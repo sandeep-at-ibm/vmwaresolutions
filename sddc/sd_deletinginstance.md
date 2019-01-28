@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -51,9 +51,9 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cyc
 
 ### Related links
 
-* [Deleting Cloud Foundation instances in a multi-site configuration](sd_deletinginstance_multi.html)
-* [Ordering Cloud Foundation instances](sd_orderinginstance.html)
-* [Viewing Cloud Foundation instances](sd_viewinginstances.html)
-* [Expanding and contracting capacity for Cloud Foundation instances](sd_addingremovingservers.html)
-* [Deleting multi-site configurations](sd_deletinginstance_multi.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
+* [Deleting Cloud Foundation instances in a multi-site configuration](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Viewing Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Deleting multi-site configurations](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

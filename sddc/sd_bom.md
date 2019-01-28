@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -32,9 +32,9 @@ Table 2. BOM for the software components in Cloud Foundation instances
 
 | Manufacturer | Component                                | Version      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 Update 2c (up to ESXi650-201808001 patch level) |
-| VMware       | vCenter Server Appliance                 | 6.5 Update 2c |
-| VMware       | Platform Services Controller             | 6.5 Update 2c |
+| VMware       | vSphere ESXi                             | 6.5 Update EP11 (build 6.5.0-10719125) |
+| VMware       | vCenter Server Appliance                 | 6.5 U2c (build 6.5.0-9451637) |
+| VMware       | Platform Services Controller             | 6.5 U2c (build 6.5.0-9451637) |
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX for vSphere                          | 6.4.1        |
 | VMware       | SDDC Manager                             | 2.4          |
@@ -58,7 +58,8 @@ Table 3. ESXi servers advanced configuration settings for Cloud Foundation insta
 | Queue Full Sample Size | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | Queue Full Threshold | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
-**Notes:**
+### Notes
+
 * The **MaxVolumes** setting is required for the IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service because the service might use more than the default number of NFS mounts on the ESXi server.
 * A value of **Not set** for a configuration setting indicates that the new setting is not automatically applied because it requires rebooting the ESXi servers, which might be disruptive.
 
@@ -71,5 +72,5 @@ Table 3. ESXi servers advanced configuration settings for Cloud Foundation insta
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Cloud Foundation overview](sd_cloudfoundationoverview.html)
-* [Planning Cloud Foundation instances](sd_planning.html)
+* [Cloud Foundation overview](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Planning Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_planning.html)

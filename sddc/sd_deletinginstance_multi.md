@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,5 +41,5 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cyc
 
 ### Related links
 
-* [Deleting Cloud Foundation instances](sd_deletinginstance.html)
-* [Ordering, viewing, and removing services from Cloud Foundation instances](sd_addingremovingservices.html)
+* [Deleting Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [Ordering, viewing, and removing services from Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)

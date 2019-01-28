@@ -2,27 +2,37 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-01-21"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Considerations about changing Cloud Foundation artifacts
 
 Changing users, resources, or subnets that are reserved for {{site.data.keyword.vmwaresolutions_full}} can impact management operations for VMware Cloud Foundation instances.
 
-**Important:** Do not change the global permissions of the **ic4v-vCenter** group in the **Users and Groups** page on the VMware vSphere Web Client. The following examples are global permission changes: changing the user name, deleting the user, or changing its password.
+Do not change the global permissions of the **ic4v-vCenter** group in the **Users and Groups** page on the VMware vSphere Web Client. The following examples are global permission changes: changing the user name, deleting the user, or changing its password.
+Use the **customerroot** host user ID in place of the **root** host user ID.
+{:important}
 
 ## Service-specific user accounts
+{: faq}
 
 Each service creates an internal user account in vCenter Server. This account is necessary so that management operations that are associated to a service can connect to vCenter Server to perform the operations on the service.
 
-**Important:** To prevent outages and connection problems, if you change the user ID, password, or password expiration settings for this user account, ensure that you also update the information in the associated service.
+To prevent outages and connection problems, if you change the user ID, password, or password expiration settings for this user account, ensure that you also update the information in the associated service.
+{:important}
 
 The user ID for this account is in the format `<service_name>-<truncated service_uuid>@test.local` or `<service_name>-<truncated service_uuid>@example-domain.local`. For example, the user ID that the Veeam on {{site.data.keyword.cloud_notm}} service uses to connect to vCenter Server to perform scheduled backups is `Veeam-<Veeam_uuid>@test.local`.
 
-**Note:** The `<service_name>` together with the `<service_uuid>` truncates to 20 characters.
+The `<service_name>` together with the `<service_uuid>` truncates to 20 characters.
+{:note}
 
 ## VMware resources for Cloud Foundation instances
 
