@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -78,7 +78,7 @@ Figure 2. Logical VLAN switch to vmkernel interface
 
 ## NSX-T
 
-This design specifies the configuration of NSX-T components, the VLAN, and overlay transport zones but does not apply any overlay network component configuration. It is left up to the customer to design the network overlay based on their needs.
+This design specifies the configuration of NSX-T components, the VLAN, and overlay transport zones but does not apply any overlay network component configuration. It's up to you to design the network overlay based on your needs.
 
 The following is configured:
 -	Management servers and controllers are installed.
@@ -95,11 +95,11 @@ What is NOT configured:
 
 ### vCenter Server with NSX-V and NSX-T
 
-The original vCenter Server cluster contains all the management components for NSX-V and NSX-T along with the vCenter Server appliances. The hosts in this cluster are prepared for NSX-V as described in [NSX-V overview](vcsnsxt-overview-ic4vnsxv.html). The hosts in the second cluster are prepared for NSX-T and configured as transport nodes. This configuration gives customers the ability to migrate from NSX-V to NSX-T if they choose to do so.
+The original vCenter Server cluster contains all the management components for NSX-V and NSX-T along with the vCenter Server appliances. The hosts in this cluster are prepared for NSX-V as described in [NSX-V overview](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-ic4vnsxv.html). The hosts in the second cluster are prepared for NSX-T and configured as transport nodes. This configuration gives customers the ability to migrate from NSX-V to NSX-T if they choose to do so.
 
 ### NSX-T versus NSX-V
 
-The following information highlights the major difference between the VMware SDN products, NSX-V, and NSX-T. Both solutions provide micro-segmentation within a VMware environment, however NSX-T takes it a bit further as outlined below.
+The following information highlights the major difference between the VMware SDN products, NSX-V, and NSX-T. Both solutions provide micro-segmentation within a VMware environment, however NSX-T takes it a bit further as outlined in the following sections.
 
 For detailed architectural differences, see [VMware NSX-T Reference Design Guide](https://communities.vmware.com/servlet/JiveServlet/download/37591-3-195840/VMware%20NSX-T%20Reference%20Design%20Guide.pdf) (PDF download).
 
@@ -116,7 +116,7 @@ NSX-V highlights:
 
 #### NSX Transformers
 
-NSX-T is a stand-alone solution for vCenter and vSphere environments, but it also supports KVM, public cloud, containers, and can be integrated into frameworks like IKS and ICP, Redhat OpenShift, Pivotal, and others. NSX-T gives you the ability to manage your SDN across multiple hypervisors, containers, and clouds.
+NSX-T is a stand-alone solution for vCenter and vSphere environments, but it also supports KVM, public cloud, containers, and can be integrated into frameworks like {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.icpfull_notm}}, Redhat OpenShift, Pivotal, and others. NSX-T gives you the ability to manage your SDN across multiple hypervisors, containers, and clouds.
 
 NSX-T highlights
 -	Stand-alone product. vCenter isn't required.
@@ -154,13 +154,13 @@ The NSX-T architecture has built-in separation of the data plane, control plane,
 
 #### Differences between Calico and NSX
 
-Calico is a Tigera open source project and is primarily maintained by the Tigera team. It is delivered as a CNI that enables networking and security for orchestration systems like Kubernetes, which both ICP and IKS use.
+Calico is a Tigera open source project and is primarily maintained by the Tigera team. It is delivered as a CNI that enables networking and security for orchestration systems like Kubernetes, which both {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}} use.
 
 Calico creates and manages a flat Layer 3 network, assigning each workload a fully routable IP address. Workloads can communicate without IP encapsulation or network address translation for bare metal performance, easier troubleshooting, and better interoperability. In environments that require an overlay, Calico uses IP-in-IP tunneling or can work with other overlay networking such as Flannel. There is an open source project that is called Canel, which is an effort to provide Calico and Flannel installation at the same time and provide out of the box VXLAN networking, while also allowing you take advantage of policy isolation with Calico policies.
 
 Calico is made up of several interdependent components that provide endpoint communication, security, routing, and plug-in integration with Kubernetes. This is all done through command line and configuration file thus making it difficult to provide consistent networking and security policies across a hybrid environment. For more details on the Calico components, see the [Project Calico](https://www.projectcalico.org/) documentation.
 
-NSX-T is a stand-alone solution for vCenter and vSphere environments, it also supports KVM, public cloud, containers, and can be integrated into frameworks like IKS and ICP, Redhat OpenShift, Pivotal, and others. This gives you the ability to manage your SDN across multiple hypervisors, containers, and cloud. NSX-T operates at Layers 2, 3, and 4 and provides functions at each layer.
+NSX-T is a stand-alone solution for vCenter and vSphere environments, it also supports KVM, public cloud, containers, and can be integrated into frameworks like {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.icpfull_notm}}, Redhat OpenShift, Pivotal, and others. This gives you the ability to manage your SDN across multiple hypervisors, containers, and cloud. NSX-T operates at Layers 2, 3, and 4 and provides functions at each layer.
 
 NSX-T allows network and security policy management across a vm and container environment in an easy to understand web interface.
 
@@ -199,7 +199,7 @@ Figure 6. NSX-T Micro-segmentation
 
 NSX for vSphere (NSX-V) is designed for vSphere deployments only and is designed so a single NSX-V manager platform is tied to a single VMware vCenter Server instance. Basically, if you need network virtualization within your VMware environment NSX-V is most likely the appropriate solution.
 
-NSX Transformers (NSX-T) is a stand-alone solution that can support more than one vCenters and vSphere environments, it also supports KVM, public cloud, containers, and can be integrated into frameworks like IBM IKS and ICP, Redhat OpenShift, Pivotal, and others. This gives you the ability to manage your SDN across more than one hypervisors, containers, and clouds with a common set of tools.
+NSX Transformers (NSX-T) is a stand-alone solution that can support more than one vCenters and vSphere environments, it also supports KVM, public cloud, containers, and can be integrated into frameworks like {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.icpfull_notm}}, Redhat OpenShift, Pivotal, and others. This gives you the ability to manage your SDN across more than one hypervisors, containers, and clouds with a common set of tools.
 
 #### Network scalability with NSX–V
 
@@ -215,11 +215,11 @@ VMware NSX-V allows you to define security policies that are defined consistentl
 
 #### Security with NSX-T
 
-VMware NSX-T provides the same capabilities as NSX-V with in a VMware vSphere environment. NSX-T delivers consistent and scalable micro-segmentation security for application that run in private and public cloud environments like {{site.data.keyword.cloud}} Private and IBM Kubernetes Services along with other cloud offerings.
+VMware NSX-T provides the same capabilities as NSX-V with in a VMware vSphere environment. NSX-T delivers consistent and scalable micro-segmentation security for application that run in private and public cloud environments like {{site.data.keyword.cloud}} Private and {{site.data.keyword.containerlong_notm}} along with other cloud offerings.
 
 #### Integration with NSX-V
 
-For NSX-V integration with Kubernetes {{site.data.keyword.cloud_notm}} automation installs ICP on top of a vCenter Server instance. A dedicated switch/VXLAN, DLR, and ESG are created specifically for the Kubernetes network. Day 1 overlay network for ICP is a 192.168.20.0/24 subnet with routing setup through the ESG for access to the underlay network.
+For NSX-V integration with Kubernetes {{site.data.keyword.cloud_notm}} automation installs {{site.data.keyword.icpfull_notm}} on a vCenter Server instance. A dedicated switch/VXLAN, DLR, and ESG are created specifically for the Kubernetes network. Day 1 overlay network for {{site.data.keyword.icpfull_notm}} is a 192.168.20.0/24 subnet with routing setup through the ESG for access to the underlay network.
 
 Figure 7. NSX-V and Kubernetes
 ![NSX-V and Kubernetes](vcsnsxt-transitnet.svg)
