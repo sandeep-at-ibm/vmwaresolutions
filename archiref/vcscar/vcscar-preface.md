@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -40,17 +40,7 @@ dimensions to the iterations based on direction, rotation,
 “stance,” and whether turning with or against the flip of the
 board.
 
-These last two variables deserve a little more explanation. First,
-*stance* is easily confused with linear directionality. Skaters all have
-a native stance, either left or right foot forward; thus, doing a trick
-*switch* (switch-stance) means it’s the mirror image of it, akin to a
-switch-hitter in baseball. The backward direction is incidental; the
-primary distinction is one of handedness or “footedness.”  Thus, any
-trick done *switch* deserves far more credit not because it’s backwards,
-but because all the motor functions are reversed to your weaker side or
-“wrong” foot. To simply do a trick backwards or “fakie” is simply
-putting a minus-sign on direction and involves all the same motor
-functions, which are only marginally harder.
+These last two variables deserve a little more explanation. First, *stance* is easily confused with linear directionality. Skaters all have a native stance, either left or right foot forward; thus, doing a trick *switch* (switch-stance) means it’s the mirror image of it, akin to a switch-hitter in baseball. The backward direction is incidental; the primary distinction is one of handedness or “footedness.”  Thus, any trick done *switch* deserves far more credit not because it’s backwards, but because all the motor functions are reversed to your weaker side or “wrong” foot. To simply do a trick backwards or “fakie” is simply putting a minus-sign on direction and involves all the same motor functions, which are only marginally harder.
 
 The second subtlety that is so important to higher-level skaters
 applies to an *inward* or *outward* flip, depending on how the board
@@ -63,14 +53,7 @@ well-deserved separate term, called *hard-flips*. Thus, a
 *nollie-inward-kickflip* is identical to *nollie-hardflip*, requiring
 more precision because they’re against the grain.
 
-Therefore, each component of this prefix-root-suffix structure can be
-broken into three more binary elements of rotation, direction, and
-stance; some tricks require having to specify whether the flip
-is inward or outward. Skating would be child’s
-play were it not for the possibility of combining tricks, which
-snowballs the number of iterations. Multiple base tricks can be strung
-together into single clusters that are composed of couplets, triplets, or even
-more up to five or even six, for top pros.
+Therefore, each component of this prefix-root-suffix structure can be broken into three more binary elements of rotation, direction, and stance; some tricks require having to specify whether the flip is inward or outward. Skating would be child’s play were it not for the possibility of combining tricks, which snowballs the number of iterations. Multiple base tricks can be strung together into single clusters that are composed of couplets, triplets, or even more up to five or even six, for top pros.
 
 So far, the number of practical iterations brings us well into the
 hundreds, which just sets the table for us; the real complexity is seen
@@ -81,7 +64,7 @@ Back in the early 90’s, skaters took early flat-ground tricks
 and projecting them onto the “organic” environment around them: stairs,
 ledges, handrails, banks, hips, flat-bars, picnic tables, planters; all
 of it opened up the dimensionality of what defined them. The endless
-ways that they could combine tricks and terrain into yin-yang couplings 
+ways that they could combine tricks and terrain into yin-yang couplings
 kept skaters busy for decades. This also applies to *vert-skating*,
 exemplified by Tony Hawk in ramps and pools.
 
@@ -173,4 +156,4 @@ None of this would be achieved without the {{site.data.keyword.cloud}}.
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-20"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -24,8 +24,8 @@ Services instance that is the target for migrated virtual machines (VMs) from th
 on-premises environment. Together with the on-premises Virtualization it
 is a hybrid environment and allow VMs to move from one environment
 to the other.
--	{{site.data.keyword.cloud_notm}} Private - ICP is an application platform for
-developing and managing containerized applications. The ICP environment is an integrated
+-	{{site.data.keyword.icpfull_notm}} - {{site.data.keyword.icpfull_notm}} is an application platform for
+developing and managing containerized applications. The {{site.data.keyword.icpfull_notm}} environment is an integrated
 environment that includes the container orchestrator Kubernetes, a
 private image repository, a management console, monitoring frameworks
 and a graphical user interface, which provides a centralized location
@@ -77,4 +77,4 @@ machine that is managed by vCenter Server.
 
 ## Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
