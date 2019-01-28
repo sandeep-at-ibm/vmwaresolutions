@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -42,8 +42,8 @@ Before you remove the HyTrust DataControl on {{site.data.keyword.cloud_notm}} se
 
 ### Related links
 
-* [Ordering HyTrust DataControl on {{site.data.keyword.cloud_notm}}](htdc_ordering.html)
-* [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtdc.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [Ordering HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_ordering.html)
+* [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtdc.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [HyTrust website](https://www.hytrust.com/)

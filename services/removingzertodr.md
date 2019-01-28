@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Removal process for Zerto on IBM Cloud
 
@@ -25,7 +29,8 @@ The removal process of the Zerto on {{site.data.keyword.cloud}} service is autom
    4. Return the private portable subnet that was ordered for Zerto Virtual Replication communication to {{site.data.keyword.cloud_notm}}  infrastructure.   
    5. Remove the charges of the Zerto disaster recovery service from your {{site.data.keyword.cloud_notm}} billing statement.
 
-      **Note:** You are billed until the end of the billing cycle for the removed Zerto disaster recovery service.
+      You are billed until the end of the billing cycle for the removed Zerto disaster recovery service.
+      {:note}
 
 ## Results
 

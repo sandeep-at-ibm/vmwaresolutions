@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -12,14 +12,14 @@ lastupdated: "2018-11-29"
 {:note: .note}
 {:important: .important}
 
-# VMware HCX on IBM Cloud overview
+# VMware HCX on IBM Cloud specifications and considerations
 
 The HCX on {{site.data.keyword.cloud}} service seamlessly extends the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows you to migrate virtual machines (VMs) to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
 
 This service is available only to VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle instances that are deployed in V2.3 and later.
 {:note}
 
-You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance. For more information about upgrading your instance and deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [Procedure to upgrade to the vCenter Server with Hybridity Bundle instance](../vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance).
+You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance. For more information about upgrading your instance and deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [Procedure to upgrade to the vCenter Server with Hybridity Bundle instance](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance).
 
 A vCenter Server instance with HCX on {{site.data.keyword.cloud_notm}} is limited to three simultaneous connections from on-premises sites.
 {:note}
@@ -78,9 +78,9 @@ Review the following considerations before you remove the HCX on {{site.data.key
 
 ### Related links
 
-* [Ordering HCX on {{site.data.keyword.cloud_notm}}](hcx_ordering.html)
-* [Managing HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)
-* [Glossary of HCX terms](hcx_glossary.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
+* [Ordering HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_ordering.html)
+* [Managing HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [Glossary of HCX terms](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources)

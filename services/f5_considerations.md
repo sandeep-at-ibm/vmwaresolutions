@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -104,8 +104,8 @@ Before you remove the F5 on {{site.data.keyword.cloud_notm}} service, ensure tha
 
 ### Related links
 
-* [Ordering F5 on {{site.data.keyword.cloud_notm}}](f5_ordering.html)
-* [Managing F5 on {{site.data.keyword.cloud_notm}}](managing_f5.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [Ordering F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_ordering.html)
+* [Managing F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_f5.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [F5 website](https://f5.com/){:new_window}

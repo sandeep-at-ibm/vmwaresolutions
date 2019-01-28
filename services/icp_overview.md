@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -47,7 +47,7 @@ Table 2. {{site.data.keyword.cloud_notm}} Private Hosted resource requirements i
 | Worker     | 4 | 16 | 200 | 300 | 6 |
 | Vulnerability advisor | 8 | 16 | 500 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| Bootstrap ICP/CAM | 16 | 32 | 250 | 1 | 1 |
+| Bootstrap {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 | 1 | 1 |
 | NFS server | 8 | 4  | 350 | 1 | 1 |
 | NSX Edge Services Gateway | 2 | 1 | 0.5 | 0.5 | 2 |
 | Documented constraints | 52 | 640 |  | 8,000 |   |
@@ -63,7 +63,7 @@ Table 3. {{site.data.keyword.cloud_notm}} Private Hosted resource requirements i
 | Worker     | 4 | 16 | 200 | 300 | 3 |
 | Vulnerability advisor | 8 | 16 | 150 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| Bootstrap ICP/CAM | 16 | 32 | 250 | 1 | 1 |
+| Bootstrap {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 | 1 | 1 |
 | NFS server | 8 | 4  | 350 | 1 | 1 |
 | NSX Edge Services Gateway | 2 | 1 | 0.5 | 0.5 | 2 |
 | Documented constraints | 30 | 200 |  | 4,000 |  |
@@ -83,7 +83,7 @@ Table 4. Description of variables in Formula 1
 | AvailableCores |	The number of actual cores available for workloads and services in the environment |	Cores |	38	| 43 |
 | HostCount	| The number of hosts in the default cluster	| Hosts | 4	| 4 |
 | HostCoreCount	| The number of raw cores available in each host in the default cluster |	Cores |	16 | 16 |
-| HostOverheadCores	| The number of cores reserved by the ESXi server as overhead, which equals 0.1 cores	| Cores	| 0.1 |	0.1 |
+| HostOverheadCores	| The number of cores that are reserved by the ESXi server as overhead, which equals 0.1 cores	| Cores	| 0.1 |	0.1 |
 | MgmtOverheadCores | The number of cores reserved by the vCenter Server management components (vCenter Server, PSC, AD/DNS, Edges), which equals five cores	| Cores	| 5	| 5 |
 | vSphereHAHostTolerance |	The number of hosts to tolerate in the vSphere HA configuration, which equals one host |	Hosts	 | 1 | 1 |
 | HostVsanOverheadCorePercentage | The percentage of a host's cores used by vSAN, which equals 10% or equals 0% if the host is non-vSAN | % | 10% |	0% |
@@ -100,7 +100,7 @@ Table 5. Description of variables in Formula 2
 | HostCount	| The number of hosts in the default cluster | Hosts  | 6	| 6 |
 | HostMemory |	The number of raw GBs of memory available in each host in the default cluster |	GB	| 192 |	192 |
 | HostVsanCapacityDiskSize | The number of GB of a capacity of each vSAN capacity SSD disk on this host, which equals 960, 1,946, or 3,891, or equals 0 GB if the host is non-vSAN | GB |	960 | 0 |
-| HostOverheadMemory |	The number of GB of memory reserved by the ESXi server as overhead, which equals 4.6 GB |	GB	| 4.6 |	4.6 |
+| HostOverheadMemory |	The number of GB of memory that is reserved by the ESXi server as overhead, which equals 4.6 GB |	GB	| 4.6 |	4.6 |
 | MgmtOverheadMemory |	The number of GB of memory reserved by the vCenter Server management components (vCenter Server, PSC, AD/DNS, Edges), which equals 77 GB | GB | 77 | 77 |
 | vSphereHAHostTolerance | The number of hosts to tolerate in the vSphere HA configuration, which equals one host | Hosts	| 1 | 1 |
 | HostVsanOverheadMemoryDiskPercentage | The number of GB of memory reserved by vSAN management (represented as percentage of one of the capacity vSAN disks), which equals 2.75% |	% | 2.75%	| 2.75% |
@@ -115,10 +115,10 @@ Table 5. Description of variables in Formula 2
 ## Considerations when you remove IBM Cloud Private Hosted
 
 * {{site.data.keyword.cloud_notm}} deletes only the virtual machines (VMs) that were deployed during the initial installation of the {{site.data.keyword.cloud_notm}} Private Hosted service. Any node that is deployed postinstallation will not be cleaned up.
-* {{site.data.keyword.cloud_notm}} will delete the VXLAN, DLR, and the edge gateway that was created during the initial deployment of the {{site.data.keyword.cloud_notm}} Private Hosted service. The VMs that you deployed on VXLAN will lose connectivity once the removal of the {{site.data.keyword.cloud_notm}} Private Hosted service is started.
+* {{site.data.keyword.cloud_notm}} will delete the VXLAN, DLR, and the edge gateway that was created during the initial deployment of the {{site.data.keyword.cloud_notm}} Private Hosted service. The VMs that you deployed on VXLAN will lose connectivity after the removal of the {{site.data.keyword.cloud_notm}} Private Hosted service is started.
 
 ### Related links
 
-* [Ordering IBM Cloud Private Hosted](../services/icp_ordering.html)
-* [vCenter Server and IBM Cloud Private guide](../archiref/vcsicp/vcsicp-intro.html)
+* [Ordering IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services/icp_ordering.html)
+* [vCenter Server and IBM Cloud Private guide](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
 * [Open a Ticket for IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US)
