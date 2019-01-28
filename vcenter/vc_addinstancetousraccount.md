@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,6 +35,6 @@ For more information about how to link your Iaas-only account to your PaaS accou
 
 ### Related links
 
-* [Managing user access with IAM](../vmonic/iam.html)
-* [Inviting users to access services and resources](../vmonic/iamuserinvite.html)
-* [What is IBM Cloud IAM](../../../iam/index.html)
+* [Managing user access with IAM](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [Inviting users to access services and resources](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [What is IBM Cloud IAM](/docs/iam/index.html)

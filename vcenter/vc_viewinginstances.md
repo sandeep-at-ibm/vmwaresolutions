@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -89,10 +89,6 @@ Table 4. vCenter Server access information for instance-related components
 | NSX Manager IP  | The IP address of the NSX Manager.  |
 | NSX Manager FQDN  | The NSX Manager fully qualified domain name (FQDN).  |
 | NSX Manager HTTP  | The user name and password used to access the NSX Manager web console. |
-| PSC IP  | The IP address of the Platform Services Controller (PSC).  |
-| PSC FQDN  | The PSC fully qualified domain name (FQDN).  |    
-| PSC ADMIN  | The VMware vCenter Single Sign-On user name and password that you can use to access the PSC web console.  |
-| PSC SSH  | The user name and password that you can use to access the PSC VM via SSH connection.  |
 | vCenter IP  | The IP address of the vCenter Server.  |
 | vCenter FQDN  | The vCenter Server fully qualified domain name (FQDN).  |
 | vCenter ADMIN  | The VMware vCenter Single Sign-On user name and password that you can use to log in to the vCenter Server by using the vSphere Web Client.  |
@@ -111,7 +107,7 @@ Table 5. vCenter Server instance deployment history
 
 ## What to do if errors occur
 
-If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](../vmonic/trbl_support.html).
+If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## What to do next
 
@@ -121,13 +117,13 @@ Before you click **vCenter console** on the instance summary page to go to the v
 {:important}
 
 Review the following topics for information to help you complete the login instructions:
-*  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
+*  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 *  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network using VPN, see [VPN Access](http://www.softlayer.com/vpn-access){:new_window}.
-*  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
+*  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
 
 ### Related links
 
-* [Ordering vCenter Server instances](vc_orderinginstance.html)
-* [Adding, viewing, and deleting clusters for vCenter Server instances](vc_addingviewingclusters.html)
-* [Expanding and contracting capacity for vCenter Server instances](vc_addingremovingservers.html)
-* [Deleting vCenter Server instances](vc_deletinginstance.html)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Deleting vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)

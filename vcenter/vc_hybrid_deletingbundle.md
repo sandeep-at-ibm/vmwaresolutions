@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-11-09"
 
 To remove the Hybridity Bundle license from your vCenter Server instance, you must replace the VMware NSX and VMware vSAN rental license keys with Bring Your Own License (BYOL) keys in the VMware vSphere Web Client. Additionally, you must open a support ticket to cancel charges for the rental licenses.
 
-Downgrading your license might cause your vCenter Server instance to fail. You can choose to downgrade a license at your own risk, but first consider the functions that are not available when you downgrade. For more information, see [Comparison chart for VMware component editions](../archiref/solution/appendix.html).
+Downgrading your license might cause your vCenter Server instance to fail. You can choose to downgrade a license at your own risk, but first consider the functions that are not available when you downgrade. For more information, see [Comparison chart for VMware component editions](/docs/services/vmwaresolutions/archiref/solution/appendix.html).
 {:important}
 
 ## Important considerations before you remove the Hybridity Bundle from a multi-site environment
@@ -27,7 +27,7 @@ Review the following considerations before you remove the Hybridity Bundle from 
 * You must combine VMware NSX licenses and have enough capacity to use across all multi-site deployments.
 * You must create a single support ticket to remove the Hybridity Bundle from all multi-site deployments.
 
-While removing the Hybridity Bundle from a multi-site environment, BYOL licenses are applied. For all sites in a multi-site configuration, the NSX license is automatically reverted to the lowest license edition among all sites. You must ensure that the license editions are consistent across all sites in the multi-site configuration.
+While removing the Hybridity Bundle from a multi-site environment, BYOL licenses are applied. It is your responsibility to ensure that the license editions are consistent across all sites in the multi-site configuration.
 {:note}
 
 ## Before you remove the Hybridity Bundle
@@ -108,6 +108,6 @@ Verify the following requirements before you remove the Hybridity Bundle:
 
 ### Related links
 
-* [Ordering vCenter Server with Hybridity Bundle instances](vc_hybrid_orderinginstance.html)
-* [Viewing vCenter Server with Hybridity Bundle instances](vc_hybrid_viewinginstances.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
+* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

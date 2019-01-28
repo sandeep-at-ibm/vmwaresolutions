@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,7 @@ The single-node trial is for proof of concepts only. Do not run production workl
 
 This trial is intended for use up to 90 days. When you are finished with the trial, you may delete this environment and then provision a highly available environment that meets your capacity needs.
 
-For information about the architecture design, see [HCX on IBM Cloud architecture design for the Single-node Trial for vCenter Server on IBM Cloud](../archiref/trial/vc_trial_hcx_arch.html).
+For information about the architecture design, see [HCX on IBM Cloud architecture design for the Single-node Trial for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html).
 
 ## Technical specifications for Single-node Trial for vCenter Server instances
 
@@ -145,7 +145,7 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. The foll
    * Public and private uplink interfaces are configured by using the ordered subnets.
    * The ESGs are configured as a pair of extra large edge appliances with High Availability (HA) enabled.
    * The firewall rules and network address translation (NAT) rules are configured to allow inbound and outbound HTTPS traffic to and from the HCX Manager.
-   * The load balancer rules and resource pools are configured. These rules are resource pools are used to forward HCX-related inbound traffic to the appropriate virtual appliances of HCX Manager, vCenter Server, and Platform Services Controller (PSC).
+   * The load balancer rules and resource pools are configured. These rules and resource pools are used to forward HCX-related inbound traffic to the appropriate virtual appliances of HCX Manager and vCenter Server (with embedded Platform Services Controller).
    * An SSL certificate to encrypt the HCX-related inbound HTTPS traffic that is coming through the ESGs is applied.
 
    The HCX management edge is dedicated to the HCX management traffic between the on-premises HCX components and the cloud-side HCX components. Do not modify the HCX management edge or use it for HCX network extensions. Instead, create separate edges for network extensions. In addition, using a firewall or disabling the HCX management edge communications to the private IBM management components or public internet might adversely impact the HCX functionality.
@@ -153,7 +153,7 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. The foll
 
 5. The HCX Manager on {{site.data.keyword.cloud_notm}} is deployed, activated, and configured:
    * The HCX Manager is registered with vCenter Server.
-   * The HCX Manager, vCenter Server, PSC, and NSX Manager are configured.
+   * The HCX Manager, vCenter Server (with embedded Platform Services Controller), and NSX Manager are configured.
    * The HCX fleet is configured.
    * Local and remote HCX deployment containers are configured.
 6. The host name and IP address of the HCX Manager is registered with the DNS server of VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
@@ -238,6 +238,6 @@ Complete the following steps to delete a Single-node Trial for vCenter Server in
 
 ### Related links
 
-* [HCX on IBM Cloud architecture design for the Single-node Trial for vCenter Server on IBM Cloud](../archiref/trial/vc_trial_hcx_arch.html)
+* [HCX on IBM Cloud architecture design for the Single-node Trial for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)
