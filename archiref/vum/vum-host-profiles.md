@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ vCenter has a feature that is called Host Profiles. This feature creates a profi
 
 As more VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi hosts are deployed by the IC4VS automation that deployed the original cluster, there are less configuration drift than with manual methods of adding hosts. However, system administrator actions, besides the automation can make the hosts configuration different. For example, more NFS storage is added or extra VLANs are added. The use of Host Profiles to validate the configuration of a new host by checking compliance of this host against an existing host is a valid use case of this tool within {{site.data.keyword.cloud_notm}}.
 
-To add more hosts to your vCenter Server cluster, see [Expanding and contracting capacity for vCenter Server instances](../../vcenter/vc_addingremovingservers.html).
+To add more hosts to your vCenter Server cluster, see [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html).
 
 Note:
 *	For instances deployed at, or upgraded to, V2.1 or higher, newly deployed ESXi servers and clusters are patched with recent, but not necessarily the most recent ESXi updates from VMware.
@@ -54,11 +54,11 @@ The following sequence is required to check compliance:
 
 ##	Reviewing compliance failures and remediation
 
-1.	To see more detail on compliance failures, select the **Host Profile** from the **Objects** tab that is used in the compliance check.
-2.	In order to see specific detail on which parameters differ between the host that failed compliance and the Host Profile, click the **Monitor tab** and select the **Compliance view**.
-3.	Expand the object hierarchy and select the failing host.
-4.	The differing parameters are displayed in the Compliance window, below the hierarchy.
-5.	Review the parameters and understand why the new host can vary from the reference host. For parameters where the compliance isn't acceptable, remediate before moving the new host from maintenance mode. For example, where configuration drift is caused by system administrator action.
+1. To see more detail on compliance failures, select the **Host Profile** from the **Objects** tab that is used in the compliance check.
+2. In order to see specific detail on which parameters differ between the host that failed compliance and the Host Profile, click the **Monitor tab** and select the **Compliance view**.
+3. Expand the object hierarchy and select the failing host.
+4. The differing parameters are displayed in the Compliance window, under the hierarchy.
+5. Review the parameters and understand why the new host can vary from the reference host. For parameters where the compliance isn't acceptable, remediate before moving the new host from maintenance mode. For example, where configuration drift is caused by system administrator action.
 
 ### Related links
 
