@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,7 +41,7 @@ This layer consists of vCenter Server, which represents the management layer for
 
 On the {{site.data.keyword.vmwaresolutions_short}} console, you can expand and contract the capacity of your instances by using the add and remove ESXi server capability. In addition, lifecycle management functions like applying updates and upgrading the VMware components in the hosted environment are also available.
 
-For more information about the architecture, see [Solution overview](../archiref/solution/solution_overview.html).
+For more information about the architecture, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Technical specifications for Cloud Foundation instances
 
@@ -54,16 +54,17 @@ Charges that are incurred for the hardware, networking, virtual machines, and st
 
 You can order {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with one of the following configurations:
 *  **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.   
-*  **Broadwell**: 2-CPU Intel Broadwell generation servers (Intel Xeon E5-2600 v4 series) with your selected CPU model and RAM size.   
-   If you plan to use vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
-   {:note}
+*  **Broadwell**: 2-CPU Intel Broadwell generation servers (Intel Xeon E5-2600/E7-4800 series) with your selected CPU model and RAM size.
+
+If you plan to use vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
+{:note}
 
 ### Networking
 
 The following networking components are ordered:
 * 10 Gbps dual public and private network uplinks
 * Three VLANs (Virtual LANs): one public VLAN and two private VLANs
-* Secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Does the management services NSX Edge pose a security risk?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* Secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
   This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the Cloud Foundation instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
   {:important}
@@ -100,7 +101,7 @@ Each Cloud Foundation expansion node deploys and incurs charges for the followin
 
 ### Hardware for expansion nodes
 
-One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration presented in [Technical specifications for Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration presented in [Technical specifications for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Licenses and fees for expansion nodes
 
@@ -124,9 +125,9 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 
 ### Related links
 
-* [Cloud Foundation Software Bill of Materials](sd_bom.html)
-* [Planning Cloud Foundation instances](sd_planning.html)
-* [Ordering Cloud Foundation instances](sd_orderinginstance.html)
+* [Cloud Foundation Software Bill of Materials](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [Planning Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
 * [VMware vSphere Documentation Center](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [VMware NSX 6 Documentation Center](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764)

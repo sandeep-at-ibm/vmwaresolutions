@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ Review the following requirements before you order your VMware Cloud Foundation 
 
 ## IBM Cloud account requirements
 
-The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](../vmonic/slaccountrequirement.html).
+The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## IBM Cloud Data Center availability
 
@@ -67,19 +67,19 @@ Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when yo
 
 ## Backup of management components
 
-You are responsible for maintaining and ensuring the availability of all instance components. It is recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](../archiref/solution/solution_backingup.html).
+You are responsible for maintaining and ensuring the availability of all instance components. It is recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
 ## Services for Cloud Foundation instances
 
-You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for Cloud Foundation instances](sd_addingremovingservices.html).
+You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html).
 
 ## Capacity considerations
 
-For more information about capacity, see [Scaling capacity](../archiref/solution/solution_scaling.html).
+For more information about capacity, see [Scaling capacity](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
 
 ### Related links
 
-* [Cloud Foundation overview](sd_cloudfoundationoverview.html)
-* [Ordering Cloud Foundation instances](sd_orderinginstance.html)
-* [Expanding and contracting capacity for Cloud Foundation instances](sd_addingremovingservers.html)
-* [Ordering, viewing, and removing services for Cloud Foundation instances](sd_addingremovingservices.html)
+* [Cloud Foundation overview](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
