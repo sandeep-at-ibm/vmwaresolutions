@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -47,13 +47,11 @@ Figure 2. NetApp ONTAP Select components
 
 The virtualization management layer consists of the following components:
 
-* vCenter Server virtual appliance
+* vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC)
 * NSX Manager
 * Two NSX Edge Services Gateways (ESGs)
 * Three NSX Controllers
-* Platform Services Controller (PSC) virtual appliance
-* vCenter Server Appliance (vCSA)
-* IBM CloudDriver virtual server instance (VSI).
+* IBM CloudDriver virtual server instance (VSI)
 
 NetApp ONTAP Select runs in a VMware cluster and virtualizes the local storage on the hosts. NetApp ONTAP Select is deployed in the dedicated model, where other workloads are not expected to share the cluster with it. As a result, the hardware configuration of the NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} offering is sized only based on the requirements of NetApp ONTAP Select.
 
@@ -124,7 +122,7 @@ If you're using firewalls, you must configure rules for all communications from 
 
 ### Related links
 
-* [Planning NetApp ONTAP Select instances](np_planning.html)
-* [Ordering NetApp ONTAP Select instances](np_orderinginstances.html)
-* [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html)
+* [Planning NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_planning.html#requirements-and-planning-for-netapp-ontap-select-instances)
+* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
 * [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){:new_window}

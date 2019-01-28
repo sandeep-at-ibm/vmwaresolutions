@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -79,10 +79,6 @@ Table 3. Access information for NetApp ONTAP Select instance-related components
 | NetApp Deploy Tool IP | The IP address of the NetApp ONTAP Select Deploy virtual machine. |
 | NetApp Deploy Tool FQDN | The NetApp ONTAP Select Deploy fully qualified domain name. |
 | NetApp Deploy Tool HTTPS | The user name and password that you can use to access the NetApp ONTAP Select Deploy virtual machine. |
-| PSC IP | The IP address of the Platform Services Controller. |
-| PSC FQDN | The PSC fully qualified domain name. |
-| PSC ADMIN | The VMware vCenter Single Sign-On user name and password that you can use to access the PSC web console. |
-| PSC SSH | The user name and password that you can use to access the PSC VM via SSH connection. |
 | vCenter IP | The IP address of the vCenter Server. |
 | vCenter FQDN | The vCenter Server fully qualified domain name. |
 | vCenter ADMIN | The VMware vCenter Single Sign-On user name and password that you can use to log in to the vCenter Server by using the vSphere Web Client. |
@@ -99,7 +95,7 @@ Table 4. NetApp ONTAP Select instance deployment history
 | Date | The date and time when the instance status is changed |
 | Summary | The details of the change |
 
-If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](../vmonic/trbl_support.html).
+If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## Viewing NetApp ONTAP Select clusters
 
@@ -172,12 +168,12 @@ Before you click **vCenter console** on the instance summary page to go to the v
 
 For more information to help you complete the login instructions, review the following topics:
 
-*  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
+*  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 *  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network using VPN, see [VPN Access](http://www.softlayer.com/vpn-access){:new_window}.
-*  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
+*  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
 
 ### Related links
 
-* [Ordering NetApp ONTAP Select instances](np_orderinginstances.html)
-* [Deleting NetApp ONTAP Select instances](np_deletinginstance.html)
+* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [Deleting NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
