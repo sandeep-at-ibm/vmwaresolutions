@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -19,8 +19,8 @@ To deploy a VMware virtualized platform with a dedicated and highly available so
 ## Requirements
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](../vmonic/useraccount.html).
-*  You reviewed the requirements and considerations in [Requirements and planning for NetApp ONTAP Select instances](np_planning.html).
+*  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  You reviewed the requirements and considerations in [Requirements and planning for NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_planning.html).
 
 Do not modify any values that are set during instance order or deployment. Doing so make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
 {:important}
@@ -33,7 +33,7 @@ When you order a NetApp ONTAP Select instance, you must specify the following ba
 
 The instance name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
-* The instance name must start and end with an alphanumeric character.
+* The instance name must start with an alphabetic character and end with an alphanumeric character.
 * The maximum length of the instance name is 10 characters.
 * The instance name must be unique within your account.
 
@@ -52,7 +52,7 @@ The host name prefix must meet the following requirements:
 
 The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
-*  The subdomain label must start and end with an alphanumeric character.
+*  The subdomain label must start with an alphabetic character and end with an alphanumeric character.
 *  The maximum length of the subdomain label is 10 characters.
 *  The subdomain label must be unique within your account.
 
@@ -113,7 +113,7 @@ The number of ESXi servers of a NetApp ONTAP Select instance is 4 by default. Yo
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [Technical specifications for NetApp ONTAP Select instances](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) are installed on your VMware virtual platform.
+When the instance is successfully deployed, the components that are described in [Technical specifications for NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) are installed on your VMware virtual platform.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
@@ -132,7 +132,7 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 
 ### Related links
 
-* [Viewing NetApp ONTAP Select instances](np_viewinginstances.html)
-* [Deleting NetApp ONTAP Select instances](np_deletinginstance.html)
+* [Viewing NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [Deleting NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
 * [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -49,6 +49,6 @@ You are billed until the end of the billing cycle for the deleted instance.
 
 ### Related links
 
-* [Ordering NetApp ONTAP Select instances](np_orderinginstances.html)
-* [Viewing NetApp ONTAP Select instances](np_viewinginstances.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
+* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [Viewing NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
