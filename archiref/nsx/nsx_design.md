@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,4 +45,4 @@ While this makes it simple to set up a worldwide connected infrastructure within
 
 ### Related links
 
-* [Solution overview](../solution/solution_overview.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
