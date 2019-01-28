@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-26"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -26,11 +26,11 @@ You can add the HyTrust DataControl on {{site.data.keyword.cloud_notm}} service 
 
 ### Related links
 
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} overview](htdc_considerations.html)
-* [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtdc.html)
-* [Ordering, viewing, and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
-* [Ordering, viewing, and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
-* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/htdc_considerations.html)
+* [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtdc.html)
+* [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [HyTrust website](https://www.hytrust.com/)

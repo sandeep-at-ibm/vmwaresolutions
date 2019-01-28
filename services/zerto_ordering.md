@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -26,11 +26,11 @@ You can add the Zerto on {{site.data.keyword.cloud_notm}} service into an existi
 
 ### Related links
 
-* [Zerto on {{site.data.keyword.cloud_notm}} overview](addingzertodr.html)
-* [Managing Zerto on {{site.data.keyword.cloud_notm}}](managingzertodr.html)
-* [Ordering, viewing, and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
-* [Ordering, viewing, and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
-* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Requesting managed services for Zerto on {{site.data.keyword.cloud_notm}}](managing_zerto_services.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/addingzertodr.html)
+* [Managing Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingzertodr.html)
+* [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Requesting managed services for Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
 * [zerto.com website](https://www.zerto.com){:new_window}
 * [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

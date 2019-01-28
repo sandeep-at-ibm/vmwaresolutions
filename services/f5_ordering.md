@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -68,11 +68,11 @@ You cannot change the license model after service installation. To change the li
 
 ### Related links
 
-* [F5 on {{site.data.keyword.cloud_notm}} overview](f5_considerations.html)
-* [Managing F5 on {{site.data.keyword.cloud_notm}}](managing_f5.html)
-* [Ordering, viewing, and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
-* [Ordering, viewing, and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
-* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [F5 on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/f5_considerations.html)
+* [Managing F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_f5.html)
+* [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [F5 Deployment Guides](https://f5.com/solutions/deployment-guides){:new_window}

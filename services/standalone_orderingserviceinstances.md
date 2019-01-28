@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -15,8 +15,8 @@ You can order an on-premises HCX on {{site.data.keyword.cloud}} instance without
 ## Before you begin
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](../vmonic/useraccount.html).
-*  You reviewed all the considerations in [Considerations when installing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](../services/standalone_considerations.html).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  You reviewed all the considerations in [Considerations when installing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/standalone_considerations.html).
 
 ## Procedure to order on-premises VMware HCX on IBM Cloud instances
 
@@ -38,7 +38,7 @@ View and manage the on-premises HCX on {{site.data.keyword.cloud_notm}} instance
 
 ### Related links
 
-* [Viewing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](standalone_viewingserviceinstances.html)
-* [Deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](standalone_deletingserviceinstances.html)
-* [Glossary of HCX terms](hcx_glossary.html)
+* [Viewing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
+* [Deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
+* [Glossary of HCX terms](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources)

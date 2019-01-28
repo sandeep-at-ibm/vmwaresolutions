@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -63,7 +63,7 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether 
    * Public and private uplink interfaces are configured by using the ordered subnets.
    * The ESGs are configured as a pair of extra large edge appliances with High Availability (HA) enabled.
    * The firewall rules and network address translation (NAT) rules are configured to allow inbound and outbound HTTPS traffic to and from the HCX Manager.
-   * The load balancer rules and resource pools are configured. These rules are resource pools are used to forward HCX-related inbound traffic to the appropriate virtual appliances of HCX Manager, vCenter Server, and Platform Services Controller (PSC).
+   * The load balancer rules and resource pools are configured. These rules and resource pools are used to forward HCX-related inbound traffic to the appropriate virtual appliances of HCX Manager and vCenter Server (with embedded Platform Services Controller).
    * An SSL certificate to encrypt the HCX-related inbound HTTPS traffic that is coming through the ESGs is applied.
 
    The HCX management edge is dedicated to the HCX management traffic between the on-premises HCX components and the cloud-side HCX components. Do not modify the HCX management edge or use it for HCX network extensions. Instead, create separate edges for network extensions. In addition, using a firewall or disabling the HCX management edge communications to the private IBM management components or public internet might adversely impact the HCX functionality.
@@ -71,17 +71,17 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether 
 
 6. The HCX Manager on {{site.data.keyword.cloud_notm}} is deployed, activated, and configured:
    * The HCX Manager is registered with vCenter Server.
-   * The HCX Manager, vCenter Server, PSC, and NSX Manager are configured.
+   * The HCX Manager, vCenter Server (with embedded Platform Services Controller), and NSX Manager are configured.
    * The HCX fleet is configured.
    * Local and remote HCX deployment containers are configured.
 7. The host name and IP address of the HCX Manager is registered with the DNS server of VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 ### Related links
 
-* [HCX on {{site.data.keyword.cloud_notm}} overview](hcx_considerations.html)
-* [Managing HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)
-* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Glossary of HCX terms](hcx_glossary.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
+* [HCX on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [Managing HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Glossary of HCX terms](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources)

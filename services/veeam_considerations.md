@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -59,10 +59,10 @@ Removal of the Veeam on {{site.data.keyword.cloud_notm}} service stops all backu
 
 ### Related links
 
-* [Ordering Veeam on {{site.data.keyword.cloud_notm}}](veeam_ordering.html)
-* [Managing Veeam on {{site.data.keyword.cloud_notm}}](managingveeam.html)
-* [Requesting managed services for Veeam on {{site.data.keyword.cloud_notm}}](managing_veeam_services.html)
-* [Contacting IBM Support](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [Ordering Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_ordering.html)
+* [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingveeam.html)
+* [Requesting managed services for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_veeam_services.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Veeam website](https://www.veeam.com/){:new_window}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}
