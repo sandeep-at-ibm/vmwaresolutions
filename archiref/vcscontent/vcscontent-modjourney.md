@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-01-23"
 
 ---
 
 # Modernization journey
 
-This is a reference use case on how a classic WebSphere Application Server application is modernized by using {{site.data.keyword.cloud}} Private, IBM Middleware content, {{site.data.keyword.cloud_notm}} Kubernetes Service, and VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
+This is a reference use case on how a classic WebSphere Application Server application is modernized by using {{site.data.keyword.cloud}} Private, IBM Middleware content, {{site.data.keyword.containerlong_notm}}, and VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 ## Modernization is more than applications
 
@@ -24,31 +24,31 @@ Most of our focus in this journey is on modernizing the Stock Trader application
 
 The goal is cloud-native applications that scale and respond to quickly changing demands.
 
-- "You need to modernize existing apps and create new cloud-native apps to capture your customer's imagination".
-- "You need apps that can scale, reach worldwide, adjust to demands, change, enhance, and can pivot quickly".
+* You need to modernize existing apps and create new cloud-native apps to capture your customer's imagination.
+* You need apps that can scale, reach worldwide, adjust to demands, change, enhance, and can pivot quickly.
 
 ### DevOps modernization
 
 While you modernize your application, the way you deliver that application, the entire delivery pipeline, is modernized so the new cloud-native culture your Developers are creating can scale into how that app is delivered.
 
-- "You need to modernize your Development and Operations (and security) culture while you modernize your applications".
-- "You need DevOps teams that can scale, reach worldwide, adjust to demand, change, enhance, and can pivot quickly".
+* You need to modernize your Development and Operations (and security) culture while you modernize your applications.
+* You need DevOps teams that can scale, reach worldwide, adjust to demand, change, enhance, and can pivot quickly.
 
 ###  Integration modernization
 
 All along the modernization journey, your teams need to integrate with existing assets, new cloud services, your data, and new insights from analytics performed on that data.
 
-- "You need to use your existing assets on this journey in a way that can scale, reach worldwide, adjust to demand, change, enhance, and can pivot quickly".
-- "You need to enrich with new cloud services at each step of this journey".
-- "You need to integrate your data and the insight you get from applying analytics to your data".
+* You need to use your existing assets on this journey in a way that can scale, reach worldwide, adjust to demand, change, enhance, and can pivot quickly.
+* You need to enrich with new cloud services at each step of this journey.
+* You need to integrate your data and the insight you get from applying analytics to your data.
 
 ### Management
 
 Modernizing your management practices is another parallel journey to take while you modernize your applications. The tools, culture, and core behaviors of how to manage and maintain a modernized application is far different than before.
 
-- "You need to manage your microservices, and containerized middleware by using built-in orchestration, logging, and monitoring".
-- "You need to manage your multi-cloud hybrid platforms across worldwide locations in a way that can scale, reach worldwide, adjust to demand, change, enhance, and can pivot quickly".
-- "You need to automate how you manage more than one cloud and the applications and middleware that run on them".
+* You need to manage your microservices, and containerized middleware by using built-in orchestration, logging, and monitoring.
+* You need to manage your multi-cloud hybrid platforms across worldwide locations in a way that can scale, reach worldwide, adjust to demand, change, enhance, and can pivot quickly.
+* You need to automate how you manage more than one cloud and the applications and middleware that run on them.
 
 ## Meet Todd and Jane
 
@@ -86,4 +86,4 @@ be entirely portable for use in other Kubernetes environments.
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
