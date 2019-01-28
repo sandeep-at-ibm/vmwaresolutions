@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -31,9 +31,9 @@ Along with the public and private networks, each {{site.data.keyword.cloud_notm}
 
 ## Primary and portable IP blocks
 
-{{site.data.keyword.cloud_notm}} allocates two types of IP addresses to be used within {{site.data.keyword.cloud_notm}} infrastructure:
--	Primary IP addresses are assigned to devices, bare metal, and virtual servers provisioned by {{site.data.keyword.cloud_notm}}. Users shouldn't assign any IP addresses in these blocks.
--	Portable IP addresses are provided for the user to assign and manage as needed.
+{{site.data.keyword.cloud_notm}} allocates two types of IP addresses to be used within the  {{site.data.keyword.cloud_notm}} infrastructure:
+* Primary IP addresses are assigned to devices, bare metal, and virtual servers provisioned by {{site.data.keyword.cloud_notm}}. Users shouldn't assign any IP addresses in these blocks.
+* Portable IP addresses are provided for the user to assign and manage as needed.
 
 Primary or Portable IP addresses can be made routable to any VLAN within the customer account if either VLAN Spanning is enabled within the account or the account is configured as a virtual routing and forwarding (VRF) account.
 
@@ -85,4 +85,4 @@ The private network connections are configured to use jumbo frames with MTU size
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

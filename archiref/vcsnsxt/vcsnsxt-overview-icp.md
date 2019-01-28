@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-01-23"
 
 ---
 
 # IBM Cloud Private
 
-{{site.data.keyword.cloud}} Private (ICP) is an application platform for developing and managing containerized applications. It is an integrated environment that includes the container orchestrator Kubernetes, a private image repository, a management console, monitoring frameworks and a graphical user interface, which provides a centralized location from where you can deploy, manage, monitor, and scale your applications.
+{{site.data.keyword.icpfull_notm}} is an application platform for developing and managing containerized applications. It is an integrated environment that includes the container orchestrator Kubernetes, a private image repository, a management console, monitoring frameworks and a graphical user interface, which provides a centralized location from where you can deploy, manage, monitor, and scale your applications.
 
 {{site.data.keyword.cloud_notm}} Private has the following features:
 -	**Unified installer** – The installer rapidly sets up a Kubernetes based cluster with master, worker, and proxy nodes by using an Ansible based installer.
@@ -20,7 +20,7 @@ lastupdated: "2018-11-19"
 -	**Isolated tenant networks** - Calico allows for improved performance and network isolation inside your cluster. With Calico, you can create an isolated subnet for each project inside your cluster. This network isolation provides you with added security during data transmissions and reduces the chances of compromising applications and their data. Calico also facilitates the creation of new network policies that can enable fine grained control over the sharing of objects within a single namespace.
 -	**Robust monitoring and logging with ELK stack** - {{site.data.keyword.cloud_notm}} Private uses Elasticsearch, Logstash, Filebeat, and Heapster for the collection, storage, and querying of logs and metrics. This monitoring and logging process provides a centralized store for all logs and metrics, better performance, and increased stability when you access and query logs and metrics.
 
-## ICP components
+## IBM Cloud Private components
 
 An {{site.data.keyword.cloud_notm}} Private cluster has four main classes of nodes: boot, master, worker, and proxy. You can optionally specify management, Vulnerability Advisor (VA), and etcd nodes in your cluster.
 -	**Boot node** - A boot node is used for running installation, configuration, node scaling, and cluster updates.
@@ -31,13 +31,13 @@ An {{site.data.keyword.cloud_notm}} Private cluster has four main classes of nod
 -	**Vulnerability Advisor (VA) node** - A VA node is an optional node that is used for running the Vulnerability Advisor services.
 -	**etcd** node - An etcd node is an optional node that is used for running the etcd distributed key value store.
 
-## ICP networking
+## IBM Cloud Private networking
 
-ICP network management is facilitated by the use of Calico.
+{{site.data.keyword.icpfull_notm}} network management is facilitated by the use of Calico.
 Calico uses layer 3 or the network layer, of the Open System Interconnection (OSI) model. Calico uses Border Gateway Protocol (BGP) to build routing tables that facilitate communication among agent nodes.
 
-For more information about Calico networking, see [IBM Kubernetes service](vcsnsxt-overview-iks.html).
+For more information about Calico networking, see [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-iks.html).
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

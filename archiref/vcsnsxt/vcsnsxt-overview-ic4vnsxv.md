@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,27 +16,27 @@ In this design, the NSX Manager is deployed on the initial cluster. The NSX Mana
 
 Table 1. NSX-V Manager virtual appliance specifications
 
-Attribute	|Specification
+Attribute | Specification
 ---|---
-NSX Manager	|Virtual appliance
-Number of vCPUs	|4
-Memory	|16 GB
-Disk	|60 GB on the management NFS share
-Disk type	|Thin provisioned
-Network	|Private A portable designated for management components
+NSX Manager | Virtual appliance
+Number of vCPUs | 4
+Memory | 16 GB
+Disk | 60 GB on the management NFS share
+Disk type | Thin provisioned
+Network | **Private A** portable designated for management components
 
 The NSX-V Manager following network overview shows the placement of the NSX Manager in relation to the other components in this architecture.
 
 Figure 1. NSX-V Manager network overview
 ![NSX-V Manager network overview](vcsnsxt-vmgmt.svg)
 
-After initial deployment, the {{site.data.keyword.cloud}} automation deploys three NSX Controllers within the initial cluster. The controllers are assigned an IP address from the Private A portable subnet that is designated for management components. VM–VM anti–affinity rules are created such that controllers are separated among the hosts in the cluster. The initial cluster must be deployed with a minimum of three nodes to ensure high availability for the controllers.
+After initial deployment, the {{site.data.keyword.cloud}} automation deploys three NSX Controllers within the initial cluster. The controllers are assigned an IP address from the **Private A** portable subnet that is designated for management components. VM–VM anti–affinity rules are created such that controllers are separated among the hosts in the cluster. The initial cluster must be deployed with a minimum of three nodes to ensure high availability for the controllers.
 
-Along with to the controllers, the {{site.data.keyword.cloud_notm}} automation prepares the deployed vSphere hosts with NSX VIBS that enable the use of a virtualized network (VXLAN) via the use of VXLAN Tunnel Endpoints (VTEP). The VTEPs are assigned IP addresses from the Private A portable IP address range that is specified for VTEPs. The VXLAN traffic resides on the untagged VLAN and is assigned to the private virtual distributed switch (vDS). Later, a segment ID pool is assigned and the hosts in the cluster are added to the transport zone. Only unicast is used in the transport zone since IGMP snooping isn't configured within the {{site.data.keyword.cloud_notm}}.
+Along with to the controllers, the {{site.data.keyword.cloud_notm}} automation prepares the deployed vSphere hosts with NSX VIBS that enable the use of a virtualized network (VXLAN) via the use of VXLAN Tunnel Endpoints (VTEP). The VTEPs are assigned IP addresses from the IP address range of the **Private A** portable subnet that is specified for VTEPs. The VXLAN traffic resides on the untagged VLAN and is assigned to the private virtual distributed switch (vDS). Later, a segment ID pool is assigned and the hosts in the cluster are added to the transport zone. Only unicast is used in the transport zone since IGMP snooping isn't configured within the {{site.data.keyword.cloud_notm}}.
 
 NSX Edge Services Gateway (ESG) pairs are then deployed. For all deployments one gateway pair is used for outbound traffic from automation components that reside on the private network. VMware vCenter Server on {{site.data.keyword.cloud_notm}} instances include a second gateway, which is known as the customer–managed edge, that is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. Any required NSX component such as Distributed Logical Routers (DLR), logical switches, and firewalls can be configured by the administrator.
 
-## Distribute switch design
+## Distributed switch design
 
 The design uses a minimum number of virtual distributed switches (vDS). The hosts in the cluster are connected to public and private networks. They're configured with two virtual distributed switches. The use of two switches follows the physical network separation of the public and private networks that are implemented within {{site.data.keyword.cloud_notm}}.
 
@@ -62,15 +62,16 @@ SDDC-Dswitch-Public | External management traffic (North–South) | Enabled |Rou
 
 Table 4. Distributed switch port group teaming and failover setting
 
-Parameter	|Setting
+Parameter | Setting
 ---|---
-Load balancing	|Route based on the originating virtual port*
-Failover detection	|Link status only
-Notify switches	|Enabled
-Failback	|Enabled
-Failover order	|Active uplinks: Uplink1, Uplink2*
+Load balancing | Route based on the originating virtual port \*
+Failover detection | Link status only
+Notify switches | Enabled
+Failback | Enabled
+Failover order | Active uplinks: Uplink1, Uplink2 \*
 
-\* The vSAN port group uses explicit failover with active standby since it load balancing of vSAN storage traffic is not supported.
+\* The vSAN port group uses explicit failover with active or standby because it does not support load balancing of vSAN storage traffic.
+{:note}
 
 Figure 2. Cluster VM kernel interface port group-mapping
 ![Cluster VM kernel interface port group mapping](vcsnsxt-vds-kernel-Int.svg)
@@ -121,4 +122,4 @@ Figure 3. NSX-V security
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
