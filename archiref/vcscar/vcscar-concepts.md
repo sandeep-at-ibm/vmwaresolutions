@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -53,12 +53,12 @@ For the following rules, see the Core Elements and Element Modifiers as a refere
 
 ### Trick ruleset
 
-*   **base_combo** = 'direction \+ \[varial | turn_prefix\] \+
-\[rotation\] \+ \[base_trick\]'
-*   **next_combo** = ''\[varial | turn_prefix\] \+ \[rotation\] \+
-\[base_trick\]'
-*   **landing_combo** = ''\[varial | turn_prefix\] \+ landing'
-*   **trick** = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
+```
+base_combo = 'direction \+ \[varial | turn_prefix\] \+ \[rotation\] \+ \[base_trick\]'
+next_combo = ''\[varial | turn_prefix\] \+ \[rotation\] \+ \[base_trick\]'
+landing_combo = ''\[varial | turn_prefix\] \+ landing'
+trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
+```
 
 ### Trick rule engine
 
@@ -72,69 +72,37 @@ Figure 1. Skate language overview
 The following example is a list of sample tricks:
 
 ```
-
 fakie-kickflip
-
 fakie-kickflip to fakie-5-0 to fronside-halfcab (out)
-
 fakie-heeflip
-
 fakie-heeflip to fakie-maual to fakie-hardflip
-
 fakie-inward (varial) heeflip to fakie-backside tailslide to fakie
-
 switch-heeflip to fakie-maual to fakie-hardflip
-
 switch-hardflip to fakie-manual
-
 fakie-hardflp to fakie-nosegrind
-
 nollie-hardflip-to-tailslide
-
 nollie-inward-heelflip to frontside noseslide
-
 kickflip-frontside to crooked grind
-
 halfcab-heelflip to crooked grind
-
 frontside-shuvit to nosegrind to nollie-flip (out)
-
 kickflip to nosegrind to nollie-impossilbe (out)
-
 nollie-kickflip to noseslide to nollieflip
-
 nollie-kickflip to frontside-lipslide
-
 nollie-impossible to manual
-
 nollie-impossible to 5-0
-
 nollie-kickflip to crooked grind
-
 nollie-kickflip to crooked grind to nollie-halfcab-kickflip (out)
-
 frontside-nollie-halfcab-heelflip to fakie-nosegrind
-
 backside-nollie-halfcab-kickflip to backside-tailslide to backside-180-out
-
 frontside-nollie-cab-kicflip halfcab to backside-smithgrind
-
 halfcab to backside-smithgrind to backside-180-bigspin (out)
-
 kickflip-backside-tailslide to backside-180-kickflip
-
 kickflip-backside-tailslide to backside-backside-bigspin
-
 360-kicflip to nosemanual to nollie-360-kickflip
-
 360-kicflip to frontside-lipslide
-
 harflip to backside-lipslide
-
 kicflip to frontside-boardslidev
-
 nollie-heelflip to frontside-boardslide
-
 ```
 
 ## Relevance
@@ -143,4 +111,4 @@ The Trick Language is the key construct that is used to train Watson to recogniz
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)  
+* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)  

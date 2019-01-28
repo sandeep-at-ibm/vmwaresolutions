@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-20"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -33,31 +33,31 @@ The VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle s
 
 ## Physical structure
 
-The physical infrastructure required to deploy an {{site.data.keyword.cloud_notm}} Private (ICP) production instance onto a VMware vCenter Server on {{site.data.keyword.cloud_notm}} cluster, requires the following minimum specification.
+The physical infrastructure required to deploy an {{site.data.keyword.icpfull_notm}} production instance onto a VMware vCenter Server on {{site.data.keyword.cloud_notm}} cluster, requires the following minimum specification.
 
-Table 1. vCenter Server specification for ICP
+Table 1. vCenter Server specification for {{site.data.keyword.icpfull_notm}}
 
 | NFS Deployment | vSAN Deployment |
 :--|:----:|:----:
 Number of Servers | 3 | 4
 CPU | 28 Cores 2.2 GHz | 28 Cores 2.2 GHz
 Memory | 384 GB | 384 GB
-Storage | 2000 GB 2IOPS/GB Management, 2000 GB 4IOPS/GB Workload, 4000 GB 4IOPS/GB ICP | Min 960-GB SSD x 2
+Storage | 2000 GB 2IOPS/GB Management, 2000 GB 4IOPS/GB Workload, 4000 GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | Min 960-GB SSD x 2
 
-In addition to the {{site.data.keyword.cloud_notm}} Private hardware requirements, you must create persistent volumes in the ICP environment to store Cloud Automation Manager (CAM) database and log data. While CAM supports all of the persistent volume types that ICP supports, the two recommended storage configurations for CAM are NFS and GlusterFS.
+In addition to the {{site.data.keyword.cloud_notm}} Private hardware requirements, you must create persistent volumes in the {{site.data.keyword.icpfull_notm}} environment to store Cloud Automation Manager (CAM) database and log data. While CAM supports all of the persistent volume types that {{site.data.keyword.icpfull_notm}} supports, the two recommended storage configurations for CAM are NFS and GlusterFS.
 
 ## Virtual structure
 
-Figure 1. Structure of vCenter Server and ICP deployment
-![Structure of vCenter Server and ICP deployment](vcscar-icp.svg)
+Figure 1. Structure of vCenter Server and {{site.data.keyword.icpfull_notm}} deployment
+![Structure of vCenter Server and {{site.data.keyword.icpfull_notm}} deployment](vcscar-icp.svg)
 
-Within the vCenter Server instance, the ICP instance is deployed with a dedicated NSX Edge Services Gateway (ESG) and Distributed Logical Router (DLR).
-The ICP installation is loaded into the VXLAN subnet that is defined in the previous components.
+Within the vCenter Server instance, the {{site.data.keyword.icpfull_notm}} instance is deployed with a dedicated NSX Edge Services Gateway (ESG) and Distributed Logical Router (DLR).
+The {{site.data.keyword.icpfull_notm}} installation is loaded into the VXLAN subnet that is defined in the previous components.
 
-The ESG is configured with a source NAT rule (SNAT) to allow outbound traffic, which enables internet connectivity to download the ICP prerequisites and to connect to GitHub and Docker. Alternatively, you can use a web-proxy for internet connectivity. The ESG is also configured to provide access to DNS and NTP services.
+The ESG is configured with a source NAT rule (SNAT) to allow outbound traffic, which enables internet connectivity to download the {{site.data.keyword.icpfull_notm}} prerequisites and to connect to GitHub and Docker. Alternatively, you can use a web-proxy for internet connectivity. The ESG is also configured to provide access to DNS and NTP services.
 
-The ESG is also configured with a destination NAT rule (DNAT) to the ICP Master/Proxy virtual IP addresses from the {{site.data.keyword.cloud_notm}} 10.x network through to the VXLAN environment.
+The ESG is also configured with a destination NAT rule (DNAT) to the {{site.data.keyword.icpfull_notm}} Master/Proxy virtual IP addresses from the {{site.data.keyword.cloud_notm}} 10.x network to the VXLAN environment.
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

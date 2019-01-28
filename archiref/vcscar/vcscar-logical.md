@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -131,4 +131,4 @@ After trained, the Discovery Service can respond to queries such as:
 ### Related links
 
 * [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle overview
-](../vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

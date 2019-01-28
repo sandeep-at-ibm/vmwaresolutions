@@ -2,27 +2,27 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
-# Common services components
+# Common services components for VMware and Skate Advisor Concept Car
 
 Common services provide the services that are used by other services in the cloud
 management platform. Common services include identity and access services, domain
 name services, and NTP services.
 
-Figure 1. {{site.data.keyword.cloud}} Private (ICP) common services
-![ICP common services](vcscar-common-services.svg)
+Figure 1. {{site.data.keyword.icpfull_notm}} common services
+![{{site.data.keyword.icpfull_notm}} common services](vcscar-common-services.svg)
 
 ## Identity and access services
 
 As part of the VMware vCenter Server on {{site.data.keyword.cloud_notm}} automation, a Microsoft Active Directory (AD) is
 employed for Identity  Management. A single AD virtual server instance
 (VSI) is deployed. The vCenter is configured to use AD
-authentication and you can configure ICP as well for LDAP
+authentication and you can configure {{site.data.keyword.icpfull_notm}} as well for LDAP
 Authentication.
 
 ## Domain Name services
@@ -41,4 +41,4 @@ correctly.
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

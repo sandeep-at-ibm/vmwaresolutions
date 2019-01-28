@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,13 +45,13 @@ from the private portable subnet that is designated for management components.
 
 ### NSX Edge and Distributed Logical Router
 
-NSX Edge Services Gateway (ESG) pairs are deployed. In all cases, one gateway pair is used for outbound traffic from automation components that reside on the private network. For vCenter Server and {{site.data.keyword.cloud_notm}} Private (ICP), a second gateway that is known as the icp–managed edge, is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. The administrator can configure any required NSX component such as Distributed Logical Router (DLR), logical switches, and firewalls.
+NSX Edge Services Gateway (ESG) pairs are deployed. In all cases, one gateway pair is used for outbound traffic from automation components that reside on the private network. For vCenter Server and {{site.data.keyword.icpfull_notm}}, a second gateway that is known as the icp–managed edge, is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. The administrator can configure any required NSX component such as Distributed Logical Router (DLR), logical switches, and firewalls.
 
-For more information about the network design, see [vCenter Server Networking reference architecture](../vcsnsxt/vcsnsxt-intro.html).
+For more information about the network design, see [vCenter Server Networking reference architecture](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html).
 
-The following table summarizes the ICP ESG and DLR specifications.
+The following table summarizes the {{site.data.keyword.icpfull_notm}} ESG and DLR specifications.
 
-Table 1. ICP ESG specifications
+Table 1. {{site.data.keyword.icpfull_notm}} ESG specifications
 
 Attribute | Specification
 --|--
@@ -60,7 +60,7 @@ Edge size    Large | Number of vCPUs    2
 Memory    | 1 GB
 Disk    | 1000 GB on local datastore
 
-Table 2. ICP DLR specifications
+Table 2. {{site.data.keyword.icpfull_notm}} DLR specifications
 
 Attribute | Specification
 --|--|
@@ -69,16 +69,16 @@ Edge size    Compact | Number of vCPUs    1
 Memory    | 512 MB
 Disk    | 1000 GB on local datastore
 
-## ICP components
+## IBM Cloud Private components
 
-ICP is an application platform for developing and managing
-on-premises, containerized applications. ICP is an integrated environment
+{{site.data.keyword.icpfull_notm}} is an application platform for developing and managing
+on-premises, containerized applications. {{site.data.keyword.icpfull_notm}} is an integrated environment
 for managing containers that includes the container orchestrator
 Kubernetes, a private image repository, a management console, and
 monitoring frameworks.
 
-Figure 2. Virtual ICP deployment with vCenter Server
-![Virtual ICP Deployment with vCenter Server](vcscar-icp.svg)
+Figure 2. Virtual {{site.data.keyword.icpfull_notm}} deployment with vCenter Server
+![Virtual {{site.data.keyword.icpfull_notm}} Deployment with vCenter Server](vcscar-icp.svg)
 
 ### Boot node
 
@@ -120,7 +120,7 @@ is required inside the cluster.
 A management node is an optional node that hosts management
 services such as monitoring, metering, and logging. By configuring
 dedicated management nodes, you can prevent the master node from
-becoming overloaded. You can enable the management node only during ICP installation.
+becoming overloaded. You can enable the management node only during {{site.data.keyword.icpfull_notm}} installation.
 
 ### Vulnerability Advisor node
 
@@ -129,10 +129,10 @@ running the Vulnerability Advisor services. Vulnerability Advisor
 services are resource-intensive. If you use the Vulnerability Advisor
 service, specify a dedicated VA node.
 
-The following table provides the VM specifications that are required for a Highly Available ICP
+The following table provides the VM specifications that are required for a Highly Available {{site.data.keyword.icpfull_notm}}
 instance.
 
-Table 3. ICP VM specifications
+Table 3. {{site.data.keyword.icpfull_notm}} VM specifications
 
 Node |     Instances    | IP    | CPU    | RAM (GB)    | DISK (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -146,7 +146,7 @@ Worker    | 3-6    | IP (x3)    |4-8    |4    |150
 CAM requires worker nodes to have a higher vCPU and memory
 configuration.
 
-Table 4. ICP VM specifications
+Table 4. {{site.data.keyword.icpfull_notm}} VM specifications
 
 Node |     Instances    | IP    | CPU    | RAM (GB)    | DISK (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -155,7 +155,7 @@ Worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
 ## IBM Cloud Automation Manager components
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) is a multi-cloud, self-service
-management platform that runs on ICP that helps Developers and
+management platform that runs on {{site.data.keyword.icpfull_notm}} that helps Developers and
 administrators to meet business demands.
 
 Figure 3. CAM component reference
@@ -207,4 +207,4 @@ The database for the template designer application.
 
 ## Related Links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

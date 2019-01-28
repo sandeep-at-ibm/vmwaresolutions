@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-21"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,14 +19,14 @@ to extend into more cloud regions that are located in one of the following optio
 2. Another {{site.data.keyword.cloud_notm}} pod within the same data center.
 3. Another geography and another {{site.data.keyword.cloud_notm}} pod within the same data center.
 
-The {{site.data.keyword.cloud_notm}} Private (ICP) and Cloud Automation Manager (CAM) products
+The {{site.data.keyword.icpfull_notm}} and Cloud Automation Manager (CAM) products
 can be manually deployed into your on-premises virtualization platform,
-enabling cloud management from on-premises locations. Alternatively, ICP
+enabling cloud management from on-premises locations. Alternatively, {{site.data.keyword.icpfull_notm}}
 and CAM are offered as service extensions to an existing or new VMware
 vCenter Server on {{site.data.keyword.cloud_notm}} deployment, via automation, enabling
 cloud management from {{site.data.keyword.cloud_notm}}.
 
-ICP is an application platform for developing and managing on-premises,
+{{site.data.keyword.icpfull_notm}} is an application platform for developing and managing on-premises,
 containerized applications. It's an integrated environment for managing
 containers that includes the container orchestrator Kubernetes, a
 private image repository, a management console, and monitoring
@@ -42,7 +42,7 @@ levels that applications expect.
 {{site.data.keyword.cloud_notm}} Automation Manager is a multi-cloud, self-service management
 platform that runs on {{site.data.keyword.cloud_notm}} Private that allows Developers and
 administrators to meet business demands. Cloud Automation Manager
-Service Composer enables you to expose hybrid cloud services in the ICP catalog.
+Service Composer enables you to expose hybrid cloud services in the {{site.data.keyword.icpfull_notm}} catalog.
 
 ## Skate Advisor physical components
 
@@ -62,40 +62,26 @@ infrastructure.
 
 ### Application packaging and deployment
 
-The application is deployed as a CAM Orchestration which containers the
-following elements:
+The application is deployed as a CAM Orchestration which contains the following elements:
+* Service Orchestration - A CAM service orchestration is a workflow resource that describes the Terraform templates and Helm charts to deploy as a facet of a service. A service can be published and is the controlling artifact from which the entire deployment is orchestrated.
+* Helm Chart - The Helm chart resides in the local {{site.data.keyword.icpfull_notm}} Repository and deploys containers and other resources to {{site.data.keyword.icpfull_notm}}. A Helm chart is a description of Kubernetes resources that include:
+  - Container deployments
+  - Services
+  - Ingress
+  - Rules
+  - Endpoints
+
+* Docker Images - Docker images contain the operating system (ubuntu), the middleware (WebSphere Liberty, nginx), and the Skate Advisor and Skate Store code. Docker images are static objects that are deployed
+into running containers.
+* Terraform Template - A Terraform template is a file that describes cloud resources to be deployed. For Skate Advisor, a ubuntu template, which is preinstalled with mysql and the database schema is described.
+* VMWare Template - The VMWare template is an Ubuntu template with mysql and the database schema preinstalled.
 
 Figure 2. CAM orchestration
 ![CAM orchestration](vcscar-cam.svg)
 
-These elements are described as follows:
-* Service Orchestration - A CAM service orchestration is a workflow
-resource that describes the Terraform templates and Helm charts to
-deploy as a facet of a service. A service can be published and is the
-controlling artifact from which the entire deployment is orchestrated.
-* Helm Chart - The Helm chart resides in the local ICP
-Repository and deploys containers and other resources to ICP. A Helm
-chart is a description of Kubernetes resources that include:
- - Container deployments
- - Services
- - Ingress
- - Rules
- - Endpoints
-
-* Docker Images - Docker images contain the operating system (ubuntu),
-the middleware (WebSphere Liberty, nginx), and the Skate Advisor and
-Skate Store code. Docker images are static objects that are deployed
-into running containers.
-* Terraform Template - A Terraform template is a file that describes
-cloud resources to be deployed. For Skate Advisor, a ubuntu
-template, which is preinstalled with mysql and the database schema is
-described.
-* VMWare Template - The VMWare template is an Ubuntu template with mysql
-and the database schema preinstalled.
-
 ### Load balancing and proxying
 
-Load balancing and proxying are implemented via the ICP Ingress
+Load balancing and proxying are implemented via the {{site.data.keyword.icpfull_notm}} Ingress
 Controller component. This component handles the container scaling
 and failover in a seamless manner.
 
@@ -111,7 +97,7 @@ URL	|EndPoint
 /acme/api/explorer	|Skate Advisor Service
 
 Containers have unpredictable IP addresses that might scale in and out as
-the system demands. To overcome this issue, the ICP services are used to
+the system demands. To overcome this issue, the {{site.data.keyword.icpfull_notm}} services are used to
 perform real-time IP address resolution within the system.
 
 ### Acme skate web application
@@ -145,11 +131,11 @@ communicate with each other over a high-speed backbone in all {{site.data.keywor
 
 The Virtual Routing Appliance (VRA) allows customers to route private
 and public network traffic by associating the VLANs with the appliance.
-Both the vCenter Server NSX Edge and IKS infrastructure are configured
+Both the vCenter Server NSX Edge and {{site.data.keyword.containerlong_notm}} infrastructure are configured
 with a default route to the public network and with a standard
 10.0.0.0/8 route to the private network.
 
-A static route is required on the IKS infrastructure to the VRA
+A static route is required on the {{site.data.keyword.containerlong_notm}} infrastructure to the VRA
 appliance for any NSX VXLANs defined. From the NSX Edge, we configure
 BGP peering with the VRA over the private network, enabling route
 advertisement and interjection of the NSX VXLANs. This peering allows the
@@ -187,17 +173,17 @@ architecture.
 Figure 5. Cloud management
 ![On-cloud management](vcscar-cloud-management.svg)
 
-This diagram represents ICP and CAM deployed on a vCenter
-Server instance, with connections to the on-premises vCenter and the IKS
+This diagram represents {{site.data.keyword.icpfull_notm}} and CAM deployed on a vCenter
+Server instance, with connections to the on-premises vCenter and the {{site.data.keyword.containerlong_notm}}
 service. Using CAM, system administrators and Developers can
 deploy virtual machines on-premises or into the vCenter Server instance
-and containers to the ICP and IKS clusters.
+and containers to the {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}} clusters.
 
 In the diagram, CAM logically creates cloud connections to the vCenters,
-cloud providers, and ICP and IKS environments. ICP Clusters are
+cloud providers, and {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}} environments. {{site.data.keyword.icpfull_notm}} Clusters are
 deployed to each datacenter/cloud environment, with MCM providing the
-mechanism to connect the ICP clusters into a single management view.
+mechanism to connect the {{site.data.keyword.icpfull_notm}} clusters into a single management view.
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
