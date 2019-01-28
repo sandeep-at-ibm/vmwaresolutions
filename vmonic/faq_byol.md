@@ -2,17 +2,23 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # FAQ about licensing and BYOL
 
 Find answers to frequently asked questions about licensing, including the Bring Your Own License (BYOL) feature of {{site.data.keyword.vmwaresolutions_full}}.
 
 ## What is BYOL?
+{: faq}
 
 Bring Your Own License, or BYOL, is a feature available to VMware Cloud Foundation instances in V1.8 and later, and to VMware vCenter Server and VMware vSphere clusters in V2.0 and later. With BYOL, you can use your own VMware licenses for one or more of the following VMware software components:
 * VMware vCenter Server
@@ -22,13 +28,14 @@ Bring Your Own License, or BYOL, is a feature available to VMware Cloud Foundati
 
 If you choose to use your own license for a VMware component and provide a valid license key for it, no license is ordered from IBM for this component and no monthly license charges are incurred to your {{site.data.keyword.cloud_notm}} infrastructure account for this component.
 
-**Note:** The BYOL feature is not available to Business Partner users.
+The BYOL feature is not available to Business Partner users.
+{:note}
 
 ## Where do I manage the licenses and components that are ordered through VMware vSphere on IBM Cloud?
 
 After an order to create a new cluster for VMware vSphere on {{site.data.keyword.cloud_notm}} is placed, the VMware licenses, ESXi servers, and other networking components, are delivered and can be managed from the {{site.data.keyword.slportal}}.
 
-After deployment, go to the {{site.data.keyword.vmwaresolutions_short}} console to scale the new cluster by using the saved configuration. For more information, see [Scaling existing vSphere clusters](../vsphere/vs_scalingexistingclusters.html).
+After deployment, go to the {{site.data.keyword.vmwaresolutions_short}} console to scale the new cluster by using the saved configuration. For more information, see [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html).
 
 ## What license editions and CPUs are required for BYOL?
 
@@ -147,8 +154,7 @@ While the vCenter Server with Hybridity Bundle includes NSX Advanced, you can up
 
 ### Related links
 
-* [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
-* [Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html)
-* [Accessing the console](loginmethod.html)
-* [Contacting IBM Support](trbl_support.html)
-* [vRealize Automation](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/vRealizeAutomation){:new_window}
+* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Accessing the console](/docs/services/vmwaresolutions/vmonic/loginmethod.html)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

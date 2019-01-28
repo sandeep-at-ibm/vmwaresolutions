@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -73,5 +73,5 @@ By default, all unread notifications are displayed. You can filter the notificat
 
 ### Related links
 
-* [FAQ](faq.html)
-* [User account and settings](useraccount.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [User account and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html)

@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-04-16"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Release notes for V2.1
 
@@ -20,7 +24,7 @@ This release includes new features, component updates, usability enhancements, a
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-For more information, see [Addressing Spectre and Meltdown vulnerabilities](../vmonic/trbl_fix_spectre.html).
+For more information, see [Addressing Spectre and Meltdown vulnerabilities](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
 
 ## VMware HCX on IBM Cloud
 
@@ -31,10 +35,10 @@ You can order Cloud Foundation or vCenter Server instances with the HCX on {{sit
 You can also order an on-premises HCX instance for licensing and activation of your on-premises HCX installation.
 
 For more information, see the following topics:
-* [Considerations for HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)
-* [Managing HCX on {{site.data.keyword.cloud_notm}}](../services/managinghcx.html)
-* [Considerations for on-premises HCX instances](../services/standalone_considerations.html)
-* [Ordering on-premises HCX instances](../services/standalone_orderingserviceinstances.html)
+* [Considerations for HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [Managing HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [Considerations for on-premises HCX instances](/docs/services/vmwaresolutions/services/standalone_considerations.html)
+* [Ordering on-premises HCX instances](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
 
 ## More flexible Bring Your Own License model for VMware Cloud Foundation and vCenter Server
 
@@ -44,21 +48,21 @@ Additionally, when you add nodes to a cluster that is licensed with your key, th
 
 For more information, see the following topics:
 
-* [Adding and viewing clusters for Cloud Foundation instances](../sddc/sd_addingviewingclusters.html)
-* [Adding and viewing clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html)
-* [FAQ about BYOL](../vmonic/faq_byol.html)
+* [Adding and viewing clusters for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
+* [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [FAQ about BYOL](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
 
 ## Zerto on IBM Cloud service component updates
 
 For Zerto on {{site.data.keyword.cloud_notm}} service that is deployed in V2.1 and later Cloud Foundation instances and vCenter Server instances, Zerto Virtual Replication 5.5u2 is provisioned. Zerto virtual replication appliances (VRAs) are now deployed to the management data store (either vSAN or Endurance) rather than to the local data store for performance reasons. If you have existing VRAs, consider migrating their storage to the management data store for better performance.
 
-For more information, see [Zerto on {{site.data.keyword.cloud_notm}} overview](../services/addingzertodr.html).
+For more information, see [Zerto on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/addingzertodr.html).
 
 ## Updates for VMware vCenter Server instances
 
 ### Network MTU configuration settings
 
-For V2.1 or later releases, new vCenter Server instances are ordered with the setting Public Distributed Virtual Switch (DVS) as MTU 1500 (default). For more information, see _Network MTU configuration settings_ in [vCenter Server Bill of Materials](../vcenter/vc_bom.html).
+For V2.1 or later releases, new vCenter Server instances are ordered with the setting Public Distributed Virtual Switch (DVS) as MTU 1500 (default). For more information, see _Network MTU configuration settings_ in [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 ### Automatic application of VMware ESXi patches and updates to hosts
 
@@ -67,36 +71,37 @@ In V2.0 and earlier VMware vCenter Server instances, patches were not automatica
 In V2.1 and later instances, the automation applies patches to new ESXi hosts so that the patch level matches the patch level at the time that the initial instance was provisioned. You are responsible for manually applying any future patches and updates.
 When VMware patches and updates become available in future releases, the automation scans the ESXi hosts of your existing instances and email you a reminder to apply the most recent patches and updates manually.
 
-For more information, see [Applying updates to vCenter Server instances](../vcenter/vc_applyingupdates.html).
+For more information, see [Applying updates to vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html).
 
 ### Price estimates for VMware NSX license upgrades
 
 You can now see a price estimate before you submit an order to upgrade to the VMware NSX Advanced or Enterprise edition. The pricing is based on the number of ESXi hosts in the vCenter Server instance. This purchase changes only the NSX license key and upgrades your VMware NSX Base edition to the Advanced or Enterprise edition. The purchase does not upgrade the NSX software version.
 
-For more information, see [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html).
+For more information, see [vCenter Server overview](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html).
 
 ### Maximum servers per cluster increases from 32
 
-For the default cluster in an instance, you can deploy or expand up to 51 servers. For all subsequent clusters in an instance, you can deploy or expand up to 59 servers. For more information, see [Adding and viewing clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html).
+For the default cluster in an instance, you can deploy or expand up to 51 servers. For all subsequent clusters in an instance, you can deploy or expand up to 59 servers. For more information, see [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html).
 
-**Note:** This capability is available only to instances that are deployed in V2.1 and later. Instances that are upgraded to V2.1 from pre-V2.1 releases do not have this option.
+This capability is available only to instances that are deployed in V2.1 and later. Instances that are upgraded to V2.1 from pre-V2.1 releases do not have this option.
+{:note}
 
 ### User customized IBM Cloud Bare Metal Server configuration options
 
 User customized Bare Metal Servers configuration now offers the Dual Intel Xeon Gold 6140 with 36 cores total, 2.3 GHz.
 
 For more information, see the following topics:
-* [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html)
-* [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
+* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 
 ### Individual NFS file share configurations
 
 You can now configure NFS file shares on an individual basis. Select the file size and performance level for each individual file share or select the same file size and performance level for all of the file shares that you order.
 
 For more information, see the following topics:
-* [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html)
-* [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
-* [Adding and viewing clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html)
+* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
 
 ## User interface updates and enhancements
 

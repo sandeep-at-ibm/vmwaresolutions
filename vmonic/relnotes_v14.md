@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-03-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Release notes for V1.4
 
@@ -22,7 +26,7 @@ The following components are new or updated:
 * VMware ESXi 6.0 u2 p04
 * A new Windows VSI (Virtual Server Instance) is ordered for Microsoft Active Directory (AD) and DNS (Domain Name System) services, which are required for multi-site configuration support in this release. This VSI has the following specifications: Windows 2012 R2 (8 GB RAM / 2 CPU cores / 100 GB disk / Dual 1 Gbps private uplinks).
 
-For more information, see [Cloud Foundation overview](../sddc/sd_cloudfoundationoverview.html).
+For more information, see [Cloud Foundation overview](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html).
 
 ## Component updates for vCenter Server instances
 
@@ -34,7 +38,8 @@ VMware NSX for vSphere 6.2.4 is now installed by default on all vCenter Server i
 
 As part of the NSX installation, the NSX Manager is installed and licensed on all new instances that are deployed. In addition, an NSX Edge is created for instance management, but you can create your own NSX Edge components if required. For more information about the NSX Edge, see the _VMware NSX Edge_ section on this page.
 
-**Note**: The NSX Controller is not installed on vCenter Server instances (the way it is installed on Cloud Foundation instances). If you are using VXLAN or distributed logical routers for your vCenter Server instances, then you must install the NSX Controller yourself.
+The NSX Controller is not installed on vCenter Server instances (the way it is installed on Cloud Foundation instances). If you are using VXLAN or distributed logical routers for your vCenter Server instances, then you must install the NSX Controller yourself.
+{:note}
 
 For more information about the enhancements that are introduced in VMware NSX for vSphere 6.2.4, its requirements, and known issues, see [NSX for vSphere 6.2.4 release notes](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
 
@@ -46,8 +51,8 @@ During instance deployment, a Management VMware NSX Edge Services Gateway (ESG) 
 
 To ensure security, firewall rules are in place to allow only outbound HTTPS communications that are initiated by the management virtual machines. This ESG is deployed in a Large configuration, and only IBM Support can modify the configuration. For more information, see the following topics:
 
-* [vCenter Server technical specifications](../vcenter/vc_vcenterserveroverview.html)
-* [Does the management services NSX Edge pose a security risk?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* [vCenter Server technical specifications](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ### NSX license
@@ -74,20 +79,21 @@ This release includes the following topology enhancements for your instances:
 * For both Cloud Foundation instances and vCenter Server instances: Optimized networking configuration, that is, only the primary public and private IP addresses that are assigned by SoftLayer® are attached to ESXi servers. Portable private addresses are no longer deployed for management traffic.
 * For Cloud Foundation instances only: Windows AD SSO (Active Directory Single Sign-On) and Domain Name System (DNS) server
 
-**Note**: Because of these changes, you cannot use your existing pre-V1.4 instances in the current release. To reuse the configuration of your existing instances, you must upgrade them to the current version. For more information, see [Upgrading instances from pre-V1.4](movinginstances.html).
+Because of these changes, you cannot use your existing pre-V1.4 instances in the current release. To reuse the configuration of your existing instances, you must upgrade them to the current version. For more information, see [Upgrading instances from pre-V1.4](/docs/services/vmwaresolutions/vmonic/movinginstances.html).
+{:note}
 
 ## Multi-site configuration support for Cloud Foundation instances
 
 You can now deploy either a single Cloud Foundation instance, just like in previous releases or, in addition, deploy secondary instances that are attached to a primary instance. The multi-site configuration model uses a hub and spoke topology with a primary site and a maximum of seven secondary sites.
 
-For more information, see [Multi-site configuration for Cloud Foundation instances](../sddc/sd_multisite.html).
+For more information, see [Multi-site configuration for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_multisite.html).
 
 ## Enhancements to the deployment of Zerto disaster recovery
 
 * For Cloud Foundation instances, the deployment of Zerto disaster recovery is automated rather than handled through a support ticket. All Zerto components, such as a private portable subnet, a Windows VSI (Virtual Service Instance), and the Zerto license charges are listed on the estimated cost, so you can review before you place your order.
 * For vCenter Server instances, the deployment of Zerto disaster recovery is done through a support ticket, as in the previous release. However, NSX Edge and the public portable subnet are no longer needed, since they are now included in the base deployment. The charges for a private portable subnet, a Windows VSI (Virtual Service Instance), and the Zerto license still apply.
 
-For more information, see [Zerto disaster recovery](../services/addingzertodr.html).
+For more information, see [Zerto disaster recovery](/docs/services/vmwaresolutions/services/addingzertodr.html).
 
 ## Instance order process
 
@@ -98,15 +104,15 @@ The instance order process is greatly simplified:
 
 For more information, see the following topics:
 
-* [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
-* [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
+* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 
 ## Instance management
 
 New features and improvements are made to the instance management process:
 
-* For Cloud Foundation instances, you can view the user name and passwords for various instance components on the instance details page. For more information, see [Viewing Cloud Foundation instances](../sddc/sd_viewinginstances.html).
-* For vCenter Server instances, you can now install software updates and patches for IBM components directly from the console. For more information, see [Applying updates and patches to vCenter Server instances](../vcenter/vc_applyingupdates.html).
+* For Cloud Foundation instances, you can view the user name and passwords for various instance components on the instance details page. For more information, see [Viewing Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html).
+* For vCenter Server instances, you can now install software updates and patches for IBM components directly from the console. For more information, see [Applying updates and patches to vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html).
 
 ## Console notifications
 
@@ -114,5 +120,5 @@ You can now configure console notifications on the **Settings** page. By default
 
 For more information, see the following topics:
 
-* [User accounts and settings](useraccount.html)
-* [Notifications](notifications.html)
+* [User accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [Notifications](/docs/services/vmwaresolutions/vmonic/notifications.html)

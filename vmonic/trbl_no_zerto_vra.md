@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,4 +22,4 @@ Open an {{site.data.keyword.cloud}} Support ticket and work with IBM Support to 
 
 To access the Zerto console, click the Zerto card from the **Services** tab of the instance and click **View Details** then, **View Zerto Console**.
 
-For more information about contacting IBM Support, see [Contacting IBM Support](trbl_support.html).
+For more information about contacting IBM Support, see [Contacting IBM Support](/docs/services/vmwaresolutions//vmonic/trbl_support.html).
