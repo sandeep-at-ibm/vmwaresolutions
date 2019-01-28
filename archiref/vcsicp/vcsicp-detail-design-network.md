@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-21"
+lastupdated: "2019-01-23"
 
 ---
 
 # Network access and flows
 
-## Container application access – ICP
+## Container application access – IBM Cloud Private
 
 There are three main ways to get external traffic and access into your Kubernetes cluster applications:
 
@@ -18,19 +18,19 @@ There are three main ways to get external traffic and access into your Kubernete
 - LoadBalancer
 - Ingress
 
-### NodePort - ICP
+### NodePort - IBM Cloud Private
 
 Nodeports are a simple way of exposing external access to a workload for initial development and testing but not recommended for production. Ingress or load balancer is the recommended path.
 
-### LoadBalancer - ICP
+### LoadBalancer - IBM Cloud Private
 
-Currently, the ICP Platform supports an external Load Balancer for application workload.
+Currently, the {{site.data.keyword.icpfull_notm}} Platform supports an external Load Balancer for application workload.
 
-### Ingress - ICP
+### Ingress - IBM Cloud Private
 
-An Ingress is a collection of rules that allow inbound connections to reach the cluster services. It can be configured to give services externally reachable URLs, load balance traffic, terminate SSL, offer name-based virtual hosting, and more.  The Proxy node in ICP infrastructure performs this function.
+An Ingress is a collection of rules that allow inbound connections to reach the cluster services. It can be configured to give services externally reachable URLs, load balance traffic, terminate SSL, offer name-based virtual hosting, and more.  The Proxy node in {{site.data.keyword.icpfull_notm}} infrastructure performs this function.
 
-## Container application access – IKS
+## Container application access – IBM Cloud Kubernetes Service
 
 There are three main ways to get external traffic and access into your Kubernetes cluster applications:
 
@@ -38,15 +38,15 @@ There are three main ways to get external traffic and access into your Kubernete
 - LoadBalancer
 - Ingress
 
-### NodePort - IKS
+### NodePort - IBM Cloud Kubernetes Service
 
 Nodeports are a simple way of exposing external access to a workload for initial development and testing but not recommended for production. Ingress or load balancer is the recommended path.
 
-### LoadBalancer - IKS
+### LoadBalancer - IBM Cloud Kubernetes Service
 
-Every IKS Cluster is provisioned with a public or private Application Load Balancer (ALB). The ALB uses a secured and unique public or private entry point to route incoming requests to your applications.
+Every {{site.data.keyword.containerlong_notm}} Cluster is provisioned with a public or private Application Load Balancer (ALB). The ALB uses a secured and unique public or private entry point to route incoming requests to your applications.
 
-### Ingress - IKS
+### Ingress - IBM Cloud Kubernetes Service
 
 An Ingress is a collection of rules that allow inbound connections to reach the cluster services. It can be configured to give services externally reachable URLs, load balance traffic, terminate SSL, offer name-based virtual hosting, and more.
 
@@ -54,11 +54,11 @@ An Ingress is a collection of rules that allow inbound connections to reach the 
 
 The following traffic flows are described:
 
-- External user on the internet to a web tier hosted in a container in {{site.data.keyword.cloud}} Private (ICP).
-- Web tier hosted in a container in ICP to database tier hosted in a virtual machine (VM) in VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
+- External user on the internet to a web tier hosted in a container in {{site.data.keyword.icpfull_notm}}.
+- Web tier hosted in a container in {{site.data.keyword.icpfull_notm}} to database tier hosted in a virtual machine (VM) in VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 - Enterprise user on the corporate network access to a VM in vCenter Server.
 
-### External user on the internet to a web tier hosted in a container in ICP
+### External user on the internet to a web tier hosted in a container in IBM Cloud Private
 
 1. The external user makes a request to the web tier by using the URL.
 2.	DNS is used to determine the IP address. This IP address is an {{site.data.keyword.cloud_notm}} public address on a portable subnet that is assigned to the vCenter Server instance.
@@ -67,11 +67,11 @@ The following traffic flows are described:
 5.	Within the worker node, kube-proxy routes the request to the ALB or Ingress Service.
 6.	If the application is on the same worker node, then iptables is used to determine which internal interface is used to forward the request. If the application is on a different worker node, then the Calico vRouter routes to the applicable worker node, by using IP-in-IP encapsulation. The IP-in-IP packet is encapsulated in a VXLAN frame for transport to the vSphere ESXi host where the worker node is located.
 
-### Web tier hosted in a container in ICP to database tier hosted in a VM in vCenter Server
+### Web tier hosted in a container in IBM Cloud Private to database tier hosted in a VM in vCenter Server
 
-How the route tables in the ESG and vRouters are populated depends on the method of integration. See ICP and vCenter Server Integration.
+How the route tables in the ESG and vRouters are populated depends on the method of integration. See {{site.data.keyword.icpfull_notm}} and vCenter Server Integration.
 
-1.	The web tier that runs in a container in ICP makes a request to a database that runs on a VM in the same vCenter Server instance.
+1.	The web tier that runs in a container in {{site.data.keyword.icpfull_notm}} makes a request to a database that runs on a VM in the same vCenter Server instance.
 2.	DNS is used to resolve the request to the IP address of the database.
 3.	The container sends the request to the Calico vRouter.
 4.	The vRouter has its route table that is populated with the IP address ranges hosted on the vCenter Server instance.
@@ -93,23 +93,23 @@ How the route tables in the ESG and vRouters are populated depends on the method
 
 ## Public access network
 
-ICP and CAM by default require internet connectivity to retrieve Docker images, Helm charts, Terraform templates, and operating system package managers.
+{{site.data.keyword.icpfull_notm}} and CAM by default require internet connectivity to retrieve Docker images, Helm charts, Terraform templates, and operating system package managers.
 In the latest releases, there is now support for proxy based installs for installations that are not directly connected to the internet and have options to install in an offline mode.
 
 ###	NSX firewall
 
-The ICP NSX Edge firewall, is configured with rules to allow:
+The {{site.data.keyword.icpfull_notm}} NSX Edge firewall, is configured with rules to allow:
 *	Enable VXLAN networks access to public access.
 *	Enable VXLAN networks access to private {{site.data.keyword.cloud_notm}} network access.
 *	Enable private {{site.data.keyword.cloud_notm}} network access to VXLAN networks.
 
 ### NSX NAT
 
-The ICP NSX NAT, is configured with the following NATs:
+The {{site.data.keyword.icpfull_notm}} NSX NAT, is configured with the following NATs:
 *	SNAT for VXLAN networks access to public access.
 *	SNAT for VXLAN networks access to private {{site.data.keyword.cloud_notm}} network access.
-*	DNAT for ICP Cluster vIPs.
+*	DNAT for {{site.data.keyword.icpfull_notm}} Cluster vIPs.
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
