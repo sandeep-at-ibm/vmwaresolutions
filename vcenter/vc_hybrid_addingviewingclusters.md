@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-06"
 
 ---
 
@@ -20,7 +20,7 @@ You can add clusters to your VMware vCenter Server on {{site.data.keyword.cloud}
 
 ## Adding clusters to vCenter Server with Hybridity Bundle instances
 
-The number of clusters that can be added to an instance depend on the instance version:
+The number of clusters that can be added to an instance depends on the instance version:
 * For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment.
 * For instances that were deployed in (or upgraded to) V2.3 and later, you can add up to 10 clusters.
 

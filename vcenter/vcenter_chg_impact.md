@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-06"
 
 ---
 
@@ -42,7 +42,9 @@ The `<service_name>` together with the `<service_uuid>` truncates to 20 characte
 
 ## VMware resources for vCenter Server instances (V1.9 and later)
 
-For instances deployed in V1.9 and later, if the vCenter Server instance is in a **Ready to Use** state, you can modify the VMware virtual datacenter, cluster, switches, port groups, and customer datastore names from the VMware vSphere Web Client. However, you must not change the name of the management datastore from its default value: **vsanDatastore** for vSAN instances and **management-share** for Network File System (NFS) instances.
+For instances deployed in V1.9 and later, if the vCenter Server instance is in a **Ready to Use** state, you can modify the VMware virtual datacenter, cluster, switches, port groups, and customer datastore names from the VMware vSphere Web Client.
+
+However, you must not change the name of the management datastore from its default value, which is  **vsanDatastore** for vSAN instances and **management-share** for Network File System (NFS) instances. In addition, you must not change the name of the network uplinks that are created during provisioning.
 
 ## VMware resources for vCenter Server instances (V1.8 and earlier)
 
