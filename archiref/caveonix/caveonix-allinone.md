@@ -12,7 +12,7 @@ lastupdated: "2019-02-06"
 
 An automated deployment and configuration of a single virtual machine (VM) that hosts all the RiskForesight application components. This deployment model is suitable for small deployments, up to 100 assets with 7 - 30 days of indexing. The “all-in-one” VM details are shown in the following table:
 
-Table1. All-in-one parameters
+Table 1. All-in-one parameters
 
 |Parameter	|Value|
 |---|---|
