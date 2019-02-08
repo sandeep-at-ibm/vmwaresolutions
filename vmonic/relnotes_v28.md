@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-28"
+lastupdated: "2019-02-08"
 
 ---
 
@@ -93,13 +93,15 @@ Previously, you could order a Cloud Foundation or vCenter Server instance with t
 
 Starting with the V2.8 release, the service is available as a standalone service without being associated to a VMware instance. Each instance of the service can serve one or more Cloud Foundation instances, vCenter Server instances, or vSphere clusters.
 
-**Note**: In this release, KMIP for VMware on {{site.data.keyword.cloud_notm}} is limited to vSphere encryption only.
-
 For more information, see [KMIP for VMware on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html).
 
 ## Reference architecture documentation
 
-A new technical document for KMIP for VMware on {{site.data.keyword.cloud_notm}} solution architecture is available in the *Reference* section of the user documentation. For more information, see [KMIP for VMware overview](/docs/services/vmwaresolutions/archiref/kmip/overview.html).
+(Updated on February 08, 2019) The following technical documents are now available in the *Reference* section of the user documentation:
+
+* [{{site.data.keyword.vmwaresolutions_short}} with NSX-T architecture](/docs/services/vmwaresolutions/archiref/vcsarch/vcsarch-overview.html)
+* [Caveonix RiskForesight reference architecture](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-on-vcs.html)
+* [HCX on {{site.data.keyword.cloud_notm}} deployment and operations guide](/docs/services/vmwaresolutions/archiref/vcshcx/vcshcx-intro.html)
 
 ## User interface updates and enhancements
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-20"
+lastupdated: "2019-02-06"
 
 ---
 
@@ -45,7 +45,8 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} uses the IBM Key Protect for
 ## Considerations when you use KMIP for VMware on IBM Cloud
 
 * To use an ordered KMIP for VMware on {{site.data.keyword.cloud_notm}} service as a Key Management Server (KMS) that is registered to VMware vCenter Server, ensure that the network connectivity from the vCenter Server to the endpoint of the ordered KMIP for VMware on {{site.data.keyword.cloud_notm}} service is functional.
-* To use the service for VMware vSAN encryption, ensure that the network connectivity between the hosts on the target vSAN and the endpoint of the ordered KMIP for VMware on {{site.data.keyword.cloud_notm}} service is functional.
+* To use the service with VMware vSAN encryption, ensure that the network connectivity between the hosts on the target vSAN and the endpoint of the ordered KMIP for VMware on {{site.data.keyword.cloud_notm}} service is functional.
+* When you use KMIP for VMware with vSAN encryption, the vSAN health check might issue periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings.
 
 ## Considerations when you remove KMIP for VMware on IBM Cloud
 

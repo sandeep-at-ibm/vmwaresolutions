@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-05"
 
 ---
 
@@ -16,8 +16,6 @@ lastupdated: "2019-01-25"
 
 KMIP for VMware on {{site.data.keyword.cloud}} provides a key management service compatible with VMware vSAN encryption and VMware vSphere encryption, by using [IBM Key Protect](/docs/services/key-protect/index.html) to provide root key and data key storage.
 
-**Note**: In this release, KMIP for VMware on {{site.data.keyword.cloud_notm}} is limited to vSphere encryption only.
-
 ## Storage encryption options
 
 KMIP for VMware is compatible with both VMware vSAN encryption and vSphere encryption. Both of these solutions are implemented in the hypervisor layer but provide slightly different functions. Evaluate their functions according to your requirements.
@@ -28,8 +26,11 @@ VMware vSAN encryption is only applicable to vSAN datastores. With this solution
 
 Because vSAN encryption operates at the datastore level, its primary goal is to prevent data exposure if loss of physical disk drives occurs. Also, vSAN encryption is fully compatible with all virtual machine backup and replication technologies, such as vSphere replication, cross-vCenter vMotion, VMware HCX, Zerto, Veeam, and IBM Spectrum Protect Plus.
 
-vSAN encryption does not encrypt the host to host vSAN replication communications within your cluster. vSAN encryption is not applicable to other storage solutions such as {{site.data.keyword.cloud_notm}} Endurance file and block storage. vSAN encryption requires the vSAN Enterprise license.
-{:note}
+**Notes**:
+* vSAN encryption does not encrypt the host to host vSAN replication communications within your cluster.
+* vSAN encryption is not applicable to other storage solutions such as {{site.data.keyword.cloud_notm}} Endurance file and block storage.
+* vSAN encryption requires the vSAN Enterprise license.
+* The vSAN health check might issue periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings.
 
 ### vSphere encryption
 

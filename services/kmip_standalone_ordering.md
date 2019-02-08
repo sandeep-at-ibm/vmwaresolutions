@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-06"
 
 ---
 
@@ -15,10 +15,10 @@ You can order a KMIP for VMware on {{site.data.keyword.cloud}} instance without 
 ## Before you begin
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
-*  You reviewed all the considerations in [Considerations when installing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html).
+* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+* You reviewed all the considerations in [Considerations when installing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html).
 
-## Ordering KMIP for VMware on IBM Cloud instances
+## Procedure to order KMIP for VMware on IBM Cloud instances
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Getting started** from the left navigation pane.
 2. In the **Order additional services** area, click **KMIP for VMware on IBM Cloud**.
@@ -69,7 +69,7 @@ When the instance is ready to use, the status of the instance is changed to **In
 
 Add client certificates for the KMIP for VMware on {{site.data.keyword.cloud_notm}} instance that you ordered. For more information, see [Adding, viewing, and deleting certificates for KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_addingdeletingcert.html).
 
-### Related links
+## Related links
 
 * [Viewing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_viewing.html)
 * [Deleting KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_deleting.html)

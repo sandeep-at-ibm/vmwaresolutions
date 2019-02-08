@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-06"
 
 ---
 
@@ -23,7 +23,7 @@ The delete cluster feature is available only to instances that are deployed in (
 
 ## Adding clusters to vCenter Server instances
 
-The number of clusters that can be added to an instance depend on the instance version:
+The number of clusters that can be added to an instance depends on the instance version:
 * For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment.
 * For instances that were deployed in (or upgraded to) V2.2 and later, you can add up to 10 clusters.
 * For instances that were deployed in V2.1 or earlier, you can add up to five clusters.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-06"
 
 ---
 
@@ -23,7 +23,7 @@ Table 1. Supported functions for Cloud Foundation, vCenter Server, vCenter Serve
 | Cloud automated multi-site deployment | Supported for new instances that are deployed in V2.0 or later | Supported for new instances that are deployed in V2.0 or later | Supported | Supported. Automated configuration not included |
 | Add ESXi servers | Supported | Supported | Supported | Supported. Automated configuration not included |
 | Remove ESXi servers | Supported | Supported | Supported | Supported. Automated configuration not included |
-| Multi-cluster support | Five clusters | Ten clusters | Ten clusters | Supported. Automated configuration not included |
+| Multi-cluster support | Five clusters | Maximum number depends on VMware sizing guidelines | Maximum number depends on VMware sizing guidelines | Supported. Automated configuration not included |
 | Client-managed updating and patching of VMware stack | Automation-assisted updates:<br/>SDDC Manager | Client-managed updates:<br/>Native VMware tools (VMware Update Manager) | Client-managed updates:<br/>Native VMware tools (VMware Update Manager) | Client-managed updates:<br/>Native VMware tools (VMware Update Manager) |
 | Backup and restore | Manually using IBM Spectrum Protect Plus or Veeam | Manually using IBM Spectrum Protect Plus or Veeam | Manually using IBM Spectrum Protect Plus or Veeam | Backup and restore solution not included |
 | Software-defined networking | NSX Enterprise | NSX Base, Advanced, or Enterprise | NSX Advanced or Enterprise | NSX Standard, Base, or Enterprise. Automated configuration not included |
