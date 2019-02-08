@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-08"
 
 ---
 
@@ -163,7 +163,7 @@ Additionally, it is possible to attach NFSv3 file shares from the NetApp ONTAP S
 
 The availability of the 10 IOPS/GB depends on the {{site.data.keyword.CloudDataCent_notm}}. Data centers that offer the 10 IOPS/GB performance tier also include provider–managed encryption of data at rest (AES–256 encryption), and are backed by all–flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB.
 
-For more information on the shared NAS used in this solution, see [Attached Storage for vCenter Server™ on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
+For more information on the shared NAS used in this solution, see [Attached Storage for vCenter Server™ on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
 #### Shared iSCSI storage
 
@@ -179,7 +179,7 @@ Additional iSCSI LUNs for workloads can also be allocated and mounted across all
 
 The availability of the 10 IOPS/GB depends on the {{site.data.keyword.CloudDataCent_notm}}. Data centers that offer the 10 IOPS/GB performance tier also include provider–managed encryption of data at rest (AES–256 encryption), and are backed by all–flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB.
 
-For more information about the shared NAS used in this solution, see [Attached Storage for vCenter Server™ on {{site.data.keyword.cloud_notm}} Solution Architecture.
+For more information about the shared NAS used in this solution, see [Attached Storage for vCenter Server™ on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
 ## Related links
 

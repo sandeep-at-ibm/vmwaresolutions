@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-08"
 
 ---
 
@@ -59,7 +59,7 @@ In summary, the {{site.data.keyword.vmwaresolutions_short}} offerings:
 - Accelerate delivery of IT projects to Developers and lines of business
 by reducing the time that it takes for procurement, architecture,
 implementation, and deployment of resources from weeks or even months,
-to hours
+to hours.
 - Enhance security with dedicated bare metal servers in a hosted private
 cloud, including the encryption of data at rest. For vSAN
 storage, encryption of data at rest is optional using either vSAN or
@@ -69,9 +69,9 @@ select data centers or is optional using vSphere encryption. You must manage nec
 - Enable consistent management and governance of the deployed hybrid
 cloud by providing full administrative access to virtualization
 management, thus preserving your existing VMware tools, scripts, and
-investments in training
+investments in training.
 - Use VMware expertise at global scale with IBM Professional and
-Managed Services spanning 30+ {{site.data.keyword.CloudDataCents_notm}} worldwide
+Managed Services spanning 30+ {{site.data.keyword.CloudDataCents_notm}} worldwide.
 
 ## IBM Cloud for VMware Solutions with NSX-T components
 
