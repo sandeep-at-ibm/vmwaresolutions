@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-06"
 
 ---
 
@@ -13,8 +13,6 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # KMIP for VMware implementation and management
-
-**Note**: In this release, KMIP for VMware on {{site.data.keyword.cloud_notm}} is limited to vSphere encryption only.
 
 ## Connecting the key management server
 
@@ -32,6 +30,9 @@ To enable vSphere encryption or vSAN encryption by using KMIP for VMware on {{si
 ## Enabling encryption
 
 To use vSAN encryption, edit the vSAN general settings in your vCenter cluster and select the encryption check box.
+
+The vSAN health check might issue periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings.
+{:note}
 
 To use vSphere encryption, edit your virtual machine storage policies to require disk encryption.
 
