@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-06"
 
 ---
 
@@ -61,21 +61,10 @@ Transfer a powered-off virtual machine to IBM Cloud over a stretched network.
 
 The following networking features are built into the Cloud Gateway and the Layer 2 Concentrators.
 
-### Intelligent flow routing
-
-Automatically selects the best connection based on the internet path, efficiently flooding the entire connection so that workloads are moved as fast as possible. When larger flows, such as backup or replication, cause CPU contention, smaller flows are routed to less busy CPUs, improving performance of interactive traffic
-
-### Proximity routing
-
-Ensures that forwarding between virtual machines that are connected to stretched and routed networks both on-premises and in the cloud is symmetrical.
-
-### Security
-
-The Cloud Gateway offers Suite B-compliant AES-GCM with IKEv2, AES-NI offload, and flow based admission control.
-
-HCX owns the source and destination encryption and decryption processes, ensuring consistent security and providing admission for hybrid workflows such as virtual machine migration and network extension.
-
-A security policy that is defined in the on-premises vCenter and assigned to a virtual machine can be migrated with the virtual machine.
+* Intelligent flow routing - Automatically selects the best connection based on the internet path, efficiently flooding the entire connection so that workloads are moved as fast as possible. When larger flows, such as backup or replication, cause CPU contention, smaller flows are routed to less busy CPUs, improving performance of interactive traffic.
+* Proximity Routing - Ensures that forwarding between virtual machines that are connected to stretched and routed networks both on-premises and in the cloud is symmetrical.
+* Security - The Cloud Gateway offers Suite B-compliant AES-GCM with IKEv2, AES-NI offload, and flow based admission control. HCX owns the source and destination encryption and decryption processes, ensuring consistent security and providing admission for hybrid workflows such as virtual machine migration and network extension.
+  A security policy that is defined in the on-premises vCenter and assigned to a virtual machine can be migrated with the virtual machine.
 
 ## Understanding HCX
 
@@ -197,11 +186,11 @@ target IBM Cloud.
   * Two IP addresses per HCX Manager appliance connected to IBM Cloud. The addresses can be used to connect to the Internet or one or more Direct Connect lines.
   * Add one if there is a separate vMotion network connection.
 
-### Proximity Routing
+### Proximity Routing feature
 
 Proximity Routing is a networking feature which can be enabled when the Cloud Gateway is configured.
 
-Proximity routing ensures forwarding between virtual machines connected to stretched and routed networks, both on-premises and in the cloud, is symmetrical. This feature requires Dynamic Routing
+Proximity Routing ensures forwarding between virtual machines connected to stretched and routed networks, both on-premises and in the cloud, is symmetrical. This feature requires Dynamic Routing
 configured between the customer premises and the cloud.
 
 When users extend their networks to the cloud, Layer 2 connectivity is stretched onto IBM Cloud. However, without route optimization, Layer 3 communication requests must return to the on-premises network origin to be routed. This return trip is called "tromboning" or "hairpinning."
@@ -222,8 +211,7 @@ R1 is the default gateway for N1-b, therefore, N1-b must return to R1 to route t
 
 If the virtual machine was transferred using vMotion, the route is not injected until the virtual machine reboots. Waiting until after the reboot ensures that the on-premises stateful devices continue to service the existing session until the virtual machine reboots. After the reboot, the routing information is consistent both on-premises and in the cloud.
 
-That is, R1 can use routing to reach a specific virtual machine through R2, rather than using the locally connected extended Network. R2 fully owns the path for other networks to reach virtual machines
-with Proximity Routing enabled.
+That is, R1 can use routing to reach a specific virtual machine through R2, rather than using the locally connected extended Network. R2 fully owns the path for other networks to reach virtual machines with Proximity Routing enabled.
 
 Figure 5. Asymmetric Routing with Proximity Routing solution
 ![Asymmetric Routing with Proximity Routing solution](asymmetric_routing_proximity_routing_solution.svg)
@@ -252,6 +240,6 @@ Rules that specify security groups or application groups for the source or desti
 
 Any change to the migrated policy is propagated to all VMs that use the policy.
 
-### Related links
+## Related links
 
 * [Installing and configuring on the source](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
