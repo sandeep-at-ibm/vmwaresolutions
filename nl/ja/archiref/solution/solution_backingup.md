@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-29"
 
 ソリューションの一部として、IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} アドオン・サービスまたは Veeam on {{site.data.keyword.cloud_notm}} アドオン・サービスを必要に応じてデプロイできます。 Veeam と IBM Spectrum Protect Plus は、管理コンポーネントをバックアップするための要件を満たすことにつながります。
 
-これらのアドオン・サービスは、{{site.data.keyword.cloud_notm}} エンデュランス・ストレージとともにデプロイされます。 これらのサービスにより、管理コンポーネントおよびワークロードをバックアップしやすくなります。 [IBM Spectrum Protect Plus アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}と [Veeam アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}は、デプロイメントの計画とサイジングに関するガイダンスとして役立ちます。 Veeam デプロイメントには、[マネージド・サービス](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)も要求可能です。
+これらのアドオン・サービスは、{{site.data.keyword.cloud_notm}} エンデュランス・ストレージとともにデプロイされます。 これらのサービスにより、管理コンポーネントおよびワークロードをバックアップしやすくなります。 [IBM Spectrum Protect Plus アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}と [Veeam アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}は、デプロイメントの計画とサイジングに関するガイダンスとして役立ちます。 Veeam デプロイメントには、[マネージド・サービス](/docs/services/vmwaresolutions/services/managing_veeam_services.html)も要求可能です。
 
 必要なバックアップ戦略はソリューション・コンポーネントによって異なります。 イメージ・レベルのバックアップを使用して保護されるコンポーネントもあれば、構成とデータのファイル・ベースのバックアップを使用して保護されるコンポーネントもあります。
 
@@ -34,7 +34,7 @@ VMware vCenter Server、Platform Services Controller (PSC)、VMware NSX など�
 
 VMware vCenter Server と PSC には、さまざまなプロトコルを使用して[データベースと構成をファイル・サーバーにエクスポートするためのアプライアンス管理用ユーザー・インターフェースと API](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} が用意されています。 VMware は、直接 vCenter Server Appliance と PSC 上で[クーロン・ジョブとして定期的に実行する](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window}ようにこれを構成する方法の例が記述されています。この例を適応させて使用できます。
 
-この手法を使用して、vCenter Server Appliance と PSC の両方を別々にバックアップする必要があります。 VMware が文書化した考慮事項と制限事項をよく理解し、それに基づいて計画を立ててください。 また、ファイル・サーバー上のファイル・バックアップの定期的ローテーションと有効期限の計画を立ててください。
+外部 PSC を使用している場合は、この手法を使用して、vCenter Server Appliance と PSC の両方を別々にバックアップする必要があります。組み込み PSC を使用している場合は、PSC のバックアップが vCenter のバックアップに組み込まれます。VMware が文書化した考慮事項と制限事項をよく理解し、それに基づいて計画を立ててください。 また、ファイル・サーバー上のファイル・バックアップの定期的ローテーションと有効期限の計画を立ててください。
 
 VMware のバックアップ・ロケーションは空のフォルダーでなければならないので、後続の各バックアップ・ジョブのためにロケーションを空にしておくようにバックアップ・ローテーションや自動化の計画を立ててください。
 {:note}
@@ -74,7 +74,7 @@ VMware vCenter 6.5u2 以降、VMware は、イメージ・ベースのバック�
 管理バックアップをリストアする際の特別な考慮事項がいくつかあります。
 
 * vCenter と PSC の場合、VMware には、新しい仮想アプライアンスをデプロイしてバックアップから構成をリストアできるインストーラーが用意されています。
-* バックアップからアプライアンスをリストアする際に、インストーラーは、ユーザーが提供するバックアップ情報に基づいて、アプライアンスのタイプ (vCenter Server または PSC) を検出します。
+* バックアップからアプライアンスをリストアする際に、インストーラーは、ユーザーが提供するバックアップ情報に基づいて、アプライアンスのタイプ (vCenter Server、PSC、または組み込み PSC を使用する vCenter) を検出します。
 * ホストのいずれかに直接デプロイすると、分散スイッチまたは分散ポート・グループにデプロイできないことがあります。 リカバリーされたアプライアンスをデプロイする目的で一時的な標準のスイッチとポート・グループを作成し、このスイッチに vmnic のいずれかを一時的に移行することで、VM がネットワーク接続できるようにしなければならない場合があります。 デプロイメント後、VM を分散ポート・グループに移行し、vmnic を dvSwitch に返すことができます。
 * NSX の場合は、バックアップから構成をリストアする前に、NSX Manager とコントローラーを再デプロイしなければならない場合があります。
 * vCenter のバックアップとリストアに関する VMware の考慮事項と制限事項をよく理解しておいてください。
@@ -85,6 +85,6 @@ VMware vCenter 6.5u2 以降、VMware は、イメージ・ベースのバック�
 
 ### 関連リンク
 
-* [ソリューションの概要](solution_overview.html)
-* [設計の概要](design_overview.html)
-* [キャパシティーの拡張](solution_scaling.html)
+* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [設計の概要](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [キャパシティーの拡張](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)

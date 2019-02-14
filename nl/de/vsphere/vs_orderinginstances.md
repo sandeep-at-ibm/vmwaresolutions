@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,8 +21,8 @@ In dieser Prozedur werden Sie durch die Auswahl von VMware-Komponenten, {{site.d
 ## Voraussetzungen
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](../vmonic/useraccount.html).
-*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für vSphere-Cluster](vs_planning.html) vertraut gemacht.
+*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für vSphere-Cluster](/docs/services/vmwaresolutions/vsphere/vs_planning.html) vertraut gemacht.
 
 ## Systemeinstellungen
 
@@ -112,8 +112,12 @@ Die Registerkarte **SAP-zertifiziert** ist nicht verfügbar, wenn Sie zuvor VMwa
 
 Wählen Sie gemäß Ihren Anforderungen eine Bare Metal Server-Konfiguration aus:
   * Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 192 GB RAM
-  * Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,2 GHzDual / 384 GB RAM
+  * Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 384 GB RAM
   * Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 768 GB RAM
+  * Dual Intel Xeon E5-2690 v4-Prozessor / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM
+  * Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 1024 GB RAM
+  * Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 2048 GB RAM
+  * Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 4096 GB RAM
 
 ### Broadwell
 
@@ -123,9 +127,11 @@ Tabelle 3. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 64 GB, 128 GB, 256 GB, 384 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Bare Metal Server-Anzahl
 
@@ -142,7 +148,11 @@ Bei Bestellungen mit vSAN werden ESXi-Server mit einem Chassis für zwölf Platt
 Wenn Sie für den Cluster die Komponente "VMware vSAN" ausgewählt haben, müssen Sie folgende Einstellungen angeben.
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
-* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
+
+  Die Option **High-Performance Intel Optane** ist nur für die Skylake-CPU-Modelle Dual Intel Xeon Gold 5120 und Dual Intel Xeon Gold 6140 verfügbar.
+  {:note}
+
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
 
 ## Netzschnittstelleneinstellungen
@@ -178,7 +188,7 @@ Der Domänenname wird für alle {{site.data.keyword.baremetal_short}}-Instanzen 
 
 ### Öffentliches oder privates Netz
 
-Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC – Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
+Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
 
 * F5 on {{site.data.keyword.cloud_notm}}
 * FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}
@@ -205,12 +215,12 @@ Abhängig vom ausgewählten {{site.data.keyword.CloudDataCent_notm}} sind mögli
   * **Primäres privates Teilnetz** - Wird physischen Hosts für den Managementdatenverkehr zugewiesen.
 
 **Wichtig:**
-* Stellen Sie sicher, dass die Firewallkonfiguration bei den ausgewählten VLANs den Managementdatenverkehr nicht blockiert.
+* Stellen Sie sicher, dass die Firewallkonfiguration bei den ausgewählten VLANs den Managementdatenverkehr nicht sperrt.
 * Stellen Sie sicher, dass sich alle von Ihnen ausgewählten VLANs in demselben Pod befinden. ESXi-Server können nicht in VLANs mit unterschiedlichen Pods bereitgestellt werden.
 
 #### HA-Paar von FortiGate Physical Appliance 300 Series
 
-Sie können außerdem auswählen, ob das HA-Paar von FortiGate Physical Appliance 300 Series zum Sichern der Cloudumgebung enthalten sein soll. Weitere Informationen enthält der Abschnitt [Übersicht über FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html).
+Sie können außerdem auswählen, ob das HA-Paar von FortiGate Physical Appliance 300 Series zum Sichern der Cloudumgebung enthalten sein soll. Weitere Informationen enthält der Abschnitt [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/fsa_considerations.html). 
 
 ## Bestellübersicht
 
@@ -260,6 +270,6 @@ Die vSphere-Cluster werden (anders als die vCenter Server- und Cloud Foundation-
 
 ### Zugehörige Links
 
-* [Auf vorhandenen Konfigurationen basierenden vSphere-Cluster bestellen](vs_orderingbasedonexistingconfig.html)
-* [Vorhandene Cluster skalieren](vs_scalingexistingclusters.html)
-* [Außerhalb der Konsole erstellte Cluster skalieren](vs_orderingforclustersoutside.html)
+* [Auf vorhandenen Konfigurationen basierenden vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [Vorhandene Cluster skalieren](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [Außerhalb der Konsole erstellte Cluster skalieren](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

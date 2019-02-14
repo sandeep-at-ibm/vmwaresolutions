@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-11-05"
 
 Mit VMware Federal on {{site.data.keyword.cloud}} können Sie eine vCenter Server-Basisinstanz bestellen und zusätzlich US-Bundesbehörden die Möglichkeit bieten, bereitgestellte vCenter Server-Instanzen zu schützen. Beim Schützen einer bereitgestellten Instanz werden die sensiblen Informationen, die über die Instanz gespeichert sind, entfernt. Außerdem wird die offene Verbindung für den Instanzzugriff entfernt; dies bedeutet, dass Managementfunktionen wie beispielsweise das Hinzufügen und Entfernen von Hosts und Clustern nicht mehr verfügbar sind. Nachdem Sie die Option zum Schützen ausgewählt haben, steht nur noch die Funktion zum Löschen der Instanz zur Verfügung.
 
-Weitere Informationen zu vCenter Server on {{site.data.keyword.cloud_notm}} und die vCenter Server-Architektur finden Sie unter [Übersicht über vCenter Server](vc_vcenterserveroverview.html).
+Weitere Informationen zu vCenter Server on {{site.data.keyword.cloud_notm}} und die vCenter Server-Architektur finden Sie unter [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html).
 
 VMware Federal on {{site.data.keyword.cloud_notm}} bietet nur eine Untergruppe der vCenter-Server-Angebote. Konfigurationen mit mehreren Standorten, das Verwenden eigener Lizenzen (BYOL) und die Option für die Bestellung von Add-on-Services werden nicht unterstützt.
 {:note}
@@ -43,13 +43,13 @@ Die folgenden Netzkomponenten werden bestellt:
 *  3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
 *  1 VXLAN (Virtual eXtensible LAN) mit einem verteilten logischen Router (Distributed Logical Router, DLR) für die potenzielle Ost-West-Kommunikation zwischen lokalen Workloads, die mit Netzen der Schicht 2 (L2) verbunden sind. Das VXLAN wird als Muster für die Routingtopologie bereitgestellt, das Sie ändern, als Ausgangspunkt für Erstellungen verwenden oder entfernen können. Sie können außerdem Sicherheitszonen hinzufügen, indem Sie weitere VXLANs an neue logische Schnittstellen im DLR anhängen.
 *  2 VMware NSX Edge Services Gateways:
-  * 1 sicheres VMware NSX Edge Services Gateway (ESG) für Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Über dieses ESG kommunizieren virtuelle IBM Management-Maschinen mit bestimmten externen IBM Managementkomponenten, die mit der Automatisierung zusammenhängen. Weitere Informationen finden Sie unter [Netz zur Verwendung des vom Kunden verwalteten ESG konfigurieren](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * 1 sicheres VMware NSX Edge Services Gateway (ESG) für Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Über dieses ESG kommunizieren virtuelle IBM Management-Maschinen mit bestimmten externen IBM Managementkomponenten, die mit der Automatisierung zusammenhängen. Weitere Informationen finden Sie unter [Netz zur Verwendung des vom Kunden verwalteten ESG konfigurieren](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     Dieses ESG ist für Sie weder zugänglich, noch können Sie es verwenden. Falls Sie es ändern, sind Sie möglicherweise nicht in der Lage, die vCenter Server-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Außerdem führt die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu, dass {{site.data.keyword.vmwaresolutions_short}} unbrauchbar wird.
     {:important}
-  * 1 sicheres vom Kunden verwaltetes VMware NSX Edge Services Gateway für eingehenden und abgehenden HTTPS-Workloaddatenverkehr, das von IBM als Vorlage bereitgestellt wird und von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen. Weitere Informationen finden Sie im Abschnitt [Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
+  * 1 sicheres vom Kunden verwaltetes VMware NSX Edge Services Gateway für eingehenden und abgehenden HTTPS-Workloaddatenverkehr, das von IBM als Vorlage bereitgestellt wird und von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen. Weitere Informationen finden Sie im Abschnitt [Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
-  Das VMware NSX Edge Services Gateway (ESG) für abgehenden HTTPS-Managementdatenverkehr wird im Rahmen der Aktion zum Schutz der bereitgestellten VMware Federal-Instanz entfernt. Weitere Informationen finden Sie unter [VMware Federal-Instanzen schützen](vc_fed_securinginstance.html).
+  Das VMware NSX Edge Services Gateway (ESG) für abgehenden HTTPS-Managementdatenverkehr wird im Rahmen der Aktion zum Schutz der bereitgestellten VMware Federal-Instanz entfernt. Weitere Informationen finden Sie unter [VMware Federal-Instanzen schützen](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html).
   {:note}
 
 ### Virtual Server-Instanzen
@@ -94,7 +94,7 @@ Jeder vCenter Server-Erweiterungsknoten stellt die folgenden Komponenten in Ihre
 
 ### Hardware für Erweiterungsknoten
 
-1 Bare Metal Server mit der unter [Technische Spezifikationen für VMware Federal on {{site.data.keyword.cloud_notm}}-Instanzen](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) aufgeführten Konfiguration.
+1 Bare Metal Server mit der unter [Technische Spezifikationen für VMware Federal on {{site.data.keyword.cloud_notm}}-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) aufgeführten Konfiguration.
 
 ### Lizenzen und Gebühren für Erweiterungsknoten
 
@@ -114,9 +114,9 @@ Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in 
 
 ### Zugehörige Links
 
-* [Voraussetzungen und Planung für VMware Federal-Instanzen](vc_fed_planning.html)
-* [VMware Federal-Instanzen bestellen](vc_fed_orderinginstance.html)
-* [Cluster für VMware Federal-Instanzen hinzufügen, anzeigen und löschen](fed_addviewdeleteclusters.html)
-* [Kapazität für VMware Federal-Instanzen erweitern und verringern](vc_fed_addingremovingservers.html)
-* [VMware Federal-Instanzen schützen](vc_fed_securinginstance.html)
+* [Voraussetzungen und Planung für VMware Federal-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
+* [VMware Federal-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [Cluster für VMware Federal-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [Kapazität für VMware Federal-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [VMware Federal-Instanzen schützen](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
 * [{{site.data.keyword.cloud_notm}} File Storage und Block Storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

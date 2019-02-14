@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,7 @@ L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) era p
 
 L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} che utilizzi deve disporre di determinate autorizzazioni per poter ordinare i componenti nelle tue istanze ed eseguire operazioni per tuo conto. I requisiti di autorizzazione sono applicabili a tutti i tipi di istanze e servizi che ordini dalla console {{site.data.keyword.vmwaresolutions_short}}.
 
-Gli utenti autorizzati possono verificare e aggiornare le autorizzazioni per un account dell'infrastruttura {{site.data.keyword.cloud_notm}} nel {{site.data.keyword.slportal}}. Per ulteriori informazioni, consulta [Modifica delle autorizzazioni del portale clienti di un utente](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
+Gli utenti autorizzati possono verificare e aggiornare le autorizzazioni per un account dell'infrastruttura {{site.data.keyword.cloud_notm}} nel {{site.data.keyword.slportal}}. Per ulteriori informazioni, consulta [Modifica delle autorizzazioni del portale clienti di un utente](/docs/customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
 
 Tabella 1. Autorizzazioni richieste per l'account dell'infrastruttura {{site.data.keyword.cloud_notm}}
 
@@ -45,12 +45,19 @@ Tabella 1. Autorizzazioni richieste per l'account dell'infrastruttura {{site.dat
 | Visualizza password | Questa autorizzazione è necessaria per poter amministrare le VSI ordinate. |
 | Gestisci monitoraggio server | Questa autorizzazione non è necessaria per effettuare un ordine ma è richiesta per recuperare e convalidare lo stato di monitoraggio dei {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} su cui sono in esecuzione i server VMware ESXi nella tua istanza. |
 
-## Spanning della VLAN per account classici (non VRF)
+## Requisito di VRF (Virtual Routing and Forwarding)
 
-Se utilizzi un account dell'infrastruttura {{site.data.keyword.cloud_notm}} classico (non VRF), è necessario abilitare lo spanning della VLAN. Se lo spanning della VLAN non è abilitato per gli account classici, i vari componenti dell'ambiente di virtualizzazione VMware potrebbero non essere in grado di comunicare tra loro. Per abilitare lo spanning della VLAN nel tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}}, vedi [VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} deve essere un account VRF o, se è un account non VRF, deve avere lo spanning della VLAN abilitato. Per ulteriori informazioni sulla conversione del tuo account da non VRF a VRF, vedi [Panoramica di VRF on IBM Cloud](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html).
+
+## Spanning della VLAN per gli account non VRF
+
+Se stai utilizzando un account dell'infrastruttura {{site.data.keyword.cloud_notm}} non VRF, è necessario abilitare lo spanning della VLAN. Se lo spanning della VLAN non è abilitato per gli account non VRF, i vari componenti dell'ambiente di virtualizzazione VMware potrebbero non essere in grado di comunicare tra loro. 
+
+Per abilitare lo spanning della VLAN nel tuo account, vedi [Spanning della VLAN](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ### Link correlati
 
-* [Requisiti per le istanze Cloud Foundation](../sddc/sd_planning.html)
-* [Requisiti per le istanze vCenter Server](../vcenter/vc_planning.html)
-* [Account utente e impostazioni](useraccount.html)
+* [Requisiti per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Requisiti per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [Panoramica di VRF on IBM Cloud](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)

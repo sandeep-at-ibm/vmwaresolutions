@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-07"
 
 ---
 
@@ -26,8 +26,8 @@ Tabla 1. Servicios disponibles para las instancias de Cloud Foundation
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 y posterior |
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | V2.3 y posterior |
 | [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 y posterior |
-| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.1 Parche 1 | V2.2 y posterior |
-| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 y posterior |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.2 | V2.2 y posterior |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_standalone_considerations.html) |  2.0 | N/D |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | 9.5u3 | V1.8 y posterior |
 | [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 6.0 actualización 3 | V1.2 y posterior |
 
@@ -61,7 +61,8 @@ Una vez aceptada su solicitud de eliminación del servicio, el estado del servic
 
 Cuando la eliminación del servicio finalice correctamente, recibirá una notificación por correo electrónico y el servicio se eliminará de la página **Servicios** de la instancia.
 
-**Atención:** se le facturará por los servicios eliminados hasta el final del ciclo de facturación de {{site.data.keyword.cloud_notm}}.
+Se le facturará por los servicios eliminados hasta el final del ciclo de facturación de {{site.data.keyword.cloud_notm}}.
+{:note}
 
 ### Enlaces relacionados
 

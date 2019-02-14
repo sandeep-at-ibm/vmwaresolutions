@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -22,8 +22,8 @@ Attualmente, solo le istanze vCenter Server supportano VMware Federal on {{site.
 ## Requisiti per ordinare le istanze VMware Federal
 
 Assicurati di aver completato le seguenti attività:
-* Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](../vmonic/useraccount.html).
-* Hai esaminato le informazioni in [Requisiti e pianificazione per le istanze VMware Federal](vc_fed_planning.html).
+* Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+* Hai esaminato le informazioni in [Requisiti e pianificazione per le istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html).
 * Hai esaminato il formato del nome di istanza e di dominio. Il nome del dominio e l'etichetta del dominio secondario vengono utilizzati per generare il nome utente e i nomi server dell'istanza.
 
 Tabella 1. Formato del valore per i nomi di istanza e di dominio
@@ -48,7 +48,7 @@ Quando ordini un'istanza VMware Federal, devi specificare le seguenti impostazio
 
 Il nome dell'istanza deve rispettare i seguenti requisiti:
 * Sono consentiti solo caratteri alfanumerici e trattini (-).
-* Il nome dell'istanza deve iniziare e terminare con un carattere alfanumerico.
+* Il nome istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
 * La lunghezza massima del nome dell'istanza è di 10 caratteri.
 * Il nome dell'istanza deve essere univoco all'interno del tuo account.
 
@@ -65,7 +65,7 @@ Licenze fornite da IBM per i seguenti componenti VMware:
 * NSX Service Providers 6.4 (Edizione Base, Advanced o Enterprise)
 * (Per i cluster vSAN) vSAN 6.6 (Edizione Advanced o Enterprise)
 
-**Attenzione:**
+### Attenzione
 
 * Le edizioni minime della licenza sono indicate sull'interfaccia utente. Se sono supportate edizioni diverse per i componenti, puoi selezionare l'edizione che vuoi. Sei responsabile di garantire che la chiave di licenza fornita sia corretta per ogni componente VMware selezionato.
 * Per vSphere, al momento dell'ordine verrà addebitato un costo di licenza, ma tale costo verrà successivamente accreditato sul tuo account.
@@ -106,7 +106,7 @@ Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 
 Puoi configurare il numero di server ESXi nell'intervallo 2 - 20.
 
-Tutti i server ESXi condividono la stessa configurazione. Nella post distribuzione, puoi aggiungere altri quattro cluster. Per le impostazioni di archiviazione vSAN, sono richiesti 4 server ESXi per i cluster iniziali e di post-distribuzione. Per ulteriori informazioni sul numero minimo di server ESXi, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+Tutti i server ESXi condividono la stessa configurazione. Nella post distribuzione, puoi aggiungere altri quattro cluster. Per le impostazioni di archiviazione vSAN, sono richiesti 4 server ESXi per i cluster iniziali e di post-distribuzione. Per ulteriori informazioni sul numero minimo di server ESXi, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Impostazioni di archiviazione
 
@@ -117,7 +117,11 @@ Le impostazioni di archiviazione si basano sulla tua selezione della configurazi
 Specifica le seguenti opzioni vSAN:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
-* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
+* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
+
+  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPI Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
 * **Licenza vSAN**: seleziona l'edizione della licenza vSAN 6.6 (Advanced o Enterprise).
 
@@ -155,7 +159,7 @@ Il prefisso del nome host deve rispettare i seguenti requisiti:
 
 L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
 *  Sono consentiti solo caratteri alfanumerici e trattini (-).
-*  L'etichetta del dominio secondario deve iniziare e terminare con un carattere alfanumerico.
+*  L'etichetta del dominio secondario deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
 *  La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
 *  L'etichetta del dominio secondario deve essere univoca all'interno del tuo account.
 
@@ -218,7 +222,7 @@ In base alla configurazione che hai selezionato per l'istanza, il costo stimato 
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze VMware Federal on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 
@@ -239,10 +243,10 @@ Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmw
 
 ### Link correlati
 
-* [Registrazione di un account {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
-* [Visualizzazione delle istanze VMware Federal](vc_fed_viewinginstance.html)
-* [Espansione e contrazione della capacità per le istanze VMware Federal](vc_fed_addingremovingservers.html)
-* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze VMware Federal](fed_addviewdeleteclusters.html)
-* [Protezione di istanze VMware Federal](vc_fed_securinginstance.html)
-* [Eliminazione di istanze VMware Federal](vc_fed_deletinginstance.html)
-* [Come contattare il supporto IBM](../vmonic/trbl_support.html)
+* [Registrazione di un account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [Visualizzazione delle istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Espansione e contrazione della capacità per le istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [Protezione di istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [Eliminazione di istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

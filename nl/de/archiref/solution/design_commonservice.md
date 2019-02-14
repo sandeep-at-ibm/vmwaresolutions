@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -85,6 +85,6 @@ Sie können die Windows-AD-Server in diesem Design verwenden, um Zertifikate zu 
 
 ### Zugehörige Links
 
-* [Design der physischen Infrastruktur](design_physicalinfrastructure.html)
-* [Design der virtuellen Infrastruktur](design_virtualinfrastructure.html)
-* [Design des Infrastrukturmanagements](design_infrastructuremgmt.html)
+* [Design der physischen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [Design der virtuellen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [Design des Infrastrukturmanagements](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)

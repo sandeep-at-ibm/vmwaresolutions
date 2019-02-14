@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-06-22"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V2.4 릴리스 정보
 
@@ -37,8 +41,6 @@ V2.4 릴리스 이상에서는 자국어 지원(NLS)을 {{site.data.keyword.vmwa
 * 브라질 포르투갈어
 * 중국어
 * 대만어
-
-**참고**: 참조 아키텍처 문서는 영어로만 사용 가능합니다.
 
 ## Skylake Xeon CPU 지원
 
@@ -80,7 +82,7 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 
 ### 참조 아키텍처 문서
 
-{{site.data.keyword.vmwaresolutions_short}} 아키텍처 문서는 이제 사용자 문서의 *참조* 절에서 사용할 수 있습니다. 참조 아키텍처는 문서는 영어로만 사용 가능합니다. 자세한 정보는 [솔루션 개요](../archiref/solution/solution_overview.html)를 참조하십시오.
+{{site.data.keyword.vmwaresolutions_short}} 아키텍처 문서는 이제 사용자 문서의 *참조* 절에서 사용할 수 있습니다. 자세한 정보는 [솔루션 개요](../archiref/solution/solution_overview.html)를 참조하십시오.
 
 ### 서비스 문서
 

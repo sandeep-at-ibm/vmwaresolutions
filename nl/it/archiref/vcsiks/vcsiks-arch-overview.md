@@ -2,26 +2,24 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-16"
+lastupdated: "2019-01-23"
 
 ---
 
 # Panoramica sull'architettura
 Le offerte {{site.data.keyword.vmwaresolutions_full}} forniscono l'automazione per distribuire
-i componenti di tecnologia VMware nei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. L'architettura
-consiste in una singola regione cloud e supporta la capacità di estensione
-in più regioni cloud che si trovano
-in un'altra area geografica e/o in un altro pod di {{site.data.keyword.cloud_notm}} all'interno dello stesso data center.
+i componenti di tecnologia VMware nei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. L'architettura è costituita da una singola regione cloud e supporta la capacità di estendersi in più regioni cloud che si trovano in un'altra area geografia o in un altro pod di {{site.data.keyword.cloud_notm}} all'interno dello stesso data center.
 
-Puoi distribuire manualmente i prodotti ICP ({{site.data.keyword.cloud_notm}} Private) e CAM (Cloud Automation Manager) nella tua piattaforma di virtualizzazione in loco,
-abilitando la gestione cloud dalle ubicazioni in loco. In alternativa, ICP
+Puoi distribuire manualmente i prodotti {{site.data.keyword.icpfull_notm}} e CAM (Cloud Automation Manager) nella tua piattaforma di virtualizzazione in loco,
+abilitando la gestione cloud dalle ubicazioni in loco. In alternativa, {{site.data.keyword.icpfull_notm}}
 e CAM vengono offerti come estensioni di servizio a una distribuzione VMware
 vCenter Server on {{site.data.keyword.cloud_notm}} nuova o esistente, tramite l'automazione, abilitando
 la gestione cloud da {{site.data.keyword.cloud_notm}}.
 
-ICP è una piattaforma dell'applicazione per lo sviluppo e la gestione in loco delle applicazioni inserite nei contenitori. ICP è un ambiente integrato per la gestione
+{{site.data.keyword.icpfull_notm}} è una piattaforma dell'applicazione per lo sviluppo e la gestione di applicazioni
+inserite nei contenitori in loco. {{site.data.keyword.icpfull_notm}} è un ambiente integrato per la gestione
 dei contenitori che include l'orchestrazione del contenitore Kubernetes, un
 repository di immagini privato, una console di gestione e i
 framework di monitoraggio.
@@ -41,43 +39,46 @@ Cloud Private.
 
 ## Piattaforma di gestione cloud lato IBM Cloud
 
-Il seguente diagramma visualizza ICP e CAM distribuiti con l'infrastruttura {{site.data.keyword.cloud_notm}},
-con connessioni al vCenter in loco e al servizio IBM
-Kubernetes Service (IKS) distribuiti su {{site.data.keyword.cloud_notm}}. Gli utenti possono distribuire le macchine virtuali (VM) in loco e nelle istanze vCenter Server
-e i contenitori nel cluster ICP e IKS.
+Il seguente diagramma visualizza {{site.data.keyword.icpfull_notm}} e CAM distribuiti con l'infrastruttura {{site.data.keyword.cloud_notm}},
+con connessioni al vCenter in loco e al servizio {{site.data.keyword.containerlong_notm}} distribuiti su {{site.data.keyword.cloud_notm}}. Gli utenti possono distribuire macchine virtuali (VM) in loco, VM nelle istanze
+vCenter Server e contenitori al cluster {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
 Figura 1. Gestione cloud dal lato cloud
 ![Sul cloud - gestione cloud](vcsiks-oncloud-cloudmgt.svg)
 
-Nel diagramma, CAM crea in modo logico le connessioni cloud ai vCenter, ai provider cloud, a ICP e agli ambienti IKS. I cluster ICP devono essere
+Nel diagramma, CAM crea in modo logico le connessioni cloud ai vCenter,
+ai provider cloud e agli ambienti {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. I cluster {{site.data.keyword.icpfull_notm}} devono essere
 distribuiti in ciascun data center o ambiente cloud, con MCM che fornisce il
-meccanismo per connettere i cluster ICP in un'unica vista di gestione.
+meccanismo per connettere i cluster {{site.data.keyword.icpfull_notm}} in un'unica vista di gestione.
 
-ICP può essere distribuito con i componenti NSX-V o NSX-T. ICP con NSX-V,
-consente alle VM ICP l'esecuzione sulla rete VXLAN e di utilizzare
+{{site.data.keyword.icpfull_notm}} può essere distribuito con i componenti NSX-V o NSX-T. {{site.data.keyword.icpfull_notm}} con NSX-V
+consente alle VM {{site.data.keyword.icpfull_notm}} l'esecuzione sulla rete VXLAN e di utilizzare
 la rete interna Kubernetes Calico.
 
-ICP con NSX-T, consente agli utenti di controllare e configurare la rete, la sottorete, le politiche dall'IU centrale (NSX-T Manager). Per informazioni sulle differenze tra NSX-V e NSX-T, vedi [{{site.data.keyword.cloud_notm}}
-VCS Networking reference architecture](../vcsnsxt/vcsnsxt-intro.html).
+{{site.data.keyword.icpfull_notm}} con NSX-T consente agli utenti di controllare e configurare la rete,
+la sottorete e le politiche dall'IU centrale (NSX-T Manager). Per informazioni sulle differenze tra NSX-V e NSX-T, vedi l'[architettura di riferimento di rete VCS {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/
+vcsnsxt/vcsnsxt-intro.html).
 
 ## Piattaforma di gestione cloud in loco
 
-Il seguente diagramma visualizza ICP e CAM distribuiti nell'infrastruttura
-in loco, con connessioni a vCenter e IKS distribuiti su {{site.data.keyword.cloud_notm}}. Gli utenti possono distribuire VM e contenitori
+Il seguente diagramma visualizza {{site.data.keyword.icpfull_notm}} e CAM distribuiti nell'infrastruttura
+in loco, con connessioni a vCenter e {{site.data.keyword.containerlong_notm}} distribuiti su {{site.data.keyword.cloud_notm}}. Gli utenti possono distribuire VM e contenitori
 in loco, VM nelle istanze vCenter Server e contenitori
-nel cluster IKS.
+al cluster {{site.data.keyword.containerlong_notm}}.
 
 Figura 2. Gestione cloud dal lato locale
 ![In loco - gestione cloud](vcsiks-onprem-cloudmgt.svg)
 
 La VPN strongSwan viene utilizzata per stabilire la connettività con i contenitori
-IKS distribuiti. Con il tempo, strongSwan potrebbe essere sostituito con la connettività
+{{site.data.keyword.containerlong_notm}} distribuiti. Con il tempo, strongSwan potrebbe essere sostituito con la connettività
 Direct-link.
 
-Nel diagramma, CAM crea in modo logico le connessioni cloud ai vCenter, ai provider cloud, a ICP e agli ambienti IKS. I cluster ICP devono essere
+Nel diagramma, CAM crea in modo logico le connessioni cloud ai vCenter,
+ai provider cloud e agli ambienti {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. I cluster {{site.data.keyword.icpfull_notm}} devono essere
 distribuiti in ciascun data center o ambiente cloud, con MCM che fornisce il
-meccanismo per connettere i cluster ICP in un'unica vista di gestione.
+meccanismo per connettere i cluster {{site.data.keyword.icpfull_notm}} in un'unica vista di gestione.
 
 ### Link correlati
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

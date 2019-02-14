@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-12"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ Esamina i seguenti requisiti prima di ordinare le tue istanze NetApp ONTAP Selec
 
 ## Requisiti dell'account IBM Cloud
 
-L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Disponibilità dei data center IBM Cloud
 
@@ -25,31 +25,31 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicazione | Regione | Opzioni server |
 |:------|:----------------|:----------------|:---------------------------|
 | AMS03 | Amsterdam | Europa | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
-| CHE01 | Chennai | Asia Pacifico | Alta capacità
+| CHE01 | Chennai | Asia-Pacifico | Alta capacità
 | DAL09 | Dallas | Nord America meridionale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | DAL10 | Dallas | Nord America meridionale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | DAL12 | Dallas | Nord America meridionale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | DAL13 | Dallas | Nord America meridionale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | FRA02 | Francoforte | Europa | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | FRA04 | Francoforte | Europa | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
-| HKG02 | Hong Kong | Asia Pacifico | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
+| HKG02 | Hong Kong | Asia-Pacifico | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | LON02 | Londra | Europa | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | LON04 | Londra | Europa | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | LON06 | Londra | Europa | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
-| MEL01 | Melbourne | Asia Pacifico | Alte prestazioni (medio), Alta capacità
+| MEL01 | Melbourne | Asia-Pacifico | Alte prestazioni (medio), Alta capacità
 | MEX01 | Queretaro | Nord America meridionale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | MIL01 | Milano | Europa | Alte prestazioni (medio), Alta capacità
 | MON01 | Montreal | Nord America orientale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | OSL01 | Oslo | Europa | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | PAR01 | Parigi | Europa | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | SAO01 | San Paolo | Sud America | Alte prestazioni (elevato), Alta capacità
-| SEO01 | Seul | Asia Pacifico | Alte prestazioni (elevato), Alta capacità
+| SEO01 | Seul | Asia-Pacifico | Alte prestazioni (elevato), Alta capacità
 | SJC03 | San Jose | Nord America occidentale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | SJC04 | San Jose | Nord America occidentale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
-| SNG01 | Singapore | Asia Pacifico | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
-| SYD01 | Sydney | Asia Pacifico | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
-| SYD04 | Sydney | Asia Pacifico | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
-| TOK02 | Tokyo | Asia Pacifico | Alte prestazioni (elevato), Alta capacità
+| SNG01 | Singapore | Asia-Pacifico | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
+| SYD01 | Sydney | Asia-Pacifico | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
+| SYD04 | Sydney | Asia-Pacifico | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
+| TOK02 | Tokyo | Asia-Pacifico | Alte prestazioni (elevato), Alta capacità
 | TOR01 | Toronto | Nord America orientale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | WDC04 | Washington, DC | Nord America orientale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | WDC06 | Washington, DC | Nord America orientale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
@@ -57,5 +57,5 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze 
 
 ### Link correlati
 
-* [Panoramica di NetApp ONTAP Select](np_netappoverview.html)
-* [Ordine di istanze NetApp ONTAP Select](np_orderinginstances.html)
+* [Panoramica di NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
+* [Ordine di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -49,6 +49,6 @@ NetApp ONTAP Select インスタンスを削除すると、以下のコンポー
 
 ### 関連リンク
 
-* [NetApp ONTAP Select インスタンスの注文](np_orderinginstances.html)
-* [NetApp ONTAP Select インスタンスの表示](np_viewinginstances.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
+* [NetApp ONTAP Select インスタンスの注文](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [NetApp ONTAP Select インスタンスの表示](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

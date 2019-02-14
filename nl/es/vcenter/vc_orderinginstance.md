@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-14"
 
 ---
 
@@ -29,10 +29,9 @@ Tabla 1. Formato del valor de nombres de instancia y de dominio
   |:------------|:------------ |
   | Nombre de dominio | `<root_domain>` |  
   | Nombre usuario inicio sesión vCenter Server | `<user_id>@<root_domain>` (usuario de Microsoft Active Directory) o `administrator@vsphere.local` |
-  | FQDN de vCenter Server | `vcenter.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
+  | vCenter Server (con PSC incorporado) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
   | Nombre sitio inicio sesión único (SSO) | `<subdomain_label>` |
-  | Nombre completo de servidor ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `<n>` es la secuencia del servidor ESXi. La longitud máxima es de 50 caracteres. |  
-  | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
+  | Nombre completo de servidor ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `<n>` es la secuencia del servidor ESXi. La longitud máxima es de 50 caracteres. |
 
 No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime.
 {:important}
@@ -64,8 +63,8 @@ Para los usuarios de Business Partners, se incluyen y se adquieren en su nombre 
 
 Para usuarios que no son Business Partner, puede utilizar las licencias de VMware que proporciona IBM para estos componentes seleccionando **Incluir con la compra** o puede traer su propia licencia (BYOL) seleccionando **Proporcionaré** e indicando sus propias claves de licencia.
 
+### Atención:
 
-**Atención:**
 * Se necesita una licencia con un mínimo de ocho CPU, lo que equivale a cuatro servidores con dos CPU por servidor. La opción de licencia de cada componente de VMware se aplica a la instancia básica y a cualquier servidor ESXi que añada a la instancia posteriormente. Asegúrese de que su licencia da soporte a la expansión de capacidad futura en su infraestructura.
 * Las ediciones de licencia mínimas se indican en la interfaz de usuario. Si se da soporte a distintas ediciones de componentes, puede seleccionar la edición que desee. El usuario es el responsable de asegurar que la clave de licencia proporcionada es correcta para cada componente de VMware seleccionado.
 * Para vSphere, se incurre en un cargo de licencia en el momento de realizar el pedido, pero el cargo por licencia se abonará entonces a su cuenta.
@@ -101,6 +100,10 @@ En función de sus requisitos, seleccione una configuración de servidor nativo:
   * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 192 GB de RAM
   * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 384 GB de RAM
   * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 768 GB de RAM
+  * Procesador Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz / 512 GB de RAM
+  * Procesador Quad Intel Xeon E7-8890 v4 / 96 núcleos en total, 2,2 GHz / 1024 GB de RAM
+  * Procesador Quad Intel Xeon E7-8890 v4 / 96 núcleos en total, 2,2 GHz / 2048 GB de RAM
+  * Procesador Quad Intel Xeon E7-8890 v4 / 96 núcleos en total, 2,2 GHz / 4096 GB de RAM
 
 ### Broadwell
 
@@ -113,10 +116,12 @@ Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 | Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Número de servidores nativos
 
-Para el clúster inicial de la instancia, puede configurar un número de servidores ESXi comprendido entre 2 y 20. Todos los servidores ESXi comparten la configuración del conjunto. 
+Para el clúster inicial de la instancia, puede configurar un número de servidores ESXi comprendido entre 2 y 20. Todos los servidores ESXi comparten la configuración del conjunto.
 
 Después del despliegue inicial, puede añadir cuatro clústeres más. Si ha seleccionado la configuración **Skylake** o **Broadwell** para VMware vSAN, se necesitan 4 servidores ESXi para el clúster inicial y para los posteriores al despliegue. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
@@ -129,7 +134,11 @@ Los valores de almacenamiento dependen de la opción que seleccione de configura
 vSAN está disponible solo para la configuración de servidor nativo **Skylake** o **Broadwell**. Especifique las siguientes opciones de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
-* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto.
+
+  La opción **Intel Optane de alto rendimiento** solo está disponible para los modelos de CPU de Skylake Dual Intel Xeon Gold 5120 y Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
 * **Licencia de vSAN**: Utilice la licencia de VMware que proporciona IBM para el componente vSAN seleccionando **Incluir con la compra**, o traiga su propia licencia (BYOL) seleccionando **Proporcionaré** e indicando su propia clave de licencia.
 
@@ -142,17 +151,24 @@ El número de comparticiones de archivo debe estar comprendido entre 1 y 32.
 
 * **Configurar las comparticiones individualmente**: Seleccione para especificar distintos valores de configuración para cada compartición de archivos.
 * **Número de comparticiones**: Cuando se utiliza el mismo valor de configuración para cada compartición de archivos, especifique el número de comparticiones de archivos para el almacenamiento compartido de NFS que desee añadir.
-* **Almacenamiento**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
 * **Rendimiento**: Seleccione el valor de IOPS (operaciones de entrada/salida por segundo) por GB en función de sus requisitos de carga de trabajo.
-* **AÑADIR NFS**: Seleccione para añadir comparticiones de archivos individuales que utilicen distintos valores de configuración.
+* **Tamaño (GB)**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
+* **Añadir almacenamiento compartido**: seleccione esta opción para añadir comparticiones de archivos individuales que utilicen distintos valores de configuración.
 
 Tabla 4. Opciones de nivel de rendimiento de NFS
 
 | Opción        | Detalles       |
   |:------------- |:------------- |
+  | 0,25 IOPS/GB | Esta opción está diseñada para cargas de trabajo que no se utilizan a menudo. Estas son algunas aplicaciones de ejemplo: datos en caja fuerte, alojamiento de bases de datos grandes con datos antiguos o imágenes de disco virtual del sistema de memoria virtual como copia de seguridad. |
   | 2 IOPS/GB | Esta opción está diseñada para la mayoría de cargas de trabajo generales. Entre las aplicaciones de ejemplo se encuentran alojamiento de bases de datos pequeñas, copia de seguridad de aplicaciones web o imágenes de disco de máquina virtual para un hipervisor. |
   | 4 IOPS/GB | Esta opción está diseñada para cargas de trabajo de mayor intensidad que tienen un alto porcentaje de datos activos en un momento determinado. Las aplicaciones de ejemplo incluyen bases de datos transaccionales. |
   | 10 IOPS/GB | Esta opción está diseñada para los tipos de carga de trabajo más exigentes, como las analíticas. Las aplicaciones de ejemplo incluyen bases de datos con un gran número de transacciones y otras bases de datos sensibles al rendimiento. Este nivel de rendimiento está limitado a una capacidad máxima de 4 TB por compartición de archivo. |
+
+### Discos locales
+
+La opción de discos locales solo está disponible para la configuración de tipo procesador nativo Quad Intel Xeon E7-8890 v4 **certificado por SAP**. Especifique las siguientes opciones:
+* **Recuento de discos**: seleccione el número de discos que desea añadir.
+* **Tipo de disco**: seleccione una opción para el tipo de disco que necesita.
 
 ## Valores de interfaz de red
 
@@ -204,6 +220,7 @@ Se necesita una VLAN pública y dos VLAN privadas para el pedido de la instancia
 Seleccione esta opción para solicitar una VLAN pública nueva y dos VLAN privadas nuevas.
 
 #### Seleccionar las VLAN existentes
+
 En función del {{site.data.keyword.CloudDataCent_notm}} que haya seleccionado, puede que haya VLAN públicas y privadas existentes disponibles.
 
 Cuando seleccione reutilizar las VLAN públicas y privadas existentes, especifique las VLAN y las subredes:
@@ -213,9 +230,10 @@ Cuando seleccione reutilizar las VLAN públicas y privadas existentes, especifiq
 * **Subred primaria** se asigna a hosts físicos para acceder a la red pública.
 * **Subred primaria privada** se asigna a hosts físicos para el tráfico de gestión.
 
+##### Importante
+
 * Asegúrese de que la configuración del cortafuegos en las VLAN seleccionadas no bloquee el tráfico de datos de gestión.
 * Asegúrese de que todas las VLAN que seleccione estén en el mismo pod. Los servidores ESXi no se pueden suministrar en VLAN en pods mixtos.
-{:important}
 
 ### Configuración DNS
 
@@ -250,8 +268,9 @@ En función de la configuración seleccionada para la instancia y los servicios 
    * Pulse **Instancia primaria** para desplegar una sola instancia en el entorno o para desplegar la primera instancia en una topología de varios sitios.
    * Pulse **Instancia secundaria** para conectar la instancia con una instancia existente (primaria) en el entorno para conseguir alta disponibilidad y siga estos pasos:
      1. Seleccione la instancia primaria a la que desea conectar la instancia secundaria.
-     2. Para las instancias primarias V2.5 o posteriores, especifique el valor para la **Contraseña de administrador del PSC de la instancia primaria**.
-     3. Para las instancias primarias V2.4 o anteriores, verifique que el valor prerrellenado para el campo **Contraseña del administrador para el PSC de instancia primaria** es correcto.
+     2. Para las instancias primarias V2.8 o posteriores, especifique la contraseña del administrador de vCenter Server para la instancia primaria.
+     3. Para las instancias primarias V2.5, 2.6 o 2.7, especifique la contraseña del administrador de PSC para la instancia primaria.
+     4. Para las instancias primarias V2.4 o anteriores, verifique que el valor especificado correspondiente a la contraseña del administrador de PSC para la instancia primaria sea correcto.
 5. Complete los valores de licencia de los componentes de la instancia.
    *  Para utilizar licencias proporcionadas por IBM, seleccione **Incluir con la compra** y seleccione la edición de licencia, si es necesario.
    *  Para utilizar su propia licencia, seleccione **Proporcionaré** y escriba la clave de la licencia.
@@ -263,8 +282,9 @@ En función de la configuración seleccionada para la instancia y los servicios 
     3. Especifique el número de {{site.data.keyword.baremetal_short}}. Si tiene previsto utilizar vSAN como solución de almacenamiento, se necesitan un mínimo de 4 {{site.data.keyword.baremetal_short}}.  
 7. Complete la configuración del almacenamiento.
   * Si selecciona **Almacenamiento vSAN**, especifique los tipos de disco para la capacidad y los discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
-  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar los mismos valores para todas las comparticiones de archivos, especifique el **Número de comparticiones**, **Tamaño** y **Rendimiento**.
-  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar comparticiones de archivos individualmente, seleccione **Configurar comparticiones individualmente**. A continuación, pulse el icono **+** situado junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y **Rendimiento** para cada compartición de archivos. Debe seleccionar al menos una unidad compartida de archivo.
+  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar los mismos valores para todas las comparticiones de archivos, especifique el **Número de comparticiones**, el **Rendimiento** y el **Tamaño (GB)**.
+  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar comparticiones de archivos individualmente, seleccione **Configurar comparticiones individualmente**. A continuación, pulse el icono **+** situado junto a la etiqueta **Añadir almacenamiento compartido** y seleccione el **Rendimiento** y el **Tamaño (GB)** de cada compartición de archivos. Debe seleccionar al menos una unidad compartida de archivo.
+  * Si selecciona **Discos locales**, especifique el recuento de discos y el tipo de disco.
 8. Complete los valores de interfaz de red.
    1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio raíz. Para una instancia secundaria, el nombre de dominio se rellena automáticamente.
    2. Seleccione el valor de red de **Red pública y privada** o **Solo red privada**.

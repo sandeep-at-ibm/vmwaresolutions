@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -86,6 +86,6 @@ SDDC Manager が管理するコンポーネントのホスト名は SDDC Manager
 
 ### 関連リンク
 
-* [物理インフラストラクチャー設計](design_physicalinfrastructure.html)
-* [仮想インフラストラクチャー設計](design_virtualinfrastructure.html)
-* [インフラストラクチャー管理設計](design_infrastructuremgmt.html)
+* [物理インフラストラクチャー設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [仮想インフラストラクチャー設計](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [インフラストラクチャーの管理の設計](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)

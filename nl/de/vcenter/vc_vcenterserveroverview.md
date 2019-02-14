@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,13 +18,13 @@ VMware vCenter Server on {{site.data.keyword.cloud}} ist eine gehostete private 
 
 In zahlreichen Fällen kann die gesamte Umgebung in weniger als einem Tag bereitgestellt werden und die Bare-Metal-Infrastruktur kann die Rechenkapazität nach Bedarf schnell und flexibel skalieren.
 
-Nach der Bereitstellung können Sie den gemeinsam genutzten Speicher vergrößern, indem Sie weitere gemeinsam genutzte NFS-Dateiressourcen (NFS – Network File System) im {{site.data.keyword.slportal}} bestellen und die gemeinsam genutzten Dateiressourcen manuell an alle ESXi-Server in einem Cluster anhängen. Wenn Sie dedizierten Speicher benötigen, können Sie [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html) nutzen, das sowohl in Konfigurationen mit hoher Leistung (alle mit SSD) als auch mit hoher Speicherkapazität (alle mit SATA) angeboten wird.
+Nach der Bereitstellung können Sie den gemeinsam genutzten Speicher erweitern, indem Sie weitere gemeinsam genutzte NFS-Dateiressourcen (NFS - Network File System) im {{site.data.keyword.slportal}} bestellen und die gemeinsam genutzten Dateiressourcen manuell an alle ESXi-Server in einem Cluster anhängen. Wenn Sie dedizierten Speicher benötigen, können Sie [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp/np_netappoverview.html) nutzen, das sowohl in Konfigurationen mit hoher Leistung (alle mit SSD) als auch mit hoher Speicherkapazität (alle mit SATA) angeboten wird.
 
 VMware vSAN steht ebenfalls als Option für dedizierten Speicher zur Verfügung. Wenn Sie die vSAN-basierte Speicherkapazität eines vSAN-Clusters erhöhen möchten, können Sie nach der Bereitstellung weitere ESXi-Server hinzufügen.
 
 Falls Sie eine von IBM bereitgestellte VMware-Lizenzierung erworben haben, können Sie für VMware NSX Base Edition ein Upgrade auf Advanced oder Enterprise Edition durchführen und weitere VMware-Komponenten wie VMware vRealize Operations erwerben.
 
-Sie können IBM Managed Services hinzufügen, wenn Sie die Routineabläufe und die Wartung der Virtualisierung, des Gastbetriebssystems oder der Anwendungsschichten auslagern möchten. Das Team von {{site.data.keyword.cloud_notm}} Professional Services kann Ihnen durch Migrations-, Implementierungs-, Planungs- und Onboarding-Services ebenfalls dabei helfen, Ihren Einstieg in die Cloud zu beschleunigen.
+Sie können von IBM verwaltete Services hinzufügen, wenn Sie die Routineabläufe und die Wartung der Virtualisierung, des Gastbetriebssystems oder der Anwendungsschichten auslagern möchten. Das Team von {{site.data.keyword.cloud_notm}} Professional Services kann Ihnen durch Migrations-, Implementierungs-, Planungs- und Onboarding-Services ebenfalls dabei helfen, Ihren Einstieg in die Cloud zu beschleunigen.
 
 ## vCenter Server-Architektur
 
@@ -45,13 +45,13 @@ Diese Schicht virtualisiert die physische Infrastruktur durch verschiedene VMwar
 
 ### Virtualisierungsmanagement
 
-Diese Schicht besteht aus vCenter Server Appliance (vCSA), dem NSX-Manager, zwei NSX Edge Services Gateways (ESGs), drei NSX-Controllern, der virtuellen Appliance für Platform Services Controller (PSC) und der virtuellen Serverinstanz (VSI) für IBM CloudDriver. Die CloudDriver-VSI wird bei Bedarf auf Anforderung für bestimmte Operationen, wie zum Beispiel für das Hinzufügen von Hosts zur Umgebung, bereitgestellt.
+Diese Schicht besteht aus vCenter Server Appliance (vCSA) mit integriertem Platform Services Controller (PSC), NSX Manager, zwei Edge Services Gateways (ESGs), drei NSX-Controllersn und der virtuellen Serverinstanz (VSI) für IBM CloudDriver. Die CloudDriver-VSI wird bei Bedarf auf Anforderung für bestimmte Operationen, wie zum Beispiel für das Hinzufügen von Hosts zur Umgebung, bereitgestellt.
 
 Das Basisangebot wird mit einer vCenter Server-Appliance bereitgestellt, deren Größe für die Unterstützung einer Umgebung mit bis zu 400 Hosts und bis zu 4000 VMs ausgelegt ist. Zum Verwalten der von IBM gehosteten VMware-Umgebung können Sie dieselben mit der vSphere-API kompatiblen Tools und Scripts verwenden.
 
 Insgesamt benötigt das Basisangebot 38 virtuelle CPUs und 67 GB virtuellen RAM, die für die Virtualisierungsmanagementschicht reserviert sind. Die verbleibende Hostkapazität für Ihre VMs hängt von mehreren Faktoren ab, beispielsweise der Übersubskriptionsrate, der VM-Dimensionierung und den Anforderungen an die Workloadleistung.
 
-Weitere Informationen zur Architektur enthält die [Referenzdokumentation zur Architektur von {{site.data.keyword.vmwaresolutions_short}}](../archiref/solution/solution_overview.html).
+Weitere Informationen zur Architektur enthält die [Referenzdokumentation zur Architektur von {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html). 
 
 ## Technische Spezifikationen für vCenter Server-Instanzen
 
@@ -64,14 +64,12 @@ Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen kön
 
 Sie können drei oder mehr {{site.data.keyword.baremetal_short}}-Instanzen mit einer der folgenden Konfigurationen bestellen:
 * **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.  
-* **SAP-zertifiziert**: {{site.data.keyword.baremetal_short}}-Instanzen mit dem ausgewählten CPU-Modell.
-  * Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 192 GB RAM
-  * Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 384 GB RAM
-  * Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 768 GB RAM
-* **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600 v4 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.  
-     Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
-     {:note}
-     
+* **SAP-zertifiziert**: Intel Skylake oder Intel Broadwell Generation-Server (Intel Xeon 6140/E5-2690/E7-8890 Series) mit dem ausgewählten CPU-Modell.
+* **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600/E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.  
+
+Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
+{:note}
+
 ### Vernetzung
 
 Die folgenden Netzkomponenten werden bestellt:
@@ -79,11 +77,11 @@ Die folgenden Netzkomponenten werden bestellt:
 *  3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
 *  1 VXLAN (Virtual eXtensible LAN) mit einem verteilten logischen Router (Distributed Logical Router, DLR) für die potenzielle Ost-West-Kommunikation zwischen lokalen Workloads, die mit Netzen der Schicht 2 (L2) verbunden sind. Das VXLAN wird als Muster für die Routingtopologie bereitgestellt, das Sie ändern, als Ausgangspunkt für Erstellungen verwenden oder entfernen können. Sie können außerdem Sicherheitszonen hinzufügen, indem Sie zusätzliche VXLANs an neue logische Schnittstellen im DLR anhängen.
 *  2 VMware NSX Edge Services Gateways:
-  * 1 sicheres VMware NSX Edge Services Gateway (ESG) für Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Über dieses ESG kommunizieren virtuelle IBM Management-Maschinen mit bestimmten externen IBM Managementkomponenten, die mit der Automatisierung zusammenhängen. Weitere Informationen finden Sie unter [Netz zur Verwendung des vom Kunden verwalteten ESG konfigurieren](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * 1 sicheres VMware NSX Edge Services Gateway (ESG) für Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Über dieses ESG kommunizieren virtuelle IBM Management-Maschinen mit bestimmten externen IBM Managementkomponenten, die mit der Automatisierung zusammenhängen. Weitere Informationen finden Sie unter [Netz zur Verwendung des vom Kunden verwalteten ESG konfigurieren](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     Dieses ESG trägt den Namen **mgmt-nsx-edge**. Es ist für Sie weder zugänglich, noch können Sie es verwenden. Falls Sie es ändern, sind Sie möglicherweise nicht in der Lage, die vCenter Server-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Außerdem führt die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu, dass {{site.data.keyword.vmwaresolutions_short}} möglicherweise unbrauchbar wird.
     {:important}
-  * Ein sicheres vom Kunden verwaltetes VMware NSX Edge Services Gateway für eingehenden und abgehenden HTTPS-Workloaddatenverkehr. Dieses Gateway wird von IBM als Vorlage bereitgestellt, die von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen. Weitere Informationen finden Sie im Abschnitt [Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
+  * Ein sicheres vom Kunden verwaltetes VMware NSX Edge Services Gateway für eingehenden und abgehenden HTTPS-Workloaddatenverkehr. Dieses Gateway wird von IBM als Vorlage bereitgestellt, die von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen. Weitere Informationen finden Sie im Abschnitt [Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-). 
 
 ### Virtual Server-Instanzen
 
@@ -96,6 +94,9 @@ Die folgenden VSIs (Virtual Server-Instanzen) werden bestellt:
 ### Speicher
 
 Während der Erstbereitstellung können Sie zwischen den Speicheroptionen "vSAN" und "NFS" wählen.
+
+Für Instanzen der Version 2.8 und höher können gemeinsam genutzte NFS-Speicherressourcen zu einem vorhandenen NFS- oder vSAN-Cluster hinzugefügt werden. Weitere Informationen finden Sie im Abschnitt *NFS-Speicher zu vCenter Server-Instanzen hinzufügen* in [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances).
+{:note}
 
 #### vSAN-Speicher
 
@@ -112,11 +113,15 @@ Die Option "vSAN" bietet angepasste Konfigurationen mit unterschiedlichen Option
 #### NFS-Speicher
 
 Die Option "NFS" bietet angepassten gemeinsam genutzten Speicher auf Dateiebene für Workloads mit verschiedenen Optionen für Größe und Leistung:
-* Größe: 1, 2, 4, 8 oder 12 TB
-* Leistung: 2, 4 oder 10 IOPS/GB (E/A-Operationen pro Sekunde und GB).
+* Größe: 20 bis 12000 GB
+* Leistung: 0,25, 2, 4 oder 10 IOPS/GB.
 * Die gemeinsam genutzten Dateiressourcen werden einzeln konfiguriert.
 
 Wenn Sie die Option "NFS" auswählen, wird 1 gemeinsam genutzte Dateiressource mit 2 TB und 4 IOPS/GB für Managementkomponenten bestellt.
+
+#### Lokaler Plattenspeicher
+
+Die Option für lokale Festplatten, die nur für die Bare-Metal-Konfiguration des **SAP-zertifizierten** Quad Intel Xeon E7-8890 v4-Prozessors verfügbar ist, bietet kundenspezifische Konfigurationen mit verschiedenen Optionen für Plattenanzahl und Plattentyp.
 
 ### Lizenzen (von IBM bereitgestellt oder eigene) und Gebühren
 
@@ -132,7 +137,7 @@ Jeder vCenter Server-Erweiterungsknoten stellt die folgenden Komponenten in Ihre
 
 ### Hardware für Erweiterungsknoten
 
-1 Bare Metal Server mit der unter [Technische Spezifikationen für vCenter Server-Instanzen](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) aufgeführten Konfiguration.
+1 Bare Metal Server mit der unter [Technische Spezifikationen für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) aufgeführten Konfiguration.
 
 ### Lizenzen und Gebühren für Erweiterungsknoten
 
@@ -152,7 +157,7 @@ Ausgenommen von diesen Aktivitäten ist unter anderem das Management der gemeins
 
 ### Zugehörige Links
 
-* [vCenter Server-Softwareteileliste](vc_bom.html)
-* [vCenter Server-Instanzen planen](vc_planning.html)
-* [vCenter Server-Instanzen bestellen](vc_orderinginstance.html)
+* [vCenter Server-Softwareteileliste](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [vCenter Server-Instanzen planen](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 * [{{site.data.keyword.cloud_notm}} File Storage und Block Storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

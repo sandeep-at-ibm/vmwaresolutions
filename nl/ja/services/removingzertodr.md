@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Zerto on IBM Cloud の削除プロセス
 
@@ -25,7 +29,8 @@ Zerto on {{site.data.keyword.cloud}} サービスの削除プロセスは自動�
    4. {{site.data.keyword.cloud_notm}} インフラストラクチャーへの Zerto Virtual Replication 通信のために注文したプライベート・ポータブル・サブネットを返却します。   
    5. お客様の {{site.data.keyword.cloud_notm}} 請求書から Zerto 災害復旧サービスの料金を削除します。
 
-      **注:** 削除対象の Zerto 災害復旧サービスに関する請求は、請求処理サイクルの終わりまで行われます。
+      削除対象の Zerto 災害復旧サービスに関する請求は、請求処理サイクルの終わりまで行われます。
+      {:note}
 
 ## 結果
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -22,11 +22,11 @@ Wenn Sie Hosts, virtuelle Maschinen (VMs) und virtuelle Einheiten scannen, bewer
 2. Wenn die Prüfung abgeschlossen ist, wählen Sie **Kritische Host-Patches** aus. Überprüfen Sie im unteren Teilfenster die Patchdetails für die einzelnen Hosts, indem Sie auf die Zahl in **Anzahl der Patches** klicken. In einem Fenster werden die Patchinformationen angezeigt.
 3. Nehmen Sie die Prüfung vor und wiederholen Sie den Vorgang für **Nicht kritische Patches**.
 
-  Die VUM-Protokolldateien befinden sich unter _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_.
+  Die VUM-Protokolldateien befinden sich unter _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
 ## Prüfung von virtuellen Maschinen und virtuellen Appliances manuell initiieren
 
-Sie können virtuelle Maschinen (VMs) und virtuelle Appliances anhand angehängter Baselines und Baselinegruppen prüfen. Die VMs und Appliances, die Sie auswählen, werden - je nach den von Ihnen ausgewählten Optionen - anhand der angehängten Baselines geprüft. Alle untergeordneten Objekte werden ebenfalls geprüft, d. h. je größer die virtuelle Infrastruktur ist und je weiter oben in der Objekthierarchie sie die Prüfung initiieren, umso länger dauert die Prüfung und umso genauer wird die Konformitätsansicht.
+Sie können virtuelle Maschinen (VMs) und virtuelle Appliances anhand angehängter Baselines und Baselinegruppen prüfen. Die VMs und Appliances, die Sie auswählen, werden - je nach den von Ihnen ausgewählten Optionen - anhand der angehängten Baselines geprüft. Alle untergeordneten Objekte werden geprüft, d. h. je größer die virtuelle Infrastruktur ist und je weiter oben in der Objekthierarchie sie die Prüfung initiieren, umso länger dauert die Prüfung und umso genauer wird die Konformitätsansicht.
 
 1.	Bei Verwendung des vSphere Web Client wählen Sie **Home** > **VMs und Vorlagen** aus.
 2.	Klicken Sie mit der rechten Maustaste auf eine _virtuelle Maschine_, eine _virtuelle Appliance_ oder einen _Ordner mit virtuellen Maschinen und Appliances_ und klicken Sie auf **Auf Updates prüfen**.
@@ -45,7 +45,7 @@ Sie können eine simultane Prüfung von Hosts, VMs und virtuellen Appliances sta
 
 Sie können den vSphere Web Client so konfigurieren, dass VMs, virtuelle Appliances und vSphere ESXi-Hosts zu bestimmten Zeiten oder in den gewünschten Abständen geprüft werden.
 
-1.	Bei Verwendung des vSphere Web Client wählen Sie ein Objekt aus dem Bestand aus. Alle Objekte, die dem ausgewählten Objekt untergeordnet sind, werden ebenfalls geprüft.
+1.	Wählen Sie mithilfe des vSphere Web Client ein Objekt aus dem Bestand aus. Alle Objekte, die dem ausgewählten Objekt untergeordnet sind, werden ebenfalls geprüft.
 2.	Wählen Sie die Registerkarte **Überwachen** und klicken Sie auf **Task und Ereignisse**.
 3.	Wählen Sie **Geplante Tasks** aus und klicken Sie auf **Neue Task planen**.
 4.	Wählen Sie in der dann angezeigten Dropdown-Liste die Option **Auf Updates prüfen** aus. Der Assistent für das Prüfen auf Updates wird geöffnet.
@@ -56,4 +56,4 @@ Sie können den vSphere Web Client so konfigurieren, dass VMs, virtuelle Applian
 ### Zugehörige Links
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-12"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -33,25 +33,25 @@ VUM により、VMware vSphere の集中型の自動化されたパッチおよ�
 
 代替インターネット接続の使用を必要とするお客様は、VMware vSphere Update Manager Download Service (UMDS) について調べる必要があります。これは、この資料には記載されていません。
 
-VUM は、共有リポジトリーから更新をインポートしたり、パッチや拡張を .zip ファイルから手動でインポートしたりするように構成できますが、これらのトピックについてはこの資料には記載されていません。
+VUM は、共有リポジトリーから更新をインポートしたり、パッチや拡張を圧縮ファイルから手動でインポートしたりするように構成できますが、これらのトピックについてはこの資料では説明しません。
 
-したがって、vSphere 6.5 では、vCenter Server 環境内の VM に VUM をデプロイできない個別の Windows マシンに VUM サーバーをインストールする際に、VUM を VCSA に登録することはサポートされなくなりました。
+vSphere 6.5 では、vCenter Server 環境内の VM に VUM をデプロイできない個別の Windows システムに VUM サーバーをインストールする際に、VUM を VCSA に登録することはサポートされなくなりました。
 
 この資料は以下のセクションで構成されています。
-* [VMware Update Manager の概要](vum-overview.html) - このセクションでは VUM プロセスについて説明し、ツールの操作および UI を理解するために必要な重要な用語を紹介します。
-* **インストール、構成、および使用法** - このセクションでは、vCenter Server インスタンスで VUM を作動させるために必要なステップについて説明します。
-  - [初期構成](vum-init-config.html) - 以下を行う一回限りのタスク。
+* [VMware Update Manager の概要](/docs/services/vmwaresolutions/archiref/vum/vum-overview.html) - VUM プロセスについて説明し、ツールの操作および UI を理解するために必要な重要な用語を紹介します。
+* **インストール、構成、および使用法** - vCenter Server インスタンスで VUM を使用するために必要な手順について説明します。
+  - [初期構成](/docs/services/vmwaresolutions/archiref/vum/vum-init-config.html) - 以下を行う一回限りのタスク。
       - プロキシー・サーバーがインターネットにアクセスできるようにするための NSX ネットワーキングの構成。
       - VUM へのインターネット・アクセスを提供するためのプロキシー・サーバーのインストールと構成。
       - プロキシー・サーバーを使用するための VUM の初期セットアップ。
-  - [メタデータの収集](vum-metadata.html)- VUM は、変更可能な事前定義の自動プロセスを介して、アップグレード、パッチ、または拡張に関するメタデータをダウンロードします。 VUM は、構成可能な一定の間隔で、VMware またはサード・パーティーのソースにアクセスして、使用可能なアップグレード、パッチ、または拡張に関する最新のメタデータを収集します。
-  - [ベースラインの作成](vum-baselines.html) - 事前定義のベースラインおよびベースライン・グループを使用するか、カスタム・ベースラインを作成します。 その後、ベースラインおよびベースライン・グループがインベントリー・オブジェクトに接続されます。
-  - [スキャンおよびレビュー](vum-scanning.html) - インベントリー・オブジェクトがスキャンされ、結果がレビューされて、ベースラインおよびベースライン・グループにどのように準拠しているかが判別されます。 スキャン結果は、テキスト検索、グループ選択、ベースライン選択、およびコンプライアンス状況の選択によってフィルタリングできます。
-  - [ステージングおよび修復](vum-staging.html) - 修復の前にオプションでパッチおよび拡張をステージングして、確実にホストにダウンロードされるようにすることができます。 修復中に、VUM によってパッチ、拡張、およびアップグレードがインベントリー・オブジェクトに適用されます。
+  - [メタデータの収集](/docs/services/vmwaresolutions/archiref/vum/vum-metadata.html)- VUM は、変更可能な事前定義の自動プロセスを介して、アップグレード、パッチ、または拡張に関するメタデータをダウンロードします。 VUM は、構成可能な一定の間隔で、VMware またはサード・パーティーのソースにアクセスして、使用可能なアップグレード、パッチ、または拡張に関する最新のメタデータを収集します。
+  - [ベースラインの作成](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html) - 事前定義のベースラインおよびベースライン・グループを使用するか、カスタム・ベースラインを作成します。 その後、ベースラインおよびベースライン・グループがインベントリー・オブジェクトに接続されます。
+  - [スキャンおよびレビュー](/docs/services/vmwaresolutions/archiref/vum/vum-scanning.html) - インベントリー・オブジェクトがスキャンされ、結果がレビューされて、ベースラインおよびベースライン・グループにどのように準拠しているかが判別されます。 スキャン結果は、テキスト検索、グループ選択、ベースライン選択、およびコンプライアンス状況の選択によってフィルタリングできます。
+  - [ステージングおよび修復](/docs/services/vmwaresolutions/archiref/vum/vum-staging.html) - 修復の前にオプションでパッチおよび拡張をステージングして、確実にホストにダウンロードされるようにすることができます。 修復中に、VUM によってパッチ、拡張、およびアップグレードがインベントリー・オブジェクトに適用されます。
 
-この資料では、1 つの 1 次 vCenter Server インスタンス、または複数の個別の 1 次 vCenter Server インスタンスがデプロイされていることを前提としています。 1 次および 2 次 vCenter Server インスタンスがデプロイされているため、シングル・サインオン (SSO) を使用している場合は、[SSO がリンクされた vCenters](vum-updating-vcsa.html) を参照してください。
+この資料では、1 つの 1 次 vCenter Server インスタンス、または複数の個別の 1 次 vCenter Server インスタンスがデプロイされていることを前提としています。 デプロイされていて、シングル・サインオン (SSO) を使用している 1 次および 2 次 vCenter Server インスタンスがある場合は、[SSO がリンクされた vCenters](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html) を参照してください。
 
-vSAN を使用して vCenter Server をデプロイした場合は、まず [vSAN クラスターの更新](vum-updating-vsan.html)を参照してください。
+vSAN を使用して vCenter Server をデプロイした場合は、まず [vSAN クラスターの更新](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vsan.html)を参照してください。
 
 {{site.data.keyword.cloud_notm}} インフラストラクチャー管理の自動化を更新する場合は、{{site.data.keyword.vmwaresolutions_short}} コンソールを使用します。
 
@@ -66,4 +66,4 @@ vSAN を使用して vCenter Server をデプロイした場合は、まず [vSA
 ### 関連リンク
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモ)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)

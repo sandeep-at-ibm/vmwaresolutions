@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-11-20"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Releaseinformationen für V2.0
 
@@ -19,8 +23,8 @@ Der Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" is
 Bestellen Sie Instanzen, die den Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" enthalten, oder fügen Sie diesen Service später Ihren vorhandenen Instanzen über die Registerkarte **Services** auf der Seite mit den Instanzdetails hinzu. Wählen Sie je nach Bedarf eine der drei Bereitstellungsgrößen und Lizenzierungsoptionen, die für diesen Service vorhanden sind. Verwalten und konfigurieren Sie nach der erfolgreichen Installation des Service Firewallregeln für FortiGate Virtual Appliances über die FortiGate-Konsole.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Komponenten und Hinweise für FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} verwalten](../services/managingfortinetvm.html)
+* [Komponenten und Hinweise für FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
 
 ## Installation mehrerer Services für F5 on IBM Cloud und FortiGate Virtual Appliance on IBM Cloud
 
@@ -29,8 +33,8 @@ Sie können jetzt mehrere Instanzen der Services "F5 on {{site.data.keyword.clou
 Nachdem die Instanzbereitstellung erfolgt ist, können Sie weitere Instanzen des F5- oder FortiGate-Service hinzufügen, indem Sie den Service auf der Registerkarte **Services hinzufügen** der Seite mit den Instanzdetails installieren. Sie können gleichzeitig jeweils nur eine einzige Serviceinstanz hinzufügen; der Prozess muss für jede Instanz, die Sie für einen Service hinzufügen wollen, wiederholt werden.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
+* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ## Updates für FortiGate Security Appliance on IBM Cloud
 
@@ -45,9 +49,9 @@ Sie müssen die FSA-Konfiguration in jedem Fall sorgfältig verwalten, damit nur
 Der vollständig qualifizierte Domänenname (Fully Qualified Domain Name, FQDN) wird jetzt bei allen Instanzen konsistent dargestellt. Beim Aufgeben einer Bestellung können Sie Ihr eigenes Unterdomänen- und Hostnamenspräfix eingeben, um sicherzustellen, dass der Branchenstandard für das FQDN-Format eingehalten wird. Beispiel: `hostnamenspräfix<n>.unterdomänenpräfix.domänenname`.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
-* [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
-* [Neue vSphere-Cluster bestellen](../vsphere/vs_orderinginstances.html)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
 
 ## Workload- und Speicherschätzungen bei einer Instanzbestellung
 
@@ -55,9 +59,9 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 * Bei einer Bestellung von Cloud Foundation und vCenter Server erhalten Sie eine Schätzung der nutzbaren Speicherkapazität für die bestellte Instanz.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
-* [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
-* [Neue vSphere-Cluster bestellen](../vsphere/vs_orderinginstances.html)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
 
 ## Updates für VMware Cloud Foundation-Instanzen
 
@@ -70,15 +74,16 @@ Im aktuellen Release werden die folgenden Komponentenupdates und Verbesserungen 
 * VMware NSX for vSphere 6.3.4
 * VMware ESXi 6.5, Patch-Release ESXi650-201710401-BG. Updates für VIBs "esx-base", "esx-tboot", "vsan" und "vsanhealth" (2151061). Weitere Informationen zu Details über das Patch können Sie auf der Seite [VMware vCenter Server Appliance Photon OS Security Patches](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window} nachlesen.
 
-**Hinweis**: Bei vorhandenen Instanzen (aus Releases V1.9 und früher) ist ein Upgrade auf die in dieser Liste aufgeführten Komponentenversionen nicht möglich.
+Bei vorhandenen Instanzen (aus Releases V1.9 und früher) ist ein Upgrade auf die in dieser Liste aufgeführten Komponentenversionen nicht möglich.
+{:note}
 
-Weitere Informationen zu Komponenten finden Sie unter [Übersicht über Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
+Weitere Informationen zu Komponenten finden Sie unter [Übersicht über Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html).
 
 ### Clusterunterstützung für Cloud Foundation-Instanzen
 
 Sie können jetzt ESXi-Server in Cloud Foundation-Instanzen, die in V2.0 und höher bereitgestellt werden, mithilfe von Clustern verwalten und so ein besseres Ressourcenmanagement und eine hohe Verfügbarkeit erreichen. Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, werden standardmäßig unter **SDDC-Cluster** gruppiert.
 
-Auf der Registerkarte **Infrastruktur** der Seite mit den Instanzdetails können Sie die Clusterdetails anzeigen und für eine Instanz bis zu insgesamt fünf Cluster hinzufügen. Wenn Sie die Kapazität für eine Instanz erweitern oder verringern, können Sie auswählen, in welchem Cluster ESXi-Server hinzugefügt oder entfernt werden sollen. Weitere Informationen finden Sie unter [Cluster für Cloud Foundation-Instanzen hinzufügen und anzeigen](../sddc/sd_addingviewingclusters.html).
+Auf der Registerkarte **Infrastruktur** der Seite mit den Instanzdetails können Sie die Clusterdetails anzeigen und für eine Instanz bis zu insgesamt fünf Cluster hinzufügen. Wenn Sie die Kapazität für eine Instanz erweitern oder verringern, können Sie auswählen, in welchem Cluster ESXi-Server hinzugefügt oder entfernt werden sollen. Weitere Informationen finden Sie unter [Cluster für Cloud Foundation-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html).
 
 ### Unterstützung für angepassten vSAN-Speicher bei Cloud Foundation-Instanzen
 
@@ -86,12 +91,12 @@ Sie können die vSAN-Speicherkonfiguration jetzt anpassen, indem Sie Anzahl und 
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 
-* [Übersicht über Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
-* [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
+* [Übersicht über Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
 
 ### Auswahl der VMware vSAN-Lizenzedition (Advanced oder Enterprise) für Cloud Foundation-Instanzen
 
-Sie können jetzt bei der Bestellung einer Cloud Foundation-Instanz die gewünschte vSAN-Lizenzedition auswählen. Sie können entweder die Lizenz im Rahmen der Bestellung kaufen oder eine eigene Lizenz verwenden (Bring Your Own License, BYOL). Weitere Informationen finden Sie im Abschnitt [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html).
+Sie können jetzt bei der Bestellung einer Cloud Foundation-Instanz die gewünschte vSAN-Lizenzedition auswählen. Sie können entweder die Lizenz im Rahmen der Bestellung kaufen oder eine eigene Lizenz verwenden (Bring Your Own License, BYOL). Weitere Informationen finden Sie im Abschnitt [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html).
 
 ### Neue standardisierte IBM Bare Metal Server-Konfigurationen für Cloud Foundation-Instanzen
 
@@ -99,11 +104,12 @@ Die folgenden Einstellungen für Bare Metal Server-Konfigurationen sind jetzt ve
 * S (Klein): Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz / 128 GB RAM / 12 Platten
 * L (Groß): Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM / 12 Platten
 
-**Anmerkung**: Im Chassis ist Platz für 12 Platten. Nicht alle Steckplätze sind belegt. Die Konfiguration **S (Klein)** stellt zwei Micron 5100 MAX-Laufwerke mit 1,9 TB bereit; die Konfiguration **L (Groß)** bietet vier Micron 5100 PRO-Laufwerke mit 3,8 TB.
+Im Chassis ist Platz für 12 Platten. Nicht alle Steckplätze sind belegt. Die Konfiguration **S (Klein)** stellt zwei Micron 5100 MAX-Laufwerke mit 1,9 TB bereit; die Konfiguration **L (Groß)** bietet vier Micron 5100 PRO-Laufwerke mit 3,8 TB.
+{:note}
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Übersicht über Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
-* [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
+* [Übersicht über Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
 
 ## Updates für VMware vCenter Server-Instanzen
 
@@ -114,30 +120,31 @@ Im aktuellen Release werden die folgenden Komponentenupdates für neue Bereitste
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
 
-**Anmerkung:** Angepasste vCenter Server-Bestellungen mit der oder ohne die Komponente "VMware vSAN" enthalten immer einen Server mit einem Chassis für 12 Platten. Dieser Server führt in der PDF-Datei für die Preisschätzung zu etwas höheren Kosten für die {{site.data.keyword.baremetal_short}}-Instanzen bei einer Bestellung ohne vSAN.
+Angepasste vCenter Server-Bestellungen mit der oder ohne die Komponente "VMware vSAN" enthalten immer einen Server mit einem Gehäuse für 12 Platten. Dieser Server führt in der PDF-Datei für die Preisschätzung zu etwas höheren Kosten für die {{site.data.keyword.baremetal_short}}-Instanzen bei einer Bestellung ohne vSAN.
+{:note}
 
-Weitere Informationen zu Komponenten enthält der Abschnitt [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html).
+Weitere Informationen zu Komponenten enthält der Abschnitt [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html).
 
 ### Unterstützung von Konfigurationen mit mehreren Standorten für vCenter Server-Instanzen
 
 Sie können nun eine einzige vCenter Server-Instanz bereitstellen und zusätzlich auch sekundäre Instanzen bereitstellen, die an eine primäre Instanz angeschlossen sind. Das Konfigurationsmodell für mehrere Standorte verwendet eine Hub-Peripherie-Topologie mit einem primären Standort und maximal sieben sekundären Standorten.
 
-Weitere Informationen finden Sie unter [Konfiguration mit mehreren Standorten für vCenter Server-Instanzen](../vcenter/vc_multisite.html).
+Weitere Informationen finden Sie unter [Konfiguration mit mehreren Standorten für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_multisite.html).
 
 ### Unterstützung für angepassten vSAN-Speicher bei vCenter Server-Instanzen
 
 vSAN-Speicher ist jetzt sowohl für primäre als auch für sekundäre vCenter Server-Instanzen verfügbar. Die Verfügbarkeit besteht jedoch nur dann, wenn Sie eine angepasste Konfiguration auswählen. Die gewünschte vSAN-Lizenzedition (Advanced oder Enterprise) können Sie jetzt bei der Bestellung der vCenter Server-Instanz auswählen. Sie können entweder die Lizenz im Rahmen der Bestellung kaufen oder eine eigene Lizenz verwenden (Bring Your Own License, BYOL).
 
-Weitere Informationen finden Sie unter [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html).
+Weitere Informationen finden Sie unter [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html).
 
 ### Eigene Lizenzen für VMware vCenter Server-Instanzen verwenden (Bring Your Own License, BYOL)
 
 BYOL, also die Verwendung eigener Lizenzen, ist jetzt für vCenter Server-Instanzen verfügbar. Verwenden Sie eine oder mehrere Ihrer eigenen Lizenzen für vCenter Server, vSphere, vSAN und NSX VMware, wenn Sie vCenter Server-Instanzen bestellen.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
-* [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
-* [Neue vSphere-Cluster bestellen](../vsphere/vs_orderinginstances.html)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
 
 ## Updates für VMware vSphere on IBM Cloud
 
@@ -152,22 +159,23 @@ Bei der Komponente "VMware vSAN" sind jetzt die folgenden Plattentypen für {{si
 * 3,8-TB-SSD-SED-Laufwerke sind unterstützt, wenn sie allgemein in einem {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) verfügbar gemacht werden.
 * Bestellungen mit oder ohne die Komponente "VMware vSAN" enthalten immer einen Server mit einem Chassis für 12 Platten. Dieser Server führt in der PDF-Datei für die Preisschätzung zu etwas höheren Kosten für die {{site.data.keyword.baremetal_short}}-Instanzen bei einer Bestellung ohne vSAN.
 
-Weitere Informationen finden Sie unter [Neue vSphere-Cluster bestellen](../vsphere/vs_orderinginstances.html).
+Weitere Informationen finden Sie unter [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html).
 
 ## Updates für NetApp ONTAP Select on IBM Cloud
 
 ### Neue Bare Metal Server-Optionen
 
 Die folgenden Bare Metal Server-Konfigurationsoptionen sind jetzt verfügbar:
-* **Hohe Leistung (M = Mittel)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 59 TB
-* **Hohe Leistung (L = Groß)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 3,8-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 118 TB
-* **Hohe Kapazität** – Standardlizenz / Dual Intel Xeon E5-2650 v4 (24 Kerne insgesamt, 2,2 GHz) / 64 GB RAM / Kapazität von zehn 4-TB-SATA-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 60 TB
+* **Hohe Leistung (M = Mittel)** - Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten - 59 TB
+* **Hohe Leistung (L = Groß)** - Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 3,8-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten - 118 TB
+* **Hohe Kapazität** - Standardlizenz / Dual Intel Xeon E5-2650 v4 (24 Kerne insgesamt, 2,2 GHz) / 64 GB RAM / Kapazität von zehn 4-TB-SATA-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten - 60 TB
 
-**Anmerkung:** 3,8-TB-SSD-Laufwerke sind unterstützt, wenn sie allgemein in einem {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) verfügbar gemacht werden.
+3,8-TB-SSD-Laufwerke sind unterstützt, wenn sie allgemein in einem {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) verfügbar gemacht werden.
+{:note}
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Übersicht über NetApp ONTAP Select](../netapp/np_netappoverview.html)
-* [NetApp ONTAP Select-Instanzen bestellen](../netapp/np_orderinginstances.html)
+* [Übersicht über NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
+* [NetApp ONTAP Select-Instanzen bestellen](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
 
 ## Neue und aktualisierte Dokumentation
 

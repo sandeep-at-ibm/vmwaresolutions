@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-26"
 
 ---
 
 # Creación de líneas base y conexión a objetos de inventario
 
-Las líneas base contienen una colección de uno o varios parches, extensiones, paquetes de servicio, arreglos de errores o actualizaciones, y se pueden clasificar como líneas base de parches, extensiones o actualización. Los grupos de línea base se ensamblan desde las líneas base existentes. Los grupos de línea base de host pueden contener una sola línea base de actualización y varias líneas base de parche y extensión. Los grupos de línea base de la máquina virtual y del dispositivo virtual pueden contener hasta tres líneas base de actualización: una línea base de actualización de VMware Tools, una línea base de actualización de hardware de máquina virtual y una línea base de actualización de dispositivo virtual.
+Las líneas base tienen una colección de uno o varios parches, extensiones, paquetes de servicio, arreglos de errores o actualizaciones, y se pueden clasificar como líneas base de parches, extensiones o actualización. Los grupos de línea base se ensamblan desde las líneas base existentes. Los grupos de línea base de host pueden tener una sola línea base de actualización y varias líneas base de parche y extensión. Los grupos de línea base de la máquina virtual y del dispositivo virtual pueden tener hasta tres líneas base de actualización: una línea base de actualización de VMware Tools, una línea base de actualización de hardware de máquina virtual y una línea base de actualización de dispositivo virtual.
 
 VUM incluye líneas base predefinidas que no se pueden editar ni suprimir. Puede utilizar las líneas base predefinidas o crear las líneas base de parche, extensión y actualización que cumplan sus criterios. Las líneas base personalizadas que cree y las líneas base predefinidas se pueden combinar en grupos de línea base.
 
@@ -35,4 +35,4 @@ Para utilizar las líneas base y los grupos de línea base, debe adjuntarlos a l
 ### Enlaces relacionados
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

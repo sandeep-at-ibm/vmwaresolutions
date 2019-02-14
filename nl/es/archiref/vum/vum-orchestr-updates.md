@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-20"
 
 ---
 
 #	Actualizaciones coordinadas
 
-Puede utilizar actualizaciones coordinadas para actualizar el hardware virtual y las herramientas de VMware de máquinas virtuales en el inventario después de actualizar los hosts ESXi de vSphere. Una vez que se han actualizado los hosts, primero se ejecuta la línea base de actualización de VMware Tools, seguido de la línea base de actualización de hardware de la máquina. Las actualizaciones coordinadas se pueden realizar en un clúster, una carpeta o un nivel de centro de datos.
+Puede utilizar actualizaciones coordinadas para actualizar el hardware virtual y las herramientas de VMware de máquinas virtuales en el inventario después de actualizar los hosts ESXi de vSphere. Una vez que se han actualizado los hosts, primero se ejecuta la línea base de actualización de VMware Tools, seguido de la línea base de actualización de hardware de la máquina. Puede utilizar actualizaciones coordinadas a nivel de clúster, de carpeta o de centro de datos.
 
 VUM le permite realizar actualizaciones coordinadas de hosts y de máquinas virtuales utilizando grupos de línea base. Se utiliza un grupo de línea base que contiene una sola línea base de actualización de host y varias líneas base de parche o extensión. VUM primero actualiza los hosts y después aplica el parche o las líneas base de extensión. Para realizar una actualización coordinada de máquinas virtuales, utilice un grupo de línea base de máquina virtual que contenga las siguientes líneas base:
 * Actualización de VM Hardware para que coincida con el host
@@ -20,11 +20,11 @@ Las actualizaciones coordinadas de VUM le permiten actualizar los objetos de inv
 
 En la actualización coordinada, el clúster se corregirá primero frente al grupo de línea base de host, que aplica parches, extensiones y actualizaciones y, una vez actualizado, las máquinas virtuales del clúster se corrigen frente al grupo de línea base de actualización de la máquina virtual que contiene la actualización de hardware de VM para que coincida con las líneas base de Host y VMware Tools.
 
-Si el grupo de línea base también contiene una línea base de actualización, VUM actualiza primero los hosts ESXi de vSphere y después aplica el parche y/o las líneas base de extensión ya que los parches son aplicables a la versión específica del host. Para las máquinas virtuales, primero se actualizan las herramientas de VMware y después se actualiza el hardware virtual.
+Si el grupo de línea base también contiene una línea base de actualización, VUM actualiza primero los hosts ESXi de vSphere y después aplica el parche o las líneas base de extensión ya que los parches son aplicables a la versión específica del host. Para las máquinas virtuales, primero se actualizan las herramientas de VMware y después se actualiza el hardware virtual.
 
-Por lo tanto, durante la actualización de las herramientas de VMware, si las máquinas virtuales están en estado apagado o suspendido, VUM las encenderá, ejecutará la actualización y restaurará el estado de alimentación original de la máquina virtual. Por lo tanto, si durante la actualización de hardware virtual, las máquinas virtuales deben estar en estado apagado si hay máquinas virtuales encendidas, VUM las cerrará, actualizará el hardware virtual y encenderá la alimentación de nuevo.
+Por lo tanto, durante la actualización de las herramientas de VMware, si las máquinas virtuales están en estado apagado o suspendido, VUM las enciende, ejecuta la actualización y restaura el estado de alimentación original de la máquina virtual. Por lo tanto, si durante la actualización de hardware virtual, las máquinas virtuales deben estar en estado apagado si hay máquinas virtuales encendidas, VUM las cierra, actualiza el hardware virtual y enciende la alimentación de nuevo.
 
-De forma predeterminada, la corrección de los hosts de vSphere ESXi se realiza de forma secuencial y se corregirá un host a la vez. Cuando el proceso se haya completado para un host, VUM empezará a corregir el siguiente host. Este valor predeterminado se puede cambiar para habilitar la corrección en paralelo de modo que se pueda corregir más de un host a la vez, sin embargo, esto solo es posible si tiene la capacidad de migración tras error adecuada en el clúster.
+De forma predeterminada, la corrección de los hosts de vSphere ESXi se realiza de forma secuencial y se corrige un host a la vez. Cuando el proceso se haya completado para un host, VUM empezará a corregir el siguiente host. Este valor predeterminado se puede cambiar para habilitar la corrección en paralelo de modo que se pueda corregir más de un host a la vez, sin embargo, esto solo es posible si tiene la capacidad de migración tras error adecuada en el clúster.
 
 Si los hosts de vSphere ESXI forman parte de un clúster vSAN, el proceso de corrección siempre es secuencial incluso si ha seleccionado la corrección en paralelo en el asistente de corrección, ya que solo un host de un clúster vSAN puede estar en modalidad de mantenimiento en cualquier momento. VUM es inteligente y lleva a cabo un cálculo del número de hosts que se pueden corregir en paralelo sin interrumpir la configuración de DRS.
 
@@ -44,7 +44,7 @@ El flujo de trabajo siguiente describe el proceso para realizar una actualizaci�
 8. Opcionalmente, cree una línea base de parche nueva pulsando **Crear una nueva línea base de parche de host** en la parte inferior de la página Parches y complete el asistente Línea base nueva. Pulse **Siguiente**.
 9. Seleccione las líneas base de extensión que desee incluir en el grupo de línea base.
 10. Opcionalmente, cree una nueva línea base de actualización de extensión pulsando **Crear una nueva línea base de extensión** en la parte inferior de la página Actualizaciones y complete el asistente de Nueva línea base.
-11. Revise la página Preparado para completar, pulse **Finalizar** y el grupo de línea base de host se muestra en el panel Grupos de línea base.
+11. Revise la página **Preparado para completar**, pulse **Finalizar** y el grupo de línea base de host se muestra en el panel Grupos de línea base.
 
 ## Paso 2
 
@@ -61,4 +61,4 @@ Ahora puede utilizar estos grupos de línea base en los procesos de exploración
 ### Enlaces relacionados
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

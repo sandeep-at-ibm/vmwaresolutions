@@ -2,13 +2,21 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-12-20"
 
 ---
 
-# KMIP for VMware on IBM Cloud 주문
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+
+# KMIP for VMware on IBM Cloud 주문 - 더 이상 사용되지 않음
+
+KMIP for VMware on IBM Cloud의 현재 버전은 더 이상 사용되지 않습니다. 자세한 정보는 [IBM 지원 센터에 문의](../vmonic/trbl_support.html)하십시오.
+{:deprecated}
 
 서비스가 포함된 새 인스턴스를 주문할 때 또는 기존 인스턴스에 서비스를 추가하여 KMIP for VMware on {{site.data.keyword.cloud}} 서비스를 주문할 수 있습니다.
 
@@ -61,16 +69,14 @@ IBM Key Protect Service 인스턴스에 액세스하는 데 사용되는 {{site.
 
 **검색**을 클릭하여 선택된 IBM Key Protect 인스턴스에 저장된 고객 루트 키를 가져오십시오.
 
-
-
 ### 관련 링크
 
 * [KMIP for VMware on {{site.data.keyword.cloud_notm}} 개요](kmip_considerations.html)
 * [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](../sddc/sd_addingremovingservices.html)
 * [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_addingremovingservices.html)
 * [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_hybrid_addingremovingservices.html)
-* [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/services/keymgmt/index.html#getting-started-with-key-protect)
-* [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect?&language=javascript_jquery#introduction)
+* [{{site.data.keyword.cloudaccesstrailshort}} 이벤트](../vmonic/at-events.html)
+* [IBM Key Protect for {{site.data.keyword.cloud_notm}}](../../keymgmt/index.html)
 * [vSphere Security](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)
 * [FAQ](../vmonic/faq.html)
 * [IBM 지원 센터에 문의](../vmonic/trbl_support.html)

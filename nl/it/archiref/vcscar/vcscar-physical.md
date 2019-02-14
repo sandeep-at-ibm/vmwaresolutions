@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,14 +19,15 @@ in più regioni cloud che si trovano in una delle seguenti opzioni:
 2. Un altro pod {{site.data.keyword.cloud_notm}} all'interno dello stesso data center.
 3. Un'altra area geografica e un altro pod {{site.data.keyword.cloud_notm}} all'interno dello stesso data center.
 
-I prodotti IPC ({{site.data.keyword.cloud_notm}} Private) e CAM (Cloud Automation Manager)
+I prodotti {{site.data.keyword.icpfull_notm}} e CAM (Cloud Automation Manager)
 possono essere distribuiti manualmente nella tua piattaforma di virtualizzazione in loco,
-abilitando la gestione cloud dalle ubicazioni in loco. In alternativa, ICP
+abilitando la gestione cloud dalle ubicazioni in loco. In alternativa, {{site.data.keyword.icpfull_notm}}
 e CAM vengono offerti come estensioni di servizio a una distribuzione VMware
 vCenter Server on {{site.data.keyword.cloud_notm}} nuova o esistente, tramite l'automazione, abilitando
 la gestione cloud da {{site.data.keyword.cloud_notm}}.
 
-ICP è una piattaforma dell'applicazione per lo sviluppo e la gestione in loco delle applicazioni inserite nei contenitori. È un ambiente integrato per la gestione
+{{site.data.keyword.icpfull_notm}} è una piattaforma dell'applicazione per lo sviluppo e la gestione di applicazioni
+inserite nei contenitori in loco. È un ambiente integrato per la gestione
 dei contenitori che include l'orchestrazione del contenitore Kubernetes, un
 repository di immagini privato, una console di gestione e i
 framework di monitoraggio.
@@ -41,9 +42,9 @@ di servizio previsti dalle applicazioni.
 {{site.data.keyword.cloud_notm}} Automation Manager è una piattaforma di gestione self service multi-cloud
 eseguita su {{site.data.keyword.cloud_notm}} Private che consente agli sviluppatori e
 agli amministratori di soddisfare le richieste di business. Cloud Automation Manager
-Service Composer ti consente di esporre i servizi cloud ibridi nel catalogo ICP.
+Service Composer ti consente di esporre i servizi cloud ibridi nel catalogo {{site.data.keyword.icpfull_notm}}.
 
-## Componenti di Skate Advisor
+## Componenti fisici di Skate Advisor
 
 Il seguente diagramma descrive l'implementazione di riferimento dell'applicazione Acme
 Skate Advisor in un'implementazione dell'infrastruttura di modernizzazione
@@ -65,23 +66,18 @@ necessaria.
 
 L'applicazione viene distribuita come orchestrazione CAM che contiene
 i seguenti elementi:
-
-Figura 2. Orchestrazione CAM
-![Orchestrazione CAM](vcscar-cam.svg)
-
-Questi elementi sono descritti nel seguente modo:
 * Orchestrazione del servizio - Un'orchestrazione del servizio CAM è una risorsa
 del flusso di lavoro che descrive i modelli Terraform e i grafici Helm da distribuire
 come facet di un servizio. Un servizio può essere pubblicato ed è
 la risorsa di controllo da cui viene orchestrata l'intera distribuzione.
-* Grafico Helm - Il grafico Helm si trova nel repository ICP
-locale e distribuisce contenitori e altre risorse a ICP. Un grafico Helm
+* Grafico Helm - Il grafico Helm si trova nel repository {{site.data.keyword.icpfull_notm}}
+locale e distribuisce contenitori e altre risorse a {{site.data.keyword.icpfull_notm}}. Un grafico Helm
 è una descrizione delle risorse Kubernetes che includono:
- - Distribuzioni del contenitore
- - Servizi
- - Ingress
- - Regole
- - Endpoint
+  - Distribuzioni del contenitore
+  - Servizi
+  - Ingress
+  - Regole
+  - Endpoint
 
 * Immagini Docker - Le immagini Docker contengono il sistema operativo (ubuntu),
 il middleware (WebSphere Liberty, nginx) e il codice di Skate Advisor e
@@ -94,10 +90,13 @@ database.
 * Modello VMWare - Il modello VMWare è un modello di Ubuntu con mysql
 e lo schema del database preinstallati.
 
+Figura 2. Orchestrazione CAM
+![Orchestrazione CAM](vcscar-cam.svg)
+
 ### Bilanciamento del carico e proxy
 
 Il bilanciamento del carico e il proxy vengono implementati attraverso il componente
-del controller Ingress ICP. Questo componente gestisce il ridimensionamento e il failover
+del controller Ingress {{site.data.keyword.icpfull_notm}}. Questo componente gestisce il ridimensionamento e il failover
 del contenitore in modo continuo.
 
 Il proxy dell'applicazione è fornito dal contenitore nginx che bilancia
@@ -112,7 +111,7 @@ URL	|Endpoint
 /acme/api/explorer	|Skate Advisor Service
 
 I contenitori hanno indirizzi IP imprevedibili che possono ridimensionarsi in modo decrementale o
-incrementale secondo quanto richiesto dal sistema. Per superare questo problema, i servizi ICP vengono utilizzati per
+incrementale secondo quanto richiesto dal sistema. Per superare questo problema, i servizi {{site.data.keyword.icpfull_notm}} vengono utilizzati per
 eseguire la risoluzione degli indirizzi IP in tempo reale all'interno del sistema.
 
 ### Applicazione web Acme Skate
@@ -146,11 +145,11 @@ comunicare tra loro su un backbone ad alta velocità in tutti i {{site.data.keyw
 
 Il VRA (Virtual Routing Appliance) consente ai clienti di instradare il traffico
 della rete privata e pubblica associando le VLAN al dispositivo.
-Sia l'Edge NSX che l'infrastruttura IKS di vCenter Server sono configurati
+Sia l'Edge NSX che l'infrastruttura {{site.data.keyword.containerlong_notm}} di vCenter Server sono configurati
 con una rotta predefinita alla rete pubblica e con una rotta
 10.0.0.0/8 standard alla rete privata.
 
-Sull'infrastruttura IKS è richiesta una rotta statica al dispositivo VRA
+Sull'infrastruttura {{site.data.keyword.containerlong_notm}} è richiesta una rotta statica al dispositivo VRA
 per qualsiasi VXLAN NSX definita. Dall'Edge NSX, configuriamo il
 peering BGP con il VRA sulla rete privata, abilitando l'annuncio
 di rotte (route advertisement) e l'interiezione delle VXLAN NSX. Questo peering consente alla
@@ -188,17 +187,18 @@ architettura.
 Figura 5. Gestione cloud
 ![Gestione su cloud](vcscar-cloud-management.svg)
 
-Questo diagramma rappresenta ICP e CAM distribuiti su un'istanza vCenter
+Questo diagramma rappresenta {{site.data.keyword.icpfull_notm}} e CAM distribuiti su un'istanza vCenter
 Server, con connessioni al vCenter in loco e al servizio
-IKS. Utilizzando CAM, gli amministratori di sistema e gli sviluppatori possono
+{{site.data.keyword.containerlong_notm}}. Utilizzando CAM, gli amministratori di sistema e gli sviluppatori possono
 distribuire macchine virtuali in loco o nell'istanza vCenter Server
-e contenitori nei cluster ICP e IKS.
+e contenitori nei cluster {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
-Nel diagramma, CAM crea logicamente connessioni cloud ai vCenter,
-ai provider cloud e agli ambienti ICP e IKS. I cluster ICP vengono
+Nel diagramma, CAM crea in modo logico connessioni cloud ai vCenter,
+ai provider cloud e agli ambienti {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. I cluster {{site.data.keyword.icpfull_notm}} vengono
 distribuiti in ciascun data center/ambiente cloud, con MCM che fornisce il
-meccanismo per connettere i cluster ICP in un'unica vista di gestione.
+meccanismo per connettere i cluster {{site.data.keyword.icpfull_notm}} in un'unica vista di gestione.
 
 ### Link correlati
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

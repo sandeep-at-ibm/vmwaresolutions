@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -73,5 +73,5 @@ Per impostazione predefinita, vengono visualizzate tutte le notifiche non lette.
 
 ### Link correlati
 
-* [Domande frequenti](faq.html)
-* [Account utente e impostazioni](useraccount.html)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html)

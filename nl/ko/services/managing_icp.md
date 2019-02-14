@@ -2,13 +2,21 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-09-27"
 
 ---
 
-# IBM Cloud Private Hosted 요청
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+
+# IBM Cloud Private Hosted 요청 - 더 이상 사용되지 않음
+
+이 주제의 정보는 더 이상 사용되지 않습니다. IBM Cloud Private Hosted에 대한 최신 정보는 [IBM Cloud Private Hosted 개요](icp_overview.html)를 참조하십시오.
+{:deprecated}
 
 {{site.data.keyword.cloud}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}}는 {{site.data.keyword.cloud_notm}} Private Hosted on your VMware vCenter Server 인스턴스를 자동으로 배치합니다.
 
@@ -39,8 +47,3 @@ lastupdated: "2018-09-27"
 6. **IBM Cloud Private Hosted on vCenter Server on IBM Cloud** 페이지의 **IBM Cloud Private Hosted DevOps 팀에 문의** 상자에 요구사항에 대한 설명을 입력하고 **상담 요청**을 클릭하십시오.
 
 {{site.data.keyword.cloud_notm}} Private Hosted DevOps 담당자가 {{site.data.keyword.cloud_notm}} 연락처 정보를 통해 사용자에게 연락하여 시작을 돕습니다.
-
-### 관련 링크
-
-* [IBM Cloud Private Hosted](https://www.ibm.com/developerworks/community/files/form/anonymous/api/library/eafb752c-55f3-4b07-9b20-b61c8ea980b9/document/af203658-30c0-40ba-81b5-46c393fb723f/media/IBM_Cloud_Private_Hosted-IBM_Cloud.pdf)(PDF 다운로드)
-* [IBM Cloud Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US)

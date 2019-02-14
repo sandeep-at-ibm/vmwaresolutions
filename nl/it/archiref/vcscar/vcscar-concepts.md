@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -31,7 +31,7 @@ Tipo di elemento | Testo del linguaggio
 ---|---|---
 Direzione | fakie<br>nollie<br>switch
 Rotazione | halfcab<br>cab<br>180<br>360<br>540
- Base | kickflip<br>heelflip<br>hardflip<br>bigspin<br>shuvit<br>impossibile
+Base | kickflip<br>heelflip<br>hardflip<br>bigspin<br>shuvit<br>impossibile
 atterraggio | manual (2 ruote indietro)<br>nosemanual (2 ruote avanti)<br>5-0 (grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
 
 ### Modificatori di elemento
@@ -43,7 +43,7 @@ Tabella 2. Modificatori del linguaggio
 Tipo di elemento | Testo del linguaggio |Avvisi
 ---|---|---
 Turn Prefix | Frontside<br>backside | Il Turn Prefix si riferisce alla direzione di una curva
-Varial | Verso l'interno<br>verso l'esterno|
+Varial | Verso l'interno<br>verso l'esterno |
 
 ## Regole del linguaggio
 
@@ -53,12 +53,12 @@ Per le seguenti regole, vedi Elementi principali e Modificatori di elemento come
 
 ### Serie di regole dei trick
 
-*   **base_combo** = 'direction \+ \[varial | turn_prefix\] \+
-\[rotation\] \+ \[base_trick\]'
-*   **next_combo** = ''\[varial | turn_prefix\] \+ \[rotation\] \+
-\[base_trick\]'
-*   **landing_combo** = ''\[varial | turn_prefix\] \+ landing'
-*   **trick** = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
+```
+base_combo = 'direction \+ \[varial | turn_prefix\] \+ \[rotation\] \+ \[base_trick\]'
+next_combo = ''\[varial | turn_prefix\] \+ \[rotation\] \+ \[base_trick\]'
+landing_combo = ''\[varial | turn_prefix\] \+ landing'
+trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
+```
 
 ### Motore di regole dei trick
 
@@ -72,69 +72,37 @@ Figura 1. Panoramica del linguaggio di skate
 Di seguito è riportato un elenco di trick di esempio:
 
 ```
-
 fakie-kickflip
-
 fakie-kickflip to fakie-5-0 to fronside-halfcab (out)
-
 fakie-heeflip
-
 fakie-heeflip to fakie-maual to fakie-hardflip
-
 fakie-inward (varial) heeflip to fakie-backside tailslide to fakie
-
 switch-heeflip to fakie-maual to fakie-hardflip
-
 switch-hardflip to fakie-manual
-
 fakie-hardflp to fakie-nosegrind
-
 nollie-hardflip-to-tailslide
-
 nollie-inward-heelflip to frontside noseslide
-
 kickflip-frontside to crooked grind
-
 halfcab-heelflip to crooked grind
-
 frontside-shuvit to nosegrind to nollie-flip (out)
-
 kickflip to nosegrind to nollie-impossilbe (out)
-
 nollie-kickflip to noseslide to nollieflip
-
 nollie-kickflip to frontside-lipslide
-
 nollie-impossible to manual
-
 nollie-impossible to 5-0
-
 nollie-kickflip to crooked grind
-
 nollie-kickflip to crooked grind to nollie-halfcab-kickflip (out)
-
 frontside-nollie-halfcab-heelflip to fakie-nosegrind
-
 backside-nollie-halfcab-kickflip to backside-tailslide to backside-180-out
-
 frontside-nollie-cab-kicflip halfcab to backside-smithgrind
-
 halfcab to backside-smithgrind to backside-180-bigspin (out)
-
 kickflip-backside-tailslide to backside-180-kickflip
-
 kickflip-backside-tailslide to backside-backside-bigspin
-
 360-kicflip to nosemanual to nollie-360-kickflip
-
 360-kicflip to frontside-lipslide
-
 harflip to backside-lipslide
-
 kicflip to frontside-boardslidev
-
 nollie-heelflip to frontside-boardslide
-
 ```
 
 ## Rilevanza
@@ -143,4 +111,5 @@ Il linguaggio di trick è il costrutto chiave utilizzato per addestrare Watson a
 
 ### Link correlati
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)  
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

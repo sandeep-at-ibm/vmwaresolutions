@@ -2,27 +2,37 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-01-21"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Considerazioni sulla modifica delle risorse Cloud Foundation
 
 La modifica di utenti, risorse o sottoreti riservati a {{site.data.keyword.vmwaresolutions_full}} può influire sulle operazioni di gestione per le istanze VMware Cloud Foundation.
 
-**Importante:** non modificare le autorizzazioni globali del gruppo **ic4v-vCenter** nella pagina **Utenti e gruppi** sul client web VMware vSphere. I seguenti esempi sono modifiche alle autorizzazioni globali: modifica del nome utente, eliminazione dell'utente o modifica della sua password.
+Non modificare le autorizzazioni globali del gruppo **ic4v-vCenter** nella pagina **Utenti e gruppi** del client web VMware vSphere. I seguenti esempi sono modifiche alle autorizzazioni globali: modifica del nome utente, eliminazione dell'utente o modifica della sua password.
+Utilizza l'ID utente host **customerroot** al posto dell'ID utente host **root**.
+{:important}
 
 ## Account utente specifici del servizio
+{: faq}
 
 Ogni servizio crea un account utente interno in vCenter Server. Questo account è necessario affinché le operazioni di gestione associate a un servizio possano connettersi a vCenter Server per eseguire le operazioni sul servizio.
 
-**Importante:** per evitare interruzioni e problemi di connessione, se modifichi le impostazioni di ID utente, password o scadenza password per questo account utente, assicurati di aggiornare le informazioni anche nel servizio associato.
+Per evitare interruzioni e problemi di connessione, se modifichi le impostazioni di ID utente, password o scadenza password per questo account utente, assicurati di aggiornare le informazioni anche nel servizio associato.
+{:important}
 
 L'ID utente per questo account è nel formato `<service_name>-<truncated service_uuid>@test.local` o `<service_name>-<truncated service_uuid>@example-domain.local`. Ad esempio, l'ID utente utilizzato dal servizio Veeam on {{site.data.keyword.cloud_notm}} per connettersi a vCenter Server per eseguire backup pianificati è `Veeam-<Veeam_uuid>@test.local`.
 
-**Nota:** il `<service_name>` insieme al `<service_uuid>` viene troncato a 20 caratteri.
+Il `<service_name>` insieme al `<service_uuid>` viene troncato a 20 caratteri.
+{:note}
 
 ## Risorse VMware per le istanze Cloud Foundation
 
@@ -45,7 +55,7 @@ Tabella 2. Operazioni interessate dall'accesso shell e SSH (locale)
 
 | Tentativo di modifica  | Operazioni interessate  | Severità  | Metodo di recupero  |
 |:------------- |:------------- |:--------------|:--------------|
-| Disabilita l'accesso SSH o shell per vCenter Server o PSC.    | L'accoppiamento di un istanza primaria e secondaria potrebbe non riuscire. Applicare le patch alle risorse potrebbe non riuscire.    | Importante    | N/A    |
+| Disabilita l'accesso SSH o shell per vCenter Server o PSC.    | L'accoppiamento di un'istanza primaria e secondaria potrebbe non riuscire. Applicare le patch alle risorse potrebbe non riuscire.    | Importante    | N/A    |
 | Disabilita l'accesso SSH o shell per ESXi.    | L'aggiunta e la rimozione degli host, dei servizi e della memoria di rete per l'istanza potrebbe non riuscire. Applicare le patch alle risorse potrebbe non riuscire.    | Importante    | N/A    |
 
 Se scegli di disabilitare l'accesso shell o SSH, puoi riabilitarlo temporaneamente prima di eseguire le operazioni indicate.

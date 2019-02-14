@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -51,9 +51,9 @@ Die gelöschte Instanz wird bis zum Ende des {{site.data.keyword.cloud_notm}}-Ab
 
 ### Zugehörige Links
 
-* [Cloud Foundation-Instanzen in Konfiguration mit mehreren Standorten löschen](sd_deletinginstance_multi.html)
-* [Cloud Foundation-Instanzen bestellen](sd_orderinginstance.html)
-* [Cloud Foundation-Instanzen anzeigen](sd_viewinginstances.html)
-* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](sd_addingremovingservers.html)
-* [Konfigurationen mit mehreren Standorten löschen](sd_deletinginstance_multi.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
+* [Cloud Foundation-Instanzen in Konfiguration mit mehreren Standorten löschen](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation-Instanzen anzeigen](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Konfigurationen mit mehreren Standorten löschen](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

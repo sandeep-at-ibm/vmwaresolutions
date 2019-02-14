@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -33,14 +33,14 @@ Una distribuzione multisito è costituita dai seguenti componenti.
    *  Nome del sito SSO
    *  Dominio secondario DNS collegato al dominio root sull'istanza primaria
    *  Replica DNS e AD configurata tra le macchine virtuali AD sulle istanze primarie e secondarie.
-   *  PSC (Platform Services Controller) distribuito e configurato per la replica con il PSC sull'istanza primaria.
+   *  Per le istanze primarie distribuite nella V2.8 o successive: vCSA (vCenter Server Appliance) con PSC (Platform Services Controller) integrato viene distribuito e configurato.
    *  VMware vCenter sulle istanze secondarie è configurato con la modalità di collegamento migliorata per vCenter sull'istanza primaria.
 
 ## Distribuzione multisito di vCenter Server
 
 La funzione di configurazione multisito utilizza una topologia "hub and spoke" con un sito primario e un massimo di sette siti secondari. È supportato un singolo livello di siti, ovvero non puoi configurare siti successivi collegati ad altri siti secondari. Puoi avere un totale di 128 server ESXi in una configurazione multisito tra tutte le istanze.
 
-Se la tua configurazione richiede una distribuzione multisito con più di 128 server ESXi, contatta il supporto IBM per assistenza. Per ulteriori informazioni, vedi [Come contattare il supporto IBM](../vmonic/trbl_support.html).
+Se la tua configurazione richiede una distribuzione multisito con più di 128 server ESXi, contatta il supporto IBM per assistenza. Per ulteriori informazioni, vedi [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 {:note}
 
 Il seguente grafico illustra la vista generale della distribuzione multisito di vCenter Server.
@@ -58,7 +58,7 @@ Puoi assegnare solo un'istanza secondaria a un'istanza primaria alla volta. Non 
 
 Puoi avere un massimo di 8 istanze (1 primaria e 7 secondarie) che vengono distribuite in una configurazione multisito.
 
-L'eliminazione delle istanze vCenter Server che fanno parte di una configurazione multisito richiede una pianificazione speciale. Per ulteriori informazioni, vedi [Eliminazione di istanze vCenter Server in una configurazione multisito](vc_deletinginstance_multi.html).
+L'eliminazione delle istanze vCenter Server che fanno parte di una configurazione multisito richiede una pianificazione speciale. Per ulteriori informazioni, vedi [Eliminazione di istanze vCenter Server in una configurazione multisito](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance_multi.html).
 {:note}
 
 ### Link correlati

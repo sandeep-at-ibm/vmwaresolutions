@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-11-20"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V2.0 릴리스 정보
 
@@ -70,7 +74,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 * VMware NSX for vSphere 6.3.4
 * VMware ESXi 6.5, 패치 릴리스 ESXi650-201710401-BG. 업데이트 esx-base, esx-tboot, vsan 및 vsanhealth VIBs(2151061). 패치 세부사항에 대한 자세한 정보는 [VMware vCenter Server Appliance Photon OS 보안 패치](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window}를 참조하십시오.
 
-**참고**: 기존 인스턴스(V1.9 이전 릴리스에서)를 이 목록의 컴포넌트 버전으로 업그레이드할 수 없습니다.
+기존 인스턴스(V1.9 이전 릴리스에서)를 이 목록의 컴포넌트 버전으로 업그레이드할 수 없습니다.
+{:note}
 
 컴포넌트에 대한 자세한 정보는 [Cloud Foundation 개요](../sddc/sd_cloudfoundationoverview.html)를 참조하십시오.
 
@@ -99,7 +104,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 * 소형(듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz / 128GB RAM / 12개의 디스크)
 * 대형(듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz / 512GB RAM / 12개의 디스크)
 
-**참고**: 섀시에는 12개의 디스크를 위한 공간이 있습니다. 모든 슬롯을 채울 수 없습니다. **소형** 구성은 두 개의 1.9TB Micron 5100 최대 드라이브를 제공하고 **대형** 구성은 네 개의 3.8TB Micron 5100 PRO 드라이브를 제공합니다.
+섀시에는 12개의 디스크를 위한 공간이 있습니다. 모든 슬롯을 채울 수 없습니다. **소형** 구성은 두 개의 1.9TB Micron 5100 최대 드라이브를 제공하고 **대형** 구성은 네 개의 3.8TB Micron 5100 PRO 드라이브를 제공합니다.
+{:note}
 
 자세한 정보는 다음 주제를 참조하십시오.
 * [Cloud Foundation 개요](../sddc/sd_cloudfoundationoverview.html)
@@ -114,7 +120,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
 
-**참고:** vSAN 컴포넌트가 포함되거나 포함되지 않은 vCenter Server 사용자 정의된 주문은 항상 12개의 디스크 섀시 서버를 포함합니다. 이 서버는 가격 예상 PDF에서 비vSAN 주문 케이스에 대한 {{site.data.keyword.baremetal_short}}의 비용이 약간 높아질 수 있습니다.
+vSAN 컴포넌트가 포함되거나 포함되지 않은 vCenter Server 사용자 정의된 주문은 항상 12개의 디스크 섀시 서버를 포함합니다. 이 서버는 가격 예상 PDF에서 비vSAN 주문 케이스에 대한 {{site.data.keyword.baremetal_short}}의 비용이 약간 높아질 수 있습니다.
+{:note}
 
 컴포넌트에 대한 자세한 정보는 [vCenter Server 개요](../vcenter/vc_vcenterserveroverview.html)를 참조하십시오.
 
@@ -163,7 +170,7 @@ VMware vSAN 컴포넌트의 경우 이제 {{site.data.keyword.baremetal_short}}�
 * **고성능(대형)** – 프리미엄 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 128GB RAM / 노드당 22개의 3.8TB SSD 드라이브 용량 / 4 노드 클러스터의 유효한 용량 – 118TB
 * **고용량** – 표준 라이센스 / 듀얼 Intel Xeon E5-2650 v4(총 24개의 코어, 2.2GHz) / 64GB RAM / 노드당 10개의 4TB SATA 드라이브 용량 / 4 노드 클러스터의 유효한 용량 – 60TB
 
-**참고:** 3.8TB SSD 드라이브는 {{site.data.keyword.CloudDataCent_notm}}에서 일반적으로 사용 가능하게 될 때 지원됩니다.
+3.8TB SSD 드라이브는 {{site.data.keyword.CloudDataCent_notm}}에서 일반적으로 사용 가능하게 되면 지원됩니다.{:note}
 
 자세한 정보는 다음 주제를 참조하십시오.
 * [NetApp ONTAP Select 개요](../netapp/np_netappoverview.html)

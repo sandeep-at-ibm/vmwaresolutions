@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-12"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-12"
 
 ## Voraussetzungen für IBM Cloud-Konto
 
-Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Konto](../vmonic/slaccountrequirement.html).
+Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Konto](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Verfügbarkeit des IBM Cloud-Rechenzentrums
 
@@ -57,5 +57,5 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für NetApp ONT
 
 ### Zugehörige Links
 
-* [Übersicht über NetApp ONTAP Select](np_netappoverview.html)
-* [NetApp ONTAP Select-Instanzen bestellen](np_orderinginstances.html)
+* [Übersicht über NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
+* [NetApp ONTAP Select-Instanzen bestellen](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)

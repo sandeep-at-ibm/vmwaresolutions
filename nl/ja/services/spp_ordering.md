@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-20"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -56,11 +56,11 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} のデプロイメ
 
 ### 関連リンク
 
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} の概要](spp_considerations.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/spp_considerations.html)
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service Planning](http://www.ibm.com/support/docview.wss?uid=swg22012650)
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](managingspp.html) の管理
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](../sddc/sd_addingremovingservices.html)
-* [vCenter Server インスタンスのサービスの注文、表示、削除](../vcenter/vc_addingremovingservices.html)
-* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](../vcenter/vc_hybrid_addingremovingservices.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingspp.html) の管理
+* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
 * [IBM Spectrum Protect Plus の資料](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

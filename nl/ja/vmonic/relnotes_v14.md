@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-03-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V1.4 のリリース・ノート
 
@@ -22,7 +26,7 @@ lastupdated: "2017-03-08"
 * VMware ESXi 6.0 u2 p04
 * このリリースのマルチサイト構成サポートに必要な Microsoft Active Directory (AD) サービスと DNS (ドメイン・ネーム・システム) サービス用に、新しい Windows VSI (仮想サーバー・インスタンス) が注文されます。 この VSI の仕様は、Windows 2012 R2 (8 GB RAM / 2 CPU コア / 100 GB ディスク / デュアル 1 Gbps プライベート・アップリンク) です。
 
-詳しくは、[Cloud Foundation の概要](../sddc/sd_cloudfoundationoverview.html)を参照してください。
+詳しくは、[Cloud Foundation の概要](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)を参照してください。
 
 ## vCenter Server インスタンスのコンポーネントの更新
 
@@ -34,7 +38,8 @@ lastupdated: "2017-03-08"
 
 NSX インストールの一環として、デプロイしたすべての新しいインスタンスに、NSX Manager がインストールされ、ライセンスされます。 さらに、インスタンス管理のために NSX Edge が作成されますが、必要に応じて独自の NSX Edge コンポーネントを作成することもできます。 NSX Edge について詳しくは、このページの『_VMware NSX Edge_』セクションを参照してください。
 
-**注**: NSX Controller は、vCenter Server インスタンスにはインストールされません (Cloud Foundation インスタンスにはインストールされます)。 vCenter Server インスタンスで VXLAN または分散論理ルーターを使用する場合は、NSX Controller をユーザーがインストールする必要があります。
+NSX Controller は、vCenter Server インスタンスにはインストールされません (Cloud Foundation インスタンスにはインストールされます)。 vCenter Server インスタンスで VXLAN または分散論理ルーターを使用する場合は、NSX Controller をユーザーがインストールする必要があります。
+{:note}
 
 VMware NSX for vSphere 6.2.4 で導入された拡張機能、要件、および既知の問題について詳しくは、[NSX for vSphere 6.2.4 リリース・ノート](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}を参照してください。
 
@@ -46,8 +51,8 @@ NSX Edge が、注文した新しい vCenter Server インスタンスに含ま�
 
 セキュリティーを確保するため、管理仮想マシンから開始されたアウトバウンド HTTPS 通信のみを許可するようにファイアウォール・ルールが適用されます。 この ESG は「ラージ」構成でデプロイされ、IBM サポートのみが構成を変更できます。 詳しくは、以下のトピックを参照してください。
 
-* [vCenter Server 技術仕様](../vcenter/vc_vcenterserveroverview.html)
-* [管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* [vCenter Server 技術仕様](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [VMware NSX 資料](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ### NSX ライセンス
@@ -73,20 +78,21 @@ NSX Edge が、注文した新しい vCenter Server インスタンスに含ま�
 * Cloud Foundation インスタンスと vCenter Server インスタンスの両方: 最適化されたネットワーク構成。SoftLayer® によって割り当てられたプライマリーのパブリック IP アドレスとプライベート IP アドレスのみが ESXi サーバーに接続されます。 管理トラフィック用にポータブル・プライベート・アドレスがデプロイされることはなくなりました。
 * Cloud Foundation インスタンスのみ: Windows AD SSO (Active Directory シングル・サインオン) およびドメイン・ネーム・システム (DNS) サーバー
 
-**注**: これらの変更により、現行リリースで V1.4 より前の既存のインスタンスを使用することはできません。 既存のインスタンスの構成を再利用するには、それらを現行バージョンにアップグレードする必要があります。 詳しくは、[V1.4 より前のインスタンスのアップグレード](movinginstances.html)を参照してください。
+これらの変更により、現行リリースで V1.4 より前の既存のインスタンスを使用することはできません。 既存のインスタンスの構成を再利用するには、それらを現行バージョンにアップグレードする必要があります。 詳しくは、[V1.4 より前のインスタンスのアップグレード](/docs/services/vmwaresolutions/vmonic/movinginstances.html)を参照してください。
+{:note}
 
 ## Cloud Foundation インスタンスのマルチサイト構成のサポート
 
 以前のリリースと同様に、単一の Cloud Foundation インスタンスをデプロイすることも、プライマリー・インスタンスに接続されたセカンダリー・インスタンスをデプロイすることもできます。 マルチサイト構成モデルでは、ハブ・アンド・スポーク・トポロジーでプライマリー・サイトと最大 7 つのセカンダリー・サイトを使用します。
 
-詳しくは、[Cloud Foundation インスタンスのマルチサイト構成](../sddc/sd_multisite.html)を参照してください。
+詳しくは、[Cloud Foundation インスタンスのマルチサイト構成](/docs/services/vmwaresolutions/sddc/sd_multisite.html)を参照してください。
 
 ## Zerto 災害復旧のデプロイメントの機能拡張
 
 * Cloud Foundation インスタンスの Zerto 災害復旧のデプロイメントが、サポート・チケットによって処理されるのではなく、自動化されました。 プライベート・ポータブル・サブネット、Windows VSI (仮想サービス・インスタンス)、Zerto ライセンス料など、すべての Zerto コンポーネントが見積もりコストにリストされるので、注文前に確認することができます。
 * vCenter Server インスタンスについては、前のリリースと同様に、サポート・チケットを使用して Zerto 災害復旧のデプロイメントを行います。 ただし、NSX Edge とパブリック・ポータブル・サブネットは、基本デプロイメントに含まれるようになったため、不要になりました。 プライベート・ポータブル・サブネット、Windows VSI (仮想サービス・インスタンス)、および Zerto ライセンスの料金は引き続き適用されます。
 
-詳しくは、[Zerto 災害復旧](../services/addingzertodr.html)を参照してください。
+詳しくは、[Zerto 災害復旧](/docs/services/vmwaresolutions/services/addingzertodr.html)を参照してください。
 
 ## インスタンスの注文プロセス
 
@@ -97,15 +103,15 @@ NSX Edge が、注文した新しい vCenter Server インスタンスに含ま�
 
 詳しくは、以下のトピックを参照してください。
 
-* [Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)
-* [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
+* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 
 ## インスタンス管理
 
 インスタンス管理プロセスの新機能と改善点は以下のとおりです。
 
-* Cloud Foundation インスタンスの場合、インスタンスの詳細ページでさまざまなインスタンスのコンポーネントのユーザー名とパスワードを表示できます。 詳しくは、[Cloud Foundation インスタンスの表示](../sddc/sd_viewinginstances.html)を参照してください。
-* vCenter Server インスタンスの場合は、コンソールから直接、IBM コンポーネントのソフトウェアの更新とパッチをインストールできます。 詳しくは、[vCenter Server インスタンスへの更新とパッチの適用](../vcenter/vc_applyingupdates.html)を参照してください。
+* Cloud Foundation インスタンスの場合、インスタンスの詳細ページでさまざまなインスタンスのコンポーネントのユーザー名とパスワードを表示できます。 詳しくは、[Cloud Foundation インスタンスの表示](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)を参照してください。
+* vCenter Server インスタンスの場合は、コンソールから直接、IBM コンポーネントのソフトウェアの更新とパッチをインストールできます。 詳しくは、[vCenter Server インスタンスへの更新とパッチの適用](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html)を参照してください。
 
 ## コンソール通知
 
@@ -113,5 +119,5 @@ NSX Edge が、注文した新しい vCenter Server インスタンスに含ま�
 
 詳しくは、以下のトピックを参照してください。
 
-* [ユーザー・アカウントと設定](useraccount.html)
-* [通知](notifications.html)
+* [ユーザー・アカウントと設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [通知](/docs/services/vmwaresolutions/vmonic/notifications.html)

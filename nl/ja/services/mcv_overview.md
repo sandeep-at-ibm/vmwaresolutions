@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -75,4 +75,4 @@ vSphere + vSAN 拡張クラスター・アーキテクチャーには以下の�
 
 ### 関連リンク
 
-* [Mission Critical VMware on IBM Cloud の要求](managing_mcv.html)
+* [Mission Critical VMware on IBM Cloud の要求](/docs/services/vmwaresolutions/services/managing_mcv.html)

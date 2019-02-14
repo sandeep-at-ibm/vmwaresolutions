@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -33,7 +33,7 @@ Ein Trick wird durch das Sprachkonstrukt, das ihn beschreibt, eindeutig definier
 
 ### Liste der Tricks
 
-Durch eine Abfrage des Basistricks oder der Landung, die in Sprachelementen definiert sind, wird eine Liste von Tricks zurückgegeben. 
+Durch eine Abfrage des Basistricks oder der Landung, die in Sprachelementen definiert sind, wird eine Liste von Tricks zurückgegeben.
 
 ### Trickdaten
 
@@ -53,9 +53,9 @@ Tabelle 1. Dialog
 
 Dialog | Struktur | Ergebnis
 ---|---|---
-Tricksuche | Beschreibung eines Tricks | Liste mit Tricks
+Tricksuche | Beschreibung eines Tricks |Liste mit Tricks
 Spotsuche | Spot, an dem ein bestimmter Trick ausgeführt werden könnte | Liste von Spots für einen bestimmten Trick
-Medienwiedergabe | Anzeige eines Videos für einen Trick | Liste mit Medienergebnissen
+Medienwiedergabe | Anzeige eines Videos für einen Trick |Liste mit Medienergebnissen
 
 ## Benutzerschnittstellenkomponenten
 
@@ -129,4 +129,4 @@ Nach dem Training kann der Discovery-Service Abfragen wie beispielsweise Folgend
 
 ### Zugehörige Links
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

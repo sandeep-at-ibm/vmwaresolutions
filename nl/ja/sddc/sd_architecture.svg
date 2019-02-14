@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 600 320" style="enable-background:new 0 0 600 320;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#4C84C5;}
 	.st1{fill:#959595;}
-	.st2{fill:#1DA78D;}
+	.st2{fill:#1BA78D;}
 	.st3{fill:#FFFFFF;}
-	.st4{font-family:'Roboto-Light';}
+	.st4{font-family:'MS-Gothic';}
 	.st5{font-size:26px;}
-	.st6{font-size:21px;}
+	.st6{font-family:'ArialMT';}
 	.st7{font-size:18px;}
-	.st8{font-size:14px;}
+	.st8{font-size:21px;}
 </style>
 <rect class="st0" width="600" height="100"/>
 <rect y="220" class="st1" width="600" height="100"/>
 <rect y="110" class="st2" width="190" height="100"/>
 <rect x="205" y="110" class="st2" width="190" height="100"/>
 <rect x="410" y="110" class="st2" width="190" height="100"/>
-<text transform="matrix(1 0 0 1 152.4775 43.3711)"><tspan x="0" y="0" class="st3 st4 st5">仮想化の管理</tspan><tspan x="45.3" y="34" class="st3 st4 st6">VMware vCenter Server</tspan></text>
-<text transform="matrix(1 0 0 1 8.5747 155.8755)"><tspan x="0" y="0" class="st3 st4 st7">コンピュートの仮想化</tspan><tspan x="37.6" y="23.9" class="st3 st4 st8">VMware vSphere</tspan></text>
-<text transform="matrix(1 0 0 1 219.127 155.8755)"><tspan x="0" y="0" class="st3 st4 st7">ストレージの仮想化</tspan><tspan x="39.8" y="23.9" class="st3 st4 st8">VMware vSAN</tspan></text>
-<text transform="matrix(1 0 0 1 420.666 155.8755)"><tspan x="0" y="0" class="st3 st4 st7">ネットワークの仮想化</tspan><tspan x="46.4" y="23.9" class="st3 st4 st8">VMware NSX</tspan></text>
-<text transform="matrix(1 0 0 1 104.6255 263.5371)" class="st3 st4 st5">IBM Cloud 上の物理インフラストラクチャー</text>
-<text transform="matrix(1 0 0 1 273.2098 300.3732)" class="st3 st4 st6">ストレージ</text>
-<text transform="matrix(1 0 0 1 401.5988 300.3732)" class="st3 st4 st6">ネットワーク</text>
-<text transform="matrix(1 0 0 1 128.7132 299.2558)" class="st3 st4 st6">コンピュート</text>
+<text transform="matrix(1 0 0 1 221.9995 43.3711)"><tspan x="0" y="0" class="st3 st4 st5">仮想化の管理</tspan><tspan x="-60.7" y="34" class="st3 st6 st5">VMware vCenter Server</tspan></text>
+<text transform="matrix(1 0 0 1 5.5044 155.8755)"><tspan x="0" y="0" class="st3 st4 st7">コンピュートの仮想化</tspan><tspan x="21" y="23.9" class="st3 st6 st7">VMware vSphere</tspan></text>
+<text transform="matrix(1 0 0 1 219 155.8755)"><tspan x="0" y="0" class="st3 st4 st7">ストレージの仮想化</tspan><tspan x="22.5" y="23.9" class="st3 st6 st7">VMware vSAN</tspan></text>
+<text transform="matrix(1 0 0 1 414.5 155.8755)"><tspan x="0" y="0" class="st3 st4 st7">ネットワークの仮想化</tspan><tspan x="36" y="23.9" class="st3 st6 st7">VMware NSX</tspan></text>
+<text transform="matrix(1 0 0 1 40.6978 263.5371)"><tspan x="0" y="0" class="st3 st6 st5">IBM Cloud </tspan><tspan x="128.6" y="0" class="st3 st4 st5">上の物理インフラストラクチャー</tspan></text>
+<text transform="matrix(1 0 0 1 254.7503 300.3732)" class="st3 st4 st8">ストレージ</text>
+<text transform="matrix(1 0 0 1 376.0939 300.3732)" class="st3 st4 st8">ネットワーク</text>
+<text transform="matrix(1 0 0 1 106.8202 299.2558)" class="st3 st4 st8">コンピュート</text>
 </svg>

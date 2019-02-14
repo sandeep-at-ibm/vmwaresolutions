@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -19,12 +19,12 @@ Sie können die systemverwalteten Baselines verwenden, um Ihre vSAN-Cluster mit 
 Die VMware-Standardeinstellungen für VUM sind für die meisten Unternehmen geeignet. Im Folgenden wird beschrieben, wie Sie diese Einstellungen ändern können, wenn Ihr Unternehmen andere Einstellungen verwenden möchte.
 
 ##	Zeitplan für Downloads
-Unter Updates sind Upgrades für virtuelle Appliances, Host-Patches und Erweiterungen zu verstehen. Standardmäßig lädt VUM Downloads täglich herunter. Dies kann durch Zugriff auf den vSphere Web Client geändert werden. Navigieren Sie zu **Home** > **Update Manager** > **Verwalten** > **Einstellungen** und wählen Sie **Zeitplan für Downloads** aus und klicken Sie anschließend auf **Bearbeiten**.
+Unter Updates sind Upgrades für virtuelle Appliances, Host-Patches und Erweiterungen zu verstehen. Standardmäßig lädt VUM Downloads täglich herunter. Der Zeitplan für Downloads kann durch Zugriff auf den vSphere Web Client geändert werden. Navigieren Sie zu **Home** > **Update Manager** > **Verwalten** > **Einstellungen** und wählen Sie **Zeitplan für Downloads** aus und klicken Sie anschließend auf **Bearbeiten**.
 
 ##	Zeitplan für Benachrichtigungen
 Benachrichtigungen sind Informationen über Patchrückrufe, neue Fixes und Alerts. Standardmäßig lädt VUM die Benachrichtigungen auf Stundenbasis herunter. Diese Änderung kann durch Zugriff auf den vSphere Web Client geändert werden. Navigieren Sie zu **Home** > **Update Manager** > **Verwalten** > **Einstellungen** und wählen Sie **Zeitplan für Benachrichtigungen** aus und klicken Sie anschließend auf **Bearbeiten**.
 
-##	Einstellungen für virtuelle Maschinen
+##	Einstellungen für virtuelle Maschine
 Um die Einstellungen für eine virtuelle Maschine (VM) zu ändern, rufen Sie den vSphere Web Client auf, navigieren Sie zu **Home** > **Update Manager** > **Verwalten** > **Einstellungen** und **VM-Einstellungen** und klicken Sie dann auf **Bearbeiten**.
 
 ##	Host-/Clustereinstellungen
@@ -33,4 +33,4 @@ Um die Host-/Clustereinstellungen zu ändern, rufen Sie den vSphere Web Client a
 ### Zugehörige Links
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

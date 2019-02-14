@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ Sie sind für die Konfiguration, Verwaltung und Überwachung sämtlicher Softwar
 
 Als Teil der Lösung können Sie optional IBM Spectrum Protect&trade; Plus in {{site.data.keyword.cloud_notm}} oder Veeam auf {{site.data.keyword.cloud_notm}}-Add-on-Services bereitstellen. Veeam und IBM Spectrum Protect Plus können helfen, die Sicherungsanforderungen für Ihre Managementkomponenten zu erfüllen.
 
-Diese Add-on-Services werden zusammen mit {{site.data.keyword.cloud_notm}} Endurance-Speicher bereitgestellt. Die Services unterstützen Sie bei der Sicherung Ihrer Workloads und der Managementkomponenten. Die [Übersicht über die IBM Spectrum Protect Plus-Architektur](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} und die [Übersicht über die Veeam-Architektur](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} bieten nützliche Anleitungen zur Planung und Dimensionierung Ihrer Bereitstellung. Sie können auch [verwaltete Services](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) für Ihre Veeam-Bereitstellung anfordern.
+Diese Add-on-Services werden zusammen mit {{site.data.keyword.cloud_notm}} Endurance-Speicher bereitgestellt. Die Services unterstützen Sie bei der Sicherung Ihrer Workloads und der Managementkomponenten. Die [Übersicht über die IBM Spectrum Protect Plus-Architektur](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} und die [Übersicht über die Veeam-Architektur](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} bieten nützliche Anleitungen zur Planung und Dimensionierung Ihrer Bereitstellung. Sie können auch [verwaltete Services](/docs/services/vmwaresolutions/services/managing_veeam_services.html) für Ihre Veeam-Bereitstellung anfordern.
 
 Verschiedene Lösungskomponenten erfordern unterschiedliche Strategien für die Sicherung. Einige Komponenten werden geschützt, indem für die zugehörige Konfiguration und die Daten Sicherungen auf Imageebene verwendet werden; für die Konfiguration und die Daten anderer Komponenten werden dateibasierte Sicherungen verwendet.
 
@@ -34,7 +34,7 @@ Stellen Sie zur Speicherung dieser Sicherungen einen Linux-Dateiserver in Ihrem 
 
 VMware vCenter Server und PSC stellen eine [Benutzerschnittstelle für das Appliance-Management und eine API zum Exportieren der Datenbank und der Konfiguration auf einen Dateiserver ](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} unter Verwendung verschiedener Protokolle zur Verfügung. VMware dokumentiert ein Beispiel dafür, wie diese zur [regelmäßigen Ausführung als Cron-Job](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} direkt auf der vCenter Server Appliance und dem PSC konfiguriert werden kann. Sie können dieses Beispiel für Ihren Verwendungszweck anpassen.
 
-Bei diesem Verfahren müssen Sie sowohl die vCenter Server Appliance als auch PSC separat sichern. Machen Sie sich mit den von VMware dokumentierten Aspekten und Einschränkungen vertraut und planen Sie entsprechend. Sehen Sie außerdem eine regelmäßige Rotation und einen regelmäßigen Gültigkeitsablauf für die Dateisicherungen auf Ihrem Dateiserver vor.
+Bei der Verwendung eines externen PSC müssen Sie sowohl die vCenter Server Appliance als auch den PSC separat mit dieser Methode sichern. Bei der Verwendung eines integrierten PSC ist die PSC-Sicherung in der vCenter-Sicherung enthalten. Machen Sie sich mit den von VMware dokumentierten Aspekten und Einschränkungen vertraut und planen Sie entsprechend. Sehen Sie außerdem eine regelmäßige Rotation und einen regelmäßigen Gültigkeitsablauf für die Dateisicherungen auf Ihrem Dateiserver vor.
 
 VMware setzt voraus, dass die Sicherungsposition ein leerer Ordner ist. Daher müssen Sie dafür sorgen, dass Ihre Sicherungsrotation oder -automatisierung die Position für jeden nachfolgenden Sicherungsjob leer zurücklässt.
 {:note}
@@ -74,7 +74,7 @@ Ab VMware vCenter 6.5u2 unterstützt VMware die Sicherung der vCenter-Postgres-D
 Beim Wiederherstellen Ihrer Managementsicherungen sind einige besondere Aspekte zu beachten:
 
 * Für vCenter und PSC stellt VMware ein Installationsprogramm zur Verfügung, das eine neue virtuelle Appliance bereitstellen und die Konfiguration von einer Sicherung wiederherstellen kann.
-* Wenn Sie eine Appliance aus einer Sicherung wiederherstellen, erkennt das Installationsprogramm den Typ der Appliance (vCenter Server oder PSC) anhand der von Ihnen angegebenen Sicherungsinformationen.
+* Bei der Wiederherstellung einer Appliance auf der Basis einer Sicherung stellt das Installationsprogramm den Typ der Appliance (vCenter Server, PSC oder vCenter mit integriertem PSC) anhand der von Ihnen angegebenen Sicherungsinformationen fest. 
 * Da Sie die Bereitstellung direkt auf einem Ihrer Hosts durchführen, können Sie die Bereitstellung möglicherweise nicht auf einem verteilten Switch oder einer verteilten Portgruppe durchführen. Sie müssen möglicherweise einen temporären Standardswitch und eine Portgruppe für die Bereitstellung der wiederhergestellten Appliances erstellen und eine Ihrer VM-NICs zeitweilig auf diesen Switch migrieren, um Netzkonnektivität für Ihre VMs bereitzustellen. Nach der Bereitstellung können Sie die VMs auf die verteilte Portgruppe migrieren und die VM-NIC auf den verteilten virtuellen Switch zurückverlegen.
 * Für NSX müssen Sie Ihren NSX-Manager und Ihre Controller möglicherweise erneut bereitstellen, bevor Sie die Konfiguration aus einer Sicherung wiederherstellen.
 * Stellen Sie sicher, dass Sie sich mit den VMware-Aspekten und -Einschränkungen für die vCenter-Sicherung und -Wiederherstellung vertraut machen.
@@ -85,6 +85,6 @@ Durch geeignete Planung können Sie sicherstellen, dass Ihre VMware-Instanz in d
 
 ### Zugehörige Links
 
-* [Lösungsübersicht](solution_overview.html)
-* [Übersicht über das Design](design_overview.html)
-* [Skalierungskapazität](solution_scaling.html)
+* [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Übersicht über das Design](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [Skalierungskapazität](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)

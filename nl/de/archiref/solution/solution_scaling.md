@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-25"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -53,6 +53,6 @@ Sie können einen vorhandenen Cluster skalieren, indem Sie Hosts über die Konso
 
 ### Zugehörige Links
 
-* [Lösungsübersicht](solution_overview.html)
-* [Übersicht über das Design](design_overview.html)
-* [Komponenten sichern](solution_backingup.html)
+* [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Übersicht über das Design](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [Komponenten sichern](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

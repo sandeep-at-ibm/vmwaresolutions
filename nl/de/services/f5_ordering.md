@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -49,7 +49,7 @@ Geben Sie den Servicenamen ein.
 
 ### Maximale Bandbreite
 
-Geben Sie den maximalen Durchsatz der F5 BIG–IP-Appliance an.
+Geben Sie den maximalen Durchsatz der F5 BIG-IP-Appliance an.
 
 ### Lizenzmodell
 
@@ -68,11 +68,11 @@ Sie können das Lizenzmodell nach der Serviceinstallation nicht mehr ändern. We
 
 ### Zugehörige Links
 
-* [Übersicht über F5 on {{site.data.keyword.cloud_notm}}](f5_considerations.html)
-* [F5 on {{site.data.keyword.cloud_notm}} verwalten](managing_f5.html)
-* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
-* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [F5 on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/f5_considerations.html)
+* [F5 on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managing_f5.html)
+* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [F5 Deployment Guides](https://f5.com/solutions/deployment-guides){:new_window}

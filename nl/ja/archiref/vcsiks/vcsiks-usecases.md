@@ -2,15 +2,16 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-16"
+lastupdated: "2019-01-23"
 
 ---
 
 # ユース・ケース
 
 ## IBM Cloud へのワークロードのマイグレーション
+
 Acme Skateboards 社は、オンプレミスの VMware SDDC を VMware vCenter Server on {{site.data.keyword.cloud}} インスタンスにシームレスに拡張したいと考えています。 その際には、ビジネスを継続して、ダウン時間を最小限に抑える必要があります。 使用しているアプリケーションをクラウドで実行するように再構成することは、最適なソリューションではありません。
 
 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle を使用することにより、{{site.data.keyword.cloud_notm}} とオンプレミスの VMware 仮想化データ・センターの間にシームレスな接続を作成することができます。
@@ -35,18 +36,19 @@ Acme Skateboards 社はこのソリューションを使用して、オンプレ
 
 ## ハイブリッド・アーキテクチャーのデプロイメント
 
-Acme Skateboards 社は、アプリケーション・モダナイゼーションに至る過程で、vCenter Server と ICP で構成されるハイブリッド・アーキテクチャーを {{site.data.keyword.cloud_notm}} にデプロイしたいと考えています。 この際の要件は、仮想マシン上でデータベースを実行し、コンテナー内でアプリケーションと Web サービスを実行するとともに、ネットワークとセキュリティーの管理に共通のツール・セットを使用することです。
+Acme Skateboards 社は、アプリケーション・モダナイゼーションに至る過程で、vCenter Server と {{site.data.keyword.icpfull_notm}} で構成されるハイブリッド・アーキテクチャーを {{site.data.keyword.cloud_notm}} にデプロイしたいと考えています。 この際の要件は、仮想マシン上でデータベースを実行し、コンテナー内でアプリケーションと Web サービスを実行するとともに、ネットワークとセキュリティーの管理に共通のツール・セットを使用することです。
 
 図 2. Acme Skateboards 社のハイブリッド・アプリケーション
 ![Acme Skateboards 社のハイブリッド・アプリケーションの図](vcsiks-acme-app-arch.svg)
 
-{{site.data.keyword.vmwaresolutions_short}} は、世界中の {{site.data.keyword.CloudDataCents_notm}}に VMware テクノロジー・コンポーネントをデプロイするための自動化機能を提供します。 このアーキテクチャーは単一のクラウド領域で構成されます。また、別の地域にある追加のクラウド領域、または同じデータ・センター内の別の {{site.data.keyword.cloud_notm}} ポッド (あるいはその両方) に拡張する機能をサポートします。
+{{site.data.keyword.vmwaresolutions_short}} は、世界中の {{site.data.keyword.CloudDataCents_notm}}に VMware テクノロジー・コンポーネントをデプロイするための自動化機能を提供します。 このアーキテクチャーは単一のクラウド領域で構成されます。また、別の地域にある追加のクラウド領域、または同じデータ・センター内の別の {{site.data.keyword.cloud_notm}} ポッドに拡張する機能をサポートします。
 
-{{site.data.keyword.cloud_notm}} Private (ICP) 製品および Cloud Automation Manager (CAM) 製品は、オンプレミスの仮想化プラットフォームに手動でデプロイされるので、オンプレミス・ロケーションからクラウド管理を行うことができます。 あるいは、ICP および CAM は、既存または新規の vCenter Server デプロイメントのサービス拡張として自動化機能によって提供され、{{site.data.keyword.cloud_notm}} からのクラウド管理を可能にします。
+{{site.data.keyword.icpfull_notm}} 製品および Cloud Automation Manager (CAM) 製品は、オンプレミスの仮想化プラットフォームに手動でデプロイされるので、オンプレミス・ロケーションからクラウド管理を行うことができます。 あるいは、{{site.data.keyword.icpfull_notm}} および CAM は、既存または新規の vCenter Server デプロイメントのサービス拡張として自動化機能によって提供され、{{site.data.keyword.cloud_notm}} からのクラウド管理を可能にします。
 
-次の図は、vCenter Server インスタンスで実行される ICP を表しています。ICP オーバーレイ・ネットワークにアクセスするために専用スイッチ/VXLAN、DLR、ESG を使用して NSX-V が構成されており、アンダーレイ・ネットワークにアクセスするために ESG を介してルーティングがセットアップされています。
+次の図は、vCenter Server インスタンスで実行される {{site.data.keyword.icpfull_notm}} を表しています。 {{site.data.keyword.icpfull_notm}} オーバーレイ・ネットワークにアクセスするために専用スイッチ/VXLAN、DLR、ESG を使用して NSX-V が構成されており、アンダーレイ・ネットワークにアクセスするために ESG を介してルーティングがセットアップされています。
 
-Acme Skateboards 社は、{{site.data.keyword.cloud_notm}} 自動化を使用して、データベース VM を実行するための VMware on {{site.data.keyword.cloud_notm}} と、アプリとフロントエンド Web サービスをコンテナー内で実行するための VMware on {{site.data.keyword.cloud_notm}} 上の ICP で構成されるハイブリッド・ソリューションをプロビジョンできます。 NSX は、オーバーレイ・ネットワーク内のネットワークとセキュリティー用の共通の管理ツール・セットを提供します。
+Acme Skateboards 社は、{{site.data.keyword.cloud_notm}} 自動化を使用して、データベース VM を実行するための VMware on {{site.data.keyword.cloud_notm}} と、アプリとフロントエンド Web サービスをコンテナー内で実行するための VMware on {{site.data.keyword.cloud_notm}} 上の {{site.data.keyword.icpfull_notm}} で構成されるハイブリッド・ソリューションをプロビジョンできます。 NSX は、オーバーレイ・ネットワーク内のネットワークとセキュリティー用の共通の管理ツール・セットを提供します。
 
 ### 関連リンク
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](../vcs/vcs-hybridity-intro.html)
+
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

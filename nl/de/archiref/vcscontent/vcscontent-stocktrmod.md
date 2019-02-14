@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2018-11-15"
 
 Der nächste Schritt im Modernisierungsprozess für Stock Trader ist die Umwandlung der Workloadausführung in virtuellen Maschinen (VMs) in eine Ausführung in Containern.
 
-Zur Fortsetzung des Prozesses führen Todd und Jane Transformation Advisor aus, um die Workload von Stock Trader zu analysieren, gegebenenfalls komplexe Aspekte der Migration zu ermitteln und Änderungen zu empfehlen. Nachdem alles vorbereitet ist, stellen sie Stock Trader mithilfe von Transformation Advisor in Liberty-Containern bereit, die unter {{site.data.keyword.cloud}} Private (ICP) ausgeführt werden.
+Zur Fortsetzung des Prozesses führen Todd und Jane Transformation Advisor aus, um die Workload von Stock Trader zu analysieren, gegebenenfalls komplexe Aspekte der Migration zu ermitteln und Änderungen zu empfehlen. Nachdem alles vorbereitet ist, stellen sie Stock Trader mithilfe von Transformation Advisor in Liberty-Containern bereit, die unter {{site.data.keyword.icpfull_notm}} ausgeführt werden.
 
 ## IBM Cloud Private vorbereiten
 
-Todd muss zunächst ICP installieren. Da er über eine VMware on {{site.data.keyword.cloud_notm}}-Umgebung verfügt, beschließt er, das Produktangebot "{{site.data.keyword.cloud_notm}} Private Hosted" zu nutzen, das ihm eine vollständige ICP-Instanz zur Verfügung stellt, die auf virtuellen VMware-Maschinen in {{site.data.keyword.cloud_notm}} ausgeführt wird.
+Todd muss zunächst {{site.data.keyword.icpfull_notm}} installieren. Da Todd über eine VMware on {{site.data.keyword.cloud_notm}}-Umgebung verfügt, beschließt er, das Produktangebot "{{site.data.keyword.cloud_notm}} Private Hosted" zu nutzen, das ihm eine vollständige {{site.data.keyword.icpfull_notm}}-Instanz zur Verfügung stellt, die auf virtuellen VMware-Maschinen in {{site.data.keyword.cloud_notm}} ausgeführt wird.
 
 Das Standarddashboard bietet eine umfassende Benutzerschnittstelle für die Verwaltung des Kubernetes-Clusters, der Sicherheit, des Speichers und der Bereitstellung aus dem Katalog.
 
@@ -48,7 +48,7 @@ Anschließend fügt Todd die folgende Zeile hinzu:
 
 `systemctl restart nfs-kernel-server`
 
-Danach führt Todd den folgenden Befehl auf jeder virtuellen Maschine aus, um NFS in jeder Worker-VM für ICP zu installieren:
+Danach führt Todd den folgenden Befehl auf jeder virtuellen Maschine aus, um NFS in jeder Worker-VM für {{site.data.keyword.icpfull_notm}} zu installieren:
 
 `sudo apt-get update`
 
@@ -68,7 +68,7 @@ Jedes Mal, wenn ein neuer NFS-Datenträger benötigt wird, führt Todd den folge
 
 ### Imagesicherheit vorbereiten
 
-In ICP V3.1 wird die Sicherheit dadurch erweitert, dass eine Imagerichtlinie erstellt worden sein muss, bevor ein Image mit einer Pull-Operation in eine ICP-Instanz extrahiert werden kann. Die Erweiterung setzt voraus, dass Sie eine Imagerichtlinie für die Position der IBM Images (*dockerhub/ibmcom*) und im Docker-Speicher hinzufügen.
+In {{site.data.keyword.icpfull_notm}} V3.1 wird die Sicherheit dadurch erweitert, dass eine Imagerichtlinie erstellt worden sein muss, bevor ein Image mit einer Pull-Operation in eine {{site.data.keyword.icpfull_notm}}-Instanz extrahiert werden kann. Die Erweiterung setzt voraus, dass Sie eine Imagerichtlinie für die Position der IBM Images (*dockerhub/ibmcom*) und im Docker-Speicher hinzufügen.
 
 Die Richtlinie "ibmcloud-default-cluster-image-policy" wird standardmäßig bereitgestellt und deckt alle IBM Images unter "docker.io/ibmcom/\*" ab. Da sich Db2 und anderer IBM Inhalt im Docker-Speicher befinden, ist jedoch eine weitere Imagerichtlinie für den Docker-Speicher *docker.io/store/ibmcorp/* erforderlich.
 
@@ -78,7 +78,7 @@ Weitere Informationen finden Sie im [IBM Knowledge Center](https://www.ibm.com/s
 
 ## Transformation Advisor und Microclimate bereitstellen
 
-Nachdem Todd ICP in Betrieb genommen hat, installiert er Transformation Advisor zusammen mit Microclimate. Todd öffnet den [Katalog](https://www.ibm.com/cloud/private/developer) und zeigt den gesamten verfügbaren Inhalt an.
+Nachdem Todd {{site.data.keyword.icpfull_notm}} in Betrieb genommen hat, installiert er Transformation Advisor zusammen mit Microclimate. Todd öffnet den [Katalog](https://www.ibm.com/cloud/private/developer) und zeigt den gesamten verfügbaren Inhalt an.
 
 Todd sucht nach Transformation Advisor und Microclimate und installiert beides anhand der in der Readme-Datei bereitstehenden Anweisungen, wenn er auf das Helm-Diagramm klickt.
 
@@ -97,4 +97,4 @@ Todd hat die Datenquelle während des Transformationsschritts nicht geändert. T
 
 ### Zugehörige Links
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

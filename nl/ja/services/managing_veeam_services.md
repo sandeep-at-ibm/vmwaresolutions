@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -25,12 +25,12 @@ Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービスを�
 3. **「Veeam on IBM Cloud」**ページで、マネージド・サービスとしての Veeam on {{site.data.keyword.cloud_notm}} の説明と技術仕様を確認してから、**「作成」**をクリックします。
 4. 要件に応じて構成設定値を指定するか、またはデフォルト値を受け入れます。
 5. **「vCenter サーバー」**または**「Cloud Foundation」**をクリックして、このサービスをいずれかのインスタンスに追加します。
-6. このサービスを新規インスタンスの注文中に追加するには、**「新規インスタンスに追加」**をクリックしてから、新規 [vCenter Server](../vcenter/vc_orderinginstance.html) インスタンス、[vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html) インスタンス、または [Cloud Foundation](../sddc/sd_orderinginstance.html) インスタンスの注文を続けます。
+6. このサービスを新規インスタンスの注文中に追加するには、**「新規インスタンスに追加」**をクリックしてから、新規 [vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html) インスタンス、[vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html) インスタンス、または [Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html) インスタンスの注文を続けます。
 7. このサービスを既存のインスタンスに追加するには、**「既存にインスタンスに追加 (Add to Existing Instance)」**をクリックし、リストから対象インスタンスを選択してから、**「プロビジョン」**をクリックして注文に進むことに同意します。
 
 ### 関連リンク
 
-* [vCenter Server インスタンスのサービスの注文、表示、削除](../vcenter/vc_addingremovingservices.html)
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](../sddc/sd_addingremovingservices.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
+* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [Data Backup and Protection Services](https://www-935.ibm.com/services/business-continuity/backup-and-data-protection-services/)

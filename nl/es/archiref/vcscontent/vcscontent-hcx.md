@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-11-14"
 
@@ -23,7 +23,7 @@ Figura 1. vCenter Server con paquete híbrido (Hybridity)
 
 La hibridación crea una interconexión ligeramente acoplada entre {{site.data.keyword.cloud_notm}} local y ofrece las siguientes funciones:
 
-* Interconectividad sencilla: las conexiones de red lógicas se establecen fácilmente sobre cualquier conexión física que incluya internet pública, VPN privada o enlace directo.
+* Interconectividad sencilla: las conexiones de red lógicas se establecen fácilmente sobre cualquier conexión física, como internet pública, VPN privada o enlace directo.
 * Extensión de capa 2: las redes locales se amplían a la nube e incluyen subredes locales y direccionamiento IP.
 * Cifrado: el tráfico de red se cifra de forma segura entre los dos lados.
 * Red optimizada: selecciona la mejor conexión y gestiona la conexión de forma eficiente de modo que el tráfico se transmite de la forma más rápida posible.

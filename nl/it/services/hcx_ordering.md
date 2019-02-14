@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -63,7 +63,7 @@ La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Si
    * Le interfacce di uplink pubblico e privato vengono configurate utilizzando le sottoreti ordinate.
    * Gli ESG vengono configurati come una coppia di dispositivi edge di grandi dimensioni con l'alta disponibilità (HA) abilitata.
    * Le regole del firewall e le regole NAT (Network Address Translation) vengono configurate per consentire il traffico HTTPS in entrata e in uscita da e verso HCX Manager.
-   * Vengono configurate le regole di bilanciamento del carico e i pool di risorse. Le regole e i pool di risorse sono utilizzati per inoltrare il traffico in entrata correlato a HCX ai dispositivi virtuali appropriati di HCX Manager, vCenter Server e PSC (Platform Services Controller).
+   * Vengono configurate le regole di bilanciamento del carico e i pool di risorse. Tali regole e pool di risorse sono utilizzati per inoltrare il traffico in entrata correlato a HCX ai dispositivi virtuali appropriati di HCX Manager e vCenter Server (con Platform Services Controller integrato).
    * Viene applicato un certificato SSL per crittografare il traffico HTTPS in entrata correlato a HCX che arriva tramite gli ESG.
 
    L'edge di gestione HCX è dedicato al traffico di gestione HCX tra i componenti HCX in loco e i componenti HCX lato cloud. Non modificare l'edge di gestione HCX o utilizzarlo per le estensioni di rete HCX. Crea, invece, edge separati per le estensioni di rete. Inoltre, l'utilizzo di un firewall o la disabilitazione delle comunicazioni dell'edge di gestione HCX ai componenti di gestione IBM privati o all'Internet pubblico potrebbe influire negativamente sulla funzionalità di HCX.
@@ -71,17 +71,17 @@ La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Si
 
 6. HCX Manager on {{site.data.keyword.cloud_notm}} viene distribuito, attivato, e configurato:
    * HCX Manager viene registrato con vCenter Server.
-   * Vengono configurati HCX Manager, vCenter Server, PSC e NSX Manager.
+   * Vengono configurati HCX Manager, vCenter Server (con Platform Services Controller integrato) e NSX Manager.
    * Viene configurata la flotta HCX.
    * Vengono configurati i contenitori di distribuzione HCX locali e remoti.
 7. Il nome host e l'indirizzo IP di HCX Manager vengono registrati con il server DNS di VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 ### Link correlati
 
-* [Panoramica di HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
-* [Gestione di HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Glossario dei termini HCX](hcx_glossary.html)
-* [Come contattare il supporto IBM](../vmonic/trbl_support.html)
+* [Panoramica di HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [Gestione di HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Glossario dei termini HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [Panoramica di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
 * [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

@@ -2,17 +2,20 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-12-11"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Consideraciones sobre red para instancias de Cloud Foundation
 
 Revise la siguiente información para obtener detalles sobre las consideraciones y requisitos de red para las instancias de Cloud Foundation. Asegúrese de cumplir los requisitos para que la instancia funcione correctamente.
 
 ## Componentes de red para instancias de Cloud Foundation
+{: faq}
 
 Para revisar los componentes de red que se incluyen en la instancia de Cloud Foundation, consulte [Especificaciones técnicas para instancias de Cloud Foundation](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 

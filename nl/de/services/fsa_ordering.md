@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-26"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -26,12 +26,12 @@ Sie können den Service "FortiGate Security Appliance on {{site.data.keyword.clo
 
 ### Zugehörige Links
 
-* [Übersicht über FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](fsa_considerations.html)
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} verwalten](managingfsa.html)
-* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
-* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/fsa_considerations.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managingfsa.html)
+* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Fortinet-Website](https://www.fortinet.com/){:new_window}
 * [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

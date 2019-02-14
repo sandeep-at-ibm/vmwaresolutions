@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,7 +21,7 @@ Für die Einrichtung der Umgebung, die Installation und die Konfiguration der ve
 
 ## Voraussetzungen für IBM Cloud-Konto
 
-Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Konto](../vmonic/slaccountrequirement.html).
+Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Konto](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Verfügbarkeit des IBM Cloud-Rechenzentrums
 
@@ -69,6 +69,6 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vSphere-Cl
 
 ### Zugehörige Links
 
-* [Neue vSphere-Cluster bestellen](vs_orderinginstances.html)
-* [Vorhandene Cluster skalieren](vs_scalingexistingclusters.html)
-* [Außerhalb der Konsole erstellte Cluster skalieren](vs_orderingforclustersoutside.html)
+* [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Vorhandene Cluster skalieren](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [Außerhalb der Konsole erstellte Cluster skalieren](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

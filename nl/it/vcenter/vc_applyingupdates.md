@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,7 @@ Quando aggiorni un'istanza vCenter Server a un'istanza vCenter Server with Hybri
 
 Gli utenti Business Partner non hanno l'opzione di aggiornare un'istanza vCenter Server esistente a un'istanza vCenter Server with Hybridity Bundle.
 
-A partire dalla V2.5, gli aggiornamenti di IBM CloudDriver non sono più elencati perché sono abilitati gli aggiornamenti automatici. Azioni come l'aggiunta di un host, l'aggiunta di un cluster e l'ordine di un servizio aggiornano automaticamente l'istanza all'ultima versione. Per ulteriori informazioni sugli aggiornamenti automatici, consulta la sezione *Resilienza di IBM CloudDriver* in [Note sulla release per la V2.5](../vmonic/relnotes_v25.html).
+A partire dalla V2.5, gli aggiornamenti di IBM CloudDriver non sono più elencati perché sono abilitati gli aggiornamenti automatici. Azioni come l'aggiunta di un host, l'aggiunta di un cluster e l'ordine di un servizio aggiornano automaticamente l'istanza all'ultima versione. Per ulteriori informazioni sugli aggiornamenti automatici, consulta la sezione *Resilienza di IBM CloudDriver* in [Note sulla release per la V2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
 {:note}
 
 Prima di tentare di applicare un aggiornamento, espandi la voce di aggiornamento facendo clic sulla freccia in giù e verifica le seguenti informazioni:
@@ -43,12 +43,12 @@ Tabella 1. Livelli di aggiornamento e impatto
   <tr>
     <td>Basso</td>
     <td>Questo aggiornamento non influisce su alcun sistema. Non devi applicarlo durante i tempi di inattività
-    pianificati.</td>
+pianificati.</td>
   </tr>
   <tr>
     <td>Medio</td>
   <td>Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività
-    pianificati.</td>
+pianificati.</td>
   </tr>
     <tr>
     <td>Maggiore</td>
@@ -56,7 +56,7 @@ Tabella 1. Livelli di aggiornamento e impatto
   </tr>
 </table>
 
-## Procedura per applicare aggiornamenti e patch alle istanze vCenter Server (V2.1 o successive) 
+## Procedura per applicare aggiornamenti e patch alle istanze vCenter Server (V2.1 o successive)
 
 Questa procedura si applica alle istanze distribuite nella V2.1 o successive. Per le istanze distribuite nella V2.0 e precedenti, devi applicare gli aggiornamenti VMware manualmente.
 
@@ -145,10 +145,10 @@ Completa la seguente procedura per aggiornare un'istanza vCenter Server a vCente
       </tr>
     </table>
 
-4. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](../vmonic/trbl_support.html) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato a tentare nuovamente l'aggiornamento dal passo non riuscito.
+4. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato a tentare nuovamente l'aggiornamento dal passo non riuscito.
 
 ### Link correlati
 
-* [Panoramica di vCenter Server](../vcenter/vc_vcenterserveroverview.html)
-* [Come contattare il supporto IBM](../vmonic/trbl_support.html)
-* [Domande frequenti](../vmonic/faq.html)
+* [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2017-10-26"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -33,7 +33,7 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 
 1. Rimuovi tutti i servizi dall'istanza secondaria di vCenter Server.
 2. Assicurarti che nessun oggetto NSX sia espanso nell'istanza secondaria che vuoi eliminare.
-3. Elimina il vCenter e il PSC (Platform Services Controller) secondari dal dominio SSO (Single Sign-On) primario. Per ulteriori informazioni, vedi [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2106736){:new_window}.
+3. Elimina il vCenter Server secondario dal dominio SSO (Single Sign-On) primario. Per ulteriori informazioni, vedi [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2106736){:new_window}.
 4. Riduci il livello dell'istanza di servizio virtuale (o VSI, Virtual Service Instance) del controller di dominio locale. Per ulteriori informazioni, vedi [Demoting domain controllers and domains](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
 5. Elimina l'istanza secondaria vCenter Server dalla console {{site.data.keyword.vmwaresolutions_short}}.
 6. Ripeti i passi da 1 a 5 per tutte le istanze vCenter Server secondarie nella tua configurazione multisito.
@@ -41,5 +41,5 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 
 ### Link correlati
 
-* [Eliminazione di istanze vCenter Server](vc_deletinginstance.html)
-* [Ordine, visualizzazione e rimozione dei servizi dalle istanze vCenter Server](vc_addingremovingservices.html)
+* [Eliminazione di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)
+* [Ordine, visualizzazione e rimozione dei servizi dalle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)

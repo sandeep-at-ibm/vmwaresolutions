@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-14"
 
 ---
 
@@ -29,10 +29,9 @@ Tabla 1. Formato del valor de nombres de instancia y de dominio
   |:------------- |:------------- |
   | Nombre de dominio | `<root_domain>` |  
   | Nombre usuario inicio sesión vCenter Server | `<user_id>@<root_domain>` (usuario de Microsoft Active Directory) o `administrator@vsphere.local` |
-  | FQDN de vCenter Server | `vcenter.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
+  | vCenter Server (con PSC incorporado) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
   | Nombre sitio inicio sesión único (SSO) | `<subdomain_label>` |
-  | Nombre completo de servidor ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `<n>` es la secuencia del servidor ESXi. La longitud máxima es de 50 caracteres. |  
-  | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
+  | Nombre completo de servidor ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `<n>` es la secuencia del servidor ESXi. La longitud máxima es de 50 caracteres. |
 
 No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime.
 {:important}
@@ -62,7 +61,8 @@ Las siguientes licencias de VMware se incluyen con el pedido de instancia de vCe
 * NSX Service Providers 6.4 (edición Advanced o Enterprise)
 * vSAN 6.6 (edición Advanced o Enterprise)
 
-**Atención:**
+### Atención:
+
 * Las instancias de vCenter Server con el paquete híbrido (Hybridity) no admiten la opción de traer su propia licencia.
 * Las ediciones de licencia mínimas se indican en la interfaz de usuario. Si se da soporte a distintas ediciones de componentes, puede seleccionar la edición que desee.
 
@@ -99,6 +99,8 @@ Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 | Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Número de servidores nativos
 
@@ -109,7 +111,11 @@ De forma predeterminada, se seleccionan cuatro servidores ESXi, y esto no se pue
 Se incluye VMware vSAN 6.6 en el pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity). Especifique las siguientes opciones de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
-* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto.
+
+  La opción **Intel Optane de alto rendimiento** solo está disponible para los modelos de CPU de Skylake Dual Intel Xeon Gold 5120 y Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
 
 ## Valores de interfaz de red
@@ -204,7 +210,8 @@ En función de la configuración seleccionada para la instancia y los servicios 
    * Pulse **Instancia primaria** para desplegar una sola instancia en el entorno o para desplegar la primera instancia en una topología de varios sitios.
    * Pulse **Instancia secundaria** para conectar la instancia con una instancia existente (primaria) en el entorno para conseguir alta disponibilidad y siga estos pasos:
      1. Seleccione la instancia primaria a la que desea conectar la instancia secundaria.
-     2. Especifique la contraseña de administrador PSC de la instancia primaria.
+     2. Para las instancias primarias V2.8 o posteriores, especifique la contraseña del administrador de vCenter Server para la instancia primaria.
+     3. Para las instancias primarias V2.7 o anteriores, especifique la contraseña del administrador de PSC para la instancia primaria.
 5. Seleccione la edición de licencia de NSX y la edición de licencia de vSAN.
 6. Complete los valores del servidor nativo.
   1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} que va a alojar la instancia.

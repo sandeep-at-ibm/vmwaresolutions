@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-04-16"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V2.1 のリリース・ノート
 
@@ -20,7 +24,7 @@ lastupdated: "2018-04-16"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-詳しくは、[Spectre および Meltdown 脆弱性への対処](../vmonic/trbl_fix_spectre.html)を参照してください。
+詳しくは、[Spectre および Meltdown 脆弱性への対処](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)を参照してください。
 
 ## VMware HCX on IBM Cloud
 
@@ -31,10 +35,10 @@ HCX on {{site.data.keyword.cloud_notm}} サービスを組み込んだ形で Clo
 オンプレミスの HCX インスタンスを注文し、オンプレミス HCX インストールのライセンスを適用してアクティベーションすることもできます。
 
 詳しくは、以下のトピックを参照してください。
-* [HCX on {{site.data.keyword.cloud_notm}} に関する考慮事項](../services/hcx_considerations.html)
-* [HCX on {{site.data.keyword.cloud_notm}} の管理](../services/managinghcx.html)
-* [オンプレミス HCX インスタンスに関する考慮事項](../services/standalone_considerations.html)
-* [オンプレミス HCX インスタンスの注文](../services/standalone_orderingserviceinstances.html)
+* [HCX on {{site.data.keyword.cloud_notm}} に関する考慮事項](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [HCX on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [オンプレミス HCX インスタンスに関する考慮事項](/docs/services/vmwaresolutions/services/standalone_considerations.html)
+* [オンプレミス HCX インスタンスの注文](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
 
 ## より柔軟になった VMware Cloud Foundation と vCenter Server のライセンス持ち込みモデル
 
@@ -44,21 +48,21 @@ V2.1 以降の VMware Cloud Foundation インスタンスと VMware vCenter Serv
 
 詳しくは、以下のトピックを参照してください。
 
-* [Cloud Foundation インスタンスのクラスターの追加と表示](../sddc/sd_addingviewingclusters.html)
-* [vCenter Server インスタンスのクラスターの追加と表示](../vcenter/vc_addingviewingclusters.html)
-* [BYOL に関するよくある質問](../vmonic/faq_byol.html)
+* [Cloud Foundation インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
+* [vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [BYOL に関するよくある質問](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
 
 ## Zerto on IBM Cloud サービスのコンポーネントの更新
 
 V2.1 以降の Cloud Foundation インスタンスと vCenter Server インスタンスに Zerto on {{site.data.keyword.cloud_notm}} サービスをデプロイすると、Zerto Virtual Replication 5.5u2 がプロビジョンされます。 Zerto 仮想レプリケーション・アプライアンス (VRA) は、パフォーマンス上の理由により、ローカル・データ・ストアではなく、管理データ・ストア (vSAN またはエンデュランスのどちらか) にデプロイされるようになりました。 既存の VRA がある場合は、パフォーマンス向上のために、そのストレージを管理データ・ストアにマイグレーションすることを検討してください。
 
-詳しくは、[Zerto on {{site.data.keyword.cloud_notm}} の概要](../services/addingzertodr.html)を参照してください。
+詳しくは、[Zerto on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/addingzertodr.html)を参照してください。
 
 ## VMware vCenter Server インスタンスの更新
 
 ### ネットワーク MTU の構成設定
 
-V2.1 以降のリリースでは、新しい vCenter Server インスタンスは、パブリックの分散仮想スイッチ (DVS) が MTU 1500 (デフォルト) の設定で注文されます。 詳しくは、[vCenter Server の部品構成表](../vcenter/vc_bom.html)の_ネットワーク MTU の構成設定_を参照してください。
+V2.1 以降のリリースでは、新しい vCenter Server インスタンスは、パブリックの分散仮想スイッチ (DVS) が MTU 1500 (デフォルト) の設定で注文されます。 詳しくは、[vCenter Server の部品構成表](/docs/services/vmwaresolutions/vcenter/vc_bom.html)の_ネットワーク MTU の構成設定_を参照してください。
 
 ### VMware ESXi のパッチと更新のホストへの自動適用
 
@@ -67,36 +71,37 @@ V2.0 以前の VMware vCenter Server インスタンスでは、クラスター�
 V2.1 以降のインスタンスでは、新しい ESXi ホストにパッチが自動適用されるので、初期インスタンスをプロビジョンしたときのパッチ・レベルと同じパッチ・レベルになります。 それ以降のパッチと更新は手動で適用する必要があります。
 今後のリリースで VMware のパッチや更新が提供された場合は、既存インスタンスの ESXi ホストが自動的にスキャンされ、最新のパッチや更新を手動で適用することを促すリマインダーが E メールで送信されます。
 
-詳しくは、[vCenter Server インスタンスへの更新の適用](../vcenter/vc_applyingupdates.html)を参照してください。
+詳しくは、[vCenter Server インスタンスへの更新の適用](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html)を参照してください。
 
 ### VMware NSX ライセンスのアップグレードの見積もり価格
 
 VMware NSX の Advanced または Enterprise エディションにアップグレードする注文を送信する前に、見積もり価格を確認できるようになりました。 見積もり価格は、vCenter Server インスタンス内の ESXi ホストの数に基づいています。 この購入では、NSX ライセンス・キーのみが変更され、VMware NSX の Base エディションが Advanced エディションまたは Enterprise エディションにアップグレードされます。 購入によって NSX ソフトウェアのバージョンがアップグレードされるわけではありません。
 
-詳しくは、[vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html)を参照してください。
+詳しくは、[vCenter Server の概要](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)を参照してください。
 
 ### 1 クラスターあたりの最大サーバー数が 32 以上に
 
-インスタンス内のデフォルト・クラスターについては、最大 51 サーバーまでデプロイまたは拡張できます。 インスタンス内の 2 つ目以降のすべてのクラスターについては、最大 59 サーバーまでデプロイまたは拡張できます。 詳しくは、[vCenter Server インスタンスのクラスターの追加と表示](../vcenter/vc_addingviewingclusters.html)を参照してください。
+インスタンス内のデフォルト・クラスターについては、最大 51 サーバーまでデプロイまたは拡張できます。 インスタンス内の 2 つ目以降のすべてのクラスターについては、最大 59 サーバーまでデプロイまたは拡張できます。 詳しくは、[vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)を参照してください。
 
-**注:** この能力は、V2.1 以降でデプロイされたインスタンスでのみ使用できます。 V2.1 より前のリリースから V2.1 にアップグレードされたインスタンスには、このオプションはありません。
+この機能は、V2.1 以降でデプロイされたインスタンスでのみ利用可能です。 V2.1 より前のリリースから V2.1 にアップグレードされたインスタンスには、このオプションはありません。
+{:note}
 
 ### ユーザー・カスタマイズ型の IBM Cloud ベア・メタル・サーバーの構成オプション
 
 ユーザー・カスタマイズ型のベア・メタル・サーバー構成に、Dual Intel Xeon Gold 6140 (合計 36 コア、2.3 GHz) が追加されました。
 
 詳しくは、以下のトピックを参照してください。
-* [vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
+* [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 
 ### 個別の NFS ファイル共有構成
 
 NFS ファイル共有を個々に構成できるようになりました。 ファイル共有ごとにファイル・サイズとパフォーマンス・レベルを選択するか、注文するすべてのファイル共有に同じファイル・サイズとパフォーマンス・レベルを選択します。
 
 詳しくは、以下のトピックを参照してください。
-* [vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
-* [vCenter Server インスタンスのクラスターの追加と表示](../vcenter/vc_addingviewingclusters.html)
+* [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
 
 ## ユーザー・インターフェースの更新と向上
 

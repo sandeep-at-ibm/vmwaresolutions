@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,15 +16,15 @@ lastupdated: "2018-11-13"
 
 インフラストラクチャー管理では、vSphere ESXi インフラストラクチャーを管理する VMware コンポーネントについて触れます。
 
-これらのコンポーネントについて詳しくは、[仮想インフラストラクチャー設計](../solution/design_virtualinfrastructure.html)の図 2『NSX Manager ネットワークの概要』を参照してください。
+これらのコンポーネントについて詳しくは、[仮想インフラストラクチャー設計](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)の図 2『NSX Manager ネットワークの概要』を参照してください。
 
 ## 仮想ネットワーキングの設計
 
-この設計で使用されるネットワークの仮想化では、プライベート・ネットワークに関連付けられた既存の vSphere 分散スイッチ (vDS) が使用されます。 これは、[{{site.data.keyword.vmwaresolutions_full}} のアーキテクチャー](../solution/solution_overview.html)に規定されています。
+この設計で使用されるネットワークの仮想化では、プライベート・ネットワークに関連付けられた既存の vSphere 分散スイッチ (vDS) が使用されます。 これは、[{{site.data.keyword.vmwaresolutions_full}} のアーキテクチャー](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)に規定されています。
 
 ## vSphere 分散スイッチ
 
-別の VLAN が vCenter Server ソリューション内に作成され、NFS マウント・ポイントを既存のクラスター内の ESXi ホストに接続するのに使用されます。vCenter Server ソリューションには、プライベート・ネットワークが関連付けられた vSphere 分散スイッチがあるので、別のポート・グループが作成され、追加された VLAN の番号のタグが付けられます。この追加 VLAN はネイティブではないからです。
+別の VLAN が vCenter Server ソリューション内に作成され、NFS マウント・ポイントを既存のクラスター内の ESXi ホストに接続するのに使用されます。 vCenter Server ソリューションには、プライベート・ネットワークが関連付けられた vSphere 分散スイッチがあるので、別のポート・グループが作成され、追加された VLAN の番号のタグが付けられます。この追加 VLAN はネイティブではないからです。
 
 この新しいポート・グループのデフォルトの設定値を次の表に示します。
 
@@ -40,7 +40,7 @@ lastupdated: "2018-11-13"
 | ロード・バランシング | 起点仮想ポートに基づく転送 |
 | アクティブ・アップリンク | Uplink1 と uplink2 |
 
-NFS ストレージ・トラフィック用の vDS ポート・グループが作成されるほか、VMkernel ポートが、デプロイメント中に各 vSphere ESXi ホスト上に作成され、SDDC-DPG-NFS ポート・グループに割り当てられます。VMkernel ポートには、接続ストレージの VLAN (プライベート VLAN B) に関連付けられたプライベート・ポータブル・サブネットの IP アドレスも割り当てられ、ポートの MTU は、ジャンボ・フレームをサポートするために 9000 に設定されます。
+NFS ストレージ・トラフィック用の vDS ポート・グループが作成されるほか、VMkernel ポートが、デプロイメント中に各 vSphere ESXi ホスト上に作成され、SDDC-DPG-NFS ポート・グループに割り当てられます。 VMkernel ポートには、接続ストレージの VLAN (プライベート VLAN B) に関連付けられたプライベート・ポータブル・サブネットの IP アドレスも割り当てられ、ポートの MTU は、ジャンボ・フレームをサポートするために 9000 に設定されます。
 
 図 1. プライベート vDS ポート・グループとアップリンク
 
@@ -52,4 +52,4 @@ NFS ストレージ・トラフィック用の vDS ポート・グループが�
 
 ### 関連リンク
 
-* [ソリューションの概要](../solution/solution_overview.html)
+* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

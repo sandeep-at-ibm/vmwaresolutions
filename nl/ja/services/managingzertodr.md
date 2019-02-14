@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,8 +41,8 @@ Zerto Virtual Replication を更新するには、Zerto Virtual Replication コ�
 
 ### 関連リンク
 
-* [Zerto on {{site.data.keyword.cloud_notm}} の概要](addingzertodr.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](managing_zerto_services.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/addingzertodr.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
 * [zerto.com Web サイト](https://www.zerto.com){:new_window}
 * [Zerto 技術資料](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
 * [Zerto 災害復旧](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}

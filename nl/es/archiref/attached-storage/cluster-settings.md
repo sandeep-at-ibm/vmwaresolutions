@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -37,7 +37,7 @@ Tabla 1. Valores de automatización de DRS para el clúster DRS de vSphere
 
 Para obtener más información sobre la configuración de estos valores en el cliente web de vSphere, consulte [Establecimiento de un nivel de automatización personalizado para una máquina virtual en el cliente web de vSphere](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-C21C0609-923B-46FB-920C-887F00DBCAB9.html).
 
-Junto con el nivel de automatización y el umbral de migración del clúster, este diseño habilita la automatización de las máquinas virtuales para que pueda establecer alteraciones temporales en las VM individuales. Un control más granular de las VM le permite priorizar el equilibrio de la carga de las VM.
+Junto con el nivel de automatización y el umbral de migración del clúster, este diseño habilita la automatización de las máquinas virtuales para que pueda modificar valores en las VM individuales. Un control más granular de las VM le permite priorizar el equilibrio de la carga de las VM.
 
 ### Gestión de alimentación
 
@@ -84,7 +84,7 @@ Para obtener más información sobre la configuración de estos valores en el cl
 
 vCenter Server utiliza el control de admisiones para garantizar que hay suficientes recursos disponibles en un clúster para ofrecer protección de migración tras error y para asegurar que se respetan las reservas de recursos de VM. En este diseño, la capacidad de migración tras error se reserva mediante la especificación de un porcentaje de los recursos del clúster. La capacidad de migración tras error definida se establece en 25% de CPU y 25% de memoria.
 
-#### Almacén de datos para pulsaciones
+#### Pulsaciones del almacén de datos
 
 HA de vSphere utiliza pulsaciones del almacén de datos para identificar los hosts que han fallado y los hosts que residen en una partición de red. Las pulsaciones del almacén de datos permiten a HA de vSphere supervisar los hosts cuando se produce una partición de red de gestión y para continuar respondiendo ante los errores que se producen. En este diseño, la política de selección del almacén de datos de pulsaciones está establecida en "Selección automática de almacenes de datos accesibles desde el host".
 

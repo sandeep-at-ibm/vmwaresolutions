@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-08"
 
 ## Copia de seguridad
 
-### Copia de seguridad VCS
+### Copia de seguridad de VMware vCenter Server on IBM Cloud
 
 Como parte de {{site.data.keyword.vmwaresolutions_full}}, el software de copia de seguridad de Veeam se puede desplegar de forma opcional en una instancia de servidor virtual de {{site.data.keyword.cloud_notm}} (VSI) mediante el uso del almacenamiento de resistencia (Endurance) de {{site.data.keyword.cloud_notm}} fuera del clúster VMware. El objetivo de este software es hacer copia de seguridad de los componentes de gestión de la solución. En el apartado sobre [visión general de Veeam on {{site.data.keyword.cloud_notm}}](../../services/veeam_considerations.html) encontrará detalles sobre la oferta.
 
@@ -22,7 +22,7 @@ La copia de seguridad de NSX Manager contiene toda la configuración de NSX, inc
 
 ### Copia de seguridad y recuperación en caso de error para IBM Cloud Private
 
-Las copias de seguridad de un despliegue de ICP resultan cruciales para restaurar el sistema a su estado de trabajo si se produce una anomalía. Sobre una copia de seguridad de VM tradicional, hay un punto conflictivo: cada nodo maestro de ICP ejecuta un servicio *etcd* y en la documentación de *etcd* se indica claramente que no se utilice la copia de seguridad de VM tradicional para restaurarlo.
+Las copias de seguridad de un despliegue de {{site.data.keyword.icpfull_notm}} resultan cruciales para restaurar el sistema a su estado de trabajo si se produce una anomalía. En el caso de una copia de seguridad de VM tradicional, hay un punto conflictivo: cada nodo maestro de {{site.data.keyword.icpfull_notm}} ejecuta un servicio *etcd* y en la documentación de *etcd* se indica claramente que no se utilice la copia de seguridad de VM tradicional para restaurarlo.
 
 En {{site.data.keyword.cloud_notm}} Private a nivel de plataforma, deberá realizar una copia de seguridad de estos componentes.
 - **etcd** - etcd se utiliza para almacenar recursos de Kubernetes y la información de estado de Calico.
@@ -42,13 +42,13 @@ Las copias de seguridad de un despliegue de CAM resultan cruciales para restaura
 -	**Base de datos de Maria**: utilizada por CAM Blueprint Designer.
 -	**Sistemas de archivos NFS/Gluster**: los datos de CAM residen en cuatro volúmenes persistentes.
 
-### Copia de seguridad y DR para IKS
+### Copia de seguridad y DR para el servicio IBM Cloud Kubernetes
 
 La copia de seguridad de la base de datos etcd se proporciona al cliente como parte del servicio gestionado; sin embargo, el cliente es el responsable de realizar la copia de seguridad de los datos de las aplicaciones.
 
 ## Escalabilidad
 
-### Escalabilidad de VCS
+### Escalabilidad de vCenter Server
 
 Después del despliegue de los hosts iniciales, los usuarios pueden escalar la capacidad de cálculo desde dentro del portal de {{site.data.keyword.cloud_notm}} for VMware.
 
@@ -69,28 +69,28 @@ Los usuarios pueden escalar la capacidad de cálculo creando un nuevo clúster d
 
 El usuario puede escalar un clúster existente solicitando hosts desde dentro de la consola y los nuevos hosts se añaden automáticamente al clúster. Para obtener más información, consulte [Ampliación y reducción de capacidad para instancias de vCenter Server](../../vcenter/vc_addingremovingservers.html). Es posible que tenga que ajustar la política de reserva de HA para el clúster en función de sus requisitos de reserva.
 
-### Escalabilidad de ICP e IKS
+### Escalabilidad de IBM Cloud Private y del servicio IBM Cloud Kubernetes
 
 En función de la capacidad de cálculo disponible en las ubicaciones locales o en la nube, los usuarios pueden escalar la arquitectura de nodos desde el nodo de arranque desplegado inicialmente. Para escalar el entorno puede:
--	Ampliar los nodos trabajadores de ICP.
--	Ampliar y utilizar la oferta IKS.
+-	Ampliar los nodos trabajadores de {{site.data.keyword.icpfull_notm}}.
+-	Ampliar y utilizar la oferta {{site.data.keyword.containerlong_notm}}.
 
-#### Expansión de ICP
+#### Expansión de IBM Cloud Private
 
-Los nodos de máquina virtual de nodos trabajadores de ICP se escalan para ampliar el cálculo y la aplicación:
-- El cliente suministra una nueva máquina virtual en la misma VXLAN que la que está desplegado ICP.
+Los nodos de máquina virtual de nodos trabajadores de {{site.data.keyword.icpfull_notm}} se escalan para ampliar el cálculo y la aplicación:
+- El cliente suministra una nueva máquina virtual en la misma VXLAN que la que está desplegado {{site.data.keyword.icpfull_notm}}.
 - Los clientes pueden escalar los nodos trabajadores, suministrando nuevas máquinas virtuales y luego iniciando una sesión en el nodo de arranque y ejecutando un mandato para incorporar los nuevos nodos al clúster. Consulte [Adición y eliminación de nodos del clúster](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/installing/modify_cluster.html) para obtener más información.
-- Utilice CAM para automatizar el suministro de la VM y la ejecución de mandatos para añadirla al clúster ICP.
+- Utilice CAM para automatizar el suministro de la VM y la ejecución de mandatos para añadirla al clúster {{site.data.keyword.icpfull_notm}}.
 
-#### Expansión de IKS
+#### Expansión del servicio IBM Cloud Kubernetes
 
-Los usuarios pueden suministrar un entorno IKS mediante el portal de {{site.data.keyword.cloud_notm}} para ampliar y utilizar un entorno de contenedor. Para obtener más información, consulte [Mejoras en la hibridación en {{site.data.keyword.cloud_notm}} e {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/community/blogs/5092bd93-e659-4f89-8de2-a7ac980487f0/entry/Hybrid_Enhancements_Across_IBM_Cloud_Private_and_IBM_Public_Cloud?lang=en_us).
+Los usuarios pueden suministrar un entorno {{site.data.keyword.containerlong_notm}} mediante el portal de {{site.data.keyword.cloud_notm}} para ampliar y utilizar un entorno de contenedor. Para obtener más información, consulte [Mejoras en la hibridación en {{site.data.keyword.cloud_notm}} e {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/community/blogs/5092bd93-e659-4f89-8de2-a7ac980487f0/entry/Hybrid_Enhancements_Across_IBM_Cloud_Private_and_IBM_Public_Cloud?lang=en_us).
 
-Los despliegues de aplicaciones en IKS son posibles con los métodos siguientes:
--	La conexión y los servicios de IKS que se desarrollan en CAM y se publican en el catálogo ICP.
--	Multi Cloud Manager, una futura mejora para gestionar instancias de IKS.
+Los despliegues de aplicaciones en {{site.data.keyword.containerlong_notm}} son posibles con los métodos siguientes:
+-	La conexión y los servicios de {{site.data.keyword.containerlong_notm}} se desarrollan en CAM y se publican en el catálogo de {{site.data.keyword.icpfull_notm}}.
+-	Multi Cloud Manager, una futura mejora para gestionar instancias de {{site.data.keyword.containerlong_notm}}.
 -	Línea de mandatos de Helm.
 
 ### Enlaces relacionados
 
-* [Visión general de VCS con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,8 +45,8 @@ Sobald die Instanz erfolgreich geschützt wurde, ändert sich der Status der Ins
 
 ### Zugehörige Links
 
-* [Übersicht über VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
-* [VMware Federal-Instanzen bestellen](vc_fed_orderinginstance.html)
-* [VMware Federal-Instanzen anzeigen](vc_fed_viewinginstance.html)
-* [VMware Federal-Instanzen löschen](vc_fed_deletinginstance.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
+* [VMware Federal-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [VMware Federal-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [VMware Federal-Instanzen löschen](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

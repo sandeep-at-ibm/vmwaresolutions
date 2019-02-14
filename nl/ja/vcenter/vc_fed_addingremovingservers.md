@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -71,7 +71,7 @@ ESXi サーバーを追加または削除して、VMware Federal インスタン
 
 ### 関連リンク
 
-* [VMware Federal インスタンスの要件と計画](vc_fed_planning.html)
-* [VMware Federal インスタンスのクラスターの追加、表示、削除](fed_addviewdeleteclusters.html)
+* [VMware Federal インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
+* [VMware Federal インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
 * [ホストをメンテナンス モードに切り替える](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

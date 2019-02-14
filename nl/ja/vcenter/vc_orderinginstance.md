@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-05"
 
 # vCenter Server インスタンスの注文
 
-ワークロードのニーズに合わせて最適化できる、柔軟でカスタマイズ可能な VMware 仮想化プラットフォームをデプロイするには、VMware vCenter Server インスタンスを注文します。 初回注文時に、災害復旧のための [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html) などのサービスも追加できます。
+ワークロードのニーズに合わせて最適化できる、柔軟でカスタマイズ可能な VMware 仮想化プラットフォームをデプロイするには、VMware vCenter Server インスタンスを注文します。 初回注文時に、災害復旧のための [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html) などのサービスも追加できます。
 
 ## 要件
 
 以下の作業を完了していることを確認してください。
-* **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](../vmonic/useraccount.html)を参照してください。
-* [vCenter Server インスタンスの要件と計画](vc_planning.html)の情報を確認する。
+* **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](/docs/services/vmwaresolutions/vmonic/useraccount.html)を参照してください。
+* [vCenter Server インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter/vc_planning.html)の情報を確認する。
 * インスタンス名とドメイン・ネームの形式を確認する。 ドメイン・ネームとサブドメイン・ラベルは、インスタンスのユーザー名とサーバー名の生成に使用されます。
 
 表 1. インスタンス名とドメイン・ネームの値の形式
@@ -29,10 +29,9 @@ lastupdated: "2018-11-05"
   |:------------|:------------ |
   | ドメイン・ネーム | `<root_domain>` |  
   | vCenter Server ログイン・ユーザー名 | `<user_id>@<root_domain>` (Microsoft Active Directory ユーザー) または `administrator@vsphere.local` |
-  | vCenter Server FQDN | `vcenter.<subdomain_label>.<root_domain>`. 最大長は 50 文字です。 |
+  | vCenter Server (PSC が組み込まれたもの) の FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大長は 50 文字です。 |
   | シングル・サインオン (SSO) サイト名 | `<subdomain_label>` |
-  | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。ここで `<n>` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |  
-  | PSC FQDN | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大長は 50 文字です。 |
+  | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。ここで `<n>` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |
 
 インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
 {:important}
@@ -45,7 +44,7 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 
 インスタンス名は、次の要件を満たす必要があります。
 * 英数字とダッシュ (-) の文字だけを使用できます。
-* インスタンス名の先頭と末尾は英数字である必要があります。
+* インスタンス名の先頭は英字、末尾は英数字でなければなりません。
 * インスタンス名の最大の長さは 10 文字です。
 * インスタンス名はアカウント内で固有である必要があります。
 
@@ -64,8 +63,8 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 
 ビジネス・パートナーでないユーザーの場合、**「購入に含める」**を選択してこれらのコンポーネントに IBM 提供 VMware ライセンスを使用することも、**「自分で提供する」**を選択し、所有するライセンス・キーを入力してライセンス持ち込み (BYOL) を適用することもできます。
 
+### 注意
 
-**注意:**
 * CPU を 2 つ搭載したサーバー 4 台を使用するため、8 個以上の CPU を使用できるライセンスが必要です。 各 VMware コンポーネントに選択したライセンスは、基本インスタンスと、そのインスタンスに後から追加する ESXi サーバーに適用されます。 ご使用のライセンスが、インフラストラクチャーの今後の容量拡張に対応できることを確認してください。
 * 最小のライセンス・エディションが、ユーザー・インターフェースに表示されます。 複数のコンポーネント・エディションがサポートされている場合は、必要なエディションを選択できます。 選択した VMware コンポーネントごとに、指定したライセンス・キーが正しいことを確認してください。
 * vSphere の場合は、注文時にライセンス料が発生しますが、そのライセンス料は後でアカウントに返金されます。
@@ -101,6 +100,10 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
   * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 192 GB RAM
   * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 384 GB RAM
   * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 768 GB RAM
+  * Dual Intel Xeon E5-2690 v4 プロセッサー / 合計 28 コア、2.6 GHz / 512 GB RAM
+  * Quad Intel Xeon E7-8890 v4 プロセッサー / 合計 96 コア、2.2 GHz / 1024 GB RAM
+  * Quad Intel Xeon E7-8890 v4 プロセッサー / 合計 96 コア、2.2 GHz / 2048 GB RAM
+  * Quad Intel Xeon E7-8890 v4 プロセッサー / 合計 96 コア、2.2 GHz / 4096 GB RAM
 
 ### Broadwell
 
@@ -113,23 +116,32 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 | デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
+| クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、2.0 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
+| クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.1 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 ### ベア・メタル・サーバーの数
 
-インスタンス内の初期クラスターの場合、ESXi サーバーの数は 2 台から 20 台までの範囲で構成できます。すべての ESXi サーバーが設定済み構成を共有します。 
+インスタンス内の初期クラスターの場合、ESXi サーバーの数は 2 台から 20 台までの範囲で構成できます。 すべての ESXi サーバーが設定済み構成を共有します。
 
-初期デプロイメントの後に、さらに 4 つのクラスターを追加できます。 VMware vSAN に**「Skylake」**または**「Broadwell」**の構成を選択した場合は、初期クラスターとデプロイメント後のクラスターの両方に 4 つの ESXi サーバーが必要です。 ESXi サーバーの最小数について詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
+初期デプロイメントの後に、さらに 4 つのクラスターを追加できます。 VMware vSAN に**「Skylake」**または**「Broadwell」**の構成を選択した場合は、初期クラスターとデプロイメント後のクラスターの両方に 4 つの ESXi サーバーが必要です。 ESXi サーバーの最小数について詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
 
 ## ストレージ設定
 
 ストレージ設定は、選択したベア・メタル・サーバー構成とストレージ・タイプによって異なります。
+
+インスタンス V2.8 以降の場合、NFS ストレージ共有を既存の NFS または vSAN クラスターに追加できます。詳しくは、[vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances)の *vCenter Server インスタンスへの NFS ストレージの追加* のセクションを参照してください。
+{:note}
 
 ### vSAN ストレージ
 
 vSAN は、**「Skylake」**と**「Broadwell」**のベアメタル構成でのみ使用できます。 以下の vSAN オプションを指定します。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
-* 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。 **「High-Performance Intel Optane」**オプションは、Dual Intel Xeon Gold 5120 および 6140 プロセッサーでのみ使用できます。
+* 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
+
+  **High-Performance Intel Optane** オプションは、Skylake の CPU モデルの Dual Intel Xeon Gold 5120 および Dual Intel Xeon Gold 6140 でのみ使用できます。
+  {:note}
+
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
 * **vSAN License**: **「Include with purchase」**を選択して vSAN コンポーネントで IBM 提供 VMware ライセンスを使用するか、**「I will provide」**を選択し、所有するライセンス・キーを入力してライセンス持ち込み (BYOL) を適用します。
 
@@ -142,17 +154,24 @@ vSAN は、**「Skylake」**と**「Broadwell」**のベアメタル構成での
 
 * **Configure shares individually**: ファイル共有ごとに異なる構成設定を指定する場合に選択します。
 * **Number of Shares**: どのファイル共有でも同じ構成設定を使用する場合に、追加する NFS 共有ストレージのファイル共有の数を指定します。
-* **サイズ**: 共有ストレージのニーズを満たす容量を選択します。
 * **パフォーマンス (Performance)**: ワークロードの要件に基づいて、1 GB あたりの IOPS (入出力操作数/秒) を選択します。
-* **ADD NFS**: 別々の構成設定を使用する個々のファイル共有を追加する時に選択します。
+* **サイズ (GB)**: 共有ストレージのニーズを満たす容量を選択します。
+* **共有ストレージの追加 (Add Shared Storage)**: 別々の構成設定を使用するファイル共有を個々に追加するときに選択します。
 
 表 4. NFS パフォーマンス・レベルのオプション
 
 | オプション        | 詳細       |
   |:------------- |:------------- |
+  | 0.25 IOPS/GB | このオプションは、使用頻度の低いワークロード用に設計されています。 例えば、データの貯蔵、レガシー・データを保管する大規模データベースのホスト、バックアップとして使用する仮想メモリー・システムの仮想ディスク・イメージなどの用途があります。 |
   | 2 IOPS/GB | このオプションは、最も汎用的なワークロード用に設計されています。 例えば、小規模なデータベースのホスト、Web アプリケーションのバックアップ、ハイパーバイザーの仮想マシン・ディスク・イメージなどの用途があります。 |
   | 4 IOPS/GB | このオプションは、同時に高い割合のデータがアクティブになる高負荷のワークロード用に設計されています。 例えば、トランザクション・データベースなどの用途があります。 |
   | 10 IOPS/GB | このオプションは、分析などの最も要求の厳しいワークロード・タイプ用に設計されています。 例えば、トランザクションの多いデータベースやその他のパフォーマンス重視のデータベースなどの用途があります。 このパフォーマンス・レベルは、ファイル共有あたり最大 4 TB の容量に制限されています。 |
+
+### ローカル・ディスク
+
+ローカル・ディスク・オプションは、**SAP 認定**のクワッド Intel Xeon E7-8890 v4 プロセッサーのベアメタル構成でのみ使用できます。 以下のオプションを指定します。
+* **ディスク数 (Disk Count)**: 追加するディスクの数を選択します。
+* **ディスク・タイプ**: 必要なディスク・タイプのオプションを選択します。
 
 ## ネットワーク・インターフェースの設定
 
@@ -169,7 +188,7 @@ vCenter Server インスタンスを注文する際には、以下のネット�
 
 サブドメイン・ラベルは、次の要件を満たす必要があります。
 *  英数字とダッシュ (-) の文字だけを使用できます。
-*  サブドメイン・ラベルの先頭と末尾は英数字である必要があります。
+*  サブドメイン・ラベルの先頭は英字、末尾は英数字でなければなりません。
 *  サブドメイン・ラベルの最大長は 10 文字です。
 *  サブドメイン・ラベルは、アカウント内で固有でなければなりません。
 
@@ -204,6 +223,7 @@ vCenter Server インスタンスを注文する際には、以下のネット�
 新規パブリック VLAN 1 つと新規プライベート VLAN 2 つを注文することを選択します。
 
 #### 既存の VLAN を選択
+
 選択した {{site.data.keyword.CloudDataCent_notm}}によっては、既存のパブリック VLAN とプライベート VLAN を使用できることがあります。
 
 既存のパブリック VLAN とプライベート VLAN を再使用することを選択した場合は、それらの VLAN とサブネットを指定します。
@@ -213,9 +233,10 @@ vCenter Server インスタンスを注文する際には、以下のネット�
 * **プライマリー・サブネット**は、パブリック・ネットワーク・アクセス用に物理ホストに割り当てられます。
 * **プライマリー・プライベート・サブネット**は、管理トラフィック用に物理ホストに割り当てられます。
 
+##### 重要
+
 * 選択した VLAN のファイアウォール構成が管理用データ・トラフィックをブロックしていないことを確認してください。
 * 選択したすべての VLAN が同じポッドに含まれていることを確認してください。 複数のポッドの VLAN に ESXi サーバーをプロビジョンすることはできません。
-{:important}
 
 ### DNS 構成
 
@@ -235,7 +256,7 @@ Windows のライセンスについて詳しくは、[Windows Server 2012 R2 の
 
 ## サービスの設定
 
-vCenter Server インスタンスを注文するときには、アドオン・サービスを注文することもできます。 サービスについて詳しくは、[vCenter Server インスタンスで使用可能なサービス](vc_addingremovingservices.html#available-services-for-vcenter-server-instances)を参照してください。
+vCenter Server インスタンスを注文するときには、アドオン・サービスを注文することもできます。 サービスについて詳しくは、[vCenter Server インスタンスで使用可能なサービス](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)を参照してください。
 
 ## 注文のサマリー
 
@@ -250,8 +271,9 @@ vCenter Server インスタンスを注文するときには、アドオン・�
    * 環境の単一インスタンスをデプロイするか、マルチサイト・トポロジーの最初のインスタンスをデプロイする場合は、**「プライマリー・インスタンス」**をクリックします。
    * 可用性を向上させる場合は、**「セカンダリー・インスタンス」**をクリックし、環境内の既存の (プライマリー) インスタンスにインスタンスを接続して、以下の手順を実行します。
      1. セカンダリー・インスタンスを接続するプライマリー・インスタンスを選択します。
-     2. プライマリー・インスタンスが V2.5 以降である場合は、**「プライマリー・インスタンス PSC の管理者パスワード (Administrator Password for the Primary Instance PSC)」**の値を入力します。
-     3. プライマリー・インスタンスが V2.4 以前である場合は、**「プライマリー・インスタンス PSC の管理者パスワード (Administrator Password for the Primary Instance PSC)」**フィールドの事前入力値が正しいことを確認します。
+     2. プライマリー・インスタンスが V2.8 以降である場合は、プライマリー・インスタンスの vCenter Server 管理者パスワードを入力します。
+     3. プライマリー・インスタンスが V2.5、2.6、または 2.7 である場合は、プライマリー・インスタンスの PSC 管理者パスワードを入力します。
+     4. プライマリー・インスタンスが V2.4 以前である場合は、プライマリー・インスタンスの PSC 管理者パスワードの事前入力値が正しいことを確認します。
 5. インスタンスのコンポーネントのライセンス設定を行います。
    *  IBM 提供のライセンスを使用するには、**「購入に含める」**を選択し、必要に応じてライセンス・エディションを選択します。
    *  所有しているライセンスを使用するには、**「自分で提供する」**を選択し、ライセンス・キーを入力します。
@@ -263,8 +285,9 @@ vCenter Server インスタンスを注文するときには、アドオン・�
     3. {{site.data.keyword.baremetal_short}}の数を指定します。 vSAN をストレージ・ソリューションとして使用する場合は、4 台以上の{{site.data.keyword.baremetal_short}}が必要です。  
 7. ストレージ構成を次の手順で実行します。
   * **「vSAN Storage」**を選択した場合は、容量ディスクおよびキャッシュ・ディスクのディスク・タイプ、ディスク数、vSAN ライセンス・エディションを指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
-  * **「NFS Storage」**を選択し、すべてのファイル共有に同じ設定を追加して構成する場合は、**「Number of Shares」**、**「Size」**、**「Performance」**を指定します。
-  * **「NFS Storage」**を選択してファイル共有を個別に追加して構成する場合は、**「Configure shares individually」**を選択します。 その後、ファイル共有ごとに、**「Add NFS」**ラベルの横にある**「+」**アイコンをクリックして、**「Size」**と**「Performance」**を選択します。 少なくとも 1 つのファイル共有を選択する必要があります。
+  * **「NFS ストレージ」**を選択し、すべてのファイル共有に同じ設定を構成して追加する場合は、**「共有の数」**、**「パフォーマンス」**、**「サイズ (GB)」**を指定します。
+  * **「NFS Storage」**を選択してファイル共有を個別に追加して構成する場合は、**「Configure shares individually」**を選択します。 その後、ファイル共有ごとに、**「共有ストレージの追加」**ラベルの横にある**「+」**アイコンをクリックして、**「パフォーマンス」**と**「サイズ (GB)」**を選択します。 少なくとも 1 つのファイル共有を選択する必要があります。
+  * **「ローカル・ディスク」**を選択した場合は、ディスク数とディスク・タイプを指定します。
 8. ネットワーク・インターフェースの設定を行います。
    1. ホスト名接頭部、サブドメイン・ラベル、ルート・ドメイン・ネームを入力します。 セカンダリー・インスタンスの場合、ドメイン・ネームは自動的に入力されます。
    2. **「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のいずれかのネットワーク設定を選択します。
@@ -286,7 +309,7 @@ vCenter Server インスタンスを注文するときには、アドオン・�
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
 
-インスタンスが正常にデプロイされると、[vCenter Server インスタンスの技術仕様](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 アドオン・サービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
+インスタンスが正常にデプロイされると、[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 アドオン・サービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
@@ -310,10 +333,10 @@ vCenter Server インスタンスを注文するときには、アドオン・�
 
 ### 関連リンク
 
-* [{{site.data.keyword.cloud_notm}} アカウントへの登録](../vmonic/signing_softlayer_account.html)
-* [vCenter Server インスタンスの表示](vc_viewinginstances.html)
-* [vCenter Server インスタンスのマルチサイト構成](vc_multisite.html)
-* [vCenter Server インスタンスのクラスターの追加、表示、削除](vc_addingviewingclusters.html)
-* [vCenter Server インスタンスの容量の拡張と縮小](vc_addingremovingservers.html)
-* [vCenter Server インスタンスのサービスの注文、表示、削除](vc_addingremovingservices.html)
-* [vCenter Server インスタンスの削除](vc_deletinginstance.html)
+* [{{site.data.keyword.cloud_notm}} アカウントの登録](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [vCenter Server インスタンスの表示](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
+* [vCenter Server インスタンスのマルチサイト構成](/docs/services/vmwaresolutions/vcenter/vc_multisite.html)
+* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [vCenter Server インスタンスの削除](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)

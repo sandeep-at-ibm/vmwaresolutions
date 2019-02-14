@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-24"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Veeam on IBM Cloud の注文
 
@@ -34,7 +38,7 @@ Veeam on {{site.data.keyword.cloud}} サービスを注文するには、その�
 
 ### ストレージ・サイズ
 
-ストレージのニーズを満たす容量。 ストレージ・サイズを見積もる際の考慮事項については、[Estimating Repository Capacity](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html) を参照してください。
+ストレージのニーズを満たす容量。 ストレージ・サイズを見積もるための考慮事項については、[Estimating Repository Capacity](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html) を参照してください。
 
 ### ストレージ・パフォーマンス
 
@@ -42,13 +46,13 @@ Veeam on {{site.data.keyword.cloud}} サービスを注文するには、その�
 
 ### 関連リンク
 
-* [Veeam on {{site.data.keyword.cloud_notm}} の概要](veeam_considerations.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} の管理](managingveeam.html)
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](../sddc/sd_addingremovingservices.html)
-* [vCenter Server インスタンスのサービスの注文、表示、削除](../vcenter/vc_addingremovingservices.html)
-* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} の管理対象サービスの要求](managing_veeam_services.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managingveeam.html)
+* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](/docs/services/vmwaresolutions/services/managing_veeam_services.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Veeam の Web サイト](https://www.veeam.com/){:new_window}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}

@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-08-14"
 
@@ -25,7 +25,7 @@ lastupdated: "2018-08-14"
 
 ## 주요 이점
 
-VMware Cloud Foundation 및 vCenter Server on {{site.data.keyword.cloud_notm}}는 기본 구성 요소를 제공하며, 여기에는 vSAN을 포함한 공유 스토리지 옵션과 VMware vSphere, vCenter Server, NSX가 있습니다. 이러한 컴포넌트는 워크로드에 가장 적합한 VMware 소프트웨어 정의 데이터 센터 솔루션을 유연하게 구축하는 데 필요합니다. 
+VMware Cloud Foundation 및 vCenter Server on {{site.data.keyword.cloud_notm}}는 기본 구성 요소를 제공하며, 여기에는 vSAN을 포함한 공유 스토리지 옵션과 VMware vSphere, vCenter Server, NSX가 있습니다. 이러한 컴포넌트는 워크로드에 가장 적합한 VMware 소프트웨어 정의 데이터 센터 솔루션을 유연하게 구축하는 데 필요합니다.
 
 고급 자동화 및 싱글 테넌트 베어메탈 인프라를 적용함으로써 몇 시간 내에 전체 VMware 환경을 {{site.data.keyword.cloud_notm}}에 신속하게 배치할 수 있습니다. 그런 다음 고유 VMware 클라이언트, 명령행 인터페이스(CLI), 기존 스크립트 또는 기타 친숙한 vSphere API 호환 도구를 통해 IBM 호스팅 환경에 액세스하고 이를 관리할 수 있습니다.
 

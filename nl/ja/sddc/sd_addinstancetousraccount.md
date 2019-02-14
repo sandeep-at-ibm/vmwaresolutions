@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-17"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -35,6 +35,6 @@ IaaS 専用アカウントと PaaS アカウントをリンクする方法につ
 
 ### 関連リンク
 
-* [IAM でのユーザー・アクセスの管理](../vmonic/iam.html)
-* [サービスとリソースにアクセスするようにユーザーを招待する](../vmonic/iamuserinvite.html)
-* [IBM Cloud IAM とは](../../../iam/index.html)
+* [IAM でのユーザー・アクセス権限の管理](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [サービスとリソースにアクセスするようにユーザーを招待する](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [IBM Cloud IAM とは](/docs/iam/index.html)

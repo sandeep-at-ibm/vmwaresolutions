@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-11-14"
 
@@ -10,9 +10,7 @@ lastupdated: "2018-11-14"
 
 # Stock Trader VM을 IBM Cloud로 올리기 및 이동
 Todd는 현대화 과정의 첫 번째 단계로 온프레미스 VMware SDDC 인스턴스를
-{{site.data.keyword.cloud}}의 VMware vCenter Server로 원활하게 확장하려고 합니다.
-비즈니스는 계속해서 시작되고 실행되어야 하며 작동 중지 시간은 최소화해야 합니다.
-
+{{site.data.keyword.cloud}}의 VMware vCenter Server로 원활하게 확장하려고 합니다. 비즈니스는 계속해서 시작되고 실행되어야 하며 작동 중지 시간은 최소화해야 합니다.
 
 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle을 사용하면
 vCenter Server 인스턴스와
@@ -20,7 +18,6 @@ vCenter Server 인스턴스와
 
 {{site.data.keyword.cloud_notm}} VMware 대상 사이트의 가상 머신으로
 배치되는 vCenter Server with Hybridity Bundle 컴포넌트를 사용하면 피어 온프레미스 소스 사이트에 설치되는 HCX 컴포넌트와 연결할 수 있습니다.
-
 
 그림 1. vCenter Server with Hybridity Bundle
 ![vCenter Server with Hybridity Bundle](vcscontent-hcx.svg)
@@ -40,7 +37,6 @@ Hybridity는 온프레미스와
 
 Todd는 Stock Trader를
 온프레미스 VMware 환경에서 VMware on {{site.data.keyword.cloud_notm}} 환경으로 마이그레이션할 수 있으며 가동 중단 시간이 없이 애플리케이션을 다시 구성할 필요 없는 요구사항을 충족시킬 수 있습니다.
-
 
 ### 관련 링크
 

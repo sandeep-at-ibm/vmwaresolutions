@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -79,10 +79,6 @@ Tabella 3. Informazioni di accesso per i componenti relativi alle istanze NetApp
 | IP strumento di distribuzione NetApp | L'indirizzo IP della macchina virtuale di distribuzione NetApp ONTAP Select. |
 | Nome di dominio completo strumento di distribuzione NetApp | Il nome di dominio completo della macchina virtuale di distribuzione NetApp ONTAP Select. |
 | HTTPS strumento di distribuzione NetApp | Il nome utente e la password che puoi utilizzare per accedere alla macchina virtuale di distribuzione NetApp ONTAP Select. |
-| IP PSC | L'indirizzo IP del PSC (Platform Services Controller). |
-| Nome di dominio completo PSC | Il nome di dominio completo del PSC. |
-| ADMIN PSC | Il nome utente e la password di VMware vCenter Single Sign-On che puoi utilizzare per accedere alla console web PSC. |
-| SSH PSC | Il nome utente e la password che puoi utilizzare per accedere alla VM PSC tramite una connessione SSH. |
 | IP vCenter | L'indirizzo IP di vCenter Server. |
 | Nome di dominio completo vCenter | Il nome di dominio completo di vCenter Server. |
 | ADMIN vCenter | Il nome utente e la password di VMware vCenter Single Sign-On che puoi utilizzare per accedere a vCenter Server utilizzando il client web vSphere. |
@@ -99,7 +95,7 @@ Tabella 4. Cronologia di distribuzione delle istanze NetApp ONTAP Select
 | Data | La data e l'ora in cui lo stato dell'istanza è stato modificato |
 | Riepilogo | I dettagli della modifica |
 
-Se si verificano degli errori durante la distribuzione o l'eliminazione dell'istanza, il team di supporto {{site.data.keyword.cloud_notm}} viene automaticamente informato. Per informazioni sullo stato del tuo ticket, puoi [contattare il supporto IBM](../vmonic/trbl_support.html).
+Se si verificano degli errori durante la distribuzione o l'eliminazione dell'istanza, il team di supporto {{site.data.keyword.cloud_notm}} viene automaticamente informato. Per informazioni sullo stato del tuo ticket, puoi [contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## Visualizzazione dei cluster NetApp ONTAP Select
 
@@ -172,12 +168,12 @@ Prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza
 
 Per ulteriori informazioni che ti consentono di completare le istruzioni di accesso, consulta i seguenti argomenti:
 
-*  Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](../vmonic/trbl_timeout_vc_console.html).
+*  Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 *  Per un elenco di punti di accesso per accedere alla rete privata dell'infrastruttura {{site.data.keyword.cloud_notm}} tramite VPN, vedi [Accesso VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](../vmonic/trbl_deploy_ovf.html).
+*  Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
 
 ### Link correlati
 
-* [Ordine di istanze NetApp ONTAP Select](np_orderinginstances.html)
-* [Eliminazione di istanze NetApp ONTAP Select](np_deletinginstance.html)
+* [Ordine di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [Eliminazione di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [Collega l'archiviazione dedicata alle distribuzioni di NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

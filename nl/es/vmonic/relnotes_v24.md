@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-06-22"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Notas del release para V2.4
 
@@ -37,8 +41,6 @@ Están soportados los siguientes idiomas, además del inglés:
 * Portugués de Brasil
 * Chino simplificado
 * Chino tradicional
-
-**Nota**: Los documentos de arquitectura de referencia solo están disponibles en inglés.
 
 ## Soporte de CPU Skylake Xeon
 
@@ -80,7 +82,7 @@ Ahora hay disponible una opción nueva para que elija entre la red pública y la
 
 ### Documentación de arquitectura de referencia
 
-El documento de arquitectura de {{site.data.keyword.vmwaresolutions_short}} ahora está disponible en la sección *Referencia* de la documentación de usuario. El documento de arquitectura de referencia solo está disponible en inglés. Para obtener más información, consulte [Visión general de la solución](../archiref/solution/solution_overview.html).
+El documento de arquitectura de {{site.data.keyword.vmwaresolutions_short}} ahora está disponible en la sección *Referencia* de la documentación de usuario. Para obtener más información, consulte [Visión general de la solución](../archiref/solution/solution_overview.html).
 
 ### Documentación de servicios
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -24,8 +24,11 @@ Die Funktion zum Löschen von Clustern steht nur für Instanzen zur Verfügung, 
 ## Cluster zu vCenter Server-Instanzen hinzufügen
 
 Die Anzahl der Cluster, die zu einer Instanz hinzugefügt werden können, hängt von der Instanzversion ab:
+* Für Instanzen, die in (oder einem Upgrade auf) V2.5 und höher implementiert wurden, legt die Anzahl der Cluster, Hosts und VMs die maximale Begrenzung für die Anzahl der Cluster fest, die Sie hinzufügen können. Sie müssen die Richtlinien und Grenzwerte für die VMware-Dimensionierung für Ihre Implementierung beibehalten.
 * Für Instanzen, die in V2.2 oder höher bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden, können Sie bis zu 10 Cluster hinzufügen.
 * Für Instanzen, die in V2.1 oder früher bereitgestellt wurden, können Sie bis zu fünf Cluster hinzufügen.
+
+Weitere Informationen zu maximalen Grenzwerten finden Sie in [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
 
 ### Systemeinstellungen
 
@@ -51,7 +54,7 @@ Sie können **Skylake**, **SAP-zertifiziert** oder **Broadwell** auswählen.
 
 #### Skylake
 
-Für die Einstellung **Skylake** steht eine Reihe von Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
+Für die Einstellung **Skylake** stehen Ihnen Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
 
 Tabelle 1. Optionen für Skylake {{site.data.keyword.baremetal_short}}
 
@@ -69,6 +72,10 @@ Wählen Sie gemäß Ihren Anforderungen eine Bare Metal Server-Konfiguration aus
 * Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 192 GB RAM
 * Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 384 GB RAM
 * Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 768 GB RAM
+* Dual Intel Xeon E5-2690 v4-Prozessor / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM
+* Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 1024 GB RAM
+* Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 2048 GB RAM
+* Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 4096 GB RAM
 
 #### Broadwell
 
@@ -81,6 +88,8 @@ Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Bare Metal Server-Anzahl
 
@@ -101,7 +110,11 @@ Die Speichereinstellungen sind von der Auswahl der Bare Metal Server-Konfigurati
 Geben Sie die folgenden vSAN-Optionen an:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
-* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
+
+  Die Option **High-Performance Intel Optane** ist nur für die Skylake-CPU-Modelle Dual Intel Xeon Gold 5120 und Dual Intel Xeon Gold 6140 verfügbar.
+  {:note}
+
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
 * **vSAN-Lizenz**: Verwenden Sie die von IBM bereitgestellte VMware-Lizenz für die vSAN-Komponente, indem Sie **In Kauf einbeziehen** auswählen, oder verwenden Sie eine eigene Lizenz (Bring Your Own License, BYOL), indem Sie **Lizenz selbst bereitstellen** auswählen und Ihren eigenen Lizenzschlüssel eingeben.
 
@@ -124,9 +137,16 @@ Tabelle 3. Optionen für die NFS-Leistungsstufe
 
 | Option        | Details       |
   |:------------- |:------------- |
-  | 2 IOPS/GB | Diese Option ist für die meisten allgemeinen Workloads geeignet. Anwendungsbeispiele sind das Hosting von kompakten Datenbanken, die Sicherung von Webanwendungen oder Plattenimages von virtuellen Maschinen für einen Hypervisor. |
+  | 0,25 IOPS/GB | Diese Option ist für Workloads vorgesehen, die nicht häufig verwendet werden. Zu den Beispielanwendungen gehören: durch Vaulting geschützte Daten, das Hosting großer Datenbanken mit übernommenen Daten oder Images von virtuellen Platten des virtuellen Speichersystems als Sicherung. |
+  | 2 IOPS/GB | Diese Option ist für die meisten allgemeinen Workloads geeignet. Anwendungsbeispiele sind das Hosting von kompakten Datenbanken, die Sicherung von Webanwendungen oder Plattenimages von virtuellen Maschinen (VM) für einen Hypervisor. |
   | 4 IOPS/GB | Diese Option ist für Workloads mit höherer Intensität geeignet, die zu einem bestimmten Zeitpunkt einen hohen Prozentsatz an aktiven Daten aufweisen. Anwendungsbeispiele sind transaktionsorientierte Datenbanken. |
   | 10 IOPS/GB | Diese Option ist für die aufwändigsten Workloadtypen wie beispielsweise die Analyse gedacht. Anwendungsbeispiele sind Hochtransaktionsdatenbanken und andere leistungskritische Datenbanken. Diese Leistungsstufe ist auf eine maximale Kapazität von 4 TB pro gemeinsam genutzte Dateiressource begrenzt. |
+
+### Lokale Platten
+
+Die Option für lokale Festplatten steht nur für die Bare-Metal-Konfiguration des **SAP-zertifizierten** Quad Intel Xeon E7-8890 v4-Prozessors zur Verfügung. Geben Sie die folgenden Optionen an:
+* **Plattenanzahl**: Wählen Sie die Anzahl der Platten aus, die hinzugefügt werden sollen.
+* **Plattentyp**: Wählen Sie eine Option für den Plattentyp aus, den Sie benötigen.
 
 ### Lizenzierungseinstellungen
 
@@ -136,7 +156,7 @@ Geben Sie die Lizenzierungsoption für die Komponente "VMware vSphere" im Cluste
 
 ### Netzschnittstelleneinstellungen
 
-Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC – Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
+Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
 
 * F5 on {{site.data.keyword.cloud_notm}}
 * FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}
@@ -162,8 +182,10 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
    * Wenn Sie **SAP-zertifiziert** ausgewählt haben, geben Sie das CPU-Modell an.
 7. Führen Sie die Speicherkonfiguration durch.
   * Wenn Sie **vSAN-Speicher** auswählen, geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten, die Anzahl der Platten und die vSAN-Lizenzedition an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
-  * Wenn Sie **NFS-Speicher** auswählen und für alle gemeinsam genutzten Dateiressourcen dieselben Einstellungen hinzufügen und konfigurieren wollen, geben Sie die **Anzahl der gemeinsam genutzten Ressourcen**, **Größe** und **Leistung** an.
-  * Wenn Sie **NFS-Speicher** auswählen und alle gemeinsam genutzten Dateiressourcen einzeln hinzufügen und konfigurieren möchten, wählen Sie **Gemeinsam genutzte Ressourcen einzeln konfigurieren** aus. Klicken Sie anschließend auf das Symbol **+** neben der Bezeichnung **NFS hinzufügen** und wählen Sie für jede gemeinsam genutzte Dateiressource die **Größe** und die **Leistung** aus. Sie müssen mindestens eine gemeinsam genutzte Dateiressource auswählen.
+  * Wenn Sie **NFS-Speicher** auswählen und für alle gemeinsam genutzten Dateiressourcen dieselben Einstellungen konfigurieren möchten, geben Sie die **Anzahl der gemeinsam genutzten Ressourcen**, die **Leistung**und die **Größe (GB)** an.
+  * Wenn Sie **NFS-Speicher** auswählen und alle gemeinsam genutzten Dateiressourcen einzeln hinzufügen und konfigurieren möchten, wählen Sie **Gemeinsam genutzte Ressourcen einzeln konfigurieren** aus. Klicken Sie anschließend auf das Symbol **+** neben der Bezeichnung **Gemeinsam genutzten Speicher hinzufügen** und wählen Sie für jede Dateifreigabe die Optionen **Leistung** und **Größe (GB)** aus. Sie müssen mindestens eine gemeinsam genutzte Dateiressource auswählen.
+  * Wenn Sie **Lokale Platten** auswählen, geben Sie die Plattenanzahl und den Plattentyp an.
+8. Geben Sie die Netzschnittstelleneinstellungen an.
 8. Geben Sie an, wie der vSphere-Lizenzschlüssel bereitgestellt wird:
   * Für Benutzer der Kategorie "Business Partner" ist die vSphere-Lizenz (Enterprise Plus Edition) enthalten und wird in Ihrem Namen erworben.
   * Für Benutzer, bei denen es sich nicht um Business Partner handelt, können Sie eine der folgenden Optionen auswählen:
@@ -251,7 +273,7 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 * Für Cluster, die in Instanzen der Version 2.2 oder älter bereitgestellt wurden, müssen Sie ein Upgrade der Instanz auf Version 2.3 durchführen, wenn Sie die Cluster löschen möchten, die Sie der Instanz hinzugefügt haben.
 * Es kann immer nur ein Cluster gleichzeitig gelöscht werden. Beim Löschen von mehreren Clustern müssen Sie nacheinander löschen. Warten Sie, bis der vorherige Cluster gelöscht wurde, bevor Sie den nächsten Cluster löschen.
 * Stellen Sie sicher, dass alle Knoten in einem Cluster eingeschaltet und betriebsbereit sind, bevor Sie den Cluster löschen.
-* Wenn Sie einen Cluster löschen, werden auch alle VMs (virtuellen Maschinen) des Clusters gelöscht und können nicht wiederhergestellt werden. Sollen die VMs beibehalten werden, dann müssen Sie sie auf andere Cluster migrieren.
+* Wenn Sie einen Cluster löschen, werden auch alle VMs des Clusters gelöscht und können nicht wiederhergestellt werden. Sollen die VMs beibehalten werden, dann müssen Sie sie auf andere Cluster migrieren.
 * Der Standardcluster kann nicht gelöscht werden.
 
 ### Vorgehensweise zum Löschen von Clustern aus vCenter Server-Instanzen
@@ -263,9 +285,9 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
    {:note}
 
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Suchen Sie in der Tabelle **CLUSTER** den Cluster, der gelöscht werden soll, und klicken Sie dann auf das Symbol **Löschen** in der Spalte **Aktionen**.
-4. Vergewissern Sie sich, dass die Migration der virtuellen Maschinen (VMs) auf andere Cluster (sofern erforderlich) durchgeführt wurde und dass der Cluster tatsächlich gelöscht werden soll.
+4. Vergewissern Sie sich, dass die Migration der VMs auf andere Cluster (sofern erforderlich) durchgeführt wurde und dass der Cluster tatsächlich gelöscht werden soll.
 
 ### Zugehörige Links
 
-* [vCenter Server-Instanzen anzeigen](vc_viewinginstances.html)
-* [Kapazität für vCenter Server-Instanzen erweitern und verringern](vc_addingremovingservers.html)
+* [vCenter Server-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
+* [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)

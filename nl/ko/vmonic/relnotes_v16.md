@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-05-22"
 
@@ -50,7 +50,7 @@ V1.6 이전 인스턴스의 기타 모든 조치는 더 이상 사용할 수 없
 
 *  사용자 VM(가상 머신)이 인터넷에 액세스할 수 있도록 사용자 대신 공용 VLAN의 16개 IP 주소가 있는 공인 서브넷이 주문됩니다.
 *  사용자 VM이 SoftLayer® 내부 네트워크에 액세스할 수 있도록 사용자 대신 사설 VLAN의 64개 IP 주소가 있는 사설 서브넷이 주문됩니다.
-*  NSX Controller가 연관관계 방지 규칙으로 배치되고 3 노드 배치 구성으로 별도의 ESXi 서버에 실행됨
+*  NSX Controller가 비유사성 규칙으로 배치되고 3 노드 배치 구성으로 별도의 ESXi 서버에 실행됨
 *  고객 사용을 위한 새 VMware NSX Edge Services Gateway
 
    추가 NSX Edge Services Gateway(ESG)가 이제 주문 중인 새 vCenter Server 인스턴스의 일부로 배치됩니다.

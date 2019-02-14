@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,8 +45,9 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} では、オプションの V
 ### ベア・メタル・サーバー
 
 選択した CPU モデルと RAM サイズの 1 つ以上の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} を選択します。
-* 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600 v4 シリーズ)
 * 2-CPU Intel Skylake 世代 (Intel Xeon 4100/5100/6100 シリーズ)
+* SAP 認定 (Intel Xeon 6140/E5-2690/E7-8890 シリーズ)
+* 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600/E7-4800 シリーズ)
 
 使用可能なオプションは、VMware vSAN コンポーネントを選択したかどうかによります。
 
@@ -77,23 +78,23 @@ vSphere クラスター拡張ノードごとに、{{site.data.keyword.slportal}}
 
 ### 拡張ノード用のハードウェア
 
-[VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているハードウェア構成の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。
+[VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているハードウェア構成の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。
 
 ### 拡張ノード用ネットワーキング
 
-[VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているネットワーキング構成の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。
+[VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているネットワーキング構成の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。
 
 ### 拡張ノード用 VMware コンポーネント
 
 * VMware vSphere Enterprise Plus 6.0u2 または 6.5u1 が適用された {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。  
-* [VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているオプションの VMware コンポーネント。
+* [VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているオプションの VMware コンポーネント。
 
-注文して {{site.data.keyword.cloud_notm}} アカウントに提供された ESXi サーバー、オプションの VMware コンポーネント、追加のハードウェアの管理は、必ず {{site.data.keyword.slportal}}のみから行う必要があります。 {{site.data.keyword.vmwaresolutions_short}} コンソールで新規クラスターを作成した後、コンソールに戻り、保存されている情報を使用して、その新規クラスターを拡張できます。 詳しくは、[既存の vSphere クラスターの拡張](vs_scalingexistingclusters.html)を参照してください。
+注文して {{site.data.keyword.cloud_notm}} アカウントに提供された ESXi サーバー、オプションの VMware コンポーネント、追加のハードウェアの管理は、必ず {{site.data.keyword.slportal}}のみから行う必要があります。 {{site.data.keyword.vmwaresolutions_short}} コンソールで新規クラスターを作成した後、コンソールに戻り、保存されている情報を使用して、その新規クラスターを拡張できます。 詳しくは、[既存の vSphere クラスターの拡張](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)を参照してください。
 {:important}
 
 ### 関連リンク
 
-* [VMware vSphere ソフトウェアの部品構成表](vs_bom.html)
-* [vSphere クラスターの計画](vs_planning.html)
-* [vSphere クラスターの注文](vs_orderinginstances.html)
-* [既存の vSphere クラスターの拡張](vs_scalingexistingclusters.html)
+* [VMware vSphere ソフトウェアの部品構成表](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
+* [vSphere クラスターの計画](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
+* [vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [既存の vSphere クラスターの拡張](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)

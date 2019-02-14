@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -34,11 +34,11 @@ Pertanto, il processo di VUM è il seguente:
 Il download di aggiornamenti, patch di host, estensioni e metadati correlati è un processo automatico predefinito che può essere modificato. Per impostazione predefinita, a intervalli regolari configurabili, VUM contatta VMware o fonti di terze parti per raccogliere le seguenti informazioni su aggiornamenti, patch o estensioni disponibili:
 
 * Metadati relativi a tutte le patch di ESXi 5.5 e ESXi 6.x indipendentemente dal fatto che nel tuo ambiente siano presenti host di tali versioni.
-* Metadati relativi alle patch di ESXi 5.5 e ESXi 6.x nonché alle estensioni provenienti da indirizzi URL di fornitori di terze parti.
+* Metadati relativi alle patch di ESXi 5.5 e ESXi 6.x e alle estensioni da indirizzi URL di fornitori di terze parti.
 * Notifiche, avvisi e richiami di patch per gli host ESXi 5.5 e ESXi 6.x.
 * Metadati relativi agli aggiornamenti per i dispositivi virtuali.
 
-VUM supporta il richiamo di patch per host che eseguono ESXi 5.0 o versioni successive. Una patch viene richiamata se la patch rilasciata presenta problemi o potenziali problemi. Dopo aver eseguito la scansione degli host nell'istanza VMware vCenter Server on {{site.data.keyword.cloud}}, VUM ti avvisa se la patch richiamata è stata installata su un determinato host. Le patch richiamate non possono essere installate sugli host con VUM. VUM inoltre elimina tutte le patch richiamate dal repository di patch. Dopo che viene rilasciata una patch che corregge il problema, VUM scarica la nuova patch nel suo repository di patch. Se hai già installato la patch problematica, VUM ti avvisa che è stata rilasciata una correzione e ti chiede di applicare la nuova patch.
+VUM supporta il richiamo di patch per host che eseguono ESXi 5.0 o versioni successive. Una patch viene richiamata se la patch rilasciata presenta problemi o potenziali problemi. Dopo aver eseguito la scansione degli host nella tua istanza VMware vCenter Server on {{site.data.keyword.cloud}}, VUM ti avvisa se la patch richiamata è installata su un determinato host. Le patch richiamate non possono essere installate sugli host con VUM. VUM inoltre elimina tutte le patch richiamate dal repository di patch. Dopo che viene rilasciata una patch che corregge il problema, VUM scarica la nuova patch nel suo repository di patch. Se hai installato la patch problematica, VUM ti avvisa che è stata rilasciata una correzione e ti chiede di applicare la nuova patch.
 
 L'interfaccia del client VUM fornisce due viste principali:
 *	Vista di amministrazione (Administration)
@@ -64,4 +64,4 @@ Per accedere alla vista di conformità di un oggetto di inventario selezionato, 
 ### Link correlati
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)

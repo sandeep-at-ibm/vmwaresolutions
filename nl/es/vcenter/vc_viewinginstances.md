@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-04"
 
 ---
 
@@ -89,10 +89,6 @@ Tabla 4. Información de acceso de vCenter Server correspondiente a los componen
 | NSX Manager IP  | La dirección IP de NSX Manager.  |
 | NSX Manager FQDN  | El nombre de dominio completo de NSX Manager (FQDN).  |
 | NSX Manager HTTP  | El nombre de usuario y la contraseña que se utilizan para acceder a la consola web de NSX Manager. |
-| PSC IP  | La dirección IP de Platform Services Controller (PSC).  |
-| PSC FQDN  | El nombre de dominio completo de PSC (FQDN).  |    
-| PSC ADMIN  | El nombre de usuario y la contraseña de inicio de sesión único de VMware vCenter que puede utilizar para acceder a la consola web de PSC.  |
-| PSC SSH  | El nombre de usuario y la contraseña que puede utilizar para acceder a PSC VM mediante una conexión SSH.  |
 | vCenter IP  | La dirección IP de vCenter Server.  |
 | vCenter FQDN  | El nombre de dominio completo de vCenter Server (FQDN).  |
 | vCenter ADMIN  | El nombre de usuario y la contraseña de inicio de sesión único de VMware vCenter que puede utilizar para iniciar una sesión en vCenter Server mediante el cliente web de vSphere.  |

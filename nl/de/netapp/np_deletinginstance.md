@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -49,6 +49,6 @@ Die gelöschte Instanz wird Ihnen bis zum Ende des Abrechnungszyklus berechnet.
 
 ### Zugehörige Links
 
-* [NetApp ONTAP Select-Instanzen bestellen](np_orderinginstances.html)
-* [NetApp ONTAP Select-Instanzen anzeigen](np_viewinginstances.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
+* [NetApp ONTAP Select-Instanzen bestellen](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [NetApp ONTAP Select-Instanzen anzeigen](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

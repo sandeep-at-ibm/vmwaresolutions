@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -79,10 +79,6 @@ Tabelle 3. Zugriffsinformationen für instanzbezogene NetApp ONTAP Select-Kompon
 | IP für NetApp-Bereitstellungstool | Die IP-Adresse der virtuellen Maschine für NetApp ONTAP Select Deploy. |
 | Vollständig qualifizierter Domänenname für NetApp-Bereitstellungstool | Der vollständig qualifizierte Domänenname für NetApp ONTAP Select Deploy. |
 | HTTPS für NetApp-Bereitstellungstool | Der Benutzername und das Kennwort, mit denen Sie auf die virtuelle Maschine für NetApp ONTAP Select Deploy zugreifen können. |
-| PSC-IP | Die IP-Adresse von Platform Services Controller (PSC). |
-| Vollständig qualifizierter Domänenname für PSC | Der vollständig qualifizierte Domänenname von PSC. |
-| PSC-ADMIN | Der SSO-Benutzername und das Kennwort für VMware vCenter, mit dem Sie auf die PSC-Webkonsole zugreifen können. |
-| PSC-SSH | Der Benutzername und das Kennwort, die Sie für den Zugriff auf die PSC-VM über eine SSH-Verbindung verwenden können. |
 | vCenter-IP | Die IP-Adresse von vCenter Server. |
 | Vollständig qualifizierter Domänenname für vCenter | Der vollständig qualifizierte Domänenname von vCenter Server. |
 | vCenter-ADMIN | Der SSO-Benutzername und das Kennwort für VMware vCenter, mit dem Sie sich unter Verwendung von vSphere Web Client bei vCenter Server anmelden können. |
@@ -99,7 +95,7 @@ Tabelle 4. Bereitstellungsverlauf der NetApp ONTAP Select-Instanz
 | Datum | Der Zeitpunkt (Datum und Uhrzeit), zu dem sich der Instanzstatus geändert hat. |
 | Zusammenfassung | Die Details der Änderung. |
 
-Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, wird automatisch das {{site.data.keyword.cloud_notm}}-Support-Team benachrichtigt. Um den Status Ihres Tickets abzufragen, können Sie den [IBM Support kontaktieren](../vmonic/trbl_support.html).
+Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, wird automatisch das {{site.data.keyword.cloud_notm}}-Support-Team benachrichtigt. Um den Status Ihres Tickets abzufragen, können Sie den [IBM Support kontaktieren](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## NetApp ONTAP Select-Cluster anzeigen
 
@@ -172,12 +168,12 @@ Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** k
 
 Weitere Informationen, die Sie beim Umsetzen der Anmeldeanweisungen unterstützen, finden Sie in den folgenden Abschnitten:
 
-*  Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
+*  Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 *  Eine Liste der Zugriffspunkte für die Anmeldung beim privaten Netz der {{site.data.keyword.cloud_notm}}-Infrastruktur mittels VPN finden Sie unter [VPN-Zugriff](http://www.softlayer.com/vpn-access){:new_window}.
-*  Falls Sie beim Bereitstellen einer Datei im Format "OVF" (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](../vmonic/trbl_deploy_ovf.html) weitere Informationen.
+*  Falls Sie beim Bereitstellen einer Datei im Format "OVF" (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html) weitere Informationen.
 
 ### Zugehörige Links
 
-* [NetApp ONTAP Select-Instanzen bestellen](np_orderinginstances.html)
-* [NetApp ONTAP Select-Instanzen löschen](np_deletinginstance.html)
+* [NetApp ONTAP Select-Instanzen bestellen](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [NetApp ONTAP Select-Instanzen löschen](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [Dedizierten Speicher für NetApp ONTAP Select-Bereitstellungen zuordnen](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

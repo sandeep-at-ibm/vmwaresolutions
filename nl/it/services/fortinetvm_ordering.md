@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -34,7 +34,7 @@ Quando ordini il servizio, fornisci le seguenti impostazioni.
 
 ### Connessione di rete FortiGuard
 
-Seleziona **Rete pubblica** o **Rete privata** per FortiGuard. Se il cluster di destinazione è configurato con interfacce di rete solo private, è disponibile solo l'opzione **Rete privata**. Questa selezione determina come FortiGuard contatterà il server di licenza Fortinet per attivare la licenza e per scaricare le patch di sicurezza e non influirà sul piano di dati del carico di lavoro.
+Seleziona **Rete pubblica** o **Rete privata** per FortiGuard. Se il cluster di destinazione è configurato con interfacce di rete solo private, è disponibile solo l'opzione **Rete privata**. Questa selezione determina come FortiGuard contatterà il server di licenza Fortinet per attivare la licenza e per scaricare le patch di sicurezza e non influirà sul piano dati del carico di lavoro.
 
 Se selezioni **Rete privata**, specifica le seguenti impostazioni:
 * **Indirizzo IP proxy**: l'indirizzo IPv4 del server proxy.
@@ -60,12 +60,12 @@ Il modello di licenza per FortiGate Virtual Appliance on {{site.data.keyword.clo
         <dt class="dt dlterm">Standard FW</dt>
         <dd class="dd">Questo bundle include Filtraggio stateful dei pacchetti, Protezione VLAN e registrazione avanzata, Regole firewall in entrata e in uscita, Terminazione VPN SSL/IPSec e supporto e supporto 24 x 7.</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
-        <dd class="dd">Questo bundle include tutti i servizi firewall standard oltre al servizio Advanced Malware Protection (AMP) (tra cui Antivirus, Botnet IP/Domain Service, Mobile Malware Security, FortiSandbox Cloud, FortiSandbox Cloud, Virus Outbreak Protection Service e Content Disarm & Reconstruct), nonché i servizi Web Filtering, IPS, Antispam, Application Control e FortiCare.</dd>
+        <dd class="dd">Questo bundle include tutti i servizi firewall standard in aggiunta al servizio AMP (Advanced Malware Protection). Include Antivirus, Botnet IP/Domain Service, Mobile Malware Security, FortiSandbox Cloud, Virus Outbreak Protection Service e Content Disarm & Reconstruct. Include inoltre i servizi Web Filtering, IPS, Antispam, Application Control e FortiCare.</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>
-        <dd class="dd">Questo bundle include tutti i servizi firewall standard e i servizi UTM oltre ai seguenti servizi:<ul><li>Cloud Access Security Broker (CASB): Questo servizio fornisce visibilità, conformità, sicurezza dei dati e protezione delle minacce per i servizi basati sul cloud.</li><li>Industrial Security: Questo servizio fornisce firme per i protocolli ICS/SCADA comuni.</li><li>Security Rating: Questo servizio fornisce funzionalità di controllo per identificare le vulnerabilità critiche e le debolezze della configurazione e implementare i suggerimenti delle procedure consigliate.</li></ul></dd>
+        <dd class="dd">Questo bundle include tutti i servizi firewall standard e i servizi UTM oltre ai seguenti servizi:<ul><li>Cloud Access Security Broker (CASB) - Questo servizio fornisce visibilità, conformità, sicurezza dei dati e protezione dalle minacce per i servizi basati su cloud.</li><li>Industrial Security - Questo servizio fornisce firme per i protocolli ICS/SCADA comuni.</li><li>Security Rating - Questo servizio fornisce funzionalità di controllo per identificare vulnerabilità critiche e debolezze di configurazione e per implementare i suggerimenti delle procedure consigliate.</li></ul></dd>
 </dl>
 
-Nel terzo quadrimestre del 2018, Fortinet ha aggiunto tre nuovi servizi (CASB, Industrial Security, e Security Rating) al proprio bundle aziendale. Questi servizi sono disponibili solo su FortiGate 6.0.
+Nel terzo trimestre del 2018, Fortinet ha aggiunto tre nuovi servizi (CASB, Industrial Security e Security Rating) al proprio bundle aziendale. Questi servizi sono disponibili solo su FortiGate 6.0.
 {:note}
 
 Non puoi modificare il modello di licenza dopo l'installazione del servizio. Per modificare il modello di licenza, devi rimuovere il servizio esistente e reinstallare il servizio selezionando un'opzione di licenza diversa.
@@ -73,12 +73,12 @@ Non puoi modificare il modello di licenza dopo l'installazione del servizio. Per
 
 ### Link correlati
 
-* [Panoramica di FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_considerations.html)
-* [Gestione di FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](managingfortinetvm.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](../sddc/sd_addingremovingservices.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](../vcenter/vc_addingremovingservices.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Come contattare il supporto IBM](../vmonic/trbl_support.html)
-* [Domande frequenti](../vmonic/faq.html)
+* [Panoramica di FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)
+* [Gestione di FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Sito web Fortinet](https://www.fortinet.com/){:new_window}
 * [Libreria di documenti Fortinet](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -16,9 +16,9 @@ Figura 1. Contexto del sistema
 
 Estos son componentes principales del contexto del sistema:
 -	vCenter Server: VMware vCenter Server on {{site.data.keyword.cloud_notm}} es una instancia de {{site.data.keyword.cloud_notm}} for VMware Services destinada a las máquinas virtuales (VM) migradas desde el entorno local. Junto con el entorno virtualizado local, forma un entorno híbrido que permite que las VM se muevan de un entorno a otro.
--	{{site.data.keyword.cloud_notm}} Private: ICP es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones contenerizadas. El entorno ICP es un entorno integrado que incluye el coordinador de contenedores Kubernetes, un repositorio de imágenes privadas, una consola de gestión, infraestructuras de supervisión y una interfaz gráfica de usuario, que proporciona una ubicación centralizada desde la que puede desplegar, gestionar, supervisar y escalar aplicaciones.
--	{{site.data.keyword.cloud_notm}} Automation Manager: CAM es una plataforma de infraestructura como código preparada para la empresa que proporciona un único panel para crear cargas de trabajo basadas en VM junto con cargas de trabajo basadas en Kubernetes, la automatización del suministro de las cargas de trabajo, ya sean VM o contenedores, y los requisitos previos de la infraestructura. 
--	Watson – Watson es la plataforma de soluciones cognitivas y de inteligencia artificial de IBM. 
+-	{{site.data.keyword.icpfull_notm}}: {{site.data.keyword.icpfull_notm}} es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones contenerizadas. El entorno {{site.data.keyword.icpfull_notm}} es un entorno integrado que incluye el coordinador de contenedores Kubernetes, un repositorio de imágenes privadas, una consola de gestión, infraestructuras de supervisión y una interfaz gráfica de usuario, que proporciona una ubicación centralizada desde la que puede desplegar, gestionar, supervisar y escalar aplicaciones.
+-	{{site.data.keyword.cloud_notm}} Automation Manager: CAM es una plataforma de infraestructura como código preparada para la empresa que proporciona un único panel para crear cargas de trabajo basadas en VM junto con cargas de trabajo basadas en Kubernetes, la automatización del suministro de las cargas de trabajo, ya sean VM o contenedores, y los requisitos previos de la infraestructura.
+-	Watson – Watson es la plataforma de soluciones cognitivas y de inteligencia artificial de IBM.
 -	Watson Knowledge Studio - Watson Knowledge Studio ofrece un modelo que Watson Discovery utiliza.
 
 ### Actores

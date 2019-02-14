@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-03-30"
 
@@ -20,15 +20,15 @@ VRF (Virtual Routing and Forwarding) SoftLayer アカウントの場合、変更
 
 インスタンスを注文する前に、使用する SoftLayer アカウントが、VRF アカウントであるか、VLAN スパンニングを有効にしたクラシック (非VRF) アカウントであることを確認してください。 そうでない場合は、注文が失敗する可能性があります。
 
-使用する SoftLayer アカウントが VRF アカウントかどうかを確認するには、IBM Bluemix サポートにお問い合わせください。 クラシック・アカウントの場合は、[VLAN スパンニングの有効化または無効化](../../../infrastructure/vlans/vlan-spanning.html){:new_window}の手順に従って VLAN スパンニングを有効にする必要があります。
+使用する SoftLayer アカウントが VRF アカウントかどうかを確認するには、IBM Bluemix サポートにお問い合わせください。 クラシック・アカウントの場合は、[VLAN スパンニングの有効化または無効化](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}の手順に従って VLAN スパンニングを有効にする必要があります。
 
 ## サービス料金モデルの更新
 
-Cloud Foundation インスタンスには、新しい _SDDC Manager_ ライセンスが導入されています。これは、各ノードに適用される月額料金です。 詳しくは、[Cloud Foundation インスタンスの技術仕様](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)を参照してください。
+Cloud Foundation インスタンスには、新しい _SDDC Manager_ ライセンスが導入されています。これは、各ノードに適用される月額料金です。 詳しくは、[Cloud Foundation インスタンスの技術仕様](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)を参照してください。
 
 ## 使いやすさの向上
 
 ユーザー・インターフェース全体が以下のように改善されました。
 
-* さまざまな {{site.data.keyword.CloudDataCents_notm}}の使用可否や、注文に対応する十分な在庫があるかどうかが、ユーザー・インターフェースに明確に表示されます。 これらの詳細を使用すると、インスタンスの注文時に選択する {{site.data.keyword.CloudDataCent_notm}}に関して、十分な情報に基づく決定を行えます。 詳しくは、[Cloud Foundation インスタンスの要件と計画](../sddc/sd_planning.html)および [vCenter Server インスタンスの要件と計画](../vcenter/vc_planning.html)を参照してください。
-* Cloud Foundation インスタンスの場合は、入力フィールドに必要な情報を入力すると、インスタンス名、ドメイン・ネームとサブドメイン・ネーム、データ・センターの場所などの情報が自動的にグラフィカル形式で表示されます。 詳しくは、[Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)を参照してください。
+* さまざまな {{site.data.keyword.CloudDataCents_notm}}の使用可否や、注文に対応する十分な在庫があるかどうかが、ユーザー・インターフェースに明確に表示されます。 これらの詳細を使用すると、インスタンスの注文時に選択する {{site.data.keyword.CloudDataCent_notm}}に関して、十分な情報に基づく決定を行えます。 詳しくは、[Cloud Foundation インスタンスの要件と計画](/docs/services/vmwaresolutions/sddc/sd_planning.html)および [vCenter Server インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter/vc_planning.html)を参照してください。
+* Cloud Foundation インスタンスの場合は、入力フィールドに必要な情報を入力すると、インスタンス名、ドメイン・ネームとサブドメイン・ネーム、データ・センターの場所などの情報が自動的にグラフィカル形式で表示されます。 詳しくは、[Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)を参照してください。

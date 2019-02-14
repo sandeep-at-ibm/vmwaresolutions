@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-10"
 
 ---
 
@@ -27,7 +27,7 @@ Revise las consideraciones siguientes antes de eliminar el paquete de Hybridity 
 * Debe combinar las licencias de VMware NSX y tener suficiente capacidad que utilizar en todos los despliegues de varios sitios.
 * Debe crear una sola incidencia de soporte para eliminar el paquete de Hybridity de todos los despliegues de varios sitios.
 
-Al eliminar el paquete de híbrido de un entorno de varios sitios, se aplican las licencias BYOL. Para todos los sitios de una configuración de varios sitios, la licencia de NSX se revierte automáticamente a la edición de licencia más baja entre todos los sitios. Debe asegurarse de que las ediciones de licencias sean coherentes entre todos los sitios de la configuración de varios sitios.
+Al eliminar el paquete de híbrido de un entorno de varios sitios, se aplican las licencias BYOL. Es su responsabilidad asegurarse de que las ediciones de licencias sean coherentes entre todos los sitios de la configuración de varios sitios.
 {:note}
 
 ## Antes de eliminar el paquete híbrido (Hybridity)

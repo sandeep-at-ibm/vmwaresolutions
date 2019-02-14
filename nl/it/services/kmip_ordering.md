@@ -2,13 +2,21 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-12-20"
 
 ---
 
-# Ordine di KMIP for VMware on IBM Cloud
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+
+# Ordine di KMIP for VMware on IBM Cloud - Obsoleto
+
+La versione corrente di KMIP for VMware on IBM Cloud è obsoleta. Per ulteriori informazioni, [contatta il supporto IBM](../vmonic/trbl_support.html).
+{:deprecated}
 
 Puoi ordinare il servizio KMIP for VMware on {{site.data.keyword.cloud}} mentre ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
 
@@ -61,16 +69,14 @@ Fai clic su **Recupera** per ottenere l'elenco delle istanze del servizio IBM Ke
 
 Fai clic su **Recupera** per ottenere la chiave root del cliente memorizzata nella tua istanza IBM Key Protect selezionata.
 
-
-
 ### Link correlati
 
 * [Panoramica di KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip_considerations.html)
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](../vcenter/vc_addingremovingservices.html)
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)
-* [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/services/keymgmt/index.html#getting-started-with-key-protect)
-* [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect?&language=javascript_jquery#introduction)
+* [Eventi di {{site.data.keyword.cloudaccesstrailshort}}](../vmonic/at-events.html)
+* [IBM Key Protect for {{site.data.keyword.cloud_notm}}](../../keymgmt/index.html)
 * [vSphere Security](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)
 * [Domande frequenti](../vmonic/faq.html)
 * [Come contattare il supporto IBM](../vmonic/trbl_support.html)

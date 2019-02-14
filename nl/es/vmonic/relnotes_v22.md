@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-10-19"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Notas del release para V2.2
 
@@ -64,7 +68,8 @@ Para obtener más información, consulte _Valores de configuración avanzada par
 
 Para V2.2 y releases posteriores, ahora puede aumentar el número de servidores ESXi hasta un máximo de 51 para un clúster inicial y hasta 59 para clústeres adicionales.
 
-**Importante:** para instancias desplegadas en V2.1 o releases anteriores, debe habilitar el soporte de vSAN necesario para aumentar el tamaño del clúster por encima de 32. Para obtener más información sobre los pasos a seguir para aumentar el número de servidores ESXi, consulte _¿Cuántos servidores ESXi puedo añadir a un clúster?_ en [Preguntas frecuentes sobre servidores ESXi](../vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-).
+Para instancias desplegadas en V2.1 o releases anteriores, debe habilitar el soporte de vSAN necesario para aumentar el tamaño del clúster por encima de 32. Para obtener más información sobre los pasos a seguir para aumentar el número de servidores ESXi, consulte _¿Cuántos servidores ESXi puedo añadir a un clúster?_ en [Preguntas frecuentes sobre servidores ESXi](../vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-).
+{:important}
 
 ## Más opciones de configuración de red para instancias de vCenter Server y de Cloud Foundation
 
@@ -86,7 +91,8 @@ Para instancias de VMware vCenter Server desplegadas en V2.2 o releases posterio
 
 Ahora puede seleccionar el despliegue de una sola instancia de servidor virtual (VSI) de Microsoft Windows Server para Microsoft Active Directory (AD) o dos máquinas virtuales Microsoft Windows de alta disponibilidad en el clúster de gestión. Para releases anteriores a V2.2, se despliega de forma predeterminada y automáticamente una sola VSI Microsoft Windows para Microsoft AD. La nueva opción de seleccionar dos máquinas virtuales Microsoft Windows proporciona más privacidad y la opción de hacer copia de seguridad y restaurar las máquinas virtuales mediante el servicio Veeam.
 
-**Nota:** Debe proporcionar 2 licencias de Microsoft Windows Server 2012 R2 si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. Utilice la licencia de Microsoft Windows Server 2012 R2 Standard Edition y/o la licencia de Microsoft Windows Server 2012 R2 Datacenter Edition. Tiene 30 días para activar las máquinas virtuales.
+Debe proporcionar 2 licencias de Microsoft Windows Server 2012 R2 si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. Utilice la licencia de Microsoft Windows Server 2012 R2 Standard Edition y/o la licencia de Microsoft Windows Server 2012 R2 Datacenter Edition. Tiene 30 días para activar las máquinas virtuales.
+{:note}
 
 Para obtener más información, consulte la sección *Valores del sistema* del apartado [Pedido de instancias de vCenter Server](../vcenter/vc_orderinginstance.html#system-settings).
 

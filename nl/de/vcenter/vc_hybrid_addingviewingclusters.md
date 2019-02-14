@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -20,7 +20,11 @@ Sie können Cluster zu Ihrer VMware vCenter Server on {{site.data.keyword.cloud}
 
 ## Cluster zu vCenter Server with Hybridity Bundle-Instanzen hinzufügen
 
-Sie können bis zu 10 Cluster zu Ihrer vCenter Server with Hybridity Bundle-Instanz hinzufügen.
+Die Anzahl der Cluster, die zu einer Instanz hinzugefügt werden können, hängt von der Instanzversion ab:
+* Für Instanzen, die in (oder einem Upgrade auf) V2.5 und höher implementiert wurden, legt die Anzahl der Cluster, Hosts und VMs die maximale Begrenzung für die Anzahl der Cluster fest, die Sie hinzufügen können. Sie müssen die Richtlinien und Grenzwerte für die VMware-Dimensionierung für Ihre Implementierung beibehalten.
+* Für Instanzen, die ab Version 2.3 bereitgestellt oder darauf aktualisiert wurden, können Sie bis zu 10 Cluster hinzufügen.
+
+Weitere Informationen zu maximalen Grenzwerten finden Sie in [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
 
 ### Systemeinstellungen
 
@@ -67,6 +71,8 @@ Tabelle 2. Optionen für Broadwell Bare Metal Server-Instanzen
 | Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Bare Metal Server-Anzahl
 
@@ -81,7 +87,11 @@ Nach der Implementierung können Sie bis zu vier weitere Cluster erstellen. Für
 VMware vSAN 6.6 ist Bestandteil der Bestellung Ihrer vCenter Server with Hybridity Bundle-Instanz. Geben Sie die folgenden vSAN-Optionen an:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
-* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
+
+  Die Option **High-Performance Intel Optane** ist nur für die Skylake-CPU-Modelle Dual Intel Xeon Gold 5120 und Dual Intel Xeon Gold 6140 verfügbar.
+  {:note}
+
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
 * **vSAN-Lizenz**: Wählen Sie die VMware vSAN 6.6-Lizenzedition (Advanced oder Enterprise) aus.
 
@@ -94,7 +104,7 @@ Von IBM bereitgestellte Lizenzen für folgende VMware-Komponenten:
 
 ### Netzschnittstelleneinstellungen
 
-Die Einstellungen für die Netzschnittstellenkarte (NIC – Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind bei Auswahl der privaten Option nicht verfügbar:
+Die Einstellungen für die Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind bei Auswahl der privaten Option nicht verfügbar:
 
 * F5 on {{site.data.keyword.cloud_notm}}
 * FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}
@@ -212,5 +222,5 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 
 ### Zugehörige Links
 
-* [vCenter Server with Hybridity Bundle-Instanzen anzeigen](vc_hybrid_viewinginstances.html)
-* [Kapazität für vCenter Server with Hybridity Bundle-Instanzen erweitern und verringern](vc_hybrid_addingremovingservers.html)
+* [vCenter Server with Hybridity Bundle-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [Kapazität für vCenter Server with Hybridity Bundle-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)

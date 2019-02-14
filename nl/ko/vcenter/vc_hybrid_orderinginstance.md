@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-14"
 
 ---
 
@@ -29,10 +29,9 @@ lastupdated: "2018-10-29"
   |:------------- |:------------- |
   |도메인 이름 | `<root_domain>` |  
   |vCenter Server 로그인 사용자 이름 | `<user_id>@<root_domain>`(Microsoft Active Directory 사용자) 또는 `administrator@vsphere.local` |
-  |vCenter Server FQDN |`vcenter.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
+  |vCenter Server(임베드된 PSC 포함) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
   |SSO(Single Sign-On) 사이트 이름 | `<subdomain_label>` |
-  |완전한 ESXi 서버 이름 | `<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `<n>`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |  
-  |PSC FQDN |`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
+  |완전한 ESXi 서버 이름 | `<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `<n>`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |
 
 인스턴스 주문 또는 배치 중에 설정되는 값은 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다.
 {:important}
@@ -62,7 +61,8 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 VMware 라
 * NSX Service Providers 6.4(Advanced 또는 Enterprise 에디션)
 * vSAN 6.6(Advanced 또는 Enterprise 에디션)
 
-**주의:**
+### 주의
+
 * vCenter Server with Hybridity Bundle 인스턴스는 고유한 라이센스 가져오기(BYOL)를 지원하지 않습니다.
 * 최소 라이센스 에디션은 사용자 인터페이스에 표시됩니다. 다른 컴포넌트 에디션이 지원되는 경우 원하는 에디션을 선택할 수 있습니다.
 
@@ -99,6 +99,8 @@ vSAN 구성의 초기 및 사후 배치 클러스터 모두에 네 개의 ESXi �
 | 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
+| 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 2.0GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
+| 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.1GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 
 ### Bare Metal Server 수
 
@@ -109,7 +111,11 @@ vSAN 구성의 초기 및 사후 배치 클러스터 모두에 네 개의 ESXi �
 vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6이 포함됩니다. 다음 vSAN 옵션을 지정하십시오.
 * **vSAN 용량 디스크의 디스크 유형 및 크기**: 필요한 용량 디스크에 대한 옵션을 선택하십시오.
 * **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
-* 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다. **고성능 Intel Optane** 옵션은 듀얼 Intel Xeon Gold 5120 및 6140 프로세서에 대해서만 사용 가능합니다.
+* 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다.
+
+  **고성능 Intel Optane** 옵션은 Skylake CPU 모델 듀얼 Intel Xeon Gold 5120 및 듀얼 Intel Xeon Gold 6140에 대해서만 사용 가능합니다.
+  {:note}
+
 * **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **고성능 Intel Optane** 상자를 선택했는지 여부에 따라 달라집니다.
 
 ## 네트워크 인터페이스 설정
@@ -204,7 +210,8 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
    * 환경에 하나의 인스턴스를 배치하거나 다중 사이트 토폴로지에 첫 번째 인스턴스를 배치하려면 **기본 인스턴스**를 클릭하십시오.
    * 고가용성을 위해 인스턴스를 환경의 기존(기본) 인스턴스에 연결하려면 **보조 인스턴스**를 클릭하고 다음 단계를 완료하십시오.
      1. 보조 인스턴스를 연결할 기본 인스턴스를 선택하십시오.
-     2. 기본 인스턴스의 PSC 관리자 비밀번호를 입력하십시오.
+     2. 기본 인스턴스 V2.8 이상의 경우 기본 인스턴스의 vCenter Server 관리자 비밀번호를 입력하십시오.
+     3. 기본 인스턴스 V2.7 이상의 경우 기본 인스턴스의 PSC 관리자 비밀번호를 입력하십시오.
 5. NSX 라이센스 에디션 및 vSAN 라이센스 에디션을 선택하십시오.
 6. Bare Metal Server 설정을 완료하십시오.
   1. {{site.data.keyword.CloudDataCent_notm}}를 선택하여 인스턴스를 호스팅하십시오.

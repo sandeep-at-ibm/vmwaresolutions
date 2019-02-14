@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -21,7 +21,7 @@ vCenter Server with HCX on {{site.data.keyword.cloud_notm}} インスタンス�
 
 ## オンプレミス HCX on IBM Cloud インスタンスをインストールする際の考慮事項
 
-HCX on {{site.data.keyword.cloud_notm}} コンポーネントを {{site.data.keyword.cloud_notm}} とオンプレミス vSphere 環境の両方にインストールする必要があります。 HCX on {{site.data.keyword.cloud_notm}} サービスを {{site.data.keyword.cloud_notm}} 上の vCenter Server with Hybridity Bundle インスタンスにインストールしてから、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスをインストールすることをお勧めします。 詳しくは、[HCX on {{site.data.keyword.cloud_notm}} に関する考慮事項](../services/hcx_considerations.html)を参照してください。
+HCX on {{site.data.keyword.cloud_notm}} コンポーネントを {{site.data.keyword.cloud_notm}} とオンプレミス vSphere 環境の両方にインストールする必要があります。 HCX on {{site.data.keyword.cloud_notm}} サービスを {{site.data.keyword.cloud_notm}} 上の vCenter Server with Hybridity Bundle インスタンスにインストールしてから、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスをインストールすることをお勧めします。 詳しくは、[HCX on {{site.data.keyword.cloud_notm}} に関する考慮事項](/docs/services/vmwaresolutions/services/hcx_considerations.html)を参照してください。
 
 ### IP アドレスに関する要件
 
@@ -30,7 +30,7 @@ HCX の全機能を利用するには、少なくとも 5 つのプライベー�
 ### オンプレミス HCX on IBM Cloud インスタンスのデプロイメント・プロセス
 
 オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを正常にインストールするには、以下のタスクを実行する必要があります。
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを注文します。 詳しくは、 [オンプレミス VMware HCX on IBM Cloud インスタンスの注文](standalone_orderingserviceinstances.html)を参照してください。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを注文します。 詳しくは、 [オンプレミス VMware HCX on IBM Cloud インスタンスの注文](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)を参照してください。
 2. **「HCX クラウド・コンソール」**で、以下のステップを実行します。
     1. **「管理」**タブをクリックします。
     2. **「システム更新」**タブで、**「ダウンロード・リンクの要求」**をクリックします。
@@ -39,7 +39,7 @@ HCX の全機能を利用するには、少なくとも 5 つのプライベー�
 
    オンプレミス HCX Manager をプライベート・ネットワークにデプロイし、パブリック・ネットワークへのアクセスを許可する必要があります。 NSX Edge、Vyatta、または類似のゲートウェイを使用して、オンプレミス HCX Manager へのインターネット・アクセスを許可することができます。 使用するゲートウェイがプライベート・ネットワーク・アクセスとパブリック・ネットワーク・アクセスとで異なる場合は、デフォルト・ゲートウェイを使用してパブリック・ネットワーク・アクセスを許可し、オンプレミスの**「HCX Manager 管理コンソール」**を使用して、プライベート・ネットワーク・アクセス用の静的ルートを作成することをお勧めします。
    {:note}
-4. HCX Manager のデプロイメントが完了したら、**「HCX Manager 管理コンソール」**を使用して、オンプレミス HCX Manager をアクティブ化します。 オンプレミス HCX Manager のアクティベーション・キーを入手するには、{{site.data.keyword.vmwaresolutions_short}} コンソールでオンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを注文します。 詳しくは、[オンプレミス HCX インスタンスの注文](../services/standalone_orderingserviceinstances.html)を参照してください。
+4. HCX Manager のデプロイメントが完了したら、**「HCX Manager 管理コンソール」**を使用して、オンプレミス HCX Manager をアクティブ化します。 オンプレミス HCX Manager のアクティベーション・キーを入手するには、{{site.data.keyword.vmwaresolutions_short}} コンソールでオンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを注文します。 詳しくは、[オンプレミス HCX インスタンスの注文](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)を参照してください。
 5. HCX on {{site.data.keyword.cloud_notm}} サービスの注文時に自己署名 SSL 証明書を使用した場合は、以下のステップを実行して、その証明書をオンプレミス HCX Manager にインポートする必要があります。
     1. オンプレミスの**「HCX Manager 管理コンソール」**で、**「管理」**タブをクリックします。
     2. 左側のナビゲーション・ペインで、**「トラステッド CA 証明書」**をクリックし、右側の**「インポート」**をクリックします。
@@ -62,12 +62,12 @@ HCX の全機能を利用するには、少なくとも 5 つのプライベー�
    {:important}
 2. {{site.data.keyword.vmwaresolutions_short}} コンソールで、オンプレミス HCX Manager のアクティベーション・キーを入手するために注文した、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを削除します。 コンソールで、削除したインスタンスが使用不可になったことを確認してから、次のステップに進んでください。
 
-   詳しくは、[オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの削除](../services/standalone_deletingserviceinstances.html)を参照してください。
+   詳しくは、[オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの削除](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)を参照してください。
 3. VMware vSphere Web Client で、オンプレミス HCX Manager を削除します。
 
 ### 関連リンク
 
-* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの参照](../services/standalone_viewingserviceinstances.html)
-* [HCX の用語集](hcx_glossary.html)
+* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの参照](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
+* [HCX の用語集](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -63,7 +63,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
    * 注文したサブネットに基づいて、パブリック・アップリンク・インターフェースとプライベート・アップリンク・インターフェースが構成されます。
    * ESG がエクストラ・ラージ・エッジ・アプライアンスのペアとして構成され、高可用性 (HA) が有効になります。
    * HCX Manager との間のインバウンドとアウトバウンドの HTTPS トラフィックが可能になるように、ファイアウォール・ルールとネットワーク・アドレス変換 (NAT) ルールが構成されます。
-   * ロード・バランサー・ルールとリソース・プールが構成されます。 それらのルールとリソース・プールを使用して、HCX 関連のインバウンド・トラフィックが、HCX Manager、vCenter Server、Platform Services Controller (PSC) の該当する仮想アプライアンスに転送されます。
+   * ロード・バランサー・ルールとリソース・プールが構成されます。 これらのルールとリソース・プールを使用して、HCX 関連のインバウンド・トラフィックが、HCX Manager および vCenter Server (Platform Services Controller が組み込まれたもの) の適切な仮想アプライアンスに転送されます。
    * ESG を通ってくる HCX 関連のインバウンド HTTPS トラフィックを暗号化するための SSL 証明書が適用されます。
 
    HCX 管理エッジは、オンプレミスの HCX コンポーネントとクラウド・サイドの HCX コンポーネントの間の HCX 管理トラフィック専用です。 HCX 管理エッジは、変更したり、HCX ネットワーク拡張に使用したりしないでください。 ネットワーク拡張用には別のエッジを作成してください。 また、ファイアウォールを使用したり、プライベート IBM 管理コンポーネントやパブリック・インターネットへの HCX 管理エッジ通信を無効にしたりすると、HCX の機能に悪影響を与える恐れがあります。
@@ -71,17 +71,17 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 
 6. {{site.data.keyword.cloud_notm}} 上の HCX Manager がデプロイされ、アクティブにされ、構成されます。
    * HCX Manager が vCenter Server に登録されます。
-   * HCX Manager、vCenter Server、PSC、および NSX Manager が構成されます。
+   * HCX Manager、vCenter Server (Platform Services Controller が組み込まれたもの)、および NSX Manager が構成されます。
    * HCX フリートが構成されます。
    * ローカルとリモートの HCX デプロイメント・コンテナーが構成されます。
-7. HCX Manager のホスト名と IP アドレスが {{site.data.keyword.cloud_notm}} 上の VMware vCenter Server の DNS サーバーに登録されます。
+7. HCX Manager のホスト名と IP アドレスが VMware vCenter Server on {{site.data.keyword.cloud_notm}} の DNS サーバーに登録されます。
 
 ### 関連リンク
 
-* [HCX on {{site.data.keyword.cloud_notm}} の概要](hcx_considerations.html)
-* [HCX on {{site.data.keyword.cloud_notm}} の管理](managinghcx.html)
-* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](../vcenter/vc_hybrid_addingremovingservices.html)
-* [HCX の用語集](hcx_glossary.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
+* [HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [HCX on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [HCX の用語集](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension の概要](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -24,12 +24,12 @@ Per accedere alla console HTDC dal client web vSphere, utilizza la seguente proc
 3. Accedi alla console utilizzando le relative credenziali che puoi trovare nella pagina dei dettagli del servizio HyTrust DataControl on {{site.data.keyword.cloud_notm}}.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](../sddc/sd_addingremovingservices.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](../vcenter/vc_addingremovingservices.html)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ### Link correlati
 
-* [Panoramica di HyTrust DataControl on {{site.data.keyword.cloud_notm}}](htdc_considerations.html)
-* [Come contattare il supporto IBM](../vmonic/trbl_support.html)
-* [Domande frequenti](../vmonic/faq.html)
+* [Panoramica di HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_considerations.html)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Sito web HyTrust](https://www.hytrust.com/)

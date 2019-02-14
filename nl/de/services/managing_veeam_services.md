@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -25,12 +25,12 @@ Wenn Sie verwaltete Services für Veeam on {{site.data.keyword.cloud_notm}} anfo
 3. Prüfen Sie auf der Seite **Veeam on IBM Cloud** die Beschreibung und die technischen Spezifikationen für Veeam on {{site.data.keyword.cloud_notm}} als verwalteten Service und klicken Sie anschließend auf **Erstellen**.
 4. Geben Sie die Konfigurationseinstellungen entsprechend Ihren Anforderungen an oder übernehmen Sie die Standardwerte.
 5. Klicken Sie entweder auf **vCenter Server** oder **Cloud Foundation**, um den Service zu einer Ihrer Instanzen hinzuzufügen.
-6. Um den Service während der Bestellung einer neuen Instanz hinzuzufügen, klicken Sie auf **Zu neuer Instanz hinzufügen** und fahren Sie dann mit der Bestellung einer neuen [vCenter Server](../vcenter/vc_orderinginstance.html)-, [vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html)- oder [Cloud Foundation](../sddc/sd_orderinginstance.html)-Instanz fort.
+6. Um den Service während der Bestellung einer neuen Instanz hinzuzufügen, klicken Sie auf **Zu neuer Instanz hinzufügen** und fahren Sie dann mit der Bestellung einer neuen [vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)-, [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)- oder [Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)-Instanz fort.
 7. Um den Service zu einer bereits vorhandenen Instanz hinzuzufügen, müssen Sie auf **Zu bereitgestellter Instanz hinzufügen** klicken und dann die gewünschte Instanz in der Liste auswählen. Anschließend müssen Sie bestätigen, dass Sie mit der Bestellung fortfahren möchten, indem Sie auf **Bereitstellung** klicken.
 
 ### Zugehörige Links
 
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
-* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
+* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [Data Backup and Protection Services](https://www-935.ibm.com/services/business-continuity/backup-and-data-protection-services/)

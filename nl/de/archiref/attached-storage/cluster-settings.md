@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -37,15 +37,17 @@ Tabelle 1. Einstellungen zur DRS-Automatisierung für den vSphere-DRS-Cluster
 
 Weitere Informationen zur Konfiguration dieser Einstellungen in vSphere Web Client finden Sie im Abschnitt zum [Festlegen einer angepassten Automatisierungsstufe für eine virtuelle Maschine in vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-C21C0609-923B-46FB-920C-887F00DBCAB9.html).
 
-Neben der Automatisierungsstufe und dem Migrationsschwellenwert des Clusters ermöglicht dieses Design die VM-Automatisierung, sodass Überschreibungen für einzelne VMs festgelegt werden können. Eine differenzierte Steuerung von VMs ermöglicht eine weitere Priorisierung des Lastausgleichs von VMs.
+Neben der Automatisierungsstufe und dem Migrationsschwellenwert des Clusters ermöglicht dieses Design die VM-Automatisierung, sodass Werte-Überschreibungen für einzelne VMs festgelegt werden können. Eine differenzierte Steuerung von VMs ermöglicht eine weitere Priorisierung des Lastausgleichs von VMs.
 
 ### Energiemanagement
 
-Wenn die Funktion VMware Distributed Power Management aktiviert wird, dann vergleicht DRS die Kapazität auf Cluster- und auf Hostebene mit den Anforderungen der Cluster-VMs unter Berücksichtigung der zuletzt ermittelten Bedarfswerte. Die Energiemanagementfunktion versetzt Hosts in den Standby-Stromversorgungsmodus oder empfiehlt dies, wenn genügend Überkapazitäten ermittelt werden, oder veranlasst die Zuschaltung von Hosts, wenn Kapazitätsengpässe festgestellt werden. Abhängig von den resultierenden Empfehlungen zum Stromversorgungsstatus der Hosts müssen VMs möglicherweise auf andere Hosts verlagert werden. In diesem Design wird das Energiemanagement inaktiviert, da sich durch die Ab- oder Zuschaltung von Hosts im Cluster keine operativen oder finanziellen Vorteile ergeben.
+Wenn die Funktion VMware Distributed Power Management aktiviert wird, dann vergleicht DRS die Kapazität auf Cluster- und auf Hostebene mit den Anforderungen der Cluster-VMs unter Berücksichtigung der zuletzt ermittelten Bedarfswerte. Die Energiemanagementfunktion versetzt Hosts in den Standby-Stromversorgungsmodus oder empfiehlt dies, wenn genügend Überkapazitäten ermittelt werden, oder veranlasst die Zuschaltung von Hosts, wenn Kapazitätsengpässe festgestellt werden. Abhängig von den resultierenden Empfehlungen zum Stromversorgungsstatus der Hosts müssen VMs möglicherweise auf andere Hosts verlagert werden.
+In diesem Design wird das Energiemanagement inaktiviert, da sich durch die Ab- oder Zuschaltung von Hosts im Cluster keine operativen oder finanziellen Vorteile ergeben.
 
 ## vSphere High Availability (HA)
 
-vSphere stellt Hochverfügbarkeit (HA = High Availability) für VMs bereit, indem die virtuellen Maschinen und die Hosts, auf denen diese platziert wurden, in einem Cluster zusammengefasst werden. Die Hosts im Cluster werden überwacht und im Falle eines Fehlers oder Ausfalls werden die VMs auf dem fehlerhaften oder ausgefallenen Host auf einem Ausweichhost erneut gestartet. In diesem Design wird vSphere High Availability mit der Hostüberwachung und der VM-Überwachung im Cluster aktiviert.
+vSphere stellt Hochverfügbarkeit (HA = High Availability) für VMs bereit, indem die virtuellen Maschinen und die Hosts, auf denen diese platziert wurden, in einem Cluster zusammengefasst werden. Die Hosts im Cluster werden überwacht und im Falle eines Fehlers oder Ausfalls werden die VMs auf dem fehlerhaften oder ausgefallenen Host auf einem Ausweichhost erneut gestartet.
+In diesem Design wird vSphere High Availability mit der Hostüberwachung und der VM-Überwachung im Cluster aktiviert.
 
 ### Hostüberwachung
 
@@ -89,4 +91,4 @@ vSphere High Availability (HA) verwendet das Heartbeating für Datenspeicher zur
 
 ### Zugehörige Links
 
-* [Lösungsübersicht](../solution/solution_overview.html)
+* [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

@@ -2,15 +2,17 @@
 
 copyright:
 
-  years: 2016, 2018
+  years: 2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2019-01-07"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:note: .note}
+{:important: .important}
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
@@ -33,7 +35,8 @@ lastupdated: "2018-11-01"
   *  Google Chrome
   *  Apple Safari
 
-**참고**: Microsoft Internet Explorer는 지원되지 않습니다.
+Microsoft Internet Explorer가 지원되지 않습니다.
+{:note}
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 보기 및 작업을 최적화하려면 최소 1024 픽셀 너비 x 500 픽셀 높이로 화면 해상도를 설정하십시오.
 
@@ -49,7 +52,7 @@ lastupdated: "2018-11-01"
    </tr>
    <tr>
       <td>IBM ID</td>
-      <td>**IBM ID**를 사용하면 {{site.data.keyword.cloud_notm}}를 포함하여 사용하는 모든 IBM 제품과 서비스에 하나의 로그인 사용자 이름을 사용할 수 있습니다. {{site.data.keyword.vmwaresolutions_short}}는 {{site.data.keyword.cloud_notm}} 카탈로그의 인프라 솔루션으로 제공됩니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔에 액세스하려면 **IBM ID**가 있어야 합니다.<br><br>**IBM ID**를 사용하여 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 로그인하려면 **IBM ID**를 {{site.data.keyword.cloud_notm}} 계정과 연관시켜야 합니다. 처음 콘솔에 로그인하면 기존 **IBM ID**를 {{site.data.keyword.cloud_notm}} 계정과 연관시키거나 새 {{site.data.keyword.cloud_notm}} 계정을 등록하도록 안내를 받습니다. 새 {{site.data.keyword.cloud_notm}} 계정은 **IBM ID**와 자동으로 연관됩니다. 이 프로세스를 한 번만 수행해야 합니다.<br><br>**IBM ID**를 {{site.data.keyword.cloud_notm}} 계정과 연관시키는 데 문제점이 있는 경우 [{{site.data.keyword.cloud_notm}} 액세스의 문제점 해결](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html)을 참조하십시오.</td>
+      <td>**IBM ID**를 사용하면 {{site.data.keyword.cloud_notm}}를 포함하여 사용하는 모든 IBM 제품과 서비스에 하나의 로그인 사용자 이름을 사용할 수 있습니다. {{site.data.keyword.vmwaresolutions_short}}는 {{site.data.keyword.cloud_notm}} 카탈로그의 인프라 솔루션으로 제공됩니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔에 액세스하려면 **IBM ID**가 있어야 합니다.<br><br>**IBM ID**를 사용하여 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 로그인하려면 **IBM ID**를 {{site.data.keyword.cloud_notm}} 계정과 연관시켜야 합니다. 처음 콘솔에 로그인하면 기존 **IBM ID**를 {{site.data.keyword.cloud_notm}} 계정과 연관시키거나 새 {{site.data.keyword.cloud_notm}} 계정을 등록하도록 안내를 받습니다. 새 {{site.data.keyword.cloud_notm}} 계정은 **IBM ID**와 자동으로 연관됩니다. 이 프로세스를 한 번만 수행해야 합니다.<br><br>**IBM ID**를 {{site.data.keyword.cloud_notm}} 계정과 연관시키는 데 문제점이 있는 경우 [{{site.data.keyword.cloud_notm}} 액세스의 문제점 해결](https://console.cloud.ibm.com/docs/account/ts_accessing.html)을 참조하십시오.</td>
    </tr>
    <tr>
       <td>IBM Cloud 계정</td>
@@ -57,7 +60,7 @@ lastupdated: "2018-11-01"
    </tr>
    <tr>
       <td>IBM Cloud 인프라(SoftLayer) 계정</td>
-      <td>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 이전에는 IBM SoftLayer 계정이라고 했습니다.  계정이 충족해야 하는 요구사항에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정의 요구사항](vmonic/slaccountrequirement.html)을 참조하십시오.<br><br>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정과 {{site.data.keyword.cloud_notm}} 계정을 링크하여 결합된 IaaS(Infrastructure as a Service) 및 PaaS(Platform as a Service) 리소스를 사용할 수 있습니다. 그리고 단일 로그인에서 IaaS 리소스와 PaaS 리소스에 액세스할 수 있습니다. 또한 계정을 연결하면 사용하는 모든 PaaS 및 IaaS 리소스에 대한 하나의 송장이 사용자에게 제공됩니다.<ul><li>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 없는 경우에는 [IBM Cloud 인프라(SoftLayer) 계정 등록](vmonic/signing_softlayer_account.html)의 프로시저에 따라 계정을 요청한 후에 [IBM ID 계정 링크](https://console.bluemix.net/docs/account/softlayerlink.html)의 프로시저에 따라 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하십시오.</li><li>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 있는 경우에는 [IBM ID 계정 연결](https://console.bluemix.net/docs/account/softlayerlink.html)의 프로시저에 따라 이를 {{site.data.keyword.cloud_notm}} 계정과 연결할 수 있습니다.</li></ul></td>
+      <td>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 이전에는 IBM SoftLayer 계정이라고 했습니다.  계정이 충족해야 하는 요구사항에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정의 요구사항](vmonic/slaccountrequirement.html)을 참조하십시오.<br><br>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정과 {{site.data.keyword.cloud_notm}} 계정을 링크하여 결합된 IaaS(Infrastructure as a Service) 및 PaaS(Platform as a Service) 리소스를 사용할 수 있습니다. 그리고 단일 로그인에서 IaaS 리소스와 PaaS 리소스에 액세스할 수 있습니다. 또한 계정을 연결하면 사용하는 모든 PaaS 및 IaaS 리소스에 대한 하나의 송장이 사용자에게 제공됩니다.<ul><li>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 없는 경우에는 [IBM Cloud 인프라(SoftLayer) 계정 등록](vmonic/signing_softlayer_account.html)의 프로시저에 따라 계정을 요청한 후에 [IBM ID 계정 링크](https://console.cloud.ibm.com/docs/account/softlayerlink.html)의 프로시저에 따라 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하십시오.</li><li>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 있는 경우에는 [IBM ID 계정 연결](https://console.cloud.ibm.com/docs/account/softlayerlink.html)의 프로시저에 따라 이를 {{site.data.keyword.cloud_notm}} 계정과 연결할 수 있습니다.</li></ul></td>
    </tr>
    </table>
 
@@ -144,7 +147,7 @@ lastupdated: "2018-11-01"
        <td>IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 서비스는 가상 환경에서의 데이터 보호, 데이터 재사용 및 데이터 복구를 위한 효율적이고 스케일링 가능한 솔루션을 제공합니다. 사용자는 독립형 솔루션으로서 서비스를 구현하거나 장기 저장 및 데이터 통제를 위한 사본을 오프로드하기 위해 이를 IBM Spectrum Protect 환경과 통합할 수 있습니다.</td>
     </tr>
     <tr>
-       <td>[KMIP for VMware on IBM Cloud](services/kmip_considerations.html)</td>
+       <td>[KMIP for VMware on IBM Cloud](services/kmip_standalone_considerations.html)</td>
        <td>KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스는 {{site.data.keyword.cloud_notm}}의 VMware에서 사용되는 암호화 키를 관리하기 위해 고가용성 서비스를 제공합니다. 이 서비스는 고객이 암호화 키를 작성, 검색, 활성화, 취소 및 영구 삭제할 수 있도록 하는 런타임 기능을 제공합니다. 또한 클라이언트 인증 정보와 암호화 키 간의 연관을 유지보수하는 관리 기능도 제공합니다.</td>
     </tr>
     <tr>
@@ -166,7 +169,7 @@ lastupdated: "2018-11-01"
 {{site.data.keyword.vmwaresolutions_short}} 콘솔은 배치를 주문하고 관리하는 인터페이스입니다. 각 배치는 콘솔의 인스턴스로 관리됩니다. 콘솔은 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에서 분리된 독립형 사용자 인터페이스입니다.
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 액세스하려면 다음을 수행하십시오.
-1. https://console.ng.bluemix.net/infrastructure/vmware-solutions/console 사이트로 이동하십시오.
+1. https://console.cloud.ibm.com/infrastructure/vmware-solutions/console로 이동하십시오.
 2. **IBM ID**로 콘솔에 로그인하십시오.
 
 ## 2단계: 사용자 계정 및 설정 구성

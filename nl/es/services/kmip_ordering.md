@@ -2,13 +2,21 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-12-20"
 
 ---
 
-# Solicitud de KMIP for VMware on IBM Cloud
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+
+# Solicitud de KMIP for VMware on IBM Cloud - en desuso
+
+La versión actual de KMIP for VMware on IBM Cloud ha quedado en desuso. Para obtener más información, [póngase en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html).
+{:deprecated}
 
 Puede solicitar el servicio de KMIP for VMware on {{site.data.keyword.cloud}} cuando pida una instancia nueva incluida con el servicio o añadiendo el servicio a la instancia existente.
 
@@ -61,16 +69,14 @@ Pulse **Recuperar** para obtener la lista de instancias disponibles de IBM Key P
 
 Pulse **Recuperar** para obtener la clave raíz del cliente que se almacena en la instancia de IBM Key Protect seleccionada.
 
-
-
 ### Enlaces relacionados
 
 * [Visión general de KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip_considerations.html)
 * [Solicitud, visualización y eliminación de servicios para instancias de Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](../vcenter/vc_addingremovingservices.html)
 * [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server con el paquete híbrido (Hybridity)](../vcenter/vc_hybrid_addingremovingservices.html)
-* [IBM Key Protect para {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/services/keymgmt/index.html#getting-started-with-key-protect)
-* [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect?&language=javascript_jquery#introduction)
+* [Sucesos de {{site.data.keyword.cloudaccesstrailshort}}](../vmonic/at-events.html)
+* [IBM Key Protect para {{site.data.keyword.cloud_notm}}](../../keymgmt/index.html)
 * [Seguridad de vSphere](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)
 * [Preguntas frecuentes](../vmonic/faq.html)
 * [Cómo ponerse en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html)

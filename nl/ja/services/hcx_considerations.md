@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -12,14 +12,14 @@ lastupdated: "2018-11-08"
 {:note: .note}
 {:important: .important}
 
-# VMware HCX on IBM Cloud の概要
+# VMware HCX on IBM Cloud の仕様と考慮事項
 
 HCX on {{site.data.keyword.cloud}} サービスは、オンプレミス・データ・センターのネットワークを {{site.data.keyword.cloud_notm}} にシームレスに拡張できます。これにより、変換や変更を行わずに仮想マシン (VM) を {{site.data.keyword.cloud_notm}} との間で移行できるようになります。
 
 このサービスは、V2.3 以降でデプロイされた VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスでのみ利用可能です。
 {:note}
 
-既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードできます。 インスタンスをアップグレードして HCX on {{site.data.keyword.cloud_notm}} サービスをデプロイする方法について詳しくは、[vCenter Server with Hybridity Bundle インスタンスへアップグレードする手順](../vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)を参照してください。
+既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードできます。 インスタンスをアップグレードして HCX on {{site.data.keyword.cloud_notm}} サービスをデプロイする方法について詳しくは、[vCenter Server with Hybridity Bundle インスタンスへアップグレードする手順](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)を参照してください。
 
 vCenter Server with HCX on {{site.data.keyword.cloud_notm}} インスタンスでは、オンプレミス・サイトからの同時接続が 3 つまでに制限されています。
 {:note}
@@ -51,11 +51,6 @@ vCenter Server with HCX on {{site.data.keyword.cloud_notm}} インスタンス�
 * 64 個の IP アドレスを持つ 2 つのプライベート・ポータブル・サブネット
 * プライベート・ポータブル vMotion サブネットからの 8 個の IP アドレス
 
-### ライセンスと料金
-
-* 基本のライセンス料金: サービスのための必須の課金
-* 管理対象 VM の料金: 月ごとにマイグレーションされる VM ごとの課金
-
 ## HCX on IBM Cloud をインストールする際の考慮事項
 
 HCX on {{site.data.keyword.cloud_notm}} をインストールしようとする前に、以下の考慮事項を確認してください。
@@ -83,9 +78,9 @@ HCX on {{site.data.keyword.cloud_notm}} サービスを削除する前に、以�
 
 ### 関連リンク
 
-* [HCX on {{site.data.keyword.cloud_notm}} の注文](hcx_ordering.html)
-* [HCX on {{site.data.keyword.cloud_notm}} の管理](managinghcx.html)
-* [HCX の用語集](hcx_glossary.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
+* [HCX on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/hcx_ordering.html)
+* [HCX on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [HCX の用語集](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension の概要](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)

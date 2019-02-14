@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-13"
 
 Beim angehängten Speicher handelt es sich um eine Erweiterung zum VMware vCenter Server on {{site.data.keyword.cloud}}-Angebot. In der Architektur der Lösung für den angehängten Speicher für VMware vCenter Server on {{site.data.keyword.cloud_notm}} werden die Komponenten der Lösung und die allgemeine Konfiguration aller Komponenten im Design beschrieben.
 
-Weitere Informationen zum vCenter Server-Design finden Sie in der [Lösungsübersicht](../solution/solution_overview.html).
+Weitere Informationen zum vCenter Server-Design finden Sie in der [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Wichtigste Vorteile des angehängten Speichers für vCenter Server
 
@@ -29,4 +29,4 @@ Tabelle 1. Funktionsbeschreibung für angehängten Speicher für vCenter Server
 
 ### Zugehörige Links
 
-* [Lösungsübersicht](../solution/solution_overview.html)
+* [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

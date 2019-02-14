@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -47,7 +47,7 @@ Tabla 2. Requisitos de recursos de {{site.data.keyword.cloud_notm}} Private Host
 | Trabajador     | 4 | 16 | 200 | 300 | 6 |
 | Vulnerability Advisor | 8 | 16 | 500 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| Bootstrap ICP/CAM | 16 | 32 | 250 | 1 | 1 |
+| Arranque {{site.data.keyword.icpfull_notm}}/CAM | 16 | 32 | 250 | 1 | 1 |
 | Servidor NFS | 8 | 4  | 350 | 1 | 1 |
 | NSX Edge Services Gateway | 2 | 1 | 0,5 | 0,5 | 2 |
 | Restricciones documentadas | 52 | 640 |  | 8.000 |   |
@@ -63,7 +63,7 @@ Tabla 3. Requisitos de recursos de {{site.data.keyword.cloud_notm}} Private Host
 | Trabajador     | 4 | 16 | 200 | 300 | 3 |
 | Vulnerability Advisor | 8 | 16 | 150 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| Bootstrap ICP/CAM | 16 | 32 | 250 | 1 | 1 |
+| Arranque {{site.data.keyword.icpfull_notm}}/CAM | 16 | 32 | 250 | 1 | 1 |
 | Servidor NFS | 8 | 4  | 350 | 1 | 1 |
 | NSX Edge Services Gateway | 2 | 1 | 0,5 | 0,5 | 2 |
 | Restricciones documentadas | 30 | 200 |  | 4.000 |  |
@@ -83,7 +83,7 @@ Tabla 4. Descripción de las variables de la Fórmula 1
 | AvailableCores |	El número de núcleos reales disponibles para cargas de trabajo y servicios en el entorno |	Núcleos |	38	| 43 |
 | HostCount	| El número de hosts en el clúster predeterminado	| Hosts | 4	| 4 |
 | HostCoreCount	| El número de núcleos brutos disponibles en cada host en el clúster predeterminado |	Núcleos |	16 | 16 |
-| HostOverheadCores	| El número de núcleos reservados por el servidor ESXi como sobrecarga, que equivale a 0,1 núcleos	| Núcleos	| 0,1 |	0,1 |
+| HostOverheadCores	| El número de núcleos que están reservados por el servidor ESXi como sobrecarga, que equivale a 0,1 núcleos	| Núcleos	| 0,1 |	0,1 |
 | MgmtOverheadCores | El número de núcleos reservados por los componentes de gestión de vCenter Server (vCenter Server, PSC, AD/DNS, Extremos), que equivale a cinco núcleos	| Núcleos	| 5	| 5 |
 | vSphereHAHostTolerance |	El número de hosts que se deben tolerar en la configuración de alta disponibilidad de vSphere, que equivale a un host |	Hosts	 | 1 | 1 |
 | HostVsanOverheadCorePercentage | Porcentaje de núcleos de host utilizados por vSAN, que equivale al 10% o es igual a 0% si el host no es vSAN | % | 10% |	0% |

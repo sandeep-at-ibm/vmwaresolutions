@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -24,7 +24,7 @@ Puoi anche specificare se vuoi ricevere notifiche via e-mail o via console per i
 ## Prima di iniziare
 
 * Puoi collegare un solo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) a un account utente {{site.data.keyword.cloud_notm}}.
-* L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti dell'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
+* L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti dell'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 * Se la chiave API per il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) cambia, devi aggiornare la chiave nella pagina **Impostazioni** nella console {{site.data.keyword.vmwaresolutions_short}}.
 
    **Importante:** è tua responsabilità garantire che la chiave API salvata nella pagina **Impostazioni** sia corretta e aggiornata. Altrimenti, le operazioni che richiedono la convalida della chiave API potrebbero non riuscire.
@@ -38,7 +38,7 @@ Puoi anche specificare se vuoi ricevere notifiche via e-mail o via console per i
 3. Nell'area **Credenziali infrastruttura IBM Cloud**, immetti il nome utente e la chiave API del tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer):
    * Se il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) e il tuo account {{site.data.keyword.cloud_notm}} sono collegati, fai clic su **Recupera** per immettere le credenziali automaticamente.
    * Se il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) e il tuo account {{site.data.keyword.cloud_notm}} non sono collegati, devi collegarli. Accedi al [portale del cliente dell'infrastruttura {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/) e segui le istruzioni sulla console per ottenere le credenziali, quindi immettile.
-   * Se non disponi di un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), [registrane uno](../vmonic/signing_softlayer_account.html) e segui le istruzioni sulla console per ottenere le credenziali, quindi immettile.
+   * Se non disponi di un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), [registrane uno](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html) e segui le istruzioni sulla console per ottenere le credenziali, quindi immettile.
 4. Fai clic su **Salva credenziali**.
 
 ## Risultati
@@ -51,8 +51,8 @@ Se sono state abilitate le notifiche via e-mail o console per determinati eventi
 
 ### Link correlati
 
-* [Domande frequenti](faq.html)
-* [Ordine di istanze Cloud Foundation](../sddc/sd_orderinginstance.html)
-* [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html)
-* [Notifiche](notifications.html)
-* [API SoftLayer](../../../customer-portal/cpapi.html){:new_window}
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Notifiche](/docs/services/vmwaresolutions/vmonic/notifications.html)
+* [API SoftLayer](/docs/customer-portal/cpapi.html){:new_window}

@@ -2,11 +2,16 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-14"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 
 # V2.7의 릴리스 정보
 
@@ -61,6 +66,11 @@ V2.7 이상에 배치되는 Zerto on {{site.data.keyword.cloud_notm}} 서비스�
 
 이제 VMware 인스턴스 이벤트 외에도 키 작성, 키 삭제 및 키 액세스 등의 KMIP for VMware on {{site.data.keyword.cloud_notm}}에 대한 이벤트가 {{site.data.keyword.cloud_notm}} Activity Tracker 인스턴스와 통합됩니다. KMIP for WMware on {{site.data.keyword.cloud_notm}}에 대한 자세한 정보는 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 개요](../services/kmip_considerations.html)를 참조하십시오.
 
+### KMIP for VMware on IBM Cloud - 더 이상 사용되지 않음
+
+(2018년 12월 14일에 업데이트됨) KMIP for VMware on {{site.data.keyword.cloud_notm}}의 현재 버전은 더 이상 사용되지 않습니다. 자세한 정보는 [IBM 지원 센터에 문의](../vmonic/trbl_support.html)하십시오.
+{:deprecated}
+
 ## 새로 작성되고 업데이트된 문서
 
 ### 참조 아키텍처 문서
@@ -74,8 +84,6 @@ V2.7 이상에 배치되는 Zerto on {{site.data.keyword.cloud_notm}} 서비스�
 * [vCenter Server 및 IBM Kubernetes Service 안내서](../archiref/vcsiks/vcsiks-intro.html)
 * [VMware 및 Skate Advisor Concept Car 안내서](../archiref/vcscar/vcscar-intro.html)
 * [VMware - Stock Trader의 현대화 과정](../archiref/vcscontent/vcscontent-modjourney.html)
-
-이들 중 일부 참조 아키텍처 문서는 영어로만 사용 가능합니다.
 
 ## 사용자 인터페이스 업데이트 및 개선사항
 

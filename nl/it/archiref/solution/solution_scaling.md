@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-25"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -53,6 +53,6 @@ Puoi ridimensionare un cluster esistente ordinando gli host dalla console {{site
 
 ### Link correlati
 
-* [Panoramica della soluzione](solution_overview.html)
-* [Panoramica della progettazione](design_overview.html)
-* [Backup dei componenti](solution_backingup.html)
+* [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Panoramica della progettazione](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [Backup dei componenti](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -34,7 +34,7 @@ La rete fisica è gestita da {{site.data.keyword.cloud_notm}}. La seguente sezio
 
 ### Panoramica della rete di IBM Cloud
 
-La rete fisica di {{site.data.keyword.cloud_notm}} è suddivisa in tre reti distinte: Pubblica, Privata e di Gestione. Per ulteriori informazioni sulle reti pubbliche, private e di gestione, vedi [Panoramica della soluzione](../solution/solution_overview.html).
+La rete fisica di {{site.data.keyword.cloud_notm}} è suddivisa in tre reti distinte: Pubblica, Privata e di Gestione. Per ulteriori informazioni sulle reti pubbliche, private e di gestione, vedi [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 Per ulteriori informazioni sulla rete {{site.data.keyword.cloud_notm}}, vedi [The {{site.data.keyword.cloud_notm}} network](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}.
 
@@ -46,7 +46,7 @@ Esamina le seguenti informazioni per una descrizione della rete dei servizi che 
 
 ### VLAN
 
-Per ulteriori informazioni sulle VLAN, vedi la sezione _Progettazione della rete fisica_ in [Progettazione dell'infrastruttura fisica](../solution/design_physicalinfrastructure.html).
+Per ulteriori informazioni sulle VLAN, vedi la sezione _Progettazione della rete fisica_ in [Progettazione dell'infrastruttura fisica](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html).
 
 ## Progettazione dell'archiviazione fisica
 
@@ -65,10 +65,10 @@ Endurance è disponibile in tre livelli di prestazioni IOPS per supportare esige
 Dopo essere stata ordinata, una condivisione NFS può essere ridimensionata o riconfigurata per consentire più o meno IOPS.
 {:note}
 
-Per le opzioni IOPS dettagliate, vedi la sezione _Impostazioni di archiviazione_ in [Ordine di istanze vCenter Server](../../vcenter/vc_orderinginstance.html).
+Per le opzioni IOPS dettagliate, vedi la sezione _Impostazioni di archiviazione_ in [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html).
 
 Oltre ai livelli di archiviazione, l'archiviazione Endurance di {{site.data.keyword.cloud_notm}} supporta un'ampia selezione di esigenze applicative, comprese le istantanee e la replica e la crittografia dei dati inattivi nelle ubicazioni {{site.data.keyword.CloudDataCent_notm}}.
 
 ### Link correlati
 
-* [Panoramica della soluzione](../solution/solution_overview.html)
+* [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

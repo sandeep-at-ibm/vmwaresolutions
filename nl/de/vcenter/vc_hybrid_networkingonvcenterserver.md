@@ -2,29 +2,32 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2019-01-23"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Hinweise zum Netzbetrieb für vCenter Server with Hybridity Bundle-Instanzen
 
 Die Informationen in diesem Abschnitt enthalten Hinweise und Voraussetzungen für den Netzbetrieb Ihrer VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle-Instanzen. Stellen Sie sicher, dass die Voraussetzungen erfüllt sind, damit Ihre Instanzen ordnungsgemäß arbeiten.
 
 ## Netzkomponenten für vCenter Server with Hybridity Bundle-Instanzen
+{: faq}
 
-Informationen zu den Komponenten für den Netzbetrieb, die in Ihrer vCenter Server with Hybridity Bundle-Instanz enthalten sind, finden Sie unter [Technische Spezifikationen für vCenter Server with Hybridity Bundle-Instanzen](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances).
+Informationen zu den Komponenten für den Netzbetrieb, die in Ihrer vCenter Server with Hybridity Bundle-Instanz enthalten sind, finden Sie unter [Technische Spezifikationen für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances).
 
 ## Hinweise zur Firewall
 
-Wenn Sie Firewalls verwenden, müssen Sie Regeln für die gesamte Kommunikation aus der {{site.data.keyword.IBM}} CloudDriver-VSI (VSI – virtuelle Serverinstanz) und den SDDC Manager-VMs konfigurieren. Diese Regeln müssen es zulassen, dass alle Protokolle an den IP-Adressen `10.0.0.0/8` und `161.26.0.0/16` kommunizieren können. Beispiele für solche Firewalls sind NSX Distributed Firewalls (DFW) oder Vyatta-Firewalls.
+Wenn Sie Firewalls verwenden, müssen Sie Regeln für die gesamte Kommunikation aus der {{site.data.keyword.IBM}} CloudDriver-VSI (VSI - virtuelle Serverinstanz) und den SDDC Manager-VMs konfigurieren. Diese Regeln müssen es zulassen, dass alle Protokolle an den IP-Adressen `10.0.0.0/8` und `161.26.0.0/16` kommunizieren können. Beispiele für solche Firewalls sind NSX Distributed Firewalls (DFW) oder Vyatta-Firewalls.
 
 ## NSX mit virtuellen Maschinen verwenden
 
 Während der Bereitstellung der vCenter Server-Instanz wird in Ihrer Instanz VMware NSX bestellt, installiert, lizenziert und konfiguriert. Auch der NSX-Manager, die NSX-Controller und die NSX-Transportzone werden eingerichtet und jeder ESXi-Server wird mit den NSX-Komponenten konfiguriert.
 
-Zur Verwendung durch die Workload-VMs wird außerdem ein NSX Edge Services Gateway bereitgestellt. Weitere Informationen finden Sie unter [Netz zur Verwendung des vom Kunden verwalteten NSX ESG mit eigenen virtuellen Maschinen konfigurieren](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+Zur Verwendung durch die Workload-VMs wird außerdem ein NSX Edge Services Gateway bereitgestellt. Weitere Informationen finden Sie unter [Netz zur Verwendung des vom Kunden verwalteten NSX ESG mit eigenen virtuellen Maschinen konfigurieren](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
 ## Hinweise zum Ändern von Kennwörtern für NSX-Komponenten
 
@@ -38,4 +41,4 @@ Prüfen Sie vor dem Ändern der Kennwörter für den NSX-Manager, die NSX-Contro
 * [Overview of NSX](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
 * [Managing NAT Rules](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}
-* [Übersicht über VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/hcx_considerations.html)

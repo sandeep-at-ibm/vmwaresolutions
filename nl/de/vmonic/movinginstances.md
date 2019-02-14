@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Upgrade für Instanzen ausgehend von älteren Releases als V1.4 durchführen
 
@@ -17,12 +21,13 @@ Die Instanznetztopologie in V1.4 und höheren Releases unterscheidet sich von de
 ## Lösung
 
 In V1.4 und höheren Releases sind verschiedene Netztopologieerweiterungen für Ihre Instanzen verfügbar:
-* (Alle Instanzen): Es gibt eine optimierte Netzkonfiguration. Da das von Ihnen verwendete {{site.data.keyword.cloud}}-Konto entweder ein Konto des Typs "VRF" (Virtual Routing and Forwarding) sein muss oder bei einem klassischen Konto (ohne VRF) die VLAN Spanning-Funktion aktiviert sein muss, wird eine zweite portierbare IP-Adresse nicht benötigt. Zur Bereitstellung ist nur die primäre portierbare IP-Adresse für die {{site.data.keyword.cloud_notm}}-Infrastruktur erforderlich.
+* (Alle Instanzen): Es gibt eine optimierte Netzkonfiguration. Da das von Ihnen verwendete {{site.data.keyword.cloud}}-Konto entweder ein Konto des Typs "VRF" (Virtual Routing and Forwarding) sein muss oder bei einem klassischen Konto (ohne VRF) die VLAN-Spanning-Funktion aktiviert sein muss, wird eine zweite portierbare IP-Adresse nicht benötigt. Zur Bereitstellung ist nur die primäre portierbare IP-Adresse für die {{site.data.keyword.cloud_notm}}-Infrastruktur erforderlich.
 * (Nur für Cloud Foundation-Instanzen): Es gibt eine Funktion zur Bereitstellung mit mehreren Standorten mit Servern für Microsoft Windows AD SSO (Active Directory Single Sign-On) und DNS.
 
 Falls Sie Ihre Instanzen aus Releases vor V1.4 nicht migriert oder gelöscht haben, sind sie möglicherweise weiterhin im Lesezugriffsmodus in der {{site.data.keyword.vmwaresolutions_short}}-Konsole sichtbar. Solche Instanzen sind in der Benutzerschnittstelle durch ein Warnsymbol als **Veraltet** gekennzeichnet.
 
-**Hinweis:** Die in den Instanzeigenschaften angezeigten Informationen geben die Daten gemäß dem Release V1.4 wieder und werden nicht mehr aktualisiert.
+Die in den Instanzeigenschaften angezeigten Informationen geben die Daten gemäß dem Release V1.4 wieder und werden nicht mehr aktualisiert.
+{:note}
 
 Für die Instanzen aus einem Release vor V1.4 sind die folgenden Aktionen verfügbar:
 *  Sie können die Informationen auf der Seite mit den Instanzdetails anzeigen.
@@ -43,4 +48,4 @@ Führen Sie zum Versetzen Ihrer Instanzen aus Releases vor V1.4 auf neue Instanz
 
 Weitere Informationen zum Exportieren und Importieren von VMs finden Sie in der VMware vSphere-Dokumentation.
 
-Falls Sie bei der Verwendung von {{site.data.keyword.vmwaresolutions_short}} Hilfe benötigen, setzen Sie sich über einen der Unterstützungskanäle mit dem [IBM Support](trbl_support.html) in Verbindung.
+Falls Sie bei der Verwendung von {{site.data.keyword.vmwaresolutions_short}} Hilfe benötigen, setzen Sie sich über einen der Unterstützungskanäle mit dem [IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) in Verbindung.

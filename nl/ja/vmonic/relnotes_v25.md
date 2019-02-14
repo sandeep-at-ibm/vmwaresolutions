@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-08-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V2.5 のリリース・ノート
 
@@ -20,7 +24,7 @@ lastupdated: "2018-08-30"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-詳しくは、[Spectre および Meltdown 脆弱性への対処](../vmonic/trbl_fix_spectre.html)を参照してください。
+詳しくは、[Spectre および Meltdown 脆弱性への対処](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)を参照してください。
 
 ## NSX コンポーネントの更新
 
@@ -32,9 +36,10 @@ lastupdated: "2018-08-30"
 
 V2.5 リリース以降、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} および Veeam on {{site.data.keyword.cloud_notm}} サービスは、デプロイ時に VM のバックアップの事前構成を行いません。 この変更により、スケジュール作成、保存期間、重複排除の使用、モニタリングとアラート、暗号キーの管理など、バックアップ・ジョブのすべての側面をユーザーが適切に構成できるようになりました。 さらに、IBM CloudDriver VM は、NSX バックアップ用の永続的なファイル・サーバーとしては構成されなくなります。
 
-お客様は、管理インフラストラクチャーとワークロードのバックアップと可用性など、すべてのソフトウェア・コンポーネントの構成、管理、およびモニタリングについての責任があります。 詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html#backing-up-components)を参照してください。
+お客様は、管理インフラストラクチャーとワークロードのバックアップと可用性など、すべてのソフトウェア・コンポーネントの構成、管理、およびモニタリングについての責任があります。 詳しくは、[コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#backing-up-components)を参照してください。
 
-**注:** この変更は、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} や Veeam on {{site.data.keyword.cloud_notm}} サービスがインストールされている、V2.5 より前にデプロイされたインスタンスには影響しません。
+この変更は、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} や Veeam on {{site.data.keyword.cloud_notm}} サービスがインストールされている、V2.5 より前にデプロイされたインスタンスには影響しません。
+{:note}
 
 ## IBM CloudDriver の回復力
 
@@ -50,8 +55,8 @@ V2.5 リリースから、{{site.data.keyword.vmwaresolutions_short}} は IBM Id
 * V2.4 以前のリリースでデプロイされたインスタンスは、指定の {{site.data.keyword.cloud_notm}} アカウントにマイグレーションしてから、IAM を使用して管理できます。
 
 詳しくは、以下のトピックを参照してください。
-* [サービスとリソースにアクセスするようにユーザーを招待する](../vmonic/iamuserinvite.html)
-* [IAM でのユーザー・アクセスの管理](../vmonic/iam.html)
+* [サービスとリソースにアクセスするようにユーザーを招待する](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [IAM でのユーザー・アクセス権限の管理](/docs/services/vmwaresolutions/vmonic/iam.html)
 
 ## VMware vCenter Server および VMware Cloud Foundation インスタンスのためのユーザー・アカウントとグループへの変更
 
@@ -59,12 +64,14 @@ V2.5 リリースから、{{site.data.keyword.vmwaresolutions_short}} は IBM Id
 
 VMware vSphere Web Client の**「ユーザーおよびグループ」**ページで**「ic4v-vCenter」**グループのグローバル許可を編集しないでください。 編集すると、管理操作が影響を受ける可能性があります。
 
-Cloud Foundation インスタンスの場合、**customerroot** ホスト・ユーザー ID を **root** ホスト・ユーザー ID の代わりに使用します。 vCenter Server インスタンスには **root** ホスト・ユーザー ID を引き続き使用します。
+Cloud Foundation インスタンスの場合、**customerroot** ホスト・ユーザー ID を **root** ホスト・ユーザー ID の代わりに使用します。 
+
+vCenter Server インスタンスの場合、**root** ホスト・ユーザー ID を引き続き使用します。**ic4vroot** ホスト・ユーザー ID は、IBM 専用に作成されたものです。
 
 ユーザー・アカウントについて詳しくは、以下のトピックを参照してください。
 
-* [vCenter Server 成果物の変更に関する考慮事項](../vcenter/vcenter_chg_impact.html)
-* [Cloud Foundation 成果物の変更に関する考慮事項](../sddc/cf_chg_impact.html)
+* [vCenter Server 成果物の変更に関する考慮事項](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
+* [Cloud Foundation 成果物の変更に関する考慮事項](/docs/services/vmwaresolutions/sddc/cf_chg_impact.html)
 
 ## アドオン・サービスの更新
 
@@ -74,7 +81,7 @@ Cloud Foundation インスタンスの場合、**customerroot** ホスト・ユ�
 
 {{site.data.keyword.cloud_notm}} Private Hosted は、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。 このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。
 
-このサービスは、vCenter Server インスタンスの注文後に要求できます。 詳しくは、[{{site.data.keyword.cloud_notm}} Private Hosted の要求](../services/managing_icp.html)を参照してください。
+このサービスは、vCenter Server インスタンスの注文後に要求できます。
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -86,13 +93,13 @@ V2.5 リリースから、IBM Spectrum Protect Plus on {{site.data.keyword.cloud
 
 ドイツでは、KMIP for VMware on {{site.data.keyword.cloud_notm}} サービス用に新しいエンドポイントが使用可能になりました。
 
-詳しくは、[KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスの構成](../services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration)を参照してください。
+詳しくは、[KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスの構成](/docs/services/vmwaresolutions/services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration)を参照してください。
 
 ## 新規資料および更新された資料
 
 ### 接続されたストレージの資料
 
-vCenter Server on IBM Cloud の接続されたストレージに関する技術資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。 このリファレンス・アーキテクチャー資料は英語版しかありません。 詳しくは、[vCenter Server on IBM Cloud の接続されたストレージ](../archiref/attached-storage/storage-benefits.html)を参照してください。
+vCenter Server on IBM Cloud の接続されたストレージに関する技術資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。 詳しくは、[vCenter Server on IBM Cloud の接続されたストレージ](/docs/services/vmwaresolutions/archiref/attached-storage/storage-benefits.html)を参照してください。
 
 ### 技術仕様
 
@@ -104,9 +111,9 @@ vCenter Server on IBM Cloud の接続されたストレージに関する技術�
 
 詳しくは、以下のトピックを参照してください。
 
-* [vCenter Server インスタンスで使用可能なサービス](../vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
-* [vCenter Server with Hybridity Bundle インスタンスで使用可能なサービス](../vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [Cloud Foundation インスタンス用の使用可能なサービス](../sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
+* [vCenter Server インスタンスで使用可能なサービス](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
+* [vCenter Server with Hybridity Bundle インスタンスで使用可能なサービス](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [Cloud Foundation インスタンス用の使用可能なサービス](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
 
 ## ユーザー・インターフェースの更新と向上
 

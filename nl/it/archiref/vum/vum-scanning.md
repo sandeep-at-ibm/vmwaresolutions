@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -22,11 +22,11 @@ Quando esegui la scansione di host, macchine virtuali (VM) e dispositivi virtual
 2. Al termine della scansione, seleziona **Critical Host Patches**. Nel pannello in basso, controlla i dettagli della patch per ciascun host facendo clic sul numero in **Number of Patches**. Una finestra mostra le informazioni sulla patch.
 3. Esamina i dettagli e ripeti per le **Non-Critical Patches**.
 
-  I file di log di VUM sono ubicati in _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
+  I file di log di VUM si trovano nel seguente percorso: _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
 ## Avvio manuale di una scansione di macchine virtuali e dispositivi virtuali
 
-Puoi eseguire la scansione di VM e dispositivi virtuali nell'inventario di vSphere in base alle baseline e ai gruppi di baseline collegati. Le macchine e i dispositivi virtuali selezionati vengono scansionati rispetto alle baseline collegate, a seconda delle opzioni che selezioni. Vengono scansionati anche tutti gli oggetti figlio, quindi quanto più grande è l'infrastruttura virtuale e più in alto nella gerarchia di oggetti di cui avvii la scansione, tanto più tempo impiegherà la scansione e più accurata sarà la vista di conformità.
+Puoi eseguire la scansione di VM e dispositivi virtuali nell'inventario di vSphere in base alle baseline e ai gruppi di baseline collegati. Le macchine e i dispositivi virtuali selezionati vengono scansionati rispetto alle baseline collegate, a seconda delle opzioni che selezioni. Vengono scansionati tutti gli oggetti figlio, quindi più grande è l'infrastruttura virtuale e più in alto nella gerarchia di oggetti di cui avvii la scansione, più tempo impiega la scansione e più accurata è la vista di conformità.
 
 1.	Utilizzando il client web vSphere, seleziona **Home** > **VMs and Templates**.
 2.	Fai clic con il tasto destro su una _macchina virtuale_, un _dispositivo virtuale_ o una _cartella di macchine e dispositivi virtuali_ e fai clic su **Scan for Updates**.
@@ -56,4 +56,4 @@ Puoi configurare il client web vSphere per eseguire la scansione di VM, disposit
 ### Link correlati
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -60,7 +60,7 @@ También puede gestionar el acceso de los usuarios existentes, incluida la modif
 
 ## Migración de instancias existentes a cuentas de IBM Cloud
 
-Debido a la integración de {{site.data.keyword.vmwaresolutions_short}} con IAM, las instancias que se despliegan en V2.5 y releases posteriores en la cuenta de {{site.data.keyword.cloud}} se añaden automáticamente a la cuenta y se gestionan mediante IAM.
+Debido a la integración de {{site.data.keyword.vmwaresolutions_short}} con IAM, las instancias que se despliegan en V2.5 y releases posteriores en la cuenta de {{site.data.keyword.cloud_notm}} se añaden automáticamente a la cuenta y se gestionan mediante IAM.
 
 Para las instancias existentes que se han desplegado en V2.4 y releases anteriores, puede migrarlas a cuentas de {{site.data.keyword.cloud_notm}} especificadas para la gestión habilitada para IAM. Para obtener más información, consulte los temas siguientes:
 * [Migración de instancias anteriores a V2.5 vCenter Server a cuentas de IBM Cloud](../vcenter/vc_addinstancetousraccount.html)

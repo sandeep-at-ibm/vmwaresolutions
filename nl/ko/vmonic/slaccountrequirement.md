@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -54,3 +54,4 @@ lastupdated: "2018-11-05"
 * [Cloud Foundation 인스턴스에 대한 요구사항](../sddc/sd_planning.html)
 * [vCenter Server 인스턴스에 대한 요구사항](../vcenter/vc_planning.html)
 * [사용자 계정 및 설정](useraccount.html)
+* [IBM Cloud의 VRF 개요](../../../infrastructure/direct-link/vrf-on-ibm-cloud.html)

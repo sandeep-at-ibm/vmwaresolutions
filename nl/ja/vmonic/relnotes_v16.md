@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-05-22"
 
@@ -21,7 +21,7 @@ lastupdated: "2017-05-22"
 *  新しいハードウェア仕様: **スモール**または**標準** (要件に従う)。
 *  デプロイメントに使用できる新しいデータ・センター: **HKG02 - 香港**、**OSL01 - オスロ**、**SEO01 - ソウル**、**SNG01 - シンガポール**、**SYD04 - シドニー**。
 
-コンポーネントの完全なリストについては、[VMware Cloud Foundation の概要](../sddc/sd_cloudfoundationoverview.html)を参照してください。
+コンポーネントの完全なリストについては、[VMware Cloud Foundation の概要](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)を参照してください。
 
 ## VMware vCenter Server インスタンスの更新
 
@@ -63,7 +63,7 @@ V1.6 より前のインスタンスではこれ以外のアクションは使用
    * VMware HA (High Availability) は、管理 ESG とユーザー管理 ESG で共有される新しいポート・グループを使用するように構成されます。
 
    この ESG は、インスタンス・ハードウェアのタイプにかかわらずデプロイされ、お客様が構成を変更できます。 詳しくは、以下のトピックを参照してください。
-   *  [ユーザー管理の NSX Edge Services Gateway を VM で使用するためのネットワークの構成](../vcenter/vc_esg_config.html)
+   *  [ユーザー管理の NSX Edge Services Gateway を VM で使用するためのネットワークの構成](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html)
    *  [VMware NSX 資料](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## 使いやすさの向上
@@ -73,4 +73,4 @@ V1.6 より前のインスタンスではこれ以外のアクションは使用
 *  ユーザー・インターフェースのすべての領域にアクセスできるナビゲーション・ペインが左側に導入されたことで、コンソールのメイン・ナビゲーションが大幅に改善されました。 新規インスタンスの注文、デプロイ済みのインスタンスの表示、システム通知の確認、設定の変更、オンライン・ドキュメントのアクセスを簡単に行えます。
 *  左側のナビゲーション・ペインからアクセスできる新しい**「開始」**ページにより、十分に詳しい情報がコンソールで直接得られるので、注文するインスタンスのコンポーネントについて、情報に基づいた決定を行うことができます。 **「開始」**ページでは、インスタンスを注文するプロセスの手順が、インスタンスを注文するためのすべての前提条件 (必要なユーザー・アカウントなど) を満たすところから始まり、最終的に注文を実行するところまで順を追って説明されます。
 *  Cloud Foundation インスタンスと vCenter Server インスタンスの両方のサマリーの詳細が、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**メニューからアクセスできる単一のページに統合されました。 このページから、適切なタブを選択して、Cloud Foundation インスタンスまたは vCenter Server インスタンスをフィルタリングできます。
-* インスタンスに Zerto 災害復旧がインストールされている場合は、サービスの詳細のページから Zerto コンソールにワンクリックで直接アクセスできます。 詳しくは、[Cloud Foundation インスタンスのサービスの注文、表示、削除](../sddc/sd_addingremovingservices.html)および[vCenter Server インスタンスのサービスの注文、表示、削除](../vcenter/vc_addingremovingservices.html)を参照してください。
+* インスタンスに Zerto 災害復旧がインストールされている場合は、サービスの詳細のページから Zerto コンソールにワンクリックで直接アクセスできます。 詳しくは、[Cloud Foundation インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)および[vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)を参照してください。

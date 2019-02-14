@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -22,11 +22,11 @@ Cuando explora hosts, máquinas virtuales (VM) y dispositivos virtuales, los eva
 2. Cuando se complete la exploración, seleccione **Parches de host críticos**. En el panel inferior, revise los detalles del parche para cada host pulsando el número en **Número de parches**. Una ventana muestra la información del parche.
 3. Revíselo y repítalo para los **parches no críticos**.
 
-  Los archivos de registro VUM se encuentran en _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
+  Los archivos de registro VUM se encuentran en la siguiente vía de acceso: _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
 ## Iniciación manual de una exploración de máquinas y dispositivos virtuales
 
-Puede explorar VM y dispositivos virtuales en el inventario de vSphere frente a las líneas base y los grupos de línea base conectados. Las VM y los dispositivos que seleccione se exploran con las líneas base conectadas, en función de las opciones que seleccione. También se exploran todos los objetos hijo, por lo que cuanto mayor sea la infraestructura virtual y mayor en la jerarquía de objetos que inicia la exploración, más tiempo se tarda en realizar la exploración y más precisa es la vista de conformidad.
+Puede explorar VM y dispositivos virtuales en el inventario de vSphere frente a las líneas base y los grupos de línea base conectados. Las VM y los dispositivos que seleccione se exploran con las líneas base conectadas, en función de las opciones que seleccione. Se exploran todos los objetos hijo, por lo que cuanto mayor sea la infraestructura virtual y mayor en la jerarquía de objetos que inicia la exploración, más tiempo se tarda en realizar la exploración y más precisa es la vista de conformidad.
 
 1.	Mediante el cliente web de vSphere, seleccione **Inicio** > **Máquinas y plantillas**.
 2.	Pulse con el botón derecho del ratón en una _máquina virtual_, _ dispositivo virtual_ o una _ carpeta de máquinas y dispositivos virtuales _ y pulse **Explorar para actualizaciones**.
@@ -45,7 +45,7 @@ Iniciar una exploración simultánea de hosts, VM virtuales y dispositivos virtu
 
 Puede configurar el cliente web de vSphere para explorar VM, dispositivos virtuales y hosts ESXi de vSphere en momentos específicos o a los intervalos que le convengan.
 
-1.	El uso del cliente web de vSphere selecciona un objeto del inventario. También se exploran todos los objetos hijo del objeto que seleccione.
+1.	Mediante el cliente web de vSphere, seleccione un objeto del inventario. También se exploran todos los objetos hijo del objeto que seleccione.
 2.	Seleccione el **separador Supervisar** y pulse el botón **Valores**.
 3.	Seleccione **Tareas planificadas** y pulse **Planificar una nueva tarea**.
 4.	Seleccione **Explorar para actualizaciones** en la lista desplegable que aparece. Se abre el asistente Explorar actualizaciones.
@@ -56,4 +56,4 @@ Puede configurar el cliente web de vSphere para explorar VM, dispositivos virtua
 ### Enlaces relacionados
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

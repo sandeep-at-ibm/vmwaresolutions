@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,8 +25,8 @@ Tabelle 1. Teileliste für VLANs in vCenter Server-Instanzen
 | VLAN       | Typ       | Details       |
 |:---------- |:---------- |:------------- |
 | VLAN1     | Öffentlich, Primär | Wird physischen ESXi-Servern für den Zugriff auf öffentliche Netze zugeordnet. Wird nach der Erstbereitstellung nicht mehr verwendet. Für den Internetzugriff verfügbar. |
-| VLAN2     | Privates VLAN A, Primär | Wird durch {{site.data.keyword.cloud}} physischen ESXi-Servern zugeordnet. Wird von der Managementschnittstelle für den VMware vSphere-Managementdatenverkehr verwendet.<br><br>Wird virtuellen Maschinen (VMs) zugeordnet, die als Managementkomponenten fungieren.<br><br>Wird VMware NSX VTEP (VXLAN-Tunnelendpunkt) zugeordnet. |
-| VLAN3     | Privates VLAN B, Portierbar | Wird VMware vSAN zugeordnet, sofern verwendet.<br><br>Wird VMware NFS zugeordnet, sofern verwendet.<br><br>Wird VMware vSphere vMotion zugeordnet. |
+| VLAN2     | VLAN "Privat A", Primär | Wird durch {{site.data.keyword.cloud}} physischen ESXi-Servern zugeordnet. Wird von der Managementschnittstelle für den VMware vSphere-Managementdatenverkehr verwendet.<br><br>Wird virtuellen Maschinen (VMs) zugeordnet, die als Managementkomponenten fungieren.<br><br>Wird VMware NSX VTEP (VXLAN-Tunnelendpunkt) zugeordnet. |
+| VLAN3     | VLAN "Privat B", Portierbar | Wird VMware vSAN zugeordnet, sofern verwendet.<br><br>Wird VMware NFS zugeordnet, sofern verwendet.<br><br>Wird VMware vSphere vMotion zugeordnet. |
 
 ## Softwareteileliste für vCenter Server-Instanzen
 
@@ -36,9 +36,9 @@ Tabelle 2. Teileliste für Softwarekomponenten in vCenter Server-Instanzen
 
 | Hersteller  | Komponente                      | Version       |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.5 Update 2c (bis zu Patch-Level ESXi650-201808001) |
-| VMware       | vCenter Server Appliance        | 6.5 Update 2c |
-| VMware       | Platform Services Controller    | 6.5 Update 2c |
+| VMware       | vSphere ESXi                    | 6.5 Update P3 (Build 6.5.0-10884925) |
+| VMware       | vCenter Server Appliance        | 6.5 Update 2d (Build 6.5.0-10964411) |
+| VMware       | Platform Services Controller    | 6.5 Update 2d (Build 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX for vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
@@ -130,5 +130,5 @@ Führen Sie zum Aktualisieren der MTU-Einstellung für den öffentlichen Switch 
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [Übersicht über vCenter Server](vc_vcenterserveroverview.html)
-* [vCenter Server-Instanzen planen](vc_planning.html)
+* [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [vCenter Server-Instanzen planen](/docs/services/vmwaresolutions/vcenter/vc_planning.html)

@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-05-28"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V2.3 릴리스 정보
 
@@ -73,7 +77,8 @@ V2.3 릴리스부터, **사용자 정의됨** Bare Metal Server 설정을 선택
 
 이제 Microsoft Active Directory(AD)용 하나의 Microsoft Windows Server Virtual Server Instance(VSI) 또는 관리 클러스터에 있는 두 개의 고가용성 Microsoft Windows 가상 머신의 배치를 선택하는 옵션이 제공됩니다. V2.2의 경우, 기본적으로 하나의 Microsoft AD용 Microsoft Windows VSI가 자동 배치되었습니다. 두 개의 Microsoft Windows 가상 머신을 선택하는 새 옵션은 더 많은 개인정보 보호를 제공하고 Veeam 서비스를 사용하여 가상 머신을 백업하고 복원하는 옵션을 제공합니다.
 
-**참고:** 2개의 Microsoft Windows 가상 머신을 사용하도록 인스턴스를 구성하는 경우 2개의 Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스 및/또는 Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스를 사용하십시오. 가상 머신을 활성화할 수 있는 30일의 기간이 제공됩니다.
+두 개의 Microsoft Windows 가상 머신을 사용하도록 인스턴스를 구성하는 경우 두 개의 Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스 및/또는 Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스를 사용하십시오. 가상 머신을 활성화할 수 있는 30일의 기간이 제공됩니다.
+{:note}
 
 자세한 정보는 [VMware Federal 인스턴스 주문](../vcenter/vc_fed_orderinginstance.html#network-interface-settings)의 *네트워크 인터페이스 설정* 절을 참조하십시오.
 

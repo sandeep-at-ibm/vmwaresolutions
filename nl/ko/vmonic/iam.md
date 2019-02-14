@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -60,7 +60,7 @@ lastupdated: "2018-11-05"
 
 ## IBM Cloud 계정으로 기존 인스턴스 마이그레이션
 
-IAM과 {{site.data.keyword.vmwaresolutions_short}}의 통합으로 인해, {{site.data.keyword.cloud}} 계정에서 V2.5 이상 릴리스에 배치된 인스턴스는 자동으로 계정에 추가되며 IAM에 의해 관리됩니다.
+IAM과 {{site.data.keyword.vmwaresolutions_short}}의 통합으로 인해, {{site.data.keyword.cloud_notm}} 계정에서 V2.5 이상 릴리스에 배치된 인스턴스는 자동으로 계정에 추가되며 IAM에 의해 관리됩니다.
 
 V2.4 이하 릴리스에서 배치된 기존 인스턴스의 경우에는 IAM-사용 관리를 위해 지정된 {{site.data.keyword.cloud_notm}} 계정으로 이를 마이그레이션할 수 있습니다. 자세한 정보는 다음 주제를 참조하십시오.
 * [IBM Cloud 계정으로 V2.5 이전 vCenter Server 인스턴스 마이그레이션](../vcenter/vc_addinstancetousraccount.html)

@@ -2,35 +2,42 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-24"
+lastupdated: "2019-01-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # ライセンスと BYOL に関するよくある質問
 
 {{site.data.keyword.vmwaresolutions_full}} のライセンス持ち込み (BYOL) 機能など、ライセンスに関するよくある質問への回答をご覧ください。
 
 ## BYOL とは何ですか?
+{: faq}
 
-BYOL (Bring Your Own License) は、V1.8 以降のリリースの VMware Cloud Foundation インスタンス、および V2.0 以降のリリースの vCenter Server と vSphere クラスターで使用できる機能です。 BYOL を使用すると、所有している VMware ライセンスを、インスタンスの注文時に以下の 1 つ以上の VMware ソフトウェア・コンポーネントに使用できます。
+ライセンス持ち込み (BYOL) は、V1.8 以降の VMware Cloud Foundation インスタンスと、V2.0 以降の VMware vCenter Server および VMware vSphere クラスターで使用できる機能です。 BYOL を利用すると、所有している VMware ライセンスを、以下の 1 つ以上の VMware ソフトウェア・コンポーネントに使用できます。
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
 * VMware vSAN
 
-自分で所有しているライセンスを VMware コンポーネントで使用することを選択し、有効なライセンス・キーを提供する場合、そのコンポーネントのライセンスは IBM から注文されません。そのコンポーネントの月単位のライセンス料金は、{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントに請求されません。
+自分で所有しているライセンスを VMware コンポーネントで使用することを選択し、有効なライセンス・キーを提供する場合、そのコンポーネントのライセンスは IBM から注文されません。そのコンポーネントの月単位のライセンス料金は、{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントに請求されません。
 
-**注:** ビジネス・パートナーであるユーザーは、BYOL 機能を使用できません。
+ビジネス・パートナーであるユーザーは、BYOL 機能を使用できません。
+{:note}
 
 ## VMware vSphere on IBM Cloud を通して注文されたライセンスとコンポーネントの管理はどこで行うのでしょうか?
 
 VMware vSphere on {{site.data.keyword.cloud_notm}} で新規クラスター作成の注文を実行すると、VMware ライセンス、ESXi サーバー、およびその他のネットワーキング・コンポーネントが提供されます。これらは、{{site.data.keyword.slportal}}から管理できます。
 
-デプロイメント後に、保管された構成を使用して新規クラスターを拡張するには、{{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスしてください。 拡張方法について詳しくは、[既存の vSphere クラスターの拡張](../vsphere/vs_scalingexistingclusters.html)を参照してください。
+デプロイメント後に、保管された構成を使用して新規クラスターを拡張するには、{{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスしてください。 詳しくは、[既存の vSphere クラスターの拡張](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)を参照してください。
 
-## BYOL にはどのエディションのライセンスと CPU 数が必要ですか?
+## BYOL を行うために必要なライセンス・エディションと CPU は何ですか?
 
 BYOL のライセンス・エディションには、以下の要件が適用されます。
 
@@ -64,21 +71,28 @@ BYOL のライセンス・エディションには、以下の要件が適用さ
 
 はい。 どの VMware コンポーネントも CPU ごとにライセンスが 1 つ必要です。 現在、すべての vCenter Server サーバーと Cloud Foundation サーバーは CPU を 2 つ使用します。 そのため、サーバーごとにライセンスが 2 つ必要です。 基本インスタンスと、将来的にインスタンスに追加する拡張ノードに対応できるライセンス・キーを提供することをお勧めします。
 
-## BYOL 機能を使用する場合に SDDC Manager ライセンスは提供できますか?
+## BYOL 機能を使用する場合に SDDC Manager ライセンスは自分で提供できますか?
 
 いいえ。VMware と IBM の契約により、IBM はクライアントの実際のライセンス・キーを許諾する必要があります。 Cloud Foundation のデプロイメントには SDDC Manager のライセンスが含まれていますが、SDDC Manager のライセンス・キー・ファイルを許諾してそれらを BYOL で使用できるか検証することはできません。 したがって、SDDC Manager ライセンス料の請求は、どのインスタンスについても IBM が行います。 SDDC Manager ライセンスは、Cloud Foundation インスタンスの全体のライセンス料金の一部です。
 
 ## 一部の VMware コンポーネントでは BYOL 機能を使用して、他の VMware コンポーネントでは月単位のライセンスを購入することはできますか?
 
-はい。 4 つの VMware コンポーネントのうち、BYOL 機能を使用するものとライセンスを購入するものを任意に組み合わせられます。 {{site.data.keyword.vmwaresolutions_short}} コンソールで、vCenter Server または Cloud Foundation インスタンスを注文する際に、簡単にライセンス・オプションを選択できます。 最初のインスタンスの注文時のライセンス・オプションが、そのインスタンスの存続期間にわたって適用されます。
+はい。 4 つの VMware コンポーネントのうち、BYOL 機能を使用するものとライセンスを購入するものを任意に組み合わせられます。 {{site.data.keyword.vmwaresolutions_short}} コンソールで、インスタンスを注文する際に、簡単にライセンス・オプションを選択できます。 最初のインスタンスの注文時のライセンス・オプションが、そのインスタンスの存続期間にわたって適用されます。
 
 ## 特定の VMware コンポーネントで、一部のライセンスに BYOL を使用し、他のライセンスを IBM から購入することはできますか?
 
-はい。 特定の VMware コンポーネントに BYOL を選択した場合は、新規クラスターを作成するときに、新規 BYOL キーを入力するか、既存の BYOL キーを使用し続けるか、そのクラスター用に IBM 提供のライセンスを購入するかを選択できます。 現在、クラスター単位でライセンスを適用できるのは、VMware vSphere Enterprise と VMware vSAN だけです。
+はい。 クラスターを作成するときに、特定の VMware コンポーネントに BYOL を選択した場合、以下の方法を選択できます。
+* 新規 BYOL キーを入力する
+* 既存の BYOL キーを引き続き使用する
+* そのクラスター用に IBM 提供のライセンスを購入する
 
-## 新規クラスターを作成するときに BYOL を使用できますか?
+現時点では、クラスター単位でライセンスを適用できるのは、VMware vSphere Enterprise と VMware vSAN だけです。
 
-はい。 新規クラスターの作成時には、既存の BYOL ライセンスを BYOL することも、新規 BYOL を入力することもできます。 また、新規クラスターの作成時に、IBM 提供のサブスクリプション・ライセンスを購入することもできます。 現在、クラスター単位でライセンスを適用できるのは、VMware vSphere Enterprise と VMware vSAN だけです。
+## クラスターを作成するときに BYOL を使用できますか?
+
+はい。 クラスターの作成時には、既存の BYOL ライセンスを使用して BYOL を利用することも、新規 BYOL を入力して BYOL を利用することもできます。 また、クラスターの作成時に、IBM 提供のサブスクリプション・ライセンスを購入することもできます。
+
+現時点では、クラスター単位でライセンスを適用できるのは、VMware vSphere Enterprise と VMware vSAN だけです。
 
 ## BYOL ライセンスを管理するにはどうすればよいですか?
 
@@ -93,7 +107,7 @@ BYOL のライセンス・エディションには、以下の要件が適用さ
 ライセンス・キーで使用可能な CPU の数を検出するには、以下の手順を実行します。
 1. **「デプロイ済みインスタンス」**ページに進みます。
 2. インスタンスを見つけてクリックします。
-3. **「インフラストラクチャー」**タブで、ライセンス・キャパシティーを確認するクラスターをクリックします。 
+3. **「インフラストラクチャー」**タブで、ライセンス・キャパシティーを確認するクラスターをクリックします。
    使用可能な CPU の数が、**「ユーザー提供ライセンス」**表にリストされます。
 
 ## BYOL ライセンス・オプションを選択した場合、IBM からサポートを受けられますか?
@@ -110,7 +124,7 @@ BYOL 機能を導入した場合、手動プロセスを引き続き使用する
 
 ## VMware vRealize Automation、VMware vRealize Operations、VMware vRealize Log Insight などの他の VMware 製品でも BYOL はサポートされますか?
 
-いいえ。これらの VMware 製品はインスタンスのデプロイメントに含まれないのでサポートされません。 これらの VMware 製品は、一般に初期デプロイメントに追加してインストールされるため、クライアントまたはエージェントが、インストールおよびライセンス適用を行う必要があります。
+いいえ。これらの VMware 製品はインスタンスのデプロイメントに含まれないのでサポートされません。 これらの VMware 製品は、一般に初期デプロイメントに追加してインストールされるため、クライアントまたはエージェントが、製品のインストールとライセンス適用を実行する必要があります。
 
 ## vCenter Server with Hybridity Bundle と一緒に NFS ストレージを注文できますか?
 
@@ -140,8 +154,7 @@ vCenter Server with Hybridity Bundle には NSX Advanced が含まれていま�
 
 ### 関連リンク
 
-* [Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html)
-* [Cloud Foundation インスタンス](../sddc/sd_cloudfoundationoverview.html)
-* [コンソールへのアクセス](loginmethod.html)
-* [IBM サポートへのお問い合わせ](trbl_support.html)
-* [vRealize Automation](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/vRealizeAutomation){:new_window}
+* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation インスタンス](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [コンソールへのアクセス](/docs/services/vmwaresolutions/vmonic/loginmethod.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -2,19 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2019-01-23"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # vCenter Server with Hybridity Bundle インスタンスのネットワーキングに関する考慮事項
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle インスタンスのネットワーキングの考慮事項と要件についての詳細情報を以下に示します。 インスタンスが正常に機能するように、要件を満たしていることを確認してください。
 
 ## vCenter Server with Hybridity Bundle インスタンスのネットワーキング・コンポーネント
+{: faq}
 
-vCenter Server with Hybridity Bundle インスタンス内に組み込まれているネットワーキング・コンポーネントを確認するには、[vCenter Server with Hybridity Bundle インスタンスの技術仕様](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)を参照してください。
+vCenter Server with Hybridity Bundle インスタンス内に組み込まれているネットワーキング・コンポーネントを確認するには、[vCenter Server with Hybridity Bundle インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)を参照してください。
 
 ## ファイアウォールに関する考慮事項
 
@@ -24,7 +27,7 @@ vCenter Server with Hybridity Bundle インスタンス内に組み込まれて�
 
 vCenter Server インスタンスのデプロイメント中に、インスタンスで VMware NSX が注文され、インストールされ、ライセンスを適用され、構成されます。 また、NSX Manager、NSX Controllers、および NSX Transport Zone がセットアップされ、各 ESXi サーバーに NSX コンポーネントが構成されます。
 
-ワークロード仮想マシン (VM) で使用するための NSX Edge Services Gateway もデプロイされます。 詳しくは、[ユーザー管理の NSX ESG を VM で使用するためのネットワークの構成](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)を参照してください。
+ワークロード仮想マシン (VM) で使用するための NSX Edge Services Gateway もデプロイされます。 詳しくは、[ユーザー管理の NSX ESG を VM で使用するためのネットワークの構成](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)を参照してください。
 
 ## NSX コンポーネントのパスワードを変更する際の考慮事項
 
@@ -38,4 +41,4 @@ NSX Manager、NSX Controllers、NSX Edges のパスワードを変更する前�
 * [NSX の概要](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
 * [NAT ルールの管理](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}
-* [VMware HCX on {{site.data.keyword.cloud_notm}} の概要](../services/hcx_considerations.html)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/hcx_considerations.html)

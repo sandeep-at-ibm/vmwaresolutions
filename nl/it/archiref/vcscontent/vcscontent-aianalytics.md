@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -47,7 +47,7 @@ API. Per fortuna, Jane usava [API
 Connect](https://console.cloud.ibm.com/catalog/services/api-connect).
 Inizialmente, utilizzava API Connect per semplificare la risposta dal
 servizio azionario originale poiché era un po' complicato ricevere e
-formattare i dati che desiderava attraverso l'API non elaborata che le era stata fornita. 
+formattare i dati che desiderava attraverso l'API non elaborata che le era stata fornita.
 
 Adesso, Jane è contenta perché quando ha modificato il servizio azionario, ha semplicemente cambiato il modo in cui è associato all'API semplificata che ha creato
 e non è stato nemmeno necessario riavviare il suo codice. La soluzione Stock Trader ha continuato
@@ -59,4 +59,5 @@ chi utilizza la sua API semplificata.
 
 ### Link correlati
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-26"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -26,12 +26,12 @@ FortiGate Security Appliance on {{site.data.keyword.cloud}} サービスを注�
 
 ### 関連リンク
 
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の概要](fsa_considerations.html)
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の管理](managingfsa.html)
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](../sddc/sd_addingremovingservices.html)
-* [vCenter Server インスタンスのサービスの注文、表示、削除](../vcenter/vc_addingremovingservices.html)
-* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](../vcenter/vc_hybrid_addingremovingservices.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/fsa_considerations.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managingfsa.html)
+* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Fortinet Web サイト](https://www.fortinet.com/){:new_window}
 * [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

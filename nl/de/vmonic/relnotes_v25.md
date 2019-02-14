@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-08-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Releaseinformationen für V2.5
 
@@ -20,7 +24,7 @@ Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserung
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Weitere Informationen enthält der Abschnitt [Gegenmaßnahmen für Sicherheitslücken "Spectre" und "Meltdown"](../vmonic/trbl_fix_spectre.html).
+Weitere Informationen enthält der Abschnitt [Gegenmaßnahmen für Sicherheitslücken "Spectre" und "Meltdown"](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
 
 ## NSX-Komponentenaktualisierung
 
@@ -32,9 +36,10 @@ Mit diesem Release wird VMware NSX for vSphere 6.4.1 für neue Bereitstellungen 
 
 Ab Release V2.5 führen die Services "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" und "Veeam on {{site.data.keyword.cloud_notm}}", wenn sie bereitgestellt werden, keine Vorkonfiguration der Sicherung von VMs mehr durch. Durch diese Änderung können Sie die ordnungsgemäße Konfiguration aller Aspekte Ihrer Sicherungsjobs, wie Zeitplan, Aufbewahrungsdauer, Verwendung der Deduplizierung, Überwachung und Alerts sowie Management von Verschlüsselungsschlüsseln sicherstellen. Darüber hinaus wird die IBM CloudDriver-VM nicht mehr als persistenter Dateiserver für NSX-Sicherungen konfiguriert.
 
-Sie sind für die Konfiguration, Verwaltung und Überwachung sämtlicher Softwarekomponenten verantwortlich. Dies schließt die Sicherung der Managementinfrastruktur und Workloads sowie die Gewährleistung der Verfügbarkeit dieser Komponenten ein. Weitere Informationen finden Sie unter [Komponenten sichern](../archiref/solution/solution_backingup.html#backing-up-components).
+Sie sind für die Konfiguration, Verwaltung und Überwachung sämtlicher Softwarekomponenten verantwortlich. Dies schließt die Sicherung der Managementinfrastruktur und Workloads sowie die Gewährleistung der Verfügbarkeit dieser Komponenten ein. Weitere Informationen finden Sie unter [Komponenten sichern](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#backing-up-components).
 
-**Hinweis:** Diese Änderung wirkt sich nicht auf Instanzen aus, die vor Version 2.5 bereitgestellt wurden und für die bereits der Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" oder "Veeam on {{site.data.keyword.cloud_notm}}" installiert wurde.
+Diese Änderung wirkt sich nicht auf Instanzen aus, die vor Version 2.5 bereitgestellt wurden und für die bereits der Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" oder Veeam on {{site.data.keyword.cloud_notm}} installiert wurde.
+{:note}
 
 ## IBM CloudDriver-Ausfallsicherheit
 
@@ -50,8 +55,8 @@ Ab dem Release von Version 2.5 ist {{site.data.keyword.vmwaresolutions_short}} i
 * Bei Instanzen, die in Version 2.4 und früheren Releases bereitgestellt wurden, können Sie diese auf ein {{site.data.keyword.cloud_notm}}-Konto migrieren und anschließend ebenfalls mithilfe von IAM verwalten.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Benutzer für den Zugriff auf Services und Ressourcen einladen](../vmonic/iamuserinvite.html)
-* [Benutzerzugriff mit IAM verwalten](../vmonic/iam.html)
+* [Benutzer für den Zugriff auf Services und Ressourcen einladen](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [Benutzerzugriff mit IAM verwalten](/docs/services/vmwaresolutions/vmonic/iam.html)
 
 ## Änderungen an Benutzerkonten und -gruppen für VMware vCenter Server- und VMware Cloud Foundation-Instanzen
 
@@ -59,12 +64,14 @@ Die Benutzergruppe **ic4v-vCenter** wurde auf dem Microsoft Active Directory-Ser
 
 Bearbeiten Sie keine globalen Berechtigungen der Gruppe **ic4v-vCenter** auf der Seite **Benutzer und Gruppen** auf dem VMware vSphere-Web-Client. Dies könnte sich auf Managementoperationen auswirken.
 
-Verwenden Sie für Cloud Foundation-Instanzen die Hostbenutzer-ID **customerroot** anstelle der Hostbenutzer-ID **root**. Verwenden Sie die Hostbenutzer-ID **root** weiterhin für vCenter Server-Instanzen.
+Verwenden Sie für Cloud Foundation-Instanzen die Hostbenutzer-ID **customerroot** anstelle der Hostbenutzer-ID **root**.
+
+Verwenden Sie für vCenter Server-Instanzen weiterhin die Hostbenutzer-ID **root**. Die Hostbenutzer-ID **ic4vroot** wurde ausschließlich zur Verwendung durch IBM erstellt. 
 
 Weitere Informationen zu Benutzerkonten finden Sie in den folgenden Abschnitten:
 
-* [Hinweise zum Ändern von vCenter Server-Artefakten](../vcenter/vcenter_chg_impact.html)
-* [Hinweise zum Ändern von Cloud Foundation-Artefakten](../sddc/cf_chg_impact.html)
+* [Hinweise zum Ändern von vCenter Server-Artefakten](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
+* [Hinweise zum Ändern von Cloud Foundation-Artefakten](/docs/services/vmwaresolutions/sddc/cf_chg_impact.html)
 
 ## Updates für Add-on-Services
 
@@ -72,9 +79,9 @@ Weitere Informationen zu Benutzerkonten finden Sie in den folgenden Abschnitten:
 
 Der Service "{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}}" ist nun für vCenter Server-Instanzen verfügbar, die in V2.5 oder höheren Releases bereitgestellt werden bzw. für die ein Upgrade auf eine entsprechende Version durchgeführt wurde.
 
-{{site.data.keyword.cloud_notm}} Private Hosted stellt die Leistungsfähigkeit von Mikroservices und Containern in Ihrer VMware-Umgebung unter {{site.data.keyword.cloud_notm}} zur Verfügung. Mit diesem Service können Sie den Einsatz des bereits vertrauten VMware- und {{site.data.keyword.cloud_notm}} Private-Betriebsmodells und der zugehörigen Tools von Ihrem lokalen Standort (On-Premises) auf {{site.data.keyword.cloud_notm}}-Umgebungen ausdehnen.
+{{site.data.keyword.cloud_notm}} Private Hosted stellt die Leistungsfähigkeit von Mikroservices und Containern in Ihrer VMware-Umgebung unter {{site.data.keyword.cloud_notm}} zur Verfügung. Mit diesem Service können Sie den Einsatz des bereits vertrauten VMware- und {{site.data.keyword.cloud_notm}} Private-Betriebsmodells und der zugehörigen Tools von Ihrem lokalen Standort (On-Premises) auf {{site.data.keyword.cloud_notm}}-Umgebungen erweitern.
 
-Sie können diesen Service anfordern, nachdem Sie Ihre vCenter Server-Instanz bestellt haben. Weitere Informationen hierzu finden Sie im Abschnitt zum [Anfordern von {{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html).
+Sie können diesen Service anfordern, nachdem Sie Ihre vCenter Server-Instanz bestellt haben.
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -86,13 +93,13 @@ Sie können jetzt bis zu zehn Sicherungsdatenspeicher mit einer Größe von bis 
 
 Ein neuer Endpunkt ist jetzt in Deutschland für den Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}" verfügbar.
 
-Weitere Informationen enthält der Abschnitt zur [Konfiguration des Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}"](../services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration).
+Weitere Informationen enthält der Abschnitt zur [Konfiguration des Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}"](/docs/services/vmwaresolutions/services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration).
 
 ## Neue und aktualisierte Dokumentation
 
 ### Dokumentation zu angehängtem Speicher
 
-Das technische Dokument zu angehängtem Speicher (Attached Storage) für vCenter Server on IBM Cloud ist jetzt im Abschnitt *Referenzinformationen* der Benutzerdokumentation verfügbar. Dieses Architekturreferenzdokument ist nur in Englisch verfügbar. Weitere Informationen finden Sie in [Angehängter Speicher für vCenter Server on IBM Cloud](../archiref/attached-storage/storage-benefits.html).
+Das technische Dokument zu angehängtem Speicher (Attached Storage) für vCenter Server on IBM Cloud ist jetzt im Abschnitt *Referenzinformationen* der Benutzerdokumentation verfügbar. Weitere Informationen finden Sie in [Angehängter Speicher für vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/attached-storage/storage-benefits.html).
 
 ### Technische Spezifikationen
 
@@ -104,9 +111,9 @@ Die Informationen zu Services wurden verbessert, sodass sich die Unterstützung 
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 
-* [Verfügbare Services für vCenter Server-Instanzen](../vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
-* [Verfügbare Services für vCenter Server with Hybridity Bundle-Instanzen](../vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [Verfügbare Services für Cloud Foundation-Instanzen](../sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
+* [Verfügbare Services für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
+* [Verfügbare Services für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [Verfügbare Services für Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
 
 ## Updates und Erweiterungen der Benutzerschnittstelle
 

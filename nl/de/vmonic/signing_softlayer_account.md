@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,30 +12,18 @@ lastupdated: "2018-11-05"
 
 ## Für ein IBM Cloud-Konto registrieren
 
-Sie können sich für ein {{site.data.keyword.cloud}}-Konto registrieren, indem Sie eine vorhandene **IBMid** verwenden oder eine neue **IBMid** erstellen. Weitere Informationen zur Registrierung für ein {{site.data.keyword.cloud_notm}}-Konto finden Sie unter [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](../../../account/adminpublic.html).
+Sie können sich für ein {{site.data.keyword.cloud}}-Konto registrieren, indem Sie eine vorhandene **IBMid** verwenden oder eine neue **IBMid** erstellen. Weitere Informationen zur Registrierung für ein {{site.data.keyword.cloud_notm}}-Konto finden Sie in [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](/docs/account/adminpublic.html). 
 
 ## Für ein IBM Cloud-Infrastrukturkonto (SoftLayer-Konto) registrieren
 
-Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer), das früher als IBM SoftLayer-Konto bezeichnet wurde, wird zur Anmeldung am Kundenportal für die {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet, das weitere Funktionen zur Verwaltung von Infrastrukturprodukten und -services zur Verfügung stellt. Sie können sich für ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) registrieren, indem Sie Ihr {{site.data.keyword.cloud_notm}}-Konto in ein nutzungsabhängiges Konto aktualisieren.
+Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer), das früher als IBM SoftLayer-Konto bezeichnet wurde, wird zur Anmeldung am Kundenportal für die {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet, das weitere Funktionen zur Verwaltung von Infrastrukturprodukten und -services zur Verfügung stellt.
 
-### Vorgehensweise zur Registrierung für ein IBM Cloud-Konto
-
-1. Melden Sie sich bei der {{site.data.keyword.vmwaresolutions_short}}-Konsole mit Ihrer **IBMid** an.
-2. Klicken Sie auf der rechten Seite des Banners auf **Verwalten > Abrechnung und Nutzung > Abrechnung**.
-3. Klicken Sie auf **Kreditkarte hinzufügen**.
-4. Geben Sie die Abrechnungs- und Kreditkarteninformationen ein.
-5. Lesen Sie die Bedingungen für die Cloud-Services. Vergewissern Sie sich, dass Sie mit den Bedingungen einverstanden sind, bevor Sie das Upgrade durchführen.
-6. Wählen Sie das Kontrollkästchen **Ich akzeptiere die Bedingungen für Cloud-Services** aus.
-7. Klicken Sie auf **Weiter**.
-8. Prüfen Sie die persönlichen Daten, die Rechnungsadresse und die Kreditkarteninformationen.
-9. Klicken Sie auf **Fertig**. Sie werden per E-Mail benachrichtigt, wenn Ihre Kontoeinrichtung verarbeitet wird.
-10. Sobald Sie per E-Mail benachrichtigt werden, dass Ihr Konto bereit ist, rufen Sie das {{site.data.keyword.slportal}} auf und klicken Sie auf **Mit IBMid anmelden**.
-    Sie werden dann automatisch angemeldet.
+Sie können sich für ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) registrieren, indem Sie Ihr {{site.data.keyword.cloud_notm}}-Konto in ein nutzungsabhängiges Konto aktualisieren. Weitere Informationen finden Sie unter [Wie aktualisiere oder ändere ich meinen Kontotyp?](/docs/account/account_faq.html)
 
 ### Zugehörige Links
 
-* [Häufig gestellte Fragen](faq.html)
-* [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](slaccountrequirement.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)
 * [Video - Erstellung eines {{site.data.keyword.cloud_notm}}-Kontos](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
-* [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
-* [Zur IBMid wechseln und Konten verknüpfen](../../../admin/softlayerlink.html){:new_window}
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Zur IBMid wechseln und Konten verknüpfen](/docs/admin/softlayerlink.html){:new_window}

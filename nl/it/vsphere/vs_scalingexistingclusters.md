@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,8 +19,8 @@ Puoi ridimensionare un cluster VMware vSphere che hai ordinato o salvato nella c
 ## Requisiti
 
 Assicurati di aver completato le seguenti attività:
-*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](../vmonic/useraccount.html).
-*  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per i cluster vSphere](vs_planning.html).
+*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html#managing-user-accounts-and-settings).
+*  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per i cluster vSphere](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
 *  Hai ricevuto un'e-mail con la conferma che il cluster che vuoi ridimensionare è pronto per l'utilizzo.
 
 ## Procedura per ridimensionare i cluster esistenti
@@ -46,6 +46,6 @@ I cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation,
 
 ### Link correlati
 
-* [Ordine di nuovi cluster vSphere](vs_orderinginstances.html)
-* [Ordine di cluster vSphere in base alle configurazioni esistenti](vs_orderingbasedonexistingconfig.html)
-* [Ridimensionamento di cluster creati all'esterno della console](vs_orderingforclustersoutside.html)
+* [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Ordine di cluster vSphere in base alle configurazioni esistenti](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [Ridimensionamento di cluster creati all'esterno della console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

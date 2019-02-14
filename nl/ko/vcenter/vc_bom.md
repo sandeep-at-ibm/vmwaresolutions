@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -36,9 +36,9 @@ VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 �
 
 |제조업체  |컴포넌트                      |버전       |
 |:------------- |:------------------------------ |:------------- |
-|VMware       |vSphere ESXi                    | 6.5 Update 2c(최대 ESXi650-201808001 패치 레벨) |
-|VMware       |vCenter Server Appliance        | 6.5 Update 2c |
-|VMware       |Platform Services Controller    | 6.5 Update 2c |
+|VMware       |vSphere ESXi                    | 6.5 Update P3(6.5.0-10884925 빌드) |
+|VMware       |vCenter Server Appliance        | 6.5 U2d(6.5.0-10964411 빌드) |
+|VMware       |Platform Services Controller    | 6.5 U2d(6.5.0-10964411 빌드) |
 |VMware       |vSAN                            |6.6.1        |
 |VMware       |NSX for vSphere                 | 6.4.1        |
 |Microsoft    |Windows Server Standard 에디션 |2012R2       |

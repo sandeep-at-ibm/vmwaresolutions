@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-08-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Notas del release para V2.5
 
@@ -34,7 +38,8 @@ A partir del release V2.5, los servicios de IBM Spectrum Protect Plus on {{site.
 
 Usted es responsable de la configuración, la gestión y la supervisión de todos los componentes de software, incluida la copia de seguridad y la disponibilidad de la infraestructura de gestión y las cargas de trabajo. Para obtener más información, consulte [Copia de seguridad de componentes](../archiref/solution/solution_backingup.html#backing-up-components).
 
-**Nota:** Este cambio no afecta a las instancias desplegadas antes de la V2.5 que ya tienen instalado el servicio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}.
+Este cambio no afecta a las instancias desplegadas antes de la V2.5 que ya tienen instalado el servicio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}.
+{:note}
 
 ## Resiliencia de IBM CloudDriver
 
@@ -74,7 +79,7 @@ El servicio {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on
 
 {{site.data.keyword.cloud_notm}} Private Hosted incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware e {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}.
 
-Puede solicitar este servicio después de solicitar la instancia de vCenter Server. Para obtener más información, consulte [Solicitud de {{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html).
+Puede solicitar este servicio después de solicitar la instancia de vCenter Server.
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -92,7 +97,7 @@ Para obtener más información, consulte [Configuración del servicio de KMIP fo
 
 ### Documentación de almacenamiento adjunto
 
-El almacenamiento adjunto para la documentación técnica de vCenter Server on IBM Cloud ahora está disponible en la sección *Referencia* de la región documentación de usuario. Este documento de arquitectura de referencia solo está disponible en inglés. Para obtener más información, consulte [Almacenamiento adjunto para vCenter Server on IBM Cloud](../archiref/attached-storage/storage-benefits.html).
+El almacenamiento adjunto para la documentación técnica de vCenter Server on IBM Cloud ahora está disponible en la sección *Referencia* de la región documentación de usuario. Para obtener más información, consulte [Almacenamiento adjunto para vCenter Server on IBM Cloud](../archiref/attached-storage/storage-benefits.html).
 
 ### Especificaciones técnicas
 

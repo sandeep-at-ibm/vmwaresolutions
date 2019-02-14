@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ Utilizza questa procedura per eliminare le istanze HCX on {{site.data.keyword.cl
 
 ## Prima di iniziare
 
-Assicurati di aver esaminato tutte le considerazioni in [Considerazioni sull'eliminazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](../services/standalone_considerations.html).
+Assicurati di aver esaminato tutte le considerazioni in [Considerazioni sull'eliminazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services/standalone_considerations.html).
 
 ## Procedura per eliminare le istanze VMware HCX on IBM Cloud in loco
 
@@ -26,7 +26,7 @@ Assicurati di aver esaminato tutte le considerazioni in [Considerazioni sull'eli
 
 ### Link correlati
 
-* [Ordine di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](standalone_orderingserviceinstances.html)
-* [Visualizzazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](standalone_viewingserviceinstances.html)
-* [Glossario dei termini HCX](hcx_glossary.html)
+* [Ordine di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
+* [Visualizzazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
+* [Glossario dei termini HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -115,7 +115,7 @@ machine learning. Per gli skater, ogni sfumatura del movimento complesso è
 incorporata nella nomenclatura stessa. In effetti, questo linguaggio è così solido
 che è stato adottato non solo dagli snowboarder, ma anche dai surfisti.
 
-Tuttavia, nonostante tutta questa complessità e potenza, la codificazione del linguaggio
+Tuttavia, nonostante tutta questa complessità e potenza, la codifica del linguaggio
 è semplice e concisa. Ogni *trick di base* ha un componente *direzionale* e
 *rotazionale*, insieme a un *atterraggio*, che determina se
 e come si concatena con il successivo trick di base per formare delle combinazioni;
@@ -123,7 +123,7 @@ questi sono i quattro *elementi fondamentali*. Vengono aggiunti altri due *modif
 un *turn prefix* per orientare la rotazione del rider (in senso orario o
 antiorario) e un altro componente *varial* per specificare come
 ruota la tavola, rispetto al corpo (verso l'interno o verso l'esterno). Utilizzando questa
-codificazione, è possibile applicare in modo ricorsivo una serie di regole concisa per consentire
+codifica , è possibile applicare in modo ricorsivo una serie di regole concisa per consentire
 combinazioni di qualsiasi lunghezza.
 
 ## Ulteriori variabili di ambiente
@@ -173,4 +173,5 @@ Niente di tutto ciò potrebbe essere ottenuto senza {{site.data.keyword.cloud}}.
 
 ### Link correlati
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

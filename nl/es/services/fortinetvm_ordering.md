@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-10-29"
 
@@ -60,7 +60,7 @@ El modelo de licencia de FortiGate Virtual Appliance on {{site.data.keyword.clou
         <dt class="dt dlterm">Standard FW</dt>
         <dd class="dd">Este paquete incluye Stateful Packet Inspection, VLAN Protection y Advanced Logging, Ingress and Egress Firewall Rules, SSL/IPSec VPN Termination y soporte las 24 horas.</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
-        <dd class="dd">Este paquete incluye todos los servicios de cortafuegos estándar, además del servicio Advanced Malware Protection (AMP) (que incluye Antivirus, Botnet IP/Domain Service, Mobile Malware Security, FortiSandbox Cloud, Virus Outbreak Protection Service y Content Disarm & Reconstruct), así como filtrado web, IPS, Antispam, control de aplicaciones y servicios de FortiCare.</dd>
+        <dd class="dd">Este paquete incluye todos los servicios de cortafuegos estándar además del servicio de protección de malware avanzado (AMP). Incluye Antivirus, Botnet IP/Domain Service, Mobile Malware Security, FortiSandbox Cloud, Virus Outbreak Protection Service y Content Disarm & Reconstruct. También incluye servicios de filtrado de web, IPS, antispam, control de aplicaciones y FortiCare.</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>
         <dd class="dd">Este paquete incluye todos los servicios de cortafuegos estándar y los servicios UTM, además de los siguientes servicios:<ul><li>Cloud Access Security Broker (CASB): este servicio proporciona visibilidad, conformidad, seguridad de datos y protección frente a amenazas para los servicios basados en la nube.</li><li>Industrial Security: este servicio ofrece firmas para los protocolos ICS/SCADA más utilizados.</li><li>Security Rating: este servicio ofrece funciones de auditoría para identificar las principales vulnerabilidades y los puntos débiles de la configuración e implementar las recomendaciones de las mejores prácticas.</li></ul></dd>
 </dl>

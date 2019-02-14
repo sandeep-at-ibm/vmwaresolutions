@@ -2,13 +2,21 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-12-20"
 
 ---
 
-# KMIP for VMware on IBM Cloud bestellen
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+
+# KMIP for VMware on IBM Cloud bestellen - nicht mehr verwendet
+
+Die aktuelle Version von KMIP for VMware on IBM Cloud wird nicht weiter unterstützt. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html).
+{:deprecated}
 
 Sie können den Service "KMIP for VMware on {{site.data.keyword.cloud}}" durch Bestellen einer neuen Instanz, die den Service beinhaltet, oder durch Hinzufügen des Service zu Ihrer vorhandenen Instanz bestellen.
 
@@ -61,16 +69,14 @@ Klicken Sie auf **Abrufen**, um eine Liste der verfügbaren IBM Key Protect Serv
 
 Klicken Sie auf **Abrufen**, um den Stammschlüssel des Kunden abzurufen, der in der ausgewählten IBM Key Protect-Instanz gespeichert ist.
 
-
-
 ### Zugehörige Links
 
 * [KMIP for VMware on {{site.data.keyword.cloud_notm}} - Übersicht](kmip_considerations.html)
 * [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
 * [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
 * [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_hybrid_addingremovingservices.html)
-* [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/services/keymgmt/index.html#getting-started-with-key-protect)
-* [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect?&language=javascript_jquery#introduction)
+* [{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse](../vmonic/at-events.html)
+* [IBM Key Protect for {{site.data.keyword.cloud_notm}}](../../keymgmt/index.html)
 * [vSphere Security](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)
 * [Häufig gestellte Fragen](../vmonic/faq.html)
 * [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)

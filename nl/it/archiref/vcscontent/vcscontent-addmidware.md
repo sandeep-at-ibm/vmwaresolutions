@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ Ora che Stock Trader è in un contenitore e Jane è soddisfatta
 degli attuali microservizi, lei e Todd lavorano su come migliorare
 l'applicazione con funzionalità aggiuntive. Eseguendo il refactoring dei microservizi di Stock Trader
 per gestire una maggiore attività e scalabilità, entrambi vedono la
-necessità di aggiungere il middleware in {{site.data.keyword.cloud}} Private (ICP). Alcuni dei
+necessità di aggiungere il middleware in {{site.data.keyword.cloud}} Private. Alcuni dei
 middleware esistevano nel loro data center, quindi diventa più di un
 esercizio di trasformazione con qualche nuovo middleware aggiunto.
 
@@ -27,22 +27,20 @@ più semplice.
 
 ## Scelte dei contenuti
 
-ICP ha una vasta selezione di contenuti e sia Todd
-che Jane devono decidere quali si adattano meglio alle loro esigenze. Come Todd vede nel
-catalogo ICP, la maggior parte dei contenuti è disponibile per la prova,
-ma alcuni contenuti richiedono l'acquisto e il download da
-Passport Advantage.
+{{site.data.keyword.cloud_notm}} Private ha una vasta selezione di contenuti e sia Todd che Jane devono decidere quali si adattano meglio alle loro esigenze. Come Todd vede nel
+catalogo {{site.data.keyword.cloud_notm}} Private, la maggior parte dei contenuti è disponibile per la prova,
+ma alcuni contenuti richiedono l'acquisto e il download da Passport Advantage.
 
-* Toolchain & Runtime
-  -	UrbanCode Deploy
-  -	Microclimate
-  -	Jenkins (open source)
-  -	IBM WebSphere Liberty (MicroProfile, web Profile, Java Platform, Enterprise Edition Profile)
-  -	Open Liberty (open source)
-  -	Runtime Node.js (open source)
-  -	Runtime Swift (open source)
+* Toolchain e runtime
+  - UrbanCode Deploy
+  - Microclimate
+  - Jenkins (open source)
+  - IBM WebSphere Liberty (MicroProfile, Web Profile, Java Platform, Enterprise Edition Profile)
+  - Open Liberty (open source)
+  - Runtime Node.js (open source)
+  - Runtime Swift (open source)
   - nginx (open source)
-  -	IBM WebSphere Application Server for ICP VM Quickstarter Community education.
+  - IBM WebSphere Application Server for {{site.data.keyword.cloud_notm}} Private VM Quickstarter Community Edition.
 
 * Integrazione
   -	IBM Integration Bus
@@ -105,20 +103,20 @@ Passport Advantage.
 * Gestione multi-cloud
   -	{{site.data.keyword.cloud_notm}} Automation Manager
 
-* Watson 
+* Watson
   -	IBM Watson Compare & Comply: Element Classification
   -	Compliance Assist
 
 * Gestione
-  -	IBM Netcool - integrazione (Analisi per i servizi ICP – Eventi di registrazione e
+  -	IBM Netcool - integrazione (Analisi per i servizi {{site.data.keyword.icpfull_notm}} – Eventi di registrazione e
 avvisi di monitoraggio)
   - {{site.data.keyword.cloud_notm}} App Management 2018.2.0
-  -	IBM Netcool - integrazione (Analisi per gestire eventi ICP. Venduto con il prodotto IBM
+  -	IBM Netcool - integrazione (Analisi per gestire eventi {{site.data.keyword.icpfull_notm}}. Venduto con il prodotto IBM
 Netcool Insights)
   - {{site.data.keyword.cloud_notm}} Event Management for IBM
 Cloud Private (Con licenza ILAN per rilevamento e prova dal catalogo)
   - IBM Operations Analytics Predictive Insights Mediation Pack (Gestisci
-le metriche di monitoraggio ICP. Con licenza ILAN per rilevamento e prova dal
+le metriche di monitoraggio {{site.data.keyword.icpfull_notm}}. Con licenza ILAN per rilevamento e prova dal
 catalogo)  -	IBM Operations Analytics Predictive Insights Mediation Pack
 (Venduto con il prodotto Predictive Insights)
 
@@ -152,7 +150,7 @@ Per Stock Trader, Todd ha deciso di aggiungere tutto il middleware. Le seguenti 
 Todd inizia con Db2 perché lo stanno già utilizzando e possono
 dedicare un Db2 basato su contenitore per ogni soluzione.
 
-Dal momento che Todd ha preparato ICP, ha già definito la sua politica di sicurezza pod. Todd può concentrarsi sulla creazione di un segreto di pull dell'immagine docker:
+Dal momento che Todd ha preparato {{site.data.keyword.icpfull_notm}}, ha già definito la sua politica di sicurezza pod. Todd può concentrarsi sulla creazione di un segreto di pull dell'immagine docker:
 
 `kubectl create secret docker-registry db2dockerregistry
 --docker-username=dockeruser
@@ -162,7 +160,7 @@ Dal momento che Todd ha preparato ICP, ha già definito la sua politica di sicur
 Infine, poiché Todd ha deciso di utilizzare NFS, ha creato volumi NFS in base ai
 requisiti del file readme:
 
-Vai al dashboard ICP e crea il volume persistente. Quanto deve essere grande? Consulta il file
+Vai al dashboard {{site.data.keyword.icpfull_notm}} e crea il volume persistente. Quanto deve essere grande? Consulta il file
 readme per scoprirlo:
 
 `capacity=20Gi
@@ -201,7 +199,7 @@ la versione di sviluppo può essere avviata per ogni sviluppatore, risparmiando 
 traffico di produzione. L'installazione di MQ è abbastanza semplice. Todd crea
 l'archiviazione proprio come ha fatto con Db2 e quindi installa il grafico Helm.
 
-Dashboard ICP > Catalogo > inizia a digitare in MQ > seleziona
+Dashboard {{site.data.keyword.icpfull_notm}} > Catalogo > inizia a digitare in MQ > seleziona
 ibm-mqadvanced-server-dev Controlla il file readme e fai clic su Configure
 Fornisci o verifica i seguenti valori di input:
 
@@ -250,7 +248,7 @@ per puntare all'origine dati. È stato un buon
 inizio e l'applicazione di Jane ottiene immediatamente il valore dalla pianificazione
 e dall'orchestrazione di Kubernetes.
 
-Esistono molti altri vantaggi dall'ottimizzazione dei microservizi di Jane (ricodifica
+Esistono molti altri vantaggi dall'ottimizzazione dei microservizi di Jane (riesecuzione della codifica
 e creazione) per il mondo di Kubernetes.
 
 Per ottimizzare, Jane ha compiuto i seguenti passi:
@@ -269,7 +267,7 @@ in GitHub.
 
 Ora che Jane ha eseguito il refactoring dei microservizi di Stock Trader, ha bisogno di un modo
 per astrarre i nomi, gli ID utente e le password del servizio, in modo che la sua applicazione possa raccogliere dettagli univoci sul servizio quando viene distribuito
-senza codificare in modo permanente specifici nomi e ricreare l'applicazione.
+senza impostare come hardcoded specifici nomi e ricreare l'applicazione.
 
 Utilizzando i segreti Kubernetes, Jane configura un nome segreto ben definito
 e i parametri all'interno di ciascun segreto per garantire che quando il microservizio viene
@@ -300,4 +298,5 @@ Figura 3. Arricchimento di Stock Trader
 
 ### Link correlati
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

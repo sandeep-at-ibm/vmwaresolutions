@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,7 +16,7 @@ Prima dell'aggiunta dell'archiviazione collegata, la soluzione vCenter Server no
 
 Due funzioni principali sono abilitate quando attivi vSphere DRS su un cluster: Load Balancing (Bilanciamento del carico) e Power Management (Gestione dell'alimentazione).
 
-###  Bilanciamento del carico 
+### Bilanciamento del carico
 
 Con il bilanciamento del carico, la distribuzione e l'utilizzo delle risorse di CPU e memoria per tutti gli host e le macchine virtuali (VM, Virtual Machine) nel cluster sono monitorati costantemente. DRS confronta queste metriche a un utilizzo delle risorse ideale, dati gli attributi dei pool di risorse e delle VM del cluster e la domanda attuale. Completa o suggerisce quindi le migrazioni di VM come necessario.
 
@@ -90,4 +90,4 @@ vSphere HA utilizza la funzione Datastore Heartbeating (Heartbeat degli archivi 
 
 ### Link correlati
 
-* [Panoramica della soluzione](../solution/solution_overview.html)
+* [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

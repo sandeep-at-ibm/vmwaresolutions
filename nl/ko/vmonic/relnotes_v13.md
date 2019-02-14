@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-01-23"
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-23"
 
 이 릴리스에는 새 기능, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
-## vCenter Server 인스턴스에 대한 공유 파일 레벨 스토리지
+## vCenter Server 인스턴스에 대한 공유 파일 스토리지
 
 이제 공유 NAS(Network Attached Storage)를 vCenter Server 인스턴스에 추가할 수 있습니다. 이 기능을 추가하면 vCenter Server에서 프로덕션 워크로드를 실행할 수 있고 노드 실패가 발생하는 경우 데이터의 유실을 방지할 수 있습니다. NFS(Network File System) File Storage가 vCenter Server 인스턴스에 대한 주문 프로세스의 옵션으로 제공됩니다. 자세한 정보는 [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)을 참조하십시오.
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -32,9 +32,9 @@ VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情�
 
 | 製造元 | コンポーネント                                | バージョン      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 Update 2c (最大パッチ・レベル: ESXi650-201808001) |
-| VMware       | vCenter Server Appliance                 | 6.5 Update 2c |
-| VMware       | Platform Services Controller             | 6.5 Update 2c |
+| VMware       | vSphere ESXi                             | 6.5 Update EP11 (ビルド 6.5.0-10719125) |
+| VMware       | vCenter Server Appliance                 | 6.5 U2c (ビルド 6.5.0-9451637) |
+| VMware       | Platform Services Controller             | 6.5 U2c (ビルド 6.5.0-9451637) |
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX for vSphere                          | 6.4.1        |
 | VMware       | SDDC Manager                             | 2.4          |
@@ -58,7 +58,8 @@ VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情�
 | キュー・フルのサンプル・サイズ | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | キュー・フルのしきい値 | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
-**注:**
+### メモ
+
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} サービスには **MaxVolumes** 設定が必要です。このサービスは、ESXi サーバーのデフォルトの NFS マウント数を超える NFS マウントを使用する可能性があるからです。
 * **「未設定」**という構成設定の値は、ESXi サーバーを再起動しないと新しい設定が自動では適用されないことを示していますが、混乱を招く可能性があります。
 
@@ -71,5 +72,5 @@ VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情�
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Cloud Foundation の概要](sd_cloudfoundationoverview.html)
-* [Cloud Foundation インスタンスの計画](sd_planning.html)
+* [Cloud Foundation の概要](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Cloud Foundation インスタンスの計画](/docs/services/vmwaresolutions/sddc/sd_planning.html)

@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-08-28"
 
@@ -19,8 +19,8 @@ Der Service "Fortinet on {{site.data.keyword.cloud_notm}}" ist jetzt für Cloud 
 Nachdem der Fortinet-Service erfolgreich installiert wurde, können Sie Firewallregeln für FSA über die FortiGate-Konsole verwalten und konfigurieren. Sie müssen sicherstellen, dass die FSA-Firewallregeln definiert sind, um abgehende HTTPS-Übertragungen zu ermöglichen, die von Managementkomponenten wie der virtuellen Maschine von IBM CloudDriver oder von Zerto Virtual Manager eingeleitet werden, um mit der externen Managementdatenbank in IBM Bluemix® über das Internet zu kommunizieren. Die abgehende HTTPS-Kommunikation stammt aus der öffentlichen IP-Adresse der Management-Services für VMware NSX Edge Services Gateway (ESG) in Ihrer Instanz.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Übersicht über Fortinet on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)
-* [Fortinet on {{site.data.keyword.cloud_notm}} verwalten](../services/managingfsa.html)
+* [Fortinet on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/fsa_considerations.html)
+* [Fortinet on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managingfsa.html)
 
 ## Service "Veeam on IBM Cloud"
 
@@ -31,8 +31,8 @@ Aufgrund dieser Änderung sind die Sicherungspunkte für die Instanzen nicht meh
 Darüber hinaus läuft die Lizenz der virtuellen Serverinstanz für Veeam in Instanzen aus Releases vor V1.8 am 14. Oktober 2017 ab. Daher müssen Sie die vorherige virtuelle Serverinstanz für Veeam so bald wie möglich durch den neuen Veeam-Service ersetzen.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Übersicht über Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} verwalten](../services/managingveeam.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managingveeam.html)
 
 ## Updates für VMware Cloud Foundation-Instanzen
 
@@ -43,8 +43,8 @@ Ab Release V1.8 haben Sie bei der Bestellung einer Cloud Foundation-Instanz zwei
 Sie können aber auch die Verwendung Ihrer eigenen VMware-Lizenz für eine Komponente auswählen. In diesem Fall müssen Sie die Lizenzschlüssel bereitstellen. Die Unterstützung für die VMware-Komponenten, für die Sie Lizenzen selbst bereitstellen, erhalten Sie dann durch VMware und nicht durch den IBM Support.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
-* [Häufig gestellte Fragen zu eigenen Lizenzen (BYOL)](faq_byol.html)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Häufig gestellte Fragen zu eigenen Lizenzen (BYOL)](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
 
 ## Updates für VMware vCenter Server-Instanzen
 
@@ -53,27 +53,27 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 Neben den vordefinierten und getesteten Optionen "S (Klein)", "M (Mittel)" und "L (Groß)" gibt es eine anpassbare Serveroption. Sie können eine Auswahl in einer Liste mit VMware-HCL-kompatiblen Servern treffen, die auf Dual-CPUs und der Gesamtzahl der Kerne sowie der RAM-Menge basiert. Lokaler Speicher kann nicht angepasst werden.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
-* [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](../vcenter/vc_addingviewingclusters.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
 
 ### Unterstützung für das Hinzufügen von mehr als sieben gemeinsam genutzten NFS-Dateiressourcen
 
  Für alle ESXi-Server in einem Cluster können Sie bis zu maximal 32 gemeinsam genutzte Dateiressourcen zuordnen.
 
  Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
-* [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](../vcenter/vc_addingviewingclusters.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
 
 ### Updates für Rechenzentren
 
 Die folgenden neuen Rechenzentren sind für die Bereitstellung verfügbar: **DAL-09, DAL-12, DAL-13 - Dallas**; **LON-04, LON-06 - London**; **SJC-04 - San Jose**; **WDC-06, WDC-07 - Washington, DC**.
 
-Weitere Informationen finden Sie unter [Voraussetzungen und Planung für vCenter Server-Instanzen](../vcenter/vc_planning.html).
+Weitere Informationen finden Sie unter [Voraussetzungen und Planung für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_planning.html).
 
 ## Erweiterungen beim Bedienungskomfort
 
 In der gesamten Benutzerschnittstelle wurden Verbesserungen vorgenommen:
-* Auf der Seite **Einführung** im linken Navigationsfenster können Sie sich über Services informieren und eine Instanz bestellen. Weitere Informationen zur Servicearchitektur von {{site.data.keyword.cloud_notm}} Secure Virtualization finden Sie unter [Security and compliance - HyTrust](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust).
+* Auf der Seite **Einführung** im linken Navigationsfenster können Sie sich über Services informieren und eine Instanz bestellen.
 * Mit dem Überlaufmenü auf der Seite mit den Instanzdetails können Sie eine Instanz löschen, die den Status **Bereit** aufweist.
 * Die Option zum Durchführen eines Upgrades für Ihre NSX-Lizenzedition befindet sich jetzt auf der Registerkarte **Update und Patch**. Bei der Aktualisierung der Lizenz werden alle vorhandenen NSX-Lizenzen in Ihrem IBM SoftLayer-Konto durch die neue Lizenz ersetzt.
 * Die Registerkarte **Sicherung und Wiederherstellung** auf der Seite mit den Instanzdetails ist nicht mehr verfügbar.

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,5 +41,5 @@ Die gelöschte Instanz wird bis zum Ende des {{site.data.keyword.cloud_notm}}-Ab
 
 ### Zugehörige Links
 
-* [Cloud Foundation-Instanzen löschen](sd_deletinginstance.html)
-* [Services von Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](sd_addingremovingservices.html)
+* [Cloud Foundation-Instanzen löschen](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [Services von Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)

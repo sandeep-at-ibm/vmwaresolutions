@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -85,7 +85,7 @@ Tabla 2. Parámetros de configuración avanzada de NFS
 | NFS.HeartbeatMaxFailures | 10 |
 | NFS.HeartbeatFrequency  | 12 |
 | NFS.HeartbeatTimeout | 5 |
-| NFS.MazQueueDepth | 64 |
+| NFS.MaxQueueDepth | 64 |
 
 ### Enlaces relacionados
 

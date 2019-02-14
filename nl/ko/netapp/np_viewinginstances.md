@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-04"
 
 ---
 
@@ -79,10 +79,6 @@ lastupdated: "2018-10-30"
 |NetApp Deploy 도구 IP |NetApp ONTAP Select Deploy 가상 머신의 IP 주소입니다. |
 |NetApp Deploy 도구 FQDN |NetApp ONTAP Select Deploy의 완전한 도메인 이름입니다. |
 |NetApp Deploy 도구 HTTPS |NetApp ONTAP Select Deploy 가상 머신에 액세스하는 데 사용할 수 있는 사용자 이름 및 비밀번호입니다. |
-|PSC IP |Platform Services Controller의 IP 주소입니다. |
-|PSC FQDN |PSC의 완전한 도메인 이름입니다. |
-|PSC ADMIN |PSC 웹 콘솔에 액세스하는 데 사용할 수 있는 VMware vCenter Single Sign-On 사용자 이름 및 비밀번호입니다. |
-|PSC SSH |SSH 연결을 통해 PSC VM에 액세스하는 데 사용할 수 있는 사용자 이름 및 비밀번호입니다. |
 |vCenter IP |vCenter Server의 IP 주소입니다. |
 |vCenter FQDN |vCenter Server의 완전한 도메인 이름입니다. |
 |vCenter ADMIN |vSphere Web Client를 사용하여 vCenter Server에 로그인하는 데 사용할 수 있는 VMware vCenter Single Sign-On 사용자 이름 및 비밀번호입니다. |

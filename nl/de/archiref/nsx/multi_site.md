@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -36,4 +36,4 @@ Abbildung 1. Topologie mit mehreren Standorten
 
 ### Zugehörige Links
 
-* [Netzservices unter {{site.data.keyword.cloud_notm}}](networking_services.html)
+* [Netzservices unter {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/nsx/networking_services.html)

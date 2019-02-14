@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ Sei responsabile della configurazione, della gestione e del monitoraggio di tutt
 
 Come parte della soluzione, puoi distribuire facoltativamente i servizi aggiuntivi IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. Veeam e IBM Spectrum Protect Plus possono aiutare a soddisfare i requisiti per il backup dei tuoi componenti di gestione.
 
-Questi servizi aggiuntivi vengono distribuiti insieme all'archiviazione Endurance {{site.data.keyword.cloud_notm}}. I servizi ti aiutano a eseguire il backup dei tuoi carichi di lavoro e dei componenti di gestione. In [Panoramica dell'architettura di IBM Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} e [Panoramica dell'architettura di Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} vengono fornite indicazioni utili sulla pianificazione e sul dimensionamento della tua distribuzione. Puoi anche richiedere i [servizi gestiti](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) per la tua distribuzione Veeam.
+Questi servizi aggiuntivi vengono distribuiti insieme all'archiviazione Endurance {{site.data.keyword.cloud_notm}}. I servizi ti aiutano a eseguire il backup dei tuoi carichi di lavoro e dei componenti di gestione. In [Panoramica dell'architettura di IBM Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} e [Panoramica dell'architettura di Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} vengono fornite indicazioni utili sulla pianificazione e sul dimensionamento della tua distribuzione. Puoi anche richiedere i [servizi gestiti](/docs/services/vmwaresolutions/services/managing_veeam_services.html) per la tua distribuzione Veeam.
 
 I diversi componenti della soluzione richiedono differenti strategie per il backup. Alcuni componenti sono protetti utilizzando il backup a livello di immagine mentre altri componenti sono protetti utilizzando il backup basato su file per la loro configurazione e i dati.
 
@@ -34,7 +34,7 @@ Per ospitare questi backup, distribuisci un file server Linux nel tuo cluster ut
 
 VMware vCenter Server e PSC forniscono un'[interfaccia utente di gestione dispositivi e un'API per esportare il database e la configurazione in un file server](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} utilizzando vari protocolli. VMware documenta un esempio di come puoi configurare tutto questo in modo che venga [eseguito periodicamente come lavoro cron](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} direttamente su vCenter Server Appliance e PSC, che puoi adattare per il tuo utilizzo.
 
-Devi eseguire separatamente il backup di vCenter Server Appliance e del PSC utilizzando questa tecnica. Scopri e pianifica le considerazioni e le limitazioni documentate da VMware. Inoltre, pianifica una rotazione e una scadenza regolari dei backup dei file sul tuo file server.
+Se hai un PSC esterno, devi eseguire il backup sia di vCenter Server Appliance che di PSC separatamente utilizzando questa tecnica. Se hai un PSC integrato, il backup di PSC è incluso nel tuo backup di vCenter. Scopri e pianifica le considerazioni e le limitazioni documentate da VMware. Inoltre, pianifica una rotazione e una scadenza regolari dei backup dei file sul tuo file server.
 
 VMware richiede che l'ubicazione di backup sia una cartella vuota, quindi pianifica la rotazione o l'automazione del backup in modo da lasciare l'ubicazione vuota per ogni successivo lavoro di backup.
 {:note}
@@ -74,7 +74,7 @@ A partire da VMware vCenter 6.5u2, VMware supporta il backup del database vCente
 Quando ripristini i backup di gestione, ci sono diverse considerazioni speciali:
 
 * Per vCenter e PSC, VMware fornisce un programma di installazione che può distribuire un nuovo dispositivo virtuale e ripristinare la configurazione dal backup.
-* Quando ripristini un dispositivo dal backup, il programma di installazione rileva il tipo di dispositivo (vCenter Server o PSC) in base alle informazioni di backup da te fornite.
+* Quando ripristini un dispositivo dal backup, il programma di installazione rileva il tipo di dispositivo (vCenter Server. PSC o vCenter con PSC integrato) in base alle informazioni di backup da te fornite.
 * Poiché distribuisci direttamente su uno dei tuoi host, potresti non essere in grado di eseguire la distribuzione su uno switch distribuito o un gruppo di porte. Potresti dover creare uno switch e un gruppo di porte standard temporaneo per la distribuzione dei dispositivi ripristinati e migrare temporaneamente una delle tue vmnic a questo switch per fornire la connettività di rete per le tue VM. Dopo la distribuzione, puoi migrare le VM al gruppo di porte distribuito e restituire la vmnic al dvSwitch.
 * Per NSX, potresti dover ridistribuire NSX Manager e i controller prima di ripristinare la configurazione dal backup.
 * Assicurati di acquisire familiarità con le considerazioni e le limitazioni di VMware per il backup e il ripristino di vCenter.
@@ -85,6 +85,6 @@ Con una pianificazione adeguata, puoi garantire che la tua istanza VMware possa 
 
 ### Link correlati
 
-* [Panoramica della soluzione](solution_overview.html)
-* [Panoramica della progettazione](design_overview.html)
-* [Ridimensionamento della capacità](solution_scaling.html)
+* [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Panoramica della progettazione](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [Ridimensionamento della capacità](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)

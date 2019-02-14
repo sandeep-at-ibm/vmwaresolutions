@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,5 +41,5 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 
 ### Link correlati
 
-* [Eliminazione di istanze Cloud Foundation](sd_deletinginstance.html)
-* [Ordine, visualizzazione e rimozione dei servizi dalle istanze Cloud Foundation](sd_addingremovingservices.html)
+* [Eliminazione di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [Ordine, visualizzazione e rimozione dei servizi dalle istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)

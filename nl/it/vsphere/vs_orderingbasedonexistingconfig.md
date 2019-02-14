@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,8 +19,8 @@ Puoi ordinare un cluster VMware vSphere in base a un template di configurazione 
 ## Requisiti
 
 Assicurati di aver completato le seguenti attività:
-*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](../vmonic/useraccount.html).
-*  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per i cluster vSphere](vs_planning.html).
+*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per i cluster vSphere](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
 *  Hai creato un template di configurazione da riutilizzare.
 
 ## Procedura per ordinare i cluster vSphere in base alle configurazioni esistenti
@@ -29,7 +29,7 @@ Assicurati di aver completato le seguenti attività:
 2. Nella pagina **VMware vSphere on IBM Cloud**, fai clic su **Crea**.  
 3. Fai clic sulla scheda **Crea nuovo** e seleziona un template di configurazione dell'elenco **Configurazioni cluster**.
 4. Immetti il nome del nuovo cluster.
-5. Esamina le impostazioni del cluster che vengono completate automaticamente e aggiorna le impostazioni in base alle tue esigenze. Per ulteriori informazioni sulle impostazioni, vedi [Ordine di nuovi cluster vSphere](vs_orderinginstances.html).
+5. Esamina le impostazioni del cluster che vengono completate automaticamente e aggiorna le impostazioni in base alle tue esigenze. Per ulteriori informazioni sulle impostazioni, vedi [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html).
 6. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza e il costo stimato.
    * Per salvare la configurazione come template senza effettuare un ordine, fai clic su **Salva configurazione**.
    * Per effettuare l'ordine, assicurati che l'account da addebitare sia corretto, esamina e accetta i termini e infine fai clic su **Fornitura**.
@@ -48,6 +48,6 @@ I cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation,
 
 ### Link correlati
 
-* [Ordine di nuovi cluster vSphere](vs_orderinginstances.html)
-* [Ridimensionamento di cluster vSphere esistenti](vs_scalingexistingclusters.html)
-* [Ridimensionamento di cluster creati all'esterno della console](vs_orderingforclustersoutside.html)
+* [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Ridimensionamento di cluster vSphere esistenti](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [Ridimensionamento di cluster creati all'esterno della console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

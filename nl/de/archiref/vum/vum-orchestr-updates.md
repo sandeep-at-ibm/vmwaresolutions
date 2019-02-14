@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-20"
 
 ---
 
 #	Koordinierte Upgrades
 
-Sie können koordinierte Upgrades verwenden, um die virtuelle Hardware und die VMware Tools virtueller Maschinen im Bestand aufzurüsten, nachdem die vSphere ESXi-Hosts aktualisiert wurden. Nachdem die Hosts aktualisiert wurden, wird zuerst die Upgrade-Baseline für VMware Tools und danach die Hardware-Upgrade-Baseline der virtuellen Maschine ausgeführt. Koordinierte Upgrades können auf Cluster-, Ordner- oder Rechenzentrumsebene durchgeführt werden.
+Sie können koordinierte Upgrades verwenden, um die virtuelle Hardware und die VMware Tools virtueller Maschinen im Bestand aufzurüsten, nachdem die vSphere ESXi-Hosts aktualisiert wurden. Nachdem die Hosts aktualisiert wurden, wird zuerst die Upgrade-Baseline für VMware Tools und danach die Hardware-Upgrade-Baseline der virtuellen Maschine ausgeführt. Koordinierte Upgrades können auf Cluster-, Ordner- oder Rechenzentrumsebene verwendet werden.
 
 Mit VUM können Sie koordinierte Upgrades für Hosts und dann virtuelle Maschinen mithilfe von Baselinegruppen durchführen. Es wird eine Baselinegruppe verwendet, die eine einzelne Host-Upgrade-Baseline und mehrere Patch- oder Erweiterungsbaselines enthält. VUM führt zunächst das Upgrade für die Hosts durch und wendet dann die Patch- oder Erweiterungsbaselines an. Zur Durchführung eines koordinierten Upgrades für virtuelle Maschinen verwenden Sie eine Baselinegruppe für virtuelle Maschinen, die die folgenden Baselines enthält:
 * VM-Hardware-Upgrade übereinstimmend mit Host
@@ -20,7 +20,7 @@ Mit durch VUM koordinierten Upgrades können Sie die Bestandsobjekte in VCSA in 
 
 Im koordinierten Upgrade wird der Cluster zuerst anhand der Host-Baseline-Gruppe korrigiert, die Patches, Erweiterungen und Upgrades anwendet. Nach diesem Upgrade werden die virtuellen Maschinen im Cluster mit der Upgrade-Baseline-Gruppe für virtuelle Maschinen korrigiert, die die Baselines "VM-Hardware-Upgrade übereinstimmend mit Host" und "VMware Tools-Upgrade übereinstimmend Host" enthält.
 
-Wenn die Baselinegruppe auch eine Upgrade-Baseline enthält, führt VUM zunächst ein Upgrade der vSphere ESXi-Hosts durch und wendet dann die Patch- und/oder Erweiterungsbaselines an, da sich die Patches immer auf eine bestimmte Hostversion beziehen. Für die virtuellen Maschinen werden zuerst die VMware Tools aktualisiert, danach erfolgt die Aktualisierung der virtuellen Hardware.
+Wenn die Baselinegruppe auch eine Upgrade-Baseline enthält, führt VUM zunächst ein Upgrade der vSphere ESXi-Hosts durch und wendet dann die Patch- oder Erweiterungsbaselines an, da sich die Patches immer auf eine bestimmte Hostversion beziehen. Für die virtuellen Maschinen werden zuerst die VMware Tools aktualisiert, danach erfolgt die Aktualisierung der virtuellen Hardware.
 
 Daher werden die virtuellen Maschinen während des Upgrades der VMware Tools eingeschaltet, wenn sich virtuelle Maschinen in einem ausgeschalteten oder ausgesetzten Zustand befinden; VUM übernimmt das Einschalten, führt das Upgrade durch und stellt so den ursprünglichen Betriebszustand der virtuellen Maschine wieder her. Daher müssen sich die VMs während des Upgrades für virtuelle Hardware im ausgeschalteten Zustand befinden. Wenn virtuelle Maschinen eingeschaltet sind, schaltet VUM diese aus, führt das Upgrade der virtuellen Hardware durch und schaltet die VMS wieder ein.
 
@@ -44,7 +44,7 @@ Der folgende Workflow beschreibt den Prozess zur Durchführung eines koordiniert
 8. Sie können optional eine neue Patch-Baseline erstellen, indem Sie auf **Neue Host-Patch-Baseline erstellen** unten auf der Seite "Patches" klicken und im Assistenten "Neue Baseline" die entsprechenden Angaben machen. Klicken Sie auf **Weiter**.
 9. Wählen Sie die Erweiterungsbaselines aus, die in die Baselinegruppe aufgenommen werden sollen.
 10. Sie können optional eine neue Erweiterungsbaseline erstellen, indem Sie auf **Neue Erweiterungsbaseline erstellen** unten auf der Seite "Patches" klicken und im Assistenten "Neue Baseline" die entsprechenden Angaben machen.
-11. Überprüfen Sie die Seite "Bereit zum Abschließen", klicken Sie auf **Fertigstellen** und die Host-Baseline-Gruppe wird im Teilfenster "Baselinegruppen" angezeigt.
+11. Überprüfen Sie die Seite **Bereit zum Abschließen**, klicken Sie auf **Fertigstellen** und die Host-Baseline-Gruppe wird im Teilfenster "Baselinegruppen" angezeigt.
 
 ## Schritt 2
 
@@ -61,4 +61,4 @@ Sie können diese Baselinegruppen nun in Prozessen zum Prüfen und Auswerten, f�
 ### Zugehörige Links
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

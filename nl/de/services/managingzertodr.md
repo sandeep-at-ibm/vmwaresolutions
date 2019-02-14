@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -26,7 +26,7 @@ Zum Verwalten der Konfiguration von Zerto-Replikationen (z. B. zum Reparieren vo
 
 Wenn Sie Replikationen zwischen unterschiedlichen {{site.data.keyword.cloud_notm}} Zerto-Instanzen durchführen, können Sie die Replikation direkt zwischen den Zerto-Instanzen konfigurieren. Falls Sie die Replikation zwischen der {{site.data.keyword.cloud_notm}} Zerto-Instanz und Ihrem eigenen Rechenzentrum durchführen, müssen Sie Zerto selbst in Ihrem eigenen Rechenzentrum installieren. Diese Instanz kann sich selbst automatisch lizenzieren, wenn Sie sie in einem Paar mit der {{site.data.keyword.cloud_notm}} Zerto-Instanz verbinden.
 
-Die Zerto-Replikation unterstützt die NAT-Traversierung (NAT – Network Address Translation) nicht. Zum Aufbau der Konnektivität zwischen der {{site.data.keyword.cloud_notm}} Zerto-Instanz und Ihrem eigenen Rechenzentrum müssen möglicherweise Routen für Appliances von Zerto Virtual Manager (ZVM) oder von Zerto Virtual Replication Appliances (VRAs) auf beiden Seiten angepasst werden. Zum Aufbau der Konnektivität ist unter Umständen auch eine sichere Tunnelung zwischen den Standorten erforderlich. Wenn Sie Routen für ZVM-Appliances konfigurieren oder rekonfigurieren, müssen Sie sicherstellen, dass alle ZVM-Appliances zur Erstellung von Nutzungsberichten erfolgreich eine Verbindung zu `zerto.com` herstellen können. Diese Verbindung können Sie überprüfen, indem Sie von der ZVM-Appliance aus eine Browsersitzung für `https://www.zerto.com` öffnen.
+Die Zerto-Replikation unterstützt die NAT-Traversierung (NAT - Network Address Translation) nicht. Zum Aufbau der Konnektivität zwischen der {{site.data.keyword.cloud_notm}} Zerto-Instanz und Ihrem eigenen Rechenzentrum müssen möglicherweise Routen für Appliances von Zerto Virtual Manager (ZVM) oder von Zerto Virtual Replication Appliances (VRAs) auf beiden Seiten angepasst werden. Zum Aufbau der Konnektivität ist unter Umständen auch eine sichere Tunnelung zwischen den Standorten erforderlich. Wenn Sie Routen für ZVM-Appliances konfigurieren oder rekonfigurieren, müssen Sie sicherstellen, dass alle ZVM-Appliances zur Erstellung von Nutzungsberichten erfolgreich eine Verbindung zu `zerto.com` herstellen können. Diese Verbindung können Sie überprüfen, indem Sie von der ZVM-Appliance aus eine Browsersitzung für `https://www.zerto.com` öffnen.
 
 Das VMware NSX Edge Services Gateway (ESG) für das Management von Cloud Foundation-Instanzen und vCenter Server-Instanzen in {{site.data.keyword.cloud_notm}} ist so vorkonfiguriert, dass abgehende HTTPS-Kommunikation (TCP-Port 443) zulässig ist, die aus ZVM stammt.
 {:note}
@@ -41,8 +41,8 @@ Wenn Sie ESXi-Server für den primären Cluster Ihrer Instanz hinzufügen oder e
 
 ### Zugehörige Links
 
-* [Übersicht über Zerto on {{site.data.keyword.cloud_notm}}](addingzertodr.html)
-* [Verwaltete Services für Zerto on {{site.data.keyword.cloud_notm}} anfordern](managing_zerto_services.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/addingzertodr.html)
+* [Verwaltete Services für Zerto on {{site.data.keyword.cloud_notm}} anfordern](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
 * [Website "zerto.com"](https://www.zerto.com){:new_window}
 * [Technische Dokumentation zu Zerto (englisch)](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
 * [Disaster-Recovery mit Zerto](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}

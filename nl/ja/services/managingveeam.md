@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -24,12 +24,12 @@ Veeam on {{site.data.keyword.cloud_notm}} サービスを管理するには、�
 Windows IP アドレスと Administrator 資格情報は、Veeam on {{site.data.keyword.cloud_notm}} サービスの詳細ページに表示されます。
 
 詳しくは、以下のトピックを参照してください。
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](../sddc/sd_addingremovingservices.html)
-* [vCenter Server インスタンスのサービスの注文、表示、削除](../vcenter/vc_addingremovingservices.html)
+* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ## Veeam on IBM Cloud がインストールされているインスタンスの管理コンポーネントのバックアップとリストア
 
-Veeam コンソールを使用して管理コンポーネントをバックアップするように、Veeam on {{site.data.keyword.cloud_notm}} サービスを構成できます。 詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html)を参照してください。
+Veeam コンソールを使用して管理コンポーネントをバックアップするように、Veeam on {{site.data.keyword.cloud_notm}} サービスを構成できます。 詳しくは、[コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)を参照してください。
 
 V1.8 以降のリリースでデプロイ (または V1.8 以降のリリースにアップグレード) されたインスタンスの場合、環境の構成変更の自動バックアップは行われません。 そのため、環境の構成を変更する前に、管理バックアップ・ジョブを Veeam コンソールで実行して、管理コンポーネントを手動でバックアップすることをお勧めします。 手動バックアップについて詳しくは、[Veeam 技術説明](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}を参照してください。
 
@@ -39,23 +39,23 @@ V1.8 以降のリリースでデプロイ (または V1.8 以降のリリース�
 
 Veeam ソフトウェアを最新バージョンに更新する責任は、ユーザー側にあります。
 
-### パブリック・ネットワークおよびプライベート・ネットワークを使用してデプロイされたインスタンスの場合
+### パブリック・ネットワークおよびプライベート・ネットワークを使用してデプロイされたインスタンスに更新を適用する
 
 パブリック・ネットワークとプライベート・ネットワークを持つインスタンスに Veeam サービスがインストールされている場合は、Veeam ソフトウェア自体を使用して更新を確認およびダウンロードできます。
 
-### プライベート・ネットワークのみを使用してデプロイされたインスタンスの場合
+### プライベート・ネットワークのみを使用してデプロイされたインスタンスに更新を適用する
 
 プライベート・ネットワークのみのインスタンスに Veeam サービスがインストールされている場合は、Veeam VSI はパブリック・ネットワーク・アクセスなしで構成されているため、Veeam ソフトウェア自体を使用して更新を確認またはダウンロードすることはできません。 その代わりに、Veeam Web サイトから更新をダウンロードし、Veeam VM に転送してからインストールする必要があります。
 
 ## Veeam ライセンスの更新
 
-### パブリック・ネットワークおよびプライベート・ネットワークを使用してデプロイされたインスタンスの場合
+### パブリック・ネットワークおよびプライベート・ネットワークを使用してデプロイされたインスタンスの Veeam ライセンスを更新する
 
 パブリック・ネットワークとプライベート・ネットワークを持つインスタンスに Veeam サービスがインストールされている場合は、Veeam ライセンスを自動で更新することも、[ライセンスの更新]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html)にある Veeam の説明に従って手動で更新することもできます。
 
-### プライベート・ネットワークのみを使用してデプロイされたインスタンスの場合
+### プライベート・ネットワークのみを使用してデプロイされたインスタンスの Veeam ライセンスを更新する
 
-プライベート・ネットワークのみのインスタンスに Veeam サービスがインストールされている場合は、ライセンスの有効期限をメモしておき、更新が必要になったら [IBM サポート](../vmonic/trbl_support.html)に連絡して、ライセンス・キーの更新を行ってください。
+プライベート・ネットワークのみのインスタンスに Veeam サービスがインストールされている場合は、ライセンスの有効期限をメモしておき、更新が必要になったら [IBM サポートに連絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)して、ライセンス・キーの更新を行ってください。
 
 ## V1.8 より前のインスタンスの Veeam VSI を Veeam on IBM Cloud に置き換える
 
@@ -75,8 +75,8 @@ Veeam ソフトウェアを最新バージョンに更新する責任は、ユ�
 
 ### 関連リンク
 
-* [Veeam on {{site.data.keyword.cloud_notm}} の概要](veeam_considerations.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Veeam.com Web サイト](https://www.veeam.com/)
 * [Veeam 技術資料](https://www.veeam.com/documentation-guides-datasheets.html)

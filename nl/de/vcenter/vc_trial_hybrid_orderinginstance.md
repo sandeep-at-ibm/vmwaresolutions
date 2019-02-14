@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,7 +21,9 @@ Die Testversion eignet sich ideal für einen Konzeptnachweis, der zeigt, wie sch
 Die Testversion für Einzelknoten (Single-node Trial) dient nur für den Konzeptnachweis. Die Umgebung ist nicht für Workloads im Produktionsbetrieb geeignet. Managementfunktionen wie das Hinzufügen und Entfernen von Hosts und Clustern, das Bestellen zusätzlicher Add-on-Services und das Anwenden von Updates werden nicht unterstützt.
 {:important}
 
-Diese Testversion ist für eine Nutzung von bis zu 90 Tagen vorgesehen. Wenn Sie das Testen abschlossen haben, können Sie die Umgebung löschen und anschließend eine hoch verfügbare Umgebung einrichten, die Ihren Kapazitätsanforderungen entspricht. Weitere Informationen finden Sie unter [vCenter Server with Hybridity Bundle-Instanzen bestellen](vc_hybrid_orderinginstance.html).
+Diese Testversion ist für eine Nutzung von bis zu 90 Tagen vorgesehen. Wenn Sie das Testen abschlossen haben, können Sie die Umgebung löschen und anschließend eine hoch verfügbare Umgebung einrichten, die Ihren Kapazitätsanforderungen entspricht.
+
+Weitere Informationen zum Architekturdesign finden Sie unter [HCX on IBM Cloud-Architektur für Single-node Trial for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html).
 
 ## Technische Spezifikationen für Single-node Trial for vCenter Server-Instanzen
 
@@ -34,44 +36,63 @@ Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen kön
 
 Ein Dual Intel Xeon Gold 5120-Prozessor (28 Kerne, 2,20 GHz) mit 384 GB RAM.
 
-### Vernetzung
+### Netzspezifikationen für Instanzen von Single-node- Trial for vCenter-Server
 
 Die folgenden Netzkomponenten werden bestellt:
 *  10-Gbps-Uplinks für öffentliche und private Netze
 *  3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
 *  1 VXLAN (Virtual eXtensible LAN) mit einem verteilten logischen Router (Distributed Logical Router, DLR) für die potenzielle Ost-West-Kommunikation zwischen lokalen Workloads, die mit Netzen der Schicht 2 (L2) verbunden sind. Das VXLAN wird als Muster für die Routingtopologie bereitgestellt, das Sie ändern, als Ausgangspunkt für Erstellungen verwenden oder entfernen können. Sie können außerdem Sicherheitszonen hinzufügen, indem Sie zusätzliche VXLANs an neue logische Schnittstellen im DLR anhängen.
 *  2 VMware NSX Edge Services Gateways:
-  * 1 sicheres VMware NSX Edge Services Gateway (ESG) für Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Dieses ESG wird von den IBM Management-VMs für die Kommunikation mit bestimmten externen IBM Managementkomponenten verwendet, die mit der Automatisierung zusammenhängen. Weitere Informationen finden Sie unter [Netz zur Verwendung des vom Kunden verwalteten ESG konfigurieren](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * 1 sicheres VMware NSX Edge Services Gateway (ESG) für Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Dieses ESG wird von den IBM Management-VMs für die Kommunikation mit bestimmten externen IBM Managementkomponenten verwendet, die mit der Automatisierung zusammenhängen.
 
     Dieses ESG ist für Sie weder zugänglich, noch können Sie es verwenden. Falls Sie es ändern, sind Sie möglicherweise nicht in der Lage, die Single-node Trial for vCenter Server-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Beachten Sie außerdem, dass die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu führt, dass {{site.data.keyword.vmwaresolutions_short}} unbrauchbar wird.
     {:important}
-  * 1 sicheres vom Kunden verwaltetes VMware NSX Edge Services Gateway für eingehenden und abgehenden HTTPS-Workloaddatenverkehr, das von IBM als Vorlage bereitgestellt wird und von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen. Weitere Informationen finden Sie im Abschnitt [Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
-
-Weitere Informationen zu Netzkomponenten, die bei der Bereitstellung des Service "HCX on {{site.data.keyword.cloud_notm}}" bestellt werden, finden Sie im Abschnitt [Übersicht über HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+  * 1 sicheres vom Kunden verwaltetes VMware NSX Edge Services Gateway für eingehenden und abgehenden HTTPS-Workloaddatenverkehr, das von IBM als Vorlage bereitgestellt wird und von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen.
 
 ### Virtual Server-Instanzen
 
 Die folgenden VSIs (Virtual Server-Instanzen) werden bestellt:
 
-* Eine VSI für IBM CloudBuilder, der nach vollständiger Bereitstellung der Instanz beendet wird.
+* Eine VSI für IBM CloudBuilder, die nach vollständiger Bereitstellung der Instanz abgebrochen wird.
 * Eine VSI von Microsoft Windows Server für Microsoft Active Directory (AD) wird bereitgestellt und kann zur Suche verwendet werden. Die Virtual Server-Instanz (VSI) dient als DNS für die Instanz, auf der die Hosts und VMs registriert sind.
 
 ### Von IBM bereitgestellte Lizenzen und Gebühren
 
 Ihre Bestellung der Single-node Trial for vCenter Server-Instanz enthält die folgenden Lizenzen:
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 
 Single-node Trial for vCenter Server-Instanzen bieten keine BYOL-Unterstützung (BYOL = Bring Your Own License; d. h. Verwendung der eigenen Lizenz).
 {:note}
 
-Es können zusätzliche Support- und Servicegebühren anfallen.
-
 ## Technische Spezifikationen für VMware HCX on IBM Cloud
 
-Single-node Trial for vCenter Server enthält HCX on {{site.data.keyword.cloud_notm}}. Weitere Informationen zu technischen Spezifikationen und Hinweise zu HCX on {{site.data.keyword.cloud_notm}} finden Sie im Abschnitt [Übersicht über VMware HCX on IBM Cloud](../services/hcx_considerations.html).
+Single-node Trial for vCenter Server enthält HCX on {{site.data.keyword.cloud_notm}}. Mit dem Service "HCX on {{site.data.keyword.cloud_notm}}" werden die folgenden Komponenten bestellt und einbezogen.
+
+Lokale HCX-Instanzen schließen nur Lizenzierung und Aktivierung ein.
+{:note}
+
+### Ein Aktiv/Passiv-Paar von VMware NSX Edge Services Gateways für das HCX-Management
+
+* CPU: 6 vCPU
+* RAM: 8 GB
+* Festplatte: 3 GB VMDK
+
+### HCX-Management-Appliance - virtuelle Maschine
+
+* CPU: 4 vCPU
+* RAM: 12 GB
+* Festplatte: 60 GB VMDK
+
+Weitere HCX-Appliances werden bei der Konfiguration wie für die L2-Konnektivität, die WAN-Optimierung und Gateway-Verbindungen erforderlich bereitgestellt.
+
+### Netzspezifikationen für den Service "HCX on IBM Cloud"
+
+* 1 öffentliches portierbares Teilnetz mit 16 IP-Adressen
+* 2 private portierbare Teilnetze mit 64 IP-Adressen
+* 8 IP-Adressen aus dem privaten portierbaren vMotion-Teilnetz
 
 ## Voraussetzungen und Planung für die Bestellung von Single-node Trial for vCenter Server-Instanzen
 
@@ -80,18 +101,17 @@ Single-node Trial for vCenter Server enthält HCX on {{site.data.keyword.cloud_n
  * Erfordert VMware vSphere und vCenter 5.5 oder höher.
  * Die vSphere-Umgebung muss über verteilte Switches für die VMx verfügen, die zu {{site.data.keyword.cloud_notm}} migriert wird.
  * HCX Manager Virtual Appliance muss in einem privaten Netzwerk in der lokalen Umgebung bereitgestellt werden können und auf das öffentliche Internet zugreifen dürfen.
-* Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Konto](../vmonic/slaccountrequirement.html).
-*  Konfigurieren Sie die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen**. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](../vmonic/useraccount.html).
-* Machen Sie sich mit den Anforderungen für die Instanznamen vertraut:  
- * Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
- * Der Instanzname muss mit einem alphanumerischen Zeichen beginnen und enden.
- * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
- * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
-* Prüfen Sie, welche {{site.data.keyword.CloudDataCents_notm}} die Anforderungen der physischen Infrastruktur erfüllen. Weitere Informationen finden Sie im Abschnitt *Verfügbarkeit des {{site.data.keyword.CloudDataCent_notm}}s* unter [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle-Instanzen](../vcenter/vc_hybrid_planning.html#ibm-cloud-data-center-availability).
+ * Um {{site.data.keyword.vmwaresolutions_short}} für die Bestellung von Instanzen verwenden zu können, müssen Sie ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) besitzen. Die Kosten der Komponenten, die in Ihren Instanzen bestellt werden, werden diesem {{site.data.keyword.cloud_notm}}-Konto in Rechnung gestellt.
+ *  Konfigurieren Sie die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen**. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Einstellungen**.
+ * Machen Sie sich mit den Anforderungen für die Instanznamen vertraut:
+    * Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
+    * Der Instanzname muss mit einem alphanumerischen Zeichen beginnen und enden.
+    * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
+    * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
 
 ## Vorgehensweise zum Bestellen von Single-node Trial for vCenter Server-Instanzen
 
-1. Klicken Sie auf der Seite **Single-node Trial for VMware vCenter Server on {{site.data.keyword.cloud_notm}}** auf die Karte **vCenter Server** und dann auf **Fortsetzen**.
+1. Klicken Sie auf der Seite **Single-node Trial for VMware vCenter Server on {{site.data.keyword.cloud_notm}}** auf **Weiter**.
 2. Führen Sie auf der Seite **Single-node Trial for VMware vCenter Server** die entsprechenden Schritte aus, um ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto anzufordern oder um Ihren bestehenden **Benutzernamen** und den **API-Schlüssel** anzugeben, und klicken Sie auf **Abrufen**.
 
  Dieser Abschnitt ist ausgeblendet, wenn der API-Schlüssel bereits vorhanden ist.
@@ -99,7 +119,7 @@ Single-node Trial for vCenter Server enthält HCX on {{site.data.keyword.cloud_n
 3. Geben Sie den Instanznamen ein.
 4. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.  
 
- Das {{site.data.keyword.CloudDataCent_notm}} ist bereits ausgewählt. Wählen Sie bei Bedarf einen anderen Standort für das {{site.data.keyword.CloudDataCent_notm}} aus.
+ Standardmäßig ist DAL09 {{site.data.keyword.CloudDataCent_notm}} bereits ausgewählt. Wählen Sie bei Bedarf einen anderen Standort für das {{site.data.keyword.CloudDataCent_notm}} aus.
  {:note}
 5. Überprüfen Sie im Fenster **Bestellübersicht** die Instanzkonfiguration, bevor Sie die Bestellung aufgeben.
    1. Überprüfen Sie die Einstellungen für die Instanz.
@@ -125,7 +145,7 @@ Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert
    * Öffentliche und private Uplink-Schnittstellen werden unter Verwendung der bestellten Teilnetze konfiguriert.
    * Die ESGs werden als ein Paar sehr großer Edge-Appliances mit aktivierter Hochverfügbarkeit konfiguriert.
    * Die Firewallregeln und die Regeln für die Netzadressumsetzung (NAT-Regeln) werden konfiguriert, damit eingehender und abgehender HTTPS-Datenverkehr an den und vom HCX-Manager zulässig ist.
-   * Die Regeln für den Lastausgleich und Ressourcenpools werden konfiguriert. Diese Regeln und Ressourcenpools werden für die Weiterleitung des HCX-bezogenen eingehenden Datenverkehrs an die entsprechenden virtuellen Appliances für den HCX-Manager, für vCenter Server und für Platform Services Controller (PSC) verwendet.
+   * Die Regeln für den Lastausgleich und Ressourcenpools werden konfiguriert. Diese Regeln und Ressourcenpools werden verwendet, um den HCX-bezogenen eingehenden Datenverkehr an die entsprechenden virtuellen Appliances von HCX Manager und vCenter Server (mit Embedded Platform Services Controller) weiterzuleiten.
    * Ein SSL-Zertifikat zum Verschlüsseln des HCX-bezogenen eingehenden HTTPS-Datenverkehrs, der über die ESGs eintrifft, wird angewendet.
 
    Die HCX-Management-Edge ist für den HCX-Managementdatenverkehr zwischen den lokalen HCX-Komponenten und den cloudseitigen HCX-Komponenten dediziert. Die HCX-Management-Edge darf weder geändert noch für HCX-Netzerweiterungen verwendet werden. Erstellen Sie für Netzerweiterungen stattdessen separate Edges. Außerdem kann die Verwendung einer Firewall oder die Inaktivierung der HCX-Edge-Kommunikation mit den privaten IBM Managementkomponenten oder dem öffentlichen Internet die HCX-Funktionalität beeinträchtigen.
@@ -133,19 +153,16 @@ Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert
 
 5. Der HCX-Manager on {{site.data.keyword.cloud_notm}} wird bereitgestellt, aktiviert und konfiguriert:
    * Der HCX-Manager wird bei vCenter Server registriert.
-   * Der HCX-Manager, vCenter Server, PSC und der NSX-Manager werden konfiguriert.
+   * Der HCX-Manager, vCenter Server (mit integriertem Platform Services Controller) und NSX-Manager sind konfiguriert.
    * Das HCX-Produktpaket wird konfiguriert.
    * Lokale und ferne HCX-Bereitstellungscontainer werden konfiguriert.
 6. Der Hostname und die IP-Adresse des HCX-Managers werden beim DNS-Server von VMware vCenter Server on {{site.data.keyword.cloud_notm}} registriert.
 
 #### Instanzdetails anzeigen
 
-Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen. Informationen zum Anzeigen von Instanzdetails finden Sie unter:
+Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen. Klicken Sie im linken Navigationsfenster auf **Bereitgestellte Instanzen** und suchen Sie die Tabelle **vCenter Server-Instanzen** oder **Lokale HCX-Instanzen**, um Informationen zu den bestellten Instanzen anzuzeigen.
 
-* [vCenter Server-Instanzen anzeigen](vc_viewinginstances.html)
-* [Lokale VMware HCX on IBM Cloud-Instanzen anzeigen](../services/standalone_viewingserviceinstances.html)
-
-Wenn die Instanz erfolgreich bereitgestellt wurde, werden die Komponenten, die in den Abschnitten *Technische Spezifikationen* dieses Themas beschrieben werden, auf Ihrer virtuellen VMware-Plattform installiert und der Aktivierungsschlüssel des lokalen HCX on {{site.data.keyword.cloud_notm}}-Service steht auf der {{site.data.keyword.cloud_notm}}-Detailseite zur Verfügung.
+Wenn die Instanz erfolgreich bereitgestellt wurde, werden die in den Abschnitten *Technische Spezifikationen* dieses Themas beschriebenen Komponenten auf Ihrer virtuellen VMware-Plattform installiert und der Aktivierungsschlüssel für den lokalen HCX on {{site.data.keyword.cloud_notm}}-Service in der Tabelle **Lokale HCX-Instanzen** aufgeführt.
 
 Der Status der Instanz ändert sich in **Bereit** und Sie erhalten eine Benachrichtigung per E-Mail.
 
@@ -155,8 +172,8 @@ Installieren Sie den lokalen HCX Enterprise Manager und konfigurieren Sie die Ve
 
 1. Suchen Sie den lokalen Aktivierungsschlüssel auf der Seite **Bereitgestellte Instanzen**.
   1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
-  2. Suchen Sie in der Tabelle **vCenter Server-Instanzen** in der Spalte **Typ** nach der Single-node Trial-Instanz und notieren Sie den Instanznamen.
-  3. Blättern Sie zur Tabelle **Lokale HCX-Instanzen** und suchen Sie in der Spalte **Name** nach der Instanz, die denselben Namen wie die Einzelknoteninstanz hat. An den Instanznamen wird *-OnPrem* angehängt.
+  2. Suchen Sie in der Tabelle **vCenter Server-Instanzen** in der Spalte **Typ** nach der vCenter Server Single-node Trial-Instanz und notieren Sie den Instanznamen.
+  3. Blättern Sie zur Tabelle **Lokale HCX-Instanzen** und suchen Sie in der Spalte **Name** nach der Instanz mit demselben Namen wie die bestellte Einzelknoteninstanz mit dem Suffix *-OnPrem*.
   4. Notieren Sie den Schlüssel im Feld **Aktivierungsschlüssel**.
 2. Rufen Sie die HCX Enterprise Manager Open Virtual Appliance (OVA) von der HCX on {{site.data.keyword.cloud_notm}} HCX Manager-Konsole ab.
   1. Stellen Sie eine Verbindung mit der HCX-Cloudkonsole her.
@@ -173,7 +190,7 @@ Installieren Sie den lokalen HCX Enterprise Manager und konfigurieren Sie die Ve
       3. Klicken Sie auf **LINK KOPIEREN** und verwenden Sie anschließend diesen Link, um HCX Enterprise Client in eine lokale Umgebung herunterzuladen, die Zugriff auf Ihre lokale vSphere-Umgebung besitzt.
 3. Stellen Sie HCX Enterprise Client in VMware vSphere Web Client als virtuelle Appliance für den HCX-Manager (kurz "HCX-Manager") in Ihrer lokalen Umgebung bereit. Weitere Informationen hierzu finden Sie im Abschnitt [HCX Enterprise Manager OVA installieren](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html).
 
-Sie müssen den lokalen HCX-Manager in einem privaten Netz bereitstellen und ihm den Zugriff auf das öffentliche Netz ermöglichen. Sie können NSX Edge, Vyatta oder ähnliche Gateways verwenden, um dem lokalen HCX-Manager den Internetzugriff zu ermöglichen. Falls für den Zugriff auf das private Netz und auf das öffentliche Netz verschiedene Gateways verwendet werden, empfiehlt es sich, das Standardgateway für den Zugriff auf das öffentliche Netz zu verwenden und mit der lokalen **Administratorkonsole für den HCX-Manager** eine statische Route für den Zugriff auf das private Netz zu erstellen.  
+    Sie müssen den lokalen HCX-Manager in einem privaten Netz bereitstellen und ihm den Zugriff auf das öffentliche Netz ermöglichen. Sie können NSX Edge, Vyatta oder ähnliche Gateways verwenden, um dem lokalen HCX-Manager den Internetzugriff zu ermöglichen. Falls für den Zugriff auf das private Netz und auf das öffentliche Netz verschiedene Gateways verwendet werden, empfiehlt es sich, das Standardgateway für den Zugriff auf das öffentliche Netz zu verwenden und mit der lokalen **Administratorkonsole für den HCX-Manager** eine statische Route für den Zugriff auf das private Netz zu erstellen.  
     {:note}
 4. Verwenden Sie den in Schritt 1 notierten lokalen Aktivierungsschlüssel, um die lokale virtuelle HCX Enterprise Manager-Maschine zu aktivieren.
   1. Melden Sie sich bei der lokalen virtuellen HCX Enterprise Manager-Maschine mit den Berechtigungsnachweisen an, die bei der Bereitstellung von OVA angegeben wurden.
@@ -196,14 +213,31 @@ Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_sh
 
 ## Vorgehensweise zum Löschen von Single-node Trial for vCenter Server-Instanzen
 
-Zum Freigeben der Komponenten, die Sie in einer Single-node Trial for vCenter Server-Instanz bestellt haben, löschen Sie die Instanz.
+Wenn Sie eine Instanz von Single-node Trial for vCenter Server löschen, werden die folgenden Komponenten nacheinander freigegeben:
 
-Weitere Informationen finden Sie unter [vCenter Server-Instanzen löschen](vc_deletinginstance.html).
+1. Alle bereitgestellten Services
+3. VMware-Produktlizenzen
+4. ESXi-Server
+5. Teilnetze
+6. VLANs
+
+Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz nicht sofort freigegeben, wenn Sie die Instanz löschen. Beispielsweise können die Teilnetze und VLANs erst gelöscht werden, nachdem die ESXi-Server vollständig von der {{site.data.keyword.cloud_notm}}-Infrastruktur zurückgefordert wurden, was am Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur erfolgt. Am Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur, der normalerweise 30 Tage beträgt, werden die Teilnetze und VLANs gelöscht und die Instanzlöschung ist abgeschlossen.
+
+Die gelöschten Instanzen werden Ihnen bis zum Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur berechnet.
+{:note}
+
+Führen Sie folgende Schritte aus, um eine Instanz von Single-node Trial for vCenter Server zu löschen:
+
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+2. Suchen Sie in der Tabelle **vCenter Server-Instanzen** nach der Instanz, die Sie löschen wollen.
+3. Klicken Sie in der Spalte **Aktionen** auf das Symbol "Löschen".
+   Der Status der Instanz ändert sich in **Wird gelöscht**. Nachdem die Instanz erfolgreich gelöscht wurde, werden die Komponenten der Instanz freigegeben und der Status der Instanz ändert sich in **Gelöscht**.
+4. Wenn Sie den Instanzdatensatz aus der {{site.data.keyword.vmwaresolutions_short}}-Konsole entfernen möchten, führen Sie die folgenden Schritte aus:
+   1. Klicken Sie in der Spalte **Aktionen** erneut auf das Symbol "Löschen".
+   2. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
 
 ### Zugehörige Links
 
-* [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](../vmonic/signing_softlayer_account.html)
-* [Glossar der HCX-Begriffe](../services/hcx_glossary.html)
+* [HCX on IBM Cloud-Architekturdesign für Single-node Trial for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [Dokumentation zu VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
 * [HCX OVA anfordern](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)
-* [vCenter Server with Hybridity Bundle-Instanzen bestellen](vc_hybrid_orderinginstance.html)

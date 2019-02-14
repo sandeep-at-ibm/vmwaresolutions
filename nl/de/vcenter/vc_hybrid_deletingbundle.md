@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,9 +14,9 @@ lastupdated: "2018-11-09"
 
 # Hybridity Bundle aus einer vCenter Server-Instanz entfernen
 
-Zum Entfernen der Hybridity Bundle-Lizenz aus Ihrer vCenter Server-Instanz müssen Sie die Schlüssel der VMware NSX- und VMware vSAN-Mietlizenzen in VMware vSphere Web Client durch Schlüssel eigener Lizenzen (BYOL – Bring Your Own License) ersetzen. Darüber hinaus müssen Sie ein Support-Ticket öffnen, um die Gebühren für die Mietlizenzen zu stornieren.
+Zum Entfernen der Hybridity Bundle-Lizenz aus Ihrer vCenter Server-Instanz müssen Sie die Schlüssel der VMware NSX- und VMware vSAN-Mietlizenzen in VMware vSphere Web Client durch Schlüssel eigener Lizenzen (BYOL - Bring Your Own License) ersetzen. Darüber hinaus müssen Sie ein Support-Ticket öffnen, um die Gebühren für die Mietlizenzen zu stornieren.
 
-Wenn Sie für Ihre Lizenz ein Downgrade durchführen, kann dies zum Fehlschlagen Ihrer vCenter Server-Instanz führen. Sie können auswählen, auf eigenes Risiko ein Downgrade für Ihre Lizenz durchzuführen; betrachten Sie jedoch zunächst die Funktionen, die nach einem Downgrade nicht verfügbar sein werden. Weitere Informationen finden Sie im [Vergleichsdiagramm für VMware-Komponenteneditionen](../archiref/solution/appendix.html).
+Wenn Sie für Ihre Lizenz ein Downgrade durchführen, kann dies zum Fehlschlagen Ihrer vCenter Server-Instanz führen. Sie können auswählen, auf eigenes Risiko ein Downgrade für Ihre Lizenz durchzuführen; betrachten Sie jedoch zunächst die Funktionen, die nach einem Downgrade nicht verfügbar sein werden. Weitere Informationen finden Sie im [Vergleichsdiagramm für VMware-Komponenteneditionen](/docs/services/vmwaresolutions/archiref/solution/appendix.html).
 {:important}
 
 ## Wichtige Hinweise, bevor Sie das Hybridity Bundle aus einer Umgebung mit mehreren Standorten entfernen:
@@ -27,7 +27,8 @@ Lesen Sie die folgenden Hinweise, bevor Sie das Hybridity Bundle aus einer Umgeb
 * Sie müssen VMware NSX-Lizenzen kombinieren und über genügend Kapazität zur Nutzung über alle Bereitstellungen mit mehreren Standorten verfügen.
 * Sie müssen ein einzelnes Support-Ticket erstellen, um das Hybridity Bundle aus allen Bereitstellungen mit mehreren Standorten zu entfernen.
 
-Beim Entfernen des Hybridity Bundle aus einer Umgebung mit mehreren Standorten werden BYOL-Lizenzen angewendet. Für alle Standorte in einer Konfiguration mit mehreren Standorten wird die NSX-Lizenz automatisch auf die niedrigste Lizenzeditionen unter allen Standorten zurückgesetzt. Sie müssen sicherstellen, dass die Lizenzeditionen über alle Standorten hinweg in der Konfiguration mit mehreren Standorten konsistent sind.{:note}
+Beim Entfernen des Hybridity Bundle aus einer Umgebung mit mehreren Standorten werden BYOL-Lizenzen angewendet. Es liegt in Ihrer Verantwortung sicherstellen, dass die Lizenzeditionen über alle Standorten hinweg in der Konfiguration mit mehreren Standorten konsistent sind.
+{:note}
 
 ## Vor dem Entfernen von Hybridity Bundle
 
@@ -107,6 +108,6 @@ Beim Entfernen des Hybridity Bundle aus einer Umgebung mit mehreren Standorten w
 
 ### Zugehörige Links
 
-* [vCenter Server with Hybridity Bundle-Instanzen bestellen](vc_hybrid_orderinginstance.html)
-* [vCenter Server with Hybridity Bundle-Instanzen anzeigen](vc_hybrid_viewinginstances.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
+* [vCenter Server with Hybridity Bundle-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-01-10"
 
 ---
 
@@ -112,8 +112,12 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 
 자신의 요구사항에 따라 Bare Metal Server 구성을 선택하십시오.
   * 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 192GB RAM
-  * 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.2GHz / 384GB RAM
+  * 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 384GB RAM
   * 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 768GB RAM
+  * 듀얼 Intel Xeon E5-2690 v4 프로세서 / 총 28개의 코어, 2.6GHz / 512GB RAM
+  * 쿼드 Intel Xeon E7-8890 v4 프로세서 / 총 96개의 코어, 2.2GHz / 1024GB RAM
+  * 쿼드 Intel Xeon E7-8890 v4 프로세서 / 총 96개의 코어, 2.2GHz / 2048GB RAM
+  * 쿼드 Intel Xeon E7-8890 v4 프로세서 / 총 96개의 코어, 2.2GHz / 4096GB RAM
 
 ### Broadwell
 
@@ -123,9 +127,11 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
-| 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz | 64GB, 128GB, 256GB, 384GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz | 64GB, 128GB, 256GB, 384GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz | 64GB, 128GB, 256GB, 384GB, 512GB, 768GB, 1.5TB |
+| 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
+| 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
+| 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
+| 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 2.0GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
+| 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.1GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 
 ### Bare Metal Server 수
 
@@ -142,7 +148,11 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 클러스터용 VMware vSAN 컴포넌트를 선택하고 나면 다음 설정을 지정하십시오.
 * **vSAN 용량 디스크의 디스크 유형 및 크기**: 필요한 용량 디스크에 대한 옵션을 선택하십시오.
 * **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
-* 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다. **고성능 Intel Optane** 옵션은 듀얼 Intel Xeon Gold 5120 및 6140 프로세서에 대해서만 사용 가능합니다.
+* 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다.
+
+  **고성능 Intel Optane** 옵션은 Skylake CPU 모델 듀얼 Intel Xeon Gold 5120 및 듀얼 Intel Xeon Gold 6140에 대해서만 사용 가능합니다.
+  {:note}
+
 * **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **고성능 Intel Optane** 상자를 선택했는지 여부에 따라 달라집니다.
 
 ## 네트워크 인터페이스 설정

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,4 +45,4 @@ Anche se questo semplifica la configurazione di un'infrastruttura connessa a liv
 
 ### Link correlati
 
-* [Panoramica della soluzione](../solution/solution_overview.html)
+* [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

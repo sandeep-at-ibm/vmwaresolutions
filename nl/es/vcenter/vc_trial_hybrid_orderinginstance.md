@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-11"
 
 ---
 
@@ -21,7 +21,9 @@ Esta versión de prueba es ideal para una prueba de concepto que demuestra la ve
 La prueba de un solo nodo solo es para prueba de concepto. No ejecute cargas de trabajo de producción en este entorno. Las funciones de gestión, como la adición y eliminación de hosts y clústeres, la solicitud de servicios complementarios adicionales y la aplicación de actualizaciones, no reciben soporte.
 {:important}
 
-Esta versión de prueba está pensada para utilizarla durante un máximo de 90 días. Cuando finalice el periodo de prueba, puede suprimir este entorno y luego suministrar un entorno de alta disponibilidad que se ajuste a sus necesidades de capacidad. Para obtener más información, consulte [Solicitud de vCenter Server con instancias de paquete híbrido (Hybridity)](vc_hybrid_orderinginstance.html).
+Esta versión de prueba está pensada para utilizarla durante un máximo de 90 días. Cuando finalice el periodo de prueba, puede suprimir este entorno y luego suministrar un entorno de alta disponibilidad que se ajuste a sus necesidades de capacidad.
+
+Para obtener información sobre el diseño de la arquitectura, consulte [Diseño de la arquitectura de HCX on IBM Cloud para la prueba de un solo nodo de vCenter Server on IBM Cloud ](../archiref/trial/vc_trial_hcx_arch.html).
 
 ## Especificaciones técnicas de la versión de prueba de un solo nodo de instancias de vCenter Server
 
@@ -34,44 +36,63 @@ La disponibilidad y los precios de las configuraciones estandarizadas de hardwar
 
 Un procesador Dual Intel Xeon Gold 5120 (28 núcleos, 2,20 GHz) con 384 GB de RAM.
 
-### Redes
+### Especificaciones de red de la versión de prueba de un solo nodo de instancias de vCenter Server
 
 Se solicitan los siguientes componentes del sistema de redes:
 *  Enlaces ascendentes de red pública y privada de 10 Gbps
 *  Tres VLAN (LAN virtuales): una VLAN pública y dos VLAN privadas
 *  Se despliega una VXLAN (LAN extensible virtual) con DLR (direccionador lógico distribuido) para una potencial comunicación este-oeste entre cargas de trabajo locales conectadas a redes de la capa 2 (L2). La VXLAN se despliega como una topología de direccionamiento de ejemplo, que puede modificar o eliminar o a la que puede añadir componentes. También puede añadir zonas de seguridad por conectar VXLAN adicionales a las nuevas interfaces lógicas del DLR.
 *  Dos VMware NSX Edge Services Gateways:
-  * Una Edge Services Gateway (ESG) de NSX de VMware de servicios de gestión segura para el tráfico de gestión de HTTPS saliente, desplegado por IBM como parte de la topología del sistema de redes de gestión. Las VM de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Para obtener más información, consulte [Configuración de la red para que utilice la ESG gestionada por el cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * Una Edge Services Gateway (ESG) de NSX de VMware de servicios de gestión segura para el tráfico de gestión de HTTPS saliente, desplegado por IBM como parte de la topología del sistema de redes de gestión. Las VM de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización.
 
     El usuario no puede acceder ni utilizar esta ESG. Si lo modifica, es posible que no pueda gestionar la prueba de un solo nodo para la instancia de vCenter Server desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, tenga en cuenta que el uso de un cortafuegos o la inhabilitación de las comunicaciones ESG con componentes externos de gestión de IBM harán que {{site.data.keyword.vmwaresolutions_short}} quede inutilizable.
     {:important}
-  * Una Edge Services Gateway de NSX de VMware gestionada por el cliente para el tráfico de salida y de entrada de carga de trabajo HTTPS, que IBM despliega como plantilla que puede modificar para proporcionar acceso VPN o acceso público. Para obtener más información, consulte [¿Representa NSX Edge gestionado por el cliente un riesgo para la seguridad?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
-
-Para obtener más información sobre los componentes de red solicitados al desplegar el servicio de HCX on {{site.data.keyword.cloud_notm}}, consulte [Visión general de HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+  * Una Edge Services Gateway de NSX de VMware gestionada por el cliente para el tráfico de salida y de entrada de carga de trabajo HTTPS, que IBM despliega como plantilla que puede modificar para proporcionar acceso VPN o acceso público.
 
 ### Instancias de servidor virtual
 
 Se solicitan las siguientes instancias de servidor virtual (VSI):
 
-* Una VSI para IBM CloudBuilder, que se cierra una vez completado el despliegue de la instancia.
+* Una VSI para IBM CloudBuilder, que se cancela una vez completado el despliegue de la instancia.
 * Se despliega y se puede consultar una VSI de Microsoft Windows Server para Microsoft Active Directory (AD). La VSI funciona como el DNS para la instancia en la que se han registrado los hosts y las máquinas virtuales.
 
 ### Licencias proporcionadas por IBM y tarifas
 
 En la versión de prueba de un solo nodo de la solicitud de una instancia de vCenter Server se incluyen las siguientes licencias:
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 
 La versión de prueba de un solo nodo de instancias de vCenter Server no admiten la opción de traer su propia licencia.
 {:note}
 
-Puede que se apliquen tarifas de servicio y soporte adicionales.
-
 ## Especificaciones técnicas de VMware HCX on IBM Cloud
 
-La prueba de un solo nodo para vCenter Server incluye HCX on {{site.data.keyword.cloud_notm}}. Para obtener información sobre las especificaciones técnicas y las consideraciones sobre HCX on {{site.data.keyword.cloud_notm}}, consulte [Visión general de VMware HCX on IBM Cloud](../services/hcx_considerations.html).
+La prueba de un solo nodo para vCenter Server incluye HCX on {{site.data.keyword.cloud_notm}}. Los componentes siguientes se solicitan y se incluyen en el servicio HCX on {{site.data.keyword.cloud_notm}}.
+
+Las instancias de HCX locales incluyen solo la licencia y la activación.
+{:note}
+
+### Un par activo/pasivo de pasarelas de servicio VMware NSX Edge para la gestión de HCX
+
+* CPU: 6 vCPU
+* RAM: 8 GB
+* Disco: 3 GB VMDK
+
+### Dispositivo de gestión HCX - máquina virtual
+
+* CPU: 4 vCPU
+* RAM: 12 GB
+* Disco: 60 GB VMDK
+
+Los dispositivos HCX adicionales se despliegan durante la configuración, según sean necesarios para la conectividad de L2, la optimización de WAN y las conexiones de pasarela.
+
+### Especificaciones de red para el servicio HCX on IBM Cloud
+
+* Una subred portátil pública con 16 direcciones IP
+* Dos subredes portátiles privadas con 64 direcciones IP
+* Ocho direcciones IP desde una subred vMotion portátil privada
 
 ## Requisitos y planificación para solicitar una versión de prueba de un solo nodo para instancias de vCenter Server
 
@@ -80,18 +101,17 @@ Asegúrese de cumplir con los siguientes requisitos y de haber completado las ta
  * Requiere VMware vSphere y vCenter 5.5 o superior.
  * El entorno de vSphere debe tener conmutadores distribuidos para el VMx que se migrará a {{site.data.keyword.cloud_notm}}.
  * El dispositivo virtual de HCX Manager debe poder desplegarse en una red privada en el entorno local y debe tener permiso para acceder a Internet público.
-* La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
-*  Configure las credenciales de la infraestructura {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
-* Revise los requisitos del nombre de la instancia:  
- * Solo se permiten caracteres alfanuméricos y el guión (-).
- * El nombre de instancia debe empezar y terminar por un carácter alfanumérico.
- * La longitud máxima del nombre de instancia es de 10 caracteres.
- * El nombre de instancia debe ser exclusivo dentro de su cuenta.
-* Revise los {{site.data.keyword.CloudDataCents_notm}} que se ajustan a los requisitos de la infraestructura física. Para obtener más información, consulte la sección sobre *Disponibilidad de {{site.data.keyword.CloudDataCent_notm}}* en [Requisitos y planificación de vCenter Server con instancias de paquete híbrido (Hybridity)](../vcenter/vc_hybrid_planning.html#ibm-cloud-data-center-availability).
+ * Para utilizar {{site.data.keyword.vmwaresolutions_short}} para solicitar instancias, debe tener una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer). El coste de los componentes que se solicitan en las instancias se factura a dicha cuenta de {{site.data.keyword.cloud_notm}}.
+ *  Configure las credenciales de la infraestructura {{site.data.keyword.cloud_notm}} en la página **Configuración**. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Valores** en el panel de navegación de la izquierda.
+ * Revise los requisitos del nombre de la instancia:
+    * Solo se permiten caracteres alfanuméricos y el guión (-).
+    * El nombre de instancia debe empezar y terminar por un carácter alfanumérico.
+    * La longitud máxima del nombre de instancia es de 10 caracteres.
+    * El nombre de instancia debe ser exclusivo dentro de su cuenta.
 
 ## Procedimiento para solicitar la versión de prueba de un solo nodo para instancias de vCenter Server
 
-1. En la página **Prueba de un solo nodo para VMware vCenter Server on {{site.data.keyword.cloud_notm}}**, pulse la tarjeta **vCenter Server** y pulse **Continuar**.
+1. En la página **Prueba de un solo nodo para VMware vCenter Server on {{site.data.keyword.cloud_notm}}**, pulse **Continuar**.
 2. En la página **Prueba de un solo nodo para VMware vCenter Server**, siga los pasos para solicitar una cuenta de la infraestructura {{site.data.keyword.cloud_notm}} o especifique su **Nombre de usuario** y **Clave de API** existentes y pulse **Recuperar**.
 
  Esta sección está oculta si la clave de API ya existe.
@@ -99,7 +119,7 @@ Asegúrese de cumplir con los siguientes requisitos y de haber completado las ta
 3. Escriba el nombre de la instancia.
 4. Seleccione el {{site.data.keyword.CloudDataCent_notm}} que va a alojar la instancia.  
 
- El {{site.data.keyword.CloudDataCent_notm}} aparece preseleccionado. Seleccione otra ubicación de {{site.data.keyword.CloudDataCent_notm}} si es necesario.
+ De forma predeterminada, aparece preseleccionado el {{site.data.keyword.CloudDataCent_notm}} DAL09. Seleccione otra ubicación de {{site.data.keyword.CloudDataCent_notm}} si es necesario.
  {:note}
 5. En el panel **Resumen del pedido**, verifique la configuración de la instancia antes de realizar el pedido.
    1. Revise los valores de la instancia.
@@ -125,7 +145,7 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. El proc
    * Se configuran interfaces de enlaces ascendentes públicos y privados utilizando las subredes solicitadas.
    * Se configuran los ESG como un par de dispositivos de extremo extra grandes con alta disponibilidad (HA) habilitada.
    * Se configuran reglas de cortafuegos y reglas de conversión de direcciones de red (NAT) para permitir el tráfico HTTPS de entrada y de salida procedente y destinado a HCX Manager.
-   * Se configuran las agrupaciones de recursos y las reglas del equilibrador de carga. Estas reglas son agrupaciones de recursos que se utilizan para reenviar el tráfico de entrada relacionado con HCX a los dispositivos virtuales adecuados de HCX Manager, vCenter Server y de Platform Services Controller (PSC).
+   * Se configuran las agrupaciones de recursos y las reglas del equilibrador de carga. Estas reglas y agrupaciones de recursos se utilizan para reenviar el tráfico de entrada relacionado con HCX a los dispositivos virtuales adecuados de HCX Manager y vCenter Server (con el controlador de servicios de plataforma integrado).
    * Se aplica el certificado SSL para cifrar el tráfico HTTPS de entrada relacionado con HCX que llega a través de los ESG.
 
    El extremo de gestión HCX se dedica al tráfico de gestión HCX entre los componentes locales de HCX y los componentes en la nube de HCX. No modifique el extremo de gestión de HCX ni lo utilice para extensiones de red de HCX. En su lugar, crear otros extremos para extensiones de red. Además, el uso de un cortafuegos o la inhabilitación de las comunicaciones del extremo de gestión de HCX con componentes de gestión privados de IBM o con internet pública pueden afectar negativamente a las funciones de HCX.
@@ -133,19 +153,17 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. El proc
 
 5. Se despliega, se activa y se configura HCX Manager on {{site.data.keyword.cloud_notm}}:
    * Se registra HCX Manager con vCenter Server.
-   * Se configuran los componentes HCX Manager, vCenter Server, PSC y NSX Manager.
+   * Se configuran los componentes HCX Manager, vCenter Server (con el controlador de servicios de plataforma integrado) y NSX Manager.
    * Se configura la flota HCX.
    * Se configuran contenedores de despliegue de HCX locales y remotos.
 6. Se registra el nombre de host y la dirección IP de HCX Manager con el servidor DNS de VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 #### Visualización de detalles de una instancia
 
-Puede comprobar el estado del despliegue visualizando los detalles de la instancia. Para obtener información sobre la visualización de detalles de una instancia, consulte:
+Puede comprobar el estado del despliegue visualizando los detalles de la instancia. Pulse **Instancias desplegadas** en el panel de navegación de la izquierda y localice la tabla **Instancias de vCenter Server** o **Instancias de HCX locales** para
+ver información sobre las instancias que ha solicitado.
 
-* [Visualización de instancias de vCenter Server](vc_viewinginstances.html)
-* [Visualización de instancias locales de VMware HCX on IBM Cloud](../services/standalone_viewingserviceinstances.html)
-
-Cuando la instancia se despliega correctamente, los componentes que se describen en las secciones *Especificaciones técnicas* de este tema se instalan en la plataforma virtual de VMware y la clave de activación del servicio HCX on {{site.data.keyword.cloud_notm}} local está disponible en la página de detalles de HCX on {{site.data.keyword.cloud_notm}} local.
+Cuando la instancia se ha desplegado correctamente, los componentes que se describen en las secciones *Especificaciones técnicas* de este tema se instalan en la plataforma virtual de VMware y la clave de activación del servicio HCX local en {{site.data.keyword.cloud_notm}} aparece listado en la tabla **Instancias de HCX locales**.
 
 El estado de la instancia pasa a ser **Listo para su uso** y el usuario recibe una notificación por correo electrónico.
 
@@ -156,7 +174,7 @@ Instale HCX Enterprise Manager local y configure la conexión con el HCX en la i
 1. Localice la clave de activación local en la página **Instancias desplegadas**.
   1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
   2. En la tabla **Instancias de vCenter Server**, revise la columna **Tipo** para localizar la instancia de prueba de un solo nodo y anote el nombre de la instancia.
-  3. Desplácese hasta la tabla **Instancias de HCX local** y examine la columna **Nombre** para localizar la instancia que tiene el mismo nombre que la instancia de un solo nodo. Se añade *-OnPrem* al nombre de la instancia.
+  3. Desplácese hasta la tabla **Instancias de HCX locales** y examine la columna **Nombre** para localizar la instancia que tiene el mismo nombre que la instancia de un solo nodo que ha solicitado con el prefijo *-OnPrem*.
   4. Anote la clave del campo **Clave de activación**.
 2. Obtenga el HCX Enterprise Manager Open Virtual Appliance (OVA) local desde HCX en la consola de {{site.data.keyword.cloud_notm}} HCX Manager.
   1. Conéctese a la consola de HCX Cloud.
@@ -196,14 +214,31 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 
 ## Procedimiento para suprimir la versión de prueba de un solo nodo para instancias de vCenter Server
 
-Para liberar los componentes que ha solicitado en una versión de prueba de un solo nodo de una instancia de vCenter Server, suprima la instancia.
+Cuando suprima una instancia de prueba de un solo nodo de vCenter Server, los siguientes componentes se liberarán en esta secuencia:
 
-Para obtener más información, consulte [Supresión de instancias de vCenter Server](vc_deletinginstance.html).
+1. Todos los servicios desplegados
+3. Licencias del producto VMware
+4. Servidores ESXi
+5. Subredes
+6. VLAN
+
+Debido a las dependencias entre recursos, los componentes de la instancia no se liberan inmediatamente cuando se suprime la instancia. Por ejemplo, las subredes y las VLAN no se pueden suprimir hasta que la infraestructura de {{site.data.keyword.cloud_notm}} haya reclamado por completo los servidores ESXi, lo cual sucede al final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}. Al final del ciclo de facturación de la infraestructura de {{site.data.keyword.cloud_notm}}, que suele ser de 30 días, se suprimen las subredes y las VLAN y se completa la supresión de la instancia.
+
+Se le facturará por la instancia suprimida hasta el final del ciclo de facturación de la infraestructura {{site.data.keyword.cloud_notm}}.
+{:note}
+
+Siga los pasos siguientes para suprimir una instancia de prueba de un solo nodo para vCenter Server:
+
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+2. En la tabla **Instancias de vCenter Server**, busque la instancia que desea suprimir.
+3. En la columna **Acciones**, pulse el icono Suprimir.
+   El estado de la instancia pasa a ser **Suprimiendo**. Cuando la instancia se haya suprimido correctamente, los componentes de la instancia se liberarán y el estado de la instancia pasará a ser **Suprimido**.
+4. Si desea eliminar el registro de la instancia de la consola de {{site.data.keyword.vmwaresolutions_short}}, siga estos pasos:
+   1. En la columna **Acciones**, pulse el icono Suprimir de nuevo.
+   2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
 ### Enlaces relacionados
 
-* [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
-* [Glosario de términos de HCX](../services/hcx_glossary.html)
+* [Diseño de la arquitectura de HCX on IBM Cloud para la versión de prueba de un solo nodo para vCenter Server on IBM Cloud](../archiref/trial/vc_trial_hcx_arch.html)
 * [Documentación de VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
 * [Obtención de HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)
-* [Solicitud de instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_orderinginstance.html)

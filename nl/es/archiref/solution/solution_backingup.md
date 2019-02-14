@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-27"
 
 ---
 
@@ -14,7 +14,7 @@ Usted es responsable de la configuración, la gestión y la supervisión de todo
 
 Como parte de la solución, puede desplegar opcionalmente los servicios complementarios IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. Veeam e IBM Spectrum Protect Plus pueden ayudar a satisfacer el requisito de realizar copia de seguridad de los componentes de gestión.
 
-Estos servicios complementarios se despliegan junto con el almacenamiento de Resistencia de {{site.data.keyword.cloud_notm}}. Los servicios le ayudan a realizar copia de seguridad de las cargas de trabajo y de los componentes de gestión. La [Visión general de la arquitectura de IBM Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} y la [Visión general de la arquitectura de Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} proporcionan una guía útil sobre la planificación y el dimensionamiento del despliegue. También puede solicitar [servicios gestionados](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) para el despliegue de Veeam.
+Estos servicios complementarios se despliegan junto con el almacenamiento de Resistencia de {{site.data.keyword.cloud_notm}}. Los servicios le ayudan a realizar copia de seguridad de las cargas de trabajo y de los componentes de gestión. La [Visión general de la arquitectura de IBM Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} y la [Visión general de la arquitectura de Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} proporcionan una guía útil sobre la planificación y el dimensionamiento del despliegue. También puede solicitar [servicios gestionados](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) para el despliegue de Veeam.
 
 Distintos componentes de solución requieren distintas estrategias para la copia de seguridad. Algunos componentes están protegidos mediante la copia de seguridad a nivel de imagen, y otros componentes están protegidos mediante la copia de seguridad basada en archivos para su configuración y datos.
 

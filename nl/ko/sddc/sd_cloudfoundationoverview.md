@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -54,9 +54,10 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 
 다음 구성 중 하나로 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
 *  **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)   
-*  **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 Intel Broadwell 세대 서버(Intel Xeon E5-2600 v4 시리즈)   
+*  **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 Intel Broadwell 세대 서버(IntelXeon E5-2600/E7-4800 시리즈)
+
 vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
-   {:note}
+{:note}
 
 ### 네트워킹
 

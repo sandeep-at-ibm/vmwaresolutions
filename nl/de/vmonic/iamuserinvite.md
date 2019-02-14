@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-11"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-11"
 ## Vorbereitende Schritte
 
 * Stellen Sie sicher, dass Sie der Kontoeigner sind oder dass Sie die Plattformmanagementrolle **Administrator** für den Service **VMware Solutions** besitzen.
-* Stellen Sie sicher, dass Sie die Benutzerrollen und Berechtigungen geprüft haben, die unter [Benutzerzugriff mit Identity and Access Management verwalten](iam.html) aufgeführt sind.
+* Stellen Sie sicher, dass Sie die Benutzerrollen und Berechtigungen geprüft haben, die unter [Benutzerzugriff mit Identity and Access Management verwalten](/docs/services/vmwaresolutions/vmonic/iam.html) aufgeführt sind.
 
 ## Vorgehensweise zum Einladen von Benutzern für den Zugriff auf Services und Ressourcen
 
@@ -34,12 +34,12 @@ Sobald die hinzugefügten Benutzer Ihre Einladung akzeptiert haben, können sie 
 
 ### Zugehörige Links
 
-* [Benutzer einladen und Zugriff zuweisen](../../../iam/iamuserinv.html)
-* [Identität und Zugriff verwalten](../../../iam/quickstart.html)
-* [Benutzer und Zugriff verwalten](../../../iam/iamusermanage.html)
-* [Was ist IAM?](../../../iam/index.html)
-* [vCenter Server-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](../vcenter/vc_addinstancetousraccount.html)
-* [vCenter Server with Hybridity Bundle-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [Cloud Foundation-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](../sddc/sd_addinstancetousraccount.html)
-* [NetApp ONTAP Select-Instanzen aus Versionen vor Version 2.5 auf IBM Cloud-Konten migrieren](../netapp/np_addinstancetousraccount.html)
-* [VMware Federal-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](../vcenter/vc_fed_addinstancetousraccount.html)
+* [Benutzer einladen und Zugriff zuweisen](/docs/iam/iamuserinv.html)
+* [Identität und Zugriff verwalten](/docs/iam/quickstart.html)
+* [Benutzer und Zugriff verwalten](/docs/iam/iamusermanage.html)
+* [Was ist IAM?](/docs/iam/index.html)
+* [vCenter Server-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [vCenter Server with Hybridity Bundle-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [Cloud Foundation-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [NetApp ONTAP Select-Instanzen aus Versionen vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [VMware Federal-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)

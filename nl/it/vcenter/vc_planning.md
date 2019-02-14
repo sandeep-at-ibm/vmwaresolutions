@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ Esamina i seguenti requisiti prima di ordinare le tue istanze VMware vCenter Ser
 
 ## Requisiti dell'account IBM Cloud
 
-L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Disponibilità dei data center IBM Cloud
 
@@ -25,31 +25,31 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicazione | Regione | Opzioni server |
 |:----------------------|:---------|:-------|:---------------|
 | AMS03 | Amsterdam | Europa | Skylake, Broadwell |
-| CHE01 | Chennai | Asia Pacifico | Skylake, Certificato SAP, Broadwell |
+| CHE01 | Chennai | Asia-Pacifico | Skylake, Certificato SAP, Broadwell |
 | DAL09 | Dallas | Nord America meridionale | Skylake, Certificato SAP, Broadwell |
 | DAL10 | Dallas | Nord America meridionale | Skylake, Certificato SAP, Broadwell |
 | DAL12 | Dallas | Nord America meridionale | Skylake, Certificato SAP, Broadwell |
 | DAL13 | Dallas | Nord America meridionale | Skylake, Certificato SAP, Broadwell |
 | FRA02 | Francoforte | Europa | Skylake, Certificato SAP, Broadwell |
 | FRA04 | Francoforte | Europa | Skylake, Certificato SAP, Broadwell |
-| HKG02 | Hong Kong | Asia Pacifico | Skylake, Broadwell |
+| HKG02 | Hong Kong | Asia-Pacifico | Skylake, Broadwell |
 | LON02 | Londra | Europa | Skylake, Broadwell |
 | LON04 | Londra | Europa | Skylake, Certificato SAP, Broadwell |
 | LON06 | Londra | Europa | Skylake, Certificato SAP, Broadwell |
-| MEL01 | Melbourne | Asia Pacifico | Skylake, Certificato SAP, Broadwell |
+| MEL01 | Melbourne | Asia-Pacifico | Skylake, Certificato SAP, Broadwell |
 | MEX01 | Queretaro | Nord America meridionale | Skylake, Certificato SAP, Broadwell |
 | MIL01 | Milano | Europa | Skylake, Certificato SAP, Broadwell |
 | MON01 | Montreal | Nord America orientale | Skylake, Certificato SAP, Broadwell |
 | OSL01 | Oslo | Europa | Skylake, Broadwell |
 | PAR01 | Parigi | Europa | Skylake, Broadwell |
 | SAO01 | San Paolo | Sud America | Skylake, Certificato SAP, Broadwell |
-| SEO01 | Seul | Asia Pacifico | Skylake, Certificato SAP, Broadwell |
+| SEO01 | Seul | Asia-Pacifico | Skylake, Certificato SAP, Broadwell |
 | SJC03 | San Jose | Nord America occidentale | Skylake, Broadwell |
 | SJC04 | San Jose | Nord America occidentale | Skylake, Broadwell |
-| SNG01 | Singapore | Asia Pacifico | Skylake, Broadwell |
-| SYD01 | Sydney | Asia Pacifico | Skylake, Broadwell |
-| SYD04 | Sydney | Asia Pacifico | Skylake, Certificato SAP, Broadwell |
-| TOK02 | Tokyo | Asia Pacifico | Skylake, Certificato SAP, Broadwell |
+| SNG01 | Singapore | Asia-Pacifico | Skylake, Broadwell |
+| SYD01 | Sydney | Asia-Pacifico | Skylake, Broadwell |
+| SYD04 | Sydney | Asia-Pacifico | Skylake, Certificato SAP, Broadwell |
+| TOK02 | Tokyo | Asia-Pacifico | Skylake, Certificato SAP, Broadwell |
 | TOR01 | Toronto | Nord America orientale | Skylake, Certificato SAP, Broadwell |
 | WDC04 | Washington, DC | Nord America orientale | Skylake, Certificato SAP, Broadwell |
 | WDC06 | Washington, DC | Nord America orientale | Skylake, Certificato SAP, Broadwell |
@@ -67,19 +67,19 @@ Tabella 2. Indicatori di stato per i {{site.data.keyword.CloudDataCents_notm}} q
 
 ## Backup dei componenti di gestione
 
-Sei responsabile del mantenimento e della verifica della disponibilità di tutti i componenti dell'istanza. Si consiglia vivamente di pianificare il backup o l'alta disponibilità di tutti i componenti di gestione. Per ulteriori informazioni, vedi [Backup dei componenti](../archiref/solution/solution_backingup.html).
+Sei responsabile del mantenimento e della verifica della disponibilità di tutti i componenti dell'istanza. Si consiglia vivamente di pianificare il backup o l'alta disponibilità di tutti i componenti di gestione. Per ulteriori informazioni, vedi [Backup dei componenti](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
 ## Servizi per le istanze vCenter Server
 
-Puoi ordinare servizi aggiuntivi per la tua istanza in base alle tue esigenze, ad esempio il ripristino di emergenza. Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](vc_addingremovingservices.html).
+Puoi ordinare servizi aggiuntivi per la tua istanza in base alle tue esigenze, ad esempio il ripristino di emergenza. Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html).
 
 ## Considerazioni sulla capacità
 
-Per ulteriori informazioni relative alle considerazioni sulla capacità, vedi [Ridimensionamento della capacità](../archiref/solution/solution_scaling.html).
+Per ulteriori informazioni relative alle considerazioni sulla capacità, vedi [Ridimensionamento della capacità](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
 
 ### Link correlati
 
-* [Panoramica di vCenter Server](vc_vcenterserveroverview.html)
-* [Ordine di istanze vCenter Server](vc_orderinginstance.html)
-* [Espansione e contrazione della capacità per le istanze vCenter Server](vc_addingremovingservers.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](vc_addingremovingservices.html)
+* [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)

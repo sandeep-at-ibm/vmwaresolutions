@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-14"
 
 ---
 
@@ -51,9 +51,8 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링은 스토리�
 * NSX Manager
 * 두 개의 NSX ESG(Edge Services Gateway)
 * 세 개의 NSX Controllers
-* PSC(Platform Services Controller) 가상 어플라이언스
-* vCSA(vCenter Server Appliance)
-* IBM CloudDriver VSI(Virtual Server Instance).
+* 임베드된 PSC(Platform Services Controller)가 포함된 vCenter Server Appliance(vCSA)
+* IBM CloudDriver VSI(Virtual Server Instance)
 
 NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로컬 스토리지를 가상화합니다. NetApp ONTAP Select는 전용 모델에 배치되며, 여기서 기타 워크로드는 이와의 클러스터 공유가 예상되지 않습니다. 결과적으로 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링의 하드웨어 구성은 NetApp ONTAP Select의 요구사항에 따라서만 크기가 조정됩니다.
 

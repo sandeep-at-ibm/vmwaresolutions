@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,4 +16,4 @@ Todd と Jane は Stock Trader の機能を拡張し、開発および管理方�
 
 ### 関連リンク
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

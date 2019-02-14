@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-10-29"
 
 # vCenter Server with Hybridity Bundle-Instanzen bestellen
 
-Um eine flexible und anpassbare virtualisierte VMware-Plattform bereitzustellen, die Ihren Workloadbedarf optimal erfüllt, bestellen Sie eine VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle-Instanz. Ihre Bestellung der vCenter Server with Hybridity Bundle-Instanz beinhaltet die Lizenzierung von VMware Hybrid Cloud Extension (HCX) und berechtigt Sie zur Verwendung des Service "VMware HCX on {{site.data.keyword.cloud_notm}}". Sie können auch Services hinzufügen, wie zum Beispiel [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) für die Disaster-Recovery.
+Um eine flexible und anpassbare virtualisierte VMware-Plattform bereitzustellen, die Ihren Workloadbedarf optimal erfüllt, bestellen Sie eine VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle-Instanz. Ihre Bestellung der vCenter Server with Hybridity Bundle-Instanz beinhaltet die Lizenzierung von VMware Hybrid Cloud Extension (HCX) und berechtigt Sie zur Verwendung des Service "VMware HCX on {{site.data.keyword.cloud_notm}}". Sie können auch Services hinzufügen, wie zum Beispiel [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html) für die Disaster-Recovery.
 
 ## Voraussetzungen für die Bestellung von vCenter Server with Hybridity Bundle-Instanzen
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](../vmonic/useraccount.html).
-*  Sie haben die Informationen in [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle](vc_hybrid_planning.html) gelesen.
+*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Sie haben die Informationen in [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html) gelesen.
 * Sie haben das Instanz- und Domänennamensformat geprüft. Der Domänenname und die Unterdomänenbezeichnung werden verwendet, um den Benutzernamen und die Servernamen der Instanz zu generieren.
 
 Tabelle 1. Wertformat für Instanz- und Domänennamen
@@ -29,10 +29,9 @@ Tabelle 1. Wertformat für Instanz- und Domänennamen
   |:------------- |:------------- |
   | Domänenname | `<root_domain>` |  
   | Anmeldebenutzername für vCenter Server | `<user_id>@<root_domain>` (Microsoft Active Directory-Benutzer) oder `administrator@vsphere.local` |
-  | Vollständig qualifizierter Domänenname für vCenter Server | ` vcenter.<subdomain_label>.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |
+  | vCenter Server (mit integriertem PSC) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |
   | SSO-Standortname | `<subdomain_label>` |
-  | Vollständig qualifizierter Name des ESXi-Servers | `<host_prefix><n>.<subdomain_label>.<root_domain>`, hierbei steht `<n>` für die Folgenummer des ESXi-Servers. Die maximale Länge beträgt 50 Zeichen. |  
-  | Vollständig qualifizierter Domänenname für PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |
+  | Vollständig qualifizierter Name des ESXi-Servers | `<host_prefix><n>.<subdomain_label>.<root_domain>`, hierbei steht `<n>` für die Folgenummer des ESXi-Servers. Die maximale Länge beträgt 50 Zeichen. |
 
 Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung oder Bereitstellung der Instanz festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise, wenn der öffentliche Netzbetrieb beendet wird, Server sowie virtuelle Serverinstanzen (VSIs) mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder wenn die Virtual Server-Instanz für IBM CloudBuilder gestoppt oder gelöscht wird.
 {:important}
@@ -45,7 +44,7 @@ Sie müssen die folgenden Systemeinstellungen angeben, wenn Sie eine vCenter Ser
 
 Der Instanzname muss die folgenden Anforderungen erfüllen:
 * Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-* Der Instanzname muss mit einem alphanumerischen Zeichen beginnen und enden.
+* Der Instanzname muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden. 
 * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
 * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
 
@@ -62,7 +61,8 @@ In die Bestellung Ihrer vCenter Server with Hybridity Bundle-Instanz sind folgen
 * NSX Service Providers 6.4 (Advanced Edition oder Enterprise Edition)
 * vSAN 6.6 (Advanced Edition oder Enterprise Edition)
 
-**Achtung:**
+### Achtung
+
 * vCenter Server with Hybridity Bundle-Instanzen bieten keine BYOL-Unterstützung (BYOL = Bring Your Own License; Verwendung der eigenen Lizenz).
 * Die mindestens erforderlichen Lizenzeditionen sind in der Benutzerschnittstelle angegeben. Falls unterschiedliche Komponenteneditionen unterstützt werden, können Sie die gewünschte Edition auswählen.
 
@@ -99,6 +99,8 @@ Tabelle 3. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Bare Metal Server-Anzahl
 
@@ -109,7 +111,11 @@ Standardmäßig werden vier ESXi-Server ausgewählt. Diese Einstellung kann nich
 VMware vSAN 6.6 ist Bestandteil der Bestellung Ihrer vCenter Server with Hybridity Bundle-Instanz. Geben Sie die folgenden vSAN-Optionen an:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
-* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
+
+  Die Option **High-Performance Intel Optane** ist nur für die Skylake-CPU-Modelle Dual Intel Xeon Gold 5120 und Dual Intel Xeon Gold 6140 verfügbar.
+  {:note}
+
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
 
 ## Netzschnittstelleneinstellungen
@@ -127,7 +133,7 @@ Sie müssen die folgenden Netzschnittstelleneinstellungen angeben, wenn Sie eine
 
 Die Unterdomänenbezeichnung muss die folgenden Anforderungen erfüllen:
 *  Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-*  Die Unterdomänenbezeichnung muss mit einem alphanumerischen Zeichen beginnen und enden.
+*  Die Unterdomänenbezeichnung muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden. 
 *  Die maximale Länge der Unterdomänenbezeichnung beträgt 10 Zeichen.
 *  Die Unterdomänenbezeichnung muss innerhalb Ihres Kontos eindeutig sein.
 
@@ -145,7 +151,7 @@ Die maximale Länge des vollständig qualifizierten Domänennamens für Hosts un
 
 ### Öffentliches oder privates Netz
 
-Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC – Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
+Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
 
 * F5 on {{site.data.keyword.cloud_notm}}
 * FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}
@@ -167,7 +173,7 @@ Für Ihre Instanzbestellung sind 1 öffentliches VLAN und 2 private VLANs erford
 Wählen Sie **Vorhandene VLANs auswählen** aus, um vorhandene öffentliche und private VLANs wiederzuverwenden und eine Auswahl unter den verfügbaren VLANs und Teilnetzen zu treffen.
 
 
-* Stellen Sie sicher, dass die Firewallkonfiguration bei den ausgewählten VLANs den Managementdatenverkehr nicht blockiert.
+* Stellen Sie sicher, dass die Firewallkonfiguration bei den ausgewählten VLANs den Managementdatenverkehr nicht sperrt.
 * Stellen Sie sicher, dass sich alle von Ihnen ausgewählten VLANs in demselben Pod befinden, da ESXi-Server nicht in VLANs mit heterogenen Pods bereitgestellt werden können.
 {:important}
 
@@ -185,11 +191,11 @@ Jede Lizenz kann nur einem einzigen physischen Server zugeordnet werden und deck
 
 Sie haben 30 Tage Zeit, um die VMs zu aktivieren.
 
-Weitere Informationen zum Bestellen der Windows-Lizenzierung finden Sie auf der Seite [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+Weitere Informationen zum Bestellen der Windows-Lizenzierung finden Sie auf der Seite mit der [Dokumentation zu Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Serviceeinstellungen
 
-Beim Bestellen einer vCenter Server with Hybridity Bundle-Instanz können Sie auch zusätzliche Services bestellen. Weitere Informationen zu den Services finden Sie unter [Verfügbare Services für vCenter Server with Hybridity Bundle-Instanzen](vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances).
+Beim Bestellen einer vCenter Server with Hybridity Bundle-Instanz können Sie auch zusätzliche Services bestellen. Weitere Informationen zu den Services finden Sie unter [Verfügbare Services für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances).
 
 ## Bestellübersicht
 
@@ -204,7 +210,8 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
    * Klicken Sie auf **Primäre Instanz**, um eine einzelne Instanz in der Umgebung bereitzustellen oder um die erste Instanz in einer Topologie mit mehreren Standorten bereitzustellen.
    * Klicken Sie auf **Sekundäre Instanz**, um die Instanz mit einer vorhandenen (primären) Instanz in der Umgebung zu verbinden, um eine hohe Verfügbarkeit zu erreichen, und führen Sie dann die folgenden Schritte aus:
      1. Wählen Sie die primäre Instanz aus, mit der die sekundäre Instanz verbunden werden soll.
-     2. Geben Sie das PSC-Administratorkennwort für die primäre Instanz ein.
+     2. Geben Sie für primäre Instanzen ab Version 2.8 das Administratorkennwort für vCenter Server in der primären Instanz ein.
+     3. Geben Sie für primäre Instanzen ab Version 2.7 das PSC-Administratorkennwort in der primären Instanz ein.
 5. Wählen Sie die NSX-Lizenzedition und die vSAN-Lizenzedition aus.
 6. Geben Sie die Bare Metal Server-Einstellungen an.
   1. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
@@ -220,7 +227,7 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
      *  Falls Sie neue öffentliche und private VLANs bestellen wollen, klicken Sie auf **Neue VLANs bestellen**.
      *  Wenn Sie die vorhandenen öffentlichen und privaten VLANs wiederverwenden möchten, sofern diese verfügbar sind, dann klicken Sie auf **Vorhandene VLANs auswählen** und wählen Sie anschließend das öffentliche VLAN, das primäre Teilnetz, das private VLAN, das primäre private Teilnetz und das sekundäre private VLAN aus.
   4. Wählen Sie die DNS-Konfiguration aus.
-9. Führen Sie die Konfiguration für den enthaltenen Service "HCX on {{site.data.keyword.cloud_notm}}" aus. Weitere Informationen zum Angeben von Einstellungen für den Service finden Sie im Abschnitt _VMware HCX on IBM Cloud – Konfiguration_ in [VMware HCX on IBM Cloud bestellen](../services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration).
+9. Führen Sie die Konfiguration für den enthaltenen Service "HCX on {{site.data.keyword.cloud_notm}}" aus. Weitere Informationen zum Angeben von Einstellungen für den Service finden Sie im Abschnitt _VMware HCX on IBM Cloud - Konfiguration_ in [VMware HCX on IBM Cloud bestellen](/docs/services/vmwaresolutions/services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration).
 10. Wählen Sie die Add-on-Services aus, die in der Instanz bereitgestellt werden sollen, indem Sie auf die entsprechende Servicekarte klicken. Wenn ein Service konfiguriert werden muss, dann geben Sie die servicespezifischen Einstellungen an und klicken Sie dann auf der Karte auf **Service hinzufügen**.  
 Weitere Informationen zum Angeben von Einstellungen für einen Service finden Sie im entsprechenden Abschnitt zum Bestellen von Services.
 
@@ -234,7 +241,7 @@ Weitere Informationen zum Angeben von Einstellungen für einen Service finden Si
 
 Die Bereitstellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen.
 
-Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für vCenter Server with Hybridity Bundle-Instanzen](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert. Wenn Sie Add-on-Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
+Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert. Wenn Sie Add-on-Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 
@@ -258,10 +265,10 @@ Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_sh
 
 ### Zugehörige Links
 
-* [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](../vmonic/signing_softlayer_account.html)
-* [vCenter Server with Hybridity Bundle-Instanzen anzeigen](vc_hybrid_viewinginstances.html)
-* [Konfiguration mit mehreren Standorten für vCenter Server with Hybridity Bundle-Instanzen](vc_hybrid_multisite.html)
-* [Cluster für vCenter Server with Hybridity Bundle-Instanzen hinzufügen und anzeigen](vc_hybrid_addingviewingclusters.html)
-* [Kapazität für vCenter Server with Hybridity Bundle-Instanzen erweitern und verringern](vc_hybrid_addingremovingservers.html)
-* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](vc_hybrid_addingremovingservices.html)
-* [vCenter Server with Hybridity Bundle-Instanzen löschen](vc_hybrid_deletinginstance.html)
+* [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [vCenter Server with Hybridity Bundle-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [Konfiguration mit mehreren Standorten für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_multisite.html)
+* [Cluster für vCenter Server with Hybridity Bundle-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
+* [Kapazität für vCenter Server with Hybridity Bundle-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle-Instanzen löschen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ Hybridity Bundle インスタンスを使用して、VMware vCenter Server on {{
 
 ## IBM Cloud アカウントの要件
 
-使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](../vmonic/slaccountrequirement.html)を参照してください。
+使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)を参照してください。
 
 ## IBM Cloud データ・センターの使用可否
 
@@ -67,7 +67,7 @@ vCenter Server with Hybridity Bundle のデプロイメントには、物理イ�
 
 ## 管理コンポーネントのバックアップ
 
-すべてのインスタンス・コンポーネントの可用性を維持し、確保する作業は、お客様が行う必要があります。 すべての管理コンポーネントのバックアップと高可用性について計画を立てることを強くお勧めします。 詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html)を参照してください。
+すべてのインスタンス・コンポーネントの可用性を維持し、確保する作業は、お客様が行う必要があります。 すべての管理コンポーネントのバックアップと高可用性について計画を立てることを強くお勧めします。 詳しくは、[コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)を参照してください。
 
 ## vCenter Server with Hybridity Bundle インスタンス用のサービス
 
@@ -84,15 +84,15 @@ vCenter Server with Hybridity Bundle インスタンスには VMware Hybrid Clou
   * (オプション) **パスワードの再入力**: 秘密鍵のパスワードをもう一度入力します。
   * (オプション) **ホスト名**: CA 証明書の共通名 (CN) にマップするホスト名を入力します。 HCX on {{site.data.keyword.cloud_notm}} には、NSX Edge で受け入れられる形式の CA 証明書を使用する必要があります。 NSX Edge の証明書の形式について詳しくは、[SSL 証明書のインポート](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)を参照してください。
 
-それぞれのニーズに基づいて、インスタンスの他のアドオン・サービスを注文できます。例えば、災害復旧などがあります。 詳しくは、[vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](vc_hybrid_addingremovingservices.html)を参照してください。
+それぞれのニーズに基づいて、インスタンスの他のアドオン・サービスを注文できます。例えば、災害復旧などがあります。 詳しくは、[vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)を参照してください。
 
 ## キャパシティーに関する考慮事項
 
-キャパシティーの考慮事項について詳しくは、[キャパシティーの拡張](../archiref/solution/solution_scaling.html)を参照してください。
+キャパシティーの考慮事項について詳しくは、[キャパシティーの拡張](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)を参照してください。
 
 ### 関連リンク
 
-* [vCenter Server with Hybridity Bundle の概要](vc_hybrid_overview.html)
-* [vCenter Server with Hybridity Bundle インスタンスの注文](vc_hybrid_orderinginstance.html)
-* [vCenter Server with Hybridity Bundle インスタンスの容量の拡張と縮小](vc_hybrid_addingremovingservers.html)
-* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](vc_hybrid_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle の概要](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,7 +41,7 @@ lastupdated: "2018-11-05"
 
 {{site.data.keyword.vmwaresolutions_short}} コンソール上で、ESXi サーバーの追加と削除の機能を使用して、インスタンスの容量を拡張したり縮小したりできます。 さらに、ホスト環境での更新の適用や VMware コンポーネントのアップグレードなどの、ライフサイクル管理機能も使用できます。
 
-アーキテクチャーについて詳しくは、[ソリューションの概要](../archiref/solution/solution_overview.html)を参照してください。
+アーキテクチャーについて詳しくは、[ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)を参照してください。
 
 ## Cloud Foundation インスタンスの技術仕様
 
@@ -54,16 +54,17 @@ Cloud Foundation インスタンスには以下のコンポーネントが含ま
 
 以下のいずれかの構成の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}を注文できます。
 *  **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。   
-*  **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600 v4 シリーズ)。   
-   vSAN ストレージを使用する計画がある場合は、構成に 4 つの{{site.data.keyword.baremetal_short}}が必要です。
-   {:note}
+*  **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600/E7-4800 シリーズ)。
+
+vSAN ストレージを使用する計画がある場合は、構成に 4 つの{{site.data.keyword.baremetal_short}}が必要です。
+{:note}
 
 ### ネットワーキング
 
 以下のネットワーキング・コンポーネントが注文されます。
 * 10 Gbps デュアル・ネットワーク・アップリンク (パブリックとプライベート)
 * VLAN (仮想 LAN) 3 つ: パブリック VLAN 1 つとプライベート VLAN 2 つ
-* アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX Edge Services Gateway (ESG)。これは、管理ネットワーキング類型の一部として IBM によってデプロイされます。 この ESG は、IBM 管理仮想マシンが、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[管理サービス NSX Edge でセキュリティー・リスクが生じますか?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-) を参照してください。
+* アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX Edge Services Gateway (ESG)。これは、管理ネットワーキング類型の一部として IBM によってデプロイされます。 この ESG は、IBM 管理仮想マシンが、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[管理サービス NSX Edge でセキュリティー・リスクが生じますか?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-) を参照してください。
 
   ユーザーは、この ESG にアクセスすることはできず、使用できません。 これに変更を加えると、{{site.data.keyword.vmwaresolutions_short}} コンソールから Cloud Foundation インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなります。
   {:important}
@@ -100,7 +101,7 @@ Cloud Foundation 拡張ノードごとに、{{site.data.keyword.cloud_notm}} ア
 
 ### 拡張ノード用のハードウェア
 
-[Cloud Foundation インスタンスの技術仕様](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)に示されている構成になっている、1 台の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー。
+[Cloud Foundation インスタンスの技術仕様](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)に示されている構成になっている、1 台の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー。
 
 ### 拡張ノード用のライセンスと料金
 
@@ -124,9 +125,9 @@ Cloud Foundation 拡張ノードごとに、{{site.data.keyword.cloud_notm}} ア
 
 ### 関連リンク
 
-* [Cloud Foundation ソフトウェアの部品構成表](sd_bom.html)
-* [Cloud Foundation インスタンスの計画](sd_planning.html)
-* [Cloud Foundation インスタンスの注文](sd_orderinginstance.html)
+* [Cloud Foundation ソフトウェアの部品構成表](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [Cloud Foundation インスタンスの計画](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
 * [VMware vSphere ドキュメント・センター](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [VMware NSX 6 Documentation Center](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764)

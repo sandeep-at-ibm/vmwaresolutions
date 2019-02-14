@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-05"
 
 # Cloud Foundation-Instanzen bestellen
 
-Durch die Bestellung einer VMware Cloud Foundation-Instanz können Sie eine einheitliche Plattform für SDDC (Software-Defined Data Center, softwaredefiniertes Rechenzentrum) mit einer Standardkonfiguration für Rechenressourcen, Speicher und Netz bereitstellen. Während der Erstbestellung können Sie auch Services hinzufügen, z. B. [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html) für die Disaster-Recovery.
+Durch die Bestellung einer VMware Cloud Foundation-Instanz können Sie eine einheitliche Plattform für SDDC (Software-Defined Data Center, softwaredefiniertes Rechenzentrum) mit einer Standardkonfiguration für Rechenressourcen, Speicher und Netz bereitstellen. Während der Erstbestellung können Sie auch Services hinzufügen, z. B. [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html) für die Disaster-Recovery.
 
 ## Voraussetzungen
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](../vmonic/useraccount.html).
-*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für Cloud Foundation-Instanzen](sd_planning.html) vertraut gemacht.
+*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc/sd_planning.html) vertraut gemacht.
 
 Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung oder Bereitstellung der Instanz festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise, wenn der öffentliche Netzbetrieb beendet wird, Server sowie virtuelle Serverinstanzen (VSIs) mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder wenn die Virtual Server-Instanz für IBM CloudBuilder gestoppt oder gelöscht wird. Ändern Sie darüber hinaus nach der Bereitstellung der Instanz weder den Instanznamen, noch den Rootdomänennamen, die Unterdomänenbezeichnung oder das Hostnamenspräfix.
 {:important}
@@ -33,7 +33,7 @@ Sie müssen folgende Systemeinstellungen angeben, wenn Sie eine Cloud Foundation
 
 Der Instanzname muss die folgenden Anforderungen erfüllen:
 * Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-* Der Instanzname muss mit einem alphanumerischen Zeichen beginnen und enden.
+* Der Instanzname muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden. 
 * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
 * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
 
@@ -82,6 +82,8 @@ Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Bare Metal Server-Anzahl
 
@@ -94,7 +96,11 @@ Für Cloud Foundation-Instanzen können Sie nur VMware vSAN-Speicher bestellen.
 Wenn Sie für die Bare Metal Server-Konfiguration die Option **Skylake** oder **Broadwell** auswählen, können Sie den vSAN-Speicher für Ihre Instanz anpassen. Geben Sie folgende vSAN-Einstellungen an:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
-* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
+
+  Die Option **High-Performance Intel Optane** ist nur für die Skylake-CPU-Modelle Dual Intel Xeon Gold 5120 und Dual Intel Xeon Gold 6140 verfügbar.
+  {:note}
+
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
 
 ## Netzschnittstelleneinstellungen
@@ -112,7 +118,7 @@ Das Hostnamenspräfix muss die folgenden Anforderungen erfüllen:
 
 Die Unterdomänenbezeichnung muss die folgenden Anforderungen erfüllen:
 *  Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-*  Die Unterdomänenbezeichnung muss mit einem alphanumerischen Zeichen beginnen und enden.
+*  Die Unterdomänenbezeichnung muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden. 
 *  Die maximale Länge der Unterdomänenbezeichnung beträgt 10 Zeichen.
 *  Die Unterdomänenbezeichnung muss innerhalb Ihres Kontos eindeutig sein.
 
@@ -144,7 +150,7 @@ Tabelle 3. Wertformat für Benutzernamen, Domänennamen und Servernamen
   | SSO-Standortname | `<subdomain_label>`
   | Vollständig qualifizierter Domänenname für PSC | `PSC-<subdomain_label>.<subdomain_label>.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |  
 
-  Der vollständig qualifizierte Domänenname für SDDC Manager kann nicht öffentlich auflösbar sein. Andernfalls schlägt die Konfiguration der Cloud Foundation-Instanz möglicherweise fehl und kann nicht wiederhergestellt werden. Prüfen Sie vor Angabe eines Domänennamens die Informationen unter [Hinweise zur Auswahl eines Rootdomänennamens](../vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances).
+  Der vollständig qualifizierte Domänenname für SDDC Manager kann nicht öffentlich auflösbar sein. Andernfalls schlägt die Konfiguration der Cloud Foundation-Instanz möglicherweise fehl und kann nicht wiederhergestellt werden. Prüfen Sie vor Angabe eines Domänennamens die Informationen unter [Hinweise zur Auswahl eines Rootdomänennamens](/docs/services/vmwaresolutions/vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances).
 
 ### VLANs
 
@@ -165,13 +171,14 @@ Wenn Sie vorhandene öffentliche und private VLANs wiederverwenden wollen, dann 
   * **Primäres Teilnetz** - Wird physischen Hosts für den Zugriff auf öffentliche Netze zugewiesen.
   * **Privates primäres Teilnetz** - Wird physischen Hosts für den Managementdatenverkehr zugewiesen.
 
-**Wichtig:**
-* Stellen Sie sicher, dass die Firewallkonfiguration bei den ausgewählten VLANs den Managementdatenverkehr nicht blockiert.
+##### Wichtig
+
+* Stellen Sie sicher, dass die Firewallkonfiguration bei den ausgewählten VLANs den Managementdatenverkehr nicht sperrt.
 * Stellen Sie sicher, dass sich alle von Ihnen ausgewählten VLANs in demselben Pod befinden, da ESXi-Server nicht in VLANs mit heterogenen Pods bereitgestellt werden können.
 
 ## Services
 
-Beim Bestellen einer Cloud Foundation-Instanz können Sie auch Add-on-Services bestellen. Weitere Informationen zu den verfügbaren Services finden Sie unter [Services für Cloud Foundation-Instanzen](sd_planning.html#services-for-cloud-foundation-instances).
+Beim Bestellen einer Cloud Foundation-Instanz können Sie auch Add-on-Services bestellen. Weitere Informationen zu den verfügbaren Services finden Sie unter [Services für Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc/sd_planning.html#services-for-cloud-foundation-instances).
 
 ## Bestellübersicht
 
@@ -216,7 +223,7 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
 
 Die Bereitstellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen.
 
-Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für Cloud Foundation-Instanzen](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **SDDC-Cluster** gruppiert. Wenn Sie Add-on-Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
+Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **SDDC-Cluster** gruppiert. Wenn Sie Add-on-Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 
@@ -240,10 +247,10 @@ Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in 
 
 ### Zugehörige Links
 
-* [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](../vmonic/signing_softlayer_account.html)
-* [Cloud Foundation-Instanzen anzeigen](sd_viewinginstances.html)
-* [Cluster für Cloud Foundation-Instanzen hinzufügen, anzeigen und löschen](sd_addingviewingclusters.html)
-* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](sd_addingremovingservers.html)
-* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](sd_addingremovingservices.html)
-* [Cloud Foundation-Instanzen löschen](sd_deletinginstance.html)
-* [Häufig gestellte Fragen zu eigenen Lizenzen (BYOL)](../vmonic/faq_byol.html)
+* [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [Cloud Foundation-Instanzen anzeigen](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Cluster für Cloud Foundation-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
+* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Cloud Foundation-Instanzen löschen](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [Häufig gestellte Fragen zu eigenen Lizenzen (BYOL)](/docs/services/vmwaresolutions/vmonic/faq_byol.html)

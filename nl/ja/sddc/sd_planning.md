@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ VMware Cloud Foundation インスタンスを注文する前に、以下の要�
 
 ## IBM Cloud アカウントの要件
 
-使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](../vmonic/slaccountrequirement.html)を参照してください。
+使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)を参照してください。
 
 ## IBM Cloud データ・センターの使用可否
 
@@ -67,19 +67,19 @@ Cloud Foundation のデプロイメントには、物理インフラストラク
 
 ## 管理コンポーネントのバックアップ
 
-すべてのインスタンス・コンポーネントの可用性を維持し、確保する作業は、お客様が行う必要があります。 すべての管理コンポーネントのバックアップと高可用性について計画を立てることをお勧めします。 詳しくは、[コンポーネントのバックアップ](../archiref/solution/solution_backingup.html)を参照してください。
+すべてのインスタンス・コンポーネントの可用性を維持し、確保する作業は、お客様が行う必要があります。 すべての管理コンポーネントのバックアップと高可用性について計画を立てることをお勧めします。 詳しくは、[コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)を参照してください。
 
 ## Cloud Foundation インスタンス用サービス
 
-それぞれのニーズに基づいて、インスタンスのアドオン・サービスを注文できます。例えば、災害復旧などがあります。 詳しくは、[Cloud Foundation インスタンスのサービスの注文、表示、削除](sd_addingremovingservices.html)を参照してください。
+それぞれのニーズに基づいて、インスタンスのアドオン・サービスを注文できます。例えば、災害復旧などがあります。 詳しくは、[Cloud Foundation インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)を参照してください。
 
 ## キャパシティーに関する考慮事項
 
-キャパシティーについて詳しくは、[キャパシティーの拡張](../archiref/solution/solution_scaling.html)を参照してください。
+キャパシティーについて詳しくは、[キャパシティーの拡張](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)を参照してください。
 
 ### 関連リンク
 
-* [Cloud Foundation の概要](sd_cloudfoundationoverview.html)
-* [Cloud Foundation インスタンスの注文](sd_orderinginstance.html)
-* [Cloud Foundation インスタンスの容量の拡張と縮小](sd_addingremovingservers.html)
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](sd_addingremovingservices.html)
+* [Cloud Foundation の概要](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)

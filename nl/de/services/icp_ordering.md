@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -32,8 +32,8 @@ Geben Sie beim Bestellen des Service die folgenden Einstellungen an:
 
 ### Zugehörige Links
 
-* [Übersicht über IBM Cloud Private Hosted](../services/icp_overview.html)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
-* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [Übersicht über IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services/icp_overview.html)
+* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)

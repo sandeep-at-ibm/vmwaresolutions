@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -16,16 +16,16 @@ lastupdated: "2018-11-14"
 2. Otro pod {{site.data.keyword.cloud_notm}} del mismo centro de datos.
 3. Otra geografía y otro pod {{site.data.keyword.cloud_notm}} del mismo centro de datos.
 
-Los productos {{site.data.keyword.cloud_notm}} Private (ICP) y Cloud Automation Manager (CAM) se pueden desplegar manualmente en la plataforma de virtualización local, lo que permite gestionar la nube desde ubicaciones locales. Como alternativa, ICP y CAM se ofrecen como extensiones de servicio de un despliegue de vCenter Server on {{site.data.keyword.cloud_notm}} nuevo o existente, mediante automatización, lo que permite gestionar la nube desde {{site.data.keyword.cloud_notm}}.
+Los productos {{site.data.keyword.icpfull_notm}} y Cloud Automation Manager (CAM) se pueden desplegar manualmente en la plataforma de virtualización local, lo que permite gestionar la nube desde ubicaciones locales. Como alternativa, {{site.data.keyword.icpfull_notm}} y CAM se ofrecen como extensiones de servicio de un despliegue de vCenter Server on {{site.data.keyword.cloud_notm}} nuevo o existente, mediante automatización, lo que permite gestionar la nube desde {{site.data.keyword.cloud_notm}}.
 
-ICP es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones de contenedor locales. Es un entorno integrado para gestionar contenedores que incluye el coordinador de contenedores Kubernetes,
+{{site.data.keyword.icpfull_notm}} es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones locales contenerizadas. Es un entorno integrado para gestionar contenedores que incluye el coordinador de contenedores Kubernetes,
 un repositorio de imágenes privadas, una consola de gestión e infraestructuras de supervisión.
 
 IBM Multi-Cluster Manager proporciona visibilidad de usuario, gestión centrada en aplicaciones (política, despliegues, estado, operaciones) y conformidad basada en políticas entre nubes y clústeres. Con IBM Multi-Cluster Manager, tiene el control sobre los clústeres de Kubernetes. Se asegura de que sus clústeres sean seguros, que funcionen de forma eficiente y que proporcionen los niveles de servicio que esperan las aplicaciones.
 
-{{site.data.keyword.cloud_notm}} Automation Manager es una plataforma de gestión de autoservicio multinube que se ejecuta en {{site.data.keyword.cloud_notm}} Private que permite a los desarrolladores y a los administradores satisfacer las necesidades de la empresa. Cloud Automation Manager Service Composer le permite exponer los servicios de nube híbrida en el catálogo de ICP.
+{{site.data.keyword.cloud_notm}} Automation Manager es una plataforma de gestión de autoservicio multinube que se ejecuta en {{site.data.keyword.cloud_notm}} Private que permite a los desarrolladores y a los administradores satisfacer las necesidades de la empresa. Cloud Automation Manager Service Composer le permite exponer los servicios de nube híbrida en el catálogo de {{site.data.keyword.icpfull_notm}}.
 
-## Componentes de Skate Advisor
+## Componentes físicos de Skate Advisor
 
 En el diagrama siguiente se describe la implementación de referencia de la aplicación Acme Skate Advisor en una implementación de infraestructura de modernización de aplicaciones.
 
@@ -39,20 +39,15 @@ La aplicación Skate Advisor aprovecha la plataforma de modernización de aplica
 ### Empaquetado y despliegue de aplicaciones
 
 La aplicación se despliega como una coordinación de CAM que contiene los siguientes elementos:
-
-Figura 2. Coordinación de CAM
-![Coordinación de CAM](vcscar-cam.svg)
-
-Estos elementos se describen de la forma siguiente:
 * Coordinación de servicios: una coordinación de servicios CAM es un recurso de flujo de trabajo que describe
 las plantillas de Terraform y los diagramas de Helm que se van a desplegar como parte de un servicio. Un servicio se puede publicar y constituye el artefacto de control desde el que se coordina todo el despliegue.
-* Diagrama de Helm: el diagrama de Helm reside en el repositorio de ICP local y despliega contenedores y otros recursos en ICP. Un diagrama de Helm es una descripción de los recursos
+* Diagrama de Helm: el diagrama de Helm reside en el repositorio de {{site.data.keyword.icpfull_notm}} local y despliega contenedores y otros recursos en {{site.data.keyword.icpfull_notm}}. Un diagrama de Helm es una descripción de los recursos
 de Kubernetes, que incluye:
- - Despliegues de contenedor
- - Servicios
- - Ingress
- - Reglas
- - Puntos finales
+  - Despliegues de contenedor
+  - Servicios
+  - Ingress
+  - Reglas
+  - Puntos finales
 
 * Imágenes de Docker: las imágenes de Docker contiene el sistema operativo (ubuntu),
 el middleware (WebSphere Liberty, nginx) y el código de Skate Advisor y de
@@ -61,9 +56,12 @@ Skate Store. Las imágenes de Docker son objetos estáticos que se despliegan en
 * Plantilla de VMWare: la plantilla de VMWare es una plantilla de Ubuntu con mysql
 y el esquema de base de datos preinstalados.
 
+Figura 2. Coordinación de CAM
+![Coordinación de CAM](vcscar-cam.svg)
+
 ### Equilibrio de carga y proceso sustitución (proxy)
 
-El equilibrio de carga y el proceso de sustitución (proxy) se implementan mediante el componente ICP Ingress Controller. Este componente maneja el escalado del contenedor y la migración tras error de forma transparente.
+El equilibrio de carga y el proceso de sustitución (proxy) se implementan mediante el componente {{site.data.keyword.icpfull_notm}} Ingress Controller. Este componente maneja el escalado del contenedor y la migración tras error de forma transparente.
 
 El proceso de proxy de aplicaciones se suministra mediante el contenedor nginx, que equilibra la carga del siguiente modo.
 
@@ -75,7 +73,7 @@ URL	|Punto final
 /acme/api	|Servicio Skate Advisor
 /acme/api/explorer	|Servicio Skate Advisor
 
-Los contenedores tienen direcciones IP impredecibles, cuyo número puede aumentar o disminuir según la exigencia del sistema. Para solucionar este problema, se utilizan servicios de ICP para realizar la resolución de direcciones IP en tiempo real dentro del sistema.
+Los contenedores tienen direcciones IP impredecibles, cuyo número puede aumentar o disminuir según la exigencia del sistema. Para solucionar este problema, se utilizan servicios de {{site.data.keyword.icpfull_notm}} para realizar la resolución de direcciones IP en tiempo real dentro del sistema.
 
 ### Aplicación web de Acme Skate
 La aplicación web de Acme Skate es una aplicación de Java Platform, Enterprise Edition (Java Platform, Enterprise Edition) basada en la infraestructura Spring. La aplicación se despliega en un contenedor WebSphere Liberty.
@@ -100,10 +98,10 @@ Figura 3. Acceso a la red pública
 {{site.data.keyword.cloud_notm}} tiene dos redes. La red pública permite acceder a los servidores desde internet y la red privada permite que los servidores se comuniquen entre sí a través de una red troncal de alta velocidad en todos los {{site.data.keyword.CloudDataCents_notm}}.
 
 Virtual Routing Appliance (VRA) permite a los clientes direccionar el tráfico de la red privada y pública mediante la asociación de VLAN con el dispositivo.
-Tanto la infraestructura de vCenter Server NSX Edge como la de IKS están configuradas con una ruta predeterminada a la red pública y con una ruta
+Tanto la infraestructura de vCenter Server NSX Edge como la de {{site.data.keyword.containerlong_notm}} están configuradas con una ruta predeterminada a la red pública y con una ruta
 10.0.0.0/8 estándar a la red privada.
 
-Se necesita una ruta estática en la infraestructura de IKS con el dispositivo VRA
+Se necesita una ruta estática en la infraestructura de {{site.data.keyword.containerlong_notm}} con el dispositivo VRA
 para cualquier NSX VXLAN definida. Desde NSX Edge, configuramos un igual
 BGP con el VRA sobre la red privada, lo que permite anunciar e inyectar rutas
 de las NSX VXLAN. Este igual permite que la red de
@@ -132,9 +130,9 @@ Acme Skate Advisor reside en {{site.data.keyword.cloud_notm}} y, como tal, const
 Figura 5. Gestión de la nube
 ![Gestión en la nube](vcscar-cloud-management.svg)
 
-Este diagrama representa ICP y CAM desplegados en una instancia de vCenter Server, con conexiones con el vCenter local y el servicio IKS. Con CAM, los administradores del sistema y los desarrolladores pueden desplegar máquinas virtuales locales en la instancia de vCenter Server y los contenedores en los clústeres de ICP e IKS.
+Este diagrama representa {{site.data.keyword.icpfull_notm}} y CAM desplegados en una instancia de vCenter Server, con conexiones con el vCenter local y el servicio {{site.data.keyword.containerlong_notm}}. Con CAM, los administradores del sistema y los desarrolladores pueden desplegar máquinas virtuales locales en la instancia de vCenter Server y los contenedores en los clústeres de {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
-En el diagrama, CAM crea de forma lógica conexiones en la nube con los entornos de vCenters, proveedores de nube, ICP e IKS. Los clústeres de ICP se despliegan en cada entorno de centro de datos/nube, y MCM proporciona el mecanismo para conectar los clústeres de ICP en una única vista de gestión.
+En el diagrama, CAM crea de forma lógica conexiones en la nube con los entornos de vCenters, proveedores de nube, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. Los clústeres de {{site.data.keyword.icpfull_notm}} se despliegan en cada entorno de centro de datos/nube, y MCM proporciona el mecanismo para conectar los clústeres de {{site.data.keyword.icpfull_notm}} en una única vista de gestión.
 
 ### Enlaces relacionados
 

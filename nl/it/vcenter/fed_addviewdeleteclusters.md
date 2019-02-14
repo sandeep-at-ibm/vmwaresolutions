@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,7 +22,11 @@ Puoi aggiungere cluster alle tue istanze VMware Federal per espandere la capacit
 
 ## Aggiunta di cluster alle istanze VMware Federal
 
-Puoi aggiungere fino a 10 cluster a un'istanza. Quando aggiungi un cluster a un'istanza VMware Federal, devi specificare le seguenti impostazioni.
+Il numero di cluster che possono essere aggiunti a un'istanza dipende dalla versione dell'istanza:
+* Per le istanze che sono state distribuite o aggiornate alla V2.5 e versioni successive, il numero di cluster, host e VM determina il limite massimo per il numero di cluster che puoi aggiungere. Devi rispettare le direttive e i limiti di dimensionamento VMware per la tua distribuzione.
+* Per le istanze che sono state distribuite o aggiornate alla V2.2 e versioni successive, puoi aggiungere fino a 10 cluster.
+
+Per ulteriori informazioni sui limiti massimi, vedi [Valori massimi di configurazione di VMware](https://configmax.vmware.com/home){:new_window}.
 
 ### Impostazioni di sistema
 
@@ -83,7 +87,11 @@ Le impostazioni di archiviazione si basano sulla tua selezione della configurazi
 Specifica le seguenti opzioni vSAN:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
-* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
+* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
+
+  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPI Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
 * **Licenza vSAN**: seleziona l'edizione della licenza VMware vSAN 6.6 (Advanced o Enterprise).
 
@@ -254,5 +262,5 @@ Utilizza questa procedura per rimuovere i cluster dalle istanze che sono state d
 
 ### Link correlati
 
-* [Visualizzazione delle istanze VMware Federal](vc_fed_viewinginstance.html)
-* [Espansione e contrazione della capacità per le istanze VMware Federal](vc_fed_addingremovingservers.html)
+* [Visualizzazione delle istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Espansione e contrazione della capacità per le istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2019-01-07"
 
 ---
 
@@ -128,7 +128,7 @@ IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 서비스�
 
 KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스는 {{site.data.keyword.cloud_notm}}의 VMware에서 사용되는 암호화 키를 관리하기 위해 고가용성 서비스를 연중무휴로 제공합니다. 이 서비스는 고객이 암호화 키를 작성, 검색, 활성화, 취소 및 영구 삭제할 수 있도록 하는 런타임 기능을 제공합니다. 또한 클라이언트 인증 정보와 암호화 키 간의 연관을 유지보수하는 관리 기능도 제공합니다.
 
-자세한 정보는 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 개요](../services/kmip_considerations.html)를 참조하십시오.
+자세한 정보는 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 개요](../services/kmip_standalone_considerations.html)를 참조하십시오.
 
 ### Veeam on IBM Cloud
 

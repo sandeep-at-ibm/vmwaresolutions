@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2019-01-07"
 
 ---
 
@@ -128,7 +128,7 @@ Para obtener más información, consulte [Visión general de IBM Spectrum Protec
 
 El servicio KMIP for VMware on {{site.data.keyword.cloud_notm}} ofrece un servicio altamente disponible de tipo 24x7 para gestionar las claves de cifrado que utiliza VMware en {{site.data.keyword.cloud_notm}}. Este servicio ofrece capacidad de tiempo de ejecución que permite a los clientes crear, recuperar, activar, revocar y destruir las claves de cifrado. También proporciona capacidad de gestión para mantener las asociaciones entre las credenciales del cliente y las claves de cifrado.
 
-Para obtener más información, consulte [Visión general de KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html).
+Para obtener más información, consulte [Visión general de KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_standalone_considerations.html).
 
 ### Veeam on IBM Cloud
 

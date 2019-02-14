@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-05"
 
 ## Voraussetzungen für IBM Cloud-Konto
 
-Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Konto](../vmonic/slaccountrequirement.html).
+Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Konto](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Verfügbarkeit des IBM Cloud-Rechenzentrums
 
@@ -67,19 +67,19 @@ Tabelle 2. Statusanzeiger für {{site.data.keyword.CloudDataCents_notm}} bei der
 
 ## Sicherung von Managementkomponenten
 
-Sie sind für die Erhaltung und Sicherstellung der Verfügbarkeit aller Instanzkomponenten verantwortlich. Es wird dringend empfohlen, die Sicherung oder Hochverfügbarkeit aller Managementkomponenten zu planen. Weitere Informationen finden Sie unter [Komponenten sichern](../archiref/solution/solution_backingup.html).
+Sie sind für die Erhaltung und Sicherstellung der Verfügbarkeit aller Instanzkomponenten verantwortlich. Es wird dringend empfohlen, die Sicherung oder Hochverfügbarkeit aller Managementkomponenten zu planen. Weitere Informationen finden Sie unter [Komponenten sichern](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
 ## Services für vCenter Server-Instanzen
 
-Sie können für Ihre Instanz auf der Basis Ihrer Anforderungen Add-on-Services bestellen, zum Beispiel für die Disaster-Recovery. Weitere Informationen finden Sie unter [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](vc_addingremovingservices.html).
+Sie können für Ihre Instanz auf der Basis Ihrer Anforderungen Add-on-Services bestellen, zum Beispiel für die Disaster-Recovery. Weitere Informationen finden Sie unter [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html).
 
 ## Kapazitätsaspekte
 
-Weitere Informationen zu Kapazitätsaspekten finden Sie unter [Skalierungskapazität](../archiref/solution/solution_scaling.html).
+Weitere Informationen zu Kapazitätsaspekten finden Sie unter [Skalierungskapazität](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
 
 ### Zugehörige Links
 
-* [Übersicht über vCenter Server](vc_vcenterserveroverview.html)
-* [vCenter Server-Instanzen bestellen](vc_orderinginstance.html)
-* [Kapazität für vCenter Server-Instanzen erweitern und verringern](vc_addingremovingservers.html)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](vc_addingremovingservices.html)
+* [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)

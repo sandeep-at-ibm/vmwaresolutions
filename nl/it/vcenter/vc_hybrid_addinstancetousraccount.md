@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-17"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,6 +35,6 @@ Per ulteriori informazioni su come collegare il tuo account solo IaaS al tuo acc
 
 ### Link correlati
 
-* [Gestione dell'accesso utente con IAM](../vmonic/iam.html)
-* [Come invitare gli utenti ad accedere a servizi e risorse](../vmonic/iamuserinvite.html)
-* [Cos'è IBM Cloud IAM](../../../iam/index.html)
+* [Gestione dell'accesso utente con IAM](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [Come invitare gli utenti ad accedere a servizi e risorse](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [Cos'è IBM Cloud IAM](/docs/iam/index.html)

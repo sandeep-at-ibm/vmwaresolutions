@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-08-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ VMware Cloud Foundation や VMware vCenter Server など、ターゲット・ワ
 
 ## 主な利点
 
-{{site.data.keyword.cloud_notm}} 上の VMware Cloud Foundation および vCenter Server は、基本的なビルディング・ブロックを提供します。これには、VMware vSphere、vCenter Server、NSX や、vSAN などの共有ストレージ・オプションが含まれます。 これらのコンポーネントは、ワークロードに最適な VMware ソフトウェア定義のデータ・センター・ソリューションを柔軟に設計するのに必要です。 
+{{site.data.keyword.cloud_notm}} 上の VMware Cloud Foundation および vCenter Server は、基本的なビルディング・ブロックを提供します。これには、VMware vSphere、vCenter Server、NSX や、vSAN などの共有ストレージ・オプションが含まれます。 これらのコンポーネントは、ワークロードに最適な VMware ソフトウェア定義のデータ・センター・ソリューションを柔軟に設計するのに必要です。
 
 高度な自動化と単一テナント・ベアメタル・インフラストラクチャーを適用することで、数時間のうちに VMware 環境全体を迅速に {{site.data.keyword.cloud_notm}} にデプロイできるようになります。 次に、ネイティブ VMware クライアント、コマンド・ライン・インターフェース (CLI)、既存のスクリプト、または他の使い慣れた vSphere API 互換ツールを使用して、IBM ホスト環境にアクセスし、管理できます。
 
@@ -40,6 +40,6 @@ VMware on {{site.data.keyword.cloud_notm}} オファリングには、以下の�
 
 ### 関連リンク
 
-* [設計の概要](design_overview.html)
-* [キャパシティーの拡張](solution_scaling.html)
-* [コンポーネントのバックアップ](solution_backingup.html)
+* [設計の概要](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [キャパシティーの拡張](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
+* [コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

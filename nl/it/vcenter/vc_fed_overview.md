@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-11-05"
 
 Con VMware Federal on {{site.data.keyword.cloud}}, puoi ordinare un'istanza vCenter Server di base oltre a fornire alle agenzie del Governo federale degli Stati Uniti l'opzione per proteggere le istanze vCenter Server distribuite. Quando proteggi un'istanza distribuita, le informazioni sensibili memorizzate relative all'istanza vengono rimosse. Inoltre, viene rimossa la connessione aperta per l'accesso all'istanza, il che significa che le funzioni di gestione, come l'aggiunta e la rimozione di host e cluster, non sono più disponibili. Dopo aver selezionato l'opzione di protezione, l'unica funzione disponibile è l'eliminazione dell'istanza.
 
-Per ulteriori informazioni su vCenter Server on {{site.data.keyword.cloud_notm}} e sull'architettura di vCenter Server, vedi [Panoramica di vCenter Server](vc_vcenterserveroverview.html).
+Per ulteriori informazioni su vCenter Server on {{site.data.keyword.cloud_notm}} e sull'architettura di vCenter Server, vedi [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html).
 
 VMware Federal on {{site.data.keyword.cloud_notm}} offre solo un sottoinsieme delle offerte di vCenter Server. La configurazione multisito, BYOL (Bring Your Own License) e l'opzione per ordinare servizi aggiuntivi non sono supportati.
 {:note}
@@ -43,13 +43,13 @@ Vengono ordinati i seguenti componenti di rete:
 *  Tre VLAN (Virtual LAN): una VLAN pubblica e due VLAN private
 *  Una VXLAN (Virtual eXtensible LAN) con DLR (Distributed Logical Router) per la potenziale comunicazione est-ovest tra carichi di lavoro locali connessi alle reti di livello 2 (L2). La VXLAN viene distribuita come topologia di instradamento di esempio, che puoi modificare, compilare o rimuovere. Puoi anche aggiungere zone di sicurezza collegando altre VXLAN a nuove interfacce logiche sul DLR.
 *  Due gateway dei servizi edge VMware NSX:
-  * Un gateway dei servizi edge (ESG) VMware NSX sicuro dei servizi di gestione per il traffico di gestione HTTPS in uscita, distribuito da IBM come parte della tipologia di rete di gestione. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. Per ulteriori informazioni, vedi [Configurazione della rete per utilizzare l'ESG gestito dal cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * Un gateway dei servizi edge (ESG) VMware NSX sicuro dei servizi di gestione per il traffico di gestione HTTPS in uscita, distribuito da IBM come parte della tipologia di rete di gestione. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. Per ulteriori informazioni, vedi [Configurazione della rete per utilizzare l'ESG gestito dal cliente](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     Non puoi accedere a questo ESG e non puoi usarlo. Se lo modifichi, potresti non essere in grado di gestire l'istanza vCenter Server dalla console {{site.data.keyword.vmwaresolutions_short}}. Inoltre, l'utilizzo di un firewall o la disabilitazione delle comunicazioni ESG ai componenti di gestione IBM esterni comporterà l'inutilizzabilità di {{site.data.keyword.vmwaresolutions_short}}.
     {:important}
-  * Un gateway dei servizi edge VMware NSX sicuro gestito dal cliente per il traffico del carico di lavoro HTTPS in uscita e in entrata, distribuito da IBM come template che puoi modificare per fornire l'accesso VPN o l'accesso pubblico. Per ulteriori informazioni, vedi [L'edge NSX gestito dal cliente rappresenta un rischio per la sicurezza?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
+  * Un gateway dei servizi edge VMware NSX sicuro gestito dal cliente per il traffico del carico di lavoro HTTPS in uscita e in entrata, distribuito da IBM come template che puoi modificare per fornire l'accesso VPN o l'accesso pubblico. Per ulteriori informazioni, vedi [L'edge NSX gestito dal cliente rappresenta un rischio per la sicurezza?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
-  Il gateway dei servizi edge (ESG) VMware NSX per il traffico di gestione HTTPS in uscita viene rimosso come parte dell'azione per proteggere la tua istanza VMware Federal distribuita. Per ulteriori informazioni, vedi [Protezione di istanze VMware Federal](vc_fed_securinginstance.html).
+  Il gateway dei servizi edge (ESG) VMware NSX per il traffico di gestione HTTPS in uscita viene rimosso come parte dell'azione per proteggere la tua istanza VMware Federal distribuita. Per ulteriori informazioni, vedi [Protezione di istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html).
   {:note}
 
 ### VSI (Virtual Server Instance)
@@ -94,7 +94,7 @@ Ogni nodo di espansione vCenter Server verrà distribuito e addebitato per i seg
 
 ### Hardware per i nodi di espansione
 
-Un Bare Metal Server con la configurazione presentata in [Specifiche tecniche per le istanze VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
+Un Bare Metal Server con la configurazione presentata in [Specifiche tecniche per le istanze VMware Federal on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ### Licenze e tariffe per i nodi di espansione
 
@@ -114,9 +114,9 @@ Devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel
 
 ### Link correlati
 
-* [Requisiti e pianificazione per le istanze VMware Federal](vc_fed_planning.html)
-* [Ordine di istanze VMware Federal](vc_fed_orderinginstance.html)
-* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze VMware Federal](fed_addviewdeleteclusters.html)
-* [Espansione e contrazione della capacità per le istanze VMware Federal](vc_fed_addingremovingservers.html)
-* [Protezione di istanze VMware Federal](vc_fed_securinginstance.html)
+* [Requisiti e pianificazione per le istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
+* [Ordine di istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [Espansione e contrazione della capacità per le istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [Protezione di istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
 * [Archiviazione file e blocchi di {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

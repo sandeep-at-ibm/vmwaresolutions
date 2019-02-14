@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Löschprozess für Zerto on IBM Cloud
 
@@ -25,7 +29,8 @@ Der Löschprozess für den Service "Zerto on {{site.data.keyword.cloud}}" ist au
    4. Das private portierbare Teilnetz, das für die Kommunikation von Zerto Virtual Replication bestellt wurde, wird an die {{site.data.keyword.cloud_notm}}-Infrastruktur zurückgegeben.   
    5. Die Gebühren für den Disaster-Recovery-Service von Zerto werden aus Ihrer {{site.data.keyword.cloud_notm}}-Abrechnungsanweisung entfernt.
 
-      **Hinweis:** Der entfernte Disaster-Recovery-Service von Zerto wird Ihnen bis zum Ende des Abrechnungszyklus berechnet.
+      Der entfernte Disaster-Recovery-Service von Zerto wird Ihnen bis zum Ende des Abrechnungszyklus berechnet.
+      {:note}
 
 ## Ergebnisse
 

@@ -2,27 +2,36 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-12-11"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Cloud Foundation 아티팩트 변경에 대한 고려사항
 
 {{site.data.keyword.vmwaresolutions_full}}에 대해 예약된 사용자, 리소스 또는 서브넷을 변경하면 VMware Cloud Foundation 인스턴스의 관리 오퍼레이션에 영향을 줄 수 있습니다.
 
-**중요:** VMware vSphere Web Client의 **사용자 및 그룹** 페이지에서 **ic4v-vCenter** 그룹의 글로벌 권한을 변경하지 마십시오. 글로벌 권한 변경에는 사용자 이름 변경, 사용자 삭제 또는 해당 비밀번호 변경이 포함됩니다.
+VMware vSphere Web Client의 **사용자 및 그룹** 페이지에서 **ic4v-vCenter** 그룹의 글로벌 권한을 변경하지 마십시오. 글로벌 권한 변경에는 사용자 이름 변경, 사용자 삭제 또는 해당 비밀번호 변경이 포함됩니다.
+{:important}
 
 ## 서비스 고유 사용자 계정
+{: faq}
 
 각 서비스는 vCenter Server에 내부 사용자 계정을 작성합니다. 이 계정은 서비스와 연관된 관리 조작이 서비스에 대해 해당 조작을 수행하기 위해 vCenter Server에 연결하는 데 필요합니다.
 
-**중요:** 가동 중단 및 연결 문제점을 방지하려면 이 사용자 계정의 사용자 ID, 비밀번호 또는 비밀번호 만기 설정을 변경하는 경우 연관된 서비스에서도 해당 정보를 업데이트해야 합니다.
+가동 중단 및 연결 문제점을 방지하려면 이 사용자 계정의 사용자 ID, 비밀번호 또는 비밀번호 만기 설정을 변경하는 경우 연관된 서비스에서도 해당 정보를 업데이트해야 합니다.
+{:important}
 
 이 계정의 사용자 ID 형식은 `<service_name>-<truncated service_uuid>@test.local` 또는 `<service_name>-<truncated service_uuid>@example-domain.local`입니다. 예를 들어, Veeam on {{site.data.keyword.cloud_notm}} 서비스가 스케줄된 백업을 수행하기 위해 vCenter Server에 연결하는 데 사용하는 사용자 ID는 `Veeam-<Veeam_uuid>@test.local`입니다.
 
-**참고:** `<service_name>`은 `<service_uuid>`와 함께 20자에서 잘립니다.
+`<service_name>`은 `<service_uuid>`와 함께 20자에서 잘립니다.
+{:note}
 
 ## Cloud Foundation 인스턴스에 대한 VMware 리소스
 
@@ -45,8 +54,8 @@ lastupdated: "2018-11-05"
 
 |시도된 변경  |영향을 받은 오퍼레이션  |심각도  |복구 방법  |
 |:------------- |:------------- |:--------------|:--------------|
-|vCenter Server 또는 PSC에 대한 SSH 또는 쉘 액세스를 사용 안함으로 설정합니다. |기본 및 보조 인스턴스의 페어링이 실패할 수 있습니다. 리소스에 패치를 적용하는 작업이 실패할 수 있습니다. |중요    |해당사항 없음    |
-|ESXi에 대한 SSH 또는 쉘 액세스를 사용 안함으로 설정합니다. |호스트, 서비스 및 네트워크 스토리지를 인스턴스에 추가하고 제거하는 작업이 실패할 수 있습니다. 리소스에 패치를 적용하는 작업이 실패할 수 있습니다. |중요    |해당사항 없음    |
+|vCenter Server 또는 PSC에 대한 SSH 또는 쉘 액세스를 사용 안함으로 설정합니다.    |기본 및 보조 인스턴스의 페어링이 실패할 수 있습니다. 리소스에 패치를 적용하는 작업이 실패할 수 있습니다.    |중요    |해당사항 없음    |
+|ESXi에 대한 SSH 또는 쉘 액세스를 사용 안함으로 설정합니다.    |호스트, 서비스 및 네트워크 스토리지를 인스턴스에 추가하고 제거하는 작업이 실패할 수 있습니다. 리소스에 패치를 적용하는 작업이 실패할 수 있습니다.    |중요    |해당사항 없음    |
 
 SSH 또는 쉘 액세스를 사용 안함으로 선택하는 경우 표시된 오퍼레이션을 수행하기 전에 임시로 다시 사용으로 설정해야 합니다.
 

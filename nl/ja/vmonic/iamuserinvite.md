@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-11"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-11"
 ## 始める前に
 
 * アカウント所有者であるか、または **VMware Solutions** サービスに対して持っているプラットフォーム管理役割が**「管理者」**であることを確認します。
-* [Identity and Access Management でのユーザー・アクセス権限の管理](iam.html)で、ユーザー役割と許可を検討したことを確認します。
+* [Identity and Access Management でのユーザー・アクセス権限の管理](/docs/services/vmwaresolutions/vmonic/iam.html)で、ユーザー役割と許可を検討したことを確認します。
 
 ## サービスとリソースにアクセスするようにユーザーを招待する手順
 
@@ -34,12 +34,12 @@ lastupdated: "2018-11-11"
 
 ### 関連リンク
 
-* [ユーザーの招待とアクセス権限の割り当て](../../../iam/iamuserinv.html)
-* [ID およびアクセス権限の管理](../../../iam/quickstart.html)
-* [ユーザーおよびアクセス権限の管理](../../../iam/iamusermanage.html)
-* [IAM とは](../../../iam/index.html)
-* [IBM Cloud アカウントへの V2.5 より前の vCenter Server インスタンスのマイグレーション](../vcenter/vc_addinstancetousraccount.html)
-* [IBM Cloud アカウントへの V2.5 より前の vCenter Server with Hybridity Bundle インスタンスのマイグレーション](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [IBM Cloud アカウントへの V2.5 より前の Cloud Foundation インスタンスのマイグレーション](../sddc/sd_addinstancetousraccount.html)
-* [IBM Cloud アカウントへの V2.5 より前の NetApp ONTAP Select インスタンスのマイグレーション](../netapp/np_addinstancetousraccount.html)
-* [IBM Cloud アカウントへの V2.5 より前の VMware Federal インスタンスのマイグレーション](../vcenter/vc_fed_addinstancetousraccount.html)
+* [ユーザーの招待とアクセス権限の割り当て](/docs/iam/iamuserinv.html)
+* [ID およびアクセス権限の管理](/docs/iam/quickstart.html)
+* [ユーザーおよびアクセス権限の管理](/docs/iam/iamusermanage.html)
+* [IAM とは](/docs/iam/index.html)
+* [IBM Cloud アカウントへの V2.5 より前の vCenter Server インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [IBM Cloud アカウントへの V2.5 より前の vCenter Server with Hybridity Bundle インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [V2.5 以前の Cloud Foundation インスタンスの IBM Cloud アカウントへのマイグレーション](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [V2.5 以前の NetApp ONTAP Select インスタンスの IBM Cloud アカウントへのマイグレーション](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [IBM Cloud アカウントへの V2.5 より前の VMware Federal インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)

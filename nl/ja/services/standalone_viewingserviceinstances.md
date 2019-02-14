@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -38,7 +38,7 @@ lastupdated: "2018-11-08"
 
 ### 関連リンク
 
-* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの注文](standalone_orderingserviceinstances.html)
-* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの削除](standalone_deletingserviceinstances.html)
-* [HCX の用語集](hcx_glossary.html)
+* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの注文](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
+* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの削除](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
+* [HCX の用語集](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)

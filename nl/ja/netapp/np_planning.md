@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-12"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ NetApp ONTAP Select インスタンスを注文する前に、以下の要件を
 
 ## IBM Cloud アカウントの要件
 
-使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](../vmonic/slaccountrequirement.html)を参照してください。
+使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)を参照してください。
 
 ## IBM Cloud データ・センターの使用可否
 
@@ -57,5 +57,5 @@ NetApp ONTAP Select のデプロイメントには、物理インフラストラ
 
 ### 関連リンク
 
-* [NetApp ONTAP Select の概要](np_netappoverview.html)
-* [NetApp ONTAP Select インスタンスの注文](np_orderinginstances.html)
+* [NetApp ONTAP Select の概要](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
+* [NetApp ONTAP Select インスタンスの注文](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)

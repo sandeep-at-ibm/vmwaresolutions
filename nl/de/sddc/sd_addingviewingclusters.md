@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -20,7 +20,8 @@ Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, we
 
 Sie können eigene Cluster zu Ihren VMware Cloud Foundation-Instanzen hinzufügen, um die Rechen- und Speicherkapazität zu erweitern. In einem Cluster können Sie ESXi-Server verwalten, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Die hinzugefügten Cluster können aus Ihren Instanzen gelöscht werden, wenn sie nicht mehr benötigt werden.
 
-**Verfügbarkeit:**
+## Verfügbarkeit
+
 * Die Funktion zum Hinzufügen von Clustern steht nur für Instanzen zur Verfügung, die in V2.0 oder höheren Releases bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden.
 * Die Funktion zum Löschen von Clustern steht nur für Instanzen zur Verfügung, die in V2.3 oder höheren Releases bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden.  
 
@@ -75,13 +76,19 @@ Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### vSAN-Speichereinstellungen
 
 Bei Bare Metal Server-Konfigurationen des Typs **Skylake** und **Broadwell** können Sie den vSAN-Speicher durch Angeben der folgenden Einstellungen anpassen:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
-* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
+
+  Die Option **High-Performance Intel Optane** ist nur für die Skylake-CPU-Modelle Dual Intel Xeon Gold 5120 und Dual Intel Xeon Gold 6140 verfügbar.
+  {:note}
+
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
 
 ### Lizenzierungseinstellungen
@@ -171,7 +178,7 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
         <dt class="dt dlterm">Wird gelöscht</dt>
         <dd class="dd">Der ESXi-Server wird gerade gelöscht.</dd>
         </dl>
-   * Die Details der vSAN-Lizenz und der vSphere-Lizenz. Die Details der vSphere-Lizenz stehen nur zur Verfügung, wenn Sie bei der Clusterbestellung die Option zur Verwendung Ihrer eigenen VMware-Lizenz (BYOL – Bring Your Own License) ausgewählt haben.
+   * Die Details der vSAN-Lizenz und der vSphere-Lizenz. Die Details der vSphere-Lizenz stehen nur zur Verfügung, wenn Sie bei der Clusterbestellung die Option zur Verwendung Ihrer eigenen VMware-Lizenz (BYOL - Bring Your Own License) ausgewählt haben.
        * **Lizenztyp**: Die vSAN-Lizenz oder die vSphere-Lizenz.
        * **Bestelltyp**: Die Lizenz wird vom Benutzer bereitgestellt (BYOL = Bring Your Own License) oder im Namen des Benutzers erworben.
        * **Lizenzedition**: Die Edition der Lizenz.
@@ -205,5 +212,5 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 
 ### Zugehörige Links
 
-* [Cloud Foundation-Instanzen anzeigen](sd_viewinginstances.html)
-* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](sd_addingremovingservers.html)
+* [Cloud Foundation-Instanzen anzeigen](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)

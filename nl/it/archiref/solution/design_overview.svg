@@ -1,67 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="851px" height="408px" viewBox="0 0 851 408" style="enable-background:new 0 0 851 408;" xml:space="preserve">
+	 viewBox="0 0 851 408" style="enable-background:new 0 0 851 408;" xml:space="preserve">
 <style type="text/css">
-<![CDATA[
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
-	.st1{clip-path:url(#SVGID_6_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
-	.st2{clip-path:url(#SVGID_14_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
-	.st3{font-family:'IBMPlexSans-Bold';}
-	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#4C84C5;}
-	.st5{fill:#F59C57;}
-	.st6{clip-path:url(#SVGID_20_);fill:#FFFFFF;}
-	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#1DA78D;}
-	.st8{clip-path:url(#SVGID_2_);}
-	.st9{clip-path:url(#SVGID_4_);}
-	.st10{clip-path:url(#SVGID_8_);}
-	.st11{clip-path:url(#SVGID_4_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
-	.st12{clip-path:url(#SVGID_12_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
-	.st13{fill:#FFFFFF;}
-	.st14{fill-rule:evenodd;clip-rule:evenodd;fill:#F2F2F2;}
-	.st15{clip-path:url(#SVGID_24_);fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:8;}
-	.st16{fill-rule:evenodd;clip-rule:evenodd;fill:#959595;}
-	.st17{clip-path:url(#SVGID_24_);fill:#FFFFFF;}
-	.st18{clip-path:url(#SVGID_2_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st0{fill:#F59C57;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#1DA78D;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#4C84C5;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#959595;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:none;}
+	.st5{fill:#FFFFFF;}
+	.st6{font-family:'IBMPlexSans-Bold';}
+	.st7{font-size:18px;}
+	.st8{font-family:'IBMPlexSans';}
+	.st9{font-size:16px;}
+	.st10{font-size:21px;}
+	.st11{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st12{clip-path:url(#SVGID_2_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st13{clip-path:url(#SVGID_2_);}
+	.st14{clip-path:url(#SVGID_4_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st15{clip-path:url(#SVGID_4_);}
+	.st16{clip-path:url(#SVGID_6_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st17{clip-path:url(#SVGID_8_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st18{clip-path:url(#SVGID_8_);}
 	.st19{clip-path:url(#SVGID_10_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
-	.st20{font-size:16;}
-	.st21{font-size:18;}
-	.st22{font-size:21;}
-	.st23{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
-	.st24{clip-path:url(#SVGID_8_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st20{clip-path:url(#SVGID_10_);}
+	.st21{clip-path:url(#SVGID_12_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st22{clip-path:url(#SVGID_12_);}
+	.st23{clip-path:url(#SVGID_14_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
+	.st24{clip-path:url(#SVGID_14_);}
 	.st25{clip-path:url(#SVGID_16_);fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:8;}
-	.st26{clip-path:url(#SVGID_10_);}
-	.st27{clip-path:url(#SVGID_12_);}
-	.st28{clip-path:url(#SVGID_14_);}
-	.st29{clip-path:url(#SVGID_18_);}
-	.st30{clip-path:url(#SVGID_22_);}
-	.st31{font-family:'IBMPlexSans';}
-]]>
+	.st26{clip-path:url(#SVGID_18_);}
+	.st27{clip-path:url(#SVGID_20_);fill:#FFFFFF;}
+	.st28{fill-rule:evenodd;clip-rule:evenodd;fill:#F2F2F2;}
+	.st29{clip-path:url(#SVGID_22_);}
+	.st30{clip-path:url(#SVGID_24_);fill:#FFFFFF;}
+	.st31{clip-path:url(#SVGID_24_);fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:8;}
 </style>
-<rect x="13.3" y="24.9" class="st5" width="186.9" height="237.1"/>
-<polygon class="st7" points="211.9,148.4 839.2,148.4 839.2,260 211.9,260 211.9,148.4 "/>
-<polygon class="st4" points="211.9,24.5 839.2,24.5 839.2,136.1 211.9,136.1 211.9,24.5 "/>
-<polygon class="st16" points="9.6,272.3 839.2,272.3 839.2,383 9.6,383 9.6,272.3 "/>
-<rect x="31.5" y="62" class="st0" width="168" height="45"/>
-<text transform="matrix(1 0 0 1 31.4507 74.7798)" class="st13 st3 st21">Servizi comuni</text>
-<text transform="matrix(1 0 0 1 56.167 124)" class="st13 st31 st20">Autenticazione</text>
-<text transform="matrix(1 0 0 1 88.7378 157)" class="st13 st31 st20">DNS</text>
-<text transform="matrix(1 0 0 1 89.2559 193)" class="st13 st31 st20">NTP</text>
-<text transform="matrix(0.9303 0 0 1 18.3906 223)" class="st13 st31 st20">Autorità di certificazione (CA)</text>
-<rect x="389" y="43" class="st0" width="283" height="39"/>
-<text transform="matrix(1 0 0 1 389 57.9097)" class="st13 st3 st22">Gestione infrastruttura</text>
-<rect x="406" y="172" class="st0" width="217" height="45"/>
-<text transform="matrix(1 0 0 1 406 186.9097)" class="st13 st3 st22">Infrastruttura virtuale</text>
-<rect x="317" y="300" class="st0" width="230" height="45"/>
-<text transform="matrix(1 0 0 1 317 314.9102)" class="st13 st3 st22">Infrastruttura fisica</text>
-<text transform="matrix(1 0 0 1 270 110)" class="st13 st31 st21">Platform Services Controller</text>
-<text transform="matrix(1 0 0 1 568 110)" class="st13 st31 st21">VMware vCenter Server</text>
-<text transform="matrix(1 0 0 1 261 234.0703)" class="st13 st31 st21">VMware vSphere</text>
-<text transform="matrix(1 0 0 1 452 234.0703)" class="st13 st31 st21">VMware NSX</text>
-<text transform="matrix(1 0 0 1 629 234.0703)" class="st13 st31 st21">VMware vSAN (facoltativo)</text>
+<rect x="13.3" y="24.9" class="st0" width="186.9" height="237.1"/>
+<polygon class="st1" points="211.9,148.4 839.2,148.4 839.2,260 211.9,260 211.9,148.4 "/>
+<polygon class="st2" points="211.9,24.5 839.2,24.5 839.2,136.1 211.9,136.1 211.9,24.5 "/>
+<polygon class="st3" points="9.6,272.3 839.2,272.3 839.2,383 9.6,383 9.6,272.3 "/>
+<rect x="31.5" y="62" class="st4" width="168" height="45"/>
+<text transform="matrix(1 0 0 1 31.4505 75.3198)" class="st5 st6 st7">Servizi comuni</text>
+<text transform="matrix(1 0 0 1 56.1668 124)" class="st5 st8 st9">Autenticazione</text>
+<text transform="matrix(1 0 0 1 88.7376 157)" class="st5 st8 st9">DNS</text>
+<text transform="matrix(1 0 0 1 89.2557 193)" class="st5 st8 st9">NTP</text>
+<text transform="matrix(1 0 0 1 38.3895 223)" class="st5 st8 st9">CA (Certificate Authority)</text>
+<rect x="389" y="43" class="st4" width="283" height="39"/>
+<text transform="matrix(1 0 0 1 389 58.54)" class="st5 st6 st10">Gestione infrastruttura</text>
+<rect x="406" y="172" class="st4" width="217" height="45"/>
+<text transform="matrix(1 0 0 1 406 187.54)" class="st5 st6 st10">Infrastruttura virtuale </text>
+<rect x="317" y="300" class="st4" width="230" height="45"/>
+<text transform="matrix(1 0 0 1 317 315.54)" class="st5 st6 st10">Infrastruttura fisica</text>
+<text transform="matrix(1 0 0 1 270 110)" class="st5 st8 st7">Platform Services Controller</text>
+<text transform="matrix(1 0 0 1 568 110)" class="st5 st8 st7">VMware vCenter Server</text>
+<text transform="matrix(1 0 0 1 261 234.0703)" class="st5 st8 st7">VMware vSphere</text>
+<text transform="matrix(1 0 0 1 452 234.0703)" class="st5 st8 st7">VMware NSX</text>
+<text transform="matrix(1 0 0 1 629 234.0703)" class="st5 st8 st7">VMware vSAN (facoltativo)</text>
 <g>
-	<polygon class="st23" points="620.8,220.7 620.8,220.7 620.8,220.5 620.7,220.1 620.2,219.7 619.4,219.2 618.5,218.7 617.3,218.4 
+	<polygon class="st11" points="620.8,220.7 620.8,220.7 620.8,220.5 620.7,220.1 620.2,219.7 619.4,219.2 618.5,218.7 617.3,218.4 
 		616,218.2 614.6,217.9 612.9,217.9 611.3,217.9 609.9,218.2 608.6,218.4 607.4,218.7 606.5,219.2 605.7,219.7 605.2,220.1 
 		605.1,220.5 605.1,220.7 605.1,225.3 605.1,225.6 605.2,225.9 605.7,226.4 606.5,226.9 607.4,227.3 608.6,227.6 609.9,227.9 
 		611.3,228.1 612.9,228.1 614.6,228.1 616,227.9 617.3,227.6 618.5,227.3 619.4,226.9 620.2,226.4 620.7,225.9 620.8,225.6 
@@ -73,27 +70,27 @@
 		<clipPath id="SVGID_2_">
 			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 		</clipPath>
-		<polyline class="st18" points="605.1,220.7 605.1,220.7 605.1,221 605.2,221.3 605.7,221.8 606.5,222.3 607.4,222.7 608.6,223.1 
+		<polyline class="st12" points="605.1,220.7 605.1,220.7 605.1,221 605.2,221.3 605.7,221.8 606.5,222.3 607.4,222.7 608.6,223.1 
 			609.9,223.3 611.3,223.6 612.9,223.6 614.6,223.6 616,223.3 617.3,223.1 618.5,222.7 619.4,222.3 620.2,221.8 620.7,221.3 
 			620.8,221 620.8,220.7 		"/>
-		<g class="st8">
+		<g class="st13">
 			<defs>
 				<polygon id="SVGID_3_" points="604.9,237.5 621,237.5 621,217.7 604.9,217.7 604.9,237.5 				"/>
 			</defs>
 			<clipPath id="SVGID_4_">
 				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
 			</clipPath>
-			<polyline class="st11" points="605.1,227.3 605.1,230 605.1,230.2 605.2,230.5 605.7,231 606.5,231.5 607.4,231.9 608.6,232.2 
+			<polyline class="st14" points="605.1,227.3 605.1,230 605.1,230.2 605.2,230.5 605.7,231 606.5,231.5 607.4,231.9 608.6,232.2 
 				609.9,232.5 611.3,232.7 612.9,232.7 614.6,232.7 616,232.5 617.3,232.2 618.5,231.9 619.4,231.5 620.2,231 620.7,230.5 
 				620.8,230.2 620.8,230 620.8,227.3 			"/>
-			<g class="st9">
+			<g class="st15">
 				<defs>
 					<polygon id="SVGID_5_" points="604.9,237.5 621,237.5 621,217.7 604.9,217.7 604.9,237.5 					"/>
 				</defs>
 				<clipPath id="SVGID_6_">
 					<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
 				</clipPath>
-				<polyline class="st1" points="605.1,231.8 605.1,234.6 605.1,234.8 605.2,235.1 605.7,235.6 606.5,236.1 607.4,236.5 
+				<polyline class="st16" points="605.1,231.8 605.1,234.6 605.1,234.8 605.2,235.1 605.7,235.6 606.5,236.1 607.4,236.5 
 					608.6,236.8 609.9,237.1 611.3,237.3 612.9,237.3 614.6,237.3 616,237.1 617.3,236.8 618.5,236.5 619.4,236.1 620.2,235.6 
 					620.7,235.1 620.8,234.8 620.8,234.6 620.8,231.8 				"/>
 			</g>
@@ -101,8 +98,8 @@
 	</g>
 </g>
 <g>
-	<polygon class="st23" points="234.8,236.7 234.8,216.8 234.8,216.5 234.9,216.4 235.1,216.3 235.3,216.3 254.7,216.3 254.9,216.3 
-		255,216.4 255.2,216.5 255.2,216.8 255.2,236.7 255.2,237 255,237.1 254.9,237.2 254.7,237.2 235.3,237.2 235.1,237.2 234.9,237.1 
+	<polygon class="st11" points="234.8,236.7 234.8,216.8 234.8,216.6 234.9,216.4 235.1,216.3 235.3,216.3 254.7,216.3 254.9,216.3 
+		255,216.4 255.2,216.6 255.2,216.8 255.2,236.7 255.2,237 255,237.1 254.9,237.2 254.7,237.2 235.3,237.2 235.1,237.2 234.9,237.1 
 		234.8,237 234.8,236.7 234.8,236.7 	"/>
 	<g>
 		<defs>
@@ -111,8 +108,8 @@
 		<clipPath id="SVGID_8_">
 			<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
 		</clipPath>
-		<line class="st24" x1="234.8" y1="219.4" x2="255.2" y2="219.7"/>
-		<g class="st10">
+		<line class="st17" x1="234.8" y1="219.4" x2="255.2" y2="219.7"/>
+		<g class="st18">
 			<defs>
 				<polygon id="SVGID_9_" points="234.5,237.5 255.4,237.5 255.4,216 234.5,216 234.5,237.5 				"/>
 			</defs>
@@ -120,27 +117,27 @@
 				<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
 			</clipPath>
 			<line class="st19" x1="236.2" y1="217.7" x2="237" y2="218"/>
-			<g class="st26">
+			<g class="st20">
 				<defs>
 					<polygon id="SVGID_11_" points="234.5,237.5 255.4,237.5 255.4,216 234.5,216 234.5,237.5 					"/>
 				</defs>
 				<clipPath id="SVGID_12_">
 					<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
 				</clipPath>
-				<line class="st12" x1="238.2" y1="217.7" x2="239" y2="218"/>
-				<g class="st27">
+				<line class="st21" x1="238.2" y1="217.7" x2="239" y2="218"/>
+				<g class="st22">
 					<defs>
 						<polygon id="SVGID_13_" points="234.5,237.5 255.4,237.5 255.4,216 234.5,216 234.5,237.5 						"/>
 					</defs>
 					<clipPath id="SVGID_14_">
 						<use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
 					</clipPath>
-					<polygon class="st2" points="250.9,226.7 250,224.8 248.9,225.2 248.4,224.6 247.8,224.1 248.1,223 246.3,222.2 245.8,223.2 
+					<polygon class="st23" points="250.9,226.7 250,224.8 248.9,225.2 248.4,224.6 247.8,224.1 248.1,223 246.3,222.2 245.8,223.2 
 						244.9,223.2 244.2,223.2 243.7,222.2 241.8,223 242.2,224.1 241.5,224.6 241,225.2 239.8,224.8 239,226.7 240.1,227.3 240,228 
 						240.1,228.8 239,229.4 239.8,231.3 241,230.9 241.5,231.5 242.2,232 241.8,233.1 243.7,233.8 244.2,232.9 244.9,232.9 
 						245.8,232.9 246.3,233.8 248.1,233.1 247.8,232 248.4,231.5 248.9,230.9 250,231.3 250.9,229.4 249.8,228.8 249.9,228 
 						249.8,227.3 250.9,226.7 250.9,226.7 					"/>
-					<g class="st28">
+					<g class="st24">
 						<defs>
 							<polygon id="SVGID_15_" points="234.5,237.5 255.4,237.5 255.4,216 234.5,216 234.5,237.5 							"/>
 						</defs>
@@ -164,39 +161,40 @@
 		<clipPath id="SVGID_18_">
 			<use xlink:href="#SVGID_17_"  style="overflow:visible;"/>
 		</clipPath>
-		<g class="st29">
+		<g class="st26">
 			<defs>
 				<polygon id="SVGID_19_" points="425.5,237.5 446.1,237.5 446.1,216 425.5,216 425.5,237.5 				"/>
 			</defs>
 			<clipPath id="SVGID_20_">
 				<use xlink:href="#SVGID_19_"  style="overflow:visible;"/>
 			</clipPath>
-			<path class="st6" d="M443.9,232.1v-5.4h-8.1v-5.5c1.3-0.2,2.2-1.3,2.2-2.6c0-1.5-1.2-2.7-2.7-2.7s-2.7,1.2-2.7,2.7
-				c0,1.3,1,2.4,2.2,2.6v5.5h-7.2v5.5c-1.3,0.3-2.2,1.3-2.2,2.6c0,1.5,1.2,2.7,2.7,2.7s2.7-1.2,2.7-2.7c0-1.3-1-2.4-2.2-2.6v-4.6
-				H443v4.6c-1.3,0.2-2.2,1.3-2.2,2.6c0,1.5,1.2,2.7,2.7,2.7s2.7-1.2,2.7-2.7C446.1,233.5,445.3,232.3,443.9,232.1L443.9,232.1z
-				 M433.6,218.7c0-1,0.8-1.8,1.8-1.8c1,0,1.8,0.8,1.8,1.8c0,1-0.8,1.8-1.8,1.8C434.4,220.5,433.6,219.7,433.6,218.7L433.6,218.7z
-				 M430,234.8c0,1-0.8,1.8-1.8,1.8s-1.8-0.8-1.8-1.8c0-1,0.8-1.8,1.8-1.8S430,233.8,430,234.8L430,234.8z M443.5,236.6
-				c-1,0-1.8-0.8-1.8-1.8c0-1,0.8-1.8,1.8-1.8s1.8,0.8,1.8,1.8C445.3,235.8,444.4,236.6,443.5,236.6L443.5,236.6z"/>
+			<path class="st27" d="M443.9,232.1v-5.4h-8.1v-5.5c1.3-0.2,2.2-1.3,2.2-2.6c0-1.5-1.2-2.7-2.7-2.7c-1.5,0-2.7,1.2-2.7,2.7
+				c0,1.3,1,2.4,2.2,2.6v5.5h-7.2v5.5c-1.3,0.3-2.2,1.3-2.2,2.6c0,1.5,1.2,2.7,2.7,2.7c1.5,0,2.7-1.2,2.7-2.7c0-1.3-1-2.4-2.2-2.6
+				v-4.6H443v4.6c-1.3,0.2-2.2,1.3-2.2,2.6c0,1.5,1.2,2.7,2.7,2.7c1.5,0,2.7-1.2,2.7-2.7C446.1,233.5,445.3,232.3,443.9,232.1
+				L443.9,232.1z M433.6,218.7c0-1,0.8-1.8,1.8-1.8c1,0,1.8,0.8,1.8,1.8c0,1-0.8,1.8-1.8,1.8C434.4,220.5,433.6,219.7,433.6,218.7
+				L433.6,218.7z M430,234.8c0,1-0.8,1.8-1.8,1.8c-1,0-1.8-0.8-1.8-1.8c0-1,0.8-1.8,1.8-1.8C429.2,233,430,233.8,430,234.8
+				L430,234.8z M443.5,236.6c-1,0-1.8-0.8-1.8-1.8c0-1,0.8-1.8,1.8-1.8c1,0,1.8,0.8,1.8,1.8C445.3,235.8,444.4,236.6,443.5,236.6
+				L443.5,236.6z"/>
 		</g>
 	</g>
 </g>
-<text transform="matrix(1 0 0 1 81 355)" class="st13 st31 st21">Calcolo fisico</text>
-<text transform="matrix(1 0 0 1 358 355)" class="st13 st31 st21">Rete fisica</text>
-<text transform="matrix(1 0 0 1 623 355)" class="st13 st31 st21">Archivio fisico</text>
+<text transform="matrix(1 0 0 1 81 355)" class="st5 st8 st7">Calcolo fisico</text>
+<text transform="matrix(1 0 0 1 358 355)" class="st5 st8 st7">Rete fisica</text>
+<text transform="matrix(1 0 0 1 623 355)" class="st5 st8 st7">Archiviazione fisica</text>
 <g>
-	<path class="st14" d="M364.1,54.9h-2.4l-0.7-0.7l-0.1-0.1l-0.1,0l-0.1,0h-0.1h-1.7l-0.1,0l-0.1,0l-0.1,0.1l-0.1,0.1l-0.1,0.1l0,0.1
+	<path class="st28" d="M364.1,54.9h-2.4l-0.7-0.7l-0.1-0.1l-0.1,0l-0.1,0h-0.1h-1.7l-0.1,0l-0.1,0l-0.1,0.1l-0.1,0.1l-0.1,0.1l0,0.1
 		l0,0.1l0,0.1v4.3l0,0.1l0,0.1l0,0.1l0.1,0.1l0.1,0l0.1,0l0.1,0l0.1,0h5.2l0.1,0l0.1,0l0.1,0l0.1,0l0.1-0.1l0-0.1l0-0.1l0-0.1v-3.5
 		l0-0.1l0-0.1l0-0.1l-0.1-0.1l-0.1-0.1l-0.1,0L364.1,54.9L364.1,54.9L364.1,54.9L364.1,54.9z M363.7,58.4h-4.3v-3.5h1.1l0.7,0.7
 		l0.1,0.1l0.1,0l0.1,0l0.1,0h2.2V58.4L363.7,58.4L363.7,58.4z"/>
-	<path class="st14" d="M380.6,54.9h-2.4l-0.7-0.7l-0.1-0.1l-0.1,0l-0.1,0h-0.1h-1.7l-0.1,0l-0.1,0l-0.1,0.1l-0.1,0.1l-0.1,0.1l0,0.1
+	<path class="st28" d="M380.6,54.9h-2.4l-0.7-0.7l-0.1-0.1l-0.1,0l-0.1,0h-0.1h-1.7l-0.1,0l-0.1,0l-0.1,0.1l-0.1,0.1l-0.1,0.1l0,0.1
 		l0,0.1l0,0.1v4.3l0,0.1l0,0.1l0,0.1l0.1,0.1l0.1,0l0.1,0l0.1,0l0.1,0h5.2l0.1,0l0.1,0l0.1,0l0.1,0l0.1-0.1l0-0.1l0-0.1v-0.1v-3.5
 		v-0.1l0-0.1l0-0.1l-0.1-0.1l-0.1-0.1l-0.1,0L380.6,54.9L380.6,54.9L380.6,54.9L380.6,54.9z M380.1,58.4h-4.3v-3.5h1.1l0.7,0.7
 		l0.1,0.1l0.1,0l0.1,0l0.1,0h2.2V58.4L380.1,58.4L380.1,58.4z"/>
-	<path class="st14" d="M373.3,57.8h-3.6l-0.3-0.6l0,0l0,0l0-0.1l0,0l-0.1,0l-0.1,0l-0.1,0H369h-2.6l-0.1,0l-0.1,0l-0.1,0.1l-0.1,0.1
+	<path class="st28" d="M373.3,57.8h-3.6l-0.3-0.6l0,0l0,0l0-0.1l0,0l-0.1,0l-0.1,0l-0.1,0H369h-2.6l-0.1,0l-0.1,0l-0.1,0.1l-0.1,0.1
 		l0,0.1l0,0.1l0,0.1l0,0.1v5.2l0,0.1l0,0.1l0,0.1l0,0.1l0.1,0.1l0.1,0l0.1,0l0.1,0h6.9l0.1,0l0.1,0l0.1,0l0.1-0.1l0-0.1l0-0.1l0-0.1
 		l0-0.1v-4.3l0-0.1l0-0.1l0-0.1l0-0.1l-0.1-0.1l-0.1,0L373.3,57.8L373.3,57.8L373.3,57.8L373.3,57.8z M372.9,62.1h-6v-4.3h1.9
 		l0.3,0.6l0,0.1l0,0.1l0,0l0.1,0l0,0l0.1,0l0.1,0l0.1,0h3.4V62.1L372.9,62.1L372.9,62.1z"/>
-	<path class="st14" d="M365.1,49.2h4.3v1.8l-0.1,0l-0.1,0l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1
+	<path class="st28" d="M365.1,49.2h4.3v1.8l-0.1,0l-0.1,0l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1l-0.1,0.1
 		l-0.1,0.1l-0.1,0.1l-0.1,0.1l0,0.1l0,0.1l0,0.1h-6.5l-0.1,0l-0.1,0l-0.1,0l-0.1,0.1l0,0.1l0,0.1l0,0.1l0,0.1v0.9l0,0.1l0,0.1l0,0.1
 		l0,0.1l0.1,0.1l0.1,0l0.1,0l0.1,0l0.1,0l0.1,0l0.1,0l0.1-0.1l0.1-0.1l0-0.1l0-0.1v-0.1v-0.4h6.1l0,0.1l0,0.1l0,0.1l0.1,0.1l0.1,0.1
 		l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0.1l0.1,0l0.1,0l0.1,0v1.8v0.1l0,0.1l0,0.1l0.1,0.1l0.1,0.1l0.1,0
@@ -243,27 +241,27 @@
 		<clipPath id="SVGID_22_">
 			<use xlink:href="#SVGID_21_"  style="overflow:visible;"/>
 		</clipPath>
-		<g class="st30">
+		<g class="st29">
 			<defs>
 				<polygon id="SVGID_23_" points="281.5,322 307,322 307,296.5 281.5,296.5 281.5,322 				"/>
 			</defs>
 			<clipPath id="SVGID_24_">
 				<use xlink:href="#SVGID_23_"  style="overflow:visible;"/>
 			</clipPath>
-			<path class="st17" d="M296.4,297.6v23.4h-13.8v-23.4H296.4L296.4,297.6L296.4,297.6z M297.4,296.5h-15.9V322h15.9V296.5
+			<path class="st30" d="M296.4,297.6v23.4h-13.8v-23.4H296.4L296.4,297.6L296.4,297.6z M297.4,296.5h-15.9V322h15.9V296.5
 				L297.4,296.5L297.4,296.5z M305.9,297.6v23.4h-5.3v-23.4H305.9L305.9,297.6L305.9,297.6z M307,296.5h-7.4V322h7.4V296.5
 				L307,296.5L307,296.5z"/>
-			<path class="st15" d="M296.4,297.6v23.4h-13.8v-23.4H296.4L296.4,297.6L296.4,297.6z M297.4,296.5h-15.9V322h15.9V296.5
+			<path class="st31" d="M296.4,297.6v23.4h-13.8v-23.4H296.4L296.4,297.6L296.4,297.6z M297.4,296.5h-15.9V322h15.9V296.5
 				L297.4,296.5L297.4,296.5z M305.9,297.6v23.4h-5.3v-23.4H305.9L305.9,297.6L305.9,297.6z M307,296.5h-7.4V322h7.4V296.5
 				L307,296.5L307,296.5z"/>
-			<path class="st17" d="M294.3,300.8v4.3h-9.6v-4.3H294.3L294.3,300.8L294.3,300.8z M295.3,299.7h-11.7v6.4h11.7V299.7L295.3,299.7
+			<path class="st30" d="M294.3,300.8v4.3h-9.6v-4.3H294.3L294.3,300.8L294.3,300.8z M295.3,299.7h-11.7v6.4h11.7V299.7L295.3,299.7
 				L295.3,299.7z M303.8,299.7v1.1h-1.1v-1.1H303.8L303.8,299.7L303.8,299.7z M304.9,298.6h-3.2v3.2h3.2V298.6L304.9,298.6
 				L304.9,298.6z M303.8,303.9v1.1h-1.1v-1.1H303.8L303.8,303.9L303.8,303.9z M304.9,302.9h-3.2v3.2h3.2V302.9L304.9,302.9
 				L304.9,302.9z M303.8,308.2v1.1h-1.1v-1.1H303.8L303.8,308.2L303.8,308.2z M304.9,307.1h-3.2v3.2h3.2V307.1L304.9,307.1
 				L304.9,307.1z M303.8,312.4v1.1h-1.1v-1.1H303.8L303.8,312.4L303.8,312.4z M304.9,311.4h-3.2v3.2h3.2V311.4L304.9,311.4
 				L304.9,311.4z M303.8,316.7v1.1h-1.1v-1.1H303.8L303.8,316.7L303.8,316.7z M304.9,315.6h-3.2v3.2h3.2V315.6L304.9,315.6
 				L304.9,315.6z"/>
-			<path class="st15" d="M294.3,300.8v4.3h-9.6v-4.3H294.3L294.3,300.8L294.3,300.8z M295.3,299.7h-11.7v6.4h11.7V299.7L295.3,299.7
+			<path class="st31" d="M294.3,300.8v4.3h-9.6v-4.3H294.3L294.3,300.8L294.3,300.8z M295.3,299.7h-11.7v6.4h11.7V299.7L295.3,299.7
 				L295.3,299.7z M303.8,299.7v1.1h-1.1v-1.1H303.8L303.8,299.7L303.8,299.7z M304.9,298.6h-3.2v3.2h3.2V298.6L304.9,298.6
 				L304.9,298.6z M303.8,303.9v1.1h-1.1v-1.1H303.8L303.8,303.9L303.8,303.9z M304.9,302.9h-3.2v3.2h3.2V302.9L304.9,302.9
 				L304.9,302.9z M303.8,308.2v1.1h-1.1v-1.1H303.8L303.8,308.2L303.8,308.2z M304.9,307.1h-3.2v3.2h3.2V307.1L304.9,307.1

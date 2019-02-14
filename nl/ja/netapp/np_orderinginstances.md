@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -19,8 +19,8 @@ lastupdated: "2018-10-30"
 ## 要件
 
 以下の作業を完了していることを確認してください。
-*  **「設定」**ページで {{site.data.keyword.cloud}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](../vmonic/useraccount.html)を参照してください。
-*  [NetApp ONTAP Select インスタンスの要件と計画](np_planning.html)に記載されている要件と考慮事項を確認した。
+*  **「設定」**ページで {{site.data.keyword.cloud}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](/docs/services/vmwaresolutions/vmonic/useraccount.html)を参照してください。
+*  [NetApp ONTAP Select インスタンスの要件と計画](/docs/services/vmwaresolutions/netapp/np_planning.html)に記載されている要件と考慮事項を確認した。
 
 インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
 {:important}
@@ -33,7 +33,7 @@ NetApp ONTAP Select インスタンスを注文する際には、以下の基本
 
 インスタンス名は、次の要件を満たす必要があります。
 * 英数字とダッシュ (-) の文字だけを使用できます。
-* インスタンス名の先頭と末尾は英数字である必要があります。
+* インスタンス名の先頭は英字、末尾は英数字でなければなりません。
 * インスタンス名の最大の長さは 10 文字です。
 * インスタンス名はアカウント内で固有である必要があります。
 
@@ -52,7 +52,7 @@ NetApp ONTAP Select インスタンスを注文する際には、以下のネッ
 
 サブドメイン・ラベルは、次の要件を満たす必要があります。
 *  英数字とダッシュ (-) の文字だけを使用できます。
-*  サブドメイン・ラベルの先頭と末尾は英数字である必要があります。
+*  サブドメイン・ラベルの先頭は英字、末尾は英数字でなければなりません。
 *  サブドメイン・ラベルの最大長は 10 文字です。
 *  サブドメイン・ラベルは、アカウント内で固有でなければなりません。
 
@@ -113,7 +113,7 @@ NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォ
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
 
-インスタンスが正常にデプロイされると、[NetApp ONTAP Select インスタンスの技術仕様](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。
+インスタンスが正常にデプロイされると、[NetApp ONTAP Select インスタンスの技術仕様](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
@@ -132,7 +132,7 @@ NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォ
 
 ### 関連リンク
 
-* [NetApp ONTAP Select インスタンスの表示](np_viewinginstances.html)
-* [NetApp ONTAP Select インスタンスの削除](np_deletinginstance.html)
+* [NetApp ONTAP Select インスタンスの表示](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [NetApp ONTAP Select インスタンスの削除](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [　 NetApp ONTAP 9 ドキュメント・センター](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
 * [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

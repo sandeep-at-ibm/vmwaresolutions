@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -20,16 +20,16 @@ Tabelle 1. Verfügbare Services für Cloud Foundation-Instanzen
 
 | Servicename | Aktuelle Serviceversion | Instanzversion |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE V13.1.1.2 | V1.9 und höher |
-| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | 300 Series | V1.8 und höher |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 6.0.3 | V2.0 und höher |
-| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 und höher |
-| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | V2.3 und höher |
-| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 und höher |
-| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.1 Patch 1 | V2.2 und höher |
-| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 und höher |
-| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | 9.5u3 | V1.8 und höher |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 6.0 Update 3 | V1.2 und höher |
+| [F5 on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/f5_considerations.html)                                 | BIG-IP VE V13.1.1.2 | V1.9 und höher |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_considerations.html)       | 300 Series | V1.8 und höher |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html) | 6.0.3 | V2.0 und höher |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html)              | 5.4.0 | V2.3 und höher |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_considerations.html)              | 4.2.1 | V2.3 und höher |
+| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_considerations.html)              | 4.2 | V2.5 und höher |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_considerations.html)  | 10.1.2 | V2.2 und höher |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html) |  2.0 | Nicht zutreffend |
+| [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html)                          | 9.5u3 | V1.8 und höher |
+| [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html)                                 | 6.0 Update 3 | V1.2 und höher |
 
 ## Vorgehensweise zum Hinzufügen von Services zu Cloud Foundation-Instanzen
 
@@ -61,8 +61,9 @@ Nachdem Ihre Anforderung zum Entfernen des Service akzeptiert wurde, ändert sic
 
 Nachdem die Entfernung des Service erfolgreich abgeschlossen wurde, werden Sie per E-Mail benachrichtigt und der Service wird von der Seite **Services** der Instanz entfernt.
 
-**Achtung:** Die entfernten Services werden Ihnen bis zum Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus berechnet.
+Die entfernten Services werden Ihnen bis zum Ende des {{site.data.keyword.cloud_notm}}-Abrechnungszyklus berechnet.
+{:note}
 
 ### Zugehörige Links
 
-* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)

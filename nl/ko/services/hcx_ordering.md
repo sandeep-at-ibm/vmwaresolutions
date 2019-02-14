@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-11"
 
 ---
 
@@ -63,7 +63,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 서비�
    * 주문된 서브넷을 사용하여 공용 및 사설 업링크 인터페이스가 구성됩니다.
    * ESG가 고가용성(HA)을 사용하는 추가 대형 에지 어플라이언스의 쌍으로 구성됩니다.
    * HCX Manager 간에 인바운드 및 아웃바운드 HTTPS 트래픽을 허용하도록 방화벽 규칙 및 네트워크 주소 변환(NAT) 규칙이 구성됩니다.
-   * 로드 밸런서 규칙 및 리소스 풀이 구성됩니다. 이러한 규칙은 HCX Manager, vCenter Server 및 PSC(Platform Services Controller)의 적절한 가상 어플라이언스로 HCX 관련 인바운드 트래픽을 전달하는 데 사용되는 리소스 풀입니다.
+   * 로드 밸런서 규칙 및 리소스 풀이 구성됩니다. 이러한 규칙 및 리소스 풀은 HCX Manager 및 vCenter Server(Platform Services Controller가 임베드됨)의 적절한 가상 어플라이언스로 HCX 관련 인바운드 트래픽을 전달하는 데 사용되는 리소스 풀입니다.
    * ESG를 통해 수신되는 HCX 관련 인바운드 HTTPS 트래픽을 암호화하는 SSL 인증서가 적용됩니다.
 
    HCX 관리 에지는 온프레미스 HCX 컴포넌트와 클라우드 측 HCX 컴포넌트 간의 HCX 관리 트래픽에만 사용됩니다. HCX 관리 에지를 수정하거나 HCX 네트워크 확장에 이를 사용하지 마십시오. 대신, 네트워크 확장을 위한 별도의 에지를 작성하십시오. 또한 방화벽을 사용하거나 사설 IBM 관리 컴포넌트 또는 공용 인터넷과의 HCX 관리 에지 통신을 사용 안함으로 설정하면 HCX 기능에 부정적인 영향을 줄 수 있습니다.
@@ -71,7 +71,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 서비�
 
 6. HCX Manager on {{site.data.keyword.cloud_notm}}가 배치되고 활성화되고 구성됩니다.
    * HCX Manager는 vCenter Server에 등록됩니다.
-   * HCX Manager, vCenter Server, PSC 및 NSX Manager가 구성됩니다.
+   * HCX Manager, vCenter Server(Platform Services Controller가 임베드됨) 및 NSX Manager가 구성됩니다.
    * HCX Fleet가 구성됩니다.
    * 로컬 및 원격 HCX 배치 컨테이너가 구성됩니다.
 7. HCX Manager의 호스트 이름 및 IP 주소가 VMware vCenter Server on {{site.data.keyword.cloud_notm}}의 DNS 서버에 등록됩니다.

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -63,7 +63,7 @@ Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert
    * Öffentliche und private Uplink-Schnittstellen werden unter Verwendung der bestellten Teilnetze konfiguriert.
    * Die ESGs werden als ein Paar sehr großer Edge-Appliances mit aktivierter Hochverfügbarkeit konfiguriert.
    * Die Firewallregeln und die Regeln für die Netzadressumsetzung (NAT-Regeln) werden konfiguriert, damit eingehender und abgehender HTTPS-Datenverkehr an den und vom HCX-Manager zulässig ist.
-   * Die Regeln für den Lastausgleich und Ressourcenpools werden konfiguriert. Diese Regeln und Ressourcenpools werden für die Weiterleitung des HCX-bezogenen eingehenden Datenverkehrs an die entsprechenden virtuellen Appliances für den HCX-Manager, für vCenter Server und für Platform Services Controller (PSC) verwendet.
+   * Die Regeln für den Lastausgleich und Ressourcenpools werden konfiguriert. Diese Regeln und Ressourcenpools werden verwendet, um den HCX-bezogenen eingehenden Datenverkehr an die entsprechenden virtuellen Appliances von HCX Manager und vCenter Server (mit Embedded Platform Services Controller) weiterzuleiten.
    * Ein SSL-Zertifikat zum Verschlüsseln des HCX-bezogenen eingehenden HTTPS-Datenverkehrs, der über die ESGs eintrifft, wird angewendet.
 
    Die HCX-Management-Edge ist für den HCX-Managementdatenverkehr zwischen den lokalen HCX-Komponenten und den cloudseitigen HCX-Komponenten dediziert. Das HCX-Management-Edge darf weder geändert noch für HCX-Netzerweiterungen verwendet werden. Erstellen Sie für Netzerweiterungen stattdessen separate Edges. Außerdem kann die Verwendung einer Firewall oder die Inaktivierung der HCX-Edge-Kommunikation mit den privaten IBM Managementkomponenten oder dem öffentlichen Internet die HCX-Funktionalität beeinträchtigen.
@@ -71,17 +71,17 @@ Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert
 
 6. Der HCX-Manager on {{site.data.keyword.cloud_notm}} wird bereitgestellt, aktiviert und konfiguriert:
    * Der HCX-Manager wird bei vCenter Server registriert.
-   * Der HCX-Manager, vCenter Server, PSC und der NSX-Manager werden konfiguriert.
+   * Der HCX-Manager, vCenter Server (mit integriertem Platform Services Controller) und NSX-Manager sind konfiguriert.
    * Das HCX-Produktpaket wird konfiguriert.
    * Lokale und ferne HCX-Bereitstellungscontainer werden konfiguriert.
 7. Der Hostname und die IP-Adresse des HCX-Managers werden beim DNS-Server von VMware vCenter Server on {{site.data.keyword.cloud_notm}} registriert.
 
 ### Zugehörige Links
 
-* [Übersicht über HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
-* [HCX on {{site.data.keyword.cloud_notm}} verwalten](managinghcx.html)
-* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Glossar der HCX-Begriffe](hcx_glossary.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
+* [HCX on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [HCX on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Glossar der HCX-Begriffe](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx)
 * [Dokumentation zu VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

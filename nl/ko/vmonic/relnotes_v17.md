@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-07-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V1.7 릴리스 정보
 
@@ -22,7 +26,8 @@ lastupdated: "2017-07-05"
 * IBM CloudDriver 컴포넌트에 대한 안전성 개선
 * EVC 모드(Intel “Haswell” 2690-V3 프로세서 기반)는 업그레이드 시 V3 서버에 있는 기존의 이전 VMware 배치에서 사용으로 설정됩니다.
 
-  **참고**: EVC 모드는 V4 서버의 기존 또는 새 배치에 사용으로 설정되지 않습니다.
+  EVC 모드는 V4 서버의 기존 또는 새 배치에 사용으로 설정되지 않습니다.
+{:note}
 
 * 5월 22일 이전에 배치되었으며 이에 따라 V3 서버를 사용 중인 VMware Cloud Foundation 배치는 이제 새 노드를 인스턴스에 추가할 때 V4 서버를 주문합니다. 이 서버에는 256GB의 메모리가 있습니다. 512GB 메모리가 필요하면 서버를 추가한 후 지원 티켓을 열어 521GB 메모리로 서버 업그레이드를 요청하십시오. IBM 지원 센터 문의에 대한 자세한 정보는 [IBM 지원 센터에 문의](trbl_support.html)를 참조하십시오.
 

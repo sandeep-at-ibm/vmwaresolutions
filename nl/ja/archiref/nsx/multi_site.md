@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -36,4 +36,4 @@ Cross-vCenter NSX 機能を使用すると、最大 9 つの NSX マネージャ
 
 ### 関連リンク
 
-* [{{site.data.keyword.cloud_notm}} のネットワーキング・サービス](networking_services.html)
+* [{{site.data.keyword.cloud_notm}} のネットワーキング・サービス](/docs/services/vmwaresolutions/archiref/nsx/networking_services.html)

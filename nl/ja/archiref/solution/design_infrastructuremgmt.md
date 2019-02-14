@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -127,6 +127,6 @@ vCenter Server インスタンスでは SDDC Manager がないため、これら
 
 ### 関連リンク
 
-* [物理インフラストラクチャー設計](design_physicalinfrastructure.html)
-* [仮想インフラストラクチャー設計](design_virtualinfrastructure.html)
-* [共通サービス設計](design_commonservice.html)
+* [物理インフラストラクチャー設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [仮想インフラストラクチャー設計](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [共通サービス設計](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)

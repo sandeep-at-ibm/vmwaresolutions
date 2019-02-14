@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-11-13"
 {:note: .note}
 {:important: .important}
 
-# Speichereinstellungen
+# Konfiguration und Einstellungen für angehängten Speicher
 
-Dieses Design unterstützt nur das Anhängen von gemeinsamem Speicher über NFS v3. NFS v4 und v4.1 werden nicht unterstützt.
+Dieses Design unterstützt nur die Zuordnung von gemeinsamem Speicher über NFS v3. NFS v4 und v4.1 werden nicht unterstützt.
 
-Der gesamte angehängte Speicher dieses Designs ist auf den {{site.data.keyword.cloud_notm}}-Speicher beschränkt, der innerhalb desselben {{site.data.keyword.CloudDataCent_notm}} verfügbaren ist, in dem sich auch die vCenter Server-Lösung befindet. Außerdem handelt es sich bei allen im Datenspeicher gespeicherten virtuellen Platten standardmäßig um Thin-Provisioning-Einheiten.
+Der angehängte Speicher dieses Designs ist auf den {{site.data.keyword.cloud_notm}}-Speicher beschränkt, der innerhalb desselben {{site.data.keyword.CloudDataCent_notm}} verfügbaren ist, in dem sich auch die vCenter Server-Lösung befindet. Außerdem handelt es sich bei allen im Datenspeicher gespeicherten virtuellen Platten standardmäßig um Thin-Provisioning-Einheiten.
 {:note}
 
 Die Architektur gibt an, dass NFS v3-Datenspeicher unter Verwendung des DNS-Namens aus dem {{site.data.keyword.cloud_notm}}-Speicher angehängt werden, um eine Verbindung zur gemeinsam genutzten Ressource herzustellen. Die gemeinsam genutzte NFS-Ressource wird auf allen Hosts im vCenter Server-Cluster angehängt und in einem Datenspeichercluster platziert, in dem die Storage DRS-Funktion aktiviert wurde.
@@ -85,8 +85,8 @@ Tabelle 2. Erweiterte NFS-Konfigurationsparameter
 | NFS.HeartbeatMaxFailures | 10 |
 | NFS.HeartbeatFrequency  | 12 |
 | NFS.HeartbeatTimeout | 5 |
-| NFS.MazQueueDepth | 64 |
+| NFS.MaxQueueDepth | 64 |
 
 ### Zugehörige Links
 
-* [Lösungsübersicht](../solution/solution_overview.html)
+* [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

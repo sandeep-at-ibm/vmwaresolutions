@@ -2,21 +2,21 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2018-01-03"
 
 ---
 
 # Proceso de modernización
 
-Este es un caso de uso de referencia sobre cómo se moderniza una aplicación clásica de WebSphere Application Server mediante {{site.data.keyword.cloud}} Private, contenido de IBM Middleware, {{site.data.keyword.cloud_notm}} Kubernetes Service y VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
+Este es un caso de uso de referencia sobre cómo se moderniza una aplicación clásica de WebSphere Application Server mediante {{site.data.keyword.cloud}} Private, contenido de IBM Middleware, {{site.data.keyword.containerlong_notm}} y VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 ## La modernización es más que aplicaciones
 
 Todos estamos en un proceso de transición a la nube, y cada uno de nosotros está en un punto diferente del proceso. Este caso de uso se centra en cómo se moderniza una aplicación existente, Stock Trader, a través de pasos incrementales que el arquitecto de infraestructura de la aplicación, Jane, y el arquitecto de infraestructura de nube, Todd, han planificado. En este caso de uso se muestran ejemplos que pueden ayudar en cada paso del proceso y el valor que supone para la empresa, independientemente del tamaño de cada paso.
 
-El proceso se centra principalmente en la modernización de la aplicación Stock Trader. Para modernizar por completo su negocio y transformarlo en un negocio nativo de la nube, se deben tener en cuenta temas relacionados con las aplicaciones, DevOps, la integración y la gestión. Cada uno de ellos trabaja combinación con los demás para ayudarle a alcanzar sus objetivos y, de hecho, a modernizar cada uno sin que los otros tengan problemas.
+El proceso se centra principalmente en la modernización de la aplicación Stock Trader. Para modernizar por completo su negocio y transformarlo en un negocio nativo de la nube, se deben tener en cuenta temas relacionados con las aplicaciones, DevOps, la integración y la gestión. Cada tema trabaja en combinación con los demás para ayudarle a alcanzar sus objetivos. El hecho de modernizar un tema sin los otros podría dar lugar a problemas.
 
 ## Motivos para modernizar
 
@@ -24,31 +24,31 @@ El proceso se centra principalmente en la modernización de la aplicación Stock
 
 El objetivo es conseguir aplicaciones nativas de la nube que se escalan y responden rápidamente a las demandas cambiantes.
 
-- "Es necesario modernizar las apps existentes y crear apps nativas de la nube para atraer la imaginación del cliente".
-- "Se necesitan apps que se puedan escalar, que sean accesibles en todo el mundo, que se ajusten a demandas, cambios y mejoras y que se puedan adaptar rápidamente".
+* Es necesario modernizar las apps existentes y crear apps nativas de la nube para atraer la imaginación del cliente.
+* Se necesitan apps que se puedan escalar, que sean accesibles en todo el mundo, que se ajusten a demandas, cambios y mejoras y que se puedan adaptar rápidamente.
 
 ### Modernización de DevOps
 
 Cuando se moderniza la aplicación, hay que modernizar la forma de distribuir dicha aplicación y el conducto de distribución entero para que la nueva cultura nativa de la nube que crean los desarrolladores se pueda escalar en cuanto a la forma en que se distribuye la app.
 
-- "Es necesario modernizar la cultura de desarrollo y de operaciones (y de seguridad) a la vez que se modernizan las aplicaciones".
-- "Se necesitan equipos de DevOps que se puedan escalar, que sean accesibles en todo el mundo, que se ajusten a demandas, cambios y mejoras y que se puedan adaptar rápidamente".
+* Es necesario modernizar la cultura de desarrollo y de operaciones (y de seguridad) a la vez que se modernizan las aplicaciones.
+* Se necesitan equipos de DevOps que se puedan escalar, que sean accesibles en todo el mundo, que se ajusten a demandas, cambios y mejoras y que se puedan adaptar rápidamente.
 
 ###  Modernización de la integración
 
 En este proceso de modernización, los equipos necesitan integrarse con los activos existentes, los nuevos servicios de nube, los datos y los nuevos conocimientos procedentes de los análisis que se realizan sobre dichos datos.
 
-- "Es necesario utilizar activos existentes en este proceso de forma que se puedan escalar, que sean accesibles en todo el mundo, que se ajusten a demandas, cambios y mejoras y que se puedan adaptar rápidamente".
-- "Es necesario optimizar con nuevos servicios de nube en cada paso de este proceso".
-- "Hay que integrar los datos y la información que se obtiene de aplicar análisis a los datos".
+* Es necesario utilizar activos existentes en este proceso de forma que se puedan escalar, que sean accesibles en todo el mundo, que se ajusten a demandas, cambios y mejoras y que se puedan adaptar rápidamente.
+* Es necesario optimizar con nuevos servicios de nube en cada paso de este proceso.
+* Hay que integrar los datos y la información que se obtiene de aplicar análisis a los datos.
 
 ### Gestión
 
 La modernización de las prácticas de gestión es otro proceso paralelo que hay que llevar a cabo mientras se modernizan las aplicaciones. Las herramientas, la cultura y los comportamientos principales en cuanto a la gestión y mantenimiento de una aplicación modernizada cambian sustancialmente.
 
-- "Necesita gestionar sus microservicios y el middleware contenerizado utilizando la coordinación, el registro y la supervisión integrados".
-- "Es necesario gestionar las plataformas híbridas multinube dispersas en ubicaciones de todo el globo de forma que se puedan escalar, que sean accesibles en todo el mundo, que se ajusten a demandas, cambios y mejoras y que se puedan adaptar rápidamente".
-- "Es necesario automatizar la forma de gestionar más de una nube y las aplicaciones y el middleware que se ejecutan en las mismas".
+* Necesita gestionar sus microservicios y el middleware contenerizado utilizando la coordinación, el registro y la supervisión integrados.
+* Es necesario gestionar las plataformas híbridas multinube dispersas en ubicaciones de todo el globo de forma que se puedan escalar, que sean accesibles en todo el mundo, que se ajusten a demandas, cambios y mejoras y que se puedan adaptar rápidamente.
+* Es necesario automatizar la forma de gestionar más de una nube y las aplicaciones y el middleware que se ejecutan en las mismas.
 
 ## Presentación de Todd y Jane
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -31,7 +31,7 @@ Die folgenden Komponenten werden mit dem Service "F5 on {{site.data.keyword.clou
 * 4, 8 oder 16 GB RAM pro virtuelle Maschine, abhängig von der Lizenzierungsoption.
 
 ### Vernetzung
-* Private Virtual Extensible LAN (VXLAN) für HA-Synchronisation (HA – High Availability).
+* Private Virtual Extensible LAN (VXLAN) für HA-Synchronisation (HA - High Availability).
 * Zugriff auf Konsole für Traffic Management Shell (TMSH) und Management über privates Managementnetz.
 
 ### Lizenzen und Gebühren
@@ -59,7 +59,7 @@ Tabelle 1. CPU- und RAM-Bereitstellungen für unterschiedliche Bandbreiten- und 
 
 ### Weitere Aspekte
 
-* F5 BIG–IP begrenzt den Appliance-Durchsatz aufgrund der von Ihnen ausgewählten maximalen Bandbreite. Da die Netzleistung durch viele Faktoren beeinflusst wird, sind möglicherweise nicht alle Konfigurationen und Topologien in der Lage, die ausgewählte maximale Bandbreite zu erzielen.
+* F5 BIG-IP begrenzt den Appliance-Durchsatz aufgrund der von Ihnen ausgewählten maximalen Bandbreite. Da die Netzleistung durch viele Faktoren beeinflusst wird, sind möglicherweise nicht alle Konfigurationen und Topologien in der Lage, die ausgewählte maximale Bandbreite zu erzielen.
 * Das Hochverfügbarkeitspaar (HA-Paar) der virtuellen Maschinen für BIG-IP VE wird nur im Standardcluster bereitgestellt.
 
   Außerdem sind 100% der CPU und des RAM für die zwei virtuellen Maschinen für BIG-IP VE ebenfalls reserviert, weil sich diese virtuellen Maschinen auf der Datenebene der Netzkommunikation befinden und es entscheidend ist, dass für sie immer Ressourcen verfügbar sind.
@@ -104,8 +104,8 @@ Bevor Sie den Service "F5 on {{site.data.keyword.cloud_notm}}" entfernen, müsse
 
 ### Zugehörige Links
 
-* [F5 on {{site.data.keyword.cloud_notm}} bestellen](f5_ordering.html)
-* [F5 on {{site.data.keyword.cloud_notm}} verwalten](managing_f5.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [F5 on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/f5_ordering.html)
+* [F5 on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managing_f5.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [F5-Website](https://f5.com/){:new_window}

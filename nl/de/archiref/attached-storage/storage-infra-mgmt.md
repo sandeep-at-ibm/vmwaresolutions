@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2018-11-13"
 
 Das Infrastrukturmanagement bezieht sich auf die VMware-Komponenten, die zum Management der vSphere ESXi-Infrastruktur eingesetzt werden.
 
-Weitere Informationen zu den Komponenten finden Sie in Abbildung 2 "Netzübersicht für NSX Manager" unter [Design der virtuellen Infrastruktur](../solution/design_virtualinfrastructure.html).
+Weitere Informationen zu den Komponenten finden Sie in Abbildung 2 "Netzübersicht für NSX Manager" unter [Design der virtuellen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html).
 
 ## Design des virtuellen Netzbetriebs
 
-Die Netzvirtualisierung, die in diesem Design eingesetzt wird, nutzt einen bereits vorhandenen vSphere Distributed Switch (vDS), der dem privaten Netz zugeordnet und in der [{{site.data.keyword.vmwaresolutions_full}}-Architektur](../solution/solution_overview.html) angegeben ist.
+Die Netzvirtualisierung, die in diesem Design eingesetzt wird, nutzt einen bereits vorhandenen vSphere Distributed Switch (vDS), der dem privaten Netz zugeordnet und in der [{{site.data.keyword.vmwaresolutions_full}}-Architektur](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html) angegeben ist.
 
 ## vSphere Distributed Switch (vDS)
 
@@ -52,4 +52,4 @@ Obwohl der vDS mit einer neuen Portgruppe konfiguriert und der Portgruppe ein VM
 
 ### Zugehörige Links
 
-* [Lösungsübersicht](../solution/solution_overview.html)
+* [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

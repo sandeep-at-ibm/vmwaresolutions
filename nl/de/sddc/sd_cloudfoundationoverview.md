@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,7 +41,7 @@ Diese Schicht besteht aus vCenter Server und stellt die Managementschicht für d
 
 In der {{site.data.keyword.vmwaresolutions_short}}-Konsole können Sie die Kapazität Ihrer Instanzen mithilfe der Funktion zum Hinzufügen und Entfernen von ESXi-Servern erweitern und verringern. Darüber hinaus sind Funktionen für das Lebenszyklusmanagement wie das Anwenden von Updates und das Durchführen von Upgrades für die VMware-Komponenten in der gehosteten Umgebung verfügbar.
 
-Weitere Informationen zur Architektur enthält der Abschnitt [Lösungsübersicht](../archiref/solution/solution_overview.html).
+Weitere Informationen zur Architektur enthält der Abschnitt [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Technische Spezifikationen für Cloud Foundation-Instanzen
 
@@ -54,16 +54,17 @@ Die für Hardware, Netzbetrieb, virtuelle Maschinen und Speicher anfallenden Geb
 
 Sie können {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen mit einer der folgenden Konfigurationen bestellen:
 *  **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.   
-*  **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600 v4 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.   
-   Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
-   {:note}
+*  **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600/E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
+
+Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
+{:note}
 
 ### Vernetzung
 
 Die folgenden Netzkomponenten werden bestellt:
 * 10-Gbps-Uplinks für öffentliche und private Netze
 * 3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
-* Sicheres VMware NSX Edge Services Gateway (ESG) für die Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Über dieses ESG kommunizieren virtuelle IBM Management-Maschinen mit bestimmten externen IBM Managementkomponenten, die mit der Automatisierung zusammenhängen. Weitere Information finden Sie im Abschnitt [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* Sicheres VMware NSX Edge Services Gateway (ESG) für die Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Über dieses ESG kommunizieren virtuelle IBM Management-Maschinen mit bestimmten externen IBM Managementkomponenten, die mit der Automatisierung zusammenhängen. Weitere Information finden Sie im Abschnitt [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
   Dieses ESG ist für Sie weder zugänglich, noch können Sie es verwenden. Falls Sie es ändern, sind Sie möglicherweise nicht in der Lage, die Cloud Foundation-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Außerdem führt die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu, dass {{site.data.keyword.vmwaresolutions_short}} unbrauchbar wird.
   {:important}
@@ -100,7 +101,7 @@ Jeder Cloud Foundation-Erweiterungsknoten stellt folgende Komponenten in Ihrem {
 
 ### Hardware für Erweiterungsknoten
 
-1 {{site.data.keyword.cloud_notm}} Bare Metal Server mit der unter [Technische Spezifikationen für Cloud Foundation-Instanzen](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) aufgeführten Konfiguration.
+1 {{site.data.keyword.cloud_notm}} Bare Metal Server mit der unter [Technische Spezifikationen für Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) aufgeführten Konfiguration.
 
 ### Lizenzen und Gebühren für Erweiterungsknoten
 
@@ -124,9 +125,9 @@ Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in 
 
 ### Zugehörige Links
 
-* [Softwareteileliste für Cloud Foundation](sd_bom.html)
-* [Cloud Foundation-Instanzen planen](sd_planning.html)
-* [Cloud Foundation-Instanzen bestellen](sd_orderinginstance.html)
+* [Softwareteileliste für Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [Cloud Foundation-Instanzen planen](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
 * [VMware vSphere Documentation Center](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [VMware NSX 6 Documentation Center](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
-* [EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764)
+* [Häufig gestellte Fragen zur Kompatibilität von EVC und CPU](https://kb.vmware.com/s/article/1005764)

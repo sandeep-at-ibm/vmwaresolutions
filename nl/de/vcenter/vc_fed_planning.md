@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-19"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-19"
 
 ## Voraussetzungen für IBM Cloud-Konto
 
-Das {{site.data.keyword.cloud}}-Konto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Konto](../vmonic/slaccountrequirement.html).
+Das {{site.data.keyword.cloud}}-Konto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Konto](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Verfügbarkeit des IBM Cloud-Rechenzentrums
 
@@ -24,7 +24,7 @@ Die VMware Federal on {{site.data.keyword.cloud_notm}}-Bereitstellung stellt str
 
 ## Sicherung von Managementkomponenten
 
-Sie sind für die Erhaltung und Sicherstellung der Verfügbarkeit aller Instanzkomponenten unter Verwendung Ihrer bevorzugten Sicherungslösung verantwortlich. Es wird dringend empfohlen, die Sicherung oder Hochverfügbarkeit aller Managementkomponenten zu planen. Weitere Informationen finden Sie unter [Komponenten sichern](../archiref/solution/solution_backingup.html).
+Sie sind für die Erhaltung und Sicherstellung der Verfügbarkeit aller Instanzkomponenten unter Verwendung Ihrer bevorzugten Sicherungslösung verantwortlich. Es wird dringend empfohlen, die Sicherung oder Hochverfügbarkeit aller Managementkomponenten zu planen. Weitere Informationen finden Sie unter [Komponenten sichern](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
 ## Services für VMware Federal-Instanzen
 
@@ -32,12 +32,12 @@ Für VMware Federal on {{site.data.keyword.cloud_notm}} besteht nicht die Mögli
 
 ## Kapazitätsaspekte
 
-Informationen und Hinweise zur Kapazität finden Sie unter [Skalierungskapazität](../archiref/solution/solution_scaling.html).
+Informationen und Hinweise zur Kapazität finden Sie unter [Skalierungskapazität](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
 
 ### Zugehörige Links
 
-* [vCenter Server-Softwareteileliste](vc_bom.html)
-* [Übersicht über VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
-* [VMware Federal-Instanzen bestellen](vc_fed_orderinginstance.html)
-* [VMware Federal-Instanzen schützen](vc_fed_securinginstance.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
+* [vCenter Server-Softwareteileliste](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
+* [VMware Federal-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [VMware Federal-Instanzen schützen](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

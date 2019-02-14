@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -15,8 +15,8 @@ Puoi ordinare un'istanza HCX on {{site.data.keyword.cloud}} in loco senza associ
 ## Prima di iniziare
 
 Assicurati di aver completato le seguenti attività:
-*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](../vmonic/useraccount.html).
-*  Hai esaminato tutte le considerazioni in [Considerazioni sull'istallazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](../services/standalone_considerations.html).
+*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Hai esaminato tutte le considerazioni in [Considerazioni sull'istallazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services/standalone_considerations.html).
 
 ## Procedura per ordinare le istanze VMware HCX on IBM Cloud in loco
 
@@ -38,7 +38,7 @@ Visualizza e gestisci l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco 
 
 ### Link correlati
 
-* [Visualizzazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](standalone_viewingserviceinstances.html)
-* [Eliminazione di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](standalone_deletingserviceinstances.html)
-* [Glossario dei termini HCX](hcx_glossary.html)
+* [Visualizzazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
+* [Eliminazione di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
+* [Glossario dei termini HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

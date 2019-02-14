@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,10 @@ lastupdated: "2018-10-29"
 
 # Kapazität für vCenter Server-Instanzen erweitern und verringern
 
-Sie können die Kapazität Ihrer VMware vCenter Server-Instanz entsprechend Ihren Geschäftsanforderungen erweitern oder verringern, indem Sie ESXi-Server hinzufügen oder entfernen.
+Sie können die Kapazität Ihrer VMware vCenter Server-Instanz entsprechend Ihren Geschäftsanforderungen erweitern oder verringern, indem Sie ESXi-Server oder NFS-Speicher (Network File System) hinzufügen oder entfernen.
+
+Sie können NFS-Speicherfreigaben zu einem vorhandenen NFS- oder vSAN vCenter Server-Cluster hinzufügen oder aus einem vorhandenen NFS-oder vSAN vCenter Server-Cluster entfernen.
+{:note}
 
 Wenn Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen von einem oder mehreren ESXi-Servern nach der Bereitstellung die Speicherkapazität des Clusters erhöhen.
 
@@ -27,16 +30,16 @@ Wenn Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen von ei
 * Eine vCenter Server-Instanz mit vSAN-Speicher benötigt mindestens 4 ESXi-Server.
 * Bei vCenter Server-Instanzen, die in V2.0 oder einer früheren Version bereitgestellt wurden, können Sie jeden Cluster auf bis zu 32 ESXi-Server erweitern. Für die Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen, die Sie jeweils hinzufügen können, gilt Folgendes:
    * Bei Konfigurationen des Typs **S (Klein)**, **M (Mittel)** und **L (Groß)** können Sie gleichzeitig 1 bis 10 ESXi-Server hinzufügen.
-   * Bei Konfigurationen des Typs **Skylake** und **Broadwell** können Sie gleichzeitig 1 bis 20 ESXi-Server hinzufügen. Weitere Informationen zum Minimum von ESXi-Servern finden Sie im Abschnitt [Ist eine Serverinstanz mit zwei Knoten hoch verfügbar?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+   * Bei Konfigurationen des Typs **Skylake** und **Broadwell** können Sie gleichzeitig 1 bis 20 ESXi-Server hinzufügen. Weitere Informationen zum Minimum von ESXi-Servern finden Sie im Abschnitt [Ist eine Serverinstanz mit zwei Knoten hoch verfügbar?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
-## Vorgehensweise beim Hinzufügen von ESXi-Servern
+### Vorgehensweise beim Hinzufügen von ESXi-Servern
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die die Kapazität erweitert werden soll.
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
 4. Klicken Sie in der Tabelle **CLUSTER** auf den Cluster, zu dem ESXi-Server hinzugefügt werden sollen.
-5. Klicken Sie im Abschnitt **ESXi-Server** auf **Hinzufügen**.
-6. Geben Sie im Fenster **Server hinzufügen** die Anzahl der Server ein, die Sie hinzufügen wollen. Prüfen Sie geschätzten Kosten und klicken Sie dann auf **Hinzufügen**.
+5. Klicken Sie im Abschnitt **ESXi-Server** auf **Server hinzufügen**.
+6. Geben Sie im Fenster **Server hinzufügen** die Anzahl der Server ein, die Sie hinzufügen möchten. Prüfen Sie die geschätzten Kosten und klicken Sie dann auf **Server hinzufügen**.
 
 ### Ergebnisse nach dem Hinzufügen von ESXi-Servern
 
@@ -48,13 +51,13 @@ Wenn Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen von ei
 
 ### Vor dem Entfernen von ESXi-Servern
 
-* Entfernen Sie keine ESXi-Server über VMware vSphere Web Client. Die Änderungen, die Sie in vSphere Web Client vornehmen, werden nicht mit der {{site.data.keyword.vmwaresolutions_full}}-Konsole synchronisiert.
+* Entfernen Sie keine ESXi-Server über VMware vSphere Web Client. Die Änderungen, die Sie in vSphere Web Client vornehmen, werden nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert.
 * Eine vCenter Server-Instanz mit NFS-Speicher benötigt mindestens 2 ESXi-Server und eine vCenter Server-Instanz mit vSAN-Speicher muss über mindestens 4 ESXi-Server verfügen.
 * Bevor Sie ESXi-Server mit installiertem Service "F5 on {{site.data.keyword.cloud_notm}}" oder "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" entfernen, müssen Sie die VMs für F5 BIG-IP und FortiGate auf einen ESXi-Server verlagern, auf dem die VMs nicht gehostet werden.
 * Stellen Sie vor dem Entfernen von ESXi-Servern mit installiertem Service "IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}" sicher, dass keine (fehlgeschlagenen oder laufenden) Sicherungs- oder Wiederherstellungsoperationen aktiv sind, da diese aktiven Operationen das Entfernen der ESXi-Server verhindern könnten.
 * Wenn Sie ESXi-Server entfernen, werden die Server in den Wartungsmodus versetzt. Anschließend werden alle virtuellen Maschinen (VMs), die auf den Servern ausgeführt werden, migriert, bevor sie aus vCenter Server entfernt werden. Damit die Verlagerung von VMs maximal gesteuert werden kann, empfiehlt es sich, die zu entfernenden ESXi-Server in den Wartungsmodus zu versetzen und die auf ihnen ausgeführten VMs manuell mithilfe von VMware vSphere Web Client zu migrieren. Anschließend entfernen Sie die ESXi-Server mithilfe der {{site.data.keyword.vmwaresolutions_short}}-Konsole.
 
-## Vorgehensweise beim Entfernen von ESXi-Servern
+### Vorgehensweise beim Entfernen von ESXi-Servern
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die die Kapazität verringert werden soll.
@@ -71,10 +74,63 @@ Wenn Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen von ei
    Die entfernten ESXi-Server werden Ihnen bis zum Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur berechnet.
    {:note}
 
+## NFS-Speicher zu vCenter-Server-Instanzen hinzufügen
+
+### Vor dem Hinzufügen von NFS-Speicher
+
+Fügen Sie NFS-Speicher nicht über VMware vSphere Web Client hinzu. Die Änderungen, die Sie in vSphere Web Client vornehmen, werden nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert. IBM verwaltet keine NFS-Dateifreigaben, die Sie manuell zu einer Instanz hinzugefügt haben.
+
+### Vorgehensweise zum Hinzufügen von NFS-Speicher
+
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die die Kapazität erweitert werden soll.
+3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
+4. Klicken Sie in der Tabelle **CLUSTER** auf den Cluster, zu dem NFS-Speicher hinzugefügt werden soll.
+5. Klicken Sie im Abschnitt **Speicher** auf **Hinzufügen**.
+6. Führen Sie im Fenster **Speicher** die Speicherkonfiguration durch.
+   * Wenn Sie für alle Dateifreigaben dieselben Einstellungen hinzufügen und konfigurieren wollen, geben Sie **Anzahl der gemeinsam genutzten Ressourcen**, **Leistung** und **Größe (GB)** an.
+   * Wenn Sie Dateifreigaben einzeln hinzufügen und konfigurieren wollen, wählen Sie **Gemeinsam genutzte Ressourcen einzeln konfigurieren** an, klicken auf das Plussymbol (**+**) neben der Bezeichnung **Gemeinsam genutzten Speicher hinzufügen** und wählen für jede einzelne Dateifreigabe die **Leistung** und **Größe (GB)** aus. Sie müssen mindestens eine gemeinsam genutzte Dateiressource auswählen.
+7. Klicken Sie auf **NFS-Speicher hinzufügen**.
+
+### Ergebnisse nach dem Hinzufügen von NFS-Speicher
+
+1. Es kann eine leichte Verzögerung in der Konsole auftreten, während sich der Instanzstatus von **Bereit** in **Wird geändert** ändert. Warten Sie, bis die Operation vollständig abgeschlossen ist, bevor Sie weitere Änderungen an der Instanz vornehmen.
+2. Sie werden per E-Mail benachrichtigt, dass Ihre Anforderung zum Hinzufügen von NFS-Speicher verarbeitet wird. In der Konsole wird der Status des Clusters, der dem NFS-Speicher zugeordnet ist, in **Wird geändert** geändert.
+3. Wenn der neue NFS-Speicher nicht zur Liste im Cluster hinzugefügt wird, überprüfen Sie die E-Mail- oder Konsolenbenachrichtigungen, um weitere Details über den Fehler zu ermitteln.
+
+## NFS-Speicher aus vCenter Server-Instanzen entfernen
+
+### Vor dem Entfernen von NFS-Speicher
+
+* Entfernen Sie den NFS-Speicher nicht über VMware vSphere Web Client. Die Änderungen, die Sie in vSphere Web Client vornehmen, werden nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert.
+* Stellen Sie vor dem Entfernen des NFS-Speichers sicher, dass alle im Speicher befindlichen VMs entfernt wurden. 
+* Stellen Sie sicher, dass die gemeinsam genutzten Ressourcen, die entfernt werden sollen, der korrekten vCenter Server-Instanz zugeordnet sind. 
+* Der Cluster muss den Status **Bereit** haben.
+
+### Vorgehensweise zum Entfernen von NFS-Speicher
+
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die die Kapazität verringert werden soll.
+3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
+4. Klicken Sie in der Tabelle **CLUSTER** auf den Cluster, von dem der NFS-Speicher entfernt werden soll.
+5. Wählen Sie im Abschnitt **Speicher** die zu entfernende Speicherfreigabe aus und klicken Sie auf **Löschen**.
+6. Klicken Sie im Fenster **Speicher entfernen** auf **Entfernen**.
+
+### Ergebnisse nach dem Entfernen von NFS-Speicher
+
+1. Es kann eine leichte Verzögerung in der Konsole auftreten, während sich der Instanzstatus von **Bereit** in **Wird geändert** ändert. Warten Sie, bis die Operation vollständig abgeschlossen ist, bevor Sie weitere Änderungen an der Instanz vornehmen.
+2. Sie werden per E-Mail benachrichtigt, dass Ihre Anforderung zum Entfernen von NFS-Speicher verarbeitet wird. In der Konsole wird der Status des Clusters, der dem NFS-Speicher zugeordnet ist, in **Wird geändert** geändert.
+3. Der NFS-Speicher wird von der {{site.data.keyword.cloud_notm}}-Infrastruktur am Ende des {{site.data.keyword.cloud_notm}}-Infrastruktur-Abrechnungszyklus, der in der Regel 30 Tage umfasst, vollständig zurückgefordert.
+
+   Der NFS-Speicher wird Ihnen bis zum Ende des {{site.data.keyword.cloud_notm}}-Infrastrukturabrechnungszyklus in Rechnung gestellt.
+   {:note}
+
+
 ### Zugehörige Links
 
-* [vCenter Server-Teileliste](vc_bom.html)
-* [Voraussetzungen und Planung für vCenter Server-Instanzen](vc_planning.html)
-* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](vc_addingviewingclusters.html)
+* [vCenter Server-Teileliste](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [Voraussetzungen und Planung für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
 * [Versetzen eines Hosts in den Wartungsmodus](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Prozessorunterstützung für EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

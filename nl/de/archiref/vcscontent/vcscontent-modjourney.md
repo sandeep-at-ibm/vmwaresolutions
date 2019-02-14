@@ -2,21 +2,21 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2019-01-23"
 
 ---
 
 # Modernisierungsprozess
 
-Dies ist ein Referenzanwendungsfall für die Modernisierung einer klassischen WebSphere Application Server-Anwendung, bei der {{site.data.keyword.cloud}} Private, IBM Middleware-Inhalt, der {{site.data.keyword.cloud_notm}} Kubernetes-Service und VMware vCenter Server on {{site.data.keyword.cloud_notm}} zum Einsatz kommen.
+Dies ist ein Referenzanwendungsfall für die Modernisierung einer klassischen WebSphere Application Server-Anwendung, bei der {{site.data.keyword.cloud}} Private, IBM Middleware-Inhalt, der {{site.data.keyword.containerlong_notm}} und VMware vCenter Server on {{site.data.keyword.cloud_notm}} zum Einsatz kommen.
 
 ## Modernisierung umfasst nicht nur Anwendungen
 
 Alle sind auf dem Weg zur Cloud, aber jeder befindet sich an einer anderen Etappe dieser Strecke. Schwerpunkt dieses Anwendungsfalls ist die von der Anwendungsarchitektin Jane und dem Cloudinfrastrukturarchitekten Todd geplante schrittweise Modernisierung einer vorhandenen Anwendung namens "Stock Trader". Dieser Anwendungsfall zeigt anhand von Beispielen, wie Sie die einzelnen Schritte im Prozess ausführen und welchen Wert jeder Schritt ungeachtet seiner Größe für Ihr Unternehmen hat.
 
-Bei dem hier vorgestellten Prozess liegt der Schwerpunkt auf der Modernisierung der Anwendung "Stock Trader". Zur vollständigen Modernisierung eines Unternehmens in ein cloudnatives Unternehmen müssen aber auch Aspekte wie Anwendungen, DevOps, Integration und Management erörtert werden. Diese Bereiche sind bei der Umsetzung Ihrer Ziele eng verzahnt und die Modernisierung lediglich eines einzigen Bereiches führt faktisch zu Problemen in allen Bereichen.
+Bei dem hier vorgestellten Prozess liegt der Schwerpunkt auf der Modernisierung der Anwendung "Stock Trader". Zur vollständigen Modernisierung eines Unternehmens in ein cloudnatives Unternehmen müssen aber auch Aspekte wie Anwendungen, DevOps, Integration und Management erörtert werden. Alle Bereiche sind bei der Umsetzung Ihrer Ziele eng verzahnt. Einen Bereich ohne die anderen zu modernisieren, könnte zu Problemen führen.
 
 ## Gründe für die Modernisierung
 
@@ -24,31 +24,31 @@ Bei dem hier vorgestellten Prozess liegt der Schwerpunkt auf der Modernisierung 
 
 Ziel sind cloudnative Anwendungen, die skalierbar sind und auf schnelle Bedarfsänderungen reagieren können.
 
-- Sie müssen vorhandene Anwendungen modernisieren und neue cloudnative Anwendungen erstellen, um Faszination bei Ihren Kunden zu wecken.
-- Sie benötigen Anwendungen, die skalierbar und weltweit einsetzbar sind, an den Bedarf angepasst werden sowie schnell geändert, erweitert und verlagert werden können.
+* Sie müssen vorhandene Anwendungen modernisieren und neue cloudnative Anwendungen erstellen, um Faszination bei Ihren Kunden zu wecken.
+* Sie benötigen Anwendungen, die skalierbar und weltweit einsetzbar sind, an den Bedarf angepasst werden und schnell geändert, erweitert und verlagert werden können.
 
 ### DevOps-Modernisierung
 
 Im Zuge der Anwendungsmodernisierung wird mit dem Verfahren, das Sie zur Bereitstellung der Anwendung nutzen, auch die gesamte Delivery Pipeline modernisiert, damit sich die von Ihren Anwendungsentwicklern aufgebaute cloudnative Kultur auch auf die Art der Anwendungsbereitstellung erstrecken kann.
 
-- Sie müssen die Kultur für Entwicklung und Betrieb (DevOps) sowie auch der Sicherheit modernisieren, wenn Sie Ihre Anwendungen modernisieren.
-- Sie benötigen DevOps-Teams, die skalierbar und weltweit einsetzbar sind, an den Bedarf angepasst werden sowie schnell geändert, erweitert und verlagert werden können.
+* Sie müssen die Kultur für Entwicklung und Betrieb (DevOps) sowie auch der Sicherheit modernisieren, wenn Sie Ihre Anwendungen modernisieren.
+* Sie benötigen DevOps-Teams, die skalierbar und weltweit einsetzbar sind, an den Bedarf angepasst werden und schnell geändert, erweitert und verlagert werden können.
 
 ###  Integrationsmodernisierung
 
 Im Zuge des Modernisierungsprozesses müssen Ihre Teams vorhandene Assets, neue Cloud-Services, Ihre Daten und neue Erkenntnisse aus Analysen integrieren, die für diese Daten ausgeführt wurden.
 
-- Sie müssen Ihre vorhandenen Assets bei diesem Prozess in einer Weise einsetzen, die skalierbar und weltweit einsetzbar ist, an den Bedarf angepasst werden sowie schnell geändert, erweitert und verlagert werden kann.
-- Sie müssen in jedem Schritt dieses Prozesses eine Anreicherung durch neue Cloud-Services vornehmen.
-- Sie müssen Ihre Daten und die Erkenntnisse integrieren, die Sie durch die Anwendung von Analysen auf Ihre Daten gewinnen.
+* Sie müssen Ihre vorhandenen Assets bei diesem Prozess in einer Weise einsetzen, die skalierbar und weltweit einsetzbar ist, an den Bedarf angepasst werden sowie schnell geändert, erweitert und verlagert werden kann.
+* Sie müssen in jedem Schritt dieses Prozesses eine Anreicherung durch neue Cloud-Services vornehmen.
+* Sie müssen Ihre Daten und die Erkenntnisse integrieren, die Sie durch die Anwendung von Analysen auf Ihre Daten gewinnen.
 
 ### Management
 
 Die Modernisierung der Managementpraxis ist ein weiterer paralleler Prozess, den Sie beim Modernisieren Ihrer Anwendungen vollziehen müssen. Tools, Kultur und Kernverhalten bei der Verwaltung und Wartung einer modernisierten Anwendung unterscheiden sich stark vom bisher üblichen.
 
-- Sie müssen Ihre Mikroservices und containerisierte Middleware unter Verwendung von integrierter Orchestrierung, Protokollierung und Überwachung verwalten.
-- Sie müssen Ihre Multi-Cloud-Hybridplattformen an weltweit verteilten Standorten in einer Weise verwalten, die skalierbar und weltweit einsetzbar ist, an den Bedarf angepasst werden sowie schnell geändert, erweitert und verlagert werden kann.
-- Sie müssen das Verfahren für das Management von mehreren Clouds und den in ihnen ausgeführten Anwendungen und Middlewarekomponenten automatisieren.
+* Sie müssen Ihre Mikroservices und containerisierte Middleware unter Verwendung von integrierter Orchestrierung, Protokollierung und Überwachung verwalten.
+* Sie müssen Ihre Multi-Cloud-Hybridplattformen an weltweit verteilten Standorten in einer Weise verwalten, die skalierbar und weltweit einsetzbar ist, an den Bedarf angepasst werden sowie schnell geändert, erweitert und verlagert werden kann.
+* Sie müssen das Verfahren für das Management von mehreren Clouds und den in ihnen ausgeführten Anwendungen und Middlewarekomponenten automatisieren.
 
 ## Wir stellen vor: Todd und Jane
 
@@ -85,4 +85,4 @@ Für Todd und Jane ergeben sich im Prozess für Stock Trader die folgenden Schri
 
 ### Zugehörige Links
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

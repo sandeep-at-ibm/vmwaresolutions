@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,7 +18,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} は、VMware vSphere スタ
 
 多くの場合、環境全体を 1 日以内でプロビジョンできます。また、このベア・メタル・インフラストラクチャーのコンピュート能力は、必要に応じて迅速かつ伸縮自在に拡張や縮小ができます。
 
-デプロイメント後に、{{site.data.keyword.slportal}}から NFS (ネットワーク・ファイル・システム) ファイル共有をさらに注文してからクラスター内のすべての ESXi サーバーにそれらを手動で接続することによって、共有ストレージを増やすことができます。 専用ストレージが必要な場合は、[NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html) を、高性能 (オール SSD) 構成と大容量 (オール SATA) 構成の両方で利用できます。
+デプロイメント後に、{{site.data.keyword.slportal}}から NFS (ネットワーク・ファイル・システム) ファイル共有をさらに注文してからクラスター内のすべての ESXi サーバーにそれらを手動で接続することによって、共有ストレージを増やすことができます。 専用ストレージが必要な場合は、[NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp/np_netappoverview.html) を、高性能 (オール SSD) 構成と大容量 (オール SATA) 構成の両方で利用できます。
 
 VMware vSAN は専用ストレージのオプションとしても利用できます。 vSAN クラスターの vSAN ベース・ストレージの容量を増やすには、デプロイメント後に ESXi サーバーをさらに追加します。
 
@@ -45,13 +45,13 @@ IBM 提供の VMware ライセンスを購入した場合は、VMware NSX Base �
 
 ### 仮想化管理
 
-この層は、vCenter Server Appliance (vCSA)、NSX Manager、2 つの NSX ESG、3 つの NSX Controller、Platform Services Controller (PSC) 仮想アプライアンス、および IBM CloudDriver 仮想サーバー・インスタンス (VSI) で構成されます。 CloudDriver VSI は、環境へのホストの追加などの特定の操作のために必要に応じてオンデマンドでデプロイします。
+この層は、Platform Services Controller (PSC) が組み込まれた vCenter Server Appliance (vCSA)、NSX Manager、NSX ESG 2 つ、NSX Controller 3 つ、IBM CloudDriver 仮想サーバー・インスタンス (VSI) で構成されます。 CloudDriver VSI は、環境へのホストの追加などの特定の操作のために必要に応じてオンデマンドでデプロイします。
 
 基本オファリングでは、最大 400 台のホストと最大 4000 個の VM が存在する環境をサポートできる規模の vCenter Server アプライアンスがデプロイされます。 vSphere API と互換性のある同じツールとスクリプトを使用して、IBM がホストする VMware 環境を管理できます。
 
 合計で、基本オファリングには、仮想化管理層用に予約される 38 個の vCPU と 67 GB の vRAM が必要です。 VM 用の残りのホスト容量は、オーバーサブスクリプション率、VM サイジング、ワークロードのパフォーマンス要件などのいくつかの要因によって決まります。
 
-アーキテクチャーについて詳しくは、[{{site.data.keyword.vmwaresolutions_short}} アーキテクチャーの参照情報](../archiref/solution/solution_overview.html)を参照してください。
+アーキテクチャーについて詳しくは、[{{site.data.keyword.vmwaresolutions_short}} アーキテクチャーの参照情報](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)を参照してください。
 
 ## vCenter Server インスタンスの技術仕様
 
@@ -64,14 +64,12 @@ vCenter Server インスタンスには、以下のコンポーネントが含�
 
 以下のいずれかの構成で{{site.data.keyword.baremetal_short}}を 3 つ以上注文できます。
 * **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。  
-* **SAP 認定**: 選択した CPU モデルを使用した{{site.data.keyword.baremetal_short}}。
-  * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 192 GB RAM
-  * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 384 GB RAM
-  * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 768 GB RAM
-* **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600 v4 シリーズ)。  
-     vSAN ストレージを使用する計画がある場合は、構成に 4 つの{{site.data.keyword.baremetal_short}}が必要です。
-     {:note}
-     
+* **SAP 認定**: 選択した CPU モデルの Intel Skylake または Intel Broadwell 世代サーバー (Intel Xeon 6140/E5-2690/E7-8890 シリーズ)。
+* **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600/E7-4800 シリーズ)。  
+
+vSAN ストレージを使用する計画がある場合は、構成に 4 つの{{site.data.keyword.baremetal_short}}が必要です。
+{:note}
+
 ### ネットワーキング
 
 以下のネットワーキング・コンポーネントが注文されます。
@@ -79,11 +77,11 @@ vCenter Server インスタンスには、以下のコンポーネントが含�
 *  VLAN (仮想 LAN) 3 つ: パブリック VLAN 1 つとプライベート VLAN 2 つ
 *  レイヤー 2 (L2) ネットワークに接続されたローカル・ワークロード間で実行される可能性のある東西通信用の DLR (分散論理ルーター) を備えた VXLAN (仮想拡張可能 LAN) 1 つ。 この VXLAN は、サンプルのルーティング・トポロジーとしてデプロイされるので、変更したり、作成の基礎として使用したり、削除したりできます。 また、DLR の新しい論理インターフェースにさらに VXLAN を接続してセキュリティー・ゾーンを追加することもできます。
 *  以下の 2 つの VMware NSX Edge Services Gateway
-  * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX Edge Services Gateway (ESG)。これは、管理ネットワーキング・トポロジーの一部として IBM がデプロイします。 この ESG は、IBM 管理仮想マシンが、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[ユーザー管理の ESG を使用するためのネットワークの構成](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)を参照してください。
+  * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX Edge Services Gateway (ESG)。これは、管理ネットワーキング・トポロジーの一部として IBM がデプロイします。 この ESG は、IBM 管理仮想マシンが、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[ユーザー管理の ESG を使用するためのネットワークの構成](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)を参照してください。
 
     この ESG は **mgmt-nsx-edge** という名前で、ユーザーはこの ESG にアクセスできず、使用できません。 これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなる可能性があります。
     {:important}
-  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。 このゲートウェイは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-) を参照してください。
+  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。 このゲートウェイは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-) を参照してください。
 
 ### 仮想サーバー・インスタンス
 
@@ -96,6 +94,9 @@ vCenter Server インスタンスには、以下のコンポーネントが含�
 ### ストレージ
 
 最初のデプロイメントのときに、vSAN と NFS のどちらかのストレージ・オプションを選択できます。
+
+インスタンス V2.8 以降の場合、NFS ストレージ共有を既存の NFS または vSAN クラスターに追加できます。詳しくは、[vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances)の *vCenter Server インスタンスへの NFS ストレージの追加* のセクションを参照してください。
+{:note}
 
 #### vSAN ストレージ
 
@@ -112,11 +113,15 @@ vSAN オプションでは、構成をカスタマイズできます。ディス
 #### NFS ストレージ
 
 NFS オプションでは、ワークロード用のファイル・レベルの共有ストレージをカスタマイズできます。サイズとパフォーマンスをさまざまなオプションから選択できます。
-* サイズ: 1、2、4、8、12 TB
-* パフォーマンス: 2、4、10 IOPS/GB。
+* サイズ: 20 から 12000 GB
+* パフォーマンス: 0.25、2、4、または 10 IOPS/GB。
 * ファイル共有の個々の構成。
 
 NFS オプションを選択すると、管理コンポーネント用の 2 TB および 4 IOPS/GB ファイル共有が 1 つ注文されます。
+
+#### ローカル・ディスク・ストレージ
+
+ローカル・ディスク・オプションは、**SAP 認定**のクワッド Intel Xeon E7-8890 v4 プロセッサーのベアメタル構成でのみ使用できます。ディスク数とディスク・タイプをさまざまなオプションから選択して、構成をカスタマイズできます。
 
 ### ライセンス (IBM 提供または BYOL) および料金
 
@@ -132,7 +137,7 @@ vCenter Server 拡張ノードごとに、{{site.data.keyword.cloud_notm}} ア�
 
 ### 拡張ノード用のハードウェア
 
-[vCenter Server インスタンスの技術仕様](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)に示されている構成になっている、1 台のベア・メタル・サーバー。
+[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)に示されている構成になっている、1 台のベア・メタル・サーバー。
 
 ### 拡張ノード用のライセンスと料金
 
@@ -152,7 +157,7 @@ vCenter Server 拡張ノードごとに、{{site.data.keyword.cloud_notm}} ア�
 
 ### 関連リンク
 
-* [vCenter Server ソフトウェアの部品構成表](vc_bom.html)
-* [vCenter Server インスタンスの計画](vc_planning.html)
-* [vCenter Server インスタンスの注文](vc_orderinginstance.html)
+* [vCenter Server ソフトウェアの部品構成表](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [vCenter Server インスタンスの計画](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 * [{{site.data.keyword.cloud_notm}} のファイル・ストレージとブロック・ストレージ](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

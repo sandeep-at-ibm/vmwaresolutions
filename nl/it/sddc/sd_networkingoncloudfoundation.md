@@ -2,19 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-04"
+lastupdated: "2019-01-25"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Considerazioni sulla rete per le istanze Cloud Foundation
 
 Rivedi le seguenti informazioni per i dettagli sulle considerazioni e sui requisiti di rete per le tue istanze Cloud Foundation. Assicurati di soddisfare i requisiti affinché l'istanza funzioni correttamente.
 
 ## Componenti di rete per le istanze Cloud Foundation
+{: faq}
 
-Per esaminare i componenti di rete inclusi nella tua istanza Cloud Foundation, vedi [Specifiche tecniche per le istanze Cloud Foundation](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+Per esaminare i componenti di rete inclusi nella tua istanza Cloud Foundation, vedi [Specifiche tecniche per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## Considerazioni su firewall
 
@@ -28,7 +31,7 @@ Tuttavia, se le tue VM del carico di lavoro devono comunicare tra loro e acceder
 
 Per ulteriori informazioni su come configurare NSX, vedi i seguenti argomenti:
 * Per un'istanza primaria (singola) di Cloud Foundation, vedi [Setting up NSX for workload VMs on VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/).
-* Per un'istanza Cloud Foundation multisito, vedi Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html).
+* Per un'istanza Cloud Foundation multisito, vedi [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}.
 
 ## Considerazioni sulla modifica delle password per i componenti NSX
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -51,8 +51,8 @@ vCenter Server with Hybridity Bundle インスタンスを削除すると、以�
 
 ### 関連リンク
 
-* [マルチサイト構成での Hybridity Bundle インスタンスを使用した vCenter Server の削除](vc_hybrid_deletinginstance_multi.html)
-* [vCenter Server with Hybridity Bundle インスタンスの注文](vc_hybrid_orderinginstance.html)
-* [vCenter Server with Hybridity Bundle インスタンスの表示](vc_hybrid_viewinginstances.html)
-* [vCenter Server with Hybridity Bundle インスタンスの容量の拡張と縮小](vc_hybrid_addingremovingservers.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
+* [マルチサイト構成での Hybridity Bundle インスタンスを使用した vCenter Server の削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html)
+* [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle インスタンスの表示](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [vCenter Server with Hybridity Bundle インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

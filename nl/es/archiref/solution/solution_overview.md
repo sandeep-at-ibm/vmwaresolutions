@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-08-14"
 
@@ -25,7 +25,7 @@ Figura 1. Visión general de VMware on {{site.data.keyword.cloud_notm}}
 
 ## Beneficios clave
 
-VMware Cloud Foundation y vCenter Server on {{site.data.keyword.cloud_notm}} proporcionan los bloques de construcción fundamentales, que incluye VMware vSphere, vCenter Server, NSX y las opciones de almacenamiento compartidas, entre las que se incluyen vSAN. Estos componentes son necesarios para diseñar de forma flexible una solución de centro de datos definida por software de VMware que se adapte mejor a sus cargas de trabajo. 
+VMware Cloud Foundation y vCenter Server on {{site.data.keyword.cloud_notm}} proporcionan los bloques de construcción fundamentales, que incluye VMware vSphere, vCenter Server, NSX y las opciones de almacenamiento compartidas, entre las que se incluyen vSAN. Estos componentes son necesarios para diseñar de forma flexible una solución de centro de datos definida por software de VMware que se adapte mejor a sus cargas de trabajo.
 
 Mediante la aplicación de la automatización avanzada y de la infraestructura nativa de un solo arrendatario, puede desplegar rápidamente todo el entorno de VMware en el {{site.data.keyword.cloud_notm}} en horas. Entonces, puede acceder y gestionar el entorno alojado por IBM mediante los clientes de VMware nativos, la interfaz de línea de mandatos (CLI), los scripts existentes u otras herramientas familiares compatibles con la API de vSphere.
 

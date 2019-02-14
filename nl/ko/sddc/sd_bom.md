@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -32,9 +32,9 @@ VMware Cloud Foundation 인스턴스에 대한 BOM(Bill of Materials) 정보를 
 
 |제조업체 |컴포넌트                                |버전      |
 |:-------------|:-----------------------------------------|:-------------|
-|VMware       |vSphere ESXi                             | 6.5 Update 2c(최대 ESXi650-201808001 패치 레벨) |
-|VMware       |vCenter Server Appliance                 | 6.5 Update 2c |
-|VMware       |Platform Services Controller             | 6.5 Update 2c |
+|VMware       |vSphere ESXi                             | 6.5 Update EP11(6.5.0-10719125 빌드) |
+|VMware       |vCenter Server Appliance                 | 6.5 U2c(6.5.0-9451637 빌드) |
+|VMware       |Platform Services Controller             | 6.5 U2c(6.5.0-9451637 빌드) |
 |VMware       |vSAN                                     |6.6.1        |
 |VMware       |NSX for vSphere                          | 6.4.1        |
 |VMware       |SDDC Manager                             |2.4          |
@@ -58,7 +58,8 @@ ESXi 서버에 적용되는 고급 구성 설정의 개요에 대해서는 아�
 |큐 전체 샘플 크기 |**QFullSampleSize** = 32 |**/Disk/QFullSampleSize** = 32 |
 |큐 전체 임계값 |**QFullThreshold** = 8 |**/Disk/QFullThreshold** = 8 |
 
-**참고:**
+### 참고
+
 * 서비스가 ESXi 서버에서 기본 NFS 마운트 수보다 더 많은 NFS 마운트를 사용할 수 있으므로 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 서비스에 **MaxVolumes** 설정이 필요합니다.
 * 구성 설정에 대한 **설정되지 않음** 값은 새 설정이 자동으로 적용되지 않음을 나타내며, ESXi 서버를 다시 부팅해야 하므로 중단이 발생할 수 있습니다.
 

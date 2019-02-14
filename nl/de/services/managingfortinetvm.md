@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2017-07-19"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -17,13 +17,13 @@ Um den Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud}}" zu v
 * Greifen Sie über eine SSH-Verbindung unter Verwendung der Berechtigungsnachweise, die auf der Seite mit den Details für den Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" zu finden sind, auf die Konsole zu.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
+* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ### Zugehörige Links
 
-* [Übersicht über FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_considerations.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Website "fortinet.com"](https://www.fortinet.com/)
-* [Fortinet technical documentation](http://docs.fortinet.com/fortigate/admin-guides)
+* [Technische Dokumentation zu Fortinet](http://docs.fortinet.com/fortigate/admin-guides)

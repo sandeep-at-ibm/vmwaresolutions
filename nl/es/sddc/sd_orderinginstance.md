@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-10"
 
 ---
 
@@ -82,6 +82,8 @@ Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 | Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Número de servidores nativos
 
@@ -94,7 +96,11 @@ Para las instancias de Cloud Foundation, solo puede solicitar almacenamiento VMw
 Cuando selecciona la configuración de servidor nativo **Skylake** o **Broadwell**, puede personalizar el almacenamiento vSAN para la instancia. Especifique los siguientes valores de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
-* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto.
+
+  La opción **Intel Optane de alto rendimiento** solo está disponible para los modelos de CPU de Skylake Dual Intel Xeon Gold 5120 y Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
 
 ## Valores de interfaz de red
@@ -165,7 +171,8 @@ Cuando seleccione reutilizar las VLAN públicas y privadas existentes, especifiq
   * **Subred primaria** se asigna a hosts físicos para acceder a la red pública.
   * **Subred primaria privada** se asigna a hosts físicos para el tráfico de gestión.
 
-**Importante:**
+##### Importante
+
 * Asegúrese de que la configuración del cortafuegos en las VLAN seleccionadas no bloquee el tráfico de datos de gestión.
 * Asegúrese de que todas las VLAN que seleccione estén en el mismo pod, porque los servidores ESXi no se pueden suministrar en VLAN de pod mixtos.
 
@@ -187,7 +194,7 @@ En función de la configuración seleccionada para la instancia y los servicios 
    * Pulse **Instancia secundaria** para conectar la instancia con una instancia existente (primaria) en el entorno para obtener una alta disponibilidad. Siga estos pasos:
      1. Seleccione la instancia primaria a la que desea conectar la instancia secundaria.
      2. Para las instancias primarias V2.5 o posteriores, especifique el valor para la **Contraseña de administrador del PSC de la instancia primaria**.
-     3. Para las instancias primarias V2.4 o anteriores, verifique que el valor prerrellenado para el campo **Contraseña del administrador para el PSC de instancia primaria** es correcto.
+     3. Para las instancias primarias V2.4 o anteriores, verifique que el valor especificado para el campo **Contraseña del administrador para el PSC de instancia primaria** es correcto.
 5. Complete los valores de licencia de los componentes de la instancia:
    *  Para utilizar licencias proporcionadas por IBM, seleccione **Incluir con la compra**.
    *  Para utilizar su propia licencia, seleccione **Proporcionaré** y escriba la clave de la licencia.  

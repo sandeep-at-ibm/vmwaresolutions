@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,4 +22,4 @@ Für die zusätzlichen Cluster müssen Sie die Disaster-Recovery mit Zerto geson
 
 Um auf die Zerto-Konsole zuzugreifen, klicken Sie auf der Registerkarte **Services** der Instanz auf die Karte für Zerto, dann auf **Details anzeigen** und anschließend auf **Zerto-Konsole anzeigen**.
 
-Unter [Kontaktaufnahme mit dem IBM Support](trbl_support.html) finden Sie weitere Angaben darüber, wie Sie sich mit dem IBM Support in Verbindung setzen.
+Unter [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions//vmonic/trbl_support.html) finden Sie weitere Angaben darüber, wie Sie sich mit dem IBM Support in Verbindung setzen.

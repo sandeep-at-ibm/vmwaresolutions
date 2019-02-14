@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -111,7 +111,7 @@ Tabelle 5. Bereitstellungsverlauf der Cloud Foundation-Instanz
 
 ## Nächste Schritte bei aufgetretenen Fehlern
 
-Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, wird automatisch das {{site.data.keyword.cloud_notm}}-Support-Team benachrichtigt. Um den Status Ihres Tickets abzufragen, können Sie den [IBM Support kontaktieren](../vmonic/trbl_support.html).
+Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, wird automatisch das {{site.data.keyword.cloud_notm}}-Support-Team benachrichtigt. Um den Status Ihres Tickets abzufragen, können Sie den [IBM Support kontaktieren](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## Nächste Schritte
 
@@ -122,12 +122,12 @@ Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** k
 
 In den folgenden Abschnitten finden Sie Informationen, die Sie bei der Ausführung der Anmeldeanweisungen unterstützen:
 
-* Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
+* Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 * Eine Liste der Zugriffspunkte für die Anmeldung beim privaten Netz von {{site.data.keyword.cloud_notm}} mittels VPN finden Sie unter [VPN-Zugriff](http://www.softlayer.com/vpn-access){:new_window}.
-* Falls Sie beim Bereitstellen einer Datei im Format OVF (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](../vmonic/trbl_deploy_ovf.html) weitere Informationen.
+* Falls Sie beim Bereitstellen einer Datei im Format OVF (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html) weitere Informationen.
 
 ### Zugehörige Links
 
-* [Cloud Foundation-Instanzen bestellen](sd_orderinginstance.html)
-* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](sd_addingremovingservers.html)
-* [Cloud Foundation-Instanzen löschen](sd_deletinginstance.html)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Cloud Foundation-Instanzen löschen](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)

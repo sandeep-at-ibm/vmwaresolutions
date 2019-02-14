@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-11-05"
 
 使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントには、お客様に代わってインスタンス内でコンポーネントを注文して操作を実行できるだけの権限がなければなりません。 この権限の要件は、{{site.data.keyword.vmwaresolutions_short}} コンソールから注文するすべてのタイプのインスタンスとサービスに適用されます。
 
-許可ユーザーは、{{site.data.keyword.slportal}}で {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの権限を確認したり更新したりできます。 詳しくは、『[ユーザーのカスタマー・ポータル許可の編集](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}』を参照してください。
+許可ユーザーは、{{site.data.keyword.slportal}}で {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの権限を確認したり更新したりできます。 詳しくは、『[ユーザーのカスタマー・ポータル許可の編集](/docs/customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}』を参照してください。
 
 表 1. {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントに必要な権限
 
@@ -45,12 +45,19 @@ lastupdated: "2018-11-05"
 | パスワードの表示 | この許可は注文した VSI を管理するために必要です。 |
 | サーバー・モニタリングの管理 | この権限は、注文を実行するときには不要ですが、インスタンス内で VMware ESXi サーバーを実行している {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}のモニタリング状況を取得して確認するときに必要です。 |
 
-## クラシック (非 VRF) アカウントの VLAN スパンニング
+## Virtual Routing and Forwarding (VRF) の要件
 
-クラシック (非 VRF) {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを使用する場合は、VLAN スパンニングを有効にする必要があります。 クラシック・アカウントの VLAN スパンニングを有効にしないと、VMware 仮想化環境のさまざまなコンポーネントが相互通信できない可能性があります。 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの VLAN スパンニングを有効にするには、[VLAN スパンニング](../../../infrastructure/vlans/vlan-spanning.html){:new_window}を参照してください。
+{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、VRF アカウントでなければなりません。あるいは、非 VRF アカウントである場合、VLAN スパンニングが有効になっている必要があります。非 VRF から VRF へのアカウントの変換について詳しくは、[IBM Cloud での VRF の概要](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)を参照してください。
+
+## 非 VRF アカウントの VLAN スパンニング
+
+非 VRF {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを使用する場合は、VLAN スパンニングを有効にする必要があります。非 VRF アカウントの VLAN スパンニングを有効にしないと、VMware 仮想化環境のさまざまなコンポーネントが相互に通信できなくなる可能性があります。
+
+アカウントの VLAN スパンニングを有効にするには、[VLAN スパンニング](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}を参照してください。
 
 ### 関連リンク
 
-* [Cloud Foundation インスタンスの要件](../sddc/sd_planning.html)
-* [vCenter Server インスタンスの要件](../vcenter/vc_planning.html)
-* [ユーザー・アカウントと設定](useraccount.html)
+* [Cloud Foundation インスタンスの要件](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [vCenter Server インスタンスの要件](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [ユーザー・アカウントと設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [IBM Cloud での VRF の概要](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -54,23 +54,23 @@ lastupdated: "2018-11-05"
 
 ## ユーザーのアクセス権限の管理
 
-新しいユーザーを {{site.data.keyword.cloud_notm}} アカウントに追加して、それらのユーザーがアカウントに対してプロビジョンされているサービスやリソースを共有できるようにすることができます。 詳しくは、[サービスとリソースにアクセスするようにユーザーを招待する](../vmonic/iamuserinvite.html)を参照してください。
+新しいユーザーを {{site.data.keyword.cloud_notm}} アカウントに追加して、それらのユーザーがアカウントに対してプロビジョンされているサービスやリソースを共有できるようにすることができます。 詳しくは、[サービスとリソースにアクセスするようにユーザーを招待する](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)を参照してください。
 
-既存のユーザーのアクセス権限を管理することもできます。これには、既存のアクセス権限の変更、新しいアクセス権限の割り当て、割り当て済みのアクセス権限の検討などが含まれます。 ユーザーのアクセス権限を管理するには、アカウント所有者であるか、または**「管理者」**のプラットフォーム管理役割を持つ必要があります。 詳しくは、『[リソースへのアクセスの管理](../../../iam/mngiam.html)』を参照してください。
+既存のユーザーのアクセス権限を管理することもできます。これには、既存のアクセス権限の変更、新しいアクセス権限の割り当て、割り当て済みのアクセス権限の検討などが含まれます。 ユーザーのアクセス権限を管理するには、アカウント所有者であるか、または**「管理者」**のプラットフォーム管理役割を持つ必要があります。 詳しくは、[リソースに対するアクセス権限の管理](/docs/iam/mngiam.html)を参照してください。
 
 ## IBM Cloud アカウントへの既存のインスタンスのマイグレーション
 
-{{site.data.keyword.vmwaresolutions_short}} を IAM と統合したために、V2.5 以降のリリースで {{site.data.keyword.cloud}} アカウントにデプロイされたインスタンスは、自動的にアカウントに追加されて IAM によって管理されます。
+{{site.data.keyword.vmwaresolutions_short}} を IAM と統合したために、V2.5 以降のリリースで {{site.data.keyword.cloud_notm}} アカウントにデプロイされたインスタンスは、自動的にアカウントに追加されて IAM によって管理されます。
 
 V2.4 以前のリリースでデプロイされた既存のインスタンスは、IAM 対応の管理のために指定された {{site.data.keyword.cloud_notm}} アカウントにマイグレーションできます。 詳しくは、以下のトピックを参照してください。
-* [IBM Cloud アカウントへの V2.5 より前の vCenter Server インスタンスのマイグレーション](../vcenter/vc_addinstancetousraccount.html)
-* [IBM Cloud アカウントへの V2.5 より前の vCenter Server with Hybridity Bundle インスタンスのマイグレーション](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [IBM Cloud アカウントへの V2.5 より前の Cloud Foundation インスタンスのマイグレーション](../sddc/sd_addinstancetousraccount.html)
-* [IBM Cloud アカウントへの V2.5 より前の NetApp ONTAP Select インスタンスのマイグレーション](../netapp/np_addinstancetousraccount.html)
-* [IBM Cloud アカウントへの V2.5 より前の VMware Federal インスタンスのマイグレーション](../vcenter/vc_fed_addinstancetousraccount.html)
+* [IBM Cloud アカウントへの V2.5 より前の vCenter Server インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [IBM Cloud アカウントへの V2.5 より前の vCenter Server with Hybridity Bundle インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [V2.5 以前の Cloud Foundation インスタンスの IBM Cloud アカウントへのマイグレーション](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [V2.5 以前の NetApp ONTAP Select インスタンスの IBM Cloud アカウントへのマイグレーション](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [IBM Cloud アカウントへの V2.5 より前の VMware Federal インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)
 
 ### 関連リンク
 
-* [ID およびアクセス権限の管理](../../../iam/quickstart.html)
-* [ユーザーおよびアクセス権限の管理](../../../iam/iamusermanage.html)
-* [IAM とは](../../../iam/index.html)
+* [ID およびアクセス権限の管理](/docs/iam/quickstart.html)
+* [ユーザーおよびアクセス権限の管理](/docs/iam/iamusermanage.html)
+* [IAM とは](/docs/iam/index.html)

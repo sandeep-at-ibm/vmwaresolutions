@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -54,3 +54,4 @@ Si utiliza una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} cl√
 * [Requisitos para las instancias de Cloud Foundation](../sddc/sd_planning.html)
 * [Requisitos para las instancias de vCenter Server](../vcenter/vc_planning.html)
 * [Cuenta de usuario y valores](useraccount.html)
+* [Visi√≥n general de VRF on IBM Cloud](../../../infrastructure/direct-link/vrf-on-ibm-cloud.html)

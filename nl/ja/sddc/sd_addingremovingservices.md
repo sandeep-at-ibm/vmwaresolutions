@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -20,16 +20,16 @@ Cloud Foundation インスタンスで使用できるサービスと、インス
 
 | サービス名 | 現在のサービスのバージョン | インスタンスのバージョン |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)                                 | BIG-IP VE v13.1.1.2 | V1.9 以降 |
-| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)       | 300 シリーズ | V1.8 以降 |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 6.0.3 | V2.0 以降 |
-| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 以降 |
-| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | V2.3 以降 |
-| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 以降 |
-| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.1 パッチ 1 | V2.2 以降 |
-| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 以降 |
-| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | 9.5u3 | V1.8 以降 |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 6.0 update 3 | V1.2 以降 |
+| [F5 on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/f5_considerations.html)                                 | BIG-IP VE v13.1.1.2 | V1.9 以降 |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_considerations.html)       | 300 シリーズ | V1.8 以降 |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html) | 6.0.3 | V2.0 以降 |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html)              | 5.4.0 | V2.3 以降 |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_considerations.html)              | 4.2.1 | V2.3 以降 |
+| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_considerations.html)              | 4.2 | V2.5 以降 |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_considerations.html)  | 10.1.2 | V2.2 以降 |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html) |  2.0 | N/A |
+| [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html)                          | 9.5u3 | V1.8 以降 |
+| [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html)                                 | 6.0 update 3 | V1.2 以降 |
 
 ## Cloud Foundation インスタンスにサービスを追加する手順
 
@@ -61,8 +61,9 @@ Cloud Foundation インスタンスにサービスを追加するには、前の
 
 サービスの削除が正常に完了すると、お客様に E メールで通知され、サービスがインスタンスの**「サービス」**ページから削除されます。
 
-**注意:** 削除対象のサービスに関する請求は、{{site.data.keyword.cloud_notm}} 請求処理サイクルの終わりまで行われます。
+削除したサービスは、{{site.data.keyword.cloud_notm}} の請求サイクルの最後まで課金されます。
+{:note}
 
 ### 関連リンク
 
-* [FAQ](../vmonic/faq.html)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)

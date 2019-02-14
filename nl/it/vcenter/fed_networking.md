@@ -2,19 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-28"
+lastupdated: "2019-01-25"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Considerazioni sulla rete per le istanze VMware Federal
 
 Rivedi le seguenti informazioni per i dettagli sulle considerazioni e sui requisiti di rete per le tue istanze VMware Federal. Assicurati di soddisfare i requisiti affinché l'istanza funzioni correttamente.
 
 ## Componenti di rete per le istanze VMware Federal
+{: faq}
 
-Per esaminare i componenti di rete inclusi nella tua istanza VMware Federal, vedi [Specifiche tecniche per le istanze VMware Federal on {{site.data.keyword.cloud}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
+Per esaminare i componenti di rete inclusi nella tua istanza VMware Federal, vedi [Specifiche tecniche per le istanze VMware Federal on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ## Considerazioni su firewall
 
@@ -24,7 +27,7 @@ Se utilizzi i firewall, devi configurare le regole per tutte le comunicazioni da
 
 Durante la distribuzione dell'istanza VMware Federal, VMware NSX viene ordinato, installato, concesso in licenza e configurato nella tua istanza. Inoltre, vengono configurati NSX Manager, i controller NSX e NSX Transport Zone e ciascun server ESXi viene configurato con i componenti NSX.
 
-Viene distribuito anche un gateway dei servizi edge NSX per essere utilizzato dalle macchine virtuali (VM) del carico di lavoro. Per ulteriori informazioni, vedi [Configurazione della rete per utilizzare l'ESG NSX gestito dal cliente con le tue VM](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+Viene distribuito anche un gateway dei servizi edge NSX per essere utilizzato dalle macchine virtuali (VM) del carico di lavoro. Per ulteriori informazioni, vedi [Configurazione della rete per utilizzare l'ESG NSX gestito dal cliente con le tue VM](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
 ## Considerazioni sulla modifica delle password per i componenti NSX
 

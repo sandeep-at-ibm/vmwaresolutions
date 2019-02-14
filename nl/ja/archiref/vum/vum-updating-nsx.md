@@ -2,26 +2,26 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2019-01-23"
 
 ---
 
 # NSX の更新
 
-このセクションは、NSX の更新プロセスのフレーバーを提供するために本書に追加されました。 アップグレード先の NSX バージョンの更新プロセスについては、VMware のガイドを参照してください。
+ここでは、NSX の更新プロセスの例を紹介します。 アップグレード先の NSX バージョンの更新プロセスについては、VMware のガイドを参照してください。
 
 NSX と vSphere の両方をアップグレードする必要がある場合、NSX VIB がホストにインストールされている ESXi のバージョンに固有であることから、VMware で最初に NSX アップグレードを完了した後に vSphere アップグレードを完了することをお勧めします。 ただし、手動で行った場合には、本書で説明しているように、以下のワークフローを使用して一度に 1 つのホストで VUM を使用することをお勧めします。
 
-1. **ESXi のアップグレード** - ESXi のアップグレードが完了すると、ホストは保守モードを終了しますが、次のステップが完了するまで、論理スイッチに接続されている VM をホストに移動することはできません。
-2. **NSX VIB のアップグレード** - VIB がアップグレードされ、ホストの保守モードが終了すると、論理スイッチに接続されている VM をホストに移動できます。
+1. **ESXi をアップグレードする** - ESXi のアップグレードが完了すると、ホストは保守モードから出ますが、次の手順が完了するまで、論理スイッチに接続されている VM をホストに移動してはいけません。
+2. **NSX VIB をアップグレードする** - VIB がアップグレードされ、ホストが保守モードから出たら、論理スイッチに接続されている VM をホストに移動できます。
 
-NSX は、_my.vmware.com_ からのダウンロードを使用して NSX Manager を更新することで更新されます。 したがって、更新をダウンロードするにはアカウントが必要です。 VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスで {{site.data.keyword.cloud}} サブスクリプション・ライセンスを使用している場合、**my.vmware.com** アカウントを使用して更新をダウンロードすることはできません。 そのため、[IBM サポートに連絡](../../vmonic/trbl_support.html)する必要があります。
+NSX は、_my.vmware.com_ からのダウンロードを使用して NSX Manager を更新することで更新されます。 したがって、更新をダウンロードするにはアカウントが必要です。 VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスで {{site.data.keyword.cloud}} サブスクリプション・ライセンスを使用している場合、**my.vmware.com** アカウントを使用して更新をダウンロードすることはできません。 そのため、[IBM サポートに連絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)する必要があります。
 
-アップグレードを開始する前に、リリース・ノートを確認してください。これらの NSX リリース・ノートには、既知のアップグレードに関する問題と回避策が記載されています。 リリース・ノートを使用して、vCenter が NSX の新しいシステム要件を満たしていることを確認します。
+更新を開始する前に、NSX ノートでアップグレードに関する問題や回避策を確認してください。 リリース・ノートを使用して、vCenter が NSX の新しいシステム要件を満たしていることを確認します。
 
-VMware パートナーから追加のソフトウェアをインストールした場合は、互換性およびアップグレードの詳細についてパートナーの資料を参照してください。 vCenter Server のプライマリー・インスタンスとセカンダリー・インスタンスをデプロイしており、Cross-vCenter NSX 環境を使用している場合は、適切なアップグレード・プロセスについてリリース・ノートを参照してください。
+VMware ビジネス・パートナーから追加のソフトウェアをインストールした場合は、互換性およびアップグレードの詳細についてビジネス・パートナーの資料を参照してください。 vCenter Server のプライマリー・インスタンスとセカンダリー・インスタンスをデプロイしており、vCenter をまたぐ NSX 環境を使用している場合は、リリース・ノートを参照して適切なアップグレード・プロセスを確認してください。
 
 Cross-vCenter NSX 環境では、最初に NSX Manager のプライマリー・アプライアンスが更新された後、NSX Manager のすべてのセカンダリー・アプライアンスが更新されます。
 **ダウングレードはサポートされていない**ため、アップグレードに進む前に NSX Manager のバックアップを取ります。これにより、すべての NSX Edge 構成、論理ルーター、および Edge Services Gateway が、NSX Manager のバックアップの一部としてバックアップされます。
@@ -43,7 +43,7 @@ NSX Manager が正常にアップグレードされた後に NSX をダウング
   - IC4VS コンソールに記載されている IP アドレスと資格情報を使用して NSX Manager 仮想アプライアンスにログインし、ホーム・ページの「Upgrade」ボタンをクリックします。
   - NSX Manager にログインします。
   - **「Appliance Management」**で、**「Backups & Restore」**をクリックします。
-  - 「Backup」をクリックして、適切なファイル名を入力します。 VMware では、NSX Manager データをリストアする前に NSX Manager アプライアンスを再インストールすることをお勧めします。 既存の NSX Manager アプライアンスでのリストア操作は機能しますが、正式にはサポートされていません。 ベスト・プラクティスは、新しくデプロイされた NSX Manager アプライアンスの IP 情報とバックアップ・ロケーション情報を指定する際に使用できるように、NSX Manager アプライアンスの IP 設定をメモしておくことです。
+  - 「Backup」をクリックして、適切なファイル名を入力します。 VMware は、NSX Manager データを復元する前に NSX Manager 装置を再インストールすることを推奨しています。 既存の NSX Manager アプライアンスでのリストア操作は機能しますが、正式にはサポートされていません。 ベスト・プラクティスは、新しくデプロイされた NSX Manager アプライアンスの IP 情報とバックアップ・ロケーション情報を指定する際に使用できるように、NSX Manager アプライアンスの IP 設定をメモしておくことです。
   - 右上の**「Upload Bundle」**をクリックして、_my.vmware.com_ からダウンロードしたファイルをアップロードします。
   - アップグレード情報を読み、SSH を有効にして VMware カスタマー・エクスペリエンス向上プログラムに参加するかどうかを選択します。
   - **「Upgrade」**をクリックします。
@@ -64,4 +64,4 @@ NSX Manager が正常にアップグレードされた後に NSX をダウング
 ### 関連リンク
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモ)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)

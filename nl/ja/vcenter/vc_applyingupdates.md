@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,7 @@ vCenter Server インスタンスを vCenter Server with Hybridity Bundle イン
 
 ビジネス・パートナーのユーザーには、既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードするためのオプションは提供されません。
 
-V2.5 以降は自動更新が有効になっているため、IBM CloudDriver の更新はリストされなくなりました。 ホストの追加、クラスターの追加、サービスの注文などの操作を行うと、自動的にインスタンスが最新バージョンに更新されます。自動更新について詳しくは、[V2.5 のリリース・ノート](../vmonic/relnotes_v25.html)の『*IBM CloudDriver の回復力*』のセクションを参照してください。
+V2.5 以降は自動更新が有効になっているため、IBM CloudDriver の更新はリストされなくなりました。 ホストの追加、クラスターの追加、サービスの注文などの操作を行うと、自動的にインスタンスが最新バージョンに更新されます。 自動更新について詳しくは、[V2.5 のリリース・ノート](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)の『*IBM CloudDriver の回復力*』のセクションを参照してください。
 {:note}
 
 更新を適用する前に、下矢印をクリックして更新エントリーを展開し、以下の情報を確認します。
@@ -143,10 +143,10 @@ vCenter Server インスタンスを vCenter Server with Hybridity Bundle にア
       </tr>
     </table>
 
-4. 特定のステップで更新プロセスが失敗する場合は、[IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)によって支援を得ることができます。 問題の解決方法についてアドバイスし、失敗した手順からもう一度アップグレードする方法をご案内します。
+4. 特定のステップで更新プロセスが失敗する場合は、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)によって支援を得ることができます。 問題の解決方法についてアドバイスし、失敗した手順からもう一度アップグレードする方法をご案内します。
 
 ### 関連リンク
 
-* [vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)

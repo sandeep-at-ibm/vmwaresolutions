@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,7 +22,7 @@ Führen Sie die folgenden Schritte aus, um direkt auf die Konsole zuzugreifen:
 ## Über den IBM Cloud-Katalog zugreifen
 
 Führen Sie die folgenden Schritte aus, um über den {{site.data.keyword.cloud_notm}}-Katalog auf die Konsole zuzugreifen:
-1. Rufen Sie die Adresse 'https://console.cloud.ibm.com' auf.
+1. Rufen Sie die Adresse "https://console.cloud.ibm.com" auf.
 2. Melden Sie sich mit Ihrem **IBMid**-Konto bei {{site.data.keyword.cloud_notm}} an.
 3. Klicken Sie auf der linken Seite des Banners auf **Katalog**.
 4. Geben Sie im Suchfeld oben auf der Seite **Katalog** den Begriff **VMware Solutions** ein.
@@ -40,5 +40,5 @@ Führen Sie die folgenden Schritte aus, um über die Website "ibm.com" auf die K
 
 ### Zugehörige Links
 
-* [Häufig gestellte Fragen](faq.html)
-* [Fehlerbehebung beim Zugriff auf {{site.data.keyword.cloud_notm}}](../../../account/ts_accessing.html){:new_window}
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Fehlerbehebung beim Zugriff auf {{site.data.keyword.cloud_notm}}](/docs/account/ts_accessing.html){:new_window}

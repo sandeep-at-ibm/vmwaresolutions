@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -71,7 +71,7 @@ Diese Funktion ist nur für VMware Federal-Instanzen verfügbar, die nicht gesch
 
 ### Zugehörige Links
 
-* [Voraussetzungen und Planung für VMware Federal-Instanzen](vc_fed_planning.html)
-* [Cluster für VMware Federal-Instanzen hinzufügen, anzeigen und löschen](fed_addviewdeleteclusters.html)
+* [Voraussetzungen und Planung für VMware Federal-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
+* [Cluster für VMware Federal-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
 * [Versetzen eines Hosts in den Wartungsmodus](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Prozessorunterstützung für EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

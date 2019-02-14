@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -51,9 +51,9 @@ Cloud Foundation インスタンスを削除すると、以下のコンポーネ
 
 ### 関連リンク
 
-* [マルチサイト構成での Cloud Foundation インスタンスの削除](sd_deletinginstance_multi.html)
-* [Cloud Foundation インスタンスの注文](sd_orderinginstance.html)
-* [Cloud Foundation インスタンスの表示](sd_viewinginstances.html)
-* [Cloud Foundation インスタンスの容量の拡張と縮小](sd_addingremovingservers.html)
-* [マルチサイト構成の削除](sd_deletinginstance_multi.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
+* [マルチサイト構成での Cloud Foundation インスタンスの削除](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation インスタンスの表示](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [マルチサイト構成の削除](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -32,9 +32,9 @@ Tabla 2. Lista de materiales para los componentes de software de instancias de C
 
 | Fabricante | Componente                                | Versión      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 Actualización 2c (hasta el nivel de parche ESXi650-201808001) |
-| VMware       | vCenter Server Appliance                 | 6.5 Actualización 2c |
-| VMware       | Platform Services Controller             | 6.5 Actualización 2c |
+| VMware       | vSphere ESXi                             | 6.5 Actualización EP11 (compilación 6.5.0-10719125) |
+| VMware       | vCenter Server Appliance                 | 6.5 U2c (compilación 6.5.0-9451637) |
+| VMware       | Platform Services Controller             | 6.5 U2c (compilación 6.5.0-9451637) |
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX for vSphere                          | 6.4.1        |
 | VMware       | SDDC Manager                             | 2.4          |
@@ -58,7 +58,8 @@ Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e
 | Tamaño muestra cola completa | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | Umbral cola completa | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
-**Notas:**
+### Notes
+
 * El valor **MaxVolumes** es obligatorio para el servicio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} porque el servicio puede utilizar más del número predeterminado de montajes de NFS en el servidor ESXi.
 * Un valor de **No definido** para un valor de configuración indica que el nuevo valor no se aplica automáticamente porque requiere que se rearranquen los servidores ESXi, lo que puede suponer una interrupción.
 

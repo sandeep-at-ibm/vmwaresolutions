@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -47,12 +47,10 @@ lastupdated: "2018-10-30"
 
 仮想化管理レイヤーは、以下のコンポーネントで構成されています。
 
-* vCenter Server 仮想アプライアンス
+* 組み込みプラットフォーム・サービス・コントローラー (PSC) を備えた vCenter Server Appliance (vCSA)
 * NSX Manager
 * 2 つの NSX Edge Services Gateway (ESG)
 * 3 つの NSX Controller
-* Platform Services Controller (PSC) 仮想アプライアンス
-* vCenter Server Appliance (vCSA)
 * IBM CloudDriver 仮想サーバー・インスタンス (VSI)
 
 NetApp ONTAP Select は、VMware クラスター内で実行され、ホスト上のローカル・ストレージを仮想化します。 NetApp ONTAP Select は専用モデルでデプロイされます。つまり、他のワークロードとクラスターを共有するという想定にはなっていません。 そのため、{{site.data.keyword.cloud_notm}} オファリング上の NetApp ONTAP Select のハードウェア構成のサイズは、NetApp ONTAP Select の要件のみに基づいて決まります。
@@ -124,7 +122,7 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
 
 ### 関連リンク
 
-* [NetApp ONTAP Select インスタンスの計画](np_planning.html)
-* [NetApp ONTAP Select インスタンスの注文](np_orderinginstances.html)
-* [vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html)
+* [NetApp ONTAP Select インスタンスの計画](/docs/services/vmwaresolutions/netapp/np_planning.html#requirements-and-planning-for-netapp-ontap-select-instances)
+* [NetApp ONTAP Select インスタンスの注文](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
 * [NetApp ONTAP 9 ドキュメント・センター](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){:new_window}

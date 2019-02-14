@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -51,8 +51,8 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 
 ### Link correlati
 
-* [Eliminazione di istanze vCenter Server with Hybridity Bundle in una configurazione multisito](vc_hybrid_deletinginstance_multi.html)
-* [Ordine di istanze vCenter Server with Hybridity Bundle](vc_hybrid_orderinginstance.html)
-* [Visualizzazione delle istanze vCenter Server with Hybridity Bundle](vc_hybrid_viewinginstances.html)
-* [Espansione e contrazione della capacità per le istanze vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservers.html)
-* [Come contattare il supporto IBM](../vmonic/trbl_support.html)
+* [Eliminazione di istanze vCenter Server with Hybridity Bundle in una configurazione multisito](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html)
+* [Ordine di istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [Visualizzazione delle istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [Espansione e contrazione della capacità per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

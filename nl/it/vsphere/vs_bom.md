@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-19"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,5 +22,5 @@ Tabella 1. Diba per i cluster VMware vSphere
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware ESXi 6.0 Update 2 Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.0/rn/vsphere-esxi-60u2-release-notes.html)
-* [Panoramica di VMware vSphere](vs_vsphereclusteroverview.html)
-* [Pianificazione per i cluster vSphere](vs_planning.html)
+* [Panoramica di VMware vSphere](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)
+* [Pianificazione per i cluster vSphere](/docs/services/vmwaresolutions/vsphere/vs_planning.html)

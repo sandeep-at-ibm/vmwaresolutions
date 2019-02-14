@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -71,7 +71,7 @@ Questa funzione è disponibile solo per le istanze VMware Federal che non sono s
 
 ### Link correlati
 
-* [Requisiti e pianificazione per le istanze VMware Federal](vc_fed_planning.html)
-* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze VMware Federal](fed_addviewdeleteclusters.html)
+* [Requisiti e pianificazione per le istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
+* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
 * [Metti un host in modalità di manutenzione](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Supporto del processore EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

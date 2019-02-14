@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -22,8 +22,8 @@ Aktuell wird VMware Federal on {{site.data.keyword.cloud}} nur von vCenter Serve
 ## Voraussetzungen für die Bestellung von VMware Federal-Instanzen
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-* Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](../vmonic/useraccount.html).
-* Sie haben die Informationen in [Voraussetzungen und Planung für VMware Federal-Instanzen](vc_fed_planning.html) gelesen.
+* Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+* Sie haben die Informationen in [Voraussetzungen und Planung für VMware Federal-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html) gelesen.
 * Sie haben das Instanz- und Domänennamensformat geprüft. Der Domänenname und die Unterdomänenbezeichnung werden verwendet, um den Benutzernamen und die Servernamen der Instanz zu generieren.
 
 Tabelle 1. Wertformat für Instanz- und Domänennamen
@@ -48,7 +48,7 @@ Sie müssen folgende Systemeinstellungen angeben, wenn Sie eine VMware Federal-I
 
 Der Instanzname muss die folgenden Anforderungen erfüllen:
 * Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-* Der Instanzname muss mit einem alphanumerischen Zeichen beginnen und enden.
+* Der Instanzname muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden. 
 * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
 * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
 
@@ -65,7 +65,7 @@ Von IBM bereitgestellte Lizenzen für folgende VMware-Komponenten:
 * NSX Service Providers 6.4 (Base, Advanced oder Enterprise Edition)
 * (Für vSAN-Cluster) vSAN 6.6 (Advanced oder Enterprise Edition)
 
-**Achtung:**
+### Achtung
 
 * Die mindestens erforderlichen Lizenzeditionen sind in der Benutzerschnittstelle angegeben. Falls unterschiedliche Komponenteneditionen unterstützt werden, können Sie die gewünschte Edition auswählen. Es liegt in Ihrer Verantwortung, zu gewährleisten, dass der bereitgestellte Lizenzschlüssel für jede ausgewählte VMware-Komponente korrekt ist.
 * Für vSphere wird zum Zeitpunkt der Bestellung eine Lizenzgebühr berechnet, anschließend wird die Lizenzgebühr dann aber Ihrem Konto gutgeschrieben.
@@ -106,7 +106,7 @@ Tabelle 3. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 
 Sie können die Anzahl der ESXi-Server im Bereich von 2 bis 20 konfigurieren.
 
-Alle ESXi-Server nutzen dieselbe Konfiguration gemeinsam. Nach der Bereitstellung können Sie vier weitere Cluster hinzufügen. Für die vSAN-Speichereinstellungen werden für den ersten Cluster und die Cluster nach der Bereitstellung 4 ESXi-Server benötigt. Weitere Informationen zum Minimum von ESXi-Servern finden Sie im Abschnitt [Ist eine Serverinstanz mit zwei Knoten hoch verfügbar?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+Alle ESXi-Server nutzen dieselbe Konfiguration gemeinsam. Nach der Bereitstellung können Sie vier weitere Cluster hinzufügen. Für die vSAN-Speichereinstellungen werden für den ersten Cluster und die Cluster nach der Bereitstellung 4 ESXi-Server benötigt. Weitere Informationen zum Minimum von ESXi-Servern finden Sie im Abschnitt [Ist eine Serverinstanz mit zwei Knoten hoch verfügbar?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Speichereinstellungen
 
@@ -117,7 +117,11 @@ Die Speichereinstellungen sind von der Auswahl der Bare Metal Server-Konfigurati
 Geben Sie die folgenden vSAN-Optionen an:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
-* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
+
+  Die Option **High-Performance Intel Optane** ist nur für die Skylake-CPU-Modelle Dual Intel Xeon Gold 5120 und Dual Intel Xeon Gold 6140 verfügbar.
+  {:note}
+
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
 * **vSAN-Lizenz**: Wählen Sie die vSAN 6.6-Lizenzedition (Advanced oder Enterprise) aus.
 
@@ -155,7 +159,7 @@ Das Hostnamenspräfix muss die folgenden Anforderungen erfüllen:
 
 Die Unterdomänenbezeichnung muss die folgenden Anforderungen erfüllen:
 *  Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-*  Die Unterdomänenbezeichnung muss mit einem alphanumerischen Zeichen beginnen und enden.
+*  Die Unterdomänenbezeichnung muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden. 
 *  Die maximale Länge der Unterdomänenbezeichnung beträgt 10 Zeichen.
 *  Die Unterdomänenbezeichnung muss innerhalb Ihres Kontos eindeutig sein.
 
@@ -185,7 +189,7 @@ Derzeit kann jede Lizenz nur einem einzigen physischen Server zugeordnet werden 
 
 Sie haben 30 Tage Zeit, um die virtuellen Maschinen zu aktivieren.
 
-Weitere Informationen zur Bestellung der Windows-Lizenzierung finden Sie auf der Seite [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+Weitere Informationen zur Bestellung der Windows-Lizenzierung finden Sie auf der Seite mit der [Dokumentation zu Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Bestellübersicht
 
@@ -218,7 +222,7 @@ Auf Basis der für die Instanz ausgewählten Konfiguration werden die geschätzt
 
 Die Bereitstellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen.
 
-Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für VMware Federal on {{site.data.keyword.cloud_notm}}-Instanzen](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert.
+Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für VMware Federal on {{site.data.keyword.cloud_notm}}-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 
@@ -239,10 +243,10 @@ Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_sh
 
 ### Zugehörige Links
 
-* [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](../vmonic/signing_softlayer_account.html)
-* [VMware Federal-Instanzen anzeigen](vc_fed_viewinginstance.html)
-* [Kapazität für VMware Federal-Instanzen erweitern und verringern](vc_fed_addingremovingservers.html)
-* [Cluster für VMware Federal-Instanzen hinzufügen, anzeigen und löschen](fed_addviewdeleteclusters.html)
-* [VMware Federal-Instanzen schützen](vc_fed_securinginstance.html)
-* [VMware Federal-Instanzen löschen](vc_fed_deletinginstance.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
+* [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [VMware Federal-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Kapazität für VMware Federal-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [Cluster für VMware Federal-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [VMware Federal-Instanzen schützen](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [VMware Federal-Instanzen löschen](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

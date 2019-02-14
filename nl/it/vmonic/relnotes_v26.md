@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-10-01"
 
@@ -20,7 +20,7 @@ Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramen
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Per ulteriori informazioni, vedi [Risoluzione delle vulnerabilità Spectre e Meltdown](../vmonic/trbl_fix_spectre.html).
+Per ulteriori informazioni, vedi [Risoluzione delle vulnerabilità Spectre e Meltdown](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
 
 ## Opzione Alte prestazioni con Intel Optane
 
@@ -40,9 +40,9 @@ Alcuni servizi aggiuntivi richiedono schede NIC pubbliche e non sono disponibili
 
 Per ulteriori informazioni, vedi la sezione _Impostazioni dell'interfaccia di rete_ nei seguenti argomenti:
 
-* [Ordine di istanze vCenter Server](../vcenter/vc_orderinginstance.html#network-interface-settings)
-* [Ordine di istanze vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_orderinginstance.html#network-interface-settings)
-* [Ordine di nuovi cluster vSphere](../vsphere/vs_orderinginstances.html#network-interface-settings)
+* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#network-interface-settings)
+* [Ordine di istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html#network-interface-settings)
+* [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#network-interface-settings)
 
 ## Eliminazione di server ESXi
 
@@ -50,9 +50,9 @@ Puoi ora eliminare qualsiasi server ESXi dalla tua istanza vCenter Server, vCent
 
 Per ulteriori informazioni sui requisiti del server ESXi, vedi i seguenti argomenti:
 
-* [Espansione e contrazione della capacità per le istanze vCenter Server](../vcenter/vc_addingremovingservers.html)
-* [Espansione e contrazione della capacità per le istanze vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservers.html)
-* [Espansione e contrazione della capacità per le istanze Cloud Foundation](../sddc/sd_addingremovingservers.html)
+* [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Espansione e contrazione della capacità per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
 
 ## Aggiornamenti per le istanze VMware vCenter Server
 
@@ -69,7 +69,7 @@ Questa release applica i seguenti aggiornamenti e miglioramenti:
 
 Puoi ora rimuovere la licenza di Hybridity Bundle dalla tua istanza vCenter Server. Per farlo, devi sostituire le chiavi di licenza a noleggio di VMware NSX e VMware vSAN con le chiavi BYOL (Bring Your Own License) e aprire un ticket di supporto per annullare i costi per le licenze a noleggio.
 
-Per ulteriori informazioni, vedi [Rimozione di Hybridity Bundle da un'istanza vCenter Server](../vcenter/vc_hybrid_deletingbundle.html).
+Per ulteriori informazioni, vedi [Rimozione di Hybridity Bundle da un'istanza vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletingbundle.html).
 
 ### Disponibilità di vCenter Server with Hybridity Bundle
 
@@ -77,8 +77,8 @@ I Business Partner possono ora ordinare un'istanza vCenter Server with Hybridity
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
 
-* [Panoramica di vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
-* [Ordine di istanze vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_orderinginstance.html)
+* [Panoramica di vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [Ordine di istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
 
 ## Aggiornamenti per le istanze VMware Cloud Foundation
 
@@ -98,8 +98,8 @@ Il servizio HyTrust KeyControl on {{site.data.keyword.cloud_notm}} è ora dispon
 Puoi ordinare le istanze con il servizio incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Componenti e considerazioni per HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)
-* [Gestione di HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/managinghtkc.html)
+* [Componenti e considerazioni per HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_considerations.html)
+* [Gestione di HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtkc.html)
 
 ### HyTrust CloudControl on IBM Cloud
 
@@ -115,7 +115,7 @@ A partire dalla V2.6, le nuove istanze e i nuovi host vengono forniti utilizzand
 
 Si consiglia di aggiornare alla V9.5u3a o successiva anche le istanze Cloud Foundation esistenti in cui è installato Veeam on {{site.data.keyword.cloud_notm}}.
 
-Per ulteriori informazioni su Veeam on {{site.data.keyword.cloud_notm}}, vedi [Panoramica di Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html).
+Per ulteriori informazioni su Veeam on {{site.data.keyword.cloud_notm}}, vedi [Panoramica di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html).
 
 ### VMware HCX on IBM Cloud
 
@@ -136,7 +136,7 @@ Per ulteriori informazioni su come risolvere questo messaggio di avvertenza, ved
 ### Documentazione dell'architettura di riferimento
 Il documento dell'architettura {{site.data.keyword.vmwaresolutions_short}} viene aggiornato per includere considerazioni importanti per comprendere le tue responsabilità in merito alla gestione e al funzionamento della tua istanza VMware.
 
-Per ulteriori informazioni, vedi [Considerazioni sulla post-distribuzione per la tua istanza VMware](../archiref/solution/solution_considerations.html).
+Per ulteriori informazioni, vedi [Considerazioni sulla post-distribuzione per la tua istanza VMware](/docs/services/vmwaresolutions/archiref/solution/solution_considerations.html).
 
 ## Aggiornamenti e miglioramenti dell'interfaccia utente
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -12,14 +12,14 @@ lastupdated: "2018-11-08"
 {:note: .note}
 {:important: .important}
 
-# Übersicht über VMware HCX on IBM Cloud
+# VMware HCX on IBM Cloud - Spezifikationen und Aspekte
 
 Der Service "HCX on {{site.data.keyword.cloud}}" kann die Netze von lokalen Rechenzentren nahtlos in die {{site.data.keyword.cloud_notm}} erweitern. Dies ermöglicht die Migration von virtuellen Maschinen in die und aus der {{site.data.keyword.cloud_notm}}, ohne dass hierzu eine Konvertierung oder Änderung erforderlich ist.
 
 Dieser Service ist nur für Instanzen von VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle verfügbar, die in V2.3 (und höher) bereitgestellt werden.
 {:note}
 
-Sie können für Ihre vorhandene vCenter Server-Instanz ein Upgrade auf eine vCenter Server with Hybridity Bundle-Instanz durchführen. Weitere Informationen zum Durchführen eines Upgrades für Ihre Instanz und zum Bereitstellen des Service "HCX on {{site.data.keyword.cloud_notm}}" finden Sie unter [Vorgehensweise zum Durchführen eines Upgrades auf eine vCenter Server with Hybridity Bundle-Instanz](../vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance).
+Sie können für Ihre vorhandene vCenter Server-Instanz ein Upgrade auf eine vCenter Server with Hybridity Bundle-Instanz durchführen. Weitere Informationen zum Durchführen eines Upgrades für Ihre Instanz und zum Bereitstellen des Service "HCX on {{site.data.keyword.cloud_notm}}" finden Sie unter [Vorgehensweise zum Durchführen eines Upgrades auf eine vCenter Server with Hybridity Bundle-Instanz](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance).
 
 Eine vCenter Server-Instanz mit HCX on {{site.data.keyword.cloud_notm}} ist auf drei simultane Verbindungen von lokalen Standorten begrenzt.
 {:note}
@@ -51,11 +51,6 @@ Weitere HCX-Appliances werden bei der Konfiguration wie für die L2-Konnektivit�
 * 2 private portierbare Teilnetze mit 64 IP-Adressen
 * 8 IP-Adressen aus dem privaten portierbaren vMotion-Teilnetz
 
-### Lizenzen und Gebühren
-
-* Basislizenzgebühr: Erforderliche Gebühr für den Service
-* Gebühr für verwaltete VM: Pro VM berechnet, die monatlich migriert wird
-
 ## Hinweise zur Installation von HCX on IBM Cloud
 
 Lesen Sie die folgenden Hinweise, bevor Sie versuchen, HCX on {{site.data.keyword.cloud_notm}} zu installieren.
@@ -83,9 +78,9 @@ Lesen Sie die folgenden Hinweise, bevor Sie den Service "HCX on {{site.data.keyw
 
 ### Zugehörige Links
 
-* [HCX on {{site.data.keyword.cloud_notm}} bestellen](hcx_ordering.html)
-* [HCX on {{site.data.keyword.cloud_notm}} verwalten](managinghcx.html)
-* [Glossar der HCX-Begriffe](hcx_glossary.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
-* [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx)
+* [HCX on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/hcx_ordering.html)
+* [HCX on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [Glossar der HCX-Begriffe](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [VMware Hybrid Cloud Extension - Übersicht](https://cloud.vmware.com/vmware-hcx)
 * [Dokumentation zu VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -92,9 +92,9 @@ Bevor Sie den Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_
 
 ### Zugehörige Links
 
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} bestellen](fortinetvm_ordering.html)
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} verwalten](managingfortinetvm.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Fortinet-Website](https://www.fortinet.com/){:new_window}
-* [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}
+* [Dokumentbibliothek zu Fortinet](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-05"
 
 # Ordine di istanze vCenter Server
 
-Per distribuire una piattaforma virtualizzata VMware flessibile e personalizzabile che soddisfi al meglio le tue esigenze del carico di lavoro, ordina un'istanza VMware vCenter Server. Durante l'ordine iniziale, puoi anche aggiungere servizi, come [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html) per il ripristino di emergenza.
+Per distribuire una piattaforma virtualizzata VMware flessibile e personalizzabile che soddisfi al meglio le tue esigenze del carico di lavoro, ordina un'istanza VMware vCenter Server. Durante l'ordine iniziale, puoi anche aggiungere servizi, come [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html) per il ripristino di emergenza.
 
 ## Requisiti
 
 Assicurati di aver completato le seguenti attività:
-* Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](../vmonic/useraccount.html).
-* Hai esaminato le informazioni in [Requisiti e pianificazione per le istanze vCenter Server](vc_planning.html).
+* Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+* Hai esaminato le informazioni in [Requisiti e pianificazione per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html).
 * Hai esaminato il formato del nome di istanza e di dominio. Il nome del dominio e l'etichetta del dominio secondario vengono utilizzati per generare il nome utente e i nomi server dell'istanza.
 
 Tabella 1. Formato del valore per i nomi di istanza e di dominio
@@ -29,10 +29,9 @@ Tabella 1. Formato del valore per i nomi di istanza e di dominio
   |:------------|:------------ |
   | Nome dominio | `<root_domain>` |  
   | Nome utente di accesso vCenter Server | `<user_id>@<root_domain>` (utente di Microsoft Active Directory) o `administrator@vsphere.local` |
-  | Dome di dominio completo vCenter Server | `vcenter.<subdomain_label>.<root_domain>`. La lunghezza massima è di 50 caratteri. |
+  | Dome di dominio completo vCenter Server (con PSC integrato) | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La lunghezza massima è di 50 caratteri. |
   | Nome del sito SSO (Single Sign-On) | `<subdomain_label>` |
-  | Nome completo server ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, dove `<n>` è la sequenza del server ESXi. La lunghezza massima è di 50 caratteri. |  
-  | Nome di dominio completo PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La lunghezza massima è di 50 caratteri. |
+  | Nome completo server ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, dove `<n>` è la sequenza del server ESXi. La lunghezza massima è di 50 caratteri. |
 
 Non modificare alcun valore impostato durante l'ordine o la distribuzione dell'istanza. La modifica può rendere inutilizzabile la tua istanza. Ad esempio, se la rete pubblica si interrompe, se i server e le VSI (Virtual Server Instance) vanno dietro una fornitura media di Vyatta o se la VSI di IBM CloudBuilder si arresta o viene eliminata.
 {:important}
@@ -45,7 +44,7 @@ Quando ordini un'istanza vCenter Server, devi specificare le seguenti impostazio
 
 Il nome dell'istanza deve rispettare i seguenti requisiti:
 * Sono consentiti solo caratteri alfanumerici e trattini (-).
-* Il nome dell'istanza deve iniziare e terminare con un carattere alfanumerico.
+* Il nome istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
 * La lunghezza massima del nome dell'istanza è di 10 caratteri.
 * Il nome dell'istanza deve essere univoco all'interno del tuo account.
 
@@ -64,8 +63,8 @@ Per gli utenti Business Partner, la licenza vCenter Server (Standard edition), l
 
 Per gli utenti non Business Partner, puoi utilizzare le licenze VMware fornite da IBM per questi componenti selezionando **Includi con l'acquisto** o puoi utilizzare l'opzione Bring Your Own License (BYOL) selezionando **Fornita dall'utente** e immettendo le tue chiavi di licenza.
 
+### Attenzione
 
-**Attenzione:**
 * È richiesta una licenza con un minimo di otto CPU, che è per quattro server con due CPU per ogni server. La scelta della licenza per ogni componente VMware si applica all'istanza di base e a qualsiasi server ESXi che aggiungi all'istanza in un secondo momento. Assicurati che la tua licenza supporti la futura espansione della capacità nella tua infrastruttura.
 * Le edizioni minime della licenza sono indicate sull'interfaccia utente. Se sono supportate edizioni diverse per i componenti, puoi selezionare l'edizione che vuoi. Sei responsabile di garantire che la chiave di licenza fornita sia corretta per ogni componente VMware selezionato.
 * Per vSphere, viene addebitato un costo di licenza al momento dell'ordine, ma tale costo viene poi accreditato sul tuo account.
@@ -98,9 +97,13 @@ Tabella 2. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
 Se selezioni **Certificato SAP**, non puoi modificare le impostazioni di CPU o RAM.
 
 In base ai tuoi requisiti, seleziona una configurazione di Bare Metal Server:
-  * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 192 GB RAM
-  * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 384 GB RAM
-  * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 768 GB RAM
+  * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz / 192 GB di RAM
+  * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz / 384 GB di RAM
+  * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz / 768 GB di RAM
+  * Processore Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz / 512 GB di RAM
+  * Processore Quad Intel Xeon E7-8890 v4 / 96 core totali, 2,2 GHz / 1024 GB di RAM
+  * Processore Quad Intel Xeon E7-8890 v4 / 96 core totali, 2,2 GHz / 2048 GB di RAM
+  * Processore Quad Intel Xeon E7-8890 v4 / 96 core totali, 2,2 GHz / 4096 GB di RAM
 
 ### Broadwell
 
@@ -113,23 +116,32 @@ Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 core totali, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 core totali, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Numero di server Bare Metal
 
-Per il cluster iniziale nell'istanza, puoi configurare il numero di server ESXi nell'intervallo 2 - 20. Tutti i server ESXi condividono la configurazione impostata. 
+Per il cluster iniziale nell'istanza, puoi configurare il numero di server ESXi nell'intervallo 2 - 20. Tutti i server ESXi condividono la configurazione impostata.
 
-Dopo la distribuzione iniziale, puoi aggiungere altri quattro cluster. Se hai selezionato la configurazione **Skylake** o **Broadwell** per VMware vSAN, sono richiesti 4 server ESXi per i cluster iniziali e di post-distribuzione. Per ulteriori informazioni sul numero minimo di server ESXi, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
+Dopo la distribuzione iniziale, puoi aggiungere altri quattro cluster. Se hai selezionato la configurazione **Skylake** o **Broadwell** per VMware vSAN, sono richiesti 4 server ESXi per i cluster iniziali e di post-distribuzione. Per ulteriori informazioni sul numero minimo di server ESXi, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Impostazioni di archiviazione
 
 Le impostazioni di archiviazione si basano sulla tua selezione della configurazione Bare Metal Server e sul tipo di archiviazione.
+
+Per le istanze V2.8 e successive, puoi aggiungere le condivisioni di archiviazione NFS a un cluster NFS o vSAN esistente. Per ulteriori informazioni, vedi la sezione *Aggiunta dell'archiviazione NFS alle istanze vCenter Server* in [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances).
+{:note}
 
 ### Archiviazione vSAN
 
 vSAN è disponibile solo per la configurazione Bare Metal **Skylake** e **Broadwell**. Specifica le seguenti opzioni vSAN:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
-* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
+* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
+
+  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPI Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
 * **Licenza vSAN**: utilizza la licenza VMware fornita da IBM per il componente vSAN selezionando **Includi con l'acquisto** o utilizza l'opzione BYOL (Bring Your Own License) selezionando **Fornita dall'utente** e immettendo la tua chiave di licenza.
 
@@ -142,17 +154,24 @@ Il numero di condivisioni file deve essere compreso tra 1 e 32.
 
 * **Configura le condivisioni singolarmente**: seleziona questa opzione per specificare diverse impostazioni di configurazione per ogni condivisione file.
 * **Numero di condivisioni**: quando utilizzi la stessa impostazione di configurazione per ogni condivisione file, specifica il numero di condivisioni file per l'archiviazione condivisa NFS che vuoi aggiungere.
-* **Dimensione**: seleziona la capacità che soddisfa le tue esigenze di archiviazione condivisa.
 * **Prestazioni**: seleziona l'IOPS (input/output operations per second) per GB in base ai tuoi requisiti del carico di lavoro.
-* **AGGIUNGI NFS**: seleziona questa opzione per aggiungere singole condivisioni file che utilizzano impostazioni di configurazione diverse.
+* **Dimensione (GB)**: seleziona la capacità che soddisfa le tue esigenze di archiviazione condivisa.
+* **Aggiungi storage condiviso**: seleziona questa opzione per aggiungere singole condivisioni file che utilizzano impostazioni di configurazione diverse.
 
 Tabella 4. Opzioni del livello di prestazioni NFS
 
 | Opzione        | Dettagli       |
   |:------------- |:------------- |
+  | 0,25 IOPS/GB | Questa opzione è progettata per i carichi di lavoro che non vengono utilizzati spesso. Applicazioni di esempio includono: dati archiviati, hosting di database di grandi dimensioni con dati legacy o immagini di dischi virtuali del sistema di memoria virtuale come backup. |
   | 2 IOPS/GB | Questa opzione è progettata per i carichi di lavoro più generici. Applicazioni di esempio includono: hosting di piccoli database, backup di applicazioni web o immagini disco di macchine virtuali per un hypervisor. |
   | 4 IOPS/GB | Questa opzione è progettata per i carichi di lavoro ad alta intensità che hanno un'alta percentuale di dati attivi alla volta. Applicazioni di esempio includono: database transazionali. |
   | 10 IOPS/GB | Questa opzione è progettata per i tipi di carichi di lavoro più impegnativi, come l'analisi. Applicazioni di esempio includono: database ad alte transazioni e altri database sensibili alle prestazioni. Questo livello di prestazioni è limitato a una capacità massima di 4 TB per condivisione file. |
+
+### Dischi locali
+
+L'opzione dischi locali è disponibile solo per la configurazione Bare Metal del processore Quad Intel Xeon E7-8890 v4 con **Certificato SAP**. Specifica le seguenti opzioni:
+* **Numero di dischi**: seleziona il numero di dischi che vuoi aggiungere.
+* **Tipo di disco**: seleziona un'opzione per il tipo di disco di cui hai bisogno.
 
 ## Impostazioni dell'interfaccia di rete
 
@@ -169,7 +188,7 @@ Il prefisso del nome host deve rispettare i seguenti requisiti:
 
 L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
 *  Sono consentiti solo caratteri alfanumerici e trattini (-).
-*  L'etichetta del dominio secondario deve iniziare e terminare con un carattere alfanumerico.
+*  L'etichetta del dominio secondario deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
 *  La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
 *  L'etichetta del dominio secondario deve essere univoca all'interno del tuo account.
 
@@ -204,6 +223,7 @@ Per l'ordine della tua istanza sono richieste una VLAN pubblica e due VLAN priva
 Seleziona questa opzione per ordinare una nuova VLAN pubblica e due nuove VLAN private.
 
 #### Seleziona VLAN esistenti
+
 A seconda del {{site.data.keyword.CloudDataCent_notm}} che hai selezionato, potrebbero essere disponibili VLAN pubbliche e private esistenti.
 
 Se scegli di riutilizzare VLAN pubbliche e private esistenti, specifica le VLAN e le sottoreti:
@@ -213,9 +233,10 @@ Se scegli di riutilizzare VLAN pubbliche e private esistenti, specifica le VLAN 
 * La **Sottorete primaria** è assegnata agli host fisici per l'accesso alla rete pubblica.
 * La **Sottorete privata primaria** è assegnata agli host fisici per il traffico di gestione.
 
+##### Importante
+
 * Assicurati che la configurazione del firewall sulle VLAN selezionate non blocchi il traffico dei dati di gestione.
 * Assicurati che tutte le VLAN che selezioni si trovino nello stesso pod. I server ESXi non possono essere forniti su VLAN di pod misti.
-{:important}
 
 ### Configurazione DNS
 
@@ -235,7 +256,7 @@ Per ulteriori informazioni sulle licenze di Windows, vedi la [Documentazione di 
 
 ## Impostazioni dei servizi
 
-Quando ordini un'istanza vCenter Server, puoi anche ordinare servizi aggiuntivi. Per ulteriori informazioni sui servizi, vedi [Servizi disponibili per le istanze vCenter Server](vc_addingremovingservices.html#available-services-for-vcenter-server-instances).
+Quando ordini un'istanza vCenter Server, puoi anche ordinare servizi aggiuntivi. Per ulteriori informazioni sui servizi, vedi [Servizi disponibili per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances).
 
 ## Riepilogo ordine
 
@@ -250,8 +271,9 @@ In base alla configurazione che hai selezionato per l'istanza e i servizi aggiun
    * Fai clic su **Istanza primaria** per distribuire una singola istanza nell'ambiente o per distribuire la prima istanza in una topologia multisito.
    * Fai clic su **Istanza secondaria** per connettere l'istanza a un'istanza esistente (primaria) nell'ambiente per l'alta disponibilità e completa quindi la seguente procedura:
      1. Seleziona l'istanza primaria a cui desideri collegare l'istanza secondaria.
-     2. Per le istanze primarie della V2.5 o successive, immetti il valore per **Password dell'amministratore per PSC istanza primaria**.
-     3. Per le istanze primarie della V2.4 o precedenti, verifica che il valore precompilato per il campo **Password dell'amministratore per PSC istanza primaria** sia corretto.
+     2. Per le istanze primarie della V2.8 o successive, immetti la password dell'amministratore vCenter Server per l'istanza primaria.
+     3. Per le istanze primarie della V2.5, 2.6 o 2.7, immetti la password dell'amministratore PSC per l'istanza primaria.
+     4. Per le istanze primarie della V2.4 o precedenti, verifica che il valore precompilato per la password dell'amministratore PSC per l'istanza primaria sia corretto.
 5. Completa le impostazioni di licenza per i componenti dell'istanza.
    *  Per utilizzare le licenze fornite da IBM, seleziona **Includi con l'acquisto** e, se necessario, seleziona l'edizione della licenza.
    *  Per utilizzare la tua propria licenza, seleziona **Fornita dall'utente** e immetti la chiave di licenza.
@@ -263,8 +285,9 @@ In base alla configurazione che hai selezionato per l'istanza e i servizi aggiun
     3. Specifica il numero di {{site.data.keyword.baremetal_short}}. Se intendi utilizzare vSAN come soluzione di archiviazione, sono richiesti almeno 4 {{site.data.keyword.baremetal_short}}.  
 7. Completa la configurazione di archiviazione.
   * Se selezioni **Storage vSAN**, specifica i tipi di disco per i dischi di capacità e cache, il numero di dischi e l'edizione della licenza vSAN. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
-  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
-  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**. Quindi, fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni condivisione file. Devi selezionare almeno una condivisione file.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, le **Prestazioni** e la **Dimensione (GB)**.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**. Quindi, fai clic sull'icona **+** accanto all'etichetta **Aggiungi storage condiviso** e seleziona le **Prestazioni** e la **Dimensione (GB)** per ogni condivisione file. Devi selezionare almeno una condivisione file.
+  * Se selezioni **Dischi locali**, specifica il numero di dischi e il tipo di disco.
 8. Completa le impostazioni dell'interfaccia di rete.
    1. Immetti il prefisso del nome host, l'etichetta del dominio secondario e il nome del dominio root. Per un'istanza secondaria, il nome di dominio viene completato automaticamente.
    2. Seleziona l'impostazione di rete **Rete pubblica e privata** o **Solo rete privata**.
@@ -286,7 +309,7 @@ Per ulteriori informazioni su come fornire le impostazioni per un servizio, vedi
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 
@@ -310,10 +333,10 @@ Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmw
 
 ### Link correlati
 
-* [Registrazione di un account {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
-* [Visualizzazione delle istanze vCenter Server](vc_viewinginstances.html)
-* [Configurazione multisito per le istanze vCenter Server](vc_multisite.html)
-* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](vc_addingviewingclusters.html)
-* [Espansione e contrazione della capacità per le istanze vCenter Server](vc_addingremovingservers.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](vc_addingremovingservices.html)
-* [Eliminazione di istanze vCenter Server](vc_deletinginstance.html)
+* [Registrazione di un account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [Visualizzazione delle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
+* [Configurazione multisito per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_multisite.html)
+* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Eliminazione di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)

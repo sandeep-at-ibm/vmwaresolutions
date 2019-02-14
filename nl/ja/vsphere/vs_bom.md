@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-19"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,5 +22,5 @@ VMware vSphere ソフトウェア・コンポーネントの部品構成表 (BOM
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware ESXi 6.0 Update 2 Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.0/rn/vsphere-esxi-60u2-release-notes.html)
-* [VMware vSphere の概要](vs_vsphereclusteroverview.html)
-* [vSphere クラスターの計画](vs_planning.html)
+* [VMware vSphere の概要](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)
+* [vSphere クラスターの計画](/docs/services/vmwaresolutions/vsphere/vs_planning.html)

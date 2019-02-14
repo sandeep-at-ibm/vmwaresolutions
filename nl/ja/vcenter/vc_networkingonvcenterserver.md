@@ -2,19 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-04"
+lastupdated: "2019-01-23"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # vCenter Server インスタンスのネットワーキングに関する考慮事項
 
 vCenter Server on {{site.data.keyword.cloud}} インスタンスのネットワーキングの考慮事項と要件についての詳細情報を以下に示します。 インスタンスが正常に機能するように、要件を満たしていることを確認してください。
 
 ## vCenter Server インスタンスのネットワーキング・コンポーネント
+{: faq}
 
-vCenter Server インスタンス内に組み込まれているネットワーキング・コンポーネントを確認するには、[vCenter Server インスタンスの技術仕様](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)を参照してください。
+vCenter Server インスタンス内に組み込まれているネットワーキング・コンポーネントを確認するには、[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)を参照してください。
 
 ## ファイアウォールに関する考慮事項
 
@@ -24,7 +27,7 @@ vCenter Server インスタンス内に組み込まれているネットワー�
 
 vCenter Server インスタンスのデプロイメント中に、インスタンスで VMware NSX が注文され、インストールされ、ライセンスを適用され、構成されます。 また、NSX Manager、NSX Controllers、および NSX Transport Zone がセットアップされ、各 ESXi サーバーに NSX コンポーネントが構成されます。
 
-ワークロード仮想マシン (VM) で使用するための NSX Edge Services Gateway もデプロイされます。 詳しくは、[ユーザー管理の NSX ESG を VM で使用するためのネットワークの構成](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)を参照してください。
+ワークロード仮想マシン (VM) で使用するための NSX Edge Services Gateway もデプロイされます。 詳しくは、[ユーザー管理の NSX ESG を VM で使用するためのネットワークの構成](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)を参照してください。
 
 ## NSX コンポーネントのパスワードを変更する際の考慮事項
 

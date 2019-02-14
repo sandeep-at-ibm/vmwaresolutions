@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-12"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,23 +35,23 @@ Kunden, die andere Internetverbindungen benötigen, sollten sich über den VMwar
 
 VUM kann zwar auch so konfiguriert werden, dass Updates aus einem gemeinsam genutzten Repository importiert oder Patches und Erweiterungen manuell aus einer ZIP-Datei importiert werden können. Diese Themen werden aber in diesem Dokument nicht behandelt.
 
-Beachten Sie daher, dass es in vSphere 6.5 nicht mehr möglich ist, VUM während der Installation des VUM-Servers auf einer separaten Windows-Maschine bei einer VCSA zu registrieren; Sie können VUM nicht in einer VM in der vCenter Server-Umgebung bereitstellen.
+In vSphere 6.5 ist nicht mehr möglich, VUM während der Installation des VUM-Servers auf einer separaten Windows-Maschine bei einer VCSA zu registrieren; Sie können VUM nicht in einer VM in der vCenter Server-Umgebung bereitstellen.
 
 Dieses Dokument setzt sich aus folgenden Abschnitten zusammen:
-* [Übersicht über VMware Update Manager](vum-overview.html) - In diesem Abschnitt wird der VUM-Prozess beschrieben und es werden Schlüsselbegriffe eingeführt, die erforderlich sind, um die Operationen und die Benutzeroberfläche des Tools zu verstehen.
-* **Installation, Konfiguration und Verwendung** - In diesem Abschnitt werden die Schritte beschrieben, die erforderlich sind, um VUM in einer vCenter Server-Instanz in Betrieb zu nehmen:
-  - [Erstkonfiguration](vum-init-config.html) - eine einmalige Aufgabe, die Folgendes umfasst:
+* [Übersicht über VMware Update Manager](/docs/services/vmwaresolutions/archiref/vum/vum-overview.html) - Beschreibt den VUM-Prozess und führt Schlüsselbegriffe ein, die erforderlich sind, um die Operationen und die Benutzeroberfläche des Tools zu verstehen.
+* **Installation, Konfiguration und Verwendung** - Beschreibt die Schritte, die erforderlich sind, um VUM in einer vCenter Server-Instanz in Betrieb zu nehmen:
+  - [Erstkonfiguration](/docs/services/vmwaresolutions/archiref/vum/vum-init-config.html) - eine einmalige Aufgabe, die Folgendes umfasst:
       - Konfiguration der NSX-Vernetzung, um den Zugriff des Proxy-Servers auf das Internet zu ermöglichen.
       - Installation und Konfiguration eines Proxy-Servers, um den Internetzugriff für VUM bereitzustellen.
       - Ersteinrichtung von VUM für die Verwendung des Proxy-Servers.
-  - [Sammeln von Metadaten](vum-metadata.html) - VUM lädt Metadaten zu den Upgrades, Patches oder Erweiterungen über einen vordefinierten automatischen Prozess herunter, den Sie ändern können. In regelmäßigen konfigurierbaren Intervallen nimmt VUM Kontakt zu VMware oder Drittanbieterquellen auf, um die aktuellen Metadaten zu verfügbaren Upgrades, Patches oder Erweiterungen zu erfassen.
-  - [Erstellen von Baselines](vum-baselines.html) - Sie können die vordefinierten Baselines und Baselinegruppe verwenden oder neue angepasste erstellen. Baselines und Baselinegruppen werden dann an Bestandsobjekte angehängt.
-  - [Prüfen und Auswerten](vum-scanning.html) - Die Bestandsobjekte werden geprüft und die Ergebnisse ausgewertet, um zu ermitteln, wie sie den Baselines und Baselinegruppen entsprechen. Die Prüfergebnisse können anhand von Textsuche, Gruppenauswahl, Baselineauswahl und Konformitätsstatusauswahl gefiltert werden.
-  - [Staging und Korrektur](vum-staging.html) - Patches und Erweiterungen können optional vor der Korrektur zwischengespeichert ("staged") werden, um sicherzustellen, dass sie auf den Host heruntergeladen werden. Bei der Korrektur ("remediation") wendet VUM die Patches, Erweiterungen und Upgrades auf die Bestandsobjekte an.
+  - [Sammeln von Metadaten](/docs/services/vmwaresolutions/archiref/vum/vum-metadata.html) - VUM lädt Metadaten zu den Upgrades, Patches oder Erweiterungen über einen vordefinierten automatischen Prozess herunter, den Sie ändern können. In regelmäßigen konfigurierbaren Intervallen nimmt VUM Kontakt zu VMware oder Drittanbieterquellen auf, um die aktuellen Metadaten zu verfügbaren Upgrades, Patches oder Erweiterungen zu erfassen.
+  - [Erstellen von Baselines](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html) - Sie können die vordefinierten Baselines und Baselinegruppe verwenden oder neue angepasste erstellen. Baselines und Baselinegruppen werden dann an Bestandsobjekte angehängt.
+  - [Prüfen und Auswerten](/docs/services/vmwaresolutions/archiref/vum/vum-scanning.html) - Die Bestandsobjekte werden geprüft und die Ergebnisse ausgewertet, um zu ermitteln, wie sie den Baselines und Baselinegruppen entsprechen. Die Prüfergebnisse können anhand von Textsuche, Gruppenauswahl, Baselineauswahl und Konformitätsstatusauswahl gefiltert werden.
+  - [Staging und Korrektur](/docs/services/vmwaresolutions/archiref/vum/vum-staging.html) - Patches und Erweiterungen können optional vor der Korrektur zwischengespeichert ("staged") werden, um sicherzustellen, dass sie auf den Host heruntergeladen werden. Bei der Korrektur ("remediation") wendet VUM die Patches, Erweiterungen und Upgrades auf die Bestandsobjekte an.
 
-In diesem Dokument wird davon ausgegangen, dass Sie eine primäre vCenter Server-Instanz oder eine Reihe von separaten primären vCenter Server-Instanzen bereitgestellt haben. Wenn Sie primäre und sekundäre vCenter Server-Instanzen bereitgestellt haben und daher Single Sign-on (SSO) verwenden, finden Sie weitere Informationen hierzu unter [Über SSO angebundene vCenter](vum-updating-vcsa.html).
+In diesem Dokument wird davon ausgegangen, dass Sie eine primäre vCenter Server-Instanz oder eine Reihe von separaten primären vCenter Server-Instanzen bereitgestellt haben. Wenn Sie primäre und sekundäre vCenter Server-Instanzen bereitgestellt haben, die Single Sign-on (SSO) verwenden, finden Sie weitere Informationen hierzu unter [Über SSO angebundene vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html).
 
-Wenn Sie eine vCenter Server-Instanz mithilfe von vSAN bereitgestellt haben, lesen Sie zunächst die Informationen im Abschnitt [vSAN-Cluster aktualisieren](vum-updating-vsan.html).
+Wenn Sie eine vCenter Server-Instanz mithilfe von vSAN bereitgestellt haben, lesen Sie zunächst die Informationen im Abschnitt [vSAN-Cluster aktualisieren](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vsan.html).
 
 Wenn Sie die Automatisierung des {{site.data.keyword.cloud_notm}}-Infrastrukturmanagements aktualisieren möchten, verwenden Sie die {{site.data.keyword.vmwaresolutions_short}}-Konsole.
 
@@ -66,4 +66,4 @@ Diese Funktion ermöglicht die automatisierte Aktualisierung nur für die Manage
 ### Zugehörige Links
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

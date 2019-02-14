@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-22"
 
 ---
 
@@ -16,7 +16,8 @@ lastupdated: "2018-10-29"
 
 {{site.data.keyword.vmwaresolutions_full}} permite desplegar instancias en diferentes ubicaciones y conseguir que se activen y se ejecuten en un breve periodo de tiempo.
 
-**Notas:**
+## Notes
+
 * No puede establecer enlaces entre instancias de VMware Cloud Foundation y VMware vCenter Server en una configuración de varios sitios.
 * No puede enlazar instancias desplegadas en V2.0 con instancias de releases anteriores (aunque se hayan actualizado a V2.0).
 
@@ -33,8 +34,8 @@ Un despliegue de varios sitios consta de los siguientes componentes.
 * **Instancia o instancias secundarias**: una o varias instancias secundarias de Cloud Foundation, enlazadas a la instancia primaria, con la configuración siguiente:
    *  Nombre del sitio SSO
    *  Subdominio DNS enlazado al dominio raíz en la instancia primaria
-   *  Se configura la réplica de DNS y AD entre las máquinas virtuales AD en las instancias primaria y secundarias
-   *  Se despliega y configura un PSC (Platform Services Controller) para realizar réplicas con el PSC en la instancia primaria
+   *  Réplica de DNS y AD configurada entre las máquinas virtuales AD en las instancias primaria y secundarias
+   *  PSC (Platform Services Controller) desplegado y configurado para realizar réplicas con el PSC en la instancia primaria
    *  VMware vCenter en las instancias secundarias se configura con la modalidad enlazada mejorada con el vCenter en la instancia primaria
 
 ## Despliegue de varios sitios de Cloud Foundation

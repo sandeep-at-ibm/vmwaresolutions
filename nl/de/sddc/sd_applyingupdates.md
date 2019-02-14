@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,11 +14,12 @@ lastupdated: "2018-11-05"
 
 # Updates auf Cloud Foundation-Instanzen anwenden
 
-Die {{site.data.keyword.vmwaresolutions_full}}-Konsole führt laufend Erkennungen durch und listet die verfügbaren Software-Updates auf, die Sie auf Ihre virtuelle VMWare-Umgebung anwenden können.
+Die {{site.data.keyword.vmwaresolutions_full}}-Konsole führt laufend Erkennungen durch und listet die verfügbaren Software-Updates auf, die Sie auf Ihre virtuelle VMware-Umgebung anwenden können.
 
 Ein verfügbares Update ist ein Eintrag in der Liste der Software-Updates für die Instanz, das sofort angewendet oder für einen späteren Zeitpunkt geplant werden kann. Das Update ist ein Bundle, das eines oder mehrere Pakete für die Aktualisierung der IBM Managementkomponenten und der VMware-Komponenten enthält.
 
-Ab Version 2.5 werden IBM CloudDriver-Updates nicht mehr aufgelistet, da automatische Aktualisierungsfunktionalität aktiviert ist. Durch Aktionen wie das Hinzufügen eines Hosts, Hinzufügen eines Clusters und Bestellen eines Service wird die Instanz automatisch auf die aktuelle Version aktualisiert. Weitere Informationen zu automatischen Aktualisierungen finden Sie im Abschnitt zur *IBM CloudDriver-Ausfallsicherheit* in den [Releaseinformationen für Version 2.5](../vmonic/relnotes_v25.html).{:note}
+Ab Version 2.5 werden IBM CloudDriver-Updates nicht mehr aufgelistet, da automatische Aktualisierungsfunktionalität aktiviert ist. Durch Aktionen wie das Hinzufügen eines Hosts, Hinzufügen eines Clusters und Bestellen eines Service wird die Instanz automatisch auf die aktuelle Version aktualisiert. Weitere Informationen zu automatischen Aktualisierungen finden Sie im Abschnitt zur *IBM CloudDriver-Ausfallsicherheit* in den [Releaseinformationen für Version 2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
+{:note}
 
 ## Vorbereitende Schritte
 
@@ -108,11 +109,11 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
       </tr>
     </table>
 
-6. Falls der Updateprozess bei einem bestimmten Schritt fehlschlägt, [wenden Sie sich an den IBM Support](../vmonic/trbl_support.html), um Unterstützung zu erhalten. Sie erhalten Hilfe bei der Lösung des Problems und Anweisungen, wie Sie das Upgrade beim fehlgeschlagenen Schritt erneut starten.
+6. Falls der Updateprozess bei einem bestimmten Schritt fehlschlägt, [wenden Sie sich an den IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html), um Unterstützung zu erhalten. Sie erhalten Hilfe bei der Lösung des Problems und Anweisungen, wie Sie das Upgrade beim fehlgeschlagenen Schritt erneut starten.
 
 ### Zugehörige Links
 
-* [Übersicht über Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
-* [Übersicht über Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [Übersicht über Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)

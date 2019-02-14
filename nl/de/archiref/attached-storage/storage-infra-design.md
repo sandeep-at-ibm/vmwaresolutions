@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -34,7 +34,7 @@ Der physische Netzbetrieb wird von {{site.data.keyword.cloud_notm}} gesteuert. I
 
 ### Netzübersicht für IBM Cloud
 
-Das physische Netz von {{site.data.keyword.cloud_notm}} ist in drei verschiedene Netze unterteilt: öffentliches Netz, privates Netz und Managementnetz. Weitere Informationen über das öffentliche, das private und das Managementnetz finden Sie in der [Lösungsübersicht](../solution/solution_overview.html).
+Das physische Netz von {{site.data.keyword.cloud_notm}} ist in drei verschiedene Netze unterteilt: öffentliches Netz, privates Netz und Managementnetz. Weitere Informationen über das öffentliche, das private und das Managementnetz finden Sie in der [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 Weitere Informationen zum {{site.data.keyword.cloud_notm}}-Netz finden Sie im [{{site.data.keyword.cloud_notm}}-Netz](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}.
 
@@ -46,7 +46,7 @@ Lesen Sie die folgenden Informationen, um eine Beschreibung des Servicenetzes zu
 
 ### VLANs
 
-Weitere Informationen zu VLANs finden Sie im Abschnitt zum _physischen Netzdesign_ unter [Design der physischen Infrastruktur](../solution/design_physicalinfrastructure.html).
+Weitere Informationen zu VLANs finden Sie im Abschnitt zum _physischen Netzdesign_ unter [Design der physischen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html).
 
 ## Design des physischen Speichers
 
@@ -65,10 +65,10 @@ Endurance steht in drei IOPS-Leistungsstufen zur Unterstützung unterschiedliche
 Die Größe einer gemeinsam genutzten NFS-Ressource kann nach der Bestellung geändert oder neu konfiguriert werden, um eine größere oder geringere Anzahl von IOPS zu ermöglichen.
 {:note}
 
-Detaillierte Informationen zu den IOPS-Optionen finden Sie im Abschnitt mit den _Speichereinstellungen_ unter dem Thema zum [Bestellen von vCenter Server-Instanzen](../../vcenter/vc_orderinginstance.html).
+Detaillierte Informationen zu den IOPS-Optionen finden Sie im Abschnitt mit den _Speichereinstellungen_ unter dem Thema zum [Bestellen von vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html).
 
 Zusätzlich zu den Speicherstufen unterstützt der {{site.data.keyword.cloud_notm}}-Endurance-Speicher eine umfangreiche Palette von Anwendungsanforderungen einschließlich der Erstellung von Momentaufnahmen und Replikationen sowie der Verschlüsselung an den {{site.data.keyword.CloudDataCent_notm}}-Standorten.
 
 ### Zugehörige Links
 
-* [Lösungsübersicht](../solution/solution_overview.html)
+* [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -39,21 +39,21 @@ Si se producen errores en los componentes de gestión, puede restaurar dichos co
 
 El usuario es el responsable de mantener el software Veeam actualizado al nivel de la versión más reciente.
 
-### Para las instancias desplegadas con red pública y privada
+### Aplicación de actualizaciones para las instancias desplegadas con red pública y privada
 
 Si el servicio Veeam está instalado en una instancia con red pública y privada, puede comprobar si hay actualizaciones y descargarlas mediante el propio software Veeam.
 
-### Para las instancias desplegadas solo con red privada
+### Aplicación de actualizaciones para las instancias desplegadas solo con red privada
 
 Si el servicio Veeam está instalado en una instancia solo con red privada, porque la VSI Veeam está configurada sin acceso a la red pública, no puede comprobar si hay actualizaciones ni descargarlas mediante el propio software Veeam. En su lugar, debe descargar las actualizaciones desde el sitio web de Veeam, transferirlas a la VM de Veeam, y luego instalarlas.
 
 ## Actualización de licencias de Veeam
 
-### Para las instancias desplegadas con red pública y privada
+### Actualización de licencias de Veeam para las instancias desplegadas con red pública y privada
 
 Si el servicio Veeam está instalado en una instancia con red pública y privada, puede actualizar la licencia de Veeam de forma automática o manual siguiendo las instrucciones de Veeam que encontrará en [Actualización de licencia]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html).
 
-### Para las instancias desplegadas solo con red privada
+### Actualización de licencias de Veeam para las instancias desplegadas solo con red privada
 
 Si el servicio Veeam está instalado en una instancia solo con red privada, debe anotar fecha de caducidad de la licencia y ponerse en contacto con el [servicio de soporte de IBM](../vmonic/trbl_support.html) para obtener ayuda con la actualización de la clave de licencia cuando haya que renovar.
 

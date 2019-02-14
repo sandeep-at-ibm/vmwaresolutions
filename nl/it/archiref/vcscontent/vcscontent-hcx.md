@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,7 +21,7 @@ data center virtualizzato VMware installato in loco.
 I componenti di vCenter Server with Hybridity Bundle, che vengono distribuiti
 come macchine virtuali nel sito di destinazione {{site.data.keyword.cloud_notm}} VMware, consentono di
 stabilire una connessione con i componenti HCX installati
-nel sito di origine in loco del peer. 
+nel sito di origine in loco del peer.
 
 Figura 1. vCenter Server with Hybridity Bundle
 ![vCenter Server with Hybridity Bundle](vcscontent-hcx.svg)
@@ -56,4 +56,5 @@ e di nessuna riconfigurazione dell'applicazione.
 
 ### Link correlati
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

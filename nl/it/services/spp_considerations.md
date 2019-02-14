@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-10-25"
 
 Il servizio {{site.data.keyword.IBM}} Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} fornisce una soluzione efficiente e scalabile per la protezione, il riutilizzo e il recupero dei dati per gli ambienti virtuali. Puoi implementare il servizio come soluzione autonoma o integrarlo con il tuo ambiente IBM Spectrum Protect per scaricare copie per la governance di dati e archiviazione a lungo termine.
 
-Questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o aggiornate alla V2.2 o successive. La versione corrente di {{site.data.keyword.IBM}} Spectrum Protect Plus installata è la V10.1.1 patch 1.
+Questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o aggiornate alla V2.2 o successive. La versione {{site.data.keyword.IBM}} Spectrum Protect Plus corrente installata è la V10.1.2.
 {:note}
 
 ## Specifiche tecniche per IBM Spectrum Protect Plus on IBM Cloud
@@ -78,7 +78,7 @@ Esamina le seguenti considerazioni prima di rimuovere il servizio IBM Spectrum P
 ### Link correlati
 
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service Planning](http://www.ibm.com/support/docview.wss?uid=swg22012650)
-* [Gestione di IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](managingspp.html)
-* [Ordine di IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](spp_ordering.html)
+* [Gestione di IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingspp.html)
+* [Ordine di IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_ordering.html)
 * [Documentazione di IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
-* [Come contattare il supporto IBM](../vmonic/trbl_support.html)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

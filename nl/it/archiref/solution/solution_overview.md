@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-08-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ Figura 1. Panoramica di VMware on {{site.data.keyword.cloud_notm}}
 
 ## Vantaggi principali
 
-VMware Cloud Foundation e vCenter Server on {{site.data.keyword.cloud_notm}} forniscono gli elementi costitutivi fondamentali, tra cui VMware vSphere, vCenter Server, NSX e le opzioni di archiviazione condivisa, incluso vSAN. Questi componenti sono necessari per architettare in modo flessibile una soluzione di data center definito dal software VMware che meglio si adatta ai tuoi carichi di lavoro. 
+VMware Cloud Foundation e vCenter Server on {{site.data.keyword.cloud_notm}} forniscono gli elementi costitutivi fondamentali, tra cui VMware vSphere, vCenter Server, NSX e le opzioni di archiviazione condivisa, incluso vSAN. Questi componenti sono necessari per architettare in modo flessibile una soluzione di data center definito dal software VMware che meglio si adatta ai tuoi carichi di lavoro.
 
 Applicando l'automazione avanzata e l'infrastruttura bare metal a singolo tenant, puoi distribuire rapidamente l'intero ambiente VMware su {{site.data.keyword.cloud_notm}} in poche ore. Puoi quindi accedere e gestire l'ambiente ospitato da IBM tramite client VMware nativi, CLI (Command Line Interface), script esistenti o altri strumenti compatibili con l'API vSphere.
 
@@ -40,6 +40,6 @@ Le offerte VMware on {{site.data.keyword.cloud_notm}} forniscono i seguenti vant
 
 ### Link correlati
 
-* [Panoramica della progettazione](design_overview.html)
-* [Ridimensionamento della capacità](solution_scaling.html)
-* [Backup dei componenti](solution_backingup.html)
+* [Panoramica della progettazione](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [Ridimensionamento della capacità](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
+* [Backup dei componenti](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -74,14 +74,14 @@ Passo | Descrizione
 ---|---
 1 | Inizia una conversazione valida, vedi la sezione sui flussi di conversazione
 2 | Il chatbot invia la voce la servizio Speech to Text.
- 3 | Il servizio Speech to Text invia il testo al chatbot.
+3 | Il servizio Speech to Text invia il testo al chatbot.
 4 | Il chatbot invia la query di testo a Skate Advisor.
- 5 | Skate Advisor valuta la richiesta e la invia a Watson Assistant.
- 6 | Watson Assistant classifica la richiesta e risponde a Skate Advisor con l'azione da intraprendere.
+5 | Skate Advisor valuta la richiesta e la invia a Watson Assistant.
+6 | Watson Assistant classifica la richiesta e risponde a Skate Advisor con l'azione da intraprendere.
 7 | Skate Advisor richiede una serie di dati dal Discovery Service.
- 8 | Il Discovery Service valuta la query e invia la risposta.
+8 | Il Discovery Service valuta la query e invia la risposta.
 9 |Skate Advisor forma una risposta e la invia al chatbot in testo.
- 10 |Il chatbot invia la risposta di testo al servizio Text To Speech.
+10 | Il chatbot invia la risposta di testo al servizio Text To Speech.
 11 | Il risultato viene inviato all'utente tramite il chatbot.
 
 ### Rendering video
@@ -90,7 +90,7 @@ Il componente di rendering video riproduce un video o visualizza un documento. Q
 
 Il componente di rendering video è un widget incorporato nell'interfaccia web che visualizza un video. I video vengono visualizzati nel chatbot come risultato di una query eseguita dall'utente di sistema. Il link al video risultante, una volta selezionato, attiva il rendering video.
 
-### Interfaccia di posizione
+### Interfaccia di ubicazione
 
 Skate Advisor include un'interfaccia che consente agli utenti del sistema di registrare la posizione di un trick specifico. Il componente dell'interfaccia web ha due elementi principali:
 1. Accettare una posizione dall'utente del sistema come il luogo migliore per eseguire un trick specifico.
@@ -131,4 +131,4 @@ Dopo la formazione, il Discovery Service può rispondere a query come:
 ### Link correlati
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
-](../vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

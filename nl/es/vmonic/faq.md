@@ -2,17 +2,23 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-12-11"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Preguntas frecuentes generales sobre IBM Cloud for VMware Solutions
 
 Encuentre las respuestas a las preguntas más frecuentes sobre {{site.data.keyword.vmwaresolutions_full}}.
 
 ## ¿Qué cuentas de usuario necesito para IBM Cloud for VMware Solutions?
+{: faq}
 
 * **Cuenta de IBMid**. Se necesita esta cuenta para acceder a la consola de {{site.data.keyword.vmwaresolutions_short}}. La consola es una interfaz de usuario autónoma, independiente del {{site.data.keyword.slportal}}. Para obtener más información, consulte
 [Iniciación](../index.html).
@@ -68,26 +74,34 @@ Para instancias de vCenter Server, el primer clúster que se crea durante el des
 
 **Nota:** para instancias de Cloud Foundation, el nombre de clúster predeterminado no se puede cambiar.
 
-##¿Cómo se gestionan los parches?
+## ¿Cómo se gestionan los parches?
 
 IBM proporciona actualizaciones continuas del código de IBM desplegando la instancia de servidor virtual (VSI) de IBM CloudDriver a petición. IBM no proporciona actualizaciones continuas de los servicios complementarios, como Zerto on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. La obtención y la instalación de estas actualizaciones es responsabilidad del usuario.
 
-Las actualizaciones de VMware se aplican de distinta forma en función del tipo de instancia de VMware que haya desplegado:
+Las actualizaciones de VMware se aplican de distinta forma en función del tipo de instancia.
 
-* Para instancias de VMware Cloud Foundation, las actualizaciones de los componentes vSphere ESXi, NSX, vCenter, Platform Services Controller y SDDC Manager se proporcionan a través de la consola de {{site.data.keyword.vmwaresolutions_short}}.
-* Para instancias de VMware vCenter Server:
-  * Para instancias desplegadas al nivel de la versión V2.1 o posteriores o actualizadas a las mismas, se aplicarán a los clústeres y servidores ESXi parches con las actualizaciones más recientes, pero no necesariamente las últimas, de ESXi de VMware.
-  * El usuario es el responsable de todas las demás actualizaciones de los componentes de VMware, lo que incluye asegurarse de que los clústeres y servidores ESXi recién desplegados tienen las actualizaciones más recientes que necesita.
-  * Para las instancias desplegadas en V2.0 o posteriores, VMware Update Manager (VUM) está integrado en vCenter Server. Puede configurar VUM para descargar actualizaciones de ESXi desde VMware.
+### Instancias de VMware Cloud Foundation
+
+Las actualizaciones de los componentes vSphere ESXi, NSX, vCenter, Platform Services Controller y SDDC Manager se proporcionan a través de la consola de {{site.data.keyword.vmwaresolutions_short}}.
+
+### Instancias de VMware vCenter Server
+
+Para instancias desplegadas al nivel de la versión V2.1 o posteriores o actualizadas a las mismas, se aplicarán parches a los clústeres y servidores ESXi con las actualizaciones más recientes, pero no necesariamente las últimas, de ESXi de VMware.
+
+El usuario es el responsable de todas las demás actualizaciones de los componentes de VMware, lo que incluye asegurarse de que los clústeres y servidores ESXi recién desplegados tienen las actualizaciones más recientes que necesita.
+{:important}
+
+Para las instancias desplegadas en V2.0 o posteriores, VMware Update Manager (VUM) está integrado en vCenter Server. Puede configurar VUM para descargar actualizaciones de ESXi desde VMware.
 
 Para más información, consulte los siguientes recursos:
 * [Soporte de VMware](https://www.vmware.com/support.html)
 * [Aplicación de actualizaciones a instancias de vCenter Server](../vcenter/vc_applyingupdates.html)
 * [Aplicación de actualizaciones a instancias de Cloud Foundation](../sddc/sd_applyingupdates.html)
+* [Aplicación de actualizaciones a instancias de vCenter Server con el paquete híbrido (Hybridity)](../vcenter/vc_hybrid_applyingupdates.html)
 
 ## ¿Representa NSX Edge de servicios de gestión un riesgo para la seguridad?
 
-Aunque VMware NSX Edge para servicios de gestión está en una subred pública, se siguen medidas de seguridad para garantizar que no representa un riesgo para la seguridad. Estas medidas son:
+Aunque VMware NSX Edge para servicios de gestión está en una subred pública, se siguen las siguientes medidas de seguridad para garantizar que no representa un riesgo para la seguridad:
 *  Se configura el cortafuegos de NSX Edge de modo que solo permita el tráfico HTTPS de salida (puerto TCP 443) iniciado por las máquinas virtuales de gestión.
 *  Se utiliza SNAT (conversión de direcciones de red) para que las direcciones IP privadas no resulten visibles fuera de la red privada.
 *  Se inhabilita el acceso remoto para el dispositivo NSX Edge de servicios de gestión.

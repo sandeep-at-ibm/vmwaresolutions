@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2018-10-29"
   <dd class="dd">物理ネットワークは、後にネットワーク仮想化で使用される環境へのネットワーク接続を提供します。 このネットワークは {{site.data.keyword.cloud_notm}} サービス・ネットワークによって提供され、DNS や NTP などの追加のサービスが含まれています。</dd>
 </dl>
 
-物理コンポーネントについて詳しくは、[Cloud Foundation インスタンス](../../sddc/sd_bom.html)または [vCenter Server インスタンス](../../vcenter/vc_bom.html)の部品構成表を参照してください。
+物理コンポーネントについて詳しくは、[Cloud Foundation インスタンス](/docs/services/vmwaresolutions/sddc/sd_bom.html)または [vCenter Server インスタンス](/docs/services/vmwaresolutions/vcenter/vc_bom.html)の部品構成表を参照してください。
 
 ストレージについて詳しくは、[共有ストレージのアーキテクチャー](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)を参照してください。
 
@@ -33,7 +33,7 @@ lastupdated: "2018-10-29"
 
 物理ホストとは、コンピュート・リソースを提供する環境内の{{site.data.keyword.baremetal_short}}のことです。 このソリューションで適用される{{site.data.keyword.baremetal_short}}は VMware によって認証されています。これらは、[VMware HCG](http://www.vmware.com/resources/compatibility/search.php) にリストされています。
 
-ソリューションに用意されているサーバー構成は、vSphere ESXi をインストール、構成、管理するための最小要件を満たしているか上回っています。 さまざまな要件を満たす各種構成が使用可能です。 VMware on {{site.data.keyword.cloud_notm}} ソリューションに使用される正確な仕様の詳細リストについては、[Cloud Foundation インスタンス](../../sddc/sd_bom.html)または [vCenter Server インスタンス](../../vcenter/vc_bom.html)の部品構成表を参照してください。
+ソリューションに用意されているサーバー構成は、vSphere ESXi をインストール、構成、管理するための最小要件を満たしているか上回っています。 さまざまな要件を満たす各種構成が使用可能です。 VMware on {{site.data.keyword.cloud_notm}} ソリューションに使用される正確な仕様の詳細リストについては、[Cloud Foundation インスタンス](/docs/services/vmwaresolutions/sddc/sd_bom.html)または [vCenter Server インスタンス](/docs/services/vmwaresolutions/vcenter/vc_bom.html)の部品構成表を参照してください。
 
 {{site.data.keyword.baremetal_short}}は {{site.data.keyword.cloud_notm}} 内に存在します。
 {:note}
@@ -156,7 +156,7 @@ vSphere ESXi ハイパーバイザーは、永続ロケーションにインス�
 
 使用する場合は、オール・フラッシュ構成を使用して VMware vSAN が構成されます。 この設計では、2U および 4U シャーシ、さまざまなディスク数、さまざまなディスク・サイズなど、いくつかの構成オプションが用意されています。 すべての構成で 2 つの vSAN ディスク・グループ (キャッシュ用ソリッド・ステート・ディスク (SSD) が 1 つ、容量用 SSD が 1 つ以上) が使用されます。 vSAN 消費に割り振られるドライブはすべて、単一ディスク RAID-0 内に構成されます。
 
-サポートされる構成について詳しくは、[Cloud Foundation インスタンス](../../sddc/sd_bom.html)または [vCenter Server インスタンス](../../vcenter/vc_bom.html)の部品構成表を参照してください。
+サポートされる構成について詳しくは、[Cloud Foundation インスタンス](/docs/services/vmwaresolutions/sddc/sd_bom.html)または [vCenter Server インスタンス](/docs/services/vmwaresolutions/vcenter/vc_bom.html)の部品構成表を参照してください。
 
 ### ホスト間のファイル・レベルの共有ストレージ
 
@@ -172,7 +172,7 @@ vSphere ESXi ハイパーバイザーは、永続ロケーションにインス�
 
 ### 関連リンク
 
-* [Cloud Foundation の部品構成表](../../sddc/sd_bom.html)
-* [vCenter Server の部品構成表](../../vcenter/vc_bom.html)
+* [Cloud Foundation の部品構成表](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [vCenter Server の部品構成表](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
 * [共有ストレージのアーキテクチャー](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
 * [NetApp ONTAP Select のアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

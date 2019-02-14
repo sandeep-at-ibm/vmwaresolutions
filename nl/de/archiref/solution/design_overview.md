@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-10"
+lastupdated: "2019-01-23"
 
 ---
 # Übersicht über das Design
@@ -28,7 +28,7 @@ Abbildung 1. Komponenten von VMware on {{site.data.keyword.cloud_notm}}
 
 ### Zugehörige Links
 
-* [Design der physischen Infrastruktur](design_physicalinfrastructure.html)
-* [Design der virtuellen Infrastruktur](design_virtualinfrastructure.html)
-* [Design der allgemeinen Services](design_commonservice.html)
-* [Design des Infrastrukturmanagements](design_infrastructuremgmt.html)
+* [Design der physischen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [Design der virtuellen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [Design der allgemeinen Services](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)
+* [Design des Infrastrukturmanagements](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,7 +21,7 @@ ESXi サーバーがデプロイされた後は、お客様が、環境をセッ
 
 ## IBM Cloud アカウントの要件
 
-使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](../vmonic/slaccountrequirement.html)を参照してください。
+使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)を参照してください。
 
 ## IBM Cloud データ・センターの使用可否
 
@@ -69,6 +69,6 @@ vSAN コンポーネントを選択した場合は、SSD (ソリッド・ステ�
 
 ### 関連リンク
 
-* [新規 vSphere クラスターの注文](vs_orderinginstances.html)
-* [既存クラスターの拡張](vs_scalingexistingclusters.html)
-* [コンソール以外で作成された既存クラスターの拡張](vs_orderingforclustersoutside.html)
+* [新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [既存クラスターの拡張](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [コンソール以外で作成された既存クラスターの拡張](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

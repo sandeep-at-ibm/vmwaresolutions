@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ L'infrastruttura fisica comprende i seguenti componenti:
   <dd class="dd">La rete fisica fornisce la connettività di rete nell'ambiente che viene quindi utilizzato dalla virtualizzazione di rete. La rete è fornita dalla rete dei servizi {{site.data.keyword.cloud_notm}} e include servizi supplementari come DNS e NTP.</dd>
 </dl>
 
-Per ulteriori informazioni sui componenti fisici, vedi la distinta base per l'[istanza Cloud Foundation](../../sddc/sd_bom.html) o l'[istanza vCenter Server](../../vcenter/vc_bom.html).
+Per ulteriori informazioni sui componenti fisici, vedi la distinta base per l'[istanza Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html) o l'[istanza vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 Per ulteriori informazioni sull'archiviazione, vedi [Architettura dell'archiviazione condivisa](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
@@ -33,7 +33,7 @@ Per ulteriori informazioni sull'archiviazione, vedi [Architettura dell'archiviaz
 
 L'host fisico si riferisce ai {{site.data.keyword.baremetal_short}} nell'ambiente che fornisce risorse di calcolo. I {{site.data.keyword.baremetal_short}} applicati in questa soluzione sono certificati da VMware ed elencati nella guida [VMware HCG](http://www.vmware.com/resources/compatibility/search.php).
 
-Le configurazioni del server disponibili nella soluzione soddisfano o superano i requisiti minimi per installare, configurare e gestire vSphere ESXi. Sono disponibili varie configurazioni per soddisfare diversi requisiti. Per l'elenco dettagliato delle specifiche esatte utilizzate per la soluzione VMware on {{site.data.keyword.cloud_notm}}, vedi la distinta base per l'[istanza Cloud Foundation](../../sddc/sd_bom.html) o l'[istanza vCenter Server](../../vcenter/vc_bom.html).
+Le configurazioni del server disponibili nella soluzione soddisfano o superano i requisiti minimi per installare, configurare e gestire vSphere ESXi. Sono disponibili varie configurazioni per soddisfare diversi requisiti. Per l'elenco dettagliato delle specifiche esatte utilizzate per la soluzione VMware on {{site.data.keyword.cloud_notm}}, vedi la distinta base per l'[istanza Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html) o l'[istanza vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 I {{site.data.keyword.baremetal_short}} risiedono in {{site.data.keyword.cloud_notm}}.
 {:note}
@@ -157,7 +157,7 @@ Questa progettazione consente di utilizzare VMware vSAN o l'archiviazione a live
 
 Se utilizzato, VMware vSAN viene configurato utilizzando una configurazione all-flash. Questa progettazione consente diverse opzioni di configurazione, tra cui chassis 2U e 4U, vari numeri di dischi e varie dimensioni del disco. Tutte le configurazioni utilizzano due gruppi di dischi vSAN, con un SSD (Solid State Disk) per la cache e uno o più SSD per la capacità. Tutte le unità che vengono assegnate per il consumo di vSAN sono configurate in RAID-0 a singolo disco.
 
-Per ulteriori informazioni sulle configurazioni supportate, vedi la distinta base per l'[istanza Cloud Foundation](../../sddc/sd_bom.html) o l'[istanza vCenter Server](../../vcenter/vc_bom.html).
+Per ulteriori informazioni sulle configurazioni supportate, vedi la distinta base per l'[istanza Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html) o l'[istanza vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 ### Archiviazione a livello di file condivisa tra gli host
 
@@ -173,7 +173,7 @@ I {{site.data.keyword.CloudDataCents_notm}} che offrono il livello di prestazion
 
 ### Link correlati
 
-* [Distinta base di Cloud Foundation](../../sddc/sd_bom.html)
-* [Distinta base di vCenter Server](../../vcenter/vc_bom.html)
+* [Distinta base di Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
 * [Architettura dell'archiviazione condivisa](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
 * [Architettura di NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

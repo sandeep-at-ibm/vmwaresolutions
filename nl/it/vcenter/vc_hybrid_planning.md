@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ Esamina i seguenti requisiti prima di ordinare la tua istanza VMware vCenter Ser
 
 ## Requisiti dell'account IBM Cloud
 
-L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Disponibilità dei data center IBM Cloud
 
@@ -25,31 +25,31 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicazione | Regione |
 |:-----|:----------------|
 | AMS03 | Amsterdam | Europa |
-| CHE01 | Chennai | Asia Pacifico |
+| CHE01 | Chennai | Asia-Pacifico |
 | DAL09 | Dallas | Nord America meridionale |
 | DAL10 | Dallas | Nord America meridionale |
 | DAL12 | Dallas | Nord America meridionale |
 | DAL13 | Dallas | Nord America meridionale |
 | FRA02 | Francoforte | Europa |
 | FRA04 | Francoforte | Europa |
-| HKG02 | Hong Kong | Asia Pacifico |
+| HKG02 | Hong Kong | Asia-Pacifico |
 | LON02 | Londra | Europa |
 | LON04 | Londra | Europa |
 | LON06 | Londra | Europa |
-| MEL01 | Melbourne | Asia Pacifico |
+| MEL01 | Melbourne | Asia-Pacifico |
 | MEX01 | Queretaro | Nord America meridionale |
 | MIL01 | Milano | Europa |
 | MON01 | Montreal | Nord America orientale |
 | OSL01 | Oslo | Europa |
 | PAR01 | Parigi | Europa |
 | SAO01 | San Paolo | Sud America |
-| SEO01 | Seul | Asia Pacifico |
+| SEO01 | Seul | Asia-Pacifico |
 | SJC03 | San Jose | Nord America occidentale |
 | SJC04 | San Jose | Nord America occidentale |
-| SNG01 | Singapore | Asia Pacifico |
-| SYD01 | Sydney | Asia Pacifico |
-| SYD04 | Sydney | Asia Pacifico |
-| TOK02 | Tokyo | Asia Pacifico |
+| SNG01 | Singapore | Asia-Pacifico |
+| SYD01 | Sydney | Asia-Pacifico |
+| SYD04 | Sydney | Asia-Pacifico |
+| TOK02 | Tokyo | Asia-Pacifico |
 | TOR01 | Toronto | Nord America orientale |
 | WDC04 | Washington, DC | Nord America orientale |
 | WDC06 | Washington, DC | Nord America orientale |
@@ -67,7 +67,7 @@ Tabella 2. Indicatori di stato per i {{site.data.keyword.CloudDataCents_notm}} q
 
 ## Backup dei componenti di gestione
 
-Sei responsabile del mantenimento e della verifica della disponibilità di tutti i componenti dell'istanza. Si consiglia vivamente di pianificare il backup o l'alta disponibilità di tutti i componenti di gestione. Per ulteriori informazioni, vedi [Backup dei componenti](../archiref/solution/solution_backingup.html).
+Sei responsabile del mantenimento e della verifica della disponibilità di tutti i componenti dell'istanza. Si consiglia vivamente di pianificare il backup o l'alta disponibilità di tutti i componenti di gestione. Per ulteriori informazioni, vedi [Backup dei componenti](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
 ## Servizi per le istanze vCenter Server with Hybridity Bundle
 
@@ -84,15 +84,15 @@ Quando distribuisci questo servizio, completa le seguenti impostazioni:
   * (Facoltativo) **Immettere nuovamente la password**: immetti di nuovo la password per la chiave privata.
   * (Facoltativo) **Nome host**: immetti il nome host da associare al nome comune (CN) del certificato CA. HCX on {{site.data.keyword.cloud_notm}} richiede che il certificato CA sia in un formato accettato da Edge NSX. Per ulteriori informazioni sui formati dei certificati Edge NSX, vedi [Importazione di certificati SSL](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
 
-Puoi ordinare altri servizi aggiuntivi per la tua istanza in base alle tue esigenze, come ad esempio il ripristino di emergenza. Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservices.html).
+Puoi ordinare altri servizi aggiuntivi per la tua istanza in base alle tue esigenze, come ad esempio il ripristino di emergenza. Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html).
 
 ## Considerazioni sulla capacità
 
-Per ulteriori informazioni relative alle considerazioni sulla capacità, vedi [Ridimensionamento della capacità](../archiref/solution/solution_scaling.html).
+Per ulteriori informazioni relative alle considerazioni sulla capacità, vedi [Ridimensionamento della capacità](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
 
 ### Link correlati
 
-* [Panoramica di vCenter Server with Hybridity Bundle](vc_hybrid_overview.html)
-* [Ordine di istanze vCenter Server with Hybridity Bundle](vc_hybrid_orderinginstance.html)
-* [Espansione e contrazione della capacità per le istanze vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservers.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservices.html)
+* [Panoramica di vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [Ordine di istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [Espansione e contrazione della capacità per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)

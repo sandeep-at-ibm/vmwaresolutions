@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -111,7 +111,7 @@ Tabella 5. Cronologia di distribuzione delle istanze Cloud Foundation
 
 ## Cosa fare se si verificano errori
 
-Se si verificano degli errori durante la distribuzione o l'eliminazione dell'istanza, il team di supporto {{site.data.keyword.cloud_notm}} viene automaticamente informato. Per informazioni sullo stato del tuo ticket, puoi [contattare il supporto IBM](../vmonic/trbl_support.html).
+Se si verificano degli errori durante la distribuzione o l'eliminazione dell'istanza, il team di supporto {{site.data.keyword.cloud_notm}} viene automaticamente informato. Per informazioni sullo stato del tuo ticket, puoi [contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## Operazioni successive
 
@@ -122,12 +122,12 @@ Prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza
 
 Rivedi i seguenti argomenti per informazioni utili per completare le istruzioni di accesso:
 
-* Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](../vmonic/trbl_timeout_vc_console.html).
+* Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 * Per un elenco di punti di accesso per accedere alla rete privata di {{site.data.keyword.cloud_notm}} utilizzando la VPN, vedi [Accesso VPN](http://www.softlayer.com/vpn-access){:new_window}.
-* Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](../vmonic/trbl_deploy_ovf.html).
+* Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
 
 ### Link correlati
 
-* [Ordine di istanze Cloud Foundation](sd_orderinginstance.html)
-* [Espansione e contrazione della capacità per le istanze Cloud Foundation](sd_addingremovingservers.html)
-* [Eliminazione di istanze Cloud Foundation](sd_deletinginstance.html)
+* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Eliminazione di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)

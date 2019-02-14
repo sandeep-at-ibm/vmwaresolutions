@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-13"
 
 接続ストレージは、VMware vCenter Server on {{site.data.keyword.cloud}} オファリングの拡張機能です。 VMware vCenter Server on {{site.data.keyword.cloud_notm}} の接続ストレージ・ソリューション・アーキテクチャーに、このソリューションの各コンポーネントと、設計での各コンポーネントの構成概要が詳しく示されます。
 
-vCenter Server の設計について詳しくは、[ソリューションの概要](../solution/solution_overview.html)を参照してください。
+vCenter Server の設計について詳しくは、[ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)を参照してください。
 
 ## vCenter Server の接続ストレージの主な利点
 
@@ -29,4 +29,4 @@ vCenter Server の設計について詳しくは、[ソリューションの概�
 
 ### 関連リンク
 
-* [ソリューションの概要](../solution/solution_overview.html)
+* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

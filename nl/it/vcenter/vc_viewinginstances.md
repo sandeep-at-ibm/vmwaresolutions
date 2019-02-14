@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -89,10 +89,6 @@ Tabella 4. Informazioni di accesso di vCenter Server per i componenti relativi a
 | IP NSX Manager  | L'indirizzo IP di NSX Manager.  |
 | Nome di dominio completo NSX Manager  | Il nome di dominio completo di NSX Manager.  |
 | HTTP NSX Manager  | Il nome utente e la password utilizzati per accedere alla console web di NSX Manager. |
-| IP PSC  | L'indirizzo IP del PSC (Platform Services Controller).  |
-| Nome di dominio completo PSC  | Il nome di dominio completo del PSC.  |    
-| ADMIN PSC  | Il nome utente e la password di VMware vCenter Single Sign-On che puoi utilizzare per accedere alla console web PSC.  |
-| SSH PSC  | Il nome utente e la password che puoi utilizzare per accedere alla VM PSC tramite una connessione SSH.  |
 | IP vCenter  | L'indirizzo IP di vCenter Server.  |
 | Nome di dominio completo vCenter  | Il nome di dominio completo di vCenter Server.  |
 | ADMIN vCenter  | Il nome utente e la password di VMware vCenter Single Sign-On che puoi utilizzare per accedere a vCenter Server utilizzando il client web vSphere.  |
@@ -111,7 +107,7 @@ Tabella 5. Cronologia di distribuzione delle istanze vCenter Server
 
 ## Cosa fare se si verificano errori
 
-Se si verificano degli errori durante la distribuzione o l'eliminazione dell'istanza, il team di supporto {{site.data.keyword.cloud_notm}} viene automaticamente informato. Per informazioni sullo stato del tuo ticket, puoi [contattare il supporto IBM](../vmonic/trbl_support.html).
+Se si verificano degli errori durante la distribuzione o l'eliminazione dell'istanza, il team di supporto {{site.data.keyword.cloud_notm}} viene automaticamente informato. Per informazioni sullo stato del tuo ticket, puoi [contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## Operazioni successive
 
@@ -121,13 +117,13 @@ Prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza
 {:important}
 
 Rivedi i seguenti argomenti per informazioni utili per completare le istruzioni di accesso:
-*  Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](../vmonic/trbl_timeout_vc_console.html).
+*  Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 *  Per un elenco di punti di accesso per accedere alla rete privata dell'infrastruttura {{site.data.keyword.cloud_notm}} tramite VPN, vedi [Accesso VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](../vmonic/trbl_deploy_ovf.html).
+*  Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
 
 ### Link correlati
 
-* [Ordine di istanze vCenter Server](vc_orderinginstance.html)
-* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](vc_addingviewingclusters.html)
-* [Espansione e contrazione della capacità per le istanze vCenter Server](vc_addingremovingservers.html)
-* [Eliminazione di istanze vCenter Server](vc_deletinginstance.html)
+* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Eliminazione di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)

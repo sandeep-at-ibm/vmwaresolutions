@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -47,13 +47,11 @@ Figura 2. Componenti di NetApp ONTAP Select
 
 Il livello di gestione della virtualizzazione è costituito dai seguenti componenti:
 
-* Dispositivo virtuale vCenter Server
+* vCenter Server Appliance (vCSA) con Platform Services Controller (PSC) integrato
 * NSX Manager
 * Due gateway dei servizi edge (ESG) NSX
 * Tre controller NSX
-* Dispositivo virtuale PSC (Platform Services Controller)
-* vCenter Server Appliance (vCSA)
-* VSI (Virtual Server Instance) IBM CloudDriver.
+* VSI (Virtual Server Instance) IBM CloudDriver
 
 NetApp ONTAP Select viene eseguito in un cluster VMware e virtualizza l'archiviazione locale sugli host. NetApp ONTAP Select è distribuito nel modello dedicato, dove non è previsto che altri carichi di lavoro condividano il cluster con esso. Di conseguenza, la configurazione hardware dell'offerta NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} viene ridimensionata solo in base ai requisiti di NetApp ONTAP Select.
 
@@ -79,7 +77,7 @@ Sono forniti quattro {{site.data.keyword.baremetal_short}} {{site.data.keyword.c
 * **Alta capacità** – Licenza Standard / Dual Intel Xeon E5-2650 v4 (24 core totali, 2,2 GHz) / 64 GB di RAM / Capacità di trentaquattro unità SATA da 4 TB per nodo / Capacità effettiva di un cluster a 4 nodi – 190 TB
 
 Le unità SSD (Solid-State Disk) da 3,8 TB sono supportate quando vengono rese generalmente disponibili in un data center.
-  {:note}
+{:note}
 
 ### Hardware
 
@@ -124,7 +122,7 @@ Se utilizzi i firewall, devi configurare le regole per tutte le comunicazioni da
 
 ### Link correlati
 
-* [Pianificazione per le istanze NetApp ONTAP Select](np_planning.html)
-* [Ordine di istanze NetApp ONTAP Select](np_orderinginstances.html)
-* [Panoramica di vCenter Server](../vcenter/vc_vcenterserveroverview.html)
+* [Pianificazione per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_planning.html#requirements-and-planning-for-netapp-ontap-select-instances)
+* [Ordine di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
 * [Centro di documentazione di NetApp ONTAP](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){:new_window}

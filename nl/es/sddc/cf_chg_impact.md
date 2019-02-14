@@ -2,27 +2,36 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-12-11"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Consideraciones sobre el cambio de artefactos de Cloud Foundation
 
 El cambio de usuarios, recursos o subredes reservados para {{site.data.keyword.vmwaresolutions_full}} puede afectar a las operaciones de gestión de las instancias de VMware Cloud Foundation.
 
-**Importante:** No cambie los permisos globales del grupo **ic4v-vCenter** en la página **Usuarios y grupos** en el cliente web de VMware vSphere. Los ejemplos siguientes son cambios de permiso global: cambiar el nombre de usuario, suprimir el usuario o cambiar su contraseña.
+No cambie los permisos globales del grupo **ic4v-vCenter** en la página **Usuarios y grupos** del cliente web de VMware vSphere. Los ejemplos siguientes son cambios de permiso global: cambiar el nombre de usuario, suprimir el usuario o cambiar su contraseña.
+{:important}
 
 ## Cuentas de usuario específicas de servicio
+{: faq}
 
 Cada servicio crea una cuenta de usuario interna en vCenter Server. Esta cuenta es necesaria para que las operaciones de gestión que están asociadas a un servicio se puedan conectar con vCenter Server para realizar las operaciones en el servicio.
 
-**Importante:** Para evitar interrupciones y problemas de conexión, si cambia el ID de usuario, la contraseña o los valores de caducidad de contraseña de esta cuenta de usuario, asegúrese de actualizar también la información en el servicio asociado.
+Para evitar interrupciones y problemas de conexión, si cambia el ID de usuario, la contraseña o los valores de caducidad de contraseña de esta cuenta de usuario, asegúrese de actualizar también la información en el servicio asociado.
+{:important}
 
 El ID de usuario de esta cuenta está en el formato `<service_name>-<truncated service_uuid>@test.local` o `<service_name>-<truncated service_uuid>@example-domain.local`. Por ejemplo, el ID de usuario que utiliza el servicio Veeam on {{site.data.keyword.cloud_notm}} para conectarse a vCenter Server para realizar copias de seguridad planificadas es `Veeam-<Veeam_uuid>@test.local`.
 
-**Nota:** El servicio `<service_name>` junto con `<service_uuid>` se trunca a 20 caracteres.
+`<service_name>` junto con `<service_uuid>` se trunca a 20 caracteres.
+{:note}
 
 ## Recursos de VMware correspondientes a instancias de Cloud Foundation
 

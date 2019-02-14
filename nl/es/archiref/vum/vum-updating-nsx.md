@@ -2,31 +2,31 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
 # Actualización de NSX
 
-Esta sección se ha añadido a este documento para proporcionarle un tipo de proceso de actualización para NSX. Debe consultar la guía de VMware correspondiente al proceso de actualización de la versión de NSX a la que está actualizando.
+La información siguiente es un ejemplo del proceso de actualización para NSX. Consulte la guía de VMware correspondiente al proceso de actualización de la versión de NSX a la que está actualizando.
 
 Si tiene que actualizar NSX y vSphere, VMware recomienda completar primero la actualización de NSX y, a continuación, completar la actualización de vSphere como VIB de NSX ya que son específicos de la versión de ESXi que está instalada en el host. Sin embargo, se recomienda utilizar VUM, tal como se documenta en este documento. Si se realiza manualmente, siga este flujo de trabajo, un host cada vez:
 
-1. **Actualizar ESXi**: una vez que finalice la actualización de ESXi, el host sale de la modalidad de mantenimiento; sin embargo, no puede mover las VM conectadas a los conmutadores lógicos al host hasta que se haya completado el siguiente paso.
-2. **Actualizar VIB de NSX**: una vez que se hayan actualizado los VIB y que el host se haya eliminado de la modalidad de mantenimiento, puede mover las VM conectadas a los conmutadores lógicos al host.
+1. **Actualizar ESXi**: después de que finalice la actualización de ESXi, el host sale de la modalidad de mantenimiento; sin embargo, no puede mover las VM conectadas a los conmutadores lógicos al host hasta que se haya completado el siguiente paso.
+2. **Actualizar VIB de NSX**: después de que se hayan actualizado los VIB y de que el host se elimine de la modalidad de mantenimiento, puede mover las VM conectadas a los conmutadores lógicos al host.
 
 NSX se actualiza mediante la actualización de NSX Manager, que se descarga de _my.vmware.com_. Por lo tanto, necesita una cuenta en la descarga de la actualización. Si consume licencias de suscripción de {{site.data.keyword.cloud}} con la instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}}, no podrá descargar las actualizaciones con la cuenta de **my.vmware.com**. Por lo tanto, debe [ponerse en contacto con el soporte de IBM](../../vmonic/trbl_support.html).
 
-Antes de empezar la actualización, compruebe las notas del release de NSX ya que allí se documentan problemas conocidos de actualización y sus soluciones temporales.release de NSX. Mediante las notas del release, verifique que vCenter cumple con los nuevos requisitos del sistema para NSX.
+Antes de empezar la actualización, consulte las notas de NSX para ver los problemas de actualización y las soluciones temporales. Mediante las notas del release, verifique que vCenter cumple con los nuevos requisitos del sistema para NSX.
 
-Si ha instalado algún software adicional de los socios de VMware, consulte la documentación del socio para ver los detalles de la compatibilidad y la actualización. Si ha desplegado las instancias primaria y secundaria de vCenter Server y tiene un entorno NSX entre varios vCenter, consulte las notas del release del proceso de actualización correcto.
+Si ha instalado algún software adicional de business partners de VMware, consulte la documentación del business partner para ver los detalles de la compatibilidad y la actualización. Si ha desplegado las instancias primaria y secundaria de vCenter Server y tiene un entorno NSX entre varios vCenter, consulte las notas del release del proceso de actualización correcto.
 
 En un entorno NSX entre vCenter, el dispositivo primario NSX Manager se actualiza primero, seguido de todos los dispositivos NSX Manager secundarios.
 **No se admiten degradaciones**, por lo que debe realizar una copia de seguridad de NSX Manager antes de continuar con una actualización. Se realiza una copia de seguridad de todas las configuraciones de NSX Edge, direccionadores lógicos y pasarelas de servicios de extremo como parte de la copia de seguridad de NSX Manager.
 
-Una vez que NSX Manager se ha actualizado correctamente, NSX no se puede degradar. Se aconseja que cualquier actividad de mantenimiento se lleve a cabo en una ventana de mantenimiento acordada, por lo tanto, siga las instrucciones de su empresa. Se recomienda que todos los componentes de NSX se actualicen en una única ventana de parada para minimizar el tiempo de inactividad y reducir problemas de funcionalidad. El proceso de actualización de NSX puede llevar algún tiempo, por lo que es importante comprender el orden de actualización de despliegue de NSX:
+Después de que NSX Manager se actualice correctamente, NSX no se puede degradar. Se aconseja que cualquier actividad de mantenimiento se lleve a cabo en una ventana de mantenimiento acordada, por lo tanto, siga las instrucciones de su empresa. Se recomienda que todos los componentes de NSX se actualicen en una única ventana de parada para minimizar el tiempo de inactividad y reducir problemas de funcionalidad. El proceso de actualización de NSX puede llevar algún tiempo, por lo que es importante comprender el orden de actualización de despliegue de NSX:
 * NSX Manager
 * Clúster de controlador NSX
 * Clústeres de host NSX
@@ -43,7 +43,7 @@ El flujo de trabajo es el siguiente:
   - Inicie la sesión en el dispositivo virtual de NSX Manager mediante la dirección IP y las credenciales que están documentadas en la consola IC4VS y pulse el botón Actualizar en la página de inicio.
   - Inicie la sesión en NSX Manager.
   - En **Gestión de dispositivos**, pulse **Copias de seguridad y restaurar**.
-  - Pulse Copia de seguridad y especifique un nombre de archivo adecuado. Tenga en cuenta que VMware recomienda reinstalar el dispositivo de NSX Manager antes de restaurar los datos de NSX Manager. Aunque es posible que funcione una operación de restauración en un dispositivo NSX Manager existente, oficialmente no se admite. La práctica recomendada es tomar nota de los valores de IP para el dispositivo NSX Manager para que se puedan utilizar para especificar información de IP y la información de ubicación de copia de seguridad para el dispositivo NSX Manager recién desplegado.
+  - Pulse Copia de seguridad y especifique un nombre de archivo adecuado. VMware recomienda que vuelva a instalar el dispositivo NSX Manager antes de restaurar los datos de NSX Manager. Aunque es posible que una operación de restauración en un dispositivo NSX Manager existente funcione, oficialmente no se admite. La práctica recomendada es tomar nota de los valores de IP para el dispositivo NSX Manager para que se puedan utilizar para especificar información de IP y la información de ubicación de copia de seguridad para el dispositivo NSX Manager recién desplegado.
   - En la parte superior derecha, pulse **Cargar paquete** y cargue el archivo que ha descargado de _my.vmware.com_.
   - Lea la información de actualización y seleccione si desea habilitar SSH y participar en el programa VMware Customer Experience Improvement Program.
   - Pulse **Actualizar**.
@@ -64,4 +64,4 @@ El flujo de trabajo es el siguiente:
 ### Enlaces relacionados
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

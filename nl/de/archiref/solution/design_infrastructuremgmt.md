@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -127,6 +127,6 @@ Die folgende Prozedur beschreibt die Reihenfolge der Ereignisse, wenn eine VMwar
 
 ### Zugehörige Links
 
-* [Design der physischen Infrastruktur](design_physicalinfrastructure.html)
-* [Design der virtuellen Infrastruktur](design_virtualinfrastructure.html)
-* [Design der allgemeinen Services](design_commonservice.html)
+* [Design der physischen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [Design der virtuellen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [Design der allgemeinen Services](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)

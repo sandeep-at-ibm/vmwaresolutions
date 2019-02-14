@@ -2,23 +2,26 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-04"
+lastupdated: "2019-01-25"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Hinweise zum Netzbetrieb für Cloud Foundation-Instanzen
 
 Die Informationen in diesem Abschnitt enthalten Hinweise und Voraussetzungen für den Netzbetrieb Ihrer Cloud Foundation-Instanzen. Stellen Sie sicher, dass die Voraussetzungen erfüllt sind, damit Ihre Instanzen ordnungsgemäß arbeiten.
 
 ## Netzkomponenten für Cloud Foundation-Instanzen
+{: faq}
 
-Informationen zu den Komponenten für den Netzbetrieb, die in Ihrer Cloud Foundation-Instanz enthalten sind, finden Sie unter [Technische Spezifikationen für Cloud Foundation-Instanzen](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+Informationen zu den Komponenten für den Netzbetrieb, die in Ihrer Cloud Foundation-Instanz enthalten sind, finden Sie unter [Technische Spezifikationen für Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## Hinweise zur Firewall
 
-Wenn Sie Firewalls verwenden, müssen Sie Regeln für die gesamte Kommunikation aus der {{site.data.keyword.IBM}} CloudDriver-VSI (VSI – virtuelle Serverinstanz) und den SDDC Manager-VMs konfigurieren. Diese Regeln müssen es zulassen, dass alle Protokolle an den IP-Adressen `10.0.0.0/8` und `161.26.0.0/16` kommunizieren können. Beispiele für solche Firewalls sind NSX Distributed Firewalls (DFW) oder Vyatta-Firewalls.
+Wenn Sie Firewalls verwenden, müssen Sie Regeln für die gesamte Kommunikation aus der {{site.data.keyword.IBM}} CloudDriver-VSI (VSI - virtuelle Serverinstanz) und den SDDC Manager-VMs konfigurieren. Diese Regeln müssen es zulassen, dass alle Protokolle an den IP-Adressen `10.0.0.0/8` und `161.26.0.0/16` kommunizieren können. Beispiele für solche Firewalls sind NSX Distributed Firewalls (DFW) oder Vyatta-Firewalls.
 
 ## VMware NSX mit virtuellen Maschinen verwenden
 
@@ -28,7 +31,7 @@ Wenn Ihre Workload-VMs jedoch miteinander kommunizieren und auf das internet zug
 
 Weitere Informationen zur Vorgehensweise beim Einrichten von NSX finden Sie in den folgenden Abschnitten:
 * Lesen Sie bezüglich einer primären (einzelnen) Cloud Foundation-Instanz den Abschnitt [Setting up NSX for workload VMs on VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/).
-* Lesen Sie im Zusammenhang mit einer Cloud Foundation-Instanz in einer Konfiguration mit mehreren Standorten den Abschnitt "Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}" (https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html).
+* Informationen zu einer Cloud Foundation-Instanz in einer Konfiguration mit mehreren Standorten finden Sie in [Sichere Verbindung für private VMware-Workloads in {{site.data.keyword.cloud_notm}} herstellen](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}.
 
 ## Hinweise zum Ändern von Kennwörtern für NSX-Komponenten
 

@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-10-19"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V2.2 릴리스 정보
 
@@ -64,7 +68,8 @@ V2.2 이상 릴리스에서 새 인스턴스는 ESXi 서버에 대한 새 고급
 
 V2.2 이상 릴리스의 경우, 초기 클러스터에 ESXi 서버 수를 최대 51개까지 늘리고 추가 클러스터에 ESXi 서버 수를 최대 59개까지 늘릴 수 있습니다.
 
-**중요:Important:** V2.1 이전 릴리스에 배치된 인스턴스의 경우, 필요한 vSAN 지원을 사용으로 설정하여 32개가 초과하도록 클러스터 크기를 늘려야 합니다. ESXi 서버 수를 늘리는 단계에 대한 자세한 정보는 [ESXi 서버에 대한 FAQ](../vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-)의 _몇 개의 ESXi 서버를 클러스터에 추가할 수 있습니까?_를 참조하십시오.
+V2.1 이전 릴리스에 배치된 인스턴스의 경우, 필요한 vSAN 지원을 사용으로 설정하여 32개가 초과하도록 클러스터 크기를 늘려야 합니다. ESXi 서버 수를 늘리는 단계에 대한 자세한 정보는 [ESXi 서버에 대한 FAQ](../vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-)의 _몇 개의 ESXi 서버를 클러스터에 추가할 수 있습니까?_를 참조하십시오.
+{:important}
 
 ## vCenter Server 및 Cloud Foundation 인스턴스에 대한 추가 네트워크 구성 옵션
 
@@ -86,7 +91,8 @@ V2.2 이상 릴리스에 배치된 VMware vCenter Server 인스턴스의 경우,
 
 이제 Microsoft Active Directory(AD)용 하나의 Microsoft Windows Server Virtual Server Instance(VSI) 또는 관리 클러스터에 있는 두 개의 고가용성 Microsoft Windows 가상 머신의 배치를 선택할 수 있습니다. V2.2 이전 릴리스의 경우, 기본적으로 Microsoft AD용 Microsoft Windows VSI 하나가 자동으로 배치되었습니다. 두 개의 Microsoft Windows 가상 머신을 선택하는 새 옵션은 더 많은 개인정보 보호를 제공하고 Veeam 서비스를 사용하여 가상 머신을 백업하고 복원하는 옵션을 제공합니다.
 
-**참고:** 2개의 Microsoft Windows 가상 머신을 사용하도록 인스턴스를 구성하는 경우 2개의 Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스 및/또는 Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스를 사용하십시오. 가상 머신을 활성화할 수 있는 30일의 기간이 제공됩니다.
+두 개의 Microsoft Windows 가상 머신을 사용하도록 인스턴스를 구성하는 경우 두 개의 Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스 및/또는 Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스를 사용하십시오. 가상 머신을 활성화할 수 있는 30일의 기간이 제공됩니다.
+{:note}
 
 자세한 정보는 [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html#system-settings)의 *시스템 설정* 절을 참조하십시오.
 

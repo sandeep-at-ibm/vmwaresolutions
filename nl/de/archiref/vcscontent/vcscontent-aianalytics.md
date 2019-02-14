@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,7 +19,8 @@ Abbildung 1. Weitere Anreicherung von Stock Trader
 
 Das folgende Beispiel zeigt ein einfaches, aber nur vermeintlich leistungsfähiges Verfahren für die Anreicherung einer Anwendung. Jane durchsucht den [{{site.data.keyword.cloud}}-Katalog](https://console.cloud.ibm.com/catalog/) nach den Services [AI](https://console.cloud.ibm.com/catalog/?category=ai) und [Analytics](https://console.cloud.ibm.com/catalog/?category=analytics) und stellt fest, dass der Katalog reichhaltigen Inhalt aufweist.
 
-Jane wählt [Tone Analyzer](https://console.cloud.ibm.com/catalog/services/tone-analyzer) aus, entscheidet sich für den Standardplan und erhält anschließend die Berechtigungsnachweise für den Aufruf. Jane hat das Refactoring von Stock Trader ausgeführt und erstellt lediglich einen geheimen Kubernetes-Schlüssel für Tone Analyzer. Selbst wenn Jane Pläne oder Regionen ändert, muss sie daher keinen erneuten Build für den Code durchführen.
+Jane wählt [Tone Analyzer](https://console.cloud.ibm.com/catalog/services/tone-analyzer) aus, entscheidet sich für den Standardplan und erhält anschließend die Berechtigungsnachweise für den Aufruf.
+Jane hat das Refactoring von Stock Trader ausgeführt und erstellt lediglich einen geheimen Kubernetes-Schlüssel für Tone Analyzer. Selbst wenn Jane Pläne oder Regionen ändert, muss sie daher keinen erneuten Build für den Code durchführen.
 
 Dank des Refactorings konnte Jane mit verschiedenen Benutzerschnittstellenframeworks experimentieren, ohne hierdurch die Funktionalität für den Benutzer zu unterbrechen. Als Folge steht eine neue Benutzerschnittstelle zur Verfügung, mit deren Hilfe der Tonfall des Benutzerfeedbacks verstanden werden kann.
 
@@ -35,7 +36,9 @@ Jetzt kann sich die Marketingleiterin Margret bei jeder laufenden Werbekampagne 
 
 ## Neuer Börsenservice
 
-Sie haben vielleicht bereits bemerkt, dass der Börsenservice geändert wurde. Dies kann der Fall sein, wenn sich der Eigentümer oder die API-Struktur eines öffentlichen Service ändert. Zum Glück hat Jane [API Connect](https://console.cloud.ibm.com/catalog/services/api-connect) verwendet. Zunächst setzte sie API Connect ein, um die Antwort vom ursprünglichen Börsenservice zu vereinfachen, weil Empfang und Formatierung der gewünschten Daten aus der erhaltenen unaufbereiteten API etwas umständlich war.
+Sie haben vielleicht bereits bemerkt, dass der Börsenservice geändert wurde.
+Dies kann der Fall sein, wenn sich der Eigentümer oder die API-Struktur eines öffentlichen Service ändert. Zum Glück hat Jane [API Connect](https://console.cloud.ibm.com/catalog/services/api-connect) verwendet.
+Zunächst setzte sie API Connect ein, um die Antwort vom ursprünglichen Börsenservice zu vereinfachen, weil Empfang und Formatierung der gewünschten Daten aus der erhaltenen unaufbereiteten API etwas umständlich war.
 
 Dies hat für Jane jetzt den erfreulichen Effekt, dass sie zur Änderung des Börsenservice lediglich seine Zuordnung zu der von ihr erstellten vereinfachten API ändern und ihren Code noch nicht einmal erneut starten musste. Die Lösung "Stock Trader" forderte einfach die Daten weiterhin von derselben API an, als ob sich nichts geändert hätte. Alle API-Änderungen fanden sozusagen hinter den Kulissen statt.
 
@@ -43,4 +46,4 @@ Durch die Überwachung und Messung in API Connect kann Jane darüber hinaus verf
 
 ### Zugehörige Links
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

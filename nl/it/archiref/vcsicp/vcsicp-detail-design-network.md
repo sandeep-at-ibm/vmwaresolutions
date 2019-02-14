@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-16"
+lastupdated: "2019-01-23"
 
 ---
 
 # Flussi e accesso di rete
 
-## Accesso all'applicazione del contenitore - ICP
+## Accesso all'applicazione del contenitore – IBM Cloud Private
 
 Ci sono tre modi principali per ottenere il traffico esterno e l'accesso alle applicazioni del cluster Kubernetes:
 
@@ -18,39 +18,47 @@ Ci sono tre modi principali per ottenere il traffico esterno e l'accesso alle ap
 - LoadBalancer
 - Ingress
 
-### NodePort
+### NodePort - IBM Cloud Private
+
 Le Nodeport sono un modo semplice di esporre l'accesso esterno ad un carico di lavoro per la verifica e lo sviluppo iniziale ma non è consigliato per la produzione. Ingress o LoadBalancer sono il percorso consigliato.
 
-### LoadBalancer
-Al momento, la piattaforma ICP supporta un LoadBalancer esterno per il carico di lavoro dell'applicazione.
+### LoadBalancer - IBM Cloud Private
 
-### Ingress
-Un Ingress è una raccolta di regole che consentono alle connessioni in entrata di raggiungere i servizi cluster. Può essere configurato per fornire URL raggiungibili esternamente dai servizi, il traffico di bilanciamento del carico, terminare l'SSL, offrire un host virtuale basato sul nome e altro ancora.  Il nodo Proxy nell'infrastruttura ICP esegue questa funzione.
+Al momento, la piattaforma {{site.data.keyword.icpfull_notm}} supporta un LoadBalancer esterno per il carico di lavoro dell'applicazione.
 
-## Accesso all'applicazione del contenitore - IKS
+### Ingress - IBM Cloud Private
+
+Un Ingress è una raccolta di regole che consentono alle connessioni in entrata di raggiungere i servizi cluster. Può essere configurato per fornire URL raggiungibili esternamente dai servizi, il traffico di bilanciamento del carico, terminare l'SSL, offrire un host virtuale basato sul nome e altro ancora.  Il nodo Proxy nell'infrastruttura {{site.data.keyword.icpfull_notm}} esegue questa funzione.
+
+## Accesso all'applicazione del contenitore – Servizio Kubernetes IBM Cloud
+
 Ci sono tre modi principali per ottenere il traffico esterno e l'accesso alle applicazioni del cluster Kubernetes:
 
 - NodePort
 - LoadBalancer
 - Ingress
 
-### NodePort
+### NodePort - Servizio Kubernetes IBM Cloud
+
 Le Nodeport sono un modo semplice di esporre l'accesso esterno ad un carico di lavoro per la verifica e lo sviluppo iniziale ma non è consigliato per la produzione. Ingress o LoadBalancer sono il percorso consigliato.
 
-### LoadBalancer
-Ogni cluster IKS viene fornito con un programma di bilanciamento del carico dell'applicazione (ALB) pubblico o privato. L'ALB utilizza un punto di ingresso pubblico o privato sicuro e univoco per instradare le richieste in entrata alle tue applicazioni.
+### LoadBalancer - Servizio Kubernetes IBM Cloud
 
-### Ingress
+Ogni cluster {{site.data.keyword.containerlong_notm}} viene fornito con un programma di bilanciamento del carico dell'applicazione (ALB) pubblico o privato. L'ALB utilizza un punto di ingresso pubblico o privato sicuro e univoco per instradare le richieste in entrata alle tue applicazioni.
+
+### Ingress - Servizio Kubernetes IBM Cloud
+
 Un Ingress è una raccolta di regole che consentono alle connessioni in entrata di raggiungere i servizi cluster. Può essere configurato per fornire URL raggiungibili esternamente dai servizi, il traffico di bilanciamento del carico, terminare l'SSL, offrire un host virtuale basato sul nome e altro ancora.
 
 ## Flussi del traffico
+
 Sono descritti i seguenti flussi di traffico:
 
-- Utente esterno su internet a un livello web ospitato in un contenitore in ICP ({{site.data.keyword.cloud}} Private).
-- Livello web ospitato in un contenitore in ICP al livello del database ospitato in una macchina virtuale (VM) in VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
+- Utente esterno su internet a un livello web ospitato in un contenitore in {{site.data.keyword.icpfull_notm}}.
+- Livello web ospitato in un contenitore in {{site.data.keyword.icpfull_notm}} al livello del database ospitato in una macchina virtuale (VM) in VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 - Utente aziendale sull'accesso di rete aziendale a una VM in vCenter Server.
 
-### Utente esterno su internet a un livello web ospitato in un contenitore in ICP
+### Utente esterno su internet a un livello web ospitato in un contenitore in IBM Cloud Private
 
 1. L'utente esterno effettua una richiesta al livello web utilizzando l'URL.
 2.	Viene utilizzato DNS per determinare l'indirizzo IP. Questo indirizzo IP è un indirizzo pubblico di {{site.data.keyword.cloud_notm}} su una sottorete portatile che è assegnata all'istanza vCenter Server.
@@ -59,11 +67,11 @@ Sono descritti i seguenti flussi di traffico:
 5.	All'interno del nodo di lavoro, kube-proxy instrada la richiesta al servizio ALB o Ingress.
 6.	Se l'applicazione si trova sullo stesso nodo di lavoro, vengono utilizzate le iptable per determinare quale interfaccia interna viene utilizzata per inoltrare la richiesta. Se l'applicazione si trova su un nodo di lavoro differente, allora il Calico vRouter esegue l'instradamento verso il nodo di lavoro applicabile, utilizzando l'incapsulamento IP-in-IP. Il pacchetto IP-in-IP viene incapsulato in un frame VXLAN per il trasporto verso l'host vSphere ESXi in cui si trova il nodo di lavoro.
 
-### Livello web ospitato in un contenitore in ICP al livello del database ospitato in una VM in vCenter Server
+### Livello web ospitato in un contenitore in IBM Cloud Private al livello del database ospitato in una VM in vCenter Server
 
-Il modo in cui le tabelle di instradamento nell'ESG e i vRouter vengono popolate dipende dal metodo di integrazione. Vedi l'integrazione di ICP e vCenter Server.
+Il modo in cui le tabelle di instradamento nell'ESG e i vRouter vengono popolate dipende dal metodo di integrazione. Vedi l'integrazione di {{site.data.keyword.icpfull_notm}} e vCenter Server.
 
-1.	Il livello web che viene eseguito in un contenitore in ICP effettua una richiesta a un database che viene eseguito su una VM nella stessa istanza vCenter Server.
+1.	Il livello web che viene eseguito in un contenitore in {{site.data.keyword.icpfull_notm}} effettua una richiesta a un database che viene eseguito su una VM nella stessa istanza vCenter Server.
 2.	Viene utilizzato DNS per risolvere la richiesta all'indirizzo IP del database.
 3.	Il contenitore invia la richiesta al Calico vRouter.
 4.	Il vRouter ha una sua tabella di instradamento che viene popolata con gli intervalli di indirizzi IP ospitati nell'istanza vCenter Server.
@@ -84,21 +92,25 @@ Il modo in cui le tabelle di instradamento nell'ESG e i vRouter vengono popolate
 7.	La VM riceve la richiesta.
 
 ## Rete di accesso pubblica
-ICP e CAM, per impostazione predefinita, richiedono la connettività internet per richiamare le immagini Docker, i grafici Helm, i modelli Terraform e i gestori del pacchetto del sistema operativo.
+
+{{site.data.keyword.icpfull_notm}} e CAM, per impostazione predefinita, richiedono la connettività internet per richiamare le immagini Docker, i grafici Helm, i modelli Terraform e i gestori del pacchetto del sistema operativo.
 Nelle ultime release, è ora presente il supporto per le installazioni basate sul proxy non direttamente collegate a internet e che dispongono di opzioni per l'installazione in una modalità offline.
 
 ###	Firewall NSX
-Il firewall Edge NSX ICP è configurato con le regole per poter:
+
+Il firewall Edge NSX {{site.data.keyword.icpfull_notm}} è configurato con le regole per poter:
 *	Abilitare l'accesso alle reti VXLAN all'accesso pubblico.
 *	Abilitare l'accesso alle reti VXLAN all'accesso di rete {{site.data.keyword.cloud_notm}} privata.
 *	Abilitare l'accesso alla rete {{site.data.keyword.cloud_notm}} privata alle reti VXLAN.
 
 ### NAT NSX
-NAT NSX ICP è configurato con i seguenti NAT:
+
+NAT NSX {{site.data.keyword.icpfull_notm}} è configurato con i seguenti NAT:
 *	SNAT per l'accesso alle reti VXLAN per l'accesso pubblico.
 *	SNAT per l'accesso alle reti VXLAN per l'accesso di rete {{site.data.keyword.cloud_notm}} privata.
-*	DNAT per i vIP del cluster ICP.
+*	DNAT per i vIP del cluster {{site.data.keyword.icpfull_notm}}.
 
 ### Link correlati
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

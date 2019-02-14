@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-14"
 
 ---
 
@@ -51,9 +51,8 @@ La capa de gestión de virtualización consta de los componentes siguientes:
 * NSX Manager
 * Dos NSX Edge Services Gateways (ESG)
 * Tres NSX Controllers
-* Dispositivo virtual de Platform Services Controller (PSC)
-* vCenter Server Appliance (vCSA)
-* Instancia de servidor virtual de IBM CloudDriver (VSI).
+* vCenter Server Appliance (vCSA) con Platform Services Controller (PSC) incorporado
+* Instancia de servidor virtual IBM CloudDriver (VSI)
 
 NetApp ONTAP Select se ejecuta en un clúster de VMware y virtualiza el almacenamiento local en los hosts. NetApp ONTAP Select se despliega en el modelo dedicado, donde no se espera que otras cargas de trabajo compartan el clúster con el mismo. Como resultado, la configuración de hardware de la oferta NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} se dimensiona teniendo en cuenta únicamente los requisitos de NetApp ONTAP Select.
 

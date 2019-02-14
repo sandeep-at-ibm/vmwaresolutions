@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-16"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2018-11-16"
 Dieses Dokument enthält eine Übersicht über den Prozess der Anwendungsmodernisierung auf {{site.data.keyword.cloud}}. Dabei liegt der Fokus auf den Cloud-Management-Komponenten, damit eine integrierte Umgebung mit mehreren Clouds für die Anwendungsmodernisierung genutzt werden kann:
 
 - **vCenter Server on {{site.data.keyword.cloud_notm}}** - vCenter Server ist ein Angebot von {{site.data.keyword.vmwaresolutions_short}} und stellt eine VMware-basierte Plattform dar, die automatisch auf {{site.data.keyword.cloud_notm}} eingerichtet wird.
-- **{{site.data.keyword.cloud_notm}} Private** - ICP ist eine Anwendungsplattform für die Entwicklung und Verwaltung von containerisierten Anwendungen, die auf virtualisierten Infrastrukturplattformen, wie z. B. VMware, bereitgestellt werden.
-- **IBM Kubernetes Services** - IKS ist ein verwalteter Service auf {{site.data.keyword.cloud_notm}}, der Kubernetes als Orchestrierungsengine für die Automatisierung der Bereitstellung, die Skalierung und den Betrieb von Anwendungscontainern in einem Cluster mit einem Tenant verwendet.
+- **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}} ist eine Anwendungsplattform für die Entwicklung und Verwaltung von containerisierten Anwendungen, die auf virtualisierten Infrastrukturplattformen, wie z. B. VMware, bereitgestellt werden.
+- **{{site.data.keyword.containerlong_notm}}** – {{site.data.keyword.containerlong_notm}} ist ein verwalteter Service auf {{site.data.keyword.cloud_notm}}, der Kubernetes als Orchestrierungsengine für die Automatisierung der Bereitstellung, die Skalierung und den Betrieb von Anwendungscontainern in einem Cluster mit einem Tenant verwendet.
 - **IBM Multi-Cluster Manager** - MCM bietet Benutzertransparenz, anwendungsorientiertes Management (Richtlinien, Bereitstellungen, Vitalität, Betrieb) und die richtlinienbasierte Konformität über Clouds und Cluster hinweg. Mit MCM erhalten Sie die Kontrolle über Ihre Kubernetes-Cluster.
-- **{{site.data.keyword.cloud_notm}} Automation Manager** - CAM ist eine Self-Service-Managementplattform für mehrere Clouds, die unter ICP ausgeführt wird und die Entwickler und Administratoren in die Lage versetzt, die Anforderungen des Unternehmens zu erfüllen.
+- **{{site.data.keyword.cloud_notm}} Automation Manager** - CAM ist eine Self-Service-Managementplattform für mehrere Clouds, die unter {{site.data.keyword.icpfull_notm}} ausgeführt wird und die Entwickler und Administratoren in die Lage versetzt, die Anforderungen des Unternehmens zu erfüllen.
 
 ## Anwendungsmodernisierung auf IBM Cloud
 
@@ -34,7 +34,7 @@ Die Anwendungsmodernisierung bietet u. a. folgende Vorteile:
 IBM geht davon aus, dass 70% der eingesetzten privaten Clouds durch die Notwendigkeit der Modernisierung von Anwendungsumgebungen motiviert sind. Die meisten Unternehmen verfolgen bei der Anwendungsmodernisierung jedoch einen stufenweisen Ansatz, was Hybridumgebungen und Umgebungen mit mehreren Clouds erforderlich macht. Die Szenarien zeichnen sich durch folgende Merkmale aus:
 
 - Komplexe und monolithische traditionelle Anwendungen, die in der Regel auf Mainframes oder UNIX-Systemen ausgeführt werden, werden weiterhin lokal betrieben.
-- x86-Umgebungen, die für Systems of Record (SoR) verwendet werden, oder Anwendungen, die sicherheitskritische oder regulierte Workloads beinhalten, werden in eine virtualisierte Infrastruktur oder in eine private Cloud verlegt.
+- x86-Umgebungen, die für Systems of Record (SoR) verwendet werden, und Anwendungen, die sicherheitskritische und regulierte Workloads beinhalten, werden in eine virtualisierte Infrastruktur oder in eine private Cloud verlegt.
 - Anwendungen wie SAP oder High-Performance Computing nutzen Bare-Metal-Ressourcen.
 - Sicherheitskritische und einige regulierte Workloads, die in die öffentliche Cloud verlegt werden können, werden in dedizierte Umgebungen verlagert.
 - Systems of Engagement (SoE) wie z. B. Web, Mobile, IoT, AI oder Video werden in öffentliche Clouds verlagert.
@@ -45,17 +45,17 @@ Da Ihre IT-Infrastruktur und Ihre Geschäftsanforderungen individuell sind, ben�
 
 Dieses Dokument ist eine von fünf Veröffentlichungen, die die verschiedenen Technologien, die bei der Anwendungsmodernisierung hin zur {{site.data.keyword.cloud_notm}} verwendet werden, aus verschiedenen Blickwinkeln beleuchten:
 
-* _vCenter Server und IBM Cloud Private_ - Aktueller Leitfaden, der als Referenzarchitektur für die Bereitstellung der folgenden Plattformen dient:
+* _vCenter Server und {{site.data.keyword.icpfull_notm}}_ - Aktueller Leitfaden, der als Referenzarchitektur für die Bereitstellung der folgenden Plattformen dient:
   - **VMware vCenter Server on {{site.data.keyword.cloud_notm}}** - Dies ist ein Angebot von {{site.data.keyword.vmwaresolutions_short}} und stellt eine VMware-basierte Plattform dar, die automatisch auf {{site.data.keyword.cloud_notm}} eingerichtet wird.
-  - **{{site.data.keyword.cloud_notm}} Private** - Eine Anwendungsplattform für die Entwicklung und Verwaltung von containerisierten Anwendungen. Bei ICP handelt sich um eine integrierte Umgebung, die Kubernetes als Container-Orchestrator, ein privates Image-Repository, eine Managementkonsole, Überwachungsframeworks und eine grafische Benutzerschnittstelle enthält, von der aus Sie Ihre Anwendungen zentral bereitstellen, verwalten, überwachen und skalieren können.
+  - **{{site.data.keyword.icpfull_notm}}** – Eine Anwendungsplattform für die Entwicklung und Verwaltung von containerisierten Anwendungen. Bei {{site.data.keyword.icpfull_notm}} handelt es sich um eine integrierte Umgebung, die Kubernetes als Container-Orchestrator, ein privates Image-Repository, eine Managementkonsole, Überwachungsframeworks und eine grafische Benutzerschnittstelle enthält, von der aus Sie Anwendungen zentral bereitstellen, verwalten, überwachen und skalieren können.
   - **{{site.data.keyword.cloud_notm}} Automation Manager** - Eine auf Unternehmen abgestimmte IaC-Plattform (IaC = Infrastructure as Code), die eine zentrale Bereitstellung von VMware-basierten Workloads neben Kubernetes-basierten Workloads bietet und bei der Sie Vorlagen verwenden können, die in einem Repository gespeichert und versioniert werden.
-* [vCenter Server und IBM Kubernetes Service](../vcsiks/vcsiks-intro.html) - Referenzarchitektur für die Bereitstellung der folgenden Plattformen:
+* [vCenter Server und {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html) - Referenzarchitektur für die Bereitstellung der folgenden Plattformen:
   - **VMware vCenter Server on {{site.data.keyword.cloud_notm}}** - Dies ist ein Angebot von {{site.data.keyword.vmwaresolutions_short}} und stellt eine VMware-basierte Plattform dar, die automatisch auf {{site.data.keyword.cloud_notm}} eingerichtet wird.
-  - **{{site.data.keyword.cloud_notm}} Kubernetes Service** - Ein verwalteter Service auf {{site.data.keyword.cloud_notm}}, der Kubernetes als Orchestrierungsengine für die Automatisierung der Bereitstellung, die Skalierung und den Betrieb von Anwendungscontainern in einem Cluster mit einem Tenant verwendet.
-* [vCenter Server-Netzbetrieb](../vcsnsxt/vcsnsxt-intro.html) - Ein Leitfaden, der sich auf die Netztechnologien konzentriert, die in vCenter Server, ICP und IKS eingesetzt werden (z. B. NSX-V, NSX-T und Calico).
-* [VMware und Concept Car "Skate Advisor"](../vcscar/vcscar-intro.html) - Diese Referenzarchitektur ist ein so genanntes "Concept Car", also ein Mechanismus, der in einer Art Designstudie Technologien zur Lösung von realen Problemen herausstellt und demonstriert. Sie soll auf realistische Weise eine Interaktion zwischen Watson AI und maschinellem Lernen veranschaulichen. Anhand der Skateboarding-Szene werden Cloud-Services auf verständliche Weise erläutert. Die Implementierung der Designstudie erweitert die Anwendung "Acme Skateboard" durch das Tool "Skate Advisor". Mit dem Tool "Skate Advisor" können sich Benutzer durch eine Watson-gesteuerte Engine über Skateboard-Tricks austauschen. 
-* [VMware: Modernisierung der Anwendung "Stock Trader"](../vcscontent/vcscontent-modjourney.html) - Dieser Referenzanwendungsfall beschreibt die Modernisierung einer klassischen WebSphere Application Server-Anwendung mit ICP, IBM Middleware-Inhalten, {{site.data.keyword.cloud_notm}} Kubernetes Service und vCenter Server. Alle sind auf dem Weg zur Cloud, aber jeder befindet sich an einer anderen Etappe dieser Strecke. Schritt für Schritt wird die bestehende Anwendung "Stock Trader" von der Anwendungsarchitektin Jane und dem Cloudinfrastrukturarchitekten Todd modernisiert. Die Referenz zeigt anhand von Beispielen, wie Sie die einzelnen Schritte im Prozess ausführen und welchen Wert jeder Schritt ungeachtet seiner Größe für Ihr Unternehmen hat. Der Fokus liegt auf vier Themen: Anwendungen, DevOps, Integration und Management. Diese Bereiche sind bei der Umsetzung Ihrer Ziele eng verzahnt und die Modernisierung lediglich eines einzigen Bereiches führt faktisch zu Problemen in allen Bereichen.
+  - **{{site.data.keyword.containerlong_notm}}** – ist ein verwalteter Service auf {{site.data.keyword.cloud_notm}}, der Kubernetes als Orchestrierungsengine für die Automatisierung der Bereitstellung, die Skalierung und den Betrieb von Anwendungscontainern in einem Cluster mit einem Tenant verwend.
+* [vCenter Server-Netzbetrieb](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html) - Dieser Leitfaden konzentriert sich auf die Netztechnologien, die in vCenter Server, {{site.data.keyword.icpfull_notm}} und {{site.data.keyword.containerlong_notm}} eingesetzt werden (z. B. NSX-V, NSX-T und Calico).
+* [VMware und Concept Car "Skate Advisor"](/docs/services/vmwaresolutions/archiref/vcscar/vcscar-intro.html) - Diese Referenzarchitektur ist ein so genanntes "Concept Car", also ein Mechanismus, der in einer Art Designstudie Technologien zur Lösung von realen Problemen herausstellt und demonstriert. Sie soll auf realistische Weise eine Interaktion zwischen Watson AI und maschinellem Lernen veranschaulichen. Anhand der Skateboarding-Szene werden Cloud-Services auf verständliche Weise erläutert. Die Implementierung der Designstudie erweitert die Anwendung "Acme Skateboard" durch das Tool "Skate Advisor". Mit dem Tool "Skate Advisor" können sich Benutzer durch eine Watson-gesteuerte Engine über Skateboard-Tricks austauschen.
+* [VMware: Modernisierung der Anwendung "Stock Trader"](/docs/services/vmwaresolutions/archiref/vcscontent/vcscontent-modjourney.html) - Dieser Referenzanwendungsfall beschreibt die Modernisierung einer klassischen WebSphere Application Server-Anwendung mit {{site.data.keyword.icpfull_notm}}, IBM Middleware-Inhalten, {{site.data.keyword.containerlong_notm}} und vCenter Server. Alle sind auf dem Weg zur Cloud, aber jeder befindet sich an einer anderen Etappe dieser Strecke. Schritt für Schritt wird die bestehende Anwendung "Stock Trader" von der Anwendungsarchitektin Jane und dem Cloudinfrastrukturarchitekten Todd modernisiert. Die Referenz zeigt anhand von Beispielen, wie Sie die einzelnen Schritte im Prozess ausführen und welchen Wert jeder Schritt ungeachtet seiner Größe für Ihr Unternehmen hat. Der Fokus liegt auf vier Themen: Anwendungen, DevOps, Integration und Management. Alle Bereiche sind bei der Umsetzung Ihrer Ziele eng verzahnt. Einen Bereich ohne die anderen zu modernisieren, könnte zu Problemen führen.
 
 ### Zugehörige Links
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

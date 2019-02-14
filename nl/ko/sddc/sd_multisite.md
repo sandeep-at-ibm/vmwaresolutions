@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-22"
 
 ---
 
@@ -16,7 +16,8 @@ lastupdated: "2018-10-29"
 
 {{site.data.keyword.vmwaresolutions_full}}를 사용하여 다른 위치에 인스턴스를 배치할 수 있고 짧은 시간 동안 시작하고 실행할 수 있습니다.
 
-**참고:**
+## 참고
+
 * 다중 사이트 구성에서 VMware Cloud Foundation과 VMware vCenter Server 인스턴스를 연결할 수 없습니다.
 * 이전 릴리스의 인스턴스로 V2.0에 배치된 인스턴스를 연결할 수 없습니다(이전 릴리스가 V2.0으로 업그레이드된 경우에도 해당).
 

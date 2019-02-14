@@ -2,21 +2,27 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # IBM Cloud for VMware Solutions に関する一般的なよくある質問
 
 {{site.data.keyword.vmwaresolutions_full}} に関するよくある質問への回答をご覧ください。
 
 ## IBM Cloud for VMware Solutions にはどのようなユーザー・アカウントが必要ですか?
+{: faq}
 
-* **IBMid アカウント**。 {{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスするためには、このアカウントが必要です。 このコンソールは、{{site.data.keyword.slportal}}とは別のスタンドアロンのユーザー・インターフェースです。 詳しくは、[概説](../index.html)を参照してください。
+* **IBMid アカウント**。 {{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスするためには、このアカウントが必要です。 このコンソールは、{{site.data.keyword.slportal}}とは別のスタンドアロンのユーザー・インターフェースです。 詳しくは、[概説](/docs/services/vmwaresolutions/index.html)を参照してください。
 * **{{site.data.keyword.cloud_notm}} アカウント**。 プロビジョニングにはこのアカウントが必要です。 {{site.data.keyword.cloud_notm}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。
-* **{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウント**。 このアカウントは以前は **IBM SoftLayer** アカウントと呼ばれていたもので、インフラストラクチャー製品とサービスを管理するための複数の追加機能を提供する {{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルへのログインにはこのアカウントを使用します。 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、**{{site.data.keyword.cloud_notm}} アカウント**を従量課金 (PAYG) タイプのアカウントにアップグレードすることにより、または既存の {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを {{site.data.keyword.cloud_notm}} アカウントにリンクすることにより取得できます。 使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは特定の要件を満たしている必要があります。 詳しくは、[必要なアカウントの登録](signing_softlayer_account.html)および [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](slaccountrequirement.html)を参照してください。
+* **{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウント**。 このアカウントは以前は **IBM SoftLayer** アカウントと呼ばれていたもので、インフラストラクチャー製品とサービスを管理するための複数の追加機能を提供する {{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルへのログインにはこのアカウントを使用します。 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、**{{site.data.keyword.cloud_notm}} アカウント**を従量課金 (PAYG) タイプのアカウントにアップグレードすることにより、または既存の {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを {{site.data.keyword.cloud_notm}} アカウントにリンクすることにより取得できます。 使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは特定の要件を満たしている必要があります。 詳しくは、[必要なアカウントの登録](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)および [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)を参照してください。
 
 ## IBM Cloud インフラストラクチャーの資格情報を IBM Cloud for VMware Solutions コンソールに関連付けるにはどうすればよいですか?
 
@@ -30,21 +36,21 @@ lastupdated: "2018-09-27"
 
 どのインスタンス・タイプでも、VMware 仮想環境のデプロイメント方法を選択できます。 違いは、カスタマイズと自動化の程度にあります。
 
-* VMware vCenter Server インスタンスを注文した場合は、カスタマイズしたコンピュート、ストレージ、ネットワークのリソースを備えた VMware 仮想環境がデプロイされます。 デプロイされるコンポーネントについて詳しくは、[vCenter Server インスタンスの技術仕様](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)を参照してください。
-* VMware Cloud Foundation インスタンスを注文した場合は、統一されたソフトウェア定義データ・センター (SDDC) プラットフォームがデプロイされます。 デプロイされるコンポーネントについて詳しくは、[Cloud Foundation インスタンスの技術仕様](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)を参照してください。
+* VMware vCenter Server インスタンスを注文した場合は、カスタマイズしたコンピュート、ストレージ、ネットワークのリソースを備えた VMware 仮想環境がデプロイされます。 デプロイされるコンポーネントについて詳しくは、[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)を参照してください。
+* VMware Cloud Foundation インスタンスを注文した場合は、統一されたソフトウェア定義データ・センター (SDDC) プラットフォームがデプロイされます。 デプロイされるコンポーネントについて詳しくは、[Cloud Foundation インスタンスの技術仕様](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)を参照してください。
 * VMware vSphere クラスターを注文すると、ホスト対象の VMware 環境を、VMware 互換ハードウェアを組み込みながら設計して構築するための柔軟性が最大化されます。 ただし、{{site.data.keyword.cloud_notm}} では、VMware vSphere クラスターのオプションの VMware コンポーネントのインストールや構成や起動が自動化されません。
-* vCenter Server インスタンスと Cloud Foundation インスタンスと vSphere クラスターでは、サポートされている機能がそれぞれ違います。 詳しくは、[オファリングの比較表](inst_comp_chart.html)を参照してください。
+* vCenter Server インスタンスと Cloud Foundation インスタンスと vSphere クラスターでは、サポートされている機能がそれぞれ違います。 詳しくは、[オファリングの比較表](/docs/services/vmwaresolutions/vmonic/inst_comp_chart.html)を参照してください。
 
 ## vCenter Server インスタンスには何が含まれていますか?
 
-詳しくは、[vCenter Server インスタンスの技術仕様](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)を参照してください。
+詳しくは、[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)を参照してください。
 
 ## Cloud Foundation インスタンスには何が含まれていますか?
 
-詳しくは、[Cloud Foundation インスタンスの技術仕様](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)を参照してください。
+詳しくは、[Cloud Foundation インスタンスの技術仕様](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)を参照してください。
 
 ## vSphere クラスターには何が含まれていますか?
-詳しくは、[VMware vSphere on {{site.data.keyword.cloud_notm}} のコンポーネント](../vsphere/vs_vsphereclusteroverview.html)を参照してください。
+詳しくは、[VMware vSphere on {{site.data.keyword.cloud_notm}} のコンポーネント](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)を参照してください。
 
 ## 2 ノードの vCenter Server インスタンスの可用性は高いですか?
 
@@ -66,26 +72,34 @@ vCenter Server インスタンスの場合、デプロイ時に作成される�
 
 **注:** Cloud Foundation インスタンスの場合、デフォルトのクラスター名は変更できません。
 
-##パッチはどのように管理されていますか?
+## パッチはどのように管理されていますか?
 
 IBM は、IBM CloudDriver 仮想サーバー・インスタンス (VSI) をオンデマンドでデプロイすることで、IBM コードの継続的な更新を提供しています。 Zerto on {{site.data.keyword.cloud_notm}} や Veeam on {{site.data.keyword.cloud_notm}} などのアドオン・サービスについては、継続的な更新を提供していません。 これらの更新は、お客様が入手してインストールしてください。
 
-VMware の更新は、デプロイした VMware インスタンスのタイプに応じて異なる方法で適用されます。
+VMware の更新は、インスタンスのタイプに応じて異なる方法で適用されます。
 
-* VMware Cloud Foundation インスタンスの場合は、vSphere ESXi、NSX、vCenter、Platform Services Controller、および SDDC Manager コンポーネントの更新が、{{site.data.keyword.vmwaresolutions_short}} コンソールから提供されます。
-* VMware vCenter Server インスタンスの場合
-  * V2.1 以上でデプロイまたは V2.1 以上にアップグレードしたインスタンスの場合、新しくデプロイされる ESXi サーバーとクラスターには、VMware から提供される新しい (最新とは限りません) ESXi 更新が適用されます。
-  * 新しくデプロイした ESXi サーバーとクラスターに、必要な最新の更新がすべて適用されていることを確認する作業を含め、VMware コンポーネントのその他のすべての更新はお客様が行ってください。
-  * V2.0 以上でデプロイしたインスタンスの場合は、VMware Update Manager (VUM) が vCenter Server に統合されています。 VMware から ESXi の更新をダウンロードするように VUM を構成できます。
+### VMware Cloud Foundation インスタンス
+
+vSphere ESXi、NSX、vCenter、Platform Services Controller、および SDDC Manager コンポーネントの更新が、{{site.data.keyword.vmwaresolutions_short}} コンソールから提供されます。
+
+### VMware vCenter Server インスタンス
+
+V2.1 以上でデプロイされたインスタンス、または V2.1 以上にアップグレードしたインスタンスの場合、新しくデプロイされる ESXi サーバーとクラスターには、VMware から提供される新しい (最新とは限りません) ESXi 更新が適用されます。
+
+新しくデプロイした ESXi サーバーとクラスターに、必要な最新の更新がすべて適用されていることを確認する作業を含め、VMware コンポーネントのその他のすべての更新はお客様が行ってください。
+{:important}
+
+V2.0 以上でデプロイしたインスタンスの場合は、VMware Update Manager (VUM) が vCenter Server に統合されています。 VMware から ESXi の更新をダウンロードするように VUM を構成できます。
 
 詳しくは、以下のリソースを参照してください。
 * [VMware サポート](https://www.vmware.com/support.html)
-* [vCenter Server インスタンスへの更新の適用](../vcenter/vc_applyingupdates.html)
-* [Cloud Foundation インスタンスへの更新の適用](../sddc/sd_applyingupdates.html)
+* [vCenter Server インスタンスへの更新の適用](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html)
+* [Cloud Foundation インスタンスへの更新の適用](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)
+* [vCenter Server with Hybridity Bundle インスタンスへの更新の適用](/docs/services/vmwaresolutions/vcenter/vc_hybrid_applyingupdates.html)
 
 ## 管理サービスの NSX Edge にはセキュリティーのリスクがありますか?
 
-管理サービスの VMware NSX Edge はパブリック・サブネット上に配置されますが、セキュリティーのリスクが生じないようにセキュリティー対策が適用されます。 それらの対策を次に示します。
+管理サービスの VMware NSX Edge はパブリック・サブネット上に配置されますが、セキュリティーのリスクが生じないように、以下のセキュリティー対策が適用されます。
 *  NSX Edge ファイアウォールは、管理仮想マシンから開始された発信 HTTPS (TCP ポート 443) トラフィックだけを許可するように構成されます。
 *  プライベート IP アドレスがプライベート・ネットワークの外部に見えないように、SNAT (送信元ネットワーク・アドレス変換) が使用されます。
 *  管理サービスの NSX Edge アプライアンスのリモート・アクセスは無効になっています。
@@ -104,12 +118,12 @@ VMware の更新は、デプロイした VMware インスタンスのタイプ�
 インスタンスのデプロイメントには、物理インフラストラクチャーに関する厳密な要件があります。ただし、具体的な要件は、{{site.data.keyword.CloudDataCents_notm}}ごとに違います。 インスタンスの注文時に、各地域で利用できるデータ・センターのリストが表示され、そのリストの中から 1 つを選択できます。
 
 詳しくは、以下の資料にある『_IBM Cloud データ・センターの使用可否_』セクションを参照してください。
-* [vCenter Server インスタンスの要件と計画](../vcenter/vc_planning.html)
-* [vCenter Server with Hybridity Bundle インスタンスの要件と計画](../vcenter/vc_hybrid_planning.html)
-* [Cloud Foundation インスタンスの要件と計画](../sddc/sd_planning.html)
-* [VMware vSphere on {{site.data.keyword.cloud_notm}} の要件と計画](../vsphere/vs_planning.html)
-* [NetApp ONTAP Select インスタンスの要件と計画](../netapp/np_planning.html)
-* [VMware Federal インスタンスの要件と計画](../vcenter/vc_fed_planning.html)
+* [vCenter Server インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [vCenter Server with Hybridity Bundle インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
+* [Cloud Foundation インスタンスの要件と計画](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [VMware vSphere on {{site.data.keyword.cloud_notm}} の要件と計画](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
+* [NetApp ONTAP Select インスタンスの要件と計画](/docs/services/vmwaresolutions/netapp/np_planning.html)
+* [VMware Federal インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
 
 ## インスタンスのデプロイにはどのくらいの時間がかかりますか?
 
@@ -127,12 +141,12 @@ VMware ESXi は各ベア・メタル・サーバーに自動的にインスト�
 
 ## IBM Cloud for VMware Solutions に問題がある場合はどうすればよいですか?
 
-{{site.data.keyword.vmwaresolutions_short}} のサポートが必要な場合は、いずれかのサポート・チャネルを使用して IBM サポートに連絡してください。 詳しくは、[IBM サポートへのお問い合わせ](trbl_support.html)を参照してください。
+{{site.data.keyword.vmwaresolutions_short}} のサポートが必要な場合は、いずれかのサポート・チャネルを使用して IBM サポートに連絡してください。 詳しくは、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)を参照してください。
 
 ### 関連リンク
 
-* [通知](notifications.html)
-* [Cloud Foundation インスタンス](../sddc/sd_cloudfoundationoverview.html)
-* [vCenter Server インスタンス](../vcenter/vc_vcenterserveroverview.html)
-* [コンソールへのアクセス](loginmethod.html)
-* [ユーザー・アカウントと設定](useraccount.html)
+* [通知](/docs/services/vmwaresolutions/vmonic/notifications.html)
+* [Cloud Foundation インスタンス](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [vCenter Server インスタンス](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [コンソールへのアクセス](/docs/services/vmwaresolutions/vmonic/loginmethod.html)
+* [ユーザー・アカウントと設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)

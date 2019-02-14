@@ -2,17 +2,20 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-12-11"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # VMware Federal 인스턴스에 대한 네트워킹 고려사항
 
 VMware Federal 인스턴스에 대한 자세한 네트워킹 고려사항 및 요구사항은 다음 정보를 검토하십시오. 인스턴스가 올바르게 작동하도록 요구사항을 충족하는지 확인하십시오.
 
 ## VMware Federal 인스턴스의 네트워킹 컴포넌트
+{: faq}
 
 VMware Federal 인스턴스에 포함된 네트워킹 컴포넌트를 검토하려면 [VMware Federal on {{site.data.keyword.cloud}} 인스턴스의 기술 스펙](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)을 참조하십시오.
 

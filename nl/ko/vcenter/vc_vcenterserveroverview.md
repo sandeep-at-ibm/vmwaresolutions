@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-14"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-05"
 
 # vCenter Server 개요
 
-VMware vCenter Server on {{site.data.keyword.cloud}}는 서비스로 VMware vSphere 스택을 제공하는 호스팅된 프라이빗 클라우드입니다. VMware 환경은 최소 두 개(세 개 권장)의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 맨 위에 빌드되고, 공유 네트워크 연결 스토리지와 전용 소프트웨어 정의 스토리지 옵션을 제공하며, VMware 환경에는 자동화 배치와 VMware NSX로 작동되며 관리하기 쉬운 논리 에지 방화벽의 구성이 포함됩니다.
+VMware vCenter Server on {{site.data.keyword.cloud}}는 서비스로 VMware vSphere 스택을 제공하는 호스팅된 프라이빗 클라우드입니다. VMware 환경은 최소 두 개(세 개 권장)의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 맨 위에 빌드되고, 공유 네트워크 연결 스토리지와 전용 소프트웨어 정의 스토리지 옵션을 제공하며, VMware 환경에는 자동화 배치와 VMware NSX로 작동되며 관리하기 쉬운 로지컬 에지 방화벽의 구성이 포함됩니다.
 
 대부분의 경우 전체 환경은 하루 내에 프로비저닝할 수 있으며, 베어메탈 인프라는 필요에 따라 신속하고 탄력적으로 컴퓨팅 용량을 늘리거나 줄이도록 스케일링할 수 있습니다.
 
@@ -45,7 +45,7 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 
 ### 가상화 관리
 
-이 계층은 vCenter Server Appliance(vCSA), NSX Manager, 2개의 NSX ESG, 3개의 NSX Controller, PSC(Platform Services Controller) 가상 어플라이언스 및 IBM CloudDriver VSI(Virtual Server Instance)로 구성됩니다. CloudDriver VSI는 환경에 호스트 추가 등과 같은 특정 오퍼레이션에 필요하면 요청 시에 배치됩니다.
+이 계층은 vCenter Server Appliance(vCSA), NSX Manager, 2개의 NSX ESG, 3개의 NSX Controller 및 IBM CloudDriver VSI(Virtual Server Instance)로 구성됩니다. CloudDriver VSI는 환경에 호스트 추가 등과 같은 특정 오퍼레이션에 필요하면 요청 시에 배치됩니다.
 
 기본 오퍼링은 최대 400개의 호스트와 최대 4000개의 VM이 포함된 환경을 지원하도록 크기가 조정된 vCenter Server 어플라이언스로 배치됩니다. 동일한 vSphere API 호환 도구 및 스크립트는 IBM 호스팅 VMware 환경을 관리하는 데 사용될 수 있습니다.
 
@@ -64,14 +64,12 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 
 다음 구성 중 하나로 세 개 이상의 {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
 * **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)  
-* **SAP 인증**: 선택한 CPU 모델의 {{site.data.keyword.baremetal_short}}
-  * 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 192GB RAM
-  * 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 384GB RAM
-  * 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 768GB RAM
-* **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 Intel Broadwell 세대 서버(Intel Xeon E5-2600 v4 시리즈)  
+* **SAP-certified**: 선택한 CPU 모델을 사용하는 Intel Skylake 또는 Intel Broadwell 세대 서버(Intel Xeon 6140/E5-2690/E7-8890 시리즈)
+* **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 Intel Broadwell 세대 서버(IntelXeon E5-2600/E7-4800 시리즈)  
+
      vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
-     {:note}
-     
+{:note}
+
 ### 네트워킹
 
 다음 네트워킹 컴포넌트가 주문됩니다.
@@ -111,12 +109,16 @@ vSAN 옵션은 디스크 유형, 크기 및 양에 대한 다양한 옵션을 �
 
 #### NFS 스토리지
 
-NFS 옵션은 크기 및 성능에 대한 다양한 옵션을 포함하여 워크로드의 사용자 정의된 공유 파일 레벨 스토리지를 제공합니다.
-* 크기: 1, 2, 4, 8 또는 12TB
-* 성능: 2, 4 또는 10IOPS/GB.
+NFS 옵션은 크기 및 성능에 대한 다양한 옵션을 포함하여 워크로드의 사용자 정의된 공유 파일 스토리지를 제공합니다.
+* 크기: 20 - 12000GB
+* 성능: 0.25, 2, 4 또는 10IOPS/GB
 * 파일 공유의 개별 구성
 
 NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 및 4 IOPS/GB 파일 공유가 주문됩니다.
+
+#### 로컬 디스크 스토리지
+
+**SAP 인증** 쿼드 Intel Xeon E7-8890 v4 프로세서 베어메탈 구성에만 사용 가능한 로컬 디스크 옵션은 디스크 수 및 디스크 유형에 적합한 여러 옵션을 사용하여 사용자 정의된 구성을 제공합니다.
 
 ### 라이센스(IBM 제공 또는 BYOL) 및 요금
 

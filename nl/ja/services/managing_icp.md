@@ -2,13 +2,21 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-09-27"
 
 ---
 
-# IBM Cloud Private Hosted の要求
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+
+# IBM Cloud Private Hosted の要求 - 非推奨
+
+このトピック内の情報は非推奨になっています。 IBM Cloud Private Hosted に関する最新の情報は、[IBM Cloud Private Hosted の概要](icp_overview.html)を参照してください。
+{:deprecated}
 
 {{site.data.keyword.cloud}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} は、自動的に {{site.data.keyword.cloud_notm}} Private Hosted を VMware vCenter Server インスタンスにデプロイします。
 
@@ -39,8 +47,3 @@ lastupdated: "2018-09-27"
 6. **「IBM Cloud Private Hosted on vCenter Server on IBM Cloud」**ページの**「IBM Cloud Private Hosted DevOps チームに連絡 (Contact the IBM Cloud Private Hosted DevOps Team)」**ボックスに、要件に関する説明を入力し、**「コンサルテーションを要求」**をクリックします。
 
 {{site.data.keyword.cloud_notm}} Private Hosted DevOps の担当員が、{{site.data.keyword.cloud_notm}} 連絡先情報を使用してお客様に連絡し、サービスを開始できるようにします。
-
-### 関連リンク
-
-* [IBM Cloud Private Hosted](https://www.ibm.com/developerworks/community/files/form/anonymous/api/library/eafb752c-55f3-4b07-9b20-b61c8ea980b9/document/af203658-30c0-40ba-81b5-46c393fb723f/media/IBM_Cloud_Private_Hosted-IBM_Cloud.pdf) (PDF のダウンロード)
-* [IBM Cloud Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US)

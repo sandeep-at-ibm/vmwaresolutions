@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -44,8 +44,8 @@ HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービスを削除�
 
 ### 関連リンク
 
-* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} の注文](htcc_ordering.html)
-* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} の管理](managinghtcc.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/htcc_ordering.html)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managinghtcc.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [HyTrust Web サイト](https://www.hytrust.com/)

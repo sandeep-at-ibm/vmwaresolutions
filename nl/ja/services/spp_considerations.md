@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-10-25"
 
 {{site.data.keyword.IBM}} Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスは、仮想環境のデータ保護、データ再使用、データ・リカバリーのための効率的でスケーラブルなソリューションを提供します。 サービスをスタンドアロン・ソリューションとして実装することも、お客様の IBM Spectrum Protect 環境と統合して長期保管とデータ・ガバナンスのためにコピーをオフロードすることもできます。
 
-このサービスは、vSphere 6.5 を実行する、V2.2 以降でデプロイまたは V2.2 以降にアップグレードされたインスタンスでのみ利用できます。 現在インストールされている {{site.data.keyword.IBM}} Spectrum Protect Plus のバージョンは V10.1.1 パッチ 1 です。
+このサービスは、vSphere 6.5 を実行する、V2.2 以降でデプロイまたは V2.2 以降にアップグレードされたインスタンスでのみ利用できます。 現在インストールされている {{site.data.keyword.IBM}} Spectrum Protect Plus のバージョンは V10.1.2 です。
 {:note}
 
 ## IBM Spectrum Protect Plus on IBM Cloud の技術仕様
@@ -78,7 +78,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスを削
 ### 関連リンク
 
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service Planning](http://www.ibm.com/support/docview.wss?uid=swg22012650)
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](managingspp.html) の管理
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](spp_ordering.html) の注文
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingspp.html) の管理
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_ordering.html) の注文
 * [IBM Spectrum Protect Plus の資料](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

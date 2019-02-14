@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-04"
 
 ---
 
@@ -65,7 +65,7 @@ Licencias proporcionadas por IBM para los siguientes componentes de VMware:
 * NSX Service Providers 6.4 (edición Base, Advanced o Enterprise)
 * (Para clústeres vSAN) vSAN 6.6 (edición Advanced o Enterprise)
 
-**Atención:**
+### Atención:
 
 * Las ediciones de licencia mínimas se indican en la interfaz de usuario. Si se da soporte a distintas ediciones de componentes, puede seleccionar la edición que desee. El usuario es el responsable de asegurar que la clave de licencia proporcionada es correcta para cada componente de VMware seleccionado.
 * Para vSphere, se incurrirá en un cargo de licencia en el momento de realizar el pedido, pero posteriormente el cargo por licencia se abonará a su cuenta.
@@ -117,7 +117,11 @@ Los valores de almacenamiento dependen de la opción que seleccione de configura
 Especifique las siguientes opciones de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
-* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto.
+
+  La opción **Intel Optane de alto rendimiento** solo está disponible para los modelos de CPU de Skylake Dual Intel Xeon Gold 5120 y Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
 * **Licencia de vSAN**: Seleccione la edición de licencia de vSAN 6.6 (Advanced o Enterprise).
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,30 +12,18 @@ lastupdated: "2018-11-05"
 
 ## IBM Cloud アカウントの登録
 
-{{site.data.keyword.cloud}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。 {{site.data.keyword.cloud_notm}} アカウントを登録する方法について詳しくは、[{{site.data.keyword.cloud_notm}}の登録](../../../account/adminpublic.html)を参照してください。
+{{site.data.keyword.cloud}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。 {{site.data.keyword.cloud_notm}} アカウントを登録する方法について詳しくは、[{{site.data.keyword.cloud_notm}} の登録](/docs/account/adminpublic.html)を参照してください。
 
 ## IBM Cloud インフラストラクチャー (SoftLayer) アカウントの登録
 
-{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウント (以前は IBM SoftLayer アカウントと呼ばれていた) を使用して、インフラストラクチャー製品とサービスを管理するためのいくつかの追加の機能を提供する、{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルにログインします。 {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを登録するには、{{site.data.keyword.cloud_notm}} アカウントを従量課金タイプのアカウントにアップグレードします。
+{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウント (以前は IBM SoftLayer アカウントと呼ばれていた) を使用して、インフラストラクチャー製品とサービスを管理するためのいくつかの追加の機能を提供する、{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルにログインします。
 
-### IBM Cloud アカウントを登録する手順
-
-1. **IBM ID** で {{site.data.keyword.vmwaresolutions_short}} コンソールにログインします。
-2. バナーの左側の**「管理」>「請求および使用量」>「請求処理」**をクリックします。
-3. **「クレジット・カードの追加」**をクリックします。
-4. 請求先情報とクレジット・カード情報を入力します。
-5. クラウド・サービスに関する条項を読みます。 アップグレードする前に条項に同意する必要があります。
-6. **「クラウド・サービスの使用条件に同意します」**チェック・ボックスを選択します。
-7. **「次へ」**をクリックします。
-8. 個人情報、請求先住所、クレジット・カード情報を確認します。
-9. **「完了」**をクリックします。 アカウントのセットアップの処理中に E メールで通知されます。
-10. アカウントの準備ができたことが E メールで通知されたら、{{site.data.keyword.slportal}}にアクセスして、**「IBM ID でログイン」**をクリックします。
-    すると、自動的にログインします。
+{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを登録するには、{{site.data.keyword.cloud_notm}} アカウントを従量課金タイプのアカウントにアップグレードします。 詳しくは、[アカウント・タイプをアップグレードまたは変更するには、どのようにすればよいですか?](/docs/account/account_faq.html) を参照してください。
 
 ### 関連リンク
 
-* [よくある質問](faq.html)
-* [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](slaccountrequirement.html)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)
 * [ビデオ - {{site.data.keyword.cloud_notm}} アカウントの作成方法](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
-* [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)
-* [IBM ID への切り替えとアカウントのリンク](../../../admin/softlayerlink.html){:new_window}
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [IBM ID への切り替えとアカウントのリンク](/docs/admin/softlayerlink.html){:new_window}

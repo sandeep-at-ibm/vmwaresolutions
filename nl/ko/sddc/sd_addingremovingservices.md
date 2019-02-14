@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-07"
 
 ---
 
@@ -26,8 +26,8 @@ lastupdated: "2018-11-09"
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)              | 5.4.0 | V2.3 이상 |
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)              | 4.2.1 | V2.3 이상 |
 | [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 이상 |
-| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.1 패치 1 | V2.2 이상 |
-| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)                  |   | V2.2 이상 |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)  | 10.1.2 | V2.2 이상 |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_standalone_considerations.html) |  2.0 |해당사항 없음 |
 | [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)                          | 9.5u3 | V1.8 이상 |
 | [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)                                 | 6.0 update 3 | V1.2 이상 |
 
@@ -61,7 +61,8 @@ Cloud Foundation 인스턴스에 서비스를 추가하려면 이전 테이블�
 
 서비스 제거가 완료되면 이메일로 알림을 받게 되며 인스턴스의 **서비스** 페이지에서 서비스가 제거됩니다.
 
-**주의:** 제거된 서비스에 대한 {{site.data.keyword.cloud_notm}} 비용 청구 주기 종료 시 비용이 청구됩니다.
+제거된 서비스에 대한 {{site.data.keyword.cloud_notm}} 비용 청구 주기 종료 시까지 비용이 청구됩니다.
+{:note}
 
 ### 관련 링크
 

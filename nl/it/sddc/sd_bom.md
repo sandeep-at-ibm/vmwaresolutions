@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -32,9 +32,9 @@ Tabella 2. Diba per i componenti software nelle istanze Cloud Foundation
 
 | Produttore | Componente                                | Versione      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 Aggiornamento 2c (fino al livello di patch ESXi650-201808001) |
-| VMware       | vCenter Server Appliance                 | 6.5 Aggiornamento 2c |
-| VMware       | Platform Services Controller             | 6.5 Aggiornamento 2c |
+| VMware       | vSphere ESXi                             | 6.5 Aggiornamento EP11 (build 6.5.0-10719125) |
+| VMware       | vCenter Server Appliance                 | 6.5 U2c (build 6.5.0-9451637) |
+| VMware       | Platform Services Controller             | 6.5 U2c (build 6.5.0-9451637) |
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX per vSphere                          | 6.4.1        |
 | VMware       | SDDC Manager                             | 2.4          |
@@ -58,7 +58,8 @@ Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanz
 | Dimensione campione completa della coda | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | Soglia completa della coda | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
-**Note:**
+### Note
+
 * L'impostazione **MaxVolumes** è obbligatoria per il servizio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} perché il servizio potrebbe utilizzare più del numero predefinito di montaggi NFS sul server ESXi.
 * Il valore **Non impostato** per un'impostazione di configurazione indica che la nuova impostazione non viene applicata automaticamente perché richiede il riavvio dei server ESXi, il che potrebbe causare un'interruzione.
 
@@ -71,5 +72,5 @@ Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanz
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Panoramica di Cloud Foundation](sd_cloudfoundationoverview.html)
-* [Pianificazione per le istanze Cloud Foundation](sd_planning.html)
+* [Panoramica di Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Pianificazione per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-12-10"
 
 ---
 
@@ -44,9 +44,10 @@ Seleccione licencias (proporcionadas por IBM o BYOL) para los siguientes compone
 
 ### Servidor nativo
 
-Seleccione uno o varios {{site.data.keyword.baremetal_short}} de {{site.data.keyword.cloud_notm}} con el modelo de CPU y el tamaño de RAM seleccionados:
-* 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
-* 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
+Seleccione uno o varios {{site.data.keyword.baremetal_short}} de {{site.data.keyword.cloud_notm}} con el modelo de CPU y el tamaño de RAM que seleccione.
+* Generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100)
+* Certificado por SAP (Intel Xeon serie 6140/E5-2690/E7-8890)
+* Generación Intel Broadwell de 2 CPU (Intel Xeon serie E5-2600/E7-4800)
 
 Las opciones disponibles dependen de si ha seleccionado el componente vSAN de VMware.
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -18,7 +18,7 @@ La console {{site.data.keyword.vmwaresolutions_full}} rileva ed elenca periodica
 
 Un aggiornamento disponibile è un record nell'elenco di aggiornamenti software dell'istanza, che può essere applicato immediatamente o pianificato per un secondo momento. L'aggiornamento è un bundle che contiene uno o più pacchetti per l'aggiornamento dei componenti di gestione IBM e dei componenti VMware.
 
-A partire dalla V2.5, gli aggiornamenti di IBM CloudDriver non sono più elencati perché sono abilitati gli aggiornamenti automatici. Azioni come l'aggiunta di un host, l'aggiunta di un cluster e l'ordine di un servizio aggiornano automaticamente l'istanza all'ultima versione. Per ulteriori informazioni sugli aggiornamenti automatici, consulta la sezione *Resilienza di IBM CloudDriver* in [Note sulla release per la V2.5](../vmonic/relnotes_v25.html).
+A partire dalla V2.5, gli aggiornamenti di IBM CloudDriver non sono più elencati perché sono abilitati gli aggiornamenti automatici. Azioni come l'aggiunta di un host, l'aggiunta di un cluster e l'ordine di un servizio aggiornano automaticamente l'istanza all'ultima versione. Per ulteriori informazioni sugli aggiornamenti automatici, consulta la sezione *Resilienza di IBM CloudDriver* in [Note sulla release per la V2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
 {:note}
 
 ## Prima di iniziare
@@ -40,12 +40,12 @@ Tabella 1. Livelli di aggiornamento e impatto
   <tr>
     <td>Basso</td>
     <td>Questo aggiornamento non influisce su alcun sistema. Non devi applicarlo durante i tempi di inattività
-    pianificati.</td>
+pianificati.</td>
   </tr>
   <tr>
     <td>Medio</td>
   <td>Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività
-    pianificati.</td>
+pianificati.</td>
   </tr>
     <tr>
     <td>Maggiore</td>
@@ -111,11 +111,11 @@ Tabella 1. Livelli di aggiornamento e impatto
       </tr>
     </table>
 
-6. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](../vmonic/trbl_support.html) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato a riavviare l'aggiornamento dal passo non riuscito.
+6. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato a riavviare l'aggiornamento dal passo non riuscito.
 
 ### Link correlati
 
-* [Panoramica di Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
-* [Panoramica di Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
-* [Come contattare il supporto IBM](../vmonic/trbl_support.html)
-* [Domande frequenti](../vmonic/faq.html)
+* [Panoramica di Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Panoramica di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 686 689" style="enable-background:new 0 0 686 689;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9157,7.9157;}
+	.st3{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.903,7.903;}
+	.st4{fill:#AADFF2;}
+	.st5{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9718,7.9718;}
+	.st6{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:8.1177,8.1177;}
+	.st7{font-family:'MyriadPro-Regular';}
+	.st8{font-size:21px;}
+	.st9{fill:#E1E5BA;}
+	.st10{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:8.1892,8.1892;}
+	.st11{fill:#FFFFFF;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st12{fill:#FF7BAC;}
+	.st13{font-family:'IBMPlexSans';}
+	.st14{fill:#EF7C26;}
+	.st15{fill:#F4BA51;}
+	.st16{fill:#169ADB;stroke:#9BCCDD;stroke-width:0.5;stroke-miterlimit:10;}
+	.st17{fill:url(#SVGID_1_);}
+	.st18{font-size:11.4646px;}
+	.st19{fill:url(#SVGID_2_);}
+	.st20{font-size:9.2282px;}
+	.st21{font-size:18px;}
+	.st22{fill:#2B6782;}
+	.st23{fill:#1E4C66;}
+	.st24{font-size:16.5319px;}
+</style>
+<g id="Outter_dash_rectangle">
+	<g>
+		<rect x="9" y="64" class="st0" width="665" height="537.5"/>
+		<g>
+			<polyline class="st1" points="674,597.5 674,601.5 670,601.5 			"/>
+			<line class="st2" x1="662.1" y1="601.5" x2="17" y2="601.5"/>
+			<polyline class="st1" points="13,601.5 9,601.5 9,597.5 			"/>
+			<line class="st3" x1="9" y1="589.6" x2="9" y2="72"/>
+			<polyline class="st1" points="9,68 9,64 13,64 			"/>
+			<line class="st2" x1="20.9" y1="64" x2="666" y2="64"/>
+			<polyline class="st1" points="670,64 674,64 674,68 			"/>
+			<line class="st3" x1="674" y1="75.9" x2="674" y2="593.5"/>
+		</g>
+	</g>
+</g>
+<g id="Public_address_space_rectangle">
+	<g>
+		<rect x="59.5" y="94.5" class="st4" width="574" height="146"/>
+		<g>
+			<polyline class="st1" points="633.5,236.5 633.5,240.5 629.5,240.5 			"/>
+			<line class="st5" x1="621.5" y1="240.5" x2="67.5" y2="240.5"/>
+			<polyline class="st1" points="63.5,240.5 59.5,240.5 59.5,236.5 			"/>
+			<line class="st6" x1="59.5" y1="228.4" x2="59.5" y2="102.6"/>
+			<polyline class="st1" points="59.5,98.5 59.5,94.5 63.5,94.5 			"/>
+			<line class="st5" x1="71.5" y1="94.5" x2="625.5" y2="94.5"/>
+			<polyline class="st1" points="629.5,94.5 633.5,94.5 633.5,98.5 			"/>
+			<line class="st6" x1="633.5" y1="106.6" x2="633.5" y2="232.4"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 418 226)" class="st7 st8">Öffentlicher Adressraum</text>
+</g>
+<g id="Private_address_space_rectangle">
+	<g>
+		<rect x="59.5" y="251.5" class="st9" width="574" height="311"/>
+		<g>
+			<polyline class="st1" points="633.5,558.5 633.5,562.5 629.5,562.5 			"/>
+			<line class="st5" x1="621.5" y1="562.5" x2="67.5" y2="562.5"/>
+			<polyline class="st1" points="63.5,562.5 59.5,562.5 59.5,558.5 			"/>
+			<line class="st10" x1="59.5" y1="550.3" x2="59.5" y2="259.6"/>
+			<polyline class="st1" points="59.5,255.5 59.5,251.5 63.5,251.5 			"/>
+			<line class="st5" x1="71.5" y1="251.5" x2="625.5" y2="251.5"/>
+			<polyline class="st1" points="629.5,251.5 633.5,251.5 633.5,255.5 			"/>
+			<line class="st10" x1="633.5" y1="263.7" x2="633.5" y2="554.4"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 421 547)" class="st7 st8">Privater Adressraum</text>
+</g>
+<g id="ibm_cloud">
+	<path class="st11" d="M141.2,59.9c0-11.4-13.4-20.6-29.9-20.6c-1.6,0-3.2,0.1-4.7,0.3c-1-2.2-2.6-4.2-4.6-5.8
+		c-4.7-3.8-10.8-4.5-15.7-2.3C83.5,16.9,72,6,58.2,6C43.8,6,32,17.8,29.8,33.2c-0.1,0-0.2,0-0.4,0c-11.6,0-21,10.6-21,23.7
+		c0,10,5.5,18.5,13.2,22v0.9h2.4c1.7,0.5,3.5,0.8,5.3,0.8c1.8,0,3.6-0.3,5.3-0.8h68.4c2.6,0.5,5.3,0.8,8.1,0.8
+		c2.8,0,5.5-0.3,8.1-0.8h2.4v-0.5C133.1,76.3,141.2,68.8,141.2,59.9z"/>
+	<text transform="matrix(1 0 0 1 21 62)" class="st7 st8">IBM Cloud</text>
+</g>
+<g id="lines">
+	<line class="st1" x1="128" y1="190" x2="128" y2="406.5"/>
+	<line class="st1" x1="262.5" y1="381" x2="262.5" y2="407.5"/>
+</g>
+<g id="pubic_VLAN_native">
+	<g>
+		<g>
+			<g>
+				<g>
+					<path class="st12" d="M103.5,190.5L103.5,190.5l-0.4-0.1c-7.7-1.1-13.6-10.3-13.6-21.4s5.8-20.3,13.6-21.4l0.4-0.1v0h485.3
+						l0.2,0c7.6,0.4,13.5,9.8,13.5,21.5s-5.9,21.1-13.5,21.5l-0.4,0H103.5z"/>
+					<path d="M588.6,148l0.3,0c7.2,0.4,13.1,9.8,13.1,21s-5.9,20.6-13.1,21l-0.2,0H103.8l-0.7-0.1c-7.4-1-13.1-10.2-13.1-20.9
+						s5.8-19.9,13.1-20.9l0.7-0.1H588.6 M589,147H103v0.1c-7.9,1.1-14,10.5-14,21.9c0,11.4,6.1,20.8,14,21.9v0.1h486v0
+						c7.8-0.4,14-10.1,14-22C603,157.1,596.8,147.4,589,147L589,147L589,147z"/>
+				</g>
+				<g>
+					<path class="st0" d="M587.5,186.9c-5.5,0-10-8.2-10-18.4c0-10.1,4.5-18.4,10-18.4c5.5,0,10,8.2,10,18.4
+						C597.5,178.7,593,186.9,587.5,186.9z"/>
+					<path d="M587.5,150.7c5.1,0,9.5,8.2,9.5,17.9c0,9.7-4.4,17.9-9.5,17.9c-5.1,0-9.5-8.2-9.5-17.9
+						C578,158.9,582.4,150.7,587.5,150.7 M587.5,149.7c-5.8,0-10.5,8.4-10.5,18.9c0,10.4,4.7,18.9,10.5,18.9S598,179,598,168.6
+						C598,158.1,593.3,149.7,587.5,149.7L587.5,149.7z"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 247.75 175.75)" class="st13 st8">Öffentliches VLAN (nativ)</text>
+	</g>
+</g>
+<g id="security_lock_icon">
+</g>
+<g id="security_lock_bottom">
+</g>
+<g id="gear_bottom">
+</g>
+<g id="gear_icon">
+</g>
+<g id="vSAN_vMotion">
+	<g id="Layer_7">
+	</g>
+	<g>
+		<g>
+			<g>
+				<path class="st14" d="M103.5,506.5L103.5,506.5l-0.4-0.1c-7.7-1-13.6-10-13.6-20.9s5.8-19.9,13.6-20.9l0.4-0.1v0h485.3l0.2,0
+					c7.6,0.4,13.5,9.6,13.5,21s-5.9,20.6-13.5,21l-0.4,0H103.5z"/>
+				<path d="M588.6,465l0.3,0c7.2,0.4,13.1,9.6,13.1,20.5s-5.9,20.1-13.1,20.5l-0.2,0H103.8l-0.7-0.1c-7.4-1-13.1-9.9-13.1-20.4
+					c0-10.5,5.8-19.4,13.1-20.4l0.7-0.1H588.6 M589,464H103v0.1c-7.9,1-14,10.2-14,21.4s6.1,20.4,14,21.4v0.1h486v0
+					c7.8-0.4,14-9.9,14-21.5S596.8,464.4,589,464L589,464L589,464z"/>
+			</g>
+			<g>
+				<ellipse class="st0" cx="587.5" cy="485.1" rx="10" ry="17.9"/>
+				<path d="M587.5,467.6c5.1,0,9.5,8,9.5,17.4c0,9.4-4.4,17.4-9.5,17.4c-5.1,0-9.5-8-9.5-17.4C578,475.6,582.4,467.6,587.5,467.6
+					 M587.5,466.6c-5.8,0-10.5,8.3-10.5,18.4c0,10.2,4.7,18.4,10.5,18.4s10.5-8.3,10.5-18.4C598,474.9,593.3,466.6,587.5,466.6
+					L587.5,466.6z"/>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 201 494)" class="st7 st8">vSAN &amp; vMotion -- Privates VLAN B</text>
+	</g>
+</g>
+<g id="Logical_swiitch">
+	<g id="Layer_9">
+	</g>
+</g>
+<g id="management_vxlan">
+	<g id="Layer_6">
+	</g>
+	<g>
+		<g>
+			<path class="st15" d="M103.5,450.5L103.5,450.5l-0.4-0.1c-7.7-1.1-13.6-10.3-13.6-21.4s5.8-20.3,13.6-21.4l0.4-0.1v0h485.3l0.2,0
+				c7.6,0.4,13.5,9.8,13.5,21.5s-5.9,21.1-13.5,21.5l-0.4,0H103.5z"/>
+			<path d="M588.6,408l0.3,0c7.2,0.4,13.1,9.8,13.1,21s-5.9,20.6-13.1,21l-0.2,0H103.8l-0.7-0.1c-7.4-1-13.1-10.2-13.1-20.9
+				s5.8-19.9,13.1-20.9l0.7-0.1H588.6 M589,407H103v0.1c-7.9,1.1-14,10.5-14,21.9c0,11.4,6.1,20.8,14,21.9v0.1h486v0
+				c7.8-0.4,14-10.1,14-22C603,417.1,596.8,407.4,589,407L589,407L589,407z"/>
+		</g>
+		<g>
+			<path class="st0" d="M587.5,446.9c-5.5,0-10-8.2-10-18.4s4.5-18.4,10-18.4c5.5,0,10,8.2,10,18.4S593,446.9,587.5,446.9z"/>
+			<path d="M587.5,410.7c5.1,0,9.5,8.2,9.5,17.9c0,9.7-4.4,17.9-9.5,17.9c-5.1,0-9.5-8.2-9.5-17.9
+				C578,418.9,582.4,410.7,587.5,410.7 M587.5,409.7c-5.8,0-10.5,8.4-10.5,18.9c0,10.4,4.7,18.9,10.5,18.9S598,439,598,428.6
+				C598,418.1,593.3,409.7,587.5,409.7L587.5,409.7z"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 115 436)" class="st7 st8">Management &amp; VXLAN -- Privates VLAN A (nativ)</text>
+</g>
+<g id="P_x2F_V">
+	<g>
+		<g>
+			<g>
+				<rect x="104.5" y="280" class="st16" width="47.3" height="47.3"/>
+				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="135.9627" y1="296.7212" x2="124.5096" y2="338.8456">
+					<stop  offset="0" style="stop-color:#CCE0F4"/>
+					<stop  offset="7.748765e-02" style="stop-color:#C5DDF3"/>
+					<stop  offset="0.1918" style="stop-color:#B1D5EF"/>
+					<stop  offset="0.329" style="stop-color:#90C9EA"/>
+					<stop  offset="0.4838" style="stop-color:#63B7E2"/>
+					<stop  offset="0.6515" style="stop-color:#2AA1D9"/>
+					<stop  offset="0.6829" style="stop-color:#1E9CD7"/>
+					<stop  offset="0.8652" style="stop-color:#0075BE"/>
+					<stop  offset="0.9944" style="stop-color:#005B97"/>
+				</linearGradient>
+				<polygon class="st17" points="106.3,325.5 150,281.8 150,325.5 				"/>
+			</g>
+			<text transform="matrix(1 0 0 1 108.084 315.4692)" class="st0 st13 st18">P</text>
+			<text transform="matrix(1 0 0 1 116.6836 324.0688)" class="st0 st13 st18">V</text>
+			<g>
+				<g>
+					<g>
+						<g>
+							<polygon class="st0" points="110.1,288.6 112.8,297.8 119.2,291.8 							"/>
+						</g>
+					</g>
+				</g>
+				<g>
+					<g>
+						<g>
+							
+								<rect x="117" y="293.5" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -172.128 163.1521)" class="st0" width="4.1" height="9"/>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g>
+				<g>
+					<g>
+						<g>
+							<polygon class="st0" points="142.6,322.1 132.5,318.2 139.2,311.8 							"/>
+						</g>
+					</g>
+				</g>
+				<g>
+					<g>
+						<g>
+							
+								<rect x="130.2" y="306.1" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -177.6229 175.9507)" class="st0" width="4.3" height="10.4"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Layer_15">
+	<g>
+		<g>
+			<g>
+				<rect x="232.5" y="619.9" class="st16" width="38.1" height="38.1"/>
+				<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="257.8253" y1="633.3933" x2="248.6063" y2="667.3004">
+					<stop  offset="0" style="stop-color:#CCE0F4"/>
+					<stop  offset="7.748765e-02" style="stop-color:#C5DDF3"/>
+					<stop  offset="0.1918" style="stop-color:#B1D5EF"/>
+					<stop  offset="0.329" style="stop-color:#90C9EA"/>
+					<stop  offset="0.4838" style="stop-color:#63B7E2"/>
+					<stop  offset="0.6515" style="stop-color:#2AA1D9"/>
+					<stop  offset="0.6829" style="stop-color:#1E9CD7"/>
+					<stop  offset="0.8652" style="stop-color:#0075BE"/>
+					<stop  offset="0.9944" style="stop-color:#005B97"/>
+				</linearGradient>
+				<polygon class="st19" points="234,656.5 269.1,621.4 269.1,656.5 				"/>
+			</g>
+			<text transform="matrix(1 0 0 1 235.3848 648.484)" class="st0 st13 st20">P</text>
+			<text transform="matrix(1 0 0 1 242.3071 655.4059)" class="st0 st13 st20">V</text>
+			<g>
+				<g>
+					<g>
+						<g>
+							<polygon class="st0" points="237,626.9 239.2,634.3 244.3,629.4 							"/>
+						</g>
+					</g>
+				</g>
+				<g>
+					<g>
+						<g>
+							
+								<rect x="242.6" y="630.8" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -369.0017 341.0172)" class="st0" width="3.3" height="7.2"/>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g>
+				<g>
+					<g>
+						<g>
+							<polygon class="st0" points="263.2,653.9 255,650.7 260.4,645.5 							"/>
+						</g>
+					</g>
+				</g>
+				<g>
+					<g>
+						<g>
+							
+								<rect x="253.2" y="640.9" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -373.4311 351.3326)" class="st0" width="3.5" height="8.4"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 215 679)" class="st7 st21">NSX Edge</text>
+</g>
+<g id="Layer_16">
+	<g>
+		<g>
+			<rect x="347" y="621" class="st22" width="41.1" height="37"/>
+			<rect x="387.2" y="621" class="st23" width="89.8" height="37"/>
+		</g>
+		<text transform="matrix(1 0 0 1 353.2979 645.4043)" class="st0 st7 st24">VM</text>
+		<text transform="matrix(1 0 0 1 391.9365 645.4043)" class="st0 st7 st24">HCX-Cloud</text>
+	</g>
+	<text transform="matrix(1 0 0 1 353 679)" class="st7 st21">HCX-Manager</text>
+</g>
+<g id="VM_HCX">
+	<g>
+		<g>
+			<rect x="186" y="333" class="st22" width="50.8" height="47"/>
+			<rect x="235.8" y="333" class="st23" width="111.2" height="47"/>
+		</g>
+		<text transform="matrix(1 0 0 1 194 364)" class="st0 st7 st8">VM</text>
+		<text transform="matrix(1 0 0 1 242 364)" class="st0 st7 st8">HCX-Cloud</text>
+	</g>
+</g>
+</svg>

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -29,14 +29,14 @@ lastupdated: "2018-10-29"
    *  SSO サイト名
    *  プライマリー・インスタンスのルート・ドメインにリンクされた DNS サブドメイン
    *  プライマリー・インスタンスとセカンダリー・インスタンスの AD 仮想マシン間にセットアップされた DNS および AD のレプリケーション。
-   *  プライマリー・インスタンスの PSC (Platform Services Controller) と複製するためにデプロイされ、構成された PSC
+   *  V2.8 以降でデプロイされたプライマリー・インスタンスの場合: 組み込み Platform Services Controller (PSC) を備えた vCenter Server Appliance (vCSA) がデプロイされ、構成されます。
    *  セカンダリー・インスタンスの VMware vCenter には、プライマリー・インスタンスの vCenter との拡張リンク・モードがセットアップされます。
 
 ## vCenter Server with Hybridity Bundle のマルチサイト・デプロイメント
 
 マルチサイト構成機能では、1 つのプライマリー・サイトおよび最大 7 つのセカンダリー・サイトから成る、ハブ・アンド・スポーク・トポロジーを使用します。 サポートされるのは単一層のサイトであるため、他のセカンダリー・サイトにリンクされた後続のサイトは構成できません。 マルチサイト構成では、すべてのインスタンスにわたって、ESXi サーバーを合計 128 台使用できます。
 
-128 台を超える ESXi サーバーのマルチサイト・デプロイメントが必要な構成を使用する場合は、IBM サポートにお問い合わせください。 詳しくは、[IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)を参照してください。
+128 台を超える ESXi サーバーのマルチサイト・デプロイメントが必要な構成を使用する場合は、IBM サポートにお問い合わせください。 詳しくは、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)を参照してください。
 {:note}
 
 次の図は、vCenter Server with Hybridity Bundle のマルチサイト・デプロイメントの全体像を示しています。
@@ -54,7 +54,7 @@ lastupdated: "2018-10-29"
 
 マルチサイト構成では、最大 8 つのインスタンス (プライマリー・インスタンス 1 つとセカンダリー・インスタンス 7 つ) をデプロイできます。
 
-マルチサイト構成に含まれている vCenter Server with Hybridity Bundle インスタンスを削除するには、特別な計画が必要です。 詳しくは、[マルチサイト構成の vCenter Server with Hybridity Bundle インスタンスの削除](vc_hybrid_deletinginstance_multi.html)を参照してください。
+マルチサイト構成に含まれている vCenter Server with Hybridity Bundle インスタンスを削除するには、特別な計画が必要です。 詳しくは、[マルチサイト構成の vCenter Server with Hybridity Bundle インスタンスの削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html)を参照してください。
 {:note}
 
 ### 関連リンク

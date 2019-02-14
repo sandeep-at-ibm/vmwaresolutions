@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -33,13 +33,13 @@ La automatización de {{site.data.keyword.cloud}} despliega tres controladores N
 
 ### NSX Edge y direccionador lógico distribuido
 
-Se despliegan pares NSX Edge Services Gateway (ESG). En todos los casos, se utiliza un par de pasarela para el tráfico de salida de los componentes de automatización que residen en la red privada. Para vCenter Server e {{site.data.keyword.cloud_notm}} Private (ICP), una segunda pasarela, conocida como el borde gestionado por el cliente, se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada. El administrador puede configurar cualquier componente NSX necesario, como por ejemplo DLR (Distributed Logical Router), conmutadores lógicos y cortafuegos.
+Se despliegan pares NSX Edge Services Gateway (ESG). En todos los casos, se utiliza un par de pasarela para el tráfico de salida de los componentes de automatización que residen en la red privada. Para vCenter Server e {{site.data.keyword.icpfull_notm}}, una segunda pasarela, conocida como el borde gestionado por el cliente, se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada. El administrador puede configurar cualquier componente NSX necesario, como por ejemplo DLR (Distributed Logical Router), conmutadores lógicos y cortafuegos.
 
 Para obtener más información sobre el diseño de red, consulte [Arquitectura de referencia de red de vCenter Server](../vcsnsxt/vcsnsxt-intro.html).
 
-En la tabla siguiente se resumen las especificaciones de ICP ESG y DLR.
+En la tabla siguiente se resumen las especificaciones de {{site.data.keyword.icpfull_notm}} ESG y DLR.
 
-Tabla 1. Especificaciones de ICP ESG
+Tabla 1. Especificaciones de {{site.data.keyword.icpfull_notm}} ESG
 
 Atributo | Especificación
 --|--
@@ -48,7 +48,7 @@ Tamaño de Edge    Grande | Número de vCPU	2
 Memoria    | 1 GB
 Disco    | 1000 GB en almacén de datos local
 
-Tabla 2. Especificaciones de DLR de ICP
+Tabla 2. Especificaciones de DLR de {{site.data.keyword.icpfull_notm}}
 
 Atributo | Especificación
 --|--|
@@ -57,13 +57,13 @@ Tamaño de Edge    Compacto | Número de vCPU	1
 Memoria    | 512 MB
 Disco    | 1000 GB en almacén de datos local
 
-## Componentes de ICP
+## Componentes de IBM Cloud Private
 
-ICP es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones de contenedor locales. ICP es un entorno integrado para gestionar contenedores que incluye el coordinador de contenedores Kubernetes,
+{{site.data.keyword.icpfull_notm}} es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones locales contenerizadas. {{site.data.keyword.icpfull_notm}} es un entorno integrado para gestionar contenedores que incluye el coordinador de contenedores Kubernetes,
 un repositorio de imágenes privadas, una consola de gestión e infraestructuras de supervisión.
 
-Figura 2. Despliegue de ICP virtual con vCenter Server
-![Despliegue de ICP virtual con vCenter Server](vcscar-icp.svg)
+Figura 2. Despliegue de {{site.data.keyword.icpfull_notm}} virtual con vCenter Server
+![Desarrollo de {{site.data.keyword.icpfull_notm}} virtual con vCenter Server](vcscar-icp.svg)
 
 ### Nodo de arranque
 
@@ -84,15 +84,15 @@ Un nodo proxy es un nodo que transmite la solicitud externa a los servicios crea
 
 ### Nodo de gestión
 
-Un nodo de gestión es un nodo opcional que aloja servicios de gestión como, por ejemplo, supervisión, calibración y registro. Mediante la configuración de nodos de gestión dedicados, puede evitar que el nodo maestro se sobrecargue. Solo puede habilitar el nodo de gestión durante la instalación de ICP.
+Un nodo de gestión es un nodo opcional que aloja servicios de gestión como, por ejemplo, supervisión, calibración y registro. Mediante la configuración de nodos de gestión dedicados, puede evitar que el nodo maestro se sobrecargue. Solo puede habilitar el nodo de gestión durante la instalación de {{site.data.keyword.icpfull_notm}}.
 
 ### Nodo de Vulnerability Advisor
 
 Un nodo de Vulnerability Advisor (VA) es un nodo opcional que se utiliza para ejecutar los servicios de Vulnerability Advisor. Los servicios de Vulnerability Advisor consumen muchos recursos. Si utiliza el servicio Vulnerability Advisor, especifique un nodo VA dedicado.
 
-En la tabla siguiente encontrará las especificaciones de VM necesarias para una instancia ICP de alta disponibilidad.
+En la tabla siguiente encontrará las especificaciones de VM necesarias para una instancia {{site.data.keyword.icpfull_notm}} de alta disponibilidad.
 
-Tabla 3. Especificaciones de ICP VM
+Tabla 3. Especificaciones de {{site.data.keyword.icpfull_notm}} VM
 
 Nodo |     Instancias    | IP    | CPU    | RAM (GB)    | DISCO (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -105,7 +105,7 @@ Trabajador    | 3-6    | IP (x3)    |4-8    |4    |150
 
 CAM requiere que los nodos trabajadores tengan una configuración de vCPU y de memoria superior.
 
-Tabla 4. Especificaciones de ICP VM
+Tabla 4. Especificaciones de {{site.data.keyword.icpfull_notm}} VM
 
 Nodo |     Instancias    | IP    | CPU    | RAM (GB)    | DISCO (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -113,7 +113,7 @@ Trabajador  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 ## Componentes de IBM Cloud Automation Manager
 
-{{site.data.keyword.cloud_notm}} Automation Manager (CAM) es una plataforma de gestión de autoservicio multinube de autoservicio que se ejecuta en ICP que ayuda a los desarrolladores y a los administradores a satisfacer las necesidades de la empresa.
+{{site.data.keyword.cloud_notm}} Automation Manager (CAM) es una plataforma de gestión de autoservicio multinube de autoservicio que se ejecuta en {{site.data.keyword.icpfull_notm}} que ayuda a los desarrolladores y a los administradores a satisfacer las necesidades de la empresa.
 
 Figura 3. Referencia de componentes de CAM
 ![Referencia de componentes de CAM](vcscar-cam-components.svg)

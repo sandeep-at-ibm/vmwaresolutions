@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -19,8 +19,8 @@ Per distribuire una piattaforma virtualizzata VMware con un'applicazione di arch
 ## Requisiti
 
 Assicurati di aver completato le seguenti attività:
-*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](../vmonic/useraccount.html).
-*  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per le istanze NetApp ONTAP Select](np_planning.html).
+*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_planning.html).
 
 Non modificare alcun valore impostato durante l'ordine o la distribuzione dell'istanza. La modifica rende inutilizzabile la tua istanza. Ad esempio, se la rete pubblica si interrompe, se i server e le VSI (Virtual Server Instance) vanno dietro una fornitura media di Vyatta o se la VSI di IBM CloudBuilder si arresta o viene eliminata.
 {:important}
@@ -33,7 +33,7 @@ Quando ordini un'istanza NetApp ONTAP Select, devi specificare le seguenti impos
 
 Il nome dell'istanza deve rispettare i seguenti requisiti:
 * Sono consentiti solo caratteri alfanumerici e trattini (-).
-* Il nome dell'istanza deve iniziare e terminare con un carattere alfanumerico.
+* Il nome istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
 * La lunghezza massima del nome dell'istanza è di 10 caratteri.
 * Il nome dell'istanza deve essere univoco all'interno del tuo account.
 
@@ -52,7 +52,7 @@ Il prefisso del nome host deve rispettare i seguenti requisiti:
 
 L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
 *  Sono consentiti solo caratteri alfanumerici e trattini (-).
-*  L'etichetta del dominio secondario deve iniziare e terminare con un carattere alfanumerico.
+*  L'etichetta del dominio secondario deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
 *  La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
 *  L'etichetta del dominio secondario deve essere univoca all'interno del tuo account.
 
@@ -86,7 +86,7 @@ Seleziona una configurazione Bare Metal Server in base ai tuoi requisiti:
 * **Alta capacità** – Licenza Standard / Dual Intel Xeon E5-2650 v4 (24 core totali, 2,2 GHz) / 64 GB di RAM / Capacità di trentaquattro unità SATA da 4 TB per nodo / Capacità effettiva di un cluster a 4 nodi – 190 TB
 
 Le unità SSD (Solid-State Disk) da 3,8 TB sono supportate quando vengono rese generalmente disponibili in un {{site.data.keyword.CloudDataCent_notm}}.
-  {:note}
+{:note}
 
 ### Numero di server Bare Metal
 
@@ -113,7 +113,7 @@ Il numero di server ESXi di un'istanza NetApp ONTAP Select è 4 per impostazione
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze NetApp ONTAP Select](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) vengono installati sulla tua piattaforma virtuale VMware.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) vengono installati sulla tua piattaforma virtuale VMware.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 
@@ -132,7 +132,7 @@ Devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel
 
 ### Link correlati
 
-* [Visualizzazione delle istanze NetApp ONTAP Select](np_viewinginstances.html)
-* [Eliminazione di istanze NetApp ONTAP Select](np_deletinginstance.html)
+* [Visualizzazione delle istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [Eliminazione di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [Centro di documentazione di NetApp ONTAP](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
 * [Collega l'archiviazione dedicata alle distribuzioni di NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

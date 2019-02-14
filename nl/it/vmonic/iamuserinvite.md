@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-11"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-11"
 ## Prima di iniziare
 
 * Assicurati di essere il proprietario dell'account o che il tuo ruolo di gestione della piattaforma per il servizio **VMware Solutions** sia **Amministratore**.
-* Assicurati di aver esaminato i ruoli e le autorizzazioni utente in [Gestione dell'accesso utente con Identity and Access Management](iam.html).
+* Assicurati di aver esaminato i ruoli e le autorizzazioni utente in [Gestione dell'accesso utente con Identity and Access Management](/docs/services/vmwaresolutions/vmonic/iam.html).
 
 ## Procedura per invitare gli utenti ad accedere a servizi e risorse
 
@@ -34,12 +34,12 @@ Dopo che gli utenti aggiunti hanno accettato il tuo invito, possono accedere all
 
 ### Link correlati
 
-* [Invito di utenti e assegnazione dell'accesso](../../../iam/iamuserinv.html)
-* [Gestione di identità e accesso](../../../iam/quickstart.html)
-* [Gestione di utenti e accesso](../../../iam/iamusermanage.html)
-* [Cos'è IAM](../../../iam/index.html)
-* [Migrazione di istanze vCenter Server precedenti alla V2.5 agli account IBM Cloud](../vcenter/vc_addinstancetousraccount.html)
-* [Migrazione di istanze vCenter Server with Hybridity Bundle precedenti alla V2.5 agli account IBM Cloud](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [Migrazione di istanze Cloud Foundation precedenti alla V2.5 agli account IBM Cloud](../sddc/sd_addinstancetousraccount.html)
-* [Migrazione di istanze NetApp ONTAP Select precedenti alla V2.5 agli account IBM Cloud](../netapp/np_addinstancetousraccount.html)
-* [Migrazione di istanze VMware Federal precedenti alla V2.5 agli account IBM Cloud](../vcenter/vc_fed_addinstancetousraccount.html)
+* [Invito di utenti e assegnazione dell'accesso](/docs/iam/iamuserinv.html)
+* [Gestione di identità e accesso](/docs/iam/quickstart.html)
+* [Gestione di utenti e accesso](/docs/iam/iamusermanage.html)
+* [Cos'è IAM](/docs/iam/index.html)
+* [Migrazione di istanze vCenter Server precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [Migrazione di istanze vCenter Server with Hybridity Bundle precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [Migrazione di istanze Cloud Foundation precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [Migrazione di istanze NetApp ONTAP Select precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [Migrazione di istanze VMware Federal precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)

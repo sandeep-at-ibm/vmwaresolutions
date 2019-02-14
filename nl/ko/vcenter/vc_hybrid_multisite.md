@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-14"
 
 ---
 
@@ -29,7 +29,7 @@ lastupdated: "2018-10-29"
    *  SSO 사이트 이름
    *  기본 인스턴스의 루트 도메인에 연결된 DNS 하위 도메인
    *  기본 및 보조 인스턴스의 AD 가상 머신 간에 DNS 및 AD 복제 설정
-   *  기본 인스턴스의 PSC(Platform Services Controller)로 복제하도록 배치되고 구성된 PSC
+   *  임베드된 PSC(Platform Services Controller)가 포함된 vCenter Server Appliance(vCSA)가 배치되고 구성됨
    *  보조 인스턴스의 VMware vCenter가 기본 인스턴스에서 vCenter에 대한 향상된 연결 모드로 설정됨
 
 ## vCenter Server with Hybridity Bundle 다중 사이트 배치

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,8 @@ Wenn Sie ein Upgrade einer vCenter Server-Instanz auf eine vCenter Server with H
 
 Business Partner-Benutzer haben nicht die Option, für eine vorhandene vCenter Server-Instanz ein Upgrade auf eine vCenter Server with Hybridity Bundle-Instanz durchzuführen.
 
-Ab Version 2.5 werden IBM CloudDriver-Updates nicht mehr aufgelistet, da automatische Aktualisierungsfunktionalität aktiviert ist. Durch Aktionen wie das Hinzufügen eines Hosts, Hinzufügen eines Clusters und Bestellen eines Service wird die Instanz automatisch auf die aktuelle Version aktualisiert. Weitere Informationen zu automatischen Aktualisierungen finden Sie im Abschnitt zur *IBM CloudDriver-Ausfallsicherheit* in den [Releaseinformationen für Version 2.5](../vmonic/relnotes_v25.html).{:note}
+Ab Version 2.5 werden IBM CloudDriver-Updates nicht mehr aufgelistet, da automatische Aktualisierungsfunktionalität aktiviert ist. Durch Aktionen wie das Hinzufügen eines Hosts, Hinzufügen eines Clusters und Bestellen eines Service wird die Instanz automatisch auf die aktuelle Version aktualisiert. Weitere Informationen zu automatischen Aktualisierungen finden Sie im Abschnitt zur *IBM CloudDriver-Ausfallsicherheit* in den [Releaseinformationen für Version 2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
+{:note}
 
 Bevor Sie versuchen, ein Update anzuwenden, erweitern Sie den Update-Eintrag, indem Sie auf den Abwärtspfeil klicken und die folgenden Informationen überprüfen:
 * Überprüfen Sie die Version des Updates. Sie müssen die Updates in chronologischer Reihenfolge anwenden, also zuerst das älteste Update und zuletzt das neueste Update. Stellen Sie sicher, dass Sie alle vorherigen Updates angewendet haben, bevor Sie das aktuelle Update anwenden. Beispielsweise müssen Sie das Update für V2.3 anwenden, bevor Sie versuchen, das Update für V2.4 anzuwenden.
@@ -142,10 +143,10 @@ Führen Sie die folgenden Schritte aus, um für eine vCenter Server-Instanz ein 
       </tr>
     </table>
 
-4. Falls der Updateprozess bei einem bestimmten Schritt fehlschlägt, [wenden Sie sich an den IBM Support](../vmonic/trbl_support.html), um Unterstützung zu erhalten. Sie erhalten Hilfe bei der Lösung des Problems und Anweisungen, wie Sie das Upgrade ab dem fehlgeschlagenen Schritt erneut versuchen.
+4. Falls der Updateprozess bei einem bestimmten Schritt fehlschlägt, [wenden Sie sich an den IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html), um Unterstützung zu erhalten. Sie erhalten Hilfe bei der Lösung des Problems und Anweisungen, wie Sie das Upgrade ab dem fehlgeschlagenen Schritt erneut versuchen.
 
 ### Zugehörige Links
 
-* [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)

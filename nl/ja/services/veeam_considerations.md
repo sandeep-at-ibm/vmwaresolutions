@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -59,10 +59,10 @@ Veeam on {{site.data.keyword.cloud_notm}} サービスを削除すると、す�
 
 ### 関連リンク
 
-* [Veeam on {{site.data.keyword.cloud_notm}} の注文](veeam_ordering.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} の管理](managingveeam.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} の管理対象サービスの要求](managing_veeam_services.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/veeam_ordering.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managingveeam.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](/docs/services/vmwaresolutions/services/managing_veeam_services.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Veeam の Web サイト](https://www.veeam.com/){:new_window}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}

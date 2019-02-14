@@ -2,17 +2,20 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-12-11"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Consideraciones sobre red para instancias de VMware Federal
 
 Revise la siguiente información para obtener detalles sobre las consideraciones y requisitos de red para las instancias de VMware Federal. Asegúrese de cumplir los requisitos para que la instancia funcione correctamente.
 
 ## Componentes de red para instancias de VMware Federal
+{: faq}
 
 Para revisar los componentes de red que se incluyen en la instancia de VMware Federal, consulte [Especificaciones técnicas para instancias de VMware Federal on {{site.data.keyword.cloud}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 

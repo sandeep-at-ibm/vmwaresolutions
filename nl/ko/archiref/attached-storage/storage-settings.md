@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -85,7 +85,7 @@ SIOC가 스토리지 디바이스가 혼잡하거나 제한된 경우를 판별�
 | NFS.HeartbeatMaxFailures |10 |
 | NFS.HeartbeatFrequency  | 12 |
 | NFS.HeartbeatTimeout |5 |
-| NFS.MazQueueDepth | 64 |
+| NFS.MaxQueueDepth | 64 |
 
 ### 관련 링크
 

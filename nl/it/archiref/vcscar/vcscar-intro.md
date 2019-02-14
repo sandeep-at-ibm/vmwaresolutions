@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -43,7 +43,7 @@ dall'applicazione.
 
 L'applicazione Skate Advisor viene implementata anche sulla piattaforma
 di modernizzazione dell'applicazione, che fornisce servizi basati su contenitore attraverso
-{{site.data.keyword.cloud}} Private (ICP) ospitato sulla piattaforma {{site.data.keyword.cloud_notm}} for VMware Services.
+{{site.data.keyword.icpfull_notm}} ospitato sulla piattaforma {{site.data.keyword.cloud_notm}} for VMware Services.
 
 L'applicazione Acme Skate Advisor sfrutta sia la piattaforma Watson
 che la piattaforma di modernizzazione dell'applicazione.
@@ -53,7 +53,7 @@ che la piattaforma di modernizzazione dell'applicazione.
 ### Dimostrazione di modernizzazione dell'applicazione
 
 Dimostrare un'applicazione che è stata distribuita nella piattaforma
-di modernizzazione dell'applicazione. La piattaforma include componenti ICP, CAM e NSX
+di modernizzazione dell'applicazione. La piattaforma include componenti {{site.data.keyword.icpfull_notm}}, CAM e NSX
 distribuiti su {{site.data.keyword.cloud_notm}} per l'offerta VMware vCenter Server
 on {{site.data.keyword.cloud_notm}}.
 
@@ -86,7 +86,6 @@ sviluppo e fornitura sul cloud. I clienti oggi cercano approcci innovativi ed ef
 Le pressioni economiche richiedono un tempo più veloce per il mercato. Il tuo patrimonio esistente include non solo le applicazioni, ma i dati, i processi, la logica aziendale e le interfacce utente, che devono tutti adattarsi per tenere il passo con le nuove esigenze aziendali.
 
 Il seguente elenco descrive i vantaggi della modernizzazione dell'applicazione:
-
 - Migliora la produttività degli sviluppatori
 - Aumenta l'efficienza operativa
 - Riduce i costi per creare nuove funzioni
@@ -97,11 +96,8 @@ dalla necessità di modernizzare gli ambienti dell'applicazione. Tuttavia, la ma
 parte delle organizzazioni si sta avvicinando alla modernizzazione dell'applicazione
 con un approccio a più fasi, che richiede un panorama ibrido e multi-cloud, in cui:
 
-- Le applicazioni heritage complesse e monolitiche che tipicamente vengono eseguite
-su mainframe o sistemi UNIX rimangono in loco.
-- Gli ambienti x86 utilizzati per i SoR (System of Record), le applicazioni
-sensibili alla sicurezza e i carichi di lavoro regolamentati vengono collocati
-sull'infrastruttura virtualizzata o su un cloud privato.
+- Le applicazioni heritage complesse e monolitiche che tipicamente vengono eseguite su mainframe o sistemi UNIX rimangono in loco.
+- Gli ambienti x86 utilizzati per i SoR (System of Record), le applicazioni sensibili alla sicurezza e i carichi di lavoro regolamentati vengono collocati su un'infrastruttura virtualizzata o su un cloud privato.
 - Applicazioni come SAP o il calcolo ad alte prestazioni utilizzano risorse bare
 metal.
 - Alcuni carichi di lavoro regolamentati e importanti per la sicurezza, che possono essere spostati nel cloud pubblico si stanno spostando negli ambienti dedicati.
@@ -124,17 +120,18 @@ uniche di tecnologia e di business.
 
 I seguenti documenti forniscono diversi punti di vista sulle tecnologie utilizzate nel percorso di modernizzazione dell'applicazione in {{site.data.keyword.cloud_notm}}:
 
-* [vCenter Server e {{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html) - Un'architettura di riferimento per la distribuzione delle seguenti piattaforme.
+* [vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html) - Un'architettura di riferimento per la distribuzione delle seguenti piattaforme.
    - **VMware vCenter Server on IBM Cloud** - vCenter Server è un'offerta di {{site.data.keyword.vmwaresolutions_short}}, che è una piattaforma basata su VMware fornita automaticamente su {{site.data.keyword.cloud_notm}}.
-   - **IBM Cloud Private** – ICP è una piattaforma dell'applicazione per lo sviluppo e la gestione delle applicazioni inserite nei contenitori. ICP è un ambiente integrato che include l'orchestrazione del contenitore Kubernetes, un repository di immagini privato, una console di gestione, i framework di monitoraggio e un'interfaccia utente grafica. L'interfaccia utente fornisce una posizione centralizzata da cui puoi distribuire, gestire, monitorare e ridimensionare le tue applicazioni. 
+   - **{{site.data.keyword.icpfull_notm}}** – {{site.data.keyword.icpfull_notm}} è una piattaforma dell'applicazione per lo sviluppo e la gestione delle applicazioni inserite nei contenitori. {{site.data.keyword.icpfull_notm}} è un ambiente integrato che include l'orchestrazione del contenitore Kubernetes, un repository di immagini privato, una console di gestione, i framework di monitoraggio e un'interfaccia utente grafica. L'interfaccia utente fornisce una posizione centralizzata da cui puoi distribuire, gestire, monitorare e ridimensionare le tue applicazioni.
    - **IBM Cloud Automation Manager** – CAM è una piattaforma IaC (Infrastructure as Code) pronta per le aziende che fornisce un unico pannello di controllo per il provisioning dei carichi di lavoro basati su VM insieme ai carichi di lavoro basati su Kubernetes utilizzando modelli archiviati e forniti di versione in un repository.
-* [vCenter Server e IBM Kubernetes Service](../vcsiks/vcsiks-intro.html) - Un'architettura di riferimento per la distribuzione delle seguenti piattaforme.
+* [vCenter Server e {{site.data.keyword.containerlong_notm}} Service](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html) - Un'architettura di riferimento per la distribuzione delle seguenti piattaforme.
    - **VMware vCenter Server on IBM Cloud** - vCenter Server è un'offerta di {{site.data.keyword.vmwaresolutions_short}}, che è una piattaforma basata su VMware fornita automaticamente su {{site.data.keyword.cloud_notm}}.
-   - **IBM Cloud Kubernetes Service** – IKS è un servizio gestito su {{site.data.keyword.cloud_notm}} che utilizza Kubernetes come motore di orchestrazione per automatizzare la distribuzione, il ridimensionamento e le operazioni dei contenitori dell'applicazione in un cluster a singolo tenant.
-* [Rete di vCenter Server](../vcsnsxt/vcsnsxt-intro.html) - Si concentra sulle tecnologie di rete utilizzate per l'integrazione tra vCenter Server, ICP e IKS come NSX-V e Calico insieme a un'anteprima della tecnologia di NSX-T.
+   - **{{site.data.keyword.containerlong_notm}}** – {{site.data.keyword.containerlong_notm}} è un servizio gestito su {{site.data.keyword.cloud_notm}} che utilizza Kubernetes come motore di orchestrazione per automatizzare la distribuzione, il ridimensionamento e le operazioni dei contenitori dell'applicazione in un cluster a singolo tenant.
+* [Rete di vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html) - Si concentra sulle tecnologie di rete utilizzate per l'integrazione tra vCenter Server, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}} come NSX-V e Calico insieme a un'anteprima della tecnologia di NSX-T.
 * _Guida di VMware e Skate Advisor Concept Car_ - Un'architettura di riferimento che è una “concept car”, ossia un meccanismo per evidenziare e mostrare le tecnologie che risolvono i problemi del mondo reale. Vogliamo dimostrare un'interazione tra l'intelligenza artificiale Watson e il machine learning in modo reale. Attraverso la cultura dello skateboarding, dimostriamo i servizi cloud in un modo unico. L'implementazione della “concept car” è un'estensione all'applicazione Acme Skateboard chiamata Skate Advisor. Skate Advisor è uno strumento, che permette agli utenti di avere conversazioni di skateboarding con un motore controllato da Watson.
-* [VMware: il percorso di modernizzazione di Stock Trader](../vcscontent/vcscontent-modjourney.html) - Un caso di utilizzo di riferimento che descrive una classica applicazione WebSphere Application Server che viene modernizzata utilizzando {{site.data.keyword.cloud_notm}} Private, il contenuto di IBM Middleware, {{site.data.keyword.cloud_notm}} Kubernetes Service e vCenter Server on {{site.data.keyword.cloud_notm}}. Siamo tutti su un percorso nel cloud e a diversi punti del percorso. Tramite passi incrementali da parte dell'architetto dell'applicazione, Jane, e dell'architetto dell'infrastruttura cloud, Todd, modernizziamo un'applicazione esistente chiamata Stock Trader. Esamina gli esempi che ti aiutano a compiere ogni passo del tuo percorso e il valore che viene realizzato per il tuo business, indipendentemente da quanto grande o piccolo sia ciascun passo. Ci concentriamo su quattro temi: applicazioni, DevOps, integrazione e gestione. Ognuno viene utilizzato per aiutarti a raggiungere i tuoi obiettivi, e in realtà, a modernizzarne uno senza che gli altri creino alcun problema.
+* [VMware: il percorso di modernizzazione di Stock Trader](/docs/services/vmwaresolutions/archiref/vcscontent/vcscontent-modjourney.html) - Un caso di utilizzo di riferimento che descrive una classica applicazione WebSphere Application Server che viene modernizzata utilizzando {{site.data.keyword.cloud_notm}} Private, il contenuto di IBM Middleware, {{site.data.keyword.containerlong_notm}} e vCenter Server on {{site.data.keyword.cloud_notm}}. Siamo tutti su un percorso nel cloud e a diversi punti del percorso. Tramite passi incrementali da parte dell'architetto dell'applicazione, Jane, e dell'architetto dell'infrastruttura cloud, Todd, modernizziamo un'applicazione esistente chiamata Stock Trader. Esamina gli esempi che ti aiutano a compiere ogni passo del tuo percorso e il valore che viene realizzato per il tuo business, indipendentemente da quanto grande o piccolo sia ciascun passo. Ci concentriamo su quattro temi: applicazioni, DevOps, integrazione e gestione. Tutti i temi operano insieme per aiutarti a raggiungere i tuoi obiettivi. Modernizzare un tema e non gli altri potrebbe creare dei problemi.
 
 ### Link correlati
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

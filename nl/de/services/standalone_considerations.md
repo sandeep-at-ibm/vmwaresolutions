@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -21,7 +21,7 @@ Eine vCenter Server-Instanz mit HCX on {{site.data.keyword.cloud_notm}} ist auf 
 
 ## Hinweise zur Installation von lokalen HCX on IBM Cloud-Instanzen
 
-Die HCX on {{site.data.keyword.cloud_notm}}-Komponenten müssen sowohl in der {{site.data.keyword.cloud_notm}} als auch in Ihrer lokalen vSphere-Umgebung installiert sein. Es empfiehlt sich, den Service "HCX on {{site.data.keyword.cloud_notm}}" in Ihrer vCenter Server with Hybridity Bundle-Instanz in {{site.data.keyword.cloud_notm}} zu installieren, bevor Sie die lokale HCX on {{site.data.keyword.cloud_notm}}-Instanz installieren. Weitere Informationen finden Sie unter [Hinweise zu HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+Die HCX on {{site.data.keyword.cloud_notm}}-Komponenten müssen sowohl in der {{site.data.keyword.cloud_notm}} als auch in Ihrer lokalen vSphere-Umgebung installiert sein. Es empfiehlt sich, den Service "HCX on {{site.data.keyword.cloud_notm}}" in Ihrer vCenter Server with Hybridity Bundle-Instanz in {{site.data.keyword.cloud_notm}} zu installieren, bevor Sie die lokale HCX on {{site.data.keyword.cloud_notm}}-Instanz installieren. Weitere Informationen finden Sie unter [Hinweise zu HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_considerations.html).
 
 ### Anforderungen an IP-Adressen
 
@@ -30,7 +30,7 @@ Für die vollständige HCX-Funktionalität benötigen Sie mindestens fünf priva
 ### Bereitstellungsprozess für lokale HCX on IBM Cloud-Instanzen
 
 Zur erfolgreichen Installation auf der lokalen HCX on {{site.data.keyword.cloud_notm}}-Instanz müssen Sie die folgenden Tasks ausführen.
-1. Bestellen Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole die lokale HCX on {{site.data.keyword.cloud_notm}}-Instanz. Weitere Informationen hierzu finden Sie in [Lokale VMware HCX on IBM Cloud-Instanzen bestellen](standalone_orderingserviceinstances.html).
+1. Bestellen Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole die lokale HCX on {{site.data.keyword.cloud_notm}}-Instanz. Weitere Informationen hierzu finden Sie in [Lokale VMware HCX on IBM Cloud-Instanzen bestellen](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html).
 2. Führen Sie in der **HCX-Cloudkonsole** die folgenden Schritte aus:
     1. Klicken Sie auf die Registerkarte **Verwaltung**.
     2. Klicken Sie auf der Registerkarte **Systemupdates** auf **DOWNLOAD-LINK ANFORDERN**.
@@ -39,7 +39,7 @@ Zur erfolgreichen Installation auf der lokalen HCX on {{site.data.keyword.cloud_
 
    Sie müssen den lokalen HCX-Manager in einem privaten Netz bereitstellen und ihm den Zugriff auf das öffentliche Netz ermöglichen. Sie können NSX Edge, Vyatta oder ähnliche Gateways verwenden, um dem lokalen HCX-Manager den Internetzugriff zu ermöglichen. Falls für den Zugriff auf das private Netz und auf das öffentliche Netz verschiedene Gateways verwendet werden, empfiehlt es sich, das Standardgateway für den Zugriff auf das öffentliche Netz zu verwenden und mit der lokalen **Administratorkonsole für den HCX-Manager** eine statische Route für den Zugriff auf das private Netz zu erstellen.
    {:note}
-4. Verwenden Sie nach der Bereitstellung des HCX-Managers die **Administratorkonsole für den HCX-Manager**, um den lokalen HCX-Manager zu aktivieren. Einen Aktivierungsschlüssel für den lokalen HCX-Manager erhalten Sie, wenn Sie eine lokale HCX on {{site.data.keyword.cloud_notm}}-Instanz in der {{site.data.keyword.vmwaresolutions_short}}-Konsole bestellen. Weitere Informationen finden Sie unter [Lokale HCX-Instanzen bestellen](../services/standalone_orderingserviceinstances.html).
+4. Verwenden Sie nach der Bereitstellung des HCX-Managers die **Administratorkonsole für den HCX-Manager**, um den lokalen HCX-Manager zu aktivieren. Einen Aktivierungsschlüssel für den lokalen HCX-Manager erhalten Sie, wenn Sie eine lokale HCX on {{site.data.keyword.cloud_notm}}-Instanz in der {{site.data.keyword.vmwaresolutions_short}}-Konsole bestellen. Weitere Informationen finden Sie unter [Lokale HCX-Instanzen bestellen](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html).
 5. Falls Sie ein selbst signiertes SSL-Zertifikat verwendet haben, als Sie den Service "HCX on {{site.data.keyword.cloud_notm}}" bestellt haben, müssen Sie das Zertifikat in den lokalen HCX-Manager importieren, indem Sie die folgenden Schritte ausführen:
     1. Klicken Sie in der lokalen **Administratorkonsole für den HCX-Manager** auf die Registerkarte **Verwaltung**.
     2. Klicken Sie im linken Navigationsfenster auf **Anerkanntes CA-Zertifikat** und dann rechts auf **IMPORTIEREN**.
@@ -62,12 +62,12 @@ Lesen Sie die folgenden Hinweise, bevor Sie eine HCX on {{site.data.keyword.clou
    {:important}
 2. Löschen Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole die lokale HCX on {{site.data.keyword.cloud_notm}}-Instanz, die bestellt wurde, um den Aktivierungsschlüssel für den lokalen HCX-Manager zu erhalten. Stellen Sie sicher, dass die gelöschte Instanz nicht mehr in der Konsole verfügbar ist, bevor Sie mit dem nächsten Schritt fortfahren.
 
-   Weitere Informationen finden Sie unter [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen löschen](../services/standalone_deletingserviceinstances.html).
+   Weitere Informationen finden Sie unter [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen löschen](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html).
 3. Löschen Sie den lokalen HCX-Manager in VMware vSphere Web Client.
 
 ### Zugehörige Links
 
-* [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen anzeigen](../services/standalone_viewingserviceinstances.html)
-* [Glossar der HCX-Begriffe](hcx_glossary.html)
+* [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen anzeigen](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
+* [Glossar der HCX-Begriffe](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [Dokumentation zu VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

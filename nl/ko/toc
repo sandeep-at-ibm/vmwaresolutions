@@ -10,7 +10,8 @@ IBM Cloud for VMware Solutions
     vmonic/inst_comp_chart.md
 
     {: .topicgroup}
-    릴리스 정보
+    설치하기 전에
+        vmonic/relnotes_v28.md
         vmonic/relnotes_v27.md
         vmonic/relnotes_v26.md
         vmonic/relnotes_v25.md
@@ -79,6 +80,11 @@ IBM Cloud for VMware Solutions
         vcenter/vc_hybrid_deletingbundle.md
         vcenter/vc_hybrid_deletinginstance.md
         vcenter/vc_hybrid_deletinginstance_multi.md
+
+    {: .topicgroup}
+    마이그레이션 및 앱 현대화를 위한 단일 노드 평가판
+        vcenter/cloud_modern_bundle_overview.md
+        vcenter/cloud_modern_bundle_orderinginstance.md
 
     {: .topicgroup}
     Cloud Foundation on IBM Cloud
@@ -178,8 +184,11 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     KMIP for VMware on IBM Cloud
-        services/kmip_considerations.md
-        services/kmip_ordering.md
+        services/kmip_standalone_considerations.md
+        services/kmip_standalone_ordering.md
+        services/kmip_standalone_viewing.md
+        services/kmip_standalone_addingdeletingcert.md
+        services/kmip_standalone_deleting.md
 
     {: .topicgroup}
     Mission Critical VMware on IBM Cloud
@@ -250,6 +259,8 @@ IBM Cloud for VMware Solutions
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    vmonic/at-events.md
+
     {: .topicgroup}
     IBM Cloud for VMware Solutions 아키텍처
         archiref/solution/solution_overview.md
@@ -297,6 +308,12 @@ IBM Cloud for VMware Solutions
         archiref/vum/vum-orchestr-updates.md
         archiref/vum/vum-zerto.md
         archiref/vum/vum-host-profiles.md
+
+    {: .topicgroup}
+    KMIP for VMware on IBM Cloud 솔루션 아키텍처
+        archiref/kmip/overview.md
+        archiref/kmip/design.md
+        archiref/kmip/implementation.md
 
     {: .topicgroup}
     vCenter Server 네트워킹 안내서
@@ -361,5 +378,20 @@ IBM Cloud for VMware Solutions
         archiref/vcscontent/vcscontent-aianalytics.md
         archiref/vcscontent/vcscontent-iks.md
         archiref/vcscontent/vcscontent-summary.md
+
+    {: .topicgroup}
+    VMware HCX on IBM Cloud 솔루션 아키텍처
+        archiref/hcx-archi/hcx-archi-intro.md
+        archiref/hcx-archi/hcx-archi-overview.md
+        archiref/hcx-archi/hcx-archi-source.md
+        archiref/hcx-archi/hcx-archi-target.md
+        archiref/hcx-archi/hcx-archi-port-req.md
+        archiref/hcx-archi/hcx-archi-prep-install.md
+        archiref/hcx-archi/hcx-archi-install-cfg-src.md
+        archiref/hcx-archi/hcx-archi-reg-vcenter.md
+        archiref/hcx-archi/hcx-archi-install-cfg-hybrid.md
+        archiref/hcx-archi/hcx-archi-migrate-vm.md
+        archiref/hcx-archi/hcx-archi-mod-uninstall.md
+        archiref/hcx-archi/hcx-archi-trbl.md
 
     {: .navgroup-end}

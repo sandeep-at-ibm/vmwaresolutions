@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-11-09"
 
 vCenter Server インスタンスから Hybridity Bundle ライセンスを削除するには、VMware NSX および VMware vSAN のレンタル・ライセンス・キーを VMware vSphere Web Client のライセンス持ち込み (BYOL) キーに置き換える必要があります。 さらに、レンタル・ライセンスの料金を取り消すために、サポート・チケットを開く必要があります。
 
-ライセンスをダウングレードすると、vCenter Server インスタンスに障害が起こる可能性があります。 自己責任でのライセンスのダウングレードを選択することもできますが、ダウングレード時に利用できなくなる機能についてまず考慮する必要があります。 詳しくは、[VMware コンポーネント・エディションの比較チャート](../archiref/solution/appendix.html)を参照してください。
+ライセンスをダウングレードすると、vCenter Server インスタンスに障害が起こる可能性があります。 自己責任でのライセンスのダウングレードを選択することもできますが、ダウングレード時に利用できなくなる機能についてまず考慮する必要があります。 詳しくは、[VMware コンポーネント・エディションの比較チャート](/docs/services/vmwaresolutions/archiref/solution/appendix.html)を参照してください。
 {:important}
 
 ## Hybridity Bundle をマルチサイト環境から削除する前の重要な考慮事項
@@ -27,7 +27,7 @@ Hybridity Bundle をマルチサイト環境から削除する前に、以下の
 * VMware NSX ライセンスを結合し、すべてのマルチサイト・デプロイメントで使用するのに十分な容量を確保する必要があります。
 * Hybridity バンドルをすべてのマルチサイト・デプロイメントから削除するには、単一のサポート・チケットを作成する必要があります。
 
-マルチサイト環境から Hybridity バンドルを削除中に、BYOL ライセンスが適用されます。マルチサイト構成に含まれるすべてのサイトにおいて、NSX ライセンスが、すべてのサイトの中で最小のライセンス・エディションに自動的に戻されます。マルチサイト構成に含まれるすべてのサイトで、ライセンス・エディションが一貫していることを確認する必要があります。
+マルチサイト環境から Hybridity バンドルを削除中に、BYOL ライセンスが適用されます。 マルチサイト構成に含まれるすべてのサイトでライセンス・エディションが統一されていることを確認するのはお客様の責任となります。
 {:note}
 
 ## Hybridity Bundle を削除する前に
@@ -108,6 +108,6 @@ Hybridity Bundle を削除する前に、以下の要件を確認してくださ
 
 ### 関連リンク
 
-* [vCenter Server with Hybridity Bundle インスタンスの注文](vc_hybrid_orderinginstance.html)
-* [vCenter Server with Hybridity Bundle インスタンスの表示](vc_hybrid_viewinginstances.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
+* [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle インスタンスの表示](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

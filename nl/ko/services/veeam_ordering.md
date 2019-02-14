@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-07"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Veeam on IBM Cloud 주문
 

@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-11-20"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Notas del release para V2.0
 
@@ -70,7 +74,8 @@ El release actual aplica las siguientes actualizaciones y mejoras de componentes
 * VMware NSX for vSphere 6.3.4
 * VMware ESXi 6.5, Release de parche ESXi650-201710401-BG. Actualiza los VIB esx-base, esx-tboot, vsan y vsanhealth (2151061). Para obtener más información sobre los detalles del parche, consulte [Parches de seguridad del SO VMware vCenter Server Appliance Photon](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window}.
 
-**Nota**: Las instancias existentes (de releases V1.9 y anteriores) no se pueden actualizar a las versiones de componentes de esta lista.
+Las instancias existentes (de releases V1.9 y anteriores) no se pueden actualizar a las versiones de componentes de esta lista.
+{:note}
 
 Para obtener más información sobre los componentes, consulte [Visión general de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
 
@@ -99,7 +104,8 @@ Dispone de los siguientes valores de configuración de servidor nativo (Bare Met
 * Pequeño (Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz / 128 GB de RAM / 12 discos)
 * Grande (Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz / 512 GB de RAM / 12 discos)
 
-**Nota**: El chasis tiene espacio para 12 discos. No todas las ranuras están rellenadas. La configuración **Pequeño** proporciona dos unidades de 1,9 TB Micron 5100 MAX y la configuración **Grande** proporciona cuatro unidades de 3,8 TB Micron 5100 PRO.
+El chasis tiene espacio para 12 discos. No todas las ranuras están rellenadas. La configuración **Pequeño** proporciona dos unidades de 1,9 TB Micron 5100 MAX y la configuración **Grande** proporciona cuatro unidades de 3,8 TB Micron 5100 PRO.
+{:note}
 
 Para obtener más información, consulte los temas siguientes:
 * [Visión general de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
@@ -114,7 +120,8 @@ El release actual aplica las siguientes actualizaciones de componentes para nuev
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
 
-**Nota:** Los pedidos personalizados de vCenter Server con o sin el componente VMware vSAN siempre incluyen un servidor con un chasis para 12 discos. Este servidor da lugar a un coste ligeramente superior para el {{site.data.keyword.baremetal_short}} para el caso de pedido no vSAN en el PDF de estimación de precios.
+Los pedidos personalizados de vCenter Server con o sin el componente VMware vSAN siempre incluyen un servidor con un chasis para 12 discos. Este servidor da lugar a un coste ligeramente superior para el {{site.data.keyword.baremetal_short}} para el caso de pedido no vSAN en el PDF de estimación de precios.
+{:note}
 
 Para obtener más información sobre los componentes, consulte [Visión general de vCenter Server](../vcenter/vc_vcenterserveroverview.html).
 
@@ -163,7 +170,8 @@ Ahora dispone de las siguientes opciones de configuración de servidor nativo:
 * **Alto rendimiento (Grande)**: Licencia Premium / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 128 GB de RAM / Capacidad por nodo de 22 unidades SSD de 3,8 TB / Capacidad efectiva de un clúster de 4 nodos – 118 TB
 * **Alta capacidad** – Licencia Estándar / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 64 GB de RAM / Capacidad por nodo de diez unidades SATA de 4 TB / Capacidad efectiva de un clúster de 4 nodos – 60 TB
 
-**Nota:** Las unidades SSD de 3,8 TB reciben soporte cuando estén disponibles a un nivel general en un {{site.data.keyword.CloudDataCent_notm}}.
+Las unidades SSD de 3,8 TB reciben soporte cuando estén disponibles a un nivel general en un {{site.data.keyword.CloudDataCent_notm}}.
+{:note}
 
 Para obtener más información, consulte los temas siguientes:
 * [Visión general de NetApp ONTAP Select](../netapp/np_netappoverview.html)

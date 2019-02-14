@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -24,8 +24,8 @@ Services che rappresenta la destinazione per le macchine virtuali (VM) migrate d
 in loco. Insieme alla virtualizzazione in loco, è
 un ambiente ibrido e consente alle VM di spostarsi da un ambiente
 all'altro.
--	{{site.data.keyword.cloud_notm}} Private - ICP è una piattaforma dell'applicazione per
-lo sviluppo e la gestione delle applicazioni inserite nei contenitori. L'ambiente ICP è un ambiente
+-	{{site.data.keyword.icpfull_notm}} - {{site.data.keyword.icpfull_notm}} è una piattaforma dell'applicazione per
+lo sviluppo e la gestione delle applicazioni inserite nei contenitori. L'ambiente {{site.data.keyword.icpfull_notm}} è un ambiente
 integrato che include l'orchestrazione del contenitore Kubernetes, un
 repository di immagini privato, una console di gestione, i framework di monitoraggio
 e un'interfaccia utente grafica che fornisce una posizione centralizzata
@@ -33,9 +33,9 @@ da cui puoi distribuire, gestire, monitorare e ridimensionare le applicazioni.
 -	{{site.data.keyword.cloud_notm}} Automation Manager – CAM è una piattaforma IaC (Infrastructure as Code)
 pronta per le aziende che fornisce un unico pannello di controllo per
 il provisioning dei carichi di lavoro basati su VM insieme ai carichi di lavoro basati su Kubernetes e
-per l'automazione del provisioning dei carichi di lavoro per VM e/o contenitori e
-i relativi prerequisiti dell'infrastruttura. 
--	Watson – Watson è la piattaforma delle soluzioni di intelligenza artificiale e cognitiva di IBM. 
+per l'automazione del provisioning dei carichi di lavoro per VM o contenitori e
+i relativi prerequisiti dell'infrastruttura.
+-	Watson – Watson è la piattaforma delle soluzioni di intelligenza artificiale e cognitiva di IBM.
 -	Watson Knowledge Studio - Watson Knowledge Studio fornisce un modello da utilizzare con
 Watson Discovery.
 
@@ -77,4 +77,5 @@ virtuale gestita da vCenter Server.
 
 ## Link correlati
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

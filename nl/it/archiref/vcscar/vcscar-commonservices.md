@@ -2,22 +2,23 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
-# Componenti di servizi comuni
+# Componenti di servizi comuni per VMware e Skate Advisor Concept Car
 
 I servizi comuni forniscono i servizi che vengono utilizzati da altri servizi nella piattaforma di gestione cloud. I servizi comuni includono i servizi di identità e di accesso, i servizi di nome dominio e i servizi NTP.
 
-Figura 1. Servizi comuni di ICP ({{site.data.keyword.cloud}} Private)
-![Servizi comuni di ICP](vcscar-common-services.svg)
+Figura 1. Servizi comuni {{site.data.keyword.icpfull_notm}}
+![{{site.data.keyword.icpfull_notm}} - Servizi comuni](vcscar-common-services.svg)
 
 ## Servizi di identità e accesso
 
-Come parte dell'automazione di VMware vCenter Server on {{site.data.keyword.cloud_notm}}, per la gestione delle identità viene utilizzato un Microsoft AD (Active Directory). Viene distribuita una singola VSI (Virtual Server Instance) AD. Il vCenter è configurato per utilizzare l'autenticazione AD e puoi configurare anche ICP per l'autenticazione LDAP.
+Come parte dell'automazione di VMware vCenter Server on {{site.data.keyword.cloud_notm}}, per la gestione delle identità viene utilizzato un Microsoft AD (Active Directory). Viene distribuita una singola VSI (Virtual Server Instance) AD. Il vCenter è configurato per utilizzare l'autenticazione AD e puoi configurare anche
+{{site.data.keyword.icpfull_notm}} per l'autenticazione LDAP.
 
 ## DNS (Domain Name Service)
 
@@ -31,4 +32,5 @@ Per il corretto funzionamento dei certificati e dell'autenticazione di AD, è fo
 
 ### Link correlati
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

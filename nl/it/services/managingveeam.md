@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -24,12 +24,12 @@ Per gestire il servizio Veeam on {{site.data.keyword.cloud_notm}}, accedi alla c
 Puoi trovare l'indirizzo IP di Windows IP e le credenziali di amministratore nella pagina dei dettagli del servizio Veeam on {{site.data.keyword.cloud_notm}}.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](../sddc/sd_addingremovingservices.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](../vcenter/vc_addingremovingservices.html)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ## Backup e ripristino dei componenti di gestione per le istanze in cui è installato Veeam on IBM Cloud
 
-Il servizio Veeam on {{site.data.keyword.cloud_notm}} può essere configurato per eseguire il backup dei componenti di gestione utilizzando la console Veeam. Per ulteriori informazioni, vedi [Backup dei componenti](../archiref/solution/solution_backingup.html).
+Il servizio Veeam on {{site.data.keyword.cloud_notm}} può essere configurato per eseguire il backup dei componenti di gestione utilizzando la console Veeam. Per ulteriori informazioni, vedi [Backup dei componenti](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
 Per le istanze distribuite in o aggiornate alle release V1.8 o successive, le modifiche alla configurazione del tuo ambiente non vengono automaticamente sottoposte a backup. Pertanto, prima di modificare la configurazione del tuo ambiente, si consiglia di eseguire manualmente il backup dei componenti di gestione eseguendo il lavoro di backup di gestione nella console Veeam. Per ulteriori informazioni sul backup manuale, consulta le [istruzioni tecniche di Veeam](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}.
 
@@ -39,23 +39,23 @@ Quando si verificano errori nei componenti di gestione, puoi ripristinare tali c
 
 Sei responsabile di mantenere il software Veeam aggiornato alla versione più recente.
 
-### Per le istanze distribuite con rete pubblica e privata
+### Applicazione di aggiornamenti per le istanze distribuite con rete pubblica e privata
 
 Se il servizio Veeam viene installato su un'istanza con la rete pubblica e privata, puoi controllare e scaricare gli aggiornamenti utilizzando il software Veeam.
 
-### Per le istanze distribuite solo con rete privata
+### Applicazione di aggiornamenti per le istanze distribuite solo con rete privata
 
 Se il servizio Veeam viene installato su un'istanza solo con la rete privata, poiché la VSI Veeam è configurata senza accesso alla rete pubblica, non puoi controllare o scaricare gli aggiornamenti utilizzando il software Veeam. Invece, devi scaricare gli aggiornamenti dal sito web Veeam, trasferirli alla VM Veeam e poi installarli.
 
 ## Aggiornamento delle licenze Veeam
 
-### Per le istanze distribuite con rete pubblica e privata
+### Aggiornamento delle licenze Veeam per le istanze distribuite con rete pubblica e privata
 
 Se il servizio Veeam è installato su un'istanza con rete pubblica e privata, puoi aggiornare la tua licenza Veeam automaticamente o manualmente seguendo le istruzioni Veeam in [Updating license]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html).
 
-### Per le istanze distribuite solo con rete privata
+### Aggiornamento delle licenze Veeam per le istanze distribuite solo con rete privata
 
-Se il servizio Veeam è installato su un'istanza solo con la rete privata, devi prendere nota della data di scadenza della licenza e rivolgerti al [Supporto IBM](../vmonic/trbl_support.html) per ottenere assistenza con l'aggiornamento della chiave di licenza quando è necessario il rinnovo.
+Se il servizio Veeam è installato su un'istanza solo con la rete privata, devi prendere nota della data di scadenza della licenza e [contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) per ottenere assistenza con l'aggiornamento della chiave di licenza quando è necessario il rinnovo.
 
 ## Sostituzione della VSI Veeam delle istanze precedenti alla V1.8 con Veeam on IBM Cloud
 
@@ -75,8 +75,8 @@ Una volta distribuito il nuovo servizio Veeam on {{site.data.keyword.cloud_notm}
 
 ### Link correlati
 
-* [Panoramica di Veeam on {{site.data.keyword.cloud_notm}}](veeam_considerations.html)
-* [Come contattare il supporto IBM](../vmonic/trbl_support.html)
-* [Domande frequenti](../vmonic/faq.html)
+* [Panoramica di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Sito web Veeam.com](https://www.veeam.com/)
 * [Documentazione tecnica di Veeam](https://www.veeam.com/documentation-guides-datasheets.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -43,16 +43,16 @@ Die VMware Cloud Foundation- und vCenter Server-Umgebungen, die als {{site.data.
 
 ## Proaktive Unterstützung
 
-### Ersteinrichtung
+### Proaktive Unterstützung für die Erstbereitstellung
 
 * Während der ursprünglichen Bestellung und Bereitstellung einer Instanz oder eines Service kann IBM Support auf Kundeninstanzen und -informationen ohne vorherige Benachrichtigung des Kunden zugreifen, um sicherzustellen, dass die Bestellungen ordnungsgemäß ausgeführt werden.
 * Neben den Bestell-, Bereitstellungs- und Installationsprozessen überwacht IBM Support aktiv Lebenszyklusoperationen der Instanzen, wie das Hinzufügen neuer Hosts.
 * Um bereits aufgetretene oder zukünftige Probleme zu beheben, kann IBM Support eine Reihe von Maßnahmen ergreifen, darunter unter anderem das Überprüfen von Kundenauftragsdetails, das erneute Starten von Automationsjobs, das Durchführen von Operationen für das erneute Laden des Betriebssystems oder das Öffnen von IBM Cloud-Tickets mithilfe des bereitgestellten Benutzernamens und API-Schlüssels für IBM Cloud.
 
-### Operationen am zweiten Tag
+### Proaktive Unterstützung für Operationen im stabilen Zustand
 
-* In seltenen Fällen kann IBM Support den Zugriff auf Kundeninstanzen während der Operationen am zweiten Tag anfordern, um proaktiv eine Fehlerbehebung für eine Instanz durchzuführen oder die Funktion von bereitgestellten Services oder Komponenten zu überprüfen.
-* Dieser Zugriff erfolgt über das interne IBM Cloud-Unterstützungsnetz. IBM Support ändert Instanzkonfigurationen nur mit der vorherigen Zustimmung des Kunden. 
+* In seltenen Fällen kann IBM Support den Zugriff auf Kundeninstanzen während Operationen im stabilen Zustand anfordern, um proaktiv eine Fehlerbehebung für eine Instanz durchzuführen oder die Funktion von bereitgestellten Services oder Komponenten zu überprüfen.
+* Dieser Zugriff erfolgt über das interne IBM Cloud-Unterstützungsnetz. IBM Support ändert Instanzkonfigurationen nur mit der vorherigen Zustimmung des Kunden.
 * Der Zugriff erfolgt auf VMware-Managementkomponenten und/oder IBM Cloud-Managementkomponenten und nie auf die virtuellen Maschinen oder Anwendungen der Kunden.
 
 ### Support-Tickets
@@ -62,7 +62,7 @@ Die VMware Cloud Foundation- und vCenter Server-Umgebungen, die als {{site.data.
 * Aufgrund des Grades an Spezialisierung, der erforderlich ist, um das technische Know-how auf Teamebene aufrecht zu erhalten, ist es in manchen Fällen nötig, dass mehr als ein Support-Team an der Lösung eines bestimmten Softwareproblems beteiligt ist. Dies ist ohne großen Aufwand durchsetzbar, da unsere Support-Teams gut miteinander vernetzt sind und Hand in Hand an aufgetretenen Probleme arbeiten.
 * Um das Problem zu untersuchen, muss IBM möglicherweise auf Informationen zu Ihrem System in Bezug auf den Fehler zugreifen oder den Fehler erneut generieren, um zusätzliche Informationen zu erhalten.
 * Ein vom Kunden geöffnetes Support-Ticket dient als Bestätigung seitens des Kunden, dass IBM Support für das Durchführen von Untersuchungen, Debugging und Triage auf die VMware-Managementschicht zugreifen kann. Wenn Wartungsunterbrechungen oder Änderungen an der Umgebung erforderlich sind, fordert IBM Support zusätzliche dokumentierte Bestätigungen vom Kunden über Tickets als Teil unseres Änderungsmanagementprozesses an.
-* Weitere Informationen zu Support-Tickets finden Sie im [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) und unter [Kontaktaufnahmen mit IBM Support](../vmonic/trbl_support.html).
+* Weitere Informationen zu Support-Tickets finden Sie im [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) und unter [Kontaktaufnahmen mit IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## Verantwortlichkeiten des Kunden
 
@@ -72,7 +72,7 @@ Die VMware Cloud Foundation- und vCenter Server-Umgebungen, die als {{site.data.
 * Bei der ersten Bereitstellung laufen die Automatisierung des Angebots und das Konto des Kunden getrennt voneinander. Kunden sind berechtigt und werden dazu ermutigt, alle von IBM bereitgestellten Kennwörter im Portal zu ändern.
 * Der vCenter-Zugriff und die Berechtigungsnachweise werden während den ersten Implementierungen erstellt und dem Kunden bereitgestellt. Im Rahmen der Anforderung unseres Angebots muss IBM Support uneingeschränkten Zugriff auf die Managementschicht erhalten, um Lebenszyklusmanagement sowie Unterstützung für unsere Kunden bereitzustellen.
 * Wenn Berechtigungsnachweise, wie Kennwörter, zu einem beliebigen Zeitpunkt geändert werden, kann IBM Support möglicherweise Kunden nicht mehr bei der Wiederherstellung verloren gegangener oder vergessener Berechtigungsnachweise oder sogar bei der Fehlerbehebung von Kundenumgebungen helfen.
-* Weitere Informationen zur Bedeutung dieses Problems und zu den zugehörigen Bedenken finden Sie im Abschnitt [Hinweise zum Ändern von Kennwörtern für NSX-Komponenten](vc_networkingonvcenterserver.html#considerations-when-changing-passwords-for-nsx-components) und [Hinweise zum Ändern der vCenter Server-Artefakte](vcenter_chg_impact.html).
+* Weitere Informationen zur Bedeutung dieses Problems und zu den zugehörigen Bedenken finden Sie im Abschnitt [Hinweise zum Ändern von Kennwörtern für NSX-Komponenten](/docs/services/vmwaresolutions/vcenter/vc_networkingonvcenterserver.html#considerations-when-changing-passwords-for-nsx-components) und [Hinweise zum Ändern der vCenter Server-Artefakte](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html).
 
 ### Kommunikation und Fehlerbehebung
 
@@ -87,7 +87,7 @@ Die VMware Cloud Foundation- und vCenter Server-Umgebungen, die als {{site.data.
 
 * Management des Cloud-Service: Der Kunde ist für das Management der Administration, Operation, Wartung und Sicherheit der Anwendungen, einschließlich der zugrunde liegenden Middleware, verantwortlich.
 * Integrität und Verfügbarkeit des Service: IBM leitet dem Kunden alle Benachrichtigungen zu Netzangriffen weiter, die für diesen Cloud-Service erkannt werden. Es liegt in der Verantwortung des Kunden, die Auswirkungen jeder gemeldeten Benachrichtigung zu ermitteln. Der Kunde wird über Hardwarefehler benachrichtigt. Die Überwachung und Reaktion auf Betriebssystemfehler oder Softwarefehler liegt in der Verantwortung des Kunden; bei Bedarf kann IBM Support einbezogen werden.
-* Aktivitätsprotokollierung: Der Kunde ist je nach Bedarf für die Aktivitätsprotokollierung für Betriebssystem/System und Datenbank/Anwendungen verantwortlich.  
+* Aktivitätsprotokollierung: Der Kunde ist je nach Bedarf für die Aktivitätsprotokollierung für Betriebssystem/System und Datenbank/Anwendungen verantwortlich.
 * Verschlüsselung: Der Kunde ist je nach Bedarf für die Konfiguration und Verwaltung der gesamten Verschlüsselung verantwortlich (sowohl für ruhende Daten als auch für Daten während der Übertragung).
 * Business-Continuity und Disaster-Recovery: Der Kunde ist je nach Bedarf für die Konfiguration und Verwaltung aller Business-Continuity und Disaster-Recovery-Prozesse verantwortlich.
 
@@ -111,12 +111,12 @@ Die VMware Cloud Foundation- und vCenter Server-Umgebungen, die als {{site.data.
 * Mit der Absendung der Bestellung erklärt sich der Kunde mit diesen Bedingungen einverstanden und erteilt IBM Support die Zustimmung, jederzeit ohne vorherige Ankündigung auf seine Instanzen zugreifen zu dürfen, um Probleme im Zusammenhang mit der Umgebung schnell beheben oder künftige Ausfälle verhindern zu können.
 * Diese Zustimmung gilt für alle aktuell bestellten Instanzen für ihren gesamten Lebenszyklus. Für Instanzen und Komponenten von Instanzen, die zukünftig bereitgestellt werden, ist möglicherweise eine zusätzliche Zustimmung erforderlich.
 
-## Operationen am zweiten Tag
+## Operationen im stabilen Zustand
 
 Wenn der Kunde keine Zustimmung zur proaktiven Unterstützung für eine Instanz bei der Ersteinrichtung und ursprünglichen Bestellung erteilt hat, muss er bei Bedarf in alle zukünftigen Service-Tickets eine explizite Zustimmung geben. Zustimmungserklärungen müssen den festgelegten Richtlinien entsprechen; andernfalls werden sie als nichtig betrachtet.
 
 ### Zugehörige Links
 
-* [Übersicht über vCenter Server](vc_vcenterserveroverview.html)
-* [Übersicht über vCenter Server with Hybridity Bundle](vc_hybrid_overview.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
+* [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Übersicht über vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

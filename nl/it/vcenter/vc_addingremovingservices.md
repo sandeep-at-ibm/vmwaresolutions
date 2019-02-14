@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -24,17 +24,17 @@ Tabella 1. Servizi disponibili per le istanze vCenter Server
 
 | Nome servizio | Versione servizio corrente | Versione istanza |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html) | BIG-IP VE v13.1.1.2 | V1.9 e successive |
-| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 300 series | V2.0 e successive |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html) | 6.0.3 | V2.0 e successive |
-| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html) | 5.4.0 | V2.3 e successive |
-| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)  | 4.2.1 | V2.3 e successive |
-| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)              | 4.2 | V2.5 e successive |
-| [{{site.data.keyword.cloud_notm}} Private Hosted](../services/icp_overview.html) | 3.1 | V2.5 e successive |
-| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html) | 10.1.1 Patch 1 | V2.2 e successive |
-| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html) |   | V2.2 e successive |
-| [Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html) | 9.5u3 | V1.8 e successive |
-| [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) | 6.0 aggiornamento a 3 | V1.2 e successive |
+| [F5 on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/f5_considerations.html) | BIG-IP VE v13.1.1.2 | V1.9 e successive |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_considerations.html) | 300 series | V2.0 e successive |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html) | 6.0.3 | V2.0 e successive |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html) | 5.4.0 | V2.3 e successive |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_considerations.html)  | 4.2.1 | V2.3 e successive |
+| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_considerations.html)              | 4.2 | V2.5 e successive |
+| [{{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services/icp_overview.html) | 3.1 | V2.5 e successive |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_considerations.html) | 10.1.2 | V2.2 e successive |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html) | 2.0  | N/A  |
+| [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html) | 9.5u3 | V1.8 e successive |
+| [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html) | 6.0 aggiornamento a 3 | V1.2 e successive |
 
 ## Procedura per aggiungere servizi alle istanze vCenter Server
 
@@ -62,7 +62,7 @@ Una volta completata correttamente l'installazione del servizio, riceverai una n
 
 ### Risultati della rimozione del servizio
 
-Dopo che la tua richiesta di rimozione del servizio viene accettata, lo stato del servizio viene modificato in  **In fase di rimozione**.
+Dopo che la tua richiesta di rimozione del servizio viene accettata, lo stato del servizio viene modificato in **In fase di rimozione**.
 
 Una volta completata correttamente la rimozione del servizio, riceverai una notifica via e-mail e il servizio verrà rimosso dalla pagina **Servizi** dell'istanza.
 
@@ -71,4 +71,4 @@ Per i servizi rimossi ti vengono addebitati costi fino alla fine del ciclo di fa
 
 ### Link correlati
 
-* [Domande frequenti](../vmonic/faq.html)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)

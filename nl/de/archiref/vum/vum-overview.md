@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -34,11 +34,11 @@ Daher läuft der VUM-Prozess wie folgt ab:
 Das Herunterladen von Upgrades, Host-Patches, Erweiterungen und zugehörigen Metadaten ist ein vordefinierter automatischer Prozess, der geändert werden kann. Standardmäßig nimmt VUM in regelmäßigen konfigurierbaren Intervallen Kontakt zu VMware oder Drittanbieterquellen auf, um folgende Metadaten zu verfügbaren Upgrades, Patches oder Erweiterungen zu erfassen:
 
 * Metadaten über alle ESXi 5.5- und ESXi 6.x-Patches unabhängig davon, ob es Hosts dieser Versionen in Ihrer Umgebung gibt.
-* Metadaten zu ESXi 5.5- und ESXi 6.x-Patches sowie zu Erweiterungen von URL-Adressen von Drittanbietern.
+* Metadaten zu ESXi 5.5- und ESXi 6.x-Patches und zu Erweiterungen von URL-Adressen von Drittanbietern.
 * Benachrichtigungen, Alerts und Patchrückrufe für ESXi 5.5- und ESXi 6.x-Hosts.
 * Metadaten zu Upgrades für virtuelle Appliances.
 
-VUM unterstützt den Rückruf von Patches für Hosts, auf denen ESXi 5.0 oder höher ausgeführt wird. Ein Patch wird zurückgerufen, wenn bei dem freigegebenen Patch Probleme oder potenzielle Probleme auftreten. Nachdem Sie die Hosts in Ihrer VMware vCenter Server on {{site.data.keyword.cloud}}-Instanz geprüft haben, werden Sie von VUM benachrichtigt, wenn das zurückgerufene Patch auf einem bestimmten Host installiert wurde. Zurückgerufene Patches können nicht mit VUM auf Hosts installiert werden. VUM löscht außerdem alle zurückgerufenen Patches aus dem Patch-Repository. Nachdem ein Patch zur Behebung des Problems freigegeben wurde, lädt VUM das neue Patch in sein Patch-Repository herunter. Wenn Sie das problematische Patch bereits installiert haben, benachrichtigt VUM Sie darüber, dass ein Fix freigegeben wurde, und fordert Sie auf, das neue Patch anzuwenden.
+VUM unterstützt den Rückruf von Patches für Hosts, auf denen ESXi 5.0 oder höher ausgeführt wird. Ein Patch wird zurückgerufen, wenn bei dem freigegebenen Patch Probleme oder potenzielle Probleme auftreten. Nachdem Sie die Hosts in Ihrer VMware vCenter Server on {{site.data.keyword.cloud}}-Instanz geprüft haben, werden Sie von VUM benachrichtigt, wenn das zurückgerufene Patch auf einem bestimmten Host installiert wird. Zurückgerufene Patches können nicht mit VUM auf Hosts installiert werden. VUM löscht außerdem alle zurückgerufenen Patches aus dem Patch-Repository. Nachdem ein Patch zur Behebung des Problems freigegeben wurde, lädt VUM das neue Patch in sein Patch-Repository herunter. Wenn Sie das problematische Patch bereits installiert haben, benachrichtigt VUM Sie darüber, dass ein Fix freigegeben wurde, und fordert Sie auf, das neue Patch anzuwenden.
 
 Die VUM-Clientschnittstelle bietet zwei Hauptansichten:
 *	Administrationsansicht
@@ -64,4 +64,4 @@ Sie rufen die Konformitätsansicht eines ausgewählten Bestandsobjekts auf, inde
 ### Zugehörige Links
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

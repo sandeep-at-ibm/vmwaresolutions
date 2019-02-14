@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -50,8 +50,8 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 
 ### Link correlati
 
-* [Panoramica di VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
-* [Ordine di istanze VMware Federal](vc_fed_orderinginstance.html)
-* [Protezione di istanze VMware Federal](vc_fed_securinginstance.html)
-* [Visualizzazione delle istanze VMware Federal](vc_fed_viewinginstance.html)
-* [Come contattare il supporto IBM](../vmonic/trbl_support.html)
+* [Panoramica di VMware Federal on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
+* [Ordine di istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [Protezione di istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [Visualizzazione delle istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

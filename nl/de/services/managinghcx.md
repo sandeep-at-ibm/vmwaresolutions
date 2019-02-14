@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -17,7 +17,7 @@ Um den Service "HCX on {{site.data.keyword.cloud}}" zu verwalten, müssen Sie au
 2. Klicken Sie zum Zugriff auf die HCX-Cloudkonsole auf der Seite mit den Details für den Service "HCX on {{site.data.keyword.cloud_notm}}" auf **HCX-Cloudkonsole anzeigen** und melden Sie sich dann mit den vCenter Server-Berechtigungsnachweisen an.
 3. Klicken Sie zum Zugriff auf die Administratorkonsole des HCX-Managers auf der Seite mit den Details für den Service "HCX on {{site.data.keyword.cloud_notm}}" auf **Verwaltungskonsole des HCX-Managers anzeigen** und melden Sie sich dann mit den Berechtigungsnachweisen für den HCX-Manager an, die auf derselben Servicedetailseite aufgeführt sind.
 
-Weitere Informationen finden Sie unter [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_hybrid_addingremovingservices.html).
+Weitere Informationen finden Sie unter [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html).
 
 ## Updates auf HCX on IBM Cloud anwenden
 
@@ -25,11 +25,11 @@ HCX on {{site.data.keyword.cloud_notm}} wird mit dem neuesten getesteten Build d
 
 Zum Anwenden von Wartungsfixes, die mit Push-Operation an Ihre Umgebung übertragen wurden, müssen Sie die Administratorkonsole des HCX-Managers in Ihrem lokalen Rechenzentrum und Ihre vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle-Instanz verwenden.
 
-Wenn ein erwartetes Build-Update nicht angezeigt wird, wenn Probleme mit HCX auftreten oder wenn Sie möchten, dass der neueste HCX-Build sofort mit Push-Operation an Ihr System übertragen wird, öffnen Sie ein Support-Ticket. Befolgen Sie dazu die im Abschnitt [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html) beschriebenen Schritte.
+Wenn ein erwartetes Build-Update nicht angezeigt wird, wenn Probleme mit HCX auftreten oder wenn Sie möchten, dass der neueste HCX-Build sofort mit Push-Operation an Ihr System übertragen wird, öffnen Sie ein Support-Ticket. Befolgen Sie dazu die im Abschnitt [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) beschriebenen Schritte.
 
 ### Zugehörige Links
 
-* [Übersicht über HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
-* [Glossar der HCX-Begriffe](hcx_glossary.html)
+* [HCX on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [Glossar der HCX-Begriffe](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx)
 * [Dokumentation zu VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

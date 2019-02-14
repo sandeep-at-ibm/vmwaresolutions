@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-01"
 
 ESXi 6.5 contiene molti nuovi driver nativi che sostituiscono i driver vmklinux precedenti. Mentre la maggior parte dei nuovi driver nativi vengono abilitati per impostazione predefinita dopo l'installazione o l'aggiornamento, tre dei nuovi driver nativi sono disabilitati per impostazione predefinita perché non supportano completamente le funzioni dei driver vmklinux corrispondenti.
 
-ixgben è un driver nativo che sostituisce il driver vmklinux net-ixgbe ma non supporta SR-IOV e SW FcOE. L'automazione di ICVS non ha abilitato questo driver quando è stato eseguito il provisioning del tuo host vSphere ESXi. Si consiglia di abilitare questo driver per i benefici prestazionali che offre. La seguente procedura descritta in questa appendice ti mostra come abilitare e disabilitare i driver nativi utilizzando la riga di comando vSphere (vCLI).
+ixgben è un driver nativo che sostituisce il driver vmklinux net-ixgbe ma non supporta SR-IOV e SW FcOE. L'automazione di ICVS non abilita questo driver quando viene eseguito il provisioning del tuo host vSphere ESXi. Si consiglia di abilitare questo driver per i benefici prestazionali che offre. La seguente procedura descritta in questa appendice ti mostra come abilitare e disabilitare i driver nativi utilizzando la riga di comando vSphere (vCLI).
 
 Prima di iniziare questa attività, recupera tutti gli indirizzi IP degli host fisici, gli ID di accesso e le password dal [{{site.data.keyword.cloud}}portale dell'infrastruttura](https://control.softlayer.com/devices). Ciò è necessario in caso di ripristino o per controllare l'avanzamento di un aggiornamento, in cui non esiste un accesso di rete diretto all'host.
 
@@ -23,7 +23,7 @@ Per ogni host, effettua le seguenti operazioni in successione:
   `esxcli system module set --enabled=true --module=ixgben`
 4. Immetti il seguente comando della vCLI per riavviare l'host vSphere ESXi:
   `system shutdown reboot --reason “Install ixgben driver”`
-5. Dopo il riavvio dell'host vSphere ESXI, utilizzando SSH accedi nuovamente all'host. Immetti il seguente comando della vCLI e verifica che il driver ixgben sia “caricato” (prima colonna) e “abilitato” (seconda colonna):
+5. Dopo che l'host vSphere ESXI viene riavviato, utilizzando SSH accedi di nuovo all'host, immetti il seguente comando della vCLI e verifica che il driver ixgben sia “caricato” (prima colonna) e “abilitato” (seconda colonna):
   `esxcli system module list |grep ixg`
 6. Se i driver sono abilitati, utilizzando il client web vSphere, seleziona l'host nel riquadro di navigazione, fai clic con il tasto destro del mouse e seleziona **Maintenance Mode** > **Exit Maintenance Mode**. Seleziona l'host successivo e abilita i driver finché non vengono terminati tutti gli host.
 7. Se la modifica non funziona, per annullare l'operazione, immetti il seguente comando:
@@ -34,18 +34,18 @@ Per ogni host, effettua le seguenti operazioni in successione:
 
 Se hai bisogno di ripristinare e non puoi eseguire l'SSH nell'host vSphere ESXi, devi accedere alla console KVM per l'host che richiede il ripristino tramite la finestra di controllo di {{site.data.keyword.cloud_notm}}.
 
-Utilizza l'ID e la password elencati nella finestra di controllo di {{site.data.keyword.cloud_notm}} con l'indirizzo IP IPMI per accedere all'interfaccia web IPMI. Devi essere connesso al data center in cui si trova l'host tramite VPN. Per ulteriori informazioni, vedi [Introduzione a VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
+Utilizza l'ID e la password elencati nella finestra di controllo di {{site.data.keyword.cloud_notm}} con l'indirizzo IP IPMI per accedere all'interfaccia web IPMI. Devi essere connesso al data center in cui si trova l'host tramite VPN. Per ulteriori informazioni, vedi [Introduzione a VPN](/docs/infrastructure/iaas-vpn/getting-started.html).
 
-1. Vai alla pagina Device Details, Remote Mgmt per l'host vSphere ESXi e seleziona **Actions** > **KVM Console**. Si aprirà un'altra finestra in cui dovrai immettere utente e password IPMI.
-2. Seleziona **Remote Control** > **iKVM/HTML5** e fai clic su **iKVM/HTML5** per riavviare. Potrai ora accedere alla console dell'host vSphere ESXi.
+1. Vai alla pagina Device Details, Remote Mgmt per l'host vSphere ESXi e seleziona **Actions** > **KVM Console**. Si apre un'altra finestra in cui dovrai immettere utente e password IPMI.
+2. Seleziona **Remote Control** > **iKVM/HTML5** e fai clic su **iKVM/HTML5** per riavviare. Puoi ora accedere alla console dell'host vSphere ESXi.
 3. Se l'host risponde ai comandi, utilizza **ALT-F1** nella console per accedere alla console dell'host ESXi. Per accedere, utilizza le credenziali dell'host.
 4. Se l'host non risponde, utilizza i menu IPMI per spegnere e accendere l'host.
-5. Guarda attentamente la console HTML5 mentre l'host si riavvia. Hai solo pochi secondi per passare alla modalità di ripristino quando ESXi inizia a riavviarsi.
+5. Guarda attentamente la console HTML5 mentre l'host si riavvia. Hai solo pochi secondi per passare alla modalità di ripristino al riavvio di ESXi.
 6. Premi contemporaneamente i tasti **CMD + R** per accedere alla modalità di ripristino.
 7. Digita **“Y”** per accedere alla modalità di ripristino e avviare il server ESXi con la versione precedente.
-8. Monitora l'avanzamento tramite la console. Questa operazione può richiedere da 10 a 20 minuti.
+8. Monitora l'avanzamento tramite la console. L'avvio può richiedere da 10 a 20 minuti.
 
 ### Link correlati
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)

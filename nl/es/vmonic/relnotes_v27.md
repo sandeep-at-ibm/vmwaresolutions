@@ -2,11 +2,16 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-14"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 
 # Notas del release para V2.7
 
@@ -61,6 +66,11 @@ Para el servicio Zerto on {{site.data.keyword.cloud_notm}} desplegado en instanc
 
 Además de los sucesos de instancia de VMware, ahora los sucesos correspondientes a KMIP for VMware on {{site.data.keyword.cloud_notm}}, como la creación de claves, la supresión de claves y el acceso a claves, están integrados con la instancia de {{site.data.keyword.cloud_notm}} Activity Tracker. Para obtener más información sobre KMIP for WMware on {{site.data.keyword.cloud_notm}}, consulte [Visión general de KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html).
 
+### KMIP for VMware on IBM Cloud - en desuso
+
+(Actualizado el 14 de diciembre de 2018) La versión actual de KMIP for VMware on {{site.data.keyword.cloud_notm}} ha quedado en desuso. Para obtener más información, [póngase en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html).
+{:deprecated}
+
 ## Documentación nueva y actualizada
 
 ### Documentación de arquitectura de referencia
@@ -74,8 +84,6 @@ Los siguientes documentos técnicos están ahora disponibles en la sección *Con
 * [Guía de vCenter Server y del servicio IBM Kubernetes](../archiref/vcsiks/vcsiks-intro.html)
 * [Guía de VMware y Skate Advisor Concept Car](../archiref/vcscar/vcscar-intro.html)
 * [VMware: el proceso de modernización de Stock Trader](../archiref/vcscontent/vcscontent-modjourney.html)
-
-Algunos de estos documentos de arquitectura de referencia solo están disponibles en inglés.
 
 ## Actualizaciones y mejoras de la interfaz de usuario
 

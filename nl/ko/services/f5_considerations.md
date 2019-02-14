@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-11-09"
 
@@ -72,7 +72,7 @@ F5 on {{site.data.keyword.cloud_notm}} 서비스를 설치하기 전에 다음 �
 
 ### 플랜 고려사항
 F5 on {{site.data.keyword.cloud_notm}}가 실패하지 않으려면 다음 요구사항을 충족해야 합니다.
-* 개별 서버에 VM을 유지하는 연관관계 방지 규칙으로 두 BIG-IP VE VM을 배치하는 데 최소 두 개의 활성 ESXi 서버를 사용할 수 있습니다.
+* 개별 서버에 VM을 유지하는 비유사성 규칙으로 두 BIG-IP VE VM을 배치하는 데 최소 두 개의 활성 ESXi 서버를 사용할 수 있습니다.
 * CPU 및 RAM이 100% 예약된 상태로 각 ESXi 서버에 하나의 BIG-IP VE VM을 호스팅할 수 있도록 두 개의 활성 서버에 사용할 수 있는 충분한 리소스가 있습니다.
 * VMware vSphere HA에는 CPU 및 RAM이 100% 상태로 두 BIG-IP VM을 호스팅할 수 있는 충분한 리소스가 있습니다.
 

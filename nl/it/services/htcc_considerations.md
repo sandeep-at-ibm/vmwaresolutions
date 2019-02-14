@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -44,8 +44,8 @@ Prima di rimuovere il servizio HyTrust CloudControl on {{site.data.keyword.cloud
 
 ### Link correlati
 
-* [Ordine di HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](htcc_ordering.html)
-* [Gestione di HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](managinghtcc.html)
-* [Come contattare il supporto IBM](../vmonic/trbl_support.html)
-* [Domande frequenti](../vmonic/faq.html)
+* [Ordine di HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_ordering.html)
+* [Gestione di HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtcc.html)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Sito web HyTrust](https://www.hytrust.com/)

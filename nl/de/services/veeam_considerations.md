@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -59,10 +59,10 @@ Durch das Entfernen des Veeam on {{site.data.keyword.cloud_notm}}-Service werden
 
 ### Zugehörige Links
 
-* [Veeam on {{site.data.keyword.cloud_notm}} bestellen](veeam_ordering.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} verwalten](managingveeam.html)
-* [Verwaltete Services für Veeam on {{site.data.keyword.cloud_notm}} anfordern](managing_veeam_services.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/veeam_ordering.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managingveeam.html)
+* [Verwaltete Services für Veeam on {{site.data.keyword.cloud_notm}} anfordern](/docs/services/vmwaresolutions/services/managing_veeam_services.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Veeam-Website](https://www.veeam.com/){:new_window}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}

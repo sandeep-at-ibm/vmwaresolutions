@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-08-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ Abbildung 1. Übersicht über VMware on {{site.data.keyword.cloud_notm}}
 
 ## Hauptvorteile
 
-VMware Cloud Foundation und vCenter Server on {{site.data.keyword.cloud_notm}} stellen die Grundbausteine bereit, zu denen VMware vSphere, vCenter Server, NSX und Optionen für gemeinsam genutzten Speicher wie vSAN gehören. Diese Komponenten sind erforderlich, um eine flexible Architektur für eine durch die VMware-Software definierte Lösung für das Rechenzentrum aufzubauen, die sich am besten für Ihre Workloads eignet. 
+VMware Cloud Foundation und vCenter Server on {{site.data.keyword.cloud_notm}} stellen die Grundbausteine bereit, zu denen VMware vSphere, vCenter Server, NSX und Optionen für gemeinsam genutzten Speicher wie vSAN gehören. Diese Komponenten sind erforderlich, um eine flexible Architektur für eine durch die VMware-Software definierte Lösung für das Rechenzentrum aufzubauen, die sich am besten für Ihre Workloads eignet.
 
 Durch die erweiterte Automatisierung und die Bare-Metal-Infrastruktur für einzelne Tenants können Sie zügig innerhalb weniger Stunden die gesamte VMware-Umgebung in der {{site.data.keyword.cloud_notm}} bereitstellen. Anschließend können Sie auf die von IBM gehostete Umgebung über native VMware-Clients, Befehlszeilenschnittstellen (Command Line Interface, CLI), vorhandene Scripts oder durch andere vertraute und mit der vSphere-API kompatible Tools zugreifen und Managementoperationen ausführen.
 
@@ -40,6 +40,6 @@ Die VMware on {{site.data.keyword.cloud_notm}}-Angebote bieten die folgenden Vor
 
 ### Zugehörige Links
 
-* [Übersicht über das Design](design_overview.html)
-* [Skalierungskapazität](solution_scaling.html)
-* [Komponenten sichern](solution_backingup.html)
+* [Übersicht über das Design](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [Skalierungskapazität](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
+* [Komponenten sichern](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

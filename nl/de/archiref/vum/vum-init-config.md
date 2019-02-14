@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-11-07"
 
 Mit der IC4VS-Automation wird die VCSA mit einem Standardgateway konfiguriert, das auf den {{site.data.keyword.cloud}} Backend Customer Router (BCR) eingestellt ist. Es gibt jedoch über den BCR keine Route zum Internet. Die Standardroute von der VMware vCenter Server on {{site.data.keyword.cloud_notm}}-Instanz zum Internet verläuft über das Management-ESG. Da es nicht ratsam ist, die Konfiguration der VCSA oder des Management-ESG zu ändern, wird eine Proxy-Server-Implementierung im Kundenteilnetz empfohlen, um VUM zu aktivieren.
 
-Dieser Ansatz bedeutet, dass weder die VCSA noch das Management-ESG neu konfiguriert werden muss, sondern es muss lediglich eine weniger umfangreiche virtuelle Maschine (VM) oder Appliance installiert werden. Ein Proxy-Server ist ein System, das sich zwischen zwei Endpunktgeräten befindet und als Zwischeneinheit dient. In diesem Fall befindet es sich zwischen VUM und den Update-Servern bei VMware.
+Dieser Ansatz bedeutet, dass Sie die VCSA oder die Management-ESG nicht neu konfigurieren müssen, sondern es muss lediglich eine kleine virtuelle Maschine (VM) oder ein Gerät installiert sein. Ein Proxy-Server ist ein System, das sich zwischen zwei Endpunktgeräten befindet und als Zwischeneinheit dient. In diesem Fall befindet es sich zwischen VUM und den Update-Servern bei VMware.
 
 Wenn VUM eine Ressource vom Update-Server bei VMware anfordert, wird die Anforderung zuerst an den Proxy-Server gesendet und der Proxy-Server sendet die Anforderung dann an den Update-Server. Sobald die Ressource vom Proxy-Server empfangen wurde, sendet er die Ressource an VUM. Ein Proxy-Server kann verwendet werden, um Sicherheitsfunktionen, Verwaltungssteuermechanismen und Caching-Services zu unterstützen.
 
-In diesem Dokument wird die Verwendung eines Proxy-Servers auf der Basis von CentOS und Squid beschrieben. Squid Proxy ist ein Open-Source-Caching-Proxy für das Web, der zahlreiche Protokolle (wie z. B. HTTP und HTTPS) unterstützt. Es steht eine Reihe von VM- und Appliance-basierten Proxys zur Verfügung und Sie sollten den gewünschten Proxy entsprechend Ihren Unternehmensanforderungen auswählen und ihn nach der Anleitung des Anbieters installieren und konfigurieren. Kunden, die sich für eine CentOS/Squid-Implementierung entscheiden, sollten mit dem unten stehenden Prozess fortfahren.
+In diesem Dokument wird die Verwendung eines Proxy-Servers auf der Basis von CentOS und Squid beschrieben. Squid Proxy ist ein Open-Source-Caching-Proxy für das Web, der zahlreiche Protokolle (wie z. B. HTTP und HTTPS) unterstützt. Es steht eine Reihe von VM- und Appliance-basierten Proxys zur Verfügung und Sie müssen den gewünschten Proxy entsprechend Ihren Unternehmensanforderungen auswählen und ihn nach der Anleitung des Anbieters installieren und konfigurieren. Kunden, die sich für eine CentOS/Squid-Implementierung entscheiden, sollten mit dem folgenden Prozess fortfahren.
 
 * Laden Sie CentOS-ISO-Datei auf einen Jump-Server herunter.
 * Erstellen Sie eine vCenter-Bibliothek.
@@ -83,7 +83,7 @@ Erstellen Sie eine lokale vCenter-Inhaltsbibliothek. Auf die Bibliothek kann nur
 2. Geben Sie einen Namen für die Inhaltsbibliothek ein (z. B. ISO), geben Sie in das Textfeld "Hinweise" eine Beschreibung für die Bibliothek ein und klicken Sie auf **Weiter**.
 3. Wählen Sie **Lokale Inhaltsbibliothek** aus und klicken Sie auf **Weiter**.
 4. Wählen Sie einen Datenspeicher aus und klicken Sie anschließend auf einen geeigneten Datenspeicher (z. B. vsanDatastore).
-5. Überprüfen Sie die Informationen auf der Seite "Bereit zum Abschließen" und klicken Sie auf **Fertigstellen**.
+5. Lesen Sie die Informationen auf der Seite **Bereit zum Abschließen** und klicken Sie auf **Fertigstellen**.
 
 ### Proxy-VM konfigurieren und CentOS und Squid installieren
 
@@ -97,7 +97,7 @@ Diese Aktivität umfasst die folgenden Tasks:
 
 Mit dieser Task wird eine neue VM erstellt, die für den sofortigen Einsatz als Proxy-Server geeignet ist. Die Einstellungen von "Tabelle 1 - Werte für die Bereitstellung" sollten für die Konfiguration verwendet werden.
 
-1.	Bei Verwendung des vSphere Web Client wählen Sie **Home** > **VMs und Vorlagen** aus.
+1.	Bei Verwendung von vSphere Web Client wechseln Sie zu **Home** > **VMs und Vorlagen**.
 2.	Klicken Sie im Navigatorfenster auf **datacenter1**, klicken Sie anschließend mit der rechten Maustaste und wählen Sie **Neue virtuelle Maschine** > **Neue virtuelle Maschine** aus.
 3.	Wählen Sie **Neue virtuelle Maschine erstellen** aus und klicken Sie auf **Weiter**.
 4.	Geben Sie einen Namen für die VM ein (z. B. Proxy01), wählen Sie **datacenter1** aus und klicken Sie anschließend auf **Weiter**.
@@ -114,27 +114,27 @@ Mit dieser Task wird eine neue VM erstellt, die für den sofortigen Einsatz als 
 Diese Task installiert und konfiguriert die neu erstellte VM, sodass sie für die Squid-Installation bereit ist.
 
 1.	Wählen Sie im Navigatorfenster des vSphere Web Client die soeben erstellte **VM** aus (Proxy01) und wählen Sie dann die Registerkarte mit der **Zusammenfassung** aus.
-2.	Wählen Sie die Schaltfläche **"Play"** aus, um die VM einzuschalten.
-3.	Die VM wird nun aktiviert und vom CentOS 7-ISO-System aus gebootet. Starten Sie eine **ferne Konsole oder eine Webkonsole** für die VM. Beachten Sie, dass die ferne Konsole installiert sein muss und dass das System, das den Web-Browser ausführt, die vSphere ESXi-Hosts nach Namen auflösen muss.
-4.	Wählen Sie in der Willkommensanzeige von CentOS 7 die gewünschte Sprache aus und klicken Sie auf **Continue**.
-5.	Klicken Sie in der Anzeige **LOCALIZATION** auf **DATE & TIME**, wählen Sie Ihre Zeitzone aus und klicken Sie anschließend auf **Done**.
-6.	Klicken Sie in der Anzeige **LOCALIZATION** auf **KEYBOARD**, um bei Bedarf die Standardeinstellung zu ändern, und klicken Sie anschließend auf **Done**.
-7.	Klicken Sie in der Anzeige **LOCALIZATION** auf **INSTALLATION DESTINATION**, klicken Sie auf das Symbol **VMware virtual disk** und klicken Sie dann auf **Done**.
+2.	Klicken Sie auf **"Play"**, um die VM einzuschalten.
+3.	Die VM wird eingeschaltet und vom CentOS 7-ISO-System aus gebootet. Starten Sie eine **ferne Konsole oder eine Webkonsole** für die VM. Die ferne Konsole muss installiert sein und das System, das den Web-Browser ausführt, muss die vSphere ESXi-Hosts nach Namen auflösen.
+4.	Wählen Sie in der Willkommensanzeige von CentOS 7 die gewünschte Sprache aus und klicken Sie auf **Weiter**.
+5.	Klicken Sie in der Anzeige **LOCALIZATION** auf **DATE & TIME**, wählen Sie Ihre Zeitzone aus und klicken Sie anschließend auf **Fertig**.
+6.	Klicken Sie in der Anzeige **LOCALIZATION** auf **KEYBOARD**, um bei Bedarf die Standardeinstellung zu ändern, und klicken Sie anschließend auf **Fertig**.
+7.	Klicken Sie in der Anzeige **LOCALIZATION** auf **INSTALLATION DESTINATION**, klicken Sie auf das Symbol **Virtuelle VMware-Platte** und klicken Sie dann auf **Done**.
 8.	Klicken Sie in der Anzeige **LOCALIZATION** auf **NETWORK & HOSTNAME** und ändern Sie den Hostnamen in den von Ihnen gewünschten Hostnamen (z. B. Proxy01).
-9.	Klicken Sie auf die Schaltfläche **Configure** und anschließend auf **IPv4 Settings**. Wählen Sie im Feld **Method** die Option **Manual** aus.
+9.	Klicken Sie auf **Konfigurieren** und anschließend auf **IPv4-Einstellungen**. Wählen Sie im Feld **Methode** die Option **Manuell** aus.
 10.	Verwenden Sie die Schaltfläche **Add**, um die _Adressnetzmaske_ und das _Gateway_ aus _Tabelle 1 - Werte für die Bereitstellung_ einzufügen.
 11.	Geben Sie die _IP-Adresse des DNS-Servers_ aus "Tabelle 1 - Werte für die Bereitstellung" ein.
 12.	Klicken Sie auf die Schaltfläche **Routes** und fügen Sie die folgenden statischen Routen hinzu: _10.0.0.0/8 und 161.26.0.0/16_ mit einer Gateway-IP-Adresse (_BCR-IP-Adresse_) aus Tabelle 1 (Werte für die Bereitstellung) als Gateway. Diese statische Route ermöglicht es dem Proxy-Server, den DNS-Server zu erreichen.
 13.	Klicken Sie auf **Save** und stellen Sie dann sicher, dass die Ethernet-Schnittstelle aktiv ist und als verbunden angezeigt wird. Klicken Sie auf **Done** und **Begin Installation**.
 14.	Legen Sie im weiteren Verlauf der Installation ein Rootkennwort fest und richten Sie einen Benutzer ein.
-15.	Wenn die Installation abgeschlossen ist, melden Sie sich als Benutzer an und geben Sie dann den Befehl _ping vmware.com_ ein. Der Name muss in eine IP-Adresse aufgelöst werden und Sie sollten eine Antwort erhalten. Wenn Sie keine Antwort erhalten, überprüfen Sie die IP-Adressen, Firewallregeln und NAT-Einstellungen.
+15.	Wenn die Installation abgeschlossen ist, melden Sie sich als Benutzer an und geben Sie dann den Befehl _ping vmware.com_ ein. Der Name wird in eine IP-Adresse aufgelöst und Sie erhalten eine Antwort. Wenn Sie keine Antwort erhalten, überprüfen Sie die IP-Adressen, Firewallregeln und NAT-Einstellungen.
 
 #### Squid installieren und konfigurieren
 
-Bei Squid bestehen keine Mindestvoraussetzungen an die Hardware, aber die Menge an RAM kann je nach den Benutzern, die über Ihren Proxy auf das Internet zugreifen, und den im Cache gespeicherten Objekten variieren. Da nur VUM auf den Proxy-Server zugreift und der Cache nicht aktiviert ist, wurde nur eine weniger umfangreiche VM konfiguriert.
+Bei Squid bestehen keine Mindestvoraussetzungen an die Hardware, aber die Menge an RAM kann je nach den Benutzern, die über Ihren Proxy auf das Internet zugreifen, und den im Cache gespeicherten Objekten variieren. Da nur VUM auf den Proxy-Server zugreift und der Cache nicht aktiviert ist, wird nur eine weniger umfangreiche VM konfiguriert.
 
 1. Melden Sie sich entweder über die Webkonsole oder über die ferne Konsole von vSphere Web Client beim Proxy-Server als Benutzer an und führen Sie dann `su` als Rootbenutzer aus.
-2. Vor der Installation von Paketen wird empfohlen, das System und die Pakete mit dem folgenden Befehl zu aktualisieren:
+2. Bevor Sie Pakete installieren, müssen Sie den folgenden Befehl verwenden, um das System und die Pakete zu aktualisieren:
   `yum -y update`
 
 3. Um Squid zu installieren, müssen Sie das EPEL-Repository auf dem System installieren, da Squid im yum-Standardrepository nicht verfügbar ist. Führen Sie den folgenden Befehl aus, um das EPEL-Repository zu installieren:
@@ -164,4 +164,4 @@ Konfigurieren Sie VUM so, dass der Proxy-Server für den Zugriff auf die Reposit
 ### Zugehörige Links
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

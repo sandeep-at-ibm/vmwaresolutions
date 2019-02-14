@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -24,8 +24,11 @@ La funzione di eliminazione cluster è disponibile solo per le istanze che sono 
 ## Aggiunta di cluster alle istanze vCenter Server
 
 Il numero di cluster che possono essere aggiunti a un'istanza dipende dalla versione dell'istanza:
+* Per le istanze che sono state distribuite o aggiornate alla V2.5 e versioni successive, il numero di cluster, host e VM determina il limite massimo per il numero di cluster che puoi aggiungere. Devi rispettare le direttive e i limiti di dimensionamento VMware per la tua distribuzione.
 * Per le istanze che sono state distribuite o aggiornate alla V2.2 e versioni successive, puoi aggiungere fino a 10 cluster.
 * Per le istanze che sono state distribuite nella V2.1 o versioni precedenti, puoi aggiungere fino a cinque cluster.
+
+Per ulteriori informazioni sui limiti massimi, vedi [Valori massimi di configurazione di VMware](https://configmax.vmware.com/home){:new_window}.
 
 ### Impostazioni di sistema
 
@@ -51,7 +54,7 @@ Puoi scegliere **Skylake**, **Certificato SAP** o **Broadwell**.
 
 #### Skylake
 
-Per l'impostazione **Skylake**, hai una serie di opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
+Per l'impostazione **Skylake**, hai opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
 
 Tabella 1. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
 
@@ -66,9 +69,13 @@ Tabella 1. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
 Se selezioni **Certificato SAP**, non puoi modificare le impostazioni di CPU o RAM.
 
 In base ai tuoi requisiti, seleziona una configurazione di Bare Metal Server:
-* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 192 GB RAM
-* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 384 GB RAM
-* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 768 GB RAM
+* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz / 192 GB di RAM
+* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz / 384 GB di RAM
+* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz / 768 GB di RAM
+* Processore Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz / 512 GB di RAM
+* Processore Quad Intel Xeon E7-8890 v4 / 96 core totali, 2,2 GHz / 1024 GB di RAM
+* Processore Quad Intel Xeon E7-8890 v4 / 96 core totali, 2,2 GHz / 2048 GB di RAM
+* Processore Quad Intel Xeon E7-8890 v4 / 96 core totali, 2,2 GHz / 4096 GB di RAM
 
 #### Broadwell
 
@@ -81,6 +88,8 @@ Tabella 2. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 core totali, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Numero di server Bare Metal
 
@@ -101,7 +110,11 @@ Le impostazioni di archiviazione si basano sulla tua selezione della configurazi
 Specifica le seguenti opzioni vSAN:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
-* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
+* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
+
+  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPI Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
 * **Licenza vSAN**: utilizza la licenza VMware fornita da IBM per il componente vSAN selezionando **Includi con l'acquisto** o utilizza l'opzione BYOL (Bring Your Own License) selezionando **Fornita dall'utente** e immettendo la tua chiave di licenza.
 
@@ -124,9 +137,16 @@ Tabella 3. Opzioni del livello di prestazioni NFS
 
 | Opzione        | Dettagli       |
   |:------------- |:------------- |
-  | 2 IOPS/GB | Questa opzione è progettata per i carichi di lavoro più generici. Applicazioni di esempio includono: hosting di piccoli database, backup di applicazioni web o immagini disco di macchine virtuali per un hypervisor. |
+  | 0,25 IOPS/GB | Questa opzione è progettata per i carichi di lavoro che non vengono utilizzati spesso. Applicazioni di esempio includono: dati archiviati, hosting di database di grandi dimensioni con dati legacy o immagini di dischi virtuali del sistema di memoria virtuale come backup. |
+  | 2 IOPS/GB | Questa opzione è progettata per i carichi di lavoro più generici. Applicazioni di esempio includono: hosting di database di piccole dimensioni, backup di applicazioni web o immagini di dischi di macchine virtuali (VM) per un hypervisor. |
   | 4 IOPS/GB | Questa opzione è progettata per i carichi di lavoro ad alta intensità che hanno un'alta percentuale di dati attivi alla volta. Applicazioni di esempio includono: database transazionali. |
   | 10 IOPS/GB | Questa opzione è progettata per i tipi di carichi di lavoro più impegnativi, come l'analisi. Applicazioni di esempio includono: database ad alte transazioni e altri database sensibili alle prestazioni. Questo livello di prestazioni è limitato a una capacità massima di 4 TB per condivisione file. |
+
+### Dischi locali
+
+L'opzione dischi locali è disponibile solo per la configurazione Bare Metal del processore Quad Intel Xeon E7-8890 v4 con **Certificato SAP**. Specifica le seguenti opzioni:
+* **Numero di dischi**: seleziona il numero di dischi che vuoi aggiungere.
+* **Tipo di disco**: seleziona un'opzione per il tipo di disco di cui hai bisogno.
 
 ### Impostazioni di licenza
 
@@ -162,8 +182,10 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
    * Se hai selezionato **Certificato SAP**, specifica il modello CPU.
 7. Completa la configurazione di archiviazione.
   * Se selezioni **Storage vSAN**, specifica i tipi di disco per i dischi di capacità e cache, il numero di dischi e l'edizione della licenza vSAN. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
-  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.
-  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**. Quindi, fai clic sull'icona **+** accanto all'etichetta **Aggiungi NFS** e seleziona la **Dimensione** e le **Prestazioni** per ogni condivisione file. Devi selezionare almeno una condivisione file.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, le **Prestazioni** e la **Dimensione (GB)**.
+  * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**. Quindi, fai clic sull'icona **+** accanto all'etichetta **Aggiungi storage condiviso** e seleziona le **Prestazioni** e la **Dimensione (GB)** per ogni condivisione file. Devi selezionare almeno una condivisione file.
+  * Se selezioni **Dischi locali**, specifica il numero di dischi e il tipo di disco.
+8. Completa le impostazioni dell'interfaccia di rete.
 8. Specifica come viene fornita la chiave di licenza vSphere:
   * Per gli utenti Business Partner, la licenza vSphere (Enterprise Plus edition) viene inclusa e acquistata per tuo conto.
   * Per gli utenti che non sono Business Partner, puoi selezionare una delle seguenti opzioni:
@@ -251,7 +273,7 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 * Per i cluster distribuiti nelle istanze della V2.2 o precedenti, devi aggiornare l'istanza alla V2.3 se vuoi eliminare i cluster che hai aggiunto all'istanza.
 * Puoi eliminare un singolo cluster alla volta. Per eliminare più di un cluster, devi farlo in sequenza. Attendi che il cluster precedente venga eliminato prima di eliminare quello successivo.
 * Assicurati che tutti i nodi in un cluster siano accesi e operativi prima di eliminare il cluster.
-* Quando elimini un cluster, da questo vengono eliminate anche tutte le VM (macchine virtuali) e non possono essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.
+* Quando elimini un cluster, da questo vengono eliminate anche tutte le VM e non potranno essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.
 * Il cluster predefinito non può essere eliminato.
 
 ### Procedura per eliminare i cluster dalle istanze vCenter Server
@@ -263,9 +285,9 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
    {:note}
 
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, individua il cluster che vuoi eliminare e fai clic sull'icona **Elimina** nella colonna **Azioni**.
-4. Conferma di aver completato la migrazione delle macchine virtuali in altri cluster, se necessario, e di voler eliminare il cluster.
+4. Conferma di aver completato la migrazione delle VM ad altri cluster e, se necessario, di voler eliminare il cluster.
 
 ### Link correlati
 
-* [Visualizzazione delle istanze vCenter Server](vc_viewinginstances.html)
-* [Espansione e contrazione della capacità per le istanze vCenter Server](vc_addingremovingservers.html)
+* [Visualizzazione delle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
+* [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)

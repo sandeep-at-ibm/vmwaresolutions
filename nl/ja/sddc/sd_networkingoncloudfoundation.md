@@ -2,19 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-04"
+lastupdated: "2019-01-25"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Cloud Foundation インスタンスに関するネットワーキングの考慮事項
 
 Cloud Foundation インスタンスに関するネットワーキングの考慮事項と要件について詳しくは、以下の情報を確認してください。 インスタンスが正常に機能するように、要件を満たしていることを確認してください。
 
 ## Cloud Foundation インスタンスに関するネットワーキング・コンポーネント
+{: faq}
 
-Cloud Foundation インスタンス内に組み込まれているネットワーキング・コンポーネントを確認するには、[Cloud Foundation インスタンスの技術仕様](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)を参照してください。
+Cloud Foundation インスタンス内に組み込まれているネットワーキング・コンポーネントを確認するには、[Cloud Foundation インスタンスの技術仕様](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)を参照してください。
 
 ## ファイアウォールに関する考慮事項
 
@@ -28,7 +31,7 @@ Cloud Foundation インスタンスのデプロイ時に、インスタンス内
 
 NSX をセットアップする方法について詳しくは、以下のトピックを参照してください。
 * 1 次 (単一) Cloud Foundation インスタンスの場合、[Setting up NSX for workload VMs on VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/) を参照してください。
-* マルチサイト Cloud Foundation インスタンスの場合は、Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html) を参照してください。
+* マルチサイト Cloud Foundation インスタンスの場合は、[Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window} を参照してください。
 
 ## NSX コンポーネントのパスワードを変更する際の考慮事項
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -38,7 +38,7 @@ Tabella 2. Descrizioni dello stato delle istanze HCX on {{site.data.keyword.clou
 
 ### Link correlati
 
-* [Ordine di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](standalone_orderingserviceinstances.html)
-* [Eliminazione di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](standalone_deletingserviceinstances.html)
-* [Glossario dei termini HCX](hcx_glossary.html)
+* [Ordine di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
+* [Eliminazione di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
+* [Glossario dei termini HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -24,12 +24,12 @@ Um über den vSphere Web Client auf die HTKC-Konsole zuzugreifen, führen Sie di
 3. Melden Sie sich bei der Konsole mithilfe der Berechtigungsnachweise der Konsole an, die auf der Seite mit den Details zum Service "HyTrust KeyControl on {{site.data.keyword.cloud_notm}}" enthalten sind.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
+* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ### Zugehörige Links
 
-* [Übersicht über HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](htkc_considerations.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/htkc_considerations.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [HyTrust-Website](https://www.hytrust.com/)

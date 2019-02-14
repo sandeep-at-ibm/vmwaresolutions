@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-10"
 
 ---
 
@@ -20,7 +20,11 @@ lastupdated: "2018-10-29"
 
 ## vCenter Server with Hybridity Bundle 인스턴스에 클러스터 추가
 
-vCenter Server with Hybridity Bundle 인스턴스에는 최대 10개의 클러스터를 추가할 수 있습니다.
+인스턴스에 추가할 수 있는 클러스터의 수는 인스턴스 버전에 따라 달라집니다.
+* V2.5 이상에 배치된(또는 업그레이드된) 인스턴스의 경우에는 클러스터, 호스트 및 VM 수가 추가할 수 있는 클러스터 수의 최대 제한을 결정합니다. 배치를 위해 VMware 크기 조정 가이드라인 및 제한사항을 계속 준수해야 합니다.
+* V2.3 이상에 배치된(또는 업그레이드된) 인스턴스의 경우에는 최대 10개의 클러스터를 추가할 수 있습니다.
+
+최대 제한에 대한 자세한 정보는 [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}를 참조하십시오.
 
 ### 시스템 설정
 
@@ -67,6 +71,8 @@ Bare Metal Server의 CPU 모델 및 RAM을 지정하십시오. 사용 가능한 
 | 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
+| 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 1.9GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
+| 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.2GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 
 #### Bare Metal Server 수
 
@@ -81,7 +87,11 @@ Bare Metal Server의 CPU 모델 및 RAM을 지정하십시오. 사용 가능한 
 vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6이 포함됩니다. 다음 vSAN 옵션을 지정하십시오.
 * **vSAN 용량 디스크의 디스크 유형 및 크기**: 필요한 용량 디스크에 대한 옵션을 선택하십시오.
 * **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
-* 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다. **고성능 Intel Optane** 옵션은 듀얼 Intel Xeon Gold 5120 및 6140 프로세서에 대해서만 사용 가능합니다.
+* 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다.
+
+  **고성능 Intel Optane** 옵션은 Skylake CPU 모델 듀얼 Intel Xeon Gold 5120 및 듀얼 Intel Xeon Gold 6140에 대해서만 사용 가능합니다.
+  {:note}
+
 * **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **고성능 Intel Optane** 상자를 선택했는지 여부에 따라 달라집니다.
 * **vSAN 라이센스**: VMware vSAN 6.6 라이센스 에디션(Advanced 또는 Enterprise)을 선택하십시오.
 

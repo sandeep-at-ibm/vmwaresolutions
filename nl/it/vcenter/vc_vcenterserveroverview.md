@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,7 +18,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} è un cloud privato ospitat
 
 In molti casi, l'intero ambiente può essere fornito in meno di un giorno e l'infrastruttura bare metal può ridimensionare rapidamente ed elasticamente la capacità di calcolo a seconda delle necessità.
 
-Dopo la distribuzione, puoi aumentare l'archiviazione condivisa ordinando altre condivisioni file NFS (Network File System) dal {{site.data.keyword.slportal}} e collegandole manualmente a tutti i server ESXi in un cluster. Se hai bisogno dell'archiviazione dedicata, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html) è offerto sia in configurazioni ad alte prestazioni (tutti gli SSD) che ad alta capacità (tutti i SATA).
+Dopo la distribuzione, puoi aumentare l'archiviazione condivisa ordinando altre condivisioni file NFS (Network File System) dal {{site.data.keyword.slportal}} e collegandole manualmente a tutti i server ESXi in un cluster. Se hai bisogno dell'archiviazione dedicata, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp/np_netappoverview.html) è offerto sia in configurazioni ad alte prestazioni (tutti gli SSD) che ad alta capacità (tutti i SATA).
 
 VMware vSAN è anche disponibile come opzione di archiviazione dedicata. Per aumentare la capacità di archiviazione basata su vSAN di un cluster vSAN, puoi aggiungere altri server ESXi dopo la distribuzione.
 
@@ -45,13 +45,13 @@ Questo livello virtualizza l'infrastruttura fisica attraverso diversi prodotti V
 
 ### Gestione della virtualizzazione
 
-Questo livello comprende il dispositivo vCenter Server Appliance (vCSA), NSX Manager, due ESG NSX, tre controller NSX, il dispositivo virtuale PSC (Platform Services Controller) e la VSI (Virtual Server Instance) IBM CloudDriver. La VSI CloudDriver viene distribuita su richiesta in base alle esigenze per determinate operazioni, ad esempio l'aggiunta di host all'ambiente.
+Questo livello comprende il dispositivo vCenter Server Appliance (vCSA) con Platform Services Controller (PSC) integrato, NSX Manager, due ESG NSX, tre controller NSX e la VSI (virtual server instance) IBM CloudDriver. La VSI CloudDriver viene distribuita su richiesta in base alle esigenze per determinate operazioni, ad esempio l'aggiunta di host all'ambiente.
 
 L'offerta di base viene distribuita con un dispositivo vCenter Server dimensionato per supportare un ambiente con un massimo di 400 host e 4000 VM. Gli stessi strumenti e script compatibili con l'API vSphere possono essere utilizzati per gestire l'ambiente VMware ospitato da IBM.
 
 In totale, l'offerta di base richiede 38 vCPU e 67 GB di vRAM che sono riservati per il livello di gestione della virtualizzazione. La capacità host rimanente per le tue macchine virtuali dipende da diversi fattori, come la percentuale di sottoscrizione eccedente, il dimensionamento della VM e i requisiti delle prestazioni del carico di lavoro.
 
-Per ulteriori informazioni sull'architettura, vedi [Riferimento all'architettura di {{site.data.keyword.vmwaresolutions_short}}](../archiref/solution/solution_overview.html).
+Per ulteriori informazioni sull'architettura, vedi [Riferimento all'architettura di {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Specifiche tecniche per le istanze vCenter Server
 
@@ -63,15 +63,13 @@ La disponibilità e il prezzo delle configurazioni hardware standardizzate posso
 ### Bare Metal Server
 
 Puoi ordinare tre o più {{site.data.keyword.baremetal_short}} con una delle seguenti configurazioni:
-* **Skylake**: server di generazione 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series) con i tuoi modello CPU e dimensione RAM selezionati.  
-* **Certificato SAP**: {{site.data.keyword.baremetal_short}} con il modello CPU da te selezionato.
-  * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 192 GB RAM
-  * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 384 GB RAM
-  * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 768 GB RAM
-* **Broadwell**: server di generazione 2-CPU Intel Broadwell (Intel Xeon E5-2600 v4 series) con i tuoi modello CPU e dimensione RAM selezionati.  
-     Se intendi utilizzare l'archiviazione vSAN, la configurazione richiede quattro {{site.data.keyword.baremetal_short}}.
-     {:note}
-     
+* **Skylake**: server di generazione 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series) con il modello di CPU e la dimensione della RAM da te selezionati.  
+* **Certificato**: server di generazione Intel Skylake o Intel Broadwell (Intel Xeon 6140/E5-2690/E7-8890 series) con il modello di CPU da te selezionato.
+* **Broadwell**: server di generazione 2-CPU Intel Broadwell (Intel Xeon E5-2600/E7-4800 series) con il modello di CPU e la dimensione della RAM da te selezionati.  
+
+Se intendi utilizzare l'archiviazione vSAN, la configurazione richiede quattro {{site.data.keyword.baremetal_short}}.
+{:note}
+
 ### Rete
 
 Vengono ordinati i seguenti componenti di rete:
@@ -79,11 +77,11 @@ Vengono ordinati i seguenti componenti di rete:
 *  Tre VLAN (Virtual LAN): una VLAN pubblica e due VLAN private
 *  Una VXLAN (Virtual eXtensible LAN) con DLR (Distributed Logical Router) per la potenziale comunicazione est-ovest tra carichi di lavoro locali connessi alle reti di livello 2 (L2). La VXLAN viene distribuita come topologia di instradamento di esempio, che puoi modificare, compilare o rimuovere. Puoi anche aggiungere zone di sicurezza collegando ulteriori VXLAN a nuove interfacce logiche sul DLR.
 *  Due gateway dei servizi edge VMware NSX:
-  * Un gateway dei servizi edge (ESG) VMware NSX sicuro dei servizi di gestione per il traffico di gestione HTTPS in uscita, distribuito da IBM come parte della tipologia di rete di gestione. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. Per ulteriori informazioni, vedi [Configurazione della rete per utilizzare l'ESG gestito dal cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * Un gateway dei servizi edge (ESG) VMware NSX sicuro dei servizi di gestione per il traffico di gestione HTTPS in uscita, distribuito da IBM come parte della tipologia di rete di gestione. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. Per ulteriori informazioni, vedi [Configurazione della rete per utilizzare l'ESG gestito dal cliente](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     Questo ESG è denominato **mgmt-nsx-edge**, non puoi accedervi e usarlo. Se lo modifichi, potresti non essere in grado di gestire l'istanza vCenter Server dalla console {{site.data.keyword.vmwaresolutions_short}}. Inoltre, l'utilizzo di un firewall o la disabilitazione delle comunicazioni ESG ai componenti di gestione IBM esterni potrebbe comportare l'inutilizzabilità di {{site.data.keyword.vmwaresolutions_short}}.
     {:important}
-  * Un gateway dei servizi edge VMware NSX sicuro gestito dal cliente per il traffico del carico di lavoro HTTPS in uscita e in entrata. Questo gateway è distribuito da IBM come template che puoi modificare per fornire l'accesso VPN o l'accesso pubblico. Per ulteriori informazioni, vedi [L'edge NSX gestito dal cliente rappresenta un rischio per la sicurezza?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
+  * Un gateway dei servizi edge VMware NSX sicuro gestito dal cliente per il traffico del carico di lavoro HTTPS in uscita e in entrata. Questo gateway è distribuito da IBM come template che puoi modificare per fornire l'accesso VPN o l'accesso pubblico. Per ulteriori informazioni, vedi [L'edge NSX gestito dal cliente rappresenta un rischio per la sicurezza?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
 ### VSI (Virtual Server Instance)
 
@@ -96,6 +94,9 @@ Vengono ordinate le seguenti VSI (Virtual Server Instance):
 ### Archiviazione
 
 Durante la distribuzione iniziale, puoi scegliere tra le opzioni di archiviazione vSAN e NFS.
+
+Per le istanze V2.8 e successive, puoi aggiungere le condivisioni di archiviazione NFS a un cluster NFS o vSAN esistente. Per ulteriori informazioni, vedi la sezione *Aggiunta dell'archiviazione NFS alle istanze vCenter Server* in [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances).
+{:note}
 
 #### Archiviazione vSAN
 
@@ -112,11 +113,15 @@ L'opzione vSAN offre configurazioni personalizzate, con varie opzioni per tipo, 
 #### Archiviazione NFS
 
 L'opzione NFS offre l'archiviazione a livello di file condivisa personalizzata per carichi di lavoro con varie opzioni per dimensioni e prestazioni:
-* Dimensioni: 1, 2, 4, 8 o 12 TB
-* Prestazioni: 2, 4 o 10 IOPS/GB.
+* Dimensione: da 20 a 12000 GB
+* Prestazioni: 0,25, 2, 4 o 10 IOPS/GB.
 * Configurazione individuale delle condivisioni file.
 
 Se scegli l'opzione NFS, viene ordinata una condivisione file da 2 TB e 4 IOPS/GB per i componenti di gestione.
+
+#### Archiviazione su disco locale
+
+L'opzione dischi locali, disponibile solo per la configurazione Bare Metal del processore Quad Intel Xeon E7-8890 v4 con **Certificato SAP**, offre configurazioni personalizzate con varie opzioni per il numero di dischi e il tipo di disco.
 
 ### Licenze (fornite da IBM o BYOL) e tariffe
 
@@ -132,7 +137,7 @@ Ogni nodo di espansione vCenter Server verrà distribuito e addebitato per i seg
 
 ### Hardware per i nodi di espansione
 
-Un Bare Metal Server con la configurazione presentata in [Specifiche tecniche per le istanze vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
+Un Bare Metal Server con la configurazione presentata in [Specifiche tecniche per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ### Licenze e tariffe per i nodi di espansione
 
@@ -152,7 +157,7 @@ La gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short
 
 ### Link correlati
 
-* [Distinta base del software vCenter Server](vc_bom.html)
-* [Pianificazione per le istanze vCenter Server](vc_planning.html)
-* [Ordine di istanze vCenter Server](vc_orderinginstance.html)
+* [Distinta base del software vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [Pianificazione per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 * [Archiviazione file e blocchi di {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

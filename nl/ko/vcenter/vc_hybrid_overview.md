@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-14"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-10-29"
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle은 V2.3 이상 릴리스에서 사용 가능한 인스턴스입니다. V2.6부터 vCenter Server with Hybridity Bundle 인스턴스를 비즈니스 파트너가 사용할 수 있습니다.
 
-vCenter Server with Hybridity Bundle은 VMware vSphere 스택을 서비스로 제공하는 호스팅된 프라이빗 클라우드입니다. VMware 환경은 네 개의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 위에 빌드되며, 전용 스토리지인 VMware vSAN을 포함하고, VMware NSX를 기반으로 하면서 관리하기 쉬운 논리 에지 방화벽의 자동 배치 및 구성을 제공하며, VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 포함합니다.
+vCenter Server with Hybridity Bundle은 VMware vSphere 스택을 서비스로 제공하는 호스팅된 프라이빗 클라우드입니다. VMware 환경은 네 개의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 위에 빌드되며, 전용 스토리지인 VMware vSAN을 포함하고, VMware NSX를 기반으로 하면서 관리하기 쉬운 로지컬 에지 방화벽의 자동 배치 및 구성을 제공하며, VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 포함합니다.
 
 대부분의 경우 전체 환경은 하루 내에 프로비저닝할 수 있으며, 베어메탈 인프라는 필요에 따라 신속하고 탄력적으로 컴퓨팅 용량을 늘리거나 줄이도록 스케일링할 수 있습니다.
 
@@ -47,7 +47,7 @@ vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 
 
 ### 가상화 관리
 
-이 계층은 vCenter Server Appliance(vCSA), NSX Manager, 2개의 NSX ESG, 3개의 NSX Controller, PSC(Platform Services Controller) 가상 어플라이언스 및 IBM CloudDriver VSI(Virtual Server Instance)로 구성됩니다. CloudDriver VSI는 환경에 호스트 추가 등과 같은 특정 오퍼레이션에 필요하면 요청 시에 배치됩니다.
+이 계층은 vCenter Server Appliance(vCSA), NSX Manager, 2개의 NSX ESG, 3개의 NSX Controller 및 IBM CloudDriver VSI(Virtual Server Instance)로 구성됩니다. CloudDriver VSI는 환경에 호스트 추가 등과 같은 특정 오퍼레이션에 필요하면 요청 시에 배치됩니다.
 
 기본 오퍼링은 최대 400개의 호스트와 최대 4000개의 VM이 포함된 환경을 지원하도록 크기가 조정된 vCenter Server 어플라이언스로 배치됩니다. 동일한 vSphere API 호환 도구 및 스크립트는 IBM 호스팅 VMware 환경을 관리하는 데 사용될 수 있습니다.
 
@@ -72,7 +72,7 @@ vCenter Server with Hybridity Bundle 인스턴스에는 다음 컴포넌트가 �
 
 4개의 **Skylake** 또는 **Broadwell** {{site.data.keyword.baremetal_short}}는 vCenter Server with Hybridity Bundle 인스턴스 주문에 포함됩니다. 다음 CPU 모델이 사용 가능합니다.
   * 두 개의 CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
-  * 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
+  * 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600/E7-4800 시리즈)
 
 ### 네트워킹
 
@@ -92,7 +92,7 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스를 배치할 때 주문된 네
 ### Virtual Server 인스턴스
 
 다음 VSI(Virtual Server Instance)가 주문됩니다.
-* 인스턴스 배치가 완료된 후 시스템이 종료되는 IBM CloudBuilder용 VSI
+* IBM CloudBuilder용 VSI는 인스턴스 배치가 완료된 후 취소됩니다. 
 * 보안 및 강력한 추진력 향상을 위해 하나의 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI 또는 관리 클러스터에 있는 두 개의 고가용성 Microsoft Windows VM을 배치하도록 선택할 수 있습니다.
 
 ### vSAN 스토리지

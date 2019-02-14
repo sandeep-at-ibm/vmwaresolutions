@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-06-22"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V2.4 のリリース・ノート
 
@@ -20,7 +24,7 @@ lastupdated: "2018-06-22"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-詳しくは、[Spectre および Meltdown 脆弱性への対処](../vmonic/trbl_fix_spectre.html)を参照してください。
+詳しくは、[Spectre および Meltdown 脆弱性への対処](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)を参照してください。
 
 ## 各国語サポート
 
@@ -38,8 +42,6 @@ V2.4 リリースから、{{site.data.keyword.vmwaresolutions_short}} に各国�
 * 中国語 (簡体字)
 * 中国語 (繁体字)
 
-**注**: リファレンス・アーキテクチャー資料は英語版しかありません。
-
 ## Skylake Xeon CPU のサポート
 
 V2.4 リリースから、VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}、VMware vSphere on {{site.data.keyword.cloud_notm}}、VMware Federal on {{site.data.keyword.cloud_notm}} のインスタンスとクラスターのデプロイメントで、以下の新しいベアメタル・サーバー CPU モデルを利用できるようになりました。
@@ -50,21 +52,21 @@ V2.4 リリースから、VMware Cloud Foundation on {{site.data.keyword.cloud_n
 
 詳しくは、以下の資料にある『*ベアメタル・サーバーの設定*』セクションを参照してください。
 
-* [Cloud Foundation インスタンスの注文](../sddc/sd_orderinginstance.html#bare-metal-server-settings)
-* [新規 vSphere クラスターの注文](../vsphere/vs_orderinginstances.html#bare-metal-server-settings)
-* [VMware Federal インスタンスの注文](../vcenter/vc_fed_orderinginstance.html#bare-metal-server-settings)
+* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html#bare-metal-server-settings)
+* [新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#bare-metal-server-settings)
+* [VMware Federal インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html#bare-metal-server-settings)
 
 ## VMware vCenter Server インスタンスの更新
 
 ### ネットワーク・ファイル・システムのパフォーマンスの強化
 
-ワークロードが非常に大きいタイプの処理に合わせて設計されている 10 IOPS/GB のパフォーマンス・レベルが、特定の {{site.data.keyword.CloudDataCent_notm}}に制限されずに、すべてのデータ・センターで利用できるようになりました。 詳しくは、[vCenter Server の概要](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)の『*ストレージ*』セクションを参照してください。
+ワークロードが非常に大きいタイプの処理に合わせて設計されている 10 IOPS/GB のパフォーマンス・レベルが、特定の {{site.data.keyword.CloudDataCent_notm}}に制限されずに、すべてのデータ・センターで利用できるようになりました。 詳しくは、[vCenter Server の概要](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)の『*ストレージ*』セクションを参照してください。
 
 ## VMware Federal インスタンスの更新
 
 ### IBM Cloud データ・センターの新しいオプション
 
-VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.CloudDataCent_notm}}にデプロイできるようになりました。 詳しくは、[VMware Federal インスタンスの要件と計画](../vcenter/vc_fed_planning.html#ibm-cloud-data-center-availability)の『*IBM Cloud データ・センターの使用可否*』セクションを参照してください。
+VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.CloudDataCent_notm}}にデプロイできるようになりました。 詳しくは、[VMware Federal インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html#ibm-cloud-data-center-availability)の『*IBM Cloud データ・センターの使用可否*』セクションを参照してください。
 
 ## アドオン・サービスの更新
 
@@ -74,13 +76,13 @@ VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.Clou
 
 ### VMware HCX on IBM Cloud
 
-新しいオプションが用意され、このサービスの注文時に、HCX 相互接続のためにパブリック・ネットワークとプライベート・ネットワークのいずれかを選択できるようになりました。 詳しくは、[VMware HCX on {{site.data.keyword.cloud_notm}} の注文](../services/hcx_ordering.html)を参照してください。
+新しいオプションが用意され、このサービスの注文時に、HCX 相互接続のためにパブリック・ネットワークとプライベート・ネットワークのいずれかを選択できるようになりました。 詳しくは、[VMware HCX on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/hcx_ordering.html)を参照してください。
 
 ## 新規資料および更新された資料
 
 ### リファレンス・アーキテクチャー資料
 
-{{site.data.keyword.vmwaresolutions_short}} のアーキテクチャー資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。 リファレンス・アーキテクチャー資料は英語版しかありません。 詳しくは、[ソリューションの概要](../archiref/solution/solution_overview.html)を参照してください。
+{{site.data.keyword.vmwaresolutions_short}} のアーキテクチャー資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。 詳しくは、[ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)を参照してください。
 
 ### サービスの資料
 
@@ -88,15 +90,15 @@ VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.Clou
 
 詳しくは、以下のトピックを参照してください。
 
-* [F5 on {{site.data.keyword.cloud_notm}} の注文](../services/f5_ordering.html)
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の注文](../services/fsa_ordering.html)
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の注文](../services/fortinetvm_ordering.html)
-* [Hytrust CloudControl on {{site.data.keyword.cloud_notm}} の注文](../services/htcc_ordering.html)
-* [Hytrust DataControl on {{site.data.keyword.cloud_notm}} の注文](../services/htdc_ordering.html)
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} の注文](../services/spp_ordering.html)
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}} の注文](../services/kmip_ordering.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} の注文](../services/veeam_ordering.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} の注文](../services/zerto_ordering.html)
+* [F5 on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/f5_ordering.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/fsa_ordering.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
+* [Hytrust CloudControl on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/htcc_ordering.html)
+* [Hytrust DataControl on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/htdc_ordering.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_ordering.html) の注文
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/kmip_ordering.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/veeam_ordering.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/zerto_ordering.html)
 
 ## ユーザー・インターフェースの更新と向上
 

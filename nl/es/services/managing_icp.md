@@ -2,15 +2,23 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-09-27"
 
 ---
 
-# Solicitud de IBM Cloud Private Hosted
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 
-{{site.data.keyword.cloud}} Private Hosted on vCenter Server en {{site.data.keyword.cloud_notm}} despliega automáticamente {{site.data.keyword.cloud_notm}} Private Hosted en las instancias de VMware vCenter Server.
+# Solicitud de IBM Cloud Private Hosted - en desuso
+
+La información de este ha quedado en desuso. Para obtener la información más reciente acerca de IBM Cloud Private Hosted, consulte [Visión general de IBM Cloud Private Hosted](icp_overview.html).
+{:deprecated}
+
+{{site.data.keyword.cloud}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} despliega automáticamente {{site.data.keyword.cloud_notm}} Private Hosted en las instancias de VMware vCenter Server.
 
 {{site.data.keyword.cloud_notm}} Private Hosted incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware e {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}.
 
@@ -39,8 +47,3 @@ Estos son los requisitos mínimos para solicitar el servicio {{site.data.keyword
 6. En la página **IBM Cloud Private Hosted on vCenter Server on IBM Cloud**, en el recuadro **Póngase en contacto con el equipo de DevOps de IBM Cloud Private Hosted**, describa sus requisitos y pulse **Solicitar una consulta**.
 
 Un representante de {{site.data.keyword.cloud_notm}} Private Hosted DevOps se pondrá en contacto con usted a través de la información de contacto de {{site.data.keyword.cloud_notm}} y le ayudará a comenzar.
-
-### Enlaces relacionados
-
-* [IBM Cloud Private Hosted](https://www.ibm.com/developerworks/community/files/form/anonymous/api/library/eafb752c-55f3-4b07-9b20-b61c8ea980b9/document/af203658-30c0-40ba-81b5-46c393fb723f/media/IBM_Cloud_Private_Hosted-IBM_Cloud.pdf) (descarga de PDF)
-* [Apertura de una incidencia para IBM Cloud privado](https://www.ibm.com/mysupport/s/?language=en_US)

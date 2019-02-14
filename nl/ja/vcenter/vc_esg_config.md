@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-29"
 
 # ユーザー管理の NSX ESG を VM で使用するためのネットワークの構成
 
-VMware vCenter Server インスタンスにデプロイされている VMware NSX Edge Services Gateway (ESG) を活用できるように、仮想マシンのネットワークを構成します。 セキュリティー・リスクを最小化するために適用されるセキュリティー対策について詳しくは、[管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-) を参照してください。
+VMware vCenter Server インスタンスにデプロイされている VMware NSX Edge Services Gateway (ESG) を活用できるように、仮想マシンのネットワークを構成します。 セキュリティー・リスクを最小化するために適用されるセキュリティー対策について詳しくは、[管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-) を参照してください。
 
 VMware NSX は、分離したネットワークの仮想化を可能にし、スイッチ、ルーティング、ファイアウォールなどの複数のネットワーク・サービスを提供するネットワーク仮想化プラットフォームです。 NSX について詳しくは、[NSX の概要](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}を参照してください。
 
@@ -25,7 +25,11 @@ vCenter Server インスタンスの注文プロセスの中で、以下のア�
 * サンプルの NSX 論理スイッチが、お客様のワークロード VM で使用するためにデプロイされます。
 * レイヤー 2 (L2) ネットワークに接続されているローカル・ワークロード間で実行される可能性のある東西通信用のサンプル NSX 分散論理ルーター (DLR) がデプロイされます。
 * NSX Edge アプライアンスがデプロイされ、NAT ルールでワークロード論理スイッチの IP アドレスの範囲をパブリック IP アドレスに変換するネットワーク・アドレス変換 (NAT) を実行するように構成されます。
-* {{site.data.keyword.cloud_notm}} サービスに Veeam をインストールした場合は、NSX Manager が NSX 構成の日次バックアップを実行するように構成されます。 詳しくは、[{{site.data.keyword.cloud_notm}} に Veeam をインストールする際の考慮事項](../services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud)を参照してください。
+
+  プライベート専用であるインスタンスの場合、NSX edge はデプロイされません。
+  {:note}
+
+* {{site.data.keyword.cloud_notm}} サービスに Veeam をインストールした場合は、NSX Manager が NSX 構成の日次バックアップを実行するように構成されます。 詳しくは、[{{site.data.keyword.cloud_notm}} に Veeam をインストールする際の考慮事項](/docs/services/vmwaresolutions/services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud)を参照してください。
 
 ## VM のネットワーク設定を構成する手順
 
@@ -80,6 +84,6 @@ NSX Edge NAT ルールについて詳しくは、[NAT ルールの管理](https:
 
 ### 関連リンク
 
-* [トラブルシューティング](../vcenter/vcenter_chg_impact.html)
-* [FAQ](../vmonic/faq.html)
+* [トラブルシューティング](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

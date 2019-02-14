@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -187,7 +187,7 @@ IBM ワークロード ESG は、ワークロード・ネットワーク通信�
 
 NAT は、ネットワーク・トラフィックが IP アドレス・スペース間を横断できるようにするために、ワークロード ESG 上で使用されます。 ワークロード ESG の場合、インターネット宛先への通信を許可するだけでなく、任意の {{site.data.keyword.cloud_notm}} ソース IP 範囲と通信するためにも NAT が必要です。 この設計では、ワークロード・トラフィックはインターネットにアクセスできますが、管理ネットワークや {{site.data.keyword.cloud_notm}} ネットワークにはアクセスできません。 したがって、ワークロード ESG で SNAT のみを定義する必要があります。 ワークロードのポータブル・サブネット全体が SNAT を横断するように構成されています。
 
-NAT を使用して、Cloud Foundation または vCenter Server の複数のインスタンス間でのワークロード通信を可能にすることはできますが、多数のワークロードを複数のインスタンスにわたって接続する必要がある場合は、これは現実的ではありません。 高度な NSX 機能を使用して、Cloud Foundation または vCeter Server インスタンス全体で過度な L2 トランジット・ネットワークを作成する例については、[マルチサイト・アーキテクチャー](multi_site.html)を参照してください。
+NAT を使用して、Cloud Foundation または vCenter Server の複数のインスタンス間でのワークロード通信を可能にすることはできますが、多数のワークロードを複数のインスタンスにわたって接続する必要がある場合は、これは現実的ではありません。 高度な NSX 機能を使用して、Cloud Foundation または vCeter Server インスタンス全体で過度な L2 トランジット・ネットワークを作成する例については、[マルチサイト・アーキテクチャー](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)を参照してください。
 
 表 10. ワークロード ESG の NAT ルール
 
@@ -240,5 +240,5 @@ NAT を使用して、Cloud Foundation または vCenter Server の複数のイ�
 
 ### 関連リンク
 
-* [NSX Edge Services Gateway の設計](nsx_design.html)
-* [マルチサイト・アーキテクチャー](multi_site.html)
+* [NSX Edge Services Gateway の設計](/docs/services/vmwaresolutions/archiref/nsx/nsx_design.html)
+* [マルチサイト・アーキテクチャー](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)

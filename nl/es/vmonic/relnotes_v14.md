@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-03-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Notas del release para V1.4
 
@@ -34,7 +38,8 @@ Ahora VMware NSX for vSphere 6.2.4 se instala de forma predeterminada en todas l
 
 Como parte de la instalación de NSX, NSX Manager se instala y se obtiene una licencia del mismo en todas las instancias nuevas que se despliegan. Además, se crea un NSX Edge para la gestión de la instancia, aunque puede crear sus propios componentes de NSX Edge si es necesario. Para obtener más información sobre NSX Edge, consulte la sección _VMware NSX Edge_ en esta página.
 
-**Nota**: el controlador NSX no se instala en las instancias de vCenter Server (del modo en que se instala en las instancias de Cloud Foundation). Si utiliza VXLAN o direccionadores lógicos distribuidos para sus instancias de vCenter Server, debe instalar el controlador NSX usted mismo.
+El controlador NSX no se instala en las instancias de vCenter Server (del modo en que se instala en las instancias de Cloud Foundation). Si utiliza VXLAN o direccionadores lógicos distribuidos para sus instancias de vCenter Server, debe instalar el controlador NSX usted mismo.
+{:note}
 
 Para obtener más información sobre las mejoras incorporadas en VMware NSX para vSphere 6.2.4, sus requisitos y problemas conocidos, consulte las [Notas del release de NSX for vSphere 6.2.4](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
 
@@ -73,7 +78,8 @@ Este release incluye las siguientes mejoras en la topología de las instancias:
 * Tanto para instancias de Cloud Foundation como para instancias de vCenter Server: configuración optimizada del sistema de red, es decir, solo la red pública primaria y las direcciones IP privadas asignadas por SoftLayer® se conectan a los servidores ESXi. Las direcciones privadas portátiles ya no se despliegan para el tráfico de gestión.
 * Solo para instancias de Cloud Foundation: Windows AD SSO (inicio de sesión único de Active Directory) y servidor del Sistema de nombres de dominio (DNS)
 
-**Nota**: debido a estos cambios, no puede utilizar las instancias existentes previas a V1.4 en el release actual. Para reutilizar la configuración de las instancias existentes, debe actualizarlas a la versión actual. Para obtener más información, consulte [Actualización de instancias de versiones anteriores a V1.4](movinginstances.html).
+Debido a estos cambios, no puede utilizar las instancias existentes previas a V1.4 en el release actual. Para reutilizar la configuración de las instancias existentes, debe actualizarlas a la versión actual. Para obtener más información, consulte [Actualización de instancias de versiones anteriores a V1.4](movinginstances.html).
+{:note}
 
 ## Soporte de la configuración de varios sitios para instancias de Cloud Foundation
 

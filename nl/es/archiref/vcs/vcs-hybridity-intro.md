@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2018-01-03"
 
 ---
 # Visión general de vCenter Server on IBM Cloud con el paquete híbrido (Hybridity)
@@ -25,7 +25,7 @@ Las ofertas de copia de seguridad y recuperación tras desastre de IBM, Veeam y 
 
 vCenter Server con el paquete híbrido (Hybridity) no es un servicio gestionado, aunque puede añadir servicios gestionados por IBM para descargar las operaciones diarias y el mantenimiento de las capas de virtualización, de sistema operativo invitado o de aplicaciones. El equipo de {{site.data.keyword.cloud_notm}} Professional Services también está disponible para ayudarle a acelerar la implantación en la nube con servicios de migración, implementación, planificación e incorporación.
 
-Las opciones de integración de plataforma de vCenter Server con el paquete híbrido (Hybridity) no se limitan a las opciones disponibles en VMware, como vRealize Suite o vSphere con gestión de operaciones, sino que abarcan varias ofertas de servicios de {{site.data.keyword.cloud_notm}}, como el [servicio IBM Kubernetes](../vcsiks/vcsiks-intro.html) e [{{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html), que utilizan Terraform de código abierto para gestionar y suministrar la infraestructura como código.
+Las opciones de integración de plataforma de vCenter Server con el paquete híbrido (Hybridity) no se limitan a las opciones disponibles en VMware, como vRealize Suite o vSphere con gestión de operaciones, sino que abarcan varias ofertas de servicios de {{site.data.keyword.cloud_notm}}, como [{{site.data.keyword.containerlong_notm}}](../vcsiks/vcsiks-intro.html) e [{{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html), que utilizan Terraform de código abierto para gestionar y suministrar la infraestructura como código.
 
 La amplia gama de servicios y opciones de integración de varias ofertas disponibles para vCenter Server con el paquete híbrido (Hybridity) ofrecen una verdadera plataforma híbrida, que facilita la hibridación como servicio.
 

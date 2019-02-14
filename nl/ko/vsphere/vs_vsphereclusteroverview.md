@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-12-10"
 
 ---
 
@@ -45,8 +45,9 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}의 컴포넌트를 검토하�
 ### Bare Metal Server
 
 선택한 CPU 모델 및 RAM 크기를 사용하는 하나 이상의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 선택:
-* 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600 v4 시리즈)
 * 두 개의 CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
+* SAP 인증(Intel Xeon 6140/E5-2690/E7-8890 시리즈)
+* 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600/E7-4800 시리즈)
 
 사용 가능한 옵션은 VMware vSAN 컴포넌트 선택 여부에 따라 달라집니다.
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -51,8 +51,8 @@ Die gelöschten Instanzen werden Ihnen bis zum Ende des Abrechnungszyklus für d
 
 ### Zugehörige Links
 
-* [vCenter Server with Hybridity Bundle-Instanzen in einer Konfiguration mit mehreren Standorten löschen](vc_hybrid_deletinginstance_multi.html)
-* [vCenter Server with Hybridity Bundle-Instanzen bestellen](vc_hybrid_orderinginstance.html)
-* [vCenter Server with Hybridity Bundle-Instanzen anzeigen](vc_hybrid_viewinginstances.html)
-* [Kapazität für vCenter Server with Hybridity Bundle-Instanzen erweitern und verringern](vc_hybrid_addingremovingservers.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
+* [vCenter Server with Hybridity Bundle-Instanzen in einer Konfiguration mit mehreren Standorten löschen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html)
+* [vCenter Server with Hybridity Bundle-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [Kapazität für vCenter Server with Hybridity Bundle-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

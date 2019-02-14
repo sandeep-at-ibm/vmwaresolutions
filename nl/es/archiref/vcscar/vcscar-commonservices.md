@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -12,12 +12,12 @@ lastupdated: "2018-11-13"
 
 Los servicios comunes proporcionan los servicios que utilizan otros servicios en la plataforma de gestión de nube. Los servicios comunes incluyen servicios de identidad y acceso, servicios de nombres de dominio, servicios NTP.
 
-Figura 1. Servicios comunes de {{site.data.keyword.cloud}} Private (ICP)
-![Servicios comunes de ICP](vcscar-common-services.svg)
+Figura 1. Servicios comunes de {{site.data.keyword.icpfull_notm}}
+![Servicios comunes de {{site.data.keyword.icpfull_notm}}](vcscar-common-services.svg)
 
 ## Servicios de identidad y acceso
 
-Como parte de VMware vCenter Server en la automatización de {{site.data.keyword.cloud_notm}}, se utiliza un Microsoft Active Directory (AD) para la gestión de identidades. Se despliega una sola instancia de servidor virtual (VSI) AD. El vCenter se configura de modo que utilice la autenticación de AD y también puede configurar el ICP para la autenticación de LDAP.
+Como parte de VMware vCenter Server en la automatización de {{site.data.keyword.cloud_notm}}, se utiliza un Microsoft Active Directory (AD) para la gestión de identidades. Se despliega una sola instancia de servidor virtual (VSI) AD. El vCenter se configura de modo que utilice la autenticación de AD y puede configurar {{site.data.keyword.icpfull_notm}} para la autenticación de LDAP.
 
 ## Servicios de nombres de dominio
 

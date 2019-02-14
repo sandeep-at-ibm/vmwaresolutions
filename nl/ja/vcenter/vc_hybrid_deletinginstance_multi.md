@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2017-11-07"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -33,7 +33,7 @@ vCenter Server with Hybridity Bundle インスタンスを削除すると、以�
 
 1. セカンダリー vCenter Server with Hybridity Bundle インスタンスからすべてのサービスを削除します。
 2. 削除するセカンダリー・インスタンスに NSX オブジェクトを展開していないことを確認します。
-3. プライマリー SSO (シングル・サインオン) ドメインからセカンダリー vCenter および PSC (Platform Services Controller) を削除します。 詳しくは、[シングル・サインオンからの vCenter Server の登録解除](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2106736){:new_window}を参照してください。
+3. プライマリー SSO (シングル・サインオン) ドメインからセカンダリー vCenter Server を削除します。 詳しくは、[シングル・サインオンからの vCenter Server の登録解除](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2106736){:new_window}を参照してください。
 4. ローカル・ドメイン・コントローラー VSI (仮想サービス・インスタンス) を降格します。 詳しくは、[ドメイン・コントローラーとドメインの降格](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}を参照してください。
 5. {{site.data.keyword.vmwaresolutions_short}} コンソールからセカンダリー vCenter Server with Hybridity Bundle インスタンスを削除します。
 6. マルチサイト構成に含まれているすべてのセカンダリー vCenter Server with Hybridity Bundle インスタンスについて手順 1 から 5 までを繰り返します。
@@ -41,5 +41,5 @@ vCenter Server with Hybridity Bundle インスタンスを削除すると、以�
 
 ### 関連リンク
 
-* [vCenter Server with Hybridity Bundle インスタンスの削除](vc_hybrid_deletinginstance.html)
-* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](vc_hybrid_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle インスタンスの削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
+* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)

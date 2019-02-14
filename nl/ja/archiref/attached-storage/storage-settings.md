@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,18 +12,18 @@ lastupdated: "2018-11-13"
 {:note: .note}
 {:important: .important}
 
-# ストレージ設定
+# 接続ストレージの構成と設定
 
 この設計は、NFS v3 による共有ストレージの接続のみをサポートしています。 NFS v4 および v4.1 はサポートされていません。
 
-この設計のすべての接続ストレージは、vCenter Server ソリューションと同じ {{site.data.keyword.CloudDataCent_notm}}で提供されている {{site.data.keyword.cloud_notm}} ストレージに制限されます。 また、データ・ストアに格納されるすべての仮想ディスクは、デフォルトでシン・プロビジョニングされます。
+この設計の接続ストレージは、vCenter Server ソリューションと同じ {{site.data.keyword.CloudDataCent_notm}}で提供されている {{site.data.keyword.cloud_notm}} ストレージに制限されます。また、データ・ストアに格納されるすべての仮想ディスクは、デフォルトでシン・プロビジョニングされます。
 {:note}
 
 このアーキテクチャーでは、共有に接続できるように、{{site.data.keyword.cloud_notm}} ストレージの DNS 名を使用して NFS v3 データ・ストアが接続されるように指定しています。 NFS 共有は、vCenter Server クラスター内のすべてのホストに接続され、Storage DRS が有効にされたデータ・ストア・クラスターに組み込まれます。
 
 ## vSphere Storage Distributed Resource Scheduler (Storage DRS)
 
-Storage DRS を使用して、データ・ストア・クラスターの集約リソースを管理できます。Storage DRS が有効な場合、データ・ストア・クラスター内のデータ・ストア間でスペースと入出力リソースのバランスを取るために、仮想マシン (VM) のディスクの配置と移行に関する推奨情報が生成されます。
+Storage DRS を使用して、データ・ストア・クラスターの集約リソースを管理できます。 Storage DRS が有効な場合、データ・ストア・クラスター内のデータ・ストア間でスペースと入出力リソースのバランスを取るために、仮想マシン (VM) のディスクの配置と移行に関する推奨情報が生成されます。
 
 Storage DRS がオンの場合は、以下の機能を使用できます。
 * データ・ストア・クラスター内のデータ・ストア間でのスペースのロード・バランシング
@@ -36,7 +36,7 @@ Storage DRS がオンの場合は、以下の機能を使用できます。
 
 Storage DRS の積極性は、領域使用率と入出力待ち時間のしきい値を指定することで決まります。 Storage DRS は、データ・ストア・クラスター内のデータ・ストアに関するリソース使用率の情報を収集します。 vCenter Server は、この情報を使用して、データ・ストア上の仮想ディスクの配置に関する推奨情報を生成します。
 
-データ・ストア・クラスターに対して低い積極性レベルを設定すると、Storage DRS は、必要な場合にのみ Storage vMotion の移行を推奨します。 例えば、入出力負荷や領域使用率が高くなったり、バランスが大きく偏ったりした場合に、Storage DRS は移行を推奨します。データ・ストア・クラスターに対して高い積極性レベルを設定すると、Storage DRS は、領域や入出力のロード・バランシングがデータ・ストア・クラスターにとって有効である場合には常に移行を推奨します。
+データ・ストア・クラスターに対して低い積極性レベルを設定すると、Storage DRS は、必要な場合にのみ Storage vMotion の移行を推奨します。 例えば、入出力負荷や領域使用率が高くなったり、バランスが大きく偏ったりした場合に、Storage DRS は移行を推奨します。 データ・ストア・クラスターに対して高い積極性レベルを設定すると、Storage DRS は、領域や入出力のロード・バランシングがデータ・ストア・クラスターにとって有効である場合には常に移行を推奨します。
 
 データ・ストア・クラスターには、次のしきい値カテゴリーがあります。
 
@@ -85,8 +85,8 @@ SIOC を使用して、個々の VM の個々の仮想ディスクを制限し�
 | NFS.HeartbeatMaxFailures | 10 |
 | NFS.HeartbeatFrequency  | 12 |
 | NFS.HeartbeatTimeout | 5 |
-| NFS.MazQueueDepth | 64 |
+| NFS.MaxQueueDepth | 64 |
 
 ### 関連リンク
 
-* [ソリューションの概要](../solution/solution_overview.html)
+* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

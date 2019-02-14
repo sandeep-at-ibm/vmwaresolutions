@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,8 +19,8 @@ Sie können einen vorhandenen VMware vSphere-Cluster, den Sie bestellt oder gesp
 ## Voraussetzungen
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen](../vmonic/useraccount.html).
-*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für vSphere-Cluster](vs_planning.html) vertraut gemacht.
+*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen](/docs/services/vmwaresolutions/vmonic/useraccount.html#managing-user-accounts-and-settings).
+*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für vSphere-Cluster](/docs/services/vmwaresolutions/vsphere/vs_planning.html) vertraut gemacht.
 *  Sie haben eine E-Mail mit der Bestätigung erhalten, dass der Cluster, den Sie skalieren möchten, zur Verwendung bereit ist.
 
 ## Vorgehensweise beim Skalieren vorhandener Cluster
@@ -46,6 +46,6 @@ Die vSphere-Cluster werden (anders als die vCenter Server- und Cloud Foundation-
 
 ### Zugehörige Links
 
-* [Neue vSphere-Cluster bestellen](vs_orderinginstances.html)
-* [Auf vorhandenen Konfigurationen basierenden vSphere-Cluster bestellen](vs_orderingbasedonexistingconfig.html)
-* [Außerhalb der Konsole erstellte Cluster skalieren](vs_orderingforclustersoutside.html)
+* [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Auf vorhandenen Konfigurationen basierenden vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [Außerhalb der Konsole erstellte Cluster skalieren](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

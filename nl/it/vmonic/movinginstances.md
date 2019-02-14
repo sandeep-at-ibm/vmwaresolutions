@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Aggiornamento delle tue istanze dalle release precedenti alla V1.4
 
@@ -22,7 +26,8 @@ Nelle release della V1.4 e successive, sono disponibili numerosi miglioramenti d
 
 Se non hai migrato o eliminato le tue istanze dalle release precedenti alla V1.4, potrebbero essere ancora visibili sulla console {{site.data.keyword.vmwaresolutions_short}} in modalità di sola visualizzazione. Queste istanze sono contrassegnate nell'interfaccia utente come **Obsolete** con un'icona del simbolo di avvertenza.
 
-**Nota:** le informazioni visualizzate nelle proprietà dell'istanza riflettono i dati a partire dalla data di rilascio della V1.4 e non vengono più aggiornate.
+Le informazioni visualizzate nelle proprietà dell'istanza riflettono i dati a partire dalla data di rilascio della V1.4 e non vengono più aggiornate.
+{:note}
 
 Sulle istanze precedenti alla V1.4 sono disponibili le seguenti azioni:
 *  Visualizzare le informazioni nella pagina dei dettagli dell'istanza.
@@ -43,4 +48,4 @@ Per spostare le tue istanze precedenti alla V1.4 in nuove istanze, completa la s
 
 Per ulteriori informazioni sull'esportazione e importazione delle VM, consulta la tua documentazione di VMware vSphere.
 
-Se hai bisogno di assistenza con {{site.data.keyword.vmwaresolutions_short}}, [contatta il supporto IBM](trbl_support.html) attraverso uno dei canali di supporto.
+Se hai bisogno di assistenza con {{site.data.keyword.vmwaresolutions_short}}, [contatta il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) attraverso uno dei canali di supporto.

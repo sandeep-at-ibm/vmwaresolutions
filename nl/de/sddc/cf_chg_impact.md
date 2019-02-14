@@ -2,27 +2,37 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-01-21"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Hinweise zum Ändern von Cloud Foundation-Artefakten
 
 Das Ändern von Benutzern, Ressourcen oder Teilnetzen, die für {{site.data.keyword.vmwaresolutions_full}} reserviert sind, kann sich auf Managementoperationen für Instanzen von VMware Cloud Foundation auswirken.
 
-**Wichtig:** Ändern Sie nicht die globalen Berechtigungen der Gruppe **ic4v-vCenter** auf der Seite **Benutzer und Gruppen** auf dem VMware vSphere-Web-Client. Folgende Beispiele gehören zu den globalen Berechtigungsänderungen: Ändern des Benutzernamens, Löschen des Benutzers oder Ändern seines Kennworts.
+Bearbeiten Sie keine globalen Berechtigungen der Gruppe **ic4v-vCenter** auf der Seite **Benutzer und Gruppen** auf dem VMware vSphere-Web-Client. Folgende Beispiele gehören zu den globalen Berechtigungsänderungen: Ändern des Benutzernamens, Löschen des Benutzers oder Ändern seines Kennworts.
+Verwenden Sie die Hostbenutzer-ID **customerroot** anstelle der Hostbenutzer-ID **root**.
+{:important}
 
 ## Servicespezifische Benutzerkonten
+{: faq}
 
 Jeder Service erstellt ein internes Benutzerkonto in vCenter Server. Dieses Konto ist erforderlich, damit Managementoperationen, die einem Service zugeordnet sind, eine vCenter Server-Verbindung herstellen können, um die Operationen für den Service ausführen zu können.
 
-**Wichtig:** Um Ausfälle und Verbindungsprobleme zu vermeiden, sollten Sie beim Ändern der Benutzer-ID, des Kennworts oder der Einstellungen für den Ablauf des Kennworts für dieses Benutzerkonto sicherstellen, dass auch die Informationen im zugeordneten Service geändert werden.
+Um Ausfälle und Verbindungsprobleme zu vermeiden, sollten Sie beim Ändern der Benutzer-ID, des Kennworts oder der Einstellungen für den Ablauf des Kennworts für dieses Benutzerkonto sicherstellen, dass auch die Informationen im zugeordneten Service geändert werden.
+{:important}
 
 Die Benutzer-ID für dieses Konto ist im Format `<service_name>-<truncated service_uuid>@test.local` oder `<service_name>-<truncated service_uuid>@example-domain.local` angegeben. Die Benutzer-ID, die vom Service "Veeam on {{site.data.keyword.cloud_notm}}" verwendet wird, um eine vCenter Server-Verbindung zur Durchführung geplanter Sicherungen herzustellen, lautet z. B. `Veeam-<Veeam_uuid>@test.local`.
 
-**Hinweis:** Die aus `<service_name>` und `<service_uuid>` zusammengesetzte Zeichenfolge wird bei einer Länge von 20 Zeichen abgeschnitten.
+Die aus `<service_name>` und `<service_uuid>` zusammengesetzte Zeichenfolge wird bei einer Länge von 20 Zeichen abgeschnitten.
+{:note}
 
 ## VMware-Ressourcen für Cloud Foundation-Instanzen
 

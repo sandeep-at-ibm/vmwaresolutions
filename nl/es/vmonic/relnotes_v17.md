@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-07-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Notas del release para V1.7
 
@@ -22,7 +26,8 @@ Esta actualización se aplica a las siguientes actualizaciones y mejoras:
 * Mejoras en la estabilidad del componente IBM CloudDriver
 * La modalidad EVC (basada en el procesador Intel “Haswell” 2690-V3) se habilita en los despliegues de VMware preexistentes que están en los servidores V3 en el momento de la actualización.
 
-  **Nota**: la modalidad EVC no está habilitada para los despliegues nuevos o existentes en servidores V4.
+  La modalidad EVC no está habilitada para los despliegues nuevos o existentes en servidores V4.
+  {:note}
 
 * Los despliegues de VMware Cloud Foundation desplegados antes del 22 de mayo y que por lo tanto utilizan servidores V3 solicitarán servidores V4 cuando se añada un nuevo nodo a la instancia. Estos servidores tienen 256 GB de memoria; si necesita 512 GB de memoria, después de añadir los servidores abra una incidencia de soporte para solicitar una actualización del servidor a 512 GB de memoria. Para obtener más información sobre cómo ponerse en contacto con el equipo de soporte de IBM, consulte [Cómo ponerse en contacto con el equipo de soporte de IBM](trbl_support.html).
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,4 +22,4 @@ Apri un ticket di supporto {{site.data.keyword.cloud}} e collabora con il suppor
 
 Per accedere alla console Zerto, seleziona la scheda Zerto dalla scheda **Servizi** dell'istanza e fai clic su **Visualizza dettagli** e quindi su **Visualizza Zerto Console**.
 
-Per ulteriori informazioni su come contattare il supporto IBM, vedi [Come contattare il supporto IBM](trbl_support.html).
+Per ulteriori informazioni su come contattare il supporto IBM, vedi [Come contattare il supporto IBM](/docs/services/vmwaresolutions//vmonic/trbl_support.html).

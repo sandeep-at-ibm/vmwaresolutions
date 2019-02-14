@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -65,6 +65,6 @@ Tabella 2. Tabella di confronto per le edizioni di VMware vSAN
 
 ### Link correlati
 
-* [Panoramica della soluzione](solution_overview.html)
-* [Panoramica della progettazione](design_overview.html)
-* [Backup dei componenti](solution_backingup.html)
+* [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Panoramica della progettazione](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [Backup dei componenti](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

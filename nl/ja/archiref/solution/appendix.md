@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -65,6 +65,6 @@ lastupdated: "2018-07-09"
 
 ### 関連リンク
 
-* [ソリューションの概要](solution_overview.html)
-* [設計の概要](design_overview.html)
-* [コンポーネントのバックアップ](solution_backingup.html)
+* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [設計の概要](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

@@ -106,26 +106,26 @@
   <path d="m995 148.88-3.5-7h7z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="875" y="48" width="53" height="29" fill="#fff" stroke-width="0"/>
-   <text x="900" y="57.5">Consume</text>
+   <text x="900" y="57.5">Consumir</text>
    <text x="900" y="71.5">servicios</text>
   </g>
   <path d="m930 570h-70q-10 0-10-10v-45q0-10-10-10h-113.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <path d="m721.12 505 7-3.5-1.75 3.5 1.75 3.5z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="542" y="364" width="96" height="43" fill="#fff" stroke-width="0"/>
-   <text x="589" y="374">Apps de despliegue /</text>
-   <text x="589" y="402">ciclo de vida</text>
+   <text x="589" y="374">Desplegar/ciclo de vida</text>
+   <text x="589" y="402">apps</text>
   </g>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="443" y="590" width="96" height="43" fill="#fff" stroke-width="0"/>
-   <text x="490" y="600">Apps de despliegue /</text>
-   <text x="490" y="628">ciclo de vida</text>
+   <text x="490" y="600">Desplegar/ciclo de vida</text>
+   <text x="490" y="628">apps</text>
   </g>
   <path d="m540 30h-170q-10 0-10 10v138.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <path d="m360 183.88-3.5-7 3.5 1.75 3.5-1.75z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="335" y="48" width="53" height="29" fill="#fff" stroke-width="0"/>
-   <text x="360" y="57.5">Consume</text>
+   <text x="360" y="57.5">Consumir</text>
    <text x="360" y="71.5">servicios</text>
   </g>
   <ellipse cx="86" cy="768" rx="7.5" ry="7.5" fill="#fff" pointer-events="none" stroke="#000"/>
@@ -164,7 +164,7 @@
   <path d="m893.88 232-7 3.5 1.75-3.5-1.75-3.5z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="784" y="207" width="53" height="29" fill="#fff" stroke-width="0"/>
-   <text x="809.5" y="216.5">Consume</text>
+   <text x="809.5" y="216.5">Consumir</text>
    <text x="809.5" y="230.5">servicios</text>
   </g>
   <rect x="690" y="440" width="30" height="130" fill="#fff" pointer-events="none" stroke="#000"/>
@@ -182,7 +182,7 @@
   <path d="m370 428.88-3.5-7 3.5 1.75 3.5-1.75z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="545" y="157" width="53" height="29" fill="#fff" stroke-width="0"/>
-   <text x="570.5" y="167">Consume</text>
+   <text x="570.5" y="167">Consumir</text>
    <text x="570.5" y="181">servicios</text>
   </g>
   <path d="m120 790h223.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
@@ -201,12 +201,12 @@
   <path d="m348.88 750-7 3.5 1.75-3.5-1.75-3.5z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="265" y="657" width="53" height="29" fill="#fff" stroke-width="0"/>
-   <text x="290" y="667">Consume</text>
+   <text x="290" y="667">Consumir</text>
    <text x="290" y="681">servicios</text>
   </g>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
-   <text x="850.5" y="543.5">Apps de despliegue /</text>
-   <text x="850.5" y="557.5">ciclo de vida</text>
+   <text x="850.5" y="543.5">Desplegar/ciclo de vida</text>
+   <text x="850.5" y="557.5">apps</text>
   </g>
   <rect x="945" y="195" width="120" height="30" fill="#fff" pointer-events="none" stroke="#000"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">

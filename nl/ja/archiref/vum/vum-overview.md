@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -38,7 +38,7 @@ VMware Update Manager (VUM) は、マルチステージ・プロセスを使用�
 * ESXi 5.5 ホストおよび ESXi 6.x ホストの通知、アラート、およびパッチの再呼び出し。
 * 仮想アプライアンスのアップグレードに関するメタデータ。
 
-VUM は、ESXi 5.0 以降を実行しているホストのパッチの再呼び出しをサポートします。 リリースされたパッチに問題または潜在的な問題がある場合、パッチが再呼び出しされます。 VMware vCenter Server on {{site.data.keyword.cloud}} インスタンス内のホストをスキャンした後、再呼び出しされたパッチが特定のホストにインストールされているかどうかを VUM が警告します。 再呼び出しされたパッチは、VUM を使用してホストにインストールすることはできません。 また、VUM によって、再呼び出しされたすべてのパッチがパッチ・リポジトリーから削除されます。 問題を修正するパッチがリリースされると、VUM によって新規パッチがパッチ・リポジトリーにダウンロードされます。 問題のあるパッチが既にインストールされている場合、VUM によって修正がリリースされたことが通知され、新しいパッチの適用を求めるプロンプトが表示されます。
+VUM は、ESXi 5.0 以降を実行しているホストのパッチの再呼び出しをサポートします。 リリースされたパッチに問題または潜在的な問題がある場合、パッチが再呼び出しされます。 VMware vCenter Server on {{site.data.keyword.cloud}} インスタンス内のホストをスキャンした後、再呼び出しされたパッチが特定のホストにインストールされているかどうかを VUM が警告します。 再呼び出しされたパッチは、VUM を使用してホストにインストールすることはできません。 また、VUM によって、再呼び出しされたすべてのパッチがパッチ・リポジトリーから削除されます。 問題を修正するパッチがリリースされると、VUM によって新規パッチがパッチ・リポジトリーにダウンロードされます。 問題のあるパッチがインストールされている場合、VUM によって修正がリリースされたことが通知され、新しいパッチの適用を求めるプロンプトが表示されます。
 
 VUM クライアント・インターフェースには、以下の 2 つのメイン・ビューがあります。
 *	管理ビュー
@@ -64,4 +64,4 @@ VUM クライアント・インターフェースには、以下の 2 つのメ�
 ### 関連リンク
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモ)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)

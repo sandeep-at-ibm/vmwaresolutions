@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 670 452" style="enable-background:new 0 0 670 452;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#B6CAEF;stroke:#0071BC;stroke-miterlimit:10;}
+	.st1{font-family:'IBMPlexSans';}
+	.st2{font-size:14px;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st5{fill:#ABD6AD;stroke:#006837;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:4.969,4.969;}
+	.st8{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:5.0236,5.0236;}
+</style>
+<g id="vCenter_VM_ESXi">
+	<g id="ESXi_1">
+		<path class="st0" d="M205.5,197.5h-179c-6.6,0-12-5.4-12-12v-30c0-6.6,5.4-12,12-12h179c6.6,0,12,5.4,12,12v30
+			C217.5,192.1,212.1,197.5,205.5,197.5z"/>
+		<text transform="matrix(1 0 0 1 104.3335 177.6665)" class="st1 st2">ESXi</text>
+	</g>
+	<g id="ESXi_1_1_">
+		<path class="st0" d="M423.5,197.5h-179c-6.6,0-12-5.4-12-12v-30c0-6.6,5.4-12,12-12h179c6.6,0,12,5.4,12,12v30
+			C435.5,192.1,430.1,197.5,423.5,197.5z"/>
+		<text transform="matrix(1 0 0 1 322.3335 177.6665)" class="st1 st2">ESXi</text>
+	</g>
+	<g id="ESXi_1_2_">
+		<path class="st0" d="M640.5,197.5h-179c-6.6,0-12-5.4-12-12v-30c0-6.6,5.4-12,12-12h179c6.6,0,12,5.4,12,12v30
+			C652.5,192.1,647.1,197.5,640.5,197.5z"/>
+		<text transform="matrix(1 0 0 1 539.3335 177.6665)" class="st1 st2">ESXi</text>
+	</g>
+	<g id="vCenter">
+		<g>
+			<rect x="37.5" y="95.5" class="st3" width="61" height="61"/>
+			<path d="M98,96v60H38V96H98 M99,95H37v62h62V95L99,95z"/>
+		</g>
+		<text transform="matrix(1 0 0 1 43.5493 130.228)" class="st1 st2">vCenter</text>
+	</g>
+	<g id="VM1">
+		<g>
+			<rect x="138.5" y="95.5" class="st3" width="61" height="61"/>
+			<path d="M199,96v60h-60V96H199 M200,95h-62v62h62V95L200,95z"/>
+		</g>
+		<text transform="matrix(1 0 0 1 159.053 130.228)" class="st1 st2">VM</text>
+	</g>
+	<g id="VM2">
+		<g>
+			<rect x="255.5" y="95.5" class="st3" width="61" height="61"/>
+			<path d="M316,96v60h-60V96H316 M317,95h-62v62h62V95L317,95z"/>
+		</g>
+		<text transform="matrix(1 0 0 1 276.053 130.228)" class="st1 st2">VM</text>
+	</g>
+	<g id="VM3">
+		<g>
+			<rect x="349.5" y="95.5" class="st3" width="61" height="61"/>
+			<path d="M410,96v60h-60V96H410 M411,95h-62v62h62V95L411,95z"/>
+		</g>
+		<text transform="matrix(1 0 0 1 370.053 130.228)" class="st1 st2">VM</text>
+	</g>
+	<g id="VM4">
+		<g>
+			<rect x="470.5" y="95.5" class="st3" width="61" height="61"/>
+			<path d="M531,96v60h-60V96H531 M532,95h-62v62h62V95L532,95z"/>
+		</g>
+		<text transform="matrix(1 0 0 1 491.053 130.228)" class="st1 st2">VM</text>
+	</g>
+	<g id="VM5">
+		<g>
+			<rect x="562.5" y="95.5" class="st3" width="61" height="61"/>
+			<path d="M623,96v60h-60V96H623 M624,95h-62v62h62V95L624,95z"/>
+		</g>
+		<text transform="matrix(1 0 0 1 583.053 130.228)" class="st1 st2">VM</text>
+	</g>
+	<g id="certificate_top">
+		<path class="st4" d="M51,74v30.7c0,0,17.8,9.7,36.3,0s38,0,38,0V74H51z"/>
+		<text transform="matrix(1 0 0 1 56 92.5)" class="st1 st2">Certificado</text>
+	</g>
+</g>
+<g id="KMIP">
+	<g>
+		<g>
+			<g>
+				<rect x="54.5" y="302.5" class="st5" width="127.7" height="48"/>
+				<text transform="matrix(1 0 0 1 65 335.667)" class="st1 st2">KMIP for VMware</text>
+			</g>
+			<g>
+				<rect x="37.5" y="287.5" class="st5" width="127.7" height="48"/>
+				<text transform="matrix(1 0 0 1 48 320.667)" class="st1 st2">KMIP for VMware</text>
+			</g>
+		</g>
+		<g id="certificate_top_1_">
+			<path class="st4" d="M108,268v30.7c0,0,17.8,9.7,36.3,0c18.6-9.7,38,0,38,0V268H108z"/>
+			<text transform="matrix(1 0 0 1 113 286.5)" class="st1 st2">Certificado</text>
+		</g>
+	</g>
+</g>
+<g id="Key_protect">
+	<g>
+		<g>
+			<rect x="496.5" y="302.5" class="st5" width="127.7" height="48"/>
+			<text transform="matrix(1 0 0 1 522 332.667)" class="st1 st2">Key Protect</text>
+		</g>
+		<g>
+			<rect x="484.5" y="289.5" class="st5" width="127.7" height="48"/>
+			<text transform="matrix(1 0 0 1 510 319.667)" class="st1 st2">Key Protect</text>
+		</g>
+	</g>
+</g>
+<g id="CloudHSM_and_Key">
+	<g>
+		<g>
+			<g>
+				<path class="st0" d="M605.5,441.5h-96c-6.6,0-12-5.4-12-12v-30c0-6.6,5.4-12,12-12h96c6.6,0,12,5.4,12,12v30
+					C617.5,436.1,612.1,441.5,605.5,441.5z"/>
+				<text transform="matrix(1 0 0 1 530.333 419.667)" class="st1 st2">CloudHSM</text>
+			</g>
+			<g>
+				<path class="st0" d="M595.5,426.5h-98c-6.6,0-12-5.4-12-12v-30c0-6.6,5.4-12,12-12h98c6.6,0,12,5.4,12,12v30
+					C607.5,421.1,602.1,426.5,595.5,426.5z"/>
+				<text transform="matrix(1 0 0 1 512.333 404.667)" class="st1 st2">CloudHSM</text>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path class="st4" d="M592,417.7v21c0,0,12.2,6.6,24.9,0s26,0,26,0v-21H592z"/>
+				<text transform="matrix(1 0 0 1 605.6666 431.0458)" class="st1 st2">Clave</text>
+			</g>
+			<g>
+				<path class="st4" d="M592,402.7v21c0,0,12.2,6.6,24.9,0s26,0,26,0v-21H592z"/>
+				<text transform="matrix(1 0 0 1 605.6666 416.0458)" class="st1 st2">Clave</text>
+			</g>
+			<g>
+				<path class="st4" d="M592,388.7v21c0,0,12.2,6.6,24.9,0s26,0,26,0v-21H592z"/>
+				<text transform="matrix(1 0 0 1 605.6666 402.0458)" class="st1 st2">Clave</text>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="dash_lines_and_text_around">
+	<text transform="matrix(1 0 0 1 13.3335 38.3335)" class="st1 st2">Cuenta de infraestructura del cliente</text>
+	<text transform="matrix(1 0 0 1 561 17.6665)" class="st1 st2">Red pública</text>
+	<text transform="matrix(1 0 0 1 493 228)" class="st1 st2">Red privada del cliente</text>
+	<text transform="matrix(1 0 0 1 449.333 249.333)" class="st1 st2">Red de gestión de IBM Cloud</text>
+	<g id="top_dash_line">
+		<g>
+			<line class="st6" x1="10" y1="24" x2="12.5" y2="24"/>
+			<line class="st7" x1="17.5" y1="24" x2="651" y2="24"/>
+			<line class="st6" x1="653.5" y1="24" x2="656" y2="24"/>
+		</g>
+	</g>
+	<g id="second_dash_line">
+		<g>
+			<line class="st6" x1="14" y1="234" x2="16.5" y2="234"/>
+			<line class="st8" x1="21.5" y1="234" x2="652" y2="234"/>
+			<line class="st6" x1="654.5" y1="234" x2="657" y2="234"/>
+		</g>
+	</g>
+</g>
+<g id="arrows">
+	<g>
+		<g>
+			<line class="st6" x1="65.5" y1="156.5" x2="65.5" y2="280.5"/>
+			<g>
+				<path d="M65.5,286.5c-1.1-2.8-2.9-6.4-4.8-8.5l4.8,1.7l4.8-1.7C68.4,280.1,66.6,283.7,65.5,286.5z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st6" x1="86.5" y1="197.5" x2="86.5" y2="280.5"/>
+			<g>
+				<path d="M86.5,286.5c-1.1-2.8-2.9-6.4-4.8-8.5l4.8,1.7l4.8-1.7C89.4,280.1,87.6,283.7,86.5,286.5z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st6" x1="181.5" y1="314.5" x2="477.5" y2="314.5"/>
+			<g>
+				<path d="M483.5,314.5c-2.8,1.1-6.4,2.9-8.5,4.8l1.7-4.8l-1.7-4.8C477.1,311.6,480.7,313.4,483.5,314.5z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st6" x1="548.5" y1="336.5" x2="548.5" y2="366.5"/>
+			<g>
+				<path d="M548.5,372.5c-1.1-2.8-2.9-6.4-4.8-8.5l4.8,1.7l4.8-1.7C551.4,366.1,549.6,369.7,548.5,372.5z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

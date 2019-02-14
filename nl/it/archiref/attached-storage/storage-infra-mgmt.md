@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2018-11-13"
 
 La gestione dell'infrastruttura fa riferimento ai componenti VMware che stanno gestendo l'infrastruttura vSphere ESXi.
 
-Per ulteriori informazioni sui componenti, vedi la Figura 2. Panoramica sulla rete NSX Manager in [Progettazione dell'infrastruttura virtuale](../solution/design_virtualinfrastructure.html).
+Per ulteriori informazioni sui componenti, vedi la Figura 2. Panoramica sulla rete NSX Manager in [Progettazione dell'infrastruttura virtuale](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html).
 
 ## Progettazione della rete virtuale
 
-La virtualizzazione di rete utilizzata in questa progettazione utilizza il vDS (vSphere Distributed Switch) esistente associato alla rete privata e specificato nell'[architettura {{site.data.keyword.vmwaresolutions_full}} ](../solution/solution_overview.html).
+La virtualizzazione di rete utilizzata in questa progettazione utilizza il vDS (vSphere Distributed Switch) esistente associato alla rete privata e specificato nell'[architettura {{site.data.keyword.vmwaresolutions_full}} ](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## vDS (vSphere Distributed Switch)
 
@@ -52,4 +52,4 @@ Anche se il vDS è configurato con un nuovo gruppo di porte e una porta VMkernel
 
 ### Link correlati
 
-* [Panoramica della soluzione](../solution/solution_overview.html)
+* [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

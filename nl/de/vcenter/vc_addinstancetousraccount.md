@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,6 +35,6 @@ Weitere Informationen zum Verknüpfen Ihres Nur-IaaS-Kontos mit Ihrem PaaS-Konto
 
 ### Zugehörige Links
 
-* [Benutzerzugriff mit IAM verwalten](../vmonic/iam.html)
-* [Benutzer für den Zugriff auf Services und Ressourcen einladen](../vmonic/iamuserinvite.html)
-* [Was ist IBM Cloud IAM?](../../../iam/index.html)
+* [Benutzerzugriff mit IAM verwalten](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [Benutzer für den Zugriff auf Services und Ressourcen einladen](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [Was ist IBM Cloud IAM?](/docs/iam/index.html)

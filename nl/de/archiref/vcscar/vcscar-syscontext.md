@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,9 +16,9 @@ Abbildung 1. Systemkontext
 
 Die Kernkomponenten des Systemkontextes sind Folgende:
 -	vCenter Server - VMware vCenter Server on {{site.data.keyword.cloud_notm}} ist eine {{site.data.keyword.cloud_notm}} for VMware Services-Instanz, die das Ziel für migrierte virtuelle Maschinen (VMs) aus der lokalen Umgebung darstellt. Zusammen mit der lokalen Virtualisierung bildet sie eine Hybridumgebung und ermöglicht virtuellen Maschinen den Wechsel aus einer Umgebung in die andere Umgebung.
--	{{site.data.keyword.cloud_notm}} Private - ICP ist eine Anwendungsplattform für die Entwicklung und Verwaltung von containerisierten Anwendungen. Bei der ICP-Umgebung handelt sich um eine integrierte Umgebung, die Kubernetes als Container-Orchestrator, ein privates Image-Repository, eine Managementkonsole, Überwachungsframeworks und eine grafische Benutzerschnittstelle enthält, von der aus Sie Anwendungen zentral bereitstellen, verwalten, überwachen und skalieren können.
--	{{site.data.keyword.cloud_notm}} Automation Manager - CAM ist eine auf Unternehmen abgestimmte IaC-Plattform (IaC = Infrastructure as Code), die eine zentrale Bereitstellung von VMware-basierten Workloads neben Kubernetes-basierten Workloads sowie die Automatisierung der Workloadbereitstellung unabhängig davon bietet, ob virtuelle Maschinen und/oder Container verwendet werden und wie deren Infrastrukturanforderungen beschaffen sind. 
--	Watson - Watson ist die IBM Plattform für künstliche Intelligenz und kognitive Lösungen. 
+-	{{site.data.keyword.icpfull_notm}} - {{site.data.keyword.icpfull_notm}} ist eine Anwendungsplattform zur Entwicklung und Verwaltung von containerisierten Anwendungen. Bei der {{site.data.keyword.icpfull_notm}}-Umgebung handelt es sich um eine integrierte Umgebung, die Kubernetes als Container-Orchestrator, ein privates Image-Repository, eine Managementkonsole, Überwachungsframeworks und eine grafische Benutzerschnittstelle enthält, von der aus Sie Anwendungen zentral bereitstellen, verwalten, überwachen und skalieren können.
+-	{{site.data.keyword.cloud_notm}} Automation Manager - CAM ist eine auf Unternehmen abgestimmte IaC-Plattform (IaC = Infrastructure as Code), die eine zentrale Bereitstellung von VMware-basierten Workloads neben Kubernetes-basierten Workloads sowie die Automatisierung der Workloadbereitstellung unabhängig davon bietet, ob virtuelle Maschinen oder Container verwendet werden und wie deren Infrastrukturanforderungen beschaffen sind.
+-	Watson - Watson ist die IBM Plattform für künstliche Intelligenz und kognitive Lösungen.
 -	Watson Knowledge Studio - Watson Knowledge Studio stellt ein Modell für die Verwendung von Watson Discovery bereit.
 
 ### Akteure
@@ -31,7 +31,7 @@ Im Systemkontextdiagramm sind die folgenden Akteure angegeben:
 
 ### Systeme
 Im Systemkontextdiagramm sind die folgenden Systeme angegeben:
-* Knowledge Studio - Watson Studio ist ein Tool, mit dem die Skater-Sprache für das System entworfen und zum Erkennen von Dokumenten aus dem Web verwendet werden kann, die die Skater-Sprache implementieren. 
+* Knowledge Studio - Watson Studio ist ein Tool, mit dem die Skater-Sprache für das System entworfen und zum Erkennen von Dokumenten aus dem Web verwendet werden kann, die die Skater-Sprache implementieren.
 * Speech to Text - Wandelt Sprache in Text um. Diese Komponente akzeptiert Eingaben in Audioform von einem Gerät, auf dem der Chatbot ausgeführt wird, und konvertiert sie zur Verarbeitung durch Watson in Text.
 * Text to Speech - Erstellt synthetische Sprache aus Text. Diese Komponente akzeptiert Text aus der Anwendung "Skate Advisor" und konvertiert sie in eine Sprachausgabe für das Gerät, auf dem der Chatbot ausgeführt wird.
 * Discovery-Service - Mithilfe des Watson Discovery-Service ruft das System Datensätze für das Skateboarding ab, die den angeforderten Parametern entsprechen. Ein Beispiel wäre die Anforderung nach dem Auflisten aller Datensätze für den Trick "Casper".\ Watson Assistant - Mithilfe des Watson Discovery-Service ruft das System Skater-relevanten Inhalt ab, der den angeforderten Parametern entspricht. Ein Beispiel wäre die Anforderung nach dem Auflisten aller Datensätze für den Trick "Casper". Watson Discovery nutzt intelligente Techniken des maschinellen Lernens, um die relevantesten Passagen aus dem aufgenommenen Inhalt zu extrahieren.  
@@ -41,4 +41,4 @@ Im Systemkontextdiagramm sind die folgenden Systeme angegeben:
 
 ## Zugehörige Links
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

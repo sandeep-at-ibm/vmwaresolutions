@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -15,8 +15,8 @@ lastupdated: "2018-11-08"
 ## 始める前に
 
 以下の作業を完了していることを確認してください。
-*  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントおよび設定](../vmonic/useraccount.html)を参照してください。
-*  [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスをインストールする際の考慮事項](../services/standalone_considerations.html)に記載されている、すべての考慮事項を確認する。
+*  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)を参照してください。
+*  [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスをインストールする際の考慮事項](/docs/services/vmwaresolutions/services/standalone_considerations.html)に記載されている、すべての考慮事項を確認する。
 
 ## オンプレミス VMware HCX on IBM Cloud インスタンスを注文する手順
 
@@ -38,7 +38,7 @@ lastupdated: "2018-11-08"
 
 ### 関連リンク
 
-* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの参照](standalone_viewingserviceinstances.html)
-* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの削除](standalone_deletingserviceinstances.html)
-* [HCX の用語集](hcx_glossary.html)
+* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの参照](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
+* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの削除](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
+* [HCX の用語集](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)

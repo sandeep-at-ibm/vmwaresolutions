@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -62,7 +62,7 @@ L'architettura cluster estesa vSphere + vSAN ha le seguenti specifiche:
 * Le richieste di scrittura da macchine virtuali (VM) sono scritte in modo sincrono su entrambi i siti incorrendo nella latenza della rete site-to-site.
 * Le richieste di lettura dalle VM sono realizzate localmente nell'ubicazione fisica in cui è ubicata la VM, evitando ulteriore latenza.
 * Il sito e l'host di controllo agiscono come split brain/quorum.
-* La codifica nativa vSAN (per la crittografia inattiva) può essere utilizzata insieme a questa architettura.
+* La crittografia nativa vSAN (per la crittografia inattiva) può essere utilizzata insieme a questa architettura.
 
 ### Specifiche dell'architettura di rete
 
@@ -75,4 +75,4 @@ L'architettura di rete ha le seguenti specifiche:
 
 ### Link correlati
 
-* [Richiesta di Mission Critical VMware on IBM Cloud](managing_mcv.html)
+* [Richiesta di Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services/managing_mcv.html)

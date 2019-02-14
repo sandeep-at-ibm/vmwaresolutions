@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-10"
 
 ---
 
@@ -20,7 +20,11 @@ Puede añadir clústeres a la instancia de VMware vCenter Server on {{site.data.
 
 ## Adición de clústeres a instancias de vCenter Server con el paquete híbrido (Hybridity)
 
-Puede añadir hasta 10 clústeres a la instancia de vCenter Server con el paquete híbrido (Hybridity).
+El número de clústeres que pueden añadirse a una instancia depende de la versión de la instancia:
+* Para las instancias que se han desplegado en V2.5 y posteriores o que se han actualizado a las mismas, el número de clústeres, hosts y máquinas virtuales determina el límite máximo para el número de clústeres que puede añadir. Debe respetar las directrices de dimensionamiento de VMware y los límites para el despliegue.
+* Para instancias que se han desplegado en (o se han actualizado a) V2.3 y posteriores, puede añadir hasta 10 clústeres.
+
+Para obtener más información sobre los límites máximos, consulte [Máximos de configuración de VMware](https://configmax.vmware.com/home){:new_window}.
 
 ### Valores del sistema
 
@@ -67,6 +71,8 @@ Tabla 2. Opciones para servidores nativos Broadwell
 | Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Número de servidores nativos
 
@@ -81,7 +87,11 @@ Después del despliegue, puede crear un máximo de cuatro clústeres más. Para 
 Se incluye VMware vSAN 6.6 en el pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity). Especifique las siguientes opciones de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
-* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto.
+
+  La opción **Intel Optane de alto rendimiento** solo está disponible para los modelos de CPU de Skylake Dual Intel Xeon Gold 5120 y Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
 * **Licencia de vSAN**: Seleccione la edición de licencia de VMware vSAN 6.6 (Advanced o Enterprise).
 

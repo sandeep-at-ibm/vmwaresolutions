@@ -2,15 +2,17 @@
 
 copyright:
 
-  years: 2016, 2018
+  years: 2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2019-01-07"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:note: .note}
+{:important: .important}
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
@@ -33,7 +35,8 @@ Se admiten los siguientes navegadores:
   *  Google Chrome
   *  Apple Safari
 
-**Nota**: no se admite Microsoft Internet Explorer.
+Microsoft Internet Explorer no recibe soporte.
+{:note}
 
 Para ver y trabajar mejor con la consola de {{site.data.keyword.vmwaresolutions_short}}, defina una resolución de pantalla de al menos 1024 px de anchura por 500 px de altura.
 
@@ -49,7 +52,7 @@ Necesita una cuenta de {{site.data.keyword.cloud_notm}} y una cuenta de infraest
    </tr>
    <tr>
       <td>IBMid</td>
-      <td>Al utilizar el **IBMid**, puede tener un único nombre de usuario de inicio de sesión para todos los productos y servicios de IBM que utilice, incluido {{site.data.keyword.cloud_notm}}. {{site.data.keyword.vmwaresolutions_short}} se proporciona como una solución de infraestructura en el catálogo de {{site.data.keyword.cloud_notm}}. Para acceder a la consola de {{site.data.keyword.vmwaresolutions_short}}, debe tener un **IBMid**.<br><br>Para utilizar **IBMid** para iniciar sesión en la consola de {{site.data.keyword.vmwaresolutions_short}}, debe asociar el **IBMid** con una cuenta de {{site.data.keyword.cloud_notm}}. Cuando inicie una sesión en la consola por primera vez, se le indicará que asocie su **IBMid** existente con una cuenta de {{site.data.keyword.cloud_notm}} o que se registre para conseguir una nueva cuenta de {{site.data.keyword.cloud_notm}}. La nueva cuenta de {{site.data.keyword.cloud_notm}} se asociará automáticamente con el **IBMid**. Debe pasar por este proceso una sola vez.<br><br>Si tiene problemas para asociar su **IBMid** con una cuenta de {{site.data.keyword.cloud_notm}}, consulte [Resolución de problemas para acceder a {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html).</td>
+      <td>Al utilizar el **IBMid**, puede tener un único nombre de usuario de inicio de sesión para todos los productos y servicios de IBM que utilice, incluido {{site.data.keyword.cloud_notm}}. {{site.data.keyword.vmwaresolutions_short}} se proporciona como una solución de infraestructura en el catálogo de {{site.data.keyword.cloud_notm}}. Para acceder a la consola de {{site.data.keyword.vmwaresolutions_short}}, debe tener un **IBMid**.<br><br>Para utilizar **IBMid** para iniciar sesión en la consola de {{site.data.keyword.vmwaresolutions_short}}, debe asociar el **IBMid** con una cuenta de {{site.data.keyword.cloud_notm}}. Cuando inicie una sesión en la consola por primera vez, se le indicará que asocie su **IBMid** existente con una cuenta de {{site.data.keyword.cloud_notm}} o que se registre para conseguir una nueva cuenta de {{site.data.keyword.cloud_notm}}. La nueva cuenta de {{site.data.keyword.cloud_notm}} se asociará automáticamente con el **IBMid**. Debe pasar por este proceso una sola vez.<br><br>Si tiene problemas para asociar su **IBMid** con una cuenta de {{site.data.keyword.cloud_notm}}, consulte [Resolución de problemas para acceder a {{site.data.keyword.cloud_notm}}](https://console.cloud.ibm.com/docs/account/ts_accessing.html).</td>
    </tr>
    <tr>
       <td>Cuenta de IBM Cloud</td>
@@ -57,7 +60,7 @@ Necesita una cuenta de {{site.data.keyword.cloud_notm}} y una cuenta de infraest
    </tr>
    <tr>
       <td>Cuenta de infraestructura de IBM Cloud (SoftLayer)</td>
-      <td>La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) se conocía anteriormente como la cuenta de IBM SoftLayer.  Para obtener más información sobre los requisitos que debe cumplir la cuenta, consulte [Requisitos de la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](vmonic/slaccountrequirement.html).<br><br>Puede enlazar las cuentas de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) con las cuentas de {{site.data.keyword.cloud_notm}} para utilizar la infraestructura combinada como servicio (IaaS) y los recursos de la plataforma como servicio (PaaS). A continuación, puede acceder a los recursos de IaaS y a los recursos de PaaS desde un solo inicio de sesión. El enlace de las cuentas también le proporciona una sola factura para todos los recursos de PaaS e IaaS que utiliza.<ul><li>Si no tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer), solicite una siguiendo el procedimiento de [Inicio de sesión para una cuenta de infraestructura de IBM Cloud (SoftLayer)](vmonic/signing_softlayer_account.html) y, a continuación, enlace la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) con la cuenta de {{site.data.keyword.cloud_notm}} siguiendo el procedimiento de [Enlace de cuentas de IBMid](https://console.bluemix.net/docs/account/softlayerlink.html).</li><li>Si tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer), puede enlazarla con la cuenta de {{site.data.keyword.cloud_notm}} siguiendo el procedimiento de [Enlace de cuentas de IBMid](https://console.bluemix.net/docs/account/softlayerlink.html).</li></ul></td>
+      <td>La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) se conocía anteriormente como la cuenta de IBM SoftLayer.  Para obtener más información sobre los requisitos que debe cumplir la cuenta, consulte [Requisitos de la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](vmonic/slaccountrequirement.html).<br><br>Puede enlazar las cuentas de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) con las cuentas de {{site.data.keyword.cloud_notm}} para utilizar la infraestructura combinada como servicio (IaaS) y los recursos de la plataforma como servicio (PaaS). A continuación, puede acceder a los recursos de IaaS y a los recursos de PaaS desde un solo inicio de sesión. El enlace de las cuentas también le proporciona una sola factura para todos los recursos de PaaS e IaaS que utiliza.<ul><li>Si no tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer), solicite una siguiendo el procedimiento de [Inicio de sesión para una cuenta de infraestructura de IBM Cloud (SoftLayer)](vmonic/signing_softlayer_account.html) y, a continuación, enlace la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) con la cuenta de {{site.data.keyword.cloud_notm}} siguiendo el procedimiento de [Enlace de cuentas de IBMid](https://console.cloud.ibm.com/docs/account/softlayerlink.html).</li><li>Si tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer), puede enlazarla con la cuenta de {{site.data.keyword.cloud_notm}} siguiendo el procedimiento de [Enlace de cuentas de IBMid](https://console.cloud.ibm.com/docs/account/softlayerlink.html).</li></ul></td>
    </tr>
    </table>
 
@@ -144,7 +147,7 @@ Revise y elija los servicios de complemento para la oferta de despliegue.
        <td>El servicio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} proporciona una solución eficiente y escalable para la protección de datos, la reutilización de datos y la recuperación de datos para entornos virtuales. Puede implementar el servicio como una solución autónoma o integrarlo con su entorno IBM Spectrum Protect para descargar copias para su almacenamiento y gestión de datos a largo plazo.</td>
     </tr>
     <tr>
-       <td>[KMIP for VMware on IBM Cloud](services/kmip_considerations.html)</td>
+       <td>[KMIP for VMware on IBM Cloud](services/kmip_standalone_considerations.html)</td>
        <td>El servicio KMIP for VMware on {{site.data.keyword.cloud_notm}} ofrece un servicio altamente disponible para gestionar las claves de cifrado que utiliza VMware en {{site.data.keyword.cloud_notm}}. Este servicio ofrece capacidad de tiempo de ejecución que permite a los clientes crear, recuperar, activar, revocar y destruir las claves de cifrado. También proporciona capacidad de gestión para mantener las asociaciones entre las credenciales del cliente y las claves de cifrado.</td>
     </tr>
     <tr>
@@ -166,7 +169,7 @@ Revise y elija los servicios de complemento para la oferta de despliegue.
 La consola de {{site.data.keyword.vmwaresolutions_short}} es la interfaz con la que solicita y gestiona sus despliegues. Cada despliegue se gestiona como una instancia en la consola. La consola es una interfaz de usuario autónoma, independiente del portal de clientes de infraestructura de {{site.data.keyword.cloud_notm}}.
 
 Para acceder a la consola de {{site.data.keyword.vmwaresolutions_short}}:
-1. Vaya a https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
+1. Vaya a https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Inicie sesión en la consola con su **IBMid**.
 
 ## Paso 2: Configuración de la cuenta de usuario y valores

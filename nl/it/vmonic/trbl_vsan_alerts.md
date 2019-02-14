@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2017-08-16"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,7 +18,7 @@ Queste avvertenze non comportano complicazioni e non indicano problemi funzional
 utilizza la seguente procedura.
 
 1. Vai all'indirizzo http://partnerweb.vmware.com/service/vsan/all.json e salva il file JSON, denominato `all.json`, sul tuo sistema locale.
-2. Assicurati di aver completato i passi indicati in [Timeout della console vCenter](trbl_timeout_vc_console.html).
+2. Assicurati di aver completato i passi indicati in [Timeout della console vCenter](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 3. Nella pagina dei dettagli dell'istanza Cloud Foundation, fai clic sul pulsante **Console vCenter** e accedi al client web vSphere utilizzando le credenziali visualizzate nella console {{site.data.keyword.vmwaresolutions_full}}.
 4. Nel client web vSphere, passa a **Gestisci > Impostazioni** e apri la sezione **Virtual SAN > Integrità > Database HCL**. Fai clic su **Aggiorna da file**, quindi carica il file `all.json` salvato in precedenza.
 5. Per cancellare le avvertenze, passa al riquadro **Allarmi** nell'angolo superiore destro del client web vSphere. Fai clic con il tasto destro del mouse su ciascun allarme e seleziona **Reimposta su verde**.

@@ -2,35 +2,42 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-24"
+lastupdated: "2019-01-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Häufig gestellte Fragen zur Lizenzierung und zu eigenen Lizenzen (BYOL)
 
 Hier finden Sie Antworten auf häufig gestellte Fragen zur Lizenzierung, einschließlich der {{site.data.keyword.vmwaresolutions_full}}-Funktion, die Ihnen die Verwendung von eigenen Lizenzen ermöglicht (Bring Your Own License, BYOL).
 
 ## Was bedeutet BYOL?
+{: faq}
 
-BYOL steht für "Bring Your Own License", also die mögliche Verwendung Ihrer eigenen Lizenzen, und ist als Funktion für VMware Cloud Foundation-Instanzen in V1.8 und höheren Releases sowie für vCenter Server- und vSphere-Cluster in V2.0 und höheren Releases verfügbar. Mit BYOL können Sie Ihre eigenen VMware-Lizenzen für folgende VMware-Softwarekomponenten verwenden, wenn Sie Instanzen bestellen:
+BYOL steht für "Bring Your Own License", also die mögliche Verwendung Ihrer eigenen Lizenzen, und ist als Funktion für Vmware Cloud Foundation-Instanzen in Version 1.8 und höheren Releases sowie VMware vCenter Server- und VMware vSphere-Cluster in Version 2.0 und höheren Releases verfügbar. Mit BYOL können Sie Ihre eigenen VMware-Lizenzen für folgende VMware-Softwarekomponenten verwenden:
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
 * VMware vSAN
 
-Wenn Sie die Verwendung Ihrer eigenen Lizenz für eine VMware-Komponente auswählen und einen gültigen Lizenzschlüssel dafür angeben, wird für diese Komponente keine Lizenz von IBM bestellt und es fallen keine monatlichen Lizenzgebühren im Konto Ihrer {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) für diese Komponente an.
+Wenn Sie die Verwendung Ihrer eigenen Lizenz für eine VMware-Komponente auswählen und einen gültigen Lizenzschlüssel dafür angeben, wird für diese Komponente keine Lizenz von IBM bestellt und es fallen keine monatlichen Lizenzgebühren im Konto Ihrer {{site.data.keyword.cloud_notm}}-Infrastruktur für diese Komponente an.
 
-**Hinweis:** Die BYOL-Funktion (BYOL = Bring Your Own License) ist für Benutzer der Kategorie "Business Partner" nicht verfügbar.
+Die BYOL-Funktion (BYOL = Bring Your Own License) ist für Benutzer der Kategorie "Business Partner" nicht verfügbar.
+{:note}
 
 ## Wo verwalte ich die über VMware vSphere on IBM Cloud bestellten Lizenzen und Komponenten?
 
 Nachdem Sie die Erstellung eines neuen Clusters für VMware vSphere on {{site.data.keyword.cloud_notm}} bestellt haben, werden die VMware-Lizenzen, die ESXi-Server und weiteren Netzkomponenten geliefert und können im {{site.data.keyword.slportal}} verwaltet werden.
 
-Rufen Sie nach der Bereitstellung die {{site.data.keyword.vmwaresolutions_short}}-Konsole auf, um den neuen Cluster unter Verwendung der gespeicherten Konfiguration zu skalieren. Weitere Informationen zur Skalierung finden Sie unter [Vorhandene vSphere-Cluster skalieren](../vsphere/vs_scalingexistingclusters.html).
+Rufen Sie nach der Bereitstellung die {{site.data.keyword.vmwaresolutions_short}}-Konsole auf, um den neuen Cluster unter Verwendung der gespeicherten Konfiguration zu skalieren. Weitere Informationen finden Sie unter [Vorhandene vSphere-Cluster skalieren](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html).
 
-## Welche Lizenzeditionen und CPU-Mengen sind für BYOL erforderlich?
+## Welche Lizenzeditionen und CPUs sind für BYOL erforderlich?
 
 Bei den Lizenzeditionen für BYOL gelten die folgenden Anforderungen.
 
@@ -70,15 +77,22 @@ Nein. Unsere Vereinbarung mit VMware erfordert, dass wir den tatsächlichen Lize
 
 ## Kann ich die BYOL-Funktion für einige VMware-Komponenten verwenden und für andere Komponenten monatliche Lizenzen erwerben?
 
-Ja. Sie können die BYOL-Funktion oder erworbene Lizenzen in jeder gewünschten Kombination für die vier VMware-Komponenten verwenden. In der {{site.data.keyword.vmwaresolutions_short}}-Konsole können Sie direkt die Lizenzierungsoption auswählen, wenn Sie die vCenter Server- oder Cloud Foundation-Instanz bestellen. Die Lizenzierungsoption, die Sie bei der erstmaligen Instanzbestellung auswählen, gilt für die Laufzeit dieser Instanz.
+Ja. Sie können die BYOL-Funktion oder erworbene Lizenzen in jeder gewünschten Kombination für die vier VMware-Komponenten verwenden. In der {{site.data.keyword.vmwaresolutions_short}}-Konsole können Sie direkt die Lizenzierungsoption auswählen, wenn Sie Ihre Instanz bestellen. Die Lizenzierungsoption, die Sie bei der erstmaligen Instanzbestellung auswählen, gilt für die Laufzeit dieser Instanz.
 
 ## Kann ich bei einer bestimmten VMware-Komponente BYOL für einige Lizenzen verwenden und die übrigen Lizenzen bei IBM erwerben?
 
-Ja. Wenn Sie BYOL für eine bestimmte VMware-Komponente ausgewählt haben, erhalten Sie bei der Erstellung eines neuen Clusters die Möglichkeit, einen neuen BYOL-Schlüssel einzugeben, weiter einen vorhandenen BYOL-Schlüssel zu verwenden oder eine von IBM bereitgestellte Lizenzierung für diesen Cluster zu erwerben. Die Lizenzierung für einzelne Cluster ist derzeit nur mit VMware vSphere Enterprise und VMware vSAN möglich.
+Ja. Wenn Sie BYOL bei der Erstellung eines Clusters für eine bestimmte VMware-Komponente ausgewählt haben, stehen Ihnen folgende Optionen zur Verfügung:
+* Eingabe eines neuen BYOL-Schlüssels
+* Weiterverwendung eines vorhandenen BYOL-Schlüssels
+* Erwerb einer von IBM bereitgestellten Lizenz für diesen Cluster
+
+Die Lizenzierung pro Cluster ist derzeit nur mit VMware vSphere Enterprise und VMware vSAN möglich.
 
 ## Kann ich BYOL beim Erstellen eines neuen Clusters verwenden?
 
-Ja. Sie können BYOL aus vorhandenen BYOL-Lizenzen verwenden oder beim Erstellen eines neuen Clusters BYOL neu eingeben. Beim Erstellen eines neuen Clusters können Sie auch eine von IBM bereitgestellte Abonnementslizenz erwerben. Die Lizenzierung für einzelne Cluster ist derzeit nur mit VMware vSphere Enterprise und VMware vSAN möglich.
+Ja. Sie können BYOL aus vorhandenen BYOL-Lizenzen verwenden oder beim Erstellen eines neuen Clusters BYOL neu eingeben. Beim Erstellen eines Clusters können Sie auch eine von IBM bereitgestellte Abonnementslizenz erwerben.
+
+Die Lizenzierung pro Cluster ist derzeit nur mit VMware vSphere Enterprise und VMware vSAN möglich.
 
 ## Wie verwalte ich meine BYOL-Lizenzen?
 
@@ -93,7 +107,7 @@ Ja. Sobald Sie weitere ESXi-Server zu einer bereitgestellten Instanz hinzufügen
 Führen Sie die folgenden Schritte aus, um die über Ihren Lizenzschlüssel verfügbare CPU-Anzahl zu ermitteln:
 1. Rufen Sie die Seite **Bereitgestellte Instanzen** auf.
 2. Suchen Sie die Instanz und klicken Sie auf die Instanz.
-3. Klicken Sie auf der Registerkarte **Infrastruktur** auf den Cluster, für den die Lizenzkapazität geprüft werden soll. 
+3. Klicken Sie auf der Registerkarte **Infrastruktur** auf den Cluster, für den die Lizenzkapazität geprüft werden soll.
    Die Anzahl der verfügbaren CPUs ist in der Tabelle **Vom Benutzer bereitgestellte Lizenz** angegeben.
 
 ## Stellt IBM Unterstützung bereit, wenn ich die BYOL-Lizenzierungsoption auswähle?
@@ -140,8 +154,7 @@ vCenter Server with Hybridity Bundle beinhaltet NSX Advanced; Sie können nach d
 
 ### Zugehörige Links
 
-* [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
-* [Cloud Foundation-Instanzen](../sddc/sd_cloudfoundationoverview.html)
-* [Auf die Konsole zugreifen](loginmethod.html)
-* [Kontaktaufnahme mit dem IBM Support](trbl_support.html)
-* [vRealize Automation](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/vRealizeAutomation){:new_window}
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Auf die Konsole zugreifen](/docs/services/vmwaresolutions/vmonic/loginmethod.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

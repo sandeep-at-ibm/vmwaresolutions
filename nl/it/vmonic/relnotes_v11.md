@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2016-11-04"
 
@@ -14,12 +14,12 @@ Questa release include nuove funzioni, miglioramenti dell'usabilità e correzion
 
 ## Requisito di spanning della VLAN
 
-Se utilizzi un account SoftLayer® classico (non VRF), è necessario abilitare lo spanning della VLAN. Se lo spanning della VLAN non è abilitato per gli account classici, i vari componenti dell'ambiente di virtualizzazione VMware potrebbero non essere in grado di comunicare tra loro. Per abilitare lo spanning della VLAN nel tuo account SoftLayer, vedi [Abilita o disabilita il VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+Se utilizzi un account SoftLayer® classico (non VRF), è necessario abilitare lo spanning della VLAN. Se lo spanning della VLAN non è abilitato per gli account classici, i vari componenti dell'ambiente di virtualizzazione VMware potrebbero non essere in grado di comunicare tra loro. Per abilitare lo spanning della VLAN nel tuo account SoftLayer, vedi [Abilita o disabilita il VLAN Spanning](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ## Impostazioni e notifiche e-mail
 
-Puoi configurare le notifiche e-mail nella pagina **Impostazioni**. Per impostazione predefinita, l'impostazione è abilitata, il che significa che ricevi una notifica via e-mail per ogni istanza appena ordinata, quando tale istanza viene fornita ed è pronta per l'uso. Puoi anche disabilitare le notifiche e-mail nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](useraccount.html).
+Puoi configurare le notifiche e-mail nella pagina **Impostazioni**. Per impostazione predefinita, l'impostazione è abilitata, il che significa che ricevi una notifica via e-mail per ogni istanza appena ordinata, quando tale istanza viene fornita ed è pronta per l'uso. Puoi anche disabilitare le notifiche e-mail nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html).
 
 ## Informazioni dettagliate sullo stato
 
-Le informazioni dettagliate sullo stato sono ora disponibili per le istanze Cloud Foundation. Quando fai clic su un nome di istanza, le informazioni sullo stato visualizzate forniscono ulteriori dettagli sull'avanzamento della distribuzione. Se si verifica un errore, vengono visualizzati i messaggi per risolvere il problema. Per ulteriori informazioni, vedi [Visualizzazione delle istanze Cloud Foundation](../sddc/sd_viewinginstances.html).
+Le informazioni dettagliate sullo stato sono ora disponibili per le istanze Cloud Foundation. Quando fai clic su un nome di istanza, le informazioni sullo stato visualizzate forniscono ulteriori dettagli sull'avanzamento della distribuzione. Se si verifica un errore, vengono visualizzati i messaggi per risolvere il problema. Per ulteriori informazioni, vedi [Visualizzazione delle istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html).

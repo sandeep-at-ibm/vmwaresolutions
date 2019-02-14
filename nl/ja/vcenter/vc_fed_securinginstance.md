@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,8 +45,8 @@ lastupdated: "2018-10-30"
 
 ### 関連リンク
 
-* [VMware Federal on {{site.data.keyword.cloud_notm}} の概要](vc_fed_overview.html)
-* [VMware Federal インスタンスの注文](vc_fed_orderinginstance.html)
-* [VMware Federal インスタンスの表示](vc_fed_viewinginstance.html)
-* [VMware Federal インスタンスの削除](vc_fed_deletinginstance.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
+* [VMware Federal インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [VMware Federal インスタンスの表示](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [VMware Federal インスタンスの削除](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 745 493" style="enable-background:new 0 0 745 493;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;stroke-dasharray:5.0216,5.0216;}
+	.st2{fill:none;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;stroke-dasharray:5.0308,5.0308;}
+	.st3{fill:#FFFFFF;stroke:#4D4D4D;stroke-width:2;stroke-miterlimit:10;}
+	.st4{font-family:'MyriadPro-Regular';}
+	.st5{font-size:18px;}
+	.st6{fill:#E4EFCA;}
+	.st7{fill:none;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;stroke-dasharray:4.9847,4.9847;}
+	.st8{fill:none;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;stroke-dasharray:4.9455,4.9455;}
+	.st9{fill:#A558E8;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+	.st10{fill:#FFFFFF;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+	.st11{font-size:21px;}
+	.st12{fill:#009245;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+	.st13{fill:#29ABE2;}
+	.st14{fill:#FFFFFF;}
+	.st15{fill:#FFFFFF;stroke:#8CC63F;stroke-width:8;stroke-miterlimit:10;}
+	.st16{fill:#F9C73D;}
+	.st17{fill:#8CC63F;stroke:#009245;stroke-width:0.25;stroke-miterlimit:10;}
+	.st18{fill:#29ABE2;stroke:#0071BC;stroke-width:0.25;stroke-miterlimit:10;}
+	.st19{fill:#F9C73D;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+	.st20{fill:#F7931E;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+</style>
+<g id="inner_box">
+	<g id="Layer_2">
+		<g>
+			<g>
+				<g>
+					<polyline class="st0" points="723,388 723,390.5 720.5,390.5 					"/>
+					<line class="st1" x1="715.5" y1="390.5" x2="25" y2="390.5"/>
+					<polyline class="st0" points="22.5,390.5 20,390.5 20,388 					"/>
+					<line class="st2" x1="20" y1="383" x2="20" y2="63.5"/>
+					<polyline class="st0" points="20,61 20,58.5 22.5,58.5 					"/>
+					<line class="st1" x1="27.5" y1="58.5" x2="718" y2="58.5"/>
+					<polyline class="st0" points="720.5,58.5 723,58.5 723,61 					"/>
+					<line class="st2" x1="723" y1="66" x2="723" y2="385.5"/>
+				</g>
+			</g>
+			<g>
+				<path class="st3" d="M109.7,32.9c-6.2,0-12,1.5-16.6,4.1c-1.8-15.2-13.5-27-27.7-27c-14.6,0-26.6,12.5-27.8,28.3
+					c-1.3-0.5-2.6-0.8-4-0.8C26,37.5,20,45.7,20,55.8c0,10.1,6,18.3,13.5,18.3c1.6,0,3.2-0.4,4.7-1.1h62.4c2.9,0.7,5.9,1.1,9.1,1.1
+					c15.4,0,28-9.2,28-20.6C137.6,42.1,125.1,32.9,109.7,32.9z"/>
+				<text transform="matrix(0.9526 0 0 1 32.8589 59.0684)" class="st4 st5"><tspan x="-10">Centro de datos</tspan></text>
+			</g>
+		</g>
+		<g>
+			<rect x="43.5" y="89.5" class="st6" width="658" height="277"/>
+			<g>
+				<polyline class="st0" points="701.5,364 701.5,366.5 699,366.5 				"/>
+				<line class="st7" x1="694" y1="366.5" x2="48.5" y2="366.5"/>
+				<polyline class="st0" points="46,366.5 43.5,366.5 43.5,364 				"/>
+				<line class="st8" x1="43.5" y1="359.1" x2="43.5" y2="94.5"/>
+				<polyline class="st0" points="43.5,92 43.5,89.5 46,89.5 				"/>
+				<line class="st7" x1="51" y1="89.5" x2="696.5" y2="89.5"/>
+				<polyline class="st0" points="699,89.5 701.5,89.5 701.5,92 				"/>
+				<line class="st8" x1="701.5" y1="96.9" x2="701.5" y2="361.5"/>
+			</g>
+		</g>
+	</g>
+	<polyline class="st0" points="408.5,176.5 408.5,186.5 445.5,186.5 	"/>
+</g>
+<g id="extended_network_1">
+	<g>
+		<path class="st9" d="M680,126c0-10.8-2.7-19.6-6.1-20v0H452.1v0c-3.4,0.4-6.1,9.2-6.1,20s2.7,19.6,6.1,20v0h221.8v0
+			C677.3,145.6,680,136.8,680,126z"/>
+		<ellipse class="st10" cx="668.1" cy="126.4" rx="9.6" ry="16.6"/>
+	</g>
+	<text transform="matrix(1 0 0 1 465 133)" class="st4 st11">Red ampliada 1</text>
+	<g>
+		<path class="st12" d="M680,179c0-10.8-2.7-19.6-6.1-20v0H452.1v0c-3.4,0.4-6.1,9.2-6.1,20s2.7,19.6,6.1,20v0h221.8v0
+			C677.3,198.6,680,189.8,680,179z"/>
+		<ellipse class="st10" cx="668.1" cy="179.4" rx="9.6" ry="16.6"/>
+	</g>
+	<text transform="matrix(1 0 0 1 468 186)" class="st4 st11">Red ampliada 2</text>
+</g>
+<g id="cloud_gateway">
+</g>
+<g id="outter_box">
+</g>
+<g id="lines">
+	<g>
+		<g>
+			<path class="st13" d="M259,173.5h-27c-6.6,0-12-5.4-12-12v-22.3c0-6.6,5.4-12,12-12h27c6.6,0,12,5.4,12,12v22.3
+				C271,168.1,265.6,173.5,259,173.5z"/>
+			<g>
+				<g>
+					<path class="st14" d="M250.9,148h-9.8c-2.2,0-4.1-1.8-4.1-4.1v-5.1c0-2.2,1.8-4.1,4.1-4.1h9.8c2.2,0,4.1,1.8,4.1,4.1v5.1
+						C254.9,146.1,253.1,148,250.9,148z"/>
+					<path class="st13" d="M249.1,146.1h-6.3c-1.1,0-2.1-0.9-2.1-2.1v-3.5c0-1.1,0.9-2.1,2.1-2.1h6.3c1.1,0,2.1,0.9,2.1,2.1v3.5
+						C251.2,145.2,250.2,146.1,249.1,146.1z"/>
+					<path class="st14" d="M256.5,165.9h-21.2c-2.2,0-4.1-1.8-4.1-4.1v-12.7c0-2.2,1.8-4.1,4.1-4.1h21.2c2.2,0,4.1,1.8,4.1,4.1v12.7
+						C260.6,164.1,258.8,165.9,256.5,165.9z"/>
+				</g>
+				<g>
+					<ellipse class="st13" cx="246.4" cy="153.2" rx="3.8" ry="3.3"/>
+					<path class="st13" d="M246,163.1L246,163.1c-0.8,0-1.4-0.6-1.4-1.4v-6.6c0-0.8,0.6-1.4,1.4-1.4l0,0c0.8,0,1.4,0.6,1.4,1.4v6.6
+						C247.4,162.4,246.8,163.1,246,163.1z"/>
+					<path class="st13" d="M248.8,158.4h-1.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h1.9c0.3,0,0.5,0.2,0.5,0.5l0,0
+						C249.3,158.1,249.1,158.4,248.8,158.4z"/>
+					<path class="st13" d="M248.8,160.3h-1.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h1.9c0.3,0,0.5,0.2,0.5,0.5l0,0
+						C249.3,160,249.1,160.3,248.8,160.3z"/>
+					<path class="st13" d="M248.8,162.1h-1.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h1.9c0.3,0,0.5,0.2,0.5,0.5l0,0
+						C249.3,161.9,249.1,162.1,248.8,162.1z"/>
+				</g>
+			</g>
+		</g>
+		<line class="st0" x1="250.5" y1="173.5" x2="250.5" y2="286.5"/>
+		<line class="st0" x1="239.5" y1="173.5" x2="239.5" y2="219.5"/>
+	</g>
+	<polyline class="st0" points="408.5,127.5 408.5,117.5 445.5,117.5 	"/>
+</g>
+<g id="bottom_explanation">
+	<g>
+		<g>
+			<path class="st15" d="M128,403.8h-10.9c-3.3,0-6,2.7-6,6v4h-4c-3.3,0-6,2.7-6,6v10.2c0,3.3,2.7,6,6,6h10.3c3.3,0,6-2.7,6-6v-2.6
+				h4.6c3.3,0,6-2.7,6-6v-11.6C134,406.5,131.3,403.8,128,403.8z"/>
+			<path class="st16" d="M115.8,429.6h-7.3c-0.9,0-1.7-0.8-1.7-1.7v-6.6c0-0.9,0.8-1.7,1.7-1.7h7.3c0.9,0,1.7,0.8,1.7,1.7v6.6
+				C117.5,428.8,116.7,429.6,115.8,429.6z"/>
+			<path class="st16" d="M125.8,421h-7.3c-0.9,0-1.7-0.8-1.7-1.7V412c0-0.9,0.8-1.7,1.7-1.7h7.3c0.9,0,1.7,0.8,1.7,1.7v7.3
+				C127.5,420.3,126.8,421,125.8,421z"/>
+		</g>
+		<text transform="matrix(1 0 0 1 142 428.1019)" class="st4 st5">vCenter</text>
+	</g>
+	<g>
+		<g>
+			<path class="st17" d="M286.3,425.1v-7.9c0-1.9-1.5-3.4-3.2-3.4h-4.2v-10.1h6.9c5.1,0,9.2,4.3,9.2,9.7v15.3c0,5.3-4.1,9.7-9.2,9.7
+				h-6.9v-9.8h4.2C284.8,428.5,286.3,427,286.3,425.1z"/>
+			<path class="st18" d="M281.3,415.8h-4.2v-12.1h-6.5c-4.8,0-8.7,4.3-8.7,9.7v15.3c0,5.3,3.9,9.7,8.7,9.7h6.5v-11.3h4.2
+				c1.3,0,2.4-1.2,2.4-2.6v-6C283.6,417,282.6,415.8,281.3,415.8z"/>
+		</g>
+		<text transform="matrix(1 0 0 1 299.9024 426.7726)" class="st4 st5">Servicios de nube híbrida</text>
+	</g>
+	<g>
+		<g>
+			<path class="st13" d="M531,438.1h-13c-6.6,0-12-5.4-12-12v-9.6c0-6.6,5.4-12,12-12h13c6.6,0,12,5.4,12,12v9.6
+				C543,432.7,537.6,438.1,531,438.1z"/>
+			<g>
+				<g>
+					<path class="st14" d="M527.3,419.6h-4.9c-2.2,0-4.1-1.8-4.1-4.1v-1.5c0-2.2,1.8-4.1,4.1-4.1h4.9c2.2,0,4.1,1.8,4.1,4.1v1.5
+						C531.4,417.8,529.5,419.6,527.3,419.6z"/>
+					<path class="st13" d="M526.5,418.2h-3.4c-1.1,0-2.1-0.9-2.1-2.1v-1.4c0-1.1,0.9-2.1,2.1-2.1h3.4c1.1,0,2.1,0.9,2.1,2.1v1.4
+						C528.6,417.3,527.7,418.2,526.5,418.2z"/>
+					<path class="st14" d="M531.4,432.6h-13.1c-2.2,0-4.1-1.8-4.1-4.1v-6.9c0-2.2,1.8-4.1,4.1-4.1h13.1c2.2,0,4.1,1.8,4.1,4.1v6.9
+						C535.5,430.8,533.6,432.6,531.4,432.6z"/>
+				</g>
+				<g>
+					<ellipse class="st13" cx="525.2" cy="423.4" rx="2.7" ry="2.4"/>
+					<path class="st13" d="M524.8,430.6L524.8,430.6c-0.6,0-1-0.5-1-1v-4.8c0-0.6,0.5-1,1-1l0,0c0.6,0,1,0.5,1,1v4.8
+						C525.9,430.1,525.4,430.6,524.8,430.6z"/>
+					<path class="st13" d="M526.9,427.1h-1.4c-0.2,0-0.3-0.2-0.3-0.3l0,0c0-0.2,0.2-0.3,0.3-0.3h1.4c0.2,0,0.3,0.2,0.3,0.3l0,0
+						C527.2,427,527.1,427.1,526.9,427.1z"/>
+					<path class="st13" d="M526.9,428.5h-1.4c-0.2,0-0.3-0.2-0.3-0.3l0,0c0-0.2,0.2-0.3,0.3-0.3h1.4c0.2,0,0.3,0.2,0.3,0.3l0,0
+						C527.2,428.4,527.1,428.5,526.9,428.5z"/>
+					<path class="st13" d="M526.9,429.9h-1.4c-0.2,0-0.3-0.2-0.3-0.3l0,0c0-0.2,0.2-0.3,0.3-0.3h1.4c0.2,0,0.3,0.2,0.3,0.3l0,0
+						C527.2,429.7,527.1,429.9,526.9,429.9z"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 546.667 427.333)" class="st4 st5">Cloud Gateway</text>
+	</g>
+	<g>
+		<g>
+			<path class="st13" d="M206,480.8h-18.8c-6.6,0-12-5.4-12-12V454c0-6.6,5.4-12,12-12H206c6.6,0,12,5.4,12,12v14.8
+				C218,475.4,212.6,480.8,206,480.8z"/>
+			<g>
+				<g>
+					<g>
+						<g>
+							<g>
+								<ellipse class="st14" cx="196.5" cy="461.2" rx="11.5" ry="11.1"/>
+								<ellipse class="st13" cx="196.5" cy="461.2" rx="5.1" ry="5"/>
+							</g>
+							<rect x="193.1" y="447.1" class="st14" width="6.2" height="4"/>
+							<rect x="193.7" y="470.9" class="st14" width="5.5" height="4.8"/>
+						</g>
+						<rect x="206.5" y="458.6" class="st14" width="4.8" height="5.5"/>
+						<rect x="182" y="458.6" class="st14" width="4.8" height="5.5"/>
+					</g>
+					
+						<rect x="184.6" y="450.1" transform="matrix(0.7526 0.6585 -0.6585 0.7526 344.4036 -11.2706)" class="st14" width="5.2" height="5.2"/>
+					
+						<rect x="202.2" y="467.5" transform="matrix(0.7526 0.6585 -0.6585 0.7526 360.4512 -19.0498)" class="st14" width="6.8" height="5.2"/>
+				</g>
+				
+					<rect x="203.6" y="450.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 380.8846 -13.0761)" class="st14" width="5.2" height="5.7"/>
+				
+					<rect x="185.2" y="467.5" transform="matrix(0.7071 0.7071 -0.7071 0.7071 387.3958 4.8689)" class="st14" width="5.2" height="5.2"/>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 223 468)" class="st4 st5">Optimizador de WAN</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 480 470)" class="st4 st5">Concentrador L2</text>
+		<g>
+			<path class="st13" d="M463,480.9h-14.5c-6.6,0-12-5.4-12-12V458c0-6.6,5.4-12,12-12H463c6.6,0,12,5.4,12,12v10.9
+				C475,475.5,469.6,480.9,463,480.9z"/>
+			<g>
+				<rect x="445.1" y="454.4" class="st14" width="21.4" height="11.4"/>
+				<rect x="448.4" y="463.1" class="st14" width="14.7" height="5.3"/>
+				<rect x="448.4" y="458.5" class="st13" width="14.7" height="1.3"/>
+				<rect x="453.7" y="467.1" class="st14" width="4" height="9.4"/>
+				<rect x="447.1" y="450.4" class="st14" width="4" height="7.4"/>
+				<rect x="453.1" y="450.4" class="st14" width="2" height="2.7"/>
+				<rect x="456.4" y="450.4" class="st14" width="2" height="2.7"/>
+				<rect x="460.4" y="450.4" class="st14" width="4" height="7.4"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="L2_concentrator">
+	<g>
+		<line class="st0" x1="392.5" y1="176.5" x2="392.5" y2="218.5"/>
+		<g>
+			<path class="st13" d="M408.5,176.6h-30c-6.6,0-12-5.4-12-12v-25c0-6.6,5.4-12,12-12h30c6.6,0,12,5.4,12,12v25
+				C420.5,171.2,415.1,176.6,408.5,176.6z"/>
+			<g>
+				<rect x="378.5" y="139.5" class="st14" width="30" height="15.9"/>
+				<rect x="383.2" y="151.6" class="st14" width="20.6" height="7.5"/>
+				<rect x="383.2" y="145.1" class="st13" width="20.6" height="1.9"/>
+				<rect x="390.7" y="157.3" class="st14" width="5.6" height="13.1"/>
+				<rect x="381.3" y="133.8" class="st14" width="5.6" height="10.3"/>
+				<rect x="389.8" y="133.8" class="st14" width="2.8" height="3.8"/>
+				<rect x="394.4" y="133.8" class="st14" width="2.8" height="3.8"/>
+				<rect x="400.1" y="133.8" class="st14" width="5.6" height="10.3"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="wan_optimizer">
+	<g>
+		<line class="st0" x1="317.5" y1="175.5" x2="317.5" y2="219.5"/>
+		<g>
+			<path class="st13" d="M333.3,175.8h-30c-6.6,0-12-5.4-12-12v-25c0-6.6,5.4-12,12-12h30c6.6,0,12,5.4,12,12v25
+				C345.3,170.4,339.9,175.8,333.3,175.8z"/>
+			<g>
+				<g>
+					<g>
+						<g>
+							<g>
+								<ellipse class="st14" cx="318.1" cy="151.1" rx="14.5" ry="14"/>
+								<ellipse class="st13" cx="318.1" cy="151.1" rx="6.5" ry="6.3"/>
+							</g>
+							<rect x="313.8" y="133.3" class="st14" width="7.8" height="5"/>
+							<rect x="314.6" y="163.3" class="st14" width="7" height="6"/>
+						</g>
+						<rect x="330.8" y="147.8" class="st14" width="6" height="7"/>
+						<rect x="299.8" y="147.8" class="st14" width="6" height="7"/>
+					</g>
+					
+						<rect x="303.1" y="137" transform="matrix(0.7526 0.6585 -0.6585 0.7526 168.1729 -167.0228)" class="st14" width="6.6" height="6.6"/>
+					
+						<rect x="325.2" y="159" transform="matrix(0.7526 0.6585 -0.6585 0.7526 188.439 -176.8479)" class="st14" width="8.6" height="6.6"/>
+				</g>
+				
+					<rect x="327.1" y="137.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 196.4677 -192.3151)" class="st14" width="6.5" height="7.2"/>
+				
+					<rect x="303.9" y="159" transform="matrix(0.7071 0.7071 -0.7071 0.7071 204.684 -169.6509)" class="st14" width="6.5" height="6.5"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="hybrid_cloud_services">
+	<g>
+		<line class="st0" x1="179.5" y1="171.5" x2="179.5" y2="218.5"/>
+		<g>
+			<path class="st17" d="M188.7,154.3v-10.2c0-2.4-1.9-4.4-4.2-4.4H179v-13.1h9c6.6,0,12,5.7,12,12.6V159c0,6.9-5.4,12.6-12,12.6h-9
+				v-12.8h5.5C186.8,158.8,188.7,156.8,188.7,154.3z"/>
+			<path class="st18" d="M182.2,142.2h-5.4v-15.7h-8.5c-6.2,0-11.3,5.7-11.3,12.6V159c0,6.9,5.1,12.6,11.3,12.6h8.5v-14.7h5.4
+				c1.7,0,3.1-1.5,3.1-3.4v-7.9C185.3,143.8,183.9,142.2,182.2,142.2z"/>
+		</g>
+	</g>
+</g>
+<g id="mngt_network">
+	<g>
+		<path class="st19" d="M650,243.5c0-12.7-6.7-23-15.1-23.5v0H89.1v0c-8.4,0.5-15.1,10.8-15.1,23.5c0,12.7,6.7,23,15.1,23.5v0h545.9
+			v0C643.3,266.5,650,256.2,650,243.5z"/>
+		<ellipse class="st10" cx="633.7" cy="244" rx="10.7" ry="19.5"/>
+	</g>
+	<text transform="matrix(1 0 0 1 262 251)" class="st4 st11">Red de gestión</text>
+</g>
+<g id="vmotion_network">
+	<g>
+		<path class="st20" d="M651,310.5c0-12.7-6.7-23-15.1-23.5v0H90.1v0c-8.4,0.5-15.1,10.8-15.1,23.5s6.7,23,15.1,23.5v0h545.9v0
+			C644.3,333.5,651,323.2,651,310.5z"/>
+		<ellipse class="st10" cx="634.7" cy="311" rx="10.7" ry="19.5"/>
+	</g>
+	<text transform="matrix(1 0 0 1 283 319)" class="st4 st11">Red de vMotion</text>
+</g>
+<g id="vcenter">
+	<g>
+		<line class="st0" x1="101.5" y1="174.5" x2="101.5" y2="218.5"/>
+		<g>
+			<path class="st15" d="M124.6,125h-15.2c-4.6,0-8.4,3.8-8.4,8.4v5.6h-5.6c-4.6,0-8.4,3.8-8.4,8.4v14.2c0,4.6,3.8,8.4,8.4,8.4h14.3
+				c4.6,0,8.4-3.8,8.4-8.4V158h6.4c4.6,0,8.4-3.8,8.4-8.4v-16.2C133,128.8,129.2,125,124.6,125z"/>
+			<path class="st16" d="M108.3,160.9H96.7c-0.9,0-1.7-0.8-1.7-1.7v-10.5c0-0.9,0.8-1.7,1.7-1.7h11.6c0.9,0,1.7,0.8,1.7,1.7v10.5
+				C110,160.2,109.2,160.9,108.3,160.9z"/>
+			<path class="st16" d="M122.3,149h-11.6c-0.9,0-1.7-0.8-1.7-1.7v-11.6c0-0.9,0.8-1.7,1.7-1.7h11.6c0.9,0,1.7,0.8,1.7,1.7v11.6
+				C124,148.2,123.2,149,122.3,149z"/>
+		</g>
+	</g>
+</g>
+</svg>

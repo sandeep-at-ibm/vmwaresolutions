@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-10-31"
 
@@ -35,7 +35,7 @@ Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para clústeres d
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicación | Región |
 |:----------------------|:---------|:-------|
 | AMS03 | Amsterdam | Europa |
-| CHE01 | Chennai | Asia-Pacífico |
+| CHE01 | Chennai | Asia Pacífico |
 | DAL09 | Dallas | América del Norte sur |
 | DAL10 | Dallas | América del Norte sur |
 | DAL12 | Dallas | América del Norte sur |
@@ -43,25 +43,25 @@ Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para clústeres d
 | FRA02 | Frankfurt | Europa |
 | FRA04 | Frankfurt | Europa |
 | FRA05 | Frankfurt | Europa |
-| HKG02 | Hong Kong | Asia-Pacífico |
+| HKG02 | Hong Kong | Asia Pacífico |
 | LON02 | Londres | Europa |
 | LON04 | Londres | Europa |
 | LON05 | Londres | Europa |
 | LON06 | Londres | Europa |
-| MEL01 | Melbourne | Asia-Pacífico |
+| MEL01 | Melbourne | Asia Pacífico |
 | MEX01 | Queretaro | América del Norte sur |
 | MIL01 | Milán | Europa |
 | MON01 | Montreal | América del Norte este |
 | OSL01 | Oslo | Europa |
 | PAR01 | París | Europa |
 | SAO01 | Sao Paulo | América del Sur |
-| SEO01 | Seúl | Asia-Pacífico |
+| SEO01 | Seúl | Asia Pacífico |
 | SJC03 | San José | América del Norte oeste |
 | SJC04 | San José | América del Norte oeste |
-| SNG01 | Singapur | Asia-Pacífico |
-| SYD01 | Sídney | Asia-Pacífico |
-| SYD04 | Sídney | Asia-Pacífico |
-| TOK02 | Tokio | Asia-Pacífico |
+| SNG01 | Singapur | Asia Pacífico |
+| SYD01 | Sídney | Asia Pacífico |
+| SYD04 | Sídney | Asia Pacífico |
+| TOK02 | Tokio | Asia Pacífico |
 | TOR01 | Toronto | América del Norte este |
 | WDC04 | Washington, DC | América del Norte este |
 | WDC06 | Washington, DC | América del Norte este |

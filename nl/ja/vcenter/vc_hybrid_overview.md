@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -47,13 +47,13 @@ VMware NSX Advanced エディションを Enterprise エディションにアッ
 
 ### 仮想化管理
 
-この層は、vCenter Server Appliance (vCSA)、NSX Manager、2 つの NSX ESG、3 つの NSX Controller、Platform Services Controller (PSC) 仮想アプライアンス、および IBM CloudDriver 仮想サーバー・インスタンス (VSI) で構成されます。 CloudDriver VSI は、環境へのホストの追加などの特定の操作のために必要に応じてオンデマンドでデプロイします。
+この層は、Platform Services Controller (PSC) が組み込まれた vCenter Server Appliance (vCSA)、NSX Manager、NSX ESG 2 つ、NSX Controller 3 つ、IBM CloudDriver 仮想サーバー・インスタンス (VSI) で構成されます。 CloudDriver VSI は、環境へのホストの追加などの特定の操作のために必要に応じてオンデマンドでデプロイします。
 
 基本オファリングでは、最大 400 台のホストと最大 4000 個の VM が存在する環境をサポートできる規模の vCenter Server アプライアンスがデプロイされます。 vSphere API と互換性のある同じツールとスクリプトを使用して、IBM がホストする VMware 環境を管理できます。
 
 合計で、基本オファリングには、仮想化管理層用に予約される 38 個の vCPU と 67 GB の vRAM が必要です。 VM 用の残りのホスト容量は、オーバーサブスクリプション率、VM サイジング、ワークロードのパフォーマンス要件などのいくつかの要因によって決まります。
 
-HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時の追加の管理リソース要件については、[VMware HCX on {{site.data.keyword.cloud_notm}} の概要](../services/hcx_considerations.html)を参照してください。
+HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時の追加の管理リソース要件については、[VMware HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/hcx_considerations.html)を参照してください。
 
 ### インフラストラクチャーのハイブリッド化
 
@@ -72,7 +72,7 @@ vCenter Server with Hybridity Bundle インスタンスには、以下のコン�
 
 vCenter Server with Hybridity Bundle インスタンスの注文では、**Skylake** または **Broadwell** の{{site.data.keyword.baremetal_short}}を 4 台注文します。 次の CPU モデルが用意されています。
   * 2-CPU Intel Skylake 世代 (Intel Xeon 4100/5100/6100 シリーズ)
-  * 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600 v4 シリーズ)
+  * 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600/E7-4800 シリーズ)
 
 ### ネットワーキング
 
@@ -81,18 +81,18 @@ vCenter Server with Hybridity Bundle インスタンスの注文では、**Skyla
 *  VLAN (仮想 LAN) 3 つ: パブリック VLAN 1 つとプライベート VLAN 2 つ
 *  レイヤー 2 (L2) ネットワークに接続されたローカル・ワークロード間で実行される可能性のある東西通信用の DLR (分散論理ルーター) を備えた VXLAN (仮想拡張可能 LAN) 1 つ。 この VXLAN は、サンプルのルーティング・トポロジーとしてデプロイされるので、変更したり、作成の基礎として使用したり、削除したりできます。 また、DLR の新しい論理インターフェースに追加の VXLAN を接続してセキュリティー・ゾーンを追加することもできます。
 *  以下の 2 つの VMware NSX Edge Services Gateway
-  * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX Edge Services Gateway (ESG)。これは、管理ネットワーキング・トポロジーの一部として IBM がデプロイします。 この ESG は、IBM 管理 VM が、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[ユーザー管理の ESG を使用するためのネットワークの構成](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)を参照してください。
+  * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX Edge Services Gateway (ESG)。これは、管理ネットワーキング・トポロジーの一部として IBM がデプロイします。 この ESG は、IBM 管理 VM が、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[ユーザー管理の ESG を使用するためのネットワークの構成](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)を参照してください。
 
     ユーザーは、この ESG にアクセスすることはできず、使用できません。 これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server with Hybridity Bundle インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用不可になります。
     {:important}
-  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。これは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-) を参照してください。
+  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。これは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-) を参照してください。
 
-HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時に注文するネットワーキング・コンポーネントについて詳しくは、[HCX on {{site.data.keyword.cloud_notm}} の概要](../services/hcx_considerations.html)を参照してください。
+HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時に注文するネットワーキング・コンポーネントについて詳しくは、[HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/hcx_considerations.html)を参照してください。
 
 ### 仮想サーバー・インスタンス
 
 以下の仮想サーバー・インスタンス (VSI) が注文されます。
-* IBM CloudBuilder の VSI。これは、インスタンスのデプロイメントが完了した後にシャットダウンされます。
+* IBM CloudBuilder の VSI。これは、インスタンスのデプロイメントが完了した後にキャンセルされます。
 * Microsoft Active Directory (AD) 用に 1 つの Microsoft Windows Server VSI をデプロイするか、管理クラスターに 2 つの高可用性 Microsoft Windows VM をデプロイしてセキュリティーと堅牢性を強化するかを選択できます。
 
 ### vSAN ストレージ
@@ -121,7 +121,7 @@ vCenter Server with Hybridity Bundle 拡張ノードごとに、{{site.data.keyw
 
 ### 拡張ノード用のハードウェア
 
-[vCenter Server with Hybridity Bundle インスタンスの技術仕様](../vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)に示されている構成になっている、1 台のベアメタル・サーバー。
+[vCenter Server with Hybridity Bundle インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)に示されている構成になっている、1 台のベアメタル・サーバー。
 
 ### 拡張ノード用のライセンスと料金
 
@@ -143,8 +143,8 @@ vCenter Server with Hybridity Bundle 拡張ノードごとに、{{site.data.keyw
 
 ### 関連リンク
 
-* [vCenter Server ソフトウェアの部品構成表](vc_bom.html)
-* [vCenter Server with Hybridity Bundle インスタンスの要件と計画](vc_hybrid_planning.html)
-* [vCenter Server with Hybridity Bundle インスタンスの注文](vc_hybrid_orderinginstance.html)
-* [HCX on {{site.data.keyword.cloud_notm}} の概要](../services/hcx_considerations.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
+* [vCenter Server ソフトウェアの部品構成表](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [vCenter Server with Hybridity Bundle インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
+* [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

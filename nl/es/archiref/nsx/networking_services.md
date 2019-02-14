@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-11-13"
 
@@ -123,7 +123,7 @@ Se establecen las siguientes reglas de cortafuegos, además de las reglas genera
 
 Tabla 6. Configuración de cortafuegos de NSX ESG
 
-| Servicio | Fuente | Destino | Protocolo | Acción |
+| Servicio | Origen | Destino | Protocolo | Acción |
 |:------- |:------ |:----------- |:-------- |:------ |
 | Zerto on {{site.data.keyword.cloud_notm}} | VM de gestión de Zerto | Cualquiera | Puerto 443 | Permitir |
 | Veeam on {{site.data.keyword.cloud_notm}} | VM de copia de seguridad y réplica de Veeam | Cualquiera | Puerto 443 | Permitir |
@@ -217,7 +217,7 @@ Se establecen las siguientes reglas de cortafuegos, además de las reglas genera
 
 Tabla 12. Reglas de cortafuegos de ESG de carga
 
-| Servicio | Fuente | Destino | Protocolo | Acción |
+| Servicio | Origen | Destino | Protocolo | Acción |
 |:------- |:------ |:----------- |:-------- |:------ |
 | Cargas de trabajo | Subred de carga | Cualquiera | Cualquiera | Permitir |
 | Cualquiera | Cualquiera | Cualquiera | Cualquiera | Denegar |

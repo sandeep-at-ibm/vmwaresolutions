@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-05"
 
 # vCenter Server-Instanzen bestellen
 
-Um eine flexible und anpassbare virtualisierte VMware-Plattform bereitzustellen, die Ihren Workloadbedarf optimal erfüllt, bestellen Sie eine VMware vCenter Server-Instanz. Während der Erstbestellung können Sie auch Services hinzufügen, z. B. [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html) für die Disaster-Recovery.
+Um eine flexible und anpassbare virtualisierte VMware-Plattform bereitzustellen, die Ihren Workloadbedarf optimal erfüllt, bestellen Sie eine VMware vCenter Server-Instanz. Während der Erstbestellung können Sie auch Services hinzufügen, z. B. [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html) für die Disaster-Recovery.
 
 ## Voraussetzungen
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-* Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](../vmonic/useraccount.html).
-* Sie haben die Informationen in [Voraussetzungen und Planung für vCenter Server-Instanzen](vc_planning.html) gelesen.
+* Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+* Sie haben die Informationen in [Voraussetzungen und Planung für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_planning.html) gelesen.
 * Sie haben das Instanz- und Domänennamensformat geprüft. Der Domänenname und die Unterdomänenbezeichnung werden verwendet, um den Benutzernamen und die Servernamen der Instanz zu generieren.
 
 Tabelle 1. Wertformat für Instanz- und Domänennamen
@@ -29,10 +29,9 @@ Tabelle 1. Wertformat für Instanz- und Domänennamen
   |:------------|:------------ |
   | Domänenname | `<root_domain>` |  
   | Anmeldebenutzername für vCenter Server | `<user_id>@<root_domain>` (Microsoft Active Directory-Benutzer) oder `administrator@vsphere.local` |
-  | Vollständig qualifizierter Domänenname für vCenter Server | ` vcenter.<subdomain_label>.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |
+  | vCenter Server (mit integriertem PSC) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |
   | SSO-Standortname | `<subdomain_label>` |
-  | Vollständig qualifizierter Name des ESXi-Servers | `<host_prefix><n>.<subdomain_label>.<root_domain>`, hierbei steht `<n>` für die Folgenummer des ESXi-Servers. Die maximale Länge beträgt 50 Zeichen. |  
-  | Vollständig qualifizierter Domänenname für PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |
+  | Vollständig qualifizierter Name des ESXi-Servers | `<host_prefix><n>.<subdomain_label>.<root_domain>`, hierbei steht `<n>` für die Folgenummer des ESXi-Servers. Die maximale Länge beträgt 50 Zeichen. |
 
 Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung oder Bereitstellung der Instanz festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise, wenn der öffentliche Netzbetrieb beendet wird, Server sowie virtuelle Serverinstanzen (VSIs) mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder wenn die Virtual Server-Instanz für IBM CloudBuilder gestoppt oder gelöscht wird.
 {:important}
@@ -45,7 +44,7 @@ Sie müssen folgende Systemeinstellungen angeben, wenn Sie eine vCenter Server-I
 
 Der Instanzname muss die folgenden Anforderungen erfüllen:
 * Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-* Der Instanzname muss mit einem alphanumerischen Zeichen beginnen und enden.
+* Der Instanzname muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden. 
 * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
 * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
 
@@ -56,16 +55,16 @@ Wählen Sie aus, ob Sie eine neue primäre oder sekundäre Instanz für eine ber
 ## Lizenzierungseinstellungen
 
 Geben Sie die Lizenzierungsoptionen für die folgenden VMware-Komponenten in der Instanz an:
-* vCenter Server 6.5 – Standard Edition
-* vSphere 6.5u1 – Enterprise Plus Edition
+* vCenter Server 6.5 - Standard Edition
+* vSphere 6.5u1 - Enterprise Plus Edition
 * NSX Service Providers 6.4 (Base, Advanced oder Enterprise Edition)
 
 Für Benutzer der Kategorie "Business Partner" sind die vCenter Server-Lizenz (Standard Edition), die vSphere-Lizenz (Enterprise Plus Edition) und die NSX-Lizenz enthalten und werden in Ihrem Namen erworben. Für die NSX-Lizenz muss allerdings die Edition angegeben werden.
 
 Für Nicht-Business-Partner-Benutzer können die von IBM bereitgestellten VMware-Lizenzen für diese Komponenten benutzt werden. Wählen Sie hierzu **In Kauf einbeziehen** aus. Alternativ hierzu können Sie auch eine eigene Lizenz (Bring Your Own License; BYOL) verwenden, indem Sie **Lizenz selbst bereitstellen** auswählen und die eigenen Lizenzschlüssel angeben.
 
+### Achtung
 
-**Achtung:**
 * Es ist eine Lizenz mit mindestens acht CPUs erforderlich, die für vier Server mit zwei CPUs pro Server verwendet wird. Die Lizenzauswahl für jede VMware-Komponente gilt für die Basisinstanz und für alle ESXi-Server, die Sie später zur Instanz hinzufügen. Stellen Sie sicher, dass Ihre Lizenz eine zukünftige Kapazitätserweiterung in Ihrer Infrastruktur unterstützt.
 * Die mindestens erforderlichen Lizenzeditionen sind in der Benutzerschnittstelle angegeben. Falls unterschiedliche Komponenteneditionen unterstützt werden, können Sie die gewünschte Edition auswählen. Es liegt in Ihrer Verantwortung, zu gewährleisten, dass der bereitgestellte Lizenzschlüssel für jede ausgewählte VMware-Komponente korrekt ist.
 * Für vSphere wird zum Zeitpunkt der Bestellung eine Lizenzgebühr berechnet, anschließend wird die Lizenzgebühr dann aber Ihrem Konto gutgeschrieben.
@@ -101,6 +100,10 @@ Wählen Sie gemäß Ihren Anforderungen eine Bare Metal Server-Konfiguration aus
   * Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 192 GB RAM
   * Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 384 GB RAM
   * Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 768 GB RAM
+  * Dual Intel Xeon E5-2690 v4-Prozessor / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM
+  * Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 1024 GB RAM
+  * Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 2048 GB RAM
+  * Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 4096 GB RAM
 
 ### Broadwell
 
@@ -113,23 +116,32 @@ Tabelle 3. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Bare Metal Server-Anzahl
 
-Für den ersten Cluster in der Instanz können Sie die Anzahl der ESXi-Server im Bereich von 2 bis 20 konfigurieren. Alle ESXi-Server nutzen die festgelegte Konfiguration gemeinsam. 
+Für den ersten Cluster in der Instanz können Sie die Anzahl der ESXi-Server im Bereich von 2 bis 20 konfigurieren. Alle ESXi-Server nutzen die festgelegte Konfiguration gemeinsam.
 
-Nach der Erstbereitstellung können Sie vier weitere Cluster hinzufügen. Wenn Sie die Konfiguration **Skylake** oder **Broadwell** für VMware vSAN ausgewählt haben, werden sowohl für den ersten Cluster als auch für die Cluster nach der Bereitstellung 4 ESXi-Server benötigt. Weitere Informationen zum Minimum von ESXi-Servern finden Sie im Abschnitt [Ist eine Serverinstanz mit zwei Knoten hoch verfügbar?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+Nach der Erstbereitstellung können Sie vier weitere Cluster hinzufügen. Wenn Sie die Konfiguration **Skylake** oder **Broadwell** für VMware vSAN ausgewählt haben, werden sowohl für den ersten Cluster als auch für die Cluster nach der Bereitstellung 4 ESXi-Server benötigt. Weitere Informationen zum Minimum von ESXi-Servern finden Sie im Abschnitt [Ist eine Serverinstanz mit zwei Knoten hoch verfügbar?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Speichereinstellungen
 
 Die Speichereinstellungen sind von der Auswahl der Bare Metal Server-Konfiguration und des Speichertyps abhängig.
+
+Für Instanzen der Version 2.8 und höher können gemeinsam genutzte NFS-Speicherressourcen zu einem vorhandenen NFS- oder vSAN-Cluster hinzugefügt werden. Weitere Informationen finden Sie im Abschnitt *NFS-Speicher zu vCenter Server-Instanzen hinzufügen* in [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances).
+{:note}
 
 ### vSAN-Speicher
 
 vSAN ist nur für die Bare-Metal-Konfigurationen des Typs **Skylake** oder **Broadwell**verfügbar. Geben Sie die folgenden vSAN-Optionen an:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
-* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern. Die Option **Hohe Leistung mit Intel Optane** steht nur für die Dualprozessoren Intel Xeon Gold 5120 und 6140 zur Verfügung.
+* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
+
+  Die Option **High-Performance Intel Optane** ist nur für die Skylake-CPU-Modelle Dual Intel Xeon Gold 5120 und Dual Intel Xeon Gold 6140 verfügbar.
+  {:note}
+
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
 * **vSAN-Lizenz**: Verwenden Sie die von IBM bereitgestellte VMware-Lizenz für die vSAN-Komponente, indem Sie **In Kauf einbeziehen** auswählen, oder verwenden Sie eine eigene Lizenz (Bring Your Own License, BYOL), indem Sie **Lizenz selbst bereitstellen** auswählen und Ihren eigenen Lizenzschlüssel eingeben.
 
@@ -142,17 +154,24 @@ Die Anzahl der gemeinsam genutzten Dateiressourcen muss zwischen 1 und 32 liegen
 
 * **Gemeinsam genutzte Ressourcen einzeln konfigurieren**: Wählen Sie diese Option aus, um für jede einzelne gemeinsam genutzte Dateiressource unterschiedliche Konfigurationseinstellungen anzugeben.
 * **Anzahl der gemeinsam genutzten Ressourcen**: Geben Sie bei Verwendung derselben Konfigurationseinstellung für alle gemeinsam genutzten Dateiressourcen die Anzahl der gemeinsam genutzten Dateiressourcen für den gemeinsam genutzten NFS-Speicher an, die Sie hinzufügen möchten.
-* **Größe**: Wählen Sie die Kapazität aus, die Ihrem Bedarf an gemeinsam genutzten Speicher entspricht.
 * **Leistung**: Wählen Sie basierend auf Ihren Workloadanforderungen die pro GB geltende Anzahl von E/A-Operationen pro Sekunde aus.
-* **NFS hinzufügen**: Wählen Sie diese Option aus, um einzelne gemeinsam genutzte Dateiressourcen hinzuzufügen, für die unterschiedliche Konfigurationseinstellungen verwendet werden.
+* **Größe (GB)**: Wählen Sie die Kapazität aus, die Ihrem Bedarf an gemeinsam genutzten Speicher entspricht.
+* **Gemeinsam genutzten Speicher hinzufügen**: Wählen Sie diese Option aus, um einzelne gemeinsam genutzte Dateiressourcen mit anderen Konfigurationseinstellungen hinzuzufügen.
 
 Tabelle 4. Optionen für die NFS-Leistungsstufe
 
 | Option        | Details       |
   |:------------- |:------------- |
+  | 0,25 IOPS/GB | Diese Option ist für Workloads vorgesehen, die nicht häufig verwendet werden. Zu den Beispielanwendungen gehören: durch Vaulting geschützte Daten, das Hosting großer Datenbanken mit übernommenen Daten oder Images von virtuellen Platten des virtuellen Speichersystems als Sicherung. |
   | 2 IOPS/GB | Diese Option ist für die meisten allgemeinen Workloads geeignet. Anwendungsbeispiele sind das Hosting von kompakten Datenbanken, die Sicherung von Webanwendungen oder Plattenimages von virtuellen Maschinen für einen Hypervisor. |
   | 4 IOPS/GB | Diese Option ist für Workloads mit höherer Intensität geeignet, die zu einem bestimmten Zeitpunkt einen hohen Prozentsatz an aktiven Daten aufweisen. Anwendungsbeispiele sind transaktionsorientierte Datenbanken. |
   | 10 IOPS/GB | Diese Option ist für die aufwändigsten Workloadtypen wie beispielsweise die Analyse gedacht. Anwendungsbeispiele sind Hochtransaktionsdatenbanken und andere leistungskritische Datenbanken. Diese Leistungsstufe ist auf eine maximale Kapazität von 4 TB pro gemeinsam genutzte Dateiressource begrenzt. |
+
+### Lokale Platten
+
+Die Option für lokale Festplatten steht nur für die Bare-Metal-Konfiguration des **SAP-zertifizierten** Quad Intel Xeon E7-8890 v4-Prozessors zur Verfügung. Geben Sie die folgenden Optionen an:
+* **Plattenanzahl**: Wählen Sie die Anzahl der Platten aus, die hinzugefügt werden sollen.
+* **Plattentyp**: Wählen Sie eine Option für den Plattentyp aus, den Sie benötigen.
 
 ## Netzschnittstelleneinstellungen
 
@@ -169,7 +188,7 @@ Das Hostnamenspräfix muss die folgenden Anforderungen erfüllen:
 
 Die Unterdomänenbezeichnung muss die folgenden Anforderungen erfüllen:
 *  Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-*  Die Unterdomänenbezeichnung muss mit einem alphanumerischen Zeichen beginnen und enden.
+*  Die Unterdomänenbezeichnung muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden. 
 *  Die maximale Länge der Unterdomänenbezeichnung beträgt 10 Zeichen.
 *  Die Unterdomänenbezeichnung muss innerhalb Ihres Kontos eindeutig sein.
 
@@ -187,7 +206,7 @@ Die maximale Länge des vollständig qualifizierten Domänennamens (FQDN = Fully
 
 ### Öffentliches oder privates Netz
 
-Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC – Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
+Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
 
 * F5 on {{site.data.keyword.cloud_notm}}
 * FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}
@@ -204,6 +223,7 @@ Für Ihre Instanzbestellung sind 1 öffentliches VLAN und 2 private VLANs erford
 Wählen Sie diese Option aus, um ein neues öffentliches VLANs und zwei neue private VLANs zu bestellen.
 
 #### Vorhandene VLANs auswählen
+
 Abhängig vom ausgewählten {{site.data.keyword.CloudDataCent_notm}} sind möglicherweise vorhandene öffentliche und private VLANs verfügbar.
 
 Wenn Sie vorhandene öffentliche und private VLANs wiederverwenden wollen, dann geben Sie die VLANs und Teilnetze an:
@@ -213,9 +233,10 @@ Wenn Sie vorhandene öffentliche und private VLANs wiederverwenden wollen, dann 
 * **Primäres Teilnetz** - Wird physischen Hosts für den Zugriff auf öffentliche Netze zugewiesen.
 * **Primäres privates Teilnetz** - Wird physischen Hosts für den Managementdatenverkehr zugewiesen.
 
-* Stellen Sie sicher, dass die Firewallkonfiguration bei den ausgewählten VLANs den Managementdatenverkehr nicht blockiert.
+##### Wichtig
+
+* Stellen Sie sicher, dass die Firewallkonfiguration bei den ausgewählten VLANs den Managementdatenverkehr nicht sperrt.
 * Stellen Sie sicher, dass sich alle von Ihnen ausgewählten VLANs in demselben Pod befinden. ESXi-Server können nicht in VLANs mit unterschiedlichen Pods bereitgestellt werden.
-{:important}
 
 ### DNS-Konfiguration
 
@@ -231,11 +252,11 @@ Jede Lizenz kann nur einem einzigen physischen Server zugeordnet werden und deck
 
 Sie haben 30 Tage Zeit, um die VMs zu aktivieren.
 
-Weitere Informationen zur Windows-Lizenzierung finden Sie auf der Seite [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+Weitere Informationen zur Windows-Lizenzierung finden Sie auf der Seite mit der [Dokumentation zu Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Serviceeinstellungen
 
-Beim Bestellen einer vCenter Server-Instanz können Sie auch Add-on-Services bestellen. Weitere Informationen zu den Services finden Sie unter [Verfügbare Services für vCenter Server-Instanzen](vc_addingremovingservices.html#available-services-for-vcenter-server-instances).
+Beim Bestellen einer vCenter Server-Instanz können Sie auch Add-on-Services bestellen. Weitere Informationen zu den Services finden Sie unter [Verfügbare Services für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances).
 
 ## Bestellübersicht
 
@@ -250,8 +271,9 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
    * Klicken Sie auf **Primäre Instanz**, um eine einzelne Instanz in der Umgebung bereitzustellen oder um die erste Instanz in einer Topologie mit mehreren Standorten bereitzustellen.
    * Klicken Sie auf **Sekundäre Instanz**, um die Instanz mit einer vorhandenen (primären) Instanz in der Umgebung zu verbinden, um eine hohe Verfügbarkeit zu erreichen, und führen Sie dann die folgenden Schritte aus:
      1. Wählen Sie die primäre Instanz aus, mit der die sekundäre Instanz verbunden werden soll.
-     2. Geben Sie für primäre Instanzen ab Version 2.5 den Wert für ****das Administratorkennwort für PSC in der primären Instanz ein.
-     3. Überprüfen Sie für primäre Instanzen der Version 2.4 oder früher, dass der in das Feld ****für das Administratorkennwort für PSC in der primären Instanz voreingetragene Wert korrekt ist.
+     2. Geben Sie für primäre Instanzen ab Version 2.8 das Administratorkennwort für vCenter Server in der primären Instanz ein.
+     3. Geben Sie für primäre Instanzen der Version 2.5, 2.6 oder 2.7 das PSC-Administratorkennwort in der primären Instanz ein.
+     4. Überprüfen Sie für primäre Instanzen bis Version 2.4, ob der vorgegebene Wert für das PSC-Administratorkennwort der primären Instanz korrekt ist.
 5. Geben Sie die Lizenzeinstellungen für die Instanzkomponenten ein.
    *  Zur Verwendung der von IBM bereitgestellten Lizenzen müssen Sie **In Kauf einbeziehen** und bei Bedarf die Lizenzedition auswählen.
    *  Zur Verwendung einer eigenen Lizenz müssen Sie **Lizenz selbst bereitstellen** auswählen und den Lizenzschlüssel eingeben.
@@ -263,8 +285,9 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
     3. Geben Sie die Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen an. Wenn vSAN als Speicherlösung verwendet werden soll, sind mindestens vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.  
 7. Führen Sie die Speicherkonfiguration durch.
   * Wenn Sie **vSAN-Speicher** auswählen, geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten, die Anzahl der Platten und die vSAN-Lizenzedition an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
-  * Wenn Sie **NFS-Speicher** auswählen und für alle gemeinsam genutzten Dateiressourcen dieselben Einstellungen hinzufügen und konfigurieren wollen, geben Sie die **Anzahl der gemeinsam genutzten Ressourcen**, **Größe** und **Leistung** an.
-  * Wenn Sie **NFS-Speicher** auswählen und alle gemeinsam genutzten Dateiressourcen einzeln hinzufügen und konfigurieren möchten, wählen Sie **Gemeinsam genutzte Ressourcen einzeln konfigurieren** aus. Klicken Sie anschließend auf das Symbol **+** neben der Bezeichnung **NFS hinzufügen** und wählen Sie für jede gemeinsam genutzte Dateiressource die **Größe** und die **Leistung** aus. Sie müssen mindestens eine gemeinsam genutzte Dateiressource auswählen.
+  * Wenn Sie **NFS-Speicher** auswählen und für alle gemeinsam genutzten Dateiressourcen dieselben Einstellungen konfigurieren möchten, geben Sie die **Anzahl der gemeinsam genutzten Ressourcen**, die **Leistung**und die **Größe (GB)** an.
+  * Wenn Sie **NFS-Speicher** auswählen und alle gemeinsam genutzten Dateiressourcen einzeln hinzufügen und konfigurieren möchten, wählen Sie **Gemeinsam genutzte Ressourcen einzeln konfigurieren** aus. Klicken Sie anschließend auf das Symbol **+** neben der Bezeichnung **Gemeinsam genutzten Speicher hinzufügen** und wählen Sie für jede Dateifreigabe die Optionen **Leistung** und **Größe (GB)** aus. Sie müssen mindestens eine gemeinsam genutzte Dateiressource auswählen.
+  * Wenn Sie **Lokale Platten** auswählen, geben Sie die Plattenanzahl und den Plattentyp an.
 8. Geben Sie die Netzschnittstelleneinstellungen an.
    1. Geben Sie das Hostnamenspräfix, die Unterdomänenbezeichnung und den Rootdomänennamen ein. Für eine sekundäre Instanz wird der Domänenname automatisch ergänzt.
    2. Wählen Sie die Netzeinstellung für entweder **Öffentliches und privates Netz** oder **Nur privates Netz** aus.
@@ -286,7 +309,7 @@ Weitere Informationen zum Angeben von Einstellungen für einen Service finden Si
 
 Die Bereitstellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen.
 
-Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für vCenter Server-Instanzen](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert. Wenn Sie Add-on-Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
+Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert. Wenn Sie Add-on-Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 
@@ -310,10 +333,10 @@ Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_sh
 
 ### Zugehörige Links
 
-* [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](../vmonic/signing_softlayer_account.html)
-* [vCenter Server-Instanzen anzeigen](vc_viewinginstances.html)
-* [Konfiguration mit mehreren Standorten für vCenter Server-Instanzen](vc_multisite.html)
-* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](vc_addingviewingclusters.html)
-* [Kapazität für vCenter Server-Instanzen erweitern und verringern](vc_addingremovingservers.html)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](vc_addingremovingservices.html)
-* [vCenter Server-Instanzen löschen](vc_deletinginstance.html)
+* [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [vCenter Server-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
+* [Konfiguration mit mehreren Standorten für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_multisite.html)
+* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [vCenter Server-Instanzen löschen](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)

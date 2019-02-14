@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-16"
+lastupdated: "2019-01-23"
 
 ---
 
 # Netzzugriff und Datenfluss
 
-## Zugriff auf Containeranwendung - ICP
+## Zugriff auf Containeranwendung – IBM Cloud Private
 
 Es gibt im Wesentlichen drei Methoden, um einen externen Datenverkehr und Zugriff auf Ihre Kubernetes-Cluster-Anwendungen zu ermöglichen:
 
@@ -18,39 +18,47 @@ Es gibt im Wesentlichen drei Methoden, um einen externen Datenverkehr und Zugrif
 - LoadBalancer
 - Ingress
 
-### NodePort
+### NodePort - IBM Cloud Private
+
 NodePorts sind eine einfache Möglichkeit, externen Zugriff auf eine Workload für die Erstentwicklung und den Test zu ermöglichen, aber sie sind nicht für den Produktionsbetrieb zu empfehlen. Dafür sind Ingress oder LoadBalancer geeignet.
 
-### LoadBalancer
-Derzeit unterstützt die ICP-Plattform eine externe Lastausgleichsfunktion (LoadBalancer) für die Anwendungsworkload.
+### LoadBalancer - IBM Cloud Private
 
-### Ingress
-Bei Ingress handelt es sich um eine Sammlung von Regeln, die eingehende Verbindungen ermöglichen, um die Cluster-Services zu erreichen. Ingress kann so konfiguriert werden, dass es den Services extern erreichbare URLs zur Verfügung stellt, Lastausgleich für den Datenverkehr ermöglicht, SSL beendet, namensbasiertes virtuelles Hosting anbietet usw.  Der Proxy-Knoten in der ICP-Infrastruktur führt diese Funktion aus.
+Derzeit unterstützt die {{site.data.keyword.icpfull_notm}}-Plattform eine externe Lastausgleichsfunktion (LoadBalancer) für die Anwendungsworkload.
 
-## Zugriff auf Containeranwendung - IKS
+### Ingress - IBM Cloud Private
+
+Bei Ingress handelt es sich um eine Sammlung von Regeln, die eingehende Verbindungen ermöglichen, um die Cluster-Services zu erreichen. Ingress kann so konfiguriert werden, dass es den Services extern erreichbare URLs zur Verfügung stellt, Lastausgleich für den Datenverkehr ermöglicht, SSL beendet, namensbasiertes virtuelles Hosting anbietet usw.  Der Proxy-Knoten in der {{site.data.keyword.icpfull_notm}}-Infrastruktur führt diese Funktion aus.
+
+## Zugriff auf Containeranwendung – IBM Cloud Kubernetes-Service
+
 Es gibt im Wesentlichen drei Methoden, um einen externen Datenverkehr und Zugriff auf Ihre Kubernetes-Cluster-Anwendungen zu ermöglichen:
 
 - NodePort
 - LoadBalancer
 - Ingress
 
-### NodePort
+### NodePort - IBM Cloud Kubernetes-Service
+
 NodePorts sind eine einfache Möglichkeit, externen Zugriff auf eine Workload für die Erstentwicklung und den Test zu ermöglichen, aber sie sind nicht für den Produktionsbetrieb zu empfehlen. Dafür sind Ingress oder LoadBalancer geeignet.
 
-### LoadBalancer
-Jeder IKS-Cluster wird mit einem öffentlichen oder privaten Application Load Balancer (ALB) bereitgestellt. Der ALB verwendet einen sicheren und eindeutigen öffentlichen oder privaten Eingangspunkt, um eingehende Anforderungen an Ihre Anwendungen weiterzuleiten.
+### LoadBalancer - IBM Cloud Kubernetes-Service
 
-### Ingress
+Jeder {{site.data.keyword.containerlong_notm}}-Cluster wird mit einem öffentlichen oder privaten Application Load Balancer (ALB) bereitgestellt. Der ALB verwendet einen sicheren und eindeutigen öffentlichen oder privaten Eingangspunkt, um eingehende Anforderungen an Ihre Anwendungen weiterzuleiten.
+
+### Ingress - IBM Cloud Kubernetes-Service
+
 Bei Ingress handelt es sich um eine Sammlung von Regeln, die eingehende Verbindungen ermöglichen, um die Cluster-Services zu erreichen. Ingress kann so konfiguriert werden, dass es den Services extern erreichbare URLs zur Verfügung stellt, Lastausgleich für den Datenverkehr ermöglicht, SSL beendet, namensbasiertes virtuelles Hosting anbietet usw.
 
 ## Datenfluss
+
 Für den Datenfluss gibt es die folgenden Möglichkeiten:
 
-- Von einem externen Benutzer im Internet an eine Webschicht, die in einem Container in {{site.data.keyword.cloud}} Private ICP gehostet wird
-- Von einer Webschicht, die in einem Container in ICP gehostet wird, an eine Datenbankschicht, die in einer VM in VMware vCenter Server in {{site.data.keyword.cloud_notm}} gehostet wird
+- Von externem Benutzer im Internet an eine Webschicht, die in einem Container in {{site.data.keyword.icpfull_notm}} gehostet wird
+- Von einer Webschicht, die in einem Container in {{site.data.keyword.icpfull_notm}} gehostet wird, an eine Datenbankschicht, die in einer VM in VMware vCenter Server in {{site.data.keyword.cloud_notm}} gehostet wird
 - Von einem Benutzer im unternehmensweiten Netz an eine VM in vCenter Server
 
-### Von externem Benutzer im Internet an eine Webschicht, die in einem Container in ICP gehostet wird
+### Von externem Benutzer im Internet an eine Webschicht, die in einem Container in IBM Cloud Private gehostet wird
 
 1. Der externe Benutzer stellt über die URL eine Anforderung an die Webschicht.
 2.	DNS wird verwendet, um die IP-Adresse zu ermitteln. Bei dieser IP-Adresse handelt es sich um eine öffentliche {{site.data.keyword.cloud_notm}}-Adresse in einem portierbaren Teilnetz, das der vCenter Server-Instanz zugeordnet ist.
@@ -59,11 +67,11 @@ Für den Datenfluss gibt es die folgenden Möglichkeiten:
 5.	Innerhalb des Workerknotens leitet "kube-proxy" die Anforderung an den ALB oder Ingress-Service weiter.
 6.	Wenn sich die Anwendung auf demselben Workerknoten befindet, wird "iptables" verwendet, um zu ermitteln, welche interne Schnittstelle zum Weiterleiten der Anforderung verwendet wird. Wenn sich die Anwendung auf einem anderen Workerknoten befindet, nimmt der Calico vRouter-Knoten die Weiterleitung an den entsprechenden Workerknoten vor und verwendet dabei IP-in-IP-Kapselung. Das IP-in-IP-Paket wird für den Transport zum vSphere ESXi-Host in einem VXLAN-Rahmen gekapselt, auf dem sich der Workerknoten befindet.
 
-### Von einer Webschicht, die in einem Container in ICP gehostet wird, an eine Datenbankschicht, die in einer VM in vCenter Server gehostet wird
+### Von einer Webschicht, die in einem Container in IBM Cloud Private gehostet wird, an eine Datenbankschicht, die in einer VM in vCenter Server gehostet wird
 
-Wie die Routentabellen in den ESGs und vRoutern mit Daten gefüllt werden, hängt von der Integrationsmethode ab. Siehe "ICP- und vCenter Server-Integration".
+Wie die Routentabellen in den ESGs und vRoutern mit Daten gefüllt werden, hängt von der Integrationsmethode ab. Siehe "{{site.data.keyword.icpfull_notm}}- und vCenter Server-Integration".
 
-1.	Die Webschicht, die in einem Container in ICP ausgeführt wird, stellt eine Anforderung an eine Datenbank, die auf einer VM in derselben vCenter Server-Instanz ausgeführt wird.
+1.	Die Webschicht, die in einem Container in {{site.data.keyword.icpfull_notm}} ausgeführt wird, stellt eine Anforderung an eine Datenbank, die auf einer VM in derselben vCenter Server-Instanz ausgeführt wird.
 2.	DNS wird verwendet, um die Anforderung an die IP-Adresse der Datenbank aufzulösen.
 3.	Der Container sendet die Anfrage an den Calico vRouter.
 4.	Der vRouter verfügt über eine Routentabelle, die mit den IP-Adressbereichen gefüllt ist, die in der vCenter Server-Instanz gehostet werden.
@@ -76,7 +84,7 @@ Wie die Routentabellen in den ESGs und vRoutern mit Daten gefüllt werden, häng
 ### 	Von einem Benutzer im unternehmensweiten Netz an eine VM in vCenter Server
 
 1.	Ein Unternehmensbenutzer, der mit dem internen Unternehmensnetz verbunden ist, fordert eine Ressource auf einer VM an, die in vCenter Server gehostet wird.
-2.	DNS wird verwendet, um die IP-Adresse der VM zu bestimmen. Diese IP-Adresse befindet sich in einem Netz, das auf {{site.data.keyword.cloud_notm}} ausgedehnt ist.
+2.	DNS wird verwendet, um die IP-Adresse der VM zu bestimmen. Diese IP-Adresse befindet sich in einem Netz, das auf {{site.data.keyword.cloud_notm}} erweitert ist.
 3.	Der lokale Router leitet den Datenverkehr an den vSphere-Host weiter, der den L2-Konzentrator hostet.
 4.	Der L2-Konzentrator kapselt die Anforderung in einem sicheren Kanal und leitet sie an den fernen L2-Konzentrator weiter, der in {{site.data.keyword.cloud_notm}} gehostet wird. Dabei wird die private portierbare IP-Teilnetzadresse verwendet, die dem Gerät zugeordnet ist. Die Weiterleitung erfolgt über den lokalen Router.
 5.	Die lokale Route sucht in der zugehörigen Routing-Tabelle, bemerkt, dass die IP-Adresse für den fernen L2-Konzentrator an die WAN-Schnittstelle gesendet werden muss, und nimmt die Weiterleitung durch das WAN über den {{site.data.keyword.cloud_notm}} XCR-Router via BCR vor.
@@ -84,20 +92,24 @@ Wie die Routentabellen in den ESGs und vRoutern mit Daten gefüllt werden, häng
 7.	Die VM empfängt die Anforderung.
 
 ## Netz mit öffentlichem Zugang
-ICP und CAM erfordern standardmäßig Internetkonnektivität zum Abrufen von Docker-Images, Helm-Diagrammen, Terraform-Vorlagen und Betriebssystempaketmanagern. In den neuesten Releases wird jetzt die Unterstützung für Proxy-basierte Installationsprozesse für Installationen unterstützt, die nicht direkt mit dem Internet verbunden sind und Optionen für die Installation in einem Offlinemodus bieten.
+
+{{site.data.keyword.icpfull_notm}} und CAM erfordern standardmäßig Internetkonnektivität zum Abrufen von Docker-Images, Helm-Diagrammen, Terraform-Vorlagen und Betriebssystempaketmanagern.
+In den neuesten Releases wird jetzt die Unterstützung für Proxy-basierte Installationsprozesse für Installationen unterstützt, die nicht direkt mit dem Internet verbunden sind und Optionen für die Installation in einem Offlinemodus bieten.
 
 ###	NSX-Firewall
-Die ICP NSX Edge-Firewall ist mit Regeln konfiguriert, die Folgendes zulassen:
+
+Die {{site.data.keyword.icpfull_notm}} NSX Edge-Firewall ist mit Regeln konfiguriert, die Folgendes zulassen:
 *	VXLAN-Netzen einen öffentlichen Zugriff ermöglichen
 *	VXLAN-Netzen Zugriff auf private {{site.data.keyword.cloud_notm}}-Netze ermöglichen
 *	Privaten {{site.data.keyword.cloud_notm}}-Netzen Zugriff auf VXLAN-Netze ermöglichen
 
 ### NSX-NAT
-Die ICP NSX NAT ist mit den folgenden NATs konfiguriert:
+
+Die {{site.data.keyword.icpfull_notm}} NSX NAT ist mit den folgenden NATs konfiguriert:
 *	SNAT für VXLAN-Zugriff auf öffentliche Netze
 *	SNAT für VXLAN-Zugriff auf private {{site.data.keyword.cloud_notm}}-Netze
-*	DNAT für ICP-Cluster-vIPs
+*	DNAT für {{site.data.keyword.icpfull_notm}}-Cluster-vIPs
 
 ### Zugehörige Links
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -86,10 +86,6 @@ vCenter Server with Hybridity Bundle インスタンスのプロパティーの�
 | NSX Manager IP  | NSX Manager の IP アドレス。  |
 | NSX Manager FQDN  | NSX Manager の完全修飾ドメイン・ネーム (FQDN)。  |
 | NSX Manager HTTP  | NSX Manager Web コンソールにアクセスするために使用されるユーザー名とパスワード。 |
-| PSC IP  | Platform Services Controller (PSC) の IP アドレス。  |
-| PSC FQDN  | PSC の完全修飾ドメイン・ネーム (FQDN)。  |    
-| PSC ADMIN  | PSC Web コンソールにアクセスするために使用できる VMware vCenter シングル・サインオンのユーザー名とパスワード。  |
-| PSC SSH  | SSH 接続で PSC VM にアクセスするために使用できるユーザー名とパスワード。  |
 | vCenter IP  | vCenter Server の IP アドレス。  |
 | vCenter FQDN  | vCenter Server の完全修飾ドメイン・ネーム (FQDN)。  |
 | vCenter ADMIN  | vSphere Web Client を使用して vCenter Server にログインするために使用できる VMware vCenter Single Sign-On ユーザー名とパスワード。  |
@@ -108,7 +104,7 @@ vCenter Server with Hybridity Bundle インスタンスのプロパティーの�
 
 ## エラーが発生した場合の対処方法
 
-インスタンスのデプロイメント中またはインスタンスの削除中にエラーが発生した場合、{{site.data.keyword.cloud_notm}} サポート・チームに自動的に通知されます。 チケットの状況については、[IBM サポートにお問い合わせください](../vmonic/trbl_support.html)。
+インスタンスのデプロイメント中またはインスタンスの削除中にエラーが発生した場合、{{site.data.keyword.cloud_notm}} サポート・チームに自動的に通知されます。 チケットの状況については、[IBM サポートにお問い合わせください](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
 
 ## 次に行うこと
 
@@ -118,13 +114,13 @@ vCenter Server with Hybridity Bundle インスタンスのプロパティーの�
 {:important}
 
 ログイン手順を実行するには、以下のトピックを参照してください。
-*  vSphere Web Client にアクセスするための要件と必要な手順については、[Timeout reached while connecting to the vSphere Web Client](../vmonic/trbl_timeout_vc_console.html) を参照してください。
+*  vSphere Web Client にアクセスするための要件と必要な手順については、[Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html) を参照してください。
 *  VPN を使用して {{site.data.keyword.cloud_notm}} インフラストラクチャーのプライベート・ネットワークにログインするためのアクセス・ポイントのリストについては、[VPN アクセス](http://www.softlayer.com/vpn-access){:new_window}を参照してください。
-*  vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイする際に問題が発生した場合は、[vSphere Web Client を使用して OVF ファイルをデプロイする方法](../vmonic/trbl_deploy_ovf.html)を参照してください。
+*  vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイする際に問題が発生した場合は、[vSphere Web Client を使用して OVF ファイルをデプロイする方法](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html)を参照してください。
 
 ### 関連リンク
 
-* [vCenter Server with Hybridity Bundle インスタンスの注文](vc_hybrid_orderinginstance.html)
-* [vCenter Server with Hybridity Bundle インスタンスのクラスターの追加、表示、削除](vc_hybrid_addingviewingclusters.html)
-* [vCenter Server with Hybridity Bundle インスタンスの容量の拡張と縮小](vc_hybrid_addingremovingservers.html)
-* [vCenter Server with Hybridity Bundle インスタンスの削除](vc_hybrid_deletinginstance.html)
+* [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
+* [vCenter Server with Hybridity Bundle インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [vCenter Server with Hybridity Bundle インスタンスの削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)

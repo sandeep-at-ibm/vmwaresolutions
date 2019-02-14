@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -25,31 +25,31 @@ Tabla 1. {{site.data.keyword.CloudDataCents_notm}} y configuraciones de servidor
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicación | Región | Configuraciones del servidor |
 |:----------------------|:---------|:-------|:----------------------|
 | AMS03 | Amsterdam | Europa | Skylake, Broadwell |
-| CHE01 | Chennai | Asia-Pacífico | Skylake, Broadwell |
+| CHE01 | Chennai | Asia Pacífico | Skylake, Broadwell |
 | DAL09 | Dallas | América del Norte sur | Skylake, Broadwell |
 | DAL10 | Dallas | América del Norte sur | Skylake, Broadwell |
 | DAL12 | Dallas | América del Norte sur | Skylake, Broadwell |
 | DAL13 | Dallas | América del Norte sur | Skylake, Broadwell |
 | FRA02 | Frankfurt | Europa | Skylake, Broadwell |
 | FRA04 | Frankfurt | Europa | Skylake, Broadwell |
-| HKG02 | Hong Kong | Asia-Pacífico | Skylake, Broadwell |
+| HKG02 | Hong Kong | Asia Pacífico | Skylake, Broadwell |
 | LON02 | Londres | Europa | Skylake, Broadwell |
 | LON04 | Londres | Europa | Skylake, Broadwell |
 | LON06 | Londres | Europa | Skylake, Broadwell |
-| MEL01 | Melbourne | Asia-Pacífico | Skylake, Broadwell |
+| MEL01 | Melbourne | Asia Pacífico | Skylake, Broadwell |
 | MEX01 | Queretaro | América del Norte sur | Skylake, Broadwell |
 | MIL01 | Milán | Europa | Skylake, Broadwell |
 | MON01 | Montreal | América del Norte este | Skylake, Broadwell |
 | OSL01 | Oslo | Europa | Skylake, Broadwell |
 | PAR01 | París | Europa | Skylake, Broadwell |
 | SAO01 | Sao Paulo | América del Sur | Skylake, Broadwell |
-| SEO01 | Seúl | Asia-Pacífico | Skylake, Broadwell |
+| SEO01 | Seúl | Asia Pacífico | Skylake, Broadwell |
 | SJC03 | San José | América del Norte oeste | Skylake, Broadwell |
 | SJC04 | San José | América del Norte oeste | Skylake, Broadwell |
-| SNG01 | Singapur | Asia-Pacífico | Skylake, Broadwell |
-| SYD01 | Sídney | Asia-Pacífico | Skylake, Broadwell |
-| SYD04 | Sídney | Asia-Pacífico | Skylake, Broadwell |
-| TOK02 | Tokio | Asia-Pacífico | Skylake, Broadwell |
+| SNG01 | Singapur | Asia Pacífico | Skylake, Broadwell |
+| SYD01 | Sídney | Asia Pacífico | Skylake, Broadwell |
+| SYD04 | Sídney | Asia Pacífico | Skylake, Broadwell |
+| TOK02 | Tokio | Asia Pacífico | Skylake, Broadwell |
 | TOR01 | Toronto | América del Norte este | Skylake, Broadwell |
 | WDC04 | Washington, DC | América del Norte este | Skylake, Broadwell |
 | WDC06 | Washington, DC | América del Norte este | Skylake, Broadwell |

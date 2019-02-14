@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -20,7 +20,8 @@ lastupdated: "2018-11-06"
 
 VMware Cloud Foundation インスタンスに独自のクラスターを追加して、コンピュート能力やストレージ容量を拡張できます。 クラスター内で ESXi サーバーを管理すると、リソース割り振りを改善したり高可用性を実現したりできます。 不要になった場合は、追加したクラスターをインスタンスから削除できます。
 
-**利用可否:**
+## 可用性
+
 * クラスターの追加機能は、V2.0 以降のリリースでデプロイ (または V2.0 以降のリリースにアップグレード) されたインスタンスでのみ利用できます。
 * クラスターの削除機能は、V2.3 以降のリリースでデプロイ (または V2.3 以降のリリースにアップグレード) されたインスタンスでのみ利用できます。  
 
@@ -75,13 +76,19 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 | デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
+| クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、1.9 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
+| クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.2 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 ### vSAN ストレージ設定
 
 **「Skylake」**および**「Broadwell」**ベアメタル・サーバー構成の場合は、以下の設定を指定して vSAN ストレージをカスタマイズできます。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
-* 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。 **「High-Performance Intel Optane」**オプションは、Dual Intel Xeon Gold 5120 および 6140 プロセッサーでのみ使用できます。
+* 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
+
+  **High-Performance Intel Optane** オプションは、Skylake の CPU モデルの Dual Intel Xeon Gold 5120 および Dual Intel Xeon Gold 6140 でのみ使用できます。
+  {:note}
+
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
 
 ### ライセンス交付の設定
@@ -205,5 +212,5 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 
 ### 関連リンク
 
-* [Cloud Foundation インスタンスの表示](sd_viewinginstances.html)
-* [Cloud Foundation インスタンスの容量の拡張と縮小](sd_addingremovingservers.html)
+* [Cloud Foundation インスタンスの表示](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)

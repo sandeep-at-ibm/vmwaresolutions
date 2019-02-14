@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -54,23 +54,23 @@ Tabella 2. Descrizione delle azioni e ruoli richiesti
 
 ## Gestione dell'accesso per gli utenti
 
-Puoi aggiungere nuovi utenti all'account {{site.data.keyword.cloud_notm}} in modo che questi utenti possano condividere i servizi e le risorse forniti per l'account. Per ulteriori informazioni, vedi [Come invitare gli utenti ad accedere a servizi e risorse](../vmonic/iamuserinvite.html).
+Puoi aggiungere nuovi utenti all'account {{site.data.keyword.cloud_notm}} in modo che questi utenti possano condividere i servizi e le risorse forniti per l'account. Per ulteriori informazioni, vedi [Come invitare gli utenti ad accedere a servizi e risorse](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html).
 
-Puoi anche gestire l'accesso per gli utenti esistenti, inclusa la modifica dell'accesso esistente, l'assegnazione di un nuovo accesso e la revisione dell'accesso assegnato. Per gestire l'accesso per gli utenti, devi essere il proprietario dell'account o avere il ruolo di gestione della piattaforma di **Amministratore**. Per ulteriori informazioni, vedi [Gestione dell'accesso alle risorse](../../../iam/mngiam.html).
+Puoi anche gestire l'accesso per gli utenti esistenti, inclusa la modifica dell'accesso esistente, l'assegnazione di un nuovo accesso e la revisione dell'accesso assegnato. Per gestire l'accesso per gli utenti, devi essere il proprietario dell'account o avere il ruolo di gestione della piattaforma di **Amministratore**. Per ulteriori informazioni, vedi [Gestione dell'accesso alle risorse](/docs/iam/mngiam.html).
 
 ## Migrazione di istanze esistenti agli account IBM Cloud
 
-A causa dell'integrazione di {{site.data.keyword.vmwaresolutions_short}} con IAM, le istanze che sono state distribuite nelle release della V2.5 e successive nel tuo account {{site.data.keyword.cloud}} vengono aggiunte automaticamente al tuo account e sono gestite da IAM.
+A causa dell'integrazione di {{site.data.keyword.vmwaresolutions_short}} con IAM, le istanze che sono state distribuite nelle release della V2.5 e successive nel tuo account {{site.data.keyword.cloud_notm}} vengono aggiunte automaticamente al tuo account e sono gestite da IAM.
 
 Le istanze esistenti distribuite nelle release della V2.4 e precedenti possono essere migrate ad account {{site.data.keyword.cloud_notm}} specificati per la gestione abilitata a IAM. Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Migrazione di istanze vCenter Server precedenti alla V2.5 agli account IBM Cloud](../vcenter/vc_addinstancetousraccount.html)
-* [Migrazione di istanze vCenter Server with Hybridity Bundle precedenti alla V2.5 agli account IBM Cloud](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [Migrazione di istanze Cloud Foundation precedenti alla V2.5 agli account IBM Cloud](../sddc/sd_addinstancetousraccount.html)
-* [Migrazione di istanze NetApp ONTAP Select precedenti alla V2.5 agli account IBM Cloud](../netapp/np_addinstancetousraccount.html)
-* [Migrazione di istanze VMware Federal precedenti alla V2.5 agli account IBM Cloud](../vcenter/vc_fed_addinstancetousraccount.html)
+* [Migrazione di istanze vCenter Server precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [Migrazione di istanze vCenter Server with Hybridity Bundle precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [Migrazione di istanze Cloud Foundation precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [Migrazione di istanze NetApp ONTAP Select precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [Migrazione di istanze VMware Federal precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)
 
 ### Link correlati
 
-* [Gestione di identità e accesso](../../../iam/quickstart.html)
-* [Gestione di utenti e accesso](../../../iam/iamusermanage.html)
-* [Cos'è IAM](../../../iam/index.html)
+* [Gestione di identità e accesso](/docs/iam/quickstart.html)
+* [Gestione di utenti e accesso](/docs/iam/iamusermanage.html)
+* [Cos'è IAM](/docs/iam/index.html)

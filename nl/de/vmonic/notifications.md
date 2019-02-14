@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -73,5 +73,5 @@ Standardmäßig werden alle nicht gelesenen Benachrichtigungen angezeigt. Sie k�
 
 ### Zugehörige Links
 
-* [Häufig gestellte Fragen](faq.html)
-* [Benutzerkonten und -einstellungen](useraccount.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Benutzerkonten und -einstellungen](/docs/services/vmwaresolutions/vmonic/useraccount.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -16,7 +16,8 @@ lastupdated: "2018-10-29"
 
 {{site.data.keyword.vmwaresolutions_full}} consente alle istanze di essere distribuite in ubicazioni diverse e di renderle operative in breve tempo.
 
-**Note:**
+## Note
+
 * Non puoi creare collegamenti tra le istanze VMware Cloud Foundation e VMware vCenter Server in una configurazione multisito.
 * Non puoi collegare le istanze distribuite nella V2.0 con le istanze di release precedenti (anche se sono state aggiornate alla V2.0).
 
@@ -41,7 +42,7 @@ Una distribuzione multisito è costituita dai seguenti componenti.
 
 La funzione di configurazione multisito utilizza una topologia "hub and spoke" con un sito primario e un massimo di sette siti secondari. È supportato un singolo livello di siti, ovvero non puoi configurare siti successivi collegati ad altri siti secondari. Puoi avere un totale di 128 server ESXi in una configurazione multisito tra tutte le istanze.
 
-Se la tua configurazione richiede una distribuzione multisito con più di 128 server ESXi, contatta il supporto IBM per assistenza. Per ulteriori informazioni, vedi [Come contattare il supporto IBM](../vmonic/trbl_support.html).
+Se la tua configurazione richiede una distribuzione multisito con più di 128 server ESXi, contatta il supporto IBM per assistenza. Per ulteriori informazioni, vedi [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 {:note}
 
 Il seguente grafico illustra la vista generale della distribuzione multisito di Cloud Foundation.
@@ -59,7 +60,7 @@ Puoi assegnare solo un'istanza secondaria a un'istanza primaria alla volta. Non 
 
 Puoi avere un massimo di 8 istanze (1 primaria e 7 secondarie) che vengono distribuite in una configurazione multisito.
 
-L'eliminazione delle istanze Cloud Foundation che fanno parte di una configurazione multisito richiede una pianificazione speciale. Per ulteriori informazioni, vedi [Eliminazione di istanze Cloud Foundation in una configurazione multisito](sd_deletinginstance_multi.html).
+L'eliminazione delle istanze Cloud Foundation che fanno parte di una configurazione multisito richiede una pianificazione speciale. Per ulteriori informazioni, vedi [Eliminazione di istanze Cloud Foundation in una configurazione multisito](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html).
 {:note}
 
 ### Link correlati

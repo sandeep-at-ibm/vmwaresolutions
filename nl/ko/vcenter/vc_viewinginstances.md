@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-04"
 
 ---
 
@@ -89,10 +89,6 @@ lastupdated: "2018-10-29"
 |NSX Manager IP  |NSX Manager의 IP 주소입니다.  |
 |NSX Manager FQDN  |NSX Manager의 완전한 도메인 이름(FQDN)입니다.  |
 |NSX Manager HTTP  |NSX Manager 웹 콘솔에 액세스하는 데 사용되는 사용자 이름 및 비밀번호입니다. |
-|PSC IP  |PSC(Platform Services Controller)의 IP 주소입니다.  |
-|PSC FQDN  |PSC의 완전한 도메인 이름(FQDN)입니다.  |    
-|PSC ADMIN  |PSC 웹 콘솔에 액세스하는 데 사용할 수 있는 VMware vCenter Single Sign-On 사용자 이름 및 비밀번호입니다.  |
-|PSC SSH  |SSH 연결을 통해 PSC VM에 액세스하는 데 사용할 수 있는 사용자 이름 및 비밀번호입니다.  |
 |vCenter IP  |vCenter Server의 IP 주소입니다.  |
 |vCenter FQDN  |vCenter Server의 완전한 도메인 이름(FQDN)입니다.  |
 |vCenter ADMIN  |vSphere Web Client를 사용하여 vCenter Server에 로그인하는 데 사용할 수 있는 VMware vCenter Single Sign-On 사용자 이름 및 비밀번호입니다.  |

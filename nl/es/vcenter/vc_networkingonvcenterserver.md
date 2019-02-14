@@ -2,17 +2,20 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-04"
+lastupdated: "2018-12-11"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Consideraciones sobre red para instancias de vCenter Server
 
 Revise la siguiente información para obtener detalles sobre las consideraciones y los requisitos de red para las instancias de vCenter Server on {{site.data.keyword.cloud}}. Asegúrese de cumplir los requisitos para que la instancia funcione correctamente.
 
 ## Componentes de red para instancias de vCenter Server
+{: faq}
 
 Para revisar los componentes de red que se incluyen en la instancia de vCenter Server, consulte [Especificaciones técnicas para instancias de vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -21,8 +21,8 @@ Tabelle 1. Teileliste für VLANs in Cloud Foundation-Instanzen
 | VLAN      | Typ      | Details      |
 |:----------|:----------|:-------------|
 | VLAN1     | Öffentlich, Primär | Wird physischen ESXi-Servern für den Zugriff auf öffentliche Netze zugeordnet. Wird nach der Erstbereitstellung nicht mehr verwendet. Für den Internetzugriff verfügbar. |
-| VLAN2     | Privates VLAN A, Primär | Wird durch {{site.data.keyword.cloud}} physischen ESXi-Servern zugeordnet. Wird von der Managementschnittstelle für den VMware vSphere-Managementdatenverkehr verwendet.<br><br>Wird virtuellen Maschinen (VMs) zugeordnet, die als Managementkomponenten fungieren.<br><br>Wird VMware NSX VTEP (VXLAN-Tunnelendpunkt) zugeordnet. |
-| VLAN3     | Privates VLAN B, Portierbar | Wird VMware vSAN zugeordnet, sofern verwendet.<br><br>Wird VMware NFS zugeordnet, sofern verwendet.<br><br>Wird VMware vSphere vMotion zugeordnet. |
+| VLAN2     | VLAN "Privat A", Primär | Wird durch {{site.data.keyword.cloud}} physischen ESXi-Servern zugeordnet. Wird von der Managementschnittstelle für den VMware vSphere-Managementdatenverkehr verwendet.<br><br>Wird virtuellen Maschinen (VMs) zugeordnet, die als Managementkomponenten fungieren.<br><br>Wird VMware NSX VTEP (VXLAN-Tunnelendpunkt) zugeordnet. |
+| VLAN3     | VLAN "Privat B", Portierbar | Wird VMware vSAN zugeordnet, sofern verwendet.<br><br>Wird VMware NFS zugeordnet, sofern verwendet.<br><br>Wird VMware vSphere vMotion zugeordnet. |
 
 ## Softwareteileliste für Cloud Foundation-Instanzen
 
@@ -32,9 +32,9 @@ Tabelle 2. Teileliste für Softwarekomponenten in Cloud Foundation-Instanzen
 
 | Hersteller | Komponente                                | Version      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 Update 2c (bis zu Patch-Level ESXi650-201808001) |
-| VMware       | vCenter Server Appliance                 | 6.5 Update 2c |
-| VMware       | Platform Services Controller             | 6.5 Update 2c |
+| VMware       | vSphere ESXi                             | 6.5 Update EP11 (Build 6.5.0-10719125) |
+| VMware       | vCenter Server Appliance                 | 6.5 U2c (Build 6.5.0-9451637) |
+| VMware       | Platform Services Controller             | 6.5 U2c (Build 6.5.0-9451637) |
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX for vSphere                          | 6.4.1        |
 | VMware       | SDDC Manager                             | 2.4          |
@@ -58,7 +58,8 @@ Tabelle 3. Erweiterte Konfigurationseinstellungen für ESXi-Server für Cloud Fo
 | Stichprobengröße für volle Warteschlange | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | Schwellenwert für volle Warteschlange | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
-**Hinweise:**
+### Hinweise
+
 * Die Einstellung **MaxVolumes** ist für den Service "IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}" erforderlich, weil der Service möglicherweise mehr als die Standardanzahl von NFS-Mounts auf dem ESXi-Server verwendet.
 * Der Wert **Nicht festgelegt** für eine Konfigurationseinstellung gibt an, dass die neue Einstellung nicht automatisch angewendet wird, da dies einen Warmstart für die ESXi-Server erforderlich macht, der zu einer Unterbrechung des Betriebs führen könnte.
 
@@ -71,5 +72,5 @@ Tabelle 3. Erweiterte Konfigurationseinstellungen für ESXi-Server für Cloud Fo
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Übersicht über Cloud Foundation](sd_cloudfoundationoverview.html)
-* [Cloud Foundation-Instanzen planen](sd_planning.html)
+* [Übersicht über Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Cloud Foundation-Instanzen planen](/docs/services/vmwaresolutions/sddc/sd_planning.html)

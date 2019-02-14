@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-14"
 
 ---
 
@@ -47,7 +47,7 @@ Esta capa virtualiza la infraestructura física mediante diversos productos de V
 
 ### Gestión de la virtualización
 
-Esta capa consta de vCenter Server Appliance (vCSA), NSX Manager, dos NSX ESG, tres controladores NSX, el dispositivo virtual Platform Services Controller (PSC) y la Instancia de servidor virtual (VSI) de IBM CloudDriver. La VSI de CloudDriver se despliega a petición según sea necesario para determinadas operaciones, como por ejemplo, añadir hosts al entorno.
+Esta capa consta de vCenter Server Appliance (vCSA) con el Platform Services Controller (PSC) incorporado, NSX Manager, dos NSX ESG, tres controladores NSX y la instancia de servidor virtual de IBM CloudDriver (VSI). La VSI de CloudDriver se despliega a petición según sea necesario para determinadas operaciones, como por ejemplo, añadir hosts al entorno.
 
 La oferta básica se despliega con un dispositivo vCenter Server cuyo tamaño se ajusta para dar soporte a un entorno con un máximo de 400 hosts y hasta 4000 máquinas virtuales. Se pueden utilizar las mismas herramientas y scripts compatibles con la API de vSphere para gestionar el entorno VMware alojado por IBM.
 
@@ -71,8 +71,8 @@ La disponibilidad y los precios de las configuraciones estandarizadas de hardwar
 ### Servidor nativo
 
 El pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity) incluye cuatro {{site.data.keyword.baremetal_short}} **Skylake** o **Broadwell**. Están disponibles los siguientes modelos de CPU:
-  * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
-  * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
+  * Generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100)
+  * Generación Intel Broadwell de 2 CPU (Intel Xeon serie E5-2600/E7-4800)
 
 ### Redes
 
@@ -92,7 +92,7 @@ Para obtener más información sobre los componentes de red ordenados al despleg
 ### Instancias de servidor virtual
 
 Se solicitan las siguientes instancias de servidor virtual (VSI):
-* Una VSI para IBM CloudBuilder, que se cierra una vez completado el despliegue de la instancia.
+* Una VSI para IBM CloudBuilder, que se cancela una vez completado el despliegue de la instancia.
 * Puede elegir desplegar un único Microsoft Windows Server VSI for Microsoft Active Directory (AD) o dos VM Microsoft Windows de alta disponibilidad en el clúster de gestión para ayudar a mejorar la seguridad y la solidez.
 
 ### Almacenamiento vSAN

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-29"
 
 # Configurazione della rete per utilizzare l'ESG NSX gestito dal cliente con le tue VM
 
-Configura la rete per le tue macchine virtuali in modo da poter usufruire del gateway dei servizi edge (ESG) VMware NSX che viene distribuito nelle tue istanze VMware vCenter Server. Per ulteriori informazioni sulle misure di sicurezza implementate per ridurre al minimo il rischio di sicurezza, vedi [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+Configura la rete per le tue macchine virtuali in modo da poter usufruire del gateway dei servizi edge (ESG) VMware NSX che viene distribuito nelle tue istanze VMware vCenter Server. Per ulteriori informazioni sulle misure di sicurezza implementate per ridurre al minimo il rischio di sicurezza, vedi [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX è una piattaforma di virtualizzazione di rete che consente la virtualizzazione di reti isolate e fornisce numerosi servizi
 di rete come switch, instradamento e firewall. Per ulteriori informazioni su NSX, vedi [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
@@ -27,7 +27,11 @@ Come parte del processo di ordine per la tua istanza di vCenter Server, le segue
 * Un DLR (Distributed Logical Router) NSX di esempio viene distribuito per la potenziale comunicazione est-ovest tra carichi di lavoro locali connessi alle reti di livello 2 (L2).
 * Un dispositivo Edge NSX viene distribuito e configurato per eseguire la conversione degli indirizzi di rete (NAT) dall'intervallo di indirizzi IP
 dello switch logico del carico di lavoro a un indirizzo IP pubblico sulle regole NAT.
-* Se hai installato il servizio Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager è configurato per eseguire un backup giornaliero delle configurazioni NSX. Per ulteriori informazioni, vedi [Considerazioni sull'istallazione di Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud).
+
+  NXS Edge non viene distribuito per le istanze che sono solo private.
+  {:note}
+
+* Se hai installato il servizio Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager è configurato per eseguire un backup giornaliero delle configurazioni NSX. Per ulteriori informazioni, vedi [Considerazioni sull'istallazione di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud).
 
 ## Procedura per configurare le impostazioni di rete per le tue VM
 
@@ -85,6 +89,6 @@ Inoltre, puoi trovare ulteriori dettagli sulle sottoreti del cliente completando
 
 ### Link correlati
 
-* [Risoluzione dei problemi](../vcenter/vcenter_chg_impact.html)
-* [Domande frequenti](../vmonic/faq.html)
+* [Risoluzione dei problemi](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Gateway dei servizi edge NSX](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

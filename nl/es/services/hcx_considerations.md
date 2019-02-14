@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -50,11 +50,6 @@ Los dispositivos HCX adicionales se despliegan durante la configuración, según
 * Una subred portátil pública con 16 direcciones IP
 * Dos subredes portátiles privadas con 64 direcciones IP
 * Ocho direcciones IP desde una subred vMotion portátil privada
-
-### Licencias y tarifas
-
-* Tarifa de licencia base: cargo obligatorio para el servicio
-* Tarifa de máquina virtual gestionada: cobrada por máquina virtual que se migra mensualmente
 
 ## Consideraciones al instalar HCX on IBM Cloud
 

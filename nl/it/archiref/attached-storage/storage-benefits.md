@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-13"
 
 L'archiviazione collegata è un'estensione dell'offerta VMware vCenter Server on {{site.data.keyword.cloud}}. L'architettura della soluzione di archiviazione collegata per VMware vCenter Server on {{site.data.keyword.cloud_notm}} indica in dettaglio i componenti della soluzione e la configurazione di alto livello di ciascun componente nella progettazione.
 
-Per ulteriori informazioni sulla progettazione di vCenter Server, vedi [Panoramica della soluzione](../solution/solution_overview.html).
+Per ulteriori informazioni sulla progettazione di vCenter Server, vedi [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Vantaggi chiave dell'archiviazione collegata per vCenter Server
 
@@ -29,4 +29,4 @@ Tabella 1. Descrizione delle funzioni per l'archiviazione collegata per vCenter 
 
 ### Link correlati
 
-* [Panoramica della soluzione](../solution/solution_overview.html)
+* [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

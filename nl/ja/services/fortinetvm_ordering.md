@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -60,9 +60,9 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} のライセン�
         <dt class="dt dlterm">標準 FW</dt>
         <dd class="dd">このバンドルには、ステートフル・パケット・インスペクション、VLAN の保護と詳細ロギング、入り口/出口ファイアウォール・ルール、SSL/IPSec VPN 終端、24 時間 365 日サポートが含まれています。</dd>
         <dt class="dt dlterm">標準 FW + UTM</dt>
-        <dd class="dd">このバンドルには、すべての標準ファイアウォール・サービスに加え、Advanced Malware Protection (AMP) サービス (アンチウィルス、ボットネット IP/ドメイン・サービス、モバイル・マルウェア・セキュリティー、FortiSandbox クラウド、ウィルス発生保護サービス、コンテンツ無害化と再構築など)、Web フィルタリング、IPS、アンチスパム、アプリケーション制御、および FortiCare サービスが含まれています。</dd>
+        <dd class="dd">このバンドルには、標準的なファイアウォール・サービスすべてに加えて、Advanced Malware Protection (AMP) サービスが含まれています。 これには、アンチウィルス、ボットネット IP/ドメイン・サービス、モバイル・マルウェア・セキュリティー、FortiSandbox クラウド、ウィルス発生保護サービス、コンテンツ無害化、および再構築が含まれます。 また、Web フィルタリング、IPS、アンチスパム、アプリケーション制御、および FortiCare サービスも含まれています。</dd>
         <dt class="dt dlterm">標準 FW + Enterprise</dt>
-        <dd class="dd">このバンドルには、標準的なファイアウォール・サービスと UTM サービスすべてに加えて、以下のサービスが含まれています。<ul><li>Cloud Access Security Broker (CASB): このサービスはクラウド・ベース・サービスの可視性、コンプライアンス、データ・セキュリティー、および脅威防御の各機能を提供します。</li><li>産業用セキュリティー: このサービスは、一般的な ICS/SCADA プロトコルに対してシグニチャーを提供します。</li><li>セキュリティーの格付け: このサービスは、重大な脆弱性と構成の脆弱性を特定してベスト・プラクティス推奨事項を実施するために監査機能を提供します。</li></ul></dd>
+        <dd class="dd">このバンドルには、標準的なファイアウォール・サービスと UTM サービスすべてに加えて、以下のサービスが含まれています。<ul><li>Cloud Access Security Broker (CASB) - このサービスはクラウド・ベース・サービスの可視性、コンプライアンス、データ・セキュリティー、および脅威防御の各機能を提供します。</li><li>産業用セキュリティー - このサービスは、一般的な ICS/SCADA プロトコルに対してシグニチャーを提供します。</li><li>セキュリティーの格付け - このサービスは、重大な脆弱性と構成の脆弱性を特定してベスト・プラクティス推奨事項を実施するために監査機能を提供します。</li></ul></dd>
 </dl>
 
 2018 年第 3 四半期に、Fortinet はエンタープライズ・バンドルに 3 つの新しいサービス (CASB、産業用セキュリティー、およびセキュリティーの格付け) を追加しました。 これらのサービスは FortiGate 6.0 でのみ使用可能です。
@@ -73,12 +73,12 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} のライセン�
 
 ### 関連リンク
 
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の概要](fortinetvm_considerations.html)
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の管理](managingfortinetvm.html)
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](../sddc/sd_addingremovingservices.html)
-* [vCenter Server インスタンスのサービスの注文、表示、削除](../vcenter/vc_addingremovingservices.html)
-* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](../vcenter/vc_hybrid_addingremovingservices.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
+* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Fortinet Web サイト](https://www.fortinet.com/){:new_window}
 * [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

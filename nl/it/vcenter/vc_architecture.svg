@@ -15,11 +15,11 @@
 <rect y="220" class="st1" width="600" height="100"/>
 <rect y="110" class="st2" width="297.5" height="100"/>
 <rect x="305.3" y="110" class="st2" width="294.7" height="100"/>
-<text transform="matrix(1 0 0 1 152.4775 43.3711)"><tspan x="0" y="0" class="st3 st4 st5">Virtualization Management</tspan><tspan x="45.3" y="34" class="st3 st4 st6">VMware vCenter Server</tspan></text>
-<text transform="matrix(1 0 0 1 19.6601 158.6688)"><tspan x="0" y="0" class="st3 st4 st5">Compute Virtualization</tspan><tspan x="51.6" y="23.9" class="st3 st4 st6">VMware vSphere</tspan></text>
-<text transform="matrix(1 0 0 1 333.6861 159.7861)"><tspan x="0" y="0" class="st3 st4 st5">Network Virtualization</tspan><tspan x="65" y="23.9" class="st3 st4 st6">VMware NSX</tspan></text>
-<text transform="matrix(1 0 0 1 102.3994 263.5371)"><tspan x="0" y="0" class="st3 st4 st5">Physical Infrastructure on IBM Cloud</tspan><tspan x="390.7" y="0" class="st3 st4 st6"> </tspan></text>
-<text transform="matrix(1 0 0 1 410.2971 302.2838)" class="st3 st4 st6">Network</text>
-<text transform="matrix(1 0 0 1 273.8523 302.8424)" class="st3 st4 st6">Storage</text>
-<text transform="matrix(1 0 0 1 114.1154 302.7475)" class="st3 st4 st6">Compute</text>
+<text transform="matrix(1 0 0 1 152.4775 43.3711)"><tspan x="0" y="0" class="st3 st4 st5">Gestione della virtualizzazione</tspan><tspan x="45.3" y="34" class="st3 st4 st6">VMware vCenter Server</tspan></text>
+<text transform="matrix(1 0 0 1 19.6601 158.6688)"><tspan x="0" y="0" class="st3 st4 st5">Virtualizzazione di calcolo</tspan><tspan x="51.6" y="23.9" class="st3 st4 st6">VMware vSphere</tspan></text>
+<text transform="matrix(1 0 0 1 333.6861 159.7861)"><tspan x="0" y="0" class="st3 st4 st5">Virtualizzazione di rete</tspan><tspan x="65" y="23.9" class="st3 st4 st6">VMware NSX</tspan></text>
+<text transform="matrix(1 0 0 1 102.3994 263.5371)"><tspan x="0" y="0" class="st3 st4 st5">Infrastruttura fisica su IBM Cloud</tspan><tspan x="390.7" y="0" class="st3 st4 st6"> </tspan></text>
+<text transform="matrix(1 0 0 1 410.2971 302.2838)" class="st3 st4 st6">Rete</text>
+<text transform="matrix(1 0 0 1 273.8523 302.8424)" class="st3 st4 st6">Archiviazione</text>
+<text transform="matrix(1 0 0 1 114.1154 302.7475)" class="st3 st4 st6">Calcolo</text>
 </svg>

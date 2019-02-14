@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
 # Verwaltete Services von IMI anfordern
 
-{{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) kann das Management der virtuellen VMware-Infrastruktur mithilfe modularer Services vereinfachen. IMI nutzt die erweiterte Automatisierung und Analyse, um kritische Infrastrukturkomponenten weltweit zu verwalten und dynamische Remote-Management-Services für eine breite Palette konventioneller und virtueller Cloud-Infrastrukturen bereitzustellen.
+{{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) kann das Management der virtuellen VMware-Infrastruktur mithilfe modularer Services vereinfachen. IMI nutzt die erweiterte Automatisierung und Analyse, um kritische Infrastrukturkomponenten weltweit zu verwalten und dynamische Remote-Management-Services für eine breite Palette konventioneller und virtueller Cloudinfrastrukturen bereitzustellen.
 
 IMI kann als einzelner vertrauenswürdiger Provider genutzt werden, um die Überwachung und Verwaltung der virtuellen IT-Infrastruktur zu vereinfachen, da IMI einheitliche verwaltete Services für VMware Cloud Foundation- und VMware vCenter Server-Umgebungen anbietet.
 
@@ -36,6 +36,6 @@ Ein IMI-Pre-Sales-Ansprechpartner wird sich dann mit Ihnen über Ihre {{site.dat
 
 ### Zugehörige Links
 
-* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)

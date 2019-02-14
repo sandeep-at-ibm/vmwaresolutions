@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-04"
 
 ---
 
@@ -79,10 +79,6 @@ Tabla 3. Información de acceso correspondiente a los componentes relacionados c
 | NetApp Deploy Tool IP | La dirección IP de la máquina virtual de NetApp ONTAP Select Deploy. |
 | NetApp Deploy Tool FQDN | El nombre de dominio completo de NetApp ONTAP Select Deploy. |
 | NetApp Deploy Tool HTTPS | El nombre de usuario y la contraseña que puede utilizar para acceder a la máquina virtual de NetApp ONTAP Select Deploy. |
-| PSC IP | La dirección IP de Platform Services Controller. |
-| PSC FQDN | El nombre de dominio completo de PSC. |
-| PSC ADMIN | El nombre de usuario y la contraseña de inicio de sesión único de VMware vCenter que puede utilizar para acceder a la consola web de PSC. |
-| PSC SSH | El nombre de usuario y la contraseña que puede utilizar para acceder a PSC VM mediante una conexión SSH. |
 | vCenter IP | La dirección IP de vCenter Server. |
 | vCenter FQDN | El nombre de dominio completo de vCenter Server. |
 | vCenter ADMIN | El nombre de usuario y la contraseña de inicio de sesión único de VMware vCenter que puede utilizar para iniciar una sesión en vCenter Server mediante el cliente web de vSphere. |

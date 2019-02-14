@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -104,8 +104,8 @@ F5 on {{site.data.keyword.cloud_notm}} サービスを削除する前に、既�
 
 ### 関連リンク
 
-* [F5 on {{site.data.keyword.cloud_notm}} の注文](f5_ordering.html)
-* [F5 on {{site.data.keyword.cloud_notm}} の管理](managing_f5.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [F5 on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/f5_ordering.html)
+* [F5 on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managing_f5.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [F5 Web サイト](https://f5.com/){:new_window}

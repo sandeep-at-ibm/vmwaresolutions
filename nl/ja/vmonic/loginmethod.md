@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -40,5 +40,5 @@ ibm.com Web サイトからコンソールにアクセスするには、以下�
 
 ### 関連リンク
 
-* [よくある質問](faq.html)
-* [{{site.data.keyword.cloud_notm}} へのアクセスに関するトラブルシューティング](../../../account/ts_accessing.html){:new_window}
+* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [{{site.data.keyword.cloud_notm}} へのアクセスに関するトラブルシューティング](/docs/account/ts_accessing.html){:new_window}

@@ -2,19 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-28"
+lastupdated: "2019-01-25"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # VMware Federal インスタンスのネットワーキングに関する考慮事項
 
 VMware Federal インスタンスに関するネットワーキングの考慮事項と要件について詳しくは、以下の情報を確認してください。 インスタンスが正常に機能するように、要件を満たしていることを確認してください。
 
 ## VMware Federal インスタンスに関するネットワーキング・コンポーネント
+{: faq}
 
-VMware Federal インスタンスに含まれているネットワーキング・コンポーネントを確認するには、[{{site.data.keyword.cloud}} インスタンスの技術仕様](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)を参照してください。
+VMware Federal インスタンスに含まれているネットワーキング・コンポーネントを確認するには、[{{site.data.keyword.cloud}} インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)を参照してください。
 
 ## ファイアウォールに関する考慮事項
 
@@ -24,7 +27,7 @@ VMware Federal インスタンスに含まれているネットワーキング�
 
 VMware Federal インスタンスのデプロイ時に、インスタンス内で VMware NSX の注文、インストール、ライセンス交付、構成が行われます。 また、NSX Manager、NSX Controllers、および NSX Transport Zone がセットアップされ、各 ESXi サーバーに NSX コンポーネントが構成されます。
 
-ワークロード仮想マシン (VM) で使用するための NSX Edge Services Gateway もデプロイされます。 詳しくは、[ユーザー管理の NSX ESG を VM で使用するためのネットワークの構成](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)を参照してください。
+ワークロード仮想マシン (VM) で使用するための NSX Edge Services Gateway もデプロイされます。 詳しくは、[ユーザー管理の NSX ESG を VM で使用するためのネットワークの構成](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)を参照してください。
 
 ## NSX コンポーネントのパスワードを変更する際の考慮事項
 

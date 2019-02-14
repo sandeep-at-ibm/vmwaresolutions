@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-05-22"
 
@@ -21,7 +21,7 @@ I seguenti componenti sono nuovi o aggiornati:
 *  Nuove specifiche hardware: **Small** o **Standard**, a seconda dei tuoi requisiti.
 *  Nuovi data center disponibili per la distribuzione: **HKG02 - Hong Kong**, **OSL01 - Oslo**, **SEO01 - Seul**, **SNG01 - Singapore** e **SYD04 - Sydney**.
 
-Per l'elenco completo dei componenti, vedi [Panoramica di VMware Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
+Per l'elenco completo dei componenti, vedi [Panoramica di VMware Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html).
 
 ## Aggiornamenti per le istanze VMware vCenter Server
 
@@ -66,7 +66,7 @@ Tutte le altre azioni sulle istanze precedenti alla V1.6 non sono più disponibi
 
    Questo ESG viene distribuito per tutti i tipi di hardware dell'istanza e i clienti possono modificare la configurazione. Per ulteriori informazioni, vedi i
    seguenti argomenti:
-   *  [Configurazione della rete per utilizzare l'ESG NSX gestito dal cliente con le tue VM](../vcenter/vc_esg_config.html)
+   *  [Configurazione della rete per utilizzare l'ESG NSX gestito dal cliente con le tue VM](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html)
    *  [Documentazione di VMware NSX](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## Miglioramenti dell'usabilità
@@ -76,4 +76,4 @@ Sono stati apportati miglioramenti in tutta l'interfaccia utente:
 *  La navigazione principale sulla console è notevolmente migliorata attraverso l'introduzione del riquadro di navigazione a sinistra con accesso a tutte le aree dell'interfaccia utente. Puoi rapidamente ordinare una nuova istanza, visualizzare le tue istanze distribuite, rivedere le notifiche di sistema, modificare le impostazioni e accedere alla documentazione in linea.
 *  La nuova pagina **Introduzione** accessibile dal riquadro di navigazione a sinistra ti fornisce dettagli sufficienti direttamente sulla console per aiutarti a prendere una decisione consapevole sui componenti dell'istanza che stai ordinando. Nella pagina **Introduzione**, sei anche guidato passo dopo passo nel processo di ordine di un'istanza, iniziando con soddisfare tutti i prerequisiti per ordinare un'istanza, come gli account utente richiesti, e terminando con effettuare un ordine.
 *  I dettagli di riepilogo per le istanze Cloud Foundation e vCenter Server sono consolidati in un'unica pagina, accessibile dal menu **Istanze distribuite** nel riquadro di navigazione a sinistra. Da questa pagina, puoi selezionare la scheda appropriata per filtrare le istanze Cloud Foundation o le istanze vCenter Server.
-* Se sulla tua istanza è installato il ripristino di emergenza Zerto, puoi accedere direttamente alla console Zerto dalla pagina dei dettagli del servizio con un solo clic. Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](../sddc/sd_addingremovingservices.html) e [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](../vcenter/vc_addingremovingservices.html).
+* Se sulla tua istanza è installato il ripristino di emergenza Zerto, puoi accedere direttamente alla console Zerto dalla pagina dei dettagli del servizio con un solo clic. Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html) e [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html).

@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-23"
 
 ---
 
 # IBM Cloud Private
 
-{{site.data.keyword.cloud}} Private (ICP) ist eine Anwendungsplattform für die Entwicklung und Verwaltung von containerisierten Anwendungen. Es handelt sich um eine integrierte Umgebung, die Kubernetes als Container-Orchestrator, ein privates Image-Repository, eine Managementkonsole, Überwachungsframeworks und eine grafische Benutzerschnittstelle enthält, von der aus Sie Ihre Anwendungen zentral bereitstellen, verwalten, überwachen und skalieren können.
+{{site.data.keyword.icpfull_notm}} ist eine Anwendungsplattform zur Entwicklung und Verwaltung von containerisierten Anwendungen. Es handelt sich um eine integrierte Umgebung, die Kubernetes als Container-Orchestrator, ein privates Image-Repository, eine Managementkonsole, Überwachungsframeworks und eine grafische Benutzerschnittstelle enthält, von der aus Sie Ihre Anwendungen zentral bereitstellen, verwalten, überwachen und skalieren können.
 
 {{site.data.keyword.cloud_notm}} Private ist mit den folgenden Funktionen ausgestattet:
 -	**Einheitliches Installationsprogramm** - Das auf Ansible basierende Installationsprogramm richtet in kürzester Zeit einen Kubernetes-basierten Cluster mit Master-, Worker- und Proxyknoten ein.
@@ -20,7 +20,7 @@ lastupdated: "2018-11-06"
 -	**Isolierte Tenantnetzwerke** - Calico ermöglicht eine verbesserte Leistung und Netzwerkisolation innerhalb Ihres Clusters. Mit Calico können Sie für jedes Projekt in Ihrem Cluster ein isoliertes Teilnetz erstellen. Diese Netzisolation bietet Ihnen zusätzliche Sicherheit bei Datenübertragungen und verringert das Risiko von Beeinträchtigungen der Anwendungen und ihrer Daten. Calico vereinfacht darüber hinaus die Erstellung neuer Netzrichtlinien, die eine differenziertere Steuerung der gemeinsamen Nutzung von Objekten in einem einzigen Namensbereich ermöglichen können.
 -	**Leistungsfähige Überwachung und Protokollierung mit ELK-Stack** - {{site.data.keyword.cloud_notm}} Private verwendet Elasticsearch, Logstash, Filebeat und Heapster für die Erfassung, Speicherung und Abfrage von Protokollen und Metriken. Dieser Überwachungs- und Protokollierungsprozess stellt einen zentralen Speicher für alle Protokolle und Metriken bereit und bietet eine verbesserte Leistung sowie erhöhte Stabilität beim Zugriff auf bzw. Abfragen von Protokollen und Metriken.
 
-## ICP-Komponenten
+## Komponenten von IBM Cloud Private
 
 Ein {{site.data.keyword.cloud_notm}} Private-Cluster verfügt über vier Hauptklassen von Knoten: Bootknoten, Masterknoten, Workerknoten und Proxy-Knoten. Optional können Sie in Ihrem Cluster Managementknoten, Vulnerability Advisor-Knoten (VA-Knoten) und etcd-Knoten angeben.
 -	**Bootknoten** - Ein Bootknoten wird für die Ausführung der Installation, Konfiguration, Knotenskalierung und für Clusteraktualisierungen verwendet.
@@ -31,12 +31,13 @@ Ein {{site.data.keyword.cloud_notm}} Private-Cluster verfügt über vier Hauptkl
 -	**Vulnerability Advisor-Knoten (VA-Knoten)** - Ein VA-Knoten ist ein optionaler Knoten, der für die Ausführung der Vulnerability Advisor-Funktion verwendet wird.
 -	**etcd-Knoten** - Ein etcd-Knoten ist optional; er wird zur Ausführung des verteilten etcd-Schlüsselwertspeichers verwendet.
 
-## ICP-Netzbetrieb
+## Privater IBM Cloud-Netzbetrieb
 
-Das ICP-Netzmanagement wird durch die Verwendung von Calico vereinfacht. Calico verwendet Layer 3 oder die Vermittlungsschicht des Modells von Open System Interconnection (OSI). Mithilfe von Border Gateway Protocol (BGP) erstellt Calico Routing-Tabellen, die die Kommunikation zwischen Agentenknoten vereinfachen.
+Das {{site.data.keyword.icpfull_notm}}-Netzmanagement wird durch die Verwendung von Calico vereinfacht.
+Calico verwendet Layer 3 oder die Vermittlungsschicht des Modells von Open System Interconnection (OSI). Mithilfe von Border Gateway Protocol (BGP) erstellt Calico Routing-Tabellen, die die Kommunikation zwischen Agentenknoten vereinfachen.
 
-Weitere Informationen zum Netzbetrieb von Calico enthält der Abschnitt [IBM Kubernetes Service](vcsnsxt-overview-iks.html).
+Weitere Informationen zum Netzbetrieb von Calico enthält der Abschnitt [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-iks.html).
 
 ### Zugehörige Links
 
-* [Übersicht über VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

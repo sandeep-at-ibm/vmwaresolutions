@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-04-16"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Notas del release para V2.1
 
@@ -79,7 +83,8 @@ Para obtener más información, consulte [Visión general de vCenter Server](../
 
 Para el clúster predeterminado de una instancia, puede desplegar o ampliar hasta 51 servidores. Para todos los siguientes clústeres de una instancia, puede desplegar o ampliar hasta 59 servidores. Para obtener más información, consulte [Adición y visualización de clústeres para instancias vCenter Server](../vcenter/vc_addingviewingclusters.html).
 
-**Nota:** esta característica solo está disponible para instancias desplegadas en V2.1 y posteriores. Las instancias que se han actualizado a V2.1 desde releases anteriores a V2.1 no tienen esta opción.
+Esta función solo está disponible para las instancias desplegadas en la versión V2.1 o posterior. Las instancias que se han actualizado a V2.1 desde releases anteriores a V2.1 no tienen esta opción.
+{:note}
 
 ### Opciones de configuración personalizadas por el usuario de servidores nativos de IBM Cloud
 

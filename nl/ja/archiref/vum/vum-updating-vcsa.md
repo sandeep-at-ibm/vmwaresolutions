@@ -2,32 +2,34 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-25"
 
 ---
 
 # VCSA 更新および SSO がリンクされた vCenter
 
-## VCSA 更新
+## PSC および VCSA の更新
 
-VUM では VCSA が更新されないため、このセクションでは、このアプライアンスを更新するプロセスについて説明します。 VMware vCenter Server on {{site.data.keyword.cloud}} インスタンスにデプロイされた VCSA はインターネットにアクセスできないため、最初に更新バンドルをジャンプ・サーバーにダウンロードする必要があります。
+このセクションは、vCentre Server Appliance (VCSA) と Platform Services Controller (PSC) の両方に関係します。これらのアプライアンスは両方とも VCSA アプライアンスですが、役割が異なります。外部 PSC を使用する vSphere をアップグレードする場合は、最初に PSC、次に VCSA、次に ESXi ホスト、最後に仮想マシンのハードウェア・バージョンおよび VMware Tools の順にアップグレードします。
 
-VCSA は、vSphere Web Client ではなく、アプライアンス管理コンソールを介して更新されます。 VCSA アプライアンス管理コンソールには、ブラウザー、VCSA IP アドレス、およびポート 5480 を使用してアクセスします。
+VUM は PSC/VCSA を更新しません。ここでは、それらのアプライアンスを更新するプロセスについて説明します。VMware vCenter Server on {{site.data.keyword.cloud}} インスタンスにデプロイされた PSC/VCSA はインターネットにアクセスできないため、最初に更新バンドルをジャンプ・サーバーにダウンロードする必要があります。
 
-更新する前に、アプライアンスのスナップショットまたは VCSA のバックアップを開始する必要があります。 すべてが予想どおりに機能することを確認してから、数日以内にスナップショットを削除して、パフォーマンスが低下しないようにします。 さらに、アップグレードを試みる前にリリース・ノートを参照してください。
+PSC/VCSA は、vSphere Web Client ではなく、アプライアンス管理コンソールを介して更新されます。PSC/VCSA アプライアンス管理コンソールには、ブラウザー、PSC/VCSA IP アドレス、およびポート 5480 を使用してアクセスします。
 
-VCSA を更新するには、以下の手順を実行します。
+更新する前に、アプライアンスのスナップショットまたは PSC/VCSA のバックアップを開始する必要があります。すべてが予想どおりに機能することを確認してから、数日以内にスナップショットを削除して、パフォーマンスが低下しないようにします。 さらに、指定されたリリースに対する特定の指示を把握するため、アップグレードを試みる前に VMware リリース・ノートを参照してください。
+
+PSC/VCSA を更新するには、以下の手順を実行します。
 1. 更新をダウンロードするには、VMware パッチの[ダウンロード・センター](https://my.vmware.com/group/vmware/patch#search)にアクセスし、ログインして**「Search by Product」**メニューから VC を選択します。 適切なパッチを選択して、**「Download」**をクリックします。
 2. vSphere Web Client を使用して、ISO ファイルを vCenter データ・ストア・リポジトリーにアップロードします。
 3. 更新 ISO ファイルを vCenter サーバーにマウントします。
 4. vCenter サーバーのスナップショットを取得します。
-5. vCenter アプライアンス管理コンソール (`https://vcenterip:5480`) にログインします。
+5. `https://pscip:5480` (PSC の場合) または `https://vcenterip:5480` (VCSA の場合) で、vCenter アプライアンス管理コンソールにログインします。
 6. **「Update」**セクションに移動して**「Check Updates」**を選択してから、**「Check CDROM」**を選択します。 更新がリストされます。
 7. **「Install Updates」**を選択して、EULA に**同意します**。 更新がインストールされます。
 8. 更新が完了したら、アプライアンス管理コンソールに戻り、コンソールの再始動を選択する必要があります。
-9. vSphere Web Client に再度ログインし、エラーがないか確認します。 VUM のスキャンを手動で実行し、**「Home」** > **「Hosts and Cluster」**に移動してデータ・センターまたはクラスターを選択し、**「Update Manager」タブ**を選択してから**「Scan for Updates」**をクリックします。 これによりエラーが発生する場合は、[Resetting VMware Update Manager database on a vCenter Server appliance 6.5 (2147284)](https://kb.vmware.com/s/article/2147284) を参照してください。
+9. vSphere Web Client に再度ログインし、エラーがないか確認します。 VUM のスキャンを手動で実行し、**「Home」** > **「Hosts and Cluster」**に移動してデータ・センターまたはクラスターを選択し、**「Update Manager」タブ**を選択してから**「Scan for Updates」**をクリックします。 手動スキャンでエラーが発生した場合は、[Resetting VMware Update Manager database on a vCenter Server appliance 6.5 (2147284)](https://kb.vmware.com/s/article/2147284) を参照してください。
 10. テスト後、バックアウトする必要がある場合は、スナップショットに戻すか、以前のバックアップで vCenter をリストアします。
 
 ## SSO がリンクされた vCenter
@@ -39,4 +41,4 @@ VUM インスタンスを指定するには、VUM インスタンスが登録さ
 ### 関連リンク
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモ)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)

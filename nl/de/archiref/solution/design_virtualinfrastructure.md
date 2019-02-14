@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -39,7 +39,7 @@ Tabelle 1. vSphere ESXi-Konfiguration
 | Zeitsynchronisation   | Verwendet {{site.data.keyword.cloud}}-NTP-Server. |
 | Hostzugriff            | Unterstützt DCUI, ESXi Shell oder SSH. |
 | Benutzerzugriff            | Lokale Authentifizierung und MSAD. |
-| Auflösung von Domänennamen | Verwendet DNS wie in [Design der allgemeinen Services](design_commonservice.html) beschrieben. |
+| Auflösung von Domänennamen | Verwendet DNS wie in [Design der allgemeinen Services](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html) beschrieben. |
 
 Der vSphere-Cluster enthält die virtuellen Maschinen (VMs), die die zentrale Cloud und die Rechenressourcen für Benutzerworkloads verwalten.
 
@@ -73,7 +73,7 @@ vSAN arbeitet mit den folgenden Komponenten:
 * Der Onboard-RAID-Controller wird für jedes Laufwerk außer den beiden Betriebssystemlaufwerken (BS-Laufwerken) auf der Ebene RAID-0 konfiguriert.
 * Aus allen Speicherressourcen wird ein einzelner vSAN-Datenspeicher erstellt.
 
-Die verfügbaren vSAN-Features hängen von der Lizenzedition ab, die Sie bei der Bestellung der Instanz auswählen. Weitere Informationen finden Sie unter [Vergleich der VMware vSAN-Editionen](appendix.html#vmware-vsan-edition-comparison).
+Die verfügbaren vSAN-Features hängen von der Lizenzedition ab, die Sie bei der Bestellung der Instanz auswählen. Weitere Informationen finden Sie unter [Vergleich der VMware vSAN-Editionen](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-vsan-edition-comparison).
 
 ### Einrichtung des virtuellen Netzes für vSAN
 
@@ -81,7 +81,7 @@ Bei diesem Design fließt der vSAN-Datenverkehr zwischen ESXi-Hosts über ein de
 
 vSAN führt keinen Lastausgleich für den Datenverkehr zwischen Uplinks aus. Daher ist ein Adapter aktiv, während der andere im Standby-Modus ist, um hohe Verfügbarkeit (HA) zu unterstützen. Die Netzrichtlinie für die Funktionsübernahme (Failover) für vSAN ist als explizites Failover (**Explicit Failover**) zwischen physischen Netzports konfiguriert.
 
-Weitere Informationen zu physischen NIC-Verbindungen enthält Abbildung 2, "Physische NIC-Hostverbindungen im Abschnitt [Design der physischen Infrastruktur](design_physicalinfrastructure.html)".
+Weitere Informationen zu physischen NIC-Verbindungen enthält Abbildung 2, "Physische NIC-Hostverbindungen im Abschnitt [Design der physischen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)".
 
 ### Design von Speicherrichtlinien
 
@@ -112,7 +112,7 @@ vSAN-Einstellungen werden nach bewährten Verfahren für die Bereitstellung von 
 
 Die Netzvirtualisierung stellt ein Netzoverlay zur Verfügung, das in der virtuellen Schicht vorhanden ist. Die Netzvirtualisierung stattet die Architektur mit Funktionen wie schnelle Einrichtung, Bereitstellung, Rekonfiguration und Löschung von virtuellen On-Demand-Netzen aus. In diesem Design wird der vDS und VMware NSX for vSphere zur Implementierung eines virtuellen Netzes verwendet.
 
-In diesem Design wird der NSX-Manager im ersten Cluster bereitgestellt. Dem NSX-Manager wird eine VLAN-gestützte IP-Adresse aus dem privaten, portierbaren Adressblock zugeordnet, der für Managementkomponenten vorgesehen ist und der mit den unter [Design der allgemeinen Services](design_commonservice.html) behandelten DNS- und NTP-Servern konfiguriert wird. Der NSX-Manager wird mit den in Tabelle 2 aufgeführten Spezifikationen installiert.
+In diesem Design wird der NSX-Manager im ersten Cluster bereitgestellt. Dem NSX-Manager wird eine VLAN-gestützte IP-Adresse aus dem privaten, portierbaren Adressblock zugeordnet, der für Managementkomponenten vorgesehen ist und der mit den unter [Design der allgemeinen Services](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html) behandelten DNS- und NTP-Servern konfiguriert wird. Der NSX-Manager wird mit den in Tabelle 2 aufgeführten Spezifikationen installiert.
 
 Tabelle 2. NSX-Manager-Attribute
 
@@ -133,13 +133,13 @@ Abbildung 2. Netzübersicht für NSX-Manager
 
 Nach der Erstbereitstellung stellt die {{site.data.keyword.cloud_notm}}-Automatisierung drei NSX-Controller im ersten Cluster bereit. Jedem der Controller wird eine VLAN-gestützte IP-Adresse aus dem portierbaren Teilnetz **Privat A** zugeordnet, das für Managementkomponenten vorgesehen ist. Ferner werden in dem Design VM-VM-Anti-Affinitätsregeln erstellt, um die Controller unter den Hosts im Cluster zu separieren. Der erste Cluster muss mindestens drei Knoten enthalten, um hohe Verfügbarkeit für die Controller sicherzustellen.
 
-Neben den Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisierung die bereitgestellten vSphere-Hosts mit NSX-VIBs vor, um die Verwendung eines virtualisierten Netzes durch VXLAN-Tunnelendpunkte (VTEPs) einzurichten. Den VTEPs wird eine VLAN-gestützte IP-Adresse aus dem portierbaren IP-Adressbereich von **Privat A** zugeordnet, der für VTEPs angegeben ist, wie in *Tabelle 1. VLAN- und Teilnetzzusammenfassung* für das [Design der physischen Infrastruktur](design_physicalinfrastructure.html) aufgeführt. Der VXLAN-Datenverkehr befindet sich im nicht mit Tags versehenen VLAN und wird dem privaten vDS zugewiesen.
+Neben den Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisierung die bereitgestellten vSphere-Hosts mit NSX-VIBs vor, um die Verwendung eines virtualisierten Netzes durch VXLAN-Tunnelendpunkte (VTEPs) einzurichten. Den VTEPs wird eine VLAN-gestützte IP-Adresse aus dem portierbaren IP-Adressbereich von **Privat A** zugeordnet, der für VTEPs angegeben ist, wie in *Tabelle 1. VLAN- und Teilnetzzusammenfassung* für das [Design der physischen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html) aufgeführt. Der VXLAN-Datenverkehr befindet sich im nicht mit Tags versehenen VLAN und wird dem privaten vDS zugewiesen.
 
 Anschließend wird ein Segment-ID-Pool zugeordnet und die Hosts in dem Cluster werden der Transportzone hinzugefügt. In der Transportzone wird nur Unicast verwendet, da die IGMP-Netzüberwachung (IGMP - Internet Group Management Protocol) in der {{site.data.keyword.cloud_notm}} nicht konfiguriert ist.
 
 Als Nächstes werden die NSX Edge Services Gateway-Paare bereitgestellt. In allen Fällen wird ein Gateway-Paar für den abgehenden Datenverkehr aus Automatisierungskomponenten verwendet, die sich im privaten Netz befinden. Für vCenter Server wird ein zweites Gateway, das als kundenverwaltetes Edge-Gateway bezeichnet wird, bereitgestellt und mit einem Uplink zum öffentlichen Netz sowie einer Schnittstelle, die dem privaten Netz zugeordnet ist, konfiguriert. Weitere Informationen zu NSX Edge Services Gateways, die als Teil der Lösung bereitgestellt werden, finden Sie im Dokument zur [Architektur der NSX Edge-Lösung in {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf).
 
-Cloudadministratoren können alle erforderlichen NSX-Komponenten wie Distributed Logical Router (DLR), logische Switches und Firewalls konfigurieren. Die verfügbaren NSX-Features sind von der NSX-Lizenzedition abhängig, die Sie bei der Bestellung der Instanz auswählen. Weitere Informationen finden Sie unter [Vergleich der VMware NSX-Editionen](appendix.html#vmware-nsx-edition-comparison). Für vCenter Server-Instanzen fügt die {{site.data.keyword.cloud_notm}}-Automatisierung die vCenter Server Appliance und PSC (Platform Services Controller) in der Ausschlussliste des NSX-Managers für verteilte Firewalls hinzu.
+Cloudadministratoren können alle erforderlichen NSX-Komponenten wie Distributed Logical Router (DLR), logische Switches und Firewalls konfigurieren. Die verfügbaren NSX-Features sind von der NSX-Lizenzedition abhängig, die Sie bei der Bestellung der Instanz auswählen. Weitere Informationen finden Sie unter [Vergleich der VMware NSX-Editionen](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-nsx-edition-comparison). Für vCenter Server-Instanzen fügt die {{site.data.keyword.cloud_notm}}-Automatisierung die vCenter Server Appliance und PSC (Platform Services Controller) in der Ausschlussliste des NSX-Managers für verteilte Firewalls hinzu.
 
 ### Design verteilter Switches
 

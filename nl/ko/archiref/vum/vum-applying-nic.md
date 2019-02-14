@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -23,7 +23,8 @@ ixgben은 vmklinux net-ixgbe 드라이버를 대체하지만 SR-IOV 및 SW FcOE�
   `esxcli system module set --enabled=true --module=ixgben`
 4. 다음 vCLI 명령을 실행하여 vSphere ESXi 호스트를 다시 시작하십시오.
   `system shutdown reboot --reason “Install ixgben driver”`
-5. vSphere ESXi 호스트가 다시 부팅된 후 SSH를 사용하여 호스트에 다시 로그인하십시오. 다음 vCLI 명령을 실행하고 ixgben 드라이버가 "로드"되고(첫 번째 열) "사용으로 설정"(두 번째 열)되었는지 확인하십시오. `esxcli system module list |grep ixg`
+5. vSphere ESXI 호스트가 SSH를 사용하여 다시 부팅하고 호스트에 다시 로그인한 후 다음 vCLI 명령을 실행하고 ixgben 드라이버가 "로드"되고(첫 번째 열) "사용으로 설정"(두 번째 열)되었는지 확인하십시오.
+  `esxcli system module list |grep ixg`
 6. 드라이버가 사용으로 설정된 경우 vSphere Web Client를 사용하여 네비게이터 분할창에서 호스트를 선택하고 마우스 오른쪽 단추를 클릭한 후 **유지보수 모드** > **유지보수 모드 종료**를 선택하십시오. 다음 호스트를 선택하고 모든 호스트가 완료될 때까지 드라이버를 사용으로 설정하십시오.
 7. 변경사항이 작동하지 않는 경우 되돌리려면 다음 명령을 실행하십시오. `esxcli system module set --enabled=false --module=ixgben`
 
@@ -38,10 +39,10 @@ IPMI IP 주소와 함께 {{site.data.keyword.cloud_notm}} 제어 창에 나열�
 2. **원격 제어** > **iKVM/HTML5**를 선택하고 **iKVM/HTML5**를 클릭하여 재실행하십시오. 이제 vSphere ESXi 호스트의 콘솔에 액세스할 수 있습니다.
 3. 호스트가 명령에 응답하는 경우 콘솔에서 **ALT-F1**을 사용하여 ESXi 호스트 콘솔에 액세스하십시오. 호스트의 인증 정보를 사용하여 로그인하십시오.
 4. 호스트가 응답하지 않는 경우 IPMI 메뉴를 사용하여 호스트의 전원 주기를 수행하십시오.
-5. 호스트가 다시 시작될 때 HTML5 콘솔을 주의하여 보십시오. ESXi가 다시 시작되기 시작할 때 몇 초 내에 복구 모드로 전환됩니다.
+5. 호스트가 다시 시작될 때 HTML5 콘솔을 주의하여 보십시오. ESXi가 다시 시작할 때 몇 초 내에 복구 모드로 전환됩니다.
 6. **CMD+R** 키를 동시에 눌러 복구 모드에 진입하십시오.
 7. **“Y”**를 입력하여 복구 모드에 진입하고 이전 버전을 사용하여 ESXi 서버를 부팅하십시오.
-8. 콘솔을 통해 진행상태를 모니터하십시오. 10 - 20분이 걸릴 수 있습니다.
+8. 콘솔을 통해 진행상태를 모니터하십시오. 부팅 시 10 - 20분이 걸릴 수 있습니다.
 
 ### 관련 링크
 

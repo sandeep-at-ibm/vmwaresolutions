@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -33,44 +33,49 @@ L'automazione di {{site.data.keyword.cloud}} distribuisce tre controller NSX all
 
 ### Edge NSX e Distributed Logical Router
 
-Vengono distribuite coppie di gateway dei servizi edge (ESG) NSX. In tutti i casi, una coppia di gateway viene utilizzata per il traffico in uscita dai componenti di automazione che risiedono sulla rete privata. Per vCenter Server e ICP ({{site.data.keyword.cloud_notm}} Private), un secondo gateway, che è noto come edge gestito da ICP, viene distribuito e configurato con un uplink alla rete pubblica e un'interfaccia che è assegnata alla rete privata. L'amministratore può configurare qualsiasi componente NSX richiesto, come ad esempio DLR (Distributed Logical Router), switch logici e firewall.
+Vengono distribuite coppie di gateway dei servizi edge (ESG) NSX. In tutti i casi, una coppia di gateway viene utilizzata per il traffico in uscita dai componenti di automazione che risiedono sulla rete privata. Per vCenter Server e {{site.data.keyword.icpfull_notm}}, un secondo gateway noto come edge gestito da ICP, viene distribuito e configurato con un uplink alla rete pubblica e un'interfaccia che è assegnata alla rete privata. L'amministratore può configurare qualsiasi componente NSX richiesto, come ad esempio DLR (Distributed Logical Router), switch logici e firewall.
 
-Per ulteriori informazioni sulla progettazione della rete, vedi [Architettura di riferimento della rete di vCenter Server](../vcsnsxt/vcsnsxt-intro.html).
+Per ulteriori informazioni sulla progettazione della rete, vedi [Architettura di riferimento della rete di vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html).
 
-La seguente tabella riepiloga le specifiche ESG e DLR ICP.
+La seguente tabella riepiloga le specifiche ESG e DLR {{site.data.keyword.icpfull_notm}}.
 
-Tabella 1. Specifiche ESG ICP
+Tabella 1. Specifiche ESG {{site.data.keyword.icpfull_notm}}
 
-Attributo  |  Specifica
+Attributo | Specifica
 --|--
-Gateway servizio edge  |Dispositivo virtuale
-Dimensione Edge    Large |   Numero di vCPUs	2
- Memoria | 1 GB 
- Disco            | 1000 GB sul datastore locale
+Gateway servizio edge | Dispositivo virtuale
+Dimensione Edge    Large | Numero di vCPUs	2
+Memoria    | 1 GB
+Disco    | 1000 GB sul datastore locale
 
-Tabella 2. Specifiche DLR ICP
+Tabella 2. Specifiche DLR {{site.data.keyword.icpfull_notm}}
 
-Attributo  |  Specifica
+Attributo | Specifica
 --|--|
-Router logico distribuito |Dispositivo virtuale
+Router logico distribuito |     Dispositivo virtuale
 Dimensione Edge    Compact | Numero di vCPUs	1
- Memoria | 512 MB
- Disco            | 1000 GB sul datastore locale
+Memoria    | 512 MB
+Disco    | 1000 GB sul datastore locale
 
-## Componenti ICP
+## Componenti IBM Cloud Private
 
-ICP è una piattaforma dell'applicazione per lo sviluppo e la gestione in loco delle applicazioni inserite nei contenitori. ICP è un ambiente integrato per la gestione dei contenitori che include l'orchestrazione del contenitore Kubernetes, un repository di immagini privato, una console di gestione e i framework di monitoraggio.
+{{site.data.keyword.icpfull_notm}} è una piattaforma dell'applicazione per lo sviluppo e la gestione di applicazioni
+inserite nei contenitori in loco. {{site.data.keyword.icpfull_notm}} è un ambiente integrato per la gestione
+dei contenitori che include l'orchestrazione del contenitore Kubernetes, un
+repository di immagini privato, una console di gestione e i
+framework di monitoraggio.
 
-Figura 2. Distribuzione ICP virtuale con vCenter Server
-![Distribuzione ICP virtuale con vCenter Server](vcscar-icp.svg)
+Figura 2. Distribuzione {{site.data.keyword.icpfull_notm}} virtuale con vCenter Server
+![Distribuzione {{site.data.keyword.icpfull_notm}} virtuale con VCS](vcscar-icp.svg)
 
-### Nodo di avvio 
+### Nodo di avvio
 
 Un nodo di avvio o bootstrap (facoltativo) viene utilizzato per l'esecuzione dell'installazione, della configurazione, della scalabilità del nodo e degli aggiornamenti del cluster. Per ogni cluster è necessario un solo nodo di avvio. Utilizza un solo nodo sia per il master che per l'avvio.
 
 ### Nodo master
 
-Un nodo master fornisce servizi di gestione e controlla i nodi di lavoro in un cluster. I nodi master ospitano i processi che sono responsabili dell'allocazione delle risorse, della manutenzione dello stato, della pianificazione e del monitoraggio. Poiché un ambiente ad elevata disponibilità (HA) presenta più di un singolo nodo master, se il nodo master principale ha un malfunzionamento, la logica di failover promuove automaticamente un nodo differente al ruolo master. Gli host che possono funzionare come master sono detti candidati master.
+Un nodo master fornisce servizi di gestione e controlla i nodi di lavoro in un cluster. I nodi master ospitano i processi che sono responsabili dell'allocazione delle risorse, della manutenzione dello stato, della pianificazione e del monitoraggio.
+Poiché un ambiente ad elevata disponibilità (HA) presenta più di un singolo nodo master, se il nodo master principale ha un malfunzionamento, la logica di failover promuove automaticamente un nodo differente al ruolo master. Gli host che possono funzionare come master sono detti candidati master.
 
 ### Nodo di lavoro
 
@@ -82,36 +87,39 @@ Un nodo proxy è un nodo che trasmette una richiesta esterna ai servizi creati a
 
 ### Nodo di gestione
 
-Un nodo di gestione è un nodo facoltativo che ospita i servizi di gestione come il monitoraggio, la misurazione e la registrazione. Configurando i nodi di gestione dedicati, puoi evitare che il nodo master diventi sovraccaricato. Puoi abilitare il nodo di gestione solo durante l'installazione di ICP.
+Un nodo di gestione è un nodo facoltativo che ospita i servizi di gestione come il monitoraggio, la misurazione e la registrazione. Configurando i nodi di gestione dedicati, puoi evitare che il nodo master diventi sovraccaricato. Puoi abilitare il nodo di gestione solo durante l'installazione di {{site.data.keyword.icpfull_notm}}.
 
 ### Nodo Controllo vulnerabilità
 
 Un nodo Controllo vulnerabilità (o VA, Vulnerability Advisor) è un nodo facoltativo utilizzato per l'esecuzione dei servizi del Controllo vulnerabilità. I servizi del Controllo vulnerabilità sono intensivi per le risorse. Se utilizzi il servizio Controllo vulnerabilità, specifica un nodo VA dedicato.
 
-La seguente tabella fornisce le specifiche VM richieste per un'istanza ICP ad elevata disponibilità
+La seguente tabella fornisce le specifiche VM richieste per un'istanza {{site.data.keyword.icpfull_notm}} ad elevata
+disponibilità
 
-Tabella 3. Specifiche VM ICP
+Tabella 3. Specifiche VM {{site.data.keyword.icpfull_notm}}
 
-Nodo |     Istanze    | IP    |CPU | RAM (GB)	| DISK (GB)
+Nodo |     Istanze    | IP    | CPU    | RAM (GB)    | DISK (GB)
 :-----|------------:|:----|----:|----------:|----------:|
-Master| 3 | IP (x3) VIP (x1)    | 4  | 64 | 200
- Gestione | 3 | IP (x3)  | 8 | 64 |500
- Proxy      | 3 | IP (x3)VIP (x1)    | 2                              | 4  |150
-Controllo vulnerabilità    | 3 | IP (x3)  | 4  |16 |500
- GlusterFS  | 3 | IP (x3)  | 8 |16 |150
- Di lavoro     | 3-6    | IP (x3)  |  4-8 | 4  |150
+Master|    3    | IP (x3) VIP (x1)    | 4    | 64    | 200
+Gestione    |3    | IP (x3)    |8    |64    |500
+Proxy    | 3    | IP (x3)VIP (x1)    |2    |4    |150
+Controllo vulnerabilità    |3    | IP (x3)    | 4    | 16    |500
+GlusterFS    | 3    | IP (x3)    |8    |16    |150
+Di lavoro    | 3-6    | IP (x3)    |4-8    |4    |150
 
 CAM richiede che i nodi di lavoro abbiano una configurazione di vCPU e memoria superiore.
 
-Tabella 4. Specifiche VM ICP
+Tabella 4. Specifiche VM {{site.data.keyword.icpfull_notm}}
 
-Nodo |     Istanze    | IP    |CPU | RAM (GB)	| DISK (GB)
+Nodo |     Istanze    | IP    | CPU    | RAM (GB)    | DISK (GB)
 :-----|------------:|:----|----:|----------:|----------:|
- Di lavoro     |  3 | IP (x3)  |  4-8 |16-20   |  150
+Di lavoro  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 ## Componenti di IBM Cloud Automation Manager
 
-CAM ({{site.data.keyword.cloud_notm}} Automation Manager) è una piattaforma di gestione self-service multicloud che viene eseguita su ICP che aiuta gli sviluppatori e gli amministratori a soddisfare le richieste di business.
+CAM ({{site.data.keyword.cloud_notm}} Automation Manager) è una piattaforma di gestione self-service multicloud
+che viene eseguita su {{site.data.keyword.icpfull_notm}} che aiuta gli sviluppatori
+e gli amministratori a soddisfare le richieste di business.
 
 Figura 3. Riferimento del componente CAM
 ![Riferimento del componente CAM](vcscar-cam-components.svg)
@@ -156,6 +164,7 @@ Una GUI (graphical user interface) per creare modelli Terraform, con una funzion
 
 Il database per l'applicazione designer del modello.
 
-## Link correlati 
+## Link correlati
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

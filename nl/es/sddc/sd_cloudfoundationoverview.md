@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -53,10 +53,11 @@ Los cargos en los que se incurre en concepto de hardware, sistema de red, máqui
 ### Servidor nativo
 
 Puede solicitar {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} con una de las siguientes configuraciones:
-*  **Skylake**: servidores 2-CPU Intel Skylake generation (Intel Xeon series 4100/5100/6100) con el modelo de CPU y el tamaño de RAM seleccionados.   
-*  **Broadwell**: servidores 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 series v4) con el modelo de CPU y el tamaño de RAM seleccionados.   
-   Si tiene pensado utilizar almacenamiento vSAN, la configuración necesita cuatro {{site.data.keyword.baremetal_short}}.
-   {:note}
+*  **Skylake**: servidores de generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100) con el modelo de CPU y el tamaño de RAM que seleccione.   
+*  **Broadwell**: servidores de generación Intel Broadwell de 2 CPU (Intel Xeon serie E5-2600/E7-4800) con el modelo de CPU y el tamaño de RAM que seleccione.
+
+Si tiene pensado utilizar almacenamiento vSAN, la configuración necesita cuatro {{site.data.keyword.baremetal_short}}.
+{:note}
 
 ### Redes
 

@@ -2,26 +2,33 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Häufig gestellte Fragen zu ESXi-Servern
 
 Hier finden Sie Antworten auf häufig gestellte Fragen zu den ESXi-Servern, die in der {{site.data.keyword.vmwaresolutions_full}}-Konsole verwaltet werden.
 
 ## Wie viele ESXi-Server kann ich zu meiner Instanz hinzufügen?
+{: faq}
 
 * Bei vCenter Server-Instanzen können Sie den Standardcluster auf bis zu 51 ESXi-Server erweitern. Jeder Cluster, bei dem es sich nicht um den Standardcluster handelt, kann auf bis zu 59 ESXi-Server erweitert werden. Da Sie bis zu 10 Cluster zu einer Instanz hinzufügen können, kann jede bereitgestellte Instanz in allen Clustern maximal 51 + 9 x 59 = 582 ESXi-Server umfassen.
 * Bei Cloud Foundation-Instanzen enthält die Standardkonfiguration vier ESXi-Server. Sie können maximal 28 Server hinzufügen (also insgesamt 32 Server verwenden). Bei Cloud Foundation-Instanzen in einer Konfiguration mit mehreren Standorten können insgesamt bis zu 128 ESXi-Server in allen Instanzen verwendet werden.
 
-  **Hinweis:** Falls Ihre Cloud Foundation-Konfiguration eine Bereitstellung mit mehreren Standorten mit mehr als 128 ESXi-Servern erforderlich macht, bitten Sie den [IBM Support](trbl_support.html) um Unterstützung.
+  Falls Ihre Cloud Foundation-Konfiguration eine Bereitstellung mit mehreren Standorten mit mehr als 128 ESXi-Servern erforderlich macht, bitten Sie den [IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) um Unterstützung.
+  {:note}
 
 ## Wie viele ESXi-Server kann ich zu einem Cluster hinzufügen?
 
-Bei V2.2 und höhere Releases können Sie maximal 51 ESXi-Server zu einem ersten Cluster und maximal 59 ESXi-Server zu den hinzugefügten Clustern hinzufügen.
+Bei Instanzen, die in Version 2.2 und höheren Releases bereitgestellt wurden, können Sie maximal 51 ESXi-Server zu einem ersten Cluster und maximal 59 ESXi-Server zu den hinzugefügten Clustern hinzufügen.
 
 Bei Instanzen, die in V2.1 oder früheren Releases bereitgestellt wurden, müssen Sie die erforderliche vSAN-Unterstützung aktivieren, um die Clustergröße auf über 32 zu erhöhen. Führen Sie zum Aktivieren der erforderlichen vSAN-Unterstützung die folgenden Schritte aus:
 
@@ -39,7 +46,8 @@ Bei Instanzen, die in V2.1 oder früheren Releases bereitgestellt wurden, müsse
 
 Die Namen und IP-Adressen von ESXi-Servern können nicht geändert werden, weil sie für die Windows-DNS-Auflösung registriert werden. Änderungen könnten dazu führen, dass während der Bereitstellung oder bei vCenter Server-Funktionen Fehler auftreten.
 
-**Hinweis:** Versuchen Sie nicht, die Namen von ESXi-Servern mithilfe der Funktion **Einheit umbenennen** in der {{site.data.keyword.cloud_notm}}-Benutzerschnittstelle zu ändern. Diese Funktion ändert zwar tatsächlich den vollständig qualifizierten Domänennamen des ESXi-Servers, aber die konfigurierten vCenter- und Windows-VSI-Hostregistrierungen werden hierdurch falsch und können Fehler verursachen.
+Versuchen Sie nicht, die Namen von ESXi-Servern mithilfe der Funktion **Einheit umbenennen** in der {{site.data.keyword.cloud_notm}}-Benutzerschnittstelle zu ändern. Diese Funktion ändert zwar tatsächlich den vollständig qualifizierten Domänennamen des ESXi-Servers, aber die konfigurierten vCenter Server- und Windows-VSI-Hostregistrierungen werden hierdurch falsch und können Fehler verursachen.
+{:note}
 
 ## Kann ich den Rootzugriff auf meinen ESXi-Servern inaktivieren?
 
@@ -51,14 +59,15 @@ Für nachfolgende Automatisierungsoperationen, beispielsweise beim Hinzufügen u
 
 ## Kann ich statische Routen auf meinen ESXi-Servern hinzufügen, um Speicher von anderen Speicherorten anzuhängen?
 
-Statische Routen können für Speicher hinzugefügt werden, die Operationen müssen jedoch mit äußerster Sorgfalt ausgeführt werden. Andernfalls könnten die vorhandenen, gemeinsam genutzten Ressourcen abgehängt werden.
+Sie können statische Routen für den Speicher hinzufügen, müssen aber dabei mit äußerster Sorgfalt vorgehen. Andernfalls könnten die vorhandenen, gemeinsam genutzten Ressourcen abgehängt werden.
 
-**Hinweis:** Das Hinzufügen statischer Routen für vMotion wird nicht unterstützt. Änderungen an der vMotion-Teilnetzkonfiguration könnten zu Störungen bei den Funktionen von {{site.data.keyword.vmwaresolutions_short}} führen.
+Das Hinzufügen statischer Routen für vMotion wird nicht unterstützt. Änderungen an der vMotion-Teilnetzkonfiguration könnten zu Störungen bei den Funktionen von {{site.data.keyword.vmwaresolutions_short}} führen.
+{:note}
 
 ### Zugehörige Links
 
-* [Kapazität für vCenter Server-Instanzen erweitern und verringern](../vcenter/vc_addingremovingservers.html)
-* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](../sddc/sd_addingremovingservers.html)
-* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](../vcenter/vc_addingviewingclusters.html)
-* [Cluster für Cloud Foundation-Instanzen hinzufügen, anzeigen und löschen](../sddc/sd_addingviewingclusters.html)
-* [Kontaktaufnahme mit dem IBM Support](trbl_support.html)
+* [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Cluster für Cloud Foundation-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

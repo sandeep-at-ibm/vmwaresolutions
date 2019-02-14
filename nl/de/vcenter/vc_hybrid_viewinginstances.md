@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -86,10 +86,6 @@ Tabelle 4. vCenter Server with Hybridity Bundle-Zugriffsinformationen für insta
 | NSX-Manager-IP  | Die IP-Adresse des NSX-Managers.  |
 | Vollständig qualifizierter Domänenname für NSX-Manager  | Der vollständig qualifizierte Domänenname des NSX-Managers.  |
 | NSX-Manager-HTTP  | Der Benutzername und das Kennwort für den Zugriff auf die Webkonsole des NSX-Managers. |
-| PSC-IP  | Die IP-Adresse von Platform Services Controller (PSC).  |
-| Vollständig qualifizierter Domänenname für PSC  | Der vollständig qualifizierte Domänenname von PSC.  |    
-| PSC-ADMIN  | Der SSO-Benutzername und das Kennwort für VMware vCenter, mit dem Sie auf die PSC-Webkonsole zugreifen können.  |
-| PSC-SSH  | Der Benutzername und das Kennwort, die Sie für den Zugriff auf die PSC-VM über eine SSH-Verbindung verwenden können.  |
 | vCenter-IP  | Die IP-Adresse von vCenter Server.  |
 | Vollständig qualifizierter Domänenname für vCenter  | Der vollständig qualifizierte Domänenname von vCenter Server.  |
 | vCenter-ADMIN  | Der SSO-Benutzername und das Kennwort für VMware vCenter, mit dem Sie sich unter Verwendung von vSphere Web Client bei vCenter Server anmelden können.  |
@@ -108,7 +104,7 @@ Tabelle 5. Bereitstellungsverlauf für vCenter Server with Hybridity Bundle-Inst
 
 ## Nächste Schritte bei aufgetretenen Fehlern
 
-Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, wird automatisch das {{site.data.keyword.cloud_notm}}-Support-Team benachrichtigt. Um den Status Ihres Tickets abzufragen, können Sie den [IBM Support kontaktieren](../vmonic/trbl_support.html).
+Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, wird automatisch das {{site.data.keyword.cloud_notm}}-Support-Team benachrichtigt. Um den Status Ihres Tickets abzufragen, können Sie den [IBM Support kontaktieren](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## Nächste Schritte
 
@@ -118,13 +114,13 @@ Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** k
 {:important}
 
 In den folgenden Abschnitten finden Sie Informationen, die Sie bei der Ausführung der Anmeldeanweisungen unterstützen:
-*  Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
+*  Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 *  Eine Liste der Zugriffspunkte für die Anmeldung beim privaten Netz der {{site.data.keyword.cloud_notm}}-Infrastruktur mittels VPN finden Sie unter [VPN-Zugriff](http://www.softlayer.com/vpn-access){:new_window}.
-*  Falls Sie beim Bereitstellen einer Datei im Format "OVF" (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](../vmonic/trbl_deploy_ovf.html) weitere Informationen.
+*  Falls Sie beim Bereitstellen einer Datei im Format "OVF" (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html) weitere Informationen.
 
 ### Zugehörige Links
 
-* [vCenter Server with Hybridity Bundle-Instanzen bestellen](vc_hybrid_orderinginstance.html)
-* [Cluster für vCenter Server with Hybridity Bundle-Instanzen hinzufügen, anzeigen und löschen](vc_hybrid_addingviewingclusters.html)
-* [Kapazität für vCenter Server with Hybridity Bundle-Instanzen erweitern und verringern](vc_hybrid_addingremovingservers.html)
-* [vCenter Server with Hybridity Bundle-Instanzen löschen](vc_hybrid_deletinginstance.html)
+* [vCenter Server with Hybridity Bundle-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [Cluster für vCenter Server with Hybridity Bundle-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
+* [Kapazität für vCenter Server with Hybridity Bundle-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [vCenter Server with Hybridity Bundle-Instanzen löschen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)

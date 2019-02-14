@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-12"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -25,31 +25,31 @@ Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para instancias d
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicación | Región | Opciones servidor |
 |:------|:----------------|:----------------|:---------------------------|
 | AMS03 | Amsterdam | Europa | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
-| CHE01 | Chennai | Asia-Pacífico | Alta capacidad
+| CHE01 | Chennai | Asia Pacífico | Alta capacidad
 | DAL09 | Dallas | América del Norte sur | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | DAL10 | Dallas | América del Norte sur | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | DAL12 | Dallas | América del Norte sur | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | DAL13 | Dallas | América del Norte sur | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | FRA02 | Frankfurt | Europa | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | FRA04 | Frankfurt | Europa | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
-| HKG02 | Hong Kong | Asia-Pacífico | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
+| HKG02 | Hong Kong | Asia Pacífico | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | LON02 | Londres | Europa | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | LON04 | Londres | Europa | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | LON06 | Londres | Europa | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
-| MEL01 | Melbourne | Asia-Pacífico | Alto rendimiento (Medio), Alta capacidad
+| MEL01 | Melbourne | Asia Pacífico | Alto rendimiento (Medio), Alta capacidad
 | MEX01 | Queretaro | América del Norte sur | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | MIL01 | Milán | Europa | Alto rendimiento (Medio), Alta capacidad
 | MON01 | Montreal | América del Norte este | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | OSL01 | Oslo | Europa | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | PAR01 | París | Europa | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | SAO01 | Sao Paulo | América del Sur | Alto rendimiento (Grande), Alta capacidad
-| SEO01 | Seúl | Asia-Pacífico | Alto rendimiento (Grande), Alta capacidad
+| SEO01 | Seúl | Asia Pacífico | Alto rendimiento (Grande), Alta capacidad
 | SJC03 | San José | América del Norte oeste | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | SJC04 | San José | América del Norte oeste | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
-| SNG01 | Singapur | Asia-Pacífico | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
-| SYD01 | Sídney | Asia-Pacífico | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
-| SYD04 | Sídney | Asia-Pacífico | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
-| TOK02 | Tokio | Asia-Pacífico | Alto rendimiento (Grande), Alta capacidad
+| SNG01 | Singapur | Asia Pacífico | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
+| SYD01 | Sídney | Asia Pacífico | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
+| SYD04 | Sídney | Asia Pacífico | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
+| TOK02 | Tokio | Asia Pacífico | Alto rendimiento (Grande), Alta capacidad
 | TOR01 | Toronto | América del Norte este | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | WDC04 | Washington, DC | América del Norte este | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | WDC06 | Washington, DC | América del Norte este | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad

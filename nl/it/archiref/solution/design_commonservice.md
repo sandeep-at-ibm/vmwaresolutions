@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -85,6 +85,6 @@ Puoi utilizzare i server Windows AD in questa progettazione per creare certifica
 
 ### Link correlati
 
-* [Progettazione dell'infrastruttura fisica](design_physicalinfrastructure.html)
-* [Progettazione dell'infrastruttura virtuale](design_virtualinfrastructure.html)
-* [Progettazione della gestione dell'infrastruttura](design_infrastructuremgmt.html)
+* [Progettazione dell'infrastruttura fisica](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [Progettazione dell'infrastruttura virtuale](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [Progettazione della gestione dell'infrastruttura](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)

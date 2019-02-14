@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-23"
 
 ---
 
 # Übersicht über IBM Cloud-Netzbetrieb
 
-{{site.data.keyword.cloud}} wickelt den physischen Netzbetrieb ab. In diesem Abschnitt wird das physische Netz beschrieben, das von der {{site.data.keyword.cloud_notm}} und den physischen Hostverbindungen (VLANs, MTU) zur Verfügung gestellt wird, die den zuvor beschriebenen physischen Hosts zugeordnet sind.
+{{site.data.keyword.cloud}} wickelt den physischen Netzbetrieb ab. Im Folgenden wird das physische Netz beschrieben, das von {{site.data.keyword.cloud_notm}} und den physischen Hostverbindungen (VLANs, MTU) zur Verfügung gestellt wird, die den zuvor beschriebenen physischen Hosts zugeordnet sind.
 
 Das physische Netz von {{site.data.keyword.cloud_notm}} ist in drei verschiedenartige Netze unterteilt: öffentliches Netz, privates Netz und Managementnetz.
 
@@ -32,18 +32,18 @@ Neben dem öffentlichen und dem privaten Netz ist jeder {{site.data.keyword.clou
 ## Primäre und portierbare IP-Blöcke
 
 {{site.data.keyword.cloud_notm}} ordnet zwei Typen von IP-Adressen zur Verwendung in der {{site.data.keyword.cloud_notm}}-Infrastruktur zu:
--	Primäre IP-Adressen werden Einheiten (Geräten), bare metal Servern und virtuellen Servern zugeordnet, die von {{site.data.keyword.cloud_notm}} bereitgestellt werden. Benutzer sollten keine IP-Adressen in diesen Blöcken zuweisen.
--	Portierbare IP-Adressen werden zur Verfügung gestellt, die ein Benutzer nach Bedarf zuweisen und verwalten kann.
+* Primäre IP-Adressen werden Einheiten (Geräten), bare metal Servern und virtuellen Servern zugeordnet, die von {{site.data.keyword.cloud_notm}} bereitgestellt werden. Benutzer sollten keine IP-Adressen in diesen Blöcken zuweisen.
+* Portierbare IP-Adressen werden zur Verfügung gestellt, die ein Benutzer nach Bedarf zuweisen und verwalten kann.
 
 Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN im Kundenkonto weiterleitbar gemacht werden, wenn das VLAN-Spanning Konto aktiviert ist oder wenn das Konto als VRF-Konto (VRF - Virtual Routing and Forwarding) konfiguriert ist.
 
 ## VLAN-Spanning
 
-Das VLAN-Spanning ist eine globale {{site.data.keyword.cloud_notm}}-Kontoeinstellung, durch die jeder IP-Block eines primären und portierbaren Teilnetzes aller VLANs im Konto untereinander weitergeleitet werden kann. Wenn diese Einstellung inaktiviert ist, können IP-Blöcke immer noch an {{site.data.keyword.cloud_notm}}-Services weiterleiten, jedoch nicht untereinander. Diese Architektur setzt voraus, dass das VLAN-Spanning in dem Konto aktiviert ist, in dem VCS bereitgestellt ist, damit Verbindungen über die verschiedenen Teilnetze, in denen sich die Lösungskomponenten befinden, transparent hergestellt werden können.
+Das VLAN-Spanning ist eine globale {{site.data.keyword.cloud_notm}}-Kontoeinstellung, durch die jeder IP-Block eines primären und portierbaren Teilnetzes aller VLANs im Konto untereinander weitergeleitet werden kann. Wenn diese Einstellung nicht verfügbar ist, können IP-Blöcke immer noch an {{site.data.keyword.cloud_notm}}-Services weiterleiten, jedoch nicht untereinander. Diese Architektur setzt voraus, dass das VLAN-Spanning in dem Konto aktiviert ist, in dem VMware vCenter Server on {site.data.keyword.cloud_notm}} bereitgestellt ist, damit Verbindungen über die verschiedenen Teilnetze, in denen sich die Lösungskomponenten befinden, transparent hergestellt werden können.
 
 ## Virtual Routing and Forwarding (VRF)
 
-{{site.data.keyword.cloud_notm}}-Konten können auch als VRF-Konto konfiguriert werden. Dies bietet eine ähnliche Funktionen wie das VLAN-Spanning, sodass ein automatisches Routing zwischen IP-Teilnetzblöcken möglich wird. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
+{{site.data.keyword.cloud_notm}}-Konten können auch als VRF-Konto konfiguriert werden. Ein VRF-Konto bietet eine ähnliche Funktionalität wie das VLAN-Spanning, sodass ein automatisches Routing zwischen IP-Teilnetzblöcken möglich wird. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
 
 ## Physische Hostverbindungen
 
@@ -58,31 +58,31 @@ Die Angebote von VMware on {{site.data.keyword.cloud_notm}} beinhalten drei VLAN
 
 Wie bereits erläutert besteht das private Netz in diesem Design aus zwei VLANs. Drei Teilnetze werden dem ersten dieser VLANs (hier als VLAN "Privat A" bezeichnet) zugeordnet. Das erste Teilnetz ist ein primärer privater IP-Teilnetzbereich, den {{site.data.keyword.cloud_notm}} den physischen Hosts zuweist. Das zweite Teilnetz wird für virtuelle Maschinen für das Management (z. B. vCenter Server Appliance und Platform Services Controller) verwendet. Das dritte Teilnetz wird für die VXLAN-Tunnelendpunkte (VTEPs) verwendet, die den einzelnen Hosts durch NSX Manager zugeordnet werden.
 
-Neben dem VLAN "Privat A" ist ein zweites privates VLAN (hier als VLAN "Privat B" bezeichnet) vorhanden, um VMware-Features wie vSAN und vMotion zu unterstützen und die Konnektivität zum NAS-Speicher (NAS - Network Attached Storage) herzustellen. Das VLAN als solches ist in zwei oder drei portierbare Teilnetze unterteilt. Das erste Teilnetz wird einer Kernelportgruppe für vMotion-Datenverkehr zugeordnet. Das bzw. die verbleibenden Teilnetze werden für den Speicherdatenverkehr genutzt und bei Verwendung von vSAN wird ein Teilnetz den Kernelportgruppen zugeordnet, die für vSAN-Datenverkehr genutzt werden. Bei Verwendung von NAS wird ein Teilnetz einer Portgruppe zugeordnet, die für NFS-Datenverkehr dediziert ist. Zu beachten ist, dass alle im Rahmen einer automatisierten Bereitstellung mit VCS konfigurierten Teilnetze von {{site.data.keyword.cloud_notm}} verwaltete Bereiche verwenden. Dadurch wird sichergestellt, dass eine beliebige IP-Adresse an jedes Rechenzentrum innerhalb des {{site.data.keyword.cloud_notm}}-Kontos geleitet werden kann, falls dies jetzt oder in Zukunft erforderlich sein sollte.
+Neben dem VLAN "Privat A" ist ein zweites privates VLAN (hier als VLAN "Privat B" bezeichnet) vorhanden, um VMware-Features wie vSAN und vMotion zu unterstützen und die Konnektivität zum NAS-Speicher (NAS - Network Attached Storage) herzustellen. Das VLAN als solches ist in zwei oder drei portierbare Teilnetze unterteilt. Das erste Teilnetz wird einer Kernelportgruppe für vMotion-Datenverkehr zugeordnet. Das bzw. die verbleibenden Teilnetze werden für den Speicherdatenverkehr genutzt und bei Verwendung von vSAN wird ein Teilnetz den Kernelportgruppen zugeordnet, die für vSAN-Datenverkehr genutzt werden. Bei Verwendung von NAS wird ein Teilnetz einer Portgruppe zugeordnet, die für NFS-Datenverkehr dediziert ist. Alle Teilnetze, die als Bestandteil einer automatisierten vCenter Server-Bereitstellung konfiguriert werden, verwenden verwaltete {{site.data.keyword.cloud_notm}}-Bereiche. Dadurch wird sichergestellt, dass eine beliebige IP-Adresse an jedes Rechenzentrum innerhalb des {{site.data.keyword.cloud_notm}}-Kontos geleitet werden kann, falls dies jetzt oder in Zukunft erforderlich sein sollte.
 
 Tabelle 1. VLAN- und Teilnetzzusammenfassung
 
 VLAN 	|Teilnetztyp 	|Beschreibung
 ---|---|---
-Öffentlich	|Primär 	|Physischen Hosts für öffentlichen Netzzugriff zugeordnet. Bei der Erstbereitstellung nicht verwendet.
+Öffentlich 	|Primär 	|Physischen Hosts für öffentlichen Netzzugriff zugeordnet. Bei der Erstbereitstellung nicht verwendet.
 Öffentlich	|Portierbar 	|Für Uplink- und NAT-Verwendung in customer-nsx-esg zugeordnet.
 Öffentlich	|Portierbar 	|Für Uplink-NAT-Verwendung in mgmt-nsx-esg zugeordnet.
 Öffentlich	|Portierbar 	|Bei Auswahl von Hybridity Bundle für Uplink-NAT-Verwendung in hcx-mgmt-esg zugeordnet.
-Privat A 	|Primär 	|Zugeordnet zu physischen Hosts, die von {{site.data.keyword.cloud_notm}} zugeordnet wurden. Von der Managementschnittstelle für vSphere-Managementdatenverkehr verwendet.
+Privat A 	|Primär 	  |Zugeordnet zu physischen Hosts, die von {{site.data.keyword.cloud_notm}} zugeordnet wurden. Von der Managementschnittstelle für vSphere-Managementdatenverkehr verwendet.
 Privat A 	|Portierbar 	|Zugeordnet zu virtuellen Maschinen, die als Managementkomponenten ausgeführt werden.
 Privat A 	|Portierbar 	|Zugeordnet zu NSX VTEP.
 Privat A 	|Portierbar 	|Zugeordnet zu HCX für die interne Verwendung, falls Hybridity Bundle ausgewählt ist.
 Privat A 	|Portierbar 	|Für Uplink-Verwendung in customer-nsx-esg zugeordnet.
 Privat A 	|Portierbar 	|Zugeordnet zu HCX, falls Hybridity Bundle ausgewählt ist.
-Privat B  |Primär	  |Bei der Erstbereitstellung nicht verwendet.
+Privat B	  |Primär	  |Bei der Erstbereitstellung nicht verwendet.
 Privat B 	|Portierbar 	|Zugeordnet für vSAN, falls verwendet.
 Privat B 	|Portierbar 	|Zugeordnet für NAS, falls verwendet.
 Privat B 	|Portierbar 	|Zugeordnet für vMotion.
 
-Dieses Design wird mit physischen Hosts und virtuellen Systeminstanzen (VSI) in VLANs bereitgestellt und so konfiguriert, dass als Standardroute auf den Back-End-Kundenrouter (Backend Customer Router, BCR) des privaten Netzes von {{site.data.keyword.cloud_notm}} verwiesen wird. Die Verwendung eines softwaredefinierten Netzbetriebs wird währenddessen durch VCS-Instanzen ermöglicht. Es ist zu beachten, dass alle von NSX erstellten Netzoverlays, die eine Weiterleitung an VLAN-Teilnetze einbeziehen, für die von {{site.data.keyword.cloud_notm}} verwalteten Router unbekannt sind und Sie möglicherweise statische Routen, Firewallregeln und NAT-Regeln erstellen müssen, damit die Netzflüsse ordnungsgemäß verwaltet werden können.
+Dieses Design wird mit physischen Hosts und virtuellen Systeminstanzen (VSI) in VLANs bereitgestellt und so konfiguriert, dass als Standardroute auf den Back-End-Kundenrouter (Backend Customer Router, BCR) des privaten Netzes von {{site.data.keyword.cloud_notm}} verwiesen wird. Die Verwendung eines softwaredefinierten Netzbetriebs wird währenddessen durch vCenter Server-Instanzen ermöglicht. Alle von NSX erstellten Netzoverlays, die eine Weiterleitung an VLAN-Teilnetze einbeziehen, sind für die von {{site.data.keyword.cloud_notm}} verwalteten Router unbekannt und Sie müssen möglicherweise statische Routen, Firewallregeln und NAT-Regeln erstellen, damit die Netzflüsse ordnungsgemäß verwaltet werden können.
 
-Die privaten Netzverbindungen werden so konfiguriert, dass sie Jumbo-Frames mit einer MTU-Größe von 9000 verwenden, was die Leistung für große Datenübertragungen wie für Speicher- und vMotion-Operationen zu verbessert. Dies ist der maximale MTU-Wert, der in VMware und von {{site.data.keyword.cloud_notm}} zulässig ist. Die öffentlichen Netzverbindungen verwenden den Standardwert für Ethernet-MTU von 1500. Dies muss beibehalten werden. Änderungen können zur Paketfragmentierung bei der Übertragung im Internet führen.
+Die privaten Netzverbindungen werden so konfiguriert, dass sie Jumbo-Frames mit einer MTU-Größe von 9000 verwenden, was die Leistung für große Datenübertragungen wie für Speicher- und vMotion-Operationen zu verbessert. Dies ist der maximale MTU-Wert, der in VMware und von {{site.data.keyword.cloud_notm}} zulässig ist. Die öffentlichen Netzverbindungen verwenden den Standardwert für Ethernet-MTU von 1500. Dieser Wert muss beibehalten werden, da Änderungen zu einer Paketfragmentierung bei der Übertragung über das Internet führen können.
 
 ### Zugehörige Links
 
-* [Übersicht über VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

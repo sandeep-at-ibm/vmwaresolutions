@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2018-01-14"
 
 ---
 
 # Refactorizar y añadir middleware a IBM Cloud Private
 
-Ahora que Stock Trader se ejecutan en un contenedor y que Jane está satisfecha con los microservicios actuales, ella y Todd trabajan en cómo mejorar la aplicación con prestaciones adicionales. Mediante la refactorización de los microservicios de Stock Trader para manejar la actividad y la escalabilidad en aumento, ambos ven la necesidad de añadir middleware a {{site.data.keyword.cloud}} Private (ICP). Parte del middleware ya existía en su centro de datos, por lo que se trata de un ejercicio de replanteamiento de la plataforma con la adición de cierto middleware.
+Ahora que Stock Trader se ejecutan en un contenedor y que Jane está satisfecha con los microservicios actuales, ella y Todd trabajan en cómo mejorar la aplicación con prestaciones adicionales. Mediante la refactorización de los microservicios de Stock Trader para manejar la actividad y la escalabilidad en aumento, ambos ven la necesidad de añadir middleware a {{site.data.keyword.cloud}} Private. Parte del middleware ya existía en su centro de datos, por lo que se trata de un ejercicio de replanteamiento de la plataforma con la adición de cierto middleware.
 
 Figura 1. Refactorización de Stock Trader
 ![Refactorización de Stock Trader](vcscontent-refactor.svg)
@@ -19,18 +19,18 @@ Esta refactorización de la solución genera una plataforma común en la que eje
 
 ## Opciones de contenido
 
-ICP ofrece una amplia selección de contenidos, y tanto Todd como Jane deben decidir cuál se adapta mejor a sus necesidades. Según observa Todd en el catálogo de ICP, la mayor parte del contenido se puede probar, aunque cierto contenido se tiene que adquirir y descargar desde Passport Advantage.
+{{site.data.keyword.cloud_notm}} ofrece una amplia selección de contenidos, y tanto Todd como Jane deben decidir cuál se adapta mejor a sus necesidades. Según observa Todd en el catálogo de {{site.data.keyword.cloud_notm}}, la mayor parte del contenido se puede probar, aunque cierto contenido se tiene que adquirir y descargar desde Passport Advantage.
 
 * Cadena de herramientas y tiempos de ejecución
-  -	UrbanCode Deploy
-  -	Microclimate
-  -	Jenkins (código abierto)
-  -	IBM WebSphere Liberty (MicroProfile, web Profile, Java Platform, Enterprise Edition Profile)
-  -	Open Liberty (código abierto)
-  -	Tiempo de ejecución Node.js (código abierto)
-  -	Tiempo de ejecución Swift (código abierto)
+  - UrbanCode Deploy
+  - Microclimate
+  - Jenkins (código abierto)
+  - IBM WebSphere Liberty (MicroProfile, Web Profile, Java Platform, Enterprise Edition Profile)
+  - Open Liberty (código abierto)
+  - Tiempo de ejecución Node.js (código abierto)
+  - Tiempo de ejecución Swift (código abierto)
   - nginx (código abierto)
-  -	IBM WebSphere Application Server for ICP VM Quickstarter Community education.
+  - IBM WebSphere Application Server for {{site.data.keyword.cloud_notm}} Private VM Quickstarter Community Edition
 
 * Integración
   -	IBM Integration Bus
@@ -98,13 +98,13 @@ ICP ofrece una amplia selección de contenidos, y tanto Todd como Jane deben dec
   -	Compliance Assist
 
 * Gestión
-  -	IBM Netcool - integración (prueba para ICP Services – registro de sucesos y supervisión de alertas)
+  -	IBM Netcool - integración (prueba para {{site.data.keyword.icpfull_notm}} Services – registro de sucesos y supervisión de alertas)
   - {{site.data.keyword.cloud_notm}} App Management 2018.2.0
-  -	IBM Netcool - integración (prueba para gestionar sucesos de ICP. Se vende con el producto IBM
+  -	IBM Netcool - integración (prueba para gestionar sucesos de {{site.data.keyword.icpfull_notm}}. Se vende con el producto IBM
 Netcool Insights)
   - {{site.data.keyword.cloud_notm}} Event Management for IBM
 Cloud Private (licencia de ILAN para descubrimiento y prueba desde el catálogo)
-  - IBM Operations Analytics Predictive Insights Mediation Pack (gestionar métricas de supervisión de ICP. Con licencia de ILAN para descubrimiento y prueba desde el catálogo)  -	IBM Operations Analytics Predictive Insights Mediation Pack
+  - IBM Operations Analytics Predictive Insights Mediation Pack (gestionar métricas de supervisión de {{site.data.keyword.icpfull_notm}}. Con licencia de ILAN para descubrimiento y prueba desde el catálogo)  -	IBM Operations Analytics Predictive Insights Mediation Pack
 (se vende con el producto Predictive Insights)
 
 * Redes
@@ -135,7 +135,7 @@ Para Stock Trader, Todd ha decidido añadir todo el middleware. En la siguiente 
 ### Db2
 Todd empieza con Db2 porque ya están utilizando Db2 y pueden dedicar un Db2 basado en contenedor a cada solución.
 
-Puesto que Todd ha preparado ICP, ya tiene definida su política de seguridad de pod. Todd se puede centrar en la creación de un secreto de extracción de imágenes de docker:
+Puesto que Todd ha preparado {{site.data.keyword.icpfull_notm}}, ya tiene definida su política de seguridad de pod. Todd se puede centrar en la creación de un secreto de extracción de imágenes de docker:
 
 `kubectl create secret docker-registry db2dockerregistry
 --docker-username=dockeruser
@@ -144,7 +144,7 @@ Puesto que Todd ha preparado ICP, ya tiene definida su política de seguridad de
 
 Por último, puesto que Todd ha decidido utilizar NFS, ha creado volúmenes NFS basados en los requisitos del archivo readme:
 
-Va al panel de control de ICP y crea un volumen persistente. ¿De qué tamaño? Examina el archivo readme para saberlo:
+Va al panel de control de {{site.data.keyword.icpfull_notm}} y crea un volumen persistente. ¿De qué tamaño? Examina el archivo readme para saberlo:
 
 `capacity=20Gi
 RWO
@@ -177,7 +177,7 @@ Stock Trader.
 Todd y Jane necesitan software de mensajería, y, como ya utilizan MQ, esta constituye una excelente opción. Además, ocupa poco y la versión de desarrollo se puede poner a disponibilidad de cada desarrollador, lo que ahorra un tráfico de producción valioso. La instalación de MQ es muy sencilla. Todd crea el almacenamiento igual que ha hecho con
 Db2 y luego instala el diagrama de helm:
 
-Panel de control de ICP > Catálogo > empezar a escribir en MQ > seleccionar
+Panel de control de {{site.data.keyword.icpfull_notm}} > Catálogo > empezar a escribir en MQ > seleccionar
 ibm-mqadvanced-server-dev Revisar el archivo readme y luego pulsar Configurar
 Proporcionar o verificar los siguientes valores de entrada:
 

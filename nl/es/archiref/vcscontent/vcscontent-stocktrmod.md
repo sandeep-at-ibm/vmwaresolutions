@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2018-11-15"
 
 El siguiente paso en el proceso de modernización de Stock Trader es transformar la carga de trabajo que se ejecuta en máquinas virtuales (VM) en carga de trabajo que se ejecuta en contenedores.
 
-Para continuar, Todd y Jane ejecutan Transformation Advisor para analizar la carga de trabajo de Stock Trader, identificar cualquier complejidad de la migración y recomendar cambios. Cuando están preparados, utilizan Transformation Advisor para desplegar Stock Trader en los contenedores Liberty que se ejecutan en {{site.data.keyword.cloud}} Private (ICP).
+Para continuar, Todd y Jane ejecutan Transformation Advisor para analizar la carga de trabajo de Stock Trader, identificar cualquier complejidad de la migración y recomendar cambios. Cuando están preparados, utilizan Transformation Advisor para desplegar Stock Trader en los contenedores Liberty que se ejecutan en {{site.data.keyword.icpfull_notm}}.
 
 ## Preparar IBM Cloud Private
 
-En primer lugar Todd tiene que instalar ICP. Puesto que Todd tiene su VMware en el entorno {{site.data.keyword.cloud_notm}}, decide utilizar la oferta {{site.data.keyword.cloud_notm}} Private Hosted, que le proporciona una instancia de ICP completa que se ejecuta en las máquinas virtuales VMware en {{site.data.keyword.cloud_notm}}.
+En primer lugar Todd tiene que instalar {{site.data.keyword.icpfull_notm}}. Puesto que Todd tiene su VMware en el entorno {{site.data.keyword.cloud_notm}}, decide utilizar la oferta {{site.data.keyword.cloud_notm}} Private Hosted, que le proporciona una instancia de {{site.data.keyword.icpfull_notm}} completa que se ejecuta en las máquinas virtuales VMware en {{site.data.keyword.cloud_notm}}.
 
 El panel de control predeterminado proporciona una interfaz de usuario completa para gestionar el clúster de Kubernetes, la seguridad, el almacenamiento y el despliegue desde el catálogo.
 
@@ -48,7 +48,7 @@ A continuación, Todd añade la siguiente línea:
 
 `systemctl restart nfs-kernel-server`
 
-A continuación, Todd ejecuta el siguiente mandato en cada VM para instalar NFS en cada VM de nodo trabajador de ICP:
+A continuación, Todd ejecuta el siguiente mandato en cada VM para instalar NFS en cada VM de nodo trabajador de {{site.data.keyword.icpfull_notm}}:
 
 `sudo apt-get update`
 
@@ -68,7 +68,7 @@ Siempre que se necesite un nuevo volumen NFS, Todd ejecuta el siguiente mandato 
 
 ### Preparar la seguridad de imágenes
 
-En ICP V3.1, la seguridad se ha mejorado al requerir una política de imágenes para que se pueda incorporar una imagen en una instancia de ICP. La mejora requiere que añada una política de imagen para el lugar en que residen las imágenes de IBM, *dockerhub/ibmcom*, y en el almacén de docker.
+En {{site.data.keyword.icpfull_notm}} V3.1, la seguridad se ha mejorado al requerir una política de imágenes para que se pueda incorporar una imagen en una instancia de {{site.data.keyword.icpfull_notm}}. La mejora requiere que añada una política de imagen para el lugar en que residen las imágenes de IBM, *dockerhub/ibmcom*, y en el almacén de docker.
 
 Se proporciona la política ibmcloud-default-cluster-image-policy de forma predeterminada, que cubre cualquier imagen de IBM de docker.io/ibmcom/\*, pero, como Db2 y otro contenido de IBM se encuentra en el almacén de Docker, se necesita otra política de imágenes para el almacén de docker, *docker.io/store/ibmcorp/*.
 
@@ -79,7 +79,7 @@ Center](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/manage_cluster/
 
 ## Desplegar Transformation Advisor y Microclimate
 
-Cuando Todd tiene ICP en ejecución, instala Transformation Advisor, junto con Microclimate. Todd abre el [catálogo](https://www.ibm.com/cloud/private/developer) y ve todo el contenido disponible.
+Cuando Todd tiene {{site.data.keyword.icpfull_notm}} en ejecución, instala Transformation Advisor, junto con Microclimate. Todd abre el [catálogo](https://www.ibm.com/cloud/private/developer) y ve todo el contenido disponible.
 
 Todd busca Transformation Advisor y Microclimate y los instala mediante las instrucciones del archivo readme que se proporciona cuando pulsa el diagrama de helm.
 

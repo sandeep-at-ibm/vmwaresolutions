@@ -2,17 +2,20 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2018-12-11"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Consideraciones sobre red para instancias de vCenter Server con el paquete híbrido (Hybridity)
 
 Revise la siguiente información para obtener detalles sobre las consideraciones y requisitos de red para las instancias de VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity). Asegúrese de cumplir los requisitos para que la instancia funcione correctamente.
 
 ## Componentes de red para instancias de vCenter Server con el paquete híbrido (Hybridity)
+{: faq}
 
 Para revisar los componentes de red que se incluyen en la instancia del vCenter Server con el paquete híbrido (Hybridity), consulte [Especificaciones técnicas para la instancia de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances).
 

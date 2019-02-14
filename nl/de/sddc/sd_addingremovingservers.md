@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -70,8 +70,8 @@ Eine Cloud Foundation-Instanz kann bis zu fünf Cluster umfassen, von denen eine
 
 ### Zugehörige Links
 
-* [Cloud Foundation-Teileliste](sd_bom.html)
-* [Voraussetzungen und Planung für Cloud Foundation-Instanzen](sd_planning.html)
-* [Cluster für Cloud Foundation-Instanzen hinzufügen, anzeigen und löschen](sd_addingviewingclusters.html)
+* [Cloud Foundation-Teileliste](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [Voraussetzungen und Planung für Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Cluster für Cloud Foundation-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
 * [Versetzen eines Hosts in den Wartungsmodus](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Prozessorunterstützung für EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

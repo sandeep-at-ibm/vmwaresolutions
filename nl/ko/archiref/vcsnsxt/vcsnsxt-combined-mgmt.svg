@@ -409,7 +409,6 @@
    style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
    id="tspan4416">및</tspan>
 
-
  NTP Server</text>
     </g>
     <path
@@ -857,10 +856,10 @@
 </text>
       <text
          x="529.5"
-         y="97.5"
+         y="99.5"
          id="text250">
         <tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
            id="tspan4428">클러스터</tspan>
       </text>
     </g>

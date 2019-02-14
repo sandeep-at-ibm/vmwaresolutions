@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -187,7 +187,7 @@ Tabelle 9. IP-Konfiguration für DLR und Workload-ESG
 
 NAT wird im Workload-ESG verwendet, um die Traversierung des Netzverkehrs zwischen zwei IP-Adressräumen zu ermöglichen. Für das ESG muss NAT die Kommunikation nicht nur zu Internetzielen ermöglichen, sondern zu allen IP-Bereichen, die auf {{site.data.keyword.cloud_notm}} zurückgehen. Bei diesem Design kann der Workloaddatenverkehr ins Internet gelangen, aber nicht zum Management- oder einem der {{site.data.keyword.cloud_notm}}-Netze. Daher muss im Workload-ESG nur ein SNAT definiert sein. Das gesamte Workload-portierbare Teilnetz wird für die Traversierung durch SNAT konfiguriert.
 
-Auch wenn es möglich ist, NAT zu verwenden, um die Workloadkommunikation über mehrere Instanzen von Cloud Foundation oder vCenter Server zu ermöglichen, ist dies nicht mehr praktikabel, wenn viele Workloads über Instanzen hinweg verbunden werden müssen. Beispiele für die Verwendung erweiterter NSX-Funktionen zum Erstellen eines L2-Overly-Transit-Netzes über Cloud Foundation- oder vCenter Server-Instanzen hinweg finden Sie unter [Architektur mit mehreren Standorten](multi_site.html).
+Auch wenn es möglich ist, NAT zu verwenden, um die Workloadkommunikation über mehrere Instanzen von Cloud Foundation oder vCenter Server zu ermöglichen, ist dies nicht mehr praktikabel, wenn viele Workloads über Instanzen hinweg verbunden werden müssen. Beispiele für die Verwendung erweiterter NSX-Funktionen zum Erstellen eines L2-Overly-Transit-Netzes über Cloud Foundation- oder vCenter Server-Instanzen hinweg finden Sie unter [Architektur mit mehreren Standorten](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html).
 
 Tabelle 10. Workload-ESG-NAT-Regeln
 
@@ -240,5 +240,5 @@ Standardmäßig ist die Protokollierung für alle neuen NSX Edge-Appliances akti
 
 ### Zugehörige Links
 
-* [Design von NSX Edge Services Gateway](nsx_design.html)
-* [Architektur mit mehreren Standorten](multi_site.html)
+* [NSX Edge Services Gateway-Design](/docs/services/vmwaresolutions/archiref/nsx/nsx_design.html)
+* [Architektur mit mehreren Standorten](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,7 +41,7 @@ Questo livello è costituito da vCenter Server, che rappresenta il livello di ge
 
 Nella console {{site.data.keyword.vmwaresolutions_short}}, puoi espandere e contrarre la capacità delle tue istanze utilizzando la funzionalità di aggiunta e rimozione di server ESXi. Inoltre, sono disponibili anche funzioni di gestione del ciclo di vita come l'applicazione di aggiornamenti e l'aggiornamento dei componenti VMware nell'ambiente ospitato.
 
-Per ulteriori informazioni sull'architettura, vedi [Panoramica della soluzione](../archiref/solution/solution_overview.html).
+Per ulteriori informazioni sull'architettura, vedi [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Specifiche tecniche per le istanze Cloud Foundation
 
@@ -53,17 +53,18 @@ Gli addebiti sostenuti per hardware, rete, macchine virtuali e archiviazione pot
 ### Bare Metal Server
 
 Puoi ordinare {{site.data.keyword.baremetal_short}} {{site.data.keyword.cloud_notm}} con una delle seguenti configurazioni:
-*  **Skylake**: server di generazione 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series) con i tuoi modello CPU e dimensione RAM selezionati.   
-*  **Broadwell**: server di generazione 2-CPU Intel Broadwell (Intel Xeon E5-2600 v4 series) con i tuoi modello CPU e dimensione RAM selezionati.   
-   Se intendi utilizzare l'archiviazione vSAN, la configurazione richiede quattro {{site.data.keyword.baremetal_short}}.
-   {:note}
+*  **Skylake**: server di generazione 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series) con il modello di CPU e la dimensione della RAM da te selezionati.   
+*  **Broadwell**: server di generazione 2-CPU Intel Broadwell (Intel Xeon E5-2600/E7-4800 series) con il modello di CPU e la dimensione della RAM da te selezionati.
+
+Se intendi utilizzare l'archiviazione vSAN, la configurazione richiede quattro {{site.data.keyword.baremetal_short}}.
+{:note}
 
 ### Rete
 
 Vengono ordinati i seguenti componenti di rete:
 * Doppi uplink di rete privata e pubblica da 10 Gbps
 * Tre VLAN (Virtual LAN): una VLAN pubblica e due VLAN private
-* Gateway dei servizi edge (ESG) VMware NSX sicuro dei servizi di gestione per il traffico di gestione HTTPS in uscita, distribuito da IBM come parte della tipologia di rete di gestione. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. Per ulteriori informazioni, vedi [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* Gateway dei servizi edge (ESG) VMware NSX sicuro dei servizi di gestione per il traffico di gestione HTTPS in uscita, distribuito da IBM come parte della tipologia di rete di gestione. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. Per ulteriori informazioni, vedi [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
   Non puoi accedere a questo ESG e non puoi usarlo. Se lo modifichi, potresti non essere in grado di gestire l'istanza Cloud Foundation dalla console {{site.data.keyword.vmwaresolutions_short}}. Inoltre, l'utilizzo di un firewall o la disabilitazione delle comunicazioni ESG ai componenti di gestione IBM esterni comporterà l'inutilizzabilità di {{site.data.keyword.vmwaresolutions_short}}.
   {:important}
@@ -100,7 +101,7 @@ Ogni nodo di espansione Cloud Foundation distribuisce e comporta addebiti per i 
 
 ### Hardware per i nodi di espansione
 
-Un Bare Metal Server {{site.data.keyword.cloud_notm}} con la configurazione presentata in [Specifiche tecniche per le istanze Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+Un Bare Metal Server {{site.data.keyword.cloud_notm}} con la configurazione presentata in [Specifiche tecniche per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Licenze e tariffe per i nodi di espansione
 
@@ -124,9 +125,9 @@ Devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel
 
 ### Link correlati
 
-* [Distinta base del software Cloud Foundation](sd_bom.html)
-* [Pianificazione per le istanze Cloud Foundation](sd_planning.html)
-* [Ordine di istanze Cloud Foundation](sd_orderinginstance.html)
+* [Distinta base del software Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [Pianificazione per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
 * [Centro di documentazione di VMware vSphere](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [Centro di documentazione di VMware NSX 6](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764)

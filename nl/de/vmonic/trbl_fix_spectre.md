@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,7 +35,7 @@ Instanzen aus V2.0 oder höher wurden mit VMware vSphere 6.5 und VMware vCenter 
 
 ### In V2.0 oder einem höheren Release bereitgestellte Cloud Foundation-Instanzen
 
-Um die erforderlichen Patches für VMware vSphere 6.5 und VMware vCenter Server 6.5 anzuwenden, müssen Sie für Ihre Cloud Foundation-Instanzen ein Upgrade auf das neueste Patch-Bundle von VMware durchführen. Für alle vorhandenen Instanzen und ESXi-Server werden Sie aufgefordert, die Patches auf der Seite **Update und Patch** in der {{site.data.keyword.vmwaresolutions_full}}-Konsole anzuwenden. Weitere Informationen finden Sie unter [Updates auf Cloud Foundation-Instanzen anwenden](../sddc/sd_applyingupdates.html).
+Um die erforderlichen Patches für VMware vSphere 6.5 und VMware vCenter Server 6.5 anzuwenden, müssen Sie für Ihre Cloud Foundation-Instanzen ein Upgrade auf das neueste Patch-Bundle von VMware durchführen. Für alle vorhandenen Instanzen und ESXi-Server werden Sie aufgefordert, die Patches auf der Seite **Update und Patch** in der {{site.data.keyword.vmwaresolutions_full}}-Konsole anzuwenden. Weitere Informationen finden Sie unter [Updates auf Cloud Foundation-Instanzen anwenden](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html).
 
 ### In V2.0 oder einem höheren Release bereitgestellte VMware vSphere-Instanzen
 
@@ -63,6 +63,6 @@ Bei VMware vSphere 6.0 und VMware vCenter Server 6.0 müssen Sie die Patches (ES
 
 ### Zugehörige Links
 
-* [Updates auf Cloud Foundation-Instanzen anwenden](../sddc/sd_applyingupdates.html)
+* [Updates auf Cloud Foundation-Instanzen anwenden](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)
 * [Secure against recent security vulnerabilities](https://www.ibm.com/blogs/bluemix/2018/01/ibm-cloud-spectre-meltdown-vulnerabilities/)
 * [Site für VMware-Produktpatches](https://my.vmware.com/group/vmware/patch)

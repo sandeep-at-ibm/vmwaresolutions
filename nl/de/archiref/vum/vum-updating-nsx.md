@@ -2,26 +2,26 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2019-01-23"
 
 ---
 
 # NSX aktualisieren
 
-Dieser Abschnitt wurde zu diesem Dokument hinzugefügt, um Ihnen einen Eindruck vom Aktualisierungsprozess für NSX zu geben. Weitere Informationen zum Aktualisierungsprozess finden Sie in dem VMware-Handbuch für die NSX-Version, auf die Sie das Upgrade durchführen.
+Die folgenden Informationen sind ein Beispiel für den Aktualisierungsprozess für NSX. Weitere Informationen zum Aktualisierungsprozess finden Sie in dem VMware-Handbuch für die NSX-Version, auf die Sie das Upgrade durchführen.
 
 Wenn Sie ein Upgrade für NSX und vSphere durchführen müssen, sollte zunächst das NSX-Upgrade und dann das vSphere-Upgrade durchgeführt werden, da die NSX-VIBs für die Version von ESXi spezifisch sind, die auf dem Host installiert ist. Es wird allerdings empfohlen, VUM zu verwenden, wie dies in diesem Dokument dokumentiert ist. Beim manuellen Verfahren ist wie folgt Host für Host vorzugehen:
 
 1. **Upgrade von ESXi** - Nach Abschluss des ESXi-Upgrades beendet der Host den Wartungsmodus. Sie können die mit logischen Switches verbundenen VMs jedoch erst auf den Host verschieben, wenn der nächste Schritt durchgeführt wurde.
 2. **Upgrade der NSX-VIBs** - Nachdem ein Upgrade der VIBs erfolgt ist und sich der Host nicht mehr im Wartungsmodus befindet, können Sie die mit logischen Switches verbundenen VMs auf den Host verschieben.
 
-NSX wird durch ein Update von NSX Manager unter Verwendung eines Downloads von _my.vmware.com_ aktualisiert. Daher benötigen Sie ein Konto, um das Update herunterladen zu können. Wenn Sie die {{site.data.keyword.cloud}}-Abonnementlizenzierung mit Ihrer VMware vCenter Server on {{site.data.keyword.cloud_notm}}-Instanz nutzen, können Sie die Aktualisierungen nicht mit Ihrem **my.vmware.com**-Konto herunterladen. Daher müssen Sie den [IBM Support kontaktieren](../../vmonic/trbl_support.html).
+NSX wird durch ein Update von NSX Manager unter Verwendung eines Downloads von _my.vmware.com_ aktualisiert. Daher benötigen Sie ein Konto, um das Update herunterladen zu können. Wenn Sie die {{site.data.keyword.cloud}}-Abonnementlizenzierung mit Ihrer VMware vCenter Server on {{site.data.keyword.cloud_notm}}-Instanz nutzen, können Sie die Aktualisierungen nicht mit Ihrem **my.vmware.com**-Konto herunterladen. Daher müssen Sie den [IBM Support kontaktieren](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
-Bevor Sie mit dem Upgrade beginnen, lesen Sie die NSX-Releaseinformationen, da dort die bekannten Upgradeprobleme und Problemumgehungen dokumentiert sind. Prüfen Sie anhand der Releaseinformationen, ob vCenter die neuen Systemvoraussetzungen für NSX erfüllt.
+Vor Beginn des Upgrades überprüfen Sie die NSX-Hinweise auf Upgrade-Fehler und Ausweichlösungen. Prüfen Sie anhand der Releaseinformationen, ob vCenter die neuen Systemvoraussetzungen für NSX erfüllt.
 
-Wenn Sie zusätzliche Software von VMware-Partnern installiert haben, ziehen Sie die Partnerdokumentation bei Fragen zu Kompatibilität und Upgradedetails zurate. Wenn Sie primären und sekundären Instanzen von vCenter Server bereitgestellt haben und über eine Cross-vCenter NSX-Umgebung verfügen, finden Sie in den Releaseinformationen den richtigen Upgradeprozess.
+Wenn Sie zusätzliche Software von VMware-Business Partnern installiert haben, ziehen Sie die Business Partner-Dokumentation bei Fragen zu Kompatibilität und Upgradedetails zurate. Wenn Sie primären und sekundären Instanzen von vCenter Server bereitgestellt haben und über eine Cross-vCenter NSX-Umgebung verfügen, finden Sie in den Releaseinformationen den richtigen Upgradeprozess.
 
 In einer Cross-vCenter NSX-Umgebung wird die primäre NSX Manager-Appliance zuerst aktualisiert, gefolgt von allen sekundären NSX Manager-Appliances.
 **Herabstufungen (Downgrades) werden nicht unterstützt:** Führen Sie vor der Durchführung eines Upgrades immer eine Sicherung von NSX Manager durch. Alle NSX Edge-Konfigurationen, logischen Router und Edge Services Gateways werden im Rahmen der NSX Manager-Sicherung gesichert.
@@ -43,7 +43,7 @@ Es gilt folgender Workflow:
   - Melden Sie sich bei der virtuellen Appliance von NSX Manager an, indem Sie die IP-Adresse und die Berechtigungsnachweise verwenden, die in der IC4VS-Konsole dokumentiert sind, und klicken Sie auf die Schaltfläche "Upgrade" auf der Startseite.
   - Melden Sie sich bei NSX Manager an.
   - Klicken Sie unter **Appliance-Management** auf **Sicherung und Wiederherstellung**.
-  - Klicken Sie auf "Sichern" und geben Sie einen entsprechenden Dateinamen ein. Beachten Sie, dass VMware die erneute Installation der NSX Manager-Appliance empfiehlt, bevor NSX Manager-Daten wiederhergestellt werden. Auch wenn eine Wiederherstellungsoperation für eine vorhandene NSX Manager-Appliance möglicherweise ausgeführt werden kann, wird dies doch offiziell nicht unterstützt. Am besten ist es, sich die IP-Einstellungen für die NSX Manager-Appliance zu notieren, sodass sie verwendet werden können, um Informationen zu IP-Adressen und Sicherungsposition für die neu bereitgestellte NSX Manager-Appliance anzugeben.
+  - Klicken Sie auf "Sichern" und geben Sie einen entsprechenden Dateinamen ein. VMware empfiehlt, die NSX-Manager-Appliance erneut zu installieren, bevor Sie NSX Manager-Daten wiederherstellen. Auch wenn eine Wiederherstellungsoperation für eine vorhandene NSX Manager-Appliance möglicherweise ausgeführt werden kann, wird dies doch offiziell nicht unterstützt. Am besten ist es, sich die IP-Einstellungen für die NSX Manager-Appliance zu notieren, sodass sie verwendet werden können, um Informationen zu IP-Adressen und Sicherungsposition für die neu bereitgestellte NSX Manager-Appliance anzugeben.
   - Klicken Sie in der rechten oberen Ecke auf **Bundle hochladen** und laden Sie die Datei hoch, die Sie von _my.vmware.com_ heruntergeladen haben.
   - Lesen Sie die Upgradeinformationen und wählen Sie, ob Sie SSH aktivieren und am VMware Customer Experience Improvement Program teilnehmen möchten.
   - Klicken Sie auf **Upgrade**.
@@ -64,4 +64,4 @@ Es gilt folgender Workflow:
 ### Zugehörige Links
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

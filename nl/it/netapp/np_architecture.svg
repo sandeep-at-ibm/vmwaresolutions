@@ -29,15 +29,15 @@
 	<rect x="0.3" y="0.9" class="st3" width="186.9" height="190.5"/>
 </g>
 <g id="Layer_4">
-	<text transform="matrix(1 0 0 1 8.0529 35.8409)" class="st4 st5 st6">Common Services</text>
-	<text transform="matrix(1 0 0 1 42.7579 75.3497)"><tspan x="0" y="0" class="st4 st5 st7">Authentication</tspan><tspan x="35.2" y="31.4" class="st4 st5 st7">DNS</tspan><tspan x="36.2" y="62.8" class="st4 st5 st7">NTP</tspan><tspan x="-17.1" y="94.3" class="st4 st5 st7">Certificate Authority</tspan></text>
+	<text transform="matrix(1 0 0 1 8.0529 35.8409)" class="st4 st5 st6">Servizi comuni</text>
+	<text transform="matrix(1 0 0 1 42.7579 75.3497)"><tspan x="0" y="0" class="st4 st5 st7">Autenticazione</tspan><tspan x="35.2" y="31.4" class="st4 st5 st7">DNS</tspan><tspan x="36.2" y="62.8" class="st4 st5 st7">NTP</tspan><tspan x="-17.1" y="94.3" class="st4 st5 st7">Autorità di certificazione</tspan></text>
 </g>
-<text transform="matrix(1 0 0 1 332.3229 38.8409)"><tspan x="0" y="0" class="st4 st5 st8">Virtualization Management</tspan><tspan x="39.7" y="29.8" class="st4 st5 st9">VMware vCenter Server</tspan></text>
-<text transform="matrix(1 0 0 1 205.0602 139.9747)"><tspan x="0" y="0" class="st4 st5 st10">Compute Virtualization</tspan><tspan x="27.9" y="20.9" class="st4 st5 st11">VMware vSphere</tspan></text>
-<text transform="matrix(1 0 0 1 561.7472 141.4337)" class="st4 st5 st10">NetApp  ONTAP  Select</text>
-<text transform="matrix(1 0 0 1 385.2491 140.9747)"><tspan x="0" y="0" class="st4 st5 st10">Network Virtualization</tspan><tspan x="34.2" y="20.9" class="st4 st5 st11">VMware NSX</tspan><tspan x="108.9" y="18.3" class="st4 st5 st11">  </tspan></text>
-<text transform="matrix(1 0 0 1 187.5363 246.7403)"><tspan x="0" y="0" class="st4 st5 st12">Physical Infrastructure on IBM</tspan><tspan x="283.7" y="0" class="st4 st5 st13"> </tspan><tspan x="290.4" y="0" class="st4 st5 st14">Cloud</tspan></text>
-<text transform="matrix(1 0 0 1 200.6517 294.1616)" class="st4 st5 st15">Compute</text>
-<text transform="matrix(1 0 0 1 334.018 294.1616)" class="st4 st5 st15">Storage </text>
-<text transform="matrix(1 0 0 1 449.0178 293.2401)" class="st4 st5 st15">Network</text>
+<text transform="matrix(1 0 0 1 332.3229 38.8409)"><tspan x="0" y="0" class="st4 st5 st8">Gestione della virtualizzazione</tspan><tspan x="39.7" y="29.8" class="st4 st5 st9">VMware vCenter Server</tspan></text>
+<text transform="matrix(1 0 0 1 205.0602 139.9747)"><tspan x="0" y="0" class="st4 st5 st10">Virtualizzazione di calcolo</tspan><tspan x="27.9" y="20.9" class="st4 st5 st11">VMware vSphere</tspan></text>
+<text transform="matrix(1 0 0 1 561.7472 141.4337)" class="st4 st5 st10">NetApp ONTAP Select</text>
+<text transform="matrix(1 0 0 1 385.2491 140.9747)"><tspan x="0" y="0" class="st4 st5 st10">Virtualizzazione di rete</tspan><tspan x="34.2" y="20.9" class="st4 st5 st11">VMware NSX</tspan><tspan x="108.9" y="18.3" class="st4 st5 st11">  </tspan></text>
+<text transform="matrix(1 0 0 1 187.5363 246.7403)"><tspan x="0" y="0" class="st4 st5 st12">Infrastruttura fisica su IBM</tspan><tspan x="283.7" y="0" class="st4 st5 st13"> </tspan><tspan x="290.4" y="0" class="st4 st5 st14">Cloud</tspan></text>
+<text transform="matrix(1 0 0 1 200.6517 294.1616)" class="st4 st5 st15">Calcolo</text>
+<text transform="matrix(1 0 0 1 334.018 294.1616)" class="st4 st5 st15">Archiviazione </text>
+<text transform="matrix(1 0 0 1 449.0178 293.2401)" class="st4 st5 st15">Rete</text>
 </svg>

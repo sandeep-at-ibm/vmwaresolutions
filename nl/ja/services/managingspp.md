@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-19"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -21,8 +21,8 @@ lastupdated: "2018-07-19"
 IBM Spectrum Protect Plus を最新バージョンに更新する責任は、ユーザー側にあります。 必要な更新は、[IBM Spectrum Protect Plus サポート](https://www.ibm.com/mysupport/s/topic/0TO50000000IQWtGAO/spectrum-protect-plus)のページからダウンロードできます。
 
 詳しくは、以下のトピックを参照してください。
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](../sddc/sd_addingremovingservices.html)
-* [vCenter Server インスタンスのサービスの注文、表示、削除](../vcenter/vc_addingremovingservices.html)
+* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ## IBM Spectrum Protect Plus VM のオペレーティング・システムの更新
 
@@ -30,6 +30,6 @@ IBM Spectrum Protect Plus VM のオペレーティング・システムを更新
 
 ### 関連リンク
 
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} の概要](spp_considerations.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/spp_considerations.html)
 * [How to increase vsnap storage for IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)
 * [IBM Spectrum Protect Plus の資料](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)

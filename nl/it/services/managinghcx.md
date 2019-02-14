@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -17,7 +17,7 @@ Per gestire il servizio HCX on {{site.data.keyword.cloud}}, devi accedere alla c
 2. Per accedere alla console cloud HCX, fai clic su **Visualizza console cloud HCX** nella pagina dei dettagli del servizio HCX on {{site.data.keyword.cloud_notm}} ed esegui quindi l'accesso utilizzando le credenziali di vCenter Server.
 3. Per accedere alla console di gestione HCX Manager, fai clic su **Visualizza console di gestione HCX Manager** nella pagina dei dettagli del servizio HCX on {{site.data.keyword.cloud_notm}} ed esegui quindi l'accesso utilizzando le credenziali di HCX Manager elencate nella stessa pagina dei dettagli del servizio.
 
-Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html).
+Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html).
 
 ## Applicazione degli aggiornamenti a HCX on IBM Cloud
 
@@ -25,11 +25,11 @@ HCX on {{site.data.keyword.cloud_notm}} viene distribuito con l'ultima build tes
 
 Per applicare eventuali correzioni di manutenzione trasmesse al tuo ambiente, devi utilizzare la console di gestione HCX Manager nel tuo data center in loco e nella tua istanza vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle.
 
-Se non vedi un aggiornamento di build previsto, hai problemi con HCX o vuoi che l'ultima build di HCX venga trasmessa immediatamente al tuo sistema, apri un ticket di supporto seguendo la procedura in [Come contattare il supporto IBM](../vmonic/trbl_support.html).
+Se non vedi un aggiornamento di build previsto, hai problemi con HCX o vuoi che l'ultima build di HCX venga trasmessa immediatamente al tuo sistema, apri un ticket di supporto seguendo la procedura in [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ### Link correlati
 
-* [Panoramica di HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
-* [Glossario dei termini HCX](hcx_glossary.html)
+* [Panoramica di HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [Glossario dei termini HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [Panoramica di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
 * [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

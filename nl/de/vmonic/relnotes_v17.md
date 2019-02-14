@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-07-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Releaseinformationen für V1.7
 
@@ -22,29 +26,30 @@ Mit diesem Update werden die folgenden Upgrades und Verbesserungen angewendet:
 * Stabilitätsverbesserungen für die Komponente "IBM CloudDriver"
 * Der auf dem Intel-Prozessor "Haswell" (2690-V3) basierende EVC-Modus wird für VMware-Bereitstellungen aktiviert, die zum Zeitpunkt des Upgrades bereits auf V3-Servern vorhanden sind.
 
-  **Hinweis**: Der EVC-Modus wird auf V4-Servern für vorhandene oder neue Bereitstellungen nicht aktiviert.
+  Der EVC-Modus wird auf V4-Servern für vorhandene oder neue Bereitstellungen nicht aktiviert.
+  {:note}
 
-* VMware Cloud Foundation-Bereitstellungen, die vor dem 22. Mai bereitgestellt wurden und daher V3-Server verwenden, bestellen jetzt V4-Server, sobald ein neuer Knoten zur Instanz hinzugefügt wird. Diese Server verfügen über 256 GB Speicher. Wenn Sie nach dem Hinzufügen der Server 512 GB Speicher benötigen, öffnen Sie ein Support-Ticket, um einen Server-Upgrade auf 512 GB Speicher anzufordern. Unter [Kontaktaufnahme mit dem IBM Support](trbl_support.html) finden Sie weitere Angaben darüber, wie Sie sich mit dem IBM Support in Verbindung setzen.
+* VMware Cloud Foundation-Bereitstellungen, die vor dem 22. Mai bereitgestellt wurden und daher V3-Server verwenden, bestellen jetzt V4-Server, sobald ein neuer Knoten zur Instanz hinzugefügt wird. Diese Server verfügen über 256 GB Speicher. Wenn Sie nach dem Hinzufügen der Server 512 GB Speicher benötigen, öffnen Sie ein Support-Ticket, um einen Server-Upgrade auf 512 GB Speicher anzufordern. Unter [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) finden Sie weitere Angaben darüber, wie Sie sich mit dem IBM Support in Verbindung setzen.
 
-Weitere Informationen zu Komponenten finden Sie unter [Technische Spezifikationen für Cloud Foundation-Instanzen](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+Weitere Informationen zu Komponenten finden Sie unter [Technische Spezifikationen für Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Voraussetzungen für Updateprozess
 
-Abhängig davon, wie komplex Ihre Cloud Foundation-Instanzbereitstellung ist und ob Sie eine Konfiguration mit mehreren Standorten verwenden, müssen Sie beim Updateprozess möglicherweise eine Reihe von Schritten ausführen, die auf der Registerkarte **Update und Patch** in der Konsole angegeben sind. Weitere Informationen finden Sie unter [Updates auf Cloud Foundation-Instanzen anwenden](../sddc/sd_applyingupdates.html#applying-updates-to-cloud-foundation-instances).
+Abhängig davon, wie komplex Ihre Cloud Foundation-Instanzbereitstellung ist und ob Sie eine Konfiguration mit mehreren Standorten verwenden, müssen Sie beim Updateprozess möglicherweise eine Reihe von Schritten ausführen, die auf der Registerkarte **Update und Patch** in der Konsole angegeben sind. Weitere Informationen finden Sie unter [Updates auf Cloud Foundation-Instanzen anwenden](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html#applying-updates-to-cloud-foundation-instances).
 
 ## Updates für VMware vCenter Server-Instanzen
 
 ### Clusterunterstützung
 
-Ab dem Release V1.7 können Sie ESXi-Server in vCenter Server-Instanzen mithilfe von Clustern verwalten und so ein besseres Ressourcenmanagement und eine hohe Verfügbarkeit erreichen. Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, werden standardmäßig unter **cluster1** gruppiert. Auf der neu eingeführten Registerkarte **Infrastruktur** der Seite mit den Instanzdetails können Sie die Clusterdetails anzeigen und für eine Instanz bis zu insgesamt fünf Cluster hinzufügen. Wenn Sie die Kapazität für eine Instanz erweitern oder verringern, können Sie auswählen, in welchem Cluster ESXi-Server hinzugefügt oder entfernt werden sollen. Weitere Informationen finden Sie unter [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](../vcenter/vc_addingviewingclusters.html).
+Ab dem Release V1.7 können Sie ESXi-Server in vCenter Server-Instanzen mithilfe von Clustern verwalten und so ein besseres Ressourcenmanagement und eine hohe Verfügbarkeit erreichen. Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, werden standardmäßig unter **cluster1** gruppiert. Auf der neu eingeführten Registerkarte **Infrastruktur** der Seite mit den Instanzdetails können Sie die Clusterdetails anzeigen und für eine Instanz bis zu insgesamt fünf Cluster hinzufügen. Wenn Sie die Kapazität für eine Instanz erweitern oder verringern, können Sie auswählen, in welchem Cluster ESXi-Server hinzugefügt oder entfernt werden sollen. Weitere Informationen finden Sie unter [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html).
 
 ### Funktionale Erweiterungen bei der Bereitstellung der Disaster-Recovery mit Zerto
 
-Die Bereitstellung der Disaster-Recovery mit Zerto erfolgt jetzt automatisiert und wird nicht über ein Support-Ticket abgewickelt. Alle Kosten für Zerto-Komponenten (z. B. privates portierbares Teilnetz und Windows-VSI) und die Zerto-Lizenz werden bei den geschätzten Kosten aufgeführt und können von Ihnen überprüft werden, bevor Sie die Bestellung aufgeben. Weitere Informationen finden Sie unter [Bereitstellungsprozess für Disaster-Recovery mit Zerto](../services/addingzertodr.html).
+Die Bereitstellung der Disaster-Recovery mit Zerto erfolgt jetzt automatisiert und wird nicht über ein Support-Ticket abgewickelt. Alle Kosten für Zerto-Komponenten (z. B. privates portierbares Teilnetz und Windows-VSI) und die Zerto-Lizenz werden bei den geschätzten Kosten aufgeführt und können von Ihnen überprüft werden, bevor Sie die Bestellung aufgeben. Weitere Informationen finden Sie unter [Bereitstellungsprozess für Disaster-Recovery mit Zerto](/docs/services/vmwaresolutions/services/addingzertodr.html).
 
 ### Upgradefunktionen für NSX-Lizenzen
 
-Sie können für Ihre NSX-Lizenzedition ausgehend von der Registerkarte **Zusammenfassung** Ihrer vCenter Server-Instanz ein Upgrade durchführen. Bei der Aktualisierung der Lizenz werden alle vorhandenen NSX-SoftLayer-Lizenzen in Ihrem Konto durch die neue Lizenz ersetzt. Weitere Informationen finden Sie unter [vCenter Server-Instanzen anzeigen](../vcenter/vc_viewinginstances.html).
+Sie können für Ihre NSX-Lizenzedition ausgehend von der Registerkarte **Zusammenfassung** Ihrer vCenter Server-Instanz ein Upgrade durchführen. Bei der Aktualisierung der Lizenz werden alle vorhandenen NSX-SoftLayer-Lizenzen in Ihrem Konto durch die neue Lizenz ersetzt. Weitere Informationen finden Sie unter [vCenter Server-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html).
 
 ## Erweiterungen beim Bedienungskomfort
 

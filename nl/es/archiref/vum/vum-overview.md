@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -34,11 +34,11 @@ Por lo tanto, el proceso VUM es el siguiente:
 La descarga de las actualizaciones, los parches de host, las extensiones y los metadatos relacionados es un proceso automático predefinido que se puede modificar. De forma predeterminada, a intervalos configurables regulares, VUM se pone en contacto con VMware o con orígenes de terceros para recopilar las siguientes actualizaciones, parches o extensiones disponibles:
 
 * Los metadatos acerca de todos los parches ESXi 5.5 y ESXi 6.x independientemente de si tiene hosts de dichas versiones en su entorno.
-* Los metadatos sobre los parches de ESXi 5.5 y ESXi 6.x, así como sobre las extensiones de direcciones URL de proveedores de terceros.
+* Los metadatos sobre los parches de ESXi 5.5 y ESXi 6.x y sobre las extensiones de direcciones URL de proveedores de terceros.
 * Notificaciones, alertas y recuperaciones de parches para hosts ESXi 5.5 y ESXi 6.x.
 * Metadatos sobre actualizaciones para dispositivos virtuales.
 
-VUM admite la recuperación de parches para hosts que ejecutan ESXi 5.0 o posterior. Se recupera un parche si el parche liberado tiene problemas o problemas potenciales. Después de explorar los hosts en la instancia de VMware vCenter Server on {{site.data.keyword.cloud}}, VUM le avisa si el parche recuperado se ha instalado en un host determinado. Los parches recuperados no se pueden instalar en hosts con VUM. VUM también suprime todos los parches recuperados del repositorio de parches. Después de que se libere un parche que solucione el problema, VUM descarga el nuevo parche en su repositorio de parches. Si ya ha instalado el parche problemático, VUM le notifica que se ha publicado una solución y le solicita que aplique el parche nuevo.
+VUM admite la recuperación de parches para hosts que ejecutan ESXi 5.0 o posterior. Se recupera un parche si el parche liberado tiene problemas o problemas potenciales. Después de explorar los hosts en la instancia de VMware vCenter Server on {{site.data.keyword.cloud}}, VUM le avisa si el parche recuperado se instala en un host determinado. Los parches recuperados no se pueden instalar en hosts con VUM. VUM también suprime todos los parches recuperados del repositorio de parches. Después de que se publique un parche que solucione el problema, VUM descarga el nuevo parche en su repositorio de parches. Si ha instalado el parche problemático, VUM le notifica que se ha publicado una solución y le solicita que aplique el parche nuevo.
 
 La interfaz de cliente VUM proporciona dos vistas principales:
 *	Vista de administración
@@ -64,4 +64,4 @@ Se accede a la vista de conformidad de un objeto de inventario seleccionado desd
 ### Enlaces relacionados
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

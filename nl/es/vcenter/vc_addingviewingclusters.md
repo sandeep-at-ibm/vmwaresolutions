@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2018-01-10"
 
 ---
 
@@ -24,8 +24,11 @@ La característica de supresión de clúster solo está disponible para las inst
 ## Adición de clústeres a instancias de vCenter Server
 
 El número de clústeres que pueden añadirse a una instancia depende de la versión de la instancia:
+* Para las instancias que se han desplegado en V2.5 y posteriores o que se han actualizado a las mismas, el número de clústeres, hosts y máquinas virtuales determina el límite máximo para el número de clústeres que puede añadir. Debe respetar las directrices de dimensionamiento de VMware y los límites para el despliegue.
 * Para instancias que se han desplegado en (o se han actualizado a) V2.2 y posteriores, puede añadir hasta 10 clústeres.
 * Para instancias que se han desplegado en V2.1 o anteriores, puede añadir hasta cinco clústeres.
+
+Para obtener más información sobre los límites máximos, consulte [Máximos de configuración de VMware](https://configmax.vmware.com/home){:new_window}.
 
 ### Valores del sistema
 
@@ -69,6 +72,10 @@ En función de sus requisitos, seleccione una configuración de servidor nativo:
 * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 192 GB de RAM
 * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 384 GB de RAM
 * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 768 GB de RAM
+* Procesador Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz / 512 GB de RAM
+* Procesador Quad Intel Xeon E7-8890 v4 / 96 núcleos en total, 2,2 GHz / 1024 GB de RAM
+* Procesador Quad Intel Xeon E7-8890 v4 / 96 núcleos en total, 2,2 GHz / 2048 GB de RAM
+* Procesador Quad Intel Xeon E7-8890 v4 / 96 núcleos en total, 2,2 GHz / 4096 GB de RAM
 
 #### Broadwell
 
@@ -81,6 +88,8 @@ Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 | Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Número de servidores nativos
 
@@ -101,7 +110,11 @@ Los valores de almacenamiento dependen de la opción que seleccione de configura
 Especifique las siguientes opciones de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
-* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto.
+
+  La opción **Intel Optane de alto rendimiento** solo está disponible para los modelos de CPU de Skylake Dual Intel Xeon Gold 5120 y Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
 * **Licencia de vSAN**: Utilice la licencia de VMware que proporciona IBM para el componente vSAN seleccionando **Incluir con la compra**, o traiga su propia licencia (BYOL) seleccionando **Proporcionaré** e indicando su propia clave de licencia.
 
@@ -124,9 +137,16 @@ Tabla 3. Opciones de nivel de rendimiento de NFS
 
 | Opción        | Detalles       |
   |:------------- |:------------- |
-  | 2 IOPS/GB | Esta opción está diseñada para la mayoría de cargas de trabajo generales. Entre las aplicaciones de ejemplo se encuentran alojamiento de bases de datos pequeñas, copia de seguridad de aplicaciones web o imágenes de disco de máquina virtual para un hipervisor. |
+  | 0,25 IOPS/GB | Esta opción está diseñada para cargas de trabajo que no se utilizan a menudo. Estas son algunas aplicaciones de ejemplo: datos en caja fuerte, alojamiento de bases de datos grandes con datos antiguos o imágenes de disco virtual del sistema de memoria virtual como copia de seguridad. |
+  | 2 IOPS/GB | Esta opción está diseñada para la mayoría de cargas de trabajo generales. Entre las aplicaciones de ejemplo se encuentran alojamiento de bases de datos pequeñas, copia de seguridad de aplicaciones web o imágenes de disco de máquina virtual (VM) para un hipervisor. |
   | 4 IOPS/GB | Esta opción está diseñada para cargas de trabajo de mayor intensidad que tienen un alto porcentaje de datos activos en un momento determinado. Las aplicaciones de ejemplo incluyen bases de datos transaccionales. |
   | 10 IOPS/GB | Esta opción está diseñada para los tipos de carga de trabajo más exigentes, como las analíticas. Las aplicaciones de ejemplo incluyen bases de datos con un gran número de transacciones y otras bases de datos sensibles al rendimiento. Este nivel de rendimiento está limitado a una capacidad máxima de 4 TB por compartición de archivo. |
+
+### Discos locales
+
+La opción de discos locales solo está disponible para la configuración de tipo procesador nativo Quad Intel Xeon E7-8890 v4 **certificado por SAP**. Especifique las siguientes opciones:
+* **Recuento de discos**: seleccione el número de discos que desea añadir.
+* **Tipo de disco**: seleccione una opción para el tipo de disco que necesita.
 
 ### Valores de licencia
 
@@ -162,8 +182,10 @@ En función de la configuración seleccionada para el clúster, el coste estimad
    * Si ha seleccionado **Certificado por SAP**, especifique el modelo de CPU.
 7. Complete la configuración del almacenamiento.
   * Si selecciona **Almacenamiento vSAN**, especifique los tipos de disco para la capacidad y los discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
-  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar los mismos valores para todas las comparticiones de archivos, especifique el **Número de comparticiones**, **Tamaño** y **Rendimiento**.
-  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar comparticiones de archivos individualmente, seleccione **Configurar comparticiones individualmente**. A continuación, pulse el icono **+** situado junto a la etiqueta **Añadir NFS** y seleccione el **Tamaño** y **Rendimiento** para cada compartición de archivos. Debe seleccionar al menos una unidad compartida de archivo.
+  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar los mismos valores para todas las comparticiones de archivos, especifique el **Número de comparticiones**, el **Rendimiento** y el **Tamaño (GB)**.
+  * Si selecciona **Almacenamiento NFS** y desea añadir y configurar comparticiones de archivos individualmente, seleccione **Configurar comparticiones individualmente**. A continuación, pulse el icono **+** situado junto a la etiqueta **Añadir almacenamiento compartido** y seleccione el **Rendimiento** y el **Tamaño (GB)** de cada compartición de archivos. Debe seleccionar al menos una unidad compartida de archivo.
+  * Si selecciona **Discos locales**, especifique el recuento de discos y el tipo de disco.
+8. Complete los valores de interfaz de red.
 8. Especifique cómo se proporciona la clave de licencia de vSphere:
   * Para los usuarios de Business Partners, se incluye y se adquiere en su nombre la licencia de vSphere (edición Enterprise Plus).
   * Para los usuarios que no son Business Partners, puede seleccionar una de las opciones siguientes:
@@ -251,7 +273,7 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 * Para los clústeres desplegados en V2.2 o instancias anteriores, debe actualizar la instancia a V2.3 si desea suprimir los clústeres que ha añadido a la instancia.
 * Puede suprimir un único clúster al mismo tiempo. Para suprimir más de un clúster, debe hacerlo en secuencia. Espere a que el clúster anterior se suprima antes de suprimir el clúster siguiente.
 * Asegúrese de que todos los nodos de un clúster estén encendidos y operativos antes de suprimir el clúster.
-* Cuando se suprime un clúster, todas las VM (máquinas virtuales) del clúster también se suprimen y no se pueden recuperar. Si desea mantener las VM, mígrelas a otros clústeres.
+* Cuando se suprime un clúster, todas las VM del clúster también se suprimen y no se pueden recuperar. Si desea mantener las VM, mígrelas a otros clústeres.
 * El clúster predeterminado no se puede suprimir.
 
 ### Procedimiento para suprimir clústeres de instancias de vCenter Server
@@ -263,7 +285,7 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
    {:note}
 
 3. Pulse **Infraestructura** en el panel de navegación izquierdo. En la tabla **CLÚSTERES**, localice el clúster que desea suprimir y pulse el icono **Suprimir** en la columna **Acciones**.
-4. Confirme que ha completado la migración de las máquinas virtuales a otros clústeres, si es necesario, y que desea suprimir el clúster.
+4. Confirme que ha completado la migración de las VM a otros clústeres, si es necesario, y que desea suprimir el clúster.
 
 ### Enlaces relacionados
 

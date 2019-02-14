@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-16"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -38,9 +38,9 @@ CPU | 28 núcleos 2,2 GHZ | 28 núcleos 2,2 GHZ
 Memoria | 384 GB | 384 GB
 Almacenamiento|Gestión: 2 TB 2 IOPS, Carga trabajo: 2 TB 4 IOPS|SSD mín: 960 GB(x2)   
 
-Las opciones de despliegue de IKS varían en función de los requisitos del nodo trabajador.
+Las opciones de despliegue de {{site.data.keyword.containerlong_notm}} varían en función de los requisitos del nodo trabajador.
 
-Tabla 2. Especificaciones de IKS
+Tabla 2. Especificaciones de {{site.data.keyword.containerlong_notm}}
 
   | máquina virtual | Nativa
 --|---|--
@@ -51,13 +51,13 @@ Almacenamiento | 100 GB |  SATA: 2 TB / SSD: 960 GB
 
 ## Estructura virtual
 
-Figura 1. Estructura física de los despliegues IKS e ICP
+Figura 1. Estructura física de los despliegues {{site.data.keyword.containerlong_notm}} e {{site.data.keyword.icpfull_notm}}
 
-![Diagrama de la estructura física de los despliegues IKS e ICP](vcsiks-phy-ics-iks-deployment.svg)
+![Diagrama de la estructura física de los despliegues {{site.data.keyword.containerlong_notm}} e {{site.data.keyword.icpfull_notm}}](vcsiks-phy-ics-iks-deployment.svg)
 
 Dentro de la instancia de vCenter Server, las VMS del cliente se despliegan en NSX Edge Services Gateways (ESG) y Distributed Logical Routers (DLR) dedicados.
 
-El ESG se configura con una SNAT para permitir el tráfico de salida, permitiendo la conectividad a internet para descargar los requisitos previos de ICP y la conectividad con GitHub y Docker, o se puede utilizar un proxy web para proporcionar la conectividad a internet. El ESG se configura para acceder a los servicios DNS y NTP a través de la red privada. La integración con la instancia de IKS está disponible a través de la red de {{site.data.keyword.cloud_notm}} entre la instancia de vCenter Server e IKS.
+El ESG se configura con una regla NAT de origen (SNAT) para permitir el tráfico de salida, lo que permite la conectividad a Internet para descargar los requisitos previos de {{site.data.keyword.icpfull_notm}} y para conectarse a GitHub y Docker. De forma alternativa, puede utilizar un proxy web para la conectividad de Internet. El ESG se configura para acceder a los servicios DNS y NTP a través de la red privada. La integración con la instancia de {{site.data.keyword.containerlong_notm}} está disponible a través de la red de {{site.data.keyword.cloud_notm}} entre la instancia de vCenter Server e {{site.data.keyword.containerlong_notm}}.
 
 ## Componentes de vCenter Server
 
@@ -78,12 +78,12 @@ NSX Manager se despliega en el clúster inicial de vCenter Server. Además se as
 La automatización de {{site.data.keyword.cloud_notm}} despliega tres controladores NSX dentro del clúster inicial. Se asigna a los controladores direcciones IP desde la subred portátil privada que está destinada para los componentes de gestión.
 
 ### NSX ESG / DLR
-Se despliegan pares NSX Edge Services Gateway (ESG). En todos los casos, se utiliza un par de pasarela para el tráfico de salida de los componentes de automatización que residen en la red privada. Para vCenter Server e ICP, una segunda pasarela, conocida como el borde gestionado por el cliente, se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada.
+Se despliegan pares NSX Edge Services Gateway (ESG). En todos los casos, se utiliza un par de pasarela para el tráfico de salida de los componentes de automatización que residen en la red privada. Para vCenter Server e {{site.data.keyword.icpfull_notm}}, una segunda pasarela, conocida como el borde gestionado por el cliente, se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada.
 El administrador puede configurar los componentes NSX necesarios como, por ejemplo, el direccionador lógico distribuido (DLR), los conmutadores lógicos y los cortafuegos. Para obtener más información sobre los NSX Edges que se despliegan como parte de la solución, consulte la [Guía de red de vCenter Server](../vcsnsxt/vcsnsxt-intro.html).
 
-En la tabla siguiente se resumen las especificaciones de ICP ESG/DLR.
+En la tabla siguiente se resumen las especificaciones de {{site.data.keyword.icpfull_notm}} ESG/DLR.
 
-Tabla 3. Especificaciones de ICP ESG
+Tabla 3. Especificaciones de ESG de {{site.data.keyword.icpfull_notm}}
 
 Atributo |  Especificación
 --|--
@@ -92,7 +92,7 @@ Edge tamaño grande | Número de vCPU	2
 Memoria	| 1 GB
 Disco	| 1000 GB en almacén de datos local
 
-Tabla 4. Especificaciones de ICP DLR
+Tabla 4. Especificaciones de DLR de {{site.data.keyword.icpfull_notm}}
 
 Atributo  |  Especificación
 --|--|
@@ -101,10 +101,10 @@ Edge tamaño Compacto | Número de vCPU	1
 Memoria	| 512 MB
 Disco	| 1000 GB en almacén de datos local
 
-## Componentes de IKS
+## Componentes del servicio IBM Cloud Kubernetes
 
-Figura 3. Componentes de IKS
-![Diagrama de los componentes de IKS](vcsiks-iks-components.svg)
+Figura 3. Componentes de {{site.data.keyword.containerlong_notm}}
+![Diagrama de componentes de {{site.data.keyword.containerlong_notm}}](vcsiks-iks-components.svg)
 
 ### Kubernetes maestro
 

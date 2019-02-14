@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -30,7 +30,7 @@ El objetivo era demostrar una interacción entre la inteligencia artificial de W
 Acme Skate Advisor aprovecha Watson Discovery Service para ingerir artículos, vídeos,
 blogs y otro contenido de Internet con el fin de crear una base de datos de trucos, que la aplicación puede consultar.
 
-La aplicación Skate Advisor también se implementa en la plataforma de modernización de aplicaciones, que proporciona servicios basados en contenedor mediante {{site.data.keyword.cloud}} Private (ICP) alojado en la plataforma {{site.data.keyword.cloud_notm}} for VMware Services.
+La aplicación Skate Advisor también se implementa en la plataforma de modernización de aplicaciones, que proporciona servicios basados en contenedor mediante {{site.data.keyword.icpfull_notm}} alojado en la plataforma {{site.data.keyword.cloud_notm}} for VMware Services.
 
 La aplicación Acme Skate Advisor aprovecha tanto la plataforma Watson como la plataforma de modernización de aplicaciones.
 
@@ -38,7 +38,7 @@ La aplicación Acme Skate Advisor aprovecha tanto la plataforma Watson como la p
 
 ### Demostración de la modernización de aplicaciones
 
-Se muestra una aplicación que se ha desplegado en la plataforma de modernización de aplicaciones. La plataforma incluye los componentes ICP, CAM y NSX desplegados en la oferta {{site.data.keyword.cloud_notm}} para VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
+Se muestra una aplicación que se ha desplegado en la plataforma de modernización de aplicaciones. La plataforma incluye los componentes {{site.data.keyword.icpfull_notm}}, CAM y NSX desplegados en la oferta {{site.data.keyword.cloud_notm}} para VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 ### Reconocimiento de voz de Watson con Watson Assistant
 
@@ -65,7 +65,6 @@ Modernización de aplicaciones es un término que describe el proceso de transic
 Las presiones de la industria exigen un plazo más rápido de salida de productos al mercado. El entorno existente no solo incluye aplicaciones, sino también datos, procesos, lógica empresarial e interfaces de usuario, y todos se deben adaptar para mantenerse al día con las nuevas necesidades de la empresa.
 
 En esta lista se describen las ventajas de la modernización de aplicaciones:
-
 - Mejora la productividad del desarrollador
 - Aumenta la eficiencia operativa
 - Reduce el coste de crear nuevas características
@@ -94,15 +93,15 @@ En los siguientes documentos se proporcionan distintas vistas sobre las tecnolog
 
 * [vCenter Server e {{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html). una arquitectura de referencia para desplegar las siguientes plataformas.
    - ** VMware vCenter Server on IBM Cloud**: vCenter Server es una oferta de {{site.data.keyword.vmwaresolutions_short}} que es una plataforma basada en VMware que se suministra automáticamente en {{site.data.keyword.cloud_notm}}.
-   - **IBM Cloud Private**: ICP es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones contenerizadas. ICP es un entorno integrado que incluye el coordinador de contenedores Kubernetes,
+   - **{{site.data.keyword.icpfull_notm}}**: {{site.data.keyword.icpfull_notm}} es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones contenerizadas. {{site.data.keyword.icpfull_notm}} es un entorno integrado que incluye el coordinador de contenedores Kubernetes,
 un repositorio de imágenes privadas, una consola de gestión e infraestructuras de supervisión. La interfaz de usuario proporciona una ubicación centralizada desde la que puede desplegar, gestionar, supervisar y escalar las aplicaciones.
    - **IBM Cloud Automation Manager**: CAM es una plataforma de infraestructura como código preparada para la empresa que proporciona un único panel para suministrar cargas de trabajo basadas en VM junto con cargas de trabajo basadas en Kubernetes utilizando plantillas que se almacenan en un repositorio y de las que se crean versiones.
-* [vCenter Server y servicio IBM Kubernetes](../vcsiks/vcsiks-intro.html). una arquitectura de referencia para desplegar las siguientes plataformas.
+* [vCenter Server y servicio {{site.data.keyword.containerlong_notm}}](../vcsiks/vcsiks-intro.html): una arquitectura d e referencia para desplegar las siguientes plataformas.
    - ** VMware vCenter Server on IBM Cloud**: vCenter Server es una oferta de {{site.data.keyword.vmwaresolutions_short}} que es una plataforma basada en VMware que se suministra automáticamente en {{site.data.keyword.cloud_notm}}.
-   - **IBM Cloud Kubernetes Service**: IKS un servicio gestionado en {{site.data.keyword.cloud_notm}} que utiliza Kubernetes como motor de coordinación para automatizar el despliegue, el escalado y las operaciones de los contenedores de aplicaciones en un clúster de un solo arrendatario.
-* [Red de vCenter Server](../vcsnsxt/vcsnsxt-intro.html): se centra en las tecnologías de red utilizadas para la integración entre vCenter, ICP e IKS, como NSX-V y Calico, junto con una presentación técnica de NSX-T.
+   - **{{site.data.keyword.containerlong_notm}}**: {{site.data.keyword.containerlong_notm}} es un servicio gestionado en {{site.data.keyword.cloud_notm}} que utiliza Kubernetes como motor de coordinación para automatizar el despliegue, el escalado y las operaciones de los contenedores de aplicaciones en un clúster de un solo arrendatario.
+* [Red de vCenter Server](../vcsnsxt/vcsnsxt-intro.html): se centra en las tecnologías de red utilizadas para la integración entre vCenter, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}, como NSX-V y Calico, junto con una presentación técnica de NSX-T.
 * _Guía de VMware y Skate Advisor Concept Car_: una arquitectura de referencia que constituye un “concept car”, es decir, un mecanismo para destacar y mostrar tecnologías que solucionan problemas del mundo real. El objetivo era demostrar una interacción entre Watson AI y Machine Learning con un ejemplo real. A través de la cultura del skateboarding, demostramos de forma global los servicios de la nube de una forma única. La implementación del “concept car” constituye una extensión de la aplicación de Acme Skateboard llamada Skate Advisor. Skate Advisor es una herramienta que permite a los usuarios tener conversaciones sobre skateboarding con un motor controlado por Watson.
-* [VMware: el proceso de modernización de Stock Trader](../vcscontent/vcscontent-modjourney.html): un caso de uso de referencia describe una aplicación de WebSphere Application Server clásica que se moderniza con {{site.data.keyword.cloud_notm}} Private, contenido de IBM Middleware, el servicio Kubernetes de {{site.data.keyword.cloud_notm}} y vCenter Server on {{site.data.keyword.cloud_notm}}. Todos estamos en un proceso de transición a la nube, y cada uno de nosotros está en un punto diferente del proceso. Siguiendo los pasos indicados por la arquitecta de la aplicación, Jane, y por el arquitecto de la infraestructura de nube, Todd, modernizamos una aplicación existente denominada Stock Trader. Revise los ejemplos que le pueden ayudar en cada paso del proceso y el valor que supone para la empresa, independientemente del tamaño de cada paso. Nos centramos en cuatro temas: aplicaciones, DevOps, integración y gestión. Cada uno de ellos trabaja combinación con los demás para ayudarle a alcanzar sus objetivos y, de hecho, a modernizar cada uno sin que los otros tengan problemas.
+* [VMware: el proceso de modernización de Stock Trader](../vcscontent/vcscontent-modjourney.html): nuestro caso de uso de referencia describe una aplicación de WebSphere Application Server clásica que se moderniza con {{site.data.keyword.cloud_notm}} Private, contenido de IBM Middleware, {{site.data.keyword.containerlong_notm}} y vCenter Server on {{site.data.keyword.cloud_notm}}. Todos estamos en un proceso de transición a la nube, y cada uno de nosotros está en un punto diferente del proceso. Siguiendo los pasos indicados por la arquitecta de la aplicación, Jane, y por el arquitecto de la infraestructura de nube, Todd, modernizamos una aplicación existente denominada Stock Trader. Revise los ejemplos que le pueden ayudar en cada paso del proceso y el valor que supone para la empresa, independientemente del tamaño de cada paso. Nos centramos en cuatro temas: aplicaciones, DevOps, integración y gestión. Cada tema trabaja en combinación con los demás para ayudarle a alcanzar sus objetivos. El hecho de modernizar un tema sin los otros podría dar lugar a problemas.
 
 ### Enlaces relacionados
 

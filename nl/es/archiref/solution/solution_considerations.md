@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-12"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -39,7 +39,7 @@ Complete los pasos siguientes para gestionar el acceso a la red de {{site.data.k
 
 - Acceda a los puntos finales de gestión de la instancia utilizando la [VPN de {{site.data.keyword.cloud_notm}}](https://www.softlayer.com/vpn-access) o la [Conexión de Direct-Link de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/direct-link).
 - Idee una estrategia para la conectividad de red pública desde dentro de su instancia. Entre sus opciones se incluyen: el cliente de ejemplo VMware NSX Edge Services Gateway (ESG), dispositivos de pasarela tales como Vyatta y FortiGate, y servidores proxy desplegados en la red de {{site.data.keyword.cloud_notm}} o en su propia red a la que se accede a través de DirectLink.
-- Planifique si desea desplegar la carga de trabajo en VLAN de {{site.data.keyword.cloud_notm}} con [direcciones IP portátiles de {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/infrastructure/subnets/getting-started.html) o [en conmutadores lógicos NSX (VXLAN) utilizando sus propias direcciones IP](../nsx/nsx_overview.html). Tenga en cuenta que el uso de redes definidas por software (SDN) de NSX le proporciona la mayor flexibilidad para gestionar y proteger la red de carga de trabajo en el {{site.data.keyword.cloud_notm}}.
+- Planifique si desea desplegar la carga de trabajo en VLAN de {{site.data.keyword.cloud_notm}} con [direcciones IP portátiles de {{site.data.keyword.cloud_notm}}](https://console.cloud.ibm.com/docs/infrastructure/subnets/getting-started.html) o [en conmutadores lógicos NSX (VXLAN) utilizando sus propias direcciones IP](../nsx/nsx_overview.html). Tenga en cuenta que el uso de redes definidas por software (SDN) de NSX le proporciona la mayor flexibilidad para gestionar y proteger la red de carga de trabajo en el {{site.data.keyword.cloud_notm}}.
 - Utilice ESG de NSX, [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) y la interconexión de DirectLink para planificar la conectividad con cargas de trabajo (Network Address Translation, Virtual Private Network, direccionamiento).
 - Si implementa Cross-vCenter NSX, asegúrese de que los rangos de ID de segmento local no se solapen antes de desplegar las cargas de trabajo locales.
 
@@ -50,7 +50,7 @@ El usuario es responsable de proteger, cifrar y supervisar la instancia de VMwar
 - Cambie todas las contraseñas visualizadas en la consola de {{site.data.keyword.vmwaresolutions_short}} y utilice su propio sistema de gestión de contraseñas. Tenga en cuenta que IBM mantiene los ID de usuario distintos necesarios para la automatización y el soporte en curso.
 - Revise las políticas de contraseñas, como por ejemplo la complejidad y el período de caducidad, en todos los componentes.
 - Revise los valores de cifrado en todos los componentes.
-- Planifique e implemente soluciones de cortafuegos físicas o virtuales adecuadas, como por ejemplo NSX Distributed Firewall (DFW), NSX ESG, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../../services/fortinetvm_considerations.html) e [IBM Cloud Vyatta](https://console.bluemix.net/catalog/infrastructure/virtual-router-appliance).
+- Planifique e implemente soluciones de cortafuegos físicas o virtuales adecuadas, como por ejemplo NSX Distributed Firewall (DFW), NSX ESG, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../../services/fortinetvm_considerations.html) e [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance).
 - Planifique e implemente las soluciones adecuadas de equilibrio de carga de aplicaciones y de seguridad, como [F5 on {{site.data.keyword.cloud_notm}}](../../services/f5_considerations.html).
 - Planifique e implemente las soluciones adecuadas de información de seguridad y de gestión de sucesos (SIEM), como por ejemplo [IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence).
 - Planifique e implemente la exploración de vulnerabilidades adecuada.
@@ -119,7 +119,9 @@ Además de la planificación de la capacidad, complete los siguientes pasos para
   - RAID-1 proporciona un mejor rendimiento y menor susceptibilidad a un fallo secuencial, como un tiempo de reconstrucción más corto, en comparación con RAID-5. Sin embargo, RAID-5 tiene menos sobrecarga de almacenamiento.
   - RAID-6 proporciona protección frente a errores dobles, pero requiere un mínimo de seis hosts en comparación con cuatro hosts para RAID-5.
 - Para añadir más almacenamiento al clúster de vSAN, debe añadir nuevos hosts al clúster o añadir en su lugar el almacenamiento NFS de {{site.data.keyword.cloud_notm}} Endurance. No se da soporte en este momento a la adición de discos a los hosts existentes.
-- Si monta almacenamiento de NFS {{site.data.keyword.cloud_notm}} Endurance adicional en el clúster, asegúrese de seguir la orientación de la arquitectura y de configurar rutas de hosts en el almacenamiento utilizando las direcciones de grupo de puertos `SDDC-DPortGroup-NFS`. Debe autorizar estas direcciones, en lugar de los propios hosts, en el almacenamiento. Para obtener más información, consulte [Gestión de la infraestructura de almacenamiento adjunto](../attached-storage/storage-infra-mgmt.html#vsphere-host-static-routing). Consulte también la receta de developerWorks que muestra cómo [añadir más almacenamiento de resistencia a su clúster VMware](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/) utilizando IBM Spectrum Protect Plus como ejemplo.
+- Si monta almacenamiento de NFS {{site.data.keyword.cloud_notm}} Endurance adicional en el clúster, asegúrese de seguir la orientación de la arquitectura y de configurar rutas de hosts en el almacenamiento utilizando las direcciones de grupo de puertos `SDDC-DPortGroup-NFS`. Debe autorizar estas direcciones, en lugar de los propios hosts, en el almacenamiento. Para obtener más información, consulte [Gestión de la infraestructura de almacenamiento adjunto](../attached-storage/storage-infra-mgmt.html#vsphere-host-static-routing).
+
+Consulte también la receta de developerWorks que muestra cómo [ añadir más almacenamiento de resistencia a su clúster VMware ](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/) utilizando IBM Spectrum Protect Plus como ejemplo.
 
 ### Enlaces relacionados
 

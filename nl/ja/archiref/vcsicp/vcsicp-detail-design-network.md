@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-16"
+lastupdated: "2019-01-23"
 
 ---
 
 # ネットワーク・アクセスおよびフロー
 
-## コンテナー・アプリケーション・アクセス – ICP
+## コンテナー・アプリケーション・アクセス – IBM Cloud Private
 
 外部トラフィックを取得して Kubernetes クラスター・アプリケーションにアクセスするには、主に 3 つの方法があります。
 
@@ -18,39 +18,47 @@ lastupdated: "2018-11-16"
 - LoadBalancer
 - Ingress
 
-### NodePort
+### NodePort - IBM Cloud Private
+
 NodePort は、初期開発とテストの際にワークロードへの外部アクセス権限を付与するための簡単な方法ですが、実動には推奨されません。 Ingress またはロード・バランサーが、推奨されるパスです。
 
-### LoadBalancer
-ICP プラットフォームは現在、アプリケーション・ワークロード用に外部ロード・バランサーをサポートしています。
+### LoadBalancer - IBM Cloud Private
 
-### Ingress
-Ingress は、インバウンド接続がクラスター・サービスに到達できるようにするルールの集合です。 サービスへの外部到達可能 URL の提示、トラフィックのロード・バランシング、SSL の終了、名前ベースの仮想ホスティングの提供などを行うように構成できます。  この機能は、ICP インフラストラクチャー内のプロキシー・ノードによって実行されます。
+{{site.data.keyword.icpfull_notm}} プラットフォームは現在、アプリケーション・ワークロード用に外部ロード・バランサーをサポートしています。
 
-## コンテナー・アプリケーション・アクセス – IKS
+### Ingress - IBM Cloud Private
+
+Ingress は、インバウンド接続がクラスター・サービスに到達できるようにするルールの集合です。 サービスへの外部到達可能 URL の提示、トラフィックのロード・バランシング、SSL の終了、名前ベースの仮想ホスティングの提供などを行うように構成できます。  この機能は、{{site.data.keyword.icpfull_notm}} インフラストラクチャー内のプロキシー・ノードによって実行されます。
+
+## コンテナー・アプリケーション・アクセス – IBM Cloud Kubernetes Service
+
 外部トラフィックを取得して Kubernetes クラスター・アプリケーションにアクセスするには、主に 3 つの方法があります。
 
 - NodePort
 - LoadBalancer
 - Ingress
 
-### NodePort
+### NodePort - IBM Cloud Kubernetes Service
+
 NodePort は、初期開発とテストの際にワークロードへの外部アクセス権限を付与するための簡単な方法ですが、実動には推奨されません。 Ingress またはロード・バランサーが、推奨されるパスです。
 
-### LoadBalancer
-どの IKS Cluster にも、パブリックまたはプライベート Application Load Balancer (ALB) がプロビジョンされます。ALB は、保護された固有のパブリック・エントリー・ポイントまたはプライベート・エントリー・ポイントを使用して、着信要求をアプリケーションにルーティングします。
+### LoadBalancer - IBM Cloud Kubernetes Service
 
-### Ingress
+どの {{site.data.keyword.containerlong_notm}} Cluster にも、パブリックまたはプライベート Application Load Balancer (ALB) がプロビジョンされます。 ALB は、保護された固有のパブリック・エントリー・ポイントまたはプライベート・エントリー・ポイントを使用して、着信要求をアプリケーションにルーティングします。
+
+### Ingress - IBM Cloud Kubernetes Service
+
 Ingress は、インバウンド接続がクラスター・サービスに到達できるようにするルールの集合です。 サービスへの外部到達可能 URL の提示、トラフィックのロード・バランシング、SSL の終了、名前ベースの仮想ホスティングの提供などを行うように構成できます。
 
 ## トラフィック・フロー
+
 以下のトラフィック・フローについて説明します。
 
-- インターネット上の外部ユーザーから {{site.data.keyword.cloud}} Private (ICP) のコンテナーでホストされる Web 層まで
-- ICP のコンテナーでホストされる Web 層から、VMware vCenter Server on {{site.data.keyword.cloud_notm}} の仮想マシン (VM) でホストされるデータベース層まで。
+- インターネット上の外部ユーザーから {{site.data.keyword.icpfull_notm}} のコンテナーでホストされる Web 層まで。
+- {{site.data.keyword.icpfull_notm}} のコンテナーでホストされる Web 層から、VMware vCenter Server on {{site.data.keyword.cloud_notm}} の仮想マシン (VM) でホストされるデータベース層まで。
 - 企業ネットワーク・アクセスが可能なエンタープライズ・ユーザーから vCenter Server の VM まで。
 
-### インターネット上の外部ユーザーから ICP のコンテナーでホストされる Web 層まで
+### インターネット上の外部ユーザーから IBM Cloud Private のコンテナーでホストされる Web 層まで
 
 1. 外部ユーザーが URL を使用して Web 層に要求を出します。
 2.	DNS を使用して IP アドレスが判別されます。 この IP アドレスは、vCenter Server インスタンスに割り当てられるポータブル・サブネット上の {{site.data.keyword.cloud_notm}} パブリック・アドレスです。
@@ -59,11 +67,11 @@ Ingress は、インバウンド接続がクラスター・サービスに到達
 5.	ワーカー・ノード内で、kube-proxy が要求を ALB または Ingress サービスにルーティングします。
 6.	同じワーカー・ノード上にアプリケーションがある場合は、iptables を使用して、要求の転送に使用される内部インターフェースが判別されます。 別のワーカー・ノード上にアプリケーションがある場合は、Calico vRouter が IP-in-IP カプセル化を使用して、該当するワーカー・ノードにルーティングします。 IP-in-IP パケットは、ワーカー・ノードが置かれている vSphere ESXi ホストへの転送のために、VXLAN フレームにカプセル化されます。
 
-### ICP のコンテナーでホストされる Web 層から vCenter Server の VM でホストされるデータベース層まで
+### IBM Cloud Private のコンテナーでホストされる Web 層から vCenter Server の VM でホストされるデータベース層まで
 
-ESG と vRouter 内の経路テーブルにどのようにデータが取り込まれるかは、統合方式によって異なります。 「ICP と vCenter Server の統合」を参照してください。
+ESG と vRouter 内の経路テーブルにどのようにデータが取り込まれるかは、統合方式によって異なります。 「{{site.data.keyword.icpfull_notm}} と vCenter Server の統合」を参照してください。
 
-1.	ICP のコンテナーで実行されている Web 層が、同じ vCenter Server インスタンス内の VM 上で実行されているデータベースに要求を出します。
+1.	{{site.data.keyword.icpfull_notm}} のコンテナーで実行されている Web 層が、同じ vCenter Server インスタンス内の VM 上で実行されているデータベースに要求を出します。
 2.	DNS を使用して、要求がデータベースの IP アドレスとして解決されます。
 3.	コンテナーが Calico vRouter に要求を送信します。
 4.	vRouter の経路テーブルには、vCenter Server インスタンスでホストされている IP アドレス範囲が取り込まれています。
@@ -84,21 +92,24 @@ ESG と vRouter 内の経路テーブルにどのようにデータが取り込�
 7.	VM が要求を受け取ります。
 
 ## パブリック・アクセス・ネットワーク
-ICP と CAM は、Docker イメージ、Helm チャート、Terraform テンプレート、オペレーティング・システムのパッケージ・マネージャーを取得するために、デフォルトでインターネット接続を必要とします。
+
+{{site.data.keyword.icpfull_notm}} と CAM は、Docker イメージ、Helm チャート、Terraform テンプレート、オペレーティング・システムのパッケージ・マネージャーを取得するために、デフォルトでインターネット接続を必要とします。
 最新リリースでは、インターネットに直接接続されていない、オフライン・モードでインストールするオプションがあるインストール環境のためのプロキシー・ベースのインストールがサポートされるようになりました。
 
 ###	NSX ファイアウォール
-ICP NSX Edge ファイアウォールには、以下を許可するルールが構成されます。
+
+{{site.data.keyword.icpfull_notm}} NSX Edge ファイアウォールには、以下を許可するルールが構成されます。
 *	パブリック・アクセスへの VXLAN ネットワーク・アクセスを有効にする。
 *	プライベート {{site.data.keyword.cloud_notm}} ネットワーク・アクセスへの VXLAN ネットワーク・アクセスを有効にする。
 *	VXLAN ネットワークへのプライベート {{site.data.keyword.cloud_notm}} ネットワーク・アクセスを有効にする。
 
 ### NSX NAT
-ICP NSX NAT には、以下の NAT が構成されます。
+
+{{site.data.keyword.icpfull_notm}} NSX NAT には、以下の NAT が構成されます。
 *	パブリック・アクセスへの VXLAN ネットワーク・アクセスのための SNAT。
 *	プライベート {{site.data.keyword.cloud_notm}} ネットワーク・アクセスへの VXLAN ネットワーク・アクセスのための SNAT。
-*	ICP クラスター vIP のための DNAT。
+*	{{site.data.keyword.icpfull_notm}} クラスター vIP のための DNAT。
 
 ### 関連リンク
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

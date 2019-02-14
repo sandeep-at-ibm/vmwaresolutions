@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -22,8 +22,8 @@ lastupdated: "2018-11-05"
 ## VMware Federal インスタンスを注文するための要件
 
 以下の作業を完了していることを確認してください。
-* **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](../vmonic/useraccount.html)を参照してください。
-* [VMware Federal インスタンスの要件と計画](vc_fed_planning.html)の情報を確認する。
+* **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](/docs/services/vmwaresolutions/vmonic/useraccount.html)を参照してください。
+* [VMware Federal インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)の情報を確認する。
 * インスタンス名とドメイン・ネームの形式を確認する。 ドメイン・ネームとサブドメイン・ラベルは、インスタンスのユーザー名とサーバー名の生成に使用されます。
 
 表 1. インスタンス名とドメイン・ネームの値の形式
@@ -48,7 +48,7 @@ VMware Federal インスタンスを注文する際には、以下のシステ�
 
 インスタンス名は、次の要件を満たす必要があります。
 * 英数字とダッシュ (-) の文字だけを使用できます。
-* インスタンス名の先頭と末尾は英数字である必要があります。
+* インスタンス名の先頭は英字、末尾は英数字でなければなりません。
 * インスタンス名の最大の長さは 10 文字です。
 * インスタンス名はアカウント内で固有である必要があります。
 
@@ -65,7 +65,7 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 * NSX Service Providers 6.4 (Base、Advanced、または Enterprise エディション)
 * (vSAN クラスターの場合) vSAN 6.6 (Advanced または Enterprise エディション)
 
-**注意:**
+### 注意
 
 * 最小のライセンス・エディションが、ユーザー・インターフェースに表示されます。 複数のコンポーネント・エディションがサポートされている場合は、必要なエディションを選択できます。 選択した VMware コンポーネントごとに、指定したライセンス・キーが正しいことを確認してください。
 * vSphere の場合は、注文時にライセンス料が発生しますが、そのライセンス料は後でアカウントにクレジットされます。
@@ -106,7 +106,7 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 
 ESXi サーバーの数は、2 台から 20 台の範囲内で構成できます。
 
-すべての ESXi サーバーが同じ構成を共有します。 デプロイメント後には、さらに 4 つのクラスターを追加できます。 vSAN ストレージ設定の場合、初期クラスターとデプロイメント後のクラスターの両方に 4 つの ESXi サーバーが必要です。 最小限の ESXi サーバーについて詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
+すべての ESXi サーバーが同じ構成を共有します。 デプロイメント後には、さらに 4 つのクラスターを追加できます。 vSAN ストレージ設定の場合、初期クラスターとデプロイメント後のクラスターの両方に 4 つの ESXi サーバーが必要です。 最小限の ESXi サーバーについて詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
 
 ## ストレージ設定
 
@@ -117,7 +117,11 @@ ESXi サーバーの数は、2 台から 20 台の範囲内で構成できます
 以下の vSAN オプションを指定します。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
-* 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。 **「High-Performance Intel Optane」**オプションは、Dual Intel Xeon Gold 5120 および 6140 プロセッサーでのみ使用できます。
+* 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
+
+  **High-Performance Intel Optane** オプションは、Skylake の CPU モデルの Dual Intel Xeon Gold 5120 および Dual Intel Xeon Gold 6140 でのみ使用できます。
+  {:note}
+
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
 * **vSAN ライセンス**: vSAN 6.6 ライセンス・エディション (Advanced または Enterprise) を選択します。
 
@@ -155,7 +159,7 @@ ESXi サーバーの数は、2 台から 20 台の範囲内で構成できます
 
 サブドメイン・ラベルは、次の要件を満たす必要があります。
 *  英数字とダッシュ (-) の文字だけを使用できます。
-*  サブドメイン・ラベルの先頭と末尾は英数字である必要があります。
+*  サブドメイン・ラベルの先頭は英字、末尾は英数字でなければなりません。
 *  サブドメイン・ラベルの最大長は 10 文字です。
 *  サブドメイン・ラベルは、アカウント内で固有でなければなりません。
 
@@ -218,7 +222,7 @@ Windows ライセンスの注文方法について詳しくは、[Windows Server
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
 
-インスタンスが正常にデプロイされると、[{{site.data.keyword.cloud_notm}} インスタンスの技術仕様](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。
+インスタンスが正常にデプロイされると、[{{site.data.keyword.cloud_notm}} インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
@@ -239,10 +243,10 @@ Windows ライセンスの注文方法について詳しくは、[Windows Server
 
 ### 関連リンク
 
-* [{{site.data.keyword.cloud_notm}} アカウントへの登録](../vmonic/signing_softlayer_account.html)
-* [VMware Federal インスタンスの表示](vc_fed_viewinginstance.html)
-* [VMware Federal インスタンスの容量の拡張と縮小](vc_fed_addingremovingservers.html)
-* [VMware Federal インスタンスのクラスターの追加、表示、削除](fed_addviewdeleteclusters.html)
-* [VMware Federal インスタンスの保護](vc_fed_securinginstance.html)
-* [VMware Federal インスタンスの削除](vc_fed_deletinginstance.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
+* [{{site.data.keyword.cloud_notm}} アカウントの登録](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [VMware Federal インスタンスの表示](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [VMware Federal インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [VMware Federal インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [VMware Federal インスタンスの保護](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [VMware Federal インスタンスの削除](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

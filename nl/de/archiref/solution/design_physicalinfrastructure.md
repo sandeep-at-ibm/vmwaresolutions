@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ Die physische Infrastruktur setzt sich aus den folgenden Komponenten zusammen:
   <dd class="dd">Das physische Netz stellt die Netzkonnektivität in die Umgebung bereit, die dann durch die Netzvirtualisierung genutzt wird. Das Netz wird durch das {{site.data.keyword.cloud_notm}}-Servicenetz bereitgestellt und es schließt weitere Services wie DNS und NTP ein.</dd>
 </dl>
 
-Weitere Informationen zu den physischen Komponenten finden Sie in der Teileliste für die [Cloud Foundation-Instanz](../../sddc/sd_bom.html) bzw. [vCenter Server-Instanz](../../vcenter/vc_bom.html).
+Weitere Informationen zu den physischen Komponenten finden Sie in der Teileliste für die [Cloud Foundation-Instanz](/docs/services/vmwaresolutions/sddc/sd_bom.html) bzw. [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 Weitere Informationen zum Speicher finden Sie im Dokument zur [Architektur des gemeinsam genutzten Speichers](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
@@ -33,7 +33,7 @@ Weitere Informationen zum Speicher finden Sie im Dokument zur [Architektur des g
 
 "Physischer Host" bezieht sich auf die {{site.data.keyword.baremetal_short}} in der Umgebung, in der Rechenressourcen bereitgestellt werden. Die in dieser Lösung eingesetzten {{site.data.keyword.baremetal_short}} sind von VMware zertifiziert und werden im [VMware Compatibility Guide (HCG)](http://www.vmware.com/resources/compatibility/search.php) aufgeführt.
 
-Die in der Lösung verfügbaren Serverkonfigurationen erfüllen oder überschreiten die Mindestanforderungen für die Installation, Konfiguration und Verwaltung von vSphere ESXi. Es stehen verschiedene Konfigurationen für unterschiedliche Anforderungen zur Verfügung. Eine detaillierte Liste der genauen Spezifikationen für die VMware on {{site.data.keyword.cloud_notm}}-Lösung finden Sie in der Teileliste für die [Cloud Foundation-Instanz](../../sddc/sd_bom.html) bzw. [vCenter Server-Instanz](../../vcenter/vc_bom.html).
+Die in der Lösung verfügbaren Serverkonfigurationen erfüllen oder überschreiten die Mindestanforderungen für die Installation, Konfiguration und Verwaltung von vSphere ESXi. Es stehen verschiedene Konfigurationen für unterschiedliche Anforderungen zur Verfügung. Eine detaillierte Liste der genauen Spezifikationen für die VMware on {{site.data.keyword.cloud_notm}}-Lösung finden Sie in der Teileliste für die [Cloud Foundation-Instanz](/docs/services/vmwaresolutions/sddc/sd_bom.html) bzw. [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 Die {{site.data.keyword.baremetal_short}} befindet sich in der {{site.data.keyword.cloud_notm}}.
 {:note}
@@ -157,7 +157,7 @@ Dieses Design bietet die Option, entweder VMware vSAN-Speicher oder gemeinsam ge
 
 Für die Verwendung wird VMware vSAN mithilfe einer reinen Flashkonfiguration konfiguriert. Dieses Design bietet mehrere Konfigurationsoptionen, einschließlich 2U- und 4U-Chassis, verschiedener Plattenanzahlen und verschiedener Plattengrößen. Alle Konfigurationen verwenden zwei vSAN-Plattengruppen, wobei eine SSD-Platte (Solid State Disk) für Cachefunktionen und eine oder mehrere SSDs für Kapazität verwendet werden. Alle für vSAN-Nutzung zugeordneten Laufwerke werden in einer RAID-0-Konfiguration mit einer einzelnen Platte konfiguriert.
 
-Weitere Informationen zu den unterstützten Konfigurationen finden Sie in der Teileliste für die [Cloud Foundation-Instanz](../../sddc/sd_bom.html) bzw. [vCenter Server-Instanz](../../vcenter/vc_bom.html).
+Weitere Informationen zu den unterstützten Konfigurationen finden Sie in der Teileliste für die [Cloud Foundation-Instanz](/docs/services/vmwaresolutions/sddc/sd_bom.html) bzw. [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 ### Hostübergreifend gemeinsam genutzter Speicher auf Dateiebene
 
@@ -173,7 +173,7 @@ Sie können beim Kauf oder später weitere gemeinsam genutzte Dateiressourcen f�
 
 ### Zugehörige Links
 
-* [Cloud Foundation-Teileliste](../../sddc/sd_bom.html)
-* [vCenter Server-Teileliste](../../vcenter/vc_bom.html)
+* [Cloud Foundation-Teileliste](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [vCenter Server-Teileliste](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
 * [Architektur des gemeinsam genutzten Speichers](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
 * [Architektur von NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

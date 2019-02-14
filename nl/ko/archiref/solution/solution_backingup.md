@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-27"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-29"
 
 솔루션의 일부로 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 또는 Veeam on {{site.data.keyword.cloud_notm}} 추가 기능 서비스를 선택적으로 배치할 수 있습니다. Veeam 및 IBM Spectrum Protect Plus는 관리 컴포넌트를 백업하기 위한 요구사항의 충족에 도움이 될 수 있습니다.
 
-이러한 추가 기능 서비스는 {{site.data.keyword.cloud_notm}} Endurance 스토리지와 함께 배치됩니다. 서비스는 관리 컴포넌트 및 워크로드를 백업하는 데 도움이 됩니다. [IBM Spectrum Protect Plus 아키텍처 개요](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} 및 [Veeam 아키텍처 개요](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}는 배치의 계획 및 크기 조정에 관한 유용한 지침을 제공합니다. 또한 Veeam 배치를 위한 [관리 서비스](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)를 요청할 수 있습니다.
+이러한 추가 기능 서비스는 {{site.data.keyword.cloud_notm}} Endurance 스토리지와 함께 배치됩니다. 서비스는 관리 컴포넌트 및 워크로드를 백업하는 데 도움이 됩니다. [IBM Spectrum Protect Plus 아키텍처 개요](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} 및 [Veeam 아키텍처 개요](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}는 배치의 계획 및 크기 조정에 관한 유용한 지침을 제공합니다. 또한 Veeam 배치를 위한 [관리 서비스](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)를 요청할 수 있습니다.
 
 서로 다른 솔루션 컴포넌트에서는 백업을 위한 서로 다른 전략이 필요합니다. 일부 컴포넌트는 이미지 레벨 백업을 사용하여 보호되며, 기타 컴포넌트는 구성 및 데이터에 대한 파일 기반 백업을 사용하여 보호됩니다.
 

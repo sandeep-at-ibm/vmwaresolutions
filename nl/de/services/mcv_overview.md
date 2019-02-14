@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,7 +41,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} ist in den folgenden
 
 Für die Basisinfrastruktur gelten folgende Spezifikationen:
 * Jeder Standort hat seine eigenen dedizierten Edge- und Management-Cluster.
-* Der Ressourcencluster ist ein 'vSphere + vSAN Stretched Cluster'.
+* Der Ressourcencluster ist ein "vSphere + vSAN Stretched Cluster".
 * Der Zeugenstandort enthält einen ESXi-Host als Zeugen.
 * Architektur mit einem vCenter und NSX Manager
 * vCenter Server Appliance mit integriertem Platform Services Controller (PSC), der vCenter High Availability (HA) über eine L3-Netzarchitektur verwendet
@@ -55,9 +55,9 @@ Für die Tools und die technologische Architektur gelten folgende Spezifikatione
 * Optionale Disaster-Recovery (DR) für einen {{site.data.keyword.cloud_notm}}-Standort außerhalb der Region
 * Fortigate Security Appliance (oder ähnlich), um einen Internetzugang zu schützen und die Aktiv-Aktiv-Netzintegration mit dem lokalen Netz zu ermöglichen
 
-### Spezifikationen für die 'vSphere + vSAN Stretched Cluster'-Architektur
+### Spezifikationen für die "vSphere + vSAN Stretched Cluster"-Architektur
 
-Für die 'vSphere + vSAN Stretched Cluster'-Architektur gelten folgende Spezifikationen:
+Für die "vSphere + vSAN Stretched Cluster"-Architektur gelten folgende Spezifikationen:
 * Der Cluster bietet Speicher- und Rechenfunktionen, die sich über zwei Standorte erstrecken, um eine verbesserte Verfügbarkeit zu ermöglichen.
 * Schreibanforderungen von virtuellen Maschinen (VMs) werden synchron an beiden Standorten geschrieben, wodurch sich eine Netzlatenz zwischen den Standorten ergibt.
 * Leseanforderungen von VMs werden lokal an dem physischem Standort erfüllt, an dem sich die VM befindet. Dadurch wird eine zusätzliche Latenz vermieden.
@@ -75,4 +75,4 @@ Für die Netzarchitektur gelten folgende Spezifikationen:
 
 ### Zugehörige Links
 
-* [Mission Critical VMware on IBM Cloud anfordern](managing_mcv.html)
+* [Mission Critical VMware on IBM Cloud anfordern](/docs/services/vmwaresolutions/services/managing_mcv.html)

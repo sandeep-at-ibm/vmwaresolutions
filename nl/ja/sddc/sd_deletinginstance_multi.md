@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,5 +41,5 @@ Cloud Foundation インスタンスを削除すると、以下のコンポーネ
 
 ### 関連リンク
 
-* [Cloud Foundation インスタンスの削除](sd_deletinginstance.html)
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](sd_addingremovingservices.html)
+* [Cloud Foundation インスタンスの削除](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)

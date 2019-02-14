@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -24,7 +24,7 @@ Sie können außerdem angeben, ob Sie E-Mail- und Konsolenbenachrichtigungen fü
 ## Vorbereitende Schritte
 
 * Sie können nur ein Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit einem {{site.data.keyword.cloud_notm}}-Benutzerkonto verknüpfen.
-* Das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer), das Sie verwenden, muss bestimmte Anforderungen erfüllen. Weitere Informationen finden Sie unter [Anforderungen an das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur](slaccountrequirement.html).
+* Das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer), das Sie verwenden, muss bestimmte Anforderungen erfüllen. Weitere Informationen finden Sie in [Anforderungen an das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html). 
 * Wenn der API-Schlüssel für Ihr Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) geändert wird, müssen Sie den Schlüssel auf der Seite **Einstellungen** in der Konsole von {{site.data.keyword.vmwaresolutions_short}} aktualisieren.
 
    **Wichtig:** Sie müssen dafür sorgen, dass der auf der Seite **Einstellungen** gespeicherte API-Schlüssel richtig und aktuell ist. Andernfalls können Operationen fehlschlagen, die eine Validierung des API-Schlüssels erforderlich machen.
@@ -38,7 +38,7 @@ Sie können außerdem angeben, ob Sie E-Mail- und Konsolenbenachrichtigungen fü
 3. Geben Sie im Bereich **Berechtigungsnachweise für IBM Cloud-Infrastruktur** den Benutzernamen und den API-Schlüssel Ihres Kontos der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) ein:
    * Wenn Ihr Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) und Ihr {{site.data.keyword.cloud_notm}}-Konto verknüpft sind, klicken Sie auf **Abrufen**, um die Berechtigungsnachweise automatisch eintragen zu lassen.
    * Wenn Ihr Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) und Ihr {{site.data.keyword.cloud_notm}}-Konto nicht verknüpft sind, stellen Sie die Verknüpfung her. Melden Sie sich im [Kundenportal der {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/) an und rufen Sie die Berechtigungsnachweise wie in der Konsole angegeben ab. Geben Sie die Berechtigungsnachweise anschließend ein.
-   * Wenn Sie kein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) haben, [registrieren Sie sich für ein Konto](../vmonic/signing_softlayer_account.html). Befolgen Sie dann die Anweisungen in der Konsole, um die Berechtigungsnachweise abzurufen, und geben Sie die Berechtigungsnachweise anschließend ein.
+   * Wenn Sie kein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) haben, [registrieren Sie sich für ein Konto](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html). Befolgen Sie dann die Anweisungen in der Konsole, um die Berechtigungsnachweise abzurufen, und geben Sie die Berechtigungsnachweise anschließend ein.
 4. Klicken Sie auf **Berechtigungsnachweise speichern**.
 
 ## Ergebnisse
@@ -51,8 +51,8 @@ Falls für bestimmte Instanzereignisse E-Mail- oder Konsolenbenachrichtigungen a
 
 ### Zugehörige Links
 
-* [Häufig gestellte Fragen](faq.html)
-* [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
-* [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
-* [Benachrichtigungen](notifications.html)
-* [SoftLayer-API](../../../customer-portal/cpapi.html){:new_window}
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Benachrichtigungen](/docs/services/vmwaresolutions/vmonic/notifications.html)
+* [SoftLayer-API](/docs/customer-portal/cpapi.html){:new_window}

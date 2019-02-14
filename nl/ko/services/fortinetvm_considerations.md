@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-10-25"
 
@@ -58,7 +58,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 설
 * FortiGate Virtual Appliances의 HA 이중화를 인스턴스에 배치하는 경우, 라이센스 활성화와 최신 보안 정책 및 컨텐츠 확보를 위해 인스턴스와 공용 네트워크 간의 아웃바운드 HTTPS 통신을 허용하도록 SNAT 및 방화벽 규칙이 관리 NSX Edge Services Gateway(ESG)에서 FortiGate Virtual Appliances의 정적 라우트와 함께 정의됩니다.
 * 서비스 설치 후 라이센스 레벨을 변경할 수 없습니다. 라이센스 레벨을 변경하려면 기존 서비스를 제거한 후 다른 라이센스 옵션을 선택하여 서비스를 다시 설치해야 합니다.
 * FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}가 실패하지 않으려면 다음 요구사항을 충족해야 합니다.
-   * 개별 서버에 VM을 유지하는 연관관계 방지 규칙으로 두 FortiGate VM이 최소 두 개의 활성 ESXi 서버를 배치할 수 있습니다.
+   * 개별 서버에 VM을 유지하는 비유사성 규칙으로 두 FortiGate VM이 최소 두 개의 활성 ESXi 서버를 배치할 수 있습니다.
    * CPU 및 RAM이 100% 예약된 상태로 각 ESXi 서버에 하나의 FortiGate VM을 호스팅할 수 있도록 두 개의 활성 서버에 사용할 수 있는 충분한 리소스가 있습니다.
    * VMware vSphere HA에는 CPU 및 RAM이 100% 상태로 두 FortiGate VM을 호스팅할 수 있는 충분한 리소스가 있습니다.
 

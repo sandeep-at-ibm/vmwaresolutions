@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,8 +19,8 @@ Sie können einen VMware vSphere-Cluster bestellen, der auf einer von Ihnen gesp
 ## Voraussetzungen
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen](../vmonic/useraccount.html).
-*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für vSphere-Cluster](vs_planning.html) vertraut gemacht.
+*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für vSphere-Cluster](/docs/services/vmwaresolutions/vsphere/vs_planning.html) vertraut gemacht.
 *  Sie haben eine Konfigurationsvorlage für die Wiederverwendung erstellt.
 
 ## Vorgehensweise zum Bestellen von vSphere-Clustern, die auf vorhandenen Konfigurationen basieren
@@ -29,7 +29,7 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 2. Klicken Sie auf der Seite **VMware vSphere on IBM Cloud** auf **Erstellen**.  
 3. Klicken Sie auf die Registerkarte **Neue erstellen** und wählen Sie eine Konfigurationsvorlage in der Liste **Clusterkonfigurationen** aus.
 4. Geben Sie einen neuen Clusternamen ein.
-5. Überprüfen Sie die automatisch eingetragenen Clustereinstellungen und aktualisieren Sie die Einstellungen nach Bedarf. Weitere Informationen zu den Einstellungen finden Sie unter [Neue vSphere-Cluster bestellen](vs_orderinginstances.html).
+5. Überprüfen Sie die automatisch eingetragenen Clustereinstellungen und aktualisieren Sie die Einstellungen nach Bedarf. Weitere Informationen zu den Einstellungen finden Sie unter [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html).
 6. Überprüfen Sie im Fenster **Bestellübersicht** die Instanzkonfiguration und die geschätzten Kosten.
    * Wenn Sie die Konfiguration als Vorlage speichern wollen, ohne eine Bestellung aufzugeben, klicken Sie auf **Konfiguration speichern**.
    * Wenn Sie die Bestellung aufgeben wollen, dann vergewissern Sie sich, dass das zu belastende Konto korrekt ist, überprüfen und akzeptieren Sie die Bedingungen und klicken Sie dann auf **Bereitstellung**.
@@ -48,6 +48,6 @@ Die vSphere-Cluster werden (anders als die vCenter Server- und Cloud Foundation-
 
 ### Zugehörige Links
 
-* [Neue vSphere-Cluster bestellen](vs_orderinginstances.html)
-* [Vorhandene vSphere-Cluster skalieren](vs_scalingexistingclusters.html)
-* [Außerhalb der Konsole erstellte Cluster skalieren](vs_orderingforclustersoutside.html)
+* [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Vorhandene vSphere-Cluster skalieren](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [Außerhalb der Konsole erstellte Cluster skalieren](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

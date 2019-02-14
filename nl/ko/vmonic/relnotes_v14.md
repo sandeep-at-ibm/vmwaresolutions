@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-03-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V1.4 릴리스 정보
 
@@ -34,7 +38,8 @@ lastupdated: "2017-03-08"
 
 NSX 설치의 일부로 NSX Manager가 배치된 모든 새 인스턴스에 설치되고 라이센스가 부여됩니다. 또한 NSX Edge는 인스턴스 관리를 위해 작성되지만 필요한 경우 고유한 NSX Edge 컴포넌트를 작성할 수 있습니다. NSX Edge에 대한 자세한 정보는 이 페이지의 _VMware NSX Edge_ 절을 참조하십시오.
 
-**참고**: NSX Controller는 vCenter Server 인스턴스에 설치되어 있지 않습니다(Cloud Foundation 인스턴스에 설치된 방법으로). VXLAN 또는 vCenter Server 인스턴스에 대한 분배된 논리 라우터를 사용하는 경우 자체적으로 NSX Controller를 설치해야 합니다.
+NSX Controller는 vCenter Server 인스턴스에 설치되어 있지 않습니다(Cloud Foundation 인스턴스에 설치된 방법으로). VXLAN 또는 vCenter Server 인스턴스에 대한 분배된 논리 라우터를 사용하는 경우 자체적으로 NSX Controller를 설치해야 합니다.
+{:note}
 
 VMware NSX for vSphere 6.2.4에 도입된 개선사항, 요구사항 및 알려진 문제에 대한 자세한 정보는 [NSX for vSphere 6.2.4 릴리스 정보](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}를 참조하십시오.
 
@@ -74,7 +79,8 @@ NSX Edge는 이제 주문 중인 새 vCenter Server 인스턴스의 일부로 �
 * Cloud Foundation 인스턴스 및 vCenter Server 인스턴스의 경우: 최적화된 네트워킹 구성 즉, SoftLayer®로 지정된 기본 공용 및 사설 IP 주소만 ESXi 서버에 연결됩니다. 포터블 사설 주소가 더이상 관리 트래픽에 대해 배치되지 않습니다.
 * Cloud Foundation 인스턴스만의 경우: Windows AD SSO(Active Directory Single Sign-On) 및 DNS(Domain Name System) 서버
 
-**참고**: 이 변경으로 인해 현재 릴리스에서 기존의 V1.4 이전 인스턴스를 사용할 수 없습니다. 기존 인스턴스의 구성을 다시 사용하려면 기존 인스턴스를 현재 버전으로 업그레이드해야 합니다. 자세한 정보는 [V1.4 이전에서 인스턴스 업그레이드](movinginstances.html)를 참조하십시오.
+이 변경으로 인해 현재 릴리스에서 기존의 V1.4 이전 인스턴스를 사용할 수 없습니다. 기존 인스턴스의 구성을 다시 사용하려면 기존 인스턴스를 현재 버전으로 업그레이드해야 합니다. 자세한 정보는 [V1.4 이전에서 인스턴스 업그레이드](movinginstances.html)를 참조하십시오.
+{:note}
 
 ## Cloud Foundation 인스턴스에 대한 다중 사이트 구성 지원
 

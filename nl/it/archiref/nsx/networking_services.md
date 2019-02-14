@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -187,7 +187,7 @@ Tabella 9. Configurazione IP ESG del carico di lavoro e DLR
 
 NAT è utilizzato nell'ESG del carico di lavoro per consentire al traffico di rete di passare tra uno spazio di indirizzi IP e un altro. Per l'ESG del carico di lavoro, NAT è necessario non solo per consentire la comunicazione verso destinazioni Internet, ma anche per comunicare in qualsiasi intervallo di IP originato da {{site.data.keyword.cloud_notm}}. Per questa progettazione, il traffico del carico di lavoro può uscire su Internet, ma non sulla rete di gestione o su una qualsiasi rete di {{site.data.keyword.cloud_notm}}. Pertanto, è necessario definire solo uno SNAT sull'ESG del carico di lavoro. L'intera sottorete portatile del carico di lavoro è configurata per attraversare SNAT.
 
-Sebbene sia possibile utilizzare NAT per consentire la comunicazione del carico di lavoro tra più istanze di Cloud Foundation o vCenter Server, questo diventa poco pratico quando è necessario collegare molti carichi di lavoro tra le istanze. Per esempi di utilizzo delle funzionalità NSX avanzate per creare una rete L2 eccessivamente transitabile tra le istanze Cloud Foundation o vCenter Server, vedi [Architettura multisito](multi_site.html).
+Sebbene sia possibile utilizzare NAT per consentire la comunicazione del carico di lavoro tra più istanze di Cloud Foundation o vCenter Server, questo diventa poco pratico quando è necessario collegare molti carichi di lavoro tra le istanze. Per esempi di utilizzo delle funzionalità NSX avanzate per creare una rete L2 eccessivamente transitabile tra le istanze Cloud Foundation o vCenter Server, vedi [Architettura multisito](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html).
 
 Tabella 10. Regole NAT ESG del carico di lavoro
 
@@ -211,7 +211,7 @@ Tabella 11. Instradamento dinamico
 
 Per impostazione predefinita, l'ESG del carico di lavoro è configurato per negare tutto il traffico.
 
-**Nega:** per eliminare tutto il traffico senza risposta quando tale traffico non viene autorizzato ad attraversare il firewall da una regola o serie di regole precedente (più alta nell'ordine). La generazione automatica delle regole è selezionata per consentire il traffico di controllo alla coppia ESG.
+**Nega:** consente di eliminare tutto il traffico senza risposta quando tale traffico non viene autorizzato ad attraversare il firewall da una regola o serie di regole precedente (più alta nell'ordine). La generazione automatica delle regole è selezionata per consentire il traffico di controllo alla coppia ESG.
 
 Sono impostate le seguenti regole del firewall, oltre alle regole generate automaticamente.
 
@@ -240,5 +240,5 @@ Per impostazione predefinita, la registrazione è abilitata su tutti i nuovi dis
 
 ### Link correlati
 
-* [Progettazione del gateway dei servizi edge NSX](nsx_design.html)
-* [Architettura multisito](multi_site.html)
+* [Progettazione del gateway dei servizi edge NSX](/docs/services/vmwaresolutions/archiref/nsx/nsx_design.html)
+* [Architettura multisito](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)

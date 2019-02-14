@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -53,10 +53,12 @@ Als Referenzinformationen zu den folgenden Regeln gelten die Angaben für die Ke
 
 ### Regelsatz für Tricks
 
-*   **basis-combo** = 'richtung \+ \[varial |drehungspräfix\] \+\[drehung\] \+ \[basistrick\]'
-*   **nächster_combo** = ''\[varial |drehungspräfix\] \+ \[drehung\] \+ \[basistrick\]'
-*   **landungs-combo** = ''\[varial |drehungspräfix\] \+ landung'
-*   **trick** = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landungs-combo\]'
+```
+basis-combo = 'richtung \+ \[varial | drehungspräfix\] \+ \[drehung\] \+ \[basistrick\]'
+nächster_combo = ''\[varial | drehungspräfix\] \+ \[drehung\] \+ \[basistrick\]'
+landungs-combo = ''\[varial | drehungspräfix\] \+ landung'
+trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landungs-combo\]'
+```
 
 ### Regelengine für Tricks
 
@@ -70,76 +72,43 @@ Abbildung 1. Übersicht über Skater-Sprache
 Die folgende Liste enthält Beispiele für Tricks:
 
 ```
-
 fakie-kickflip
-
 fakie-kickflip to fakie-5-0 to fronside-halfcab (out)
-
 fakie-heeflip
-
 fakie-heeflip to fakie-maual to fakie-hardflip
-
 fakie-inward (varial) heeflip to fakie-backside tailslide to fakie
-
 switch-heeflip to fakie-maual to fakie-hardflip
-
 switch-hardflip to fakie-manual
-
 fakie-hardflp to fakie-nosegrind
-
 nollie-hardflip-to-tailslide
-
 nollie-inward-heelflip to frontside noseslide
-
 kickflip-frontside to crooked grind
-
 halfcab-heelflip to crooked grind
-
 frontside-shuvit to nosegrind to nollie-flip (out)
-
 kickflip to nosegrind to nollie-impossilbe (out)
-
 nollie-kickflip to noseslide to nollieflip
-
 nollie-kickflip to frontside-lipslide
-
 nollie-impossible to manual
-
 nollie-impossible to 5-0
-
 nollie-kickflip to crooked grind
-
 nollie-kickflip to crooked grind to nollie-halfcab-kickflip (out)
-
 frontside-nollie-halfcab-heelflip to fakie-nosegrind
-
 backside-nollie-halfcab-kickflip to backside-tailslide to backside-180-out
-
 frontside-nollie-cab-kicflip halfcab to backside-smithgrind
-
 halfcab to backside-smithgrind to backside-180-bigspin (out)
-
 kickflip-backside-tailslide to backside-180-kickflip
-
 kickflip-backside-tailslide to backside-backside-bigspin
-
 360-kicflip to nosemanual to nollie-360-kickflip
-
 360-kicflip to frontside-lipslide
-
 harflip to backside-lipslide
-
 kicflip to frontside-boardslidev
-
 nollie-heelflip to frontside-boardslide
-
 ```
 
 ## Relevanz
 
 Die Sprache für Tricks ist das Schlüsselkonstrukt, mit dem Watson für die Erkennung und Aufnahme von Dokumenten und Medien über das Skateboarding trainiert wird, und bildet außerdem die Grundlage für Dialoge mit dem Benutzer.
 
-
 ### Zugehörige Links
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)  
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)  

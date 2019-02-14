@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-10-01"
 
@@ -20,7 +20,7 @@ Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserung
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Weitere Informationen enthält der Abschnitt [Gegenmaßnahmen für Sicherheitslücken "Spectre" und "Meltdown"](../vmonic/trbl_fix_spectre.html).
+Weitere Informationen enthält der Abschnitt [Gegenmaßnahmen für Sicherheitslücken "Spectre" und "Meltdown"](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
 
 ## Option "Hohe Leistung mit Intel Optane"
 
@@ -34,15 +34,15 @@ Weitere Informationen finden Sie in dem für Ihre Instanz oder Ihren Clustertyp 
 
 ## Öffentliches oder privates Netz aktivieren
 
-Sie können nun vCenter Server- und vCenter Server with Hybridity Bundle-Instanzen sowie VMware vSphere-Cluster bereitstellen, die eine für das öffentliche und private Netz aktivierte Schnittstellenkarte (NIC – Network Interface Card) oder eine nur für das private Netz aktivierte NIC haben. Diese Option ist auch verfügbar, wenn Sie Ihrer vCenter Server- bzw. vCenter Server with Hybridity Bundle-Instanz einen neuen Cluster hinzufügen.
+Sie können nun vCenter Server- und vCenter Server with Hybridity Bundle-Instanzen sowie VMware vSphere-Cluster bereitstellen, die eine für das öffentliche und private Netz aktivierte Schnittstellenkarte (NIC - Network Interface Card) oder eine nur für das private Netz aktivierte NIC haben. Diese Option ist auch verfügbar, wenn Sie Ihrer vCenter Server- bzw. vCenter Server with Hybridity Bundle-Instanz einen neuen Cluster hinzufügen.
 
 Einige Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie das ausschließlich private Netz auswählen.
 
 Weitere Informationen finden Sie unter _Netzschnittstelleneinstellungen_ in den folgenden Abschnitten:
 
-* [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html#network-interface-settings)
-* [vCenter Server with Hybridity Bundle-Instanzen bestellen](../vcenter/vc_hybrid_orderinginstance.html#network-interface-settings)
-* [Neue vSphere-Cluster bestellen](../vsphere/vs_orderinginstances.html#network-interface-settings)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#network-interface-settings)
+* [vCenter Server with Hybridity Bundle-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html#network-interface-settings)
+* [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#network-interface-settings)
 
 ## ESXi-Server löschen
 
@@ -50,9 +50,9 @@ Sie können nun aus Ihrer vCenter Server-, vCenter Server with Hybridity Bundle-
 
 Weitere Informationen zu Voraussetzungen für ESXi-Server finden Sie in den folgenden Abschnitten:
 
-* [Kapazität für vCenter Server-Instanzen erweitern und verringern](../vcenter/vc_addingremovingservers.html)
-* [Kapazität für vCenter Server with Hybridity Bundle-Instanzen erweitern und verringern](../vcenter/vc_hybrid_addingremovingservers.html)
-* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](../sddc/sd_addingremovingservers.html)
+* [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Kapazität für vCenter Server with Hybridity Bundle-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
 
 ## Updates für VMware vCenter Server-Instanzen
 
@@ -67,9 +67,9 @@ Mit diesem Release werden die folgenden Upgrades und Verbesserungen angewendet:
 
 ### Hybridity Bundle aus einer vCenter Server-Instanz entfernen
 
-Sie können nun die Lizenz für Hybridity Bundle aus Ihrer vCenter Server-Instanz entfernen. Dazu müssen Sie die Schlüssel der VMware NSX- und VMware vSAN-Mietlizenzen in VMware vSphere Web Client durch Schlüssel eigener Lizenzen (BYOL – Bring Your Own License) ersetzen und ein Support-Ticket öffnen, um die Gebühren für die Mietlizenzen zu stornieren.
+Sie können nun die Lizenz für Hybridity Bundle aus Ihrer vCenter Server-Instanz entfernen. Dazu müssen Sie die Schlüssel der VMware NSX- und VMware vSAN-Mietlizenzen in VMware vSphere Web Client durch Schlüssel eigener Lizenzen (BYOL - Bring Your Own License) ersetzen und ein Support-Ticket öffnen, um die Gebühren für die Mietlizenzen zu stornieren.
 
-Weitere Informationen finden Sie in [Hybridity Bundle aus einer vCenter Server-Instanz entfernen](../vcenter/vc_hybrid_deletingbundle.html).
+Weitere Informationen finden Sie in [Hybridity Bundle aus einer vCenter Server-Instanz entfernen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletingbundle.html).
 
 ### Verfügbarkeit von vCenter Server with Hybridity Bundle
 
@@ -77,8 +77,8 @@ Business Partner können nun vCenter Server with Hybridity Bundle-Instanzen best
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 
-* [Übersicht über vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
-* [vCenter Server with Hybridity Bundle-Instanzen bestellen](../vcenter/vc_hybrid_orderinginstance.html)
+* [Übersicht über vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [vCenter Server with Hybridity Bundle-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
 
 ## Updates für VMware Cloud Foundation-Instanzen
 
@@ -98,8 +98,8 @@ Der Service "HyTrust KeyControl on {{site.data.keyword.cloud_notm}}" ist nun fü
 Sie können Instanzen bestellen, die den Service enthalten, oder diesen Service später zu Ihren vorhandenen Instanzen hinzufügen.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Komponenten und Hinweise für HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)
-* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/managinghtkc.html)
+* [Komponenten und Hinweise für HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_considerations.html)
+* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtkc.html)
 
 ### HyTrust CloudControl on IBM Cloud
 
@@ -115,7 +115,7 @@ Ab Version 2.6 werden neue Instanzen und neue Hosts mithilfe von vSphere ESXi V6
 
 Es wird empfohlen, für vorhandene Cloud Foundation-Instanzen, in denen Veeam on {{site.data.keyword.cloud_notm}} installiert ist, ebenfalls eine Aktualisierung auf Version 9.5u3a oder höher durchzuführen.
 
-Weitere Informationen zu Veeam on {{site.data.keyword.cloud_notm}} finden Sie in [Übersicht über Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html).
+Weitere Informationen zu Veeam on {{site.data.keyword.cloud_notm}} finden Sie in [Veeam on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/veeam_considerations.html). 
 
 ### VMware HCX on IBM Cloud
 
@@ -123,7 +123,7 @@ Das aktuelle Release installiert VMware HCX 3.5.1 auf allen neu bereitgestellten
 
 ### Zerto on IBM Cloud-Unterstützung für vSphere ESXi V6.5 Update 2c
 
-Wenn Sie vorhandene Hosts auf vSphere ESXi V6.5 Update 2 aktualisieren und zuvor Zerto on {{site.data.keyword.cloud_notm}} installiert haben, kann die Zerto Virtual Replication-Konsole unter Umständen die Warnung `Unsupported ESX Version` unter dem Status 'Zerto Virtual Replication Appliances (VRAs)' anzeigen.
+Wenn Sie vorhandene Hosts auf vSphere ESXi V6.5 Update 2 aktualisieren und zuvor Zerto on {{site.data.keyword.cloud_notm}} installiert haben, kann die Zerto Virtual Replication-Konsole unter Umständen die Warnung `Unsupported ESX Version` unter dem Status "Zerto Virtual Replication Appliances (VRAs)" anzeigen.
 
 Weitere Informationen zum Beheben dieser Warnung finden Sie in den folgenden Abschnitten:
 
@@ -135,7 +135,7 @@ Weitere Informationen zum Beheben dieser Warnung finden Sie in den folgenden Abs
 ### Referenzdokumentation zur Architektur
 Das {{site.data.keyword.vmwaresolutions_short}}-Architekturdokument wurde aktualisiert, um wichtige Hinweise für das Verständnis Ihrer Verantwortlichkeiten hinsichtlich der Verwaltung und des Betriebs Ihrer VMware-Instanz zu verstehen.
 
-Weitere Informationen finden Sie in [Nach der Bereitstellung zu beachtende Aspekte für Ihre VMware-Instanz](../archiref/solution/solution_considerations.html).
+Weitere Informationen finden Sie in [Nach der Bereitstellung zu beachtende Aspekte für Ihre VMware-Instanz](/docs/services/vmwaresolutions/archiref/solution/solution_considerations.html).
 
 ## Updates und Erweiterungen der Benutzerschnittstelle
 

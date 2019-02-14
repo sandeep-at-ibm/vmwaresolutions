@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,8 +19,8 @@ lastupdated: "2018-10-29"
 ## 要件
 
 以下の作業を完了していることを確認してください。
-*  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定](../vmonic/useraccount.html)を参照してください。
-*  [vSphere クラスターの要件と計画](vs_planning.html)に記載されている要件と考慮事項を確認する。
+*  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定](/docs/services/vmwaresolutions/vmonic/useraccount.html#managing-user-accounts-and-settings)を参照してください。
+*  [vSphere クラスターの要件と計画](/docs/services/vmwaresolutions/vsphere/vs_planning.html)に記載されている要件と考慮事項を確認する。
 *  拡張対象のクラスターを使用する準備ができたことが、確認の E メールで通知される。
 
 ## 既存のクラスターを拡張する手順
@@ -46,6 +46,6 @@ vSphere クラスターは、vCenter Server インスタンスや Cloud Foundati
 
 ### 関連リンク
 
-* [新規 vSphere クラスターの注文](vs_orderinginstances.html)
-* [既存の構成を基にした vSphere クラスターの注文](vs_orderingbasedonexistingconfig.html)
-* [コンソール以外で作成されたクラスターの拡張](vs_orderingforclustersoutside.html)
+* [新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [既存の構成を基にした vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [コンソール以外で作成されたクラスターの拡張](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

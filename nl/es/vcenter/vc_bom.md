@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -36,9 +36,9 @@ Tabla 2. Lista de materiales para los componentes de software de instancias de v
 
 | Fabricante  | Componente                      | Versión       |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.5 Actualización 2c (hasta el nivel de parche ESXi650-201808001) |
-| VMware       | vCenter Server Appliance        | 6.5 Actualización 2c |
-| VMware       | Platform Services Controller    | 6.5 Actualización 2c |
+| VMware       | vSphere ESXi                    | 6.5 Actualización P3 (compilación 6.5.0-10884925) |
+| VMware       | vCenter Server Appliance        | 6.5 U2d (compilación 6.5.0-10964411) |
+| VMware       | Platform Services Controller    | 6.5 U2d (compilación 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX for vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |

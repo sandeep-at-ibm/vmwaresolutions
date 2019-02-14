@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,13 +25,13 @@ I termini in questa sezione vengono applicati a tutto il portfolio {{site.data.k
 
 ### HIPAA
 
-Nonostante le informazioni contenute nella scheda di dati per questo Servizio cloud relativamente all'HIPAA (Health Information Portability and Accountability Act) del 1996 e all'uso consentito delle informazioni e dei dati sanitari come tipi di dati personali e/o categorie speciali di dati personali (collettivamente "Dati sanitari) con questo Servizio cloud, l'uso di Dati sanitari con questo Servizio cloud è soggetto alle seguenti limitazioni e condizioni 
+Nonostante le informazioni contenute nella scheda di dati per questo Servizio cloud relativamente all'HIPAA (Health Information Portability and Accountability Act) del 1996 e all'uso consentito delle informazioni e dei dati sanitari come tipi di dati personali e/o categorie speciali di dati personali (collettivamente "Dati sanitari) con questo Servizio cloud, l'uso di Dati sanitari con questo Servizio cloud è soggetto alle seguenti limitazioni e condizioni
 
 {{site.data.keyword.vmwaresolutions_short}}
 
-Solo le offerte sopra elencate possono essere fornite per implementare i controlli delle regole in materia di riservatezza e sicurezza dell'HPIAA per l'uso con Dati sanitari se il Cliente notifica preventivamente a IBM che userà i Dati sanitari con il Servizio cloud e IBM conferma per iscritto che il Servizio cloud verrà fornito per l'utilizzo di Dati sanitari. Di conseguenza, il Servizio cloud non può essere usato per la trasmissione, l'archiviazione o altro utilizzo di Dati sanitari tutelati dall'HIPAA tranne nel caso in cui (i) il Cliente fornisca a IBM tali notifiche; (ii) IBM e il Cliente abbiano concluso un accordo BAA (Business Associate Agreement); e (iii) IBM fornisca al cliente un'esplicita conferma scritta che il Servizio cloud possa essere utilizzato con i Dati sanitari. In nessun caso il Servizio cloud sarà utilizzato per elaborare informazioni sanitarie personali come un  centro di raccolta e smistamento di informazioni relative all'assistenza sanitaria ai termini dell'HIPAA. 
+Solo le offerte sopra elencate possono essere fornite per implementare i controlli delle regole in materia di riservatezza e sicurezza dell'HPIAA per l'uso con Dati sanitari se il Cliente notifica preventivamente a IBM che userà i Dati sanitari con il Servizio cloud e IBM conferma per iscritto che il Servizio cloud verrà fornito per l'utilizzo di Dati sanitari. Di conseguenza, il Servizio cloud non può essere usato per la trasmissione, l'archiviazione o altro utilizzo di Dati sanitari tutelati dall'HIPAA tranne nel caso in cui (i) il Cliente fornisca a IBM tali notifiche; (ii) IBM e il Cliente abbiano concluso un accordo BAA (Business Associate Agreement); e (iii) IBM fornisca al cliente un'esplicita conferma scritta che il Servizio cloud possa essere utilizzato con i Dati sanitari. In nessun caso il Servizio cloud sarà utilizzato per elaborare informazioni sanitarie personali come un centro di raccolta e smistamento di informazioni relative all'assistenza sanitaria ai termini dell'HIPAA.
 
-Nel caso di un errore di sistema, un provider di servizi di terze parti può richiedere le risorse di debug dal cliente (log, dump di memoria core e così via). È unica responsabilità del cliente di raccogliere e trasmettere queste risorse al provider di terze parti. Il team di supporto IBM può fornire assistenza fornendo link alla documentazione o indicazioni tramite sessioni di condivisione dello schermo. Tuttavia, il cliente è responsabile della pulizia dei dati di qualsiasi PHI e di assicurarsi che siano adeguatamente codificati prima della trasmissione. È anche responsabilità del cliente valutare se richiedono l'esecuzione di un BAA con il provider di terze parti prima di inviare i dati.
+Nel caso di un errore di sistema, un provider di servizi di terze parti può richiedere le risorse di debug dal cliente (log, dump di memoria core e così via). È unica responsabilità del cliente di raccogliere e trasmettere queste risorse al provider di terze parti. Il team di supporto IBM può fornire assistenza fornendo link alla documentazione o indicazioni tramite sessioni di condivisione dello schermo. Tuttavia, il cliente è responsabile della pulizia dei dati di qualsiasi PHI e di assicurarsi che siano adeguatamente crittografati prima della trasmissione. È anche responsabilità del cliente valutare se richiedono l'esecuzione di un BAA con il provider di terze parti prima di inviare i dati.
 
 ## Informazioni personali e dati regolamentati
 
@@ -43,16 +43,16 @@ Gli ambienti VMware Cloud Foundation e vCenter Server, che vengono forniti come 
 
 ## Supporto proattivo
 
-### Provisioning iniziale
+### Supporto proattivo per il provisioning iniziale
 
 * Durante l'ordine e il provisioning iniziali di un'istanza o di un servizio, il supporto IBM può accedere alle istanze e alle informazioni del client senza notifica preventiva per assicurarsi che gli ordini siano correttamente adempiuti.
 * Il supporto IBM monitora attivamente le operazioni del ciclo di vita dell'istanza come l'aggiunta di nuovi host, oltre ai processi di ordine, provisioning e installazione.
 * Per risolvere i problemi individuati o che potrebbero presentarsi in futuro, il supporto IBM può assumere un certo numero di azioni tra cui ma non limitate a: rivedere i dettagli dell'ordine del cliente, riavviare i lavori di automazione, eseguire operazioni di ricaricamento del sistema operativo o aprire i ticket di IBM Cloud utilizzando il nome utente e la chiave API di IBM Cloud forniti dal cliente.
 
-### Operazioni successive
+### Supporto proattivo per operazioni in stato stabile
 
-* In rare occasioni, il supporto IBM può richiedere l'accesso alle istanze del cliente durante le operazioni successive per risolvere in modo proattivo un problema dell'istanza o per verificare il funzionamento dei servizi o dei componenti forniti.
-* Questo accesso avviene tramite la rete di supporto interno di IBM Cloud. In nessun momento il supporto IBM modifica la configurazione dell'istanza senza il previo consenso del cliente. 
+* In rare occasioni, il supporto IBM potrebbe richiedere l'accesso alle istanze client durante le operazioni in stato stabile per risolvere proattivamente un problema di istanza o per verificare la funzione dei servizi o componenti forniti.
+* Questo accesso avviene tramite la rete di supporto interno di IBM Cloud. In nessun momento il supporto IBM modifica la configurazione dell'istanza senza il previo consenso del cliente.
 * L'accesso è ai componenti di gestione VMware e/o ai componenti di gestione di IBM Cloud e mai alle macchine o alle applicazioni virtuali del cliente.
 
 ### Ticket di supporto
@@ -62,7 +62,7 @@ Gli ambienti VMware Cloud Foundation e vCenter Server, che vengono forniti come 
 * A causa del livello di specializzazione richiesto per mantenere una competenza tecnica superiore a livello di team, a volte è necessario coinvolgere più di un team di supporto nella risoluzione di un particolare problema software. Questo è gestito facilmente, poiché i nostri team di supporto sono tutti collegati in rete e lavorano come una squadra per risolvere i problemi o le questioni che vengono individuati.
 * Per analizzare il problema, IBM potrebbe avere bisogno di accedere alle informazioni sul tuo sistema relative all'errore o potrebbe essere necessario ricreare l'errore per ottenere ulteriori informazioni.
 * Un certificato di supporto generato dal cliente serve come riconoscimento che il supporto IBM può accedere al livello di gestione VMware per le indagini, il debug e l'intervento. Se sono necessari l'interruzione della manutenzione o delle modifiche all'ambiente, il supporto IBM richiederà una ulteriore conferma documentata dal cliente tramite ticket come parte del nostro processo di gestione delle modifiche.
-* Per ulteriori informazioni sui ticket di supporto, consulta [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) e [Come contattare il supporto IBM](../vmonic/trbl_support.html).
+* Per ulteriori informazioni sui ticket di supporto, consulta [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) e [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## Responsabilità del cliente
 
@@ -72,7 +72,7 @@ Gli ambienti VMware Cloud Foundation e vCenter Server, che vengono forniti come 
 * Al momento della distribuzione iniziale, l'automazione dell'offerta e l'account del cliente sono separati. Al client viene consentito ed è incoraggiato a modificare tutte le password fornite da IBM nel portale.
 * L'accesso vCenter e le credenziali vengono create durante le distribuzioni iniziali e fornite al cliente. Come parte dei requisiti della nostra offerta, il supporto IBM deve mantenere l'accesso completo al livello di gestione per fornire la gestione del ciclo di vita nonché il supporto ai nostri clienti.
 * Se le credenziali come le password vengono modificate in qualsiasi momento, il supporto IBM potrebbe non essere più in grado di aiutare il cliente a recuperare le credenziali perse o dimenticate o anche a risolvere i problemi degli ambienti del cliente.
-* Per ulteriori informazioni sull'importanza di questo problema e sulle relative preoccupazioni, consulta [Considerazioni sulla modifica delle password per i componenti NSX](vc_networkingonvcenterserver.html#considerations-when-changing-passwords-for-nsx-components) e [Considerazioni sulla modifica delle risorse vCenter Server](vcenter_chg_impact.html).
+* Per ulteriori informazioni sull'importanza di questo problema e sulle relative preoccupazioni, consulta [Considerazioni sulla modifica delle password per i componenti NSX](/docs/services/vmwaresolutions/vcenter/vc_networkingonvcenterserver.html#considerations-when-changing-passwords-for-nsx-components) e [Considerazioni sulla modifica delle risorse vCenter Server](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html).
 
 ### Comunicazione e risoluzione dei problemi
 
@@ -87,9 +87,9 @@ Gli ambienti VMware Cloud Foundation e vCenter Server, che vengono forniti come 
 
 * Gestione del servizio cloud: il cliente è responsabile della gestione dell'amministrazione, delle operazioni, della manutenzione e della sicurezza delle applicazioni, incluso il middleware sottostante.
 * Integrità e disponibilità dei servizi: IBM inoltrerà al cliente tutte le notifiche di intrusione nella rete rilevate per questo servizio cloud. La responsabilità del cliente è quella di valutare l'impatto di ciascuna notifica. Il cliente verrà informato di malfunzionamenti hardware. Il monitoraggio e la risposta ai malfunzionamenti del sistema operativo o del software sono responsabilità del cliente, coinvolgere il supporto IBM come richiesto.
-* Registrazione delle attività: il cliente è responsabile della registrazione delle attività di SO/Sistema e Database/Applicazioni, se necessario.  
-* Codifica: il cliente è responsabile della configurazione e della gestione di tutte le codifiche (sia per i dati a riposo che in transito), se necessario.
-* Continuità di business e ripristino d'emergenza: il cliente è responsabile della configurazione e della gestione di tutti i processi di continuità di business e di ripristino d'emergenza, se necessario.
+* Registrazione delle attività: il cliente è responsabile della registrazione delle attività di SO/Sistema e Database/Applicazioni, come necessario.
+* Crittografia: il cliente è responsabile della configurazione e della gestione di tutte le crittografie (sia per i dati inattivi che in transito), come necessario.
+* Continuità di business e ripristino d'emergenza: il cliente è responsabile della configurazione e della gestione di tutti i processi di continuità di business e di ripristino d'emergenza, come necessario.
 
 ### Servizi di terze parti
 
@@ -111,12 +111,12 @@ Gli ambienti VMware Cloud Foundation e vCenter Server, che vengono forniti come 
 * Inoltrando l'ordine, il cliente acconsente a questi termini e quindi concede il consenso al supporto IBM di accedere alle loro istanze in qualsiasi momento senza notifica preventiva per risolvere rapidamente i problemi relativi all'ambiente o per prevenire futuri malfunzionamenti.
 * Questo consenso si applica a tutte le istanze correntemente ordinate durante tutto il loro ciclo di vita. Le istanze e i componenti dell'istanza di cui viene eseguito il provisioning in futuro potrebbero richiedere ulteriore consenso.
 
-## Operazioni successive
+## Operazioni in stato stabile
 
 Se il cliente non ha concesso il consenso a un supporto proattivo per un'istanza nell'ordine e nel provisioning iniziale, deve includere il consenso esplicito in tutti i ticket di servizio futuri, se lo desidera. Le dichiarazioni di consenso devono seguire le linee guida stabilite o saranno considerate nulle.
 
 ### Link correlati
 
-* [Panoramica di vCenter Server](vc_vcenterserveroverview.html)
-* [Panoramica di vCenter Server with Hybridity Bundle](vc_hybrid_overview.html)
-* [Come contattare il supporto IBM](../vmonic/trbl_support.html)
+* [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Panoramica di vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

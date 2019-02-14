@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-03-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Releaseinformationen für V1.4
 
@@ -22,7 +26,7 @@ Die folgenden Komponenten sind neu verfügbar oder wurden aktualisiert:
 * VMware ESXi 6.0 u2 p04
 * Für den Service von Microsoft Active Directory (AD) und den DNS-Service, die in diesem Release zur Unterstützung von Konfigurationen mit mehreren Standorten erforderlich sind, wird eine neue Virtual Server-Instanz (VSI) von Windows bestellt. Diese VSI hat die folgenden Spezifikationen: Windows 2012 R2 (8 GB RAM / 2 CPU-Kerne / 100 GB Plattenspeicher / Duale 1-Gbps-Uplinks für private Netze).
 
-Weitere Informationen enthält der Abschnitt [Übersicht über Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
+Weitere Informationen enthält der Abschnitt [Übersicht über Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html).
 
 ## Komponentenaktualisierungen für vCenter Server-Instanzen
 
@@ -34,7 +38,8 @@ VMware NSX for vSphere 6.2.4 wird nun standardmäßig für alle vCenter Server-I
 
 Im Rahmen der NSX-Installation wird der NSX-Manager installiert und für alle neuen Instanzen lizenziert, die bereitgestellt werden. Darüber hinaus wird NSX Edge für das Instanzmanagement erstellt. Bei Bedarf können Sie jedoch eigene NSX Edge-Komponenten erstellen. Weitere Informationen zu NSX Edge finden Sie im Abschnitt _VMware NSX Edge_ auf dieser Seite.
 
-**Hinweis**: Der NSX-Controller wird (anders als bei Cloud Foundation-Instanzen) nicht für vCenter Server-Instanzen installiert. Falls Sie für Ihre vCenter Server-Instanzen VXLAN oder verteilte logische Router verwenden, müssen Sie den NSX-Controller selbst installieren.
+Der NSX-Controller wird (anders als bei Cloud Foundation-Instanzen) nicht für vCenter Server-Instanzen installiert. Falls Sie für Ihre vCenter Server-Instanzen VXLAN oder verteilte logische Router verwenden, müssen Sie den NSX-Controller selbst installieren.
+{:note}
 
 Weitere Informationen zu den in VMware NSX for vSphere 6.2.4 eingeführten Erweiterungen, den Voraussetzungen und den bekannten Problemen finden Sie auf der Seite [NSX for vSphere 6.2.4 release notes](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
 
@@ -47,9 +52,9 @@ Während der Instanzbereitstellung wird durch IBM ein VMware NSX Edge Services G
 Zur Gewährleistung der Sicherheit gelten Firewallregeln, die nur abgehenden HTTPS-Datenverkehr zulassen, der durch die Management-VMs eingeleitet
 wird. Dieses ESG wird in einer Konfiguration des Typs "L (Groß)" bereitgestellt; die Konfiguration kann nur durch den IBM Support geändert werden. Weitere Informationen finden Sie in den folgenden Abschnitten:
 
-* [Technische Spezifikationen für vCenter Server](../vcenter/vc_vcenterserveroverview.html)
-* [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
-* [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
+* [Technische Spezifikationen für vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* [VMware NSX-Dokumentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ### NSX-Lizenz
 
@@ -75,20 +80,21 @@ Das aktuelle Release beinhaltet die folgenden Topologieerweiterungen für Ihre I
 * Bei Cloud Foundation-Instanzen und vCenter Server-Instanzen: Optimierte Netzkonfiguration, bei der nur die primären öffentlichen und privaten IP-Adressen, die durch SoftLayer® zugewiesen werden, den ESXi-Servern zugeordnet werden. Portierbare private Adressen werden für den Managementdatenverkehr nicht mehr bereitgestellt.
 * Nur bei Cloud Foundation-Instanzen: Server für Windows AD SSO (Active Directory Single Sign-On) und DNS (Domain Name System)
 
-**Hinweis**: Aufgrund dieser Änderungen können Sie Ihre vorhandenen Instanzen aus Releases vor V1.4 im aktuellen Release nicht mehr nutzen. Um die Konfiguration Ihrer vorhandenen Instanzen wiederzuverwenden, müssen Sie für die Instanzen ein Upgrade auf die neue Version durchführen. Weitere Informationen finden Sie unter [Upgrade für Instanzen aus Releases vor V1.4 durchführen](movinginstances.html).
+Aufgrund dieser Änderungen können Sie Ihre vorhandenen Versionen vor Version 1.4 im aktuellen Release nicht verwenden. Um die Konfiguration Ihrer vorhandenen Instanzen wiederzuverwenden, müssen Sie für die Instanzen ein Upgrade auf die neue Version durchführen. Weitere Informationen finden Sie unter [Upgrade für Instanzen aus Releases vor V1.4 durchführen](/docs/services/vmwaresolutions/vmonic/movinginstances.html).
+{:note}
 
 ## Unterstützung von Konfigurationen mit mehreren Standorten bei Cloud Foundation-Instanzen
 
 Sie können nun entweder wie in früheren Releases eine einzige Cloud Foundation-Instanz bereitstellen oder zusätzlich auch sekundäre Instanzen bereitstellen, die an eine primäre Instanz angeschlossen sind. Das Konfigurationsmodell für mehrere Standorte verwendet eine Hub-Peripherie-Topologie mit einem primären Standort und maximal sieben sekundären Standorten.
 
-Weitere Informationen finden Sie unter [Konfiguration mit mehreren Standorten für Cloud Foundation-Instanzen](../sddc/sd_multisite.html).
+Weitere Informationen finden Sie unter [Konfiguration mit mehreren Standorten für Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc/sd_multisite.html).
 
 ## Funktionale Erweiterungen bei der Bereitstellung der Disaster-Recovery mit Zerto
 
 * Bei Cloud Foundation-Instanzen erfolgt die Bereitstellung der Disaster-Recovery mit Zerto automatisiert und wird nicht über ein Support-Ticket abgewickelt. Alle Kosten für Zerto-Komponenten (z. B. privates portierbares Teilnetz und Windows-VSI) und die Zerto-Lizenz werden bei den geschätzten Kosten aufgeführt und können von Ihnen überprüft werden, bevor Sie die Bestellung aufgeben.
 * Bei vCenter Server-Instanzen erfolgt die Bereitstellung der Disaster-Recovery mit Zerto wie in den Vorgängerreleases durch ein Support-Ticket. NSX Edge und das öffentliche portierbare Teilnetz werden jedoch nicht mehr benötigt, da diese Komponenten nun Bestandteil der Basisbereitstellung sind. Die Gebühren für ein privates portierbares Teilnetz, eine Windows-VSI (Virtuelle Service-Instanz) und die Zerto-Lizenz fallen weiterhin an.
 
-Weitere Informationen finden Sie unter [Disaster-Recovery mit Zerto](../services/addingzertodr.html).
+Weitere Informationen finden Sie unter [Disaster-Recovery mit Zerto](/docs/services/vmwaresolutions/services/addingzertodr.html).
 
 ## Instanzbestellungsprozess
 
@@ -99,15 +105,15 @@ Der Instanzbestellprozess wurde erheblich vereinfacht:
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 
-* [Cloud Foundation-Instanzen bestellen](../sddc/sd_orderinginstance.html)
-* [vCenter Server-Instanzen bestellen](../vcenter/vc_orderinginstance.html)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 
 ## Instanzmanagement
 
 Der Instanzmanagementprozess wurde folgendermaßen erweitert und verbessert:
 
-* Bei Cloud Foundation-Instanzen können Sie den Benutzernamen und die Kennwörter für die einzelnen Instanzkomponenten auf der Seite mit den Instanzdetails einsehen. Entsprechende Informationen finden Sie im Abschnitt [Cloud Foundation-Instanzen anzeigen](../sddc/sd_viewinginstances.html).
-* Bei vCenter Server-Instanzen können Sie künftig Software-Updates und Patches für IBM Komponenten direkt von der Konsole aus installieren. Weitere Informationen enthält der Abschnitt [Updates und Patches auf vCenter Server-Instanzen anwenden](../vcenter/vc_applyingupdates.html).
+* Bei Cloud Foundation-Instanzen können Sie den Benutzernamen und die Kennwörter für die einzelnen Instanzkomponenten auf der Seite mit den Instanzdetails einsehen. Entsprechende Informationen finden Sie im Abschnitt [Cloud Foundation-Instanzen anzeigen](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html).
+* Bei vCenter Server-Instanzen können Sie künftig Software-Updates und Patches für IBM Komponenten direkt von der Konsole aus installieren. Weitere Informationen enthält der Abschnitt [Updates und Patches auf vCenter Server-Instanzen anwenden](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html).
 
 ## Konsolenbenachrichtigungen
 
@@ -115,5 +121,5 @@ Die Konsolenbenachrichtigungen können jetzt auf der Seite **Einstellungen** von
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 
-* [Benutzerkonten und -einstellungen](useraccount.html)
-* [Benachrichtigungen](notifications.html)
+* [Benutzerkonten und -einstellungen](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [Benachrichtigungen](/docs/services/vmwaresolutions/vmonic/notifications.html)

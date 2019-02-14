@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-11-05"
 
 使用できる更新は、インスタンスのソフトウェア更新リストに記録され、即時に適用することも後で行うようにスケジュールすることもできます。 更新は、IBM 管理コンポーネントや VMware コンポーネントを更新するための 1 つ以上のパッケージを収めたバンドルとして提供されます。
 
-V2.5 以降は自動更新が有効になっているため、IBM CloudDriver の更新はリストされなくなりました。 ホストの追加、クラスターの追加、サービスの注文などの操作を行うと、自動的にインスタンスが最新バージョンに更新されます。自動更新について詳しくは、[V2.5 のリリース・ノート](../vmonic/relnotes_v25.html)の『*IBM CloudDriver の回復力*』のセクションを参照してください。
+V2.5 以降は自動更新が有効になっているため、IBM CloudDriver の更新はリストされなくなりました。 ホストの追加、クラスターの追加、サービスの注文などの操作を行うと、自動的にインスタンスが最新バージョンに更新されます。 自動更新について詳しくは、[V2.5 のリリース・ノート](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)の『*IBM CloudDriver の回復力*』のセクションを参照してください。
 {:note}
 
 ## 始める前に
@@ -109,11 +109,11 @@ V2.5 以降は自動更新が有効になっているため、IBM CloudDriver �
       </tr>
     </table>
 
-6. 特定のステップで更新プロセスが失敗する場合は、[IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)によって支援を得ることができます。 問題の解決方法に関するアドバイスが与えられ、失敗したステップからアップグレードを再開する方法が提示されます。
+6. 特定のステップで更新プロセスが失敗する場合は、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)によって支援を得ることができます。 問題の解決方法に関するアドバイスが与えられ、失敗したステップからアップグレードを再開する方法が提示されます。
 
 ### 関連リンク
 
-* [Cloud Foundation の概要](../sddc/sd_cloudfoundationoverview.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} の概要](../services/veeam_considerations.html)
-* [IBM サポートへのお問い合わせ](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [Cloud Foundation の概要](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)

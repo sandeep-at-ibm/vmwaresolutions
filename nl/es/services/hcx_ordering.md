@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-11"
 
 ---
 
@@ -63,7 +63,7 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. Tanto s
    * Se configuran interfaces de enlaces ascendentes públicos y privados utilizando las subredes solicitadas.
    * Se configuran los ESG como un par de dispositivos de extremo extra grandes con alta disponibilidad (HA) habilitada.
    * Se configuran reglas de cortafuegos y reglas de conversión de direcciones de red (NAT) para permitir el tráfico HTTPS de entrada y de salida procedente y destinado a HCX Manager.
-   * Se configuran las agrupaciones de recursos y las reglas del equilibrador de carga. Estas reglas son agrupaciones de recursos que se utilizan para reenviar el tráfico de entrada relacionado con HCX a los dispositivos virtuales adecuados de HCX Manager, vCenter Server y de Platform Services Controller (PSC).
+   * Se configuran las agrupaciones de recursos y las reglas del equilibrador de carga. Estas reglas y agrupaciones de recursos se utilizan para reenviar el tráfico de entrada relacionado con HCX a los dispositivos virtuales adecuados de HCX Manager y vCenter Server (con el controlador de servicios de plataforma integrado).
    * Se aplica el certificado SSL para cifrar el tráfico HTTPS de entrada relacionado con HCX que llega a través de los ESG.
 
    El extremo de gestión HCX se dedica al tráfico de gestión HCX entre los componentes locales de HCX y los componentes en la nube de HCX. No modifique el extremo de gestión de HCX ni lo utilice para extensiones de red de HCX. En su lugar, crear otros extremos para extensiones de red. Además, el uso de un cortafuegos o la inhabilitación de las comunicaciones del extremo de gestión de HCX con componentes de gestión privados de IBM o con internet pública pueden afectar negativamente a las funciones de HCX.
@@ -71,7 +71,7 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. Tanto s
 
 6. Se despliega, se activa y se configura HCX Manager on {{site.data.keyword.cloud_notm}}:
    * Se registra HCX Manager con vCenter Server.
-   * Se configuran los componentes HCX Manager, vCenter Server, PSC y NSX Manager.
+   * Se configuran los componentes HCX Manager, vCenter Server (con el controlador de servicios de plataforma integrado) y NSX Manager.
    * Se configura la flota HCX.
    * Se configuran contenedores de despliegue de HCX locales y remotos.
 7. Se registra el nombre de host y la dirección IP de HCX Manager con el servidor DNS de VMware vCenter Server on {{site.data.keyword.cloud_notm}}.

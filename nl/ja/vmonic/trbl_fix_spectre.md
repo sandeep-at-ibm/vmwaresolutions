@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,7 +35,7 @@ V2.0 以降のインスタンスは、VMware vSphere 6.5 および VMware vCente
 
 ### V2.0 以降でデプロイされた Cloud Foundation インスタンス
 
-VMware vSphere 6.5 および VMware vCenter Server 6.5 に必要なパッチを適用するには、Cloud Foundation インスタンスを最新の VMware パッチ・バンドルにアップグレードする必要があります。 既存のすべてのインスタンスと ESXi サーバーでは、{{site.data.keyword.vmwaresolutions_full}} コンソールの**「更新およびパッチ」**ページに、パッチを適用するようプロンプトが出されます。 詳しくは、[Cloud Foundation インスタンスへの更新の適用](../sddc/sd_applyingupdates.html)を参照してください。
+VMware vSphere 6.5 および VMware vCenter Server 6.5 に必要なパッチを適用するには、Cloud Foundation インスタンスを最新の VMware パッチ・バンドルにアップグレードする必要があります。 既存のすべてのインスタンスと ESXi サーバーでは、{{site.data.keyword.vmwaresolutions_full}} コンソールの**「更新およびパッチ」**ページに、パッチを適用するようプロンプトが出されます。 詳しくは、[Cloud Foundation インスタンスへの更新の適用](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)を参照してください。
 
 ### V2.0 以降でデプロイされた VMware vSphere クラスター
 
@@ -63,6 +63,6 @@ VMware vSphere 6.0 と VMware vCenter Server 6.0 では、新しくデプロイ�
 
 ### 関連リンク
 
-* [Cloud Foundation インスタンスへの更新の適用](../sddc/sd_applyingupdates.html)
+* [Cloud Foundation インスタンスへの更新の適用](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)
 * [最近のセキュリティー脆弱性に対する保護](https://www.ibm.com/blogs/bluemix/2018/01/ibm-cloud-spectre-meltdown-vulnerabilities/)
 * [VMware 製品パッチ・サイト](https://my.vmware.com/group/vmware/patch)

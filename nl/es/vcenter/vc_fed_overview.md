@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-11-05"
 
@@ -29,8 +29,8 @@ Se incluyen los siguientes componentes:
 
 Puede solicitar dos o más {{site.data.keyword.baremetal_short}} con una de las siguientes configuraciones:
 
-* 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
-* 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
+* Generación Intel Broadwell de 2 CPU (Intel Xeon serie E5-2600 v4)
+* Generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100)
 
 Para la configuración de almacenamiento NFS, el número recomendado de {{site.data.keyword.baremetal_short}} se establece en tres como valor predeterminado.
 

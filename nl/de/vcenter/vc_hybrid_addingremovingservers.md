@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -69,8 +69,8 @@ Da Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen einzelne
 
 ### Zugehörige Links
 
-* [vCenter Server-Teileliste](vc_bom.html)
-* [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle-Instanzen](vc_hybrid_planning.html)
-* [Cluster für vCenter Server with Hybridity Bundle-Instanzen hinzufügen, anzeigen und löschen](vc_hybrid_addingviewingclusters.html)
+* [vCenter Server-Teileliste](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
+* [Cluster für vCenter Server with Hybridity Bundle-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
 * [Versetzen eines Hosts in den Wartungsmodus](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Prozessorunterstützung für EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

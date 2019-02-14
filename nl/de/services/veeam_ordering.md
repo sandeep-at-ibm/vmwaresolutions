@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-24"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Veeam on IBM Cloud bestellen
 
@@ -30,7 +34,7 @@ Geben Sie beim Bestellen des Service die folgenden Einstellungen an.
 
 ### Anzahl zu lizenzierender VMs
 
-Für das Lizenzmanagement sind mindestens 10 virtuelle Maschinen (VMs) erforderlich.
+Für die Lizenzverwaltung sind mindestens 10 VMs erforderlich.
 
 ### Speichergröße
 
@@ -38,17 +42,17 @@ Die Kapazität, die Ihre Speicheranforderungen erfüllt. Hinweise zur Schätzung
 
 ### Speicherleistung
 
-Die E/A-Operationen pro Sekunde (Input/Output Operations Per Second, IOPS) und pro GB basierend auf Ihren Workloadanforderungen.
+Die E/A-Operationen pro Sekunde (Input/Output operations per second, IOPS) und pro GB basierend auf Ihren Workloadanforderungen.
 
 ### Zugehörige Links
 
-* [Übersicht über Veeam on {{site.data.keyword.cloud_notm}}](veeam_considerations.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} verwalten](managingveeam.html)
-* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](../sddc/sd_addingremovingservices.html)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_addingremovingservices.html)
-* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Verwaltete Services für Veeam on {{site.data.keyword.cloud_notm}} anfordern](managing_veeam_services.html)
-* [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](../vmonic/faq.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managingveeam.html)
+* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Verwaltete Services für Veeam on {{site.data.keyword.cloud_notm}} anfordern](/docs/services/vmwaresolutions/services/managing_veeam_services.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Veeam-Website](https://www.veeam.com/){:new_window}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}

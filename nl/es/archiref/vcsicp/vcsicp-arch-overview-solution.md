@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2018-01-14"
 
 ---
 
@@ -33,11 +33,11 @@ La automatización de {{site.data.keyword.cloud}} despliega tres controladores N
 
 ### NSX Edge / DLR
 
-Se despliegan pares NSX Edge Services Gateway (ESG). En todos los casos, se utiliza un par de pasarela para el tráfico de salida de los componentes de automatización que residen en la red privada. Para vCenter Server e {{site.data.keyword.cloud_notm}} Private (ICP), una segunda pasarela, conocida como el borde gestionado por el cliente, se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada. El administrador puede configurar los componentes NSX necesarios como, por ejemplo, el direccionador lógico distribuido (DLR), los conmutadores lógicos y los cortafuegos. La [guía de red de vCenter Server](../vcsnsxt/vcsnsxt-intro.html) contiene más detalles sobre el diseño de red.
+Se despliegan pares NSX Edge Services Gateway (ESG). En todos los casos, se utiliza un par de pasarela para el tráfico de salida de los componentes de automatización que residen en la red privada. Para vCenter Server e {{site.data.keyword.icpfull_notm}}, una segunda pasarela, conocida como el borde gestionado por el cliente, se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada. El administrador puede configurar los componentes NSX necesarios como, por ejemplo, el direccionador lógico distribuido (DLR), los conmutadores lógicos y los cortafuegos. La [guía de red de vCenter Server](../vcsnsxt/vcsnsxt-intro.html) contiene más detalles sobre el diseño de red.
 
-En la tabla siguiente se resumen las especificaciones de ICP ESG/DLR.
+En la tabla siguiente se resumen las especificaciones de {{site.data.keyword.icpfull_notm}} ESG y DLR.
 
-Tabla 1. Especificaciones de ICP ESG
+Tabla 1. Especificaciones de {{site.data.keyword.icpfull_notm}} ESG
 
 Atributo  |  Especificación
 --|--
@@ -45,7 +45,7 @@ Edge Service Gateway  |  Dispositivo virtual
 Edge tamaño grande |   Número de vCPU	2
 Memoria	| Disco de 1 GB	| 1000 GB en almacén de datos local
 
-Tabla 2. Especificaciones de DLR de ICP
+Tabla 2. Especificaciones de DLR de {{site.data.keyword.icpfull_notm}}
 
 Atributo  |  Especificación
 --|--|
@@ -53,12 +53,12 @@ Direccionador lógico distribuido | 	Dispositivo virtual
 Edge tamaño Compacto | Número de vCPU	1
 Memoria	| Disco de 512 MB	| 1000 GB en almacén de datos local
 
-## Componentes de ICP
-ICP es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones de contenedor locales. Es un entorno integrado para gestionar contenedores que incluye el coordinador de contenedores Kubernetes,
+## Componentes de IBM Cloud Private
+{{site.data.keyword.icpfull_notm}} es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones locales contenerizadas. Es un entorno integrado para gestionar contenedores que incluye el coordinador de contenedores Kubernetes,
 un repositorio de imágenes privadas, una consola de gestión e infraestructuras de supervisión.
 
-Figura 2. Despliegue de ICP virtual con vCenter Server
-![Despliegue de ICP virtual con VCS](vcsicp-virtual-icp-deployment-vcs.svg)
+Figura 2. Despliegue de {{site.data.keyword.icpfull_notm}} virtual con vCenter Server
+![Despliegue de {{site.data.keyword.icpfull_notm}} virtual con VCS](vcsicp-virtual-icp-deployment-vcs.svg)
 
 ###	Nodo de arranque
 
@@ -78,15 +78,15 @@ Un nodo proxy es un nodo que transmite la solicitud externa a los servicios crea
 
 ### Nodo de gestión
 
-Un nodo de gestión es un nodo opcional que aloja únicamente servicios de gestión como, por ejemplo, supervisión, calibración y registro. Mediante la configuración de nodos de gestión dedicados, puede evitar que el nodo maestro se sobrecargue. Solo puede habilitar el nodo de gestión durante la instalación de ICP.
+Un nodo de gestión es un nodo opcional que aloja únicamente servicios de gestión como, por ejemplo, supervisión, calibración y registro. Mediante la configuración de nodos de gestión dedicados, puede evitar que el nodo maestro se sobrecargue. Solo puede habilitar el nodo de gestión durante la instalación de {{site.data.keyword.icpfull_notm}}.
 
 ###	Nodo de Vulnerability Advisor
 
 Un nodo de Vulnerability Advisor es un nodo opcional que se utiliza para ejecutar los servicios de Vulnerability Advisor. Los servicios de Vulnerability Advisor consumen muchos recursos. Si utiliza el servicio Vulnerability Advisor, especifique un nodo VA dedicado.
 
-Se necesitan las siguientes especificaciones de VM para una instancia de ICP de alta disponibilidad:
+Se necesitan las siguientes especificaciones de VM para una instancia de {{site.data.keyword.icpfull_notm}} de alta disponibilidad:
 
-Tabla 3. Especificaciones de máquina virtual ICP
+Tabla 3. Especificaciones de máquina virtual {{site.data.keyword.icpfull_notm}}
 
 Nodo | 	Instancias	| IP	| CPU	| RAM (GB)	| DISCO (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -99,7 +99,7 @@ Trabajador	| 3-6	| IP (x3)	|4-8	|4	|150
 
 CAM requiere que los nodos trabajadores tengan una configuración de vCPU y de memoria superior.
 
-Tabla 4. Especificaciones de máquina virtual ICP
+Tabla 4. Especificaciones de máquina virtual {{site.data.keyword.icpfull_notm}}
 
 Nodo | 	Instancias	| IP	| CPU	| RAM (GB)	| DISCO (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -107,7 +107,7 @@ trabajador  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 ## Componentes de CAM
 
-{{site.data.keyword.cloud_notm}} Automation Manager (CAM) es una plataforma de gestión de autoservicio multinube de autoservicio que se ejecuta en ICP que permite a los desarrolladores y a los administradores a satisfacer las necesidades de la empresa.
+{{site.data.keyword.cloud_notm}} Automation Manager (CAM) es una plataforma de gestión de autoservicio multinube de autoservicio que se ejecuta en {{site.data.keyword.icpfull_notm}} que permite a los desarrolladores y a los administradores satisfacer las necesidades de la empresa.
 
 Figura 3. Referencia de componentes de CAM
 ![Referencia de componentes de CAM](vcsicp-cam-component-ref.svg)

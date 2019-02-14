@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -19,8 +19,8 @@ Durch die Bestellung einer NetApp ONTAP Select-Instanz können Sie eine virtuali
 ## Voraussetzungen
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](../vmonic/useraccount.html).
-*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für NetApp ONTAP Select-Instanzen](np_planning.html) vertraut gemacht.
+*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für NetApp ONTAP Select-Instanzen](/docs/services/vmwaresolutions/netapp/np_planning.html) vertraut gemacht.
 
 Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung oder Bereitstellung der Instanz festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise, wenn der öffentliche Netzbetrieb beendet wird, Server sowie virtuelle Serverinstanzen (VSIs) mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder wenn die Virtual Server-Instanz für IBM CloudBuilder gestoppt oder gelöscht wird.
 {:important}
@@ -33,7 +33,7 @@ Wenn Sie eine NetApp ONTAP Select-Instanz bestellen, müssen Sie die folgenden B
 
 Der Instanzname muss die folgenden Anforderungen erfüllen:
 * Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-* Der Instanzname muss mit einem alphanumerischen Zeichen beginnen und enden.
+* Der Instanzname muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden. 
 * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
 * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
 
@@ -52,7 +52,7 @@ Das Hostnamenspräfix muss die folgenden Anforderungen erfüllen:
 
 Die Unterdomänenbezeichnung muss die folgenden Anforderungen erfüllen:
 *  Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-*  Die Unterdomänenbezeichnung muss mit einem alphanumerischen Zeichen beginnen und enden.
+*  Die Unterdomänenbezeichnung muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden. 
 *  Die maximale Länge der Unterdomänenbezeichnung beträgt 10 Zeichen.
 *  Die Unterdomänenbezeichnung muss innerhalb Ihres Kontos eindeutig sein.
 
@@ -81,9 +81,9 @@ Sie müssen das {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) auswäh
 ### Bare Metal Server-Konfiguration
 
 Wählen Sie eine Ihren Anforderungen entsprechende Bare Metal Server-Konfiguration aus:
-* **Hohe Leistung (M = Mittel)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 59 TB
-* **Hohe Leistung (groß)** – Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 3,8-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 118 TB
-* **Hohe Kapazität** – Standard-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 64 GB RAM / Kapazität von 34 4-TB-SATA-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten – 190 TB
+* **Hohe Leistung (M = Mittel)** - Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten - 59 TB
+* **Hohe Leistung (groß)** - Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 3,8-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten - 118 TB
+* **Hohe Kapazität** - Standard-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 64 GB RAM / Kapazität von 34 4-TB-SATA-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten - 190 TB
 
 3,8-TB-Solid-State-Platten (SSD) werden unterstützt, wenn sie in einem {{site.data.keyword.CloudDataCent_notm}} allgemein verfügbar gemacht werden.
 {:note}
@@ -113,7 +113,7 @@ Die Anzahl der ESXi-Server einer NetApp ONTAP Select-Instanz ist standardmäßig
 
 Die Bereitstellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen.
 
-Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für NetApp ONTAP Select-Instanzen](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert.
+Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für NetApp ONTAP Select-Instanzen](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 
@@ -132,7 +132,7 @@ Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in 
 
 ### Zugehörige Links
 
-* [NetApp ONTAP Select-Instanzen anzeigen](np_viewinginstances.html)
-* [NetApp ONTAP Select-Instanzen löschen](np_deletinginstance.html)
+* [NetApp ONTAP Select-Instanzen anzeigen](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [NetApp ONTAP Select-Instanzen löschen](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
 * [Dedizierten Speicher für NetApp ONTAP Select-Bereitstellungen zuordnen](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

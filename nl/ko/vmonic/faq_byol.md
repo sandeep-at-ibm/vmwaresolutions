@@ -2,35 +2,42 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-24"
+lastupdated: "2018-12-11"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # 라이센싱 및 BYOL에 대한 FAQ
 
 {{site.data.keyword.vmwaresolutions_full}}의 고유한 라이센스 가져오기(BYOL) 기능을 포함하여 라이센스 부여에 대한 자주 묻는 질문의 답을 찾으십시오.
 
 ## BYOL은 무엇입니까?
+{: faq}
 
-고유한 라이센스 가져오기, 즉 BYOL은 V1.8 이상 릴리스의 VMware Cloud Foundation 인스턴스 및 V2.0 이상 릴리스의 vCenter Server와 vSphere 클러스터에 사용 가능한 기능입니다. BYOL을 통해 인스턴스 주문 시 다음 VMware 소프트웨어 컴포넌트 중 하나 이상에 대한 고유한 VMware 라이센스를 사용할 수 있습니다.
+고유한 라이센스 가져오기, 즉 BYOL은 V1.8 이상의 VMware Cloud Foundation 인스턴스와 V2.0 이상의 VMware vCenter Server 및 VMware vSphere 클러스터에 사용 가능한 기능입니다. BYOL을 통해 다음 VMware 소프트웨어 컴포넌트 중 하나 이상에 대한 고유한 VMware 라이센스를 사용할 수 있습니다.
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
 * VMware vSAN
 
-VMware 컴포넌트에 대해 고유 라이센스 사용을 선택하고 이에 대한 유효한 라이센스 키를 제공한 경우에는 이 컴포넌트에 대해 IBM에서 라이센스가 주문되지 않으며 월별 라이센스 비용이 이 컴포넌트의 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정으로 부과되지 않습니다.
+VMware 컴포넌트에 대해 고유 라이센스 사용을 선택하고 이에 대한 유효한 라이센스 키를 제공한 경우에는 이 컴포넌트에 대해 IBM에서 라이센스가 주문되지 않으며 월별 라이센스 비용이 이 컴포넌트의 {{site.data.keyword.cloud_notm}} 인프라 계정으로 부과되지 않습니다.
 
-**참고:** 비즈니스 파트너 사용자는 BYOL 기능을 사용할 수 없습니다.
+비즈니스 파트너 사용자는 BYOL 기능을 사용할 수 없습니다.
+{:note}
 
 ## VMware vSphere on IBM Cloud를 통해 주문된 라이센스 및 컴포넌트는 어디서 관리합니까?
 
 VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 새 클러스터를 작성하기 위해 주문한 후 VMware 라이센스, ESXi 서버 및 기타 네트워킹 컴포넌트가 제공되고 {{site.data.keyword.slportal}}에서 관리될 수 있습니다.
 
-배치 후 {{site.data.keyword.vmwaresolutions_short}} 콘솔로 이동하여 저장된 구성을 통해 새 클러스터를 스케일링하십시오. 스케일링에 대한 자세한 정보는 [기존 vSphere 클러스터 스케일링](../vsphere/vs_scalingexistingclusters.html)을 참조하십시오.
+배치 후 {{site.data.keyword.vmwaresolutions_short}} 콘솔로 이동하여 저장된 구성을 통해 새 클러스터를 스케일링하십시오. 자세한 정보는 [기존 vSphere 클러스터 스케일링](../vsphere/vs_scalingexistingclusters.html)을 참조하십시오.
 
-## BYOL에 필요한 라이센스 에디션 및 CPU 양은 어떻게 됩니까?
+## BYOL에 필요한 라이센스 에디션 및 CPU는 무엇입니까?
 
 다음 요구사항이 BYOL의 라이센스 에디션에 적용됩니다.
 
@@ -64,27 +71,34 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 새 클러스터를
 
 예. 각 VMware 컴포넌트의 경우 CPU당 하나의 라이센스가 필요합니다. 현재 모든 vCenter Server 및 Cloud Foundation 서버에 두 개의 CPU가 있습니다. 따라서 각 서버에 두 개의 라이센스가 필요합니다. 나중에 인스턴스에 추가할 기본 인스턴스 및 확장 노드를 지원할 수 있는 라이센스 키를 제공하는 것이 좋습니다.
 
-## BYOL 기능을 사용할 때 SDDC Manager 라이센스를 제공할 수 있습니까?
+## BYOL 기능을 사용하는 경우 SDDC Manager 라이센스를 제공할 수 있습니까?
 
 아니오. VMware과의 계약에는 클라이언트의 실제 라이센스 키를 승인해야 하는 내용이 포함됩니다. Cloud Foundation 배치에 SDDC Manager 라이센스가 포함되어 있지만 SDDC Manager 라이센스 키 파일을 승인할 수 없고 BYOL에 대해 이 파일을 유효성 검증할 수 없습니다. 그러므로 IBM에서 모든 인스턴스에 대한 SDDC Manager 라이센스 비용을 청구합니다. SDDC Manager 라이센스는 Cloud Foundation 인스턴스에 대한 전체 라이센스 비용 중 극히 일부만 표시합니다.
 
 ## 일부 VMware 컴포넌트의 경우 BYOL 기능을 사용하고, 다른 컴포넌트의 경우 월별 라이센스를 구매할 수 있습니까?
 
-예. 네 가지 VMware 컴포넌트의 모든 조합으로 BYOL 기능을 사용하거나 라이센스를 구매할 수 있습니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔은 vCenter Server 또는 Cloud Foundation 인스턴스를 주문할 때 라이센스 부여 옵션을 선택할 수 있도록 간소화할 수 있습니다. 초기 인스턴스 주문 시 라이센스 부여 옵션이 해당 인스턴스의 수명에 적용됩니다.
+예. 네 가지 VMware 컴포넌트의 모든 조합으로 BYOL 기능을 사용하거나 라이센스를 구매할 수 있습니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔은 인스턴스를 주문할 때 라이센스 부여 옵션을 선택할 수 있도록 간소화할 수 있습니다. 초기 인스턴스 주문 시 라이센스 부여 옵션이 해당 인스턴스의 수명에 적용됩니다.
 
 ## 특정 VMware 컴포넌트의 경우 일부 라이센스에 BYOL을 사용하고 IBM에서 나머지 라이센스를 구매할 수 있습니까?
 
-예. 특정 VMware 컴포넌트의 경우 BYOL을 선택했으며 새 클러스터를 작성할 때 새 BYOL 키를 입력할 수 있는 옵션이 있는 경우, 기존 BYOL 키 사용을 계속하거나 해당 클러스터에 대한 IBM 제공 라이센스를 구매하십시오. 현재 클러스터당 라이센싱에 VMware vSphere Enterprise 및 VMware vSAN만 사용할 수 있습니다.
+예. 클러스터 작성 시 특정 VMware 컴포넌트에 맞는 BYOL을 선택한 경우 다음 옵션이 제공됩니다. 
+* 새 BYOL키 입력
+* 계속해서 기존 BYOL 키 사용
+* 해당 클러스터를 위해 IBM 제공 라이센싱 구매
 
-## 새 클러스터 작성 시 BYOL을 사용할 수 있습니까?
+현재 클러스터당 VMware vSphere Enterprise 및 VMware vSAN만 라이센싱할 수 잇습니다. 
 
-예. 새 클러스터 작성 시 기존 BYOL 라이센스에서 BYOL을 수행하거나 새 BYOL을 입력할 수 있습니다. 또한 새 클러스터 작성 시 IBM 제공 구독 라이센스를 구매할 수 있습니다. 현재 클러스터당 라이센싱에 VMware vSphere Enterprise 및 VMware vSAN만 사용할 수 있습니다.
+## 클러스터 작성 시 BYOL을 사용할 수 있습니까?
+
+예. 클러스터 작성 시 기존 BYOL 라이센스에서 BYOL을 수행하거나 새 BYOL을 입력할 수 있습니다. 또한 클러스터 작성 시 IBM 제공 구독 라이센스를 구매할 수 있습니다. 
+
+현재 클러스터당 VMware vSphere Enterprise 및 VMware vSAN만 라이센싱할 수 잇습니다. 
 
 ## 내 BYOL 라이센스를 관리할 수 있는 방법은 무엇입니까?
 
 인스턴스 배치가 완료된 후 VMware vSphere Web Client를 사용하여 BYOL 라이센스를 관리할 수 있습니다.
 
-## 나중에 더 많은 ESXi 서버를 내 인스턴스에 추가하는 경우 인스턴스에서 내 BYOL 라이센스의 용량이 충분한지 여부를 유효성 검증합니까?
+## 나중에 더 많은 ESXi 서버를 내 인스턴스에 추가하는 경우 인스턴스에서 내 BYOL 라이센스에 충분한 용량이 있는지를 유효성 검증합니까?
 
 예. 더 많은 ESXi 서버를 배치된 인스턴스에 추가하는 경우 BYOL 라이센스의 용량이 지정된 ESXi 서버의 수를 자동으로 확인합니다. 용량이 충분하지 않으면 ESXi 서버가 추가되지 않고 콘솔 알림을 받습니다.
 
@@ -93,7 +107,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 새 클러스터를
 라이센스 키에서 사용 가능한 CPU 수를 찾으려면 다음 단계를 완료하십시오.
 1. **배치된 인스턴스** 페이지로 이동하십시오.
 2. 인스턴스를 찾아 클릭하십시오.
-3. **인프라** 탭에서 라이센스 용량을 확인할 클러스터를 클릭하십시오. 
+3. **인프라** 탭에서 라이센스 용량을 확인할 클러스터를 클릭하십시오.
    사용 가능한 CPU의 수는 **사용자 제공 라이센스** 테이블에 나열됩니다.
 
 ## BYOL 라이센스 부여 옵션을 선택한 경우 IBM에서 지원을 제공합니까?
@@ -110,7 +124,7 @@ BYOL 기능의 도입으로 수동 프로세스를 계속 사용하는 것은 �
 
 ## BYOL이 기타 VMware 제품(예: VMware vRealize Automation, VMware vRealize Operations 또는 VMware vRealize Log Insight)에 지원됩니까?
 
-아니오, 이 VMware 제품은 인스턴스 배치의 일부가 아니기 때문입니다. 초기 배치 외에 이 VMware 제품이 설치될 수 있으며, 이 경우 설치 및 라이센싱을 수행하는 데 클라이언트 또는 해당 에이전트가 필요합니다.
+아니오, 이 VMware 제품은 인스턴스 배치의 일부가 아니기 때문입니다. 초기 배치 외에 이 VMware 제품이 설치될 수 있으며, 이 경우 이 제품을 설치하고 라이센싱하는 데 클라이언트 또는 해당 에이전트가 필요합니다.
 
 ## vCenter Server with Hybridity Bundle과 함께 NFS 스토리지를 주문할 수 있습니까?
 

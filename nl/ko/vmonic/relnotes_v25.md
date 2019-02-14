@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-08-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V2.5의 릴리스 정보
 
@@ -34,7 +38,8 @@ V2.5 릴리스 이상에서 IBM Spectrum Protect Plus on {{site.data.keyword.clo
 
 사용자는 관리 인프라 및 워크로드의 백업과 가용성을 포함하여 모든 소프트웨어 컴포넌트의 구성, 관리 및 모니터링에 책임이 있습니다. 자세한 정보는 [컴포넌트 백업](../archiref/solution/solution_backingup.html#backing-up-components)을 참조하십시오.
 
-**참고:** 이 변경사항은 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 또는 Veeam on {{site.data.keyword.cloud_notm}} 서비스가 설치된 V2.5 전에 배치된 인스턴스에는 적용되지 않습니다.
+이 변경사항은 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 또는 Veeam on {{site.data.keyword.cloud_notm}} 서비스가 설치된 V2.5 전에 배치된 인스턴스에는 적용되지 않습니다.
+{:note}
 
 ## IBM CloudDriver 복원성
 
@@ -74,7 +79,7 @@ Cloud Foundation 인스턴스의 경우에는 **root** 호스트 사용자 ID �
 
 {{site.data.keyword.cloud_notm}} Private Hosted는 마이크로서비스 및 컨테이너의 기능을 {{site.data.keyword.cloud_notm}}의 VMware 환경에 제공합니다. 이 서비스를 사용하면 익숙한 동일 VMware 및 {{site.data.keyword.cloud_notm}} Private 운영 모델과 도구를 온프레미스에서 {{site.data.keyword.cloud_notm}}로 확장할 수 있습니다.
 
-vCenter Server 인스턴스를 주문한 후 이 서비스를 요청할 수 있습니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} Private Hosted 요청](../services/managing_icp.html)을 참조하십시오.
+vCenter Server 인스턴스를 주문한 후 이 서비스를 요청할 수 있습니다.
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -92,7 +97,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스에 대해 이제 �
 
 ### 연결된 스토리지 문서
 
-vCenter Server on IBM Cloud의 연결 스토리지 기술 문서를 이제 사용자 문서의 *참조* 섹션에서 사용할 수 있습니다. 이 참조 아키텍처 문서는 영어로만 사용 가능합니다. 자세한 정보는 [vCenter Server on IBM Cloud의 연결 스토리지](../archiref/attached-storage/storage-benefits.html)를 참조하십시오.
+vCenter Server on IBM Cloud의 연결 스토리지 기술 문서를 이제 사용자 문서의 *참조* 섹션에서 사용할 수 있습니다. 자세한 정보는 [vCenter Server on IBM Cloud의 연결 스토리지](../archiref/attached-storage/storage-benefits.html)를 참조하십시오.
 
 ### 기술 스펙
 

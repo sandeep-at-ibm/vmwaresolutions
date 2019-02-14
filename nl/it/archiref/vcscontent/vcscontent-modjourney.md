@@ -2,21 +2,21 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2019-01-23"
 
 ---
 
 # Percorso di modernizzazione
 
-Questo è un caso di utilizzo di riferimento che descrive come viene modernizzata una classica applicazione WebSphere Application Server utilizzando {{site.data.keyword.cloud}} Private, il contenuto di IBM Middleware, {{site.data.keyword.cloud_notm}} Kubernetes Service e VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
+Questo è un caso di utilizzo di riferimento che descrive come viene modernizzata una classica applicazione WebSphere Application Server utilizzando {{site.data.keyword.cloud}} Private, il contenuto di IBM Middleware, {{site.data.keyword.containerlong_notm}} e VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 ## La modernizzazione va oltre le applicazioni
 
 Siamo tutti su un percorso cloud e a diversi punti del percorso. Questo caso di utilizzo si concentra sul modo in cui un'applicazione esistente, Stock Trader, viene modernizzata attraverso dei passi incrementali pianificati dall'architetto dell'applicazione, Jane, e dall'architetto dell'infrastruttura cloud, Todd. Questo caso di utilizzo mostra esempi che ti aiutano ad affrontare ogni passo del tuo percorso e il valore che viene realizzato per il tuo business, indipendentemente da quanto grande o piccolo sia ciascun passo.
 
-La maggior parte della nostra attenzione in questo percorso è rivolta alla modernizzazione dell'applicazione Stock Trader. Per modernizzare completamente il tuo business in un business nativo cloud, è necessario discutere i temi relativi ad applicazioni, DevOps, integrazione e gestione. Ognuno viene utilizzato per aiutarti a raggiungere i tuoi obiettivi, e in realtà, a modernizzarne uno senza che gli altri creino alcun problema.
+La maggior parte della nostra attenzione in questo percorso è rivolta alla modernizzazione dell'applicazione Stock Trader. Per modernizzare completamente il tuo business in un business nativo cloud, è necessario discutere i temi relativi ad applicazioni, DevOps, integrazione e gestione. Tutti i temi operano insieme per aiutarti a raggiungere i tuoi obiettivi. Modernizzare un tema e non gli altri potrebbe creare dei problemi.
 
 ## Motivi per modernizzare
 
@@ -24,31 +24,31 @@ La maggior parte della nostra attenzione in questo percorso è rivolta alla mode
 
 L'obiettivo sono applicazioni native cloud in grado di adeguarsi e rispondere alle richieste in continua evoluzione.
 
-- "Devi modernizzare le applicazioni esistenti e creare nuove applicazioni native cloud per catturare l'immaginazione dei clienti".
-- "Hai bisogno di applicazioni in grado di scalare, raggiungere tutto il mondo, adattarsi alle richieste, cambiare, migliorare e rinnovarsi rapidamente".
+* Devi modernizzare le applicazioni esistenti e creare nuove applicazioni native cloud per catturare l'immaginazione dei clienti.
+* Hai bisogno di applicazioni in grado di scalare, raggiungere tutto il mondo, adattarsi alle richieste, cambiare, migliorare e rinnovarsi rapidamente.
 
 ### Modernizzazione di DevOps
 
 Mentre modernizzi la tua applicazione, la forma in cui distribuisci l'applicazione, l'intera pipeline di distribuzione, viene modernizzata in modo che la nuova cultura nativa cloud che i tuoi sviluppatori stanno creando possa ridimensionare il modo in cui l'applicazione viene distribuita.
 
-- "Devi modernizzare la tua cultura di Sviluppo e Operazioni (e sicurezza) mentre modernizzi le tue applicazioni".
-- "Hai bisogno di team DevOps in grado di scalare, raggiungere tutto il mondo, adattarsi alla domanda, cambiare, migliorare e rinnovarsi rapidamente".
+* Devi modernizzare la tua cultura di Sviluppo e Operazioni (e sicurezza) mentre modernizzi le tue applicazioni.
+* Hai bisogno di team DevOps in grado di scalare, raggiungere tutto il mondo, adattarsi alla domanda, cambiare, migliorare e rinnovarsi rapidamente.
 
 ###  Modernizzazione dell'integrazione
 
 Lungo tutto il percorso di modernizzazione, i tuoi team devono integrarsi con risorse esistenti, nuovi servizi cloud, i tuoi dati e nuove informazioni approfondite dalle analisi eseguite su tali dati.
 
-- "Devi utilizzare le tue risorse esistenti in questo percorso in modo che possano scalare, raggiungere tutto il mondo, adattarsi alla domanda, cambiare, migliorare e rinnovarsi rapidamente".
-- "Devi arricchire con nuovi servizi cloud in ogni fase di questo percorso".
-- "Devi integrare i tuoi dati e le informazioni approfondite ottenute dall'applicazione dell'analisi ai tuoi dati".
+* Devi utilizzare le tue risorse esistenti in questo percorso in modo che possano scalare, raggiungere tutto il mondo, adattarsi alla domanda, cambiare, migliorare e rinnovarsi rapidamente.
+* Devi arricchire con nuovi servizi cloud in ogni fase di questo percorso.
+* Devi integrare i tuoi dati e le informazioni approfondite ottenute dall'applicazione dell'analisi ai tuoi dati.
 
 ### Gestione
 
 La modernizzazione delle procedure di gestione è un altro percorso parallelo da intraprendere mentre modernizzi le tue applicazioni. Gli strumenti, la cultura e i comportamenti principali su come gestire e mantenere un'applicazione modernizzata sono molto diversi rispetto a prima.
 
-- "Devi gestire i tuoi microservizi e il middleware inserito in contenitore utilizzando l'orchestrazione, la registrazione e il monitoraggio integrati".
-- "Devi gestire le tue piattaforme ibride multi-cloud in tutte le sedi mondiali in modo che possano scalare, raggiungere tutto il mondo, adattarsi alla domanda, cambiare, migliorare e rinnovarsi rapidamente".
-- "Devi automatizzare il modo in cui gestisci più di un cloud e le applicazioni e il middleware che vengono eseguiti su di essi".
+* Devi gestire i tuoi microservizi e il middleware inserito in contenitore utilizzando l'orchestrazione, la registrazione e il monitoraggio integrati.
+* Devi gestire le tue piattaforme ibride multi-cloud in tutte le sedi mondiali in modo che possano scalare, raggiungere tutto il mondo, adattarsi alla domanda, cambiare, migliorare e rinnovarsi rapidamente.
+* Devi automatizzare il modo in cui gestisci più di un cloud e le applicazioni e il middleware che vengono eseguiti su di essi.
 
 ## Conosci Todd e Jane
 
@@ -82,8 +82,9 @@ a essere interamente portatile per l'uso in altri ambienti Kubernetes.
 
 6. Modernizzazione di DevOps. Durante questo percorso, Jane migliora il modo in cui fornisce Stock Trader.
 
-7. Modernizzazione della gestione. Todd e Jane hanno lavorato per migliorare il modo in cui gestiscono Stock Trader e la piattaforma su cui viene eseguito, anche in più di un cluster e in un ambiente cloud. 
+7. Modernizzazione della gestione. Todd e Jane hanno lavorato per migliorare il modo in cui gestiscono Stock Trader e la piattaforma su cui viene eseguito, anche in più di un cluster e in un ambiente cloud.
 
 ### Link correlati
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

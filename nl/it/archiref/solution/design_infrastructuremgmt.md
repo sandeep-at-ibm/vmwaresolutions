@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -127,6 +127,6 @@ La seguente procedura descrive l'ordine degli eventi quando si ordina un'istanza
 
 ### Link correlati
 
-* [Progettazione dell'infrastruttura fisica](design_physicalinfrastructure.html)
-* [Progettazione dell'infrastruttura virtuale](design_virtualinfrastructure.html)
-* [Progettazione di servizi comuni](design_commonservice.html)
+* [Progettazione dell'infrastruttura fisica](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [Progettazione dell'infrastruttura virtuale](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [Progettazione di servizi comuni](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)

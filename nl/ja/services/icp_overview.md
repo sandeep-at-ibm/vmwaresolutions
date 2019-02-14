@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -47,7 +47,7 @@ lastupdated: "2018-11-09"
 | ワーカー     | 4 | 16 | 200 | 300 | 6 |
 | Vulnerability Advisor | 8 | 16 | 500 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| ブートストラップ ICP/CAM | 16 | 32 | 250 | 1 | 1 |
+| ブートストラップ {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 | 1 | 1 |
 | NFS サーバー | 8 | 4  | 350 | 1 | 1 |
 | NSX Edge Services Gateway | 2 | 1 | 0.5 | 0.5 | 2 |
 | 文書化された制約 | 52 | 640 |  | 8,000 |   |
@@ -63,7 +63,7 @@ lastupdated: "2018-11-09"
 | ワーカー     | 4 | 16 | 200 | 300 | 3 |
 | Vulnerability Advisor | 8 | 16 | 150 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| ブートストラップ ICP/CAM | 16 | 32 | 250 | 1 | 1 |
+| ブートストラップ {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 | 1 | 1 |
 | NFS サーバー | 8 | 4  | 350 | 1 | 1 |
 | NSX Edge Services Gateway | 2 | 1 | 0.5 | 0.5 | 2 |
 | 文書化された制約 | 30 | 200 |  | 4,000 |  |
@@ -109,8 +109,8 @@ IBM Cloud Private および管理オーバーヘッドのスペース所要量�
 ## IBM Cloud Private Hosted をインストールする際の考慮事項
 
 * {{site.data.keyword.cloud_notm}} Private Hosted サービスをインストールする前に、必要なライセンスを収集してください。ライセンスでは、{{site.data.keyword.cloud_notm}} Private Hosted の初期デプロイメントだけではなく、インフラストラクチャー内の将来の {{site.data.keyword.cloud_notm}} Private Hosted のサイズ拡張もサポートできるようにすることをお勧めします。
-* 実動対応環境の {{site.data.keyword.cloud_notm}} Private Hosted デプロイメントの場合、ホスト 1 台に 64 GB RAM はサポートされません。そのため、**RAM** に 64 GB より高いオプションを選択する必要があります。
-* {{site.data.keyword.cloud_notm}} Private Hosted サービスが環境にインストールされる前に、環境内のデフォルト・クラスターの空き容量が検査され、サービス・コンポーネントを収容できるか確認されます。容量検査に失格した場合、サービスはインストールされず、コンソールのサービス状態が**「容量検査失格 (Capacity Validation Failed)」**に設定されます。さらに、詳しい情報を示すコンソール・メッセージが表示され、E メールで通知されます。サービスをインストールするためには、ホストを追加するか、RAM、 CPU、またはディスク・スペースを解放してデフォルト・クラスターの容量を増やしてから、もう一度コンソールでサービスを追加してください。その後で、**「容量検査失格 (Capacity Validation Failed)」**状態の既存のサービスを、その横にある**「削除」**アイコンをクリックして削除できます。
+* 実動対応環境の {{site.data.keyword.cloud_notm}} Private Hosted デプロイメントの場合、ホスト 1 台に 64 GB RAM はサポートされません。 そのため、**RAM** に 64 GB より高いオプションを選択する必要があります。
+* {{site.data.keyword.cloud_notm}} Private Hosted サービスが環境にインストールされる前に、環境内のデフォルト・クラスターの空き容量が検査され、サービス・コンポーネントを収容できるか確認されます。 容量検査に失格した場合、サービスはインストールされず、コンソールのサービス状態が**「容量検査失格 (Capacity Validation Failed)」**に設定されます。 さらに、詳しい情報を示すコンソール・メッセージが表示され、E メールで通知されます。 サービスをインストールするためには、ホストを追加するか、RAM、 CPU、またはディスク・スペースを解放することで、デフォルト・クラスターの容量を増やしてから、もう一度コンソールでサービスを追加してください。 その後で、**「容量検査失格 (Capacity Validation Failed)」**状態の既存のサービスを、その横にある**「削除」**アイコンをクリックして削除できます。
 
 ## IBM Cloud Private Hosted を削除する際の考慮事項
 
@@ -119,6 +119,6 @@ IBM Cloud Private および管理オーバーヘッドのスペース所要量�
 
 ### 関連リンク
 
-* [IBM Cloud Private Hosted の注文](../services/icp_ordering.html)
-* [vCenter Server および IBM Cloud Private ガイド](../archiref/vcsicp/vcsicp-intro.html)
+* [IBM Cloud Private Hosted の注文](/docs/services/vmwaresolutions/services/icp_ordering.html)
+* [vCenter Server および IBM Cloud Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
 * [IBM Cloud Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -32,35 +32,36 @@ Die {{site.data.keyword.cloud}}-Automatisierung stellt drei NSX-Controller im ur
 
 ### NSX Edge und Distributed Logical Router
 
-NSX Edge Services Gateway-Paare werden bereitgestellt. In allen Fällen wird ein Gateway-Paar für den abgehenden Datenverkehr aus Automatisierungskomponenten verwendet, die sich im privaten Netz befinden. Für vCenter Server und {{site.data.keyword.cloud_notm}} Private (ICP) wird ein zweites Gateway, das als ICP-verwaltete Edge bezeichnet wird, bereitgestellt und mit einem Uplink zum öffentlichen Netz sowie einer Schnittstelle, die dem privaten Netz zugeordnet ist, konfiguriert. Der Administrator kann alle erforderlichen NSX-Komponenten wie Distributed Logical Router (DLR), logische Switches und Firewalls konfigurieren. 
+NSX Edge Services Gateway-Paare werden bereitgestellt. In allen Fällen wird ein Gateway-Paar für den abgehenden Datenverkehr aus Automatisierungskomponenten verwendet, die sich im privaten Netz befinden. Für vCenter Server und {{site.data.keyword.icpfull_notm}} wird ein zweites Gateway, das als ICP-verwaltete Edge bezeichnet wird, bereitgestellt und mit einem Uplink zum öffentlichen Netz sowie einer Schnittstelle, die dem privaten Netz zugeordnet ist, konfiguriert. Der Administrator kann alle erforderlichen NSX-Komponenten wie Distributed Logical Router (DLR), logische Switches und Firewalls konfigurieren.
 
-Weitere Informationen zum Netzdesign enthält der Abschnitt [Referenzarchitektur für den vCenter Server-Netzbetrieb](../vcsnsxt/vcsnsxt-intro.html).
+Weitere Informationen zum Netzdesign enthält der Abschnitt [Referenzarchitektur für den vCenter Server-Netzbetrieb](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html).
 
-In der folgenden Tabelle sind die ICP ESG- und DLR-Spezifikationen zusammengefasst.
+In der folgenden Tabelle sind die {{site.data.keyword.icpfull_notm}} ESG- und DLR-Spezifikationen zusammengefasst.
 
-Tabelle 1. ICP-ESG-Spezifikationen
+Tabelle 1. {{site.data.keyword.icpfull_notm}} ESG-Spezifikationen
 
 Attribut | Spezifikation
 --|--
 Edge Service Gateway | Virtual Appliance
 Edge-Größe "Large" | Anzahl vCPUs	2
 Speicher    | 1 GB
-Plattenspeicher   | 1000 GB auf lokalem Datenspeicher
+Plattenspeicher    | 1000 GB auf lokalem Datenspeicher
 
-Tabelle 2. ICP-DLR-Spezifikationen
+Tabelle 2. {{site.data.keyword.icpfull_notm}} DLR-Spezifikationen
 
 Attribut | Spezifikation
 --|--|
 Distributed Logical Router |     Virtual Appliance
 Edge-Größe "Compact" | Anzahl vCPUs	1
 Speicher    | 512 MB
-Plattenspeicher   | 1000 GB auf lokalem Datenspeicher
+Plattenspeicher    | 1000 GB auf lokalem Datenspeicher
 
-## ICP-Komponenten
+## Komponenten von IBM Cloud Private
 
-ICP ist eine Anwendungsplattform für die Entwicklung und das Management von lokalen containerisierten Anwendungen. Bei ICP handelt es sich um eine integrierte Umgebung für die Verwaltung von Containern, die Kubernetes als Container-Orchestrator, ein privates Image-Repository, eine Managementkonsole und Überwachungsframeworks enthält.
+{{site.data.keyword.icpfull_notm}} ist eine Anwendungsplattform für die Entwicklung und Verwaltung von lokalen, containerisierten Anwendungen. Bei {{site.data.keyword.icpfull_notm}} handelt es sich um eine integrierte Umgebung für die Verwaltung von Containern, die Kubernetes als Container-Orchestrator, ein privates Image-Repository, eine Managementkonsole und Überwachungsframeworks enthält.
 
-Abbildung 2. Virtuelle ICP-Bereitstellung mit vCenter Server ![Virtuelle ICP-Bereitstellung mit vCenter Server](vcscar-icp.svg)
+Abbildung 2. Virtuelle {{site.data.keyword.icpfull_notm}}-Bereitstellung mit vCenter Server
+![Virtuelle {{site.data.keyword.icpfull_notm}}-Bereitstellung mit vCenter Server](vcscar-icp.svg)
 
 ### Bootknoten
 
@@ -68,7 +69,8 @@ Ein Boot- oder Bootstrap-Knoten (optional) wird für die Ausführung der Install
 
 ### Masterknoten
 
-Ein Masterknoten stellt Management-Services zur Verfügung und steuert die Workerknoten in einem Cluster. Masterknoten sind Hostprozesse, die für die Ressourcenzuordnung, die Statusverwaltung, die Zeitplanung und die Überwachung verantwortlich sind. Da eine Hochverfügbarkeitsumgebung (High Availability, HA) mehrere Masterknoten enthält, übergibt die Failover-Logik bei einem Ausfall des führenden Masterknotens die Masterrolle automatisch an einen anderen Knoten. Hosts, die als Master fungieren können, werden als Masterkandidaten bezeichnet.
+Ein Masterknoten stellt Management-Services zur Verfügung und steuert die Workerknoten in einem Cluster. Masterknoten sind Hostprozesse, die für die Ressourcenzuordnung, die Statusverwaltung, die Zeitplanung und die Überwachung verantwortlich sind.
+Da eine Hochverfügbarkeitsumgebung (High Availability, HA) mehrere Masterknoten enthält, übergibt die Failover-Logik bei einem Ausfall des führenden Masterknotens die Masterrolle automatisch an einen anderen Knoten. Hosts, die als Master fungieren können, werden als Masterkandidaten bezeichnet.
 
 ### Workerknoten
 
@@ -80,15 +82,15 @@ Ein Proxy-Knoten ist ein Knoten, der externe Anforderungen an die Services über
 
 ### Managementknoten
 
-Ein Managementknoten ist ein optionaler Knoten, der Management-Services wie Überwachung, Messung und Protokollierung bietet. Durch die Konfiguration dedizierter Managementknoten können Sie verhindern, dass der Masterknoten überlastet wird. Sie können den Managementknoten nur während der ICP-Installation aktivieren.
+Ein Managementknoten ist ein optionaler Knoten, der Management-Services wie Überwachung, Messung und Protokollierung bietet. Durch die Konfiguration dedizierter Managementknoten können Sie verhindern, dass der Masterknoten überlastet wird. Der Managementknoten kann nur während der {{site.data.keyword.icpfull_notm}}-Installation aktiviert werden.
 
 ### Vulnerability Advisor-Knoten
 
 Ein Vulnerability Advisor-Knoten ist ein optionaler Knoten, der für die Ausführung der Vulnerability Advisor-Funktion verwendet wird. Die Vulnerability Advisor-Services sind ressourcenintensiv. Wenn Sie den Vulnerability Advisor-Service verwenden, geben Sie einen dedizierten VA-Knoten an.
 
-In der folgenden Tabelle sind die VM-Spezifikationen angegeben, die für eine hoch verfügbare ICP-Instanz erforderlich sind.
+In der folgenden Tabelle sind die VM-Spezifikationen angegeben, die für eine hoch verfügbare {{site.data.keyword.icpfull_notm}}-Instanz erforderlich sind.
 
-Tabelle 3. ICP-VM-Spezifikationen
+Tabelle 3. {{site.data.keyword.icpfull_notm}}-VM-Spezifikationen
 
 Knoten |     Instanzen    | IP    | CPU    | RAM (GB)    | Platte (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -101,7 +103,7 @@ Worker    | 3-6    | IP (x3)    |4-8    |4    |150
 
 CAM setzt voraus, dass Workerknoten eine höhere vCPU- und Speicherkonfiguration haben.
 
-Tabelle 4. ICP-VM-Spezifikationen
+Tabelle 4. {{site.data.keyword.icpfull_notm}}-VM-Spezifikationen
 
 Knoten |     Instanzen    | IP    | CPU    | RAM (GB)    | Platte (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -109,7 +111,7 @@ Worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 ## Komponenten von IBM Cloud Automation Manager
 
-{{site.data.keyword.cloud_notm}} Automation Manager (CAM) ist eine Self-Service-Managementplattform für mehrere Clouds, die unter ICP ausgeführt wird und die Entwickler und Administratoren dabei unterstützt, die Anforderungen des Unternehmens zu erfüllen.
+{{site.data.keyword.cloud_notm}} Automation Manager (CAM) ist eine Self-Service-Managementplattform für mehrere Clouds, die unter {{site.data.keyword.icpfull_notm}} ausgeführt wird und die Entwickler und Administratoren dabei unterstützt, die Anforderungen des Unternehmens zu erfüllen.
 
 Abbildung 3. CAM-Komponentenreferenz
 ![CAM-Komponentenreferenz](vcscar-cam-components.svg)
@@ -156,4 +158,4 @@ Die Datenbank für die Vorlagendesigneranwendung.
 
 ## Zugehörige Links
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

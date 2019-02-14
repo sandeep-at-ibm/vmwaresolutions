@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-13"
 
 La soluzione Gateway dei servizi edge (ESG) VMware NSX è un'estensione delle offerte VMware Cloud Foundation on {{site.data.keyword.cloud}} e vCenter Server on {{site.data.keyword.cloud_notm}} attualmente disponibili su {{site.data.keyword.cloud_notm}}. L'architettura della soluzione per Cloud Foundation e vCenter Server indica in dettaglio i componenti della soluzione e la configurazione di alto livello di ogni componente nella progettazione.
 
-Per ulteriori informazioni sulla progettazione di Cloud Foundation e vCenter Server, vedi [Panoramica della soluzione](../solution/solution_overview.html).
+Per ulteriori informazioni sulla progettazione di Cloud Foundation e vCenter Server, vedi [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Panoramica di Gateway dei servizi edge NSX
 
@@ -27,11 +27,11 @@ Tabella 1. Funzioni disponibili con il gateway dei servizi edge NSX
 | NAT | Fornisce controlli separati per gli indirizzi IP di origine e destinazione è la conversione delle porte. |
 | DHCP | Fornisce la configurazione di pool di IP, gateway, server DNS e domini di ricerca. |
 | VPN Site-to-Site | Utilizza le impostazioni del protocollo IPSec standardizzate per interagire con tutti i principali fornitori di VPN. |
-| L2VPN |Estende le reti L2 sulle topologie L3. |
+| L2VPN | Estende le reti L2 sulle topologie L3. |
 | SSL VPN-Plus |  SSL VPN-Plus consente agli utenti remoti di connettersi in modo sicuro alle reti private dietro un gateway Edge NSX. |
 | Bilanciamento del carico | Fornisce indirizzi IP virtuali e gruppi di server semplici e dinamicamente configurabili. |
 | Alta disponibilità | Assicura un Edge NSX attivo sulla rete nel caso in cui la macchina virtuale Edge NSX primaria non sia disponibile. |
 
 ### Link correlati
 
-* [Panoramica della soluzione](../solution/solution_overview.html)
+* [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

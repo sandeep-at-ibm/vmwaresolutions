@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -54,23 +54,23 @@ Tabelle 2. Aktionsbeschreibungen und erforderliche Rollen
 
 ## Zugriff für Benutzer verwalten
 
-Sie können dem {{site.data.keyword.cloud_notm}}-Konto neue Benutzer hinzufügen, sodass diese Benutzer die Services und Ressourcen, die für das Konto zur Verfügung gestellt werden, gemeinsam nutzen können. Weitere Informationen finden Sie unter [Benutzer für den Zugriff auf Services und Ressourcen einladen](../vmonic/iamuserinvite.html).
+Sie können dem {{site.data.keyword.cloud_notm}}-Konto neue Benutzer hinzufügen, sodass diese Benutzer die Services und Ressourcen, die für das Konto zur Verfügung gestellt werden, gemeinsam nutzen können. Weitere Informationen finden Sie unter [Benutzer für den Zugriff auf Services und Ressourcen einladen](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html).
 
-Sie können außerdem den Zugriff für vorhandene Benutzer verwalten, indem Sie zum Beispiel den vorhandenen Zugriff ändern, einen neuen Zugriff zuweisen oder den zugewiesenen Zugriff prüfen. Zur Verwaltung des Zugriffs für Benutzer müssen Sie der Kontoeigner sein oder die Plattformmanagementrolle **Administrator** besitzen. Weitere Informationen hierzu finden Sie im Abschnitt [Zugriff auf Ressourcen verwalten](../../../iam/mngiam.html).
+Sie können außerdem den Zugriff für vorhandene Benutzer verwalten, indem Sie zum Beispiel den vorhandenen Zugriff ändern, einen neuen Zugriff zuweisen oder den zugewiesenen Zugriff prüfen. Zur Verwaltung des Zugriffs für Benutzer müssen Sie der Kontoeigner sein oder die Plattformmanagementrolle **Administrator** besitzen. Weitere Informationen hierzu finden Sie im Abschnitt [Zugriff auf Ressourcen verwalten](/docs/iam/mngiam.html).
 
 ## Vorhandene Instanzen auf IBM Cloud-Konten migrieren
 
-Durch die Integration von {{site.data.keyword.vmwaresolutions_short}} in IAM werden Instanzen, die in V2.5 und höheren Releases in Ihrem {{site.data.keyword.cloud}}-Konto bereitgestellt werden, Ihrem Konto automatisch hinzugefügt und durch IAM verwaltet.
+Durch die Integration von {{site.data.keyword.vmwaresolutions_short}} in IAM werden Instanzen, die in V2.5 und höheren Releases in Ihrem {{site.data.keyword.cloud_notm}}-Konto bereitgestellt werden, Ihrem Konto automatisch hinzugefügt und durch IAM verwaltet.
 
 Ihre vorhandenen Instanzen, die in V2.4 und früheren Releases bereitgestellt wurden, können Sie auf angegebene {{site.data.keyword.cloud_notm}}-Konten migrieren, um sie mithilfe von IAM zu verwalten. Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [vCenter Server-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](../vcenter/vc_addinstancetousraccount.html)
-* [vCenter Server with Hybridity Bundle-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [Cloud Foundation-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](../sddc/sd_addinstancetousraccount.html)
-* [NetApp ONTAP Select-Instanzen aus Versionen vor Version 2.5 auf IBM Cloud-Konten migrieren](../netapp/np_addinstancetousraccount.html)
-* [VMware Federal-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](../vcenter/vc_fed_addinstancetousraccount.html)
+* [vCenter Server-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [vCenter Server with Hybridity Bundle-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [Cloud Foundation-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [NetApp ONTAP Select-Instanzen aus Versionen vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [VMware Federal-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)
 
 ### Zugehörige Links
 
-* [Identität und Zugriff verwalten](../../../iam/quickstart.html)
-* [Benutzer und Zugriff verwalten](../../../iam/iamusermanage.html)
-* [Was ist IAM?](../../../iam/index.html)
+* [Identität und Zugriff verwalten](/docs/iam/quickstart.html)
+* [Benutzer und Zugriff verwalten](/docs/iam/iamusermanage.html)
+* [Was ist IAM?](/docs/iam/index.html)

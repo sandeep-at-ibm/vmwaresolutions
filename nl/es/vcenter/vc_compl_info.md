@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -43,15 +43,15 @@ Los entornos VMware Cloud Foundation y vCenter Server, que se suministran como {
 
 ## Soporte proactivo
 
-### Suministro inicial
+### Soporte proactivo para el suministro inicial
 
 * Durante el pedido inicial y el suministro de una instancia o servicio, el soporte de IBM puede acceder a las instancias del cliente y a la información sin notificación previa del cliente para asegurarse de que los pedidos se han cumplido correctamente.
 * El soporte de IBM supervisa de forma activa las operaciones del ciclo de vida de las instancias como, por ejemplo, la adición de nuevos hosts, además de los procesos de pedido, suministro e instalación.
 * Para solucionar los problemas que se hayan producido o que pueden surgir en el futuro, el soporte de IBM puede emprender varias acciones, entre ellas revisar los detalles del pedido del cliente, reiniciar trabajos de automatización, realizar operaciones de recarga de sistema operativo o abrir incidencias de IBM Cloud utilizando el nombre de usuario y la clave de API del cliente de IBM Cloud.
 
-### Operaciones del segundo día
+### Soporte proactivo para operaciones de estado estable
 
-* En raras ocasiones, el servicio de soporte de IBM puede requerir acceso a instancias de cliente durante operaciones del segundo día para resolver de forma proactiva un problema de una instancia o para verificar el funcionamiento de los servicios o componentes suministrados.
+* En raras ocasiones, el servicio de soporte de IBM puede requerir acceso a instancias de cliente durante operaciones de estado estable para resolver de forma proactiva un problema de una instancia o para verificar el funcionamiento de los servicios o componentes suministrados.
 * Este acceso se realiza a través de la red de soporte interno de IBM Cloud. En ningún momento el servicio de soporte de IBM modificará la configuración de la instancia sin el consentimiento previo del cliente.
 * El acceso se realiza a los componentes de gestión de VMware y/o a los componentes de gestión de IBM Cloud y nunca a las máquinas virtuales ni a las aplicaciones del cliente.
 
@@ -88,7 +88,7 @@ Los entornos VMware Cloud Foundation y vCenter Server, que se suministran como {
 * Gestión del servicio de nube: el cliente es responsable de gestionar la administración, el funcionamiento, el mantenimiento y la seguridad de las aplicaciones, incluido el middleware subyacente.
 * Integridad y disponibilidad del servicio: IBM reenviará al Cliente todas las notificaciones de intrusión en la red detectadas para este servicio en la nube. Es responsabilidad del Cliente determinar el impacto de cada notificación notificada. Se notificará al Cliente en caso de anomalías del hardware. La supervisión y la respuesta ante anomalías del sistema operativo o del software son
 responsabilidad del Cliente, que debe ponerse en contacto con el soporte de IBM según corresponda.
-* Registro de actividad: el Cliente es responsable del registro de la actividad del SO y del sistema y de la base de datos y de las aplicaciones, según sea necesario.  
+* Registro de actividad: el Cliente es responsable del registro de la actividad del SO y del sistema y de la base de datos y de las aplicaciones, según sea necesario.
 * Cifrado: el Cliente es responsable de configurar y gestionar todo el cifrado (tanto para datos en reposo como para datos en tránsito), según sea necesario.
 * Continuidad del negocio y recuperación en caso de error: el Cliente es responsable de configurar y gestionar todos los procesos de continuidad del negocio y de recuperación en caso de error, según sea necesario.
 
@@ -112,7 +112,7 @@ responsabilidad del Cliente, que debe ponerse en contacto con el soporte de IBM 
 * Al enviar el pedido, el cliente acepta estos términos y, por lo tanto, otorga el consentimiento al servicio de soporte de IBM para acceder a sus instancias en cualquier momento sin notificación previa, para resolver rápidamente problemas relacionados con el entorno o para evitar futuros fallos.
 * Este consentimiento se aplica a todas las instancias que se están solicitando actualmente durante todo su ciclo de vida. Las instancias y los componentes de las instancias suministrados en el futuro pueden requerir consentimiento adicional.
 
-## Operaciones del segundo día
+## Operaciones de estado estable
 
 Si el cliente no ha otorgado el consentimiento para un soporte proactivo para una instancia durante el suministro y el pedido iniciales, debe incluir el consentimiento explícito en cualquier futura incidencia de servicio, si lo desea. Las declaraciones de consentimiento deben seguir las directrices establecidas o se considerarán nulas.
 

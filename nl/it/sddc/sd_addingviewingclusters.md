@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -20,7 +20,8 @@ I server ESXi che hai configurato quando hai ordinato un'istanza sono raggruppat
 
 Puoi aggiungere i tuoi propri cluster alle istanze VMware Cloud Foundation per espandere la capacità di calcolo e archiviazione. All'interno di un cluster, puoi gestire i server ESXi per una migliore allocazione delle risorse e alta disponibilità. Quando non sono più necessari, puoi eliminare i cluster aggiunti dalle tue istanze.
 
-**Disponibilità:**
+## Disponibilità
+
 * La funzione di aggiunta cluster è disponibile solo per le istanze che sono state distribuite o aggiornate alle release della V2.0 e successive.
 * La funzione di eliminazione cluster è disponibile solo per le istanze che sono state distribuite o aggiornate alle release della V2.3 e successive.  
 
@@ -75,13 +76,19 @@ Tabella 2. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 core totali, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Impostazioni di archiviazione vSAN
 
 Per la configurazione **Skylake** e **Broadwell** di Bare Metal Server, puoi personalizzare l'archiviazione vSAN specificando le seguenti impostazioni:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
-* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i processori Dual Intel Xeon Gold 5120 e 6140.
+* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
+
+  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPI Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
 
 ### Impostazioni di licenza
@@ -103,7 +110,7 @@ Puoi specificare le opzioni di licenza per i componenti VMware nel cluster, incl
 5. Se vuoi ospitare il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso da quello in cui è ospitata l'istanza, in **Bare Metal Server**, seleziona la casella di spunta **Seleziona un'ubicazione differente** e scegli il {{site.data.keyword.CloudDataCent_notm}} per ospitare l'istanza.
 6. Completa la configurazione Bare Metal specificando il **Modello CPU** e la dimensione **RAM**.
 7. Completa la configurazione di archiviazione:
-   1. Specifica i tipi di disco per i dischi di capacità vSAN e cache e il numero di dischi. 
+   1. Specifica i tipi di disco per i dischi di capacità vSAN e cache e il numero di dischi.
    2. Se vuoi più spazio di archiviazione, seleziona la casella di spunta **Alte prestazioni con Intel Optane**.
 8. Specifica come vengono fornite le tue chiavi di licenza:
    * Per gli utenti Business Partner IBM, la licenza vSphere (Enterprise Plus edition) e la licenza vSAN sono incluse e acquistate per tuo conto. Tuttavia, devi specificare l'edizione per la licenza vSAN.
@@ -177,7 +184,7 @@ Non puoi modificare il nome del cluster. La modifica del nome del cluster potreb
        * **Edizione licenza**: l'edizione della licenza.
        * **Chiave di licenza**: la chiave di licenza.
        * **Capacità totale (CPU)**: la capacità totale o il numero di CPU fornite dalla licenza.
-       * **Capacità libera  (CPU)**: la capacità disponibile nella licenza.
+       * **Capacità libera (CPU)**: la capacità disponibile nella licenza.
 
 ## Eliminazione di cluster dalle istanze Cloud Foundation
 
@@ -205,5 +212,5 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 
 ### Link correlati
 
-* [Visualizzazione delle istanze Cloud Foundation](sd_viewinginstances.html)
-* [Espansione e contrazione della capacità per le istanze Cloud Foundation](sd_addingremovingservers.html)
+* [Visualizzazione delle istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)

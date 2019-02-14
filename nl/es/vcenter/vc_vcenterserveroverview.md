@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-14"
 
 ---
 
@@ -45,7 +45,7 @@ Esta capa virtualiza la infraestructura física mediante diversos productos de V
 
 ### Gestión de la virtualización
 
-Esta capa consta de vCenter Server Appliance (vCSA), NSX Manager, dos NSX ESG, tres controladores NSX, el dispositivo virtual Platform Services Controller (PSC) y la Instancia de servidor virtual (VSI) de IBM CloudDriver. La VSI de CloudDriver se despliega a petición según sea necesario para determinadas operaciones, como por ejemplo, añadir hosts al entorno.
+Esta capa consta de vCenter Server Appliance (vCSA) con el Platform Services Controller (PSC) incorporado, NSX Manager, dos NSX ESG, tres controladores NSX y la instancia de servidor virtual de IBM CloudDriver (VSI). La VSI de CloudDriver se despliega a petición según sea necesario para determinadas operaciones, como por ejemplo, añadir hosts al entorno.
 
 La oferta básica se despliega con un dispositivo vCenter Server cuyo tamaño se ajusta para dar soporte a un entorno con un máximo de 400 hosts y hasta 4000 máquinas virtuales. Se pueden utilizar las mismas herramientas y scripts compatibles con la API de vSphere para gestionar el entorno VMware alojado por IBM.
 
@@ -63,15 +63,13 @@ La disponibilidad y los precios de las configuraciones estandarizadas de hardwar
 ### Servidor nativo
 
 Puede solicitar tres o más {{site.data.keyword.baremetal_short}} con una de las siguientes configuraciones:
-* **Skylake**: servidores 2-CPU Intel Skylake generation (Intel Xeon series 4100/5100/6100) con el modelo de CPU y el tamaño de RAM seleccionados.  
-* **Certificado por SAP**: {{site.data.keyword.baremetal_short}} con el modelo de CPU seleccionado.
-  * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 192 GB de RAM
-  * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 384 GB de RAM
-  * Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 768 GB de RAM
-* **Broadwell**: servidores 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 series v4) con el modelo de CPU y el tamaño de RAM seleccionados.  
-     Si tiene pensado utilizar almacenamiento vSAN, la configuración necesita cuatro {{site.data.keyword.baremetal_short}}.
-     {:note}
-     
+* **Skylake**: servidores de generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100) con el modelo de CPU y el tamaño de RAM que seleccione.  
+* **Certificado por SAP**: servidores de generación Intel Skylake o Intel Broadwell (Intel Xeon serie 6140/E5-2690/E7-8890) con el modelo de CPU que elija.
+* **Broadwell**: servidores de generación Intel Broadwell de 2 CPU (Intel Xeon serie E5-2600/E7-4800) con el modelo de CPU y el tamaño de RAM que seleccione.  
+
+Si tiene pensado utilizar almacenamiento vSAN, la configuración necesita cuatro {{site.data.keyword.baremetal_short}}.
+{:note}
+
 ### Redes
 
 Se solicitan los siguientes componentes del sistema de redes:
@@ -112,11 +110,15 @@ La opción vSAN ofrece configuraciones personalizadas, con diversas opciones par
 #### Almacenamiento NFS
 
 La opción NFS ofrece almacenamiento a nivel de archivo compartido personalizado para cargas de trabajo con distintas opciones de tamaño y de rendimiento:
-* Tamaño: 1, 2, 4, 8 o 12 TB
-* Rendimiento: 2, 4 o 10 IOPS/GB.
+* Tamaño: de 20 a 12000 GB
+* Rendimiento: 0,25, 2, 4 o 10 IOPS/GB.
 * Configuración individual de comparticiones de archivos.
 
 Si selecciona la opción NFS, se solicita una compartición de archivos de 2 TB y de 4 IOPS/GB para los componentes de gestión.
+
+#### Almacenamiento de disco local
+
+La opción de discos locales, que solo está disponible para las configuraciones de procesador nativo Quad Intel Xeon E7-8890 v4 **certificado por SAP**, ofrece configuraciones personalizadas con diversas opciones para recuento de discos y tipo de disco.
 
 ### Licencias (proporcionadas por IBM o BYOL) y cuotas
 

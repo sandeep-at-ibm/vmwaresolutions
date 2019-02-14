@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Proceso de eliminación de Zerto on IBM Cloud
 
@@ -25,7 +29,8 @@ El proceso de eliminación del servicio Zerto on {{site.data.keyword.cloud}} es 
    4. Se devuelve la subred privada portátil que se había solicitado para la comunicación del servicio de réplica virtual de Zerto con la infraestructura de {{site.data.keyword.cloud_notm}}.   
    5. Se eliminan de la factura de {{site.data.keyword.cloud_notm}} los cargos por el servicio de recuperación tras desastre de Zerto.
 
-      **Nota:** Se le facturará por el servicio de recuperación tras desastre de Zerto eliminado hasta el final del ciclo de facturación.
+      Se le facturará por el servicio de recuperación tras desastre de Zerto eliminado hasta el final del ciclo de facturación.
+      {:note}
 
 ## Resultados
 
