@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Fazendo upgrade de suas instâncias de liberações pré-V1.4
 
@@ -22,25 +26,26 @@ Na V1.4 e liberações mais recentes, vários aprimoramentos da topologia de red
 
 Se você não tiver migrado ou excluído suas instâncias de liberações pré-V1.4, elas poderão ainda estar visíveis no console do {{site.data.keyword.vmwaresolutions_short}} no modo somente visualização. Estas instâncias são marcadas na interface com o usuário como **Descontinuadas** com um ícone de símbolo de aviso.
 
-**Nota:** as informações que são exibidas nas propriedades de instância refletem os dados a partir da data de liberação da V1.4 e não são mais atualizadas.
+As informações que são exibidas nas propriedades de instância refletem os dados a partir da data de liberação da V1.4 e não são mais atualizadas.
+{:note}
 
 As ações a seguir estão disponíveis nas instâncias pré-V1.4:
 *  Visualize as informações na página de detalhes da instância.
 *  Visualize informações de backup da instância.
 *  Abra o vSphere Web Client e use a instância no vCenter.
 *  Solicite a restauração da instância abrindo um chamado de suporte do {{site.data.keyword.cloud_notm}}.
-*  Exclua a instância.
+*  Excluir instância.
 
 Todas as outras ações nas instâncias pré-V1.4 não estão mais disponíveis.
 
 Se você tiver instâncias pré-V1.4 e planejar continuar a usá-las, será possível fazer upgrade delas criando novas instâncias e, em seguida, movendo suas configurações existentes para essas novas instâncias.
 
 Para mover suas instâncias pré-V1.4 para novas instâncias, conclua as etapas a seguir no vSphere Web Client:
-1. De sua instância pré-V1.4, exporte todas as VMs (máquinas virtuais).
+1. De sua instância pré-V1.4, exporte todas as MVs (máquinas virtuais).
 2. Crie uma instância na liberação atual.
-3. Importe todas as VMs exportadas da **Etapa 1**.
+3. Importe todas as MVs exportadas da **Etapa 1**.
 4. Use sua nova instância.
 
-Para obter mais informações sobre como exportar e importar VMs, consulte a documentação do VMware vSphere.
+Para obter mais informações sobre como exportar e importar MVs, consulte a documentação do VMware vSphere.
 
-Se você precisar de assistência com o {{site.data.keyword.vmwaresolutions_short}}, [entre em contato com o Suporte IBM](trbl_support.html) por meio de um dos canais de suporte.
+Se você precisar de assistência com o {{site.data.keyword.vmwaresolutions_short}}, [entre em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) por meio de um dos canais de suporte.

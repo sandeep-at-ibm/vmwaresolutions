@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-076"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -26,13 +26,13 @@ FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스를 �
 * FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 찾을 수 있는 인증 정보를 사용하여 SSH 연결을 통해 콘솔에 액세스하십시오.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](../sddc/sd_addingremovingservices.html)
-* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_addingremovingservices.html)
+* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ### 관련 링크
 
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 개요](fsa_considerations.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/fsa_considerations.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [fortinet.com 웹 사이트](https://www.fortinet.com/)
 * [Fortinet 기술 문서](http://docs.fortinet.com/fortigate/admin-guides)

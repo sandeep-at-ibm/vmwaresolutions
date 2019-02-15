@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -23,14 +23,14 @@ Tabela 1. Itens de instâncias do HCX on {{site.data.keyword.cloud_notm}} no loc
 | Nome | O nome da instância. |
 | Chave de ativação | A chave de ativação da instância do HCX on {{site.data.keyword.cloud_notm}} no local. |  
 | Horário de criação | A data e hora em que a instância foi criada. |
-| Barra de Status | O status da instância. |  
+| Status | O status da instância. |  
 | Ações | Clique no ícone **Excluir** para excluir a instância. |
 
 O status da instância pode ter uma gama de opções.
 
 Tabela 2. Descrições de status de instâncias do HCX on {{site.data.keyword.cloud_notm}} no local
 
-| Barra de Status        | Descrição       |
+| Status | Descrição       |
 |:------------- |:------------- |
 | Modificando | A instância está sendo criada. |
 | Instalado | A instância está pronta para uso. |
@@ -38,7 +38,7 @@ Tabela 2. Descrições de status de instâncias do HCX on {{site.data.keyword.cl
 
 ### Links relacionados
 
-* [Solicitando HCX no {{site.data.keyword.cloud_notm}} instâncias](standalone_orderingserviceinstances.html)
-* [Excluindo HCX no {{site.data.keyword.cloud_notm}} instâncias](standalone_deletingserviceinstances.html)
-* [Glossário de termos do HCX](hcx_glossary.html)
+* [Solicitando HCX no {{site.data.keyword.cloud_notm}} instâncias](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
+* [Excluindo HCX no {{site.data.keyword.cloud_notm}} instâncias](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
+* [Glossário de termos do HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [Documentação do VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

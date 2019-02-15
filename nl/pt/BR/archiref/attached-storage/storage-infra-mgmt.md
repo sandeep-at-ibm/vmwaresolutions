@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2018-11-13"
 
 Gerenciamento de infraestrutura refere-se aos componentes do VMware que estão gerenciando a infraestrutura do vSphere ESXi.
 
-Para obter mais informações sobre os componentes, veja a Figura 2. Visão geral da rede do NSX Manager em [Design de infraestrutura virtual](../solution/design_virtualinfrastructure.html).
+Para obter mais informações sobre os componentes, veja a Figura 2. Visão geral da rede do NSX Manager em [Design de infraestrutura virtual](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html).
 
 ## Design de rede virtual
 
-A virtualização de rede usada neste design usa o vSphere Distributed Switch (vDS) existente associado à rede privada e especificado na [arquitetura do {{site.data.keyword.vmwaresolutions_full}}](../solution/solution_overview.html).
+A virtualização de rede que é usada nesse design usa o vSphere Distributed Switch (vDS) existente associado à rede privada e especificado na arquitetura do [ {{site.data.keyword.vmwaresolutions_full}} ](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Comutador Distribuído do vSphere
 
@@ -52,4 +52,4 @@ Embora o vDS seja configurado com um novo grupo de portas e uma porta VMkernel s
 
 ### Links relacionados
 
-* [ Visão geral da solução ](../solution/solution_overview.html)
+* [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -18,7 +18,7 @@ O console do {{site.data.keyword.vmwaresolutions_full}} periodicamente detecta e
 
 Uma atualização disponível é um registro na lista de atualizações de software da instância, que pode ser aplicado imediatamente ou planejado para um horário posterior. A atualização é um pacote configurável que contém um ou mais pacotes para atualizar os componentes de gerenciamento da IBM e os componentes do VMware.
 
-Iniciando com a V2.5, as atualizações do IBM CloudDriver não são mais listadas porque as atualizações automáticas estão ativadas. Ações como a inclusão de um host, a inclusão de um cluster e a solicitação de um serviço atualizam automaticamente a instância para a versão mais recente. Para obter mais informações sobre atualizações automáticas, consulte a seção *Resiliência do IBM CloudDriver* em Notas sobre a liberação do [ para a V2.5](../vmonic/relnotes_v25.html).
+Iniciando com a V2.5, as atualizações do IBM CloudDriver não são mais listadas porque as atualizações automáticas estão ativadas. Ações como a inclusão de um host, a inclusão de um cluster e a solicitação de um serviço atualizam automaticamente a instância para a versão mais recente. Para obter mais informações sobre atualizações automáticas, consulte a seção *Resiliência do IBM CloudDriver* em Notas sobre a liberação do [ para a V2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
 {:note}
 
 ## Antes de iniciar
@@ -66,7 +66,7 @@ Tabela 1. Atualize os níveis e o impacto
 ## Resultados
 
 1. Antes de uma operação de atualização ser iniciada, uma verificação de funcionamento da instância será concluída. Se a verificação de funcionamento falhar, você será notificado para poder corrigir o problema antes de aplicar a atualização.
-2. Durante atualizações que incluem atualizações de componentes VMware, as VMs podem precisar ser migradas dos servidores ESXi para entrar no modo de manutenção. A migração da VM poderá ser evitada se uma VM tiver um armazenamento de dados local ou um CD-ROM montado.
+2. Durante atualizações que incluem atualizações de componentes VMware, as MVs podem precisar ser migradas dos servidores ESXi para entrar no modo de manutenção. A migração da MV poderá ser evitada se uma MV tiver um armazenamento de dados local ou um CD-ROM montado.
 3. Durante o fornecimento de um novo ambiente, o {{site.data.keyword.vmwaresolutions_short}} cria o ID **automationuser** que é usado para gerenciamento da instância, incluindo para aplicar atualizações. Não mude a senha para esse ID do usuário. Mudar a senha pode fazer com que a atualização falhe.
 
 4. Depois que uma atualização for aplicada, aparecerá um registro na lista de status de atualização de software, no qual é possível visualizar o progresso detalhado e o status da atualização. Quando a atualização for concluída com êxito, um registro aparecerá na lista de atualizações de softwares instalados.
@@ -80,7 +80,7 @@ Tabela 1. Atualize os níveis e o impacto
 
     <table>
       <tr>
-        <th>Barra de Status</th>
+        <th> Status </th>
         <th>Detalhes</th>
       </tr>
       <tr>
@@ -109,11 +109,11 @@ Tabela 1. Atualize os níveis e o impacto
       </tr>
     </table>
 
-6. Se o processo de atualização falhar em uma etapa específica, [entre em contato com o Suporte IBM](../vmonic/trbl_support.html) para obter assistência. Você será avisado sobre como resolver o problema e será orientado a reiniciar o upgrade a partir da etapa que falhou.
+6. Se o processo de atualização falhar em uma etapa específica, [entre em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) para obter assistência. Você será avisado sobre como resolver o problema e será orientado a reiniciar o upgrade a partir da etapa que falhou.
 
 ### Links relacionados
 
-* [Visão geral do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
-* [Veeam no {{site.data.keyword.cloud_notm}} visão geral](../services/veeam_considerations.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
-* [Perguntas Mais Frequentes](../vmonic/faq.html)
+* [Visão geral do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Veeam no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Perguntas Mais Frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)

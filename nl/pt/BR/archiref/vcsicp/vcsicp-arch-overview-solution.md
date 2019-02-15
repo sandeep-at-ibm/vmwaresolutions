@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -17,11 +17,11 @@ Figura 1. Diagrama do ambiente do vCenter Server
 
 ### Platform Service Controller
 
-A implementação do vCenter Server usa um único controlador de serviços de plataforma externa instalado em uma sub-rede móvel na VLAN privada associada a máquinas virtuais (VMs) de gerenciamento. Seu gateway padrão é configurado para o backend customer router (BCR).
+A implementação do vCenter Server usa um único controlador de serviços de plataforma externa instalado em uma sub-rede móvel na VLAN privada associada a máquinas virtuais (MVs) de gerenciamento. Seu gateway padrão é configurado para o backend customer router (BCR).
 
 ### vCenter Server
 
-Como o controlador de serviços de plataforma, o vCenter Server é implementado como um dispositivo. Além disso, o vCenter Server é instalado em uma sub-rede móvel na VLAN privada associada a VMs de gerenciamento. Seu gateway padrão é configurado para o endereço IP designado no BCR para essa sub-rede específica.
+Como o controlador de serviços de plataforma, o vCenter Server é implementado como um dispositivo. Além disso, o vCenter Server é instalado em uma sub-rede móvel na VLAN privada associada a MVs de gerenciamento. Seu gateway padrão é configurado para o endereço IP designado no BCR para essa sub-rede específica.
 
 ### Gerenciador NSX
 
@@ -33,11 +33,11 @@ A automação do {{site.data.keyword.cloud}} implementa três Controladores NSX 
 
 ### NSX Edge / DLR
 
-Os pares do NSX Edge Services Gateway (ESG) são implementados. Em todos os casos, um par de gateway é usado para o tráfego de saída dos componentes de automação que residem na rede privada. Para o vCenter Server e o {{site.data.keyword.cloud_notm}} Private (ICP), um segundo gateway, que é conhecido como a borda gerenciada pelo icp, é implementado e configurado com um uplink para a rede pública e uma interface que é designada à rede privada. Qualquer componente NSX necessário, como o Distributed Logical Router (DLR), os comutadores lógicos e os firewalls, pode ser configurado pelo administrador. O [Guia de rede do vCenter Server](../vcsnsxt/vcsnsxt-intro.html) fornece mais detalhes sobre o design da rede.
+Os pares do NSX Edge Services Gateway (ESG) são implementados. Em todos os casos, um par de gateway é usado para o tráfego de saída dos componentes de automação que residem na rede privada. Para o vCenter Server e o {{site.data.keyword.icpfull_notm}}, um segundo gateway, conhecido como a borda gerenciada por icp, é implementado e configurado com um uplink para a rede pública e uma interface designada à rede privada. Qualquer componente NSX necessário, como o Distributed Logical Router (DLR), os comutadores lógicos e os firewalls, pode ser configurado pelo administrador. O [Guia de rede do vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html) fornece mais detalhes sobre o design da rede.
 
-A tabela a seguir resume as especificações do ICP ESG/DLR.
+A tabela a seguir resume as especificações do {{site.data.keyword.icpfull_notm}} ESG/DLR.
 
-Tabela 1. Especificações do ESG do ICP
+Tabela 1. Especificações do {{site.data.keyword.icpfull_notm}} ESG
 
 Atributo  |  Especificação
 --|--
@@ -45,7 +45,7 @@ Gateway de Serviço de Edge  |  Dispositivo Virtual
 Tamanho de borda Grande |   Número de vCPUs 2
 Memória	| Disco de 1 GB	| 1000 GB no armazenamento de dados local
 
-Tabela 2. Especificações do DLR do ICP
+Tabela 2. Especificações do {{site.data.keyword.icpfull_notm}} DLR
 
 Atributo  |  Especificação
 --|--|
@@ -53,11 +53,11 @@ Roteador Lógico Distribuído | 	Dispositivo Virtual
 Tamanho de borda	Compacto | Número de vCPUs 1
 Memória	| Disco de 512 MB	| 1000 GB no armazenamento de dados local
 
-## Componentes do ICP
-O ICP é uma plataforma de aplicativo para desenvolvimento e gerenciamento de aplicativos conteinerizados no local. É um ambiente integrado para gerenciar contêineres, que inclui o orquestrador de contêiner Kubernetes, um repositório de imagem privada, um console de gerenciamento e estruturas de monitoramento.
+## Componentes do IBM Cloud Private
+O {{site.data.keyword.icpfull_notm}} é uma plataforma de aplicativo para desenvolver e gerenciar aplicativos conteinerizados no local. É um ambiente integrado para gerenciar contêineres, que inclui o orquestrador de contêiner Kubernetes, um repositório de imagem privada, um console de gerenciamento e estruturas de monitoramento.
 
-Figura 2. Implementação do ICP virtual com o vCenter Server
-![Implementação do ICP virtual com o VCS](vcsicp-virtual-icp-deployment-vcs.svg)
+Figura 2. Implementação do {{site.data.keyword.icpfull_notm}} virtual com o vCenter Server
+![Implementação do {{site.data.keyword.icpfull_notm}} virtual com o VCS](vcsicp-virtual-icp-deployment-vcs.svg)
 
 ###	Nó de Inicialização
 
@@ -77,15 +77,15 @@ Um nó do proxy é um nó que transmite uma solicitação externa para os servi�
 
 ### Nó de Gerenciamento
 
-Um nó de gerenciamento é um nó opcional que hospeda somente serviços de gerenciamento, como monitoramento, medição e criação de log. Configurando os nós de gerenciamento dedicados, é possível evitar que o nó principal fique sobrecarregado. É possível ativar o nó de gerenciamento apenas durante a instalação do ICP.
+Um nó de gerenciamento é um nó opcional que hospeda somente serviços de gerenciamento, como monitoramento, medição e criação de log. Configurando os nós de gerenciamento dedicados, é possível evitar que o nó principal fique sobrecarregado. É possível ativar o nó de gerenciamento apenas durante a instalação do {{site.data.keyword.icpfull_notm}}.
 
 ###	Nó do Vulnerability Advisor
 
 Um nó do Vulnerability Advisor é um nó opcional usado para executar os serviços do Vulnerability Advisor. Os serviços do Vulnerability Advisor são intensivos em recurso. Se você usar o serviço Vulnerability Advisor, especifique um nó VA dedicado.
 
-As especificações de VMs a seguir são necessárias para uma instância do ICP altamente disponível:
+As especificações de MVs a seguir são necessárias para uma instância do {{site.data.keyword.icpfull_notm}} Altamente Disponível:
 
-Tabela 3. Especificações da máquina virtual do ICP
+Tabela 3. {{site.data.keyword.icpfull_notm}}  especificações da máquina virtual
 
 Nó | 	Instâncias	| IP	| CPU	| RAM (GB)	| DISCO (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -98,7 +98,7 @@ Trabalhador	| 3-6	| IP (x3)	|4-8	|4	|150
 
 O CAM requer que os nós do trabalhador tenham uma configuração de vCPU e de memória mais alta.
 
-Tabela 4. Especificações da máquina virtual do ICP
+Tabela 4. {{site.data.keyword.icpfull_notm}}  especificações da máquina virtual
 
 Nó | 	Instâncias	| IP	| CPU	| RAM (GB)	| DISCO (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -106,7 +106,7 @@ trabalhador  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 ## Componentes do CAM
 
-O {{site.data.keyword.cloud_notm}} Automation Manager (CAM) é uma plataforma de gerenciamento de autoatendimento multinuvem executada no ICP que confere poderes aos Desenvolvedores e administradores para atender às demandas de negócios.
+O {{site.data.keyword.cloud_notm}} Automation Manager (CAM) é uma plataforma de gerenciamento de autoatendimento multinuvem, executada no {{site.data.keyword.icpfull_notm}}, que confere poderes aos Desenvolvedores e administradores para atender às demandas de negócios.
 
 Figura 3. Referência do componente CAM
 ![Referência do componente CAM](vcsicp-cam-component-ref.svg)
@@ -153,4 +153,4 @@ O banco de dados para o aplicativo de designer modelo.
 
 ### Links relacionados
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

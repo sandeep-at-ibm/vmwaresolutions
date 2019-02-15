@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -39,7 +39,7 @@ vSphere ESXi 구성은 다음과 같은 측면으로 구성되어 있습니다.
 | 시간 동기화   | {{site.data.keyword.cloud}} NTP 서버 사용 |
 | 호스트 액세스            | DCUI, ESXi 쉘 또는 SSH 지원 |
 | 사용자 액세스            | 로컬 인증 및 MSAD |
-| 도메인 이름 분석 |[공통 서비스 디자인](design_commonservice.html)에서 설명된 대로 DNS 사용 |
+| 도메인 이름 분석 |[공통 서비스 디자인](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)에서 설명된 대로 DNS 사용 |
 
 vSphere 클러스터는 사용자 워크로드에 대한 컴퓨팅 리소스 및 중앙 클라우드를 관리하는 가상 머신(VM)을 수용합니다.
 
@@ -75,7 +75,7 @@ vSAN에서는 다음 컴포넌트를 채택합니다.
 * 온보드 RAID 제어기는 RAID-0 레벨에서 2개의 OS 드라이브를 제외한 각 드라이브마다 구성됩니다.
 * 단일 vSAN 데이터 저장소가 모든 스토리지에서 작성됩니다.
 
-사용 가능한 vSAN 기능은 인스턴스를 주문할 때 선택하는 라이센스 에디션에 따라 다릅니다. 자세한 정보는 [VMware vSAN 에디션 비교](appendix.html#vmware-vsan-edition-comparison)를 참조하십시오.
+사용 가능한 vSAN 기능은 인스턴스를 주문할 때 선택하는 라이센스 에디션에 따라 다릅니다. 자세한 정보는 [VMware vSAN 에디션 비교](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-vsan-edition-comparison)를 참조하십시오.
 
 ### vSAN의 가상 네트워크 설정
 
@@ -83,7 +83,7 @@ vSAN에서는 다음 컴포넌트를 채택합니다.
 
 vSAN은 업링크 간의 트래픽을 로드 밸런싱하지 않습니다. 따라서 고가용성(HA)을 지원하기 위해 다른 어댑터가 대기 중인 동안 하나의 어댑터는 활성입니다. vSAN에 대한 네트워크 장애 복구 정책은 실제 네트워크 포트 간에 **명시적 장애 복구**로서 구성됩니다.
 
-실제 NIC 연결에 대한 자세한 정보는 그림 2. [실제 인프라 디자인](design_physicalinfrastructure.html)의 실제 호스트 NIC 연결을 참조하십시오.
+실제 NIC 연결에 대한 자세한 정보는 그림 2. [실제 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)의 실제 호스트 NIC 연결을 참조하십시오.
 
 ### 스토리지 정책 디자인
 
@@ -114,7 +114,7 @@ vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware Solutions 배�
 
 네트워크 가상화는 가상 계층 내에 존재하는 네트워크 오버레이를 제공합니다. 네트워크 가상화에서는 On-Demand 가상 네트워크의 빠른 프로비저닝, 배치, 재구성 및 폐기 등의 기능을 아키텍처에 제공합니다. 이 디자인은 vDS 및 VMware NSX for vSphere를 사용하여 가상 네트워킹을 구현합니다.
 
-이 디자인에서 NSX Manager는 초기 클러스터에 배치됩니다. NSX Manager에는 사설 포터블 주소 블록의 VLAN 지원 IP 주소가 지정됩니다. 이는 관리 컴포넌트용으로 지정되고 [공통 서비스 디자인](design_commonservice.html)에 표시되는 DNS 및 NTP 서버로 구성됩니다. NSX Manager는 표 2에 나열된 스펙으로 설치됩니다.
+이 디자인에서 NSX Manager는 초기 클러스터에 배치됩니다. NSX Manager에는 사설 포터블 주소 블록의 VLAN 지원 IP 주소가 지정됩니다. 이는 관리 컴포넌트용으로 지정되고 [공통 서비스 디자인](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)에 표시되는 DNS 및 NTP 서버로 구성됩니다. NSX Manager는 표 2에 나열된 스펙으로 설치됩니다.
 
 표 2. NSX Manager 속성
 
@@ -135,13 +135,13 @@ vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware Solutions 배�
 
 초기 배치 이후 {{site.data.keyword.cloud_notm}} 자동화는 초기 클러스터 내에 3개의 NSX Controller를 배치합니다. 각 제어기에는 관리 컴포넌트용으로 지정된 **사설 A** 포터블 서브넷의 VLAN 지원 IP 주소가 지정됩니다. 또한 이 디자인은 클러스터의 호스트 간에 제어기를 분리하기 위해 VM-VM 비유사성 규칙을 작성합니다. 초기 클러스터에는 제어기에 대한 고가용성을 보장할 수 있도록 최소한 3개의 노드가 포함되어 있어야 합니다.
 
-제어기에 추가하여, {{site.data.keyword.cloud_notm}} 자동화는 VTEP(VXLAN Tunnel Endpoint)를 통한 가상화된 네트워크의 사용이 가능하도록 NSX VIBS의 배치된 vSphere 호스트를 준비합니다. VTEP에는 [실제 인프라 디자인](design_physicalinfrastructure.html)의 *표 1. VLAN 및 서브넷 요약*에 나열된 대로 VTEP에 지정된 **사설 A** 포터블 IP 주소 범위의 VLAN 지원 IP 주소가 지정됩니다. VXLAN 트래픽은 태그가 지정되지 않은 VLAN에 상주하며 사설 vDS에 지정됩니다.
+제어기에 추가하여, {{site.data.keyword.cloud_notm}} 자동화는 VTEP(VXLAN Tunnel Endpoint)를 통한 가상화된 네트워크의 사용이 가능하도록 NSX VIBS의 배치된 vSphere 호스트를 준비합니다. VTEP에는 [실제 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)의 *표 1. VLAN 및 서브넷 요약*에 나열된 대로 VTEP에 지정된 **사설 A** 포터블 IP 주소 범위의 VLAN 지원 IP 주소가 지정됩니다. VXLAN 트래픽은 태그가 지정되지 않은 VLAN에 상주하며 사설 vDS에 지정됩니다.
 
 그런 다음 세그먼트 ID 풀이 지정되고 클러스터에 있는 호스트가 전송 구역에 추가됩니다. IGMP(Internet Group Management Protocol) 스누핑이 {{site.data.keyword.cloud_notm}} 내에서 구성되지 않으므로 전송 구역에서는 유니캐스트만 사용됩니다.
 
 이후에 NSX Edge Services Gateway 쌍이 배치됩니다. 모든 경우에, 하나의 게이트웨이 쌍은 사설 네트워크에 상주하는 자동화 컴포넌트의 아웃바운드 트래픽에 사용됩니다. vCenter Server의 경우, 고객 관리 에지라고 하는 두 번째 게이트웨이가 배치되며 사설 네트워크에 지정된 인터페이스와 공용 네트워크에 대한 업링크로 구성됩니다. 솔루션의 일부로서 배치된 NSX Edge Services Gateway에 대한 자세한 정보는 [NSX Edge on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)를 참조하십시오.
 
-클라우드 관리자는 임의의 필수 컴포넌트(예: DLR(Distributed Logical Router), 논리 스위치 및 방화벽)를 구성할 수 있습니다. 사용 가능한 NSX 기능은 인스턴스를 주문할 때 선택하는 NSX 라이센스 에디션에 따라 다릅니다. 자세한 정보는 [VMware NSX 에디션 비교](appendix.html#vmware-nsx-edition-comparison)를 참조하십시오. vCenter Server 인스턴스의 경우, {{site.data.keyword.cloud_notm}} 자동화는 vCenter Server Appliance 및 PSC(Platform Services Controller)를 NSX Manager 분배 방화벽 제외 목록에 추가합니다.
+클라우드 관리자는 임의의 필수 컴포넌트(예: DLR(Distributed Logical Router), 논리 스위치 및 방화벽)를 구성할 수 있습니다. 사용 가능한 NSX 기능은 인스턴스를 주문할 때 선택하는 NSX 라이센스 에디션에 따라 다릅니다. 자세한 정보는 [VMware NSX 에디션 비교](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-nsx-edition-comparison)를 참조하십시오. vCenter Server 인스턴스의 경우, {{site.data.keyword.cloud_notm}} 자동화는 vCenter Server Appliance 및 PSC(Platform Services Controller)를 NSX Manager 분배 방화벽 제외 목록에 추가합니다.
 
 ### 분배 스위치 디자인
 

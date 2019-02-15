@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -43,15 +43,15 @@ Os ambientes do VMware Cloud Foundation e do vCenter Server, que são entregues 
 
 ## Suporte proativo
 
-### Fornecimento inicial
+### Suporte Proativo para Fornecimento Inicial
 
 * Durante o pedido e o fornecimento iniciais de uma instância ou um serviço, o Suporte IBM pode acessar instâncias e informações do cliente sem notificação prévia do cliente para assegurar que os pedidos sejam devidamente cumpridos.
 * O Suporte IBM monitora ativamente as operações de ciclo de vida da instância, como a inclusão de novos hosts, além dos processos de pedido, fornecimento e instalação.
 * Para corrigir problemas que surgiram ou podem surgir no futuro, o Suporte IBM pode tomar várias ações, incluindo, mas não se limitando a: revisar detalhes do pedido do cliente, reiniciar tarefas de automação, executar operações de recarregamento do Sistema operacional ou abrir chamados do IBM Cloud usando o nome de usuário e a chave API do IBM Cloud do cliente fornecido.
 
-### Operações do segundo dia
+### Suporte proativo para operações de estado estável
 
-* Em raras ocasiões, o Suporte IBM pode requerer acesso a instâncias do cliente durante operações do segundo dia para solucionar proativamente um problema de instância ou para verificar a função de serviços ou componentes provisionados.
+* Em raras ocasiões, o Suporte IBM pode requerer acesso a instâncias do cliente durante operações de estado estável para solucionar proativamente um problema de instância ou para verificar a função de serviços ou componentes provisionados.
 * Esse acesso é por meio da rede de suporte interno do IBM Cloud. Em nenhum momento o Suporte IBM modificará a configuração da instância sem o consentimento prévio do cliente.
 * O acesso é para componentes de gerenciamento do VMware e/ou componentes de gerenciamento do IBM Cloud e nunca para as máquinas virtuais do cliente ou aplicativos.
 
@@ -62,7 +62,7 @@ Os ambientes do VMware Cloud Foundation e do vCenter Server, que são entregues 
 * Devido ao nível de especialização necessário para manter o conhecimento técnico superior no nível da equipe, às vezes é necessário envolver mais de uma equipe de suporte na resolução de um problema de software específico. Isso é facilmente manipulado, uma vez que nossas equipes de suporte estão todas em rede juntas e trabalham como uma para resolver quaisquer problemas ou problemas que surjam.
 * Para investigar o problema, a IBM pode precisar acessar informações sobre o sistema relativas à falha ou pode precisar recriar a falha para obter informações adicionais.
 * Um chamado de suporte gerado pelo cliente serve como reconhecimento de que o Suporte IBM pode acessar a camada de gerenciamento do VMware para investigação, depuração e triagem. Se a indisponibilidade de manutenção ou mudanças no ambiente forem necessárias, o Suporte IBM solicitará confirmação adicional documentada do cliente por meio de chamados como parte de nosso processo de gerenciamento de mudanças.
-* Para obter mais informações sobre chamados de suporte, consulte [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) e [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html).
+* Para obter mais informações sobre chamados de suporte, consulte [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) e [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## Responsabilidades do cliente
 
@@ -72,7 +72,7 @@ Os ambientes do VMware Cloud Foundation e do vCenter Server, que são entregues 
 * Na implementação inicial, a automação da oferta e a conta do cliente são separadas. O cliente tem permissão e é encorajado a mudar todas as senhas fornecidas pela IBM no portal.
 * O acesso ao vCenter e as credenciais são criados durante as implementações iniciais e fornecidos para o cliente. Como parte do requisito de nossa oferta, o Suporte IBM deve reter acesso total à camada de gerenciamento para fornecer gerenciamento de ciclo de vida, bem como suporte para nossos clientes.
 * Se credenciais, como senhas, forem mudadas a qualquer momento, o Suporte IBM não poderá mais ajudar o cliente a recuperar credenciais perdidas ou esquecidas ou até mesmo a solucionar problemas de ambientes do cliente.
-* Para obter mais informações sobre a importância desse problema e preocupações relacionadas, consulte [Considerações ao mudar senhas de componentes NSX](vc_networkingonvcenterserver.html#considerations-when-changing-passwords-for-nsx-components) e [Considerações sobre a mudança de artefatos do vCenter Server](vcenter_chg_impact.html).
+* Para obter mais informações sobre a importância desse problema e preocupações relacionadas, consulte [Considerações ao mudar senhas de componentes NSX](/docs/services/vmwaresolutions/vcenter/vc_networkingonvcenterserver.html#considerations-when-changing-passwords-for-nsx-components) e [Considerações sobre a mudança de artefatos do vCenter Server](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html).
 
 ### Comunicação e resolução de problemas
 
@@ -87,7 +87,7 @@ Os ambientes do VMware Cloud Foundation e do vCenter Server, que são entregues 
 
 * Gerenciamento do Serviço de nuvem: o cliente é responsável por gerenciar a administração, a operação, a manutenção e a segurança dos aplicativos, incluindo o middleware subjacente.
 * Integridade de serviço e disponibilidade: a IBM encaminhará para o Cliente todas as notificações de intrusão de rede detectadas para este Serviço de nuvem. É responsabilidade do Cliente determinar o impacto de cada notificação relatada. O Cliente será notificado sobre falhas de hardware. O monitoramento e a resposta a falhas do S.O. ou do software é responsabilidade do Cliente, iniciando o suporte IBM conforme necessário.
-* Criação de log de atividade: o cliente é responsável pela criação de log de atividade do S.O./Sistema e do Banco de dados/Aplicativos, conforme necessário.  
+* Criação de log de atividade: o cliente é responsável pela criação de log de atividade do S.O./Sistema e do Banco de dados/Aplicativos, conforme necessário.
 * Criptografia: o cliente é responsável por configurar e gerenciar toda a criptografia (para os dados em repouso e em trânsito), conforme necessário.
 * Continuidade de negócios e recuperação de desastre: o cliente é responsável pela configuração e pelo gerenciamento de todos os processos de continuidade de negócios e de recuperação de desastre, conforme necessário.
 
@@ -111,12 +111,12 @@ Os ambientes do VMware Cloud Foundation e do vCenter Server, que são entregues 
 * Ao enviar o pedido, o cliente concorda com esses termos e, assim, concede o consentimento para o Suporte IBM acessar suas instâncias a qualquer momento sem notificação prévia para resolver rapidamente os problemas relacionados ao ambiente ou para evitar futuras falhas.
 * Esse consentimento se aplica a todas as instâncias que estão sendo pedidas atualmente em todo seu ciclo de vida. Instâncias e componentes de instância provisionados no futuro podem requerer consentimento adicional.
 
-## Operações do segundo dia
+## Operações de estado estável
 
 Se o cliente não tiver concedido o consentimento para o suporte proativo para uma instância no fornecimento e pedido iniciais, ele deverá incluir um consentimento explícito em quaisquer chamados de serviço futuros, se desejado. As declarações de consentimento devem seguir as diretrizes configuradas ou serão consideradas nulas.
 
 ### Links relacionados
 
-* [Visão geral do vCenter Server](vc_vcenterserveroverview.html)
-* [vCenter Server com visão Hybridity Bundle](vc_hybrid_overview.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
+* [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [VCenter Server with Hybridity Bundle Visão Geral](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

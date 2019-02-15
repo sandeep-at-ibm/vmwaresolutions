@@ -26,7 +26,7 @@ lastupdated: "2017-03-08"
 * VMware ESXi 6.0 u2 p04
 * 새 Windows VSI(Virtual Server Instance)는 이 릴리스의 다중 사이트 구성 지원에 필요한 Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스에 대해 주문됩니다. 이 VSI 스펙은 Windows 2012 R2(8GB RAM / 두 개의 CPU 코어 / 100GB 디스크 / 듀얼 1Gbps 사설 업링크)입니다.
 
-자세한 정보는 [Cloud Foundation 개요](../sddc/sd_cloudfoundationoverview.html)를 참조하십시오.
+자세한 정보는 [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)를 참조하십시오.
 
 ## vCenter Server 인스턴스에 대한 컴포넌트 업데이트
 
@@ -51,8 +51,8 @@ NSX Edge는 이제 주문 중인 새 vCenter Server 인스턴스의 일부로 �
 
 보안을 보장하기 위해 관리 가상 머신에서 시작된 아웃바운드 HTTPS 통신만 허용하도록 방화벽 규칙이 제공됩니다. 이 ESG는 대형 구성에 배치되고 IBM 지원 센터만 구성을 수정할 수 있습니다. 자세한 정보는 다음 주제를 참조하십시오.
 
-* [vCenter Server 기술 스펙](../vcenter/vc_vcenterserveroverview.html)
-* [관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* [vCenter Server 기술 스펙](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ### NSX 라이센스
@@ -79,21 +79,21 @@ NSX Edge는 이제 주문 중인 새 vCenter Server 인스턴스의 일부로 �
 * Cloud Foundation 인스턴스 및 vCenter Server 인스턴스의 경우: 최적화된 네트워킹 구성 즉, SoftLayer®로 지정된 기본 공용 및 사설 IP 주소만 ESXi 서버에 연결됩니다. 포터블 사설 주소가 더이상 관리 트래픽에 대해 배치되지 않습니다.
 * Cloud Foundation 인스턴스만의 경우: Windows AD SSO(Active Directory Single Sign-On) 및 DNS(Domain Name System) 서버
 
-이 변경으로 인해 현재 릴리스에서 기존의 V1.4 이전 인스턴스를 사용할 수 없습니다. 기존 인스턴스의 구성을 다시 사용하려면 기존 인스턴스를 현재 버전으로 업그레이드해야 합니다. 자세한 정보는 [V1.4 이전에서 인스턴스 업그레이드](movinginstances.html)를 참조하십시오.
+이 변경으로 인해 현재 릴리스에서 기존의 V1.4 이전 인스턴스를 사용할 수 없습니다. 기존 인스턴스의 구성을 다시 사용하려면 기존 인스턴스를 현재 버전으로 업그레이드해야 합니다. 자세한 정보는 [V1.4 이전에서 인스턴스 업그레이드](/docs/services/vmwaresolutions/vmonic/movinginstances.html)를 참조하십시오.
 {:note}
 
 ## Cloud Foundation 인스턴스에 대한 다중 사이트 구성 지원
 
 이제 이전 릴리스에서와 같이 단일 Cloud Foundation 인스턴스를 배치하거나 기본 인스턴스에 연결된 보조 인스턴스를 배치할 수 있습니다. 다중 사이트 구성 모델은 기본 사이트와 최대 일곱 개의 보조 사이트로 허브 및 스포크 토폴로지를 사용합니다.
 
-자세한 정보는 [Cloud Foundation 인스턴스에 대한 다중 사이트 구성](../sddc/sd_multisite.html)을 참조하십시오.
+자세한 정보는 [Cloud Foundation 인스턴스에 대한 다중 사이트 구성](/docs/services/vmwaresolutions/sddc/sd_multisite.html)을 참조하십시오.
 
 ## Zerto 재해 복구의 배치에 대한 개선사항
 
 * Cloud Foundation 인스턴스의 경우, Zerto 재해 복구의 배치가 지원 티켓을 통해 처리되지 않고 자동화됩니다. 주문하기 전에 검토할 수 있도록 예상 비용에 모든 Zerto 컴포넌트(예: 사설 포터블 서브넷), Windows VSI(Virtual Service Instance) 및 Zerto 라이센스 비용이 나열됩니다.
 * vCenter Server 인스턴스의 경우, 이전 릴리스에서와 같이 Zerto 재해 복구의 배치가 지원 티켓을 통해 수행됩니다. 그러나 NSX Edge 및 공인 포터블 서브넷이 이제 기본 배치에 포함되므로 더 이상 필요하지 않습니다. 사설 포터블 서브넷, Windows VSI(Virtual Service Instance) 및 Zerto 라이센스의 비용이 계속해서 적용됩니다.
 
-자세한 정보는 [Zerto 재해 복구](../services/addingzertodr.html)를 참조하십시오.
+자세한 정보는 [Zerto 재해 복구](/docs/services/vmwaresolutions/services/addingzertodr.html)를 참조하십시오.
 
 ## 인스턴스 주문 프로세스
 
@@ -104,15 +104,15 @@ NSX Edge는 이제 주문 중인 새 vCenter Server 인스턴스의 일부로 �
 
 자세한 정보는 다음 주제를 참조하십시오.
 
-* [Cloud Foundation 인스턴스 주문](../sddc/sd_orderinginstance.html)
-* [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 
 ## 인스턴스 관리
 
 인스턴스 관리 프로세스에 대한 새 기능 및 개선사항은 다음과 같습니다.
 
-* Cloud Foundation 인스턴스의 경우, 인스턴스 세부사항 페이지에서 여러 인스턴스 컴포넌트에 대한 사용자 이름 및 비밀번호를 볼 수 있습니다. 자세한 정보는 [Cloud Foundation 인스턴스 보기](../sddc/sd_viewinginstances.html)를 참조하십시오.
-* vCenter Server 인스턴스의 경우, 이제 콘솔에서 직접 IBM 컴포넌트용 소프트웨어 업데이트 및 패치를 설치할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 업데이트 및 패치 적용](../vcenter/vc_applyingupdates.html)을 참조하십시오.
+* Cloud Foundation 인스턴스의 경우, 인스턴스 세부사항 페이지에서 여러 인스턴스 컴포넌트에 대한 사용자 이름 및 비밀번호를 볼 수 있습니다. 자세한 정보는 [Cloud Foundation 인스턴스 보기](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)를 참조하십시오.
+* vCenter Server 인스턴스의 경우, 이제 콘솔에서 직접 IBM 컴포넌트용 소프트웨어 업데이트 및 패치를 설치할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 업데이트 및 패치 적용](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html)을 참조하십시오.
 
 ## 콘솔 알림
 
@@ -120,5 +120,5 @@ NSX Edge는 이제 주문 중인 새 vCenter Server 인스턴스의 일부로 �
 
 자세한 정보는 다음 주제를 참조하십시오.
 
-* [사용자 계정 및 설정](useraccount.html)
-* [알림](notifications.html)
+* [사용자 계정 및 설정](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [알림](/docs/services/vmwaresolutions/vmonic/notifications.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -17,7 +17,7 @@ NSX 및 vSphere를 모두 업그레이드해야 하는 경우 VMware에서는 �
 1. **ESXi 업그레이드** - ESXi 업그레이드가 완료된 후 호스트가 유지보수 모드를 종료하지만 다음 단계가 완료될 때까지 논리 스위치에 연결된 VM을 호스트로 이동할 수 없습니다.
 2. **NSX VIB 업그레이드** - VIB가 업그레이드되고 호스트가 유지보수 모드에서 제거된 후 논리 스위치에 연결된 VM을 호스트로 이동할 수 있습니다.
 
-NSX는 _my.vmware.com_에서 받은 다운로드로 NSX Manager를 업데이트하여 업데이트됩니다. 따라서 업데이트를 다운로드하려면 계정이 필요합니다. VMware vCenter Server on {{site.data.keyword.cloud_notm}} 인스턴스에 {{site.data.keyword.cloud}} 구독 라이센싱을 이용하는 경우 **my.vmware.com** 계정을 사용하여 업데이트를 다운로드할 수 없습니다. 따라서 [IBM 지원 센터에 문의](../../vmonic/trbl_support.html)해야 합니다.
+NSX는 _my.vmware.com_에서 받은 다운로드로 NSX Manager를 업데이트하여 업데이트됩니다. 따라서 업데이트를 다운로드하려면 계정이 필요합니다. VMware vCenter Server on {{site.data.keyword.cloud_notm}} 인스턴스에 {{site.data.keyword.cloud}} 구독 라이센싱을 이용하는 경우 **my.vmware.com** 계정을 사용하여 업데이트를 다운로드할 수 없습니다. 따라서 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)해야 합니다.
 
 업그레이드를 시작하기 전에 업그레이드 문제 및 임시 해결책에 대한 NSX 참고사항을 확인하십시오. 릴리스 정보를 사용하여 vCenter가 NSX에 대한 새로운 시스템 요구사항을 충족하는지 확인하십시오.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -34,7 +34,7 @@ lastupdated: "2018-11-13"
 
 ### IBM Cloud 네트워크 개요
 
-{{site.data.keyword.cloud_notm}}의 실제 네트워크는 3개의 개별 네트워크(공용, 사설 및 관리)로 분류됩니다. 공용, 사설 및 관리 네트워크에 대한 자세한 정보는 [솔루션 개요](../solution/solution_overview.html)를 참조하십시오.
+{{site.data.keyword.cloud_notm}}의 실제 네트워크는 3개의 개별 네트워크(공용, 사설 및 관리)로 분류됩니다. 공용, 사설 및 관리 네트워크에 대한 자세한 정보는 [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)를 참조하십시오.
 
 {{site.data.keyword.cloud_notm}} 네트워크에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 네트워크](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}를 참조하십시오.
 
@@ -46,7 +46,7 @@ lastupdated: "2018-11-13"
 
 ### VLAN
 
-VLAN에 대한 자세한 정보는 [실제 인프라 디자인](../solution/design_physicalinfrastructure.html)의 _실제 네트워크 디자인_ 섹션을 참조하십시오.
+VLAN에 대한 자세한 정보는 [실제 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)의 _실제 네트워크 디자인_ 섹션을 참조하십시오.
 
 ## 실제 스토리지 디자인
 
@@ -65,10 +65,10 @@ Endurance는 다양한 애플리케이션 욕구를 지원하기 위해 세 가�
 NFS 공유를 주문한 후에 IOPS를 많이 또는 적게 허용하도록 크기를 조정하거나 재구성할 수 있습니다.
 {:note}
 
-자세한 IOPS 옵션은 [vCenter Server 인스턴스 주문](../../vcenter/vc_orderinginstance.html)의 _스토리지 설정_ 섹션을 참조하십시오.
+자세한 IOPS 옵션은 [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)의 _스토리지 설정_ 섹션을 참조하십시오.
 
 스토리지 티어 외에 {{site.data.keyword.cloud_notm}} Endurance 스토리지는 스냅샷과 복제, {{site.data.keyword.CloudDataCent_notm}} 위치의 유휴 시 암호화를 포함해 넓은 범위의 애플리케이션 요구 선택을 지원합니다.
 
 ### 관련 링크
 
-* [솔루션 개요](../solution/solution_overview.html)
+* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

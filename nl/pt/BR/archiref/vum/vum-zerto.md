@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
 # Zerto
 
-Caso você descubra que um host vSphere ESXi não pode entrar no modo de manutenção durante a correção, pode ser que o Zerto o esteja interrompendo. Se você atualizou o Zerto desde a implementação inicial, realize as etapas a seguir para corrigir isso. Se você não tiver atualizado, siga as instruções em [Como colocar um host com um VRA associado no modo de manutenção](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/).
+Caso você descubra que um host vSphere ESXi não pode entrar no modo de manutenção durante a correção, pode ser que o Zerto esteja parando-o. Se você tiver atualizado o Zerto desde a implementação inicial, conclua as etapas a seguir para corrigir isso. Se você não tiver atualizado, conclua as instruções a seguir em [Como colocar um host com um VRA associado no modo de manutenção](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/).
 
 1. Efetue login na interface com o usuário da web Zerto.
 2. Selecione **Configurações de site** no menu suspenso.
@@ -20,4 +20,4 @@ Caso você descubra que um host vSphere ESXi não pode entrar no modo de manuten
 ### Links relacionados
 
 * [VMware HCX no {{site.data.keyword.cloud}} Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [Soluções de VMware no {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)

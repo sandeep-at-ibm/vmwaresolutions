@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-01-14"
 
 {{site.data.keyword.cloud_notm}} Private에는 다음 기능이 있습니다.
 -	**Unified 설치 프로그램** – 이 설치 프로그램은 Ansible 기반 설치 프로그램을 사용하여 마스터, 작업자 및 프록시 노드가 있는 Kubernetes 기반 클러스터를 신속하게 설치합니다.
--	**{{site.data.keyword.cloud_notm}} Private 관리 콘솔** – 안전한 중앙 집중식의 단일 관리 콘솔에서 애플리케이션 및 클러스터를 관리, 모니터링하고 문제점을 해결합니다. 
+-	**{{site.data.keyword.cloud_notm}} Private 관리 콘솔** – 안전한 중앙 집중식의 단일 관리 콘솔에서 애플리케이션 및 클러스터를 관리, 모니터링하고 문제점을 해결합니다.
 -	**Private Docker 이미지 레지스트리** - 이 로컬 레지스트리에는 Docker Hub와 동일한 모든 기능이 있지만 이미지를 보거나 가져올 수 있는 사용자를 제한할 수 있습니다.
 -	**중앙 집중식 소프트웨어 및 서비스 카탈로그** - 이 카탈로그는 패키지를 찾아보고 클러스터에 설치할 수 있는 중앙 집중식 위치를 제공합니다. 추가 IBM 제품의 패키지는 기본 {{site.data.keyword.cloud_notm}} Private
 저장소 목록에 포함된 큐레이트 저장소에서 사용할 수 있습니다.
@@ -34,10 +34,11 @@ lastupdated: "2018-01-14"
 
 ## IBM Cloud Private 네트워킹
 
-Calico를 사용하면 {{site.data.keyword.icpfull_notm}} 네트워크 관리가 용이합니다. Calico는 OSI(Open System Interconnection) 모델의 계층 3 네트워크 계층을 사용합니다. Calico는 BGP(Border Gateway Protocol)를 사용하여 에이전트 노드 간의 통신을 용이하게 하는 라우팅 테이블을 빌드합니다.
+Calico를 사용하면 {{site.data.keyword.icpfull_notm}} 네트워크 관리가 용이합니다.
+Calico는 OSI(Open System Interconnection) 모델의 계층 3 네트워크 계층을 사용합니다. Calico는 BGP(Border Gateway Protocol)를 사용하여 에이전트 노드 간의 통신을 용이하게 하는 라우팅 테이블을 빌드합니다.
 
-Calico 네트워킹에 대한 자세한 정보는 [{{site.data.keyword.containerlong_notm}}](vcsnsxt-overview-iks.html)의 내용을 참조하십시오. 
+Calico 네트워킹에 대한 자세한 정보는 [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-iks.html)의 내용을 참조하십시오.
 
 ### 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

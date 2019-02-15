@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -41,5 +41,5 @@ vCenter Server 인스턴스를 삭제하는 경우 다음 컴포넌트가 순차
 
 ### 관련 링크
 
-* [vCenter Server 인스턴스 삭제](vc_deletinginstance.html)
-* [vCenter Server 인스턴스에서 서비스 주문, 보기 및 제거](vc_addingremovingservices.html)
+* [vCenter Server 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)
+* [vCenter Server 인스턴스에서 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)

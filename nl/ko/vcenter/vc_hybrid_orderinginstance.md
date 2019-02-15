@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2019-01-14"
 
 # vCenter Server with Hybridity Bundle 인스턴스 주문
 
-워크로드 요구사항에 가장 적합한 유연하고 사용자 정의할 수 있는 VMware 가상화된 플랫폼을 배치하려면 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 인스턴스를 주문하십시오. vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware Hybrid Cloud Extension(HCX) 라이센싱이 포함되며, 이는 사용자에게 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 사용할 수 있는 자격을 부여합니다. 재해 복구를 위한 [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)와 같은 서비스를 추가할 수도 있습니다.
+워크로드 요구사항에 가장 적합한 유연하고 사용자 정의할 수 있는 VMware 가상화된 플랫폼을 배치하려면 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 인스턴스를 주문하십시오. vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware Hybrid Cloud Extension(HCX) 라이센싱이 포함되며, 이는 사용자에게 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 사용할 수 있는 자격을 부여합니다. 재해 복구를 위한 [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html)와 같은 서비스를 추가할 수도 있습니다.
 
 ## vCenter Server with Hybridity Bundle 인스턴스 주문 요구사항
 
 다음 태스크를 완료했는지 확인하십시오.
-*  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](../vmonic/useraccount.html)를 참조하십시오.
-*  [vCenter Server with Hybridity Bundle에 대한 요구사항 및 계획](vc_hybrid_planning.html)의 정보를 검토했습니다.
+*  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](/docs/services/vmwaresolutions/vmonic/useraccount.html)를 참조하십시오.
+*  [vCenter Server with Hybridity Bundle에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)의 정보를 검토했습니다.
 * 인스턴스 및 도메인 이름 형식을 검토했습니다. 도메인 이름 및 하위 도메인 레이블은 인스턴스의 사용자 이름 및 서버 이름을 생성하는 데 사용됩니다.
 
 표 1. 인스턴스 및 도메인 이름의 값 형식
@@ -44,7 +44,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때는 다음 시
 
 인스턴스 이름은 다음 요구사항을 충족해야 합니다.
 * 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 인스턴스 이름은 영숫자 문자로 시작하고 끝나야 합니다.
+* 인스턴스 이름은 영문자로 시작하고 영숫자로 끝나야 합니다. 
 * 인스턴스 이름의 최대 길이는 10자입니다.
 * 인스턴스 이름은 계정 내에서 고유해야 합니다.
 
@@ -133,7 +133,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때는 다음 네
 
 하위 도메인 레이블은 다음 요구사항을 충족해야 합니다.
 *  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-*  하위 도메인 레이블은 영숫자 문자로 시작하고 끝나야 합니다.
+*  하위 도메인 레이블은 영문자로 시작하고 영숫자로 끝나야 합니다. 
 *  하위 도메인 레이블의 최대 길이는 10자입니다.
 *  하위 도메인 레이블은 계정 내에서 고유해야 합니다.
 
@@ -195,7 +195,7 @@ Windows 라이센스를 주문하는 방법에 대한 자세한 정보는 [Windo
 
 ## 서비스 설정
 
-vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비스도 주문할 수 있습니다. 서비스에 대한 자세한 정보는 [vCenter Server with Hybridity Bundle 인스턴스에 대한 사용 가능 서비스](vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)를 참조하십시오.
+vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비스도 주문할 수 있습니다. 서비스에 대한 자세한 정보는 [vCenter Server with Hybridity Bundle 인스턴스에 대한 사용 가능 서비스](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)를 참조하십시오.
 
 ## 주문 요약
 
@@ -227,7 +227,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
      *  새 공용 및 사설 VALN을 주문하려면 **새 VLAN 주문**을 클릭하십시오.
      *  기존 공용 및 사설 VALN이 사용 가능한 경우 이들을 재사용하려면 **기존 VLAN 선택**을 클릭한 후 공용 VLAN, 기본 서브넷, 사설 VLAN, 사설 기본 서브넷 및 보조 사설 VLAN을 선택하십시오.
   4. DNS 구성을 선택하십시오.
-9. 포함된 HCX on {{site.data.keyword.cloud_notm}} 서비스에 대해 구성을 완료하십시오. 서비스에 대한 설정을 제공하는 데 대한 자세한 정보는 [VMware HCX on IBM Cloud 주문](../services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration)의 _VMware HCX on IBM Cloud 구성_ 섹션을 참조하십시오.
+9. 포함된 HCX on {{site.data.keyword.cloud_notm}} 서비스에 대해 구성을 완료하십시오. 서비스에 대한 설정을 제공하는 데 대한 자세한 정보는 [VMware HCX on IBM Cloud 주문](/docs/services/vmwaresolutions/services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration)의 _VMware HCX on IBM Cloud 구성_ 섹션을 참조하십시오.
 10. 추가 기능 서비스 카드를 클릭하여 인스턴스에 배치할 해당 추가 기능 서비스를 선택하십시오. 서비스가 구성을 필요로 하는 경우에는 서비스 고유 설정을 완료하고 카드의 **서비스 추가**를 클릭하십시오.  
 서비스의 설정을 제공하는 방법에 대한 자세한 정보는 해당 서비스 주문 주제를 참조하십시오.
 
@@ -241,7 +241,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 
 인스턴스의 배치가 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 배치의 상태를 확인할 수 있습니다.
 
-인스턴스가 성공적으로 배치된 경우에는 [Hybridity Bundle 인스턴스의 기술 스펙](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
+인스턴스가 성공적으로 배치된 경우에는 [Hybridity Bundle 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
 
 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
@@ -265,10 +265,10 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 
 ### 관련 링크
 
-* [{{site.data.keyword.cloud_notm}} 계정 등록](../vmonic/signing_softlayer_account.html)
-* [vCenter Server with Hybridity Bundle 인스턴스 보기](vc_hybrid_viewinginstances.html)
-* [vCenter Server with Hybridity Bundle 인스턴스에 대한 다중 사이트 구성](vc_hybrid_multisite.html)
-* [vCenter Server with Hybridity Bundle 인스턴스의 클러스터 추가 및 보기](vc_hybrid_addingviewingclusters.html)
-* [vCenter Server with Hybridity Bundle 인스턴스에 대한 용량 확장 및 축소](vc_hybrid_addingremovingservers.html)
-* [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](vc_hybrid_addingremovingservices.html)
-* [vCenter Server with Hybridity Bundle 인스턴스 삭제](vc_hybrid_deletinginstance.html)
+* [{{site.data.keyword.cloud_notm}} 계정 등록](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [vCenter Server with Hybridity Bundle 인스턴스 보기](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [vCenter Server with Hybridity Bundle 인스턴스에 대한 다중 사이트 구성](/docs/services/vmwaresolutions/vcenter/vc_hybrid_multisite.html)
+* [vCenter Server with Hybridity Bundle 인스턴스의 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
+* [vCenter Server with Hybridity Bundle 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)

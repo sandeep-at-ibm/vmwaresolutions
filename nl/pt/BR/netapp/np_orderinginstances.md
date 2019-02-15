@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -19,8 +19,8 @@ Para implementar uma plataforma virtualizada VMware com um dispositivo de armaze
 ## Requisitos
 
 Assegure-se de que tenha concluído as tarefas a seguir:
-*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](../vmonic/useraccount.html).
-*  Você revisou os requisitos e considerações em [Requisitos e planejamento para instâncias do NetApp ONTAP Select](np_planning.html).
+*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Você revisou os requisitos e considerações em [Requisitos e planejamento para instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_planning.html).
 
 Não modifique nenhum valor configurado durante o pedido ou a implementação da instância. Isso tornará a instância não utilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
 {:important}
@@ -33,7 +33,7 @@ Ao pedir uma instância do NetApp ONTAP Select, deve-se especificar as configura
 
 O nome da instância deve atender aos requisitos a seguir:
 * Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-* O nome da instância deve iniciar e terminar com um caractere alfanumérico.
+* O nome da instância deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
 * O comprimento máximo do nome da instância é de 10 caracteres.
 * O nome da instância deve ser exclusivo dentro de sua conta.
 
@@ -52,7 +52,7 @@ O prefixo de nome do host deve atender aos requisitos a seguir:
 
 O rótulo do subdomínio deve atender aos requisitos a seguir:
 *  Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-*  O rótulo do subdomínio deve iniciar e terminar com um caractere alfanumérico.
+*  O rótulo do subdomínio deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
 *  O comprimento máximo do rótulo do subdomínio é de 10 caracteres.
 *  O rótulo do subdomínio deve ser exclusivo em sua conta.
 
@@ -65,7 +65,7 @@ O nome do domínio-raiz deve atender aos requisitos a seguir:
 * A última sequência pode incluir somente caracteres alfabéticos.
 * O comprimento da última sequência deve estar no intervalo de 2 a 24 caracteres.
 
-O comprimento máximo do nome completo do domínio (FQDN) para hosts e máquinas virtuais (VMs) é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
+O comprimento máximo do nome completo do domínio (FQDN) para hosts e máquinas virtuais (MVs) é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
 {:note}
 
 ## Configurações de licenciamento
@@ -113,7 +113,7 @@ O número de servidores ESXi de uma instância do NetApp ONTAP Select é 4 por p
 
 A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
 
-Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do NetApp ONTAP Select](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) serão instalados em sua plataforma virtual do VMware.
+Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) serão instalados em sua plataforma virtual do VMware.
 
 Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 
@@ -133,7 +133,7 @@ Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} 
 
 ### Links relacionados
 
-* [Visualizando instâncias do NetApp ONTAP Select](np_viewinginstances.html)
-* [Excluindo instâncias do NetApp ONTAP Select](np_deletinginstance.html)
+* [Visualizando instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [Excluindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [Centro de Documentação do NetApp ONTAP](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
 * [Anexar armazenamento dedicado a implementações do NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

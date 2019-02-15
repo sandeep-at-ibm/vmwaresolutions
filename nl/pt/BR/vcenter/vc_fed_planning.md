@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-19"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ Revise os seguintes requisitos antes de pedir uma instância do VMware Federal. 
 
 ## Requisitos da conta do IBM Cloud
 
-A conta do {{site.data.keyword.cloud}} que você está usando deve atender a determinados requisitos. Para obter mais informações, veja [Requisitos para a conta do {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+A conta do {{site.data.keyword.cloud}} que você está usando deve atender a determinados requisitos. Para obter mais informações, consulte [Requisitos para a conta do {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Disponibilidade do data center do IBM Cloud
 
@@ -24,7 +24,7 @@ A implementação do VMware Federal on {{site.data.keyword.cloud_notm}} tem requ
 
 ## Backup de componentes de gerenciamento
 
-Você é responsável por manter e assegurar a disponibilidade de todos os componentes da instância usando sua solução de backup preferencial. É altamente recomendável planejar o backup ou a alta disponibilidade de todos os componentes de gerenciamento. Para obter mais informações, consulte [Fazendo backup de componentes](../archiref/solution/solution_backingup.html).
+Você é responsável por manter e assegurar a disponibilidade de todos os componentes da instância usando sua solução de backup preferencial. É altamente recomendável planejar o backup ou a alta disponibilidade de todos os componentes de gerenciamento. Para obter mais informações, consulte [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
 ## Serviços para instâncias do VMware Federal
 
@@ -32,12 +32,12 @@ O VMware Federal on {{site.data.keyword.cloud_notm}} não oferece a opção para
 
 ## Considerações sobre capacidade
 
-Para obter informações e considerações sobre capacidade, consulte [Ajustando a escala da capacidade](../archiref/solution/solution_scaling.html).
+Para obter informações e considerações sobre capacidade, consulte [Ajustando a escala da capacidade](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
 
 ### Links relacionados
 
-* [Lista de materiais do software vCenter Server](vc_bom.html)
-* [Visão geral do VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
-* [Pedindo instâncias do VMware Federal](vc_fed_orderinginstance.html)
-* [Protegendo instâncias do VMware Federal](vc_fed_securinginstance.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
+* [Lista de materiais do software vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [Visão geral do VMware Federal on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
+* [Pedindo instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [Protegendo instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-11-05"
 
 사용 가능한 업데이트는 인스턴스의 소프트웨어 업데이트 목록에 있는 레코드로, 즉시 적용되거나 나중에 실행되도록 스케줄될 수 있습니다. 업데이트는 IBM 관리 컴포넌트 및 VMware 컴포넌트를 업데이트하기 위해 하나 이상의 패키지가 포함된 번들입니다.
 
-V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데이트는 더 이상 나열되지 않습니다. 호스트 추가, 클러스터 추가 및 서비스 주문과 같은 조치를 수행하면 인스턴스가 최신 버전으로 자동 업데이트됩니다. 자동 업데이트에 대한 자세한 정보는 [V2.5 릴리스 정보](../vmonic/relnotes_v25.html)에서 *IBM CloudDriver 복원성* 섹션을 참조하십시오.
+V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데이트는 더 이상 나열되지 않습니다. 호스트 추가, 클러스터 추가 및 서비스 주문과 같은 조치를 수행하면 인스턴스가 최신 버전으로 자동 업데이트됩니다. 자동 업데이트에 대한 자세한 정보는 [V2.5 릴리스 정보](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)에서 *IBM CloudDriver 복원성* 섹션을 참조하십시오.
 {:note}
 
 ## 시작하기 전에
@@ -109,11 +109,11 @@ V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데
       </tr>
     </table>
 
-6. 특정 단계에서 업데이트 프로세스에 실패하는 경우 [IBM 지원 센터에 문의](../vmonic/trbl_support.html)하여 도움을 받으십시오. 문제 해결 방법에 대한 정보를 얻고 실패한 단계에서 업그레이드를 다시 시작하도록 안내됩니다.
+6. 특정 단계에서 업데이트 프로세스에 실패하는 경우 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)하여 도움을 받으십시오. 문제 해결 방법에 대한 정보를 얻고 실패한 단계에서 업그레이드를 다시 시작하도록 안내됩니다.
 
 ### 관련 링크
 
-* [Cloud Foundation 개요](../sddc/sd_cloudfoundationoverview.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} 개요](../services/veeam_considerations.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)

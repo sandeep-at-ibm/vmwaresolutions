@@ -2,27 +2,28 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-23"
 
 ---
 
-# Considerações operacionais
+# Considerações operacionais para a rede do vCenter Server
 
 ## Backup
 
-### Backup do VCS
+### Backup do VMware vCenter Server on IBM Cloud
 
-Como parte do {{site.data.keyword.vmwaresolutions_full}}, o software de backup Veeam é opcionalmente implementado em uma instância de servidor virtual (VSI) do {{site.data.keyword.cloud_notm}} usando o armazenamento do Endurance do {{site.data.keyword.cloud_notm}} fora do cluster do VMware. O propósito desse software é fazer backup dos componentes de gerenciamento na solução. A [Visão geral do Veeam on {{site.data.keyword.cloud_notm}}](../../services/veeam_considerations.html) fornece detalhes sobre a oferta.
+Como parte do {{site.data.keyword.vmwaresolutions_full}}, o software de backup Veeam é opcionalmente implementado em uma instância de servidor virtual (VSI) do {{site.data.keyword.cloud_notm}} usando o armazenamento do Endurance do {{site.data.keyword.cloud_notm}} fora do cluster do VMware. O propósito desse software é fazer backup dos componentes de gerenciamento na solução. [A
+visão geral do Veeam on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/services/veeam_considerations.html) fornece detalhes sobre a oferta.
 
 O backup de todos os componentes do NSX será crucial para restaurar o sistema para seu estado de funcionamento se ocorrer uma falha. Não é suficiente fazer backup dos dispositivos virtuais NSX, a função de backup do NSX dentro do gerenciador NSX deve ser empregada para um backup efetivo. Essa operação requer que um servidor FTP ou SFTP seja especificado para o repositório de dados de backup do NSX.
 
-O backup do NSX Manager contém toda a configuração do NSX, incluindo controladores, entidades lógicas de roteamento e comutação, segurança, regras de firewall e tudo mais que você configura dentro da interface com o usuário ou API do NSX Manager. O banco de dados do vCenter e os elementos relacionados, como os comutadores virtuais, precisam ter backup feito separadamente. Veja [Backup baseado em arquivo do NSX](../solution/solution_backingup.html#nsx-file-based-backup) para obter detalhes. A configuração do NSX deve ser submetida a backup juntamente com um [backup baseado em arquivo do vCenter](../solution/solution_backingup.html#vcenter-file-based-backup).
+O backup do NSX Manager contém toda a configuração do NSX, incluindo controladores, entidades lógicas de roteamento e comutação, segurança, regras de firewall e tudo mais que você configura dentro da interface com o usuário ou API do NSX Manager. O banco de dados do vCenter e os elementos relacionados, como os comutadores virtuais, precisam ter backup feito separadamente. Veja [Backup baseado em arquivo do NSX](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#nsx-file-based-backup) para obter detalhes. A configuração do NSX deve ser submetida a backup juntamente com um [backup baseado em arquivo do vCenter](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#vcenter-file-based-backup).
 
 ### Backup e recuperação de desastre para o IBM Cloud Private
 
-Os backups para uma implementação do ICP serão cruciais para restaurar o sistema para seu estado de funcionamento se ocorrer uma falha. Sobre um backup de VM tradicional, há um ponto de aderência: cada nó principal do ICP executa um serviço *etcd* e a documentação do *etcd* indica claramente para não usar o backup de VM tradicional para restaurá-lo.
+Os backups para uma implementação do {{site.data.keyword.icpfull_notm}} serão cruciais para restaurar o sistema para seu estado de funcionamento se ocorrer uma falha. Para um backup de MV tradicional, há um ponto de aderência: cada nó principal do {{site.data.keyword.icpfull_notm}} executa um serviço *etcd* e a documentação do *etcd* estabelece claramente que não se deve usar o backup de MV tradicional para restaurá-lo.
 
 Para o {{site.data.keyword.cloud_notm}} Private no nível de plataforma, será necessário fazer backup dos componentes a seguir.
 - **etcd** - o etcd é usado para armazenar recursos do Kubernetes e informações de estado do Calico.
@@ -42,13 +43,13 @@ Os backups de uma implementação do CAM serão cruciais para restaurar o sistem
 -	**Maria Database** - usado pelo CAM Blueprint Designer.
 -	**Sistemas de arquivos NFS/Gluster** - os dados do CAM residem em quatro volumes persistentes.
 
-### Backup e DR para IKS
+### Backup e DR para o IBM Cloud Kubernetes Service
 
 O backup do banco de dados etcd é fornecido para o cliente como parte do serviço gerenciado, no entanto, quaisquer dados do aplicativo devem ser suportados pelo cliente.
 
 ## Escalabilidade
 
-### Escalabilidade do VCS
+### Escalabilidade do vCenter Server
 
 Após a implementação dos hosts iniciais, os usuários podem ampliar a capacidade de cálculo de dentro do portal do {{site.data.keyword.cloud_notm}} for VMware.
 
@@ -59,38 +60,40 @@ A ampliação do ambiente segue um destes caminhos:
 
 #### Implementações multisite
 
-O VMware on {{site.data.keyword.cloud_notm}} pode usar a presença mundial de data center do {{site.data.keyword.cloud_notm}} e o backbone de rede integrada para permitir que vários casos de uso de geografia cruzada sejam implementados e estejam funcionando dentro de uma fração do tempo que levaria para construir tal infraestrutura do zero. Informações adicionais podem ser localizadas em [Configuração multisite para instâncias do vCenter Server on {{site.data.keyword.cloud_notm}}](../../vcenter/vc_multisite.html).
+O VMware on {{site.data.keyword.cloud_notm}} pode usar a presença mundial de data center do {{site.data.keyword.cloud_notm}} e o backbone de rede integrada para permitir que vários casos de uso de geografia cruzada sejam implementados e estejam funcionando dentro de uma fração do tempo que levaria para construir tal infraestrutura do zero. Informações adicionais podem ser localizadas em
+[Configuração multisite para instâncias do
+vCenter Server on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/vcenter/vc_multisite.html).
 
 #### Ampliar com novo cluster
 
-Os usuários também podem ampliar a capacidade de cálculo criando um novo cluster de dentro do console por meio do pedido de hosts e os novos hosts são incluídos automaticamente no novo cluster. Essa opção cria um cluster separado no ambiente e fornece aos usuários a capacidade de segregar física e logicamente as cargas de trabalho de gerenciamento das cargas de trabalho do aplicativo, a capacidade de segregar cargas de trabalho com base em outras características (por exemplo, cluster de banco de dados Microsoft SQL) e a capacidade de implementar aplicativos em topologias altamente disponíveis. Para obter mais informações, veja [Pedindo instâncias do vCenter Server](../../vcenter/vc_orderinginstance.html).
+Os usuários também podem ampliar a capacidade de cálculo criando um novo cluster de dentro do console por meio do pedido de hosts e os novos hosts são incluídos automaticamente no novo cluster. Essa opção cria um cluster separado no ambiente e fornece aos usuários a capacidade de segregar física e logicamente as cargas de trabalho de gerenciamento das cargas de trabalho do aplicativo, a capacidade de segregar cargas de trabalho com base em outras características (por exemplo, cluster de banco de dados Microsoft SQL) e a capacidade de implementar aplicativos em topologias altamente disponíveis. Para obter mais informações, veja [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html).
 
 #### Escalar o cluster existente
 
-O usuário pode ampliar um cluster existente pedindo hosts de dentro do console e os novos hosts serão incluídos automaticamente no cluster. Para obter mais informações, veja [Expandindo e contraindo capacidade para instâncias do vCenter Server](../../vcenter/vc_addingremovingservers.html) para obter detalhes. Talvez seja necessário ajustar a política de reserva de HA para o cluster com base em seus requisitos de reserva.
+O usuário pode ampliar um cluster existente pedindo hosts de dentro do console e os novos hosts serão incluídos automaticamente no cluster. Para obter mais informações, veja [Expandindo e contraindo capacidade para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html) para obter detalhes. Talvez seja necessário ajustar a política de reserva de HA para o cluster com base em seus requisitos de reserva.
 
-### Escalabilidade do ICP e do IKS
+### Escalabilidade do IBM Cloud Private e do IBM Cloud Kubernetes Service
 
 Com base na capacidade de cálculo disponível no local ou em locais da nuvem, os usuários podem ampliar a arquitetura do nó por meio do nó de inicialização implementado inicialmente. Para ampliar o ambiente:
--	Expanda os nós do trabalhador do ICP.
--	Expanda e use a oferta IKS.
+-	Expanda os nós do trabalhador do  {{site.data.keyword.icpfull_notm}} .
+-	Expanda e use a oferta  {{site.data.keyword.containerlong_notm}} .
 
-#### Expansão do ICP
+#### expansão do IBM Cloud Private
 
-Os nós da máquina virtual do trabalhador do ICP são escalados para expandir o cálculo e o aplicativo:
-- O cliente provisiona uma nova máquina virtual no mesmo VXLAN em que o ICP é implementado.
+Os nós de máquina virtual do trabalhador do {{site.data.keyword.icpfull_notm}} são escalados para expandir o cálculo e o aplicativo:
+- O cliente provisiona uma nova máquina virtual na mesma VXLAN em que o {{site.data.keyword.icpfull_notm}} é implementado.
 - Os clientes podem escalar os nós de trabalhadores, provisionando novas máquinas virtuais, em seguida, efetuando login no nó de inicialização e executando um comando para trazer os novos nós para o cluster. Veja [Incluindo ou removendo nós do cluster](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/installing/modify_cluster.html) para obter detalhes adicionais.
-- Use o CAM para automatizar o fornecimento da VM e executar os comandos para incluí-lo no Cluster do ICP.
+- Use o CAM para automatizar o fornecimento da MV e executar os comandos para incluí-la no Cluster do {{site.data.keyword.icpfull_notm}}.
 
-#### Expansão IKS
+#### expansão do IBM Cloud Kubernetes Service
 
-Os usuários podem provisionar um ambiente do IKS usando o {{site.data.keyword.cloud_notm}} Portal para ampliar e usar um ambiente de contêiner. Para obter mais informações, veja [Aprimoramentos híbridos no {{site.data.keyword.cloud_notm}} Private e no {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/community/blogs/5092bd93-e659-4f89-8de2-a7ac980487f0/entry/Hybrid_Enhancements_Across_IBM_Cloud_Private_and_IBM_Public_Cloud?lang=en_us).
+Os usuários podem provisionar um ambiente do {{site.data.keyword.containerlong_notm}} usando o Portal do {{site.data.keyword.cloud_notm}} para ampliar e usar um ambiente de contêiner. Para obter mais informações, veja [Aprimoramentos híbridos no {{site.data.keyword.cloud_notm}} Private e no {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/community/blogs/5092bd93-e659-4f89-8de2-a7ac980487f0/entry/Hybrid_Enhancements_Across_IBM_Cloud_Private_and_IBM_Public_Cloud?lang=en_us).
 
-As implementações do aplicativo no IKS são possíveis usando os métodos a seguir:
--	A conexão e os serviços do IKS são desenvolvidos no CAM e publicados no catálogo do ICP.
--	Multi Cloud Manager, um aprimoramento futuro para gerenciar instâncias do IKS.
+As implementações do aplicativo no {{site.data.keyword.containerlong_notm}} são possíveis usando os métodos a seguir:
+-	A conexão e os serviços do {{site.data.keyword.containerlong_notm}} são desenvolvidos no CAM e publicados no catálogo do {{site.data.keyword.icpfull_notm}}.
+-	Multi Cloud Manager, um aprimoramento futuro para gerenciar as instâncias do {{site.data.keyword.containerlong_notm}}.
 -	Linha de comandos do Helm.
 
 ### Links relacionados
 
-* [Visão geral do VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -85,6 +85,6 @@ SDDC Manager가 자신이 관리하는 컴포넌트에 대한 호스트 이름�
 
 ### 관련 링크
 
-* [실제 인프라 디자인](design_physicalinfrastructure.html)
-* [가상 인프라 디자인](design_virtualinfrastructure.html)
-* [인프라 관리 디자인](design_infrastructuremgmt.html)
+* [실제 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [가상 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [인프라 관리 디자인](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)

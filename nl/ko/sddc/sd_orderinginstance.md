@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-10"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2019-01-10"
 
 # Cloud Foundation 인스턴스 주문
 
-표준 컴퓨팅, 스토리지 및 네트워크구성으로 통합된 소프트웨어 정의 데이터 센터(SDDC) 플랫폼을 배치하려면 VMware Cloud Foundation 인스턴스를 주문하십시오. 초기 주문 중에는 재해 복구를 위한 [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html)와 같은 서비스를 추가할 수도 있습니다.
+표준 컴퓨팅, 스토리지 및 네트워크구성으로 통합된 소프트웨어 정의 데이터 센터(SDDC) 플랫폼을 배치하려면 VMware Cloud Foundation 인스턴스를 주문하십시오. 초기 주문 중에는 재해 복구를 위한 [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html)와 같은 서비스를 추가할 수도 있습니다.
 
 ## 요구사항
 
 다음 태스크를 완료했는지 확인하십시오.
-*  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](../vmonic/useraccount.html)를 참조하십시오.
-*  [Cloud Foundation 인스턴스에 대한 요구사항 및 계획](sd_planning.html)의 요구사항 및 고려사항을 검토했습니다.
+*  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](/docs/services/vmwaresolutions/vmonic/useraccount.html)를 참조하십시오.
+*  [Cloud Foundation 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/sddc/sd_planning.html)의 요구사항 및 고려사항을 검토했습니다.
 
 인스턴스 주문 또는 배치 중에 설정되는 값은 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다. 또한 인스턴스가 배치된 후 인스턴스 이름, 루트 도메인 이름, 하위 도메인 레이블 또는 호스트 이름 접두부를 변경하지 마십시오.
 {:important}
@@ -33,7 +33,7 @@ Cloud Foundation 인스턴스를 주문할 때는 다음 시스템 설정을 지
 
 인스턴스 이름은 다음 요구사항을 충족해야 합니다.
 * 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 인스턴스 이름은 영숫자 문자로 시작하고 끝나야 합니다.
+* 인스턴스 이름은 영문자로 시작하고 영숫자로 끝나야 합니다. 
 * 인스턴스 이름의 최대 길이는 10자입니다.
 * 인스턴스 이름은 계정 내에서 고유해야 합니다.
 
@@ -118,7 +118,7 @@ Cloud Foundation 인스턴스를 주문할 때는 다음 네트워크 인터페�
 
 하위 도메인 레이블은 다음 요구사항을 충족해야 합니다.
 *  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-*  하위 도메인 레이블은 영숫자 문자로 시작하고 끝나야 합니다.
+*  하위 도메인 레이블은 영문자로 시작하고 영숫자로 끝나야 합니다. 
 *  하위 도메인 레이블의 최대 길이는 10자입니다.
 *  하위 도메인 레이블은 계정 내에서 고유해야 합니다.
 
@@ -150,7 +150,7 @@ Cloud Foundation 인스턴스를 주문할 때는 다음 네트워크 인터페�
   |SSO(Single Sign-On) 사이트 이름 | `<subdomain_label>`
   |PSC FQDN |`PSC-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |  
 
-  SDDC Manager FQDN은 공개적으로 분석될 수 없습니다. 그렇지 않으면, Cloud Foundation 인스턴스 구성은 실패할 수 있고 복구할 수 없습니다. 도메인 이름을 지정하기 전에 [루트 도메인 이름 선택 시 고려사항](../vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances)을 검토하십시오.
+  SDDC Manager FQDN은 공개적으로 분석될 수 없습니다. 그렇지 않으면, Cloud Foundation 인스턴스 구성은 실패할 수 있고 복구할 수 없습니다. 도메인 이름을 지정하기 전에 [루트 도메인 이름 선택 시 고려사항](/docs/services/vmwaresolutions/vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances)을 검토하십시오.
 
 ### VLAN
 
@@ -178,7 +178,7 @@ Cloud Foundation 인스턴스를 주문할 때는 다음 네트워크 인터페�
 
 ## Services
 
-Cloud Foundation 인스턴스를 주문하는 경우 추가 기능 서비스도 주문할 수 있습니다. 사용 가능한 서비스에 대한 자세한 정보는 [Cloud Foundation 인스턴스에 대한 서비스](sd_planning.html#services-for-cloud-foundation-instances)를 참조하십시오.
+Cloud Foundation 인스턴스를 주문하는 경우 추가 기능 서비스도 주문할 수 있습니다. 사용 가능한 서비스에 대한 자세한 정보는 [Cloud Foundation 인스턴스에 대한 서비스](/docs/services/vmwaresolutions/sddc/sd_planning.html#services-for-cloud-foundation-instances)를 참조하십시오.
 
 ## 주문 요약
 
@@ -223,7 +223,7 @@ Cloud Foundation 인스턴스를 주문하는 경우 추가 기능 서비스도 
 
 인스턴스의 배치가 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 배치의 상태를 확인할 수 있습니다.
 
-인스턴스가 성공적으로 배치된 경우에는 [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **SDDC-Cluster**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
+인스턴스가 성공적으로 배치된 경우에는 [Cloud Foundation 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **SDDC-Cluster**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
 
 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
@@ -247,10 +247,10 @@ Cloud Foundation 인스턴스를 주문하는 경우 추가 기능 서비스도 
 
 ### 관련 링크
 
-* [{{site.data.keyword.cloud_notm}} 계정 등록](../vmonic/signing_softlayer_account.html)
-* [Cloud Foundation 인스턴스 보기](sd_viewinginstances.html)
-* [Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제](sd_addingviewingclusters.html)
-* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](sd_addingremovingservers.html)
-* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](sd_addingremovingservices.html)
-* [Cloud Foundation 인스턴스 삭제](sd_deletinginstance.html)
-* [BYOL에 대한 FAQ](../vmonic/faq_byol.html)
+* [{{site.data.keyword.cloud_notm}} 계정 등록](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [Cloud Foundation 인스턴스 보기](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
+* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Cloud Foundation 인스턴스 삭제](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [BYOL에 대한 FAQ](/docs/services/vmwaresolutions/vmonic/faq_byol.html)

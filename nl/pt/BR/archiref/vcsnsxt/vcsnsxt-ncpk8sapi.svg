@@ -68,13 +68,13 @@
    <path d="m303 122 0.24-19.5" fill="none" stroke="#808080" stroke-dasharray="6 6" stroke-miterlimit="10" stroke-width="2"/>
   </g>
   <g font-family="Helvetica" font-size="11px">
-   <text x="230.5" y="92.5">Adaptador</text>
-   <text x="230.5" y="105.5">K8s</text>
+   <text x="230.5" y="92.5">K8s</text>
+   <text x="230.5" y="105.5">Adaptador</text>
   </g>
   <g font-family="Helvetica" font-size="11px">
-   <text x="325.5" y="53">Biblioteca/</text>
-   <text x="325.5" y="66">fluxos de trabalho</text>
-   <text x="325.5" y="79">do NSX</text>
+   <text x="325.5" y="53">NSX</text>
+   <text x="325.5" y="66">workflows</text>
+   <text x="325.5" y="79">/library</text>
   </g>
   <g pointer-events="none">
    <g stroke="#0070c0" stroke-miterlimit="10" stroke-width="2">
@@ -87,8 +87,8 @@
   </g>
   <g font-family="Helvetica" font-size="12px" text-anchor="end">
    <rect x="1" y="8" width="63" height="29" fill="#fff" stroke-width="0"/>
-   <text x="61.83" y="10.58">Servidor de API</text>
-   <text x="61.83" y="24.58">do Kubernetes</text>
+   <text x="61.83" y="10.58">Kubernetes</text>
+   <text x="61.83" y="24.58">Servidor de API</text>
   </g>
   <rect transform="translate(2,3)" x="56" y="106" width="20" height="20" rx="1" ry="1" opacity=".25" stroke="#000"/>
   <g pointer-events="none">

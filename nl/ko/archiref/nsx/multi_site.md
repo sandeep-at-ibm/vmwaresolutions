@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -36,4 +36,4 @@ lastupdated: "2018-11-13"
 
 ### 관련 링크
 
-* [{{site.data.keyword.cloud_notm}}의 네트워킹 서비스](networking_services.html)
+* [{{site.data.keyword.cloud_notm}}의 네트워킹 서비스](/docs/services/vmwaresolutions/archiref/nsx/networking_services.html)

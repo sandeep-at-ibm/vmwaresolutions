@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -50,8 +50,8 @@ VMware Federal 인스턴스를 삭제하는 경우 다음 컴포넌트가 순차
 
 ### 관련 링크
 
-* [VMware Federal on {{site.data.keyword.cloud_notm}} 개요](vc_fed_overview.html)
-* [VMware Federal 인스턴스 주문](vc_fed_orderinginstance.html)
-* [VMware Federal 인스턴스 보호](vc_fed_securinginstance.html)
-* [VMware Federal 인스턴스 보기](vc_fed_viewinginstance.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
+* [VMware Federal 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [VMware Federal 인스턴스 보호](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [VMware Federal 인스턴스 보기](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

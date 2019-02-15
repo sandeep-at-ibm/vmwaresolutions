@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-16"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -30,7 +30,7 @@ NFS 스토리지 공유를 기존 NFS 또는 vSAN vCenter Server 클러스터에
 * vSAN 스토리지가 포함된 vCenter Server 인스턴스에는 최소 네 개의 ESXi 서버가 있어야 합니다.
 * V2.0 이전에 배치된 vCenter Server 인스턴스의 경우, 최대 32개의 ESXi 서버를 보유하도록 각 클러스터를 확장할 수 있습니다. 한 번에 추가할 수 있는 {{site.data.keyword.baremetal_short}}의 수는 다음과 같습니다.
    * **소형**, **중형** 및 **대형** 구성의 경우, 한 번에 1 - 10개의 ESXi 서버를 추가할 수 있습니다.
-   * **Skylake** 및 **Broadwell** 구성의 경우, 한 번에 1 - 20개의 ESXi 서버를 추가할 수 있습니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
+   * **Skylake** 및 **Broadwell** 구성의 경우, 한 번에 1 - 20개의 ESXi 서버를 추가할 수 있습니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
 
 ### ESXi 서버를 추가하는 프로시저
 
@@ -78,8 +78,7 @@ NFS 스토리지 공유를 기존 NFS 또는 vSAN vCenter Server 클러스터에
 
 ### NFS 스토리지를 추가하기 전에
 
-* VMware vSphere Web Client에서 NFS 스토리지를 추가하지 마십시오. vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다. IBM은 인스턴스에 수동으로 추가하는 NFS 파일 공유를 관리하지 않습니다. 
-* 기존 vCenter Server 클러스터는 이미 NFS 스토리지 옵션을 보유하고 있으며 **사용할 준비가 됨** 상태여야 합니다. 
+VMware vSphere Web Client에서 NFS 스토리지를 추가하지 마십시오. vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다. IBM은 인스턴스에 수동으로 추가하는 NFS 파일 공유를 관리하지 않습니다.
 
 ### NFS 스토리지를 추가하는 프로시저
 
@@ -104,8 +103,9 @@ NFS 스토리지 공유를 기존 NFS 또는 vSAN vCenter Server 클러스터에
 ### NFS 스토리지를 제거하기 전에
 
 * VMware vSphere Web Client에서 NFS 스토리지를 제거하지 마십시오. vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다.
-* 기존 vCenter Server 클러스터는 클러스터에 남아 있는 최소 하나의 NFS 파일 공유를 보유해야 합니다. 
-* 클러스터는 **사용할 준비가 됨** 상태여야 합니다. 
+* NFS 스토리지를 제거하기 전에 해당 스토리지에 상주하는 모든 VM이 제거되었는지 확인하십시오. 
+* 제거할 공유가 올바른 vCenter Server 인스턴스와 연관되었는지 확인하십시오. 
+* 클러스터는 **사용할 준비가 됨** 상태여야 합니다.
 
 ### NFS 스토리지를 제거하는 프로시저
 
@@ -114,7 +114,7 @@ NFS 스토리지 공유를 기존 NFS 또는 vSAN vCenter Server 클러스터에
 3. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오.
 4. **클러스터** 테이블에서 NFS 스토리지를 제거할 클러스터를 클릭하십시오.
 5. **스토리지** 섹션에서 제거할 스토리지 공유를 선택한 후 **삭제**를 클릭하십시오.
-6. **스토리지 제거** 창에서 **제거**를 클릭하십시오. 
+6. **스토리지 제거** 창에서 **제거**를 클릭하십시오.
 
 ### NFS 스토리지를 제거한 후의 결과
 
@@ -128,9 +128,9 @@ NFS 스토리지 공유를 기존 NFS 또는 vSAN vCenter Server 클러스터에
 
 ### 관련 링크
 
-* [vCenter Server 명세서](vc_bom.html)
-* [vCenter Server 인스턴스에 대한 요구사항 및 계획](vc_planning.html)
-* [vCenter Server 인스턴스 주문](vc_orderinginstance.html)
-* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](vc_addingviewingclusters.html)
+* [vCenter Server 명세서](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [vCenter Server 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
 * [Place a host in maintenance mode](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

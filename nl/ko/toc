@@ -256,6 +256,7 @@ IBM Cloud for VMware Solutions
         vmonic/trbl_mixed_multisite.md
         vmonic/movinginstances.md
         vmonic/getting-started.md
+        vmonic/trbl_fix_spectre.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

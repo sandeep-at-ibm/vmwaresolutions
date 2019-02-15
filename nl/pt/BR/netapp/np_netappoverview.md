@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -35,7 +35,7 @@ Essa camada fornece a infraestrutura física (recursos de cálculo, rede e armaz
 Essa camada virtualiza a infraestrutura física por meio dos produtos VMware a seguir e do produto NetApp ONTAP Select:
 * O VMware vSphere virtualizará os recursos de cálculo físico
 * VMware NSX é a plataforma de virtualização de rede que fornece componentes de rede lógica e redes virtuais.
-* O NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} implementa um cluster do ONTAP Select, que consiste em quatro VMs para os quatro hosts.
+* O NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} implementa um cluster do ONTAP Select, que consiste em quatro MVs para os quatro hosts.
 
 O gráfico a seguir ilustra os componentes da implementação do NetApp ONTAP Select.
 
@@ -47,13 +47,11 @@ Figura 2. Componentes do NetApp ONTAP Select
 
 A camada de gerenciamento de virtualização consiste nos seguintes componentes:
 
-* Dispositivo virtual vCenter Server
+* vCenter Server Appliance (vCSA) com o Platform Services Controller (PSC) integrado
 * Gerenciador NSX
 * Dois NSX Edge Services Gateways (ESGs)
 * Três NSX Controllers
-* Dispositivo virtual Platform Services Controller (PSC)
-* vCenter Server Appliance (vCSA)
-* Instância de servidor virtual (VSI) do IBM CloudDriver.
+* Instância do servidor virtual do IBM CloudDriver (VSI)
 
 O NetApp ONTAP Select é executado em um cluster VMware e virtualiza o armazenamento local nos hosts. O NetApp ONTAP Select é implementado no modelo dedicado, em que outras cargas de trabalho não são esperadas compartilhar o cluster com ele. Como resultado, a configuração de hardware do NetApp ONTAP Select na oferta do {{site.data.keyword.cloud_notm}} é dimensionada apenas com base nos requisitos do NetApp ONTAP Select.
 
@@ -69,7 +67,7 @@ A disponibilidade e a precificação de configurações padronizadas podem varia
 * Escolha entre **Alto desempenho (Médio)**, **Alto desempenho (Grande)** e **Alta capacidade**
 * RAID 5 com hot spare
 * Duas unidades SATA 1 TB ESXi OS – RAID 1
-* Armazenamento de dados de gerenciamento – 500 GB para VMs de gerenciamento
+* Armazenamento de dados de gerenciamento – 500 GB para MVs de gerenciamento
 
 ### Configurações predefinidas
 
@@ -121,11 +119,11 @@ Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} 
 
 ## Considerações de firewall
 
-Caso esteja usando firewalls, deve-se configurar regras para todas as comunicações por meio da instância de servidor virtual (VSI) do {{site.data.keyword.IBM}} CloudDriver e das máquinas virtuais (VMs) do SDDC Manager. Essas regras devem permitir que todos os protocolos se comuniquem nos endereços IP `10.0.0.0/8` e `161.26.0.0/16`. Exemplos desses firewalls são os NSX Distributed Firewalls (DFW) ou os firewalls Vyatta.
+Caso esteja usando firewalls, deve-se configurar regras para todas as comunicações por meio da instância de servidor virtual (VSI) do {{site.data.keyword.IBM}} CloudDriver e das máquinas virtuais (MVs) do SDDC Manager. Essas regras devem permitir que todos os protocolos se comuniquem nos endereços IP `10.0.0.0/8` e `161.26.0.0/16`. Exemplos desses firewalls são os NSX Distributed Firewalls (DFW) ou os firewalls Vyatta.
 
 ### Links relacionados
 
-* [Planejando instâncias do NetApp ONTAP Select](np_planning.html)
-* [Pedindo instâncias do NetApp ONTAP Select](np_orderinginstances.html)
-* [Visão geral do vCenter Server](../vcenter/vc_vcenterserveroverview.html)
+* [Planejando instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_planning.html#requirements-and-planning-for-netapp-ontap-select-instances)
+* [Pedindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
 * [Centro de Documentação do NetApp ONTAP](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){:new_window}

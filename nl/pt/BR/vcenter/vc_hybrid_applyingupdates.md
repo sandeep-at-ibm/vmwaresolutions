@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,7 +18,7 @@ O processo de aplicação de correções e atualizações a instâncias do vCent
 
 ## Antes de iniciar
 
-Iniciando com a V2.5, as atualizações do IBM CloudDriver não são mais listadas porque as atualizações automáticas estão ativadas. Ações como a inclusão de um host, a inclusão de um cluster e a solicitação de um serviço atualizam automaticamente a instância para a versão mais recente. Para obter mais informações sobre atualizações automáticas, consulte a seção *Resiliência do IBM CloudDriver* em Notas sobre a liberação do [ para a V2.5](../vmonic/relnotes_v25.html).
+Iniciando com a V2.5, as atualizações do IBM CloudDriver não são mais listadas porque as atualizações automáticas estão ativadas. Ações como a inclusão de um host, a inclusão de um cluster e a solicitação de um serviço atualizam automaticamente a instância para a versão mais recente. Para obter mais informações sobre atualizações automáticas, consulte a seção *Resiliência do IBM CloudDriver* em Notas sobre a liberação do [ para a V2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
 {:note}
 
 Antes de tentar aplicar uma atualização, expanda a entrada de atualização clicando na seta para baixo e verifique as informações a seguir:
@@ -86,10 +86,10 @@ Tabela 1. Atualize os níveis e o impacto
 <dd class="dd">O status da tarefa de atualização não pode ser obtido. Entre em contato com o Suporte IBM para obter assistência.</dd>
 </dl>
 
-4. Se o processo de atualização falhar em uma etapa específica, [entre em contato com o Suporte IBM](../vmonic/trbl_support.html) para obter assistência. Você será avisado sobre como resolver o problema e orientado a tentar o upgrade novamente a partir da etapa que falhou.
+4. Se o processo de atualização falhar em uma etapa específica, [entre em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) para obter assistência. Você será avisado sobre como resolver o problema e orientado a tentar o upgrade novamente a partir da etapa que falhou.
 
 ### Links relacionados
 
-* [vCenter Server com visão Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
-* [Perguntas Mais Frequentes](../vmonic/faq.html)
+* [VCenter Server with Hybridity Bundle Visão Geral](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Perguntas Mais Frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)

@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-24"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Solicitando on IBM Cloud
 
@@ -28,27 +32,27 @@ lastupdated: "2018-09-25"
 
 Quando você pedir o serviço, forneça as configurações a seguir.
 
-### Número de VMs para licença
+### Número de MVs para licença
 
-É necessário um mínimo de 10 VMs para gerenciamento de licença.
+Pelo menos 10 MVs são necessárias para gerenciamento de licença.
 
 ### Tamanho do Armazenamento
 
-A capacidade que atenda às suas necessidades de armazenamento. Para obter considerações ao estimar o tamanho do armazenamento, veja [Estimando a capacidade do repositório](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
+A capacidade que atenda às suas necessidades de armazenamento. Para obter considerações sobre estimativa do tamanho do armazenamento, veja [Estimando a capacidade do repositório](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
 
 ### Desempenho de Armazenamento
 
-As IOPS (Input/output Operations Per Second) por GB com base em seus requisitos de carga de trabalho.
+Os IOPS (input/output operations per second) por GB com base em seus requisitos de carga de trabalho.
 
 ### Links relacionados
 
-* [Veeam no {{site.data.keyword.cloud_notm}} visão geral](veeam_considerations.html)
-* [Gerenciando o Veeam no {{site.data.keyword.cloud_notm}}](managingveeam.html)
-* [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](../sddc/sd_addingremovingservices.html)
-* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](../vcenter/vc_addingremovingservices.html)
-* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Solicitando serviços gerenciados para o Veeam no {{site.data.keyword.cloud_notm}}](managing_veeam_services.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
-* [Perguntas mais frequentes](../vmonic/faq.html)
+* [Veeam no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [Gerenciando o Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingveeam.html)
+* [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Solicitando serviços gerenciados para o Veeam no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_veeam_services.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Website do Veeam](https://www.veeam.com/){:new_window}
 * [Centro de Ajuda do Veeam](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}

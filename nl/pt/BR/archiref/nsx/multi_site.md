@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -26,7 +26,7 @@ O exemplo a seguir inclui uma zona de transporte universal do NSX nas topologias
 
 * A zona de transporte universal abrange dois {{site.data.keyword.CloudDataCents_notm}} ou PODs dentro de um {{site.data.keyword.CloudDataCent_notm}}.
 * Após a zona de transporte ser incluída, múltiplas VXLANs são incluídas com um Universal Distributed Router que abrange as novas VXLANs.
-* Deve-se configurar uplinks para os ESGs de carga de trabalho em ambos os sites. Essa configuração permite que máquinas virtuais (VMs) no site local atravessem seu ESG local.
+* Deve-se configurar uplinks para os ESGs de carga de trabalho em ambos os sites. Essa configuração permite que máquinas virtuais (MVs) no site local atravessem seu ESG local.
 * Para o tráfego de entrada, é necessário um balanceador de carga global. Veja as ofertas de balanceamento de carga global do {{site.data.keyword.cloud_notm}} para atender a esse requisito.
 * Este exemplo requer edição do VMware NSX Enterprise.
 
@@ -36,4 +36,4 @@ Figura 1. Topologia de vários sites
 
 ### Links relacionados
 
-* [ Serviços de rede no  {{site.data.keyword.cloud_notm}} ](networking_services.html)
+* [ Serviços de rede no  {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/archiref/nsx/networking_services.html)

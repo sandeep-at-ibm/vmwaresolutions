@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-08"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2019-01-08"
 ## VMware Federal 인스턴스에 클러스터 추가
 
 인스턴스에 추가할 수 있는 클러스터의 수는 인스턴스 버전에 따라 달라집니다.
-* V2.5 이상에 배치된(또는 업그레이드된) 인스턴스의 경우에는 클러스터, 호스트 및 VM 수가 추가할 수 있는 클러스터 수의 최대 제한을 결정합니다. 배치를 위해 VMware 크기 조정 가이드라인 및 제한사항을 계속 준수해야 합니다. 
+* V2.5 이상에 배치된(또는 업그레이드된) 인스턴스의 경우에는 클러스터, 호스트 및 VM 수가 추가할 수 있는 클러스터 수의 최대 제한을 결정합니다. 배치를 위해 VMware 크기 조정 가이드라인 및 제한사항을 계속 준수해야 합니다.
 * V2.2 이상에 배치된(또는 업그레이드된) 인스턴스의 경우에는 최대 10개의 클러스터를 추가할 수 있습니다.
 
 최대 제한에 대한 자세한 정보는 [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}를 참조하십시오.
@@ -262,5 +262,5 @@ V2.3 이상으로 배치된 VMware Federal 인스턴스의 경우, 클러스터�
 
 ### 관련 링크
 
-* [VMware Federal 인스턴스 보기](vc_fed_viewinginstance.html)
-* [VMware Federal 인스턴스에 대한 용량 확장 및 축소](vc_fed_addingremovingservers.html)
+* [VMware Federal 인스턴스 보기](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [VMware Federal 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)

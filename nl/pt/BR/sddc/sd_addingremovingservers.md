@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -48,7 +48,7 @@ Uma instância do Cloud Foundation pode ter até cinco clusters, um dos quais é
 
 * Não remova servidores ESXi do Web client do VMware vSphere. As mudanças que você faz no VMware vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}.
 * A plataforma base que você pediu tem 4 servidores ESXi por padrão. É possível remover os servidores ESXi que você incluiu. Não é possível remover os servidores ESXi padrão.
-* Antes de remover os servidores ESXi com os serviços F5 on {{site.data.keyword.cloud_notm}} ou FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalados, deve-se migrar as VMs F5 BIG-IP e FortiGate para um servidor ESXi diferente daquele que está hospedando as VMs.
+* Antes de remover os servidores ESXi com os serviços F5 on {{site.data.keyword.cloud_notm}} ou FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalados, deve-se migrar as MVs F5 BIG-IP e FortiGate para um servidor ESXi diferente daquele que está hospedando as MVs.
 * Antes de remover servidores ESXi com o serviço IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} instalado, assegure-se de que não haja operações de backup ou de restauração ativas. Operações ativas, sejam com falha ou em andamento, podem evitar a remoção dos servidores ESXi.
 
 ## Procedimento para remover servidores ESXi
@@ -70,8 +70,8 @@ Uma instância do Cloud Foundation pode ter até cinco clusters, um dos quais é
 
 ### Links relacionados
 
-* [Lista de materiais do Cloud Foundation](sd_bom.html)
-* [Requisitos e planejamento para instâncias do Cloud Foundation](sd_planning.html)
-* [Incluindo, visualizando e excluindo clusters para instâncias do Cloud Foundation](sd_addingviewingclusters.html)
+* [Lista de materiais do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [Requisitos e planejamento para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Incluindo, visualizando e excluindo clusters para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
 * [Colocar um host no modo de manutenção](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Suporte ao processador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

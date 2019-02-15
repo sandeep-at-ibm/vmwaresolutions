@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,8 @@ lastupdated: "2018-12-11"
 * vCenter Server 인스턴스의 경우, 최대 51개의 ESXi 서버를 보유하도록 기본 클러스터를 확장할 수 있습니다. 기본이 아닌 각 클러스터는 최대 59개의 ESXi 서버를 보유하도록 확장할 수 있습니다. 최대 10개의 클러스터를 인스턴스에 추가할 수 있으므로 모든 클러스터의 각 배치된 인스턴스에는 최대 51 + 9x59 = 582개의 ESXi 서버가 있을 수 있습니다.
 * Cloud Foundation 인스턴스의 경우, 표준 구성에 네 개의 ESXi 서버가 있습니다. 최대 28개의 서버를(총 32개의 서버에) 추가할 수 있습니다. 다중 사이트 구성에 있는 Cloud Foundation 인스턴스의 경우, 모든 인스턴스에 최대 128개의 ESXi 서버를 보유할 수 있습니다.
 
-  Cloud Foundation 구성에서 128개를 초과하는 ESXi 서버가 포함된 다중 사이트 배치가 필요한 경우 [IBM 지원 센터에 문의](trbl_support.html)하여 도움을 받으십시오.{:note}
+  Cloud Foundation 구성에서 128개를 초과하는 ESXi 서버가 포함된 다중 사이트 배치가 필요한 경우 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)하여 도움을 받으십시오.
+  {:note}
 
 ## 몇 개의 ESXi 서버를 클러스터에 추가할 수 있습니까?
 
@@ -65,8 +66,8 @@ vMotion에 대한 정적 라우트 추가는 지원되지 않습니다. vMotion 
 
 ### 관련 링크
 
-* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](../vcenter/vc_addingremovingservers.html)
-* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](../sddc/sd_addingremovingservers.html)
-* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](../vcenter/vc_addingviewingclusters.html)
-* [Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제](../sddc/sd_addingviewingclusters.html)
-* [IBM 지원 센터에 문의](trbl_support.html)
+* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

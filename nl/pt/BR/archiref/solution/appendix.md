@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -65,6 +65,6 @@ Tabela 2. Gráfico de comparação de edição do VMware vSAN
 
 ### Links relacionados
 
-* [ Visão geral da solução ](solution_overview.html)
-* [ Visão geral do design ](design_overview.html)
-* [ Fazendo backup de componentes ](solution_backingup.html)
+* [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Visão geral do design](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

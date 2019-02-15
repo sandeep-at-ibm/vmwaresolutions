@@ -4,13 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-10"
+lastupdated: "2019-01-23"
 
 ---
 
 # 유스 케이스
 
 ## IBM Cloud로 워크로드 마이그레이션
+
 Acme Skateboards는 온프레미스 VMware SDDC를 {{site.data.keyword.cloud}} 인스턴스의 VMware vCenter Server로 원활하게 확장하려고 합니다. 가동 중단 시간을 최소한으로 유지하며 비즈니스를 계속 운영해야 합니다. 클라우드에서 실행하도록 애플리케이션을 다시 구성하는 것은 적절한 솔루션이 아닙니다.
 
 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle을 사용하면
@@ -59,4 +60,4 @@ Acme Skateboards는 애플리케이션 현대화에 대한 과정을 위해 vCen
 
 ### 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

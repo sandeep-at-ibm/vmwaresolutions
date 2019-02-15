@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-22"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -20,8 +20,8 @@ vSAN은 VUM에 사용할 시스템 기준선 및 기준선 그룹을 생성합�
 vSAN 클러스터 업그레이드는 다음과 같은 태스크 순서로 진행됩니다.
 * **vSAN 온라인 상태 워크플로우 사용** – 이 워크플로우는 업데이트가 검토되고 수정될 수 있도록 VUM에서 vSAN 기준선을 사용으로 설정합니다. 이 워크플로우는 처음에 VUM에서 vSAN을 사용하도록 설정하기 위해서만 수행되어야 합니다.
 * **전제조건** – 전제조건, 프로세스 및 제한사항을 이해합니다.
-* **vCenter Server 어플라이언스 업그레이드** - 자세한 정보는 [VCSA 업데이트 및 SSO 링크된 vCenter](vum-updating-vcsa.html)를 참조하십시오.
-* **vSphere ESXi 호스트 업그레이드** – 자세한 정보는 [기준선 작성 및 인벤토리 오브젝트에 연결](vum-baselines.html)을 참조하십시오.
+* **vCenter Server 어플라이언스 업그레이드** - 자세한 정보는 [VCSA 업데이트 및 SSO 링크된 vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html)를 참조하십시오.
+* **vSphere ESXi 호스트 업그레이드** – 자세한 정보는 [기준선 작성 및 인벤토리 오브젝트에 연결](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html)을 참조하십시오.
 * **vSAN 디스크 형식 업그레이드** - vSAN 디스크 형식 업그레이드를 참조하십시오. 디스크 형식 업그레이드는 선택사항이지만 최상의 결과를 얻으려면 최신 버전을 사용하도록 오브젝트를 업그레이드하십시오. 온디스크 형식은 사용자 환경을 vSAN의 전체 기능 세트에 노출합니다.
 
 ## vSAN 온라인 상태 워크플로우 사용
@@ -30,7 +30,7 @@ vSAN 클러스터 업그레이드는 다음과 같은 태스크 순서로 진행
 * **vSAN 버전 권장사항** - VMware 호환성 안내서, vSAN 릴리스 카탈로그 및 기본 하드웨어 구성 인식의 정보를 사용하여 자동으로 생성됩니다. 또한 권장 릴리스에 필요한 드라이버 및 패치 업데이트를 시스템 기준선에 포함시킵니다.
 * **vSAN 빌드 권장사항** - 클러스터가 현재 하드웨어 호환성 상태 또는 더 개선된 상태를 유지하도록 보장합니다.
 
-vCenter 6.5 패치 2 이상 버전은 일부 프록시 사용 문제를 수정하므로 계속하기 전에 VCSA가 이 버전인지 확인하십시오. 자세한 정보는 [VCSA 업데이트 및 SSO 링크된 vCenter](vum-updating-vcsa.html)를 참조하십시오.
+vCenter 6.5 패치 2 이상 버전은 일부 프록시 사용 문제를 수정하므로 계속하기 전에 VCSA가 이 버전인지 확인하십시오. 자세한 정보는 [VCSA 업데이트 및 SSO 링크된 vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html)를 참조하십시오.
 
 VUM에서 해당 vSAN 업데이트를 보기 위해 vSAN 온라인 상태 워크플로우가 이어집니다. 따라서 vSAN 온라인 상태를 사이트 `vcsa.vmware.com` 및 `vmware.com`에 연결하여 필요한 vSAN 온라인 상태 워크플로우를 사용으로 설정할 수 있도록 이러한 온라인 상태 검사를 수행해야 합니다.
 * 프록시를 사용하도록 VCSA 구성
@@ -68,7 +68,7 @@ HTTPS 매개변수가 설정되지 않은 경우 다음 명령을 사용하십�
 4. **온라인 상태를 사용하여 다시 테스트**를 클릭하여 첫 번째 업로드를 시작하고 최근 태스크 분할창에서 상태를 검토하여 프로세스가 완료될 때까지 기다리십시오. 테스트 이름이 온라인 상태(마지막 검사: 방금)로 변경됩니다.
 5. 완료되면 상태 창에서 vSAN 빌드 권장사항으로 스크롤하여 펼치고 **vSAN 빌드 권장사항 엔진 상태**를 클릭하십시오.
 6. **my.vmware.com에 로그인**을 클릭하고 인증 정보를 입력하십시오. 프로세스가 완료되면 **테스트 결과**가 **패스됨** 상태로 변경됩니다.
-7. **Update Manager 탭**을 누르면 vSAN 클러스터가 기준선에 추가됩니다. 
+7. **Update Manager 탭**을 누르면 vSAN 클러스터가 기준선에 추가됩니다.
 
 ## 전제조건
 
@@ -94,11 +94,11 @@ vSAN 업그레이드 프로세스를 시작하기 전에 다음 요구사항이 
 
 ## vCenter Server 어플라이언스 업그레이드
 
-자세한 정보는 [VCSA 업데이트 및 SSO 링크된 vCenter](vum-updating-vcsa.html)를 참조하십시오.
+자세한 정보는 [VCSA 업데이트 및 SSO 링크된 vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html)를 참조하십시오.
 
 ##	vSphere ESXi 호스트 업그레이드
 
-자세한 정보는 [기준선 작성 및 인벤토리 오브젝트에 연결](vum-baselines.html)을 참조하십시오.
+자세한 정보는 [기준선 작성 및 인벤토리 오브젝트에 연결](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html)을 참조하십시오.
 
 ##	vSAN 디스크 형식 업그레이드
 

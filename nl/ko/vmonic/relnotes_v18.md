@@ -19,8 +19,8 @@ Fortinet on {{site.data.keyword.cloud_notm}} 서비스는 이제 Cloud Foundatio
 Fortinet 서비스가 설치된 후 FortiGate 콘솔에서 FSA의 방화벽 규칙을 관리하고 구성할 수 있습니다. FSA 방화벽 규칙이 인터넷을 통해 IBM Bluemix®의 외부 관리 데이터베이스와 통신하기 위해 관리 컴포넌트(예: IBM CloudDriver 가상 머신 또는 Zerto Virtual Manager)로 시작되는 아웃바운드 HTTPS 통신을 허용하도록 정의되어 있는지 확인해야 합니다. 아웃바운드 HTTPS 통신은 인스턴스에 있는 관리 서비스 VMware NSX Edge Services Gateway(ESG)의 공인 IP 주소에서 시작됩니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [Fortinet on {{site.data.keyword.cloud_notm}} 개요](../services/fsa_considerations.html)
-* [Fortinet on {{site.data.keyword.cloud_notm}} 관리](../services/managingfsa.html)
+* [Fortinet on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/fsa_considerations.html)
+* [Fortinet on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managingfsa.html)
 
 ## Veeam on IBM Cloud 서비스
 
@@ -31,8 +31,8 @@ Fortinet 서비스가 설치된 후 FortiGate 콘솔에서 FSA의 방화벽 규�
 또한 V1.8 이전 인스턴스의 Veeam VSI 라이센스가 2017년 10월 14일에 만료되었습니다. 그러므로 가능한 빨리 이전 Veeam VSI를 새 Veeam 서비스로 대체해야 합니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [Veeam on {{site.data.keyword.cloud_notm}} 개요](../services/veeam_considerations.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} 관리](../services/managingveeam.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managingveeam.html)
 
 ## VMware Cloud Foundation 인스턴스에 대한 업데이트
 
@@ -43,8 +43,8 @@ V1.8 릴리스부터 Cloud Foundation 인스턴스를 주문하는 경우 vSpher
 라이센스 키를 제공해야 하는 경우 컴포넌트에 고유한 VMware 라이센스를 사용하도록 선택할 수도 있습니다. 이 경우, 라이센스를 제공하는 VMware 컴포넌트에 대한 지원은 IBM 지원 센터가 아닌 VMware에서 제공됩니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [Cloud Foundation 인스턴스 주문](../sddc/sd_orderinginstance.html)
-* [BYOL에 대한 FAQ](faq_byol.html)
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [BYOL에 대한 FAQ](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
 
 ## VMware vCenter Server 인스턴스에 대한 업데이트
 
@@ -53,27 +53,27 @@ V1.8 릴리스부터 Cloud Foundation 인스턴스를 주문하는 경우 vSpher
 사용자 정의 서버 옵션은 사전 빌드되고 테스트된 소형, 중형 및 대형 옵션과 함께 사용할 수 있습니다. RAM 양 외에도, 듀얼 CPU 및 총 코어 수에 따라 VMware HCL 호환 가능 서버의 목록에서 선택할 수 있습니다. 로컬 스토리지는 사용자 정의할 수 없습니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)
-* [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](../vcenter/vc_addingviewingclusters.html)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
 
 ### 여덟 개 이상의 NFS 파일 공유를 추가하는 지원
 
  클러스터의 모든 ESXi 서버에서 최대 32개의 파일 공유에 연결할 수 있습니다.
 
  자세한 정보는 다음 주제를 참조하십시오.
-* [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)
-* [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](../vcenter/vc_addingviewingclusters.html)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
 
 ### 데이터 센터에 대한 업데이트
 
 새 데이터 센터 즉, **DAL-09, DAL-12, DAL-13 - 달라스**, **LON-04, LON-06 - 런던**, **SJC-04 - 산호세**, **WDC-06, WDC-07 - 워싱턴, DC**를 배치에 사용할 수 있습니다.
 
-자세한 정보는 [vCenter Server 인스턴스에 대한 요구사항 및 계획](../vcenter/vc_planning.html)을 참조하십시오.
+자세한 정보는 [vCenter Server 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter/vc_planning.html)을 참조하십시오.
 
 ## 사용성 개선사항
 
 개선사항은 사용자 인터페이스를 통해 수행됩니다.
-* 왼쪽 탐색 분할창의 **시작하기** 페이지에서 서비스에 대해 알아보고 인스턴스를 주문할 수 있습니다. {{site.data.keyword.cloud_notm}} Secure Virtualization 서비스 아키텍처에 대한 자세한 정보는 [보안 및 준수 - HyTrust](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust)를 참조하십시오.
+* 왼쪽 탐색 분할창의 **시작하기** 페이지에서 서비스에 대해 알아보고 인스턴스를 주문할 수 있습니다.
 * 인스턴스 세부사항 페이지의 오버플로우 메뉴를 사용하여 **사용할 준비가 됨** 상태의 인스턴스를 삭제하십시오.
 * NSX 라이센스 에디션을 업그레이드하는 옵션은 이제 **업데이트 및 패치** 탭에서 사용할 수 있습니다. 라이센스 업그레이드는 IBM SoftLayer 계정에 있는 기존의 모든 라이센스를 새 라이센스로 대체합니다.
 * 인스턴스 세부사항 페이지의 **백업 및 복원** 탭은 더 이상 사용할 수 없습니다.

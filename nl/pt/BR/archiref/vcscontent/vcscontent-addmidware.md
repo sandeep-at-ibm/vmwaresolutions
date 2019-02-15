@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,9 +12,7 @@ lastupdated: "2018-11-15"
 
 Agora que o Stock Trader está em execução em um contêiner e Jane está satisfeita
 com os microsserviços atuais, ela e Todd trabalham em como aprimorar o
-aplicativo com recursos extras. Refatorando os microsserviços
-do Stock Trader para manipular a atividade e a escalabilidade aumentadas, eles
-veem a necessidade de incluir middleware no {{site.data.keyword.cloud}} Private (ICP). Alguns dos
+aplicativo com recursos extras. Ao refatorar os microsserviços do Stock Trader para manipular a atividade e a escalabilidade aumentadas, eles veem a necessidade de incluir o middleware no {{site.data.keyword.cloud}} Private. Alguns dos
 middlewares existiam em seu data center, portanto, isso se torna mais que um
 exercício de nova plataforma com um novo middleware incluído.
 
@@ -27,22 +25,18 @@ mais simples.
 
 ## Opções de conteúdo
 
-A ICP tem uma ampla seleção de conteúdo e tanto Todd quanto
-Jane precisam decidir qual melhor se adéqua às suas necessidades. Como Todd vê no
-catálogo do ICP, a maioria do conteúdo está disponível para
-experimentar, mas algum conteúdo requer compra e download por meio
-do Passport Advantage.
+O {{site.data.keyword.cloud_notm}} Private tem uma ampla seleção de conteúdo e tanto Todd quanto Jane precisam decidir qual melhor se adéqua às suas necessidades. Como Todd vê no catálogo do {{site.data.keyword.cloud_notm}} Private, a maioria do conteúdo está disponível para ser experimentado, mas algum conteúdo requer compra e download por meio do Passport Advantage.
 
-* Cadeia de ferramentas e tempos de execução
-  -	UrbanCode Deploy
-  -	Microclimate
-  -	Jenkins (software livre)
-  -	IBM WebSphere Liberty (MicroProfile, web Profile, Java Platform, Enterprise Edition Profile)
-  -	Open Liberty (software livre)
-  -	Tempo de execução do Node.js (software livre)
-  -	Tempo de execução de Swift (software livre)
+* Toolchain e Runtimes
+  - UrbanCode Deploy
+  - Microclimate
+  - Jenkins (software livre)
+  - IBM WebSphere Liberty (MicroProfile, Web Profile, Java Platform, Enterprise Edition Profile)
+  - Open Liberty (software livre)
+  - Tempo de execução do Node.js (software livre)
+  - Tempo de execução de Swift (software livre)
   - nginx (software livre)
-  -	IBM WebSphere Application Server for ICP VM Quickstarter Community education.
+  - IBM WebSphere Application Server for {{site.data.keyword.cloud_notm}} Private MV Quickstarter Community Edition
 
 * Integração
   -	IBM Integration Bus
@@ -110,15 +104,15 @@ do Passport Advantage.
   -	Compliance Assist
 
 * Gerenciamento
-  -	IBM Netcool - integração (análise para serviços do ICP – eventos de criação de log e
+  -	IBM Netcool - integração (análise para serviços do {{site.data.keyword.icpfull_notm}} – eventos de criação de log e
 alertas de monitoramento)
   - {{site.data.keyword.cloud_notm}} App Management 2018.2.0
-  -	IBM Netcool - integração (análise para gerenciar eventos do ICP. Vendido com o produto
+  -	IBM Netcool - integração (análise para gerenciar eventos do {{site.data.keyword.icpfull_notm}}. Vendido com o produto
 IBM Netcool Insights)
   - {{site.data.keyword.cloud_notm}} Event Management for IBM
 Cloud Private (Licenciado por ILAN para descoberta e tentativa por meio do catálogo)
   - IBM Operations Analytics Predictive Insights Mediation Pack (gerenciar
-métricas de monitoramento do ICP. Licenciado por ILAN para descoberta e tentativa por meio do
+métricas de monitoramento do {{site.data.keyword.icpfull_notm}}. Licenciado por ILAN para descoberta e tentativa por meio do
 catálogo) - IBM Operations Analytics Predictive Insights Mediation Pack
 (vendido com o produto Predictive Insights)
 
@@ -152,7 +146,7 @@ Para o Stock Trader, Todd decidiu incluir todo o middleware. As informações a 
 Todd inicia com o Db2 porque ele já está usando o Db2 e pode
 dedicar um Db2 baseado em contêiner para cada solução.
 
-Como Todd preparou o ICP, ele já tem sua política de segurança de pod definida. Todd pode se concentrar em criar um segredo de pull de imagem do docker:
+Como Todd preparou o {{site.data.keyword.icpfull_notm}}, ele já tem sua política de segurança de pod definida. Todd pode se concentrar em criar um segredo de pull de imagem do docker:
 
 `kubectl create secret docker-registry db2dockerregistry
 --docker-username=dockeruser
@@ -162,7 +156,7 @@ Como Todd preparou o ICP, ele já tem sua política de segurança de pod definid
 Finalmente, como Todd decidiu usar NFS, ele criou volumes NFS com base nos
 requisitos do arquivo leia-me:
 
-Acesse o painel ICP e crie um Volume persistente. Quão grande? Verifique o
+Acesse o painel do {{site.data.keyword.icpfull_notm}} e crie o Volume Persistente. Quão grande? Verifique o
 arquivo leia-me para descobrir:
 
 `capacity=20Gi
@@ -201,7 +195,7 @@ a versão dev pode ser ativada para cada Desenvolvedor, economizando o tráfego
 precioso de Produção. A instalação do MQ é bastante simples. Todd cria o
 armazenamento exatamente como ele fez com o Db2 e, em seguida, instala o gráfico helm:
 
-Painel do ICP > Catálogo > comece a digitar no MQ > selecione
+Painel do {{site.data.keyword.icpfull_notm}} > Catálogo > comece a digitar no MQ > selecione
 ibm-mqadvanced-server-dev. Revise o arquivo leia-me, em seguida, clique em Configurar.
 Forneça ou verifique os valores de entrada a seguir:
 
@@ -220,7 +214,7 @@ middleware por meio da interface com o usuário. Eventualmente, Todd pode usar o
 os pods dentro do cluster possam chegar ao middleware.
 
 Para configurar o MQ para usar o Stock Trader, Todd abre a interface com o usuário
-do MQ Management, que é exatamente a mesma que aquela da versão da VM.
+do MQ Management, que é exatamente a mesma que aquela da versão da MV.
 
 ### 	Redis
 
@@ -300,4 +294,4 @@ Figura 3. Enriquecimento do Stock Trader
 
 ### Links relacionados
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

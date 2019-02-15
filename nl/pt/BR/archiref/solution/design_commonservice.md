@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,7 +22,7 @@ Nesse design, o Microsoft Active Directory (AD) é usado para o Gerenciamento de
 
 ### Microsoft Active Directory
 
-Por padrão, uma única VSI do Active Directory é implementada na infraestrutura do {{site.data.keyword.cloud}}. O design também fornece a opção de implementar dois servidores Microsoft Active Directory altamente disponíveis como VMs dedicadas do Windows Server no cluster de gerenciamento.
+Por padrão, uma única VSI do Active Directory é implementada na infraestrutura do {{site.data.keyword.cloud}}. O design também fornece a opção de implementar dois servidores Microsoft Active Directory altamente disponíveis como MVs dedicadas do Windows Server no cluster de gerenciamento.
 
 Você será responsável por fornecer o licenciamento e a ativação da Microsoft se escolher essa opção.
 {:note}
@@ -54,11 +54,11 @@ Esse design integra serviços do DNS nos Active Directory Servers por meio da co
 
 ### VMware Cloud Foundation
 
-A implementação do Cloud Foundation usa a automação do VMware Cloud Foundation, que usa seu próprio servidor DNS que reside dentro do componente de VM SDDC Manager. Os componentes do Cloud Foundation que são gerenciados pelo SDDC Manager, incluindo hosts do vCenter, PSC, NSX e ESXi, são configurados para usar o endereço IP da VM do SDDC Manager como seu DNS padrão por design.
+A implementação do Cloud Foundation usa a automação do VMware Cloud Foundation, que usa seu próprio servidor DNS que reside dentro do componente de MV SDDC Manager. Os componentes do Cloud Foundation que são gerenciados pelo SDDC Manager, incluindo hosts do vCenter, PSC, NSX e ESXi, são configurados para usar o endereço IP da MV do SDDC Manager como seu DNS padrão por design.
 
 Como o SDDC Manager gera e mantém os nomes de host para os componentes que ele gerencia, não é recomendado corromper seu arquivo de zona do DNS diretamente para incluir e remover hosts.
 
-Esse design integra serviços do DNS nos Active Directory Servers com a VM do SDDC Manager na configuração a seguir:
+Esse design integra serviços do DNS nos Active Directory Servers com a MV do SDDC Manager na configuração a seguir:
 * É possível especificar a estrutura de domínio. O nome de domínio pode ser qualquer número de níveis (até o máximo que os componentes do Cloud Foundation manipularão).
 * O nível mais baixo é o subdomínio para o qual o SDDC Manager está autorizado.
 * O nome de domínio DNS especificado será usado como o nome de domínio da floresta raiz do Active Directory. Por exemplo, se o nome de domínio do DNS for `cloud.ibm.com`, a raiz da floresta do domínio do Active Directory será `cloud.ibm.com`. Esse domínio DNS e o domínio do Active Directory são os mesmos em todas as instâncias do Cloud Foundation vinculadas.
@@ -85,6 +85,6 @@ Por padrão, o VMware vSphere usa certificados TLS que são assinados pela VMwar
 
 ### Links relacionados
 
-* [ Design da infraestrutura física ](design_physicalinfrastructure.html)
-* [ Design de infraestrutura virtual ](design_virtualinfrastructure.html)
-* [ Design de gerenciamento de infraestrutura ](design_infrastructuremgmt.html)
+* [ Design da infraestrutura física ](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [ Design de infraestrutura virtual ](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [ Design de gerenciamento de infraestrutura ](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)

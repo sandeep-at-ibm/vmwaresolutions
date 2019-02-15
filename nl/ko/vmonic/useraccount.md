@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-10-26"
 ## 시작하기 전에
 
 * 하나의 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정만 하나의 {{site.data.keyword.cloud_notm}} 사용자 계정에 링크할 수 있습니다.
-* 사용 중인 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정 요구사항](slaccountrequirement.html)을 참조하십시오.
+* 사용 중인 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정 요구사항](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)을 참조하십시오.
 * {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정의 API키가 변경된 경우에는 {{site.data.keyword.vmwaresolutions_short}} 콘솔의 **설정** 페이지에서 키를 업데이트해야 합니다.
 
    **중요:** 사용자는 **설정** 페이지에 저장된 API 키가 올바르고 최신 상태인지 확인해야 합니다. 그렇지 않으면, API 키 유효성 검증이 필요한 오퍼레이션에 실패할 수 있습니다.
@@ -38,7 +38,7 @@ lastupdated: "2018-10-26"
 3. **IBM Cloud 인프라 인증 정보** 영역에서 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정의 사용자 이름과 API키를 입력하십시오.
    * {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정과 {{site.data.keyword.cloud_notm}} 계정이 연결된 경우 **검색**을 클릭하여 인증 정보를 자동으로 입력하십시오.
    * {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정과 {{site.data.keyword.cloud_notm}} 계정이 연결되지 않은 경우에는 두 계정을 연결해야 합니다. [{{site.data.keyword.cloud_notm}} 인프라 고객 포털](https://control.softlayer.com/)에 로그인하고 콘솔의 지시사항에 따라 인증 정보를 가져온 다음 이를 입력하십시오.
-   * {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 없는 경우에는 [계정을 등록](../vmonic/signing_softlayer_account.html)하고 콘솔의 지시사항에 따라 인증 정보를 가져온 다음 이를 입력하십시오.
+   * {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 없는 경우에는 [계정을 등록](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)하고 콘솔의 지시사항에 따라 인증 정보를 가져온 다음 이를 입력하십시오.
 4. **인증 정보 저장**을 클릭하십시오.
 
 ## 결과
@@ -51,8 +51,8 @@ lastupdated: "2018-10-26"
 
 ### 관련 링크
 
-* [FAQ](faq.html)
-* [Cloud Foundation 인스턴스 주문](../sddc/sd_orderinginstance.html)
-* [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)
-* [알림](notifications.html)
-* [SoftLayer API](../../../customer-portal/cpapi.html){:new_window}
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [알림](/docs/services/vmwaresolutions/vmonic/notifications.html)
+* [SoftLayer API](/docs/customer-portal/cpapi.html){:new_window}

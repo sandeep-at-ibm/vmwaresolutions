@@ -50,7 +50,7 @@
   </g>
   <rect x="300" y="185" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
-   <text x="359.5" y="208.5">VM no local</text>
+   <text x="359.5" y="208.5">MV no local</text>
   </g>
   <ellipse cx="955" cy="548" rx="7.5" ry="7.5" fill="#fff" pointer-events="none" stroke="#000"/>
   <path d="m955 555v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
@@ -142,7 +142,7 @@
   </g>
   <rect x="350" y="730" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
-   <text x="409.5" y="753.5">Na VM em nuvem</text>
+   <text x="409.5" y="753.5">Na MV em nuvem</text>
   </g>
   <g pointer-events="none" stroke="#000">
    <path d="m565 550h-15q-10 0-10 10v220q0 10-10 10h-53.63" fill="none" stroke-miterlimit="10"/>

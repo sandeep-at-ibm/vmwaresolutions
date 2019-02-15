@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -48,9 +48,9 @@ Zerto Replication V6.0 atualização 3 licença
 
 ### Links relacionados
 
-* [Sobre o {{site.data.keyword.vmwaresolutions_short}}](../vmonic/prod_overview.html)
-* [Solicitando on {{site.data.keyword.cloud_notm}}](zerto_ordering.html)
-* [Gerenciando o Zerto on {{site.data.keyword.cloud_notm}}](managingzertodr.html)
-* [Solicitando serviços gerenciados para o Zerto on {{site.data.keyword.cloud_notm}}](managing_zerto_services.html)
+* [Sobre o {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/vmonic/prod_overview.html)
+* [Solicitando on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/zerto_ordering.html)
+* [Gerenciando o Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingzertodr.html)
+* [Solicitando serviços gerenciados para o Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
 * [Website zerto.com](https://www.zerto.com){:new_window}
 * [Documentação técnica do Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

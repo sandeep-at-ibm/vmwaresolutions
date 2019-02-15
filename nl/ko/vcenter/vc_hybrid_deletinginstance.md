@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -51,8 +51,8 @@ vCenter Server with Hybridity Bundle 인스턴스를 삭제하면 다음 컴포�
 
 ### 관련 링크
 
-* [다중 사이트 구성에서 vCenter Server with Hybridity Bundle 인스턴스 삭제](vc_hybrid_deletinginstance_multi.html)
-* [vCenter Server with Hybridity Bundle 인스턴스 주문](vc_hybrid_orderinginstance.html)
-* [vCenter Server with Hybridity Bundle 인스턴스 보기](vc_hybrid_viewinginstances.html)
-* [vCenter Server with Hybridity Bundle 인스턴스에 대한 용량 확장 및 축소](vc_hybrid_addingremovingservers.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
+* [다중 사이트 구성에서 vCenter Server with Hybridity Bundle 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html)
+* [vCenter Server with Hybridity Bundle 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle 인스턴스 보기](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [vCenter Server with Hybridity Bundle 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -22,9 +22,9 @@ Atualmente, apenas as instâncias do vCenter Server suportam o VMware Federal on
 ## Requisitos para pedir instâncias do VMware Federal
 
 Assegure-se de que tenha concluído as tarefas a seguir:
-* Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](../vmonic/useraccount.html).
+* Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](/docs/services/vmwaresolutions/vmonic/useraccount.html).
 * Você revisou as informações em [Requisitos e planejamento para instâncias do VMware
-Federal](vc_fed_planning.html).
+Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html).
 * Você revisou o formato de nome da instância e do domínio. O nome do domínio e o rótulo do subdomínio são usados para gerar o nome do usuário e os nomes do servidor da instância.
 
 Tabela 1. Formato de valor para nomes de instância e de domínio
@@ -49,7 +49,7 @@ Deve-se especificar as seguintes configurações do sistema ao pedir uma instân
 
 O nome da instância deve atender aos requisitos a seguir:
 * Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-* O nome da instância deve iniciar e terminar com um caractere alfanumérico.
+* O nome da instância deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
 * O comprimento máximo do nome da instância é de 10 caracteres.
 * O nome da instância deve ser exclusivo dentro de sua conta.
 
@@ -66,7 +66,7 @@ Licenças fornecidas pela IBM para os seguintes componentes VMware:
 * NSX Service Providers 6.4 (Edição Base, Advanced ou Enterprise)
 * (Para clusters vSAN) vSAN 6.6 (Edição Advanced ou Enterprise)
 
-**Atenção:**
+### Atenção
 
 * As edições de licença mínimas são indicadas na interface com o usuário. Se diferentes edições de componentes forem suportadas, será possível selecionar a edição desejada. Você é responsável por assegurar que a chave de licença fornecida está correta para cada componente de VMware selecionado.
 * Para o vSphere, um encargo de licença incorrerá no momento do pedido, mas esse encargo será creditado subsequentemente em sua conta.
@@ -107,7 +107,7 @@ Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}
 
 É possível configurar o número de servidores ESXi no intervalo de 2 a 20.
 
-Todos os servidores ESXi compartilham a mesma configuração. Na pós-implementação, é possível incluir mais quatro clusters. Para configurações de armazenamento vSAN, 4 servidores ESXi são necessários para os clusters iniciais e pós-implementação. Para obter mais informações sobre o mínimo de servidores ESXi, veja [Uma instância do vCenter Server com dois nós é altamente disponível?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+Todos os servidores ESXi compartilham a mesma configuração. Na pós-implementação, é possível incluir mais quatro clusters. Para configurações de armazenamento vSAN, 4 servidores ESXi são necessários para os clusters iniciais e pós-implementação. Para obter mais informações sobre o mínimo de servidores ESXi, veja [Uma instância do vCenter Server com dois nós é altamente disponível?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Configurações de armazenamento
 
@@ -118,7 +118,11 @@ As configurações de armazenamento são baseadas em sua seleção de configura�
 Especifique as seguintes opções vSAN:
 * **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
 * **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
-* Se você desejar incluir discos de capacidade além do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
+* Se você desejar incluir discos de capacidade além do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS.
+
+  A opção **Intel Optane de alto desempenho** está disponível apenas para os modelos de CPU Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140 do Skylake.
+  {:note}
+
 * Revise os valores **Tipo de disco para discos de cache vSAN** e **Número de discos de cache vSAN**. Esses valores dependem de a caixa **Intel Optane de alto desempenho** estar ou não marcada.
 * **Licença vSAN**: selecione a edição de licença vSAN 6.6 (Advanced ou Enterprise).
 
@@ -157,7 +161,7 @@ O prefixo de nome do host deve atender aos requisitos a seguir:
 
 O rótulo do subdomínio deve atender aos requisitos a seguir:
 *  Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-*  O rótulo do subdomínio deve iniciar e terminar com um caractere alfanumérico.
+*  O rótulo do subdomínio deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
 *  O comprimento máximo do rótulo do subdomínio é de 10 caracteres.
 *  O rótulo do subdomínio deve ser exclusivo em sua conta.
 
@@ -170,7 +174,7 @@ O nome do domínio-raiz deve atender aos requisitos a seguir:
 * A última sequência pode conter apenas caracteres alfabéticos.
 * O comprimento da última sequência deve estar no intervalo de 2 a 24 caracteres.
 
-O comprimento máximo do Nome Completo do Domínio (FQDN) para hosts e VMs é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
+O comprimento máximo do Nome Completo do Domínio (FQDN) para hosts e MVs é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
 {:note}
 
 ### Configuração de DNS
@@ -178,7 +182,7 @@ O comprimento máximo do Nome Completo do Domínio (FQDN) para hosts e VMs é de
 Selecione a configuração do Sistema de Nomes de Domínio (DNS) para sua instância:
 
 * **Único VSI público do Windows para o Active Directory/DNS**: um único VSI do Microsoft Windows Server para o Microsoft Active Directory (AD), que funciona como o DNS para a instância na qual os hosts e as máquinas virtuais são registrados, é implementado e pode ser consultado.
-* **Duas VMs do Windows Server dedicadas e altamente disponíveis no cluster de gerenciamento**: para a V2.3 e liberações futuras, duas máquinas virtuais do Microsoft Windows são implementadas, ajudando a aprimorar a segurança e robustez.
+* **Duas MVs do Windows Server dedicadas e altamente disponíveis no cluster de gerenciamento**: para a V2.3 e liberações futuras, duas máquinas virtuais do Microsoft Windows são implementadas, ajudando a aprimorar a segurança e robustez.
 
 Deve-se fornecer duas licenças do Microsoft Windows Server 2012 R2 coso você configure sua instância para usar as duas máquinas virtuais do Microsoft Windows. Use a licença da edição Standard do Microsoft Windows Server 2012 R2 ou a licença da edição Datacenter do Microsoft Windows Server 2012 R2 ou ambas.
 {:important}
@@ -220,7 +224,10 @@ Com base em sua configuração selecionada para a instância, o custo estimado �
 
 A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
 
-Quando a instância for implementada com êxito, os componentes descritos em [Especificações técnicas para instâncias do VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) ser instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão.
+Quando a instância for implementada com êxito, os componentes que são descritos em
+[Especificações
+técnicas para instâncias do VMware Federal on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) serão
+instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão.
 
 Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 
@@ -242,10 +249,10 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 
 ### Links relacionados
 
-* [Inscrevendo-se para uma conta do {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
-* [Visualizando instâncias do VMware Federal](vc_fed_viewinginstance.html)
-* [Expandindo e contraindo a capacidade para instâncias do VMware Federal](vc_fed_addingremovingservers.html)
-* [Incluindo, visualizando e excluindo clusters para instâncias do VMware Federal](fed_addviewdeleteclusters.html)
-* [Protegendo instâncias do VMware Federal](vc_fed_securinginstance.html)
-* [Excluindo instâncias do VMware Federal](vc_fed_deletinginstance.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
+* [Inscrevendo-se em uma conta do {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [Visualizando instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Expandindo e contraindo a capacidade para instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [Incluindo, visualizando e excluindo clusters para instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [Protegendo instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [Excluindo instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

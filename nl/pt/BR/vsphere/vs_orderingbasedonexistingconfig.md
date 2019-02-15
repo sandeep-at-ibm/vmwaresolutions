@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,8 +19,8 @@ lastupdated: "2018-10-29"
 ## Requisitos
 
 Assegure-se de que tenha concluído as tarefas a seguir:
-*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](../vmonic/useraccount.html).
-*  Você revisou os requisitos e as considerações em [Requisitos e planejamento para clusters do vSphere](vs_planning.html).
+*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Você revisou os requisitos e as considerações em [Requisitos e planejamento para clusters do vSphere](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
 *  Você criou um modelo de configuração para ser reutilizado.
 
 ## Procedimento para pedir clusters do vSphere com base nas configurações existentes
@@ -29,7 +29,7 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 2. Na página **VMware vSphere on IBM Cloud**, clique em **Criar**.  
 3. Clique na guia **Criar novo** e selecione um modelo de configuração na lista **Configurações de cluster**.
 4. Insira um novo nome do cluster.
-5. Revise as configurações do cluster que são concluídas automaticamente e atualize as configurações de acordo com suas necessidades. Para obter mais informações sobre as configurações, veja [Pedindo novos clusters do vSphere](vs_orderinginstances.html).
+5. Revise as configurações do cluster que são concluídas automaticamente e atualize as configurações de acordo com suas necessidades. Para obter mais informações sobre as configurações, veja [Pedindo novos clusters do vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html).
 6. Na área de janela **Resumo do pedido**, verifique a configuração da instância e o custo estimado.
    * Para salvar a configuração como um modelo sem fazer um pedido, clique em **Salvar configuração**.
    * Para fazer o pedido, assegure-se de que a conta a ser cobrada está correta, revise e aceite os termos e, em seguida, clique em **Provisão**.
@@ -48,6 +48,6 @@ Os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Clo
 
 ### Links relacionados
 
-* [Pedindo novos clusters do vSphere](vs_orderinginstances.html)
-* [Ajustando a escala de clusters existentes do vSphere](vs_scalingexistingclusters.html)
-* [Ajustando a escala de clusters criados fora do console](vs_orderingforclustersoutside.html)
+* [Pedindo novos clusters do vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Ajustando a escala dos clusters do vSphere existentes](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [Ajustando a escala de clusters criados fora do console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

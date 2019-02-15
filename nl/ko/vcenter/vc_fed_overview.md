@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-11-05"
 
 VMware Federal on {{site.data.keyword.cloud}}를 사용하면 미국 연방 정부 기관에 배치된 vCenter Server 인스턴스를 보호하는 옵션을 제공할 뿐만 아니라 기본 vCenter Server 인스턴스를 주문할 수 있습니다. 배치된 인스턴스에 보안을 설정하면 저장되어 있는 인스턴스에 대한 민감한 정보는 제거됩니다. 또한 인스턴스 액세스를 위한 열린 연결이 제거됩니다. 즉, 호스트 및 클러스터 추가 및 제거와 같은 관리 기능을 더 이상 사용할 수 없습니다. 보안 옵션을 선택하고 나면 인스턴스 삭제 기능만 사용할 수 있습니다.
 
-vCenter Server on {{site.data.keyword.cloud_notm}} 및 vCenter Server 아키텍처에 대한 자세한 정보는 [vCenter Server 개요](vc_vcenterserveroverview.html)를 참조하십시오.
+vCenter Server on {{site.data.keyword.cloud_notm}} 및 vCenter Server 아키텍처에 대한 자세한 정보는 [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)를 참조하십시오.
 
 VMware Federal on {{site.data.keyword.cloud_notm}}는 vCenter Server 오퍼링의 서브세트만 제공합니다. 다중 사이트 구성, BYOL(Bring Your Own License) 및 추가 기능 서비스 주문 옵션은 지원되지 않습니다.
 {:note}
@@ -43,13 +43,13 @@ vSAN 스토리지를 선택하는 경우 구성에 4개의 {{site.data.keyword.b
 *  세 개의 VLAN(Virtual LANs): 한 개의 공용 VLAN 및 두 개의 사설 VLAN
 *  계층 2(L2) 네트워크에 연결된 로컬 워크로드 간의 잠재적인 동쪽-서쪽 통신을 위해 DLR(Distributed Logical Router)이 포함된 하나의 VXLAN(Virtual eXtensible LAN). VXLAN은 VXLAN을 수정하거나 VXLAN에 빌드하거나 VXLAN을 제거할 수 있는 샘플 라우팅 토폴로지로 배치됩니다. 또한 DLR의 새 논리 인터페이스에 추가 VXLAN을 연결하여 보안 구역을 추가할 수 있습니다.
 *  두 개의 VMware NSX Edge Services Gateway:
-  * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 자세한 정보는 [고객 관리 ESG를 사용하도록 네트워크 구성](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)을 참조하십시오.
+  * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 자세한 정보는 [고객 관리 ESG를 사용하도록 네트워크 구성](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)을 참조하십시오.
 
     사용자는 이 ESG에 액세스할 수 없고 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
     {:important}
-  * VPN 액세스 또는 공용 액세스를 제공하도록 사용자가 수정할 수 있는 템플리트로 IBM에서 배치되는 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽을 위한 보안 고객 관리 VMware NSX Edge Services Gateway. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
+  * VPN 액세스 또는 공용 액세스를 제공하도록 사용자가 수정할 수 있는 템플리트로 IBM에서 배치되는 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽을 위한 보안 고객 관리 VMware NSX Edge Services Gateway. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
-  아웃바운드 HTTPS 관리 트래픽을 위한 VMware NSX ESG(Edge Services Gateway)가 배치된 VMware Federal 인스턴스를 보호하는 조치의 일부로 제거됩니다. 자세한 정보는 [VMware Federal 인스턴스 보호](vc_fed_securinginstance.html)를 참조하십시오.
+  아웃바운드 HTTPS 관리 트래픽을 위한 VMware NSX ESG(Edge Services Gateway)가 배치된 VMware Federal 인스턴스를 보호하는 조치의 일부로 제거됩니다. 자세한 정보는 [VMware Federal 인스턴스 보호](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)를 참조하십시오.
   {:note}
 
 ### Virtual Server 인스턴스
@@ -94,7 +94,7 @@ NFS 옵션을 선택한 경우 관리 컴포넌트용 하나의 2TB, 4IOPS/GB �
 
 ### 확장 노드를 위한 하드웨어
 
-[VMware Federal on {{site.data.keyword.cloud_notm}} 인스턴스의 기술 스펙](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)에 제시된 구성을 지닌 하나의 Bare Metal Server.
+[VMware Federal on {{site.data.keyword.cloud_notm}} 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)에 제시된 구성을 지닌 하나의 Bare Metal Server.
 
 ### 확장 노드의 라이센스 및 요금
 
@@ -114,9 +114,9 @@ NFS 옵션을 선택한 경우 관리 컴포넌트용 하나의 2TB, 4IOPS/GB �
 
 ### 관련 링크
 
-* [VMware Federal 인스턴스에 대한 요구사항 및 계획](vc_fed_planning.html)
-* [VMware Federal 인스턴스 주문](vc_fed_orderinginstance.html)
-* [VMware Federal 인스턴스의 클러스터 추가, 보기 및 삭제](fed_addviewdeleteclusters.html)
-* [VMware Federal 인스턴스에 대한 용량 확장 및 축소](vc_fed_addingremovingservers.html)
-* [VMware Federal 인스턴스 보호](vc_fed_securinginstance.html)
+* [VMware Federal 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
+* [VMware Federal 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [VMware Federal 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [VMware Federal 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [VMware Federal 인스턴스 보호](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
 * [{{site.data.keyword.cloud_notm}} file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

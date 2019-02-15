@@ -2,31 +2,31 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2019-01-23"
 
 ---
 
 # Atualizando o NSX
 
-Esta seção foi incluída neste documento para fornecer a você um tipo de processo de atualização para NSX. É necessário consultar o guia do VMware para o processo de atualização para a versão NSX para a qual você está fazendo upgrade.
+As informações a seguir são um exemplo do processo de atualização para NSX. Consulte o guia do VMware para obter o processo de atualização para a versão do NSX para a qual você está fazendo upgrade.
 
 Caso seja necessário fazer upgrade do NSX e do vSphere, o VMware recomenda concluir o upgrade do NSX primeiro e, em seguida, concluir o upgrade do vSphere, pois os VIBs do NSX são específicos para a versão do ESXi que está instalada no host. No entanto, é recomendado usar o VUM, conforme especificado neste documento; se feito manualmente, use o fluxo de trabalho a seguir, um host por vez:
 
-1. **Fazer upgrade do ESXi** - assim que o upgrade do ESXi for concluído, o host sairá do modo de manutenção, entretanto, não será possível mover as VMs conectadas a comutadores lógicos para o host até a próxima etapa ser concluída.
-2. **Fazer upgrade de VIBs do NSX** - assim que for feito upgrade dos VIBs o host tiver sido removido do modo de manutenção, será possível mover VMs conectadas a comutadores lógicos para o host.
+1. **Fazer upgrade do ESXi** - depois que o upgrade do ESXi for concluído, o host sairá do modo de manutenção, no entanto, não será possível mover MVs conectadas a comutadores lógicos para o host até que a próxima etapa seja concluída.
+2. **Fazer upgrade de VIBs NSX** - depois que os VIBs forem submetidos a upgrade e o host for removido do modo de manutenção, será possível mover MVs conectadas a comutadores lógicos para o host.
 
-O NSX é atualizado por meio da atualização do NSX Manager usando um download em _my.vmware.com_. Portanto, você precisa de uma conta para o download da atualização. Se você estiver consumindo o licenciamento de assinatura do {{site.data.keyword.cloud}} com sua instância do VMware vCenter Server on {{site.data.keyword.cloud_notm}}, não será possível fazer download das atualizações com sua conta **my.vmware.com**. Portanto, será necessário [entrar em contato com o Suporte IBM](../../vmonic/trbl_support.html).
+O NSX é atualizado por meio da atualização do NSX Manager usando um download em _my.vmware.com_. Portanto, você precisa de uma conta para o download da atualização. Se você estiver consumindo o licenciamento de assinatura do {{site.data.keyword.cloud}} com sua instância do VMware vCenter Server on {{site.data.keyword.cloud_notm}}, não será possível fazer download das atualizações com sua conta **my.vmware.com**. Portanto, será necessário [entrar em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
-Antes de iniciar o upgrade, verifique as notas sobre a liberação, pois problemas conhecidos de upgrade e soluções alternativas estão documentados nessas notas sobre a liberação do NSX. Usando as notas sobre a liberação, verifique se o vCenter atende aos novos requisitos do sistema para NSX.
+Antes de iniciar o upgrade, verifique as notas do NSX para problemas de upgrade e soluções alternativas. Usando as notas sobre a liberação, verifique se o vCenter atende aos novos requisitos do sistema para NSX.
 
-Se você instalou qualquer software adicional de parceiros do VMware, consulte a documentação do parceiro para obter detalhes de compatibilidade e upgrade. Se você implementou instâncias primárias e secundárias do vCenter Server e tem um ambiente cruzado do vCenter NSX, consulte as notas sobre a liberação para o processo de upgrade correto.
+Se você instalou qualquer software adicional de parceiros de negócios do VMware, consulte a documentação do parceiro de negócios para obter detalhes de compatibilidade e upgrade. Se você implementou instâncias primárias e secundárias do Servidor vCenter Server e tiver um ambiente do cross-vCenter NSX, consulte as notas sobre a liberação para obter o processo de upgrade correto.
 
 Em um ambiente do cross-vCenter NSX, o dispositivo NSX Manager primário é atualizado primeiro, seguido por todos os dispositivos NSX Manager secundários.
-**Os downgrades não são suportados**, portanto, faça um backup do NSX Manager antes de continuar com um upgrade. Todas as configurações do NSX Edge, todos os roteadores lógicos e todos os gateways de serviços de borda são submetidos a backup como parte do backup do NSX Manager.
+**Downgrades não são suportados**, portanto, faça um backup do NSX Manager antes de continuar com um upgrade. Todas as configurações do NSX Edge, todos os roteadores lógicos e todos os gateways de serviços de borda são submetidos a backup como parte do backup do NSX Manager.
 
-Depois fazer upgrade do NSX Manager com êxito, não será possível fazer downgrade do NSX. É aconselhável que qualquer atividade de manutenção seja executada em uma janela de manutenção acordada, portanto, siga sua orientação corporativa. Recomenda-se que seja feito upgrade de todos os componentes do NSX em uma única janela de indisponibilidade para minimizar o tempo de inatividade e reduzir problemas de funcionalidade. O processo de upgrade do NSX pode levar algum tempo, portanto, é importante entender a ordem de upgrade de implementação do NSX:
+Depois que o NSX Manager for submetido a upgrade com êxito, não será possível fazer downgrade do NSX. É aconselhável que qualquer atividade de manutenção seja executada em uma janela de manutenção acordada, portanto, siga sua orientação corporativa. Recomenda-se que seja feito upgrade de todos os componentes do NSX em uma única janela de indisponibilidade para minimizar o tempo de inatividade e reduzir problemas de funcionalidade. O processo de upgrade do NSX pode levar algum tempo, portanto, é importante entender a ordem de upgrade de implementação do NSX:
 * Gerenciador NSX
 * Cluster do Controlador NSX
 * Clusters de Host NSX
@@ -43,7 +43,7 @@ O fluxo de trabalho é o seguinte:
   - Efetue login no NSX Manager Virtual Appliance, usando o endereço IP e as credenciais que estão documentados no Console do IC4VS e clique no botão Upgrade na página inicial.
   - Efetue login no NSX Manager.
   - Em  ** Gerenciamento de Dispositivos **, clique em  ** Backups & Restauração **.
-  - Clique em Backup e insira um nome de arquivo apropriado. Observe que o VMware recomenda a reinstalação do dispositivo NSX Manager antes de restaurar os dados do NSX Manager. Embora uma operação de restauração em um dispositivo NSX Manager existente possa funcionar, ela não é suportada oficialmente. A melhor prática é tomar nota das configurações de IP para o dispositivo NSX Manager para que elas possam ser usadas para especificar informações de IP e informações de localização de backup para o dispositivo NSX Manager recém-implementado.
+  - Clique em Backup e insira um nome de arquivo apropriado. O VMware recomenda que você reinstale o dispositivo NSX Manager antes de restaurar dados do NSX Manager. Embora uma operação de restauração em um dispositivo NSX Manager existente possa funcionar, ela não é oficialmente suportada. A melhor prática é tomar nota das configurações de IP para o dispositivo NSX Manager para que elas possam ser usadas para especificar informações de IP e informações de localização de backup para o dispositivo NSX Manager recém-implementado.
   - Na parte superior direita, clique em **Fazer upload do pacote configurável** e faça upload do arquivo que você transferiu por download de _my.vmware.com_.
   - Leia as informações de upgrade e selecione se você deseja ativar o SSH e participar do Customer Experience Improvement Program do VMware.
   - Clique em  ** Fazer upgrade **.
@@ -64,4 +64,4 @@ O fluxo de trabalho é o seguinte:
 ### Links relacionados
 
 * [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [Soluções de VMware no {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -127,6 +127,6 @@ vCenter Server 인스턴스의 경우, SDDC Manager가 없으므로 이러한 �
 
 ### 관련 링크
 
-* [실제 인프라 디자인](design_physicalinfrastructure.html)
-* [가상 인프라 디자인](design_virtualinfrastructure.html)
-* [공통 서비스 디자인](design_commonservice.html)
+* [실제 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [가상 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [공통 서비스 디자인](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)

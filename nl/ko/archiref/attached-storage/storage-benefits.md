@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-13"
 
 연결된 스토리지는 VMware vCenter Server on {{site.data.keyword.cloud}} 오퍼링의 확장입니다. VMware vCenter Server on {{site.data.keyword.cloud_notm}}에 대한 연결된 스토리지 솔루션 아키텍처는 디자인에서 각 컴포넌트의 상위 레벨 구성 및 솔루션의 컴포넌트를 자세히 보여줍니다.
 
-vCenter Server 디자인에 대한 자세한 정보는 [솔루션 개요](../solution/solution_overview.html)를 참조하십시오.
+vCenter Server 디자인에 대한 자세한 정보는 [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)를 참조하십시오.
 
 ## vCenter Server에 대한 연결된 스토리지의 주요 이점
 
@@ -29,4 +29,4 @@ vCenter Server 디자인에 대한 자세한 정보는 [솔루션 개요](../sol
 
 ### 관련 링크
 
-* [솔루션 개요](../solution/solution_overview.html)
+* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

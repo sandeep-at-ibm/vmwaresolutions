@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -15,8 +15,8 @@ lastupdated: "2018-11-08"
 ## Antes de iniciar
 
 Assegure-se de que tenha concluído as tarefas a seguir:
-*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](../vmonic/useraccount.html).
-*  Você revisou todas as considerações em [Considerações ao instalar as instâncias do HCX on {{site.data.keyword.cloud_notm}} no local](../services/standalone_considerations.html).
+*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Você revisou todas as considerações em [Considerações ao instalar as instâncias do HCX on {{site.data.keyword.cloud_notm}} no local](/docs/services/vmwaresolutions/services/standalone_considerations.html).
 
 ## Procedimento para pedir instâncias do VMware HCX on IBM Cloud no local
 
@@ -38,7 +38,7 @@ Visualize e gerencie a instância do HCX on {{site.data.keyword.cloud_notm}} no 
 
 ### Links relacionados
 
-* [Visualizando HCX no {{site.data.keyword.cloud_notm}} instâncias](standalone_viewingserviceinstances.html)
-* [Excluindo HCX no {{site.data.keyword.cloud_notm}} instâncias](standalone_deletingserviceinstances.html)
-* [Glossário de termos do HCX](hcx_glossary.html)
+* [Visualizando HCX no {{site.data.keyword.cloud_notm}} instâncias](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
+* [Excluindo HCX no {{site.data.keyword.cloud_notm}} instâncias](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
+* [Glossário de termos do HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [Documentação do VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

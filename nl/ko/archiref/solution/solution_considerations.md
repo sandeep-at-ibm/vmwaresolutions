@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,20 +18,20 @@ lastupdated: "2018-11-29"
 
 다음 고려사항을 검토하여 인스턴스 배치 전후의 인스턴스 관리 및 운영에 대한 책임을 이해하십시오.
 
-다음 목록은 완전하지 않습니다. 자세한 정보는 [IBM 관리 서비스](../../services/managing_imi.html)를 참조하십시오.
+다음 목록은 완전하지 않습니다. 자세한 정보는 [IBM 관리 서비스](/docs/services/vmwaresolutions/services/managing_imi.html)를 참조하십시오.
 {:note}
 
 ## IBM Cloud 계정 액세스
 
-{{site.data.keyword.cloud_notm}} 계정에 대한 액세스를 관리하려면, 팀의 다른 구성원이 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 인스턴스에 액세스할 수 있도록 허용하십시오. 자세한 정보는 [서비스 및 리소스에 액세스하기 위한 사용자 초대](../../vmonic/iamuserinvite.html)를 참조하십시오.
+{{site.data.keyword.cloud_notm}} 계정에 대한 액세스를 관리하려면, 팀의 다른 구성원이 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 인스턴스에 액세스할 수 있도록 허용하십시오. 자세한 정보는 [서비스 및 리소스에 액세스하기 위한 사용자 초대](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)를 참조하십시오.
 
 ## 제약사항
 
 인스턴스에 대한 다음 제한사항을 잘 알고 있어야 합니다.
 
-- [vCenter 아티팩트 변경의 영향](../../vcenter/vcenter_chg_impact.html)
-- [네트워킹 고려사항 및 제한사항](../../vcenter/vc_networkingonvcenterserver.html)
-- [자주 묻는 질문(FAQ)](../../vmonic/faq.html)
+- [vCenter 아티팩트 변경의 영향](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
+- [네트워킹 고려사항 및 제한사항](/docs/services/vmwaresolutions/vcenter/vc_networkingonvcenterserver.html)
+- [자주 묻는 질문(FAQ)](/docs/services/vmwaresolutions/vmonic/faq.html)
 
 ## 네트워크 디자인 및 연결
 
@@ -39,7 +39,7 @@ lastupdated: "2018-11-29"
 
 - [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 또는 [{{site.data.keyword.cloud_notm}} Direct-Link 연결](https://www.ibm.com/cloud/direct-link)을 사용하여 인스턴스 관리 엔드포인트에 액세스하십시오.
 - 인스턴스 내에서 공용 네트워크 연결에 대한 전략을 설계하십시오. 옵션에는 샘플 고객 VMware NSX Edge Services Gateway(ESG), 게이트웨이 어플라이언스(예: Vyatta 및 FortiGate) 및 {{site.data.keyword.cloud_notm}} 네트워크 또는 DirectLink를 통해 액세스한 자체 네트워크에 배치된 프록시 서버가 포함됩니다.
-- [{{site.data.keyword.cloud_notm}} 휴대용 IP 주소](https://console.cloud.ibm.com/docs/infrastructure/subnets/getting-started.html)를 사용하여 {{site.data.keyword.cloud_notm}} VLAN에 또는 [고유 IP 주소를 사용하여 NSX 논리 스위치(VXLANs)](../nsx/nsx_overview.html)에 워크로드를 배치할지 계획하십시오. NSX SDN(Software-Defined Networking)을 사용하면 강력한 유연성을 제공하여 {{site.data.keyword.cloud_notm}}에서 워크로드 네트워크를 관리하고 보안을 설정할 수 있습니다.
+- [{{site.data.keyword.cloud_notm}} 휴대용 IP 주소](/docs/infrastructure/subnets/getting-started.html)를 사용하여 {{site.data.keyword.cloud_notm}} VLAN에 또는 [고유 IP 주소를 사용하여 NSX 논리 스위치(VXLANs)](/docs/services/vmwaresolutions/archiref/nsx/nsx_overview.html)에 워크로드를 배치할지 계획하십시오. NSX SDN(Software-Defined Networking)을 사용하면 강력한 유연성을 제공하여 {{site.data.keyword.cloud_notm}}에서 워크로드 네트워크를 관리하고 보안을 설정할 수 있습니다.
 - NSX ESG, [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 및 DirectLink 피어링을 사용하여 워크로드(네트워크 주소 변환, 가상 사설망(VPN), 라우팅)에 대한 연결을 계획하십시오.
 - 교차 vCenter NSX를 구현하는 경우 로컬 워크로드를 배치하기 전에 로컬 세그먼트 ID 범위가 겹치지 않는지 확인하십시오.
 
@@ -50,11 +50,11 @@ lastupdated: "2018-11-29"
 - {{site.data.keyword.vmwaresolutions_short}} 콘솔에 표시되는 모든 비밀번호를 변경하고 자체 비밀번호 관리 시스템을 사용하십시오. IBM은 진행 중인 자동화 및 지원에 필요한 개별 사용자 ID를 보유하고 있습니다.
 - 모든 컴포넌트에서 복잡도 및 만료 기간과 같은 비밀번호 정책을 검토하십시오.
 - 모든 컴포넌트에서 암호화 설정을 검토하십시오.
-- 적절한 실제 또는 가상 방화벽 솔루션(예: NSX DFW(Distributed Firewall), NSX ESG, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../../services/fortinetvm_considerations.html) 및 [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance))을 계획 및 구현하십시오.
-- 적절한 애플리케이션 로드 밸런싱 및 보안 솔루션(예: [F5 on {{site.data.keyword.cloud_notm}}](../../services/f5_considerations.html))을 계획 및 구현하십시오.
+- 적절한 실제 또는 가상 방화벽 솔루션(예: NSX DFW(Distributed Firewall), NSX ESG, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html) 및 [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance))을 계획 및 구현하십시오.
+- 적절한 애플리케이션 로드 밸런싱 및 보안 솔루션(예: [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_considerations.html))을 계획 및 구현하십시오.
 - 적절한 보안 정보 및 이벤트 관리(SIEM) 솔루션(예: [IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence))을 계획 및 구현하십시오.
 - 적절한 취약성 스캔을 계획하고 구현하십시오.
-- [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../../services/htcc_considerations.html)와 같은 솔루션을 사용하여 인스턴스에 대한 적절한 변경 관리, 승인, 감사 및 액세스 제어를 계획 및 구현하십시오.
+- [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html)와 같은 솔루션을 사용하여 인스턴스에 대한 적절한 변경 관리, 승인, 감사 및 액세스 제어를 계획 및 구현하십시오.
 
 ## 사용자 정의
 
@@ -81,7 +81,7 @@ lastupdated: "2018-11-29"
 
 소프트웨어 유지보수에 대한 적절한 계획을 위해 다음 단계를 완료하십시오.
 
-- 프록시를 통해 [VUM(VMware Update Manager)을 설정](../vum/vum-intro.html)하여 VMware 업데이트를 가져오십시오.
+- 프록시를 통해 [VUM(VMware Update Manager)을 설정](/docs/services/vmwaresolutions/archiref/vum/vum-intro.html)하여 VMware 업데이트를 가져오십시오.
 - 해당되는 경우, 프록시를 통해 vSAN을 설정하여 vSAN HCL(Hardware Compatibility List) 데이터베이스를 유지보수하십시오.
 - VUM에서 지원하지 않는 VMware 컴포넌트에 대해 정기적인 유지보수를 계획하십시오. (예: VMware vCenter, PSC 및 NSX).
 - vSphere EVC(Enhanced vMotion Compatibility) 구성을 검토하십시오. 현재 버전의 vSphere에서 사용자 하드웨어 레벨에 대한 EVC를 지원하지 않는 경우 클러스터가 EVC 사용으로 구성되지 않을 수 있습니다.
@@ -95,7 +95,7 @@ lastupdated: "2018-11-29"
 - 필요에 따라 SMTP 서버 및 SMS(Short Message Service) 게이트웨이의 구성을 포함하는 경보 인프라
 - 호스트, 드라이브, 관리 소프트웨어 및 네트워크의 사전 모니터링
 - vSAN 모니터링(해당되는 경우)
-- 용량 모니터링 및 계획. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 인스턴스에 [클러스터를 추가 및 제거](../../vcenter/vc_addingviewingclusters.html)하고 [호스트를 추가 및 제거](../../vcenter/vc_addingremovingservers.html)할 수 있습니다.
+- 용량 모니터링 및 계획. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 인스턴스에 [클러스터를 추가 및 제거](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)하고 [호스트를 추가 및 제거](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)할 수 있습니다.
 - 백업 인프라 및 백업 작업 모니터링
 
 ## 비즈니스 연속성 및 가용성
@@ -106,9 +106,9 @@ VMware 인스턴스가 {{site.data.keyword.cloud_notm}}의 Bare Metal Server에�
 - 요구사항에 대해 네트워크 및 스토리지 입출력 제어 구성을 검토하십시오.
 - 요구사항에 대해 가상 머신 시작 순서를 구성하십시오.
 - 필요에 따라 관리 및 워크로드에 대한 리소스 풀을 구성하십시오.
-- [인스턴스 관리 컴포넌트](solution_backingup.html) 및 워크로드 둘 다를 위한 백업 솔루션을 계획하고, 구현하고, 모니터링하십시오.
+- [인스턴스 관리 컴포넌트](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html) 및 워크로드 둘 다를 위한 백업 솔루션을 계획하고, 구현하고, 모니터링하십시오.
 - 여러 인스턴스, 여러 클러스터, vCenter HA 및 PSC HA의 가능성을 포함하여 인스턴스 관리의 고가용성을 계획하십시오.
-- [Zerto Disaster Recovery](../../services/addingzertodr.html), [Veeam backup and replication](../../services/veeam_considerations.html) 및 [IBM Spectrum Protect Plus](../../services/spp_considerations.html)와 같은 솔루션을 사용하여 워크로드의 비즈니스 연속성을 계획하십시오.
+- [Zerto Disaster Recovery](/docs/services/vmwaresolutions/services/addingzertodr.html), [Veeam backup and replication](/docs/services/vmwaresolutions/services/veeam_considerations.html) 및 [IBM Spectrum Protect Plus](/docs/services/vmwaresolutions/services/spp_considerations.html)와 같은 솔루션을 사용하여 워크로드의 비즈니스 연속성을 계획하십시오.
 
 ## 스토리지 계획
 
@@ -119,12 +119,12 @@ VMware 인스턴스가 {{site.data.keyword.cloud_notm}}의 Bare Metal Server에�
   - RAID-1은 RAID-5과 비교할 때 짧아진 재빌드 시간과 같은 연속 장애 발생 간격이 짧아지고 성능이 향상되었습니다. 그러나 RAID-5에 스토리지 오버헤드가 적습니다.
   - RAID-6은 듀얼 장애를 보호하지만 최소 6개의 호스트가 필요합니다(RAID-5의 경우 4개 호스트 필요).
 - vSAN 클러스터에 스토리지를 더 추가하려면 클러스터에 새 호스트를 추가하거나 {{site.data.keyword.cloud_notm}} Endurance NFS 스토리지를 대신 추가해야 합니다. 기존 호스트에 디스크 추가는 현재 지원되지 않습니다.
-- 추가적인 {{site.data.keyword.cloud_notm}} Endurance NFS 스토리지를 클러스터에 마운트하는 경우, 아키텍처 안내를 따르고 `SDDC-DPortGroup-NFS` 포트 그룹 주소를 사용하여 스토리지에 대한 호스트 라우트를 구성해야 합니다. 호스트 자체가 아니라 스토리지에 이러한 주소에 권한을 부여해야 합니다. 자세한 정보는 [연결된 스토리지 인프라 관리](../attached-storage/storage-infra-mgmt.html#vsphere-host-static-routing)를 참조하십시오.
+- 추가적인 {{site.data.keyword.cloud_notm}} Endurance NFS 스토리지를 클러스터에 마운트하는 경우, 아키텍처 안내를 따르고 `SDDC-DPortGroup-NFS` 포트 그룹 주소를 사용하여 스토리지에 대한 호스트 라우트를 구성해야 합니다. 호스트 자체가 아니라 스토리지에 이러한 주소에 권한을 부여해야 합니다. 자세한 정보는 [연결된 스토리지 인프라 관리](/docs/services/vmwaresolutions/archiref/attached-storage/storage-infra-mgmt.html#vsphere-host-static-routing)를 참조하십시오.
 
 또한, 예제로 IBM Spectrum Protect Plus를 사용하여 [VMware 클러스터에 Endurance 스토리지를 추가](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)하는 방법을 보여주는 developerWorks 지침도 참조하십시오.
 
 ### 관련 링크
 
-* [솔루션 개요](solution_overview.html)
-* [디자인 개요](design_overview.html)
-* [용량 스케일링](solution_scaling.html)
+* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [디자인 개요](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [용량 스케일링](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)

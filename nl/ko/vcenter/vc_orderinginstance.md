@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2019-01-14"
 
 # vCenter Server 인스턴스 주문
 
-워크로드 요구사항에 가장 적합한 유연하고 사용자 정의할 수 있는 VMware 가상화된 플랫폼을 배치하려면 VMware vCenter Server 인스턴스를 주문하십시오. 초기 주문 중에는 재해 복구를 위한 [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html)와 같은 서비스를 추가할 수도 있습니다.
+워크로드 요구사항에 가장 적합한 유연하고 사용자 정의할 수 있는 VMware 가상화된 플랫폼을 배치하려면 VMware vCenter Server 인스턴스를 주문하십시오. 초기 주문 중에는 재해 복구를 위한 [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html)와 같은 서비스를 추가할 수도 있습니다.
 
 ## 요구사항
 
 다음 태스크를 완료했는지 확인하십시오.
-* **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](../vmonic/useraccount.html)를 참조하십시오.
-* [vCenter Server 인스턴스에 대한 요구사항 및 계획](vc_planning.html)의 정보를 검토했습니다.
+* **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](/docs/services/vmwaresolutions/vmonic/useraccount.html)를 참조하십시오.
+* [vCenter Server 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter/vc_planning.html)의 정보를 검토했습니다.
 * 인스턴스 및 도메인 이름 형식을 검토했습니다. 도메인 이름 및 하위 도메인 레이블은 인스턴스의 사용자 이름 및 서버 이름을 생성하는 데 사용됩니다.
 
 표 1. 인스턴스 및 도메인 이름의 값 형식
@@ -44,7 +44,7 @@ vCenter Server 인스턴스를 주문할 때는 다음 시스템 설정을 지�
 
 인스턴스 이름은 다음 요구사항을 충족해야 합니다.
 * 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 인스턴스 이름은 영숫자 문자로 시작하고 끝나야 합니다.
+* 인스턴스 이름은 영문자로 시작하고 영숫자로 끝나야 합니다. 
 * 인스턴스 이름의 최대 길이는 10자입니다.
 * 인스턴스 이름은 계정 내에서 고유해야 합니다.
 
@@ -123,11 +123,14 @@ Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성
 
 인스턴스에 있는 초기 클러스터의 경우 ESXi 서버의 수를 2 - 20개 범위로 구성할 수 있습니다. 모든 ESXi 서버는 설정 구성을 공유한다.
 
-초기 배치 후에는 네 개의 클러스터를 추가할 수 있습니다. VMware vSAN에 대해 **Skylake** 또는 **Broadwell** 구성을 선택한 경우 초기 및 사후 배치 클러스터 둘 다를 위해 네 개의 ESXi 서버가 필요합니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
+초기 배치 후에는 네 개의 클러스터를 추가할 수 있습니다. VMware vSAN에 대해 **Skylake** 또는 **Broadwell** 구성을 선택한 경우 초기 및 사후 배치 클러스터 둘 다를 위해 네 개의 ESXi 서버가 필요합니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
 
 ## 스토리지 설정
 
 스토리지 설정은 Bare Metal Server 구성의 선택 및 스토리지 유형에 따라 달라집니다.
+
+인스턴스 V2.8 이상의 경우에는 기존 NFS 또는 vSAN 클러스터에 NFS 스토리지 공유를 추가할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances)의 *NFS 스토리지를 vCenter Server 인스턴스에 추가* 섹션을 참조하십시오.
+{:note}
 
 ### vSAN 스토리지
 
@@ -166,7 +169,7 @@ vSAN은 **Skylake** 및 **Broadwell** Bare Metal Server 구성에만 사용할 �
 
 ### 로컬 디스크
 
-로컬 디스크 옵션은 **SAP 인증** 쿼드 Intel Xeon E7-8890 v4 프로세서 베어메탈 구성에만 사용할 수 있습니다. 다음 옵션을 지정하십시오. 
+로컬 디스크 옵션은 **SAP 인증** 쿼드 Intel Xeon E7-8890 v4 프로세서 베어메탈 구성에만 사용할 수 있습니다. 다음 옵션을 지정하십시오.
 * **디스크 수**: 추가할 용량 디스크 수를 선택하십시오.
 * **디스크 유형**: 필요한 디스크 유형에 대한 옵션을 선택하십시오.
 
@@ -185,7 +188,7 @@ vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이
 
 하위 도메인 레이블은 다음 요구사항을 충족해야 합니다.
 *  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-*  하위 도메인 레이블은 영숫자 문자로 시작하고 끝나야 합니다.
+*  하위 도메인 레이블은 영문자로 시작하고 영숫자로 끝나야 합니다. 
 *  하위 도메인 레이블의 최대 길이는 10자입니다.
 *  하위 도메인 레이블은 계정 내에서 고유해야 합니다.
 
@@ -253,7 +256,7 @@ Windows 라이센싱에 대한 자세한 정보는 [Windows Server 2012 R2 문�
 
 ## 서비스 설정
 
-vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 주문할 수 있습니다. 서비스에 대한 자세한 정보는 [vCenter Server 인스턴스에 대한 사용 가능 서비스](vc_addingremovingservices.html#available-services-for-vcenter-server-instances)를 참조하십시오.
+vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 주문할 수 있습니다. 서비스에 대한 자세한 정보는 [vCenter Server 인스턴스에 대한 사용 가능 서비스](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)를 참조하십시오.
 
 ## 주문 요약
 
@@ -306,7 +309,7 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
 
 인스턴스의 배치가 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 배치의 상태를 확인할 수 있습니다.
 
-인스턴스가 성공적으로 배치된 경우에는 [vCenter Server 인스턴스의 기술 스펙](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
+인스턴스가 성공적으로 배치된 경우에는 [vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
 
 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
@@ -330,10 +333,10 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
 
 ### 관련 링크
 
-* [{{site.data.keyword.cloud_notm}} 계정 등록](../vmonic/signing_softlayer_account.html)
-* [vCenter Server 인스턴스 보기](vc_viewinginstances.html)
-* [vCenter Server 인스턴스에 대한 다중 사이트 구성](vc_multisite.html)
-* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](vc_addingviewingclusters.html)
-* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](vc_addingremovingservers.html)
-* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](vc_addingremovingservices.html)
-* [vCenter Server 인스턴스 삭제](vc_deletinginstance.html)
+* [{{site.data.keyword.cloud_notm}} 계정 등록](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [vCenter Server 인스턴스 보기](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
+* [vCenter Server 인스턴스에 대한 다중 사이트 구성](/docs/services/vmwaresolutions/vcenter/vc_multisite.html)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [vCenter Server 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)

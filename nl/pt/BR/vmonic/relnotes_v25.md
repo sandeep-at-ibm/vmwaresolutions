@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-08-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Notas sobre a Liberação para V2.5
 
@@ -20,7 +24,7 @@ O {{site.data.keyword.vmwaresolutions_short}} liberou correções do VMware em r
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Para obter mais informações, veja [Tratando as vulnerabilidades Spectre e Meltdown](../vmonic/trbl_fix_spectre.html).
+Para obter mais informações, veja [Tratando as vulnerabilidades Spectre e Meltdown](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
 
 ## Atualização de componente NSX
 
@@ -30,15 +34,16 @@ Esta liberação instala o VMware NSX for vSphere 6.4.1 para novas implementaç�
 
 O {{site.data.keyword.vmwaresolutions_short}} oferece dois serviços de complementos integrados para backup: IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} e Veeam on {{site.data.keyword.cloud_notm}}. Com esses serviços, é possível planejar e fornecer a recuperação de sua infraestrutura de gerenciamento e de sua carga de trabalho. Além disso, o IBM Resiliency Services fornece serviços gerenciados para backups do Veeam.
 
-Iniciando com a liberação da V2.5, os serviços IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} e Veeam on {{site.data.keyword.cloud_notm}}, quando implementados, não pré-configuram mais o backup de quaisquer VMs. Com essa mudança, é possível assegurar uma configuração adequada de todos os aspectos de suas tarefas de backup, incluindo planejamento, período de retenção, uso de deduplicação, monitoramento e alertas e gerenciamento de chaves de criptografia. Além disso, a VM do IBM CloudDriver não é mais configurada como um servidor de arquivos persistente para backups do NSX.
+Iniciando com a liberação da V2.5, os serviços IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} e Veeam on {{site.data.keyword.cloud_notm}}, quando implementados, não pré-configuram mais o backup de quaisquer MVs. Com essa mudança, é possível assegurar uma configuração adequada de todos os aspectos de suas tarefas de backup, incluindo planejamento, período de retenção, uso de deduplicação, monitoramento e alertas e gerenciamento de chaves de criptografia. Além disso, a MV do IBM CloudDriver não é mais configurada como um servidor de arquivos persistente para backups do NSX.
 
-Você é responsável pela configuração, gerenciamento e monitoramento de todos os componentes de software, incluindo o backup e a disponibilidade da infraestrutura de gerenciamento e das cargas de trabalho. Para obter mais informações, consulte [Fazendo backup de componentes](../archiref/solution/solution_backingup.html#backing-up-components).
+Você é responsável pela configuração, gerenciamento e monitoramento de todos os componentes de software, incluindo o backup e a disponibilidade da infraestrutura de gerenciamento e das cargas de trabalho. Para obter mais informações, consulte [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#backing-up-components).
 
-**Nota:** essa mudança não afeta as instâncias implementadas antes da V2.5 que tenham o serviço IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} ou o serviço Veeam on {{site.data.keyword.cloud_notm}} instalados.
+Essa mudança não afeta as instâncias que são implementadas antes da V2.5 que têm o serviço IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}} instalado.
+{:note}
 
 ## Resiliência do IBM CloudDriver
 
-Para instâncias implementadas ou submetidas a upgrade para liberações V2.5 ou mais recentes, o componente IBM CloudDriver não está mais configurado como uma máquina virtual (VM) dentro do cluster do vSphere. Em vez disso, ele é implementado como uma instância de servidor virtual (VSI) da infraestrutura do {{site.data.keyword.cloud_notm}}, conforme necessário, com o código mais recente do {{site.data.keyword.cloud_notm}} for VMware para operações, como a implementação de nós, clusters ou serviços adicionais. Além disso, o IBM CloudDriver foi mudado para se comunicar com o plano de gerenciamento do {{site.data.keyword.cloud_notm}}, usando a rede privada do {{site.data.keyword.cloud_notm}}. Com essa mudança, as regras de firewall de gerenciamento do NSX Edge Services Gateway (ESG) e as regras de conversão de endereço de rede (NAT) que permitem que o IBM CloudDriver comunique a saída para a rede pública são removidas.
+Para instâncias implementadas ou submetidas a upgrade para liberações V2.5 ou mais recentes, o componente IBM CloudDriver não está mais configurado como uma máquina virtual (MV) dentro do cluster do vSphere. Em vez disso, ele é implementado como uma instância de servidor virtual (VSI) da infraestrutura do {{site.data.keyword.cloud_notm}}, conforme necessário, com o código mais recente do {{site.data.keyword.cloud_notm}} for VMware para operações, como a implementação de nós, clusters ou serviços adicionais. Além disso, o IBM CloudDriver foi mudado para se comunicar com o plano de gerenciamento do {{site.data.keyword.cloud_notm}}, usando a rede privada do {{site.data.keyword.cloud_notm}}. Com essa mudança, as regras de firewall de gerenciamento do NSX Edge Services Gateway (ESG) e as regras de conversão de endereço de rede (NAT) que permitem que o IBM CloudDriver comunique a saída para a rede pública são removidas.
 
 Alguns serviços de complemento, como F5 on {{site.data.keyword.cloud_notm}}, FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} e Zerto on {{site.data.keyword.cloud_notm}}, ainda requerem acesso à rede pública, portanto o NSX ESG de gerenciamento permanece implementado em todas as instâncias.
 
@@ -50,8 +55,8 @@ Iniciando com a liberação V2.5, o {{site.data.keyword.vmwaresolutions_short}} 
 * Para instâncias que foram implementadas nas liberações V2.4 e anteriores, é possível migrá-las para uma conta especificada do {{site.data.keyword.cloud_notm}} e, em seguida, gerenciá-las usando o IAM também.
 
 Para obter mais informações, veja os tópicos a seguir:
-* [Convidando usuários para acessar serviços e recursos](../vmonic/iamuserinvite.html)
-* [ Gerenciando o acesso de usuário com o IAM ](../vmonic/iam.html)
+* [Convidando usuários para acessar serviços e recursos](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [Gerenciando o acesso de usuário com o IAM](/docs/services/vmwaresolutions/vmonic/iam.html)
 
 ## Mudanças nas contas do usuário e grupos para instâncias do VMware vCenter Server e do VMware Cloud Foundation
 
@@ -59,12 +64,15 @@ O grupo de usuários **ic4v-vCenter** foi criado no Microsoft Active Directory S
 
 Não edite as permissões globais do grupo **ic4v-vCenter** na página **Usuários e grupos** no VMware vSphere Web Client. Fazer isso pode afetar as operações de gerenciamento.
 
-Para instâncias do Cloud Foundation, use o ID do usuário do host **customerroot** no lugar do ID do usuário do host **raiz**. Continue a usar o ID do usuário do host **raiz** para instâncias do vCenter Server.
+Para instâncias do Cloud Foundation, use o ID do usuário do host **customerroot** no lugar do ID do usuário do host **raiz**.
+
+Para instâncias do vCenter Server, continue a usar a identificação de usuário do host **raiz**. A identificação
+de usuário do host **ic4vroot** foi criada apenas para uso da IBM.
 
 Para obter mais informações sobre contas do usuário, consulte os tópicos a seguir:
 
-* [Considerações sobre como alterar os artefatos do vCenter Server](../vcenter/vcenter_chg_impact.html)
-* [Considerações sobre como alterar os artefatos do Cloud Foundation](../sddc/cf_chg_impact.html)
+* [Considerações sobre como alterar os artefatos do vCenter Server](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
+* [Considerações sobre como alterar os artefatos do Cloud Foundation](/docs/services/vmwaresolutions/sddc/cf_chg_impact.html)
 
 ## Atualizações para serviços complementares
 
@@ -74,25 +82,27 @@ O serviço {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on 
 
 O {{site.data.keyword.cloud_notm}} Private Hosted traz o poder de microsserviços e contêineres para o ambiente VMware no {{site.data.keyword.cloud_notm}}. Com esse serviço, é possível ampliar o mesmo VMware familiar, o modelo operacional e as ferramentas do {{site.data.keyword.cloud_notm}} Private, do local para o {{site.data.keyword.cloud_notm}}.
 
-É possível solicitar esse serviço depois de pedir sua instância do vCenter Server. Para obter mais informações, consulte [Solicitando o {{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html).
+É possível solicitar esse serviço depois de pedir sua instância do vCenter Server.
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-A partir da liberação da V2.5, o serviço IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} é implementado como duas VMs separadas com base nas melhores práticas, com uma VM executando o servidor IBM Spectrum Protect Plus e a outra VM executando o servidor vSnap e o proxy do VADP.
+A partir da liberação da V2.5, o serviço IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} é implementado como duas MVs separadas com base nas melhores práticas, com uma MV executando o servidor IBM Spectrum Protect Plus e a outra MV executando o servidor vSnap e o proxy do VADP.
 
-Agora é possível pedir até 10 armazenamentos de dados de backup, permitindo até 120 TB de armazenamento de backup. O vSnap e a VM do VADP são dimensionados dependendo de seu tamanho de armazenamento de backup selecionado e de acordo com as informações nos [Blueprints do IBM Spectrum Protect Plus](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints).
+Agora é possível pedir até 10 armazenamentos de dados de backup, permitindo até 120 TB de armazenamento de backup. O vSnap e a MV do VADP são dimensionados dependendo de seu tamanho de armazenamento de backup selecionado e de acordo com as informações nos [Blueprints do IBM Spectrum Protect Plus](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints).
 
 ### KMIP for VMware on IBM Cloud
 
 Um novo terminal está agora disponível na Alemanha para o serviço KMIP for VMware on {{site.data.keyword.cloud_notm}}.
 
-Para obter mais informações, veja [Configuração do serviço KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration).
+Para obter mais informações, consulte
+[Configuração
+de serviço do KMIP for VMware on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration).
 
 ## Documentação nova e atualizada
 
 ### Documentação de armazenamento anexado
 
-O armazenamento Anexado para o vCenter Server no documento técnico do IBM Cloud agora está disponível na seção *Referência* da documentação do usuário. Esse documento de arquitetura de referência está disponível somente em inglês. Para obter mais informações, veja [Armazenamento anexado para o vCenter Server on IBM Cloud](../archiref/attached-storage/storage-benefits.html).
+O armazenamento Anexado para o vCenter Server no documento técnico do IBM Cloud agora está disponível na seção *Referência* da documentação do usuário. Para obter mais informações, veja [Armazenamento anexado para o vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/attached-storage/storage-benefits.html).
 
 ### Especificações técnicas
 
@@ -104,9 +114,9 @@ As informações de serviços são melhoradas para identificar facilmente o supo
 
 Para obter mais informações, veja os tópicos a seguir:
 
-* [Serviços disponíveis para instâncias do vCenter Server](../vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
-* [Serviços disponíveis para instâncias do vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [Serviços disponíveis para instâncias do Cloud Foundation](../sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
+* [Serviços disponíveis para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
+* [Serviços disponíveis para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [Serviços disponíveis para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
 
 ## Atualizações e aprimoramentos da interface com o usuário
 

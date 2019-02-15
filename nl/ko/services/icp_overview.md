@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -47,7 +47,7 @@ lastupdated: "2018-01-14"
 | 작업자     | 4 | 16 | 200 | 300 | 6 |
 | Vulnerability Advisor |8 | 16 | 500 |1 |1 |
 | GlusterFS  |8 | 16 | 150 | 50 | 3 |
-| 부트스트랩 {{site.data.keyword.icpfull_notm}}/CAM | 16 |32 | 250 |1 |1 |
+| 부트스트랩 {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 |1 |1 |
 | NFS 서버 |8 | 4개  | 350 |1 |1 |
 |NSX Edge Services Gateway |2 |1 | 0.5 | 0.5 |2 |
 | 문서화된 제한조건 | 52 | 640 |  | 8,000 |   |
@@ -63,7 +63,7 @@ lastupdated: "2018-01-14"
 | 작업자     | 4개 | 16 | 200 | 300 | 3 |
 | Vulnerability Advisor |8 | 16 | 150 |1 |1 |
 | GlusterFS  |8 | 16 | 150 | 50 | 3 |
-| 부트스트랩 {{site.data.keyword.icpfull_notm}}/CAM | 16 |32 | 250 |1 |1 |
+| 부트스트랩 {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 |1 |1 |
 | NFS 서버 |8 | 4개  | 350 |1 |1 |
 |NSX Edge Services Gateway |2 |1 | 0.5 | 0.5 |2 |
 | 문서화된 제한조건 | 30 | 200 |  | 4,000 |  |
@@ -83,7 +83,7 @@ lastupdated: "2018-01-14"
 | AvailableCores |	환경에서 워크로드 및 서비스에 사용 가능한 실제 코어의 수 |	 코어 수 |	38	| 43 |
 | HostCount	| 기본 클러스터에 있는 호스트 수	| 호스트 수 | 4	| 4개 |
 | HostCoreCount	| 기본 클러스터의 각 호스트에서 사용 가능한 원시 코어의 수 |	코어 수 |	16 | 16 |
-| HostOverheadCores	| ESXi 서버에 의해 오버헤드로 예약되는 코어의 수, 0.1 코어와 같음 | 코어 수	| 0.1 |	0.1 |
+| HostOverheadCores	| ESXi 서버에 의해 오버헤드로 예약되는 코어의 수, 0.1 코어와 같음	| 코어 수	| 0.1 |	0.1 |
 | MgmtOverheadCores |vCenter Server 관리 컴포넌트(vCenter Server, PSC, AD/DNS, Edges)에 의해 예약되는 코어의 수(5개 코어와 동일함)	| 코어 수	| 5	|5 |
 | vSphereHAHostTolerance |	vSphere HA 구성에서 허용하는 호스트 수(하나의 호스트와 동일함) |	 호스트 수	 |1 |1 |
 | HostVsanOverheadCorePercentage | vSAN에서 사용되는 호스트 코어의 백분율이며 10%이거나 호스트가 비vSAN인 경우 0% | % | 10% |	0% |
@@ -119,6 +119,6 @@ lastupdated: "2018-01-14"
 
 ### 관련 링크
 
-* [IBM Cloud Private Hosted 주문](../services/icp_ordering.html)
-* [vCenter Server 및 IBM Cloud Private 안내서](../archiref/vcsicp/vcsicp-intro.html)
+* [IBM Cloud Private Hosted 주문](/docs/services/vmwaresolutions/services/icp_ordering.html)
+* [vCenter Server 및 IBM Cloud Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
 * [IBM Cloud Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US)

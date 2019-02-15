@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-08-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,11 +21,11 @@ Esse design serve como uma arquitetura de linha de base que fornece a base para 
 ## Visão geral do VMware on IBM Cloud
 
 Figura 1. Visão geral do VMware on {{site.data.keyword.cloud_notm}}
-![Visão geral do VMware on {{site.data.keyword.cloud_notm}}](solution_overview.svg "A solução virtualiza o cálculo, a rede e opcionalmente os recursos de armazenamento a serem consumidos pelas VMs nas quais é possível executar seus aplicativos.")
+![Visão geral do VMware on {{site.data.keyword.cloud_notm}}](solution_overview.svg "A solução virtualiza o cálculo, a rede e opcionalmente os recursos de armazenamento a serem consumidos pelas MVs nas quais é possível executar seus aplicativos.")
 
 ## Principais benefícios
 
-O VMware Cloud Foundation e o vCenter Server on {{site.data.keyword.cloud_notm}} fornecem os blocos de construção fundamentais, o que inclui VMware vSphere, vCenter Server, NSX e opções de armazenamento compartilhado, incluindo vSAN. Esses componentes são necessários para arquitetar flexivelmente uma solução de data center definida pelo software VMware que melhor se ajuste às cargas de trabalho. 
+O VMware Cloud Foundation e o vCenter Server on {{site.data.keyword.cloud_notm}} fornecem os blocos de construção fundamentais, o que inclui VMware vSphere, vCenter Server, NSX e opções de armazenamento compartilhado, incluindo vSAN. Esses componentes são necessários para arquitetar flexivelmente uma solução de data center definida pelo software VMware que melhor se ajuste às cargas de trabalho.
 
 Aplicando a automação avançada e a infraestrutura bare metal de único locatário, é possível implementar rapidamente o ambiente do VMware inteiro para o {{site.data.keyword.cloud_notm}} em horas. Em seguida, é possível acessar e gerenciar o ambiente hospedado pela IBM por meio dos clientes nativos do VMware, da Interface da Linha de Comandos (CLI), dos scripts existentes ou de outras ferramentas compatíveis com a API do vSphere familiar.
 
@@ -40,6 +40,6 @@ As ofertas do VMware on {{site.data.keyword.cloud_notm}} trazem os benefícios a
 
 ### Links relacionados
 
-* [ Visão geral do design ](design_overview.html)
-* [ Capacidade de Escalação ](solution_scaling.html)
-* [ Fazendo backup de componentes ](solution_backingup.html)
+* [Visão geral do design](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [ Capacidade de Escalação ](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
+* [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

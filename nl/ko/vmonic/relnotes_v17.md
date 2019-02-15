@@ -27,29 +27,29 @@ lastupdated: "2017-07-05"
 * EVC 모드(Intel “Haswell” 2690-V3 프로세서 기반)는 업그레이드 시 V3 서버에 있는 기존의 이전 VMware 배치에서 사용으로 설정됩니다.
 
   EVC 모드는 V4 서버의 기존 또는 새 배치에 사용으로 설정되지 않습니다.
-{:note}
+  {:note}
 
-* 5월 22일 이전에 배치되었으며 이에 따라 V3 서버를 사용 중인 VMware Cloud Foundation 배치는 이제 새 노드를 인스턴스에 추가할 때 V4 서버를 주문합니다. 이 서버에는 256GB의 메모리가 있습니다. 512GB 메모리가 필요하면 서버를 추가한 후 지원 티켓을 열어 521GB 메모리로 서버 업그레이드를 요청하십시오. IBM 지원 센터 문의에 대한 자세한 정보는 [IBM 지원 센터에 문의](trbl_support.html)를 참조하십시오.
+* 5월 22일 이전에 배치되었으며 이에 따라 V3 서버를 사용 중인 VMware Cloud Foundation 배치는 이제 새 노드를 인스턴스에 추가할 때 V4 서버를 주문합니다. 이 서버에는 256GB의 메모리가 있습니다. 512GB 메모리가 필요하면 서버를 추가한 후 지원 티켓을 열어 521GB 메모리로 서버 업그레이드를 요청하십시오. IBM 지원 센터 문의에 대한 자세한 정보는 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)를 참조하십시오.
 
-컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오.
+컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)을 참조하십시오.
 
 ### 업그레이드 프로세스 요구사항
 
-Cloud Foundation 인스턴스 배치의 복잡도 및 다중 사이트 구성의 보유 여부에 따라 업데이트 프로세스에는 콘솔의 **업데이트 및 패치** 탭에 표시된 대로 완료해야 하는 단계의 순서가 필요할 수 있습니다. 자세한 정보는 [Cloud Foundation 인스턴스에 업데이트 적용](../sddc/sd_applyingupdates.html#applying-updates-to-cloud-foundation-instances)을 참조하십시오.
+Cloud Foundation 인스턴스 배치의 복잡도 및 다중 사이트 구성의 보유 여부에 따라 업데이트 프로세스에는 콘솔의 **업데이트 및 패치** 탭에 표시된 대로 완료해야 하는 단계의 순서가 필요할 수 있습니다. 자세한 정보는 [Cloud Foundation 인스턴스에 업데이트 적용](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html#applying-updates-to-cloud-foundation-instances)을 참조하십시오.
 
 ## VMware vCenter Server 인스턴스에 대한 업데이트
 
 ### 클러스터 지원
 
-더 나은 리소스 관리 및 고가용성을 위해 V1.7 릴리스부터 클러스터를 사용하여 vCenter Server 인스턴스의 ESXi 서버를 관리할 수 있습니다. 인스턴스를 주문할 때 구성한 ESXi 서버는 기본적으로 **cluster1**로 그룹화됩니다. 클러스터 새부사항을 보거나 인스턴스 세부사항 페이지에 있는 새로 도입된 **인프라** 탭의 인스턴스에 총 다섯 개의 클러스터를 추가할 수 있습니다. 인스턴스의 용량을 확장하거나 축소하는 경우 ESXi 서버를 추가할 클러스터 또는 ESXi 서버를 제거할 클러스터를 선택할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](../vcenter/vc_addingviewingclusters.html)를 참조하십시오.
+더 나은 리소스 관리 및 고가용성을 위해 V1.7 릴리스부터 클러스터를 사용하여 vCenter Server 인스턴스의 ESXi 서버를 관리할 수 있습니다. 인스턴스를 주문할 때 구성한 ESXi 서버는 기본적으로 **cluster1**로 그룹화됩니다. 클러스터 새부사항을 보거나 인스턴스 세부사항 페이지에 있는 새로 도입된 **인프라** 탭의 인스턴스에 총 다섯 개의 클러스터를 추가할 수 있습니다. 인스턴스의 용량을 확장하거나 축소하는 경우 ESXi 서버를 추가할 클러스터 또는 ESXi 서버를 제거할 클러스터를 선택할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)를 참조하십시오.
 
 ### Zerto 재해 복구의 배치에 대한 개선사항
 
-이제 Zerto 재해 복구의 배치가 지원 티켓을 통해 처리되지 않고 자동화됩니다. 주문하기 전에 검토할 수 있도록 예상 비용에 모든 Zerto 컴포넌트(예: 사설 포터블 서브넷), Windows VSI(Virtual Service Instance) 및 Zerto 라이센스 비용이 나열됩니다. 자세한 정보는 [Zerto 재해 복구의 배치 프로세스](../services/addingzertodr.html)를 참조하십시오.
+이제 Zerto 재해 복구의 배치가 지원 티켓을 통해 처리되지 않고 자동화됩니다. 주문하기 전에 검토할 수 있도록 예상 비용에 모든 Zerto 컴포넌트(예: 사설 포터블 서브넷), Windows VSI(Virtual Service Instance) 및 Zerto 라이센스 비용이 나열됩니다. 자세한 정보는 [Zerto 재해 복구의 배치 프로세스](/docs/services/vmwaresolutions/services/addingzertodr.html)를 참조하십시오.
 
 ### NSX 라이센스 업그레이드 기능
 
-vCenter Server 인스턴스의 **요약** 탭에서 NSX 라이센스 에디션을 업그레이드할 수 있습니다. 라이센스 업그레이드는 계정에 있는 기존의 모든 NSX SoftLayer 라이센스를 새 라이센스로 대체합니다. 자세한 정보는 [vCenter Server 인스턴스 보기](../vcenter/vc_viewinginstances.html)를 참조하십시오.
+vCenter Server 인스턴스의 **요약** 탭에서 NSX 라이센스 에디션을 업그레이드할 수 있습니다. 라이센스 업그레이드는 계정에 있는 기존의 모든 NSX SoftLayer 라이센스를 새 라이센스로 대체합니다. 자세한 정보는 [vCenter Server 인스턴스 보기](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)를 참조하십시오.
 
 ## 사용성 개선사항
 

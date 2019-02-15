@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,7 +18,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}}는 서비스로 VMware vSph
 
 대부분의 경우 전체 환경은 하루 내에 프로비저닝할 수 있으며, 베어메탈 인프라는 필요에 따라 신속하고 탄력적으로 컴퓨팅 용량을 늘리거나 줄이도록 스케일링할 수 있습니다.
 
-배치 후 {{site.data.keyword.slportal}}에서 추가 NFS(Network File System) 파일 공유를 주문하고 클러스터의 모든 ESXi 서버에 해당 파일 공유를 수동으로 연결하여 공유 스토리지를 늘릴 수 있습니다. 전용 스토리지가 필요한 경우, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html)가 고성능(모두 SSD) 및 고용량(모두 SATA) 구성 모두에서 제공됩니다.
+배치 후 {{site.data.keyword.slportal}}에서 추가 NFS(Network File System) 파일 공유를 주문하고 클러스터의 모든 ESXi 서버에 해당 파일 공유를 수동으로 연결하여 공유 스토리지를 늘릴 수 있습니다. 전용 스토리지가 필요한 경우, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)가 고성능(모두 SSD) 및 고용량(모두 SATA) 구성 모두에서 제공됩니다.
 
 또한 VMware vSAN은 전용 스토리지 옵션으로도 사용할 수 있습니다. vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 후 더 많은 ESXi 서버를 추가할 수 있습니다.
 
@@ -51,7 +51,7 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 
 기본 오퍼링에는 가상화 관리 계층에 대해 예약된 총 38개의 vCPU와 67GB vRAM이 필요합니다. VM에 남아 있는 호스트 용량은 초과 구독 비율, VM 크기 조정 및 워크로드 성능 요구사항과 같은 여러 요인에 따라 달라집니다.
 
-아키텍처에 대한 자세한 정보는 [{{site.data.keyword.vmwaresolutions_short}} 아키텍처 참조](../archiref/solution/solution_overview.html)를 참조하십시오.
+아키텍처에 대한 자세한 정보는 [{{site.data.keyword.vmwaresolutions_short}} 아키텍처 참조](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)를 참조하십시오.
 
 ## vCenter Server 인스턴스의 기술 스펙
 
@@ -77,11 +77,11 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 *  세 개의 VLAN(Virtual LANs): 한 개의 공용 VLAN 및 두 개의 사설 VLAN
 *  계층 2(L2) 네트워크에 연결된 로컬 워크로드 간의 잠재적인 동쪽-서쪽 통신을 위해 DLR(Distributed Logical Router)이 포함된 하나의 VXLAN(Virtual eXtensible LAN). VXLAN은 VXLAN을 수정하거나 VXLAN에 빌드하거나 VXLAN을 제거할 수 있는 샘플 라우팅 토폴로지로 배치됩니다. 또한 DLR의 새 논리 인터페이스에 추가 VXLAN을 연결하여 보안 구역을 추가할 수 있습니다.
 *  두 개의 VMware NSX Edge Services Gateway:
-  * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 자세한 정보는 [고객 관리 ESG를 사용하도록 네트워크 구성](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)을 참조하십시오.
+  * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 자세한 정보는 [고객 관리 ESG를 사용하도록 네트워크 구성](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)을 참조하십시오.
 
     이 ESG는 **mgmt-nsx-edge**로 이름이 지정되고 사용자가 액세스할 수 없으며 사용자는 ESG를 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트에 대한 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
     {:important}
-  * 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽에 대한 보안 고객 관리 VMware NSX Edge Services Gateway. 이 게이트웨이는 VPN 액세스 또는 공용 액세스를 제공하기 위해 사용자가 수정할 수 있는 템플리트로 IBM에 의해 배치됩니다. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
+  * 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽에 대한 보안 고객 관리 VMware NSX Edge Services Gateway. 이 게이트웨이는 VPN 액세스 또는 공용 액세스를 제공하기 위해 사용자가 수정할 수 있는 템플리트로 IBM에 의해 배치됩니다. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
 ### Virtual Server 인스턴스
 
@@ -94,6 +94,9 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 ### 스토리지
 
 초기 배치 중에 vSAN과 NFS 스토리지 옵션 중에서 선택할 수 있습니다.
+
+인스턴스 V2.8 이상의 경우에는 기존 NFS 또는 vSAN 클러스터에 NFS 스토리지 공유를 추가할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances)의 *NFS 스토리지를 vCenter Server 인스턴스에 추가* 섹션을 참조하십시오.
+{:note}
 
 #### vSAN 스토리지
 
@@ -134,7 +137,7 @@ NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 
 
 ### 확장 노드를 위한 하드웨어
 
-[vCenter Server 인스턴스의 기술 스펙](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)에 제시된 구성을 지닌 하나의 Bare Metal Server.
+[vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)에 제시된 구성을 지닌 하나의 Bare Metal Server.
 
 ### 확장 노드의 라이센스 및 요금
 
@@ -154,7 +157,7 @@ NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 
 
 ### 관련 링크
 
-* [vCenter Server 소프트웨어 명세서](vc_bom.html)
-* [vCenter Server 인스턴스 계획](vc_planning.html)
-* [vCenter Server 인스턴스 주문](vc_orderinginstance.html)
+* [vCenter Server 소프트웨어 명세서](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [vCenter Server 인스턴스 계획](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 * [{{site.data.keyword.cloud_notm}} file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

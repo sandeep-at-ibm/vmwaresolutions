@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -35,7 +35,7 @@ VMware 컴포넌트에 대해 고유 라이센스 사용을 선택하고 이에 
 
 VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 새 클러스터를 작성하기 위해 주문한 후 VMware 라이센스, ESXi 서버 및 기타 네트워킹 컴포넌트가 제공되고 {{site.data.keyword.slportal}}에서 관리될 수 있습니다.
 
-배치 후 {{site.data.keyword.vmwaresolutions_short}} 콘솔로 이동하여 저장된 구성을 통해 새 클러스터를 스케일링하십시오. 자세한 정보는 [기존 vSphere 클러스터 스케일링](../vsphere/vs_scalingexistingclusters.html)을 참조하십시오.
+배치 후 {{site.data.keyword.vmwaresolutions_short}} 콘솔로 이동하여 저장된 구성을 통해 새 클러스터를 스케일링하십시오. 자세한 정보는 [기존 vSphere 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)을 참조하십시오.
 
 ## BYOL에 필요한 라이센스 에디션 및 CPU는 무엇입니까?
 
@@ -81,18 +81,18 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 새 클러스터를
 
 ## 특정 VMware 컴포넌트의 경우 일부 라이센스에 BYOL을 사용하고 IBM에서 나머지 라이센스를 구매할 수 있습니까?
 
-예. 클러스터 작성 시 특정 VMware 컴포넌트에 맞는 BYOL을 선택한 경우 다음 옵션이 제공됩니다. 
+예. 클러스터 작성 시 특정 VMware 컴포넌트에 맞는 BYOL을 선택한 경우 다음 옵션이 제공됩니다.
 * 새 BYOL키 입력
 * 계속해서 기존 BYOL 키 사용
 * 해당 클러스터를 위해 IBM 제공 라이센싱 구매
 
-현재 클러스터당 VMware vSphere Enterprise 및 VMware vSAN만 라이센싱할 수 잇습니다. 
+현재 클러스터당 VMware vSphere Enterprise 및 VMware vSAN만 라이센싱할 수 잇습니다.
 
 ## 클러스터 작성 시 BYOL을 사용할 수 있습니까?
 
-예. 클러스터 작성 시 기존 BYOL 라이센스에서 BYOL을 수행하거나 새 BYOL을 입력할 수 있습니다. 또한 클러스터 작성 시 IBM 제공 구독 라이센스를 구매할 수 있습니다. 
+예. 클러스터 작성 시 기존 BYOL 라이센스에서 BYOL을 수행하거나 새 BYOL을 입력할 수 있습니다. 또한 클러스터 작성 시 IBM 제공 구독 라이센스를 구매할 수 있습니다.
 
-현재 클러스터당 VMware vSphere Enterprise 및 VMware vSAN만 라이센싱할 수 잇습니다. 
+현재 클러스터당 VMware vSphere Enterprise 및 VMware vSAN만 라이센싱할 수 잇습니다.
 
 ## 내 BYOL 라이센스를 관리할 수 있는 방법은 무엇입니까?
 
@@ -154,8 +154,7 @@ vCenter Server with Hybridity Bundle에 NSX Advanced가 포함되어 있을 때 
 
 ### 관련 링크
 
-* [Cloud Foundation 인스턴스 주문](../sddc/sd_orderinginstance.html)
-* [Cloud Foundation 인스턴스](../sddc/sd_cloudfoundationoverview.html)
-* [콘솔에 액세스](loginmethod.html)
-* [IBM 지원 센터에 문의](trbl_support.html)
-* [vRealize Automation](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/vRealizeAutomation){:new_window}
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation 인스턴스](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [콘솔에 액세스](/docs/services/vmwaresolutions/vmonic/loginmethod.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

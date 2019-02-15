@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-10"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-01-10"
 ## vCenter Server 인스턴스에 클러스터 추가
 
 인스턴스에 추가할 수 있는 클러스터의 수는 인스턴스 버전에 따라 달라집니다.
-* V2.5 이상에 배치된(또는 업그레이드된) 인스턴스의 경우에는 클러스터, 호스트 및 VM 수가 추가할 수 있는 클러스터 수의 최대 제한을 결정합니다. 배치를 위해 VMware 크기 조정 가이드라인 및 제한사항을 계속 준수해야 합니다. 
+* V2.5 이상에 배치된(또는 업그레이드된) 인스턴스의 경우에는 클러스터, 호스트 및 VM 수가 추가할 수 있는 클러스터 수의 최대 제한을 결정합니다. 배치를 위해 VMware 크기 조정 가이드라인 및 제한사항을 계속 준수해야 합니다.
 * V2.2 이상에 배치된(또는 업그레이드된) 인스턴스의 경우에는 최대 10개의 클러스터를 추가할 수 있습니다.
 * V2.1 이하에 배치된 인스턴스의 경우 최대 5개의 클러스터를 추가할 수 있습니다.
 
@@ -144,7 +144,7 @@ V2.0 이하에 배치된 vCenter Server 인스턴스의 경우, 클러스터에 
 
 ### 로컬 디스크
 
-로컬 디스크 옵션은 **SAP 인증** 쿼드 Intel Xeon E7-8890 v4 프로세서 베어메탈 구성에만 사용할 수 있습니다. 다음 옵션을 지정하십시오. 
+로컬 디스크 옵션은 **SAP 인증** 쿼드 Intel Xeon E7-8890 v4 프로세서 베어메탈 구성에만 사용할 수 있습니다. 다음 옵션을 지정하십시오.
 * **디스크 수**: 추가할 용량 디스크 수를 선택하십시오.
 * **디스크 유형**: 필요한 디스크 유형에 대한 옵션을 선택하십시오.
 
@@ -289,5 +289,5 @@ V2.0 이하에 배치된 vCenter Server 인스턴스의 경우, 클러스터에 
 
 ### 관련 링크
 
-* [vCenter Server 인스턴스 보기](vc_viewinginstances.html)
-* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](vc_addingremovingservers.html)
+* [vCenter Server 인스턴스 보기](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
+* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)

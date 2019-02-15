@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -71,7 +71,7 @@ lastupdated: "2018-10-30"
 
 ### 관련 링크
 
-* [VMware Federal 인스턴스에 대한 요구사항 및 계획](vc_fed_planning.html)
-* [VMware Federal 인스턴스의 클러스터 추가, 보기 및 삭제](fed_addviewdeleteclusters.html)
+* [VMware Federal 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
+* [VMware Federal 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
 * [Place a host in maintenance mode](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

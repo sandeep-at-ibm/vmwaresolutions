@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -54,17 +54,17 @@ A implementação do HCX no {{site.data.keyword.cloud_notm}} é automatizada. Qu
    * Uma sub-rede portátil privada para interconexões HCX. Essa sub-rede é usada quando a opção **Rede privada** é selecionada para o **Tipo de interconexão HCX**.
    * Uma sub-rede portátil pública para ativação e manutenção com o VMware. Se a opção **Rede pública** estiver selecionada para o **Tipo de interconexão HCX**, essa sub-rede também será usada para interconexões HCX.
 
-   Os endereços IP nas sub-redes que são pedidos para o HCX são destinados a serem gerenciados pela automação do VMware on {{site.data.keyword.cloud_notm}}. Esses endereços IP não podem ser designados a recursos do VMware, como VMs e NSX Edges, que são criados por você. Se você precisar de endereços IP adicionais para seus artefatos do VMware, deverá pedir suas próprias sub-redes do {{site.data.keyword.cloud_notm}}.
+   Os endereços IP nas sub-redes que são pedidos para o HCX são destinados a serem gerenciados pela automação do VMware on {{site.data.keyword.cloud_notm}}. Esses endereços IP não podem ser designados a recursos do VMware, como MVs e NSX Edges, que são criados por você. Se você precisar de endereços IP adicionais para seus artefatos do VMware, deverá pedir suas próprias sub-redes do {{site.data.keyword.cloud_notm}}.
    {:important}
 2. Se a **Rede privada** foi selecionada para o **Tipo de interconexão do HCX**, um grupo de portas denominado **SDDC-DPortGroup-HCX-Private** será criado no Distributed Virtual Switch (DVS) privado.
 3. Uma chave de ativação do HCX é pedida por meio do VMware.
-4. Três conjuntos de recursos e pastas da VM para o HCX são criados, os quais são necessários para as interconexões do
+4. Três conjuntos de recursos e pastas da MV para o HCX são criados, os quais são necessários para as interconexões do
 HCX, os componentes do HCX local e os componentes do HCX remoto.
 5. Um par de VMware NSX Edge Services Gateways (ESGs) para o tráfego de gerenciamento do HCX é implementado e configurado:
    * As interfaces de uplink públicas e privadas são configuradas usando as sub-redes pedidas.
    * Os ESGs são configurados como um par de dispositivos de borda extragrandes com a Alta Disponibilidade (HA) ativada.
    * As regras de firewall e as regras de conversão de endereço de rede (NAT) são configuradas para permitir o tráfego HTTPS de entrada e de saída para/do HCX Manager.
-   * As regras do balanceador de carga e os conjuntos de recursos são configurados. Essas regras são conjuntos de recursos usados para encaminhar o tráfego de entrada relacionado ao HCX para os dispositivos virtuais apropriados do HCX Manager, vCenter Server e Platform Services Controller (PSC).
+   * As regras do balanceador de carga e os conjuntos de recursos são configurados. Essas regras e conjuntos de recursos são usados para encaminhar o tráfego de entrada relacionado ao HCX para os dispositivos virtuais apropriados do HCX Manager e do vCenter Server (com o Platform Services Controller integrado).
    * Um certificado SSL para criptografar o tráfego HTTPS de entrada relacionado ao HCX que está chegando por meio de ESGs é aplicado.
 
    A borda de gerenciamento do HCX é dedicada ao tráfego de gerenciamento do HCX entre os componentes do HCX no local e os componentes do HCX do lado da nuvem. Não modifique o limite de gerenciamento do HCX ou use-o para extensões de rede do HCX. Em vez disso, crie limites separados para extensões de rede. Além disso, usar um firewall ou desativar as comunicações de borda de gerenciamento do HCX para os componentes de gerenciamento privados da IBM ou para a Internet pública pode impactar negativamente a funcionalidade do HCX.
@@ -72,17 +72,17 @@ HCX, os componentes do HCX local e os componentes do HCX remoto.
 
 6. O HCX Manager on {{site.data.keyword.cloud_notm}} é implementado, ativado e configurado:
    * O HCX Manager é registrado com o vCenter Server.
-   * O HCX Manager, vCenter Server, PSC e NSX Manager são configurados.
+   * O HCX Manager, o vCenter Server (com o Platform Services Controller integrado) e o NSX Manager estão configurados.
    * A frota do HCX está configurado.
    * Os contêineres de implementação do HCX locais e remotos são configurados.
 7. O nome do host e o endereço IP do HCX Manager está registrado com o servidor DNS do VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 ### Links relacionados
 
-* [HCX no {{site.data.keyword.cloud_notm}} visão geral](hcx_considerations.html)
-* [Gerenciando o HCX no {{site.data.keyword.cloud_notm}}](managinghcx.html)
-* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Glossário de termos do HCX](hcx_glossary.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
+* [HCX no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [Gerenciando o HCX no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Glossário de termos do HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [Visão geral do VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
 * [Documentação do VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

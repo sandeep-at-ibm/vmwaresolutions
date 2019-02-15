@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-07-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -65,6 +65,6 @@ lastupdated: "2018-07-09"
 
 ### 관련 링크
 
-* [솔루션 개요](solution_overview.html)
-* [디자인 개요](design_overview.html)
-* [컴포넌트 백업](solution_backingup.html)
+* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [디자인 개요](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

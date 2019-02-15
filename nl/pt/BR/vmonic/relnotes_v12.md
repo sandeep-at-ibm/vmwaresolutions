@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2016-12-12"
 
@@ -21,27 +21,27 @@ A nova versão do VMware ESXi é vSphere 6.0 u2 p03, atualizada do ESXi 6.0 u2 n
 O {{site.data.keyword.vmwaresolutions_full}} é fornecido como uma solução de infraestrutura no catálogo do IBM Bluemix®. Deve-se associar a conta **IBMid** a uma conta do Bluemix para usar a conta **IBMid** para efetuar login no console do {{site.data.keyword.vmwaresolutions_short}}.
 
 Para obter mais informações, veja os tópicos a seguir:
-* [Iniciar](../index.html)
-* [Resolução de problemas para acessar o Bluemix](../../../account/ts_accessing.html){:new_window}
+* [Introdução](/docs/services/vmwaresolutions/index.html)
+* [Resolução de problemas para acessar o Bluemix](/docs/account/ts_accessing.html){:new_window}
 
 ## Recuperação de desastre Zerto
 
 É possível pedir instâncias do VMware Cloud Foundation e do VMware vCenter Server com a recuperação de desastre Zerto incluída quando você pede suas instâncias. É possível também incluir a recuperação de desastre Zerto em suas instâncias existentes do Cloud Foundation e do vCenter Server na página de detalhes da instância.
 
 Para obter mais informações, veja os tópicos a seguir:
-* [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html)
-* [Visualizando instâncias do Cloud Foundation](../sddc/sd_viewinginstances.html)
-* [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)
-* [Visualizando instâncias do vCenter Server](../vcenter/vc_viewinginstances.html)
-* [Recuperação de desastre Zerto](../services/addingzertodr.html)
+* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Visualizando instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Visualizando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
+* [Recuperação de desastre Zerto](/docs/services/vmwaresolutions/services/addingzertodr.html)
 
 ## Informações de precificação
 
 Agora, é possível ver e revisar o custo estimado da instância pedida antes de você decidir fazer um pedido. Depois de selecionar seus componentes ao pedir sua instância, o custo total e a precificação detalhada de todos os componentes são exibidos na página **Resumo**.
 
 Para obter mais informações, veja os tópicos a seguir:
-* [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html)
-* [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)
+* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 
 ## Aprimoramentos para o processo de pedido da instância
 
@@ -50,11 +50,11 @@ O processo de ordem da instância foi aprimorado significativamente por meio dos
 *  Para instâncias do vCenter Server, o pedido no qual você seleciona os componentes da instância é otimizado para que apenas os data centers que têm o hardware disponível e os servidores ESXi que você precisa sejam exibidos. Essa mudança minimiza a possibilidade de erros mais tarde.
 
 Para obter mais informações, veja os tópicos a seguir:
-* [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html)
-* [Pedindo instâncias do vCenter Server](../vcenter/vc_orderinginstance.html)
+* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 
 ## Notificações adicionais por e-mail
 
 Agora, você recebe uma notificação por e-mail quando novos servidores ESXi são incluídos em suas instâncias e quando servidores ESXi existentes são removidos. Além disso, você é notificado por e-mail quando uma instância é excluída. As configurações de notificação são ativadas por padrão. Com base em suas preferências, é possível configurar quais notificações você deseja receber na página **Configurações**.
 
-Para obter mais informações, veja [Configurações e conta do usuário](useraccount.html).
+Para obter mais informações, veja [Configurações e conta do usuário](/docs/services/vmwaresolutions/vmonic/useraccount.html).

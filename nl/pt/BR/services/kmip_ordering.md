@@ -2,13 +2,21 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-12-20"
 
 ---
 
-# Pedindo o KMIP for VMware on IBM Cloud
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+
+# Pedindo o KMIP for VMware on IBM Cloud - Descontinuado
+
+A versão atual do KMIP for VMware on IBM Cloud está sendo descontinuada. Para obter mais informações, [entre em contato com o suporte IBM](../vmonic/trbl_support.html).
+{:deprecated}
 
 É possível pedir o serviço KMIP for VMware on {{site.data.keyword.cloud}} ao pedir uma nova instância com o serviço incluso ou incluindo serviço em sua instância existente.
 
@@ -61,16 +69,14 @@ Clique em **Recuperar** para obter a lista de instâncias disponíveis do IBM Ke
 
 Clique em **Recuperar** para obter a chave raiz do cliente que está armazenada em sua instância selecionada do IBM Key Protect.
 
-
-
 ### Links relacionados
 
 * [ Visão geral do KMIP for VMware on  {{site.data.keyword.cloud_notm}}  overview ](kmip_considerations.html)
 * [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](../sddc/sd_addingremovingservices.html)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](../vcenter/vc_addingremovingservices.html)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)
-* [IBM Key Protect para {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/services/keymgmt/index.html#getting-started-with-key-protect)
-* [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect?&language=javascript_jquery#introduction)
+* [Eventos do {{site.data.keyword.cloudaccesstrailshort}}](../vmonic/at-events.html)
+* [IBM Key Protect para {{site.data.keyword.cloud_notm}}](../../keymgmt/index.html)
 * [vSphere Security](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)
 * [Perguntas mais frequentes](../vmonic/faq.html)
 * [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)

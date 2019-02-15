@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -39,9 +39,9 @@ alimentar artigos, vídeos, blogs e outros conteúdos baseados na Internet para
 criar um banco de dados de manobras aprendidas, que pode ser consultado pelo
 aplicativo.
 
-O aplicativo Skate Advisor também é implementado na plataforma de
-modernização de aplicativo, que fornece serviços baseados em contêiner por meio do
-{{site.data.keyword.cloud}} Private (ICP) hospedado na plataforma {{site.data.keyword.cloud_notm}} for VMware Services.
+O aplicativo Skate Advisor também é implementado na plataforma de modernização
+de aplicativo, que fornece serviços baseados em contêiner por meio do
+{{site.data.keyword.icpfull_notm}} hospedado na plataforma {{site.data.keyword.cloud_notm}} for VMware Services.
 
 O aplicativo Acme Skate Advisor aproveita tanto a plataforma
 Watson quanto a plataforma de modernização de aplicativo.
@@ -51,8 +51,8 @@ Watson quanto a plataforma de modernização de aplicativo.
 ### Demonstração de modernização de aplicativo
 
 Demonstre um aplicativo que tenha sido implementado na plataforma de
-modernização de aplicativo. A plataforma inclui os componentes ICP, CAM e NSX
-implementados no {{site.data.keyword.cloud_notm}} para a oferta VMware vCenter Server on
+modernização de aplicativo. A plataforma inclui os componentes {{site.data.keyword.icpfull_notm}}, CAM e NSX
+implementados no {{site.data.keyword.cloud_notm}} para a oferta do VMware vCenter Server on
 {{site.data.keyword.cloud_notm}}.
 
 ### Reconhecimento de voz do Watson com o Watson Assistant
@@ -82,7 +82,6 @@ Modernização de aplicativo é um termo que descreve o processo de transição 
 As pressões de negócios demandam prazo de lançamento no mercado mais rápido. Seu estado existente inclui não somente aplicativos, mas dados, processos, lógica de negócios e interfaces com o usuário, todos os quais precisam se adaptar para manter novas demandas de negócios.
 
 A lista a seguir descreve os benefícios da modernização de aplicativo:
-
 - Melhora a produtividade do Desenvolvedor
 - Aumenta a eficiência operacional
 - Reduz o custo para construir novos recursos
@@ -93,16 +92,15 @@ necessidade de modernizar os ambientes de aplicativos. No entanto, a maioria
 das organizações está se aproximando da modernização de aplicativo em uma abordagem
 montada, que requer uma paisagem híbrida e multinuvem, em que:
 
-- Aplicativos legados complexos e monolíticos que geralmente são executados em
-mainframes ou sistemas UNIX que permanecem no local.
-- Os ambientes x86 usados para Sistemas de registro (SoR) ou aplicativos que são cargas de trabalho reguladas ou sensíveis à segurança são colocados em infraestrutura virtualizada ou em uma nuvem privada.
+- Os aplicativos de herança complexos e monolíticos que geralmente são executados em mainframes ou sistemas UNIX permanecem no local.
+- Ambientes x86 usados para Sistemas de Registro (SoR), aplicativos que são sensíveis à segurança e cargas de trabalho reguladas são colocados em uma infraestrutura virtualizada ou em uma nuvem privada.
 - Aplicativos como o SAP ou a computação de alto desempenho usam
 recursos bare metal.
 - As cargas de trabalho reguladas e sensíveis à segurança, que podem ser movidas para a nuvem pública, estão se movendo para ambientes dedicados.
 - Os sistemas de engajamento (SoE), como web, móvel, IoT, IA ou vídeo, estão sendo transferidos para nuvens públicas.
 
 Por exemplo, um padrão comum é ter aplicativos SoE de front-end implementados como contêineres com bancos de dados e middleware legado que são implementados em
-VMs em uma nuvem privada.
+MVs em uma nuvem privada.
 
 Como a infraestrutura de TI e as necessidades de negócios são exclusivas, uma abordagem à modernização deve fornecer as prioridades a seguir:
 
@@ -115,17 +113,17 @@ A IBM fornece exatamente uma abordagem para modernização do aplicativo que pod
 
 Os documentos a seguir fornecem diferentes visualizações sobre as tecnologias que são usadas na jornada de modernização de aplicativo para o {{site.data.keyword.cloud_notm}}:
 
-* [vCenter Server e {{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html) - uma arquitetura de referência para implementar as plataformas a seguir.
+* [vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html): uma arquitetura de referência para implementar as plataformas a seguir.
    - **VMware vCenter Server on IBM Cloud** – o vCenter Server é uma oferta do {{site.data.keyword.vmwaresolutions_short}} que é uma plataforma baseada em VMware provisionada automaticamente no {{site.data.keyword.cloud_notm}}.
-   - **IBM Cloud Private** – o ICP é uma plataforma de aplicativo para desenvolver e gerenciar aplicativos conteinerizados. O ICP é um ambiente integrado que inclui o orchestrator de contêineres Kubernetes, um repositório de imagem privada, um console de gerenciamento, estruturas de monitoramento e uma interface gráfica com o usuário. A interface com o usuário fornece um local centralizado por meio do qual é possível implementar, gerenciar, monitorar e escalar seus aplicativos.
-   - **IBM Cloud Automation Manager** - o CAM é uma plataforma infrastructure as code pronta para empresa que fornece uma única área de janela de vidro para provisionar cargas de trabalho baseadas em VM ao lado de cargas de trabalho baseadas em Kubernetes usando modelos que são armazenados e com versão em um repositório.
-* [vCenter Server e IBM Kubernetes Service](../vcsiks/vcsiks-intro.html) - uma arquitetura de referência para implementar as plataformas a seguir.
+   - **{{site.data.keyword.icpfull_notm}}** - O {{site.data.keyword.icpfull_notm}} é uma plataforma de aplicativo para desenvolver e gerenciar aplicativos conteinerizados. O {{site.data.keyword.icpfull_notm}} é um ambiente integrado que inclui o orquestrador de contêineres Kubernetes, um repositório de imagem privada, um console de gerenciamento, estruturas de monitoramento e uma interface gráfica com o usuário. A interface com o usuário fornece um local centralizado por meio do qual é possível implementar, gerenciar, monitorar e escalar seus aplicativos.
+   - **IBM Cloud Automation Manager** - o CAM é uma plataforma infrastructure as code pronta para empresa que fornece uma única área de janela de vidro para provisionar cargas de trabalho baseadas em MV ao lado de cargas de trabalho baseadas em Kubernetes usando modelos que são armazenados e com versão em um repositório.
+* [vCenter Server e o serviço {{site.data.keyword.containerlong_notm}} ](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html): uma arquitetura de referência para implementar as plataformas a seguir.
    - **VMware vCenter Server on IBM Cloud** – o vCenter Server é uma oferta do {{site.data.keyword.vmwaresolutions_short}} que é uma plataforma baseada em VMware provisionada automaticamente no {{site.data.keyword.cloud_notm}}.
-   - **IBM Cloud Kubernetes Service** - o IKS é um serviço gerenciado no {{site.data.keyword.cloud_notm}} que usa o Kubernetes como o mecanismo de orquestração para automatizar a implementação, o ajuste de escala e as operações de contêineres de aplicativos em um cluster de único locatário.
-* [Rede do vCenter Server](../vcsnsxt/vcsnsxt-intro.html) - concentra-se nas tecnologias de rede que são usadas para integração entre o vCenter Server, o ICP e o IKS, como NSX-V e Calico, juntamente com uma visualização de tecnologia do NSX-T.
+   - **{{site.data.keyword.containerlong_notm}}** - o {{site.data.keyword.containerlong_notm}} é um serviço gerenciado no {{site.data.keyword.cloud_notm}} que usa o Kubernetes como o mecanismo de orquestração para automatizar a implementação, o ajuste de escala e as operações de contêineres de aplicativos em um cluster de único locatário.
+* [Rede do vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html) - concentra-se nas tecnologias de rede usadas para integração entre o vCenter Server, o {{site.data.keyword.icpfull_notm}} e o {{site.data.keyword.containerlong_notm}}, como NSX-V e Calico, com uma visualização de tecnologia do NSX-T.
 * _Guia do VMware e do Protótipo do Skate Advisor_ - uma arquitetura de referência que é um “protótipo”, ou seja, um mecanismo para destacar e mostrar tecnologias que resolvem problemas reais do mundo. Queríamos demonstrar uma interação entre o Watson AI e o aprendizado de máquina de uma maneira real. Por meio da cultura do skate, demonstramos os serviços de nuvem de uma maneira exclusiva. A implementação do "carro conceito" é uma extensão do aplicativo Acme Skateboard, chamado Skate Advisor. O Skate Advisor é uma ferramenta, que permite que os usuários tenham conversas sobre truques de skate com um mecanismo acionado pelo Watson.
-* [VMware: a jornada de modernização do Stock Trader](../vcscontent/vcscontent-modjourney.html) - um caso de uso de referência que descreve um aplicativo clássico do WebSphere Application Server que é modernizado usando o {{site.data.keyword.cloud_notm}} Private, o conteúdo do IBM Middleware, o {{site.data.keyword.cloud_notm}} Kubernetes Service e o vCenter Server on {{site.data.keyword.cloud_notm}}. Estamos todos em uma jornada de nuvem e estamos todos em pontos diferentes nessa jornada. Por meio de etapas incrementais da arquiteta de aplicativo, Jane, e do arquiteto de infraestrutura em nuvem, Todd, modernizamos um aplicativo existente chamado Stock Trader. Revise exemplos que ajudam a executar cada etapa em sua jornada e o valor que é realizado para seus negócios, independentemente de cada etapa ser grande ou pequena. Concentramo-nos em quatro temas: aplicativos, DevOps, integração e gerenciamento. Cada um deles trabalha em conjunto para ajudá-lo a atingir seus objetivos e, de fato, modernizar um sem os outros resulta em problemas por toda a parte.
+* [VMware: a jornada de modernização do Stock Trader](/docs/services/vmwaresolutions/archiref/vcscontent/vcscontent-modjourney.html) - um caso de uso de referência que descreve um aplicativo clássico do WebSphere Application Server que é modernizado usando o {{site.data.keyword.cloud_notm}} Private, o conteúdo do IBM Middleware, o {{site.data.keyword.containerlong_notm}} e o vCenter Server on {{site.data.keyword.cloud_notm}}. Estamos todos em uma jornada de nuvem e estamos todos em pontos diferentes nessa jornada. Por meio de etapas incrementais da arquiteta de aplicativo, Jane, e do arquiteto de infraestrutura em nuvem, Todd, modernizamos um aplicativo existente chamado Stock Trader. Revise exemplos que ajudam a executar cada etapa em sua jornada e o valor que é realizado para seus negócios, independentemente de cada etapa ser grande ou pequena. Concentramo-nos em quatro temas: aplicativos, DevOps, integração e gerenciamento. Todos os temas trabalham em conjunto para ajudá-lo a atingir suas metas. Modernizar um tema sem os outros pode resultar em problemas.
 
 ### Links relacionados
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

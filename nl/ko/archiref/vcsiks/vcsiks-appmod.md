@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -28,7 +28,7 @@ HCX는 고객이 {{site.data.keyword.cloud_notm}}에서 실행 중인 VMware vCe
   - **NSX-V** - NSX-V는 Acme Skateboards VM에 대한 네트워크 오버레이를 제공하는 vCenter Server의 네트워크 가상화 계층을 제공합니다. NSX-V는 BYOIP를 사용으로 설정하고 {{site.data.keyword.cloud_notm}} 네트워크에서 워크로드 네트워크를 격리합니다. NSX-V는 Acme Skateboards가 온프레미스에서 확장하는 네트워크를 작성하기 위해 HCX로 프로그래밍됩니다.
   - **NSX-T** - NSX-T는 컨테이너 및 VM 모두에서 네트워크 및 보안 관리를 위한 공통 도구 세트를 제공합니다. NSX-T는 Kubernetes Container Networking Interface(CCNI)와 완전히 호환 가능하며 컨테이너 네트워킹을 제공하기 위해 CNI와 통합됩니다. NSX-T는 현대화된 애플리케이션이 사용하는 오버레이 네트워크를 제공하며 기본적으로 {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}}에서 사용하는 Calico를 대체합니다.
 
-- **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}}는 컨테이너화된 애플리케이션의 개발 및 관리를 위한 애플리케이션 플랫폼입니다. {{site.data.keyword.icpfull_notm}}는 컨테이너 오케스트레이터 Kubernetes, 개인용 이미지 저장소, 관리 콘솔, 모니터링 프레임워크 및 Acme Skateboards에서 애플리케이션을 배치, 관리, 모니터 및 확장할 수 있는 중앙 위치를 제공하는 그래픽 사용자 인터페이스가 포함된 통합 환경입니다. vCenter Server 인스턴스는 VM으로 실행 중인 {{site.data.keyword.icpfull_notm}} 컴포넌트, 마스터 노드, 작업자 노드 등을 호스팅합니다. {{site.data.keyword.icpfull_notm}}는 다음을 호스팅합니다. 
+- **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}}는 컨테이너화된 애플리케이션의 개발 및 관리를 위한 애플리케이션 플랫폼입니다. {{site.data.keyword.icpfull_notm}}는 컨테이너 오케스트레이터 Kubernetes, 개인용 이미지 저장소, 관리 콘솔, 모니터링 프레임워크 및 Acme Skateboards에서 애플리케이션을 배치, 관리, 모니터 및 확장할 수 있는 중앙 위치를 제공하는 그래픽 사용자 인터페이스가 포함된 통합 환경입니다. vCenter Server 인스턴스는 VM으로 실행 중인 {{site.data.keyword.icpfull_notm}} 컴포넌트, 마스터 노드, 작업자 노드 등을 호스팅합니다. {{site.data.keyword.icpfull_notm}}는 다음을 호스팅합니다.
 - **{{site.data.keyword.cloud_notm}} Automation Manager** - CAM은 템플리트를 사용하여 Kubernetes 워크로드와 함께 {{site.data.keyword.icpfull_notm}} 또는 {{site.data.keyword.containerlong_notm}}의 온프레미스 또는 vCenter Server에서 VM 워크로드를 프로비저닝하기 위해 단일 분할창 방식을 제공하는 엔터프라이즈용 IaC(Infrastructure as Code) 플랫폼입니다. CAM은 {{site.data.keyword.icpfull_notm}} 설치에서 실행되는 도커화된 애플리케이션이며, 권한 부여, 역할 기반 액세스 제어(RBAC) 및 다른 기능을 위해 긴밀하게 통합됩니다.
     - 고객이 이 환경에 배치하려는 컨테이너화된 Acme Skateboards 애플리케이션
 
@@ -63,10 +63,10 @@ Kubernetes 클러스터 내에 경량 DNS를 제공합니다. 로드 밸런싱�
 이전의 양호한 이미지 버전으로 자동으로 롤백할 수 있습니다.
 - 시크릿과 구성 관리. 시크릿은 비밀번호, 토큰 또는 키와 같은 민감한 데이터를 저장하는 Kubernetes 내의 오브젝트입니다. 이러한 시크릿은 기본적으로 암호화되며, 민감한 데이터에 대한 액세스를 제어해야 합니다.
 
-{{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}}와 같은 클라우드 기반 애플리케이션 플랫폼으로 이동하는 고객은 속도와 혁신에 중점을 두고 있으며 항상 보안 및 네트워킹을 염두에 두고 있지는 않습니다. 네트워킹 또는 보안 팀에서 Load Balancer, 방화벽, 스위치, 라우터와 같은 서비스를 주문할 수 있을 때까지 고객이 대기해야 하는 경우 가치 창출을 위한 애플리케이션 시간이 줄어듭니다. 
+{{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}}와 같은 클라우드 기반 애플리케이션 플랫폼으로 이동하는 고객은 속도와 혁신에 중점을 두고 있으며 항상 보안 및 네트워킹을 염두에 두고 있지는 않습니다. 네트워킹 또는 보안 팀에서 Load Balancer, 방화벽, 스위치, 라우터와 같은 서비스를 주문할 수 있을 때까지 고객이 대기해야 하는 경우 가치 창출을 위한 애플리케이션 시간이 줄어듭니다.
 
 이 참조 아키텍처는 VCS, {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}}가 애플리케이션 현대화 과정을 따라 Acme Skateboards로 안전하게 이동하는 방법을 보여줍니다.
 
 ### 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

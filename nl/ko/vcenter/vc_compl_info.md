@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-21"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -62,7 +62,7 @@ VMware vCenter Server 및 vCenter Server with Hybridity Bundle 인스턴스에 �
 * 팀 차원에서 뛰어난 기술 전문지식을 유지하기 위해서는 높은 수준의 전문성이 필요하기 때문에, 때로는 특정 소프트웨어 문제점을 해결하기 위해 둘 이상의 지원 팀이 관여해야 할 수 있습니다. IBM 지원 팀은 네트워크를 통해 모두 함께 연결되어 있고 발생하는 모든 문제점을 해결하기 위해 하나가 되어 작업하므로 쉽게 처리할 수 있습니다.
 * 문제를 조사하기 위해 IBM은 고객의 시스템에서 장애와 관련된 정보에 액세스하거나 추가 정보를 얻기 위해 장애를 재현해야 할 수 있습니다.
 * 고객이 생성한 지원 티켓은 IBM 지원 센터에서 조사, 디버깅 및 심사를 위해 VMware 관리 계층에 액세스할 수 있음을 확인하는 역할을 합니다. 유지관리를 위해 가동을 중단하거나 환경을 변경해야 하는 경우 IBM 지원 센터에서 변경 관리 프로세스의 일부로 티켓을 통해 고객에게 문서화된 추가 확인을 요청합니다.
-* 지원 티켓에 대한 자세한 정보는 [소프트웨어 지원 핸드북](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) 및 [IBM 지원 센터에 문의](../vmonic/trbl_support.html)를 참조하십시오.
+* 지원 티켓에 대한 자세한 정보는 [소프트웨어 지원 핸드북](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) 및 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)를 참조하십시오.
 
 ## 고객 책임사항
 
@@ -72,7 +72,7 @@ VMware vCenter Server 및 vCenter Server with Hybridity Bundle 인스턴스에 �
 * 초기 배치 시 오퍼링의 자동화 및 고객 계정은 별도로 제공됩니다. 고객은 포털에서 IBM이 제공하는 모든 비밀번호를 변경할 수 있으며 변경하도록 권장됩니다.
 * vCenter 액세스 권한 및 인증 정보는 초기 배치 중에 작성되며 고객에게 제공됩니다. IBM 오퍼링 요구사항의 일부로 IBM 지원 센터에서는 고객에게 지원과 라이프사이클 관리를 제공하기 위해 관리 계층에 대한 전체 액세스 권한을 보유해야 합니다.
 * 언제든지 비밀번호와 같은 인증 정보가 변경되면 IBM 지원 센터에서 고객이 유실되었거나 잊어버린 인증 정보를 복구하는 데 도움을 주거나 고객 환경 문제점을 해결할 수 없게 됩니다.
-* 이 문제의 중요도와 관련 관심사항에 대한 자세한 정보는 [NSX 컴포넌트의 비밀번호 변경 시 고려사항](vc_networkingonvcenterserver.html#considerations-when-changing-passwords-for-nsx-components) 및 [vCenter Server 아티팩트 변경에 대한 고려사항](vcenter_chg_impact.html)을 참조하십시오.
+* 이 문제의 중요도와 관련 관심사항에 대한 자세한 정보는 [NSX 컴포넌트의 비밀번호 변경 시 고려사항](/docs/services/vmwaresolutions/vcenter/vc_networkingonvcenterserver.html#considerations-when-changing-passwords-for-nsx-components) 및 [vCenter Server 아티팩트 변경에 대한 고려사항](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)을 참조하십시오.
 
 ### 의사소통 및 문제점 해결
 
@@ -117,6 +117,6 @@ VMware vCenter Server 및 vCenter Server with Hybridity Bundle 인스턴스에 �
 
 ### 관련 링크
 
-* [vCenter Server 개요](vc_vcenterserveroverview.html)
-* [vCenter Server with Hybridity Bundle 개요](vc_hybrid_overview.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
+* [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [vCenter Server with Hybridity Bundle 개요](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

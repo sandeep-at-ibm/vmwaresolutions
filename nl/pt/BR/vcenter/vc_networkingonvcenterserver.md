@@ -2,29 +2,32 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-04"
+lastupdated: "2019-01-23"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Considerações de rede para instâncias do vCenter Server
 
 Revise as informações a seguir para obter detalhes sobre as considerações de rede e os requisitos para suas instâncias do vCenter Server on {{site.data.keyword.cloud}}. Assegure-se de que atenda aos requisitos para que sua instância funcione corretamente.
 
 ## Componentes de rede para instâncias do vCenter Server
+{: faq}
 
-Para revisar os componentes de rede que estão incluídos em sua instância do vCenter Server, veja [Especificações técnicas para instâncias do vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
+Para revisar os componentes de rede que estão incluídos em sua instância do vCenter Server, veja [Especificações técnicas para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## Considerações de firewall
 
-Caso esteja usando firewalls, deve-se configurar regras para todas as comunicações por meio da instância de servidor virtual (VSI) do {{site.data.keyword.IBM}} CloudDriver e das máquinas virtuais (VMs) do SDDC Manager. Essas regras devem permitir que todos os protocolos se comuniquem nos endereços IP `10.0.0.0/8` e `161.26.0.0/16`. Exemplos desses firewalls são os NSX Distributed Firewalls (DFW) ou os firewalls Vyatta.
+Caso esteja usando firewalls, deve-se configurar regras para todas as comunicações por meio da instância de servidor virtual (VSI) do {{site.data.keyword.IBM}} CloudDriver e das máquinas virtuais (MVs) do SDDC Manager. Essas regras devem permitir que todos os protocolos se comuniquem nos endereços IP `10.0.0.0/8` e `161.26.0.0/16`. Exemplos desses firewalls são os NSX Distributed Firewalls (DFW) ou os firewalls Vyatta.
 
 ## Usando NSX com suas máquinas virtuais
 
 Durante a implementação da instância do vCenter Server, o VMware NSX é pedido, instalado, licenciado e configurado em sua instância. Além disso, o NSX Manager, os NSX Controllers e o NSX Transport Zone são configurados e cada servidor ESXi é configurado com os componentes do NSX.
 
-Um NSX Edge Services Gateway também é implementado para ser usado por suas máquinas virtuais de carga de trabalho (VMs). Para obter mais informações, veja [Configurando sua rede para usar o NSX ESG gerenciado pelo cliente com suas VMs](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+Um NSX Edge Services Gateway também é implementado para ser usado por suas máquinas virtuais de carga de trabalho (MVs). Para obter mais informações, veja [Configurando sua rede para usar o NSX ESG gerenciado pelo cliente com suas VMs](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
 ## Considerações ao mudar senhas de componentes NSX
 

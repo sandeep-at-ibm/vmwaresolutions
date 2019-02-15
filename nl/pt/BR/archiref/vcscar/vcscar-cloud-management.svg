@@ -28,7 +28,7 @@
   </g>
   <path d="m224.36 478.5h146.28c6.28 0 11.36-7.16 11.36-16s-5.08-16-11.36-16h-146.28c-6.28 0-11.36 7.16-11.36 16s5.08 16 11.36 16" fill="url(#mx-gradient-d5e8d4-1-97d077-1-s-0)" fill-opacity=".5" pointer-events="none" stroke="#82b366" stroke-miterlimit="10"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
-   <text x="297" y="466">Migração da VM</text>
+   <text x="297" y="466">Migração da MV</text>
   </g>
   <g pointer-events="none">
    <path d="m491.5 505.5" fill="none" stroke="#000" stroke-miterlimit="10"/>

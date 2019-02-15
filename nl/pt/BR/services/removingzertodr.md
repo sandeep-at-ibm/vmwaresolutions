@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Processo de remoção para o Zerto on IBM Cloud
 
@@ -25,7 +29,8 @@ O processo de remoção do serviço Zerto on {{site.data.keyword.cloud}} é auto
    4. Retorne a sub-rede móvel privada que foi pedida para a comunicação do Zerto Virtual Replication para a infraestrutura do {{site.data.keyword.cloud_notm}}.   
    5. Remova os encargos do serviço de recuperação de desastre do Zerto de sua instrução de faturamento do {{site.data.keyword.cloud_notm}}.
 
-      **Nota:** você é cobrado até o término do ciclo de faturamento pelo serviço de recuperação de desastre Zerto removido.
+      Você é faturado até o término do ciclo de faturamento para o serviço de recuperação de desastre Zerto removido.
+      {:note}
 
 ## Resultados
 

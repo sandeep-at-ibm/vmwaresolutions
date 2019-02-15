@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -42,7 +42,6 @@ Acme Skate Advisor 애플리케이션은 Watson 플랫폼과 애플리케이션 
 애플리케이션 현대화 플랫폼에 배치된 애플리케이션을 시연합니다. 플랫폼에는 VMware vCenter Server on {{site.data.keyword.cloud_notm}}
 오퍼링을 위해 {{site.data.keyword.cloud_notm}}에 배치된 {{site.data.keyword.icpfull_notm}}, CAM 및 NSX 컴포넌트가
 포함되어 있습니다.
-
 
 ### Watson Assistant를 사용한 Watson 음성 인식
 
@@ -95,17 +94,17 @@ IBM은 고유한 비즈니스 및 기술 요구사항을 해결하기 위해 사
 다음 문서는 {{site.data.keyword.cloud_notm}}의 애플리케이션 현대화 과정에서
 사용되는 기술에 대한 다른 보기를 제공합니다.
 
-* [vCenter Server 및 {{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html) - 다음 플랫폼을 배치하기 위한 참조 아키텍처입니다.
+* [vCenter Server 및 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html) - 다음 플랫폼을 배치하기 위한 참조 아키텍처입니다.
    - **VMware vCenter Server on IBM Cloud** - vCenter Server는 {{site.data.keyword.vmwaresolutions_short}}의 오퍼링이며 {{site.data.keyword.cloud_notm}}에서 자동으로 프로비저닝되는 VMware 기반 플랫폼입니다.
    - **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}}는 컨테이너화된 애플리케이션의 개발 및 관리를 위한 애플리케이션 플랫폼입니다. {{site.data.keyword.icpfull_notm}}는 컨테이너 오케스트레이터 Kubernetes, 개인용 이미지 저장소, 관리 콘솔, 모니터링 프레임워크 및 그래픽 사용자 인터페이스를 포함하는 통합 환경입니다. 사용자 인터페이스는 애플리케이션을 배치, 관리, 모니터 및 확장할 수 있는 중앙 위치를 제공합니다.
    - **IBM Cloud Automation Manager** - CAM은 저장소에 저장되고 버전화된 템플리트를 사용하여 Kubernetes 기반 워크로드와 함께 VM 기반 워크로드를 프로비저닝하기 위해 단일 분할창 방식을 제공하는 엔터프라이즈용 IaC(infrastructure as code) 플랫폼입니다.
-* [vCenter Server 및 {{site.data.keyword.containerlong_notm}} 서비스](../vcsiks/vcsiks-intro.html) - 다음 플랫폼을 배치하기 위한 참조 아키텍처입니다.
+* [vCenter Server 및 {{site.data.keyword.containerlong_notm}} 서비스](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html) - 다음 플랫폼을 배치하기 위한 참조 아키텍처입니다.
    - **VMware vCenter Server on IBM Cloud** - vCenter Server는 {{site.data.keyword.vmwaresolutions_short}}의 오퍼링이며 {{site.data.keyword.cloud_notm}}에서 자동으로 프로비저닝되는 VMware 기반 플랫폼입니다.
    - **{{site.data.keyword.containerlong_notm}}** - {{site.data.keyword.containerlong_notm}}는 싱글 테넌트 클러스터에서 애플리케이션 컨테이너의 운영, 확장 및 배치 자동화를 위한 오케스트레이션 엔진으로 Kubernetes를 활용하는 {{site.data.keyword.cloud_notm}}의 관리 서비스입니다.
-* [vCenter Server 네트워킹](../vcsnsxt/vcsnsxt-intro.html) - NSX-T의 기술 미리보기와 함께 NSX-V 및 Calico 등 vCenter Server, {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}} 간의 통합에 사용되는 네트워크 기술을 설명합니다.
+* [vCenter Server 네트워킹](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html) - NSX-T의 기술 미리보기와 함께 NSX-V 및 Calico 등 vCenter Server, {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}} 간의 통합에 사용되는 네트워크 기술을 설명합니다.
 * _VMware 및 Skate Advisor Concept Car 안내서_ - "컨셉트 카"의 참조 아키텍처입니다. 즉, 실제 문제점을 해결하는 기술을 강조표시하고 보여주기 위한 메커니즘입니다. 실질적인 방식으로 Watson AI와 기계 학습 간의 상호작용을 시연하려고 했습니다. 스케이트보드 문화를 통해 고유 방식으로 클라우드 서비스를 시연합니다. "컨셉트 카" 구현은 Skate Advisor라는 Acme Skateboard 애플리케이션에 대한 확장입니다. Skate Advisor는 사용자가 Watson 구동 엔진과 스케이트보드 트릭 대화를 할 수 있도록 하는 도구입니다.
-* [VMware: Stock Trader의 현대화 과정](../vcscontent/vcscontent-modjourney.html) - {{site.data.keyword.cloud_notm}} Private, IBM Middleware 컨텐츠, {{site.data.keyword.containerlong_notm}} 및 vCenter Server on {{site.data.keyword.cloud_notm}}를 사용하여 현대화되는 일반 WebSphere Application Server 애플리케이션에 대해 설명하는 참조 유스 케이스입니다. 모두가 클라우드 과정 중에 있으며 이 과정의 서로 다른 지점에 있습니다. 애플리케이션 설계자 Jane과 클라우드 인프라 설계자 Todd에 의한 점진적 단계를 통해 Stock Trader라는 기존 애플리케이션을 현대화합니다. 각 단계의 규모에 관계없이 과정의 각 단계를 수행하는 데 도움을 주는 예제와 비즈니스에 실현되는 가치를 검토하십시오. 애플리케이션, DevOps, 통합 및 관리 등 4개의 테마에 초점을 맞춥니다. 모든 테마는 함께 작동하여 목표를 달성할 수 있도록 지원합니다. 하나의 테마(나머지 테마 없이)를 현대화하면 문제가 발생할 수 있습니다.
+* [VMware: Stock Trader의 현대화 과정](/docs/services/vmwaresolutions/archiref/vcscontent/vcscontent-modjourney.html) - {{site.data.keyword.cloud_notm}} Private, IBM Middleware 컨텐츠, {{site.data.keyword.containerlong_notm}} 및 vCenter Server on {{site.data.keyword.cloud_notm}}를 사용하여 현대화되는 일반 WebSphere Application Server 애플리케이션에 대해 설명하는 참조 유스 케이스입니다. 모두가 클라우드 과정 중에 있으며 이 과정의 서로 다른 지점에 있습니다. 애플리케이션 설계자 Jane과 클라우드 인프라 설계자 Todd에 의한 점진적 단계를 통해 Stock Trader라는 기존 애플리케이션을 현대화합니다. 각 단계의 규모에 관계없이 과정의 각 단계를 수행하는 데 도움을 주는 예제와 비즈니스에 실현되는 가치를 검토하십시오. 애플리케이션, DevOps, 통합 및 관리 등 4개의 테마에 초점을 맞춥니다. 모든 테마는 함께 작동하여 목표를 달성할 수 있도록 지원합니다. 하나의 테마(나머지 테마 없이)를 현대화하면 문제가 발생할 수 있습니다.
 
 ### 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

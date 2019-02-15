@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -36,6 +36,6 @@ Um representante de pré-vendas do IMI entra em contato com você usando suas in
 
 ### Links relacionados
 
-* [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](../sddc/sd_addingremovingservices.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
-* [Perguntas mais frequentes](../vmonic/faq.html)
+* [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)

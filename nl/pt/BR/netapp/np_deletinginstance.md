@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-10-30"
 # Excluindo instâncias do NetApp ONTAP Select
 
 Se você excluir uma instância do NetApp ONTAP Select, os componentes a seguir serão liberados sequencialmente:
-1. As VMs (máquinas virtuais) implementadas em cluster do NetApp ONTAP Select e a VM de implementação do NetApp ONTAP Select
+1. As MVs (máquinas virtuais) implementadas em cluster do NetApp ONTAP Select e a MV de implementação do NetApp ONTAP Select
 2. Taxa de suporte e serviços
 3. Licenças do produto VMware
 4. Servidores ESXi
@@ -50,6 +50,6 @@ Você é faturado até o final do ciclo de faturamento da instância excluída.
 
 ### Links relacionados
 
-* [Pedindo instâncias do NetApp ONTAP Select](np_orderinginstances.html)
-* [Visualizando instâncias do NetApp ONTAP Select](np_viewinginstances.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
+* [Pedindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [Visualizando instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -42,8 +42,8 @@ HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스를 제거하�
 
 ### 관련 링크
 
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 주문](htdc_ordering.html)
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 관리](managinghtdc.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/htdc_ordering.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managinghtdc.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [HyTrust 웹 사이트](https://www.hytrust.com/)

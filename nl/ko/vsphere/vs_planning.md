@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,7 +21,7 @@ VMware vSphere on {{site.data.keyword.cloud}}를 주문하기 전에 다음 요�
 
 ## IBM Cloud 계정 요구사항
 
-사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](../vmonic/slaccountrequirement.html)을 참조하십시오.
+사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)을 참조하십시오.
 
 ## IBM Cloud Data Center 가용성
 
@@ -69,6 +69,6 @@ vSAN 컴포넌트를 선택하면 위치 목록이 SSD(Solid-State Disk) 가용�
 
 ### 관련 링크
 
-* [새 vSphere 클러스터 주문](vs_orderinginstances.html)
-* [기존 클러스터 스케일링](vs_scalingexistingclusters.html)
-* [콘솔 외부에서 작성된 기존 클러스터 스케일링](vs_orderingforclustersoutside.html)
+* [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [기존 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [콘솔 외부에서 작성된 기존 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

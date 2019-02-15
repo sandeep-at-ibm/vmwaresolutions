@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-04"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -22,8 +22,8 @@ lastupdated: "2019-01-04"
 ## VMware Federal 인스턴스를 주문하기 위한 요구사항
 
 다음 태스크를 완료했는지 확인하십시오.
-* **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](../vmonic/useraccount.html)를 참조하십시오.
-* [VMware Federal 인스턴스에 대한 요구사항 및 계획](vc_fed_planning.html)의 정보를 검토했습니다.
+* **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](/docs/services/vmwaresolutions/vmonic/useraccount.html)를 참조하십시오.
+* [VMware Federal 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)의 정보를 검토했습니다.
 * 인스턴스 및 도메인 이름 형식을 검토했습니다. 도메인 이름 및 하위 도메인 레이블은 인스턴스의 사용자 이름 및 서버 이름을 생성하는 데 사용됩니다.
 
 표 1. 인스턴스 및 도메인 이름의 값 형식
@@ -48,7 +48,7 @@ VMware Federal 인스턴스를 주문할 때는 다음 시스템 설정을 지�
 
 인스턴스 이름은 다음 요구사항을 충족해야 합니다.
 * 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 인스턴스 이름은 영숫자 문자로 시작하고 끝나야 합니다.
+* 인스턴스 이름은 영문자로 시작하고 영숫자로 끝나야 합니다. 
 * 인스턴스 이름의 최대 길이는 10자입니다.
 * 인스턴스 이름은 계정 내에서 고유해야 합니다.
 
@@ -106,7 +106,7 @@ Bare Metal Server의 CPU 모델 및 RAM을 지정하십시오.
 
 ESXi 서버의 수를 2 - 20의 범위로 구성할 수 있습니다.
 
-모든 ESXi 서버는 동일한 구성을 공유합니다. 사후 배치에서 네 개의 추가 클러스터를 추가할 수 있습니다. vSAN 스토리지 설정의 경우에는 초기 및 사후 배치 클러스터 모두에 네 개의 서버가 필요합니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
+모든 ESXi 서버는 동일한 구성을 공유합니다. 사후 배치에서 네 개의 추가 클러스터를 추가할 수 있습니다. vSAN 스토리지 설정의 경우에는 초기 및 사후 배치 클러스터 모두에 네 개의 서버가 필요합니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
 
 ## 스토리지 설정
 
@@ -159,7 +159,7 @@ ESXi 서버의 수를 2 - 20의 범위로 구성할 수 있습니다.
 
 하위 도메인 레이블은 다음 요구사항을 충족해야 합니다.
 *  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-*  하위 도메인 레이블은 영숫자 문자로 시작하고 끝나야 합니다.
+*  하위 도메인 레이블은 영문자로 시작하고 영숫자로 끝나야 합니다. 
 *  하위 도메인 레이블의 최대 길이는 10자입니다.
 *  하위 도메인 레이블은 계정 내에서 고유해야 합니다.
 
@@ -222,7 +222,7 @@ Windows 라이센싱 주문에 대한 자세한 정보는 [Windows Server 2012 R
 
 인스턴스의 배치가 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 배치의 상태를 확인할 수 있습니다.
 
-인스턴스가 성공적으로 배치된 경우에는 [VMware Federal on {{site.data.keyword.cloud_notm}} 인스턴스의 기술 스펙](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다.
+인스턴스가 성공적으로 배치된 경우에는 [VMware Federal on {{site.data.keyword.cloud_notm}} 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다.
 
 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
@@ -243,10 +243,10 @@ Windows 라이센싱 주문에 대한 자세한 정보는 [Windows Server 2012 R
 
 ### 관련 링크
 
-* [{{site.data.keyword.cloud_notm}} 계정 등록](../vmonic/signing_softlayer_account.html)
-* [VMware Federal 인스턴스 보기](vc_fed_viewinginstance.html)
-* [VMware Federal 인스턴스에 대한 용량 확장 및 축소](vc_fed_addingremovingservers.html)
-* [VMware Federal 인스턴스의 클러스터 추가, 보기 및 삭제](fed_addviewdeleteclusters.html)
-* [VMware Federal 인스턴스 보호](vc_fed_securinginstance.html)
-* [VMware Federal 인스턴스 삭제](vc_fed_deletinginstance.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
+* [{{site.data.keyword.cloud_notm}} 계정 등록](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [VMware Federal 인스턴스 보기](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [VMware Federal 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [VMware Federal 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [VMware Federal 인스턴스 보호](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [VMware Federal 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

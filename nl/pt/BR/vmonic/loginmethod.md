@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -40,5 +40,5 @@ Para acessar o console do website ibm.com, conclua as etapas a seguir:
 
 ### Links relacionados
 
-* [Perguntas mais frequentes](faq.html)
-* [Resolução de problemas para acessar o {{site.data.keyword.cloud_notm}}](../../../account/ts_accessing.html){:new_window}
+* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Resolução de problemas para acessar o {{site.data.keyword.cloud_notm}}](/docs/account/ts_accessing.html){:new_window}

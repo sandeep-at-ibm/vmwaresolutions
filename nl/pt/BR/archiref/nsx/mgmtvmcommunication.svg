@@ -29,7 +29,7 @@
 	<path id="vSphere_rectangle" class="st4" d="m409.5 288h-371c-5.2 0-9.5-4.3-9.5-9.5s4.3-9.5 9.5-9.5h371c5.2 0 9.5 4.3 9.5 9.5s-4.3 9.5-9.5 9.5z"/>
 	<text class="st2 st3" transform="translate(189.5 282)">vSphere ESXi</text>
 	<text transform="translate(125.5 198)"><tspan class="st5 st2 st6" x="0" y="0">Dispositivo </tspan><tspan class="st5 st2 st6" x="0" y="10.8">virtual</tspan></text>
-	<text class="st5 st2 st6" transform="translate(46.5 223)">   VM</text>
+	<text class="st5 st2 st6" transform="translate(46.5 223)">   MV</text>
 	<text transform="translate(192.5 199)"><tspan class="st5 st2 st6" x="0" y="0">Dispositivo </tspan><tspan class="st5 st2 st6" x="0" y="10.8">virtual</tspan></text>
 	<line class="st7" x1="57" x2="94" y1="190" y2="190"/>
 <g id="cluster">
@@ -47,7 +47,7 @@
 	<text transform="translate(263.5 171)"><tspan class="st2 st8" x="0" y="0">NSX</tspan><tspan class="st2 st8" x="0" y="13.2">Manager</tspan></text>
 	<text transform="translate(187 156)"><tspan class="st2 st8" x="0" y="0">Controlador de</tspan><tspan class="st2 st8" x="0" y="13.2"> serviços de</tspan><tspan class="st2 st8" x="0" y="26.4">plataforma</tspan></text>
 	<text transform="translate(121 154)"><tspan class="st2 st8" x="0" y="0"> vCenter</tspan><tspan class="st2 st8" x="0" y="13.2">   Server</tspan><tspan class="st2 st8" x="0" y="26.4">Appliance</tspan></text>
-	<text x="29.5" y="180.5"><tspan class="st2 st8" x="29.5" y="180.5" font-family="MyriadPro-Regular" font-size="11px"> VMs de serviço</tspan></text>
+	<text x="29.5" y="180.5"><tspan class="st2 st8" x="29.5" y="180.5" font-family="MyriadPro-Regular" font-size="11px"> MVs de serviço</tspan></text>
 				<rect class="st9" x="178.5" y="79" width="27.2" height="27.2"/>
 				<linearGradient id="SVGID_1_" x1="196.61" x2="190.02" y1="88.627" y2="112.88" gradientUnits="userSpaceOnUse">
 					<stop stop-color="#CCE0F4" offset="0"/>

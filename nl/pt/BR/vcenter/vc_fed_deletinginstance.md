@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -50,8 +50,8 @@ Você é faturado até o final do ciclo de faturamento da infraestrutura do {{si
 
 ### Links relacionados
 
-* [Visão geral do VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
-* [Pedindo instâncias do VMware Federal](vc_fed_orderinginstance.html)
-* [Protegendo instâncias do VMware Federal](vc_fed_securinginstance.html)
-* [Visualizando instâncias do VMware Federal](vc_fed_viewinginstance.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
+* [Visão geral do VMware Federal on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
+* [Pedindo instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [Protegendo instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [Visualizando instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

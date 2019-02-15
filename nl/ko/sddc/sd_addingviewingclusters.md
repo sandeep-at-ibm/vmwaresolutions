@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-10"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -212,5 +212,5 @@ VMware vSphere 및 VMware vSAN을 포함한 클러스터의 VMware 컴포넌트�
 
 ### 관련 링크
 
-* [Cloud Foundation 인스턴스 보기](sd_viewinginstances.html)
-* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](sd_addingremovingservers.html)
+* [Cloud Foundation 인스턴스 보기](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)

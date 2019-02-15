@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -46,8 +46,8 @@ Antes de remover o serviço HyTrust KeyControl on {{site.data.keyword.cloud_notm
 
 ### Links relacionados
 
-* [Pedindo o HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](htkc_ordering.html)
-* [Gerenciando o HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](managinghtkc.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
-* [Perguntas mais frequentes](../vmonic/faq.html)
+* [Pedindo o HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_ordering.html)
+* [Gerenciando o HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtkc.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [HyTrust Website](https://www.hytrust.com/)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -19,8 +19,8 @@ lastupdated: "2018-10-30"
 ## 요구사항
 
 다음 태스크를 완료했는지 확인하십시오.
-*  **설정** 페이지에 {{site.data.keyword.cloud}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](../vmonic/useraccount.html)를 참조하십시오.
-*  [NetApp ONTAP Select 인스턴스에 대한 요구사항 및 계획](np_planning.html)의 요구사항 및 고려사항을 검토했습니다.
+*  **설정** 페이지에 {{site.data.keyword.cloud}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](/docs/services/vmwaresolutions/vmonic/useraccount.html)를 참조하십시오.
+*  [NetApp ONTAP Select 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/netapp/np_planning.html)의 요구사항 및 고려사항을 검토했습니다.
 
 인스턴스 주문 또는 배치 중에 설정되는 값은 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다.
 {:important}
@@ -33,7 +33,7 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 기본 설정을 지
 
 인스턴스 이름은 다음 요구사항을 충족해야 합니다.
 * 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 인스턴스 이름은 영숫자 문자로 시작하고 끝나야 합니다.
+* 인스턴스 이름은 영문자로 시작하고 영숫자로 끝나야 합니다. 
 * 인스턴스 이름의 최대 길이는 10자입니다.
 * 인스턴스 이름은 계정 내에서 고유해야 합니다.
 
@@ -52,7 +52,7 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 
 하위 도메인 레이블은 다음 요구사항을 충족해야 합니다.
 *  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-*  하위 도메인 레이블은 영숫자 문자로 시작하고 끝나야 합니다.
+*  하위 도메인 레이블은 영문자로 시작하고 영숫자로 끝나야 합니다. 
 *  하위 도메인 레이블의 최대 길이는 10자입니다.
 *  하위 도메인 레이블은 계정 내에서 고유해야 합니다.
 
@@ -113,7 +113,7 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 
 인스턴스의 배치가 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 배치의 상태를 확인할 수 있습니다.
 
-인스턴스가 성공적으로 배치된 경우에는 [NetApp ONTAP Select 인스턴스의 기술 스펙](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다.
+인스턴스가 성공적으로 배치된 경우에는 [NetApp ONTAP Select 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다.
 
 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
@@ -132,7 +132,7 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 
 ### 관련 링크
 
-* [NetApp ONTAP Select 인스턴스 보기](np_viewinginstances.html)
-* [NetApp ONTAP Select 인스턴스 삭제](np_deletinginstance.html)
+* [NetApp ONTAP Select 인스턴스 보기](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [NetApp ONTAP Select 인스턴스 삭제](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
 * [NetApp ONTAP Select 배치에 전용 스토리지 연결](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

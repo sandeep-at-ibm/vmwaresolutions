@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,7 +45,7 @@ a *stance* é facilmente confundida com direcionalidade linear. Todos os skatist
 uma stance nativa, pé esquerdo ou direito para a frente; assim, fazer uma manobra
 *switch* (switch-stance) significa que é a imagem de espelho dele, semelhante a um
 rebatedor no beisebol. A direção para trás é incidental; a
-distinção primária é uma destreza manual ou “destreza do pé”. Assim, qualquer
+distinção primária é uma destreza manual ou “destreza do pé”.  Assim, qualquer
 manobra feita como *switch* merece muito mais crédito, não porque seja para trás,
 mas porque todas as funções motoras são revertidas para o seu lado mais fraco ou
 pé “errado”. Para simplesmente fazer uma manobra para trás ou "fakie" é simplesmente
@@ -170,4 +170,4 @@ Nada disso seria alcançado sem o {{site.data.keyword.cloud}}.
 
 ### Links relacionados
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

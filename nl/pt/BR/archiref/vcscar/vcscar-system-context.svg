@@ -121,9 +121,9 @@
    <text x="38.25" y="448">Administrador</text>
   </g>
   <g font-family="Helvetica" font-size="8px" text-anchor="middle">
-   <text x="169.5" y="416.5">Artigos</text>
-   <text x="169.5" y="426.5">de origem</text>
-   <text x="169.5" y="436.5">do skatista</text>
+   <text x="169.5" y="416.5">Skater</text>
+   <text x="169.5" y="426.5">Origem</text>
+   <text x="169.5" y="436.5">Artigos</text>
   </g>
   <path d="m540.5 90h-50.5q-10 0-10-5v-2.5q0-2.5-10-2.5h-31.88" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <path d="m431.12 80 7-3.5v7z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>

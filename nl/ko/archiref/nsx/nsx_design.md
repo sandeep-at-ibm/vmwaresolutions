@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,4 +45,4 @@ RFC1918 사설 IP 주소 범위는 인터넷이 아니라 조직 내부에서 �
 
 ### 관련 링크
 
-* [솔루션 개요](../solution/solution_overview.html)
+* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

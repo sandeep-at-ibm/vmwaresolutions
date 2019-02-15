@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-02"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -24,7 +24,7 @@ VMware Cloud Foundation 인스턴스, VMware vCenter Server 인스턴스, VMware
 |ESXi 서버 추가 |지원됨 |지원됨 |지원됨 |지원됨. 자동화된 구성이 포함되지 않음 |
 |ESXi 서버 제거 |지원됨 |지원됨 |지원됨 |지원됨. 자동화된 구성이 포함되지 않음 |
 |다중 클러스터 지원 | 5개의 클러스터 | 10개의 클러스터 | 10개의 클러스터 |지원됨. 자동화된 구성이 포함되지 않음 |
-|VMware 스택의 클라이언트 관리 업데이트 및 패치 |자동화 지원 업데이트: <br/>SDDC Manager |클라이언트 관리 업데이트:<br/>원시 VMware 도구(VMware 업데이트 관리자) |클라이언트 관리 업데이트:<br/>원시 VMware 도구(VMware 업데이트 관리자) |클라이언트 관리 업데이트:<br/>원시 VMware 도구(VMware 업데이트 관리자) |
+|VMware 스택의 클라이언트 관리 업데이트 및 패치 |자동화 지원 업데이트:<br/>SDDC Manager |클라이언트 관리 업데이트:<br/>원시 VMware 도구(VMware 업데이트 관리자) |클라이언트 관리 업데이트:<br/>원시 VMware 도구(VMware 업데이트 관리자) |클라이언트 관리 업데이트:<br/>원시 VMware 도구(VMware 업데이트 관리자) |
 |백업 및 복원 |수동으로 IBM Spectrum Protect Plus 또는 Veeam 사용 |수동으로 IBM Spectrum Protect Plus 또는 Veeam 사용 |수동으로 IBM Spectrum Protect Plus 또는 Veeam 사용 | 백업 및 복원 솔루션이 포함되지 않음 |
 |소프트웨어 정의 네트워킹 |NSX Enterprise |NSX Base, Advanced 또는 Enterprise |NSX Advanced 또는 Enterprise |NSX Standard, Base 또는 Enterprise. 자동화된 구성이 포함되지 않음 |
 |vSphere 및 vSAN용 BYOL |클러스터당 전체 지원됨 |클러스터당 전체 지원됨 |지원되지 않음 |지원됨 |
@@ -37,15 +37,15 @@ VMware Cloud Foundation 인스턴스, VMware vCenter Server 인스턴스, VMware
 
 <sup>1</sup> 유효성 검증된 디자인에 따라 그리고 배치 중에 확인하여.
 
-<sup>2</sup> vSAN 클러스터에서 최대 64개까지 ESXi 서버 수를 늘릴 수 있습니다. 자세한 정보는 [ESXi 서버에 대한 FAQ](faq_esxi.html)의 _몇 개의 ESXi 서버를 클러스터에 추가할 수 있습니까?_를 참조하십시오.
+<sup>2</sup> vSAN 클러스터에서 최대 64개까지 ESXi 서버 수를 늘릴 수 있습니다. 자세한 정보는 [ESXi 서버에 대한 FAQ](/docs/services/vmwaresolutions/vmonic/faq_esxi.html)의 _몇 개의 ESXi 서버를 클러스터에 추가할 수 있습니까?_를 참조하십시오.
 
 ### 관련 링크
 
-* [FAQ](faq.html)
-* [Cloud Foundation 개요](../sddc/sd_cloudfoundationoverview.html)
-* [vCenter Server 개요](../vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server with Hybridity 개요](../vcenter/vc_hybrid_overview.html)
-* [VMware vSphere 개요](../vsphere/vs_vsphereclusteroverview.html)
-* [Cloud Foundation BOM](../sddc/sd_bom.html)
-* [vCenter Server BOM](../vcenter/vc_bom.html)
-* [VMware vSphere BOM](../vsphere/vs_bom.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [vCenter Server with Hybridity 개요](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [VMware vSphere 개요](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)
+* [Cloud Foundation BOM](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [vCenter Server BOM](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [VMware vSphere BOM](/docs/services/vmwaresolutions/vsphere/vs_bom.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-01-14"
 
 # 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스의 주문, 보기 및 삭제
 
-마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스를 주문하기 전에 계획 요구사항을 검토하십시오. 
+마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스를 주문하기 전에 계획 요구사항을 검토하십시오.
 
 ## 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스 주문의 요구사항 및 계획
 
@@ -35,7 +35,7 @@ lastupdated: "2019-01-14"
 
 인스턴스 이름 요구사항을 검토하십시오.
 * 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 인스턴스 이름은 영숫자 문자로 시작하고 끝나야 합니다.
+* 인스턴스 이름은 영문자로 시작하고 영숫자로 끝나야 합니다. 
 * 인스턴스 이름의 최대 길이는 10자입니다.
 * 인스턴스 이름은 계정 내에서 고유해야 합니다.
 
@@ -93,7 +93,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 
 인스턴스 세부사항을 보고 배치 상태를 확인할 수 있습니다. 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하고 **vCenter Server 인스턴스** 또는 **온프레미스 HCX 인스턴스** 테이블을 찾아 주문한 인스턴스에 대한 정보를 보십시오.
 
-인스턴스가 성공적으로 배치되는 경우 이 주제의 *기술 스펙* 섹션에 설명되어 있는 컴포넌트가 VMware 가상 플랫폼에 설치되며, 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 서비스 정품 인증 키는 **온프레미스 HCX 인스턴스**에 나열됩니다. 
+인스턴스가 성공적으로 배치되는 경우 이 주제의 *기술 스펙* 섹션에 설명되어 있는 컴포넌트가 VMware 가상 플랫폼에 설치되며, 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 서비스 정품 인증 키는 **온프레미스 HCX 인스턴스**에 나열됩니다.
 
 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
@@ -103,8 +103,8 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 
 1. **배치된 인스턴스** 페이지에서 온프레미스 정품 인증 키를 찾으십시오.
   1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
-  2. **vCenter Server 인스턴스** 테이블에서 **유형** 열을 검토하여 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스를 찾고 인스턴스 이름을 기록해 두십시오. 
-  3. **온프레미스 HCX 인스턴스** 테이블로 스크롤하고 **이름** 열을 검토하여 *-OnPrem* 접두어로 정렬한 단일 노드 인스턴스와 동일한 이름을 가진 인스턴스를 찾으십시오. 
+  2. **vCenter Server 인스턴스** 테이블에서 **유형** 열을 검토하여 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스를 찾고 인스턴스 이름을 기록해 두십시오.
+  3. **온프레미스 HCX 인스턴스** 테이블로 스크롤하고 **이름** 열을 검토하여 *-OnPrem* 접두어로 정렬한 단일 노드 인스턴스와 동일한 이름을 가진 인스턴스를 찾으십시오.
   4. **정품 인증 키** 필드에 있는 키를 기록해 두십시오.
 2. HCX on {{site.data.keyword.cloud_notm}} HCX Manager 콘솔에서 온프레미스 HCX Enterprise Manager OVA(Open Virtual Appliance)를 얻으십시오.
   1. HCX Cloud 콘솔에 연결하십시오.
@@ -157,7 +157,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 삭제된 인스턴스에 대한 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시까지 비용이 청구됩니다.
 {:note}
 
-마이그레이션 및 현대화를 위한 단일 노드 평가판 인스턴스를 삭제하려면 다음 단계를 완료하십시오. 
+마이그레이션 및 현대화를 위한 단일 노드 평가판 인스턴스를 삭제하려면 다음 단계를 완료하십시오.
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 삭제할 인스턴스를 찾으십시오.
@@ -169,7 +169,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 
 ### 관련 링크
 
-* [vCenter Server 및 IBM Cloud Private 안내서](../archiref/vcsicp/vcsicp-intro.html)
+* [vCenter Server 및 IBM Cloud Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
 * [IBM Cloud Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US)
 * [VMware Hybrid Cloud Extension 문서](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

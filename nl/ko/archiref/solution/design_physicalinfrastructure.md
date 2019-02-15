@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2018-10-29"
   <dd class="dd">실제 네트워크는 해당 환경으로의 네트워크 연결을 제공하며, 이는 다시 네트워크 가상화에 의해 사용됩니다. 네트워크는 {{site.data.keyword.cloud_notm}} 서비스 네트워크에서 제공하며 여기에는 DNS 및 NTP 등의 추가 서비스가 포함되어 있습니다.</dd>
 </dl>
 
-실제 컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스](../../sddc/sd_bom.html) 또는 [vCenter Server 인스턴스](../../vcenter/vc_bom.html)의 명세서를 참조하십시오.
+실제 컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스](/docs/services/vmwaresolutions/sddc/sd_bom.html) 또는 [vCenter Server 인스턴스](/docs/services/vmwaresolutions/vcenter/vc_bom.html)의 명세서를 참조하십시오.
 
 스토리지에 대한 자세한 정보는 [공유 스토리지 아키텍처](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)를 참조하십시오.
 
@@ -33,7 +33,7 @@ lastupdated: "2018-10-29"
 
 실제 호스트는 컴퓨팅 리소스를 제공하는 환경의 {{site.data.keyword.baremetal_short}}를 의미합니다. 이 솔루션에서 적용된 {{site.data.keyword.baremetal_short}}는 VMware에 의해 인증되며 [VMware HCG](http://www.vmware.com/resources/compatibility/search.php)에 나열되어 있습니다.
 
-솔루션에서 사용 가능한 서버 구성은 vSphere ESXi를 설치, 구성하고 관리하기 위한 최소 요구사항을 충족하거나 초과합니다. 서로 다른 요구사항을 충족하기 위해 다양한 구성을 사용할 수 있습니다. VMware on {{site.data.keyword.cloud_notm}} 솔루션에 사용되는 정확한 스펙의 세부 목록은 [Cloud Foundation 인스턴스](../../sddc/sd_bom.html) 또는 [vCenter Server 인스턴스](../../vcenter/vc_bom.html)의 명세서를 참조하십시오.
+솔루션에서 사용 가능한 서버 구성은 vSphere ESXi를 설치, 구성하고 관리하기 위한 최소 요구사항을 충족하거나 초과합니다. 서로 다른 요구사항을 충족하기 위해 다양한 구성을 사용할 수 있습니다. VMware on {{site.data.keyword.cloud_notm}} 솔루션에 사용되는 정확한 스펙의 세부 목록은 [Cloud Foundation 인스턴스](/docs/services/vmwaresolutions/sddc/sd_bom.html) 또는 [vCenter Server 인스턴스](/docs/services/vmwaresolutions/vcenter/vc_bom.html)의 명세서를 참조하십시오.
 
 {{site.data.keyword.baremetal_short}}는 {{site.data.keyword.cloud_notm}}에 상주합니다.
 {:note}
@@ -156,7 +156,7 @@ vSphere ESXi 하이퍼바이저는 지속적 위치에 설치되도록 디자인
 
 사용되는 경우, VMware vSAN은 올플래시(all-flash) 구성을 사용하여 구성됩니다. 이 디자인에서는 2U 및 4U 섀시, 여러 개의 디스크 및 다양한 디스크 크기를 포함하여 여러 구성 옵션을 허용합니다. 모든 구성에서는 2개의 vSAN 디스크 그룹을 사용합니다(캐시용 1개의 SSD(Solid State Disk) 및 용량용 2개 이상의 SSD). vSAN 사용을 위해 할당된 모든 드라이브는 단일 디스크 RAID-0으로 구성됩니다.
 
-지원되는 구성에 대한 자세한 정보는 [Cloud Foundation 인스턴스](../../sddc/sd_bom.html) 또는 [vCenter Server 인스턴스](../../vcenter/vc_bom.html)의 명세서를 참조하십시오.
+지원되는 구성에 대한 자세한 정보는 [Cloud Foundation 인스턴스](/docs/services/vmwaresolutions/sddc/sd_bom.html) 또는 [vCenter Server 인스턴스](/docs/services/vmwaresolutions/vcenter/vc_bom.html)의 명세서를 참조하십시오.
 
 ### 호스트 간의 공유 파일 스토리지
 
@@ -172,7 +172,7 @@ vSphere ESXi 하이퍼바이저는 지속적 위치에 설치되도록 디자인
 
 ### 관련 링크
 
-* [Cloud Foundation 명세서](../../sddc/sd_bom.html)
-* [vCenter Server 명세서](../../vcenter/vc_bom.html)
+* [Cloud Foundation 명세서](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [vCenter Server 명세서](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
 * [공유 스토리지 아키텍처](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
 * [NetApp ONTAP Select 아키텍처](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

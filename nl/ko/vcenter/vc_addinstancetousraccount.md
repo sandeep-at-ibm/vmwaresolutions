@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,6 +35,6 @@ IaaS 전용 계정을 PaaS 계정에 연결하는 방법에 대한 자세한 정
 
 ### 관련 링크
 
-* [IAM에서 사용자 액세스 관리](../vmonic/iam.html)
-* [서비스 및 리소스에 액세스하기 위한 사용자 초대](../vmonic/iamuserinvite.html)
-* [IBM Cloud IAM 개념](../../../iam/index.html)
+* [IAM에서 사용자 액세스 관리](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [서비스 및 리소스에 액세스하기 위한 사용자 초대](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [IBM Cloud IAM 개념](/docs/iam/index.html)

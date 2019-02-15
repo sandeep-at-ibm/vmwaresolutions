@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -40,6 +40,6 @@ VMware on {{site.data.keyword.cloud_notm}} 오퍼링은 다음과 같은 이점�
 
 ### 관련 링크
 
-* [디자인 개요](design_overview.html)
-* [용량 스케일링](solution_scaling.html)
-* [컴포넌트 백업](solution_backingup.html)
+* [디자인 개요](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [용량 스케일링](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
+* [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

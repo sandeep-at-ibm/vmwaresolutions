@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -74,5 +74,5 @@ Por padrão, todas as notificações não lidas são exibidas. É possível filt
 
 ### Links relacionados
 
-* [Perguntas mais frequentes](faq.html)
-* [Conta do usuário e configurações](useraccount.html)
+* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Conta do usuário e configurações](/docs/services/vmwaresolutions/vmonic/useraccount.html)

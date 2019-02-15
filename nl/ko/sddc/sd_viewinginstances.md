@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -111,7 +111,7 @@ lastupdated: "2018-10-29"
 
 ## 오류 발생 시 수행할 작업
 
-인스턴스 배치 또는 인스턴스 삭제 중에 오류가 발생하는 경우 {{site.data.keyword.cloud_notm}} 지원 팀에 자동으로 알림이 전송됩니다. 티켓의 상태에 대해 문의하려는 경우에는 [IBM 지원 센터에 문의](../vmonic/trbl_support.html)할 수 있습니다.
+인스턴스 배치 또는 인스턴스 삭제 중에 오류가 발생하는 경우 {{site.data.keyword.cloud_notm}} 지원 팀에 자동으로 알림이 전송됩니다. 티켓의 상태에 대해 문의하려는 경우에는 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)할 수 있습니다.
 
 ## 수행할 작업
 
@@ -122,12 +122,12 @@ lastupdated: "2018-10-29"
 
 로그인 지시사항을 완료하는 데 도움이 되는 정보는 다음 주제를 검토하십시오.
 
-* vSphere Web Client에 액세스하기 전의 요구사항 및 필요한 단계는 [vSphere Web Client에 연결하는 중에 제한시간이 초과함](../vmonic/trbl_timeout_vc_console.html)을 참조하십시오.
+* vSphere Web Client에 액세스하기 전의 요구사항 및 필요한 단계는 [vSphere Web Client에 연결하는 중에 제한시간이 초과함](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html)을 참조하십시오.
 * VPN을 사용하여 {{site.data.keyword.cloud_notm}} 사설 네트워크에 로그인하기 위한 액세스 지점의 목록은 [VPN 액세스](http://www.softlayer.com/vpn-access){:new_window}를 참조하십시오.
-* vSphere Web Client를 사용하여 OVF(Open Virtualization Format) 파일을 배치할 때 문제점이 발생하면 [vSphere Web Client를 사용하여 OVF 파일 배치](../vmonic/trbl_deploy_ovf.html)를 참조하십시오.
+* vSphere Web Client를 사용하여 OVF(Open Virtualization Format) 파일을 배치할 때 문제점이 발생하면 [vSphere Web Client를 사용하여 OVF 파일 배치](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html)를 참조하십시오.
 
 ### 관련 링크
 
-* [Cloud Foundation 인스턴스 주문](sd_orderinginstance.html)
-* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](sd_addingremovingservers.html)
-* [Cloud Foundation 인스턴스 삭제](sd_deletinginstance.html)
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Cloud Foundation 인스턴스 삭제](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)

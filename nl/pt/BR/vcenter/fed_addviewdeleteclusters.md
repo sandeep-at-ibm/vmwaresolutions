@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,7 +22,11 @@ Os servidores ESXi configurados quando você pediu uma instância são agrupados
 
 ## Incluindo clusters para instâncias do VMware Federal
 
-É possível incluir até 10 clusters em uma instância. Ao incluir um cluster para uma instância do VMware Federal, deve-se especificar as configurações a seguir.
+O número de clusters que podem ser incluídos em uma instância depende da versão da instância:
+* Para instâncias que foram implementadas (ou submetidas a upgrade) na V2.5 e mais recente, o número de clusters, de hosts e de MVs determina o limite máximo para o número de clusters que podem ser incluídos. Deve-se permanecer dentro das diretrizes de dimensionamento do VMware e limites para sua implementação.
+* Para instâncias que foram implementadas na (ou submetidas a upgrade para) V2.2 e mais recente, é possível incluir até 10 clusters.
+
+Para obter mais informações sobre os limites máximos, consulte [Máximos de configuração do VMware](https://configmax.vmware.com/home){:new_window}.
 
 ### Configurações do sistema
 
@@ -83,7 +87,11 @@ As configurações de armazenamento são baseadas em sua seleção de configura�
 Especifique as seguintes opções vSAN:
 * **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
 * **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
-* Se você desejar incluir discos de capacidade além do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS. A opção **Intel Optane de alto desempenho** está disponível apenas para os Processadores Dual Intel Xeon Gold 5120 e 6140.
+* Se você desejar incluir discos de capacidade além do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS.
+
+  A opção **Intel Optane de alto desempenho** está disponível apenas para os modelos de CPU Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140 do Skylake.
+  {:note}
+
 * Revise os valores **Tipo de disco para discos de cache vSAN** e **Número de discos de cache vSAN**. Esses valores dependem de a caixa **Intel Optane de alto desempenho** estar ou não marcada.
 * **Licença vSAN**: selecione a edição de licença VMware vSAN 6.6 (Advanced ou Enterprise).
 
@@ -240,7 +248,7 @@ Use este procedimento para remover clusters de instâncias implementadas (ou sub
 * Para clusters implementados em instâncias da V2.2 ou anteriores, deve-se fazer upgrade da instância para a V2.3 para ser possível excluir os clusters incluídos na instância.
 * É possível excluir um único cluster de cada vez. Para excluir múltiplos clusters, deve-se fazer isso em sequência, aguardando que o cluster anterior seja excluído antes de tentar excluir o próximo cluster.
 * Assegure-se de que todos os nós em um cluster estejam ativados e operacionais antes de excluir o cluster.
-* Quando você exclui um cluster, todas as VMs (máquinas virtuais) do cluster também são excluídas e não podem ser recuperadas. Se quiser manter as VMs, migre-as para outros clusters.
+* Quando você exclui um cluster, todas as MVs (máquinas virtuais) do cluster também são excluídas e não podem ser recuperadas. Se quiser manter as MVs, migre-as para outros clusters.
 * O cluster padrão não pode ser excluído.
 
 ## Procedimento para excluir clusters de instâncias do VMware Federal
@@ -255,5 +263,5 @@ Use este procedimento para remover clusters de instâncias implementadas (ou sub
 
 ### Links relacionados
 
-* [Visualizando instâncias do VMware Federal](vc_fed_viewinginstance.html)
-* [Expandindo e contraindo a capacidade para instâncias do VMware Federal](vc_fed_addingremovingservers.html)
+* [Visualizando instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Expandindo e contraindo a capacidade para instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)

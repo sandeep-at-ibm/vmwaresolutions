@@ -24,7 +24,7 @@ lastupdated: "2018-06-22"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-자세한 정보는 [스펙터(Spectre) 및 멜트다운(Meltdown) 취약점 해결](../vmonic/trbl_fix_spectre.html)을 참조하십시오.
+자세한 정보는 [스펙터(Spectre) 및 멜트다운(Meltdown) 취약점 해결](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)을 참조하십시오.
 
 ## 자국어 지원
 
@@ -52,21 +52,21 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 
 자세한 정보는 *Bare Metal Server 설정* 절을 참조하십시오.
 
-* [Cloud Foundation 인스턴스 주문](../sddc/sd_orderinginstance.html#bare-metal-server-settings)
-* [새 vSphere 클러스터 주문](../vsphere/vs_orderinginstances.html#bare-metal-server-settings)
-* [VMware Federal 인스턴스 주문](../vcenter/vc_fed_orderinginstance.html#bare-metal-server-settings)
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html#bare-metal-server-settings)
+* [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#bare-metal-server-settings)
+* [VMware Federal 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html#bare-metal-server-settings)
 
 ## VMware vCenter Server 인스턴스에 대한 업데이트
 
 ### Network File System 성능 개선
 
-가장 까다로운 워크로드 유형에 맞게 디자인된 10IOPS/GB의 성능 레벨은 더 이상 특정 {{site.data.keyword.CloudDataCent_notm}}로 제한되지 않으며 이제 어디서든 사용 가능합니다. 자세한 정보는 [vCenter Server 개요](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)에서 *스토리지* 절을 참조하십시오.
+가장 까다로운 워크로드 유형에 맞게 디자인된 10IOPS/GB의 성능 레벨은 더 이상 특정 {{site.data.keyword.CloudDataCent_notm}}로 제한되지 않으며 이제 어디서든 사용 가능합니다. 자세한 정보는 [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)에서 *스토리지* 절을 참조하십시오.
 
 ## VMware Federal 인스턴스에 대한 업데이트
 
 ### 새 IBM Cloud Data Center 옵션
 
-이제 VMware Federal 인스턴스를 DAL08 - Dallas, TX {{site.data.keyword.CloudDataCent_notm}}에 배치할 수 있습니다. 자세한 정보는 [VMware Federal 인스턴스에 대한 요구사항 및 계획](../vcenter/vc_fed_planning.html#ibm-cloud-data-center-availability)의 *IBM Cloud Data Center 가용성* 절을 참조하십시오.
+이제 VMware Federal 인스턴스를 DAL08 - Dallas, TX {{site.data.keyword.CloudDataCent_notm}}에 배치할 수 있습니다. 자세한 정보는 [VMware Federal 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html#ibm-cloud-data-center-availability)의 *IBM Cloud Data Center 가용성* 절을 참조하십시오.
 
 ## 추가 서비스에 대한 업데이트
 
@@ -76,13 +76,13 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 
 ### VMware HCX on IBM Cloud
 
-새 옵션은 이 서비스를 주문할 때 HCX 상호연결을 위해 공용 네트워크와 사설 네트워크 중에서 선택하는 데 사용할 수 있습니다. 자세한 정보는 [VMware HCX on {{site.data.keyword.cloud_notm}} 주문](../services/hcx_ordering.html)을 참조하십시오.
+새 옵션은 이 서비스를 주문할 때 HCX 상호연결을 위해 공용 네트워크와 사설 네트워크 중에서 선택하는 데 사용할 수 있습니다. 자세한 정보는 [VMware HCX on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/hcx_ordering.html)을 참조하십시오.
 
 ## 새로 작성되고 업데이트된 문서
 
 ### 참조 아키텍처 문서
 
-{{site.data.keyword.vmwaresolutions_short}} 아키텍처 문서는 이제 사용자 문서의 *참조* 절에서 사용할 수 있습니다. 자세한 정보는 [솔루션 개요](../archiref/solution/solution_overview.html)를 참조하십시오.
+{{site.data.keyword.vmwaresolutions_short}} 아키텍처 문서는 이제 사용자 문서의 *참조* 절에서 사용할 수 있습니다. 자세한 정보는 [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)를 참조하십시오.
 
 ### 서비스 문서
 
@@ -90,15 +90,15 @@ V2.4 릴리스부터는 다음 새 Bare Metal Server CPU 모델이 VMware Cloud 
 
 자세한 정보는 다음 주제를 참조하십시오.
 
-* [F5 on {{site.data.keyword.cloud_notm}} 주문](../services/f5_ordering.html)
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 주문](../services/fsa_ordering.html)
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 주문](../services/fortinetvm_ordering.html)
-* [Hytrust CloudControl on {{site.data.keyword.cloud_notm}} 주문](../services/htcc_ordering.html)
-* [Hytrust DataControl on {{site.data.keyword.cloud_notm}} 주문](../services/htdc_ordering.html)
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 주문](../services/spp_ordering.html)
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 주문](../services/kmip_ordering.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} 주문](../services/veeam_ordering.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} 주문](../services/zerto_ordering.html)
+* [F5 on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/f5_ordering.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/fsa_ordering.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
+* [Hytrust CloudControl on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/htcc_ordering.html)
+* [Hytrust DataControl on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/htdc_ordering.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/spp_ordering.html)
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/kmip_ordering.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/veeam_ordering.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/zerto_ordering.html)
 
 ## 사용자 인터페이스 업데이트 및 개선사항
 

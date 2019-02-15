@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ Use este procedimento para excluir as instâncias do HCX on {{site.data.keyword.
 
 ## Antes de iniciar
 
-Assegure-se de ter revisado todas as considerações em [Considerações ao excluir instâncias do HCX on {{site.data.keyword.cloud_notm}} no local](../services/standalone_considerations.html).
+Assegure-se de ter revisado todas as considerações em [Considerações ao excluir instâncias do HCX on {{site.data.keyword.cloud_notm}} no local](/docs/services/vmwaresolutions/services/standalone_considerations.html).
 
 ## Procedimento para excluir instâncias do VMware HCX on IBM Cloud no local
 
@@ -26,7 +26,7 @@ Assegure-se de ter revisado todas as considerações em [Considerações ao excl
 
 ### Links relacionados
 
-* [Solicitando HCX no {{site.data.keyword.cloud_notm}} instâncias](standalone_orderingserviceinstances.html)
-* [Visualizando HCX no {{site.data.keyword.cloud_notm}} instâncias](standalone_viewingserviceinstances.html)
-* [Glossário de termos do HCX](hcx_glossary.html)
+* [Solicitando HCX no {{site.data.keyword.cloud_notm}} instâncias](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
+* [Visualizando HCX no {{site.data.keyword.cloud_notm}} instâncias](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
+* [Glossário de termos do HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [Documentação do VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-11"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -78,10 +78,10 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 서비�
 
 ### 관련 링크
 
-* [HCX on {{site.data.keyword.cloud_notm}} 개요](hcx_considerations.html)
-* [HCX on {{site.data.keyword.cloud_notm}} 관리](managinghcx.html)
-* [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_hybrid_addingremovingservices.html)
-* [HCX 용어집](hcx_glossary.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
+* [HCX on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [HCX on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [HCX 용어집](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension 개요](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources)

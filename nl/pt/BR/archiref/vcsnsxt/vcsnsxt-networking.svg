@@ -52,7 +52,7 @@
       <xhtml:div display="inline-block" text-align="inherit" text-decoration="inherit">On Cloud VMs</xhtml:div>
      </xhtml:div>
     </foreignObject>
-    <text x="39" y="12" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">Nas VMs em nuvem</text>
+    <text x="39" y="12" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">Nas MVs em nuvem</text>
    </switch>
   </g>
   <rect x="505" y="217" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
@@ -61,7 +61,7 @@
   </g>
   <rect x="180" y="122" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
-   <text x="239.5" y="145.5">VM no local</text>
+   <text x="239.5" y="145.5">MV no local</text>
   </g>
   <rect x="450" y="542" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">

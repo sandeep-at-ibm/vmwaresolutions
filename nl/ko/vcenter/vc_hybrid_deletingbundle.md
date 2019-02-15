@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-10"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2019-01-10"
 
 vCenter Server 인스턴스에서 Hybridity Bundle 라이센스를 제거하려면, VMware vSphere Web Client에서 VMware NSX 및 VMware vSAN 임대 라이센스 키를 BYOL(Bring Your Own License) 키로 대체해야 합니다. 또한 임대 라이센스 비용을 취소하려면 지원 티켓을 열어야 합니다.
 
-라이센스를 다운그레이드하면 vCenter Server 인스턴스가 실패할 수 있습니다. 사용자 책임 하에 라이센스를 다운그레이드하도록 선택할 수 있지만 먼저 다운그레이드하는 경우 사용할 수 없는 기능에 대해 고려하십시오. 자세한 정보는 [VMware 컴포넌트 에디션의 비교 차트](../archiref/solution/appendix.html)를 참조하십시오.
+라이센스를 다운그레이드하면 vCenter Server 인스턴스가 실패할 수 있습니다. 사용자 책임 하에 라이센스를 다운그레이드하도록 선택할 수 있지만 먼저 다운그레이드하는 경우 사용할 수 없는 기능에 대해 고려하십시오. 자세한 정보는 [VMware 컴포넌트 에디션의 비교 차트](/docs/services/vmwaresolutions/archiref/solution/appendix.html)를 참조하십시오.
 {:important}
 
 ## 다중 사이트 환경에서 Hybridity Bundle을 제거하기 전의 중요한 고려사항
@@ -108,6 +108,6 @@ Hybridity Bundle을 제거하기 전에 다음 요구사항을 확인하십시�
 
 ### 관련 링크
 
-* [vCenter Server with Hybridity Bundle 인스턴스 주문](vc_hybrid_orderinginstance.html)
-* [vCenter Server with Hybridity Bundle 인스턴스 보기](vc_hybrid_viewinginstances.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
+* [vCenter Server with Hybridity Bundle 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle 인스턴스 보기](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

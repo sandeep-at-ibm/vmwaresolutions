@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-11"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-11"
 ## 시작하기 전에
 
 * 자신이 계정 소유자인지 또는 **VMware Solutions** 서비스에 대한 플랫폼 관리 역할이 **관리자**인지 확인하십시오.
-* [IAM(Identity and Access Management)으로 사용자 액세스 관리](iam.html)에서 사용자 역할 및 권한을 검토했는지 확인하십시오.
+* [IAM(Identity and Access Management)으로 사용자 액세스 관리](/docs/services/vmwaresolutions/vmonic/iam.html)에서 사용자 역할 및 권한을 검토했는지 확인하십시오.
 
 ## 서비스 및 자원에 액세스하도록 사용자를 초대하는 프로시저
 
@@ -34,12 +34,12 @@ lastupdated: "2018-11-11"
 
 ### 관련 링크
 
-* [사용자 초대 및 액세스 지정](../../../iam/iamuserinv.html)
-* [ID 및 액세스 관리](../../../iam/quickstart.html)
-* [사용자 및 액세스 관리](../../../iam/iamusermanage.html)
-* [IAM 개념](../../../iam/index.html)
-* [IBM Cloud 계정으로 V2.5 이전 vCenter Server 인스턴스 마이그레이션](../vcenter/vc_addinstancetousraccount.html)
-* [IBM Cloud 계정으로 V2.5 이전 vCenter Server with Hybridity Bundle 인스턴스 마이그레이션](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [IBM Cloud 계정으로 V2.5 이전 Cloud Foundation 인스턴스 마이그레이션](../sddc/sd_addinstancetousraccount.html)
-* [IBM Cloud 계정으로 V2.5 이전 NetApp ONTAP Select 인스턴스 마이그레이션](../netapp/np_addinstancetousraccount.html)
-* [IBM Cloud 계정으로 V2.5 이전 VMware Federal 인스턴스 마이그레이션](../vcenter/vc_fed_addinstancetousraccount.html)
+* [사용자 초대 및 액세스 지정](/docs/iam/iamuserinv.html)
+* [ID 및 액세스 관리](/docs/iam/quickstart.html)
+* [사용자 및 액세스 관리](/docs/iam/iamusermanage.html)
+* [IAM 개념](/docs/iam/index.html)
+* [IBM Cloud 계정으로 V2.5 이전 vCenter Server 인스턴스 마이그레이션](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [IBM Cloud 계정으로 V2.5 이전 vCenter Server with Hybridity Bundle 인스턴스 마이그레이션](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [IBM Cloud 계정으로 V2.5 이전 Cloud Foundation 인스턴스 마이그레이션](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [IBM Cloud 계정으로 V2.5 이전 NetApp ONTAP Select 인스턴스 마이그레이션](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [IBM Cloud 계정으로 V2.5 이전 VMware Federal 인스턴스 마이그레이션](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)

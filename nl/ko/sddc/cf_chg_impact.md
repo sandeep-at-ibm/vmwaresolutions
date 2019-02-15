@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2018-01-21"
 
 ---
 
@@ -18,6 +18,7 @@ lastupdated: "2018-12-11"
 {{site.data.keyword.vmwaresolutions_full}}에 대해 예약된 사용자, 리소스 또는 서브넷을 변경하면 VMware Cloud Foundation 인스턴스의 관리 오퍼레이션에 영향을 줄 수 있습니다.
 
 VMware vSphere Web Client의 **사용자 및 그룹** 페이지에서 **ic4v-vCenter** 그룹의 글로벌 권한을 변경하지 마십시오. 글로벌 권한 변경에는 사용자 이름 변경, 사용자 삭제 또는 해당 비밀번호 변경이 포함됩니다.
+**root** 호스트 사용자 ID 대신 **customerroot** 호스트 사용자 ID를 사용하십시오.
 {:important}
 
 ## 서비스 고유 사용자 계정

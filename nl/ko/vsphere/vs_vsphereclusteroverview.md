@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-10"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -78,23 +78,23 @@ VMware vSAN 컴포넌트가 선택될 때 vSAN 구성을 위한 사용자 정의
 
 ### 확장 노드를 위한 하드웨어
 
-[VMware vSphere on {{site.data.keyword.cloud_notm}} 클러스터의 기술 스펙](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)에 표시된 하드웨어 구성을 지닌 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server입니다.
+[VMware vSphere on {{site.data.keyword.cloud_notm}} 클러스터의 기술 스펙](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)에 표시된 하드웨어 구성을 지닌 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server입니다.
 
 ### 확장 노드를 위한 네트워킹
 
-[VMware vSphere on {{site.data.keyword.cloud_notm}} 클러스터의 기술 스펙](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)에 표시된 네트워크 구성을 지닌 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server입니다.
+[VMware vSphere on {{site.data.keyword.cloud_notm}} 클러스터의 기술 스펙](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)에 표시된 네트워크 구성을 지닌 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server입니다.
 
 ### 확장 노드를 위한 VMware 컴포넌트
 
 * VMware vSphere Enterprise Plus 6.0u2 또는 6.5u1의 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server  
-* [VMware vSphere on {{site.data.keyword.cloud_notm}} 클러스터의 기술 스펙](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)에 표시된 선택적 VMware 컴포넌트입니다.
+* [VMware vSphere on {{site.data.keyword.cloud_notm}} 클러스터의 기술 스펙](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)에 표시된 선택적 VMware 컴포넌트입니다.
 
-{{site.data.keyword.slportal}}에서만 {{site.data.keyword.cloud_notm}} 계정에 주문되어 제공되는 ESXi 서버, 선택적 VMware 컴포넌트 및 추가적인 하드웨어를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 새 클러스터를 작성한 후에는 콘솔로 돌아가서 저장된 구성을 사용하여 새 클러스터를 스케일링할 수 있습니다. 자세한 정보는 [기존 vSphere 클러스터 스케일링](vs_scalingexistingclusters.html)을 참조하십시오.
+{{site.data.keyword.slportal}}에서만 {{site.data.keyword.cloud_notm}} 계정에 주문되어 제공되는 ESXi 서버, 선택적 VMware 컴포넌트 및 추가적인 하드웨어를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 새 클러스터를 작성한 후에는 콘솔로 돌아가서 저장된 구성을 사용하여 새 클러스터를 스케일링할 수 있습니다. 자세한 정보는 [기존 vSphere 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)을 참조하십시오.
 {:important}
 
 ### 관련 링크
 
-* [VMware vSphere Software 명세서](vs_bom.html)
-* [vSphere 클러스터 계획](vs_planning.html)
-* [vSphere 클러스터 주문](vs_orderinginstances.html)
-* [기존 vSphere 클러스터 스케일링](vs_scalingexistingclusters.html)
+* [VMware vSphere Software 명세서](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
+* [vSphere 클러스터 계획](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
+* [vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [기존 vSphere 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -130,5 +130,5 @@ V2.0 이하로 배치된 인스턴스의 경우에는 공용 스위치 MTU 설�
 * [빌드 번호 및 VMware vCenter Server(2143838)의 버전](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [vCenter Server 개요](vc_vcenterserveroverview.html)
-* [vCenter Server 인스턴스 계획](vc_planning.html)
+* [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [vCenter Server 인스턴스 계획](/docs/services/vmwaresolutions/vcenter/vc_planning.html)

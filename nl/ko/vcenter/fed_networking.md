@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -17,7 +17,7 @@ VMware Federal 인스턴스에 대한 자세한 네트워킹 고려사항 및 �
 ## VMware Federal 인스턴스의 네트워킹 컴포넌트
 {: faq}
 
-VMware Federal 인스턴스에 포함된 네트워킹 컴포넌트를 검토하려면 [VMware Federal on {{site.data.keyword.cloud}} 인스턴스의 기술 스펙](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)을 참조하십시오.
+VMware Federal 인스턴스에 포함된 네트워킹 컴포넌트를 검토하려면 [VMware Federal on {{site.data.keyword.cloud}} 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)을 참조하십시오.
 
 ## 방화벽 고려사항
 
@@ -27,7 +27,7 @@ VMware Federal 인스턴스에 포함된 네트워킹 컴포넌트를 검토하�
 
 VMware Federal 인스턴스 배치 중에, 인스턴스에서 VMware NSX가 주문, 설치, 라이센싱 및 구성됩니다. 또한 NSX Manager, NSX Controller 및 NSX Transport Zone이 설정되고 각 ESXi 서버가 NSX 컴포넌트로 구성됩니다.
 
-또한 NSX Edge Services Gateway는 워크로드 가상 머신(VM)에서 사용할 수 있도록 배치됩니다. 자세한 정보는 [VM에서 고객 관리 NSX ESG를 사용하도록 네트워크 구성](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)을 참조하십시오.
+또한 NSX Edge Services Gateway는 워크로드 가상 머신(VM)에서 사용할 수 있도록 배치됩니다. 자세한 정보는 [VM에서 고객 관리 NSX ESG를 사용하도록 네트워크 구성](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)을 참조하십시오.
 
 ## NSX 컴포넌트의 비밀번호 변경 시 고려사항
 

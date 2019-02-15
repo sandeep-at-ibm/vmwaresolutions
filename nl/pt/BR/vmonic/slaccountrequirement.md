@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,7 @@ A conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) era co
 
 A conta de infraestrutura do {{site.data.keyword.cloud_notm}} que você está usando deve ter determinadas permissões para poder pedir os componentes em suas instâncias e executar operações em seu nome. Os requisitos de permissão são aplicáveis a todos os tipos de instâncias e serviços que você está pedindo do console do {{site.data.keyword.vmwaresolutions_short}}.
 
-Os usuários autorizados podem verificar e atualizar as permissões para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} no {{site.data.keyword.slportal}}. Para obter mais informações, consulte [Editando permissões do portal do cliente de um usuário](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
+Os usuários autorizados podem verificar e atualizar as permissões para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} no {{site.data.keyword.slportal}}. Para obter mais informações, consulte [Editando permissões do portal do cliente de um usuário](/docs/customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
 
 Tabela 1. Permissões necessárias para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}
 
@@ -45,12 +45,23 @@ Tabela 1. Permissões necessárias para a conta de infraestrutura do {{site.data
 | Visualizar senhas | Essa permissão é necessária para poder administrar os VSIs pedidos. |
 | Gerenciar Monitoramento do Servidor | Essa permissão não é necessária para fazer um pedido, mas é necessária para recuperar e validar o status de monitoramento do {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} no qual os servidores VMware ESXi estão em execução em sua instância. |
 
-## Ampliação da VLAN para contas clássicas (não VRF)
+## Requisito de roteamento e encaminhamento virtual (VRF)
 
-Se você está usando uma conta de infraestrutura clássica (não VRF) do {{site.data.keyword.cloud_notm}}, o VLAN Spanning deve ser ativado. Se a ampliação da VLAN não estiver ativada para contas clássicas, os vários componentes do ambiente de virtualização do VMware poderão não ser capazes de se comunicar entre si. Para permitir a ampliação da VLAN em sua conta de infraestrutura do {{site.data.keyword.cloud_notm}}, consulte [Ampliação da VLAN](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+A conta de infraestrutura do {{site.data.keyword.cloud_notm}} deve ser uma conta VRF ou, caso seja uma conta não VRF, deve ter a ampliação de VLAN ativada. Para obter mais informações sobre como converter sua conta de não VRF para VRF,
+consulte [Visão geral do VRF on IBM Cloud](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html).
+
+## Ampliação de VLAN para contas não VRF
+
+Se você estiver usando uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} não VRF, a
+ampliação de VLAN deve ser ativada. Se a ampliação de VLAN não estiver ativada para contas não VRF, os vários
+componentes do ambiente de virtualização do VMware podem não ser capazes de se comunicar uns com os outros.
+
+Para ativar a ampliação de VLAN em sua conta, consulte
+[Ampliação de VLAN](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ### Links relacionados
 
-* [Requisitos para instâncias do Cloud Foundation](../sddc/sd_planning.html)
-* [Requisitos para instâncias do vCenter Server](../vcenter/vc_planning.html)
-* [Conta do usuário e configurações](useraccount.html)
+* [Requisitos para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Requisitos para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [Conta do usuário e configurações](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [ Visão geral do VRF no IBM Cloud ](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -51,9 +51,9 @@ Você é faturado até o final do ciclo de faturamento do {{site.data.keyword.cl
 
 ### Links relacionados
 
-* [Excluindo instâncias do Cloud Foundation em uma configuração de vários sites](sd_deletinginstance_multi.html)
-* [Pedindo instâncias do Cloud Foundation](sd_orderinginstance.html)
-* [Visualizando instâncias do Cloud Foundation](sd_viewinginstances.html)
-* [Expandindo e contraindo a capacidade para instâncias do Cloud Foundation](sd_addingremovingservers.html)
-* [Excluindo configurações de vários sites](sd_deletinginstance_multi.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
+* [Excluindo instâncias do Cloud Foundation em uma configuração de vários sites](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Visualizando instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Expandindo e contraindo a capacidade para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Excluindo configurações de vários sites](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

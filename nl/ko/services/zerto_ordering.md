@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -26,11 +26,11 @@ lastupdated: "2018-09-25"
 
 ### 관련 링크
 
-* [Zerto on {{site.data.keyword.cloud_notm}} 개요](addingzertodr.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} 관리](managingzertodr.html)
-* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](../sddc/sd_addingremovingservices.html)
-* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_addingremovingservices.html)
-* [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스 요청](managing_zerto_services.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/addingzertodr.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managingzertodr.html)
+* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스 요청](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
 * [zerto.com 웹 사이트](https://www.zerto.com){:new_window}
 * [Zerto 기술 문서](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

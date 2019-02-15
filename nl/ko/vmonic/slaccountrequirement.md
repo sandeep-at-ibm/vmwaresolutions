@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-04"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-12-04"
 
 사용 중인 {{site.data.keyword.cloud_notm}} 인프라 계정에는 인스턴스의 컴포넌트를 주문하고 사용자를 대신해 오퍼레이션을 수행할 수 있는 특정 권한이 있어야 합니다. 권한 요구사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 주문 중인 모든 유형의 인스턴스와 서비스에 적용할 수 있습니다.
 
-권한 부여된 사용자는 {{site.data.keyword.slportal}}에서 {{site.data.keyword.cloud_notm}} 인프라 계정에 대한 권한을 확인하고 업데이트할 수 있습니다. 자세한 정보는 [사용자의 고객 포털 권한 편집](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}을 참조하십시오.
+권한 부여된 사용자는 {{site.data.keyword.slportal}}에서 {{site.data.keyword.cloud_notm}} 인프라 계정에 대한 권한을 확인하고 업데이트할 수 있습니다. 자세한 정보는 [사용자의 고객 포털 권한 편집](/docs/customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}을 참조하십시오.
 
 표 1. {{site.data.keyword.cloud_notm}} 인프라 계정에 대한 필수 권한
 
@@ -45,13 +45,19 @@ lastupdated: "2018-12-04"
 |비밀번호 보기 |이 권한은 주문된 VSI를 관리하는 데 필요합니다. |
 | 서버 모니터링 관리 |이 권한은 주문하는 데 필요하지 않지만 인스턴스에서 VMware ESXi 서버가 실행되는 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}의 모니터링 상태를 검색하고 유효성 검증하는 데 필요합니다. |
 
-## 클래식(VRF 아님) 계정에 대한 VLAN Spanning
+## VRF(Virtual Routing and Forwarding) 요구사항
 
-클래식(비-VRF) {{site.data.keyword.cloud_notm}} 인프라 계정을 사용 중이면 VLAN Spanning을 사용해야 합니다. VLAN Spanning이 클래식 계정에 대해 사용으로 설정되지 않은 경우 VMware 가상화 환경의 여러 컴포넌트는 서로 통신하지 못할 수 있습니다. {{site.data.keyword.cloud_notm}} 인프라 계정에서 VLAN Spanning을 사용으로 설정하려면 [VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}을 참조하십시오.
+{{site.data.keyword.cloud_notm}} 인프라 계정은 VRF 계정이어야 합니다. 또는 VRF 계정이 아니면 VLAN Spanning이 사용으로 설정되어야 합니다. 비-VRF 계정에서 VRF 계정으로의 변환에 대한 자세한 정보는 [IBM Cloud의 VRF 개요](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)를 참조하십시오. 
+
+## 비-VRF 계정에 대한 VLAN Spanning
+
+비-VRF {{site.data.keyword.cloud_notm}} 인프라 계정을 사용 중이면 VLAN Spanning이 사용으로 설정되어야 합니다. 비-VRF 계정에 대해 VLAN Spanning이 사용으로 설정되지 않으면 VMware 가상화 환경의 다양한 컴포넌트가 서로 간에 통신할 수 없습니다. 
+
+계정에서 VLAN Spanning을 사용으로 설정하려면 [VLAN Spanning](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}을 참조하십시오. 
 
 ### 관련 링크
 
-* [Cloud Foundation 인스턴스에 대한 요구사항](../sddc/sd_planning.html)
-* [vCenter Server 인스턴스에 대한 요구사항](../vcenter/vc_planning.html)
-* [사용자 계정 및 설정](useraccount.html)
-* [IBM Cloud의 VRF 개요](../../../infrastructure/direct-link/vrf-on-ibm-cloud.html)
+* [Cloud Foundation 인스턴스에 대한 요구사항](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [vCenter Server 인스턴스에 대한 요구사항](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [사용자 계정 및 설정](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [IBM Cloud의 VRF 개요](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)

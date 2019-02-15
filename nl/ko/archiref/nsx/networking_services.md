@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -187,7 +187,7 @@ IBM 워크로드 ESG는 워크로드 네트워크 통신을 목적으로 하는 
 
 NAT는 워크로드 ESG에서 네트워크 트래픽이 하나의 IP 주소 공간과 다른 IP 주소 공간 사이를 순회할 수 있도록 하는 방법으로 사용됩니다. 워크로드 ESG의 경우 NAT는 인터넷 대상에 대한 통신을 허용하기 위해서만이 아니라 모든 {{site.data.keyword.cloud_notm}} 소스 IP 범위와 통신하는 데 필요합니다. 이 디자인의 경우 워크로드 트래픽이 인터넷으로 나갈 수 있지만 관리 또는 모든 {{site.data.keyword.cloud_notm}} 네트워크로 나갈 수는 없습니다. 따라서 하나의 SNAT만 워크로드 ESG에 정의되어야 합니다. 전체 워크로드 포터블 서브넷이 해당 SNAT를 통해 순회하도록 구성됩니다.
 
-NAT를 사용하여 Cloud Foundation 또는 vCenter Server의 여러 인스턴스에서 워크로드 통신을 허용할 수 있지만 인스턴스 간에 많은 워크로드가 연결되어야 하는 경우에는 적합하지 않습니다. 고급 NSX 기능을 사용하여 Cloud Foundation 또는 vCeter Server 인스턴스에서 L2 오버레이 전송 네트워크를 작성하는 예는 [다중 사이트 아키텍처](multi_site.html)를 참조하십시오.
+NAT를 사용하여 Cloud Foundation 또는 vCenter Server의 여러 인스턴스에서 워크로드 통신을 허용할 수 있지만 인스턴스 간에 많은 워크로드가 연결되어야 하는 경우에는 적합하지 않습니다. 고급 NSX 기능을 사용하여 Cloud Foundation 또는 vCeter Server 인스턴스에서 L2 오버레이 전송 네트워크를 작성하는 예는 [다중 사이트 아키텍처](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)를 참조하십시오.
 
 표 10. 워크로드 ESG NAT 규칙
 
@@ -240,5 +240,5 @@ NAT를 사용하여 Cloud Foundation 또는 vCenter Server의 여러 인스턴�
 
 ### 관련 링크
 
-* [NSX Edge Services Gateway 디자인](nsx_design.html)
-* [다중 사이트 아키텍처](multi_site.html)
+* [NSX Edge Services Gateway 디자인](/docs/services/vmwaresolutions/archiref/nsx/nsx_design.html)
+* [다중 사이트 아키텍처](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -48,9 +48,9 @@ Zerto Replication V6.0 update 3 라이센스
 
 ### 관련 링크
 
-* [{{site.data.keyword.vmwaresolutions_short}} 정보](../vmonic/prod_overview.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} 주문](zerto_ordering.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} 관리](managingzertodr.html)
-* [Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스 요청](managing_zerto_services.html)
+* [{{site.data.keyword.vmwaresolutions_short}} 정보](/docs/services/vmwaresolutions/vmonic/prod_overview.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/zerto_ordering.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managingzertodr.html)
+* [Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스 요청](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
 * [zerto.com 웹 사이트](https://www.zerto.com){:new_window}
 * [Zerto 기술 문서](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

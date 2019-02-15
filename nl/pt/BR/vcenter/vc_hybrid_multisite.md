@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -29,14 +29,15 @@ Uma implementação de vários sites consiste nos componentes a seguir.
    *  Nome do site SSO
    *  Subdomínio do DNS que é vinculado ao domínio-raiz na instância primária
    *  Configuração de replicação DNS e AD entre as máquinas virtuais AD nas instâncias primárias e secundárias.
-   *  PSC (Platform Services Controller) implementado e configurado para replicar com o PSC na instância primária.
+   *  Para instâncias primárias implementadas na V2.8 ou mais recente: o vCenter Server Appliance (vCSA) com o
+Platform Services Controller (PSC) integrado é implementado e configurado.
    *  O VMware vCenter nas instâncias secundárias é configurado com o Modo vinculado avançado para o vCenter na instância primária.
 
 ## Implementação multissite do vCenter Server with Hybridity Bundle
 
 O recurso de configuração de vários sites usa uma topologia de hub e spoke com um site primário e um máximo de sete sites secundários. Uma única camada de sites é suportada, ou seja, não é possível configurar sites subsequentes vinculados a outros sites secundários. É possível ter um total de 128 servidores ESXi em uma configuração de vários sites em todas as instâncias.
 
-Se a sua configuração requerer uma implementação de vários sites com mais de 128 servidores ESXi, entre em contato com o Suporte IBM para obter assistência. Para obter mais informações, veja [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html).
+Se a sua configuração requerer uma implementação de vários sites com mais de 128 servidores ESXi, entre em contato com o Suporte IBM para obter assistência. Para obter mais informações, veja [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 {:note}
 
 O gráfico a seguir descreve a visão geral da implementação multissite do vCenter Server with Hybridity Bundle.
@@ -54,7 +55,7 @@ O modelo contém as camadas a seguir:
 
 É possível ter um máximo de 8 instâncias (1 primária e 7 secundárias) que serão implementadas em uma configuração de vários sites.
 
-A exclusão de instâncias do vCenter Server with Hybridity Bundle que fazem parte de uma configuração multisite requer planejamento especial. Para obter mais informações, veja [Excluindo instâncias do vCenter Server with Hybridity Bundle em uma configuração multisite](vc_hybrid_deletinginstance_multi.html).
+A exclusão de instâncias do vCenter Server with Hybridity Bundle que fazem parte de uma configuração multisite requer planejamento especial. Para obter mais informações, veja [Excluindo instâncias do vCenter Server with Hybridity Bundle em uma configuração multisite](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html).
 {:note}
 
 ### Links relacionados

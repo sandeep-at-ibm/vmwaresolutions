@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -59,9 +59,9 @@ Revise as considerações a seguir antes de remover o serviço FortiGate Securit
 
 ### Links relacionados
 
-* [Solicitando FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}](fsa_ordering.html)
-* [Gerenciando o FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}](managingfsa.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
-* [Perguntas mais frequentes](../vmonic/faq.html)
+* [Solicitando FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_ordering.html)
+* [Gerenciando o FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfsa.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Website do Fortinet](https://www.fortinet.com/){:new_window}
 * [Biblioteca de documentos do Fortinet](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

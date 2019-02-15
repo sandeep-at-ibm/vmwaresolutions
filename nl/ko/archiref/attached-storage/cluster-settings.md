@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -90,4 +90,4 @@ vSphere HA는 데이터 저장소 하트비트를 사용하여 장애가 발생�
 
 ### 관련 링크
 
-* [솔루션 개요](../solution/solution_overview.html)
+* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

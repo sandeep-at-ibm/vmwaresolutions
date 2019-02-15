@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ Tabela 1. BOM para as VLANs em instâncias do vCenter Server
 | VLAN       | Tipo       | Detalhes       |
 |:---------- |:---------- |:------------- |
 | VLAN1     | Público, primário | Designado aos servidores ESXi físicos para acesso à rede pública. Não usado após a implementação inicial. Disponível para acesso à Internet. |
-| VLAN2     | A privado, primário | Designado pelos servidores  {{site.data.keyword.cloud}}  aos servidores ESXi físicos. Usado pela interface de gerenciamento para o tráfego de gerenciamento do VMware vSphere.<br><br>Designado às VMs (máquinas virtuais) que funcionam como componentes de gerenciamento.<br><br>Designado ao VMware NSX VTEP (VXLAN Tunnel Endpoint) |
+| VLAN2     | A privado, primário | Designado pelos servidores  {{site.data.keyword.cloud}}  aos servidores ESXi físicos. Usado pela interface de gerenciamento para o tráfego de gerenciamento do VMware vSphere.<br><br>Designado às MVs (máquinas virtuais) que funcionam como componentes de gerenciamento.<br><br>Designado ao VMware NSX VTEP (VXLAN Tunnel Endpoint) |
 | VLAN3     | B privado, móvel | Designado ao VMware vSAN, se usado.<br><br>Designado ao VMware NFS, se usado.<br><br>Designado ao VMware vSphere vMotion. |
 
 ## BOM do software para instâncias do vCenter Server
@@ -36,9 +36,9 @@ Tabela 2. BOM para os componentes de software em instâncias do vCenter Server
 
 | Fabricante  | Componente                      | Versão       |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.5 Atualização 2c (até o nível da correção ESXi650-201808001) |
-| VMware       | vCenter Server Appliance        | 6.5 Atualização 2c |
-| VMware       | Platform Services Controller    | 6.5 Atualização 2c |
+| VMware       | vSphere ESXi                    | 6,5 Atualização P3 (construção 6.5.0-10884925) |
+| VMware       | vCenter Server Appliance        | 6.5 U2d (construção 6.5.0-10964411) |
+| VMware       | Platform Services Controller    | 6.5 U2d (construção 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX for vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
@@ -123,7 +123,7 @@ Para atualizar a configuração de MTU para o comutador público, conclua as seg
 2. Na **guia Propriedades**, selecione a opção **Avançado**.
 3. Certifique-se de que o valor de **MTU máximo** esteja configurado para 1500.
 
-   **Nota:** quando o tamanho de MTU em um vDS é mudado, os uplinks conectados (NICs físicos) são desativados e ativados novamente. Como resultado, uma breve interrupção ocorre para as VMs que estão usando o uplink. Portanto, é
+   **Nota:** quando o tamanho de MTU em um vDS é mudado, os uplinks conectados (NICs físicos) são desativados e ativados novamente. Como resultado, uma breve interrupção ocorre para as MVs que estão usando o uplink. Portanto, é
 recomendável planejar a atualização de configuração do MTU durante o tempo de inatividade planejado.
 
 ### Links relacionados
@@ -132,5 +132,5 @@ recomendável planejar a atualização de configuração do MTU durante o tempo 
 * [Números de compilação e versões do VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Ativando quadros gigantes em comutadores virtuais distribuídos](https://kb.vmware.com/s/article/1038827)
 * [Planilha de dados de proteção do VMware vCenter Server on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [Visão geral do vCenter Server](vc_vcenterserveroverview.html)
-* [Planejando instâncias do vCenter Server](vc_planning.html)
+* [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Planejando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html)

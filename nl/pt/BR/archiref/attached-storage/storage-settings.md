@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,18 +12,18 @@ lastupdated: "2018-11-13"
 {:note: .note}
 {:important: .important}
 
-# Configurações de armazenamento
+# Configuração e definições para o armazenamento conectado
 
 Esse design suporta a conexão de armazenamento compartilhado somente por meio do NFS v3. O NFS v4 e a v4.1 não são suportados.
 
-Todo o armazenamento conectado para esse design é limitado ao armazenamento do {{site.data.keyword.cloud_notm}} disponível no mesmo {{site.data.keyword.CloudDataCent_notm}} que a solução vCenter Server. Além disso, todos os discos virtuais armazenados no armazenamento de dados são thin-provisioned por padrão.
+O armazenamento conectado para esse design é limitado ao armazenamento do {{site.data.keyword.cloud_notm}} disponível no mesmo {{site.data.keyword.CloudDataCent_notm}} que a solução do vCenter Server. Além disso, todos os discos virtuais armazenados no armazenamento de dados são thin-provisioned por padrão.
 {:note}
 
 A arquitetura especifica que os armazenamentos de dados do NFS v3 são conectados usando o nome do DNS do armazenamento do {{site.data.keyword.cloud_notm}} para se conectar ao compartilhamento. O compartilhamento do NFS é conectado a todos os hosts no cluster do vCenter Server e colocado em um cluster de armazenamento de dados com o DRS de armazenamento ativado.
 
 ## vSphere Storage Distributed Resource Scheduler (Storage DRS)
 
-Use o Storage DRS para gerenciar os recursos agregados de um cluster de armazenamento de dados. Quando o Storage DRS está ativado, ele fornece recomendações para posicionamento e migração de disco da máquina virtual (VM) para equilibrar o espaço e os recursos de E/S nos armazenamentos de dados no cluster de armazenamento de dados.
+Use o Storage DRS para gerenciar os recursos agregados de um cluster de armazenamento de dados. Quando o Storage DRS está ativado, ele fornece recomendações para posicionamento e migração de disco da máquina virtual (MV) para equilibrar o espaço e os recursos de E/S nos armazenamentos de dados no cluster de armazenamento de dados.
 
 Os recursos a seguir estão disponíveis quando o Storage DRS está ativado:
 * Balanceamento de carga de espaço entre armazenamentos de dados em um cluster de armazenamento de dados
@@ -59,13 +59,13 @@ Para obter mais informações sobre como configurar essas definições no vSpher
 
 ## Controle de E/S de Armazenamento para NFS v3
 
-Quando o SIOC (Storage I/O Control) é ativado no ambiente, ele muda o comprimento da fila de dispositivo da única VM. A mudança para o comprimento da fila de dispositivo reduz a fila de matriz de armazenamento de todas as VMs para um compartilhamento e regulador iguais da fila de armazenamento. O SIOC será encaixado apenas se os recursos forem restritos e a latência de E/S de armazenamento for maior que um limite definido.
+Quando o SIOC (Storage I/O Control) é ativado no ambiente, ele muda o comprimento da fila de dispositivo da única MV. A mudança para o comprimento da fila de dispositivo reduz a fila de matriz de armazenamento de todas as MVs para um compartilhamento e regulador iguais da fila de armazenamento. O SIOC será encaixado apenas se os recursos forem restritos e a latência de E/S de armazenamento for maior que um limite definido.
 
 Para que o SIOC determine quando um dispositivo de armazenamento está congestionado ou restrito, ele requer um limite definido. A latência de limite de congestionamento é diferente para tipos de armazenamento diferentes. Esse design recomenda e implementa uma latência de limite de 10 milissegundos.
 
-É possível limitar discos virtuais individuais para VMs individuais ou conceder-lhes compartilhamentos diferentes com SIOC. A limitação de discos e a concessão de diferentes compartilhamentos permitem que você corresponda e alinhe o ambiente à carga de trabalho com o número de IOPS do volume de armazenamento de arquivo adquirido. O limite é configurado pelo IOPS e é possível configurar um peso ou compartilhamentos diferentes.
+É possível limitar discos virtuais individuais para MVs individuais ou conceder-lhes compartilhamentos diferentes com SIOC. A limitação de discos e a concessão de diferentes compartilhamentos permitem que você corresponda e alinhe o ambiente à carga de trabalho com o número de IOPS do volume de armazenamento de arquivo adquirido. O limite é configurado pelo IOPS e é possível configurar um peso ou compartilhamentos diferentes.
 
-Compartilhamentos de discos virtuais configurados como **Alto** (2.000 compartilhamentos) recebem duas vezes mais E/S do que um disco configurado como **Normal** (1.000 compartilhamentos) e quatro vezes mais do que um configurado como **Baixo** (500 compartilhamentos). **Normal** é o valor padrão para todas as VMs, portanto, será necessário ajustar as configurações **Normal** das VMs que precisarem.
+Compartilhamentos de discos virtuais configurados como **Alto** (2.000 compartilhamentos) recebem duas vezes mais E/S do que um disco configurado como **Normal** (1.000 compartilhamentos) e quatro vezes mais do que um configurado como **Baixo** (500 compartilhamentos). **Normal** é o valor padrão para todas as MVs, portanto, será necessário ajustar as configurações **Normal** das MVs que precisarem.
 
 ## Armazenamento adicional para NFS v3
 
@@ -85,8 +85,8 @@ Tabela 2. Parâmetros de configuração avançados do NFS
 | NFS.HeartbeatMaxFailures | 10 |
 | NFS.HeartbeatFrequency  | 12 |
 | NFS.HeartbeatTimeout | 5 |
-| NFS.MazQueueDepth | 64 |
+| NFS.MaxQueueDepth | 64 |
 
 ### Links relacionados
 
-* [ Visão geral da solução ](../solution/solution_overview.html)
+* [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

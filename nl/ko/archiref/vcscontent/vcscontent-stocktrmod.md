@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -20,7 +20,7 @@ Stock Trader 현대화 과정에서 다음 단계는 가상 머신(VM)에서 실
 
 ## IBM Cloud Private 준비
 
-Todd는 먼저 {{site.data.keyword.icpfull_notm}}를 설치해야 합니다. Todd는 VMware on {{site.data.keyword.cloud_notm}} 환경을 사용하므로, {{site.data.keyword.cloud_notm}}의 VMware VM에서 실행되는 완전한 {{site.data.keyword.icpfull_notm}} 인스턴스를 제공하는 {{site.data.keyword.cloud_notm}} Private Hosted 오퍼링을 사용하려고 합니다. 
+Todd는 먼저 {{site.data.keyword.icpfull_notm}}를 설치해야 합니다. Todd는 VMware on {{site.data.keyword.cloud_notm}} 환경을 사용하므로, {{site.data.keyword.cloud_notm}}의 VMware VM에서 실행되는 완전한 {{site.data.keyword.icpfull_notm}} 인스턴스를 제공하는 {{site.data.keyword.cloud_notm}} Private Hosted 오퍼링을 사용하려고 합니다.
 
 기본 대시보드는 카탈로그에서 Kubernetes 클러스터, 보안, 스토리지와 배치를 관리하기 위해 포괄적인 사용자 인터페이스를 제공합니다.
 
@@ -99,4 +99,4 @@ Todd는 변환 단계 중에 데이터 소스를 변경하지 않았습니다. T
 
 ### 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

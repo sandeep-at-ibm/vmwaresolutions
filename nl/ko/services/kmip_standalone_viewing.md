@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-11"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -37,7 +37,7 @@ lastupdated: "2019-01-11"
 
 ### 관련 링크
 
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스 주문](kmip_standalone_ordering.html)
-* [KMIP for VMware on IBM Cloud 인스턴스에 대한 인증서 추가, 보기 및 삭제](kmip_standalone_addingdeletingcert.html)
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스 삭제](kmip_standalone_deleting.html)
-* [활성 트래커 이벤트](../vmonic/at-events.html)
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스 주문](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html)
+* [KMIP for VMware on IBM Cloud 인스턴스에 대한 인증서 추가, 보기 및 삭제](/docs/services/vmwaresolutions/services/kmip_standalone_addingdeletingcert.html)
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스 삭제](/docs/services/vmwaresolutions/services/kmip_standalone_deleting.html)
+* [활성 트래커 이벤트](/docs/services/vmwaresolutions/vmonic/at-events.html)

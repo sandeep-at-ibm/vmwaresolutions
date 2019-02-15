@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -54,23 +54,23 @@ Tabela 2. Descrições de ação e funções necessárias
 
 ## Gerenciando o acesso para usuários
 
-É possível incluir novos usuários na conta do {{site.data.keyword.cloud_notm}} para que esses usuários possam compartilhar os serviços e os recursos que são provisionados para a conta. Para obter mais informações, veja [Convidando usuários para acessar serviços e recursos](../vmonic/iamuserinvite.html).
+É possível incluir novos usuários na conta do {{site.data.keyword.cloud_notm}} para que esses usuários possam compartilhar os serviços e os recursos que são provisionados para a conta. Para obter mais informações, veja [Convidando usuários para acessar serviços e recursos](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html).
 
-Também é possível gerenciar o acesso para usuários existentes, incluindo a modificação de acesso existente, a designação de novo acesso e a revisão de acesso designado. Para gerenciar o acesso para usuários, deve-se ser o proprietário da conta ou ter a função de gerenciamento de plataforma **Administrador**. Para obter mais informações, consulte [Gerenciando o acesso a recursos](../../../iam/mngiam.html).
+Também é possível gerenciar o acesso para usuários existentes, incluindo a modificação de acesso existente, a designação de novo acesso e a revisão de acesso designado. Para gerenciar o acesso para usuários, deve-se ser o proprietário da conta ou ter a função de gerenciamento de plataforma **Administrador**. Para obter mais informações, consulte [Gerenciando o acesso a recursos](/docs/iam/mngiam.html).
 
 ## Migrando instâncias existentes para contas do IBM Cloud
 
-Devido à integração do {{site.data.keyword.vmwaresolutions_short}} ao IAM, as instâncias que são implementadas na V2.5 e liberações mais recentes em sua conta do {{site.data.keyword.cloud}} são incluídas automaticamente em sua conta e são gerenciadas pelo IAM.
+Devido à integração do {{site.data.keyword.vmwaresolutions_short}} ao IAM, as instâncias que são implementadas na V2.5 e liberações mais recentes em sua conta do {{site.data.keyword.cloud_notm}} são incluídas automaticamente em sua conta e são gerenciadas pelo IAM.
 
 Para as suas instâncias existentes que foram implementadas na V2.4 e liberações anteriores, é possível migrá-las para as contas do {{site.data.keyword.cloud_notm}} especificadas para gerenciamento ativado pelo IAM. Para obter mais informações, veja os tópicos a seguir:
-* [Migrando instâncias do vCenter Server anteriores à V2.5 para contas do IBM Cloud](../vcenter/vc_addinstancetousraccount.html)
-* [Migrando instâncias do vCenter Server with Hybridity Bundle anteriores à V2.5 para contas do IBM Cloud](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [Migrando instâncias do Cloud Foundation anteriores à V2.5 para contas do IBM Cloud](../sddc/sd_addinstancetousraccount.html)
-* [Migrando instâncias do NetApp ONTAP Select anteriores à V2.5 para contas do IBM Cloud](../netapp/np_addinstancetousraccount.html)
-* [Migrando instâncias do VMware Federal anteriores à V2.5 para contas do IBM Cloud](../vcenter/vc_fed_addinstancetousraccount.html)
+* [Migrando instâncias do vCenter Server pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [Migrando instâncias do vCenter Server with Hybridity Bundle pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [Migrando instâncias do Cloud Foundation pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [Migrando instâncias do NetApp ONTAP Select pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [Migrando instâncias do VMware pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)
 
 ### Links relacionados
 
-* [ Gerenciando a identidade e o acesso ](../../../iam/quickstart.html)
-* [ Gerenciando usuários e o acesso ](../../../iam/iamusermanage.html)
-* [ O que é IAM ](../../../iam/index.html)
+* [ Gerenciando a identidade e o acesso ](/docs/iam/quickstart.html)
+* [ Gerenciando usuários e o acesso ](/docs/iam/iamusermanage.html)
+* [ O que é IAM ](/docs/iam/index.html)

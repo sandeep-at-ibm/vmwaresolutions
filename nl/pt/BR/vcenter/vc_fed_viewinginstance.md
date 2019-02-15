@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -31,13 +31,13 @@ Tabela 1. Itens de instâncias do VMware Federal
 | Versão | A versão de liberação na qual a instância foi implementada ou submetida a upgrade. |  
 | Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada. |  
 | Horário de criação | A data e hora em que a instância foi criada. |
-| Barra de Status | O status da instância. |
+| Status | O status da instância. |
 
 A instância pode ter um intervalo de status.
 
 Tabela 2. Descrições de status de instâncias do data center do VMware Federal
 
-| Barra de Status        | Descrição       |
+| Status | Descrição       |
 |:------------- |:------------- |
 | Criando | A instância está sendo criada. |
 | Construindo | A instância está sendo configurada. |
@@ -70,7 +70,7 @@ Tabela 3. Propriedades de instância do VMware Federal
 | Domínio-raiz DNS | O nome do domínio-raiz é o nome de domínio do DNS (Sistema de Nomes de Domínio) e o nome raiz da floresta do Microsoft Active Directory (AD). |
 | Domínio SSO DNC | O domínio SSO é o domínio de Conexão única do vSphere. O nome de domínio SSO é corrigido para todas as instâncias implementadas do vCenter Server com um valor de <samp class="ph codeph">vsphere.local</samp>. |
 | Subdomínio DNS | O subdomínio é o nome do subdomínio do DNS no nome de domínio-raiz no qual os nomes de host da instância local do vCenter Server residem. O nome do subdomínio está no formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
-| Barra de Status | O status da instância. |
+| Status | O status da instância. |
 
 ## Procedimento para visualizar informações de acesso para instâncias do VMware Federal
 
@@ -89,11 +89,11 @@ Tabela 4. Informações de acesso para componentes relacionados à instância
 | IP do PSC  | O endereço IP do Platform Services Controller (PSC).  |
 | FQDN do PSC  | O nome completo do domínio (FQDN) do PSC.  |    
 | ADMINISTRADOR do PSC  | O nome do usuário e a senha do VMware vCenter Single Sign-On que podem ser usados para acessar o console da web do PSC.  |
-| SSH do PSC  | O nome do usuário e a senha que podem ser usados para acessar a VM do PSC por meio da conexão SSH.  |
+| SSH do PSC  | O nome do usuário e a senha que podem ser usados para acessar a MV do PSC por meio da conexão SSH.  |
 | IP do vCenter  | O endereço IP do vCenter Server.  |
 | FQDN do vCenter  | O nome completo do domínio (FQDN) do vCenter Server.  |
 | ADMINISTRADOR do vCenter  | O nome do usuário e a senha do VMware vCenter Single Sign-On que podem ser usados para efetuar login no vCenter Server usando o vSphere Web Client.  |
-| SSH do vCenter  | O nome do usuário e a senha que podem ser usados para acessar a VM do vCenter Server por meio da conexão SSH.  |
+| SSH do vCenter  | O nome do usuário e a senha que podem ser usados para acessar a MV do vCenter Server por meio da conexão SSH.  |
 
 ## Procedimento para visualizar o histórico de implementação para instâncias do VMware Federal
 
@@ -108,7 +108,7 @@ Tabela 5. Histórico de implementação da instância do VMware Federal
 
 ## O que fazer se ocorrerem erros
 
-Se ocorrerem erros durante a implementação ou exclusão da instância, a equipe de Suporte do {{site.data.keyword.cloud_notm}} será notificada automaticamente. Para consultar o status de seu chamado, é possível [entrar em contato com o Suporte IBM](../vmonic/trbl_support.html).
+Se ocorrerem erros durante a implementação ou exclusão da instância, a equipe de Suporte do {{site.data.keyword.cloud_notm}} será notificada automaticamente. Para consultar o status de seu chamado, é possível [entrar em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## O que fazer a seguir
 
@@ -118,13 +118,13 @@ Antes de clicar no **Console do vCenter** na página de resumo da instância par
 {:important}
 
 Revise os tópicos a seguir para obter informações que ajudarão a concluir as instruções de login:
-*  Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
+*  Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 *  Para obter uma lista de pontos de acesso para efetuar login na Rede privada da infraestrutura do {{site.data.keyword.cloud_notm}} usando a VPN, consulte [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, consulte [Implementando um arquivo OVF usando o vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
+*  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, consulte [Implementando um arquivo OVF usando o vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
 
 ### Links relacionados
 
-* [Visão geral do VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
-* [Pedindo instâncias do VMware Federal](vc_fed_orderinginstance.html)
-* [Excluindo instâncias do VMware Federal](vc_fed_deletinginstance.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
+* [Visão geral do VMware Federal on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
+* [Pedindo instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [Excluindo instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

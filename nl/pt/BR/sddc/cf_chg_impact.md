@@ -2,27 +2,37 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-01-21"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Considerações sobre como alterar os artefatos do Cloud Foundation
 
 Mudar usuários, recursos ou sub-redes que são reservados para o {{site.data.keyword.vmwaresolutions_full}} pode afetar as operações de gerenciamento para instâncias do VMware Cloud Foundation.
 
-**Importante:** não mude as permissões globais do grupo **ic4v-vCenter** na página **Usuários e grupos** no VMware vSphere Web Client. Os exemplos a seguir são mudanças de permissões globais: mudando o nome do usuário, excluindo o usuário ou mudando sua senha.
+Não mude as permissões globais do grupo **ic4v-vCenter** na página **Usuários e grupos** no VMware vSphere Web Client. Os exemplos a seguir são mudanças de permissões globais: mudando o nome do usuário, excluindo o usuário ou mudando sua senha.
+Use a identificação de usuário do host **customerroot** no lugar da identificação de usuário do host **raiz**.
+{:important}
 
 ## As contas do usuário de serviço específico
+{: faq}
 
 Cada serviço cria uma conta de usuário interna no vCenter Server. Esta conta é necessária para que as operações de gerenciamento associadas a um serviço possam se conectar ao vCenter Server para executar as operações no serviço.
 
-**Importante:** para evitar indisponibilidades e problemas de conexão, se você mudar as configurações de ID do usuário, de senha ou de expiração de senha para essa conta de usuário, assegure-se de atualizar também as informações no serviço associado.
+Para evitar indisponibilidades e problemas de conexão, se você mudar as configurações de ID do usuário, senha ou expiração de senha para essa conta do usuário, assegure-se de também atualizar as informações no serviço associado.
+{:important}
 
 O ID do usuário para esta conta está no formato `<service_name>-<truncated service_uuid>@test.local` ou `<service_name>-<truncated service_uuid>@example-domain.local`. Por exemplo, o ID do usuário usado pelo serviço Veeam on {{site.data.keyword.cloud_notm}} para se conectar ao vCenter Server para executar backups planejados é `Veeam-<Veeam_uuid>@test.local`.
 
-**Nota:** O `<service_name>` junto com o `<service_uuid>` trunca para 20 caracteres.
+O  `<service_name>` junto com o `<service_uuid>` trunca para 20 caracteres.
+{:note}
 
 ## Recursos do VMware para instâncias do Cloud Foundation
 

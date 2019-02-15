@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -81,7 +81,7 @@ URL	|엔드포인트
 /acme/api/explorer	|Skate Advisor 서비스
 
 컨테이너에는 시스템 요구에 따라 스케일 축소 및 확장될 수 있는 예측 불가능한 IP 주소가 있습니다. 이 문제를 해결하기 위해 {{site.data.keyword.icpfull_notm}} 서비스는 시스템 내에서
-실시간 IP 주소 분석을 수행하는 데 사용됩니다. 
+실시간 IP 주소 분석을 수행하는 데 사용됩니다.
 
 ### Acme Skate 웹 애플리케이션
 Acme Skate 웹 애플리케이션은 Spring Framework를 기반으로 하는 Java 플랫폼, 엔터프라이즈 에디션(Java 플랫폼, 엔터프라이즈 에디션)
@@ -143,17 +143,15 @@ Architecture의 중요한 부분입니다. {{site.data.keyword.cloud_notm}}에�
 ![클라우드 관리](vcscar-cloud-management.svg)
 
 이 다이어그램은 온프레미스 vCenter 및 {{site.data.keyword.containerlong_notm}} 서비스에 대한 연결을 통해 vCenter
-Server 인스턴스에 배치된 {{site.data.keyword.icpfull_notm}} 및 CAM을 나타냅니다.
-CAM을 사용하면, 시스템 관리자와 개발자가 가상 머신을 온프레미스로 또는
+Server 인스턴스에 배치된 {{site.data.keyword.icpfull_notm}} 및 CAM을 나타냅니다. CAM을 사용하면, 시스템 관리자와 개발자가 가상 머신을 온프레미스로 또는
 {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}}
-클러스터에 대한 vCenter Server 인스턴스에 배치할 수 있습니다. 
+클러스터에 대한 vCenter Server 인스턴스에 배치할 수 있습니다.
 
 다이어그램에서 CAM은 vCenter, 클라우드 제공자, {{site.data.keyword.icpfull_notm}} 및
 {{site.data.keyword.containerlong_notm}} 환경에 클라우드 연결을 논리적으로 작성합니다. {{site.data.keyword.icpfull_notm}}
 클러스터는 각 데이터 센터/클라우드 환경에 배치되며, MCM은 {{site.data.keyword.icpfull_notm}} 클러스터를 단일 관리 보기에
 연결하는 메커니즘을 제공합니다.
 
-
 ### 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-06-22"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Notas sobre a Liberação para V2.4
 
@@ -20,7 +24,7 @@ O {{site.data.keyword.vmwaresolutions_short}} liberou correções do VMware em r
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Para obter mais informações, veja [Tratando as vulnerabilidades Spectre e Meltdown](../vmonic/trbl_fix_spectre.html).
+Para obter mais informações, veja [Tratando as vulnerabilidades Spectre e Meltdown](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
 
 ## Suporte ao Idioma Nacional
 
@@ -38,8 +42,6 @@ As linguagens a seguir são suportadas, além do inglês:
 * Chinês Simplificado
 * Chinês Tradicional
 
-**Nota**: os documentos de arquitetura de referência estão disponíveis somente em inglês.
-
 ## Suporte de CPU Xeon Skylake
 
 Iniciando com a liberação V2.4, os novos modelos de CPU Bare Metal Server a seguir estão disponíveis para implementação para instâncias e clusters do VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}, VMware vSphere on {{site.data.keyword.cloud_notm}} e VMware Federal on {{site.data.keyword.cloud_notm}}:
@@ -50,21 +52,21 @@ Iniciando com a liberação V2.4, os novos modelos de CPU Bare Metal Server a se
 
 Para obter mais informações, veja a seção *Configurações do Bare Metal Server* em:
 
-* [Pedindo instâncias do Cloud Foundation](../sddc/sd_orderinginstance.html#bare-metal-server-settings)
-* [Pedindo novos clusters do vSphere](../vsphere/vs_orderinginstances.html#bare-metal-server-settings)
-* [Pedindo instâncias do VMware Federal](../vcenter/vc_fed_orderinginstance.html#bare-metal-server-settings)
+* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html#bare-metal-server-settings)
+* [Pedindo novos clusters do vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#bare-metal-server-settings)
+* [Pedindo instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html#bare-metal-server-settings)
 
 ## Atualizações para instâncias do VMware vCenter Server
 
 ### Network File System aprimoramento de desempenho
 
-O nível de desempenho de 10 IOPS/GB, projetado para os tipos de carga de trabalho mais exigentes, não é mais limitado a um {{site.data.keyword.CloudDataCent_notm}} específico, mas agora está disponível para todos. Para obter mais informações, consulte a seção *Armazenamento* na [Visão geral do vCenter Server](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
+O nível de desempenho de 10 IOPS/GB, projetado para os tipos de carga de trabalho mais exigentes, não é mais limitado a um {{site.data.keyword.CloudDataCent_notm}} específico, mas agora está disponível para todos. Para obter mais informações, consulte a seção *Armazenamento* na [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## Atualizações para instâncias do VMware Federal
 
 ### Novo IBM Cloud Data Center opção
 
-Agora é possível implementar instâncias do VMware Federal para o {{site.data.keyword.CloudDataCent_notm}} DAL08 - Dallas, TX. Para obter mais informações, veja a seção *Disponibilidade do IBM Cloud Data Center* em [Requisitos e planejamento para instâncias do VMware Federal](../vcenter/vc_fed_planning.html#ibm-cloud-data-center-availability).
+Agora é possível implementar instâncias do VMware Federal para o {{site.data.keyword.CloudDataCent_notm}} DAL08 - Dallas, TX. Para obter mais informações, veja a seção *Disponibilidade do IBM Cloud Data Center* em [Requisitos e planejamento para instâncias do VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html#ibm-cloud-data-center-availability).
 
 ## Atualizações para serviços complementares
 
@@ -75,13 +77,13 @@ recém-implementadas. Para obter mais informações sobre os novos recursos no I
 
 ### VMware HCX on IBM Cloud
 
-Uma nova opção agora está disponível para você escolher entre rede pública e rede privada para interconexões do HCX ao pedir esse serviço. Para obter mais informações, veja [Pedindo o VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_ordering.html).
+Uma nova opção agora está disponível para você escolher entre rede pública e rede privada para interconexões do HCX ao pedir esse serviço. Para obter mais informações, veja [Pedindo o VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_ordering.html).
 
 ## Documentação nova e atualizada
 
 ### Arquitetura de Referência da documentação
 
-O documento de arquitetura do {{site.data.keyword.vmwaresolutions_short}} agora está disponível na seção *Referência* da documentação do usuário. O documento de arquitetura de referência está disponível somente em inglês. Para obter mais informações, consulte [Visão Geral da Solução](../archiref/solution/solution_overview.html).
+O documento de arquitetura do {{site.data.keyword.vmwaresolutions_short}} agora está disponível na seção *Referência* da documentação do usuário. Para obter mais informações, consulte [Visão Geral da Solução](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ### Serviços de documentação
 
@@ -89,15 +91,15 @@ As informações de serviço são reestruturadas e a navegação é melhorada pa
 
 Para obter mais informações, veja os tópicos a seguir:
 
-* [Solicitando F5 no {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
-* [Solicitando FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)
-* [Solicitando FortiGate Virtual Appliance no {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)
-* [Solicitando Hytrust CloudControl no {{site.data.keyword.cloud_notm}}](../services/htcc_ordering.html)
-* [Solicitando Hytrust DataControl no {{site.data.keyword.cloud_notm}}](../services/htdc_ordering.html)
-* [Solicitando IBM Spectrum Protect Plus no {{site.data.keyword.cloud_notm}}](../services/spp_ordering.html)
-* [Solicitando KMIP para VMware no {{site.data.keyword.cloud_notm}}](../services/kmip_ordering.html)
-* [Pedindo o Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_ordering.html)
-* [Solicitando on {{site.data.keyword.cloud_notm}}](../services/zerto_ordering.html)
+* [Solicitando F5 no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_ordering.html)
+* [Solicitando FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_ordering.html)
+* [Solicitando FortiGate Virtual Appliance no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
+* [Solicitando Hytrust CloudControl no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_ordering.html)
+* [Solicitando Hytrust DataControl no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_ordering.html)
+* [Solicitando IBM Spectrum Protect Plus no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_ordering.html)
+* [Solicitando KMIP para VMware no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_ordering.html)
+* [Pedindo o Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_ordering.html)
+* [Solicitando on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/zerto_ordering.html)
 
 ## Atualizações e aprimoramentos da interface com o usuário
 

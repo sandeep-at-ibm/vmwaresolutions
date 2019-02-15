@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-08"
 
 ## 시작하기 전에
 
-[온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 삭제 시 고려사항](../services/standalone_considerations.html)의 모든 고려사항을 검토했는지 확인하십시오.
+[온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 삭제 시 고려사항](/docs/services/vmwaresolutions/services/standalone_considerations.html)의 모든 고려사항을 검토했는지 확인하십시오.
 
 ## 온프레미스 VMware HCX on IBM Cloud 인스턴스를 삭제하는 프로시저
 
@@ -26,7 +26,7 @@ lastupdated: "2018-11-08"
 
 ### 관련 링크
 
-* [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 주문](standalone_orderingserviceinstances.html)
-* [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 보기](standalone_viewingserviceinstances.html)
-* [HCX 용어집](hcx_glossary.html)
+* [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 주문](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
+* [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 보기](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
+* [HCX 용어집](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources)

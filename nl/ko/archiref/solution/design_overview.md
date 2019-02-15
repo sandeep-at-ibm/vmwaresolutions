@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-07-10"
+lastupdated: "2019-01-23"
 
 ---
 # 디자인 개요
@@ -28,7 +28,7 @@ lastupdated: "2018-07-10"
 
 ### 관련 링크
 
-* [실제 인프라 디자인](design_physicalinfrastructure.html)
-* [가상 인프라 디자인](design_virtualinfrastructure.html)
-* [공통 서비스 디자인](design_commonservice.html)
-* [인프라 관리 디자인](design_infrastructuremgmt.html)
+* [실제 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [가상 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [공통 서비스 디자인](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)
+* [인프라 관리 디자인](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)

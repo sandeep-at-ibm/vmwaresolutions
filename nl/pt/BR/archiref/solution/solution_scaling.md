@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-25"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -28,7 +28,7 @@ Nesse design, a definição de uma implementação multissite é composta do seg
 * Sites secundários únicos ou múltiplos que são provisionados para o domínio SSO de sites primários que requerem a configuração a seguir:
    * Novo nome do site SSO
    * Novo site/subdomínio DNS vinculado à raiz do domínio primário
-   * Configuração de replicação do DNS e AD entre as VMs do AD do site secundário e primário
+   * Configuração de replicação do DNS e AD entre as MVs do AD do site secundário e primário
    * PSC implementado e configurado para sincronizar com o PSC do site primário
    * Configuração do vCenter com o Enhanced Linked Mode para o vCenter do site primário
 
@@ -53,6 +53,6 @@ Quando o cluster inicial for convertido em um cluster somente de gerenciamento, 
 
 ### Links relacionados
 
-* [ Visão geral da solução ](solution_overview.html)
-* [ Visão geral do design ](design_overview.html)
-* [ Fazendo backup de componentes ](solution_backingup.html)
+* [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Visão geral do design](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

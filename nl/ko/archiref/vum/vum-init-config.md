@@ -135,7 +135,6 @@ Squid는 최소 하드웨어 요구사항을 갖추고 있지 않지만 프록�
 
 1. vSphere Web Client에서 웹 콘솔 또는 원격 콘솔을 사용하여 사용자로 프록시 서버에 로그인 후 root로 `su`하십시오.
 2. 패키지를 설치하기 전에 `yum -y update` 명령을 사용하여 시스템 및 패키지를 업데이트하십시오.
-   
 
 3. Squid가 기본 yum 저장소에서 사용 가능하지 않으므로 Squid를 설치하려면 시스템에 EPEL 저장소를 설치해야 합니다. `yum -y install epel-release` 명령을 실행하여 EPEL 저장소를 설치하십시오.
 

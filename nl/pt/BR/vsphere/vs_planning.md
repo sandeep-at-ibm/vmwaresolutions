@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,7 +21,9 @@ Você é responsável por configurar o ambiente, instalar e configurar vários c
 
 ## Requisitos da conta do IBM Cloud
 
-A conta do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, veja [Requisitos para a conta do {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+A conta do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para
+obter mais informações, consulte [Requisitos
+para a conta do {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Disponibilidade do data center do IBM Cloud
 
@@ -35,7 +37,7 @@ Tabela 1. Disponível {{site.data.keyword.CloudDataCents_notm}} para clusters do
 | {{site.data.keyword.CloudDataCent_notm}} | Localização | Região |
 |:----------------------|:---------|:-------|
 | AMS03 | Amsterdã | Europa |
-| CHE01 | Chennai | Ásia Pacífico |
+| CHE01 | Chennai | Ásia-Pacífico |
 | DAL09 | Dallas | NA Sul |
 | DAL10 | Dallas | NA Sul |
 | DAL12 | Dallas | NA Sul |
@@ -43,25 +45,25 @@ Tabela 1. Disponível {{site.data.keyword.CloudDataCents_notm}} para clusters do
 | FRA02 | Frankfurt | Europa |
 | FRA04 | Frankfurt | Europa |
 | FRA05 | Frankfurt | Europa |
-| HKG02 | Hong Kong | Ásia Pacífico |
+| HKG02 | Hong Kong | Ásia-Pacífico |
 | LON02 | Londres | Europa |
 | LON04 | Londres | Europa |
 | LON05 | Londres | Europa |
 | LON06 | Londres | Europa |
-| MEL01 | Melbourne | Ásia Pacífico |
+| MEL01 | Melbourne | Ásia-Pacífico |
 | MEX01 | Querétaro | NA Sul |
 | MIL01 | Milão | Europa |
 | MON01 | Montreal | NA Leste |
 | OSL01 | Oslo | Europa |
 | PAR01 | Paris | Europa |
 | SAO01 | São Paulo | América do Sul |
-| SEO01 | Seul | Ásia Pacífico |
+| SEO01 | Seul | Ásia-Pacífico |
 | SJC03 | São José | Oeste ND |
 | SJC04 | São José | Oeste ND |
-| SNG01 | Cingapura | Ásia Pacífico |
-| SYD01 | Sydney | Ásia Pacífico |
-| SYD04 | Sydney | Ásia Pacífico |
-| TOK02 | Tóquio | Ásia Pacífico |
+| SNG01 | Cingapura | Ásia-Pacífico |
+| SYD01 | Sydney | Ásia-Pacífico |
+| SYD04 | Sydney | Ásia-Pacífico |
+| TOK02 | Tóquio | Ásia-Pacífico |
 | TOR01 | Toronto | NA Leste |
 | WDC04 | Washington, DC | NA Leste |
 | WDC06 | Washington, DC | NA Leste |
@@ -69,6 +71,6 @@ Tabela 1. Disponível {{site.data.keyword.CloudDataCents_notm}} para clusters do
 
 ### Links relacionados
 
-* [Pedindo novos clusters do vSphere](vs_orderinginstances.html)
-* [Ajustando a escala de clusters existentes](vs_scalingexistingclusters.html)
-* [Ajustando a escala dos clusters existentes criados fora do console](vs_orderingforclustersoutside.html)
+* [Pedindo novos clusters do vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Ajustando a escala de clusters existentes](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [Ajustando a escala dos clusters existentes criados fora do console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,16 +19,16 @@ lastupdated: "2018-10-29"
 ## Requisitos
 
 Assegure-se de que tenha concluído as tarefas a seguir:
-*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](../vmonic/useraccount.html).
+*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](/docs/services/vmwaresolutions/vmonic/useraccount.html).
 *  Você revisou os requisitos e as considerações em [Requisitos e planejamento para o VMware vSphere
-on {{site.data.keyword.cloud_notm}}](vs_planning.html).
+on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
 
 ## Procedimento para escalar clusters criados fora do console
 
 1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação à esquerda e, em seguida, clique em **VMware vSphere** na seção **Datacenters virtuais**.
 2. Na página **VMware vSphere on IBM Cloud**, clique em **Criar**.  
    Assegure-se de que está na guia **Criar novo** e que **Novo cluster** está exibido na lista **Configurações de cluster**.
-3. Crie um cluster com as mesmas configurações que o cluster existente que foi criado fora do console do {{site.data.keyword.vmwaresolutions_short}}. Para obter mais informações, veja [Pedindo novos clusters do vSphere](vs_orderinginstances.html).  
+3. Crie um cluster com as mesmas configurações que o cluster existente que foi criado fora do console do {{site.data.keyword.vmwaresolutions_short}}. Para obter mais informações, veja [Pedindo novos clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html).  
    Para a interface de rede, para escalar um cluster que é criado fora do console do {{site.data.keyword.vmwaresolutions_short}}, deve-se selecionar as VLANs existentes para o cluster.
    {:note}
 4. Na área de janela **Resumo**, verifique a configuração de cluster e, em seguida, clique em **Salvar configuração**.   
@@ -48,6 +48,6 @@ Os clusters do vSphere não são exibidos na página **Instâncias implementadas
 
 ### Links relacionados
 
-* [Pedindo novos clusters do vSphere](vs_orderinginstances.html)
-* [Pedindo clusters do vSphere com base em configurações existentes](vs_orderingbasedonexistingconfig.html)
-* [Ajustando a escala de clusters existentes do vSphere](vs_scalingexistingclusters.html)
+* [Pedindo novos clusters do vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Pedindo clusters do vSphere com base nas configurações existentes](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [Ajustando a escala dos clusters do vSphere existentes](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)

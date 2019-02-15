@@ -4,13 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
 # 자세한 디자인
 
 ## 공통 서비스 컴포넌트
+
 공통 서비스는 클라우드 관리 플랫폼의 기타 서비스에서 사용하는 서비스를 제공합니다. 공통 서비스는 ID 및 액세스 서비스, Domain Name Service 및 NTP 서비스가 포함됩니다.
 
 그림 1. {{site.data.keyword.icpfull_notm}} 공통 서비스
@@ -40,7 +41,7 @@ VCS 배치에 포함된 NSX-V 네트워킹을 사용하여 {{site.data.keyword.i
 
 ![NSX-V 네트워킹을 사용하는 {{site.data.keyword.icpfull_notm}}](vcsicp-nsxv-networking.svg)
 
-자세한 정보는 [vCenter Server 네트워킹 안내서](../vcsnsxt/vcsnsxt-intro.html)를 참조하십시오.
+자세한 정보는 [vCenter Server 네트워킹 안내서](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html)를 참조하십시오.
 
 ### NSX-T 네트워킹
 
@@ -54,4 +55,4 @@ NSX-T는 모든 유형의 애플리케이션에 연결할 수 있는 단일 네�
 
 ### 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

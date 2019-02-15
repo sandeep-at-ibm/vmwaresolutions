@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-29"
 
 # VM에서 고객 관리 NSX ESG를 사용하도록 네트워크 구성
 
-VMware vCenter Server 인스턴스에 배치된 VMware NSX Edge Services Gateway(ESG)를 활용할 수 있도록 가상 머신의 네트워크를 구성하십시오. 보안 위험을 최소화하도록 제공된 보안 조치에 대한 자세한 정보는 [관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)를 참조하십시오.
+VMware vCenter Server 인스턴스에 배치된 VMware NSX Edge Services Gateway(ESG)를 활용할 수 있도록 가상 머신의 네트워크를 구성하십시오. 보안 위험을 최소화하도록 제공된 보안 조치에 대한 자세한 정보는 [관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
 VMware NSX는 격리된 네트워크의 가상화를 허용하고 스위치, 라우팅 및 방화벽과 같은 여러 네트워킹 서비스를 제공하는
 네트워크 가상화 플랫폼입니다. NSX에 대한 자세한 정보는 [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}를 참조하십시오.
@@ -27,7 +27,11 @@ vCenter Server 인스턴스에 대한 주문 프로세스의 일부로 다음 �
 * 샘플 NSX DLR(Distributed Logical Router)은 계층 2(L2) 네트워크에 연결된 로컬 워크로드 간의 잠재적인 동쪽-서쪽 통신을 위해 배치됩니다.
 * NSX Edge 어플라이언스는 워크로드 논리 스위치의 IP 주소 범위와 네트워크 주소 변환(NAT) 규칙의 공인 IP 주소 간의 NAT를
 수행하도록 배치되고 구성됩니다.
-* Veeam on {{site.data.keyword.cloud_notm}} 서비스를 설치한 경우에는 NSX Manager가 NSX 구성의 일별 백업을 수행하도록 구성됩니다. 자세한 정보는 [Veeam on {{site.data.keyword.cloud_notm}} 설치 시 고려사항](../services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud)을 참조하십시오.
+
+  NXS 에지는 개인 전용인 인스턴스의 경우에는 배치되지 않습니다.
+  {:note}
+
+* Veeam on {{site.data.keyword.cloud_notm}} 서비스를 설치한 경우에는 NSX Manager가 NSX 구성의 일별 백업을 수행하도록 구성됩니다. 자세한 정보는 [Veeam on {{site.data.keyword.cloud_notm}} 설치 시 고려사항](/docs/services/vmwaresolutions/services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud)을 참조하십시오. 
 
 ## VM에 대한 네트워킹 설정을 구성하는 프로시저
 
@@ -84,6 +88,6 @@ NSX Edge NAT 규칙에 대한 자세한 정보는 [Managing NAT rules](https://p
 
 ### 관련 링크
 
-* [문제점 해결](../vcenter/vcenter_chg_impact.html)
-* [FAQ](../vmonic/faq.html)
+* [문제점 해결](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

@@ -69,8 +69,8 @@
    <text x="784.5" y="250">Stock Service</text>
   </g>
   <g font-family="Helvetica" font-size="16px" text-anchor="middle">
-   <text x="341.5" y="283.5">App da web</text>
-   <text x="341.5" y="340.5">Stock Trader</text>
+   <text x="341.5" y="283.5">Stock Trader</text>
+   <text x="341.5" y="340.5">Aplicativo da web</text>
   </g>
  </g>
 </svg>

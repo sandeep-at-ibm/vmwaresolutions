@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -113,13 +113,13 @@ NSX for vSphere를 사용하면 조직은 데이터 센터를 별개의 보안 �
 -	NSX를 통해 단지 IP 주소와 MAC이 아닌 동적 보안 그룹 및 연관된 정책을 작성할 수 있습니다. 이러한 정책에는 vCenter 오브젝트와 태그, 운영 체제 유형 및 계층 7 애플리케이션 정보가 포함되어 애플리케이션 컨텍스트를 기반으로 마이크로 세그먼트화할 수 있습니다.
 -	VM, Active Directory 및 Mobile Device Management 통합의 로그인 정보를 사용하는 ID 기반 정책은 원격 및 가상 데스크탑 환경의 세션 레벨 보안을 포함하여 사용자 기반 보안에 허용됩니다.
 - Application Rule Manager 및 Endpoint Monitoring을 사용하면 최대 계층 7까지 엔드 투 엔드 네트워크 트래픽 플로우 가상화를 수행할 수 있습니다. 이를 통해 애플리케이션 팀은 intra- 및 inter-데이터 센터 엔드포인트를 모두 식별할 수 있으며 적절한 보안 규칙을 작성하여 응답할 수 있습니다.
-- 차세대 방화벽, IDS/IPS, 에이전트가 없는 안티바이러스, 전환, 고급 보안 등과 같은 서드파티 공급업체와의 관리, 제어 플레인 및 데이터 플레인 통합을 지원합니다. 
+- 차세대 방화벽, IDS/IPS, 에이전트가 없는 안티바이러스, 전환, 고급 보안 등과 같은 서드파티 공급업체와의 관리, 제어 플레인 및 데이터 플레인 통합을 지원합니다.
 
-다음 다이어그램에서는 보안 그룹을 작성하여 NSX-V의 마이크로 세그먼트화 기능 중 일부를 구현할 수 있는 방법에 대한 상위 레벨 다이어그램을 보여줍니다. 이 예에서, 프로덕션 및 개발은 보안 그룹이며 이 그룹을 기반으로 보안 규칙이 지정됩니다. 
+다음 다이어그램에서는 보안 그룹을 작성하여 NSX-V의 마이크로 세그먼트화 기능 중 일부를 구현할 수 있는 방법에 대한 상위 레벨 다이어그램을 보여줍니다. 이 예에서, 프로덕션 및 개발은 보안 그룹이며 이 그룹을 기반으로 보안 규칙이 지정됩니다.
 
 그림 3. NSX-V 보안
 ![NSX-V 보안](vcsnsxt-vsecurity.svg)
 
 ### 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

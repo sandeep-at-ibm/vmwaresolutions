@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,8 +19,8 @@ lastupdated: "2018-10-29"
 ## 요구사항
 
 다음 태스크를 완료했는지 확인하십시오.
-*  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정](../vmonic/useraccount.html)을 참조하십시오.
-*  [vSphere 클러스터에 대한 요구사항 및 계획](vs_planning.html)의 요구사항 및 고려사항을 검토했습니다.
+*  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정](/docs/services/vmwaresolutions/vmonic/useraccount.html#managing-user-accounts-and-settings)을 참조하십시오.
+*  [vSphere 클러스터에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vsphere/vs_planning.html)의 요구사항 및 고려사항을 검토했습니다.
 *  스케일링하려는 클러스터가 사용할 준비가 되었다는 확인 이메일을 받았습니다.
 
 ## 기존 클러스터를 스케일링하는 프로시저
@@ -46,6 +46,6 @@ vSphere 클러스터는 vCenter Server 및 Cloud Foundation 인스턴스와 달�
 
 ### 관련 링크
 
-* [새 vSphere 클러스터 주문](vs_orderinginstances.html)
-* [기존 구성에 따라 vSphere 클러스터 주문](vs_orderingbasedonexistingconfig.html)
-* [콘솔 외부에서 작성된 클러스터 스케일링](vs_orderingforclustersoutside.html)
+* [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [기존 구성에 따라 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [콘솔 외부에서 작성된 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

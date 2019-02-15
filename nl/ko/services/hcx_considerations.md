@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -12,14 +12,14 @@ lastupdated: "2018-11-29"
 {:note: .note}
 {:important: .important}
 
-# VMware HCX on IBM Cloud 개요
+# VMware HCX on IBM Cloud 스펙 및 고려사항
 
 HCX on {{site.data.keyword.cloud}} 서비스는 온프레미스 데이터 센터의 네트워크를 {{site.data.keyword.cloud_notm}}로 원활하게 확장하며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}} 간에 가상 머신(VM)을 마이그레이션할 수 있습니다.
 
 이 서비스는 V2.3 이상에 배치된 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스에만 사용 가능합니다.
 {:note}
 
-기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 인스턴스 업그레이드 및 HCX on {{site.data.keyword.cloud_notm}} 서비스 배치에 대한 자세한 정보는 [vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하는 프로시저](../vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)를 참조하십시오.
+기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 인스턴스 업그레이드 및 HCX on {{site.data.keyword.cloud_notm}} 서비스 배치에 대한 자세한 정보는 [vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하는 프로시저](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)를 참조하십시오.
 
 HCX on {{site.data.keyword.cloud_notm}}의 vCenter Server 인스턴스는 온프레미스 사이트의 세 개의 동시 연결로 제한됩니다.
 {:note}
@@ -78,9 +78,9 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 다음 
 
 ### 관련 링크
 
-* [HCX on {{site.data.keyword.cloud_notm}} 주문](hcx_ordering.html)
-* [HCX on {{site.data.keyword.cloud_notm}} 관리](managinghcx.html)
-* [HCX 용어집](hcx_glossary.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
+* [HCX on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/hcx_ordering.html)
+* [HCX on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [HCX 용어집](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension 개요](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources)

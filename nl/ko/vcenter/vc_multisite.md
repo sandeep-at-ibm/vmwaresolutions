@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -33,14 +33,14 @@ lastupdated: "2019-01-14"
    *  SSO 사이트 이름
    *  기본 인스턴스의 루트 도메인에 연결된 DNS 하위 도메인
    *  기본 및 보조 인스턴스의 AD 가상 머신 간에 DNS 및 AD 복제 설정
-   *  임베드된 PSC(Platform Services Controller)가 포함된 vCenter Server Appliance(vCSA)가 배치되고 구성됨
+   *  V2.8 이상에 배치된 기본 인스턴스의 경우: 임베디드 PSC(Platform Services Controller)가 포함된 vCSA(vCenter Server Appliance)가 배치 및 구성됨
    *  보조 인스턴스의 VMware vCenter가 기본 인스턴스에서 vCenter에 대한 향상된 연결 모드로 설정됨
 
 ## vCenter Server 다중 사이트 배치
 
 다중 사이트 구성 기능은 기본 사이트와 최대 일곱 개의 보조 사이트로 허브 및 스포크 토폴로지를 사용합니다. 단일 사이트 계층이 지원되며, 이는 다른 보조 사이트에 연결된 후속 사이트를 구성할 수 없음을 의미합니다. 모든 인스턴스의 다중 사이트 구성에서 총 128개의 ESXi 서버를 보유할 수 있습니다.
 
-구성에 128개보다 많은 ESXi 서버가 포함된 다중 사이트 배치가 필요한 경우 IBM 지원 센터에 문의하여 도움을 받으십시오. 자세한 정보는 [IBM 지원 센터에 문의](../vmonic/trbl_support.html)를 참조하십시오.
+구성에 128개보다 많은 ESXi 서버가 포함된 다중 사이트 배치가 필요한 경우 IBM 지원 센터에 문의하여 도움을 받으십시오. 자세한 정보는 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)를 참조하십시오.
 {:note}
 
 다음 그림은 vCenter Server 다중 사이트 배치의 전체 보기에 대해 설명합니다.
@@ -58,7 +58,7 @@ lastupdated: "2019-01-14"
 
 다중 사이트 구성에 배치된 최대 8개의(1개의 기본 및 7개의 보조) 인스턴스를 보유할 수 있습니다.
 
-다중 사이트 구성의 일부인 vCenter Server 인스턴스를 삭제하려면 특수 계획이 필요합니다. 자세한 정보는 [다중 사이트 구성에서 vCenter Server 인스턴스 삭제](vc_deletinginstance_multi.html)를 참조하십시오.
+다중 사이트 구성의 일부인 vCenter Server 인스턴스를 삭제하려면 특수 계획이 필요합니다. 자세한 정보는 [다중 사이트 구성에서 vCenter Server 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance_multi.html)를 참조하십시오.
 {:note}
 
 ### 관련 링크

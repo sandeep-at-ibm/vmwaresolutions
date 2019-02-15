@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-18"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -78,7 +78,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 서비스를 제�
 ### 관련 링크
 
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service 계획](http://www.ibm.com/support/docview.wss?uid=swg22012650)
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 관리](managingspp.html)
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 주문](spp_ordering.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managingspp.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/spp_ordering.html)
 * [IBM Spectrum Protect Plus 문서](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

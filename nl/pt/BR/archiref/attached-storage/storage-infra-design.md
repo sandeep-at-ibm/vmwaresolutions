@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -34,7 +34,7 @@ A rede física é manipulada pelo {{site.data.keyword.cloud_notm}}. A seção a 
 
 ### Visão geral da rede do IBM Cloud
 
-A rede física do {{site.data.keyword.cloud_notm}} é separada em três redes distintas: pública, privada e de gerenciamento. Para obter mais informações sobre as redes pública, privada e de gerenciamento, consulte [Visão geral da solução](../solution/solution_overview.html).
+A rede física do {{site.data.keyword.cloud_notm}} é separada em três redes distintas: pública, privada e de gerenciamento. Para obter mais informações sobre as redes pública, privada e de gerenciamento, consulte [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 Para obter mais informações sobre a rede do {{site.data.keyword.cloud_notm}}, consulte [A rede do {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}.
 
@@ -46,7 +46,7 @@ O {{site.data.keyword.cloud_notm}} tem uma rede de serviços privados que fornec
 
 ### VLANs
 
-Para obter mais informações sobre as VLANs, consulte a seção _Design da rede física_ em [Design da infraestrutura física](../solution/design_physicalinfrastructure.html).
+Para obter mais informações sobre as VLANs, consulte a seção _Design da rede física_ em [Design da infraestrutura física](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html).
 
 ## Design de armazenamento físico
 
@@ -66,10 +66,10 @@ do aplicativo.
 Depois que um compartilhamento do NFS é solicitado, ele pode ser redimensionado ou reconfigurado para permitir mais ou menos IOPS.
 {:note}
 
-Para obter opções detalhadas de IOPS, consulte a seção _Configurações de armazenamento_ em [Pedindo instâncias do vCenter Server](../../vcenter/vc_orderinginstance.html).
+Para obter opções detalhadas de IOPS, consulte a seção _Configurações de armazenamento_ em [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html).
 
 Além das camadas de armazenamento, o armazenamento do Endurance do {{site.data.keyword.cloud_notm}} suporta uma ampla seleção de necessidades do aplicativo, incluindo capturas instantâneas e replicação, além de criptografia em repouso nas localizações do {{site.data.keyword.CloudDataCent_notm}}.
 
 ### Links relacionados
 
-* [ Visão geral da solução ](../solution/solution_overview.html)
+* [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

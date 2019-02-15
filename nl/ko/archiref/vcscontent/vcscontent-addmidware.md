@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-01-14"
 
 ## 컨텐츠 선택
 
-{{site.data.keyword.cloud_notm}} Private은 다양한 컨텐츠 선택사항을 가지고 있으며 Todd와 Jane 모두 그들의 필요에 가장 적합한 컨텐츠를 결정해야 합니다. Todd가 {{site.data.keyword.cloud_notm}} Private 카탈로그에서 본 것처럼, 대부분의 컨텐츠를 시도해 볼 수는 있지만 일부 컨텐츠는 Passport Advantage에서 구매하고 다운로드해야 합니다. 
+{{site.data.keyword.cloud_notm}} Private은 다양한 컨텐츠 선택사항을 가지고 있으며 Todd와 Jane 모두 그들의 필요에 가장 적합한 컨텐츠를 결정해야 합니다. Todd가 {{site.data.keyword.cloud_notm}} Private 카탈로그에서 본 것처럼, 대부분의 컨텐츠를 시도해 볼 수는 있지만 일부 컨텐츠는 Passport Advantage에서 구매하고 다운로드해야 합니다.
 
 * 도구 체인 및 런타임
   - UrbanCode Deploy
@@ -99,7 +99,6 @@ lastupdated: "2018-01-14"
 
 * 관리
   -	IBM Netcool - 통합({{site.data.keyword.icpfull_notm}} 서비스를 위한 프로브 – 이벤트 로깅 및 경보 모니터링)
-
   - {{site.data.keyword.cloud_notm}} App Management 2018.2.0
   -	IBM Netcool - 통합({{site.data.keyword.icpfull_notm}} 이벤트 관리를 위한 프로브. IBM
 Netcool Insights 제품과 함께 판매)
@@ -250,4 +249,4 @@ Slack 채널이나 공용 Twitter 채널을 통해 동적 로열티 레벨 메�
 
 ### 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

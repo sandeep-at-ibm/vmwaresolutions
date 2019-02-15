@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,7 +35,6 @@ Cloud Private 카탈로그에서 하이브리드 클라우드 서비스를 노�
 서비스와의 연결을 통해 {{site.data.keyword.cloud_notm}} 인프라로 배치된 {{site.data.keyword.icpfull_notm}} 및 CAM을 표시합니다. 사용자는 가상 머신(VM)을 온프레미스에, VM을
 vCenter Server 인스턴스에, 컨테이너를 {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}} 클러스터에 배치할 수 있습니다.
 
-
 그림 1. 클라우드 측에서 클라우드 관리
 ![클라우드에서 - 클라우드 관리](vcsiks-oncloud-cloudmgt.svg)
 
@@ -49,8 +48,8 @@ NSX-V 또는 NSX-T 컴포넌트로 {{site.data.keyword.icpfull_notm}}를 배치�
 내부 네트워킹을 사용할 수 있습니다.
 
 NSX-T를 사용하는 {{site.data.keyword.icpfull_notm}}의 경우 사용자가 중앙 UI(NSX-T 관리자)에서
-네트워킹, 서브넷, 정책을 제어하고 구성할 수 있습니다. NSX-V와 NSX-T 간의 차이에 대한 정보는 [{{site.data.keyword.cloud_notm}}
-VCS 네트워킹 참조 아키텍처](../vcsnsxt/vcsnsxt-intro.html)를 참조하십시오.
+네트워킹, 서브넷, 정책을 제어하고 구성할 수 있습니다. NSX-V와 NSX-T 간의 차이점에 대한 정보는 [{{site.data.keyword.cloud_notm}} VCS 네트워킹 참조 아키텍처](/docs/services/vmwaresolutions/archiref/
+vcsnsxt/vcsnsxt-intro.html)를 참조하십시오. 
 
 ## 온프레미스 클라우드 관리 플랫폼
 
@@ -72,4 +71,4 @@ strongSwan VPN은 배치된 {{site.data.keyword.containerlong_notm}} 컨테이�
 
 ### 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

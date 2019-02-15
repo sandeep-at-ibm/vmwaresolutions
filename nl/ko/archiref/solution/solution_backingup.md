@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-27"
 
 솔루션의 일부로 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 또는 Veeam on {{site.data.keyword.cloud_notm}} 추가 기능 서비스를 선택적으로 배치할 수 있습니다. Veeam 및 IBM Spectrum Protect Plus는 관리 컴포넌트를 백업하기 위한 요구사항의 충족에 도움이 될 수 있습니다.
 
-이러한 추가 기능 서비스는 {{site.data.keyword.cloud_notm}} Endurance 스토리지와 함께 배치됩니다. 서비스는 관리 컴포넌트 및 워크로드를 백업하는 데 도움이 됩니다. [IBM Spectrum Protect Plus 아키텍처 개요](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} 및 [Veeam 아키텍처 개요](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}는 배치의 계획 및 크기 조정에 관한 유용한 지침을 제공합니다. 또한 Veeam 배치를 위한 [관리 서비스](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)를 요청할 수 있습니다.
+이러한 추가 기능 서비스는 {{site.data.keyword.cloud_notm}} Endurance 스토리지와 함께 배치됩니다. 서비스는 관리 컴포넌트 및 워크로드를 백업하는 데 도움이 됩니다. [IBM Spectrum Protect Plus 아키텍처 개요](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} 및 [Veeam 아키텍처 개요](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}는 배치의 계획 및 크기 조정에 관한 유용한 지침을 제공합니다. 또한 Veeam 배치를 위한 [관리 서비스](/docs/services/vmwaresolutions/services/managing_veeam_services.html)를 요청할 수 있습니다.
 
 서로 다른 솔루션 컴포넌트에서는 백업을 위한 서로 다른 전략이 필요합니다. 일부 컴포넌트는 이미지 레벨 백업을 사용하여 보호되며, 기타 컴포넌트는 구성 및 데이터에 대한 파일 기반 백업을 사용하여 보호됩니다.
 
@@ -34,7 +34,7 @@ VMware vCenter Server, PSC(Platform Services Controller) 및 VMware NSX 등의 �
 
 VMware vCenter Server 및 PSC는 다양한 프로토콜을 사용하여 [데이터베이스 및 구성을 파일 서버로 내보내기 위한 어플라이언스 관리 사용자 인터페이스 및 API](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window}를 제공합니다. VMware에는 vCenter Server Appliance 및 PSC에서 직접 [cron 작업으로서 주기적으로 실행](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window}하도록 이를 구성하는 방법의 예가 문서화되어 있으며, 이는 용도에 맞게 수정이 가능합니다.
 
-이 기술을 사용하여 vCenter Server Appliance 및 PSC를 둘 다 별도로 백업해야 합니다. VMware에서 문서화한 고려사항과 제한사항을 숙지하고 이에 대한 계획을 세우십시오. 또한 파일 서버에서 파일 백업의 정기적인 순환과 만료에 대해서도 계획하십시오.
+외부 PSC가 있는 경우에는 이 기술을 사용하여 vCenter Server Appliance 및 PSC를 둘 다 별도로 백업해야 합니다. 임베디드 PSC가 있는 경우에는 PSC 백업이 vCenter 백업에 포함됩니다. VMware에서 문서화한 고려사항과 제한사항을 숙지하고 이에 대한 계획을 세우십시오. 또한 파일 서버에서 파일 백업의 정기적인 순환과 만료에 대해서도 계획하십시오.
 
 VMware는 백업 위치가 비어 있는 폴더여야 하므로 각 후속 백업 작업에 대한 위치를 비워 두도록 백업 순환 또는 자동화를 계획하십시오.
 {:note}
@@ -74,7 +74,7 @@ VMware vCenter 6.5u2 이상에서, VMware는 데이터베이스 무결성을 보
 관리 백업을 복원하는 경우 다음과 같은 몇 가지 특수 고려사항이 있습니다.
 
 * vCenter 및 PSC의 경우, VMware는 새 가상 어플라이언스를 배치하고 백업으로부터 구성을 복원할 수 있는 설치 프로그램을 제공합니다.
-* 백업에서 어플라이언스를 복원할 때 설치 프로그램은 사용자가 제공하는 백업 정보를 기반으로 어플라이언스의 유형(vCenter Server 또는 PSC)을 감지합니다.
+* 백업에서 어플라이언스를 복원하는 경우, 설치 프로그램은 사용자가 제공하는 백업 정보를 기반으로 어플라이언스의 유형(vCenter Server, PSC 또는 임베디드 PSC의 vCenter)을 감지합니다. 
 * 호스트 중 하나에 직접 배치하므로, 사용자는 분배 스위치 또는 포트 그룹에 배치하지 못할 수 있습니다. 복구된 어플라이언스를 배치하기 위해 임시 표준 스위치 및 포트 그룹을 작성하고 VM에 대한 네트워크 연결을 제공하기 위해 vmnic 중 하나를 임시로 이 스위치로 마이그레이션해야 할 수 있습니다. 배치 후에는 VM을 분배 포트 그룹에 마이그레이션하고 vmnic를 dvSwitch로 리턴할 수 있습니다.
 * NSX의 경우에는 백업에서 구성을 복원하기 전에 NSX Manager 및 제어기를 다시 배치해야 할 수 있습니다.
 * vCenter 백업 및 복원에 대한 VMware 고려사항과 제한사항을 잘 숙지하고 있는지 확인하십시오.
@@ -85,6 +85,6 @@ VMware vCenter 6.5u2 이상에서, VMware는 데이터베이스 무결성을 보
 
 ### 관련 링크
 
-* [솔루션 개요](solution_overview.html)
-* [디자인 개요](design_overview.html)
-* [용량 스케일링](solution_scaling.html)
+* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [디자인 개요](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [용량 스케일링](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)

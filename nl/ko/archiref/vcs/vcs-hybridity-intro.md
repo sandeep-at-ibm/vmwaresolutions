@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-03"
+lastupdated: "2019-01-23"
 
 ---
 # vCenter Server on IBM Cloud with Hybridity Bundle 개요
@@ -25,7 +25,7 @@ IBM, Veeam 및 Zerto의 백업 및 재해 복구 오퍼링은 재해가 발생�
 
 vCenter Server Hybridity Bundle은 IBM 관리 서비스를 추가하여 일상적인 운영 및 가상화, 게스트 OS 또는 애플리케이션 계층의 유지보수를 오프로드할 수 있지만 관리 서비스는 아닙니다. 또한 {{site.data.keyword.cloud_notm}} Professional Services 팀을 활용하면 마이그레이션, 구현, 계획 및 온보딩 서비스를 사용하여 클라우드로의 이동 속도를 높이는 데 도움이 됩니다.
 
-vCenter Server Hybridity Bundle의 플랫폼 통합 옵션은 vRealize Suite 또는 vSphere with Operations Management와 같이 VMware에서 사용 가능한 옵션으로 제한되지 않지만, 오픈 소스 Terraform을 사용하여 IaC(Infrastructure as Code)를 관리하고 제공하는 [{{site.data.keyword.containerlong_notm}}](../vcsiks/vcsiks-intro.html) 및 [{{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html)과 같은 여러 {{site.data.keyword.cloud_notm}} 서비스 오퍼링으로 확장됩니다. 
+vCenter Server Hybridity Bundle의 플랫폼 통합 옵션은 vRealize Suite 또는 vSphere with Operations Management와 같이 VMware에서 사용 가능한 옵션으로 제한되지 않지만, 오픈 소스 Terraform을 사용하여 IaC(Infrastructure as Code)를 관리하고 제공하는 [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html) 및 [{{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)과 같은 여러 {{site.data.keyword.cloud_notm}} 서비스 오퍼링으로 확장됩니다.
 
 vCenter Server Hybridity Bundle에 사용 가능한 서비스 및 다중 오퍼링 통합 옵션의 광범위한 포트폴리오는 서비스로서의 하이브리드를 가능하게 하는 진정한 하이브리드 플랫폼을 제공합니다.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,7 +35,7 @@ V2.0 이상의 인스턴스가 VMware vSphere 6.5 및 VMware vCenter Server 6.5�
 
 ### V2.0 이상에 배치된 Cloud Foundation 인스턴스
 
-VMware vSphere 6.5 및 VMware vCenter Server 6.5의 필수 패치를 적용하려면 Cloud Foundation 인스턴스를 최신 VMware 패치 번들로 업그레이드해야 합니다. 기존의 모든 인스턴스 및 ESXi 서버의 경우, {{site.data.keyword.vmwaresolutions_full}} 콘솔의 **업데이트 및 패치** 페이지에서 패치를 적용하도록 프롬프트가 표시됩니다. 자세한 정보는 [Cloud Foundation 인스턴스에 업데이트 적용](../sddc/sd_applyingupdates.html)을 참조하십시오.
+VMware vSphere 6.5 및 VMware vCenter Server 6.5의 필수 패치를 적용하려면 Cloud Foundation 인스턴스를 최신 VMware 패치 번들로 업그레이드해야 합니다. 기존의 모든 인스턴스 및 ESXi 서버의 경우, {{site.data.keyword.vmwaresolutions_full}} 콘솔의 **업데이트 및 패치** 페이지에서 패치를 적용하도록 프롬프트가 표시됩니다. 자세한 정보는 [Cloud Foundation 인스턴스에 업데이트 적용](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)을 참조하십시오.
 
 ### V2.0 이상에 배치된 VMware vSphere 클러스터
 
@@ -63,6 +63,6 @@ VMware vSphere 6.0 및 VMware vCenter Server 6.0의 경우, [VMware 제품 패�
 
 ### 관련 링크
 
-* [업데이트를 Cloud Foundation 인스턴스에 적용](../sddc/sd_applyingupdates.html)
+* [업데이트를 Cloud Foundation 인스턴스에 적용](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)
 * [Secure against recent security vulnerabilities](https://www.ibm.com/blogs/bluemix/2018/01/ibm-cloud-spectre-meltdown-vulnerabilities/)
 * [VMware 제품 패치 사이트](https://my.vmware.com/group/vmware/patch)

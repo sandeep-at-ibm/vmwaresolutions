@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -31,13 +31,13 @@ A configuração incorreta ou a desativação do ESG de gerenciamento não imped
 
 O ESG de gerenciamento IBM é um cluster dedicado do NSX Edge somente para o tráfego de rede de gerenciamento do {{site.data.keyword.cloud_notm}}. Ele não é destinado à passagem de tráfego de nenhum componente que não seja implementado e gerenciado pela automação do Cloud Foundation ou do vCenter Server.
 
-O ESG de gerenciamento fornece um caminho de comunicação entre máquinas virtuais (VMs) de serviços de complemento que residem dentro de instâncias do Cloud Foundation ou do vCenter Server e a infraestrutura do IBM Automation no {{site.data.keyword.cloud_notm}} conforme mostrado para o Cloud Foundation no gráfico a seguir.
+O ESG de gerenciamento fornece um caminho de comunicação entre máquinas virtuais (MVs) de serviços de complemento que residem dentro de instâncias do Cloud Foundation ou do vCenter Server e a infraestrutura do IBM Automation no {{site.data.keyword.cloud_notm}} conforme mostrado para o Cloud Foundation no gráfico a seguir.
 
 Figura 2. Comunicações de borda de gerenciamento no Cloud Foundation
 
 ![Comunicações de borda de gerenciamento no Cloud Foundation](mgmtvmcommunication.svg "Comunicação de borda de gerenciamento no Cloud Foundation")
 
-Como resultado da comunicação leve entre certas VMs de serviços de complemento e seus sistemas de licenciamento e medição correspondentes, os NSX ESGs são dimensionados em uma configuração grande em um par ativo/passivo de alta disponibilidade (HA) e implementados no conjunto de recursos de gerenciamento do cluster convergido do Cloud Foundation ou do cluster do vCenter Server. A tabela a seguir fornece um resumo da implementação do NSX ESG de gerenciamento IBM.
+Como resultado da comunicação leve entre certas MVs de serviços de complemento e seus sistemas de licenciamento e medição correspondentes, os NSX ESGs são dimensionados em uma configuração grande em um par ativo/passivo de alta disponibilidade (HA) e implementados no conjunto de recursos de gerenciamento do cluster convergido do Cloud Foundation ou do cluster do vCenter Server. A tabela a seguir fornece um resumo da implementação do NSX ESG de gerenciamento IBM.
 
 Tabela 1. Especificações do NSX ESG de gerenciamento IBM
 
@@ -57,7 +57,7 @@ O acesso de saída é necessário para os serviços a seguir:
 
 ### Interfaces de Edge
 
-A configuração de interfaces ESG define a quais redes L2 o ESG tem acesso. Para o gerenciamento de ciclo de vida do Cloud Foundation e do vCenter Server, é necessário que VMs específicas colocadas na VLAN de gerenciamento tenham permissão para atravessar para a VLAN pública. As interfaces a seguir são definidas na implementação:
+A configuração de interfaces ESG define a quais redes L2 o ESG tem acesso. Para o gerenciamento de ciclo de vida do Cloud Foundation e do vCenter Server, é necessário que MVs específicas colocadas na VLAN de gerenciamento tenham permissão para atravessar para a VLAN pública. As interfaces a seguir são definidas na implementação:
 
 Tabela 2. Configuração da interface NSX ESG
 
@@ -81,7 +81,7 @@ Tabela 3. Configuração de IP do NSX ESX
 
 ### Definições de Conversão de Endereço de Rede
 
-A Conversão de Endereço de Rede (NAT) é empregada no ESG de Gerenciamento para permitir que o tráfego de rede atravesse entre um espaço de endereço IP e outro. Isso é normalmente feito para conservar endereços IP roteáveis da Internet ou para ocultar endereços IP internos de públicos por razões de segurança. A NAT também é usada para permitir o redirecionamento de porta do Protocolo de Controle de Transmissões (TCP) e User Datagram Protocol (UDP). O tráfego de gerenciamento é sempre iniciado de dentro da instância do Cloud Foundation e do vCenter Server, requerendo que somente uma NAT de origem (SNAT) seja definida no ESG de Gerenciamento. Um SNAT individual não é criado para cada VM interna que hospeda um serviço que precisa sair da instância.
+A Conversão de Endereço de Rede (NAT) é empregada no ESG de Gerenciamento para permitir que o tráfego de rede atravesse entre um espaço de endereço IP e outro. Isso é normalmente feito para conservar endereços IP roteáveis da Internet ou para ocultar endereços IP internos de públicos por razões de segurança. A NAT também é usada para permitir o redirecionamento de porta do Protocolo de Controle de Transmissões (TCP) e User Datagram Protocol (UDP). O tráfego de gerenciamento é sempre iniciado de dentro da instância do Cloud Foundation e do vCenter Server, requerendo que somente uma NAT de origem (SNAT) seja definida no ESG de Gerenciamento. Um SNAT individual não é criado para cada MV interna que hospeda um serviço que precisa sair da instância.
 
 Tabela 4. Configuração NAT do NSX ESG
 
@@ -91,7 +91,7 @@ Tabela 4. Configuração NAT do NSX ESG
 
 ### Roteamento
 
-Como os serviços dentro de VMs necessários para atravessar o ESG de Gerenciamento também podem precisar chegar aos serviços do {{site.data.keyword.cloud_notm}} dentro da rede privada do {{site.data.keyword.cloud_notm}} do cliente, a configuração a seguir é necessária para alcançar essa comunicação.
+Como os serviços dentro de MVs necessários para atravessar o ESG de Gerenciamento também podem precisar chegar aos serviços do {{site.data.keyword.cloud_notm}} dentro da rede privada do {{site.data.keyword.cloud_notm}} do cliente, a configuração a seguir é necessária para alcançar essa comunicação.
 
 Embora seja difícil prever qual intervalo de IPs de destino é necessário como um destino para conexões voltadas à Internet, qualquer serviço implementado e gerenciado pelo {{site.data.keyword.cloud_notm}} aponta para o ESG de Gerenciamento como seu gateway padrão. Uma rota estática é necessária para forçar o tráfego ao longo do {{site.data.keyword.cloud_notm}} BCR para as conexões de rede externas requeridas pelos serviços.
 
@@ -99,7 +99,7 @@ As configurações a seguir são recomendadas para qualquer serviço que esteja 
 * O gateway padrão é um ESG de gerenciamento.
 * Uma rota estática é necessária para destinos internos do {{site.data.keyword.cloud_notm}}.
 
-Se houver uma necessidade de o serviço ou a VM acessar o ESG do cliente, as rotas estáticas deverão ser mantidas dentro do serviço ou VM individual e apontadas para o ESG do cliente.
+Se houver uma necessidade de o serviço ou a MV acessar o ESG do cliente, as rotas estáticas deverão ser mantidas dentro do serviço ou MV individual e apontadas para o ESG do cliente.
 
 Nenhum protocolo de roteamento automático está configurado para o ESG de Gerenciamento atualmente.
 
@@ -125,10 +125,10 @@ Tabela 6. Configuração de firewall NSX ESG
 
 | Serviço | Origem | Destino | Protocolo | Ação |
 |:------- |:------ |:----------- |:-------- |:------ |
-| Zerto on {{site.data.keyword.cloud_notm}} | Zerto Management VM | Qualquer | Porta 443 | Permitir |
-| Veeam on {{site.data.keyword.cloud_notm}} | VM de Backup e Replicação do Veeam | Qualquer | Porta 443 | Permitir |
-| FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} | VMs de serviço | Qualquer | Porta 443 | Permitir |
-| F5 on {{site.data.keyword.cloud_notm}} | VMs de serviço | Qualquer | Porta 443 | Permitir |
+| Zerto on {{site.data.keyword.cloud_notm}} | Zerto Management MV | Qualquer | Porta 443 | Permitir |
+| Veeam on {{site.data.keyword.cloud_notm}} | MV de Backup e Replicação do Veeam | Qualquer | Porta 443 | Permitir |
+| FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} | MVs de serviço | Qualquer | Porta 443 | Permitir |
+| F5 on {{site.data.keyword.cloud_notm}} | MVs de serviço | Qualquer | Porta 443 | Permitir |
 | Qualquer | Qualquer | Qualquer | Qualquer | Negar |
 
 ## Borda do NSX de carga de trabalho
@@ -187,7 +187,7 @@ Tabela 9. Configuração de DLR e de IP do ESG de Carga de Trabalho
 
 A NAT é empregada no ESG de Carga de Trabalho para permitir que o tráfego de rede atravesse em um espaço de endereço IP e outro. Para o ESG de carga de trabalho, a NAT é necessária não somente para permitir a comunicação com destinos da Internet, mas também para comunicar-se com qualquer intervalo de IP de origem do {{site.data.keyword.cloud_notm}}. Para esse design, o tráfego de carga de trabalho tem permissão para sair para a Internet, mas não para o gerenciamento ou quaisquer redes do {{site.data.keyword.cloud_notm}}. Como tal, somente uma SNAT precisa ser definida no ESG da Carga de Trabalho. A sub-rede móvel de carga de trabalho inteira é configurada para atravessar o SNAT.
 
-Embora seja possível usar NAT para permitir a comunicação de carga de trabalho entre múltiplas instâncias do Cloud Foundation ou do vCenter Server, isso se torna impraticável quando muitas cargas de trabalho precisam ser conectadas entre as instâncias. Para obter exemplos de uso de recursos NSX avançados para criar uma rede de trânsito de sobreposição L2 ao longo das instâncias do Cloud Foundation ou do vCenter Server, veja [Arquitetura multisite](multi_site.html).
+Embora seja possível usar NAT para permitir a comunicação de carga de trabalho entre múltiplas instâncias do Cloud Foundation ou do vCenter Server, isso se torna impraticável quando muitas cargas de trabalho precisam ser conectadas entre as instâncias. Para obter exemplos de uso de recursos NSX avançados para criar uma rede de trânsito de sobreposição L2 ao longo das instâncias do Cloud Foundation ou do vCenter Server, veja [Arquitetura multisite](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html).
 
 Tabela 10. Regras NAT do Workload ESG
 
@@ -240,5 +240,5 @@ Por padrão, a criação de log é ativada em todos os novos dispositivos NSX Ed
 
 ### Links relacionados
 
-* [ Design do NSX Edge Services Gateway ](nsx_design.html)
-* [ Arquitetura de vários sites ](multi_site.html)
+* [ Design do NSX Edge Services Gateway ](/docs/services/vmwaresolutions/archiref/nsx/nsx_design.html)
+* [Arquitetura multissite](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -47,11 +47,10 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링은 스토리�
 
 가상화 관리 계층은 다음 컴포넌트로 구성됩니다.
 
-* vCenter Server 가상 어플라이언스
+* 임베드된 PSC(Platform Services Controller)가 포함된 vCenter Server Appliance(vCSA)
 * NSX Manager
 * 두 개의 NSX ESG(Edge Services Gateway)
 * 세 개의 NSX Controllers
-* 임베드된 PSC(Platform Services Controller)가 포함된 vCenter Server Appliance(vCSA)
 * IBM CloudDriver VSI(Virtual Server Instance)
 
 NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로컬 스토리지를 가상화합니다. NetApp ONTAP Select는 전용 모델에 배치되며, 여기서 기타 워크로드는 이와의 클러스터 공유가 예상되지 않습니다. 결과적으로 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링의 하드웨어 구성은 NetApp ONTAP Select의 요구사항에 따라서만 크기가 조정됩니다.
@@ -123,7 +122,7 @@ NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로�
 
 ### 관련 링크
 
-* [NetApp ONTAP Select 인스턴스 계획](np_planning.html)
-* [NetApp ONTAP Select 인스턴스 주문](np_orderinginstances.html)
-* [vCenter Server 개요](../vcenter/vc_vcenterserveroverview.html)
+* [NetApp ONTAP Select 인스턴스 계획](/docs/services/vmwaresolutions/netapp/np_planning.html#requirements-and-planning-for-netapp-ontap-select-instances)
+* [NetApp ONTAP Select 인스턴스 주문](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
 * [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-21"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -24,12 +24,12 @@ Veeam on {{site.data.keyword.cloud_notm}} 서비스를 관리하려면 다음 �
 Windows IP 주소 및 관리자 인증 정보는 Veeam on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 찾을 수 있습니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](../sddc/sd_addingremovingservices.html)
-* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](../vcenter/vc_addingremovingservices.html)
+* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ## Veeam on IBM Cloud가 설치된 인스턴스에 대한 관리 컴포넌트 백업 및 복원
 
-Veeam 콘솔을 사용하여 관리 컴포넌트를 백업하도록 Veeam on {{site.data.keyword.cloud_notm}} 서비스를 구성할 수 있습니다. 자세한 정보는 [컴포넌트 백업](../archiref/solution/solution_backingup.html)을 참조하십시오.
+Veeam 콘솔을 사용하여 관리 컴포넌트를 백업하도록 Veeam on {{site.data.keyword.cloud_notm}} 서비스를 구성할 수 있습니다. 자세한 정보는 [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)을 참조하십시오.
 
 V1.8 이상 릴리스로 배치된(또는 이러한 릴리스로 업그레이드된) 인스턴스의 경우에는 환경에 대한 구성 변경사항이 자동으로 백업되지 않습니다. 따라서 환경의 구성을 변경하기 전에 Veeam 콘솔에서 관리 백업 작업을 실행하여 수동으로 관리 컴포넌트를 백업하도록 권장합니다. 수동 백업에 대한 자세한 정보는 [Veeam 기술 지시사항](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}을 참조하십시오.
 
@@ -55,7 +55,7 @@ V1.8 이상 릴리스로 배치된(또는 이러한 릴리스로 업그레이드
 
 ### 사설 네트워크만 사용하여 배치된 인스턴스에 대한 Veeam 라이센스 업데이트
 
-사설 네트워크만을 사용하여 Veeam 서비스가 인스턴스에 설치되는 경우 라이센스의 만기 날짜를 기록해 두고 라이센스 갱신이 필요한 시점이 되면 [IBM 지원](../vmonic/trbl_support.html)에 문의하여 라이센스 키를 업데이트하도록 요청하십시오.
+Veeam 서비스가 사설 네트워크만의 인스턴스에 설치된 경우에는 라이센스의 만기 날짜를 기록해 두고 갱신이 필요할 때 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)하여 라이센스 키 업데이트에 대한 지원을 받아야 합니다. 
 
 ## V1.8 이전 인스턴스의 Veeam VSI를 Veeam on IBM Cloud로 대체
 
@@ -75,8 +75,8 @@ V1.8 이상 릴리스로 배치된(또는 이러한 릴리스로 업그레이드
 
 ### 관련 링크
 
-* [Veeam on {{site.data.keyword.cloud_notm}} 개요](veeam_considerations.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Veeam.com 웹 사이트](https://www.veeam.com/)
 * [Veeam 기술 문서](https://www.veeam.com/documentation-guides-datasheets.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -51,9 +51,9 @@ Cloud Foundation 인스턴스를 삭제하는 경우 다음 컴포넌트가 순�
 
 ### 관련 링크
 
-* [다중 사이트 구성에서 Cloud Foundation 인스턴스 삭제](sd_deletinginstance_multi.html)
-* [Cloud Foundation 인스턴스 주문](sd_orderinginstance.html)
-* [Cloud Foundation 인스턴스 보기](sd_viewinginstances.html)
-* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](sd_addingremovingservers.html)
-* [다중 사이트 구성 삭제](sd_deletinginstance_multi.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
+* [다중 사이트 구성에서 Cloud Foundation 인스턴스 삭제](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation 인스턴스 보기](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [다중 사이트 구성 삭제](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

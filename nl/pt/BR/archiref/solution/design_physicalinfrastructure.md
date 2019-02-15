@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ A infraestrutura física inclui os componentes a seguir:
   <dd class="dd">A rede física fornece a conectividade de rede para o ambiente que é usado, então, pela virtualização de rede. A rede é fornecida pela rede de serviços do {{site.data.keyword.cloud_notm}} e inclui serviços extras, como DNS e NTP.</dd>
 </dl>
 
-Para obter mais informações sobre os componentes físicos, veja a Lista de Materiais para a [instância do Cloud Foundation](../../sddc/sd_bom.html) ou [instância do vCenter Server](../../vcenter/vc_bom.html).
+Para obter mais informações sobre os componentes físicos, veja a Lista de Materiais para a [instância do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html) ou [instância do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 Para obter mais informações sobre armazenamento, veja [Arquitetura de armazenamento compartilhado](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
@@ -33,7 +33,7 @@ Para obter mais informações sobre armazenamento, veja [Arquitetura de armazena
 
 Host físico refere-se ao {{site.data.keyword.baremetal_short}} no ambiente que entrega recursos de cálculo. O {{site.data.keyword.baremetal_short}} aplicado nesta solução é certificado pelo VMware e listado no [VMware HCG](http://www.vmware.com/resources/compatibility/search.php).
 
-As configurações do servidor disponíveis na solução atendem ou excedem os requisitos mínimos para instalar, configurar e gerenciar o vSphere ESXi. Várias configurações estão disponíveis para satisfazer requisitos diferentes. Para obter a listagem detalhada das especificações exatas usadas para a solução VMware on {{site.data.keyword.cloud_notm}}, veja a Lista de Materiais para a [instância do Cloud Foundation](../../sddc/sd_bom.html) ou [instância do vCenter Server](../../vcenter/vc_bom.html).
+As configurações do servidor disponíveis na solução atendem ou excedem os requisitos mínimos para instalar, configurar e gerenciar o vSphere ESXi. Várias configurações estão disponíveis para satisfazer requisitos diferentes. Para obter a listagem detalhada das especificações exatas usadas para a solução VMware on {{site.data.keyword.cloud_notm}}, veja a Lista de Materiais para a [instância do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html) ou [instância do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 O  {{site.data.keyword.baremetal_short}}  reside no  {{site.data.keyword.cloud_notm}}.
 {:note}
@@ -130,11 +130,11 @@ Tabela 1. Resumo de VLAN e sub-rede
 | VLAN | Tipo | Descrição |
 |:---- |:---- |:----------- |
 | Pública| Primária  | Designada a hosts físicos para acesso à rede pública. Não usada na implementação inicial. |
-| Privada A | Primária  | Sub-rede única designada a hosts físicos designados pelo {{site.data.keyword.cloud_notm}}. Usada pela interface de gerenciamento para o tráfego de gerenciamento do vSphere. |
-| Privada A | Móvel | Sub-rede única designada a máquinas virtuais funcionando como componentes de gerenciamento |
+| Privado A | Primária  | Sub-rede única designada a hosts físicos designados pelo {{site.data.keyword.cloud_notm}}. Usada pela interface de gerenciamento para o tráfego de gerenciamento do vSphere. |
+| Privado A | Móvel | Sub-rede única designada a máquinas virtuais funcionando como componentes de gerenciamento |
 | Privada A | Móvel | Sub-rede única designada ao NSX VTEP |
-| Privada B | Móvel | Sub-rede única designada para vSAN, se em uso |
-| Privada B | Móvel | Sub-rede única designada para o NAS, se em uso |
+| Privado B | Móvel | Sub-rede única designada para vSAN, se em uso |
+| Privado B | Móvel | Sub-rede única designada para o NAS, se em uso |
 | Privada B | Móvel | Sub-rede única designada para vMotion |
 
 Nesse design, todos os hosts e máquinas virtuais suportados por VLAN são configurados para apontar para o roteador do cliente de “rede privada” de backend do {{site.data.keyword.cloud_notm}} como a rota padrão. Embora as instâncias do vCenter Server e do Cloud Foundation permitam o uso de Rede Definida por Software (SDN), as sobreposições de rede criadas em uma instância do VMware que incluem roteamento para sub-redes internas não são conhecidas pelos roteadores gerenciados pelo {{site.data.keyword.cloud_notm}}. Portanto, talvez seja necessário criar rotas estáticas na instância do VMware em alguns ou em todos os componentes de gerenciamento.
@@ -143,7 +143,7 @@ As conexões de rede privada são configuradas para usar um tamanho de MTU de qu
 
 ## Design de armazenamento físico
 
-O design de armazenamento físico consiste na configuração dos discos físicos que são instalados nos hosts físicos e na configuração do armazenamento de nível de arquivo compartilhado. Isso inclui os discos do sistema operacional do hypervisor do vSphere ESXi e os discos que são usados para armazenamento das máquinas virtuais (VMs). O armazenamento para VMs pode consistir em discos locais virtualizados pelo VMware vSAN ou em armazenamento de nível de arquivo compartilhado.
+O design de armazenamento físico consiste na configuração dos discos físicos que são instalados nos hosts físicos e na configuração do armazenamento de nível de arquivo compartilhado. Isso inclui os discos do sistema operacional do hypervisor do vSphere ESXi e os discos que são usados para armazenamento das máquinas virtuais (MVs). O armazenamento para MVs pode consistir em discos locais virtualizados pelo VMware vSAN ou em armazenamento de nível de arquivo compartilhado.
 
 ### Discos do sistema operacional
 
@@ -151,13 +151,13 @@ O hypervisor do vSphere ESXi foi projetado para ser instalado em um local persis
 
 ### Armazenamento de máquina virtual
 
-Esse design permite a opção de usar o VMware vSAN ou armazenamento de nível de arquivo compartilhado como o armazenamento de dados primário para VMs.
+Esse design permite a opção de usar o VMware vSAN ou armazenamento de nível de arquivo compartilhado como o armazenamento de dados primário para MVs.
 
 ### discos vSAN
 
 Quando usados, o VMware vSAN é configurado usando uma configuração totalmente em flash. Esse design permite várias opções de configuração, incluindo chassis 2U e 4U, além de vários números e tamanhos de disco. Todas as configurações usam dois grupos de discos vSAN, com um solid-state disk (SSD) para cache e um ou mais SSDs para capacidade. Todas as unidades alocadas para o consumo de vSAN são configuradas no RAID-0 de disco único.
 
-Para obter mais informações sobre as configurações suportadas, consulte a Lista de materiais para a [instância do Cloud Foundation](../../sddc/sd_bom.html) ou a [instância do vCenter Server](../../vcenter/vc_bom.html).
+Para obter mais informações sobre as configurações suportadas, consulte a Lista de materiais para a [instância do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html) ou a [instância do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 ### Armazenamento de nível de arquivo compartilhado entre hosts
 
@@ -173,7 +173,7 @@ Os {{site.data.keyword.CloudDataCents_notm}} que oferecem a camada de desempenho
 
 ### Links relacionados
 
-* [Lista de materiais do Cloud Foundation](../../sddc/sd_bom.html)
-* [Lista de materiais do vCenter Server](../../vcenter/vc_bom.html)
+* [Lista de materiais do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [Lista de materiais do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
 * [Arquitetura de armazenamento compartilhado](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
 * [Arquitetura do NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

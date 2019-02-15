@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,4 +22,4 @@ vCenter Server 인스턴스의 경우, Zerto 재해 복구 서비스가 기본 �
 
 Zerto 콘솔에 액세스하려면 인스턴스의 **서비스** 탭에서 Zerto 카드를 클릭하고 **세부사항 보기**를 클릭한 후 **Zerto 콘솔 보기**를 클릭하십시오.
 
-IBM 지원 센터 문의에 대한 자세한 정보는 [IBM 지원 센터에 문의](trbl_support.html)를 참조하십시오.
+IBM 지원 센터 문의에 대한 자세한 정보는 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions//vmonic/trbl_support.html)를 참조하십시오.

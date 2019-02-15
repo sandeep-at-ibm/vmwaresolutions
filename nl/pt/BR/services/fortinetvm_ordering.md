@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -34,7 +34,7 @@ Quando você pedir o serviço, forneça as configurações a seguir.
 
 ### Conexão de Rede FortiGuard
 
-Selecione **Rede pública** ou **Rede privada** para o FortiGuard. Se o cluster de destino for configurado com interfaces de rede somente privadas, apenas a opção **Rede privada** estará disponível. Essa seleção determina como o FortiGuard contatará o servidor de licença do Fortinet para ativar a licença e para fazer download das correções de segurança e isso não afetará o plano de dados de carga de trabalho.
+Selecione **Rede pública** ou **Rede privada** para o FortiGuard. Se o cluster de destino for configurado com interfaces de rede somente privadas, apenas a opção **Rede privada** estará disponível. Essa seleção determina como o FortiGuard contatará o servidor de licença do Fortinet para ativar a licença e para fazer download de correções de segurança e isso não causará impacto no plano de dados de carga de trabalho.
 
 Se você selecionar **Rede privada**, especifique as configurações a seguir:
 * **Endereço IP do proxy**: o endereço IPv4 do servidor.
@@ -60,9 +60,9 @@ O modelo de licença para o FortiGate Virtual Appliance no {{site.data.keyword.c
         <dt class="dt dlterm">Standard FW</dt>
         <dd class="dd">Esse pacote configurável inclui Inspeção de Pacote Stateful, Proteção de VLAN e Criação de Log Avançado, Regras de Firewall de Ingresso e Egresso, Finalização de VPN SSL/IPSec e suporte 24 x 7.</dd>
         <dt class="dt dlterm">Standard FW + UTM</dt>
-        <dd class="dd">Esse pacote configurável inclui todos os serviços de firewall padrão além do serviço Advanced Malware Protection (AMP) (incluindo Antivírus, Serviço de IP/Domínio do Botnet, Mobile Malware Security, FortiSandbox Cloud, Virus Outbreak Protection Service e Content Disarm e Reconstruct), assim como os serviços de Filtragem da Web, IPS, Antispam, Controle do Aplicativo e FortiCare.</dd>
+        <dd class="dd">Esse pacote configurável inclui todos os serviços de firewall padrão, além do serviço Advanced Malware Protection (AMP). Ele inclui Antivírus, Botnet IP/Domain Service, Mobile Malware Security, FortiSandbox Cloud, Virus Outbreak Service Protection Service e Content Disarm & Reconstruct. Ele também inclui os serviços Web Filtering, IPS, Antispam, Application Control e FortiCare.</dd>
         <dt class="dt dlterm">Standard FW + Enterprise</dt>
-        <dd class="dd">Esse pacote configurável inclui todos os serviços de firewall padrão e UTM, além dos serviços a seguir:<ul><li>Cloud Access Security Broker (CASB): esse serviço fornece visibilidade, conformidade, segurança de dados e proteção de ameaça para serviços baseados em nuvem.</li><li>Segurança Industrial: esse serviço fornece assinaturas para protocolos ICS/SCADA comuns.</li><li>Classificação de segurança: esse serviço fornece recursos de auditoria para identificar vulnerabilidades críticas e pontos fracos de configuração e implementar recomendações de melhor prática.</li></ul></dd>
+        <dd class="dd">Esse pacote configurável inclui todos os serviços de firewall padrão e UTM, além dos serviços a seguir:<ul><li>Cloud Access Security Broker (CASB) - esse serviço fornece visibilidade, conformidade, segurança de dados e proteção de ameaça para serviços baseados em nuvem.</li><li>Segurança industrial - esse serviço fornece assinaturas para protocolos ICS/SCADA comuns.</li><li>Classificação de segurança - esse serviço fornece recursos de auditoria para identificar vulnerabilidades críticas e fraquezas de configuração e implementar recomendações de melhor prática.</li></ul></dd>
 </dl>
 
 No 3º trimestre de 2018, o Fortinet incluiu três novos serviços (CASB, Segurança Industrial e Classificação de Segurança) em seu pacote configurável Enterprise. Esses serviços estão disponíveis somente no FortiGate 6.0.
@@ -73,12 +73,12 @@ Não é possível mudar o modelo de licença após a instalação do serviço. P
 
 ### Links relacionados
 
-* [FortiGate Virtual Appliance no {{site.data.keyword.cloud_notm}} visão geral](fortinetvm_considerations.html)
-* [Gerenciando o FortiGate Virtual Appliance no {{site.data.keyword.cloud_notm}}](managingfortinetvm.html)
-* [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](../sddc/sd_addingremovingservices.html)
-* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](../vcenter/vc_addingremovingservices.html)
-* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
-* [Perguntas mais frequentes](../vmonic/faq.html)
+* [FortiGate Virtual Appliance no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)
+* [Gerenciando o FortiGate Virtual Appliance no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
+* [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Website do Fortinet](https://www.fortinet.com/){:new_window}
 * [Biblioteca de documentos do Fortinet](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -48,4 +48,4 @@ V1.4 이전 인스턴스를 새 인스턴스로 이동하려면 vSphere Web Clie
 
 VM 내보내기 및 가져오기에 대한 자세한 정보는 VMware vSphere 문서를 참조하십시오.
 
-{{site.data.keyword.vmwaresolutions_short}}에 대한 지원이 필요하면 지원 채널 중 하나를 통해 [IBM 지원 센터에 문의](trbl_support.html)하십시오.
+{{site.data.keyword.vmwaresolutions_short}}에 대한 지원이 필요하면 지원 채널 중 하나를 통해 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)하십시오.

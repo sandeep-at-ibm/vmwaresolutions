@@ -4,21 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
-# 운영 고려사항
+# vCenter Server 네트워킹에 대한 작동 고려사항
 
 ## 백업
 
 ### VMware vCenter Server on IBM Cloud 백업
 
-{{site.data.keyword.vmwaresolutions_full}}의 일부로, Veeam 백업 소프트웨어는 VMware 클러스터 외부에서 {{site.data.keyword.cloud_notm}} Endurance Storage를 사용하여 {{site.data.keyword.cloud_notm}} VSI(Virtual Server Instance)에 선택적으로 배치됩니다. 이 소프트웨어의 목적은 솔루션의 관리 컴포넌트를 백업하는 것입니다. [Veeam on {{site.data.keyword.cloud_notm}} 개요](../../services/veeam_considerations.html)에서는 오퍼링을 자세히 설명합니다.
+{{site.data.keyword.vmwaresolutions_full}}의 일부로, Veeam 백업 소프트웨어는 VMware 클러스터 외부에서 {{site.data.keyword.cloud_notm}} Endurance Storage를 사용하여 {{site.data.keyword.cloud_notm}} VSI(Virtual Server Instance)에 선택적으로 배치됩니다. 이 소프트웨어의 목적은 솔루션의 관리 컴포넌트를 백업하는 것입니다. [Veeam on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/veeam_considerations.html)에서는 오퍼링을 자세히 설명합니다.
 
 모든 NSX 컴포넌트의 백업은 장애가 발생하는 경우 시스템을 해당 작업 상태로 복원하는 데 매우 중요합니다. NSX 가상 어플라이언스를 백업하는 것만으로는 충분하지 않으며, NSX Manager 내의 NSX 백업 기능을 사용하여 효과적인 백업을 수행해야 합니다. 이 오퍼레이션을 위해서는 FTP 또는 SFTP 서버가 NSX 백업 데이터의 저장소에 대해 지정되어야 합니다.
 
-NSX 관리자 백업에는 제어기, 엔티티의 논리적 전환 및 라우팅, 보안, 방화벽 규칙 및 NSX Manager 사용자 인터페이스 또는 API 내에서 구성하는 모든 것을 포함하여 모든 NSX 구성이 포함됩니다. vCenter 데이터베이스와 관련 요소(예: 가상 스위치)는 별도로 백업해야 합니다. 자세한 내용은 [NSX 파일 기반 백업](../solution/solution_backingup.html#nsx-file-based-backup)을 참조하십시오. NSX 구성은 [vCenter 파일 기반 백업](../solution/solution_backingup.html#vcenter-file-based-backup)과 함께 백업되어야 합니다.
+NSX 관리자 백업에는 제어기, 엔티티의 논리적 전환 및 라우팅, 보안, 방화벽 규칙 및 NSX Manager 사용자 인터페이스 또는 API 내에서 구성하는 모든 것을 포함하여 모든 NSX 구성이 포함됩니다. vCenter 데이터베이스와 관련 요소(예: 가상 스위치)는 별도로 백업해야 합니다. 자세한 내용은 [NSX 파일 기반 백업](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#nsx-file-based-backup)을 참조하십시오. NSX 구성은 [vCenter 파일 기반 백업](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#vcenter-file-based-backup)과 함께 백업되어야 합니다.
 
 ### IBM Cloud Private에 대한 백업 및 재해 복구
 
@@ -59,15 +59,15 @@ etcd 데이터베이스의 백업은 관리 서비스의 일부로 고객에게 
 
 #### 다중 사이트 배치
 
-VMware on {{site.data.keyword.cloud_notm}}는 {{site.data.keyword.cloud_notm}}의 전세계 데이터 센터 및 통합 네트워크 백본을 사용하여 다양한 교차 지역의 유스 케이스를 배치하고 처음부터 이러한 인프라를 빌드하는 데 걸리는 시간 내에 작동되도록 할 수 있습니다. 추가 정보는 [vCenter Server on {{site.data.keyword.cloud_notm}} 인스턴스를 위한 다중 사이트 구성](../../vcenter/vc_multisite.html)을 참조하십시오.
+VMware on {{site.data.keyword.cloud_notm}}는 {{site.data.keyword.cloud_notm}}의 전세계 데이터 센터 및 통합 네트워크 백본을 사용하여 다양한 교차 지역의 유스 케이스를 배치하고 처음부터 이러한 인프라를 빌드하는 데 걸리는 시간 내에 작동되도록 할 수 있습니다. 추가 정보는 [vCenter Server on {{site.data.keyword.cloud_notm}} 인스턴스를 위한 다중 사이트 구성](/docs/services/vmwaresolutions/vcenter/vc_multisite.html)을 참조하십시오.
 
 #### 새 클러스터로 확장
 
-또한 사용자는 콘솔에서 새 클러스터를 작성하고, 호스트를 주문하여 컴퓨팅 용량을 확장할 수 있으며, 새 호스트는 새 클러스터에 자동으로 추가됩니다. 이 옵션은 환경에 별도의 클러스터를 작성하며, 사용자에게 애플리케이션 워크로드에서 관리 워크로드를 물리적 및 논리적으로 구분하는 기능, 다른 특성(예: Microsoft SQL 데이터베이스 클러스터)에 따라 워크로드를 구분하는 기능 및 고가용성 토폴로지에 애플리케이션을 배치하는 기능을 제공합니다. 자세한 정보는 [vCenter Server 인스턴스 주문](../../vcenter/vc_orderinginstance.html)을 참조하십시오.
+또한 사용자는 콘솔에서 새 클러스터를 작성하고, 호스트를 주문하여 컴퓨팅 용량을 확장할 수 있으며, 새 호스트는 새 클러스터에 자동으로 추가됩니다. 이 옵션은 환경에 별도의 클러스터를 작성하며, 사용자에게 애플리케이션 워크로드에서 관리 워크로드를 물리적 및 논리적으로 구분하는 기능, 다른 특성(예: Microsoft SQL 데이터베이스 클러스터)에 따라 워크로드를 구분하는 기능 및 고가용성 토폴로지에 애플리케이션을 배치하는 기능을 제공합니다. 자세한 정보는 [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)을 참조하십시오.
 
 #### 기존 클러스터 확장
 
-사용자는 콘솔 내에서 호스트를 주문하여 기존 클러스터를 확장할 수 있으며 새 호스트는 자동으로 클러스터에 추가됩니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 용량 확장 및 축소](../../vcenter/vc_addingremovingservers.html)를 참조하십시오. 예약 요구사항에 따라 클러스터에 대한 HA 예약 정책을 조정해야 할 수 있습니다.
+사용자는 콘솔 내에서 호스트를 주문하여 기존 클러스터를 확장할 수 있으며 새 호스트는 자동으로 클러스터에 추가됩니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)를 참조하십시오. 예약 요구사항에 따라 클러스터에 대한 HA 예약 정책을 조정해야 할 수 있습니다.
 
 ### IBM Cloud Private 및 IBM Cloud Kubernetes Service 확장성
 
@@ -93,4 +93,4 @@ VMware on {{site.data.keyword.cloud_notm}}는 {{site.data.keyword.cloud_notm}}�
 
 ### 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

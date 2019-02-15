@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ VMware vCenter Server 인스턴스를 주문하기 전에 다음 요구사항을
 
 ## IBM Cloud 계정 요구사항
 
-사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](../vmonic/slaccountrequirement.html)을 참조하십시오.
+사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)을 참조하십시오.
 
 ## IBM Cloud Data Center 가용성
 
@@ -67,19 +67,19 @@ vCenter Server 배치에는 실제 인프라에 대한 엄격한 요구사항이
 
 ## 관리 컴포넌트의 백업
 
-사용자는 모든 인스턴스 컴포넌트의 가용성을 유지보수하고 보장할 책임이 있습니다. 모든 관리 컴포넌트의 백업 또는 고가용성에 대해 계획하도록 적극 권장합니다. 자세한 정보는 [컴포넌트 백업](../archiref/solution/solution_backingup.html)을 참조하십시오.
+사용자는 모든 인스턴스 컴포넌트의 가용성을 유지보수하고 보장할 책임이 있습니다. 모든 관리 컴포넌트의 백업 또는 고가용성에 대해 계획하도록 적극 권장합니다. 자세한 정보는 [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)을 참조하십시오.
 
 ## vCenter Server 인스턴스에 대한 서비스
 
-사용자의 요구(재해 복구)에 따라 인스턴스에 추가 기능 서비스를 주문할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](vc_addingremovingservices.html)를 참조하십시오.
+사용자의 요구(재해 복구)에 따라 인스턴스에 추가 기능 서비스를 주문할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)를 참조하십시오.
 
 ## 용량 고려사항
 
-용량 고려사항에 대한 자세한 정보는 [용량 스케일링](../archiref/solution/solution_scaling.html)을 참조하십시오.
+용량 고려사항에 대한 자세한 정보는 [용량 스케일링](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)을 참조하십시오.
 
 ### 관련 링크
 
-* [vCenter Server 개요](vc_vcenterserveroverview.html)
-* [vCenter Server 인스턴스 주문](vc_orderinginstance.html)
-* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](vc_addingremovingservers.html)
-* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](vc_addingremovingservices.html)
+* [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)

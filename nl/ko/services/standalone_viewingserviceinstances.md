@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -38,7 +38,7 @@ lastupdated: "2018-11-08"
 
 ### 관련 링크
 
-* [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 주문](standalone_orderingserviceinstances.html)
-* [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 삭제](standalone_deletingserviceinstances.html)
-* [HCX 용어집](hcx_glossary.html)
+* [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 주문](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
+* [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 삭제](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
+* [HCX 용어집](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources)

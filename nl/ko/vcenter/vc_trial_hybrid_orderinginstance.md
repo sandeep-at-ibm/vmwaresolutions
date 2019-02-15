@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-11"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}}에 대한 단일 노드 평
 
 이 평가판은 최대 90일 동안 사용할 수 있습니다. 평가판 사용이 완료되면 이 환경을 삭제한 다음 용량 요구사항을 충족하는 고가용성 환경을 프로비저닝할 수 있습니다.
 
-아키텍처 디자인에 대한 자세한 정보는 [vCenter Server on IBM Cloud에 대한 단일 노드 평가판의 HCX on IBM Cloud 아키텍처 디자인](../archiref/trial/vc_trial_hcx_arch.html)을 참조하십시오.
+아키텍처 디자인에 대한 자세한 정보는 [vCenter Server on IBM Cloud에 대한 단일 노드 평가판의 HCX on IBM Cloud 아키텍처 디자인](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)을 참조하십시오.
 
 ## vCenter Server 인스턴스에 대한 단일 노드 평가판의 기술 스펙
 
@@ -53,7 +53,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}}에 대한 단일 노드 평
 
 다음 VSI(Virtual Server Instance)가 주문됩니다.
 
-* IBM CloudBuilder용 VSI는 인스턴스 배치가 완료된 후 취소됩니다. 
+* IBM CloudBuilder용 VSI는 인스턴스 배치가 완료된 후 취소됩니다.
 * Microsoft Active Directory(AD)용 Microsoft Windows Server VSI가 배치되어 있으며 검색할 수 있습니다. VSI는 호스트와 VM이 등록되는 인스턴스에 대한 DNS의 역할을 합니다.
 
 ### IBM 제공 라이센스 및 요금
@@ -162,7 +162,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 
 인스턴스 세부사항을 보고 배치 상태를 확인할 수 있습니다. 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하고 **vCenter Server 인스턴스** 또는 **온프레미스 HCX 인스턴스** 테이블을 찾아 주문한 인스턴스에 대한 정보를 보십시오.
 
-인스턴스가 성공적으로 배치되는 경우 이 주제의 *기술 스펙* 섹션에 설명되어 있는 컴포넌트가 VMware 가상 플랫폼에 설치되며, 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 서비스 정품 인증 키는 **온프레미스 HCX 인스턴스**에 나열됩니다. 
+인스턴스가 성공적으로 배치되는 경우 이 주제의 *기술 스펙* 섹션에 설명되어 있는 컴포넌트가 VMware 가상 플랫폼에 설치되며, 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 서비스 정품 인증 키는 **온프레미스 HCX 인스턴스**에 나열됩니다.
 
 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
@@ -172,8 +172,8 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 
 1. **배치된 인스턴스** 페이지에서 온프레미스 정품 인증 키를 찾으십시오.
   1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
-  2. **vCenter Server 인스턴스** 테이블에서 **유형** 열을 검토하여 vCenter Server 단일 노드 평가판 인스턴스를 찾고 인스턴스 이름을 기록해 두십시오. 
-  3. **온프레미스 HCX 인스턴스** 테이블로 스크롤하고 **이름** 열을 검토하여 *-OnPrem* 접두어로 정렬한 단일 노드 인스턴스와 동일한 이름을 가진 인스턴스를 찾으십시오. 
+  2. **vCenter Server 인스턴스** 테이블에서 **유형** 열을 검토하여 vCenter Server 단일 노드 평가판 인스턴스를 찾고 인스턴스 이름을 기록해 두십시오.
+  3. **온프레미스 HCX 인스턴스** 테이블로 스크롤하고 **이름** 열을 검토하여 *-OnPrem* 접두어로 정렬한 단일 노드 인스턴스와 동일한 이름을 가진 인스턴스를 찾으십시오.
   4. **정품 인증 키** 필드에 있는 키를 기록해 두십시오.
 2. HCX on {{site.data.keyword.cloud_notm}} HCX Manager 콘솔에서 온프레미스 HCX Enterprise Manager OVA(Open Virtual Appliance)를 얻으십시오.
   1. HCX Cloud 콘솔에 연결하십시오.
@@ -226,7 +226,7 @@ vCenter Server 인스턴스에 대한 단일 노드 평가판을 삭제하는 �
 삭제된 인스턴스에 대한 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시까지 비용이 청구됩니다.
 {:note}
 
-vCenter Server 인스턴스에 대한 단일 노드 평가판을 삭제하려면 다음 단계를 완료하십시오. 
+vCenter Server 인스턴스에 대한 단일 노드 평가판을 삭제하려면 다음 단계를 완료하십시오.
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 삭제할 인스턴스를 찾으십시오.
@@ -238,6 +238,6 @@ vCenter Server 인스턴스에 대한 단일 노드 평가판을 삭제하려면
 
 ### 관련 링크
 
-* [vCenter Server on IBM Cloud에 대한 단일 노드 평가판의 HCX on IBM Cloud 아키텍처 디자인](../archiref/trial/vc_trial_hcx_arch.html)
+* [vCenter Server on IBM Cloud에 대한 단일 노드 평가판의 HCX on IBM Cloud 아키텍처 디자인](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [VMware Hybrid Cloud Extension 문서](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

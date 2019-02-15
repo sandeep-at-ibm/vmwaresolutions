@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,10 +35,9 @@ Controller
 
 ### NSX Edge 및 Distributed Logical Router
 
-NSX Edge Services Gateway(ESG) 쌍이 배치됩니다. 모든 경우에, 하나의 게이트웨이 쌍은 사설 네트워크에 상주하는 자동화 컴포넌트의 아웃바운드 트래픽에 사용됩니다. vCenter Server 및 {{site.data.keyword.icpfull_notm}}의 경우, ICP 관리 에지라고 하는 두 번째 게이트웨이가 배치되며 사설 네트워크에 지정된 인터페이스와 공용 네트워크에 대한 업링크로 구성됩니다.
-관리자는 임의의 필수 컴포넌트(예: DLR(Distributed Logical Router), 논리 스위치 및 방화벽)를 구성할 수 있습니다.
+NSX Edge Services Gateway(ESG) 쌍이 배치됩니다. 모든 경우에, 하나의 게이트웨이 쌍은 사설 네트워크에 상주하는 자동화 컴포넌트의 아웃바운드 트래픽에 사용됩니다. vCenter Server 및 {{site.data.keyword.icpfull_notm}}의 경우, ICP 관리 에지라고 하는 두 번째 게이트웨이가 배치되며 사설 네트워크에 지정된 인터페이스와 공용 네트워크에 대한 업링크로 구성됩니다. 관리자는 임의의 필수 컴포넌트(예: DLR(Distributed Logical Router), 논리 스위치 및 방화벽)를 구성할 수 있습니다.
 
-네트워크 디자인에 대한 자세한 정보는 [vCenter Server 네트워킹 참조 아키텍처](../vcsnsxt/vcsnsxt-intro.html)를 참조하십시오.
+네트워크 디자인에 대한 자세한 정보는 [vCenter Server 네트워킹 참조 아키텍처](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html)를 참조하십시오.
 
 다음 표에서는 {{site.data.keyword.icpfull_notm}} ESG 및 DLR 스펙의 개요를 보여줍니다.
 
@@ -97,7 +96,7 @@ Edge 크기    콤팩트 | vCPU 수 1
 VA(Vulnerability Advisor) 노드는 Vulnerability Advisor 서비스 실행에 사용되는 선택적 노드입니다. Vulnerability Advisor 서비스는 리소스 집약적인 서비스입니다. Vulnerability Advisor 서비스를 사용하는 경우 전용 VA 노드를 지정하십시오.
 
 다음 표는 고가용성 {{site.data.keyword.icpfull_notm}} 인스턴스에 필요한 VM 스펙을
-제공합니다. 
+제공합니다.
 
 표 3. {{site.data.keyword.icpfull_notm}} VM 스펙
 
@@ -122,7 +121,7 @@ CAM에서는 작업자 노드가 더 높은 vCPU 및 메모리 구성을 포함�
 
 {{site.data.keyword.cloud_notm}} Automation Manager(CAM)은 개발자와 관리자가
 비즈니스 요구를 충족시킬 수 있도록 도움을 주는 {{site.data.keyword.icpfull_notm}}에서
-실행되는 다중 클라우드의 셀프 서비스 관리 플랫폼입니다. 
+실행되는 다중 클라우드의 셀프 서비스 관리 플랫폼입니다.
 
 그림 3. CAM 컴포넌트 참조
 ![CAM 컴포넌트 참조](vcscar-cam-components.svg)
@@ -170,4 +169,4 @@ Terraform 모듈의 끌어서 놓기 기능을 사용하여 Terraform 템플리�
 
 ## 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

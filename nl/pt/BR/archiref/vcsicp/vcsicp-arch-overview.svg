@@ -34,7 +34,7 @@
       <xhtml:div display="inline-block" text-align="inherit" text-decoration="inherit">VM Migration</xhtml:div>
      </xhtml:div>
     </foreignObject>
-    <text x="36" y="12" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">Migração da VM</text>
+    <text x="36" y="12" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">Migração da MV</text>
    </switch>
   </g>
   <g pointer-events="none">

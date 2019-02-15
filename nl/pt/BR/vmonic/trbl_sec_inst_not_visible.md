@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-08-16"
 
@@ -20,7 +20,7 @@ Esse é um problema conhecido do VMware 6.5.
 
 Para resolver o problema, deve-se reiniciar o vSphere Web Client:
 
-1. Usando a conta **raiz**, conecte-se em **ssh** à VM (máquina virtual) do vCenter da instância pedida anteriormente.
+1. Usando a conta **raiz**, conecte-se em **ssh** à MV (máquina virtual) do vCenter da instância pedida anteriormente.
 2. Digite ``shell`` para inserir o shell bash.
 3. Insira `service-control --stop vsphere-client` para parar o cliente.
 4. Insira `service-control --start vsphere-client` para reiniciar o cliente.

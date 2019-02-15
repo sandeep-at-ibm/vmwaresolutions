@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,7 +35,7 @@ Instâncias da V2.0 ou mais recente foram implementadas com o VMware vSphere 6.5
 
 ### Instâncias do Cloud Foundation que foram implementadas na V2.0 ou mais recente
 
-Para aplicar as correções necessárias para o VMware vSphere 6.5 e o VMware vCenter Server 6.5, deve-se fazer upgrade de suas instâncias do Cloud Foundation para o pacote configurável de correções mais recente do VMware. Para todas as instâncias e servidores ESXi existentes, você será solicitado a aplicar as correções na página **Atualização e correção** do console do {{site.data.keyword.vmwaresolutions_full}}. Para obter mais informações, veja [Aplicando atualizações a instâncias do Cloud Foundation](../sddc/sd_applyingupdates.html).
+Para aplicar as correções necessárias para o VMware vSphere 6.5 e o VMware vCenter Server 6.5, deve-se fazer upgrade de suas instâncias do Cloud Foundation para o pacote configurável de correções mais recente do VMware. Para todas as instâncias e servidores ESXi existentes, você será solicitado a aplicar as correções na página **Atualização e correção** do console do {{site.data.keyword.vmwaresolutions_full}}. Para obter mais informações, veja [Aplicando atualizações a instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html).
 
 ### Clusters do VMware vSphere que foram implementados na V2.0 ou mais recente
 
@@ -63,6 +63,6 @@ Para o VMware vSphere 6.0 e o VMware vCenter Server 6.0, deve-se aplicar as corr
 
 ### Links relacionados
 
-* [Aplicando atualizações a instâncias do Cloud Foundation](../sddc/sd_applyingupdates.html)
+* [Aplicando atualizações a instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)
 * [Proteger contra vulnerabilidades de segurança recentes](https://www.ibm.com/blogs/bluemix/2018/01/ibm-cloud-spectre-meltdown-vulnerabilities/)
 * [Site de Correções de Produtos VMware](https://my.vmware.com/group/vmware/patch)

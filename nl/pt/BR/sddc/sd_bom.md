@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -21,7 +21,7 @@ Tabela 1. BOM para as VLANs em instâncias do Cloud Foundation
 | VLAN      | Tipo      | Detalhes      |
 |:----------|:----------|:-------------|
 | VLAN1     | Público, primário | Designado aos servidores ESXi físicos para acesso à rede pública. Não usado após a implementação inicial. Disponível para acesso à Internet. |
-| VLAN2     | A privado, primário | Designado pelos servidores  {{site.data.keyword.cloud}}  aos servidores ESXi físicos. Usado pela interface de gerenciamento para o tráfego de gerenciamento do VMware vSphere.<br><br>Designado às VMs (máquinas virtuais) que funcionam como componentes de gerenciamento.<br><br>Designado ao VMware NSX VTEP (VXLAN Tunnel Endpoint) |
+| VLAN2     | A privado, primário | Designado pelos servidores  {{site.data.keyword.cloud}}  aos servidores ESXi físicos. Usado pela interface de gerenciamento para o tráfego de gerenciamento do VMware vSphere.<br><br>Designado às MVs (máquinas virtuais) que funcionam como componentes de gerenciamento.<br><br>Designado ao VMware NSX VTEP (VXLAN Tunnel Endpoint) |
 | VLAN3     | B privado, móvel | Designado ao VMware vSAN, se usado.<br><br>Designado ao VMware NFS, se usado.<br><br>Designado ao VMware vSphere vMotion. |
 
 ## BOM de software para instâncias do Cloud Foundation
@@ -32,9 +32,9 @@ Tabela 2. BOM para os componentes de software em instâncias do Cloud Foundation
 
 | Fabricante | Componente                                | Versão      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 Atualização 2c (até o nível da correção ESXi650-201808001) |
-| VMware       | vCenter Server Appliance                 | 6.5 Atualização 2c |
-| VMware       | Platform Services Controller             | 6.5 Atualização 2c |
+| VMware       | vSphere ESXi                             | 6,5 Atualização EP11 (construção 6.5.0-10719125) |
+| VMware       | vCenter Server Appliance                 | 6,5 U2c (construção 6.5.0-9451637) |
+| VMware       | Platform Services Controller             | 6,5 U2c (construção 6.5.0-9451637) |
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX for vSphere                          | 6.4.1        |
 | VMware       | SDDC Manager                             | 2.4          |
@@ -58,7 +58,8 @@ Tabela 3. Definições de configuração avançada de servidores ESXi para inst�
 | Tamanho da amostra completa da fila | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | Limite completo da fila | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
-**Notas:**
+### Notas
+
 * A configuração **MaxVolumes** é necessária para o serviço IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} porque o serviço pode usar mais que o número padrão de montagens NFS no servidor ESXi.
 * Um valor de **Not set** para uma definição de configuração indica que a nova configuração não é aplicada automaticamente porque requer reinicialização de servidores ESXi, o que pode causar interrupção.
 
@@ -71,5 +72,5 @@ Tabela 3. Definições de configuração avançada de servidores ESXi para inst�
 * [Números de compilação e versões do VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Números de compilação e versões do VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Planilha de dados de proteção do VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Visão geral do Cloud Foundation](sd_cloudfoundationoverview.html)
-* [Planejando instâncias do Cloud Foundation](sd_planning.html)
+* [Visão geral do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Planejando instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)

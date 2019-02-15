@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -72,5 +72,5 @@ ESXi 서버에 적용되는 고급 구성 설정의 개요에 대해서는 아�
 * [빌드 번호 및 VMware ESXi/ESX(2143832)의 버전](https://kb.vmware.com/s/article/2143832)
 * [빌드 번호 및 VMware vCenter Server(2143838)의 버전](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Cloud Foundation 개요](sd_cloudfoundationoverview.html)
-* [Cloud Foundation 인스턴스 계획](sd_planning.html)
+* [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Cloud Foundation 인스턴스 계획](/docs/services/vmwaresolutions/sddc/sd_planning.html)

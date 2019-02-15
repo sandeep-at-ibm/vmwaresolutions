@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -47,19 +47,19 @@ Esta camada virtualiza a infraestrutura física por meio de produtos VMware dife
 
 ### Gerenciamento de virtualização
 
-Essa camada consiste no vCenter Server Appliance (vCSA), no NSX Manager, em dois NSX ESGs, três NSX Controllers, no dispositivo virtual Platform Services Controller (PSC) e na instância de servidor virtual (VSI) do IBM CloudDriver. A VSI do CloudDriver é implementada sob demanda conforme necessário para determinadas operações, como inclusão de hosts no ambiente.
+Essa camada consiste no vCenter Server Appliance (vCSA) com o Platform Services Controller (PSC) integrado, no NSX Manager, em dois NSX ESGs, em três NSX Controllers e na instância de servidor virtual do IBM CloudDriver (VSI). A VSI do CloudDriver é implementada sob demanda conforme necessário para determinadas operações, como inclusão de hosts no ambiente.
 
-A oferta de base é implementada com um dispositivo vCenter Server que é dimensionado para suportar um ambiente com até 400 hosts e até 4000 VMs. As mesmas ferramentas e scripts compatíveis com o vSphere API podem ser usados para gerenciar o ambiente do VMware hospedado pela IBM.
+A oferta de base é implementada com um dispositivo vCenter Server que é dimensionado para suportar um ambiente com até 400 hosts e até 4000 MVs. As mesmas ferramentas e scripts compatíveis com o vSphere API podem ser usados para gerenciar o ambiente do VMware hospedado pela IBM.
 
-No total, a oferta de base requer 38 vCPU e 67 GB de vRAM que são reservados para a camada de gerenciamento de virtualização. A capacidade restante do host para suas VMs depende de vários fatores, como a taxa de alocação excessiva, o dimensionamento da VM e os requisitos de desempenho de carga de trabalho.
+No total, a oferta de base requer 38 vCPU e 67 GB de vRAM que são reservados para a camada de gerenciamento de virtualização. A capacidade restante do host para suas MVs depende de vários fatores, como a taxa de alocação excessiva, o dimensionamento da MV e os requisitos de desempenho de carga de trabalho.
 
-Para obter os requisitos de recursos de gerenciamento adicionais ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte a visão geral do [VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+Para obter os requisitos de recurso de gerenciamento adicionais ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do VMware HCX on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/services/hcx_considerations.html).
 
 ### Infraestrutura Hybridity
 
-Essa camada fornece uma abstração de recursos entre os sites no local e os sites do {{site.data.keyword.cloud_notm}} para que seja possível mover cargas de trabalho para a frente e para trás de forma segura e fácil sem a necessidade de mudar as características das VMs, como seus endereços IP.
+Essa camada fornece uma abstração de recursos entre os sites no local e os sites do {{site.data.keyword.cloud_notm}} para que seja possível mover cargas de trabalho para a frente e para trás de forma segura e fácil sem a necessidade de mudar as características das MVs, como seus endereços IP.
 
-Com base no VMware Hybrid Cloud Extension (HCX), é possível criar interconexões fracamente acopladas entre sites do {{site.data.keyword.cloud_notm}} e no local para ativar a migração em massa de VMs ou o vMotion em tempo real de VMs sem tempo de inatividade.
+Com base no VMware Hybrid Cloud Extension (HCX), é possível criar interconexões fracamente acopladas entre sites do {{site.data.keyword.cloud_notm}} e no local para ativar a migração em massa de MVs ou o vMotion em tempo real de MVs sem tempo de inatividade.
 
 ## Especificações técnicas para instâncias do vCenter Server with Hybridity Bundle
 
@@ -72,7 +72,7 @@ A disponibilidade e a precificação de configurações padronizadas de hardware
 
 Quatro {{site.data.keyword.baremetal_short}} de **Skylake** ou **Broadwell** são fornecidos com a ordem de instância do vCenter Server with Hybridity Bundle. Os seguintes modelos de CPU estão disponíveis:
   * Geração Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100)
-  * Geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600 v4)
+  * Geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600/E7-4800)
 
 ### Rede
 
@@ -81,19 +81,19 @@ Os componentes de rede a seguir são pedidos:
 *  Três VLANs (Virtual LANs): uma VLAN pública e duas VLANs privadas
 *  Uma VXLAN (Virtual eXtensible LAN) com DLR (Distributed Logical Router) para comunicação leste-oeste potencial entre cargas de trabalho locais conectadas a redes de camada 2 (L2). A VXLAN é implementada como uma topologia de roteamento de amostra, que pode ser modificada, usada para construção ou ser removida. Também é possível incluir zonas de segurança anexando VXLANs adicionais em novas interfaces lógicas no DLR.
 *  Dois VMware NSX Edge Services Gateways:
-  * Um serviço de gerenciamento seguro VMware NSX Edge Services Gateway (ESG) para tráfego de gerenciamento de saída HTTPS, que é implementado pela IBM como parte da tipologia de rede de gerenciamento. Esse ESG é usado pelas VMs de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Para obter mais informações, veja [Configurando sua rede para usar o ESG gerenciado pelo cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * Um serviço de gerenciamento seguro VMware NSX Edge Services Gateway (ESG) para tráfego de gerenciamento de saída HTTPS, que é implementado pela IBM como parte da tipologia de rede de gerenciamento. Esse ESG é usado pelas MVs de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Para obter mais informações, veja [Configurando sua rede para usar o ESG gerenciado pelo cliente](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     Este ESG não está acessível a você e não pode ser usado. Se você o modificar, poderá não ser capaz de gerenciar a instância do vCenter Server with Hybridity Bundle por meio do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, observe que usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externo da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
     {:important}
-  * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
+  * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
-Para obter mais informações sobre componentes de rede pedidos ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+Para obter informações adicionais sobre componentes de rede pedidos ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do HCX on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/services/hcx_considerations.html).
 
 ### Virtual Server Instances
 
 Os virtual server instances (VSIs) a seguir são pedidos:
-* Um VSI for IBM CloudBuilder, que será encerrado depois que a implementação da instância for concluída.
-* É possível escolher implementar um único VSI do Microsoft Windows Server para o Microsoft Active Directory (AD) ou duas VMs de alta disponibilidade do Microsoft Windows no cluster de gerenciamento para ajudar a aprimorar a segurança e robustez.
+* Uma VSI para o IBM CloudBuilder, que é cancelada após a conclusão da implementação da instância.
+* É possível escolher implementar um único VSI do Microsoft Windows Server para o Microsoft Active Directory (AD) ou duas MVs de alta disponibilidade do Microsoft Windows no cluster de gerenciamento para ajudar a aprimorar a segurança e robustez.
 
 ### Armazenamento vSAN
 
@@ -121,7 +121,7 @@ Cada nó de expansão do vCenter Server with Hybridity Bundle implementará e in
 
 ### Hardware para nós de expansão
 
-Um Bare Metal Server com a configuração apresentada em [Especificações técnicas para instâncias do vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances).
+Um Bare Metal Server com a configuração apresentada em [Especificações técnicas para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances).
 
 ### Licenças e taxas para os nós de expansão
 
@@ -138,14 +138,14 @@ Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} 
 *  Incluindo, modificando, retornando ou removendo componentes
 *  Expandindo ou contraindo a capacidade da instância por meio da inclusão ou remoção de servidores ESXi
 *  Desativando componentes
-*  Reiniciando os serviços
+*  Reinício dos serviços
 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhados.
 
 ### Links relacionados
 
-* [Lista de materiais do software vCenter Server](vc_bom.html)
-* [Requisitos e planejamento para instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_planning.html)
-* [Pedindo instâncias do vCenter Server with Hybridity Bundle](vc_hybrid_orderinginstance.html)
-* [HCX no {{site.data.keyword.cloud_notm}} visão geral](../services/hcx_considerations.html)
-* [Entrando em contato com o Suporte IBM](../vmonic/trbl_support.html)
+* [Lista de materiais do software vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [Requisitos e planejamento para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
+* [Pedindo instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [HCX no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -38,7 +38,7 @@ As tabelas a seguir listam os requisitos de recurso do serviço {{site.data.keyw
 
 Tabela 2. Requisitos de recursos do {{site.data.keyword.cloud_notm}} Private Hosted no ambiente Pronto para produção
 
-| Tipo de nó  | Núcleos   |  Memória (GB) | Disco 1 (GB) | Disco 2 (GB) | Número de VMs |
+| Tipo de nó  | Núcleos   |  Memória (GB) | Disco 1 (GB) | Disco 2 (GB) | Número de MVs |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
 | Inicializar       | 12 | 24 | 100 | 1 | 1 |   
 | Gerenciamento | 8 | 64 | 500 | 3 | 3 |
@@ -47,14 +47,14 @@ Tabela 2. Requisitos de recursos do {{site.data.keyword.cloud_notm}} Private Hos
 | Trabalhador     | 4 | 16 | 200 | 300 | 6 |
 | Consultor de Vulnerabilidade | 8 | 16 | 500 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| Bootstrap ICP/CAM | 16 | 32 | 250 | 1 | 1 |
+| Bootstrap  {{site.data.keyword.icpfull_notm}} /CAM | 24 | 44 | 250 | 1 | 1 |
 | servidor NFS | 8 | 4  | 350 | 1 | 1 |
 | Gateway de Serviços de Edge NSX | 2 | 1 | 0,5 | 0,5 | 2 |
 | Restrições documentadas | 52 | 640 |  | 8.000 |   |
 
 Tabela 3. Requisitos de recursos do {{site.data.keyword.cloud_notm}} Private Hosted no ambiente de Desenvolvimento/Teste
 
-| Tipo de nó  | Núcleos   |  Memória (GB) | Disco 1 (GB) | Disco 2 (GB) | Número de VMs |
+| Tipo de nó  | Núcleos   |  Memória (GB) | Disco 1 (GB) | Disco 2 (GB) | Número de MVs |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
 | Inicializar       | 12 | 24 | 100 | 1 | 1 |   
 | Gerenciamento | 8 | 16 | 150 | 1 | 1 |
@@ -63,7 +63,7 @@ Tabela 3. Requisitos de recursos do {{site.data.keyword.cloud_notm}} Private Hos
 | Trabalhador     | 4 | 16 | 200 | 300 | 3 |
 | Consultor de Vulnerabilidade | 8 | 16 | 150 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| Bootstrap ICP/CAM | 16 | 32 | 250 | 1 | 1 |
+| Bootstrap  {{site.data.keyword.icpfull_notm}} /CAM | 24 | 44 | 250 | 1 | 1 |
 | servidor NFS | 8 | 4  | 350 | 1 | 1 |
 | Gateway de Serviços de Edge NSX | 2 | 1 | 0,5 | 0,5 | 2 |
 | Restrições documentadas | 30 | 200 |  | 4.000 |  |
@@ -83,7 +83,7 @@ Tabela 4. Descrição de variáveis na Fórmula 1
 | AvailableCores |	O número de núcleos reais disponíveis para cargas de trabalho e serviços no ambiente |	Núcleos |	38	| 43 |
 | HostCount	| O número de hosts no cluster padrão	| Hosts | 4	| 4 |
 | HostCoreCount	| O número de núcleos brutos disponíveis em cada host no cluster padrão |	Núcleos |	16 | 16 |
-| HostOverheadCores	| O número de núcleos reservados pelo servidor ESXi como sobrecarga, que é igual a 0,1 núcleos	| Núcleos	| 0,1 |	0,1 |
+| HostOverheadCores	| O número de núcleos que são reservados pelo servidor ESXi como sobrecarga, que é igual a 0,1 núcleos	| Núcleos	| 0,1 |	0,1 |
 | MgmtOverheadCores | O número de núcleos reservados pelos componentes de gerenciamento do vCenter Server (vCenter Server, PSC, AD/DNS, Edges), que é igual a cinco núcleos	| Núcleos	| 5	| 5 |
 | vSphereHAHostTolerance |	O número de hosts a serem tolerados na configuração do vSphere HA, que é igual a um host |	Hosts	 | 1 | 1 |
 | HostVsanOverheadCorePercentage | A porcentagem de núcleos de um host usada pelo vSAN, que será igual a 10% ou igual a 0% se o host não for vSAN | % | 10% |	0% |
@@ -114,11 +114,11 @@ Tabela 5. Descrição de variáveis na Fórmula 2
 
 ## Considerações ao remover o IBM Cloud Private Hosted
 
-* O {{site.data.keyword.cloud_notm}} exclui somente as máquinas virtuais (VMs) que foram implementadas durante a instalação inicial do serviço {{site.data.keyword.cloud_notm}} Private Hosted. Qualquer nó que for implementado pós-instalação não será limpo.
-* O {{site.data.keyword.cloud_notm}} excluirá o VXLAN, o DLR e o gateway de borda que foi criado durante a implementação inicial do serviço {{site.data.keyword.cloud_notm}} Private Hosted. As VMs que você implementou na VXLAN perderão a conectividade assim que a remoção do serviço {{site.data.keyword.cloud_notm}} Private Hosted for iniciada.
+* O {{site.data.keyword.cloud_notm}} exclui somente as máquinas virtuais (MVs) que foram implementadas durante a instalação inicial do serviço {{site.data.keyword.cloud_notm}} Private Hosted. Qualquer nó que for implementado pós-instalação não será limpo.
+* O {{site.data.keyword.cloud_notm}} excluirá o VXLAN, o DLR e o gateway de borda que foi criado durante a implementação inicial do serviço {{site.data.keyword.cloud_notm}} Private Hosted. As MVs que você implementou na VXLAN perderão a conectividade depois que a remoção do serviço {{site.data.keyword.cloud_notm}} Private Hosted for iniciada.
 
 ### Links relacionados
 
-* [ Ordenando o IBM Cloud Privado Hospedado ](../services/icp_ordering.html)
-* [Guia do vCenter Server e do IBM Cloud Private](../archiref/vcsicp/vcsicp-intro.html)
+* [ Ordenando o IBM Cloud Privado Hospedado ](/docs/services/vmwaresolutions/services/icp_ordering.html)
+* [Guia do vCenter Server e do IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
 * [Abra um chamado para o IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US)

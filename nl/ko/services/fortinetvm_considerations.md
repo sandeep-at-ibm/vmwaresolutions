@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -92,9 +92,9 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 제
 
 ### 관련 링크
 
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 주문](fortinetvm_ordering.html)
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 관리](managingfortinetvm.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
-* [FAQ](../vmonic/faq.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Fortinet 웹 사이트](https://www.fortinet.com/){:new_window}
 * [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

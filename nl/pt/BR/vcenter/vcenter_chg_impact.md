@@ -2,19 +2,28 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Considerações sobre como alterar os artefatos do vCenter Server
 
 Mudar usuários, recursos ou sub-redes que são reservados para {{site.data.keyword.vmwaresolutions_full}} pode afetar as operações de gerenciamento.
 
-**Importante:** não edite as permissões globais do grupo **ic4v-vCenter** na página **Usuários e grupos** no VMware vSphere Web Client. Essas mudanças incluem: mudar o nome do usuário, excluir o usuário ou mudar sua senha.
+Não edite as permissões globais do grupo **ic4v-vCenter** na página **Usuários e grupos** no VMware vSphere Web Client. Essas mudanças incluem: mudar o nome do usuário, excluir o usuário ou mudar sua senha.
+Use a identificação de usuário do host **raiz**. A identificação de usuário do host
+**ic4vroot** foi criada apenas para uso da IBM.
+{:important}
 
 ## ID de automação
+{: faq}
 
 O ID de **automação** é uma conta do usuário que é usada pelas operações automatizadas fornecidas no console do {{site.data.keyword.vmwaresolutions_short}}.
 
@@ -24,11 +33,13 @@ Os usuários e as senhas das operações automatizadas no console não devem ser
 
 Cada serviço cria uma conta de usuário interna no vCenter Server. Esta conta é necessária para que as operações de gerenciamento associadas a um serviço possam se conectar ao vCenter Server para executar as operações no serviço.
 
-**Importante:** para evitar indisponibilidades e problemas de conexão, se você mudar as configurações de ID do usuário, de senha ou de expiração de senha para essa conta de usuário, assegure-se de atualizar também as informações no serviço associado.
+Para evitar indisponibilidades e problemas de conexão, se você mudar as configurações de ID do usuário, senha ou expiração de senha para essa conta do usuário, assegure-se de também atualizar as informações no serviço associado.
+{:important}
 
 O ID do usuário para esta conta está no formato `<service_name>-<truncated service_uuid>@test.local` ou `<service_name>-<truncated service_uuid>@example-domain.local`. Por exemplo, o ID do usuário usado pelo serviço Veeam on {{site.data.keyword.cloud_notm}} para se conectar ao vCenter Server para executar backups planejados é `Veeam-<Veeam_uuid>@test.local`.
 
-**Nota:** O `<service_name>` junto com o `<service_uuid>` trunca para 20 caracteres.
+O  `<service_name>` junto com o `<service_uuid>` trunca para 20 caracteres.
+{:note}
 
 ## Recursos do VMware para instâncias do vCenter Server (V1.9 e mais recente)
 
@@ -78,5 +89,5 @@ Além disso, as sub-redes de gerenciamento a seguir também são reservadas para
 *  Uma sub-rede móvel pública de 16 endereços IP na VLAN pública
 
 Se precisar usar mais sub-redes, será possível obter endereços IP para usar em uma das maneiras a seguir:
-*  **Opção 1 (recomendado)**: use sobreposições de rede virtual VMware NSX. Um modelo de VXLAN de amostra é fornecido mediante pedido. Esse VXLAN pode ser usado como ponto de início para construir a rede definida por software (SDN). Para obter mais informações, veja [Configurando sua rede para usar o NSX Edge gerenciado pelo cliente](vc_esg_config.html).
+*  **Opção 1 (recomendado)**: use sobreposições de rede virtual VMware NSX. Um modelo de VXLAN de amostra é fornecido mediante pedido. Esse VXLAN pode ser usado como ponto de início para construir a rede definida por software (SDN). Para obter mais informações, veja [Configurando sua rede para usar o NSX Edge gerenciado pelo cliente](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html).
 *  **Opção 2**: peça suas próprias sub-redes móveis públicas ou privadas para obter endereços IP. Para distinguir as sub-redes pedidas das sub-redes de gerenciamento, é possível incluir notas em todas as sub-redes que estão sendo pedidas.

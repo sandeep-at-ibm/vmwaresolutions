@@ -2,15 +2,16 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-16"
+lastupdated: "2019-01-23"
 
 ---
 
 # Casos de uso
 
 ## Migração de carga de trabalho para o IBM Cloud
+
 A Acme Skateboards deseja ampliar de forma contínua seu VMware SDDC no local para uma instância do VMware vCenter Server on {{site.data.keyword.cloud}}. Ela precisa manter seus negócios em funcionamento e manter seu tempo de inatividade para o mínimo. Reconfigurar seus aplicativos para execução na nuvem não é uma solução ideal.
 
 O VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle permite a criação de conexões contínuas entre o {{site.data.keyword.cloud_notm}} e um data center virtualizado do VMware no local.
@@ -34,18 +35,19 @@ Usando essa solução, a Acme Skateboards migrou com êxito suas cargas de traba
 
 ## Implementação de arquitetura híbrida
 
-A Acme Skateboards deseja implementar uma arquitetura híbrida no {{site.data.keyword.cloud_notm}} que consiste no vCenter Server e no ICP para sua jornada para a modernização do aplicativo. Seus requisitos devem executar seus bancos de dados em máquinas virtuais, os aplicativos e os serviços da web em contêineres e usar um conjunto comum de ferramentas para gerenciamento de rede e segurança.
+O Acme Skateboards deseja implementar uma arquitetura híbrida no {{site.data.keyword.cloud_notm}} que consiste no vCenter Server e no {{site.data.keyword.icpfull_notm}}, para sua jornada para a modernização do aplicativo. Seus requisitos devem executar seus bancos de dados em máquinas virtuais, os aplicativos e os serviços da web em contêineres e usar um conjunto comum de ferramentas para gerenciamento de rede e segurança.
 
 Figura 2. Aplicativo híbrido Acme Skateboards
 ![Diagrama do aplicativo híbrido Acme Skateboards](vcsiks-acme-app-arch.svg)
 
-O {{site.data.keyword.vmwaresolutions_short}} fornece automação para implementar componentes de tecnologia do VMware em {{site.data.keyword.CloudDataCents_notm}} em todo o mundo. A arquitetura consiste em uma única região de nuvem e suporta a capacidade de se estender em mais regiões de nuvem localizadas em outra geografia e/ou em outro pod do {{site.data.keyword.cloud_notm}} dentro do mesmo data center.
+O {{site.data.keyword.vmwaresolutions_short}} fornece automação para implementar componentes de tecnologia do VMware em {{site.data.keyword.CloudDataCents_notm}} em todo o mundo. A arquitetura consiste em uma única região de nuvem e suporta a capacidade de ampliação para mais regiões de nuvem localizadas em outra geografia ou em outro pod do {{site.data.keyword.cloud_notm}} dentro do mesmo data center.
 
-Os produtos {{site.data.keyword.cloud_notm}} Private (ICP) e Cloud Automation Manager (CAM) são implementados manualmente na plataforma de virtualização no local, permitindo o gerenciamento de nuvem por meio de localização no local. Como alternativa, o ICP e o CAM são oferecidos como uma extensão de serviço para uma implementação nova ou existente do vCenter Server por meio da automação, permitindo o gerenciamento de nuvem por meio do {{site.data.keyword.cloud_notm}}.
+Os produtos {{site.data.keyword.icpfull_notm}} e Cloud Automation Manager (CAM) são implementados manualmente em sua plataforma de virtualização local, permitindo o gerenciamento de nuvem no local. Como alternativa, o {{site.data.keyword.icpfull_notm}} e o CAM são oferecidos como uma extensão de serviço para uma implementação nova ou existente do vCenter Server, via automação, permitindo o gerenciamento de nuvem por meio do {{site.data.keyword.cloud_notm}}.
 
-O diagrama a seguir representa o ICP em execução na parte superior de uma instância do vCenter Server. O NSX-V é configurado com um comutador/VXLAN dedicado, um DLR e um ESG especificamente para a rede de sobreposição do ICP, o roteamento é configurado por meio do ESG para acesso à rede subjacente.
+O diagrama a seguir representa o {{site.data.keyword.icpfull_notm}} em execução na parte superior de uma instância do vCenter Server. O NSX-V é configurado com um comutador/VXLAN dedicado, um DLR e um ESG especificamente para a rede de sobreposição do {{site.data.keyword.icpfull_notm}}. O roteamento é configurado por meio do ESG para acesso à rede subjacente.
 
-Usando a automação do {{site.data.keyword.cloud_notm}}, a Acme Skateboards pode provisionar uma solução híbrida que abrange o VMware on {{site.data.keyword.cloud_notm}} para executar suas VMs de banco de dados e o ICP no VMware on {{site.data.keyword.cloud_notm}} para executar seus apps e serviços da web de front-end em contêineres. O NSX fornece a eles um conjunto comum de ferramentas de gerenciamento para rede e segurança na rede de sobreposição.
+Usando a automação do {{site.data.keyword.cloud_notm}}, o Acme Skateboards pode provisionar uma solução híbrida que abrange o VMware on {{site.data.keyword.cloud_notm}} para executar suas MVs de banco de dados e o {{site.data.keyword.icpfull_notm}} on VMware on {{site.data.keyword.cloud_notm}} para executar seus apps e serviços da web de front-end em contêineres. O NSX fornece a eles um conjunto comum de ferramentas de gerenciamento para rede e segurança na rede de sobreposição.
 
 ### Links relacionados
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

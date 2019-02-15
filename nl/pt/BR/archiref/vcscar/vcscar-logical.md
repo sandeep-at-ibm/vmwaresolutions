@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -80,7 +80,7 @@ Etapa | Descrição
 6 | O Watson Assistant classifica a solicitação e responde ao Skate Advisor com a ação a ser tomada.
 7 | O Skate Advisor solicita um conjunto de dados do Discovery Service.
 8 | O Discovery Service avalia a consulta e envia a resposta.
-9 | O Skate Advisor forma uma resposta e envia para o Robô de bate-papo no texto.
+9 |O Skate Advisor forma uma resposta e envia para o Robô de bate-papo no texto.
 10 | O Robô de bate-papo envia a resposta de texto ao serviço Text to Speech.
 11 | O resultado é enviado para o usuário por meio do Robô de bate-papo.
 
@@ -130,4 +130,4 @@ Depois de treinado, o Discovery Service pode responder a consultas, como:
 
 ### Links relacionados
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

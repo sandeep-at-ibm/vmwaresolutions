@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-03"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-01-03"
 {{site.data.keyword.cloud}}에는 두 가지 네트워크가 있습니다. 공용 네트워크를 사용하면 인터넷에서 서버에 도달할 수 있으며 사설 네트워크를 사용하면 서버가 모든 {{site.data.keyword.CloudDataCents_notm}}의
 고속 백본을 통해 서로 통신할 수 있습니다.
 
-기본적으로 {{site.data.keyword.containerlong_notm}}는 공용 VLAN 및 사설 VLAN에 대한 액세스 권한으로 클러스터를 설정합니다. 
+기본적으로 {{site.data.keyword.containerlong_notm}}는 공용 VLAN 및 사설 VLAN에 대한 액세스 권한으로 클러스터를 설정합니다.
 - 각 작업자 노드의 공용 IP 주소. 이를 통해 작업자 노드에 공용 네트워크 인터페이스를 제공합니다.
   - 모든 아웃바운드 네트워크 트래픽이 모든 작업자 노드에 허용됩니다.
   - 인바운드 네트워크 트래픽은 몇 개의 포트를 제외하고 차단됩니다. IBM이 네트워크 트래픽을 모니터하고 Kubernetes 마스터에 대한 보안 업데이트를 설치할 수 있도록 이러한 포트는 열려 있습니다.
@@ -117,7 +117,7 @@ Calico는 Kubernetes 작업자 노드에 Linux iptables 규칙을 설정하여, 
 소스 IP를 사용하여 클러스터에서 이 요청을 내보냅니다.
 2. 대상 IP 주소는 작업자 노드와 동일한 서브넷에 있지 않으므로 {{site.data.keyword.cloud_notm}}
 BCR로 전달됩니다.
-3. BCR은 요청을 라우트하고, customer-nsx-edge가 연결되는 고객 워크로드 서브넷인 **사설 A** VLAN에 대한 요청을 수행합니다. 
+3. BCR은 요청을 라우트하고, customer-nsx-edge가 연결되는 고객 워크로드 서브넷인 **사설 A** VLAN에 대한 요청을 수행합니다.
 
 이 NSX Edge에는 다음과 같은 규칙이 있습니다.
 - 이 연결을 허용하는 방화벽 규칙.
@@ -166,11 +166,11 @@ VMware on {{site.data.keyword.cloud_notm}}는 IBM Cloud의 전세계 데이터 �
   - Helm 명령행 인터페이스.
   - 다중 구역 클러스터를 사용하여 고가용성을 늘리십시오.
 
-[클러스터 및 작업자 노드 설정 계획](../../../../containers/cs_clusters_planning.html#plan_clusters)은 요구사항을 충족하는 솔루션을 설계하기 위한 옵션과 프로세스에 대해 설명합니다.
+[클러스터 및 작업자 노드 설정 계획](/docs/containers/cs_clusters_planning.html#plan_clusters)은 요구사항을 충족하는 솔루션을 설계하기 위한 옵션과 프로세스에 대해 설명합니다.
 
 ## 보안 및 규제 준수
-엄격한 업계 가이드라인 준수에 관해 {{site.data.keyword.cloud_notm}}는 사용자를 위해 준수를 촉진하는 작업을 수행했습니다. [{{site.data.keyword.cloud_notm}}의 규제 준수](https://www.ibm.com/cloud/compliance)에서는 보안 및 개인정보 보호를 위한 특정한 준수 인증, 글로벌 규정, 맞춤 및 프레임워크에 대해 자세히 설명합니다. [{{site.data.keyword.containerlong_notm}}](../../../../containers/cs_secure.html#security)에 대한 보안에서는 {{site.data.keyword.containerlong_notm}} 보안 기능에 대해 자세히 설명합니다.
+엄격한 업계 가이드라인 준수에 관해 {{site.data.keyword.cloud_notm}}는 사용자를 위해 준수를 촉진하는 작업을 수행했습니다. [{{site.data.keyword.cloud_notm}}의 규제 준수](https://www.ibm.com/cloud/compliance)에서는 보안 및 개인정보 보호를 위한 특정한 준수 인증, 글로벌 규정, 맞춤 및 프레임워크에 대해 자세히 설명합니다. [{{site.data.keyword.containerlong_notm}}에 대한 보안](/docs/containers/cs_secure.html#security)에는 {{site.data.keyword.containerlong_notm}} 보안 기능이 자세히 설명되어 있습니다. 
 
 ### 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

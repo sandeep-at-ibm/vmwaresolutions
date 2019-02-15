@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -19,4 +19,4 @@ Um representante do Mission Critical VMware on {{site.data.keyword.cloud_notm}} 
 
 ### Links relacionados
 
-* [Visão geral do Mission Critical VMware on IBM Cloud](mcv_overview.html)
+* [Visão geral do Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services/mcv_overview.html)

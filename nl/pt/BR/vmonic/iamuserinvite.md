@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-11"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -15,7 +15,7 @@ O {{site.data.keyword.vmwaresolutions_full}} é integrado ao {{site.data.keyword
 ## Antes de iniciar
 
 * Assegure-se de que você seja o proprietário da conta ou de que sua função de gerenciamento de plataforma para o serviço **VMware Solutions** seja **Administrador**.
-* Assegure-se de ter revisado as funções de usuário e as permissões em [Gerenciando o acesso de usuário com o Identity and Access Management](iam.html).
+* Assegure-se de ter revisado as funções de usuário e as permissões em [Gerenciando o acesso de usuário com o Identity and Access Management](/docs/services/vmwaresolutions/vmonic/iam.html).
 
 ## Procedimento para convidar usuários para acessar serviços e recursos
 
@@ -34,12 +34,12 @@ Depois que os usuários incluídos aceitarem seu convite, eles poderão efetuar 
 
 ### Links relacionados
 
-* [ Convidando usuários e designando acesso ](../../../iam/iamuserinv.html)
-* [ Gerenciando a identidade e o acesso ](../../../iam/quickstart.html)
-* [ Gerenciando usuários e o acesso ](../../../iam/iamusermanage.html)
-* [ O que é IAM ](../../../iam/index.html)
-* [Migrando instâncias do vCenter Server anteriores à V2.5 para contas do IBM Cloud](../vcenter/vc_addinstancetousraccount.html)
-* [Migrando instâncias do vCenter Server with Hybridity Bundle anteriores à V2.5 para contas do IBM Cloud](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [Migrando instâncias do Cloud Foundation anteriores à V2.5 para contas do IBM Cloud](../sddc/sd_addinstancetousraccount.html)
-* [Migrando instâncias do NetApp ONTAP Select anteriores à V2.5 para contas do IBM Cloud](../netapp/np_addinstancetousraccount.html)
-* [Migrando instâncias do VMware Federal anteriores à V2.5 para contas do IBM Cloud](../vcenter/vc_fed_addinstancetousraccount.html)
+* [ Convidando usuários e designando acesso ](/docs/iam/iamuserinv.html)
+* [ Gerenciando a identidade e o acesso ](/docs/iam/quickstart.html)
+* [ Gerenciando usuários e o acesso ](/docs/iam/iamusermanage.html)
+* [ O que é IAM ](/docs/iam/index.html)
+* [Migrando instâncias do vCenter Server pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [Migrando instâncias do vCenter Server with Hybridity Bundle pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [Migrando instâncias do Cloud Foundation pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [Migrando instâncias do NetApp ONTAP Select pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [Migrando instâncias do VMware pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)

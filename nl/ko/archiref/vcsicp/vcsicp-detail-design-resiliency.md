@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -85,9 +85,9 @@ VMware on {{site.data.keyword.cloud_notm}}는 IBM Cloud의 전세계 데이터 �
 
 ###  IBM Cloud Kubernetes Service 확장
 
-사용자는 {{site.data.keyword.cloud_notm}} Portal을 통해 {{site.data.keyword.containerlong_notm}} 환경을 프로비저닝하여 컨테이너 환경을 확장하거나 사용할 수 있습니다. 
+사용자는 {{site.data.keyword.cloud_notm}} Portal을 통해 {{site.data.keyword.containerlong_notm}} 환경을 프로비저닝하여 컨테이너 환경을 확장하거나 사용할 수 있습니다.
 
-애플리케이션을 {{site.data.keyword.containerlong_notm}}에 배치하려면 다음을 수행하십시오. 
+애플리케이션을 {{site.data.keyword.containerlong_notm}}에 배치하려면 다음을 수행하십시오.
 - {{site.data.keyword.containerlong_notm}} 연결 또는 서비스는 CAM에서 개발되고 {{site.data.keyword.icpfull_notm}} 카탈로그에 공개됩니다.
 - 다중 클라우드 관리자의 향후 {{site.data.keyword.containerlong_notm}} 인스턴스 관리 개선사항
 - Helm 명령행 인터페이스
@@ -96,7 +96,7 @@ VMware on {{site.data.keyword.cloud_notm}}는 IBM Cloud의 전세계 데이터 �
 ### 관련 링크
 
 * [클러스터 노드 추가 또는 제거](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/installing/modify_cluster.html)
-* [기존 작업자 풀을 크기 조정하여 작업자 노드 추가](../../../../containers/cs_clusters.html#resize_pool)
+* [기존 작업자 풀을 크기 조정하여 작업자 노드 추가](/docs/containers/cs_clusters.html)
 * [{{site.data.keyword.cloud_notm}} Private 백업 및 복원 방법](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
 * [{{site.data.keyword.icpfull_notm}} 백업 GitHub](https://github.com/ibm-cloud-architecture/icp-backup/)
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

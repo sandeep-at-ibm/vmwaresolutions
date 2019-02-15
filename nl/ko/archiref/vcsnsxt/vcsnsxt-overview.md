@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
-# 아키텍처 개요
+# 전체 아키텍처 개요
 
 다음 정보에서는 이 참조 아키텍처에서 사용되는 네트워크 아키텍처를 자세히 설명합니다. 다음 섹션으로 구성됩니다.
-* **VMware vCenter Server on {{site.data.keyword.cloud}} 개요** – vCenter Server 플랫폼의 중요 사항에 대해 설명합니다. 
+* **VMware vCenter Server on {{site.data.keyword.cloud}} 개요** – vCenter Server 플랫폼의 중요 사항에 대해 설명합니다.
 * **네트워크 개요** - 이 참조 아키텍처에서 사용되는 네트워크 컴포넌트에 대한 정보를 제공합니다.
-  - **{{site.data.keyword.cloud_notm}} 네트워킹** - {{site.data.keyword.cloud_notm}}는 실제 네트워크를 제공하고 {{site.data.keyword.cloud_notm}}에서 완전히 관리합니다. 온프레미스와 오프프레미스 사이의 네트워크 흐름과 다른 서비스에서 호스팅되는 작업 부하 사이의 네트워크 흐름을 이해하도록 {{site.data.keyword.cloud_notm}} 네트워킹의 주요 특징을 검토하십시오. 
-  - **NSX-V** - vCenter Server 네트워킹은 VMware NSX-V에서 제공하는 오버레이를 가진 {{site.data.keyword.cloud_notm}} 네트워크에 빌드됩니다. 이 오버레이는 BYOIP(Bring Your Own IP)를 비롯해 더 많은 제어와 구성을 허용하는 {{site.data.keyword.cloud_notm}} 언더레이 네트워크의 트래픽을 세그먼트화합니다. 
+  - **{{site.data.keyword.cloud_notm}} 네트워킹** - {{site.data.keyword.cloud_notm}}는 실제 네트워크를 제공하고 {{site.data.keyword.cloud_notm}}에서 완전히 관리합니다. 온프레미스와 오프프레미스 사이의 네트워크 흐름과 다른 서비스에서 호스팅되는 작업 부하 사이의 네트워크 흐름을 이해하도록 {{site.data.keyword.cloud_notm}} 네트워킹의 주요 특징을 검토하십시오.
+  - **NSX-V** - vCenter Server 네트워킹은 VMware NSX-V에서 제공하는 오버레이를 가진 {{site.data.keyword.cloud_notm}} 네트워크에 빌드됩니다. 이 오버레이는 BYOIP(Bring Your Own IP)를 비롯해 더 많은 제어와 구성을 허용하는 {{site.data.keyword.cloud_notm}} 언더레이 네트워크의 트래픽을 세그먼트화합니다.
   - **{{site.data.keyword.containerlong_notm}}** - {{site.data.keyword.containerlong_notm}}는 Calico를 Container Network Interface 플러그인으로 사용합니다.
   - **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}}는 Calico를 Container Network Interface 플러그인으로 사용합니다.
 
@@ -40,10 +40,10 @@ IBM, Veeam 및 Zerto의 백업 및 재해 복구 오퍼링은 재해가 발생�
 
 vCenter Server Hybridity Bundle은 IBM 관리 서비스를 추가하여 일상적인 운영 및 가상화, 게스트 OS 또는 애플리케이션 계층의 유지보수를 오프로드할 수 있지만 관리 서비스는 아닙니다. 또한 {{site.data.keyword.cloud_notm}} Professional Services 팀을 활용하면 마이그레이션, 구현, 계획 및 온보딩 서비스를 사용하여 클라우드로의 이동 속도를 높이는 데 도움이 됩니다.
 
-vCenter Server Hybridity Bundle의 플랫폼 통합 옵션은 vRealize Suite 또는 vSphere with Operations Management와 같이 VMware에서 사용 가능한 옵션으로 제한되지 않지만, 오픈 소스 Terraform을 사용하여 IaC(Infrastructure as Code)를 관리하고 제공하는 [vCenter Server 및 {{site.data.keyword.containerlong_notm}}](../vcsiks/vcsiks-intro.html)와 [vCenter Server 및 {{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html)과 같은 여러 {{site.data.keyword.cloud_notm}} 서비스 오퍼링으로 확장됩니다. 
+vCenter Server Hybridity Bundle의 플랫폼 통합 옵션은 vRealize Suite 또는 vSphere with Operations Management와 같이 VMware에서 사용 가능한 옵션으로 제한되지 않지만, 오픈 소스 Terraform을 사용하여 IaC(Infrastructure as Code)를 관리하고 제공하는 [vCenter Server 및 {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html)와 [vCenter Server 및 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)과 같은 여러 {{site.data.keyword.cloud_notm}} 서비스 오퍼링으로 확장됩니다.
 
 vCenter Server Hybridity Bundle에 사용 가능한 서비스 및 다중 오퍼링 통합 옵션의 광범위한 포트폴리오는 서비스로서의 하이브리드를 가능하게 하는 진정한 하이브리드 플랫폼을 제공합니다.
 
 ### 관련 링크
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

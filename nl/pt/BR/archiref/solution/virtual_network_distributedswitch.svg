@@ -581,7 +581,7 @@
 <rect x="115" y="252" class="st63" width="46" height="17"/>
 <text transform="matrix(1 0 0 1 115 265.3193)" class="st64 st65 st66">Borda</text>
 <rect x="236" y="251" class="st63" width="38" height="15"/>
-<text transform="matrix(1 0 0 1 236 264.3193)" class="st64 st65 st66">VM</text>
+<text transform="matrix(1 0 0 1 236 264.3193)" class="st64 st65 st66">MV</text>
 <rect x="237" y="284" class="st63" width="38" height="15"/>
 <text transform="matrix(1 0 0 1 237 294.3589)" class="st64 st65 st67">APP</text>
 <rect x="347" y="285" class="st63" width="38" height="15"/>
@@ -603,7 +603,7 @@
 <rect x="666" y="291" class="st63" width="38" height="15"/>
 <text transform="matrix(1 0 0 1 666 301.3589)" class="st64 st65 st67">S.O.</text>
 <rect x="346" y="251" class="st63" width="38" height="15"/>
-<text transform="matrix(1 0 0 1 346 264.3193)" class="st64 st65 st66">VM</text>
+<text transform="matrix(1 0 0 1 346 264.3193)" class="st64 st65 st66">MV</text>
 <rect x="104" y="93" class="st63" width="291" height="19"/>
 <text transform="matrix(1 0 0 1 104 106.3198)" class="st64 st65 st66">Infraestrutura de gerenciamento/borda</text>
 <rect x="546" y="95" class="st63" width="92" height="19"/>

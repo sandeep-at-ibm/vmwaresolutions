@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -40,5 +40,5 @@ ibm.com 웹 사이트에서 콘솔에 액세스하려면 다음 단계를 완료
 
 ### 관련 링크
 
-* [FAQ](faq.html)
-* [Troubleshooting for accessing {{site.data.keyword.cloud_notm}}](../../../account/ts_accessing.html){:new_window}
+* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Troubleshooting for accessing {{site.data.keyword.cloud_notm}}](/docs/account/ts_accessing.html){:new_window}

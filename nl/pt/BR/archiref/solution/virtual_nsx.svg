@@ -679,13 +679,13 @@ GAARzQAAAABJRU5ErkJggg==" transform="matrix(0.7785 0 0 0.7818 506.0419 392.349)"
 <rect x="588.4" y="21" class="st45" width="155.6" height="55.3"/>
 <text transform="matrix(1 0 0 1 588.3564 34.3198)"><tspan x="0" y="0" class="st46 st47">VMware Platform</tspan><tspan x="0" y="21.6" class="st46 st47">Services Controller</tspan></text>
 <rect x="180" y="93" class="st45" width="48.8" height="41.2"/>
-<text transform="matrix(1 0 0 1 180 105.7798)" class="st48 st49 st47">VM</text>
+<text transform="matrix(1 0 0 1 180 105.7798)" class="st48 st49 st47">MV</text>
 <rect x="331" y="93" class="st45" width="48.8" height="41.2"/>
-<text transform="matrix(1 0 0 1 331 105.7798)" class="st48 st49 st47">VM</text>
+<text transform="matrix(1 0 0 1 331 105.7798)" class="st48 st49 st47">MV</text>
 <rect x="468" y="93" class="st45" width="48.8" height="41.2"/>
-<text transform="matrix(1 0 0 1 468 105.7798)" class="st48 st49 st47">VM</text>
+<text transform="matrix(1 0 0 1 468 105.7798)" class="st48 st49 st47">MV</text>
 <rect x="642" y="93" class="st45" width="48.8" height="41.2"/>
-<text transform="matrix(1 0 0 1 642 105.7798)" class="st48 st49 st47">VM</text>
+<text transform="matrix(1 0 0 1 642 105.7798)" class="st48 st49 st47">MV</text>
 <rect x="41" y="215" class="st45" width="155" height="51"/>
 <text transform="matrix(1 0 0 1 41 228.3198)"><tspan x="0" y="0" class="st46 st47">IBM Cloud</tspan><tspan x="0" y="21.6" class="st46 st47">Private Network</tspan></text>
 <rect x="41" y="299" class="st45" width="137" height="43.3"/>

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -75,4 +75,4 @@ vSphere + vSAN 확장 클러스터 아키텍처에는 다음과 같은 스펙이
 
 ### 관련 링크
 
-* [Mission Critical VMware on IBM Cloud 요청](managing_mcv.html)
+* [Mission Critical VMware on IBM Cloud 요청](/docs/services/vmwaresolutions/services/managing_mcv.html)

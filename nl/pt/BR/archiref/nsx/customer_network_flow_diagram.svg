@@ -275,11 +275,11 @@
 		<line class="st31" x1="396" x2="396" y1="238" y2="249"/>
 		<line class="st31" x1="437" x2="437" y1="240" y2="249"/>
 			<rect class="st32" x="341.5" y="210.5" width="28" height="28"/>
-			<text class="st33 st2 st34" transform="translate(346.4 229.4)">VM</text>
+			<text class="st33 st2 st34" transform="translate(346.4 229.4)">MV</text>
 			<rect class="st32" x="382.5" y="210.5" width="28" height="28"/>
-			<text class="st33 st2 st34" transform="translate(387.4 229.4)">VM</text>
+			<text class="st33 st2 st34" transform="translate(387.4 229.4)">MV</text>
 			<rect class="st32" x="423.5" y="211.5" width="28" height="28"/>
-			<text class="st33 st2 st34" transform="translate(428.4 230.4)">VM</text>
+			<text class="st33 st2 st34" transform="translate(428.4 230.4)">MV</text>
 						<linearGradient id="SVGID_7_" x1="483.54" x2="524.17" y1="543.05" y2="543.05" gradientTransform="matrix(.8383 -.5452 .5452 .8383 -217.28 67.298)" gradientUnits="userSpaceOnUse">
 						<stop stop-color="#39B54A" offset="6e-8"/>
 						<stop stop-color="#38B44D" offset=".2095"/>
@@ -438,22 +438,22 @@
 </g>
 <g id="VMs">
 			<rect class="st32" x="174.5" y="534.5" width="28" height="28"/>
-			<text class="st33 st2 st34" transform="translate(179.4 553.4)">VM</text>
+			<text class="st33 st2 st34" transform="translate(179.4 553.4)">MV</text>
 		<text transform="translate(163.67 515)"><tspan class="st2 st56" x="0" y="0">VSI-MSAD/</tspan><tspan class="st2 st56" x="0" y="13.2">DNS/NTP</tspan></text>
 			<rect class="st32" x="63.5" y="534.5" width="28" height="28"/>
-			<text class="st33 st2 st34" transform="translate(68.399 553.4)">VM</text>
+			<text class="st33 st2 st34" transform="translate(68.399 553.4)">MV</text>
 		<text transform="translate(40.334 515)"><tspan class="st2 st56" x="0" y="0">Servidor VSI-Backup</tspan><tspan class="st2 st56" x="0" y="13.2">(Veeam)</tspan></text>
 </g>
 		<rect class="st32" x="77.5" y="410.5" width="28" height="28"/>
-		<text class="st33 st2 st34" transform="translate(82.399 429.4)">VM</text>
+		<text class="st33 st2 st34" transform="translate(82.399 429.4)">MV</text>
 		<rect class="st32" x="158" y="410.5" width="28" height="28"/>
-		<text class="st33 st2 st34" transform="translate(162.9 429.4)">VM</text>
+		<text class="st33 st2 st34" transform="translate(162.9 429.4)">MV</text>
 		<rect class="st32" x="243.5" y="410.5" width="28" height="28"/>
-		<text class="st33 st2 st34" transform="translate(248.4 429.4)">VM</text>
+		<text class="st33 st2 st34" transform="translate(248.4 429.4)">MV</text>
 		<rect class="st32" x="334" y="410.5" width="28" height="28"/>
-		<text class="st33 st2 st34" transform="translate(338.9 429.4)">VM</text>
+		<text class="st33 st2 st34" transform="translate(338.9 429.4)">MV</text>
 		<rect class="st32" x="411.5" y="410.5" width="28" height="28"/>
-		<text class="st33 st2 st34" transform="translate(416.4 429.4)">VM</text>
+		<text class="st33 st2 st34" transform="translate(416.4 429.4)">MV</text>
 	<text transform="translate(70.334 388.67)"><tspan class="st2 st5" x="0" y="0">  SDDC</tspan><tspan class="st2 st5" x="0" y="14.4">Manager</tspan></text>
 	<text transform="translate(231.33 374.33)"><tspan class="st2 st5" x="0" y="0"> vCenter</tspan><tspan class="st2 st5" x="0" y="14.4">   Server</tspan><tspan class="st2 st5" x="0" y="28.8">Appliance</tspan></text>
 <text x="157.29842" y="389.90515"><tspan class="st2 st5" x="157.29842" y="389.90515" font-family="IBMPlexSans" font-size="12px"> IBM          </tspan></text>

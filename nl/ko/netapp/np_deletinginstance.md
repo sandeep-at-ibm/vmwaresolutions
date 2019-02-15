@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -49,6 +49,6 @@ NetApp ONTAP Select 인스턴스를 삭제하면 다음 컴포넌트가 순차�
 
 ### 관련 링크
 
-* [NetApp ONTAP Select 인스턴스 주문](np_orderinginstances.html)
-* [NetApp ONTAP Select 인스턴스 보기](np_viewinginstances.html)
-* [IBM 지원 센터에 문의](../vmonic/trbl_support.html)
+* [NetApp ONTAP Select 인스턴스 주문](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [NetApp ONTAP Select 인스턴스 보기](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2018-11-13"
 
 인프라 관리는 vSphere ESXi 인프라를 관리하는 VMware 컴포넌트를 의미합니다.
 
-컴포넌트에 대한 자세한 정보는 [가상 인프라 디자인](../solution/design_virtualinfrastructure.html)의 그림 2. NSX Manager 네트워크 개요를 참조하십시오.
+컴포넌트에 대한 자세한 정보는 [가상 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)의 그림 2. NSX Manager 네트워크 개요를 참조하십시오.
 
 ## 가상 네트워킹 디자인
 
-이 디자인에서 사용되는 네트워크 가상화는 사설 네트워크와 연관되어 있고 [{{site.data.keyword.vmwaresolutions_full}} 아키텍처](../solution/solution_overview.html)에 지정된 기존 vDS(vSphere Distributed Switch)를 사용합니다.
+이 디자인에서 사용되는 네트워크 가상화는 사설 네트워크와 연관되어 있고 [{{site.data.keyword.vmwaresolutions_full}} 아키텍처](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)에 지정된 기존 vDS(vSphere Distributed Switch)를 사용합니다.
 
 ## vSphere 분배 스위치
 
@@ -28,7 +28,7 @@ lastupdated: "2018-11-13"
 
 다음 표에서는 새 포트 그룹의 기본 설정에 대해 설명합니다.
 
-이러한 기본 설정을 변경하지 마십시오.
+이러한 기본 설정은 변경하지 마십시오.
 {:important}
 
 표 1. NFS 포트 그룹 요약
@@ -52,4 +52,4 @@ vDS가 새 포트 그룹으로 구성되고 VMkernel 포트가 포트 그룹에 
 
 ### 관련 링크
 
-* [솔루션 개요](../solution/solution_overview.html)
+* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

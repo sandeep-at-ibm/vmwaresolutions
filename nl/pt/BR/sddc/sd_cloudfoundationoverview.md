@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,7 +41,7 @@ Essa camada consiste no vCenter Server, que representa a camada de gerenciamento
 
 No console do {{site.data.keyword.vmwaresolutions_short}}, é possível expandir e contrair a capacidade de suas instâncias usando o recurso de inclusão e remoção de servidores ESXi. Além disso, as funções de gerenciamento de ciclo de vida, como aplicar atualizações e fazer upgrade dos componentes do VMware no ambiente hospedado, também estão disponíveis.
 
-Para obter mais informações sobre a arquitetura, consulte [Visão geral da solução](../archiref/solution/solution_overview.html).
+Para obter mais informações sobre a arquitetura, consulte [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Especificações técnicas para instâncias do Cloud Foundation
 
@@ -54,16 +54,17 @@ Os encargos incorridos para o hardware, rede, máquinas virtuais e armazenamento
 
 É possível pedir o {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} com uma das configurações a seguir:
 *  **Skylake**: servidores de geração do Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100) com o seu modelo de CPU selecionado e o tamanho de RAM.   
-*  **Broadwell**: servidores de geração do Intel Broadwell de 2 CPUs (série Intel Xeon E5-2600 v4) com o seu modelo de CPU selecionado e o tamanho de RAM.   
-   Se você planeja usar o armazenamento vSAN, a configuração requer quatro {{site.data.keyword.baremetal_short}}.
-   {:note}
+*  **Broadwell**: servidores de geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600/E7-4800 ) com seu modelo de CPU e tamanho de RAM selecionados.
+
+Se você planeja usar o armazenamento vSAN, a configuração requer quatro {{site.data.keyword.baremetal_short}}.
+{:note}
 
 ### Redes
 
 Os componentes de rede a seguir são pedidos:
 * Uplinks duais de rede pública e privada de 10 Gbps
 * Três VLANs (Virtual LANs): uma VLAN pública e duas VLANs privadas
-* Serviços de gerenciamento seguro VMware NSX Edge Services Gateway (ESG) para o tráfego de gerenciamento HTTPS de saída, que é implementado pela IBM como parte da tipologia de rede de gerenciamento. Este ESG é usado pelas máquinas virtuais de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Para obter mais informações, veja [Os serviços de gerenciamento NSX Edge representam um risco de segurança?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* Serviços de gerenciamento seguro VMware NSX Edge Services Gateway (ESG) para o tráfego de gerenciamento HTTPS de saída, que é implementado pela IBM como parte da tipologia de rede de gerenciamento. Este ESG é usado pelas máquinas virtuais de gerenciamento da IBM para se comunicar com componentes de gerenciamento externo específicos da IBM relacionados à automação. Para obter mais informações, veja [Os serviços de gerenciamento NSX Edge representam um risco de segurança?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
   Este ESG não está acessível a você e não pode ser usado. Se modificá-lo, talvez você não consiga gerenciar a instância do Cloud Foundation do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externos da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
   {:important}
@@ -100,7 +101,7 @@ Cada nó de expansão do Cloud Foundation é implementado e incorre em encargos 
 
 ### Hardware para nós de expansão
 
-Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração apresentada em [Especificações técnicas para instâncias do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração apresentada em [Especificações técnicas para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Licenças e taxas para os nós de expansão
 
@@ -118,15 +119,15 @@ Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} 
 *  Incluindo, modificando, retornando ou removendo componentes
 *  Expandindo ou contraindo a capacidade da instância por meio da inclusão ou remoção de servidores ESXi
 *  Desativando componentes
-*  Reiniciando os serviços
+*  Reinício dos serviços
 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhados.
 
 ### Links relacionados
 
-* [Lista de materiais de software do Cloud Foundation](sd_bom.html)
-* [Planejando instâncias do Cloud Foundation](sd_planning.html)
-* [Pedindo instâncias do Cloud Foundation](sd_orderinginstance.html)
+* [Lista de materiais de software do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [Planejando instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
 * [Centro de documentação do VMware vSphere](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [Centro de documentação do VMware NSX 6](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [FAQ de compatibilidade de EVC e CPU](https://kb.vmware.com/s/article/1005764)

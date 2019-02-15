@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -32,8 +32,8 @@ Figura 1. Serviços de rede de nuvem no {{site.data.keyword.cloud_notm}}
 A arquitetura dedicada implementa os componentes necessários do NSX Edge em um cluster do vSphere de dois nós separados que é dedicado ao uso do NSX Edge e fornece interação crítica com a infraestrutura de rede física. A arquitetura dedicada tem as características e funções a seguir:
 
 * Fornece conectividade de via de acesso de entrada e via de acesso de saída para redes físicas. Por exemplo, roteamento Norte-Sul L3 nos dispositivos virtuais NSX Edge.
-* Permite a comunicação com dispositivos físicos que são conectados a VLANs nas redes físicas por meio da ponte NSX L2 e hospeda a máquina virtual (VM) de controle para roteamento do Distributed Logical Router (DLR).
-* Pode ter serviços lógicos ou físicos centralizados. Por exemplo, um firewall, balanceadores de carga, componentes de monitoramento de Rede Privada Virtual (VPN), VMs do insight de log.
+* Permite a comunicação com dispositivos físicos que são conectados a VLANs nas redes físicas por meio da ponte NSX L2 e hospeda a máquina virtual (MV) de controle para roteamento do Distributed Logical Router (DLR).
+* Pode ter serviços lógicos ou físicos centralizados. Por exemplo, um firewall, balanceadores de carga, componentes de monitoramento de Rede Privada Virtual (VPN), MVs do insight de log.
 * Os NSX Controllers podem ser hospedados em um cluster Edge quando um vCenter dedicado é usado para gerenciar os recursos de cálculo e de borda.
 * Os recursos de cluster do Edge têm um requisito de antiafinidade para proteger a configuração de espera ativa ou para manter a disponibilidade da largura da banda durante a falha.
 
@@ -45,4 +45,4 @@ Embora isso torne simples a configuração de uma infraestrutura conectada mundi
 
 ### Links relacionados
 
-* [ Visão geral da solução ](../solution/solution_overview.html)
+* [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

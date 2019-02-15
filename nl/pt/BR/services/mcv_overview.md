@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -59,8 +59,8 @@ A arquitetura de conjunto de ferramentas e de tecnologia tem as especificações
 
 A arquitetura de cluster estendido do vSphere + vSAN tem as especificações a seguir:
 * O cluster fornece recursos de armazenamento e de cálculo que abrangem dois sites para fornecer disponibilidade aprimorada.
-* As solicitações de gravação de máquinas virtuais (VMs) são gravadas de forma síncrona em ambos os sites, incorrendo em latência de rede de site para site.
-* As solicitações de leitura de VMs são preenchidas localmente para o local físico no qual a VM está localizada, evitando latência extra.
+* As solicitações de gravação de máquinas virtuais (MVs) são gravadas de forma síncrona em ambos os sites, incorrendo em latência de rede de site para site.
+* As solicitações de leitura de MVs são preenchidas localmente para o local físico no qual a MV está localizada, evitando latência extra.
 * O site de testemunha e o host de testemunha agem como o split-brain/quorum.
 * A Criptografia Nativa do vSAN (para criptografia em repouso) pode ser usada em combinação com essa arquitetura.
 
@@ -69,10 +69,10 @@ A arquitetura de cluster estendido do vSphere + vSAN tem as especificações a s
 A arquitetura de rede tem as especificações a seguir:
 * Edge/DLR/VXLANs em combinação com o roteamento baseado em métrica do BGP para facilitar um design de site ativo/ativo com failover automatizado.
 * Cada site tem o conceito de seu próprio conjunto de Edges/DLRs e VXLANs.
-* Em circunstâncias normais, todas as VMs conectadas ao DLR-A, por exemplo VM-A, estarão na zona de disponibilidade nº 1 do {{site.data.keyword.cloud_notm}} e o ingresso e o egresso do tráfego ocorrerá localmente.
+* Em circunstâncias normais, todas as MVs conectadas ao DLR-A, por exemplo VM-A, estarão na zona de disponibilidade nº 1 do {{site.data.keyword.cloud_notm}} e o ingresso e o egresso do tráfego ocorrerá localmente.
 * Durante uma atividade de vMotion para o VM-A, ainda ocorrerá o tráfego de ingresso e egresso por meio da zona de disponibilidade nº 1 do {{site.data.keyword.cloud_notm}}.
 * Durante uma falha de site ou de borda, o tráfego será roteado para fora do site disponível restante.
 
 ### Links relacionados
 
-* [Solicitando o Mission Critical VMware on IBM Cloud](managing_mcv.html)
+* [Solicitando o Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services/managing_mcv.html)

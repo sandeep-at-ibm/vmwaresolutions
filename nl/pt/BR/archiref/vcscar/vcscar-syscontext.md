@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -20,22 +20,21 @@ Figura 1. Contexto de sistema
 
 A seguir estão os componentes principais de contexto de sistema:
 -	vCenter Server -o VMware vCenter Server on {{site.data.keyword.cloud_notm}} é uma instância do {{site.data.keyword.cloud_notm}} for VMware
-Services que é o destino para máquinas virtuais (VMs) migradas por meio do
+Services que é o destino para máquinas virtuais (MVs) migradas por meio do
 ambiente no local. Juntamente com a Virtualização no local, é
-um ambiente híbrido e permite que as VMs se movam de um ambiente
+um ambiente híbrido e permite que as MVs se movam de um ambiente
 para outro.
--	{{site.data.keyword.cloud_notm}} Private – o ICP é uma plataforma de aplicativo para
-desenvolver e gerenciar aplicativos conteinerizados. O ambiente do ICP é um ambiente
+-	{{site.data.keyword.icpfull_notm}} - O {{site.data.keyword.icpfull_notm}} é uma plataforma de aplicativo para desenvolver e gerenciar aplicativos conteinerizados. O ambiente do {{site.data.keyword.icpfull_notm}} é um ambiente
 integrado que inclui o orquestrador de contêineres Kubernetes, um
 repositório de imagem privada, um console de gerenciamento, estruturas de monitoramento
 e uma interface gráfica com o usuário, que fornece um local centralizado
 por meio do qual é possível implementar, gerenciar, monitorar e escalar aplicativos.
--	{{site.data.keyword.cloud_notm}} Automation Manager - o CAM é uma infraestrutura pronta
-para a empresa como plataforma de código que fornece uma única área de janela de vidro para
-provisionar cargas de trabalho baseadas em VM ao lado de cargas de trabalho baseadas em Kubernetes, a
-automação de fornecimento de cargas de trabalho, seja VM e/ou contêineres e
-seus pré-requisitos de infraestrutura. 
--	Watson - Watson é a plataforma de inteligência artificial e soluções cognitivas da IBM. 
+-	{{site.data.keyword.cloud_notm}} Automation Manager - o CAM é uma infraestrutura pronta para
+empresa como plataforma de código que fornece uma única área de janela de vidro para
+provisionar cargas de trabalho baseadas em MV juntamente com cargas de trabalho baseadas em Kubernetes, a
+automação de fornecimento de cargas de trabalho, seja MV ou contêineres e
+seus pré-requisitos de infraestrutura.
+-	Watson - Watson é a plataforma de inteligência artificial e soluções cognitivas da IBM.
 -	Watson Knowledge Studio - o Watson Knowledge Studio fornece um modelo para ser usado
 pelo Watson Discovery.
 
@@ -70,4 +69,4 @@ virtual que é gerenciada pelo vCenter Server.
 
 ## Links relacionados
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

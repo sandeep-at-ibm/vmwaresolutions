@@ -20,7 +20,7 @@ lastupdated: "2018-10-01"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-자세한 정보는 [스펙터(Spectre) 및 멜트다운(Meltdown) 취약점 해결](../vmonic/trbl_fix_spectre.html)을 참조하십시오.
+자세한 정보는 [스펙터(Spectre) 및 멜트다운(Meltdown) 취약점 해결](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)을 참조하십시오.
 
 ## Intel Optane 옵션을 사용하는 고성능
 
@@ -40,9 +40,9 @@ Intel Optane 옵션을 사용한 고성능 옵션은 듀얼 Intel Xeon Gold 5120
 
 자세한 정보는 다음 주제에서 _네트워크 인터페이스 설정_ 섹션을 참조하십시오.
 
-* [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html#network-interface-settings)
-* [vCenter Server with Hybridity Bundle 인스턴스 주문](../vcenter/vc_hybrid_orderinginstance.html#network-interface-settings)
-* [새 vSphere 클러스터 주문](../vsphere/vs_orderinginstances.html#network-interface-settings)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#network-interface-settings)
+* [vCenter Server with Hybridity Bundle 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html#network-interface-settings)
+* [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#network-interface-settings)
 
 ## ESXi 서버 삭제
 
@@ -50,9 +50,9 @@ Intel Optane 옵션을 사용한 고성능 옵션은 듀얼 Intel Xeon Gold 5120
 
 ESXi 서버 요구사항에 대한 자세한 정보는 다음 주제를 참조하십시오.
 
-* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](../vcenter/vc_addingremovingservers.html)
-* [vCenter Server with Hybridity Bundle 인스턴스의 용량 확장 및 축소](../vcenter/vc_hybrid_addingremovingservers.html)
-* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](../sddc/sd_addingremovingservers.html)
+* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [vCenter Server with Hybridity Bundle 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
 
 ## VMware vCenter Server 인스턴스에 대한 업데이트
 
@@ -69,7 +69,7 @@ ESXi 서버 요구사항에 대한 자세한 정보는 다음 주제를 참조�
 
 이제 vCenter Server 인스턴스에서 Hybridity Bundle 라이센스를 제거할 수 있습니다. 이렇게 하려면 VMware NSX 및 VMware vSAN 임대 라이센스 키를 BYOL(Bring Your Own License) 키로 대체하고 지원 티켓을 열어 임대 라이센스에 대한 비용을 취소해야 합니다.
 
-자세한 정보는 [vCenter Server 인스턴스에서 Hybridity Bundle 제거](../vcenter/vc_hybrid_deletingbundle.html)를 참조하십시오.
+자세한 정보는 [vCenter Server 인스턴스에서 Hybridity Bundle 제거](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletingbundle.html)를 참조하십시오.
 
 ### vCenter Server with Hybridity Bundle 가용성
 
@@ -77,8 +77,8 @@ ESXi 서버 요구사항에 대한 자세한 정보는 다음 주제를 참조�
 
 자세한 정보는 다음 주제를 참조하십시오.
 
-* [vCenter Server with Hybridity Bundle 개요](../vcenter/vc_hybrid_overview.html)
-* [vCenter Server with Hybridity Bundle 인스턴스 주문](../vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle 개요](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [vCenter Server with Hybridity Bundle 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
 
 ## VMware Cloud Foundation 인스턴스에 대한 업데이트
 
@@ -98,8 +98,8 @@ ESXi 서버 요구사항에 대한 자세한 정보는 다음 주제를 참조�
 인스턴스를 주문할 때 포함된 서비스와 함께 인스턴스를 주문하거나 나중에 이 서비스를 기존 인스턴스에 추가할 수 있습니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}에 대한 컴포넌트 및 고려사항](../services/htkc_considerations.html)
-* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 관리](../services/managinghtkc.html)
+* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}에 대한 컴포넌트 및 고려사항](/docs/services/vmwaresolutions/services/htkc_considerations.html)
+* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managinghtkc.html)
 
 ### HyTrust CloudControl on IBM Cloud
 
@@ -115,7 +115,7 @@ V2.6부터 새 인스턴스와 새 호스트는 vSphere ESXi V6.5 Update 2c를 �
 
 Veeam on {{site.data.keyword.cloud_notm}}가 설치되어 있는 기존 Cloud Foundation 인스턴스도 V9.5u3a 이상으로 업데이트하는 것이 좋습니다.
 
-Veeam on {{site.data.keyword.cloud_notm}}에 대한 자세한 정보는 [Veeam on {{site.data.keyword.cloud_notm}} 개요](../services/veeam_considerations.html)를 참조하십시오.
+Veeam on {{site.data.keyword.cloud_notm}}에 대한 자세한 정보는 [Veeam on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/veeam_considerations.html)를 참조하십시오.
 
 ### VMware HCX on IBM Cloud
 
@@ -135,7 +135,7 @@ Veeam on {{site.data.keyword.cloud_notm}}에 대한 자세한 정보는 [Veeam o
 ### 참조 아키텍처 문서
 {{site.data.keyword.vmwaresolutions_short}} 아키텍처 문서는 VMware 인스턴스 관리 및 운영에 대한 책임을 이해하는 데 중요한 고려사항을 포함하도록 업데이트됩니다.
 
-자세한 정보는 [VMware 인스턴스에 대한 사후 배치 고려사항](../archiref/solution/solution_considerations.html)을 참조하십시오.
+자세한 정보는 [VMware 인스턴스에 대한 사후 배치 고려사항](/docs/services/vmwaresolutions/archiref/solution/solution_considerations.html)을 참조하십시오.
 
 ## 사용자 인터페이스 업데이트 및 개선사항
 

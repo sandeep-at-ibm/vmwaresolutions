@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -41,5 +41,5 @@ vCenter Server with Hybridity Bundle 인스턴스를 삭제하면 다음 컴포�
 
 ### 관련 링크
 
-* [vCenter Server with Hybridity Bundle 인스턴스 삭제](vc_hybrid_deletinginstance.html)
-* [vCenter Server with Hybridity Bundle 인스턴스에서 서비스 주문, 보기 및 제거](vc_hybrid_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
+* [vCenter Server with Hybridity Bundle 인스턴스에서 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)

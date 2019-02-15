@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,11 +18,11 @@ de ampliar em mais regiões de nuvem que estão localizadas em uma das opções 
 2. Outro pod do {{site.data.keyword.cloud_notm}} dentro do mesmo data center.
 3. Outra geografia e outro pod do {{site.data.keyword.cloud_notm}} dentro do mesmo data center.
 
-Os produtos {{site.data.keyword.cloud_notm}} Private (ICP) e Cloud Automation Manager (CAM)
+Os produtos {{site.data.keyword.icpfull_notm}} e Cloud Automation Manager (CAM)
 podem ser implementados manualmente em sua plataforma de virtualização no local,
-permitindo o gerenciamento de nuvem por meio de locais no local. Como alternativa, o ICP e o CAM são oferecidos como extensões de serviço para uma implementação nova ou existente do VMware vCenter Server on {{site.data.keyword.cloud_notm}} por meio da automação, permitindo o gerenciamento de nuvem por meio do {{site.data.keyword.cloud_notm}}.
+permitindo o gerenciamento de nuvem por meio de locais no local. Como alternativa, o {{site.data.keyword.icpfull_notm}} e o CAM são oferecidos como extensões de serviço para uma implementação nova ou existente do VMware vCenter Server on {{site.data.keyword.cloud_notm}}, via automação, permitindo o gerenciamento de nuvem por meio do {{site.data.keyword.cloud_notm}}.
 
-O ICP é uma plataforma de aplicativo para desenvolvimento e gerenciamento de aplicativos conteinerizados no local. É um ambiente integrado para gerenciar
+O {{site.data.keyword.icpfull_notm}} é uma plataforma de aplicativo para desenvolver e gerenciar aplicativos conteinerizados no local. É um ambiente integrado para gerenciar
 contêineres que inclui o orquestrador de contêineres Kubernetes, um
 repositório de imagem privada, um console de gerenciamento e estruturas de
 monitoramento.
@@ -34,9 +34,9 @@ política entre nuvens e clusters. Com o IBM Multi-Cluster Manager, você tem co
 O {{site.data.keyword.cloud_notm}} Automation Manager é uma plataforma de gerenciamento de autoatendimento
 multinuvem que é executada no {{site.data.keyword.cloud_notm}} Private que permite que os Desenvolvedores e
 administradores atendam às demandas de negócios. O Cloud Automation Manager
-Service Composer permite expor os serviços de nuvem híbrida no catálogo do ICP.
+Service Composer permite que você exponha os serviços de nuvem híbrida no catálogo do {{site.data.keyword.icpfull_notm}}.
 
-## Componentes do Skate Advisor
+## Componentes físicos do Skate Advisor
 
 O diagrama a seguir descreve a implementação de referência do aplicativo
 Acme Skate Advisor em uma implementação de infraestrutura de modernização de
@@ -56,25 +56,18 @@ necessária.
 
 ### Empacotamento e implementação de aplicativo
 
-O aplicativo é implementado como uma Orquestração do CAM que conteineriza os
-elementos a seguir:
-
-Figura 2. Orquestração do CAM
-![Orquestração do CAM](vcscar-cam.svg)
-
-Estes elementos são descritos conforme a seguir:
+O aplicativo é implementado como uma Orquestração do CAM que contém os elementos a seguir:
 * Orquestração de serviço - uma orquestração de serviço do CAM é um recurso de
 fluxo de trabalho que descreve os modelos do Terraform e os gráficos Helm para
 implementar como um aspecto de um serviço. Um serviço pode ser publicado e é o
 artefato de controle por meio do qual a implementação inteira é orquestrada.
-* Gráfico Helm - o gráfico Helm reside no Repositório do ICP local
-e implementa contêineres e outros recursos no ICP. Um gráfico
+* Gráfico do Helm - o gráfico do Helm reside no Repositório local do {{site.data.keyword.icpfull_notm}} e implementa contêineres e outros recursos no {{site.data.keyword.icpfull_notm}}. Um gráfico
 Helm é uma descrição dos recursos do Kubernetes que incluem:
- - Implementações de contêiner
- - Serviços
- - Ingresso
- - Regras
- - Terminais
+  - Implementações de contêiner
+  - Serviços
+  - Ingresso
+  - Regras
+  - Terminais
 
 * Imagens do docker - as imagens o docker contêm o sistema operacional (ubuntu),
 o middleware (WebSphere Liberty, nginx) e o código do Skate Advisor e
@@ -87,10 +80,13 @@ descrito.
 * Modelo VMWare - o modelo VMWare é um modelo Ubuntu com o mysql
 e o esquema do banco de dados pré-instalados.
 
+Figura 2. Orquestração do CAM
+![Orquestração do CAM](vcscar-cam.svg)
+
 ### Balanceamento de carga e proxy
 
-O balanceamento de carga e o proxy são implementados por meio do componente
-ICP Ingress Controller. Esse componente manipula o ajuste de escala e o failover
+O balanceamento de carga e o proxying são implementados por meio do componente {{site.data.keyword.icpfull_notm}} Ingress
+Controller. Esse componente manipula o ajuste de escala e o failover
 do contêiner de uma maneira contínua.
 
 O proxy de aplicativo é fornecido pelo contêiner nginx que equilibra
@@ -105,7 +101,7 @@ URL	|Terminal
 /acme/api/explorer	|Skate Advisor Service
 
 Os contêineres têm endereços IP imprevisíveis que podem escalar dentro e fora conforme
-as demandas do sistema. Para superar esse problema, os serviços do ICP são usados para
+as demandas do sistema. Para superar esse problema, os serviços do {{site.data.keyword.icpfull_notm}} são usados para
 executar a resolução de endereço IP em tempo real dentro do sistema.
 
 ### Aplicativo da web Acme Skate
@@ -137,12 +133,12 @@ O {{site.data.keyword.cloud_notm}} tem duas redes. A rede pública permite que o
 
 O Virtual Routing Appliance (VRA) permite aos clientes rotear o tráfego
 de rede privada e pública associando as VLANs ao dispositivo.
-As infraestruturas do vCenter Server NSX Edge e do IKS são configuradas
-com uma rota padrão para a rede pública e com uma rota 10.0.0.0/8
-padrão para a rede privada.
+O vCenter Server NSX Edge e a infraestrutura do {{site.data.keyword.containerlong_notm}} são configurados
+com uma rota padrão para a rede pública e com uma rota
+10.0.0.0/8 padrão para a rede privada.
 
-Uma rota estática é necessária na infraestrutura do IKS para o
-dispositivo VRA para quaisquer VXLANs definidas do NSX. No NSX Edge, nós configuramos
+Uma rota estática é necessária na infraestrutura do {{site.data.keyword.containerlong_notm}} para o dispositivo
+VRA para quaisquer VXLANs do NSX definidas. No NSX Edge, nós configuramos
 o peering do BGP com o VRA sobre a rede privada, permitindo a propaganda de
 rota e a interjeição das VXLANs do NSX. Esse peering permite que a
 rede de sobreposição VXLAN do NSX se comunique com o backbone do {{site.data.keyword.cloud_notm}} e
@@ -179,17 +175,17 @@ a seguir.
 Figura 5. Gerenciamento de nuvem
 ![Gerenciamento na nuvem](vcscar-cloud-management.svg)
 
-Este diagrama representa o ICP e o CAM implementados em uma instância
-do vCenter Server com conexões com o vCenter no local e o serviço
-IKS. Usando o CAM, os administradores do sistema e os Desenvolvedores podem
-implementar máquinas virtuais no local ou na instância do vCenter Server
-e contêineres para os clusters do ICP e do IKS.
+Esse diagrama representa o {{site.data.keyword.icpfull_notm}} e o CAM implementados em uma instância
+do vCenter Server, com conexões com o vCenter no local e o serviço
+{{site.data.keyword.containerlong_notm}}. Usando o CAM, os administradores do sistema e os Desenvolvedores podem
+implementar máquinas virtuais no local ou na instância do vCenter Server,
+além de contêineres para os clusters do {{site.data.keyword.icpfull_notm}} e do {{site.data.keyword.containerlong_notm}}.
 
 No diagrama, o CAM cria logicamente conexões em nuvem para os vCenters,
-provedores em nuvem e ambientes do ICP e IKS. Os Clusters do ICP são
-implementados em cada data center/ambiente de nuvem, com o MCM fornecendo o
-mecanismo para conectar os clusters do ICP a uma única visualização de gerenciamento.
+os provedores em nuvem e os ambientes do {{site.data.keyword.icpfull_notm}} e do {{site.data.keyword.containerlong_notm}}. Os Clusters do {{site.data.keyword.icpfull_notm}} são
+implementados em cada data center /ambiente de nuvem, com o MCM fornecendo o
+mecanismo para conectar os clusters do {{site.data.keyword.icpfull_notm}} a uma única visualização de gerenciamento.
 
 ### Links relacionados
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-21"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-11-21"
 {:note: .note}
 {:important: .important}
 
-# 스토리지 설정
+# 연결된 스토리지에 대한 구성 및 설정
 
 이 디자인은 NFS v3을 통해서만 공유 스토리지 연결을 지원합니다. NFS v4 및 v4.1은 지원되지 않습니다.
 
-이 디자인에 대해 연결된 모든 스토리지는 vCenter Server 솔루션과 동일한 {{site.data.keyword.CloudDataCent_notm}}에서 사용 가능한 {{site.data.keyword.cloud_notm}} 스토리지로 제한됩니다. 또한 데이터 저장소에 저장된 모든 가상 디스크는 기본적으로 씬 프로비저닝됩니다.
+이 디자인용으로 연결된 스토리지는 vCenter Server 솔루션과 동일한 {{site.data.keyword.CloudDataCent_notm}}에서 사용 가능한 {{site.data.keyword.cloud_notm}} 스토리지로 제한됩니다. 또한 데이터 저장소에 저장된 모든 가상 디스크는 기본적으로 씬 프로비저닝됩니다.
 {:note}
 
 아키텍처는 공유에 연결하기 위해 {{site.data.keyword.cloud_notm}} 스토리지의 DNS 이름을 사용하여 NFS v3 데이터 저장소가 연결됨을 지정합니다. NFS 공유는 vCenter Server 클러스터의 모든 호스트에 연결되며 Storage DRS가 사용되는 데이터 저장소 클러스터에 위치합니다.
@@ -89,4 +89,4 @@ SIOC가 스토리지 디바이스가 혼잡하거나 제한된 경우를 판별�
 
 ### 관련 링크
 
-* [솔루션 개요](../solution/solution_overview.html)
+* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

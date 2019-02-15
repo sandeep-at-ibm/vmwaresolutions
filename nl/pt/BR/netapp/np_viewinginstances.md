@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -79,14 +79,10 @@ Tabela 3. Informações de acesso para componentes relacionados à instância do
 | NetApp Deploy Tool IP | O endereço IP da máquina virtual do NetApp ONTAP Select Deploy. |
 | NetApp Deploy Tool FQDN | O nome completo do domínio do NetApp ONTAP Select Deploy. |
 | NetApp Deploy Tool HTTPS | O nome do usuário e a senha que podem ser usados para acessar a máquina virtual do NetApp ONTAP Select Deploy. |
-| IP do PSC | O endereço IP do Platform Services Controller. |
-| FQDN do PSC | O nome completo do domínio do PSC. |
-| ADMINISTRADOR do PSC | O nome do usuário e a senha do VMware vCenter Single Sign-On que podem ser usados para acessar o console da web do PSC. |
-| SSH do PSC | O nome do usuário e a senha que podem ser usados para acessar a VM do PSC por meio da conexão SSH. |
 | IP do vCenter | O endereço IP do vCenter Server. |
 | FQDN do vCenter | O nome completo do domínio do vCenter Server. |
 | ADMINISTRADOR do vCenter | O nome do usuário e a senha do VMware vCenter Single Sign-On que podem ser usados para efetuar login no vCenter Server usando o vSphere Web Client. |
-| SSH do vCenter | O nome do usuário e a senha que podem ser usados para acessar a VM do vCenter Server por meio da conexão SSH. |
+| SSH do vCenter | O nome do usuário e a senha que podem ser usados para acessar a MV do vCenter Server por meio da conexão SSH. |
 
 ## Procedimento para visualizar o histórico de implementação para instâncias do NetApp ONTAP Select
 
@@ -99,7 +95,7 @@ Tabela 4. Histórico de implementação de instância do NetApp ONTAP Select
 | Data | A data e hora em que o status da instância muda |
 | Resumo | Os detalhes da mudança |
 
-Se ocorrerem erros durante a implementação ou exclusão da instância, a equipe de Suporte do {{site.data.keyword.cloud_notm}} será notificada automaticamente. Para consultar o status de seu chamado, é possível [entrar em contato com o Suporte IBM](../vmonic/trbl_support.html).
+Se ocorrerem erros durante a implementação ou exclusão da instância, a equipe de Suporte do {{site.data.keyword.cloud_notm}} será notificada automaticamente. Para consultar o status de seu chamado, é possível [entrar em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## Visualizando clusters do NetApp ONTAP Select
 
@@ -142,7 +138,7 @@ Se ocorrerem erros durante a implementação ou exclusão da instância, a equip
 			 <td>O pod no qual o cluster é criado.</td>
 		 </tr>
 		 <tr>
-		  <td>Barra de Status</td>
+		  <td> Status </td>
 			<td>O status do cluster. O status pode ter um dos valores a seguir:<ul><li>Inicializando: o cluster está sendo criado e configurado.</li><li>Modificando: O cluster está sendo modificado.</li><li>Pronto para uso: o cluster está pronto para uso.</li></ul></td>
 		 </tr>
 		 <tr>
@@ -172,12 +168,12 @@ Antes de clicar no **Console do vCenter** na página de resumo da instância par
 
 Para obter mais informações para ajudar a concluir as instruções de login, revise os tópicos a seguir:
 
-*  Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](../vmonic/trbl_timeout_vc_console.html).
+*  Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 *  Para obter uma lista de pontos de acesso para efetuar login na Rede Privada da infraestrutura do {{site.data.keyword.cloud_notm}} usando a VPN, veja [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, veja [Implementando um arquivo OVF usando o vSphere Web Client](../vmonic/trbl_deploy_ovf.html).
+*  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, veja [Implementando um arquivo OVF usando o vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
 
 ### Links relacionados
 
-* [Pedindo instâncias do NetApp ONTAP Select](np_orderinginstances.html)
-* [Excluindo instâncias do NetApp ONTAP Select](np_deletinginstance.html)
+* [Pedindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [Excluindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [Anexar armazenamento dedicado a implementações do NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

@@ -24,19 +24,19 @@ lastupdated: "2018-05-28"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-자세한 정보는 [스펙터(Spectre) 및 멜트다운(Meltdown) 취약점 해결](../vmonic/trbl_fix_spectre.html)을 참조하십시오.
+자세한 정보는 [스펙터(Spectre) 및 멜트다운(Meltdown) 취약점 해결](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)을 참조하십시오.
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
 이 릴리스에서는 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 오퍼링이 도입되었습니다. vCenter Server with Hybridity Bundle은 온프레미스 인프라를 클라우드로 쉽고 빠르게 확장하는 데 도움을 주는 프라이빗 클라우드에서 호스팅됩니다. VMware 환경은 IBM 제공 VMware 소프트웨어 정의 데이터 센터 라이센스를 기반으로 하며 원활한 인프라 하이브리디티 및 진정한 애플리케이션 이동성을 위해 온프레미스 vSphere 5.0+ 환경을 {{site.data.keyword.cloud_notm}} 사이트와 손쉽고 안전하게 연결하는 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 포함합니다.
 
-HCX on {{site.data.keyword.cloud_notm}} 서비스는 vCenter Server with Hybridity Bundle 인스턴스를 통해서만 사용 가능합니다. 먼저 기본 vCenter Server V2.3 소프트웨어 업데이트를 적용한 후 기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 업데이트 적용](../vcenter/vc_applyingupdates.html)을 참조하십시오.
+HCX on {{site.data.keyword.cloud_notm}} 서비스는 vCenter Server with Hybridity Bundle 인스턴스를 통해서만 사용 가능합니다. 먼저 기본 vCenter Server V2.3 소프트웨어 업데이트를 적용한 후 기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 업데이트 적용](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html)을 참조하십시오.
 
 vCenter Server with Hybridity Bundle에 대한 자세한 정보는 다음 주제를 참조하십시오.
 
-* [vCenter Server with Hybridity Bundle 개요](../vcenter/vc_hybrid_overview.html)
-* [vCenter Server with Hybridity Bundle 인스턴스에 대한 요구사항 및 계획](../vcenter/vc_hybrid_planning.html)
-* [vCenter Server with Hybridity Bundle 인스턴스 주문](../vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle 개요](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [vCenter Server with Hybridity Bundle 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
+* [vCenter Server with Hybridity Bundle 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
 
 ## vCenter Server 및 Cloud Foundation 인스턴스에 대한 클러스터 삭제 지원
 
@@ -44,8 +44,8 @@ vCenter Server with Hybridity Bundle에 대한 자세한 정보는 다음 주제
 
 자세한 정보는 다음 주제를 참조하십시오.
 
-* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](../vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
-* [Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제](../sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
+* [Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
 
 ## VMware vCenter Server 인스턴스에 대한 업데이트
 
@@ -61,8 +61,8 @@ V2.3 릴리스부터, **사용자 정의됨** Bare Metal Server 설정을 선택
 
 자세한 정보는 다음 주제를 참조하십시오.
 
-* [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)
-* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](../vcenter/vc_addingviewingclusters.html)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
 
 ## VMware Cloud Foundation 인스턴스에 대한 업데이트
 
@@ -80,7 +80,7 @@ V2.3 릴리스부터, **사용자 정의됨** Bare Metal Server 설정을 선택
 두 개의 Microsoft Windows 가상 머신을 사용하도록 인스턴스를 구성하는 경우 두 개의 Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스 및/또는 Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스를 사용하십시오. 가상 머신을 활성화할 수 있는 30일의 기간이 제공됩니다.
 {:note}
 
-자세한 정보는 [VMware Federal 인스턴스 주문](../vcenter/vc_fed_orderinginstance.html#network-interface-settings)의 *네트워크 인터페이스 설정* 절을 참조하십시오.
+자세한 정보는 [VMware Federal 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html#network-interface-settings)의 *네트워크 인터페이스 설정* 절을 참조하십시오.
 
 ### VMware Federal 인스턴스에 대한 클러스터 추가 및 삭제 지원
 
@@ -88,7 +88,7 @@ V2.3 릴리스부터, **사용자 정의됨** Bare Metal Server 설정을 선택
 
 또한 전체 인스턴스를 삭제하지 않고 인스턴스에서 하나 이상의 클러스터를 삭제할 수도 있습니다.
 
-자세한 정보는 [VMware Federal 인스턴스에 대한 클러스터 추가, 보기 및 삭제](../vcenter/fed_addviewdeleteclusters.html)를 참조하십시오.
+자세한 정보는 [VMware Federal 인스턴스에 대한 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)를 참조하십시오.
 
 ## 추가 서비스에 대한 업데이트
 
@@ -99,8 +99,8 @@ HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSp
 인스턴스를 주문할 때 포함된 서비스와 함께 인스턴스를 주문하거나 나중에 이 서비스를 기존 인스턴스에 추가할 수 있습니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}의 컴포넌트 및 고려사항](../services/htcc_considerations.html)
-* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 관리](../services/managinghtcc.html)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}의 컴포넌트 및 고려사항](/docs/services/vmwaresolutions/services/htcc_considerations.html)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managinghtcc.html)
 
 ### HyTrust DataControl on IBM Cloud
 
@@ -109,8 +109,8 @@ HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSph
 인스턴스를 주문할 때 포함된 서비스와 함께 인스턴스를 주문하거나 나중에 이 서비스를 기존 인스턴스에 추가할 수 있습니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}}의 컴포넌트 및 고려사항](../services/htdc_considerations.html)
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 관리](../services/managinghtdc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}}의 컴포넌트 및 고려사항](/docs/services/vmwaresolutions/services/htdc_considerations.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
