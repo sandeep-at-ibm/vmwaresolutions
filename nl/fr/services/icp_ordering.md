@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -28,12 +28,12 @@ Vous pouvez ajouter le service {{site.data.keyword.cloud_notm}} Private Hosted d
 
 Lorsque vous commandez le service, indiquez les paramètres suivants :
 * Sélectionnez **Prêt pour la production** ou **Développement/Test** selon vos besoins.
-* Cochez la case requise pour certifier que vous possédez déjà la licence qui est obligatoire pour déployer le service {{site.data.keyword.cloud_notm}} Private Hosted. 
+* Cochez la case requise pour certifier que vous possédez déjà la licence qui est obligatoire pour déployer le service {{site.data.keyword.cloud_notm}} Private Hosted.
 
 ### Liens connexes
 
-* [Présentation d'IBM Cloud Private Hosted](../services/icp_overview.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server](../vcenter/vc_addingremovingservices.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
-* [Foire aux questions](../vmonic/faq.html)
+* [Présentation d'IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services/icp_overview.html)
+* [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)

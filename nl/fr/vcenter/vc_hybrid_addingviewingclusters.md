@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -20,7 +20,11 @@ Vous pouvez ajouter des clusters à votre instance VMware vCenter Server on {{si
 
 ## Ajout de clusters à des instances vCenter Server with Hybridity Bundle
 
-Vous pouvez ajouter jusqu'à 10 clusters à votre instance vCenter Server with Hybridity Bundle.
+Le nombre de clusters pouvant être ajoutés à une instance varie en fonction de la version de l'instance :
+* Pour les instances déployées dans (ou mises à niveau vers) la version 2.5 et des versions ultérieures, le nombre de clusters, d'hôtes et de machines virtuelles détermine la limite maximum relative au nombre de clusters que vous pouvez ajouter. Vous devez respecter les règles et limites de dimensionnement VMware pour votre déploiement.
+* Pour les instances déployées dans (ou mises à niveau vers) la version 2.3 et des versions ultérieures, vous pouvez ajouter jusqu'à 10 clusters.
+
+Pour plus d'informations sur les limites maximum, voir [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
 
 ### Paramètres système
 
@@ -67,6 +71,8 @@ Tableau 2. Options pour les serveurs Broadwell bare metal
 | Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+| Quad Intel Xeon E7-4820 v4/40 coeurs au total, 1,9 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
+| Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 
 #### Nombre de serveurs bare metal
 
@@ -81,7 +87,11 @@ Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémenta
 VMware vSAN 6.6 est inclus avec votre commande d'instance vCenter Server with Hybridity Bundle. Spécifiez les options vSAN suivantes :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
-* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+
+  L'option **Hautes performances Intel Optane** est disponible uniquement pour les modèles d'UC Skylake Dual Intel Xeon Gold 5120 et Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 * **Licence vSAN** : sélectionnez l'édition de licence VMware vSAN 6.6 (Advanced ou Enterprise).
 
@@ -212,5 +222,5 @@ Vous souhaiterez peut-être supprimer un cluster d'une instance si vous n'en ave
 
 ### Liens connexes
 
-* [Affichage des instances vCenter Server with Hybridity Bundle](vc_hybrid_viewinginstances.html)
-* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservers.html)
+* [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)

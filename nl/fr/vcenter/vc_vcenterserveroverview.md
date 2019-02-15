@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,7 +18,7 @@ VMware vCenter Server sur {{site.data.keyword.cloud}} est un cloud privé héber
 
 Dans de nombreux cas, l'ensemble de l'environnement peut être mis à disposition en moins d'une journée et l'infrastructure bare metal peut rapidement et de manière élastique augmenter ou diminuer en fonction des besoins de la capacité de calcul.
 
-Après le déploiement, vous pouvez augmenter le stockage partagé en commandant davantage de partages de fichiers NFS (Network File System) à partir du portail {{site.data.keyword.slportal}} et en les connectant manuellement à tous les serveurs ESXi d'un cluster. Si vous avez besoin d'un stockage dédié, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](../netapp/np_netappoverview.html) est offert en configuration hautes performances (entièrement SSD) et en configuration haute capacité (entièrement SATA).
+Après le déploiement, vous pouvez augmenter le stockage partagé en commandant davantage de partages de fichiers NFS (Network File System) à partir du portail {{site.data.keyword.slportal}} et en les connectant manuellement à tous les serveurs ESXi d'un cluster. Si vous avez besoin d'un stockage dédié, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp/np_netappoverview.html) est offert en configuration hautes performances (entièrement SSD) et en configuration haute capacité (entièrement SATA).
 
 VMware vSAN est également disponible en tant qu'option de stockage dédié. Pour augmenter la capacité d'un stockage basé sur vSAN d'un cluster vSAN, vous pouvez ajouter d'autres serveurs ESXi après le déploiement.
 
@@ -44,13 +44,13 @@ Cette couche virtualise l'infrastructure physique par le biais de différents pr
 
 ### Gestion de la virtualisation
 
-Cette couche se compose du dispositif vCenter Server Appliance (vCSA), de NSX Manager, de deux passerelles NSX ESG, de trois contrôleurs NSX, du dispositif virtuel PSC (Platform Services Controller) et de l'instance de serveur virtuel IBM CloudDriver. L'instance de serveur virtuel CloudDriver est déployée à la demande en fonction des besoins de certaines opérations, telles que l'ajout d'hôtes à l'environnement.
+Cette couche se compose du dispositif vCenter Server Appliance (vCSA) avec Platform Services Controller (PSC) intégré, NSX Manager, deux NSX ESG, trois NSX Controllers et l'instance de serveur virtuel (VSI) IBM CloudDriver. L'instance de serveur virtuel CloudDriver est déployée à la demande en fonction des besoins de certaines opérations, telles que l'ajout d'hôtes à l'environnement.
 
 L'offre de base est déployée avec un dispositif vCenter Server dimensionné de manière à prendre en charge un environnement comportant jusqu'à 400 hôtes et jusqu'à 4000 machines virtuelles. Les mêmes outils et scripts compatibles API vSphere peuvent être utilisés pour gérer l'environnement VMware hébergé par IBM.
 
 Au total, l'offre de base nécessite 38 UC virtuelles et 67 Go de vRAM réservés pour la couche de gestion de la virtualisation. La capacité hôte restante pour vos machines virtuelles dépend de plusieurs facteurs, tels que le taux de surabonnement, le dimensionnement des machines virtuelles et les besoins de performances de la charge de travail.
 
-Pour plus d'informations sur l'architecture, voir [Référence de l'architecture {{site.data.keyword.vmwaresolutions_short}}](../archiref/solution/solution_overview.html).
+Pour plus d'informations sur l'architecture, voir [Référence de l'architecture {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Spécifications techniques relatives aux instances vCenter Server
 
@@ -62,15 +62,13 @@ La disponibilité et la tarification des configurations matérielles normalisée
 ### Serveur bare metal
 
 Vous pouvez commander trois serveurs {{site.data.keyword.baremetal_short}} ou plus dans l'une des configurations suivantes :
-* **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.   
-* **Certifiés SAP** : Sserveur {{site.data.keyword.baremetal_short}} avec le modèle d'UC que vous avez sélectionné. 
-  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/192 Go de mémoire RAM
-  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/384 Go de mémoire RAM
-  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/768 Go de mémoire RAM
-* **Broadwell** : Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.   
-     Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.
-     {:note}
-     
+* **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.  
+* **Certifiés SAP** : serveurs des générations Intel Skylake ou Intel Broadwell (Intel série Xeon 6140/E5-2690/E7-8890) avec votre modèle d'UC sélectionné.
+* **Broadwell** : serveurs des générations Intel Broadwell à 2 UC (Intel série Xeon E5-2600/E7-4800) avec vos modèle d'UC et taille de RAM sélectionnées.  
+
+Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.
+{:note}
+
 ### Utilisation en réseau
 
 Les composants réseau suivants sont commandés :
@@ -78,11 +76,11 @@ Les composants réseau suivants sont commandés :
 *  Trois VLAN (réseaux locaux virtuels) : un VLAN public et deux VLAN privés
 *  Un VXLAN (réseau local virtuel extensible) avec routeur logique distribué (DLR) pour éventuelle communication d'est en ouest entre des charges de travail locales connectées à des réseaux de la couche 2 (L2). Le VXLAN est déployé en tant qu'exemple de topologie de routage, que vous pouvez modifier, à partir duquel vous pouvez construire et que vous pouvez supprimer. Vous pouvez également ajouter des zones de sécurité en connectant des VXLAN supplémentaires aux nouvelles interfaces logiques sur le DLR.
 *  Deux passerelles de services périphériques VMware NSX :
-  * Une passerelle de gestion sécurisée VMware NSX Edge Services Gateway (ESG) pour le trafic de gestion HTTPS sortant, déployée par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle ESG gérée par le client](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * Une passerelle de gestion sécurisée VMware NSX Edge Services Gateway (ESG) pour le trafic de gestion HTTPS sortant, déployée par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle ESG gérée par le client](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     Cette passerelle ESG se nomme **mgmt-nsx-edge**. Vous n'avez pas accès à cette passerelle ESG et vous ne pouvez pas l'utiliser. Si vous la modifiez, vous ne pourrez plus gérer l'instance vCenter Server depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
     {:important}
-  * Une passerelle VMware NSX Edge Services Gateway sécurisée gérée par le client pour le trafic de charge de travail HTTPS sortant et entrant. Cette passerelle est déployée par IBM en tant que modèle que vous pouvez modifier pour fournir un accès au réseau privé virtuel ou un accès public. Pour plus d'informations, voir [La passerelle NSX Edge gérée par le client présente-t-elle un risque pour la sécurité ?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
+  * Une passerelle VMware NSX Edge Services Gateway sécurisée gérée par le client pour le trafic de charge de travail HTTPS sortant et entrant. Cette passerelle est déployée par IBM en tant que modèle que vous pouvez modifier pour fournir un accès au réseau privé virtuel ou un accès public. Pour plus d'informations, voir [La passerelle NSX Edge gérée par le client présente-t-elle un risque pour la sécurité ?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
 ### Instance de serveur virtuel
 
@@ -95,6 +93,8 @@ Les instances de serveur virtuel suivantes sont commandées :
 ### Stockage
 
 Lors du déploiement initial, vous avez le choix entre les options de stockage vSAN et NFS.
+
+Pour les instances en version 2.8 et versions ultérieure, vous pouvez ajouter des partages de stockage NFS à un cluster NFS ou vSAN existant. Pour plus d'informations, voir la section *Ajout de stockage NFS à des instances vCenter Server* dans [Extension et réduction de capacité pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances).{:note}
 
 #### Stockage vSAN
 
@@ -111,11 +111,15 @@ L'option vSAN offre des configurations personnalisées, avec différentes option
 #### Stockage NFS
 
 L'option NFS offre un stockage de niveau fichier partagé personnalisé pour les charges de travail avec diverses options de taille et de performance :
-* Taille : 1, 2, 4, 8 ou 12 To
-* Performance : 2, 4 ou 10 E-S/s/Go.
+* Taille : 20 à 12000 Go
+* Performances : 0.25, 2, 4 ou 10 IOPS/Go.
 * Configuration individuelle des partages de fichiers.
 
 Si vous sélectionnez l'option NFS, un partage de fichiers de 2 To et 4 IOPS/Go pour les composants de gestion est commandé.
+
+#### Stockage sur disque local
+
+L'option Disques locaux, disponible uniquement pour la configuration de processeur Quad Intel Xeon E7-8890 v4 Bare Metal **certifié SAP**, offre des configurations personnalisées avec différentes options relatives au nombre et au type de disque.
 
 ### Licences (fournies par IBM ou BYOL) et frais
 
@@ -131,7 +135,7 @@ Chaque noeud d'extension vCenter Server déployé génère des frais, imputés �
 
 ### Matériel pour les noeuds d'extension
 
-Un serveur bare metal doté de la configuration présentée dans [Spécifications techniques relatives aux instances vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
+Un serveur bare metal doté de la configuration présentée dans [Spécifications techniques relatives aux instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ### Licences et frais pour les noeuds d'extension
 
@@ -151,7 +155,7 @@ Gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés da
 
 ### Liens connexes
 
-* [Nomenclature du logiciel vCenter Server](vc_bom.html)
-* [Planification des instances vCenter Server](vc_planning.html)
-* [Commande d'instances vCenter Server](vc_orderinginstance.html)
+* [Nomenclature du logiciel vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [Planification des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 * [Stockage de fichiers et de blocs d'{{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

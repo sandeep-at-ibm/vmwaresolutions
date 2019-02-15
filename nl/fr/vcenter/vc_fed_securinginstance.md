@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -31,7 +31,8 @@ Passez en revue les informations suivantes afin de comprendre les résultats de 
 4. Cliquez sur **Sécuriser une instance**.
 5. Cliquez sur **OK** pour confirmer que vous voulez déconnecter l'instance de l'automatisation.
 
-  Avant d'exécuter cette étape, prenez soin de passer en revue les informations contenues dans la section **Avant de commencer**.{:note}
+  Avant d'exécuter cette étape, prenez soin de passer en revue les informations contenues dans la section **Avant de commencer**.
+  {:note}
 
 6. Retirez de votre environnement les services de gestion face au public VMware NSX Edge Services Gateway (ESG) et éventuellement votre ESG géré par le client et qui a été déployé au cours de l'automatisation.
 7. Réinitialisez les mots de passe ou les clés pour tous les qui sont comptes utilisés par l'automatisation IBM. Pour plus d'informations, voir [How can I secure my environment to remove access by IBM automation and support?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)
@@ -40,12 +41,12 @@ Passez en revue les informations suivantes afin de comprendre les résultats de 
 
 L'instance prend le statut **Modification en cours**.
 
-Une fois l'instance correctement sécurisée, elle prend le statut **Sécurisé** et seuls les propriétés de l'instance et l'historique de déploiement sont disponibles.
+Une fois l'instance correctement sécurisée, elle prend le statut **Sécurisé** et seules les propriétés de l'instance et l'historique de déploiement sont disponibles.
 
 ### Liens connexes
 
-* [Présentation de VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
-* [Commande d'instances VMware Federal](vc_fed_orderinginstance.html)
-* [Affichage des instances VMware Federal](vc_fed_viewinginstance.html)
-* [Suppression d'instances VMware Federal](vc_fed_deletinginstance.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
+* [Présentation de VMware Federal on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
+* [Commande d'instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [Affichage des instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Suppression d'instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

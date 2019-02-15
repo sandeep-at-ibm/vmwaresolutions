@@ -2,19 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-04"
+lastupdated: "2019-01-25"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Remarques relatives à la mise en réseau des instances Cloud Foundation
 
 Passez en revue les informations suivantes pour des détails relatifs aux remarques et exigences concernant la mise en réseau de vos instances Cloud Foundation. Prenez soin de respecter les exigences de sorte que vos instances puissent fonctionner correctement.
 
 ## Composants de mise en réseau pour les instances Cloud Foundation
+{: faq}
 
-Pour passer en revue les composants de mise en réseau inclus dans votre instance Cloud Foundation, voir [Spécifications techniques relatives aux instances Cloud Foundation](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+Pour passer en revue les composants de mise en réseau inclus dans votre instance Cloud Foundation, voir [Spécifications techniques relatives aux instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## Remarques relatives aux pare-feu
 
@@ -28,7 +31,7 @@ Cependant, si vos machines virtuelles de charge de travail ont besoin de communi
 
 Pour plus d'informations sur la configuration de NSX, voir les rubriques suivantes :
 * Pour une instance Cloud Foundation principale (unique), voir [Configuration de NSX pour des machines virtuelles de charge de travail sur VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/).
-* Pour une instance Cloud Foundation multisite, voir Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}} (https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html).
+* Pour une instance Cloud Foundation multisite, voir [Connexion sécurisée à vos charges de travail VMware privées dans {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}.
 
 ## Remarques relatives à la modification de mots de passe pour des composants NSX
 

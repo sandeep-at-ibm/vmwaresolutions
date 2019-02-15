@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,7 +18,7 @@ Deux fonctions principales sont activées lorsque vous mettez sous tension la fo
 
 ### Equilibrage de charge
 
-Avec l'équilibrage de charge, la distribution et l'utilisation des ressources d'unité centrale et de mémoire pour tous les hôtes et toutes les machines virtuelles du cluster sont surveillées en permanence. La fonction DRS compare ces métriques à une utilisation de ressource idéale en fonction des attributs des pools de ressources et des machines virtuelles du cluster et de la demande en cours. Ensuite, elle effectue ou recommande d'effectuer des migrations de machine virtuelle selon les besoins. 
+Avec l'équilibrage de charge, la distribution et l'utilisation des ressources d'unité centrale et de mémoire pour tous les hôtes et toutes les machines virtuelles du cluster sont surveillées en permanence. La fonction DRS compare ces métriques à une utilisation de ressource idéale en fonction des attributs des pools de ressources et des machines virtuelles du cluster et de la demande en cours. Ensuite, elle effectue ou recommande d'effectuer des migrations de machine virtuelle selon les besoins.
 
 Lorsqu'une machine virtuelle est mise sous tension dans le cluster pour la première fois, la fonction DRS tente de maintenir un équilibrage de charge adéquat en plaçant la machine virtuelle sur un hôte approprié ou en effectuant une recommandation. Les paramètres de placement ou de recommandation sont définis dans la section DRS Automation des paramètres du cluster.
 
@@ -37,7 +37,7 @@ Tableau 1. Paramètres d'automatisation DRS pour le cluster vSphere DRS
 
 Pour plus d'informations sur la configuration de ces paramètres dans le client Web vSphere, voir [Set a Custom Automation Level for a Virtual Machine in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-C21C0609-923B-46FB-920C-887F00DBCAB9.html).
 
-Outre le niveau d'automatisation et le seuil de migration du cluster, cette conception active l'automatisation des machines virtuelles de manière à vous permettre de définir des substitutions pour les machines virtuelles individuelles. Un contrôle granulaire plus précis des machines virtuelles vous donne la possibilité de définir des priorités pour l'équilibrage de charge des machines virtuelles.
+Outre le niveau d'automatisation e le seuil de migration du cluster, cette conception permet l'automatisation de la machine virtuelle, de manière à vous permettre de remplacer des valeurs par machine virtuelle individuelle. Un contrôle granulaire plus précis des machines virtuelles vous donne la possibilité de définir des priorités pour l'équilibrage de charge des machines virtuelles.
 
 ### Gestion de l'alimentation
 
@@ -90,4 +90,4 @@ vSphere HA utilise la fonction des signaux de présence de magasin de données p
 
 ### Liens connexes
 
-* [Présentation de la solution](../solution/solution_overview.html)
+* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

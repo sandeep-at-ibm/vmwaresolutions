@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-10-25"
 
 Le service {{site.data.keyword.IBM}} Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} fournit une solution évolutive et efficace de protection, de réutilisation et de récupération des données pour les environnements virtuels. Vous pouvez implémenter le service en tant que solution autonome ou vous pouvez l'intégrer à votre environnement IBM Spectrum Protect Plus pour décharger des copies de stockage à long terme et pour la gouvernance des données.
 
-Ce service n'est disponible que pour les instances qui exécutent vSphere 6.5 et qui sont déployées dans (ou mises à niveau vers) la version 2.2 ou des éditions ultérieures. La version {{site.data.keyword.IBM}} Spectrum Protect Plus qui est installée est la version 10.1.1 Patch 1.
+Ce service n'est disponible que pour les instances qui exécutent vSphere 6.5 et qui sont déployées dans (ou mises à niveau vers) la version 2.2 ou des éditions ultérieures. La version {{site.data.keyword.IBM}} Spectrum Protect Plus qui est installée est la version 10.1.2.
 {:note}
 
 ## Spécifications techniques relatives à IBM Spectrum Protect Plus on IBM Cloud
@@ -78,7 +78,7 @@ Passez en revue les remarques suivantes avant de retirer le service IBM Spectrum
 ### Liens connexes
 
 * [Planification préventive du service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](http://www.ibm.com/support/docview.wss?uid=swg22012650)
-* [Gestion d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](managingspp.html)
-* [Commande d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](spp_ordering.html)
+* [Gestion d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingspp.html)
+* [Commande d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_ordering.html)
 * [Documentation IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

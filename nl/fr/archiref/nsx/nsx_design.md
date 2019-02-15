@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,4 +45,4 @@ Alors que cela facilite la configuration d'une infrastructure connectée au nive
 
 ### Liens connexes
 
-* [Présentation de la solution](../solution/solution_overview.html)
+* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

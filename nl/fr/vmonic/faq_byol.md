@@ -2,35 +2,42 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-24"
+lastupdated: "2019-01-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Foire aux questions sur l'octroi de licence et le mode BYOL
 
 Trouvez des réponses aux questions concernant l'octroi de licence, y compris la fonction BYOL d'{{site.data.keyword.vmwaresolutions_full}}.
 
 ## Qu'est-ce que BYOL ?
+{: faq}
 
-Bring Your Own License, ou BYOL, est une fonction disponible pour les instances VMware Cloud Foundation en V1.8 et dans des éditions ultérieures et pour les clusters vCenter Server et vSphere en V2.0 et dans des éditions ultérieures. La fonction BYOL vous permet d'utiliser vos propres licences VMware pour un ou plusieurs des composants logiciels VMware suivants lorsque vous commandez des instances :
+Bring Your Own License, ou BYOL, est une fonction disponible pour les instances VMware Cloud Foundation en V1.8 et dans des éditions ultérieures et pour les clusters VMware vCenter Server et vSphere en V2.0 et dans des éditions ultérieures. La fonction BYOL vous permet d'utiliser vos propres licences VMware pour un ou plusieurs des composants logiciels VMware suivants :
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
 * VMware vSAN
 
-Si vous choisissez d'utiliser votre propre licence pour un composant VMware et de fournir une clé de licence valide pour celui-ci, aucune licence n'est commandée auprès d'IBM pour ce composant et aucun frais de licence mensuel n'est facturé sur votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) pour ce composant.
+Si vous choisissez d'utiliser votre propre licence pour un composant VMware et de fournir une clé de licence valide pour celui-ci, aucune licence n'est commandée auprès d'IBM pour ce composant et aucun frais de licence mensuel n'est facturé sur votre compte d'infrastructure {{site.data.keyword.cloud_notm}} pour ce composant.
 
-**Remarque :** cette fonction BYOL n'est pas disponible pour les partenaires commerciaux.
+La fonction BYOL n'est pas disponible pour les partenaires commerciaux.
+{:note}
 
 ## Où puis-je gérer les licences et les composants commandés via VMware vSphere on IBM Cloud ?
 
-Une fois que vous avez passé une commande de création d'un nouveau cluster pour VMware vSphere on {{site.data.keyword.cloud_notm}}, les licences VMware, les serveurs ESXi et les autres composants de réseau sont distribués et peuvent être gérés depuis le portail {{site.data.keyword.slportal}}.
+Une fois que vous avez passé une commande de création d'un nouveau cluster pour VMware vSphere on {{site.data.keyword.cloud_notm}}, les licences VMware, les serveurs ESXi et les autres composants de réseau sont distribués et peuvent être gérés depuis {{site.data.keyword.slportal}}.
 
-Après le déploiement, accédez à la console {{site.data.keyword.vmwaresolutions_short}} afin de mettre à l'échelle le nouveau cluster à l'aide de la configuration enregistrée. Pour plus d'informations sur la mise à l'échelle, voir [Mise à l'échelle de clusters vSphere existants](../vsphere/vs_scalingexistingclusters.html).
+Après le déploiement, accédez à la console {{site.data.keyword.vmwaresolutions_short}} afin de mettre à l'échelle le nouveau cluster à l'aide de la configuration enregistrée. Pour plus d'informations, voir [Mise à l'échelle de clusters existants](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html).
 
-## Quelles éditions de licence et quantités d'UC sont nécessaires pour BYOL ?
+## Quelles éditions de licence et UC sont nécessaires pour BYOL ?
 
 Les exigences suivantes s'appliquent aux éditions de licence pour BYOL.
 
@@ -70,21 +77,28 @@ Non. Notre accord avec VMware implique que vous devez accepter la clé de licenc
 
 ## Puis-je utiliser la fonction BYOL pour certains composants VMware et acheter des licences mensuelles pour d'autres ?
 
-Oui. Vous pouvez utiliser la fonction BYOL ou acheter des licences pour toute combinaison des quatre composants VMware. La console {{site.data.keyword.vmwaresolutions_short}} vous simplifie la sélection de l'option de licence lorsque vous commandez une instance vCenter Server ou Cloud Foundation. Votre option de licence lors de la commande de l'instance initiale s'applique à toute la durée de vie de cette instance.
+Oui. Vous pouvez utiliser la fonction BYOL ou acheter des licences pour toute combinaison des quatre composants VMware. La console {{site.data.keyword.vmwaresolutions_short}} vous simplifie la sélection de l'option de licence lorsque vous commandez une instance. Votre option de licence lors de la commande de l'instance initiale s'applique à toute la durée de vie de cette instance.
 
 ## Pour un composant VMware spécifique, puis-je utiliser BYOL pour certaines licences et acheter les autres licences à IBM ?
 
-Oui. Si vous avez sélectionné BYOL pour un composant VMware spécifique, vous avez la possibilité lors de la création d'un nouveau cluster d'entrer une nouvelle clé BYOL, de continuer à utiliser une clé BYOL existante ou d'acheter une licence fournie par IBM pour ce cluster. Actuellement, seuls VMware vSphere Enterprise et VMware vSAN sont disponibles pour un octroi de licence par cluster.
+Oui. Si vous avez sélectionné BYOL pour un composant VMware spécifique lors de la création d'un cluster, vous disposez des options suivantes :
+* Entrer une nouvelle clé BYOL
+* Continuer à utiliser une clé BYOL existante
+* Acheter une licence IBM pour ce cluster.
 
-## Puis-je utiliser BYOL lors de la création d'un nouveau cluster ?
+Actuellement, seuls VMware vSphere Enterprise et VMware vSAN peuvent être utilisés sous licence par cluster.
 
-Oui. Vous pouvez utiliser BYOL à partir de licences BYOL existantes ou entrer une nouvelle BYOL lors de la création d'un nouveau cluster. Vous avez également la possibilité d'acquérir une licence d'abonnement IBM lors de la création d'un nouveau cluster. Actuellement, seuls VMware vSphere Enterprise et VMware vSAN sont disponibles pour un octroi de licence par cluster.
+## Puis-je utiliser BYOL lors de la création d'un cluster ?
+
+Oui. Vous pouvez utiliser BYOL à partir de licences BYOL existantes ou entrer une nouvelle BYOL lors de la création d'un cluster. Vous avez également la possibilité d'acquérir une licence d'abonnement IBM lors de la création d'un cluster.
+
+Actuellement, seuls VMware vSphere Enterprise et VMware vSAN peuvent être utilisés sous licence par cluster.
 
 ## Comment puis-je gérer mes licences BYOL ?
 
 Vous pouvez gérer vos licences BYOL à l'aide du client Web VMware vSphere une fois le déploiement de l'instance terminé.
 
-## Si j'ajoute d'autres serveurs ESXi à mon instance ultérieurement, est-ce que l'instance vérifie si la capacité de mes licences BYOL est suffisante ?
+## Si j'ajoute d'autres serveurs ESXi à mon instance ultérieurement, est-ce que l'instance vérifie si mes licences BYOL ont suffisamment de capacité ?
 
 Oui. Lorsque vous ajoutez des serveurs ESXi à une instance déployée, la capacité de vos licences BYOL est automatiquement vérifiée par rapport au nombre de serveurs ESXi spécifié. Si cette capacité n'est pas suffisante, les serveurs ESXi ne sont pas ajoutés et vous recevez une notification sur la console.
 
@@ -93,7 +107,7 @@ Oui. Lorsque vous ajoutez des serveurs ESXi à une instance déployée, la capac
 Pour identifier le nombre d'UC utilisables avec votre clé de licence, procédez comme suit :
 1. Accédez à la page **Instances déployées**.
 2. Localisez et cliquez sur l'instance.
-3. Sur l'onglet **Infrastructure**, cliquez sur le cluster pour lequel vous désirez vérifier la capacité de licence. 
+3. Sur l'onglet **Infrastructure**, cliquez sur le cluster pour lequel vous désirez vérifier la capacité de licence.
    Le nombre d'UC disponibles est indiqué dans le tableau **Licence fournie par l'utilisateur**.
 
 ## Est-ce que je bénéficie du support IBM lorsque je sélectionne l'option de licence BYOL ?
@@ -140,8 +154,7 @@ Bien que vCenter Server with Hybridity Bundle inclut l'édition NSX Advanced, vo
 
 ### Liens connexes
 
-* [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
-* [Instances Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
-* [Accès à la console](loginmethod.html)
-* [Contacter le support IBM](trbl_support.html)
-* [vRealize Automation](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/vRealizeAutomation){:new_window}
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Accès à la console](/docs/services/vmwaresolutions/vmonic/loginmethod.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

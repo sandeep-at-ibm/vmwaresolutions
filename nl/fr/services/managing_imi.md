@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -36,6 +36,6 @@ Un représentant du service commercial IMI vous contacte à l'aide de vos inform
 
 ### Liens connexes
 
-* [Commande, affichage et retrait de services pour des instances Cloud Foundation](../sddc/sd_addingremovingservices.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
-* [Foire aux questions](../vmonic/faq.html)
+* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)

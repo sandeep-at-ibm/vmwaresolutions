@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -32,11 +32,11 @@ L'automatisation d'{{site.data.keyword.cloud}} déploie trois contrôleurs NSX d
 
 ### NSX Edge/DLR
 
-Des paires de passerelles NSX ESG (Edge Services Gateway) sont déployées. Dans tous les cas, une paire de passerelles est utilisée pour le trafic sortant des composants d'automatisation qui résident sur le réseau privé. Pour vCenter Server et {{site.data.keyword.cloud_notm}} Private (ICP), une seconde passerelle, appelée serveur de périphérie géré ICP, est déployée et configurée avec une liaison montante au réseau public et une interface qui est affectée au réseau privé. Les composants NSX requis, tels que le routeur DLR (Distributed Logical Router), les commutateurs logiques et les pare-feu peuvent être configurés par l'administrateur. Le [guide de mise en réseau de vCenter Server](../vcsnsxt/vcsnsxt-intro.html) contient davantage de détails relatifs à la conception du réseau.
+Des paires de passerelles NSX ESG (Edge Services Gateway) sont déployées. Dans tous les cas, une paire de passerelles est utilisée pour le trafic sortant des composants d'automatisation qui résident sur le réseau privé. Pour vCenter Server et {{site.data.keyword.icpfull_notm}}, une seconde passerelle, appelée serveur de périphérie géré ICP, est déployée et configurée avec une liaison montante au réseau public et une interface qui est affectée au réseau privé. Les composants NSX requis, tels que le routeur DLR (Distributed Logical Router), les commutateurs logiques et les pare-feu peuvent être configurés par l'administrateur. Le [guide de mise en réseau de vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html) contient davantage de détails relatifs à la conception du réseau.
 
-Le tableau ci-après répertorie les spécifications ESG/DLR pour ICP.
+Le tableau ci-après répertorie les spécifications ESG / DLR pour {{site.data.keyword.icpfull_notm}}.
 
-Tableau 1. Spécifications ESG pour ICP
+Tableau 1. Spécifications ESG pour {{site.data.keyword.icpfull_notm}}
 
 Attribut  |  Spécification
 --|--
@@ -44,7 +44,7 @@ Edge Service Gateway  |  Dispositif virtuel
 Edge size	Large |   Nombre de vCPU	2
 Memory	| Disque 1 Go	| 1000 Go sur magasin de données local
 
-Tableau 2. Spécifications DLR pour ICP
+Tableau 2. Spécifications DLR pour {{site.data.keyword.icpfull_notm}}
 
 Attribut  |  Spécification
 --|--|
@@ -52,11 +52,11 @@ Distributed Logical Router | 	Dispositif virtuel
 Edge size	Compact | Nombre de vCPU	1
 Memory	| Disque de 512 Mo	| 1000 Go sur magasin de données local
 
-## Composants ICP
-ICP est une plateforme applicative pour le développement et la gestion sur site d'applications conteneurisées. Il s'agit d'un environnement intégré pour la gestion de conteneurs qui inclut l'orchestrateur de conteneurs Kubernetes, un registre d'images privé, une console de gestion, ainsi que des infrastructures préfabriquées de surveillance.
+## Composants IBM Cloud Private
+{{site.data.keyword.icpfull_notm}} est une plateforme applicative pour le développement et la gestion sur site d'applications conteneurisées. Il s'agit d'un environnement intégré pour la gestion de conteneurs qui inclut l'orchestrateur de conteneurs Kubernetes, un registre d'images privé, une console de gestion, ainsi que des infrastructures préfabriquées de surveillance.
 
-Figure 2. Déploiement ICP virtuel avec vCenter Server
-![Déploiement ICP virtuel avec VCS](vcsicp-virtual-icp-deployment-vcs.svg)
+Figure 2. Déploiement {{site.data.keyword.icpfull_notm}} virtuel avec vCenter Server
+![Virtual {{site.data.keyword.icpfull_notm}} - Déploiement avec VCS](vcsicp-virtual-icp-deployment-vcs.svg)
 
 ###	Noeud d'amorçage
 
@@ -76,15 +76,15 @@ Un noeud proxy est un noeud qui transmet une demande externe aux services créé
 
 ### Noeud de gestion
 
-Un noeud de gestion est un noeud facultatif qui héberge uniquement des services de gestion, tels que la surveillance, le décompte et la consignation. Configurer des noeuds de gestion dédiés vous permet d'éviter que le noeud maître ne soit en surcharge. Vous pouvez activer le noeud de gestion uniquement lors de l'installation d'ICP. 
+Un noeud de gestion est un noeud facultatif qui héberge uniquement des services de gestion, tels que la surveillance, le décompte et la consignation. Configurer des noeuds de gestion dédiés vous permet d'éviter que le noeud maître ne soit en surcharge. Vous pouvez activer le noeud de gestion uniquement lors de l'installation d'{{site.data.keyword.icpfull_notm}}.
 
 ###	Noeud Vulnerability Advisor
 
 Un noeud Vulnerability Advisor est un noeud facultatif, utilisé pour l'exécution des services Vulnerability Advisor. Les services Vulnerability Advisor consomment un grand nombre de ressources. Si vous utilisez des services Vulnerability Advisor, spécifiez un noeud VA dédié.
 
-Spécifications de machine virtuelle requises pour une instance ICP à haute disponibilité :
+Spécifications de machine virtuelle requises pour une instance {{site.data.keyword.icpfull_notm}} à haute disponibilité :
 
-Tableau 3. Spécifications de machine virtuelle ICP
+Tableau 3. Spécifications de machine virtuelle {{site.data.keyword.icpfull_notm}}
 
 Noeud | 	Instances	| IP	| UC	| Mémoire RAM (Go)	| Disque (Go)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -97,7 +97,7 @@ Worker	| 3-6	| IP (x3)	|4-8	|4	|150
 
 CAM requiert une configuration d'UC virtuelle et de mémoire plus élevée pour les noeuds worker.
 
-Tableau 4. Spécifications de machine virtuelle ICP
+Tableau 4. Spécifications de machine virtuelle {{site.data.keyword.icpfull_notm}}
 
 Noeud | 	Instances	| IP	| UC	| Mémoire RAM (Go)	| Disque (Go)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -105,7 +105,7 @@ worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 ## Composants CAM
 
-{{site.data.keyword.cloud_notm}} Automation Manager (CAM) est une plateforme de gestion libre-service multi-cloud qui s'exécute sur ICP et permet aux développeurs et aux administrateurs de répondre aux besoins de l'entreprise. 
+{{site.data.keyword.cloud_notm}} Automation Manager (CAM) est une plateforme de gestion libre-service multi-cloud qui s'exécute sur {{site.data.keyword.icpfull_notm}} et permet aux développeurs et aux administrateurs de répondre aux besoins de l'entreprise.
 
 Fig 3. Référence des composants CAM
 ![Référence des composants CAM](vcsicp-cam-component-ref.svg)
@@ -116,7 +116,7 @@ Fournit un accès proxy nginx dans CAM.
 
 ### Interface utilisateur CAM
 
-Les composants d'interface utilisateur sont répartis entre plusieurs conteneurs. Ils sont inclus dans l'interface utilisateur Connexions au cloud, l'interface utilisateur Bibliothèque de modèles et l'interface utilisateur Instances déployées. 
+Les composants d'interface utilisateur sont répartis entre plusieurs conteneurs. Ils sont inclus dans l'interface utilisateur Connexions au cloud, l'interface utilisateur Bibliothèque de modèles et l'interface utilisateur Instances déployées.
 
 ### API CAM
 
@@ -128,7 +128,7 @@ Conteneur avec les fichiers binaires requis pour déployer des graphiques helm d
 
 ### Terraform
 
-Conteneur avec les fichiers binaires requis pour déployer des ressources Terraform dans plus d'un cloud. 
+Conteneur avec les fichiers binaires requis pour déployer des ressources Terraform dans plus d'un cloud.
 
 ### Journaux
 
@@ -152,4 +152,4 @@ Base de données de l'application Template Designer.
 
 ### Liens connexes
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

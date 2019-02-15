@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-12"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ Passez en revue les exigences suivantes avant de commander vos instances NetApp 
 
 ## Exigences liées au compte IBM Cloud
 
-Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Disponibilité du centre de données IBM Cloud
 
@@ -57,5 +57,5 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instan
 
 ### Liens connexes
 
-* [Présentation de NetApp ONTAP Select](np_netappoverview.html)
-* [Commande d'instances NetApp ONTAP Select](np_orderinginstances.html)
+* [Présentation de NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
+* [Commande d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)

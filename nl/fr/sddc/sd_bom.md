@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -32,9 +32,9 @@ Tableau 2. Nomenclature des composants logiciels des instances Cloud Foundation
 
 | Fabricant | Composant                                | Version      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 Update 2c (jusqu'au niveau de module de correction ESXi650-201808001) |
-| VMware       | vCenter Server Appliance                 | 6.5 Update 2c |
-| VMware       | Contrôleur PSC (Platform Services Controller)             | 6.5 Update 2c |
+| VMware       | vSphere ESXi                             | 6.5 Update EP11 (build 6.5.0-10719125) |
+| VMware       | vCenter Server Appliance                 | 6.5 U2c (build 6.5.0-9451637) |
+| VMware       | Contrôleur PSC (Platform Services Controller)             | 6.5 U2c (build 6.5.0-9451637) |
 | VMware       | vSAN                                     | 6.6.1        |
 | VMware       | NSX for vSphere                          | 6.4.1        |
 | VMware       | Gestionnaire SDDC                             | 2.4          |
@@ -58,7 +58,8 @@ Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les inst
 | Queue Full Sample Size | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | Queue Full Threshold | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
-**Remarques :**
+### Remarques
+
 * Le paramètre **MaxVolumes** est obligatoire pour le service IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} car ce service risque d'utiliser plus que le nombre de montages NFS par défaut sur le serveur ESXi.
 * La valeur **Non défini** d'un paramètre de configuration indique que le nouveau paramètre n'est pas automatiquement appliqué car il nécessite un réamorçage des serveurs ESXi, ce qui risque de provoquer une interruption.
 
@@ -71,5 +72,5 @@ Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les inst
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Feuille de données de protection de VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Présentation de Cloud Foundation](sd_cloudfoundationoverview.html)
-* [Planification des instances Cloud Foundation](sd_planning.html)
+* [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Planification des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)

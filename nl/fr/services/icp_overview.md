@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -47,9 +47,9 @@ Tableau 2. Besoins en ressources d'{{site.data.keyword.cloud_notm}} Private Host
 | Worker     | 4 | 16 | 200 | 300 | 6 |
 | Vulnerability Advisor | 8 | 16 | 500 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| Bootstrap ICP/CAM | 16 | 32 | 250 | 1 | 1 |
+| Amorçage {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 | 1 | 1 |
 | Serveur NFS | 8 | 4  | 350 | 1 | 1 |
-|Passerelle NSX ESG (Edge Services Gateway)| 2 | 1 | 0,5 | 0,5 | 2 |
+| Passerelle NSX ESG (Edge Services Gateway) | 2 | 1 | 0,5 | 0,5 | 2 |
 | Contraintes documentées | 52 | 640 |  | 8 000 |   |
 
 Tableau 3. Besoins en ressources d'{{site.data.keyword.cloud_notm}} Private Hosted dans l'environnement Développement/Test
@@ -63,9 +63,9 @@ Tableau 3. Besoins en ressources d'{{site.data.keyword.cloud_notm}} Private Host
 | Worker     | 4 | 16 | 200 | 300 | 3 |
 | Vulnerability Advisor | 8 | 16 | 150 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| Bootstrap ICP/CAM | 16 | 32 | 250 | 1 | 1 |
+| Amorçage {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 | 1 | 1 |
 | Serveur NFS | 8 | 4  | 350 | 1 | 1 |
-|Passerelle NSX ESG (Edge Services Gateway)| 2 | 1 | 0,5 | 0,5 | 2 |
+| Passerelle NSX ESG (Edge Services Gateway) | 2 | 1 | 0,5 | 0,5 | 2 |
 | Contraintes documentées | 30 | 200 |  | 4 000 |  |
 
 ### Formules de calcul des exigences d'espace pour IBM Cloud Private Hosted
@@ -83,9 +83,9 @@ Tableau 4. Description des variables de la formule 1
 | AvailableCores |	Nombre de coeurs réels disponibles pour les charges de travail et les services dans l'environnement |	Coeurs |	38	| 43 |
 | HostCount	| Nombre d'hôtes dans le cluster par défaut	| Hôtes | 4	| 4 |
 | HostCoreCount	| Nombre de coeurs bruts disponibles dans chaque hôte dans le cluster par défaut |	Coeurs |	16 | 16 |
-| HostOverheadCores	| Nombre de coeurs réservés par le serveur ESXi comme surcharge, égal à 0,1 coeur | Coeurs | 0,1 |	0,1 |
-| MgmtOverheadCores | Nombre de coeurs réservés par les composants de gestion vCenter Server (vCenter Server, PSC, AD/DNS, Edges), égal à cinq coeurs | Coeurs | 5	| 5 |
-| vSphereHAHostTolerance |	Nombre d'hôtes à tolérer dans la configuration vSphere HA, égal à un hôte |	Hôtes | 1 | 1 |
+| HostOverheadCores	| Nombre de coeurs réservés par le serveur ESXi comme surcharge, égal à 0,1 coeur	| Coeurs	| 0,1 |	0,1 |
+| MgmtOverheadCores | Nombre de coeurs réservés par les composants de gestion vCenter Server (vCenter Server, PSC, AD/DNS, Edges), égal à cinq coeurs	| Coeurs	| 5	| 5 |
+| vSphereHAHostTolerance |	Nombre d'hôtes à tolérer dans la configuration vSphere HA, égal à un hôte |	Hôtes	 | 1 | 1 |
 | HostVsanOverheadCorePercentage | Pourcentage de coeurs d'un hôte utilisé par vSAN, égal à 10 % ou à 0 % pour un hôte hors VSAN | % | 10 % |	0 % |
 
 #### Formule 2
@@ -97,28 +97,28 @@ Tableau 5. Description des variables de la formule 2
 | Variables	| Description |	Unité |	Exemple vSAN | Exemple NFS |
 |:--------- |:----------- |:---- |:------------- |:----------- |
 | AvailableMemory	| Nombre de Go de mémoire disponible pour les charges de travail et les services dans l'environnement | Go | 	693	| 860 |
-| HostCount	| Nombre d'hôtes dans le cluster par défaut | Hôtes | 6	| 6 |
+| HostCount	| Nombre d'hôtes dans le cluster par défaut | Hôtes  | 6	| 6 |
 | HostMemory |	Nombre de Go de mémoire bruts disponibles dans chaque hôte dans le cluster par défaut |	Go	| 192 |	192 |
 | HostVsanCapacityDiskSize | Nombre de Go de capacité de chaque disque SSD vSAN sur cet hôte, égal à 960, 1946 ou 3891, ou égal à 0 Go pour un hôte hors VSAN | Go |	960 | 0 |
 | HostOverheadMemory |	Nombre de Go de mémoire réservés par le serveur ESXi comme surcharge, égal à 4,6 Go |	Go	| 4,6 |	4,6 |
 | MgmtOverheadMemory |	Nombre de Go de mémoire réservés par les composants de gestion vCenter Server (vCenter Server, PSC, AD/DNS, Edges), égal à 77 Go | Go | 77 | 77 |
-| vSphereHAHostTolerance |Nombre d'hôtes à tolérer dans la configuration vSphere HA, égal à un hôte |Hôtes | 1 | 1 |
-| HostVsanOverheadMemoryDiskPercentage | Nombre de Go de mémoire réservés par les composants vSAN (représenté en tant que pourcentage de l'un des disques vSAN de capacité), égal à 2,75 %|	% | 2,75%	| 2,75% |
-| HostVsanOverheadMemory |Nombre de Go de mémoire réservés par la gestion vSAN quelle que soit la taille du disque, égal à 7 Go ou à 0 Go pour un hôte hors VSAN | Go |  7	| 0 |
+| vSphereHAHostTolerance | Nombre d'hôtes à tolérer dans la configuration vSphere HA, égal à un hôte | Hôtes	| 1 | 1 |
+| HostVsanOverheadMemoryDiskPercentage | Nombre de Go de mémoire réservés par les composants vSAN (représenté en tant que pourcentage de l'un des disques vSAN de capacité), égal à 2,75 % |	% | 2,75%	| 2,75% |
+| HostVsanOverheadMemory | Nombre de Go de mémoire réservés par la gestion vSAN quelle que soit la taille du disque, égal à 7 Go ou à 0 Go pour un hôte hors VSAN	| Go |  7	| 0 |
 
 ## Considérations à prendre en compte lorsque vous installez IBM Cloud Private Hosted
 
 * Procurez-vous la licence requise avant d'installer le service {{site.data.keyword.cloud_notm}} Private Hosted.Nous vous conseillons de vérifier que votre licence peut prendre en charge non seulement le déploiement {{site.data.keyword.cloud_notm}} Private Hosted initial, mais également la future extension de taille d'{{site.data.keyword.cloud_notm}} Private Hosted dans votre infrastructure.
 * Pour les déploiements {{site.data.keyword.cloud_notm}} Private Hosted en environnement prêt pour la production, 64 Go de mémoire RAM par hôte ne sont pas pris en charge. Par conséquent, vous devez sélectionner une option de plus de 64 Go pour la mémoire **RAM**.
-* Avant l'installation du service {{site.data.keyword.cloud_notm}} Private Hosted dans votre environnement, la capacité disponible sur le cluster par défaut dans l'environnement est vérifiée afin de s'assurer qu'il y aura suffisamment de place pour les composants de service. Si la vérification de la capacité échoue, le service n'est pas installé et l'état **La validation de la capacité a échoué** apparaît sur la console pour le service. De plus, un message de console contenant davantage de détails apparaît et vous êtes averti par courrier électronique. Pour installer le service, vous devez augmenter la capacité dans votre cluster par défaut en ajoutant d'autres hôtes ou en libérant de la mémoire RAM, de l'UC ou de l'espace disque, puis vous devez rajouter le service dans la console. Après cela, vous pouvez retirer le service qui est à l'état **La validation de la capacité a échoué** en cliquant sur l'icône **Supprimer** figurant en regard de son nom. 
+* Avant l'installation du service {{site.data.keyword.cloud_notm}} Private Hosted dans votre environnement, la capacité disponible sur le cluster par défaut dans l'environnement est vérifiée afin de s'assurer qu'il y aura suffisamment de place pour les composants de service. Si la vérification de la capacité échoue, le service n'est pas installé et l'état **La validation de la capacité a échoué** apparaît sur la console pour le service. De plus, un message de console contenant davantage de détails apparaît et vous êtes averti par courrier électronique. Pour installer le service, vous devez augmenter la capacité dans votre cluster par défaut en ajoutant d'autres hôtes ou en libérant de la mémoire RAM, de l'UC ou de l'espace disque, puis vous devez rajouter le service dans la console. Après cela, vous pouvez retirer le service qui est à l'état **La validation de la capacité a échoué** en cliquant sur l'icône **Supprimer** figurant en regard de son nom.
 
 ## Considérations à prendre en compte lorsque vous retirez IBM Cloud Private Hosted
 
-* {{site.data.keyword.cloud_notm}} supprime uniquement les machines virtuelles qui ont été déployées durant l'installation initiale du service {{site.data.keyword.cloud_notm}} Private Hosted. Tout noeud qui est déployé après l'installation ne sera pas nettoyé. 
+* {{site.data.keyword.cloud_notm}} supprime uniquement les machines virtuelles qui ont été déployées durant l'installation initiale du service {{site.data.keyword.cloud_notm}} Private Hosted. Tout noeud qui est déployé après l'installation ne sera pas nettoyé.
 * {{site.data.keyword.cloud_notm}} supprimera le réseau VXLAN, le routeur DLR et la passerelle de périphérie qui ont été créés durant le déploiement initial du service {{site.data.keyword.cloud_notm}} Private Hosted. Les machines virtuelles que vous avez déployées sur le réseau VXLAN perdent la connectivité une fois le retrait du service {{site.data.keyword.cloud_notm}} Private Hosted commencé.
 
 ### Liens connexes
 
-* [Commande d'IBM Cloud Private Hosted](../services/icp_ordering.html)
-* [Guide vCenter Server et IBM Cloud Private](../archiref/vcsicp/vcsicp-intro.html)
+* [Commande d'IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services/icp_ordering.html)
+* [Guide vCenter Server et IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
 * [Ouvrir un ticket au sujet d'IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=fr_FR)

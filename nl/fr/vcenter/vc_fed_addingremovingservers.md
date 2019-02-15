@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,7 +18,8 @@ Vous pouvez accroître ou réduire la capacité de votre instance VMware Federal
 
 Si votre cluster principal dispose d'un stockage vSAN, l'ajout d'un ou plusieurs serveurs ESXi après le déploiement permet d'augmenter la capacité de stockage du cluster.
 
-Cette fonction n'est disponible que pour les instances VMware Federal qui n'ont pas été sécurisées.{:note}
+Cette fonction n'est disponible que pour les instances VMware Federal qui n'ont pas été sécurisées.
+{:note}
 
 ## Ajout de serveurs ESXi à des instances VMware Federal
 
@@ -70,7 +71,7 @@ Cette fonction n'est disponible que pour les instances VMware Federal qui n'ont 
 
 ### Liens connexes
 
-* [Exigences et planification pour les instances VMware Federal](vc_fed_planning.html)
-* [Ajout, affichage et suppression de clusters pour des instances VMware Federal](fed_addviewdeleteclusters.html)
+* [Exigences et planification pour les instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
+* [Ajout, affichage et suppression de clusters pour des instances VMware Federal](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
 * [Activer le mode maintenance sur un hôte](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

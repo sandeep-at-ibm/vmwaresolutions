@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,7 @@ Auparavant, le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLay
 
 Le compte d'infrastructure {{site.data.keyword.cloud_notm}} que vous utilisez doit détenir certaines autorisations pour être à même de commander les composants de vos instances et d'effectuer des opérations en votre nom. Les autorisations requises sont applicables à tous les types d'instances et services que vous commandez depuis la console {{site.data.keyword.vmwaresolutions_short}}.
 
-Les utilisateurs autorisés peuvent vérifier et mettre à jour les autorisations d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} sur le portail {{site.data.keyword.slportal}}. Pour plus d'informations, voir [Edition des autorisations de portail client d'un utilisateur](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
+Les utilisateurs autorisés peuvent vérifier et mettre à jour les autorisations d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} sur le portail {{site.data.keyword.slportal}}. Pour plus d'informations, voir [Edition des autorisations de portail client d'un utilisateur](/docs/customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
 
 Tableau 1. Autorisations requises pour le compte d'infrastructure {{site.data.keyword.cloud_notm}}
 
@@ -45,12 +45,19 @@ Tableau 1. Autorisations requises pour le compte d'infrastructure {{site.data.ke
 | Affichage des mots de passe | Ce droit est nécessaire pour pouvoir administrer les instances de serveur virtuel commandées. |
 | Gestion de la surveillance du serveur | Ce droit n'est pas nécessaire pour passer une commande mais il l'est pour extraire et valider le statut de surveillance des serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} sur lesquels les serveurs VMware ESXi exécutent votre instance. |
 
-## Spanning de réseaux locaux virtuels (VLAN) pour les comptes classiques (non VRF)
+## Exigences relatives à Virtual Routing and Forwarding (VRF)
 
-Si vous utilisez un compte d'infrastructure {{site.data.keyword.cloud_notm}} classique (non VRF), le spanning VLAN doit être activé. S'il ne l'est pas pour les comptes classiques, les divers composants de l'environnement de virtualisation VMware risquent de ne pas pouvoir communiquer entre eux. Pour activer le spanning VLAN dans votre compte d'infrastructure {{site.data.keyword.cloud_notm}}, voir [Spanning VLAN](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+Le compte d'infrastructure {{site.data.keyword.cloud_notm}} doit être un compte VRF ou, s'il s'agit d'un compte non VRF, le spanning VLAN doit être activé. Pour plus d'informations sur la conversion de votre compte de non VRF en VRF, voir [Présentation de VRF on IBM Cloud](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html).
+
+## Spanning VLAN pour les comptes non VRF
+
+Si vous utilisez un compte d'infrastructure {{site.data.keyword.cloud_notm}} non VRF, le spanning VLAN doit être activé. Si le spanning VLAN n'est pas activé pour les comptes non VRF, les divers composants de l'environnement de virtualisation VMware risquent de ne pas pouvoir communiquer entre eux. 
+
+Pour activer le spanning VLAN dans votre compte, voir [Spanning VLAN](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ### Liens connexes
 
-* [Exigences pour les instances Cloud Foundation](../sddc/sd_planning.html)
-* [Exigences pour les instances vCenter Server](../vcenter/vc_planning.html)
-* [Paramètres et comptes utilisateur](useraccount.html)
+* [Exigences pour les instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Exigences pour les instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [Paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [Présentation de VRF on IBM Cloud](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -18,7 +18,7 @@ La console {{site.data.keyword.vmwaresolutions_full}} détecte et répertorie r�
 
 Une mise à jour disponible est un enregistrement dans la liste des mises à jour logicielles disponibles de l'instance, qui peut être appliquée immédiatement ou planifiée pour une application ultérieure. La mise à jour est une offre groupée qui contient un ou plusieurs packages pour la mise à jour des composants de gestion IBM et des composants VMware.
 
-A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](../vmonic/relnotes_v25.html).
+A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
 {:note}
 
 ## Avant de commencer
@@ -109,11 +109,11 @@ Tableau 1. Niveaux de mise à jour et impact
       </tr>
     </table>
 
-6. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](../vmonic/trbl_support.html) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à reprendre la mise à niveau à partir de l'étape où elle a échoué.
+6. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à reprendre la mise à niveau à partir de l'étape où elle a échoué.
 
 ### Liens connexes
 
-* [Présentation de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
-* [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
-* [Foire aux questions](../vmonic/faq.html)
+* [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)

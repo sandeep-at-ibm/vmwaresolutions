@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -15,7 +15,7 @@ Les notifications vous permettent de vérifier le statut des opérations systèm
 ## Affichage des notifications
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Notifications** dans le panneau de navigation de gauche.
-2. Affichez le récapitulatif de toutes les notification. 
+2. Affichez le récapitulatif de toutes les notification.
 
    Tableau 1. Historique des notifications
 
@@ -73,5 +73,5 @@ Par défaut, toutes les notifications non lues s'affichent. Vous pouvez filtrer 
 
 ### Liens connexes
 
-* [Foire aux questions](faq.html)
-* [Paramètres et comptes utilisateur](useraccount.html)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html)

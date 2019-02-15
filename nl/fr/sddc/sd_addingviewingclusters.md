@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -20,7 +20,8 @@ Les serveurs ESXi que vous avez configurés lors de la commande d'une instance s
 
 Vous pouvez ajouter vos propres clusters à vos instances VMware Cloud Foundation afin d'étendre la capacité de calcul et de stockage. Au sein d'un cluster, vous pouvez gérer des serveurs ESXi afin d'optimiser l'allocation des ressources et la haute disponibilité. Lorsque vous n'en avez plus besoin, vous pouvez supprimer les clusters que vous avez ajoutés à vos instances.
 
-**Disponibilité :**
+## Disponibilité
+
 * La fonction d'ajout de cluster est disponible uniquement pour les instances qui ont été déployées dans (ou mises à niveau vers) la version 2.0 et des éditions ultérieures.
 * La fonction de suppression de cluster est disponible uniquement pour les instances qui ont été déployées dans (ou mises à niveau vers) la version 2.3 et des éditions ultérieures.  
 
@@ -75,13 +76,19 @@ Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 | Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+| Quad Intel Xeon E7-4820 v4/40 coeurs au total, 1,9 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
+| Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 
 ### Paramètres de stockage vSAN
 
 Pour les configurations de serveur bare metal **Skylake** et **Broadwell**, vous pouvez personnaliser le stockage vSAN en spécifiant les paramètres suivants :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
-* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+
+  L'option **Hautes performances Intel Optane** est disponible uniquement pour les modèles d'UC Skylake Dual Intel Xeon Gold 5120 et Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 
 ### Paramètres d'octroi de licence
@@ -101,9 +108,9 @@ Vous pouvez spécifier les options d'octroi de licence pour les composants VMwar
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche et cliquez sur **Ajouter** en haut à droite du tableau **CLUSTERS**.
 4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
 5. Si vous souhaitez héberger le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui dans lequel l'instance est hébergée, sous **Serveur bare metal**, cochez la case **Sélectionner un autre emplacement** et choisissez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel héberger l'instance.
-6. Sélectionnez la configuration de serveur bare metal, puis renseignez les zones **Modèle UC** et **Mémoire RAM**. 
+6. Sélectionnez la configuration de serveur bare metal, puis renseignez les zones **Modèle UC** et **Mémoire RAM**.
 7. Procédez à la configuration du stockage :
-   1. Spécifiez les types de disque pour les disques de cache et de capacité vSAN, ainsi que le nombre de disques. 
+   1. Spécifiez les types de disque pour les disques de cache et de capacité vSAN, ainsi que le nombre de disques.
    2. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 8. Spécifiez de quelle manière les clés de licence sont fournies :
    * Si vous êtes un partenaire commercial IBM, la licence vSphere (Enterprise Plus edition) et la licence vSAN sont incluses et achetées en votre nom. Vous devez néanmoins spécifier l'édition pour la licence vSAN.
@@ -119,7 +126,7 @@ Vous pouvez spécifier les options d'octroi de licence pour les composants VMwar
 ### Résultats après l'ajout de clusters à des instances Cloud Foundation
 
 1. Le déploiement du cluster démarre automatiquement et le cluster prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page récapitulative de l'instance.
-2. Lorsque le cluster est prêt pour utilisation, il prend le statut **Prêt à l'emploi**. Le cluster qui vient d'être ajouté est activé avec vSphere à haute disponibilité et vSphere Distributed Resource Scheduler (DRS).
+2. Lorsque le cluster est prêt pour utilisation, il prend le statut **Prêt à l'emploi**. Le cluster qui vient d'être ajouté est activé avec vSphere haute disponibilité et vSphere Distributed Resource Scheduler (DRS).
 
 Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster peut entraîner l'échec d'opérations d'ajout ou de suppression de serveurs ESXi dans le cluster.
 {:important}
@@ -205,5 +212,5 @@ Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous 
 
 ### Liens connexes
 
-* [Affichage d'instances Cloud Foundation](sd_viewinginstances.html)
-* [Extension et réduction de capacité pour des instances Cloud Foundation](sd_addingremovingservers.html)
+* [Affichage d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)

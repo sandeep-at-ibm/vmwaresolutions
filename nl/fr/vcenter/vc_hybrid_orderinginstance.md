@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-10-29"
 
 # Commande d'instances vCenter Server with Hybridity Bundle
 
-Afin de déployer une plateforme virtuelle VMware personnalisable et flexible totalement adaptée à vos besoins en charge de travail, commandez une instance VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle. L'instance vCenter Server with Hybridity Bundle inclut la licence VMware Hybrid Cloud Extension (HCX) qui vous autorise à utiliser le service VMware HCX on {{site.data.keyword.cloud_notm}}. Vous pouvez également ajouter des services, tels que [Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html) pour la reprise après incident.
+Afin de déployer une plateforme virtuelle VMware personnalisable et flexible totalement adaptée à vos besoins en charge de travail, commandez une instance VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle. L'instance vCenter Server with Hybridity Bundle inclut la licence VMware Hybrid Cloud Extension (HCX) qui vous autorise à utiliser le service VMware HCX on {{site.data.keyword.cloud_notm}}. Vous pouvez également ajouter des services, tels que [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html) pour la reprise après incident.
 
 ## Exigences relatives à la commande d'instances vCenter Server with Hybridity Bundle
 
 Assurez-vous que :
-*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
-*  Vous avez passé en revue les informations décrites dans la rubrique [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](vc_hybrid_planning.html).
+*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Vous avez passé en revue les informations décrites dans la rubrique [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html).
 * Vous avez passé en revue le format des noms d'instance et de domaine. Le nom de domaine et le libellé de sous-domaine sont utilisés pour générer le nom d'utilisateur et les noms de serveur de l'instance.
 
 Tableau 1. Format de la valeur des noms d'instance et de domaine
@@ -29,10 +29,9 @@ Tableau 1. Format de la valeur des noms d'instance et de domaine
   |:------------- |:------------- |
   | Nom de domaine | `<root_domain>` |  
   | Nom d'utilisateur de connexion vCenter Server | `<user_id>@<root_domain>` (utilisateur Microsoft Active Directory) ou `administrator@vsphere.local` |
-  | Nom de domaine complet vCenter Server | `vcenter.<subdomain_label>.<root_domain>`. La longueur maximale admise est de 50 caractères. |
+  | vCenter Server (avec PSC intégré) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La longueur maximale admise est de 50 caractères. |
   | Nom du site de connexion unique | `<subdomain_label>` |
-  | Nom de serveur ESXi qualifié complet | `<host_prefix><n>.<subdomain_label>.<root_domain>`, où `<n>` est la séquence du serveur ESXi. La longueur maximale admise est de 50 caractères. |  
-  | Nom de domaine complet PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La longueur maximale admise est de 50 caractères. |
+  | Nom de serveur ESXi qualifié complet | `<host_prefix><n>.<subdomain_label>.<root_domain>`, où `<n>` est la séquence du serveur ESXi. La longueur maximale admise est de 50 caractères. |
 
 Ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
 {:important}
@@ -45,7 +44,7 @@ Vous devez spécifier les paramètres système répertoriés ci-après lorsque v
 
 Le nom de l'instance qui doit respecter les règles suivantes :
 * Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-* Le nom d'instance doit commencer et se terminer par un caractère alphanumérique.
+* Le nom d'instance doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
 * Le nom d'instance ne doit pas dépasser 10 caractères.
 * Le nom d'instance doit être unique au sein de votre compte.
 
@@ -62,7 +61,8 @@ Les licences VMware suivantes sont incluses avec votre commande d'instance vCent
 * NSX Service Providers 6.4 (édition Advanced ou Enterprise)
 * vSAN 6.6 (édition Advanced ou Enterprise)
 
-**Attention :**
+### Attention
+
 * Les instances vCenter Server with Hybridity Bundle ne prennent pas en charge le mode BYOL (Bring Your Own License).
 * Les éditions de licence minimum sont indiquées sur l'interface utilisateur. Si différentes éditions de composant sont prises en charge, vous pouvez sélectionner celle qui vous convient.
 
@@ -99,6 +99,8 @@ Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 | Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+| Quad Intel Xeon E7-4820 v4/40 coeurs au total, 2,0 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
+| Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 
 ### Nombre de serveurs bare metal
 
@@ -109,7 +111,11 @@ Quatre serveurs ESXi sont sélectionnés par défaut et ne sont pas modifiables.
 VMware vSAN 6.6 est inclus avec votre commande d'instance vCenter Server with Hybridity Bundle. Spécifiez les options vSAN suivantes :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
-* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+
+  L'option **Hautes performances Intel Optane** est disponible uniquement pour les modèles d'UC Skylake Dual Intel Xeon Gold 5120 et Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 
 ## Paramètres d'interface réseau
@@ -127,7 +133,7 @@ Vous devez spécifier les paramètres d'interface réseau répertoriés ci-aprè
 
 Le libellé du sous-domaine qui doit respecter les règles suivantes :
 *  Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-*  Le libellé de sous-domaine doit commencer et se terminer par un caractère alphanumérique.
+*  Le libellé de sous-domaine doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique. 
 *  Le libellé de sous-domaine ne doit pas dépasser 10 caractères.
 *  Le libellé de sous-domaine doit être unique au sein de votre compte.
 
@@ -189,7 +195,7 @@ Pour plus d'informations sur la commande de licence Windows, voir la [documentat
 
 ## Paramètres de services
 
-Lorsque vous commandez une instance vCenter Server with Hybridity Bundle, vous pouvez également commander des services supplémentaires. Pour plus d'informations sur les services, voir [Services disponibles pour les instances vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances).
+Lorsque vous commandez une instance vCenter Server with Hybridity Bundle, vous pouvez également commander des services supplémentaires. Pour plus d'informations sur les services, voir [Services disponibles pour les instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances).
 
 ## Récapitulatif de la commande
 
@@ -204,7 +210,8 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
    * Cliquez sur **Instance principale** pour déployer une seule instance dans l'environnement ou pour déployer la première instance dans une topologie multisite.
    * Cliquez sur **Instance secondaire** pour connecter l'instance à une instance (principale) existante dans l'environnement à des fins de haute disponibilité et procédez comme suit :
      1. Sélectionnez l'instance principale à laquelle vous voulez que l'instance secondaire soit connectée.
-     2. Entrez le mot de passe de l'administrateur PSC pour l'instance principale.
+     2. Pour les instances principales V2.8 ou ultérieures, entrez le mot de passe administrateur vCenter Server pour l'instance principale.
+     3. Pour les instances principales V2.7 ou antérieures, entrez le mot de passe administrateur PSC pour l'instance principale.
 5. Sélectionnez l'édition de licence NSX et l'édition de licence vSAN.
 6. Spécifiez les paramètres de serveur bare metal.
   1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger l'instance.
@@ -220,7 +227,7 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
      *  Si vous voulez commander de nouveaux VLAN publics et privés, cliquez sur **Commander de nouveaux VLAN**.
      *  Si vous voulez réutiliser les VLAN publics et privés existants lorsqu'ils sont disponibles, cliquez sur **Sélectionner des VLAN existants**, puis sélectionnez le VLAN public, le sous-réseau principal, le VLAN privé, le sous-réseau principal privé et le VLAN privé secondaire.
   4. Sélectionnez la configuration DNS.
-9. Effectuez la configuration du service HCX on {{site.data.keyword.cloud_notm}} inclus. Pour savoir comment indiquer les paramètres d'un service, voir la section _Configuration de VMware HCX on IBM Cloud_ dans [Commande de VMware HCX on IBM Cloud](../services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration).
+9. Effectuez la configuration du service HCX on {{site.data.keyword.cloud_notm}} inclus. Pour savoir comment indiquer les paramètres d'un service, voir la section _Configuration de VMware HCX on IBM Cloud_ dans [Commande de VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration).
 10. Sélectionnez les services complémentaires à déployer dans l'instance en cliquant sur la carte de service correspondante. Si un service nécessite de la configuration, spécifiez les paramètres qui lui sont propres et cliquez sur **Ajouter un service** sur la carte.  
 Pour savoir comment indiquer les paramètres d'un service, voir la rubrique de commande de service correspondante.
 
@@ -234,7 +241,7 @@ Pour savoir comment indiquer les paramètres d'un service, voir la rubrique de c
 
 Le déploiement de l'instance commence automatiquement. Vous recevez une confirmation que la commande est en cours de traitement et vous pouvez vérifier l'état du déploiement en affichant les détails de l'instance.
 
-Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle](vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**. Si vous avez commandé des services complémentaires, le déploiement des services commence une fois votre commande honorée.
+Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**. Si vous avez commandé des services complémentaires, le déploiement des services commence une fois votre commande honorée.
 
 Lorsque l'instance est prête pour utilisation, elle prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 
@@ -258,10 +265,10 @@ Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwa
 
 ### Liens connexes
 
-* [Inscription à un compte {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
-* [Affichage des instances vCenter Server with Hybridity Bundle](vc_hybrid_viewinginstances.html)
-* [Configuration multisite pour des instances vCenter Server with Hybridity Bundle](vc_hybrid_multisite.html)
-* [Ajout et affichage de clusters pour des instances vCenter Server with Hybridity Bundle](vc_hybrid_addingviewingclusters.html)
-* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservers.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservices.html)
-* [Suppression d'instances vCenter Server with Hybridity Bundle](vc_hybrid_deletinginstance.html)
+* [Inscription à un compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [Configuration multisite pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_multisite.html)
+* [Ajout et affichage de clusters pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
+* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Suppression des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)

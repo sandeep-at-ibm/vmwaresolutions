@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -16,7 +16,8 @@ lastupdated: "2018-10-29"
 
 {{site.data.keyword.vmwaresolutions_full}} permet de déployer des instances dans différents emplacements et de les rendre actives et opérationnelles très rapidement.
 
-**Remarques :**
+## Remarques
+
 * Vous ne pouvez pas lier des instances VMware Cloud Foundation à des instances VMware vCenter Server dans une configuration multisite.
 * Vous ne pouvez pas lier des instances déployées en version 2.0 à des instances d'éditions antérieures (même si ces dernières ont été mises à niveau vers la version 2.0).
 
@@ -41,7 +42,7 @@ Un déploiement multisite est constitué des composants suivants.
 
 Le modèle de configuration multisite utilise un concentrateur et une topologie en étoile (hub and spoke) avec un site principal et un maximum de sept sites secondaires. Une seule couche de sites est prise en charge, c'est-à-dire que vous ne pouvez pas configurer de sites supplémentaires qui sont liés à d'autres sites secondaires. Une configuration multisite accepte jusqu'à 128 serveurs ESXi répartis dans toutes les instances.
 
-Si votre configuration nécessite un déploiement multisite de plus de 128 serveurs ESXi, contactez le support IBM pour obtenir de l'aide. Pour plus d'informations, voir [Contacter le support IBM](../vmonic/trbl_support.html).
+Si votre configuration nécessite un déploiement multisite de plus de 128 serveurs ESXi, contactez le support IBM pour obtenir de l'aide. Pour plus d'informations, voir [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 {:note}
 
 Le graphique suivant décrit l'architecture globale d'un déploiement Cloud Foundation multisite.
@@ -59,7 +60,7 @@ Vous ne pouvez affecter qu'une seule instance secondaire à la fois à une insta
 
 Vous pouvez avoir jusqu'à 8 instances (1 principale et 7 secondaires) au maximum déployées dans une configuration multisite.
 
-La suppression d'instances Cloud Foundation qui font partie d'une configuration multisite requiert une planification spéciale. Pour plus d'informations, voir [Suppression d'instances Cloud Foundation dans une configuration multisite](sd_deletinginstance_multi.html).
+La suppression d'instances Cloud Foundation qui font partie d'une configuration multisite requiert une planification spéciale. Pour plus d'informations, voir [Suppression d'instances Cloud Foundation dans une configuration multisite](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html).
 {:note}
 
 ### Liens connexes

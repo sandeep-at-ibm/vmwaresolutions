@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -71,17 +71,17 @@ Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatis
 
 6. HCX Manager on {{site.data.keyword.cloud_notm}} est déployé, activé et configuré :
    * HCX Manager est enregistré auprès de vCenter Server.
-   * HCX Manager, vCenter Server, PSC et NSX Manager sont configurés.
+   * HCX Manager, vCenter Server (avec Platform Services Controller intégré) et NSX Manager sont configurés.
    * Le parc HCX est configuré.
    * Les conteneurs de déploiement HCX locaux et distants sont configurés.
 7. Le nom d'hôte et l'adresse IP de HCX Manager sont enregistrés auprès du serveur DNS de VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 ### Liens connexes
 
-* [Présentation de HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
-* [Gestion de HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Glossaire des termes HCX](hcx_glossary.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
+* [Présentation de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [Gestion de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Glossaire des termes HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [Présentation de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
 * [Documentation VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

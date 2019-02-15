@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-03-30"
 
@@ -20,15 +20,15 @@ Pour les comptes SoftLayer de réacheminement et de routage virtuels (VRF, Virtu
 
 Avant de passer une commande d'instance, vérifiez que votre compte SoftLayer est soit un compte VRF soit un compte classique (non VRF) pour lequel le spanning VLAN est activé. Sinon, la commande risque d'échouer.
 
-Pour confirmer que votre compte SoftLayer est un compte VRF, interrogez le support IBM Bluemix. Pour les comptes classiques, vous devez activer le spanning VLAN en suivant les instructions de la rubrique [Activation ou désactivation du spanning VLAN](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+Pour confirmer que votre compte SoftLayer est un compte VRF, interrogez le support IBM Bluemix. Pour les comptes classiques, vous devez activer le spanning VLAN en suivant les instructions de la rubrique [Activation ou désactivation du spanning VLAN](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ## Mises à jour du modèle de frais de service
 
-Pour les instances Cloud Foundation, une nouvelle licence de _gestionnaire SDDC_ a été instaurée. Elle est appliquée à chaque noeud et perçue mensuellement. Pour plus d'informations, voir [Spécifications techniques relatives aux instances Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+Pour les instances Cloud Foundation, une nouvelle licence de _gestionnaire SDDC_ a été instaurée. Elle est appliquée à chaque noeud et perçue mensuellement. Pour plus d'informations, voir [Spécifications techniques relatives aux instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## Améliorations de la convivialité
 
 Des améliorations ont été apportées à l'interface utilisateur, à savoir :
 
-* La disponibilité des divers {{site.data.keyword.CloudDataCents_notm}} et leur capacité à honorer la commande sont clairement indiquées sur l'interface utilisateur. Utilisez ces informations pour prendre une décision éclairée concernant l'{{site.data.keyword.CloudDataCent_notm}} à sélectionner lorsque vous commandez une instance. Pour plus d'informations, voir [Exigences et planification pour les instances Cloud Foundation](../sddc/sd_planning.html) et [Exigences et planification pour les instances vCenter Server](../vcenter/vc_planning.html).
-* Pour les instances Cloud Foundation, des informations telles que le nom de l'instance, les noms de domaine et de sous-domaine et l'emplacement du centre de données sont automatiquement affichées dans un format graphique à mesure que vous entrez les informations requises dans les zones de saisie. Pour plus d'informations, voir [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html).
+* La disponibilité des divers {{site.data.keyword.CloudDataCents_notm}} et leur capacité à honorer la commande sont clairement indiquées sur l'interface utilisateur. Utilisez ces informations pour prendre une décision éclairée concernant l'{{site.data.keyword.CloudDataCent_notm}} à sélectionner lorsque vous commandez une instance. Pour plus d'informations, voir [Exigences et planification pour les instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html) et [Exigences et planification pour les instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html).
+* Pour les instances Cloud Foundation, des informations telles que le nom de l'instance, les noms de domaine et de sous-domaine et l'emplacement du centre de données sont automatiquement affichées dans un format graphique à mesure que vous entrez les informations requises dans les zones de saisie. Pour plus d'informations, voir [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html).

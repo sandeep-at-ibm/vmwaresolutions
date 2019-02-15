@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,8 +19,8 @@ Vous pouvez mettre à l'échelle un cluster VMware vSphere existant commandé ou
 ## Conditions requises
 
 Assurez-vous que :
-*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Paramètres et comptes utilisateur](../vmonic/useraccount.html).
-*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les clusters vSphere](vs_planning.html).
+*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html#managing-user-accounts-and-settings).
+*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
 *  Vous avez reçu un courrier électronique vous confirmant que le cluster que vous souhaitez mettre à échelle est prêt à être utilisé.
 
 ## Procédure de mise à l'échelle de clusters existants
@@ -46,6 +46,6 @@ Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSp
 
 ### Liens connexes
 
-* [Commande de nouveaux clusters vSphere](vs_orderinginstances.html)
-* [Commande de clusters vSphere sur la base de configurations existantes](vs_orderingbasedonexistingconfig.html)
-* [Mise à l'échelle de clusters créés en dehors de la console](vs_orderingforclustersoutside.html)
+* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Commande de clusters vSphere on la base de configurations existantes](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [Mise à l'échelle de clusters créés en dehors de la console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

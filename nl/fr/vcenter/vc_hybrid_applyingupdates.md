@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,7 +18,7 @@ Le processus d'application de modules de correction et de mises à jour aux inst
 
 ## Avant de commencer
 
-A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](../vmonic/relnotes_v25.html).
+A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
 {:note}
 
 Avant d'appliquer une mise à jour, développez l'entrée de mise à jour en cliquant sur la flèche vers le bas et vérifiez les informations suivantes :
@@ -48,8 +48,9 @@ Tableau 1. Niveaux de mise à jour et impact
 
    La page **Mise à jour et module de correction** ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. {{site.data.keyword.vmwaresolutions_short}} applique les mises à jour VMware dans les circonstances suivantes :
    * Lorsqu'une nouvelle instance vCenter Server est déployée
-   * Lorsque de nouveaux serveurs ESXi sont ajoutés, ils sont mis à disposition avec des mises à jour VMware, mais les serveurs ESXi existants ne sont pas mis à jour. 
-   * Lorsque de nouveaux clusters sont ajoutés, ils sont mis à disposition avec des mises à jour VMware, mais les clusters existants ne sont pas mis à jour. {:note}
+   * Lorsque de nouveaux serveurs ESXi sont ajoutés, ils sont mis à disposition avec des mises à jour VMware, mais les serveurs ESXi existants ne sont pas mis à jour.
+   * Lorsque de nouveaux clusters sont ajoutés, ils sont mis à disposition avec des mises à jour VMware, mais les clusters existants ne sont pas mis à jour.
+   {:note}
 
 5. Pour des mises à niveau de licence, cliquez sur **Mettre à niveau**. Sélectionnez dans la liste l'édition vers laquelle vous souhaitez effectuer une mise à niveau, puis cliquez sur **Mettre à niveau**. Les rétromigrations d'édition de licence ne sont pas disponibles.
 
@@ -87,10 +88,10 @@ avant d'appliquer de nouveau la mise à jour.</dd>
 <dd class="dd">Le statut du travail de mise à jour est inconnu. Contactez le support IBM pour obtenir de l'aide.</dd>
 </dl>
 
-4. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](../vmonic/trbl_support.html) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à relancer la mise à niveau à partir de l'étape où elle a échoué.
+4. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à relancer la mise à niveau à partir de l'étape où elle a échoué.
 
 ### Liens connexes
 
-* [Présentation de vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
-* [Foire aux questions](../vmonic/faq.html)
+* [Présentation de vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)

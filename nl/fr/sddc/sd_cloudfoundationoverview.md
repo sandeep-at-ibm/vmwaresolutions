@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,7 +41,7 @@ Cette couche se compose de vCenter Server, qui représente la couche de gestion 
 
 Sur la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez augmenter et réduire la capacité de vos instances à l'aide des fonctions d'ajout et de suppression de serveurs ESXi. De plus, des fonctions de gestion du cycle de vie, telles que l'application de mises à jour et de mises à niveau des composants VMware dans l'environnement hébergé sont également disponibles.
 
-Pour plus d'informations sur l'architecture, voir [Présentation de la solution](../archiref/solution/solution_overview.html).
+Pour plus d'informations sur l'architecture, voir [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Spécifications techniques relatives aux instances Cloud Foundation
 
@@ -53,17 +53,18 @@ Les frais encourus pour le matériel, la mise en réseau, les machines virtuelle
 ### Serveur bare metal
 
 Vous pouvez commander les serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} dans l'une des configurations suivantes :
-*  **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.    
-*  **Broadwell** : Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.    
-   Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.
-   {:note}
+*  **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.   
+*  **Broadwell** : Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600/E7-4800) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.
+
+Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.
+{:note}
 
 ### Utilisation en réseau
 
 Les composants réseau suivants sont commandés :
 * Liaisons montantes réseau public et privé double de 10 Gbps
 * Trois VLAN (réseaux locaux virtuels) : un VLAN public et deux VLAN privés
-* Passerelle de gestion sécurisée VMware NSX Edge Services Gateway (ESG) pour le trafic de gestion HTTPS sortant, déployée par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* Passerelle de gestion sécurisée VMware NSX Edge Services Gateway (ESG) pour le trafic de gestion HTTPS sortant, déployée par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
   Vous n'avez pas accès à cette passerelle ESG et vous ne pouvez pas l'utiliser. Si vous la modifiez, vous ne pourrez plus gérer l'instance Cloud Foundation depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
   {:important}
@@ -100,7 +101,7 @@ Chaque noeud d'extension Cloud Foundation déploie et génère des frais, imput�
 
 ### Matériel pour les noeuds d'extension
 
-Un serveur bare metal {{site.data.keyword.cloud_notm}} doté de la configuration présentée dans [Spécifications techniques relatives aux instances Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+Un serveur bare metal {{site.data.keyword.cloud_notm}} doté de la configuration présentée dans [Spécifications techniques relatives aux instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Licences et frais pour les noeuds d'extension
 
@@ -124,9 +125,9 @@ Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} cr�
 
 ### Liens connexes
 
-* [Nomenclature du logiciel Cloud Foundation](sd_bom.html)
-* [Planification des instances Cloud Foundation](sd_planning.html)
-* [Commande d'instances Cloud Foundation](sd_orderinginstance.html)
+* [Nomenclature du logiciel Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [Planification des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
 * [Centre de documentation VMware vSphere](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [Centre de documentation VMware NSX 6](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [Foire aux questions sur la comptabilité entre EVC et les UC](https://kb.vmware.com/s/article/1005764)

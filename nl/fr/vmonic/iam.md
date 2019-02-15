@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -54,23 +54,23 @@ Tableau 2. Descriptions des actions et des rôles requis
 
 ## Gestion de l'accès des utilisateurs
 
-Vous pouvez ajouter de nouveaux utilisateurs au compte {{site.data.keyword.cloud_notm}} afin que ces utilisateurs puissent partager les services et les ressources qui sont mis à disposition pour le compte. Pour plus d'informations, voir [Invitation des utilisateurs à accéder à des services et des ressources](../vmonic/iamuserinvite.html).
+Vous pouvez ajouter de nouveaux utilisateurs au compte {{site.data.keyword.cloud_notm}} afin que ces utilisateurs puissent partager les services et les ressources qui sont mis à disposition pour le compte. Pour plus d'informations, voir [Invitation des utilisateurs à accéder à des services et des ressources](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html).
 
-Vous pouvez également gérer l'accès des utilisateurs existants, et notamment modifier l'accès existant, affecter un nouvel accès et vérifier l'accès affecté. Pour gérer l'accès des utilisateurs, vous devez être le propriétaire du compte ou vous devez disposer du rôle de gestion de plateforme **Administrateur**. Pour plus d'informations, voir [Gestion des accès aux ressources](../../../iam/mngiam.html).
+Vous pouvez également gérer l'accès des utilisateurs existants, et notamment modifier l'accès existant, affecter un nouvel accès et vérifier l'accès affecté. Pour gérer l'accès des utilisateurs, vous devez être le propriétaire du compte ou vous devez disposer du rôle de gestion de plateforme **Administrateur**. Pour plus d'informations, voir [Gestion des accès aux ressources](/docs/iam/mngiam.html).
 
 ## Migration d'instances existantes vers des comptes IBM Cloud
 
-En raison de l'intégration d'{{site.data.keyword.vmwaresolutions_short}} à IAM, les instances qui sont déployées dans la version 2.5 et dans les éditions ultérieures de votre compte {{site.data.keyword.cloud}} sont ajoutées automatiquement à votre compte et sont gérées par IAM.
+En raison de l'intégration d'{{site.data.keyword.vmwaresolutions_short}} à IAM, les instances qui sont déployées dans la version 2.5 et dans les éditions ultérieures de votre compte {{site.data.keyword.cloud_notm}} sont ajoutées automatiquement à votre compte et sont gérées par IAM.
 
 Quant aux instances existantes qui ont été déployées dans la version 2.4 et dans des éditions antérieures, vous pouvez les faire migrer vers des comptes {{site.data.keyword.cloud_notm}} spécifiés pour la gestion activée pour IAM. Pour plus d'informations, voir les rubriques suivantes :
-* [Migration d'instances vCenter Server antérieures à la version 2.5 vers des comptes IBM Cloud](../vcenter/vc_addinstancetousraccount.html)
-* [Migration d'instances vCenter Server with Hybridity Bundle antérieures à la version 2.5 vers des comptes IBM Cloud](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [Migration d'instances Cloud Foundation Select antérieures à la version 2.5 vers des comptes IBM Cloud](../sddc/sd_addinstancetousraccount.html)
-* [Migration d'instances NetApp ONTAP Select antérieures à la version 2.5 vers des comptes IBM Cloud](../netapp/np_addinstancetousraccount.html)
-* [Migration d'instances VMware Federal antérieures à la version 2.5 vers des comptes IBM Cloud](../vcenter/vc_fed_addinstancetousraccount.html)
+* [Migration d'instances vCenter Server antérieures à la version 2.5 vers des comptes IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [Migration d'instances vCenter Server with Hybridity Bundle antérieures à la version 2.5 vers des comptes IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [Migration d'instances Cloud Foundation Select antérieures à la version 2.5 vers des comptes IBM Cloud](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [Migration d'instances NetApp ONTAP Select antérieures à la version 2.5 vers des comptes IBM Cloud](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [Migration d'instances VMware Federal antérieures à la version 2.5 vers des comptes IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)
 
 ### Liens connexes
 
-* [Gestion de l'identité et de l'accès](../../../iam/quickstart.html)
-* [Gestion des utilisateurs et de l'accès](../../../iam/iamusermanage.html)
-* [Présentation d'IAM](../../../iam/index.html)
+* [Gestion de l'identité et de l'accès](/docs/iam/quickstart.html)
+* [Gestion des utilisateurs et de l'accès](/docs/iam/iamusermanage.html)
+* [Présentation d'IAM](/docs/iam/index.html)

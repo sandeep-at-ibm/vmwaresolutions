@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -78,7 +78,7 @@ Chaque serveur ESXi a une capacité de 16 coeurs * 2,1 GHz = 33,6 GHz, de sorte 
 
 vSphere HA réserve toutefois par défaut 50% d'UC et de RAM pour le basculement sur les instances vCenter Server initialement déployées avec 2 serveurs ESXi, de sorte que nous avons uniquement :
 
-`50% de 2 * 16 coeurs * 2,1 GHz = 33,6 GHz disponibles`
+`50 % de 2 * 16 coeurs * 2,1 GHz = 33,6 GHz disponibles`
 
 Etant donné que d'autres charges de travail figureront sur les serveurs ESXi (par exemple, VMware vCenter Server, VMware NSX Controller, or VMware NSX Edge), en utilisant ces ressources, nous ne respectons pas la troisième exigence. En effet, nous avons besoin de 33,6 GHz d'UC et de 24 Go de mémoire RAM pour les deux machines virtuelles FortiGate.
 
@@ -92,9 +92,9 @@ Avant de retirer le service FortiGate Virtual Appliance on {{site.data.keyword.c
 
 ### Liens connexes
 
-* [Commande de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_ordering.html)
-* [Gestion de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](managingfortinetvm.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
-* [Foire aux questions](../vmonic/faq.html)
+* [Commande de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
+* [Gestion de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Site Web Fortinet](https://www.fortinet.com/){:new_window}
 * [Bibliothèque de documents Fortinet](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

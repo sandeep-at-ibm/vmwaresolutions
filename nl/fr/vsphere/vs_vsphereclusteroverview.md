@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,8 +45,9 @@ Sélectionnez des licences (fournies par IBM ou BYOL) pour les composants VMware
 ### Serveur bare metal
 
 Sélectionnez un ou plusieurs serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés :
-* Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600 v4)
 * Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100)
+* Certifiés SAP (Intel Xeon série 6140/E5-2690/E7-8890)
+* Génération Intel Broadwell à 2 UC (Intel Xeon série E5-2600/E7-4800)
 
 Les options disponibles varient selon que vous avez ou non sélectionné le composant VMware vSAN.
 
@@ -77,23 +78,23 @@ Chaque noeud d'extension de cluster vSphere déploie et génère des frais, impu
 
 ### Matériel pour les noeuds d'extension
 
-Un serveur bare metal {{site.data.keyword.cloud_notm}} doté de la configuration matérielle présentée dans [Spécifications techniques relatives à vSphere sur clusters {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+Un serveur bare metal {{site.data.keyword.cloud_notm}} doté de la configuration matérielle présentée dans [Spécifications techniques relatives à vSphere sur clusters {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### Mise en réseau des noeuds d'extension
 
-Un serveur bare metal {{site.data.keyword.cloud_notm}} doté de la configuration réseau présentée dans [Spécifications techniques relatives à vSphere sur clusters {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+Un serveur bare metal {{site.data.keyword.cloud_notm}} doté de la configuration réseau présentée dans [Spécifications techniques relatives à vSphere sur clusters {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### Composants VMware pour les noeuds d'extension
 
 * Un serveur bare metal {{site.data.keyword.cloud_notm}} avec VMware vSphere Enterprise Plus 6.0u2 ou 6.5u1  
-* Composants VMware facultatifs présentés dans [Spécifications techniques relatives à vSphere sur clusters {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+* Composants VMware facultatifs présentés dans [Spécifications techniques relatives à vSphere sur clusters {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
-Vous devez gérer les serveurs ESXi, les composants VMware facultatifs et le matériel supplémentaire commandés et livrés sur votre compte {{site.data.keyword.cloud_notm}} uniquement à partir du portail {{site.data.keyword.slportal}}. Après avoir créé un nouveau cluster sur la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez revenir sur la console pour mettre à l'échelle le nouveau cluster à l'aide de la configuration enregistrée. Pour plus d'informations, voir [Mise à l'échelle de clusters existants](vs_scalingexistingclusters.html).
+Vous devez gérer les serveurs ESXi, les composants VMware facultatifs et le matériel supplémentaire commandés et livrés sur votre compte {{site.data.keyword.cloud_notm}} uniquement à partir du portail {{site.data.keyword.slportal}}. Après avoir créé un nouveau cluster sur la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez revenir sur la console pour mettre à l'échelle le nouveau cluster à l'aide de la configuration enregistrée. Pour plus d'informations, voir [Mise à l'échelle de clusters existants](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html).
 {:important}
 
 ### Liens connexes
 
-* [Nomenclature du logiciel VMware vSphere](vs_bom.html)
-* [Planification des clusters vSphere](vs_planning.html)
-* [Commande de clusters vSphere](vs_orderinginstances.html)
-* [Mise à l'échelle de clusters vSphere existants](vs_scalingexistingclusters.html)
+* [Nomenclature du logiciel VMware vSphere](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
+* [Planification des clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
+* [Commande de clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Mise à l'échelle de clusters vSphere existants](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)

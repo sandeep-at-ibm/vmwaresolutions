@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-23"
 
 ---
 
 # Mise à jour des clusters vSAN
 
-vSAN génère des lignes de base de système et des groupes de lignes de base pour les utiliser avec vSphere Update Manager (VUM). Vous pouvez vous servir de ces lignes de base recommandées pour mettre à jour des logiciels, des correctifs et des extensions pour les hôtes vSphere ESXi figurant dans votre instance vCenter Server à l'aide de vSAN. vSAN 6.6.1 (et versions ultérieures) génère des recommandations de build automatisées pour les clusters vSAN. vSAN combine les informations du guide de compatibilité VMware et du catalogue de versions de vSAN avec des informations sur les versions de vSphere ESXi installées.
+vSAN génère des lignes de base de système et des groupes de lignes de base pour les utiliser avec vSphere Update Manager (VUM). Vous pouvez vous servir de ces lignes de base recommandées pour mettre à jour des logiciels, des correctifs et des extensions pour les hôtes vSphere ESXi figurant dans votre instance VMware vCenter Server on {{site.data.keyword.cloud_notm}} à l'aide de vSAN. vSAN 6.6.1 (et versions ultérieures) génère des recommandations de build automatisées pour les clusters vSAN. vSAN combine les informations du guide de compatibilité VMware et du catalogue de versions de vSAN avec des informations sur les versions de vSphere ESXi installées.
 
 Ces mises à jour recommandées offrent la meilleure édition disponible pour conserver votre matériel dans un état pris en charge.
 * **Lignes de base de système vSAN** - Les recommandations de build vSAN sont fournies à l'aide de lignes de base de système vSAN pour VUM. vSAN génère un groupe de lignes de base pour chaque cluster vSAN. Ces lignes de base sont répertoriées dans le panneau Baselines de l'onglet Baselines and Groups. VUM analyse automatiquement chaque cluster vSAN pour vérifier la conformité par rapport au groupe de lignes de base. Cependant, pour mettre à niveau votre cluster vSAN, vous devez manuellement corriger la ligne de base de système via VUM. Vous pouvez corriger une ligne de base de système vSAN sur un hôte unique ou sur l'ensemble du cluster.
@@ -20,17 +20,17 @@ Ces mises à jour recommandées offrent la meilleure édition disponible pour co
 La mise à niveau du cluster vSAN s'effectue selon la séquence de tâches suivante :
 * **Activation de vSAN Online Health Workflow** – Ce workflow active les lignes de base vSAN dans VUM de sorte que les mises à jour puissent être consultées et corrigées. Il doit être réalisé uniquement au début pour activer vSAN avec VUM
 * **Prérequis** – Familiarisez-vous avec les prérequis, le processus et les restrictions
-* **Mise à niveau de vCenter Server Appliance**. Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](vum-updating-vcsa.html).
-* **Mise à niveau des hôtes vSphere ESXi** – Pour plus d'informations, voir [Création de lignes de base et association à des objets d'inventaire](vum-baselines.html).
+* **Mise à niveau de vCenter Server Appliance**. Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html).
+* **Mise à niveau des hôtes vSphere ESXi** – Pour plus d'informations, voir [Création de lignes de base et association à des objets d'inventaire](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html).
 * **Mise à niveau du format de disque vSAN** - Reportez-vous à Mise à jour du format de disque vSAN. La mise à niveau du format de disque est facultative mais pour obtenir les meilleurs résultats, mettez à niveaux les objets pour utiliser la version la plus récente. Le format de disque expose votre environnement à la panoplie complète des fonctions de vSAN.
 
 ## Activation de vSAN Online Health Workflow
 
-L'exécution des tâches présentées dans cette section rendra les lignes de base vSAN disponibles dans VUM. vSAN 6.6.1 (et versions ultérieures) fournit un processus de mise à jour automatisé sans faille pour garantir qu'un cluster vSAN est à jour avec la meilleure version disponible pour que votre instance VMware vCenter Server on {{site.data.keyword.cloud}} reste dans un état pris en charge selon les recommandations suivantes :
+Exécutez les tâches présentées dans cette section pour rendre les lignes de base vSAN disponibles dans VUM. vSAN 6.6.1 (et versions ultérieures) fournit un processus de mise à jour automatisé sans faille pour garantir qu'un cluster vSAN est à jour avec la meilleure version disponible pour que votre instance VMware vCenter Server on {{site.data.keyword.cloud_notm}} reste dans un état pris en charge selon les recommandations suivantes :
 * **Recommandations de version vSAN** - ces recommandations sont automatiquement générées à l'aide des informations du Guide de compatibilité VMware, du catalogue des versions de vSAN et en tenant compte de la configuration matérielle sous-jacente. Cela comprend également les pilotes et les mises à jour de correctifs nécessaires pour la version recommandée dans sa ligne de base de système.
 * **Recommandations de build vSAN** - ces recommandations garantissent que les clusters restent à l'état de compatibilité actuel ou amélioré du matériel.
 
-Vérifiez que VCSA correspond à vCenter 6.5 Patch 2 ou une version plus récente avant de continuer car ces versions corrigent des erreurs liées à l'utilisation d'un proxy. Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](vum-updating-vcsa.html).
+Vérifiez que VCSA correspond à vCenter 6.5 Patch 2 ou une version plus récente avant de continuer car ces versions corrigent des erreurs liées à l'utilisation d'un proxy. Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html).
 
 Pour voir les mises à jour de vSAN dans VUM et vérifier que le workflow vSAN online Health est suivi, procédez comme suit. Par conséquent, vSAN Online Health doit se connecter aux sites `vcsa.vmware.com` et `vmware.com` pour effectuer ces contrôles de santé en ligne. Pour activer vSAN Online Health Workflow, nous devons :
 * Configurer VCSA pour utiliser le proxy.
@@ -48,7 +48,7 @@ La première étape consiste à ajouter vos données d'identification my.vmware.
 4.	Pour configurer un serveur proxy, dans le panneau Paramètres proxy, cliquez sur **Edit**.
 5.	Sélectionnez **Use a proxy server**, entrez les paramètres du serveur proxy et cliquez sur **OK**.
 
-Notez qu'il existe des rapports dans lesquels les informations de proxy sont définies uniquement pour HTTP et pas pour HTTPS. Pour configurer les informations de proxy pour le trafic HTTPS, vous devez d'abord activer cette option. Une fois connecté à VCSA via SSH, utilisez la commande proxy.get pour afficher la configuration et confirmer que les paramètres HTTPS ne sont pas définis.
+Il existe des rapports dans lesquels les informations de proxy sont définies uniquement pour HTTP et pas pour HTTPS. Pour configurer les informations de proxy pour le trafic HTTPS, vous devez d'abord activer cette option. Une fois connecté à VCSA via SSH, utilisez la commande proxy.get pour afficher la configuration et confirmer que les paramètres HTTPS ne sont pas définis.
 
 Si les paramètres HTTPS ne sont pas définis, utilisez la commande suivante :
   `proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
@@ -64,11 +64,11 @@ Cette étape est facultative. En utilisant le client vSphere Web Client, accéde
 ### Effectuer un test de téléchargement et confirmer que le téléchargement a abouti
 1. Dans vSphere Web Client, accédez à **Home** > **Hosts and Clusters**. Sélectionnez le cluster nécessaire, puis sélectionnez l'onglet **Monitor** et la page **vSAN**, puis cliquez sur **Health**. Cliquez sur **Enable Online Health**.
 2. Cliquez sur le bouton **Retest** et patientez jusqu'à la fin du processus.
-3. Une nouvelle vérification apparaît dans Health pour _"Online health connectivity"_ et le bouton "Enable Online Health" devient "Retest with Online Health".
-4. Cliquez sur le bouton **Retest with Online Health** pour déclencher le premier téléchargement et patientez jusqu'à la fin du processus en examinant le statut dans le panneau Recent Tasks. Le nom du test devient Online health (Last check: just now).
+3. Une nouvelle vérification apparaît dans Health pour _Online health connectivity_ et le bouton **Enable Online Health** devient **Retest with Online Health**.
+4. Cliquez sur **Retest with Online Health** pour démarrer le premier téléchargement et patientez jusqu'à la fin du processus en examinant le statut dans le panneau Recent Tasks. Le nom du test devient Online health (Last check: just now).
 5. A la fin du processus, dans la fenêtre Health, faites défiler l'écran vers le bas et développez vSAN Build Recommendation, puis cliquez sur **vSAN Build Recommendation Engine Health**.
 6. Cliquez sur **Login to my.vmware.com** et entrez vos données d'identification. Une fois le processus terminé, la zone **Test Result** passe à l'état **Passed**.
-7. Cliquez sur l'onglet **Update Manager** et vous devez maintenant voir que le cluster vSAN a été ajouté aux lignes de base.
+7. Cliquez sur l'onglet **Update Manager** et le cluster vSAN est ajouté aux lignes de base.
 
 ## Prérequis
 
@@ -78,9 +78,9 @@ Avant de lancer le processus de mise à niveau de vSAN, vérifiez que les condit
   - VCSA doit être au niveau de correctif supérieur ou égal aux hôtes vSphere ESXi. Mettez à jour VCSA si nécessaire
   - Tous les hôtes doivent exécuter la même génération d'ESXi. Si les versions de l'hôte vSphere ESXi ne correspondent pas, effectuez une mise à jour
 * **Tous les disques vSAN doivent être sains** :
-  - Aucun disque ne doit être à l'état d'échec ou absent. Vous pouvez le vérifier via la vue **vSAN Disk Management** dans le client vSphere Web Client. **Home** > **Hosts and Clusters**, en sélectionnant le **cluster vSAN** puis en cliquant sur l'onglet **vSAN**, puis sur **Physical Disks**. Faites défiler tous les disques et consultez le statut vSAN Health Status.
-  - Aucun objet vSAN ne doit être inaccessible. Vous pouvez le vérifier avec le service **vSAN Health Service** en cliquant sur **Home** > **Hosts and Clusters**, puis en sélectionnant **vSAN Cluster**. Cliquez sur l'onglet **Monitor**, **vSAN**, puis sur **Health**. Consultez les résultats de test.
-  - Il ne doit y avoir aucune resynchronisation active au lancement du processus de mise à niveau en cliquant sur **Home** > **Hosts and Clusters**, puis en sélectionnant **vSAN Cluster** et en cliquant sur l'onglet **vSAN**, puis sur **Resync Components**. _Le nombre de composants de resynchronisation doit être 0_. Notez qu'une activité de resynchronisation est attendue lors du processus de mise à niveau, car les données doivent être synchronisées après les redémarrages d'hôte.
+  - Aucun disque n'est à l'état d'échec ou absent. Vous pouvez le vérifier via la vue **vSAN Disk Management** dans le client vSphere Web Client. **Home** > **Hosts and Clusters**, en sélectionnant le **cluster vSAN** puis en cliquant sur l'onglet **vSAN**, puis sur **Physical Disks**. Faites défiler tous les disques et consultez le statut vSAN Health Status.
+  - Aucun objet vSAN n'est inaccessible. Vous pouvez le vérifier avec le service **vSAN Health Service** en cliquant sur **Home** > **Hosts and Clusters**, puis en sélectionnant **vSAN Cluster**. Cliquez sur l'onglet **Monitor**, **vSAN**, puis sur **Health**. Consultez les résultats de test.
+  - Il n'y a aucune resynchronisation active au lancement du processus de mise à niveau en cliquant sur **Home** > **Hosts and Clusters**, puis en sélectionnant **vSAN Cluster** et en cliquant sur l'onglet **vSAN**, puis sur **Resync Components**. _Le nombre de composants de resynchronisation doit être 0_. Une activité de resynchronisation est attendue lors du processus de mise à niveau, car les données doivent être synchronisées après les redémarrages d'hôte.
 * **Préparation de l'hôte vSphere ESXi** - Lorsque vous placez un hôte en mode maintenance dans un cluster vSAN, vous disposez de trois options au choix :
   - **No data migration** - Si vous sélectionnez cette option, vSAN n'évacue aucune données en provenance de cet hôte. Si vous mettez hors tension ou retirez l'hôte du cluster, certaines machines virtuelles risquent de ne plus être accessibles.
   - **Ensure availability** - Si vous sélectionnez cette option, vSAN vous permet de placer l'hôte en mode maintenance plus rapidement qu'avec l'option Full data migration et autorise l'accès aux machines virtuelles dans l'environnement.
@@ -94,11 +94,11 @@ Avant de lancer le processus de mise à niveau de vSAN, vérifiez que les condit
 
 ## Mise à niveau de vCenter Server Appliance
 
-Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](vum-updating-vcsa.html).
+Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html).
 
 ##	Mise à niveau des hôtes vSphere ESXi
 
-Pour plus d'informations, voir [Création de lignes de base et association à des objets d'inventaire](vum-baselines.html).
+Pour plus d'informations, voir [Création de lignes de base et association à des objets d'inventaire](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html).
 
 ##	Mise à niveau du format de disque vSAN
 
@@ -108,14 +108,14 @@ De nombreuses tâches administratives de base peuvent s'effectuer avec plus d'ef
 1. Utilisez SSH pour vous connecter à VCSA et ouvrez une session avec l'utilisateur racine et le mot de passe fournis sur la console ICVS.
 2. A l'invite, entrez :
   `rvc Administrator@vsphere.local@localhost` et appuyez sur **Entrée**.
-3. Entrez le mot de passe de l'administrateur fourni sur la console ICVS. Vous êtes maintenant à la racine du système de fichiers virtuel, entrez ls et appuyez sur **Entrée**, vous devez voir ceci :
+3. Entrez le mot de passe de l'administrateur fourni sur la console ICVS. Vous êtes maintenant à la racine du système de fichiers virtuel, entrez ls et appuyez sur **Entrée**, vous voyez ceci :
   `0 /
   1 localhost/``
 
-5. Entrez `cd 1`, appuyez sur Entrée puis entrez `ls` et appuyez sur **Entrée**. Vous devez voir ceci :
+5. Entrez `cd 1`, appuyez sur Entrée puis entrez `ls` et appuyez sur **Entrée**. Vous voyez ceci :
   `0 / datacenter1 (datacenter)`
 
-6. Tapez `cd 0`, puis appuyez sur Entrée et entrez `ls` et appuyez sur **Entrée**. Vous devez voir ceci :
+6. Tapez `cd 0`, puis appuyez sur Entrée et entrez `ls` et appuyez sur **Entrée**. Vous obtenez :
 
   `0 storage/
   1 computers [host]/
@@ -123,10 +123,10 @@ De nombreuses tâches administratives de base peuvent s'effectuer avec plus d'ef
   3 datastores [datastore]/
   4 vms [vm]/`
 
-7. Entrez `cd 1`, appuyez sur **Entrée**, puis entrez `ls` et appuyez sur **Entrée**. Vous devez voir votre cluster :
+7. Entrez `cd 1`, appuyez sur **Entrée**, puis entrez `ls` et appuyez sur **Entrée**. Vous voyez votre cluster :
   `0 cluster1 (cluster)``
 
-8. Nous allons maintenant utiliser les commandes VSAN sur ce cluster. Pour vérifier le statut du disque, entrez `vsan.disks_stats 0` et appuyez sur **Entrée**.
+8. Utilisez les commandes VSAN sur ce cluster. Pour vérifier le statut du disque, entrez `vsan.disks_stats 0` et appuyez sur **Entrée**.
 
 9. Vérifiez que l'état de santé (Health Status) de tous les disques est OK. Lancez ensuite la mise à niveau en entrant `vsan.ondisk_upgrade 0`, puis en appuyant sur **Entrée**.
 

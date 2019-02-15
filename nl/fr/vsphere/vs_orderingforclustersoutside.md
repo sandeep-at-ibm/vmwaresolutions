@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,15 +19,15 @@ Vous pouvez utiliser l'offre VMware vSphere pour mettre à l'échelle des cluste
 ## Conditions requises
 
 Assurez-vous que :
-*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
-*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_planning.html).
+*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
 
 ## Procédure de mise à l'échelle des clusters créés en dehors de la console
 
 1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur **VMware** dans le panneau de navigation de gauche, puis cliquez sur **VMware vSphere** dans la section **Centres de données virtuels**.
 2. Sur la page **VMware vSphere on IBM Cloud**, cliquez sur **Créer**.  
    Vérifiez que vous vous trouvez sur l'onglet **Créer** et que **Nouveau cluster** est affiché dans la liste **Configurations de cluster**.
-3. Créez un cluster avec les mêmes paramètres que le cluster existant créé en dehors de la console {{site.data.keyword.vmwaresolutions_short}}. Pour plus d'informations, voir [Commande de nouveaux clusters vSphere](vs_orderinginstances.html).  
+3. Créez un cluster avec les mêmes paramètres que le cluster existant créé en dehors de la console {{site.data.keyword.vmwaresolutions_short}}. Pour plus d'informations, voir [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html).  
    Dans le cadre de l'interface réseau, pour mettre à l'échelle un cluster qui est créé en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, vous devez sélectionner les VLAN existants pour le cluster.
    {:note}
 4. Sur le panneau **Récapitulatif de la commande**, vérifiez la configuration du cluster, puis cliquez sur **Sauvegarde de la configuration**.   
@@ -47,6 +47,6 @@ Les clusters vSphere ne s'affichent pas sur la page **Deployed Instances**, avec
 
 ### Liens connexes
 
-* [Commande de nouveaux clusters vSphere](vs_orderinginstances.html)
-* [Commande de clusters vSphere sur la base de configurations existantes](vs_orderingbasedonexistingconfig.html)
-* [Mise à l'échelle de clusters vSphere existants](vs_scalingexistingclusters.html)
+* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Commande de clusters vSphere on la base de configurations existantes](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [Mise à l'échelle de clusters vSphere existants](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)

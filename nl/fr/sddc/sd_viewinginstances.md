@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -111,7 +111,7 @@ Tableau 5. Historique de déploiement d'une instance Cloud Foundation
 
 ## Que faire en cas d'erreurs
 
-Si des erreurs se produisent lors du déploiement ou de la suppression d'une instance, l'équipe de support {{site.data.keyword.cloud_notm}} est automatiquement prévenue. Pour connaître le statut de votre ticket, vous pouvez [contacter le support IBM](../vmonic/trbl_support.html).
+Si des erreurs se produisent lors du déploiement ou de la suppression d'une instance, l'équipe de support {{site.data.keyword.cloud_notm}} est automatiquement prévenue. Pour connaître le statut de votre ticket, vous pouvez [contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## Etape suivante
 
@@ -122,12 +122,12 @@ Avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instan
 
 Passez en revue les rubriques suivantes pour obtenir des informations qui vous aideront à exécuter les instructions de connexion :
 
-* Pour les exigences et procédures à effectuer avant d'accéder au client Web vSphere, voir [Dépassement du délai d'attente lors de la connexion au client Web vSphere](../vmonic/trbl_timeout_vc_console.html).
+* Pour les exigences et procédures à effectuer avant d'accéder au client vSphere Web Client, voir [Dépassement du délai d'attente lors de la connexion au client vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 * Pour obtenir la liste des points d'accès de connexion au réseau privé {{site.data.keyword.cloud_notm}} à l'aide du réseau privé virtuel, voir [Accès VPN](http://www.softlayer.com/vpn-access){:new_window}.
-* Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client Web vSphere, voir [Déploiement d'un fichier OVF à l'aide du client Web vSphere](../vmonic/trbl_deploy_ovf.html).
+* Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client Web vSphere, voir [Déploiement d'un fichier OVF à l'aide du client Web vSphere](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
 
 ### Liens connexes
 
-* [Commande d'instances Cloud Foundation](sd_orderinginstance.html)
-* [Extension et réduction de capacité pour des instances Cloud Foundation](sd_addingremovingservers.html)
-* [Suppression d'instances Cloud Foundation](sd_deletinginstance.html)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Suppression d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)

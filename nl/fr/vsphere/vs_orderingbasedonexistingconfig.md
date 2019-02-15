@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,8 +19,8 @@ Vous pouvez commander un cluster VMware vSphere sur la base d'un modèle de conf
 ## Conditions requises
 
 Assurez-vous que :
-*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud}} sur la page **Paramètres**. Pour plus d'informations, voir [Paramètres et comptes utilisateur](../vmonic/useraccount.html).
-*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les clusters vSphere](vs_planning.html).
+*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud}} sur la page **Paramètres**. Pour plus d'informations, voir [Paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
 *  Vous avez créé un modèle de configuration qui sera réutilisé.
 
 ## Procédure pour commander des clusters vSphere en fonction des configurations existantes
@@ -29,7 +29,7 @@ Assurez-vous que :
 2. Sur la page **VMware vSphere on IBM Cloud**, cliquez sur **Créer**.  
 3. Cliquez sur l'onglet **Créer** et sélectionnez un modèle de configuration dans la liste **Configurations de cluster**.
 4. Entrez le nom du nouveau cluster.
-5. Passez en revue les paramètres de cluster renseignés automatiquement et mettez à jour les paramètres en fonction de vos besoins. Pour plus d'informations sur les paramètres, voir [Commande de nouveaux clusters vSphere](vs_orderinginstances.html).
+5. Passez en revue les paramètres de cluster renseignés automatiquement et mettez à jour les paramètres en fonction de vos besoins. Pour plus d'informations sur les paramètres, voir [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html).
 6. Sur le panneau **Récapitulatif de la commande**, vérifiez la configuration de l'instance et le coût estimé.
    * Pour sauvegarder la configuration en tant que modèle sans passer de commande, cliquez sur **Sauvegarde de la configuration**.
    * Pour passer la commande, assurez-vous que le compte qui devra être facturé est correct, passez en revue et acceptez les conditions, puis cliquez sur **Mettre à disposition**.
@@ -48,6 +48,6 @@ Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSp
 
 ### Liens connexes
 
-* [Commande de nouveaux clusters vSphere](vs_orderinginstances.html)
-* [Mise à l'échelle de clusters vSphere existants](vs_scalingexistingclusters.html)
-* [Mise à l'échelle de clusters créés en dehors de la console](vs_orderingforclustersoutside.html)
+* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Mise à l'échelle de clusters vSphere existants](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [Mise à l'échelle de clusters créés en dehors de la console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -36,4 +36,4 @@ Figure 1. Topologie multisite
 
 ### Liens connexes
 
-* [Networking services on {{site.data.keyword.cloud_notm}}](networking_services.html)
+* [Networking services on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/nsx/networking_services.html)

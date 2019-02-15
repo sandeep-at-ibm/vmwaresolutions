@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -36,9 +36,9 @@ Tableau 2. Nomenclature des composants logiciels des instances vCenter Server
 
 | Fabricant  | Composant                      | Version       |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.5 Update 2c (jusqu'au niveau de module de correction ESXi650-201808001) |
-| VMware       | vCenter Server Appliance        | 6.5 Update 2c |
-| VMware       | Contrôleur PSC (Platform Services Controller)    | 6.5 Update 2c |
+| VMware       | vSphere ESXi                    | 6.5 Update P3 (build 6.5.0-10884925) |
+| VMware       | vCenter Server Appliance        | 6.5 U2d (build 6.5.0-10964411) |
+| VMware       | Contrôleur PSC (Platform Services Controller)    | 6.5 U2d (build 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.6.1        |
 | VMware       | NSX for vSphere                 | 6.4.1        |
 | Microsoft    | Windows Server édition Standard | 2012R2       |
@@ -130,5 +130,5 @@ Afin de mettre à jour le paramètre de MTU pour le commutateur public, procéde
 * [Numéros et versions de génération de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Activation de trames Jumbo sur des commutateurs distribués virtuels](https://kb.vmware.com/s/article/1038827)
 * [Feuille de données de protection de VMware vCenter Server on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [Présentation de vCenter Server](vc_vcenterserveroverview.html)
-* [Planification des instances vCenter Server](vc_planning.html)
+* [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Planification des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html)

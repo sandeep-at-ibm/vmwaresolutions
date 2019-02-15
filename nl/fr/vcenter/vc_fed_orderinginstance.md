@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -16,13 +16,14 @@ lastupdated: "2018-11-05"
 
 Afin de déployer une plateforme virtuelle VMware personnalisable et flexible totalement adaptée à vos besoins en charge de travail, commandez une instance VMware Federal. Les instances VMware Federal vous permettent de déconnecter la connexion de gestion ouverte et de sécuriser votre instance déployée.
 
-Actuellement, seules les instances vCenter Server prennent en charge VMware Federal on {{site.data.keyword.cloud}}.{:note}
+Actuellement, seules les instances vCenter Server prennent en charge VMware Federal on {{site.data.keyword.cloud}}.
+{:note}
 
 ## Exigences relatives à la commande d'instances VMware Federal
 
 Assurez-vous que :
-* Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
-* Vous avez passé en revue les informations décrites dans la rubrique [Exigences et planification pour les instances VMware Federal](vc_fed_planning.html).
+* Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+* Vous avez passé en revue les informations décrites dans la rubrique [Exigences et planification pour les instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html).
 * Vous avez passé en revue le format des noms d'instance et de domaine. Le nom de domaine et le libellé de sous-domaine sont utilisés pour générer le nom d'utilisateur et les noms de serveur de l'instance.
 
 Tableau 1. Format de la valeur des noms d'instance et de domaine
@@ -47,7 +48,7 @@ Vous devez spécifier les paramètres système répertoriés ci-après lorsque v
 
 Le nom de l'instance qui doit respecter les règles suivantes :
 * Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-* Le nom d'instance doit commencer et se terminer par un caractère alphanumérique.
+* Le nom d'instance doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
 * Le nom d'instance ne doit pas dépasser 10 caractères.
 * Le nom d'instance doit être unique au sein de votre compte.
 
@@ -64,7 +65,7 @@ Licences fournies par IBM pour les composants VMware suivants :
 * NSX Service Providers 6.4 (édition Base, Advanced ou Enterprise)
 * (Pour les clusters vSAN) vSAN 6.6 (édition Advanced ou Enterprise)
 
-**Attention :**
+### Attention
 
 * Les éditions de licence minimum sont indiquées sur l'interface utilisateur. Si différentes éditions de composant sont prises en charge, vous pouvez sélectionner celle qui vous convient. Il est de votre responsabilité de vous assurer que la clé de licence fournie est correcte pour chaque composant VMware sélectionné.
 * Pour vSphere, des frais de licence seront imputés au moment de la commande, mais ces frais seront ultérieurement crédités à votre compte.
@@ -105,7 +106,7 @@ Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 
 Vous pouvez configurer de 2 à 20 serveurs ESXi.
 
-Tous les serveurs ESXi se partagent la même configuration. Après le déploiement, vous pouvez ajouter quatre clusters supplémentaires. Pour les paramètres de stockage vSAN, 4 serveurs ESXi sont nécessaires pour le cluster initial et pour les clusters post-déploiement. Pour plus d'informations sur le nombre minimum de serveurs ESXi, voir [Une instance vCenter Server à deux noeuds est-elle à haute disponibilité ?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+Tous les serveurs ESXi se partagent la même configuration. Après le déploiement, vous pouvez ajouter quatre clusters supplémentaires. Pour les paramètres de stockage vSAN, 4 serveurs ESXi sont nécessaires pour le cluster initial et pour les clusters post-déploiement. Pour plus d'informations sur le nombre minimum de serveurs ESXi, voir [Une instance vCenter Server à deux noeuds est-elle à haute disponibilité ?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Paramètres de stockage
 
@@ -116,7 +117,11 @@ Les paramètres de stockage varient en fonction de la configuration de serveur b
 Spécifiez les options vSAN suivantes :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
-* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+
+  L'option **Hautes performances Intel Optane** est disponible uniquement pour les modèles d'UC Skylake Dual Intel Xeon Gold 5120 et Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 * **Licence vSAN** : sélectionnez l'édition de licence vSAN 6.6 (Advanced ou Enterprise).
 
@@ -154,7 +159,7 @@ Le préfixe du nom d'hôte qui doit respecter les règles suivantes :
 
 Le libellé du sous-domaine qui doit respecter les règles suivantes :
 *  Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-*  Le libellé de sous-domaine doit commencer et se terminer par un caractère alphanumérique.
+*  Le libellé de sous-domaine doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique. 
 *  Le libellé de sous-domaine ne doit pas dépasser 10 caractères.
 *  Le libellé de sous-domaine doit être unique au sein de votre compte.
 
@@ -217,7 +222,7 @@ Selon la configuration que vous avez sélectionnée pour l'instance, le coût es
 
 Le déploiement de l'instance commence automatiquement. Vous recevez une confirmation que la commande est en cours de traitement et vous pouvez vérifier l'état du déploiement en affichant les détails de l'instance.
 
-Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**.
+Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances VMware Federal on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**.
 
 Lorsque l'instance est prête pour utilisation, elle prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 
@@ -238,10 +243,10 @@ Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwa
 
 ### Liens connexes
 
-* [Inscription à un compte {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
-* [Affichage des instances VMware Federal](vc_fed_viewinginstance.html)
-* [Extension et réduction de capacité pour des instances VMware Federal](vc_fed_addingremovingservers.html)
-* [Ajout, affichage et suppression de clusters pour des instances VMware Federal](fed_addviewdeleteclusters.html)
-* [Sécurisation des instances VMware Federal](vc_fed_securinginstance.html)
-* [Suppression d'instances VMware Federal](vc_fed_deletinginstance.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
+* [Inscription à un compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [Affichage des instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Extension et réduction de capacité pour des instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [Ajout, affichage et suppression de clusters pour des instances VMware Federal](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [Sécurisation des instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [Suppression d'instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

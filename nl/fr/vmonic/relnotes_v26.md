@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-10-01"
 
@@ -20,7 +20,7 @@ Cette édition inclut de nouvelles fonctionnalités, des mises à jour de compos
 * CVEID : [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID : [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Pour plus d'informations, voir [Résolution des vulnérabilités Spectre et Meltdown](../vmonic/trbl_fix_spectre.html).
+Pour plus d'informations, voir [Résolution des vulnérabilités Spectre et Meltdown](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
 
 ## Option Hautes performances avec Intel Optane
 
@@ -40,9 +40,9 @@ Certains services complémentaires requièrent des cartes d'interface réseau pu
 
 Pour plus d'informations, voir la section _Paramètres d'interface réseau_ dans les rubriques suivantes :
 
-* [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html#network-interface-settings)
-* [Commande d'instances vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_orderinginstance.html#network-interface-settings)
-* [Commande de nouveaux clusters vSphere](../vsphere/vs_orderinginstances.html#network-interface-settings)
+* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#network-interface-settings)
+* [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html#network-interface-settings)
+* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#network-interface-settings)
 
 ## Suppression de serveurs ESXi
 
@@ -50,11 +50,11 @@ Vous pouvez désormais supprimer un serveur ESXi de votre instance vCenter Serve
 
 Pour plus d'informations sur la configuration requise pour les serveurs ESXi, voir les rubriques suivantes :
 
-* [Extension et réduction de capacité pour des instances vCenter Server](../vcenter/vc_addingremovingservers.html)
-* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservers.html)
-* [Extension et réduction de capacité pour des instances Cloud Foundation](../sddc/sd_addingremovingservers.html)
+* [Extension et réduction de capacité pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
 
-## Mises à jour apportées aux instances VMware vCenter Server
+## Mises à jour des instances VMware vCenter Server
 
 Cette édition applique les mises à niveau et améliorations suivantes :
 
@@ -69,7 +69,7 @@ Cette édition applique les mises à niveau et améliorations suivantes :
 
 Vous pouvez désormais retirer la licence Hybridity Bundle de votre instance vCenter Server. Pour ce faire, vous devez remplacer les clés de licence locative VMware NSX et VMware vSAN par des clés BYOL (Bring Your Own License) et ouvrir un ticket de demande de service pour annuler les frais liés aux licences locatives.
 
-Pour plus d'informations, voir [Retrait de la licence Hybridity Bundle d'une instance vCenter Server](../vcenter/vc_hybrid_deletingbundle.html).
+Pour plus d'informations, voir [Retrait de la licence Hybridity Bundle d'une instance vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletingbundle.html).
 
 ### Disponibilité de vCenter Server with Hybridity Bundle
 
@@ -77,8 +77,8 @@ Les partenaires commerciaux peuvent désormais commander une instance vCenter Se
 
 Pour plus d'informations, voir les rubriques suivantes :
 
-* [Présentation de vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_overview.html)
-* [Commande d'instances vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_orderinginstance.html)
+* [Présentation de vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
 
 ## Mises à jour des instances VMware Cloud Foundation
 
@@ -98,8 +98,8 @@ Le service HyTrust KeyControl on {{site.data.keyword.cloud_notm}} est désormais
 Vous pouvez commander des instances avec le service déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes.
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Composants et remarques pour HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)
-* [Gestion de HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/managinghtkc.html)
+* [Composants et remarques pour HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_considerations.html)
+* [Gestion de HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtkc.html)
 
 ### HyTrust CloudControl on IBM Cloud
 
@@ -115,7 +115,7 @@ A compter de la version 2.6, de nouvelles instances et de nouveaux hôtes sont m
 
 Il est recommandé de mettre à jour également les instances Cloud Foundation existantes dotées de Veeam on {{site.data.keyword.cloud_notm}} vers V9.5u3a ou une édition ultérieure.
 
-Pour plus d'informations sur Veeam on {{site.data.keyword.cloud_notm}}, voir [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html).
+Pour plus d'informations sur Veeam on {{site.data.keyword.cloud_notm}}, voir [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html).
 
 ### VMware HCX on IBM Cloud
 
@@ -136,7 +136,7 @@ Pour en savoir plus sur comment résoudre ce message d'avertissement, voir :
 ### Documentation d'architecture de référence
 Le document sur l'architecture {{site.data.keyword.vmwaresolutions_short}} a été mis à jour avec des remarques importantes destinées à vous permettre de bien comprendre quelles sont vos responsabilités en termes de gestion et d'exécution de votre instance VMware.
 
-Pour plus d'informations, voir [Remarques relatives au post-déploiement pour votre instance VMware](../archiref/solution/solution_considerations.html).
+Pour plus d'informations, voir [Remarques relatives au post-déploiement pour votre instance VMware](/docs/services/vmwaresolutions/archiref/solution/solution_considerations.html).
 
 ## Améliorations et mises à jour apportées à l'interface utilisateur
 

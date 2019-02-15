@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -187,7 +187,7 @@ Tableau 9. Configuration du routeur DLR et de l'adresse IP de la passerelle Work
 
 La conversion NAT est employée sur la passerelle Workload ESG afin d'autoriser la circulation du trafic réseau d'un espace d'adresses IP à un autre. Pour la passerelle Workload ESG, la conversion NAT est nécessaire pour permettre la communication vers les destinations Internet, mais aussi pour communiquer avec n'importe quelles plages d'adresses IP sourcées {{site.data.keyword.cloud_notm}}. Pour cette conception, le trafic des charges de travail est autorisé pour la sortie sur Internet, mais pas pour la gestion ou tout autre réseau {{site.data.keyword.cloud_notm}}. Ainsi, seule une conversion SNAT doit être définie sur la passerelle Workload ESG. L'ensemble du sous-réseau portable Workload est configuré pour passer par la conversion SNAT.
 
-Alors qu'il est possible d'utiliser la conversion NAT pour autoriser la communication des charges de travail sur plusieurs instances Cloud Foundation ou vCenter Server, il n'est pas possible de l'utiliser lorsque plusieurs charges de travail doivent être connectées sur plusieurs instances. Pour consulter des exemples d'utilisation des fonctions avancées de NSX pour créer un réseau de transport de superposition L2 sur des instances Cloud Foundation ou vCenter Server, voir [Architecture multisite](multi_site.html).
+Alors qu'il est possible d'utiliser la conversion NAT pour autoriser la communication des charges de travail sur plusieurs instances Cloud Foundation ou vCenter Server, il n'est pas possible de l'utiliser lorsque plusieurs charges de travail doivent être connectées sur plusieurs instances. Pour consulter des exemples d'utilisation des fonctions avancées de NSX pour créer un réseau de transport de superposition L2 sur des instances Cloud Foundation ou vCenter Server, voir [Architecture multisite](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html).
 
 Tableau 10. Règles NAT de passerelle Workload ESG
 
@@ -240,5 +240,5 @@ Par défaut, la journalisation est activée pour tous les nouveaux dispositifs N
 
 ### Liens connexes
 
-* [Conception de NSX Edge Services Gateway](nsx_design.html)
-* [Architecture multisite](multi_site.html)
+* [Conception de NSX Edge Services Gateway (ESG)](/docs/services/vmwaresolutions/archiref/nsx/nsx_design.html)
+* [Architecture multisite](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-17"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -35,6 +35,6 @@ Pour savoir comment lier votre compte Iaas-only à votre compte PaaS, voir [Foll
 
 ### Liens connexes
 
-* [Gestion des accès utilisateur à l'aide d'IAM](../vmonic/iam.html)
-* [Invitation des utilisateurs à accéder à des services et des ressources](../vmonic/iamuserinvite.html)
-* [Présentation d'IBM Cloud IAM](../../../iam/index.html)
+* [Gestion des accès utilisateur à l'aide d'IAM](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [Invitation des utilisateurs à accéder à des services et des ressources](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [Présentation d'IBM Cloud IAM](/docs/iam/index.html)

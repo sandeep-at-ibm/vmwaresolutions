@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-29"
 
 # Configuration du réseau en vue d'utiliser la passerelle NSX ESG gérée par le client avec vos machines virtuelles
 
-Configurez le réseau pour vos machines virtuelles de manière à tirer parti de la passerelle VMware NSX ESG (Edge Services Gateway) déployée dans vos instances VMware vCenter Server. Pour plus d'informations sur les mesures de sécurité mises en place afin de réduire les risques en matière de sécurité, voir [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+Configurez le réseau pour vos machines virtuelles de manière à tirer parti de la passerelle VMware NSX ESG (Edge Services Gateway) déployée dans vos instances VMware vCenter Server. Pour plus d'informations sur les mesures de sécurité mises en place afin de réduire les risques en matière de sécurité, voir [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX est une plateforme de virtualisation de réseau qui permet de virtualiser des réseaux isolés et qui fournit plusieurs services de
 mise en réseau, tels que des commutateurs, des routages et des pare-feu. Pour plus d'informations sur NSX, voir [Présentation de NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
@@ -27,7 +27,11 @@ Dans le cadre du processus de commande de votre instance vCenter Server, les act
 * Déploiement d'un exemple de routeur logique distribué (DLR) NSX pour éventuelle communication d'est en ouest entre des charges de travail locales connectées à des réseaux de la couche 2 (L2).
 * Déploiement et configuration d'un dispositif NSX Edge pour la conversion des adresses réseau de la plage d'adresses IP du
 commutateur logique de charge de travail en une adresse IP publique sur les règles de conversion d'adresses réseau.
-* Si vous avez installé le service Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager est configuré de manière à effectuer une sauvegarde quotidienne des configurations NSX. Pour plus d'informations, voir [Remarques relatives à l'installation de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud).
+
+  NXS Edge n'est pas déployé pour les instances qui sont privées uniquement.
+  {:note}
+
+* Si vous avez installé le service Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager est configuré de manière à effectuer une sauvegarde quotidienne des configurations NSX. Pour plus d'informations, voir [Remarques relatives à l'installation de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud).
 
 ## Procédure de configuration des paramètres réseau pour vos machines virtuelles
 
@@ -85,6 +89,6 @@ Vous trouverez d'autres détails concernant les sous-réseau client en effectuan
 
 ### Liens connexes
 
-* [Traitement des incidents](../vcenter/vcenter_chg_impact.html)
-* [Foire aux questions](../vmonic/faq.html)
+* [Traitement des incidents](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Passerelle NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

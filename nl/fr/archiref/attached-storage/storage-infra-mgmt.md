@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2018-11-13"
 
 La gestion d'infrastructure fait référence aux composants VMware qui gèrent l'infrastructure vSphere ESXi.
 
-Pour plus d'informations sur les composants, voir Figure 2. Présentation du réseau NSX Manager dans [Conception d'infrastructure virtuelle](../solution/design_virtualinfrastructure.html).
+Pour plus d'informations sur les composants, voir Figure 2. Présentation du réseau NSX Manager dans [Conception d'infrastructure virtuelle](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html).
 
 ## Conception de mise en réseau virtuelle
 
-La virtualisation de réseau qui est utilisée dans cette conception utilise le commutateur vDS (vSphere Distributed Switch) existant qui est associé au réseau privé et qui est spécifié dans la rubrique [Architecture {{site.data.keyword.vmwaresolutions_full}}](../solution/solution_overview.html).
+La virtualisation de réseau qui est utilisée dans cette conception utilise le commutateur vDS (vSphere Distributed Switch) existant qui est associé au réseau privé et qui est spécifié dans la rubrique[Architecture {{site.data.keyword.vmwaresolutions_full}}](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Commutateur vDS (vSphere Distributed Switch)
 
@@ -28,7 +28,8 @@ Un autre réseau local virtuel est créé dans la solution vCenter Server et uti
 
 Le tableau suivant contient les paramètres par défaut du nouveau groupe de ports :
 
-Ne modifiez pas ces paramètres par défaut.{:important}
+Ne modifiez pas ces paramètres par défaut.
+{:important}
 
 Tableau 1. Récapitulatif du groupe de ports NFS
 
@@ -51,4 +52,4 @@ Bien que le commutateur vDS soit configuré avec un nouveau groupe de ports et q
 
 ### Liens connexes
 
-* [Présentation de la solution](../solution/solution_overview.html)
+* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

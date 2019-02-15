@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -51,8 +51,8 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 
 ### Liens connexes
 
-* [Suppression d'instances vCenter Server with Hybridity Bundle dans une configuration multisite](vc_hybrid_deletinginstance_multi.html)
-* [Commande d'instances vCenter Server with Hybridity Bundle](vc_hybrid_orderinginstance.html)
-* [Affichage des instances vCenter Server with Hybridity Bundle](vc_hybrid_viewinginstances.html)
-* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservers.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
+* [Suppression d'instances vCenter Server with Hybridity Bundle dans une configuration multisite](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html)
+* [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

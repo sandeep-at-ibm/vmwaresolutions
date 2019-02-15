@@ -2,19 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-28"
+lastupdated: "2019-01-25"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Remarques relatives à la mise en réseau des instances VMware Federal
 
 Passez en revue les informations suivantes pour obtenir des détails relatifs aux remarques et exigences concernant la mise en réseau de vos instances VMware Federal. Prenez soin de respecter les exigences de sorte que vos instances puissent fonctionner correctement.
 
 ## Composants de mise en réseau des instances VMware Federal
+{: faq}
 
-Pour passer en revue les composants de mise en réseau inclus dans votre instance VMware Federal, voir [Spécifications techniques relatives aux instances VMware Federal on {{site.data.keyword.cloud}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
+Pour passer en revue les composants de mise en réseau inclus dans votre instance VMware Federal, voir [Spécifications techniques relatives aux instances VMware Federal on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ## Remarques relatives aux pare-feu
 
@@ -24,7 +27,7 @@ Si vous utilisez des pare-feu, vous devez configurer des règles pour toutes les
 
 Lors du déploiement d'une instance VMware Federal, VMware NSX est commandé, installé, mis sous licence et configuré dans votre instance. De même, NSX Manager, des contrôleurs NSX et une zone de transport NSX sont configurés et chaque serveur ESXi est configuré avec les composants NSX.
 
-Une passerelle NSX Edge Services Gateway est également déployée pour être utilisée par vos machines virtuelles de charge de travail. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle NSX ESG gérée par le client avec vos machines virtuelles](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+Une passerelle NSX Edge Services Gateway est également déployée pour être utilisée par vos machines virtuelles de charge de travail. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle NSX ESG gérée par le client avec vos machines virtuelles](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
 ## Remarques relatives à la modification de mots de passe pour des composants NSX
 

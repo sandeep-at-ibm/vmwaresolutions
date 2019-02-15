@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ La configuration, la gestion et la surveillance de tous les composants logiciels
 
 Dans le cadre de la solution, vous pouvez éventuellement déployer les services complémentaires IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}}. Veeam et IBM Spectrum Protect Plus peuvent vous aider à répondre aux exigences de sauvegarde relatives à vos composants de gestion.
 
-Ces services complémentaires sont déployés en même temps que le stockage {{site.data.keyword.cloud_notm}} Endurance. Ils vous aident à sauvegarder vos charges de travail et les composants de gestion. Les rubriques de [présentation de l'architecture IBM Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} et de [présentation de l'architecture Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} fournissent des commentaires utiles en matière de planification et de dimensionnement de déploiement. Vous pouvez également demander des [services gérés](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) pour votre déploiement Veeam.
+Ces services complémentaires sont déployés en même temps que le stockage {{site.data.keyword.cloud_notm}} Endurance. Ils vous aident à sauvegarder vos charges de travail et les composants de gestion. Les rubriques de [présentation de l'architecture IBM Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} et de [présentation de l'architecture Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} fournissent des commentaires utiles en matière de planification et de dimensionnement de déploiement. Vous pouvez également demander des [services gérés](/docs/services/vmwaresolutions/services/managing_veeam_services.html) pour votre déploiement Veeam.
 
 Différents composants de solution requièrent différentes stratégies de sauvegarde. Certains composants sont protégés à l'aide d'une sauvegarde par image et d'autres composants sont protégés à l'aide d'une sauvegarde de niveau fichier pour leur configuration et leurs données.
 
@@ -34,7 +34,7 @@ Pour héberger ces sauvegardes, déployez un serveur de fichiers Linux dans votr
 
 VMware vCenter Server et PSC fournissent une[interface utilisateur de gestion de dispositif et une API permettant d'exporter la base de données et la configuration dans un serveur de fichiers](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} à l'aide de divers protocoles. Vous trouverez dans VMware un exemple montrant comment configurer cette opération [pour qu'elle s'exécute régulièrement en tant que travail cron](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} directement sur le dispositif vCenter Server Appliance et le contrôleur PSC.
 
-Vous devez sauvegarder le dispositif vCenter Server Appliance et le contrôleur PSC séparément à l'aide de cette technique. Familiarisez-vous avec cette technique et planifiez les aspects et les limitations documentés par VMware. En outre, planifiez une rotation et une expiration régulières des sauvegardes de fichiers sur votre serveur de fichiers.
+Si vous disposez d'un contrôleur PSC externe, vous devez sauvegarder le dispositif vCenter Server Appliance et le contrôleur PSC séparément à l'aide de cette technique. Si vous disposez d'un contrôleur PSC intégré, la sauvegarde PSC est incluse dans votre sauvegarde vCenter. Familiarisez-vous avec cette technique et planifiez les aspects et les limitations documentés par VMware. En outre, planifiez une rotation et une expiration régulières des sauvegardes de fichiers sur votre serveur de fichiers.
 
 VMware exige que l'emplacement de sauvegarde soit un dossier vide, par conséquent, vous devez planifier votre rotation ou automatisation de sauvegarde de manière à laisser l'emplacement vacant pour chaque tâche de sauvegarde successive.
 {:note}
@@ -74,7 +74,7 @@ A partir de VMware vCenter 6.5u2, VMware prend en charge la sauvegarde de la bas
 Vous devez tenir compte de plusieurs remarques spécifiques lorsque vous restaurez vos sauvegardes de gestion :
 
 * Pour vCenter et le contrôleur PSC, VMware fournit un programme d'installation qui peut déployer un nouveau dispositif virtuel et restaurer la configuration à partir d'une sauvegarde.
-* Lorsque vous restaurez un dispositif à partir d'une sauvegarde, le programme d'installation détecte le type de dispositif (vCenter Server ou contrôleur PSC) en fonction des informations de sauvegarde que vous indiquez.
+* Lorsque vous restaurez un dispositif à partir d'une sauvegarde, le programme d'installation détecte le type de dispositif (vCenter Server, contrôleur PSC ou vCenter avec contrôleur PSC intégré) en fonction des informations de sauvegarde que vous indiquez.
 * Etant donné que vous effectuez un déploiement directement sur l'un de vos hôtes, il se peut que vous ne puissiez pas effectuer ce déploiement sur un commutateur ou un groupe de ports distribué. Vous devrez peut-être créer un ensemble commutateur/groupe de ports standard temporaire en vue du déploiement des dispositifs restaurés, puis faire migrer temporairement l'une de vos cartes d'interface réseau de machine virtuelle (VMNIC) vers ce commutateur pour fournir la connectivité réseau nécessaire à vos machines virtuelles. Après le déploiement, vous pouvez faire migrer les machines virtuelles vers le groupe de ports distribué et renvoyer la carte d'interface réseau de machine virtuelle (VMNIC) au commutateur virtuel distribué (dvSwitch).
 * Pour NSX, vous devrez peut-être redéployer votre gestionnaire NSX et vos contrôleurs NSX avant de restaurer la configuration à partir d'une sauvegarde.
 * Prenez soin de vous familiariser avec les remarques et les limitations propres à VMware pour les opérations de sauvegarde et de restauration vCenter.
@@ -85,6 +85,6 @@ Grâce à une planification appropriée, vous avez l'assurance que votre instanc
 
 ### Liens connexes
 
-* [Présentation de la solution](solution_overview.html)
-* [Présentation de la conception](design_overview.html)
-* [Mise à l'échelle de la capacité](solution_scaling.html)
+* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Présentation de la conception](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [Mise à l'échelle de la capacité](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)

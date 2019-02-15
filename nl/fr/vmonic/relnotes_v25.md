@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-08-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Notes sur l'édition pour la version 2.5
 
@@ -20,7 +24,7 @@ Cette édition inclut de nouvelles fonctionnalités, des mises à jour de compos
 * CVEID : [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID : [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Pour plus d'informations, voir [Résolution des vulnérabilités Spectre et Meltdown](../vmonic/trbl_fix_spectre.html).
+Pour plus d'informations, voir [Résolution des vulnérabilités Spectre et Meltdown](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
 
 ## Mise à jour du composant NSX
 
@@ -32,9 +36,10 @@ Cette édition installe VMware NSX for vSphere 6.4.1 pour les nouveaux déploiem
 
 A partir de la version 2.5, les services IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} et Veeam on {{site.data.keyword.cloud_notm}}, lorsqu'ils sont déployés, ne préconfigurent plus la sauvegarde de machines virtuelles. Ce changement vous permet d'assurer la configuration appropriée de tous les aspects de vos tâches de sauvegarde, y compris la planification, la durée de conservation, l'utilisation du dédoublonnage, la surveillance et les alertes et la gestion de clés de chiffrement. De plus, la machine virtuelle IBM CloudDriver n'est plus configurée en tant que serveur de fichiers permanent pour les sauvegardes NSX.
 
-Vous êtes chargé de configurer, gérer et surveiller tous les composants logiciels, y compris la sauvegarde et la disponibilité de l'infrastructure de gestion et des charges de travail. Pour plus d'informations, voir [Sauvegarde des composants](../archiref/solution/solution_backingup.html#backing-up-components).
+Vous êtes chargé de configurer, gérer et surveiller tous les composants logiciels, y compris la sauvegarde et la disponibilité de l'infrastructure de gestion et des charges de travail. Pour plus d'informations, voir [Sauvegarde des composants](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#backing-up-components).
 
-**Remarque :** ce changement n'affecte pas les instances déployées antérieures à la version 2.5 sur lesquelles le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}} est déjà installé.
+Ce changement n'affecte pas les instances déployées antérieures à la version 2.5 sur lesquelles le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}} est déjà installé.
+{:note}
 
 ## Résilience IBM CloudDriver
 
@@ -50,8 +55,8 @@ A partir de la version 2.5, {{site.data.keyword.vmwaresolutions_short}} est int�
 * Quant aux instances déployées dans la version 2.4 et dans des éditions antérieures, vous pouvez les faire migrer vers un compte {{site.data.keyword.cloud_notm}} spécifié, puis les gérer également à l'aide d'IAM.
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Invitation des utilisateurs à accéder à des services et des ressources](../vmonic/iamuserinvite.html)
-* [Gestion des accès utilisateur à l'aide d'IAM](../vmonic/iam.html)
+* [Invitation des utilisateurs à accéder à des services et des ressources](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [Gestion des accès utilisateur à l'aide d'IAM](/docs/services/vmwaresolutions/vmonic/iam.html)
 
 ## Modifications apportées aux comptes d'utilisateur et aux groupes pour les instances VMware vCenter Server et VMware Cloud Foundation
 
@@ -59,12 +64,15 @@ Le groupe d'utilisateurs **ic4v-vCenter** a été créé sur le serveur Microsof
 
 N'éditez pas les droits globaux du groupe **ic4v-vCenter** sur la page **Utilisateurs et groupes** du client Web VMware vSphere. Cela pourrait avoir une incidence sur les opérations de gestion.
 
-Pour les instances Cloud Foundation, utilisez l'ID utilisateur d'hôte **customerroot** à la place de l'ID utilisateur d'hôte **root**. Continuez d'utiliser l'ID utilisateur d'hôte **root** pour les instances vCenter Server.
+Pour les instances Cloud Foundation, utilisez l'ID utilisateur d'hôte **customerroot** à la place de l'ID utilisateur d'hôte **root**.
+
+Pour les instances vCenter Server, continuez à utiliser l'ID utilisateur hôte **root**. L'ID utilisateur hôte **ic4vroot** a été créé pour une utilisation IBM seulement.
+
 
 Pour plus d'informations sur les comptes utilisateur, voir les rubriques suivantes :
 
-* [Remarques relatives à la modification des artefacts vCenter Server](../vcenter/vcenter_chg_impact.html)
-* [Remarques relatives à la modification des artefacts Cloud Foundation](../sddc/cf_chg_impact.html)
+* [Remarques relatives à la modification des artefacts vCenter Server](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
+* [Remarques relatives à la modification des artefacts Cloud Foundation](/docs/services/vmwaresolutions/sddc/cf_chg_impact.html)
 
 ## Mises à jour apportées aux services complémentaires
 
@@ -74,7 +82,7 @@ Le service {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on 
 
 Le service {{site.data.keyword.cloud_notm}} Private Hosted fournit la puissance des microservices et des conteneurs à votre environnement VMware sur {{site.data.keyword.cloud_notm}}. Grâce à ce service, vous pouvez déployer le même modèle opérationnel et les mêmes outils VMware et {{site.data.keyword.cloud_notm}} locaux dans {{site.data.keyword.cloud_notm}}.
 
-Vous pouvez demander ce service après avoir commandé votre instance vCenter Server. Pour plus d'informations, voir [Demande d'{{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html).
+Vous pouvez demander ce service après avoir commandé votre instance vCenter Server.
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -86,13 +94,13 @@ Vous pouvez désormais commander jusqu'à 10 magasins de données de sauvegarde 
 
 Un nouveau noeud final est désormais disponible en Allemagne pour le service KMIP for VMware on {{site.data.keyword.cloud_notm}}.
 
-Pour plus d'informations, voir [Configuration du service KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration).
+Pour plus d'informations, voir [Configuration du service KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration).
 
 ## Documentation nouvelle et mise à jour
 
 ### Documentation sur le stockage connecté
 
-La documentation technique sur le stockage connecté pour vCenter Server on IBM Cloud est désormais disponible dans la section *Référence* de la documentation utilisateur. Cette documentation sur l'architecture de référence est disponible en anglais uniquement. Pour plus d'informations, voir [Stockage connecté pour vCenter Server on IBM Cloud](../archiref/attached-storage/storage-benefits.html).
+La documentation technique sur le stockage connecté pour vCenter Server on IBM Cloud est désormais disponible dans la section *Référence* de la documentation utilisateur. Pour plus d'informations, voir [Stockage connecté pour vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/attached-storage/storage-benefits.html).
 
 ### Spécifications techniques
 
@@ -104,9 +112,9 @@ Les informations sur les services ont été améliorées afin d'identifier facil
 
 Pour plus d'informations, voir les rubriques suivantes :
 
-* [Services disponibles pour les instances vCenter Server](../vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
-* [Services disponibles pour les instances vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [Services disponibles pour les instances Cloud Foundation](../sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
+* [Services disponibles pour les instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
+* [Services disponibles pour les instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [Services disponibles pour les instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
 
 ## Améliorations et mises à jour apportées à l'interface utilisateur
 

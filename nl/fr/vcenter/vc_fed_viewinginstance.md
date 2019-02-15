@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -108,7 +108,7 @@ Tableau 5. Historique de déploiement d'une instance VMware Federal
 
 ## Que faire en cas d'erreurs
 
-Si des erreurs se produisent lors du déploiement ou de la suppression d'une instance, l'équipe de support {{site.data.keyword.cloud_notm}} est automatiquement prévenue. Pour connaître le statut de votre ticket, vous pouvez [contacter le support IBM](../vmonic/trbl_support.html).
+Si des erreurs se produisent lors du déploiement ou de la suppression d'une instance, l'équipe de support {{site.data.keyword.cloud_notm}} est automatiquement prévenue. Pour connaître le statut de votre ticket, vous pouvez [contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## Etape suivante
 
@@ -118,13 +118,13 @@ Avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instan
 {:important}
 
 Passez en revue les rubriques suivantes pour obtenir des informations qui vous aideront à exécuter les instructions de connexion :
-*  Pour les exigences et procédures à effectuer avant d'accéder au client Web vSphere, voir [Dépassement du délai d'attente lors de la connexion au client Web vSphere](../vmonic/trbl_timeout_vc_console.html).
+*  Pour les exigences et procédures à effectuer avant d'accéder au client vSphere Web Client, voir [Dépassement du délai d'attente lors de la connexion au client vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 *  Pour obtenir la liste des points d'accès de connexion au réseau privé de l'infrastructure {{site.data.keyword.cloud_notm}} à l'aide du réseau privé virtuel (VPN), voir [Accès VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client Web vSphere, voir [Déploiement d'un fichier OVF à l'aide du client Web vSphere](../vmonic/trbl_deploy_ovf.html).
+*  Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client Web vSphere, voir [Déploiement d'un fichier OVF à l'aide du client Web vSphere](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
 
 ### Liens connexes
 
-* [Présentation de VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html)
-* [Commande d'instances VMware Federal](vc_fed_orderinginstance.html)
-* [Suppression d'instances VMware Federal](vc_fed_deletinginstance.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
+* [Présentation de VMware Federal on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
+* [Commande d'instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [Suppression d'instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-13"
 
 Le stockage connecté est une extension de l'offre VMware vCenter Server on {{site.data.keyword.cloud}}. L'architecture de la solution de stockage connecté pour l'offre VMware vCenter Server on {{site.data.keyword.cloud_notm}} détaille les composants de la solution et la configuration de haut niveau de chaque composant de la conception.
 
-Pour plus d'informations sur la conception vCenter Server, voir [Présentation de la solution](../solution/solution_overview.html).
+Pour plus d'informations sur la conception vCenter Server, voir [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Principaux avantages du stockage connecté pour vCenter Server
 
@@ -29,4 +29,4 @@ Tableau 1. Description des fonctions du stockage connecté pour vCenter Server
 
 ### Liens connexes
 
-* [Présentation de la solution](../solution/solution_overview.html)
+* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

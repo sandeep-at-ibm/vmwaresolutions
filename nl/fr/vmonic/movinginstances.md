@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Mise à niveau de vos instances à partir d'éditions antérieures à la version 1.4
 
@@ -22,7 +26,8 @@ En version 1.4 et éditions ultérieures, plusieurs améliorations de la topolog
 
 Si vous n'avez pas migré ou supprimé vos instances des éditions antérieures à la version 1.4, elles seront visibles sur la console {{site.data.keyword.vmwaresolutions_short}} mais en mode affichage uniquement. Dans l'interface utilisateur, la mention **Obsolète** apparaît pour ces instances avec une icône de symbole d'avertissement.
 
-**Remarque :** les informations affichées dans les propriétés d'instance correspondent aux données de la date d'édition de la version 1.4 et ne peuvent plus être actualisées.
+Les informations affichées dans les propriétés d'instance correspondent aux données de la date d'édition de la version 1.4 et ne peuvent plus être actualisées.
+{:note}
 
 Les actions suivantes sont disponibles sur les instances antérieures à la version 1.4 :
 *  Affichage des informations sur la page des détails de l'instance.
@@ -43,4 +48,4 @@ Pour déplacer vos instances de version antérieur à 1.4 vers de nouvelles inst
 
 Pour plus d'informations sur l'exportation et l'importation de machines virtuelles, reportez-vous à votre documentation VMware vSphere.
 
-Si vous avez besoin d'aide concernant {{site.data.keyword.vmwaresolutions_short}}, [contactez le support IBM](trbl_support.html) via l'un des canaux de support.
+Si vous avez besoin d'aide concernant {{site.data.keyword.vmwaresolutions_short}}, [contactez le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) via l'un des canaux de support.

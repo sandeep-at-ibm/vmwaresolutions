@@ -2,27 +2,36 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-01-21"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Remarques relatives à la modification des artefacts Cloud Foundation
 
 Modifier des utilisateurs, des ressources ou des sous-réseaux réservés à {{site.data.keyword.vmwaresolutions_full}} peut avoir une incidence sur des opérations de gestion des instances VMware Cloud Foundation.
 
-**Important :** ne modifiez pas les droits globaux du groupe **ic4v-vCenter** sur la page **Utilisateurs et groupes** du client Web VMware vSphere. Les modifications de droits globaux incluent la modification du nom d'utilisateur, la suppression de l'utilisateur ou la modification de son mot de passe.
+N'éditez pas les droits globaux du groupe **ic4v-vCenter** sur la page **Utilisateurs et groupes** du client Web VMware vSphere. Les modifications de droits globaux incluent la modification du nom d'utilisateur, la suppression de l'utilisateur ou la modification de son mot de passe.
+Utilisez l'ID utilisateur d'hôte **customerroot** à la place de l'ID utilisateur d'hôte **root**.{:important}
 
 ## Comptes utilisateur de service
+{: faq}
 
 Chaque service crée un compte utilisateur interne dans vCenter Server. Ce compte est nécessaire pour que les opérations de gestion associées à un service puissent se connecter à vCenter Server afin d'effectuer les opérations sur le service.
 
-**Important :** pour éviter les indisponibilités et les problèmes de connexion, si vous modifiez l'ID utilisateur, le mot de passe ou les paramètres d'expiration de mot de passe pour ce compte utilisateur, prenez soin de mettre également à jour les informations dans le service associé.
+Pour éviter les indisponibilités et les problèmes de connexion, si vous modifiez l'ID utilisateur, le mot de passe ou les paramètres d'expiration de mot de passe pour ce compte utilisateur, prenez soin de mettre également à jour les informations dans le service associé.
+{:important}
 
 L'ID utilisateur de ce compte est au format `<service_name>-<truncated service_uuid>@test.local` ou `<service_name>-<truncated service_uuid>@example-domain.local`. Par exemple, l'ID utilisateur dont se sert le service Veeam on {{site.data.keyword.cloud_notm}} pour se connecter à vCenter Server afin d'effectuer des sauvegardes planifiées est `Veeam-<Veeam_uuid>@test.local`.
 
-**Remarque :** le nom du service (`<service_name>`) ainsi que l'identificateur unique universel `<service_uuid>` est tronqué à 20 caractères.
+Le `<service_name>` avec `<service_uuid>` tronque à 20 caractères.
+{:note}
 
 ## Ressources VMware pour les instances Cloud Foundation
 
@@ -39,16 +48,16 @@ Tableau 1. Opérations affectées pour l'administrateur de la connexion unique (
 | Modification du nom du magasin de données VSAN. | L'ajout d'un serveur ESXi risque d'échouer.<br><br>La mise à niveau de l'instance risque d'échouer. | Important | Redonnez au magasin de données VSAN son nom d'origine, soit **vsanDatastore**.
 | Modification du nom d'instance ou du nom de domaine. | L'instance est inutilisable. | Critique | Non applicable
 
-Le tableau suivant répertorie les opérations susceptibles d'être affectées lorsque l'accès à SSH ou à l'interpréteur de commandes est désactivé pour différentes ressources. 
+Le tableau suivant répertorie les opérations susceptibles d'être affectées lorsque l'accès à SSH ou à l'interpréteur de commandes est désactivé pour différentes ressources.
 
 Tableau 2. Opérations affectées pour l'accès à SSH et à l'interpréteur de commandes (local)
 
 | Modification  | Opérations affectées  | Gravité  | Méthode de récupération  |
 |:------------- |:------------- |:--------------|:--------------|
-| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour vCenter Server ou PSC. | L'appariement d'une instance principale et d'une instance secondaire peut échouer. L'application de correctifs aux ressources peut échouer. | Important    | Non applicable    |
-| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour ESXi. | L'ajout et le retrait d'hôtes, de services et de stockage réseau à l'instance peut échouer. L'application de correctifs aux ressources peut échouer. | Important    | Non applicable    |
+| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour vCenter Server ou PSC.    | L'appariement d'une instance principale et d'une instance secondaire peut échouer. L'application de correctifs aux ressources peut échouer.    | Important    | Non applicable    |
+| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour ESXi.    | L'ajout et le retrait d'hôtes, de services et de stockage réseau à l'instance peut échouer. L'application de correctifs aux ressources peut échouer.    | Important    | Non applicable    |
 
-Si vous choisissez de désactiver l'accès à SSH ou à l'interpréteur de commandes, vous devez le réactiver temporairement avant d'effectuer les opérations indiquées. 
+Si vous choisissez de désactiver l'accès à SSH ou à l'interpréteur de commandes, vous devez le réactiver temporairement avant d'effectuer les opérations indiquées.
 
 ## Gestion de sous-réseaux pour les instances Cloud Foundation
 

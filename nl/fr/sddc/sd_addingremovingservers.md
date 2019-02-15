@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -70,8 +70,8 @@ Une instance Cloud Foundation peut comporter jusqu'à cinq clusters, dont l'un e
 
 ### Liens connexes
 
-* [Nomenclature de Cloud Foundation](sd_bom.html)
-* [Exigences et planification pour les instances Cloud Foundation](sd_planning.html)
-* [Ajout, affichage et suppression de clusters pour des instances Cloud Foundation](sd_addingviewingclusters.html)
+* [Nomenclature de Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [Exigences et planification pour les instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Ajout, affichage et suppression de clusters pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
 * [Activer le mode maintenance sur un hôte](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

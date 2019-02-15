@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -79,10 +79,6 @@ Tableau 3. Informations d'accès relatives aux composants des instances NetApp O
 | NetApp Deploy Tool IP | Adresse IP de la machine virtuelle NetApp ONTAP Select Deploy. |
 | NetApp Deploy Tool FQDN | Nom de domaine complet de la machine virtuelle NetApp ONTAP Select Deploy. |
 | NetApp Deploy Tool HTTPS | Nom d'utilisateur et mot de passe que vous pouvez utiliser pour accéder à la machine virtuelle NetApp ONTAP Select Deploy. |
-| PSC IP | Adresse IP du contrôleur PSC (Platform Services Controller). |
-| PSC FQDN | Nom de domaine complet du contrôleur PSC. |
-| PSC ADMIN | Nom d'utilisateur et mot de passe de connexion unique VMware vCenter que vous pouvez utiliser pour accéder à la console Web du contrôleur PSC. |
-| PSC SSH | Nom d'utilisateur et mot de passe que vous pouvez utiliser pour accéder à la machine virtuelle PSC via une connexion SSH. |
 | vCenter IP | Adresse IP du serveur vCenter Server. |
 | vCenter FQDN | Nom de domaine complet du serveur vCenter Server. |
 | vCenter ADMIN | Nom d'utilisateur et mot de passe de connexion unique VMware vCenter que vous pouvez utiliser pour vous connecter au serveur vCenter Server à l'aide du client Web vSphere. |
@@ -99,7 +95,7 @@ Tableau 4. Historique de déploiement d'une instance NetApp ONTAP Select
 | Date | Date et heure de changement du statut de l'instance |
 | Récapitulatif | Détails du changement |
 
-Si des erreurs se produisent lors du déploiement ou de la suppression d'une instance, l'équipe de support {{site.data.keyword.cloud_notm}} est automatiquement prévenue. Pour connaître le statut de votre ticket, vous pouvez [contacter le support IBM](../vmonic/trbl_support.html).
+Si des erreurs se produisent lors du déploiement ou de la suppression d'une instance, l'équipe de support {{site.data.keyword.cloud_notm}} est automatiquement prévenue. Pour connaître le statut de votre ticket, vous pouvez [contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ## Affichage des clusters NetApp ONTAP Select
 
@@ -172,12 +168,12 @@ Avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instan
 
 Consultez les rubriques suivantes pour plus d'informations sur l'exécution des instructions de connexion :
 
-*  Pour les exigences et procédures à effectuer avant d'accéder au client Web vSphere, voir [Dépassement du délai d'attente lors de la connexion au client Web vSphere](../vmonic/trbl_timeout_vc_console.html).
+*  Pour les exigences et procédures à effectuer avant d'accéder au client vSphere Web Client, voir [Dépassement du délai d'attente lors de la connexion au client vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
 *  Pour la liste des points d'accès de connexion au réseau privé de l'infrastructure {{site.data.keyword.cloud_notm}} à l'aide du réseau privé virtuel (VPN), voir [Accès VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client Web vSphere, voir [Déploiement d'un fichier OVF à l'aide du client Web vSphere](../vmonic/trbl_deploy_ovf.html).
+*  Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client vSphere Web Client, voir [Déploiement d'un fichier OVF à l'aide du client vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
 
 ### Liens connexes
 
-* [Commande d'instances NetApp ONTAP Select](np_orderinginstances.html)
-* [Suppression d'instances NetApp ONTAP Select](np_deletinginstance.html)
+* [Commande d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [Suppression d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [Liaison d'un stockage dédié à des déploiements NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

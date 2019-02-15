@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,5 +41,5 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 
 ### Liens connexes
 
-* [Suppression d'instances Cloud Foundation](sd_deletinginstance.html)
-* [Commande, affichage et retrait de services pour des instances Cloud Foundation](sd_addingremovingservices.html)
+* [Suppression d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)

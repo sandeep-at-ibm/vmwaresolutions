@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -60,9 +60,9 @@ Le modèle de licence pour le service FortiGate Virtual Appliance on {{site.data
         <dt class="dt dlterm">Pare-feu standard</dt>
         <dd class="dd">Cette offre groupée inclut Inspection de paquet avec état, Protection VLAN et consignation avancée, Règles de pare-feu d'entrée et de sortie, Terminaison VPN SSL/IPSec et support 24h/24 et 7j/7.</dd>
         <dt class="dt dlterm">Pare-feu standard + UTM</dt>
-        <dd class="dd">Cette offre groupée inclut tous les services de pare-feu standard en plus du service de protection avancée contre les logiciels malveillants (qui inclut : Antivirus, Service de domaine/IP Botnet, Sécurité mobile contre les logiciels malveillants, Cloud FortiSandbox, Service de protection contre le déclenchement de virus, Désarmement et reconstruction du contenu), ainsi que les services Filtrage Web, IPS, Antispam, Contrôle d'application et FortiCare.</dd>
+        <dd class="dd">Cette offre groupée inclut tous les services de pare-feu standard en plus du service AMP (Advanced Malware Protection). Il inclut un antivirus, Botnet IP/Domain Service, Mobile Malware Security, FortiSandbox Cloud, Virus Outbreak Protection Service et Content Disarm & Reconstruct. Il inclut également les services Web Filtering, IPS, Antispam, Application Control et FortiCare.</dd>
         <dt class="dt dlterm">Pare-feu standard + Enterprise</dt>
-        <dd class="dd">Cette offre groupée inclut tous les services UTM et de pare-feu standard en plus des services suivants :<ul><li>Cloud Access Security Broker (CASB) : ce service offre des fonctions de visibilité, conformité, sécurité des données et protection contre les menaces pour les services basés sur le cloud.</li><li>Sécurité industrielle – Ce service fournit des signatures pour les protocoles ICS/SCADA courants.</li><li>Evaluation de la sécurité - Ce service fournit des fonctions d'audit pour identifier les vulnérabilités critiques et les faiblesses de la configuration, et implémenter des recommandations en matière de meilleures pratiques.</li></ul></dd>
+        <dd class="dd">Cette offre groupée inclut tous les services UTM et de pare-feu standard en plus des services suivants :<ul><li>Cloud Access Security Broker (CASB) - ce service offre des fonctions de visibilité, conformité, sécurité des données et protection contre les menaces pour les services basés sur le cloud.</li><li>Sécurité industrielle - Ce service fournit des signatures pour les protocoles ICS/SCADA courants.</li><li>Evaluation de la sécurité - Ce service fournit des fonctions d'audit pour identifier les vulnérabilités critiques et les faiblesses de la configuration, et implémenter des recommandations en matière de meilleures pratiques.</li></ul></dd>
 </dl>
 
 Au cours du troisième trimestre 2018, Fortinet a ajouté trois nouveaux services (CASB, sécurité industrielle et évaluation de la sécurité) à son offre groupée d'entreprise. Ces services sont disponibles sur FortiGate 6.0 uniquement.
@@ -73,12 +73,12 @@ Vous ne pouvez pas modifier le modèle de licence après installation du service
 
 ### Liens connexes
 
-* [Présentation de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_considerations.html)
-* [Gestion de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](managingfortinetvm.html)
-* [Commande, affichage et retrait de services pour des instances Cloud Foundation](../sddc/sd_addingremovingservices.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server](../vcenter/vc_addingremovingservices.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
-* [Foire aux questions](../vmonic/faq.html)
+* [Présentation de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)
+* [Gestion de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
+* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Site Web Fortinet](https://www.fortinet.com/){:new_window}
 * [Bibliothèque de documents Fortinet](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

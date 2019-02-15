@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,9 +16,10 @@ lastupdated: "2018-11-05"
 
 VMware Federal on {{site.data.keyword.cloud}} permet de commander une instance vCenter Server de base et offre aux organismes gouvernementaux fédéraux américains la possibilité de sécuriser les instances vCenter Server déployées. Lorsque vous sécurisez une instance déployée, les informations sensibles qui sont stockées à propos de l'instance sont retirées. De plus, la connexion ouverte pour l'accès à l'instance est retirée, ce qui signifie que les fonctions de gestion, telles que l'ajout et le retrait d'hôtes et de clusters, ne sont plus disponibles. Après que vous avez sélectionné l'option de sécurisation, seule la fonction de suppression d'instance est disponible.
 
-Pour plus d'informations sur vCenter Server on {{site.data.keyword.cloud_notm}} et sur l'architecture vCenter Server, voir [Présentation de vCenter Server](vc_vcenterserveroverview.html).
+Pour plus d'informations sur vCenter Server on {{site.data.keyword.cloud_notm}} et sur l'architecture vCenter Server, voir [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html).
 
-VMware Federal on {{site.data.keyword.cloud_notm}} ne fournit qu'un sous-ensemble des offres vCenter Server. La configuration multisite, le mode BYOL (Bring Your Own License) et l'option permettant de commander des services complémentaires ne sont pas pris en charge.{:note}
+VMware Federal on {{site.data.keyword.cloud_notm}} ne fournit qu'un sous-ensemble des offres vCenter Server. La configuration multisite, le mode BYOL (Bring Your Own License) et l'option permettant de commander des services complémentaires ne sont pas pris en charge.
+{:note}
 
 ## Spécifications techniques relatives aux instances VMware Federal on IBM Cloud
 
@@ -33,7 +34,8 @@ Vous pouvez commander au moins deux serveurs {{site.data.keyword.baremetal_short
 
 Pour une configuration de stockage NFS, le nombre de serveurs {{site.data.keyword.baremetal_short}} recommandé est de trois par défaut.
 
-Si vous sélectionnez un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.{:note}
+Si vous sélectionnez un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.
+{:note}
 
 ### Mise en réseau
 
@@ -41,13 +43,13 @@ Les composants réseau suivants sont commandés :
 *  Trois VLAN (réseaux locaux virtuels) : un VLAN public et deux VLAN privés
 *  Un VXLAN (réseau local virtuel extensible) avec routeur logique distribué (DLR) pour éventuelle communication d'est en ouest entre des charges de travail locales connectées à des réseaux de la couche 2 (L2). Le VXLAN est déployé en tant qu'exemple de topologie de routage, que vous pouvez modifier, à partir duquel vous pouvez construire et que vous pouvez supprimer. Vous pouvez également ajouter des zones de sécurité en connectant des VXLAN supplémentaires aux nouvelles interfaces logiques sur le DLR.
 *  Deux passerelles de services périphériques VMware NSX :
-  * Une passerelle de gestion sécurisée VMware NSX Edge Services Gateway (ESG) pour le trafic de gestion HTTPS sortant, déployée par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle ESG gérée par le client](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * Une passerelle de gestion sécurisée VMware NSX Edge Services Gateway (ESG) pour le trafic de gestion HTTPS sortant, déployée par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle ESG gérée par le client](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     Vous n'avez pas accès à cette passerelle ESG et vous ne pouvez pas l'utiliser. Si vous la modifiez, vous ne pourrez plus gérer l'instance vCenter Server depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
     {:important}
-  * Une passerelle VMware NSX Edge Services Gateway sécurisée gérée par le client pour le trafic de charge de travail HTTPS sortant et entrant, déployée par IBM en tant que modèle que vous pouvez modifier pour fournir un accès au réseau privé virtuel ou un accès public. Pour plus d'informations, voir [La passerelle NSX Edge gérée par le client présente-t-elle un risque pour la sécurité ?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
+  * Une passerelle VMware NSX Edge Services Gateway sécurisée gérée par le client pour le trafic de charge de travail HTTPS sortant et entrant, déployée par IBM en tant que modèle que vous pouvez modifier pour fournir un accès au réseau privé virtuel ou un accès public. Pour plus d'informations, voir [La passerelle NSX Edge gérée par le client présente-t-elle un risque pour la sécurité ?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
-  La passerelle VMware NSX ESG (Edge Services Gateway) pour le trafic de gestion HTTPS sortant est retirée dans le cadre de l'action de sécurisation de votre instance VMware Federal déployée. Pour plus d'informations, voir [Sécurisation des instances VMware Federal](vc_fed_securinginstance.html).
+  La passerelle VMware NSX ESG (Edge Services Gateway) pour le trafic de gestion HTTPS sortant est retirée dans le cadre de l'action de sécurisation de votre instance VMware Federal déployée. Pour plus d'informations, voir [Sécurisation des instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html).
   {:note}
 
 ### Instance de serveur virtuel
@@ -92,7 +94,7 @@ Chaque noeud d'extension vCenter Server déployé génère des frais, imputés �
 
 ### Matériel pour les noeuds d'extension
 
-Un serveur bare metal doté de la configuration présentée dans [Spécifications techniques relatives aux instances VMware Federal sur {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
+Un serveur bare metal doté de la configuration présentée dans [Spécifications techniques relatives aux instances VMware Federal sur {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ### Licences et frais pour les noeuds d'extension
 
@@ -112,9 +114,9 @@ Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} cr�
 
 ### Liens connexes
 
-* [Exigences et planification pour les instances VMware Federal](vc_fed_planning.html)
-* [Commande d'instances VMware Federal](vc_fed_orderinginstance.html)
-* [Ajout, affichage et suppression de clusters pour des instances VMware Federal](fed_addviewdeleteclusters.html)
-* [Extension et réduction de capacité pour des instances VMware Federal](vc_fed_addingremovingservers.html)
-* [Sécurisation des instances VMware Federal](vc_fed_securinginstance.html)
+* [Exigences et planification pour les instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
+* [Commande d'instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [Ajout, affichage et suppression de clusters pour des instances VMware Federal](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [Extension et réduction de capacité pour des instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [Sécurisation des instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
 * [Stockage de fichiers et de blocs d'{{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

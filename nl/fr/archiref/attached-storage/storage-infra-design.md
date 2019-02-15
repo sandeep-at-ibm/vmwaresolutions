@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -34,7 +34,7 @@ La mise en réseau physique est gérée par {{site.data.keyword.cloud_notm}}. La
 
 ### Présentation du réseau IBM Cloud
 
-Le réseau physique d'{{site.data.keyword.cloud_notm}} est séparé en trois réseaux distincts, un réseau public, un réseau privé et un réseau de gestion. Pour plus d'informations sur le réseau public, le réseau privé et le réseau de gestion, voir [Présentation de la solution](../solution/solution_overview.html).
+Le réseau physique d'{{site.data.keyword.cloud_notm}} est séparé en trois réseaux distincts, un réseau public, un réseau privé et un réseau de gestion. Pour plus d'informations sur le réseau public, le réseau privé et le réseau de gestion, voir [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 Pour plus d'informations sur le réseau {{site.data.keyword.cloud_notm}}, voir [The {{site.data.keyword.cloud_notm}} network](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}.
 
@@ -46,7 +46,7 @@ Consultez les informations suivantes pour obtenir une description du réseau des
 
 ### Réseaux locaux virtuels
 
-Pour plus d'informations sur les réseaux virtuels locaux, voir la section _Conception de réseau physique_ dans [Conception d'infrastructure physique](../solution/design_physicalinfrastructure.html).
+Pour plus d'informations sur les réseaux virtuels locaux, voir la section _Conception de réseau physique_ dans [Conception d'infrastructure physique](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html).
 
 ## Conception de stockage physique
 
@@ -65,10 +65,10 @@ Endurance est disponible dans trois niveaux de performance d'IOPS pour prendre e
 Après la commande d'un partage NFS, celui-ci peut être redimensionné ou reconfiguré pour permettre davantage ou moins d'IOPS.
 {:note}
 
-Pour connaître les options d'IOPS détaillées, voir la section _Paramètres de stockage_ dans la rubrique [Commande d'instances vCenter Server](../../vcenter/vc_orderinginstance.html).
+Pour connaître les options d'IOPS détaillées, voir la section _Paramètres de stockage_ dans la rubrique [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html).
 
 Outre les niveaux de stockage, le stockage {{site.data.keyword.cloud_notm}} Endurance prend en charge un vaste choix de besoins applicatifs, y compris les instantanés et la réplication, ainsi que le chiffrement des données au repos dans les emplacements {{site.data.keyword.CloudDataCent_notm}}.
 
 ### Liens connexes
 
-* [Présentation de la solution](../solution/solution_overview.html)
+* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

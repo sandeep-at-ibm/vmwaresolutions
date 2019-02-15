@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-24"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Commande de Veeam on IBM Cloud
 
@@ -38,17 +42,17 @@ Capacité répondant à vos besoins en matière de stockage. Pour toute question
 
 ### Performances de stockage
 
-Valeur IOPS (Input/output Operations Per Second) par Go adaptée à vos besoins en matière de charge de travail.
+Valeur IOPS (opérations d'entrée/sortie par seconde) par Go adaptée à vos besoins en matière de charge de travail.
 
 ### Liens connexes
 
-* [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](veeam_considerations.html)
-* [Gestion de Veeam on {{site.data.keyword.cloud_notm}}](managingveeam.html)
-* [Commande, affichage et retrait de services pour des instances Cloud Foundation](../sddc/sd_addingremovingservices.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server](../vcenter/vc_addingremovingservices.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_addingremovingservices.html)
-* [Demande de services gérés pour Veeam on {{site.data.keyword.cloud_notm}}](managing_veeam_services.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
-* [Foire aux questions](../vmonic/faq.html)
+* [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [Gestion de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingveeam.html)
+* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Demande de services gérés pour Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_veeam_services.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Site Web Veeam](https://www.veeam.com/){:new_window}
 * [Centre d'information Veeam](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}

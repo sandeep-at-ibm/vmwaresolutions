@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,7 +21,7 @@ Vous êtes responsable de la configuration de l'environnement, de l'installation
 
 ## Exigences liées au compte IBM Cloud
 
-Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Disponibilité du centre de données IBM Cloud
 
@@ -69,6 +69,6 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les cluste
 
 ### Liens connexes
 
-* [Commande de nouveaux clusters vSphere](vs_orderinginstances.html)
-* [Mise à l'échelle de clusters existants](vs_scalingexistingclusters.html)
-* [Mise à l'échelle de clusters existants créés en dehors de la console](vs_orderingforclustersoutside.html)
+* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Mise à l'échelle de clusters existants](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [Mise à l'échelle de clusters existants créés en dehors de la console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

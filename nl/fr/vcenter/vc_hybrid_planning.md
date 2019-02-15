@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ Passez en revue les exigences suivantes avant de commander votre instance VMware
 
 ## Exigences liées au compte IBM Cloud
 
-Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Disponibilité du centre de données IBM Cloud
 
@@ -67,7 +67,7 @@ Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_not
 
 ## Sauvegarde des composants de gestion
 
-Vous êtes chargé de gérer et d'assurer la disponibilité de tous les composants d'instance. Il est fortement recommandé de planifier la sauvegarde ou la haute disponibilité de tous les composants de gestion. Pour plus d'informations, voir [Sauvegarde des composants](../archiref/solution/solution_backingup.html).
+Vous êtes chargé de gérer et d'assurer la disponibilité de tous les composants d'instance. Il est fortement recommandé de planifier la sauvegarde ou la haute disponibilité de tous les composants de gestion. Pour plus d'informations, voir [Sauvegarde des composants](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
 ## Services pour les instances vCenter Server with Hybridity Bundle
 
@@ -84,15 +84,15 @@ Lorsque vous déployez ce service, définissez les paramètres suivants :
   * (Facultatif) **Confirmer le mot de passe** : entrez de nouveau le mot de passe de la clé privée.
   * (Facultatif) **Nom d'hôte** : entrez le nom d'hôte à mapper au nom usuel du certificat de l'autorité de certification. HCX on {{site.data.keyword.cloud_notm}} exige que le certificat de l'autorité de certification soit dans un format accepté par NSX Edge. Pour plus d'informations sur les formats de certificat NSX Edge, voir [Importation de certificats SSL](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
 
-Vous pouvez commander d'autres services complémentaires pour votre instance en fonction de vos besoins, par exemple, la reprise après incident. Pour plus d'informations, voir [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservices.html).
+Vous pouvez commander d'autres services complémentaires pour votre instance en fonction de vos besoins, par exemple, la reprise après incident. Pour plus d'informations, voir [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html).
 
 ## Remarques sur la capacité
 
-Pour plus d'informations sur la capacité, voir [Mise à l'échelle de la capacité](../archiref/solution/solution_scaling.html).
+Pour plus d'informations sur la capacité, voir [Mise à l'échelle de la capacité](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
 
 ### Liens connexes
 
-* [Présentation de vCenter Server with Hybridity Bundle](vc_hybrid_overview.html)
-* [Commande d'instances vCenter Server with Hybridity Bundle](vc_hybrid_orderinginstance.html)
-* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservers.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](vc_hybrid_addingremovingservices.html)
+* [Présentation de vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)

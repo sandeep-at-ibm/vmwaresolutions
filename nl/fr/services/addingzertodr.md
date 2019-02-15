@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -23,7 +23,8 @@ Ce service est disponible uniquement sur les instances qui sont déployées en v
 
 Les composants suivants sont commandés et inclus dans le service Zerto on {{site.data.keyword.cloud_notm}} :
 
-Les composants Zerto Virtual Replication Appliance (VRA) ne sont déployés que dans le cluster par défaut.{:note}
+Les composants Zerto Virtual Replication Appliance (VRA) ne sont déployés que dans le cluster par défaut.
+{:note}
 
 ### Instances de serveur virtuel
 
@@ -47,9 +48,9 @@ Licence Zerto Replication V6.0 update 3
 
 ### Liens connexes
 
-* [A propos d'{{site.data.keyword.vmwaresolutions_short}}](../vmonic/prod_overview.html)
-* [Commande de Zerto on {{site.data.keyword.cloud_notm}}](zerto_ordering.html)
-* [Gestion de Zerto on {{site.data.keyword.cloud_notm}}](managingzertodr.html)
-* [Demande de services gérés pour Zerto on {{site.data.keyword.cloud_notm}}](managing_zerto_services.html)
+* [A propos d'{{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/vmonic/prod_overview.html)
+* [Commande de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/zerto_ordering.html)
+* [Gestion de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingzertodr.html)
+* [Demande de services gérés pour Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
 * [Site Web zerto.com](https://www.zerto.com){:new_window}
 * [Documentation technique Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

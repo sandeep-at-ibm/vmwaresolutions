@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -33,14 +33,14 @@ Un déploiement multisite est constitué des composants suivants.
    *  Nom de site de connexion unique
    *  Sous-domaine DNS lié au domaine racine sur l'instance principale
    *  Réplication DNS et AD configurée entre les machines virtuelles AD de l'instance principale et des instances secondaires
-   *  Contrôleur PSC (Platform Services Controller) déployé et configuré de manière à répliquer le contrôleur PSC de l'instance principale
+   *  Pour les instances principales qui sont déployées dans la version 2.8 ou une version ultérieure : vCenter Server Appliance (vCSA) avec Platform Services Controller (PSC) intégré, déployé et configuré.
    *  VMware vCenter sur les instances secondaires configuré en mode lien étendu (Enhanced Linked) sur le serveur vCenter de l'instance principale
 
 ## Déploiement multisite vCenter Server
 
 Le modèle de configuration multisite utilise un concentrateur et une topologie en étoile (hub and spoke) avec un site principal et un maximum de sept sites secondaires. Une seule couche de sites est prise en charge, c'est-à-dire que vous ne pouvez pas configurer de sites supplémentaires qui sont liés à d'autres sites secondaires. Une configuration multisite accepte jusqu'à 128 serveurs ESXi répartis dans toutes les instances.
 
-Si votre configuration nécessite un déploiement multisite de plus de 128 serveurs ESXi, contactez le support IBM pour obtenir de l'aide. Pour plus d'informations, voir [Contacter le support IBM](../vmonic/trbl_support.html).
+Si votre configuration nécessite un déploiement multisite de plus de 128 serveurs ESXi, contactez le support IBM pour obtenir de l'aide. Pour plus d'informations, voir [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 {:note}
 
 Le graphique suivant décrit l'architecture globale d'un déploiement vCenter Server multisite.
@@ -58,7 +58,7 @@ Vous ne pouvez affecter qu'une seule instance secondaire à la fois à une insta
 
 Vous pouvez avoir jusqu'à 8 instances (1 principale et 7 secondaires) au maximum déployées dans une configuration multisite.
 
-La suppression d'instances vCenter Server qui font partie d'une configuration multisite requiert une planification spéciale. Pour plus d'informations, voir [Suppression d'instances vCenter Server dans une configuration multisite](vc_deletinginstance_multi.html).
+La suppression d'instances vCenter Server qui font partie d'une configuration multisite requiert une planification spéciale. Pour plus d'informations, voir [Suppression d'instances vCenter Server dans une configuration multisite](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance_multi.html).
 {:note}
 
 ### Liens connexes

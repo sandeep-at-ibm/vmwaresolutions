@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,7 @@ Pour chaque hôte, procédez comme suit :
   `esxcli system module set --enabled=true --module=ixgben`
 4. Exécutez la commande vCLI suivante pour redémarrer l'hôte vSphere ESXi :
   `system shutdown reboot --reason “Install ixgben driver”`
-5. Dès que l'hôte vSphere ESXI a été redémarré, reconnectez-vous à l'hôte en utilisant SSH. Exécutez la commande vCLI suivante et vérifiez que le pilote ixgben est chargé (“loaded”) (dans la première colonne) et activé (“enabled”) (dans la seconde colonne) :
+5. Une fois que l'hôte vSphere ESXI a réamorcé en utilisant SSH pour se reconnecter à l'hôte, exécutez la commande vCLI suivante et vérifiez que le pilote ixgben est chargé (“loaded”) (dans la première colonne) et activé (“enabled”) (dans la seconde colonne) :
   `esxcli system module list |grep ixg`
 6. Si les pilotes sont activés, dans vSphere Web Client, sélectionnez l'hôte dans le panneau de navigation, cliquez avec le bouton droit de la souris et sélectionnez **Maintenance Mode** > **Exit Maintenance Mode**. Sélectionnez l'hôte suivant et activez les pilotes jusqu'à que tous les hôtes soient traités.
 7. Si la modification ne fonctionne pas, pour revenir à l'état antérieur, exécutez la commande suivante :
@@ -34,18 +34,18 @@ Pour chaque hôte, procédez comme suit :
 
 Si vous souhaitez revenir à l'état antérieur et que vous ne pouvez pas vous connecter via SSH à l'hôte vSphere ESXi, vous devez vous connecter à la console KVM pour l'hôte qui doit être rétabli via la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}}.
 
-Utilisez l'ID et le mot de passe répertoriés dans la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}} avec l'adresse IP IPMI pour vous connecter à l'interface Web d'IPMI. Vous devez être connecté au centre de données dans lequel se trouve l'hôte via le réseau privé virtuel (VPN). Pour plus d'informations, voir [Initiation au VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
+Utilisez l'ID et le mot de passe répertoriés dans la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}} avec l'adresse IP IPMI pour vous connecter à l'interface Web d'IPMI. Vous devez être connecté au centre de données dans lequel se trouve l'hôte via le réseau privé virtuel (VPN). Pour plus d'informations, voir [Initiation au VPN](/docs/infrastructure/iaas-vpn/getting-started.html).
 
 1. Accédez à la section Détails de l'unité, page Gestion à distance correspondant à l'hôte vSphere ESXi et sélectionnez **Actions** > **Console KVM**. Une autre fenêtre s'affiche en vous demandant le nom d'utilisateur et le mot de passe IPMI.
-2. Sélectionnez **Contrôle à distance** > **iKVM/HTML5** et cliquez sur **iKVM/HTML5** pour relancer. Vous pourrez maintenant accéder à la console de l'hôte vSphere ESXi.
+2. Sélectionnez **Contrôle à distance** > **iKVM/HTML5** et cliquez sur **iKVM/HTML5** pour relancer. Vous pouvez maintenant accéder à la console de l'hôte vSphere ESXi.
 3. Si l'hôte répond aux commandes, utilisez la combinaison de touches **ALT-F1** dans la console pour accéder à la console de l'hôte ESXi. Utilisez les données d'identification de l'hôte pour vous connecter.
 4. Si l'hôte ne répond pas, utilisez les menus d'IPMI pour mettre l'hôte sous tension.
-5. Observez attentivement la console HTML5 au redémarrage de l'hôte. Vous ne disposez que de quelques secondes pour passer en mode reprise lorsque ESXi commence à redémarrer.
+5. Observez attentivement la console HTML5 au redémarrage de l'hôte. Vous ne disposez que de quelques secondes pour passer en mode reprise lorsque ESXi redémarre.
 6. Appuyez simultanément sur les touches **CMD + R** pour passer en mode reprise.
 7. Entrez **“Y”** pour passer en mode reprise et démarrer le serveur ESXi avec la version précédente.
-8. Surveillez sa progression dans la console. Cette opération peut prendre de 10 à 20 minutes.
+8. Surveillez sa progression dans la console. L'amorçage peut prendre de 10 à 20 minutes.
 
 ### Liens connexes
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

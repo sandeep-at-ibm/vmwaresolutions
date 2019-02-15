@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-11-07"
 
 vCenter a une fonction appelée Profils d'hôte (Host Profiles). Cette fonction permet de créer un profil qui capture une configuration d'hôte de référence validée et préconfigurée. Elle aide un administrateur système à gérer les configurations d'hôte dans un cluster. Les profils d'hôte offrent un mécanisme automatisé géré de manière centralisée pour la configuration des hôtes et la conformité à cette configuration. Les profils d'hôte permettent de traiter la configuration comme un objet géré, qui contient un catalogue de paramètres à configurer, notamment les paramètres de mise en réseau, de stockage, de sécurité, ainsi que d'autres paramètres au niveau de l'hôte. Ces profils d'hôte peuvent être appliqués à des hôtes individuels, à un cluster ou à tous les hôtes et clusters associés à un profil d'hôte.
 
-Comme il y a davantage d'hôtes vSphere ESXi VMware vCenter Server on {{site.data.keyword.cloud}} déployés par l'automatisation IC4VS qui a déployé le cluster d'origine, il y a moins de modification de configuration qu'avec des méthodes manuelles d'ajout d'hôtes. Cependant, les actions de l'administrateur système, hors de l'automatisation peuvent aboutir à une configuration différente des hôtes, par exemple, en cas d'ajout de stockage NFS ou de réseaux locaux virtuels (VLAN) supplémentaires. Par conséquent, l'utilisation de profils d'hôte pour valider la configuration d'un nouvel hôte en vérifiant la conformité de l'hôte par rapport à un hôte existant constitue un cas d'utilisation valide de cet outil dans {{site.data.keyword.cloud_notm}}.
+Comme il y a davantage d'hôtes vSphere ESXi VMware vCenter Server on {{site.data.keyword.cloud}} déployés par l'automatisation IC4VS qui a déployé le cluster d'origine, il y a moins de modification de configuration qu'avec des méthodes manuelles d'ajout d'hôtes. Cependant, les actions de l'administrateur système, en plus de l'automatisation peuvent aboutir à une configuration différente des hôtes, par exemple, en cas d'ajout de stockage NFS ou de réseaux locaux virtuels (VLAN) supplémentaires. L'utilisation de profils d'hôte pour valider la configuration d'un nouvel hôte en vérifiant la conformité de l'hôte par rapport à un hôte existant constitue un cas d'utilisation valide de cet outil dans {{site.data.keyword.cloud_notm}}.
 
-Pour ajouter des hôtes à votre cluster vCenter Server, voir [Extension et réduction de capacité pour des instances vCenter Server](../../vcenter/vc_addingremovingservers.html).
+Pour ajouter des hôtes à votre cluster vCenter Server, voir [Extension et réduction de capacité pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html).
 
-Notez que :
+Remarque :
 *	Pour les instances déployées ou mises à niveau vers la version 2.1 ou supérieure, les mises à jour d'ESXi de VMWare appliquées aux serveurs et aux clusters ESXi nouvellement déployés sont récentes mais ne sont pas forcément les plus récentes.
 *	Vous êtes responsable de toutes les autres mises à jour des composants VMware, y compris de vous assurer que les nouveaux clusters et serveurs ESXi déployés disposent de toutes les mises à jour les plus récentes dont vous avez besoin.
 
@@ -33,7 +33,7 @@ La séquence suivante est nécessaire pour vérifier la conformité :
 1.	A partir de la page d'accueil du client vSphere Web Client, cliquez sur **Policies and Profiles**.
 2.	Cliquez sur **Host Profiles** et accédez à la vue correspondante.
 3.	Cliquez sur l'icône **Extract Profile from a Host**.
-4.	Sélectionnez l'hôte existant qui fera office d'hôte de référence et cliquez sur **Next**.
+4.	Sélectionnez l'hôte existant qui fait office d'hôte de référence et cliquez sur **Next**.
 5.	Entrez un nom et une description du nouveau profil, puis cliquez sur **Next**.
 6.	Passez en revue les informations récapitulatives du nouveau profil et cliquez sur **Finish**.
 7.	Le nouveau profil apparaît dans la liste des profils.
@@ -54,13 +54,13 @@ La séquence suivante est nécessaire pour vérifier la conformité :
 
 ##	Examen et correction des erreurs de conformité
 
-1.	Pour voir plus de détails sur les erreurs de conformité, sélectionnez le **profil d'hôte** dans l'onglet **Objects** qui est utilisé pour la vérification de la conformité.
-2.	Pour voir les détails spécifiques des paramètres qui sont différents entre l'hôte dont la vérification de conformité a échoué et le profil d'hôte, cliquez sur l'onglet **Monitor** et sélectionnez la vue **Compliance**.
-3.	Développez la hiérarchie des objets et sélectionnez l'hôte ayant échoué.
-4.	Les paramètres qui diffèrent apparaissent dans la fenêtre Compliance, sous la hiérarchie.
-5.	Examinez les paramètres et essayez de comprendre pourquoi le nouvel hôte est différent de l'hôte de référence. Pour les paramètres où la conformité n'est pas acceptable, par exemple, lorsque la modification de configuration est due à une action de l'administrateur système, effectuez les corrections nécessaires avant de mettre l'hôte en mode maintenance.
+1. Pour voir plus de détails sur les erreurs de conformité, sélectionnez le **profil d'hôte** dans l'onglet **Objects** qui est utilisé pour la vérification de la conformité.
+2. Pour voir les détails spécifiques des paramètres qui sont différents entre l'hôte dont la vérification de conformité a échoué et le profil d'hôte, cliquez sur l'onglet **Monitor** et sélectionnez la vue **Compliance**.
+3. Développez la hiérarchie des objets et sélectionnez l'hôte ayant échoué.
+4. Les paramètres qui diffèrent apparaissent dans la fenêtre Compliance, sous la hiérarchie.
+5. Examinez les paramètres et essayez de comprendre pourquoi le nouvel hôte est différent de l'hôte de référence. Pour les paramètres où la conformité n'est pas acceptable, par exemple, lorsque la modification de configuration est due à une action de l'administrateur système, effectuez les corrections nécessaires avant de mettre l'hôte en mode maintenance. Autre exemple : lorsque la modification de configuration est causée par une action de l'administrateur système.
 
 ### Liens connexes
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

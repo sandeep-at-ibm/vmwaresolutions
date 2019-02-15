@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ Passez en revue les exigences suivantes avant de commander vos instances VMware 
 
 ## Exigences liées au compte IBM Cloud
 
-Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Disponibilité du centre de données IBM Cloud
 
@@ -67,19 +67,19 @@ Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_not
 
 ## Sauvegarde des composants de gestion
 
-Vous êtes chargé de gérer et d'assurer la disponibilité de tous les composants d'instance. Il est recommandé de planifier la sauvegarde ou la haute disponibilité de tous les composants de gestion. Pour plus d'informations, voir [Sauvegarde des composants](../archiref/solution/solution_backingup.html).
+Vous êtes chargé de gérer et d'assurer la disponibilité de tous les composants d'instance. Il est recommandé de planifier la sauvegarde ou la haute disponibilité de tous les composants de gestion. Pour plus d'informations, voir [Sauvegarde des composants](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
 ## Services pour les instances Cloud Foundation
 
-Vous pouvez commander des services complémentaires pour votre instance en fonction de vos besoins, par exemple, la reprise après incident. Pour plus d'informations, voir [Commande, affichage et retrait de services pour des instances Cloud Foundation](sd_addingremovingservices.html).
+Vous pouvez commander des services complémentaires pour votre instance en fonction de vos besoins, par exemple, la reprise après incident. Pour plus d'informations, voir [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html).
 
 ## Remarques sur la capacité
 
-Pour plus d'informations sur la capacité, voir [Mise à l'échelle de la capacité](../archiref/solution/solution_scaling.html).
+Pour plus d'informations sur la capacité, voir [Mise à l'échelle de la capacité](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
 
 ### Liens connexes
 
-* [Présentation de Cloud Foundation](sd_cloudfoundationoverview.html)
-* [Commande d'instances Cloud Foundation](sd_orderinginstance.html)
-* [Extension et réduction de capacité pour des instances Cloud Foundation](sd_addingremovingservers.html)
-* [Commande, affichage et retrait de services pour des instances Cloud Foundation](sd_addingremovingservices.html)
+* [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)

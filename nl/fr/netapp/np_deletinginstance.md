@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -49,6 +49,6 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 
 ### Liens connexes
 
-* [Commande d'instances NetApp ONTAP Select](np_orderinginstances.html)
-* [Affichage des instances NetApp ONTAP Select](np_viewinginstances.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
+* [Commande d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [Affichage des instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

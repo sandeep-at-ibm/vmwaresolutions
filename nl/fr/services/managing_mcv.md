@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -19,4 +19,4 @@ Vous serez contacté par un représentant de Mission Critical VMware on {{site.d
 
 ### Liens connexes
 
-* [Présentation de Mission Critical VMware on IBM Cloud](mcv_overview.html)
+* [Présentation de Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services/mcv_overview.html)

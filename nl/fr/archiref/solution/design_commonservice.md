@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -85,6 +85,6 @@ Vous pouvez utiliser les serveurs Windows AD dans cette conception pour créer d
 
 ### Liens connexes
 
-* [Conception d'infrastructure physique](design_physicalinfrastructure.html)
-* [Conception d'infrastructure virtuelle](design_virtualinfrastructure.html)
-* [Conception de gestion d'infrastructure](design_infrastructuremgmt.html)
+* [Conception d'infrastructure physique](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [Conception d'infrastructure virtuelle](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [Conception de gestion d'infrastructure](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)

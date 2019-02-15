@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,7 +35,7 @@ Les instances en version 2.0 ou ultérieure sont été déployées avec VMware v
 
 ### Instances Cloud Foundation déployées dans la version 2.0 ou ultérieure
 
-Pour appliquer les modules de correction requis pour VMware vSphere 6.5 et VMware vCenter Server 6.5, vous devez effectuer une mise à niveau de vos instances Cloud Foundation vers le dernier bundle de modules de correction VMware. Pour toutes vos instances et tous vos serveurs ESXi existants, vous serez invité à appliquer les modules de correction sur la page **Mise à jour et module de correction** depuis la console {{site.data.keyword.vmwaresolutions_full}}. Pour plus d'informations, voir [Application de mises à jour à des instances Cloud Foundation](../sddc/sd_applyingupdates.html).
+Pour appliquer les modules de correction requis pour VMware vSphere 6.5 et VMware vCenter Server 6.5, vous devez effectuer une mise à niveau de vos instances Cloud Foundation vers le dernier bundle de modules de correction VMware. Pour toutes vos instances et tous vos serveurs ESXi existants, vous serez invité à appliquer les modules de correction sur la page **Mise à jour et module de correction** depuis la console {{site.data.keyword.vmwaresolutions_full}}. Pour plus d'informations, voir [Application de mises à jour à des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html).
 
 ### Clusters VMware vSphere déployés avec la version 2.0 ou ultérieure
 
@@ -63,6 +63,6 @@ Pour VMware vSphere 6.0 et pour VMware vCenter Server 6.0, vous devez appliquer 
 
 ### Liens connexes
 
-* [Application de mises à jour à des instances Cloud Foundation](../sddc/sd_applyingupdates.html)
+* [Application de mises à jour à des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)
 * [Sécurisation contre les plus récentes vulnérabilité en matière de sécurité](https://www.ibm.com/blogs/bluemix/2018/01/ibm-cloud-spectre-meltdown-vulnerabilities/)
 * [Site des modules de correction pour les produits VMware](https://my.vmware.com/group/vmware/patch)

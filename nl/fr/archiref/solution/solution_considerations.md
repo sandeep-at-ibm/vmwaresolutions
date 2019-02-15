@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-12"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,20 +18,20 @@ Les offres {{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server et 
 
 Consultez les remarques ci-après pour bien comprendre quelles sont vos responsabilités en termes de gestion et d'exécution de l'instance avant et après son déploiement.
 
-La liste suivante n'est pas exhaustive. Pour plus d'informations, voir [Services gérés par IBM](../../services/managing_imi.html).
+La liste suivante n'est pas exhaustive. Pour plus d'informations, voir [Services gérés par IBM](/docs/services/vmwaresolutions/services/managing_imi.html).
 {:note}
 
 ## Accès à un compte IBM Cloud
 
-Pour gérer l'accès à votre compte {{site.data.keyword.cloud_notm}}, autorisez d'autres membres de votre équipe à accéder à votre instance dans la console {{site.data.keyword.vmwaresolutions_short}}. Pour plus d'informations, voir [Invitation des utilisateurs à accéder à des services et des ressources](../../vmonic/iamuserinvite.html).
+Pour gérer l'accès à votre compte {{site.data.keyword.cloud_notm}}, autorisez d'autres membres de votre équipe à accéder à votre instance dans la console {{site.data.keyword.vmwaresolutions_short}}. Pour plus d'informations, voir [Invitation des utilisateurs à accéder à des services et des ressources](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html).
 
 ## Limitations
 
 Familiarisez-vous avec les limitations de votre instance répertoriées ci-dessous :
 
-- [Impacts de la modification des artefacts vCenter](../../vcenter/vcenter_chg_impact.html)
-- [Remarques et limitations relatives à la mise en réseau](../../vcenter/vc_networkingonvcenterserver.html)
-- [Foire aux questions](../../vmonic/faq.html)
+- [Impacts de la modification des artefacts vCenter](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
+- [Remarques et limitations relatives à la mise en réseau](/docs/services/vmwaresolutions/vcenter/vc_networkingonvcenterserver.html)
+- [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
 
 ## Conception et connectivité du réseau
 
@@ -39,7 +39,7 @@ Procédez comme suit pour gérer les accès à votre réseau {{site.data.keyword
 
 - Accédez aux noeuds finaux de gestion d'instances à l'aide du [réseau privé virtuel {{site.data.keyword.cloud_notm}}](https://www.softlayer.com/vpn-access) ou de votre [connexion {{site.data.keyword.cloud_notm}} Direct Link](https://www.ibm.com/cloud/direct-link).
 - Elaborez une stratégie pour la connectivité au réseau public à partir de votre instance. Vous pouvez utiliser au choix l'exemple de passerelle ESG (Edge Services Gateway) VMware NSX du client, des dispositifs de passerelle, tels que Vyatta et FortiGate, et des serveurs proxy déployés dans le réseau {{site.data.keyword.cloud_notm}} ou sur votre propre réseau accessible via DirectLink.
-- Planifiez le déploiement de votre charge de travail sur des VLAN {{site.data.keyword.cloud_notm}} à l'aide des [adresses IP portables {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/infrastructure/subnets/getting-started.html) ou sur des [commutateurs logiques NSX (VXLAN) à l'aide de vos propres adresses IP](../nsx/nsx_overview.html). Sachez que l'utilisation de la mise en réseau définie par logiciel NSX vous offre la plus grande souplesse pour gérer et sécuriser votre réseau de charge de travail dans {{site.data.keyword.cloud_notm}}.
+- Planifiez le déploiement de votre charge de travail sur des VLAN {{site.data.keyword.cloud_notm}} à l'aide des [adresses IP portables {{site.data.keyword.cloud_notm}}](/docs/infrastructure/subnets/getting-started.html) ou sur des [commutateurs logiques NSX (VXLAN) à l'aide de vos propres adresses IP](/docs/services/vmwaresolutions/archiref/nsx/nsx_overview.html). Sachez que l'utilisation de la mise en réseau définie par logiciel NSX vous offre la plus grande souplesse pour gérer et sécuriser votre réseau de charge de travail dans {{site.data.keyword.cloud_notm}}.
 - Utilisez des passerelles NSX ESG, [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) et l'appairage DirectLink pour planifier la connectivité à des charges de travail (NAT, Virtual Private Network, routage).
 - Si vous implémentez Cross-vCenter NSX, assurez-vous que les plages d'ID de segment local ne se chevauchent pas avant de déployer des charges de travail locales.
 
@@ -50,11 +50,11 @@ Il vous incombe de sécuriser, chiffrer et surveiller votre instance VMware et v
 - Modifiez tous les mots de passe affichés dans la console {{site.data.keyword.vmwaresolutions_short}} et utilisez votre propre système de gestion de mots de passe. Sachez qu'IBM conserve des ID utilisateur distincts qui sont requis pour l'automatisation et le support en continu.
 - Passez en revue les règles sur les mots de passe, liées notamment à la complexité et à la période d'expiration, sur tous les composants.
 - Passez en revue les paramètres de chiffrement sur tous les composants.
-- Planifiez et implémentez les solutions de pare-feu physiques ou virtuelles appropriées, par exemple, un pare-feu DFW (Distributed Firewall) NSX, des passerelles NSX ESG, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../../services/fortinetvm_considerations.html) et [IBM Cloud Vyatta](https://console.bluemix.net/catalog/infrastructure/virtual-router-appliance).
-- Planifiez et implémentez les solutions de sécurité et d'équilibrage de charge d'application appropriées, par exemple, [F5 on {{site.data.keyword.cloud_notm}}](../../services/f5_considerations.html).
+- Planifiez et implémentez les solutions de pare-feu physiques ou virtuelles appropriées, par exemple, un pare-feu DFW (Distributed Firewall) NSX, des passerelles NSX ESG, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html) et [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance).
+- Planifiez et implémentez les solutions de sécurité et d'équilibrage de charge d'application appropriées, par exemple, [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_considerations.html).
 - Planifiez et implémentez les solutions SIEM (gestion des événements et des informations de sécurité) appropriées, par exemple, [IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence).
 - Planifiez et implémentez le scannage de vulnérabilité approprié.
-- Planifiez et implémentez la gestion des changements, les approbations, les audits et le contrôle d'accès appropriés pour votre instance en utilisant des solutions, telles que [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../../services/htcc_considerations.html).
+- Planifiez et implémentez la gestion des changements, les approbations, les audits et le contrôle d'accès appropriés pour votre instance en utilisant des solutions, telles que [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html).
 
 ## Personnalisation
 
@@ -81,7 +81,7 @@ Procédez comme suit pour assurer la configuration et la gestion appropriées de
 
 Procédez comme suit pour assurer une planification appropriée de la maintenance logicielle :
 
-- [Configurez VMware Update Manager (VUM)](../vum/vum-intro.html) via un proxy pour obtenir des mises à jour VMware.
+- [Configurez VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum/vum-intro.html) via un proxy pour obtenir des mises à jour VMware.
 - Le cas échéant, configurez vSAN via un proxy pour gérer la base de données HCL (Hardware Compatibility List) de vSAN.
 - Planifiez la maintenance régulière des composants VMware qui ne sont pas pris en charge par VUM. Par exemple, VMware vCenter, PSC et NSX.
 - Passez en revue la configuration EVC (Enhanced vMotion Compatibility) de vSphere. Il se peut que votre cluster ne soit pas configuré avec EVC activé si la version en cours de vSphere ne prend pas en charge EVC pour votre niveau matériel.
@@ -95,7 +95,7 @@ Prenez soin de planifier et d'implémenter les solutions suivantes pour la surve
 - Une infrastructure d'alerte, y compris la configuration du serveur SMTP et de la passerelle SMS (Short Message Service), si besoin.
 - La surveillance proactive d'hôtes, d'unités, de logiciels de gestion et de réseau.
 - La surveillance vSAN, le cas échéant.
-- La surveillance et la planification de capacité. Vous pouvez [ajouter et retirer des clusters](../../vcenter/vc_addingviewingclusters.html) et [ajouter et retirer des hôtes](../../vcenter/vc_addingremovingservers.html) dans votre instance à partir de la console {{site.data.keyword.vmwaresolutions_short}}.
+- La surveillance et la planification de capacité. Vous pouvez [ajouter et retirer des clusters](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html) et [ajouter et retirer des hôtes](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html) dans votre instance à partir de la console {{site.data.keyword.vmwaresolutions_short}}.
 - La surveillance de votre infrastructure de sauvegarde et de vos tâches de sauvegarde.
 
 ## Disponibilité et continuité des opérations
@@ -106,9 +106,9 @@ Votre instance VMware s'exécute sur des serveurs bare metal dans {{site.data.ke
 - Passez en revue la configuration du contrôle des E-S de stockage et de réseau par rapport à vos exigences.
 - Configurez l'ordre de démarrage des machines virtuelles au regard de vos exigences.
 - Configurez des pools de ressources, en fonction de vos besoins, pour la gestion et la charge de travail.
-- Planifiez, implémentez et surveillez une solution de sauvegarde à la fois pour les [composants de gestion d'instances](solution_backingup.html) et pour la charge de travail.
+- Planifiez, implémentez et surveillez une solution de sauvegarde à la fois pour les [composants de gestion d'instances](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html) et pour la charge de travail.
 - Planifiez la haute disponibilité de la gestion d'instances, y compris l'éventualité de plusieurs instances, plusieurs clusters, la haute disponibilité de vCenter et la haute disponibilité de PSC.
-- Planifiez la continuité des opérations pour vos charges de travail à l'aide de solutions, telles que la [reprise après incident Zerto](../../services/addingzertodr.html), [Veeam Backup and Replication](../../services/veeam_considerations.html) et [IBM Spectrum Protect Plus](../../services/spp_considerations.html).
+- Planifiez la continuité des opérations pour vos charges de travail à l'aide de solutions, telles que la [reprise après incident Zerto](/docs/services/vmwaresolutions/services/addingzertodr.html), [Veeam Backup and Replication](/docs/services/vmwaresolutions/services/veeam_considerations.html) et [IBM Spectrum Protect Plus](/docs/services/vmwaresolutions/services/spp_considerations.html).
 
 ## Planification du stockage
 
@@ -119,10 +119,12 @@ En plus de la planification de la capacité, procédez comme indiqué ci-après 
   - RAID-1 fournit des performances plus élevées et des fenêtres de risque d'échec séquentiel (par exemple, une durée de reconstitution plus courte) plus réduites que RAID-5. Cela dit, RAID-5 présente un temps système de stockage inférieur.
   - RAID-6 assure la protection contre les échecs en double, mais requiert au moins six hôtes alors que RAID-5 n'en nécessite que quatre.
 - Pour ajouter davantage de stockage à votre cluster vSAN, vous devez ajouter de nouveaux hôtes au cluster ou ajouter un stockage {{site.data.keyword.cloud_notm}} Endurance NFS à la place. Actuellement, il n'est pas permis d'ajouter des disques aux hôtes existants.
-- Si vous montez davantage de stockage {{site.data.keyword.cloud_notm}} Endurance NFS sur votre cluster, prenez soin de suivre les conseils relatifs à l'architecture et de configurer des routes hôte vers le stockage en utilisant les adresses de groupe de ports `SDDC-DPortGroup-NFS`. Vous devez autoriser ces adresses, au lieu des hôtes proprement dits, vers le stockage. Pour plus d'informations, voir [Gestion d'infrastructure de stockage connecté](../attached-storage/storage-infra-mgmt.html#vsphere-host-static-routing). Voir aussi la recette developerWorks montrant comment [ajouter davantage de stockage Endurance à votre cluster VMware](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/) en utilisant IBM Spectrum Protect Plus comme exemple.
+- Si vous montez davantage de stockage {{site.data.keyword.cloud_notm}} Endurance NFS sur votre cluster, prenez soin de suivre les conseils relatifs à l'architecture et de configurer des routes hôte vers le stockage en utilisant les adresses de groupe de ports `SDDC-DPortGroup-NFS`. Vous devez autoriser ces adresses, au lieu des hôtes proprement dits, vers le stockage. Pour plus d'informations, voir [Gestion d'infrastructure de stockage connecté](/docs/services/vmwaresolutions/archiref/attached-storage/storage-infra-mgmt.html#vsphere-host-static-routing).
+
+Voir aussi la recette developerWorks montrant comment [ajouter davantage de stockage Endurance à votre cluster VMware](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/) en utilisant IBM Spectrum Protect Plus comme exemple.
 
 ### Liens connexes
 
-* [Présentation de la solution](solution_overview.html)
-* [Présentation de la conception](design_overview.html)
-* [Mise à l'échelle de la capacité](solution_scaling.html)
+* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Présentation de la conception](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [Mise à l'échelle de la capacité](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)

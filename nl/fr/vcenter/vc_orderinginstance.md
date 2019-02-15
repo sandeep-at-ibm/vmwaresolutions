@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-05"
 
 # Commande d'instances vCenter Server
 
-Afin de déployer une plateforme virtuelle VMware personnalisable et flexible totalement adaptée à vos besoins en charge de travail, commandez une instance vCenter Server VMware. Lors de la commande initiale, vous pouvez également ajouter des services, tels que [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html) pour la reprise après incident.
+Afin de déployer une plateforme virtuelle VMware personnalisable et flexible totalement adaptée à vos besoins en charge de travail, commandez une instance vCenter Server VMware. Lors de la commande initiale, vous pouvez également ajouter des services, tels que [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html) pour la reprise après incident.
 
 ## Conditions requises
 
 Assurez-vous que :
-* Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
-* Vous avez passé en revue les informations décrites dans la rubrique [Exigences et planification pour les instances vCenter Server](vc_planning.html).
+* Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+* Vous avez passé en revue les informations décrites dans la rubrique [Exigences et planification pour les instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html).
 * Vous avez passé en revue le format des noms d'instance et de domaine. Le nom de domaine et le libellé de sous-domaine sont utilisés pour générer le nom d'utilisateur et les noms de serveur de l'instance.
 
 Tableau 1. Format de la valeur des noms d'instance et de domaine
@@ -29,10 +29,9 @@ Tableau 1. Format de la valeur des noms d'instance et de domaine
   |:------------|:------------ |
   | Nom de domaine | `<root_domain>` |  
   | Nom d'utilisateur de connexion vCenter Server | `<user_id>@<root_domain>` (utilisateur Microsoft Active Directory) ou `administrator@vsphere.local` |
-  | Nom de domaine complet vCenter Server | `vcenter.<subdomain_label>.<root_domain>`. La longueur maximale admise est de 50 caractères. |
+  | vCenter Server (avec PSC intégré) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La longueur maximale admise est de 50 caractères. |
   | Nom du site de connexion unique | `<subdomain_label>` |
-  | Nom de serveur ESXi qualifié complet | `<host_prefix><n>.<subdomain_label>.<root_domain>`, où `<n>` est la séquence du serveur ESXi. La longueur maximale admise est de 50 caractères. |  
-  | Nom de domaine complet PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La longueur maximale admise est de 50 caractères. |
+  | Nom de serveur ESXi qualifié complet | `<host_prefix><n>.<subdomain_label>.<root_domain>`, où `<n>` est la séquence du serveur ESXi. La longueur maximale admise est de 50 caractères. |
 
 Ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
 {:important}
@@ -45,7 +44,7 @@ Vous devez spécifier les paramètres système répertoriés ci-après lorsque v
 
 Le nom de l'instance qui doit respecter les règles suivantes :
 * Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-* Le nom d'instance doit commencer et se terminer par un caractère alphanumérique.
+* Le nom d'instance doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
 * Le nom d'instance ne doit pas dépasser 10 caractères.
 * Le nom d'instance doit être unique au sein de votre compte.
 
@@ -64,8 +63,8 @@ Si vous êtes un partenaire commercial, la licence vCenter Server (édition Stan
 
 Si vous n'êtes pas un partenaire commercial, vous pouvez utiliser les licences VMware fournies par IBM pour ces composants en sélectionnant **Inclure avec achat** ou vous pouvez fournir votre propre licence (mode BYOL) en sélectionnant **Je fournirai** et en entrant vos propres clés de licence.
 
+### Attention
 
-**Attention :**
 * Une licence avec un minimum de huit UC est requise, ce qui vaut pour quatre serveurs avec deux UC par serveur. Le choix de licence pour chaque composant VMware s'applique à l'instance de base et à tous les serveurs ESXi ajoutés ultérieurement à l'instance. Veillez à ce que votre licence soit à même de prendre en charge une future extension de capacité de votre infrastructure.
 * Les éditions de licence minimum sont indiquées sur l'interface utilisateur. Si différentes éditions de composant sont prises en charge, vous pouvez sélectionner celle qui vous convient. Il est de votre responsabilité de vous assurer que la clé de licence fournie est correcte pour chaque composant VMware sélectionné.
 * Pour vSphere, des frais de licence sont imputés au moment de la commande, mais ces frais sont ensuite crédités à votre compte.
@@ -101,6 +100,10 @@ En fonction de vos besoins, sélectionnez une configuration de serveur bare meta
   * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/192 Go de mémoire RAM
   * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/384 Go de mémoire RAM
   * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/768 Go de mémoire RAM
+  * Processeur Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de mémoire RAM
+  * Processeur Quad Intel Xeon E7-8890 v4/96 coeurs au total, 2,2 GHz/1024 Go de mémoire RAM
+  * Processeur Quad Intel Xeon E7-8890 v4/96 coeurs au total, 2,2 GHz/2048 Go de mémoire RAM
+  * Processeur Quad Intel Xeon E7-8890 v4/96 coeurs au total, 2,2 GHz/4096 Go de mémoire RAM
 
 ### Broadwell
 
@@ -113,23 +116,31 @@ Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 | Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+| Quad Intel Xeon E7-4820 v4/40 coeurs au total, 2,0 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
+| Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 
 ### Nombre de serveurs bare metal
 
-Pour le cluster initial de l'instance, vous pouvez configurer de 2 à 20 serveurs ESXi. Tous les serveurs ESXi se partagent la configuration définie. 
+Pour le cluster initial de l'instance, vous pouvez configurer de 2 à 20 serveurs ESXi. Tous les serveurs ESXi se partagent la configuration définie.
 
-Après le déploiement initial, vous pouvez ajouter quatre clusters supplémentaires. Si vous avez sélectionné la configuration **Skylake** ou **Broadwell** pour VMware vSAN, 4 serveurs ESXi sont requis à la fois pour le cluster initial et pour les clusters post-déploiement. Pour plus d'informations sur le nombre minimum de serveurs ESXi, voir [Une instance vCenter Server à deux noeuds est-elle à haute disponibilité](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
+Après le déploiement initial, vous pouvez ajouter quatre clusters supplémentaires. Si vous avez sélectionné la configuration **Skylake** ou **Broadwell** pour VMware vSAN, 4 serveurs ESXi sont requis à la fois pour le cluster initial et pour les clusters post-déploiement. Pour plus d'informations sur le nombre minimum de serveurs ESXi, voir [Une instance vCenter Server à deux noeuds est-elle à haute disponibilité](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Paramètres de stockage
 
 Les paramètres de stockage varient en fonction de la configuration de serveur bare metal et du type de stockage que vous sélectionnez.
+
+Pour les instances en version 2.8 et versions ultérieure, vous pouvez ajouter des partages de stockage NFS à un cluster NFS ou vSAN existant. Pour plus d'informations, voir la section *Ajout de stockage NFS à des instances vCenter Server* dans [Extension et réduction de capacité pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances).{:note}
 
 ### Stockage vSAN
 
 vSAN n'est disponible que pour les configurations bare metal **Skylake** et **Broadwell**. Spécifiez les options vSAN suivantes :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
-* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+
+  L'option **Hautes performances Intel Optane** est disponible uniquement pour les modèles d'UC Skylake Dual Intel Xeon Gold 5120 et Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 * **Licence vSAN** : utilisez la licence VMware fournie par IBM pour le composant vSAN en sélectionnant **Inclure avec achat** ou fournissez votre propre licence (mode BYOL) en sélectionnant **Je fournirai** et en entrant votre propre clé de licence
 
@@ -142,17 +153,24 @@ Le nombre de partages de fichiers doit être compris entre 1 et 32.
 
 * **Configurer les partages individuellement** : permet de spécifier des paramètres de configuration différents pour chaque partage de fichiers.
 * **Nombre de partages** : lorsque vous utilisez le même paramètre de configuration pour chaque partage de fichiers, spécifiez le nombre de partages de fichiers pour le stockage partagé NFS que vous souhaitez ajouter.
-* **Taille** : sélectionnez la capacité qui répond à vos besoins de stockage partagé.
 * **Performances** : sélectionnez la valeur IOPS (opérations d'entrée/sortie par seconde) par Go adaptée à vos besoins en matière de charge de travail.
-* **Ajouter NFS** : permet d'ajouter des partages de fichiers individuels qui utilisent des paramètres de configuration différents.
+* **Taille (Go)** : permet de sélectionner la capacité qui répond à vos besoins en matière de stockage partagé.
+* **Ajout de stockage partagé** : permet d'ajouter des partages de fichiers individuels qui utilisent des paramètres de configuration différents.
 
 Tableau 4. Options de niveau de performance NFS
 
 | Option        | Détails       |
   |:------------- |:------------- |
+  | 0,25 IOPS/Go | Cette option est conçue pour les charges de travail qui ne sont pas souvent utilisées. Exemples d'applications : données de coffre, hébergement de bases de données de grande taille avec des données existantes ou images de disque virtuel de système de mémoire virtuelle en tant que sauvegarde. |
   | 2 IOPS/Go | Cette option est adaptée à la plupart des charges de travail d'usage général. Entre autres exemples d'application, citons l'hébergement de petites bases de données, la sauvegarde d'applications Web ou les images de disque de machine virtuelle pour un hyperviseur. |
   | 4 IOPS/Go | Cette option est adaptée aux charges de travail de grande intensité qui ont un pourcentage élevé de données actives simultanément. Les bases de données transactionnelles en sont un exemple. |
   | 10 IOPS/Go | Cette option est adaptée aux types de charge de travail les plus exigeants, tels que les analyses. Les bases de données à transactions élevées et autres bases de données sensibles aux performances en sont des exemples. Ce niveau de performance est limité à une capacité maximale de 4 To par partage de fichiers. |
+
+### Disques locaux
+
+L'option Disques locaux est disponible uniquement pour la configuration de processeur Quad Intel Xeon E7-8890 v4 Bare Metal **certifié SAP**. Indiquez les options suivantes :
+* **Nombre de disques **: sélectionnez le nombre de disques que vous voulez ajouter.
+* **Type de disque **: sélectionnez une option pour le type de disque dont vous avez besoin.
 
 ## Paramètres d'interface réseau
 
@@ -169,7 +187,7 @@ Le préfixe du nom d'hôte qui doit respecter les règles suivantes :
 
 Le libellé du sous-domaine qui doit respecter les règles suivantes :
 *  Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-*  Le libellé de sous-domaine doit commencer et se terminer par un caractère alphanumérique.
+*  Le libellé de sous-domaine doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique. 
 *  Le libellé de sous-domaine ne doit pas dépasser 10 caractères.
 *  Le libellé de sous-domaine doit être unique au sein de votre compte.
 
@@ -204,6 +222,7 @@ Un VLAN public et deux VLAN privés sont nécessaires pour votre commande d'inst
 Sélectionnez cette option pour commander un nouveau VLAN public et deux nouveaux VLAN privés.
 
 #### Sélectionner des VLAN existants
+
 En fonction de l'{{site.data.keyword.CloudDataCent_notm}} que vous avez sélectionné, des VLAN publics et privés existants peuvent être disponibles.
 
 Lorsque vous sélectionnez cette option pour réutiliser des VLAN publics et privés existants, spécifiez les VLAN et les sous-réseaux :
@@ -213,9 +232,10 @@ Lorsque vous sélectionnez cette option pour réutiliser des VLAN publics et pri
 * **Sous-réseau principal**, affecté aux hôtes physiques pour l'accès au réseau public.
 * **Sous-réseau privé principal**, affecté aux hôtes physiques pour le trafic de gestion.
 
+##### Important
+
 * Vérifiez que la configuration de pare-feu sur les VLAN sélectionnés ne bloque pas le trafic des données de gestion.
 * Vérifiez que tous les VLAN que vous sélectionnez se trouvent dans le même pod. Les serveurs ESXi ne peuvent pas être mis à disposition sur des VLAN multi-pods.
-{:important}
 
 ### Configuration DNS
 
@@ -235,7 +255,7 @@ Pour plus d'informations sur l'octroi de licence Windows, voir la [documentation
 
 ## Paramètres de services
 
-Lorsque vous commandez une instance vCenter Server, vous pouvez également commander des services complémentaires. Pour plus d'informations sur les services, voir [Services disponibles pour les instances vCenter Server](vc_addingremovingservices.html#available-services-for-vcenter-server-instances).
+Lorsque vous commandez une instance vCenter Server, vous pouvez également commander des services complémentaires. Pour plus d'informations sur les services, voir [Services disponibles pour les instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances).
 
 ## Récapitulatif de la commande
 
@@ -250,8 +270,9 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
    * Cliquez sur **Instance principale** pour déployer une seule instance dans l'environnement ou pour déployer la première instance dans une topologie multisite.
    * Cliquez sur **Instance secondaire** pour connecter l'instance à une instance (principale) existante dans l'environnement à des fins de haute disponibilité et procédez comme suit :
      1. Sélectionnez l'instance principale à laquelle vous voulez que l'instance secondaire soit connectée.
-     2. Pour les instances principales V2.5 ou ultérieures, entrez une valeur dans la zone **Mot de passe de l'administrateur PSC pour l'instance principale**.
-     3. Pour les instances principales V2.4 ou antérieures, assurez-vous que la valeur préremplie dans la zone **Mot de passe de l'administrateur PSC pour l'instance principale** est correcte.
+     2. Pour les instances principales V2.8 ou ultérieures, entrez le mot de passe administrateur vCenter Server pour l'instance principale.
+     3. Pour les instances principales V2.5, 2.6 ou 2.7, entrez le mot de passe administrateur PSC pour l'instance principale.
+     4. Pour les instances principales V2.4 ou antérieures, assurez-vous que la valeur préremplie pour le mot de passe administrateur PSC pour l'instance principale est correcte.
 5. Spécifiez les paramètres de licence pour les composants d'instance.
    *  Pour utiliser des licences fournies par IBM, sélectionnez **Inclure avec achat** et sélectionnez l'édition de licence, le cas échéant.
    *  Pour utiliser votre propre licence, sélectionnez **Je fournirai** et entrez la clé de licence.
@@ -263,8 +284,9 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
     3. Spécifiez le nombre de serveurs {{site.data.keyword.baremetal_short}}. Si vous prévoyez d'utiliser vSAN comme solution de stockage, au moins 4 serveurs {{site.data.keyword.baremetal_short}} sont nécessaires.  
 7. Procédez à la configuration du stockage.
   * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
-  * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Taille** et **Performances**.
-  * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer des partages de fichiers individuellement, sélectionnez **Configurer les partages individuellement**. Cliquez ensuite sur l'icône **+** en regard de **Ajouter NFS** et renseignez les zones **Taille** et **Performances** pour chaque partage de fichiers. Vous devez sélectionner au moins un partage de fichiers.
+  * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Performances** et **Taille (Go)**.
+  * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer des partages de fichiers individuellement, sélectionnez **Configurer les partages individuellement**. Ensuite, cliquez sur l'icône **+** en regard du libellé **Ajout de stockage partagé** et sélectionnez une valeur pour les zones **Performances** et **Taille (Go)** pour chaque partage de fichiers. Vous devez sélectionner au moins un partage de fichiers.
+  * Si vous sélectionnez **Disques locaux**, indiquez le nombre et le type de disque.
 8. Spécifiez les paramètres d'interface réseau.
    1. Renseignez les zones Préfixe de nom d'hôte, Libelle de sous-domaine et Nom de domaine racine. Pour une instance secondaire, le nom de domaine est automatiquement renseigné.
    2. Sélectionnez le paramètre réseau **Réseau public et réseau privé** ou **réseau privé uniquement**.
@@ -286,7 +308,7 @@ Pour savoir comment indiquer les paramètres d'un service, voir la rubrique de c
 
 Le déploiement de l'instance commence automatiquement. Vous recevez une confirmation que la commande est en cours de traitement et vous pouvez vérifier l'état du déploiement en affichant les détails de l'instance.
 
-Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**. Si vous avez commandé des services complémentaires, le déploiement des services commence une fois votre commande honorée.
+Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**. Si vous avez commandé des services complémentaires, le déploiement des services commence une fois votre commande honorée.
 
 Lorsque l'instance est prête pour utilisation, elle prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 
@@ -310,10 +332,10 @@ Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwa
 
 ### Liens connexes
 
-* [Inscription à un compte {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
-* [Affichage des instances vCenter Server](vc_viewinginstances.html)
-* [Configuration multisite pour des instances vCenter Server](vc_multisite.html)
-* [Ajout, affichage et suppression de clusters pour des instances vCenter Server](vc_addingviewingclusters.html)
-* [Extension et réduction de capacité pour des instances vCenter Server](vc_addingremovingservers.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server](vc_addingremovingservices.html)
-* [Suppression d'instances vCenter Server](vc_deletinginstance.html)
+* [Inscription à un compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [Affichage des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
+* [Configuration multisite pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_multisite.html)
+* [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Extension et réduction de capacité pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Suppression d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)

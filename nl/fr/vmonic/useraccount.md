@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -24,7 +24,7 @@ Vous pouvez également indiquer si vous voulez recevoir des notifications par co
 ## Avant de commencer
 
 * Vous ne pouvez lier qu'un seul compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) à un compte utilisateur {{site.data.keyword.cloud_notm}}.
-* Le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte d'infrastructure {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
+* Le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte d'infrastructure {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 * Si la clé d'API de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) change, vous devez mettre à jour la clé sur la page **Paramètres** de la console {{site.data.keyword.vmwaresolutions_short}}.
 
    **Important :** il vous incombe de vérifier que la clé d'API sauvegardée sur la page **Paramètres** est correcte et à jour. Sinon, les opérations qui nécessitent la clé d'API risquent d'échouer.
@@ -38,7 +38,7 @@ Vous pouvez également indiquer si vous voulez recevoir des notifications par co
 3. Dans la zone **Données d'identification d'infrastructure IBM Cloud**, entrez le nom d'utilisateur et la clé d'API de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) :
    * Si votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) et votre compte {{site.data.keyword.cloud_notm}} sont liés, cliquez sur **Extraire** pour activer la saisie automatique des données d'identification.
    * Si ce n'est déjà fait, vous devez lier votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) et votre compte {{site.data.keyword.cloud_notm}}. Connectez-vous au [portail client de l'infrastructure {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/) et suivez les instructions sur la console pour obtenir les données d'identification, puis entrez ces informations.
-   * Si vous ne disposez pas d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), [souscrivez à un compte](../vmonic/signing_softlayer_account.html) et suivez les instructions sur la console pour obtenir les données d'identification, puis entrez ces informations.
+   * Si vous ne disposez pas d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), [souscrivez à un compte](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html) et suivez les instructions sur la console pour obtenir les données d'identification, puis entrez ces informations.
 4. Cliquez sur **Sauvegarder les données d'identification**.
 
 ## Résultats
@@ -51,8 +51,8 @@ Si les notifications par courrier électronique ou sur la console sont activées
 
 ### Liens connexes
 
-* [Foire aux questions](faq.html)
-* [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
-* [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
-* [Notifications](notifications.html)
-* [API SoftLayer](../../../customer-portal/cpapi.html){:new_window}
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Notifications](/docs/services/vmwaresolutions/vmonic/notifications.html)
+* [API SoftLayer](/docs/customer-portal/cpapi.html){:new_window}

@@ -2,19 +2,27 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Remarques relatives à la modification des artefacts vCenter Server
 
 Modifier des utilisateurs, des ressources ou des sous-réseaux réservés à {{site.data.keyword.vmwaresolutions_full}} peut avoir une incidence sur des opérations de gestion.
 
-**Important :** n'éditez pas les droits globaux du groupe **ic4v-vCenter** sur la page **Utilisateurs et groupes** du client Web VMware vSphere. Ces modifications incluent : la modification du nom d'utilisateur, la suppression de l'utilisateur ou la modification de son mot de passe.
+Ne modifiez pas les droits globaux du groupe **ic4v-vCenter** sur la page **Utilisateurs et groupes** du client Web VMware vSphere. Ces modifications incluent : la modification du nom d'utilisateur, la suppression de l'utilisateur ou la modification de son mot de passe.
+Utilisez l'ID utilisateur hôte **root**. L'ID utilisateur hôte **ic4vroot** a été créé pour une utilisation IBM seulement.
+{:important}
 
 ## ID d'automatisation
+{: faq}
 
 L'ID d'**automatisation** est un compte utilisateur qu'utilisent les opérations automatisées fournies par la console {{site.data.keyword.vmwaresolutions_short}}.
 
@@ -24,11 +32,13 @@ Les noms utilisateur et mots de passe des opérations automatisées dans la cons
 
 Chaque service crée un compte utilisateur interne dans vCenter Server. Ce compte est nécessaire pour que les opérations de gestion associées à un service puissent se connecter à vCenter Server afin d'effectuer les opérations sur le service.
 
-**Important :** pour éviter les indisponibilités et les problèmes de connexion, si vous modifiez l'ID utilisateur, le mot de passe ou les paramètres d'expiration de mot de passe pour ce compte utilisateur, prenez soin de mettre également à jour les informations dans le service associé.
+Pour éviter les indisponibilités et les problèmes de connexion, si vous modifiez l'ID utilisateur, le mot de passe ou les paramètres d'expiration de mot de passe pour ce compte utilisateur, prenez soin de mettre également à jour les informations dans le service associé.
+{:important}
 
 L'ID utilisateur de ce compte est au format `<service_name>-<truncated service_uuid>@test.local` ou `<service_name>-<truncated service_uuid>@example-domain.local`. Par exemple, l'ID utilisateur dont se sert le service Veeam on {{site.data.keyword.cloud_notm}} pour se connecter à vCenter Server afin d'effectuer des sauvegardes planifiées est `Veeam-<Veeam_uuid>@test.local`.
 
-**Remarque :** le nom du service (`<service_name>`) ainsi que l'identificateur unique universel `<service_uuid>` est tronqué à 20 caractères.
+Le `<service_name>` avec `<service_uuid>` tronque à 20 caractères.
+{:note}
 
 ## Ressources VMware pour des instances vCenter Server (version 1.9 et ultérieures)
 
@@ -49,18 +59,18 @@ Tableau 1. Opérations affectées par des modifications de ressources VMware
 | Modification du nom de cluster. | L'ajout d'un serveur ESXi risque d'échouer. | Important | Redonnez au cluster son nom d'origine.
 | Modification du nom du commutateur virtuel distribué (DVS, Distributed Virtual Switch) public ou privé. | L'ajout d'un serveur ESXi risque d'échouer. | Important | Redonnez au commutateur virtuel distribué public ou privé son nom d'origine.
 | Modification du nom du magasin de données vSAN dans l'instance qui utilise vSAN. | L'ajout d'un serveur ESXi risque d'échouer.<br><br>La mise à niveau de l'instance risque d'échouer. | Important | Redonnez au magasin de données vSAN son nom d'origine, à savoir **vsanDatastore**.
-| Modification du nom du magasin de données NFS de gestion dans l'instance qui utilise NFS. | L'ajout d'un serveur ESXi risque d'échouer.<br><br>La mise à niveau de l'instance risque d'échouer. | Important | Redonnez au magasin de données de gestion NFS son nom d'origine, à savoir **management-share** et remontez le magasin de données NFS en lecture seule sur le serveur ESXi. 0
+| Modification du nom du magasin de données NFS de gestion dans l'instance qui utilise NFS. | L'ajout d'un serveur ESXi risque d'échouer.<br><br>La mise à niveau de l'instance risque d'échouer. | Important | Redonnez au magasin de données de gestion NFS son nom d'origine, à savoir **management-share** et remontez le magasin de données NFS en lecture seule sur le serveur ESXi.
 
-Le tableau suivant répertorie les opérations susceptibles d'être affectées lorsque l'accès à SSH ou à l'interpréteur de commandes est désactivé pour différentes ressources. 
+Le tableau suivant répertorie les opérations susceptibles d'être affectées lorsque l'accès à SSH ou à l'interpréteur de commandes est désactivé pour différentes ressources.
 
 Tableau 2. Opérations affectées pour l'accès à SSH et à l'interpréteur de commandes (local)
 
 | Modification  | Opérations affectées  | Gravité  | Méthode de récupération  |
 |:------------- |:------------- |:--------------|:--------------|
-| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour vCenter Server ou PSC. | L'appariement d'une instance principale et d'une instance secondaire peut échouer. | Important    | Non applicable    |
-| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour ESXi. | L'ajout et le retrait d'hôtes, de services et de stockage réseau à l'instance peut échouer. | Important    | Non applicable    |
+| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour vCenter Server ou PSC.    | L'appariement d'une instance principale et d'une instance secondaire peut échouer.    | Important    | Non applicable    |
+| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour ESXi.    | L'ajout et le retrait d'hôtes, de services et de stockage réseau à l'instance peut échouer.    | Important    | Non applicable    |
 
-Si vous choisissez de désactiver l'accès à SSH ou à l'interpréteur de commandes, vous devez le réactiver temporairement avant d'effectuer les opérations indiquées. 
+Si vous choisissez de désactiver l'accès à SSH ou à l'interpréteur de commandes, vous devez le réactiver temporairement avant d'effectuer les opérations indiquées.
 
 ## Sous-réseaux de gestion pour des instances vCenter Server
 
@@ -78,5 +88,5 @@ De plus, les sous-réseaux de gestion suivants sont également réservés pour {
 *  Un sous-réseau public portable de 16 adresses IP sur le réseau local virtuel public
 
 Si vous avez besoin de davantage de sous-réseaux, vous pouvez obtenir des adresses IP à utiliser de l'une des manières suivantes :
-*  **Option 1 (recommandée)** : utilisez les superpositions de réseaux virtuels VMware NSX. Un exemple de modèle VXLAN est fourni lors de la commande. Ce modèle VXLAN peut être utilisé comme point de départ pour la génération de la mise en réseau définie par logiciel. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle NSX Edge gérée par le client](vc_esg_config.html).
+*  **Option 1 (recommandée)** : utilisez les superpositions de réseaux virtuels VMware NSX. Un exemple de modèle VXLAN est fourni lors de la commande. Ce modèle VXLAN peut être utilisé comme point de départ pour la génération de la mise en réseau définie par logiciel. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle NSX Edge gérée par le client](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html).
 *  **Option 2** : commandez vos propres sous-réseaux portables publics ou privés afin d'obtenir des adresses IP. Pour différentier les sous-réseaux que vous commandez des sous-réseaux de gestion, vous pouvez ajouter des notes aux sous-réseaux commandés.

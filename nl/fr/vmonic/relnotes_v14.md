@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-03-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Notes sur l'édition pour la version 1.4
 
@@ -22,7 +26,7 @@ Les composants suivants sont nouveaux ou ont été mis à jour :
 * VMware ESXi 6.0 u2 p04
 * Une instance de serveur virtuel Windows a été commandée pour les services Microsoft Active Directory (AD) et DNS (Domain Name System) requis pour la prise en charge des configurations multisite dans cette édition. Les spécifications de cette instance de serveur virtuel sont les suivantes : Windows 2012 R2 (8 Go de RAM / 2 coeurs d'UC / disque de 100 Go / liaisons montantes privées doubles de 1 Gbps).
 
-Pour plus d'informations, voir [Présentation de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
+Pour plus d'informations, voir [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html).
 
 ## Mises à jour de composants pour les instances vCenter Server
 
@@ -34,7 +38,8 @@ VMware NSX for vSphere 6.2.4 est désormais installé par défaut sur toutes les
 
 Dans le cadre de l'installation de NSX, NSX Manager est installé et sous licence sur toutes les nouvelles instances déployées. De plus, un composant NSX Edge est créé pour la gestion des instances, mais vous pouvez, au besoin, créer vos propres composants NSX Edge. Pour plus d'informations sur le composant NSX Edge, voir la section _VMware NSX Edge_ sur cette page.
 
-**Remarque** : le contrôleur NSX n'est pas installé sur les instances vCenter Server (comme il l'est sur les instances Cloud Foundation). Si vous utilisez VXLAN ou des routeurs logiques distribués pour vos instances vCenter Server, alors vous devez installer vous-même le contrôleur NSX.
+Le contrôleur NSX n'est pas installé sur les instances vCenter Server (comme il l'est sur les instances Cloud Foundation). Si vous utilisez VXLAN ou des routeurs logiques distribués pour vos instances vCenter Server, alors vous devez installer vous-même le contrôleur NSX.
+{:note}
 
 Pour plus d'informations sur les améliorations apportées à VMware NSX for vSphere 6.2.4, ses exigences et ses problèmes connus, voir [Notes sur l'édition pour NSX for vSphere 6.2.4](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
 
@@ -46,8 +51,8 @@ Lors du déploiement d'une instance, IBM déploie une passerelle VMware NSX ESG 
 
 Pour garantir la sécurité, des règles de pare-feu sont instaurées afin d'autoriser uniquement les communications HTTPS sortantes initiées par les machines virtuelles de gestion. Cette passerelle ESG est déployée dans une Grande configuration et seul le support IBM est habilité à modifier la configuration. Pour plus d'informations, voir les rubriques suivantes :
 
-* [Spécifications techniques de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
-* [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* [Spécifications techniques de vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [Documentation VMware NSX](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ### Licence NSX
@@ -74,20 +79,21 @@ Cette édition inclut les améliorations de topologie suivantes pour vos instanc
 * Pour les instances Cloud Foundation et vCenter Server : configuration de réseau optimisée, à savoir que seules les adresses IP publiques et privées principales affectées par SoftLayer® sont associées aux serveurs ESXi. Les adresses privées portables ne sont plus déployées pour le trafic de gestion.
 * Pour les instances Cloud Foundation uniquement : connexion unique Windows AD (Active Directory) et serveur de noms de domaine (DNS, Domain Name System)
 
-**Remarque** : en raison de ces modifications, vous ne pouvez pas utiliser vos instances existantes de version antérieure à 1.4 dans l'édition actuelle. Pour réutiliser la configuration vos instances existantes, vous devez procéder à leur mise à niveau vers la version actuelle. Pour plus d'informations, voir [Mise à niveau des instances de version antérieure à 1.4](movinginstances.html).
+En raison de ces modifications, vous ne pouvez pas utiliser vos instances existantes de version antérieure à 1.4 dans l'édition actuelle. Pour réutiliser la configuration vos instances existantes, vous devez procéder à leur mise à niveau vers la version actuelle. Pour plus d'informations, voir [Mise à niveau des instances de version antérieure à 1.4](/docs/services/vmwaresolutions/vmonic/movinginstances.html).
+{:note}
 
 ## Prise en charge de configuration multisite pour des instances Cloud Foundation
 
 Vous pouvez désormais déployer soit une instance unique Cloud Foundation, comme dans les éditions précédentes, ou déployer en plus des instances secondaires associées à l'instance principale. Le modèle de configuration multisite utilise un concentrateur et une topologie en étoile (hub and spoke) avec un site principal et un maximum de sept sites secondaires.
 
-Pour plus d'informations, voir [Configuration multisite pour des instances Cloud Foundation](../sddc/sd_multisite.html).
+Pour plus d'informations, voir [Configuration multisite pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_multisite.html).
 
 ## Améliorations au niveau du déploiement de la reprise après incident Zerto
 
 * Pour les instances Cloud Foundation, le déploiement de la reprise après incident Zerto est automatisé et non géré via un ticket de demande de service. Tous les composants Zerto, tels qu'un sous-réseau portable privé, une instance de service virtuel Windows et les frais de licence Zerto sont répertoriés dans le coût estimé, de sorte que vous pouvez les vérifier avant de commander.
 * Pour les instances vCenter Server, le déploiement de la reprise après incident Zerto s'effectue via un ticket de demande de service, comme dans l'édition précédente. Cependant, NSX Edge et le sous-réseau portable public ne sont plus nécessaires puisqu'ils sont désormais inclus dans le déploiement de base. Les frais afférents à un sous-réseau portable privé, une instance de service virtuel Windows et à la licence Zerto sont toujours applicables.
 
-Pour plus d'informations, voir [Reprise après incident Zerto](../services/addingzertodr.html).
+Pour plus d'informations, voir [Reprise après incident Zerto](/docs/services/vmwaresolutions/services/addingzertodr.html).
 
 ## Processus de commande d'instance
 
@@ -98,15 +104,15 @@ Le processus de commande d'instance a été grandement simplifié :
 
 Pour plus d'informations, voir les rubriques suivantes :
 
-* [Commande d'instances Cloud Foundation](../sddc/sd_orderinginstance.html)
-* [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 
 ## Gestion d'instances
 
 De nouvelles fonctions et améliorations ont été apportées au processus de gestion des instances :
 
-* Pour les instances Cloud Foundation, vous pouvez afficher le nom d'utilisateur et les mots de passe de divers composants d'une instance dans la page des détails de l'instance. Pour plus d'informations, voir [Affichage d'instances Cloud Foundation](../sddc/sd_viewinginstances.html).
-* Pour les instances vCenter Server, vous pouvez désormais installer des mises à jour et des modules de correction de logiciel pour les composants IBM directement à partir de la console. Pour plus d'informations, voir [Application de mises à jour et de modules de correction à des instances vCenter Server](../vcenter/vc_applyingupdates.html).
+* Pour les instances Cloud Foundation, vous pouvez afficher le nom d'utilisateur et les mots de passe de divers composants d'une instance dans la page des détails de l'instance. Pour plus d'informations, voir [Affichage d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html).
+* Pour les instances vCenter Server, vous pouvez désormais installer des mises à jour et des modules de correction de logiciel pour les composants IBM directement à partir de la console. Pour plus d'informations, voir [Application de mises à jour et de modules de correction à des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html).
 
 ## Notifications sur la console
 
@@ -114,5 +120,5 @@ Vous pouvez désormais configurer des notifications de console sur la page **Par
 
 Pour plus d'informations, voir les rubriques suivantes :
 
-* [Paramètres et comptes utilisateur](useraccount.html)
-* [Notifications](notifications.html)
+* [Paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [Notifications](/docs/services/vmwaresolutions/vmonic/notifications.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ Cette procédure permet de supprimer les instances HCX on {{site.data.keyword.cl
 
 ## Avant de commencer
 
-Prenez soin de passer en revue toutes les remarques énoncées dans la rubrique [Remarques relatives au retrait d'instances HCX on {{site.data.keyword.cloud_notm}} locales](../services/standalone_considerations.html).
+Prenez soin de passer en revue toutes les remarques énoncées dans la rubrique [Remarques relatives au retrait d'instances HCX on {{site.data.keyword.cloud_notm}} locales](/docs/services/vmwaresolutions/services/standalone_considerations.html).
 
 ## Procédure de suppression d'instances VMware HCX on IBM Cloud locales
 
@@ -26,7 +26,7 @@ Prenez soin de passer en revue toutes les remarques énoncées dans la rubrique 
 
 ### Liens connexes
 
-* [Commande d'instances HCX on {{site.data.keyword.cloud_notm}} locales](standalone_orderingserviceinstances.html)
-* [Affichage d'instances HCX on {{site.data.keyword.cloud_notm}} locales](standalone_viewingserviceinstances.html)
-* [Glossaire des termes HCX](hcx_glossary.html)
+* [Commande d'instances HCX on {{site.data.keyword.cloud_notm}} locales](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
+* [Affichage d'instances HCX on {{site.data.keyword.cloud_notm}} locales](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
+* [Glossaire des termes HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [Documentation VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

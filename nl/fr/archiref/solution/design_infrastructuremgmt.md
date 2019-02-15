@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -127,6 +127,6 @@ La procédure suivante décrit l'ordre dans lequel les événements se déroulen
 
 ### Liens connexes
 
-* [Conception d'infrastructure physique](design_physicalinfrastructure.html)
-* [Conception d'infrastructure virtuelle](design_virtualinfrastructure.html)
-* [Conception des services communs](design_commonservice.html)
+* [Conception d'infrastructure physique](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [Conception d'infrastructure virtuelle](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [Conception des services communs](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-13"
 
 La solution VMWare NSX Edge Services Gateway (ESG) est une extension des offres VMware Cloud Foundation on {{site.data.keyword.cloud}} et vCenter Server on {{site.data.keyword.cloud_notm}} actuellement disponibles sur {{site.data.keyword.cloud_notm}}. L'architecture de la solution pour Cloud Foundation et vCenter Server décrit en détails les composants de la solution et la configuration à haut niveau de chaque composant de la conception.
 
-Pour plus d'informations sur la conception de Cloud Foundation et vCenter Server, voir [Présentation de la solution](../solution/solution_overview.html).
+Pour plus d'informations sur la conception de Cloud Foundation et vCenter Server, voir [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Présentation de NSX Edge Services Gateway (ESG)
 
@@ -34,4 +34,4 @@ Tableau 1. Fonctions disponibles avec NSX Edge Service Gateway
 
 ### Liens connexes
 
-* [Présentation de la solution](../solution/solution_overview.html)
+* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

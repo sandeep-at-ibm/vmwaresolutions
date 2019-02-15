@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-19"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -21,8 +21,8 @@ Pour gérer le service {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on
 C'est à vous qu'il incombe de faire en sorte que le service IBM Spectrum Protect Plus soit toujours utilisé dans sa version la plus récente. Vous pouvez télécharger les mises à jour requises à partir de la page de [support d'IBM Spectrum Protect Plus](https://www.ibm.com/mysupport/s/topic/0TO50000000IQWtGAO/spectrum-protect-plus).
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Commande, affichage et retrait de services pour des instances Cloud Foundation](../sddc/sd_addingremovingservices.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server](../vcenter/vc_addingremovingservices.html)
+* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ## Mise à jour du système d'exploitation de la machine virtuelle IBM Spectrum Protect Plus
 
@@ -30,6 +30,6 @@ Pour mettre à jour le système d'exploitation de la machine virtuelle IBM Spect
 
 ### Liens connexes
 
-* [Présentation d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](spp_considerations.html)
+* [Présentation d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_considerations.html)
 * [How to increase vsnap storage for IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)
 * [Documentation IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -19,8 +19,8 @@ Pour déployer une plateforme virtuelle VMware avec un dispositif de stockage d�
 ## Conditions requises
 
 Assurez-vous que :
-*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
-*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les instances NetApp ONTAP Select](np_planning.html).
+*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_planning.html).
 
 Ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
 {:important}
@@ -33,7 +33,7 @@ Lorsque vous commandez une instance NetApp ONTAP Select, vous devez spécifier l
 
 Le nom de l'instance qui doit respecter les règles suivantes :
 * Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-* Le nom d'instance doit commencer et se terminer par un caractère alphanumérique.
+* Le nom d'instance doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
 * Le nom d'instance ne doit pas dépasser 10 caractères.
 * Le nom d'instance doit être unique au sein de votre compte.
 
@@ -52,7 +52,7 @@ Le préfixe du nom d'hôte qui doit respecter les règles suivantes :
 
 Le libellé du sous-domaine qui doit respecter les règles suivantes :
 *  Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-*  Le libellé de sous-domaine doit commencer et se terminer par un caractère alphanumérique.
+*  Le libellé de sous-domaine doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique. 
 *  Le libellé de sous-domaine ne doit pas dépasser 10 caractères.
 *  Le libellé de sous-domaine doit être unique au sein de votre compte.
 
@@ -113,7 +113,7 @@ Le nombre de serveurs ESXi d'une instance NetApp ONTAP Select est de 4 par défa
 
 Le déploiement de l'instance commence automatiquement. Vous recevez une confirmation que la commande est en cours de traitement et vous pouvez vérifier l'état du déploiement en affichant les détails de l'instance.
 
-Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances NetApp ONTAP Select](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) sont installés sur votre plateforme virtuelle VMware.
+Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) sont installés sur votre plateforme virtuelle VMware.
 
 Lorsque l'instance est prête pour utilisation, l'instance prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 
@@ -132,7 +132,7 @@ Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} cr�
 
 ### Liens connexes
 
-* [Affichage des instances NetApp ONTAP Select](np_viewinginstances.html)
-* [Suppression d'instances NetApp ONTAP Select](np_deletinginstance.html)
+* [Affichage des instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [Suppression d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [Centre de documentation NetApp ONTAP](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
 * [Liaison d'un stockage dédié à des déploiements NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

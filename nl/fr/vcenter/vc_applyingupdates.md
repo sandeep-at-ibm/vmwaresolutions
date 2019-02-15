@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,7 @@ Lors de la mise à niveau d'une instance vCenter Server vers une instance vCente
 
 Les partenaires commerciaux n'ont pas la possibilité de mettre à niveau une instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle.
 
-A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](../vmonic/relnotes_v25.html).
+A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
 {:note}
 
 Avant d'appliquer une mise à jour, développez l'entrée de mise à jour en cliquant sur la flèche vers le bas et vérifiez les informations suivantes :
@@ -66,8 +66,9 @@ Cette procédure s'applique aux instances déployées en version 2.1 et ultérie
 
    La page **Mise à jour et module de correction** d'une instance ne contient que les packages de mise à jour des composants de gestion IBM, pas les mises à jour VMware. Les mises à jour VMware doivent être appliquées manuellement.   {{site.data.keyword.vmwaresolutions_short}} applique les mises à jour VMware dans les circonstances suivantes :
    * Lorsqu'une nouvelle instance vCenter Server est déployée
-   * Lorsque de nouveaux serveurs ESXi sont ajoutés, ils sont mis à disposition avec des mises à jour VMware, mais les serveurs ESXi existants ne sont pas mis à jour. 
-   * Lorsque de nouveaux clusters sont ajoutés, ils sont mis à disposition avec des mises à jour VMware, mais les clusters existants ne sont pas mis à jour. {:note}
+   * Lorsque de nouveaux serveurs ESXi sont ajoutés, ils sont mis à disposition avec des mises à jour VMware, mais les serveurs ESXi existants ne sont pas mis à jour.
+   * Lorsque de nouveaux clusters sont ajoutés, ils sont mis à disposition avec des mises à jour VMware, mais les clusters existants ne sont pas mis à jour.
+   {:note}
 
 5. Pour des mises à niveau de licence NSX, cliquez sur **Mettre à niveau**. Dans la fenêtre **Mettre à niveau l'édition de licence NSX**, sélectionnez celle voulue et cliquez sur **Mettre à niveau**. Les rétromigrations d'édition de licence ne sont pas disponibles.
 
@@ -142,10 +143,10 @@ Procédez comme suit pour mettre à niveau d'une instance vCenter Server vers vC
       </tr>
     </table>
 
-4. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](../vmonic/trbl_support.html) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à relancer la mise à niveau à partir de l'étape où elle a échoué.
+4. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à relancer la mise à niveau à partir de l'étape où elle a échoué.
 
 ### Liens connexes
 
-* [Présentation de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
-* [Foire aux questions](../vmonic/faq.html)
+* [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)

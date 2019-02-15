@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,8 +21,8 @@ Cette procédure vous guide lors de la sélection des composants VMware, des par
 ## Conditions requises
 
 Assurez-vous que :
-*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](../vmonic/useraccount.html).
-*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les clusters vSphere](vs_planning.html).
+*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
 
 ## Paramètres système
 
@@ -91,8 +91,8 @@ Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel le cluster 
 
 **Remarques :**
 * Si vous sélectionnez un composant vSAN, la liste des emplacements est filtrée par disponibilité SSD.
-* Le centre de données FRA05 ne prend pas en charge les serveurs bare metal Broadwell. 
-* Le centre de données LON05 ne prend pas en charge les serveurs bare metal certifiés SAP ou Broadwell. 
+* Le centre de données FRA05 ne prend pas en charge les serveurs bare metal Broadwell.
+* Le centre de données LON05 ne prend pas en charge les serveurs bare metal certifiés SAP ou Broadwell.
 
 ### Skylake
 
@@ -112,8 +112,12 @@ L'onglet **Certifiés SAP** n'est pas disponible si vous avez précédemment sé
 
 En fonction de vos besoins, sélectionnez une configuration de serveur bare metal :
   * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/192 Go de mémoire RAM
-  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,2 GHz/384 Go de mémoire RAM
+  * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/384 Go de mémoire RAM
   * Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/768 Go de mémoire RAM
+  * Processeur Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de mémoire RAM
+  * Processeur Quad Intel Xeon E7-8890 v4/96 coeurs au total, 2,2 GHz/1024 Go de mémoire RAM
+  * Processeur Quad Intel Xeon E7-8890 v4/96 coeurs au total, 2,2 GHz/2048 Go de mémoire RAM
+  * Processeur Quad Intel Xeon E7-8890 v4/96 coeurs au total, 2,2 GHz/4096 Go de mémoire RAM
 
 ### Broadwell
 
@@ -123,9 +127,11 @@ Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 384 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 384 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 384 Go, 512 Go, 768 Go, 1,5 To |
+| Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+| Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+| Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
+| Quad Intel Xeon E7-4820 v4/40 coeurs au total, 2,0 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
+| Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 
 ### Nombre de serveurs bare metal
 
@@ -142,7 +148,11 @@ Pour les commandes avec vSAN, les serveurs ESXi sont commandés avec un châssis
 Si vous sélectionnez le composant VMware vSAN pour le cluster, spécifiez les paramètres suivants :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
-* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+
+  L'option **Hautes performances Intel Optane** est disponible uniquement pour les modèles d'UC Skylake Dual Intel Xeon Gold 5120 et Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 
 ## Paramètres d'interface réseau
@@ -210,7 +220,7 @@ En fonction de l'{{site.data.keyword.CloudDataCent_notm}} que vous avez sélecti
 
 #### Paire à haute disponibilité de dispositifs FortiGate Physical Appliance série 300
 
-Vous pouvez également choisir d'inclure la paire à haute disponibilité de dispositifs FortiGate Physical Appliance série 300 pour sécuriser votre environnement de cloud. Pour plus d'informations, voir [Présentation de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html).
+Vous pouvez également choisir d'inclure la paire à haute disponibilité de dispositifs FortiGate Physical Appliance série 300 pour sécuriser votre environnement de cloud. Pour plus d'informations, voir [Présentation de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_considerations.html).
 
 ## Récapitulatif de la commande
 
@@ -260,6 +270,6 @@ Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSp
 
 ### Liens connexes
 
-* [Commande de clusters vSphere sur la base de configurations existantes](vs_orderingbasedonexistingconfig.html)
-* [Mise à l'échelle de clusters existants](vs_scalingexistingclusters.html)
-* [Mise à l'échelle de clusters créés en dehors de la console](vs_orderingforclustersoutside.html)
+* [Commande de clusters vSphere on la base de configurations existantes](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [Mise à l'échelle de clusters existants](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [Mise à l'échelle de clusters créés en dehors de la console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

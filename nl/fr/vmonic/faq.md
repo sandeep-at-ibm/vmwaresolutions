@@ -2,21 +2,27 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # Foire aux questions sur IBM Cloud for VMware Solutions
 
 Trouvez les réponses aux questions fréquemment posées concernant {{site.data.keyword.vmwaresolutions_full}}.
 
 ## De quels comptes utilisateur ai-je besoin pour IBM Cloud for VMware Solutions ?
+{: faq}
 
-* **Compte IBMid**. Ce compte est nécessaire pour accéder à la console {{site.data.keyword.vmwaresolutions_short}}. La console est une interface utilisateur autonome distincte du portail {{site.data.keyword.slportal}}. Pour plus d'informations, voir [Initiation](../index.html).
+* **Compte IBMid**. Ce compte est nécessaire pour accéder à la console {{site.data.keyword.vmwaresolutions_short}}. La console est une interface utilisateur autonome distincte du portail {{site.data.keyword.slportal}}. Pour plus d'informations, voir [Initiation](/docs/services/vmwaresolutions/index.html).
 * **Compte {{site.data.keyword.cloud_notm}}**. Ce compte est nécessaire pour la mise à disposition. Vous pouvez vous inscrire pour obtenir un compte {{site.data.keyword.cloud_notm}} en effectuant une utilisant un **IBMid** existant ou en créant un nouvel **IBMid**.
-* **Compte d'infrastructure {{site.data.keyword.cloud_notm}}**. Ce compte, auparavant appelé compte **IBM SoftLayer**, permet de se connecter au portail client d'infrastructure {{site.data.keyword.cloud_notm}} qui fournit certaines fonctions supplémentaires pour gérer des produits et des services d'infrastructure. Vous pouvez obtenir un compte d'infrastructure {{site.data.keyword.cloud_notm}} en effectuant une mise à niveau de votre **compte {{site.data.keyword.cloud_notm}}** vers un compte de paiement à la carte ou en établissant un lien entre votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) et votre compte {{site.data.keyword.cloud_notm}}. Le compte d'infrastructure {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Inscription à des comptes requis](signing_softlayer_account.html) et [Exigences liées au compte d'infrastructure {{site.data.keyword.cloud_notm}}](slaccountrequirement.html).
+* **Compte d'infrastructure {{site.data.keyword.cloud_notm}}**. Ce compte, auparavant appelé compte **IBM SoftLayer**, permet de se connecter au portail client d'infrastructure {{site.data.keyword.cloud_notm}} qui fournit certaines fonctions supplémentaires pour gérer des produits et des services d'infrastructure. Vous pouvez obtenir un compte d'infrastructure {{site.data.keyword.cloud_notm}} en effectuant une mise à niveau de votre **compte {{site.data.keyword.cloud_notm}}** vers un compte de paiement à la carte ou en établissant un lien entre votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) et votre compte {{site.data.keyword.cloud_notm}}. Le compte d'infrastructure {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Inscription à des comptes requis](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html) et [Exigences liées au compte d'infrastructure {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## Comment associer mes données d'identification d'infrastructure IBM Cloud à la console IBM Cloud for VMware Solutions ?
 
@@ -30,21 +36,21 @@ Tous les coûts d'infrastructure physique et virtuelle, ainsi que des licences a
 
 Tous les types d'instance fournissent différentes options de déploiement pour les environnements virtuels VMware. Toutefois, la différence entre ces types réside dans l'étendue des possibilités de personnalisation et d'automatisation.
 
-* Lorsque vous commandez une instance VMware vCenter Server, vous déployez un environnement virtuel VMware avec des ressources de calcul, de stockage et de réseau personnalisées. Pour plus d'informations sur les composants déployés, voir [Spécifications techniques relatives aux instances vCenter Server](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
-* Lorsque vous commandez une instance VMware Cloud Foundation, vous déployez une plateforme unifiée de centre de données défini par les logiciels (SDDC, Software-Defined Data Center). Pour plus d'informations sur les composants déployés, voir [Spécifications techniques relatives aux instances Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+* Lorsque vous commandez une instance VMware vCenter Server, vous déployez un environnement virtuel VMware avec des ressources de calcul, de stockage et de réseau personnalisées. Pour plus d'informations sur les composants déployés, voir [Spécifications techniques relatives aux instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
+* Lorsque vous commandez une instance VMware Cloud Foundation, vous déployez une plateforme unifiée de centre de données défini par les logiciels (SDDC, Software-Defined Data Center). Pour plus d'informations sur les composants déployés, voir [Spécifications techniques relatives aux instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 * Lorsque vous commandez un cluster VMware vSphere, vous obtenez un maximum de souplesse pour concevoir et créer votre environnement VMware hébergé tout en intégrant du matériel compatible VMware. Cela dit, {{site.data.keyword.cloud_notm}} n'automatise pas l'installation, la configuration et l'apport des composants VMware facultatifs pour le cluster VMware vSphere.
-* Les fonctions qui sont prises en charge pour les instances vCenter Server, les instances Cloud Foundation et les clusters vSphere sont différentes. Pour plus d'informations, voir [Graphique de comparaison des offres](inst_comp_chart.html).
+* Les fonctions qui sont prises en charge pour les instances vCenter Server, les instances Cloud Foundation et les clusters vSphere sont différentes. Pour plus d'informations, voir [Graphique de comparaison des offres](/docs/services/vmwaresolutions/vmonic/inst_comp_chart.html).
 
 ## Qu'inclut une instance vCenter Server ?
 
-Pour plus d'informations, voir [Spécifications techniques relatives aux instances vCenter Server](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
+Pour plus d'informations, voir [Spécifications techniques relatives aux instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## Qu'inclut une instance Cloud Foundation ?
 
-Pour plus d'informations, voir [Spécifications techniques relatives aux instances Cloud Foundation](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+Pour plus d'informations, voir [Spécifications techniques relatives aux instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## Qu'inclut un cluster vSphere ?
-Pour plus d'informations, voir [Composants de VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_vsphereclusteroverview.html).
+Pour plus d'informations, voir [Composants de VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html).
 
 ## Une instance vCenter Server à deux noeuds est-elle à haute disponibilité ?
 
@@ -66,26 +72,34 @@ Pour les instances vCenter Server, le premier cluster créé lors du déploiemen
 
 **Remarque :** pour les instances Cloud Foundation, le nom du cluster par défaut n'est pas modifiable.
 
-##Comment sont gérés les modules de correction ?
+## Comment sont gérés les modules de correction ?
 
 IBM fournit des mises à jour permanentes du code en déployant l'instance de serveur virtuel (VSI) IBM CloudDriver (VSI) à la demande. IBM ne fournit pas de mises à jour permanentes pour les services complémentaires tels que Zerto on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}}. L'obtention et l'installation de ces mises à jour est de votre responsabilité.
 
-Les mises à jour de VMware sont appliquées différemment selon le type d'instance VMware que vous avez déployée :
+Les mises à jour de VMware sont appliquées différemment selon le type d'instance.
 
-* Pour les instances VMware Cloud Foundation, les mises à jour des composants vSphere ESXi, NSX, vCenter, contrôleur PSC (Platform Services Controller) et gestionnaire SDDC sont fournies via la console {{site.data.keyword.vmwaresolutions_short}}.
-* Pour les instances VMware vCenter Server :
-  * Pour les instances déployées en ou mise à niveau vers la version 2.1 ou ultérieure, les nouveaux clusters et serveurs ESXi déployés reçoivent de VMware des mises à jour ESXi récentes, mais pas nécessairement les toutes dernières.
-  * Vous êtes responsable de toutes les autres mises à jour des composants VMware, y compris de vous assurer que les nouveaux clusters et serveurs ESXi déployés disposent de toutes les mises à jour les plus récentes dont vous avez besoin.
-  * Pour les instances déployées en version 2.0 ou ultérieure, le gestionnaire de mises à jour VMware (VUM, VMware Update Manager) est intégré à votre serveur vCenter Server. Vous pouvez configurer VUM afin de télécharger des mises à jour ESXi depuis VMware.
+### Instances VMware Cloud Foundation
+
+Les mises à jour des composants vSphere ESXi, NSX, vCenter, contrôleur PSC (Platform Services Controller) et gestionnaire SDDC sont fournies via la console {{site.data.keyword.vmwaresolutions_short}}.
+
+### Instances VMware vCenter Server
+
+Pour les instances déployées en ou mise à niveau vers la version 2.1 ou ultérieure, les nouveaux clusters et serveurs ESXi déployés reçoivent de VMware des mises à jour ESXi récentes, mais pas nécessairement les toutes dernières.
+
+Vous êtes responsable de toutes les autres mises à jour des composants VMware, y compris de vous assurer que les nouveaux clusters et serveurs ESXi déployés disposent de toutes les mises à jour les plus récentes dont vous avez besoin.
+{:important}
+
+Pour les instances déployées en version 2.0 ou ultérieure, le gestionnaire de mises à jour VMware (VUM, VMware Update Manager) est intégré à votre serveur vCenter Server. Vous pouvez configurer VUM afin de télécharger des mises à jour ESXi depuis VMware.
 
 Pour plus d'informations, consultez les ressources suivantes :
 * [Support VMware](https://www.vmware.com/support.html)
-* [Application de mises à jour à des instances vCenter Server](../vcenter/vc_applyingupdates.html)
-* [Application de mises à jour à des instances Cloud Foundation](../sddc/sd_applyingupdates.html)
+* [Application de mises à jour à des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html)
+* [Application de mises à jour à des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)
+* [Application de mises à jour à des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_applyingupdates.html)
 
 ## La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?
 
-Bien que la passerelle VMware NSX Edge des services de gestion se trouve sur un sous-réseau public, des mesures de sécurité ont été prises afin de garantir qu'elle ne présente aucun risque pour la sécurité. Ces mesures sont les suivantes :
+Bien que la passerelle VMware NSX Edge des services de gestion se trouve sur un sous-réseau public, des mesures de sécurité ont été prises afin de garantir qu'elle ne présente aucun risque pour la sécurité:
 *  Le pare-feu NSX Edge est configuré de manière à n'autoriser que le trafic HTTPS sortant (port TCP 443) initié par les machines virtuelles de gestion.
 *  Le conversion d'adresses réseau (SNAT) est utilisée de sorte que les adresses IP privées ne soient pas visibles à l'extérieur du réseau privé.
 *  L'accès distant pour le dispositif NSX Edge des services de gestion est désactivé.
@@ -104,12 +118,12 @@ Bien que la passerelle NSX Edge gérée par le client soit connectée au VLAN pu
 Les déploiements d'instance sont soumis à des exigences strictes en matière d'infrastructure physique, qui varient en fonction des {{site.data.keyword.CloudDataCents_notm}}. Lorsque vous commandez votre instance, les centres de données disponibles sont répertoriés dans des régions et vous pouvez en sélectionner un dans la liste.
 
 Pour plus d'informations, voir les sections _Disponibilité d'IBM Cloud Data Center_ dans :
-* [Exigences et planification pour les instances vCenter Server](../vcenter/vc_planning.html)
-* [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](../vcenter/vc_hybrid_planning.html)
-* [Exigences et planification pour les instances Cloud Foundation](../sddc/sd_planning.html)
-* [Exigences et planification pour VMware vSphere on {{site.data.keyword.cloud_notm}}](../vsphere/vs_planning.html)
-* [Exigences et planification pour les instances NetApp ONTAP Select](../netapp/np_planning.html)
-* [Exigences et planification pour les instances VMware Federal](../vcenter/vc_fed_planning.html)
+* [Exigences et planification pour les instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
+* [Exigences et planification pour les instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Exigences et planification pour VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
+* [Exigences et planification pour les instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_planning.html)
+* [Exigences et planification pour les instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
 
 ## Combien de temps faut-il pour déployer mon instance ?
 
@@ -127,12 +141,12 @@ Pour afficher l'historique complet des notifications, cliquez sur **Notification
 
 ## Que faire en cas de problème avec IBM Cloud for VMware Solutions ?
 
-Si vous avez besoin d'aide concernant {{site.data.keyword.vmwaresolutions_short}}, contactez le support IBM via l'un des canaux de support. Pour plus d'informations, voir [Contacter le support IBM](trbl_support.html).
+Si vous avez besoin d'aide concernant {{site.data.keyword.vmwaresolutions_short}}, contactez le support IBM via l'un des canaux de support. Pour plus d'informations, voir [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
 ### Liens connexes
 
-* [Notifications](notifications.html)
-* [Instances Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
-* [Instances vCenter Server](../vcenter/vc_vcenterserveroverview.html)
-* [Accès à la console](loginmethod.html)
-* [Paramètres et comptes utilisateur](useraccount.html)
+* [Notifications](/docs/services/vmwaresolutions/vmonic/notifications.html)
+* [Instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Accès à la console](/docs/services/vmwaresolutions/vmonic/loginmethod.html)
+* [Paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-11-09"
 
 Pour retirer la licence Hybridity Bundle de votre instance vCenter Server, vous devez remplacer les clés de licence locative VMware NSX et VMware vSAN par des clés BYOL (Bring Your Own License) dans le client Web VMware vSphere. De plus, vous devez ouvrir un ticket de demande de service pour annuler les frais liés aux licences locatives.
 
-Le fait de rétromigrer votre licence peut provoquer l'échec de votre instance vCenter Server. Vous pouvez choisir de rétromigrer une licence à vos risques et périls, mais avant, examinez attentivement les fonctions qui ne seront plus disponibles à l'issue de cette opération. Pour plus d'informations, voir [Graphique de comparaison des éditions de composant VMware](../archiref/solution/appendix.html).
+Le fait de rétromigrer votre licence peut provoquer l'échec de votre instance vCenter Server. Vous pouvez choisir de rétromigrer une licence à vos risques et périls, mais avant, examinez attentivement les fonctions qui ne seront plus disponibles à l'issue de cette opération. Pour plus d'informations, voir [Graphique de comparaison des éditions de composant VMware](/docs/services/vmwaresolutions/archiref/solution/appendix.html).
 {:important}
 
 ## Considérations importantes à prendre en compte lorsque vous retirez Hybridity Bundle d'un environnement multisite
@@ -27,7 +27,7 @@ Voici les considérations que vous devez prendre en compte avant de retirer Hybr
 * Vous devez combiner les licences VMware NSX et disposer d'une capacité d'utilisation suffisante sur tous les déploiements multisite.
 * Vous devez créer un seul ticket de demande de service pour retirer Hybridity Bundle de tous les déploiements multisite.
 
-Lors du retrait de Hybridity Bundle d'un environnement multisite, les licences BYOL sont appliquées. Pour tous les sites d'une configuration multisite, la licence NSX revient automatiquement à son niveau d'édition le plus bas sur tous les sites. Vous devez vous assurer que les éditions de licence sont cohérentes sur tous les sites d'une configuration multisite.
+Lors du retrait de Hybridity Bundle d'un environnement multisite, les licences BYOL sont appliquées. Il vous incombe de vous assurer que les éditions de licence sont cohérentes sur tous les sites d'une configuration multisite.
 {:note}
 
 ## Avant de retirer Hybridity Bundle
@@ -108,6 +108,6 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
 
 ### Liens connexes
 
-* [Commande d'instances vCenter Server with Hybridity Bundle](vc_hybrid_orderinginstance.html)
-* [Affichage des instances vCenter Server with Hybridity Bundle](vc_hybrid_viewinginstances.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
+* [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

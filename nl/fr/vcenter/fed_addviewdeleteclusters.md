@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,7 +22,11 @@ Vous pouvez ajouter des clusters à vos instances VMware Federal Server afin d'�
 
 ## Ajout de clusters à des instances VMware Federal
 
-Vous pouvez ajouter jusqu'à 10 clusters à une instance. Lorsque vous ajoutez un cluster pour une instance VMware Federal, vous devez spécifier les paramètres suivants :
+Le nombre de clusters pouvant être ajoutés à une instance varie en fonction de la version de l'instance :
+* Pour les instances déployées dans (ou mises à niveau vers) la version 2.5 et des versions ultérieures, le nombre de clusters, d'hôtes et de machines virtuelles détermine la limite maximum relative au nombre de clusters que vous pouvez ajouter. Vous devez respecter les règles et limites de dimensionnement VMware pour votre déploiement.
+* Pour les instances déployées dans (ou mises à niveau vers) la version 2.2 et des versions ultérieures, vous pouvez ajouter jusqu'à 10 clusters.
+
+Pour plus d'informations sur les limites maximum, voir [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
 
 ### Paramètres système
 
@@ -70,7 +74,7 @@ Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 
 Un minimum de 2 serveurs {{site.data.keyword.baremetal_short}} est requis pour un cluster.
 
-Pour les instances VMware Federal déployées dans la version 2.1 ou des éditions ultérieures, vous pouvez ajouter jusqu'à 59 serveurs {{site.data.keyword.baremetal_short}} pour un cluster et entre 1 et 59 serveurs ESXi à la fois.
+Pour les instances VMware Federal déployées dans la version 2.3 ou des éditions ultérieures, vous pouvez ajouter jusqu'à 59 serveurs {{site.data.keyword.baremetal_short}} pour un cluster et entre 1 et 59 serveurs ESXi à la fois.
 
 Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Pour les paramètres de stockage vSAN, quatre serveurs sont nécessaires pour le cluster initial et pour les clusters post-déploiement.
 
@@ -83,7 +87,11 @@ Les paramètres de stockage varient en fonction de la configuration de serveur b
 Spécifiez les options vSAN suivantes :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
-* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée. L'option **Hautes performances avec Intel Optane** est disponible pour les processeurs Dual Intel Xeon Gold 5120 et 6140.
+* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+
+  L'option **Hautes performances Intel Optane** est disponible uniquement pour les modèles d'UC Skylake Dual Intel Xeon Gold 5120 et Dual Intel Xeon Gold 6140.
+  {:note}
+
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 * **Licence vSAN** : sélectionnez l'édition de licence VMware vSAN 6.6 (Advanced ou Enterprise).
 
@@ -230,7 +238,8 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
 
 Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous n'en avez plus besoin.
 
-Utilisez cette procédure pour retirer des clusters des instances qui sont déployées dans (ou mises à niveau vers) la version 2.3 et des éditions ultérieures.{:note}
+Utilisez cette procédure pour retirer des clusters des instances qui sont déployées dans (ou mises à niveau vers) la version 2.3 et des éditions ultérieures.
+{:note}
 
 ### Avant de supprimer
 
@@ -253,5 +262,5 @@ Utilisez cette procédure pour retirer des clusters des instances qui sont dépl
 
 ### Liens connexes
 
-* [Affichage des instances VMware Federal](vc_fed_viewinginstance.html)
-* [Extension et réduction de capacité pour des instances VMware Federal](vc_fed_addingremovingservers.html)
+* [Affichage des instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Extension et réduction de capacité pour des instances VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)

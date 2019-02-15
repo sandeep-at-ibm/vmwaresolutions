@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-16"
+lastupdated: "2019-01-23"
 
 ---
 
 # Accès réseau et flux
 
-## Accès d'application conteneur – ICP
+## Accès d'application conteneur – IBM Cloud Private
 
 Il existe trois méthodes principales pour obtenir un trafic et accès externes dans vos applications en cluster Kubernetes :
 
@@ -18,39 +18,47 @@ Il existe trois méthodes principales pour obtenir un trafic et accès externes 
 - LoadBalancer
 - Ingress
 
-### NodePort
+### NodePort - IBM Cloud Private
+
 Les ports Nodeport permettent d'exposer facilement l'accès externe à une charge de travail à des fins de développement initial et de tests, mais ils ne sont pas recommandés pour la production. La fonction Ingress ou l'équilibreur de charge sont recommandés.
 
-### LoadBalancer
-Actuellement, la plateforme ICP prend en charge un équilibreur de charge externe pour la charge de travail d'application.
+### LoadBalancer - IBM Cloud Private
 
-### Ingress
-La fonction Ingress est une collection de règles qui permettent aux connexions entrantes d'atteindre les services de cluster. La fonction Ingress peut être configurée afin d'octroyer aux services des URL accessibles en externe, d'effectuer l'équilibrage de charge pour le trafic, de terminer SSL, d'offrir un hébergement virtuel basé sur le nom, etc.  Le noeud proxy dans l'infrastructure ICP exécute cette fonction.
+Actuellement, la plateforme {{site.data.keyword.icpfull_notm}} prend en charge un équilibreur de charge externe pour la charge de travail d'application.
 
-## Accès d'application conteneur – IKS
+### Ingress - IBM Cloud Private
+
+La fonction Ingress est une collection de règles qui permettent aux connexions entrantes d'atteindre les services de cluster. La fonction Ingress peut être configurée afin d'octroyer aux services des URL accessibles en externe, d'effectuer l'équilibrage de charge pour le trafic, de terminer SSL, d'offrir un hébergement virtuel basé sur le nom, etc.  Le noeud proxy dans l'infrastructure {{site.data.keyword.icpfull_notm}} exécute cette fonction.
+
+## Accès d'application conteneur – IBM Cloud Kubernetes Service
+
 Il existe trois méthodes principales pour obtenir un trafic et accès externes dans vos applications en cluster Kubernetes :
 
 - NodePort
 - LoadBalancer
 - Ingress
 
-### NodePort
+### NodePort - IBM Cloud Kubernetes Service
+
 Les ports Nodeport permettent d'exposer facilement l'accès externe à une charge de travail à des fins de développement initial et de tests, mais ils ne sont pas recommandés pour la production. La fonction Ingress ou l'équilibreur de charge sont recommandés.
 
-### LoadBalancer
-Chaque cluster IKS est mis à disposition avec un équilibreur de charge d'application (ALB) public ou privé. L'ALB utilise un point d'entrée public ou privé unique et sécurisé pour acheminer les demandes entrantes vers vos applications.
+### LoadBalancer - IBM Cloud Kubernetes Service
 
-### Ingress
+Chaque cluster {{site.data.keyword.containerlong_notm}} est mis à disposition avec un équilibreur de charge d'application (ALB) public ou privé. L'ALB utilise un point d'entrée public ou privé unique et sécurisé pour acheminer les demandes entrantes vers vos applications.
+
+### Ingress - IBM Cloud Kubernetes Service
+
 La fonction Ingress est une collection de règles qui permettent aux connexions entrantes d'atteindre les services de cluster. La fonction Ingress peut être configurée afin d'octroyer aux services des URL accessibles en externe, d'effectuer l'équilibrage de charge pour le trafic, de terminer SSL, d'offrir un hébergement virtuel basé sur le nom, etc.
 
 ## Flux de trafic
+
 Les flux de trafic suivants sont décrits :
 
-- Utilisateur externe sur internet vers un niveau Web hébergé dans un conteneur dans {{site.data.keyword.cloud}} Private (ICP). 
-- Niveau Web hébergé dans un conteneur dans ICP vers un groupe de serveurs d'application de base de données hébergé dans une machine virtuelle dans VMware vCenter Server on {{site.data.keyword.cloud_notm}}. 
+- Utilisateur externe sur Internet vers un niveau Web hébergé dans un conteneur dans {{site.data.keyword.icpfull_notm}}.
+- Niveau Web hébergé dans un conteneur dans {{site.data.keyword.icpfull_notm}} vers un groupe de serveurs d'application de base de données hébergé dans une machine virtuelle dans VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 - Utilisateur d'entreprise sur l'accès au réseau d'entreprise vers une machine virtuelle dans vCenter Server.
 
-### Utilisateur externe sur Internet vers un niveau Web hébergé dans un conteneur dans ICP.
+### Utilisateur externe sur Internet vers un niveau Web hébergé dans un conteneur dans IBM Cloud Private.
 
 1. L'utilisateur externe émet une demande vers le niveau Web à l'aide de l'URL.
 2.	Le serveur de noms de domaine est utilisé pour déterminer l'adresse IP. Cette adresse IP est une adresse publique {{site.data.keyword.cloud_notm}} sur un sous-réseau portable qui est affecté à l'instance vCenter Server.
@@ -59,11 +67,11 @@ Les flux de trafic suivants sont décrits :
 5.	Au sein du noeud worker, le proxy kube achemine la demande vers l'ALB ou le service Ingress.
 6.	Si l'application figure sur le même noeud worker, iptables est utilisé pour déterminer quelle interface interne est utilisée pour acheminer la demande. Si l'application figure sur un autre noeud worker, Calico vRouter est acheminé vers le noeud worker qui s'applique à l'aide de l'encapsulation IP-in-IP. Le paquet IP-in-IP est encapsulé dans un cadre VXLAN pour le transport vers l'hôte vSphere ESXi sur lequel figure le noeud worker.
 
-### Niveau Web hébergé dans un conteneur dans ICP vers un groupe de serveurs d'application de base de données hébergé dans une machine virtuelle dans vCenter Server.
+### Niveau Web hébergé dans un conteneur dans IBM Cloud Private vers un groupe de serveurs d'application de base de données hébergé dans une machine virtuelle dans vCenter Server.
 
-La façon dont les tables de routage dans la passerelle et les routeurs vRouter sont renseignées varient en fonction de la méthode d'intégration. Voir l'intégration ICP et vCenter Server.
+La façon dont les tables de routage dans la passerelle et les routeurs vRouter sont renseignées varient en fonction de la méthode d'intégration. Voir l'intégration {{site.data.keyword.icpfull_notm}} et vCenter Server.
 
-1.	Le niveau Web qui s'exécute dans un conteneur dans ICP émet une demande vers une base de données qui s'exécute sur une machine virtuelle dans la même instance vCenter Server.
+1.	Le niveau Web qui s'exécute dans un conteneur dans {{site.data.keyword.icpfull_notm}} émet une demande vers une base de données qui s'exécute sur une machine virtuelle dans la même instance vCenter Server.
 2.	Le serveur de noms de domaine est utilisé pour résoudre la demande vers l'adresse IP de la base de données.
 3.	Le conteneur envoie la demande à Calico vRouter.
 4.	La table de routage de vRouter est alimentée par les plages d'adresses IP hébergées sur l'instance vCenter Server.
@@ -84,21 +92,24 @@ La façon dont les tables de routage dans la passerelle et les routeurs vRouter 
 7.	La machine virtuelle reçoit la demande.
 
 ## Réseau d'accès public
-Par défaut, ICP et CAM nécessitent une connectivité Internet pour extraire des images Docker, des chartes Helm, des modèles Terraform et des gestionnaires de packages de système d'exploitation.
-Dans les dernières éditions, des installations basées sur un proxy sont prises en charge pour les installations qui ne sont pas directement connectées à Internet et qui proposent des options d'installation en mode hors ligne. 
+
+Par défaut, {{site.data.keyword.icpfull_notm}} et CAM nécessitent une connectivité Internet pour extraire des images Docker, des chartes Helm, des modèles Terraform et des gestionnaires de packages de système d'exploitation.
+Dans les dernières éditions, des installations basées sur un proxy sont prises en charge pour les installations qui ne sont pas directement connectées à Internet et qui proposent des options d'installation en mode hors ligne.
 
 ###	Pare-feu NSX
-Le pare-feu ICP NSX Edge est configuré avec des règles permettant :
+
+Le pare-feu {{site.data.keyword.icpfull_notm}} NSX Edge est configuré avec des règles permettant :
 *	d'activer l'accès des réseaux VXLAN à un accès public ;
 *	d'activer l'accès des réseaux VXLAN à un accès réseau {{site.data.keyword.cloud_notm}} privé ;
 *	d'activer l'accès réseau {{site.data.keyword.cloud_notm}} privé à des réseaux VXLAN.
 
 ### NSX NAT
-ICP NSX NAT est configuré avec les NAT suivants :
+
+{{site.data.keyword.icpfull_notm}} NSX NAT est configuré avec les NAT suivants :
 *	SNAT pour l'accès des réseaux VXLAN à un accès public
 *	SNAT pour l'accès des réseaux VXLAN à un accès réseau {{site.data.keyword.cloud_notm}} privé
-*	DNAT pour des adresses IP virtuelles de cluster ICP
+*	DNAT pour des adresses IP virtuelles de cluster {{site.data.keyword.icpfull_notm}}
 
 ### Liens connexes
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

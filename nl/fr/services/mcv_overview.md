@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -44,7 +44,7 @@ Les spécifications de l'infrastructure de base sont les suivantes :
 * Le cluster de ressources est un cluster vSphere + vSAN étendu
 * Le site témoin contient un hôte ESXi témoin
 * Architecture vCenter et NSX Manager unique
-* vCenter Server Appliance avec un contrôleur PSC (Platform Services Controller) intégré qui utilise vCenter High Availability (HA) sur une architecture de réseau L
+* vCenter Server Appliance avec un contrôleur PSC (Platform Services Controller) intégré qui utilise vCenter High Availability (HA) sur une architecture de réseau L3
 * La reprise NSX Manager utilise une méthodologie de secours automatique qui synchronise les fichiers de sauvegarde
 
 ### Spécifications de l'architecture des outils et des technologies
@@ -75,4 +75,4 @@ Les spécifications de l'architecture de réseau sont les suivantes :
 
 ### Liens connexes
 
-* [Demande de Mission Critical VMware on IBM Cloud](managing_mcv.html)
+* [Demande de Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services/managing_mcv.html)

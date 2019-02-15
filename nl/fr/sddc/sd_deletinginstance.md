@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -51,9 +51,9 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 
 ### Liens connexes
 
-* [Suppression d'instances Cloud Foundation dans une configuration multisite](sd_deletinginstance_multi.html)
-* [Commande d'instances Cloud Foundation](sd_orderinginstance.html)
-* [Affichage d'instances Cloud Foundation](sd_viewinginstances.html)
-* [Extension et réduction de capacité pour des instances Cloud Foundation](sd_addingremovingservers.html)
-* [Suppression de configurations multisite](sd_deletinginstance_multi.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
+* [Suppression d'instances Cloud Foundation dans une configuration multisite](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Affichage d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Suppression de configurations multisite](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

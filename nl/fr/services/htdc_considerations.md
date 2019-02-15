@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -42,8 +42,8 @@ Avant de retirer le service HyTrust DataControl on {{site.data.keyword.cloud_not
 
 ### Liens connexes
 
-* [Commande de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](htdc_ordering.html)
-* [Gestion de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtdc.html)
-* [Contacter le support IBM](../vmonic/trbl_support.html)
-* [Foire aux questions](../vmonic/faq.html)
+* [Commande de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_ordering.html)
+* [Gestion de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtdc.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Site Web HyTrust](https://www.hytrust.com/)

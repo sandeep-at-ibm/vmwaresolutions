@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2016-11-04"
 
@@ -14,12 +14,12 @@ Cette édition inclut de nouvelles fonctionnalités, des améliorations d'utilis
 
 ## Exigences liées au spanning VLAN
 
-Si vous utilisez un compte SoftLayer® classique (non VRF), le spanning VLAN doit être activé. S'il ne l'est pas pour les comptes classiques, les divers composants de l'environnement de virtualisation VMware risquent de ne pas pouvoir communiquer entre eux. Pour activer le spanning VLAN dans votre compte SoftLayer, voir [Activation ou désactivation du spanning VLAN](../../../infrastructure/vlans/vlan-spanning.html){:new_window}.
+Si vous utilisez un compte SoftLayer® classique (non VRF), le spanning VLAN doit être activé. S'il ne l'est pas pour les comptes classiques, les divers composants de l'environnement de virtualisation VMware risquent de ne pas pouvoir communiquer entre eux. Pour activer le spanning VLAN dans votre compte SoftLayer, voir [Activation ou désactivation du spanning VLAN](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}.
 
 ## Paramètres de courrier électronique et notifications
 
-Vous pouvez configurer des notifications par courrier électronique sur la page **Paramètres**. Ce paramètre est activé par défaut, ce qui signifie que vous recevez une notification par courrier électronique pour chaque nouvelle commande d'instance, lorsque l'instance est mise à disposition et prête pour utilisation. Vous pouvez également désactiver les notifications par courrier électronique sur la page **Paramètres**. Pour plus d'informations, voir [Paramètres et comptes utilisateur](useraccount.html).
+Vous pouvez configurer des notifications par courrier électronique sur la page **Paramètres**. Ce paramètre est activé par défaut, ce qui signifie que vous recevez une notification par courrier électronique pour chaque nouvelle commande d'instance, lorsque l'instance est mise à disposition et prête pour utilisation. Vous pouvez également désactiver les notifications par courrier électronique sur la page **Paramètres**. Pour plus d'informations, voir [Paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html).
 
 ## Informations de statut détaillées
 
-Des informations de statut détaillées sont maintenant disponibles pour les instances Cloud Foundation. Lorsque vous cliquez sur le nom d'une instance, les informations relatives à son statut qui s'affichent désormais donnent plus de détails concernant la progression du déploiement. Si une erreur se produit, des messages s'affichent afin de vous aider à résoudre le problème. Pour plus d'informations, voir [Affichage d'instances Cloud Foundation](../sddc/sd_viewinginstances.html).
+Des informations de statut détaillées sont maintenant disponibles pour les instances Cloud Foundation. Lorsque vous cliquez sur le nom d'une instance, les informations relatives à son statut qui s'affichent désormais donnent plus de détails concernant la progression du déploiement. Si une erreur se produit, des messages s'affichent afin de vous aider à résoudre le problème. Pour plus d'informations, voir [Affichage d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html).
