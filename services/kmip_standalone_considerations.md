@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-05"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,12 +13,14 @@ lastupdated: "2019-02-05"
 {:important: .important}
 
 # KMIP for VMware on IBM Cloud overview
+{: #kmip_standalone_considerations}
 
 The KMIP for VMware on {{site.data.keyword.cloud}} service provides a 24x7 highly available service to manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}. This service offers runtime capability to allow customers to create, retrieve, activate, revoke, and destroy the encryption keys. It also provides management capability to maintain the associations between the client credentials and the encryption keys.
 
 The KMIP for VMware on {{site.data.keyword.cloud_notm}} service is available as a stand-alone service without being associated to a VMware instance. Each instance of the service can serve one or more Cloud Foundation instances, vCenter Server instances, or vSphere clusters.
 
 ## Technical specifications for KMIP for VMware on IBM Cloud
+{:#technical-specifications-for-kmip-for-vmware-on-ibm-cloud}
 
 The following specifications are included with the KMIP for VMware on {{site.data.keyword.cloud_notm}} service:
 
@@ -28,6 +30,7 @@ The following specifications are included with the KMIP for VMware on {{site.dat
 * Two KMIP service endpoints provided in each region for high availability
 
 ## Considerations when installing KMIP for VMware on IBM Cloud instances
+{: #kmip_standalone_considerations-install}
 
 Review the following considerations before you install a KMIP for VMware on {{site.data.keyword.cloud_notm}} instance:
 
@@ -49,10 +52,12 @@ Review the following considerations before you install a KMIP for VMware on {{si
 For more information, see [KMIP for VMware on IBM Cloud solution architecture](/docs/services/vmwaresolutions/archiref/kmip/overview.html).
 
 ## Considerations when deleting KMIP for VMware on IBM Cloud instances
+{: #considerations-when-deleting-kmip-for-vmware-on-ibm-cloud-instances}
 
 All data protected by the KMIP for VMware on IBM Cloud service, including encrypted backups, cannot be decrypted after you remove the service.
 
-### Related links
+## Related links
+{: #kmip_standalone_considerations-related}
 
 * [Ordering KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html)
 * [Adding, viewing, and deleting certificates for KMIP for VMware on IBM Cloud instances](/docs/services/vmwaresolutions/services/kmip_standalone_addingdeletingcert.html)

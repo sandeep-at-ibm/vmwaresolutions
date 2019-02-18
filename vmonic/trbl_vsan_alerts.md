@@ -4,18 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # Virtual SAN Health alerts and warnings
+{: #trbl_vsan_alerts}
 
 ## Problem
+{: #trbl_vsan_alerts-problem}
+
 On the VMware vSphere Web Client **Monitor** page, you might see alerts and warnings that relate to Virtual SAN Health issues.
 
 ## Resolution
-These warnings are non-issues and do not indicate functional problems. However, if you want to clear the warnings from the vSphere Web Client,
-use the following procedure.
+{: #trbl_vsan_alerts-resolution}
+
+These warnings are non-issues and do not indicate functional problems. However, if you want to clear the warnings from the vSphere Web Client, use the following procedure.
 
 1. Go to http://partnerweb.vmware.com/service/vsan/all.json and save the JSON file, with the name `all.json`, on your local system.
 2. Ensure that you completed the steps in [vCenter console timeout](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).

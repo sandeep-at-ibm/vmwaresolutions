@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,14 +13,17 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Managing Zerto on IBM Cloud
+{: #managingzertodr}
 
 After the Zerto on {{site.data.keyword.cloud}} service is deployed into your instance, you can configure or update Zerto Virtual Replication, and deploy more Virtual Replication Appliances to newly added ESXi servers.
 
 ## Using your own certificate for Zerto
+{: #managingzertodr-ssl-cert}
 
 As a best practice, use your own SSL certificate for Zerto Virtual Manager (ZVM). After you deployed Zerto on {{site.data.keyword.cloud_notm}}, replace the SSL certificate for ZVM with your own certificate. For more information, see [How to use a CER SSL Certificate to Replace the Self-Signed Certificate for the ZVM, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window}.
 
 ## Managing the configuration of Zerto replications
+{: #managingzertodr-manage}
 
 To manage the configuration of Zerto replications, log in to the Zerto Virtual Replication console by using the vCenter credentials with administrator permissions. For example, re-pairing Zerto instances or configuring virtual protection groups to replicate virtual machines.
 
@@ -32,14 +35,17 @@ The Management VMware NSX Edge Services Gateway (ESG) of Cloud Foundation instan
 {:note}
 
 ## Updating Zerto Virtual Replication
+{: #managingzertodr-update}
 
 To update Zerto Virtual Replication, log in to the Zerto Virtual Replication console.
 
 ## Deploying VRAs to newly added ESXi servers
+{: #managingzertodr-deploy}
 
 When you add or remove ESXi servers for the primary cluster of your instance, VRAs are automatically deployed or removed. VRAs aren't automatically deployed to ESXi servers in the secondary clusters of your instance. You can deploy VRAs yourself from the Zerto Virtual Replication console.
 
-### Related links
+## Related links
+{: #managingzertodr-related}
 
 * [Zerto on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/addingzertodr.html)
 * [Requesting managed services for Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_zerto_services.html)

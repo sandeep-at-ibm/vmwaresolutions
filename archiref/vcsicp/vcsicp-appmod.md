@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Application modernization overview
+{: #vcsicp-appmod}
 
 The following diagram shows the application modernization reference architecture that Acme Skateboards deploys. The architecture is described in depth in this series of documents.
 
@@ -40,6 +41,7 @@ The reference architecture has the following key components:
     - Traffic between heritage systems in the on-premises data center and cloud VMs.
 
 ## Key benefits to Acme Skateboards
+{: #vcsicp-appmod-benefits}
 
 vCenter Server provides the fundamental building blocks that include VMware vSphere, vCenter Server, NSX, and shared storage options that include vSAN, which is needed to design a VMware Software Defined Data Center (SDDC) flexible solution that best fits your workloads.
 
@@ -54,6 +56,7 @@ Customers moving toward cloud native application platforms such as {{site.data.k
 
 This reference architecture shows how VCS, {{site.data.keyword.icpfull_notm}}, and {{site.data.keyword.containerlong_notm}} move Acme Skateboards securely along the application modernization journey.
 
-### Related links
+## Related links
+{: #vcsicp-appmod-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

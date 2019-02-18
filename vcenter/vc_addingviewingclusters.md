@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-02-06"
 {:important: .important}
 
 # Adding, viewing, and deleting clusters for vCenter Server instances
+{: #adding-and-viewing-clusters-for-vcenter-server-instances}
 
 The ESXi servers that you configured when you ordered an instance are grouped as **cluster1** by default.
 
@@ -22,6 +23,7 @@ The delete cluster feature is available only to instances that are deployed in (
 {:note}
 
 ## Adding clusters to vCenter Server instances
+{: #vc_addingviewingclusters-adding}
 
 The number of clusters that can be added to an instance depends on the instance version:
 * For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment.
@@ -31,10 +33,12 @@ The number of clusters that can be added to an instance depends on the instance 
 For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
 
 ### System settings
+{: #vc_addingviewingclusters-adding-sys-settings}
 
 When you add a cluster for a vCenter Server instance, you must specify the following settings.
 
 #### Cluster name
+{: #vc_addingviewingclusters-adding-cluster-name}
 
 The cluster name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
@@ -43,16 +47,19 @@ The cluster name must meet the following requirements:
 * The cluster name must be unique within the vCenter Server instance.
 
 #### Data center location
+{: #vc_addingviewingclusters-adding-dc-location}
 
 The {{site.data.keyword.CloudDataCent}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/).
 
 If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} or {{site.data.keyword.cloud_notm}} infrastructure pod, three extra VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
 ### Bare Metal Server settings
+{: #vc_addingviewingclusters-bare-metal-settings}
 
 You can choose **Skylake**, **SAP-certified**, or **Broadwell**.
 
 #### Skylake
+{: #vc_addingviewingclusters-adding-skylake}
 
 For the **Skylake** setting, you have options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
@@ -65,6 +72,7 @@ Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 #### SAP-certified
+{: #vc_addingviewingclusters-adding-sap}
 
 When you select **SAP-certified**, you cannot alter the CPU or RAM settings.
 
@@ -78,6 +86,7 @@ Based on your requirements, select a Bare Metal Server configuration:
 * Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 4096 GB RAM
 
 #### Broadwell
+{: #vc_addingviewingclusters-adding-broadwell}
 
 For the **Broadwell** setting, you have a number of options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
@@ -92,6 +101,7 @@ Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Number of Bare Metal Servers
+{: #vc_addingviewingclusters-adding-bare-metal-number}
 
 Clusters require at least two {{site.data.keyword.baremetal_short}}.
 
@@ -102,10 +112,12 @@ For vCenter Server instances that were deployed in V2.0 or earlier, you can add 
 After deployment, you can create up to four more clusters. If you select the **Skylake** or **Broadwell** Bare Metal Server configuration with VMware vSAN storage, four servers are required for both the initial cluster and post-deployment clusters.
 
 ### Storage settings
+{: #vc_addingviewingclusters-adding-storage-settings}
 
 Storage settings are based on your selection of Bare Metal Server configuration and the storage type.
 
 #### vSAN storage
+{: #vc_addingviewingclusters-adding-vsan-storage}
 
 Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
@@ -121,6 +133,7 @@ Specify the following vSAN options:
 If your initial cluster was a vSAN cluster, any additional vSAN clusters use the same vSAN license and have the same configuration as the initial one. This is also true if any cluster in the instance has vSAN chosen to be deployed on it (initial or additional). The first time you're prompted for the vSAN license (BYOL or purchased) and the edition. The next time that you select vSAN for a new cluster, the license that is chosen initially is reused.
 
 #### NFS storage
+{: #vc_addingviewingclusters-adding-nfs-storage}
 
 When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
 
@@ -143,18 +156,21 @@ Table 3. NFS performance level options
   | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
 
 ### Local Disks
+{: #vc_addingviewingclusters-adding-local-disks}
 
 The local disks option is available for the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor Bare Metal configuration only. Specify the following options:
 * **Disk Count**: Select the number of disks that you want to add.
 * **Disk type**: Select an option for the disk type that you need.
 
 ### Licensing settings
+{: #vc_addingviewingclusters-adding-licensing-settings}
 
 Specify the licensing option for the VMware vSphere component in the cluster:
 * For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
 * For non-Business Partner users, you can use the IBM-provided VMware licenses for this component by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license key.
 
 ### Network interface settings
+{: #vc_addingviewingclusters-adding-network-interface-settings}
 
 Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and are not available if you select the private option:
 
@@ -164,10 +180,12 @@ Network interface card (NIC) enablement settings are based on your selection of 
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Order summary
+{: #vc_addingviewingclusters-adding-order-summary}
 
 Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane.
 
 ## Procedure to add clusters to vCenter Server instances
+{: #vc_addingviewingclusters-adding-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to add clusters to.
@@ -199,6 +217,7 @@ Based on your selected configuration for the cluster, the estimated cost is inst
    4. Click **Provision**.
 
 ### Results after you add clusters to vCenter Server instances
+{: #vc_addingviewingclusters-adding-results}
 
 1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history from the **Summary** page of the instance.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
@@ -207,6 +226,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
 {:important}
 
 ## Procedure to view clusters in vCenter Server instances
+{: #vc_addingviewingclusters-viewing-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click an instance to view the clusters in it.
@@ -232,42 +252,34 @@ You can't change the cluster name. Changing the cluster name might cause the add
         <dd class="dd">The cluster is deleted.</dd>
     </dl>
   * **Actions**: Click the **Delete** icon to delete the cluster.
-4. Click a cluster name to view the details of ESXi servers and storage:
+4. Click a cluster name to view the ESXi server and storage:
 
-  * ESXi servers details:
-     * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
+Table 4. ESXi server details
 
-       `host_prefix` is the host name prefix,
+| Item        | Description       |  
+|:------------- |:------------- |
+| Name | The name of the ESXi server is in the following format:<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> where:<br> `host_prefix` is the host name prefix<br> `n` is the sequence of the server<br> `subdomain_label` is the subdomain label<br> `root_domain` is the root domain name |
+| Version | The version of the ESXi server. |
+| Credentials | The user name and password to access the ESXi server. |
+| Private IP | The private IP address of the ESXi server. |
+| Status | The status of the ESXi server, which can be one of the following values:<br> **Added**: The ESXi server is added and is ready for use.<br> **Adding**: The ESXi server is being added.<br> **Deleting**: The ESXi server is being deleted. |
 
-       `n` is the sequence of the server,
+Table 5. Storage details
 
-       `subdomain_label` is the subdomain label, and
-
-       `root_domain` is the root domain name.
-
-     * **Version**: The version of the ESXi server.
-     * **Credentials**: The user name and password to access the ESXi server.
-     * **Private IP**: The private IP address of the ESXi server.
-     * **Status**: The status of the ESXi server, which can be one of the following values:
-        <dl class="dl">
-        <dt class="dt dlterm">Added</dt>
-        <dd class="dd">The ESXi server is added and is ready for use. </dd>
-        <dt class="dt dlterm">Adding</dt>
-        <dd class="dd">The ESXi server is being added. </dd>
-        <dt class="dt dlterm">Deleting</dt>
-        <dd class="dd">The ESXi server is being deleted.</dd>
-        </dl>
-  * Storage details:
-    * **Name**: The data store name.
-    * **Size**: The capacity of the storage.
-    * **IOPS/GB**: The performance level of the storage.
-    * **NFS Protocol**: The NFS version of the storage.
+| Item        | Description       |  
+|:------------- |:------------- |
+| Name | The data store name. |
+| Size | The capacity of the storage. |
+| IOPS/GB | The performance level of the storage. |
+| NFS Protocol | The NFS version of the storage. |
 
 ## Deleting clusters from vCenter Server instances
+{: #vc_addingviewingclusters-deleting}
 
 You might want to delete a cluster from an instance when it's no longer needed.
 
 ### Before you delete
+{: #vc_addingviewingclusters-deleting-prereq}
 
 * Use this procedure to delete clusters from instances that are deployed in V2.3 or later.
 * For clusters deployed in V2.2 or earlier instances, you must upgrade the instance to V2.3 if you want to delete the clusters that you added to the instance.
@@ -277,6 +289,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 * The default cluster can't be deleted.
 
 ### Procedure to delete clusters from vCenter Server instances
+{: #vc_addingviewingclusters-deleting-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to delete clusters from.
@@ -287,7 +300,8 @@ You might want to delete a cluster from an instance when it's no longer needed.
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.
 4. Confirm that you completed the migration of VMs to other clusters, if needed, and that you want to delete the cluster.
 
-### Related links
+## Related links
+{: #vc_addingviewingclusters-related}
 
 * [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
 * [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)

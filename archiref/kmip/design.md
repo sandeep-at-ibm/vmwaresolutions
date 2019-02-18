@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-05"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,14 +13,17 @@ lastupdated: "2019-02-05"
 {:important: .important}
 
 # KMIP for VMware design
+{: #kmip-design}
 
 KMIP for VMware on {{site.data.keyword.cloud}} provides a key management service compatible with VMware vSAN encryption and VMware vSphere encryption, by using [IBM Key Protect](/docs/services/key-protect/index.html) to provide root key and data key storage.
 
 ## Storage encryption options
+{: #kmip-design-storage-options}
 
 KMIP for VMware is compatible with both VMware vSAN encryption and vSphere encryption. Both of these solutions are implemented in the hypervisor layer but provide slightly different functions. Evaluate their functions according to your requirements.
 
 ### VMware vSAN encryption
+{: #kmip-design-vsan-encrypt}
 
 VMware vSAN encryption is only applicable to vSAN datastores. With this solution, VMware vCenter and your VMware ESXi hosts connect to a key management server such as KMIP for VMware to get encryption keys. These keys are used to protect individual disk drives used for your vSAN datastore, including both cache and capacity disks. vSAN encryption is implemented in a way that preserves the benefits of vSAN compression and deduplication.
 
@@ -33,6 +36,7 @@ Because vSAN encryption operates at the datastore level, its primary goal is to 
 * The vSAN health check might issue periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings.
 
 ### vSphere encryption
+{: #kmip-design-vsphere-encrypt}
 
 VMware vSphere encryption applies to all types of VMware storage, including vSAN storage and {{site.data.keyword.cloud_notm}} Endurance file and block storage.
 
@@ -43,6 +47,7 @@ vSphere encryption operates at the virtual machine disk level, and so it can pre
 Therefore vSphere encryption is not compatible with vSphere replication, cross-vCenter vMotion, VMware HCX, Zerto, or IBM Spectrum Protect Plus. However, when properly configured, Veeam Backup and Replication is compatible with vSphere encryption.
 
 ### More considerations
+{: #kmip-design-considerations}
 
 When either type of encryption is enabled in your vSphere cluster, VMware creates an extra key to encrypt your ESXi core dumps, since these dumps might contain sensitive data such as key management credentials, encryption keys, or decrypted data. You should familiarize yourself with [vSphere Virtual Machine Encryption and Core Dumps](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-63728E8B-810D-418B-B1AA-6A0A2F92AABE.html).
 
@@ -58,10 +63,12 @@ If you plan to rotate keys, review the following information about the levels at
   * If you are using vSAN encryption, you can perform a deep rekey by using the vSAN user interface.
 
 ## KMIP for VMware
+{: #kmip-design-kmip-for-vmware}
 
 VMware vSAN encryption and vSphere encryption are compatible with many key management servers. KMIP for VMware provides an IBM-managed key management service that uses IBM Key Protect to give you full control over your keys. Other {{site.data.keyword.cloud_notm}} services such as Cloud Object Storage also integrate with Key Protect, making it your central point of control for key management in the {{site.data.keyword.cloud_notm}}.
 
 ### Keys within keys
+{: #kmip-design-keys}
 
 Key management systems commonly use a technique that is known as *envelope encryption* to wrap or protect keys with other keys. These keys are called *root keys* or *key encrypting keys* (KEKs). To access a key, you need to decrypt or unwrap the key by using its corresponding root key. Destroying the root key is an effective way of invalidating all of the keys it has protected. These keys need not be stored close to the root key. Controlling access to the root key is important.
 
@@ -77,6 +84,7 @@ So we end up with the following chain of encryption:
 KMIP for VMware stores the wrapped form of the KEKs within IBM Key Protect. Although the KEKs are cryptographically secured by the CRK and are not required to be stored within an HSM, if you store them in IBM Key Protect, their presence is visible to you and you can delete them if you need to revoke individual keys.
 
 ### Authentication and authorization
+{: #kmip-design-authentication}
 
 Three components make up your storage encryption solution: your VMware cluster, your KMIP for VMware instance, and your Key Protect instance.
 
@@ -85,6 +93,7 @@ VMware vCenter and ESXi authenticate with your KMIP for VMware instance by using
 Your KMIP for VMware instance is authorized to your Key Protect instance by using an {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) service ID that has been granted access to your Key Protect instance. The service ID must have a minimum of platform Viewer access and service Manager access to your Key Protect instance. KMIP for VMware uses the customer root key (CRK) of your choice in the Key Protect instance, and stores all KEKs generated on behalf of VMware, in wrapped form, in the Key Protect instance.
 
 ### Topology
+{: #kmip-design-topology}
 
 Figure 1. Components of KMIP for VMware on {{site.data.keyword.cloud_notm}}
 ![Components of KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip-key-protect.svg "The solution enables VMware vSphere encryption and vSAN encryption by using root keys that are stored in IBM Key Protect.")
@@ -97,7 +106,8 @@ KMIP for VMware also connects to IBM Cloud Key Protect by using the IBM Cloud Pr
 
 To access KMIP for VMware over the private network, your IBM Cloud infrastructure account must be enabled for virtual routing and forwarding (VRF) and the IBM Cloud service endpoint routes must be added to the VRF routes of your account. For more information, see [enabling your account for service endpoints](/docs/services/service-endpoint/enable-servicepoint.html#cs_cli_install_steps).
 
-### Related links
+## Related links
+{: #kmip-design-related}
 
 * [Solution overview](/docs/services/vmwaresolutions/archiref/kmip/overview.html)
 * [Implementation and management](/docs/services/vmwaresolutions/archiref/kmip/implementation.html)

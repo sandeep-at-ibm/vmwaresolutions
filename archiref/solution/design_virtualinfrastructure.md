@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Virtual infrastructure design
+{: #design_virtualinfrastructure}
 
 The virtual infrastructure layer includes the VMware software components that virtualize the compute, storage, and network resources provided in the physical infrastructure layer: VMware vSphere ESXi, VMware NSX, and optionally VMware vSAN.
 
 ## VMware vSphere design
+{: #design_virtualinfrastructure-vsphere-design}
 
 The vSphere ESXi configuration consists of the following aspects:
 * Boot configuration
@@ -60,6 +62,7 @@ For more information about clusters, see [{{site.data.keyword.cloud_notm}} runni
 document](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf).
 
 ## VMware vSAN design
+{: #design_virtualinfrastructure-vsan-design}
 
 In this design, VMware vSAN storage is employed in Cloud Foundation instances and optionally in vCenter Server instances to provide shared storage for the vSphere hosts.
 
@@ -67,7 +70,7 @@ As shown in Figure 1, vSAN aggregates the local storage across multiple ESXi hos
 
 Figure 1. vSAN concept
 
-![vSAN concept](virtual_vSAN.svg "vSAN aggregates the local storage across multiple ESXi hosts within a vSphere cluster and manages the aggregated storage as a single VM datastore")
+![vSAN concept](virtual_vsan.svg "vSAN aggregates the local storage across multiple ESXi hosts within a vSphere cluster and manages the aggregated storage as a single VM datastore")
 
 vSAN employs the following components:
 * Two-disk group vSAN design; each disk group with two or more disks. One SSD of the smallest size in the group serves as the cache tier and the remaining SSDs serve as the capacity tier.
@@ -77,6 +80,7 @@ vSAN employs the following components:
 The available vSAN features depend on the license edition that you select when you order the instance. For more information, see [VMware vSAN edition comparison](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-vsan-edition-comparison).
 
 ### Virtual network setup for vSAN
+{: #design_virtualinfrastructure-net-setup}
 
 For this design, the vSAN traffic traverses between ESXi hosts on a dedicated private VLAN. The two network adapters attached to the private network switch are configured within vSphere as a vSphere Distributed Switch (vDS) with both network adapters as uplinks. A dedicated vSAN kernel port group that is configured for the vSAN VLAN resides within the vDS. Jumbo frames (MTU 9000) are enabled for the private vDS.
 
@@ -85,6 +89,7 @@ vSAN does not load balance traffic across uplinks. As a result, one adapter is a
 For more information about physical NIC connections, see Figure 2. Physical host NIC connections in [Physical infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html).
 
 ### Storage policy design
+{: #design_virtualinfrastructure-storage-policy}
 
 When vSAN is enabled and configured, storage policies are configured to define the VM storage characteristics. Storage characteristics specify different levels of service for different VMs.
 
@@ -99,6 +104,7 @@ An instance uses the default policy unless otherwise specified from the vSphere 
 Storage policies must be reapplied after addition of new ESXi hosts or patching of the ESXi hosts.
 
 ### vSAN settings
+{: #design_virtualinfrastructure-vsan-sett}
 
 vSAN settings are set based on best practices for deploying VMware solutions within {{site.data.keyword.cloud_notm}}. The vSAN settings include SIOC settings, explicit failover settings port group, and disk cache settings.
 * SSD cache policy settings: No **Read Ahead**, **Write Through**, **Direct** (NRWTD)
@@ -110,6 +116,7 @@ vSAN settings are set based on best practices for deploying VMware solutions wit
 * vSAN kernel ports: **Explicit Failover**
 
 ## VMware NSX design
+{: #design_virtualinfrastructure-nsx-design}
 
 Network virtualization provides a network overlay that exists within the virtual layer. Network virtualization provides the architecture with features such as rapid provisioning, deployment, reconfiguration, and destruction of on-demand virtual networks. This design uses the vDS and VMware NSX for vSphere to implement virtual networking.
 
@@ -130,7 +137,7 @@ The following figure shows the placement of the NSX Manager in relation to other
 
 Figure 2. NSX Manager network overview
 
-![NSX Manager network overview](virtual_NSX.svg "NSX Manager in relation to the other components in the architecture")
+![NSX Manager network overview](virtual_nsx.svg "NSX Manager in relation to the other components in the architecture")
 
 After initial deployment, the {{site.data.keyword.cloud_notm}} automation deploys three NSX controllers within the initial cluster. Each of the controllers is assigned a VLAN-backed IP address from the **Private A** portable subnet that is designated for management components. Additionally, the design creates VM-VM anti-affinity rules to separate the controllers among the hosts in the cluster. The initial cluster must contain a minimum of three nodes to ensure high availability for the controllers.
 
@@ -143,6 +150,7 @@ After that, NSX Edge Services Gateway pairs are deployed. In all cases, one gate
 Cloud administrators can configure any required NSX components, such as Distributed Logical Router (DLR), logical switches, and firewalls. The available NSX features depend on the NSX license edition that you choose when you order the instance. For more information, see [VMware NSX edition comparison](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-nsx-edition-comparison). For vCenter Server instances, the {{site.data.keyword.cloud_notm}} automation adds the vCenter Server Appliance and Platform services Controller (PSC) to the NSX Manager distributed firewall exclusion list.
 
 ### Distributed switch design
+{: #design_virtualinfrastructure-distr-switch}
 
 The design uses a minimum number of vDS Switches. The hosts in the cluster are connected to the public and private networks. The hosts are configured with two distributed virtual switches. The use of two switches follows the practice of {{site.data.keyword.cloud_notm}} network that separates the public and private networks. The following diagram shows the vDS design.
 
@@ -213,6 +221,7 @@ Table 7. Converged cluster VM kernel adapters
 | SDDC-Dswitch-Private | NAS | SDDC-DPortGroup-NFS | \-  | 9,000 |
 
 ### NSX configuration
+{: #design_virtualinfrastructure-nsx-config}
 
 This design specifies the configuration of NSX components but does not apply any network overlay component configuration. You can design the network overlay based on your needs. The following aspects are preconfigured:
 
@@ -228,7 +237,8 @@ The following aspects are not configured:
 * VXLANs
 * Linked NSX Management to other VMware instances
 
-### Related links
+## Related links
+{: #design_virtualinfrastructure-related}
 
 * [{{site.data.keyword.cloud_notm}} running VMware clusters solution architecture](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf)
 * [NSX Edge on {{site.data.keyword.cloud_notm}} solution architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)

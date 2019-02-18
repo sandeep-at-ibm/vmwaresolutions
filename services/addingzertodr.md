@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Zerto on IBM Cloud overview
+{: #addingzertodr}
 
 The Zerto on {{site.data.keyword.cloud}} service integrates replication and disaster recovery capabilities into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud_notm}}.
 
@@ -20,6 +21,7 @@ This service is available only to instances that are deployed in V1.2 or later. 
 {:note}
 
 ## Technical specifications for Zerto on IBM Cloud
+{: #technical-considerations-for-zerto-on-ibm-cloud}
 
 The following components are ordered and included in the Zerto on {{site.data.keyword.cloud_notm}} service.
 
@@ -27,6 +29,7 @@ Zerto Virtual Replication Appliance (VRA) components are deployed only into the 
 {:note}
 
 ### VSIs
+{: #addingzertodr-specs-vsi}
 
 * One Virtual Service Instance (VSI) - Zerto Virtual Manager
 * 2 x 2.0 GHz cores
@@ -34,19 +37,23 @@ Zerto Virtual Replication Appliance (VRA) components are deployed only into the 
 * Windows Server 2016 Standard Edition (64-bit)
 
 ### Storage
+{: #addingzertodr-specs-storage}
 
 100 GB (SAN) disk
 
 ### Networking
+{: #addingzertodr-specs-network}
 
 * One primary private IP address
 * 1 Gbps private network uplink
 
 ### Licenses and fees
+{: #addingzertodr-specs-licenses}
 
 Zerto Replication V6.0 update 3 license
 
-### Related links
+## Related links
+{: #addingzertodr-related}
 
 * [About {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/vmonic/prod_overview.html)
 * [Ordering Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/zerto_ordering.html)

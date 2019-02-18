@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Adding, viewing, and deleting clusters for VMware Federal instances
+{: #fed_addviewdeleteclusters}
 
 The ESXi servers that you configured when you ordered an instance are grouped as **cluster1** by default.
 
@@ -21,6 +22,7 @@ You can add clusters to your VMware Federal instances to expand the compute and 
 **Availability:** The adding and deleting clusters feature is available only to instances that were deployed in (or upgraded to) V2.3 and later releases.
 
 ## Adding clusters to VMware Federal instances
+{: #fed_addviewdeleteclusters-adding}
 
 The number of clusters that can be added to an instance depend on the instance version:
 * For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment.
@@ -29,10 +31,12 @@ The number of clusters that can be added to an instance depend on the instance v
 For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
 
 ### System settings
+{: #fed_addviewdeleteclusters-adding-sys-settings}
 
 When you add a cluster for a VMware Federal instance, you must specify the following settings.
 
 #### Cluster name
+{: #fed_addviewdeleteclusters-adding-cluster-name}
 
 The cluster name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
@@ -41,12 +45,15 @@ The cluster name must meet the following requirements:
 * The cluster name must be unique within the VMware Federal instance.
 
 #### Data center location
+{: #fed_addviewdeleteclusters-adding-dc-location}
 
 The data center of the cluster is set to the data center of the VMware Federal instance by default.
 
 ### Bare Metal Server settings
+{: #fed_addviewdeleteclusters-adding-bare-metal-settings}
 
 #### Skylake
+{: #fed_addviewdeleteclusters-adding-skylake}
 
 Specify the CPU model and RAM for the Bare Metal Server. Available options might differ depending on the version that your instance was initially deployed in.
 
@@ -59,6 +66,7 @@ Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 #### Broadwell
+{: #fed_addviewdeleteclusters-adding-broadwell}
 
 Specify the CPU model and RAM for the Bare Metal Server. Available options might differ depending on the version that your instance was initially deployed in.
 
@@ -71,6 +79,7 @@ Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 
 #### Number of Bare Metal Servers
+{: #fed_addviewdeleteclusters-adding-bare-metal-number}
 
 A minimum of 2 {{site.data.keyword.baremetal_short}} is required for a cluster.
 
@@ -79,10 +88,12 @@ For VMware Federal instances that are deployed in V2.3 or later, you can add up 
 After deployment, you can create up to four more clusters. For vSAN storage settings, four servers are required for both the initial cluster and post-deployment clusters.
 
 ### Storage settings
+{: #fed_addviewdeleteclusters-adding-storage-settings}
 
 Storage settings are based on your selection of Bare Metal Server configuration and the storage type.
 
 #### vSAN storage
+{: #fed_addviewdeleteclusters-adding-vsan-storage}
 
 Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
@@ -98,6 +109,7 @@ Specify the following vSAN options:
 If your initial cluster was added as a vSAN cluster, any additional vSAN clusters use the same vSAN license and the same configuration as the initial vSAN cluster. This is also true if any cluster in the instance has vSAN chosen to be deployed on it (initial or additional). The first time that you add a cluster, you are prompted for the vSAN license and the edition. The next time that you select vSAN for a new cluster, whatever you chose initially is reused.
 
 #### NFS storage
+{: #fed_addviewdeleteclusters-adding-nfs-storage}
 
 When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
 
@@ -119,6 +131,7 @@ Table 3. NFS performance level options
   | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share.|
 
 ### Licensing settings
+{: #fed_addviewdeleteclusters-adding-licensing-settings}
 
 {{site.data.keyword.IBM}}-provided licenses for the following VMware components:
   * vSphere Enterprise Plus 6.5u1
@@ -127,10 +140,12 @@ Table 3. NFS performance level options
   * (For vSAN clusters) vSAN 6.6 (Advanced or Enterprise edition)
 
 ### Order summary
+{: #fed_addviewdeleteclusters-adding-order-summary}
 
 Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane.
 
 ## Procedure to add clusters to VMware Federal instances
+{: #fed_addviewdeleteclusters-adding-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instance** table, click the instance that you want to add clusters to.
@@ -152,6 +167,7 @@ Based on your selected configuration for the cluster, the estimated cost is inst
    4. Click **Provision**.
 
 ## Results after adding clusters to VMware Federal instances
+{: #fed_addviewdeleteclusters-adding-results}
 
 1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history from the instance summary page.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
@@ -160,6 +176,7 @@ You cannot change the cluster name. Changing the cluster name might cause the ad
 {:important}
 
 ## Procedure to view clusters in VMware Federal instances
+{: #fed_addviewdeleteclusters-viewing-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click an instance to view the clusters in it.
@@ -188,6 +205,7 @@ You cannot change the cluster name. Changing the cluster name might cause the ad
 4. Click a cluster name to view the ESXi server, storage, and license details.
 
 ### ESXi servers
+{: #fed_addviewdeleteclusters-viewing-esxi-servers}
 
    * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
 
@@ -210,6 +228,7 @@ You cannot change the cluster name. Changing the cluster name might cause the ad
         </dl>
 
 ### Storage
+{: #fed_addviewdeleteclusters-viewing-storage}
 
    * **Name**: The data store name.
    * **Size**: The capacity of the storage.
@@ -226,6 +245,7 @@ You cannot change the cluster name. Changing the cluster name might cause the ad
         </dl>
 
 ### Licenses
+{: #fed_addviewdeleteclusters-viewing-licenses}
 
    * **License**: The license type.
    * **Order Type**: The license was IBM-provided or user-provided.
@@ -235,6 +255,7 @@ You cannot change the cluster name. Changing the cluster name might cause the ad
    * **Free Capacity (CPU)**: The amount of free CPU capacity for the license.
 
 ## Deleting clusters from VMware Federal instances
+{: #fed_addviewdeleteclusters-deleting}
 
 You might want to delete a cluster from an instance when it is no longer needed.
 
@@ -242,6 +263,7 @@ Use this procedure to remove clusters from instances that are deployed in (or up
 {:note}
 
 ### Before you delete
+{: #fed_addviewdeleteclusters-deleting-prereq}
 
 * Use this procedure to delete clusters from instances that are deployed in V2.3 or later releases.
 * For clusters deployed in V2.2 or earlier instances, you must upgrade the instance to V2.3 to be able to delete the clusters that you added to the instance.
@@ -251,6 +273,7 @@ Use this procedure to remove clusters from instances that are deployed in (or up
 * The default cluster cannot be deleted.
 
 ## Procedure to delete clusters from VMware Federal instances
+{: #fed_addviewdeleteclusters-deleting-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to delete clusters from.
@@ -260,7 +283,8 @@ Use this procedure to remove clusters from instances that are deployed in (or up
 
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.
 
-### Related links
+## Related links
+{: #fed_addviewdeleteclusters-related}
 
 * [Viewing VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
 * [Expanding and contracting capacity for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)

@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Requirements and planning for Cloud Foundation instances
+{: #sd_planning}
 
 Review the following requirements before you order your VMware Cloud Foundation instances. Plan your instance based on the {{site.data.keyword.CloudDataCent}} location, your workload capacity requirements, and service requirements.
 
 ## IBM Cloud account requirements
+{: #sd_planning-account-req}
 
 The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## IBM Cloud Data Center availability
+{: #sd_planning-dc-availability}
 
 The Cloud Foundation deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following {{site.data.keyword.CloudDataCents_notm}} are available for Cloud Foundation deployment:
 
@@ -66,18 +69,22 @@ Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when yo
 | Limited Inventory             | The {{site.data.keyword.CloudDataCent_notm}} has limited availability and the order might not be completed. |
 
 ## Backup of management components
+{: #sd_planning-backup-mgmt-components}
 
 You are responsible for maintaining and ensuring the availability of all instance components. It is recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
 ## Services for Cloud Foundation instances
+{: #sd_planning-addon-services}
 
 You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html).
 
 ## Capacity considerations
+{: #sd_planning-capacity-considerations}
 
 For more information about capacity, see [Scaling capacity](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
 
-### Related links
+## Related links
+{: #sd_planning-related}
 
 * [Cloud Foundation overview](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
 * [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)

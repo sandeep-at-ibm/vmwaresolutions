@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,12 +13,15 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Upgrading your instances from pre-V1.4 releases
+{: #movinginstances}
 
 ## Problem
+{: #movinginstances-problem}
 
 The instance network topology in V1.4 and later releases is different from releases earlier than V1.4. Because of this change, the instances that were deployed in pre-V1.4 releases cannot be used in their state in the current release.
 
 ## Resolution
+{: #movinginstances-resolution}
 
 In V1.4 and later releases, several network topology enhancements are available for your instances:
 * (Applies to all instances): Optimized networking configuration. Because the {{site.data.keyword.cloud}} account that you are using must be either a VRF (Virtual Routing and Forwarding) account or must have VLAN spanning enabled if it is a classic (non-VRF) account, a second portable IP address is not needed. Only the primary {{site.data.keyword.cloud_notm}} infrastructure portable IP address is required for deployment.

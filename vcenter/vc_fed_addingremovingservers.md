@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Expanding and contracting capacity for VMware Federal instances
+{: #vc_fed_addingremovingservers}
 
 You can expand or contract the capacity of your VMware Federal instance according to your business needs, by adding or removing ESXi servers.
 
@@ -22,14 +23,17 @@ This feature is only available to VMware Federal instances that have not been se
 {:note}
 
 ## Adding ESXi servers to VMware Federal instances
+{: #vc_fed_addingremovingservers-adding}
 
 ### Before you add ESXi servers
+{: #vc_fed_addingremovingservers-adding-prereq}
 
 * Do not add ESXi servers from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_full}} console.
 * A VMware Federal instance with NFS storage must have at least 2 ESXi servers. You can expand the default cluster to have up to 51 ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers.
 * A VMware Federal instance with vSAN storage must have at least 4 ESXi servers.
 
 ## Procedure to add ESXi servers
+{: #vc_fed_addingremovingservers-adding-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance for which you want to expand capacity.
@@ -39,20 +43,24 @@ This feature is only available to VMware Federal instances that have not been se
 6. In the **Add Server** window, select the number of servers that you want to add, click the price link to review the estimated cost, and then click **Add**.
 
 ### Results after adding ESXi servers
+{: #vc_fed_addingremovingservers-adding-results}
 
 1. You might experience a slight delay on the console while the instance status changes from **Ready to Use** to **Modifying**. Allow the operation to fully complete before making additional changes to the instance.
 2. You are notified by email that your request to add ESXi servers is being processed. On the console, the status of the cluster associated with the ESXi servers is changed to **Modifying**.
 3. If you do not see the new ESXi servers added to the list in the cluster, check the email or console notifications to find more details about the failure.
 
 ## Removing ESXi servers from VMware Federal instances
+{: #vc_fed_addingremovingservers-removing}
 
 ### Before you remove ESXi servers
+{: #vc_fed_addingremovingservers-removing-prereq}
 
 * Do not remove ESXi servers from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
 * A VMware Federal instance with NFS storage must have at least 2 ESXi servers and a VMware Federal instance with vSAN storage must have at least 4 ESXi servers.
 * When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the virtual machines (VMs) running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers using the {{site.data.keyword.vmwaresolutions_short}} console.
 
 ## Procedure to remove ESXi servers
+{: #vc_fed_addingremovingservers-removing-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance for which you want to contract capacity.
@@ -61,6 +69,7 @@ This feature is only available to VMware Federal instances that have not been se
 5. In the **ESXi Servers** table, select the servers that you want to remove and click **Remove**.
 
 ### Results after removing ESXi servers
+{: #vc_fed_addingremovingservers-removing-results}
 
 1. You might experience a slight delay on the console while the instance status changes from **Ready to Use** to **Modifying**. Allow the operation to fully complete before making additional changes to the instance.
 2. You are notified by email that your request to remove ESXi servers is being processed. On the console, the status of the cluster associated with the ESXi servers is changed to **Modifying**.
@@ -69,7 +78,8 @@ This feature is only available to VMware Federal instances that have not been se
    You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the removed ESXi servers.
    {:note}
 
-### Related links
+## Related links
+{: #vc_fed_addingremovingservers-related}
 
 * [Requirements and planning for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
 * [Adding, viewing, and deleting clusters for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)

@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # Use cases
+{: #vcsicp-usecases}
 
 ## Workload migration to IBM Cloud
+{: #vcsicp-usecases-wkld-mig}
 
 Acme Skateboards wants to seamlessly extend their on-premises VMware SDDC into a VMware vCenter Server on {{site.data.keyword.cloud}} instance. They need to keep their business up and running and keep their downtime to a minimum. Reconfiguring their applications to run in the cloud isn't an optimal solution.
 
@@ -36,6 +38,7 @@ VMware Hybrid Cloud Extension Services creates a loosely coupled interconnectivi
 Using this solution Acme Skateboards successfully migrated their on-premises VMware workloads to the {{site.data.keyword.cloud_notm}} meeting their requirements of little to no downtime and no application reconfiguration.
 
 ## Hybrid architecture deployment
+{: #vcsicp-usecases-hybrid-archi-deployment}
 
 Acme Skateboards wants to deploy a hybrid architecture on {{site.data.keyword.cloud_notm}} consisting of vCenter Server and {{site.data.keyword.icpfull_notm}}, for their journey to application modernization. Their requirements are to run their databases on virtual machines, the applications and web services in containers, and use a common set of tools for network and security management.
 
@@ -55,6 +58,7 @@ Figure 3. vCenter Server with {{site.data.keyword.icpfull_notm}}
 
 ![vCenter Server with {{site.data.keyword.icpfull_notm}}](vcsicp-virtual-icp-deployment-vcs.svg)
 
-### Related links
+## Related links
+{: #vcsicp-usecases-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

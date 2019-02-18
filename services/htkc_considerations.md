@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # HyTrust KeyControl on IBM Cloud overview
+{: #hytrust-keycontrol-on-ibm-cloud-overview}
 
 The HyTrust KeyControl on {{site.data.keyword.cloud}} service simplifies the management of encrypted workloads. This service automates and simplifies the lifecycle of encryption keys, includes key storage, key distribution, key rotation, and key revocation. Using FIPS 140-2 compliant encryption, enterprises can easily manage encryption keys at scale.
 
@@ -20,10 +21,12 @@ This service is available only to instances that are running vSphere 6.5 and tha
 {:note}
 
 ## Technical specifications for HyTrust KeyControl on IBM Cloud
+{: #htkc_considerations-specs}
 
 The following components are ordered and included in the HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service:
 
 ### HyTrust KeyControl appliance
+{: #htkc_considerations-appliance}
 
 * CPU: 2 vCPU
 * RAM: 8 GB
@@ -31,20 +34,24 @@ The following components are ordered and included in the HyTrust KeyControl on {
 * Network: Placed on VLAN-backed private portable network specified for management
 
 ### High availability
+{: #htkc_considerations-ha}
 
 By default, two KeyControl appliances are deployed in an active-active clustered configuration.
 
 Optionally, you can specify to deploy two KeyControl appliances in a stand-alone unclustered configuration.
 
 ### Licenses and fees
+{: #htkc_considerations-licenses}
 
 A HyTrust KeyControl license is ordered for each instance installation.
 
 ## Considerations when you remove HyTrust KeyControl on IBM Cloud
+{: #htkc_considerations-remove}
 
 Before you remove the HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service, ensure that you decouple all clients from using KeyContol. After you remove the service, the keys might be deleted and you might be locked out of your VMs.
 
-### Related links
+## Related links
+{: #htkc_considerations-related}
 
 * [Ordering HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_ordering.html)
 * [Managing HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtkc.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -13,16 +13,19 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Attached storage infrastructure management
+{: #storage-infra-mgmt}
 
 Infrastructure management refers to the VMware components that are managing the vSphere ESXi infrastructure.
 
 For more information about the components, see Figure 2. NSX Manager network overview in [Virtual infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html).
 
 ## Virtual networking design
+{: #storage-infra-mgmt-visual-net-design}
 
 The network virtualization that is used in this design uses the existing vSphere Distributed Switch (vDS) associated with the private network and specified in the [{{site.data.keyword.vmwaresolutions_full}} architecture](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## vSphere Distributed Switch
+{: #storage-infra-mgmt-vsphere-ds}
 
 Another VLAN is created within the vCenter Server solution and used to attach the NFS mount point to the ESXi hosts in the existing cluster. Because the vCenter Server solution has a vSphere Distributed Switch associated with the private network, another port group is created and tagged with the additional VLAN number since this additional VLAN isn't native.
 
@@ -47,9 +50,11 @@ Figure 1. Private vDS Port groups and Uplinks
 ![Private vDS Port groups and Uplinks](private_vds_portgroups_and_uplinks.svg "Private vDS port groups and uplinks")
 
 ### vSphere host static routing
+{: #storage-infra-mgmt-vsphere-routing}
 
 Although the vDS is configured with a new port group and a VMkernel port is assigned to the port group, the solution creates a static route on each vSphere ESXi host in the deployment so that all NFS traffic traverses the VLAN and subnet for NFS. The static route is created in `/etc/rc.local.d/local.sh` so that it persists across host restarts.
 
-### Related links
+## Related links
+{: #storage-infra-mgmt-related}
 
 * [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

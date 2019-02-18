@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Enrich with AI, analytics, and other public cloud services
+{: #vcscontent-aianalytics}
 
 Enriching Stock Trader is not a one-time step. For Todd and Jane, it is an iterative process. In the following figure, you see that Jane added the Watson Tone Analyzer service and a loyalty level rule by using ODM decision center. The following items highlight how Stock Trader was enriched.
 
@@ -16,6 +17,7 @@ Figure 1. Further enrichment of Stock Trader
 ![Stock Trader enrichment iteration results](vcscontent-enriched.svg)
 
 ## AI Watson Tone Analyzer
+{: #vcscontent-aianalytics-ai-watson}
 
 The following sample is a simple way to enrich an application, but is deceptively powerful. Jane browses the [{{site.data.keyword.cloud}} catalog](https://console.cloud.ibm.com/catalog/) for [AI](https://console.cloud.ibm.com/catalog/?category=ai) and [Analytics](https://console.cloud.ibm.com/catalog/?category=analytics) services, and finds the catalog rich with content.
 
@@ -27,6 +29,7 @@ Thanks to refactoring, Jane experimented with various user interface frameworks 
 In the future, Jane can provide predictive stock recommendations based on the variety of analytics services available to run in the private cloud instance, {{site.data.keyword.cloud_notm}} Private.
 
 ## Loyalty Level business rule
+{: #vcscontent-aianalytics-loyalty-rule}
 
 Originally, Jane had logic in her code to determine what monetary amount
 that is likely to result in a bump in loyalty. However, after repeated requests to
@@ -40,6 +43,7 @@ Jane talked to Todd, who added the
 Now, Margaret, the marketing director, can log in and change the loyalty level ranges whenever a campaign is going on without changing any code.
 
 ## New Stock Service
+{: #vcscontent-aianalytics-new-stock-service}
 
 You might notice that the stock service was changed.
 This can happen when a public service changes owner or its API
@@ -57,6 +61,7 @@ API changes were masked behind the scenes.
 Further, with the monitoring and metering in API Connect, Jane is able to
 track who is using her simplified API.
 
-### Related links
+## Related links
+{: #vcscontent-aianalytics-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

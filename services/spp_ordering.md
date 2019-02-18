@@ -4,45 +4,53 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Ordering IBM Spectrum Protect Plus on IBM Cloud
+{: #spp_ordering}
 
 You can order the {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service while ordering a new instance with the service included or by adding the service to your existing instance.
 
 ## Ordering IBM Spectrum Protect Plus on IBM Cloud for a new instance
+{: #spp_ordering-new}
 
 You can order a new instance with IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} by using one of the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, select **IBM Spectrum Protect Plus on IBM Cloud** in the **Services** section.
 * From the {{site.data.keyword.cloud_notm}} catalog, select **IBM Spectrum Protect Plus on IBM Cloud**, specify the service settings, and select **Add to New Instance**.
 
 ## Ordering IBM Spectrum Protect Plus on IBM Cloud for an existing instance
+{: #spp_ordering-existing}
 
 You can add the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service into an existing instance by using one the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
 * From the {{site.data.keyword.cloud_notm}} catalog, select **IBM Spectrum Protect Plus on IBM Cloud**, specify the service settings and select **Add to Existing Instance**.
 
 ## IBM Spectrum Protect Plus on IBM Cloud service configuration
+{: #spp_ordering-config}
 
 When you order the service, provide the following settings.
 
 ### Number of Storage Volumes
+{: #spp_ordering-config-number-vol}
 
 The number of volumes that meet your storage needs.
 
 ### Storage Size per Volume
+{: #spp_ordering-config-size}
 
 The storage capacity per volume.
 
 ### Storage Performance
+{: #spp_ordering-config-performance}
 
 The IOPS (Input/output Operations Per Second) per GB based on your workload requirements.
 * If you want to order licenses for IBM Spectrum Protect Plus, specify the **Number of VMs to License** on the **Order Licenses** tab.
 * If you want to Bring Your Own License (BYOL), click the **IBM Spectrum Protect Plus licenses** tab, and then click **Add License Files** to upload the IBM Spectrum Protect Plus license files that you own.
 
 ## Deployment process for IBM Spectrum Protect Plus on IBM Cloud
+{: #spp_ordering-deploy}
 
 The deployment of IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} is automated. Whether you order an instance with this service included or you deploy the service later into your instance, the following steps are completed by the {{site.data.keyword.vmwaresolutions_short}} automation process:
 
@@ -54,7 +62,8 @@ The deployment of IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 
 6. The NFS storage that was ordered for this service is attached to the IBM Spectrum Protect Plus VM and the backup repository is configured.
 7. The host name and IP address of the IBM Spectrum Protect Plus VM are registered with the DNS server of the instance.
 
-### Related links
+## Related links
+{: #spp_ordering-related}
 
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/spp_considerations.html)
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service Planning](http://www.ibm.com/support/docview.wss?uid=swg22012650)

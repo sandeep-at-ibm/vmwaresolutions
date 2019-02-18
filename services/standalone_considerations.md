@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Considerations for on-premises VMware HCX on IBM Cloud instances
+{: #standalone_considerations}
 
 Review the following considerations before you install or delete the HCX on {{site.data.keyword.cloud}} instances that you ordered for on-premises use.
 
@@ -20,14 +21,17 @@ A vCenter Server instance with HCX on {{site.data.keyword.cloud_notm}} is limite
 {:note}
 
 ## Considerations when installing on-premises HCX on IBM Cloud instances
+{: #standalone_considerations-install}
 
 The HCX on {{site.data.keyword.cloud_notm}} components must be installed both on {{site.data.keyword.cloud_notm}} and in your on-premises vSphere environment. It is recommended that you install the HCX on {{site.data.keyword.cloud_notm}} service into your vCenter Server with Hybridity Bundle instance on {{site.data.keyword.cloud_notm}} before you install the on-premises HCX on {{site.data.keyword.cloud_notm}} instance. For more information, see [Considerations for HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_considerations.html).
 
 ### Requirements on IP addresses
+{: #standalone_considerations-IP}
 
 For full HCX functionality, you need at least five private IP addresses and you must allow them to access the Internet.
 
 ### Deployment process for on-premises HCX on IBM Cloud instances
+{: #standalone_considerations-deploy}
 
 You must complete the following tasks for a successful installation of the on-premises HCX on {{site.data.keyword.cloud_notm}} instance:
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, order the on-premises HCX on {{site.data.keyword.cloud_notm}} instance. For more information, see [Ordering on-premises VMware HCX on IBM Cloud instances](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html).
@@ -51,6 +55,7 @@ You now completed the basic setup of the on-premises HCX Manager. You can procee
 For more information, see [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx).
 
 ## Considerations when deleting on-premises HCX on IBM Cloud instances
+{: #considerations-when-deleting-on-premises-hcx-instances}
 
 Review the following considerations before you delete an HCX on {{site.data.keyword.cloud_notm}} instance that was ordered for on-premises use:
 1. In the VMware vSphere Web Client, go to the HCX user interface, and then check the following items:
@@ -65,7 +70,8 @@ Review the following considerations before you delete an HCX on {{site.data.keyw
    For more information, see [Deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html).
 3. In the VMware vSphere Web Client, delete the on-premises HCX Manager.
 
-### Related links
+## Related links
+{: #standalone_considerations-related}
 
 * [Viewing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
 * [Glossary of HCX terms](/docs/services/vmwaresolutions/services/hcx_glossary.html)

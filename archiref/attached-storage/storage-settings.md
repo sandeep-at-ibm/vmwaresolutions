@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Configuration and settings for attached storage
+{: #storage-settings}
 
 This design supports the attachment of shared storage via NFS v3 only. NFS v4 and v4.1 aren't supported.
 
@@ -22,6 +23,7 @@ The attached storage for this design is limited to the {{site.data.keyword.cloud
 The architecture specifies that NFS v3 datastores are attached by using the DNS name from {{site.data.keyword.cloud_notm}} storage to connect to the share. The NFS share is attached to all hosts in the vCenter Server cluster and placed into a datastore cluster with storage DRS enabled.
 
 ## vSphere Storage Distributed Resource Scheduler (Storage DRS)
+{: #storage-settings-vsphere-storage-drs}
 
 Use Storage DRS to manage the aggregated resources of a datastore cluster. When Storage DRS is enabled, it provides recommendations for virtual machine (VM) disk placement and migration to balance space and I/O resources across the datastores in the datastore cluster.
 
@@ -33,6 +35,7 @@ The following features are available when storage DRS is turned on:
 In this design, Storage DRS is enabled with the automation level set to **Fully Automated**. As a result, files are migrated automatically to optimize resource usage on the data cluster. Since the cluster is fully automated, all other Storage DRS options are set to **Use cluster settings**.
 
 ## Storage DRS runtime settings for NFS v3
+{: #storage-settings-drs-nfs3}
 
 The aggressiveness of Storage DRS is determined by specifying thresholds for space that is used and I/O latency. Storage DRS collects resource usage information for the datastores in a datastore cluster. vCenter Server uses this information to generate recommendations for placement of virtual disks on datastores.
 
@@ -58,6 +61,7 @@ Table 1. Storage DRS runtime settings
 For more information about configuring these settings in the vSphere Web Client, see [Set Storage DRS Runtime Rules in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-AD2D13CE-539B-48C3-BBC9-E55A834874F0.html).
 
 ## Storage I/O Control for NFS v3
+{: #storage-settings-io-control-nfs-v3}
 
 When SIOC (Storage I/O Control) is enabled in the environment, it changes the device queue length for the single VM. The change to the device queue length reduces the storage array queue for all VMs to an equal share and throttle of the storage queue. SIOC engages only if resources are constrained and the storage I/O latency is higher than a defined threshold.
 
@@ -68,10 +72,12 @@ You can limit individual virtual disks for individual VMs or grant them differen
 Virtual disks shares set to **High** (2,000 shares) receive twice as much I/O as a disk set to **Normal** (1,000 shares) and four times as much as one set to **Low** (500 shares). **Normal** is the default value for all the VMs, so you need to adjust the **Normal** settings for the VMs that require it.
 
 ## Additional storage for NFS v3
+{: #storage-settings-additional-storage-nfs-v3}
 
 When the need arises to add more storage to the environment due to insufficient space or high latency, you can order another NFS share from the console. After the share is ordered, attach the export to the vSphere ESXi hosts in the cluster and place it into the storage cluster. Placing the new NFS share in the storage cluster effectively and seamlessly scales out the storage that is associated with the environment without burdening you with storage-level migrations.
 
 ## Advanced configuration parameters
+{: #storage-settings-adv-config-param}
 
 This design adds advanced configuration parameters that are recommended by {{site.data.keyword.cloud_notm}}. As a result, the following parameters are set on each vSphere ESXi host that is attached to the {{site.data.keyword.cloud_notm}} NFS share.
 
@@ -87,6 +93,7 @@ Table 2. NFS advanced configuration parameters
 | NFS.HeartbeatTimeout | 5 |
 | NFS.MaxQueueDepth | 64 |
 
-### Related links
+## Related links
+{: #storage-settings-related}
 
 * [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

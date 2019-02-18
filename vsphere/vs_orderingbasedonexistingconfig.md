@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Ordering vSphere clusters based on existing configurations
+{: #vs_orderingbasedonexistingconfig}
 
 You can order a VMware vSphere cluster based on a configuration template that you saved. Use this procedure to define a new cluster configuration based on an existing cluster configuration.
 
 ## Requirements
+{: #vs_orderingbasedonexistingconfig-req}
 
 Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
@@ -24,6 +26,7 @@ Ensure that you completed the following tasks:
 *  You created a configuration template to be reused.
 
 ## Procedure to order vSphere clusters based on existing configurations
+{: #vs_orderingbasedonexistingconfig-procedure}
 
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** on the left navigation pane, and then click **VMware vSphere** in the **Virtual Data Centers** section.
 2. On the **VMware vSphere on IBM Cloud** page, click **Create**.  
@@ -38,6 +41,7 @@ Ensure that you completed the following tasks:
    {:note}
 
 ## Results
+{: #vs_orderingbasedonexistingconfig-results}
 
 If you saved the cluster configuration as a template, you get a console notification that the configuration was saved. You can then find the template in the **Cluster Configurations** list.
 
@@ -46,7 +50,8 @@ If you placed an order, the deployment of the cluster starts automatically. You 
 The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Deployed Instances** page.
 {:note}
 
-### Related links
+## Related links
+{: #vs_orderingbasedonexistingconfig-related}
 
 * [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
 * [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)

@@ -4,17 +4,20 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # Secondary vCenter Server system does not appear in the vSphere Web Client inventory
+{: #trbl_sec_inst_not_visible}
 
 ## Problem
+{: #trbl_sec_inst_not_visible-problem}
 
 In a multi-site configuration, after you add a new secondary instance, its vCenter Server system is not visible when logged in to the VMware vSphere Web Client of a previously ordered instance.
 
 ## Resolution
+{: #trbl_sec_inst_not_visible-resolution}
 
 This is a known VMware 6.5 issue.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,30 +13,36 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Ordering new vSphere clusters
+{: #vs_orderinginstances}
 
 To deploy a highly customizable VMware virtualized platform, order a VMware vSphere cluster on {{site.data.keyword.cloud}}. Use this procedure to define a new vSphere cluster.
 
 This procedure guides you through the selection of VMware components, {{site.data.keyword.cloud_notm}} Bare Metal Server settings, storage settings, and networking choices, to create a new cluster. After you place the order, the cluster configuration is captured so that you can come back and continue to scale out the cluster as needed. After the order is completed, you can manually configure the VMware cluster based on your requirements.
 
 ## Requirements
+{: #vs_orderinginstances-req}
 
 Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
 *  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
 
 ## System settings
+{: #vs_orderinginstances-sys-settings}
 
 You must specify the following system settings when you order a new vSphere cluster.
 
 ### Cluster name
+{: #vs_orderinginstances-cluster-name}
 
 The cluster name must be unique within your account.
 
 ## Licensing settings
+{: #vs_orderinginstances-licensing-settings}
 
 Select the VMware components to be ordered with your cluster and specify the licensing option for the components.
 
 ### Component bundles for IBM Business Partner users
+{: #vs_orderinginstances-component-bundles-for-bp-users}
 
 If you're an IBM Business Partner user, you can select a component license bundle when you order a new vSphere cluster. The following bundles are available:
 
@@ -58,6 +64,7 @@ For IBM Business Partner users, the Bring Your Own License (BYOL) option is not 
 {:note}
 
 ### Individual components for non-Business Partner users
+{: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 If you're a non-Business Partner, you can select the following components for your vSphere cluster:
 * VMware vSphere Enterprise Plus
@@ -73,6 +80,7 @@ The VMware vSAN component is not available when you order VMware vSphere Enterpr
 {:note}
 
 ### Licensing options
+{: #vs_orderinginstances-licensing-options}
 
 You have the following options for licensing the selected VMware components:
 * **Include license with purchase**: In this case, a new license for the VMware component is purchased on your behalf. A combined VMware license is generated to match the cluster size of the order.
@@ -84,8 +92,10 @@ Using individual license keys together with the combined license keys does not m
 {:important}
 
 ## Bare Metal Server settings
+{: #vs_orderinginstances-bare-metal-settings}
 
 ### Data center location
+{: #vs_orderinginstances-dc-location}
 
 Select the {{site.data.keyword.CloudDataCent_notm}} where the cluster is to be hosted.
 
@@ -95,6 +105,7 @@ Select the {{site.data.keyword.CloudDataCent_notm}} where the cluster is to be h
 * The LON05 data center does not support SAP-certified or Broadwell bare metal server.
 
 ### Skylake
+{: #vs_orderinginstances-skylake}
 
 When you select **Skylake**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs. Options available depend on whether you selected the VMware vSAN component.
 
@@ -107,6 +118,7 @@ Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 ### SAP-certified
+{: #vs_orderinginstances-sap}
 
 The **SAP-certified** tab is not available if you selected VMware vSAN previously. When you select **SAP-certified**, you cannot alter the CPU or RAM settings.
 
@@ -120,6 +132,7 @@ Based on your requirements, select a Bare Metal Server configuration:
   * Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 4096 GB RAM
 
 ### Broadwell
+{: #vs_orderinginstances-broadwell}
 
 When you select **Broadwell**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs. Options available depend on whether you selected the VMware vSAN component.
 
@@ -134,12 +147,14 @@ Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Number of Bare Metal Servers
+{: #vs_orderinginstances-bare-metal-number}
 
 The number of ESXi servers that you want add to the vSphere cluster. All the ESXi servers have the same configuration.
 * If you selected the VMware NSX component, a minimum of three servers is required.
 * If you selected the VMware vSAN component, a minimum of four servers is required.
 
 ## Storage settings
+{: #vs_orderinginstances-storage-settings}
 
 For orders without vSAN, ESXi servers are ordered with a 12-disk chassis, with two disks for the ESXi operating system (OS).
 
@@ -156,10 +171,12 @@ If you select the VMware vSAN component for the cluster, specify the following s
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
 
 ## Network interface settings
+{: #vs_orderinginstances-network-interface-settings}
 
 You must specify the following network interface settings when you order a new vSphere cluster.
 
 ### Host name prefix
+{: #vs_orderinginstances-host-name-prefix}
 
 The host name is used for all bare metal server orders. It is recommended to use the host name for all management virtual machines, such as vCenter Server and NSX.
 
@@ -169,6 +186,7 @@ The host name prefix must meet the following requirements:
 * The maximum length is 10 characters.
 
 ### Subdomain label
+{: #vs_orderinginstances-subdomain-label}
 
 The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
@@ -177,6 +195,7 @@ The subdomain label must meet the following requirements:
 *  The subdomain label must be unique within your account.
 
 ### Domain name
+{: #vs_orderinginstances-domain-name}
 
 The domain name is used for all {{site.data.keyword.baremetal_short}} and must meet the following requirements:
 * The name must consist of two or more strings that are separated by period (.)
@@ -187,6 +206,7 @@ The domain name is used for all {{site.data.keyword.baremetal_short}} and must m
 * The maximum length of the domain name is 189 characters.
 
 ### Public or private network
+{: #vs_orderinginstances-public-private-network}
 
 Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and are not available if you select the private option:
 
@@ -196,15 +216,20 @@ Network interface card (NIC) enablement settings are based on your selection of 
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### VLANs
+{: #vs_orderinginstances-vlans}
 
 Network settings are based on your selection of either **Order New VLANs** or **Select Existing VLANs**.
 
 One public VLAN and two private VLANs are required for your cluster order. The two private VLANs are trunked into each Bare Metal Server.
 
 #### Order New VLANs
+{: #vs_orderinginstances-new-vlans}
+
 Select to order one new public VLAN and two new private VLANs.
 
-#### Select Existing VLANs  
+#### Select Existing VLANs
+{: #vs_orderinginstances-existing-vlans}
+
 Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
 
   When you select to reuse existing public and private VLANs, specify the VLANs and subnets:
@@ -219,14 +244,17 @@ Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, exi
 * Ensure that all VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
 
 #### FortiGate Physical Appliance 300 Series HA Pair
+{: #vs_orderinginstances-fortigate-physical-appliance}
 
 You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/fsa_considerations.html).
 
 ## Order summary
+{: #vs_orderinginstances-order-summary}
 
 Based on your configurations, the estimated cost is instantly generated and displayed in the **Order Summary** pane on the right. Click **Pricing details** to generate a PDF document that provides the estimate details.
 
 ## Procedure to order vSphere clusters
+{: #vs_orderinginstances-procedure}
 
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** on the left navigation pane, and then click **VMware vSphere** in the **Virtual Data Centers** section.
 2. On the **VMware vSphere on IBM Cloud** page, click **Create**.  
@@ -260,6 +288,7 @@ Based on your configurations, the estimated cost is instantly generated and disp
    {:note}
 
 ### Results
+{: #vs_orderinginstances-results}
 
 If you saved the cluster configuration as a template, you get a console notification that the configuration is saved successfully, and then you can find the template in the **Cluster Configurations** list.
 
@@ -268,7 +297,8 @@ If you placed an order, the deployment of the cluster starts automatically, and 
 The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Deployed Instances** page.
 {:note}
 
-### Related links
+## Related links
+{: #vs_orderinginstances-related}
 
 * [Ordering vSphere clusters based on existing configurations](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
 * [Scaling existing clusters](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)

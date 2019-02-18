@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # VMware Federal on IBM Cloud overview
+{: #vc_fed_overview}
 
 With VMware Federal on {{site.data.keyword.cloud}}, you can order a base vCenter Server instance in addition to providing US Federal Government agencies with the option to secure the deployed vCenter Server instances. When you secure a deployed instance, the sensitive information that is stored about the instance is removed. Also, the open connection for instance access is removed, which means that management functions, such as adding and removing hosts and clusters are no longer available. After you select the secure option, the only available function is instance delete.
 
@@ -22,13 +23,14 @@ VMware Federal on {{site.data.keyword.cloud_notm}} offers only a subset of the v
 {:note}
 
 ## Technical specifications for VMware Federal on IBM Cloud instances
+{: #technical-specifications-for-vmware-federal-on-ibm-cloud-instances}
 
 The following components are included:
 
 ### Bare Metal Server
+{: #vc_fed_overview-bare-metal}
 
 You can order two or more {{site.data.keyword.baremetal_short}} with one of the following configurations:
-
 * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600 v4 series)
 * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
 
@@ -38,6 +40,7 @@ If you select vSAN storage, the configuration requires four {{site.data.keyword.
 {:note}
 
 ### Networking
+{: #vc_fed_overview-networking}
 
 The following networking components are ordered:
 *  Three VLANs (Virtual LANs): one public VLAN and two private VLANs
@@ -53,6 +56,7 @@ The following networking components are ordered:
   {:note}
 
 ### Virtual Server Instances
+{: #vc_fed_overview-vsi}
 
 The following VSIs (Virtual Server Instances) are ordered:
 * A VSI for IBM CloudBuilder, which is shut down after the instance deployment is completed.
@@ -60,10 +64,12 @@ The following VSIs (Virtual Server Instances) are ordered:
 * (For V2.2 instances) A Microsoft Windows Server VSI for Microsoft Active Directory (AD) is deployed and can be looked up. This VSI functions as the DNS for the instance where the hosts and virtual machines are registered.
 
 ### Storage
+{: #vc_fed_overview-storage}
 
 During initial deployment, you can choose between vSAN and NFS storage options.
 
 #### vSAN storage
+{: #vc_fed_overview-vsan-storage}
 
 The vSAN option offers customized configurations, with various options for disk type and quantity:
 * Disk quantity: 2, 4, 6, or 8.
@@ -73,6 +79,7 @@ The vSAN option offers customized configurations, with various options for disk 
 * High-Performance Intel Optane option, which provides two extra capacity disk bays for a total of 10 capacity disks. This option depends on the CPU model.
 
 #### NFS storage
+{: #vc_fed_overview-nfs-storage}
 
 The NFS option offers customized shared file-level storage for workloads with various options for size and performance:
 * Size: 1, 2, 4, 8, or 12 TB.
@@ -82,6 +89,7 @@ The NFS option offers customized shared file-level storage for workloads with va
 If you choose the NFS option, one 2 TB, 4 IOPS/GB file share for management components is ordered.
 
 ### IBM-provided licenses and fees
+{: #vc_fed_overview-license-and-fee}
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
@@ -89,14 +97,17 @@ If you choose the NFS option, one 2 TB, 4 IOPS/GB file share for management comp
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
 ## Technical specifications for VMware Federal on IBM Cloud expansion nodes
+{: #vc_fed_overview-expansion-node-specs}
 
 Each vCenter Server expansion node will deploy and incur charges for the following components in your {{site.data.keyword.cloud_notm}} account.
 
 ### Hardware for expansion nodes
+{: #vc_fed_overview-expansion-node-hardware}
 
 One Bare Metal Server with the configuration presented in [Technical specifications for VMware Federal on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ### Licenses and fees for expansion nodes
+{: #vc_fed_overview-expansion-node-license-and-fee}
 
 * One VMware vSphere Enterprise Plus 6.5u1
 * One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
@@ -112,7 +123,8 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-### Related links
+## Related links
+{: #vc_fed_overview-related}
 
 * [Requirements and planning for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
 * [Ordering VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)

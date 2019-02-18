@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Skate Advisor logical design
+{: #vcscar-logical}
 
 The following information details those application elements that form the logical design of the system.
 
 ## System components
+{: #vcscar-logical-sys-comp}
 
 Figure 1. Skate Advisor components
 ![Skate Advisor Components](vcscar-components.svg)
@@ -20,6 +22,7 @@ Figure 1. Skate Advisor components
 The Skate Advisor consists primarily of a chatbot that can either accept text or speech recognition to interact with the system in a structured manner.
 
 ## Tricks
+{: #vcscar-logical-tricks}
 
 The core data element of the Skate Advisor is the trick. The trick language uniquely defines a trick. This language can be used to accomplish the following tasks:
 - Converse with the chatbot about tricks.
@@ -28,14 +31,17 @@ The core data element of the Skate Advisor is the trick. The trick language uniq
 - Identify a trick for location and media display purposes.
 
 ### Trick definition
+{: #vcscar-logical-trick-def}
 
 A trick is uniquely defined by the language constructs that describe it. See the Trick Rule Engine for a complete definition.
 
 ### List of tricks
+{: #vcscar-logical-list-tricks}
 
 A list of tricks is returned by a query of the Base trick or Landing that is defined in language elements.
 
 ### Trick data
+{: #vcscar-logical-trick-data}
 
 After they're returned, tricks can have the following information:
 - Trick description
@@ -43,6 +49,7 @@ After they're returned, tricks can have the following information:
 - Location information
 
 ## Conversational streams
+{: #vcscar-logical-conv-streams}
 
 The chatbot has a pre-defined and limited number of possible conversations. The conversations are defined by the following information:
 - Trick Finding: Find a set of valid tricks based on a query parameter that represents either the Base Trick or the Landing.
@@ -58,8 +65,10 @@ Location Finding | Where should I perform this trick? | List of locations for a 
 Media Display | Display a trick video |A list of media results
 
 ## User interface components
+{: #vcscar-logical-ui-comp}
 
 ### Chatbot
+{: #vcscar-logical-chatbot}
 
 The chatbot is a web component that converses with the user. The chatbot can either accept text or speech. Results such as lists are rendered in text with a possible accompanying speech to represent the results.
 
@@ -85,18 +94,21 @@ Step | Description
 11 | Result is sent to the user via the Chatbot.
 
 ### Video rendering
+{: #vcscar-logical-video-render}
 
 The video rendering component plays a video or displays a document. These artifacts represent the source artifact from which the trick was discovered.
 
 The video rendering component is an embedded widget in the web interface that displays a video. The videos are displayed in the chatbot as the result of a query from the system user. The resulting video link, after selected, triggers the video rending.
 
 ### Location interface
+{: #vcscar-logical-location-interface}
 
 Skate Advisor includes an interface for system users to record the location of a specific trick. The web interface component has two main elements:
 1. Accept a location from the system user as the best place to perform a specific trick.
 2. Display one or more locations that are recommended for a specific trick.
 
 ## Watson components
+{: #vcscar-logical-watson-comp}
 
 The following Watson components are included in this architecture.
 * Knowledge Studio - Watson Studio is a tool by which we can design the Skate Language for the system and use this language to recognize documents from the web that implement the Skate Language. Knowledge Studio provides a model for the Watson Discovery to use.
@@ -106,6 +118,7 @@ The following Watson components are included in this architecture.
 * Watson Assistant - Watson Assistant is a tool to design the interactions between users and the machine (chatbot). It must be trained with a domain-specific language, for example skateboarding, in the form of a series of grammars for which the Assistant recognizes and builds the appropriate responses.
 
 ## Skate Advisor services
+{: #vcscar-logical-skate-advisor-services}
 
 The Skate Advisor Service is an application component that provides a set of API services to render requests. The services that are exposed have a direct correlation to the conversational streams described previously. The
 API exposed has the following general categories:
@@ -115,6 +128,7 @@ API exposed has the following general categories:
 * accept_command - Accept a textual command from the Chatbot and service the request.
 
 ## Discovery service training
+{: #vcscar-logical-disc-service-training}
 
 Watson Discovery must be trained via a machine learning model, which is created in an iterative fashion by a subject matter expert by using the Watson Knowledge Studio.
 
@@ -128,7 +142,8 @@ After trained, the Discovery Service can respond to queries such as:
 - Show me all tricks.
 - Show me all tricks with multiple combos.
 
-### Related links
+## Related links
+{: #vcscar-logical-related}
 
 * [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle overview
 ](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,25 +14,29 @@ lastupdated: "2019-01-23"
 {:faq: data-hd-content-type='faq'}
 
 # General FAQ about IBM Cloud for VMware Solutions
+{: #faq}
 
 Find answers to frequently asked questions about {{site.data.keyword.vmwaresolutions_full}}.
 
 ## What user accounts do I need for IBM Cloud for VMware Solutions?
-{: faq}
+{: #faq-user-accts}
 
 * **IBMid account**. This account is required to access the {{site.data.keyword.vmwaresolutions_short}} console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.slportal}}. For more information, see [Getting started](/docs/services/vmwaresolutions/index.html).
 * **{{site.data.keyword.cloud_notm}} account**. This account is required for provisioning. You can sign up for an {{site.data.keyword.cloud_notm}} account by using an existing **IBMid** or by creating a new **IBMid**.
 * **{{site.data.keyword.cloud_notm}} infrastructure account**. This account, which was previously known as **IBM SoftLayer** account, is used to log in to the {{site.data.keyword.cloud_notm}} infrastructure customer portal that provides some additional function to manage infrastructure products and services. You can get an {{site.data.keyword.cloud_notm}} infrastructure account by upgrading your **{{site.data.keyword.cloud_notm}} account** to a Pay-As-You-Go type of account, or by linking your existing {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account with your {{site.data.keyword.cloud_notm}} account. The {{site.data.keyword.cloud_notm}} infrastructure account that you are using must meet certain requirements. For more information, see [Signing up for required accounts](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html) and [{{site.data.keyword.cloud_notm}} infrastructure account requirements](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## How do I associate my IBM Cloud infrastructure credentials with the IBM Cloud for VMware Solutions console?
+{: #faq-associate-credentials}
 
 When you order your instance for the first time, follow the instructions on the **Settings** page in the console to locate and copy the {{site.data.keyword.cloud_notm}} infrastructure user name and API key from the {{site.data.keyword.slportal}}. The {{site.data.keyword.cloud_notm}} infrastructure credentials are stored in the {{site.data.keyword.vmwaresolutions_short}} console after the first order. Future orders automatically use the stored credentials.
 
 ## How are my VMware virtual platform consumptions billed?
+{: #faq-billing}
 
 All costs for the physical and virtual infrastructure and the licenses that result from the instance are charged to your {{site.data.keyword.cloud_notm}} account. When you order an instance, you must have an {{site.data.keyword.cloud_notm}} account and provide the {{site.data.keyword.slapi_short}} key that is associated with the account.
 
 ## What are the differences among a vCenter Server instance, Cloud Foundation instance, and VMware vSphere cluster?
+{: #faq-vcs-cf-vss}
 
 All instance types provide deployment choices for VMware virtual environments. However, the difference is the extent of customizability and automation.
 
@@ -42,17 +46,22 @@ All instance types provide deployment choices for VMware virtual environments. H
 * The functions that are supported for vCenter Server instances, Cloud Foundation instances, and vSphere clusters are different. For more information, see [Offering comparison chart](/docs/services/vmwaresolutions/vmonic/inst_comp_chart.html).
 
 ## What is included in a vCenter Server instance?
+{: #faq-vcs}
 
 For more information, see [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## What is included in a Cloud Foundation instance?
+{: #faq-cf}
 
 For more information, see [Technical specifications for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## What is included in a vSphere cluster?
+{: #faq-vss}
+
 For more information, see [Components of VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html).
 
 ## Is a two-node vCenter Server instance highly available?
+{: #is-a-two-node-vcenter-server-instance-highly-available}
 
 It is recommended to deploy production workloads into environments that have at least three nodes.
 
@@ -63,26 +72,31 @@ In the two-node minimum deployment, one node has one NSX Controller, and the oth
 When a third node is added to a two-node cluster, vCenter Server automatically rebalances the three NSX Controllers across the three nodes and creates a highly available environment.
 
 ## Can I set up VMware vCenter 6.5 HA configuration?
+{: #faq-ha}
 
 No, it is not recommended. Failures in the {{site.data.keyword.vmwaresolutions_short}} functions might occur.
 
 ## Can clusters be renamed?
+{: #faq-rename-cluster}
 
 For vCenter Server instances, the first cluster that is created during deployment has a default name of **cluster1**. You can rename the default cluster in the VMware vSphere Client. When you add a cluster to a vCenter Server instance, you can specify the name that you want on the {{site.data.keyword.vmwaresolutions_short}} console.
 
 **Note:** For Cloud Foundation instances, the default cluster name cannot be changed.
 
 ## How are patches managed?
+{: #faq-patches}
 
 IBM provides ongoing updates to the IBM code by deploying the IBM CloudDriver virtual server instance (VSI) on demand. IBM does not provide ongoing updates to add-on services such as Zerto on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}}. Obtaining and installing these updates is your responsibility.
 
 VMware updates are applied in a different manner based on the instance type.
 
 ### VMware Cloud Foundation instances
+{: #faq-patches-cf}
 
 The updates to vSphere ESXi, NSX, vCenter, Platform Services Controller, and SDDC Manager components are provided through the {{site.data.keyword.vmwaresolutions_short}} console.
 
 ### VMware vCenter Server instances
+{: #faq-patches-vcs}
 
 For instances deployed in or upgraded to V2.1 or higher, newly deployed ESXi servers and clusters are patched with recent, but not necessarily the latest, ESXi updates from VMware.
 
@@ -98,6 +112,7 @@ For more information, see the following resources:
 * [Applying updates to vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_applyingupdates.html)
 
 ## Does the management services NSX Edge pose a security risk?
+{: #faq-mgmt-nsx}
 
 Although the VMware NSX Edge for management services is on a public subnet, the following security measures are in place to ensure that it does not pose a security risk:
 *  The NSX Edge firewall is configured to allow only outgoing HTTPS (TCP port 443) traffic that is initiated by the management virtual machines.
@@ -106,6 +121,7 @@ Although the VMware NSX Edge for management services is on a public subnet, the 
 *  Passwords for accessing the management services NSX Edge from the private network are randomized and encrypted.
 
 ## Does the customer-managed NSX Edge pose a security risk?
+{: #faq-customer-nsx}
 
 Although the customer-managed NSX Edge is connected to the public VLAN, security measures are in place to ensure that it does not pose a security risk. The following security measures are in place:
 *  A firewall rule is in place to allow only outgoing traffic from the private subnet range of IP addresses.
@@ -114,6 +130,7 @@ Although the customer-managed NSX Edge is connected to the public VLAN, security
 *  Passwords for accessing the customer-managed NSX Edge from the private network are randomized and encrypted.
 
 ## How do I choose the data centers for my instances?
+{: #faq-data-center}
 
 The instance deployments have strict physical infrastructure requirements, which vary among {{site.data.keyword.CloudDataCents_notm}}. When you place your instance order, the available data centers are listed within regions and you can select the one that you want from the list.
 
@@ -126,24 +143,29 @@ For more information, see the _IBM Cloud Data Center availability_ sections in:
 * [Requirements and planning for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
 
 ## How long does it take for my instance to be deployed?
+{: #faq-deploy}
 
 You can check the status of the instance deployment by viewing the deployment history on the instance details page from the {{site.data.keyword.vmwaresolutions_short}} console.
 
 ## Does VMware vSphere on IBM Cloud use automation to install, configure, and bring up the VMware stack?
+{: #faq-vss-automation}
 
 No. VMware vSphere on {{site.data.keyword.cloud_notm}} does not use the advanced automation that is found in the Cloud Foundation and vCenter Server platforms. Based on what you order, the platform delivers optional VMware licenses, ESXi servers, and, optionally, an HA-pair of FortiGate physical firewalls. If a new cluster is created, three new VLANs are also provisioned: a public VLAN and two private VLANs.
 
 VMware ESXi is automatically installed on each bare metal server, but you are responsible for installing any additional VMware components like vCenter Server or NSX. While vSphere on {{site.data.keyword.cloud_notm}} ensures that VMware-compatible hardware is ordered based on the VMware components selected, no automation exists to configure and bring up the VMware environment. You are responsible for designing and architecting the IBM-hosted environment.
 
 ## How can I view a list of all notifications?
+{: #faq-notification}
 
 To view the complete notification history, click **Notifications** from the left navigation pane.
 
 ## What if I have a problem with IBM Cloud for VMware Solutions?
+{: #faq-support}
 
 If you need assistance with {{site.data.keyword.vmwaresolutions_short}}, contact IBM Support through one of the support channels. For more information, see [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
 
-### Related links
+## Related links
+{: #faq-related}
 
 * [Notifications](/docs/services/vmwaresolutions/vmonic/notifications.html)
 * [Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)

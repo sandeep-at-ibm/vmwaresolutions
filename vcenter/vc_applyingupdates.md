@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Applying updates to vCenter Server instances
+{: #vc_applyingupdates}
 
 The process of applying patches and updates to vCenter Server instances is automated for the management components only. The VMware updates must be applied manually.
 
 ## Before you begin
+{: #vc_applyingupdates-prereq}
 
 When you upgrade a vCenter Server instance to a vCenter Server with Hybridity Bundle instance, you must first apply at least the base vCenter Server V2.3 software update. You must do so before you can perform the license upgrade to the Hybridity Bundle.
 {:important}
@@ -55,6 +57,7 @@ Table 1. Update levels and impact
 </table>
 
 ## Procedure to apply updates and patches to vCenter Server instances (V2.1 or later)
+{: #vc_applyingupdates-procedure}
 
 This procedure applies to instances that are deployed in V2.1 or later. For instances that are deployed in V2.0 and earlier, you must apply the VMware updates manually.
 
@@ -81,6 +84,7 @@ This procedure applies to instances that are deployed in V2.1 or later. For inst
 7. If you are applying updates to vCenter servers instances in multi-site deployment configuration, a section titled **Steps Required to Update** is displayed. This section lists the update operations required for all instances in the multi-site deployment. You must complete the steps in sequence by clicking **Apply Update** for each step. You must wait for the previous step to complete before you start the next step.   
 
 ## Procedure to upgrade to the vCenter Server with Hybridity Bundle instance
+{: #vc_applyingupdates-procedure-upgrade-to-hybridity}
 
 During the license upgrade to the Hybridity Bundle, you are automatically upgraded to the VMware NSX Advanced edition if your vCenter Server instance is currently using the VMware NSX Base edition.
 
@@ -102,13 +106,14 @@ Complete the following steps to upgrade a vCenter Server instance to the vCenter
   4. Review the terms that apply to the service, review the estimated cost, and click **Place Order**.
 
 ## Results
+{: #vc_applyingupdates-results}
 
-2. After you apply an update, a record appears in the software update status list, where you can view the detailed progress and status of the update. When the update is completed successfully, a record appears in the installed software updates list.
+1. After you apply an update, a record appears in the software update status list, where you can view the detailed progress and status of the update. When the update is completed successfully, a record appears in the installed software updates list.
 
   To retrieve the most recent status for an update job, click the refresh icon on the upper right corner of the page.
   {:tip}
 
-3. For details about the update statuses, see the following table.
+2. For details about the update statuses, see the following table.
 
    Table 2. Details of update statuses
 
@@ -143,9 +148,10 @@ Complete the following steps to upgrade a vCenter Server instance to the vCenter
       </tr>
     </table>
 
-4. If the update process fails at a specific step, [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) for assistance. You will be advised how to resolve the problem and guided to attempt the upgrade again from the step that failed.
+3. If the update process fails at a specific step, [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) for assistance. You will be advised how to resolve the problem and guided to attempt the upgrade again from the step that failed.
 
-### Related links
+## Related links
+{: #vc_applyingupdates-related}
 
 * [vCenter Server overview](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

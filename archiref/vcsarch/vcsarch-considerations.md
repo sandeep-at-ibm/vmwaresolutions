@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-04"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-02-04"
 {:important: .important}
 
 # Post-deployment operations and considerations
+{: #vcsarch-considerations}
 
 {{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server, and VMware Cloud Foundation offerings are not managed services. You are responsible for the configuration, security, management, and monitoring of all software components. With complete administrative access to the solution, you have great power and flexibility that requires significant technical, administrative, and operational expertise across various domains. Managing a VMware instance in the {{site.data.keyword.cloud_notm}} requires the same planning and expertise as planning for an on-premises instance. Software-defined technologies such as VMware NSX and VMware vSAN greatly simplify some aspects of instance management, but might require new skills and tools to be properly managed and operated. Combining the power, speed, and reliability of {{site.data.keyword.cloud_notm}} automated VMware deployment with the appropriate operational planning and testing ensures quick and successful navigation to hybrid cloud.
 
@@ -22,10 +23,12 @@ The following list is not exhaustive. For more information, see [IBM-managed ser
 {:note}
 
 ## IBM Cloud account access
+{: #vcsarch-considerations-acct-access}
 
 To manage access to your {{site.data.keyword.cloud_notm}} account, permit other members of your team to access your instance in the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Inviting users to access services and resources](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html).
 
 ## Limitations
+{: #vcsarch-considerations-limitations}
 
 Familiarize yourself with the following limitations for your instance:
 
@@ -34,6 +37,7 @@ Familiarize yourself with the following limitations for your instance:
 - [Frequently asked questions](/docs/services/vmwaresolutions/vmonic/faq.html)
 
 ## Network design and connectivity
+{: #vcsarch-considerations-network-connect}
 
 Complete the following steps to manage access to your {{site.data.keyword.cloud_notm}} network and to your VMware management components and to plan your {{site.data.keyword.cloud_notm}} network topology.
 
@@ -44,6 +48,7 @@ Complete the following steps to manage access to your {{site.data.keyword.cloud_
 - If implementing Cross-vCenter NSX, ensure that your local segment ID ranges are not overlapping before deploying any local workloads.
 
 ## Security planning and hardening
+{: #vcsarch-considerations-security}
 
 You are responsible for securing, encrypting, and monitoring your VMware instance and workloads to meet your corporate, industry, and regulatory standards. Complete the following steps to ensure proper security.
 
@@ -57,6 +62,7 @@ You are responsible for securing, encrypting, and monitoring your VMware instanc
 - Plan and implement appropriate change management, approval, auditing, and access control for your instance, using solutions such as [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html).
 
 ## Customization
+{: #vcsarch-considerations-custom}
 
 Complete the following steps to customize the base VMware instance installation to fit your requirements.
 
@@ -68,6 +74,7 @@ Complete the following steps to customize the base VMware instance installation 
   - For networking and security services such as F5 on {{site.data.keyword.cloud_notm}} and FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, configure network interfaces, certificates, high availability (HA) configuration, and rules according to your network topology and other requirements.
 
 ## Active Directory
+{: #vcsarch-considerations-ad}
 
 Complete the following steps to ensure proper single sign-on (SSO) configuration and management.
 
@@ -78,6 +85,7 @@ Complete the following steps to ensure proper single sign-on (SSO) configuration
 - Integrate ESXi hosts with AD SSO.
 
 ## Maintenance planning
+{: #vcsarch-considerations-maint}
 
 Complete the following steps to ensure proper planning for software maintenance.
 
@@ -88,6 +96,7 @@ Complete the following steps to ensure proper planning for software maintenance.
 - Plan regular maintenance for add-on services such as Veeam on {{site.data.keyword.cloud_notm}}, Zerto on {{site.data.keyword.cloud_notm}}, and F5 on {{site.data.keyword.cloud_notm}}.
 
 ## Monitoring
+{: #vcsarch-considerations-monitor}
 
 Ensure to plan for and implement the following solutions for monitoring your instance and instance components.
 
@@ -99,6 +108,7 @@ Ensure to plan for and implement the following solutions for monitoring your ins
 - Monitoring your backup infrastructure and backup jobs.
 
 ## Business continuity and availability
+{: #vcsarch-considerations-business-cont}
 
 Your VMware instance is running on Bare Metal Servers in the {{site.data.keyword.cloud_notm}}. Complete the following steps to ensure that you make adequate plans for high availability and business continuity.
 
@@ -111,6 +121,7 @@ Your VMware instance is running on Bare Metal Servers in the {{site.data.keyword
 - Plan for business continuity for your workloads using solutions such as [Zerto Disaster Recovery](/docs/services/vmwaresolutions/services/addingzertodr.html), [Veeam backup and replication](/docs/services/vmwaresolutions/services/veeam_considerations.html), and [IBM Spectrum Protect Plus](/docs/services/vmwaresolutions/services/spp_considerations.html).
 
 ## Storage planning
+{: #vcsarch-considerations-storage}
 
 In addition to capacity planning, complete the following to ensure that your storage configuration meets your performance and availability requirements.
 
@@ -123,7 +134,8 @@ In addition to capacity planning, complete the following to ensure that your sto
 
 In addition, see the developerWorks recipe showing how to [add more endurance storage to your VMware cluster](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/) using IBM Spectrum Protect Plus as an example.
 
-### Related links
+## Related links
+{: #vcsarch-considerations-related}
 
 * [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
 * [Design overview](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)

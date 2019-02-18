@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-16"
 
 ---
 
@@ -13,8 +13,10 @@ lastupdated: "2019-02-06"
 {:important: .important}
 
 # Monitoring parameters and components
+{: #vcshcx-monitoring}
 
 ## Using the WAN Optimizer for monitoring
+{: #vcshcx-monitoring-using-wan}
 
 The Silver Peak WAN optimization appliance that is deployed as part of
 HCX does not get its management interface configured. The web user interface (UI) is a
@@ -26,6 +28,7 @@ Optimizer appliance. Therefore, it cannot monitor stretched L2 traffic.
 {:note}
 
 ### Configuring the UI
+{: #vcshcx-monitoring-config-ui}
 
 Outside of configuring an IP address for the web UI, do not make configuration
 changes to the WAN Optimizer appliance unless directed by
@@ -53,6 +56,7 @@ You can now use the WAN Opt web UI to monitor throughput
 rates, compression ratios, and set bandwidth restrictions.
 
 ### Migration bandwidth throttling
+{: #vcshcx-monitoring-mig-bandwidth}
 
 Before you migrate VMs, perform an assessment of the network link that is used. Work with the networking
 engineers for the network that contains the source instance of vSphere or
@@ -84,6 +88,7 @@ For stretched L2 bandwidth throttling, QoS can be employed for UDP 500
 and 4500 for the tunnel traffic between the L2C appliances.
 
 ## Monitoring HCX components
+{: #vcshcx-monitoring-hcx-comp}
 
 Monitor HCX components such as HCX Manager, Cloud Gateway, WAN opt, and the Layer 2
 Concentrator operations in the following ways:
@@ -97,6 +102,7 @@ for each stretched L2 network.
 Manager or other VMware VM monitoring tools.
 
 ## Bandwidth use
+{: #vcshcx-monitoring-band-use}
 
 Use the following methods to monitor bandwidth use and latency.
 
@@ -130,6 +136,7 @@ only capable of 1 Gbps which is the bottleneck.
 the limitation is the vMotion network of 1 Gbps.
 
 ## Stretched Layer 2 traffic
+{: #vcshcx-monitoring-stretched-layer-2-traffic}
 
 The HCX fleet component Layer 2 Concentrator has a bandwidth limitation
 of ~4 Gbps aggregate for all L2 network traffic that traverses it. Individual
@@ -152,6 +159,7 @@ rebalance.
 
 
 ## Related links
+{: #vcshcx-monitoring-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
 overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   

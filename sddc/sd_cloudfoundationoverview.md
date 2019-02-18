@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Cloud Foundation overview
+{: #sd_cloudfoundationoverview}
 
 When you order VMware Cloud Foundation on {{site.data.keyword.cloud}}, an entire VMware environment is deployed automatically. The base deployment consists of four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with the VMware Cloud Foundation stack preinstalled and configured to provide a unified software-defined data center (SDDC) platform. Cloud Foundation natively integrates VMware vSphere, VMware NSX, VMware Virtual SAN, and is architected based on VMware-validated designs.
 
 ## Cloud Foundation architecture
+{: #sd_cloudfoundationoverview-archi}
 
 The following graphic depicts the overall architecture and components of the Cloud Foundation deployment.
 
@@ -25,10 +27,12 @@ Figure 1. Cloud Foundation architecture
 ![Cloud Foundation architecture](sd_architecture.svg "Cloud Foundation architecture")
 
 ### Physical infrastructure
+{: #sd_cloudfoundationoverview-physical-infras}
 
 This layer provides the physical infrastructure (compute, storage, and network resources) to be used by the virtual infrastructure.
 
 ### Virtualization infrastructure (Compute, Storage, and Network)
+{: #sd_cloudfoundationoverview-virtualization-infras}
 
 This layer virtualizes the physical infrastructure through different VMware products:
 * VMware vSphere virtualizes the physical compute resources.
@@ -36,6 +40,7 @@ This layer virtualizes the physical infrastructure through different VMware prod
 * VMware NSX is the network virtualization platform that provides logical networking components and virtual networks.
 
 ### Virtualization management
+{: #sd_cloudfoundationoverview-virtualization-mgmt}
 
 This layer consists of vCenter Server, which represents the management layer for the virtualized environment. The same familiar vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
 
@@ -44,6 +49,7 @@ On the {{site.data.keyword.vmwaresolutions_short}} console, you can expand and c
 For more information about the architecture, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Technical specifications for Cloud Foundation instances
+{: #technical-specifications-for-cloud-foundation-instances}
 
 The following components are included in your Cloud Foundation instance.
 
@@ -51,6 +57,7 @@ Charges that are incurred for the hardware, networking, virtual machines, and st
 {:note}
 
 ### Bare Metal Server
+{: #sd_cloudfoundationoverview-bare-metal}
 
 You can order {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with one of the following configurations:
 *  **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.   
@@ -60,6 +67,7 @@ If you plan to use vSAN storage, the configuration requires four {{site.data.key
 {:note}
 
 ### Networking
+{: #sd_cloudfoundationoverview-networking}
 
 The following networking components are ordered:
 * 10 Gbps dual public and private network uplinks
@@ -72,6 +80,7 @@ The following networking components are ordered:
 * The EVC (Enhanced vMotion Compatibility) feature is automatically enabled if you have an existing cluster with ESXi servers that are supported by the current VMware vSphere version. EVC provides vMotion compatibility for all ESXi servers in a cluster by ensuring that all ESXi servers in a cluster expose the same set of CPU features to virtual machines. By using EVC, the virtual machines can migrate between any ESXi servers in the cluster, even if the actual CPUs on the ESXi servers might be different.
 
 ### Virtual Server Instances
+{: #sd_cloudfoundationoverview-vsi}
 
 The following VSIs (Virtual Server Instances) are ordered:
 * A VSI for Microsoft Active Directory (AD) and Domain Name System (DNS) services. The VSI is required for multi-site configuration support. This VSI specification is: Windows 2012 R2 (8 GB RAM / 2 CPU cores / 100 GB disk / Dual 1 Gbps private uplinks).
@@ -79,6 +88,7 @@ The following VSIs (Virtual Server Instances) are ordered:
 * (If Veeam on {{site.data.keyword.cloud_notm}} is ordered) A VSI for the Veeam backup service is ordered.
 
 ### Storage
+{: #sd_cloudfoundationoverview-storage}
 
 The following storage is ordered, depending on the {{site.data.keyword.baremetal_short}} configuration that you select:
 * Two 1-TB SATA boot disks
@@ -87,6 +97,7 @@ The following storage is ordered, depending on the {{site.data.keyword.baremetal
 * For the **Skylake** and **Broadwell** configuration only, you can set the number of disk drives and the disk type and capacity according to your requirements. Also, you have the High-Performance Intel Optane option, which provides two extra capacity disk bays for a total of 10 capacity disks. The High-Performance Intel Optane option is dependent on the CPU model.
 
 ### Licenses (IBM-provided or BYOL) and fees
+{: #sd_cloudfoundationoverview-license-and-fee}
 
 * Four VMware vSphere Enterprise Plus 6.5u1
 * Four VMware vCenter Server 6.5
@@ -96,14 +107,17 @@ The following storage is ordered, depending on the {{site.data.keyword.baremetal
 * Four Support and Services fees
 
 ## Technical specifications for Cloud Foundation expansion nodes
+{: #sd_cloudfoundationoverview-expansion-node-specs}
 
 Each Cloud Foundation expansion node deploys and incurs charges for the following components in your {{site.data.keyword.cloud_notm}} account.
 
 ### Hardware for expansion nodes
+{: #sd_cloudfoundationoverview-expansion-node-hardware}
 
 One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration presented in [Technical specifications for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Licenses and fees for expansion nodes
+{: #sd_cloudfoundationoverview-expansion-node-license-and-fee}
 
 * One VMware vSphere Enterprise Plus 6.5u1
 * One VMware vCenter Server 6.5
@@ -123,7 +137,8 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-### Related links
+## Related links
+{: #sd_cloudfoundationoverview-related}
 
 * [Cloud Foundation Software Bill of Materials](/docs/services/vmwaresolutions/sddc/sd_bom.html)
 * [Planning Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_planning.html)

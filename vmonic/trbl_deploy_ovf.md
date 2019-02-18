@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # Deploying an OVF file using the VMware vSphere Web Client
+{: #trbl_deploy_ovf}
 
 ## Resolution
+{: #trbl_deploy_ovf-resolution}
 
 To deploy an OVF (Open Virtualization Format) file by using the vSphere Web Client, use the following procedure:
 1. Before you attempt to deploy an OVF file, add the following host information to the `/etc/hosts` file:

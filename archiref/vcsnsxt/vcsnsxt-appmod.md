@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Application modernization overview
+{: #vcsnsxt-appmod}
 
 The following diagram shows the application modernization reference architecture that Acme Skateboards deploy and is described in depth in this series of documents.
 
@@ -35,6 +36,7 @@ Key components of the architecture are:
   - Traffic between legacy systems in the on-premises data center and cloud VMs.
 
 ## Key benefits to Acme Skateboards
+{: #vcsnsxt-appmod-benefits}
 
 - Accelerated delivery of IT projects to developers and lines of business by reducing the time that it takes for procurement, architecture, implementation, and deployment of resources from weeks or even months, to hours. Application time to value decreases if customers need to wait until networking or security teams can order services like load balancers, firewalls, switches, and routers.
 - Enhanced security with dedicated bare metal servers in a hosted private cloud, including private endpoint deployment to {{site.data.keyword.cloud_notm}} services such as {{site.data.keyword.containerlong_notm}} and KMIP.
@@ -45,6 +47,7 @@ Customers moving toward cloud native application platforms such as {{site.data.k
 
 This reference architecture shows how VCS, {{site.data.keyword.icpfull_notm}}, and {{site.data.keyword.containerlong_notm}} move Acme Skateboards securely along the application modernization journey.
 
-### Related Links
+## Related links
+{: #vcsnsxt-appmod-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

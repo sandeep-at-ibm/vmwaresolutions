@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-14"
 
 ---
 
 # Step 4 - Application setup
+{: #caveonix-step4}
 
 After the virtual machines (VMs) are deployed and the application components are installed, the Caveonix RiskForesight solution is available to be set up for the Service Provider and the first Tenant or Organization.
 
@@ -68,6 +69,7 @@ Table 2. Default information used in application setup
 |Task |Four tasks are set up; Asset Scan, NSX Flows, VMware Infrastructure Scan, and VMware Vulnerability. Type is set to vCenter, NSX, VMWareInfrastructureScan, VMWareVulnerabilityScan |
 |Task |Schedule is set to Hourly for DC1AssetScan and Daily for the others |
 
-## Related Links
+## Related links
+{: #caveonix-step4-related}
 
 * [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,12 +13,14 @@ lastupdated: "2019-02-06"
 {:important: .important}
 
 # Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingviewingclusters}
 
 The ESXi servers that you configured when you ordered an instance are grouped as **cluster1** by default.
 
 You can add clusters to your VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instance to expand the compute and storage capacity. Within a cluster, manage the ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instance.
 
 ## Adding clusters to vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingviewingclusters-adding}
 
 The number of clusters that can be added to an instance depends on the instance version:
 * For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment.
@@ -27,10 +29,12 @@ The number of clusters that can be added to an instance depends on the instance 
 For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
 
 ### System settings
+{: #vc_hybrid_addingviewingclusters-adding-sys-settings}
 
 When you add a cluster for a vCenter Server with Hybridity Bundle instance, you must specify the following settings.
 
 #### Cluster name
+{: #vc_hybrid_addingviewingclusters-adding-cluster-name}
 
 The cluster name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
@@ -39,16 +43,19 @@ The cluster name must meet the following requirements:
 * The cluster name must be unique within the vCenter Server with Hybridity Bundle instance.
 
 #### Data center location
+{: #vc_hybrid_addingviewingclusters-adding-dc-location}
 
 The {{site.data.keyword.CloudDataCent_notm}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
 If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} or {{site.data.keyword.cloud_notm}} infrastructure pod, three more VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
 ### Bare Metal Server settings
+{: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
 Specify the CPU model and RAM for the Bare Metal Server. Available options might differ depending on the version that your instance was initially deployed in.
 
 #### Skylake
+{: #vc_hybrid_addingviewingclusters-adding-skylake}
 
 When you select **Skylake**, you can choose the CPU and RAM combination according to your needs.
 
@@ -61,6 +68,7 @@ Table 1. Options for Skylake Bare Metal Servers
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 #### Broadwell
+{: #vc_hybrid_addingviewingclusters-adding-broadwell}
 
 When you select **Broadwell**, you can choose the CPU and RAM combination according to your needs.
 
@@ -75,6 +83,7 @@ Table 2. Options for Broadwell Bare Metal Servers
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Number of Bare Metal Servers
+{: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
 
 At least two {{site.data.keyword.baremetal_short}} is required for a cluster.
 
@@ -83,6 +92,7 @@ You can add up to 59 {{site.data.keyword.baremetal_short}} for a cluster, and yo
 After deployment, you can create up to four more clusters. For VMware vSAN storage, four servers are required for both the initial cluster and post-deployment clusters.
 
 ### vSAN storage settings
+{: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
 
 VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
@@ -96,6 +106,7 @@ VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle insta
 * **vSAN License**: Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
 
 ### Licensing settings
+{: #vc_hybrid_addingviewingclusters-adding-licensing-settings}
 
 IBM-provided licenses for the following VMware components:
   * vSphere Enterprise Plus 6.5u1
@@ -103,6 +114,7 @@ IBM-provided licenses for the following VMware components:
   * NSX Service Providers 6.4 (Advanced or Enterprise edition)
 
 ### Network interface settings
+{: #vc_hybrid_addingviewingclusters-adding-network-interface-settings}
 
 Network interface card (NIC) settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and aren't available with the private option:
 
@@ -112,10 +124,12 @@ Network interface card (NIC) settings are based on your selection of either **Pu
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Order summary
+{: #vc_hybrid_addingviewingclusters-adding-order-summary}
 
 Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane.
 
 ## Procedure to add clusters to vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingviewingclusters-adding-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to view the clusters in it.
@@ -137,6 +151,7 @@ Based on your selected configuration for the cluster, the estimated cost is inst
    4. Click **Provision**.
 
 ### Results after you add clusters to vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingviewingclusters-adding-results}
 
 1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history on the **Summary** page of the instance.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
@@ -145,6 +160,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
 {:important}
 
 ## Procedure to view clusters in vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to view the clusters in it.
@@ -201,10 +217,12 @@ You can't change the cluster name. Changing the cluster name might cause the add
     * **NFS Protocol**: The NFS version of the storage.
 
 ## Deleting clusters from vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingviewingclusters-deleting}
 
 You might want to delete a cluster from an instance when it's no longer needed.
 
 ### Before you delete
+{: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
 * You can delete a single cluster at a time. To delete multiple clusters, you must do it in sequence; waiting for the previous cluster to be deleted before you delete the next cluster.
 * Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.
@@ -212,15 +230,18 @@ You might want to delete a cluster from an instance when it's no longer needed.
 * The default cluster can't be deleted.
 
 ## Procedure to delete clusters from vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to delete clusters from.
 
-   **Note:** Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot remove clusters from the instance.
+   Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot remove clusters from the instance.
+   {:note}
 
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.
 
-### Related links
+## Related links
+{: #vc_hybrid_addingviewingclusters-related}
 
 * [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
 * [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)

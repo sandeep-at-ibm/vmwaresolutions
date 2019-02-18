@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # VMware HCX on IBM Cloud component-level target architecture
+{: #hcx-archi-target}
 
 This section describes the architecture of each HCX component that is deployed within the IBM Cloud environment. The spoke (target) deployment model within the IBM Cloud is discussed.
 
 ## NSX Edge
+{: #hcx-archi-target-nsx-edge}
 
 The first component that is configured within the IBM Cloud is a pair of NSX Edge virtual machines. It is important to note that all IBM Cloud for VMware Solutions deployments install and configure an edge device for IBM CloudDriver outbound communication. However, while this ESG could be reused for Hybrid Cloud Services communications, it is advised that a new pair is deployed.
 
@@ -91,6 +93,7 @@ Table 7. Pool configuration for NSX Edge - Pool Details
 | Min Connections | 0         |
 
 ## HCX Manager
+{: #hcx-archi-target-hcxm}
 
 The HCX Manager component is the first appliance that is deployed after the NSX Edge appliances are configured on the target. This appliance is used as the main interface into the cloud environment for the source components, and provides an abstracted networking user interface that can be used to add, edit, and delete networks as well as design and configure routing without direct use of NSX. As a result of the vCenter and NSX integration, the HCX Manager appliance is assigned a private portable IP address on the management VLAN.
 
@@ -102,6 +105,7 @@ Figure 1. Target - Hybrid Cloud services appliance
 ![Target - Hybrid Cloud services appliance](target_hybrid_cloud_services_appliance.svg)
 
 ## Cloud Gateway
+{: #hcx-archi-target-cloud-gateway}
 
 A virtual appliance is deployed after a connection is established from the source to the target cloud. This appliance is the Cloud Gateway (CGW) and is used to maintain a secure channel between vSphere environment that is designated as the source and the IBM Cloud. The sizing specification of the CGW appliance that is deployed within the IBM Cloud is listed in Table 3 Cloud Gateway Deployment.
 
@@ -123,6 +127,7 @@ Figure 2. Cloud Gateway deployment
 ![Cloud Gateway deployment](cloud_gateway_deployment.svg)
 
 ## WAN Optimizer
+{: #hcx-archi-target-wan-opt}
 
 The second component that is deployed is the WAN Optimization appliance. While the WAN Optimization appliance is optional, it performs WAN conditioning to reduce effects of latency. It also incorporates Forward Error Correction to negate packet loss scenarios, and deduplication of redundant traffic patterns.
 
@@ -142,6 +147,7 @@ Figure 3. WAN Optimizer deployment
 ![WAN Optimizer deployment](wan_optimizer_deployment.svg)
 
 ## Layer 2 Concentrator
+{: #hcx-archi-target-layer-2-conc}
 
 The third component is known as the Layer 2 Concentrator (L2C) and is part of the Network Extension Services. The L2C is the virtual machine that allows the extension of on-premises datacenter networks to the IBM Cloud. The L2C stretches on-premises VLANs and/or VXLANs. Each L2C can stretch up to 4096 VLANs. Each L2C, when paired with its on-premises partner can provide up to 1 Gbps per “flow” and up to an aggregate of 4 Gbps per VLAN (or VXLAN). Deployment of more L2C appliances is supported if more network throughputs are required.
 
@@ -160,6 +166,7 @@ The L2C appliance is deployed on the management VLAN as well as the public VLAN.
 Figure 4. L2 Concentrator deployment
 ![L2 Concentrator deployment](l2_concentrator_deployment.svg)
 
-### Related links
+## Related links
+{: #hcx-archi-target-related}
 
 * [Installing and configuring on the source](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-source.html)

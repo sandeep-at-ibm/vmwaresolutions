@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,16 +13,19 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Scaling clusters created outside of the console
+{: #vs_orderingforclustersoutside}
 
 You can use the VMware vSphere offering to scale existing vSphere clusters that are created outside of the {{site.data.keyword.vmwaresolutions_full}} console. To scale a vSphere cluster that is created outside of the console, re-create the cluster with the same settings with the console and then scale the cluster.
 
 ## Requirements
+{: #vs_orderingforclustersoutside-req}
 
 Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
 *  You reviewed the requirements and considerations in [Requirements and planning for VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
 
 ## Procedure to scale clusters created outside of the console
+{: #vs_orderingforclustersoutside-procedure}
 
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** on the left navigation pane, and then click **VMware vSphere** in the **Virtual Data Centers** section.
 2. On the **VMware vSphere on IBM Cloud** page, click **Create**.  
@@ -39,13 +42,15 @@ Ensure that you completed the following tasks:
 10. In the **Order Summary** pane, verify the instance configuration and the estimated cost, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.
 
 ## Results
+{: #vs_orderingforclustersoutside-results}
 
 The deployment of the cluster starts automatically, and you receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email.
 
 The vSphere clusters are not displayed on the **Deployed Instances** page, together with the vCenter Server and Cloud Foundation instances.
 {:note}
 
-### Related links
+## Related links
+{: #vs_orderingforclustersoutside-related}
 
 * [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
 * [Ordering vSphere clusters based on existing configurations](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)

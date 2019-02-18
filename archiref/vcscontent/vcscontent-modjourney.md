@@ -4,23 +4,27 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Modernization journey
+{: #vcscontent-modjourney}
 
 This is a reference use case on how a classic WebSphere Application Server application is modernized by using {{site.data.keyword.cloud}} Private, IBM Middleware content, {{site.data.keyword.containerlong_notm}}, and VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 ## Modernization is more than applications
+{: #vcscontent-modjourney-modernization}
 
 We are all on a cloud journey, and we are all at different points on that journey. This use case focuses on how an existing application, Stock Trader, is modernized through incremental steps that the application architect, Jane, and the cloud infrastructure architect, Todd, planned out. This use case shows examples that help you take each step in your journey, and the value that is realized to your business, regardless of how large or small each step is.
 
 Most of our focus in this journey is on modernizing the Stock Trader application. To fully modernize your business into a cloud-native business, the applications, DevOps, integration, and management themes must be discussed. All themes work together to help you achieve your goals. Modernizing one theme without the others might result in problems.
 
 ## Reasons to modernize
+{: #vcscontent-modjourney-reasons}
 
 ### Application modernization
+{: #vcscontent-modjourney-app-mod}
 
 The goal is cloud-native applications that scale and respond to quickly changing demands.
 
@@ -28,6 +32,7 @@ The goal is cloud-native applications that scale and respond to quickly changing
 * You need apps that can scale, reach worldwide, adjust to demands, change, enhance, and can pivot quickly.
 
 ### DevOps modernization
+{: #vcscontent-modjourney-devops-mod}
 
 While you modernize your application, the way you deliver that application, the entire delivery pipeline, is modernized so the new cloud-native culture your Developers are creating can scale into how that app is delivered.
 
@@ -35,6 +40,7 @@ While you modernize your application, the way you deliver that application, the 
 * You need DevOps teams that can scale, reach worldwide, adjust to demand, change, enhance, and can pivot quickly.
 
 ###  Integration modernization
+{: #vcscontent-modjourney-integration-mod}
 
 All along the modernization journey, your teams need to integrate with existing assets, new cloud services, your data, and new insights from analytics performed on that data.
 
@@ -43,6 +49,7 @@ All along the modernization journey, your teams need to integrate with existing 
 * You need to integrate your data and the insight you get from applying analytics to your data.
 
 ### Management
+{: #vcscontent-modjourney-mgmt}
 
 Modernizing your management practices is another parallel journey to take while you modernize your applications. The tools, culture, and core behaviors of how to manage and maintain a modernized application is far different than before.
 
@@ -51,12 +58,14 @@ Modernizing your management practices is another parallel journey to take while 
 * You need to automate how you manage more than one cloud and the applications and middleware that run on them.
 
 ## Meet Todd and Jane
+{: #vcscontent-modjourney-todd-jane}
 
 For our Stock Trader journey, we focus on two personas: Todd and Jane. Todd is operations lead for ACME company and is responsible for the infrastructure, security, cloud environments, and the policies that ensure the workloads that run in them comply with various regulations.
 
 Jane is the development lead for the Stock Trader solution, and now has the responsibility to modernize Stock Trader, which means working across her development teams to change the development tools, culture and platforms, so the existing monolithic Stock Trader solution is modernized into a well run cloud native solution.
 
 ## Meet Stock Trader
+{: #vcscontent-modjourney-meet-stock-trader}
 
 Todd and Jane built an application that runs in WebSphere called Stock Trader. While it has a basic user interface, it is a dependable application where portfolio managers go to manage portfolios, including the buying and selling of stock, and viewing internal loyalty levels.
 
@@ -65,6 +74,7 @@ Stock Trader runs in WebSphere, is built with a few .war files, and uses a tradi
 But, while Stock Trader is fine, everyone in the company wants something better. The product managers want to add social media to their loyalty program. Jane is happy because she can refactor the app into micro-services, which allows them to continuously deliver enhanced capabilities with fewer dependencies. Todd loves the idea of cloud efficiencies, but still requires governance to maintain compliance with corporate policies.
 
 ## Steps along the journey
+{: #vcscontent-modjourney-steps}
 
 Todd and Jane know from experience that a good journey to modernize solutions starts with a roadmap. While plans can change, it’s always good to think through the vision, and define a realistic path to get there. Each step must bring value to the company and the steps are not so significant that they cause costly interruptions to their clients.
 
@@ -84,6 +94,7 @@ be entirely portable for use in other Kubernetes environments.
 
 7. Modernize Management. Todd and Jane worked to improve how they manage Stock Trader, and the platform it runs on, even across more than one cluster and cloud environment.
 
-### Related links
+## Related links
+{: #vcscontent-modjourney-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

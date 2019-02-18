@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Applying native NIC drivers
+{: #vum-applying-nic}
 
 ESXi 6.5 contains many new native drivers that are replacement for the earlier vmklinux drivers. While most of the new native drivers are enabled by default after installation or upgrade, three of the new native drivers are disabled by default, because they do not fully support the functions of the corresponding vmklinux drivers.
 
@@ -45,7 +46,8 @@ Use the ID and password that are listed in the {{site.data.keyword.cloud_notm}} 
 7. Type **“Y”** to enter recovery mode and boot the ESXi server with the previous version.
 8. Monitor its progress via the console. The boot can take 10 - 20 minutes.
 
-### Related links
+## Related links
+{: #vum-applying-nic-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

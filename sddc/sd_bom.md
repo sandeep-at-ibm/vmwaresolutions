@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Cloud Foundation Bill of Materials
+{: #sd_bom}
 
 Review the Bill of Materials (BOM) information for VMware Cloud Foundation instances.
 
 ## VLANs BOM for Cloud Foundation instances
+{: #sd_bom-vlans}
 
 The following table details the BOM information for the Cloud Foundation VLANs.
 
@@ -25,6 +27,7 @@ Table 1. BOM for the VLANs in Cloud Foundation instances
 | VLAN3     | Private B, Portable | Assigned to VMware vSAN, if used.<br><br>Assigned to VMware NFS, if used.<br><br>Assigned to VMware vSphere vMotion. |
 
 ## Software BOM for Cloud Foundation instances
+{: #sd_bom-software}
 
 The following table details the BOM information for Cloud Foundation software components.
 
@@ -41,6 +44,7 @@ Table 2. BOM for the software components in Cloud Foundation instances
 | Microsoft    | Windows Server Standard edition (64-bit) | 2012R2       |
 
 ## Advanced configuration settings for ESXi servers
+{: #sd_bom-esxi-server-advance-config}
 
 Review the following table for an overview of the advanced configuration settings that are applied on the ESXi servers. The settings are different depending on whether the Cloud Foundation instance is deployed in (or upgraded to) V2.2 or later from a previous (V2.1 or earlier) release.
 
@@ -59,6 +63,7 @@ Table 3. ESXi servers advanced configuration settings for Cloud Foundation insta
 | Queue Full Threshold | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
 ### Notes
+{: #sd_bom-notes}
 
 * The **MaxVolumes** setting is required for the IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service because the service might use more than the default number of NFS mounts on the ESXi server.
 * A value of **Not set** for a configuration setting indicates that the new setting is not automatically applied because it requires rebooting the ESXi servers, which might be disruptive.
@@ -67,7 +72,8 @@ Table 3. ESXi servers advanced configuration settings for Cloud Foundation insta
 
   For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
 
-### Related links
+## Related links
+{: #sd_bom-related}
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)

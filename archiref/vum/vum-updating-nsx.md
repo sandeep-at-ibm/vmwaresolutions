@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Updating NSX
+{: #vum-updating-nsx}
 
 The following information is an example of the update process for NSX. Refer to the VMware guide for the update process for the NSX version that you are upgrading to.
 
@@ -61,7 +62,8 @@ The workflow is as follows:
   - In the vSphere Web Client, select **Networking & Security** > **NSX Edges**. For each NSX Edge instance, select **Upgrade Version** from the **Actions** menu.
   - After the NSX Edge is upgraded successfully, the Status is Deployed, and the Version column displays the new NSX version. If an Edge fails to upgrade and does not roll back to the old version, click the **Redeploy NSX Edge** icon and then retry the upgrade.
 
-### Related links
+## Related links
+{: #vum-type-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

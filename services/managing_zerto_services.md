@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Requesting managed services for Zerto on IBM Cloud
+{: #managing_zerto_services}
 
 The Zerto on {{site.data.keyword.cloud}} service provides replication and disaster recovery capabilities. These capabilities can be integrated into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud_notm}}.
 
@@ -17,6 +18,7 @@ When you request managed services for Zerto on {{site.data.keyword.cloud_notm}},
 The following models for managed services for Zerto on {{site.data.keyword.cloud_notm}} are available.
 
 ## IBM Orchestrated Managed Services for Zerto
+{: #managing_zerto_services-orchestrated}
 
 This model is suitable if you're using the Zerto on {{site.data.keyword.cloud_notm}} offering.
 
@@ -27,12 +29,14 @@ All functions are managed via the {{site.data.keyword.cloud_notm}} Resiliency Or
 For more information, see [IBM Resiliency Orchestration](https://www.ibm.com/us-en/marketplace/disaster-recovery-orchestration).
 
 ## IBM Managed Services for Zerto (without Orchestration)
+{: #managing_zerto_services-without-orchestrated}
 
 In this model, a fully managed DR solution is provisioned for Zerto on {{site.data.keyword.cloud_notm}}. This model is suitable if you want a managed service for Zerto Virtual Replication only, without the {{site.data.keyword.cloud_notm}} Resiliency Orchestration service on the {{site.data.keyword.cloud_notm}}.
 
 For more information, see [IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top).
 
 ## Procedure to request managed services for Zerto on IBM Cloud
+{: #managing_zerto_services-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Getting Started** from the left navigation pane.
 2. Scroll down the page and under **Order additional managed services**, click the **Managed Services for Zerto on IBM Cloud** card.
@@ -42,7 +46,8 @@ For more information, see [IBM Resiliency Disaster Recovery as a Service](https:
 6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html), [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html), or [Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html) instance.
 7. To add the service to an existing instance, click **Add to Existing Instance**, select the instance that you want from the list, and then confirm that you want to proceed with the order by clicking **Provision**.
 
-### Related links
+## Related links
+{: #managing_zerto_services-related}
 
 * [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 * [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)

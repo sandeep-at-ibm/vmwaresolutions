@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,25 +13,30 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Ordering, viewing, and deleting Single-node Trial for Migration and App Modernization instances
+{: #cloud_modern_bundle_orderinginstance}
 
 Review the planning requirements before you order a Single-node Trial for Migration and App Modernization instance.
 
 ## Requirements and planning for ordering Single-node Trial for Migration and App Modernization instances
+{: #cloud_modern_bundle_orderinginstance-req}
 
 Ensure that you confirm the following requirements and complete the following tasks.
 
 ### Prerequisites for on-premises HCX instances
+{: #cloud_modern_bundle_orderinginstance-hcx-req}
 
 * Requires VMware vSphere and vCenter 5.5 or higher.
 * The vSphere environment must have distributed switches for the VMs that will be migrated to the {{site.data.keyword.cloud_notm}}.
 * The HCX Manager Virtual Appliance must be able to be deployed on a private network in the on-premises environment and must be allowed to access the public internet.
 
 ### IBM Cloud infrastructure account
+{: #cloud_modern_bundle_orderinginstance-account-req}
 
 * To use {{site.data.keyword.vmwaresolutions_short}} to order instances, you must have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account. The cost of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
 *  Configure the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Settings** from the left navigation pane.
 
 ### Instance name requirements
+{: #cloud_modern_bundle_orderinginstance-inst-name-req}
 
 Review the instance name requirements:
 * Only alphanumeric and dash (-) characters are allowed.
@@ -40,6 +45,7 @@ Review the instance name requirements:
 * The instance name must be unique within your account.
 
 ## Procedure to order Single-node Trial for Migration and App Modernization instances
+{: #cloud_modern_bundle_orderinginstance-procedure}
 
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** from the left navigation pane and then click **Single-node Trial for Migration and App Modernization** in the **Virtual Data Centers** section.
 2. On the **Single-node Trial for Migration and App Modernization** page, click **Continue**.
@@ -59,10 +65,12 @@ Review the instance name requirements:
    4. Click **Provision**.
 
 ### Results
+{: #cloud_modern_bundle_orderinginstance-results}
 
 The deployment of the instance starts automatically and the on-premises HCX on {{site.data.keyword.cloud_notm}} service activation key is ordered.
 
 #### Deployment process for HCX on IBM Cloud
+{: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
 
 The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. The following steps are completed by the {{site.data.keyword.vmwaresolutions_short}} automation process:
 1. Three subnets are ordered for HCX from the {{site.data.keyword.cloud_notm}} infrastructure:
@@ -90,6 +98,7 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. The foll
 6. The host name and IP address of the HCX Manager is registered with the DNS server of VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 #### Viewing instance details
+{: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
 You can check the status of the deployment by viewing the instance details. Click **Deployed Instances** from the left navigation pane and locate the **vCenter Server Instances** or **On-premises HCX Instances** table to view information about the instances that you ordered.
 
@@ -98,6 +107,7 @@ When the instance is successfully deployed, the components that are described in
 The status of the instance changes to **Ready to Use** and you receive a notification by email.
 
 ### What to do next
+{: #cloud_modern_bundle_orderinginstance-next}
 
 Install the on-premises HCX Enterprise Manager and configure the connection to your HCX on {{site.data.keyword.cloud_notm}} instance.
 
@@ -143,6 +153,7 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 {:important}
 
 ## Procedure to delete Single-node Trial for Migration and App Modernization instances
+{: #cloud_modern_bundle_orderinginstance-deleting-procedure}
 
 When you delete a Single-node Trial for Migration and App Modernization instance, the following components are released sequentially:
 
@@ -167,7 +178,8 @@ Complete the following steps to delete a Single-node Trial for Migration and App
    1. In the **Actions** column, click the Delete icon again.
    2. In the **Delete Instance** window, click **OK**.
 
-### Related links
+## Related links
+{: #cloud_modern_bundle_orderinginstance-related}
 
 * [vCenter Server and IBM Cloud Private guide](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
 * [Open a Ticket for IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US)

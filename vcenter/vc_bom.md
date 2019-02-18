@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server Bill of Materials
+{: #vc_bom}
 
 Review the Bill of Materials (BOM) information for VMware vCenter Server instances.
 
 ## VLANs BOM for vCenter Server instances
+{: #vc_bom-vlans}
 
 The following table details the BOM information for the vCenter Server VLANs.
 
@@ -29,6 +31,7 @@ Table 1. BOM for the VLANs in vCenter Server instances
 | VLAN3     | Private B, Portable | Assigned to VMware vSAN, if used.<br><br>Assigned to VMware NFS, if used.<br><br>Assigned to VMware vSphere vMotion. |
 
 ## Software BOM for vCenter Server instances
+{: #vc_bom-software}
 
 The following table details the BOM information for vCenter Server software components.
 
@@ -47,6 +50,7 @@ VMware vSAN is an optional component.
 {:note}
 
 ## Advanced configuration settings for ESXi servers
+{: #vc_bom-esxi-server-advance-config}
 
 Review the following table for an overview of the advanced configuration settings that are applied to ESXi servers. These settings depend on whether the vCenter Server instance is deployed in V2.2 or later, or upgraded to V2.2 or later from V2.1 or earlier.
 
@@ -75,6 +79,7 @@ Table 3. ESXi servers advanced configuration settings for vCenter Server instanc
   For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239).
 
 ## NSX and port group configuration settings
+{: #vc_bom-nsx-port-group-config}
 
 Review the following table for an overview of the VMware NSX and port group configuration settings for vCenter Server instances, and the differences between releases.
 
@@ -93,6 +98,7 @@ Table 4. NSX and port group configuration settings for vCenter Server instances
 | Port group SDDC-DPortGroup-External | **Port binding** set to **Ephemeral - no binding** | **Port binding** set to **Static binding** |
 
 ## Network MTU configuration settings
+{: #vc_bom-network-mtu-config}
 
 The vSphere cluster uses two vSphere Distributed Switches (vDS), one for public network connectivity and the other one for private network connectivity.
 
@@ -116,15 +122,18 @@ The settings do not apply to new clusters in the same {{site.data.keyword.CloudD
 For instances that were deployed in V2.0 or earlier, it is recommended that you update the Public Switch MTU setting to 1500.
 
 ### Updating the Public Switch MTU setting
+{: #vc_bom-procedure-update-public-switch-mtu-setting}
 
 To update the MTU setting for the Public Switch, complete the following steps in the VMware vSphere Web Client:
 1. Right-click the vDS and click **Edit Settings**.
 2. On the **Properties tab**, select the **Advanced** option.
 3. Ensure that the **Maximum MTU** value is set to 1500.
 
-   **Note:** When the MTU size in a vDS is changed, the attached uplinks (physical NICs) are brought down and up again. As a result, a brief outage occurs for the VMs that are using the uplink. Therefore, it is recommended to plan the MTU setting update during scheduled downtime.
+   When the MTU size in a vDS is changed, the attached uplinks (physical NICs) are brought down and up again. As a result, a brief outage occurs for the VMs that are using the uplink. Therefore, it is recommended to plan the MTU setting update during scheduled downtime.
+   {:note}
 
-### Related links
+## Related links
+{: #vc_bom-related}
 
 * [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)

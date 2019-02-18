@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Deleting Cloud Foundation instances in a multi-site configuration
+{: #sd_deletinginstance_multi}
 
 Before you plan to delete Cloud Foundation instances in a multi-site configuration, review the following considerations.
 
@@ -30,6 +31,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cyc
 {:note}
 
 ## Procedure to delete Cloud Foundation instances in a multi-site configuration
+{: #sd_deletinginstance_multi-procedure}
 
 1. Remove all services from the secondary Cloud Foundation instance.
 2. Ensure that you do not have any NSX objects that are expanded into the secondary instance that you want to delete.
@@ -39,7 +41,8 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cyc
 6. Repeat steps 1 - 5 for all secondary Cloud Foundation instances in your multi-site configuration.
 7. After you delete all secondary instances, you can also delete the primary instance from the {{site.data.keyword.vmwaresolutions_short}} console.
 
-### Related links
+## Related links
+{: #sd_deletinginstance_multi-related}
 
 * [Deleting Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
 * [Ordering, viewing, and removing services from Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)

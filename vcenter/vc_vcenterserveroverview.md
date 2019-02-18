@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server overview
+{: #vc_vcenterserveroverview}
 
 VMware vCenter Server on {{site.data.keyword.cloud}} is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of two (recommended three) {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, offers shared network-attached storage and dedicated software-defined storage options, and it includes the automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX.
 
@@ -27,6 +28,7 @@ If you purchased IBM-provided VMware licensing, you can upgrade the VMware NSX B
 You can add IBM-Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is also available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
 
 ## vCenter Server architecture
+{: #vc_vcenterserveroverview-archi}
 
 The following graphic depicts the high-level architecture and components of a three-node vCenter Server deployment.
 
@@ -34,16 +36,19 @@ Figure 1. vCenter Server high-level architecture for a three-node cluster
 ![vCenter Server architecture](vc_architecture.svg "vCenter Server high-level architecture for a three-node cluster")
 
 ### Physical infrastructure
+{: #vc_vcenterserveroverview-physical-infras}
 
 This layer provides the physical infrastructure (compute, storage, and network resources) to be used by the virtual infrastructure.
 
 ### Virtualization infrastructure (Compute and Network)
+{: #vc_vcenterserveroverview-virtualization-infras}
 
 This layer virtualizes the physical infrastructure through different VMware products:
 * VMware vSphere virtualizes the physical compute resources.
 * VMware NSX is the network virtualization platform that provides logical networking components and virtual networks.
 
 ### Virtualization management
+{: #vc_vcenterserveroverview-virtualization-mgmt}
 
 This layer consists of vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC), NSX Manager, two NSX ESGs, three NSX Controllers, and the IBM CloudDriver virtual server instance (VSI). The CloudDriver VSI is deployed on demand as needed for certain operations such as adding hosts to the environment.
 
@@ -54,6 +59,7 @@ In total, the base offering requires 38 vCPU and 67 GB vRAM that are reserved fo
 For more information about the architecture, see [{{site.data.keyword.vmwaresolutions_short}} architecture reference](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Technical specifications for vCenter Server instances
+{: #technical-specifications-for-vcenter-server-instances}
 
 The following components are included in your vCenter Server instance.
 
@@ -61,16 +67,18 @@ The availability and pricing of standardized hardware configurations might vary 
 {:note}
 
 ### Bare Metal Server
+{: #vc_vcenterserveroverview-bare-metal}
 
 You can order three or more {{site.data.keyword.baremetal_short}} with one of the following configurations:
 * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.  
 * **SAP-certified**: Intel Skylake or Intel Broadwell generation servers (Intel Xeon 6140/E5-2690/E7-8890 series) with your selected CPU model.
-* **Broadwell**: 2-CPU Intel Broadwell generation servers (Intel Xeon E5-2600/E7-4800 series) with your selected CPU model and RAM size.  
+* **Broadwell**: 2-CPU Intel Broadwell generation servers (Intel Xeon E5-2600/E7-4800 series) with your selected CPU model and RAM size. 
 
 If you plan to use vSAN storage, the configuration requires four {{site.data.keyword.baremetal_short}}.
 {:note}
 
 ### Networking
+{: #vc_vcenterserveroverview-networking}
 
 The following networking components are ordered:
 *  10 Gbps dual public and private network uplinks
@@ -84,6 +92,7 @@ The following networking components are ordered:
   * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic. This gateway is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
 ### Virtual Server Instances
+{: #vc_vcenterserveroverview-vsi}
 
 The following virtual server instances (VSIs) are ordered:
 * A VSI for IBM CloudBuilder, which is shut down after the instance deployment is completed.
@@ -92,6 +101,7 @@ The following virtual server instances (VSIs) are ordered:
 * (For instances V1.8 and earlier) A VSI for the snapshot-based backup of the management components, which keeps running after the instance deployment is completed.
 
 ### Storage
+{: #vc_vcenterserveroverview-storage}
 
 During initial deployment, you can choose between vSAN and NFS storage options.
 
@@ -99,6 +109,7 @@ For instances V2.8 and later, you can add NFS storage shares to an existing NFS 
 {:note}
 
 #### vSAN storage
+{: #vc_vcenterserveroverview-vsan-storage}
 
 The vSAN option offers customized configurations, with various options for disk type, size, and quantity:
 * Disk quantity: 2, 4, 6, or 8
@@ -111,6 +122,7 @@ The vSAN option offers customized configurations, with various options for disk 
 * High-Performance Intel Optane option, which provides two extra capacity disk bays for a total of 10 capacity disks. This option depends on the CPU model.
 
 #### NFS storage
+{: #vc_vcenterserveroverview-nfs-storage}
 
 The NFS option offers customized shared file-level storage for workloads with various options for size and performance:
 * Size: 20 to 12000 GB
@@ -120,10 +132,12 @@ The NFS option offers customized shared file-level storage for workloads with va
 If you choose the NFS option, one 2 TB and 4 IOPS/GB file share for management components are ordered.
 
 #### Local disk storage
+{: #vc_vcenterserveroverview-local-disk-storage}
 
 The local disks option, available to the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor Bare Metal configuration only, offers customized configurations with various options for disk count and disk type.
 
 ### Licenses (IBM-provided or BYOL) and fees
+{: #vc_vcenterserveroverview-license-and-fee}
 
 * VMware vSphere Enterprise Plus 6.5u1
 * VMware vCenter Server 6.5
@@ -132,14 +146,17 @@ The local disks option, available to the **SAP-certified** Quad Intel Xeon E7-88
 * Support and Services fee (one license per node)
 
 ## Technical specifications for vCenter Server expansion nodes
+{: #vc_vcenterserveroverview-expansion-node-specs}
 
 Each vCenter Server expansion node will deploy and incur charges for the following components in your {{site.data.keyword.cloud_notm}} account.
 
 ### Hardware for expansion nodes
+{: #vc_vcenterserveroverview-expansion-node-hardware}
 
 One Bare Metal Server with the configuration presented in [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ### Licenses and fees for expansion nodes
+{: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
 * One VMware vSphere Enterprise Plus 6.5u1
 * One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
@@ -155,7 +172,8 @@ Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
    {:important}
 
-### Related links
+## Related links
+{: #vc_vcenterserveroverview-related}
 
 * [vCenter Server Software Bill of Materials](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
 * [Planning vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_planning.html)

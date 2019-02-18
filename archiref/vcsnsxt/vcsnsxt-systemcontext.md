@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # System context
+{: #vcsnsxt-systemcontext}
 
 The system context diagram defines the key elements of a system, the boundary of the system and the entities that interact with it along with the interactions. It is a high-level diagram that provides the reader with an initial view of the system.
 
@@ -23,6 +24,7 @@ The four core components, from a network perspective, are as follows:
 - **IBM Cloud Services** - a wide range of services available from {{site.data.keyword.cloud_notm}} that are consumable. Service options include analytics, AI, and IoT as examples.
 
 ## Actors
+{: #vcsnsxt-systemcontext-actors}
 
 The system context diagram identifies the following actors.
 
@@ -37,6 +39,7 @@ Customer | The customer is an external actor who wants to consume services from 
 {{site.data.keyword.containerlong_notm}} | This is an IBM resource who manages the {{site.data.keyword.containerlong_notm}} Master Node of the service.
 
 ## Systems
+{: #vcsnsxt-systemcontext-systems}
 
 The system context diagram identifies the following systems.
 
@@ -52,6 +55,7 @@ CAM | {{site.data.keyword.cloud_notm}} Automation Manager (CAM) runs on {{site.d
 Containerized Applications | The apps that went through the application modernization journey and are now running as containers. For this reference architecture and in this example for Acme Skateboards, one of the containerized apps is a web server, which is part of the online presence workload.
 Watson | For this reference architecture and in this example for Acme Skateboards, Watson represents the AI service that is used in the “Concept Car” architecture.
 
-### Related Links
+## Related links
+{: #vcsnsxt-systemcontext-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

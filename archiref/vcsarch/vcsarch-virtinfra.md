@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-07"
+lastupdated: "2019-02-15"
 
 ---
 
 # Virtual infrastructure
+{: #vcsarch-virtinfra}
 
 The virtual infrastructure design includes the VMware software components that make up the virtual infrastructure layer of {{site.data.keyword.vmwaresolutions_full}}. These components include the software products that provide compute, storage, and network virtualization. The VMware products in this layer include vSphere ESXi, VMware NSX (V or T), and optionally, VMware vSAN.
 
@@ -16,6 +17,7 @@ Figure 1. Virtual infrastructure
 ![Virtual infrastructure](VCSv4RAdiagrams-RA-VirtInfra.svg)
 
 ## VMware vSphere design
+{: #vcsarch-virtinfra-vsphere}
 
 The vSphere ESXi configuration consists of five main elements: boot configuration, time synchronization, host access, user access, and configuration of DNS. Table 1 outlines the respective specifications for these. After configuration and installation of ESXi, the host is added to a VMware vCenter Server™ and is managed from there.
 
@@ -37,6 +39,7 @@ When configured with vSAN storage, a VMware on {{site.data.keyword.cloud_notm}} 
 For more details, see the {{site.data.keyword.cloud_notm}} running VMware Clusters solution architecture document.
 
 ## VMware vSAN design
+{: #vcsarch-virtinfra-vsan}
 
 For this design, VMware Virtual storage area network (vSAN) storage is employed within vCenter Server to provide shared storage for the vSphere hosts. vSAN aggregates the local storage across multiple ESXi hosts within a vSphere cluster that is represented as a single VM datastore. The compute nodes contain local disk drives for the ESXi OS and the vSAN datastore.
 
@@ -46,6 +49,7 @@ Figure 2. vSAN concept
 ![vSAN concept](VCSv4RAdiagrams-RA-VSAN.svg)
 
 ### Virtual SAN design
+{: #vcsarch-virtinfra-virtual-san}
 
 vSAN employs the following components:
 - Two–disk–group vSAN design, with each disk group consisting of two or more disks per disk group. One SSD or NVMe drive of the smallest size in the group serves as the cache tier and the remaining SSDs serve as the capacity tier.
@@ -53,12 +57,14 @@ vSAN employs the following components:
 - A single vSAN datastore is created by using all of the storage per cluster.
 
 ## Virtual network setup
+{: #vcsarch-virtinfra-virtual-net}
 
 For this design, the vSAN traffic traverses between ESXi hosts on a dedicated private VLAN. The two network adapters attached to the private network switch are configured within vSphere as a vSphere distributed switch (VDS) with both network adapters as uplinks.
 
 A dedicated vSAN kernel port group that is configured for the vSAN VLAN resides within the VDS. Jumbo frames (MTU 9000) are enabled for the private VDS. vSAN does not load balance traffic across uplinks. As a result, one adapter is active while the other is in standby to support redundancy. The network failover policy for vSAN is configured as “Explicit Failover” between physical network ports. See “Physical Network Design” section.
 
 ### Virtual SAN policy design
+{: #vcsarch-virtinfra-virtual-san-policy}
 
 After VMware Virtual SAN is enabled and configured, storage policies are configured that define the VM storage characteristics.
 
@@ -69,6 +75,7 @@ Alternatively, you can choose a RAID–6 configuration that uses FTT=2, requirin
 If a custom policy is configured, vSAN guarantees it if possible. However, if the policy cannot be guaranteed, it's not possible to provision a VM that uses the policy unless it's enabled to force provisioning. Storage policies must be reapplied upon the addition of new ESXi hosts or patching of the ESXi hosts.
 
 ### vSAN settings
+{: #vcsarch-virtinfra-vlan-sett}
 
 vSAN Settings are set based on experience in deploying VMware solutions within {{site.data.keyword.cloud_notm}}. This includes SIOC settings, explicit failover settings port group, and disk cache settings.
 - SSD drives are configured as no read ahead, write through, direct (NRWTD)
@@ -80,6 +87,7 @@ vSAN Settings are set based on experience in deploying VMware solutions within {
 - Configure the vSAN kernel ports to explicit failover
 
 ## iSCSI attached storage
+{: #vcsarch-virtinfra-iscsi-storage}
 
 Unlike NFS v3 attached storage, iSCSI attached storage supports active–active paths across all configured NIC card ports and target ports. Because of this, higher throughput can be achieved and is thus a desirable alternative to NFS attaching storage. This does come at the cost of greater complexity.
 
@@ -91,6 +99,7 @@ Figure 3. iSCSI storage attachment
 ![iSCSI storage attachment](VCSv4RAdiagrams-RA-iSCSI-LUN.svg)
 
 ### Virtual network setup for iSCSI
+{: #vcsarch-virtinfra-setup-iscsi}
 
 For this design, iSCSI traffic is allowed to use both private attached NIC card ports in an active, active configuration. Because vSphere allows only one NIC card port to be active on a particular port group within a vDS at a time, two port groups must be created (A and B) on the storage VLAN.
 
@@ -104,10 +113,12 @@ vDS Portgroup | Kernel port subnet | VMHBA
 **SDDC-Dprotgroup-iSCSI-B** | Subnet-B | vmhba64
 
 #### Storage I/O control - SIOC
+{: #vcsarch-virtinfra-sioa}
 
 iSCSI LUNS is provisioned and formatted to a single file VMFS file system per LUN. The default recommended SIOC setting is 90% of peak throughput.
 
 ## VMware NSX-V design
+{: #vcsarch-virtinfra-nsx-v}
 
 Network virtualization provides a network overlay that exists within the virtual layer. This provides the architecture with features such as rapid provisioning, deployment, reconfiguration, and destruction of on–demand virtual networks.
 
@@ -146,6 +157,7 @@ Attribute | Specification
 **Network** | Private A portable designated for management components
 
 ### Distributed switch design
+{: #vcsarch-virtinfra-distr-switch}
 
 The design uses a minimum number of distributed switches (vDS). The hosts in the cluster are connected to public and private networks. They are configured with two distributed virtual switches. The use of two switches follows the physical network separation of the public and private networks that are implemented within {{site.data.keyword.cloud_notm}}. The following diagram shows the VDS design:
 
@@ -208,6 +220,7 @@ iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
 iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 #### NSX configuration
+{: #vcsarch-virtinfra-nsx-config}
 
 This design specifies the configuration of NSX components and applies a basic topology with {{site.data.keyword.cloud_notm}} assigned IPs for egress into the NSX overlay IP space. The configuration consists of:
 - Management servers and controllers are installed an integrated into the vCenter web UI
@@ -226,6 +239,7 @@ Figure 6. Deployed example customer NSX topology
 ![Deployed Example Customer NSX topology](VCSv4RAdiagrams-RA-VCS-NSX-Topology-Customer-Example.svg)
 
 ## VMware NSX-T design
+{: #vcsarch-virtinfra-nsx-t}
 
 Unlike NSX-V (NSX on vSphere), VMware NSX-T is designed to address application frameworks and architectures that have heterogeneous endpoints and technology stacks. In addition to vSphere, these
 environments can include other hypervisors, KVM, containers, and bare metal. NSX is designed to span a software defined network and security infrastructure across platforms other than just vSphere alone. While it is possible to deploy NSX-T components without needing vSphere, this design focuses on NSX-T and its integration primarily within a vCenter Server vSphere automated deployment.
@@ -234,6 +248,7 @@ There are many advanced features within NSX-T such as firewall policies, inclusi
 Management Infrastructure is deployed during the initial vCenter Server cluster deployment in place of NSX-V.
 
 ### NSX-T vs NSX-V
+{: #vcsarch-virtinfra-nsx-t-nsx-v}
 
 For vSphere native NSX (NSX-V), review the following more well-known NSX-T objects with similar function to their NSX-V counterparts. Limitations and differences within a vSphere environment are also be discussed. Here is a table of typically used functions between T and V that correspond.
 
@@ -260,6 +275,7 @@ As follows:
 - As of NSX-T 2.4, the manager VM and the controller VM function are combined. This results in three controller manager VMs being deployed. If on the same subnet, they use and internal network load balancer. If across different subnets, an external load balancer is required.
 
 ### Resource requirements
+{: #vcsarch-virtinfra-resource-req}
 
 In this design, the NSX-T Manager-controller VMs are deployed on the initial cluster. Additionally, each controller manager is assigned a VLAN–backed IP address from the private portable address block that is designated for management components and configured with the DNS and NTP servers that are discussed in section 0. A summary of the NSX Manager installation is shown in following table.
 
@@ -281,6 +297,7 @@ Figure 7. NSX-T Manager network overview
 ![NSX-T Manager network overview](VCSv4RAdiagrams-RA-VCS-NSX-Overview.svg)
 
 ### Deployment considerations
+{: #vcsarch-virtinfra-deployment}
 
 With NSX-T on vSphere, the N-VDS must be assigned the physical adapters within the hosts. As an N-VDS can only be configured within NSX-T Manager, this implies that if redundancy is to be maintained, no physical adapters are available for native local switch or vDS assignment in a cluster that houses both the NSX-T components and the associated overlay network components.
 
@@ -307,6 +324,7 @@ Table 11. NSX-T component specification
 
 
 ### Transport zones and N-VDS
+{: #vcsarch-virtinfra-transport-zones}
 
 Transport zones dictate which hosts and which VMs can participate in the use of a particular network. A transport zone does this by limiting the hosts that can "see" a logical switch—and, therefore, which VMs can be attached to the logical switch. A transport zone can span one or more host clusters. This design calls for transport zones to be created as follows:
 
@@ -319,6 +337,7 @@ Transport zone name | VLAN/VXLAN | N-VDS name | Uplink teaming policy
 **Private-VLAN** | VLAN | SDDC-Private | NFS,vSAN,iSCSI-A&B Default
 
 ### Transport nodes
+{: #vcsarch-virtinfra-transport-nodes}
 
 Transport nodes define the physical server objects or VMs that participate in the virtual network fabric. Review the following table to understand the design.
 
@@ -331,6 +350,7 @@ Transport node type | N-VDS | Uplink profile | IP assignment | Physical NICs
 **Physical Edge** | SDDC-Private | SDDC-Private-uplink | IP Pool | eth0, eth2
 
 ### Uplink profiles
+{: #vcsarch-virtinfra-uplink-profiles}
 
 An uplink profile defines policies for the links from hypervisor hosts to NSX-T logical switches or from NSX Edge nodes to top-of-rack switches.
 
@@ -343,6 +363,7 @@ Uplink profile Name | VLAN | Included teamings | MTU
 **SDDC-Storage-Uplink** | Storage VLAN | vSAN, iSCSI-A&B,NFS | 9000
 
 ### Teaming
+{: #vcsarch-virtinfra-teaming}
 
 Table 15. NSX-T NIC port teaming specification
 
@@ -358,10 +379,12 @@ Teaming name | Failover or Loadbalance | Active NIC | Standby NIC
 **vMotion** | Failover| Uplink 2 | Uplink 1
 
 ### VNI pools
+{: #vcsarch-virtinfra-vni-pools}
 
 Virtual Network Identifiers (VNIs) are similar to VLANs to a physical network. They are automatically created when a logical switch is created from a pool or range of IDs. This design uses the default VNI pool that is deployed with NSX-T.
 
 ## Logical switches
+{: #vcsarch-virtinfra-logical-switches}
 
 An NSX-T logical switch reproduces switching functions, broadcast, unknown unicast, multicast (BUM) traffic, in a virtual environment that is completely decoupled from underlying hardware.
 
@@ -379,6 +402,7 @@ Logical switch name | VLAN |Transport zone | Uplink teaming policy
 **SDDC-LS-External** | Default | Public-VLAN | Default
 
 ### Edge cluster
+{: #vcsarch-virtinfra-edge-cluster}
 
 Within this design, a single virtual edge cluster is provisioned for use by management and customer workloads. The virtual edge cluster can house multiple instances of T0 Gateways. As described earlier, multiple T0 edge gateway instances can be instantiated on a single edge cluster, each with its own routing tables. See the following figure which diagrams the functional components of an NSX-T edge cluster.
 
@@ -389,18 +413,22 @@ Figure 9. Management T0 gateway
 ![Management T0 Gateway](VCSv4RAdiagrams-Topology-0.svg)
 
 #### Tier 0 logical gateway
+{: #vcsarch-virtinfra-tier-0}
 
 An NSX-T Tier-0 logical router provides an on and off gateway service between the logical and physical network. For this design, multiple T-0 gateways are deployed for the needs of management, add on products and optionally for customer chosen topologies.
 
 #### Tier 1 logical gateway
+{: #vcsarch-virtinfra-tier-1}
 
 An NSX-T Tier-1 logical gateway has downlink ports to connect to NSX-T Data Center logical switches and uplink ports to connect to NSX-T Data Center tier-0 logical routers only. They run in the kernel level of the hypervisor they are configured for and not as a virtual or physical machine. For this design, one or more T-1 logical gateways are created for the needs of customer chosen topologies.
 
 #### Tier 1 to Tier 0 route advertisement
+{: #vcsarch-virtinfra-tier-1-tier-0}
 
 To provide Layer three connectivity between VMs connected to logical switches that are attached to different tier-1 logical gateways, it is necessary to enable tier-1 route advertisement towards tier-0. No need to configure a routing protocol or static routes between tier-1 and tier-0 logical routers. NSX-T creates static routes automatically when you enable route advertisement. For this design, route advertisement is always enabled for any IC4V automation created T-1 gateways.
 
 ### Preconfigured topologies
+{: #vcsarch-virtinfra-preconfig-topo}
 
 Workload to T1 to T0 gateway – virtual edge cluster
 
@@ -432,5 +460,6 @@ For a complete understanding of how ICP functions on vCenter Server, see the ICP
 As of this design, you have the option not to delete these IP ranges if the vCenter Server instance is decommissioned and deleted.
 
 ## Related links
+{: #vcsarch-virtinfra-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

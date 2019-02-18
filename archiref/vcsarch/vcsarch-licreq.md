@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-02-06"
 {:important: .important}
 
 # License requirements
+{: #vcsarch-licreq}
 
 Within this design, there are multiple components that require licenses. This information captures the minimum licenses that are required for the environment to operate correctly.
 
@@ -76,5 +77,6 @@ Data at rest encryption||*
 Stretched cluster with local failure protection||*
 
 ## Related links
+{: #vcsarch-licreq-related}
 
 * [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

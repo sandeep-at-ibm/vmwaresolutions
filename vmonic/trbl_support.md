@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2018-12-11"
 {:important: .important}
 
 # Contacting IBM Support
+{: #trbl_support}
 
 If you need help with {{site.data.keyword.vmwaresolutions_full}}, create an {{site.data.keyword.cloud_notm}} Support ticket from the {{site.data.keyword.vmwaresolutions_short}} console to get assistance.
 
 ## Procedure to submit a Support ticket from the IBM Cloud for VMware Solutions console
+{: #trbl_support-procedure}
 
 1. Go to https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Log in to the console with your **IBMid** account.

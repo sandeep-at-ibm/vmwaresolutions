@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -19,16 +19,18 @@ lastupdated: "2019-01-23"
 {:table: .aria-labeledby="caption"}
 
 # Getting started with IBM Cloud for VMware Solutions
+{: #getting-started}
 
 In this getting started tutorial, we take you through the process of ordering an instance and some add-on services for it.
 {:shortdesc}
 
 ## Before you begin
-{: #prereqs}
+{: #getting-started-prereqs}
 
 Before you start to work with {{site.data.keyword.vmwaresolutions_full}}, review the following important information about browser requirements, users accounts, deployment options, and add-on services.
 
 ### Browser requirements
+{: #getting-started-browser-req}
 
 The following browsers are supported:
   *  Mozilla Firefox
@@ -41,6 +43,7 @@ Microsoft Internet Explorer is not supported.
 For optimal viewing and working on the {{site.data.keyword.vmwaresolutions_short}} console, set the screen resolution to at least 1024 px width by 500 px height.
 
 ### User accounts
+{: #getting-started-user-accts}
 
 You need an {{site.data.keyword.cloud_notm}} account and an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account. These accounts must meet certain requirements.
 
@@ -69,6 +72,7 @@ For more information, see the following topics:
 * [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)
 
 ### Deployment offerings
+{: #getting-started-depl-offerings}
 
 Review and choose your deployment offering.
 
@@ -105,6 +109,7 @@ Review and choose your deployment offering.
   </table>
 
 ### Add-on services
+{: #getting-started-add-on-services}
 
 Review and choose add-on services for your deployment offering.
 
@@ -165,6 +170,7 @@ Review and choose add-on services for your deployment offering.
    </table>
 
 ## Step 1: Accessing the IBM Cloud for VMware Solutions console
+{: #getting-started-step1}
 
 The {{site.data.keyword.vmwaresolutions_short}} console is the interface where you order and manage your deployments. Each deployment is managed as an instance in the console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.cloud_notm}} infrastructure customer portal.
 
@@ -173,12 +179,14 @@ To access the {{site.data.keyword.vmwaresolutions_short}} console:
 2. Log in to the console with your **IBMid**.
 
 ## Step 2: Configuring your user account and settings
+{: #getting-started-step2}
 
 Before you order an instance, you must enter the user name and API key of your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account on the **Settings** page of the console.
 
 For information about how to configure your user account and settings, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
 
 ## Step 3: Ordering an instance
+{: #getting-started-step3}
 
 After you decide upon a deployment offering, which is managed as an instance in the console, begin the ordering process.
 
@@ -191,6 +199,7 @@ For information about how to order an instance, see the following topics based o
 * [Ordering VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
 
 ## Step 4: Viewing the instance
+{: #getting-started-step4}
 
 After you place an instance order in **Step 3**, the deployment of the instance starts automatically. You can track the status of the deployment by viewing the instance details. When the instance deployment is completed, you can view the summary and detailed information of the instance and its add-on services on the instance details page too.
 
@@ -202,6 +211,7 @@ For information about how to view the instance you ordered, see the following to
 * [Viewing VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
 
 ## Step 5: Managing add-on services for the instance
+{: #getting-started-step5}
 
 If you ordered add-on services for your instance, you can manage the services as well.
 
@@ -211,5 +221,6 @@ For information about how to manage the services, see the following topics:
 * [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
 
 ## Next step
+{: #getting-started-next}
 
 Manage your instance from the {{site.data.keyword.vmwaresolutions_short}} console or the VMware vSphere Web Client.

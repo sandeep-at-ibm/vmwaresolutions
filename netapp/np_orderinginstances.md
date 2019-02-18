@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Ordering NetApp ONTAP Select instances
+{: #np_orderinginstances}
 
 To deploy a VMware virtualized platform with a dedicated and highly available software-define storage appliance, order a NetApp ONTAP Select instance.
 
 ## Requirements
+{: #np_orderinginstances-req}
 
 Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
@@ -26,10 +28,12 @@ Do not modify any values that are set during instance order or deployment. Doing
 {:important}
 
 ## System settings
+{: #np_orderinginstances-sys-settings}
 
 When you order a NetApp ONTAP Select instance, you must specify the following basic settings.
 
 ### Instance name
+{: #np_orderinginstances-instance-name}
 
 The instance name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
@@ -38,10 +42,12 @@ The instance name must meet the following requirements:
 * The instance name must be unique within your account.
 
 ## Network interface settings
+{: #np_orderinginstances-network-interface-settings}
 
 You must specify the following network interface settings when you order a NetApp ONTAP Select instance.
 
 ### Host name prefix
+{: #np_orderinginstances-host-name-prefix}
 
 The host name prefix must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
@@ -49,6 +55,7 @@ The host name prefix must meet the following requirements:
 *  The maximum length of the host name prefix is 10 characters.
 
 ### Subdomain label
+{: #np_orderinginstances-subdomain-label}
 
 The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
@@ -57,6 +64,7 @@ The subdomain label must meet the following requirements:
 *  The subdomain label must be unique within your account.
 
 ### Domain name
+{: #np_orderinginstances-domain-name}
 
 The root domain name must meet the following requirements:
 * The domain name must consist of two or more strings that are separated by period (.)
@@ -69,16 +77,20 @@ The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (
 {:note}
 
 ## Licensing settings
+{: #np_orderinginstances-licensing-settings}
 
 You must upload four NetApp licensing files, one for each of the four {{site.data.keyword.baremetal_short}}. Contact your NetApp sales team to obtain the appropriate licensing for your high performance or high capacity deployment.
 
 ## Bare Metal Server settings
+{: #np_orderinginstances-bare-metal-settings}
 
 ### Data center location
+{: #np_orderinginstances-dc-location}
 
 You must select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.
 
 ### Bare Metal Server configuration
+{: #np_orderinginstances-bare-metal-config}
 
 Select a Bare Metal Server configuration based on your requirements:
 * **High Performance (Medium)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128-GB RAM / 22 1.9 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 59 TB
@@ -89,10 +101,12 @@ Select a Bare Metal Server configuration based on your requirements:
 {:note}
 
 ### Number of Bare Metal Servers
+{: #np_orderinginstances-bare-metal-number}
 
 The number of ESXi servers of a NetApp ONTAP Select instance is 4 by default. You cannot change it. All the ESXi servers share configuration.
 
 ## Procedure to order NetApp ONTAP Select instances
+{: #ordering-netapp-ontap-select-instances}
 
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** on the left navigation pane, and then click **NetApp ONTAP Select** in the **Virtual Data Centers** section.
 2. On the **NetApp ONTAP Select** page, click **Create**.
@@ -110,6 +124,7 @@ The number of ESXi servers of a NetApp ONTAP Select instance is 4 by default. Yo
     5. Click **Provision**.
 
 ## Results
+{: #np_orderinginstances-results}
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
@@ -118,6 +133,7 @@ When the instance is successfully deployed, the components that are described in
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
 ## What to do next
+{: #np_orderinginstances-next}
 
 View and manage the NetApp ONTAP Select instance that you ordered.
 
@@ -130,7 +146,8 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-### Related links
+## Related links
+{: #np_orderinginstances-related}
 
 * [Viewing NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
 * [Deleting NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)

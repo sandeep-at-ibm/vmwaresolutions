@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-14"
 
 ---
 
 # Offering comparison chart
+{: #inst_comp_chart}
 
 Review the following chart to understand the differences in functions support for VMware Cloud Foundation instances, VMware vCenter Server instances, VMware vCenter Server with Hybridity Bundle instances, and VMware vSphere clusters.
 
@@ -34,12 +35,14 @@ Table 1. Supported functions for Cloud Foundation, vCenter Server, vCenter Serve
 | Add-on services | Supported, not including HCX on {{site.data.keyword.cloud_notm}}. | Supported, not including HCX on {{site.data.keyword.cloud_notm}}. Upgrade to the vCenter Server with Hybridity Bundle is available. | Supported, including HCX on {{site.data.keyword.cloud_notm}}. | Not supported by the automation of this solution, but you can bring and install your own software. |
 
 ## Notes
+{: #inst_comp_chart-notes}
 
 <sup>1</sup> According to a validated design and with verification during deployment.
 
 <sup>2</sup> You can increase the number of ESXi servers in a vSAN cluster to a maximum of 64. For more information, see _How many ESXi servers can I add to a cluster?_ in [FAQ about ESXi servers](/docs/services/vmwaresolutions/vmonic/faq_esxi.html).
 
-### Related links
+## Related links
+{: #inst_comp_chart-related}
 
 * [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Cloud Foundation overview](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)

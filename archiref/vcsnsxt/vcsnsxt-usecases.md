@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Use cases
+{: #vcsnsxt-usecases}
 
 ## VMware workload migration to IBM Cloud
+{: #vcsnsxt-usecases-wkld-mig}
 
 Acme Skateboards wants to seamlessly extend their on-premises VMware SDDC instance into a VMware vCenter Server on {{site.data.keyword.cloud}} instance. They must keep their business up and running and minimize their downtime. Reconfiguring their applications to run in the cloud isn't an optimal solution.
 
@@ -33,6 +35,7 @@ The loosely coupled interconnectivity between on-premises and {{site.data.keywor
 - **Migration of security policies** – if NSX is used on-premises any security policies, firewalls, and so on, are moved along with the workload.
 
 ## Hybrid architecture deployment
+{: #vcsnsxt-usecases-hybrid-archi-deployment}
 
 Acme Skateboards wants to deploy a hybrid architecture on the {{site.data.keyword.cloud_notm}} consisting of vCenter Server with Hybridity Bundle and {{site.data.keyword.icpfull_notm}} for their journey to application modernization. Their requirements are to run their databases on VMs, the apps and web interfaces in containers, and would like to use a common set of tools for network and security management.
 
@@ -62,6 +65,7 @@ This creates a loosely coupled interconnectivity between on-premises and {{site.
 
 Using this solution Acme Skateboards was successfully able to migrate their on-premises VMware workloads to the {{site.data.keyword.cloud_notm}} meeting their requirements of little to no downtime and no application reconfiguration. For more information about vCenter Server with Hybridity Bundle, see [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
 
-### Related Links
+## Related links
+{: #vcsnsxt-usecases-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

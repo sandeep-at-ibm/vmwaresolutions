@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-05"
+lastupdated: "2019-02-14"
 
 ---
 
 # Caveonix RiskForesight on IBM Cloud for VMware Solutions
+{: #caveonix-on-vcs}
+
 Caveonix RiskForesight on {{site.data.keyword.vmwaresolutions_full}} provides an automated deployment of the Caveonix RiskForesight solution in an “all-in-one” virtual machine (VM) deployment. It is initially configured with a Service Provider and a Tenant and integrated into vCenter and NSX Manager. The Asset Repository is populated with the VMware vCenter Server infrastructure components and an Application and Sub-Application configured that represents the VMware infrastructure platform. On the dashboard, the cyber-risk and compliance risk scores are available as well as compliance reports for the required compliance regimes.
 
 The following list is an overview of the initial workflows:
@@ -24,6 +26,8 @@ The following list is an overview of the initial workflows:
 
 
 ## Use cases
+{: #caveonix-on-vcs-use-cases}
+
 Typical use cases are as follows:
 - Customer wants to determine whether their infrastructure and workloads are meeting compliance requirements.
 -	Customer wants to assess their potential cyber risk and compliance impact on their workloads and how to mitigate.
@@ -36,6 +40,8 @@ Typical use cases are as follows:
 -	Customer wants to build and enforce security and compliance policies based on predictive analytics engine that uses network traffic flows across all applications.
 
 ## Key benefits to customers
+{: #caveonix-on-vcs-benefits}
+
 The key benefits that are provided by Caveonix RiskForesight on IC4VS include:
 -	Eliminating blind spots, by viewing multi-dimensional grouping of assets across each location, organization, and application group in hybrid cloud.
 -	Building and enforcing security and compliance policies based on predictive analytics engine that uses network traffic flows across all applications.
@@ -44,6 +50,7 @@ The key benefits that are provided by Caveonix RiskForesight on IC4VS include:
 -	Maintaining a “full-stack” understanding of the workload vulnerabilities and configuration issues at the infrastructure, platform, and application level in the context of threats and compliance requirements.
 -	Enabling the enterprise to implement the National Institute of Standards and Technology (NIST) proactive Risk Management Framework.
 
-## Related Links
+## Related links
+{: #caveonix-on-vcs-related}
 
 *   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # vCenter Server on IBM Cloud with Hybridity Bundle overview
+{: #vcs-hybridity-intro}
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle is a hosted private cloud that helps you to quickly and easily extend your on-premises infrastructure into the cloud for secure and seamless infrastructure hybridity and true application mobility.
 
@@ -29,6 +30,7 @@ Platform integration options of the vCenter Server Hybridity Bundle aren't limit
 
 The extensive portfolio of services and multi-offering integration options available for the vCenter Server Hybridity Bundle deliver a truly hybrid platform making Hybridity as a service possible.
 
-### Related links
+## Related links
+{: #vcs-hybridity-intro-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)

@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-26"
+lastupdated: "2019-02-15"
 
 ---
 
 # Creating baselines and attaching to inventory objects
+{: #vum-baselines}
 
 Baselines have a collection of one or more patches, extensions, service packs, bug fixes, or upgrades, and can be classified as patch, extension, or upgrade baselines. Baseline groups are assembled from existing baselines. Host baseline groups can have a single upgrade baseline, and various patch and extension baselines. Virtual machine and virtual appliance baseline groups can have up to three upgrade baselines: one VMware Tools upgrade baseline, one virtual machine hardware upgrade baseline, and one virtual appliance upgrade baseline.
 
@@ -32,7 +33,8 @@ To use baselines and baseline groups, you must attach them to selected inventory
 2. Click the cluster object that you want to scan.
 3. Click **Attach Baseline**, and then select the two pre-defined Patch Baselines, then click **OK**.
 
-### Related links
+## Related links
+{: #vum-baselines-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Ordering vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_orderinginstance}
 
 To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instance. Your vCenter Server with Hybridity Bundle instance order includes the VMware Hybrid Cloud Extension (HCX) licensing and entitles you to the VMware HCX on {{site.data.keyword.cloud_notm}} service. You can also add services, such as [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html) for disaster recovery.
 
 ## Requirements for ordering vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_orderinginstance-req}
 
 Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
@@ -37,10 +39,12 @@ Don't modify any values that are set during instance order or deployment. Doing 
 {:important}
 
 ## System settings
+{: #vc_hybrid_orderinginstance-sys-settings}
 
 You must specify the following system settings when you order a vCenter Server with Hybridity Bundle instance.
 
 ### Instance name
+{: #vc_hybrid_orderinginstance-inst-name}
 
 The instance name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
@@ -49,10 +53,12 @@ The instance name must meet the following requirements:
 * The instance name must be unique within your account.
 
 ### Primary or secondary
+{: #vc_hybrid_orderinginstance-primary-secondary}
 
 Select whether to order a new primary instance or a secondary instance for an existing primary instance.
 
 ## Licensing settings
+{: #vc_hybrid_orderinginstance-licensing-settings}
 
 The following VMware licenses are included with your vCenter Server with Hybridity Bundle instance order. You must specify the edition for the NSX and vSAN licenses.
 
@@ -62,21 +68,25 @@ The following VMware licenses are included with your vCenter Server with Hybridi
 * vSAN 6.6 (Advanced or Enterprise edition)
 
 ### Attention
+{: #vc_hybrid_orderinginstance-attention}
 
 * vCenter Server with Hybridity Bundle instances do not support Bring Your Own License.
 * The minimum license editions are indicated on the user interface. If different component editions are supported, you can select the edition that you want.
 
 ## Bare Metal Server settings
+{: #vc_hybrid_orderinginstance-bare-metal-settings}
 
 Bare Metal settings are based on your selection of {{site.data.keyword.CloudDataCent_notm}} and bare metal server configuration.
 
 Four ESXi servers are required for both the initial and post-deployment clusters for vSAN configurations. All ESXi servers share the same configuration. In post-deployment, you can add four more clusters.
 
 ### Data center location
+{: #vc_hybrid_orderinginstance-dc-location}
 
 Select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.
 
 ### Skylake
+{: #vc_hybrid_orderinginstance-skylake}
 
 When you select **Skylake**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
@@ -89,6 +99,7 @@ Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 ### Broadwell
+{: #vc_hybrid_orderinginstance-broadwell}
 
 When you select **Broadwell**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
@@ -103,10 +114,12 @@ Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Number of Bare Metal Servers
+{: #vc_hybrid_orderinginstance-bare-metal-number}
 
 Four ESXi servers are selected by default and cannot be changed.
 
 ## Storage settings
+{: #vc_hybrid_orderinginstance-storage-settings}
 
 VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
@@ -119,10 +132,12 @@ VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle insta
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
 
 ## Network interface settings
+{: #vc_hybrid_orderinginstance-network-interface-settings}
 
 You must specify the following network interface settings when ordering a vCenter Server with Hybridity Bundle instance.
 
 ### Host name prefix
+{: #vc_hybrid_orderinginstance-host-name-prefix}
 
   The host name prefix must meet the following requirements:
   *  Only alphanumeric and dash (-) characters are allowed.
@@ -130,6 +145,7 @@ You must specify the following network interface settings when ordering a vCente
   *  The maximum length of the host name prefix is 10 characters.
 
 ### Subdomain label
+{: #vc_hybrid_orderinginstance-subdomain-label}
 
 The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
@@ -138,6 +154,7 @@ The subdomain label must meet the following requirements:
 *  The subdomain label must be unique within your account.
 
 ### Domain name
+{: #vc_hybrid_orderinginstance-domain-name}
 
 The root domain name must meet the following requirements:
 * The domain name must consist of two or more strings that are separated by period (.)
@@ -150,6 +167,7 @@ The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (
 {:note}
 
 ### Public or private network
+{: #vc_hybrid_orderinginstance-public-private-network}
 
 Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and are not available if you select the private option:
 
@@ -159,12 +177,14 @@ Network interface card (NIC) enablement settings are based on your selection of 
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Order New VLANs
+{: #vc_hybrid_orderinginstance-new-vlans}
 
 Select **Order New VLANs** to order one new public VLAN and two new private VLANs.
 
 One public VLAN and two private VLANs are required for your instance order. The two private VLANs are trunked into each Bare Metal Server.
 
 ### Select Existing VLANs
+{: #vc_hybrid_orderinginstance-existing-vlans}
 
 Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
 
@@ -172,12 +192,12 @@ One public VLAN and two private VLANs are required for your instance order. The 
 
 Select **Select Existing VLANs** to reuse existing public and private VLANs and choose from the available VLANs and subnets.
 
-
 * Ensure that the firewall configuration on the selected VLANs does not block the management data traffic.
 * Ensure that all of the VLANs you select are in the same pod because ESXi servers cannot be provisioned on mixed-pod VLANs.
 {:important}
 
 ### DNS configuration
+{: #vc_hybrid_orderinginstance-dns-config}
 
 Select the Domain Name System (DNS) configuration for your instance:
 
@@ -194,14 +214,17 @@ You have 30 days to activate the VMs.
 For more information on ordering Windows licensing, see [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Services settings
+{: #vc_hybrid_orderinginstance-addon-services}
 
 When you order a vCenter Server with Hybridity Bundle instance, you can also order additional services. For more information about the services, see [Available services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances).
 
 ## Order summary
+{: #vc_hybrid_orderinginstance-order-summary}
 
 Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the **Order Summary** section on the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
 
 ## Procedure to order vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_orderinginstance-procedure}
 
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
 2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server with Hybridity Bundle** card and click **Create**.
@@ -231,13 +254,14 @@ Based on your selected configuration for the instance and add-on services, the e
 10. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.  
 For more information about how to provide settings for a service, see the corresponding service ordering topic.
 
-8. On the **Order Summary** pane, verify the instance configuration before you place the order.
+11. On the **Order Summary** pane, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
    2. Review the estimated cost of the instance. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you order the instance.
    4. Click **Provision**.
 
 ## Results
+{: #vc_hybrid_orderinginstance-results}
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
@@ -248,6 +272,7 @@ When the instance is ready to use, the status of the instance is changed to **Re
 When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.
 
 ## What to do next
+{: #vc_hybrid_orderinginstance-next}
 
 View and manage the vCenter Server with Hybridity Bundle instance that you ordered.
 
@@ -263,7 +288,8 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 
    Exceptions to these activities include managing the shared storage file shares from the 	{{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-### Related links
+## Related links
+{: #vc_hybrid_orderinginstance-related}
 
 * [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
 * [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)

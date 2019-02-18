@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Scaling capacity
+{: #solution_scaling}
 
 After initial deployment, you can scale out the compute capacity from the {{site.data.keyword.vmwaresolutions_full}} console. The design supports the following scale-out paths:
 * Addition of new sites managed by separate vCenter Servers
@@ -20,6 +21,7 @@ After initial deployment, you can scale out the compute capacity from the {{site
 * Addition of new hosts to an existing cluster
 
 ## Adding more sites
+{: #solution_scaling-sites}
 
 {{site.data.keyword.vmwaresolutions_short}} can leverage the {{site.data.keyword.cloud_notm}} world-wide data center presence and integrated network backbone to allow for various cross-geography use cases to be deployed and functioning within a fraction of the time that it would take to build such an infrastructure from scratch.
 
@@ -35,6 +37,7 @@ In this design, the definition of a multi-site deployment is comprised of the fo
 Additionally, the NSX manager in secondary sites may be set up as secondary NSX managers for the NSX manager on the primary site.
 
 ## Adding new clusters
+{: #solution_scaling-clusters}
 
 You can also scale out the compute capacity by creating a new cluster from the {{site.data.keyword.vmwaresolutions_short}} console and ordering new hosts that are automatically added to the new cluster.
 
@@ -48,10 +51,12 @@ When the initial cluster is converted into a management-only cluster, the migrat
 {:note}
 
 ## Adding ESXi hosts into existing clusters
+{: #solution_scaling-hosts}
 
 You can scale out an existing cluster by ordering hosts from the {{site.data.keyword.vmwaresolutions_short}} console.  The new hosts are automatically added to the cluster. Note that you may need to adjust the HA reservation policy for the cluster based on your reservation requirements.
 
-### Related links
+## Related links
+{: #solution_scaling-related}
 
 * [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
 * [Design overview](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)

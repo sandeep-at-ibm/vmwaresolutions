@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-01"
+lastupdated: "2019-02-14"
 
 ---
 
 # Caveonix RiskForesight
+{: #caveonix-intro}
 
 Enterprises undergoing a digital transformation are adopting a hybrid cloud strategy that includes workloads in both the private cloud and multiple external cloud environments, namely the public cloud or a cloud managed by a service provider. Most enterprises are also faced with the challenge of protecting an ever-increasing attack surface while simultaneously maintaining compliance with industry and regulatory compliance requirements. To protect this expanding attack surface, enterprises need continuous visibility into workloads from the moment they spin up to the moment they spin down. To do this, enterprises must maintain a “full-stack” understanding of the workload vulnerabilities and configuration issues at the infrastructure, platform, and application level in the context of threats and compliance requirements. Enterprises need predictive analytics to “connect the dots” to give a proactive view of their cyber and compliance risk posture in this vast, new hybrid world.
 
@@ -49,7 +50,8 @@ The three key services available through the RiskForesight GUI are; Risk Managem
 -	Full drill down capability for event / log-based analysis
 -	Alerts and notifications
 
-## Related Links
+## Related links
+{: #caveonix-intro-related}
 
 *   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
 *   [Caveonix website](https://www.caveonix.com/)

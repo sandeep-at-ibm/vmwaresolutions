@@ -4,15 +4,18 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-16"
 
 ---
 
 # Network stretching and virtual machine migration
+{: #vcshcx-stretching}
 
 ## Network stretching
+{: #vcshcx-network-stretching}
 
 ### Concepts and best practices for network stretching
+{: #vcshcx-stretching-best-practices-network}
 
 The glue that bridges the client-side network to the cloud side VXLAN is a sophisticated multi-tunnel VPN that consists of proprietary HCX technology. It is not based on NSX, but does work with NSX and extend its capability. This process is controlled by the client-side vCenter web user interface (UI) and automates the deployment and bring up of both endpoints on the client and cloud side. Selecting the network to stretched is done individually or in batch.
 
@@ -27,6 +30,7 @@ Rather than accessing each VM to shut off the in-guest client backup schedule, n
 Bandwidth of a single L2C is theoretically 4 Gbps, however this can be the limit for all stretched networks within a single L2C pair and is not achievable by a single stretched network. A single stretched network can achieve ~1 Gbps given there is enough underlay bandwidth allotted and latency is low (<~10 ms).
 
 ### Process to stretch a network
+{: #vcshcx-stretching-process-stretch}
 
 To stretch a network (VLAN or VXLAN) with HCX, complete the following steps from the client-side vCenter web UI.
 
@@ -37,14 +41,17 @@ To stretch a network (VLAN or VXLAN) with HCX, complete the following steps from
 Network progress is monitored in the vCenter client tasks pane.
 
 ### Proximity Routing option
+{: #vcshcx-stretching-prox-routing}
 
 Without any type of route optimization, extended networks route back to the client side for any L3 access. This trombone-ing introduces an inefficient traffic pattern as packets need to travel back and forth between client (source) and cloud even for cases where both source and destination VMs are within the cloud. The Proximity Routing feature of HCX was designed to address this and local egress of traffic.
 
 ## vMotion
+{: #vcshcx-stretching-vmotion}
 
 The vMotion capability within HCX extends the vSphere vMotion capability to work across differing versions of vSphere, separate SSO domains, and various types of network connectivity across the internet. HCX assumes the network it uses to connect across is not secure and always moves traffic through encrypted tunnels regardless of the type of connectivity.
 
 ### Concepts and best practices for vMotion
+{: #vcshcx-stretching-best-practices-vmotion}
 
 HCX is essentially a vMotion two-way proxy. Each instance of HCX emulates a single ESXi host within the vSphere data center, outside any clusters that is itself a “front” for the cloud gateway fleet component (CGW). A proxy host appears for each HCX site that is linked to the currently viewed site. When a vMotion is initiated to a remote host, the local ESXi host will vMotion that VM to the local proxy ESXi host that fronts the CGW that also is maintaining an encrypted tunnel with the CGW on the remote side.
 
@@ -59,14 +66,17 @@ Use vMotion where:
 - Scheduled migration is not required.
 
 ### Operation
+{: #vcshcx-stretching-operation}
 
 Use the HCX web UI snap-in portal or the vSphere web client contextual extension menus to initiate a cross cloud vMotion. In either case, the same migration wizard comes up. For the contextual menus, only a single VM is selected for migration operations. For the portal, multiple VMs can be selected.
 
 Reverse migrating VMs is only possible from the web UI portal that uses the **Reverse migration** check box in the HCX Migration wizard.
 
 ## Bulk migration
+{: #vcshcx-stretching-bulk-mig}
 
 ### Concepts and best practices for bulk migration
+{: #vcshcx-stretching-best-practices-bulk-mig}
 
 The bulk migration capability of HCX uses vSphere replication to migrate disk data while re-creating the VM on the destination vSphere HCX instance. A migration of a VM incurs the following workflow:
 - Creation of a new VM on the destination side and its corresponding virtual disks.
@@ -89,8 +99,10 @@ The following are disadvantages of bulk migration over vMotion:
 - VMs that depend on disk ordering and disk UUIDs (Oracle RAC) can have issues and have disks that show up differently as the UUIDs are changed, which might change the OS paths to the virtual disk devices.
 
 ## Migration type best practices
+{: #vcshcx-stretching-mig-type-best-practices}
 
 ### Shared disk clusters
+{: #vcshcx-stretching-shared-disk-clusters}
 
 Oracle RAC, MS Exchange, and MS-SQL clusters are examples of applications where two or more VMs participate in a cluster that requires shared disk across all VMs or cluster nodes. VMware multi-writer flag needs to be enabled on all of the VM nodes for disks that are part of the application cluster (non-OS virtual disks). VMs with the multi-writer-flag enabled for any virtual disk are not supported.
 
@@ -118,10 +130,12 @@ the cluster.
 13. Verify other cluster nodes operation.
 
 ### General VMs
+{: #vcshcx-stretching-general-vms}
 
 After confidence is built around the function of HCX, bulk migration must be employed. Bulk migration is necessary where redundant applications are concerned. For example, web servers and where many 100s or 1000s VMs are to be migrated.
 
 ### VMs using direct attached NAS
+{: #vcshcx-stretching-vms-direct-nas}
 
 NFS is typically employed for use to share data across many servers, such as web server content. iSCSI can be employed across VM nodes that comprise of an application cluster such as email or RDBMS and is typically more latency sensitive than NFS.
 
@@ -135,6 +149,7 @@ Post migration, iSCSI volumes can be mirrored with the OS to another local cloud
 Following the migration lifecycle, ensure to test with Development or staging applications before attempting with production. QoS can be employed for the underlay tunnel traffic (udp 500 / 4500) between the L2C HCX appliances that carry latency sensitive stretched L2 networks.
 
 ## Network swing
+{: #vcshcx-stretching-network-swing}
 
 If the goal is data center evacuation into the {{site.data.keyword.cloud_notm}}, then the next to last step before HCX removal is the network swing. Network swing achieves a migration of the network subnet that houses the migrated VMs from the source data center onto an NSX overlay network within the {{site.data.keyword.cloud_notm}}.
 
@@ -156,5 +171,6 @@ The following are considerations and implications:
 - VMware admins, network admins (including customer / WAN vendors), application owners need to be involved. Even if it is not planned that the changes impact a particular system or network equipment.
 
 ## Related links
+{: #vcshcx-stretching-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   

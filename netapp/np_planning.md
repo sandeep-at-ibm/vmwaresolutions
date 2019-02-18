@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Requirements and planning for NetApp ONTAP Select instances
+{: #np_planning}
 
 Review the following requirements before you order your NetApp ONTAP Select instances. Plan your instance based on the {{site.data.keyword.CloudDataCent}} location and your workload performance and capacity requirements.
 
 ## IBM Cloud account requirements
+{: #np_planning-account-req}
 
 The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## IBM Cloud Data Center availability
+{: #np_planning-dc-availability}
 
 The NetApp ONTAP Select deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following {{site.data.keyword.CloudDataCents_notm}} are available for NetApp ONTAP Select deployment:
 
@@ -55,7 +58,8 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for NetApp ONTAP Se
 | WDC06 | Washington, DC | NA East | High Performance (Medium), High Performance (Large), High Capacity
 | WDC07 | Washington, DC | NA East | High Performance (Medium), High Performance (Large), High Capacity
 
-### Related links
+## Related links
+{: #np_planning-related}
 
 * [NetApp ONTAP Select overview](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
 * [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)

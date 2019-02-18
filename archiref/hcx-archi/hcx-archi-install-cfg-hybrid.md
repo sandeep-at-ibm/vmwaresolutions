@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Installing and configuring hybrid services
+{: #hcx-archi-install-cfg-hybrid}
 
 The installer provisions and configures a virtual machine for each service virtual appliance. The service virtual machines are deployed both on-premises and in the cloud.
 
 ## Prerequisites
+{: #hcx-archi-install-cfg-hybrid-prereq}
 
 * The HCX Manager must be installed on premises, and registered with a VCF/VCS HCX enabled cloud endpoint.
 * The target virtual data center must have sufficient resources.
 
 ## Configuration overview
+{: #hcx-archi-install-cfg-hybrid-config-ovw}
 
 The configuration procedure assumes that all service virtual appliances will be configured. However, they are not all required.
 * The Hybrid Cloud Gateway is required.
@@ -24,14 +27,14 @@ The configuration procedure assumes that all service virtual appliances will be 
 * To configure the Network Extension service, see the section _Configuring the Network Extension service_. The deployment of the optional appliance and can be deferred by returning to the Hybrid Services page and install the appliance later.
 
 ## Starting the Hybrid Service Virtual Appliance installation and configuration
+{: #hcx-archi-install-cfg-hybrid-start-hsva}
 
 The simple web interface is used to install the service virtual appliances and to configure more Layer 2 Concentrators.
-
-### Prerequisite for installing and configuring the Hybrid Service Virtual Appliance
 
 The HCX Manager must be installed and registered with the VCF/VCS HCX enabled cloud endpoint.
 
 ### Procedure to install and configure the Hybrid Service Virtual Appliance
+{: #hcx-archi-install-cfg-hybrid-proc-install}
 
 1. Log in to the vSphere Web Client.
 2. On the **Home** tab, click the **Hybrid Cloud Services** icon.
@@ -40,19 +43,18 @@ The HCX Manager must be installed and registered with the VCF/VCS HCX enabled cl
 5. On the **Choose Hybrid Services** page, select the services to be installed, and click **Next**.
 
 ### What to do next
+{: #hcx-archi-install-cfg-hybrid-start-hsva-next}
 
 1. The next step is to configure the Hybrid Cloud Gateway if required.
 2. A Layer 2 concentrator can be added to an existing installation at any time if sufficient resources are available to support the extension.
 
 ## Configuring the Hybrid Cloud Gateway
+{: #hcx-archi-install-cfg-hybrid-config-hcg}
 
-Configure the Hybrid Cloud Gateway service virtual appliance.
-
-### Prerequisites for configuring the Hybrid Cloud Gateway
-
-Follow the steps in _Starting the Hybrid Service Virtual Appliance installation and configuration_ and check Hybrid Cloud Gateway.
+Configure the Hybrid Cloud Gateway service virtual appliance. Before you begin, follow the steps in _Starting the Hybrid Service Virtual Appliance installation and configuration_ and check Hybrid Cloud Gateway.
 
 ### Procedure to configure the Hybrid Cloud Gateway
+{: #hcx-archi-install-cfg-hybrid-proc-config-hcg}
 
 On the **Hybrid Cloud Gateway** page, provide the following values and click **Next**:
 * **Network** - The switch that connects the Hybrid Cloud Gateway management interface. In use cases 1 and 2, it can be a standard virtual switch or a virtual distributed switch. For any configuration that uses Layer 2 extension, it must be a virtual distributed switch.
@@ -64,14 +66,12 @@ On the **Hybrid Cloud Gateway** page, provide the following values and click **N
 * Under **Extended (optional)**, choose the vMotion network if applicable, and set the **admin** and **root** passwords. These passwords are specifically for the Hybrid Cloud Gateway appliance. The user name and password do not have to match the ones configured for the Hybrid Cloud Services appliance.
 
 ## Configuring the Network Extension service
+{: #hcx-archi-install-cfg-hybrid-config-nes}
 
-Configure a Network Extension service either for single path deployment, or for a stand-alone network extension on an alternative path.
-
-### Prerequisites for configuring the Network Extension service
-
-Select the Network Extension service. If the Single Path configuration is installed, **Network Extension** is your only choice.
+Configure a Network Extension service either for single path deployment, or for a stand-alone network extension on an alternative path. Before you begin, select the Network Extension service. If the Single Path configuration is installed, **Network Extension** is your only choice.
 
 ### Procedure to configure the Network Extension service
+{: #hcx-archi-install-cfg-hybrid-proc-config-nes}
 
 1. On the **Network Extension Service** page, select a virtual distributed switch from the **Distributed Switch** menu. When you install a standard Layer 2 Concentrator, the **Route stretched networks via Hybrid Cloud Gateway** check box will be available. It is not there for the high throughput L2C.
 2. If **Route stretched networks via Hybrid Cloud Gateway** is selected, the installer determines a reasonable placement for the Layer 2 Concentrator (based on the switch) and populates the placement information. Otherwise, the placement information must be manually entered in the next step.
@@ -87,10 +87,12 @@ Select the Network Extension service. If the Single Path configuration is instal
 6. Click **Next**. On the **Ready to complete** page, review the information, and click **Finish**.
 
 ## Monitoring service appliance deployment
+{: #hcx-archi-install-cfg-hybrid-monitor}
 
 The task console can be used to monitor deployment progress for a service virtual machine.
 
 ### Procedure to monitor service appliance deployment
+{: #hcx-archi-install-cfg-hybrid-monitor-proc}
 
 1. Log in to the vSphere Web Client. On the **Home** tab, click the **Hybrid Cloud Services** icon.
 2. On the **Hybrid Cloud Services** pane, click the **Hybrid Services** tab. The virtual appliance deployment can be monitored from the Task console.
@@ -102,14 +104,12 @@ The task console can be used to monitor deployment progress for a service virtua
 8. Review the configuration summary for the hybrid service virtual appliances.
 
 ## Viewing tunnel status
+{: #hcx-archi-install-cfg-hybrid-view-tunnel}
 
-View the Cloud Gateway tunnel status.
-
-### Prerequisites for viewing tunnel status
-
-The network extension service must be up if before you can stretch a network.
+View the Cloud Gateway tunnel status. The network extension service must be up before you can stretch a network.
 
 ### Procedure to view tunnel status
+{: #hcx-archi-install-cfg-hybrid-proc-view-tunnel}
 
 1. To check the tunnel status from the Web client, select **Hybrid Cloud Services** in the inventory, and click the **Hybrid Services** tab.
 2. To confirm a successful Hybrid Cloud Gateway tunnel, view the CGW (the acronym for the Hybrid Cloud Gateway) status as **Active**, and on the far right, the tunnel is color-coded green.
@@ -117,13 +117,16 @@ The network extension service must be up if before you can stretch a network.
 ## Stretching a Layer 2 Network to IBM Cloud
 
 Extend a Layer 2 network from the on-premises data center to VCF/VCS HCX enabled cloud.
+{: #hcx-archi-install-cfg-hybrid-stretch-layer-2}
 
 ### Prerequisites for stretching a Layer 2 Network to IBM Cloud
+{: #hcx-archi-install-cfg-hybrid-prereq-stretch-layer-2}
 
 * Only VLAN tagged port groups (other than VLAN type None, or VLAN ID 0) can be stretched. VXLANs are considered VLANs.
 * This procedure uses the **Extend Network** wizard. This wizard must be run from the vSphere® Web Client networking inventory view. Although the wizard is visible from other views, it must be run from the inventory context to get the correct information.
 
 ### Procedure to stretch a Layer 2 Network to IBM Cloud
+{: #hcx-archi-install-cfg-hybrid-proc-stretch-layer-2}
 
 1. Log in to the vSphere Web Client. On the **Home** tab in the central pane, click the **Networking** icon in the **Inventories** list.
 2. In the **Networking** hierarchy, identify the port group for the network to be extended.
@@ -138,6 +141,7 @@ Extend a Layer 2 network from the on-premises data center to VCF/VCS HCX enabled
 7. To track the progress of the network extension, go to the **Recent Tasks** window, click the **All** tab, and view **All Users’ Tasks**.
 8. To open the Task console, click **More Tasks**. The network extension is done when the **Extend Network** task status is **Completed**.
 
-### Related links
+## Related links
+{: #hcx-archi-install-cfg-hybrid-related}
 
 * [Modifying or uninstalling HCX](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)

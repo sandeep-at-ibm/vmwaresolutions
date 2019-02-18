@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Physical infrastructure design
+{: #design_physicalinfrastructure}
 
 The physical infrastructure comprises the following components:
 
@@ -30,6 +31,7 @@ For more information about the physical components, see the Bill of Materials fo
 For more information about storage, see [Shared storage architecture](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
 ## Physical host design
+{: #design_physicalinfrastructure-host-design}
 
 Physical host refers to the {{site.data.keyword.baremetal_short}} in the environment that serves compute resources. The {{site.data.keyword.baremetal_short}} applied in this solution are certified by VMware and listed in the [VMware HCG](http://www.vmware.com/resources/compatibility/search.php).
 
@@ -50,12 +52,14 @@ The Bare Metal Server has the following specifications:
 * Number of Drives: 2 or more
 
 ## Physical network design
+{: #design_physicalinfrastructure-net-design}
 
 This section describes the physical network that is provided by the {{site.data.keyword.cloud_notm}} and the physical host connections (VLANs, MTU) that are associated with the physical hosts.
 
 The physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: public, private, and management. For an illustration of the three networks and how they work, see [The {{site.data.keyword.cloud_notm}} Network](https://www.ibm.com/cloud-computing/bluemix/our-network).
 
 ### Public network
+{: #design_physicalinfrastructure-public-net}
 
 {{site.data.keyword.CloudDataCents_notm}} and network points of presence (PoPs) have multiple 1 Gbps or 10-Gbps connections to the top-tier transit and peering network carriers.
 
@@ -66,16 +70,19 @@ Inside the data center, {{site.data.keyword.cloud_notm}} provides 1 Gbps or 10 G
 This multitier design allows the network to scale across racks, rows, and pods within an {{site.data.keyword.CloudDataCent_notm}}.
 
 ### Private network
+{: #design_physicalinfrastructure-private-net}
 
 All {{site.data.keyword.CloudDataCents_notm}} and PoPs are connected by a private network backbone. The private network is separate from the public network, and it enables connectivity to services in {{site.data.keyword.CloudDataCents_notm}} around the world. Moving data between {{site.data.keyword.CloudDataCents_notm}} is done via multiple 10 Gbps or 40-Gbps connections to the private network.
 
 Similar to the public network, the private network is multi-tiered in that servers and other infrastructure components are connected to aggregated back-end customer switches (BCS). These aggregated switches are attached to a pair of separate back-end customer routers (BCR) for L3 networking. The private network also supports the ability to use jumbo frames (MTU 9000) for physical host connections.
 
 ### Management network
+{: #design_physicalinfrastructure-mgmt-net}
 
 In addition to the public and private networks, each {{site.data.keyword.cloud_notm}} server is connected to an out-of-band management network. This management network, accessible via VPN, allows Intelligent Platform Management Interface (IPMI) access to the server independently of its CPU, firmware, and operating system for maintenance and administration purposes.
 
 ### Primary and portable IP blocks
+{: #design_physicalinfrastructure-ip-blocks}
 
 {{site.data.keyword.cloud_notm}} allocates two types of IP addresses to be used within the {{site.data.keyword.cloud_notm}} infrastructure:
 * Primary IP addresses are assigned to devices, Bare Metal, and virtual servers that are provisioned by {{site.data.keyword.cloud_notm}}. Do not assign any IP addresses in these blocks.
@@ -84,18 +91,21 @@ In addition to the public and private networks, each {{site.data.keyword.cloud_n
 Primary or portable IP addresses can be made routable to any VLAN within the customer account when **VLAN spanning** is enabled within the {{site.data.keyword.slportal}} or the account is configured as a **Virtual Routing and Forwarding (VRF)** account.
 
 ### VLAN spanning
+{: #design_physicalinfrastructure-vlan-spanning}
 
 **VLAN Spanning** is an {{site.data.keyword.slportal}} account setting that allows primary and portable subnet IP block of all VLANs within the account to be routable to each other. When the **VLAN Spanning** setting is disabled, IP blocks can still route to {{site.data.keyword.cloud_notm}} services, but not to each other.
 
 To allow transparent connection across various subnets where the solution components reside, you need to enable **VLAN Spanning** in the {{site.data.keyword.slportal}} account where the Cloud Foundation and vCenter Server instances are deployed.
 
-### Virtual Routing and Forwarding (VRF)
+### Virtual Routing and Forwarding
+{: #design_physicalinfrastructure-vrf}
 
-You can also configure the {{site.data.keyword.slportal}} account as a VRF account to provide similar functions to VLAN spanning, enabling automatic routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
+You can also configure the {{site.data.keyword.slportal}} account as a Virtual Routing and Forwarding (VRF) account to provide similar functions to VLAN spanning, enabling automatic routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
 
 The {{site.data.keyword.vmwaresolutions_short}} console cannot detect whether VRF is enabled in the {{site.data.keyword.slportal}}. You will receive a warning that reminds you to ensure that you enabled either **VLAN spanning** or VRF in your {{site.data.keyword.slportal}} account.
 
 ### Physical host connections
+{: #design_physicalinfrastructure-host-connect}
 
 Each physical host in the design has two redundant pairs of 10-Gbps Ethernet connections into each {{site.data.keyword.cloud_notm}} Top of Rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 x 10-Gbps connections. This allows networking interface card (NIC) connections to work independently from each other.
 
@@ -104,8 +114,9 @@ Figure 1. Physical host NIC connections
 ![Physical host NIC connections](physical_nic_connection.svg "Physical host NIC connections")
 
 ### VLANs
+{: #design_physicalinfrastructure-vlans}
 
-The {{site.data.keyword.vmwaresolutions_short}} offerings are designed with 3 VLANs, one public and two private, assigned upon deployment. As shown in Figure 2, the public VLAN is assigned to eth1 and eth3, and the private VLANs are assigned to eth0 and eth2.
+The {{site.data.keyword.vmwaresolutions_short}} offerings are designed with 3 VLANs, one public and two private, assigned upon deployment. As shown in the previous figure, the public VLAN is assigned to eth1 and eth3, and the private VLANs are assigned to eth0 and eth2.
 
 The public and the first private VLAN created and assigned in this design are untagged by default within the {{site.data.keyword.cloud_notm}}. The additional private VLAN is trunked on the physical switch ports and tagged within the VMware port groups that are using these subnets.
 
@@ -142,24 +153,29 @@ In this design, all VLAN-backed hosts and virtual machines are configured to poi
 The private network connections are configured to use a jumbo frame MTU size of 9000 to improve performance for large data transfers, such as storage and vMotion. This is the maximum MTU that is allowed within VMware and by {{site.data.keyword.cloud_notm}}. The public network connections use a standard Ethernet MTU of 1500. This must be maintained as any changes might cause packet fragmentation over the internet.
 
 ## Physical storage design
+{: #design_physicalinfrastructure-storage-design}
 
 Physical storage design consists of the configuration of the physical disks that are installed in the physical hosts and the configuration of the shared file-level storage. This includes the operating system disks of the vSphere ESXi hypervisor and the disks that are used for storage of the virtual machines (VMs). Storage for VMs can consist of local disks that are virtualized by VMware vSAN, or of shared file-level storage.
 
 ### Operating system disks
+{: #design_physicalinfrastructure-os-disks}
 
 The vSphere ESXi hypervisor is designed to be installed in a persistent location. As a result, the physical hosts contain two 1-TB SATA disks in RAID-1 configuration to support redundancy for the vSphere ESXi hypervisor.
 
 ### Virtual machine storage
+{: #design_physicalinfrastructure-vm-storage}
 
 This design allows for the option of using either VMware vSAN or shared file-level storage as the primary datastore for VMs.
 
 ### vSAN disks
+{: #design_physicalinfrastructure-vsan-disks}
 
 When used, VMware vSAN is configured by using an all-flash configuration. This design allows for several configuration options, including 2U and 4U chassis, various numbers of disks, and various disk sizes. All configurations use two vSAN disk groups, with one solid-state disk (SSD) for cache and one or more SSDs for capacity. All drives that are allocated for vSAN consumption are configured in single-disk RAID-0.
 
 For more information about the supported configurations, see the Bill of Materials for [Cloud Foundation instance](/docs/services/vmwaresolutions/sddc/sd_bom.html) or [vCenter Server instance](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
 
 ### Shared File-level storage across hosts
+{: #design_physicalinfrastructure-shared-storage}
 
 When using shared file-level storage, a 2-TB NFS share is attached to the hosts that comprise the initial VMware cluster. This share, which is known as the management share, is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX. The storage is attached by using the NFSv3 protocol and can support up to 4000 IOPS.
 
@@ -171,7 +187,8 @@ You can allocate and mount more file shares for your workloads at the time of pu
 
 {{site.data.keyword.CloudDataCents_notm}} that offer the 10 IOPS/GB performance tier also include provider-managed encryption of data at rest (AES-256 encryption), and are backed up by all-flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB. For more information about the shared NAS used in this solution, see [Shared storage architecture](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
-### Related links
+## Related links
+{: #design_physicalinfrastructure-related}
 
 * [Cloud Foundation Bill of Materials](/docs/services/vmwaresolutions/sddc/sd_bom.html)
 * [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter/vc_bom.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Removing the Hybridity Bundle from a vCenter Server instance
+{: #vc_hybrid_deletingbundle}
 
 To remove the Hybridity Bundle license from your vCenter Server instance, you must replace the VMware NSX and VMware vSAN rental license keys with Bring Your Own License (BYOL) keys in the VMware vSphere Web Client. Additionally, you must open a support ticket to cancel charges for the rental licenses.
 
@@ -20,6 +21,7 @@ Downgrading your license might cause your vCenter Server instance to fail. You c
 {:important}
 
 ## Important considerations before you remove the Hybridity Bundle from a multi-site environment
+{: #vc_hybrid_deletingbundle-considerations}
 
 Review the following considerations before you remove the Hybridity Bundle from a multi-site environment:
 
@@ -31,6 +33,7 @@ While removing the Hybridity Bundle from a multi-site environment, BYOL licenses
 {:note}
 
 ## Before you remove the Hybridity Bundle
+{: #vc_hybrid_deletingbundle-prereq}
 
 Verify the following requirements before you remove the Hybridity Bundle:
 
@@ -41,6 +44,7 @@ Verify the following requirements before you remove the Hybridity Bundle:
 * Optionally and if not already applied, you have BYOL keys available to apply for the VMware vCenter Server and VMware vSphere Enterprise Plus licenses.
 
 ## Procedure to remove the Hybridity Bundle
+{: #vc_hybrid_deletingbundle-procedure}
 
 1. Log in as **Administrator** to the VMware vSphere Web Client where you want to remove the Hybridity Bundle.
 2. Click **Home > Administration > Licensing > Licenses**.
@@ -106,7 +110,8 @@ Verify the following requirements before you remove the Hybridity Bundle:
   The IBM Support and Operations teams access the vCenter management layer of your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account to verify that the rental licenses have been removed before canceling the Hybridity Bundle rental license charges.
   {:note}
 
-### Related links
+## Related links
+{: #vc_hybrid_deletingbundle-related}
 
 * [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
 * [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)

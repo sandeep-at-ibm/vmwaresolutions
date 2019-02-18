@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # Managing system notifications
+{: #notifications}
 
 You can check notifications for the status of system or user operations. You can also use the information to investigate problems that might occur.
 
 ## Viewing notifications
+{: #notifications-view}
 
 1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Notifications** from the left navigation pane.
 2. View the summary about all notifications.
@@ -68,10 +70,12 @@ You can check notifications for the status of system or user operations. You can
 3. Click a notification row to view the details of the notification.
 
 ## Filtering notifications
+{: #notifications-filter}
 
 By default, all unread notifications are displayed. You can filter the notifications by status, severity, and type. To filter the notifications, select the check boxes only for the items that you want to display in the **Status**, **Severity**, or **Type** lists.
 
-### Related links
+## Related links
+{: #notifications-related}
 
 * [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [User account and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html)

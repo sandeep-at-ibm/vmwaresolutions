@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-01"
+lastupdated: "2019-02-15"
 
 ---
 
-#	Upgrading
+# Upgrading HCX components
+{: #vcshcx-upgrade}
 
 Upgrading HCX is a simple process that uses the client web user interface (UI) on the client-side
 HCX manager update and the cloud web UI on the cloud side HCX manager
@@ -19,6 +20,7 @@ System ID, provide both the client and cloud side. Use SSH into the HCX manager 
 /common/location` to locate the System ID.
 
 ## Related links
+{: #vcshcx-upgrade-related}
 
 * [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
 overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   

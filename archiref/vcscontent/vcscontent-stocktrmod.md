@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,18 +13,21 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Transform Stock Trader from WebSphere Application Server into Stock Trader in containers
+{: #vcscontent-stocktrmod}
 
 The next step in the Stock Trader modernization journey is to transform the workload from running in virtual machines (VMs) to running in containers.
 
 To continue, Todd and Jane run Transformation Advisor to analyze the Stock Trader workload, identify any migration complexity, and recommend changes. When ready, they use Transformation Advisor to deploy Stock Trader into Liberty containers that run in {{site.data.keyword.icpfull_notm}}.
 
 ## Prepare IBM Cloud Private
+{: #vcscontent-stocktrmod-prep-icp}
 
 Todd first needs to install {{site.data.keyword.icpfull_notm}}. Since Todd has his VMware on {{site.data.keyword.cloud_notm}} environment, he decides to use the {{site.data.keyword.cloud_notm}} Private Hosted offering that gives him a complete {{site.data.keyword.icpfull_notm}} instance that runs on VMware VMs in {{site.data.keyword.cloud_notm}}.
 
 The default dashboard provides a comprehensive user interface to manage the Kubernetes cluster, security, storage, and deploy from the catalog.
 
 ### Prepare storage
+{: #vcscontent-stocktrmod-prep-storage}
 
 {{site.data.keyword.cloud_notm}} Private Hosted is configured out of the box with GlusterFS and provides file storage across VMs as dedicated GlusterFS nodes. The value of GlusterFS is that it enables dynamic provisioning. If Todd wants to, he can set up extra VMs as NFS servers.
 
@@ -68,6 +71,7 @@ Whenever a new NFS volume is needed, Todd runs the following command to create a
 `chmod 777 <foldername>`
 
 ### Prepare image security
+{: #vcscontent-stocktrmod-prep-img-sec}
 
 In {{site.data.keyword.icpfull_notm}} V3.1, security is enhanced by requiring an image policy in place before any image is pulled into an {{site.data.keyword.icpfull_notm}} instance. The enhancement requires that you add an image policy for where the IBM images reside, *dockerhub/ibmcom*, and in the docker store.
 
@@ -79,12 +83,14 @@ Learn more in the [IBM Knowledge
 Center](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/manage_cluster/enable_pod_security.html).
 
 ## Deploy Transformation Advisor and Microclimate
+{: #vcscontent-stocktrmod-deploy-tam}
 
 After Todd has {{site.data.keyword.icpfull_notm}} running, he installs Transformation Advisor, along with Microclimate. Todd opens the [catalog](https://www.ibm.com/cloud/private/developer) and views all the available content.
 
 Todd searches for Transformation Advisor and Microclimate and installs them using the provided readme file instructions when he clicks the helm chart.
 
 ### Run Transformation Advisor
+{: #vcscontent-stocktrmod-run-trans-advisor}
 
 To run Transformation Advisor, Jane added the data collector in the VM running Stock Trader in WebSphere opens the [Transformation
 Advisor](https://developer.ibm.com/recipes/tutorials/using-the-transformation-advisor-on-ibm-cloud-private/) user interface to view the results.
@@ -98,6 +104,7 @@ In the end, the resulting Stock Trader layout options are:
 Todd didn't alter the data source during the transformation step. Transformation Advisor takes the WebSphere Application Server Network Deployment data source configuration and adds it to the Liberty container’s server.xml.
 {:important}
 
-### Related links
+## Related links
+{: #vcscontent-stocktrmod-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

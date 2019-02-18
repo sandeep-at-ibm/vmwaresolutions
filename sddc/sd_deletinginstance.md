@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Deleting Cloud Foundation instances
+{: #sd_deletinginstance}
 
 To release the components that you ordered in a VMware Cloud Foundation instance, delete the instance.
 
@@ -30,6 +31,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cyc
 {:note}
 
 ## Procedure to delete instances from the Deployed Instances page
+{: #sd_deletinginstance-procedure1}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
 2. In the **Cloud Foundation Instances** table, find the instance to delete.
@@ -40,6 +42,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cyc
    2. In the **Delete Instance** window, click **OK**.
 
 ## Procedure to delete instances from the instance details page
+{: #sd_deletinginstance-procedure2}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
 2. In the **Cloud Foundation Instances** table, click the instance to delete.
@@ -49,7 +52,8 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cyc
    1. Click the overflow menu icon next to **vCenter console** again and click **Delete Instance**.
    2. In the **Delete Instance** window, click **OK**.
 
-### Related links
+## Related links
+{: #sd_deletinginstance-related}
 
 * [Deleting Cloud Foundation instances in a multi-site configuration](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
 * [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)

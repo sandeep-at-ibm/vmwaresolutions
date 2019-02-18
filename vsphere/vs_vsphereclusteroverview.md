@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # VMware vSphere on IBM Cloud overview
+{: #vs_vsphereclusteroverview}
 
 VMware vSphere on {{site.data.keyword.cloud}} is a streamlined and optimized ordering platform for VMware. With this platform, you can build your own IBM-hosted VMware environment by customizing and ordering the VMware-compatible hardware based on your selected VMware components.
 
@@ -23,6 +24,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} does not automate the install
 Use this offering to create a new cluster of ESXi servers or scale out an existing cluster of ESXi servers in an {{site.data.keyword.CloudDataCent_notm}}. Depending on the VMware components that you select, you can start with just one ESXi server and then scale the cluster later as needed.
 
 ## Technical specifications for VMware vSphere on IBM Cloud clusters
+{: #technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters}
 
 Review the components of VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
@@ -30,6 +32,7 @@ The availability and pricing of standardized hardware configurations might vary 
 {:note}
 
 ### VMware components
+{: #vs_vsphereclusteroverview-specs-vmware-components}
 
 Select licenses (IBM-provided or BYOL) for the following VMware components:
 * VMware vSphere Enterprise Plus 6.0u2, 6.5u1, or 6.5u2
@@ -43,6 +46,7 @@ Select licenses (IBM-provided or BYOL) for the following VMware components:
    * VMware vRealize Log Insight
 
 ### Bare Metal Server
+{: #vs_vsphereclusteroverview-specs-bare-metal}
 
 Select one or more {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with your selected CPU model and RAM size:
 * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
@@ -56,11 +60,13 @@ Additionally, the following disk and networking specifications:
 * One RAID disk controller
 
 ### Networking
+{: #vs_vsphereclusteroverview-specs-network}
 
 * One VLAN (Virtual LAN) public VLAN and two private VLANs
 * (Optional) An HA-pair of FortiGate Security Appliance devices
 
 ### Storage
+{: #vs_vsphereclusteroverview-specs-storage}
 
 User-customized storage for vSAN configuration when the VMware vSAN component is selected:
 * Storage disk options of 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED
@@ -73,18 +79,22 @@ User-customized storage for vSAN configuration when the VMware vSAN component is
 * High-Performance Intel Optane option, which provides two extra capacity disk bays for a total of 10 capacity disks. This option depends on the CPU model.
 
 ## Technical specifications for vSphere cluster expansion nodes
+{: #vs_vsphereclusteroverview-expansion-node-specs}
 
 Each vSphere cluster expansion node deploys and incurs charges for the following components in your {{site.data.keyword.slportal}} account.
 
 ### Hardware for expansion nodes
+{: #vs_vsphereclusteroverview-expansion-node-specs-hardware}
 
 One {{site.data.keyword.cloud_notm}} Bare Metal Server with the hardware configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### Networking for expansion nodes
+{: #vs_vsphereclusteroverview-expansion-node-specs-network}
 
 One {{site.data.keyword.cloud_notm}} Bare Metal Server with the networking configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### VMware components for expansion nodes
+{: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
 * One {{site.data.keyword.cloud_notm}} Bare Metal Server with VMware vSphere Enterprise Plus 6.0u2 or 6.5u1  
 * Optional VMware components presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
@@ -92,7 +102,8 @@ One {{site.data.keyword.cloud_notm}} Bare Metal Server with the networking confi
 You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html).
 {:important}
 
-### Related links
+## Related links
+{: #vs_vsphereclusteroverview-related}
 
 * [VMware vSphere Software Bill of Materials](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
 * [Planning vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_planning.html)

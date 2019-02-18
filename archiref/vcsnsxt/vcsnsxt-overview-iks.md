@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-iks}
 
 ## IBM Cloud Kubernetes Service overview
+{: #vcsnsxt-overview-iks-ovw}
 
 The {{site.data.keyword.containerlong_notm}} provides an isolated and secure platform for managing containers. This platform is portable, extensible, and self-healing if a failover occurs.
 
@@ -34,10 +36,12 @@ The Kubernetes network model states three fundamental requirements:
 * The IP a container sees itself is the same IP as others see it.
 
 ### Namespaces
+{: #vcsnsxt-overview-iks-namespaces}
 
 Namespaces are a fundamental aspect of container networking. Namespaces are a feature of the Linux kernel that partitions kernel resources such that one set of processes sees one set of resources, while another set of processes sees a different set of resources. Resources include mount points, processIDs, network stack, IPC, and user IDs. Each namespace has a private set of IP addresses, its own routing table, socket listing, connection tracking table, firewall, and other network-related resources.
 
 ### Container Network Interface
+{: #vcsnsxt-overview-iks-container-network-interfaces}
 
 Kubernetes uses the Container Network Interface (CNI) as its plug-in-oriented networking solution. It consists of a specification and libraries for writing plug-ins to configure network interfaces in Linux containers. The CNI specification is lightweight as it deals only with the network connectivity of containers and the garbage collection of resources after containers are deleted.
 
@@ -72,6 +76,7 @@ There are three options for North-South traffic in {{site.data.keyword.container
     - An {{site.data.keyword.cloud_notm}} Virtual Router Appliance can be deployed as a VPN gateway to securely connect to an external network. Public or private network traffic can be routed through the VRA. The VRA creates an encrypted IPSec tunnel to the remote VPN gateway.
 
 ## IBM Cloud Kubernetes Service components
+{: #vcsnsxt-overview-iks-components}
 
 Worker nodes are managed by a Kubernetes master node that centrally controls and monitors all Kubernetes resources in the cluster. When a Developer deploys the resources for a container, the master node decides which worker node to deploy those resources on, taking into account the deployment requirements and available capacity in the cluster. The master and the worker nodes communicate with each other through secure TLS certificates and an openVPN connection via the {{site.data.keyword.cloud_notm}} public network. The Developers access the kube-apiserver, hosted on the Master Node via the internet.
 
@@ -90,6 +95,7 @@ From a network perspective the following components are deployed on the worker n
 -	**Load balancer** - A load balancer is a Kubernetes service that can be used to balance network traffic workloads in your cluster by forwarding public or private requests to an app. This component operates in the ibm-system namespace.
 
 ### Calico
+{: #vcsnsxt-overview-iks-calico}
 
 {{site.data.keyword.containerlong_notm}} uses Calico as its network provider. Calico uses a Layer 3 approach rather than overlay networks. Through the CNI plug-ins, Calico integrates with Kubernetes to provide a networking that users that use an approach of using a pure IP network combined with Border Gateway Protocol for route distribution.
 
@@ -115,22 +121,27 @@ The previous diagram shows the following Calico components:
 As the {{site.data.keyword.cloud_notm}} Private network forwards {{site.data.keyword.cloud_notm}} IP addressing schemas only, Calico is required to use IP-in-IP encapsulation of the inter-workload traffic in {{site.data.keyword.containerlong_notm}} to hide the pod network IP addresses. {{site.data.keyword.containerlong_notm}} uses IP-in-IP cross subnet mode.
 
 ### Calico in IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-iks-calico-iks}
 
 Calico is installed and configured automatically in {{site.data.keyword.containerlong_notm}}. Default policies are created to protect the Kubernetes cluster, with the option to create your own policies to protect specific services. IP-in-IP encapsulation is automatically configured to encapsulate only packets traveling across subnets and uses NAT for outgoing connections from your containers. Workload-to-WAN Traffic is also enabled automatically in the {{site.data.keyword.containerlong_notm}}, so no additional configuration of Calico is necessary.
 
 #### Network scalability with Calico
+{: #vcsnsxt-overview-iks-net-scalability-calico}
 
 Calico is built on a distributed scale-out architecture that gives it the ability to smoothly scale from a single Developer notebook to large enterprise deployments and uses the standard Linux data plane to deliver bare metal performance for virtual workloads.
 
 #### Security with Calico
+{: #vcsnsxt-overview-iks-sec-calico}
 
 Calico uses a set of policies that controls every component of the system, these policies can be configured to allow services and container instances to talk to each other only when needed. It uses IP addresses to identify container instances and creates policies based on these addresses. Kubernetes integration with Calico is infrastructure aware and can scale security policies based on changes with infrastructure.
 
 #### Integration with Calico
+{: #vcsnsxt-overview-iks-integration-calico}
 
 Calico provides a highly scalable networking and network policy solution for connecting Kubernetes pods based on the same IP networking principles as the internet. It can be deployed without encapsulation or overlays to provide high performance, high scale data center networking. Calico provides fine-grained, intent-based Network security policy for Kubernetes pods via its distributed firewall. Calico can also run in policy enforcement mode along with other networking solutions such as Flannel, also known as canal, or native GCE networking.
 
 ## IBM Cloud Kubernetes Service Networking
+{: #vcsnsxt-overview-iks-networking}
 
 By default, {{site.data.keyword.containerlong_notm}} sets up the cluster with access to a public VLAN and a private VLAN with the following.
 - A public IP address for each worker node, which gives worker nodes a public network interface. By default:
@@ -151,6 +162,7 @@ IP subnets for worker nodes and pods, are also automatically provisioned onto VL
     - The primary private subnet determines the private IP addresses that are assigned to worker nodes during cluster creation. Multiple clusters in on the same VLAN can share one primary private subnet.
     - The portable private subnet is bound to one cluster only and provides the cluster with 8 private IP addresses. 3 IPs are reserved for network functions. 1 IP is used by the default private Ingress ALB and 4 IPs can be used to create private load balancer networking services. Portable private IPs are permanent, fixed IP addresses that can be used to access load balancer services over the internet.
 
-### Related links
+## Related links
+{: #vcsnsxt-overview-iks-links}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

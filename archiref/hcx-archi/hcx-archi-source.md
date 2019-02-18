@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-02-06"
 {:important: .important}
 
 # VMware HCX on IBM Cloud source-side architecture
+{: #hcx-archi-source}
 
 This section describes the architecture of each HCX component that is deployed in the source environment.
 
 ## Introducing HCX
+{: #hcx-archi-source-intro-hcx}
 
 HCX technology seamlessly integrates vSphere vCenter networks into IBM Cloud VCF or VCS platforms. Hybrid networking extends on-premises vSphere vCenter networks into IBM Cloud, supporting bidirectional virtual machine (VM) mobility.
 
@@ -28,6 +30,7 @@ This introduction summarizes the tasks that can be accomplished and the features
 * HCX integrates with vSphere vCenter and is managed from the vSphere Web Client.
 
 ## Layer 2 Network Extension
+{: #hcx-archi-source-layer-2-ext}
 
 * Securely stretch a network from a vCenter to IBM Cloud.
 * HCX provides the High Throughput Layer 2 Concentrator (HT L2C).
@@ -36,28 +39,34 @@ This introduction summarizes the tasks that can be accomplished and the features
 * Virtual machines that are migrated through the Cloud Gateway and over stretched Layer 2 can retain their IP and MAC addresses.
 
 ## Virtual machine migration methods
+{: #hcx-archi-source-vm-mig-methods}
 
 ### Low downtime migration
+{: #hcx-archi-source-low-downtime-mig}
 
 Low downtime migration relies on vSphere Replication, which is a distributed technology implemented in the VMware ESX/ESXi hypervisor. HCX creates a replica of a live virtual machine, moves it to IBM Cloud, and performs a switchover to power off the source virtual machine and power on the migrated virtual machine.
 * The migration path is always through the Cloud Gateway. The transport can be the internet, a Layer 2 stretched network, or a Direct Connect line.
 * A virtual machine can be migrated multiple times in either direction.
 
 ### vMotion migration
+{: #hcx-archi-source-vmotion-mig}
 
 vMotion migration sses vMotion to transfer a live virtual machine across a network stretched to IBM Cloud. vMotion migration is also called zero downtime migration, or cross-cloud vMotion.
 
 ### Cold migration
+{: #hcx-archi-source-cold-mig}
 
 Transfer a powered-off virtual machine to IBM Cloud over a stretched network.
 
 ### Common features
+{: #hcx-archi-source-common-feat}
 
 * Optional software-defined WAN optimization, if installed, increases migration, throughput, and speed.
 * Migration can be scheduled to occur at a specified time.
 * A migrated virtual machine can keep its host name, virtual machine name, or both.
 
 ## Networking features
+{: #hcx-archi-source-net-feat}
 
 The following networking features are built into the Cloud Gateway and the Layer 2 Concentrators.
 
@@ -67,6 +76,7 @@ The following networking features are built into the Cloud Gateway and the Layer
   A security policy that is defined in the on-premises vCenter and assigned to a virtual machine can be migrated with the virtual machine.
 
 ## Understanding HCX
+{: #hcx-archi-source-understand-hcx}
 
 HCX supports a many-to-many relationship between on-premises vCenters and IBM Cloud. vCenter Server in Linked Mode is supported. This topic provides a high-level overview of how the installer interacts with both the on-premises data center and the IBM Cloud IBM Cloud.
 
@@ -77,6 +87,7 @@ A successful deployment requires:
 * The network must permit the appliances to communicate with both local and remote virtual appliances, and other VMs.
 
 ## Deployment overview
+{: #hcx-archi-source-deployment-ovw}
 
 The HCX Manager virtual machine is installed first, and it manages the installation of any other service virtual machine appliances on premises and in the cloud.
 
@@ -89,18 +100,21 @@ The following is a summary of the basic installation tasks:
 6. After the installation, HCX Manager controls both local and remote service virtual appliances. In the IBM Cloud, HCX manages the provisioned Software-Defined WAN components as a service.
 
 ### Deployment component performance considerations
+{: #hcx-archi-source-perf-consid}
 
 Architecture planning includes the VMs to be migrated, the networks used for virtual machine traffic, and the networks to be extended. This topic summarizes some maximum and minimum values for the deployment components.
 * vSphere vCenter. The HCX manager appliance must be installed on the vCenter that requires hybrid services. There can be only one HCX deployment per vCenter. This restriction applies to linked mode,  the HCX management appliance is only installed in the primary vCenter. HCX supports up to five registered vCenters in linked mode.
 * Cloud registrations. The maximum number of cloud endpoints is ten. To find the number of endpoints, Hybrid Cloud Services tracks vCenter connections to the cloud.
 
 ### Maximum number of migration and network extension
+{: #hcx-archi-source-max-mig-net-extension}
 
 * Max concurrent low downtime migration tasks - 15
 * Max concurrent L2C stretching tasks - 1
 * Max concurrent vMotion migration tasks - 1
 
 ### HCX Management Enterprise
+{: #hcx-archi-source-hcxme}
 
 The HCX Management Enterprise OVA is deployed on the source environment and registered as a plug-in for the vCenter Server managing the source vSphere infrastructure. This plug-in is then used to configure the migration and network services required to enable cross cloud migration and L2 network stretching.
 
@@ -112,6 +126,7 @@ Figure 1. Source Hybrid Cloud services
 ![Source Hybrid Cloud services](source_hybrid_cloud_services.svg)
 
 ### HCX Virtual Appliances
+{: #hcx-archi-source-hcxva}
 
 The installation package is an OVA file containing the Hybrid Cloud Services plug-in. This Hybrid Cloud
 Services management appliance is installed and configured and then used to configure the service appliance virtual machines.
@@ -121,6 +136,7 @@ Services management appliance is installed and configured and then used to confi
 * WAN Optimizers
 
 ### HCX Manager
+{: #hcx-archi-source-hcxm}
 
 The HCX Manager plug-in is deployed on-premises only. It manages the service virtual appliances for the SD-WAN. The HCX Manager virtual appliance is an extension to the source vCenter and is deployed as a virtual machine. This appliance’s file structure contains all the hybrid service virtual appliances. The HCX Manager oversees the deployment and configuration of the Cloud Gateway, the Layer 2 Concentrators, and WAN Optimization virtual appliance both on-premises and in the cloud.
 
@@ -129,6 +145,7 @@ The virtual appliance can be installed with either thin or thick provisioning fo
 After the service, virtual appliance configuration and deployment is done, log in to this virtual machine to use the Hybrid Cloud Services Management Portal.
 
 ### HCX Cloud Gateway
+{: #hcx-archi-source-hcg}
 
 The HCX Cloud Gateway establishes and maintains a secure channel between vSphere and the IBM Cloud.
 
@@ -140,6 +157,7 @@ Figure 2. Source Cloud Gateway
 ![Source Cloud Gateway](source_cloud_gateway.svg)
 
 ### WAN Optimizer
+{: #hcx-archi-source-wan-opt}
 
 HCX also provides software-defined WAN Optimization. The WAN Optimization appliance is a highly recommended component that performs WAN conditioning to reduce effects of latency. It also incorporates Forward Error Correction to negate packet loss scenarios, and deduplication of redundant traffic patterns. Altogether, these reduce bandwidth use and ensure the best use of available network capacity to expedite data transfer to and from IBM Cloud.
 
@@ -149,6 +167,7 @@ Figure 3. Source WAN Optimizer
 ![Source WAN Optimizer](source_wan_optimizer.svg)
 
 ### Layer 2 Concentrator
+{: #hcx-archi-source-layer-2-conc}
 
 The Network Extension Service is provided by the Layer 2 Concentrator (L2C). It extends a Layer 2 network from the on-premises vSphere data center to IBM Cloud and enables seamless migration between the data center and the cloud. The Layer 2 concentrator is required to stretch the on-premises network to IBM.
 
@@ -160,6 +179,7 @@ Figure 4. Source L2 Concentrator
 ![Source L2 Concentrator](source_l2_concentrator.svg)
 
 ### Migration only
+{: #hcx-archi-source-mig-only}
 
 The minimal configuration to perform migration only requires the HCX manager and the Cloud Gateway appliances. It is possible to migrate virtual machines without network extension. In this case, the virtual machine obtains a new IP address using the Guest Customization service after it is migrated.
 
@@ -170,6 +190,7 @@ WAN Optimization can improve speed in the situations described; configuring the 
 Migrating virtual machines on extended networks into IBM Cloud is advantageous because it reduces downtime and the configuration does not change on the virtual machine. The virtual machine can retain the IP addresses, MAC addresses, computer names, and virtual machine names. Retaining these properties greatly simplifies the migration to IBM Cloud and enables easy return trips to the on-premises data center. The Network Extension feature requires a vSphere Distributed Switch, which is available with vSphere Enterprise Plus Edition.
 
 ### IP address requirements
+{: #hcx-archi-source-ip-req}
 
 To deploy the HCX, the proper number of IP addresses must be available both on-premises and in the
 target IBM Cloud.
@@ -187,6 +208,7 @@ target IBM Cloud.
   * Add one if there is a separate vMotion network connection.
 
 ### Proximity Routing feature
+{: #hcx-archi-source-prox-routing-feat}
 
 Proximity Routing is a networking feature which can be enabled when the Cloud Gateway is configured.
 
@@ -203,8 +225,9 @@ To prevent tromboning, HCX uses intelligent route management to choose routes ap
 * Created in the cloud (on a stretched network).
 
 ### Asymmetric Routing with Proximity Routing Solution
+{: #hcx-archi-source-asymm-routing}
 
-In the diagram, the N*a components on the left reside in the on-premises data center, and the N*b
+In the diagram, the `N*a` components on the left reside in the on-premises data center, and the `N*b`
 component on the right reside in the cloud.
 
 R1 is the default gateway for N1-b, therefore, N1-b must return to R1 to route traffic through R2. To prevent asymmetric routing, HCX injects host routes into within the NSX overlay of the IBM Cloud VCS/VCF deployment If the virtual machine was newly created in the cloud, or it was moved with low downtime migration, the host route is injected immediately.
@@ -217,6 +240,7 @@ Figure 5. Asymmetric Routing with Proximity Routing solution
 ![Asymmetric Routing with Proximity Routing solution](asymmetric_routing_proximity_routing_solution.svg)
 
 ### MAC address retention
+{: #hcx-archi-source-mac-addr-ret}
 
 * The option to retain the MAC address is a check box in the migration wizard. It is only visible for replication-based migration.
 * By default, **Retain MAC** is enabled if the source virtual machine is in a stretched network, and disabled when the network is not stretched. If the MAC address is not retained the virtual machine obtains a new address when the migration is done. The decision to retain a MAC address or acquire a new one can impact the migration process and the post-migration network traffic flow.
@@ -227,6 +251,7 @@ Figure 5. Asymmetric Routing with Proximity Routing solution
   * The check box is on the Select destination network page during migration operation.
 
 ### Security Policy Migration
+{: #hcx-archi-source-sec-policy-mig}
 
 The Policy Migration feature enables NSX distributed firewall rules to be moved from an on-premises   vCenter to a VCF/VCS HCX enabled Cloud. Policy Migration is possible when using low downtime migration or vMotion to move a virtual machine over a network stretched with the High Throughput Layer 2 Concentrator.
 * The on-premises data center must be running NSX 6.2.2 or greater.
@@ -241,5 +266,6 @@ Rules that specify security groups or application groups for the source or desti
 Any change to the migrated policy is propagated to all VMs that use the policy.
 
 ## Related links
+{: #hcx-archi-source-related}
 
 * [Installing and configuring on the source](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)

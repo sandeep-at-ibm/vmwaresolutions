@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Multi-site architecture
+{: #nsx-multi_site}
 
 One key differentiator between {{site.data.keyword.cloud}} and other cloud offerings is the ability to provision dedicated compute capability across the globe and automatically to connect on-demand infrastructure with the network within your private {{site.data.keyword.cloud_notm}} account. The software defined network capabilities of VMware vCenter Server and VMware Cloud Foundation together with {{site.data.keyword.cloud_notm}} provide a granular global infrastructure that can be built within days. The following sections describe a multi-site architecture example of what can be achieved with the out of the box capability of vCenter Server or Cloud Foundation.
 
 ## Cross-vCenter NSX environment
+{: #nsx-multi_site-cross-env}
 
 The cross-vCenter NSX capability allows for linking in a primary, secondary relationship of up to nine NSX managers: one primary and eight secondary. While it isn't required to have vCenter servers in an Enhanced Linked Mode (ELM) relationship for cross-vCenter NSX to function, it provides the following benefits:
 
@@ -21,6 +23,7 @@ The cross-vCenter NSX capability allows for linking in a primary, secondary rela
 * Single pane of glass management across all sites for both NSX and normal vCenter functions
 
 ## Multi-site example
+{: #nsx-multi_site-example}
 
 The following example adds an NSX universal transport zone to the basic management and workload topologies that are discussed in the previous sections, and also includes the following characteristics:
 
@@ -34,6 +37,7 @@ Figure 1. Multi-site topology
 
 ![Multi-site topology](multisite_topology.svg "Multi-site topology")
 
-### Related links
+## Related links
+{: #nsx-multi_site-related}
 
 * [Networking services on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/nsx/networking_services.html)

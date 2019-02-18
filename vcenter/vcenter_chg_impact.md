@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2019-02-06"
 {:faq: data-hd-content-type='faq'}
 
 # Considerations about changing vCenter Server artifacts
+{: #vcenter_chg_impact}
 
 Changing users, resources, or subnets that are reserved for {{site.data.keyword.vmwaresolutions_full}} can impact management operations.
 
@@ -22,6 +23,7 @@ Use the **root** host user ID. The **ic4vroot** host user ID has been created fo
 {:important}
 
 ## automation ID
+{: #vcenter_chg_impact-automation-id}
 {: faq}
 
 The **automation** ID is a user account that is used by the automated operations provided in the {{site.data.keyword.vmwaresolutions_short}} console.
@@ -29,6 +31,7 @@ The **automation** ID is a user account that is used by the automated operations
 Users and passwords for the automated operations in the console must not be changed because the console operations that depend on those credentials might fail.
 
 ## Service-specific user accounts
+{: #vcenter_chg_impact-service-usr-account}
 
 Each service creates an internal user account in vCenter Server. This account is necessary so that management operations that are associated to a service can connect to vCenter Server to perform the operations on the service.
 
@@ -41,12 +44,14 @@ The `<service_name>` together with the `<service_uuid>` truncates to 20 characte
 {:note}
 
 ## VMware resources for vCenter Server instances (V1.9 and later)
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
 
 For instances deployed in V1.9 and later, if the vCenter Server instance is in a **Ready to Use** state, you can modify the VMware virtual datacenter, cluster, switches, port groups, and customer datastore names from the VMware vSphere Web Client.
 
 However, you must not change the name of the management datastore from its default value, which is  **vsanDatastore** for vSAN instances and **management-share** for Network File System (NFS) instances. In addition, you must not change the name of the network uplinks that are created during provisioning.
 
 ## VMware resources for vCenter Server instances (V1.8 and earlier)
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
 
 The following table lists the operations that might be impacted if the SSO administrator changes VMware vCenter Server resources outside of the {{site.data.keyword.vmwaresolutions_short}} console. If a solution to recover is available, it is provided as well.
 
@@ -75,6 +80,7 @@ Table 2. Operations that are impacted by SSH and shell access (local)
 If you choose to disable SSH or shell access, you should re-enable it temporarily before performing the indicated operations.
 
 ## Management subnets for vCenter Server instances
+{: #vcenter_chg_impact-mgmt-subnets}
 
 The following information discusses the subnets that are ordered by {{site.data.keyword.vmwaresolutions_short}} and it provides options for you to order extra subnets for your own use.
 

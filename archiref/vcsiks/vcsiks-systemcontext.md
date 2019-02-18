@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # System context
+{: #vcsiks-systemcontext}
 
 Figure 1. System context
 
@@ -25,6 +26,7 @@ The core components are as follows:
 - **{{site.data.keyword.cloud_notm}} Services** – {{site.data.keyword.cloud_notm}} Services are a wide range of consumable services available including analytics, AI, and IoT offerings.
 
 ## Actors
+{: #vcsiks-systemcontext-actors}
 
 Table 1. Actors
 
@@ -36,6 +38,7 @@ Customer | External actor who consumes services from the enterprise. For Acme Sk
 {{site.data.keyword.containerlong_notm}} | IBM resource that manages the {{site.data.keyword.containerlong_notm}} Master Node for the service.
 
 ## Systems
+{: #vcsiks-systemcontext-systems}
 
 Table 2. Systems
 
@@ -56,6 +59,7 @@ Watson | For this reference architecture and Acme Skateboards, Watson represents
 
 Application migration, networking, and security often are the most challenging aspects of application modernization. VMware vCenter Server on {{site.data.keyword.cloud_notm}}, VMware Hybridity, VMware NSX, {{site.data.keyword.cloud_notm}} Private, and the {{site.data.keyword.containerlong_notm}} address these challenges and enable you to build resilient, secure, and robust modern applications.
 
-### Related links
+## Related links
+{: #vcsiks-systemcontext-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

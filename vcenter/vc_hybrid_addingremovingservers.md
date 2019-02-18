@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingremovingservers}
 
 You can expand or contract the capacity of your VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instance according to your business needs, by adding or removing ESXi servers.
 
@@ -21,11 +22,13 @@ Because your initial cluster has vSAN as its storage, adding one or more ESXi se
 ## Adding ESXi servers to vCenter Server with Hybridity Bundle instances
 
 ### Before you add ESXi servers
+{: #vc_hybrid_addingremovingservers-adding-prereq}
 
 * Do not add ESXi servers from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
 * vSAN storage requires at least 4 ESXi servers.
 
 ## Procedure to add ESXi servers
+{: #vc_hybrid_addingremovingservers-adding-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance for which you want to expand capacity.
@@ -35,14 +38,17 @@ Because your initial cluster has vSAN as its storage, adding one or more ESXi se
 6. In the **Add Server** window, select the number of servers that you want to add, click the price link to review the estimated cost, and then click **Add**.
 
 ### Results after you add ESXi servers
+{: #vc_hybrid_addingremovingservers-adding-results}
 
 1. You might experience a slight delay on the console while the instance status changes from **Ready to Use** to **Modifying**. Allow the operation to fully complete before you make more changes to the instance.
 2. You're notified by email that your request to add ESXi servers is being processed. On the console, the status of the cluster that is associated with the ESXi servers is changed to **Modifying**.
 3. If you don't see the new ESXi servers added to the list in the cluster, check the email or console notifications to find more details about the failure.
 
 ## Removing ESXi servers from vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingremovingservers-removing}
 
 ### Before you remove ESXi servers
+{: #vc_hybrid_addingremovingservers-removing-prereq}
 
 * Do not remove ESXi servers from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
 * vSAN storage requires at least 4 ESXi servers.
@@ -51,6 +57,7 @@ Because your initial cluster has vSAN as its storage, adding one or more ESXi se
 * When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the virtual machines (VMs) running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers using the {{site.data.keyword.vmwaresolutions_short}} console.
 
 ## Procedure to remove ESXi servers
+{: #vc_hybrid_addingremovingservers-removing-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance for which you want to contract capacity.
@@ -59,6 +66,7 @@ Because your initial cluster has vSAN as its storage, adding one or more ESXi se
 5. In the **ESXi Servers** table, select the servers that you want to remove and click **Remove**.
 
 ### Results after removing ESXi servers
+{: #vc_hybrid_addingremovingservers-removing-results}
 
 1. You might experience a slight delay on the console while the instance status changes from **Ready to Use** to **Modifying**. Allow the operation to fully complete before making additional changes to the instance.
 2. You are notified by email that your request to remove ESXi servers is being processed. On the console, the status of the cluster associated with the ESXi servers is changed to **Modifying**.
@@ -67,7 +75,8 @@ Because your initial cluster has vSAN as its storage, adding one or more ESXi se
    You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the removed ESXi servers.
    {:note}
 
-### Related links
+## Related links
+{: #vc_hybrid_addingremovingservers-related}
 
 * [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
 * [Requirements and planning for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)

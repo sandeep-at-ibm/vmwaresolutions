@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Lift and shift Stock Trader VMs into IBM Cloud
+{: #vcscontent-hcx}
+
 Todd wants to seamlessly extend their on-premises VMware SDDC instance
 into a VMware vCenter Server on {{site.data.keyword.cloud}} for the first step in their
 modernization journey. The business must remain up and running
@@ -54,6 +56,7 @@ Todd is able to migrate Stock Trader from their
 on-premises VMware environment to the VMware on {{site.data.keyword.cloud_notm}} environment and meets their requirements of little to no downtime and no
 application reconfiguration.
 
-### Related links
+## Related links
+{: #vcscontent-hcx-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
