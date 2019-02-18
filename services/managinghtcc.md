@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -31,7 +31,7 @@ For more information, see the following topics:
 * [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ## Related links
-{: #managinghtcc}
+{: #managinghtcc-related}
 
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/htcc_considerations.html)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
