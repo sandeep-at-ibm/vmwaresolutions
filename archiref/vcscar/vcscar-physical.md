@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -197,7 +197,7 @@ cloud providers, and {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.
 deployed to each datacenter/cloud environment, with MCM providing the
 mechanism to connect the {{site.data.keyword.icpfull_notm}} clusters into a single management view.
 
-### Related links
+## Related links
 {: #vcscar-physical-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
