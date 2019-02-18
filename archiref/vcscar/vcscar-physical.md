@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-16"
 
 ---
 
 # Skate Advisor components
+{: #vcscar-physical}
 
 {{site.data.keyword.vmwaresolutions_full}} provides automation to deploy VMware
 technology components in {{site.data.keyword.CloudDataCents_notm}} across the globe. The
@@ -45,6 +46,7 @@ administrators to meet business demands. Cloud Automation Manager
 Service Composer enables you to expose hybrid cloud services in the {{site.data.keyword.icpfull_notm}} catalog.
 
 ## Skate Advisor physical components
+{: #vcscar-physical-skate-comp}
 
 The following diagram describes the reference implementation of the Acme Skate Advisor application in an application modernization infrastructure implementation.
 
@@ -61,6 +63,7 @@ modernization platform that provides the necessary hosting
 infrastructure.
 
 ### Application packaging and deployment
+{: #vcscar-physical-app-pack-depl}
 
 The application is deployed as a CAM Orchestration which contains the following elements:
 * Service Orchestration - A CAM service orchestration is a workflow resource that describes the Terraform templates and Helm charts to deploy as a facet of a service. A service can be published and is the controlling artifact from which the entire deployment is orchestrated.
@@ -80,6 +83,7 @@ Figure 2. CAM orchestration
 ![CAM orchestration](vcscar-cam.svg)
 
 ### Load balancing and proxying
+{: #vcscar-physical-load-balance-proxy}
 
 Load balancing and proxying are implemented via the {{site.data.keyword.icpfull_notm}} Ingress
 Controller component. This component handles the container scaling
@@ -101,23 +105,30 @@ the system demands. To overcome this issue, the {{site.data.keyword.icpfull_notm
 perform real-time IP address resolution within the system.
 
 ### Acme skate web application
+{: #vcscar-physical-acme-skate-web-app}
+
 The Acme Skate web application is a Java Platform, Enterprise Edition (Java Platform, Enterprise Edition) application based on the Spring
 Framework. The application is deployed on a WebSphere Liberty container.
 
 ### Acme Skate Advisor application
+{: #vcscar-physical-acme-skate-advisor-app}
+
 The Acme Skate Advisor application is a micro-service based application that is deployed on a WebSphere Liberty container. An nginx web server provides
 a front end to the micro-services.
 
 ### Acme Skate database
+{: #vcscar-physical-acme-skate-db}
+
 The Acme Skate database is a MySQL database that is deployed on a
 vSphere managed virtual machine.
 
 ### Communications overview
+{: #vcscar-physical-comm-overview}
+
 The Skate Advisor requires the following communications:
 -	From the web container to the system user.
 -	From the Advisor and web container to Watson services.
--	Between the container and the virtual machine aspects of the
-implementation.
+-	Between the container and the virtual machine aspects of the implementation.
 
 The application modernization platform is designed with the
 following components to achieve this goal.
@@ -143,6 +154,7 @@ NSX VXLAN overlay network to communicate with the {{site.data.keyword.cloud_notm
 vice versa.
 
 ### Software Component Mapping
+{: #vcscar-physical-soft-comp-mapping}
 
 The Skate Advisor application uses the following software
 components.
@@ -165,6 +177,7 @@ application that is hosted in the client Browser. The chatbot
 communicates with Watson via the Node.js based micro-services.
 
 ## Management overview
+{: #vcscar-physical-mgmt-ovw}
 
 The Acme Skate Advisor resides on the {{site.data.keyword.cloud_notm}} and as such is a
 critical aspect of the Architecture. The {{site.data.keyword.cloud_notm}} has the following
@@ -185,5 +198,6 @@ deployed to each datacenter/cloud environment, with MCM providing the
 mechanism to connect the {{site.data.keyword.icpfull_notm}} clusters into a single management view.
 
 ### Related links
+{: #vcscar-physical-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

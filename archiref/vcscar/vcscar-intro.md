@@ -4,26 +4,24 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # VMware and Skate Advisor Concept Car introduction
+{: #vcscar-intro}
 
-The following reference architecture is a “concept car”, that is, a mechanism to
-highlight and show technologies solving real world problems. The “concept car” in no way represents a
-readily available service today.
+The following reference architecture is a “concept car”, that is, a mechanism to highlight and show technologies solving real world problems. The “concept car” in no way represents a readily available service today.
 
 The reference architecture also provides the following information:
 
 -   Provides common language for the various stakeholders.
 -   Provides consistency of technology implementation to solve problems.
--   Supports the validation of solutions against a proven reference
-architecture.
--   Encourage adherence to common standards,
-specifications, and patterns.
+-   Supports the validation of solutions against a proven reference architecture.
+-   Encourage adherence to common standards, specifications, and patterns.
 
 ## About the ACME Skate Advisor
+{: #vcscar-intro-about}
 
 We wanted to demonstrate an interaction between Watson artificial
 intelligence and machine learning in a real way and through it explore
@@ -51,8 +49,10 @@ The Acme Skate Advisor application takes advantage of both the Watson
 platform and the application modernization platform.
 
 ## Use cases
+{: #vcscar-intro-use-cases}
 
 ### Application modernization demonstration
+{: #vcscar-intro-app-mod-demo}
 
 Demonstrate an application that has been deployed to the application
 modernization platform. The platform includes {{site.data.keyword.icpfull_notm}}, CAM, and NSX components
@@ -60,16 +60,19 @@ deployed on the {{site.data.keyword.cloud_notm}} for the VMware vCenter Server o
 offering.
 
 ### Watson speech recognition With Watson Assistant
+{: #vcscar-intro-speech}
 
 The Acme Skate Advisor communicates with users via a speech-to-text and
 text-to-speech service that is provided with the Watson platform.
 
 ### Watson Discovery Service usage and training
+{: #vcscar-intro-watson-disc}
 
 The Acme Skate Advisor uses the Watson Discovery Services to keep
 track of a database of Tricks for which a classification language is applied and the tricks discovered from online services.
 
 ### Watson services usage
+{: #vcscar-intro-watson-services}
 
 The following Watson Services were used to create the Acme Skate
 Advisor:
@@ -80,6 +83,7 @@ Advisor:
 -   Watson Knowledge Studio.
 
 ## Application modernization on IBM Cloud
+{: #vcscar-intro-app-mod}
 
 Application modernization is a term that describes the process of transitioning existing applications to use new development and delivery approaches on the cloud. Customers today are seeking innovative, efficient approaches that help them make this transition based on business and application complexity.
 
@@ -125,6 +129,7 @@ The following documents provide different views on the technologies that are use
 * _VMware and Skate Advisor Concept Car guide_ - A reference architecture that is a “concept car”, that is, a mechanism to highlight and show technologies solving real world problems. We wanted to demonstrate an interaction between Watson AI and machine learning in a real way. Through the culture of skateboarding, we demonstrate cloud services in a unique way. The implementation of the “concept car” is an extension to the Acme Skateboard application called Skate Advisor. Skate Advisor is a tool, which allows users to have skateboarding trick conversations with a Watson driven engine.
 * [VMware: The modernization journey of Stock Trader](/docs/services/vmwaresolutions/archiref/vcscontent/vcscontent-modjourney.html) - A reference use case that describes a classic WebSphere Application Server application that is modernized by using {{site.data.keyword.cloud_notm}} Private, IBM Middleware content, {{site.data.keyword.containerlong_notm}}, and vCenter Server on {{site.data.keyword.cloud_notm}}. We're all on a cloud journey, and we're all at different points on that journey. Through incremental steps by the application architect, Jane, and the cloud infrastructure architect, Todd, we modernize an existing application called Stock Trader. Review examples that help you take each step in your journey, and the value that is realized to your business, no matter how large, or small each step is. We focus on four themes: applications, DevOps, integration, and management. All themes work together to help you achieve your goals. Modernizing one theme without the others might result in problems.
 
-### Related links
+## Related links
+{: #vcscar-intro-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

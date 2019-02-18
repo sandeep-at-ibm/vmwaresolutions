@@ -4,16 +4,18 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Preface
+{: #vcscar-preface}
 
 Figure 1. A language of our own devising
 ![A Language of our own devising](vcscar-alood.svg)
 
 ## Intro to skateboarding language
+{: #vcscar-preface-intro}
 
 The way skate boarders combine movements and submovements into tricks
 imposes a kind of grammar or syntax, that are based on the physics of what’s
@@ -88,6 +90,7 @@ adopted Olympic sport, but to influence other artistic endeavors, as
 well.
 
 ## Codification of the language
+{: #vcscar-preface-codification}
 
 As with any language, ours was developed over time, picking up new words
 and usage, rendering occasional redundancies and exceptions along the
@@ -110,6 +113,7 @@ codification, a concise ruleset can be applied recursively to allow for
 combinations of any length.
 
 ## Additional environmental variables
+{: #vcscar-preface-env-var}
 
 Today’s pros often spend as much effort looking for spots as they do
 practicing the tricks. Indeed, part of what distinguishes any skater is creative ability to adapt  tricks to new and imaginative ways, which often take the skater all over the world. While there are skate applications
@@ -148,12 +152,14 @@ cascading consequences of variables such as these, which help the
 creative lives of all pro skaters.
 
 ## The Cloud platform
+{: #vcscar-preface-cloud-platform}
 
 The creative layering of IT systems to generate new combinations speaks
 to the heart of skateboarding. It has the power to ripple into the lives
 of creatives to inspire innovation, across the globe, wherever we go.
 None of this would be achieved without the {{site.data.keyword.cloud}}.
 
-### Related links
+## Related links
+{: #vcscar-preface-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
