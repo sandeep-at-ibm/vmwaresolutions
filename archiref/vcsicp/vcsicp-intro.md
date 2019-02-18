@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # VMware vCenter Server on IBM Cloud and IBM Cloud Private introduction
+{: #vcsicp-intro}
 
 This document provides a view of the application modernization journey to {{site.data.keyword.cloud}}, focusing on the cloud management components to allow an integrated multi cloud to be used for application modernization:
 
@@ -19,6 +20,7 @@ This document provides a view of the application modernization journey to {{site
 - **{{site.data.keyword.cloud_notm}} Automation Manager** – CAM is a multi cloud, self-service management platform that runs on {{site.data.keyword.icpfull_notm}} that empowers Developers and administrators to meet business demands.
 
 ## Application modernization on IBM Cloud
+{: #vcsicp-intro-app-mod}
 
 Application modernization is a term that describes the process of transitioning existing applications to use new approaches on the cloud. Customers today are seeking innovative, efficient approaches that help them make this transition based on business and application complexity.
 
@@ -56,6 +58,7 @@ This document is one of five documents that provides different views on the tech
 * [VMware and Skate Advisor Concept Car](/docs/services/vmwaresolutions/archiref/vcscar/vcscar-intro.html) - This reference architecture is a “concept car”, that is, a mechanism to highlight and show technologies that solve real world problems. We wanted to demonstrate an interaction between Watson AI and machine learning in a real way. Through the culture of skateboarding, we demonstrate cloud services in a unique way. The implementation of the “concept car” is an extension to the Acme Skateboard application called Skate Advisor. Skate Advisor is a tool, which allows users to have skateboarding trick conversations with a Watson driven engine.
 * [VMware: The modernization journey of Stock Trader](/docs/services/vmwaresolutions/archiref/vcscontent/vcscontent-modjourney.html) - Our reference use case describes a classic WebSphere Application Server application that is modernized by using {{site.data.keyword.icpfull_notm}}, IBM Middleware content, {{site.data.keyword.containerlong_notm}}, and vCenter Server. We're all on a cloud journey and at different points on that journey. Through incremental steps by the application architect, Jane, and the cloud infrastructure architect, Todd, we modernize an existing app called Stock Trader. It shows examples that help you take each step in your journey, and the value that is realized to your business, regardless of how large, or small each step is. We focus on four themes: applications, DevOps, integration, and management. All themes work together to help you achieve your goals. Modernizing one theme without the others might result in problems.
 
-### Related links
+## Related links
+{: #vcsicp-intro-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

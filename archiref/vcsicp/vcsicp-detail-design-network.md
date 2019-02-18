@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Network access and flows
+{: #vcsicp-detail-design-network}
 
 ## Container application access – IBM Cloud Private
+{: #vcsicp-detail-design-network-container-icp}
 
 There are three main ways to get external traffic and access into your Kubernetes cluster applications:
 
@@ -19,18 +21,22 @@ There are three main ways to get external traffic and access into your Kubernete
 - Ingress
 
 ### NodePort - IBM Cloud Private
+{: #vcsicp-detail-design-network-nodeport-icp}
 
 Nodeports are a simple way of exposing external access to a workload for initial development and testing but not recommended for production. Ingress or load balancer is the recommended path.
 
 ### LoadBalancer - IBM Cloud Private
+{: #vcsicp-detail-design-network-loadbalancer-icp}
 
 Currently, the {{site.data.keyword.icpfull_notm}} Platform supports an external Load Balancer for application workload.
 
 ### Ingress - IBM Cloud Private
+{: #vcsicp-detail-design-network-ingress-icp}
 
 An Ingress is a collection of rules that allow inbound connections to reach the cluster services. It can be configured to give services externally reachable URLs, load balance traffic, terminate SSL, offer name-based virtual hosting, and more.  The Proxy node in {{site.data.keyword.icpfull_notm}} infrastructure performs this function.
 
 ## Container application access – IBM Cloud Kubernetes Service
+{: #vcsicp-detail-design-network-container-iks}
 
 There are three main ways to get external traffic and access into your Kubernetes cluster applications:
 
@@ -39,18 +45,22 @@ There are three main ways to get external traffic and access into your Kubernete
 - Ingress
 
 ### NodePort - IBM Cloud Kubernetes Service
+{: #vcsicp-detail-design-network-nodeport-iks}
 
 Nodeports are a simple way of exposing external access to a workload for initial development and testing but not recommended for production. Ingress or load balancer is the recommended path.
 
 ### LoadBalancer - IBM Cloud Kubernetes Service
+{: #vcsicp-detail-design-network-loadbalancer-iks}
 
 Every {{site.data.keyword.containerlong_notm}} Cluster is provisioned with a public or private Application Load Balancer (ALB). The ALB uses a secured and unique public or private entry point to route incoming requests to your applications.
 
 ### Ingress - IBM Cloud Kubernetes Service
+{: #vcsicp-detail-design-network-ingress-iks}
 
 An Ingress is a collection of rules that allow inbound connections to reach the cluster services. It can be configured to give services externally reachable URLs, load balance traffic, terminate SSL, offer name-based virtual hosting, and more.
 
 ## Traffic flows
+{: #vcsicp-detail-design-network-traffic-flows}
 
 The following traffic flows are described:
 
@@ -59,6 +69,7 @@ The following traffic flows are described:
 - Enterprise user on the corporate network access to a VM in vCenter Server.
 
 ### External user on the internet to a web tier hosted in a container in IBM Cloud Private
+{: #vcsicp-detail-design-network-external-user}
 
 1. The external user makes a request to the web tier by using the URL.
 2.	DNS is used to determine the IP address. This IP address is an {{site.data.keyword.cloud_notm}} public address on a portable subnet that is assigned to the vCenter Server instance.
@@ -68,6 +79,7 @@ The following traffic flows are described:
 6.	If the application is on the same worker node, then iptables is used to determine which internal interface is used to forward the request. If the application is on a different worker node, then the Calico vRouter routes to the applicable worker node, by using IP-in-IP encapsulation. The IP-in-IP packet is encapsulated in a VXLAN frame for transport to the vSphere ESXi host where the worker node is located.
 
 ### Web tier hosted in a container in IBM Cloud Private to database tier hosted in a VM in vCenter Server
+{: #vcsicp-detail-design-network-web-tier}
 
 How the route tables in the ESG and vRouters are populated depends on the method of integration. See {{site.data.keyword.icpfull_notm}} and vCenter Server Integration.
 
@@ -81,7 +93,8 @@ How the route tables in the ESG and vRouters are populated depends on the method
 8.	The DLR places the request onto the required VXLAN.
 9.	The database VM receives the request.
 
-### 	Enterprise user on the corporate network access to a VM in vCenter Server
+### Enterprise user on the corporate network access to a VM in vCenter Server
+{: #vcsicp-detail-design-network-enterprise-user}
 
 1.	An enterprise user connected to the enterprise internal network makes a request of a resource on a VM hosted in vCenter Server.
 2.	DNS is used to determine the IP address of the VM. This IP address is on a network that is stretched to {{site.data.keyword.cloud_notm}}.
@@ -92,11 +105,13 @@ How the route tables in the ESG and vRouters are populated depends on the method
 7.	The VM receives the request.
 
 ## Public access network
+{: #vcsicp-detail-design-network-public-access-net}
 
 {{site.data.keyword.icpfull_notm}} and CAM by default require internet connectivity to retrieve Docker images, Helm charts, Terraform templates, and operating system package managers.
 In the latest releases, there is now support for proxy based installs for installations that are not directly connected to the internet and have options to install in an offline mode.
 
 ###	NSX firewall
+{: #vcsicp-detail-design-network-nsx-firewall}
 
 The {{site.data.keyword.icpfull_notm}} NSX Edge firewall, is configured with rules to allow:
 *	Enable VXLAN networks access to public access.
@@ -104,12 +119,14 @@ The {{site.data.keyword.icpfull_notm}} NSX Edge firewall, is configured with rul
 *	Enable private {{site.data.keyword.cloud_notm}} network access to VXLAN networks.
 
 ### NSX NAT
+{: #vcsicp-detail-design-network-nsx-nat}
 
 The {{site.data.keyword.icpfull_notm}} NSX NAT, is configured with the following NATs:
 *	SNAT for VXLAN networks access to public access.
 *	SNAT for VXLAN networks access to private {{site.data.keyword.cloud_notm}} network access.
 *	DNAT for {{site.data.keyword.icpfull_notm}} Cluster vIPs.
 
-### Related links
+## Related links
+{: #vcsicp-detail-design-network-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
