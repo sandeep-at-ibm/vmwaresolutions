@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-20"
+lastupdated: "2019-02-15"
 
 ---
 
 #	Orchestrated upgrades
+{: #vum-orchestr-updates}
 
 You can use orchestrated upgrades to upgrade the virtual hardware and VMware Tools of virtual machines in the inventory after the updating the vSphere ESXi hosts. After the hosts are updated, the VMware Tools upgrade baseline runs first, followed by the virtual machine hardware upgrade baseline. You can use orchestrated upgrades at a cluster, folder, or a data center level.
 
@@ -33,6 +34,7 @@ Alternatively, you can define the limit for number of hosts that can be remediat
 The following workflow describes the process to perform an orchestrated upgrade:
 
 ## Step 1
+{: #vum-orchestr-updates-step1}
 
 1. Use the vSphere Web Client to log in to the VCSA.
 2. Select **Home** > **Update Manager**, from the **Objects tab**, select an **Update Manager instance**.
@@ -47,6 +49,7 @@ The following workflow describes the process to perform an orchestrated upgrade:
 11. Review the **Ready to Complete** page, click **Finish** and the host baseline group is displayed in the Baseline Groups pane.
 
 ## Step 2
+{: #vum-orchestr-updates-step2}
 
 1. Create a virtual machine baseline group, containing the VMware Tools Upgrade to Match Host baseline and the VM Hardware Upgrade to Match Host baseline, VUM Administration view.
 2. Attach the baseline group to an vCenter container object containing the virtual machines that you want to upgrade.
@@ -58,7 +61,8 @@ The following workflow describes the process to perform an orchestrated upgrade:
 
 You can now use these baseline groups in the scan, review, staging, and remediation processes.
 
-### Related links
+## Related links
+{: #vum-orchestr-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

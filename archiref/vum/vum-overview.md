@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # VMware Update Manager overview
+{: #vum-overview}
 
 VMware Update Manager (VUM) uses a multistage process to upgrading vSphere objects and applying patches or extensions. This process enables a smooth update procedure with a minimum of system downtime. Before we look at this process, we need to understand the following terms:
 * **Inventory Object** - an object within vCenter such as virtual machine, virtual appliances, or vSphere ESXi host.
@@ -45,6 +46,8 @@ The VUM client interface provides two main views:
 *	Compliance View
 
 ##	Administration View
+{: #vum-overview-admin-view}
+
 The administration view is accessed by navigating to; **Home** > **Update Manager** and selecting the IP address of the Update Manager instance. In the Administration view, you can do the following tasks:
 *	Configure the Update Manager settings
 *	Create and manage baselines and baseline groups
@@ -54,6 +57,8 @@ The administration view is accessed by navigating to; **Home** > **Update Manage
 *	Import ESXi images
 
 ##	Compliance View
+{: #vum-overview-compliance-view}
+
 The compliance view of a selected inventory object is accessed by navigating to **Hosts and Clusters** or **VMs and Templates** and clicking the **Update Manager tab**. In the Update Manager Compliance view, you can do the following tasks:
 *	View compliance and scan results for each selected inventory object
 *	Attach and detach baselines and baseline groups from a selected inventory object
@@ -61,7 +66,8 @@ The compliance view of a selected inventory object is accessed by navigating to 
 *	Stage patches or extensions to hosts
 *	Remediate a selected inventory object
 
-### Related links
+## Related links
+{: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 #	Collecting the metadata
+{: #vum-metadata}
 
 VUM downloads metadata about the upgrades, patches, or extensions via a predefined automatic process that you can modify. At regular configurable intervals, VUM contacts VMware, or third-party sources, to gather the latest metadata about available upgrades, patches, or extensions. However, the default settings from VMware are acceptable for use in the VMware vCenter Server on {{site.data.keyword.cloud}} instance you can change them as needed for your enterprise requirements.
 
@@ -19,18 +20,27 @@ You can use the system-managed baselines to upgrade your vSAN clusters to recomm
 For most enterprises, the VMware default settings for VUM are considered to be suitable. The following information provides how to change these settings if your enterprise would like to use different settings.
 
 ##	Download Schedule
+{: #vum-metadata-download-schedule}
+
 Updates are virtual appliance upgrades, host patches, and extensions and by default VUM downloads updates daily. Change the download schedule by accessing the vSphere Web Client, navigating to **Home** > **Update Manager** > **Manage** > **Settings** and selecting **Download Schedule** and then clicking **Edit**.
 
 ##	Notification Check Schedule
+{: #vum-metadata-notif-check-schedule}
+
 Notifications are information about patch recalls, new fixes, and alerts and by default VUM downloads notifications on an hourly basis. This can be changed by accessing the vSphere Web Client, navigating to **Home** > **Update Manager** > **Manage** > **Settings** and selecting **Notification Check Schedule** and then clicking **Edit**.
 
-##	Virtual machine Settings
+##	Virtual Machine Settings
+{: #vum-metadata-vm-settings}
+
 To change the virtual machine (VM) Settings, access the vSphere Web Client, navigate to **Home** > **Update Manager** > **Manage** > **Settings** and **VM Settings** and then clicking **Edit**.
 
 ##	Host/Cluster Settings
+{: #vum-metadata-host-settings}
+
 To change the Host/Cluster Settings, access the vSphere Web Client, navigate to **Home** > **Update Manager** > **Manage** > **Settings** and **Host/Cluster Settings** and then clicking **Edit**.
 
-### Related links
+## Related links
+{: #vum-metadata-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-15"
 
 ---
 
 # VCSA update and SSO-linked vCenters
+{: #vum-updating-vcsa}
 
 ## PSC and VCSA update
+{: #vum-updating-vcsa-psc-vcsa-update}
 
 This section relates to both the vCentre Server Appliance (VCSA) and the Platform Services Controller (PSC). Both appliances are VCSA appliances but with different roles. When upgrading vSphere with an external PSC, upgrade the PSC first, then the VCSA, then the ESXi hosts, and finally the hardware versions and VMware Tools in the virtual machines.
 
@@ -32,13 +34,15 @@ To update the PSC/VCSA, follow these steps:
 9. Log back into the vSphere Web Client and check for any errors. Complete a manual scan of VUM, **Home** > **Hosts and Cluster**, then select a datacenter or cluster and select **Update Manager tab** and then click **Scan for Updates**. If the manual scan results in an error, see [Resetting VMware Update Manager database on a vCenter Server appliance 6.5 (2147284)](https://kb.vmware.com/s/article/2147284).
 10. After testing, if you need to back out, revert to snapshot or restore the vCenter with a previous backup.
 
-## SSO-linked vCenters
+## SSO-linked vCenter Server instaces
+{: #vum-updating-vcsa-sso-vcenter}
 
 If you have primary and secondary vCenter Server instances, then your VCSAs are configured to be in a single vCenter Single Sign-On (SSO) domain. Each VCSA has a deployed VUM instance. The configuration properties that you modify are applied only to the VUM instance that you specify and are not propagated to the other instances in the group.
 
 You can specify a VUM instance by selecting the name of the VCSA with which the VUM instance is registered from the navigation bar. You can also manage baselines, baseline groups, scan, and remediate only the inventory objects that are managed by the VCSA with which the VUM instance is registered.
 
-### Related links
+## Related links
+{: #vum-updating-vcsa-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # VMware Update Manager introduction
+{: #vum-intro}
 
 The purpose of this document is to provide you, the system administrator of the {{site.data.keyword.vmwaresolutions_full}} vCenter Server instance, with instructions on how to configure VMware Update Manager (VUM) to maintain the currency of your vCenter Server environment.
 
@@ -63,7 +64,8 @@ The [{{site.data.keyword.vmwaresolutions_short}} console](https://console.cloud.
 
 This facility enables the automated updating for the management components of the vCenter Server instances only. VMware product updates must be applied by using the procedures that are detailed in this document.
 
-### Related links
+## Related links
+{: #vum-intro-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

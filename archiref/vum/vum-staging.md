@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Staging and remediation
+{: #vum-staging}
 
 Patches and extensions can be optionally staged before remediation to ensure that they are downloaded from VUM to the vSphere ESXi host without applying the patches or extensions immediately. During remediation, VUM applies the patches, extensions, and upgrades to the inventory objects. Staging patches and extensions accelerates the remediation process because the patches and extensions are already available locally on the hosts.
 
@@ -37,6 +38,8 @@ Remediation is the process in which VUM applies patches, extensions, and upgrade
 If the update requires it, hosts are put into maintenance mode before remediation. The VCSA migrates the VMs to other hosts within VMware vCenter Server on {{site.data.keyword.cloud}} instance before the host is put in maintenance mode.
 
 ## For hosts in a vSAN cluster
+{: #vum-staging-hosts-vsan}
+
 Be aware of the following behavior for hosts that are part of a vSAN cluster:
 * The host remediation process might take an extensive amount of time to complete.
 * By design, only one host from a VSAN cluster can be in a maintenance mode at any time.
@@ -73,7 +76,8 @@ There is no requirement in a vCenter Server instance to select the check box und
 12. On the Ready to complete page, you can optionally click **Pre-check Remediation** to generate a cluster remediation options report and click **OK**. A Cluster Remediation Options Report dialog box opens. You can export this report or copy the entries for your own record and click **Next**.
 13. Review the **Ready to Complete** page and click **Finish**.
 
-### Related links
+## Related links
+{: #vum-staging-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

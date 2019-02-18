@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # Types of VMware software updates
+{: #vum-type-updates}
 
 VMware uses the following terms to describe software updates.
 
@@ -27,7 +28,8 @@ Table 1. VMware software update terms and definitions
 | VA upgrade |	Updates for a virtual appliance, which the vendor considers an upgrade. |
 | VIB |	A VIB is a single software package. |
 
-### Related links
+## Related links
+{: #vum-type-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)
