@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -71,7 +71,7 @@ When the removal of the service is completed successfully, you're notified by em
 You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cycle for the removed services.
 {:note}
 
-### Related links
+## Related links
 {: #sd_addingremovingservices-related}
 
 * [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
