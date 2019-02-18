@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Requirements and planning for VMware vSphere on IBM Cloud
+{: #vs_planning}
 
 Review the following requirements before you order VMware vSphere on {{site.data.keyword.cloud}}. Plan your VMware vSphere clusters based on the {{site.data.keyword.CloudDataCent_notm}} location and your workload capacity requirements.
 
@@ -20,10 +21,12 @@ You are responsible for setting up the environment, installing, and configuring 
 {:note}
 
 ## IBM Cloud account requirements
+{: #vs_planning-account-req}
 
 The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## IBM Cloud Data Center availability
+{: #vs_planning-dc-availability}
 
 The vSphere deployment has strict requirements on the physical infrastructure. Therefore, you can deploy clusters only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following {{site.data.keyword.CloudDataCent_notm}} are available for vSphere deployment.
 
@@ -67,7 +70,8 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vSphere cluster
 | WDC06 | Washington, DC | NA East |
 | WDC07 | Washington, DC | NA East |
 
-### Related links
+## Related links
+{: #vs_planning-related}
 
 * [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
 * [Scaling existing clusters](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Scaling existing vSphere clusters
+{: #vs_scalingexistingclusters}
 
 You can scale out a VMware vSphere cluster that you ordered or saved in the {{site.data.keyword.vmwaresolutions_full}} console. To do so, add ESXi servers or order a FortiGate 300 Series Security Appliance HA pair for the cluster.
 
 ## Requirements
+{: #vs_scalingexistingclusters-req}
 
 Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html#managing-user-accounts-and-settings).
@@ -24,6 +26,7 @@ Ensure that you completed the following tasks:
 *  You received an email with the confirmation that the cluster you want to scale is ready to use.
 
 ## Procedure to scale existing clusters
+{: #vs_scalingexistingclusters-procedure}
 
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** on the left navigation pane, and then click **VMware vSphere** in the **Virtual Data Centers** section.
 2. On the **VMware vSphere on IBM Cloud** page, click **Create**.  
@@ -36,6 +39,7 @@ Ensure that you completed the following tasks:
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.
 
 ### Results
+{: #vs_scalingexistingclusters-results}
 
 The cluster scaling starts automatically. You receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email.
 
@@ -44,7 +48,8 @@ If the cluster you are scaling is not ready to use, you might receive an error m
 The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Deployed Instances** page.
 {:note}
 
-### Related links
+## Related links
+{: #vs_scalingexistingclusters-related}
 
 * [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
 * [Ordering vSphere clusters based on existing configurations](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
