@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-18"
 
 ---
 
-#	Host Profiles
+# Host Profiles
 {: #vum-host-profiles}
 
 vCenter has a feature that is called Host Profiles. This feature creates a profile that captures a pre-configured and validated reference host configuration and helps a system administrator manage the host configurations in a cluster. Host Profiles provide an automated and centrally managed mechanism for host configuration and configuration compliance. Host Profiles enable the configuration to be treated as a managed object, which has a catalog of parameters to configure; networking, storage, security, and other host-level parameters. These Host Profiles can be applied to individual hosts, a cluster, or all the hosts and clusters associated to a host profile.
@@ -17,7 +17,7 @@ As more VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi hosts 
 
 To add more hosts to your vCenter Server cluster, see [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html).
 
-Note:
+**Notes**:
 *	For instances deployed at, or upgraded to, V2.1 or higher, newly deployed ESXi servers and clusters are patched with recent, but not necessarily the most recent ESXi updates from VMware.
 *	You're responsible for all other updates to VMware components, including ensuring that newly deployed ESXi servers and clusters have all the most recent updates you require.
 
@@ -29,7 +29,7 @@ The following sequence is required to check compliance:
 3.	Check the compliance of the new host with the Host Profile.
 4.	Review compliance failures and remediate.
 
-##	Creating a host profile from an existing host
+## Creating a host profile from an existing host
 {: #vum-host-profiles-create-host-profile}
 
 1.	From the vSphere Web Client Home, click **Policies and Profiles**.
@@ -40,7 +40,7 @@ The following sequence is required to check compliance:
 6.	Review the summary information for the new profile and click **Finish**.
 7.	The new profile appears in the profile list.
 
-##	Attaching the new host to the host profile
+## Attaching the new host to the host profile
 {: #vum-host-profiles-attach-to-profile}
 
 1.	From the **Profile List** in the Host Profiles main view, select the Host Profile that was previously created to be applied to the new host.
@@ -49,14 +49,14 @@ The following sequence is required to check compliance:
 4.	The new host is added to the Attached Entities list.
 5.	Click **Next** and then click **Finish**.
 
-##	Checking the compliance of the new host with the host profile
+## Checking the compliance of the new host with the host profile
 {: #vum-host-profiles-check-compliance}
 
 1.	Navigate to the Host Profile that was previously completed.
 2.	Click the Check **Host Profile Compliance icon**.
 3.	In the **Objects tab**, the compliance status is updated as; _Compliant, Unknown, or _Non-compliant_. A non-compliant status indicates a discovered and specific inconsistency between the profile and the new host.
 
-##	Reviewing compliance failures and remediation
+## Reviewing compliance failures and remediation
 {: #vum-host-profiles-review-compliance}
 
 1. To see more detail on compliance failures, select the **Host Profile** from the **Objects** tab that is used in the compliance check.
