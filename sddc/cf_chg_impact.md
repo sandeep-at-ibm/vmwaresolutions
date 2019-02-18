@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-21"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2018-01-21"
 {:faq: data-hd-content-type='faq'}
 
 # Considerations about changing Cloud Foundation artifacts
+{: #cf_chg_impact}
 
 Changing users, resources, or subnets that are reserved for {{site.data.keyword.vmwaresolutions_full}} can impact management operations for VMware Cloud Foundation instances.
 
@@ -22,6 +23,7 @@ Use the **customerroot** host user ID in place of the **root** host user ID.
 {:important}
 
 ## Service-specific user accounts
+{: #cf_chg_impact-service-usr-account}
 {: faq}
 
 Each service creates an internal user account in vCenter Server. This account is necessary so that management operations that are associated to a service can connect to vCenter Server to perform the operations on the service.
@@ -35,6 +37,7 @@ The `<service_name>` together with the `<service_uuid>` truncates to 20 characte
 {:note}
 
 ## VMware resources for Cloud Foundation instances
+{: #cf_chg_impact-vmware-resources}
 
 The following table lists the operations that might be impacted if you change VMware resources outside of the {{site.data.keyword.vmwaresolutions_short}} console. If a solution to recover is available, it is provided as well.
 
@@ -61,23 +64,21 @@ Table 2. Operations that are impacted by SSH and shell access (local)
 If you choose to disable SSH or shell access, you should re-enable it temporarily before performing the indicated operations.
 
 ## Management subnets for Cloud Foundation instances
+{: #cf_chg_impact-mgmt-subnets}
 
 The following information discusses the subnets that are ordered by {{site.data.keyword.vmwaresolutions_short}} and it provides options for you to order extra subnets for your own use.
 
 **CAUTION:** Do not use these components for other purposes, or the stability of your environment is severely compromised.
 
 With each {{site.data.keyword.cloud_notm}} Bare Metal Server order, the following ranges of IP addresses are ordered by default:
-
 *  A primary public range of 32 IP addresses
 *  A primary private range of 64 IP addresses
 
 In addition, the following management subnets are also reserved for {{site.data.keyword.vmwaresolutions_short}}:
-
 *  Two portable private subnets of 64 IP addresses on the first VLAN: one for management and the other one for VTEPS.
 *  Two portable private subnets of 64 IP addresses on the second VLAN: one for vMotion and one for vSAN.
 *  A public portable subnet of 16 IP addresses on the public VLAN.
 
 If you need more subnets to use, you can obtain IP addresses to use in one of the following ways:
-
 * **Option 1 (recommended):** Use VMware NSX virtual network overlays. A sample VXLAN template is provided when ordering. This VXLAN template can be used as a starting point for building SDN.
 * **Option 2:** Order your own portable public or private subnets to obtain IP addresses. To distinguish the subnets that you order from the management subnets, you can add notes to all the subnets that you are ordering.

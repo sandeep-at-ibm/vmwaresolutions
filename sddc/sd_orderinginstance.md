@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Ordering Cloud Foundation instances
+{: #sd_orderinginstance}
 
 To deploy a unified software-defined data center (SDDC) platform with standard compute, storage, and network configuration, order a VMware Cloud Foundation instance. During the initial order, you can also add services, such as [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html) for disaster recovery.
 
 ## Requirements
+{: #sd_orderinginstance-req}
 
 Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
@@ -26,10 +28,12 @@ Don't modify any values that are set during instance order or deployment. Doing 
 {:important}
 
 ## System settings
+{: #sd_orderinginstance-sys-settings}
 
 You must specify the following system settings when you order a Cloud Foundation instance.
 
 ### Instance name
+{: #sd_orderinginstance-inst-name}
 
 The instance name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
@@ -38,10 +42,12 @@ The instance name must meet the following requirements:
 * The instance name must be unique within your account.
 
 ### Primary or secondary
+{: #sd_orderinginstance-primary-secondary}
 
 Select whether to order a new primary instance or a secondary instance for an existing primary instance.
 
 ## Licensing settings
+{: #sd_orderinginstance-licensing-settings}
 
 Specify the licensing options for the following VMware components in the instance:  
 * vCenter Server License - Standard
@@ -54,12 +60,15 @@ For Business Partner users, the vCenter Server license (Standard edition), the v
 For non-Business Partner users, you can use the IBM-provided VMware licenses for these components by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license keys.
 
 ## Bare Metal Server settings
+{: #sd_orderinginstance-bare-metal}
 
 ### Data center location
+{: #sd_orderinginstance-dc-location}
 
 Select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.
 
 ### Skylake
+{: #sd_orderinginstance-skylake}
 
 When you select **Skylake**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
@@ -72,6 +81,7 @@ Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 ### Broadwell
+{: #sd_orderinginstance-broadwell}
 
 When you select **Broadwell**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
@@ -86,10 +96,12 @@ Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Number of Bare Metal Servers
+{: #sd_orderinginstance-bare-metal-number}
 
 A Cloud Foundation instance comprises four Bare Metal Severs at the initial deployment. You cannot change the number of Bare Metal Servers when you place the order.
 
 ## Storage settings
+{: #sd_orderinginstance-storage}
 
 For Cloud Foundation instances, you can order VMware vSAN storage only.
 
@@ -104,10 +116,12 @@ When you select the **Skylake** or **Broadwell** Bare Metal Server configuration
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
 
 ## Network interface settings
+{: #sd_orderinginstance-network-interface}
 
 You must specify the following network interface settings when you order a Cloud Foundation instance.
 
 ### Hostname prefix
+{: #sd_orderinginstance-hostname-prefix}
 
 The host name prefix must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
@@ -115,6 +129,7 @@ The host name prefix must meet the following requirements:
 *  The maximum length of the host name prefix is 10 characters.
 
 ### Subdomain label
+{: #sd_orderinginstance-subdomain-label}
 
 The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
@@ -123,6 +138,7 @@ The subdomain label must meet the following requirements:
 *  The subdomain label must be unique within your account.
 
 ### Domain name
+{: #sd_orderinginstance-domain-name}
 
 The root domain name must meet the following requirements:
 * The domain name must consist of two or more strings that are separated by period (.)
@@ -135,6 +151,7 @@ The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (
 {:note}
 
 ### Value format for network settings
+{: #sd_orderinginstance-network-settings-value-format}
 
 The domain name and subdomain label are used to generate the user name and server names of the instance, as shown in the following table.
 
@@ -153,15 +170,20 @@ Table 3. Value format for user names, domain names, and server names
   The SDDC Manager FQDN cannot be publicly resolvable. Otherwise, the Cloud Foundation instance configuration might fail and is not recoverable. Before you specify a domain name, review [Considerations when choosing a root domain name](/docs/services/vmwaresolutions/vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances).
 
 ### VLANs
+{: #sd_orderinginstance-vlans}
 
 Network settings are based on your selection of either **Order New VLANs** or **Select Existing VLANs**.
 
 One public VLAN and two private VLANs are required for your instance order. The two private VLANs are trunked into each Bare Metal Server.
 
 #### Order New VLANs
+{: #sd_orderinginstance-new-vlans}
+
 Select to order one new public VLAN and two new private VLANs.
 
-#### Select Existing VLANs  
+#### Select Existing VLANs
+{: #sd_orderinginstance-existing-vlans}
+
 Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
 
 When you select to reuse existing public and private VLANs, specify the VLANs and subnets:
@@ -171,20 +193,21 @@ When you select to reuse existing public and private VLANs, specify the VLANs an
   * **Primary Subnet** is assigned to physical hosts for public network access.
   * **Private Primary Subnet** is assigned to physical hosts for management traffic.
 
-##### Important
-
-* Ensure that the firewall configuration on the selected VLANs does not block the management data traffic.
-* Ensure that all of the VLANs you select are in the same pod because ESXi servers cannot be provisioned on mixed-pod VLANs.
+Ensure that the firewall configuration on the selected VLANs does not block the management data traffic. Ensure that all of the VLANs you select are in the same pod because ESXi servers cannot be provisioned on mixed-pod VLANs.
+{:important}
 
 ## Services
+{: #sd_orderinginstance-addon-services}
 
 When you order a Cloud Foundation instance, you can also order add-on services. For more information about the available services, see [Services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_planning.html#services-for-cloud-foundation-instances).
 
 ## Order summary
+{: #sd_orderinginstance-order-summary}
 
 Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the right pane. Click **Pricing details** on the right pane to generate a PDF document that provides the estimate details.
 
 ## Procedure to order Cloud Foundation instances
+{: #sd_orderinginstance-procedure}
 
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** from the left navigation pane and then click **Cloud Foundation** in the **Virtual Data Centers** section.
 2. On the **VMware Cloud Foundation on IBM Cloud** page, click **Create**.
@@ -220,6 +243,7 @@ Based on your selected configuration for the instance and add-on services, the e
     5. Click **Provision**.
 
 ## Results
+{: #sd_orderinginstance-results}
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
@@ -230,6 +254,7 @@ When the instance is ready to use, the status of the instance is changed to **Re
 When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.
 
 ## What to do next
+{: #sd_orderinginstance-next}
 
 View and manage the Cloud Foundation instance that you ordered.
 
@@ -245,7 +270,8 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-### Related links
+## Related links
+{: #sd_orderinginstance-related}
 
 * [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
 * [Viewing Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)

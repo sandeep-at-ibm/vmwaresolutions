@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Applying updates to Cloud Foundation instances
+{: #sd_applyingupdates}
 
 The {{site.data.keyword.vmwaresolutions_full}} console periodically detects and lists the available software updates that you can apply to your VMware virtual environment.
 
@@ -22,6 +23,7 @@ Beginning with V2.5, IBM CloudDriver updates are no longer listed because automa
 {:note}
 
 ## Before you begin
+{: #sd_applyingupdates-prereq}
 
 Before you attempt to apply an update, expand the update entry by clicking the down arrow and verify the following information:
 * The version of the update. You must apply the updates in chronological sequence that is from the earliest one to the most recent one. Ensure that you applied all the previous updates before you apply the most recent one. For example, you must apply the V2.4 update before you attempt to apply the V2.5 update.
@@ -52,6 +54,7 @@ Table 1. Update levels and impact
 </table>
 
 ## Procedure to apply updates to Cloud Foundation instances
+{: #sd_applyingupdates-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
 2. In the **Cloud Foundation Instances** table, click the instance to update.
@@ -64,6 +67,7 @@ Table 1. Update levels and impact
 6. If you are applying updates to Cloud Foundation instances in multi-site deployment configuration, a section titled **Steps Required to Update** is displayed, which lists the update operations that are required for all instances in the multi-site deployment. You must complete the steps in sequence by clicking **Apply Update** for each step. You must wait for the previous step to complete before you start the next step.
 
 ## Results
+{: #sd_applyingupdates-results}
 
 1. Before an update operation is started, a health check for the instance is completed. If the health check fails, you are notified so you can fix the problem before you apply the update.
 2. During updates that include VMware components updates, VMs might need to be migrated from ESXi servers to go into maintenance mode. The VM migration might be prevented if a VM has a local datastore or CD-ROM mounted.
@@ -111,7 +115,8 @@ Table 1. Update levels and impact
 
 6. If the update process fails at a specific step, [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) for assistance. You will be advised how to resolve the problem and guided to restart the upgrade from the step that failed.
 
-### Related links
+## Related links
+{: #sd_applyingupdates-related}
 
 * [Cloud Foundation overview](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
 * [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/veeam_considerations.html)
