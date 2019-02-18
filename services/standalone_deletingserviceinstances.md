@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Deleting on-premises VMware HCX on IBM Cloud instances
+{: #standalone_deletingserviceinstances}
 
 Use this procedure to delete the on-premises HCX on {{site.data.keyword.cloud}} instances that you ordered for on-premises use.
 
 ## Before you begin
+{: #standalone_deletingserviceinstances-reqs}
 
 Ensure that you reviewed all the considerations in [Considerations when deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/standalone_considerations.html).
 
 ## Procedure to delete on-premises VMware HCX on IBM Cloud instances
+{: #standalone_deletingserviceinstances-procedure}
 
 1. Click **Deployed Instances** from the left navigation pane.
 2. Scroll down to the **On-premises HCX Instances** table and find the instance to delete.
@@ -24,7 +27,8 @@ Ensure that you reviewed all the considerations in [Considerations when deleting
 4. In the **Delete Instance** window, click **OK**.
    The status of the instance is changed to **Removing**. When the instance deletion is completed, the instance is no longer available in the **On-premises HCX Instances** table.
 
-### Related links
+## Related links
+{: #standalone_deletingserviceinstances-related}
 
 * [Ordering on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
 * [Viewing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)

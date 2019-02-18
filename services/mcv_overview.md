@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Mission Critical VMware on IBM Cloud overview
+{: #mcv_overview}
 
 Mission Critical VMware on {{site.data.keyword.cloud}} delivers a multi-zone cloud architecture to help enterprises prevent downtime for cloud applications and to automate failovers within a cloud region.
 
@@ -19,6 +20,7 @@ This architecture supports existing mission-critical, legacy workloads, includin
 The architecture covers various enterprise services, including networks, storage, resiliency, and other tools built for monitoring and troubleshooting cloud-based applications. In addition, this architecture can be integrated with the IBM Services Platform with Watson, built on the {{site.data.keyword.cloud_notm}}, to allow for a broader consumption of services. Using the platform’s cognitive capabilities, clients can mine data more effectively for new business insights to help maintain continuous operations.
 
 ## Technical specifications for Mission Critical VMware on IBM Cloud
+{: #technical-specifications-for-mission-critical-vmware-on-ibm-cloud}
 
 The Mission Critical VMware on {{site.data.keyword.cloud_notm}} architecture is an end to end reference architecture that provides automated failover for customer workloads. It uses an {{site.data.keyword.cloud_notm}} multi-zone region with an IBM-managed service that covers the following components:
 
@@ -38,6 +40,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} is available in the 
 * Asia-Pacific: all IBM Cloud Data Centers in Sydney and Tokyo
 
 ### Base infrastructure architecture specifications
+{: #mcv_overview-base-specs}
 
 The base infrastructure has the following specifications:
 * Each site has its own dedicated edge and management cluster
@@ -48,6 +51,7 @@ The base infrastructure has the following specifications:
 * NSX Manager recovery is using a Hot/Standby methodology that syncs up backup files
 
 ### Tooling and technology architecture specifications
+{: #mcv_overview-tooling-specs}
 
 The tooling and technology architecture has the following specifications:
 * vRealize Operations, vRealize Log Insight, and vRealize Network Insight to provide operations and management capabilities specific to the VMware products being used, for example NSX, vSAN, and vSphere
@@ -56,6 +60,7 @@ The tooling and technology architecture has the following specifications:
 * Fortigate Security Appliance or similar to secure any internet access and to facilitate active-active network integration with the on-premises network
 
 ### vSphere + vSAN stretched cluster architecture specifications
+{: #mcv_overview-stretched-cluster-specs}
 
 The vSphere + vSAN stretched cluster architecture has the following specifications:
 * The cluster provides storage and compute capabilities that span two sites to provide enhanced availability.
@@ -65,6 +70,7 @@ The vSphere + vSAN stretched cluster architecture has the following specificatio
 * vSAN Native Encryption (for at rest encryption) can be used in combination with this architecture.
 
 ### Network architecture specifications
+{: #mcv_overview-network-specs}
 
 The network architecture has the following specifications:
 * Edge/DLR/VXLANs in combination with BGP metric-based routing to facilitate an active-active site design with automated failover.
@@ -73,6 +79,7 @@ The network architecture has the following specifications:
 * During a vMotion activity for VM-A, traffic will still ingress and egress via {{site.data.keyword.cloud_notm}} availability zone #1.
 * During a site or edge failure, traffic will route out of the remaining available site.
 
-### Related links
+## Related links
+{: #mcv_overview-related}
 
 * [Requesting Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services/managing_mcv.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2019-02-06"
 {:deprecated: .deprecated}
 
 # KMIP for VMware on IBM Cloud overview - Deprecated
+{: #kmip_considerations}
 
 The current version of KMIP for VMware on IBM Cloud is being deprecated. For more information, [contact IBM Support](../vmonic/trbl_support.html).
 {:deprecated}
@@ -21,6 +22,7 @@ The current version of KMIP for VMware on IBM Cloud is being deprecated. For mor
 The KMIP for VMware on {{site.data.keyword.cloud}} service provides a 24x7 highly available service to manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}. This service offers runtime capability to allow customers to create, retrieve, activate, revoke, and destroy the encryption keys. It also provides management capability to maintain the associations between the client credentials and the encryption keys.
 
 ## Technical specifications for KMIP for VMware on IBM Cloud
+{: #kmip_considerations-specs}
 
 The following specifications are included with the KMIP for VMware on {{site.data.keyword.cloud_notm}} service:
 
@@ -30,6 +32,7 @@ The following specifications are included with the KMIP for VMware on {{site.dat
 * A highly available KMIP service endpoint in each region
 
 ## Considerations when you install KMIP for VMware on IBM Cloud
+{: #kmip_considerations-install}
 
 KMIP for VMware on {{site.data.keyword.cloud_notm}} uses the IBM Key Protect for {{site.data.keyword.cloud_notm}} service to create, encrypt, and decrypt encryption keys. Therefore, before you install KMIP for VMware on {{site.data.keyword.cloud_notm}}, ensure that:
 * You ordered a usable Key Protect service.
@@ -43,18 +46,21 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} uses the IBM Key Protect for
    **Important:** You cannot order the service without CRKs. It is highly recommended that you use the method to create a CRK using existing key material, and back up the key material that you are creating. By doing so, you ensure that you can recover your keys if a failure of the data center where IBM Key Protect is applied to store your CRKs.
 
 ## Considerations when you use KMIP for VMware on IBM Cloud
+{: #kmip_considerations-use}
 
 * To use an ordered KMIP for VMware on {{site.data.keyword.cloud_notm}} service as a Key Management Server (KMS) that is registered to VMware vCenter Server, ensure that the network connectivity from the vCenter Server to the endpoint of the ordered KMIP for VMware on {{site.data.keyword.cloud_notm}} service is functional.
 * To use the service with VMware vSAN encryption, ensure that the network connectivity between the hosts on the target vSAN and the endpoint of the ordered KMIP for VMware on {{site.data.keyword.cloud_notm}} service is functional.
 * When you use KMIP for VMware with vSAN encryption, the vSAN health check might issue periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings.
 
 ## Considerations when you remove KMIP for VMware on IBM Cloud
+{: #kmip_considerations-remove}
 
 The VMware public certificate that you're provided during ordering or when you use the service is used as the client certificate to communicate with the service instance. When the service is removed, all the encryption keys that are created by this service instance for the associated VMware public certificate are also removed.
 
 Therefore, before you remove the service, ensure that no virtual machines or vSANs are being encrypted by using the keys that are created by the KMIP service.
 
-### Related links
+## Related links
+{: #kmip_considerations-related}
 
 * [Ordering KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip_ordering.html)
 * [{{site.data.keyword.cloudaccesstrailshort}} events](../vmonic/at-events.html)

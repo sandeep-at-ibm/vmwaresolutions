@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-02-15"
 
 ---
 
 # Glossary of HCX terms
+{: #hcx_glossary}
 
 This glossary provides definitions for the terms that are associated with the VMware HCX on {{site.data.keyword.cloud}} service.
 
@@ -20,6 +21,7 @@ This glossary provides definitions for the terms that are associated with the VM
 * **HCX Manager Admin Console**: This is the user interface for managing the HCX appliances for administrative purposes, such as starting and stopping services, and collecting support logs.
 * **HCX Cloud Console**: This is the user interface for configuring the HCX cloud-side features, such as virtual data centers and disaster recovery.
 
-### Related links
+## Related links
+{: #hcx_glossary-related}
 
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources)

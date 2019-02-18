@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,26 +13,31 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Ordering FortiGate Virtual Appliance on IBM Cloud
+{: #fortinetvm_ordering}
 
 You can order the FortiGate Virtual Appliance on {{site.data.keyword.cloud}} service when you order a new instance with the service included or by adding the service to your existing instance.
 
 ## Ordering FortiGate Virtual Appliance on IBM Cloud for a new instance
+{: #fortinetvm_ordering-new}
 
 You can order a new instance with FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} by using one of the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, select **FortiGate Virtual Appliance on IBM Cloud** in the **Services** section.
 * From the {{site.data.keyword.cloud_notm}} catalog, select **FortiGate Virtual Appliance on IBM Cloud**, specify the service settings, and select **Add to New Instance**.
 
 ## Ordering FortiGate Virtual Appliance on IBM Cloud for an existing instance
+{: #fortinetvm_ordering-existing}
 
 You can add the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service into an existing instance by using one the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
 * From the {{site.data.keyword.cloud_notm}} catalog, select **FortiGate Virtual Appliance on IBM Cloud**, specify the service settings, and select **Add to Existing Instance**.
 
 ## FortiGate Virtual Appliance on IBM Cloud service configuration
+{: #fortinetvm_ordering-config}
 
 When you order the service, provide the following settings.
 
 ### FortiGuard Network Connection
+{: #fortinetvm_ordering-config-network-connect}
 
 Select **Public network** or **Private network** for FortiGuard. If the target cluster is configured with private-only network interfaces, only the **Private network** option is available. This selection determines how FortiGuard will contact the Fortinet license server to activate the license and to download security patches, and it doesn't impact the workload data plane.
 
@@ -43,10 +48,12 @@ If you select **Private network**, specify the following settings:
 * **Proxy Password**: If you require proxy authentication, enter the password of the proxy server.
 
 ### Name
+{: #fortinetvm_ordering-config-name}
 
 Enter the service name.
 
 ### Deployment size
+{: #fortinetvm_ordering-config-size}
 
 {{site.data.keyword.cloud_notm}} provides the following deployment size options:
 * Small (2 vCPUs / 4 GB RAM)
@@ -54,6 +61,7 @@ Enter the service name.
 * Large (8 vCPU / 12 GB RAM)
 
 ### License model
+{: #fortinetvm_ordering-config-license}
 
 The license model for FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} offers the following options:
 <dl class="dl">
@@ -71,7 +79,8 @@ In 3Q 2018, Fortinet added three new services (CASB, Industrial Security, and Se
 You can't change the license model after service installation. To change the license model, you must remove the existing service and reinstall the service by selecting a different license option.
 {:important}
 
-### Related links
+## Related links
+{: #fortinetvm_ordering-related}
 
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)
 * [Managing FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfortinetvm.html)

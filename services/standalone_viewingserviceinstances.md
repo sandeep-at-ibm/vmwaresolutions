@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Viewing on-premises VMware HCX on IBM Cloud instances
+{: #standalone_viewingserviceinstances}
 
 Use this procedure to view the on-premises HCX on {{site.data.keyword.cloud}} instances that you ordered for on-premises use and information about them.
 
 ## Procedure to view on-premises VMware HCX on IBM Cloud instances
+{: #standalone_viewingserviceinstances-procedure}
 
 Click **Deployed Instances** from the left navigation pane and scroll down to the **On-premises HCX Instances** table to view information about the instances that you ordered:
 
@@ -36,7 +38,8 @@ Table 2. On-premises HCX on {{site.data.keyword.cloud_notm}} instances status de
 | Installed | The instance is ready to use. |
 | Removing | The instance is being deleted. |
 
-### Related links
+## Related links
+{: #standalone_viewingserviceinstances-related}
 
 * [Ordering on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
 * [Deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)

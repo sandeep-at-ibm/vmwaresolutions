@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # HyTrust DataControl on IBM Cloud overview
+{: #htdc_considerations}
 
 The HyTrust DataControl on {{site.data.keyword.cloud}} service offers strong encryption with integrated key management to secure workloads throughout their lifecycle. The service provides encryption at both the operating system level and at the data level. This enables any directory, folder, or file within a workload to be encrypted and decrypted.
 
@@ -20,27 +21,35 @@ This service is available only to instances that are running vSphere 6.5 and are
 {:note}
 
 ## Technical specifications for HyTrust DataControl on IBM Cloud
+{: #technical-specifications-for-hytrust-datacontrol-on-ibm-cloud}
 
 The following components are ordered and included in the HyTrust DataControl on {{site.data.keyword.cloud_notm}} service:
 
 ### HyTrust DataControl appliance
+{: #htdc_considerations-appliance}
+
 * CPU: 2 vCPU
 * RAM: 8 GB
 * Disk: 20 GB VMDK resident on vSAN in converged cluster
 * Network: Placed on VLAN-backed private portable network specified for management
 
 ### High availability
+{: #htdc_considerations-ha
+}
 Two DataControl appliances are deployed in an active-active configuration.
 
 ### Licenses and fees
+{: #htdc_considerations-licenses}
 
 Per-host license: A HyTrust DataControl license is ordered for each host in the environment.
 
 ## Considerations when you remove HyTrust DataControl on IBM Cloud
+{: #htdc_considerations-remove}
 
 Before you remove the HyTrust DataControl on {{site.data.keyword.cloud_notm}} service, decouple all clients from using DataControl. After you remove the service, the keys might be deleted and you might be locked out of your VMs.
 
-### Related links
+## Related links
+{: #htdc_considerations-related}
 
 * [Ordering HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_ordering.html)
 * [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtdc.html)

@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Viewing KMIP for VMware on IBM Cloud instances
+{: #kmip_standalone_viewing}
 
 Use this procedure to view the KMIP for VMware on {{site.data.keyword.cloud}} instances that you ordered and information about them.
 
 ## Procedure to view KMIP for VMware on IBM Cloud instances
+{: #kmip_standalone_viewing-procedure}
 
 Click **Deployed Instances** from the left navigation pane and scroll down to the **KMIP for VMware on {{site.data.keyword.cloud_notm}} Instances** table to view information about the instances that you ordered:
 
@@ -35,7 +37,8 @@ Table 2. KMIP for VMware on {{site.data.keyword.cloud_notm}} instances status de
 | Installed | The instance is ready to use. |
 | Removing | The instance is being deleted. |
 
-### Related links
+## Related links
+{: #kmip_standalone_viewing-related}
 
 * [Ordering KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html)
 * [Adding, viewing, and deleting certificates for KMIP for VMware on IBM Cloud instances](/docs/services/vmwaresolutions/services/kmip_standalone_addingdeletingcert.html)

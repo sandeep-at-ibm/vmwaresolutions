@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # F5 on IBM Cloud overview
+{: #f5_considerations}
 
 The F5 on {{site.data.keyword.cloud}} service (F5 BIG-IP® Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access.
 
@@ -22,25 +23,33 @@ This service is available only to instances that are deployed in V1.9 or later. 
 {:note}
 
 ## Technical specifications for F5 on IBM Cloud
+{: #technical-specifications-for-f5-on-ibm-cloud}
 
 The following components are included with the F5 on {{site.data.keyword.cloud_notm}} service:
 
 ### Virtual machines
+{: #f5_considerations-specs-vms}
+
 * Two virtual machines (VMs) with all options available.
 * 2, 4, or 8 vCPUs per virtual machine depending on the licensing option.
 * 4, 8, or 16 GB RAM per virtual machine depending on the licensing option.
 
 ### Networking
+{: #f5_considerations-specs-network}
+
 * Private Virtual Extensible LAN (VXLAN) for High Availability (HA) synchronization.
 * Access to Traffic Management Shell (TMSH) and Management Console through private management network.
 
 ### Licenses and fees
+{: #f5_considerations-specs-license}
+
 License fees for each VM are applied to each billing cycle depending on the licensing option (Good, Better, or Best) and the selected bandwidth.
 
 You cannot change the licensing level after service installation. To change the licensing level, you must remove the existing service and reinstall the service using a different licensing option.
 {:important}
 
 ## Installation considerations for F5 on IBM Cloud
+{: #f5_considerations-install}
 
 Before you install the F5 on {{site.data.keyword.cloud_notm}} service, review the following considerations.
 
@@ -58,6 +67,7 @@ Table 1. CPU and RAM deployments for different bandwidth and license model selec
 | 10 Gbps           | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
 
 ### Additional considerations
+{: #f5_considerations-additional}
 
 * F5 BIG–IP limits the appliance throughput based on your chosen maximum bandwidth. Because network performance is affected by many factors, not all configurations and topologies may be able to achieve your chosen maximum bandwidth.
 * The HA (High Availability) pair of BIG-IP VE VMs will be deployed only into the default cluster.
@@ -71,6 +81,8 @@ Table 1. CPU and RAM deployments for different bandwidth and license model selec
   `RAM reservation = RAM size` (from Table 1)
 
 ### Planning considerations
+{: #f5_considerations-planning}
+
 You must meet the following requirements to avoid failures with F5 on {{site.data.keyword.cloud_notm}}:
 * At least two active ESXi servers are available for the two BIG-IP VE VMs to be deployed with the anti-affinity rule of keeping the VMs on separate servers.
 * The two active ESXi servers have enough resources available so that one BIG-IP VE VM can be hosted on each ESXi server with 100% CPU and RAM reservation.
@@ -79,6 +91,7 @@ You must meet the following requirements to avoid failures with F5 on {{site.dat
 Due to these requirements, you must plan for the space that is needed for F5 on {{site.data.keyword.cloud_notm}}. If needed, before you order F5 on {{site.data.keyword.cloud_notm}}, add 1-2 ESXi servers to your instance, or reduce vSphere HA CPU reservation for failover, or both.
 
 ## F5 on IBM Cloud order example
+{: #f5_considerations-example}
 
 You order a VMware vCenter Server **Small** instance with 2 ESXI servers with the following configuration: sixteen cores at 2.10 GHz each with 128 GB RAM. For F5 on {{site.data.keyword.cloud_notm}}, you select the **Best** license model and a value of 5 Gbps for **Maximum Bandwidth**.
 
@@ -99,10 +112,12 @@ Since there will be other workloads present on the ESXi servers, for example, VM
 In this case, the F5 on {{site.data.keyword.cloud_notm}} installation might fail, unless at least one ESXi server is added to the environment and vShpere HA failover reservations are updated appropriately to ensure that there are enough resources for two BIG-IP VE VMs. If additional resources are needed to run the F5 on {{site.data.keyword.cloud_notm}} service, you can add more ESXi servers before installing F5 on {{site.data.keyword.cloud_notm}}.
 
 ## Considerations when removing F5 on IBM Cloud
+{: #f5_considerations-remove}
 
 Before you remove the F5 on {{site.data.keyword.cloud_notm}} service, ensure that the existing BIG-IP VE configuration is removed correctly. Specifically, network traffic must be routed around BIG-IP VE instead of through BIG-IP VE. Otherwise, the existing data traffic from your environment might be impacted.
 
-### Related links
+## Related links
+{: #f5_considerations-related}
 
 * [Ordering F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_ordering.html)
 * [Managing F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_f5.html)

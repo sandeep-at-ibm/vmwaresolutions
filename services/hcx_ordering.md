@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,19 +13,23 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Ordering VMware HCX on IBM Cloud
+{: #hcx_ordering}
 
 You can order the VMware HCX on {{site.data.keyword.cloud}} service while ordering a new VMware vCenter Server with Hybridity Bundle instance with the service included or by adding the service to your existing instance.
 
 ## Ordering VMware HCX on IBM Cloud for a new instance
+{: #hcx_ordering-new}
 
 To order a new VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle instance with VMware HCX on {{site.data.keyword.cloud_notm}}, select **VMware HCX on IBM Cloud** in the **Services** section when you order the instance from the {{site.data.keyword.vmwaresolutions_short}} console.
 
 
 ## Ordering VMware HCX on IBM Cloud for an existing instance
+{: #hcx_ordering-existing}
 
 To add the VMware HCX on {{site.data.keyword.cloud_notm}} service into an existing VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle instance, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
 
 ## VMware HCX on IBM Cloud configuration
+{: #hcx_ordering-config}
 
 To install HCX on {{site.data.keyword.cloud_notm}}, complete the following settings:
 1. Specify the **HCX interconnect type** by selecting one of the following options:
@@ -47,6 +51,7 @@ To install HCX on {{site.data.keyword.cloud_notm}}, complete the following setti
   <!--Need enhancement, it is still not clear what the key pair is used for, is it for connecting to NSX? This is not in architecture doc either. -->
 
 ## Deployment process for HCX on IBM Cloud
+{: #hcx_ordering-deploy}
 
 The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether you order a vCenter Server with Hybridity Bundle instance with the service included or you deploy the service later into your instance, the following steps are completed by the {{site.data.keyword.vmwaresolutions_short}} automation process:
 1. Three subnets are ordered for HCX from the {{site.data.keyword.cloud_notm}} infrastructure:
@@ -76,7 +81,8 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether 
    * Local and remote HCX deployment containers are configured.
 7. The host name and IP address of the HCX Manager is registered with the DNS server of VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
-### Related links
+## Related links
+{: #hcx_ordering-related}
 
 * [HCX on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/hcx_considerations.html)
 * [Managing HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)

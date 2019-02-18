@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # FortiGate Security Appliance on IBM Cloud overview
+{: #fsa_considerations}
 
 The FortiGate Security Appliance on {{site.data.keyword.cloud}} service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances.
 
@@ -22,24 +23,29 @@ This service is available only to instances that are deployed in V1.8 or later r
 {:note}
 
 ## Technical specifications for FortiGate Security Appliance on IBM Cloud
+{: #technical-specifications-for-fortigate-security-appliance-on-ibm-cloud}
 
 The following components are ordered and included in the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service:
 
 ### Hardware
+{: #fsa_considerations-hardware}
 
 The FortiGate 300 series Security Appliance.
 
 ### High availability
+{: #fsa_considerations-ha}
 
 Two appliances are deployed in active-passive configuration.
 
 ### Networking
+{: #fsa_considerations-networking}
 
 * Dual 1 GbE bonded on both upstream and downstream networks
 * One new upstream {{site.data.keyword.cloud_notm}} public VLAN
 * One existing downstream {{site.data.keyword.cloud_notm}} public VLAN
 
 ## Considerations when you install FortiGate Security Appliance on IBM Cloud
+{: #fsa_considerations-install}
 
 Review the following considerations before you install the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service:
 * Ensure that the {{site.data.keyword.cloud_notm}} account that you're using has the **Hardware Firewall** permission. This permission is required to edit or view firewall logs and settings for the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service of your instance.
@@ -51,13 +57,15 @@ Review the following considerations before you install the FortiGate Security Ap
 * If you order additional clusters, the public VLANs for these newly added clusters do not have the HA-pair of Security Appliances.
 
 ## Considerations when you remove FortiGate Security Appliance on IBM Cloud
+{: #fsa_considerations-remove}
 
 Review the following considerations before you remove the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service:
 * Removing the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service removes the public VLAN that was added.
 * During the service removal, your instance might not be able to access the internet temporarily.
 * All FortiGate rules to permit, inspect, block, and route NAT traffic are removed together with the Fortinet service. If you have any NAT rules, you must reconfigure them.
 
-### Related links
+## Related links
+{: #fsa_considerations-related}
 
 * [Ordering FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_ordering.html)
 * [Managing FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfsa.html)

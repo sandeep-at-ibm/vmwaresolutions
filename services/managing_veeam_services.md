@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Requesting managed services for Veeam on IBM Cloud
+{: #managing_veeam_services}
 
 The Veeam on {{site.data.keyword.cloud}} service seamlessly integrates with your VMware hypervisors to help your enterprise achieve high availability (HA). This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. Use this service to directly control both the backup and restore of all virtual machines for your infrastructure from the Veeam console.
 
@@ -19,6 +20,7 @@ When you request managed services for Veeam on {{site.data.keyword.cloud_notm}},
 * You also get a scalable and flexible data protection solution to reduce the total cost of ownership and manage your compliance requirements.
 
 ## Procedure to request managed services for Veeam on IBM Cloud
+{: #managing_veeam_services-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Getting Started** from the left navigation pane.
 2. Scroll down the page and click the **Managed Services for Veeam on IBM Cloud** card, which is located under **Order additional managed services**.
@@ -28,7 +30,8 @@ When you request managed services for Veeam on {{site.data.keyword.cloud_notm}},
 6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html), [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html), or [Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html) instance.
 7. To add the service to an existing instance, click **Add to Existing Instance**, select the instance that you want from the list, and then confirm that you want to proceed with the order by clicking **Provision**.
 
-### Related links
+## Related links
+{: #managing_veeam_services-related}
 
 * [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 * [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)

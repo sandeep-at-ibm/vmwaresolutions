@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Managing FortiGate Security Appliance on IBM Cloud
+{: #managingfsa}
 
 After the FortiGate Security Appliance on {{site.data.keyword.cloud}} service is installed successfully, you can manage and configure firewall rules for the FSA from the FortiGate console.
 
@@ -20,6 +21,7 @@ You must ensure that the FSA firewall rules are defined to allow outbound HTTPS 
 {:important}
 
 ## Accessing the FortiGate 300 series console
+{: #managingfsa-access-console}
 
 To manage the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service, you must access the FortiGate® 300 series console in one of the following ways:
 * Log in to the FortiOS Web Client by using the credentials that you can find on the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service details page.
@@ -29,7 +31,8 @@ For more information, see the following topics:
 * [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
 * [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
-### Related links
+## Related links
+{: #managingfsa-related}
 
 * [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/fsa_considerations.html)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

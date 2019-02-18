@@ -4,17 +4,19 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Managing Veeam on IBM Cloud
+{: #managingveeam}
 
 After the service is deployed into your instance, you can access the Veeam console by using RDP to manage the backup and restore of all the virtual machines in your environment, including the backup and restore of the management components. You can also upgrade the service by downloading and installing the Veeam updates from the Veeam website.
 
 For instances that were deployed in releases earlier than V1.8, if you want to use the Veeam on {{site.data.keyword.cloud}} service, you must replace the existing Veeam VSI in the instances. For more information, see the _Replacing the Veeam VSI of pre-V1.8 instances with Veeam on IBM Cloud_ section.
 
 ## Accessing the Veeam console by using RDP
+{: #managingveeam-accessing}
 
 To manage the Veeam on {{site.data.keyword.cloud_notm}} service, access the Veeam console by completing the following steps:
 1. Use Remote Desktop Protocol (RDP) to connect to the Windows IP address.
@@ -28,6 +30,7 @@ For more information, see the following topics:
 * [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ## Backing up and restoring management components for instances that have Veeam on IBM Cloud installed
+{: #managing-veeam-backup-and-replication}
 
 The Veeam on {{site.data.keyword.cloud_notm}} service can be configured to back up the management components by using the Veeam console. For more information, see [Backing up components](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
@@ -36,28 +39,35 @@ For instances deployed in (or upgraded to) V1.8 or later releases, the configura
 When failures occur on the management components, you can restore the management components to a previous backup by using the Veeam console. For more information about restoring manually, see the [Veeam technical instructions]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:new_window}.
 
 ## Applying updates to Veeam on IBM Cloud
+{: #managingveeam-updates}
 
 You are responsible for maintaining the Veeam software to keep it updated to the most recent version.
 
 ### Applying updates for instances deployed with public and private network
+{: #managingveeam-updates-public-private}
 
 If the Veeam service is installed on an instance with public and private network, you can check for and download the updates by using the Veeam software itself.
 
 ### Applying updates for instances deployed with private network only
+{: #managingveeam-updates-private}
 
 If the Veeam service is installed on an instance with private network only, because the Veeam VSI is configured with no public network access, you cannot check for or download updates by using the Veeam software itself. Instead, you must download updates from the Veeam website, transfer them to the Veeam VM, and then install them.
 
 ## Updating Veeam licenses
+{: #managingveeam-update-license}
 
 ### Updating Veeam licenses for instances deployed with public and private network
+{: #managingveeam-update-license-public-private}
 
 If the Veeam service is installed on an instance with public and private network, you can update your Veeam license either automatically or manually by following the Veeam instructions at [Updating license]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html).
 
 ### Updating Veeam licenses for instances deployed with private network only
+{: #managingveeam-update-license-private}
 
 If the Veeam service is installed on an instance with private network only, you must take note of the expiration date for your license and [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) to get assistance with updating the license key when the renewal is needed.
 
 ## Replacing the Veeam VSI of pre-V1.8 instances with Veeam on IBM Cloud
+{: #managingveeam-replace-vsi}
 
 The Veeam on {{site.data.keyword.cloud_notm}} service, which can back up both management components and workloads, supersedes the previous Veeam VSI that was integrated into VMware Cloud Foundation and VMware vCenter Server in releases earlier than V1.8 for the backup of management components only.
 
@@ -73,7 +83,8 @@ Complete the following steps:
 
 After the new Veeam on {{site.data.keyword.cloud_notm}} service is deployed and a successful backup of your management components is completed, you can remove the existing Veeam VSI from your account by creating an {{site.data.keyword.cloud_notm}} Support ticket. IBM Support identifies and deletes the existing Veeam VSI and storage.
 
-### Related links
+## Related links
+{: #managingveeam-related}
 
 * [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/veeam_considerations.html)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,26 +13,31 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Ordering F5 on IBM Cloud
+{: #f5_ordering}
 
 You can order the F5 on {{site.data.keyword.cloud}} service when you order a new instance with the service included or by adding the service to your existing instance.
 
 ## Ordering F5 on IBM Cloud for a new instance
+{: #f5_ordering-new}
 
 You can order a new instance with F5 on {{site.data.keyword.cloud_notm}} by using one of the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, select **F5 on IBM Cloud** in the **Services** section.
 * From the {{site.data.keyword.cloud_notm}} catalog, select **F5 on IBM Cloud**, specify the service settings, and select **Add to New Instance**.
 
 ## Ordering F5 on IBM Cloud for an existing instance
+{: #f5_ordering-existing}
 
 You can add the F5 on {{site.data.keyword.cloud_notm}} service into an existing instance by using one the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
 * From the {{site.data.keyword.cloud_notm}} catalog, select **F5 on IBM Cloud**, specify the service settings, and select **Add to Existing Instance**.
 
 ## F5 on IBM Cloud service configuration
+{: #f5_ordering-config}
 
 When you order the service, provide the following settings.
 
 ### F5 License Activation Connection
+{: #f5_ordering-config-license}
 
 Select **Public network** or **Private network** for license activation. If the target cluster is configured with private-only network interfaces, only the **Private network** option is available. This selection determines how the F5 virtual servers will contact the F5 license server, and it does not impact the workload data plane.
 
@@ -44,14 +49,17 @@ Authenticated proxy is not supported.
 {:note}
 
 ### Name
+{: #f5_ordering-config-name}
 
 Enter the service name.
 
 ### Maximum bandwidth
+{: #f5_ordering-config-bandwidth}
 
 Specify the maximum throughput of the F5 BIG–IP appliance.
 
 ### License model
+{: #f5_ordering-config-license-model}
 
 The license model for F5 on {{site.data.keyword.cloud_notm}} service offers the following options:
 <dl class="dl">
@@ -66,7 +74,8 @@ The license model for F5 on {{site.data.keyword.cloud_notm}} service offers the 
 You cannot change the license model after service installation. To change the license model, you must remove the existing service and reinstall the service by choosing a different license model.
 {:important}
 
-### Related links
+## Related links
+{: #f5_ordering-releated}
 
 * [F5 on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/f5_considerations.html)
 * [Managing F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_f5.html)
