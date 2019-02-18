@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Attached storage infrastructure design
+{: #storage-infra-design}
 
 {{site.data.keyword.vmwaresolutions_full}} provides VMware technology that is deployed in an automated way within {{site.data.keyword.CloudDataCents_notm}} across the globe. Within the {{site.data.keyword.cloud_notm}} solutions portfolio, the base VMware vCenter Server on {{site.data.keyword.cloud_notm}} offering consists of up to 10 clusters each containing up to 59 vSphere hosts, a single Platform Services Controller (PSC), and a vCenter Server Appliance capable of managing up to 400 hosts and 4,000 virtual machines.
 
@@ -25,14 +26,17 @@ Figure 1. High-level architecture of attached storage on {{site.data.keyword.clo
 ![Attached storage architecture](../solution/physical_nfs.svg "High-level architecture of attached storage on IBM Cloud")
 
 ## Physical infrastructure design
+{: #storage-infra-design-phys-infra-design}
 
 The physical infrastructure consists of three main components: physical compute, physical storage, and physical network. The physical infrastructure includes the {{site.data.keyword.cloud_notm}} services network and the physical storage that is used by the infrastructure.
 
 ## Physical network design
+{: #storage-infra-design-phys-net-design}
 
 Physical networking is handled by {{site.data.keyword.cloud_notm}}. The following section describes the physical network that is provided by the {{site.data.keyword.cloud_notm}} as it relates to attached storage.
 
 ### IBM Cloud network overview
+{: #storage-infra-design-ibm-cloud-net-ovw}
 
 The physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: Public, Private, and Management. For more information about the public, private, and management networks, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
@@ -41,18 +45,22 @@ For more information about the {{site.data.keyword.cloud_notm}} network, see [Th
 Review the following information for a description of the services network that is part of the private network.
 
 ### Private services network
+{: #storage-infra-design-private-net}
 
 {{site.data.keyword.cloud_notm}} has a private services network that provides common services such as block storage, file storage, Object Storage, DNS resolvers, and NTP servers. This private network is separate from the customer private network and it enables environments to seamlessly connect to services located in the {{site.data.keyword.cloud_notm}}. The private network is multi-tiered in that servers and other infrastructure are connected to aggregated back-end customer switches (BCS). These aggregated switches are attached to a pair of separate routers such as back-end customer routers or BCR, for L3 networking. The private network also supports the ability to use jumbo frames, such as, MTU 9000, for physical host connections.
 
 ### VLANs
+{: #storage-infra-design-vlans}
 
 For more information about the VLANs, see the _Physical network design_ section in [Physical infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html).
 
 ## Physical storage design
+{: #storage-infra-design-phys-storage-design}
 
 The following section describes the configuration of the attached storage device that is present in the {{site.data.keyword.cloud_notm}}. The attached storage device complements the existing vCenter Server solution. As a result, locally attached disks that are internal to the physical hosts aren't presented.
 
 ## Attached storage performance
+{: #storage-infra-design-perf}
 
 Performance and Endurance storage are {{site.data.keyword.cloud_notm}} storage solutions that are designed to support high I/O applications that require predictable levels of performance. This predictable performance is achieved through the allocation of protocol-level input/output operations per second (IOPS) to individual volumes.
 
@@ -69,6 +77,7 @@ For detailed IOPS options, see the _Storage settings_ section in [Ordering vCent
 
 In addition to the tiers of storage, {{site.data.keyword.cloud_notm}} Endurance storage supports a wide selection of application needs, including snapshots and replication, and encryption at rest in the {{site.data.keyword.CloudDataCent_notm}} locations.
 
-### Related links
+## Related links
+{: #storage-infra-design-related}
 
 * [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
