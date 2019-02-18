@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -48,12 +48,12 @@ Review the architecture of all the [Virtualization Platform Extensions](https://
 Want to see for yourself? Take a short test drive of the product by following the step-by-step {{site.data.keyword.vmwaresolutions_short}} guided demonstration [Try VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions).
 
 ## developerWorks recipes
-{: #additional_resources-dWrecipes}
+{: #additional_resources-dwrecipes}
 
 * [{{site.data.keyword.vmwaresolutions_short}} - Take a look under the hood](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
 * [Steps to attach dedicated storage to VMware Solutions on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
 
 ## VMware documentation
-{: #additional_resources-VMware-doc}
+{: #additional_resources-vmware-doc}
 
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources)
