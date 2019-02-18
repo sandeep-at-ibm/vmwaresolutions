@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Deleting vCenter Server with Hybridity Bundle instances in a multi-site configuration
+{: #vc_hybrid_deletinginstance_multi}
 
 There are special considerations to be aware of before you plan to delete VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instances that are part of a multi-site configuration.
 
@@ -30,6 +31,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 {:note}
 
 ## Procedure to delete vCenter Server with Hybridity Bundle instances in a multi-site configuration
+{: #vc_hybrid_deletinginstance_multi-procedure}
 
 1. Remove all services from the secondary vCenter Server with Hybridity Bundle instance.
 2. Ensure that you do not have any NSX objects that are expanded into the secondary instance that you want to delete.
@@ -39,7 +41,8 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 6. Repeat steps 1 - 5 for all secondary vCenter Server with Hybridity Bundle instances in your multi-site configuration.
 7. After you delete all secondary instances, you can also delete the primary instance from the {{site.data.keyword.vmwaresolutions_short}} console.
 
-### Related links
+## Related links
+{: #vc_hybrid_deletinginstance_multi-related}
 
 * [Deleting vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
 * [Ordering, viewing, and removing services from vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)

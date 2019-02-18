@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Deleting VMware Federal instances
+{: #vc_fed_deletinginstance}
 
 To release the components that you ordered in a VMware Federal instance, delete the instance.
 
@@ -29,6 +30,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 {:note}
 
 ## Procedure to delete instances from the Deployed Instances page
+{: #vc_fed_deletinginstance-procedure1}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, find the instance to delete.
@@ -39,6 +41,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
    2. In the **Delete Instance** window, click **OK**.
 
 ## Procedure to delete instances from the instance details page
+{: #vc_fed_deletinginstance-procedure2}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to delete.
@@ -48,7 +51,8 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
    1. Click the overflow menu icon next to **vCenter console** again and click **Delete Instance**.
    2. In the **Delete Instance** window, click **OK**.
 
-### Related links
+## Related links
+{: #vc_fed_deletinginstance-related}
 
 * [VMware Federal on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
 * [Ordering VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)

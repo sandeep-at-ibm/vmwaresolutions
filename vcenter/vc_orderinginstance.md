@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Ordering vCenter Server instances
+{: #vc_orderinginstance}
 
 To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server instance. During the initial order, you can also add services, such as [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html) for disaster recovery.
 
 ## Requirements
+{: #vc_orderinginstance-req}
 
 Ensure that you completed the following tasks:
 * You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
@@ -37,10 +39,12 @@ Don't modify any values that are set during instance order or deployment. Doing 
 {:important}
 
 ## System settings
+{: #vc_orderinginstance-sys-settings}
 
 You must specify the following system settings when you order a vCenter Server instance.
 
 ### Instance name
+{: #vc_orderinginstance-inst-name}
 
 The instance name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
@@ -49,10 +53,12 @@ The instance name must meet the following requirements:
 * The instance name must be unique within your account.
 
 ### Primary or secondary
+{: #vc_orderinginstance-primary-secondary}
 
 Select whether to order a new primary instance or a secondary instance for an existing primary instance.
 
 ## Licensing settings
+{: #vc_orderinginstance-licensing-settings}
 
 Specify the licensing options for the following VMware components in the instance:
 * vCenter Server 6.5 - Standard edition
@@ -63,24 +69,27 @@ For Business Partner users, the vCenter Server license (Standard edition), the v
 
 For non-Business Partner users, you can use the IBM-provided VMware licenses for these components by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license keys.
 
-### Attention
+### Licensing notes
+{: #vc_orderinginstance-licensing-notes}
 
 * A license with a minimum of eight CPUs is required, which is for four servers with two CPUs per server. The license choice for each VMware component applies to the base instance and to any ESXi servers that you add to the instance later. Ensure that your license supports future capacity expansion in your infrastructure.
 * The minimum license editions are indicated on the user interface. If different component editions are supported, you can select the edition that you want. You are responsible to ensure that the license key provided is correct for each VMware component selected.
 * For vSphere, a license charge is incurred at the time of order, but the license charge is then credited to your account.
 * You can change any licenses that you provided by using the VMware vSphere Web Client after the instance deployment is completed.
 * Support for the VMware components that you provide licenses is provided by VMware, not by IBM Support.
-{:important}
 
 ## Bare Metal Server settings
+{: #vc_orderinginstance-bare-metal-settings}
 
 Bare Metal settings are based on your data center selection and bare metal server configuration.
 
 ### Data center location
+{: #vc_orderinginstance-dc-location}
 
 Select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.
 
 ### Skylake
+{: #vc_orderinginstance-skylake}
 
 When you select **Skylake**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
@@ -93,6 +102,7 @@ Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 ### SAP-certified
+{: #vc_orderinginstance-sap}
 
 When you select **SAP-certified**, you cannot alter the CPU or RAM settings.
 
@@ -106,6 +116,7 @@ Based on your requirements, select a Bare Metal Server configuration:
   * Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 4096 GB RAM
 
 ### Broadwell
+{: #vc_orderinginstance-broadwell}
 
 When you select **Broadwell**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
@@ -120,12 +131,14 @@ Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Number of Bare Metal Servers
+{: #vc_orderinginstance-bare-metal-number}
 
 For the initial cluster in the instance, you can configure the number of ESXi servers in the range 2 - 20. All ESXi servers share the set configuration.
 
 After initial deployment, you can add four more clusters. If you selected the **Skylake** or **Broadwell** configuration for VMware vSAN, 4 ESXi servers are required for both the initial and post-deployment clusters. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Storage settings
+{: #vc_orderinginstance-storage-settings}
 
 Storage settings are based on your selection of Bare Metal Server configuration and the storage type.
 
@@ -133,6 +146,7 @@ For instances V2.8 and later, you can add NFS storage shares to an existing NFS 
 {:note}
 
 ### vSAN storage
+{: #vc_orderinginstance-vsan-storage}
 
 vSAN is available for the **Skylake** and **Broadwell** Bare Metal configuration only. Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
@@ -146,6 +160,7 @@ vSAN is available for the **Skylake** and **Broadwell** Bare Metal configuration
 * **vSAN License**: Use the IBM-provided VMware license for the vSAN component by selecting **Include with purchase**, or Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license key.
 
 ### NFS storage
+{: #vc_orderinginstance-nfs-storage}
 
 When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
 
@@ -168,16 +183,19 @@ Table 4. NFS performance level options
   | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
 
 ### Local Disks
+{: #vc_orderinginstance-local-disks}
 
 The local disks option is available for the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor Bare Metal configuration only. Specify the following options:
 * **Disk Count**: Select the number of disks that you want to add.
 * **Disk type**: Select an option for the disk type that you need.
 
 ## Network interface settings
+{: #vc_orderinginstance-network-interface-settings}
 
 You must specify the following network interface settings when you order a vCenter Server instance.
 
 ### Host name prefix
+{: #vc_orderinginstance-host-name-prefix}
 
 The host name prefix must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
@@ -185,6 +203,7 @@ The host name prefix must meet the following requirements:
 *  The maximum length of the host name prefix is 10 characters.
 
 ### Subdomain label
+{: #vc_orderinginstance-subdomain-label}
 
 The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
@@ -193,6 +212,7 @@ The subdomain label must meet the following requirements:
 *  The subdomain label must be unique within your account.
 
 ### Domain name
+{: #vc_orderinginstance-domain-name}
 
 The root domain name must meet the following requirements:
 * The domain name must consist of two or more strings that are separated by period (.)
@@ -205,6 +225,7 @@ The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs i
 {:note}
 
 ### Public or private network
+{: #vc_orderinginstance-public-private-network}
 
 Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and are not available if you select the private option:
 
@@ -214,15 +235,19 @@ Network interface card (NIC) enablement settings are based on your selection of 
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### VLANs
+{: #vc_orderinginstance-vlans}
 
 Network settings are based on your selection of either **Order New VLANs** or **Select Existing VLANs**.
 
 One public VLAN and two private VLANs are required for your instance order. The two private VLANs are trunked into each Bare Metal Server.
 
 #### Order New VLANs
+{: #vc_orderinginstance-new-vlans}
+
 Select to order one new public VLAN and two new private VLANs.
 
 #### Select Existing VLANs
+{: #vc_orderinginstance-existing-vlans}
 
 Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
 
@@ -233,12 +258,11 @@ When you select to reuse existing public and private VLANs, specify the VLANs an
 * **Primary Subnet** is assigned to physical hosts for public network access.
 * **Primary Private Subnet** is assigned to physical hosts for management traffic.
 
-##### Important
-
-* Ensure that the firewall configuration on the selected VLANs does not block the management data traffic.
-* Ensure that all of the VLANs you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
+Ensure that the firewall configuration on the selected VLANs does not block the management data traffic. Also ensure that all the VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
+{:important}
 
 ### DNS configuration
+{: #vc_orderinginstance-dns-config}
 
 Select the Domain Name System (DNS) configuration for your instance:
 
@@ -255,14 +279,17 @@ You have 30 days to activate the VMs.
 For more information about Windows licensing, see [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Services settings
+{: #vc_orderinginstance-addon-services}
 
 When you order a vCenter Server instance, you can also order add-on services. For more information about the services, see [Available services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances).
 
 ## Order summary
+{: #vc_orderinginstance-order-summary}
 
 Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the **Order Summary** section on the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
 
 ## Procedure to order vCenter Server instances
+{: #vc_orderinginstance-procedure}
 
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
 2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server** card and click **Create**.
@@ -305,7 +332,8 @@ For more information about how to provide settings for a service, see the corres
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you order the instance.
    4. Click **Provision**.
 
-## Results
+## Results after you order vCenter Server instances
+{: #vc_orderinginstance-results}
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
@@ -316,6 +344,7 @@ When the instance is ready to use, the status of the instance is changed to **Re
 When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.
 
 ## What to do next
+{: #vc_orderinginstance-next}
 
 View and manage the vCenter Server instance that you ordered.
 
@@ -331,7 +360,8 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 
    Exceptions to these activities include managing the shared storage file shares from the 	{{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-### Related links
+## Related links
+{: #vc_orderinginstance-related}
 
 * [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
 * [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)

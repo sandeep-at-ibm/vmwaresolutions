@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Applying updates to vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_applyingupdates}
 
 The process of applying patches and updates to vCenter Server with Hybridity Bundle instances is automated for the management components only. The VMware updates must be applied manually.
 
 ## Before you begin
+{: #vc_hybrid_applyingupdates-prereq}
 
 Beginning with V2.5, IBM CloudDriver updates are no longer listed because automatic updates are enabled. Actions such as adding a host, adding a cluster, and ordering a service automatically updates the instance to the latest version. For more information about automatic updates, see the *IBM CloudDriver resiliency* section in [Release notes for V2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
 {:note}
@@ -39,6 +41,7 @@ Table 1. Update levels and impact
 | Major  | This update affects some or all systems. You must apply it during scheduled downtime. |  
 
 ## Procedure to apply updates to vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_applyingupdates-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to update.
@@ -63,13 +66,14 @@ Table 1. Update levels and impact
 7. If you are applying updates to vCenter Server instances in multi-site deployment configuration, a section titled **Steps Required to Update** is displayed. This section lists the update operations required for all instances in the multi-site deployment. You must complete the steps in sequence by clicking **Apply Update** for each step. You must wait for the previous step to complete before you start the next step.   
 
 ## Results
+{: #vc_hybrid_applyingupdates-results}
 
-2. After you apply an update, a record appears in the software update status list, where you can view the detailed progress and status of the update. When the update is completed successfully, a record appears in the installed software updates list.
+1. After you apply an update, a record appears in the software update status list, where you can view the detailed progress and status of the update. When the update is completed successfully, a record appears in the installed software updates list.
 
   To retrieve the most recent status for an update job, click the refresh icon in the upper right of the page.
   {:tip}
 
-3. For details about the update statuses, see the following list:
+2. For details about the update statuses, see the following list:
 <dl class="dl">
 <dt class="dt dlterm">Available</dt>
 <dd class="dd">The update is available to be applied. You cannot select an available update until all its previous updates are applied.
@@ -88,9 +92,10 @@ before you reapply the update.</dd>
 <dd class="dd">The status of the update job cannot be obtained. Contact IBM Support for assistance.</dd>
 </dl>
 
-4. If the update process fails at a specific step, [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) for assistance. You will be advised how to resolve the problem and guided to attempt the upgrade again from the step that failed.
+3. If the update process fails at a specific step, [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) for assistance. You will be advised how to resolve the problem and guided to attempt the upgrade again from the step that failed.
 
-### Related links
+## Related links
+{: #vc_hybrid_applyingupdates-related}
 
 * [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

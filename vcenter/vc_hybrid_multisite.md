@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Multi-site configuration for vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_multisite}
 
 {{site.data.keyword.vmwaresolutions_full}} allows instances to be deployed across different locations and have them up and running in a short time.
 
 ## Multi-site deployment components
+{: #vc_hybrid_multisite-deployment-components}
 
 A multi-site deployment consists of the following components.
 
@@ -33,6 +35,7 @@ A multi-site deployment consists of the following components.
    *  VMware vCenter on the secondary instances is set up with Enhanced Linked Mode to the vCenter on the primary instance.
 
 ## vCenter Server with Hybridity Bundle multi-site deployment
+{: #vc_hybrid_multisite-deployment}
 
 The multi-site configuration feature uses a hub and spoke topology with a primary site and a maximum of seven secondary sites. A single layer of sites is supported, that is, you cannot configure subsequent sites that are linked to other secondary sites. You can have a total of 128 ESXi servers in a multi-site configuration across all instances.
 
@@ -57,7 +60,8 @@ You can have a maximum of 8 (1 primary and 7 secondary) instances that are deplo
 Deleting vCenter Server with Hybridity Bundle instances that are part of a multi-site configuration requires special planning. For more information, see [Deleting vCenter Server with Hybridity Bundle instances in a multi-site configuration](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html).
 {:note}
 
-### Related links
+## Related links
+{: #vc_hybrid_multisite-related}
 
 * [Assign Primary Role to NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configuring Secondary NSX Managers](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}

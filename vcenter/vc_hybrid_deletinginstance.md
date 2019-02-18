@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Deleting vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_deletinginstance}
 
 To release the components that you ordered in a VMware vCenter Server with Hybridity Bundle instance, delete the instance.
 
@@ -30,6 +31,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 {:note}
 
 ## Procedure to delete instances from the Deployed Instances page
+{: #vc_hybrid_deletinginstance-procedure1}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, find the instance to delete.
@@ -40,6 +42,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
    2. In the **Delete Instance** window, click **OK**.
 
 ## Procedure to delete instances from the instance details page
+{: #vc_hybrid_deletinginstance-procedure2}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to delete.
@@ -49,7 +52,8 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
    1. Click the overflow menu icon next to **vCenter console** again and click **Delete Instance**.
    2. In the **Delete Instance** window, click **OK**.
 
-### Related links
+## Related links
+{: #vc_hybrid_deletinginstance-related}
 
 * [Deleting vCenter Server with Hybridity Bundle instances in a multi-site configuration](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html)
 * [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)

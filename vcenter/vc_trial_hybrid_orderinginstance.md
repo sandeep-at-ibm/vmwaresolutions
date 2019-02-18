@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Ordering and deleting Single-node Trial for VMware vCenter Server on IBM Cloud instances
+{: #vc_trial_hybrid_orderinginstance}
 
 The Single-node Trial for VMware vCenter Server on {{site.data.keyword.cloud}} is a single-tenant hosted private cloud that delivers the VMware vSphere stack as a service. While the client-managed environment is typically deployed with a minimum of three nodes, this single-node trial provides a low-cost path to experience benefits of a hybrid cloud implementation.
 
@@ -26,6 +27,7 @@ This trial is intended for use up to 90 days. When you are finished with the tri
 For information about the architecture design, see [HCX on IBM Cloud architecture design for the Single-node Trial for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html).
 
 ## Technical specifications for Single-node Trial for vCenter Server instances
+{: #vc_trial_hybrid_orderinginstance-tech-specs}
 
 The following components are included in your Single-node Trial for vCenter Server instance:
 
@@ -33,10 +35,12 @@ The availability and pricing of standardized hardware configurations might vary 
 {:note}
 
 ### Bare Metal Server
+{: #vc_trial_hybrid_orderinginstance-bare-metal}
 
 A Dual Intel Xeon Gold 5120 (28 Cores, 2.20 GHz) processor with 384 GB RAM.
 
 ### Networking specifications for Single-node Trial for vCenter Server instances
+{: #vc_trial_hybrid_orderinginstance-networking-specs}
 
 The following networking components are ordered:
 *  10 Gbps dual public and private network uplinks
@@ -50,16 +54,16 @@ The following networking components are ordered:
   * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access.
 
 ### Virtual Server Instances
+{: #vc_trial_hybrid_orderinginstance-vsi}
 
 The following virtual server instances (VSIs) are ordered:
-
 * A VSI for IBM CloudBuilder, which is cancelled after the instance deployment is completed.
 * A Microsoft Windows Server VSI for Microsoft Active Directory (AD) is deployed and can be looked up. The VSI functions as the DNS for the instance where the hosts and VMs are registered.
 
 ### IBM-provided licenses and fees
+{: #vc_trial_hybrid_orderinginstance-license-and-fee}
 
-The following licenses are included with your Single-node Trial for vCenter Server instance order.
-
+The following licenses are included with your Single-node Trial for vCenter Server instance order:
 * VMware vSphere Enterprise Plus 6.5
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
@@ -68,6 +72,7 @@ Single-node Trial for vCenter Server instances do not support Bring Your Own Lic
 {:note}
 
 ## Technical specifications for VMware HCX on IBM Cloud
+{: #vc_trial_hybrid_orderinginstance-hcx-tech-specs}
 
 The Single-node Trial for vCenter Server includes HCX on {{site.data.keyword.cloud_notm}}. The following components are ordered and included in the HCX on {{site.data.keyword.cloud_notm}} service.
 
@@ -75,12 +80,14 @@ On-premises HCX instances include only licensing and activation.
 {:note}
 
 ### An active/passive pair of VMware NSX Edge Services Gateways for HCX Management
+{: #vc_trial_hybrid_orderinginstance-esg}
 
 * CPU: 6 vCPU
 * RAM: 8 GB
 * Disk: 3 GB VMDK
 
 ### HCX Management Appliance - virtual machine
+{: #vc_trial_hybrid_orderinginstance-hcs-mgmt-appliance}
 
 * CPU: 4 vCPU
 * RAM: 12 GB
@@ -89,12 +96,14 @@ On-premises HCX instances include only licensing and activation.
 Additional HCX appliances are deployed during configuration as necessary for L2 connectivity, WAN optimization, and gateway connections.
 
 ### Networking specifications for the HCX on IBM Cloud service
+{: #vc_trial_hybrid_orderinginstance-hcx-networking-specs}
 
 * One public portable subnet with 16 IP addresses
 * Two private portable subnets with 64 IP addresses
 * Eight IP addresses from private portable vMotion subnet
 
 ## Requirements and planning for ordering Single-node Trial for vCenter Server instances
+{: #vc_trial_hybrid_orderinginstance-req}
 
 Ensure that you confirm the following requirements and complete the following tasks:
 * Prerequisites for on-premises HCX instances:
@@ -110,6 +119,7 @@ Ensure that you confirm the following requirements and complete the following ta
     * The instance name must be unique within your account.
 
 ## Procedure to order Single-node Trial for vCenter Server instances
+{: #vc_trial_hybrid_orderinginstance-procedure}
 
 1. On the **Single-node Trial for VMware vCenter Server on {{site.data.keyword.cloud_notm}}** page, click **Continue**.
 2. On the **Single-node Trial for VMware vCenter Server** page, complete the steps to request an {{site.data.keyword.cloud_notm}} infrastructure account or provide your existing **User Name** and **API Key** and click **Retrieve**.
@@ -128,10 +138,12 @@ Ensure that you confirm the following requirements and complete the following ta
    4. Click **Provision**.
 
 ### Results
+{: #vc_trial_hybrid_orderinginstance-results}
 
 The deployment of the instance starts automatically and the on-premises HCX on {{site.data.keyword.cloud_notm}} service activation key is ordered.
 
 #### Deployment process for HCX on IBM Cloud
+{: #vc_trial_hybrid_orderinginstance-hcs-deploy-process}
 
 The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. The following steps are completed by the {{site.data.keyword.vmwaresolutions_short}} automation process:
 1. Three subnets are ordered for HCX from the {{site.data.keyword.cloud_notm}} infrastructure:
@@ -159,6 +171,7 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. The foll
 6. The host name and IP address of the HCX Manager is registered with the DNS server of VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 #### Viewing instance details
+{: #vc_trial_hybrid_orderinginstance-view-inst-details}
 
 You can check the status of the deployment by viewing the instance details. Click **Deployed Instances** from the left navigation pane and locate the **vCenter Server Instances** or **On-premises HCX Instances** table to view information about the instances that you ordered.
 
@@ -167,6 +180,7 @@ When the instance is successfully deployed, the components that are described in
 The status of the instance changes to **Ready to Use** and you receive a notification by email.
 
 ### What to do next
+{: #vc_trial_hybrid_orderinginstance-next}
 
 Install the on-premises HCX Enterprise Manager and configure the connection to your HCX on {{site.data.keyword.cloud_notm}} instance.
 
@@ -212,6 +226,7 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 {:important}
 
 ## Procedure to delete Single-node Trial for vCenter Server instances
+{: #vc_trial_hybrid_orderinginstance-deleting-procedure}
 
 When you delete a Single-node Trial for vCenter Server instance, the following components are released sequentially:
 
@@ -236,7 +251,8 @@ Complete the following steps to delete a Single-node Trial for vCenter Server in
    1. In the **Actions** column, click the Delete icon again.
    2. In the **Delete Instance** window, click **OK**.
 
-### Related links
+## Related links
+{: #vc_trial_hybrid_orderinginstance-related}
 
 * [HCX on IBM Cloud architecture design for the Single-node Trial for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#/vm-documentation)

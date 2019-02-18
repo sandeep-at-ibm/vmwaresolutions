@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server with Hybridity Bundle overview
+{: #vc_hybrid_overview}
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle is an instance available in V2.3 and later releases. Beginning with V2.6, the vCenter Server with Hybridity Bundle instance is available to Business Partners.
 
@@ -27,6 +28,7 @@ You can upgrade the VMware NSX Advanced edition to the Enterprise edition, and y
 You can add IBM-Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is also available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
 
 ## vCenter Server with Hybridity Bundle architecture
+{: #vc_hybrid_overview-archi}
 
 The following graphic depicts the high-level architecture and components of a three-node vCenter Server with Hybridity Bundle deployment.
 
@@ -35,10 +37,12 @@ Figure 1. vCenter Server with Hybridity Bundle high-level architecture
 ![vCenter Server with Hybridity Bundle architecture](hybrid_architecture.svg "vCenter Server with Hybridity Bundle high-level architecture")
 
 ### Physical infrastructure
+{: #vc_hybrid_overview-physical-infras}
 
 This layer provides the physical infrastructure (compute, storage, and network resources) to be used by the virtual infrastructure.
 
 ### Virtualization infrastructure (Compute, Storage, and Network)
+{: #vc_hybrid_overview-virtualization-infras}
 
 This layer virtualizes the physical infrastructure through different VMware products:
 * VMware vSphere virtualizes the physical compute resources.
@@ -46,6 +50,7 @@ This layer virtualizes the physical infrastructure through different VMware prod
 * VMware NSX is the network virtualization platform that provides logical networking components and virtual networks.
 
 ### Virtualization management
+{: #vc_hybrid_overview-virtualization-mgmt}
 
 This layer consists of vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC), NSX Manager, two NSX ESGs, three NSX Controllers, and the IBM CloudDriver virtual server instance (VSI). The CloudDriver VSI is deployed on demand as needed for certain operations such as adding hosts to the environment.
 
@@ -55,13 +60,15 @@ In total, the base offering requires 38 vCPU and 67 GB vRAM that are reserved fo
 
 For additional management resource requirements when deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [VMware HCX on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/hcx_considerations.html).
 
-### Infrastructure Hybridity
+### Infrastructure hybridity
+{: #vc_hybrid_overview-infras-hybrid}
 
 This layer provides an abstraction of resources between the on-premises sites and {{site.data.keyword.cloud_notm}} sites so that you can move workloads back and forth securely and easily without the need to change VMs characteristics such as their IP addresses.
 
 Based on VMware Hybrid Cloud Extension (HCX), you can create loosely coupled interconnects among on-premises and {{site.data.keyword.cloud_notm}} sites to enable bulk migration of VMs or live vMotion of VMs without downtime.
 
 ## Technical specifications for vCenter Server with Hybridity Bundle instances
+{: #technical-specifications-for-vcenter-server-with-hybridity-bundle-instances}
 
 The following components are included in your vCenter Server with Hybridity Bundle instance:
 
@@ -69,12 +76,14 @@ The availability and pricing of standardized hardware configurations might vary 
 {:note}
 
 ### Bare Metal Server
+{: #vc_hybrid_overview-bare-metal}
 
 Four **Skylake** or **Broadwell** {{site.data.keyword.baremetal_short}} come with your vCenter Server with Hybridity Bundle instance order. The following CPU models are available:
   * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
   * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600/E7-4800 series)
 
 ### Networking
+{: #vc_hybrid_overview-networking}
 
 The following networking components are ordered:
 *  10 Gbps dual public and private network uplinks
@@ -90,12 +99,14 @@ The following networking components are ordered:
 For more information on networking components ordered when deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [HCX on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/hcx_considerations.html).
 
 ### Virtual Server Instances
+{: #vc_hybrid_overview-vsi}
 
 The following virtual server instances (VSIs) are ordered:
 * A VSI for IBM CloudBuilder, which is cancelled after the instance deployment is completed.
 * You can choose to deploy a single Microsoft Windows Server VSI for Microsoft Active Directory (AD) or two high availability Microsoft Windows VMs in the management cluster to help enhance security and robustness.
 
 ### vSAN storage
+{: #vc_hybrid_overview-vsan-storage}
 
 vSAN storage offers customized configurations, with various options for disk type and quantity:
 * Disk quantity: 2, 4, 6, or 8.
@@ -105,6 +116,7 @@ vSAN storage offers customized configurations, with various options for disk typ
 * High-Performance Intel Optane option, which provides two extra capacity disk bays for a total of 10 capacity disks. This option depends on the CPU model.
 
 ### IBM-provided licenses and fees
+{: #vc_hybrid_overview-license-and-fee}
 
 The following licenses are included with your vCenter Server with Hybridity Bundle instance order.
 
@@ -116,14 +128,17 @@ The following licenses are included with your vCenter Server with Hybridity Bund
 Additional support and services fees can apply.
 
 ## Technical specifications for vCenter Server with Hybridity Bundle expansion nodes
+{: #vc_hybrid_overview-expansion-node-specs}
 
 Each vCenter Server with Hybridity Bundle expansion node will deploy and incur charges for the following components in your {{site.data.keyword.cloud_notm}} account.
 
 ### Hardware for expansion nodes
+{: #vc_hybrid_overview-expansion-node-hardware}
 
 One Bare Metal Server with the configuration presented in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances).
 
 ### Licenses and fees for expansion nodes
+{: #vc_hybrid_overview-expansion-node-license-and-fee}
 
 * One VMware vSphere Enterprise Plus 6.5u1
 * One VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
@@ -141,7 +156,8 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-### Related links
+## Related links
+{: #vc_hybrid_overview-related}
 
 * [vCenter Server Software Bill of Materials](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
 * [Requirements and planning for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)

@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # Requirements and planning for vCenter Server instances
+{: #vc_planning}
 
 Review the following requirements before you order your VMware vCenter Server instances. Plan your instance based on the {{site.data.keyword.CloudDataCent}} location, your workload capacity requirements, and add-on service requirements.
 
 ## IBM Cloud account requirements
+{: #vc_planning-account-req}
 
 The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## IBM Cloud Data Center availability
+{: #vc_planning-dc-availability}
 
 The vCenter Server deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following {{site.data.keyword.CloudDataCents_notm}} are available for vCenter Server deployment:
 
@@ -66,18 +69,22 @@ Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when or
 | Limited Inventory             | The {{site.data.keyword.CloudDataCent_notm}} has limited availability and the order might not be completed. |
 
 ## Backup of management components
+{: #vc_planning-backup-mgmt-components}
 
 You are responsible for maintaining and ensuring the availability of all instance components. It is strongly recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
 ## Services for vCenter Server instances
+{: #vc_planning-addon-services}
 
 You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html).
 
 ## Capacity considerations
+{: #vc_planning-capacity-considerations}
 
 For more information about capacity considerations, see [Scaling capacity](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
 
-### Related links
+## Related links
+{: #vc_planning-related}
 
 * [vCenter Server overview](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
 * [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)

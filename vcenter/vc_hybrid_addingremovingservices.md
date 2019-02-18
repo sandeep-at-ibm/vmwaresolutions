@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingremovingservices}
 
 You can order services for your VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instance, such as a disaster recovery solution. When you no longer need these services, you can remove them from your instance.
 
 ## Available services for vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingremovingservices-available-services}
 
 The following services are available to vCenter Server with Hybridity Bundle instances, together with the installed service versions.
 
@@ -38,14 +40,17 @@ Table 1. Available services for vCenter Server with Hybridity Bundle instances
 | [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html)                                  | 6.0 update 3 | V1.2 and later |
 
 ## Procedure to add services to vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingremovingservices-adding-procedure}
 
 To apply a service to your vCenter Server with Hybridity Bundle instance, click the links in the table to review the considerations for the service. Then, check the components that are deployed and follow the instructions in the ordering topics to place your order.
 
 ### Service installation results
+{: #vc_hybrid_addingremovingservices-adding-results}
 
 When the installation of the service is completed successfully, you are notified by email, and the service is displayed on the **Services** tab of the instance details with the **Installed** status.
 
 ## Procedure to view services for vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingremovingservices-viewing-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance for which you want to view services.
@@ -54,6 +59,7 @@ When the installation of the service is completed successfully, you are notified
 5. Depending on the viewed service, you can access the service consoles using the credentials provided on the service details and you can manage the service from here.
 
 ## Procedure to remove services for vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_addingremovingservices-removing-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance for which you want to remove services.
@@ -62,6 +68,7 @@ When the installation of the service is completed successfully, you are notified
 5. In the **Delete Service** window, review the considerations or warnings if there are any. Select **I Understand** and click **Delete**.
 
 ### Service removal results
+{: #vc_hybrid_addingremovingservices-removing-results}
 
 After your request for service removal is accepted, the service status is changed to **Removing**.
 
@@ -70,6 +77,7 @@ When the removal of the service is completed successfully, you are notified by e
 You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the removed services.
 {:note}
 
-### Related links
+## Related links
+{: #vc_hybrid_addingremovingservices-related}
 
 * [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)

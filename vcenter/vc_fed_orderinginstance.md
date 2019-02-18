@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Ordering VMware Federal instances
+{: #ordering-vmware-federal-instances}
 
 To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware Federal instance. VMware Federal instances help you disconnect the open management connection and secure your deployed instance.
 
@@ -20,6 +21,7 @@ Currently, only vCenter Server instances support VMware Federal on {{site.data.k
 {:note}
 
 ## Requirements to order VMware Federal instances
+{: #vc_fed_orderinginstance-req}
 
 Ensure that you completed the following tasks:
 * You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
@@ -41,10 +43,12 @@ Don't modify any values that are set during instance order or deployment. Doing 
 {:important}
 
 ## System settings
+{: #vc_fed_orderinginstance-sys-settings}
 
 You must specify the following system settings when you order a VMware Federal instance.
 
 ### Instance name
+{: #vc_fed_orderinginstance-inst-name}
 
 The instance name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
@@ -53,10 +57,12 @@ The instance name must meet the following requirements:
 * The instance name must be unique within your account.
 
 ### Primary or secondary
+{: #vc_fed_orderinginstance-primary-secondary}
 
 Order a new primary instance. Deploying a secondary instance for high availability is not supported currently.
 
 ## Licensing settings
+{: #vc_fed_orderinginstance-licensing-settings}
 
 IBM-provided licenses for the following VMware components:
 
@@ -66,19 +72,23 @@ IBM-provided licenses for the following VMware components:
 * (For vSAN clusters) vSAN 6.6 (Advanced or Enterprise edition)
 
 ### Attention
+{: #vc_fed_orderinginstance-attention}
 
 * The minimum license editions are indicated on the user interface. If different component editions are supported, you can select the edition that you want. You are responsible to ensure that the license key provided is correct for each VMware component selected.
 * For vSphere, a license charge will be incurred at time of order, but the license charge will subsequently be credited to your account.
 
 ## Bare Metal Server settings
+{: #vc_fed_orderinginstance-bare-metal-settings}
 
 Bare Metal settings are based on your data center selection and bare metal server configuration.
 
 ### Data center location
+{: #vc_fed_orderinginstance-dc-location}
 
 Select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be hosted.
 
 ### Skylake
+{: #vc_fed_orderinginstance-skylake}
 
 Specify the CPU model and RAM for the Bare Metal Server.
 
@@ -91,6 +101,7 @@ Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 ### Broadwell
+{: #vc_fed_orderinginstance-broadwell}
 
 Specify the CPU model and RAM for the Bare Metal Server.
 
@@ -103,16 +114,19 @@ Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB |
 
 ### Number of Bare Metal Servers
+{: #vc_fed_orderinginstance-bare-metal-number}
 
 You can configure the number of ESXi servers in the range 2 - 20.
 
 All ESXi servers share the same configuration. In post-deployment, you can add four more clusters. For vSAN storage settings, 4 ESXi servers are required for both the initial and post-deployment clusters. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Storage settings
+{: #vc_fed_orderinginstance-storage-settings}
 
 Storage settings are based on your selection of Bare Metal Server configuration and the storage type.
 
 ### vSAN storage
+{: #vc_fed_orderinginstance-vsan-storage}
 
 Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
@@ -126,6 +140,7 @@ Specify the following vSAN options:
 * **vSAN License**: Select the vSAN 6.6 license edition (Advanced or Enterprise).
 
 ### NFS storage
+{: #vc_fed_orderinginstance-nfs-storage}
 
 When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
 
@@ -147,8 +162,10 @@ Table 3. NFS performance level options
   | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
 
 ## Network interface settings
+{: #vc_fed_orderinginstance-network-interface-settings}
 
 ### Host name prefix
+{: #vc_fed_orderinginstance-host-name-prefix}
 
 The host name prefix must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
@@ -156,6 +173,7 @@ The host name prefix must meet the following requirements:
 *  The maximum length of the host name prefix is 10 characters.
 
 ### Subdomain label
+{: #vc_fed_orderinginstance-subdomain-label}
 
 The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
@@ -164,6 +182,7 @@ The subdomain label must meet the following requirements:
 *  The subdomain label must be unique within your account.
 
 ### Domain name
+{: #vc_fed_orderinginstance-domain-name}
 
 The root domain name must meet the following requirements:
 * The domain name must consist of two or more strings that are separated by period (.)
@@ -176,6 +195,7 @@ The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs i
 {:note}
 
 ### DNS configuration
+{: #vc_fed_orderinginstance-dns-config}
 
 Select the Domain Name System (DNS) configuration for your instance:
 
@@ -192,10 +212,12 @@ You have 30 days to activate the virtual machines.
 For more information about ordering Windows licensing, see [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Order summary
+{: #vc_fed_orderinginstance-order-summary}
 
 Based on your selected configuration for the instance, the estimated cost is instantly generated and displayed in the **Order Summary** section on the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
 
 ## Procedure to order VMware Federal instances
+{: #vc_fed_orderinginstance-procedure}
 
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
 2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server** card and click **Create**.
@@ -219,6 +241,7 @@ Based on your selected configuration for the instance, the estimated cost is ins
    4. Click **Provision**.
 
 ## Results
+{: #vc_fed_orderinginstance-results}
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
@@ -227,6 +250,7 @@ When the instance is successfully deployed, the components that are described in
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
 ## What to do next
+{: #vc_fed_orderinginstance-next}
 
 View, manage, or secure the VMware Federal instance that you ordered.
 
@@ -241,7 +265,8 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 
    Exceptions to these activities include managing the shared storage file shares from the 	{{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
-### Related links
+## Related links
+{: #vc_fed_orderinginstance-related}
 
 * [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
 * [Viewing VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)

@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # Requirements and planning for vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_planning}
 
 Review the following requirements before you order your VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instance. Plan your instance based on the {{site.data.keyword.CloudDataCent_notm}} location, your workload capacity requirements, and additional service requirements.
 
 ## IBM Cloud account requirements
+{: #vc_hybrid_planning-account-req}
 
 The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
 
 ## IBM Cloud Data Center availability
+{: #vc_hybrid_planning-dc-availability}
 
 The vCenter Server with Hybridity Bundle deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following {{site.data.keyword.CloudDataCents_notm}} are available for vCenter Server with Hybridity Bundle deployment:
 
@@ -66,10 +69,12 @@ Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when or
 | Limited Inventory             | The {{site.data.keyword.CloudDataCent_notm}} has limited availability and the order might not be completed. |
 
 ## Backup of management components
+{: #vc_hybrid_planning-backup-mgmt-components}
 
 You are responsible for maintaining and ensuring the availability of all instance components. It is strongly recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
 
 ## Services for vCenter Server with Hybridity Bundle instances
+{: #vc_hybrid_planning-addon-services}
 
 The vCenter Server with Hybridity Bundle instance includes the VMware Hybrid Cloud Extension (HCX) licensing that entitles you to the VMware HCX on {{site.data.keyword.cloud_notm}} service. This service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
 
@@ -87,10 +92,12 @@ When you deploy this service, complete the following settings:
 You can order other add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html).
 
 ## Capacity considerations
+{: #vc_hybrid_planning-capacity-considerations}
 
 For more information about capacity considerations, see [Scaling capacity](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
 
-### Related links
+## Related links
+{: #vc_hybrid_planning-related}
 
 * [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
 * [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
