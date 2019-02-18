@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -58,7 +58,7 @@ Figure 3. vCenter Server with {{site.data.keyword.icpfull_notm}}
 
 ![vCenter Server with {{site.data.keyword.icpfull_notm}}](vcsicp-virtual-icp-deployment-vcs.svg)
 
-### Related links
+## Related links
 {: #vcsicp-usecases-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
