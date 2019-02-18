@@ -4,17 +4,19 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # About NSX Edge Services Gateway
+{: #nsx_overview}
 
 The VMware NSX Edge Services Gateway (ESG) solution is an extension of the VMware Cloud Foundation on {{site.data.keyword.cloud}} and the vCenter Server on {{site.data.keyword.cloud_notm}} offerings that are currently available on the {{site.data.keyword.cloud_notm}}. The solution architecture for Cloud Foundation and vCenter Server details the components of the solution and the high-level configuration of each component in the design.
 
 For more information about the Cloud Foundation and vCenter Server design, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
 
 ## Overview of NSX Edge Services Gateway
+{: #nsx_overview-nsx-esg}
 
 The NSX Edge Services Gateway connects isolated, stub networks to shared (uplink) networks by providing common gateway services such as Dynamic Host Configuration Protocol (DHCP), Virtual Private Network (VPN), Network Address Translation (NAT), dynamic routing, and load balancing. Common deployments of NSX Edge include demilitarized zone (DMZ), VPN Extranets, and multi-tenant Cloud environments where the NSX Edge creates virtual boundaries for each tenant, workload, or management component. The following features are available within the NSX Edge Service Gateway.
 
@@ -32,6 +34,7 @@ Table 1. Features available with the NSX Edge Service Gateway
 | Load Balancing | Provides simple and dynamically configurable virtual IP addresses and server groups. |
 | High Availability | Ensures an active NSX Edge on the network in case the primary NSX Edge virtual machine is unavailable. |
 
-### Related links
+## Related links
+{: #nsx_overview-related}
 
 * [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
