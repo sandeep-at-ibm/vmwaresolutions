@@ -37,7 +37,7 @@ Figure 1. Multi-site topology
 
 ![Multi-site topology](multisite_topology.svg "Multi-site topology")
 
-### Related links
-{: #nsx-multi_site-topology}
+## Related links
+{: #nsx-multi_site-related}
 
 * [Networking services on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/nsx/networking_services.html)
