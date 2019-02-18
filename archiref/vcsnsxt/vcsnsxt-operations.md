@@ -4,15 +4,18 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Operational considerations for vCenter Server networking
+{: #vcsnsxt-operations}
 
 ## Backup
+{: #vcsnsxt-operations-backup}
 
 ### VMware vCenter Server on IBM Cloud backup
+{: #vcsnsxt-operations-vcs-backup}
 
 As part of {{site.data.keyword.vmwaresolutions_full}}, Veeam backup software is optionally deployed on an {{site.data.keyword.cloud_notm}} virtual server instance (VSI) by using {{site.data.keyword.cloud_notm}} Endurance storage outside the VMware cluster. The purpose of this software is to back up the management components in the solution. [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/veeam_considerations.html) provides details about offering.
 
@@ -21,6 +24,7 @@ The backup of all NSX components is crucial to restore the system to its working
 The NSX Manager backup contains all of the NSX configuration, including controllers, logical switching and routing entities, security, firewall rules, and everything else that you configure within the NSX Manager user interface or API. The vCenter database and related elements like the virtual switches need to be backed up separately. See [NSX file-based backup](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#nsx-file-based-backup) for details. The NSX configuration should be backed up along with a [vCenter file-based  backup](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#vcenter-file-based-backup).
 
 ### Backup and disaster recovery for IBM Cloud Private
+{: #vcsnsxt-operations-backup-dr-icp}
 
 Backups for an {{site.data.keyword.icpfull_notm}} deployment are crucial to restore the system to its working state if a failure occurs. For a traditional VM backup, there is a sticking point: every {{site.data.keyword.icpfull_notm}} master node runs an *etcd* service, and *etcd* documentation clearly states not to use traditional VM backup to restore it.
 
@@ -36,6 +40,7 @@ For {{site.data.keyword.cloud_notm}} Private at the platform level, you will nee
 You can use the backup or restore technology that is provided by the storage provider. A similar process can be extended into your user’s application as well. For more information, see [How to back up and restore {{site.data.keyword.cloud_notm}} Private blog](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8) or  [icp-backup GitHub](https://github.com/ibm-cloud-architecture/icp-backup/).
 
 ### Backup and disaster recovery for CAM
+{: #vcsnsxt-operations-backup-dr-cam}
 
 Backups of a CAM deployment are crucial to restore the system to its working state if a failure occurs. The CAM backup requires the customer to back up the following components:
 -	**Mongo Database** – Main CAM database.
@@ -43,12 +48,15 @@ Backups of a CAM deployment are crucial to restore the system to its working sta
 -	**NFS/Gluster File Systems** - CAM data resides in four persistent volumes.
 
 ### Backup and DR for IBM Cloud Kubernetes Service
+{: #vcsnsxt-operations-backup-dr-iks}
 
 Backup of the etcd database is provided to the customer as part of the managed service, any application data must be backed by the customer however.
 
 ## Scalability
+{: #vcsnsxt-operations-scalability}
 
 ### vCenter Server Scalability
+{: #vcsnsxt-operations-vcs-scalability}
 
 After the deployment of the initial hosts, users can scale out the compute capacity from within the {{site.data.keyword.cloud_notm}} for VMware portal.
 
@@ -58,24 +66,29 @@ Scale out of the environment follows one of these paths:
 -	Addition of new hosts to an existing cluster.
 
 #### Multi-site deployments
+{: #vcsnsxt-operations-multi-site}
 
 VMware on {{site.data.keyword.cloud_notm}} can use the {{site.data.keyword.cloud_notm}} worldwide data center presence and integrated network backbone to allow for various cross geography use cases to be deployed and functioning within a fraction of the time it would take to build such an infrastructure from scratch. Further information can be found at [Multi-site configuration for vCenter Server on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/vcenter/vc_multisite.html).
 
 #### Scale out with new cluster
+{: #vcsnsxt-operations-scale-out-new-cluster}
 
 Users can also scale out the compute capacity by creating a new cluster from within the console by ordering the hosts and the new hosts are automatically added to the new cluster. This option creates a separate cluster in the environment and gives users the ability to physically and logically segregate management workloads from application workloads, the ability to segregate workloads based on other characteristics (for example, Microsoft SQL database cluster) and the ability to deploy applications in highly available topologies. For more information, see [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html).
 
 #### Scale out existing cluster
+{: #vcsnsxt-operations-scale-out-existing-cluster}
 
 The user can scale out an existing cluster by ordering hosts from within the console and the new hosts are automatically added to the cluster. For more information, see [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html) for details. You might need to adjust the HA reservation policy for the cluster based on their reservation requirements.
 
 ### IBM Cloud Private and IBM Cloud Kubernetes Service scalability
+{: #vcsnsxt-operations-icp-iks-scalability}
 
 Based on the available compute capacity at the on-premises or cloud locations, users can scale out the node architecture from the boot node initially deployed. To scale out of the environment:
 -	Expand the {{site.data.keyword.icpfull_notm}} worker nodes.
 -	Expand and use the {{site.data.keyword.containerlong_notm}} offering.
 
 #### IBM Cloud Private expansion
+{: #vcsnsxt-operations-icp-expansion}
 
 {{site.data.keyword.icpfull_notm}} worker virtual machine nodes are scaled to expand the compute and application:
 - Customer provisions a new virtual machine in the same VXLAN that {{site.data.keyword.icpfull_notm}} is deployed.
@@ -83,6 +96,7 @@ Based on the available compute capacity at the on-premises or cloud locations, u
 - Use CAM to automate the provisioning of the VM and running the commands to add it to the {{site.data.keyword.icpfull_notm}} Cluster.
 
 #### IBM Cloud Kubernetes Service expansion
+{: #vcsnsxt-operations-iks-expansion}
 
 Users can provision an {{site.data.keyword.containerlong_notm}} environment by using the {{site.data.keyword.cloud_notm}} Portal to extend and use a container environment. For more information, see [Hybrid enhancements across {{site.data.keyword.cloud_notm}} Private and {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/community/blogs/5092bd93-e659-4f89-8de2-a7ac980487f0/entry/Hybrid_Enhancements_Across_IBM_Cloud_Private_and_IBM_Public_Cloud?lang=en_us).
 
@@ -91,6 +105,7 @@ Application deployments into {{site.data.keyword.containerlong_notm}} are possib
 -	Multi Cloud Manager, a future enhancement to manage {{site.data.keyword.containerlong_notm}} instances.
 -	Helm command line.
 
-### Related links
+## Related links
+{: #vcsnsxt-operations-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

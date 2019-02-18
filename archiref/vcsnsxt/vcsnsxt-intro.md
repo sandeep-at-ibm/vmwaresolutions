@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # vCenter Server networking introduction
+{: #vcsnsxt-intro}
 
 This document provides a view on the application modernization journey to {{site.data.keyword.cloud}}, focusing on the network aspects of the following platforms to allow an integrated multi-cloud to be used for application modernization:
 
@@ -21,6 +22,7 @@ The biggest challenges in application modernization are migration, networking, a
 The [NSX-T preview](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-techpreview.html) is a technology preview to describe the use of VMware NSX Transformers (NSX-T) in a future reference architecture. NSX-T is designed to address application frameworks and architectures that have heterogeneous endpoints and technology stacks. In addition to vSphere, these environments can include other hypervisors, KVM, containers, and bare metal. NSX-T allows IT and development teams to choose the technologies best suited for their applications. NSX-T is also designed for management, operation, and consumption by development organizations in addition to networking teams.
 
 ## Application modernization on IBM Cloud
+{: #vcsnsxt-intro-app-mod}
 
 Application modernization is a term that describes the process of transitioning existing applications to use new development and delivery approaches on the cloud. Customers today are seeking innovative, efficient approaches that help them make this transition based on business and application complexity.
 
@@ -58,6 +60,7 @@ This document provides different views on the technologies that are used in the 
 * [VMware and Skate Advisor Concept Car](/docs/services/vmwaresolutions/archiref/vcscar/vcscar-intro.html) - This reference architecture is a “concept car”, that is, a mechanism to highlight and show technologies solving real world problems. We wanted to demonstrate an interaction between Watson AI and machine learning in a real way. Through the culture of skateboarding, we demonstrate cloud services in a unique way. The implementation of the “concept car” is an extension to the Acme Skateboard application called Skate Advisor. Skate Advisor is a tool, which allows users to have skateboarding trick conversations with a Watson driven engine.
 * [VMware: The modernization journey of Stock Trader](/docs/services/vmwaresolutions/archiref/vcscontent/vcscontent-modjourney.html) - Our reference use case describes a classic WebSphere Application Server application being modernized using {{site.data.keyword.cloud_notm}} Private, IBM Middleware content, {{site.data.keyword.containerlong_notm}}, and vCenter Server on {{site.data.keyword.cloud_notm}}. We are all on a cloud journey, and we are all at different points on that journey. Through incremental steps by the application architect, Jane, and the cloud infrastructure architect, Todd, we modernize an existing application called Stock Trader. It shows examples that help you take each step in your journey, and the value that is realized to your business, regardless of how large or small each step is. We focus on four themes: applications, DevOps, integration, and management. All themes work together to help you achieve your goals. Modernizing one theme without the others might result in problems.
 
-### Related links
+## Related links
+{: #vcsnsxt-intro-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

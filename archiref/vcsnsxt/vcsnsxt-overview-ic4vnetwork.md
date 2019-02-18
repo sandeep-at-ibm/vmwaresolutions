@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud networking overview
+{: #vcsnsxt-overview-ic4vnetwork}
 
 {{site.data.keyword.cloud}} handles physical networking. The following information describes the physical network that is provided by the {{site.data.keyword.cloud_notm}} and physical host connections (VLANs, MTU) associated with the physical hosts described previously.
 
@@ -18,18 +19,22 @@ Figure 1. {{site.data.keyword.cloud_notm}} high-level network view
 ![{{site.data.keyword.cloud_notm}} high-level network view](vcsnsxt-ic4vcloud.svg)
 
 ## Public network
+{: #vcsnsxt-overview-ic4vnetwork-public-net}
 
 {{site.data.keyword.CloudDataCents_notm}} and network points of presence (PoP) have more than one 1 Gbps or 10-Gbps connections to top tier transit and peering network carriers. Network traffic from anywhere in the world connects to the closest network PoP and travels directly across the network to its data center minimizing the number of network hops and handoffs between providers. Inside the data center, 1 Gbps or 10-Gbps network bandwidth is provided to individual servers via a pair of peered, aggregated front-end customer switches (FCS). These aggregated switches are attached to a pair of separate routers (that is, front-end customer routers, FCR) for L3 networking. This multitier design allows the network to scale across racks, rows, and pods within an {{site.data.keyword.CloudDataCent_notm}}.
 
 ## Private network
+{: #vcsnsxt-overview-ic4vnetwork-private-net}
 
 All {{site.data.keyword.CloudDataCents_notm}} and PoPs are connected by the private network backbone. This private network is separate from the public network, and it enables connectivity to services in {{site.data.keyword.CloudDataCents_notm}} around the world. Moving data between data centers is done vusing more than one 10 Gbps or 40-Gbps connections to the private network. Similar to the public network, the private network is multi tiered in that servers and other infrastructure are connected to aggregated backend customer switches (BCS). These aggregated switches are attached to a pair of separate routers (that is, backend customer routers, BCR) for L3 networking. The private network also supports the ability to use jumbo frames (MTU 9000) for physical host connections.
 
 ## Management network
+{: #vcsnsxt-overview-ic4vnetwork-mgmt-net}
 
 Along with the public and private networks, each {{site.data.keyword.cloud_notm}} server is connected to an out–of–band management network. This management network, accessible via VPN, allows Intelligent Platform Management Interface (IPMI) access to the server independently of its CPU, firmware, and operating system for maintenance and administration purposes.
 
 ## Primary and portable IP blocks
+{: #vcsnsxt-overview-ic4vnetwork-ip-blocks}
 
 {{site.data.keyword.cloud_notm}} allocates two types of IP addresses to be used within the  {{site.data.keyword.cloud_notm}} infrastructure:
 * Primary IP addresses are assigned to devices, bare metal, and virtual servers provisioned by {{site.data.keyword.cloud_notm}}. Users shouldn't assign any IP addresses in these blocks.
@@ -38,14 +43,17 @@ Along with the public and private networks, each {{site.data.keyword.cloud_notm}
 Primary or Portable IP addresses can be made routable to any VLAN within the customer account if either VLAN Spanning is enabled within the account or the account is configured as a virtual routing and forwarding (VRF) account.
 
 ## VLAN spanning
+{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
 
 VLAN spanning is an {{site.data.keyword.cloud_notm}} global account setting that allows each primary and portable subnet IP block within all VLANs in the account to be routable to each other. With this setting unavailable, IP blocks can still route to {{site.data.keyword.cloud_notm}} services but not each other. This architecture requires that VLAN Spanning is enabled within the account where VMware vCenter Server on {site.data.keyword.cloud_notm}} is deployed in order that connections are transparently made across the various subnets where the solution components reside.
 
-## Virtual Routing and Forwarding (VRF)
+## Virtual Routing and Forwarding
+{: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} accounts can also be configured as a VRF account. A VRF account provides similar functions to VLAN spanning, enabling automatic routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
+{{site.data.keyword.cloud_notm}} accounts can also be configured as a Virtual Routing and Forwarding (VRF) account. A VRF account provides similar functions to VLAN spanning, enabling automatic routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
 
 ## Physical host connections
+{: #vcsnsxt-overview-ic4vnetwork-host-connect}
 
 Each physical host within the design has two redundant pairs of 10-Gbps Ethernet connections into each {{site.data.keyword.cloud_notm}} Top of Rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 × 10-Gbps connections. This allows each networking interface card (NIC) connection to work independently of the others.
 
@@ -53,6 +61,7 @@ Figure 2. Physical host connections
 ![Physical host connections](vcsnsxt-host-connections.svg)
 
 ## VLANs
+{: #vcsnsxt-overview-ic4vnetwork-vlans}
 
 The VMware on {{site.data.keyword.cloud_notm}} offerings are designed with three VLANs (one public and two private) assigned upon deployment. The public VLAN is assigned to eth1 and eth3, while the private connections are assigned to eth0 and eth2. It's important to note that the public and the first private VLAN created and assigned to this design are untagged by default. Later, the additional private VLAN is trunked on the physical switch ports and tagged within the VMware port groups that are consuming these subnets.
 
@@ -83,6 +92,7 @@ This design is implemented with physical hosts and virtual system instances (VSI
 
 The private network connections are configured to use jumbo frames with MTU size of 9000, which improves performance for large data transfers such as storage and vMotion. This is the maximum MTU allowed within VMware and by {{site.data.keyword.cloud_notm}}. The public network connections use a standard Ethernet MTU of 1500. This must be maintained as any changes might cause packet fragmentation over the internet.
 
-### Related links
+## Related links
+{: #vcsnsxt-overview-ic4vnetwork-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

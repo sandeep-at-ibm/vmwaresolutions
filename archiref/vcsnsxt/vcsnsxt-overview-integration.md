@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Integration, IP addressing, and network flows
+{: #vcsnsxt-overview-integration}
 
 ## IBM Cloud Private and VMware vCenter Server on IBM Cloud integration
+{: #vcsnsxt-overview-integration-icp-vcs-integration}
 
 {{site.data.keyword.cloud}} Private is installed on several virtual machines (VMs) on a vCenter Server instance. Within the vCenter Server instance, the {{site.data.keyword.icpfull_notm}} instance is deployed with a dedicated NSX Edge Services Gateway (ESG) and Distributed Logical Router (DLR) and uses a VXLAN.
 
 The ESG is configured with a source NAT rule (SNAT) to allow outbound traffic, which enables internet connectivity to download the {{site.data.keyword.icpfull_notm}} prerequisites and to connect to GitHub and Docker. Alternatively, you can use a web-proxy for internet connectivity. The ESG is configured with private connectivity to access DNS and NTP services. The ESG is also configured with a DNAT rule to enable the {{site.data.keyword.icpfull_notm}} Master and Proxy vIPs to be accessed from the {{site.data.keyword.cloud_notm}} 10.x network.
 
 ## IBM Cloud Kubernetes Service and vCenter Server integration
+{: #vcsnsxt-overview-integration-iks-vcs-integration}
 
 Currently, the following scenarios to integrate {{site.data.keyword.containerlong_notm}} and vCenter Server networking:
 - **Common VLAN** - Requires that the {{site.data.keyword.containerlong_notm}} worker nodes are deployed onto the same VLAN as the vCenter Server instance. Common VLAN allows an ESG to be a BGP peer to the worker nodes.
@@ -25,10 +28,12 @@ Currently, the following scenarios to integrate {{site.data.keyword.containerlon
 - **BGP Peering** – BGP peering is not a default offering in {{site.data.keyword.cloud_notm}} and must be requested and approved. After enabled, BGP peering allows the Calico vRouters and the ESG to advertise routes to the BCR.
 
 ## IBM Cloud Kubernetes Service and IBM Cloud Private integration
+{: #vcsnsxt-overview-integration-iks-icp-integration}
 
 {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.icpfull_notm}} integration uses strongSwan VPN connectivity with a strongSwan container in {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}}.
 
 ## IP address allocation
+{: #vcsnsxt-overview-integration-ip-address-allocation}
 
 From an administrative perspective, the reference architecture has the following conceptual network ranges:
 -	**{{site.data.keyword.containerlong_notm}} pod network** - All pods that are deployed to a worker node are assigned a private IP address in the 172.30.0.0/16 range and are routed between worker nodes only. To avoid conflicts, don't use this IP range on any nodes that communicate with your worker nodes. Worker nodes and pods can securely communicate on the private network by using private IP addresses. However, when a pod crashes or a worker node needs to be re-created, a new private IP address is assigned.
@@ -50,6 +55,7 @@ From an administrative perspective, the reference architecture has the following
 -	**{{site.data.keyword.icpfull_notm}} worker nodes network** – An enterprise IP address range that uses a BYOIP range that does not clash with any {{site.data.keyword.cloud_notm}} provided subnet.
 
 ## Network traffic flows
+{: #vcsnsxt-overview-integration-net-traffic-flows}
 
 The following traffic flows are described:
 -	External user on the internet to a web tier hosted in a container in {{site.data.keyword.containerlong_notm}}.
@@ -59,6 +65,7 @@ The following traffic flows are described:
 -	Enterprise user on the corporate network access to a VM in vCenter Server.
 
 ### External user on the internet to a web tier hosted in a container in IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-integration-web-tier-iks}
 
 1.	The external user makes a request to the web tier by using the URL.
 2.	DNS is used to determine the IP address. This IP address is an {{site.data.keyword.cloud_notm}} public address on a portable subnet that is assigned to the ALB or Ingress Service.
@@ -68,6 +75,7 @@ The following traffic flows are described:
 6.	If the application is on the same worker node, then iptables is used to determine which internal interface is used to forward the request. If the application is on a different worker node, then the Calico vRouter routes to the applicable worker node, by using IP-in-IP encapsulation only if the worker node is on a different subnet.
 
 ### External user on the internet to a web tier hosted in a container in IBM Cloud Private
+{: #vcsnsxt-overview-integration-web-tier-icp}
 
 1.	The external user makes a request to the web tier by using the URL.
 2.	DNS is used to determine the IP address. This IP address is an {{site.data.keyword.cloud_notm}} public address on a portable subnet that is assigned to the vCenter Server instance.
@@ -77,6 +85,7 @@ The following traffic flows are described:
 6.	If the application is on the same worker node, then iptables is used to determine which internal interface is used to forward the request. If the application is on a different worker node, then the Calico vRouter routes to the applicable worker node, by using IP-in-IP encapsulation. The IP-in-IP packet is encapsulated in a VXLAN frame for transport to the vSphere ESXi host where the worker node is located.
 
 ### Web tier hosted in a container in IBM Cloud Kubernetes Service to database tier hosted in a VM in vCenter Server
+{: #vcsnsxt-overview-integration-iks-db-tier-vcs}
 
 How the route tables in the ESG and vRouters are populated depends on the method of integration. See {{site.data.keyword.containerlong_notm}} and vCenter Server integration.
 1.	The web tier that is running in a container in {{site.data.keyword.containerlong_notm}} makes a request to a database that is running on a VM in the vCenter Server instance.
@@ -91,6 +100,7 @@ How the route tables in the ESG and vRouters are populated depends on the method
 10.	The database VM receives the request.
 
 ### Web tier hosted in a container in IBM Cloud Private to database tier hosted in a VM in vCenter Server
+{: #vcsnsxt-overview-integration-icp-db-tier-vcs}
 
 How the route tables in the ESG and vRouters are populated depends on the method of integration. See {{site.data.keyword.icpfull_notm}} and vCenter Server integration.
 1.	The web tier running in a container in {{site.data.keyword.icpfull_notm}} makes a request to a database running on a VM in the same vCenter Server instance.
@@ -104,6 +114,7 @@ How the route tables in the ESG and vRouters are populated depends on the method
 9.	The database VM receives the request.
 
 ### Enterprise user on the corporate network access to a VM in vCenter Server
+{: #vcsnsxt-overview-integration-corporate-network-vcs}
 
 1.	An enterprise user connected to the enterprise internal network makes a request of a resource that is on a VM hosted in vCenter Server.
 2.	DNS is used to determine the IP address of the VM. This IP address is on a network that has been stretched to {{site.data.keyword.cloud_notm}}.
@@ -113,7 +124,8 @@ How the route tables in the ESG and vRouters are populated depends on the method
 6.	The L2 Concentrator receives the request and places it on the VXLAN that hosts the stretched network.
 7.	The VM receives the request.
 
-### More resources
+## Related links
+{: #vcsnsxt-overview-integration-related}
 
 * [{{site.data.keyword.cloud_notm}} network](https://www.ibm.com/cloud-computing/bluemix/our-network)
 * [Container white paper](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf) (PDF download)

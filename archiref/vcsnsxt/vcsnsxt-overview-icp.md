@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Private
+{: #vcsnsxt-overview-icp}
 
 {{site.data.keyword.icpfull_notm}} is an application platform for developing and managing containerized applications. It is an integrated environment that includes the container orchestrator Kubernetes, a private image repository, a management console, monitoring frameworks and a graphical user interface, which provides a centralized location from where you can deploy, manage, monitor, and scale your applications.
 
@@ -21,6 +22,7 @@ lastupdated: "2019-01-23"
 -	**Robust monitoring and logging with ELK stack** - {{site.data.keyword.cloud_notm}} Private uses Elasticsearch, Logstash, Filebeat, and Heapster for the collection, storage, and querying of logs and metrics. This monitoring and logging process provides a centralized store for all logs and metrics, better performance, and increased stability when you access and query logs and metrics.
 
 ## IBM Cloud Private components
+{: #vcsnsxt-overview-icp-comp}
 
 An {{site.data.keyword.cloud_notm}} Private cluster has four main classes of nodes: boot, master, worker, and proxy. You can optionally specify management, Vulnerability Advisor (VA), and etcd nodes in your cluster.
 -	**Boot node** - A boot node is used for running installation, configuration, node scaling, and cluster updates.
@@ -32,12 +34,14 @@ An {{site.data.keyword.cloud_notm}} Private cluster has four main classes of nod
 -	**etcd** node - An etcd node is an optional node that is used for running the etcd distributed key value store.
 
 ## IBM Cloud Private networking
+{: #vcsnsxt-overview-icp-networking}
 
 {{site.data.keyword.icpfull_notm}} network management is facilitated by the use of Calico.
 Calico uses layer 3 or the network layer, of the Open System Interconnection (OSI) model. Calico uses Border Gateway Protocol (BGP) to build routing tables that facilitate communication among agent nodes.
 
 For more information about Calico networking, see [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-iks.html).
 
-### Related links
+## Related links
+{: #vcsnsxt-overview-icp-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

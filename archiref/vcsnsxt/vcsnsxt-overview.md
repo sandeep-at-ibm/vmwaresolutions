@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Overall architecture overview
+{: #vcsnsxt-overview}
 
 The following information provides more details about the network architecture that is used in this reference architecture. It consists of the following sections:
 * **VMware vCenter Server on {{site.data.keyword.cloud}} overview** – Describes the highlights of the vCenter Server platform.
@@ -23,6 +24,7 @@ The following information provides more details about the network architecture t
   - Network traffic flows
 
 ## vCenter Server overview
+{: #vcsnsxt-overview-vcs-ovw}
 
 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle is a hosted private cloud that helps you to quickly and easily extend your on-premises infrastructure into the cloud for secure and seamless infrastructure hybridity and true application mobility.
 
@@ -44,6 +46,7 @@ The platform integration options of the vCenter Server Hybridity Bundle are not 
 
 The extensive portfolio of services and multi-offering integration options available for the vCenter Server Hybridity Bundle deliver a truly hybrid platform that makes Hybridity as a Service possible.
 
-### Related Links
+## Related links
+{: #vcsnsxt-overview-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
