@@ -89,16 +89,16 @@ Table 2. Failure Conditions and VM Response settings for the vSphere HA cluster
 For more information about configuring these settings in the vSphere Web Client, see [Configure Virtual Machine Responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html).
 
 #### Admission control
-{: #cluster-settings-admin-control
+{: #cluster-settings-admission-control}
 
 vCenter Server uses admission control to ensure that sufficient resources are available in a cluster to provide failover protection and to ensure that VM resource reservations are respected. In this design, the failover capacity is reserved by specifying a percentage of the cluster resources. The defined failover capacity is set to 25% CPU and 25% memory.
 
 #### Datastore heart beating
-{: #cluster-settings-datastore
+{: #cluster-settings-datastore}
 
 vSphere HA uses datastore heart beating to identify hosts that have failed and hosts that reside on a network partition. Datastore heart beating allows vSphere HA to monitor hosts when a management network partition occurs and to continue to respond to failures that occur. In this design, the heartbeat datastore selection policy is set to “Automatically select datastores accessible from the host”.
 
 ## Related links
-{: #cluster-settings-related
+{: #cluster-settings-related}
 
 * [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
