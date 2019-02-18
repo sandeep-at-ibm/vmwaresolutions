@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -196,7 +196,7 @@ Table 9. DLR and Workload ESG IP configuration
 | Workload (DLR) | Uplink | Assigned by customer | TBD | Workload subnet |
 
 ### NAT definitions for the IBM workload NSX edge
-{: #nsx-networking_services-nat-definitions}
+{: #nsx-networking_services-nat-definitions-nsx-edge}
 
 NAT is employed on the Workload ESG for the means of allowing network traffic to traverse between one IP address space and another. For the workload ESG, NAT is required not only to allow for communication to internet destinations, but also to communicate to any {{site.data.keyword.cloud_notm}} sourced IP ranges. For this design, workload traffic is allowed to exit to the internet, but not to the management or any {{site.data.keyword.cloud_notm}} networks. As such, only a SNAT need be defined on the Workload ESG. The entire workload portable subnet is configured to traverse through the SNAT.
 
