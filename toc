@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="vmware-solutions" audience="infrastructure" arm="3662801" href="/docs/services/vmwaresolutions/index.html" path="services/vmwaresolutions"}
+{: .toc subcollection="vmware-solutions" audience="infrastructure" arm="3662801" href="/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started" path="services/vmwaresolutions"}
 IBM Cloud for VMware Solutions
 
     {: .navgroup id="learn"}
