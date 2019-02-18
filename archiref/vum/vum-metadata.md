@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -19,22 +19,22 @@ You can use the system-managed baselines to upgrade your vSAN clusters to recomm
 
 For most enterprises, the VMware default settings for VUM are considered to be suitable. The following information provides how to change these settings if your enterprise would like to use different settings.
 
-##	Download Schedule
+## Download Schedule
 {: #vum-metadata-download-schedule}
 
 Updates are virtual appliance upgrades, host patches, and extensions and by default VUM downloads updates daily. Change the download schedule by accessing the vSphere Web Client, navigating to **Home** > **Update Manager** > **Manage** > **Settings** and selecting **Download Schedule** and then clicking **Edit**.
 
-##	Notification Check Schedule
+## Notification Check Schedule
 {: #vum-metadata-notif-check-schedule}
 
 Notifications are information about patch recalls, new fixes, and alerts and by default VUM downloads notifications on an hourly basis. This can be changed by accessing the vSphere Web Client, navigating to **Home** > **Update Manager** > **Manage** > **Settings** and selecting **Notification Check Schedule** and then clicking **Edit**.
 
-##	Virtual Machine Settings
+## Virtual Machine Settings
 {: #vum-metadata-vm-settings}
 
 To change the virtual machine (VM) Settings, access the vSphere Web Client, navigate to **Home** > **Update Manager** > **Manage** > **Settings** and **VM Settings** and then clicking **Edit**.
 
-##	Host/Cluster Settings
+## Host/Cluster Settings
 {: #vum-metadata-host-settings}
 
 To change the Host/Cluster Settings, access the vSphere Web Client, navigate to **Home** > **Update Manager** > **Manage** > **Settings** and **Host/Cluster Settings** and then clicking **Edit**.
