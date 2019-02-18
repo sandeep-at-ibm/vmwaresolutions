@@ -37,41 +37,28 @@ tunnel to the remote gateway. This remote gateway is an ESG on the vCenter Serve
 #### IBM Cloud Kubernetes Service networking VLANs
 {: #vcsiks-overview-network-iks-vlans}
 
-##### Public VLAN subnets
-{: #vcsiks-overview-network-public-vlan-subnets}
-
+The following information applies to public VLAN subnets:
 - The primary public subnet determines the public IP addresses that are assigned to worker nodes during cluster creation. Multiple clusters in on the same VLAN can share one primary public subnet.
 - The portable public subnet is bound to one cluster only and provides the cluster with eight public IP addresses. Three IPs are reserved for network functions. One IP is used by the default public Ingress ALB and four IPs are used to create public load balancer networking services.
+- Portable public IPs are permanent, fixed IP addresses that are used to access load balancer services over the internet.
 
-Portable public IPs are permanent, fixed IP addresses that are used to access load balancer services over the internet.
-
-##### Private VLAN subnets
-{: #vcsiks-overview-network-private-vlan-subnets}
-
+The following information applies to private VLAN subnets:
 - The primary private subnet determines the private IP addresses that are assigned to worker nodes during cluster creation. Multiple clusters in on the same VLAN can share one primary private subnet.
 - The portable private subnet is bound to one cluster only and provides the cluster with eight private IP addresses. Three IPs are reserved for network functions. One IP is used by the default private Ingress ALB and four IPs are used to create private load balancer networking services.
+- Portable private IPs are permanent, fixed IP addresses that are used to access load balancer services over the internet.
 
-Portable private IPs are permanent, fixed IP addresses that are used to access load balancer services over the internet.
-
-#### Calico
+#### Calico network plugin
 {: #vcsiks-overview-network-calico}
 
 Every Kubernetes cluster is set up with a network plug-in called Calico.
 
-##### Controlling traffic with network policies
-{: #vcsiks-overview-network-control-traffic}
+Default network policies are set up to secure the public network interface of every worker node in the {{site.data.keyword.containerlong_notm}}. If you have unique security requirements or you have a multizone cluster with VLAN spanning enabled, you can use Calico and Kubernetes to create network policies for a cluster. With Kubernetes network policies, you can specify the network traffic that you want to allow or block to and from a pod within a cluster. 
 
-Default network policies are set up to secure the public network interface of every worker node in the {{site.data.keyword.containerlong_notm}}. If you have unique security requirements or you have a multizone cluster with VLAN spanning enabled, you can use Calico and Kubernetes to create network policies for a cluster. With Kubernetes network policies, you can specify the network traffic that you want to allow or block to and from a pod within a cluster. To set more advanced network policies such as blocking inbound (ingress) traffic to LoadBalancer services, use Calico network policies.
+To set more advanced network policies such as blocking inbound (ingress) traffic to LoadBalancer services, use Calico network policies.
 
-###### Kubernetes network policies
-{: #vcsiks-overview-network-kube-net-policies}
+Kubernetes network policies specify how pods can communicate with other pods and with external endpoints. Traffic can also be filtered based on pod and namespace labels. Kubernetes network policies are applied by using kubectl commands or the Kubernetes APIs. When these policies are applied, they're automatically converted into Calico network policies and Calico enforces these policies.
 
-These policies specify how pods can communicate with other pods and with external endpoints. Traffic can also be filtered based on pod and namespace labels. Kubernetes network policies are applied by using kubectl commands or the Kubernetes APIs. When these policies are applied, they're automatically converted into Calico network policies and Calico enforces these policies.
-
-###### Calico network policies for Kubernetes
-{: #vcsiks-overview-network-calico-for-kube}
-
-Calico network policies are a superset of the Kubernetes network policies and are applied by using calicoctl commands.
+Calico network policies for Kubernetes are a superset of the Kubernetes network policies and are applied by using calicoctl commands.
 
 Calico policies add the following features:
 - Allow or block network traffic on specific network interfaces regardless of the Kubernetes pod source or destination IP address or CIDR.
@@ -123,7 +110,7 @@ Service resources are used to create an IP and a DNS name in kube-dns for servic
     - protocol: TCP
     - port: 3306
 
-##### Flow
+#### Flow
 {: #vcsiks-overview-network-flow}
 
 1. The web tier running in a container in {{site.data.keyword.containerlong_notm}} makes a request to the database running on a VM in the vCenter Server instance by calling mysqldb. Kubernetes resolves this name to an IP address and send this request out of the cluster with a destination IP address of the NAT'ed IP of the database server (10.x/26) and a source IP of the worker node (10.x/26).
