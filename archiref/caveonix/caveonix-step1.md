@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-14"
 
 ---
 
-# Step 1 – Initial planning and prerequisites
+# Step 1 - Initial planning and prerequisites
+{: #caveonix-step1}
+
 Each Caveonix RiskForesight application component is loosely coupled, but centrally managed. Therefore, they can be deployed in an “all-in-one” virtual machine (VM) deployment pattern or the application components can be “scaled-out” and deployed on multiple VMs for higher availability,  performance, and capacity.
 
 Deployment patterns are based on both availability requirements and sizing for data retention. RiskForesight deployment nodes can be characterized as:
@@ -41,6 +43,7 @@ There are three Caveonix RiskForesight deployment models:
 
 All components must have an FQDN and registered in DNS before any VM deployment. This step is carried out by the IC4VS automation for the initial "all-in-one" deployment, but is a client responsibility when scaling the deployment.
 
-### Related Links
+## Related links
+{: #caveonix-step1-related}
 
 * [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

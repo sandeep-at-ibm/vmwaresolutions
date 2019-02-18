@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-01"
+lastupdated: "2019-02-14"
 
 ---
 
 # Partially distributed
+{: #caveonix-partially}
 
 After the automated deployment is completed, you can manually scale out by increasing RAM and disk in the initial virtual machine (VM) and add three scale-out VMs. The Riskforesight configuration script can be run to enable and configure the application components on all four VMs.
 
@@ -57,6 +58,7 @@ Table 3. Remote collector parameters
 |OS	|CentOS 7|
 |Installed Application Components	|Remote Collector|
 
-### Related Links
+## Related links
+{: #caveonix-partially-related}
 
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

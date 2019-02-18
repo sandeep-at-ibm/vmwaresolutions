@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-14"
 
 ---
 
 # All-in-one deployment
+{: #caveonix-allinone}
 
 An automated deployment and configuration of a single virtual machine (VM) that hosts all the RiskForesight application components. This deployment model is suitable for small deployments, up to 100 assets with 7 - 30 days of indexing. The “all-in-one” VM details are shown in the following table:
 
@@ -37,6 +38,7 @@ Table 2. Remote collector
 |OS	|CentOS 7|
 |Installed Application Components	|Remote Collector|
 
-### Related Links
+## Related links
+{: #caveonix-allinone-related}
 
 *   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-01"
+lastupdated: "2019-02-14"
 
 ---
 
 # Glossary of Caveonix terms
+{: #caveonix-terminology}
+
 This glossary provides some descriptions for terms that are unassociated with the Caveonix RiskForesight solution:
 
 -	**NIST Special Publication 800-53:** A Risk Management Framework that address security control.
@@ -62,6 +64,7 @@ This glossary provides some descriptions for terms that are unassociated with th
   -	Job: "Caveo Logs" Anomaly score is > 90 then Mark asset for quarantine and send Notification to slack Channel.
   -	Job: "Caveo Network" Anomaly score is > 95 then quarantine the asset and send email notification and also send UI notification.
 
-### Related Links
+## Related links
+{: #caveonix-terminology-related}
 
 * [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

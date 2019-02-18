@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-14"
 
 ---
 
 # Architecture overview for Caveonix RiskForesight
+{: #caveonix-arch}
 
 The Caveonix RiskForesight architecture is shown in the following diagram.
 
@@ -32,6 +33,7 @@ Caveonix RiskForesight architecture has four layers:
   - The ability to visualize and enforce policies for segmentation of networks, virtual machines, or applications across the hybrid cloud.
 
 ## Zones
+{: #caveonix-arch-zones}
 
 Caveonix RiskForesight has the concept of zones:
 
@@ -48,7 +50,9 @@ Figure 2. Caveonix RiskForesight zones
 -	Tenant or Customer Environment Zone – These zones are used to segregate tenants, customer, or business units. Workloads exist in these zones, and therefore a remote collector is required. For a minimum deployment, you need one remote collector, but for a general deployment, you need one Remote Collector per tenant/customer/business unit.
 
 
-### Related Links
+## Related links
+{: #caveonix-arch-related}
+
 
 *   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
 *   [Caveonix Detailed Design](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-detailed.html)

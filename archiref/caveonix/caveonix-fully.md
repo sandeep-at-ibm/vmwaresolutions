@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-05"
+lastupdated: "2019-02-14"
 
 ---
 
 # Fully distributed
+{: #caveonix-fully}
 
 Additional base virtual machines (VMs) and scale-out VMs are added according to the number of assets and data retention requirements.
 
@@ -124,5 +125,6 @@ Table 9. Remote collector
 |Installed Application Components	|Remote Collector |
 
 ## Related Links
+{: #caveonix-fully-related}
 
 * [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

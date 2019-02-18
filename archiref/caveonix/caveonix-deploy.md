@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-02-06"
 {:important: .important}
 
 # Deployment models for Caveonix RiskForesight
+{: #caveonix-deploy}
 
 This section describes the deployment models for Caveonix RiskForesight along with the installation process for installing the solution.
 
@@ -29,6 +30,7 @@ The automated install, provisions one VM and configures all the application comp
 {:note}
 
 ## Deployment sizing
+{: #caveonix-deploy-sizing}
 
 The deployment sizing is calculated by using the following volumes.
 
@@ -99,6 +101,7 @@ Table 4. Summary
 |Scaling VMs	|0	|3	|28 |
 |Total VMs	|1	|4	|48 |
 
-### Related Links
+## Related links
+{: #caveonix-deploy-related}
 
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
