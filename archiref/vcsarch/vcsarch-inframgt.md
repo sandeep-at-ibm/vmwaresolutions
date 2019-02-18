@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -57,7 +57,7 @@ This vCenter Server configuration uses a local, embedded PostgreSQL database tha
 
 This design uses clusters that comprise vSphere ESXi hosts provisioned as part of the solution. However, before clusters can be created, a data center object is created that signifies the location of the vSphere ESXi hosts and the pod within the data center. After the data center object is created, the cluster is created. The cluster is deployed with VMware vSphere High Availability (HA) and VMware vSphere Distributed Resource Scheduler (DRS) enabled.
 
-##### vSphere distributed resource scheduler
+#### vSphere distributed resource scheduler
 {: #vcsarch-inframgt-vsphere-drs}
 
 This design uses vSphere Distributed Resource Scheduling (DRS) in the initial cluster and within the additional compute clusters to initially place and dynamically migrate VMs to achieve balanced clusters. The automation level is set to fully automated so initial placement and migration recommendations are run automatically by vSphere.
