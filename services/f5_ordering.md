@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -75,7 +75,7 @@ You cannot change the license model after service installation. To change the li
 {:important}
 
 ## Related links
-{: #f5_ordering-releated}
+{: #f5_ordering-related}
 
 * [F5 on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/f5_considerations.html)
 * [Managing F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_f5.html)
