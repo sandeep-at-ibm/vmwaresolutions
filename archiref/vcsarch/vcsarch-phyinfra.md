@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -118,8 +118,7 @@ As stated previously, the private network consists of two VLANs within this desi
 The third is used for the encapsulated overlay network Tunnel Endpoints (VTEPs) assigned to each
 host through the NSX Manager. In addition to Private VLAN A, a second private VLAN (here designated Private VLAN B) exists to support VMware features such as vSAN, vMotion, NFS, and iSCSI. As such, the VLAN is divided into two, three, or four portable subnets. The first subnet is assigned to a kernel port group for vMotion traffic.
 
-The remaining subnet or subnets are used for storage traffic. For vSAN, one is assigned to kernel port groups used for vSAN traffic. For NFS attached NAS, one is assigned to a port group dedicated to NFS traffic. For iSCSI attachment, two port groups are created to allow multipathing active-active across both private NIC ports as only one NIC port can be active at a time per VMware’s iSCSI 
-ocumentation.
+The remaining subnet or subnets are used for storage traffic. For vSAN, one is assigned to kernel port groups used for vSAN traffic. For NFS attached NAS, one is assigned to a port group dedicated to NFS traffic. For iSCSI attachment, two port groups are created to allow multipathing active-active across both private NIC ports as only one NIC port can be active at a time per VMware’s iSCSI documentation.
 
 All subnets that are configured as part of a vCenter Server automated deployment use {{site.data.keyword.cloud_notm}} portable managed ranges.
 {:note}
