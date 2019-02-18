@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -252,7 +252,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
         <dd class="dd">The cluster is deleted.</dd>
     </dl>
   * **Actions**: Click the **Delete** icon to delete the cluster.
-4. Click a cluster name to view the ESXi server, storage, and network interface details:
+4. Click a cluster name to view the ESXi server and storage:
 
 Table 4. ESXi server details
 
@@ -262,7 +262,7 @@ Table 4. ESXi server details
 | Version | The version of the ESXi server. |
 | Credentials | The user name and password to access the ESXi server. |
 | Private IP | The private IP address of the ESXi server. |
-| Status | The status of the ESXi server, which can be one of the following values:<br> **Added** The ESXi server is added and is ready for use.<br> **Adding** The ESXi server is being added.<br> **Deleting** The ESXi server is being deleted. |
+| Status | The status of the ESXi server, which can be one of the following values:<br> **Added**: The ESXi server is added and is ready for use.<br> **Adding**: The ESXi server is being added.<br> **Deleting**: The ESXi server is being deleted. |
 
 Table 5. Storage details
 
@@ -272,51 +272,6 @@ Table 5. Storage details
 | Size | The capacity of the storage. |
 | IOPS/GB | The performance level of the storage. |
 | NFS Protocol | The NFS version of the storage. |
-
-Table 6. Network interface details - Public VLAN
-
-| Item        | Description       |  
-|:------------- |:------------- |
-
-Table 7. Network interface details - Private VLAN
-
-| Item        | Description       |  
-|:------------- |:------------- |
-
-Table 8. Network interface details - Secondary Private VLAN
-
-| Item        | Description       |  
-|:------------- |:------------- |
-
-
-<!--  * ESXi servers details:
-     * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
-
-       `host_prefix` is the host name prefix,
-
-       `n` is the sequence of the server,
-
-       `subdomain_label` is the subdomain label, and
-
-       `root_domain` is the root domain name.
-
-     * **Version**: The version of the ESXi server.
-     * **Credentials**: The user name and password to access the ESXi server.
-     * **Private IP**: The private IP address of the ESXi server.
-     * **Status**: The status of the ESXi server, which can be one of the following values:
-        <dl class="dl">
-        <dt class="dt dlterm">Added</dt>
-        <dd class="dd">The ESXi server is added and is ready for use. </dd>
-        <dt class="dt dlterm">Adding</dt>
-        <dd class="dd">The ESXi server is being added. </dd>
-        <dt class="dt dlterm">Deleting</dt>
-        <dd class="dd">The ESXi server is being deleted.</dd>
-        </dl>
-  * Storage details:
-    * **Name**: The data store name.
-    * **Size**: The capacity of the storage.
-    * **IOPS/GB**: The performance level of the storage.
-    * **NFS Protocol**: The NFS version of the storage.-->
 
 ## Deleting clusters from vCenter Server instances
 {: #vc_addingviewingclusters-deleting}
