@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,8 +13,10 @@ lastupdated: "2019-02-06"
 {:important: .important}
 
 # KMIP for VMware implementation and management
+{: #kmip-implementation}
 
 ## Connecting the key management server
+{: #kmip-implementation-connecting-kms}
 
 To enable vSphere encryption or vSAN encryption by using KMIP for VMware on {{site.data.keyword.cloud_notm}}, you need to complete the following tasks:
 
@@ -28,6 +30,7 @@ To enable vSphere encryption or vSAN encryption by using KMIP for VMware on {{si
 8. Export the public version of the certificate and configure it as an allowed client certificate in your KMIP for VMware instance.
 
 ## Enabling encryption
+{: #kmip-implementation-enable-encrypt}
 
 To use vSAN encryption, edit the vSAN general settings in your vCenter cluster and select the encryption check box.
 
@@ -37,6 +40,7 @@ The vSAN health check might issue periodic warnings that it is unable to connect
 To use vSphere encryption, edit your virtual machine storage policies to require disk encryption.
 
 ## Key rotation
+{: #kmip-implementation-key-rotation}
 
 [Rotate your Key Protect customer root key (CRK)](/docs/services/key-protect/rotate-keys.html) by using the {{site.data.keyword.cloud_notm}} console or API.
 
@@ -45,6 +49,7 @@ For VMware vSAN encryption, rotate your VMware key&ndash;encrypting keys (KEKs) 
 For VMware vSphere encryption, rotate your VMware KEKs and DEKs (optionally) by using the **Set-VMEncryptionKey** PowerShell command.
 
 ## Key revocation
+{: #kmip-implementation-key-revocation}
 
 You can revoke all keys in use by KMIP for VMware by deleting your chosen CRK from Key Protect.
 
@@ -56,7 +61,8 @@ KMIP for VMware stores individual wrapped KEKs in your Key Protect instance by u
 VMware does not delete keys from the KMS when a VM having encrypted disks is removed from inventory. This is to allow recovery of that VM from backup or if it is restored to inventory. If you wish to reclaim these keys and cryptographically invalidate all backups, you need to delete the keys from Key Protect after deleting your VMs.
 {:note}
 
-### Related links
+## Related links
+{: #kmip-implementation-related}
 
 * [Solution overview](/docs/services/vmwaresolutions/archiref/kmip/overview.html)
 * [Solution design](/docs/services/vmwaresolutions/archiref/kmip/design.html)
