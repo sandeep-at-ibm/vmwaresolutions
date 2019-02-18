@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # True hybrid with IBM Cloud Kubernetes Service
+{: #vcscontent-iks}
 
 As Jane’s test team expands, she wanted to provide a test environment
 that would run major portions of her application and still use the data she has
@@ -25,5 +26,6 @@ Figure 1. Stock Trader as a true hybrid application
 ![Stock Trader as a true hybrid application](vcscontent-truehybrid.svg)
 
 ## Related links
+{: #vcscontent-iks-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Refactor and add middleware into IBM Cloud Private
+{: #vcscontent-addmidware}
 
 Now that Stock Trader is running in a container, and Jane is satisfied with the current micro-services, she and Todd work on how to enhance the application with extra capabilities. By refactoring Stock Trader micro-services to handle increased activity and scalability, they both see the need to add middleware into {{site.data.keyword.cloud}} Private. Some of the middleware existed in their data center, so it becomes more of a replatform exercise with some new middleware added.
 
@@ -18,6 +19,7 @@ Figure 1. Refactoring of Stock Trader
 This refactoring of the solution brings a common platform to run the application and the required services, bringing in a simpler management plane.
 
 ## Content choices
+{: #vcscontent-addmidware-content-choices}
 
 {{site.data.keyword.cloud_notm}} Private has a broad selection of content, and both Todd and Jane need to decide which best suits their needs. As Todd sees in the {{site.data.keyword.cloud_notm}} Private catalog, most content is available to try out, but some content requires purchase and download from Passport Advantage.
 
@@ -130,13 +132,16 @@ source)
 
 For Stock Trader, based on Jane’s solution architecture, Todd is going to start with [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://console.cloud.ibm.com/catalog/services/mq), and [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis).
 
-## Add middleware
+## Adding middleware
+{: #vcscontent-addmidware-add-middleware}
 
 To add middleware into {{site.data.keyword.cloud_notm}} Private, find the [helm chart](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md) in the catalog, read the readme file, then continue to install.
 
 For Stock Trader, Todd decided to add all of the middleware. The following information summarizes what Todd had to perform for each middleware he wanted Jane to use.
 
 ### Db2
+{: #vcscontent-addmidware-db2}
+
 Todd starts with Db2 because they're already using Db2 and can
 dedicate a container-based Db2 for each solution.
 
@@ -182,6 +187,7 @@ After Db2 is running, Todd or Jane needs to create the tables that the
 Stock Trader solution uses.
 
 ### MQ
+{: #vcscontent-addmidware-mq}
 
 Todd and Jane need messaging software, and since they already use MQ,
 this is a great option. Also, it can run in a small footprint, and
@@ -210,7 +216,8 @@ pods inside the cluster can get to the middleware.
 To configure MQ to use Stock Trader, Todd opens the MQ Management
 user interface, which is the exact same as the VM version.
 
-### 	Redis
+### Redis
+{: #vcscontent-addmidware-redis}
 
 Even though Stock Trader is running on {{site.data.keyword.cloud_notm}} Private Hosted, they
 are still worried about the stock quote service latency when all they
@@ -227,6 +234,7 @@ The configuration is simple, so Todd enters which namespace to
 install it into, and begins the installation.
 
 ## Refactor Stock Trader
+{: #vcscontent-addmidware-refactor-stock-trader}
 
 Refactoring Stock Trader is an important step for Jane. While Todd was busy adding the
 middleware into {{site.data.keyword.cloud_notm}} Private, Jane refactored her solution
@@ -253,7 +261,8 @@ extra capabilities via secrets to access services like ODM and
 Watson, along with more micro-services as individual repositories
 in GitHub.
 
-### Add Secrets
+### Adding secrets
+{: #vcscontent-addmidware-add-secrets}
 
 Now that Jane refactored the Stock Trader micro-services, she
 requires a way to abstract the service names, user IDs, and passwords, so that her application can pick up unique details about the service when deployed
@@ -268,12 +277,13 @@ Jane wants a unified code base, even when Stock Trader might run on
 more than one cloud. The secret DB2 in the following figure has different
 routing details but in the same format. When Jane's portfolio micro-service deploys, it looks for the DB2 secret endpoint parameter to connect
 to the appropriate Db2 instance. The Stock Trader application doesn't care if it's running in a VMware virtual machine, a containerized service,
-or as a Cloud-managed service.
+or as a cloud-managed service.
 
 Figure 2. Stock Trader - pivot services
 ![Stock Trader pivot services](vcscontent-pivot-services.svg)
 
 ## Result
+{: #vcscontent-addmidware-result}
 
 Because Jane committed to refactoring her Stock Trader solution,
 and Todd installing middleware into {{site.data.keyword.cloud_notm}} Private Hosted, all of the
@@ -286,6 +296,7 @@ Figure 3. Enrichment of Stock Trader
 
 ![Stock Trader enrichment](vcscontent-enrich.svg)
 
-### Related links
+## Related links
+{: #vcscontent-addmidware-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
