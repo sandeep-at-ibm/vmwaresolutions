@@ -4,18 +4,23 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # Timeout reached while connecting to the VMware vSphere Web Client
+{: #trbl_timeout_vc_console}
 
 ## Problem
+{: #trbl_timeout_vc_console-problem}
+
 When you try to connect to the vSphere Web Client, you might get the following timeout error:
 
 `The server at <IP_address> is taking too long to respond.`
 
 ## Resolution
+{: #trbl_timeout_vc_console-resolution}
+
 Use the following steps to investigate and fix the problem.
 
 1. Ensure that you completed the steps from the tooltip that gets displayed when you hover over the **vCenter console** button. For

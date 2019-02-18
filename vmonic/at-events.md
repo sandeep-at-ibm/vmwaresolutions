@@ -2,17 +2,19 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
-# {{site.data.keyword.cloudaccesstrailshort}} events
+# Activity Tracker events
+{: #at-events}
 
 Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.Bluemix_notm}}.
 
 The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in {{site.data.keyword.Bluemix_notm}}. For more information, see the [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
 
-## {{site.data.keyword.cloudaccesstrailshort}} events table
+## Activity Tracker events table
+{: #at-events-table}
 
 Check the following table for the description of the columns in the Activity Tracker events table.
 
@@ -32,6 +34,7 @@ Table 1. Description of the Activity Tracker events table
 For more information, see [Activity Tracker event fields](/docs/services/cloud-activity-tracker/at_event.html).
 
 ## Tracking instance management events
+{: #at-events-instance-mgmt}
 
 When you manage user accounts, instances, clusters, and services in {{site.data.keyword.vmwaresolutions_short}}, an event is generated and sent to the **account domain** in Activity Tracker.
 
@@ -74,6 +77,7 @@ Table 2. Description of actions that generate management events
 | `vmware-solutions.service.undeploy` | The action to remove a service from an instance is run. | `success` |
 
 ## Tracking events for the KMIP for VMware on IBM Cloud service
+{: #at-events-kmip}
 
 When you manage keys for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service, an event is generated and sent to the **account domain** in Activity Tracker.
 
@@ -92,10 +96,12 @@ Table 3. Description of actions that generate events for the KMIP for VMware on 
 | `vmware-solutions.key.discover_versions`    | <ul><li>The request to find the version of the KMIP for VMware on {{site.data.keyword.cloud_notm}} service is received.</li><li>The request to find the version of the KMIP for VMware on {{site.data.keyword.cloud_notm}} service is answered.</li></ul> |  <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
 
 ## Where to view the events
+{: #at-events-viewing}
 
 {{site.data.keyword.cloudaccesstrailshort}} events are available in the {{site.data.keyword.cloudaccesstrailshort}} **account domain** that is available in the {{site.data.keyword.Bluemix_notm}} region where the events are generated.
 
-### Related links
+## Related links
+{: #at-events-related}
 
 * [Provisioning Activity Tracker](/docs/services/cloud-activity-tracker/how-to/provision.html)
 * [Navigating to the Activity Tracker dashboard in the {{site.data.keyword.cloud_notm}} Console](/docs/services/cloud-activity-tracker/how-to/manage-events-ui/launch_at_ui.html)
