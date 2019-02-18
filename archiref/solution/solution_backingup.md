@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Backing up components
+{: #solution_backingup}
 
 You’re responsible for the configuration, management, and monitoring of all software components, including the backup and availability of your management infrastructure and workloads.
 
@@ -19,6 +20,7 @@ These add-on services are deployed together with {{site.data.keyword.cloud_notm}
 Different solution components require different strategies for backup. Some components are protected by using image-level backup, and other components are protected by using file-based backup for their configuration and data.
 
 ## File server for file-based backup
+{: #solution_backingup-fileserver-backup}
 
 Some components, such as VMware vCenter Server, Platform Services Controller (PSC), and VMware NSX, require their configuration to be backed up to a file server.
 
@@ -31,6 +33,7 @@ To host these backups, deploy a Linux file server into your cluster by using the
 5. Ensure that this VM is included in your Veeam or IBM Spectrum Protect Plus management backup job.
 
 ## vCenter file-based backup
+{: #solution_backingup-vcenter}
 
 VMware vCenter Server and PSC provide an [appliance management user interface and API to export the database and configuration to a file server](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} using various protocols. VMware documents an example of how you can configure this to [run periodically as a cron job](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} directly on the vCenter Server Appliance and PSC, which you can adapt for your use.
 
@@ -40,10 +43,12 @@ VMware requires the backup location to be an empty folder, so plan for your back
 {:note}
 
 ## NSX file-based backup
+{: #solution_backingup-nsx}
 
 Proper backup of all NSX components is crucial to restoring the system to its working state if a failure occurs. The design requires you to configure NSX backup through the NSX manager backup function. For this purpose, you can [configure NSX manager to regularly perform backups](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} to your file server. Ensure that your file server or its data is backed up correctly, and ensure the rotation of old NSX backups.
 
 ## Image-based backup of management virtual machines
+{: #solution_backingup-image}
 
 After you deployed your instance and deployed either the IBM Spectrum Protect Plus service or the Veeam backup service, configure a backup job for your management virtual machines. Plan to back up the following VMs with at least 7 days of daily backups:
 
@@ -54,6 +59,7 @@ After you deployed your instance and deployed either the IBM Spectrum Protect Pl
 Plan to allocate enough Veeam or IBM Spectrum Protect Plus licenses to back up these virtual machines, and plan for at least 2 TB of backup storage for the VMs.
 
 ## Add-on services
+{: #solution_backingup-addons}
 
 If you deploy add-on solution components into your instance, you should also plan for the backup of these components as part of your management backup strategy:
 
@@ -63,13 +69,15 @@ If you deploy add-on solution components into your instance, you should also pla
 * HyTrust Cloud Control and Data Control: HyTrust supports both image and file-based backup of the HyTrust server appliances. For more information, see the HyTrust administration guides.
 * VMware HCX: The HCX appliance management interface allows you to create and download a file-based backup of the HCX manager configuration similar to the vCenter Server Appliance.
 
-## Additional considerations
+## More considerations
+{: #solution_backingup-considerations}
 
 If you choose to deploy your AD/DNS server as an {{site.data.keyword.cloud_notm}} virtual server instance (VSI), you cannot back it up by using Veeam or IBM Spectrum Protect Plus. In this case, use your preferred Windows backup solution for backup and restore operations, or plan to deploy your instance using AD/DNS VMs within your VMware cluster, which can be backed up by Veeam or IBM Spectrum Protect Plus.
 
 Beginning with VMware vCenter 6.5u2, VMware supports the backup of the vCenter Postgres database by using image-based backups, with integrated suspend and resume scripts for the database during the backup window to ensure database integrity. If you upgrade your VMware instance to vCenter 6.5u2, you can choose to use Veeam or IBM Spectrum Protect Plus to back up your vCenter Server and PSC instead of using file-based backups. If you do so, you must use the Veeam or IBM Spectrum Protect Plus quiesce feature to ensure database integrity.
 
 ## Restoring from backup
+{: #solution_backingup-restore}
 
 There are several special considerations when you restore your management backups:
 
@@ -80,10 +88,12 @@ There are several special considerations when you restore your management backup
 * Ensure that you familiarize yourself with the VMware considerations and limitations for vCenter backup and restore.
 
 ## Summary
+{: #solution_backingup-summary}
 
 With proper planning, you can ensure that your VMware instance can suffer the loss of its management components and recover successfully. Ensure to regularly monitor the success of your backup jobs and availability of your backup data and ensure to test your backup and restore plan regularly, for both your management infrastructure and your workloads.
 
-### Related links
+## Related links
+{: #solution_backingup-related}
 
 * [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
 * [Design overview](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)

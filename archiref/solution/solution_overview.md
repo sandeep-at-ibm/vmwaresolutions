@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-29"
+lastupdated: "2019-02-15"
 
 ---
 
 # Overview of IBM Cloud for VMware Solutions
+{: #solution_overview}
 
 The {{site.data.keyword.vmwaresolutions_full}} offerings enable you to extend your existing VMware virtualized datacenter into the {{site.data.keyword.cloud_notm}} or to house cloud native applications.
 
@@ -22,6 +23,7 @@ Figure 1. Overview of VMware on {{site.data.keyword.cloud_notm}}
 ![Overview of VMware on {{site.data.keyword.cloud_notm}}](solution_overview.svg "The solution virtualizes compute, network, and optionally storage resources to be consumed by VMs where you can run your applications.")
 
 ## Key benefits of IBM Cloud for VMware Solutions
+{: #solution_overview-benefits}
 
 VMware Cloud Foundation and vCenter Server on {{site.data.keyword.cloud_notm}} provide the fundamental building blocks, which includes VMware vSphere, vCenter Server, NSX, and shared storage options including vSAN. These components are needed to flexibly architect a VMware software-defined data center solution that best fits your workloads.
 
@@ -36,7 +38,8 @@ The VMware on {{site.data.keyword.cloud_notm}} offerings bring the following ben
 * **Enabling consistent management and governance** of the deployed hybrid cloud by providing full administrative access to virtualization management, thus preserving your existing VMware tooling, scripts, and investments in training.
 * **Leverage VMware expertise at global scale** with IBM Professional and Managed Services spanning 30+ {{site.data.keyword.CloudDataCents_notm}} worldwide.
 
-### Related links
+## Related links
+{: #solution_overview-related}
 
 * [Design overview](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
 * [Scaling capacity](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)

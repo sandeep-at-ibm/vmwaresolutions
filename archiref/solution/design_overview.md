@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Design overview
+{: #design_overview}
 
 {{site.data.keyword.vmwaresolutions_full}} provides automation to deploy VMware technology components into {{site.data.keyword.CloudDataCents_notm}} across the globe.
 
 ## Solution offerings
+{: #design_overview-offerings}
 
 The solution offerings include the following VMware vSphere products within an automatically deployed and configured cluster:
 * VMware Cloud Foundation: vSphere ESXi, Platform Services Controller (PSC), VMware vCenter Server Appliance, SDDC Manager, VMware NSX, and VMware vSAN.
@@ -22,11 +24,13 @@ In this design, an instance is deployed in a single pod of an {{site.data.keywor
 The design also allows for automated expansion and contraction of virtual capacity within a Cloud Foundation or vCenter Server instance.
 
 ## VMware on IBM Cloud components
+{: #design_overview-comp}
 
 Figure 1. Components of VMware on {{site.data.keyword.cloud_notm}}
 ![Components of VMware on {{site.data.keyword.cloud_notm}}](design_overview.svg "The solution comprises physical infrastructure, virtual infrastructure, infrastructure management, and common services.")
 
-### Related links
+## Related links
+{: #design_overview-related}
 
 * [Physical infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
 * [Virtual infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)

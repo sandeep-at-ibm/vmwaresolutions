@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Comparison chart for VMware component editions
+{: #solution-appendix}
 
 ## VMware NSX edition comparison
+{: #solution-appendix-nsx-editions}
 
 Table 1 lists the available features for the **Base**, **Advanced**, and **Enterprise** editions of VMware NSX that the solution supports.
 
@@ -41,6 +43,7 @@ Table 1. VMware NSX edition comparison chart
 \*L2, L3 & NSX Edge integration only. No consumption of Security Groups
 
 ## VMware vSAN edition comparison
+{: #solution-appendix-vsan-editions}
 
 Table 2 lists the available features for the **Advanced** and **Enterprise** editions of VMware vSAN that the solution supports.
 
@@ -63,7 +66,8 @@ Table 2. VMware vSAN edition comparison chart
 | Data at rest encryption                         |          | •          |
 | Stretched cluster with local failure protection |          | •          |
 
-### Related links
+## Related links
+{: #solution-appendix-related}
 
 * [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
 * [Design overview](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
