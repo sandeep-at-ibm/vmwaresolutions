@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Deleting NetApp ONTAP Select instances
+{: #np_deletinginstance}
 
 If you delete a NetApp ONTAP Select instance, the following components are released sequentially:
 1. The deployed NetApp ONTAP Select clustered VMs (virtual machines) and the NetApp ONTAP Select Deploy VM
@@ -28,6 +29,7 @@ You are billed until the end of the billing cycle for the deleted instance.
 {:note}
 
 ## Procedure to delete instances from the Deployed Instances page
+{: #np_deletinginstance-procedure1}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
 2. In the **NetApp ONTAP Select Instances** table, find the instance to delete.
@@ -38,6 +40,7 @@ You are billed until the end of the billing cycle for the deleted instance.
    2. In the **Delete Instance** window, click **OK**.
 
 ## Procedure to delete instances from the instance details page
+{: #np_deletinginstance-procedure2}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
 2. In the **NetApp ONTAP Select Instances** table, click the instance to delete.
@@ -47,7 +50,8 @@ You are billed until the end of the billing cycle for the deleted instance.
    1. Click the overflow menu icon next to **vCenter console** again and click **Delete Instance**.
    2. In the **Delete Instance** window, click **OK**.
 
-### Related links
+## Related links
+{: #np_deletinginstance-related}
 
 * [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
 * [Viewing NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
