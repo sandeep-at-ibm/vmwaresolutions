@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-16"
 
 ---
 
 # Pre-deployment planning
+{: #vcshcx-planning}
 
 Much of the time that is spent in deploying HCX is in the pre-deployment stage.
 While it is typical for information systems migration projects to take
@@ -21,6 +22,8 @@ project management and early inclusion of stake holders, is critical to
 ensure the speed of deployment and operation of HCX is realized.
 
 ## Avoiding analysis paralysis
+{: #vcshcx-planning-avoiding}
+
 Many of the hurdles and time that is taken in migration of a virtual machine (VM) or group of VMs
 are there because of the need to modify parts of the application
 environment, the design of those changes and the scheduling of the
@@ -41,6 +44,8 @@ minimal configuration on the cloud instance while the final network
 connectivity and design is worked out.
 
 ## Stretched networks
+{: #vcshcx-planning-stretched-net}
+
 The network stretch components of the HCX fleet are very stable. At
 one particular customer with greater than 20 VLANs that are stretched into the
 {{site.data.keyword.cloud}} across 1 Gbps WAN shared with other traffic and HCX migration
@@ -55,11 +60,14 @@ enough latency for your applications.
 
 
 ## Migration lifecycle
+{: #vcshcx-planning-mig-lifecycle}
+
 The following sections describe the phases within a typical HCX
 migration lifecycle, denoting where work streams can be done in
 parallel.
 
 ## vSphere inventory
+{: #vcshcx-planning-vsphere-planning}
 
 - Use an application such as [RVTOOLS](https://www.robware.net/rvtools/)
 to dump the inventory of the source vCenter(s) into spreadsheet form.
@@ -78,7 +86,8 @@ particular VXLAN traffic to now route through the cloud instance
 NSX infrastructure.
 
 
-## 	Baseline network configuration
+## Baseline network configuration
+{: #vcshcx-planning-baseline-net-config}
 
 Create a hardened perimeter network within the cloud side vSphere
 instance. This usually consists of an NSX DLR or Edge appliance. If you use HCX Proximity Routing, there is no need
@@ -87,6 +96,7 @@ be completed later or concurrently without effecting the stretched L2
 traffic.
 
 ## 	Network extension
+{: #vcshcx-planning-net-extension}
 
 Extending the network merely means to take the existing VLAN or VXLAN
 from the source vSphere environment, represented by a virtual
@@ -94,22 +104,29 @@ distributed switch port group (vDS), and extending it to an NSX VXLAN on
 the cloud side of HCX.
 
 ## Pre-flight tests
+{: #vcshcx-planning-preflight-tests}
+
 Pre-flight tests involve performing an HCX migration with both the
 vMotion and bulk migration function in order to establish a baseline
 transfer rate.
 
 ## Migration of non-production apps
+{: #vcshcx-planning-mig-non-prod-apps}
+
 At this point, migration of VMs begins with the planned waves of
 less critical VMs. Develoment, test, and so on, use internet connectivity for
 migration and stretched L2 traffic.
 
 
-## 	Cloud network design and implementation begins
+## Cloud network design and implementation begins
+{: #vcshcx-planning-cloud-net-begins}
+
 While migrations continue, cloud side network designs are finalized
 and implemented within the cloud side vSphere instance.
 
-
 ## More network connectivity considerations
+{: #vcshcx-planning-connect-considerations}
+
 While migrations continue, private WAN network connectivity is
 ordered as it typically takes a few weeks to months to be established
 with the cloud provider. After private network connectivity is
@@ -117,6 +134,8 @@ completed, HCX can be configured to use both, the dedicated private
 network link and the internet for migration and stretched L2 traffic.
 
 ## Physical servers
+{: #vcshcx-planning-physical-servers}
+
 When the goal is data center migration into the cloud, any physical
 servers that interact with the VMs being migrated can be assessed for
 migration into the {{site.data.keyword.cloud_notm}} as either a VM (P2V), bare metal or remain
@@ -134,13 +153,16 @@ capable of being routed to the cloud side. The exception to this is if
 some other stretched L2 technology is employed, such as NSX L2 VPN, to
 replace HCX stretched L2 endpoints.
 
+## Migrate production and complex applications
+{: #vcshcx-planning-mig-prod-complex-app}
 
-## Migrate production  and complex applications
 VMs with shared multi-writer VMDKs such as Oracle RAC or MS Exchange /
 SQL clusters or VMs with raw device mappings are examples of VMs that
 need extra consideration before migration.
 
 ## Network Swing
+{: #vcshcx-planning-net-swing}
+
 Network Swing occurs after the evacuation of the VMs on source side
 networks is complete and the network design / implementation is
 completed on the cloud side. Configuring HCX to un-stretch the networks
@@ -149,6 +171,8 @@ VMs to route network traffic using the cloud side NSX
 infrastructure.
 
 ## Client platforms supported
+{: #vcshcx-planning-client-platforms}
+
 For network extension, only port groups with a vSphere virtual
 distributed switch (vDS) are supported. This also implies that stand-alone ESXi hosts are not supported as you can only have a vDS when ESXi
 hosts are managed by vCenter.
@@ -158,20 +182,28 @@ hosts are managed by vCenter.
 - vSphere 6.5 (vDS must be at a 6.0 level)
 
 ## Cloud platforms supported
+{: #vcshcx-planning-cloud-platforms}
+
 HCX Cloud side is provisioned by {{site.data.keyword.cloud_notm}} automation.
 
 ## Connectivity options
+{: #vcshcx-planning-connect-options}
 
 ### Standard HCX connectivity
+{: #vcshcx-planning-standard-connect}
+
 As deployed by the {{site.data.keyword.vmwaresolutions_short}} automation, HCX cloud side
 installation is configured to connect to across the public internet by
 default.
 
 ### Optional connectivity
+{: #vcshcx-planning-optional-connect}
+
 Connection across the {{site.data.keyword.cloud_notm}} private network is selectable at the
 time of ordering.
 
 ## Related links
+{: #vcshcx-planning-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
 overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   

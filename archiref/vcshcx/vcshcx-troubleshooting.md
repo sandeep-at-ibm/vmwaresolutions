@@ -4,33 +4,40 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-15"
 
 ---
 
-# Troubleshooting
+# HCX troubleshooting
+{: #vcshcx-troubleshooting}
 
 Review the following for common HCX issues and fixes.
 
 ## HCX Client user interface issues
+{: #vcshcx-troubleshooting-hcx-client-issues}
 
 ### HCX user interface token time out
+{: #vcshcx-troubleshooting-hcx-ui-issues}
 
 Typically, if the vCenter user interface (UI) has been left opened for some time, you may encounter a time-out in the HCX UI. This is because the login token to the HCX manager server has timed out. Log out of the vSphere web UI and back in to refresh the token.
 
-### HCX Client UI displaying “NaN” for all metrics on the dashboard screen.
+### HCX Client UI displaying “NaN” for all metrics on the dashboard screen
+{: #vcshcx-troubleshooting-nan-display}
 
 This issue is related to the permissions of the currently logged in vCenter account. Ensure that the Enterprise Administrator group is set in the HCX cloud side appliance manager UI.
 
 ## Migration issues
+{: #vcshcx-troubleshooting-mig-issues}
 
 Migration issues in the current versions of HCX are usually in three categories: licensing, cloud gateway networking connectivity, and destination hardware compatibility.
 
 ### Licensing
+{: #vcshcx-troubleshooting-licensing}
 
 If a migration fails because of a licensing issue, current versions of HCX clearly displays this in the error message with the client web UI within the vCenter UI.
 
 ### Network (WAN) connectivity
+{: #vcshcx-troubleshooting-wan-connect}
 
 If there is an issue with WAN connectivity, always check the **Interconnect -> HCX Components** screen
 within the HCX UI for tunnel status. The fleet components typically do not need to be reset or rebooted. If WAN connectivity is restored, they reconnect automatically.
@@ -49,14 +56,17 @@ If there are fixes and updates that were applied to the HCX Managers (Client and
 11. If necessary, use the `hc` ccli command to run a health check on the components.
 
 ## Destination hardware compatibility issues
+{: #vcshcx-troubleshooting-hw-compatibility}
 
 vMotion migration can be an issue when the client source side is of newer hardware version and vSphere release than the cloud. Since replication based migration copies data to a newly built virtual machine (VM) on the destination side, changing the migration type to “Bulk Migration” should allow the migration to succeed in most cases.
 
 ## Stretched L2 issues
+{: #vcshcx-troubleshooting-stretched-l2}
 
 Few if any issues have been experienced with the operation of the L2 concentrator. Similar to the CGW, if the L2C loses connectivity it reconnects automatically after the network connectivity is restored. Use the ccli shell to check health and operation. After SSH is enabled and the L2C is connected, run the `ip tunnel` and `ip link |grep t_` commands to view the status of the tunnels.
 
 ## Related links
+{: #vcshcx-troubleshooting-related}
 
 * [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
 overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   

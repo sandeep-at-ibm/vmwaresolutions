@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-31"
+lastupdated: "2019-02-15"
 
 ---
 
 # Licensing
+{: #vcshcx-licensing}
 
 HCX is a service. HCX is licensed per site and per virtual machine (VM) managed through
 licensing servers that are maintained by VMware. The HCX cloud and client-side
@@ -21,6 +22,7 @@ installation provided by {{site.data.keyword.vmwaresolutions_full}} console. A k
 each client-side HCX installation.
 
 ## Related links
+{: #vcshcx-licensing-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
 overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   

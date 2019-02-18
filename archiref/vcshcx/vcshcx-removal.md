@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-01"
+lastupdated: "2019-02-16"
 
 ---
 
-# HCX	removal
+# HCX removal
+{: #vcshcx-removal}
 
 HCX removal assumes that stretched networks are no longer in use. Use the following procedure to remove HCX.
 
@@ -21,6 +22,7 @@ cloud side.
 6. Use the vCenter Mob browser to remove the HCX snap-in.
 
 ## Related links
+{: #vcshcx-removal-related}
 
 * [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
 overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-16"
 
 ---
 
 # Cloud and client deployment
+{: #vcshcx-deployment}
 
 As described at the beginning of this document, a minimal HCX installation
 consists of a single cloud and client-side deployment. The HCX client
@@ -16,12 +17,15 @@ side can install on any version of vSphere supported by HCX assuming that
 there is network connectivity between the client and cloud sides.
 
 ## Requirements
+{: #vcshcx-deployment-req}
+
 - HCX Manager – CPU Count 4, Memory 12G, Disk 60G
 - CGW – CPU Count 8, Memory 3G, Disk 2G
 - L2C – CPU Count 8, Memory 3G, Disk 2G
 - WAN Opt – CPU Count 8, Memory 14G, Disk 100G
 
-##	Cloud
+## Cloud
+{: #vcshcx-deployment-cloud}
 
 The cloud side HCX deployment is handled by the {{site.data.keyword.vmwaresolutions_full}} automation. The default configuration uses the public port
 group for configuring any fleet components end-point connectivity. The
@@ -35,6 +39,7 @@ cloud side for private network fleet deployment for use across dedicated
 link such as MPLS.
 
 ## Client
+{: #vcshcx-deployment-client}
 
 The client-side HCX is user deployed and requires administrator
 level permissions to the source vCenter. As of this writing, the HCX
@@ -72,6 +77,7 @@ Upon successful deployment of Fleet components and after several
 minutes, the tunnel status for CGW and L2C components are in the **Up** status in the **Interconnect** tab.
 
 ## Related links
+{: #vcshcx-deployment-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
 overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   

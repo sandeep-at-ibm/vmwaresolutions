@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-05"
+lastupdated: "2019-02-16"
 
 ---
 
 # Glossary of HCX components and terms
+{: #vcshcx-components}
 
 HCX consists of a cloud side (target) and one or more clients
 (source). An instance of HCX must be deployed per vCenter, even if the
@@ -16,7 +17,8 @@ vCenters where HCX is deployed are linked in the same SSO domain on the
 client or cloud side. Configurations that are supported by HCX are, one-to-one,
 one-to-many, many-to-one, and many-to-many.
 
-## 	Cloud side and client side
+## Cloud side and client side
+{: #vcshcx-components-cloud-client-side}
 
 HCX has the concept of cloud side (target) and client side (source).
 - Cloud side - vCenter Server on 	{{site.data.keyword.cloud}} with Hybridity Bundle. The cloud
@@ -28,6 +30,8 @@ controls the cloud side slave instance through its vCenter web client user inter
 snap-in.
 
 ## HCX manager
+{: #vcshcx-components-hcx-manager}
+
 - The cloud side HCX manager is the first part of an HCX install
 deployed on the cloud side by the {{site.data.keyword.vmwaresolutions_short}} automation.
 Initially it is a single deployed OVA image file specific to the cloud
@@ -43,6 +47,7 @@ components on the client side and instructing the cloud side to do the
 same.
 
 ## Fleet components
+{: #vcshcx-components-fleet}
 
 HCX Fleet components are responsible for creating the data and control
 planes between client and cloud side. Deployed as virtual machines (VMs) in mirrored pairs,
@@ -79,8 +84,8 @@ performing a local vMotion. Benefits to this method:
 with no loss in functionality.
     - The cloud side has no vSphere visibility into the client side making it more secure.
 
-
 ## HCX user portals
+{: #vcshcx-components-hcx-user-portals}
 
 - Client web UI – The HCX client web portal is the main UI for HCX. Once the client-side HCX manager is installed, it
 shows up as a snap-in to the vCenter web UI. It controls remote cloud
@@ -103,6 +108,7 @@ when the web UI is not functioning, registration with vSphere components
 (vCenter, PSC, NSX Manager) and certificate management.
 
 ## Related links
+{: #vcshcx-components-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
 overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
