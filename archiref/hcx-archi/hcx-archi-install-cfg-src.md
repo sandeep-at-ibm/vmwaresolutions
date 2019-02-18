@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Installing and configuring HCX on the source
+{: #hcx-archi-install-cfg-src}
 
 The on-premises installation entails deploying the HCX management appliance and registering it with the vCenter and one or more VCF/VCS HCX enabled cloud endpoints.
 
 ## Installing the HCX Manager Appliance
+{: #hcx-archi-install-cfg-src-install-hma}
 
 Install the HCX Manager appliance in the on-premises vCenter.
 
@@ -53,6 +55,7 @@ Table 1. Sample values for network properties
   * View the **Summary** tab, the console reads **Powered On** and the **Play** button is green.
 10. The HCX Manager is powered on and ready to be registered with the vCenter.
 
-### Related links
+## Related links
+{: #hcx-archi-install-cfg-src-related}
 
 * [Preparing the installation environment](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-prep-install.html)

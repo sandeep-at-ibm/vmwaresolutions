@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Modifying or uninstalling HCX
+{: #hcx-archi-mod-uninstall}
 
 Existing installations can be upgraded, or some or all of a Hybrid Cloud Services deployment can be removed.
 
 ##  Unstretching a Layer 2 network
+{: #hcx-archi-mod-uninstall-unstretch-layer2}
 
 Unstretching a Layer 2 network is necessary before you remove the associated Layer 2 concentrator service virtual appliance, or before you uninstall Hybrid Cloud Services.
 
@@ -26,10 +28,12 @@ Unstretching a Layer 2 network is necessary before you remove the associated Lay
 4. Click **OK** to confirm.
 
 ## Uninstalling HCX virtual appliances
+{: #hcx-archi-mod-uninstall-uninst-hva}
 
 A service appliance might be uninstalled in preparation for uninstalling Hybrid Cloud Services or due to a change in the installation architecture. Use the Hybrid Cloud Services to administer appliances, as outlined in the following procedure.
 
 ### Prerequisites for uninstalling HCX virtual appliances
+{: #hcx-archi-mod-uninstall-prereq-uninst-hva}
 
 * Cancel or reset the execution time for any migrations that might occur during the uninstallation task.
 * Check the vSphere Web Client task console for any running migrations, and wait until they are complete.
@@ -39,6 +43,7 @@ Never delete virtual appliances from the vSphere inventory. Always use the manag
 {:note}
 
 ### Procedure to uninstall HCX virtual appliances
+{: #hcx-archi-mod-uninstall-proc-uninst-hva}
 
 1. In the vSphere Web Client interface, select the Hybrid Cloud Services plug-in from the left pane.
 2. In the center pane, click the **Hybrid Services** tab.
@@ -49,6 +54,7 @@ Never delete virtual appliances from the vSphere inventory. Always use the manag
 The Hybrid Cloud Gateway and any hybrid service virtual appliances that use the Hybrid Cloud Gateway are removed from both the vCenter and the VCF/VCS Hybrid Cloud Services Cloud.
 
 ## Uninstalling HCX Manager
+{: #hcx-archi-mod-uninstall-unist-hcxm}
 
 The HCX Manager appliance should be uninstalled before you remove the HCX solution from the on-premises data center. Follow these steps to uninstall the Hybrid Cloud Services virtual machine.
 
@@ -62,10 +68,12 @@ All virtual service appliances are removed. The following elements might remain 
 * Migrated VMs
 
 ### What to do next
+{: #hcx-archi-mod-uninstall-what-next}
 
 The migrated VMs and logs can be manually backed up or deleted.
 
 ## Logging in to the HCX Management Portal
+{: #hcx-archi-mod-uninstall-log-hcxmp}
 
 The Hybrid Cloud Services deployment can be administered from the Management Portal by using a browser-based user interface.
 
@@ -73,6 +81,7 @@ The Hybrid Cloud Services deployment can be administered from the Management Por
 2. The Hybrid Cloud Services user interface opens in a web browser window by using SSL. If necessary, accept the security certificate. The VMware Hybridity and Networking log in screen opens.
 3. Enter the user name and password. By default, the user name is Admin. The password is the value that was supplied when the Hybrid Cloud Services virtual appliance was installed.
 
-### Related links
+## Related links
+{: #hcx-archi-mod-uninstall-related}
 
 * [Troubleshooting HCX on IBM Cloud](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-trbl.html)

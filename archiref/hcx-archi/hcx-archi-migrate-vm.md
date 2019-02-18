@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Migrating a virtual machine
+{: #hcx-archi-migrate-vm}
 
 HCX enables bidirectional migration: from on-premises to the cloud, or from the cloud to the on-premises data center. HCX uses replication technology during the migration process. Replication technology is integrated in the Hybrid Cloud Gateway virtual appliance. No additional replication software needs to be installed.
 
@@ -31,6 +32,7 @@ Low downtime migration uses host-based replication to move a live virtual machin
 7. The migration is done. Hybrid Cloud Services copies the original VM to the **Migrated VMs** folder in the vSphere Templates view.
 
 ## No downtime vMotion
+{: #hcx-archi-migrate-vm-no-downtime-vm}
 
 vMotion transfers a live virtual machine from a vSphere vCenter to a VCF/VCS Cloud. This vMotion requires a stretched network. The vMotion transfer captures the virtual machine's active memory, its execution state, its IP address, and its MAC address.
 
@@ -38,10 +40,12 @@ The virtual machine hardware version must be at least version 9, or cross-cloud 
 {:note}
 
 ## Cold migration
+{: #hcx-archi-migrate-vm-cold-mig}
 
 Cold migration uses the same data plane as cross-cloud vMotion to transfer a powered-off virtual machine over an extended network. Its IP address and MAC address are preserved. The virtual machine requirements and restrictions are the same as for vMotion.
 
 ### Migrating VMs by using the bidirectional wizard
+{: #hcx-archi-migrate-vm-mig-bidir-wiz}
 
 Using the vSphere Web Client, the bidirectional migration wizard is accessible from the Hybrid Cloud Services Getting Started tab. This wizard handles all migration details, including multiple virtual machines.
 
@@ -50,6 +54,7 @@ From the vSphere Web Client, the bidirectional migration wizard can be accessed 
 * From VCF/VCS HCX Cloud to vSphere
 
 ### Checking the VMs before migration
+{: #hcx-archi-migrate-vm-check-vms}
 
 To migrate a virtual machine, a secure connection that is maintained by the Hybrid Cloud Gateway is required, and the VM must meet the following requirements:
 * The virtual machine must be powered on.
@@ -65,6 +70,7 @@ VMs with the following attributes are not supported for migration:
 * Hardware version less than 9.
 
 ### Monitoring a migration
+{: #hcx-archi-migrate-vm-monitor-mig}
 
 The progress of a replication-based migration can be monitored from the user interface, or from the command line. View the Task console, as described in Monitor Service Appliance Deployment, and look for the **Migrate VM** task. When the status is **Completed**, the VM is migrated and powered on.
 
@@ -91,6 +97,7 @@ This procedure uses an unrelated VM in the same vCenter to track the progress of
 An interruption might occur in the continuous ping during the switchover. However, the test ping quickly resumes after the **Migrate VM** task completes, as reflected in the Task console.
 
 ### Viewing migrated VMs
+{: #hcx-archi-migrate-vm-view-vms}
 
 When Hybrid Cloud Services powers on a successfully migrated virtual machine, it powers off the original VM and stores it in a folder in vCenter. The stored virtual machines remain until it is manually deleted.
 
@@ -100,6 +107,7 @@ After the migration, view the vCenter and note the folders that are labeled **VM
 * Unwanted VMs within these folders can be deleted.
 * Deletion is final, unless a backup solution is in place.
 
-### Related links
+## Related links
+{: #hcx-archi-migrate-vm-related}
 
 * [Modifying or uninstalling HCX](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
