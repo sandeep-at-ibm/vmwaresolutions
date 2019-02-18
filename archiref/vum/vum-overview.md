@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -45,7 +45,7 @@ The VUM client interface provides two main views:
 *	Administration View
 *	Compliance View
 
-##	Administration View
+## Administration View
 {: #vum-overview-admin-view}
 
 The administration view is accessed by navigating to; **Home** > **Update Manager** and selecting the IP address of the Update Manager instance. In the Administration view, you can do the following tasks:
@@ -56,7 +56,7 @@ The administration view is accessed by navigating to; **Home** > **Update Manage
 *	Review and check notifications
 *	Import ESXi images
 
-##	Compliance View
+## Compliance View
 {: #vum-overview-compliance-view}
 
 The compliance view of a selected inventory object is accessed by navigating to **Hosts and Clusters** or **VMs and Templates** and clicking the **Update Manager tab**. In the Update Manager Compliance view, you can do the following tasks:
