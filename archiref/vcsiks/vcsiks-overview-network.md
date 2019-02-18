@@ -4,12 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-18"
 
 ---
 
 # Networking, backup, disaster recovery, and scalability
 {: #vcsiks-overview-network}
+
+Review information about networking, backup, disaster recovery (DR), and scalability considerations.
 
 ## Networking
 {: #vcsiks-overview-network-networking}
@@ -71,7 +73,7 @@ Calico enforces these policies, including any Kubernetes network policies that a
 {: #vcsiks-overview-network-traffic-flows}
 
 #### External user on the internet to a web tier hosted in a container in IBM Cloud Kubernetes Service
-{: #vcsiks-overview-network}
+{: #vcsiks-overview-network-web-tier-iks}
 
 1. The external user makes a request to the web tier by using the URL.
 2. DNS is used to determine the IP address. This IP address is an {{site.data.keyword.cloud_notm}} public address on a portable subnet that is assigned to the ALB or Ingress Service.
@@ -81,7 +83,7 @@ Calico enforces these policies, including any Kubernetes network policies that a
 6. If the application is on the same worker node, then iptables is used to determine which internal interface is used to forward the request. If the app is on a different worker node, then the Calico vRouter routes to the applicable worker node, by using IP-in-IP encapsulation only if the worker node is on a different subnet.
 
 #### Web tier hosted in a container in IBM Cloud Kubernetes Service to database tier hosted in a virtual machine in vCenter Server
-{: #vcsiks-overview-network-web-tier}
+{: #vcsiks-overview-network-web-tier-vm}
 
 Endpoint resources are created that detail external database virtual machines (VMs) that include the NAT IP address and port number of the mysql database VMs, for example.
 
