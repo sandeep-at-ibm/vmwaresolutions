@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Use cases
+{: #vcsiks-usecases}
 
 ## Workload migration to IBM Cloud
+{: #vcsiks-usecases-workload-mig}
 
 Acme Skateboards wants to seamlessly extend their on-premises VMware SDDC into a VMware vCenter Server on {{site.data.keyword.cloud}} instance. They need to keep their business up and running and keep their downtime to a minimum. Reconfiguring their applications to run in the cloud isn't an optimal solution.
 
@@ -35,6 +37,7 @@ The vCenter Server with Hybridity Bundle creates a loosely coupled interconnecti
 Using this solution Acme Skateboards successfully migrated their on-premises VMware workloads to the {{site.data.keyword.cloud_notm}} meeting their requirements of little to no downtime and no application reconfiguration.
 
 ## Hybrid architecture deployment
+{: #vcsiks-usecases-hybrid-archi-deployment}
 
 Acme Skateboards wants to deploy a hybrid architecture on {{site.data.keyword.cloud_notm}} consisting of vCenter Server and {{site.data.keyword.icpfull_notm}}, for their journey to application modernization. Their requirements are to run their databases on virtual machines, the applications and web services in containers, and use a common set of tools for network and security management.
 
@@ -50,5 +53,6 @@ The following diagram represents {{site.data.keyword.icpfull_notm}} running on t
 Using the {{site.data.keyword.cloud_notm}} automation, Acme Skateboards can provision a hybrid solution that encompasses VMware on {{site.data.keyword.cloud_notm}} to run their database VMs and {{site.data.keyword.icpfull_notm}} on VMware on {{site.data.keyword.cloud_notm}} to run their apps and front-end web services in containers. NSX gives them a common set of management tools for network and security in the overlay network.
 
 ### Related links
+{: #vcsiks-usecases-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
