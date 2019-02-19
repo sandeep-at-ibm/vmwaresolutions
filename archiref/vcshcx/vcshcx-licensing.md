@@ -25,4 +25,4 @@ each client-side HCX installation.
 {: #vcshcx-licensing-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

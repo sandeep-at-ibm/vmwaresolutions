@@ -21,10 +21,10 @@ When you select the {{site.data.keyword.vmwaresolutions_full}} RiskForesight opt
 
 The RiskForesight installation consists of the following high-level steps:
 
-1. [Initial planning and prerequisites](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step1.html) – Understanding and selecting a deployment option, configuring DNS to provide FQDN/IP resolution for the application components.
-2. [Virtual machine deployment](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step2.html) – Deploying the VMs from an OVF template. The VM has installed on it all the application components.
-3. [Application configuration](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step3.html) – Running the Caveonix configuration script that configures the application component on each of the VMs.
-4. [Application setup](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step4.html) – Setting up the Service Provider and a Tenant or Organization so that the application becomes accessible for the users.
+1. [Initial planning and prerequisites](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step1) – Understanding and selecting a deployment option, configuring DNS to provide FQDN/IP resolution for the application components.
+2. [Virtual machine deployment](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step2) – Deploying the VMs from an OVF template. The VM has installed on it all the application components.
+3. [Application configuration](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step3) – Running the Caveonix configuration script that configures the application component on each of the VMs.
+4. [Application setup](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step4) – Setting up the Service Provider and a Tenant or Organization so that the application becomes accessible for the users.
 
 The automated install, provisions one VM and configures all the application components on that VM.
 {:note}
@@ -104,4 +104,4 @@ Table 4. Summary
 ## Related links
 {: #caveonix-deploy-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

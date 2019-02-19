@@ -58,4 +58,4 @@ Table 1. Sample values for network properties
 ## Related links
 {: #hcx-archi-install-cfg-src-related}
 
-* [Preparing the installation environment](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-prep-install.html)
+* [Preparing the installation environment](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-prep-install)

@@ -111,4 +111,4 @@ when the web UI is not functioning, registration with vSphere components
 {: #vcshcx-components-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

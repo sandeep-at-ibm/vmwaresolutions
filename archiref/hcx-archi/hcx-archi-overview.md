@@ -164,4 +164,4 @@ Before the components are described in more detail, it is imperative to understa
 ## Related links
 {: #hcx-archi-overview-related}
 
-* [VMware HCX on IBM Cloud introduction](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-intro.html)
+* [VMware HCX on IBM Cloud introduction](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-intro)

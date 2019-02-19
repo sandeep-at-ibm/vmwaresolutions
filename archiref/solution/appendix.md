@@ -69,6 +69,6 @@ Table 2. VMware vSAN edition comparison chart
 ## Related links
 {: #solution-appendix-related}
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [Design overview](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [Backing up components](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [Design overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [Backing up components](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

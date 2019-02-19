@@ -46,7 +46,7 @@ This layer consists of vCenter Server, which represents the management layer for
 
 On the {{site.data.keyword.vmwaresolutions_short}} console, you can expand and contract the capacity of your instances by using the add and remove ESXi server capability. In addition, lifecycle management functions like applying updates and upgrading the VMware components in the hosted environment are also available.
 
-For more information about the architecture, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
+For more information about the architecture, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Technical specifications for Cloud Foundation instances
 {: #technical-specifications-for-cloud-foundation-instances}
@@ -72,7 +72,7 @@ If you plan to use vSAN storage, the configuration requires four {{site.data.key
 The following networking components are ordered:
 * 10 Gbps dual public and private network uplinks
 * Three VLANs (Virtual LANs): one public VLAN and two private VLANs
-* Secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* Secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
   This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the Cloud Foundation instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
   {:important}
@@ -114,7 +114,7 @@ Each Cloud Foundation expansion node deploys and incurs charges for the followin
 ### Hardware for expansion nodes
 {: #sd_cloudfoundationoverview-expansion-node-hardware}
 
-One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration presented in [Technical specifications for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+One {{site.data.keyword.cloud_notm}} Bare Metal Server with the configuration presented in [Technical specifications for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances).
 
 ### Licenses and fees for expansion nodes
 {: #sd_cloudfoundationoverview-expansion-node-license-and-fee}
@@ -140,9 +140,9 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 ## Related links
 {: #sd_cloudfoundationoverview-related}
 
-* [Cloud Foundation Software Bill of Materials](/docs/services/vmwaresolutions/sddc/sd_bom.html)
-* [Planning Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_planning.html)
-* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation Software Bill of Materials](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
+* [Planning Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
+* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [VMware vSphere Documentation Center](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [VMware NSX 6 Documentation Center](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764)

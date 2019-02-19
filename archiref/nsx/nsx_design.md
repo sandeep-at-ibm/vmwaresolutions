@@ -50,4 +50,4 @@ While this makes it simple to set up a worldwide connected infrastructure within
 ## Related links
 {: #nsx_design-related}
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

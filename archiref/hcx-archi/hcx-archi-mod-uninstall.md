@@ -84,4 +84,4 @@ The Hybrid Cloud Services deployment can be administered from the Management Por
 ## Related links
 {: #hcx-archi-mod-uninstall-related}
 
-* [Troubleshooting HCX on IBM Cloud](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-trbl.html)
+* [Troubleshooting HCX on IBM Cloud](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-trbl)

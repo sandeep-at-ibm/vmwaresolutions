@@ -50,7 +50,7 @@ After your KMIP for VMware on {{site.data.keyword.cloud}} instance is ready, you
 ## Related links
 {: #kmip_standalone_addingdeletingcert-related}
 
-* [Viewing KMIP for VMware on IBM Cloud instances](/docs/services/vmwaresolutions/services/kmip_standalone_viewing.html)
-* [Ordering KMIP for VMware on IBM Cloud instances](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html)
-* [Deleting KMIP for VMware on IBM Cloud instances](/docs/services/vmwaresolutions/services/kmip_standalone_deleting.html)
-* [Activity Tracker events](/docs/services/vmwaresolutions/vmonic/at-events.html)
+* [Viewing KMIP for VMware on IBM Cloud instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
+* [Ordering KMIP for VMware on IBM Cloud instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)
+* [Deleting KMIP for VMware on IBM Cloud instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
+* [Activity Tracker events](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

@@ -146,4 +146,4 @@ After trained, the Discovery Service can respond to queries such as:
 {: #vcscar-logical-related}
 
 * [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle overview
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

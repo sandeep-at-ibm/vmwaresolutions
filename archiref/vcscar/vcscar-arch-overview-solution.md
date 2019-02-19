@@ -54,7 +54,7 @@ from the private portable subnet that is designated for management components.
 
 NSX Edge Services Gateway (ESG) pairs are deployed. In all cases, one gateway pair is used for outbound traffic from automation components that reside on the private network. For vCenter Server and {{site.data.keyword.icpfull_notm}}, a second gateway that is known as the icp–managed edge, is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. The administrator can configure any required NSX component such as Distributed Logical Router (DLR), logical switches, and firewalls.
 
-For more information about the network design, see [vCenter Server Networking reference architecture](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html).
+For more information about the network design, see [vCenter Server Networking reference architecture](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
 The following table summarizes the {{site.data.keyword.icpfull_notm}} ESG and DLR specifications.
 
@@ -202,4 +202,4 @@ The database for the template designer application.
 ## Related Links
 {: #vcscar-arch-overview-solution-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

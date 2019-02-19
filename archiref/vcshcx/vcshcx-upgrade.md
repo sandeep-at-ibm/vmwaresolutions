@@ -23,4 +23,4 @@ System ID, provide both the client and cloud side. Use SSH into the HCX manager 
 {: #vcshcx-upgrade-related}
 
 * [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
-overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

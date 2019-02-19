@@ -121,4 +121,4 @@ You can provide changed passwords in the IC4V solutions portal so that the autom
 {: #vcsarch-inframgt-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
