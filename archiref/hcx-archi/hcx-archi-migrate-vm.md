@@ -110,4 +110,4 @@ After the migration, view the vCenter and note the folders that are labeled **VM
 ## Related links
 {: #hcx-archi-migrate-vm-related}
 
-* [Modifying or uninstalling HCX](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
+* [Modifying or uninstalling HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

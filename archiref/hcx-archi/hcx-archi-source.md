@@ -268,4 +268,4 @@ Any change to the migrated policy is propagated to all VMs that use the policy.
 ## Related links
 {: #hcx-archi-source-related}
 
-* [Installing and configuring on the source](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
+* [Installing and configuring on the source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)

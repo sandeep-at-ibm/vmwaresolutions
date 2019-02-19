@@ -19,7 +19,7 @@ Review the following information for details about networking considerations and
 {: #sd_networkingoncloudfoundation-networking-components}
 {: faq}
 
-To review the networking components that are included in your Cloud Foundation instance, see [Technical specifications for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+To review the networking components that are included in your Cloud Foundation instance, see [Technical specifications for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances).
 
 ## Firewall considerations
 {: #sd_networkingoncloudfoundation-firewall-considerations}

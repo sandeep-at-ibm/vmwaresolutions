@@ -96,4 +96,4 @@ Table 2. NFS advanced configuration parameters
 ## Related links
 {: #storage-settings-related}
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

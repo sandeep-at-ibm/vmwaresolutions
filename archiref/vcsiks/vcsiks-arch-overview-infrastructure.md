@@ -132,7 +132,7 @@ public network and an interface that is assigned to the private network.
 Any required NSX component such as Distributed Logical
 Router (DLR), logical switches, and firewalls can be configured by the
 administrator. For more information about the NSX Edges that are
-deployed as part of the solution, see [vCenter Server networking guide](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html).
+deployed as part of the solution, see [vCenter Server networking guide](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
 The following tables summarize the {{site.data.keyword.icpfull_notm}} ESG / DLR specifications.
 
@@ -183,4 +183,4 @@ and worker node security compliance.
 ## Related links
 {: #vcsiks-arch-overview-infrastructure-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

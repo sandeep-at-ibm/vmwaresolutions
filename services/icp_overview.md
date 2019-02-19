@@ -128,6 +128,6 @@ Table 5. Description of variables in Formula 2
 ## Related links
 {: #icp_overview-related}
 
-* [Ordering IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services/icp_ordering.html)
-* [vCenter Server and IBM Cloud Private guide](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [Ordering IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
+* [vCenter Server and IBM Cloud Private guide](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Open a Ticket for IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US)

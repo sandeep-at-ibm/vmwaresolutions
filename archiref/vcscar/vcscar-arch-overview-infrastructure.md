@@ -69,4 +69,4 @@ The ESG is also configured with a destination NAT rule (DNAT) to the {{site.data
 ## Related links
 {: #vcscar-arch-overview-infrastructure-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

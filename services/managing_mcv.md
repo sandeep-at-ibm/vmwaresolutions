@@ -21,4 +21,4 @@ A Mission Critical VMware on {{site.data.keyword.cloud_notm}} representative wil
 ## Related links
 {: #managing_mcv-related}
 
-* [Mission Critical VMware on IBM Cloud overview](/docs/services/vmwaresolutions/services/mcv_overview.html)
+* [Mission Critical VMware on IBM Cloud overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-mcv_overview)

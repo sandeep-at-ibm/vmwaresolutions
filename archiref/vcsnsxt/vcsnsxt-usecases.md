@@ -47,7 +47,7 @@ The following diagram represents {{site.data.keyword.icpfull_notm}} running on a
 
 Using {{site.data.keyword.cloud_notm}} automation, Acme Skateboards can provision a hybrid solution that encompasses vCenter Server to run their database VMs and {{site.data.keyword.icpfull_notm}} on vCenter Server to run their applications and front end web services in containers. NSX gives them a common set of management tools for networking and security in the overlay network.
 
-For more information about NSX-V, see [NSX-V overview](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-ic4vnsxv.html). For more information about the vCenter Server and {{site.data.keyword.icpfull_notm}} offering, see [vCenter Server and {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html).
+For more information about NSX-V, see [NSX-V overview](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). For more information about the vCenter Server and {{site.data.keyword.icpfull_notm}} offering, see [vCenter Server and {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro).
 
 Figure 2. vCenter Server with {{site.data.keyword.icpfull_notm}}
 ![vCenter Server with {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
@@ -68,4 +68,4 @@ Using this solution Acme Skateboards was successfully able to migrate their on-p
 ## Related links
 {: #vcsnsxt-usecases-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

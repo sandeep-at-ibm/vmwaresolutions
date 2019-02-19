@@ -169,4 +169,4 @@ Figure 4. L2 Concentrator deployment
 ## Related links
 {: #hcx-archi-target-related}
 
-* [Installing and configuring on the source](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-source.html)
+* [Installing and configuring on the source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-source)

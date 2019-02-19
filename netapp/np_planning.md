@@ -16,7 +16,7 @@ Review the following requirements before you order your NetApp ONTAP Select inst
 ## IBM Cloud account requirements
 {: #np_planning-account-req}
 
-The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
+The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## IBM Cloud Data Center availability
 {: #np_planning-dc-availability}
@@ -61,5 +61,5 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for NetApp ONTAP Se
 ## Related links
 {: #np_planning-related}
 
-* [NetApp ONTAP Select overview](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
-* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [NetApp ONTAP Select overview](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)
+* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)

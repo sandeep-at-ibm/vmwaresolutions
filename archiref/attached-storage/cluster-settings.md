@@ -101,4 +101,4 @@ vSphere HA uses datastore heart beating to identify hosts that have failed and h
 ## Related links
 {: #cluster-settings-related}
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

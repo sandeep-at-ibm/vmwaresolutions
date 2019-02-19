@@ -44,5 +44,5 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cyc
 ## Related links
 {: #sd_deletinginstance_multi-related}
 
-* [Deleting Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
-* [Ordering, viewing, and removing services from Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Deleting Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)
+* [Ordering, viewing, and removing services from Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)

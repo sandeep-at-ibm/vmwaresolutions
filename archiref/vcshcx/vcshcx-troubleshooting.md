@@ -69,4 +69,4 @@ Few if any issues have been experienced with the operation of the L2 concentrato
 {: #vcshcx-troubleshooting-related}
 
 * [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
-overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

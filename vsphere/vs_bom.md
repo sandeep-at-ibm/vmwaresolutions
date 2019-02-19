@@ -24,5 +24,5 @@ Table 1. BOM for VMware vSphere clusters
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware ESXi 6.0 Update 2 Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.0/rn/vsphere-esxi-60u2-release-notes.html)
-* [VMware vSphere overview](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)
-* [Planning vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
+* [VMware vSphere overview](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview)
+* [Planning vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)

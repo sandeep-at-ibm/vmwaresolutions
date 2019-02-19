@@ -39,16 +39,16 @@ Table 1. Supported functions for Cloud Foundation, vCenter Server, vCenter Serve
 
 <sup>1</sup> According to a validated design and with verification during deployment.
 
-<sup>2</sup> You can increase the number of ESXi servers in a vSAN cluster to a maximum of 64. For more information, see _How many ESXi servers can I add to a cluster?_ in [FAQ about ESXi servers](/docs/services/vmwaresolutions/vmonic/faq_esxi.html).
+<sup>2</sup> You can increase the number of ESXi servers in a vSAN cluster to a maximum of 64. For more information, see _How many ESXi servers can I add to a cluster?_ in [FAQ about ESXi servers](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_esxi).
 
 ## Related links
 {: #inst_comp_chart-related}
 
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [Cloud Foundation overview](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server Hybridity overview](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [VMware vSphere overview](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)
-* [Cloud Foundation BOM](/docs/services/vmwaresolutions/sddc/sd_bom.html)
-* [vCenter Server BOM](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
-* [VMware vSphere BOM](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Cloud Foundation overview](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [vCenter Server Hybridity overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [VMware vSphere overview](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview)
+* [Cloud Foundation BOM](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
+* [vCenter Server BOM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
+* [VMware vSphere BOM](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_bom)

@@ -82,4 +82,4 @@ The network architecture has the following specifications:
 ## Related links
 {: #mcv_overview-related}
 
-* [Requesting Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services/managing_mcv.html)
+* [Requesting Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_mcv)
