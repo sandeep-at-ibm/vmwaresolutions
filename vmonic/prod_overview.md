@@ -79,11 +79,6 @@ For more information, see [NetApp ONTAP Select overview](/docs/services/vmwareso
 
 {{site.data.keyword.vmwaresolutions_short}} allows you to add various services at instance order time or after instance deployment. The following services are offered:
 
-### Caveonix RiskForesight on IBM Cloud
-{: #prod_overview-caveonix}
-
-The Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service manages cyber and compliance risk with proactive monitoring and automated defense controls to protect against threats and to meet industry or government regulations.
-
 ### F5 on IBM Cloud
 {: #prod_overview-f5}
 
