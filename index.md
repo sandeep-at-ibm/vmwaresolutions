@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -102,10 +102,6 @@ Review and choose your deployment offering.
        <td>[NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)</td>
        <td>The NetApp ONTAP Select offering allows you to deploy a software-defined storage cluster that addresses your needs for a dedicated and highly available storage appliance based on NetApp ONTAP Select.</td>
     </tr>
-    <tr>
-       <td>[VMware Federal on IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_fed_overview)</td>
-       <td>The VMware Federal on {{site.data.keyword.cloud_notm}} offering provides support for ordering a base vCenter Server instance in addition to providing the option to secure the deployed instances, removing sensitive information, and the open management connection for ongoing access to the instance for management functions.</td>
-    </tr>
   </table>
 
 ### Add-on services
@@ -195,8 +191,7 @@ For information about how to order an instance, see the following topics based o
 * [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 * [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
-* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)  
-* [Ordering VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vmware-federal-instances)
+* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
 
 ## Step 4: Viewing the instance
 {: #getting-started-step4}
@@ -208,7 +203,6 @@ For information about how to view the instance you ordered, see the following to
 * [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
 * [Viewing Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
 * [Viewing NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
-* [Viewing VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_fed_viewinginstance)
 
 ## Step 5: Managing add-on services for the instance
 {: #getting-started-step5}

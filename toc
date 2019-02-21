@@ -11,6 +11,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Release notes
+        vmonic/relnotes_v29.md
         vmonic/relnotes_v28.md
         vmonic/relnotes_v27.md
         vmonic/relnotes_v26.md
@@ -123,17 +124,12 @@ IBM Cloud for VMware Solutions
         netapp/np_deletinginstance.md
 
     {: .topicgroup}
-    VMware Federal on IBM Cloud
-        vcenter/vc_fed_overview.md
-        vcenter/vc_fed_planning.md
-        vcenter/fed_networking.md
-        vcenter/vc_fed_orderinginstance.md
-        vcenter/fed_addviewdeleteclusters.md
-        vcenter/vc_fed_addingremovingservers.md
-        vcenter/vc_fed_viewinginstance.md
-        vcenter/vc_fed_addinstancetousraccount.md
-        vcenter/vc_fed_securinginstance.md
-        vcenter/vc_fed_deletinginstance.md
+    Caveonix RiskForesight on IBM Cloud
+        services/caveonix_considerations.md
+        services/caveonix_ordering.md
+        services/managingcaveonix.md
+        services/caveonix_license_considerations.md
+        services/caveonix_license_ordering.md
 
     {: .topicgroup}
     F5 on IBM Cloud
@@ -240,7 +236,6 @@ IBM Cloud for VMware Solutions
         vcenter/vc_networkingonvcenterserver.md
         vcenter/vc_hybrid_networkingonvcenterserver.md
         sddc/sd_networkingoncloudfoundation.md
-        vcenter/fed_networking.md
         vmonic/trbl_limitations.md
 
     {: .topicgroup}
@@ -253,8 +248,6 @@ IBM Cloud for VMware Solutions
         vmonic/trbl_host_displays_warning_msg.md
         vmonic/trbl_deploy_ovf.md
         vmonic/trbl_vsan_alerts.md
-        vmonic/trbl_mixed_multisite.md
-        vmonic/movinginstances.md
         vmonic/getting-started.md
         vmonic/trbl_fix_spectre.md
     {: .navgroup-end}
