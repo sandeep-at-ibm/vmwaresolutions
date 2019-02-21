@@ -80,7 +80,7 @@ This release includes the following topology enhancements for your instances:
 * For both Cloud Foundation instances and vCenter Server instances: Optimized networking configuration, that is, only the primary public and private IP addresses that are assigned by SoftLayer® are attached to ESXi servers. Portable private addresses are no longer deployed for management traffic.
 * For Cloud Foundation instances only: Windows AD SSO (Active Directory Single Sign-On) and Domain Name System (DNS) server
 
-Because of these changes, you cannot use your existing pre-V1.4 instances in the current release. To reuse the configuration of your existing instances, you must upgrade them to the current version. For more information, see [Upgrading instances from pre-V1.4](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-movinginstances).
+Because of these changes, you cannot use your existing pre-V1.4 instances in the current release. To reuse the configuration of your existing instances, you must upgrade them to the current version.
 {:note}
 
 ## Multi-site configuration support for Cloud Foundation instances

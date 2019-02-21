@@ -45,7 +45,7 @@ The following languages are supported, in addition to English:
 
 ## Skylake Xeon CPU support
 
-Starting with the V2.4 release, the following new Bare Metal Server CPU models are available for deployment for VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}, VMware vSphere on {{site.data.keyword.cloud_notm}}, and VMware Federal on {{site.data.keyword.cloud_notm}} instances and clusters:
+Starting with the V2.4 release, the following new Bare Metal Server CPU models are available for deployment for VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} and VMware vSphere on {{site.data.keyword.cloud_notm}} instances and clusters:
 
 * Dual Intel Skylake Xeon Silver 4110 processor / 16 cores total, 2.1 GHz
 * Dual Intel Skylake Xeon Gold 5120 processor / 28 cores total, 2.2 GHz
@@ -55,19 +55,12 @@ For more information, see the *Bare Metal Server settings* section in:
 
 * [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance#bare-metal-server-settings)
 * [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)
-* [Ordering VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vmware-federal-instances#bare-metal-server-settings)
 
 ## Updates for VMware vCenter Server instances
 
 ### Network File System performance enhancement
 
 The performance level of 10 IOPS/GB, designed for the most demanding workload types, is no longer limited to specific {{site.data.keyword.CloudDataCent_notm}}, but is now available to all. For more information, see the *Storage* section in [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
-
-## Updates for VMware Federal instances
-
-### New IBM Cloud Data Center option
-
-You can now deploy VMware Federal instances to the DAL08 - Dallas, TX {{site.data.keyword.CloudDataCent_notm}}. For more information, see the *IBM Cloud Data Center availability* section in [Requirements and planning for VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_fed_planning#ibm-cloud-data-center-availability).
 
 ## Updates for add-on services
 

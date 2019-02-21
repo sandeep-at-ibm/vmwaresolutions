@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -73,13 +73,6 @@ For more information, see [VMware vSphere on {{site.data.keyword.cloud_notm}} ov
 The NetApp ONTAP Select offering allows you to deploy a software-defined storage cluster that addresses your needs for a dedicated and highly available storage appliance based on NetApp ONTAP Select.
 
 For more information, see [NetApp ONTAP Select overview](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview).
-
-### VMware Federal on IBM Cloud
-{: #prod_overview-federal}
-
-The VMware Federal on {{site.data.keyword.cloud_notm}} offering provides support for ordering a base vCenter Server instance in addition to providing the option to secure the deployed instances, removing sensitive information, and the open management connection for ongoing access to the instance for management functions.
-
-For more information, see [VMware Federal on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_fed_overview).
 
 ## Add-on services
 {: #prod_overview-services}

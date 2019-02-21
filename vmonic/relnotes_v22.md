@@ -40,20 +40,6 @@ For more information about using the Veeam on {{site.data.keyword.cloud_notm}} s
 * [Components and considerations for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
 * [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
-## Support for VMware Federal on IBM Cloud
-
-VMware Federal on {{site.data.keyword.cloud_notm}} provides the option to order a base vCenter Server instance in the WDC03 Federal on {{site.data.keyword.CloudDataCent_notm}}. In addition to supporting a subset of vCenter Server instance offerings, VMware Federal on {{site.data.keyword.cloud_notm}} provides US Federal Government agencies with the option to secure deployed VMware vCenter Server instances. Selecting the option to secure the deployed instances removes sensitive information that is stored about the instance and removes the open management connection for ongoing access to the instance for management functions, such as adding and removing hosts and clusters. After you select the secure option, all management functions are unavailable except for a full instance delete.
-
-For important considerations before you secure a VMware Federal instance, see [Securing VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-securing-vmware-federal-instances).
-
-(Updated on 2 April 2018) You can now expand or contract the capacity of your VMware Federal instance by adding or removing ESXi servers. This option is available only to VMware Federal instances that have not been secured.
-
-For more information, see the following topics:
-
-* [VMware Federal on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_fed_overview)
-* [Adding, viewing, and deleting clusters for VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-fed_addviewdeleteclusters)
-* [Expanding and contracting capacity for VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_fed_addingremovingservers)
-
 ## Advanced configuration settings on ESXi servers
 
 For V2.2 or later releases, new instances are ordered with a new set of advanced configuration settings for ESXi servers.
