@@ -123,14 +123,6 @@ IBM Cloud for VMware Solutions
         netapp/np_deletinginstance.md
 
     {: .topicgroup}
-    Caveonix RiskForesight on IBM Cloud
-        services/caveonix_considerations.md
-        services/caveonix_ordering.md
-        services/managingcaveonix.md
-        services/caveonix_license_considerations.md
-        services/caveonix_license_ordering.md
-
-    {: .topicgroup}
     F5 on IBM Cloud
         services/f5_considerations.md
         services/f5_ordering.md
