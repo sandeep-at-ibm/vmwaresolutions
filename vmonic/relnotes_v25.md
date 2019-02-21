@@ -29,7 +29,7 @@ For more information, see [Addressing Spectre and Meltdown vulnerabilities](/doc
 
 ## NSX component update
 
-This release installs VMware NSX for vSphere 6.4.1 for new deployments of VMware vCenter Server on {{site.data.keyword.cloud_notm}}, VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle, NetApp ONTAP Select, and VMware Federal on {{site.data.keyword.cloud_notm}}.
+This release installs VMware NSX for vSphere 6.4.1 for new deployments of VMware vCenter Server on {{site.data.keyword.cloud_notm}}, VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle and NetApp ONTAP Select.
 
 ## Removal of default backup configuration
 

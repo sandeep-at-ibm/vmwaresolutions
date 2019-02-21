@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -140,7 +140,6 @@ For more information, see the _IBM Cloud Data Center availability_ sections in:
 * [Requirements and planning for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
 * [Requirements and planning for VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 * [Requirements and planning for NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
-* [Requirements and planning for VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_fed_planning)
 
 ## How long does it take for my instance to be deployed?
 {: #faq-deploy}

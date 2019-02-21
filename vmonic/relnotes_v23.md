@@ -72,25 +72,6 @@ This release applies the following upgrades and improvements:
 *	VMware vCenter Server 6.5 Update 1g
 *	VMware NSX for vSphere 6.3.5
 
-## Updates for VMware Federal instances
-
-### DNS configuration for VMware Federal instances
-
-You now have the option to select the deployment of a single Microsoft Windows Server Virtual Server Instance (VSI) for Microsoft Active Directory (AD) or two high availability Microsoft Windows virtual machines in the management cluster. For V2.2, the single Microsoft Windows VSI for Microsoft AD was automatically deployed by default. The new option to select two Microsoft Windows virtual machines provides more privacy and the option to backup and restore the virtual machines using the Veeam service.
-
-You must provide 2 Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows virtual machines. Use the Microsoft Windows Server 2012 R2 Standard edition license and/or the Microsoft Windows Server 2012 R2 Datacenter edition license. You have 30 days to activate the virtual machines.
-{:note}
-
-For more information, see the *Network interface settings* section in [Ordering VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vmware-federal-instances#network-interface-settings)​.
-
-### Add and delete cluster support for VMware Federal Instances
-
-You can now use clusters to manage ESXi servers in VMware Federal instances that are deployed in V2.3 and later releases for better resource management and high availability. The ESXi servers that you configured when you ordered an instance are grouped as **cluster1** by default. You can view the cluster details on the instance overview page or add up to a total of 10 clusters to an instance. When you are expanding or contracting capacity for an instance, you can select which cluster to add ESXi servers to or to remove ESXi servers from.
-
-You also have the option to delete one or more clusters from the instance without deleting the entire instance.
-
-For more information, see [Adding, viewing, and deleting clusters for VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-fed_addviewdeleteclusters).
-
 ## Updates for add-on services
 
 ### HyTrust CloudControl on IBM Cloud
