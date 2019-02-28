@@ -51,10 +51,7 @@
 	
 	
 	
-
-	
-		
-	</defs><sodipodi:namedview
+</defs><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
    borderopacity="1"
@@ -69,7 +66,7 @@
    showgrid="false"
    inkscape:zoom="1.1135916"
    inkscape:cx="300.5"
-   inkscape:cy="382.25"
+   inkscape:cy="346.33019"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
@@ -86,10 +83,9 @@
    y="219.5"
    x="6.5" /><g
    id="g8"
-   transform="translate(69,439)"
-   style="">
+   transform="translate(69,439)">
 		<text
-   style="font-size:12px;font-family:Helvetica"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text6"
    font-size="12"
    transform="translate(-2.5273,12)">ESG</text>
@@ -103,10 +99,9 @@
    y="481.5"
    x="362.5" /><g
    id="g14"
-   transform="translate(384,543)"
-   style="">
+   transform="translate(384,543)">
 		<text
-   style="font-size:12px;font-family:Helvetica"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text12"
    font-size="12"
    transform="translate(3.3047,12)">VCSA</text>
@@ -134,7 +129,7 @@
    x="367"
    y="501">
 	</image><text
-   style="font-size:11.19813283px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text20"
    font-size="8"
    x="397.60999"
@@ -158,12 +153,11 @@
    width="83"
    y="270.5"
    x="190.5" /><text
-   style="font-size:11.19813297px;font-family:'MS UI Gothic';fill:#ffffff;stroke-width:0.86558926;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';fill:#ffffff;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text26"
    font-size="12"
-   x="227.22888"
-   y="295.16595"
-   transform="scale(0.86558928,1.1552823)">Squid プロキシー</text>
+   x="196.49001"
+   y="341">Squid プロキシー</text>
 <image
    style="overflow:visible"
    id="image28"
@@ -176,7 +170,7 @@
    x="38"
    y="347.5">
 	</image><text
-   style="font-size:11.19813283px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text30"
    font-size="12"
    x="60.667"
@@ -190,10 +184,9 @@
    y="641.5"
    x="205.5" /><g
    id="g36"
-   transform="translate(207,691)"
-   style="">
+   transform="translate(211,691)">
 		<text
-   style="font-size:11px;font-family:Helvetica"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.09999943px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
    id="text34"
    font-size="11"
    transform="translate(-0.7021,19)">IBM Cloud DNS</text>
@@ -210,17 +203,16 @@
    x="490"
    y="367.5">
 	</image><text
-   style="font-size:11.19813283px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text40"
    font-size="12"
    x="520.5"
    y="425.5">BCR</text>
 <g
    id="g48"
-   transform="translate(378,484)"
-   style="">
+   transform="translate(378,484)">
 		<text
-   style="font-size:8px;font-family:Helvetica"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text46"
    font-size="8"
    enable-background="new    "
@@ -228,11 +220,11 @@
      id="tspan42"
      y="0"
      x="0"
-     style="">Update</tspan><tspan
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.09999975px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">Update</tspan><tspan
      id="tspan44"
      y="9.6000004"
      x="0"
-     style="">Manager</tspan></text>
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.09999975px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">Manager</tspan></text>
 
 	</g><g
    style="fill:none;stroke:#000000;stroke-miterlimit:10"
@@ -243,33 +235,27 @@
 	<path
    inkscape:connector-curvature="0"
    id="path50"
-   d="m 490,387 -368,0.45"
-   style="" />
+   d="m 490,387 -368,0.45" />
 	<path
    inkscape:connector-curvature="0"
    id="path52"
-   d="M 232,388 V 348"
-   style="" />
+   d="M 232,388 V 348" />
 	<path
    inkscape:connector-curvature="0"
    id="path54"
-   d="m 401,410 v 71"
-   style="" />
+   d="m 401,410 v 71" />
 	<path
    inkscape:connector-curvature="0"
    id="path56"
-   d="M 600,600 H 200"
-   style="" />
+   d="M 600,600 H 200" />
 	<path
    inkscape:connector-curvature="0"
    id="path58"
-   d="M 518,432 V 600"
-   style="" />
+   d="M 518,432 V 600" />
 	<path
    inkscape:connector-curvature="0"
    id="path60"
-   d="m 247,561 v 40"
-   style="" />
+   d="m 247,561 v 40" />
 		</g><image
    style="overflow:visible"
    id="image64"
@@ -282,7 +268,7 @@
    x="491"
    y="138">
 	</image><text
-   style="font-size:11.19813283px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text66"
    font-size="12"
    x="522.16998"
@@ -290,8 +276,7 @@
 <g
    id="g74"
    pointer-events="none"
-   transform="translate(0.5,0.5)"
-   style="">
+   transform="translate(0.5,0.5)">
 	<path
    style="fill:none;stroke:#000000;stroke-miterlimit:10"
    inkscape:connector-curvature="0"
@@ -315,7 +300,7 @@
    transform="matrix(0.8396,0,0,0.8381,37.5,235)">
 	</image>
 	</g><text
-   style="font-size:11.19813283px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text76"
    font-size="12"
    x="59.616001"
@@ -342,46 +327,48 @@
    id="path82"
    d="M 250,368.1 V 405 c 0,6.667 3.333,10 10,10 h 120 c 6.667,0 10,3.333 10,10 v 34.9" />
 	</g><g
-   stroke-miterlimit="10"
-   id="g96"
+   id="g100"
+   pointer-events="none"
+   transform="translate(0.5,0.5)"><g
    style="stroke:#3399ff;stroke-width:3;stroke-miterlimit:10"
-   transform="translate(0.5,0.5)"><path
-   d="m 250,361.35 4.5,9 -4.5,-2.25 -4.5,2.25 z"
+   id="g96"
+   stroke-miterlimit="10"><path
+   style="fill:#3399ff"
+   inkscape:connector-curvature="0"
    id="path86"
-   inkscape:connector-curvature="0"
-   style="fill:#3399ff" />
+   d="m 250,361.35 4.5,9 -4.5,-2.25 -4.5,2.25 z" />
 	<path
-   d="m 390,466.65 -4.5,-9 4.5,2.25 4.5,-2.25 z"
+   style="fill:#3399ff"
+   inkscape:connector-curvature="0"
    id="path88"
-   inkscape:connector-curvature="0"
-   style="fill:#3399ff" />
+   d="m 390,466.65 -4.5,-9 4.5,2.25 4.5,-2.25 z" />
 	<path
-   d="M 140,335.1 V 405 c 0,6.667 3.333,10 10,10 h 50 c 6.667,0 10,-3.333 10,-10 v -36.9"
+   style="fill:none;stroke-dasharray:9, 9"
+   inkscape:connector-curvature="0"
    id="path90"
-   inkscape:connector-curvature="0"
-   style="fill:none;stroke-dasharray:9, 9" />
+   d="M 140,335.1 V 405 c 0,6.667 3.333,10 10,10 h 50 c 6.667,0 10,-3.333 10,-10 v -36.9" />
 	<path
-   d="m 140,328.35 4.5,9 -4.5,-2.25 -4.5,2.25 z"
+   style="fill:#3399ff"
+   inkscape:connector-curvature="0"
    id="path92"
-   inkscape:connector-curvature="0"
-   style="fill:#3399ff" />
+   d="m 140,328.35 4.5,9 -4.5,-2.25 -4.5,2.25 z" />
 	<path
-   d="m 210,361.35 4.5,9 -4.5,-2.25 -4.5,2.25 z"
-   id="path94"
+   style="fill:#3399ff"
    inkscape:connector-curvature="0"
-   style="fill:#3399ff" />
+   id="path94"
+   d="m 210,361.35 4.5,9 -4.5,-2.25 -4.5,2.25 z" />
 	</g><rect
-   x="121.5"
-   width="80"
-   height="80"
+   style="fill:#dae8fc;stroke:#000000"
+   y="0"
    id="rect98"
-   y="0.5"
-   style="fill:#dae8fc;stroke:#000000" /><g
+   height="80"
+   width="80"
+   x="121" />
+	</g><g
    id="g104"
-   transform="translate(125,64)"
-   style="">
+   transform="translate(135,64)">
 		<text
-   style="font-size:12px;font-family:Helvetica"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.09999943px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
    id="text102"
    font-size="12"
    transform="translate(2,-19)">リポジトリー</text>
@@ -393,13 +380,16 @@
    ry="30"
    rx="60"
    cy="108.5"
-   cx="400.5" /><text
-   font-size="12"
+   cx="400.5" /><g
+   id="g110"
+   transform="translate(370,102)">
+		<text
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.09999943px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
    id="text108"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.19813251px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
-   x="369.99799"
-   y="114">インターネット</text>
-<g
+   font-size="12"
+   transform="translate(-0.002,12)">インターネット</text>
+
+	</g><g
    style="stroke:#000000"
    id="g118"
    pointer-events="none"
@@ -425,10 +415,9 @@
    x="207" />
 	</g><g
    id="g122"
-   transform="translate(224,545)"
-   style="">
+   transform="translate(224,545)">
 		<text
-   style="font-size:12px;font-family:Helvetica"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text120"
    font-size="12"
    transform="translate(0.9736,12)">AD/DNS</text>
@@ -500,10 +489,9 @@
    d="M 600,760 H 200" />
 	</g><g
    id="g154"
-   transform="translate(174,605)"
-   style="">
+   transform="translate(174,605)">
 		<text
-   style="font-size:12px;font-family:Helvetica"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text152"
    font-size="12"
    transform="translate(-0.3418,12)">参照</text>
@@ -516,60 +504,54 @@
    pointer-events="none"
    d="m 245.5,721.5 v 40" /><g
    id="g160"
-   transform="translate(367,157)"
-   style="">
+   transform="translate(409,157)">
 		<text
-   style="font-size:11px;font-family:Helvetica"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.09999943px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
    id="text158"
    font-size="11"
    transform="translate(-13.676,8)">パブリック・ネットワーク</text>
 
 	</g><g
    id="g164"
-   transform="translate(463,417)"
-   style="">
+   transform="translate(463,417)">
 		<text
-   style="font-size:10px;font-family:Helvetica"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text162"
    font-size="10"
    transform="translate(-7.3555,3.5)">Int-Mgt</text>
 
 	</g><g
    id="g168"
-   transform="translate(500,438)"
-   style="">
+   transform="translate(500,438)">
 		<text
-   style="font-size:10px;font-family:Helvetica"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text166"
    font-size="10"
    transform="translate(-1.3555,8)">Mgt</text>
 
 	</g><g
    id="g172"
-   transform="translate(554,437)"
-   style="">
+   transform="translate(554,437)">
 		<text
-   style="font-size:10px;font-family:Helvetica"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text170"
    font-size="10"
    transform="translate(5.1445,9)">サービス</text>
 
 	</g><g
    id="g176"
-   transform="translate(207,425)"
-   style="">
+   transform="translate(207,425)">
 		<text
-   style="font-size:10px;font-family:Helvetica-Bold;fill:#3399ff"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';fill:#3399ff;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text174"
    font-size="10"
    transform="translate(0.334,8)">HTTP/HTTPS</text>
 
 	</g><g
    id="g180"
-   transform="translate(318,499)"
-   style="">
+   transform="translate(318,499)">
 		<text
-   style="font-size:12px;font-family:Helvetica"
+   style="font-size:11.09999975px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
    id="text178"
    font-size="12"
    transform="translate(-1.3379,8)">DNS</text>

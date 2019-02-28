@@ -31,9 +31,9 @@
    inkscape:window-height="1017"
    id="namedview129"
    showgrid="false"
-   inkscape:zoom="1.3665316"
-   inkscape:cx="259.16019"
-   inkscape:cy="196.07692"
+   inkscape:zoom="1.9810742"
+   inkscape:cx="363.97991"
+   inkscape:cy="172.84999"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
@@ -156,15 +156,17 @@
    id="rect32" />
 	<text
    class="st4 st5"
-   transform="translate(343 197.62)"
    id="text34"
-   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.1293335px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">お客様</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1293335px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+   x="353"
+   y="197.62">お客様</text>
 
 	<text
    class="st4 st5"
-   transform="translate(220.17 197.62)"
    id="text36"
-   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.1293335px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">IBM</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1293335px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+   x="222.17"
+   y="197.62">IBM</text>
 
 	<text
    class="st4 st5"
@@ -174,19 +176,21 @@
 
 	<text
    class="st4 st5"
-   transform="translate(626.5 93.957)"
    id="text40"
-   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.1293335px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">お客様</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1293335px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+   x="636.5"
+   y="93.957001">お客様</text>
 
 	<text
    class="st4 st5"
-   transform="translate(343 93.957)"
    id="text42"
-   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.1293335px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">お客様</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1293335px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+   x="355"
+   y="93.957001">お客様</text>
 
 <g
    id="Bare_Metal"
-   transform="translate(4)">
+   transform="translate(9.0279138)">
 	<text
    class="st6 st4 st5"
    transform="translate(52.834,330.29)"
@@ -195,71 +199,78 @@
 
 </g>
 <g
-   id="Storage">
+   id="Storage"
+   transform="translate(2.9531275)">
 	<text
    class="st6 st4 st5"
-   transform="translate(61.834 307.96)"
+   transform="translate(61.834,307.96)"
    id="text47"
-   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.1293335px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">ストレージ</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1293335px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">ストレージ</text>
 
 </g>
 <g
-   id="Network">
+   id="Network"
+   transform="translate(1.3371603)">
 	<text
    class="st6 st4 st5"
-   transform="translate(60.166 285.62)"
+   transform="translate(60.166,285.62)"
    id="text50"
-   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.1293335px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">ネットワーク</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1293335px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">ネットワーク</text>
 
 </g>
 <g
-   id="data_center">
+   id="data_center"
+   transform="translate(-0.75941511)">
 	<text
    class="st6 st4 st5"
-   transform="translate(51.5 263.96)"
+   transform="translate(51.5,263.96)"
    id="text53"
-   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.1293335px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">データ・センター</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1293335px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">データ・センター</text>
 
 </g>
 <g
-   id="PSC">
+   id="PSC"
+   transform="translate(5.388865)">
 	<text
    class="st6 st4 st5"
-   transform="translate(73.5 221.96)"
+   transform="translate(73.5,221.96)"
    id="text56"
-   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.1293335px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">PSC</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1293335px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">PSC</text>
 
 </g>
 <g
-   id="NSX">
+   id="NSX"
+   transform="translate(5.4164616)">
 	<text
    class="st6 st4 st5"
-   transform="translate(73.5 196.29)"
+   transform="translate(73.5,196.29)"
    id="text59"
-   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.1293335px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">NSX</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1293335px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">NSX</text>
 
 </g>
 <g
-   id="vCenter">
+   id="vCenter"
+   transform="translate(3.7890214)">
 	<text
    class="st6 st4 st5"
-   transform="translate(64.834 169.62)"
+   transform="translate(64.834,169.62)"
    id="text62"
-   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.1293335px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">vCenter</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1293335px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">vCenter</text>
 
 </g>
 <g
-   id="Guest_OS">
+   id="Guest_OS"
+   transform="translate(2.5757419)">
 	<text
    class="st6 st4 st5"
-   transform="translate(62.101 124.58)"
+   transform="translate(62.101,124.58)"
    id="text65"
-   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.1293335px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">ゲスト OS</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1293335px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff">ゲスト OS</text>
 
 </g>
 <g
    id="IBM_middleware"
-   transform="translate(4)">
+   transform="translate(6.617434)">
 	<text
    class="st6 st4 st5"
    transform="translate(42.219,99.212)"
@@ -269,7 +280,7 @@
 </g>
 <g
    id="Application_software"
-   transform="matrix(0.88041823,0,0,1,3.5204281,0)">
+   transform="matrix(0.85564828,0,0,1,4.2496432,0)">
 	<text
    class="st6 st4 st5"
    transform="translate(28.722,70.951)"
@@ -312,7 +323,7 @@
 </g>
 <g
    id="Configure"
-   transform="translate(24)">
+   transform="translate(22)">
 	<text
    class="st6 st8 st9"
    transform="translate(476.12,24.16)"
@@ -322,7 +333,7 @@
 </g>
 <g
    id="Maintain"
-   transform="translate(12)">
+   transform="translate(18)">
 	<text
    class="st6 st8 st9"
    transform="translate(345.36,24.16)"
@@ -332,7 +343,7 @@
 </g>
 <g
    id="Install"
-   transform="translate(-6)">
+   transform="translate(-10)">
 	<text
    class="st6 st8 st9"
    transform="translate(214.08,24.16)"
@@ -344,7 +355,7 @@
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1293335px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
    id="text94"
    class="st6 st8 st9"
-   x="55.558998"
+   x="49.558998"
    y="24.16">アクティビティー</text>
 
 <polygon

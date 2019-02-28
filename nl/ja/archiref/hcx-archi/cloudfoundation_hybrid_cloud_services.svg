@@ -1,497 +1,1514 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 856 564" style="enable-background:new 0 0 856 564;" xml:space="preserve">
-<style type="text/css">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   enable-background="new 0 0 856 564"
+   version="1.1"
+   viewBox="0 0 856 564"
+   xml:space="preserve"
+   id="svg500"
+   sodipodi:docname="cloudfoundation_hybrid_cloud_services.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"><defs
+   id="defs504">
+		
+		
+
+			
+				
+				
+				
+				
+				
+				
+				
+				
+		
+
+			<linearGradient
+   gradientUnits="userSpaceOnUse"
+   y2="297.72"
+   y1="376"
+   x2="525.01"
+   x1="525.01"
+   id="SVGID_1_">
+				<stop
+   id="stop23"
+   offset=".1332"
+   stop-color="#1E9CD7" />
+				<stop
+   id="stop25"
+   offset=".4442"
+   stop-color="#B7E0F4" />
+				<stop
+   id="stop27"
+   offset=".4818"
+   stop-color="#AEDAF1" />
+				<stop
+   id="stop29"
+   offset=".5443"
+   stop-color="#94CCEA" />
+				<stop
+   id="stop31"
+   offset=".6241"
+   stop-color="#6BB3DD" />
+				<stop
+   id="stop33"
+   offset=".7169"
+   stop-color="#3292CD" />
+				<stop
+   id="stop35"
+   offset=".7899"
+   stop-color="#0075BE" />
+				<stop
+   id="stop37"
+   offset=".9944"
+   stop-color="#005B97" />
+			</linearGradient>
+			
+				<linearGradient
+   gradientUnits="userSpaceOnUse"
+   y2="297.72"
+   y1="376"
+   x2="421.68"
+   x1="421.68"
+   id="SVGID_2_">
+					<stop
+   id="stop42"
+   offset=".1332"
+   stop-color="#1E9CD7" />
+					<stop
+   id="stop44"
+   offset=".4442"
+   stop-color="#B7E0F4" />
+					<stop
+   id="stop46"
+   offset=".4818"
+   stop-color="#AEDAF1" />
+					<stop
+   id="stop48"
+   offset=".5443"
+   stop-color="#94CCEA" />
+					<stop
+   id="stop50"
+   offset=".6241"
+   stop-color="#6BB3DD" />
+					<stop
+   id="stop52"
+   offset=".7169"
+   stop-color="#3292CD" />
+					<stop
+   id="stop54"
+   offset=".7899"
+   stop-color="#0075BE" />
+					<stop
+   id="stop56"
+   offset=".9944"
+   stop-color="#005B97" />
+				</linearGradient>
+				
+			<linearGradient
+   gradientUnits="userSpaceOnUse"
+   y2="297.72"
+   y1="376"
+   x2="315.99"
+   x1="315.99"
+   id="SVGID_3_">
+				<stop
+   id="stop61"
+   offset=".1332"
+   stop-color="#1E9CD7" />
+				<stop
+   id="stop63"
+   offset=".4442"
+   stop-color="#B7E0F4" />
+				<stop
+   id="stop65"
+   offset=".4818"
+   stop-color="#AEDAF1" />
+				<stop
+   id="stop67"
+   offset=".5443"
+   stop-color="#94CCEA" />
+				<stop
+   id="stop69"
+   offset=".6241"
+   stop-color="#6BB3DD" />
+				<stop
+   id="stop71"
+   offset=".7169"
+   stop-color="#3292CD" />
+				<stop
+   id="stop73"
+   offset=".7899"
+   stop-color="#0075BE" />
+				<stop
+   id="stop75"
+   offset=".9944"
+   stop-color="#005B97" />
+			</linearGradient>
+			
+			
+				
+				
+			
+				
+				
+			
+			
+			
+			
+			
+			
+</defs><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   id="namedview502"
+   showgrid="false"
+   inkscape:zoom="4.734105"
+   inkscape:cx="425.7859"
+   inkscape:cy="238.36514"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg500" /><metadata
+   id="metadata2"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata>
+<style
+   type="text/css"
+   id="style4">
 	.st0{fill:none;stroke:#29ABE2;stroke-width:2;stroke-miterlimit:10;}
 	.st1{fill:none;stroke:#22657C;stroke-width:2;stroke-miterlimit:10;}
-	.st2{font-family:'ArialMT';}
+	.st2{font-family:'MyriadPro-Regular';}
 	.st3{font-size:18px;}
-	.st4{font-family:'MS-Gothic';}
-	.st5{fill:url(#SVGID_1_);stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
-	.st6{fill:url(#SVGID_2_);}
-	.st7{fill:url(#SVGID_3_);stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
-	.st8{fill:#808080;}
-	.st9{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
-	.st10{fill:#FFFFFF;}
-	.st11{font-size:8.1627px;}
-	.st12{fill:none;stroke:#666666;stroke-width:4;stroke-miterlimit:10;}
-	.st13{font-size:9.0653px;}
-	.st14{fill:#808080;stroke:#666666;stroke-miterlimit:10;}
-	.st15{fill:none;stroke:#666666;stroke-width:2;stroke-miterlimit:10;}
-	.st16{fill:none;stroke:#0071BC;stroke-width:2;stroke-miterlimit:10;}
-	.st17{fill:#29ABE2;}
-	.st18{font-size:16px;}
-	.st19{fill:#FFFFFF;stroke:#808080;stroke-width:2;stroke-miterlimit:10;}
-	.st20{font-size:20.1767px;}
+	.st4{fill:url(#SVGID_1_);stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+	.st5{fill:url(#SVGID_2_);}
+	.st6{fill:url(#SVGID_3_);stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+	.st7{fill:#808080;}
+	.st8{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+	.st9{fill:#FFFFFF;}
+	.st10{font-size:8.1627px;}
+	.st11{fill:none;stroke:#666666;stroke-width:4;stroke-miterlimit:10;}
+	.st12{font-size:9.0653px;}
+	.st13{fill:#808080;stroke:#666666;stroke-miterlimit:10;}
+	.st14{fill:none;stroke:#666666;stroke-width:2;stroke-miterlimit:10;}
+	.st15{fill:none;stroke:#0071BC;stroke-width:2;stroke-miterlimit:10;}
+	.st16{fill:#29ABE2;}
+	.st17{fill:#FFFFFF;stroke:#808080;stroke-width:2;stroke-miterlimit:10;}
+	.st18{font-size:20.1767px;}
 </style>
-<g id="right_box">
-	<rect x="528.5" y="49.5" class="st0" width="277.5" height="495.5"/>
+<g
+   id="right_box">
+	<rect
+   class="st0"
+   x="528.5"
+   y="49.5"
+   width="277.5"
+   height="495.5"
+   id="rect6" />
 </g>
-<g id="left_box">
-	<rect x="25" y="49" class="st1" width="292" height="497"/>
+<g
+   id="left_box">
+	<rect
+   class="st1"
+   x="25"
+   y="49"
+   width="292"
+   height="497"
+   id="rect9" />
 </g>
-<g id="Layer_23">
-	<text transform="matrix(1 0 0 1 31 22)"><tspan x="0" y="0" class="st2 st3">vSphere 5.5u3+</tspan><tspan x="0" y="21.6" class="st2 st3">vCenter</tspan></text>
+	<text
+   transform="translate(31 22)"
+   id="text16"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"><tspan
+     class="st2 st3"
+     x="0"
+     y="0"
+     id="tspan12"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">vSphere 5.5u3+</tspan><tspan
+     class="st2 st3"
+     x="0"
+     y="21.6"
+     id="tspan14"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">vCenter</tspan></text>
+
+	<text
+   class="st2 st3"
+   transform="translate(217 23)"
+   id="text18"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">Web クライアント</text>
+
+<g
+   id="right_HCX_on_VCF">
+	<text
+   class="st2 st3"
+   transform="translate(606 41)"
+   id="text20"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">HCX on VCF</text>
+
 </g>
-<g id="Layer_24">
-	<text transform="matrix(1 0 0 1 217 23)"><tspan x="0" y="0" class="st2 st3">Web </tspan><tspan x="42" y="0" class="st4 st3">クライアント</tspan></text>
+<ellipse
+   style="fill:url(#SVGID_1_);stroke:#000000;stroke-width:0.25;stroke-miterlimit:10"
+   id="ellipse40"
+   ry="35"
+   rx="13"
+   cy="341"
+   cx="525"
+   class="st4" /><rect
+   style="fill:url(#SVGID_2_)"
+   id="rect59"
+   height="70"
+   width="211.39999"
+   y="306"
+   x="316"
+   class="st5" /><ellipse
+   style="fill:url(#SVGID_3_);stroke:#000000;stroke-width:0.25;stroke-miterlimit:10"
+   id="ellipse78"
+   ry="35"
+   rx="13"
+   cy="341"
+   cx="316"
+   class="st6" /><path
+   style="fill:#808080"
+   inkscape:connector-curvature="0"
+   id="path80"
+   d="m 471.3,329 c -3.3,0 -6.3,0.8 -8.8,2.2 -0.9,-8.1 -7.1,-14.4 -14.6,-14.4 -7.7,0 -14,6.6 -14.7,15.1 -0.7,-0.3 -1.4,-0.4 -2.1,-0.4 -3.9,0 -7.1,4.4 -7.1,9.8 0,5.4 3.2,9.8 7.1,9.8 0.9,0 1.7,-0.2 2.5,-0.6 h 32.9 c 1.5,0.4 3.1,0.6 4.8,0.6 8.1,0 14.7,-4.9 14.7,-11 0,-6.1 -6.6,-11.1 -14.7,-11.1 z"
+   class="st7" /><path
+   style="fill:none;stroke:#ffffff;stroke-width:2;stroke-miterlimit:10"
+   inkscape:connector-curvature="0"
+   id="path82"
+   d="m 456.8,345.2 h -16.7 c -0.8,0 -1.5,-0.7 -1.5,-1.5 v -13.4 c 0,-0.8 0.7,-1.5 1.5,-1.5 h 16.7 c 0.8,0 1.5,0.7 1.5,1.5 v 13.4 c -0.1,0.8 -0.7,1.5 -1.5,1.5 z"
+   class="st8" /><text
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.32904339px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke-width:0.89670521"
+   id="text84"
+   transform="scale(0.89670521,1.1151937)"
+   class="st9 st2 st10"
+   x="491.19467"
+   y="307.06772">VM</text>
+<path
+   style="fill:none;stroke:#666666;stroke-width:4;stroke-miterlimit:10"
+   inkscape:connector-curvature="0"
+   id="path86"
+   d="m 413.8,341.6 c -3.8,0 -7.4,0.9 -10.3,2.5 -1.1,-9.4 -8.3,-16.6 -17.1,-16.6 -9,0 -16.4,7.7 -17.2,17.4 -0.8,-0.3 -1.6,-0.5 -2.5,-0.5 -4.6,0 -8.3,5.1 -8.3,11.3 0,6.2 3.7,11.3 8.3,11.3 1,0 2,-0.3 2.9,-0.7 h 38.5 c 1.8,0.4 3.7,0.7 5.6,0.7 9.5,0 17.2,-5.7 17.2,-12.7 0.1,-7 -7.6,-12.7 -17.1,-12.7 z"
+   class="st11" /><path
+   inkscape:connector-curvature="0"
+   id="path88"
+   d="m 395.5,360.8 h -17.6 c -0.8,0 -1.5,-0.7 -1.5,-1.5 v -16 c 0,-0.8 0.7,-1.5 1.5,-1.5 h 17.6 c 0.8,0 1.5,0.7 1.5,1.5 v 16 c 0,0.8 -0.7,1.5 -1.5,1.5 z" /><text
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.93895912px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke-width:0.89030331"
+   id="text90"
+   transform="scale(0.89030334,1.1232127)"
+   class="st9 st2 st12"
+   x="426.17648"
+   y="316.54733">VM</text>
+<polygon
+   id="polygon92"
+   points="411,326 408,328 398,320 405,315 " /><polygon
+   id="polygon94"
+   points="402.9,333.2 400.5,335.9 388.8,330.7 394.4,324.1 " /><polygon
+   id="polygon96"
+   points="395.2,336.9 395,339.1 387,340.8 387.4,335.3 " /><polygon
+   id="polygon98"
+   points="421.2,323.5 417.6,323.9 412.4,312.2 420.9,311 " /><polygon
+   id="polygon100"
+   points="431.6,325.3 428.1,324.5 427.2,311.7 435.6,313.5 " /><polygon
+   id="polygon102"
+   points="439.2,327 437.1,325.1 441.3,316.2 446.3,320.5 " />
+		<path
+   class="st7"
+   d="m616 144h-21.2c-6.6 0-12-5.4-12-12v-17.6c0-6.6 5.4-12 12-12h21.2c6.6 0 12 5.4 12 12v17.6c0 6.6-5.4 12-12 12z"
+   id="path105" />
+		<text
+   class="st9 st2 st3"
+   transform="translate(590.05 129.24)"
+   id="text107"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">VM</text>
+
+		<path
+   class="st7"
+   d="m671 144h-21.2c-6.6 0-12-5.4-12-12v-17.6c0-6.6 5.4-12 12-12h21.2c6.6 0 12 5.4 12 12v17.6c0 6.6-5.4 12-12 12z"
+   id="path109" />
+		<text
+   class="st9 st2 st3"
+   transform="translate(645.05 129.24)"
+   id="text111"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">VM</text>
+
+		<path
+   class="st13"
+   d="m726 144h-21.2c-6.6 0-12-5.4-12-12v-17.6c0-6.6 5.4-12 12-12h21.2c6.6 0 12 5.4 12 12v17.6c0 6.6-5.4 12-12 12z"
+   id="path113" />
+		<text
+   class="st9 st2 st3"
+   transform="translate(700.05 129.24)"
+   id="text115"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">VM</text>
+
+<g
+   id="lines_top">
+	<line
+   class="st14"
+   x1="38"
+   x2="794"
+   y1="84.5"
+   y2="84.5"
+   id="line117" />
+	<line
+   class="st14"
+   x1="144"
+   x2="144"
+   y1="83"
+   y2="103"
+   id="line119" />
+	<line
+   class="st14"
+   x1="92"
+   x2="92"
+   y1="85"
+   y2="101"
+   id="line121" />
+	<line
+   class="st14"
+   x1="602"
+   x2="602"
+   y1="85"
+   y2="103"
+   id="line123" />
+	<line
+   class="st14"
+   x1="658"
+   x2="658"
+   y1="85"
+   y2="101"
+   id="line125" />
+	<line
+   class="st14"
+   x1="717"
+   x2="717"
+   y1="85"
+   y2="101"
+   id="line127" />
 </g>
-<g id="right_HCX_on_VCF">
-	<text transform="matrix(1 0 0 1 606 41)" class="st2 st3">HCX on VCF</text>
+<g
+   id="line_left">
+	<line
+   class="st14"
+   x1="51"
+   x2="51"
+   y1="66"
+   y2="534"
+   id="line130" />
 </g>
-<g id="middle_bar">
-	<g>
-		<g>
-			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="525.0101" y1="376" x2="525.0101" y2="297.7211">
-				<stop  offset="0.1332" style="stop-color:#1E9CD7"/>
-				<stop  offset="0.4442" style="stop-color:#B7E0F4"/>
-				<stop  offset="0.4818" style="stop-color:#AEDAF1"/>
-				<stop  offset="0.5443" style="stop-color:#94CCEA"/>
-				<stop  offset="0.6241" style="stop-color:#6BB3DD"/>
-				<stop  offset="0.7169" style="stop-color:#3292CD"/>
-				<stop  offset="0.7899" style="stop-color:#0075BE"/>
-				<stop  offset="0.9944" style="stop-color:#005B97"/>
-			</linearGradient>
-			<ellipse class="st5" cx="525" cy="341" rx="13" ry="35"/>
-			<g>
-				<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="421.6809" y1="376" x2="421.6809" y2="297.7211">
-					<stop  offset="0.1332" style="stop-color:#1E9CD7"/>
-					<stop  offset="0.4442" style="stop-color:#B7E0F4"/>
-					<stop  offset="0.4818" style="stop-color:#AEDAF1"/>
-					<stop  offset="0.5443" style="stop-color:#94CCEA"/>
-					<stop  offset="0.6241" style="stop-color:#6BB3DD"/>
-					<stop  offset="0.7169" style="stop-color:#3292CD"/>
-					<stop  offset="0.7899" style="stop-color:#0075BE"/>
-					<stop  offset="0.9944" style="stop-color:#005B97"/>
-				</linearGradient>
-				<rect x="316" y="306" class="st6" width="211.4" height="70"/>
-			</g>
-			<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="315.99" y1="376" x2="315.99" y2="297.7211">
-				<stop  offset="0.1332" style="stop-color:#1E9CD7"/>
-				<stop  offset="0.4442" style="stop-color:#B7E0F4"/>
-				<stop  offset="0.4818" style="stop-color:#AEDAF1"/>
-				<stop  offset="0.5443" style="stop-color:#94CCEA"/>
-				<stop  offset="0.6241" style="stop-color:#6BB3DD"/>
-				<stop  offset="0.7169" style="stop-color:#3292CD"/>
-				<stop  offset="0.7899" style="stop-color:#0075BE"/>
-				<stop  offset="0.9944" style="stop-color:#005B97"/>
-			</linearGradient>
-			<ellipse class="st7" cx="316" cy="341" rx="13" ry="35"/>
-		</g>
-		<g>
-			<path class="st8" d="M471.3,329c-3.3,0-6.3,0.8-8.8,2.2c-0.9-8.1-7.1-14.4-14.6-14.4c-7.7,0-14,6.6-14.7,15.1
-				c-0.7-0.3-1.4-0.4-2.1-0.4c-3.9,0-7.1,4.4-7.1,9.8c0,5.4,3.2,9.8,7.1,9.8c0.9,0,1.7-0.2,2.5-0.6h32.9c1.5,0.4,3.1,0.6,4.8,0.6
-				c8.1,0,14.7-4.9,14.7-11C486,334,479.4,329,471.3,329z"/>
-			<g>
-				<path class="st9" d="M456.8,345.2h-16.7c-0.8,0-1.5-0.7-1.5-1.5v-13.4c0-0.8,0.7-1.5,1.5-1.5h16.7c0.8,0,1.5,0.7,1.5,1.5v13.4
-					C458.2,344.5,457.6,345.2,456.8,345.2z"/>
-				<text transform="matrix(1.1348 0 0 1 441.3848 340.4404)" class="st10 st2 st11">VM</text>
-			</g>
-		</g>
-		<g>
-			<path class="st12" d="M413.8,341.6c-3.8,0-7.4,0.9-10.3,2.5c-1.1-9.4-8.3-16.6-17.1-16.6c-9,0-16.4,7.7-17.2,17.4
-				c-0.8-0.3-1.6-0.5-2.5-0.5c-4.6,0-8.3,5.1-8.3,11.3c0,6.2,3.7,11.3,8.3,11.3c1,0,2-0.3,2.9-0.7h38.5c1.8,0.4,3.7,0.7,5.6,0.7
-				c9.5,0,17.2-5.7,17.2-12.7C431,347.3,423.3,341.6,413.8,341.6z"/>
-			<g>
-				<path d="M395.5,360.8h-17.6c-0.8,0-1.5-0.7-1.5-1.5v-16c0-0.8,0.7-1.5,1.5-1.5h17.6c0.8,0,1.5,0.7,1.5,1.5v16
-					C397,360.1,396.3,360.8,395.5,360.8z"/>
-				<text transform="matrix(1.0229 0 0 1 379.3701 355.5459)" class="st10 st2 st13">VM</text>
-			</g>
-		</g>
-		<g>
-			<polygon points="398,320 405,315 411,326 408,328 			"/>
-			<polygon points="388.8,330.7 394.4,324.1 402.9,333.2 400.5,335.9 			"/>
-			<polygon points="387,340.8 387.4,335.3 395.2,336.9 395,339.1 			"/>
-			<polygon points="412.4,312.2 420.9,311 421.2,323.5 417.6,323.9 			"/>
-			<polygon points="427.2,311.7 435.6,313.5 431.6,325.3 428.1,324.5 			"/>
-			<polygon points="441.3,316.2 446.3,320.5 439.2,327 437.1,325.1 			"/>
-		</g>
-	</g>
+<g
+   id="line_right">
+	<line
+   class="st14"
+   x1="784"
+   x2="784"
+   y1="66"
+   y2="532"
+   id="line133" />
 </g>
-<g id="right_VM_top_3">
-	<g>
-		<path class="st8" d="M616,144h-21.2c-6.6,0-12-5.4-12-12v-17.6c0-6.6,5.4-12,12-12H616c6.6,0,12,5.4,12,12V132
-			C628,138.6,622.6,144,616,144z"/>
-		<text transform="matrix(1 0 0 1 594.0488 129.2397)" class="st10 st2 st3">VM</text>
-	</g>
-	<g>
-		<path class="st8" d="M671,144h-21.2c-6.6,0-12-5.4-12-12v-17.6c0-6.6,5.4-12,12-12H671c6.6,0,12,5.4,12,12V132
-			C683,138.6,677.6,144,671,144z"/>
-		<text transform="matrix(1 0 0 1 649.0488 129.2397)" class="st10 st2 st3">VM</text>
-	</g>
-	<g>
-		<path class="st14" d="M726,144h-21.2c-6.6,0-12-5.4-12-12v-17.6c0-6.6,5.4-12,12-12H726c6.6,0,12,5.4,12,12V132
-			C738,138.6,732.6,144,726,144z"/>
-		<text transform="matrix(1 0 0 1 704.0488 129.2397)" class="st10 st2 st3">VM</text>
-	</g>
+<g
+   id="lines_bottom">
+	<line
+   class="st14"
+   x1="39"
+   x2="285"
+   y1="519"
+   y2="519"
+   id="line136" />
+	<line
+   class="st14"
+   x1="559"
+   x2="795"
+   y1="520"
+   y2="520"
+   id="line138" />
+	<line
+   class="st14"
+   x1="80"
+   x2="80"
+   y1="506"
+   y2="518"
+   id="line140" />
+	<line
+   class="st14"
+   x1="133"
+   x2="133"
+   y1="506"
+   y2="518"
+   id="line142" />
+	<line
+   class="st14"
+   x1="641"
+   x2="641"
+   y1="506"
+   y2="520"
+   id="line144" />
 </g>
-<g id="lines_top">
-	<line class="st15" x1="38" y1="84.5" x2="794" y2="84.5"/>
-	<line class="st15" x1="144" y1="83" x2="144" y2="103"/>
-	<line class="st15" x1="92" y1="85" x2="92" y2="101"/>
-	<line class="st15" x1="602" y1="85" x2="602" y2="103"/>
-	<line class="st15" x1="658" y1="85" x2="658" y2="101"/>
-	<line class="st15" x1="717" y1="85" x2="717" y2="101"/>
+	<line
+   class="st14"
+   x1="40"
+   x2="284"
+   y1="452"
+   y2="452"
+   id="line147" />
+	<line
+   class="st14"
+   x1="560"
+   x2="795"
+   y1="449"
+   y2="449"
+   id="line149" />
+	<line
+   class="st14"
+   x1="432"
+   x2="432"
+   y1="615"
+   y2="616"
+   id="line151" />
+	<line
+   class="st14"
+   x1="81"
+   x2="81"
+   y1="438"
+   y2="451"
+   id="line153" />
+	<line
+   class="st14"
+   x1="132"
+   x2="132"
+   y1="438"
+   y2="451"
+   id="line155" />
+	<line
+   class="st15"
+   x1="736"
+   x2="736"
+   y1="368"
+   y2="378"
+   id="line157" />
+	<line
+   class="st15"
+   x1="92"
+   x2="92"
+   y1="370"
+   y2="379"
+   id="line159" />
+	<line
+   class="st14"
+   x1="185"
+   x2="185"
+   y1="438"
+   y2="451"
+   id="line161" />
+	<line
+   class="st15"
+   x1="39"
+   x2="282"
+   y1="380"
+   y2="380"
+   id="line163" />
+	<line
+   class="st15"
+   x1="556"
+   x2="795"
+   y1="378"
+   y2="378"
+   id="line165" />
+	<line
+   class="st15"
+   x1="192"
+   x2="317"
+   y1="346"
+   y2="346"
+   id="line167" />
+	<line
+   class="st15"
+   x1="640"
+   x2="538"
+   y1="346"
+   y2="346"
+   id="line169" />
+	<line
+   class="st15"
+   x1="251"
+   x2="251"
+   y1="251"
+   y2="284"
+   id="line171" />
+	<line
+   class="st15"
+   x1="251"
+   x2="251"
+   y1="321"
+   y2="327"
+   id="line173" />
+	<line
+   class="st15"
+   x1="250"
+   x2="250"
+   y1="370"
+   y2="380"
+   id="line175" />
+	<line
+   class="st15"
+   x1="251"
+   x2="251"
+   y1="438"
+   y2="451"
+   id="line177" />
+	<line
+   class="st15"
+   x1="252"
+   x2="252"
+   y1="506"
+   y2="518"
+   id="line179" />
+	<line
+   class="st15"
+   x1="585"
+   x2="585"
+   y1="368"
+   y2="378"
+   id="line181" />
+	<line
+   class="st15"
+   x1="585"
+   x2="585"
+   y1="438"
+   y2="448"
+   id="line183" />
+	<line
+   class="st15"
+   x1="585"
+   x2="585"
+   y1="506"
+   y2="520"
+   id="line185" />
+	<line
+   class="st15"
+   x1="275"
+   x2="562"
+   y1="418"
+   y2="418"
+   id="line187" />
+	<line
+   class="st15"
+   x1="276"
+   x2="562"
+   y1="487"
+   y2="487"
+   id="line189" />
+	<path
+   class="st15"
+   d="m249 169-1-78s-12-7 0-15v-43"
+   id="path191" />
+<g
+   id="right_WAN_opt">
+			<path
+   class="st16"
+   d="m675.3 369h-24.4c-6.6 0-12-5.4-12-12v-19.9c0-6.6 5.4-12 12-12h24.4c6.6 0 12 5.4 12 12v19.9c0 6.6-5.4 12-12 12z"
+   id="path193" />
+								<ellipse
+   class="st9"
+   cx="662.9"
+   cy="346.9"
+   rx="13"
+   ry="12.5"
+   id="ellipse195" />
+								<ellipse
+   class="st16"
+   cx="662.9"
+   cy="346.9"
+   rx="5.8"
+   ry="5.6"
+   id="ellipse197" />
+							<rect
+   class="st9"
+   x="659"
+   y="330.9"
+   width="7"
+   height="4.5"
+   id="rect199" />
+							<rect
+   class="st9"
+   x="659.8"
+   y="357.8"
+   width="6.3"
+   height="5.4"
+   id="rect201" />
+						<rect
+   class="st9"
+   x="674.3"
+   y="343.9"
+   width="5.4"
+   height="6.3"
+   id="rect203" />
+						<rect
+   class="st9"
+   x="646.5"
+   y="343.9"
+   width="5.4"
+   height="6.3"
+   id="rect205" />
+						<rect
+   class="st9"
+   transform="matrix(.7526 .6585 -.6585 .7526 383.49 -346.18)"
+   x="649.5"
+   y="334.3"
+   width="5.9"
+   height="5.9"
+   id="rect207" />
+						<rect
+   class="st9"
+   transform="matrix(.7526 .6585 -.6585 .7526 401.64 -354.98)"
+   x="669.3"
+   y="354"
+   width="7.7"
+   height="5.9"
+   id="rect209" />
+					<rect
+   class="st9"
+   transform="matrix(.7071 .7071 -.7071 .7071 436.31 -377.58)"
+   x="671"
+   y="334.6"
+   width="5.9"
+   height="6.5"
+   id="rect211" />
+					<rect
+   class="st9"
+   transform="matrix(.7071 .7071 -.7071 .7071 443.66 -357.28)"
+   x="650.2"
+   y="354"
+   width="5.9"
+   height="5.9"
+   id="rect213" />
+		<text
+   transform="translate(646 297.33)"
+   id="text219"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"><tspan
+     class="st2 st3"
+     x="0"
+     y="0"
+     id="tspan215"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">WAN</tspan><tspan
+     class="st2 st3"
+     x="0"
+     y="21.6"
+     id="tspan217"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">最適化</tspan></text>
+
 </g>
-<g id="line_left">
-	<line class="st15" x1="51" y1="66" x2="51" y2="534"/>
+<g
+   id="left_WAN_opt">
+			<path
+   class="st16"
+   d="m181.3 369h-24.4c-6.6 0-12-5.4-12-12v-19.9c0-6.6 5.4-12 12-12h24.4c6.6 0 12 5.4 12 12v19.9c0 6.6-5.4 12-12 12z"
+   id="path222" />
+								<ellipse
+   class="st9"
+   cx="168.9"
+   cy="346.9"
+   rx="13"
+   ry="12.5"
+   id="ellipse224" />
+								<ellipse
+   class="st16"
+   cx="168.9"
+   cy="346.9"
+   rx="5.8"
+   ry="5.6"
+   id="ellipse226" />
+							<rect
+   class="st9"
+   x="165"
+   y="330.9"
+   width="7"
+   height="4.5"
+   id="rect228" />
+							<rect
+   class="st9"
+   x="165.8"
+   y="357.8"
+   width="6.3"
+   height="5.4"
+   id="rect230" />
+						<rect
+   class="st9"
+   x="180.3"
+   y="343.9"
+   width="5.4"
+   height="6.3"
+   id="rect232" />
+						<rect
+   class="st9"
+   x="152.5"
+   y="343.9"
+   width="5.4"
+   height="6.3"
+   id="rect234" />
+						<rect
+   class="st9"
+   transform="matrix(.7526 .6585 -.6585 .7526 261.26 -20.872)"
+   x="155.5"
+   y="334.3"
+   width="5.9"
+   height="5.9"
+   id="rect236" />
+						<rect
+   class="st9"
+   transform="matrix(.7526 .6585 -.6585 .7526 279.41 -29.675)"
+   x="175.3"
+   y="354"
+   width="7.7"
+   height="5.9"
+   id="rect238" />
+					<rect
+   class="st9"
+   transform="matrix(.7071 .7071 -.7071 .7071 291.62 -28.271)"
+   x="177"
+   y="334.6"
+   width="5.9"
+   height="6.5"
+   id="rect240" />
+					<rect
+   class="st9"
+   transform="matrix(.7071 .7071 -.7071 .7071 298.97 -7.9707)"
+   x="156.2"
+   y="354"
+   width="5.9"
+   height="5.9"
+   id="rect242" />
+		<text
+   transform="translate(152 297.33)"
+   id="text248"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"><tspan
+     class="st2 st3"
+     x="0"
+     y="0"
+     id="tspan244"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">WAN</tspan><tspan
+     class="st2 st3"
+     x="0"
+     y="21.6"
+     id="tspan246"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">最適化</tspan></text>
+
 </g>
-<g id="line_right">
-	<line class="st15" x1="784" y1="66" x2="784" y2="532"/>
+<g
+   id="right_lock_icon">
+		<path
+   class="st16"
+   d="m597 369h-22.5c-6.6 0-12-5.4-12-12v-18.2c0-6.6 5.4-12 12-12h22.5c6.6 0 12 5.4 12 12v18.2c0 6.6-5.4 12-12 12z"
+   id="path251" />
+				<path
+   class="st9"
+   d="m590.3 345.7h-8.2c-2.2 0-4.1-1.8-4.1-4.1v-3.9c0-2.2 1.8-4.1 4.1-4.1h8.2c2.2 0 4.1 1.8 4.1 4.1v3.9c0 2.3-1.8 4.1-4.1 4.1z"
+   id="path253" />
+				<path
+   class="st16"
+   d="m588.9 344h-5.4c-1.1 0-2.1-0.9-2.1-2.1v-2.9c0-1.1 0.9-2.1 2.1-2.1h5.4c1.1 0 2.1 0.9 2.1 2.1v2.9c0 1.2-1 2.1-2.1 2.1z"
+   id="path255" />
+				<path
+   class="st9"
+   d="m595.5 362.1h-18.6c-2.2 0-4.1-1.8-4.1-4.1v-10.8c0-2.2 1.8-4.1 4.1-4.1h18.6c2.2 0 4.1 1.8 4.1 4.1v10.8c0 2.3-1.9 4.1-4.1 4.1z"
+   id="path257" />
+				<ellipse
+   class="st16"
+   cx="586.7"
+   cy="350.5"
+   rx="3.4"
+   ry="3"
+   id="ellipse259" />
+				<path
+   class="st16"
+   d="m586.2 359.5c-0.7 0-1.3-0.6-1.3-1.3v-6c0-0.7 0.6-1.3 1.3-1.3s1.3 0.6 1.3 1.3v6c0 0.7-0.6 1.3-1.3 1.3z"
+   id="path261" />
+				<path
+   class="st16"
+   d="m588.8 355.2h-1.7c-0.2 0-0.4-0.2-0.4-0.4s0.2-0.4 0.4-0.4h1.7c0.2 0 0.4 0.2 0.4 0.4s-0.2 0.4-0.4 0.4z"
+   id="path263" />
+				<path
+   class="st16"
+   d="m588.8 356.9h-1.7c-0.2 0-0.4-0.2-0.4-0.4s0.2-0.4 0.4-0.4h1.7c0.2 0 0.4 0.2 0.4 0.4s-0.2 0.4-0.4 0.4z"
+   id="path265" />
+				<path
+   class="st16"
+   d="m588.8 358.7h-1.7c-0.2 0-0.4-0.2-0.4-0.4s0.2-0.4 0.4-0.4h1.7c0.2 0 0.4 0.2 0.4 0.4s-0.2 0.4-0.4 0.4z"
+   id="path267" />
+			<path
+   class="st16"
+   d="m596 369h-22.5c-6.6 0-12-5.4-12-12v-18.2c0-6.6 5.4-12 12-12h22.5c6.6 0 12 5.4 12 12v18.2c0 6.6-5.4 12-12 12z"
+   id="path269" />
+					<path
+   class="st9"
+   d="m589.3 345.7h-8.2c-2.2 0-4.1-1.8-4.1-4.1v-3.9c0-2.2 1.8-4.1 4.1-4.1h8.2c2.2 0 4.1 1.8 4.1 4.1v3.9c0 2.3-1.8 4.1-4.1 4.1z"
+   id="path271" />
+					<path
+   class="st16"
+   d="m587.9 344h-5.4c-1.1 0-2.1-0.9-2.1-2.1v-2.9c0-1.1 0.9-2.1 2.1-2.1h5.4c1.1 0 2.1 0.9 2.1 2.1v2.9c0 1.2-1 2.1-2.1 2.1z"
+   id="path273" />
+					<path
+   class="st9"
+   d="m594.5 362.1h-18.6c-2.2 0-4.1-1.8-4.1-4.1v-10.8c0-2.2 1.8-4.1 4.1-4.1h18.6c2.2 0 4.1 1.8 4.1 4.1v10.8c0 2.3-1.9 4.1-4.1 4.1z"
+   id="path275" />
+					<ellipse
+   class="st16"
+   cx="585.7"
+   cy="350.5"
+   rx="3.4"
+   ry="3"
+   id="ellipse277" />
+					<path
+   class="st16"
+   d="m585.2 359.5c-0.7 0-1.3-0.6-1.3-1.3v-6c0-0.7 0.6-1.3 1.3-1.3s1.3 0.6 1.3 1.3v6c0 0.7-0.6 1.3-1.3 1.3z"
+   id="path279" />
+					<path
+   class="st16"
+   d="m587.8 355.2h-1.7c-0.2 0-0.4-0.2-0.4-0.4s0.2-0.4 0.4-0.4h1.7c0.2 0 0.4 0.2 0.4 0.4s-0.2 0.4-0.4 0.4z"
+   id="path281" />
+					<path
+   class="st16"
+   d="m587.8 356.9h-1.7c-0.2 0-0.4-0.2-0.4-0.4s0.2-0.4 0.4-0.4h1.7c0.2 0 0.4 0.2 0.4 0.4s-0.2 0.4-0.4 0.4z"
+   id="path283" />
+					<path
+   class="st16"
+   d="m587.8 358.7h-1.7c-0.2 0-0.4-0.2-0.4-0.4s0.2-0.4 0.4-0.4h1.7c0.2 0 0.4 0.2 0.4 0.4s-0.2 0.4-0.4 0.4z"
+   id="path285" />
+		<text
+   transform="translate(555.33 298.33)"
+   id="text291"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"><tspan
+     class="st2 st3"
+     x="0"
+     y="0"
+     id="tspan287"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">クラウド・</tspan><tspan
+     class="st2 st3"
+     x="0"
+     y="21.6"
+     id="tspan289"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">ゲートウェイ</tspan></text>
+
 </g>
-<g id="lines_bottom">
-	<line class="st15" x1="39" y1="519" x2="285" y2="519"/>
-	<line class="st15" x1="559" y1="520" x2="795" y2="520"/>
-	<line class="st15" x1="80" y1="506" x2="80" y2="518"/>
-	<line class="st15" x1="133" y1="506" x2="133" y2="518"/>
-	<line class="st15" x1="641" y1="506" x2="641" y2="520"/>
+<g
+   id="left_lock">
+			<path
+   class="st16"
+   d="m262 369h-22.5c-6.6 0-12-5.4-12-12v-18.2c0-6.6 5.4-12 12-12h22.5c6.6 0 12 5.4 12 12v18.2c0 6.6-5.4 12-12 12z"
+   id="path294" />
+					<path
+   class="st9"
+   d="m255.3 345.7h-8.2c-2.2 0-4.1-1.8-4.1-4.1v-3.9c0-2.2 1.8-4.1 4.1-4.1h8.2c2.2 0 4.1 1.8 4.1 4.1v3.9c0 2.3-1.8 4.1-4.1 4.1z"
+   id="path296" />
+					<path
+   class="st16"
+   d="m253.9 344h-5.4c-1.1 0-2.1-0.9-2.1-2.1v-2.9c0-1.1 0.9-2.1 2.1-2.1h5.4c1.1 0 2.1 0.9 2.1 2.1v2.9c0 1.2-1 2.1-2.1 2.1z"
+   id="path298" />
+					<path
+   class="st9"
+   d="m260.5 362.1h-18.6c-2.2 0-4.1-1.8-4.1-4.1v-10.8c0-2.2 1.8-4.1 4.1-4.1h18.6c2.2 0 4.1 1.8 4.1 4.1v10.8c0 2.3-1.9 4.1-4.1 4.1z"
+   id="path300" />
+					<ellipse
+   class="st16"
+   cx="251.7"
+   cy="350.5"
+   rx="3.4"
+   ry="3"
+   id="ellipse302" />
+					<path
+   class="st16"
+   d="m251.2 359.5c-0.7 0-1.3-0.6-1.3-1.3v-6c0-0.7 0.6-1.3 1.3-1.3s1.3 0.6 1.3 1.3v6c0 0.7-0.6 1.3-1.3 1.3z"
+   id="path304" />
+					<path
+   class="st16"
+   d="m253.8 355.2h-1.7c-0.2 0-0.4-0.2-0.4-0.4s0.2-0.4 0.4-0.4h1.7c0.2 0 0.4 0.2 0.4 0.4s-0.2 0.4-0.4 0.4z"
+   id="path306" />
+					<path
+   class="st16"
+   d="m253.8 356.9h-1.7c-0.2 0-0.4-0.2-0.4-0.4s0.2-0.4 0.4-0.4h1.7c0.2 0 0.4 0.2 0.4 0.4s-0.2 0.4-0.4 0.4z"
+   id="path308" />
+					<path
+   class="st16"
+   d="m253.8 358.7h-1.7c-0.2 0-0.4-0.2-0.4-0.4s0.2-0.4 0.4-0.4h1.7c0.2 0 0.4 0.2 0.4 0.4s-0.2 0.4-0.4 0.4z"
+   id="path310" />
+		<text
+   transform="translate(221.33 298.33)"
+   id="text316"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"><tspan
+     class="st2 st3"
+     x="0"
+     y="0"
+     id="tspan312"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">クラウド・</tspan><tspan
+     class="st2 st3"
+     x="0"
+     y="21.6"
+     id="tspan314"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">ゲートウェイ</tspan></text>
+
 </g>
-<g id="lines_row_3">
-	<line class="st15" x1="40" y1="452" x2="284" y2="452"/>
-	<line class="st15" x1="560" y1="449" x2="795" y2="449"/>
-	<line class="st15" x1="432" y1="615" x2="432" y2="616"/>
-	<line class="st15" x1="81" y1="438" x2="81" y2="451"/>
-	<line class="st15" x1="132" y1="438" x2="132" y2="451"/>
-	<line class="st16" x1="736" y1="368" x2="736" y2="378"/>
-	<line class="st16" x1="92" y1="370" x2="92" y2="379"/>
-	<line class="st15" x1="185" y1="438" x2="185" y2="451"/>
+			<path
+   class="st16"
+   d="m748.9 369h-23.1c-6.6 0-12-5.4-12-12v-18.8c0-6.6 5.4-12 12-12h23.1c6.6 0 12 5.4 12 12v18.8c0 6.6-5.4 12-12 12z"
+   id="path319" />
+				<rect
+   class="st9"
+   x="724.2"
+   y="336.6"
+   width="26.2"
+   height="13.9"
+   id="rect321" />
+				<rect
+   class="st9"
+   x="728.3"
+   y="347.2"
+   width="18"
+   height="6.5"
+   id="rect323" />
+				<rect
+   class="st16"
+   x="728.3"
+   y="341.5"
+   width="18"
+   height="1.6"
+   id="rect325" />
+				<rect
+   class="st9"
+   x="734.9"
+   y="352.1"
+   width="4.9"
+   height="11.5"
+   id="rect327" />
+				<rect
+   class="st9"
+   x="726.7"
+   y="331.7"
+   width="4.9"
+   height="9"
+   id="rect329" />
+				<rect
+   class="st9"
+   x="734"
+   y="331.7"
+   width="2.5"
+   height="3.3"
+   id="rect331" />
+				<rect
+   class="st9"
+   x="738.1"
+   y="331.7"
+   width="2.5"
+   height="3.3"
+   id="rect333" />
+				<rect
+   class="st9"
+   x="743"
+   y="331.7"
+   width="4.9"
+   height="9"
+   id="rect335" />
+		<text
+   class="st2 st3"
+   transform="translate(714.67 319.93)"
+   id="text337"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">L2 拡張</text>
+
+<path
+   style="fill:#29abe2"
+   inkscape:connector-curvature="0"
+   id="path339"
+   d="M 104.9,369 H 81.8 c -6.6,0 -12,-5.4 -12,-12 v -18.8 c 0,-6.6 5.4,-12 12,-12 h 23.1 c 6.6,0 12,5.4 12,12 V 357 c 0,6.6 -5.4,12 -12,12 z"
+   class="st16" /><rect
+   style="fill:#ffffff"
+   id="rect341"
+   height="13.9"
+   width="26.200001"
+   y="336.60001"
+   x="80.199997"
+   class="st9" /><rect
+   style="fill:#ffffff"
+   id="rect343"
+   height="6.5"
+   width="18"
+   y="347.20001"
+   x="84.300003"
+   class="st9" /><rect
+   style="fill:#29abe2"
+   id="rect345"
+   height="1.6"
+   width="18"
+   y="341.5"
+   x="84.300003"
+   class="st16" /><rect
+   style="fill:#ffffff"
+   id="rect347"
+   height="11.5"
+   width="4.9000001"
+   y="352.10001"
+   x="90.900002"
+   class="st9" /><rect
+   style="fill:#ffffff"
+   id="rect349"
+   height="9"
+   width="4.9000001"
+   y="331.70001"
+   x="82.699997"
+   class="st9" /><rect
+   style="fill:#ffffff"
+   id="rect351"
+   height="3.3"
+   width="2.5"
+   y="331.70001"
+   x="90"
+   class="st9" /><rect
+   style="fill:#ffffff"
+   id="rect353"
+   height="3.3"
+   width="2.5"
+   y="331.70001"
+   x="94.099998"
+   class="st9" /><rect
+   style="fill:#ffffff"
+   id="rect355"
+   height="9"
+   width="4.9000001"
+   y="331.70001"
+   x="99"
+   class="st9" /><text
+   style="font-size:15.83466721px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+   id="text357"
+   class="st2 st3"
+   x="70.667"
+   y="319.92999">L2 拡張</text>
+
+		<path
+   class="st16"
+   d="m597.4 438h-23.1c-6.6 0-12-5.4-12-12v-18.8c0-6.6 5.4-12 12-12h23.1c6.6 0 12 5.4 12 12v18.8c0 6.6-5.4 12-12 12z"
+   id="path360" />
+			<rect
+   class="st9"
+   x="572.7"
+   y="405.6"
+   width="26.2"
+   height="13.9"
+   id="rect362" />
+			<rect
+   class="st9"
+   x="576.8"
+   y="416.2"
+   width="18"
+   height="6.5"
+   id="rect364" />
+			<rect
+   class="st16"
+   x="576.8"
+   y="410.5"
+   width="18"
+   height="1.6"
+   id="rect366" />
+			<rect
+   class="st9"
+   x="583.3"
+   y="421.1"
+   width="4.9"
+   height="11.5"
+   id="rect368" />
+			<rect
+   class="st9"
+   x="575.2"
+   y="400.7"
+   width="4.9"
+   height="9"
+   id="rect370" />
+			<rect
+   class="st9"
+   x="582.5"
+   y="400.7"
+   width="2.5"
+   height="3.3"
+   id="rect372" />
+			<rect
+   class="st9"
+   x="586.6"
+   y="400.7"
+   width="2.5"
+   height="3.3"
+   id="rect374" />
+			<rect
+   class="st9"
+   x="591.5"
+   y="400.7"
+   width="4.9"
+   height="9"
+   id="rect376" />
+		<path
+   class="st16"
+   d="m263.4 439h-23.1c-6.6 0-12-5.4-12-12v-18.8c0-6.6 5.4-12 12-12h23.1c6.6 0 12 5.4 12 12v18.8c0 6.6-5.4 12-12 12z"
+   id="path378" />
+			<rect
+   class="st9"
+   x="238.7"
+   y="406.6"
+   width="26.2"
+   height="13.9"
+   id="rect380" />
+			<rect
+   class="st9"
+   x="242.8"
+   y="417.2"
+   width="18"
+   height="6.5"
+   id="rect382" />
+			<rect
+   class="st16"
+   x="242.8"
+   y="411.5"
+   width="18"
+   height="1.6"
+   id="rect384" />
+			<rect
+   class="st9"
+   x="249.3"
+   y="422.1"
+   width="4.9"
+   height="11.5"
+   id="rect386" />
+			<rect
+   class="st9"
+   x="241.2"
+   y="401.7"
+   width="4.9"
+   height="9"
+   id="rect388" />
+			<rect
+   class="st9"
+   x="248.5"
+   y="401.7"
+   width="2.5"
+   height="3.3"
+   id="rect390" />
+			<rect
+   class="st9"
+   x="252.6"
+   y="401.7"
+   width="2.5"
+   height="3.3"
+   id="rect392" />
+			<rect
+   class="st9"
+   x="257.5"
+   y="401.7"
+   width="4.9"
+   height="9"
+   id="rect394" />
+		<path
+   class="st16"
+   d="m597.4 506h-23.1c-6.6 0-12-5.4-12-12v-18.8c0-6.6 5.4-12 12-12h23.1c6.6 0 12 5.4 12 12v18.8c0 6.6-5.4 12-12 12z"
+   id="path396" />
+			<rect
+   class="st9"
+   x="572.7"
+   y="473.6"
+   width="26.2"
+   height="13.9"
+   id="rect398" />
+			<rect
+   class="st9"
+   x="576.8"
+   y="484.2"
+   width="18"
+   height="6.5"
+   id="rect400" />
+			<rect
+   class="st16"
+   x="576.8"
+   y="478.5"
+   width="18"
+   height="1.6"
+   id="rect402" />
+			<rect
+   class="st9"
+   x="583.3"
+   y="489.1"
+   width="4.9"
+   height="11.5"
+   id="rect404" />
+			<rect
+   class="st9"
+   x="575.2"
+   y="468.7"
+   width="4.9"
+   height="9"
+   id="rect406" />
+			<rect
+   class="st9"
+   x="582.5"
+   y="468.7"
+   width="2.5"
+   height="3.3"
+   id="rect408" />
+			<rect
+   class="st9"
+   x="586.6"
+   y="468.7"
+   width="2.5"
+   height="3.3"
+   id="rect410" />
+			<rect
+   class="st9"
+   x="591.5"
+   y="468.7"
+   width="4.9"
+   height="9"
+   id="rect412" />
+<g
+   id="left_concentrator_bottom">
+		<path
+   class="st16"
+   d="m264.4 507h-23.1c-6.6 0-12-5.4-12-12v-18.8c0-6.6 5.4-12 12-12h23.1c6.6 0 12 5.4 12 12v18.8c0 6.6-5.4 12-12 12z"
+   id="path414" />
+			<rect
+   class="st9"
+   x="239.7"
+   y="474.6"
+   width="26.2"
+   height="13.9"
+   id="rect416" />
+			<rect
+   class="st9"
+   x="243.8"
+   y="485.2"
+   width="18"
+   height="6.5"
+   id="rect418" />
+			<rect
+   class="st16"
+   x="243.8"
+   y="479.5"
+   width="18"
+   height="1.6"
+   id="rect420" />
+			<rect
+   class="st9"
+   x="250.3"
+   y="490.1"
+   width="4.9"
+   height="11.5"
+   id="rect422" />
+			<rect
+   class="st9"
+   x="242.2"
+   y="469.7"
+   width="4.9"
+   height="9"
+   id="rect424" />
+			<rect
+   class="st9"
+   x="249.5"
+   y="469.7"
+   width="2.5"
+   height="3.3"
+   id="rect426" />
+			<rect
+   class="st9"
+   x="253.6"
+   y="469.7"
+   width="2.5"
+   height="3.3"
+   id="rect428" />
+			<rect
+   class="st9"
+   x="258.5"
+   y="469.7"
+   width="4.9"
+   height="9"
+   id="rect430" />
 </g>
-<g id="lines_row_2">
-	<line class="st16" x1="39" y1="380" x2="282" y2="380"/>
-	<line class="st16" x1="556" y1="378" x2="795" y2="378"/>
-	<line class="st16" x1="192" y1="346" x2="317" y2="346"/>
-	<line class="st16" x1="640" y1="346" x2="538" y2="346"/>
-	<line class="st16" x1="251" y1="251" x2="251" y2="284"/>
-	<line class="st16" x1="251" y1="321" x2="251" y2="327"/>
-	<line class="st16" x1="250" y1="370" x2="250" y2="380"/>
-	<line class="st16" x1="251" y1="438" x2="251" y2="451"/>
-	<line class="st16" x1="252" y1="506" x2="252" y2="518"/>
-	<line class="st16" x1="585" y1="368" x2="585" y2="378"/>
-	<line class="st16" x1="585" y1="438" x2="585" y2="448"/>
-	<line class="st16" x1="585" y1="506" x2="585" y2="520"/>
-	<line class="st16" x1="275" y1="418" x2="562" y2="418"/>
-	<line class="st16" x1="276" y1="487" x2="562" y2="487"/>
-	<path class="st16" d="M249,169l-1-78c0,0-12-7,0-15V33"/>
+<g
+   id="right_VM_bottom">
+		<path
+   class="st7"
+   d="m652 506h-21.2c-6.6 0-12-5.4-12-12v-17.6c0-6.6 5.4-12 12-12h21.2c6.6 0 12 5.4 12 12v17.6c0 6.6-5.4 12-12 12z"
+   id="path433" />
+		<text
+   class="st9 st2 st3"
+   transform="translate(626.05 491.24)"
+   id="text435"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">VM</text>
+
 </g>
-<g id="right_WAN_opt">
-	<g>
-		<path class="st17" d="M675.3,369h-24.4c-6.6,0-12-5.4-12-12v-19.9c0-6.6,5.4-12,12-12h24.4c6.6,0,12,5.4,12,12V357
-			C687.3,363.6,681.9,369,675.3,369z"/>
-		<g>
-			<g>
-				<g>
-					<g>
-						<g>
-							<ellipse class="st10" cx="662.9" cy="346.9" rx="13" ry="12.5"/>
-							<ellipse class="st17" cx="662.9" cy="346.9" rx="5.8" ry="5.6"/>
-						</g>
-						<rect x="659" y="330.9" class="st10" width="7" height="4.5"/>
-						<rect x="659.8" y="357.8" class="st10" width="6.3" height="5.4"/>
-					</g>
-					<rect x="674.3" y="343.9" class="st10" width="5.4" height="6.3"/>
-					<rect x="646.5" y="343.9" class="st10" width="5.4" height="6.3"/>
-				</g>
-				
-					<rect x="649.5" y="334.3" transform="matrix(0.7526 0.6585 -0.6585 0.7526 383.493 -346.1771)" class="st10" width="5.9" height="5.9"/>
-				
-					<rect x="669.3" y="354" transform="matrix(0.7526 0.6585 -0.6585 0.7526 401.6389 -354.975)" class="st10" width="7.7" height="5.9"/>
-			</g>
-			
-				<rect x="671" y="334.6" transform="matrix(0.7071 0.7071 -0.7071 0.7071 436.3055 -377.5818)" class="st10" width="5.9" height="6.5"/>
-			
-				<rect x="650.2" y="354" transform="matrix(0.7071 0.7071 -0.7071 0.7071 443.6634 -357.2815)" class="st10" width="5.9" height="5.9"/>
-		</g>
-	</g>
-	<text transform="matrix(1 0 0 1 642 297.3335)"><tspan x="0" y="0" class="st2 st18">WAN</tspan><tspan x="0" y="19.2" class="st4 st18">最適化</tspan></text>
+<g
+   id="left_VM_bottom">
+		<path
+   class="st7"
+   d="m145 506h-21.2c-6.6 0-12-5.4-12-12v-17.6c0-6.6 5.4-12 12-12h21.2c6.6 0 12 5.4 12 12v17.6c0 6.6-5.4 12-12 12z"
+   id="path438" />
+		<text
+   class="st9 st2 st3"
+   transform="translate(119.05 491.24)"
+   id="text440"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">VM</text>
+
+		<path
+   class="st7"
+   d="m93 506h-21.2c-6.6 0-12-5.4-12-12v-17.6c0-6.6 5.4-12 12-12h21.2c6.6 0 12 5.4 12 12v17.6c0 6.6-5.4 12-12 12z"
+   id="path442" />
+		<text
+   class="st9 st2 st3"
+   transform="translate(67.049 491.24)"
+   id="text444"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">VM</text>
+
 </g>
-<g id="left_WAN_opt">
-	<g>
-		<path class="st17" d="M181.3,369h-24.4c-6.6,0-12-5.4-12-12v-19.9c0-6.6,5.4-12,12-12h24.4c6.6,0,12,5.4,12,12V357
-			C193.3,363.6,187.9,369,181.3,369z"/>
-		<g>
-			<g>
-				<g>
-					<g>
-						<g>
-							<ellipse class="st10" cx="168.9" cy="346.9" rx="13" ry="12.5"/>
-							<ellipse class="st17" cx="168.9" cy="346.9" rx="5.8" ry="5.6"/>
-						</g>
-						<rect x="165" y="330.9" class="st10" width="7" height="4.5"/>
-						<rect x="165.8" y="357.8" class="st10" width="6.3" height="5.4"/>
-					</g>
-					<rect x="180.3" y="343.9" class="st10" width="5.4" height="6.3"/>
-					<rect x="152.5" y="343.9" class="st10" width="5.4" height="6.3"/>
-				</g>
-				
-					<rect x="155.5" y="334.3" transform="matrix(0.7526 0.6585 -0.6585 0.7526 261.2628 -20.8722)" class="st10" width="5.9" height="5.9"/>
-				
-					<rect x="175.3" y="354" transform="matrix(0.7526 0.6585 -0.6585 0.7526 279.413 -29.6751)" class="st10" width="7.7" height="5.9"/>
-			</g>
-			
-				<rect x="177" y="334.6" transform="matrix(0.7071 0.7071 -0.7071 0.7071 291.615 -28.2706)" class="st10" width="5.9" height="6.5"/>
-			
-				<rect x="156.2" y="354" transform="matrix(0.7071 0.7071 -0.7071 0.7071 298.9741 -7.9707)" class="st10" width="5.9" height="5.9"/>
-		</g>
-	</g>
-	<text transform="matrix(1 0 0 1 148 297.3335)"><tspan x="0" y="0" class="st2 st18">WAN</tspan><tspan x="0" y="19.2" class="st4 st18">最適化</tspan></text>
+		<path
+   class="st7"
+   d="m196 438h-21.2c-6.6 0-12-5.4-12-12v-17.6c0-6.6 5.4-12 12-12h21.2c6.6 0 12 5.4 12 12v17.6c0 6.6-5.4 12-12 12z"
+   id="path447" />
+		<text
+   class="st9 st2 st3"
+   transform="translate(170.05 423.24)"
+   id="text449"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">VM</text>
+
+		<path
+   class="st7"
+   d="m143 438h-21.2c-6.6 0-12-5.4-12-12v-17.6c0-6.6 5.4-12 12-12h21.2c6.6 0 12 5.4 12 12v17.6c0 6.6-5.4 12-12 12z"
+   id="path451" />
+		<text
+   class="st9 st2 st3"
+   transform="translate(117.05 423.24)"
+   id="text453"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">VM</text>
+
+		<path
+   class="st7"
+   d="m92 438h-21.2c-6.6 0-12-5.4-12-12v-17.6c0-6.6 5.4-12 12-12h21.2c6.6 0 12 5.4 12 12v17.6c0 6.6-5.4 12-12 12z"
+   id="path455" />
+		<text
+   class="st9 st2 st3"
+   transform="translate(66.049 423.24)"
+   id="text457"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">VM</text>
+
+<g
+   id="arrow_icon">
+		<circle
+   class="st16"
+   cx="527.8"
+   cy="84.8"
+   r="22.2"
+   id="circle459" />
+			<polygon
+   class="st9"
+   points="521.7 90.4 512 84.8 521.7 79.2"
+   id="polygon461" />
+			<polygon
+   class="st9"
+   points="533.9 90.4 533.9 79.2 543.6 84.8"
+   id="polygon463" />
+			<rect
+   class="st9"
+   x="520.6"
+   y="82.6"
+   width="14.2"
+   height="4.4"
+   id="rect465" />
+		<circle
+   class="st16"
+   cx="316.8"
+   cy="84.8"
+   r="22.2"
+   id="circle467" />
+			<polygon
+   class="st9"
+   points="310.7 90.4 301 84.8 310.7 79.2"
+   id="polygon469" />
+			<polygon
+   class="st9"
+   points="322.9 90.4 322.9 79.2 332.6 84.8"
+   id="polygon471" />
+			<rect
+   class="st9"
+   x="309.6"
+   y="82.6"
+   width="14.2"
+   height="4.4"
+   id="rect473" />
 </g>
-<g id="right_lock_icon">
-	<g>
-		<path class="st17" d="M597,369h-22.5c-6.6,0-12-5.4-12-12v-18.2c0-6.6,5.4-12,12-12H597c6.6,0,12,5.4,12,12V357
-			C609,363.6,603.6,369,597,369z"/>
-		<g>
-			<g>
-				<path class="st10" d="M590.3,345.7h-8.2c-2.2,0-4.1-1.8-4.1-4.1v-3.9c0-2.2,1.8-4.1,4.1-4.1h8.2c2.2,0,4.1,1.8,4.1,4.1v3.9
-					C594.4,343.9,592.6,345.7,590.3,345.7z"/>
-				<path class="st17" d="M588.9,344h-5.4c-1.1,0-2.1-0.9-2.1-2.1v-2.9c0-1.1,0.9-2.1,2.1-2.1h5.4c1.1,0,2.1,0.9,2.1,2.1v2.9
-					C591,343.1,590,344,588.9,344z"/>
-				<path class="st10" d="M595.5,362.1h-18.6c-2.2,0-4.1-1.8-4.1-4.1v-10.8c0-2.2,1.8-4.1,4.1-4.1h18.6c2.2,0,4.1,1.8,4.1,4.1V358
-					C599.6,360.3,597.7,362.1,595.5,362.1z"/>
-			</g>
-			<g>
-				<ellipse class="st17" cx="586.7" cy="350.5" rx="3.4" ry="3"/>
-				<path class="st17" d="M586.2,359.5L586.2,359.5c-0.7,0-1.3-0.6-1.3-1.3v-6c0-0.7,0.6-1.3,1.3-1.3l0,0c0.7,0,1.3,0.6,1.3,1.3v6
-					C587.5,358.9,586.9,359.5,586.2,359.5z"/>
-				<path class="st17" d="M588.8,355.2h-1.7c-0.2,0-0.4-0.2-0.4-0.4l0,0c0-0.2,0.2-0.4,0.4-0.4h1.7c0.2,0,0.4,0.2,0.4,0.4l0,0
-					C589.2,355,589,355.2,588.8,355.2z"/>
-				<path class="st17" d="M588.8,356.9h-1.7c-0.2,0-0.4-0.2-0.4-0.4l0,0c0-0.2,0.2-0.4,0.4-0.4h1.7c0.2,0,0.4,0.2,0.4,0.4l0,0
-					C589.2,356.7,589,356.9,588.8,356.9z"/>
-				<path class="st17" d="M588.8,358.7h-1.7c-0.2,0-0.4-0.2-0.4-0.4l0,0c0-0.2,0.2-0.4,0.4-0.4h1.7c0.2,0,0.4,0.2,0.4,0.4l0,0
-					C589.2,358.5,589,358.7,588.8,358.7z"/>
-			</g>
-		</g>
-	</g>
-	<g>
-		<path class="st17" d="M596,369h-22.5c-6.6,0-12-5.4-12-12v-18.2c0-6.6,5.4-12,12-12H596c6.6,0,12,5.4,12,12V357
-			C608,363.6,602.6,369,596,369z"/>
-		<g>
-			<g>
-				<path class="st10" d="M589.3,345.7h-8.2c-2.2,0-4.1-1.8-4.1-4.1v-3.9c0-2.2,1.8-4.1,4.1-4.1h8.2c2.2,0,4.1,1.8,4.1,4.1v3.9
-					C593.4,343.9,591.6,345.7,589.3,345.7z"/>
-				<path class="st17" d="M587.9,344h-5.4c-1.1,0-2.1-0.9-2.1-2.1v-2.9c0-1.1,0.9-2.1,2.1-2.1h5.4c1.1,0,2.1,0.9,2.1,2.1v2.9
-					C590,343.1,589,344,587.9,344z"/>
-				<path class="st10" d="M594.5,362.1h-18.6c-2.2,0-4.1-1.8-4.1-4.1v-10.8c0-2.2,1.8-4.1,4.1-4.1h18.6c2.2,0,4.1,1.8,4.1,4.1V358
-					C598.6,360.3,596.7,362.1,594.5,362.1z"/>
-			</g>
-			<g>
-				<ellipse class="st17" cx="585.7" cy="350.5" rx="3.4" ry="3"/>
-				<path class="st17" d="M585.2,359.5L585.2,359.5c-0.7,0-1.3-0.6-1.3-1.3v-6c0-0.7,0.6-1.3,1.3-1.3l0,0c0.7,0,1.3,0.6,1.3,1.3v6
-					C586.5,358.9,585.9,359.5,585.2,359.5z"/>
-				<path class="st17" d="M587.8,355.2h-1.7c-0.2,0-0.4-0.2-0.4-0.4l0,0c0-0.2,0.2-0.4,0.4-0.4h1.7c0.2,0,0.4,0.2,0.4,0.4l0,0
-					C588.2,355,588,355.2,587.8,355.2z"/>
-				<path class="st17" d="M587.8,356.9h-1.7c-0.2,0-0.4-0.2-0.4-0.4l0,0c0-0.2,0.2-0.4,0.4-0.4h1.7c0.2,0,0.4,0.2,0.4,0.4l0,0
-					C588.2,356.7,588,356.9,587.8,356.9z"/>
-				<path class="st17" d="M587.8,358.7h-1.7c-0.2,0-0.4-0.2-0.4-0.4l0,0c0-0.2,0.2-0.4,0.4-0.4h1.7c0.2,0,0.4,0.2,0.4,0.4l0,0
-					C588.2,358.5,588,358.7,587.8,358.7z"/>
-			</g>
-		</g>
-	</g>
-	<text transform="matrix(0.873 0 0 1 550.333 298.334)"><tspan x="0" y="0" class="st4 st18">クラウド・</tspan><tspan x="0" y="19.2" class="st4 st18">ゲートウェイ</tspan></text>
+<g
+   id="left_hybrid_cloud_mngr">
+		<text
+   transform="translate(225 196)"
+   id="text482"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"><tspan
+     class="st2 st3"
+     x="0"
+     y="0"
+     id="tspan476"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">ハイブリッド・</tspan><tspan
+     class="st2 st3"
+     x="0"
+     y="21.6"
+     id="tspan478"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">クラウド・</tspan><tspan
+     class="st2 st3"
+     x="0"
+     y="43.2"
+     id="tspan480"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">マネージャー</tspan></text>
+
+		<path
+   class="st0"
+   d="m291 252h-74c-6.6 0-12-5.4-12-12v-57c0-6.6 5.4-12 12-12h74c6.6 0 12 5.4 12 12v57c0 6.6-5.4 12-12 12z"
+   id="path484" />
 </g>
-<g id="left_lock">
-	<g>
-		<path class="st17" d="M262,369h-22.5c-6.6,0-12-5.4-12-12v-18.2c0-6.6,5.4-12,12-12H262c6.6,0,12,5.4,12,12V357
-			C274,363.6,268.6,369,262,369z"/>
-		<g>
-			<g>
-				<path class="st10" d="M255.3,345.7h-8.2c-2.2,0-4.1-1.8-4.1-4.1v-3.9c0-2.2,1.8-4.1,4.1-4.1h8.2c2.2,0,4.1,1.8,4.1,4.1v3.9
-					C259.4,343.9,257.6,345.7,255.3,345.7z"/>
-				<path class="st17" d="M253.9,344h-5.4c-1.1,0-2.1-0.9-2.1-2.1v-2.9c0-1.1,0.9-2.1,2.1-2.1h5.4c1.1,0,2.1,0.9,2.1,2.1v2.9
-					C256,343.1,255,344,253.9,344z"/>
-				<path class="st10" d="M260.5,362.1h-18.6c-2.2,0-4.1-1.8-4.1-4.1v-10.8c0-2.2,1.8-4.1,4.1-4.1h18.6c2.2,0,4.1,1.8,4.1,4.1V358
-					C264.6,360.3,262.7,362.1,260.5,362.1z"/>
-			</g>
-			<g>
-				<ellipse class="st17" cx="251.7" cy="350.5" rx="3.4" ry="3"/>
-				<path class="st17" d="M251.2,359.5L251.2,359.5c-0.7,0-1.3-0.6-1.3-1.3v-6c0-0.7,0.6-1.3,1.3-1.3l0,0c0.7,0,1.3,0.6,1.3,1.3v6
-					C252.5,358.9,251.9,359.5,251.2,359.5z"/>
-				<path class="st17" d="M253.8,355.2h-1.7c-0.2,0-0.4-0.2-0.4-0.4l0,0c0-0.2,0.2-0.4,0.4-0.4h1.7c0.2,0,0.4,0.2,0.4,0.4l0,0
-					C254.2,355,254,355.2,253.8,355.2z"/>
-				<path class="st17" d="M253.8,356.9h-1.7c-0.2,0-0.4-0.2-0.4-0.4l0,0c0-0.2,0.2-0.4,0.4-0.4h1.7c0.2,0,0.4,0.2,0.4,0.4l0,0
-					C254.2,356.7,254,356.9,253.8,356.9z"/>
-				<path class="st17" d="M253.8,358.7h-1.7c-0.2,0-0.4-0.2-0.4-0.4l0,0c0-0.2,0.2-0.4,0.4-0.4h1.7c0.2,0,0.4,0.2,0.4,0.4l0,0
-					C254.2,358.5,254,358.7,253.8,358.7z"/>
-			</g>
-		</g>
-	</g>
-	<text transform="matrix(0.8988 0 0 1 218.3325 298.334)"><tspan x="0" y="0" class="st4 st18">クラウド・</tspan><tspan x="0" y="19.2" class="st4 st18">ゲートウェイ</tspan></text>
-</g>
-<g id="right_concentrator_1">
-	<g>
-		<path class="st17" d="M748.9,369h-23.1c-6.6,0-12-5.4-12-12v-18.8c0-6.6,5.4-12,12-12h23.1c6.6,0,12,5.4,12,12V357
-			C760.9,363.6,755.5,369,748.9,369z"/>
-		<g>
-			<rect x="724.2" y="336.6" class="st10" width="26.2" height="13.9"/>
-			<rect x="728.3" y="347.2" class="st10" width="18" height="6.5"/>
-			<rect x="728.3" y="341.5" class="st17" width="18" height="1.6"/>
-			<rect x="734.9" y="352.1" class="st10" width="4.9" height="11.5"/>
-			<rect x="726.7" y="331.7" class="st10" width="4.9" height="9"/>
-			<rect x="734" y="331.7" class="st10" width="2.5" height="3.3"/>
-			<rect x="738.1" y="331.7" class="st10" width="2.5" height="3.3"/>
-			<rect x="743" y="331.7" class="st10" width="4.9" height="9"/>
-		</g>
-	</g>
-	<text transform="matrix(1 0 0 1 712.667 319.9336)"><tspan x="0" y="0" class="st2 st18">L2 </tspan><tspan x="22.2" y="0" class="st4 st18">拡張</tspan></text>
-</g>
-<g id="left_L2_ext">
-	<g>
-		<path class="st17" d="M104.9,369H81.8c-6.6,0-12-5.4-12-12v-18.8c0-6.6,5.4-12,12-12h23.1c6.6,0,12,5.4,12,12V357
-			C116.9,363.6,111.5,369,104.9,369z"/>
-		<g>
-			<rect x="80.2" y="336.6" class="st10" width="26.2" height="13.9"/>
-			<rect x="84.3" y="347.2" class="st10" width="18" height="6.5"/>
-			<rect x="84.3" y="341.5" class="st17" width="18" height="1.6"/>
-			<rect x="90.9" y="352.1" class="st10" width="4.9" height="11.5"/>
-			<rect x="82.7" y="331.7" class="st10" width="4.9" height="9"/>
-			<rect x="90" y="331.7" class="st10" width="2.5" height="3.3"/>
-			<rect x="94.1" y="331.7" class="st10" width="2.5" height="3.3"/>
-			<rect x="99" y="331.7" class="st10" width="4.9" height="9"/>
-		</g>
-	</g>
-	<text transform="matrix(1 0 0 1 70.667 319.9336)"><tspan x="0" y="0" class="st2 st18">L2 </tspan><tspan x="22.2" y="0" class="st4 st18">拡張</tspan></text>
-</g>
-<g id="right_concentrator_2">
-	<g>
-		<path class="st17" d="M597.4,438h-23.1c-6.6,0-12-5.4-12-12v-18.8c0-6.6,5.4-12,12-12h23.1c6.6,0,12,5.4,12,12V426
-			C609.4,432.6,604,438,597.4,438z"/>
-		<g>
-			<rect x="572.7" y="405.6" class="st10" width="26.2" height="13.9"/>
-			<rect x="576.8" y="416.2" class="st10" width="18" height="6.5"/>
-			<rect x="576.8" y="410.5" class="st17" width="18" height="1.6"/>
-			<rect x="583.3" y="421.1" class="st10" width="4.9" height="11.5"/>
-			<rect x="575.2" y="400.7" class="st10" width="4.9" height="9"/>
-			<rect x="582.5" y="400.7" class="st10" width="2.5" height="3.3"/>
-			<rect x="586.6" y="400.7" class="st10" width="2.5" height="3.3"/>
-			<rect x="591.5" y="400.7" class="st10" width="4.9" height="9"/>
-		</g>
-	</g>
-</g>
-<g id="left_concentrator_2">
-	<g>
-		<path class="st17" d="M263.4,439h-23.1c-6.6,0-12-5.4-12-12v-18.8c0-6.6,5.4-12,12-12h23.1c6.6,0,12,5.4,12,12V427
-			C275.4,433.6,270,439,263.4,439z"/>
-		<g>
-			<rect x="238.7" y="406.6" class="st10" width="26.2" height="13.9"/>
-			<rect x="242.8" y="417.2" class="st10" width="18" height="6.5"/>
-			<rect x="242.8" y="411.5" class="st17" width="18" height="1.6"/>
-			<rect x="249.3" y="422.1" class="st10" width="4.9" height="11.5"/>
-			<rect x="241.2" y="401.7" class="st10" width="4.9" height="9"/>
-			<rect x="248.5" y="401.7" class="st10" width="2.5" height="3.3"/>
-			<rect x="252.6" y="401.7" class="st10" width="2.5" height="3.3"/>
-			<rect x="257.5" y="401.7" class="st10" width="4.9" height="9"/>
-		</g>
-	</g>
-</g>
-<g id="right_concentrator_3">
-	<g>
-		<path class="st17" d="M597.4,506h-23.1c-6.6,0-12-5.4-12-12v-18.8c0-6.6,5.4-12,12-12h23.1c6.6,0,12,5.4,12,12V494
-			C609.4,500.6,604,506,597.4,506z"/>
-		<g>
-			<rect x="572.7" y="473.6" class="st10" width="26.2" height="13.9"/>
-			<rect x="576.8" y="484.2" class="st10" width="18" height="6.5"/>
-			<rect x="576.8" y="478.5" class="st17" width="18" height="1.6"/>
-			<rect x="583.3" y="489.1" class="st10" width="4.9" height="11.5"/>
-			<rect x="575.2" y="468.7" class="st10" width="4.9" height="9"/>
-			<rect x="582.5" y="468.7" class="st10" width="2.5" height="3.3"/>
-			<rect x="586.6" y="468.7" class="st10" width="2.5" height="3.3"/>
-			<rect x="591.5" y="468.7" class="st10" width="4.9" height="9"/>
-		</g>
-	</g>
-</g>
-<g id="left_concentrator_bottom">
-	<g>
-		<path class="st17" d="M264.4,507h-23.1c-6.6,0-12-5.4-12-12v-18.8c0-6.6,5.4-12,12-12h23.1c6.6,0,12,5.4,12,12V495
-			C276.4,501.6,271,507,264.4,507z"/>
-		<g>
-			<rect x="239.7" y="474.6" class="st10" width="26.2" height="13.9"/>
-			<rect x="243.8" y="485.2" class="st10" width="18" height="6.5"/>
-			<rect x="243.8" y="479.5" class="st17" width="18" height="1.6"/>
-			<rect x="250.3" y="490.1" class="st10" width="4.9" height="11.5"/>
-			<rect x="242.2" y="469.7" class="st10" width="4.9" height="9"/>
-			<rect x="249.5" y="469.7" class="st10" width="2.5" height="3.3"/>
-			<rect x="253.6" y="469.7" class="st10" width="2.5" height="3.3"/>
-			<rect x="258.5" y="469.7" class="st10" width="4.9" height="9"/>
-		</g>
-	</g>
-</g>
-<g id="right_VM_bottom">
-	<g>
-		<path class="st8" d="M652,506h-21.2c-6.6,0-12-5.4-12-12v-17.6c0-6.6,5.4-12,12-12H652c6.6,0,12,5.4,12,12V494
-			C664,500.6,658.6,506,652,506z"/>
-		<text transform="matrix(1 0 0 1 630.0488 491.2397)" class="st10 st2 st3">VM</text>
-	</g>
-</g>
-<g id="left_VM_bottom">
-	<g>
-		<path class="st8" d="M145,506h-21.2c-6.6,0-12-5.4-12-12v-17.6c0-6.6,5.4-12,12-12H145c6.6,0,12,5.4,12,12V494
-			C157,500.6,151.6,506,145,506z"/>
-		<text transform="matrix(1 0 0 1 123.0488 491.2397)" class="st10 st2 st3">VM</text>
-	</g>
-	<g>
-		<path class="st8" d="M93,506H71.8c-6.6,0-12-5.4-12-12v-17.6c0-6.6,5.4-12,12-12H93c6.6,0,12,5.4,12,12V494
-			C105,500.6,99.6,506,93,506z"/>
-		<text transform="matrix(1 0 0 1 71.0488 491.2397)" class="st10 st2 st3">VM</text>
-	</g>
-</g>
-<g id="left_VM_middle_3">
-	<g>
-		<path class="st8" d="M196,438h-21.2c-6.6,0-12-5.4-12-12v-17.6c0-6.6,5.4-12,12-12H196c6.6,0,12,5.4,12,12V426
-			C208,432.6,202.6,438,196,438z"/>
-		<text transform="matrix(1 0 0 1 174.0488 423.2397)" class="st10 st2 st3">VM</text>
-	</g>
-	<g>
-		<path class="st8" d="M143,438h-21.2c-6.6,0-12-5.4-12-12v-17.6c0-6.6,5.4-12,12-12H143c6.6,0,12,5.4,12,12V426
-			C155,432.6,149.6,438,143,438z"/>
-		<text transform="matrix(1 0 0 1 121.0488 423.2397)" class="st10 st2 st3">VM</text>
-	</g>
-	<g>
-		<path class="st8" d="M92,438H70.8c-6.6,0-12-5.4-12-12v-17.6c0-6.6,5.4-12,12-12H92c6.6,0,12,5.4,12,12V426
-			C104,432.6,98.6,438,92,438z"/>
-		<text transform="matrix(1 0 0 1 70.0488 423.2397)" class="st10 st2 st3">VM</text>
-	</g>
-</g>
-<g id="arrow_icon">
-	<g>
-		<circle class="st17" cx="527.8" cy="84.8" r="22.2"/>
-		<g>
-			<polygon class="st10" points="521.7,90.4 512,84.8 521.7,79.2 			"/>
-			<polygon class="st10" points="533.9,90.4 533.9,79.2 543.6,84.8 			"/>
-			<rect x="520.6" y="82.6" class="st10" width="14.2" height="4.4"/>
-		</g>
-	</g>
-	<g>
-		<circle class="st17" cx="316.8" cy="84.8" r="22.2"/>
-		<g>
-			<polygon class="st10" points="310.7,90.4 301,84.8 310.7,79.2 			"/>
-			<polygon class="st10" points="322.9,90.4 322.9,79.2 332.6,84.8 			"/>
-			<rect x="309.6" y="82.6" class="st10" width="14.2" height="4.4"/>
-		</g>
-	</g>
-</g>
-<g id="left_hybrid_cloud_mngr">
-	<g>
-		<text transform="matrix(1 0 0 1 225 196)"><tspan x="0" y="0" class="st2 st3">Hybrid</tspan><tspan x="0" y="21.6" class="st2 st3">Cloud</tspan><tspan x="0" y="43.2" class="st2 st3">Manager</tspan></text>
-		<path class="st0" d="M291,252h-74c-6.6,0-12-5.4-12-12v-57c0-6.6,5.4-12,12-12h74c6.6,0,12,5.4,12,12v57
-			C303,246.6,297.6,252,291,252z"/>
-	</g>
-</g>
-<g id="left_VM_top2">
-	<g>
-		<path class="st8" d="M156,144h-21.2c-6.6,0-12-5.4-12-12v-17.6c0-6.6,5.4-12,12-12H156c6.6,0,12,5.4,12,12V132
-			C168,138.6,162.6,144,156,144z"/>
-		<text transform="matrix(1 0 0 1 134.0488 129.2397)" class="st10 st2 st3">VM</text>
-	</g>
-	<g>
-		<path class="st8" d="M103,144H81.8c-6.6,0-12-5.4-12-12v-17.6c0-6.6,5.4-12,12-12H103c6.6,0,12,5.4,12,12V132
-			C115,138.6,109.6,144,103,144z"/>
-		<text transform="matrix(1 0 0 1 77.0488 129.2397)" class="st10 st2 st3">VM</text>
-	</g>
-</g>
-<g id="cloud">
-	<path class="st19" d="M457.4,53.8c-6.4,0-12.3,1.6-17,4.3c-1.8-15.9-13.8-28.3-28.4-28.3c-15,0-27.3,13-28.5,29.7
-		c-1.3-0.6-2.7-0.8-4.1-0.8c-7.6,0-13.8,8.6-13.8,19.2c0,10.6,6.2,19.2,13.8,19.2c1.7,0,3.3-0.4,4.8-1.2H448
-		c2.9,0.8,6.1,1.2,9.3,1.2c15.8,0,28.6-9.7,28.6-21.6C486,63.5,473.2,53.8,457.4,53.8z"/>
-	<text transform="matrix(0.6672 0 0 1 381.0938 81.3945)" class="st4 st20">インターネット</text>
-</g>
+		<path
+   class="st7"
+   d="m156 144h-21.2c-6.6 0-12-5.4-12-12v-17.6c0-6.6 5.4-12 12-12h21.2c6.6 0 12 5.4 12 12v17.6c0 6.6-5.4 12-12 12z"
+   id="path487" />
+		<text
+   class="st9 st2 st3"
+   transform="translate(130.05 129.24)"
+   id="text489"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">VM</text>
+
+		<path
+   class="st7"
+   d="m103 144h-21.2c-6.6 0-12-5.4-12-12v-17.6c0-6.6 5.4-12 12-12h21.2c6.6 0 12 5.4 12 12v17.6c0 6.6-5.4 12-12 12z"
+   id="path491" />
+		<text
+   class="st9 st2 st3"
+   transform="translate(77.049 129.24)"
+   id="text493"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:15.83466721px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">VM</text>
+
+<path
+   style="fill:#ffffff;stroke:#808080;stroke-width:2;stroke-miterlimit:10"
+   inkscape:connector-curvature="0"
+   id="path495"
+   d="m 457.4,53.8 c -6.4,0 -12.3,1.6 -17,4.3 -1.8,-15.9 -13.8,-28.3 -28.4,-28.3 -15,0 -27.3,13 -28.5,29.7 -1.3,-0.6 -2.7,-0.8 -4.1,-0.8 -7.6,0 -13.8,8.6 -13.8,19.2 0,10.6 6.2,19.2 13.8,19.2 1.7,0 3.3,-0.4 4.8,-1.2 H 448 c 2.9,0.8 6.1,1.2 9.3,1.2 15.8,0 28.6,-9.7 28.6,-21.6 0.1,-12 -12.7,-21.7 -28.5,-21.7 z"
+   class="st17" /><text
+   style="font-size:15.83466721px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+   id="text497"
+   class="st2 st18"
+   x="391.09"
+   y="79.393997">インターネット</text>
+
 </svg>

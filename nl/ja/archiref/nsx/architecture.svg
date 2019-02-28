@@ -20,11 +20,6 @@
    inkscape:version="0.92.3 (2405546, 2018-03-11)"><defs
    id="defs68">
 
-
-
-
-
-
 </defs><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
@@ -38,9 +33,9 @@
    inkscape:window-height="1017"
    id="namedview66"
    showgrid="false"
-   inkscape:zoom="1.9738274"
-   inkscape:cx="362.43601"
-   inkscape:cy="202.81501"
+   inkscape:zoom="1.161932"
+   inkscape:cx="412.25353"
+   inkscape:cy="151.46317"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
@@ -53,8 +48,8 @@
    y="108"
    width="526.47"
    height="89.113"
-   fill="#4B84C4"
-   id="rect4" />
+   id="rect4"
+   fill="#4B84C4" />
 <rect
    x="-.311"
    y="309.8"
@@ -77,13 +72,36 @@
    fill="#F59C57"
    id="rect10" />
 	<text
+   transform="translate(25.726 143.06)"
+   fill="#FFFFFF"
+   font-family="'IBMPlexSans-Bold'"
    font-size="18"
    id="text12"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-   x="51.725998"
-   y="143.06">共通サービス</text>
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:18.07733281px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">共通サービス</text>
 
-	
+	<text
+   font-size="16"
+   id="text22"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
+   x="67.931068"
+   y="183.43063"><tspan
+     sodipodi:role="line"
+     id="tspan3784"
+     x="67.931068"
+     y="183.43063">認証</tspan><tspan
+     sodipodi:role="line"
+     id="tspan3786"
+     x="67.931068"
+     y="206.0273">DNS</tspan><tspan
+     sodipodi:role="line"
+     id="tspan3788"
+     x="67.931068"
+     y="228.62396">NTP</tspan><tspan
+     sodipodi:role="line"
+     id="tspan3790"
+     x="67.931068"
+     y="251.22064">認証局</tspan></text>
+
 	<rect
    x=".343"
    y=".627"
@@ -94,25 +112,24 @@
 <text
    id="text30"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-   x="348.29074"
-   y="147.49475"><tspan
-     x="348.29074"
-     y="147.49475"
-     font-size="21"
-     id="tspan26"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">     インフラストラクチャー管理</tspan><tspan
-     x="375.40176"
-     y="177.32774"
-     font-size="18"
-     id="tspan28"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">VMware vCenter Server</tspan></text>
+   x="365.38779"
+   y="146.92064"><tspan
+     sodipodi:role="line"
+     id="tspan3780"
+     x="365.38779"
+     y="146.92064">インフラストラクチャー管理</tspan><tspan
+     sodipodi:role="line"
+     id="tspan3782"
+     x="365.38779"
+     y="169.5173">VMware vCenter Server</tspan></text>
 
 <text
+   transform="translate(363.39 242.35)"
+   fill="#FFFFFF"
+   font-family="'IBMPlexSans-Bold'"
    font-size="21"
    id="text32"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-   x="377.39001"
-   y="242.35001">仮想インフラストラクチャー</text>
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:18.07733281px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">仮想インフラストラクチャー</text>
 
 <text
    transform="translate(410.74 283.1)"
@@ -139,73 +156,54 @@
      style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:18.07733281px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">  </tspan></text>
 
 <text
+   transform="translate(217.28 283.1)"
+   fill="#FFFFFF"
+   font-family="'IBMPlexSans'"
    font-size="18"
    id="text46"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-   x="229.28"
-   y="283.10001"><tspan
-     x="229.28"
-     y="283.10001"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:18.07733281px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"><tspan
+     x="0"
+     y="0"
      id="tspan42"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">VMware vSphere</tspan><tspan
-     x="356.12399"
-     y="280.46701"
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:18.07733281px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">VMware vSphere</tspan><tspan
+     x="126.844"
+     y="-2.633"
      id="tspan44"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">  </tspan></text>
+     style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:18.07733281px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">  </tspan></text>
 <text
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
    id="text48"
    font-size="21"
-   x="271.64999"
+   x="276.60651"
    y="343.95999">物理インフラストラクチャー</text>
 <text
-   style="font-size:18.07733281px;font-family:'MS UI Gothic';fill:#ffffff;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
    id="text50"
    font-size="21"
-   x="246.17"
+   x="249.03151"
    y="38.077999">クラウド・ネットワーキング・サービス</text>
+<g
+   style="font-size:18px;font-family:IBMPlexSans;fill:#ffffff"
+   id="g60"
+   font-size="18">
 <text
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
    id="text52"
-   x="124.18"
-   y="388">コンピュート</text>
+   transform="translate(124.18,388)"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:18.07733281px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">コンピュート</text>
+
 <text
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
    id="text54"
-   x="329.75"
-   y="388">ストレージ </text>
+   transform="translate(335.75,388)"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:18.07733281px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">ストレージ </text>
+
 <text
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
    id="text56"
-   x="258.07001"
-   y="77.538002">NSX Edge Services Gateway</text>
+   transform="translate(258.07,77.538)"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:18.07733281px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">NSX Edge Services Gateway</text>
+
 <text
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
    id="text58"
-   x="529.79999"
-   y="388">ネットワーク</text>
-<text
-   font-size="18"
-   id="text12-8"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-   x="73.842758"
-   y="182.57237">認証</text>
-<text
-   font-size="18"
-   id="text12-5"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-   x="75.277504"
-   y="209.83261">DNS</text>
-<text
-   font-size="18"
-   id="text12-7"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-   x="75.277504"
-   y="236.13638">NTP</text>
-<text
-   font-size="18"
-   id="text12-2"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.07733345px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
-   x="66.190758"
-   y="265.30963">認証局</text>
-</svg>
+   transform="translate(529.8,388)"
+   style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:18.07733281px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">ネットワーク</text>
+
+</g></svg>

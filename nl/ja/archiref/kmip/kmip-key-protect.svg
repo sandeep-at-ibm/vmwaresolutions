@@ -41,9 +41,9 @@
    inkscape:window-height="1017"
    id="namedview223"
    showgrid="false"
-   inkscape:zoom="1.0442478"
-   inkscape:cx="444.37017"
-   inkscape:cy="177.25927"
+   inkscape:zoom="1.4767894"
+   inkscape:cx="380.41103"
+   inkscape:cy="254.36317"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
@@ -427,19 +427,19 @@
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
    id="text155"
    class="st1 st2"
-   x="529"
+   x="539"
    y="17.6665">パブリック・ネットワーク</text>
 <text
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
    id="text157"
    class="st1 st2"
-   x="457"
+   x="471"
    y="228">お客様のプライベート・ネットワーク</text>
 <text
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
    id="text159"
    class="st1 st2"
-   x="485.33301"
+   x="499.33301"
    y="249.33299">IBM Cloud 管理ネットワーク</text>
 <g
    id="top_dash_line">
