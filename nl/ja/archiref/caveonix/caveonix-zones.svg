@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="981px"
+   height="589px"
+   version="1.1"
+   viewBox="-.5 -.5 981 589"
+   id="svg202"
+   sodipodi:docname="caveonix-zones.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs206" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview204"
+     showgrid="false"
+     inkscape:zoom="1.0102565"
+     inkscape:cx="359.99088"
+     inkscape:cy="294.1398"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg202" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     pointer-events="none"
+     id="g14">
+    <rect
+       x="139"
+       y="348"
+       width="360"
+       height="240"
+       rx="36"
+       ry="36"
+       fill="#f5f5f5"
+       stroke="#666"
+       id="rect4" />
+    <rect
+       x="620"
+       width="360"
+       height="240"
+       rx="36"
+       ry="36"
+       fill="#e1d5e7"
+       stroke="#9673a6"
+       id="rect6" />
+    <rect
+       x="579"
+       y="47"
+       width="360"
+       height="240"
+       rx="36"
+       ry="36"
+       fill="#d5e8d4"
+       stroke="#82b366"
+       id="rect8" />
+    <rect
+       x="139"
+       y="88"
+       width="360"
+       height="240"
+       rx="36"
+       ry="36"
+       fill="#ffe6cc"
+       stroke="#d79b00"
+       id="rect10" />
+    <rect
+       x="539"
+       y="88"
+       width="360"
+       height="240"
+       rx="36"
+       ry="36"
+       fill="#dae8fc"
+       stroke="#6c8ebf"
+       id="rect12" />
+  </g>
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g24">
+    <text
+       x="318.5"
+       y="111.5"
+       id="text16"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">管理ゾーン</text>
+    <text
+       x="718.5"
+       y="111.5"
+       id="text18"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">テナント・ゾーン</text>
+    <text
+       x="758.5"
+       y="71.5"
+       id="text20"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">テナント・ゾーン</text>
+    <text
+       x="798.5"
+       y="21.5"
+       id="text22"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">テナント・ゾーン</text>
+  </g>
+  <rect
+     x="169"
+     y="181.5"
+     width="120"
+     height="60"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="rect26" />
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g32">
+    <text
+       x="228.5"
+       y="208"
+       id="text28"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">Foresight</text>
+    <text
+       x="228.5"
+       y="222"
+       id="text30"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">アプリケーション</text>
+  </g>
+  <rect
+     x="340"
+     y="181.5"
+     width="120"
+     height="60"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="rect34" />
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g40">
+    <text
+       x="399.5"
+       y="208"
+       id="text36"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">セントラル・</text>
+    <text
+       x="399.5"
+       y="222"
+       id="text38"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">コレクター</text>
+  </g>
+  <rect
+     x="575"
+     y="181.5"
+     width="120"
+     height="60"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="rect42" />
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g48">
+    <text
+       x="634.5"
+       y="208"
+       id="text44"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">リモート・</text>
+    <text
+       x="634.5"
+       y="222"
+       id="text46"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">コレクター</text>
+  </g>
+  <g
+     pointer-events="none"
+     stroke="#000"
+     id="g56">
+    <path
+       d="m460 212h108.63"
+       fill="none"
+       stroke-miterlimit="10"
+       id="path50" />
+    <path
+       d="m573.88 212-7 3.5 1.75-3.5-1.75-3.5z"
+       stroke-miterlimit="10"
+       id="path52" />
+    <rect
+       x="729"
+       y="241.5"
+       width="120"
+       height="60"
+       fill="#fff"
+       id="rect54" />
+  </g>
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g64">
+    <text
+       x="788.5"
+       y="261"
+       id="text58"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">OS</text>
+    <text
+       x="788.5"
+       y="275"
+       id="text60"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">DB</text>
+    <text
+       x="788.5"
+       y="289"
+       id="text62"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">アプリ</text>
+  </g>
+  <rect
+     x="729"
+     y="137"
+     width="120"
+     height="60"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="rect66" />
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g74">
+    <text
+       x="788.5"
+       y="156.5"
+       id="text68"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">OS</text>
+    <text
+       x="788.5"
+       y="170.5"
+       id="text70"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">DB</text>
+    <text
+       x="788.5"
+       y="184.5"
+       id="text72"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">アプリ</text>
+  </g>
+  <g
+     pointer-events="none"
+     stroke="#000"
+     id="g94">
+    <g
+       stroke-miterlimit="10"
+       id="g90">
+      <path
+         d="m695 212h7q7 0 7 10v40q0 10 6.82 10h6.81"
+         fill="none"
+         id="path76" />
+      <path
+         d="m727.88 272-7 3.5 1.75-3.5-1.75-3.5z"
+         id="path78" />
+      <path
+         d="m695 212h7q7 0 7-10v-25q0-10 6.82-10h6.81"
+         fill="none"
+         id="path80" />
+      <path
+         d="m727.88 167-7 3.5 1.75-3.5-1.75-3.5z"
+         id="path82" />
+      <path
+         d="m295.37 212h38.26"
+         fill="none"
+         id="path84" />
+      <path
+         d="m290.12 212 7-3.5-1.75 3.5 1.75 3.5z"
+         id="path86" />
+      <path
+         d="m338.88 212-7 3.5 1.75-3.5-1.75-3.5z"
+         id="path88" />
+    </g>
+    <rect
+       x="389"
+       y="419"
+       width="90"
+       height="60"
+       fill="#fff"
+       id="rect92" />
+  </g>
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g100">
+    <text
+       x="433.5"
+       y="445.5"
+       id="text96"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">vCD、vCenter</text>
+    <text
+       x="433.5"
+       y="459.5"
+       id="text98"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">vRA、NSX</text>
+  </g>
+  <g
+     pointer-events="none"
+     stroke="#000"
+     id="g108">
+    <path
+       d="m400 242v106q0 10 10 10h14q10 0 10 10v44.63"
+       fill="none"
+       stroke-miterlimit="10"
+       id="path102" />
+    <path
+       d="m434 417.88-3.5-7 3.5 1.75 3.5-1.75z"
+       stroke-miterlimit="10"
+       id="path104" />
+    <rect
+       x="279"
+       y="419"
+       width="90"
+       height="60"
+       fill="#fff"
+       id="rect106" />
+  </g>
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g112">
+    <text
+       x="323.5"
+       y="452.5"
+       id="text110"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">AWS</text>
+  </g>
+  <rect
+     x="164"
+     y="419"
+     width="90"
+     height="60"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="rect114" />
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g118">
+    <text
+       x="208.5"
+       y="445.5"
+       id="text116"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">Kubernetes</text>
+  </g>
+  <g
+     pointer-events="none"
+     stroke="#000"
+     stroke-miterlimit="10"
+     id="g128">
+    <path
+       d="m400 242v106q0 10-10 10h-56q-10 0-10 10v44.63"
+       fill="none"
+       id="path120" />
+    <path
+       d="m324 417.88-3.5-7 3.5 1.75 3.5-1.75z"
+       id="path122" />
+    <path
+       d="m400 242-0.91 106q-0.09 10-10.09 10h-170q-10 0-10 10v44.63"
+       fill="none"
+       id="path124" />
+    <path
+       d="m209 417.88-3.5-7 3.5 1.75 3.5-1.75z"
+       id="path126" />
+  </g>
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g132">
+    <text
+       x="318.5"
+       y="571.5"
+       id="text130"
+       style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">クラウド・プロバイダー</text>
+  </g>
+  <ellipse
+     cx="44"
+     cy="54"
+     rx="7.5"
+     ry="7.5"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="ellipse134" />
+  <path
+     d="m44 61v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20"
+     fill="none"
+     pointer-events="none"
+     stroke="#000"
+     stroke-miterlimit="10"
+     id="path136" />
+  <text
+     x="49.018982"
+     y="121.58896"
+     font-size="12px"
+     id="text138"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.62603569px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.96883631"
+     transform="scale(0.96883633,1.0321661)">サービス・プロバイダー</text>
+  <ellipse
+     cx="44"
+     cy="144"
+     rx="7.5"
+     ry="7.5"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="ellipse144" />
+  <path
+     d="m44 151v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20"
+     fill="none"
+     pointer-events="none"
+     stroke="#000"
+     stroke-miterlimit="10"
+     id="path146" />
+  <g
+     transform="translate(25.5,203.5)"
+     id="g152">
+    <switch
+       id="switch150">
+      <foreignObject
+         width="36"
+         height="12"
+         overflow="visible"
+         pointer-events="all"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           color="rgb(0, 0, 0)"
+           display="inline-block"
+           font-family="Helvetica"
+           font-size="12px"
+           text-align="center"
+           style="line-height:1.2;vertical-align:top;white-space:nowrap">
+          <xhtml:div
+             display="inline-block"
+             text-align="inherit"
+             text-decoration="inherit"
+             style="background-color:#ffffff">Tenant</xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="18"
+         y="12"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text148"
+         style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">テナント</text>
+    </switch>
+  </g>
+  <ellipse
+     cx="44"
+     cy="234"
+     rx="7.5"
+     ry="7.5"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="ellipse154" />
+  <path
+     d="m44 241v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20"
+     fill="none"
+     pointer-events="none"
+     stroke="#000"
+     stroke-miterlimit="10"
+     id="path156" />
+  <g
+     transform="translate(25.5,293.5)"
+     id="g162">
+    <switch
+       id="switch160">
+      <foreignObject
+         width="36"
+         height="12"
+         overflow="visible"
+         pointer-events="all"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           color="rgb(0, 0, 0)"
+           display="inline-block"
+           font-family="Helvetica"
+           font-size="12px"
+           text-align="center"
+           style="line-height:1.2;vertical-align:top;white-space:nowrap">
+          <xhtml:div
+             display="inline-block"
+             text-align="inherit"
+             text-decoration="inherit"
+             style="background-color:#ffffff">Tenant</xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="18"
+         y="12"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text158"
+         style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">テナント</text>
+    </switch>
+  </g>
+  <ellipse
+     cx="44"
+     cy="324"
+     rx="7.5"
+     ry="7.5"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="ellipse164" />
+  <path
+     d="m44 331v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20"
+     fill="none"
+     pointer-events="none"
+     stroke="#000"
+     stroke-miterlimit="10"
+     id="path166" />
+  <g
+     transform="translate(25.5,383.5)"
+     id="g172">
+    <switch
+       id="switch170">
+      <foreignObject
+         width="36"
+         height="12"
+         overflow="visible"
+         pointer-events="all"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           color="rgb(0, 0, 0)"
+           display="inline-block"
+           font-family="Helvetica"
+           font-size="12px"
+           text-align="center"
+           style="line-height:1.2;vertical-align:top;white-space:nowrap">
+          <xhtml:div
+             display="inline-block"
+             text-align="inherit"
+             text-decoration="inherit"
+             style="background-color:#ffffff">Tenant</xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="18"
+         y="12"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text168"
+         style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">テナント</text>
+    </switch>
+  </g>
+  <g
+     pointer-events="none"
+     stroke="#000"
+     stroke-miterlimit="10"
+     id="g188">
+    <path
+       d="m69 88h20q10 0 10 10v104q0 10 10 10h53.63"
+       fill="none"
+       id="path174" />
+    <path
+       d="m167.88 212-7 3.5 1.75-3.5-1.75-3.5z"
+       id="path176" />
+    <path
+       d="m69 168h20q10 0 10 10v24q0 10 10 10h53.63"
+       fill="none"
+       id="path178" />
+    <path
+       d="m167.88 212-7 3.5 1.75-3.5-1.75-3.5z"
+       id="path180" />
+    <path
+       d="m69 258h20q10 0 10-10v-26q0-10 10-10h53.63"
+       fill="none"
+       id="path182" />
+    <path
+       d="m167.88 212-7 3.5 1.75-3.5-1.75-3.5z"
+       id="path184" />
+    <path
+       d="m69 348h20q10 0 10-10v-116q0-10 10-10h53.63"
+       fill="none"
+       id="path186" />
+  </g>
+  <g
+     id="g200">
+    <path
+       d="m167.88 212-7 3.5 1.75-3.5-1.75-3.5z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path190" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g198">
+      <text
+         x="208.5"
+         y="492.5"
+         id="text192"
+         style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">コンテナー</text>
+      <text
+         x="323.5"
+         y="492.5"
+         id="text194"
+         style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"> パブリック      </text>
+      <text
+         x="433.5"
+         y="492.5"
+         id="text196"
+         style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">プライベート</text>
+    </g>
+  </g>
+</svg>
