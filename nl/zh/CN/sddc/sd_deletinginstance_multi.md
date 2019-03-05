@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,5 +41,5 @@ lastupdated: "2018-10-29"
 
 ### 相关链接
 
-* [删除 Cloud Foundation 实例](sd_deletinginstance.html)
-* [订购、查看和除去 Cloud Foundation 实例中的服务](sd_addingremovingservices.html)
+* [删除 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [订购、查看和除去 Cloud Foundation 实例中的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -40,5 +40,5 @@ lastupdated: "2018-11-05"
 
 ### 相关链接
 
-* [常见问题](faq.html)
-* [有关访问 {{site.data.keyword.cloud_notm}} 的故障诊断](../../../account/ts_accessing.html){:new_window}
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [有关访问 {{site.data.keyword.cloud_notm}} 的故障诊断](/docs/account/ts_accessing.html){:new_window}

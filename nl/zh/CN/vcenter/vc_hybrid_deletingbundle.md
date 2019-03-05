@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-11-09"
 
 要从 vCenter Server 实例中除去 Hybridity Bundle 许可证，必须在 VMware vSphere Web Client 中将 VMware NSX 和 VMware vSAN 租用许可证密钥替换为自带许可证 (BYOL) 密钥。此外，您必须开具支持凭单以取消租用许可证的费用。
 
-对许可证降级可能会导致 vCenter Server 实例发生故障。您可以选择自行承担许可证降级风险，但请首先考虑降级时不可用的功能。有关更多信息，请参阅 [VMware 组件版本的比较图表](../archiref/solution/appendix.html)。
+对许可证降级可能会导致 vCenter Server 实例发生故障。您可以选择自行承担许可证降级风险，但请首先考虑降级时不可用的功能。有关更多信息，请参阅 [VMware 组件版本的比较图表](/docs/services/vmwaresolutions/archiref/solution/appendix.html)。
 {:important}
 
 ## 从多站点环境中除去 Hybridity Bundle 之前的重要注意事项
@@ -27,7 +27,7 @@ lastupdated: "2018-11-09"
 * 必须合并 VMware NSX 许可证并具有足够的容量在所有多站点部署中使用。
 * 必须创建单个支持凭单，以从所有多站点部署中除去 Hybridity Bundle。
 
-从多站点环境除去 Hybridity Bundle 时，将应用 BYOL 许可证。对于多站点配置中的所有站点，NSX 许可证会自动还原为所有站点中最低的许可证版本。您必须确保许可证版本在多站点配置中的所有站点之间保持一致。
+从多站点环境除去 Hybridity Bundle 时，将应用 BYOL 许可证。确保许可证版本在多站点配置中的所有站点之间保持一致是您的责任。
 {:note}
 
 ## 除去 Hybridity Bundle 之前
@@ -109,6 +109,6 @@ lastupdated: "2018-11-09"
 
 ### 相关链接
 
-* [订购 vCenter Server with Hybridity Bundle 实例](vc_hybrid_orderinginstance.html)
-* [查看 vCenter Server with Hybridity Bundle 实例](vc_hybrid_viewinginstances.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
+* [订购 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [查看 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

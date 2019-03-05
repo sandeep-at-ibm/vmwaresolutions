@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-11-20"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V2.0 发行说明
 
@@ -19,8 +23,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 订购实例时订购包含 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务的实例，也可以日后在实例详细信息页面上的**服务**选项卡中向现有实例添加此服务。根据您的需求，为此服务选择三种部署大小和许可选项之一。成功安装此服务后，在 FortiGate 控制台中管理和配置 FortiGate Virtual Appliance 的防火墙规则。
 
 有关更多信息，请参阅以下主题：
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的组件和注意事项](../services/fortinetvm_considerations.html)
-* [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的组件和注意事项](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)
+* [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
 
 ## F5 on IBM Cloud 和 FortiGate Virtual Appliance on IBM Cloud 的多服务安装
 
@@ -29,8 +33,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 完成实例部署后，可以通过在实例详细信息页面的**添加服务**选项卡上安装 F5 或 FortiGate 服务，以添加该服务的更多实例。一次只能添加一个服务实例，并且必须对要为服务添加的所有实例重复此过程。
 
 有关更多信息，请参阅以下主题：
-* [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
-* [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
+* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ## 对 FortiGate Security Appliance on IBM Cloud 的更新
 
@@ -45,9 +49,9 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 现在，对于所有实例，标准域名 (FQDN) 都以一致的方式表示。下订单时，可以输入您自己的子域前缀和主机名前缀，以确保遵循 FQDN 格式的行业约定。例如，`host-name-prefix<n>.subdomain-prefix.domain-name`。
 
 有关更多信息，请参阅以下主题：
-* [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
-* [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
-* [订购新的 vSphere 集群](../vsphere/vs_orderinginstances.html)
+* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
 
 ## 订购实例期间估算工作负载和存储量
 
@@ -55,9 +59,9 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 * 在订购 Cloud Foundation 和 vCenter Server 期间，会向您提供所订购实例的可用存储容量估算值。
 
 有关更多信息，请参阅以下主题：
-* [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
-* [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
-* [订购新的 vSphere 集群](../vsphere/vs_orderinginstances.html)
+* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
 
 ## 对 VMware Cloud Foundation 实例的更新
 
@@ -70,15 +74,16 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 * VMware NSX for vSphere 6.3.4
 * VMware ESXi 6.5，补丁发行版 ESXi650-201710401-BG。更新 esx-base、esx-tboot、vsan 和 vsanhealth VIB (2151061)。有关补丁详细信息的更多信息，请参阅 [VMware vCenter Server Appliance Photon OS 安全补丁](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window}。
 
-**注**：现有实例（源自 V1.9 和更低发行版）无法升级到此列表中的组件版本。
+现有实例（源自 V1.9 和更低发行版）无法升级到此列表中的组件版本。
+{:note}
 
-有关组件的更多信息，请参阅 [Cloud Foundation 概述](../sddc/sd_cloudfoundationoverview.html)。
+有关组件的更多信息，请参阅 [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)。
 
 ### Cloud Foundation 实例的集群支持
 
 现在，可以使用集群来管理在 V2.0 和更高发行版中部署的 Cloud Foundation 实例中的 ESXi 服务器，以更好地管理资源，并实现高可用性。缺省情况下，订购实例时配置的 ESXi 服务器会分组为 **SDDC-Cluster**。
 
-可以在实例详细信息页面的**基础架构**选项卡上，查看集群详细信息或向实例最多添加共五个集群。展开或收缩实例的容量时，可以选择要向其添加 ESXi 服务器或要从中除去 ESXi 服务器的集群。有关更多信息，请参阅[添加和查看 Cloud Foundation 实例的集群](../sddc/sd_addingviewingclusters.html)。
+可以在实例详细信息页面的**基础架构**选项卡上，查看集群详细信息或向实例最多添加共五个集群。展开或收缩实例的容量时，可以选择要向其添加 ESXi 服务器或要从中除去 ESXi 服务器的集群。有关更多信息，请参阅[添加和查看 Cloud Foundation 实例的集群](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)。
 
 ### 支持定制 vSAN 存储器用于 Cloud Foundation 实例
 
@@ -86,12 +91,12 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 
 有关更多信息，请参阅以下主题：
 
-* [Cloud Foundation 概述](../sddc/sd_cloudfoundationoverview.html)
-* [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
+* [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
 
 ### Cloud Foundation 实例的 VMware vSAN 许可证版本选项：Advanced 或 Enterprise
 
-现在，可以在 Cloud Foundation 实例订购期间选择所需的 vSAN 许可证版本。可以在订购期间购买许可证，也可以自带许可证 (BYOL)。有关更多信息，请参阅[订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)。
+现在，可以在 Cloud Foundation 实例订购期间选择所需的 vSAN 许可证版本。可以在订购期间购买许可证，也可以自带许可证 (BYOL)。有关更多信息，请参阅[订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)。
 
 ### Cloud Foundation 实例的新标准化 IBM 裸机服务器配置
 
@@ -99,11 +104,12 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 * 小型（双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz / 128 GB RAM / 12 个磁盘）
 * 大型（双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz / 512 GB RAM / 12 个磁盘）
 
-**注**：机箱的空间可容纳 12 个磁盘。但并非所有插槽都已装满。**小型**配置提供两个 1.9 TB Micron 5100 MAX 驱动器，**大型**配置提供四个 3.8 TB Micron 5100 PRO 驱动器。
+机箱的空间可容纳 12 个磁盘。但并非所有插槽都已装满。**小型**配置提供两个 1.9 TB Micron 5100 MAX 驱动器，**大型**配置提供四个 3.8 TB Micron 5100 PRO 驱动器。
+{:note}
 
 有关更多信息，请参阅以下主题：
-* [Cloud Foundation 概述](../sddc/sd_cloudfoundationoverview.html)
-* [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
+* [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
 
 ## 对 VMware vCenter Server 实例的更新
 
@@ -114,30 +120,31 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务现在可�
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
 
-**注**：vCenter Server 定制订单（包含或不包含 VMware vSAN 组件）始终包含可容纳 12 个磁盘的机箱服务器。在价格估算 PDF 中，对于非 vSAN 订单，此服务器会导致 {{site.data.keyword.baremetal_short}} 的成本略高。
+vCenter Server 定制订单（包含或不包含 VMware vSAN 组件）始终包含可容纳 12 个磁盘的机箱服务器。在价格估算 PDF 中，对于非 vSAN 订单，此服务器会导致 {{site.data.keyword.baremetal_short}} 的成本略高。
+{:note}
 
-有关组件的更多信息，请参阅 [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)。
+有关组件的更多信息，请参阅 [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)。
 
 ### vCenter Server 实例的多站点配置支持
 
 现在，除了部署连接到主实例的辅助实例外，还可以部署单个 vCenter Server 实例。多站点配置模型使用轴辐式拓扑，其中包含一个主站点和最多七个辅助站点。
 
-有关更多信息，请参阅 [vCenter Server 实例的多站点配置](../vcenter/vc_multisite.html)。
+有关更多信息，请参阅 [vCenter Server 实例的多站点配置](/docs/services/vmwaresolutions/vcenter/vc_multisite.html)。
 
 ### 支持定制 vSAN 存储器用于 vCenter Server 实例
 
 vSAN 存储器现在可用于 vCenter Server 实例，包括主实例和辅助实例。仅当选择用户定制的配置时，此存储器才可用。现在，可以在 vCenter Server 实例订购期间选择所需的 vSAN 许可证版本（Advanced 或 Enterprise）。可以在订购期间购买许可证，也可以自带许可证 (BYOL)。
 
-有关更多信息，请参阅[订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)。
+有关更多信息，请参阅[订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)。
 
 ### 自带许可证 (BYOL) 用于 VMware vCenter Server 实例
 
 BYOL 现在可用于 vCenter Server 实例。订购 vCenter Server 实例时，请使用一个或多个您自己的 vCenter Server、vSphere、vSAN 和 NSX VMware 许可证。
 
 有关更多信息，请参阅以下主题：
-* [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
-* [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
-* [订购新的 vSphere 集群](../vsphere/vs_orderinginstances.html)
+* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
 
 ## 对 VMware vSphere on IBM Cloud 的更新
 
@@ -152,7 +159,7 @@ BYOL 现在可用于 vCenter Server 实例。订购 vCenter Server 实例时，�
 * 3.8 TB SSD SED 驱动器在 {{site.data.keyword.CloudDataCent_notm}} 内普遍可用后就会受到支持。
 * 订单（包含或不包含 VMware vSAN 组件）始终包含可容纳 12 个磁盘的机箱服务器。在价格估算 PDF 中，对于非 vSAN 订单，此服务器会导致 {{site.data.keyword.baremetal_short}} 的成本略高。
 
-有关更多信息，请参阅[订购新的 vSphere 集群](../vsphere/vs_orderinginstances.html)。
+有关更多信息，请参阅[订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)。
 
 ## 对 NetApp ONTAP Select on IBM Cloud 的更新
 
@@ -163,11 +170,12 @@ BYOL 现在可用于 vCenter Server 实例。订购 vCenter Server 实例时，�
 * **高性能（大型）**- 高级许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 128 GB RAM / 每节点 22 个 3.8 TB SSD 驱动器容量 / 4 节点集群的有效容量 - 118 TB
 * **高容量** - 标准许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 64 GB RAM / 每节点 10 个 4 TB SATA 驱动器容量 / 4 节点集群的有效容量 - 60 TB
 
-**注**：3.8 TB SSD 驱动器在 {{site.data.keyword.CloudDataCent_notm}} 内普遍可用后就会受到支持。
+3.8 TB SSD 驱动器在 {{site.data.keyword.CloudDataCent_notm}} 内普遍可用后就会受到支持。
+{:note}
 
 有关更多信息，请参阅以下主题：
-* [NetApp ONTAP Select 概述](../netapp/np_netappoverview.html)
-* [订购 NetApp ONTAP Select 实例](../netapp/np_orderinginstances.html)
+* [NetApp ONTAP Select 概述](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
+* [订购 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
 
 ## 新增和更新的文档
 

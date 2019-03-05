@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-11-07"
 
 IC4VS 自動化會配置將預設閘道設為「{{site.data.keyword.cloud}} 後端客戶路由器 (BCR)」的 VCSA。不過，沒有可透過 BCR 通往網際網路的路徑。從 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 實例通往網際網路的標準路徑是透過「管理 ESG」。因為不建議變更 VCSA 或「管理 ESG」的配置，所以建議在客戶子網路上實作 Proxy 伺服器，以啟用 VUM。
 
-此方法表示不需要重新配置 VCSA 或「管理 ESG」，不過，需要安裝一個小型虛擬機器 (VM) 或應用裝置。Proxy 伺服器是位於兩個端點裝置之間的系統，用來作為中間裝置。在此情況下，它位在 VUM 與 VMware 的更新伺服器之間。
+此方法表示您不需要重新配置 VCSA 或「管理 ESG」，不過，必須安裝一個小型虛擬機器 (VM) 或應用裝置。Proxy 伺服器是位於兩個端點裝置之間的系統，用來作為中間裝置。在此情況下，它位在 VUM 與 VMware 的更新伺服器之間。
 
 VUM 從 VMware 的更新伺服器要求資源時，會先將要求傳送至 Proxy 伺服器，而 Proxy 伺服器接著會將要求傳送至更新伺服器。在 Proxy 伺服器取得資源之後，會將資源傳送至 VUM。Proxy 伺服器可以用來協助安全、管理控制及快取服務。
 
-本文件說明如何使用基於 CentOS 及 Squid 的 Proxy 伺服器。Squid Proxy 是 Web 的開放程式碼快取 Proxy，支援許多通訊協定（包括 HTTP 及 HTTPS）。有許多 VM 及應用裝置型 Proxy 可供使用，而您應該根據企業的需求來選取適當的 Proxy，並安裝及配置下列供應商指引。選擇使用 CentOS/Squid 實作的用戶端應該會繼續下面的處理程序。
+本文件說明如何使用基於 CentOS 及 Squid 的 Proxy 伺服器。Squid Proxy 是 Web 的開放程式碼快取 Proxy，支援包括 HTTP 及 HTTPS 的許多通訊協定。有許多 VM 及應用裝置型 Proxy 可供使用，而您必須根據企業的需求來選取適當的 Proxy，並遵循供應商的指引安裝及配置。選擇使用 CentOS/Squid 實作的用戶端應該會繼續下列處理程序。
 
 * 將 CentOS ISO 下載至跳躍伺服器
 * 建立 vCenter 程式庫
@@ -33,7 +33,7 @@ VUM 從 VMware 的更新伺服器要求資源時，會先將要求傳送至 Prox
 | Proxy RAM | 2 GB | Squid 沒有最低需求 |
 | Proxy 磁碟 |25 GB | Squid 沒有最低需求 |
 | 主機名稱 | Proxy01 | |
-| 位址 |proxy ip |應該從佈建處理程序期間指派的「客戶」專用可攜式子網路使用備用 IP 位址。此子網路上只保留兩個 IP 位址；一個適用於 BCR，另一個適用於 customer-esg
+| 位址 |proxy ip | 必須從佈建處理程序期間指派的「客戶」專用可攜式子網路使用備用 IP 位址。此子網路上只保留兩個 IP 位址；一個適用於 BCR，另一個適用於 customer-esg
 | 網路遮罩 |255.255.255.192 | |
 | 閘道 |customer-nsx-edge 專用上行鏈路 IP | 這是 Proxy 伺服器的預設閘道設定，即 customer-nsx-edge 的專用上行鏈路 IP 位址。檢閱 **customer-nsx-edge** 的**設定**標籤，即可找到此 IP 位址。|
 | DNS 伺服器 |AD/DNS IP | 在 {{site.data.keyword.vmwaresolutions_short}} 主控台的實例頁面（**已部署的實例**頁面）上，可以找到此 IP 位址。|
@@ -83,7 +83,7 @@ VUM 從 VMware 的更新伺服器要求資源時，會先將要求傳送至 Prox
 2. 輸入內容程式庫的名稱（例如 ISO），然後在「附註」文字框中輸入程式庫的說明，然後按**下一步**。
 3. 選取**本端內容程式庫**，然後按**下一步**。
 4. 選取資料儲存庫，然後按一下適合的資料儲存庫（例如，vsanDatastore）。
-5. 檢閱「準備完成」頁面上的資訊，然後按一下**完成**。
+5. 檢閱**準備完成**頁面上的資訊，然後按一下**完成**。
 
 ### 配置 Proxy VM，並安裝 CentOS 及 Squid
 
@@ -114,27 +114,27 @@ VUM 從 VMware 的更新伺服器要求資源時，會先將要求傳送至 Prox
 此作業會安裝及配置新建立的 VM 以進行 Squid 安裝
 
 1.	在 vSphere Web Client 的「導覽器」窗格中，選取剛才建立的 **VM** (Proxy01)，然後選取**摘要**標籤。
-2.	按**播放**按鈕，以開啟 VM 的電源。
-3.	VM 現在將開機，並從 CentOS 7 ISO 啟動。請對 VM 啟動**遠端主控台或 Web 主控台**。請注意，必須安裝「遠端主控台」，而且執行 Web 瀏覽器的系統必須依名稱解析 vSphere ESXi 主機。
-4.	在「歡迎使用 CentOS 7」畫面，選取您需要的語言，然後按一下**繼續**。
+2.	按一下**播放**，以開啟 VM 的電源。
+3.	VM 會開啟電源，並從 CentOS 7 ISO 啟動。請對 VM 啟動**遠端主控台或 Web 主控台**。您必須安裝「遠端主控台」，而且執行 Web 瀏覽器的系統必須依名稱解析 vSphere ESXi 主機。
+4.	在「歡迎使用 CentOS 7」畫面上，選取您需要的語言，然後按一下**繼續**。
 5.	在**本地化**畫面，按一下**日期及時間**，選取時區，然後按一下**完成**。
 6.	在**本地化**畫面，按一下**鍵盤**以變更預設值（如有必要），然後按**完成**。
 7.	在**本地化**畫面，按一下**安裝目的地**，按一下 **VMware 虛擬磁碟**圖示，然後按一下**完成**。
 8.	在**本地化**畫面，按一下**網路及主機名稱**，將「主機名稱」變更為您選擇的主機名稱（例如 Proxy01）。
-9.	按一下**配置**按鈕，然後按一下 **IPv4 設定**，在**方法**方框中選取**手動**。
+9.	按一下**配置**，然後按一下 **IPv4 設定**。在**方法**方框中，選取**手動**。
 10.	使用**新增**按鈕，在_表 1. 部署值_ 中插入_位址網路遮罩_ 和_閘道_。
 11.	在「表 1. 部署值」中，輸入 _DNS 伺服器 IP 位址_。
 12.	按一下**路徑**按鈕，然後新增下列具有「表 1 部署值」中閘道 IP 位址 _BCR IP 位址_ 的靜態路徑：_10.0.0.0/8 及 161.26.0.0/16_，以作為閘道。此靜態路徑容許 Proxy 伺服器連接到 DNS 伺服器。
 13.	按一下**儲存**，然後確定乙太網路介面已開啟並顯示為已連接。按一下**完成**和**開始安裝**。
 14.	繼續安裝時，請設定 root 密碼並設定使用者。
-15.	安裝完成時，請以使用者身分登入，然後輸入 _ping vmware.com_ 指令。名稱應該解析為 IP 位址，而且您應該會取得回應。如果您未取得回應，請檢查：IP 位址、防火牆規則及 NAT 設定。
+15.	安裝完成時，請以使用者身分登入，然後輸入 _ping vmware.com_ 指令。名稱會解析為 IP 位址，而且您會收到回應。如果您未取得回應，請檢查：IP 位址、防火牆規則及 NAT 設定。
 
 #### 安裝及配置 Squid
 
 Squid 沒有任何最低硬體需求，但根據透過 Proxy 存取網際網路的使用者以及快取中所儲存的物件，RAM 的數量可能會不同。因為只有 VUM 才能存取 Proxy 伺服器，而且未啟用快取，所以只會配置小型 VM。
 
 1. 使用 vSphere Web Client 中的「Web 主控台」或「遠端主控台」，以使用者身分登入 Proxy 伺服器，然後 `su` 到 root。
-2. 安裝任何套件之前，建議您使用下列指令來更新系統及套件：
+2. 在您安裝任何套件之前，必須使用下列指令來更新系統及套件：
   `yum -y update`
 
 3. 若要安裝 Squid，您需要將 EPEL 儲存庫安裝至系統，因為預設 Yum 儲存庫中沒有 Squid。請執行下列指令來安裝 EPEL 儲存庫：
@@ -147,8 +147,8 @@ Squid 沒有任何最低硬體需求，但根據透過 Proxy 存取網際網路�
 
 5. 使用下列指令來安裝 Squid：`yum -y install squid`。
 6. 安裝之後，使用下列指令立即啟動 Squid：`systemctl start squid`。
-7. 若要在開機時自動啟動 Squid，請執行下列指令：`systemctl enable squid`。
-8. 執行下列指令，以確保 Squid 執行中：`systemctl status squid`。
+7. 執行下列指令，以在開機時自動啟動 Squid：`systemctl enable squid`。
+8. 執行下列指令，確保 Squid 正在執行：`systemctl status squid`。
 9. CentOS 防火牆需要使用下列指令來容許存取 Squid 埠 (TCP 3128)：`firewall-cmd -add-port=3128/tcp -permanent`。
 10.	若要儲存規則並重新啟動此服務，請使用下列指令：`firewall-cmd -reload`。
 
@@ -164,4 +164,4 @@ Squid 沒有任何最低硬體需求，但根據透過 Proxy 存取網際網路�
 ### 相關鏈結
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) 上的 VMware 解決方案（示範）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

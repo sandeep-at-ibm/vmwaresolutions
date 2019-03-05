@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -91,9 +91,9 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 Fo
 
 ### 相關鏈結
 
-* [訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](fortinetvm_ordering.html)
-* [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](managingfortinetvm.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
-* [常見問題](../vmonic/faq.html)
+* [訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
+* [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Fortinet 網站](https://www.fortinet.com/){:new_window}
 * [Fortinet 文件庫](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

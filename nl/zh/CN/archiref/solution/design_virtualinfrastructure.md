@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -39,7 +39,7 @@ vSphere ESXi 配置由以下方面构成：
 |时间同步| 使用 {{site.data.keyword.cloud}} NTP 服务器 |
 |主机访问|支持 DCUI、ESXi Shell 或 SSH|
 |用户访问| 本地认证和 MSAD |
-| 域名解析 |使用 DNS，如[公共服务设计](design_commonservice.html)中所述。|
+| 域名解析 |使用 DNS，如[公共服务设计](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)中所述。|
 
 vSphere 集群包含用于管理针对用户工作负载的中央云和计算资源的虚拟机 (VM)。
 
@@ -48,8 +48,8 @@ vSphere 集群包含用于管理针对用户工作负载的中央云和计算资
 * 部署后最多可扩展到 32 个 ESXi 主机。
 
 对于 vCenter Server 实例：
-* 实例仅使用 NFS 时，初始部署时的最小 ESXi 主机数为 2，但建议使用 3 个 ESXi 主机以实现 HA。在初始部署期间或初始部署后，可以向上扩展到最多 59 个 ESXi 主机。
-* 实例使用 vSAN 时，初始部署时的最小 ESXi 主机数为 4。在初始部署期间或初始部署后，可以向上扩展到最多 59 个 ESXi 主机。
+* 实例仅使用 NFS 时，初始部署时的最小 ESXi 主机数为 2，但建议使用 3 个 ESXi 主机以实现 HA。在初始部署期间或初始部署后，可以扩展到最多 59 个 ESXi 主机。
+* 实例使用 vSAN 时，初始部署时的最小 ESXi 主机数为 4。在初始部署期间或初始部署后，可以扩展到最多 59 个 ESXi 主机。
 
 要支持更多用户工作负载，可以通过以下方式扩展环境：  
 * 为现有集群部署更多计算主机
@@ -73,7 +73,7 @@ vSAN 采用以下组件：
 * 在 RAID-0 级别，为每个驱动器（两个操作系统驱动器除外）配置板载 RAID 控制器。
 * 基于所有存储器创建一个 vSAN 数据存储。
 
-可用的 vSAN 功能部件取决于订购实例时选择的许可证版本。有关更多信息，请参阅 [VMware vSAN 版本比较](appendix.html#vmware-vsan-edition-comparison)。
+可用的 vSAN 功能部件取决于订购实例时选择的许可证版本。有关更多信息，请参阅 [VMware vSAN 版本比较](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-vsan-edition-comparison)。
 
 ### vSAN 的虚拟网络设置
 
@@ -81,7 +81,7 @@ vSAN 采用以下组件：
 
 vSAN 不会跨上行链路对流量进行负载均衡。因此，一个适配器处于活动状态，而另一个适配器处于备用状态以支持高可用性 (HA)。vSAN 的网络故障转移策略在物理网络端口之间配置为**显式故障转移**。
 
-有关物理 NIC 连接的更多信息，请参阅[物理基础架构设计](design_physicalinfrastructure.html)中的“图 2. 物理主机 NIC 连接”。
+有关物理 NIC 连接的更多信息，请参阅[物理基础架构设计](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)中的“图 2. 物理主机 NIC 连接”。
 
 ### 存储策略设计
 
@@ -112,7 +112,7 @@ vSAN 设置是根据在 {{site.data.keyword.cloud_notm}} 中部署 VMware 解决
 
 网络虚拟化提供了存在于虚拟层中的网络覆盖。网络虚拟化为体系结构提供了快速供应、部署、重新配置和销毁随需应变虚拟网络等功能。此设计使用 vDS 和 VMware NSX for vSphere 来实现虚拟联网。
 
-在此设计中，初始集群中将部署 NSX Manager。将从专用可移植地址块中为 NSX Manager 分配支持 VLAN 的 IP 地址，该地址块指定用于管理组件，并配置为使用[公共服务设计](design_commonservice.html)中提供的 DNS 和 NTP 服务器。将使用表 2 中所列的规范安装 NSX Manager。
+在此设计中，初始集群中将部署 NSX Manager。将从专用可移植地址块中为 NSX Manager 分配支持 VLAN 的 IP 地址，该地址块指定用于管理组件，并配置为使用[公共服务设计](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)中提供的 DNS 和 NTP 服务器。将使用表 2 中所列的规范安装 NSX Manager。
 
 表 2. NSX Manager 属性
 
@@ -134,13 +134,13 @@ Manager|虚拟设备|
 
 初始部署后，{{site.data.keyword.cloud_notm}} 自动化会在初始集群中部署三个 NSX 控制器。 将从指定用于管理组件的**专用 A** 可移植子网中为每个控制器分配一个支持 VLAN 的 IP 地址。此外，此设计还会创建 VM 到 VM 反亲缘关系规则，以在集群中的各主机之间分隔控制器。初始集群必须至少包含 3 个节点，以确保控制器的高可用性。
 
-除了控制器之外，{{site.data.keyword.cloud_notm}} 自动化还会为部署的 vSphere 主机准备 NSX VIBS，以支持通过 VXLAN 隧道端点（VTEP）使用虚拟化网络。从为 VTEP 指定的**专用 A** 可移植 IP 地址范围中为 VTEP 分配支持 VLAN 的 IP 地址，如[物理基础架构设计](design_physicalinfrastructure.html)的*表 1. VLAN 和子网摘要*中所列示。VXLAN 流量驻留在未标记的 VLAN 上，并且分配给专用 vDS。
+除了控制器之外，{{site.data.keyword.cloud_notm}} 自动化还会为部署的 vSphere 主机准备 NSX VIBS，以支持通过 VXLAN 隧道端点（VTEP）使用虚拟化网络。从为 VTEP 指定的**专用 A** 可移植 IP 地址范围中为 VTEP 分配支持 VLAN 的 IP 地址，如[物理基础架构设计](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)的*表 1. VLAN 和子网摘要*中所列示。VXLAN 流量驻留在未标记的 VLAN 上，并且分配给专用 vDS。
 
 然后，将分配分段标识池，并且将集群中的主机添加到传输区域。由于在 {{site.data.keyword.cloud_notm}} 中未配置因特网组管理协议 (IGMP) 监听，因此在传输区域中仅使用单点广播。
 
 在此之后，将部署 NSX Edge 服务网关对。在所有情况下，都会使用一个网关对来处理位于专用网络中的自动化组件的出站流量。对于 vCenter Server，将部署另一个称为客户管理的 Edge 的网关，并将其配置为使用上行链路连接公用网络，还会配置一个分配给专用网络的接口。有关作为解决方案的一部分部署的 NSX Edge 服务网关的更多信息，请参阅 [NSX Edge on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)。
 
-云管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。可用的 NSX 功能部件取决于在订购实例时选择的 NSX 许可证版本。有关更多信息，请参阅 [VMware NSX 版本比较](appendix.html#vmware-nsx-edition-comparison)。对于 vCenter Server 实例，{{site.data.keyword.cloud_notm}} 自动化会将 vCenter Server Appliance 和 Platform Services Controller (PSC) 添加到 NSX Manager 分布式防火墙排除列表中。
+云管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。可用的 NSX 功能部件取决于在订购实例时选择的 NSX 许可证版本。有关更多信息，请参阅 [VMware NSX 版本比较](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-nsx-edition-comparison)。对于 vCenter Server 实例，{{site.data.keyword.cloud_notm}} 自动化会将 vCenter Server Appliance 和 Platform Services Controller (PSC) 添加到 NSX Manager 分布式防火墙排除列表中。
 
 ### 分布式交换机设计
 

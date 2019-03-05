@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,8 +19,8 @@ lastupdated: "2018-10-29"
 ## 需求
 
 請確定您已完成下列作業：
-*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[使用者帳戶及設定](../vmonic/useraccount.html)。
-*  您已檢閱 [vSphere 叢集的需求及規劃](vs_planning.html)中的需求及考量。
+*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic/useraccount.html#managing-user-accounts-and-settings)。
+*  您已檢閱 [vSphere 叢集的需求及規劃](/docs/services/vmwaresolutions/vsphere/vs_planning.html)中的需求及考量。
 *  您已收到電子郵件，內含您想要擴充之叢集已經可以使用的確認。
 
 ## 擴充現有叢集的程序
@@ -46,6 +46,6 @@ vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會�
 
 ### 相關鏈結
 
-* [訂購新的 vSphere 叢集](vs_orderinginstances.html)
-* [根據現有配置來訂購 vSphere 叢集](vs_orderingbasedonexistingconfig.html)
-* [擴充在主控台之外建立的叢集](vs_orderingforclustersoutside.html)
+* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [根據現有配置來訂購 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [擴充在主控台之外建立的叢集](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

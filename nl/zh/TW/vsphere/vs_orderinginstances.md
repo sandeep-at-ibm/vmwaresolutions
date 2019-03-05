@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,8 +21,8 @@ lastupdated: "2018-10-31"
 ## 需求
 
 請確定您已完成下列作業：
-*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](../vmonic/useraccount.html)。
-*  您已檢閱 [vSphere 叢集的需求及規劃](vs_planning.html)中的需求及考量。
+*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
+*  您已檢閱 [vSphere 叢集的需求及規劃](/docs/services/vmwaresolutions/vsphere/vs_planning.html)中的需求及考量。
 
 ## 系統設定
 
@@ -109,8 +109,12 @@ lastupdated: "2018-10-31"
 
 根據您的需求，選取 Bare Metal Server 配置：
   * 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 192 GB RAM
-  * 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.2 GHz / 384 GB RAM
+  * 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 384 GB RAM
   * 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 768 GB RAM
+  * 雙重 Intel Xeon E5-2690 v4 處理器 / 總計 28 核心，2.6 GHz / 512 GB RAM
+  * 四重 Intel Xeon E7-8890 v4 處理器 / 總計 96 核心，2.2 GHz / 1024 GB RAM
+  * 四重 Intel Xeon E7-8890 v4 處理器 / 總計 96 核心，2.2 GHz / 2048 GB RAM
+  * 四重 Intel Xeon E7-8890 v4 處理器 / 總計 96 核心，2.2 GHz / 4096 GB RAM
 
 ### Broadwell
 
@@ -120,9 +124,11 @@ lastupdated: "2018-10-31"
 
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
-|雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|四重 Intel Xeon E7-4820 v4 / 總計 40 核心，2.0 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
+|四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.1 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 ### Bare Metal Server 數目
 
@@ -139,7 +145,10 @@ lastupdated: "2018-10-31"
 如果您選取叢集的 VMware vSAN 元件，請指定下列設定。
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
-* 如果您要新增超過所限制的 8 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
+* 如果您要新增超過所限制的 8 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。
+
+  **高效能 Intel Optane** 選項僅適用於 Skylake CPU 型號「雙重 Intel Xeon Gold 5120」及「雙重 Intel Xeon Gold 6140」。
+  {:note}
 
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
 
@@ -208,7 +217,7 @@ lastupdated: "2018-10-31"
 
 #### FortiGate Physical Appliance 300 系列 HA 配對
 
-您也可以選取是否包括「FortiGate Physical Appliance 300 系列 HA 配對」來保護雲端環境安全。如需相關資訊，請參閱 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概觀](../services/fsa_considerations.html)。
+您也可以選取是否包括「FortiGate Physical Appliance 300 系列 HA 配對」來保護雲端環境安全。如需相關資訊，請參閱 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/fsa_considerations.html)。
 
 ## 訂單摘要
 
@@ -255,6 +264,6 @@ vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會�
 
 ### 相關鏈結
 
-* [根據現有配置來訂購 vSphere 叢集](vs_orderingbasedonexistingconfig.html)
-* [擴充現有的叢集](vs_scalingexistingclusters.html)
-* [擴充在主控台以外建立的叢集](vs_orderingforclustersoutside.html)
+* [根據現有配置來訂購 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [擴充現有的叢集](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [擴充在主控台之外建立的叢集](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

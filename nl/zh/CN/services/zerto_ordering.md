@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -26,11 +26,11 @@ lastupdated: "2018-09-25"
 
 ### 相关链接
 
-* [Zerto on {{site.data.keyword.cloud_notm}} 概述](addingzertodr.html)
-* [管理 Zerto on {{site.data.keyword.cloud_notm}}](managingzertodr.html)
-* [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
-* [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
-* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](../vcenter/vc_hybrid_addingremovingservices.html)
-* [请求 Zerto on {{site.data.keyword.cloud_notm}} 的受管服务](managing_zerto_services.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/addingzertodr.html)
+* [管理 Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingzertodr.html)
+* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [请求 Zerto on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
 * [zerto.com Web 站点](https://www.zerto.com){:new_window}
 * [Zerto 技术文档](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

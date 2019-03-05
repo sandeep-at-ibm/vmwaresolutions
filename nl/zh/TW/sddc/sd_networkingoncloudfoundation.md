@@ -2,19 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-04"
+lastupdated: "2019-01-25"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Cloud Foundation 實例的網路考量
 
 如需 Cloud Foundation 實例之網路考量及需求的詳細資料，請檢閱下列資訊。請確定您符合需求，讓實例能夠正常運作。
 
 ## Cloud Foundation 實例的網路元件
+{: faq}
 
-若要檢閱 Cloud Foundation 實例中所含的網路元件，請參閱 [Cloud Foundation 實例的技術規格](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
+若要檢閱 Cloud Foundation 實例中所含的網路元件，請參閱 [Cloud Foundation 實例的技術規格](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 
 ## 防火牆考量
 
@@ -28,7 +31,7 @@ lastupdated: "2018-09-04"
 
 如需如何設定 NSX 的相關資訊，請參閱下列主題：
 * 若為主要（單一）Cloud Foundation 實例，請參閱 [Setting up NSX for workload VMs on VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/)。
-* 針對多站台 Cloud Foundation 實例，請參閱：[Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html)。
+* 若為多站台 Cloud Foundation 實例，請參閱[在 {{site.data.keyword.cloud_notm}} 中安全地連接專用 VMware 工作負載](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}。
 
 ## 變更 NSX 元件密碼時的考量
 

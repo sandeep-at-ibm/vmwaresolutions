@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -32,9 +32,9 @@ lastupdated: "2018-09-27"
 
 |制造商|组件|版本|
 |:-------------|:-----------------------------------------|:-------------|
-|VMware|vSphere ESXi|6.5 Update 2c（最高更新至 ESXi650-201808001 补丁级别）|
-|VMware|vCenter Server Appliance|6.5 Update 2c|
-|VMware|Platform Services Controller|6.5 Update 2c|
+|VMware|vSphere ESXi|6.5 Update EP11（构建 6.5.0-10719125）|
+|VMware|vCenter Server Appliance|6.5 U2c（构建 6.5.0-9451637）|
+|VMware|Platform Services Controller|6.5 U2c（构建 6.5.0-9451637）|
 |VMware|vSAN|6.6.1|
 |VMware|NSX for vSphere|6.4.1|
 |VMware|SDDC Manager|2.4|
@@ -58,7 +58,8 @@ lastupdated: "2018-09-27"
 |队列已满样本大小|**QFullSampleSize** = 32|**/Disk/QFullSampleSize** = 32|
 |队列已满阈值|**QFullThreshold** = 8|**/Disk/QFullThreshold** = 8|
 
-**注：**
+### 注释
+
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服务需要 **MaxVolumes** 设置，因为该服务可能会在 ESXi 服务器上使用超过缺省数量的 NFS 安装。
 * 配置设置的**未设置**值指示不会自动应用新设置，因为这需要重新引导 ESXi 服务器，这样可能有破坏性。
 
@@ -71,5 +72,5 @@ lastupdated: "2018-09-27"
 * [VMware ESXi/ESX 的构建号和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware vCenter Server 的构建号和版本 (2143838)](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Cloud Foundation 概述](sd_cloudfoundationoverview.html)
-* [规划 Cloud Foundation 实例](sd_planning.html)
+* [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [规划 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_planning.html)

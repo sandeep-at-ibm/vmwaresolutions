@@ -2,13 +2,21 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-12-20"
 
 ---
 
-# 订购 KMIP for VMware on IBM Cloud
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+
+# 订购 KMIP for VMware on IBM Cloud - 不推荐
+
+不推荐使用当前版本的 KMIP for VMware on IBM Cloud。有关更多信息，请[联系 IBM 支持人员](../vmonic/trbl_support.html)。
+{:deprecated}
 
 订购 KMIP for VMware on {{site.data.keyword.cloud}} 服务时，可订购包含此服务的新实例，也可通过向现有实例添加此服务来进行订购。
 
@@ -61,16 +69,14 @@ lastupdated: "2018-09-26"
 
 单击**检索**以获取在所选 IBM Key Protect 实例中存储的客户根密钥。
 
-
-
 ### 相关链接
 
 * [KMIP for VMware on {{site.data.keyword.cloud_notm}} 概述](kmip_considerations.html)
 * [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
 * [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
 * [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](../vcenter/vc_hybrid_addingremovingservices.html)
-* [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/services/keymgmt/index.html#getting-started-with-key-protect)
-* [IBM Key Protect](https://console.bluemix.net/apidocs/639-ibm-key-protect?&language=javascript_jquery#introduction)
+* [{{site.data.keyword.cloudaccesstrailshort}} 事件](../vmonic/at-events.html)
+* [IBM Key Protect for {{site.data.keyword.cloud_notm}}](../../keymgmt/index.html)
 * [vSphere 安全性](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-52188148-C579-4F6A-8335-CFBCE0DD2167.html)
 * [常见问题](../vmonic/faq.html)
 * [联系 IBM 支持人员](../vmonic/trbl_support.html)

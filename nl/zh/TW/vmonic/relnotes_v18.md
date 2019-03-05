@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-08-28"
 
@@ -19,8 +19,8 @@ lastupdated: "2017-08-28"
 在順利安裝 Fortinet 服務之後，您可以從 FortiGate 主控台管理及配置 FSA 的防火牆規則。您必須確定已定義 FSA 防火牆規則為容許由管理元件（例如 IBM CloudDriver 虛擬機器或 Zerto Virtual Manager）起始的出埠 HTTPS 通訊，透過網際網路與 IBM Bluemix® 上的外部管理資料庫通訊。出埠 HTTPS 通訊來自實例中管理服務 VMware NSX Edge Services Gateway (ESG) 的公用 IP 位址。
 
 如需相關資訊，請參閱下列主題：
-* [Fortinet on {{site.data.keyword.cloud_notm}} 概觀](../services/fsa_considerations.html)
-* [管理 Fortinet on {{site.data.keyword.cloud_notm}}](../services/managingfsa.html)
+* [Fortinet on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/fsa_considerations.html)
+* [管理 Fortinet on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfsa.html)
 
 ## Veeam on IBM Cloud 服務
 
@@ -31,8 +31,8 @@ lastupdated: "2017-08-28"
 此外，1.8 版之前的實例中的 Veeam VSI 授權會在 2017 年 10 月 14 日到期。因此，您必須儘早將先前的 Veeam VSI 取代為新的 Veeam 服務。
 
 如需相關資訊，請參閱下列主題：
-* [Veeam on {{site.data.keyword.cloud_notm}} 概觀](../services/veeam_considerations.html)
-* [管理 Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingveeam.html)
 
 ## VMware Cloud Foundation 實例的更新
 
@@ -43,8 +43,8 @@ lastupdated: "2017-08-28"
 您也可以選擇對元件使用您自己的 VMware 授權，在此情況下，您需要提供授權碼。在此情況下，針對您提供授權的 VMware 元件，將由 VMware 提供支援，而不是由 IBM 支援中心提供。
 
 如需相關資訊，請參閱下列主題：
-* [訂購 Cloud Foundation 實例](../sddc/sd_orderinginstance.html)
-* [關於 BYOL 的常見問題](faq_byol.html)
+* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [關於 BYOL 的常見問題](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
 
 ## VMware vCenter Server 實例的更新
 
@@ -53,27 +53,27 @@ lastupdated: "2017-08-28"
 可自訂的伺服器選項可與預先建置及測試的「小型」、「中型」及「大型」選項搭配使用。除了 RAM 數量之外，您還可以根據雙 CPU 和核心數目總計，從 VMware HCL 相容伺服器清單中選取。本端儲存空間不可自訂。
 
 如需相關資訊，請參閱下列主題：
-* [訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)
-* [新增及檢視 vCenter Server 實例的叢集](../vcenter/vc_addingviewingclusters.html)
+* [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [新增及檢視 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
 
 ### 支援新增超過 7 個的 NFS 檔案共用
 
  在叢集的所有 ESXi 伺服器之間，您最多可以連接 32 個檔案共用。
 
  如需相關資訊，請參閱下列主題：
-* [訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)
-* [新增及檢視 vCenter Server 實例的叢集](../vcenter/vc_addingviewingclusters.html)
+* [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [新增及檢視 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
 
 ### 資料中心的更新
 
 下列新的資料中心可用於部署：**DAL-09, DAL-12, DAL-13 - 達拉斯**、**LONG-04, LON-06 - 倫敦**、**SJC-04 - 聖荷西**、**WDC-06, WDC-07 - 華盛頓特區**
 
-如需相關資訊，請參閱 [vCenter Server 實例的需求及規劃](../vcenter/vc_planning.html)
+如需相關資訊，請參閱 [vCenter Server 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
 
 ## 可用性加強功能
 
 在整個使用者介面中進行了改善：
-* 您可以從左導覽窗格的**開始使用**頁面瞭解服務及訂購實例。如需 {{site.data.keyword.cloud_notm}} Secure Virtualization 服務架構的相關資訊，請參閱[安全及法規遵循 - HyTrust](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/hytrust)。
+* 您可以從左導覽窗格的**開始使用**頁面瞭解服務及訂購實例。
 * 使用實例詳細資料頁面上的溢位功能表來刪除**備妥使用**狀態的實例。
 * 現在，**更新及修補程式**標籤提供了升級 NSX 授權版本的選項。授權升級會將您的 IBM SoftLayer 帳戶中所有現有的 NSX 授權取代為新的授權。
 * 實例詳細資料頁面上的**備份及還原**標籤不再可用。

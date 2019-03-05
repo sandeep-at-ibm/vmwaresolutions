@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-11-05"
 
 可用更新是实例软件更新列表中的一个记录，可以立即应用，也可以安排在日后应用。更新是一个捆绑软件，包含一个或多个用于更新 IBM 管理组件和 VMware 组件的软件包。
 
-从 V2.5 开始，不会再列出 IBM CloudDriver 更新，因为已启用自动更新。添加主机、添加集群和订购服务等操作会自动将实例更新到最新版本。有关自动更新的更多信息，请参阅 [V2.5 发行说明](../vmonic/relnotes_v25.html)中的 *IBM CloudDriver 弹性*部分。
+从 V2.5 开始，不会再列出 IBM CloudDriver 更新，因为已启用自动更新。添加主机、添加集群和订购服务等操作会自动将实例更新到最新版本。有关自动更新的更多信息，请参阅 [V2.5 发行说明](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)中的 *IBM CloudDriver 弹性*部分。
 {:note}
 
 ## 开始之前
@@ -109,11 +109,11 @@ lastupdated: "2018-11-05"
       </tr>
     </table>
 
-6. 如果更新过程在特定步骤失败，请[联系 IBM 支持人员](../vmonic/trbl_support.html)以获取帮助。IBM 支持人员将向您提供如何解决问题的建议，并指导您从失败的步骤重新启动升级。
+6. 如果更新过程在特定步骤失败，请[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)以获取帮助。IBM 支持人员将向您提供如何解决问题的建议，并指导您从失败的步骤重新启动升级。
 
 ### 相关链接
 
-* [Cloud Foundation 概述](../sddc/sd_cloudfoundationoverview.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} 概述](../services/veeam_considerations.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
-* [常见问题](../vmonic/faq.html)
+* [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)

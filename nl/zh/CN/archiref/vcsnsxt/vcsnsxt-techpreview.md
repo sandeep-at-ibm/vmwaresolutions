@@ -2,19 +2,19 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-23"
 
 ---
 
-# VCS 上 VMware NSX-T 的技术预览
+# VMware vCenter Server on IBM Cloud 上的 VMware NSX-T 技术概述
 
 ## NSX-T 概述
 
-VMware NSX-T 旨在解决具有异构端点和技术堆栈的应用程序框架和体系结构。除了 vSphere 外，这些环境还可以包含其他系统管理程序、KVM、容器和裸机。NSX-T 支持 IT 和开发团队选择最适合其应用程序的技术。除了供 IT 团队使用外，NSX-T 还旨在供开发组织用于管理、操作和使用。
+VMware NSX-T 旨在解决具有异构端点和技术堆栈的应用程序框架和体系结构。除了 vSphere 外，这些环境还可以包含其他系统管理程序、KVM、容器和裸机。NSX-T 支持 IT 和开发团队选择最适合其应用程序的技术。NSX-T 还旨在供开发组织用于管理、操作和使用以及供 IT 组织使用。
 
-在此设计中，NSX-T 管理基础架构部署在初始 VCS 集群上，或部署到现有集群。
+在此设计中，NSX-T 管理基础架构部署在初始 vCenter Server 集群上，或部署到现有集群。
 
 将从专用可移植地址块中为 NSX-T Manager 分配 IP 地址，该地址块指定用于管理组件，并配置为使用公共 DNS 和 NTP 服务器。
 
@@ -38,13 +38,13 @@ vCPU 数量|4|4|4|8
 
 ### 初始配置
 
-在初始 VCS 集群中，部署 NSX-T Manager、包含三个控制器的控制器集群和一个边缘集群。从**专用 A** 可移植子网为所有组件分配 IP 地址。
+在初始 vCenter Server 集群中，部署 NSX-T Manager、包含三个控制器的控制器集群和一个边缘集群。从**专用 A** 可移植子网为所有组件分配 IP 地址。
 
-创建 VM-VM 反亲缘关系规则，以便控制器在集群中的各个主机之间分隔开。请注意，初始集群至少部署有三个节点，以确保控制器的高可用性。
+创建 VM-VM 反亲缘关系规则，以便控制器在集群中的各个主机之间分隔开。初始集群至少部署有三个节点，以确保控制器的高可用性。
 
-为 NSX-T Manager 再部署两个 vSphere 主机，并将 NSX-T 软件 (VIB) 安装在这两个主机上。创建主机和边缘上行链路概要文件以及 NIOC 概要文件，并定义用于隧道端点 (TEP) 通信的 IP 池。有关更多信息，请参阅上行概要文件定义表和 NIOC 概要文件定义表。
+为 NSX-T Manager 再部署两个 vSphere 主机，并将 NSX-T 软件 (VIB) 安装在这两个主机上。创建主机和边缘上行链路概要文件以及 NIOC 概要文件，并定义用于隧道端点通信的 IP 池。有关更多信息，请参阅上行概要文件定义表和 NIOC 概要文件定义表。
 
-池中定义的 IP 地址来自**专用 A** 可移植 IP 地址范围。将创建 VLAN 和覆盖传输专区，并将两个额外的 ESXi 主机配置为这两个专区的传输节点。目前，会分配等效的上行链路概要文件。在 ESXi 主机上创建 N-VDS 交换机，并将其分配给 Uplink1 和 Uplink2。
+池中定义的 IP 地址来自**专用 A** 可移植 IP 地址范围。将创建 VLAN 和覆盖传输专区，并将两个额外的 ESXi 主机配置为这两个专区的传输节点。目前，会分配等效的上行链路概要文件。在 ESXi 主机上创建 N-VDS 开关，并将其分配给 Uplink1 和 Uplink2。
 
 此时，需要两个额外的 VLAN 来供应用于将 vmkernel 端口从 vDS 端口组迁移到 NSX 逻辑 VLAN 交换机的组队、故障转移和上行链路策略。逻辑 VLAN 交换机将使用相应的 VLAN 标识进行创建，并且会迁移 vmkernel 端口。
 
@@ -78,11 +78,11 @@ vSAN 流量|无限制|100|0
 
 ## NSX-T
 
-此设计指定 NSX-T 组件、VLAN 和覆盖传输专区的配置，但不会应用任何覆盖网络组件配置。由客户来决定根据自己的需求设计网络覆盖。
+此设计指定 NSX-T 组件、VLAN 和覆盖传输专区的配置，但不会应用任何覆盖网络组件配置。由您来决定根据自己的需求设计网络覆盖。
 
 配置的内容如下：
 -	安装了管理服务器和控制器。
--	安装了 ESXi 代理程序，并且为传输节点配置了 TEP IP 地址池。
+-	安装了 ESXi 代理程序，并且为传输节点配置了隧道端点 IP 地址池。
 -	为 VLAN 和覆盖传输专区配置了传输节点。
 -	在 ESXi 传输节点上创建了 N-VDS。
 -	VMkernel 端口从 VSS/VDS 迁移到了 N-VDS。
@@ -93,19 +93,19 @@ vSAN 流量|无限制|100|0
 -	微分段。
 -	将 NSX Management 链接到其他 VMware 实例。
 
-### 使用 NSX-V 和 NSX-T 的 VCS
+### 使用 NSX-V 和 NSX-T 的 vCenter Server
 
-原始 VCS 集群包含 NSX-V 和 NSX-T 的所有管理组件以及 vCenter Server 设备。此集群中的主机已准备好用于 NSX-V，如 [NSX-V 概述](vcsnsxt-overview-ic4vnsxv.html)中所述。另一个集群中的主机已准备好用于 NSX-T，并配置为传输节点。通过该配置，客户能够选择从 NSX-V 迁移到 NSX-T。
+原始 vCenter Server 集群包含 NSX-V 和 NSX-T 的所有管理组件以及 vCenter Server 设备。此集群中的主机已准备好用于 NSX-V，如 [NSX-V 概述](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-ic4vnsxv.html)中所述。另一个集群中的主机已准备好用于 NSX-T，并配置为传输节点。通过该配置，客户能够选择从 NSX-V 迁移到 NSX-T。
 
 ### NSX-T 与 NSX-V
 
-此部分重点说明了 VMware SDN 产品 NSX-V 和 NSX-T 之间的主要差异。这两种解决方案都可在 VMware 环境中提供微分段，但 NSX-T 需要的时间更长一些，如下文所概述。
+以下信息重点说明了 VMware SDN 产品 NSX-V 和 NSX-T 之间的主要差异。这两种解决方案都可在 VMware 环境中提供微分段，但 NSX-T 需要的时间更长一些，如以下部分所概述。
 
 有关详细的体系结构差异，请参阅 [VMware NSX-T Reference Design Guide](https://communities.vmware.com/servlet/JiveServlet/download/37591-3-195840/VMware%20NSX-T%20Reference%20Design%20Guide.pdf)（下载 PDF）。
 
 #### NSX for vSphere
 
-NSX-V 仅设计用于 vSphere 部署，其架构支持将一个 NSX-V Manager 与一个 VMware vCenter Server 实例相关联。基本上，如果您需要 VMware 环境内的网络虚拟化，那么 NSX-V 是合适的解决方案。
+NSX-V 仅设计用于 vSphere 部署，旨在将一个 NSX-V Manager 与一个 VMware vCenter Server 实例相关联。基本上，如果您需要 VMware 环境内的网络虚拟化，那么 NSX-V 是合适的解决方案。
 
 NSX-V 亮点：
 -	以 VMware 为中心。
@@ -116,11 +116,11 @@ NSX-V 亮点：
 
 #### NSX Transformers
 
-NSX-T 是一种针对 vCenter 和 vSphere 环境的独立解决方案，但同时支持 KVM、公共云和容器，并且可以集成到 IKS 和 ICP、Redhat OpenShift、Pivotal 等框架中。因此，您能够跨多个系统管理程序、容器和云管理 SDN。
+NSX-T 是一种针对 vCenter 和 vSphere 环境的独立解决方案，同时支持 KVM、公共云和容器，并且可以集成到 {{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}}、Redhat OpenShift、Pivotal 等框架中。通过 NSX-T，您能够跨多个系统管理程序、容器和云管理 SDN。
 
-NSX-T 亮点：
+NSX-T 亮点
 -	独立产品。vCenter 不是必需的。
--	支持多系统管理程序：
+-	多系统管理程序支持
     - 控制器可以部署在 KVM 或 ESXi 上。
     - 边缘可部署为虚拟机或裸机。
 -	容器集成（NSX-T CNI 插件）。
@@ -134,11 +134,11 @@ NSX-T 亮点：
 
 ## Calico
 
-Calico 基于分布式向外扩展体系结构构建，因此能够顺利地从单个开发者笔记本扩展到大型企业部署，并使用标准 Linux 数据平面为虚拟工作负载交付裸机性能。Calico 由多个相互依赖的组件组成：
+Calico 基于分布式扩展体系结构构建，因此能够顺利地从单个开发者笔记本扩展到大型企业部署，并使用标准 Linux 数据平面为虚拟工作负载交付裸机性能。Calico 由多个相互依赖的组件组成：
 -	Felix，在托管端点、容器或 VM 的每个节点上运行的守护程序。Felix 负责接口管理、路径和 ACL 编程、路由到端点、端点之间的流量验证以及状态报告，主要是针对它所管理的主机的网络运行状况。
 - 编排器插件，用于将编排器插件绑定到 Calico，本例中为 Kubernetes 插件，可提供从 Kubernetes 到 Calico 的 API 转换，并将来自 Calico 的有关端点网络设置失败的反馈返回给 Kubernetes。
 -	etcd，用于提供组件之间的通信，并存储在一致的数据存储中，这将确保 Calico 始终能够构建准确的网络。
--	BIRD，用于在同时托管 Felix 的每个节点上提供 BGP 客户机功能。Felix 将路径插入到 Linux 内核中时，BGP 客户机会选取这些路径，并将其分配给部署中的其他节点。在大型环境中，还会部署 BGP 路由反射器，以充当 BGP 客户机连接到的中央点。这样每个客户机就无需与其他各个客户机进行对话，并且会将路径分发给部署中的其他节点。
+-	BIRD，用于在同时托管 Felix 的每个节点上提供 BGP 客户机功能。Felix 将路径插入到 Linux 内核中时，BGP 客户机会选取这些路径，并将其分配给部署中的其他节点。对于大型环境，还会部署 BGP 路由反射器，以充当中央点供 BGP 客户机连接。这样每个客户机就无需与其他各个客户机进行对话，并且会将路径分发给部署中的其他节点。
 
 图 3. Calico 概览图
 ![Calico 概览图](vcsnsxt-calico-cni.svg)
@@ -154,13 +154,13 @@ NSX-T 体系结构内置分隔数据平面、控制平面和管理平面的功�
 
 #### Calico 与 NSX 之间的差异
 
-Calico 是一个 Tigera 开放式源代码项目，主要由 Tigera 团队进行维护。它作为 CNI 交付，支持编排系统（如 ICP 和 IKS 都会使用的 Kubernetes）的联网和安全性。
+Calico 是一个 Tigera 开放式源代码项目，主要由 Tigera 团队进行维护。它作为 CNI 交付，支持编排系统（如 {{site.data.keyword.icpfull_notm}} 和 {{site.data.keyword.containerlong_notm}} 都会使用的 Kubernetes）的联网和安全性。
 
 Calico 创建并管理第 3 层平面网络，为每个工作负载分配可完全路由的 IP 地址。工作负载可以在不使用 IP 封装或网络地址转换的情况下进行通信，能实现裸机性能，更轻松地进行故障诊断，并提高互操作性。在需要覆盖的环境中，Calico 使用 IP-in-IP 隧道，也可以使用其他覆盖联网（如 Flannel）。有一个名为 Canel 的开放式源代码项目，用于同时提供 Calico 和 Fannel 安装，并提供现成的 VXLAN 联网，此外还支持您通过 Calico 策略来利用策略隔离。
 
 Calico 由多个相互依赖的组件组成，这些组件提供端点通信、安全性、路由以及与 Kubernetes 的插件集成。这些工作全部通过命令行和配置文件完成，因此很难在混合环境中提供一致的联网和安全策略。有关 Calico 组件的更多详细信息，请参阅 [Project Calico](https://www.projectcalico.org/) 文档。
 
-NSX-T 是针对 vCenter 和 vSphere 环境的独立解决方案，同时支持 KVM、公共云和容器，并且可以集成到 IKS 和 ICP、Redhat OpenShift、Pivotal 等框架中。因此，您能够跨多个系统管理程序、容器和云管理 SDN。NSX-T 在第 2 层、第 3 层和第 4 层运行，并在每层提供相应功能。
+NSX-T 是一种针对 vCenter 和 vSphere 环境的独立解决方案，同时支持 KVM、公共云和容器，并且可以集成到 {{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}}、Redhat OpenShift、Pivotal 等框架中。因此，您能够跨多个系统管理程序、容器和云管理 SDN。NSX-T 在第 2 层、第 3 层和第 4 层运行，并在每层提供相应功能。
 
 NSX-T 支持在易于理解的 Web 界面中，对整个 VM 和容器环境进行网络和安全策略管理。
 
@@ -171,14 +171,14 @@ NSX-T 支持在易于理解的 Web 界面中，对整个 VM 和容器环境进�
 
 用于提供 Kubernetes 和 NSX Manager 之间集成的核心组件是 NSX 容器插件 (NCP)。NCP 在 Kubernetes pod 内作为容器运行，并可监视 Kubernetes API 服务器上相关对象（如名称空间和 pod）的更改。开发者在 Kubernetes 端运行任务，NCP 会看到这些更改，并通过使用针对 NSX Manager 的 API 调用集合来创建相关 NSX 对象（如逻辑交换机、逻辑路由器和防火墙对象），从而做出反应。
 
-在下图中，有两个 Kubernetes 名称空间，即 Acme 和 Skateboards；对于每个名称空间，都有专用的逻辑交换机、第 1 层路由器以及用于将其连接到第 0 层逻辑路由器的 IP 分段。
+在下图中，提供了两个 Kubernetes 名称空间，即 Acme 和 Skateboards；对于每个名称空间，都有专用的逻辑交换机、第 1 层路由器以及用于将其连接到第 0 层逻辑路由器的 IP 分段。
 
 图 5. Kubernetes NCP
 ![Kubernetes NCP](vcsnsxt-ncpk8sapi.svg)
 
 ### NSX 安全策略管理器
 
-除了提供网络虚拟化外，NSX-T 还可充当高级安全平台，该平台中提供了一组丰富的功能来精简安全解决方案的部署。此部分概述了可以跨多个平台应用的微分段功能。
+除了提供网络虚拟化外，NSX-T 还可充当高级安全平台，该平台中提供了一组丰富的功能来精简安全解决方案的部署。以下信息概述了可以跨多个平台应用的微分段功能。
 
 要了解的主要概念包括：
 -	NSX-T 分布式防火墙，用于在 vNIC 级别提供工作负载的有状态保护。在系统管理程序内核中会强制实施 DFW，以帮助实现微分段。
@@ -197,29 +197,29 @@ NSX-T 支持在易于理解的 Web 界面中，对整个 VM 和容器环境进�
 
 ### NSX-T 与 NSX-V 之间的差异
 
-NSX for vSphere (NSX-V) 仅设计用于 vSphere 部署，其架构支持将一个 NSX-V Manager 平台与一个 VMware vCenter Server 实例相关联。基本上，如果您需要 VMware 环境内的网络虚拟化，那么 NSX-V 是最可能合适的解决方案。
+NSX for vSphere (NSX-V) 仅设计用于 vSphere 部署，旨在将一个 NSX-V Manager 平台与一个 VMware vCenter Server 实例相关联。基本上，如果您需要 VMware 环境内的网络虚拟化，那么 NSX-V 是最可能合适的解决方案。
 
-NSX Transformers (NSX-T) 是一种独立解决方案，可以支持多个 vCenter 和 vSphere 环境，同时支持 KVM、公共云和容器，并且可以集成到 IBM IKS 和 ICP、Redhat OpenShift、Pivotal 等框架中。因此，您能够使用一组通用工具跨多个系统管理程序、容器和云管理 SDN。
+NSX Transformers (NSX-T) 是一种独立解决方案，可以支持多个 vCenter 和 vSphere 环境，同时支持 KVM、公共云和容器，并且可以集成到 {{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}}、Redhat OpenShift、Pivotal 等框架中。因此，您能够使用一组通用工具跨多个系统管理程序、容器和云管理 SDN。
 
 #### 使用 NSX-V 实现网络可扩展性
 
-VMware NSX-V 旨在应对具有数千个端点和技术堆栈的应用程序框架和体系结构，从而允许它从具有 3 个主机的单个 vSphere 集群扩展到跨 vCenter 部署（具有 1000 台以上的主机和数千台虚拟机）。
+VMware NSX-V 旨在应对具有数千个端点和技术堆栈的应用程序框架和体系结构，能从具有 3 个主机的单个 vSphere 集群扩展到跨 vCenter 部署（具有 1000 台以上的主机和数千台虚拟机）。
 
 #### 使用 NSX-T 实现网络可扩展性
 
-VMware NSX-T 旨在解决具有异构端点和技术堆栈的应用程序框架和体系结构，从而允许它从任何站点、任何云或任何端点设备进行扩展。这使其能够从小型数据中心扩展到多云环境。
+VMware NSX-T 旨在应对具有异构端点和技术堆栈的应用程序框架和体系结构，能从任何站点、任何云或任何端点设备进行扩展。这使其能够从小型数据中心扩展到多云环境。
 
 #### 使用 NSX-V 实现安全性
 
-通过 VMware NSX-V，可以定义在整个环境中一致定义的安全策略，而不管应用程序的类型或它在 VMware 基础架构中的部署位置。部署新的工作负载时，这些工作负载会自动继承安全策略，并在工作负载整个生命周期内始终与这些工作负载在一起，无论工作负载在哪里供应或移至哪里。NSX 使安全策略与静态网络属性（如 IP 地址、端口和协议）相分离，并支持根据对应用程序和基础架构的上下文了解来定义策略。NSX 还支持将高级第三方安全服务插入到给定的微分段中，而不是通过物理设备或虚拟设备路由所有网络流量。通过这种方式，可以在正确的位置、正确的时间插入高级安全服务，从而最大程度地提高网络流量效率，同时提高安全服务本身的成效。
+通过 VMware NSX-V，可以定义在整个环境中一致定义的安全策略，而不管应用程序的类型或它在 VMware 基础架构中的部署位置。部署新的工作负载时，这些工作负载会自动继承安全策略，并在工作负载整个生命周期内始终与这些工作负载在一起，无论工作负载在哪里供应或移至哪里。NSX 使安全策略与静态网络属性（如 IP 地址、端口和协议）相分离，并支持根据对应用程序和基础架构的上下文了解来定义策略。NSX 还支持将高级的第三方安全服务插入到特定的微分段中，而不是通过物理设备或虚拟设备路由所有网络流量。通过这种方式，可以在正确的位置、正确的时间插入高级安全服务，从而最大程度地提高网络流量效率，同时提高安全服务本身的成效。
 
 #### 使用 NSX-T 实现安全性
 
-VMware NSX 提供的功能与 VMware vSphere 环境中 NSX-V 提供的相同。此外，NSX-T 还为在私有云和公共云环境（如 {{site.data.keyword.cloud}} Private 和 IBM Kubernetes Service 以及其他云产品）中运行的应用程序提供一致且可扩展的微分段安全性。
+VMware NSX 提供的功能与 VMware vSphere 环境中 NSX-V 提供的相同。NSX-T 为在私有云和公共云环境（如 {{site.data.keyword.cloud}} Private 和 {{site.data.keyword.containerlong_notm}} 以及其他云产品）中运行的应用程序提供一致且可扩展的微分段安全性。
 
 #### 与 NSX-V 集成
 
-为了将 NSX 与 Kubernetes 集成，{{site.data.keyword.cloud_notm}} 自动化会基于 VCS 实例安装 ICP。将专门为 Kubernetes 网络创建专用交换机/VXLAN、DLR 和 ESG。ICP 的 Day 1 覆盖网络是一个 192.168.20.0/24 子网，路由设置为通过 ESG 对底层网络进行访问。
+为了将 NSX 与 Kubernetes 集成，{{site.data.keyword.cloud_notm}} 自动化会在 vCenter Server 实例上安装 {{site.data.keyword.icpfull_notm}}。将专门为 Kubernetes 网络创建专用交换机/VXLAN、DLR 和 ESG。{{site.data.keyword.icpfull_notm}} 的 Day 1 覆盖网络是一个 192.168.20.0/24 子网，路由设置为通过 ESG 对底层网络进行访问。
 
 图 7. NSX-V 和 Kubernetes
 ![NSX-V 和 Kubernetes](vcsnsxt-transitnet.svg)
@@ -228,7 +228,7 @@ VMware NSX 提供的功能与 VMware vSphere 环境中 NSX-V 提供的相同。�
 
 NSX-T 与 Kubernetes 集成是通过 NSX-T 容器插件 (NCP) 进行的。NCP 在每个 Kubernetes 节点上运行，并与 NSX Manager 和 Kubernetes 控制平面进行通信。NSX-T 插件会为 Kubernetes 集群自动创建逻辑拓扑，为每个名称空间创建单独的逻辑网络，将 Kubernetes pod 连接到逻辑网络，并分配 IP 和 MAC 地址。
 
-NSX-T 分布式防火墙支持创建针对 Kubernetes 集群实施的网络策略。此外，它还支持流入和流出策略、标签和表达式匹配策略，并且具有负载均衡器功能，这些功能全部可应用于 Kubernetes 基础架构。
+NSX-T 分布式防火墙支持创建针对 Kubernetes 集群实施的网络策略。它支持流入和流出策略、标签和表达式匹配策略，并且具有负载均衡器功能，这些功能全部可应用于 Kubernetes 基础架构。
 
 图 8. NSX-T 和 Kubernetes
 ![NSX-T 和 Kubernetes](vcsnsxt-t1t0router.svg)

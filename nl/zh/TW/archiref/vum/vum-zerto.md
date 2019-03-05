@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
 # Zerto
 
-如果您發現 vSphere ESXi 主機無法在補救期間進入維護模式，則可能是 Zerto 正在停止它。如果您已在起始部署後更新 Zerto，則請執行下列步驟來更正此問題。如果您尚未更新，則請遵循[如何讓具有關聯 VRA 的主機進入維護模式](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/)的指示。
+如果您發現 vSphere ESXi 主機無法在補救期間進入維護模式，則可能是 Zerto 正在停止它。如果您已在起始部署後更新 Zerto，請完成下列步驟來更正此問題。如果您尚未更新，請完成[如何讓具有關聯 VRA 的主機進入維護模式](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/)的下列指示。
 
 1. 登入 Zerto Web 使用者介面。
 2. 從下拉功能表中選取**站台設定**。
@@ -20,4 +20,4 @@ lastupdated: "2018-11-01"
 ### 相關鏈結
 
 * [VMware HCX on {{site.data.keyword.cloud}} 解決方案](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) 上的 VMware 解決方案（示範）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

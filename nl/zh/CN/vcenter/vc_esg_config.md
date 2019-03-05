@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-29"
 
 # 将网络配置为将客户管理的 NSX ESG 用于 VM
 
-为虚拟机配置网络，以便您可以利用 VMware vCenter Server 实例中部署的 VMware NSX Edge 服务网关 (ESG)。有关为帮助最大限度降低安全风险而实施的安全措施的更多信息，请参阅[管理服务 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+为虚拟机配置网络，以便您可以利用 VMware vCenter Server 实例中部署的 VMware NSX Edge 服务网关 (ESG)。有关为帮助最大限度降低安全风险而实施的安全措施的更多信息，请参阅[管理服务 NSX Edge 会构成安全风险吗？](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟化，并提供多种联网服务，例如交换机、路由和防火墙。有关 NSX 的更多信息，请参阅 [NSX 概述](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}。
 
@@ -25,7 +25,11 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
 * 部署样本 NSX 逻辑交换机，以供客户工作负载 VM 使用。
 * 部署样本 NSX 分布式逻辑路由器 (DLR)，以用于处理连接到第 2 层 (L2) 网络的本地工作负载之间的潜在东-西通信。
 * 部署 NSX Edge 设备并将其配置为执行从工作负载逻辑交换机的 IP 地址范围到 NAT 规则上公共 IP 地址的网络地址转换 (NAT)。
-* 如果已安装 Veeam on {{site.data.keyword.cloud_notm}} 服务，那么会将 NSX Manager 配置为每天备份 NSX 配置。有关更多信息，请参阅[安装 Veeam on {{site.data.keyword.cloud_notm}} 时的注意事项](../services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud)。
+
+  不会为仅供专用的实例部署 NSX Edge。
+  {:note}
+
+* 如果已安装 Veeam on {{site.data.keyword.cloud_notm}} 服务，那么会将 NSX Manager 配置为每天备份 NSX 配置。有关更多信息，请参阅[安装 Veeam on {{site.data.keyword.cloud_notm}} 时的注意事项](/docs/services/vmwaresolutions/services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud)。
 
 ## 配置 VM 联网设置的过程
 
@@ -80,6 +84,6 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
 
 ### 相关链接
 
-* [故障诊断](../vcenter/vcenter_chg_impact.html)
-* [常见问题](../vmonic/faq.html)
+* [故障诊断](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [NSX Edge 服务网关](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

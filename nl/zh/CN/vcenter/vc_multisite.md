@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -33,14 +33,14 @@ lastupdated: "2018-10-26"
    *  SSO 站点名称
    *  链接到主实例上根域的 DNS 子域
    *  DNS 和 AD 复制在主实例和辅助实例上的 AD 虚拟机之间设置。
-   *  PSC (Platform Services Controller) 部署并配置为通过主实例上的 PSC 进行复制。
+   *  对于在 V2.8 或更高版本中部署的主实例：部署并配置了具有嵌入式 Platform Services Controller (PSC) 的 vCenter Server Appliance (vCSA)。
    *  辅助实例上的 VMware vCenter 设置为以“增强链接方式”与主实例上的 vCenter 相链接。
 
 ## vCenter Server 多站点部署
 
 多站点配置功能使用轴辐式拓扑，其中包含一个主站点和最多七个辅助站点。支持单层站点，即无法配置链接到其他辅助站点的后续站点。在跨所有实例的多站点配置中，总共可以有 128 个 ESXi 服务器。
 
-如果配置需要具有超过 128 个 ESXi 服务器的多站点部署，请联系 IBM 支持人员以获取帮助。有关更多信息，请参阅[联系 IBM 支持人员](../vmonic/trbl_support.html)。
+如果配置需要具有超过 128 个 ESXi 服务器的多站点部署，请联系 IBM 支持人员以获取帮助。有关更多信息，请参阅[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
 {:note}
 
 下图描绘了 vCenter Server 多站点部署的总体视图。
@@ -58,7 +58,7 @@ lastupdated: "2018-10-26"
 
 在多站点配置中最多可以部署 8 个实例（1 个主实例和 7 个辅助实例）。
 
-删除属于多站点配置中的 vCenter Server 实例需要特殊规划。有关更多信息，请参阅[删除多站点配置中的 vCenter Server 实例](vc_deletinginstance_multi.html)。
+删除属于多站点配置中的 vCenter Server 实例需要特殊规划。有关更多信息，请参阅[删除多站点配置中的 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance_multi.html)。
 {:note}
 
 ### 相关链接

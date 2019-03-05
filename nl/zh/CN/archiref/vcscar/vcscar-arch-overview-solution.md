@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,13 +35,13 @@ Controller
 
 ### NSX Edge 和分布式逻辑路由器
 
-将部署 NSX Edge 服务网关 (ESG) 对。在所有情况下，都会使用一个网关对来处理位于专用网络中的自动化组件的出站流量。对于 vCenter Server 和 {{site.data.keyword.cloud_notm}} Private (ICP)，将部署另一个网关（称为 ICP 管理的 Edge），并将其配置为使用上行链路连接到公用网络，还会配置一个分配给专用网络的接口。管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。
+将部署 NSX Edge 服务网关 (ESG) 对。在所有情况下，都会使用一个网关对来处理位于专用网络中的自动化组件的出站流量。对于 vCenter Server 和 {{site.data.keyword.icpfull_notm}}，将部署另一个网关（称为 ICP 管理的 Edge），并将其配置为使用上行链路连接到公用网络，还会配置一个分配给专用网络的接口。管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。
 
-有关网络设计的更多信息，请参阅 [vCenter Server 联网参考体系结构](../vcsnsxt/vcsnsxt-intro.html)。
+有关网络设计的更多信息，请参阅 [vCenter Server 联网参考体系结构](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html)。
 
-下表总结了 ICP ESG 和 DLR 规范。
+下表总结了 {{site.data.keyword.icpfull_notm}} ESG 和 DLR 规范。
 
-表 1. ICP ESG 规范
+表 1. {{site.data.keyword.icpfull_notm}} ESG 规范
 
 属性|规范
 --|--
@@ -50,7 +50,7 @@ Edge 大小    大|2 个 vCPU
 内存|1 GB
 磁盘|本地数据存储上 1000 GB
 
-表 2. ICP DLR 规范
+表 2. {{site.data.keyword.icpfull_notm}} DLR 规范
 
 属性|规范
 --|--|
@@ -59,12 +59,12 @@ Edge 大小    精简|1 个 vCPU
 内存|512 MB
 磁盘|本地数据存储上 1000 GB
 
-## ICP 组件
+## IBM Cloud Private 组件
 
-ICP 是一种用于开发和管理内部部署容器化应用程序的应用程序平台。ICP 是用于管理容器的集成环境，包括容器编排器 Kubernetes、专用映像存储库、管理控制台和监视框架。
+{{site.data.keyword.icpfull_notm}} 是一种用于开发和管理内部部署容器化应用程序的应用程序平台。{{site.data.keyword.icpfull_notm}} 是用于管理容器的集成环境，包括容器编排器 Kubernetes、专用映像存储库、管理控制台和监视框架。
 
-图 2. 使用 vCenter Server 的虚拟 ICP 部署
-![使用 vCenter Server 的虚拟 ICP 部署](vcscar-icp.svg)
+图 2. 使用 vCenter Server 的虚拟 {{site.data.keyword.icpfull_notm}} 部署
+![使用 vCenter Server 的虚拟 {{site.data.keyword.icpfull_notm}} 部署](vcscar-icp.svg)
 
 ### 引导节点
 
@@ -84,15 +84,15 @@ ICP 是一种用于开发和管理内部部署容器化应用程序的应用程�
 
 ### 管理节点
 
-管理节点是可选节点，用于托管管理服务，例如监视、测量和日志记录。通过配置专用的管理节点，可以避免主节点超负荷。只能在 ICP 安装期间启用管理节点。
+管理节点是可选节点，用于托管管理服务，例如监视、测量和日志记录。通过配置专用的管理节点，可以避免主节点超负荷。只能在 {{site.data.keyword.icpfull_notm}} 安装期间启用管理节点。
 
 ### 漏洞顾问程序节点
 
 漏洞顾问程序 (VA) 节点是可选节点，用于运行漏洞顾问程序服务。漏洞顾问程序服务属于资源密集型服务。使用漏洞顾问程序服务时，请指定专用的 VA 节点。
 
-下表提供了高可用性 ICP 实例需要的 VM 规范。
+下表提供了高可用性 {{site.data.keyword.icpfull_notm}} 实例需要的 VM 规范。
 
-表 3. ICP VM 规范
+表 3. {{site.data.keyword.icpfull_notm}} VM 规范
 
 节点|实例数|IP 数|CPU|RAM (GB)|磁盘 (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -105,7 +105,7 @@ GlusterFS|3|IP（3 个）|8|16|150
 
 CAM 需要工作程序节点具有更高的 vCPU 和内存配置。
 
-表 4. ICP VM 规范
+表 4. {{site.data.keyword.icpfull_notm}} VM 规范
 
 节点|实例数|IP 数|CPU|RAM (GB)|磁盘 (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -113,7 +113,7 @@ CAM 需要工作程序节点具有更高的 vCPU 和内存配置。
 
 ## IBM Cloud Automation Manager 组件
 
-{{site.data.keyword.cloud_notm}} Automation Manager (CAM) 是在 ICP 上运行的多云自助服务管理平台，帮助开发者和管理员满足其业务需求。
+{{site.data.keyword.cloud_notm}} Automation Manager (CAM) 是在 {{site.data.keyword.icpfull_notm}} 上运行的多云自助服务管理平台，帮助开发者和管理者满足其业务需求。
 
 图 3. CAM 组件参考
 ![CAM 组件参考](vcscar-cam-components.svg)
@@ -160,4 +160,4 @@ Redis 数据库用于存储 CAM 中的会话高速缓存和锁定。
 
 ## 相关链接
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

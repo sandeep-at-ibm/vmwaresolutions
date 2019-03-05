@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -36,6 +36,6 @@ IMI 管理服務隨附下列規格：
 
 ### 相關鏈結
 
-* [訂購、檢視及移除 Cloud Foundation 實例的服務](../sddc/sd_addingremovingservices.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
-* [常見問題](../vmonic/faq.html)
+* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)

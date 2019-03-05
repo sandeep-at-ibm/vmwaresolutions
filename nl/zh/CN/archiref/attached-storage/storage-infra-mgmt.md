@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2018-11-13"
 
 基础架构管理是指用于管理 vSphere ESXi 基础架构的 VMware 组件。
 
-有关这些组件的更多信息，请参阅[虚拟基础架构设计](../solution/design_virtualinfrastructure.html)中的“图 2. NSX Manager 网络概述”。
+有关这些组件的更多信息，请参阅[虚拟基础架构设计](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)中的“图 2. NSX Manager 网络概述”。
 
 ## 虚拟联网设计
 
-此设计中使用的网络虚拟化使用与专用网络相关联且在 [{{site.data.keyword.vmwaresolutions_full}} 体系结构](../solution/solution_overview.html)中指定的现有 vSphere 分布式交换机 (vDS)。
+此设计中使用的网络虚拟化使用与专用网络相关联且在 [{{site.data.keyword.vmwaresolutions_full}} 体系结构](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)中指定的现有 vSphere 分布式交换机 (vDS)。
 
 ## vSphere 分布式交换机
 
@@ -52,4 +52,4 @@ lastupdated: "2018-11-13"
 
 ### 相关链接
 
-* [解决方案概述](../solution/solution_overview.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

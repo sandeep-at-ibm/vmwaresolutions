@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,8 +45,9 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 ### Bare Metal Server
 
 選取具有所選取 CPU 型號及 RAM 大小的一個以上 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}：
-* 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
 * 2-CPU Intel Skylake Generation（Intel Xeon 4100/5100/6100 系列）
+* SAP 認證（Intel Xeon 6140/E5-2690/E7-8890 系列）
+* 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600/E7-4800 系列）
 
 可用的選項取決於您是否已選取 VMware vSAN 元件。
 
@@ -59,7 +60,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 * 一個 VLAN（虛擬 LAN）公用 VLAN 及兩個專用 VLAN
 * （選用）一組 HA 的 FortiGate Security Appliance 裝置
 
-### 儲存空間
+### Storage
 
 選取 VMware vSAN 元件時用於 vSAN 配置的使用者自訂儲存空間：
 * 儲存空間磁碟選項：960 GB SSD SED、1.9 TB SSD SED 或 3.8 TB SSD SED
@@ -77,22 +78,22 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 
 ### 擴充節點的硬體
 
-一部具有 [VMware vSphere on {{site.data.keyword.cloud_notm}} 叢集的技術規格](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中所呈現之硬體配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server。
+一部具有 [VMware vSphere on {{site.data.keyword.cloud_notm}} 叢集的技術規格](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中所呈現之硬體配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server。
 
 ### 擴充節點的網路
 
-一部具有 [VMware vSphere on {{site.data.keyword.cloud_notm}} 叢集的技術規格](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中所呈現之網路配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server。
+一部具有 [VMware vSphere on {{site.data.keyword.cloud_notm}} 叢集的技術規格](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中所呈現之網路配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server。
 
 ### 擴充節點的 VMware 元件
 
 * 一部具有 VMware vSphere Enterprise Plus 6.0u2 或 6.5u1 的 {{site.data.keyword.cloud_notm}} Bare Metal Server。  
-* 在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 叢集的技術規格](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中所呈現的選用 VMWare 元件。
+* 在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 叢集的技術規格](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中所呈現的選用 VMWare 元件。
 
-您只能從 {{site.data.keyword.slportal}} 管理 ESXi 伺服器、選用的 VMware 元件和其他已訂購及遞送至您的 {{site.data.keyword.cloud_notm}} 帳戶中的硬體。在 {{site.data.keyword.vmwaresolutions_short}} 主控台中建立新的叢集之後，您可以回到主控台，並使用已儲存的資訊來擴充新的叢集。如需相關資訊，請參閱[擴充現有 vSphere 叢集](vs_scalingexistingclusters.html)。{:important}
+您只能從 {{site.data.keyword.slportal}} 管理 ESXi 伺服器、選用的 VMware 元件和其他已訂購及遞送至您的 {{site.data.keyword.cloud_notm}} 帳戶中的硬體。在 {{site.data.keyword.vmwaresolutions_short}} 主控台中建立新的叢集之後，您可以回到主控台，並使用已儲存的資訊來擴充新的叢集。如需相關資訊，請參閱[擴充現有 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)。{:important}
 
 ### 相關鏈結
 
-* [VMware vSphere 軟體資料清單](vs_bom.html)
-* [規劃 vSphere 叢集](vs_planning.html)
-* [訂購 vSphere 叢集](vs_orderinginstances.html)
-* [擴充現有的 vSphere 叢集](vs_scalingexistingclusters.html)
+* [VMware vSphere 軟體資料清單](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
+* [規劃 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
+* [訂購 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [擴充現有的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)

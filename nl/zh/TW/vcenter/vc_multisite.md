@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -33,14 +33,14 @@ lastupdated: "2018-10-26"
    *  SSO 站台名稱
    *  鏈結至主要實例上之根網域的 DNS 子網域
    *  主要實例及次要實例上的 AD 虛擬機器之間的 DNS 及 AD 抄寫設定。
-   *  已部署並配置為向主要實例上的 PSC (Platform Services Controller) 抄寫的 PSC。
+   *  若為 2.8 版或更新版本中部署的主要實例：部署及配置具有內嵌 Platform Services Controller (PSC) 的 vCenter Server Appliance (vCSA)。
    *  使用「加強型鏈結模式」將次要實例上的 VMware vCenter 設定為主要實例上的 vCenter。
 
 ## vCenter Server 多站台部署
 
 多站台配置特性會搭配使用中心及分支拓蹼與主要站台及最多七個次要站台。支援單層站台，亦即，您無法配置鏈結至其他次要站台的後續站台。在所有實例中，您在多站台配置中共有 128 部 ESXi 伺服器。
 
-如果您的配置需要超過 128 部 ESXi 伺服器的多站台部署，請與「IBM 支援中心」聯絡以取得協助。如需相關資訊，請參閱[與 IBM 支援中心聯絡](../vmonic/trbl_support.html)。
+如果您的配置需要超過 128 部 ESXi 伺服器的多站台部署，請與「IBM 支援中心」聯絡以取得協助。如需相關資訊，請參閱[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
 {:note}
 
 下圖說明 vCenter Server 多站台部署的整體視圖。
@@ -58,7 +58,7 @@ lastupdated: "2018-10-26"
 
 您最多可以在多站台配置中部署 8 個（1 個主要及 7 個次要）實例。
 
-刪除屬於多站台配置的 vCenter Server 實例需要特殊規劃。如需相關資訊，請參閱[刪除多站台配置中的 vCenter Server 實例](vc_deletinginstance_multi.html)。
+刪除屬於多站台配置的 vCenter Server 實例需要特殊規劃。如需相關資訊，請參閱[刪除多站台配置中的 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance_multi.html)。
 {:note}
 
 ### 相關鏈結

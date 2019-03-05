@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -127,6 +127,6 @@ IBM CloudBuilder 和 IBM CloudDriver 虚拟服务器实例 (VSI) 是 IBM 开发�
 
 ### 相关链接
 
-* [物理基础架构设计](design_physicalinfrastructure.html)
-* [虚拟基础架构设计](design_virtualinfrastructure.html)
-* [公共服务设计](design_commonservice.html)
+* [物理基础架构设计](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [虚拟基础架构设计](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [公共服务设计](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)

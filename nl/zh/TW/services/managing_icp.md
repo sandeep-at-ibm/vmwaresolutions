@@ -2,13 +2,21 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-09-27"
 
 ---
 
-# 要求 IBM Cloud Private Hosted
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+
+# 要求 IBM Cloud Private Hosted - 已淘汰
+
+本主題中的資訊即將淘汰。如需 IBM Cloud Private Hosted 的最新資訊，請參閱 [IBM Cloud Private Hosted 概觀](icp_overview.html)。
+{:deprecated}
 
 vCenter Server on {{site.data.keyword.cloud_notm}} 的 {{site.data.keyword.cloud}} Private Hosted 會自動在您的 VMware vCenter Server 實例上部署 {{site.data.keyword.cloud_notm}} Private Hosted。
 
@@ -38,8 +46,3 @@ vCenter Server on {{site.data.keyword.cloud_notm}} 的 {{site.data.keyword.cloud
 6. 在 **IBM Cloud Private Hosted on vCenter Server on IBM Cloud** 頁面的**與 IBM Cloud Private Hosted DevOps 團隊聯絡**方框中，輸入需求的說明，並按一下**要求商議**。
 
 一位 {{site.data.keyword.cloud_notm}} Private Hosted DevOps 服務代表會透過您的 {{site.data.keyword.cloud_notm}} 聯絡資訊與您聯絡，協助您入門。
-
-### 相關鏈結
-
-* [IBM Cloud Private Hosted](https://www.ibm.com/developerworks/community/files/form/anonymous/api/library/eafb752c-55f3-4b07-9b20-b61c8ea980b9/document/af203658-30c0-40ba-81b5-46c393fb723f/media/IBM_Cloud_Private_Hosted-IBM_Cloud.pdf)（PDF 下載）
-* [開立 IBM Cloud Private 的問題單](https://www.ibm.com/mysupport/s/?language=en_US)

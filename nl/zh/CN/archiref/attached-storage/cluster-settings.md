@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -37,7 +37,7 @@ lastupdated: "2018-11-13"
 
 有关在 vSphere Web Client 中配置这些设置的更多信息，请参阅 [Set a Custom Automation Level for a Virtual Machine in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-C21C0609-923B-46FB-920C-887F00DBCAB9.html)。
 
-除了集群的自动化级别和迁移阈值，此设计还实现了 VM 自动化，因此可针对单个 VM 设置覆盖。通过更精确地控制 VM，可进一步划分 VM 负载均衡的优先级。
+除了集群的自动化级别和迁移阈值，此设计还实现了 VM 自动化，因此可覆盖单个 VM 的值。通过更精确地控制 VM，可进一步划分 VM 负载均衡的优先级。
 
 ### 电源管理
 
@@ -88,4 +88,4 @@ vSphere HA 使用数据存储脉动信号来识别发生故障的主机和位于
 
 ### 相关链接
 
-* [解决方案概述](../solution/solution_overview.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

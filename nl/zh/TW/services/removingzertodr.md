@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Zerto on IBM Cloud 的移除處理程序
 
@@ -25,7 +29,8 @@ lastupdated: "2018-09-27"
    4. 傳回針對 Zerto Virtual Replication 與 {{site.data.keyword.cloud_notm}} 基礎架構的通訊所訂購的專用可攜式子網路。   
    5. 從 {{site.data.keyword.cloud_notm}} 計費對帳單移除 Zerto 災難回復服務費用。
 
-      **附註：**將向您收取已移除的 Zerto 災難回復服務到計費週期結束為止的費用。
+      將針對已移除的 Zerto 災難回復服務，向您收取到計費週期結束為止的費用。
+      {:note}
 
 ## 結果
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-11-05"
 
 使用 VMware Federal on {{site.data.keyword.cloud}}，除了為美國聯邦政府機構提供保護已部署 vCenter Server 實例的選項之外，您還可以訂購基礎 vCenter Server 實例。當您保護已部署的實例時，會移除針對該實例所儲存的機密性資訊。同時會移除針對實例存取所開啟的連線，這表示無法再使用管理功能（例如新增及移除主機和叢集）。在您選取保護選項之後，唯一可用的功能是實例刪除。
 
-如需 vCenter Server on {{site.data.keyword.cloud_notm}} 及 vCenter Server 架構的相關資訊，請參閱 [vCenter Server 概觀](vc_vcenterserveroverview.html)。
+如需 vCenter Server on {{site.data.keyword.cloud_notm}} 及 vCenter Server 架構的相關資訊，請參閱 [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)。
 
 VMware Federal on {{site.data.keyword.cloud_notm}} 僅提供 vCenter Server 供應項目子集。多站台配置、自帶授權 (BYOL)，以及訂購附加服務的選項，全都不受支援。
 {:note}
@@ -42,13 +42,13 @@ VMware Federal on {{site.data.keyword.cloud_notm}} 僅提供 vCenter Server 供�
 *  三個 VLAN（虛擬 LAN）：一個公用 VLAN 和兩個專用 VLAN
 *  一個具有 DLR（分散式邏輯路由器）的 VXLAN (Virtual eXtensible LAN)，以便在連接至第 2 層 (L2) 網路的本端工作負載之間，進行潛在的東西向通訊。VXLAN 是部署成一個遞送拓蹼範例，您可以加以修改、在其上進行建置，或是移除它。您也可以藉由將其他 VXLAN 連接到 DLR 上的新邏輯介面，來新增安全區域。
 *  兩個 VMware NSX Edge Services Gateway：
-  * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，IBM 將它部署為管理網路拓蹼的一部分。IBM 管理虛擬機器會利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[將您的網路配置成使用客戶管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
+  * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，IBM 將它部署為管理網路拓蹼的一部分。IBM 管理虛擬機器會利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[將您的網路配置成使用客戶管理的 ESG](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
 您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server 實例。此外，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
 {:important}
-  * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway，IBM 將它部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)。
+  * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway，IBM 將它部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)。
 
-  在執行保護已部署的 VMware Federal 實例的動作時，會移除用於出埠 HTTPS 管理資料流量的 VMware NSX Edge Services Gateway (ESG)。如需相關資訊，請參閱[保護 VMware Federal 實例](vc_fed_securinginstance.html)。
+  在執行保護已部署的 VMware Federal 實例的動作時，會移除用於出埠 HTTPS 管理資料流量的 VMware NSX Edge Services Gateway (ESG)。如需相關資訊，請參閱[保護 VMware Federal 實例](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)。
   {:note}
 
 ### 虛擬伺服器實例
@@ -93,7 +93,7 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 
 ### 擴充節點的硬體
 
-一部具有 [VMware Federal on {{site.data.keyword.cloud_notm}} 實例的技術規格](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中所呈現之配置的 Bare Metal Server。
+一部具有 [VMware Federal on {{site.data.keyword.cloud_notm}} 實例的技術規格](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中所呈現之配置的 Bare Metal Server。
 
 ### 擴充節點的授權與費用
 
@@ -112,9 +112,9 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 
 ### 相關鏈結
 
-* [VMware Federal 實例的需求與規劃](vc_fed_planning.html)
-* [訂購 VMware Federal 實例](vc_fed_orderinginstance.html)
-* [新增、檢視及刪除 VMware Federal 實例的叢集](fed_addviewdeleteclusters.html)
-* [擴充及縮減 VMware Federal 實例的容量](vc_fed_addingremovingservers.html)
-* [保護 VMware Federal 實例](vc_fed_securinginstance.html)
+* [VMware Federal 實例的需求與規劃](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
+* [訂購 VMware Federal 實例](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [新增、檢視及刪除 VMware Federal 實例的叢集](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [擴充及縮減 VMware Federal 實例的容量](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [保護 VMware Federal 實例](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
 * [{{site.data.keyword.cloud_notm}} file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

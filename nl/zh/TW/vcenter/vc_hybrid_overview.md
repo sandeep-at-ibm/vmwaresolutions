@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -47,13 +47,13 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 
 ### 虛擬化管理
 
-此層由 vCenter Server Appliance (vCSA)、NSX Manager、兩個 NSX ESG、三個 NSX Controller、Platform Services Controller (PSC) 虛擬應用裝置及 IBM CloudDriver 虛擬伺服器實例 (VSI) 所組成。針對將主機新增至環境這類特定作業，視需要依需求部署 CloudDriver VSI。
+這層包含具有內嵌 Platform Services Controller (PSC) 的 vCenter Server Appliance (vCSA)、NSX Manager、兩個 NSX ESG、三個 NSX Controller 及 IBM CloudDriver 虛擬伺服器實例 (VSI)。針對將主機新增至環境這類特定作業，視需要依需求部署 CloudDriver VSI。
 
 基礎供應項目與 vCenter Server Appliance 一起部署，其大小調整後可支援最多 400 部主機及最多 4000 部 VM 的環境。相同的 vSphere API 相容工具及 Script 可用來管理 IBM 管理的 VMware 環境。
 
 總計，基礎供應項目需要 38 個 vCPU 及 67 GB vRAM 保留給虛擬化管理層。VM 的其餘主機容量視數個因素而定，例如超訂閱率、VM 大小調整及工作負載效能需求。
 
-如需部署 HCX on {{site.data.keyword.cloud_notm}} 服務時的其他管理資源需求，請參閱 [VMware HCX on {{site.data.keyword.cloud_notm}} 概觀](../services/hcx_considerations.html)。
+如需部署 HCX on {{site.data.keyword.cloud_notm}} 服務時的其他管理資源需求，請參閱 [VMware HCX on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/hcx_considerations.html)。
 
 ### 基礎架構混合
 
@@ -72,7 +72,7 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 
 您的 vCenter Server with Hybridity Bundle 實例訂單隨附四個 **Skylake** 或 **Broadwell** {{site.data.keyword.baremetal_short}}。以下是可用的 CPU 型號：
   * 2-CPU Intel Skylake Generation（Intel Xeon 4100/5100/6100 系列）
-  * 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600 v4 系列）
+  * 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600/E7-4800 系列）
 
 ### 網路
 
@@ -81,18 +81,18 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 *  三個 VLAN（虛擬 LAN）：一個公用 VLAN 和兩個專用 VLAN
 *  一個具有 DLR（分散式邏輯路由器）的 VXLAN (Virtual eXtensible LAN)，以便在連接至第 2 層 (L2) 網路的本端工作負載之間，進行潛在的東西向通訊。VXLAN 是部署成一個遞送拓蹼範例，您可以加以修改、在其上進行建置，或是移除它。您也可以將其他 VXLAN 連接到 DLR 上的新邏輯介面，來新增安全區域。
 *  兩個 VMware NSX Edge Services Gateway：
-  * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，IBM 將它部署為管理網路拓蹼的一部分。IBM 管理 VM 使用此 ESG，以與跟自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[將您的網路配置成使用客戶管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
+  * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，IBM 將它部署為管理網路拓蹼的一部分。IBM 管理 VM 使用此 ESG，以與跟自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[將您的網路配置成使用客戶管理的 ESG](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
 您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server with Hybridity Bundle 實例。此外，請注意，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
 {:important}
-  * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway，IBM 將它部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險？](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
+  * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway，IBM 將它部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險？](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
-如需部署 HCX on {{site.data.keyword.cloud_notm}} 服務時所訂購之網路元件的相關資訊，請參閱 [HCX on {{site.data.keyword.cloud_notm}} 概觀](../services/hcx_considerations.html)。
+如需部署 HCX on {{site.data.keyword.cloud_notm}} 服務時所訂購之網路元件的相關資訊，請參閱 [HCX on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/hcx_considerations.html)。
 
 ### 虛擬伺服器實例
 
 已訂購下列虛擬伺服器實例 (VSI)：
-* IBM CloudBuilder 的 VSI，在完成實例部署之後會關閉它。
+* IBM CloudBuilder 的 VSI，在完成實例部署之後會取消它。
 * 您可以選擇在管理叢集裡部署單一 Microsoft Windows Server VSI for Microsoft Active Directory (AD) 或兩部高可用性 Microsoft Windows VM，以協助加強安全及穩健性。
 
 ### vSAN 儲存空間
@@ -121,7 +121,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附下列授權。
 
 ### 擴充節點的硬體
 
-一部配置如 [vCenter Server with Hybridity Bundle 實例的技術規格](../vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中所示的 Bare Metal Server。
+一部配置如 [vCenter Server with Hybridity Bundle 實例的技術規格](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中所示的 Bare Metal Server。
 
 ### 擴充節點的授權與費用
 
@@ -142,8 +142,8 @@ vCenter Server with Hybridity Bundle 實例訂單隨附下列授權。
 
 ### 相關鏈結
 
-* [vCenter Server 軟體資料清單](vc_bom.html)
-* [vCenter Server with Hybridity Bundle 實例的需求及規劃](vc_hybrid_planning.html)
-* [訂購 vCenter Server with Hybridity Bundle 實例](vc_hybrid_orderinginstance.html)
-* [HCX on {{site.data.keyword.cloud_notm}} 概觀](../services/hcx_considerations.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
+* [vCenter Server 軟體資料清單](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [vCenter Server with Hybridity Bundle 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
+* [訂購 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [HCX on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

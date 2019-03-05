@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,4 +45,4 @@ RFC1918 专用 IP 地址范围专门保留了网络范围供组织内部使用�
 
 ### 相关链接
 
-* [解决方案概述](../solution/solution_overview.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

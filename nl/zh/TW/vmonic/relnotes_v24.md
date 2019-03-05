@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-06-22"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 2.4 版的版本注意事項
 
@@ -20,7 +24,7 @@ lastupdated: "2018-06-22"
 * CVEID：[CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID：[CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-如需相關資訊，請參閱[處理 Spectre 及 Meltdown 漏洞](../vmonic/trbl_fix_spectre.html)。
+如需相關資訊，請參閱[處理 Spectre 及 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)。
 
 ## 國家語言支援
 
@@ -38,8 +42,6 @@ lastupdated: "2018-06-22"
 * 簡體中文
 * 繁體中文
 
-**附註**：參照架構文件只提供英文版。
-
 ## Skylake Xeon CPU 支援
 
 從 2.4 版開始，下列新的 Bare Metal Server CPU 型號可用於部署 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}、VMware vSphere on {{site.data.keyword.cloud_notm}} 及 VMware Federal on {{site.data.keyword.cloud_notm}} 實例和叢集：
@@ -50,21 +52,21 @@ lastupdated: "2018-06-22"
 
 如需相關資訊，請參閱以下的 *Bare Metal Server 設定* 小節：
 
-* [訂購 Cloud Foundation 實例](../sddc/sd_orderinginstance.html#bare-metal-server-settings)
-* [訂購新的 vSphere 叢集](../vsphere/vs_orderinginstances.html#bare-metal-server-settings)
-* [訂購 VMware Federal 實例](../vcenter/vc_fed_orderinginstance.html#bare-metal-server-settings)
+* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html#bare-metal-server-settings)
+* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#bare-metal-server-settings)
+* [訂購 VMware Federal 實例](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html#bare-metal-server-settings)
 
 ## VMware vCenter Server 實例的更新
 
 ### 網路檔案系統效能加強功能
 
-效能層次 10 IOPS/GB 是針對需求最大的工作負載類型所設計，並且不再限制為特定 {{site.data.keyword.CloudDataCent_notm}}，現在可用於所有項目。如需相關資訊，請參閱 [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)中的*儲存空間* 小節。
+效能層次 10 IOPS/GB 是針對要求最嚴苛的工作負載類型所設計，並且不再限制為特定 {{site.data.keyword.CloudDataCent_notm}}，現在可用於所有項目。如需相關資訊，請參閱 [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)中的*儲存空間* 小節。
 
 ## VMware Federal 實例的更新
 
 ### 新的 IBM Cloud Data Center 選項
 
-您現在可以將 VMware Federal 實例部署至 DAL08 - Dallas, TX {{site.data.keyword.CloudDataCent_notm}}。如需相關資訊，請參閱 [VMware Federal 實例的需求及規劃](../vcenter/vc_fed_planning.html#ibm-cloud-data-center-availability)中的 *IBM Cloud Data Center 可用性* 小節。
+您現在可以將 VMware Federal 實例部署至 DAL08 - Dallas, TX {{site.data.keyword.CloudDataCent_notm}}。如需相關資訊，請參閱 [VMware Federal 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html#ibm-cloud-data-center-availability)中的 *IBM Cloud Data Center 可用性* 小節。
 
 ## 附加服務的更新
 
@@ -74,13 +76,13 @@ lastupdated: "2018-06-22"
 
 ### VMware HCX on IBM Cloud
 
-在您訂購此服務時，現在可以使用新的選項來選擇公用網路與專用網路以進行 HCX 交互連接。如需相關資訊，請參閱[訂購 VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_ordering.html)。
+在您訂購此服務時，現在可以使用新的選項來選擇公用網路與專用網路以進行 HCX 交互連接。如需相關資訊，請參閱[訂購 VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_ordering.html)。
 
 ## 新文件與更新的文件
 
 ### 參照架構文件
 
-{{site.data.keyword.vmwaresolutions_short}} 架構文件現在位於使用者文件的*參照* 小節中。參照架構文件只提供英文版。如需相關資訊，請參閱[解決方案概觀](../archiref/solution/solution_overview.html)。
+{{site.data.keyword.vmwaresolutions_short}} 架構文件現在位於使用者文件的*參照* 小節中。如需相關資訊，請參閱[解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)。
 
 ### 服務文件
 
@@ -88,15 +90,15 @@ lastupdated: "2018-06-22"
 
 如需相關資訊，請參閱下列主題：
 
-* [訂購 F5 on {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
-* [訂購 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)
-* [訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)
-* [訂購 Hytrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_ordering.html)
-* [訂購 Hytrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_ordering.html)
-* [訂購 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/spp_ordering.html)
-* [訂購 KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_ordering.html)
-* [訂購 Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_ordering.html)
-* [訂購 Zerto on {{site.data.keyword.cloud_notm}}](../services/zerto_ordering.html)
+* [訂購 F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_ordering.html)
+* [訂購 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_ordering.html)
+* [訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
+* [訂購 Hytrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_ordering.html)
+* [訂購 Hytrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_ordering.html)
+* [訂購 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_ordering.html)
+* [訂購 KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_ordering.html)
+* [訂購 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_ordering.html)
+* [訂購 Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/zerto_ordering.html)
 
 ## 使用者介面更新和加強功能
 

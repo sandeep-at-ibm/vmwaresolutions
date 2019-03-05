@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -34,7 +34,7 @@ lastupdated: "2018-10-29"
 
 ### FortiGuard 网络连接
 
-为 FortiGuard 选择**公用网络**或**专用网络**。如果目标集群配置为仅使用专用网络接口，那么仅**专用网络**选项可用。此选项会确定 FortiGuard 将如何联系 Fortinet 许可证服务器以激活许可证和下载安全补丁，并且此选项不会影响工作负载数据平面。
+为 FortiGuard 选择**公用网络**或**专用网络**。如果目标集群配置为仅使用专用网络接口，那么仅**专用网络**选项可用。此选项会确定 FortiGuard 将如何联系 Fortinet 许可证服务器以激活许可证并下载安全补丁，并且此选项不会影响工作负载数据平面。
 
 如果选择**专用网络**，请指定以下设置：
 * **代理 IP 地址**：代理服务器的 IPv4 地址。
@@ -60,9 +60,9 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的许可模型�
         <dt class="dt dlterm">标准 FW</dt>
         <dd class="dd">此捆绑软件包含有状态包检查、VLAN 保护和高级日志记录、流入和流出防火墙规则、SSL/IPSec VPN 终止以及全天候支持。</dd>
         <dt class="dt dlterm">标准 FW + UTM</dt>
-        <dd class="dd">此捆绑软件除了包含高级恶意软件防护 (AMP) 服务（包括 Antivirus、Botnet IP/Domain Service、Mobile Malware Security、FortiSandbox Cloud、Virus Outbreak Protection Service 和 Content Disarm & Reconstruct）外，还包含所有标准防火墙服务，以及 Web 过滤、IPS、反垃圾邮件、应用程序控制和 FortiCare 服务。</dd>
+        <dd class="dd">此捆绑软件除了包含高级恶意软件防护 (AMP) 服务外，还包含所有标准防火墙服务。它包含 Antivirus、Botnet IP/Domain Service、Mobile Malware Security、FortiSandbox Cloud、Virus Outbreak Protection Service 和 Content Disarm & Reconstruct。此外，还包含 Web Filtering、IPS、Antispam、Application Control 和 FortiCare 服务。</dd>
         <dt class="dt dlterm">标准 FW + Enterprise</dt>
-        <dd class="dd">此捆绑软件包含所有标准防火墙和 UTM 服务，以及以下服务：<ul><li>Cloud Access Security Broker (CASB)：此服务为基于云的服务提供可视性、合规性、数据安全性和威胁保护。</li><li>Industrial Security：此服务提供通用 ICS/SCADA 协议的签名。</li><li>Security Rating：此服务提供审计功能，用于识别关键漏洞和配置弱点，并实施最佳实践建议。</li></ul></dd>
+        <dd class="dd">此捆绑软件包含所有标准防火墙和 UTM 服务，以及以下服务：<ul><li>Cloud Access Security Broker (CASB) - 此服务为基于云的服务提供可视性、合规性、数据安全性和威胁保护。</li><li>Industrial Security - 此服务提供通用 ICS/SCADA 协议的签名。</li><li>Security Rating - 此服务提供审计功能，用于识别关键漏洞和配置弱点，并实施最佳实践建议。</li></ul></dd>
 </dl>
 
 在 2018 年第 3 季度，Fortinet 向其企业捆绑软件添加了三个新服务（CASB、Industrial Security 和 Security Rating）。这些服务仅在 FortiGate 6.0 上可用。
@@ -73,12 +73,12 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的许可模型�
 
 ### 相关链接
 
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 概述](fortinetvm_considerations.html)
-* [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](managingfortinetvm.html)
-* [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
-* [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
-* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](../vcenter/vc_hybrid_addingremovingservices.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
-* [常见问题](../vmonic/faq.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)
+* [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
+* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Fortinet Web 站点](https://www.fortinet.com/){:new_window}
 * [Fortinet 文档库](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

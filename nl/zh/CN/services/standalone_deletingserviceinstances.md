@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-08"
 
 ## 开始之前
 
-确保已查看[删除内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例时的注意事项](../services/standalone_considerations.html)中的所有注意事项。
+确保已查看[删除内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例时的注意事项](/docs/services/vmwaresolutions/services/standalone_considerations.html)中的所有注意事项。
 
 ## 删除内部部署 VMware HCX on IBM Cloud 实例的过程
 
@@ -25,7 +25,7 @@ lastupdated: "2018-11-08"
 
 ### 相关链接
 
-* [订购内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例](standalone_orderingserviceinstances.html)
-* [查看内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例](standalone_viewingserviceinstances.html)
-* [HCX 术语的词汇表](hcx_glossary.html)
+* [订购内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
+* [查看内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
+* [HCX 术语的词汇表](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 文档](https://cloud.vmware.com/vmware-hcx/resources)

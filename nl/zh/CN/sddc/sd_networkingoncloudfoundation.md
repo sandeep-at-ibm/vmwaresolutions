@@ -2,19 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-04"
+lastupdated: "2019-01-25"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # Cloud Foundation 实例的联网注意事项
 
 请查看以下信息，以获取有关 Cloud Foundation 实例的联网注意事项和需求的详细信息。确保满足这些需求，以便实例能正常运行。
 
 ## Cloud Foundation 实例的联网组件
+{: faq}
 
-要查看 Cloud Foundation 实例中包含的联网组件，请参阅 [Cloud Foundation 实例的技术规范](sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
+要查看 Cloud Foundation 实例中包含的联网组件，请参阅 [Cloud Foundation 实例的技术规范](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 
 ## 防火墙注意事项
 
@@ -28,7 +31,7 @@ lastupdated: "2018-09-04"
 
 有关如何设置 NSX 的更多信息，请参阅以下主题：
 * 对于主（单个）Cloud Foundation 实例，请参阅[针对 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} 上的工作负载 VM 设置 NSX](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/)。
-* 对于多站点 Cloud Foundation 实例，请参阅[在 {{site.data.keyword.cloud_notm}} 中安全连接专用 VMware 工作负载](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html)。
+* 有关多站点 Cloud Foundation 实例的信息，请参阅[安全连接 {{site.data.keyword.cloud_notm}} 中的专用 VMware 工作负载](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}。
 
 ## 更改 NSX 组件密码时的注意事项
 

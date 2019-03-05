@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-05"
 
 ## IBM Cloud 帳戶需求
 
-您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶的需求](../vmonic/slaccountrequirement.html)。
+您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶的需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
 
 ## IBM Cloud Data Center 可用性
 
@@ -67,19 +67,19 @@ vCenter Server 部署具有嚴格的實體基礎架構需求。因此，您只�
 
 ## 管理元件的備份
 
-您負責維護及確保所有實例元件的可用性。強烈建議您規劃所有管理元件的備份或高可用性。如需相關資訊，請參閱[備份元件](../archiref/solution/solution_backingup.html)。
+您負責維護及確保所有實例元件的可用性。強烈建議您規劃所有管理元件的備份或高可用性。如需相關資訊，請參閱[備份元件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)。
 
 ## 適用於 vCenter Server 實例的服務
 
-您可以根據需要來訂購實例基礎的附加程式服務（例如災難回復）。如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server 實例的服務](vc_addingremovingservices.html)。
+您可以根據需要來訂購實例基礎的附加程式服務（例如災難回復）。如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)。
 
 ## 容量考量
 
-如需容量考量的相關資訊，請參閱[調整容量](../archiref/solution/solution_scaling.html)。
+如需容量考量的相關資訊，請參閱[調整容量](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)。
 
 ### 相關鏈結
 
-* [vCenter Server 概觀](vc_vcenterserveroverview.html)
-* [訂購 vCenter Server 實例](vc_orderinginstance.html)
-* [擴充及縮減 vCenter Server 實例的容量](vc_addingremovingservers.html)
-* [訂購、檢視及移除 vCenter Server 實例的服務](vc_addingremovingservices.html)
+* [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [擴充及縮減 vCenter Server 實例的容量](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)

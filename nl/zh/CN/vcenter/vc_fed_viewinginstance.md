@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -43,7 +43,7 @@ lastupdated: "2018-10-30"
 |正在构建|正在配置实例。|
 |可供使用|实例准备就绪，可供使用。|
 |正在修改|正在修改实例。|
-|已保护|部署的实例已与打开的管理连接和自动化断开连接。
+|已保护|部署的实例已与开放式管理连接和自动化断开连接。
 |失败|创建、配置或修改过程失败。|
 |正在删除|正在删除实例。|
 |删除错误|删除实例时发生错误。|
@@ -107,7 +107,7 @@ lastupdated: "2018-10-30"
 
 ## 发生错误时要执行的操作
 
-如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持人员](../vmonic/trbl_support.html)。
+如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
 
 ## 后续步骤
 
@@ -117,13 +117,13 @@ lastupdated: "2018-10-30"
 {:important}
 
 查看以下主题，以获取有关帮助您完成登录指示信息的信息：
-*  有关访问 vSphere Web Client 之前的需求和必需步骤，请参阅[连接到 vSphere Web Client 时发生超时](../vmonic/trbl_timeout_vc_console.html)。
+*  有关访问 vSphere Web Client 之前的需求和必需步骤，请参阅[连接到 vSphere Web Client 时发生超时](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html)。
 *  有关使用 VPN 登录到 {{site.data.keyword.cloud_notm}} 基础架构专用网络的访问点列表，请参阅 [VPN 访问](http://www.softlayer.com/vpn-access){:new_window}。
-*  如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](../vmonic/trbl_deploy_ovf.html)。
+*  如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html)。
 
 ### 相关链接
 
-* [VMware Federal on {{site.data.keyword.cloud_notm}} 概述](vc_fed_overview.html)
-* [订购 VMware Federal 实例](vc_fed_orderinginstance.html)
-* [删除 VMware Federal 实例](vc_fed_deletinginstance.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
+* [订购 VMware Federal 实例](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [删除 VMware Federal 实例](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

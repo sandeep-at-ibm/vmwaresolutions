@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-09-27"
 表 1. Cloud Foundation、vCenter Server、vCenter Server with Hybridity Bundle 及 vSphere 叢集的支援功能
 
 |功能                          |Cloud Foundation    |vCenter Server | vCenter Server with Hybridity |VMware vSphere |
-|:----------------------------------|:--------------------|:---------------|:-------------------------|:-------------- |
+|:---|:---|:---|:---|:--- |
 |採用 {{site.data.keyword.IBM}} 進階自動化技術 <sup>1</sup> |是|是|是|否。自行建置及配置|
 |儲存空間選項|vSAN                |vSAN 或共用檔案層次儲存空間 (NFS)|vSAN                |vSAN 或共用檔案層次儲存空間 (NFS)|
 |起始叢集裡的 ESXi 伺服器數目|4 | 4 部用於 vSAN，且至少 2 部（建議使用 3 部）用於 NFS |4 |1 部以便擴充現有叢集，4 部用於新的 vSAN 叢集，且至少 3 部用於具有 NFS 的新叢集|
@@ -24,7 +24,7 @@ lastupdated: "2018-09-27"
 |新增 ESXi 伺服器              |支援           |支援           |支援           |支援。未包括自動化配置|
 |移除 ESXi 伺服器           |支援           |支援           |支援           |支援。未包括自動化配置|
 |多叢集支援         | 五個叢集 | 十個叢集 | 十個叢集 |支援。未包括自動化配置|
-|用戶端管理 VMware 堆疊的更新及修補 | VMware 更新 | 不包括 | 不包括 | 不包括 |
+|用戶端管理 VMware 堆疊的更新及修補 | 自動化輔助更新：<br/>SDDC Manager                             | 用戶端管理的更新：<br/>原生 VMware Tools (VMware Update Manager) | 用戶端管理的更新：<br/>原生 VMware Tools (VMware Update Manager) | 用戶端管理的更新：<br/>原生 VMware Tools (VMware Update Manager) |
 |備份及還原            | 手動使用 IBM Spectrum Protect Plus 或 Veeam | 手動使用 IBM Spectrum Protect Plus 或 Veeam | 手動使用 IBM Spectrum Protect Plus 或 Veeam | 未包括備份及還原解決方案 |
 |軟體定義網路   |NSX Enterprise   |NSX Base、Advanced 或 Enterprise |NSX Advanced 或 Enterprise |NSX Standard、Base 或 Enterprise。未包括自動化配置|
 |對於 vSphere 及 vSAN 的 BYOL |對每個叢集充分支援   |對每個叢集充分支援   |不支援|支援           |
@@ -33,19 +33,19 @@ lastupdated: "2018-09-27"
 |vSAN 授權版本         |vSAN Advanced 或 Enterprise  |vSAN Advanced 或 Enterprise  |vSAN Advanced 或 Enterprise  |vSAN Advanced 或 Enterprise  |
 |附加服務               |支援，不包括 HCX on {{site.data.keyword.cloud_notm}}。|支援，不包括 HCX on {{site.data.keyword.cloud_notm}}。可以升級至 vCenter Server with Hybridity Bundle。|支援，包括 HCX on {{site.data.keyword.cloud_notm}}。| 此解決方案的自動化不支援，但您可以啟動及安裝自己的軟體。|
 
-**附註：**
+##  附註 
 
 <sup>1</sup> 根據已驗證的設計並在部署期間驗證。
 
-<sup>2</sup> 您可以將 vSAN 叢集裡的 ESXi 伺服器數目增加到最多 64 部。如需相關資訊，請參閱[關於 ESXi 伺服器的常見問題](faq_esxi.html)中的_我可以新增多少部 ESXi 伺服器至叢集？_。
+<sup>2</sup> 您可以將 vSAN 叢集裡的 ESXi 伺服器數目增加到最多 64 部。如需相關資訊，請參閱[關於 ESXi 伺服器的常見問題](/docs/services/vmwaresolutions/vmonic/faq_esxi.html)中的_我可以新增多少部 ESXi 伺服器至叢集？_。
 
 ### 相關鏈結
 
-* [常見問題](faq.html)
-* [Cloud Foundation 概觀](../sddc/sd_cloudfoundationoverview.html)
-* [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server Hybridity 概觀](../vcenter/vc_hybrid_overview.html)
-* [VMware vSphere 概觀](../vsphere/vs_vsphereclusteroverview.html)
-* [Cloud Foundation BOM](../sddc/sd_bom.html)
-* [vCenter Server BOM](../vcenter/vc_bom.html)
-* [VMware vSphere BOM](../vsphere/vs_bom.html)
+* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [vCenter Server Hybridity 概觀](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [VMware vSphere 概觀](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)
+* [Cloud Foundation BOM](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [vCenter Server BOM](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [VMware vSphere BOM](/docs/services/vmwaresolutions/vsphere/vs_bom.html)

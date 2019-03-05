@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2018-11-13"
 
 基礎架構管理是指管理 vSphere ESXi 基礎架構的 VMware 元件。
 
-如需元件的相關資訊，請參閱[虛擬基礎架構設計](../solution/design_virtualinfrastructure.html)中的「圖 2. NSX Manager 網路概觀」。
+如需元件的相關資訊，請參閱[虛擬基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)中的「圖 2. NSX Manager 網路概觀」。
 
 ## 虛擬網路設計
 
-本設計所使用的網路虛擬化，是使用現有的 vSphere Distributed Switch (vDS)，其與專用網路相關聯，並指定在 [{{site.data.keyword.vmwaresolutions_full}} 架構](../solution/solution_overview.html)中。
+本設計所使用的網路虛擬化，是使用現有的 vSphere Distributed Switch (vDS)，其與專用網路相關聯，並指定在 [{{site.data.keyword.vmwaresolutions_full}} 架構](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)中。
 
 ## vSphere Distributed Switch
 
@@ -52,4 +52,4 @@ lastupdated: "2018-11-13"
 
 ### 相關鏈結
 
-* [解決方案概觀](../solution/solution_overview.html)
+* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

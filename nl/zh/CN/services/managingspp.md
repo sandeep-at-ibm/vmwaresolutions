@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-19"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -21,8 +21,8 @@ lastupdated: "2018-07-19"
 您应负责维护 IBM Spectrum Protect Plus，以使其保持为最新版本。可以从 [IBM Spectrum Protect Plus 支持](https://www.ibm.com/mysupport/s/topic/0TO50000000IQWtGAO/spectrum-protect-plus)页面下载所需的更新。
 
 有关更多信息，请参阅以下主题：
-* [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
-* [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
+* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ## 更新 IBM Spectrum Protect Plus VM 的操作系统
 
@@ -30,6 +30,6 @@ lastupdated: "2018-07-19"
 
 ### 相关链接
 
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 概述](spp_considerations.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/spp_considerations.html)
 * [如何向部署后的 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 添加 vSnap 存储](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)
 * [IBM Spectrum Protect Plus 文档](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)

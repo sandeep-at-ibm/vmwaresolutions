@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -47,7 +47,7 @@ lastupdated: "2018-11-09"
 | 工作者節點 |4 | 16 | 200 | 300 | 6 |
 | 漏洞警告器 | 8                                   | 16 | 500 |1 |1 |
 | GlusterFS  | 8                                   | 16 | 150 | 50 | 3 |
-| 引導 ICP/CAM | 16 | 32 | 250 |1 |1 |
+| 引導 {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 |1 |1 |
 | NFS 伺服器 | 8                                   |4 | 350 |1 |1 |
 |NSX Edge Services Gateway|2 |1 | 0.5 | 0.5 |2 |
 | 記載的限制 | 52 | 640 |  | 8,000 |   |
@@ -63,7 +63,7 @@ lastupdated: "2018-11-09"
 | 工作者節點 |4 | 16 | 200 | 300 | 3 |
 | 漏洞警告器 | 8                                   | 16 | 150 |1 |1 |
 | GlusterFS  | 8                                   | 16 | 150 | 50 | 3 |
-| 引導 ICP/CAM | 16 | 32 | 250 |1 |1 |
+| 引導 {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 |1 |1 |
 | NFS 伺服器 | 8                                   |4 | 350 |1 |1 |
 |NSX Edge Services Gateway|2 |1 | 0.5 | 0.5 |2 |
 | 記載的限制 | 30 | 200 |  | 4,000 |  |
@@ -100,7 +100,7 @@ lastupdated: "2018-11-09"
 | HostCount	| 預設叢集中的主機數目	| 主機  | 6	| 6 |
 | HostMemory |	 預設叢集中每一個主機可用的原始 GB 數 |	GB	| 192 |	192 |
 | HostVsanCapacityDiskSize | 在此主機上每一個 vSAN 容量 SSD 磁碟容量的 GB 數（等於 960、1,946 或 3,891），如果主機非 vSAN，則等於 0 GB| GB |	960 | 0 |
-| HostOverheadMemory |	ESXi 伺服器保留的記憶體 GB 數（等於 4.6 GB）|	GB	| 4.6 |	4.6 |
+| HostOverheadMemory |	ESXi 伺服器保留給額外需要的記憶體 GB 數（等於 4.6 GB）|	GB	| 4.6 |	4.6 |
 | MgmtOverheadMemory |	vCenter Server 管理元件（vCenter Server、PSC、AD/DNS、Edges）保留的記憶體 GB 數（等於 77 GB）| GB | 77 | 77 |
 | vSphereHAHostTolerance |vSphere HA 配置中容忍的主機數（等於一個主機）| 主機	|1 |1 |
 | HostVsanOverheadMemoryDiskPercentage | vSAN 管理所保留的記憶體 GB 數（以其中一個容量 vSAN 磁碟的百分比表示），其等於 2.75%|	% | 2.75%	| 2.75% |
@@ -115,10 +115,10 @@ lastupdated: "2018-11-09"
 ## 移除 IBM Cloud Private Hosted 時的考量
 
 * {{site.data.keyword.cloud_notm}} 只會刪除 {{site.data.keyword.cloud_notm}} Private Hosted 服務起始安裝期間所部署的虛擬機器 (VM)，不會清除安裝後部署的任何節點。
-* {{site.data.keyword.cloud_notm}} 將會刪除 {{site.data.keyword.cloud_notm}} Private Hosted 服務起始部署期間所建立的 VXLAN、DLR 和邊緣閘道。一旦開始移除 {{site.data.keyword.cloud_notm}} Private Hosted 服務，您部署在 VXLAN 上的 VM 就會失去連線功能。
+* {{site.data.keyword.cloud_notm}} 將會刪除 {{site.data.keyword.cloud_notm}} Private Hosted 服務起始部署期間所建立的 VXLAN、DLR 和邊緣閘道。開始移除 {{site.data.keyword.cloud_notm}} Private Hosted 服務之後，您部署在 VXLAN 上的 VM 就會失去連線功能。
 
 ### 相關鏈結
 
-* [訂購 IBM Cloud Private Hosted](../services/icp_ordering.html)
-* [vCenter Server 和 IBM Cloud Private 手冊](../archiref/vcsicp/vcsicp-intro.html)
+* [訂購 IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services/icp_ordering.html)
+* [vCenter Server 和 IBM Cloud Private 手冊](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
 * [開立 IBM Cloud Private 的問題單](https://www.ibm.com/mysupport/s/?language=en_US)

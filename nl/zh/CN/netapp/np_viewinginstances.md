@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -80,10 +80,6 @@ lastupdated: "2018-10-30"
 |NetApp Deploy Tool IP|NetApp ONTAP Select Deploy 虚拟机的 IP 地址。|
 |NetApp Deploy Tool FQDN|NetApp ONTAP Select Deploy 标准域名。|
 |NetApp Deploy Tool HTTPS|可用于访问 NetApp ONTAP Select Deploy 虚拟机的用户名和密码。|
-|PSC IP|Platform Services Controller 的 IP 地址。|
-|PSC FQDN|PSC 标准域名。|
-|PSC ADMIN|可用于访问 PSC Web 控制台的 VMware vCenter Single Sign-On 用户名和密码。|
-|PSC SSH|可用于通过 SSH 连接访问 PSC VM 的用户名和密码。|
 |vCenter IP|vCenter Server 的 IP 地址。|
 |vCenter FQDN|vCenter Server 标准域名。|
 |vCenter ADMIN|可用于通过 vSphere Web Client 登录到 vCenter Server 的 VMware vCenter Single Sign-On 用户名和密码。|
@@ -100,7 +96,7 @@ lastupdated: "2018-10-30"
 |日期|更改实例状态的日期和时间|
 |摘要|更改的详细信息|
 
-如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持人员](../vmonic/trbl_support.html)。
+如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
 
 ## 查看 NetApp ONTAP Select 集群
 
@@ -174,12 +170,12 @@ lastupdated: "2018-10-30"
 
 有关帮助您完成登录的指示信息的更多信息，请查看以下主题：
 
-*  有关访问 vSphere Web Client 之前的需求和必需步骤，请参阅[连接到 vSphere Web Client 时发生超时](../vmonic/trbl_timeout_vc_console.html)。
+*  有关访问 vSphere Web Client 之前的需求和必需步骤，请参阅[连接到 vSphere Web Client 时发生超时](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html)。
 *  有关使用 VPN 登录到 {{site.data.keyword.cloud_notm}} 基础架构专用网络的访问点的列表，请参阅 [VPN 访问](http://www.softlayer.com/vpn-access){:new_window}。
-*  如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](../vmonic/trbl_deploy_ovf.html)。
+*  如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html)。
 
 ### 相关链接
 
-* [订购 NetApp ONTAP Select 实例](np_orderinginstances.html)
-* [删除 NetApp ONTAP Select 实例](np_deletinginstance.html)
+* [订购 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [删除 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [将专用存储器连接到 NetApp ONTAP Select 部署](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

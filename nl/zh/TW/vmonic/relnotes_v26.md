@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-10-01"
 
@@ -20,7 +20,7 @@ lastupdated: "2018-10-01"
 * CVEID：[CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID：[CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-如需相關資訊，請參閱[處理 Spectre 及 Meltdown 漏洞](../vmonic/trbl_fix_spectre.html)。
+如需相關資訊，請參閱[處理 Spectre 及 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)。
 
 ## Intel Optane 的高效能選項
 
@@ -40,9 +40,9 @@ lastupdated: "2018-10-01"
 
 如需相關資訊，請參閱下列各主題中的_網路介面設定_ 小節：
 
-* [訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html#network-interface-settings)
-* [訂購 vCenter Server with Hybridity Bundle 實例](../vcenter/vc_hybrid_orderinginstance.html#network-interface-settings)
-* [訂購新的 vSphere 叢集](../vsphere/vs_orderinginstances.html#network-interface-settings)
+* [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#network-interface-settings)
+* [訂購 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html#network-interface-settings)
+* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#network-interface-settings)
 
 ## 刪除 ESXi 伺服器
 
@@ -50,9 +50,9 @@ lastupdated: "2018-10-01"
 
 如需 ESXi 伺服器需求的相關資訊，請參閱下列主題：
 
-* [擴充及縮減 vCenter Server 實例的容量](../vcenter/vc_addingremovingservers.html)
-* [擴充及縮減 vCenter Server with Hybridity Bundle 實例的容量](../vcenter/vc_hybrid_addingremovingservers.html)
-* [擴充及縮減 Cloud Foundation 實例的容量](../sddc/sd_addingremovingservers.html)
+* [擴充及縮減 vCenter Server 實例的容量](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [擴充及縮減 vCenter Server with Hybridity Bundle 實例的容量](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [擴充及縮減 Cloud Foundation 實例的容量](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
 
 ## VMware vCenter Server 實例的更新
 
@@ -69,7 +69,7 @@ lastupdated: "2018-10-01"
 
 您現在可以從 vCenter Server 實例移除 Hybridity Bundle 授權。若要這樣做，您需要將 VMware NSX 及 VMware vSAN 租賃授權碼取代為「自帶授權 (BYOL)」碼，並開立支援問題單以取消租賃授權的費用。
 
-如需相關資訊，請參閱[從 vCenter Server 實例移除 Hybridity Bundle](../vcenter/vc_hybrid_deletingbundle.html)。
+如需相關資訊，請參閱[從 vCenter Server 實例移除 Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletingbundle.html)。
 
 ### vCenter Server with Hybridity Bundle 可用性
 
@@ -77,8 +77,8 @@ lastupdated: "2018-10-01"
 
 如需相關資訊，請參閱下列主題：
 
-* [vCenter Server with Hybridity Bundle 概觀](../vcenter/vc_hybrid_overview.html)
-* [訂購 vCenter Server with Hybridity Bundle 實例](../vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [訂購 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
 
 ## VMware Cloud Foundation 實例的更新
 
@@ -98,8 +98,8 @@ lastupdated: "2018-10-01"
 您可以在訂購實例時訂購包含此服務的實例，或稍後將此服務新增至現有實例。
 
 如需相關資訊，請參閱下列主題：
-* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 的元件及考量](../services/htkc_considerations.html)
-* [管理 HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/managinghtkc.html)
+* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 的元件及考量](/docs/services/vmwaresolutions/services/htkc_considerations.html)
+* [管理 HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtkc.html)
 
 ### HyTrust CloudControl on IBM Cloud
 
@@ -115,7 +115,7 @@ lastupdated: "2018-10-01"
 
 建議一併將已安裝 Veeam on {{site.data.keyword.cloud_notm}} 的現有 Cloud Foundation 實例更新為 9.5u3a 版或更新版本。
 
-如需 Veeam on {{site.data.keyword.cloud_notm}} 的相關資訊，請參閱 [Veeam on {{site.data.keyword.cloud_notm}} 概觀](../services/veeam_considerations.html)。
+如需 Veeam on {{site.data.keyword.cloud_notm}} 的相關資訊，請參閱 [Veeam on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/veeam_considerations.html)。
 
 ### VMware HCX on IBM Cloud
 
@@ -135,7 +135,7 @@ lastupdated: "2018-10-01"
 ### 參照架構文件
 {{site.data.keyword.vmwaresolutions_short}} 架構文件已更新，包含了用來瞭解您對於 VMware 實例之管理及操作責任的重要考量。
 
-如需相關資訊，請參閱 [VMware 實例的部署後考量](../archiref/solution/solution_considerations.html)。
+如需相關資訊，請參閱 [VMware 實例的部署後考量](/docs/services/vmwaresolutions/archiref/solution/solution_considerations.html)。
 
 ## 使用者介面更新和加強功能
 

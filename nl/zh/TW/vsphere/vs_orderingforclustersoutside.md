@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,15 +19,15 @@ lastupdated: "2018-10-29"
 ## 需求
 
 請確定您已完成下列作業：
-*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](../vmonic/useraccount.html)。
-*  您已檢閱 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求及規劃](vs_planning.html)中的需求及考量。
+*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
+*  您已檢閱 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求及規劃](/docs/services/vmwaresolutions/vsphere/vs_planning.html)中的需求及考量。
 
 ## 擴充在主控台以外建立的叢集的程序
 
 1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware**，然後按一下**虛擬資料中心**區段中的 **VMware vSphere**。
 2. 在 **VMware vSphere on IBM Cloud** 頁面上，按一下**建立**。  
    請確定您位於**建立新項目**標籤，並在**叢集配置**清單中顯示**新叢集**。
-3. 使用與現有叢集相同的設定來建立叢集，而現有叢集是在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外所建立。如需相關資訊，請參閱[訂購新的 vSphere 叢集](vs_orderinginstances.html)。  
+3. 使用與現有叢集相同的設定來建立叢集，而現有叢集是在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外所建立。如需相關資訊，請參閱[訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)。  
    對於網路介面，若要擴充在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外建立的叢集，您必須為叢集選取現有的 VLAN。
    {:note}
 4. 在**訂單摘要**窗格中，驗證叢集配置，然後按一下**儲存配置**。   
@@ -47,6 +47,6 @@ vSphere 叢集不會連同 vCenter Server 實例及 Cloud Foundation 實例顯�
 
 ### 相關鏈結
 
-* [訂購新的 vSphere 叢集](vs_orderinginstances.html)
-* [根據現有配置來訂購 vSphere 叢集](vs_orderingbasedonexistingconfig.html)
-* [擴充現有的 vSphere 叢集](vs_scalingexistingclusters.html)
+* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [根據現有配置來訂購 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [擴充現有的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)

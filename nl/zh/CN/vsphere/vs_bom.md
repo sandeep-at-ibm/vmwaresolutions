@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-19"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,5 +22,5 @@ lastupdated: "2018-07-19"
 
 * [VMware ESXi/ESX 的构建号和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware ESXi 6.0 Update 2 发行说明](https://docs.vmware.com/en/VMware-vSphere/6.0/rn/vsphere-esxi-60u2-release-notes.html)
-* [VMware vSphere 概述](vs_vsphereclusteroverview.html)
-* [规划 vSphere 集群](vs_planning.html)
+* [VMware vSphere 概述](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)
+* [规划 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_planning.html)

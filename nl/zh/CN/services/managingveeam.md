@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -24,12 +24,12 @@ lastupdated: "2018-11-06"
 您可以在 Veeam on {{site.data.keyword.cloud_notm}} 服务详细信息页面上找到 Windows IP 地址和管理员凭证。
 
 有关更多信息，请参阅以下主题：
-* [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
-* [订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)
+* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ## 备份和复原安装了 Veeam on IBM Cloud 的实例的管理组件
 
-Veeam on {{site.data.keyword.cloud_notm}} 服务可以配置为使用 Veeam 控制台来备份管理组件。有关更多信息，请参阅[备份组件](../archiref/solution/solution_backingup.html)。
+Veeam on {{site.data.keyword.cloud_notm}} 服务可以配置为使用 Veeam 控制台来备份管理组件。有关更多信息，请参阅[备份组件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)。
 
 对于部署在（或升级到）V1.8 或更高发行版的实例，不会自动备份对环境的配置更改。因此，在更改环境配置之前，建议通过在 Veeam 控制台中运行管理备份作业，手动备份管理组件。有关手动备份的更多信息，请参阅 [Veeam 技术指示信息](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}。
 
@@ -39,23 +39,23 @@ Veeam on {{site.data.keyword.cloud_notm}} 服务可以配置为使用 Veeam 控�
 
 您应负责维护 Veeam 软件，以使其保持为最新版本。
 
-### 对于使用公用和专用网络部署的实例
+### 对部署有公用和专用网络的实例应用更新
 
 如果 Veeam 服务安装在使用公用和专用网络的实例上，那么可以使用 Veeam 软件本身来检查并下载更新。
 
-### 对于仅使用专用网络部署的实例
+### 对仅部署有专用网络的实例应用更新
 
 如果 Veeam 服务安装在仅使用专用网络的实例上，那么由于 Veeam VSI 配置为不具有公用网络访问权，因此无法使用 Veeam 软件本身来检查或下载更新。您必须改为从 Veeam Web 站点下载更新，将其传输到 Veeam VM，然后安装这些更新。
 
 ## 更新 Veeam 许可证
 
-### 对于使用公用和专用网络部署的实例
+### 针对部署有公用和专用网络的实例更新 Veeam 许可证
 
 如果 Veeam 服务安装在使用公用和专用网络的实例上，那么可以通过遵循[更新许可证]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html)中的 Veeam 指示信息来自动或手动更新 Veeam 许可证。
 
-### 对于仅使用专用网络部署的实例
+### 针对仅部署有专用网络的实例更新 Veeam 许可证
 
-如果 Veeam 服务安装在仅使用专用网络的实例上，那么需要续订时，您必须记下许可证的到期日期，并与 [IBM 支持人员](../vmonic/trbl_support.html)联系，以获取有关更新许可证密钥的帮助。
+如果 Veeam 服务安装在仅使用专用网络的实例上，那么您必须记下许可证的到期日期，并在需要续订时[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)以获取有关更新许可证密钥的帮助。
 
 ## 使用 Veeam on IBM Cloud 替换 V1.8 之前版本的实例的 Veeam VSI
 
@@ -75,8 +75,8 @@ Veeam on {{site.data.keyword.cloud_notm}} 服务可以同时备份管理组件�
 
 ### 相关链接
 
-* [Veeam on {{site.data.keyword.cloud_notm}} 概述](veeam_considerations.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
-* [常见问题](../vmonic/faq.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Veeam.com Web 站点](https://www.veeam.com/)
 * [Veeam 技术文档](https://www.veeam.com/documentation-guides-datasheets.html)

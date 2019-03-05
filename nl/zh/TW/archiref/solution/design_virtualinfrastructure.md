@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -39,7 +39,7 @@ vSphere ESXi 配置包含下列層面：
 | 時間同步化             | 使用 {{site.data.keyword.cloud}} NTP 伺服器 |
 | 主機存取               | 支援 DCUI、ESXi Shell 或 SSH |
 | 使用者存取             | 本端鑑別及 MSAD |
-| 網域名稱解析 |使用 DNS（如[共用服務設計](design_commonservice.html)所述）。|
+| 網域名稱解析 |使用 DNS（如[共用服務設計](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)所述）。|
 
 vSphere 叢集可存放虛擬機器 (VM)，它們會管理用於使用者工作負載的中央雲端及運算資源。
 
@@ -73,7 +73,7 @@ vSAN 會採用下列元件：
 * 針對兩個 OS 磁碟機除外的每個磁碟機，會配置 RAID-0 層次的機載 RAID 控制器。
 * 會從所有儲存空間建立單一 vSAN 資料儲存庫。
 
-可用的 vSAN 特性取決於您在訂購實例時所選取的授權版本。如需相關資訊，請參閱 [VMware vSAN 版本比較](appendix.html#vmware-vsan-edition-comparison)。
+可用的 vSAN 特性取決於您在訂購實例時所選取的授權版本。如需相關資訊，請參閱 [VMware vSAN 版本比較](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-vsan-edition-comparison)。
 
 ### vSAN 的虛擬網路設定
 
@@ -81,7 +81,7 @@ vSAN 會採用下列元件：
 
 vSAN 不會跨越上行鏈路來進行資料流量的負載平衡。因此，其中一張配接卡處於作用中狀態時，另一張配接卡會處於待命狀態，以支援高可用性 (HA)。vSAN 的網路失效接手原則，會配置為實體網路埠之間的**明確失效接手**。
 
-如需實體 NIC 連線的相關資訊，請參閱[實體基礎架構設計](design_physicalinfrastructure.html)中的「圖 2. 實體主機 NIC 連線」。
+如需實體 NIC 連線的相關資訊，請參閱[實體基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)中的「圖 2. 實體主機 NIC 連線」。
 
 ### 儲存空間原則設計
 
@@ -112,7 +112,7 @@ vSAN 設定是根據在 {{site.data.keyword.cloud_notm}} 內部署 VMware 解決
 
 網路虛擬化提供存在於虛擬層內的網路層疊。網路虛擬化提供具有諸如快速佈建、部署、重新配置及毀損隨需應變虛擬網路等特性的架構。此設計使用 vDS 及 VMware NSX for vSphere 來實作虛擬網路。
 
-在此設計中，NSX Manager 部署於起始叢集裡。NSX Manager 會獲指派專用可攜式位址區塊中的 VLAN 支援 IP 位址，這個區塊已指定給管理元件並已配置[共用服務設計](design_commonservice.html)中所呈現的 DNS 及 NTP 伺服器。NSX Manager 會使用表 2 所列的規格進行安裝。
+在此設計中，NSX Manager 部署於起始叢集裡。NSX Manager 會獲指派專用可攜式位址區塊中的 VLAN 支援 IP 位址，這個區塊已指定給管理元件並已配置[共用服務設計](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)中所呈現的 DNS 及 NTP 伺服器。NSX Manager 會使用表 2 所列的規格進行安裝。
 
 表 2. NSX Manager 屬性
 
@@ -133,13 +133,13 @@ vSAN 設定是根據在 {{site.data.keyword.cloud_notm}} 內部署 VMware 解決
 
 在起始部署之後，{{site.data.keyword.cloud_notm}} 自動化會在起始叢集內部署三個 NSX Controller。每個控制器都會獲指派**專用 A** 可攜式子網路中的 VLAN 支援 IP 位址（這個子網路是指定給管理元件）。此外，此設計還會建立 VM-VM 反親緣性規則，以在叢集的主機之間區隔控制器。起始叢集必須至少包含三個節點，以確保控制器具有高可用性。
 
-除了控制器之外，{{site.data.keyword.cloud_notm}} 自動化還會準備具有 NSX VIBS 的已部署 vSphere 主機，以便可以透過「VXLAN 通道端點 (VTEP)」來使用虛擬化網路。VTEP 會獲指派**專用 A** 可攜式 IP 位址範圍中的 VLAN 支援 IP 位址（這個 IP 位址範圍是指定給[實體基礎架構設計](design_physicalinfrastructure.html)的*表 1. VLAN 及子網路摘要* 中所列的 VTEP）。VXLAN 資料流量位於未加上標籤的 VLAN，並且會指派給專用 vDS。
+除了控制器之外，{{site.data.keyword.cloud_notm}} 自動化還會準備具有 NSX VIBS 的已部署 vSphere 主機，以便可以透過「VXLAN 通道端點 (VTEP)」來使用虛擬化網路。VTEP 會獲指派**專用 A** 可攜式 IP 位址範圍中的 VLAN 支援 IP 位址（這個 IP 位址範圍是指定給[實體基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)的*表 1. VLAN 及子網路摘要* 中所列的 VTEP）。VXLAN 資料流量位於未加上標籤的 VLAN，並且會指派給專用 vDS。
 
 然後，會指派區段 ID 儲存區，並將叢集裡的主機新增至傳輸區域。傳輸區域中只會使用單點播送，因為 {{site.data.keyword.cloud_notm}} 內未配置「網際網路群組管理通訊協定 (IGMP)」探查。
 
 之後，即會部署 NSX Edge Services Gateway 配對。無論如何，都會將一個閘道配對用於來自位於專用網路之自動化元件的出埠資料流量。對於 vCenter Server，會部署稱為客戶管理邊緣的第二個閘道，並為其配置連往公用網路的上行鏈路，以及指派給專用網路的介面。如需已部署為解決方案一部分之 NSX Edge Services Gateway 的相關資訊，請參閱 [NSX Edge on 	{{site.data.keyword.cloud_notm}} solution architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)。
 
-雲端管理者可以配置任何必要的 NSX 元件，例如「分散式邏輯路由器 (DLR)」、邏輯交換器及防火牆。可用的 NSX 特性取決於您在訂購實例時所選擇的 NSX 授權版本。如需相關資訊，請參閱 [VMware NSX 版本比較](appendix.html#vmware-nsx-edition-comparison)。對於 vCenter Server 實例，{{site.data.keyword.cloud_notm}} 自動化會將 vCenter Server Appliance 及 Platform Services Controller (PSC) 新增至 NSX Manager 分散式防火牆排除清單。
+雲端管理者可以配置任何必要的 NSX 元件，例如「分散式邏輯路由器 (DLR)」、邏輯交換器及防火牆。可用的 NSX 特性取決於您在訂購實例時所選擇的 NSX 授權版本。如需相關資訊，請參閱 [VMware NSX 版本比較](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-nsx-edition-comparison)。對於 vCenter Server 實例，{{site.data.keyword.cloud_notm}} 自動化會將 vCenter Server Appliance 及 Platform Services Controller (PSC) 新增至 NSX Manager 分散式防火牆排除清單。
 
 ### 分散式交換器設計
 

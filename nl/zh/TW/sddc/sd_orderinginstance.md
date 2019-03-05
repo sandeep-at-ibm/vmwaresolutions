@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-05"
 
 # 訂購 Cloud Foundation 實例
 
-若要使用標準運算、儲存空間及網路配置來部署統一軟體定義的資料中心 (SDDC) 平台，請訂購 VMware Cloud Foundation 實例。在起始訂購期間，您也可以新增服務，例如 [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html)，來進行災難回復。
+若要使用標準運算、儲存空間及網路配置來部署統一軟體定義的資料中心 (SDDC) 平台，請訂購 VMware Cloud Foundation 實例。在起始訂購期間，您也可以新增服務，例如 [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html)，來進行災難回復。
 
 ## 需求
 
 請確定您已完成下列作業：
-*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](../vmonic/useraccount.html)。
-*  您已檢閱 [Cloud Foundation 實例的需求及規劃](sd_planning.html)中的需求及考量。
+*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
+*  您已檢閱 [Cloud Foundation 實例的需求及規劃](/docs/services/vmwaresolutions/sddc/sd_planning.html)中的需求及考量。
 
 請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。此外，在部署實例之後，請不要變更實例名稱、根網域名稱、子網域標籤或主機名稱字首。{:important}
 
@@ -32,7 +32,7 @@ lastupdated: "2018-11-05"
 
 實例名稱必須滿足下列需求：
 * 只容許英數及橫線 (-) 字元。
-* 實例名稱的開頭及結尾必須是英數字元。
+* 實例名稱的開頭必須是英文字母，而且結尾必須是英數字元。
 * 實例名稱的長度上限為 10 個字元。
 * 實例名稱在您的帳戶中必須是唯一的。
 
@@ -81,6 +81,8 @@ lastupdated: "2018-11-05"
 |雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
+|四重 Intel Xeon E7-4820 v4 / 總計 40 核心，2.0 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
+|四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.1 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 ### Bare Metal Server 數目
 
@@ -93,7 +95,10 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 選取 **Skylake** 或 **Broadwell** Bare Metal Server 配置時，您可以自訂實例的 vSAN 儲存空間。請指定下列 vSAN 設定：
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
-* 如果您要新增超過所限制的 8 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。**高效能 Intel Optane** 選項僅適用於雙重 Intel Xeon Gold 5120 及 6140 處理器。
+* 如果您要新增超過所限制的 8 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。
+
+  **高效能 Intel Optane** 選項僅適用於 Skylake CPU 型號「雙重 Intel Xeon Gold 5120」及「雙重 Intel Xeon Gold 6140」。
+  {:note}
 
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
 
@@ -112,7 +117,7 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 
 子網域標籤必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
-*  子網域標籤的開頭及結尾必須是英數字元。
+*  子網域標籤的開頭必須是英文字母，而且結尾必須是英數字元。
 *  子網域標籤的長度上限為 10 個字元。
 *  子網域標籤在您的帳戶內必須是唯一的。
 
@@ -125,7 +130,8 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 * 最後一個字串只能包含英文字母。
 * 最後一個字串的長度範圍必須在 2 到 24 個字元之間。
 
-主機和 VM（虛擬機器）的 FQDN（完整網域名稱）長度上限為 50 個字元。網域名稱必須在這個長度上限以內。{:note}
+主機和 VM（虛擬機器）的 FQDN（完整網域名稱）長度上限為 50 個字元。網域名稱必須在這個長度上限以內。
+{:note}
 
 ### 網路設定的值格式
 
@@ -143,7 +149,7 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
   |單一登入 (SSO) 站台名稱| `<subdomain_label>`
   |PSC FQDN |`PSC-<subdomain_label>.<subdomain_label>.<root_domain>`。長度上限為 50 個字元。|  
 
-  SDDC Manager FQDN 不能是可公開解析的。否則，Cloud Foundation 實例配置可能會失敗，且無法回復。請先檢閱[選擇根網域名稱時的考量](../vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances)，再指定網域名稱。
+  SDDC Manager FQDN 不能是可公開解析的。否則，Cloud Foundation 實例配置可能會失敗，且無法回復。請先檢閱[選擇根網域名稱時的考量](/docs/services/vmwaresolutions/vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances)，再指定網域名稱。
 
 ### VLAN
 
@@ -164,13 +170,14 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
   * **主要子網路**已指派給實體主機，以進行公用網路存取。
   * **專用主要子網路**已指派給實體主機，以處理管理資料流量。
 
-**重要事項：**
+##### 重要
+
 * 確保所選取 VLAN 上的防火牆配置未封鎖管理資料流量。
 * 確保您選取的所有 VLAN 都在相同的 Pod 中，因為無法在混合 Pod VLAN 上佈建 ESXi 伺服器。
 
 ## 服務
 
-當您訂購 Cloud Foundation 實例時，也可以訂購附加程式服務。如需可用服務的相關資訊，請參閱 [Cloud Foundation 實例的服務](sd_planning.html#services-for-cloud-foundation-instances)。
+當您訂購 Cloud Foundation 實例時，也可以訂購附加程式服務。如需可用服務的相關資訊，請參閱 [Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc/sd_planning.html#services-for-cloud-foundation-instances)。
 
 ## 訂單摘要
 
@@ -215,7 +222,7 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 
 實例的部署會自動啟動。您會收到正在處理訂單的確認，並且可以檢視實例詳細資料來檢查部署的狀態。
 
-順利部署實例之後，會在 VMware 虛擬平台上安裝 [Cloud Foundation 實例的技術規格](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **SDDC-Cluster**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
+順利部署實例之後，會在 VMware 虛擬平台上安裝 [Cloud Foundation 實例的技術規格](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **SDDC-Cluster**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
 
 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 
@@ -238,10 +245,10 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 
 ### 相關鏈結
 
-* [註冊 {{site.data.keyword.cloud_notm}} 帳戶](../vmonic/signing_softlayer_account.html)
-* [檢視 Cloud Foundation 實例](sd_viewinginstances.html)
-* [新增、檢視及刪除 Cloud Foundation 實例的叢集](sd_addingviewingclusters.html)
-* [擴充及縮減 Cloud Foundation 實例的容量](sd_addingremovingservers.html)
-* [訂購、檢視及移除 Cloud Foundation 實例的服務](sd_addingremovingservices.html)
-* [刪除 Cloud Foundation 實例](sd_deletinginstance.html)
-* [關於 BYOL 的常見問題](../vmonic/faq_byol.html)
+* [註冊 {{site.data.keyword.cloud_notm}} 帳戶](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [檢視 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [新增、檢視及刪除 Cloud Foundation 實例的叢集](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
+* [擴充及縮減 Cloud Foundation 實例的容量](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [刪除 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [關於 BYOL 的常見問題](/docs/services/vmwaresolutions/vmonic/faq_byol.html)

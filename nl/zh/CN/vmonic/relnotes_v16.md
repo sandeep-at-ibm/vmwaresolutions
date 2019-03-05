@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-05-22"
 
@@ -21,7 +21,7 @@ lastupdated: "2017-05-22"
 *  新的硬件规范：**小型**或**标准**，具体取决于您的需求。
 *  可用于部署的新数据中心：**HKG02 - 中国香港特别行政区**、**OSL01 - 奥斯陆**、**SEO01 - 首尔**、**SNG01 - 新加坡**和 **SYD04 - 悉尼**。
 
-有关组件的完整列表，请参阅 [VMware Cloud Foundation 概述](../sddc/sd_cloudfoundationoverview.html)。
+有关组件的完整列表，请参阅 [VMware Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)。
 
 ## 对 VMware vCenter Server 实例的更新
 
@@ -61,7 +61,7 @@ lastupdated: "2017-05-22"
    * VMware HA（高可用性）配置为使用在管理 ESG 与客户管理的 ESG 之间共享的新端口组。
 
    此 ESG 针对所有实例硬件类型进行部署，客户可以修改相应配置。有关更多信息，请参阅以下主题：
-   *  [配置网络以将客户管理的 NSX Edge 服务网关用于 VM](../vcenter/vc_esg_config.html)
+   *  [配置网络以将客户管理的 NSX Edge 服务网关用于 VM](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html)
    *  [VMware NSX 文档](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## 易用性增强功能
@@ -71,4 +71,4 @@ lastupdated: "2017-05-22"
 *  通过引入可访问用户界面所有区域的左侧导航窗格，极大地改进了控制台上的主导航。您可以快速订购新实例，查看已部署的实例，复查系统通知，更改设置以及访问联机文档。
 *  可从左侧导航窗格访问的新**开始**页面，直接在控制台上提供了足够的详细信息，以帮助您就要订购的实例组件做出知情决策。在**开始**页面上，还将逐步引导您完成实例订购过程，从满足订购实例的所有先决条件（例如，必需的用户帐户）开始，一直到下订单结束。
 *  Cloud Foundation 实例和 vCenter Server 实例的摘要详细信息已合并到单个页面上，可通过左侧导航窗格上**已部署的实例**菜单来访问该页面。在该页面中，可以选择相应的选项卡来过滤 Cloud Foundation 实例或 vCenter Server 实例。
-* 如果实例上安装了 Zerto 灾难恢复，那么可通过一次单击直接从服务详细信息页面访问 Zerto 控制台。有关更多信息，请参阅[订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)和[订购、查看和除去 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html)。
+* 如果实例上安装了 Zerto 灾难恢复，那么可通过一次单击直接从服务详细信息页面访问 Zerto 控制台。有关更多信息，请参阅[订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)和[订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)。

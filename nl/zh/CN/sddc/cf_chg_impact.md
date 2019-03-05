@@ -2,27 +2,36 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-01-21"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # 关于更改 Cloud Foundation 工件的注意事项
 
 更改保留用于 {{site.data.keyword.vmwaresolutions_full}} 的用户、资源或子网可能会影响 VMware Cloud Foundation 实例的管理操作。
 
-**重要信息**：不要在 VMware vSphere Web Client 上的**用户和组**页面中更改 **ic4v-vCenter** 组的全局许可权。以下示例是全局许可权更改：更改用户名、删除用户或更改其密码。
+不要在 VMware vSphere Web Client 上的**用户和组**页面中更改 **ic4v-vCenter** 组的全局许可权。以下示例是全局许可权更改：更改用户名、删除用户或更改其密码。请使用 **customerroot** 主机用户标识来代替 **root** 主机用户标识。
+{:important}
 
 ## 特定于服务的用户帐户
+{: faq}
 
 每个服务在 vCenter Server 中都会创建一个内部用户帐户。此帐户是必需的，有了此帐户，与服务关联的管理操作才能连接到 vCenter Server 以对该服务执行操作。
 
-**重要信息**：为了防止发生中断和连接问题，如果更改此用户帐户的用户标识、密码或密码到期时间设置，请确保同时更新关联服务中的相应信息。
+为了防止发生中断和连接问题，如果更改此用户帐户的用户标识、密码或密码到期时间设置，请确保同时更新关联服务中的相应信息。
+{:important}
 
 此帐户的用户标识的格式为 `<service_name>-<truncated service_uuid>@test.local` 或 `<service_name>-<truncated service_uuid>@example-domain.local`。例如，Veeam on {{site.data.keyword.cloud_notm}} 服务用于连接到 vCenter Server 以执行安排的备份的用户标识为 `Veeam-<Veeam_uuid>@test.local`。
 
-**注**：`<service_name>` 和 `<service_uuid>` 一起被截断为 20 个字符。
+`<service_name>` 和 `<service_uuid>` 一起被截断为 20 个字符。
+{:note}
 
 ## Cloud Foundation 实例的 VMware 资源
 

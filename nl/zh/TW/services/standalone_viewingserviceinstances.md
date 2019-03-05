@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -38,7 +38,7 @@ lastupdated: "2018-11-08"
 
 ### 相關鏈結
 
-* [訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](standalone_orderingserviceinstances.html)
-* [刪除內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](standalone_deletingserviceinstances.html)
-* [HCX 術語名詞解釋](hcx_glossary.html)
+* [訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
+* [刪除內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
+* [HCX 術語名詞解釋](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources)

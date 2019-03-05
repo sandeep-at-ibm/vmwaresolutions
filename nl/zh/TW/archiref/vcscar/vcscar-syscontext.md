@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,9 +16,9 @@ lastupdated: "2018-11-14"
 
 下列是系統環境定義的核心元件：
 -	vCenter Server - VMware vCenter Server on {{site.data.keyword.cloud_notm}} 是 {{site.data.keyword.cloud_notm}} for VMware Services 實例，而此實例是從內部部署環境移轉虛擬機器 (VM) 的目標。它與內部部署「虛擬化」一起使用成為混合式環境，讓 VM 可以從某個環境移至另一個環境。
--	{{site.data.keyword.cloud_notm}} Private - ICP 是用來開發及管理容器化應用程式的應用程式平台。ICP 環境是整合環境，其中包括容器編排程式 Kubernetes、專用映像檔儲存庫、管理主控台、監視架構和圖形使用者介面，您可以集中在此介面中部署、管理、監視及調整應用程式。
--	{{site.data.keyword.cloud_notm}} Automation Manager - CAM 是準備供企業使用的現成「基礎架構即程式碼」平台，其提供單一窗格來同時佈建 VM 型工作負載與 Kubernetes 型工作負載（自動化工作負載佈建），不論 VM 及（或）容器和其基礎架構必要條件為何。 
--	Watson - Watson 是 IBM 的人工智慧及認知解決方案平台。 
+-	{{site.data.keyword.icpfull_notm}} - {{site.data.keyword.icpfull_notm}} 是一個應用程式平台，用於開發及管理容器化應用程式。{{site.data.keyword.icpfull_notm}} 環境是整合環境，其中包括容器編排程式 Kubernetes、專用映像檔儲存庫、管理主控台、監視架構和圖形使用者介面，您可以集中在此介面中部署、管理、監視及調整應用程式。
+-	{{site.data.keyword.cloud_notm}} Automation Manager - CAM 是準備供企業使用的現成「基礎架構即程式碼」平台，其提供單一窗格來同時佈建 VM 型工作負載與 Kubernetes 型工作負載（自動化工作負載佈建），不論 VM 或容器和其基礎架構必要條件為何。
+-	Watson - Watson 是 IBM 的人工智慧及認知解決方案平台。
 -	Watson Knowledge Studio - Watson Knowledge Studio 提供一個模型供 Watson Discovery 使用。
 
 ### 動作者
@@ -41,4 +41,4 @@ lastupdated: "2018-11-14"
 
 ## 相關鏈結
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

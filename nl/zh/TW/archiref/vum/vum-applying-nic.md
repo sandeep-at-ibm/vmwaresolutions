@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -23,7 +23,7 @@ ixgben 是一種原生驅動程式，可取代 vmklinux net-ixgbe 驅動程式�
   `esxcli system module set --enabled=true --module=ixgben`
 4. 執行下列 vCLI 指令，以重新啟動 vSphere ESXi 主機：
   `system shutdown reboot --reason “Install ixgben driver”`
-5. 在 vSphere ESXI 主機重新開機之後，使用 SSH 重新登入主機。發出下列 vCLI 指令，並確認 ixgben 驅動程式「已載入」（第一欄）且「已啟用」（第二欄）：
+5. 在使用 SSH 重新啟動 vSphere ESXI 主機之後，請重新登入主機，發出下列 vCLI 指令，然後確認 ixgben 驅動程式「已載入」（第一欄）且「已啟用」（第二欄）：
   `esxcli system module list |grep ixg`
 6. 如果已啟用驅動程式，則使用 vSphere Web Client 在「導覽器」窗格中選取主機，按一下滑鼠右鍵，然後選取**維護模式** > **結束維護模式**。選取下一部主機，並啟用驅動程式，直到完成所有主機為止。
 7. 如果變更未作用，而要回復，請執行下列指令：
@@ -34,18 +34,18 @@ ixgben 是一種原生驅動程式，可取代 vmklinux net-ixgbe 驅動程式�
 
 如果您需要回復，而且無法 SSH 至 vSphere ESXi 主機，則需要透過 {{site.data.keyword.cloud_notm}} 主控台視窗登入需要回復之主機的 KVM 主控台。
 
-使用 {{site.data.keyword.cloud_notm}} 控制視窗中列出的 ID 及密碼與 IPMI IP 位址，以登入 IPMI Web 介面。您需要透過 VPN 連接至主機所在的資料中心。如需相關資訊，請參閱[開始使用 VPN](../../../../infrastructure/iaas-vpn/getting-started.html)。
+使用 {{site.data.keyword.cloud_notm}} 控制視窗中列出的 ID 及密碼與 IPMI IP 位址，以登入 IPMI Web 介面。您需要透過 VPN 連接至主機所在的資料中心。如需相關資訊，請參閱[開始使用 VPN](/docs/infrastructure/iaas-vpn/getting-started.html)。
 
-1. 移至 vSphere ESXi 主機的「裝置詳細資料」、「遠端管理」頁面，然後選取**動作** > **KVM 主控台**。將開啟另一個視窗，供您輸入「IPMI 使用者」及「密碼」。
-2. 選取**遠端控制** > **iKVM/HTML5**，然後按一下 **iKVM/HTML5** 以重新啟動。現在，您將能夠存取 vSphere ESXi 主機的主控台。
+1. 移至 vSphere ESXi 主機的「裝置詳細資料」、「遠端管理」頁面，然後選取**動作** > **KVM 主控台**。會開啟另一個視窗，供您輸入「IPMI 使用者」及「密碼」。
+2. 選取**遠端控制** > **iKVM/HTML5**，然後按一下 **iKVM/HTML5** 以重新啟動。您現在可以存取 vSphere ESXi 主機的主控台。
 3. 如果主機正在回應指令，請在主控台中使用 **ALT-F1** 來存取 ESXi 主機主控台。請使用主機的認證來登入。
 4. 如果主機沒有回應，請使用 IPMI 功能表啟動主機電源。
-5. 在主機重新啟動時，請仔細監看 HTML5 主控台。當 ESXi 開始重新啟動時，您只有數秒鐘的時間可以進入回復模式。
+5. 在主機重新啟動時，請仔細監看 HTML5 主控台。當 ESXi 重新啟動時，您只有數秒鐘的時間可以進入回復模式。
 6. 同時按 **CMD + R** 鍵，以進入回復模式。
 7. 鍵入 **"Y"** 以進入回復模式，並使用舊版本啟動 ESXi 伺服器。
-8. 透過主控台監視其進度。這可能需要 10 - 20 分鐘。
+8. 透過主控台監視其進度。開機可能需要 10 - 20 分鐘。
 
 ### 相關鏈結
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) 上的 VMware 解決方案（示範）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

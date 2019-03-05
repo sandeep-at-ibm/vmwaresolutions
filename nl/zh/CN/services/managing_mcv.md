@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -19,4 +19,4 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 代表将通过您�
 
 ### 相关链接
 
-* [Mission Critical VMware on IBM Cloud 概述](mcv_overview.html)
+* [Mission Critical VMware on IBM Cloud 概述](/docs/services/vmwaresolutions/services/mcv_overview.html)

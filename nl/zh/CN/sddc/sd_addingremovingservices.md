@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -20,16 +20,16 @@ lastupdated: "2018-11-09"
 
 |服务名称|当前服务版本|实例版本|
 |----------------------------------------------------------------------------------------|------------------|
-|[F5 on {{site.data.keyword.cloud}}](../services/f5_considerations.html)|BIG-IP VE V13.1.1.2| V1.9 和更高版本 |
-|[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html)|300 系列| V1.8 和更高版本 |
-|[FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)|6.0.3| V2.0 和更高版本 |
-|[HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)|5.4.0| V2.3 和更高版本 |
-|[HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)|4.2.1| V2.3 和更高版本 |
-|[HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html)|4.2|V2.5 和更高版本|
-|[IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](../services/spp_considerations.html)|10.1.1 补丁 1| V2.2 和更高版本 |
-|[KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_considerations.html)|   | V2.2 和更高版本 |
-|[Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)|9.5u3| V1.8 和更高版本 |
-|[Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)|6.0 Update 3| V1.2 和更高版本 |
+|[F5 on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/f5_considerations.html)|BIG-IP VE V13.1.1.2| V1.9 和更高版本 |
+|[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_considerations.html)|300 系列| V1.8 和更高版本 |
+|[FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)|6.0.3| V2.0 和更高版本 |
+|[HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html)|5.4.0| V2.3 和更高版本 |
+|[HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_considerations.html)|4.2.1| V2.3 和更高版本 |
+|[HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_considerations.html)|4.2|V2.5 和更高版本|
+|[IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_considerations.html)|10.1.2| V2.2 和更高版本 |
+|[KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html)|2.0|不适用|
+|[Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html)|9.5u3| V1.8 和更高版本 |
+|[Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html)|6.0 Update 3| V1.2 和更高版本 |
 
 ## 向 Cloud Foundation 实例添加服务的过程
 
@@ -61,8 +61,9 @@ lastupdated: "2018-11-09"
 
 服务除去成功完成后，系统将通过电子邮件通知您，并且该服务会从实例的**服务**页面中除去。
 
-**注意**：在所除去服务的 {{site.data.keyword.cloud_notm}} 计费周期结束之前，仍然会对您计费。
+在所除去服务的 {{site.data.keyword.cloud_notm}} 计费周期结束之前，仍然会对您计费。
+{:note}
 
 ### 相关链接
 
-* [常见问题](../vmonic/faq.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)

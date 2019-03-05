@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,7 +35,7 @@ lastupdated: "2018-09-20"
 
 ### 已部署在 2.0 版或更新版本中的 Cloud Foundation 實例
 
-若要套用 VMware vSphere 6.5 及 VMware vCenter Server 6.5 所需的修補程式，您必須將 Cloud Foundation 實例升級至最新 VMware 修補程式軟體組。對於所有現有的實例及 ESXi 伺服器，會提示您從 {{site.data.keyword.vmwaresolutions_full}} 主控台的**更新及修補程式**頁面套用修補程式。如需相關資訊，請參閱[將更新套用至 Cloud Foundation 實例](../sddc/sd_applyingupdates.html)。
+若要套用 VMware vSphere 6.5 及 VMware vCenter Server 6.5 所需的修補程式，您必須將 Cloud Foundation 實例升級至最新 VMware 修補程式軟體組。對於所有現有的實例及 ESXi 伺服器，會提示您從 {{site.data.keyword.vmwaresolutions_full}} 主控台的**更新及修補程式**頁面套用修補程式。如需相關資訊，請參閱[將更新套用至 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)。
 
 ### 已部署在 2.0 版或更新版本中的 VMware vSphere 叢集
 
@@ -63,6 +63,6 @@ Cloud Foundation 實例、vCenter Server 實例以及 1.9 版或更早版本中�
 
 ### 相關鏈結
 
-* [將更新套用至 Cloud Foundation 實例](../sddc/sd_applyingupdates.html)
+* [將更新套用至 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)
 * [針對最新安全漏洞的安全防範](https://www.ibm.com/blogs/bluemix/2018/01/ibm-cloud-spectre-meltdown-vulnerabilities/)
 * [VMware 產品修補程式站台](https://my.vmware.com/group/vmware/patch)

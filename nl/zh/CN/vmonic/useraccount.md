@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-10-26"
 ## 开始之前
 
 * 只能将一个 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户链接到一个 {{site.data.keyword.cloud_notm}} 用户帐户。
-* 要使用的 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](slaccountrequirement.html)。
+* 要使用的 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
 * 如果 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户中的 API 密钥发生更改，那么必须在 {{site.data.keyword.vmwaresolutions_short}} 控制台的**设置**页面上更新密钥。
 
    **重要信息**：您负责确保**设置**页面上保存的 API 密钥正确且最新。否则，需要 API 密钥验证的操作可能会失败。
@@ -38,7 +38,7 @@ lastupdated: "2018-10-26"
 3. 在 **IBM Cloud 基础架构凭证**区域中，输入 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户的用户名和 API 密钥：
    * 如果 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户和 {{site.data.keyword.cloud_notm}} 帐户已链接，请单击**检索**以自动输入凭证。
    * 如果 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户和 {{site.data.keyword.cloud_notm}} 帐户未链接，那么必须进行链接。登录 [{{site.data.keyword.cloud_notm}} 基础架构客户门户网站](https://control.softlayer.com/)，按控制台上的指示信息操作以获取并输入凭证。
-   * 如果您没有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户，请[注册帐户](../vmonic/signing_softlayer_account.html)，然后按控制台上的指示信息操作以获取并输入凭证。
+   * 如果您没有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户，请[注册帐户](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)，然后按控制台上的指示信息操作以获取并输入凭证。
 4. 单击**保存凭证**。
 
 ## 结果
@@ -51,8 +51,8 @@ lastupdated: "2018-10-26"
 
 ### 相关链接
 
-* [常见问题](faq.html)
-* [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
-* [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
-* [通知](notifications.html)
-* [SoftLayer API](../../../customer-portal/cpapi.html){:new_window}
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [通知](/docs/services/vmwaresolutions/vmonic/notifications.html)
+* [SoftLayer API](/docs/customer-portal/cpapi.html){:new_window}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -86,10 +86,6 @@ lastupdated: "2018-10-29"
 |NSX Manager IP|NSX Manager 的 IP 地址。|
 |NSX Manager FQDN|NSX Manager 标准域名 (FQDN)。|
 |NSX Manager HTTP|用于访问 NSX Manager Web 控制台的用户名和密码。|
-|PSC IP|Platform Services Controller (PSC) 的 IP 地址。|
-|PSC FQDN|PSC 标准域名 (FQDN)。|    
-|PSC ADMIN|可用于访问 PSC Web 控制台的 VMware vCenter Single Sign-On 用户名和密码。|
-|PSC SSH|可用于通过 SSH 连接访问 PSC VM 的用户名和密码。|
 |vCenter IP|vCenter Server 的 IP 地址。|
 |vCenter FQDN|vCenter Server 标准域名 (FQDN)。|
 |vCenter ADMIN|可用于通过 vSphere Web Client 登录到 vCenter Server 的 VMware vCenter Single Sign-On 用户名和密码。|
@@ -108,7 +104,7 @@ lastupdated: "2018-10-29"
 
 ## 发生错误时要执行的操作
 
-如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持人员](../vmonic/trbl_support.html)。
+如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
 
 ## 后续步骤
 
@@ -118,13 +114,13 @@ lastupdated: "2018-10-29"
 {:important}
 
 查看以下主题，以获取有关帮助您完成登录指示信息的信息：
-*  有关访问 vSphere Web Client 之前的需求和必需步骤，请参阅[连接到 vSphere Web Client 时发生超时](../vmonic/trbl_timeout_vc_console.html)。
+*  有关访问 vSphere Web Client 之前的需求和必需步骤，请参阅[连接到 vSphere Web Client 时发生超时](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html)。
 *  有关使用 VPN 登录到 {{site.data.keyword.cloud_notm}} 基础架构专用网络的访问点的列表，请参阅 [VPN 访问](http://www.softlayer.com/vpn-access){:new_window}。
-*  如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](../vmonic/trbl_deploy_ovf.html)。
+*  如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html)。
 
 ### 相关链接
 
-* [订购 vCenter Server with Hybridity Bundle 实例](vc_hybrid_orderinginstance.html)
-* [添加、查看和删除 vCenter Server with Hybridity Bundle 实例的集群](vc_hybrid_addingviewingclusters.html)
-* [扩展和收缩 vCenter Server with Hybridity Bundle 实例的容量](vc_hybrid_addingremovingservers.html)
-* [删除 vCenter Server with Hybridity Bundle 实例](vc_hybrid_deletinginstance.html)
+* [订购 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [添加、查看和删除 vCenter Server with Hybridity Bundle 实例的集群](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
+* [扩展和收缩 vCenter Server with Hybridity Bundle 实例的容量](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [删除 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)

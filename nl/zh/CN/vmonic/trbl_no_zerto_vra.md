@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,4 +22,4 @@ lastupdated: "2018-09-25"
 
 要访问 Zerto 控制台，请单击实例的**服务**选项卡中的 Zerto 卡，单击**查看详细信息**，然后单击**查看 Zerto 控制台**。
 
-有关联系 IBM 支持人员的更多信息，请参阅[联系 IBM 支持人员](trbl_support.html)。
+有关联系 IBM 支持人员的更多信息，请参阅[联系 IBM 支持人员](/docs/services/vmwaresolutions//vmonic/trbl_support.html)。

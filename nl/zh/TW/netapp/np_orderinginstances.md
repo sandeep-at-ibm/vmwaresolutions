@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -19,8 +19,8 @@ lastupdated: "2018-10-30"
 ## 需求
 
 請確定您已完成下列作業：
-*  您已在**設定**頁面上配置 {{site.data.keyword.cloud}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](../vmonic/useraccount.html)。
-*  您已檢閱 [NetApp ONTAP Select 實例的需求及規劃](np_planning.html)中的需求及考量。
+*  您已在**設定**頁面上配置 {{site.data.keyword.cloud}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
+*  您已檢閱 [NetApp ONTAP Select 實例的需求及規劃](/docs/services/vmwaresolutions/netapp/np_planning.html)中的需求及考量。
 
 請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。{:important}
 
@@ -32,7 +32,7 @@ lastupdated: "2018-10-30"
 
 實例名稱必須滿足下列需求：
 * 只容許英數及橫線 (-) 字元。
-* 實例名稱的開頭及結尾必須是英數字元。
+* 實例名稱的開頭必須是英文字母，而且結尾必須是英數字元。
 * 實例名稱的長度上限為 10 個字元。
 * 實例名稱在您的帳戶中必須是唯一的。
 
@@ -51,7 +51,7 @@ lastupdated: "2018-10-30"
 
 子網域標籤必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
-*  子網域標籤的開頭及結尾必須是英數字元。
+*  子網域標籤的開頭必須是英文字母，而且結尾必須是英數字元。
 *  子網域標籤的長度上限為 10 個字元。
 *  子網域標籤在您的帳戶內必須是唯一的。
 
@@ -111,7 +111,7 @@ lastupdated: "2018-10-30"
 
 實例的部署會自動啟動。您會收到正在處理訂單的確認，並且可以檢視實例詳細資料來檢查部署的狀態。
 
-順利部署實例之後，會在 VMware 虛擬平台上安裝 [NetApp ONTAP Select 實例的技術規格](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)中所說明的元件。
+順利部署實例之後，會在 VMware 虛擬平台上安裝 [NetApp ONTAP Select 實例的技術規格](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)中所說明的元件。
 
 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 
@@ -129,7 +129,7 @@ lastupdated: "2018-10-30"
 
 ### 相關鏈結
 
-* [檢視 NetApp ONTAP Select 實例](np_viewinginstances.html)
-* [刪除 NetApp ONTAP Select 實例](np_deletinginstance.html)
+* [檢視 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [刪除 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
 * [NetApp ONTAP 文件中心](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
 * [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -36,6 +36,6 @@ IMI 售前代表将通过您的 {{site.data.keyword.cloud_notm}} 联系信息与
 
 ### 相关链接
 
-* [订购、查看和除去 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
-* [常见问题](../vmonic/faq.html)
+* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)

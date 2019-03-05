@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -43,15 +43,15 @@ VMware Cloud Foundation 及 vCenter Server 環境（以 {{site.data.keyword.vmwa
 
 ## 預防支援
 
-### 起始佈建
+### 起始佈建的預防支援
 
 * 在實例或服務的起始訂購及佈建期間，「IBM 支援中心」可能會在未事先通知客戶的情況下存取客戶實例及資訊，以確保適當履行訂單。
 * 除了訂購、佈建及安裝程序之外，「IBM 支援中心」還會主動監視新增主機這類的實例生命週期作業。
 * 為了解決已發生或未來可能發生的問題，「IBM 支援中心」可能會採取一些動作，包括但不限於：檢閱客戶訂單詳細資料、重新啟動自動化工作、執行「作業系統」重新載入作業，或使用所提供的客戶 IBM Cloud 使用者名稱及 API 金鑰來開啟 IBM Cloud 問題單。
 
-### 次日作業
+### 穩定狀態作業的預防支援
 
-* 在少數情況下，「IBM 支援中心」可能需要在次日作業期間存取用戶端實例，以對實例問題進行預防性疑難排解，或驗證所佈建服務或元件的功能。
+* 在少數情況下，「IBM 支援中心」可能需要在穩定狀態作業期間存取用戶端實例，以對實例問題進行預防性疑難排解，或驗證所佈建服務或元件的功能。
 * 此存取是透過 IBM Cloud 內部支援網路進行。未經客戶事先同意，「IBM 支援中心」不會修改實例配置。
 * 存取是針對 VMware 管理元件及/或 IBM Cloud 管理元件，決不會存取用戶端虛擬機器或應用程式。
 
@@ -62,7 +62,7 @@ VMware Cloud Foundation 及 vCenter Server 環境（以 {{site.data.keyword.vmwa
 * 由於在團隊層次維護卓越技術專門知識需要有專業等級，因此在解決特定軟體問題時，有時需要涉及多個支援團隊。這很容易處理，因為我們的支援團隊都是透過網路連結，來共同解決發生的任何問題。
 * 為了調查問題，IBM 可能需要存取您系統上關於失敗的資訊，或需要重建失敗以取得其他資訊。
 * 客戶產生的支援問題單可作為確認通知：「IBM 支援中心」可以存取 VMware 管理層，以進行調查、除錯及分類。如果需要對環境進行中斷維護或變更，「IBM 支援中心」會在變更管理處理程序中，透過問題單要求客戶提供其他記載確認。
-* 如需支援問題單的相關資訊，請參閱[軟體支援手冊](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html)及[與 IBM 支援中心聯絡](../vmonic/trbl_support.html)。
+* 如需支援問題單的相關資訊，請參閱[軟體支援手冊](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html)及[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
 
 ## 客戶責任
 
@@ -72,7 +72,7 @@ VMware Cloud Foundation 及 vCenter Server 環境（以 {{site.data.keyword.vmwa
 * 在起始部署時，供應項目的自動化及客戶的帳戶是分開的。我們容許並鼓勵客戶變更入口網站中 IBM 提供的所有密碼。
 * vCenter 存取和認證是在起始部署期間建立並提供給客戶。「IBM 支援中心」必須保留對管理層的完整存取權，以提供生命週期管理及支援我們的客戶，這是我們供應項目需求的一部分。
 * 如果任何時候變更了認證（例如密碼），「IBM 支援中心」可能無法再協助客戶回復遺失或忘記的認證，甚至是對客戶環境進行疑難排解。
-* 如需此問題及相關問題之重要性的相關資訊，請參閱[變更 NSX 元件密碼時的考量](vc_networkingonvcenterserver.html#considerations-when-changing-passwords-for-nsx-components)及[有關變更 vCenter Server 構件的考量](vcenter_chg_impact.html)。
+* 如需此問題及相關問題之重要性的相關資訊，請參閱[變更 NSX 元件密碼時的考量](/docs/services/vmwaresolutions/vcenter/vc_networkingonvcenterserver.html#considerations-when-changing-passwords-for-nsx-components)及[有關變更 vCenter Server 構件的考量](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)。
 
 ### 通訊與疑難排解
 
@@ -87,7 +87,7 @@ VMware Cloud Foundation 及 vCenter Server 環境（以 {{site.data.keyword.vmwa
 
 * 「雲端服務」的管理：客戶應負責應用程式之管理、作業、維護及安全，包括基礎中介軟體。
 * 服務完整性與可用性：IBM 會將針對本「雲端服務」所偵測到之所有網路侵入通知轉遞給客戶。由客戶負責確定所報告之各項通知的影響。如有硬體故障，將通知客戶。OS 或軟體故障之監視及回應由客戶負責，客戶得於必要時尋求 IBM 支援。
-* 活動記載：客戶需視需要負責「OS/系統」及「資料庫/應用程式」的活動記載。  
+* 活動記載：客戶需視需要負責「OS/系統」及「資料庫/應用程式」的活動記載。
 * 加密：客戶需視需要負責配置及管理所有加密（包括靜態資料及傳輸中資料）。
 * 企業永續性與災難回復：客戶需視需要負責配置及管理所有企業永續及災難回復程序。
 
@@ -111,12 +111,12 @@ VMware Cloud Foundation 及 vCenter Server 環境（以 {{site.data.keyword.vmwa
 * 客戶提交訂單之後，即表示同意這些條款，因而授權同意「IBM 支援中心」在沒有事先通知的情況下隨時存取其實例，以快速解決環境相關問題或防止未來的失敗。
 * 此同意適用於目前在整個生命週期中訂購的所有實例。未來佈建之實例及實例元件，可能需要其他同意。
 
-## 次日作業
+## 穩定狀態作業
 
 如果客戶未獲授權同意在起始佈建及訂購中進行實例的預防支援，則必要時，客戶必須在任何未來服務問題單中包括明確同意。同意的聲明必須遵循已設定的準則，否則被視為無效。
 
 ### 相關鏈結
 
-* [vCenter Server 概觀](vc_vcenterserveroverview.html)
-* [vCenter Server with Hybridity Bundle 概觀](vc_hybrid_overview.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
+* [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [vCenter Server with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

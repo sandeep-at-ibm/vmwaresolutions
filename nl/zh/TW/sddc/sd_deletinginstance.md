@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -50,9 +50,9 @@ lastupdated: "2018-10-29"
 
 ### 相關鏈結
 
-* [刪除多站台配置中的 Cloud Foundation 實例](sd_deletinginstance_multi.html)
-* [訂購 Cloud Foundation 實例](sd_orderinginstance.html)
-* [檢視 Cloud Foundation 實例](sd_viewinginstances.html)
-* [擴充及縮減 Cloud Foundation 實例的容量](sd_addingremovingservers.html)
-* [刪除多站台配置](sd_deletinginstance_multi.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
+* [刪除多站台配置中的 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [檢視 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [擴充及縮減 Cloud Foundation 實例的容量](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [刪除多站台配置](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

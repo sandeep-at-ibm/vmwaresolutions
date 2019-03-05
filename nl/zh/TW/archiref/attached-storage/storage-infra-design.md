@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -34,7 +34,7 @@ lastupdated: "2018-11-13"
 
 ### IBM Cloud 網路概觀
 
-{{site.data.keyword.cloud_notm}} 的實體網路分成三個不同的網路：公用、專用和管理。如需公用、專用和管理網路的相關資訊，請參閱[解決方案概觀](../solution/solution_overview.html)。
+{{site.data.keyword.cloud_notm}} 的實體網路分成三個不同的網路：公用、專用和管理。如需公用、專用和管理網路的相關資訊，請參閱[解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)。
 
 如需 {{site.data.keyword.cloud_notm}} 網路的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 網路](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}。
 
@@ -46,7 +46,7 @@ lastupdated: "2018-11-13"
 
 ### VLAN
 
-如需 VLAN 的相關資訊，請參閱[實體基礎架構設計](../solution/design_physicalinfrastructure.html)中的_實體網路設計_ 一節。
+如需 VLAN 的相關資訊，請參閱[實體基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)中的_實體網路設計_ 一節。
 
 ## 實體儲存空間設計
 
@@ -65,10 +65,10 @@ IOPS 的範圍是從 100 到 48,000，可使用範圍從 20 GB - 12 TB 的儲存
 在訂購 NFS 共用之後，可以調整其大小或重新配置，以容許更多或更少 IOPS。
 {:note}
 
-如需詳細的 IOPS 選項，請參閱[訂購 vCenter Server 實例](../../vcenter/vc_orderinginstance.html)中的_儲存空間設定_ 一節。
+如需詳細的 IOPS 選項，請參閱[訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)中的_儲存空間設定_ 一節。
 
 除了儲存空間層級之外，{{site.data.keyword.cloud_notm}} 耐久性儲存空間還支援廣泛的應用程式需求選擇，包括 Snapshot 和抄寫，以及 {{site.data.keyword.CloudDataCent_notm}} 位置的靜態加密。
 
 ### 相關鏈結
 
-* [解決方案概觀](../solution/solution_overview.html)
+* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

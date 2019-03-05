@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-29"
 
 作为解决方案的一部分，您可以选择部署 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 附加组件服务。Veeam 和 IBM Spectrum Protect Plus 可帮助满足备份管理组件的需求。
 
-这些附加组件服务与 {{site.data.keyword.cloud_notm}} 耐久性存储器一起部署。这些服务可帮助您备份工作负载和管理组件。 [IBM Spectrum Protect Plus 体系结构概述](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}和 [Veeam 体系结构概述](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}提供了有关规划部署和调整部署大小的有用指南。您还可以为 Veeam 部署请求[受管服务](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed)。
+这些附加组件服务与 {{site.data.keyword.cloud_notm}} 耐久性存储器一起部署。这些服务可帮助您备份工作负载和管理组件。 [IBM Spectrum Protect Plus 体系结构概述](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}和 [Veeam 体系结构概述](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}提供了有关规划部署和调整部署大小的有用指南。您还可以为 Veeam 部署请求[受管服务](/docs/services/vmwaresolutions/services/managing_veeam_services.html)。
 
 不同的解决方案组件需要不同的备份策略。一些组件使用映像级别的备份进行保护，另一些组件通过将基于文件的备份用于其配置和数据进行保护。
 
@@ -34,7 +34,7 @@ lastupdated: "2018-10-29"
 
 VMware vCenter Server 和 PSC 提供了使用各种协议[将数据库和配置导出到文件服务器的设备管理用户界面和 API](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window}。VMware 记录了一个示例，说明如何将这种情况配置为直接在 vCenter Server Appliance 和 PSC 上[作为定时作业定期运行](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window}，您可以对其进行调整以适合您的使用情况。
 
-您必须使用此技术分别备份 vCenter Server Appliance 和 PSC。熟悉并计划 VMware 记录的注意事项和限制。另外，计划文件服务器上文件备份的定期轮换和到期时间。
+如果您具有外部 PSC，那么必须使用此技术分别备份 vCenter Server Appliance 和 PSC。如果您具有嵌入式 PSC，那么 PSC 备份会包含在 vCenter 备份中。熟悉并计划 VMware 记录的注意事项和限制。另外，计划文件服务器上文件备份的定期轮换和到期时间。
 
 VMware 要求备份位置为空文件夹，因此您应该计划备份轮换或自动化，使该位置保留为空以用于每个后续备份作业。
 {:note}
@@ -74,7 +74,7 @@ VMware 要求备份位置为空文件夹，因此您应该计划备份轮换或�
 复原管理备份时有一些特殊注意事项：
 
 * 对于 vCenter 和 PSC，VMware 提供了一个安装程序，可以部署新的虚拟设备以及从备份复原配置。
-* 从备份复原设备时，安装程序会根据提供的备份信息来检测设备的类型（是 vCenter Server 还是 PSC）。
+* 从备份复原设备时，安装程序会根据提供的备份信息来检测设备的类型（是 vCenter Server、PSC 还是具有嵌入式 PSC 的 vCenter）。
 * 因为您是直接部署到其中一个主机，所以可能无法部署到分布式交换机或端口组。为了部署恢复的设备，您可能需要创建临时标准交换机和端口组，然后将其中一个 vmnic 临时迁移到此交换机，以便为 VM 提供网络连接。部署之后，可以将 VM 迁移到分布式端口组，然后将 vmnic 还给 dvSwitch。
 * 对于 NSX，在从备份复原配置之前，可能需要重新部署 NSX Manager 和 NSX Controller。
 * 确保您熟悉针对 vCenter 备份和复原的 VMware 注意事项及限制。
@@ -85,6 +85,6 @@ VMware 要求备份位置为空文件夹，因此您应该计划备份轮换或�
 
 ### 相关链接
 
-* [解决方案概述](solution_overview.html)
-* [设计概述](design_overview.html)
-* [扩展容量](solution_scaling.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [设计概述](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [缩放容量](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)

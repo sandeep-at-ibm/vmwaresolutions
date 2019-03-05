@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-09-27"
 表 1. Cloud Foundation、vCenter Server、vCenter Server with Hybridity Bundle 和 vSphere 集群支持的功能
 
 |功能|Cloud Foundation|vCenter Server| vCenter Server with Hybridity|VMware vSphere|
-|:----------------------------------|:--------------------|:---------------|:-------------------------|:-------------- |
+|:---|:---|:---|:---|:--- |
 |基于 {{site.data.keyword.IBM}} 高级自动化技术<sup>1</sup>|是|是|是|否。自行构建和配置|
 |存储选项|vSAN|vSAN 或共享文件级别存储器 (NFS)|vSAN|vSAN 或共享文件级别存储器 (NFS)|
 |初始集群中的 ESXi 服务器数|4| 对于 vSAN 为 4 个，对于 NFS 最少为 2 个（建议 3 个） |4|1 个用于扩展现有集群，4 个用于新的 vSAN 集群，至少 3 个用于使用 NFS 的新集群|
@@ -24,7 +24,7 @@ lastupdated: "2018-09-27"
 |添加 ESXi 服务器|支持|支持|支持|支持。不包含自动化配置|
 |除去 ESXi 服务器|支持|支持|支持|支持。不包含自动化配置|
 |多集群支持| 五个集群 | 十个集群 | 十个集群 |支持。不包含自动化配置|
-|客户机管理的 VMware 堆栈更新和修补|VMware 更新|不包含|不包含|不包含|
+|客户机管理的 VMware 堆栈更新和修补|自动辅助更新：<br/>SDDC Manager|客户机管理的更新：<br/>本机 VMware Tools (VMware Update Manager)|客户机管理的更新：<br/>本机 VMware Tools (VMware Update Manager)|客户机管理的更新：<br/>本机 VMware Tools (VMware Update Manager)|
 |备份与复原|手动使用 IBM Spectrum Protect Plus 或 Veeam|手动使用 IBM Spectrum Protect Plus 或 Veeam|手动使用 IBM Spectrum Protect Plus 或 Veeam|不包含备份和复原解决方案|
 |软件定义的联网|NSX Enterprise|NSX Base、Advanced 或 Enterprise|NSX Advanced 或 Enterprise|NSX Standard、Base 或 Enterprise。不包含自动化配置|
 |vSphere 和 vSAN 的 BYOL|每个集群完全支持|每个集群完全支持|不支持|支持|
@@ -33,19 +33,19 @@ lastupdated: "2018-09-27"
 |vSAN 许可证版本|vSAN Advanced 或 Enterprise|vSAN Advanced 或 Enterprise|vSAN Advanced 或 Enterprise|vSAN Advanced 或 Enterprise|
 |附加组件服务|支持，不包括 HCX on {{site.data.keyword.cloud_notm}}。|支持，不包括 HCX on {{site.data.keyword.cloud_notm}}。可升级到 vCenter Server with Hybridity Bundle。|支持，包括 HCX on {{site.data.keyword.cloud_notm}}。|此解决方案的自动化不支持，但您可以使用并安装自己的软件。|
 
-**注：**
+## 注释
 
 <sup>1</sup> 根据经过验证的设计并在部署期间进行过验证。
 
-<sup>2</sup> 可以将 vSAN 集群中的 ESXi 服务器数增大到最大值 64 个。有关更多信息，请参阅[关于 ESXi 服务器的常见问题](faq_esxi.html)中的_可以向集群添加多少个 ESXi 服务器？_。
+<sup>2</sup> 可以将 vSAN 集群中的 ESXi 服务器数增大到最大值 64 个。有关更多信息，请参阅[关于 ESXi 服务器的常见问题](/docs/services/vmwaresolutions/vmonic/faq_esxi.html)中的_可以向集群添加多少个 ESXi 服务器？_。
 
 ### 相关链接
 
-* [常见问题](faq.html)
-* [Cloud Foundation 概述](../sddc/sd_cloudfoundationoverview.html)
-* [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server Hybridity 概述](../vcenter/vc_hybrid_overview.html)
-* [VMware vSphere 概述](../vsphere/vs_vsphereclusteroverview.html)
-* [Cloud Foundation BOM](../sddc/sd_bom.html)
-* [vCenter Server BOM](../vcenter/vc_bom.html)
-* [VMware vSphere BOM](../vsphere/vs_bom.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [vCenter Server Hybridity 概述](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [VMware vSphere 概述](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)
+* [Cloud Foundation BOM](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [vCenter Server BOM](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [VMware vSphere BOM](/docs/services/vmwaresolutions/vsphere/vs_bom.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,7 +41,7 @@ lastupdated: "2018-11-05"
 
 在 {{site.data.keyword.vmwaresolutions_short}} 主控台上，您可以使用新增及移除 ESXi 伺服器功能，來擴充及縮減實例的容量。此外，還可以使用在受管理環境中套用更新及升級 VMware 元件這類的生命週期管理功能。
 
-如需架構的相關資訊，請參閱[解決方案概觀](../archiref/solution/solution_overview.html)。
+如需架構的相關資訊，請參閱[解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)。
 
 ## Cloud Foundation 實例的技術規格
 
@@ -53,7 +53,8 @@ Cloud Foundation 實例中包括下列元件。
 
 您可以使用下列其中一個配置來訂購 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}：
 *  **Skylake**：2-CPU Intel Skylake 產生伺服器（Intel Xeon 4100/5100/6100 系列），搭配您選取的 CPU 型號及 RAM 大小。   
-*  **Broadwell**：2-CPU Intel Broadwell 產生伺服器（Intel Xeon E5-2600 v4 系列），搭配您選取的 CPU 型號及 RAM 大小。   
+*  **Broadwell**：2-CPU Intel Broadwell 產生伺服器（Intel Xeon E5-2600/E7-4800 系列），搭配您選取的 CPU 型號及 RAM 大小。
+
 如果您計劃使用 vSAN 儲存空間，則配置需要四個 {{site.data.keyword.baremetal_short}}。{:note}
 
 ### 網路
@@ -61,7 +62,7 @@ Cloud Foundation 實例中包括下列元件。
 訂購了下列網路元件：
 * 10 Gbps 雙重公用及專用網路上行鏈路
 * 三個 VLAN（虛擬 LAN）：一個公用 VLAN 和兩個專用 VLAN
-* 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，其由 IBM 部署為管理網路拓撲的一部分。IBM 管理虛擬機器會利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[管理服務 NSX Edge 是否有安全風險？](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，其由 IBM 部署為管理網路拓撲的一部分。IBM 管理虛擬機器會利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[管理服務 NSX Edge 是否有安全風險？](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
   您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 Cloud Foundation 實例。此外，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
 {:important}
@@ -98,7 +99,7 @@ Cloud Foundation 實例中包括下列元件。
 
 ### 擴充節點的硬體
 
-一部具有 [Cloud Foundation 實例的技術規格](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中所呈現之配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server。
+一部具有 [Cloud Foundation 實例的技術規格](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中所呈現之配置的 {{site.data.keyword.cloud_notm}} Bare Metal Server。
 
 ### 擴充節點的授權與費用
 
@@ -121,9 +122,9 @@ Cloud Foundation 實例中包括下列元件。
 
 ### 相關鏈結
 
-* [Cloud Foundation 軟體資料清單](sd_bom.html)
-* [規劃 Cloud Foundation 實例](sd_planning.html)
-* [訂購 Cloud Foundation 實例](sd_orderinginstance.html)
+* [Cloud Foundation 軟體資料清單](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [規劃 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
 * [VMware vSphere 文件中心](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [VMware NSX 6 文件中心](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [EVC 及 CPU 相容性常見問題](https://kb.vmware.com/s/article/1005764)

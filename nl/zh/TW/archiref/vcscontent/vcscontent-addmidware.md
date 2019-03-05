@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2019-01-23"
 
 ---
 
 # 將中介軟體重構及新增至 IBM Cloud Private
 
-既然 Stock Trader 正在容器中執行，而且 Jane 滿意現行微服務，她及 Todd 就可以處理如何利用額外的功能來加強應用程式。藉由重構 Stock Trader 微服務來處理增加的活動及可調整性，他們都會看到將中介軟體新增至 {{site.data.keyword.cloud}} Private (ICP) 的需求。某個中介軟體已存在於其資料中心，因此，在新增某個新中介軟體的情況下，會成為更換平台練習。
+既然 Stock Trader 正在容器中執行，而且 Jane 滿意現行微服務，她及 Todd 就可以處理如何利用額外的功能來加強應用程式。藉由重構 Stock Trader 微服務來處理增加的活動及可調整性，他們都會看到將中介軟體新增至 {{site.data.keyword.cloud}} Private 的需求。某個中介軟體已存在於其資料中心，因此，在新增某個新中介軟體的情況下，會成為更換平台練習。
 
 圖 1. 重構 Stock Trader
 ![Stock Trader 重構](vcscontent-refactor.svg)
@@ -19,18 +19,18 @@ lastupdated: "2018-11-15"
 
 ## 內容選項
 
-ICP 具有各種內容選擇，而 Todd 及 Jane 需要決定哪一個最符合其需求。Todd 查看 ICP 型錄時，可試用大部分內容，但部分內容需要從 Passport Advantage 採購及下載。
+{{site.data.keyword.cloud_notm}} Private 具有各種內容選擇，而 Todd 及 Jane 需要決定哪一個最符合其需求。Todd 查看 {{site.data.keyword.cloud_notm}} Private 型錄時，可試用大部分內容，但部分內容需要從 Passport Advantage 採購及下載。
 
 * 工具鏈及運行環境
-  -	UrbanCode Deploy
-  -	Microclimate
-  -	Jenkins（開放程式碼）
-  -	IBM WebSphere Liberty（MicroProfile、Web 設定檔、Java Platform Enterprise Edition 設定檔）
-  -	Open Liberty（開放程式碼）
-  -	Node.js 運行環境（開放程式碼）
-  -	Swift 運行環境（開放程式碼）
+  - UrbanCode Deploy
+  - Microclimate
+  - Jenkins（開放程式碼）
+  - IBM WebSphere Liberty（MicroProfile、Web 設定檔、Java Platform Enterprise Edition 設定檔）
+  - Open Liberty（開放程式碼）
+  - Node.js 運行環境（開放程式碼）
+  - Swift 運行環境（開放程式碼）
   - nginx（開放程式碼）
-  -	IBM WebSphere Application Server for ICP VM Quickstarter Community 教育。
+  - IBM WebSphere Application Server for {{site.data.keyword.cloud_notm}} Private VM Quickstarter Community Edition
 
 * 整合
   -	IBM Integration Bus
@@ -97,11 +97,11 @@ ICP 具有各種內容選擇，而 Todd 及 Jane 需要決定哪一個最符合�
   -	Compliance Assist
 
 * 管理
-  -	IBM Netcool - 整合（Probe for ICP Services - 記載事件及監視警示）
+  -	IBM Netcool - 整合（Probe for {{site.data.keyword.icpfull_notm}} Services - 記載事件及監視警示）
   - {{site.data.keyword.cloud_notm}} App Management 2018.2.0
-  -	IBM Netcool - 整合（探測以管理「ICP 事件」。隨 IBM Netcool Insights 產品銷售）
+  -	IBM Netcool - 整合（探測以管理「{{site.data.keyword.icpfull_notm}} 事件」。隨 IBM Netcool Insights 產品銷售）
   - {{site.data.keyword.cloud_notm}} Event Management for IBM Cloud Private（ILAN 授權從型錄探索及試用）
-  - IBM Operations Analytics Predictive Insights Mediation Pack（管理 ICP 監視度量值。ILAN 授權從型錄探索及試用）-	IBM Operations Analytics Predictive Insights Mediation Pack（隨 Predictive Insights 產品銷售）
+  - IBM Operations Analytics Predictive Insights Mediation Pack（管理 {{site.data.keyword.icpfull_notm}} 監視度量值。ILAN 授權從型錄探索及試用）-	IBM Operations Analytics Predictive Insights Mediation Pack（隨 Predictive Insights 產品銷售）
 
 * 網路
   -	F5 BIGIP Controller（開放程式碼）
@@ -130,7 +130,7 @@ ICP 具有各種內容選擇，而 Todd 及 Jane 需要決定哪一個最符合�
 ### Db2
 Todd 從 Db2 開始，因為他們已使用 Db2，而且可以針對每個解決方案專用容器型 Db2。
 
-Todd 已備妥 ICP，因此已定義其 Pod 安全原則。Todd 可以專注於建立 Docker 映像檔取回密碼：
+Todd 已備妥 {{site.data.keyword.icpfull_notm}}，因此已定義其 Pod 安全原則。Todd 可以專注於建立 Docker 映像檔取回密碼：
 
 `kubectl create secret docker-registry db2dockerregistry
 --docker-username=dockeruser
@@ -139,7 +139,7 @@ Todd 已備妥 ICP，因此已定義其 Pod 安全原則。Todd 可以專注於�
 
 最後，Todd 在決定使用 NFS 之後，根據 Readme 檔需求來建立 NFS 磁區：
 
-請移至 ICP 儀表板，並建立「持續性磁區」。多大？請查看 Readme 檔以瞭解：
+請移至 {{site.data.keyword.icpfull_notm}} 儀表板，並建立「持續性磁區」。多大？請查看 Readme 檔以瞭解：
 
 `capacity=20Gi
 RWO
@@ -170,7 +170,7 @@ path = /shared/db2trader1`
 
 Todd 及 Jane 需要傳訊軟體，而且，因為他們已使用 MQ，所以這是一個絕佳選項。此外，它還可以在小覆蓋區中執行，並可針對每個「開發人員」啟動開發版本，以節省寶貴的「正式作業」資料流量。安裝 MQ 相當簡單。Todd 建立儲存空間的方式就像使用 Db2 時一樣，然後安裝 Helm 圖表：
 
-ICP 儀表板 > 型錄 > 開始在 MQ 中鍵入 > 選取 ibm-mqadvanced-server-dev 請檢閱 Readme 檔，然後按一下「配置」
+{{site.data.keyword.icpfull_notm}} 儀表板 > 型錄 > 開始在 MQ 中鍵入 > 選取 ibm-mqadvanced-server-dev 請檢閱 Readme 檔，然後按一下「配置」
 提供或驗證下列輸入值：
 
 `release name = mqtrader1
@@ -233,4 +233,4 @@ Jane 想要統一的程式碼庫，即使 Stock Trader 可在多個雲端上執�
 
 ### 相關鏈結
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

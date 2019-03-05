@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-13"
 
 连接的存储器是 VMware vCenter Server on {{site.data.keyword.cloud}} 产品的扩展。VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的连接存储器解决方案体系结构详细说明了设计中解决方案的组件以及每个组件的高级配置。
 
-有关 vCenter Server 设计的更多信息，请参阅[解决方案概述](../solution/solution_overview.html)。
+有关 vCenter Server 设计的更多信息，请参阅[解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)。
 
 ## vCenter Server 的连接存储器的主要优点
 
@@ -29,4 +29,4 @@ lastupdated: "2018-11-13"
 
 ### 相关链接
 
-* [解决方案概述](../solution/solution_overview.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

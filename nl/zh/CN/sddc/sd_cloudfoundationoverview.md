@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,7 +41,7 @@ lastupdated: "2018-11-05"
 
 在 {{site.data.keyword.vmwaresolutions_short}} 控制台上，可以使用添加和除去 ESXi 服务器功能来扩展和收缩实例的容量。此外，还提供了生命周期管理功能，例如在托管环境中对 VMware 组件应用更新和升级。
 
-有关体系结构的更多信息，请参阅[解决方案概述](../archiref/solution/solution_overview.html)。
+有关体系结构的更多信息，请参阅[解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)。
 
 ## Cloud Foundation 实例的技术规范
 
@@ -54,7 +54,8 @@ Cloud Foundation 实例中包含以下组件。
 
 可以使用下列其中一个配置来订购 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}：
 *  **Skylake**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Skylake 代服务器（Intel Xeon 4100/5100/6100 系列）。   
-*  **Broadwell**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Broadwell 代服务器（Intel Xeon E5-2600 V4 系列）。   
+*  **Broadwell**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU 的 Intel Broadwell 代服务器（Intel Xeon E5-2600/E7-4800 系列）。
+
      如果计划使用 vSAN 存储器，那么配置需要 4 个 {{site.data.keyword.baremetal_short}}。
      {:note}
 
@@ -63,7 +64,7 @@ Cloud Foundation 实例中包含以下组件。
 订购了以下联网组件：
 * 10 Gbps 双公用和专用网络上行链路
 * 三个 VLAN（虚拟 LAN）：一个公用 VLAN 和两个专用 VLAN
-* 用于出站 HTTPS 管理流量的安全管理服务 VMware NSX Edge 服务网关 (ESG)，由 IBM 部署为管理联网拓扑的一部分。IBM 管理虚拟机使用此 ESG 与自动化相关的特定外部 IBM 管理组件进行通信。有关更多信息，请参阅[管理服务 NSX Edge 会构成安全风险吗？](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* 用于出站 HTTPS 管理流量的安全管理服务 VMware NSX Edge 服务网关 (ESG)，由 IBM 部署为管理联网拓扑的一部分。IBM 管理虚拟机使用此 ESG 与自动化相关的特定外部 IBM 管理组件进行通信。有关更多信息，请参阅[管理服务 NSX Edge 会构成安全风险吗？](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
   您无法访问此 ESG，也无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 Cloud Foundation 实例。此外，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信将导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
 {:important}
@@ -100,7 +101,7 @@ Cloud Foundation 实例中包含以下组件。
 
 ### 扩展节点的硬件
 
-一个 {{site.data.keyword.cloud_notm}} 裸机服务器，其配置在 [Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中提供。
+一个 {{site.data.keyword.cloud_notm}} 裸机服务器，其配置在 [Cloud Foundation 实例的技术规范](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中提供。
 
 ### 扩展节点的许可证和费用
 
@@ -124,9 +125,9 @@ Cloud Foundation 实例中包含以下组件。
 
 ### 相关链接
 
-* [Cloud Foundation 软件材料清单](sd_bom.html)
-* [规划 Cloud Foundation 实例](sd_planning.html)
-* [订购 Cloud Foundation 实例](sd_orderinginstance.html)
+* [Cloud Foundation 软件材料清单](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [规划 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
 * [VMware vSphere 文档中心](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [VMware NSX 6 文档中心](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [EVC 和 CPU 兼容性常见问题](https://kb.vmware.com/s/article/1005764)

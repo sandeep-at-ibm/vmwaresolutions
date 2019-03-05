@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,11 +16,11 @@ lastupdated: "2018-11-15"
 
 在 Stock Trader 现代化之旅中，下一步是将工作负载从在虚拟机 (VM) 中运行转换为在容器中运行。
 
-接着，Todd 和 Jane 运行了 Transformation Advisor 来分析 Stock Trader 工作负载，识别任何迁移复杂性并建议更改。准备就绪后，他们使用 Transformation Advisor 将 Stock Trader 部署到在 {{site.data.keyword.cloud}} Private (ICP) 中运行的 Liberty 容器中。
+接着，Todd 和 Jane 运行了 Transformation Advisor 来分析 Stock Trader 工作负载，识别任何迁移复杂性并建议更改。准备就绪后，他们使用 Transformation Advisor 将 Stock Trader 部署到在 {{site.data.keyword.icpfull_notm}} 中运行的 Liberty 容器中。
 
 ## 准备 IBM Cloud Private
 
-Todd 首先需要安装 ICP。Todd 在 {{site.data.keyword.cloud_notm}} 环境中有 VMware，因此他决定使用 {{site.data.keyword.cloud_notm}} Private Hosted 产品来获得在 {{site.data.keyword.cloud_notm}} 中的 VMware VM 上运行的完整 ICP 实例。
+Todd 首先需要安装 {{site.data.keyword.icpfull_notm}}。Todd 在 {{site.data.keyword.cloud_notm}} 环境中有 VMware，因此他决定使用 {{site.data.keyword.cloud_notm}} Private Hosted 产品来获得在 {{site.data.keyword.cloud_notm}} 中的 VMware VM 上运行的完整 {{site.data.keyword.icpfull_notm}} 实例。
 
 缺省仪表板提供了一个综合用户界面，用于通过目录来管理 Kubernetes 集群、安全性、存储和部署。
 
@@ -48,7 +48,7 @@ Todd 运行了以下命令来创建新的 NFS 服务器：
 
 `systemctl restart nfs-kernel-server`
 
-然后，Todd 在每个 VM 上运行了以下命令，以将 NFS 安装到每个 ICP 工作程序 VM 上：
+然后，Todd 在每个 VM 上运行了以下命令，以将 NFS 安装到每个 {{site.data.keyword.icpfull_notm}} 工作程序 VM 上：
 
 `sudo apt-get update`
 
@@ -68,7 +68,7 @@ Todd 运行了以下命令以确认安装的版本：
 
 ### 准备映像安全性
 
-在 ICP V3.1 中，通过要求在任何映像拉取到 ICP 实例之前落实映像策略，从而增强了安全性。此增强功能需要为 IBM 映像所在的位置 *dockerhub/ibmcom* 以及在 Docker 存储中添加映像策略。
+在 {{site.data.keyword.icpfull_notm}} V3.1 中，通过要求在任何映像拉取到 {{site.data.keyword.icpfull_notm}} 实例之前落实映像策略，从而增强了安全性。此增强功能需要为 IBM 映像所在的位置 *dockerhub/ibmcom* 以及在 Docker 存储中添加映像策略。
 
 缺省情况下已提供 ibmcloud-default-cluster-image-policy，该策略涵盖 docker.io/ibmcom/\* 中的所有 IBM 映像，但由于 Db2 和其他 IBM 内容位于 Docker 存储中，因此需要用于 Docker 存储的另一个映像策略 *docker.io/store/ibmcorp/*。
 
@@ -78,9 +78,9 @@ Todd 运行了以下命令以确认安装的版本：
 
 ## 部署 Transformation Advisor 和 Microclimate
 
-Todd 在 ICP 开始运行后，安装了 Transformation Advisor 以及 Microclimate。Todd 打开[目录](https://www.ibm.com/cloud/private/developer)并查看了所有可用内容。
+Todd 在 {{site.data.keyword.icpfull_notm}} 开始运行后，安装了 Transformation Advisor 以及 Microclimate。Todd 打开[目录](https://www.ibm.com/cloud/private/developer)并查看了所有可用内容。
 
-Todd 单击 Helm 图表后，搜索 Transformation Advisor 和 Microclimate，并使用提供的自述文件指示信息安装了这两项。
+Todd 单击 Helm Chart 后，搜索 Transformation Advisor 和 Microclimate，并使用提供的自述文件指示信息安装了这两项。
 
 ### 运行 Transformation Advisor
 
@@ -98,4 +98,4 @@ Todd 在转换步骤期间未变更数据源。Transformation Advisor 获取了 
 
 ### 相关链接
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

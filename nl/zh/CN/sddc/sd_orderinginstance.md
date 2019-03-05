@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-05"
 
 # 订购 Cloud Foundation 实例
 
-要部署具有标准计算、存储和网络配置的统一软件定义数据中心 (SDDC) 平台，请订购 VMware Cloud Foundation 实例。在初始订购期间，还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html)。
+要部署具有标准计算、存储和网络配置的统一软件定义数据中心 (SDDC) 平台，请订购 VMware Cloud Foundation 实例。在初始订购期间，还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html)。
 
 ## 需求
 
 确保已完成以下任务：
-*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
-*  已查看[针对 Cloud Foundation 实例的需求和规划](sd_planning.html)中的需求和注意事项。
+*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
+*  已查看[针对 Cloud Foundation 实例的需求和规划](/docs/services/vmwaresolutions/sddc/sd_planning.html)中的需求和注意事项。
 
 不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。此外，在部署实例之后，不要更改实例名称、根域名、子域标签或主机名前缀。
 {:important}
@@ -33,7 +33,7 @@ lastupdated: "2018-11-05"
 
 实例名称必须满足以下需求：
 * 只允许使用字母数字字符和短划线 (-) 字符。
-* 实例名称必须以字母数字字符开头和结尾。
+* 实例名称必须以字母字符开头并以字母数字字符结尾。
 * 实例名称的最大长度为 10 个字符。
 * 实例名称在您的帐户中必须唯一。
 
@@ -82,6 +82,8 @@ lastupdated: "2018-11-05"
 |双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
+|四核 Intel Xeon E7-4820 V4 / 共 40 个核心，2.0 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
+|四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
 ### 裸机服务器的数量
 
@@ -94,7 +96,10 @@ lastupdated: "2018-11-05"
 选择 **Skylake** 或 **Broadwell** 裸机服务器配置时，可以定制实例的 vSAN 存储器。请指定以下 vSAN 设置：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
-* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
+* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
+
+  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号双 Intel Xeon Gold 5120 和双 Intel Xeon Gold 6140。
+  {:note}
 
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 
@@ -113,7 +118,7 @@ lastupdated: "2018-11-05"
 
 子域标签必须满足以下需求：
 *  只允许使用字母数字字符和短划线 (-) 字符。
-*  子域标签必须以字母数字字符开头和结尾。
+*  子域标签必须以字母字符开头并以字母数字字符结尾。
 *  子域标签的最大长度为 10 个字符。
 *  子域标签在您的帐户中必须唯一。
 
@@ -145,7 +150,7 @@ lastupdated: "2018-11-05"
   |Single Sign-On (SSO) 站点名称| `<subdomain_label>`
   |PSC FQDN|`PSC-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大长度为 50 个字符。|  
 
-  SDDC Manager FQDN 无法公开解析。否则，Cloud Foundation 实例配置可能会失败，并且不可恢复。在指定域名之前，请查看[选择根域名时的注意事项](../vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances)。
+  SDDC Manager FQDN 无法公开解析。否则，Cloud Foundation 实例配置可能会失败，并且不可恢复。在指定域名之前，请查看[选择根域名时的注意事项](/docs/services/vmwaresolutions/vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances)。
 
 ### VLAN
 
@@ -166,13 +171,14 @@ lastupdated: "2018-11-05"
   * **主子网**分配给物理主机以用于公用网络访问。
   * **专用主子网**分配给物理主机以用于管理流量。
 
-**重要信息：**
+##### 重要
+
 * 确保所选 VLAN 上的防火墙配置不会阻止管理数据流量。
 * 确保选择的所有 VLAN 都在同一 pod 中，因为 ESXi 服务器不能在混合 pod VLAN 上进行供应。
 
 ## 服务
 
-订购 Cloud Foundation 实例时，还可以订购附加组件服务。有关可用服务的更多信息，请参阅 [Cloud Foundation 实例的服务](sd_planning.html#services-for-cloud-foundation-instances)。
+订购 Cloud Foundation 实例时，还可以订购附加组件服务。有关可用服务的更多信息，请参阅 [Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_planning.html#services-for-cloud-foundation-instances)。
 
 ## 订单摘要
 
@@ -217,7 +223,7 @@ lastupdated: "2018-11-05"
 
 实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
 
-成功部署实例后，[Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **SDDC-Cluster**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
+成功部署实例后，[Cloud Foundation 实例的技术规范](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **SDDC-Cluster**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
 
 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
@@ -241,10 +247,10 @@ lastupdated: "2018-11-05"
 
 ### 相关链接
 
-* [注册 {{site.data.keyword.cloud_notm}} 帐户](../vmonic/signing_softlayer_account.html)
-* [查看 Cloud Foundation 实例](sd_viewinginstances.html)
-* [添加、查看和删除 Cloud Foundation 实例的集群](sd_addingviewingclusters.html)
-* [扩展和收缩 Cloud Foundation 实例的容量](sd_addingremovingservers.html)
-* [订购、查看和除去 Cloud Foundation 实例的服务](sd_addingremovingservices.html)
-* [删除 Cloud Foundation 实例](sd_deletinginstance.html)
-* [关于 BYOL 的常见问题](../vmonic/faq_byol.html)
+* [注册 {{site.data.keyword.cloud_notm}} 帐户](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [查看 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
+* [添加、查看和删除 Cloud Foundation 实例的集群](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
+* [扩展和收缩 Cloud Foundation 实例的容量](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [删除 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [关于 BYOL 的常见问题](/docs/services/vmwaresolutions/vmonic/faq_byol.html)

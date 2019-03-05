@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2017-11-07"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -33,7 +33,7 @@ lastupdated: "2017-11-07"
 
 1. 從次要 vCenter Server with Hybridity Bundle 實例移除所有服務。
 2. 確定您未將任何 NSX 物件擴充至要刪除的次要實例。
-3. 從主要 SSO（單一登入）網域刪除次要 vCenter 及 PSC (Platform Services Controller)。如需相關資訊，請參閱 [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2106736){:new_window}。
+3. 從主要 SSO（單一登入）網域刪除次要 vCenter Server。如需相關資訊，請參閱 [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2106736){:new_window}。
 4. 將本端網域控制站 VSI（虛擬服務實例）降級。如需相關資訊，請參閱 [Demoting domain controllers and domains](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}。
 5. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台刪除次要 vCenter Server with Hybridity Bundle 實例。
 6. 針對多站台配置中的所有次要 vCenter Server with Hybridity Bundle 實例，重複步驟 1 - 5。
@@ -41,5 +41,5 @@ lastupdated: "2017-11-07"
 
 ### 相關鏈結
 
-* [刪除 vCenter Server with Hybridity Bundle 實例](vc_hybrid_deletinginstance.html)
-* [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](vc_hybrid_addingremovingservices.html)
+* [刪除 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
+* [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)

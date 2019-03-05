@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-23"
 
 ---
 
 # IBM Cloud 联网概述
 
-{{site.data.keyword.cloud}} 可处理物理联网。此部分描述 {{site.data.keyword.cloud_notm}} 提供的物理网络以及与先前描述的物理主机关联的物理主机连接（VLAN 和 MTU）。
+{{site.data.keyword.cloud}} 可处理物理联网。以下信息描述 {{site.data.keyword.cloud_notm}} 提供的物理网络以及与先前描述的物理主机关联的物理主机连接（VLAN 和 MTU）。
 
 {{site.data.keyword.cloud_notm}} 的物理网络分为三种不同的网络：公用网络、专用网络和管理网络。
 
@@ -19,11 +19,11 @@ lastupdated: "2018-11-06"
 
 ## 公用网络
 
-{{site.data.keyword.CloudDataCents_notm}} 和网络存在点 (PoP) 具有多个 1 Gbps 或 10 Gbps 连接，用于连接到顶层传输和对等网络运营商。来自世界任何地方的网络流量都会连接到离得最近的网络 PoP，并通过该网络直接传输到其数据中心，从而最大程度地减少提供者之间的网络中继段数和切换次数。在数据中心内部，通过一对同级聚集的前端客户交换机 (FCS)，为各个服务器提供 1 Gbps 或 10 Gbps 的网络带宽。这些聚集的交换机会连接到一对单独的路由器（即，前端客户路由器 (FCR)）来进行 L3 联网。通过此多层设计，网络可以在 {{site.data.keyword.CloudDataCent_notm}} 内跨机架、机柜行和 pod 进行扩展。
+{{site.data.keyword.CloudDataCents_notm}} 和网络存在点 (PoP) 具有多个 1 Gbps 或 10 Gbps 连接，用于连接到顶层传输和对等网络运营商。来自世界任何地方的网络流量都会连接到离得最近的网络 PoP，并通过该网络直接传输到其数据中心，从而最大程度地减少提供者之间的网络中继段数和切换次数。在数据中心内部，通过一对同级聚集的前端客户交换机 (FCS)，为各个服务器提供 1 Gbps 或 10 Gbps 的网络带宽。这些聚集的交换机会连接到一对单独的路由器（即前端客户路由器 (FCR)）来进行 L3 联网。通过此多层设计，网络可以在 {{site.data.keyword.CloudDataCent_notm}} 内跨机架、机柜行和 pod 进行扩展。
 
 ## 专用网络
 
-所有 {{site.data.keyword.CloudDataCents_notm}} 和 PoP 均通过专用网络主干进行连接。此专用网络独立于公用网络，支持连接到全球的 {{site.data.keyword.CloudDataCents_notm}} 中的服务。在数据中心之间移动数据是通过与专用网络的多个 10 Gbps 或 40 Gbps 连接完成的。与公用网络类似，专用网络也是多层的，其中服务器和其他基础架构连接到聚集的后端客户交换机 (BCS)。这些聚集的交换机会连接到一对单独的路由器（即，后端客户路由器 (BCR)）来进行 L3 联网。专用网络还支持使用巨型帧 (MTU 9000) 进行物理主机连接的功能。
+所有 {{site.data.keyword.CloudDataCents_notm}} 和 PoP 均通过专用网络主干进行连接。此专用网络独立于公用网络，支持连接到全球的 {{site.data.keyword.CloudDataCents_notm}} 中的服务。在数据中心之间移动数据是使用与专用网络的多个 10 Gbps 或 40 Gbps 连接完成的。与公用网络类似，专用网络也是多层的，其中服务器和其他基础架构连接到聚集的后端客户交换机 (BCS)。这些聚集的交换机会连接到一对单独的路由器（即后端客户路由器 (BCR)）来进行 L3 联网。专用网络还支持使用巨型帧 (MTU 9000) 进行物理主机连接的功能。
 
 ## 管理网络
 
@@ -32,18 +32,18 @@ lastupdated: "2018-11-06"
 ## 主 IP 块和可移植 IP 块
 
 {{site.data.keyword.cloud_notm}} 会分配要在 {{site.data.keyword.cloud_notm}} 基础架构中使用的两种类型的 IP 地址：
--	主 IP 地址，分配给由 {{site.data.keyword.cloud_notm}} 供应的设备、裸机和虚拟服务器。用户不应分配这些块中的任何 IP 地址。
--	可移植 IP 地址，供用户根据需要进行分配和管理。
+* 主 IP 地址，分配给由 {{site.data.keyword.cloud_notm}} 供应的设备、裸机和虚拟服务器。用户不应分配这些块中的任何 IP 地址。
+* 可移植 IP 地址，供用户根据需要进行分配和管理。
 
 如果在客户帐户内启用了 VLAN 生成，或者该帐户配置为虚拟路由和转发 (VRF) 帐户，那么主 IP 地址或可移植 IP 地址可以设置为可路由到客户帐户内的任何 VLAN。
 
 ## VLAN 生成
 
-VLAN 生成是一个 {{site.data.keyword.cloud_notm}} 全局帐户设置，允许帐户中所有 VLAN 内的每个主子网 IP 块和可移植子网 IP 块可相互路由。禁用了此设置时，IP 块仍可以路由到 {{site.data.keyword.cloud_notm}} 服务，但不能相互路由。此体系结构需要在部署了 VCS 的帐户内启用 VLAN 生成，以便跨解决方案组件所在的各个子网透明地建立连接。
+VLAN 生成是一个 {{site.data.keyword.cloud_notm}} 全局帐户设置，允许帐户中所有 VLAN 内的每个主子网 IP 块和可移植子网 IP 块可相互路由。此设置不可用时，IP 块仍可以路由到 {{site.data.keyword.cloud_notm}} 服务，但不能相互路由。此体系结构需要在部署了 VMware vCenter Server on {site.data.keyword.cloud_notm}} 的帐户内启用 VLAN 生成，以便跨解决方案组件所在的各个子网透明地建立连接。
 
 ## 虚拟路由和转发 (VRF)
 
-{{site.data.keyword.cloud_notm}} 帐户还可以配置为 VRF 帐户。这提供了与 VLAN 生成类似的功能，支持子网 IP 块之间的自动路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
+{{site.data.keyword.cloud_notm}} 帐户还可以配置为 VRF 帐户。VRF 帐户提供了与 VLAN 生成类似的功能，支持子网 IP 块之间的自动路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
 
 ## 物理主机连接
 
@@ -58,7 +58,7 @@ VMware on {{site.data.keyword.cloud_notm}} 产品设计为在部署时分配三�
 
 如上所述，在此设计中，专用网络由两个 VLAN 组成。有三个子网分配给其中的第一个 VLAN（在此指定为“专用 VLAN A”）。第一个子网是 {{site.data.keyword.cloud_notm}} 分配给物理主机的主专用 IP 子网范围。第二个子网用于管理虚拟机（例如，vCenter Server Appliance 和 Platform Services Controller）。第三个子网用于通过 NSX Manager 分配给每个主机的 VXLAN 隧道端点 (VTEP)。
 
-除了“专用 VLAN A”外，还存在另一个专用 VLAN（在此指定为“专用 VLAN B”），用于支持 vSAN 和 vMotion 等 VMware 功能，以及用于连接到网络连接的存储器 (NAS)。因此，该 VLAN 分成两个或三个可移植子网。第一个子网分配给用于 vMotion 流量的内核端口组。其余子网用于存储流量，使用 vSAN 时，一个子网将分配给用于 vSAN 流量的内核端口组。使用 NAS 时，一个子网将分配给专用于 NFS 流量的端口组。请注意，在 VCS 自动化部署过程中配置的所有子网都使用 {{site.data.keyword.cloud_notm}} 管理的范围。这是为了确保如果现在或未来需要，任何 IP 地址都可以路由到 {{site.data.keyword.cloud_notm}} 帐户中的任何数据中心。
+除了“专用 VLAN A”外，还存在另一个专用 VLAN（在此指定为“专用 VLAN B”），用于支持 vSAN 和 vMotion 等 VMware 功能，以及用于连接到网络连接的存储器 (NAS)。因此，该 VLAN 分成两个或三个可移植子网。第一个子网分配给用于 vMotion 流量的内核端口组。其余子网用于存储流量，使用 vSAN 时，一个子网将分配给用于 vSAN 流量的内核端口组。使用 NAS 时，一个子网将分配给专用于 NFS 流量的端口组。在 vCenter Server 自动化部署过程中配置的所有子网都使用 {{site.data.keyword.cloud_notm}} 管理的范围。这是为了确保如果现在或未来需要，任何 IP 地址都可以路由到 {{site.data.keyword.cloud_notm}} 帐户中的任何数据中心。
 
 表 1. VLAN 和子网摘要
 
@@ -79,10 +79,10 @@ VLAN|子网类型|描述
 专用 B|可移植|分配用于 NAS（如果在使用 NAS）。
 专用 B|可移植|分配用于 vMotion。
 
-在实现此设计时，VLAN 上的物理主机和虚拟系统实例 (VSI) 都配置为指向作为缺省路径的 {{site.data.keyword.cloud_notm}} BCR（后端“专用网络”客户路由器）。但 VCS 实例支持使用软件定义的联网。请注意，由 NSX 创建的任何网络覆盖（包括到 VLAN 子网的路由）对于 {{site.data.keyword.cloud_notm}} 管理的路由器来说都是未知的，因此您可能需要创建静态路由、防火墙规则和 NAT 规则来正确管理网络流。
+在实现此设计时，VLAN 上的物理主机和虚拟系统实例 (VSI) 都配置为指向作为缺省路径的 {{site.data.keyword.cloud_notm}} BCR（后端“专用网络”客户路由器）。但 vCenter Server 实例支持使用软件定义的联网。由 NSX 创建的任何网络覆盖（包括到 VLAN 子网的路由）对于 {{site.data.keyword.cloud_notm}} 管理的路由器来说都是未知的，因此您可能需要创建静态路由、防火墙规则和 NAT 规则来正确管理网络流。
 
 专用网络连接配置为使用 MTU 大小为 9000 的巨型帧，这将提高存储和 vMotion 等大型数据传输的性能。这是 VMware 和 {{site.data.keyword.cloud_notm}} 中允许的最大 MTU。公用网络连接使用标准以太网 MTU，即 1500。必须保留此设置不变，因为对此设置的任何更改都可能导致因特网上发生包分段。
 
 ### 相关链接
 
-* [VCS Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

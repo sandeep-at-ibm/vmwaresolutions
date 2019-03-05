@@ -2,35 +2,43 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-24"
+lastupdated: "2019-01-25"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # 关于许可和 BYOL 的常见问题
 
 查找有关许可的常见问题的答案，包括 {{site.data.keyword.vmwaresolutions_full}} 的自带许可证 (BYOL) 功能。
 
 ## 什么是 BYOL？
+{: faq}
 
-自带许可证 (BYOL) 是向 V1.8 和更高发行版中 VMware Cloud Foundation 实例以及 V2.0 和更高发行版中 vCenter Server 和 vSphere 集群提供的一项功能。利用 BYOL，在订购实例时，您可以将自己的 VMware 许可证用于以下一个或多个 VMware 软件组件：
+自带许可证 (BYOL) 是向 V1.8 和更高版本中 VMware Cloud Foundation 实例以及 V2.0 和更高版本中 VMware vCenter Server 和 VMware vSphere 集群提供的一项功能。利用 BYOL，您可以将自己的 VMware 许可证用于以下一个或多个 VMware 软件组件：
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
 * VMware vSAN
 
-如果选择将自己的许可证用于 VMware 组件，并且为其提供有效的许可证密钥，那么不会向 IBM 订购此组件的许可证，并且您的 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户每月也不会发生此组件的许可费用。
+如果选择将自己的许可证用于 VMware 组件，并且为其提供有效的许可证密钥，那么不会向 IBM 订购此组件的许可证，并且您的 {{site.data.keyword.cloud_notm}} 基础架构帐户每月也不会发生此组件的许可费用。
 
-**注**：BYOL 功能不可用于业务合作伙伴用户。
+BYOL 功能不可用于业务合作伙伴用户。
+{:note}
 
 ## 在何处管理通过 VMware vSphere on IBM Cloud 订购的许可证和组件？
 
 下了订单以为 VMware vSphere on {{site.data.keyword.cloud_notm}} 创建新集群后，会交付 VMware 许可证、ESXi 服务器和其他联网组件，并可在 {{site.data.keyword.slportal}} 中对这些内容进行管理。
 
-部署后，请转至 {{site.data.keyword.vmwaresolutions_short}} 控制台以使用保存的配置来扩展新集群。有关扩展的更多信息，请参阅[扩展现有 vSphere 集群](../vsphere/vs_scalingexistingclusters.html)。
+部署后，请转至 {{site.data.keyword.vmwaresolutions_short}} 控制台以使用保存的配置来扩展新集群。有关更多信息，请参阅[扩展现有 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)。
 
-## BYOL 需要哪些许可证版本和 CPU 数量？
+
+## BYOL 需要哪些许可证版本和多少 CPU？
 
 以下需求适用于 BYOL 的许可证版本。
 
@@ -70,21 +78,28 @@ lastupdated: "2018-09-24"
 
 ## 可以将 BYOL 功能用于某些 VMware 组件，而为其他组件购买每月许可证吗？
 
-可以。您可以使用 BYOL 功能或购买许可证来用于四个 VMware 组件的任意组合。订购 vCenter Server 或 Cloud Foundation 实例时，{{site.data.keyword.vmwaresolutions_short}} 控制台支持您直接选择许可选项。初始订购实例时的许可选项会在该实例的生命周期内应用。
+可以。您可以使用 BYOL 功能或购买许可证来用于四个 VMware 组件的任意组合。订购实例时，{{site.data.keyword.vmwaresolutions_short}} 控制台支持您直接选择许可选项。初始订购实例时的许可选项会在该实例的生命周期内应用。
 
 ## 对于特定 VMware 组件，可以将 BYOL 功能用于某些许可证，而向 IBM 购买其他许可证吗？
 
-可以。如果为特定 VMware 组件选择了 BYOL，那么在创建新集群时，可以选择是输入新的 BYOL 密钥、继续使用现有 BYOL 密钥，还是购买 IBM 为该集群提供的许可。目前，仅 VMware vSphere Enterprise 和 VMware vSAN 可用于针对每个集群进行许可。
+可以。如果在创建集群时为特定 VMware 组件选择了 BYOL，那么您具有以下选项：
+* 输入新的 BYOL 密钥
+* 继续使用现有 BYOL 密钥
+* 为该集群购买 IBM 提供的许可。
 
-## 可以在创建新集群时使用 BYOL 吗？
+目前，仅 VMware vSphere Enterprise 和 VMware vSAN 可按集群获得许可。
 
-可以。创建新集群时，可以通过现有 BYOL 许可证使用 BYOL，也可以输入新的 BYOL。在创建新集群时，您还可以购买 IBM 提供的预订许可证。目前，仅 VMware vSphere Enterprise 和 VMware vSAN 可用于针对每个集群进行许可。
+## 可以在创建集群时使用 BYOL 吗？
+
+可以。创建集群时，可以通过现有 BYOL 许可证使用 BYOL，也可以输入新的 BYOL。此外，在创建集群时，您还可以购买 IBM 提供的预订许可证。
+
+目前，仅 VMware vSphere Enterprise 和 VMware vSAN 可按集群获得许可。
 
 ## 如何管理 BYOL 许可证？
 
 可以在完成实例部署后，使用 VMware vSphere Web Client 来管理 BYOL 许可证。
 
-## 日后向实例添加更多 ESXi 服务器时，该实例会验证 BYOL 许可证的容量是否足够吗？
+## 日后向实例添加更多 ESXi 服务器时，该实例会验证 BYOL 许可证是否有足够的容量吗？
 
 会的。向已部署的实例添加更多 ESXi 服务器时，会自动根据指定的 ESXi 服务器数来检查 BYOL 许可证的容量。如果容量不足，那么不会添加 ESXi 服务器，并且您将收到控制台通知。
 
@@ -109,7 +124,7 @@ lastupdated: "2018-09-24"
 
 ## 其他 VMware 产品（如 VMware vRealize Automation、VMware vRealize Operations 或 VMware vRealize Log Insight）支持 BYOL 吗？
 
-不支持，因为这些 VMware 产品不是实例部署的一部分。除了初始部署以外可能还安装了这些 VMware 产品，这就需要客户机或其代理程序来执行安装和许可。
+不支持，因为这些 VMware 产品不是实例部署的一部分。除了初始部署以外可能还安装了这些 VMware 产品，这就需要客户机或其代理程序来安装和许可这些产品。
 
 ## 可以通过 vCenter Server with Hybridity Bundle 订购 NFS 存储器吗？
 
@@ -139,8 +154,7 @@ vCenter Server with Hybridity Bundle 的新实例包括 VMware vSphere Enterpris
 
 ### 相关链接
 
-* [订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)
-* [Cloud Foundation 实例](../sddc/sd_cloudfoundationoverview.html)
-* [访问控制台](loginmethod.html)
-* [联系 IBM 支持人员](trbl_support.html)
-* [vRealize Automation](https://www.ibm.com/devops/method/content/architecture/virtCloudFoundationPlatform/vRealizeAutomation){:new_window}
+* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [访问控制台](/docs/services/vmwaresolutions/vmonic/loginmethod.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

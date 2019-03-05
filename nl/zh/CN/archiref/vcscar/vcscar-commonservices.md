@@ -2,22 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
-# 公共服务组件
+# VMware 和 Skate Advisor 概念车的公共服务组件
 
 公共服务提供由云管理平台中其他服务使用的服务。公共服务包括身份和访问权服务、域名服务和 NTP 服务。
 
-图 1. {{site.data.keyword.cloud}} Private (ICP) 公共服务
-![ICP 公共服务](vcscar-common-services.svg)
+图 1. {{site.data.keyword.icpfull_notm}} 公共服务
+![{{site.data.keyword.icpfull_notm}} 公共服务](vcscar-common-services.svg)
 
 ## 身份和访问权服务
 
-作为 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 自动化的一部分，Microsoft Active Directory (AD) 用于身份管理。部署了单个 AD 虚拟服务器实例 (VSI)。vCenter 配置为使用 AD 认证，并且还可以将 ICP 配置为进行 LDAP 认证。
+作为 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 自动化的一部分，Microsoft Active Directory (AD) 用于身份管理。部署了单个 AD 虚拟服务器实例 (VSI)。vCenter 配置为使用 AD 认证，并且还可以将 {{site.data.keyword.icpfull_notm}} 配置为进行 LDAP 认证。
 
 ## 域名服务
 
@@ -29,4 +29,4 @@ vCenter Server 部署使用 {{site.data.keyword.cloud_notm}} 基础架构网络�
 
 ### 相关链接
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

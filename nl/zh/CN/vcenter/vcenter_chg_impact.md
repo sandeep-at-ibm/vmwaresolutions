@@ -2,19 +2,26 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # 关于更改 vCenter Server 工件的注意事项
 
 更改保留用于 {{site.data.keyword.vmwaresolutions_full}} 的用户、资源或子网可能会影响管理操作。
 
-**重要信息**：不要在 VMware vSphere Web Client 上的**用户和组**页面中编辑 **ic4v-vCenter** 组的全局许可权。此类更改包括：更改用户名、删除用户或更改其密码。
+不要在 VMware vSphere Web Client 上的**用户和组**页面中编辑 **ic4v-vCenter** 组的全局许可权。此类更改包括：更改用户名、删除用户或更改其密码。请使用 **root** 主机用户标识。创建的 **ic4vroot** 主机用户标识仅供 IBM 使用。
+{:important}
 
 ## automation 标识
+{: faq}
 
 **automation** 标识是由 {{site.data.keyword.vmwaresolutions_short}} 控制台中提供的自动化操作使用的用户帐户。
 
@@ -24,11 +31,13 @@ lastupdated: "2018-11-05"
 
 每个服务在 vCenter Server 中都会创建一个内部用户帐户。此帐户是必需的，有了此帐户，与服务关联的管理操作才能连接到 vCenter Server 以对该服务执行操作。
 
-**重要信息**：为了防止发生中断和连接问题，如果更改此用户帐户的用户标识、密码或密码到期时间设置，请确保同时更新关联服务中的相应信息。
+为了防止发生中断和连接问题，如果更改此用户帐户的用户标识、密码或密码到期时间设置，请确保同时更新关联服务中的相应信息。
+{:important}
 
 此帐户的用户标识的格式为 `<service_name>-<truncated service_uuid>@test.local` 或 `<service_name>-<truncated service_uuid>@example-domain.local`。例如，Veeam on {{site.data.keyword.cloud_notm}} 服务用于连接到 vCenter Server 以执行安排的备份的用户标识为 `Veeam-<Veeam_uuid>@test.local`。
 
-**注**：`<service_name>` 和 `<service_uuid>` 一起被截断为 20 个字符。
+`<service_name>` 和 `<service_uuid>` 一起被截断为 20 个字符。
+{:note}
 
 ## vCenter Server 实例（V1.9 和更高版本）的 VMware 资源
 
@@ -78,5 +87,5 @@ lastupdated: "2018-11-05"
 *  公用 VLAN 上包含 16 个 IP 地址的公用可移植子网
 
 如果需要使用更多子网，可以通过下列其中一种方式来获取要使用的 IP 地址：
-*  **选项 1（建议）**：使用 VMware NSX 虚拟网络覆盖。订购时提供了样本 VXLAN 模板。此 VXLAN 可用作构建软件定义的联网 (SDN) 的起点。有关更多信息，请参阅[配置网络以使用客户管理的 NSX Edge](vc_esg_config.html)。
+*  **选项 1（建议）**：使用 VMware NSX 虚拟网络覆盖。订购时提供了样本 VXLAN 模板。此 VXLAN 可用作构建软件定义的联网 (SDN) 的起点。有关更多信息，请参阅[配置网络以使用客户管理的 NSX Edge](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html)。
 *  **选项 2**：订购您自己的可移植公用子网或专用子网以获取 IP 地址。要使订购的子网区别于管理子网，可以向订购的所有子网添加注释。

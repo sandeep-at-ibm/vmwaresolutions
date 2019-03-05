@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2017-03-30"
 
@@ -20,15 +20,15 @@ lastupdated: "2017-03-30"
 
 下实例订单之前，请确保 SoftLayer 帐户是 VRF 帐户或者启用了 VLAN 生成的经典（非 VRF）帐户。否则，订单可能会失败。
 
-要确认 SoftLayer 帐户是否为 VRF 帐户，请向 IBM Bluemix 支持进行验证。对于经典帐户，必须遵循[启用或禁用 VLAN 生成](../../../infrastructure/vlans/vlan-spanning.html){:new_window}中的指示信息来启用 VLAN 生成。
+要确认 SoftLayer 帐户是否为 VRF 帐户，请向 IBM Bluemix 支持进行验证。对于经典帐户，必须遵循[启用或禁用 VLAN 生成](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}中的指示信息来启用 VLAN 生成。
 
 ## 服务收费模型更新
 
-对于 Cloud Foundation 实例，引入了新的 _SDDC Manager_ 许可证，将按每个节点每月收取费用。有关更多信息，请参阅 [Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
+对于 Cloud Foundation 实例，引入了新的 _SDDC Manager_ 许可证，将按每个节点每月收取费用。有关更多信息，请参阅 [Cloud Foundation 实例的技术规范](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 
 ## 易用性增强功能
 
 对整个用户界面进行了改进：
 
-* 用户界面上清晰地指明各个 {{site.data.keyword.CloudDataCents_notm}} 的可用性以及它们是否有足够的库存来执行订单。使用这些详细信息可在订购实例时，针对要选择的 {{site.data.keyword.CloudDataCent_notm}} 做出知情决策。有关更多信息，请参阅[针对 Cloud Foundation 实例的需求和规划](../sddc/sd_planning.html)和[针对 vCenter Server 实例的需求和规划](../vcenter/vc_planning.html)。
-* 对于 Cloud Foundation 实例，在输入字段中输入必需信息时，实例名称、域名和子域名以及数据中心位置等信息会自动以图形格式显示。有关更多信息，请参阅[订购 Cloud Foundation 实例](../sddc/sd_orderinginstance.html)。
+* 用户界面上清晰地指明各个 {{site.data.keyword.CloudDataCents_notm}} 的可用性以及它们是否有足够的库存来执行订单。使用这些详细信息可在订购实例时，针对要选择的 {{site.data.keyword.CloudDataCent_notm}} 做出知情决策。有关更多信息，请参阅[针对 Cloud Foundation 实例的需求和规划](/docs/services/vmwaresolutions/sddc/sd_planning.html)和[针对 vCenter Server 实例的需求和规划](/docs/services/vmwaresolutions/vcenter/vc_planning.html)。
+* 对于 Cloud Foundation 实例，在输入字段中输入必需信息时，实例名称、域名和子域名以及数据中心位置等信息会自动以图形格式显示。有关更多信息，请参阅[订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)。

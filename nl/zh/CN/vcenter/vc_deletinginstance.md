@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -51,8 +51,8 @@ lastupdated: "2018-10-26"
 
 ### 相关链接
 
-* [删除多站点配置中的 vCenter Server 实例](vc_deletinginstance_multi.html)
-* [订购 vCenter Server 实例](vc_orderinginstance.html)
-* [查看 vCenter Server 实例](vc_viewinginstances.html)
-* [扩展和收缩 vCenter Server 实例的容量](vc_addingremovingservers.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
+* [删除多站点配置中的 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance_multi.html)
+* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [查看 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
+* [扩展和收缩 vCenter Server 实例的容量](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

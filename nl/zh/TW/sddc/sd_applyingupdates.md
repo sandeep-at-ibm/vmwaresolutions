@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-11-05"
 
 可用的更新是實例的軟體更新清單中的記錄，可立即套用或排定稍後進行。更新是一個組合，包含一個以上用來更新 IBM 管理元件及 VMware 元件的套件。
 
-因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。例如新增主機、新增叢集及訂購服務等動作，會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](../vmonic/relnotes_v25.html)中的 *IBM CloudDriver 備援* 小節。{:note}
+因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。例如新增主機、新增叢集及訂購服務等動作，會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)中的 *IBM CloudDriver 備援* 小節。{:note}
 
 ## 開始之前
 
@@ -107,11 +107,11 @@ lastupdated: "2018-11-05"
       </tr>
     </table>
 
-6. 如果更新處理程序在特定步驟失敗，請[與 IBM 支援中心聯絡](../vmonic/trbl_support.html)以取得協助。將會建議您解決問題的方式，並引導您從失敗的步驟重新啟動升級。
+6. 如果更新處理程序在特定步驟失敗，請[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)以取得協助。將會建議您解決問題的方式，並引導您從失敗的步驟重新啟動升級。
 
 ### 相關鏈結
 
-* [Cloud Foundation 概觀](../sddc/sd_cloudfoundationoverview.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} 概觀](../services/veeam_considerations.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
-* [常見問題](../vmonic/faq.html)
+* [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)

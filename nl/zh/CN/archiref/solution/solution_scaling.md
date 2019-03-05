@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-25"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2018-07-25"
 {:note: .note}
 {:important: .important}
 
-# 扩展容量
+# 缩放容量
 
-初始部署后，您可以通过 {{site.data.keyword.vmwaresolutions_full}} 控制台向外扩展计算容量。本设计支持以下向外扩展途径：
+初始部署后，您可以从 {{site.data.keyword.vmwaresolutions_full}} 控制台扩展计算容量。本设计支持以下扩展方法：
 * 添加由单独 vCenter Server 管理的新站点
 * 添加新集群
 * 向现有集群添加新主机
@@ -36,7 +36,7 @@ lastupdated: "2018-07-25"
 
 ## 添加新集群
 
-您还可以通过在 {{site.data.keyword.vmwaresolutions_short}} 控制台中创建新集群，并订购自动添加到新集群的新主机来向外扩展计算容量。
+您还可以使用此方法来扩展计算容量：在 {{site.data.keyword.vmwaresolutions_short}} 控制台中创建新集群，并订购自动添加到新集群的新主机。
 
 此方法支持您实现以下目标：
 * 在环境中创建另一个单独的集群。
@@ -49,10 +49,10 @@ lastupdated: "2018-07-25"
 
 ## 将 ESXi 主机添加到现有集群
 
-可以通过在 {{site.data.keyword.vmwaresolutions_short}} 控制台中订购主机来向外扩展现有集群。新主机将自动添加到集群。请注意，您可能需要根据预留需求来调整集群的 HA 预留策略。
+可以通过在 {{site.data.keyword.vmwaresolutions_short}} 控制台中订购主机来扩展现有集群。新主机会自动添加到该集群。请注意，您可能需要根据预留需求来调整集群的 HA 预留策略。
 
 ### 相关链接
 
-* [解决方案概述](solution_overview.html)
-* [设计概述](design_overview.html)
-* [备份组件](solution_backingup.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [设计概述](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [备份组件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

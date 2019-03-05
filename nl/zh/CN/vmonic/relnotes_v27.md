@@ -2,11 +2,16 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-14"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 
 # V2.7 发行说明
 
@@ -20,8 +25,8 @@ lastupdated: "2018-11-12"
 * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 768 GB RAM
 
 有关更多信息，请参阅以下内容中的 *{{site.data.keyword.baremetal_short_sing}} 设置*部分：
-* [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html#bare-metal-server-settings)
-* [订购新的 vSphere 集群](../vsphere/vs_orderinginstances.html#bare-metal-server-settings)
+* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#bare-metal-server-settings)
+* [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#bare-metal-server-settings)
 
 ## 对附加组件服务的更新
 
@@ -30,8 +35,8 @@ lastupdated: "2018-11-12"
 现在，{{site.data.keyword.cloud_notm}} Private Hosted 服务除了可用于部署在（或已升级到）V2.5 和更高发行版中的 VMware vCenter Server 实例外，还可用于 VMware vCenter Server with Hybridity Bundle 实例。现在，可以订购包含该服务的 vCenter Server 实例或 vCenter Server with Hybridity Bundle 实例。您还可以在初始部署后将该服务添加到现有 vCenter Server 实例或 vCenter Server with Hybridity Bundle 实例。
 
 有关更多信息，请参阅以下主题：
-* [{{site.data.keyword.cloud_notm}} Private Hosted 概述](../services/icp_overview.html)
-* [订购 {{site.data.keyword.cloud_notm}} Private Hosted](../services/icp_ordering.html)
+* [{{site.data.keyword.cloud_notm}} Private Hosted 概述](/docs/services/vmwaresolutions/services/icp_overview.html)
+* [订购 {{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services/icp_ordering.html)
 
 ### Mission Critical VMware on IBM Cloud
 
@@ -39,27 +44,32 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 服务现在可用�
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 交付多专区云体系结构，可帮助企业防止云应用程序发生停机时间，并可自动在云区域内执行故障转移。利用这种云体系结构实现的可用性和故障转移成功率，要高于大多数 VMware 客户机在内部部署环境或竞争对手的云平台中实现的可用性和故障转移成功率。
 
-有关更多信息，请参阅 [Mission Critical VMware on {{site.data.keyword.cloud_notm}} 概述](../services/mcv_overview.html)。
+有关更多信息，请参阅 [Mission Critical VMware on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/mcv_overview.html)。
 
 ### F5 on IBM Cloud
 
-现在，订购 F5 on {{site.data.keyword.cloud_notm}} 服务时，可以选择是希望 F5 通过公用网络应用许可证，还是使用代理服务器通过专用网络应用许可证。有关更多信息，请参阅[订购 F5 on {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)。
+现在，订购 F5 on {{site.data.keyword.cloud_notm}} 服务时，可以选择是希望 F5 通过公用网络应用许可证，还是使用代理服务器通过专用网络应用许可证。有关更多信息，请参阅[订购 F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_ordering.html)。
 
 ### FortiGate Virtual Appliance on IBM Cloud
 
-在 2018 年第 3 季度，Fortinet 更改了其预订捆绑软件。有关更多信息，请参阅[订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)。
+在 2018 年第 3 季度，Fortinet 更改了其预订捆绑软件。有关更多信息，请参阅[订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)。
 
 对于部署在 V2.7 和更高版本 Cloud Foundation 实例和 vCenter Server 实例中的 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务，将供应 FortiOS 6.0.3。
 
-订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 时，可以选择是希望 FortiGuard 通过公用网络应用许可证和安全更新，还是使用代理服务器通过专用网络应用许可证和安全更新。有关更多信息，请参阅[订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)。
+订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 时，可以选择是希望 FortiGuard 通过公用网络应用许可证和安全更新，还是使用代理服务器通过专用网络应用许可证和安全更新。有关更多信息，请参阅[订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)。
 
 ### Zerto on IBM Cloud 服务组件更新
 
-对于部署在 V2.7 和更高版本 Cloud Foundation 实例和 vCenter Server 实例中的 Zerto on {{site.data.keyword.cloud_notm}} 服务，将供应 Zerto Virtual Replication 6.0 Update 3。有关更多信息，请参阅 [Zerto on {{site.data.keyword.cloud_notm}} 概述](../services/addingzertodr.html)。
+对于部署在 V2.7 和更高版本 Cloud Foundation 实例和 vCenter Server 实例中的 Zerto on {{site.data.keyword.cloud_notm}} 服务，将供应 Zerto Virtual Replication 6.0 Update 3。有关更多信息，请参阅 [Zerto on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/addingzertodr.html)。
 
 ### 集成有 IBM Cloud Activity Tracker 的 KMIP for VMware on IBM Cloud
 
-现在，除了 VMware 实例事件之外，KMIP for VMware on {{site.data.keyword.cloud_notm}} 的事件（例如，密钥创建、密钥删除和密钥访问）也与 {{site.data.keyword.cloud_notm}} Activity Tracker 实例相集成。有关 KMIP for WMware on {{site.data.keyword.cloud_notm}} 的更多信息，请参阅 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 概述](../services/kmip_considerations.html)。
+现在，除了 VMware 实例事件之外，KMIP for VMware on {{site.data.keyword.cloud_notm}} 的事件（例如，密钥创建、密钥删除和密钥访问）也与 {{site.data.keyword.cloud_notm}} Activity Tracker 实例相集成。有关 KMIP for WMware on {{site.data.keyword.cloud_notm}} 的更多信息，请参阅 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/kmip_considerations.html)。
+
+### KMIP for VMware on IBM Cloud - 不推荐
+
+（更新时间：2018 年 12 月 14 日）不推荐使用当前版本的 KMIP for VMware on {{site.data.keyword.cloud_notm}}。有关更多信息，请[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
+{:deprecated}
 
 ## 新增和更新的文档
 
@@ -67,15 +77,13 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 交付多专区云�
 
 现在，用户文档的*参考*部分中提供了以下技术文档：
 
-* [NSX Edge 服务网关解决方案体系结构](../archiref/nsx/nsx_overview.html)
-* [VMware Update Manager 指南](../archiref/vum/vum-intro.html)
-* [vCenter Server 联网指南](../archiref/vcsnsxt/vcsnsxt-intro.html)
-* [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private 指南](../archiref/vcsicp/vcsicp-intro.html)
-* [vCenter Server 和 IBM Kubernetes 服务指南](../archiref/vcsiks/vcsiks-intro.html)
-* [VMware 和 Skate Advisor 概念车指南](../archiref/vcscar/vcscar-intro.html)
-* [VMware - Stock Trader 现代化之旅](../archiref/vcscontent/vcscontent-modjourney.html)
-
-其中一些参考体系结构文档仅提供英语版本。
+* [NSX Edge 服务网关解决方案体系结构](/docs/services/vmwaresolutions/archiref/nsx/nsx_overview.html)
+* [VMware Update Manager 指南](/docs/services/vmwaresolutions/archiref/vum/vum-intro.html)
+* [vCenter Server 联网指南](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html)
+* [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [vCenter Server 和 IBM Kubernetes 服务指南](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html)
+* [VMware 和 Skate Advisor 概念车指南](/docs/services/vmwaresolutions/archiref/vcscar/vcscar-intro.html)
+* [VMware - Stock Trader 现代化之旅](/docs/services/vmwaresolutions/archiref/vcscontent/vcscontent-modjourney.html)
 
 ## 用户界面更新和增强功能
 

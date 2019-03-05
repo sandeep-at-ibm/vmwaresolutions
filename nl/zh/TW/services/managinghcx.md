@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-11-08"
 2. 若要存取「HCX Cloud 主控台」，請在 HCX on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上按一下**檢視 HCX Cloud 主控台**，然後使用 vCenter Server 認證來登入。
 3. 若要存取「HCX Manager 管理主控台」，請在 HCX on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上按一下**檢視 HCX Manager 管理主控台**，然後使用相同服務詳細資料頁面上所列出的 HCX Manager 認證來登入。
 
-如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](../vcenter/vc_hybrid_addingremovingservices.html)。
+如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)。
 
 ## 將更新套用至 HCX on IBM Cloud
 
@@ -25,11 +25,11 @@ HCX on {{site.data.keyword.cloud_notm}} 已部署最新已測試建置的 VMware
 
 若要套用任何已推送至環境的維護修正程式，您必須使用內部部署資料中心及 vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 實例中的「HCX Manager 管理主控台」。
 
-如果您看不到預期的建置更新、HCX 發生問題，或要立即將最新的 HCX 建置推送至系統，請遵循[與 IBM 支援中心聯絡](../vmonic/trbl_support.html)中的步驟來開立支援問題單。
+如果您看不到預期的建置更新、HCX 發生問題，或要立即將最新的 HCX 建置推送至系統，請遵循[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)中的步驟來開立支援問題單。
 
 ### 相關鏈結
 
-* [HCX on {{site.data.keyword.cloud_notm}} 概觀](hcx_considerations.html)
-* [HCX 術語名詞解釋](hcx_glossary.html)
+* [HCX on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [HCX 術語名詞解釋](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 概觀](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources)

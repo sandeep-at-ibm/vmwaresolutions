@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -32,9 +32,9 @@ lastupdated: "2018-09-27"
 
 |製造商       |元件                                     |版本         |
 |:-------------|:-----------------------------------------|:-------------|
-|VMware       |vSphere ESXi                             | 6.5 Update 2c（最多為 ESXi650-201808001 修補程式層次）|
-|VMware       |vCenter Server Appliance                 | 6.5 Update 2c |
-|VMware       |Platform Services Controller             | 6.5 Update 2c |
+|VMware       |vSphere ESXi                             |6.5 Update EP11（建置 6.5.0-10719125）|
+|VMware       |vCenter Server Appliance                 |6.5 U2c（建置 6.5.0-9451637）|
+|VMware       |Platform Services Controller             |6.5 U2c（建置 6.5.0-9451637）|
 |VMware       |vSAN                                     |6.6.1        |
 |VMware       |NSX for vSphere                          |6.4.1        |
 |VMware       |SDDC Manager                             |2.4          |
@@ -58,7 +58,8 @@ lastupdated: "2018-09-27"
 |佇列已滿樣本大小|**QFullSampleSize** = 32 |**/Disk/QFullSampleSize** = 32 |
 |佇列已滿臨界值    |**QFullThreshold** = 8 |**/Disk/QFullThreshold** = 8 |
 
-**附註：**
+###  附註 
+
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服務需要 **MaxVolumes** 設定，因為服務可能會在 ESXi 伺服器上使用超過預設的 NFS 裝載數目。
 * 配置設定的**未設定**值指出未自動套用新設定，因為它需要重新啟動 ESXi 伺服器，這可能會造成干擾。
 
@@ -71,5 +72,5 @@ lastupdated: "2018-09-27"
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Cloud Foundation 概觀](sd_cloudfoundationoverview.html)
-* [規劃 Cloud Foundation 實例](sd_planning.html)
+* [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [規劃 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_planning.html)

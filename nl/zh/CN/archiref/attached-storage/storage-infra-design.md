@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -34,7 +34,7 @@ lastupdated: "2018-11-13"
 
 ### IBM Cloud 网络概述
 
-{{site.data.keyword.cloud_notm}} 的物理网络分为三种不同的网络：公用网络、专用网络和管理网络。有关公用网络、专用网络和管理网络的更多信息，请参阅[解决方案概述](../solution/solution_overview.html)。
+{{site.data.keyword.cloud_notm}} 的物理网络分为三种不同的网络：公用网络、专用网络和管理网络。有关公用网络、专用网络和管理网络的更多信息，请参阅[解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)。
 
 有关 {{site.data.keyword.cloud_notm}} 网络的更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 网络](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}。
 
@@ -46,7 +46,7 @@ lastupdated: "2018-11-13"
 
 ### VLAN
 
-有关 VLAN 的更多信息，请参阅[物理基础架构设计](../solution/design_physicalinfrastructure.html)中的_物理网络设计_部分。
+有关 VLAN 的更多信息，请参阅[物理基础架构设计](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)中的_物理网络设计_部分。
 
 ## 物理存储器设计
 
@@ -65,10 +65,10 @@ lastupdated: "2018-11-13"
 在订购 NFS 共享后，无法调整其大小或对其重新配置来允许更多或更少的 IOPS。
 {:note}
 
-有关详细的 IOPS 选项，请参阅[订购 vCenter Server 实例](../../vcenter/vc_orderinginstance.html)中的_存储设置_部分。
+有关详细的 IOPS 选项，请参阅[订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)中的_存储设置_部分。
 
 除了存储器层，{{site.data.keyword.cloud_notm}} 耐久性存储器还支持一系列应用程序需求，包括快照和复制，以及 {{site.data.keyword.CloudDataCent_notm}} 位置中的静态加密。
 
 ### 相关链接
 
-* [解决方案概述](../solution/solution_overview.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

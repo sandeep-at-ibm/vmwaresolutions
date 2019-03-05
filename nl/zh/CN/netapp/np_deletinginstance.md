@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -49,6 +49,6 @@ lastupdated: "2018-10-30"
 
 ### 相关链接
 
-* [订购 NetApp ONTAP Select 实例](np_orderinginstances.html)
-* [查看 NetApp ONTAP Select 实例](np_viewinginstances.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
+* [订购 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [查看 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

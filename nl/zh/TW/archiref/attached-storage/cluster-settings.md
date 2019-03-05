@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -37,7 +37,7 @@ lastupdated: "2018-11-13"
 
 如需在 vSphere Web Client 中配置這些設定的相關資訊，請參閱 [Set a Custom Automation Level for a Virtual Machine in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-C21C0609-923B-46FB-920C-887F00DBCAB9.html)。
 
-除了叢集的自動化層次和移轉臨界值之外，本設計也會啟用 VM 自動化，以便您可以對個別 VM 設定置換。更精細地控制 VM 可以進一步設定 VM 負載平衡的優先順序。
+除了叢集的自動化層次和移轉臨界值之外，本設計也會啟用 VM 自動化，讓您可以置換每個個別 VM 的值。更精細地控制 VM 可以進一步設定 VM 負載平衡的優先順序。
 
 ### 電源管理
 
@@ -82,10 +82,10 @@ VM 監視特性使用 VMware 工具擷取的活動訊號資訊作為 Proxy，以
 
 vCenter Server 使用許可控制來確保叢集裡有足夠的資源可用來提供失效接手保護，以及確保有遵循 VM 資源保留。在本設計中，會透過指定叢集資源百分比來保留失效接手容量。定義的失效接手容量是設為 25% CPU 和 25% 記憶體。
 
-#### 活動訊號的資料儲存庫
+#### 資料儲存庫活動訊號
 
 vSphere HA 使用資料儲存庫活動訊號來識別失敗的主機與位於網路分割區上的主機。資料儲存庫活動訊號可在發生管理網路分割時由 vSphere HA 監視主機，並繼續回應發生的失敗。在本設計中，活動訊號資料儲存庫選取原則是設為「自動選取可從主機存取的資料儲存庫」。
 
 ### 相關鏈結
 
-* [解決方案概觀](../solution/solution_overview.html)
+* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

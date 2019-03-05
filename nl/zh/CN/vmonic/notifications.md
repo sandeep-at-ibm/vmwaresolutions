@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -72,5 +72,5 @@ lastupdated: "2018-11-05"
 
 ### 相关链接
 
-* [常见问题](faq.html)
-* [用户帐户和设置](useraccount.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)

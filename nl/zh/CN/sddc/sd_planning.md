@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-05"
 
 ## IBM Cloud 帐户需求
 
-要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](../vmonic/slaccountrequirement.html)。
+要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
 
 ## IBM Cloud Data Center 可用性
 
@@ -67,19 +67,19 @@ Cloud Foundation 部署对物理基础架构有严格要求。因此，只能将
 
 ## 备份管理组件
 
-您负责维护和确保所有实例组件的可用性。建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](../archiref/solution/solution_backingup.html)。
+您负责维护和确保所有实例组件的可用性。建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)。
 
 ## Cloud Foundation 实例的服务
 
-您可以根据需要订购适用于实例的附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 Cloud Foundation 实例的服务](sd_addingremovingservices.html)。
+您可以根据需要订购适用于实例的附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)。
 
 ## 容量注意事项
 
-有关容量的更多信息，请参阅[扩展容量](../archiref/solution/solution_scaling.html)。
+有关容量的更多信息，请参阅[缩放容量](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)。
 
 ### 相关链接
 
-* [Cloud Foundation 概述](sd_cloudfoundationoverview.html)
-* [订购 Cloud Foundation 实例](sd_orderinginstance.html)
-* [扩展和收缩 Cloud Foundation 实例的容量](sd_addingremovingservers.html)
-* [订购、查看和除去 Cloud Foundation 实例的服务](sd_addingremovingservices.html)
+* [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [扩展和收缩 Cloud Foundation 实例的容量](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)

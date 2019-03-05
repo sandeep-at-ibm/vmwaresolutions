@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -35,7 +35,7 @@ V2.0 或更高版本中的实例是随 VMware vSphere 6.5 和 VMware vCenter Ser
 
 ### 在 V2.0 或更高版本中部署的 Cloud Foundation 实例
 
-要应用 VMware vSphere 6.5 和 VMware vCenter Server 6.5 的必需补丁，必须将 Cloud Foundation 实例升级到最新的 VMware 补丁捆绑软件。对于所有现有实例和 ESXi 服务器，系统将提示您应用 {{site.data.keyword.vmwaresolutions_full}} 控制台中**更新和补丁**页面上的补丁。有关更多信息，请参阅[对 Cloud Foundation 实例应用更新](../sddc/sd_applyingupdates.html)。
+要应用 VMware vSphere 6.5 和 VMware vCenter Server 6.5 的必需补丁，必须将 Cloud Foundation 实例升级到最新的 VMware 补丁捆绑软件。对于所有现有实例和 ESXi 服务器，系统将提示您应用 {{site.data.keyword.vmwaresolutions_full}} 控制台中**更新和补丁**页面上的补丁。有关更多信息，请参阅[对 Cloud Foundation 实例应用更新](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)。
 
 ### 在 V2.0 或更高版本中部署的 VMware vSphere 集群
 
@@ -63,6 +63,6 @@ V1.9 或更低版本中的 Cloud Foundation 实例、vCenter Server 实例和 VM
 
 ### 相关链接
 
-* [对 Cloud Foundation 实例应用更新](../sddc/sd_applyingupdates.html)
+* [对 Cloud Foundation 实例应用更新](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)
 * [防御最近的安全漏洞](https://www.ibm.com/blogs/bluemix/2018/01/ibm-cloud-spectre-meltdown-vulnerabilities/)
 * [VMware 产品补丁站点](https://my.vmware.com/group/vmware/patch)

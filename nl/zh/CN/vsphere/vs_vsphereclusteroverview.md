@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,8 +45,9 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 ### 裸机服务器
 
 选择一个或多个 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}，具有所选 CPU 型号和 RAM 大小：
-* 2 个 Intel Broadwell 代 CPU（Intel Xeon E5-2600 V4 系列）
 * 2 个 Intel Skylake 代 CPU（Intel Xeon 4100/5100/6100 系列）
+* SAP 认证（Intel Xeon 6140/E5-2690/E7-8890 系列）
+* 2 个 CPU 的 Intel Broadwell 代（Intel Xeon E5-2600/E7-4800 系列）
 
 可用的选项取决于是否选择了 VMware vSAN 组件。
 
@@ -77,23 +78,23 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 
 ### 扩展节点的硬件
 
-一个 {{site.data.keyword.cloud_notm}} 裸机服务器，其硬件配置在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 集群的技术规范](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中显示。
+一个 {{site.data.keyword.cloud_notm}} 裸机服务器，其硬件配置在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 集群的技术规范](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中显示。
 
 ### 扩展节点的联网
 
-一个 {{site.data.keyword.cloud_notm}} 裸机服务器，其联网配置在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 集群的技术规范](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中显示。
+一个 {{site.data.keyword.cloud_notm}} 裸机服务器，其联网配置在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 集群的技术规范](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中显示。
 
 ### 扩展节点的 VMware 组件
 
 * 一个 {{site.data.keyword.cloud_notm}} 裸机服务器，带 VMware vSphere Enterprise Plus 6.0u2 或 6.5u1  
-* 可选的 VMware 组件在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 集群的技术规范](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中显示。
+* 可选的 VMware 组件在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 集群的技术规范](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)中显示。
 
-您只能在 {{site.data.keyword.slportal}} 中管理订购并交付给您的 {{site.data.keyword.cloud_notm}} 帐户的 ESXi 服务器、可选 VMware 组件以及其他硬件。在 {{site.data.keyword.vmwaresolutions_short}} 控制台中创建新集群后，可以返回到控制台并使用保存的信息扩展新集群。有关更多信息，请参阅[扩展现有 vSphere 集群](vs_scalingexistingclusters.html)。
+您只能在 {{site.data.keyword.slportal}} 中管理订购并交付给您的 {{site.data.keyword.cloud_notm}} 帐户的 ESXi 服务器、可选 VMware 组件以及其他硬件。在 {{site.data.keyword.vmwaresolutions_short}} 控制台中创建新集群后，可以返回到控制台并使用保存的信息扩展新集群。有关更多信息，请参阅[缩放现有 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)。
 {:important}
 
 ### 相关链接
 
-* [VMware vSphere 软件材料清单](vs_bom.html)
-* [规划 vSphere 集群](vs_planning.html)
-* [订购 vSphere 集群](vs_orderinginstances.html)
-* [扩展现有 vSphere 集群](vs_scalingexistingclusters.html)
+* [VMware vSphere 软件材料清单](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
+* [规划 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
+* [订购 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [缩放现有 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)

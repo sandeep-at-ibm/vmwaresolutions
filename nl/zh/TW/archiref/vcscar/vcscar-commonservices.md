@@ -2,22 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
-# 共用服務元件
+# VMware 和 Skate Advisor 概念車的共用服務元件
 
 共用服務提供雲端管理平台中其他服務所使用的服務。共用服務包括身分及存取服務、網域名稱服務及 NTP 服務。
 
-圖 1. {{site.data.keyword.cloud}} Private (ICP) 共用服務
-![ICP 共用服務](vcscar-common-services.svg)
+圖 1. {{site.data.keyword.icpfull_notm}} 共用服務
+![{{site.data.keyword.icpfull_notm}} 共用服務](vcscar-common-services.svg)
 
 ## 身分及存取服務
 
-在 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 自動化過程中，採用 Microsoft Active Directory (AD) 來進行身分管理。已部署單一 AD 虛擬伺服器實例 (VSI)。vCenter 配置為使用 AD 鑑別，而且您也可以配置 ICP 進行「LDAP 鑑別」。
+在 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 自動化過程中，採用 Microsoft Active Directory (AD) 來進行身分管理。已部署單一 AD 虛擬伺服器實例 (VSI)。vCenter 配置為使用 AD 鑑別，而且您也可以配置 {{site.data.keyword.icpfull_notm}} 進行「LDAP 鑑別」。
 
 ## 網域名稱服務
 
@@ -29,4 +29,4 @@ vCenter Server 部署使用 {{site.data.keyword.cloud_notm}} 基礎架構「網�
 
 ### 相關鏈結
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

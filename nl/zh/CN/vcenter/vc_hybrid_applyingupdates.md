@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-11-07"
 
 ## 开始之前
 
-从 V2.5 开始，不会再列出 IBM CloudDriver 更新，因为已启用自动更新。添加主机、添加集群和订购服务等操作会自动将实例更新到最新版本。有关自动更新的更多信息，请参阅 [V2.5 发行说明](../vmonic/relnotes_v25.html)中的 *IBM CloudDriver 弹性*部分。
+从 V2.5 开始，不会再列出 IBM CloudDriver 更新，因为已启用自动更新。添加主机、添加集群和订购服务等操作会自动将实例更新到最新版本。有关自动更新的更多信息，请参阅 [V2.5 发行说明](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)中的 *IBM CloudDriver 弹性*部分。
 {:note}
 
 尝试应用更新之前，请通过单击向下箭头来展开更新条目，然后验证以下信息：
@@ -85,10 +85,10 @@ lastupdated: "2018-11-07"
 <dd class="dd">无法获取更新作业的状态。请联系 IBM 支持人员以获取帮助。</dd>
 </dl>
 
-4. 如果更新过程在特定步骤失败，请[联系 IBM 支持人员](../vmonic/trbl_support.html)以获取帮助。IBM 支持人员将向您提供如何解决问题的建议，并指导您从失败的步骤重试升级。
+4. 如果更新过程在特定步骤失败，请[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)以获取帮助。IBM 支持人员将向您提供如何解决问题的建议，并指导您从失败的步骤重试升级。
 
 ### 相关链接
 
-* [vCenter Server with Hybridity Bundle 概述](../vcenter/vc_hybrid_overview.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
-* [常见问题](../vmonic/faq.html)
+* [vCenter Server with Hybridity Bundle 概述](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)

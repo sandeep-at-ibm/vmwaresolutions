@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -47,7 +47,7 @@ lastupdated: "2018-11-09"
 |工作程序|4|16|200|300|6|
 |漏洞顾问程序|8|16|500|1|1|
 |GlusterFS|8|16|150|50|3|
-|引导程序 ICP/CAM |16| 32 |250|1|1|
+|引导程序 {{site.data.keyword.icpfull_notm}}/CAM|24|44|250|1|1|
 |NFS 服务器|8|4|350|1|1|
 |NSX Edge 服务网关|2|1|0.5|0.5|2|
 |记录的约束|52|640|  |8,000|   |
@@ -63,7 +63,7 @@ lastupdated: "2018-11-09"
 |工作程序|4|16|200|300|3|
 |漏洞顾问程序|8|16|150|1|1|
 |GlusterFS|8|16|150|50|3|
-|引导程序 ICP/CAM |16| 32 |250|1|1|
+|引导程序 {{site.data.keyword.icpfull_notm}}/CAM|24|44|250|1|1|
 |NFS 服务器|8|4|350|1|1|
 |NSX Edge 服务网关|2|1|0.5|0.5|2|
 |记录的约束|30|200|  |4,000|  |
@@ -119,6 +119,6 @@ lastupdated: "2018-11-09"
 
 ### 相关链接
 
-* [订购 IBM Cloud Private Hosted](../services/icp_ordering.html)
-* [vCenter Server 和 IBM Cloud Private 指南](../archiref/vcsicp/vcsicp-intro.html)
+* [订购 IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services/icp_ordering.html)
+* [vCenter Server 和 IBM Cloud Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
 * [开具有关 IBM Cloud Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-29"
 
 # 配置網路以使用客戶管理的 NSX ESG 來搭配您的 VM
 
-配置虛擬機器的網路，以便利用 VMware vCenter Server 實例中所部署的 VMware NSX Edge Services Gateway (ESG)。如需為協助降低安全風險而設的安全措施相關資訊，請參閱[管理服務 NSX Edge 是否造成安全風險？](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+配置虛擬機器的網路，以便利用 VMware vCenter Server 實例中所部署的 VMware NSX Edge Services Gateway (ESG)。如需為協助降低安全風險而設的安全措施相關資訊，請參閱[管理服務 NSX Edge 是否造成安全風險？](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX 是一種網路虛擬化平台，可將隔離的網路虛擬化，並提供數個網路服務，例如交換器、路由及防火牆。如需 NSX 的相關資訊，請參閱 [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}。
 
@@ -25,7 +25,11 @@ VMware NSX 是一種網路虛擬化平台，可將隔離的網路虛擬化，並
 * 部署一個範例 NSX 邏輯交換器，供客戶工作負載 VM 使用。
 * 在連接至第 2 層 (L2) 網路的本端工作負載之間，會針對潛在的東西向通訊而部署範例「NSX 分散式邏輯路由器 (DLR)」。
 * 部署及配置 NSX Edge 應用裝置，以執行從工作負載邏輯交換器之 IP 位址範圍到 NAT 規則上之公用 IP 位址的網址轉換 (NAT)。
-* 如果您已安裝 Veeam on {{site.data.keyword.cloud_notm}} 服務，則會配置 NSX Manager 執行 NSX 配置的每日備份。如需相關資訊，請參閱[安裝 Veeam on {{site.data.keyword.cloud_notm}} 時的考量](../services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud)。
+
+  未針對僅限專用的實例部署 NXS Edge。
+  {:note}
+
+* 如果您已安裝 Veeam on {{site.data.keyword.cloud_notm}} 服務，則會配置 NSX Manager 執行 NSX 配置的每日備份。如需相關資訊，請參閱[安裝 Veeam on {{site.data.keyword.cloud_notm}} 時的考量](/docs/services/vmwaresolutions/services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud)。
 
 ## 配置 VM 網路設定的程序
 
@@ -78,6 +82,6 @@ Edge **customer-nsx-edge** 是要給您自己使用的，因此您可以修改�
 
 ### 相關鏈結
 
-* [疑難排解](../vcenter/vcenter_chg_impact.html)
-* [常見問題](../vmonic/faq.html)
+* [疑難排解](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
+* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

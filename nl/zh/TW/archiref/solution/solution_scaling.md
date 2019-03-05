@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-25"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -53,6 +53,6 @@ lastupdated: "2018-07-25"
 
 ### 相關鏈結
 
-* [解決方案概觀](solution_overview.html)
-* [設計概觀](design_overview.html)
-* [備份元件](solution_backingup.html)
+* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [設計概觀](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [備份元件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-05"
 
 # 订购 vCenter Server 实例
 
-要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware vCenter Server 实例。在初始订购期间，还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud}}](../services/addingzertodr.html)。
+要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware vCenter Server 实例。在初始订购期间，还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html)。
 
 ## 需求
 
 确保已完成以下任务：
-* 已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
-* 已查看[针对 vCenter Server 实例的需求和规划](vc_planning.html)中的信息。
+* 已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
+* 已查看[针对 vCenter Server 实例的需求和规划](/docs/services/vmwaresolutions/vcenter/vc_planning.html)中的信息。
 * 已复查实例和域名格式。域名和子域标签用于生成实例的用户名和服务器名称。
 
 表 1. 实例和域名的值格式
@@ -29,10 +29,9 @@ lastupdated: "2018-11-05"
   |:------------|:------------ |
   |域名| `<root_domain>` |  
   |vCenter Server 登录用户名| `<user_id>@<root_domain>`（Microsoft Active Directory 用户）或 `administrator@vsphere.local`|
-  |vCenter Server FQDN|`vcenter.<subdomain_label>.<root_domain>`. 最大长度为 50 个字符。|
+  |vCenter Server（具有嵌入式 PSC）FQDN| `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大长度为 50 个字符。|
   |Single Sign-On (SSO) 站点名称| `<subdomain_label>` |
-  |标准 ESXi 服务器名称| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 服务器的序列。最大长度为 50 个字符。|  
-  |PSC FQDN|`psc-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大长度为 50 个字符。|
+  |标准 ESXi 服务器名称| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 服务器的序列。最大长度为 50 个字符。|
 
 不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。
 {:important}
@@ -45,7 +44,7 @@ lastupdated: "2018-11-05"
 
 实例名称必须满足以下需求：
 * 只允许使用字母数字字符和短划线 (-) 字符。
-* 实例名称必须以字母数字字符开头和结尾。
+* 实例名称必须以字母字符开头并以字母数字字符结尾。
 * 实例名称的最大长度为 10 个字符。
 * 实例名称在您的帐户中必须唯一。
 
@@ -64,8 +63,8 @@ lastupdated: "2018-11-05"
 
 对于非业务合作伙伴用户，可以通过选择**购买时包含**对这些组件使用 IBM 提供的 VMware 许可证，或者可以通过选择**我将提供**并输入您自己的许可证密钥以自带许可证 (BYOL)。
 
+### 注意
 
-**注意：**
 * 需要至少具有 8 个 CPU 的许可证，即用于 4 个服务器，每个服务器 2 个 CPU。每个 VMware 组件的许可证选项会应用于基本实例以及日后添加到该实例的任何 ESXi 服务器。因此，请确保您的许可证在基础架构中支持未来的容量扩展。
 * 用户界面上指示了最低许可证版本。如果支持不同的组件版本，那么可以选择所需的版本。您负责确保提供的许可证密钥对于选择的每个 VMware 组件都正确。
 * 对于 vSphere，在订购时会发生许可费用，但随后会将该许可费用计入您的帐户。
@@ -101,6 +100,10 @@ lastupdated: "2018-11-05"
   * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 192 GB RAM
   * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 384 GB RAM
   * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 768 GB RAM
+  * 双 Intel Xeon E5-2690 V4 处理器 / 共 28 个核心，2.6 GHz / 512 GB RAM
+  * 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 1024 GB RAM
+  * 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 2048 GB RAM
+  * 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 4096 GB RAM
 
 ### Broadwell
 
@@ -113,23 +116,31 @@ lastupdated: "2018-11-05"
 |双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
+|四核 Intel Xeon E7-4820 V4 / 共 40 个核心，2.0 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
+|四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
 ### 裸机服务器的数量
 
-对于实例中的初始集群，可以配置的 ESXi 服务器数范围为 2 到 20 个。所有 ESXi 服务器共享所设置的配置。 
+对于实例中的初始集群，可以配置的 ESXi 服务器数范围为 2 到 20 个。所有 ESXi 服务器共享所设置的配置。
 
-初始部署后，可以再添加四个集群。如果为 VMware vSAN 选择的是 **Skylake** 或 **Broadwell** 配置，那么初始集群和部署后集群都需要 4 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)。
+初始部署后，可以再添加四个集群。如果为 VMware vSAN 选择的是 **Skylake** 或 **Broadwell** 配置，那么初始集群和部署后集群都需要 4 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)。
 
 ## 存储设置
 
 存储设置基于您选择的裸机服务器配置和存储类型。
+
+对于 V2.8 和更高版本的实例，可以将 NFS 存储共享添加到现有 NFS 或 vSAN 集群。有关更多信息，请参阅[扩展和收缩 vCenter Server 实例的容量](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances)中的*向 vCenter Server 实例添加 NFS 存储器*部分。
+{:note}
 
 ### vSAN 存储器
 
 vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 vSAN 选项：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
-* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
+* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
+
+  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号双 Intel Xeon Gold 5120 和双 Intel Xeon Gold 6140。
+  {:note}
 
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 * **vSAN 许可证**：通过选择**购买时包含**对 vSAN 组件使用 IBM 提供的 VMware 许可证，或者通过选择**我将提供**并输入您自己的许可证密钥以自带许可证 (BYOL)。
@@ -143,17 +154,25 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 
 * **分别配置共享**：选择此项以对每个文件共享指定不同的配置设置。
 * **共享数**：对每个文件共享使用相同的配置设置时，指定要添加的 NFS 共享存储器的文件共享数。
-* **大小**：选择满足共享存储器需求的容量。
 * **性能**：选择基于工作负载需求的 IOPS（每秒输入/输出操作数）/GB。
-* **添加 NFS**：选择此项以添加使用不同配置设置的单个文件共享。
+* **大小 (GB)**：选择满足共享存储器需求的容量。
+* **添加共享存储器**：选择此项以添加使用不同配置设置的单个文件共享。
 
 表 4. NFS 性能级别选项
 
 |选项|详细信息|
   |:------------- |:------------- |
+  |0.25 IOPS/GB |此选项旨在用于不常用的工作负载。示例应用包括：保险库文件数据、托管具有旧数据的大型数据库或虚拟内存系统的虚拟磁盘映像（作为备份）。|
   |2 IOPS/GB|此选项旨在用于大多数通用工作负载。示例应用包括：托管小型数据库、备份 Web 应用程序或系统管理程序的虚拟机磁盘映像。|
   |4 IOPS/GB|此选项旨在用于同时活动数据百分比高的更高强度工作负载。示例应用包括：事务性数据库。|
   |10 IOPS/GB|此选项旨在用于要求最苛刻的工作负载类型（如分析）。示例应用包括：高事务数据库和其他性能敏感型数据库。此性能级别限制为每个文件共享的最大容量为 4 TB。|
+
+### 本地磁盘
+
+本地磁盘选项仅可用于 **SAP 认证**的四核 Intel Xeon E7-8890 V4 处理器裸机配置。
+请指定以下选项：
+* **磁盘计数**：选择要添加的磁盘数。
+* **磁盘类型**：选择与所需磁盘类型相应的选项。
 
 ## 网络接口设置
 
@@ -170,7 +189,7 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 
 子域标签必须满足以下需求：
 *  只允许使用字母数字字符和短划线 (-) 字符。
-*  子域标签必须以字母数字字符开头和结尾。
+*  子域标签必须以字母字符开头并以字母数字字符结尾。
 *  子域标签的最大长度为 10 个字符。
 *  子域标签在您的帐户中必须唯一。
 
@@ -205,6 +224,7 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 选择此项可订购一个新的公用 VLAN 和两个新的专用 VLAN。
 
 #### 选择现有 VLAN
+
 根据选择的 {{site.data.keyword.CloudDataCent_notm}}，可能会有现有公用和专用 VLAN 可用。
 
 选择复用现有公用和专用 VLAN 时，请指定 VLAN 和子网：
@@ -214,9 +234,10 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 * **主子网**分配给物理主机以用于公用网络访问。
 * **主专用子网**分配给物理主机以用于管理流量。
 
+##### 重要
+
 * 确保所选 VLAN 上的防火墙配置不会阻止管理数据流量。
 * 确保选择的所有 VLAN 都在同一 pod 中。在混合 pod VLAN 上无法供应 ESXi 服务器。
-{:important}
 
 ### DNS 配置
 
@@ -236,7 +257,7 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 
 ## 服务设置
 
-订购 vCenter Server 实例时，还可以订购附加组件服务。有关服务的更多信息，请参阅 [vCenter Server 实例的可用服务](vc_addingremovingservices.html#available-services-for-vcenter-server-instances)。
+订购 vCenter Server 实例时，还可以订购附加组件服务。有关服务的更多信息，请参阅 [vCenter Server 实例的可用服务](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)。
 
 ## 订单摘要
 
@@ -251,8 +272,9 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
    * 单击**主实例**以在环境中部署单个实例，或者在多站点拓扑中部署第一个实例。
    * 单击**辅助实例**以将该实例与环境中的现有（主）实例连接以获取高可用性，并完成以下步骤：
      1. 选择要与辅助实例连接的主实例。
-     2. 对于主实例 V2.5 或更高版本，请输入**主实例 PSC 的管理员密码**的值。
-     3. 对于主实例 V2.4 或更低版本，请验证**主实例 PSC 的管理员密码**字段的预填充值是否正确。
+     2. 对于主实例 V2.8 或更高版本，请输入主实例的 vCenter Server 管理员密码。
+     3. 对于主实例 V2.5、2.6 或 2.7，请输入主实例的 PSC 管理员密码。
+     4. 对于主实例 V2.4 或更低版本，请验证主实例的 PSC 管理员密码的预填充值是否正确。
 5. 完成实例组件的许可证设置。
    *  要使用 IBM 提供的许可证，请选择**购买时包含**，并根据需要选择许可证版本。
    *  要使用您自己的许可证，请选择**我将提供**并输入许可证密钥。
@@ -264,8 +286,9 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
     3. 指定 {{site.data.keyword.baremetal_short}} 数。如果计划将 vSAN 用作存储解决方案，那么至少需要 4 个 {{site.data.keyword.baremetal_short}}。  
 7. 填写存储配置。
   * 如果选择 **vSAN 存储器**，请指定容量和高速缓存磁盘的磁盘类型、磁盘数和 vSAN 许可证版本。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
-  * 如果选择 **NFS 存储器**，并且要向所有文件共享添加和配置相同设置，请指定**共享数**、**大小**和**性能**。
-  * 如果选择 **NFS 存储器**，并且要单独添加和配置文件共享，请选择**单独配置共享**。接着，单击**添加 NFS** 标签旁边的 **+** 图标，然后为每个文件共享选择**大小**和**性能**。必须至少选择一个文件共享。
+  * 如果选择 **NFS 存储器**，并且要向所有文件共享添加和配置相同设置，请指定**共享数**、**性能**和**大小 (GB)**。
+  * 如果选择 **NFS 存储器**，并且要单独添加和配置文件共享，请选择**单独配置共享**。接着，单击**添加共享存储器**标签旁边的 **+** 图标，然后为每个文件共享选择**性能**和**大小 (GB)**。必须至少选择一个文件共享。
+  * 如果选择**本地磁盘**，请指定磁盘计数和磁盘类型。
 8. 完成网络接口设置。
    1. 输入主机名前缀、子域标签和根域名。对于辅助实例，系统会自动填写域名。
    2. 选择网络设置**公用和专用网络**或**仅专用网络**。
@@ -286,7 +309,7 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 
 实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
 
-成功部署实例后，[vCenter Server 实例的技术规范](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
+成功部署实例后，[vCenter Server 实例的技术规范](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
 
 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
@@ -309,10 +332,10 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 
 ### 相关链接
 
-* [注册 {{site.data.keyword.cloud_notm}} 帐户](../vmonic/signing_softlayer_account.html)
-* [查看 vCenter Server 实例](vc_viewinginstances.html)
-* [vCenter Server 实例的多站点配置](vc_multisite.html)
-* [添加、查看和删除 vCenter Server 实例的集群](vc_addingviewingclusters.html)
-* [扩展和收缩 vCenter Server 实例的容量](vc_addingremovingservers.html)
-* [订购、查看和除去 vCenter Server 实例的服务](vc_addingremovingservices.html)
-* [删除 vCenter Server 实例](vc_deletinginstance.html)
+* [注册 {{site.data.keyword.cloud_notm}} 帐户](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [查看 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
+* [vCenter Server 实例的多站点配置](/docs/services/vmwaresolutions/vcenter/vc_multisite.html)
+* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [扩展和收缩 vCenter Server 实例的容量](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [删除 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)

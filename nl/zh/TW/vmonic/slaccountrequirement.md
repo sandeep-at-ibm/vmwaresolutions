@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-11-05"
 
 您使用的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須具有特定許可權，才能訂購實例中的元件，並代表您執行作業。許可權需求適用於您從 {{site.data.keyword.vmwaresolutions_short}} 主控台訂購的所有類型之實例和服務。
 
-獲授權的使用者可以在 {{site.data.keyword.slportal}} 中驗證及更新 {{site.data.keyword.cloud_notm}} 基礎架構帳戶的許可權。如需相關資訊，請參閱[編輯使用者的客戶入口網站許可權](../../../customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}。
+獲授權的使用者可以在 {{site.data.keyword.slportal}} 中驗證及更新 {{site.data.keyword.cloud_notm}} 基礎架構帳戶的許可權。如需相關資訊，請參閱[編輯使用者的客戶入口網站許可權](/docs/customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}。
 
 表 1. {{site.data.keyword.cloud_notm}} 基礎架構帳戶的必要許可權
 
@@ -44,12 +44,19 @@ lastupdated: "2018-11-05"
 |檢視密碼|需要此許可權，才能管理已訂購的 VSI。|
 |管理伺服器監視|下訂單不需要此許可權，但需要它才能擷取及驗證在實例中執行 VMware ESXi 伺服器的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 的監視狀態。|
 
-## 典型（非 VRF）帳戶的 VLAN 跨越
+## 虛擬遞送及轉遞 (VRF) 需求
 
-如果您使用典型（非 VRF）{{site.data.keyword.cloud_notm}} 基礎架構帳戶，則必須啟用 VLAN Spanning。如果未對典型帳戶啟用 VLAN 跨越，則 VMware 虛擬化環境的各種元件可能無法彼此通訊。若要在 {{site.data.keyword.cloud_notm}} 基礎架構帳戶中啟用 VLAN Spanning，請參閱 [VLAN Spanning](../../../infrastructure/vlans/vlan-spanning.html){:new_window}。
+{{site.data.keyword.cloud_notm}} 基礎架構帳戶必須是 VRF 帳戶，或者，如果是非 VRF 帳戶，則必須已啟用 VLAN Spanning。如需將帳戶從非 VRF 轉換成 VRF 的相關資訊，請參閱 [VRF on IBM Cloud 概觀](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)。
+
+## 非 VRF 帳戶的 VLAN Spanning
+
+如果您使用非 VRF {{site.data.keyword.cloud_notm}} 基礎架構帳戶，則必須啟用 VLAN Spanning。如果未對非 VRF 帳戶啟用 VLAN Spanning，則 VMware 虛擬化環境的各種元件可能無法彼此通訊。
+
+若要在帳戶中啟用 VLAN Spanning，請參閱 [VLAN Spanning](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}。
 
 ### 相關鏈結
 
-* [Cloud Foundation 實例的需求](../sddc/sd_planning.html)
-* [vCenter Server 實例的需求](../vcenter/vc_planning.html)
-* [使用者帳戶及設定](useraccount.html)
+* [Cloud Foundation 實例的需求](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [vCenter Server 實例的需求](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [VRF on IBM Cloud 概觀](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)

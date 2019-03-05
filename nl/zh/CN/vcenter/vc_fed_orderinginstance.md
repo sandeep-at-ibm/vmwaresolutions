@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-05"
 
 # 订购 VMware Federal 实例
 
-要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware Federal 实例。VMware Federal 实例可帮助将打开的管理连接断开连接并确保已部署实例的安全。
+要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware Federal 实例。VMware Federal 实例可帮助将开放式管理连接断开连接并确保已部署实例的安全。
 
 目前仅 vCenter Server 实例支持 VMware Federal on {{site.data.keyword.cloud}}。
 {:note}
@@ -22,8 +22,8 @@ lastupdated: "2018-11-05"
 ## 订购 VMware Federal 实例的需求
 
 确保已完成以下任务：
-* 已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
-* 已查看[针对 VMware Federal 实例的需求和规划](vc_fed_planning.html)中的信息。
+* 已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
+* 已查看[针对 VMware Federal 实例的需求和规划](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)中的信息。
 * 已复查实例和域名格式。域名和子域标签用于生成实例的用户名和服务器名称。
 
 表 1. 实例和域名的值格式
@@ -48,7 +48,7 @@ lastupdated: "2018-11-05"
 
 实例名称必须满足以下需求：
 * 只允许使用字母数字字符和短划线 (-) 字符。
-* 实例名称必须以字母数字字符开头和结尾。
+* 实例名称必须以字母字符开头并以字母数字字符结尾。
 * 实例名称的最大长度为 10 个字符。
 * 实例名称在您的帐户中必须唯一。
 
@@ -65,7 +65,7 @@ lastupdated: "2018-11-05"
 * NSX Service Providers 6.4（Base Edition、Advanced Edition 或 Enterprise Edition）
 * （对于 vSAN 集群）vSAN 6.6（Advanced Edition 或 Enterprise Edition）
 
-**注意：**
+### 注意
 
 * 用户界面上指示了最低许可证版本。如果支持不同的组件版本，那么可以选择所需的版本。您负责确保提供的许可证密钥对于选择的每个 VMware 组件都正确。
 * 对于 vSphere，在订购时将发生许可费用，但随后会将该许可费用计入您的帐户。
@@ -106,7 +106,7 @@ lastupdated: "2018-11-05"
 
 可以配置的 ESXi 服务器数的范围为 2 到 20 个。
 
-所有 ESXi 服务器共享相同的配置。部署后，可以再添加四个集群。对于 vSAN 存储设置，初始集群和部署后集群都需要 4 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗？](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+所有 ESXi 服务器共享相同的配置。部署后，可以再添加四个集群。对于 vSAN 存储设置，初始集群和部署后集群都需要 4 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗？](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## 存储设置
 
@@ -117,7 +117,10 @@ lastupdated: "2018-11-05"
 请指定以下 vSAN 选项：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
-* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
+* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
+
+  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号双 Intel Xeon Gold 5120 和双 Intel Xeon Gold 6140。
+  {:note}
 
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 * **vSAN 许可证**：选择 vSAN 6.6 许可证版本（Advanced 或 Enterprise）。
@@ -156,7 +159,7 @@ lastupdated: "2018-11-05"
 
 子域标签必须满足以下需求：
 *  只允许使用字母数字字符和短划线 (-) 字符。
-*  子域标签必须以字母数字字符开头和结尾。
+*  子域标签必须以字母字符开头并以字母数字字符结尾。
 *  子域标签的最大长度为 10 个字符。
 *  子域标签在您的帐户中必须唯一。
 
@@ -219,7 +222,7 @@ lastupdated: "2018-11-05"
 
 实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
 
-成功部署实例后，[VMware Federal on {{site.data.keyword.cloud_notm}} 实例的技术规范](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。
+成功部署实例后，[VMware Federal on {{site.data.keyword.cloud_notm}} 实例的技术规范](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。
 
 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
@@ -239,10 +242,10 @@ lastupdated: "2018-11-05"
 
 ### 相关链接
 
-* [注册 {{site.data.keyword.cloud_notm}} 帐户](../vmonic/signing_softlayer_account.html)
-* [查看 VMware Federal 实例](vc_fed_viewinginstance.html)
-* [扩展和收缩 VMware Federal 实例的容量](vc_fed_addingremovingservers.html)
-* [添加、查看和删除 VMware Federal 实例的集群](fed_addviewdeleteclusters.html)
-* [确保 VMware Federal 实例安全](vc_fed_securinginstance.html)
-* [删除 VMware Federal 实例](vc_fed_deletinginstance.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
+* [注册 {{site.data.keyword.cloud_notm}} 帐户](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [查看 VMware Federal 实例](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [扩展和收缩 VMware Federal 实例的容量](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [添加、查看和删除 VMware Federal 实例的集群](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [确保 VMware Federal 实例安全](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [删除 VMware Federal 实例](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2018-10-29"
   <dd class="dd">實體網路會提供與環境的網路連線功能，而之後網路虛擬化會使用該環境。網路由 {{site.data.keyword.cloud_notm}} 服務網路提供，並包含額外服務（例如 DNS 及 NTP）。</dd>
 </dl>
 
-如需實體元件的相關資訊，請參閱 [Cloud Foundation 實例](../../sddc/sd_bom.html)或 [vCenter Server 實例](../../vcenter/vc_bom.html)的「資料清單」。
+如需實體元件的相關資訊，請參閱 [Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_bom.html)或 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_bom.html)的「資料清單」。
 
 如需儲存空間的相關資訊，請參閱[共用儲存空間架構](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)。
 
@@ -33,7 +33,7 @@ lastupdated: "2018-10-29"
 
 實體主機是指環境中用來提供運算資源的 {{site.data.keyword.baremetal_short}}。此解決方案中所套用的 {{site.data.keyword.baremetal_short}} 已經過 VMware 認證，並列在 [VMware HCG](http://www.vmware.com/resources/compatibility/search.php) 中。
 
-解決方案中可用的伺服器配置符合或超出安裝、配置及管理 vSphere ESXi 的最低需求。有各種配置可用來滿足不同的需求。如需用於 VMware on {{site.data.keyword.cloud_notm}} 解決方案之確切規格的詳細清單，請參閱 [Cloud Foundation 實例](../../sddc/sd_bom.html)或 [vCenter Server 實例](../../vcenter/vc_bom.html)的「資料清單」。
+解決方案中可用的伺服器配置符合或超出安裝、配置及管理 vSphere ESXi 的最低需求。有各種配置可用來滿足不同的需求。如需用於 VMware on {{site.data.keyword.cloud_notm}} 解決方案之確切規格的詳細清單，請參閱 [Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_bom.html)或 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_bom.html)的「資料清單」。
 
 {{site.data.keyword.baremetal_short}} 位於 {{site.data.keyword.cloud_notm}}。
 {:note}
@@ -156,7 +156,7 @@ vSphere ESXi Hypervisor 設計成安裝於持續性位置中。因此，實體�
 
 使用時，會使用全快閃記憶體的配置來配置 VMware vSAN。此設計容許數個配置選項（包括 2U 和 4U 機箱）、各種磁碟數量，以及各種磁碟大小。所有配置都會使用兩個 vSAN 磁碟群組，搭配一個固態硬碟 (SSD) 用於快取，和一個以上的 SSD 用於容量。所有配置供 vSAN 耗用的磁碟機，都以單一磁碟 RAID-0 進行配置。
 
-如需所支援配置的相關資訊，請參閱 [Cloud Foundation 實例](../../sddc/sd_bom.html)或 [vCenter Server 實例](../../vcenter/vc_bom.html)的「資料清單」。
+如需所支援配置的相關資訊，請參閱 [Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_bom.html)或 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_bom.html)的「資料清單」。
 
 ### 跨主機的共用檔案層次儲存空間
 
@@ -172,7 +172,7 @@ vSphere ESXi Hypervisor 設計成安裝於持續性位置中。因此，實體�
 
 ### 相關鏈結
 
-* [Cloud Foundation 資料清單](../../sddc/sd_bom.html)
-* [vCenter Server 資料清單](../../vcenter/vc_bom.html)
+* [Cloud Foundation 資料清單](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [vCenter Server 資料清單](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
 * [共用儲存空間架構](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
 * [NetApp ONTAP Select 架構](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

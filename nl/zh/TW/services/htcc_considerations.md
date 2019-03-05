@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-25"
 
 # HyTrust CloudControl on IBM Cloud 概觀
 
-HyTrust CloudControl on {{site.data.keyword.cloud}} 服務會施行並控制是否符合安全標準，包括角色型存取控制 (RBAC)、核准及審核。此服務與 HyTrust DataControl 結合時，此服務可確保虛擬機器及工作負載資料不會離開 {{site.data.keyword.CloudDataCent_notm}} 內的特定地區、叢集或 ESXi 伺服器。
+HyTrust CloudControl on {{site.data.keyword.cloud}} 服務會施行並控制是否符合安全標準，其中包括角色型存取控制 (RBAC)、核准及審核。此服務與 HyTrust DataControl 結合時，此服務確定虛擬機器及工作負載資料不會離開 {{site.data.keyword.CloudDataCent_notm}} 內的特定地區、叢集或 ESXi 伺服器。
 
 只有執行 vSphere 6.5 以及部署在（或升級至）2.3 版或更新版本的實例，才能使用此服務。目前安裝的 HyTrust CloudControl 版本為 5.4.0。
 {:note}
@@ -40,12 +40,12 @@ HyTrust CloudControl on {{site.data.keyword.cloud}} 服務會施行並控制是�
 
 ## 移除 HyTrust CloudControl on IBM Cloud 時的考量
 
-請確定您停用已配置的 **Root 密碼加密配置檔**，並且已從 HyTrust CloudControl 刪除所有受保護主機，再移除 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服務。
+請確定您停用已配置的 **Root 密碼加密配置檔**，並且已從 HyTrust CloudControl 中刪除所有受保護主機，再移除 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服務。
 
 ### 相關鏈結
 
-* [訂購 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](htcc_ordering.html)
-* [管理 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](managinghtcc.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
-* [常見問題](../vmonic/faq.html)
+* [訂購 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_ordering.html)
+* [管理 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtcc.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [HyTrust 網站](https://www.hytrust.com/)

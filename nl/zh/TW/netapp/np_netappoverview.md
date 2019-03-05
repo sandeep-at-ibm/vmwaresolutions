@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -47,13 +47,11 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目能提供儲
 
 虛擬化管理層包含下列元件：
 
-* vCenter Server 虛擬應用裝置
+* 具有內嵌 Platform Services Controller (PSC) 的 vCenter Server Appliance (vCSA)
 * NSX Manager
 * 兩個 NSX Edge Services Gateway (ESG)
 * 三個 NSX Controller
-* Platform Services Controller (PSC) 虛擬應用裝置
-* vCenter Server Appliance (vCSA)
-* IBM CloudDriver 虛擬伺服器實例 (VSI)。
+* IBM CloudDriver 虛擬伺服器實例 (VSI)
 
 NetApp ONTAP Select 是在 VMware 叢集裡執行，並將主機上的本端儲存空間虛擬化。NetApp ONTAP Select 部署在專用模型中，其中其他工作負載預期不會與其共用叢集。因此，NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目的硬體配置僅根據 NetApp ONTAP Select 的需求調整大小。
 
@@ -64,7 +62,7 @@ NetApp ONTAP Select 實例中包含下列元件。
 標準化配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
 {:note}
 
-### 儲存空間
+### Storage
 
 * 在**高效能（中型）**、**高效能（大型）**及**高容量**之間進行選擇
 * 具有緊急備用的 RAID 5
@@ -123,7 +121,7 @@ NetApp ONTAP Select 實例中包含下列元件。
 
 ### 相關鏈結
 
-* [規劃 NetApp ONTAP Select 實例](np_planning.html)
-* [訂購 NetApp ONTAP Select 實例](np_orderinginstances.html)
-* [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html)
+* [規劃 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp/np_planning.html#requirements-and-planning-for-netapp-ontap-select-instances)
+* [訂購 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
 * [NetApp ONTAP 文件中心](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){:new_window}

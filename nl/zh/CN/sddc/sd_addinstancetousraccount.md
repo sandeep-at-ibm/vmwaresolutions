@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-17"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -35,6 +35,6 @@ lastupdated: "2018-10-17"
 
 ### 相关链接
 
-* [使用 IAM 管理用户访问权](../vmonic/iam.html)
-* [邀请用户访问服务和资源](../vmonic/iamuserinvite.html)
-* [什么是 IBM Cloud IAM](../../../iam/index.html)
+* [使用 IAM 管理用户访问权](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [邀请用户访问服务和资源](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [什么是 IBM Cloud IAM](/docs/iam/index.html)

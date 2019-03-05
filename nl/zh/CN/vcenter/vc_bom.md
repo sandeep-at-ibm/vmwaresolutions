@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -36,9 +36,9 @@ lastupdated: "2018-10-26"
 
 |制造商|组件|版本|
 |:------------- |:------------------------------ |:------------- |
-|VMware|vSphere ESXi|6.5 Update 2c（最高更新至 ESXi650-201808001 补丁级别）|
-|VMware|vCenter Server Appliance|6.5 Update 2c|
-|VMware|Platform Services Controller|6.5 Update 2c|
+|VMware|vSphere ESXi|6.5 Update P3（构建 6.5.0-10884925）|
+|VMware|vCenter Server Appliance|6.5 U2d（构建 6.5.0-10964411）|
+|VMware|Platform Services Controller|6.5 U2d（构建 6.5.0-10964411）|
 |VMware|vSAN|6.6.1|
 |VMware|NSX for vSphere|6.4.1|
 |Microsoft|Windows Server Standard Edition|2012R2|
@@ -130,5 +130,5 @@ vSphere 集群使用两个 vSphere 分布式交换机 (vDS)，一个用于公用
 * [VMware vCenter Server 的构建号和版本 (2143838)](https://kb.vmware.com/s/article/2143838)
 * [在虚拟分布式交换机上启用巨型帧](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [vCenter Server 概述](vc_vcenterserveroverview.html)
-* [规划 vCenter Server 实例](vc_planning.html)
+* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [规划 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_planning.html)

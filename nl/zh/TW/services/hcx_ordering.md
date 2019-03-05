@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -62,24 +62,24 @@ lastupdated: "2018-11-08"
    * 使用訂購的子網路來配置公用及專用上行鏈路介面。
    * 將 ESG 配置為一組啟用「高可用性 (HA)」的額外大型邊緣應用裝置。
    * 配置防火牆規則及網址轉換 (NAT) 規則，以容許與 HCX Manager 之間往返的入埠及出埠 HTTPS 資料流量。
-   * 配置負載平衡器規則及資源儲存區。這些規則是資源儲存區，用來將 HCX 相關入埠資料流量轉遞至 HCX Manager、vCenter Server 及 Platform Services Controller (PSC) 的適當虛擬應用裝置。
+   * 配置負載平衡器規則及資源儲存區。這些規則及資源儲存區用來將 HCX 相關入埠資料流量轉遞至 HCX Manager 及 vCenter Server（具有內嵌的 Platform Services Controller）的適當虛擬應用裝置。
    * 套用 SSL 憑證，以加密來自 ESG 的 HCX 相關入埠 HTTPS 資料流量。
 
    HCX 管理邊緣專用於內部部署 HCX 元件與雲端 HCX 元件之間的 HCX 管理資料流量。請不要修改 HCX 管理邊緣，或對 HCX 網路延伸使用它。請改為建立網路延伸的個別邊緣。此外，使用防火牆或停用與專用 IBM 管理元件或公用網際網路的 HCX 管理邊緣通訊，可能會對 HCX 功能造成負面影響。{:important}
 
 6. 部署、啟動及配置 HCX Manager on {{site.data.keyword.cloud_notm}}：
    * 向 vCenter Server 登錄 HCX Manager。
-   * 配置 HCX Manager、vCenter Server、PSC 及 NSX Manager。
+   * 配置 HCX Manager、vCenter Server（具有內嵌的 Platform Services Controller）及 NSX Manager。
    * 配置 HCX 機群。
    * 配置本端及遠端 HCX 部署容器。
 7. 向 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的 DNS 伺服器登錄 HCX Manager 的主機名稱及 IP 位址。
 
 ### 相關鏈結
 
-* [HCX on {{site.data.keyword.cloud_notm}} 概觀](hcx_considerations.html)
-* [管理 HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)
-* [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](../vcenter/vc_hybrid_addingremovingservices.html)
-* [HCX 術語名詞解釋](hcx_glossary.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
+* [HCX on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [管理 HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [HCX 術語名詞解釋](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension 概觀](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources)

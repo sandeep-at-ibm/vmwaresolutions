@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -71,7 +71,7 @@ lastupdated: "2018-10-30"
 
 ### 相关链接
 
-* [针对 VMware Federal 实例的需求和规划](vc_fed_planning.html)
-* [添加、查看和删除 VMware Federal 实例的集群](fed_addviewdeleteclusters.html)
+* [针对 VMware Federal 实例的需求和规划](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
+* [添加、查看和删除 VMware Federal 实例的集群](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
 * [将主机置于维护模式](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) 处理器支持](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

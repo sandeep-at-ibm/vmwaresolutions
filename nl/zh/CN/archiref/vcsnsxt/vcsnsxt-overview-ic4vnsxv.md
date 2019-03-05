@@ -2,39 +2,40 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-23"
 
 ---
 
 # NSX-V 概述
 
-网络虚拟化提供了存在于虚拟层中的网络覆盖。它为体系结构提供了快速供应、部署、重新配置和销毁随需应变虚拟网络等功能。此设计使用 vSphere 分布式交换机 (vDS) 和 VMware NSX for vSphere 来实现虚拟联网。
+网络虚拟化提供了存在于虚拟层中的网络覆盖。NSX-V 为体系结构提供了快速供应、部署、重新配置和销毁随需应变虚拟网络等功能。此设计使用 vSphere 分布式交换机 (vDS) 和 VMware NSX for vSphere 来实现虚拟联网。
 
-在此设计中，NSX Manager 会部署在初始集群上。此外，将从指定用于管理组件的专用可移植地址块中为 NSX Manager 分配支持 VLAN 的 IP 地址，并且 NSX Manager 还配置为使用先前讨论的 DNS 和 NTP 服务器。
+在此设计中，NSX Manager 会部署在初始集群上。将从指定用于管理组件的专用可移植地址块中为 NSX Manager 分配支持 VLAN 的 IP 地址，并且 NSX Manager 还配置为使用先前所述的 DNS 和 NTP 服务器。
 
 表 1. NSX-V Manager 虚拟设备规范
 
 属性|规范
 ---|---
-NSX Manager|虚拟设备
+NSX
+Manager|虚拟设备
 vCPU 数量|4
 内存|16 GB
 磁盘|管理 NFS 共享上 60 GB
 磁盘类型|自动精简配置
-网络|指定用于管理组件的专用 A 可移植子网
+网络|指定用于管理组件的**专用 A** 可移植子网
 
-下面的 NSX-V Manager 网络概览图显示了 NSX Manager 相对于此体系结构中其他组件的位置。
+以下 NSX-V Manager 网络概览图显示了 NSX Manager 相对于此体系结构中其他组件的位置。
 
 图 1. NSX-V Manager 网络概览图
 ![NSX-V Manager 网络概览图](vcsnsxt-vmgmt.svg)
 
-初始部署后，{{site.data.keyword.cloud}} 自动化会在初始集群中部署三个 NSX Controller。将从指定用于管理组件的专用 A 可移植子网中为控制器分配 IP 地址。创建了 VM-VM 反亲缘关系规则，以便控制器在集群中的各个主机之间分隔开。请注意，初始集群应该至少部署有三个节点，以确保控制器的高可用性。
+初始部署后，{{site.data.keyword.cloud}} 自动化会在初始集群中部署三个 NSX Controller。将从指定用于管理组件的**专用 A** 可移植子网中为控制器分配 IP 地址。创建了 VM-VM 反亲缘关系规则，以便控制器在集群中的各个主机之间分隔开。初始集群至少部署有三个节点，以确保控制器的高可用性。
 
-除了控制器之外，{{site.data.keyword.cloud_notm}} 自动化还会为部署的 vSphere 主机准备 NSX VIBS，以支持通过 VXLAN 隧道端点 (VTEP) 使用虚拟化网络 (VXLAN)。从为 VTEP 指定的专用 A 可移植 IP 地址范围中为 VTEP 分配 IP 地址。VXLAN 流量位于未标记的 VLAN 上，并且分配给专用虚拟分布式交换机 (vDS)。然后，将分配分段标识池，并且将集群中的主机添加到传输专区。请注意，由于在 {{site.data.keyword.cloud_notm}} 中未配置 IGMP 监听，因此在传输专区中仅使用单点广播。
+除了控制器之外，{{site.data.keyword.cloud_notm}} 自动化还会为部署的 vSphere 主机准备 NSX VIBS，以支持通过 VXLAN 隧道端点 (VTEP) 使用虚拟化网络 (VXLAN)。从为 VTEP 指定的**专用 A** 可移植子网的 IP 地址范围中为 VTEP 分配 IP 地址。VXLAN 流量位于未标记的 VLAN 上，并且分配给专用虚拟分布式交换机 (vDS)。然后，将分配分段标识池，并且将集群中的主机添加到传输专区。由于在 {{site.data.keyword.cloud_notm}} 中未配置 IGMP 监听，因此在传输专区中仅使用单点广播。
 
-随后将部署 NSX Edge 服务网关 (ESG) 对。在所有部署中，都会将一个网关对用于来自专用网络上自动化组件的出站流量。VCS 实例包含另一个网关（称为客户管理的 Edge），该网关部署并配置为使用上行链路连接到公用网络，还会配置一个分配给专用网络的接口。管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。
+随后将部署 NSX Edge 服务网关 (ESG) 对。对于所有部署，都会使用一个网关对来处理位于专用网络中的自动化组件的出站流量。VMware vCenter Server on {{site.data.keyword.cloud_notm}} 实例包含另一个网关（称为客户管理的 Edge），该网关部署并配置为使用上行链路连接到公用网络，还会配置一个分配给专用网络的接口。管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。
 
 ## 分布式交换机设计
 
@@ -63,14 +64,14 @@ SDDC-Dswitch-Public|外部管理流量（南北）|已启用|基于发起虚拟�
 
 参数|设置
 ---|---
-负载均衡|基于发起虚拟端口进行路由*
+负载均衡|基于发起虚拟端口进行路由 \*
 故障转移检测|仅链接状态
 通知交换机|已启用
 故障恢复|已启用
-故障转移顺序|活动上行链路：Uplink1、Uplink2*
+故障转移顺序|活动上行链路：Uplink1 或 Uplink2 \* 
 
 \* vSAN 端口组使用采用活动或备用方式的显式故障转移，因为它不支持对 vSAN 存储器流量进行负载均衡。
-
+{:note}
 
 图 2. 集群 VM 内核接口端口组映射
 ![集群 VM 内核接口端口组映射](vcsnsxt-vds-kernel-Int.svg)
@@ -95,7 +96,7 @@ SDDC-Dswitch-Public|SDDC-DPortGroup-External|发起虚拟端口|活动：0、1|V
 -	安装 ESXi 代理程序，并且为每个 ESXi 主机配置 VTEP IP 地址。
 -	VTEP 配置、控制器配置和 VXLAN 配置（传输专区）。
 -	NSX Edge 服务网关 (ESG) 设备，供管理组件使用。
--	（仅限 VCS）NSX Edge 服务网关 (ESG) 设备，供客户使用。
+-	（仅限 vCenter Server）NSX Edge 服务网关 (ESG) 设备，供客户使用。
 
 未配置的内容：
 -	虚拟分布式路由器。
@@ -121,4 +122,4 @@ SDDC-Dswitch-Public|SDDC-DPortGroup-External|发起虚拟端口|活动：0、1|V
 
 ### 相关链接
 
-* [VCS Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

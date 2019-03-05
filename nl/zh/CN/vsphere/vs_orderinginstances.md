@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,8 +21,8 @@ lastupdated: "2018-10-31"
 ## 需求
 
 确保已完成以下任务：
-*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
-*  已查看[针对 vSphere 集群的需求和规划](vs_planning.html)中的需求和注意事项。
+*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
+*  已查看[针对 vSphere 集群的需求和规划](/docs/services/vmwaresolutions/vsphere/vs_planning.html)中的需求和注意事项。
 
 ## 系统设置
 
@@ -113,8 +113,12 @@ lastupdated: "2018-10-31"
 
 根据需求，选择裸机服务器配置：
   * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 192 GB RAM
-  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.2 GHz / 384 GB RAM
+  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 384 GB RAM
   * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 768 GB RAM
+  * 双 Intel Xeon E5-2690 V4 处理器 / 共 28 个核心，2.6 GHz / 512 GB RAM
+  * 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 1024 GB RAM
+  * 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 2048 GB RAM
+  * 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 4096 GB RAM
 
 ### Broadwell
 
@@ -124,9 +128,11 @@ lastupdated: "2018-10-31"
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
-|双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、384 GB、512 GB、768 GB、1.5 TB|
+|双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
+|双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
+|双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
+|四核 Intel Xeon E7-4820 V4 / 共 40 个核心，2.0 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
+|四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
 ### 裸机服务器的数量
 
@@ -143,7 +149,10 @@ lastupdated: "2018-10-31"
 如果为集群选择了 VMware vSAN 组件，请指定以下设置。
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
-* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。**高性能 Intel Optane** 选项仅可用于双 Intel Xeon Gold 5120 和 6140 处理器。
+* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
+
+  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号双 Intel Xeon Gold 5120 和双 Intel Xeon Gold 6140。
+  {:note}
 
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 
@@ -212,7 +221,7 @@ lastupdated: "2018-10-31"
 
 #### FortiGate Physical Appliance 300 序列 HA 对
 
-您还可以选择是否包含 FortiGate Physical Appliance 300 系列 HA 对以确保云环境安全。有关更多信息，请参阅 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概述](../services/fsa_considerations.html)。
+您还可以选择是否包含 FortiGate Physical Appliance 300 系列 HA 对以确保云环境安全。有关更多信息，请参阅 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/fsa_considerations.html)。
 
 ## 订单摘要
 
@@ -261,6 +270,6 @@ lastupdated: "2018-10-31"
 
 ### 相关链接
 
-* [基于现有配置订购 vSphere 集群](vs_orderingbasedonexistingconfig.html)
-* [扩展现有集群](vs_scalingexistingclusters.html)
-* [扩展在控制台外部创建的集群](vs_orderingforclustersoutside.html)
+* [基于现有配置订购 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [缩放现有集群](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [缩放在控制台外部创建的集群](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -51,8 +51,8 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
 |:------------------|:--------------------|:----------------------|:--------------------|
 |25 Mbps           |2 個 vCPU、4 GB RAM |4 個 vCPU、8 GB RAM   |8 個 vCPU、16 GB RAM|
 |200 Mbps          |2 個 vCPU、4 GB RAM |4 個 vCPU、8 GB RAM   |8 個 vCPU、16 GB RAM|
-|1 Gbps            |2 個 vCPU、4 GB RAM |4 個 vCPU、8 GB RAM   |8 個 vCPU、16 GB RAM|
-|3 Gbps            |8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|
+|1 Gbps            |2 個 vCPU、4 GB RAM |4 個 vCPU、8 GB RAM   |8 個 vCPU、16 GB RAM  |
+|3 Gbps            |8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM  |
 |5 Gbps            |8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|
 |10 Gbps           |8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|
 
@@ -103,8 +103,8 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
 
 ### 相關鏈結
 
-* [訂購 F5 on {{site.data.keyword.cloud_notm}}](f5_ordering.html)
-* [管理 F5 on {{site.data.keyword.cloud_notm}}](managing_f5.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
-* [常見問題](../vmonic/faq.html)
+* [訂購 F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_ordering.html)
+* [管理 F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_f5.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [F5 網站](https://f5.com/){:new_window}

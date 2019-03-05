@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-08-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V2.5 发行说明
 
@@ -20,7 +24,7 @@ lastupdated: "2018-08-30"
 * CVEID：[CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID：[CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-有关更多信息，请参阅[解决 Spectre 和 Meltdown 漏洞](../vmonic/trbl_fix_spectre.html)。
+有关更多信息，请参阅[解决 Spectre 和 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)。
 
 ## NSX 组件更新
 
@@ -32,9 +36,10 @@ lastupdated: "2018-08-30"
 
 从 V2.5 发行版开始，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 和 Veeam on {{site.data.keyword.cloud_notm}} 服务在部署时，不再预先配置任何 VM 的备份。此更改可确保您能够正确配置备份作业的所有方面，包括安排计划、设置保留期、使用去重功能、监视和警报以及管理加密密钥。此外，IBM CloudDriver VM 不再配置为 NSX 备份的持久文件服务器。
 
-您负责所有软件组件的配置、管理和监视，包括管理基础架构和工作负载的备份和可用性。有关更多信息，请参阅[备份组件](../archiref/solution/solution_backingup.html#backing-up-components)。
+您负责所有软件组件的配置、管理和监视，包括管理基础架构和工作负载的备份和可用性。有关更多信息，请参阅[备份组件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#backing-up-components)。
 
-**注**：此更改不会影响已安装 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 服务且在 V2.5 之前部署的实例。
+此更改不会影响已安装 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 服务且在 V2.5 之前部署的实例。
+{:note}
 
 ## IBM CloudDriver 弹性
 
@@ -50,8 +55,8 @@ lastupdated: "2018-08-30"
 * 对于部署在 V2.4 和前发行版中的实例，可以将其迁移到指定的 {{site.data.keyword.cloud_notm}} 帐户，然后同样使用 IAM 来管理这些实例。
 
 有关更多信息，请参阅以下主题：
-* [邀请用户访问服务和资源](../vmonic/iamuserinvite.html)
-* [使用 IAM 管理用户访问权](../vmonic/iam.html)
+* [邀请用户访问服务和资源](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [使用 IAM 管理用户访问权](/docs/services/vmwaresolutions/vmonic/iam.html)
 
 ## 更改了 VMware vCenter Server 和 VMware Cloud Foundation 实例的用户帐户和组
 
@@ -59,12 +64,14 @@ lastupdated: "2018-08-30"
 
 不要在 VMware vSphere Web Client 上的**用户和组**页面中编辑 **ic4v-vCenter** 组的全局许可权。这样做可能会影响管理操作。
 
-对于 Cloud Foundation 实例，请使用 **customerroot** 主机用户标识来代替 **root** 主机用户标识。对于 vCenter Server 实例，请继续使用 **root** 主机用户标识。
+对于 Cloud Foundation 实例，请使用 **customerroot** 主机用户标识来代替 **root** 主机用户标识。
+
+对于 vCenter Server 实例，请继续使用 **root** 主机用户标识。创建的 **ic4vroot** 主机用户标识仅供 IBM 使用。
 
 有关用户帐户的更多信息，请参阅以下主题：
 
-* [关于更改 vCenter Server 工件的注意事项](../vcenter/vcenter_chg_impact.html)
-* [关于更改 Cloud Foundation 工件的注意事项](../sddc/cf_chg_impact.html)
+* [关于更改 vCenter Server 工件的注意事项](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
+* [关于更改 Cloud Foundation 工件的注意事项](/docs/services/vmwaresolutions/sddc/cf_chg_impact.html)
 
 ## 对附加组件服务的更新
 
@@ -74,7 +81,7 @@ lastupdated: "2018-08-30"
 
 {{site.data.keyword.cloud_notm}} Private Hosted 会将微服务和容器的强大功能引入到 {{site.data.keyword.cloud_notm}} 上的 VMware 环境中。使用此服务，可以将内部部署中您熟悉的 VMware 和 {{site.data.keyword.cloud_notm}} Private 操作模型和工具扩展到 {{site.data.keyword.cloud_notm}} 中。
 
-在订购 vCenter Server 实例后，您可以请求此服务。有关更多信息，请参阅[请求 {{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html)。
+在订购 vCenter Server 实例后，您可以请求此服务。
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -86,13 +93,13 @@ lastupdated: "2018-08-30"
 
 现在，德国有可用于 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务的新端点。
 
-有关更多信息，请参阅 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务配置](../services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration)。
+有关更多信息，请参阅 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务配置](/docs/services/vmwaresolutions/services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration)。
 
 ## 新增和更新的文档
 
 ### 连接的存储器文档
 
-现在，用户文档的*参考*部分中提供了“vCenter Server on IBM Cloud 的连接存储器”技术文档。此参考体系结构文档仅提供英语版本。有关更多信息，请参阅 [vCenter Server on IBM Cloud 的连接存储器](../archiref/attached-storage/storage-benefits.html)。
+现在，用户文档的*参考*部分中提供了“vCenter Server on IBM Cloud 的连接存储器”技术文档。有关更多信息，请参阅 [vCenter Server on IBM Cloud 的连接存储器](/docs/services/vmwaresolutions/archiref/attached-storage/storage-benefits.html)。
 
 ### 技术规范
 
@@ -104,9 +111,9 @@ lastupdated: "2018-08-30"
 
 有关更多信息，请参阅以下主题：
 
-* [可用于 vCenter Server 实例的服务](../vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
-* [vCenter Server with Hybridity Bundle 实例的可用服务](../vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [可用于 Cloud Foundation 实例的服务](../sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
+* [可用于 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
+* [vCenter Server with Hybridity Bundle 实例的可用服务](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [可用于 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
 
 ## 用户界面更新和增强功能
 

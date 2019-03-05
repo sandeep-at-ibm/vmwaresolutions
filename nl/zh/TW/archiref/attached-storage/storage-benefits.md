@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-13"
 
 連接儲存空間是 VMware vCenter Server on {{site.data.keyword.cloud}} 供應項目的延伸。VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的連接儲存空間解決方案架構，詳述了解決方案的元件，和本設計每個元件的高階配置。
 
-如需 vCenter Server 設計的相關資訊，請參閱[解決方案概觀](../solution/solution_overview.html)。
+如需 vCenter Server 設計的相關資訊，請參閱[解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)。
 
 ## vCenter Server 連接儲存空間的主要好處
 
@@ -29,4 +29,4 @@ lastupdated: "2018-11-13"
 
 ### 相關鏈結
 
-* [解決方案概觀](../solution/solution_overview.html)
+* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

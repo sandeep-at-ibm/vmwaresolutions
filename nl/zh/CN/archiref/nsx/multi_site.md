@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -36,4 +36,4 @@ lastupdated: "2018-11-13"
 
 ### 相关链接
 
-* [{{site.data.keyword.cloud_notm}} 上的联网服务](networking_services.html)
+* [{{site.data.keyword.cloud_notm}} 上的联网服务](/docs/services/vmwaresolutions/archiref/nsx/networking_services.html)

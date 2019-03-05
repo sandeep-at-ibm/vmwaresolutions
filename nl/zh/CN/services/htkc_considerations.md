@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -46,8 +46,8 @@ HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 服务中订购并包含�
 
 ### 相关链接
 
-* [订购 HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](htkc_ordering.html)
-* [管理 HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](managinghtkc.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
-* [常见问题](../vmonic/faq.html)
+* [订购 HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_ordering.html)
+* [管理 HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtkc.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [HyTrust Web 站点](https://www.hytrust.com/)

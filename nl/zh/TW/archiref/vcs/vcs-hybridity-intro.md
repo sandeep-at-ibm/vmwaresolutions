@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 # vCenter Server on IBM Cloud with Hybridity Bundle 概觀
@@ -25,7 +25,7 @@ IBM、Veeam 和 Zerto 提供的備份和災難回復供應項目可在發生災�
 
 vCenter Server Hybridity Bundle 不是受管理服務，但您可以新增 IBM 管理的服務來卸載虛擬化、來賓作業系統或應用程式層的日常作業及維護工作。{{site.data.keyword.cloud_notm}} Professional Services 團隊也可以透過移轉、實作、規劃及上線服務來協助您加速邁向雲端。
 
-vCenter Server Hybridity Bundle 的平台整合選項不侷限於 VMware 提供的選項（例如 vRealize Suite 或 vSphere with Operations Management），但可跨越多個 {{site.data.keyword.cloud_notm}} 服務供應項目（例如 [IBM Kubernetes 服務](../vcsiks/vcsiks-intro.html)和 [{{site.data.keyword.cloud_notm}} Private](../vcsicp/vcsicp-intro.html)），使用開放程式碼 Terraform 將基礎架構當作程式碼來管理及遞送。
+vCenter Server Hybridity Bundle 的平台整合選項不侷限於 VMware 提供的選項（例如 vRealize Suite 或 vSphere with Operations Management），但可跨越多個 {{site.data.keyword.cloud_notm}} 服務供應項目（例如 [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html) 和 [{{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)），使用開放程式碼 Terraform 將基礎架構當作程式碼來管理及遞送。
 
 vCenter Server Hybridity Bundle 適用廣泛的服務組合和多供應項目整合選項，提供真正的混合平台，讓 Hybridity 能夠成為服務。
 

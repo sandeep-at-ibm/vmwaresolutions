@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -22,11 +22,11 @@ lastupdated: "2018-11-01"
 2. 掃描完成時，請選取**重要主機修補程式**。在下方窗格中，按一下**修補程式數**中的數目，以檢閱每個主機的修補程式詳細資料。視窗會顯示修補程式資訊。
 3. 針對**非重要修補程式**，進行檢閱並重複。
 
-  VUM 日誌檔位於 _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
+  VUM 日誌檔位於下列路徑：_/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
 ## 手動起始虛擬機器及虛擬應用裝置的掃描
 
-您可以根據連接的基準線及基準線群組，來掃描 vSphere 庫存中的 VM 及虛擬應用裝置。視選取的選項而定，會針對連接的基準線掃描您所選取的 VM 及應用裝置。也會掃描所有子物件，因此虛擬基礎架構越大，且您起始掃描的物件階層越高，掃描所需的時間就越長，而且法規遵循視圖就越精確。
+您可以根據連接的基準線及基準線群組，來掃描 vSphere 庫存中的 VM 及虛擬應用裝置。視選取的選項而定，會針對連接的基準線掃描您所選取的 VM 及應用裝置。會掃描所有子物件，因此虛擬基礎架構越大，且您起始掃描的物件階層越高，掃描所需的時間就越長，而且法規遵循視圖就越精確。
 
 1.	使用 vSphere Web Client，選取**首頁** > **VM 及範本**。
 2.	在_虛擬機器_、_虛擬應用裝置_ 或_虛擬機器及應用裝置的資料夾_ 上按一下滑鼠右鍵，然後按一下**掃描更新**。
@@ -56,4 +56,4 @@ lastupdated: "2018-11-01"
 ### 相關鏈結
 
 * [VMware HCX on {{site.data.keyword.cloud}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) 上的 VMware 解決方案（示範）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

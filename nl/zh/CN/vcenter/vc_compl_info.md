@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -43,15 +43,15 @@ VMware Cloud Foundation 和 vCenter Server 环境作为 {{site.data.keyword.vmwa
 
 ## 主动支持
 
-### 初始供应
+### 主动支持初始供应
 
 * 在初始订购和供应实例或服务期间，IBM 支持人员可能会在未事先通知客户的情况下访问客户实例和信息，目的是为了确保正确执行订单。
 * 除了订购、供应和安装过程外，IBM 支持人员还会主动监视实例生命周期内的操作（例如，添加新主机）。
 * 为了解决已经出现或未来可能出现的问题，IBM 支持人员可能会执行若干操作，包括但不限于：复查客户订单详细信息、重新启动自动化作业、执行操作系统重装操作或使用为客户提供的 IBM Cloud 用户名和 API 密钥来开具 IBM Cloud 凭单。
 
-### 后续操作
+### 主动支持稳态运行
 
-* 在极少数情况下，IBM 支持人员可能需要在后续操作期间访问客户的实例，以主动对实例问题进行故障诊断或验证所供应的服务或组件的功能。
+* 在极少数情况下，IBM 支持人员可能需要在稳态运行期间访问客户的实例，以主动对实例问题进行故障诊断或验证所供应的服务或组件的功能。
 * 此类访问通过 IBM Cloud 内部支持网络执行。在任何情况下，IBM 支持人员都不会未经客户同意就修改实例配置。
 * 访问的对象是 VMware 管理组件和/或 IBM Cloud 管理组件，永远不会访问客户的虚拟机或应用程序。
 
@@ -62,7 +62,7 @@ VMware Cloud Foundation 和 vCenter Server 环境作为 {{site.data.keyword.vmwa
 * 由于在团队级别维护高级技术专业知识所需的专业水平，有时需要多个支持团队参与解决特定软件问题。这一点可轻松得到解决，因为我们的支持团队全部联网在一起，可以作为一个整体通力合作来解决出现的任何问题。
 * 为了调查问题，IBM 可能需要访问您系统上与故障相关的信息，或者可能需要再现故障以获取其他信息。
 * 客户生成的支持凭单用作确认，表明客户同意 IBM 支持人员访问 VMware 管理层进行调查、调试和分类。如果需要维护中断或对环境进行更改，IBM 支持人员将要求客户通过凭单进行额外书面确认，以将此作为变更管理流程的一部分。
-* 有关支持凭单的更多信息，请参阅 [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) 和[联系 IBM 支持人员](../vmonic/trbl_support.html)。
+* 有关支持凭单的更多信息，请参阅 [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) 和[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
 
 ## 客户责任
 
@@ -72,7 +72,7 @@ VMware Cloud Foundation 和 vCenter Server 环境作为 {{site.data.keyword.vmwa
 * 初始部署时，产品的自动化和客户的帐户是分开的。允许并鼓励客户更改 IBM 在门户网站中提供的所有密码。
 * vCenter 访问权和凭证在初始部署期间创建，并提供给客户。作为产品需求的一部分，IBM 支持人员必须保留对管理层的完全访问权，以提供生命周期管理以及对客户的支持。
 * 如果在任何时间更改了凭证（例如，密码），那么 IBM 支持人员可能无法再帮助客户恢复丢失或遗忘的凭证，或者甚至无法对客户的环境进行故障诊断。
-* 有关此问题和相关问题的重要性的更多信息，请参阅[关于更改 NSX 组件密码时的注意事项](vc_networkingonvcenterserver.html#considerations-when-changing-passwords-for-nsx-components)和[关于更改 vCenter Server 工件的注意事项](vcenter_chg_impact.html)。
+* 有关此问题和相关问题的重要性的更多信息，请参阅[关于更改 NSX 组件密码时的注意事项](/docs/services/vmwaresolutions/vcenter/vc_networkingonvcenterserver.html#considerations-when-changing-passwords-for-nsx-components)和[关于更改 vCenter Server 工件的注意事项](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)。
 
 ### 沟通和故障诊断
 
@@ -87,7 +87,7 @@ VMware Cloud Foundation 和 vCenter Server 环境作为 {{site.data.keyword.vmwa
 
 * Cloud Service 的管理：客户负责应用程序（包括底层中间件）的管理、操作、维护和安全性。
 * 服务完整性和可用性：IBM 将向客户转发针对此 Cloud Service 检测到的所有网络入侵通知。客户须负责确定报告的每个通知的影响。客户将收到硬件故障通知。监视和响应操作系统或软件故障是客户的责任，但可根据需要联系 IBM 支持人员参与。
-* 活动日志记录：客户负责根据需要对操作系统/系统和数据库/应用程序进行活动日志记录。  
+* 活动日志记录：客户负责根据需要对操作系统/系统和数据库/应用程序进行活动日志记录。
 * 加密：客户负责根据需要配置和管理所有加密（针对静态数据和动态数据）。
 * 业务连续性和灾难恢复：客户负责根据需要配置和管理所有业务连续性和灾难恢复过程。
 
@@ -112,12 +112,12 @@ VMware Cloud Foundation 和 vCenter Server 环境作为 {{site.data.keyword.vmwa
 * 通过提交订单，即表示客户同意这些条款，也因此同意 IBM 支持人员随时访问其实例而无需事先通知，以便迅速解决与环境相关的问题或预防未来发生故障。
 * 此同意适用于当前订购的所有实例的整个生命周期。未来供应的实例和实例组件可能需要额外的同意。
 
-## 后续操作
+## 稳态运行
 
 如果客户在初始供应和订购时未同意对实例进行主动支持，那么客户在未来开具的任何服务凭单中，必须包含明确同意（如果需要）。同意声明必须遵循规定的准则，否则将被视为无效。
 
 ### 相关链接
 
-* [vCenter Server 概述](vc_vcenterserveroverview.html)
-* [vCenter Server with Hybridity Bundle 概述](vc_hybrid_overview.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
+* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [vCenter Server with Hybridity Bundle 概述](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

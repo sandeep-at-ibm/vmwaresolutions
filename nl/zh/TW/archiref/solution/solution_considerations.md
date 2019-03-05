@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-12"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -18,20 +18,20 @@ lastupdated: "2018-11-12"
 
 請檢閱下列考量，以瞭解您在部署實例前後的實例管理及操作責任。
 
-以下並非完整清單。如需相關資訊，請參閱 [IBM 管理服務](../../services/managing_imi.html)。
+以下並非完整清單。如需相關資訊，請參閱 [IBM 管理服務](/docs/services/vmwaresolutions/services/managing_imi.html)。
 {:note}
 
 ## IBM Cloud 帳戶存取
 
-為了管理您 {{site.data.keyword.cloud_notm}} 帳戶的存取權，請允許您團隊的其他成員在 {{site.data.keyword.vmwaresolutions_short}} 主控台中存取您的實例。如需相關資訊，請參閱[邀請使用者存取服務及資源](../../vmonic/iamuserinvite.html)。
+為了管理您 {{site.data.keyword.cloud_notm}} 帳戶的存取權，請允許您團隊的其他成員在 {{site.data.keyword.vmwaresolutions_short}} 主控台中存取您的實例。如需相關資訊，請參閱[邀請使用者存取服務及資源](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)。
 
 ## 限制
 
 請充分瞭解實例的下列限制：
 
-- [變更 vCenter 構件的影響](../../vcenter/vcenter_chg_impact.html)
-- [網路考量及限制](../../vcenter/vc_networkingonvcenterserver.html)
-- [常見問題](../../vmonic/faq.html)
+- [變更 vCenter 構件的影響](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
+- [網路考量及限制](/docs/services/vmwaresolutions/vcenter/vc_networkingonvcenterserver.html)
+- [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
 
 ## 網路設計及連線功能
 
@@ -39,7 +39,7 @@ lastupdated: "2018-11-12"
 
 - 使用 [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 或 [{{site.data.keyword.cloud_notm}} DirectLink 連線](https://www.ibm.com/cloud/direct-link)來存取實例管理端點。
 - 設計您實例內的公用網路連線功能策略。您的選項包括：範例客戶 VMware NSX Edge Services Gateway (ESG)、閘道應用裝置（例如 Vyatta 和 FortiGate），以及在 {{site.data.keyword.cloud_notm}} 網路中或透過 DirectLink 存取的專屬網路上所部署的 Proxy 伺服器。
-- 規劃要在具有 [{{site.data.keyword.cloud_notm}} 可攜式 IP 位址](https://console.bluemix.net/docs/infrastructure/subnets/getting-started.html)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作負載，還是[在 NSX 邏輯交換器 (VXLAN) 上使用您自己的 IP 位址](../nsx/nsx_overview.html)來部署工作負載。請注意，使用 NSX 軟體定義網路 (SDN) 可讓您具有在 {{site.data.keyword.cloud_notm}} 中管理及保護工作負載網路的最大彈性。
+- 規劃要在具有 [{{site.data.keyword.cloud_notm}} 可攜式 IP 位址](/docs/infrastructure/subnets/getting-started.html)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作負載，還是[在 NSX 邏輯交換器 (VXLAN) 上使用您自己的 IP 位址](/docs/services/vmwaresolutions/archiref/nsx/nsx_overview.html)來部署工作負載。請注意，使用 NSX 軟體定義網路 (SDN) 可讓您具有在 {{site.data.keyword.cloud_notm}} 中管理及保護工作負載網路的最大彈性。
 - 使用 NSX ESG、[IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 及 DirectLink 對等作業，來規劃與工作負載的連線功能（網址轉換、虛擬專用網路、遞送）。
 - 如果實作「跨 vCenter NSX」，請先確定本端區段 ID 範圍未重疊，再部署任何本端工作負載。
 
@@ -50,11 +50,11 @@ lastupdated: "2018-11-12"
 - 變更 {{site.data.keyword.vmwaresolutions_short}} 主控台中顯示的所有密碼，並使用您自己的密碼管理系統。請注意，IBM 會保留進行持續自動化及支援所需的不同使用者 ID。
 - 檢閱所有元件的密碼原則（例如複雜性及有效期限）。
 - 檢閱所有元件的加密設定。
-- 規劃並實作適當的實體或虛擬防火牆解決方案（例如 NSX Distributed Firewall (DFW)、NSX ESG、[Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../../services/fortinetvm_considerations.html) 及 [IBM Cloud Vyatta](https://console.bluemix.net/catalog/infrastructure/virtual-router-appliance)）。
-- 規劃並實作適當的應用程式負載平衡及安全解決方案（例如 [F5 on {{site.data.keyword.cloud_notm}}](../../services/f5_considerations.html)）。
+- 規劃並實作適當的實體或虛擬防火牆解決方案（例如 NSX Distributed Firewall (DFW)、NSX ESG、[Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html) 及 [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance)）。
+- 規劃並實作適當的應用程式負載平衡及安全解決方案（例如 [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_considerations.html)）。
 - 規劃並實作適當的安全資訊及事件管理 (SIEM) 解決方案（例如 [IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence)）。
 - 規劃並實作適當的漏洞掃描。
-- 使用 [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../../services/htcc_considerations.html) 這類解決方案，規劃並實作您實例的適當變更管理、核准、審核及存取控制。
+- 使用 [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html) 這類解決方案，規劃並實作您實例的適當變更管理、核准、審核及存取控制。
 
 ## 自訂
 
@@ -81,7 +81,7 @@ lastupdated: "2018-11-12"
 
 請完成下列步驟，以確保適當的軟體維護規劃。
 
-- 透過 Proxy [設定 VMware Update Manager (VUM)](../vum/vum-intro.html)，以取得 VMware 更新。
+- 透過 Proxy [設定 VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum/vum-intro.html)，以取得 VMware 更新。
 - 適用時，透過 Proxy 設定 vSAN，以維護「vSAN 硬體相容性清單 (HCL)」資料庫。
 - 規劃定期維護 VUM 不支援的 VMware 元件。例如，VMware vCenter、PSC 及 NSX。
 - 檢閱「vSphere 加強型 vMotion 相容性 (EVC)」配置。如果 vSphere 的現行版本不支援硬體層次的 EVC，則可能無法配置已啟用 EVC 的叢集。
@@ -95,7 +95,7 @@ lastupdated: "2018-11-12"
 - 警示基礎架構，包含配置 SMTP 伺服器及簡訊服務 (SMS) 閘道（視需要）。
 - 主動監視主機、磁碟機、管理軟體及網路。
 - vSAN 監視（適用時）。
-- 容量監視及規劃。您可以從 {{site.data.keyword.vmwaresolutions_short}} 主控台，在實例中[新增及移除叢集](../../vcenter/vc_addingviewingclusters.html)以及[新增及移除主機](../../vcenter/vc_addingremovingservers.html)。
+- 容量監視及規劃。您可以從 {{site.data.keyword.vmwaresolutions_short}} 主控台，在實例中[新增及移除叢集](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)以及[新增及移除主機](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)。
 - 監視備份基礎架構及備份工作。
 
 ## 營運持續及可用性
@@ -106,9 +106,9 @@ lastupdated: "2018-11-12"
 - 根據您的需求，檢閱網路及儲存空間 I/O 控制配置。
 - 根據您的需求，配置虛擬機器啟動順序。
 - 視需要，配置管理及工作負載的資源儲存區。
-- 規劃、實作及監視[實例管理元件](solution_backingup.html)和工作負載的備份解決方案。
+- 規劃、實作及監視[實例管理元件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)和工作負載的備份解決方案。
 - 規劃實例管理的高可用性，包括多個實例、多個叢集、vCenter HA 及 PSC HA 的可能性。
-- 使用 [Zerto 災難回復](../../services/addingzertodr.html)、[Veeam Backup and Replication](../../services/veeam_considerations.html) 及 [IBM Spectrum Protect Plus](../../services/spp_considerations.html) 這類解決方案，規劃您工作負載的營運持續。
+- 使用 [Zerto 災難回復](/docs/services/vmwaresolutions/services/addingzertodr.html)、[Veeam Backup and Replication](/docs/services/vmwaresolutions/services/veeam_considerations.html) 及 [IBM Spectrum Protect Plus](/docs/services/vmwaresolutions/services/spp_considerations.html) 這類解決方案，規劃您工作負載的營運持續。
 
 ## 儲存空間規劃
 
@@ -119,10 +119,12 @@ lastupdated: "2018-11-12"
   - RAID-1 相較於 RAID-5，提供更佳的效能，以及對於循序失敗的更短好發時間範圍，例如較短的重建時間。不過，RAID-5 的儲存空間額外負擔較少。
   - RAID-6 提供對雙重失敗的防護，但相較於 RAID-5 的 4 部主機，最少需要 6 部主機。
 - 若要將更多儲存空間新增至 vSAN 叢集，您必須將新的主機新增至叢集，或改為新增「{{site.data.keyword.cloud_notm}} 耐久性」NFS 儲存空間。目前不支援將磁碟新增至現有主機。
-- 如果您將額外的「{{site.data.keyword.cloud_notm}} 耐久性」NFS 儲存空間裝載至叢集，請務必遵循架構指引，並使用 `SDDC-DPortGroup-NFS` 埠群組位址，配置連到儲存空間的主機路徑。您必須將這些位址（而非主機本身）授權給儲存空間。如需相關資訊，請參閱[連接儲存空間基礎架構管理](../attached-storage/storage-infra-mgmt.html#vsphere-host-static-routing)。另請參閱 developerWorks 秘訣，它使用 IBM Spectrum Protect Plus 作為範例，顯示如何[將更多耐久性儲存空間新增至 VMware 叢集](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)。
+- 如果您將額外的「{{site.data.keyword.cloud_notm}} 耐久性」NFS 儲存空間裝載至叢集，請務必遵循架構指引，並使用 `SDDC-DPortGroup-NFS` 埠群組位址，配置連到儲存空間的主機路徑。您必須將這些位址（而非主機本身）授權給儲存空間。如需相關資訊，請參閱[連接儲存空間基礎架構管理](/docs/services/vmwaresolutions/archiref/attached-storage/storage-infra-mgmt.html#vsphere-host-static-routing)。
+
+此外，請參閱 developerWorks 秘訣，它使用 IBM Spectrum Protect Plus 作為範例，顯示如何[將更多耐久性儲存空間新增至 VMware 叢集](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)。
 
 ### 相關鏈結
 
-* [解決方案概觀](solution_overview.html)
-* [設計概觀](design_overview.html)
-* [調整容量](solution_scaling.html)
+* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [設計概觀](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [調整容量](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)

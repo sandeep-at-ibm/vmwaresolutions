@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -85,6 +85,6 @@ Cloud Foundation 部署使用 VMware Cloud Foundation 自動化，以使用它�
 
 ### 相關鏈結
 
-* [實體基礎架構設計](design_physicalinfrastructure.html)
-* [虛擬基礎架構設計](design_virtualinfrastructure.html)
-* [基礎架構管理設計](design_infrastructuremgmt.html)
+* [實體基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [虛擬基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [基礎架構管理設計](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)

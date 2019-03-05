@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -54,23 +54,23 @@ lastupdated: "2018-11-05"
 
 ## 管理使用者的存取權
 
-您可以將新使用者新增至 {{site.data.keyword.cloud_notm}} 帳戶，讓這些使用者可以共用針對該帳戶所佈建的服務及資源。如需相關資訊，請參閱[邀請使用者存取服務及資源](../vmonic/iamuserinvite.html)。
+您可以將新使用者新增至 {{site.data.keyword.cloud_notm}} 帳戶，讓這些使用者可以共用針對該帳戶所佈建的服務及資源。如需相關資訊，請參閱[邀請使用者存取服務及資源](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)。
 
-您也可以管理現有使用者的存取權，包括修改現有存取權、指派新存取權，以及檢閱指派的存取權。若要管理使用者的存取權，您必須是帳戶擁有者，或者必須具有**管理者**平台管理角色。如需相關資訊，請參閱[管理資源的存取](../../../iam/mngiam.html)。
+您也可以管理現有使用者的存取權，包括修改現有存取權、指派新存取權，以及檢閱指派的存取權。若要管理使用者的存取權，您必須是帳戶擁有者，或者必須具有**管理者**平台管理角色。如需相關資訊，請參閱[管理資源的存取](/docs/iam/mngiam.html)。
 
 ## 將現有實例移轉至 IBM Cloud 帳戶
 
-因為 {{site.data.keyword.vmwaresolutions_short}} 與 IAM 整合，所以 {{site.data.keyword.cloud}} 帳戶中部署於 2.5 版及更新版本的實例會自動新增至您的帳戶，並由 IAM 管理。
+因為 {{site.data.keyword.vmwaresolutions_short}} 與 IAM 整合，所以 {{site.data.keyword.cloud_notm}} 帳戶中部署於 2.5 版及更新版本的實例會自動新增至您的帳戶，並由 IAM 管理。
 
 對於已部署在 2.4 版及更早版本中的現有實例，您可以將它們移轉至指定的 {{site.data.keyword.cloud_notm}} 帳戶，以進行啟用 IAM 功能的管理。如需相關資訊，請參閱下列主題：
-* [將 2.5 版之前的 vCenter Server 實例移轉至 IBM Cloud 帳戶](../vcenter/vc_addinstancetousraccount.html)
-* [將 2.5 版之前的 vCenter Server with Hybridity Bundle 實例移轉至 IBM Cloud 帳戶](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [將 2.5 版之前的 Cloud Foundation 實例移轉至 IBM Cloud 帳戶](../sddc/sd_addinstancetousraccount.html)
-* [將 2.5 版之前的 NetApp ONTAP Select 實例移轉至 IBM Cloud 帳戶](../netapp/np_addinstancetousraccount.html)
-* [將 2.5 版之前的 VMware Federal 實例移轉至 IBM Cloud 帳戶](../vcenter/vc_fed_addinstancetousraccount.html)
+* [將 2.5 版之前的 vCenter Server 實例移轉至 IBM Cloud 帳戶](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [將 2.5 版之前的 vCenter Server with Hybridity Bundle 實例移轉至 IBM Cloud 帳戶](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [將 2.5 版之前的 Cloud Foundation 實例移轉至 IBM Cloud 帳戶](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [將 2.5 版之前的 NetApp ONTAP Select 實例移轉至 IBM Cloud 帳戶](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [將 2.5 版之前的 VMware Federal 實例移轉至 IBM Cloud 帳戶](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)
 
 ### 相關鏈結
 
-* [管理身分及存取](../../../iam/quickstart.html)
-* [管理使用者及存取](../../../iam/iamusermanage.html)
-* [何謂 IAM](../../../iam/index.html)
+* [管理身分及存取](/docs/iam/quickstart.html)
+* [管理使用者及存取](/docs/iam/iamusermanage.html)
+* [何謂 IAM](/docs/iam/index.html)

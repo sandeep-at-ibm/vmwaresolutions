@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-09"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -104,8 +104,8 @@ F5 on {{site.data.keyword.cloud_notm}} 服务随附以下组件：
 
 ### 相关链接
 
-* [订购 F5 on {{site.data.keyword.cloud_notm}}](f5_ordering.html)
-* [管理 F5 on {{site.data.keyword.cloud_notm}}](managing_f5.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
-* [常见问题](../vmonic/faq.html)
+* [订购 F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_ordering.html)
+* [管理 F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_f5.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [F5 Web 站点](https://f5.com/){:new_window}

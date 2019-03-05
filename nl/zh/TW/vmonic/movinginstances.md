@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 從 1.4 版之前的版本升級您的實例
 
@@ -22,7 +26,8 @@ lastupdated: "2018-09-27"
 
 如果您尚未從 1.4 版之前的版本中移轉或刪除實例，則在 {{site.data.keyword.vmwaresolutions_short}} 主控台上，它們可能仍會以僅限檢視模式出現。在使用者介面中這些實例將標示為**已淘汰**，且具有警告符號圖示。
 
-**附註：**實例內容中顯示的資訊反映到 1.4 版發行日期當時的資料，且不再重新整理。
+實例內容中顯示的資訊反映到 1.4 版發行日期當時的資料，且不再重新整理。
+{:note}
 
 下列動作可用於 1.4 版之前的實例：
 *  檢視實例詳細資料頁面上的資訊。
@@ -43,4 +48,4 @@ lastupdated: "2018-09-27"
 
 如需匯出及匯入 VM 的相關資訊，請參閱 VMware vSphere 文件。
 
-如果您需要 {{site.data.keyword.vmwaresolutions_short}} 方面的協助，請透過其中一個支援管道[與 IBM 支援中心聯絡](trbl_support.html)。
+如果您需要 {{site.data.keyword.vmwaresolutions_short}} 方面的協助，請透過其中一個支援管道[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。

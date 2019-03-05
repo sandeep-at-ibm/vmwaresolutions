@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-076"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -25,13 +25,13 @@ lastupdated: "2018-11-076"
 * 使用您可以在 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上找到的認證，透過 SSH 連線存取主控台。
 
 如需相關資訊，請參閱下列主題：
-* [訂購、檢視及移除 Cloud Foundation 實例的服務](../sddc/sd_addingremovingservices.html)
-* [訂購、檢視及移除 vCenter Server 實例的服務](../vcenter/vc_addingremovingservices.html)
+* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
 
 ### 相關鏈結
 
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概觀](fsa_considerations.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
-* [常見問題](../vmonic/faq.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/fsa_considerations.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [fortinet.com 網站](https://www.fortinet.com/)
 * [Fortinet 技術文件](http://docs.fortinet.com/fortigate/admin-guides)

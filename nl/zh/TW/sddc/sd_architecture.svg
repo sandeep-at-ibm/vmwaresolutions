@@ -22,8 +22,8 @@
 <text transform="matrix(1 0 0 1 8.5747 155.8755)"><tspan x="40" y="0" class="st3 st4 st7">運算虛擬化</tspan><tspan x="37.6" y="23.9" class="st3 st4 st8">VMware vSphere</tspan></text>
 <text transform="matrix(1 0 0 1 219.127 155.8755)"><tspan x="20" y="0" class="st3 st4 st7">儲存空間虛擬化</tspan><tspan x="39.8" y="23.9" class="st3 st4 st8">VMware vSAN</tspan></text>
 <text transform="matrix(1 0 0 1 420.666 155.8755)"><tspan x="40" y="0" class="st3 st4 st7">網路虛擬化</tspan><tspan x="46.4" y="23.9" class="st3 st4 st8">VMware NSX </tspan></text>
-<text transform="matrix(1 0 0 1 104.6255 263.5371)" class="st3 st4 st5">IBM Cloud 上的實體基礎架構</text>
-<text transform="matrix(1 0 0 1 273.2098 300.3732)" class="st3 st4 st6">儲存空間</text>
-<text transform="matrix(1 0 0 1 401.5988 300.3732)" class="st3 st4 st6">網路</text>
+<text transform="matrix(1 0 0 1 130 263.5371)" class="st3 st4 st5">IBM Cloud 上的實體基礎架構</text>
+<text transform="matrix(1 0 0 1 250.2098 300.3732)" class="st3 st4 st6">儲存空間</text>
+<text transform="matrix(1 0 0 1 430 300.3732)" class="st3 st4 st6">網路</text>
 <text transform="matrix(1 0 0 1 128.7132 299.2558)" class="st3 st4 st6">運算</text>
 </svg>

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-11-08"
 {:note: .note}
 {:important: .important}
 
-# VMware HCX on IBM Cloud 概觀
+# VMware HCX on IBM Cloud 規格及考量
 
 HCX on {{site.data.keyword.cloud}} 服務會將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}，這容許您將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從該處移轉，而不需要進行任何轉換或變更。
 
 只有部署在 2.3 版及更新版本中的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 實例，才能使用此服務。{:note}
 
-您可以將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。如需升級實例及部署 HCX on {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱[升級至 vCenter Server with Hybridity Bundle 實例的程序](../vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)。
+您可以將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。如需升級實例及部署 HCX on {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱[升級至 vCenter Server with Hybridity Bundle 實例的程序](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)。
 
 具有 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 實例限制為來自內部部署站台只能有三個同時連線。{:note}
 
@@ -49,11 +49,6 @@ HCX on {{site.data.keyword.cloud}} 服務會將內部部署資料中心的網路
 * 兩個具有 64 個 IP 位址的專用可攜式子網路
 * 來自專用可攜式 vMotion 子網路的八個 IP 位址
 
-### 授權及費用
-
-* 基礎授權費用：需要的服務費用
-* 受管理 VM 費用：根據每月移轉的 VM 收費
-
 ## 安裝 HCX on IBM Cloud 時的考量
 
 請先檢閱下列考量，再嘗試安裝 HCX on {{site.data.keyword.cloud_notm}}。
@@ -81,9 +76,9 @@ HCX on {{site.data.keyword.cloud_notm}} 服務無法安裝至預設叢集具有�
 
 ### 相關鏈結
 
-* [訂購 HCX on {{site.data.keyword.cloud_notm}}](hcx_ordering.html)
-* [管理 HCX on {{site.data.keyword.cloud_notm}}](managinghcx.html)
-* [HCX 術語名詞解釋](hcx_glossary.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
+* [訂購 HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_ordering.html)
+* [管理 HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [HCX 術語名詞解釋](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [VMware Hybrid Cloud Extension 概觀](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources)

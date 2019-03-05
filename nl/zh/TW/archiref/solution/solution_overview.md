@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-08-14"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2018-08-14"
 
 ## 主要優點
 
-VMware Cloud Foundation 及 vCenter Server on {{site.data.keyword.cloud_notm}} 提供基本構成要素，包括 VMware vSphere、vCenter Server、NSX 及共用儲存空間選項（包括 vSAN)。需要有這些元件，才能彈性架構最適合您工作負載的 VMware 軟體定義資料中心解決方案。 
+VMware Cloud Foundation 及 vCenter Server on {{site.data.keyword.cloud_notm}} 提供基本構成要素，包括 VMware vSphere、vCenter Server、NSX 及共用儲存空間選項（包括 vSAN)。需要有這些元件，才能彈性架構最適合您工作負載的 VMware 軟體定義資料中心解決方案。
 
 藉由套用進階自動化及單一承租戶裸機基礎架構，您可以在幾個小時內快速將整個 VMware 環境部署至 {{site.data.keyword.cloud_notm}}。然後，您可以透過原生 VMware 用戶端、「指令行介面 (CLI)」、現有 Script 或其他熟悉的 vSphere API 相容工具，來存取及管理 IBM 代管環境。
 
@@ -40,6 +40,6 @@ VMware on {{site.data.keyword.cloud_notm}} 供應項目具有下列優點：
 
 ### 相關鏈結
 
-* [設計概觀](design_overview.html)
-* [調整容量](solution_scaling.html)
-* [備份元件](solution_backingup.html)
+* [設計概觀](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [調整容量](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
+* [備份元件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -42,8 +42,8 @@ HyTrust DataControl on {{site.data.keyword.cloud}} 服務提供具有整合式�
 
 ### 相關鏈結
 
-* [訂購 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](htdc_ordering.html)
-* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](managinghtdc.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
-* [常見問題](../vmonic/faq.html)
+* [訂購 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_ordering.html)
+* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtdc.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [HyTrust 網站](https://www.hytrust.com/)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-13"
 
 VMware NSX Edge 服务网关 (ESG) 解决方案是目前 {{site.data.keyword.cloud_notm}} 上提供的 VMware Cloud Foundation on {{site.data.keyword.cloud}} 和 vCenter Server on {{site.data.keyword.cloud_notm}} 产品的扩展。Cloud Foundation 和 vCenter Server 的解决方案体系结构详细说明了设计中解决方案的组件以及每个组件的高级别配置。
 
-有关 Cloud Foundation 和 vCenter Server 设计的更多信息，请参阅[解决方案概述](../solution/solution_overview.html)。
+有关 Cloud Foundation 和 vCenter Server 设计的更多信息，请参阅[解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)。
 
 ## NSX Edge 服务网关概述
 
@@ -34,4 +34,4 @@ NSX Edge 服务网关通过提供通用网关服务（例如，动态主机配�
 
 ### 相关链接
 
-* [解决方案概述](../solution/solution_overview.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

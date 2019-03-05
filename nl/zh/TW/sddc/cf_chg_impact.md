@@ -2,27 +2,36 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2018-01-21"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # 變更 Cloud Foundation 構件的考量
 
 變更保留給 {{site.data.keyword.vmwaresolutions_full}} 的使用者、資源或子網路，可能會影響 VMware Cloud Foundation 實例的管理作業。
 
-**重要事項：**請不要在 VMware vSphere Web Client 的**使用者和群組**頁面中，變更 **ic4v-vCenter** 群組的廣域許可權。下列範例是廣域許可權變更：變更使用者名稱、刪除使用者或變更其密碼。
+請不要在 VMware vSphere Web Client 的**使用者和群組**頁面中，變更 **ic4v-vCenter** 群組的廣域許可權。下列範例是廣域許可權變更：變更使用者名稱、刪除使用者或變更其密碼。使用 **customerroot** 主機使用者 ID 來取代 **root** 主機使用者 ID。
+{:important}
 
 ## 服務特定使用者帳戶
+{: faq}
 
 每一個服務都會在 vCenter Server 中建立內部使用者帳戶。此帳戶是必要的，因此與服務相關聯的管理作業可以連接至 vCenter Server，以在服務上執行作業。
 
-**重要事項：**若要防止中斷及連線問題，如果您變更此使用者帳戶的使用者 ID、密碼或密碼有效期限設定，則請確定您同時更新了關聯服務中的資訊。
+若要防止中斷及連線問題，如果您變更此使用者帳戶的使用者 ID、密碼或密碼有效期限設定，則請確定您也更新了關聯服務中的資訊。
+{:important}
 
 此帳戶的使用者 ID 格式為 `<service_name>-<truncated service_uuid>@test.local` 或 `<service_name>-<truncated service_uuid>@example-domain.local`。例如，Veeam on {{site.data.keyword.cloud_notm}} 服務用來連接至 vCenter Server 以執行排定備份的使用者 ID 為 `Veeam-<Veeam_uuid>@test.local`。
 
-**附註：**`<service_name>` 與 `<service_uuid>` 一起使用會截斷為 20 個字元。
+`<service_name>` 與 `<service_uuid>` 一起使用會截斷為 20 個字元。
+{:note}
 
 ## Cloud Foundation 實例的 VMware 資源
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-09"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-07-09"
 
 表 1. VMware NSX 版本比较图表
 
-|NSX 功能|Base|高级|Enterprise|
+|NSX 功能| Base | Advanced | Enterprise |
 |-----------------------------------------------|------|----------|------------|
 |分布式交换和路由| •    | •        | •          |
 |NSX Edge 防火墙| •    | •        | •          |
@@ -65,6 +65,6 @@ lastupdated: "2018-07-09"
 
 ### 相关链接
 
-* [解决方案概述](solution_overview.html)
-* [设计概述](design_overview.html)
-* [备份组件](solution_backingup.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [设计概述](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
+* [备份组件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)

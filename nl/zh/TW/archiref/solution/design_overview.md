@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-10"
+lastupdated: "2019-01-23"
 
 ---
 # 設計概觀
@@ -28,7 +28,7 @@ lastupdated: "2018-07-10"
 
 ### 相關鏈結
 
-* [實體基礎架構設計](design_physicalinfrastructure.html)
-* [虛擬基礎架構設計](design_virtualinfrastructure.html)
-* [共用服務設計](design_commonservice.html)
-* [基礎架構管理設計](design_infrastructuremgmt.html)
+* [實體基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [虛擬基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [共用服務設計](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)
+* [基礎架構管理設計](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)

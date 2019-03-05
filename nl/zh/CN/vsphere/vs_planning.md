@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-10-31"
 
 ## IBM Cloud 帐户需求
 
-要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](../vmonic/slaccountrequirement.html)。
+要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
 
 ## IBM Cloud Data Center 可用性
 
@@ -69,6 +69,6 @@ vSphere 部署对物理基础架构有严格要求。因此，只能将集群部
 
 ### 相关链接
 
-* [订购新的 vSphere 集群](vs_orderinginstances.html)
-* [扩展现有集群](vs_scalingexistingclusters.html)
-* [扩展在控制台外部创建的现有集群](vs_orderingforclustersoutside.html)
+* [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [缩放现有集群](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [缩放在控制台外部创建的现有集群](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

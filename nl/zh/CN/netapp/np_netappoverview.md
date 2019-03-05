@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -47,14 +47,12 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品通过提供存储
 
 虚拟化管理层包含以下组件：
 
-* vCenter Server 虚拟设备
+* 具有嵌入式 Platform Services Controller (PSC) 的 vCenter Server Appliance (vCSA)
 * NSX
 Manager
 * 两个 NSX Edge 服务网关 (ESG)
 * 三个 NSX Controller
-* Platform Services Controller (PSC) 虚拟设备
-* vCenter Server Appliance (vCSA)
-* IBM CloudDriver 虚拟服务器实例 (VSI)。
+* IBM CloudDriver 虚拟服务器实例 (VSI)
 
 NetApp ONTAP Select 在 VMware 集群中运行，并对主机上的本地存储器进行虚拟化。NetApp ONTAP Select 部署在专用模型中，其他工作负载不应与之共享集群。因此，NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品的硬件配置仅基于 NetApp ONTAP Select 的需求来设置大小。
 
@@ -125,7 +123,7 @@ NetApp ONTAP Select 实例中包含以下组件。
 
 ### 相关链接
 
-* [规划 NetApp ONTAP Select 实例](np_planning.html)
-* [订购 NetApp ONTAP Select 实例](np_orderinginstances.html)
-* [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)
+* [规划 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_planning.html#requirements-and-planning-for-netapp-ontap-select-instances)
+* [订购 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
 * [NetApp ONTAP 文档中心](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){:new_window}

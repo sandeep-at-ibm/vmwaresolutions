@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -54,23 +54,23 @@ lastupdated: "2018-11-05"
 
 ## 管理用户的访问权
 
-可以将新用户添加到 {{site.data.keyword.cloud_notm}} 帐户，以便这些用户可以共享为帐户供应的服务和资源。有关更多信息，请参阅[邀请用户访问服务和资源](../vmonic/iamuserinvite.html)。
+可以将新用户添加到 {{site.data.keyword.cloud_notm}} 帐户，以便这些用户可以共享为帐户供应的服务和资源。有关更多信息，请参阅[邀请用户访问服务和资源](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)。
 
-您还可以管理现有用户的访问权，包括修改现有访问权、分配新访问权以及复查分配的访问权。要管理用户的访问权，您必须是帐户所有者，或者必须具有**管理员**平台管理角色。有关更多信息，请参阅[管理资源访问权](../../../iam/mngiam.html)。
+您还可以管理现有用户的访问权，包括修改现有访问权、分配新访问权以及复查分配的访问权。要管理用户的访问权，您必须是帐户所有者，或者必须具有**管理员**平台管理角色。有关更多信息，请参阅[管理资源访问权](/docs/iam/mngiam.html)。
 
 ## 将现有实例迁移到 IBM Cloud 帐户
 
-由于 {{site.data.keyword.vmwaresolutions_short}} 与 IAM 集成，在 {{site.data.keyword.cloud}} 帐户中 V2.5 和更高发行版中部署的实例会自动添加到帐户，并由 IAM 进行管理。
+由于 {{site.data.keyword.vmwaresolutions_short}} 与 IAM 集成，在 {{site.data.keyword.cloud_notm}} 帐户中 V2.5 和更高发行版中部署的实例会自动添加到帐户，并由 IAM 进行管理。
 
 对于部署在 V2.4 和更低发行版中的现有实例，可以将其迁移到指定的 {{site.data.keyword.cloud_notm}} 帐户，以进行支持 IAM 的管理。有关更多信息，请参阅以下主题：
-* [将 V2.5 之前的 vCenter Server 实例迁移到 IBM Cloud 帐户](../vcenter/vc_addinstancetousraccount.html)
-* [将 V2.5 之前的 vCenter Server with Hybridity Bundle 实例迁移到 IBM Cloud 帐户](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [将 V2.5 之前的 Cloud Foundation 实例迁移到 IBM Cloud 帐户](../sddc/sd_addinstancetousraccount.html)
-* [将 V2.5 之前的 NetApp ONTAP Select 实例迁移到 IBM Cloud 帐户](../netapp/np_addinstancetousraccount.html)
-* [将 V2.5 之前的 VMware Federal 实例迁移到 IBM Cloud 帐户](../vcenter/vc_fed_addinstancetousraccount.html)
+* [将 V2.5 之前的 vCenter Server 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [将 V2.5 之前的 vCenter Server with Hybridity Bundle 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [将 V2.5 之前的 Cloud Foundation 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [将 V2.5 之前的 NetApp ONTAP Select 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [将 V2.5 之前的 VMware Federal 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)
 
 ### 相关链接
 
-* [管理身份和访问权](../../../iam/quickstart.html)
-* [管理用户和访问权](../../../iam/iamusermanage.html)
-* [什么是 IAM](../../../iam/index.html)
+* [管理身份和访问权](/docs/iam/quickstart.html)
+* [管理用户和访问权](/docs/iam/iamusermanage.html)
+* [什么是 IAM](/docs/iam/index.html)

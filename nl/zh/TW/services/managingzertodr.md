@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -40,8 +40,8 @@ Zerto 抄寫不支援「網址轉換 (NAT)」遍訪。在 {{site.data.keyword.cl
 
 ### 相關鏈結
 
-* [Zerto on {{site.data.keyword.cloud_notm}} 概觀](addingzertodr.html)
-* [要求 Zerto on {{site.data.keyword.cloud_notm}} 的受管理服務](managing_zerto_services.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/addingzertodr.html)
+* [要求 Zerto on {{site.data.keyword.cloud_notm}} 的受管理服務](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
 * [zerto.com 網站](https://www.zerto.com){:new_window}
 * [Zerto 技術文件](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
 * [Zerto 災難回復](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}

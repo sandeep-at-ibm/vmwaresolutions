@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-11-08"
 
 ## 安裝內部部署 HCX on IBM Cloud 實例時的考量
 
-HCX on {{site.data.keyword.cloud_notm}} 元件必須同時安裝在 {{site.data.keyword.cloud_notm}} 及內部部署 vSphere 環境中。建議您先將 HCX on {{site.data.keyword.cloud_notm}} 服務安裝至 {{site.data.keyword.cloud_notm}} 上的 vCenter Server with Hybridity Bundle 實例，再安裝內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例。如需相關資訊，請參閱 [HCX on {{site.data.keyword.cloud_notm}} 的考量](../services/hcx_considerations.html)。
+HCX on {{site.data.keyword.cloud_notm}} 元件必須同時安裝在 {{site.data.keyword.cloud_notm}} 及內部部署 vSphere 環境中。建議您先將 HCX on {{site.data.keyword.cloud_notm}} 服務安裝至 {{site.data.keyword.cloud_notm}} 上的 vCenter Server with Hybridity Bundle 實例，再安裝內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例。如需相關資訊，請參閱 [HCX on {{site.data.keyword.cloud_notm}} 的考量](/docs/services/vmwaresolutions/services/hcx_considerations.html)。
 
 ### IP 位址的需求
 
@@ -29,7 +29,7 @@ HCX on {{site.data.keyword.cloud_notm}} 元件必須同時安裝在 {{site.data.
 ### 內部部署 HCX on IBM Cloud 實例的部署程序
 
 您必須完成下列作業，才能順利安裝內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例：
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例。如需相關資訊，請參閱[訂購內部部署 VMware HCX on IBM Cloud 實例](standalone_orderingserviceinstances.html)。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例。如需相關資訊，請參閱[訂購內部部署 VMware HCX on IBM Cloud 實例](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)。
 2. 在 **HCX Cloud 主控台**中，完成下列步驟：
     1. 按一下**管理**標籤。
     2. 在**系統更新**標籤上，按一下**要求下載鏈結**。
@@ -37,7 +37,7 @@ HCX on {{site.data.keyword.cloud_notm}} 元件必須同時安裝在 {{site.data.
 3. 在 VMware vSphere Web Client 中，將 HCX Enterprise Client 當成 HCX Manager 虛擬應用裝置 (HCX Manager) 部署至內部部署環境。
 
    您必須在專用網路上部署內部部署 HCX Manager，並容許它存取公用網路。您可以使用 NSX Edge、Vyatta 或類似閘道，容許透過網際網路存取內部部署 HCX Manager。如果用於專用網路存取及公用網路存取的閘道不同，則建議您使用預設閘道來容許公用網路存取及內部部署 **HCX Manager 管理主控台**，以建立進行專用網路存取的靜態路徑。{:note}
-4. 完成 HCX Manager 部署之後，請使用 **HCX Manager 管理主控台**來啟動內部部署 HCX Manager。若要取得內部部署 HCX Manager 的啟動金鑰，請在 {{site.data.keyword.vmwaresolutions_short}} 主控台中訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例。如需相關資訊，請參閱[訂購內部部署 HCX 實例](../services/standalone_orderingserviceinstances.html)。
+4. 完成 HCX Manager 部署之後，請使用 **HCX Manager 管理主控台**來啟動內部部署 HCX Manager。若要取得內部部署 HCX Manager 的啟動金鑰，請在 {{site.data.keyword.vmwaresolutions_short}} 主控台中訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例。如需相關資訊，請參閱[訂購內部部署 HCX 實例](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)。
 5. 如果您已在訂購 HCX on {{site.data.keyword.cloud_notm}} 服務時使用自簽 SSL 憑證，則必須完成下列步驟，將憑證匯入至內部部署 HCX Manager：
     1. 在內部部署 **HCX Manager 管理主控台**中，按一下**管理**標籤。
     2. 從左導覽窗格中，按一下**授信 CA 憑證**，然後按一下右側的**匯入**。
@@ -60,12 +60,12 @@ HCX on {{site.data.keyword.cloud_notm}} 元件必須同時安裝在 {{site.data.
    {:important}
 2. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，刪除已訂購的內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例，以取得內部部署 HCX Manager 的啟動金鑰。請先確定主控台中不再有已刪除的實例，再繼續進行下一步。
 
-   如需相關資訊，請參閱[刪除內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](../services/standalone_deletingserviceinstances.html)。
+   如需相關資訊，請參閱[刪除內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)。
 3. 在 VMware vSphere Web Client 中，刪除內部部署 HCX Manager。
 
 ### 相關鏈結
 
-* [檢視內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](../services/standalone_viewingserviceinstances.html)
-* [HCX 術語名詞解釋](hcx_glossary.html)
+* [檢視內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
+* [HCX 術語名詞解釋](/docs/services/vmwaresolutions/services/hcx_glossary.html)
 * [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

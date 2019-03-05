@@ -2,26 +2,26 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2019-01-23"
 
 ---
 
 # 更新 NSX
 
-此部分已添加到本文档，让您对 NSX 更新过程有所了解。您应该参阅 VMware 指南，以了解要升级到的 NSX 版本的更新过程。
+以下信息是 NSX 更新过程的示例。有关针对要升级到的 NSX 版本的相应更新过程，请参阅 VMware 指南。
 
 如果您需要升级 NSX 和 vSphere，那么 VMware 建议先完成 NSX 升级，再完成 vSphere 升级，因为 NSX VIB 会特定于主机上安装的 ESXi 的版本。但是，如果手动执行以下工作流程，那么建议使用 VUM（如本文档中所述），一次处理一个主机：
 
 1. **升级 ESXi** - ESXi 升级完成后，主机会退出维护模式，但是，要到下一步完成后，才能将连接到逻辑交换机的 VM 移至主机。
 2. **升级 NSX VIB** - VIB 已升级并且主机已退出维护模式后，可以将连接到逻辑交换机的 VM 移至主机。
 
-通过使用从 _my.vmware.com_ 下载的更新来更新 NSX Manager，从而可更新 NSX。为此，您需要帐户来下载更新。如果您是将 {{site.data.keyword.cloud}} 预订许可用于 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 实例，那么无法使用 **my.vmware.com** 帐户下载更新。因此，您需要[联系 IBM 支持人员](../../vmonic/trbl_support.html)。
+通过使用从 _my.vmware.com_ 下载的更新来更新 NSX Manager，从而可更新 NSX。为此，您需要帐户来下载更新。如果您是将 {{site.data.keyword.cloud}} 预订许可用于 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 实例，那么无法使用 **my.vmware.com** 帐户下载更新。因此，您需要[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
 
-开始升级之前，请查看发行说明，因为这些 NSX 发行说明中记录了已知升级问题和变通方法。使用发行说明验证 vCenter 是否满足 NSX 的新系统需求。
+开始升级之前，请查看 NSX 说明以了解升级问题和解决方法。使用发行说明验证 vCenter 是否满足 NSX 的新系统需求。
 
-如果已安装 VMware 合作伙伴提供的其他任何软件，请参阅合作伙伴文档以了解兼容性和升级详细信息。如果已部署 vCenter Server 主实例和辅助实例，并具有跨 vCenter NSX 环境，请参阅发行说明以了解正确的升级过程。
+如果已安装 VMware 业务合作伙伴提供的其他任何软件，请参阅业务合作伙伴文档以了解兼容性和升级详细信息。如果已部署 vCenter Server 主实例和辅助实例，并具有跨 vCenter NSX 环境，请参阅发行说明以了解正确的升级过程。
 
 在跨 vCenter NSX 环境中，会首先更新主 NSX Manager 设备，然后更新所有辅助 NSX Manager 设备。**不支持降级**，因此在继续升级之前，请先备份 NSX Manager；所有 NSX Edge 配置、逻辑路由器和 Edge 服务网关都会作为 NSX Manager 备份的一部分进行备份。
 
@@ -43,7 +43,7 @@ Manager
   - 通过使用 IC4VS 控制台中记录的 IP 地址和凭证，登录到 NSX Manager 虚拟设备，然后单击主页上的“升级”按钮。
   - 登录到 NSX Manager。
   - 在**设备管理**下，单击**备份和复原**。
-  - 单击“备份”并输入相应的文件名。请注意，VMware 建议在复原 NSX Manager 数据之前，重新安装 NSX Manager 设备。虽然对现有 NSX Manager 设备的复原操作可能会正常工作，但此操作并未受到正式支持。最佳做法是记下 NSX Manager 设备的 IP 设置，以便可以使用这些设置来指定新部署的 NSX Manager 设备的 IP 信息和备份位置信息。
+  - 单击“备份”并输入相应的文件名。VMware 建议您在复原 NSX Manager 数据之前重新安装 NSX Manager 设备。虽然对现有 NSX Manager 设备的复原操作可能会正常工作，但此操作并未受到正式支持。最佳做法是记下 NSX Manager 设备的 IP 设置，以便可以使用这些设置来指定新部署的 NSX Manager 设备的 IP 信息和备份位置信息。
   - 单击右上角的**上传捆绑软件**，并上传从 _my.vmware.com_ 下载的文件。
   - 阅读升级信息，并选择是否要启用 SSH 并参与“VMware 客户体验改进计划”。
   - 单击**升级**。

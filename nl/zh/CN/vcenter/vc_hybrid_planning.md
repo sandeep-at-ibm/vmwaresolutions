@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-20"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-09-20"
 
 ## IBM Cloud 帐户需求
 
-要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](../vmonic/slaccountrequirement.html)。
+要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
 
 ## IBM Cloud Data Center 可用性
 
@@ -67,7 +67,7 @@ vCenter Server with Hybridity Bundle 部署对物理基础架构有严格要求�
 
 ## 备份管理组件
 
-您负责维护和确保所有实例组件的可用性。强烈建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](../archiref/solution/solution_backingup.html)。
+您负责维护和确保所有实例组件的可用性。强烈建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)。
 
 ## vCenter Server with Hybridity Bundle 实例的服务
 
@@ -84,15 +84,15 @@ vCenter Server with Hybridity Bundle 实例包含授权您使用 VMware HCX on {
   * （可选）**重新输入密码**：重新输入专用密钥的密码。
   * （可选）**主机名**：输入要映射到 CA 证书的公共名称 (CN) 的主机名。HCX on {{site.data.keyword.cloud_notm}} 需要 CA 证书采用 NSX Edge 接受的格式。有关 NSX Edge 证书格式的更多信息，请参阅[导入 SSL 证书](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)。
 
-您可以根据需要订购适用于实例的其他附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](vc_hybrid_addingremovingservices.html)。
+您可以根据需要订购适用于实例的其他附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)。
 
 ## 容量注意事项
 
-有关容量注意事项的更多信息，请参阅[扩展容量](../archiref/solution/solution_scaling.html)。
+有关容量注意事项的更多信息，请参阅[缩放容量](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)。
 
 ### 相关链接
 
-* [vCenter Server with Hybridity Bundle 概述](vc_hybrid_overview.html)
-* [订购 vCenter Server with Hybridity Bundle 实例](vc_hybrid_orderinginstance.html)
-* [扩展和收缩 vCenter Server with Hybridity Bundle 实例的容量](vc_hybrid_addingremovingservers.html)
-* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](vc_hybrid_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle 概述](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
+* [订购 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [扩展和收缩 vCenter Server with Hybridity Bundle 实例的容量](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)

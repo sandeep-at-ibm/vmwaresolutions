@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 从 V1.4 之前的发行版升级实例
 
@@ -22,7 +26,8 @@ V1.4 和更高发行版中的实例网络拓扑与低于 V1.4 的发行版中的
 
 如果尚未从 1.4 之前的发行版中迁移或删除实例，那么这些实例可能仍然会以“仅查看”方式在 {{site.data.keyword.vmwaresolutions_short}} 控制台上显示。这些实例在用户界面上标记为**不推荐**，并带有警告符号图标。
 
-**注**：实例属性中显示的信息反映的是截至 V1.4 发行日期的数据，这些数据不会再刷新。
+实例属性中显示的信息反映的是截至 V1.4 发行日期的数据，这些数据不会再刷新。
+{:note}
 
 在 V1.4 之前的实例上，以下操作可用：
 *  在实例详细信息页面上查看信息。
@@ -43,4 +48,4 @@ V1.4 和更高发行版中的实例网络拓扑与低于 V1.4 的发行版中的
 
 有关导出和导入 VM 的更多信息，请参阅 VMware vSphere 文档。
 
-如果您需要有关 {{site.data.keyword.vmwaresolutions_short}} 的帮助，请通过下列其中一种支持渠道[联系 IBM 支持人员](trbl_support.html)。
+如果您需要有关 {{site.data.keyword.vmwaresolutions_short}} 的帮助，请通过下列其中一种支持渠道[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。

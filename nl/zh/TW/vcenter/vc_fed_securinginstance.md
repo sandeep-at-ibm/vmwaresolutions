@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -45,8 +45,8 @@ lastupdated: "2018-10-30"
 
 ### 相關鏈結
 
-* [VMware Federal on {{site.data.keyword.cloud_notm}} 概觀](vc_fed_overview.html)
-* [訂購 VMware Federal 實例](vc_fed_orderinginstance.html)
-* [檢視 VMware Federal 實例](vc_fed_viewinginstance.html)
-* [刪除 VMware Federal 實例](vc_fed_deletinginstance.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
+* [訂購 VMware Federal 實例](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [檢視 VMware Federal 實例](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [刪除 VMware Federal 實例](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

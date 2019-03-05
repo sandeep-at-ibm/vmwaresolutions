@@ -2,19 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-28"
+lastupdated: "2019-01-25"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # VMware Federal 實例的網路考量
 
 如需 VMware Federal 實例之網路考量及需求的詳細資料，請檢閱下列資訊。請確定您符合需求，讓實例能夠正常運作。
 
 ## VMware Federal 實例的網路元件
+{: faq}
 
-若要檢閱 VMware Federal 實例中所含的網路元件，請參閱 [VMware Federal on {{site.data.keyword.cloud}} 實例的技術規格](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)。
+若要檢閱 VMware Federal 實例中所含的網路元件，請參閱 [VMware Federal on {{site.data.keyword.cloud}} 實例的技術規格](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)。
 
 ## 防火牆考量
 
@@ -24,7 +27,7 @@ lastupdated: "2018-09-28"
 
 在 VMware Federal 實例部署期間，會在實例中訂購、安裝、授權及配置 VMware NSX。同時，會設定 NSX Manager、NSX Controller 及「NSX 傳輸區域」，且每一部 ESXi 伺服器中都配置了 NSX 元件。
 
-也會部署 NSX Edge Services Gateway，供您的工作負載虛擬機器 (VM) 使用。如需相關資訊，請參閱[配置網路以使用客戶管理的 NSX ESG 來搭配您的 VM](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
+也會部署 NSX Edge Services Gateway，供您的工作負載虛擬機器 (VM) 使用。如需相關資訊，請參閱[配置網路以使用客戶管理的 NSX ESG 來搭配您的 VM](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
 ## 變更 NSX 元件密碼時的考量
 

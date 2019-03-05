@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,8 +19,8 @@ lastupdated: "2018-10-29"
 ## 需求
 
 确保已完成以下任务：
-*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[用户帐户和设置](../vmonic/useraccount.html)。
-*  已查看[针对 vSphere 集群的需求和规划](vs_planning.html)中的需求和注意事项。
+*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html#managing-user-accounts-and-settings)。
+*  已查看[针对 vSphere 集群的需求和规划](/docs/services/vmwaresolutions/vsphere/vs_planning.html)中的需求和注意事项。
 *  已收到有关确认您要扩展的集群已准备就绪可供使用的电子邮件。
 
 ## 扩展现有集群的过程
@@ -46,6 +46,6 @@ lastupdated: "2018-10-29"
 
 ### 相关链接
 
-* [订购新的 vSphere 集群](vs_orderinginstances.html)
-* [基于现有配置订购 vSphere 集群](vs_orderingbasedonexistingconfig.html)
-* [扩展在控制台外部创建的集群](vs_orderingforclustersoutside.html)
+* [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [基于现有配置订购 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [缩放在控制台外部创建的集群](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

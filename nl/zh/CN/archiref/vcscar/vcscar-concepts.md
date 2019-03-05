@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -31,7 +31,7 @@ Skate Advisor 的一个关键方面是可与 Watson 驱动的聊天机器人进�
 ---|---|---
 方向|倒滑<br>反脚倒滑<br>反脚
 转体|倒滑内转 180 度<br>倒滑内转 360 度<br>180<br>360<br>540
-Base|尖翻<br>跟翻<br>难翻<br>大转<br>正向倒板<br>绕板
+基本|尖翻<br>跟翻<br>难翻<br>大转<br>正向倒板<br>绕板
 着地|滑后轮（后两轮）<br>滑前轮（前两轮）<br>5-0（碾磨）<br>碾磨前桥<br>滑板尾<br>滑板鼻<br>歪磨<br>斯密磨<br>骑肋<br>反向骑肋<br>
 
 ### 元素修饰符
@@ -40,7 +40,7 @@ Base|尖翻<br>跟翻<br>难翻<br>大转<br>正向倒板<br>绕板
 
 表 2. 语言修饰符
 
-元素类型|语言文本|注意
+元素类型|语言文本|备注
 ---|---|---
 转向前辍|外转<br>内转|“转体前辍”与转体方向相关
 小乱|内转<br>外转|
@@ -53,10 +53,12 @@ Base|尖翻<br>跟翻<br>难翻<br>大转<br>正向倒板<br>绕板
 
 ### 技巧规则集
 
-*   **base_combo** = 'direction \+ \[varial | turn_prefix\] \+ \[rotation\] \+ \[base_trick\]'
-*   **next_combo** = ''\[varial | turn_prefix\] \+ \[rotation\] \+ \[base_trick\]'
-*   **landing_combo** = ''\[varial | turn_prefix\] \+ landing'
-*   **trick** = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
+```
+base_combo = 'direction \+ \[varial | turn_prefix\] \+ \[rotation\] \+ \[base_trick\]'
+next_combo = ''\[varial | turn_prefix\] \+ \[rotation\] \+ \[base_trick\]'
+landing_combo = ''\[varial | turn_prefix\] \+ landing'
+trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
+```
 
 ### 技巧规则引擎
 
@@ -70,69 +72,37 @@ Base|尖翻<br>跟翻<br>难翻<br>大转<br>正向倒板<br>绕板
 以下示例是样本技巧的列表：
 
 ```
-
 fakie-kickflip
-
 fakie-kickflip to fakie-5-0 to fronside-halfcab (out)
-
 fakie-heeflip
-
 fakie-heeflip to fakie-maual to fakie-hardflip
-
 fakie-inward (varial) heeflip to fakie-backside tailslide to fakie
-
 switch-heeflip to fakie-maual to fakie-hardflip
-
 switch-hardflip to fakie-manual
-
 fakie-hardflp to fakie-nosegrind
-
 nollie-hardflip-to-tailslide
-
 nollie-inward-heelflip to frontside noseslide
-
 kickflip-frontside to crooked grind
-
 halfcab-heelflip to crooked grind
-
 frontside-shuvit to nosegrind to nollie-flip (out)
-
 kickflip to nosegrind to nollie-impossilbe (out)
-
 nollie-kickflip to noseslide to nollieflip
-
 nollie-kickflip to frontside-lipslide
-
 nollie-impossible to manual
-
 nollie-impossible to 5-0
-
 nollie-kickflip to crooked grind
-
 nollie-kickflip to crooked grind to nollie-halfcab-kickflip (out)
-
 frontside-nollie-halfcab-heelflip to fakie-nosegrind
-
 backside-nollie-halfcab-kickflip to backside-tailslide to backside-180-out
-
 frontside-nollie-cab-kicflip halfcab to backside-smithgrind
-
 halfcab to backside-smithgrind to backside-180-bigspin (out)
-
 kickflip-backside-tailslide to backside-180-kickflip
-
 kickflip-backside-tailslide to backside-backside-bigspin
-
 360-kicflip to nosemanual to nollie-360-kickflip
-
 360-kicflip to frontside-lipslide
-
 harflip to backside-lipslide
-
 kicflip to frontside-boardslidev
-
 nollie-heelflip to frontside-boardslide
-
 ```
 
 ## 相关性
@@ -141,4 +111,4 @@ nollie-heelflip to frontside-boardslide
 
 ### 相关链接
 
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)  
+* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)  

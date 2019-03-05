@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -25,12 +25,12 @@ Veeam on {{site.data.keyword.cloud}} 服務與 VMware Hypervisor 無縫整合，
 3. 在 **Veeam on IBM Cloud** 頁面上，檢閱 Veeam on {{site.data.keyword.cloud_notm}} 即受管理服務的說明及技術規格，然後按一下**建立**。
 4. 根據您的需求指定配置設定，或接受預設值。
 5. 按一下 **vCenter Server** 或 **Cloud Foundation**，將服務新增至其中一個實例。
-6. 若要在訂購新實例時新增服務，請按一下**新增至新實例**，然後繼續訂購新的 [vCenter Server](../vcenter/vc_orderinginstance.html)、[vCenter Server with Hybridity](../vcenter/vc_hybrid_orderinginstance.html) 或 [Cloud Foundation](../sddc/sd_orderinginstance.html) 實例。
+6. 若要在訂購新實例時新增服務，請按一下**新增至新實例**，然後繼續訂購新的 [vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)、[vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html) 或 [Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html) 實例。
 7. 若要將服務新增至現有實例，請按一下**新增至現有實例**，從清單中選取您要的實例，然後按一下**佈建**確認您要繼續訂購。
 
 ### 相關鏈結
 
-* [訂購、檢視及移除 vCenter Server 實例的服務](../vcenter/vc_addingremovingservices.html)
-* [訂購、檢視及移除 Cloud Foundation 實例的服務](../sddc/sd_addingremovingservices.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
+* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
 * [資料備份及保護服務](https://www-935.ibm.com/services/business-continuity/backup-and-data-protection-services/)

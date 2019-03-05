@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-11"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-11"
 ## 開始之前
 
 * 確定您是帳戶擁有者，或 **VMware 解決方案**服務的平台管理角色是**管理者**。
-* 確定您已檢閱[利用 Identity and Access Management 管理使用者存取](iam.html)中的使用者角色及許可權。
+* 確定您已檢閱[利用 Identity and Access Management 管理使用者存取](/docs/services/vmwaresolutions/vmonic/iam.html)中的使用者角色及許可權。
 
 ## 邀請使用者存取服務及資源的程序
 
@@ -34,12 +34,12 @@ lastupdated: "2018-11-11"
 
 ### 相關鏈結
 
-* [邀請使用者及指派存取權](../../../iam/iamuserinv.html)
-* [管理身分及存取](../../../iam/quickstart.html)
-* [管理使用者及存取](../../../iam/iamusermanage.html)
-* [何謂 IAM](../../../iam/index.html)
-* [將 2.5 版之前的 vCenter Server 實例移轉至 IBM Cloud 帳戶](../vcenter/vc_addinstancetousraccount.html)
-* [將 2.5 版之前的 vCenter Server with Hybridity Bundle 實例移轉至 IBM Cloud 帳戶](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [將 2.5 版之前的 Cloud Foundation 實例移轉至 IBM Cloud 帳戶](../sddc/sd_addinstancetousraccount.html)
-* [將 2.5 版之前的 NetApp ONTAP Select 實例移轉至 IBM Cloud 帳戶](../netapp/np_addinstancetousraccount.html)
-* [將 2.5 版之前的 VMware Federal 實例移轉至 IBM Cloud 帳戶](../vcenter/vc_fed_addinstancetousraccount.html)
+* [邀請使用者及指派存取權](/docs/iam/iamuserinv.html)
+* [管理身分及存取](/docs/iam/quickstart.html)
+* [管理使用者及存取](/docs/iam/iamusermanage.html)
+* [何謂 IAM](/docs/iam/index.html)
+* [將 2.5 版之前的 vCenter Server 實例移轉至 IBM Cloud 帳戶](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [將 2.5 版之前的 vCenter Server with Hybridity Bundle 實例移轉至 IBM Cloud 帳戶](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [將 2.5 版之前的 Cloud Foundation 實例移轉至 IBM Cloud 帳戶](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [將 2.5 版之前的 NetApp ONTAP Select 實例移轉至 IBM Cloud 帳戶](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [將 2.5 版之前的 VMware Federal 實例移轉至 IBM Cloud 帳戶](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)

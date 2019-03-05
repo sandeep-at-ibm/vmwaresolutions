@@ -2,15 +2,16 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-16"
+lastupdated: "2019-01-23"
 
 ---
 
 # 使用案例
 
 ## 工作負載移轉至 IBM Cloud
+
 Acme Skateboards 想要將其內部部署 VMware SDDC 無縫延伸到 VMware vCenter Server on {{site.data.keyword.cloud}} 實例。他們需要讓業務持續運作，並使關閉時間降到最低。重新配置其應用程式以便在雲端執行並不是最佳解決方案。
 
 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 能夠在 {{site.data.keyword.cloud_notm}} 與內部部署 VMware 虛擬化資料中心之間建立無縫連線。
@@ -36,24 +37,24 @@ VMware Hybrid Cloud Extension Services 會在內部部署與 {{site.data.keyword
 
 ## 混合式架構部署
 
-Acme Skateboards 想要在由 vCenter Server 和 ICP 組成的 {{site.data.keyword.cloud_notm}} 上部署混合式架構，以進行應用程式現代化。他們的需求是在虛擬機器上執行其資料庫、在容器中執行應用程式和 Web 服務，並使用一組共用的工具來進行網路和安全管理。
+Acme Skateboards 想要在由 vCenter Server 和 {{site.data.keyword.icpfull_notm}} 組成的 {{site.data.keyword.cloud_notm}} 上部署混合式架構，以進行應用程式現代化。他們的需求是在虛擬機器上執行其資料庫、在容器中執行應用程式和 Web 服務，並使用一組共用的工具來進行網路和安全管理。
 
 圖 2. Acme Skateboards 混合式應用程式
 
 ![Acme Skateboards 混合式應用程式](vcsicp-acme-skateboards-app.svg)
 
-{{site.data.keyword.vmwaresolutions_short}} 提供自動化，以在全球的 {{site.data.keyword.CloudDataCents_notm}} 中部署 VMware 技術元件。架構由單一雲端地區組成，可支援延伸至位於另一個地理位置的其他雲端地區，及/或延伸至相同資料中心內的另一個  {{site.data.keyword.cloud_notm}} Pod。
+{{site.data.keyword.vmwaresolutions_short}} 提供自動化，以在全球的 {{site.data.keyword.CloudDataCents_notm}} 中部署 VMware 技術元件。架構由單一雲端地區組成，可支援延伸至位於另一個地理位置的其他雲端地區，或延伸至相同資料中心內的另一個 {{site.data.keyword.cloud_notm}} Pod。
 
-{{site.data.keyword.cloud_notm}} Private (ICP) 及 Cloud Automation Manager (CAM) 產品已手動部署至內部部署的虛擬化平台，因而能夠從內部部署位置進行雲端管理。或者，ICP 和 CAM 也可以透過自動化功能當作服務延伸提供給現有或新的 vCenter Server 部署，因而能夠從 {{site.data.keyword.cloud_notm}} 進行雲端管理。
+{{site.data.keyword.icpfull_notm}} 及 Cloud Automation Manager (CAM) 產品會手動部署至內部部署的虛擬化平台，因而能夠從內部部署位置進行雲端管理。或者，{{site.data.keyword.icpfull_notm}} 和 CAM 也可以透過自動化功能當作服務延伸提供給現有或新的 vCenter Server 部署，因而能夠從 {{site.data.keyword.cloud_notm}} 進行雲端管理。
 
-下圖代表 vCenter Server 實例上執行的 ICP。NSX-V 配置了專用交換器/VXLAN、DLR，以及專門用於 ICP 層疊網路的 ESG，遞送作業設定為透過 ESG 進行，以存取基礎的網路。
+下圖代表 vCenter Server 實例上執行的 {{site.data.keyword.icpfull_notm}}。NSX-V 已配置專用交換器/VXLAN、DLR，以及專門用於 {{site.data.keyword.icpfull_notm}} 層疊網路的 ESG，而且透過 ESG 設定遞送來存取基礎網路。
 
-使用 {{site.data.keyword.cloud_notm}} 自動化，Acme Skateboards 可以佈建封裝 VMware on {{site.data.keyword.cloud_notm}} 的混合式解決方案，以在 VMware on {{site.data.keyword.cloud_notm}} 上執行其資料庫 VM 和 ICP，並在容器中執行其應用程式和前端系統 Web 服務。NSX 為其提供一組共用的管理工具，用來管理層疊網路中的網路和安全。
+使用 {{site.data.keyword.cloud_notm}} 自動化，Acme Skateboards 可以佈建封裝 VMware on {{site.data.keyword.cloud_notm}} 的混合式解決方案，以在 VMware on {{site.data.keyword.cloud_notm}} 上執行其資料庫 VM 和 {{site.data.keyword.icpfull_notm}}，並在容器中執行其應用程式和前端系統 Web 服務。NSX 為其提供一組共用的管理工具，用來管理層疊網路中的網路和安全。
 
-圖 3. 具有 ICP 的 vCenter Server
+圖 3. 具有 {{site.data.keyword.icpfull_notm}} 的 vCenter Server
 
-![具有 ICP 的 vCenter Server](vcsicp-virtual-icp-deployment-vcs.svg)
+![具有 {{site.data.keyword.icpfull_notm}} 的 vCenter Server](vcsicp-virtual-icp-deployment-vcs.svg)
 
 ### 相關鏈結
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

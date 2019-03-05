@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-17"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -35,6 +35,6 @@ lastupdated: "2018-10-17"
 
 ### 相關鏈結
 
-* [利用 IAM 管理使用者存取](../vmonic/iam.html)
-* [邀請使用者存取服務及資源](../vmonic/iamuserinvite.html)
-* [何謂 IBM Cloud IAM](../../../iam/index.html)
+* [利用 IAM 管理使用者存取](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [邀請使用者存取服務及資源](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [何謂 IBM Cloud IAM](/docs/iam/index.html)

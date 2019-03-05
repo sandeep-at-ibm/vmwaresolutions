@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -75,4 +75,4 @@ vSphere + vSAN 延伸叢集架構具有下列規格：
 
 ### 相關鏈結
 
-* [要求 Mission Critical VMware on IBM Cloud](managing_mcv.html)
+* [要求 Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services/managing_mcv.html)

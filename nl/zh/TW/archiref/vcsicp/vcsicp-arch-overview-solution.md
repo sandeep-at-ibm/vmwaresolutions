@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-06"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -33,11 +33,11 @@ NSX Manager 部署在起始叢集上。此外，NSX Manager 會獲指派專用�
 
 ### NSX Edge / DLR
 
-已部署 NSX Edge Services Gateway (ESG) 配對。無論如何，都會將一個閘道配對用於來自位於專用網路之自動化元件的出埠資料流量。對於 vCenter Server 及 {{site.data.keyword.cloud_notm}} Private (ICP)，會部署稱為 ICP 管理邊緣的第二個閘道，並為其配置連往公用網路的上行鏈路，以及指派給專用網路的介面。管理者可以配置任何必要的 NSX 元件，例如「分散式邏輯路由器 (DLR)」、邏輯交換器和防火牆。[vCenter Server 網路手冊](../vcsnsxt/vcsnsxt-intro.html)提供有關網路設計的更多詳細資料。
+已部署 NSX Edge Services Gateway (ESG) 配對。無論如何，都會將一個閘道配對用於來自位於專用網路之自動化元件的出埠資料流量。對於 vCenter Server 及 {{site.data.keyword.icpfull_notm}}，會部署稱為 ICP 管理邊緣的第二個閘道，並為其配置連往公用網路的上行鏈路，以及指派給專用網路的介面。管理者可以配置任何必要的 NSX 元件，例如「分散式邏輯路由器 (DLR)」、邏輯交換器和防火牆。[vCenter Server 網路手冊](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html)提供有關網路設計的更多詳細資料。
 
-下表彙總 ICP ESG / DLR 規格。
+下表彙總 {{site.data.keyword.icpfull_notm}} ESG/DLR 規格。
 
-表 1. ICP ESG 規格
+表 1. {{site.data.keyword.icpfull_notm}} ESG 規格
 
  屬性            | 規格                           
 --|--
@@ -45,7 +45,7 @@ Edge Services Gateway  | 虛擬應用裝置
 邊緣大小為「大型」 |   vCPU 數目為	2
 記憶體	| 1-GB 磁碟 | 本端資料儲存庫上有 1000 GB 
 
-表 2. ICP DLR 規格
+表 2. {{site.data.keyword.icpfull_notm}} DLR 規格
 
  屬性            | 規格                           
 --|--|
@@ -53,11 +53,11 @@ Edge Services Gateway  | 虛擬應用裝置
 邊緣大小為「精簡」 | vCPU 數目為	1
 記憶體	|512 MB 的磁碟| 本端資料儲存庫上有 1000 GB 
 
-## ICP 元件
-ICP 是用來開發及管理內部部署容器化應用程式的應用程式平台。它是用來管理容器的整合環境，其中包括容器編排程式 Kubernetes、專用映像檔儲存庫、管理主控台和監視架構。
+## IBM Cloud Private 元件
+{{site.data.keyword.icpfull_notm}} 是一個應用程式平台，用於開發及管理內部部署容器化應用程式。它是用來管理容器的整合環境，其中包括容器編排程式 Kubernetes、專用映像檔儲存庫、管理主控台和監視架構。
 
-圖 2. 使用 vCenter Server 的虛擬 ICP 部署
-![使用 VCS 的虛擬 ICP 部署](vcsicp-virtual-icp-deployment-vcs.svg)
+圖 2. 使用 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署
+![使用 VCS 的虛擬 {{site.data.keyword.icpfull_notm}} 部署](vcsicp-virtual-icp-deployment-vcs.svg)
 
 ###	啟動節點
 
@@ -77,15 +77,15 @@ Proxy 節點的功能是將外部要求傳輸至在叢集內建立的服務。�
 
 ### 管理節點
 
-管理節點是選用性節點，只用來管理例如監視、計量和記載等管理服務。配置專用的管理節點可以防止主節點超載。您只能在 ICP 安裝期間啟用管理節點。
+管理節點是選用性節點，只用來管理例如監視、計量和記載等管理服務。配置專用的管理節點可以防止主節點超載。您只能在 {{site.data.keyword.icpfull_notm}} 安裝期間啟用管理節點。
 
 ###	漏洞警告器節點
 
 「漏洞警告器」節點是選用性節點，可用來執行「漏洞警告器」服務。「漏洞警告器」服務需要大量資源。如果您使用「漏洞警告器」服務，請指定專用的 VA 節點。
 
-下列是高可用性 ICP 實例所需的 VM 規格。
+下列是高可用性 {{site.data.keyword.icpfull_notm}} 實例所需的 VM 規格。
 
-表 3. ICP 虛擬機器規格
+表 3. {{site.data.keyword.icpfull_notm}} 虛擬機器規格
 
 節點 | 	實例	| IP	| CPU	| RAM (GB)	| 磁碟 (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -98,7 +98,7 @@ GlusterFS	| 3	| IP (x3)	|8	|16	|150
 
 CAM 需要工作者節點具有較高的 vCPU 和記憶體配置。
 
-表 4. ICP 虛擬機器規格
+表 4. {{site.data.keyword.icpfull_notm}} 虛擬機器規格
 
 節點 | 	實例	| IP	| CPU	| RAM (GB)	| 磁碟 (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -106,7 +106,7 @@ CAM 需要工作者節點具有較高的 vCPU 和記憶體配置。
 
 ## CAM 元件
 
-{{site.data.keyword.cloud_notm}} Automation Manager (CAM) 是在 ICP 上執行的多重雲端自助式管理平台，讓開發人員與管理者能夠滿足商業需求。
+{{site.data.keyword.cloud_notm}} Automation Manager (CAM) 是在 {{site.data.keyword.icpfull_notm}} 上執行的多重雲端自助式管理平台，讓開發人員與管理者能夠滿足商業需求。
 
 圖 3. CAM 元件參照
 ![CAM 元件參照](vcsicp-cam-component-ref.svg)
@@ -153,4 +153,4 @@ Template Designer 應用程式的資料庫。
 
 ### 相關鏈結
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)

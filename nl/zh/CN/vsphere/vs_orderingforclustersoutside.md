@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -19,15 +19,15 @@ lastupdated: "2018-10-29"
 ## 需求
 
 确保已完成以下任务：
-*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](../vmonic/useraccount.html)。
-*  已查看[针对 VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求和规划](vs_planning.html)中的需求和注意事项。
+*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
+*  已查看[针对 VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求和规划](/docs/services/vmwaresolutions/vsphere/vs_planning.html)中的需求和注意事项。
 
 ## 扩展在控制台外部创建的集群的过程
 
 1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **VMware vSphere**。
 2. 在 **VMware vSphere on IBM Cloud** 页面上，单击**创建**。  
    确保位于**新建**选项卡上，并且**集群配置**列表中显示了**新集群**。
-3. 使用与现有集群（在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部创建）相同的设置来创建集群。有关更多信息，请参阅[订购新的 vSphere 集群](vs_orderinginstances.html)。  
+3. 使用与现有集群（在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部创建）相同的设置来创建集群。有关更多信息，请参阅[订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)。  
    对于网络接口，要扩展在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部创建的集群，必须选择集群的现有 VLAN。
    {:note}
 4. 在**订单摘要**窗格中，验证集群配置，然后单击**保存配置**。   
@@ -47,6 +47,6 @@ vSphere 集群不会与 vCenter Server 和 Cloud Foundation 实例一起显示�
 
 ### 相关链接
 
-* [订购新的 vSphere 集群](vs_orderinginstances.html)
-* [基于现有配置订购 vSphere 集群](vs_orderingbasedonexistingconfig.html)
-* [扩展现有 vSphere 集群](vs_scalingexistingclusters.html)
+* [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [基于现有配置订购 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
+* [缩放现有 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)

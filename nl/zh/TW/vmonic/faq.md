@@ -2,21 +2,27 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # IBM Cloud for VMware Solutions 的一般常見問題
 
 尋找 {{site.data.keyword.vmwaresolutions_full}} 相關常見問題的回答。
 
 ## IBM Cloud for VMware Solutions 需要何種使用者帳戶？
+{: faq}
 
-* **IBM ID 帳戶**。需要此帳戶才能存取 {{site.data.keyword.vmwaresolutions_short}} 主控台。主控台是與 {{site.data.keyword.slportal}} 分開的獨立式使用者介面。如需相關資訊，請參閱[開始使用](../index.html)。
+* **IBM ID 帳戶**。需要此帳戶才能存取 {{site.data.keyword.vmwaresolutions_short}} 主控台。主控台是與 {{site.data.keyword.slportal}} 分開的獨立式使用者介面。如需相關資訊，請參閱[開始使用](/docs/services/vmwaresolutions/index.html)。
 * **{{site.data.keyword.cloud_notm}} 帳戶**。需要此帳戶才能進行佈建。您可以使用現有 **IBM ID** 或建立新的 **IBM ID**，來註冊 {{site.data.keyword.cloud_notm}} 帳戶。
-* **{{site.data.keyword.cloud_notm}} 基礎架構帳戶**。此帳戶（先前稱為 **IBM SoftLayer** 帳戶）用來登入 {{site.data.keyword.cloud_notm}} 基礎架構客戶入口網站，以提供一些額外功能來管理基礎架構產品及服務。您可以取得 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，方法是將 **{{site.data.keyword.cloud_notm}} 帳戶**升級至「隨收隨付制」類型的帳戶，或將現有 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。您使用的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須符合特定需求。如需相關資訊，請參閱[註冊必要帳戶](signing_softlayer_account.html)及 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶需求](slaccountrequirement.html)。
+* **{{site.data.keyword.cloud_notm}} 基礎架構帳戶**。此帳戶（先前稱為 **IBM SoftLayer** 帳戶）用來登入 {{site.data.keyword.cloud_notm}} 基礎架構客戶入口網站，以提供一些額外功能來管理基礎架構產品及服務。您可以取得 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，方法是將 **{{site.data.keyword.cloud_notm}} 帳戶**升級至「隨收隨付制」類型的帳戶，或將現有 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。您使用的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須符合特定需求。如需相關資訊，請參閱[註冊必要帳戶](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)及 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
 
 ## 如何使 IBM Cloud 基礎架構認證與 IBM Cloud for VMware Solutions 主控台產生關聯？
 
@@ -30,21 +36,21 @@ lastupdated: "2018-09-27"
 
 所有實例類型都提供 VMware 虛擬環境的部署選項。不過，差異在於自訂功能及自動化的範圍。
 
-* 當您訂購 VMware vCenter Server 實例時，您會部署具有自訂運算、儲存空間及網路資源的 VMware 虛擬環境。如需已部署元件的相關資訊，請參閱 [vCenter Server 實例的技術規格](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
-* 當您訂購 VMware Cloud Foundation 實例時，您將部署統一的軟體定義資料中心 (SDDC) 平台。如需已部署元件的相關資訊，請參閱 [Cloud Foundation 實例的技術規格](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
+* 當您訂購 VMware vCenter Server 實例時，您會部署具有自訂運算、儲存空間及網路資源的 VMware 虛擬環境。如需已部署元件的相關資訊，請參閱 [vCenter Server 實例的技術規格](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
+* 當您訂購 VMware Cloud Foundation 實例時，您將部署統一的軟體定義資料中心 (SDDC) 平台。如需已部署元件的相關資訊，請參閱 [Cloud Foundation 實例的技術規格](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 * 當您訂購 VMware vSphere 叢集時，您會有最大的彈性來設計及建置受管理的 VMware 環境，同時納入 VMware 相容的硬體。不過，{{site.data.keyword.cloud_notm}} 不會使 VMware vSphere 叢集之選用 VMware 元件的安裝、配置及啟動自動化。
-* 對 vCenter Server 實例、Cloud Foundation 實例及 vSphere 叢集所支援的功能不同。如需相關資訊，請參閱[提供比較圖表](inst_comp_chart.html)。
+* 對 vCenter Server 實例、Cloud Foundation 實例及 vSphere 叢集所支援的功能不同。如需相關資訊，請參閱[提供比較圖表](/docs/services/vmwaresolutions/vmonic/inst_comp_chart.html)。
 
 ## vCenter Server 實例包含了什麼？
 
-如需相關資訊，請參閱 [vCenter Server 實例的技術規格](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
+如需相關資訊，請參閱 [vCenter Server 實例的技術規格](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
 
 ## Cloud Foundation 實例包含了什麼？
 
-如需相關資訊，請參閱 [Cloud Foundation 實例的技術規格](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
+如需相關資訊，請參閱 [Cloud Foundation 實例的技術規格](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 
 ## vSphere 叢集包括哪些內容？
-如需相關資訊，請參閱 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的元件](../vsphere/vs_vsphereclusteroverview.html)。
+如需相關資訊，請參閱 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的元件](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)。
 
 ## 雙節點 vCenter Server 實例是否為高可用性？
 
@@ -66,26 +72,33 @@ lastupdated: "2018-09-27"
 
 **附註：**對於 Cloud Foundation 實例，無法變更預設叢集名稱。
 
-##如何管理修補程式？
+## 如何管理修補程式？
 
 IBM 提供 IBM 程式碼的持續更新，方法是隨需應變部署 IBM CloudDriver 虛擬伺服器實例 (VSI)。IBM 不對 Zerto on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 等附加服務提供持續更新。您必須負責取得並安裝這些更新。
 
-根據您已部署的 VMware 實例類型，會以不同的方式套用 VMware 更新：
+根據實例類型，會以不同的方式套用 VMware 更新。
 
-* 對於 VMware Cloud Foundation 實例，透過 {{site.data.keyword.vmwaresolutions_short}} 主控台提供 vSphere ESXi、NSX、vCenter、Platform Services Controller 及 SDDC Manager 元件的更新。
-* 對於 VMware vCenter Server 實例：
-  * 對於已部署至或升級至 2.1 版或更新版本的實例，新部署的 ESXi 伺服器和叢集將以 VMware 所提供最近但未必最新的 ESXi 更新進行修補。
-  * 您必須負責處理 VMware 元件的所有其他更新，包括確保新部署的 ESXi 伺服器和叢集具有您需要的所有最近更新。
-  * 對於在 2.0 版或更新版本上部署的實例，VMware Update Manager (VUM) 已整合至 vCenter Server。您可以配置 VUM 來下載 VMware 的 ESXi 更新。
+### VMware Cloud Foundation 實例
+
+透過 {{site.data.keyword.vmwaresolutions_short}} 主控台提供 vSphere ESXi、NSX、vCenter、Platform Services Controller 及 SDDC Manager 元件的更新。
+
+### VMware vCenter Server 實例
+
+對於已部署在或升級至 2.1 版或更新版本的實例，新部署的 ESXi 伺服器和叢集會以 VMware 最近但未必最新的 ESXi 更新進行修補。
+
+您必須負責處理 VMware 元件的所有其他更新，包括確保新部署的 ESXi 伺服器和叢集具有您需要的所有最近更新。{:important}
+
+對於在 2.0 版或更新版本上部署的實例，VMware Update Manager (VUM) 已整合至 vCenter Server。您可以配置 VUM 來下載 VMware 的 ESXi 更新。
 
 如需相關資訊，請參閱下列資源：
 * [VMware 支援](https://www.vmware.com/support.html)
-* [將更新套用至 vCenter Server 實例](../vcenter/vc_applyingupdates.html)
-* [將更新套用至 Cloud Foundation 實例](../sddc/sd_applyingupdates.html)
+* [將更新套用至 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html)
+* [將更新套用至 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)
+* [將更新套用至 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_applyingupdates.html)
 
 ## 管理服務 NSX Edge 是否造成安全風險？
 
-雖然管理服務的 VMware NSX Edge 位於公用子網路上，但仍提供安全措施，以確保不會造成安全風險。這些措施如下：
+雖然管理服務的 VMware NSX Edge 位於公用子網路上，但仍提供下列安全措施，以確保不會造成安全風險：
 *  已配置 NSX Edge 防火牆，只容許管理虛擬機器所起始的送出 HTTPS（TCP 埠 443）資料流量。
 *  使用 SNAT（來源網址轉換），使專用 IP 位址不顯示於專用網路以外。
 *  已停用對管理服務 NSX Edge 應用裝置的遠端存取。
@@ -104,12 +117,12 @@ IBM 提供 IBM 程式碼的持續更新，方法是隨需應變部署 IBM CloudD
 實例部署具有嚴格的實體基礎架構需求，這在 {{site.data.keyword.CloudDataCents_notm}} 之間會不同。當您訂購實例時，會列出地區內的可用資料中心，而且您可以從此清單中選取您要的資料中心。
 
 如需相關資訊，請參閱以下的 _IBM Cloud Data Center 可用性_ 小節：
-* [vCenter Server 實例的需求及規劃](../vcenter/vc_planning.html)
-* [vCenter Server with Hybridity Bundle 實例的需求及規劃](../vcenter/vc_hybrid_planning.html)
-* [Cloud Foundation 實例的需求及規劃](../sddc/sd_planning.html)
-* [VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求及規劃](../vsphere/vs_planning.html)
-* [NetApp ONTAP Select 實例的需求及規劃](../netapp/np_planning.html)
-* [VMware Federal 實例的需求與規劃](../vcenter/vc_fed_planning.html)
+* [vCenter Server 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [vCenter Server with Hybridity Bundle 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
+* [Cloud Foundation 實例的需求及規劃](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求及規劃](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
+* [NetApp ONTAP Select 實例的需求及規劃](/docs/services/vmwaresolutions/netapp/np_planning.html)
+* [VMware Federal 實例的需求與規劃](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
 
 ## 部署實例需要花費多久的時間？
 
@@ -127,12 +140,13 @@ VMware ESXi 會自動安裝在每一部 Bare Metal Server 上，但您必須負�
 
 ## 如果我有 IBM Cloud for VMware Solutions 方面的問題該怎麼辦？
 
-如果您需要 {{site.data.keyword.vmwaresolutions_short}} 方面的協助，請透過其中一個支援管道與 IBM 支援中心聯絡。如需相關資訊，請參閱[與 IBM 支援中心聯絡](trbl_support.html)。
+如果您需要 {{site.data.keyword.vmwaresolutions_short}} 方面的協助，請透過其中一個支援管道與 IBM 支援中心聯絡。如需相關資訊，請參閱[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
+
 
 ### 相關鏈結
 
-* [通知](notifications.html)
-* [Cloud Foundation 實例](../sddc/sd_cloudfoundationoverview.html)
-* [vCenter Server 實例](../vcenter/vc_vcenterserveroverview.html)
-* [存取主控台](loginmethod.html)
-* [使用者帳戶及設定](useraccount.html)
+* [通知](/docs/services/vmwaresolutions/vmonic/notifications.html)
+* [Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [存取主控台](/docs/services/vmwaresolutions/vmonic/loginmethod.html)
+* [使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-11"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-11"
 ## 开始之前
 
 * 确保您是帐户所有者，或者确保您的 **VMware Solutions** 服务的平台管理角色是**管理员**。
-* 确保查看了[使用 Identity and Access Management 管理用户访问权](iam.html)中的用户角色和许可权。
+* 确保查看了[使用 Identity and Access Management 管理用户访问权](/docs/services/vmwaresolutions/vmonic/iam.html)中的用户角色和许可权。
 
 ## 邀请用户访问服务和资源的过程
 
@@ -34,12 +34,12 @@ lastupdated: "2018-11-11"
 
 ### 相关链接
 
-* [邀请用户和分配访问权](../../../iam/iamuserinv.html)
-* [管理身份和访问权](../../../iam/quickstart.html)
-* [管理用户和访问权](../../../iam/iamusermanage.html)
-* [什么是 IAM](../../../iam/index.html)
-* [将 V2.5 之前的 vCenter Server 实例迁移到 IBM Cloud 帐户](../vcenter/vc_addinstancetousraccount.html)
-* [将 V2.5 之前的 vCenter Server with Hybridity Bundle 实例迁移到 IBM Cloud 帐户](../vcenter/vc_hybrid_addinstancetousraccount.html)
-* [将 V2.5 之前的 Cloud Foundation 实例迁移到 IBM Cloud 帐户](../sddc/sd_addinstancetousraccount.html)
-* [将 V2.5 之前的 NetApp ONTAP Select 实例迁移到 IBM Cloud 帐户](../netapp/np_addinstancetousraccount.html)
-* [将 V2.5 之前的 VMware Federal 实例迁移到 IBM Cloud 帐户](../vcenter/vc_fed_addinstancetousraccount.html)
+* [邀请用户和分配访问权](/docs/iam/iamuserinv.html)
+* [管理身份和访问权](/docs/iam/quickstart.html)
+* [管理用户和访问权](/docs/iam/iamusermanage.html)
+* [什么是 IAM](/docs/iam/index.html)
+* [将 V2.5 之前的 vCenter Server 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
+* [将 V2.5 之前的 vCenter Server with Hybridity Bundle 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
+* [将 V2.5 之前的 Cloud Foundation 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
+* [将 V2.5 之前的 NetApp ONTAP Select 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
+* [将 V2.5 之前的 VMware Federal 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2018-10-29"
   <dd class="dd">物理网络提供环境的网络连接，该连接接着由网络虚拟化使用。网络由 {{site.data.keyword.cloud_notm}} 服务网络提供，并且包含 DNS 和 NTP 等额外服务。</dd>
 </dl>
 
-有关物理组件的更多信息，请参阅 [Cloud Foundation 实例](../../sddc/sd_bom.html)或 [vCenter Server 实例](../../vcenter/vc_bom.html)的材料清单。
+有关物理组件的更多信息，请参阅 [Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_bom.html)或 [vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_bom.html)的材料清单。
 
 有关存储器的更多信息，请参阅[共享存储器体系结构](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)。
 
@@ -33,7 +33,7 @@ lastupdated: "2018-10-29"
 
 物理主机是指环境中提供计算资源的 {{site.data.keyword.baremetal_short}}。在此解决方案中应用的 {{site.data.keyword.baremetal_short}} 由 VMware 进行认证，并在 [VMware HCG](http://www.vmware.com/resources/compatibility/search.php) 中列出。
 
-解决方案中可用的服务器配置满足或超过安装、配置和管理 vSphere ESXi 的最低需求。有各种配置可用于满足不同需求。有关用于 VMware on {{site.data.keyword.cloud_notm}} 解决方案的确切规范的详细列表，请参阅 [Cloud Foundation 实例](../../sddc/sd_bom.html)或 [vCenter Server 实例](../../vcenter/vc_bom.html)的材料清单。
+解决方案中可用的服务器配置满足或超过安装、配置和管理 vSphere ESXi 的最低需求。有各种配置可用于满足不同需求。有关用于 VMware on {{site.data.keyword.cloud_notm}} 解决方案的确切规范的详细列表，请参阅 [Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_bom.html)或 [vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_bom.html)的材料清单。
 
 {{site.data.keyword.baremetal_short}} 位于 {{site.data.keyword.cloud_notm}} 中。
 {:note}
@@ -156,7 +156,7 @@ vSphere ESXi 系统管理程序设计为安装在持久位置。因此，物理�
 
 使用 VMware vSAN 时，将使用全闪存配置来配置 VMware vSAN。此设计支持多个配置选项，包括 2U 和 4U 机箱、不同磁盘数以及各种磁盘大小。所有配置都使用两个 vSAN 磁盘组，其中一个固态磁盘 (SSD) 用于高速缓存，一个或多个 SSD 用于容量。分配供 vSAN 使用的所有驱动器均在单磁盘 RAID-0 中配置。
 
-有关支持的配置的更多信息，请参阅 [Cloud Foundation 实例](../../sddc/sd_bom.html)或 [vCenter Server 实例](../../vcenter/vc_bom.html)的材料清单。
+有关支持的配置的更多信息，请参阅 [Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_bom.html)或 [vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_bom.html)的材料清单。
 
 ### 跨主机共享文件级别的存储器
 
@@ -172,7 +172,7 @@ vSphere ESXi 系统管理程序设计为安装在持久位置。因此，物理�
 
 ### 相关链接
 
-* [Cloud Foundation 材料清单](../../sddc/sd_bom.html)
-* [vCenter Server 材料清单](../../vcenter/vc_bom.html)
+* [Cloud Foundation 材料清单](/docs/services/vmwaresolutions/sddc/sd_bom.html)
+* [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
 * [共享存储器体系结构](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
 * [NetApp ONTAP Select 体系结构](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

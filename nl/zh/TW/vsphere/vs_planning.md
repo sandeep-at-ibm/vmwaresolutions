@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-10-31"
 
 ## IBM Cloud 帳戶需求
 
-您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶的需求](../vmonic/slaccountrequirement.html)。
+您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶的需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
 
 ## IBM Cloud Data Center 可用性
 
@@ -67,6 +67,6 @@ vSphere 部署對實體基礎架構有嚴格的需求。因此，您只能在符
 
 ### 相關鏈結
 
-* [訂購新的 vSphere 叢集](vs_orderinginstances.html)
-* [擴充現有的叢集](vs_scalingexistingclusters.html)
-* [擴充在主控台以外建立的叢集](vs_orderingforclustersoutside.html)
+* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [擴充現有的叢集](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [擴充在主控台以外建立的叢集](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)

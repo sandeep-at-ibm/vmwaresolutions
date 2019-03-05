@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -46,8 +46,8 @@ HyTrust KeyControl on {{site.data.keyword.cloud}} 服務簡化加密工作負載
 
 ### 相關鏈結
 
-* [訂購 HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](htkc_ordering.html)
-* [管理 HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](managinghtkc.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
-* [常見問題](../vmonic/faq.html)
+* [訂購 HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_ordering.html)
+* [管理 HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtkc.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [HyTrust 網站](https://www.hytrust.com/)

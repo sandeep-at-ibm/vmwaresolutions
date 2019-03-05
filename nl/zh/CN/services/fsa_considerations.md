@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -42,7 +42,7 @@ FortiGate 300 系列 Security Appliance。
 ## 安装 FortiGate Security Appliance on IBM Cloud 时的注意事项
 
 安装 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务之前，请查看以下注意事项：
-* 确保要使用的 {{site.data.keyword.cloud_notm}} 帐户具有**硬件防火墙**许可权。要编辑或查看实例的 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务的防火墙日志和设置，需要此许可权。
+* 确保要使用的 {{site.data.keyword.cloud_notm}} 帐户具有 **Hardware Firewall** 许可权。要编辑或查看实例的 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务的防火墙日志和设置，需要此许可权。
 * 如果要将 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务添加到已部署的实例，请确保该实例的公用 VLAN 上尚未部署 {{site.data.keyword.cloud_notm}} 基础架构中的其他任何防火墙。
 * 安装 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务将添加新的公用 VLAN。
 * 在服务部署期间，实例可能暂时无法访问因特网。
@@ -59,9 +59,9 @@ FortiGate 300 系列 Security Appliance。
 
 ### 相关链接
 
-* [订购 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](fsa_ordering.html)
-* [管理 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](managingfsa.html)
-* [联系 IBM 支持人员](../vmonic/trbl_support.html)
-* [常见问题](../vmonic/faq.html)
+* [订购 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_ordering.html)
+* [管理 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfsa.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Fortinet Web 站点](https://www.fortinet.com/){:new_window}
 * [Fortinet 文档库](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

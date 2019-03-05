@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-07-12"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-07-12"
 
 ## IBM Cloud 帳戶需求
 
-您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶的需求](../vmonic/slaccountrequirement.html)。
+您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶的需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
 
 ## IBM Cloud Data Center 可用性
 
@@ -57,5 +57,5 @@ NetApp ONTAP Select 部署具有嚴格的實體基礎架構需求。因此，您
 
 ### 相關鏈結
 
-* [NetApp ONTAP Select 概觀](np_netappoverview.html)
-* [訂購 NetApp ONTAP Select 實例](np_orderinginstances.html)
+* [NetApp ONTAP Select 概觀](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
+* [訂購 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)

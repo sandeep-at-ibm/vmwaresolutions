@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-25"
+lastupdated: "2019-01-24"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 訂購 Veeam on IBM Cloud
 
@@ -34,7 +38,7 @@ lastupdated: "2018-09-25"
 
 ### 儲存空間大小
 
-符合您儲存空間需求的容量。如需預估儲存空間大小時的考量，請參閱 [Estimating Repository Capacity](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html)。
+符合您儲存空間需求的容量。如需預估儲存空間大小的考量，請參閱[預估儲存庫容量](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html)。
 
 ### 儲存空間效能
 
@@ -42,13 +46,13 @@ lastupdated: "2018-09-25"
 
 ### 相關鏈結
 
-* [Veeam on {{site.data.keyword.cloud_notm}} 概觀](veeam_considerations.html)
-* [管理 Veeam on {{site.data.keyword.cloud_notm}}](managingveeam.html)
-* [訂購、檢視及移除 Cloud Foundation 實例的服務](../sddc/sd_addingremovingservices.html)
-* [訂購、檢視及移除 vCenter Server 實例的服務](../vcenter/vc_addingremovingservices.html)
-* [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](../vcenter/vc_hybrid_addingremovingservices.html)
-* [要求 Veeam on {{site.data.keyword.cloud_notm}} 的受管理服務](managing_veeam_services.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
-* [常見問題](../vmonic/faq.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/veeam_considerations.html)
+* [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingveeam.html)
+* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [要求 Veeam on {{site.data.keyword.cloud_notm}} 的受管理服務](/docs/services/vmwaresolutions/services/managing_veeam_services.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
 * [Veeam 網站](https://www.veeam.com/){:new_window}
 * [Veeam 說明中心](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}

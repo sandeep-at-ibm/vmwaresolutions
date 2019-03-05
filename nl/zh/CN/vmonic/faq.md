@@ -2,21 +2,27 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # 关于 IBM Cloud for VMware Solutions 的一般常见问题
 
 查找有关 {{site.data.keyword.vmwaresolutions_full}} 的常见问题的答案。
 
 ## 我需要将哪些用户帐户用于 IBM Cloud for VMware Solutions？
+{: faq}
 
-* **IBM 标识帐户**。需要此帐户才能访问 {{site.data.keyword.vmwaresolutions_short}} 控制台。控制台是与 {{site.data.keyword.slportal}} 分开的独立用户界面。有关更多信息，请参阅[入门](../index.html)。
+* **IBM 标识帐户**。需要此帐户才能访问 {{site.data.keyword.vmwaresolutions_short}} 控制台。控制台是与 {{site.data.keyword.slportal}} 分开的独立用户界面。有关更多信息，请参阅[入门](/docs/services/vmwaresolutions/index.html)。
 * **{{site.data.keyword.cloud_notm}} 帐户**。需要此帐户才能进行供应。您可以使用现有 **IBM 标识**或创建新的 **IBM 标识**来注册 {{site.data.keyword.cloud_notm}} 帐户。
-* **{{site.data.keyword.cloud_notm}} 基础架构帐户**。此帐户先前称为 **IBM SoftLayer** 帐户，用于登录到 {{site.data.keyword.cloud_notm}} 基础架构客户门户网站，该门户网站提供了某种额外的功能来管理基础架构产品和服务。您可以通过将 **{{site.data.keyword.cloud_notm}} 帐户**升级到现买现付类型的帐户，或通过将现有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户与 {{site.data.keyword.cloud_notm}} 帐户链接，获取 {{site.data.keyword.cloud_notm}} 基础架构帐户。要使用的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须满足特定需求。有关更多信息，请参阅[注册必需的帐户](signing_softlayer_account.html)和 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](slaccountrequirement.html)。
+* **{{site.data.keyword.cloud_notm}} 基础架构帐户**。此帐户先前称为 **IBM SoftLayer** 帐户，用于登录到 {{site.data.keyword.cloud_notm}} 基础架构客户门户网站，该门户网站提供了某种额外的功能来管理基础架构产品和服务。您可以通过将 **{{site.data.keyword.cloud_notm}} 帐户**升级到现收现付类型的帐户，或通过将现有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户与 {{site.data.keyword.cloud_notm}} 帐户链接，获取 {{site.data.keyword.cloud_notm}} 基础架构帐户。要使用的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须满足特定需求。有关更多信息，请参阅[注册必需的帐户](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)和 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
 
 ## 如何将我的 IBM Cloud Infrastructure 凭证与 IBM Cloud for VMware Solutions 控制台相关联？
 
@@ -30,21 +36,21 @@ lastupdated: "2018-09-27"
 
 所有实例类型都会为 VMware 虚拟环境提供部署选项。但是，差别在于可定制和自动化程度。
 
-* 订购 VMware vCenter Server 实例时，部署的是具有定制计算、存储和网络资源的 VMware 虚拟环境。有关部署的组件的更多信息，请参阅 [vCenter Server 实例的技术规范](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
-* 订购 VMware Cloud Foundation 实例时，部署的是统一软件定义数据中心 (SDDC) 平台。有关部署的组件的更多信息，请参阅 [Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
+* 订购 VMware vCenter Server 实例时，部署的是具有定制计算、存储和网络资源的 VMware 虚拟环境。有关部署的组件的更多信息，请参阅 [vCenter Server 实例的技术规范](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
+* 订购 VMware Cloud Foundation 实例时，部署的是统一软件定义数据中心 (SDDC) 平台。有关部署的组件的更多信息，请参阅 [Cloud Foundation 实例的技术规范](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 * 订购 VMware vSphere 集群时，您在合并与 VMware 兼容的硬件时，将有最大的灵活性来设计和构建托管的 VMware 环境。但是，{{site.data.keyword.cloud_notm}} 不会自动为 VMware vSphere 集群安装、配置和启动可选 VMware 组件。
-* vCenter Server 实例、Cloud Foundation 实例和 vSphere 集群支持的功能不同。有关更多信息，请参阅[产品比较图表](inst_comp_chart.html)。
+* vCenter Server 实例、Cloud Foundation 实例和 vSphere 集群支持的功能不同。有关更多信息，请参阅[产品比较图表](/docs/services/vmwaresolutions/vmonic/inst_comp_chart.html)。
 
 ## vCenter Server 实例中包含哪些内容？
 
-有关更多信息，请参阅 [vCenter Server 实例的技术规范](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
+有关更多信息，请参阅 [vCenter Server 实例的技术规范](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
 
 ## Cloud Foundation 实例中包含哪些内容？
 
-有关更多信息，请参阅 [Cloud Foundation 实例的技术规范](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
+有关更多信息，请参阅 [Cloud Foundation 实例的技术规范](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
 
 ## vSphere 集群中包含哪些内容？
-有关更多信息，请参阅 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的组件](../vsphere/vs_vsphereclusteroverview.html)。
+有关更多信息，请参阅 [VMware vSphere on {{site.data.keyword.cloud_notm}} 的组件](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)。
 
 ## 双节点 vCenter Server 实例具有高可用性吗？
 
@@ -66,26 +72,34 @@ lastupdated: "2018-09-27"
 
 **注**：对于 Cloud Foundation 实例，无法更改缺省集群名称。
 
-##如何管理补丁？
+## 如何管理补丁？
 
 IBM 通过按需部署 IBM CloudDriver 虚拟服务器实例 (VSI)，提供 IBM 代码的持续更新。IBM 不会提供附加组件服务（例如，Zerto on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}}）的持续更新。获取并安装这些更新是您的责任。
 
-根据已部署的 VMware 实例的类型，VMware 更新会以不同方式应用：
+根据实例类型，VMware 更新会以不同方式应用。
 
-* 对于 VMware Cloud Foundation 实例，将通过 {{site.data.keyword.vmwaresolutions_short}} 控制台提供对 vSphere ESXi、NSX、vCenter、Platform Services Controller 和 SDDC Manager 组件的更新。
-* 对于 VMware vCenter Server 实例：
-  * 对于部署或升级到 V2.1 或更高版本的实例，将使用 VMware 中最近（但不一定是最新）的 ESXi 更新，对新部署的 ESXi 服务器和集群进行修补。
-  * 您负责对 VMware 组件执行其他所有更新，包括确保新部署的 ESXi 服务器和集群都具有全部所需的最新更新。
-  * 对于部署到 V2.0 或更高版本的实例，VMware Update Manager (VUM) 将集成到 vCenter Server 中。可以将 VUM 配置为从 VMware 下载 ESXi 更新。
+### VMware Cloud Foundation 实例
+
+对 vSphere ESXi、NSX、vCenter、Platform Services Controller 和 SDDC Manager 组件的更新将通过 {{site.data.keyword.vmwaresolutions_short}} 控制台提供。
+
+### VMware vCenter Server 实例
+
+对于部署或升级到 V2.1 或更高版本的实例，将使用 VMware 中最近（但不一定是最新）的 ESXi 更新，对新部署的 ESXi 服务器和集群进行修补。
+
+您负责对 VMware 组件执行其他所有更新，包括确保新部署的 ESXi 服务器和集群都具有全部所需的最新更新。
+{:important}
+
+对于部署到 V2.0 或更高版本的实例，VMware Update Manager (VUM) 将集成到 vCenter Server 中。可以将 VUM 配置为从 VMware 下载 ESXi 更新。
 
 有关更多信息，请参阅以下资源：
 * [VMware 支持](https://www.vmware.com/support.html)
-* [对 vCenter Server 实例应用更新](../vcenter/vc_applyingupdates.html)
-* [对 Cloud Foundation 实例应用更新](../sddc/sd_applyingupdates.html)
+* [对 vCenter Server 实例应用更新](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html)
+* [对 Cloud Foundation 实例应用更新](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html)
+* [对 vCenter Server with Hybridity Bundle 实例应用更新](/docs/services/vmwaresolutions/vcenter/vc_hybrid_applyingupdates.html)
 
 ## 管理服务 NSX Edge 会构成安全风险吗？
 
-虽然用于管理服务的 VMware NSX Edge 位于公用子网上，但已采用安全措施来确保它不会构成安全风险。这些措施包括：
+虽然用于管理服务的 VMware NSX Edge 位于公用子网上，但已采用以下安全措施来确保它不会构成安全风险：
 *  NSX Edge 防火墙已配置为仅允许管理虚拟机发起的传出 HTTPS（TCP 端口 443）流量。
 *  使用了 SNAT（源网络地址转换），用于使专用 IP 地址在专用网络外部不可见。
 *  禁用了管理服务 NSX Edge 设备的远程访问。
@@ -104,12 +118,12 @@ IBM 通过按需部署 IBM CloudDriver 虚拟服务器实例 (VSI)，提供 IBM 
 实例部署具有严格的物理基础架构需求，这些需求在各个 {{site.data.keyword.CloudDataCents_notm}} 中有所不同。订购实例时，会列出区域内的可用数据中心，您可以从列表中选择数据中心。
 
 有关更多信息，请参阅以下内容中的 _IBM Cloud Data Center 可用性_部分：
-* [针对 vCenter Server 实例的需求和规划](../vcenter/vc_planning.html)
-* [针对 vCenter Server with Hybridity Bundle 实例的需求和规划](../vcenter/vc_hybrid_planning.html)
-* [针对 Cloud Foundation 实例的需求和规划](../sddc/sd_planning.html)
-* [针对 VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求和规划](../vsphere/vs_planning.html)
-* [针对 NetApp ONTAP Select 实例的需求和规划](../netapp/np_planning.html)
-* [针对 VMware Federal 实例的需求和规划](../vcenter/vc_fed_planning.html)
+* [针对 vCenter Server 实例的需求和规划](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [针对 vCenter Server with Hybridity Bundle 实例的需求和规划](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
+* [针对 Cloud Foundation 实例的需求和规划](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [针对 VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求和规划](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
+* [针对 NetApp ONTAP Select 实例的需求和规划](/docs/services/vmwaresolutions/netapp/np_planning.html)
+* [针对 VMware Federal 实例的需求和规划](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
 
 ## 实例部署需要多长时间？
 
@@ -127,12 +141,12 @@ VMware ESXi 会自动安装在每个裸机服务器上，但您负责安装 vCen
 
 ## 如果使用 IBM Cloud for VMware Solutions 时发生问题怎么办？
 
-如果您需要有关 {{site.data.keyword.vmwaresolutions_short}} 的帮助，请通过下列其中一种支持渠道联系 IBM 支持人员。有关更多信息，请参阅[联系 IBM 支持人员](trbl_support.html)。
+如果您需要有关 {{site.data.keyword.vmwaresolutions_short}} 的帮助，请通过下列其中一种支持渠道联系 IBM 支持人员。有关更多信息，请参阅[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
 
 ### 相关链接
 
-* [通知](notifications.html)
-* [Cloud Foundation 实例](../sddc/sd_cloudfoundationoverview.html)
-* [vCenter Server 实例](../vcenter/vc_vcenterserveroverview.html)
-* [访问控制台](loginmethod.html)
-* [用户帐户和设置](useraccount.html)
+* [通知](/docs/services/vmwaresolutions/vmonic/notifications.html)
+* [Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
+* [vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [访问控制台](/docs/services/vmwaresolutions/vmonic/loginmethod.html)
+* [用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -127,6 +127,6 @@ IBM CloudBuilder 及 IBM CloudDriver 虛擬伺服器實例 (VSI) 是您無法存
 
 ### 相關鏈結
 
-* [實體基礎架構設計](design_physicalinfrastructure.html)
-* [虛擬基礎架構設計](design_virtualinfrastructure.html)
-* [共用服務設計](design_commonservice.html)
+* [實體基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [虛擬基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [共用服務設計](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)

@@ -2,19 +2,22 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-04"
+lastupdated: "2019-01-23"
 
 ---
+
+{:faq: data-hd-content-type='faq'}
 
 # vCenter Server 实例的联网注意事项
 
 请查看以下信息，以获取有关 vCenter Server on {{site.data.keyword.cloud}} 实例的联网注意事项和需求的详细信息。确保满足这些需求，以便实例能正常运行。
 
 ## vCenter Server 实例的联网组件
+{: faq}
 
-要查看 vCenter Server 实例中包含的联网组件，请参阅 [vCenter Server 实例的技术规范](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
+要查看 vCenter Server 实例中包含的联网组件，请参阅 [vCenter Server 实例的技术规范](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)。
 
 ## 防火墙注意事项
 
@@ -24,7 +27,7 @@ lastupdated: "2018-09-04"
 
 在 vCenter Server 实例部署期间，将在该实例中订购、安装、许可和配置 VMware NSX。此外，还会设置 NSX Manager、NSX Controller 和 NSX 传输区域，并且每个 ESXi 服务器都会配置有 NSX 组件。
 
-此外，还部署了 NSX Edge 服务网关，以供工作负载虚拟机 (VM) 使用。有关更多信息，请参阅[配置网络以将客户管理的 NSX ESG 用于 VM](vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
+此外，还部署了 NSX Edge 服务网关，以供工作负载虚拟机 (VM) 使用。有关更多信息，请参阅[配置网络以将客户管理的 NSX ESG 用于 VM](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
 ## 更改 NSX 组件密码时的注意事项
 

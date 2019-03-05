@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-04-16"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # V2.1 发行说明
 
@@ -20,7 +24,7 @@ lastupdated: "2018-04-16"
 * CVEID：[CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID：[CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-有关更多信息，请参阅[解决 Spectre 和 Meltdown 漏洞](../vmonic/trbl_fix_spectre.html)。
+有关更多信息，请参阅[解决 Spectre 和 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)。
 
 ## VMware HCX on IBM Cloud
 
@@ -31,10 +35,10 @@ HCX on {{site.data.keyword.cloud_notm}} 服务现在可用于运行 vSphere 6.5 
 还可以订购内部部署 HCX 实例，以对内部部署 HCX 安装进行许可和激活。
 
 有关更多信息，请参阅以下主题：
-* [HCX on {{site.data.keyword.cloud_notm}} 的注意事项](../services/hcx_considerations.html)
-* [管理 HCX on {{site.data.keyword.cloud_notm}}](../services/managinghcx.html)
-* [内部部署 HCX 实例的注意事项](../services/standalone_considerations.html)
-* [订购内部部署 HCX 实例](../services/standalone_orderingserviceinstances.html)
+* [HCX on {{site.data.keyword.cloud_notm}} 的注意事项](/docs/services/vmwaresolutions/services/hcx_considerations.html)
+* [管理 HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)
+* [内部部署 HCX 实例的注意事项](/docs/services/vmwaresolutions/services/standalone_considerations.html)
+* [订购内部部署 HCX 实例](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
 
 ## 更灵活的自带许可证模型用于 VMware Cloud Foundation 和 vCenter Server
 
@@ -44,22 +48,22 @@ HCX on {{site.data.keyword.cloud_notm}} 服务现在可用于运行 vSphere 6.5 
 
 有关更多信息，请参阅以下主题：
 
-* [添加和查看 Cloud Foundation 实例的集群](../sddc/sd_addingviewingclusters.html)
-* [添加和查看 vCenter Server 实例的集群](../vcenter/vc_addingviewingclusters.html)
-* [关于 BYOL 的常见问题](../vmonic/faq_byol.html)
+* [添加和查看 Cloud Foundation 实例的集群](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
+* [添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [关于 BYOL 的常见问题](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
 
 ## Zerto on IBM Cloud 服务组件更新
 
 对于部署在 V2.1 和更高版本 Cloud Foundation 实例和 vCenter Server 实例中的 Zerto on {{site.data.keyword.cloud_notm}} 服务，将供应 Zerto Virtual Replication 5.5u2。出于性能原因，Zerto Virtual Replication 设备 (VRA) 现在会部署到管理数据存储（VSAN 或耐久性），而不是部署到本地数据存储。如果您有现有的 VRA，请考虑将其存储器迁移到管理数据存储，以提高性能。
 
-有关更多信息，请参阅 [Zerto on {{site.data.keyword.cloud_notm}} 概述](../services/addingzertodr.html)。
+有关更多信息，请参阅 [Zerto on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/addingzertodr.html)。
 
 ## 对 VMware vCenter Server 实例的更新
 
 ### 网络 MTU 配置设置
 
 对于 V2.1 或更高发行版，订购新的 vCenter Server 实例时，公用分布式虚拟交换机 (DVS) 设置为 MTU 1500（缺省值）。
-有关更多信息，请参阅 [vCenter Server 材料清单](../vcenter/vc_bom.html)中的_网络 MTU 配置设置_。
+有关更多信息，请参阅 [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter/vc_bom.html)中的_网络 MTU 配置设置_。
 
 ### 自动对主机应用 VMware ESXi 补丁和更新
 
@@ -68,36 +72,37 @@ HCX on {{site.data.keyword.cloud_notm}} 服务现在可用于运行 vSphere 6.5 
 在 V2.1 和更高版本的实例中，自动化会将补丁应用于新的 ESXi 主机，这可使补丁级别与供应初始实例时的补丁级别相匹配。您负责手动应用任何未来的补丁和更新。
 VMware 补丁和更新在未来发行版中可用时，自动化将扫描现有实例的 ESXi 主机，并通过电子邮件向您发送手动应用最新补丁和更新的提示。
 
-有关更多信息，请参阅[对 vCenter Server 实例应用更新](../vcenter/vc_applyingupdates.html)。
+有关更多信息，请参阅[对 vCenter Server 实例应用更新](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html)。
 
 ### 对 VMware NSX 许可证升级的价格估算
 
 现在，可以在提交订单以升级到 VMware NSX Advanced Edition 或 Enterprise Edition 之前查看价格估算。定价基于 vCenter Server 实例中的 ESXi 主机数。此购买仅更改 NSX 许可证密钥，并将 VMware NSX Base Edition 升级到 Advanced Edition 或 Enterprise Edition。此购买不会升级 NSX 软件版本。
 
-有关更多信息，请参阅 [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)。
+有关更多信息，请参阅 [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)。
 
 ### 每个集群的最大服务器数从 32 增加
 
-对于实例中的缺省集群，最多可以部署或扩展至 51 个服务器。对于实例中的所有后续集群，最多可以部署或扩展至 59 个服务器。有关更多信息，请参阅[添加和查看 vCenter Server 实例的集群](../vcenter/vc_addingviewingclusters.html)。
+对于实例中的缺省集群，最多可以部署或扩展至 51 个服务器。对于实例中的所有后续集群，最多可以部署或扩展至 59 个服务器。有关更多信息，请参阅[添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)。
 
-**注**：此功能仅可用于在 V2.1 和更高版本中部署的实例。从 V2.1 之前的发行版升级到 V2.1 的实例没有此选项。
+此功能仅可用于在 V2.1 和更高发行版中部署的实例。从 V2.1 之前的发行版升级到 V2.1 的实例没有此选项。
+{:note}
 
 ### 用户定制的 IBM Cloud 裸机服务器配置选项
 
 现在，用户定制的裸机服务器配置提供双 Intel Xeon Gold 6140（共 36 个核心，2.3 GHz）。
 
 有关更多信息，请参阅以下主题：
-* [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)
-* [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
+* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
 
 ### 单个 NFS 文件共享配置
 
 现在，可以逐个配置 NFS 文件共享。为每个文件共享分别选择文件大小和性能级别，或者为订购的所有文件共享选择相同的文件大小和性能级别。
 
 有关更多信息，请参阅以下主题：
-* [vCenter Server 概述](../vcenter/vc_vcenterserveroverview.html)
-* [订购 vCenter Server 实例](../vcenter/vc_orderinginstance.html)
-* [添加和查看 vCenter Server 实例的集群](../vcenter/vc_addingviewingclusters.html)
+* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
 
 ## 用户界面更新和增强功能
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2018-11-13"
 {:note: .note}
 {:important: .important}
 
-# 儲存空間設定
+# 連接儲存空間的配置及設定
 
 此設計僅支援透過 NFS 第 3 版連接共用儲存空間。不支援 NFS 第 4 版及 4.1 版。
 
-此設計的所有連接儲存空間僅限於與 vCenter Server 解決方案相同 {{site.data.keyword.CloudDataCent_notm}} 中可用的 {{site.data.keyword.cloud_notm}} 儲存空間。此外，依預設，儲存至該資料儲存庫的所有虛擬磁碟都採取精簡佈建的方式。
+此設計的連接儲存空間僅限於與 vCenter Server 解決方案相同的 {{site.data.keyword.CloudDataCent_notm}} 中可用的 {{site.data.keyword.cloud_notm}} 儲存空間。此外，依預設，儲存至該資料儲存庫的所有虛擬磁碟都採取精簡佈建的方式。
 {:note}
 
 架構指定使用 {{site.data.keyword.cloud_notm}} 儲存空間中的 DNS 名稱來連接 NFS 第 3 版資料儲存庫，以連接至共用。NFS 共用會連接到 vCenter Server 叢集中的所有主機，並放置在已啟用儲存空間 DRS 的資料儲存庫叢集中。
@@ -85,8 +85,8 @@ lastupdated: "2018-11-13"
 | NFS.HeartbeatMaxFailures | 10 |
 | NFS.HeartbeatFrequency  | 12 |
 | NFS.HeartbeatTimeout | 5 |
-| NFS.MazQueueDepth | 64 |
+| NFS.MaxQueueDepth | 64 |
 
 ### 相關鏈結
 
-* [解決方案概觀](../solution/solution_overview.html)
+* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)

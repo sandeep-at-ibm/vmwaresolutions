@@ -2,11 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
 lastupdated: "2018-08-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 2.5 版的版本注意事項
 
@@ -20,7 +24,7 @@ lastupdated: "2018-08-30"
 * CVEID：[CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID：[CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-如需相關資訊，請參閱[處理 Spectre 及 Meltdown 漏洞](../vmonic/trbl_fix_spectre.html)。
+如需相關資訊，請參閱[處理 Spectre 及 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)。
 
 ## NSX 元件更新
 
@@ -32,9 +36,10 @@ lastupdated: "2018-08-30"
 
 從 2.5 版開始，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 及 Veeam on {{site.data.keyword.cloud_notm}} 服務，在部署時將不再預先配置任何 VM 的備份。此變更容許您確保適當地配置備份工作的所有層面，包括排程、保留期間、使用刪除重複、監視和警示，以及加密金鑰的管理。此外，IBM CloudDriver VM 不再配置為 NSX 備份的持續性檔案伺服器。
 
-您負責配置、管理及監視所有軟體元件（包括管理基礎架構及工作負載的備份和可用性）。如需相關資訊，請參閱[備份元件](../archiref/solution/solution_backingup.html#backing-up-components)。
+您負責配置、管理及監視所有軟體元件（包括管理基礎架構及工作負載的備份和可用性）。如需相關資訊，請參閱[備份元件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#backing-up-components)。
 
-**附註：**此變更不會影響 2.5 版之前所部署並且已安裝 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 服務的實例。
+此變更不會影響 2.5 版之前所部署並且已安裝 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 服務的實例。
+{:note}
 
 ## IBM CloudDriver 備援
 
@@ -50,8 +55,8 @@ lastupdated: "2018-08-30"
 * 對於已部署在 2.4 版及舊版中的實例，您可以將它們移轉至指定的 {{site.data.keyword.cloud_notm}} 帳戶，然後使用 IAM 來管理它們。
 
 如需相關資訊，請參閱下列主題：
-* [邀請使用者存取服務及資源](../vmonic/iamuserinvite.html)
-* [利用 IAM 管理使用者存取](../vmonic/iam.html)
+* [邀請使用者存取服務及資源](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
+* [利用 IAM 管理使用者存取](/docs/services/vmwaresolutions/vmonic/iam.html)
 
 ## VMware vCenter Server 及 VMware Cloud Foundation 實例的使用者帳戶及群組變更
 
@@ -59,12 +64,14 @@ lastupdated: "2018-08-30"
 
 請不要在 VMware vSphere Web Client 的**使用者和群組**頁面中，編輯 **ic4v-vCenter** 群組的廣域許可權。這樣做會影響管理作業。
 
-對於 Cloud Foundation 實例，請使用 **customerroot** 主機使用者 ID 來取代 **root** 主機使用者 ID。繼續針對 vCenter Server 實例使用 **root** 主機使用者 ID。
+對於 Cloud Foundation 實例，請使用 **customerroot** 主機使用者 ID 來取代 **root** 主機使用者 ID。
+
+針對 vCenter Server 實例，繼續使用 **root** 主機使用者 ID。已建立 **ic4vroot** 主機使用者 ID，僅供 IBM 使用。
 
 如需使用者帳戶的相關資訊，請參閱下列主題：
 
-* [變更 vCenter Server 構件的考量](../vcenter/vcenter_chg_impact.html)
-* [變更 Cloud Foundation 構件的考量](../sddc/cf_chg_impact.html)
+* [變更 vCenter Server 構件的考量](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
+* [變更 Cloud Foundation 構件的考量](/docs/services/vmwaresolutions/sddc/cf_chg_impact.html)
 
 ## 附加服務的更新
 
@@ -74,7 +81,7 @@ lastupdated: "2018-08-30"
 
 {{site.data.keyword.cloud_notm}} Private Hosted 為您在 {{site.data.keyword.cloud_notm}} 上的 VMware 環境帶來微服務及容器的功能。使用此服務，您可以將熟悉的相同 VMware 與 {{site.data.keyword.cloud_notm}} Private 作業模型和工具，從內部部署延伸到 {{site.data.keyword.cloud_notm}}。
 
-訂購 vCenter Server 實例之後便可以要求此服務。如需相關資訊，請參閱[要求 {{site.data.keyword.cloud_notm}} Private Hosted](../services/managing_icp.html)。
+訂購 vCenter Server 實例之後便可以要求此服務。
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
@@ -86,13 +93,13 @@ lastupdated: "2018-08-30"
 
 德國的 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務現已推出新的端點。
 
-如需相關資訊，請參閱 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務配置](../services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration)。
+如需相關資訊，請參閱 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務配置](/docs/services/vmwaresolutions/services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration)。
 
 ## 新文件與更新的文件
 
 ### 連接儲存空間文件
 
-vCenter Server on IBM Cloud 連接儲存空間技術文件現在位於使用者文件的*參照* 小節中。此參照架構文件只提供英文版。如需相關資訊，請參閱 [vCenter Server on IBM Cloud 的連接儲存空間](../archiref/attached-storage/storage-benefits.html)。
+vCenter Server on IBM Cloud 連接儲存空間技術文件現在位於使用者文件的*參照* 小節中。如需相關資訊，請參閱 [vCenter Server on IBM Cloud 的連接儲存空間](/docs/services/vmwaresolutions/archiref/attached-storage/storage-benefits.html)。
 
 ### 技術規格
 
@@ -104,9 +111,9 @@ vCenter Server on IBM Cloud 連接儲存空間技術文件現在位於使用者�
 
 如需相關資訊，請參閱下列主題：
 
-* [vCenter Server 實例可用的服務](../vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
-* [vCenter Server with Hybridity Bundle 實例的可用服務](../vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [Cloud Foundation 實例的可用服務](../sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
+* [vCenter Server 實例可用的服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
+* [vCenter Server with Hybridity Bundle 實例的可用服務](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [Cloud Foundation 實例的可用服務](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
 
 ## 使用者介面更新和加強功能
 

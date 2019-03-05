@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -69,8 +69,8 @@ lastupdated: "2018-10-29"
 
 ### 相关链接
 
-* [vCenter Server 材料清单](vc_bom.html)
-* [针对 vCenter Server with Hybridity Bundle 实例的需求和规划](vc_hybrid_planning.html)
-* [添加、查看和删除 vCenter Server with Hybridity Bundle 实例的集群](vc_hybrid_addingviewingclusters.html)
+* [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [针对 vCenter Server with Hybridity Bundle 实例的需求和规划](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
+* [添加、查看和删除 vCenter Server with Hybridity Bundle 实例的集群](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
 * [将主机置于维护模式](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) 处理器支持](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -41,8 +41,8 @@ Zerto 复制不支持网络地址转换 (NAT) 遍历。在 {{site.data.keyword.c
 
 ### 相关链接
 
-* [Zerto on {{site.data.keyword.cloud_notm}} 概述](addingzertodr.html)
-* [请求 Zerto on {{site.data.keyword.cloud_notm}} 的受管服务](managing_zerto_services.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/addingzertodr.html)
+* [请求 Zerto on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
 * [zerto.com Web 站点](https://www.zerto.com){:new_window}
 * [Zerto 技术文档](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
 * [Zerto 灾难恢复](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}

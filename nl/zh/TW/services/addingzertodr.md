@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -48,9 +48,9 @@ Zerto Replication 6.0 版更新 3 授權
 
 ### 相關鏈結
 
-* [關於 {{site.data.keyword.vmwaresolutions_short}}](../vmonic/prod_overview.html)
-* [訂購 Zerto on {{site.data.keyword.cloud_notm}}](zerto_ordering.html)
-* [管理 Zerto on {{site.data.keyword.cloud_notm}}](managingzertodr.html)
-* [要求 Zerto on {{site.data.keyword.cloud_notm}} 的受管理服務](managing_zerto_services.html)
+* [關於 {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/vmonic/prod_overview.html)
+* [訂購 Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/zerto_ordering.html)
+* [管理 Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingzertodr.html)
+* [要求 Zerto on {{site.data.keyword.cloud_notm}} 的受管理服務](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
 * [zerto.com 網站](https://www.zerto.com){:new_window}
 * [Zerto 技術文件](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

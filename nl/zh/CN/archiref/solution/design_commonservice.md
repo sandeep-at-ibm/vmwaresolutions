@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -85,6 +85,6 @@ Cloud Foundation 部署使用 VMware Cloud Foundation 自动化，后者使用�
 
 ### 相关链接
 
-* [物理基础架构设计](design_physicalinfrastructure.html)
-* [虚拟基础架构设计](design_virtualinfrastructure.html)
-* [基础架构管理设计](design_infrastructuremgmt.html)
+* [物理基础架构设计](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
+* [虚拟基础架构设计](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
+* [基础架构管理设计](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)

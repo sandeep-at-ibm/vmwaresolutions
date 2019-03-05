@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-10-25"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-10-25"
 
 {{site.data.keyword.IBM}} Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服務提供有效且可調式解決方案，以進行虛擬環境的資料保護、資料重複使用及資料回復。您可以將服務當成獨立式解決方案來實作，或與 IBM Spectrum Protect 環境整合以卸載副本，進行長期儲存及資料控管。
 
-只有執行 vSphere 6.5 以及部署在（或升級至）2.2 版或更新版本的實例，才能使用此服務。目前安裝的 {{site.data.keyword.IBM}} Spectrum Protect Plus 版本為 10.1.1 版修補程式 1。
+只有執行 vSphere 6.5 以及部署在（或升級至）2.2 版或更新版本的實例，才能使用此服務。目前安裝的 {{site.data.keyword.IBM}} Spectrum Protect Plus 版本為 10.1.2 版。
 {:note}
 
 ## IBM Spectrum Protect Plus on IBM Cloud 的技術規格
@@ -78,7 +78,7 @@ lastupdated: "2018-10-25"
 ### 相關鏈結
 
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 預防性服務規劃](http://www.ibm.com/support/docview.wss?uid=swg22012650)
-* [管理 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](managingspp.html)
-* [訂購 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](spp_ordering.html)
+* [管理 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingspp.html)
+* [訂購 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_ordering.html)
 * [IBM Spectrum Protect Plus 文件](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-11-05"
 
 通过 VMware Federal on {{site.data.keyword.cloud}}，除了向美国联邦政府机构提供用于确保已部署 vCenter Server 实例安全的选项外，还可以订购基本 vCenter Server 实例。确保已部署实例的安全时，将除去存储的有关该实例的敏感信息。此外，还会除去打开用于访问实例的连接，这意味着管理功能（例如，添加和除去主机与集群）不再可用。选择安全选项后，唯一可用的功能是删除实例。
 
-有关 vCenter Server on {{site.data.keyword.cloud_notm}} 和 vCenter Server 体系结构的更多信息，请参阅 [vCenter Server 概述](vc_vcenterserveroverview.html)。
+有关 vCenter Server on {{site.data.keyword.cloud_notm}} 和 vCenter Server 体系结构的更多信息，请参阅 [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)。
 
 VMware Federal on {{site.data.keyword.cloud_notm}} 只是 vCenter Server 产品的一部分。不支持多站点配置、自带许可证以及用于订购附加组件服务的选项。
 {:note}
@@ -43,13 +43,13 @@ VMware Federal on {{site.data.keyword.cloud_notm}} 只是 vCenter Server 产品�
 *  三个 VLAN（虚拟 LAN）：一个公用 VLAN 和两个专用 VLAN
 *  一个 VXLAN（虚拟可扩展 LAN），带 DLR（分布式逻辑路由器），用于处理连接到第 2 层 (L2) 网络的本地工作负载之间的潜在东-西通信。VXLAN 部署为样本路由拓扑，可以基于该拓扑进行构建，或者进行修改或将其除去。还可以通过将更多 VXLAN 连接到 DLR 上的新逻辑接口来添加安全区域。
 *  两个 VMware NSX Edge 服务网关：
-  * 用于出站 HTTPS 管理流量的安全管理服务 VMware NSX Edge 服务网关 (ESG)，由 IBM 部署为管理联网拓扑的一部分。IBM 管理虚拟机使用此 ESG 与自动化相关的特定外部 IBM 管理组件进行通信。有关更多信息，请参阅[配置网络以使用客户管理的 ESG](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
+  * 用于出站 HTTPS 管理流量的安全管理服务 VMware NSX Edge 服务网关 (ESG)，由 IBM 部署为管理联网拓扑的一部分。IBM 管理虚拟机使用此 ESG 与自动化相关的特定外部 IBM 管理组件进行通信。有关更多信息，请参阅[配置网络以使用客户管理的 ESG](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
     您无法访问此 ESG，也无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server 实例。此外，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信将导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
 {:important}
-  * 用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX Edge 服务网关，由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)。
+  * 用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX Edge 服务网关，由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)。
 
-  在确保已部署 VMware 实例安全的操作过程中，会除去用于出站 HTTPS 管理流量的 VMware NSX Edge 服务网关 (ESG)。有关更多信息，请参阅[确保 VMware Federal 实例安全](vc_fed_securinginstance.html)。
+  在确保已部署 VMware 实例安全的操作过程中，会除去用于出站 HTTPS 管理流量的 VMware NSX Edge 服务网关 (ESG)。有关更多信息，请参阅[确保 VMware Federal 实例安全](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)。
   {:note}
 
 ### 虚拟服务器实例
@@ -94,7 +94,7 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 
 ### 扩展节点的硬件
 
-一个裸机服务器，其配置在 [VMware Federal on {{site.data.keyword.cloud_notm}} 实例的技术规范](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中提供。
+一个裸机服务器，其配置在 [VMware Federal on {{site.data.keyword.cloud_notm}} 实例的技术规范](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances)中提供。
 
 ### 扩展节点的许可证和费用
 
@@ -114,9 +114,9 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 
 ### 相关链接
 
-* [针对 VMware Federal 实例的需求和规划](vc_fed_planning.html)
-* [订购 VMware Federal 实例](vc_fed_orderinginstance.html)
-* [添加、查看和删除 VMware Federal 实例的集群](fed_addviewdeleteclusters.html)
-* [扩展和收缩 VMware Federal 实例的容量](vc_fed_addingremovingservers.html)
-* [确保 VMware Federal 实例安全](vc_fed_securinginstance.html)
+* [针对 VMware Federal 实例的需求和规划](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
+* [订购 VMware Federal 实例](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [添加、查看和删除 VMware Federal 实例的集群](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [扩展和收缩 VMware Federal 实例的容量](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [确保 VMware Federal 实例安全](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
 * [{{site.data.keyword.cloud_notm}} 文件和块存储器](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

@@ -2,19 +2,26 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:faq: data-hd-content-type='faq'}
 
 # 變更 vCenter Server 構件的考量
 
 變更已保留給 {{site.data.keyword.vmwaresolutions_full}} 的使用者、資源或子網路，會影響管理作業。
 
-**重要事項：**請不要在 VMware vSphere Web Client 的**使用者和群組**頁面中，編輯 **ic4v-vCenter** 群組的廣域許可權。這類變更包括：變更使用者名稱、刪除使用者或變更其密碼。
+請不要在 VMware vSphere Web Client 的**使用者和群組**頁面中，編輯 **ic4v-vCenter** 群組的廣域許可權。這類變更包括：變更使用者名稱、刪除使用者或變更其密碼。請使用 **root** 主機使用者 ID。已建立 **ic4vroot** 主機使用者 ID，僅供 IBM 使用。
+{:important}
 
 ## 自動化 ID
+{: faq}
 
 **自動化** ID 是一個使用者帳戶，由 {{site.data.keyword.vmwaresolutions_short}} 主控台中所提供的自動化作業使用。
 
@@ -24,11 +31,13 @@ lastupdated: "2018-11-05"
 
 每一個服務都會在 vCenter Server 中建立內部使用者帳戶。此帳戶是必要的，因此與服務相關聯的管理作業可以連接至 vCenter Server，以在服務上執行作業。
 
-**重要事項：**若要防止中斷及連線問題，如果您變更此使用者帳戶的使用者 ID、密碼或密碼有效期限設定，則請確定您同時更新了關聯服務中的資訊。
+若要防止中斷及連線問題，如果您變更此使用者帳戶的使用者 ID、密碼或密碼有效期限設定，則請確定您也更新了關聯服務中的資訊。
+{:important}
 
 此帳戶的使用者 ID 格式為 `<service_name>-<truncated service_uuid>@test.local` 或 `<service_name>-<truncated service_uuid>@example-domain.local`。例如，Veeam on {{site.data.keyword.cloud_notm}} 服務用來連接至 vCenter Server 以執行排定備份的使用者 ID 為 `Veeam-<Veeam_uuid>@test.local`。
 
-**附註：**`<service_name>` 與 `<service_uuid>` 一起使用會截斷為 20 個字元。
+`<service_name>` 與 `<service_uuid>` 一起使用會截斷為 20 個字元。
+{:note}
 
 ## vCenter Server 實例的 VMware 資源（第 1.9 版以及更新版本）
 
@@ -78,5 +87,5 @@ lastupdated: "2018-11-05"
 *  在公用 VLAN 上有一個包含 16 個 IP 位址的公用可攜式子網路
 
 如果您需要使用更多子網路，您可以用下列其中一種方式取得要使用的 IP 位址：
-*  **選項 1（建議）**：使用 VMware NSX 虛擬網路層疊。訂購時會提供範例的 VXLAN 範本。這個 VXLAN 可用來作為建置軟體定義網路 (SDN) 的起點。如需相關資訊，請參閱[將網路配置成使用客戶管理的 NSX Edge](vc_esg_config.html)。
+*  **選項 1（建議）**：使用 VMware NSX 虛擬網路層疊。訂購時會提供範例的 VXLAN 範本。這個 VXLAN 可用來作為建置軟體定義網路 (SDN) 的起點。如需相關資訊，請參閱[將網路配置成使用客戶管理的 NSX Edge](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html)。
 *  **選項 2**：訂購您自己的可攜式公用或專用子網路來取得 IP 位址。若要區別您訂購的子網路與管理子網路，您可以將附註新增至您訂購的所有子網路。

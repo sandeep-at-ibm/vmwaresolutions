@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -187,7 +187,7 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 
 在工作负载 ESG 上，NAT 用于允许网络流量在不同 IP 地址空间之间遍历。对于工作负载 ESG, 需要 NAT 不仅允许与因特网目标进行通信，还允许与任何以 {{site.data.keyword.cloud_notm}} 为源的 IP 范围进行通信。对于此设计，允许工作负载流量流出到因特网，但不允许流出到管理或任何 {{site.data.keyword.cloud_notm}} 网络。因此，只需要在工作负载 ESG 上定义 SNAT。整个工作负载可移植子网会配置为遍历 SNAT。
 
-虽然可以使用 NAT 来支持在 Cloud Foundation 或 vCenter Server 的多个实例之间进行工作负载通信，但当许多工作负载需要跨实例进行连接时，这种做法会变得不切实际。有关使用高级 NSX 功能在 Cloud Foundation 或 vCeter Server 实例中创建 L2 覆盖传输网络的示例，请参阅[多站点体系结构](multi_site.html)。
+虽然可以使用 NAT 来支持在 Cloud Foundation 或 vCenter Server 的多个实例之间进行工作负载通信，但当许多工作负载需要跨实例进行连接时，这种做法会变得不切实际。有关使用高级 NSX 功能在 Cloud Foundation 或 vCeter Server 实例中创建 L2 覆盖传输网络的示例，请参阅[多站点体系结构](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)。
 
 表 10. 工作负载 ESG NAT 规则
 
@@ -240,5 +240,5 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 
 ### 相关链接
 
-* [NSX Edge 服务网关设计](nsx_design.html)
-* [多站点体系结构](multi_site.html)
+* [NSX Edge 服务网关设计](/docs/services/vmwaresolutions/archiref/nsx/nsx_design.html)
+* [多站点体系结构](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)

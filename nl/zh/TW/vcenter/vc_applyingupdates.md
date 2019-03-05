@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-11-07"
 
 「事業夥伴」使用者無法選擇將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。
 
-因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。例如新增主機、新增叢集及訂購服務等動作，會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](../vmonic/relnotes_v25.html)中的 *IBM CloudDriver 備援* 小節。{:note}
+因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。例如新增主機、新增叢集及訂購服務等動作，會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)中的 *IBM CloudDriver 備援* 小節。{:note}
 
 在您嘗試套用更新之前，請按一下向下箭頭來展開更新項目，並驗證下列資訊：
 * 更新的版本。您必須依最早到最新的時間順序來套用更新。套用最新的更新之前，請確定已套用所有先前的更新。例如，嘗試套用 2.4 版更新之前，您必須套用 2.3 版更新。
@@ -139,10 +139,10 @@ lastupdated: "2018-11-07"
       </tr>
     </table>
 
-4. 如果更新處理程序在特定步驟失敗，請[與 IBM 支援中心聯絡](../vmonic/trbl_support.html)以取得協助。會建議您如何解決問題，並引導您從失敗的步驟重新嘗試升級。
+4. 如果更新處理程序在特定步驟失敗，請[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)以取得協助。會建議您如何解決問題，並引導您從失敗的步驟重新嘗試升級。
 
 ### 相關鏈結
 
-* [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html)
-* [與 IBM 支援中心聯絡](../vmonic/trbl_support.html)
-* [常見問題](../vmonic/faq.html)
+* [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)

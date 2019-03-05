@@ -2,15 +2,15 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-15"
+lastupdated: "2019-01-23"
 
 ---
 
 # 重构中间件并将中间件添加到 IBM Cloud Private 中
 
-既然 Stock Trader 已在一个容器中运行，并且 Jane 对目前的微服务感到满意，因此她和 Todd 继续研究如何利用额外的功能来提高应用程序的性能。通过重构 Stock Trader 微服务来处理增加的活动和可扩展性，他们两人都认为需要将中间件添加到 {{site.data.keyword.cloud}} Private (ICP) 中。其中一些中间件存在于其数据中心内，因此这更像是在添加一些新中间件的情况下重新构建平台的做法。
+既然 Stock Trader 已在一个容器中运行，并且 Jane 对目前的微服务感到满意，因此她和 Todd 继续研究如何利用额外的功能来提高应用程序的性能。通过重构 Stock Trader 微服务来处理增加的活动和可扩展性，他们两人都认为需要将中间件添加到 {{site.data.keyword.cloud}} Private 中。其中一些中间件存在于其数据中心内，因此这更像是在添加一些新中间件的情况下重新构建平台的做法。
 
 图 1. 重构 Stock Trader
 ![Stock Trader 重构](vcscontent-refactor.svg)
@@ -19,18 +19,18 @@ lastupdated: "2018-11-15"
 
 ## 内容选项
 
-ICP 拥有广泛的内容可供选择，Todd 和 Jane 都需要决定最适合自己需求的内容。如 Todd 在 ICP 目录中所见，大多数内容可供试用，但某些内容需要购买并从 Passport Advantage 下载。
+{{site.data.keyword.cloud_notm}} Private 拥有广泛的内容可供选择，Todd 和 Jane 都需要决定最适合自己需求的内容。如 Todd 在 {{site.data.keyword.cloud_notm}} Private 目录中所见，大多数内容可供试用，但某些内容需要购买并从 Passport Advantage 下载。
 
 * 工具链和运行时
-  -	UrbanCode Deploy
-  -	Microclimate
-  -	Jenkins（开放式源代码）
-  -	IBM WebSphere Liberty（MicroProfile、Web Profile、Java 平台企业修订版概要文件）
-  -	Open Liberty（开放式源代码）
-  -	Node.js 运行时（开放式源代码）
-  -	Swift 运行时（开放式源代码）
+  - UrbanCode Deploy
+  - Microclimate
+  - Jenkins（开放式源代码）
+  - IBM WebSphere Liberty（MicroProfile、Web Profile、Java 平台企业修订版概要文件）
+  - Open Liberty（开放式源代码）
+  - Node.js 运行时（开放式源代码）
+  - Swift 运行时（开放式源代码）
   - Nginx（开放式源代码）
-  -	IBM WebSphere Application Server for ICP VM Quickstarter Community Edition
+  - IBM WebSphere Application Server for {{site.data.keyword.cloud_notm}} Private VM Quickstarter Community Edition
 
 * 集成
   -	IBM Integration Bus
@@ -98,11 +98,12 @@ ICP 拥有广泛的内容可供选择，Todd 和 Jane 都需要决定最适合�
   -	Compliance Assist
 
 * 管理
-  -	IBM Netcool - 集成（用于 ICP 服务的探测器 - 对事件进行日志记录和监视警报）
+  -	IBM Netcool - 集成（用于 {{site.data.keyword.icpfull_notm}} 服务的探测器 - 对事件进行日志记录和监视警报）
   - {{site.data.keyword.cloud_notm}} App Management 2018.2.0
-  -	IBM Netcool - 集成（用于管理 ICP 事件的探测器。与 IBM Netcool Insights 产品一起销售）
+  -	IBM Netcool - 集成（用于管理 {{site.data.keyword.icpfull_notm}} 事件的探测器。与 IBM Netcool Insights 产品一起销售）
   - {{site.data.keyword.cloud_notm}} Event Management for IBM Cloud Private（ILAN 许可，支持在目录中发现和试用）
-  - IBM Operations Analytics Predictive Insights Mediation Pack（管理 ICP 监视度量值。ILAN 许可，支持在目录中发现和试用）-	IBM Operations Analytics Predictive Insights Mediation Pack（随 Predictive Insights 产品一起销售）
+  - IBM Operations Analytics Predictive Insights Mediation Pack（管理 {{site.data.keyword.icpfull_notm}} 监视度量值。ILAN 许可，支持在目录中发现和试用）
+  -	IBM Operations Analytics Predictive Insights Mediation Pack（随 Predictive Insights 产品一起销售）
 
 * 联网
   -	F5 BIGIP Controller（开放式源代码）
@@ -124,14 +125,14 @@ ICP 拥有广泛的内容可供选择，Todd 和 Jane 都需要决定最适合�
 
 ## 添加中间件
 
-要将中间件添加到 {{site.data.keyword.cloud_notm}} Private，请在目录中找到 [Helm 图表](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md)，阅读自述文件，然后继续安装。
+要将中间件添加到 {{site.data.keyword.cloud_notm}} Private，请在目录中找到 [Helm Chart](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md)，阅读自述文件，然后继续安装。
 
 对于 Stock Trader，Todd 决定添加所有中间件。以下信息总结了 Todd 必须对他希望 Jane 使用的每个中间件执行的操作。
 
 ### Db2
 Todd 从 Db2 着手，因为他们已经在使用 Db2，并可以为每个解决方案提供一个基于容器的专用 Db2。
 
-Todd 已准备好 ICP，因此已经定义了自己的 pod 安全策略。Todd 可以将重点放在创建 Docker 映像拉取私钥上：
+Todd 已准备好 {{site.data.keyword.icpfull_notm}}，因此已经定义了自己的 pod 安全策略。Todd 可以将重点放在创建 Docker 映像拉取私钥上：
 
 `kubectl create secret docker-registry db2dockerregistry
 --docker-username=dockeruser
@@ -140,7 +141,7 @@ Todd 已准备好 ICP，因此已经定义了自己的 pod 安全策略。Todd �
 
 最后，因为 Todd 决定使用 NFS，所以他根据自述文件需求创建了 NFS 卷：
 
-转至 ICP 仪表板并创建持久性卷。要创建多大的卷呢？请查看自述文件以了解卷大小：
+转至 {{site.data.keyword.icpfull_notm}} 仪表板并创建持久性卷。要创建多大的卷呢？请查看自述文件以了解卷大小：
 
 `capacity=20Gi
 RWO
@@ -169,9 +170,9 @@ Db2 运行后，Todd 或 Jane 需要创建 Stock Trader 解决方案使用的表
 
 ### MQ
 
-Todd 和 Jane 需要消息传递软件，他们已经使用了 MQ，这个选择很不错。此外，MQ 运行占用的空间很小，并且可以为每个开发者启动开发版本，从而节省宝贵的生产流量。安装 MQ 相当简单。Todd 如同使用 Db2 一样创建了存储器，然后安装了 Helm 图表：
+Todd 和 Jane 需要消息传递软件，他们已经使用了 MQ，这个选择很不错。此外，MQ 运行占用的空间很小，并且可以为每个开发者启动开发版本，从而节省宝贵的生产流量。安装 MQ 相当简单。Todd 如同使用 Db2 一样创建了存储器，然后安装了 Helm Chart：
 
-ICP 仪表板 > 目录 > 开始在 MQ 中进行输入 > 选择 ibm-mqadvanced-server-dev。
+{{site.data.keyword.icpfull_notm}} 仪表板 > 目录 > 开始在 MQ 中进行输入 > 选择 ibm-mqadvanced-server-dev。
 查看该自述文件，然后单击“配置”。
 提供或验证以下输入值：
 
@@ -235,4 +236,4 @@ Jane 致力于重构了自己的 Stock Trader 解决方案，而 Todd 则致力�
 
 ### 相关链接
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](../vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
