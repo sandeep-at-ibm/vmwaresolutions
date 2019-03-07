@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="vmware-solutions" audience="infrastructure" arm="3662801" href="/docs/services/vmwaresolutions/index.html" path="services/vmwaresolutions"}
+{: .toc subcollection="vmware-solutions" audience="infrastructure" arm="3662801" href="/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started" path="services/vmwaresolutions"}
 IBM Cloud for VMware Solutions
 
     {: .navgroup id="learn"}
@@ -256,6 +256,7 @@ IBM Cloud for VMware Solutions
         vmonic/trbl_mixed_multisite.md
         vmonic/movinginstances.md
         vmonic/getting-started.md
+        vmonic/trbl_fix_spectre.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -281,6 +282,22 @@ IBM Cloud for VMware Solutions
         archiref/attached-storage/storage-infra-mgmt.md
         archiref/attached-storage/storage-settings.md
         archiref/attached-storage/cluster-settings.md
+
+    {: .topicgroup}
+    Arquitectura de referencia de Caveonix RiskForesight
+        archiref/caveonix/caveonix-intro.md
+        archiref/caveonix/caveonix-on-vcs.md
+        archiref/caveonix/caveonix-arch.md
+        archiref/caveonix/caveonix-detailed.md
+        archiref/caveonix/caveonix-deploy.md
+        archiref/caveonix/caveonix-allinone.md
+        archiref/caveonix/caveonix-partial.md
+        archiref/caveonix/caveonix-fully.md
+        archiref/caveonix/caveonix-step1.md
+        archiref/caveonix/caveonix-step2.md
+        archiref/caveonix/caveonix-step3.md
+        archiref/caveonix/caveonix-step4.md
+        archiref/caveonix/caveonix-terminology.md
 
     {: .topicgroup}
     Arquitectura de soluciones de NSX Edge Services Gateway
@@ -393,5 +410,18 @@ IBM Cloud for VMware Solutions
         archiref/hcx-archi/hcx-archi-migrate-vm.md
         archiref/hcx-archi/hcx-archi-mod-uninstall.md
         archiref/hcx-archi/hcx-archi-trbl.md
+
+    {: .topicgroup}
+    Guía de despliegue y operaciones de HCX on IBM Cloud
+        archiref/vcshcx/vcshcx-intro.md
+        archiref/vcshcx/vcshcx-planning.md
+        archiref/vcshcx/vcshcx-licensing.md
+        archiref/vcshcx/vcshcx-deployment.md
+        archiref/vcshcx/vcshcx-stretching.md
+        archiref/vcshcx/vcshcx-monitoring.md
+        archiref/vcshcx/vcshcx-upgrade.md
+        archiref/vcshcx/vcshcx-troubleshooting.md
+        archiref/vcshcx/vcshcx-removal.md
+        archiref/vcshcx/vcshcx-components.md
 
     {: .navgroup-end}

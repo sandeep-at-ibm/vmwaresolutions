@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="981px"
+   height="589px"
+   version="1.1"
+   viewBox="-.5 -.5 981 589"
+   id="svg202"
+   sodipodi:docname="caveonix-zones.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs206" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview204"
+     showgrid="false"
+     showguides="false"
+     inkscape:zoom="1.1332917"
+     inkscape:cx="454.11886"
+     inkscape:cy="354.5595"
+     inkscape:window-x="-9"
+     inkscape:window-y="51"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg202" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     pointer-events="none"
+     id="g14">
+    <rect
+       x="139"
+       y="348"
+       width="360"
+       height="240"
+       rx="36"
+       ry="36"
+       fill="#f5f5f5"
+       stroke="#666"
+       id="rect4" />
+    <rect
+       x="620"
+       width="360"
+       height="240"
+       rx="36"
+       ry="36"
+       fill="#e1d5e7"
+       stroke="#9673a6"
+       id="rect6" />
+    <rect
+       x="579"
+       y="47"
+       width="360"
+       height="240"
+       rx="36"
+       ry="36"
+       fill="#d5e8d4"
+       stroke="#82b366"
+       id="rect8" />
+    <rect
+       x="139"
+       y="88"
+       width="360"
+       height="240"
+       rx="36"
+       ry="36"
+       fill="#ffe6cc"
+       stroke="#d79b00"
+       id="rect10" />
+    <rect
+       x="539"
+       y="88"
+       width="360"
+       height="240"
+       rx="36"
+       ry="36"
+       fill="#dae8fc"
+       stroke="#6c8ebf"
+       id="rect12" />
+  </g>
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g24">
+    <text
+       x="318.5"
+       y="111.5"
+       id="text16">Zone de gestion</text>
+    <text
+       x="718.5"
+       y="111.5"
+       id="text18">Zone locataire</text>
+    <text
+       x="758.5"
+       y="71.5"
+       id="text20">Zone locataire</text>
+    <text
+       x="798.5"
+       y="21.5"
+       id="text22">Zone locataire</text>
+  </g>
+  <rect
+     x="169"
+     y="181.5"
+     width="120"
+     height="60"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="rect26" />
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g32">
+    <text
+       x="228.5"
+       y="208"
+       id="text28">Application </text>
+    <text
+       x="228.5"
+       y="222"
+       id="text30">Foresight</text>
+  </g>
+  <rect
+     x="340"
+     y="181.5"
+     width="120"
+     height="60"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="rect34" />
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g40">
+    <text
+       x="399.5"
+       y="208"
+       id="text36">Collecteur</text>
+    <text
+       x="399.5"
+       y="222"
+       id="text38">central</text>
+  </g>
+  <rect
+     x="575"
+     y="181.5"
+     width="120"
+     height="60"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="rect42" />
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g48">
+    <text
+       x="634.5"
+       y="208"
+       id="text44">Collecteur</text>
+    <text
+       x="634.5"
+       y="222"
+       id="text46">distant</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path50"
+     stroke-miterlimit="10"
+     d="M 460,212 H 568.63" />
+  <path
+     style="stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path52"
+     stroke-miterlimit="10"
+     d="m 573.88,212 -7,3.5 1.75,-3.5 -1.75,-3.5 z" />
+  <rect
+     style="fill:#ffffff;stroke:#000000;stroke-width:1.02155018"
+     id="rect54"
+     height="59.978451"
+     width="125.27276"
+     y="241.51077"
+     x="729.0108" />
+  <g
+     font-size="12px"
+     id="g64"
+     transform="translate(4)"
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle">
+    <text
+       x="788.5"
+       y="261"
+       id="text58">Système d'exploitation</text>
+    <text
+       x="788.5"
+       y="275"
+       id="text60">Base de données</text>
+    <text
+       x="788.5"
+       y="289"
+       id="text62">Application</text>
+  </g>
+  <rect
+     x="729.01257"
+     y="137.01254"
+     width="126.1516"
+     height="59.974903"
+     pointer-events="none"
+     id="rect66"
+     style="fill:#ffffff;stroke:#000000;stroke-width:1.02509689" />
+  <g
+     font-size="12px"
+     id="g74"
+     transform="translate(4)"
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle">
+    <text
+       x="788.5"
+       y="156.5"
+       id="text68">Système d'exploitation</text>
+    <text
+       x="788.5"
+       y="170.5"
+       id="text70">Base de données</text>
+    <text
+       x="788.5"
+       y="184.5"
+       id="text72">Application</text>
+  </g>
+  <g
+     pointer-events="none"
+     stroke="#000"
+     id="g94">
+    <g
+       stroke-miterlimit="10"
+       id="g90">
+      <path
+         d="m695 212h7q7 0 7 10v40q0 10 6.82 10h6.81"
+         fill="none"
+         id="path76" />
+      <path
+         d="m727.88 272-7 3.5 1.75-3.5-1.75-3.5z"
+         id="path78" />
+      <path
+         d="m695 212h7q7 0 7-10v-25q0-10 6.82-10h6.81"
+         fill="none"
+         id="path80" />
+      <path
+         d="m727.88 167-7 3.5 1.75-3.5-1.75-3.5z"
+         id="path82" />
+      <path
+         d="m295.37 212h38.26"
+         fill="none"
+         id="path84" />
+      <path
+         d="m290.12 212 7-3.5-1.75 3.5 1.75 3.5z"
+         id="path86" />
+      <path
+         d="m338.88 212-7 3.5 1.75-3.5-1.75-3.5z"
+         id="path88" />
+    </g>
+    <rect
+       x="389"
+       y="419"
+       width="90"
+       height="60"
+       fill="#fff"
+       id="rect92" />
+  </g>
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g100">
+    <text
+       x="433.5"
+       y="445.5"
+       id="text96">vCD, vCenter</text>
+    <text
+       x="433.5"
+       y="459.5"
+       id="text98">vRA, NSX</text>
+  </g>
+  <g
+     pointer-events="none"
+     stroke="#000"
+     id="g108">
+    <path
+       d="m400 242v106q0 10 10 10h14q10 0 10 10v44.63"
+       fill="none"
+       stroke-miterlimit="10"
+       id="path102" />
+    <path
+       d="m434 417.88-3.5-7 3.5 1.75 3.5-1.75z"
+       stroke-miterlimit="10"
+       id="path104" />
+    <rect
+       x="279"
+       y="419"
+       width="90"
+       height="60"
+       fill="#fff"
+       id="rect106" />
+  </g>
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g112">
+    <text
+       x="323.5"
+       y="452.5"
+       id="text110">AWS</text>
+  </g>
+  <rect
+     x="164"
+     y="419"
+     width="90"
+     height="60"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="rect114" />
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g118">
+    <text
+       x="208.5"
+       y="445.5"
+       id="text116">Kubernetes</text>
+  </g>
+  <g
+     pointer-events="none"
+     stroke="#000"
+     stroke-miterlimit="10"
+     id="g128">
+    <path
+       d="m400 242v106q0 10-10 10h-56q-10 0-10 10v44.63"
+       fill="none"
+       id="path120" />
+    <path
+       d="m324 417.88-3.5-7 3.5 1.75 3.5-1.75z"
+       id="path122" />
+    <path
+       d="m400 242-0.91 106q-0.09 10-10.09 10h-170q-10 0-10 10v44.63"
+       fill="none"
+       id="path124" />
+    <path
+       d="m209 417.88-3.5-7 3.5 1.75 3.5-1.75z"
+       id="path126" />
+  </g>
+  <g
+     font-family="Helvetica"
+     font-size="12px"
+     text-anchor="middle"
+     id="g132">
+    <text
+       x="318.5"
+       y="571.5"
+       id="text130">Fournisseurs de cloud</text>
+  </g>
+  <circle
+     cx="44"
+     cy="46"
+     pointer-events="none"
+     id="ellipse134"
+     r="7.5"
+     style="fill:#ffffff;stroke:#000000" />
+  <path
+     d="M 44,55 V 80 M 44,60 H 29 m 15,0 H 59 M 44,80 29,100 m 15,-20 15,20"
+     pointer-events="none"
+     stroke-miterlimit="10"
+     id="path136"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+  <g
+     transform="translate(-0.5,105.5)"
+     id="g142">
+    <switch
+       id="switch140">
+      <foreignObject
+         width="88"
+         height="12"
+         overflow="visible"
+         pointer-events="all"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           color="rgb(0, 0, 0)"
+           display="inline-block"
+           font-family="Helvetica"
+           font-size="12px"
+           text-align="center"
+           style="line-height:1.2;vertical-align:top;white-space:nowrap">
+          <xhtml:div
+             display="inline-block"
+             text-align="inherit"
+             text-decoration="inherit"
+             style="background-color:#ffffff">Fournisseur de service</xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="44"
+         y="12"
+         font-size="12px"
+         id="text138"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000">
+        <tspan
+           sodipodi:role="line"
+           id="tspan217"
+           x="44"
+           y="12">Fournisseur</tspan>
+        <tspan
+           sodipodi:role="line"
+           id="tspan219"
+           x="44"
+           y="25.333334">de service</tspan>
+      </text>
+    </switch>
+  </g>
+  <ellipse
+     cx="44"
+     cy="144"
+     rx="7.5"
+     ry="7.5"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="ellipse144" />
+  <path
+     d="m44 151v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20"
+     fill="none"
+     pointer-events="none"
+     stroke="#000"
+     stroke-miterlimit="10"
+     id="path146" />
+  <g
+     transform="translate(25.5,203.5)"
+     id="g152">
+    <switch
+       id="switch150">
+      <foreignObject
+         width="36"
+         height="12"
+         overflow="visible"
+         pointer-events="all"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           color="rgb(0, 0, 0)"
+           display="inline-block"
+           font-family="Helvetica"
+           font-size="12px"
+           text-align="center"
+           style="line-height:1.2;vertical-align:top;white-space:nowrap">
+          <xhtml:div
+             display="inline-block"
+             text-align="inherit"
+             text-decoration="inherit"
+             style="background-color:#ffffff">Locataire</xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="18"
+         y="12"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text148">
+        <tspan
+           style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.66666667px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan211">Locataire</tspan>
+      </text>
+    </switch>
+  </g>
+  <ellipse
+     cx="44"
+     cy="234"
+     rx="7.5"
+     ry="7.5"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="ellipse154" />
+  <path
+     d="m44 241v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20"
+     fill="none"
+     pointer-events="none"
+     stroke="#000"
+     stroke-miterlimit="10"
+     id="path156" />
+  <g
+     transform="translate(25.5,293.5)"
+     id="g162">
+    <switch
+       id="switch160">
+      <foreignObject
+         width="36"
+         height="12"
+         overflow="visible"
+         pointer-events="all"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           color="rgb(0, 0, 0)"
+           display="inline-block"
+           font-family="Helvetica"
+           font-size="12px"
+           text-align="center"
+           style="line-height:1.2;vertical-align:top;white-space:nowrap">
+          <xhtml:div
+             display="inline-block"
+             text-align="inherit"
+             text-decoration="inherit"
+             style="background-color:#ffffff">Locataire</xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="18"
+         y="12"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text158">
+        <tspan
+           style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.66666667px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan213">Locataire</tspan>
+      </text>
+    </switch>
+  </g>
+  <ellipse
+     cx="44"
+     cy="324"
+     rx="7.5"
+     ry="7.5"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     id="ellipse164" />
+  <path
+     d="m44 331v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20"
+     fill="none"
+     pointer-events="none"
+     stroke="#000"
+     stroke-miterlimit="10"
+     id="path166" />
+  <g
+     transform="translate(25.5,383.5)"
+     id="g172">
+    <switch
+       id="switch170">
+      <foreignObject
+         width="36"
+         height="12"
+         overflow="visible"
+         pointer-events="all"
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+        <xhtml:div
+           color="rgb(0, 0, 0)"
+           display="inline-block"
+           font-family="Helvetica"
+           font-size="12px"
+           text-align="center"
+           style="line-height:1.2;vertical-align:top;white-space:nowrap">
+          <xhtml:div
+             display="inline-block"
+             text-align="inherit"
+             text-decoration="inherit"
+             style="background-color:#ffffff">Locataire</xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         x="18"
+         y="12"
+         fill="#000000"
+         font-family="Helvetica"
+         font-size="12px"
+         text-anchor="middle"
+         id="text168">
+        <tspan
+           style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.66666667px;text-anchor:middle;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
+           id="tspan215">Locataire</tspan>
+      </text>
+    </switch>
+  </g>
+  <g
+     pointer-events="none"
+     stroke="#000"
+     stroke-miterlimit="10"
+     id="g188">
+    <path
+       d="m69 88h20q10 0 10 10v104q0 10 10 10h53.63"
+       fill="none"
+       id="path174" />
+    <path
+       d="m167.88 212-7 3.5 1.75-3.5-1.75-3.5z"
+       id="path176" />
+    <path
+       d="m69 168h20q10 0 10 10v24q0 10 10 10h53.63"
+       fill="none"
+       id="path178" />
+    <path
+       d="m167.88 212-7 3.5 1.75-3.5-1.75-3.5z"
+       id="path180" />
+    <path
+       d="m69 258h20q10 0 10-10v-26q0-10 10-10h53.63"
+       fill="none"
+       id="path182" />
+    <path
+       d="m167.88 212-7 3.5 1.75-3.5-1.75-3.5z"
+       id="path184" />
+    <path
+       d="m69 348h20q10 0 10-10v-116q0-10 10-10h53.63"
+       fill="none"
+       id="path186" />
+  </g>
+  <g
+     id="g200">
+    <path
+       d="m167.88 212-7 3.5 1.75-3.5-1.75-3.5z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path190" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g198">
+      <text
+         x="208.5"
+         y="492.5"
+         id="text192">Conteneurs</text>
+      <text
+         x="323.5"
+         y="492.5"
+         id="text194">Public</text>
+      <text
+         x="433.5"
+         y="492.5"
+         id="text196">Privé</text>
+    </g>
+  </g>
+</svg>
