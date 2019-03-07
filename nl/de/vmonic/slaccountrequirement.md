@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Anforderungen für das IBM Cloud-Infrastrukturkonto
+{: #slaccountrequirement}
 
 Um {{site.data.keyword.vmwaresolutions_full}} für die Bestellung von Instanzen verwenden zu können, müssen Sie ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) besitzen. Die Kosten der Komponenten, die in Ihren Instanzen bestellt werden, werden diesem {{site.data.keyword.cloud_notm}}-Konto in Rechnung gestellt.
 
@@ -20,10 +21,11 @@ Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) wu
 {:note}
 
 ## Berechtigungen für das IBM Cloud-Infrastrukturkonto
+{: #slaccountrequirement-permissions}
 
 Das von Ihnen verwendete {{site.data.keyword.cloud_notm}}-Infrastrukturkonto muss bestimmte Berechtigungen besitzen, damit in Ihrem Namen die Komponenten in Ihren Instanzen bestellt und Operationen ausgeführt werden können. Die Berechtigungsanforderungen gelten für alle Typen von Instanzen und Services, die Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole bestellen.
 
-Berechtigte Benutzer können die Berechtigungen für ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto im {{site.data.keyword.slportal}} prüfen und aktualisieren. Weitere Informationen hierzu finden Sie im Abschnitt [Kundenportalberechtigungen eines Benutzers bearbeiten](/docs/customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
+Berechtigte Benutzer können die Berechtigungen für ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto im {{site.data.keyword.slportal}} prüfen und aktualisieren. Weitere Informationen hierzu finden Sie im Abschnitt [Kundenportalberechtigungen eines Benutzers bearbeiten](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:new_window}.
 
 Tabelle 1. Erforderliche Berechtigungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto
 
@@ -46,18 +48,21 @@ Tabelle 1. Erforderliche Berechtigungen für das {{site.data.keyword.cloud_notm}
 | Serverüberwachung verwalten | Diese Berechtigung ist nicht erforderlich, um eine Bestellung aufzugeben, sie wird jedoch benötigt, um den Überwachungsstatus der {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen abzurufen und zu validieren, auf denen die VMware ESXi-Server in Ihrer Instanz ausgeführt werden. |
 
 ## Voraussetzung für Virtual Routing and Forwarding (VRF)
+{: #slaccountrequirement-vrf}
 
-Beim {{site.data.keyword.cloud_notm}}-Infrastrukturkonto muss es sich entweder um ein VRF-Konto handelt oder - wenn dies nicht der Fall ist - um ein Konto, für das VLAN-Spanning aktiviert ist. Weitere Informationen zum Konvertieren des Kontos in eine VRF-Konto finden Sie in [VRF on IBM Cloud - Übersicht](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html). 
+Beim {{site.data.keyword.cloud_notm}}-Infrastrukturkonto muss es sich entweder um ein VRF-Konto handelt oder - wenn dies nicht der Fall ist - um ein Konto, für das VLAN-Spanning aktiviert ist. Weitere Informationen zum Konvertieren des Kontos in eine VRF-Konto finden Sie in [VRF on IBM Cloud - Übersicht](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
 
 ## VLAN-Spanning für Konten ohne VRF
+{: #slaccountrequirement-vlan-spanning}
 
-Wenn Sie ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto ohne VRF verwenden, muss VLAN-Spanning aktiviert sein. Wenn die VLAN-Spanning-Funktion bei Konten ohne VRF nicht aktiviert ist, sind die verschiedenen Komponenten der VMware-Virtualisierungsumgebung möglicherweise nicht in der Lage, miteinander zu kommunizieren. 
+Wenn Sie ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto ohne VRF verwenden, muss VLAN-Spanning aktiviert sein. Wenn die VLAN-Spanning-Funktion bei Konten ohne VRF nicht aktiviert ist, sind die verschiedenen Komponenten der VMware-Virtualisierungsumgebung möglicherweise nicht in der Lage, miteinander zu kommunizieren.
 
-Informationen zum Aktivieren von VLAN-Spanning in Ihrem Konto finden Sie in [VLAN-Spanning](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}. 
+Informationen zum Aktivieren von VLAN-Spanning in Ihrem Konto finden Sie in [VLAN-Spanning](/docs/infrastructure/vlans?topic=vlans-vlan-spanning){:new_window}.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #slaccountrequirement-related}
 
-* [Voraussetzungen für Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc/sd_planning.html)
-* [Voraussetzungen für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
-* [Benutzerkonten und -einstellungen](/docs/services/vmwaresolutions/vmonic/useraccount.html)
-* [Übersicht über VRF on IBM Cloud](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)
+* [Voraussetzungen für Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
+* [Voraussetzungen für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
+* [Benutzerkonten und -einstellungen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
+* [Übersicht über VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

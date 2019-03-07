@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Übersicht über FortiGate Virtual Appliance on IBM Cloud
+{: #fortinetvm_considerations}
 
 Der Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud}}" stellt ein Paar von FortiGate Virtual Appliances für Ihre Umgebung bereit, mit dessen Hilfe Sie durch die Implementierung von kritischen Sicherheitsmaßnahmen in Ihrer virtuellen Infrastruktur Risiken verringern können.
 
@@ -22,24 +23,30 @@ Dieser Service ist nur für Instanzen verfügbar, die in V2.0 oder höheren Rele
 {:note}
 
 ## Technische Spezifikationen für FortiGate Virtual Appliance on IBM Cloud
+{: #technical-specifications-for-fortigate-virtual-appliance-on-ibm-cloud}
+
 
 Mit dem Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" werden die folgenden Komponenten bestellt und einbezogen:
 
 ### Virtuelle Maschinen
+{: #fortinetvm_considerations-specs-vms}
 
 * Alle Optionen beinhalten ein hoch verfügbares Paar virtueller Maschinen
 * 2, 4 oder 8 vCPUs pro virtuelle Maschine, abhängig von der Bereitstellungsgröße und dem Subskriptionstyp
 * 4, 6 oder 12 GB RAM pro virtuelle Maschine, abhängig von der Bereitstellungsgröße und dem Subskriptionstyp
 
 ### Hochverfügbarkeit
+{: #fortinetvm_considerations-specs-ha}
 
 Zwei virtuelle Maschinen (VMs) werden bereitgestellt und für die Hochverfügbarkeitskonfiguration oder die Konfiguration von Virtual Router Redundancy Protocol (VRRP) vorbereitet.
 
 ### Vernetzung
+{: #fortinetvm_considerations-specs-network}
 
 Der Zugriff auf die FortiGate®-Konsole erfolgt über das private Managementnetz.
 
 ### Lizenz und Gebühren
+{: #fortinetvm_considerations-specs-license}
 
 Lizenzgebühren für jede virtuelle Maschine werden in jedem Abrechnungszyklus abhängig von der ausgewählten Bereitstellungsgröße und dem Lizenzierungsmodell für die monatliche Subskription berechnet.
 
@@ -47,6 +54,7 @@ Sie können die Lizenzierungsstufe nach der Serviceinstallation nicht mehr ände
 {:important}
 
 ## Hinweise zur Installation von FortiGate Virtual Appliance on IBM Cloud
+{: #fortinetvm_considerations-install}
 
 Lesen Sie die folgenden Hinweise, bevor Sie den Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" installieren:
 * Die FortiGate-VMs werden nur im Standardcluster bereitgestellt.
@@ -65,6 +73,7 @@ Lesen Sie die folgenden Hinweise, bevor Sie den Service "FortiGate Virtual Appli
   Aufgrund dieser Voraussetzungen müssen Sie den für FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} erforderlichen Speicherplatz sorgfältig planen. Fügen Sie bei Bedarf vor der Bestellung von FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 1 bis 2 ESXi-Server zu Ihrer Instanz hinzu und/oder reduzieren Sie die CPU-Reservierung der vSphere-Hochverfügbarkeit für das Failover.
 
 ## FortiGate Virtual Appliance on IBM Cloud - Bestellbeispiel
+{: #fortinetvm_considerations-example}
 
 Sie bestellen eine VMware vCenter Server-Instanz des Typs **S (Klein)** mit 2 ESXi-Servern und der folgenden Konfiguration: 16 Kerne mit 2,10 GHz und jeweils 128 GB RAM. Für FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} wählen Sie den Typ **L (Groß)** mit 8 vCPUs und 12 GB RAM als Bereitstellungsgröße sowie ein beliebiges Lizenzmodell aus.
 
@@ -87,14 +96,16 @@ In diesem Fall schlägt die Installation von FortiGate Virtual Appliance on {{si
 Wenn zur Ausführung des Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" zusätzliche Ressourcen benötigt werden, können Sie weitere ESXi-Server hinzufügen, bevor Sie den Service installieren.
 
 ## Hinweise zum Entfernen von FortiGate Virtual Appliance on IBM Cloud
+{: #fortinetvm_considerations-remove}
 
 Bevor Sie den Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" entfernen, müssen Sie sicherstellen, dass die bestehende Konfiguration für FortiGate Virtual Appliances ordnungsgemäß entfernt wurde. Insbesondere muss der Netzverkehr an FortiGate Virtual Appliances vorbei und nicht durch FortiGate Virtual Appliances geleitet werden. Andernfalls kann der vorhandene Datenverkehr an Ihre Umgebung beeinträchtigt werden.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #fortinetvm_considerations-related}
 
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
-* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_ordering)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Fortinet-Website](https://www.fortinet.com/){:new_window}
 * [Dokumentbibliothek zu Fortinet](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

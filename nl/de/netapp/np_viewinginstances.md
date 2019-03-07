@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # NetApp ONTAP Select-Instanzen anzeigen
+{: #np_viewinginstances}
 
 Sie können die Zusammenfassung und die detaillierten Informationen der NetApp ONTAP Select-Instanzen anzeigen, die für verschiedene Benutzerkonten bereitgestellt wurden.
 
 ## Vorgehensweise zum Anzeigen einer Zusammenfassung der NetApp ONTAP Select-Instanzen
+{: #np_viewinginstances-procedure-view-inst-summary}
 
 Wenn Sie eine Zusammenfassung aller NetApp ONTAP Select-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
 
@@ -35,6 +37,7 @@ Tabelle 1. Elemente von NetApp ONTAP Select-Instanzen
 | Status | Der Status der Instanz. Der Status kann einen der folgenden Werte aufweisen:<ul><li>Wird erstellt: Die Instanz wird gerade erstellt.</li><li>Wird aufgebaut: Die Instanz wird gerade konfiguriert.</li><li>Bereit: Die Instanz ist zur Verwendung bereit.</li><li>Wird geändert: Die Instanz wird gerade geändert.</li><li>Fehlgeschlagen: Der Erstellungs-, Konfigurations- oder Änderungsprozess ist fehlgeschlagen.</li><li>Wird gelöscht: Die Instanz wird gerade gelöscht.</li><li>Fehler beim Löschvorgang: Beim Löschen der Instanz ist ein Fehler aufgetreten.</li><li>Gelöscht: Die Instanz wurde gelöscht.</li></ul>|
 
 ## Vorgehensweise zum Anzeigen von Eigenschaftsdetails von NetApp ONTAP Select-Instanzen
+{: #np_viewinginstances-procedure-view-inst-property}
 
 Gehen Sie wie folgt vor, um die Eigenschaftsdetails einer Instanz anzuzeigen:
 
@@ -60,6 +63,7 @@ Tabelle 2. Eigenschaften von NetApp ONTAP Select-Instanzen
 | Status | Der Status der Instanz. |
 
 ## Vorgehensweise zum Anzeigen von Zugriffsinformationen für NetApp ONTAP Select-Instanzen
+{: #np_viewinginstances-procedure-view-inst-access-info}
 
 Zeigen Sie unter **Zugriffsinformationen** die Zugriffsinformationen für die instanzbezogenen Komponenten an. Bei diesen Kennwörtern handelt es sich um Anfangskennwörter, die vom System generiert werden. Wenn Sie sie außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden sie auf der Seite mit der Instanzzusammenfassung nicht aktualisiert.
 
@@ -85,6 +89,7 @@ Tabelle 3. Zugriffsinformationen für instanzbezogene NetApp ONTAP Select-Kompon
 | vCenter-SSH | Der Benutzername und das Kennwort, die Sie für den Zugriff auf die VM für vCenter Server über eine SSH-Verbindung verwenden können. |
 
 ## Vorgehensweise zum Anzeigen des Bereitstellungsverlaufs für NetApp ONTAP Select-Instanzen
+{: #np_viewinginstances-procedure-view-inst-deploy-history}
 
 Klicken Sie im linken Navigationsfenster auf **Bereitstellungsverlauf**, um den Bereitstellungsverlauf für die Instanz anzuzeigen.
 
@@ -95,9 +100,10 @@ Tabelle 4. Bereitstellungsverlauf der NetApp ONTAP Select-Instanz
 | Datum | Der Zeitpunkt (Datum und Uhrzeit), zu dem sich der Instanzstatus geändert hat. |
 | Zusammenfassung | Die Details der Änderung. |
 
-Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, wird automatisch das {{site.data.keyword.cloud_notm}}-Support-Team benachrichtigt. Um den Status Ihres Tickets abzufragen, können Sie den [IBM Support kontaktieren](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, wird automatisch das {{site.data.keyword.cloud_notm}}-Support-Team benachrichtigt. Um den Status Ihres Tickets abzufragen, können Sie den [IBM Support kontaktieren](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
-## NetApp ONTAP Select-Cluster anzeigen
+## Vorgehensweise zum Anzeigen von NetApp ONTAP Select-Clustern
+{: #np_viewinginstances-procedure-view-cluster}
 
 1. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
 2. Zeigen Sie unter **CLUSTER** die Zusammenfassung zu den NetApp ONTAP Select-Clustern an.
@@ -160,6 +166,7 @@ Tabelle 6. ESXi-Serverdetails eines NetApp ONTAP Select-Clusters
 | Status | Der Status des ESXi-Servers, der einen der folgenden Werte aufweisen kann:<ul><li>Aktiv: Der ESXi-Server ist zur Verwendung bereit.</li><li>Wird gelöscht: Der ESXi-Server wird gerade gelöscht.</li></ul> |
 
 ## Nächste Schritte
+{: #np_viewinginstances-next}
 
 Nun können Sie Ihre Instanzen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole, in VMware vSphere Web Client oder in der NetApp-Konsole verwalten.
 
@@ -168,12 +175,13 @@ Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** k
 
 Weitere Informationen, die Sie beim Umsetzen der Anmeldeanweisungen unterstützen, finden Sie in den folgenden Abschnitten:
 
-*  Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
+*  Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
 *  Eine Liste der Zugriffspunkte für die Anmeldung beim privaten Netz der {{site.data.keyword.cloud_notm}}-Infrastruktur mittels VPN finden Sie unter [VPN-Zugriff](http://www.softlayer.com/vpn-access){:new_window}.
-*  Falls Sie beim Bereitstellen einer Datei im Format "OVF" (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html) weitere Informationen.
+*  Falls Sie beim Bereitstellen einer Datei im Format "OVF" (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf) weitere Informationen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #np_viewinginstances-related}
 
-* [NetApp ONTAP Select-Instanzen bestellen](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [NetApp ONTAP Select-Instanzen löschen](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
+* [NetApp ONTAP Select-Instanzen bestellen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [NetApp ONTAP Select-Instanzen löschen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
 * [Dedizierten Speicher für NetApp ONTAP Select-Bereitstellungen zuordnen](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

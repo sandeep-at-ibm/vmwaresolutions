@@ -114,7 +114,9 @@ Migration eines für eine virtuelle Multi-Writer-Platte aktivierten Clusters:
 Führen Sie folgende Schritte aus, um einen für eine Multi-Writer-Platte aktivierten Cluster zu migrieren:
 1. Fahren Sie den Cluster und alle Knoten gemäß bewährtem Verfahren für die jeweilige Anwendung herunter.
 2. Vermerken Sie die Plattenreihenfolge, wenn die Anwendung dies erfordert, in jeder Knoten-VM für die für Multi-Writer konfigurierten virtuellen Platten.
-3. Bei Oracle und jeder anderen Anwendung, die die Funktion für virtuelle Platten-UUID verwendet, melden Sie sich an einem bestimmten ESXi-Host an und führen Sie den Befehl `vmkfstools -J getuuid /vmfs/volumes/datastore/VM/vm.vmdk` aus, um die UUIDs der Dateien für die einzelnen virtuellen Platten abzurufen, die das Flag "multi-writer" für den Cluster erfordern. Dies ist notwendig, wenn nach bewährtem Verfahren die Plattenbestellungen daran ausgerichtet werden, wie der Pfad im Betriebssystem angezeigt wird. vMotion kann die Platten (disk1, disk2, disk3) neu anordnen, die UUIDs bleiben jedoch unverändert. Anhand der vermerkten Informationen für die Zuordnung der UUID zur Platte können Sie die Platten-Benennungsreihenfolge neu erstellen. Nach Abschluss der Migration gegebenenfalls die iSCSI-ID. Die Anwendung sollte mit beiden Verfahren funktionieren. Dies wird verwendet, wenn eine Oracle-Instanz über viele virtuelle Platten verfügt, die für die Fehlerbehebung der Anwendung zugeordnet sind.
+3. Bei Oracle und jeder anderen Anwendung, die die Funktion für virtuelle Platten-UUID verwendet, melden Sie sich an einem bestimmten ESXi-Host an und führen Sie den Befehl `vmkfstools -J getuuid /vmfs/volumes/datastore/VM/vm.vmdk` aus, um die UUIDs der Dateien für die einzelnen virtuellen Platten abzurufen, die das Flag "multi-writer" für den Cluster erfordern.
+  Dies ist notwendig, wenn nach bewährtem Verfahren die Plattenbestellungen daran ausgerichtet werden, wie der Pfad im Betriebssystem angezeigt wird. vMotion kann die Platten (disk1, disk2, disk3) neu anordnen, die UUIDs bleiben jedoch unverändert.
+  Anhand der vermerkten Informationen für die Zuordnung der UUID zur Platte können Sie die Platten-Benennungsreihenfolge neu erstellen. Nach Abschluss der Migration gegebenenfalls die iSCSI-ID. Die Anwendung sollte mit beiden Verfahren funktionieren. Dies wird verwendet, wenn eine Oracle-Instanz über viele virtuelle Platten verfügt, die für die Fehlerbehebung der Anwendung zugeordnet sind.
 4. Entfernen Sie die virtuellen Platten aus allen Cluster-VM-Knoten, mit Ausnahme der als primär erachteten virtuellen Platten.
 5. Entfernen Sie das Flag "multi-writer" aus dem primären VM-Clusterknoten, der aktuell der einzige Eigner der Clusterplatten sein sollte.
 6. Stellen Sie den primären Clusterknoten wieder her, falls dies für minimale Ausfallzeiten erforderlich ist.
@@ -138,7 +140,7 @@ NFS wird in der Regel verwendet, um Daten, wie z. B. Web-Server-Inhalt, über vi
 
 Für beide Fälle gilt: Wenn die Latenzzeit für das {{site.data.keyword.CloudDataCent_notm}} niedrig gehalten werden kann (< ungefähr 7 ms für iSCSI und was die Anwendung für NFS toleriert) und unter der Voraussetzung, dass die Anwendung mit einer Bandbreite von ungefähr 1 Gb/s oder weniger betrieben werden kann, kann das NAS-Netz mit HCX an einen {{site.data.keyword.cloud_notm}}-Ort erweitert werden. Danach können die VMs normal migriert bzw. mittels vMotion mit HCX verschoben werden.
 
-Nach der Migration können iSCSI-Datenträger mit dem Betriebssystem in eine andere lokale Cloud-Speicherlösung gespiegelt werden und NFS-Daten können in jede beliebige Cloud-Lösung repliziert werden.Hierzu gibt es folgende Aspekte:
+Nach der Migration können iSCSI-Datenträger mit dem Betriebssystem in eine andere lokale Cloud-Speicherlösung gespiegelt werden und NFS-Daten können in jede beliebige Cloud-Lösung repliziert werden. Hierzu gibt es folgende Aspekte:
 - Latenzzeit (iSCSI oder Anwendungstoleranz für NFS)
 - Bandbreite (ca. 1 Gb/s pro erweitertes Netz)
 - Underlay-Verbindungsbandbreite
@@ -169,4 +171,4 @@ Folgende Aspekte und Auswirkungen sind zu beachten:
 ## Zugehörige Links
 {: #vcshcx-stretching-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

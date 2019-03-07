@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-06-07"
 
 ---
 
@@ -14,7 +14,7 @@ Lesen Sie die wichtigen Informationen zu Voraussetzungen und Benutzerkonten, bev
 
 ## Konsole von IBM Cloud for VMware Solutions
 
-Die Konsole von {{site.data.keyword.vmwaresolutions_short}} ist die Schnittstelle, über die Sie Ihre Bereitstellungen bestellen und verwalten. Jede Bereitstellung wird in der Konsole als Instanz verwaltet. Die Konsole ist eine eigenständige und vom {{site.data.keyword.slportal}} getrennte Benutzerschnittstelle.
+Die Konsole von {{site.data.keyword.vmwaresolutions_short}} ist die Schnittstelle, über die Sie Ihre Bereitstellungen bestellen und verwalten. Jede Bereitstellung wird in der Konsole als Instanz verwaltet. Die Konsole ist eine eigenständige und vom {{site.data.keyword.slportal_full}} getrennte Benutzerschnittstelle.
 
 ## IBMid-Konto
 
@@ -43,10 +43,10 @@ Um die Bereitstellungsangebote nutzen zu können, müssen Sie ein {{site.data.ke
 
 Optimale Anzeige- und Arbeitsbedingungen für die {{site.data.keyword.vmwaresolutions_short}}-Konsole erreichen Sie, indem Sie mindestens eine Bildschirmauflösung von 1024 Pixel Breite mal 500 Pixel Höhe verwenden.
 
-### Zugehörige Links
+## Zugehörige Links
 
 * [Informationen zu {{site.data.keyword.vmwaresolutions_short}}](vmonic/prod_overview.html)
 * [Übersicht über Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Übersicht über vCenter Server](../vcenter/vc_vcenterserveroverview.html)
-* [Übersicht über Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)
+* [Übersicht über Zerto on IBM Cloud](../services/addingzertodr.html)
 * [Fehlerbehebung](troubleshooting.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server with Hybridity Bundle-Instanzen in einer Konfiguration mit mehreren Standorten löschen
+{: #vc_hybrid_deletinginstance_multi}
 
 Vor dem Löschen von VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle-Instanzen, die Teil einer Konfiguration mit mehreren Standorten sind, müssen besondere Aspekte berücksichtigt werden.
 
@@ -30,6 +31,7 @@ Die gelöschten Instanzen werden Ihnen bis zum Ende des Abrechnungszyklus für d
 {:note}
 
 ## Vorgehensweise zum Löschen von vCenter Server with Hybridity Bundle-Instanzen in einer Konfiguration mit mehreren Standorten
+{: #vc_hybrid_deletinginstance_multi-procedure}
 
 1. Entfernen Sie alle Services aus der sekundären vCenter Server with Hybridity Bundle-Instanz.
 2. Stellen Sie sicher, dass in die zu löschende sekundäre Instanz keine NSX-Objekte erweitert wurden.
@@ -39,7 +41,8 @@ Die gelöschten Instanzen werden Ihnen bis zum Ende des Abrechnungszyklus für d
 6. Wiederholen Sie die Schritte 1-5 für alle sekundären vCenter Server with Hybridity Bundle-Instanzen in Ihrer Konfiguration mit mehreren Standorten.
 7. Nachdem Sie alle sekundären Instanzen gelöscht haben, können Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole auch die primäre Instanz löschen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vc_hybrid_deletinginstance_multi-related}
 
-* [vCenter Server with Hybridity Bundle-Instanzen löschen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
-* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle-Instanzen löschen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)
+* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)

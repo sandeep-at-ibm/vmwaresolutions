@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
-# Lösungsübersicht
+# IBM Cloud for VMware Solutions - Übersicht
+{: #solution_overview}
 
 Mit den Angeboten von {{site.data.keyword.vmwaresolutions_full}} können Sie Ihr bestehendes virtualisiertes VMware-Rechenzentrum auf {{site.data.keyword.cloud_notm}} ausweiten oder native Cloudanwendungen aufnehmen.
 
@@ -18,12 +19,11 @@ Prüfen Sie diese Informationen zum Design der {{site.data.keyword.vmwaresolutio
 
 Dieses Design dient als Basisarchitektur, die die Grundlage für andere interne oder anbieterspezifische Komponenten bereitstellt, die für bestimmte Anwendungsfälle hinzugefügt werden sollen.
 
-## Übersicht über VMware on IBM Cloud
-
 Abbildung 1. Übersicht über VMware on {{site.data.keyword.cloud_notm}}
 ![Übersicht über VMware on {{site.data.keyword.cloud_notm}}](solution_overview.svg "Die Lösung virtualisiert Rechen-, Netz- und optional Speicherressourcen, die von VMs genutzt werden, in denen Sie Ihre Anwendungen ausführen können.")
 
-## Hauptvorteile
+## Hauptvorteile von IBM Cloud for VMware Solutions
+{: #solution_overview-benefits}
 
 VMware Cloud Foundation und vCenter Server on {{site.data.keyword.cloud_notm}} stellen die Grundbausteine bereit, zu denen VMware vSphere, vCenter Server, NSX und Optionen für gemeinsam genutzten Speicher wie vSAN gehören. Diese Komponenten sind erforderlich, um eine flexible Architektur für eine durch die VMware-Software definierte Lösung für das Rechenzentrum aufzubauen, die sich am besten für Ihre Workloads eignet.
 
@@ -38,8 +38,9 @@ Die VMware on {{site.data.keyword.cloud_notm}}-Angebote bieten die folgenden Vor
 * **Konsistente Management- und Governance-Funktionalität** der bereitgestellten Hybrid-Cloud durch Bereitstellung eines vollständigen Verwaltungszugriffs auf das Virtualisierungsmanagement, sodass vorhandene VMware-Tools, Scripts und Investitionen in Schulungen ihren Wert behalten.
 * **Globale Nutzung von VMware-Know-how** mit IBM Professional Services und IBM Managed Services, die weltweit mehr als 30 {{site.data.keyword.CloudDataCents_notm}} umfassen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #solution_overview-related}
 
-* [Übersicht über das Design](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [Skalierungskapazität](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
-* [Komponenten sichern](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [Übersicht über das Design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [Skalierungskapazität](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)
+* [Komponenten sichern](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

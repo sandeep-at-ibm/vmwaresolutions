@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # Komponenten von "Skate Advisor"
+{: #vcscar-physical}
 
 {{site.data.keyword.vmwaresolutions_full}} stellt eine Automatisierung zur weltweiten Bereitstellung von VMware-Technologiekomponenten in {{site.data.keyword.CloudDataCents_notm}} bereit. Die Architektur besteht aus einer einzelnen Cloudregion und unterstützt die Erweiterung in weitere Cloudregionen, für deren Standort die folgenden Optionen bestehen:
 
@@ -25,6 +26,7 @@ IBM Multi-Cluster Manager (MCM) bietet Benutzertransparenz, anwendungsorientiert
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) ist eine Self-Service-Managementplattform für mehrere Clouds, die unter {{site.data.keyword.cloud_notm}} Private ausgeführt wird und es Entwicklern und Administratoren ermöglicht, die Anforderungen des Unternehmens zu erfüllen. Mit dem Service Composer von Cloud Automation Manager können Sie Hybrid-Cloud-Services im {{site.data.keyword.icpfull_notm}}-Katalog zugänglich machen.
 
 ## Physische Komponenten von "Skate Advisor"
+{: #vcscar-physical-skate-comp}
 
 Das folgende Diagramm beschreibt die Referenzimplementierung der Anwendung "Acme Skate Advisor" in einer Implementierung der Anwendungsmodernisierungsinfrastruktur.
 
@@ -36,6 +38,7 @@ Die Anwendung "Skate Advisor" erweitert die vorhandene Acme-Webanwendung durch e
 Die Anwendung "Skate Advisor" nutzt die Anwendungsmodernisierungsplattform, die die erforderliche Hosting-Infrastruktur bereitstellt.
 
 ### Anwendungspaketierung und -bereitstellung
+{: #vcscar-physical-app-pack-depl}
 
 Die Anwendung wird als CAM-Orchestrierung bereitgestellt, die die folgenden Elemente enthält:
 * Serviceorchestrierung - Eine CAM-Serviceorchestrierung ist eine Workflowressource, von der die Terraform-Vorlagen und Helm-Diagramme beschrieben werden, die als Facette eines Service bereitgestellt werden sollen. Ein Service kann veröffentlicht werden und stellt das steuernde Artefakt dar, aus dem die gesamte Bereitstellung orchestriert wird.
@@ -54,6 +57,7 @@ Abbildung 2. CAM-Orchestrierung
 ![CAM-Orchestrierung](vcscar-cam.svg)
 
 ### Lastausgleich und Weiterleitung
+{: #vcscar-physical-load-balance-proxy}
 
 Lastausgleich und Weiterleitung werden über die {{site.data.keyword.icpfull_notm}}-Komponente für den Ingress-Controller implementiert. Diese Komponente wickelt die Containerskalierung und das Failover reibungslos ab.
 
@@ -70,15 +74,23 @@ URL	|Endpunkt
 Container besitzen nicht vorhersagbare IP-Adressen, die je nach den Systemanforderungen herauf- oder herabskaliert werden können. Zur Überwindung dieses Problems wird innerhalb des Systems eine echtzeitorientierte IP-Adressauflösung mithilfe der {{site.data.keyword.icpfull_notm}}-Services durchgeführt.
 
 ### Webanwendung "Acme Skate"
+{: #vcscar-physical-acme-skate-web-app}
+
 Die Webanwendung "Acme Skate" ist eine Anwendung für Java Platform, Enterprise Edition (Java Platform, Enterprise Edition), die auf dem Spring-Framework basiert. Die Anwendung wird in einem WebSphere Liberty-Container bereitgestellt.
 
 ### Anwendung "Acme Skate Advisor"
+{: #vcscar-physical-acme-skate-advisor-app}
+
 Die Anwendung "Acme Skate Advisor" ist eine auf Mikroservices basierende Anwendung und wird in einem WebSphere Liberty-Container bereitgestellt. Ein Front-End für die Mikroservices wird durch einen nginx-Web-Server bereitgestellt.
 
 ### Datenbank "Acme Skate"
+{: #vcscar-physical-acme-skate-db}
+
 Die Datenbank "Acme Skate" ist eine MySQL-Datenbank, die auf einer mit vSphere verwalteten virtuellen Maschine bereitgestellt wird.
 
 ### Kommunikationsübersicht
+{: #vcscar-physical-comm-overview}
+
 Skate Advisor macht die folgende Kommunikation erforderlich:
 -	Kommunikation des Web-Containers mit dem Systembenutzer
 -	Kommunikation von Skate Advisor und Web-Container mit Watson-Services
@@ -97,6 +109,7 @@ Die Infrastrukturen von vCenter Server NSX Edge und {{site.data.keyword.containe
 Für alle definierten NSX-VXLANs ist in der {{site.data.keyword.containerlong_notm}}-Infrastruktur eine statische Route zur VRA-Appliance erforderlich. Von NSX Edge aus ist ein BGP-Peering mit VRA über das private Netz konfiguriert, was die Routenmitteilung und -einbeziehung der NSX-VXLANs ermöglicht. Dieses Peering ermöglicht dem NSX-VXLAN-Overlay-Netz die Kommunikation mit dem {{site.data.keyword.cloud_notm}}-Backbone und umgekehrt.
 
 ### Softwarekomponentenzuordnung
+{: #vcscar-physical-soft-comp-mapping}
 
 Die Anwendung "Skate Advisor" verwendet die folgenden Softwarekomponenten.
 
@@ -113,6 +126,7 @@ Mikroservices und Anwendungsanforderungen werden an die richtigen Endpunkte vert
 * JavaScript - Der Chatbot ist eine auf JavaScripts basierende Anwendung, die im Client-Browser gehostet wird. Der Chatbot kommuniziert mit Watson über die auf Node.js basierenden Mikroservices.
 
 ## Übersicht über das Management
+{: #vcscar-physical-mgmt-ovw}
 
 Die Anwendung "Acme Skate Advisor" befindet sich in der {{site.data.keyword.cloud_notm}} und ist insofern ein kritischer Aspekt der Architektur. Die {{site.data.keyword.cloud_notm}} besitzt die folgende Architektur.
 
@@ -123,6 +137,7 @@ Das obige Diagramm zeigt {{site.data.keyword.icpfull_notm}} und CAM in einer Ber
 
 Im Diagramm erstellt CAM logische Cloudverbindungen zu den vCenter-Instanzen, Cloud-Providern sowie den {{site.data.keyword.icpfull_notm}}- und {{site.data.keyword.containerlong_notm}}-Umgebungen. {{site.data.keyword.icpfull_notm}}-Cluster werden in jeder Rechenzentrums- und Cloudumgebung bereitgestellt. MCM stellt den Mechanismus zur Verfügung, mit dem die {{site.data.keyword.icpfull_notm}}-Cluster in einer Managementansicht verbunden werden können.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcscar-physical-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

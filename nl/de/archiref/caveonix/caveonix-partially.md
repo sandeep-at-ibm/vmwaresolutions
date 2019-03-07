@@ -23,7 +23,7 @@ Tabelle 1. Basis-Parameter
 
 |Parameter	|Wert|
 |---|---|
-|Typ	|Basis |
+|Typ	|Basis|
 |Anzahl VMs	|1|
 |vCPU	|16|
 |RAM	|64 GB|
@@ -35,15 +35,15 @@ Die Details der Scale-out-VMs sind wie folgt:
 
 Tabelle 2. Parameter der Scale-out-VMs
 
-|Parameter	| Wert |
+| Parameter	| Wert |
 |---|---|
-|Typ	|Scale-out |
-|Anzahl VMs	| 3 |
-|vCPU	| 8 |
-|RAM	| 16 GB |
+| Typ	| Scale-out |
+| Anzahl VMs	| 3 |
+| vCPU	| 8 |
+| RAM	| 16 GB |
 | Platte	| 4 TB |
-|BS	| CentOS 7 |
-|Installierte Anwendungskomponenten	|Datenknoten (Scale-out) |
+| BS	| CentOS 7 |
+| Installierte Anwendungskomponenten	| Datenknoten (Scale-out) |
 
 Die Details zur VM des fernen Kollektors werden in der folgenden Tabelle beschrieben.
 
@@ -51,14 +51,14 @@ Tabelle 3. Parameter des fernen Kollektors
 
 |Parameter	|Wert|
 |---|---|
-|Anzahl VMs	|Nach Bedarf |
+|Anzahl VMs	|Nach Bedarf|
 |vCPU	|8|
 |RAM	|8 GB|
-|Platte	|1 TB |
+|Platte	|1 TB|
 |BS	|CentOS 7|
 |Installierte Anwendungskomponenten	|Ferner Kollektor|
 
 ## Zugehörige Links
 {: #caveonix-partially-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,14 +13,17 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Zerto on IBM Cloud verwalten
+{: #managingzertodr}
 
 Nachdem der Service "Zerto on {{site.data.keyword.cloud}}" in Ihrer Instanz bereitgestellt wurde, können Sie Zerto Virtual Replication konfigurieren oder aktualisieren und weitere Virtual Replication Appliances (VRAs; dies sind Appliances für die virtuelle Replikation) auf neu hinzugefügten ESXi-Servern bereitstellen.
 
 ## Eigenes Zertifikat für Zerto verwenden
+{: #managingzertodr-ssl-cert}
 
 Als bewährtes Verfahren sollten Sie Ihr eigenes SSL-Zertifikat für Zerto Virtual Manager (ZVM) verwenden. Nachdem Sie Zerto on {{site.data.keyword.cloud_notm}} bereitgestellt haben, ersetzen Sie das SSL-Zertifikat für Zerto durch Ihr eigenes Zertifikat. Führen Sie hierzu die Anweisungen im Abschnitt [How to use a CER SSL Certificate to Replace the Self-Signed Certificate for the ZVM, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window} aus.
 
 ## Konfiguration von Zerto-Replikationen verwalten
+{: #managingzertodr-manage}
 
 Zum Verwalten der Konfiguration von Zerto-Replikationen (z. B. zum Reparieren von Zerto-Instanzen oder zum Konfigurieren von virtuellen Schutzgruppen zur Replikation virtueller Maschinen) melden Sie sich bei der Konsole von Zerto Virtual Replication unter Verwendung der vCenter-Berechtigungsnachweise mit Administratorberechtigungen an.
 
@@ -32,17 +35,20 @@ Das VMware NSX Edge Services Gateway (ESG) für das Management von Cloud Foundat
 {:note}
 
 ## Zerto Virtual Replication aktualisieren
+{: #managingzertodr-update}
 
 Zur Aktualisierung von Zerto Virtual Replication melden Sie sich bei der Konsole von Zerto Virtual Replication an.
 
 ## VRAs auf neu hinzugefügten ESXi-Servern bereitstellen
+{: #managingzertodr-deploy}
 
 Wenn Sie ESXi-Server für den primären Cluster Ihrer Instanz hinzufügen oder entfernen, werden VRAs automatisch bereitgestellt oder entfernt. Auf den ESXi-Servern in den sekundären Clustern Ihrer Instanz werden VRAs nicht automatisch bereitgestellt. Sie können VRAs jedoch selbst über die Konsole von Zerto Virtual Replication bereitstellen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #managingzertodr-related}
 
-* [Zerto on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/addingzertodr.html)
-* [Verwaltete Services für Zerto on {{site.data.keyword.cloud_notm}} anfordern](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
+* [Verwaltete Services für Zerto on {{site.data.keyword.cloud_notm}} anfordern](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [Website "zerto.com"](https://www.zerto.com){:new_window}
 * [Technische Dokumentation zu Zerto (englisch)](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
 * [Disaster-Recovery mit Zerto](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}

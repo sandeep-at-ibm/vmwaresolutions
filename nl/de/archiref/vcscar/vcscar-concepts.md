@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Konzepte der Skater-Sprache
+{: #vcscar-concepts}
 
 ## Skater-Sprache
+{: #vcscar-concepts-skater}
 
 Ein wichtiger Aspekt von Skate Advisor sind die über den mit Watson gesteuerten Chatbot ermöglichten Dialoge. Der folgende Abschnitt enthält detaillierte Informationen zu den Dialogregeln, die eine Benutzerinteraktion mit dem Chatbot von Skate Advisor definieren.
 
@@ -20,8 +22,10 @@ Die Skater-Sprache ist der zentrale Teil des Systems und wird folgendermaßen ei
 * Klassifizierung von Tricks: Hiermit wird ein Trick auf Grundlage der Textbeschreibung des Tricks gespeichert und klassifiziert. Tricks, die auf diese Weise klassifiziert sind, können Metadaten wie beispielsweise Standort- und Videoreferenzen zugeordnet sein.
 
 ## Sprachelemente
+{: #vcscar-concepts-lang-elem}
 
 ### Basiselemente
+{: #vcscar-concepts-core-elem}
 
 Zur Erstellung eines Tricks werden die folgenden Basissprachelemente verwendet.
 
@@ -35,6 +39,7 @@ Basis | Kickflip<br>Heelflip<br>Hardflip<br>Bigspin<br>Shuvit<br>Impossible
 Landung | Manual (Hinterachse)<br>Nose Manual (Vorderachse)<br>5-0 (Grind)<br>Nosegrind<br>Tailslide<br>Noseslide<br>Crooked Grind<br>Smithgrind<br>Boardslide<br>Lipslide<br>
 
 ### Elementmodifikatoren
+{: #vcscar-concepts-elem-modifiers}
 
 Elementmodifikatoren sind spezielle Sprachelemente, die Kontext zu bestimmten Aspekten der Sprache geben.
 
@@ -46,12 +51,14 @@ Drehungspräfix | FS (Frontside)<br>BS (Backside) | Das Drehungspräfix bezieht 
 Varial | Inward<br>Outward |
 
 ## Sprachregeln
+{: #vcscar-concepts-lang-rules}
 
 Die Sprache wird mit dem folgenden Regelsatz konstruiert. Tricks werden in eine oder mehrere Kombination von Elementen unterteilt, die als "Combo" bezeichnet werden. Zwischen dem ersten Combo und den nachfolgenden Combos besteht dahingehend ein Unterschied, dass die Richtung derjenigen des Basis-Combos entspricht, sofern nichts anderes angegeben ist.
 
 Als Referenzinformationen zu den folgenden Regeln gelten die Angaben für die Kernelemente und die Elementmodifikatoren, da diese zum Aufbau der Sprache verwendet werden.
 
 ### Regelsatz für Tricks
+{: #vcscar-concepts-trick-ruleset}
 
 ```
 basis-combo = 'richtung \+ \[varial | drehungspräfix\] \+ \[drehung\] \+ \[basistrick\]'
@@ -61,6 +68,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landungs-combo\]'
 ```
 
 ### Regelengine für Tricks
+{: #vcscar-concepts-trick-rule-engine}
 
 Das folgende Diagramm gibt einen visuellen Überblick über die Regelengine.
 
@@ -68,6 +76,7 @@ Abbildung 1. Übersicht über Skater-Sprache
 ![Übersicht über Skater-Sprache](vcscar-skate-language.svg)
 
 ## Sprachbeispiele für Tricks
+{: #vcscar-concepts-sample-trick}
 
 Die folgende Liste enthält Beispiele für Tricks:
 
@@ -106,9 +115,11 @@ nollie-heelflip to frontside-boardslide
 ```
 
 ## Relevanz
+{: #vcscar-concepts-relevance}
 
 Die Sprache für Tricks ist das Schlüsselkonstrukt, mit dem Watson für die Erkennung und Aufnahme von Dokumenten und Medien über das Skateboarding trainiert wird, und bildet außerdem die Grundlage für Dialoge mit dem Benutzer.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcscar-concepts-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)  
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)  

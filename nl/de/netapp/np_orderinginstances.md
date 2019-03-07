@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,35 +13,41 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # NetApp ONTAP Select-Instanzen bestellen
+{: #np_orderinginstances}
 
 Durch die Bestellung einer NetApp ONTAP Select-Instanz können Sie eine virtualisierte VMware-Plattform mit einer dedizierten und hoch verfügbaren Appliance für softwaredefinierten Speicher bereitstellen.
 
 ## Voraussetzungen
+{: #np_orderinginstances-req}
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](/docs/services/vmwaresolutions/vmonic/useraccount.html).
-*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für NetApp ONTAP Select-Instanzen](/docs/services/vmwaresolutions/netapp/np_planning.html) vertraut gemacht.
+*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für NetApp ONTAP Select-Instanzen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning) vertraut gemacht.
 
 Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung oder Bereitstellung der Instanz festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise, wenn der öffentliche Netzbetrieb beendet wird, Server sowie virtuelle Serverinstanzen (VSIs) mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder wenn die Virtual Server-Instanz für IBM CloudBuilder gestoppt oder gelöscht wird.
 {:important}
 
 ## Systemeinstellungen
+{: #np_orderinginstances-sys-settings}
 
 Wenn Sie eine NetApp ONTAP Select-Instanz bestellen, müssen Sie die folgenden Basiseinstellungen angeben.
 
 ### Instanzname
+{: #np_orderinginstances-instance-name}
 
 Der Instanzname muss die folgenden Anforderungen erfüllen:
 * Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-* Der Instanzname muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden. 
+* Der Instanzname muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden.
 * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
 * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
 
 ## Netzschnittstelleneinstellungen
+{: #np_orderinginstances-network-interface-settings}
 
 Sie müssen die folgenden Netzschnittstelleneinstellungen angeben, wenn Sie eine NetApp ONTAP Select-Instanz bestellen.
 
 ### Hostnamenspräfix
+{: #np_orderinginstances-host-name-prefix}
 
 Das Hostnamenspräfix muss die folgenden Anforderungen erfüllen:
 *  Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
@@ -49,14 +55,16 @@ Das Hostnamenspräfix muss die folgenden Anforderungen erfüllen:
 *  Die maximale Länge des Hostnamenspräfix beträgt 10 Zeichen.
 
 ### Unterdomänenbezeichnung
+{: #np_orderinginstances-subdomain-label}
 
 Die Unterdomänenbezeichnung muss die folgenden Anforderungen erfüllen:
 *  Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-*  Die Unterdomänenbezeichnung muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden. 
+*  Die Unterdomänenbezeichnung muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden.
 *  Die maximale Länge der Unterdomänenbezeichnung beträgt 10 Zeichen.
 *  Die Unterdomänenbezeichnung muss innerhalb Ihres Kontos eindeutig sein.
 
 ### Domänenname
+{: #np_orderinginstances-domain-name}
 
 Der Rootdomänenname muss die folgenden Anforderungen erfüllen:
 * Der Domänenname muss aus zwei oder mehr Zeichenfolgen bestehen, die jeweils durch einen Punkt (.) voneinander getrennt sind.
@@ -69,16 +77,20 @@ Die maximale Länge des vollständig qualifizierten Domänennamens für Hosts un
 {:note}
 
 ## Lizenzierungseinstellungen
+{: #np_orderinginstances-licensing-settings}
 
 Sie müssen vier NetApp-Lizenzdateien hochladen, jeweils eine für jede der vier {{site.data.keyword.baremetal_short}}-Instanzen. Wenden Sie sich an Ihr NetApp-Vertriebsteam, um die entsprechende Lizenzierung für Ihre Hochleistungs- oder Hochkapazitätsbereitstellung zu erhalten.
 
 ## Einstellungen für Bare Metal Server
+{: #np_orderinginstances-bare-metal-settings}
 
 ### Standort des Rechenzentrums
+{: #np_orderinginstances-dc-location}
 
 Sie müssen das {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) auswählen, das als Host für die Instanz verwendet werden soll.
 
 ### Bare Metal Server-Konfiguration
+{: #np_orderinginstances-bare-metal-config}
 
 Wählen Sie eine Ihren Anforderungen entsprechende Bare Metal Server-Konfiguration aus:
 * **Hohe Leistung (M = Mittel)** - Premium-Lizenz / Dual Intel Xeon E5-2650 V4 (24 Kerne insgesamt, 2,2 GHz) / 128 GB RAM / Kapazität von 22 1,9-TB-SSD-Laufwerken pro Knoten / Effektive Kapazität eines Clusters mit 4 Knoten - 59 TB
@@ -89,10 +101,12 @@ Wählen Sie eine Ihren Anforderungen entsprechende Bare Metal Server-Konfigurati
 {:note}
 
 ### Bare Metal Server-Anzahl
+{: #np_orderinginstances-bare-metal-number}
 
 Die Anzahl der ESXi-Server einer NetApp ONTAP Select-Instanz ist standardmäßig 4. Dieser Wert kann nicht geändert werden. Alle ESXi-Server verfügen über dieselbe Konfiguration.
 
 ## Vorgehensweise zum Bestellen von NetApp ONTAP Select-Instanzen
+{: #ordering-netapp-ontap-select-instances}
 
 1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und anschließend im Abschnitt **Virtuelle Rechenzentren** auf **NetApp ONTAP Select**.
 2. Klicken Sie auf der Seite **NetApp ONTAP Select** auf **Erstellen**.
@@ -110,14 +124,16 @@ Die Anzahl der ESXi-Server einer NetApp ONTAP Select-Instanz ist standardmäßig
     5. Klicken Sie auf **Bereitstellung**.
 
 ## Ergebnisse
+{: #np_orderinginstances-results}
 
 Die Bereitstellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen.
 
-Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für NetApp ONTAP Select-Instanzen](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert.
+Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für NetApp ONTAP Select-Instanzen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#technical-specifications-for-netapp-ontap-select-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 
 ## Nächste Schritte
+{: #np_orderinginstances-next}
 
 Sie können Ihre bestellte NetApp ONTAP Select-Instanz jetzt anzeigen und verwalten.
 
@@ -130,9 +146,10 @@ Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in 
 
    Ausgenommen von diesen Aktivitäten ist unter anderem das Management der gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher im {{site.data.keyword.slportal}}. Hierzu gehört das Bestellen, Löschen (mit möglicher Auswirkung auf angehängte Datenspeicher), Berechtigen und Anhängen von gemeinsam genutzten Dateiressourcen für gemeinsam genutzten Speicher.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #np_orderinginstances-related}
 
-* [NetApp ONTAP Select-Instanzen anzeigen](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
-* [NetApp ONTAP Select-Instanzen löschen](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
+* [NetApp ONTAP Select-Instanzen anzeigen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
+* [NetApp ONTAP Select-Instanzen löschen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
 * [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
 * [Dedizierten Speicher für NetApp ONTAP Select-Bereitstellungen zuordnen](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Anwendungsfälle
+{: #vcsnsxt-usecases}
 
 ## Migration von VMware-Workloads auf IBM Cloud
+{: #vcsnsxt-usecases-wkld-mig}
 
 Acme Skateboards möchte die lokale VMware SDDC-Instanz nahtlos zu einer VMware vCenter Server on {{site.data.keyword.cloud}}-Instanz erweitern. Gleichzeitig sollen die Geschäftsabläufe aber nach Möglichkeit nicht unterbrochen und die Ausfallzeiten auf ein Minimum beschränkt werden. Das Rekonfigurieren der Anwendungen für die Ausführung in der Cloud ist keine optimal Lösung.
 
@@ -33,6 +35,7 @@ Die flexible Interkonnektivität zwischen lokalen Standorten und {{site.data.key
 - **Migration von Sicherheitsrichtlinien** - Wenn NSX lokal verwendet wird, werden alle Sicherheitsrichtlinien, Firewalls usw. zusammen mit der Workload verlagert.
 
 ## Bereitstellung einer Hybridarchitektur
+{: #vcsnsxt-usecases-hybrid-archi-deployment}
 
 Acme Skateboards für den Prozess der Anwendungsmodernisierung (Journey) eine Hybridarchitektur auf {{site.data.keyword.cloud_notm}} bereitstellen, die sich aus vCenter Server zusammen mit Hybridity Bundle und {{site.data.keyword.icpfull_notm}} zusammensetzt. Dabei sollen die Datenbanken auf VMs ausgeführt werden, die Anwendungen und Webschnittstellen in Containern, und es soll eine gemeinsame Gruppe von Tools für das Netz- und Sicherheitsmanagement verwendet werden.
 
@@ -44,7 +47,7 @@ Das Diagramm unten stellt {{site.data.keyword.icpfull_notm}} bei der Ausführung
 
 Mithilfe der {{site.data.keyword.cloud_notm}}-Automatisierung kann Acme Skateboards eine Hybridlösung zur Verfügung stellen, die vCenter Server zur Ausführung der Datenbank-VMs und {{site.data.keyword.icpfull_notm}} auf vCenter Server zur Ausführung der Anwendungen und Front-End-Web-Services in Containern umfasst. NSX bietet ihnen eine gemeinsame Gruppe von Management-Tools für den Netzbetrieb und die Sicherheit im Overlay-Netz.
 
-Weitere Informationen zu NSX-V enthält der Abschnitt [Übersicht über NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-ic4vnsxv.html). Zusätzliche Angaben zu vCenter Server- und dem {{site.data.keyword.icpfull_notm}}-Angebot finden Sie unter [vCenter Server und {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html).
+Weitere Informationen zu NSX-V enthält der Abschnitt [Übersicht über NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). Zusätzliche Angaben zu vCenter Server- und dem {{site.data.keyword.icpfull_notm}}-Angebot finden Sie unter [vCenter Server und {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro).
 
 Abbildung 2. vCenter Server mit {{site.data.keyword.icpfull_notm}}
 ![vCenter Server mit {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
@@ -62,6 +65,7 @@ Dadurch wird eine flexible Verbindung zwischen Standorten und {{site.data.keywor
 
 Mithilfe dieser Lösung konnte Acme Skateboards die VMware-Workloads erfolgreich auf die {{site.data.keyword.cloud_notm}} migrieren - bei minimaler (oder ganz ohne) Ausfallzeit und ohne erneute Anwendungskonfiguration. Weitere Informationen zu vCenter Server with Hybridity Bundle finden Sie auf der Seite [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcsnsxt-usecases-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

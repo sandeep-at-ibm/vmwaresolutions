@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 ## Systemkontext
+{: #vcscar-syscontext}
+
 Das folgende Diagramm zeigt den Systemkontext für diese Referenzarchitektur. Ein Systemkontextdiagramm definiert die Schlüsselelemente eines Systems, die Grenzen des Systems sowie die Entitäten, die mit ihm interagieren, zusammen mit der Interaktion. Dieses übergeordnete Diagramm vermittelt dem Leser eine erste Sicht auf ein System.
 
 Abbildung 1. Systemkontext
@@ -22,6 +24,8 @@ Die Kernkomponenten des Systemkontextes sind Folgende:
 -	Watson Knowledge Studio - Watson Knowledge Studio stellt ein Modell für die Verwendung von Watson Discovery bereit.
 
 ### Akteure
+{: #vcscar-syscontext-actors}
+
 Im Systemkontextdiagramm sind die folgenden Akteure angegeben:
 
 * Acme-Administrator - Der Administrator ist für die kontinuierliche Bereitstellung und Wartung der Anwendung zuständig, was unter anderem die folgenden laufenden Tasks beinhaltet:
@@ -40,5 +44,6 @@ Im Systemkontextdiagramm sind die folgenden Systeme angegeben:
 * NSX Edge - NSX Edge-Instanzen sind virtuelle Appliances, die den ein- und ausgehenden Nord-Süd-Datenverkehr der vCenter Server-Instanz verwalten.
 
 ## Zugehörige Links
+{: #vcscar-syscontext-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

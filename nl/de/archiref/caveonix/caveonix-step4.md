@@ -42,10 +42,10 @@ Tabelle 1. Vom Benutzer erfasste Informationen
 
 |Stufe der Konfiguration |Parameter |
 |---|---|
-|Organisation / Asset-Repositorys | Name der Organisation |
-|Organisation | Telefonnummer |
-|Organisation | E-Mail |
-|Organisation / Asset-Repositorys | Adresszeile 1 |
+|Organisation / Asset-Repositorys  |Name der Organisation |
+|Organisation |Telefonnummer |
+|Organisation |E-Mail |
+|Organisation / Asset-Repositorys |Adresszeile 1 |
 |Cloud-Provider / Asset-Repositorys |Name |
 |Cloud-Provider |Beschreibung |
 |Cloud-Provider |PoC-E-Mail |
@@ -59,8 +59,8 @@ Tabelle 2. Für die Anwendungskonfiguration verwendete Standardinformationen
 
 |Stufe der Konfiguration |Parameter |
 |---|---|
-|Umgebung |Umgebungsname auf “Initial” gesetzt |
-|Umgebung | Score auf 5 gesetzt |
+|Umgebung |Umgebungsname auf “Initial” gesetzt|
+|Umgebung | Score auf 5 gesetzt|
 |Asset-Repository |Es werden zwei Asset-Repositorys konfiguriert: vCenter und NSX-Manager. Die Host-URL wird festgelegt auf https://*vCenter fqdn* und https://*NSX Manager fqdn*|
 |Asset-Repository |Es werden zwei Asset-Repositorys konfiguriert: vCenter und NSX-Manager. Für beide wird derselbe Benutzername verwendet. Der Benutzername wird auf den Benutzernamen des vCenter-Administrators gesetzt|
 |Asset-Repository |Es werden zwei Asset-Repositorys konfiguriert: vCenter und NSX-Manager. Für beide wird dasselbe Kennwort verwendet. Das Kennwort wird auf das Kennwort des vCenter-Administrators gesetzt
@@ -72,4 +72,4 @@ Tabelle 2. Für die Anwendungskonfiguration verwendete Standardinformationen
 ## Zugehörige Links
 {: #caveonix-step4-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -1,8 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 686 794" style="enable-background:new 0 0 686 794;" xml:space="preserve">
-<style type="text/css">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 667.59998 801.74414"
+   xml:space="preserve"
+   id="svg474"
+   sodipodi:docname="wan_optimizer_deployment.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   width="667.59998"
+   height="801.74414"><metadata
+   id="metadata480"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs478">
+	
+	
+
+
+		
+		
+	
+	
+	
+
+
+	
+
+		
+		
+
+		
+
+	
+	
+
+		
+		
+
+	
+	
+	
+
+	
+		
+		
+
+	
+	
+	
+	
+
+
+		
+		
+	
+	
+	
+	
+
+		
+		
+
+	
+	
+	
+	
+
+</defs><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="3391"
+   inkscape:window-height="1376"
+   id="namedview476"
+   showgrid="false"
+   inkscape:zoom="1.1889169"
+   inkscape:cx="1.7561713"
+   inkscape:cy="369.30698"
+   inkscape:window-x="49"
+   inkscape:window-y="27"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg474"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0" />
+<style
+   type="text/css"
+   id="style2">
 	.st0{fill:#FFFFFF;}
 	.st1{fill:none;stroke:#000000;stroke-miterlimit:10;}
 	.st2{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9157,7.9157;}
@@ -30,326 +130,1019 @@
 	.st24{fill:#1E4C66;}
 	.st25{font-size:16.5319px;}
 </style>
-<g id="Outter_dash_rectangle">
-	<g>
-		<rect x="9" y="64" class="st0" width="665" height="628"/>
-		<g>
-			<polyline class="st1" points="674,688 674,692 670,692 			"/>
-			<line class="st2" x1="662.1" y1="692" x2="17" y2="692"/>
-			<polyline class="st1" points="13,692 9,692 9,688 			"/>
-			<line class="st3" x1="9" y1="679.9" x2="9" y2="72"/>
-			<polyline class="st1" points="9,68 9,64 13,64 			"/>
-			<line class="st2" x1="20.9" y1="64" x2="666" y2="64"/>
-			<polyline class="st1" points="670,64 674,64 674,68 			"/>
-			<line class="st3" x1="674" y1="76.1" x2="674" y2="684"/>
+<g
+   id="Outter_dash_rectangle"
+   transform="translate(-6.9,-4.5)">
+	<g
+   id="g24">
+		<rect
+   x="9"
+   y="64"
+   class="st0"
+   width="665"
+   height="628"
+   id="rect4"
+   style="fill:#ffffff" />
+		<g
+   id="g22">
+			<polyline
+   class="st1"
+   points="674,688 674,692 670,692    "
+   id="polyline6"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+			<line
+   class="st2"
+   x1="662.09998"
+   y1="692"
+   x2="17"
+   y2="692"
+   id="line8"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9157, 7.9157" />
+			<polyline
+   class="st1"
+   points="13,692 9,692 9,688    "
+   id="polyline10"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+			<line
+   class="st3"
+   x1="9"
+   y1="679.90002"
+   x2="9"
+   y2="72"
+   id="line12"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:8.052, 8.052" />
+			<polyline
+   class="st1"
+   points="9,68 9,64 13,64    "
+   id="polyline14"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+			<line
+   class="st2"
+   x1="20.9"
+   y1="64"
+   x2="666"
+   y2="64"
+   id="line16"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9157, 7.9157" />
+			<polyline
+   class="st1"
+   points="670,64 674,64 674,68    "
+   id="polyline18"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+			<line
+   class="st3"
+   x1="674"
+   y1="76.099998"
+   x2="674"
+   y2="684"
+   id="line20"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:8.052, 8.052" />
 		</g>
 	</g>
 </g>
-<g id="Public_address_space_rectangle">
-	<g>
-		<rect x="59.5" y="94.5" class="st4" width="574" height="146"/>
-		<g>
-			<polyline class="st1" points="633.5,236.5 633.5,240.5 629.5,240.5 			"/>
-			<line class="st5" x1="621.5" y1="240.5" x2="67.5" y2="240.5"/>
-			<polyline class="st1" points="63.5,240.5 59.5,240.5 59.5,236.5 			"/>
-			<line class="st6" x1="59.5" y1="228.4" x2="59.5" y2="102.6"/>
-			<polyline class="st1" points="59.5,98.5 59.5,94.5 63.5,94.5 			"/>
-			<line class="st5" x1="71.5" y1="94.5" x2="625.5" y2="94.5"/>
-			<polyline class="st1" points="629.5,94.5 633.5,94.5 633.5,98.5 			"/>
-			<line class="st6" x1="633.5" y1="106.6" x2="633.5" y2="232.4"/>
+<g
+   id="g338"
+   transform="matrix(1.1098036,0,0,0.99996521,-52.920239,-4.4869013)"><rect
+     style="fill:#aadff2"
+     id="rect27"
+     height="146"
+     width="574"
+     class="st4"
+     y="94.5"
+     x="59.5" /><g
+     id="g45">
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline29"
+   points="633.5,236.5 633.5,240.5 629.5,240.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9718, 7.9718"
+   id="line31"
+   y2="240.5"
+   x2="67.5"
+   y1="240.5"
+   x1="621.5"
+   class="st5" />
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline33"
+   points="63.5,240.5 59.5,240.5 59.5,236.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:8.1177, 8.1177"
+   id="line35"
+   y2="102.6"
+   x2="59.5"
+   y1="228.39999"
+   x1="59.5"
+   class="st6" />
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline37"
+   points="59.5,98.5 59.5,94.5 63.5,94.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9718, 7.9718"
+   id="line39"
+   y2="94.5"
+   x2="625.5"
+   y1="94.5"
+   x1="71.5"
+   class="st5" />
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline41"
+   points="629.5,94.5 633.5,94.5 633.5,98.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:8.1177, 8.1177"
+   id="line43"
+   y2="232.39999"
+   x2="633.5"
+   y1="106.6"
+   x1="633.5"
+   class="st6" />
+		</g></g><text
+   style="font-size:21px;font-family:MyriadPro-Regular"
+   id="text49"
+   class="st7 st8"
+   x="396.51117"
+   y="221.5"><tspan
+     y="221.5"
+     x="396.51117"
+     id="tspan29"
+     sodipodi:role="line">Öffentlicher Adressraum</tspan></text>
+
+<g
+   id="g72"
+   transform="matrix(1.1098036,0,0,0.99996521,-52.920239,-4.4869013)">
+		<rect
+   style="fill:#e1e5ba"
+   id="rect52"
+   height="407"
+   width="574"
+   class="st9"
+   y="251.5"
+   x="59.5" />
+		<g
+   id="g70">
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline54"
+   points="633.5,654.5 633.5,658.5 629.5,658.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9718, 7.9718"
+   id="line56"
+   y2="658.5"
+   x2="67.5"
+   y1="658.5"
+   x1="621.5"
+   class="st5" />
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline58"
+   points="63.5,658.5 59.5,658.5 59.5,654.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:8.1429, 8.1429"
+   id="line60"
+   y2="259.60001"
+   x2="59.5"
+   y1="646.40002"
+   x1="59.5"
+   class="st10" />
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline62"
+   points="59.5,255.5 59.5,251.5 63.5,251.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9718, 7.9718"
+   id="line64"
+   y2="251.5"
+   x2="625.5"
+   y1="251.5"
+   x1="71.5"
+   class="st5" />
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline66"
+   points="629.5,251.5 633.5,251.5 633.5,255.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:8.1429, 8.1429"
+   id="line68"
+   y2="650.40002"
+   x2="633.5"
+   y1="263.60001"
+   x1="633.5"
+   class="st10" />
 		</g>
-	</g>
-	<text transform="matrix(1 0 0 1 418 226)" class="st7 st8">Öffentlicher Adressraum</text>
+	</g><text
+   style="font-size:21px;font-family:MyriadPro-Regular"
+   id="text74"
+   class="st7 st8"
+   x="438.22406"
+   y="638.5"><tspan
+     y="638.5"
+     x="438.22406"
+     id="tspan44"
+     sodipodi:role="line">Privater Adressraum</tspan></text>
+
+<g
+   id="ibm_cloud"
+   transform="translate(-6.9,-4.5)">
+	<path
+   class="st11"
+   d="m 141.2,59.9 c 0,-11.4 -13.4,-20.6 -29.9,-20.6 -1.6,0 -3.2,0.1 -4.7,0.3 -1,-2.2 -2.6,-4.2 -4.6,-5.8 C 97.3,30 91.2,29.3 86.3,31.5 83.5,16.9 72,6 58.2,6 43.8,6 32,17.8 29.8,33.2 c -0.1,0 -0.2,0 -0.4,0 -11.6,0 -21,10.6 -21,23.7 0,10 5.5,18.5 13.2,22 v 0.9 H 24 c 1.7,0.5 3.5,0.8 5.3,0.8 1.8,0 3.6,-0.3 5.3,-0.8 H 103 c 2.6,0.5 5.3,0.8 8.1,0.8 2.8,0 5.5,-0.3 8.1,-0.8 h 2.4 v -0.5 c 11.5,-3 19.6,-10.5 19.6,-19.4 z"
+   id="path77"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff;stroke:#000000;stroke-width:3;stroke-miterlimit:10" />
+	<text
+   transform="translate(21,62)"
+   class="st7 st8"
+   id="text79"
+   style="font-size:21px;font-family:MyriadPro-Regular"><tspan
+     sodipodi:role="line"
+     id="tspan49"
+     x="0"
+     y="0">IBM Cloud</tspan></text>
+
+
 </g>
-<g id="Private_address_space_rectangle">
-	<g>
-		<rect x="59.5" y="251.5" class="st9" width="574" height="407"/>
-		<g>
-			<polyline class="st1" points="633.5,654.5 633.5,658.5 629.5,658.5 			"/>
-			<line class="st5" x1="621.5" y1="658.5" x2="67.5" y2="658.5"/>
-			<polyline class="st1" points="63.5,658.5 59.5,658.5 59.5,654.5 			"/>
-			<line class="st10" x1="59.5" y1="646.4" x2="59.5" y2="259.6"/>
-			<polyline class="st1" points="59.5,255.5 59.5,251.5 63.5,251.5 			"/>
-			<line class="st5" x1="71.5" y1="251.5" x2="625.5" y2="251.5"/>
-			<polyline class="st1" points="629.5,251.5 633.5,251.5 633.5,255.5 			"/>
-			<line class="st10" x1="633.5" y1="263.6" x2="633.5" y2="650.4"/>
-		</g>
-	</g>
-	<text transform="matrix(1 0 0 1 421 643)" class="st7 st8">Privater Adressraum</text>
+<g
+   id="lines"
+   transform="translate(-6.9,-4.5)">
+	<line
+   class="st1"
+   x1="128"
+   y1="190"
+   x2="128"
+   y2="503.5"
+   id="line82"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+	<line
+   class="st1"
+   x1="221.5"
+   y1="407.5"
+   x2="221.5"
+   y2="503.5"
+   id="line84"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+	<line
+   class="st1"
+   x1="361.5"
+   y1="190.5"
+   x2="361.5"
+   y2="565.5"
+   id="line86"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+	<line
+   class="st1"
+   x1="346.5"
+   y1="407.5"
+   x2="346.5"
+   y2="504.5"
+   id="line88"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+	<line
+   class="st1"
+   x1="376.5"
+   y1="407.5"
+   x2="376.5"
+   y2="438.5"
+   id="line90"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+	<line
+   class="st1"
+   x1="450.5"
+   y1="407.5"
+   x2="450.5"
+   y2="437.5"
+   id="line92"
+   style="fill:none;stroke:#000000;stroke-miterlimit:10" />
 </g>
-<g id="ibm_cloud">
-	<path class="st11" d="M141.2,59.9c0-11.4-13.4-20.6-29.9-20.6c-1.6,0-3.2,0.1-4.7,0.3c-1-2.2-2.6-4.2-4.6-5.8
-		c-4.7-3.8-10.8-4.5-15.7-2.3C83.5,16.9,72,6,58.2,6C43.8,6,32,17.8,29.8,33.2c-0.1,0-0.2,0-0.4,0c-11.6,0-21,10.6-21,23.7
-		c0,10,5.5,18.5,13.2,22v0.9h2.4c1.7,0.5,3.5,0.8,5.3,0.8c1.8,0,3.6-0.3,5.3-0.8h68.4c2.6,0.5,5.3,0.8,8.1,0.8
-		c2.8,0,5.5-0.3,8.1-0.8h2.4v-0.5C133.1,76.3,141.2,68.8,141.2,59.9z"/>
-	<text transform="matrix(1 0 0 1 21 62)" class="st7 st8">IBM Cloud</text>
-</g>
-<g id="lines">
-	<line class="st1" x1="128" y1="190" x2="128" y2="503.5"/>
-	<line class="st1" x1="221.5" y1="407.5" x2="221.5" y2="503.5"/>
-	<line class="st1" x1="361.5" y1="190.5" x2="361.5" y2="565.5"/>
-	<line class="st1" x1="346.5" y1="407.5" x2="346.5" y2="504.5"/>
-	<line class="st1" x1="376.5" y1="407.5" x2="376.5" y2="438.5"/>
-	<line class="st1" x1="450.5" y1="407.5" x2="450.5" y2="437.5"/>
-</g>
-<g id="pubic_VLAN_native">
-	<g>
-		<g>
-			<g>
-				<g>
-					<path class="st12" d="M103.5,190.5L103.5,190.5l-0.4-0.1c-7.7-1.1-13.6-10.3-13.6-21.4s5.8-20.3,13.6-21.4l0.4-0.1v0h485.3
-						l0.2,0c7.6,0.4,13.5,9.8,13.5,21.5s-5.9,21.1-13.5,21.5l-0.4,0H103.5z"/>
-					<path d="M588.6,148l0.3,0c7.2,0.4,13.1,9.8,13.1,21s-5.9,20.6-13.1,21l-0.2,0H103.8l-0.7-0.1c-7.4-1-13.1-10.2-13.1-20.9
-						s5.8-19.9,13.1-20.9l0.7-0.1H588.6 M589,147H103v0.1c-7.9,1.1-14,10.5-14,21.9c0,11.4,6.1,20.8,14,21.9v0.1h486v0
-						c7.8-0.4,14-10.1,14-22C603,157.1,596.8,147.4,589,147L589,147L589,147z"/>
+<g
+   id="g109"
+   transform="matrix(1.1980025,0,0,1,-82.558243,-4.5)">
+			<g
+   id="g107">
+				<g
+   id="g99">
+					<path
+   style="fill:#ff7bac"
+   inkscape:connector-curvature="0"
+   class="st12"
+   d="m 103.5,190.5 v 0 l -0.4,-0.1 C 95.4,189.3 89.5,180.1 89.5,169 c 0,-11.1 5.8,-20.3 13.6,-21.4 l 0.4,-0.1 v 0 h 485.3 0.2 c 7.6,0.4 13.5,9.8 13.5,21.5 0,11.7 -5.9,21.1 -13.5,21.5 h -0.4 z"
+   id="path95" />
+					<path
+   inkscape:connector-curvature="0"
+   d="m 588.6,148 h 0.3 c 7.2,0.4 13.1,9.8 13.1,21 0,11.2 -5.9,20.6 -13.1,21 h -0.2 -484.9 l -0.7,-0.1 C 95.7,188.9 90,179.7 90,169 c 0,-10.7 5.8,-19.9 13.1,-20.9 l 0.7,-0.1 h 484.8 m 0.4,-1 H 103 v 0.1 c -7.9,1.1 -14,10.5 -14,21.9 0,11.4 6.1,20.8 14,21.9 v 0.1 h 486 v 0 c 7.8,-0.4 14,-10.1 14,-22 0,-11.9 -6.2,-21.6 -14,-22 z"
+   id="path97" />
 				</g>
-				<g>
-					<path class="st0" d="M587.5,186.9c-5.5,0-10-8.2-10-18.4c0-10.1,4.5-18.4,10-18.4c5.5,0,10,8.2,10,18.4
-						C597.5,178.7,593,186.9,587.5,186.9z"/>
-					<path d="M587.5,150.7c5.1,0,9.5,8.2,9.5,17.9c0,9.7-4.4,17.9-9.5,17.9c-5.1,0-9.5-8.2-9.5-17.9
-						C578,158.9,582.4,150.7,587.5,150.7 M587.5,149.7c-5.8,0-10.5,8.4-10.5,18.9c0,10.4,4.7,18.9,10.5,18.9S598,179,598,168.6
-						C598,158.1,593.3,149.7,587.5,149.7L587.5,149.7z"/>
+				<g
+   id="g105">
+					<path
+   style="fill:#ffffff"
+   inkscape:connector-curvature="0"
+   class="st0"
+   d="m 587.5,186.9 c -5.5,0 -10,-8.2 -10,-18.4 0,-10.1 4.5,-18.4 10,-18.4 5.5,0 10,8.2 10,18.4 0,10.2 -4.5,18.4 -10,18.4 z"
+   id="path101" />
+					<path
+   inkscape:connector-curvature="0"
+   d="m 587.5,150.7 c 5.1,0 9.5,8.2 9.5,17.9 0,9.7 -4.4,17.9 -9.5,17.9 -5.1,0 -9.5,-8.2 -9.5,-17.9 0,-9.7 4.4,-17.9 9.5,-17.9 m 0,-1 c -5.8,0 -10.5,8.4 -10.5,18.9 0,10.4 4.7,18.9 10.5,18.9 5.8,0 10.5,-8.5 10.5,-18.9 0,-10.5 -4.7,-18.9 -10.5,-18.9 z"
+   id="path103" />
 				</g>
 			</g>
+		</g><text
+   style="font-size:21px;font-family:IBMPlexSans"
+   class="st13 st8"
+   id="text111"
+   x="199.76752"
+   y="171.25"><tspan
+     y="171.25"
+     x="199.76752"
+     sodipodi:role="line"
+     id="tspan68">Öffentliches VLAN (nativ)</tspan></text>
+
+<g
+   id="security_lock_icon"
+   transform="translate(-6.9,-4.5)">
+	<g
+   id="g140">
+		<path
+   class="st14"
+   d="m 377,407.8 h -30 c -6.6,0 -12,-5.4 -12,-12 v -25 c 0,-6.6 5.4,-12 12,-12 h 30 c 6.6,0 12,5.4 12,12 v 25 c 0,6.6 -5.4,12 -12,12 z"
+   id="path116"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+		<g
+   id="g138">
+			<g
+   id="g124">
+				<path
+   class="st0"
+   d="M 367.9,380.8 H 357 c -2.2,0 -4.1,-1.8 -4.1,-4.1 v -5.9 c 0,-2.2 1.8,-4.1 4.1,-4.1 h 10.9 c 2.2,0 4.1,1.8 4.1,4.1 v 5.9 c 0,2.2 -1.8,4.1 -4.1,4.1 z"
+   id="path118"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
+				<path
+   class="st14"
+   d="M 365.9,378.8 H 359 c -1.1,0 -2.1,-0.9 -2.1,-2.1 v -4 c 0,-1.1 0.9,-2.1 2.1,-2.1 h 6.9 c 1.1,0 2.1,0.9 2.1,2.1 v 4 c 0,1.1 -0.9,2.1 -2.1,2.1 z"
+   id="path120"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+				<path
+   class="st0"
+   d="M 373.9,399.8 H 351 c -2.2,0 -4.1,-1.8 -4.1,-4.1 v -13.9 c 0,-2.2 1.8,-4.1 4.1,-4.1 h 22.9 c 2.2,0 4.1,1.8 4.1,4.1 v 13.9 c 0,2.2 -1.8,4.1 -4.1,4.1 z"
+   id="path122"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
+			</g>
+			<g
+   id="g136">
+				<ellipse
+   class="st14"
+   cx="363"
+   cy="386.29999"
+   rx="4"
+   ry="3.5"
+   id="ellipse126"
+   style="fill:#29abe2" />
+				<path
+   class="st14"
+   d="m 362.5,396.8 v 0 c -0.8,0 -1.5,-0.7 -1.5,-1.5 v -7 c 0,-0.8 0.7,-1.5 1.5,-1.5 v 0 c 0.8,0 1.5,0.7 1.5,1.5 v 7 c 0,0.8 -0.7,1.5 -1.5,1.5 z"
+   id="path128"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+				<path
+   class="st14"
+   d="m 365.5,391.8 h -2 c -0.3,0 -0.5,-0.2 -0.5,-0.5 v 0 c 0,-0.3 0.2,-0.5 0.5,-0.5 h 2 c 0.3,0 0.5,0.2 0.5,0.5 v 0 c 0,0.2 -0.2,0.5 -0.5,0.5 z"
+   id="path130"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+				<path
+   class="st14"
+   d="m 365.5,393.8 h -2 c -0.3,0 -0.5,-0.2 -0.5,-0.5 v 0 c 0,-0.3 0.2,-0.5 0.5,-0.5 h 2 c 0.3,0 0.5,0.2 0.5,0.5 v 0 c 0,0.2 -0.2,0.5 -0.5,0.5 z"
+   id="path132"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+				<path
+   class="st14"
+   d="m 365.5,395.8 h -2 c -0.3,0 -0.5,-0.2 -0.5,-0.5 v 0 c 0,-0.3 0.2,-0.5 0.5,-0.5 h 2 c 0.3,0 0.5,0.2 0.5,0.5 v 0 c 0,0.2 -0.2,0.5 -0.5,0.5 z"
+   id="path134"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+			</g>
 		</g>
-		<text transform="matrix(1 0 0 1 247.75 175.75)" class="st13 st8">Öffentliches VLAN (nativ)</text>
 	</g>
 </g>
-<g id="security_lock_icon">
-	<g>
-		<path class="st14" d="M377,407.8h-30c-6.6,0-12-5.4-12-12v-25c0-6.6,5.4-12,12-12h30c6.6,0,12,5.4,12,12v25
-			C389,402.4,383.6,407.8,377,407.8z"/>
-		<g>
-			<g>
-				<path class="st0" d="M367.9,380.8h-10.9c-2.2,0-4.1-1.8-4.1-4.1v-5.9c0-2.2,1.8-4.1,4.1-4.1h10.9c2.2,0,4.1,1.8,4.1,4.1v5.9
-					C372,378.9,370.2,380.8,367.9,380.8z"/>
-				<path class="st14" d="M365.9,378.8h-6.9c-1.1,0-2.1-0.9-2.1-2.1v-4c0-1.1,0.9-2.1,2.1-2.1h6.9c1.1,0,2.1,0.9,2.1,2.1v4
-					C368,377.8,367.1,378.8,365.9,378.8z"/>
-				<path class="st0" d="M373.9,399.8h-22.9c-2.2,0-4.1-1.8-4.1-4.1v-13.9c0-2.2,1.8-4.1,4.1-4.1h22.9c2.2,0,4.1,1.8,4.1,4.1v13.9
-					C378,397.9,376.2,399.8,373.9,399.8z"/>
+<g
+   id="security_lock_bottom"
+   transform="translate(-94.9,-4.5)">
+	<g
+   id="g167">
+		<path
+   class="st14"
+   d="m 444,759 h -19.2 c -6.6,0 -12,-5.4 -12,-12 v -15.2 c 0,-6.6 5.4,-12 12,-12 H 444 c 6.6,0 12,5.4 12,12 V 747 c 0,6.6 -5.4,12 -12,12 z"
+   id="path143"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+		<g
+   id="g165">
+			<g
+   id="g151">
+				<path
+   class="st0"
+   d="m 438.3,737.4 h -7.1 c -2.2,0 -4.1,-1.8 -4.1,-4.1 v -3.1 c 0,-2.2 1.8,-4.1 4.1,-4.1 h 7.1 c 2.2,0 4.1,1.8 4.1,4.1 v 3.1 c 0,2.3 -1.8,4.1 -4.1,4.1 z"
+   id="path145"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
+				<path
+   class="st14"
+   d="m 437.1,735.8 h -4.7 c -1.1,0 -2.1,-0.9 -2.1,-2.1 v -2.4 c 0,-1.1 0.9,-2.1 2.1,-2.1 h 4.7 c 1.1,0 2.1,0.9 2.1,2.1 v 2.4 c 0,1.2 -0.9,2.1 -2.1,2.1 z"
+   id="path147"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+				<path
+   class="st0"
+   d="m 443.1,752.6 h -16.7 c -2.2,0 -4.1,-1.8 -4.1,-4.1 V 739 c 0,-2.2 1.8,-4.1 4.1,-4.1 h 16.7 c 2.2,0 4.1,1.8 4.1,4.1 v 9.5 c 0,2.3 -1.8,4.1 -4.1,4.1 z"
+   id="path149"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
 			</g>
-			<g>
-				<ellipse class="st14" cx="363" cy="386.3" rx="4" ry="3.5"/>
-				<path class="st14" d="M362.5,396.8L362.5,396.8c-0.8,0-1.5-0.7-1.5-1.5v-7c0-0.8,0.7-1.5,1.5-1.5l0,0c0.8,0,1.5,0.7,1.5,1.5v7
-					C364,396.1,363.3,396.8,362.5,396.8z"/>
-				<path class="st14" d="M365.5,391.8h-2c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h2c0.3,0,0.5,0.2,0.5,0.5l0,0
-					C366,391.5,365.8,391.8,365.5,391.8z"/>
-				<path class="st14" d="M365.5,393.8h-2c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h2c0.3,0,0.5,0.2,0.5,0.5l0,0
-					C366,393.5,365.8,393.8,365.5,393.8z"/>
-				<path class="st14" d="M365.5,395.8h-2c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h2c0.3,0,0.5,0.2,0.5,0.5l0,0
-					C366,395.5,365.8,395.8,365.5,395.8z"/>
+			<g
+   id="g163">
+				<ellipse
+   class="st14"
+   cx="435.20001"
+   cy="741.79999"
+   rx="3.2"
+   ry="2.8"
+   id="ellipse153"
+   style="fill:#29abe2" />
+				<path
+   class="st14"
+   d="m 434.8,750.2 v 0 c -0.7,0 -1.2,-0.5 -1.2,-1.2 v -5.6 c 0,-0.7 0.5,-1.2 1.2,-1.2 v 0 c 0.7,0 1.2,0.5 1.2,1.2 v 5.6 c 0,0.7 -0.6,1.2 -1.2,1.2 z"
+   id="path155"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+				<path
+   class="st14"
+   d="m 437.2,746.2 h -1.6 c -0.2,0 -0.4,-0.2 -0.4,-0.4 v 0 c 0,-0.2 0.2,-0.4 0.4,-0.4 h 1.6 c 0.2,0 0.4,0.2 0.4,0.4 v 0 c 0,0.2 -0.2,0.4 -0.4,0.4 z"
+   id="path157"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+				<path
+   class="st14"
+   d="m 437.2,747.8 h -1.6 c -0.2,0 -0.4,-0.2 -0.4,-0.4 v 0 c 0,-0.2 0.2,-0.4 0.4,-0.4 h 1.6 c 0.2,0 0.4,0.2 0.4,0.4 v 0 c 0,0.2 -0.2,0.4 -0.4,0.4 z"
+   id="path159"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+				<path
+   class="st14"
+   d="m 437.2,749.4 h -1.6 c -0.2,0 -0.4,-0.2 -0.4,-0.4 v 0 c 0,-0.2 0.2,-0.4 0.4,-0.4 h 1.6 c 0.2,0 0.4,0.2 0.4,0.4 v 0 c 0,0.2 -0.2,0.4 -0.4,0.4 z"
+   id="path161"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
 			</g>
 		</g>
 	</g>
+	<text
+   transform="translate(370,780)"
+   class="st7 st15"
+   id="text169"
+   style="font-size:18px;font-family:MyriadPro-Regular"><tspan
+     sodipodi:role="line"
+     id="tspan100"
+     x="0"
+     y="0">Cloud-Gateway</tspan></text>
+
+
 </g>
-<g id="security_lock_bottom">
-	<g>
-		<path class="st14" d="M444,745h-19.2c-6.6,0-12-5.4-12-12v-15.2c0-6.6,5.4-12,12-12H444c6.6,0,12,5.4,12,12V733
-			C456,739.6,450.6,745,444,745z"/>
-		<g>
-			<g>
-				<path class="st0" d="M438.3,723.4h-7.1c-2.2,0-4.1-1.8-4.1-4.1v-3.1c0-2.2,1.8-4.1,4.1-4.1h7.1c2.2,0,4.1,1.8,4.1,4.1v3.1
-					C442.4,721.6,440.6,723.4,438.3,723.4z"/>
-				<path class="st14" d="M437.1,721.8h-4.7c-1.1,0-2.1-0.9-2.1-2.1v-2.4c0-1.1,0.9-2.1,2.1-2.1h4.7c1.1,0,2.1,0.9,2.1,2.1v2.4
-					C439.2,720.9,438.3,721.8,437.1,721.8z"/>
-				<path class="st0" d="M443.1,738.6h-16.7c-2.2,0-4.1-1.8-4.1-4.1V725c0-2.2,1.8-4.1,4.1-4.1h16.7c2.2,0,4.1,1.8,4.1,4.1v9.5
-					C447.2,736.8,445.4,738.6,443.1,738.6z"/>
-			</g>
-			<g>
-				<path class="st14" d="M438.4,727.8c0,1.5-1.4,2.8-3.2,2.8c-1.8,0-3.2-1.3-3.2-2.8c0-1.5,1.4-2.8,3.2-2.8
-					C437,725,438.4,726.2,438.4,727.8z"/>
-				<path class="st14" d="M434.8,736.2L434.8,736.2c-0.7,0-1.2-0.5-1.2-1.2v-5.6c0-0.7,0.5-1.2,1.2-1.2h0c0.7,0,1.2,0.5,1.2,1.2v5.6
-					C436,735.7,435.4,736.2,434.8,736.2z"/>
-				<path class="st14" d="M437.2,732.2h-1.6c-0.2,0-0.4-0.2-0.4-0.4v0c0-0.2,0.2-0.4,0.4-0.4h1.6c0.2,0,0.4,0.2,0.4,0.4v0
-					C437.6,732,437.4,732.2,437.2,732.2z"/>
-				<path class="st14" d="M437.2,733.8h-1.6c-0.2,0-0.4-0.2-0.4-0.4v0c0-0.2,0.2-0.4,0.4-0.4h1.6c0.2,0,0.4,0.2,0.4,0.4v0
-					C437.6,733.6,437.4,733.8,437.2,733.8z"/>
-				<path class="st14" d="M437.2,735.4h-1.6c-0.2,0-0.4-0.2-0.4-0.4v0c0-0.2,0.2-0.4,0.4-0.4h1.6c0.2,0,0.4,0.2,0.4,0.4v0
-					C437.6,735.2,437.4,735.4,437.2,735.4z"/>
-			</g>
-		</g>
-	</g>
-	<text transform="matrix(1 0 0 1 370 767)" class="st7 st15">Cloud-Gateway</text>
-</g>
-<g id="gear_bottom">
-	<g>
-		<path class="st14" d="M586,745h-21.8c-6.6,0-12-5.4-12-12v-17.5c0-6.6,5.4-12,12-12H586c6.6,0,12,5.4,12,12V733
-			C598,739.6,592.6,745,586,745z"/>
-		<g>
-			<g>
-				<g>
-					<g>
-						<g>
-							<ellipse class="st0" cx="575" cy="724.1" rx="12.3" ry="11.9"/>
-							<path class="st14" d="M580.5,724.1c0,2.9-2.5,5.3-5.5,5.3c-3,0-5.5-2.4-5.5-5.3c0-2.9,2.5-5.3,5.5-5.3
-								C578,718.8,580.5,721.2,580.5,724.1z"/>
+<g
+   id="g510"
+   transform="translate(-6.9,-4.5)"><g
+     id="g204">
+		<path
+   class="st14"
+   d="m 586,759 h -21.8 c -6.6,0 -12,-5.4 -12,-12 v -17.5 c 0,-6.6 5.4,-12 12,-12 H 586 c 6.6,0 12,5.4 12,12 V 747 c 0,6.6 -5.4,12 -12,12 z"
+   id="path172"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+		<g
+   id="g202">
+			<g
+   id="g196">
+				<g
+   id="g190">
+					<g
+   id="g184">
+						<g
+   id="g178">
+							<ellipse
+   class="st0"
+   cx="575"
+   cy="738.09998"
+   rx="12.3"
+   ry="11.9"
+   id="ellipse174"
+   style="fill:#ffffff" />
+							<ellipse
+   class="st14"
+   cx="575"
+   cy="738.09998"
+   rx="5.5"
+   ry="5.3000002"
+   id="ellipse176"
+   style="fill:#29abe2" />
 						</g>
-						<rect x="571.3" y="709" class="st0" width="6.6" height="4.2"/>
-						<rect x="572" y="734.4" class="st0" width="5.9" height="5.1"/>
+						<rect
+   x="571.29999"
+   y="723"
+   class="st0"
+   width="6.5999999"
+   height="4.1999998"
+   id="rect180"
+   style="fill:#ffffff" />
+						<rect
+   x="572"
+   y="748.40002"
+   class="st0"
+   width="5.9000001"
+   height="5.0999999"
+   id="rect182"
+   style="fill:#ffffff" />
 					</g>
-					<rect x="585.7" y="721.3" class="st0" width="5.1" height="5.9"/>
-					<rect x="559.5" y="721.3" class="st0" width="5.1" height="5.9"/>
+					<rect
+   x="585.70001"
+   y="735.29999"
+   class="st0"
+   width="5.0999999"
+   height="5.9000001"
+   id="rect186"
+   style="fill:#ffffff" />
+					<rect
+   x="559.5"
+   y="735.29999"
+   class="st0"
+   width="5.0999999"
+   height="5.9000001"
+   id="rect188"
+   style="fill:#ffffff" />
 				</g>
 				
-					<rect x="562.3" y="712.2" transform="matrix(0.7526 0.6585 -0.6585 0.7526 610.6008 -195.1859)" class="st0" width="5.6" height="5.6"/>
+					<rect
+   x="562.29999"
+   y="726.20001"
+   transform="matrix(0.7526,0.6585,-0.6585,0.7526,619.8199,-191.7219)"
+   class="st0"
+   width="5.5999999"
+   height="5.5999999"
+   id="rect192"
+   style="fill:#ffffff" />
 				
-					<rect x="581" y="730.9" transform="matrix(0.7526 0.6585 -0.6585 0.7526 627.7769 -203.5111)" class="st0" width="7.3" height="5.6"/>
+					<rect
+   x="581"
+   y="744.90002"
+   transform="matrix(0.7526,0.6585,-0.6585,0.7526,636.996,-200.0471)"
+   class="st0"
+   width="7.3000002"
+   height="5.5999999"
+   id="rect194"
+   style="fill:#ffffff" />
 			</g>
 			
-				<rect x="582.6" y="712.5" transform="matrix(0.7071 0.7071 -0.7071 0.7071 677.4365 -204.3584)" class="st0" width="5.5" height="6.1"/>
+				<rect
+   x="582.59998"
+   y="726.5"
+   transform="matrix(0.7071,0.7071,-0.7071,0.7071,687.336,-200.2579)"
+   class="st0"
+   width="5.5"
+   height="6.0999999"
+   id="rect198"
+   style="fill:#ffffff" />
 			
-				<rect x="562.9" y="730.8" transform="matrix(0.7071 0.7071 -0.7071 0.7071 684.3975 -185.1568)" class="st0" width="5.5" height="5.5"/>
+				<rect
+   x="562.90002"
+   y="744.79999"
+   transform="matrix(0.7071,0.7071,-0.7071,0.7071,694.2971,-181.0563)"
+   class="st0"
+   width="5.5"
+   height="5.5"
+   id="rect200"
+   style="fill:#ffffff" />
 		</g>
-	</g>
-	<text transform="matrix(1 0 0 1 519 765)"><tspan x="0" y="0" class="st7 st15">WAN-Optimierungs-</tspan><tspan x="0" y="21.6" class="st7 st15">programm</tspan></text>
+	</g><text
+     y="780"
+     x="575"
+     class="st7 st15"
+     id="text206"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;font-family:MyriadPro-Regular;-inkscape-font-specification:'MyriadPro-Regular, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"><tspan
+       sodipodi:role="line"
+       id="tspan121"
+       x="575"
+       y="780">WAN-Optimierungs-</tspan><tspan
+       id="tspan488"
+       sodipodi:role="line"
+       x="575"
+       y="802.5">programm</tspan></text>
 </g>
-<g id="gear_icon">
-	<g>
-		<path class="st14" d="M466.3,407.8h-30c-6.6,0-12-5.4-12-12v-25c0-6.6,5.4-12,12-12h30c6.6,0,12,5.4,12,12v25
-			C478.3,402.4,472.9,407.8,466.3,407.8z"/>
-		<g>
-			<g>
-				<g>
-					<g>
-						<g>
-							<ellipse class="st0" cx="451.1" cy="383.1" rx="14.5" ry="14"/>
-							<path class="st14" d="M457.6,383.1c0,3.5-2.9,6.3-6.5,6.3c-3.6,0-6.5-2.8-6.5-6.3c0-3.5,2.9-6.3,6.5-6.3
-								C454.7,376.8,457.6,379.6,457.6,383.1z"/>
+<g
+   id="gear_icon"
+   transform="translate(-6.9,-4.5)">
+	<g
+   id="g241">
+		<path
+   class="st14"
+   d="m 466.3,407.8 h -30 c -6.6,0 -12,-5.4 -12,-12 v -25 c 0,-6.6 5.4,-12 12,-12 h 30 c 6.6,0 12,5.4 12,12 v 25 c 0,6.6 -5.4,12 -12,12 z"
+   id="path209"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+		<g
+   id="g239">
+			<g
+   id="g233">
+				<g
+   id="g227">
+					<g
+   id="g221">
+						<g
+   id="g215">
+							<ellipse
+   class="st0"
+   cx="451.10001"
+   cy="383.10001"
+   rx="14.5"
+   ry="14"
+   id="ellipse211"
+   style="fill:#ffffff" />
+							<ellipse
+   class="st14"
+   cx="451.10001"
+   cy="383.10001"
+   rx="6.5"
+   ry="6.3000002"
+   id="ellipse213"
+   style="fill:#29abe2" />
 						</g>
-						<rect x="446.8" y="365.3" class="st0" width="7.8" height="5"/>
-						<rect x="447.6" y="395.3" class="st0" width="7" height="6"/>
+						<rect
+   x="446.79999"
+   y="365.29999"
+   class="st0"
+   width="7.8000002"
+   height="5"
+   id="rect217"
+   style="fill:#ffffff" />
+						<rect
+   x="447.60001"
+   y="395.29999"
+   class="st0"
+   width="7"
+   height="6"
+   id="rect219"
+   style="fill:#ffffff" />
 					</g>
-					<rect x="463.8" y="379.8" class="st0" width="6" height="7"/>
-					<rect x="432.8" y="379.8" class="st0" width="6" height="7"/>
+					<rect
+   x="463.79999"
+   y="379.79999"
+   class="st0"
+   width="6"
+   height="7"
+   id="rect223"
+   style="fill:#ffffff" />
+					<rect
+   x="432.79999"
+   y="379.79999"
+   class="st0"
+   width="6"
+   height="7"
+   id="rect225"
+   style="fill:#ffffff" />
 				</g>
 				
-					<rect x="436.1" y="369" transform="matrix(0.7526 0.6585 -0.6585 0.7526 353.8559 -197.2012)" class="st0" width="6.6" height="6.6"/>
+					<rect
+   x="436.10001"
+   y="369"
+   transform="matrix(0.7526,0.6585,-0.6585,0.7526,353.8559,-197.2012)"
+   class="st0"
+   width="6.5999999"
+   height="6.5999999"
+   id="rect229"
+   style="fill:#ffffff" />
 				
-					<rect x="458.2" y="391" transform="matrix(0.7526 0.6585 -0.6585 0.7526 374.1191 -207.0269)" class="st0" width="8.6" height="6.6"/>
+					<rect
+   x="458.20001"
+   y="391"
+   transform="matrix(0.7526,0.6585,-0.6585,0.7526,374.1191,-207.0269)"
+   class="st0"
+   width="8.6000004"
+   height="6.5999999"
+   id="rect231"
+   style="fill:#ffffff" />
 			</g>
 			
-				<rect x="460.1" y="369.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 399.4713 -218.409)" class="st0" width="6.5" height="7.2"/>
+				<rect
+   x="460.10001"
+   y="369.39999"
+   transform="matrix(0.7071,0.7071,-0.7071,0.7071,399.4713,-218.409)"
+   class="st0"
+   width="6.5"
+   height="7.1999998"
+   id="rect235"
+   style="fill:#ffffff" />
 			
-				<rect x="436.9" y="391" transform="matrix(0.7071 0.7071 -0.7071 0.7071 407.6876 -195.7448)" class="st0" width="6.5" height="6.5"/>
+				<rect
+   x="436.89999"
+   y="391"
+   transform="matrix(0.7071,0.7071,-0.7071,0.7071,407.6876,-195.7448)"
+   class="st0"
+   width="6.5"
+   height="6.5"
+   id="rect237"
+   style="fill:#ffffff" />
 		</g>
 	</g>
 </g>
-<g id="vSAN_vMotion">
-	<g id="Layer_7">
-	</g>
-	<g>
-		<g>
-			<g>
-				<path class="st16" d="M103.5,608.5L103.5,608.5l-0.4-0.1c-7.7-1-13.6-10-13.6-20.9s5.8-19.9,13.6-20.9l0.4-0.1v0h485.3l0.2,0
-					c7.6,0.4,13.5,9.6,13.5,21s-5.9,20.6-13.5,21l-0.4,0H103.5z"/>
-				<path d="M588.6,567l0.3,0c7.2,0.4,13.1,9.6,13.1,20.5s-5.9,20.1-13.1,20.5l-0.2,0H103.8l-0.7-0.1c-7.4-1-13.1-9.9-13.1-20.4
-					c0-10.5,5.8-19.4,13.1-20.4l0.7-0.1H588.6 M589,566H103v0.1c-7.9,1-14,10.2-14,21.4s6.1,20.4,14,21.4v0.1h486v0
-					c7.8-0.4,14-9.9,14-21.5S596.8,566.4,589,566L589,566L589,566z"/>
+<g
+   id="g257"
+   transform="matrix(1.1980025,0,0,1,-82.558243,-4.5)">
+			<g
+   id="g249">
+				<path
+   class="st16"
+   d="m 103.5,608.5 v 0 l -0.4,-0.1 c -7.7,-1 -13.6,-10 -13.6,-20.9 0,-10.9 5.8,-19.9 13.6,-20.9 l 0.4,-0.1 v 0 h 485.3 0.2 c 7.6,0.4 13.5,9.6 13.5,21 0,11.4 -5.9,20.6 -13.5,21 h -0.4 z"
+   id="path245"
+   inkscape:connector-curvature="0"
+   style="fill:#ef7c26" />
+				<path
+   d="m 588.6,567 h 0.3 c 7.2,0.4 13.1,9.6 13.1,20.5 0,10.9 -5.9,20.1 -13.1,20.5 h -0.2 -484.9 l -0.7,-0.1 C 95.7,606.9 90,598 90,587.5 90,577 95.8,568.1 103.1,567.1 l 0.7,-0.1 h 484.8 m 0.4,-1 H 103 v 0.1 c -7.9,1 -14,10.2 -14,21.4 0,11.2 6.1,20.4 14,21.4 v 0.1 h 486 v 0 c 7.8,-0.4 14,-9.9 14,-21.5 0,-11.6 -6.2,-21.1 -14,-21.5 z"
+   id="path247"
+   inkscape:connector-curvature="0" />
 			</g>
-			<g>
-				<ellipse class="st0" cx="587.5" cy="587.1" rx="10" ry="17.9"/>
-				<path d="M587.5,569.6c5.1,0,9.5,8,9.5,17.4c0,9.4-4.4,17.4-9.5,17.4c-5.1,0-9.5-8-9.5-17.4C578,577.6,582.4,569.6,587.5,569.6
-					 M587.5,568.6c-5.8,0-10.5,8.3-10.5,18.4s4.7,18.4,10.5,18.4s10.5-8.3,10.5-18.4S593.3,568.6,587.5,568.6L587.5,568.6z"/>
+			<g
+   id="g255">
+				<path
+   class="st0"
+   d="m 587.5,605 c -5.5,0 -10,-8 -10,-17.9 0,-9.9 4.5,-17.9 10,-17.9 5.5,0 10,8 10,17.9 0,9.8 -4.5,17.9 -10,17.9 z"
+   id="path251"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
+				<path
+   d="m 587.5,569.6 c 5.1,0 9.5,8 9.5,17.4 0,9.4 -4.4,17.4 -9.5,17.4 -5.1,0 -9.5,-8 -9.5,-17.4 0,-9.4 4.4,-17.4 9.5,-17.4 m 0,-1 c -5.8,0 -10.5,8.3 -10.5,18.4 0,10.1 4.7,18.4 10.5,18.4 5.8,0 10.5,-8.3 10.5,-18.4 0,-10.1 -4.7,-18.4 -10.5,-18.4 z"
+   id="path253"
+   inkscape:connector-curvature="0" />
 			</g>
-		</g>
-		<text transform="matrix(1 0 0 1 201 596)" class="st7 st8">vSAN &amp; vMotion -- Privates VLAN B</text>
-	</g>
-</g>
-<g id="Logical_swiitch">
-	<g>
-		<g>
-			<g>
-				<g>
-					<path class="st14" d="M249.4,480.5L249.4,480.5l-0.4-0.1c-5.3-1-9.5-10.2-9.5-20.9s4.2-19.9,9.5-20.9l0.4-0.1v0h343.5l0.2,0
-						c5.2,0.4,9.4,9.8,9.4,21s-4.2,20.6-9.4,21l-0.2,0H249.4z"/>
-					<path d="M592.8,439l0.2,0c5,0.4,9,9.5,9,20.5s-4,20.1-9,20.5l-0.2,0H249.5l-0.5-0.1c-5.1-1-9.1-9.9-9.1-20.4s4-19.5,9.1-20.4
-						l0.5-0.1H592.8 M593.1,438H248.9v0.1c-5.6,1-9.9,10.2-9.9,21.4s4.4,20.4,9.9,21.4v0.1h344.2v0c5.5-0.4,9.9-9.9,9.9-21.5
-						S598.6,438.4,593.1,438L593.1,438L593.1,438z"/>
+		</g><text
+   class="st7 st8"
+   id="text259"
+   style="font-size:21px;font-family:MyriadPro-Regular"
+   x="149.01581"
+   y="591.5"><tspan
+     sodipodi:role="line"
+     id="tspan151"
+     x="149.01581"
+     y="591.5">vSAN &amp; vMotion -- Privates VLAN B</tspan></text>
+
+<g
+   id="g278"
+   transform="matrix(1.085092,0,0,1,-14.473188,-4.5)">
+			<g
+   id="g276">
+				<g
+   id="g268">
+					<path
+   class="st14"
+   d="m 249.4,480.5 v 0 l -0.4,-0.1 c -5.3,-1 -9.5,-10.2 -9.5,-20.9 0,-10.7 4.2,-19.9 9.5,-20.9 l 0.4,-0.1 v 0 h 343.5 0.2 c 5.2,0.4 9.4,9.8 9.4,21 0,11.2 -4.2,20.6 -9.4,21 h -0.2 z"
+   id="path264"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+					<path
+   d="m 592.8,439 h 0.2 c 5,0.4 9,9.5 9,20.5 0,11 -4,20.1 -9,20.5 h -0.2 -343.3 l -0.5,-0.1 c -5.1,-1 -9.1,-9.9 -9.1,-20.4 0,-10.5 4,-19.5 9.1,-20.4 l 0.5,-0.1 h 343.3 m 0.3,-1 H 248.9 v 0.1 c -5.6,1 -9.9,10.2 -9.9,21.4 0,11.2 4.4,20.4 9.9,21.4 v 0.1 h 344.2 v 0 c 5.5,-0.4 9.9,-9.9 9.9,-21.5 0,-11.6 -4.4,-21.1 -9.9,-21.5 z"
+   id="path266"
+   inkscape:connector-curvature="0" />
 				</g>
-				<g>
-					<ellipse class="st0" cx="589.2" cy="459.1" rx="9.7" ry="17.9"/>
-					<path d="M589.2,441.6c5,0,9.2,8,9.2,17.4c0,9.4-4.2,17.4-9.2,17.4c-5,0-9.2-8-9.2-17.4C580,449.6,584.2,441.6,589.2,441.6
-						 M589.2,440.6c-5.6,0-10.2,8.3-10.2,18.4c0,10.2,4.6,18.4,10.2,18.4c5.6,0,10.2-8.3,10.2-18.4
-						C599.5,448.9,594.9,440.6,589.2,440.6L589.2,440.6z"/>
+				<g
+   id="g274">
+					<path
+   class="st0"
+   d="m 589.2,477 c -5.4,0 -9.7,-8 -9.7,-17.9 0,-9.9 4.4,-17.9 9.7,-17.9 5.4,0 9.7,8 9.7,17.9 0.1,9.8 -4.3,17.9 -9.7,17.9 z"
+   id="path270"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
+					<path
+   d="m 589.2,441.6 c 5,0 9.2,8 9.2,17.4 0,9.4 -4.2,17.4 -9.2,17.4 -5,0 -9.2,-8 -9.2,-17.4 0,-9.4 4.2,-17.4 9.2,-17.4 m 0,-1 c -5.6,0 -10.2,8.3 -10.2,18.4 0,10.2 4.6,18.4 10.2,18.4 5.6,0 10.2,-8.3 10.2,-18.4 0.1,-10.1 -4.5,-18.4 -10.2,-18.4 z"
+   id="path272"
+   inkscape:connector-curvature="0" />
 				</g>
 			</g>
-		</g>
-		<text transform="matrix(1 0 0 1 276 466)" class="st7 st8">Netze logischer Switches (VXLAN)</text>
-	</g>
-	<g id="Layer_9">
-	</g>
-</g>
-<g id="management_vxlan">
-	<g id="Layer_6">
-	</g>
-	<g>
-		<g>
-			<path class="st17" d="M103.5,547.5L103.5,547.5l-0.4-0.1c-7.7-1.1-13.6-10.3-13.6-21.4s5.8-20.3,13.6-21.4l0.4-0.1v0h485.3l0.2,0
-				c7.6,0.4,13.5,9.8,13.5,21.5s-5.9,21.1-13.5,21.5l-0.4,0H103.5z"/>
-			<path d="M588.6,505l0.3,0c7.2,0.4,13.1,9.8,13.1,21s-5.9,20.6-13.1,21l-0.2,0H103.8l-0.7-0.1c-7.4-1-13.1-10.2-13.1-20.9
-				s5.8-19.9,13.1-20.9l0.7-0.1H588.6 M589,504H103v0.1c-7.9,1.1-14,10.5-14,21.9s6.1,20.8,14,21.9v0.1h486v0c7.8-0.4,14-10.1,14-22
-				C603,514.1,596.8,504.4,589,504L589,504L589,504z"/>
-		</g>
-		<g>
-			<path class="st0" d="M587.5,543.9c-5.5,0-10-8.2-10-18.4c0-10.1,4.5-18.4,10-18.4c5.5,0,10,8.2,10,18.4
-				C597.5,535.7,593,543.9,587.5,543.9z"/>
-			<path d="M587.5,507.7c5.1,0,9.5,8.2,9.5,17.9c0,9.7-4.4,17.9-9.5,17.9c-5.1,0-9.5-8.2-9.5-17.9
-				C578,515.9,582.4,507.7,587.5,507.7 M587.5,506.7c-5.8,0-10.5,8.4-10.5,18.9c0,10.4,4.7,18.9,10.5,18.9S598,536,598,525.6
-				C598,515.1,593.3,506.7,587.5,506.7L587.5,506.7z"/>
-		</g>
-	</g>
-	<text transform="matrix(1 0 0 1 121 533)" class="st7 st8">Management &amp; VXLAN -- Privates VLAN A (nativ)</text>
-</g>
-<g id="P_x2F_V">
-	<g>
-		<g>
-			<g>
-				<rect x="104.5" y="280" class="st18" width="47.3" height="47.3"/>
-				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="135.9627" y1="296.7212" x2="124.5096" y2="338.8456">
-					<stop  offset="0" style="stop-color:#CCE0F4"/>
-					<stop  offset="7.748765e-02" style="stop-color:#C5DDF3"/>
-					<stop  offset="0.1918" style="stop-color:#B1D5EF"/>
-					<stop  offset="0.329" style="stop-color:#90C9EA"/>
-					<stop  offset="0.4838" style="stop-color:#63B7E2"/>
-					<stop  offset="0.6515" style="stop-color:#2AA1D9"/>
-					<stop  offset="0.6829" style="stop-color:#1E9CD7"/>
-					<stop  offset="0.8652" style="stop-color:#0075BE"/>
-					<stop  offset="0.9944" style="stop-color:#005B97"/>
+		</g><text
+   class="st7 st8"
+   id="text280"
+   style="font-size:21px;font-family:MyriadPro-Regular"
+   x="269.10001"
+   y="461.5"><tspan
+     sodipodi:role="line"
+     id="tspan164"
+     x="269.10001"
+     y="461.5">Netz logischer Switches (VXLAN)</tspan></text>
+
+<g
+   id="g291"
+   transform="matrix(1.1980025,0,0,1,-82.558243,-4.5)">
+			<path
+   class="st17"
+   d="m 103.5,547.5 v 0 l -0.4,-0.1 C 95.4,546.3 89.5,537.1 89.5,526 c 0,-11.1 5.8,-20.3 13.6,-21.4 l 0.4,-0.1 v 0 h 485.3 0.2 c 7.6,0.4 13.5,9.8 13.5,21.5 0,11.7 -5.9,21.1 -13.5,21.5 h -0.4 z"
+   id="path287"
+   inkscape:connector-curvature="0"
+   style="fill:#f4ba51" />
+			<path
+   d="m 588.6,505 h 0.3 c 7.2,0.4 13.1,9.8 13.1,21 0,11.2 -5.9,20.6 -13.1,21 h -0.2 -484.9 l -0.7,-0.1 C 95.7,545.9 90,536.7 90,526 c 0,-10.7 5.8,-19.9 13.1,-20.9 l 0.7,-0.1 h 484.8 m 0.4,-1 H 103 v 0.1 c -7.9,1.1 -14,10.5 -14,21.9 0,11.4 6.1,20.8 14,21.9 v 0.1 h 486 v 0 c 7.8,-0.4 14,-10.1 14,-22 0,-11.9 -6.2,-21.6 -14,-22 z"
+   id="path289"
+   inkscape:connector-curvature="0" />
+		</g><g
+   id="g297"
+   transform="translate(35.1,-4.5)">
+			<path
+   class="st0"
+   d="m 587.5,543.9 c -5.5,0 -10,-8.2 -10,-18.4 0,-10.1 4.5,-18.4 10,-18.4 5.5,0 10,8.2 10,18.4 0,10.2 -4.5,18.4 -10,18.4 z"
+   id="path293"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
+			<path
+   d="m 587.5,507.7 c 5.1,0 9.5,8.2 9.5,17.9 0,9.7 -4.4,17.9 -9.5,17.9 -5.1,0 -9.5,-8.2 -9.5,-17.9 0,-9.7 4.4,-17.9 9.5,-17.9 m 0,-1 c -5.8,0 -10.5,8.4 -10.5,18.9 0,10.4 4.7,18.9 10.5,18.9 5.8,0 10.5,-8.5 10.5,-18.9 0,-10.5 -4.7,-18.9 -10.5,-18.9 z"
+   id="path295"
+   inkscape:connector-curvature="0" />
+		</g><text
+   style="font-size:21px;font-family:MyriadPro-Regular"
+   id="text301"
+   class="st7 st8"
+   x="75.808044"
+   y="528.5"><tspan
+     y="528.5"
+     x="75.808044"
+     id="tspan178"
+     sodipodi:role="line">Management &amp; VXLAN -- Privates VLAN A (nativ)</tspan></text>
+
+<g
+   id="P_x2F_V"
+   transform="translate(-6.9,-4.5)">
+	<g
+   id="g371">
+		<g
+   id="g369">
+			<g
+   id="g327">
+				<rect
+   x="104.5"
+   y="280"
+   class="st18"
+   width="47.299999"
+   height="47.299999"
+   id="rect304"
+   style="fill:#169adb;stroke:#9bccdd;stroke-width:0.5;stroke-miterlimit:10" />
+				<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="135.96271"
+   y1="296.72119"
+   x2="124.5096"
+   y2="338.84561">
+					<stop
+   offset="0"
+   style="stop-color:#CCE0F4"
+   id="stop306" />
+					<stop
+   offset="7.748766e-02"
+   style="stop-color:#C5DDF3"
+   id="stop308" />
+					<stop
+   offset="0.1918"
+   style="stop-color:#B1D5EF"
+   id="stop310" />
+					<stop
+   offset="0.329"
+   style="stop-color:#90C9EA"
+   id="stop312" />
+					<stop
+   offset="0.4838"
+   style="stop-color:#63B7E2"
+   id="stop314" />
+					<stop
+   offset="0.6515"
+   style="stop-color:#2AA1D9"
+   id="stop316" />
+					<stop
+   offset="0.6829"
+   style="stop-color:#1E9CD7"
+   id="stop318" />
+					<stop
+   offset="0.8652"
+   style="stop-color:#0075BE"
+   id="stop320" />
+					<stop
+   offset="0.9944"
+   style="stop-color:#005B97"
+   id="stop322" />
 				</linearGradient>
-				<polygon class="st19" points="106.3,325.5 150,281.8 150,325.5 				"/>
+				<polygon
+   class="st19"
+   points="150,325.5 106.3,325.5 150,281.8 "
+   id="polygon325"
+   style="fill:url(#SVGID_1_)" />
 			</g>
-			<text transform="matrix(1 0 0 1 108.084 315.4692)" class="st0 st13 st20">P</text>
-			<text transform="matrix(1 0 0 1 116.6836 324.0688)" class="st0 st13 st20">V</text>
-			<g>
-				<g>
-					<g>
-						<g>
-							<polygon class="st0" points="110.1,288.6 112.8,297.8 119.2,291.8 							"/>
+			<text
+   transform="translate(108.084,315.4692)"
+   class="st0 st13 st20"
+   id="text329"
+   style="font-size:11.46459961px;font-family:IBMPlexSans;fill:#ffffff"><tspan
+     sodipodi:role="line"
+     id="tspan195"
+     x="0"
+     y="0">P</tspan></text>
+
+
+			<text
+   transform="translate(116.6836,324.0688)"
+   class="st0 st13 st20"
+   id="text331"
+   style="font-size:11.46459961px;font-family:IBMPlexSans;fill:#ffffff"><tspan
+     sodipodi:role="line"
+     id="tspan198"
+     x="0"
+     y="0">V</tspan></text>
+
+
+			<g
+   id="g349">
+				<g
+   id="g339">
+					<g
+   id="g337">
+						<g
+   id="g335">
+							<polygon
+   class="st0"
+   points="119.2,291.8 110.1,288.6 112.8,297.8 "
+   id="polygon333"
+   style="fill:#ffffff" />
 						</g>
 					</g>
 				</g>
-				<g>
-					<g>
-						<g>
+				<g
+   id="g347">
+					<g
+   id="g345">
+						<g
+   id="g343">
 							
-								<rect x="117" y="293.5" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -172.128 163.1521)" class="st0" width="4.1" height="9"/>
+								<rect
+   x="117"
+   y="293.5"
+   transform="matrix(0.7268,-0.6868,0.6868,0.7268,-172.128,163.1521)"
+   class="st0"
+   width="4.0999999"
+   height="9"
+   id="rect341"
+   style="fill:#ffffff" />
 						</g>
 					</g>
 				</g>
 			</g>
-			<g>
-				<g>
-					<g>
-						<g>
-							<polygon class="st0" points="142.6,322.1 132.5,318.2 139.2,311.8 							"/>
+			<g
+   id="g367">
+				<g
+   id="g357">
+					<g
+   id="g355">
+						<g
+   id="g353">
+							<polygon
+   class="st0"
+   points="139.2,311.8 142.6,322.1 132.5,318.2 "
+   id="polygon351"
+   style="fill:#ffffff" />
 						</g>
 					</g>
 				</g>
-				<g>
-					<g>
-						<g>
+				<g
+   id="g365">
+					<g
+   id="g363">
+						<g
+   id="g361">
 							
-								<rect x="130.2" y="306.1" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -177.6229 175.9507)" class="st0" width="4.3" height="10.4"/>
+								<rect
+   x="130.2"
+   y="306.10001"
+   transform="matrix(0.7268,-0.6868,0.6868,0.7268,-177.6229,175.9507)"
+   class="st0"
+   width="4.3000002"
+   height="10.4"
+   id="rect359"
+   style="fill:#ffffff" />
 						</g>
 					</g>
 				</g>
@@ -357,83 +1150,279 @@
 		</g>
 	</g>
 </g>
-<g id="Layer_15">
-	<g>
-		<g>
-			<g>
-				<rect x="108.5" y="706.9" class="st18" width="38.1" height="38.1"/>
-				<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="133.8253" y1="720.3933" x2="124.6063" y2="754.3004">
-					<stop  offset="0" style="stop-color:#CCE0F4"/>
-					<stop  offset="7.748765e-02" style="stop-color:#C5DDF3"/>
-					<stop  offset="0.1918" style="stop-color:#B1D5EF"/>
-					<stop  offset="0.329" style="stop-color:#90C9EA"/>
-					<stop  offset="0.4838" style="stop-color:#63B7E2"/>
-					<stop  offset="0.6515" style="stop-color:#2AA1D9"/>
-					<stop  offset="0.6829" style="stop-color:#1E9CD7"/>
-					<stop  offset="0.8652" style="stop-color:#0075BE"/>
-					<stop  offset="0.9944" style="stop-color:#005B97"/>
+<g
+   id="Layer_15"
+   transform="translate(-78.9,-4.5)">
+	<g
+   id="g441">
+		<g
+   id="g439">
+			<g
+   id="g397">
+				<rect
+   x="108.5"
+   y="720.90002"
+   class="st18"
+   width="38.099998"
+   height="38.099998"
+   id="rect374"
+   style="fill:#169adb;stroke:#9bccdd;stroke-width:0.5;stroke-miterlimit:10" />
+				<linearGradient
+   id="SVGID_2_"
+   gradientUnits="userSpaceOnUse"
+   x1="133.8253"
+   y1="734.39331"
+   x2="124.6063"
+   y2="768.30042">
+					<stop
+   offset="0"
+   style="stop-color:#CCE0F4"
+   id="stop376" />
+					<stop
+   offset="7.748766e-02"
+   style="stop-color:#C5DDF3"
+   id="stop378" />
+					<stop
+   offset="0.1918"
+   style="stop-color:#B1D5EF"
+   id="stop380" />
+					<stop
+   offset="0.329"
+   style="stop-color:#90C9EA"
+   id="stop382" />
+					<stop
+   offset="0.4838"
+   style="stop-color:#63B7E2"
+   id="stop384" />
+					<stop
+   offset="0.6515"
+   style="stop-color:#2AA1D9"
+   id="stop386" />
+					<stop
+   offset="0.6829"
+   style="stop-color:#1E9CD7"
+   id="stop388" />
+					<stop
+   offset="0.8652"
+   style="stop-color:#0075BE"
+   id="stop390" />
+					<stop
+   offset="0.9944"
+   style="stop-color:#005B97"
+   id="stop392" />
 				</linearGradient>
-				<polygon class="st21" points="110,743.5 145.1,708.4 145.1,743.5 				"/>
+				<polygon
+   class="st21"
+   points="145.1,757.5 110,757.5 145.1,722.4 "
+   id="polygon395"
+   style="fill:url(#SVGID_2_)" />
 			</g>
-			<text transform="matrix(1 0 0 1 111.3848 735.484)" class="st0 st13 st22">P</text>
-			<text transform="matrix(1 0 0 1 118.3071 742.4059)" class="st0 st13 st22">V</text>
-			<g>
-				<g>
-					<g>
-						<g>
-							<polygon class="st0" points="113,713.9 115.2,721.3 120.3,716.4 							"/>
+			<text
+   transform="translate(111.3848,749.484)"
+   class="st0 st13 st22"
+   id="text399"
+   style="font-size:9.22819996px;font-family:IBMPlexSans;fill:#ffffff"><tspan
+     sodipodi:role="line"
+     id="tspan235"
+     x="0"
+     y="0">P</tspan></text>
+
+
+			<text
+   transform="translate(118.3071,756.4059)"
+   class="st0 st13 st22"
+   id="text401"
+   style="font-size:9.22819996px;font-family:IBMPlexSans;fill:#ffffff"><tspan
+     sodipodi:role="line"
+     id="tspan238"
+     x="0"
+     y="0">V</tspan></text>
+
+
+			<g
+   id="g419">
+				<g
+   id="g409">
+					<g
+   id="g407">
+						<g
+   id="g405">
+							<polygon
+   class="st0"
+   points="120.3,730.4 113,727.9 115.2,735.3 "
+   id="polygon403"
+   style="fill:#ffffff" />
 						</g>
 					</g>
 				</g>
-				<g>
-					<g>
-						<g>
+				<g
+   id="g417">
+					<g
+   id="g415">
+						<g
+   id="g413">
 							
-								<rect x="118.6" y="717.8" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -462.626 279.618)" class="st0" width="3.3" height="7.2"/>
+								<rect
+   x="118.6"
+   y="731.79999"
+   transform="matrix(0.7268,-0.6868,0.6868,0.7268,-472.2414,283.4423)"
+   class="st0"
+   width="3.3"
+   height="7.1999998"
+   id="rect411"
+   style="fill:#ffffff" />
 						</g>
 					</g>
 				</g>
 			</g>
-			<g>
-				<g>
-					<g>
-						<g>
-							<polygon class="st0" points="139.2,740.9 131,737.7 136.4,732.5 							"/>
+			<g
+   id="g437">
+				<g
+   id="g427">
+					<g
+   id="g425">
+						<g
+   id="g423">
+							<polygon
+   class="st0"
+   points="136.4,746.5 139.2,754.9 131,751.7 "
+   id="polygon421"
+   style="fill:#ffffff" />
 						</g>
 					</g>
 				</g>
-				<g>
-					<g>
-						<g>
+				<g
+   id="g435">
+					<g
+   id="g433">
+						<g
+   id="g431">
 							
-								<rect x="129.2" y="727.9" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -467.0598 289.9329)" class="st0" width="3.5" height="8.4"/>
+								<rect
+   x="129.2"
+   y="741.90002"
+   transform="matrix(0.7268,-0.6868,0.6868,0.7268,-476.6754,293.7574)"
+   class="st0"
+   width="3.5"
+   height="8.3999996"
+   id="rect429"
+   style="fill:#ffffff" />
 						</g>
 					</g>
 				</g>
 			</g>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 91 769)" class="st7 st15">NSX Edge</text>
+	<text
+   transform="translate(91,780)"
+   class="st7 st15"
+   id="text443"
+   style="font-size:18px;font-family:MyriadPro-Regular"><tspan
+     sodipodi:role="line"
+     id="tspan261"
+     x="0"
+     y="0">NSX Edge</tspan></text>
+
+
 </g>
-<g id="Layer_16">
-	<g>
-		<g>
-			<rect x="223" y="708" class="st23" width="42" height="37"/>
-			<rect x="264.1" y="708" class="st24" width="91.9" height="37"/>
+<g
+   id="Layer_16"
+   transform="translate(-106.9,-4.5)">
+	<g
+   id="g456">
+		<g
+   id="g450">
+			<rect
+   x="223"
+   y="722"
+   class="st23"
+   width="42"
+   height="37"
+   id="rect446"
+   style="fill:#2b6782" />
+			<rect
+   x="264.10001"
+   y="722"
+   class="st24"
+   width="91.900002"
+   height="37"
+   id="rect448"
+   style="fill:#1e4c66" />
 		</g>
-		<text transform="matrix(1 0 0 1 229.2979 732.4043)" class="st0 st7 st25">VM</text>
-		<text transform="matrix(1 0 0 1 269.9365 732.4043)" class="st0 st7 st25">HCX-Cloud</text>
+		<text
+   transform="translate(229.2979,746.4043)"
+   class="st0 st7 st25"
+   id="text452"
+   style="font-size:16.53190041px;font-family:MyriadPro-Regular;fill:#ffffff"><tspan
+     sodipodi:role="line"
+     id="tspan268"
+     x="0"
+     y="0">VM</tspan></text>
+
+
+		<text
+   transform="translate(269.9365,746.4043)"
+   class="st0 st7 st25"
+   id="text454"
+   style="font-size:16.53190041px;font-family:MyriadPro-Regular;fill:#ffffff"><tspan
+     sodipodi:role="line"
+     id="tspan271"
+     x="0"
+     y="0">HCX-Cloud</tspan></text>
+
+
 	</g>
-	<text transform="matrix(1 0 0 1 229 767)" class="st7 st15">HCX-Manager</text>
+	<text
+   transform="translate(229,780)"
+   class="st7 st15"
+   id="text458"
+   style="font-size:18px;font-family:MyriadPro-Regular"><tspan
+     sodipodi:role="line"
+     id="tspan275"
+     x="0"
+     y="0">HCX-Manager</tspan></text>
+
+
 </g>
-<g id="VM_HCX">
-	<g>
-		<g>
-			<rect x="146" y="360.8" class="st23" width="52.1" height="47"/>
-			<rect x="197" y="360.8" class="st24" width="114" height="47"/>
-		</g>
-		<text transform="matrix(1 0 0 1 154 391.75)" class="st0 st7 st8">VM</text>
-		<text transform="matrix(1 0 0 1 205 391.75)" class="st0 st7 st8">HCX-Cloud</text>
-	</g>
+<g
+   id="g362"
+   transform="translate(-6.9,-4.5)"><g
+     id="g465">
+			<rect
+   style="fill:#2b6782"
+   id="rect461"
+   height="47"
+   width="52.099998"
+   class="st23"
+   y="360.79999"
+   x="146" />
+			<rect
+   style="fill:#1e4c66"
+   id="rect463"
+   height="47"
+   width="114"
+   class="st24"
+   y="360.79999"
+   x="197" />
+		</g><text
+     y="391.75"
+     x="154"
+     style="font-size:21px;font-family:MyriadPro-Regular;fill:#ffffff"
+     id="text467"
+     class="st0 st7 st8"><tspan
+       y="391.75"
+       x="154"
+       id="tspan282"
+       sodipodi:role="line">VM</tspan></text>
+<text
+     y="391.75"
+     x="199"
+     style="font-size:21px;font-family:MyriadPro-Regular;fill:#ffffff"
+     id="text469"
+     class="st0 st7 st8"><tspan
+       y="391.75"
+       x="199"
+       id="tspan285"
+       sodipodi:role="line">HCX-Cloud</tspan></text>
 </g>
 </svg>

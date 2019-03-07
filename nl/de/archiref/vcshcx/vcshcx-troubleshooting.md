@@ -67,4 +67,4 @@ Bei der Arbeit mit dem L2-Konzentrator wurden praktisch keine Fehler festgestell
 ## Zugehörige Links
 {: #vcshcx-troubleshooting-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

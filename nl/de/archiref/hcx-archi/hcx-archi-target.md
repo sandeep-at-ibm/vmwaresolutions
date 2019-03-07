@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # VMware HCX on IBM Cloud - Zielarchitektur auf Komponentenebene
+{: #hcx-archi-target}
 
 In diesem Abschnitt wird die Architektur der einzelnen HCX-Komponenten beschrieben, die in der IBM Cloud-Umgebung bereitgestellt werden. Es wird das Peripherie- (Ziel-) Bereitstellungsmodell innerhalb von IBM Cloud erläutert.
 
 ## NSX Edge
+{: #hcx-archi-target-nsx-edge}
 
 Die erste Komponente, die in IBM Cloud konfiguriert wird, ist ein Paar von virtuellen NSX Edge-Maschinen. Es ist wichtig zu beachten, dass alle IBM Cloud for VMware Solutions-Bereitstellungen eine Edge-Einheit für die abgehende Kommunikation von IBM CloudDriver installieren und konfigurieren. Wenngleich diese ESG für die Kommunikation von Hybrid-Cloud-Services wiederverwendet werden kann, wird empfohlen, ein neues Paar bereitzustellen.
 
@@ -91,6 +93,7 @@ Tabelle 7. Poolkonfiguration für NSX Edge - Pooldetails
 | Min. Verbindungen | 0         |
 
 ## HCX-Manager
+{: #hcx-archi-target-hcxm}
 
 Die HCX-Manager-Komponente ist die erste Appliance, die bereitgestellt wird, nachdem die NSX Edge-Appliances für das Ziel konfiguriert wurden. Diese Appliance wird als Hauptschnittstelle zur Cloud-Umgebung für die Quellenkomponenten verwendet und bildet eine abstrahierte Netzbenutzerschnittstelle, die zum Hinzufügen, Bearbeiten und Löschen von Netzen sowie zum Entwerfen und Konfigurieren von Routing ohne direkte Verwendung von NSX verwendet werden kann. Als Ergebnis der Integration von vCenter und NSX wird der HCX-Manager-Appliance eine private portierbare IP-Adresse im Management-VLAN zugeordnet.
 
@@ -102,6 +105,7 @@ Abbildung 1. Ziel - Hybrid-Cloud-Services-Appliance
 ![Ziel - Hybrid-Cloud-Services-Appliance](target_hybrid_cloud_services_appliance.svg)
 
 ## Cloud-Gateway
+{: #hcx-archi-target-cloud-gateway}
 
 Eine virtuelle Appliance wird bereitgestellt, nachdem eine Verbindung zwischen der Quelle und der Ziel-Cloud hergestellt wurde. Diese Appliance ist das Cloud-Gateway (CGW), das verwendet wird, um einen sicheren Kanal zwischen der als Quelle festgelegten vSphere-Umgebung und IBM Cloud zu verwalten. Die Dimensionierung der CGW-Appliance, die in IBM Cloud bereitgestellt wird, ist in Tabelle 3 zur Cloud-Gateway-Bereitstellung aufgeführt.
 
@@ -123,6 +127,7 @@ Abbildung 2. Cloud-Gateway-Bereitstellung
 ![Cloud-Gateway-Bereitstellung](cloud_gateway_deployment.svg)
 
 ## WAN-Optimierungsprogramm
+{: #hcx-archi-target-wan-opt}
 
 Die zweite Komponente, die bereitgestellt wird, ist die Appliance des WAN-Optimierungsprogramms. Das WAN-Optimierungsprogramm ist zwar optional, aber es setzt WAN-Bedingungen, um die Auswirkungen der Latenzzeit zu reduzieren. Zudem enthält es eine vorwärtsgerichtete Fehlerkorrektur zur Behebung von Szenarios mit Paketverlusten und Deduplizierung von redundanten Datenverkehrsmustern.
 
@@ -142,6 +147,7 @@ Abbildung 3. Bereitstellung des WAN-Optimierungsprogramms
 ![Bereitstellung des WAN-Optimierungsprogramms](wan_optimizer_deployment.svg)
 
 ## Layer-2-Konzentrator
+{: #hcx-archi-target-layer-2-conc}
 
 Die dritte Komponente wird als "Layer-2-Konzentrator" (L2-Konzentrator oder L2C) bezeichnet und ist Teil der Network Extension Services. Der L2C ist die virtuelle Maschine, die die Erweiterung von lokalen Rechenzentrumsnetzen hin zu IBM Cloud ermöglicht. Der L2C erweitert lokale VLANs und/oder VXLANs. Jeder L2C bietet eine Erweiterung auf bis zu 4096 VLANs. Bei Paarung mit seinem lokalen Partner kann jeder L2C bis zu 1 Gb/s pro "Fluss" und bis zu einem Aggregat von 4 Gb/s pro VLAN (oder VXLAN) bereitstellen. Wenn mehr Netzdurchsätze erforderlich sind, wird auch die Bereitstellung von weiteren L2C-Appliances unterstützt.
 
@@ -160,6 +166,7 @@ Die L2C-Appliance wird sowohl im Management-VLAN als auch im öffentlichen VLAN 
 Abbildung 4. Bereitstellung des L2-Konzentrators
 ![Bereitstellung des L2-Konzentrators](l2_concentrator_deployment.svg)
 
-### Zugehörige Links
+## Zugehörige Links
+{: #hcx-archi-target-related}
 
-* [Installation und Konfiguration in der Quelle](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-source.html)
+* [Installation und Konfiguration in der Quelle](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-source)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Übersicht über IBM Cloud Private Hosted
+{: #icp_overview}
 
 Der Service "{{site.data.keyword.cloud}} Private Hosted" führt eine automatische Bereitstellung von {{site.data.keyword.cloud_notm}} Private Hosted auf Ihren VMware vCenter Server-Instanzen durch. Dieser Service stellt die Leistungsfähigkeit von Mikroservices und Containern in Ihrer VMware-Umgebung unter {{site.data.keyword.cloud_notm}} zur Verfügung. Mit diesem Service können Sie den Einsatz des bereits vertrauten VMware- und {{site.data.keyword.cloud_notm}} Private-Betriebsmodells und der zugehörigen Tools von Ihrem lokalen Standort (On-Premises) auf {{site.data.keyword.cloud_notm}}-Umgebungen erweitern.
 
@@ -22,6 +23,7 @@ Dieser Service ist für die folgenden Instanzen verfügbar:
 {:note}
 
 ## Technische Spezifikationen für IBM Cloud Private Hosted
+{: #technical-specifications-for-ibm-cloud-private-hosted}
 
 In der folgenden Tabelle sind die Mindestvoraussetzungen für die Bestellung von IBM Cloud Private Hosted Service für die **Produktionsumgebung** und die **Entwicklungs-/Testumgebung** aufgeführt.
 
@@ -33,6 +35,7 @@ Tabelle 1. Mindestvoraussetzungen für Produktions- und Entwicklungs-/Testumgebu
 | Entwicklung/Test | 30 | 200 | 3 | 4.000 |
 
 ### Ressourcenbedarf für IBM Cloud Private Hosted
+{: #resource-requirements-for-ibm-cloud-private-hosted}
 
 In den folgenden Tabellen werden die Ressourcenanforderungen für den {{site.data.keyword.cloud_notm}} Private Hosted-Service in Produktions- und Entwicklungs-/Testumgebungen aufgelistet.
 
@@ -69,10 +72,12 @@ Tabelle 3. {{site.data.keyword.cloud_notm}} Private Hosted-Ressourcenanforderung
 | Dokumentierte Einschränkungen | 30 | 200 |  | 4.000 |  |
 
 ### Formeln für die Berechnung des Speicherbedarfs von IBM Cloud Private Hosted
+{: #icp_overview-formulas}
 
 Die folgenden Formeln werden verwendet, um den Speicherbedarf von IBM Cloud Private und den Managementaufwand zu berechnen.
 
 #### Formel 1
+{: #icp_overview-formulas-1}
 
 `AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
@@ -89,6 +94,7 @@ Tabelle 4. Beschreibung der Variablen in Formel 1
 | HostVsanOverheadCorePercentage | Der Prozentsatz der von vSAN verwendeten Kerne eines Hosts (entspricht 10 % oder 0 % (falls der Host kein vSAN-Host ist) | % | 10% |	0% |
 
 #### Formel 2
+{: #icp_overview-formulas-2}
 
 `AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
@@ -107,18 +113,21 @@ Tabelle 5. Beschreibung der Variablen in Formel 2
 | HostVsanOverheadMemory | Der Speicher in GB, der vom vSAN-Management reserviert wird (unabhängig von der Plattengröße) - entspricht 7 GB oder 0 GB (falls der Host kein vSAN-Host ist)	| GB |  7	| 0 |
 
 ## Hinweise zur Installation von IBM Cloud Private Hosted
+{: #icp_overview-install}
 
 * Stellen Sie sicher, dass Sie über die erforderliche Lizenz verfügen, bevor Sie den {{site.data.keyword.cloud_notm}} Private Hosted-Service installieren. Vergewissern Sie sich, dass Ihre Lizenz nicht nur die erste {{site.data.keyword.cloud_notm}} Private Hosted-Bereitstellung unterstützt, sondern auch eine zukünftige Erweiterung Ihrer {{site.data.keyword.cloud_notm}} Private Hosted-Infrastruktur berücksichtigt.
 * Für die {{site.data.keyword.cloud_notm}} Private Hosted-Bereitstellungen in einer einsatzbereiten Umgebung werden 64 GB RAM pro Host nicht unterstützt. Aus diesem Grund müssen Sie eine Option auswählen, die größer als 64 GB für **RAM** ist.
 * Bevor der Service "{{site.data.keyword.cloud_notm}} Private Hosted" in Ihrer Umgebung installiert wird, wird eine Prüfung für die verfügbare Kapazität des Standardclusters in der Umgebung ausgeführt, um sicherzustellen, dass die Servicekomponenten angepasst werden können. Wenn die Kapazitätsprüfung fehlschlägt, wird der Service nicht installiert und der Servicestatus wird in der Konsole auf **Kapazitätsprüfung fehlgeschlagen** festgelegt. Darüber hinaus wird eine Konsolennachricht mit weiteren Details angezeigt und Sie werden per E-Mail benachrichtigt. Um den Service zu installieren, müssen Sie die Kapazität in Ihrem Standardcluster erhöhen, indem Sie entweder mehr Hosts hinzufügen oder Arbeitsspeicher, CPU oder Plattenspeicherplatz freigeben und anschließend den Service in der Konsole erneut hinzufügen. Danach können Sie den vorhandenen Service mit dem Status **Kapazitätsüberprüfung fehlgeschlagen** entfernen, indem Sie auf das Symbol **Löschen** neben dem Service klicken.
 
 ## Hinweise zur Deinstallation von IBM Cloud Private Hosted
+{: #icp_overview-remove}
 
 * {{site.data.keyword.cloud_notm}} löscht nur die virtuellen Maschinen (VMs), die während der Erstinstallation des {{site.data.keyword.cloud_notm}} Private Hosted-Service bereitgestellt wurden. Jeder nach der Installation bereitgestellte Knoten wird nicht bereinigt.
 * {{site.data.keyword.cloud_notm}} löscht das VXLAN, den DLR und das Edge-Gateway, das während der ersten Bereitstellung des {{site.data.keyword.cloud_notm}} Private Hosted-Service erstellt wurde. Die VMs, die Sie in VXLAN bereitgestellt haben, verlieren die Verbindung, sobald der {{site.data.keyword.cloud_notm}} Private Hosted-Service gestartet wird.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #icp_overview-related}
 
-* [IBM Cloud Private Hosted bestellen](/docs/services/vmwaresolutions/services/icp_ordering.html)
-* [vCenter Server und IBM Cloud Private - Leitfaden](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [IBM Cloud Private Hosted bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
+* [vCenter Server und IBM Cloud Private - Leitfaden](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Ticket für IBM Cloud Private öffnen](https://www.ibm.com/mysupport/s/?language=en_US)

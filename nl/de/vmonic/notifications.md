@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # Systembenachrichtigungen verwalten
+{: #notifications}
 
 Sie können Benachrichtigungen über den Status von System- oder Benutzeroperationen überprüfen. Mithilfe der Informationen können Sie darüber hinaus potenzielle Probleme überprüfen.
 
 ## Benachrichtigungen anzeigen
+{: #notifications-view}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Benachrichtigungen**.
 2. Zeigen Sie die Zusammenfassung zu allen Benachrichtigungen an.
@@ -68,10 +70,12 @@ Sie können Benachrichtigungen über den Status von System- oder Benutzeroperati
 3. Klicken Sie auf die Zeile für eine Benachrichtigung, um die Details der Benachrichtigung anzuzeigen.
 
 ## Benachrichtigungen filtern
+{: #notifications-filter}
 
 Standardmäßig werden alle nicht gelesenen Benachrichtigungen angezeigt. Sie können die Benachrichtigungen nach Status, Prioritätsstufe und Typ filtern. Wählen Sie zum Filtern der Benachrichtigungen in den Listen **Status**, **Prioritätsstufe** oder **Typ** nur die Kontrollkästchen für die Elemente aus, die angezeigt werden sollen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #notifications-related}
 
-* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [Benutzerkonten und -einstellungen](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Benutzerkonten und -einstellungen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)

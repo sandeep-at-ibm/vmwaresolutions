@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Skalierungskapazität
+{: #solution_scaling}
 
 Nach der Erstimplementierung können Sie die Rechenkapazität über die Konsole von {{site.data.keyword.vmwaresolutions_full}} skalieren. Das Design unterstützt die folgenden Scale-out-Pfade:
 * Hinzufügen neuer Standorte (Sites), die von separaten vCenter-Servern verwaltet werden
@@ -20,6 +21,7 @@ Nach der Erstimplementierung können Sie die Rechenkapazität über die Konsole 
 * Hinzufügen neuer Hosts zu einem vorhandenen Cluster
 
 ## Weitere Standorte (Sites) hinzufügen
+{: #solution_scaling-sites}
 
 {{site.data.keyword.vmwaresolutions_short}} kann dank der weltweiten Verfügbarkeit von {{site.data.keyword.cloud_notm}}-Rechenzentren und des integrierten Netzbackbones die Bereitstellung und Funktion verschiedener Anwendungsfälle in unterschiedlichsten Regionen unterstützen, und dies unter einem Bruchteil des Zeitaufwands, der ansonsten zum Neuaufbau einer solchen Infrastruktur erforderlich wäre.
 
@@ -35,6 +37,7 @@ In diesem Design besteht die Definition einer Bereitstellung mit mehreren Stando
 Darüber hinaus kann der NSX-Manager an sekundären Standorten als sekundärer NSX-Manager für den NSX-Manager am primären Standort konfiguriert werden.
 
 ## Neue Cluster hinzufügen
+{: #solution_scaling-clusters}
 
 Sie können die Rechenkapazität auch dadurch skalieren, dass Sie einen neuen Cluster über die Konsole von {{site.data.keyword.vmwaresolutions_short}} erstellen und neue Hosts bestellen, die dem neuen Cluster automatisch hinzugefügt werden.
 
@@ -48,11 +51,13 @@ Wenn der erste Cluster in einen reinen Management-Cluster konvertiert wird, erfo
 {:note}
 
 ## ESXi-Hosts in vorhandenen Clustern hinzufügen
+{: #solution_scaling-hosts}
 
 Sie können einen vorhandenen Cluster skalieren, indem Sie Hosts über die Konsole von {{site.data.keyword.vmwaresolutions_short}} bestellen.  Die neuen Hosts werden dem Cluster automatisch hinzugefügt. Beachten Sie, dass Sie die Reservierungsrichtlinie für Hochverfügbarkeit (HA) für den Cluster entsprechend Ihren Reservierungsanforderungen möglicherweise anpassen müssen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #solution_scaling-related}
 
-* [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [Übersicht über das Design](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [Komponenten sichern](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [Übersicht über das Design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [Komponenten sichern](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

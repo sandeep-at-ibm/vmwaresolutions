@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server-Instanzen anzeigen
+{: #vc_viewinginstances}
 
 Sie können die Zusammenfassung und die detaillierten Informationen der VMware vCenter Server-Instanzen anzeigen, die für verschiedene Benutzerkonten bereitgestellt wurden.
 
 ## Vorgehensweise zum Anzeigen einer Zusammenfassung der vCenter Server-Instanzen
+{: #vc_viewinginstances-procedure-view-inst-summary}
 
 Wenn Sie eine Zusammenfassung aller vCenter Server-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
 
@@ -51,6 +53,7 @@ Tabelle 2. Statusbeschreibungen der vCenter Server-Instanzen
 | Gelöscht | Die Instanz wurde gelöscht. |
 
 ## Vorgehensweise zum Anzeigen von Eigenschaftsdetails einer vCenter Server-Instanz
+{: #vc_viewinginstances-procedure-view-inst-property}
 
 Gehen Sie wie folgt vor, um die Eigenschaftsdetails einer Instanz anzuzeigen:
 
@@ -76,6 +79,7 @@ Tabelle 3. Eigenschaften von vCenter Server-Instanzen
 | Status  | Der Status der Instanz.<br><br>Die angezeigten Informationen aktualisieren den Verarbeitungsfortschritt bei der Bereitstellung bzw. der für die Instanz ausgeführten Aktion. Falls Probleme auftreten, wird möglicherweise eine Nachricht angezeigt, die Sie bei der Untersuchung und Lösung des Problems unterstützt. |
 
 ## Vorgehensweise zum Anzeigen der Zugriffsinformationen für vCenter Server-Instanzen
+{: #vc_viewinginstances-procedure-view-access-info}
 
 Zeigen Sie unter **Zugriffsinformationen** die Zugriffsinformationen für die instanzbezogenen Komponenten an. Bei den angezeigten Kennwörtern handelt es sich um Anfangskennwörter, die vom System generiert werden. Wenn Sie sie außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden sie auf der Seite mit der Instanzzusammenfassung nicht aktualisiert.
 
@@ -95,6 +99,7 @@ Tabelle 4. vCenter Server-Zugriffsinformationen für instanzbezogene Komponenten
 | vCenter-SSH  | Der Benutzername und das Kennwort, die Sie für den Zugriff auf die VM für vCenter Server über eine SSH-Verbindung verwenden können.  |
 
 ## Vorgehensweise zum Anzeigen des Bereitstellungsverlaufs für vCenter Server-Instanzen
+{: #vc_viewinginstances-procedure-view-deploy-history}
 
 Klicken Sie im linken Navigationsfenster auf **Bereitstellungsverlauf**, um den Bereitstellungsverlauf für die Instanz anzuzeigen.
 
@@ -106,10 +111,12 @@ Tabelle 5. Bereitstellungsverlauf der vCenter Server-Instanz
 | Zusammenfassung | Die Details der Änderung. |
 
 ## Nächste Schritte bei aufgetretenen Fehlern
+{: #vc_viewinginstances-if-errors-occur}
 
-Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, wird automatisch das {{site.data.keyword.cloud_notm}}-Support-Team benachrichtigt. Um den Status Ihres Tickets abzufragen, können Sie den [IBM Support kontaktieren](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, wird automatisch das {{site.data.keyword.cloud_notm}}-Support-Team benachrichtigt. Um den Status Ihres Tickets abzufragen, können Sie den [IBM Support kontaktieren](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Nächste Schritte
+{: #vc_viewinginstances-next}
 
 Nun können Sie Ihre Instanzen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole oder in VMware vSphere Web Client verwalten.
 
@@ -117,13 +124,14 @@ Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** k
 {:important}
 
 In den folgenden Abschnitten finden Sie Informationen, die Sie bei der Ausführung der Anmeldeanweisungen unterstützen:
-*  Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
+*  Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
 *  Eine Liste der Zugriffspunkte für die Anmeldung beim privaten Netz der {{site.data.keyword.cloud_notm}}-Infrastruktur mittels VPN finden Sie unter [VPN-Zugriff](http://www.softlayer.com/vpn-access){:new_window}.
-*  Falls Sie beim Bereitstellen einer Datei im Format "OVF" (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html) weitere Informationen.
+*  Falls Sie beim Bereitstellen einer Datei im Format "OVF" (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf) weitere Informationen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vc_viewinginstances-related}
 
-* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
-* [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [vCenter Server-Instanzen löschen](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [vCenter Server-Instanzen löschen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)

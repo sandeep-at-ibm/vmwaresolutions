@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-26"
+lastupdated: "2019-02-15"
 
 ---
 
 # Baselines erstellen und an Bestandsobjekte anhängen
+{: #vum-baselines}
 
 Baselines enthalten eine Sammlung von Patches, Erweiterungen, Service-Packs, Fehlerkorrekturen oder Upgrades und können als Patch-, Erweiterungs- oder Upgrade-Baselines klassifiziert werden. Baselinegruppen setzen sich aus vorhandenen Baselines zusammen. Host-Baseline-Gruppen können eine einzelne Upgrade-Baseline und verschiedene Patch- und Erweiterungsbaselines enthalten. Die Baselinegruppen für virtuelle Maschinen und virtuelle Appliances können bis zu drei Upgrade-Baselines enthalten: eine VMware Tools-Upgrade-Baseline, eine Hardware-Upgrade-Baseline für virtuelle Maschinen und eine Upgrade-Baseline für virtuelle Appliances.
 
@@ -32,7 +33,8 @@ Wenn Sie Baselines und Baselinegruppen verwenden möchten, müssen Sie sie an au
 2. Klicken Sie auf das Clusterobjekt, das Sie prüfen möchten.
 3. Klicken Sie auf **Baseline anhängen**, wählen Sie dann die beiden vordefinierten Patch-Baselines aus und klicken Sie anschließend auf **OK**.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vum-baselines-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

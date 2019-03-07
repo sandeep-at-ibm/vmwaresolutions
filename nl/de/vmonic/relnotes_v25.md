@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-08-30"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-08-30"
 {:important: .important}
 
 # Releaseinformationen für V2.5
+{: #relnotes_v25}
 
 Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -24,11 +25,11 @@ Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserung
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Weitere Informationen enthält der Abschnitt [Gegenmaßnahmen für Sicherheitslücken "Spectre" und "Meltdown"](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
+Weitere Informationen enthält der Abschnitt [Gegenmaßnahmen für Sicherheitslücken "Spectre" und "Meltdown"](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre).
 
 ## NSX-Komponentenaktualisierung
 
-Mit diesem Release wird VMware NSX for vSphere 6.4.1 für neue Bereitstellungen von VMware vCenter Server auf {{site.data.keyword.cloud_notm}}, von VMware vCenter Server auf {{site.data.keyword.cloud_notm}} with Hybridity Bundle, von NetApp ONTAP Select sowie von VMware Federal auf {{site.data.keyword.cloud_notm}} installiert.
+Mit diesem Release wird VMware NSX for vSphere 6.4.1 für neue Bereitstellungen von VMware vCenter Server auf {{site.data.keyword.cloud_notm}}, von VMware vCenter Server auf {{site.data.keyword.cloud_notm}} with Hybridity Bundle  und von NetApp ONTAP Select installiert.
 
 ## Entfernen der Standardsicherungskonfiguration
 
@@ -36,7 +37,7 @@ Mit diesem Release wird VMware NSX for vSphere 6.4.1 für neue Bereitstellungen 
 
 Ab Release V2.5 führen die Services "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" und "Veeam on {{site.data.keyword.cloud_notm}}", wenn sie bereitgestellt werden, keine Vorkonfiguration der Sicherung von VMs mehr durch. Durch diese Änderung können Sie die ordnungsgemäße Konfiguration aller Aspekte Ihrer Sicherungsjobs, wie Zeitplan, Aufbewahrungsdauer, Verwendung der Deduplizierung, Überwachung und Alerts sowie Management von Verschlüsselungsschlüsseln sicherstellen. Darüber hinaus wird die IBM CloudDriver-VM nicht mehr als persistenter Dateiserver für NSX-Sicherungen konfiguriert.
 
-Sie sind für die Konfiguration, Verwaltung und Überwachung sämtlicher Softwarekomponenten verantwortlich. Dies schließt die Sicherung der Managementinfrastruktur und Workloads sowie die Gewährleistung der Verfügbarkeit dieser Komponenten ein. Weitere Informationen finden Sie unter [Komponenten sichern](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#backing-up-components).
+Sie sind für die Konfiguration, Verwaltung und Überwachung sämtlicher Softwarekomponenten verantwortlich. Dies schließt die Sicherung der Managementinfrastruktur und Workloads sowie die Gewährleistung der Verfügbarkeit dieser Komponenten ein. Weitere Informationen finden Sie unter [Komponenten sichern](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#backing-up-components).
 
 Diese Änderung wirkt sich nicht auf Instanzen aus, die vor Version 2.5 bereitgestellt wurden und für die bereits der Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" oder Veeam on {{site.data.keyword.cloud_notm}} installiert wurde.
 {:note}
@@ -55,8 +56,8 @@ Ab dem Release von Version 2.5 ist {{site.data.keyword.vmwaresolutions_short}} i
 * Bei Instanzen, die in Version 2.4 und früheren Releases bereitgestellt wurden, können Sie diese auf ein {{site.data.keyword.cloud_notm}}-Konto migrieren und anschließend ebenfalls mithilfe von IAM verwalten.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Benutzer für den Zugriff auf Services und Ressourcen einladen](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
-* [Benutzerzugriff mit IAM verwalten](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [Benutzer für den Zugriff auf Services und Ressourcen einladen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
+* [Benutzerzugriff mit IAM verwalten](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
 
 ## Änderungen an Benutzerkonten und -gruppen für VMware vCenter Server- und VMware Cloud Foundation-Instanzen
 
@@ -66,12 +67,12 @@ Bearbeiten Sie keine globalen Berechtigungen der Gruppe **ic4v-vCenter** auf der
 
 Verwenden Sie für Cloud Foundation-Instanzen die Hostbenutzer-ID **customerroot** anstelle der Hostbenutzer-ID **root**.
 
-Verwenden Sie für vCenter Server-Instanzen weiterhin die Hostbenutzer-ID **root**. Die Hostbenutzer-ID **ic4vroot** wurde ausschließlich zur Verwendung durch IBM erstellt. 
+Verwenden Sie für vCenter Server-Instanzen weiterhin die Hostbenutzer-ID **root**. Die Hostbenutzer-ID **ic4vroot** wurde ausschließlich zur Verwendung durch IBM erstellt.
 
 Weitere Informationen zu Benutzerkonten finden Sie in den folgenden Abschnitten:
 
-* [Hinweise zum Ändern von vCenter Server-Artefakten](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
-* [Hinweise zum Ändern von Cloud Foundation-Artefakten](/docs/services/vmwaresolutions/sddc/cf_chg_impact.html)
+* [Hinweise zum Ändern von vCenter Server-Artefakten](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)
+* [Hinweise zum Ändern von Cloud Foundation-Artefakten](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cf_chg_impact)
 
 ## Updates für Add-on-Services
 
@@ -99,7 +100,7 @@ Weitere Informationen enthält der Abschnitt zur [Konfiguration des Service "KMI
 
 ### Dokumentation zu angehängtem Speicher
 
-Das technische Dokument zu angehängtem Speicher (Attached Storage) für vCenter Server on IBM Cloud ist jetzt im Abschnitt *Referenzinformationen* der Benutzerdokumentation verfügbar. Weitere Informationen finden Sie in [Angehängter Speicher für vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/attached-storage/storage-benefits.html).
+Das technische Dokument zu angehängtem Speicher (Attached Storage) für vCenter Server on IBM Cloud ist jetzt im Abschnitt *Referenzinformationen* der Benutzerdokumentation verfügbar. Weitere Informationen finden Sie in [Angehängter Speicher für vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits).
 
 ### Technische Spezifikationen
 
@@ -111,9 +112,9 @@ Die Informationen zu Services wurden verbessert, sodass sich die Unterstützung 
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 
-* [Verfügbare Services für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
-* [Verfügbare Services für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [Verfügbare Services für Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
+* [Verfügbare Services für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)
+* [Verfügbare Services für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [Verfügbare Services für Cloud Foundation-Instanzen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices#available-services-for-cloud-foundation-instances)
 
 ## Updates und Erweiterungen der Benutzerschnittstelle
 

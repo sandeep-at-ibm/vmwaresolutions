@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-08-28"
 
 ---
 
 # Releaseinformationen für V1.8
+{: #relnotes_v18}
 
 Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -19,8 +20,8 @@ Der Service "Fortinet on {{site.data.keyword.cloud_notm}}" ist jetzt für Cloud 
 Nachdem der Fortinet-Service erfolgreich installiert wurde, können Sie Firewallregeln für FSA über die FortiGate-Konsole verwalten und konfigurieren. Sie müssen sicherstellen, dass die FSA-Firewallregeln definiert sind, um abgehende HTTPS-Übertragungen zu ermöglichen, die von Managementkomponenten wie der virtuellen Maschine von IBM CloudDriver oder von Zerto Virtual Manager eingeleitet werden, um mit der externen Managementdatenbank in IBM Bluemix® über das Internet zu kommunizieren. Die abgehende HTTPS-Kommunikation stammt aus der öffentlichen IP-Adresse der Management-Services für VMware NSX Edge Services Gateway (ESG) in Ihrer Instanz.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Fortinet on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/fsa_considerations.html)
-* [Fortinet on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managingfsa.html)
+* [Fortinet on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)
+* [Fortinet on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
 
 ## Service "Veeam on IBM Cloud"
 
@@ -31,8 +32,8 @@ Aufgrund dieser Änderung sind die Sicherungspunkte für die Instanzen nicht meh
 Darüber hinaus läuft die Lizenz der virtuellen Serverinstanz für Veeam in Instanzen aus Releases vor V1.8 am 14. Oktober 2017 ab. Daher müssen Sie die vorherige virtuelle Serverinstanz für Veeam so bald wie möglich durch den neuen Veeam-Service ersetzen.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Veeam on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/veeam_considerations.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managingveeam.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [Veeam on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
 ## Updates für VMware Cloud Foundation-Instanzen
 
@@ -43,8 +44,8 @@ Ab Release V1.8 haben Sie bei der Bestellung einer Cloud Foundation-Instanz zwei
 Sie können aber auch die Verwendung Ihrer eigenen VMware-Lizenz für eine Komponente auswählen. In diesem Fall müssen Sie die Lizenzschlüssel bereitstellen. Die Unterstützung für die VMware-Komponenten, für die Sie Lizenzen selbst bereitstellen, erhalten Sie dann durch VMware und nicht durch den IBM Support.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Häufig gestellte Fragen zu eigenen Lizenzen (BYOL)](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Häufig gestellte Fragen zu eigenen Lizenzen (BYOL)](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## Updates für VMware vCenter Server-Instanzen
 
@@ -53,22 +54,22 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 Neben den vordefinierten und getesteten Optionen "S (Klein)", "M (Mittel)" und "L (Groß)" gibt es eine anpassbare Serveroption. Sie können eine Auswahl in einer Liste mit VMware-HCL-kompatiblen Servern treffen, die auf Dual-CPUs und der Gesamtzahl der Kerne sowie der RAM-Menge basiert. Lokaler Speicher kann nicht angepasst werden.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### Unterstützung für das Hinzufügen von mehr als sieben gemeinsam genutzten NFS-Dateiressourcen
 
  Für alle ESXi-Server in einem Cluster können Sie bis zu maximal 32 gemeinsam genutzte Dateiressourcen zuordnen.
 
  Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### Updates für Rechenzentren
 
 Die folgenden neuen Rechenzentren sind für die Bereitstellung verfügbar: **DAL-09, DAL-12, DAL-13 - Dallas**; **LON-04, LON-06 - London**; **SJC-04 - San Jose**; **WDC-06, WDC-07 - Washington, DC**.
 
-Weitere Informationen finden Sie unter [Voraussetzungen und Planung für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_planning.html).
+Weitere Informationen finden Sie unter [Voraussetzungen und Planung für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning).
 
 ## Erweiterungen beim Bedienungskomfort
 

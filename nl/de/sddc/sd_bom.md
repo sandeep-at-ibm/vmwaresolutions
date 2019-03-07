@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Cloud Foundation-Teileliste
+{: #sd_bom}
 
 In diesem Abschnitt erhalten Sie Informationen zur Teileliste (Bill of Materials, BOM) für VMware Cloud Foundation-Instanzen.
 
 ## VLAN-Teileliste für Cloud Foundation-Instanzen
+{: #sd_bom-vlans}
 
 Die folgende Tabelle enthält detaillierte Informationen zur Teileliste für die Cloud Foundation-VLANs.
 
@@ -25,6 +27,7 @@ Tabelle 1. Teileliste für VLANs in Cloud Foundation-Instanzen
 | VLAN3     | VLAN "Privat B", Portierbar | Wird VMware vSAN zugeordnet, sofern verwendet.<br><br>Wird VMware NFS zugeordnet, sofern verwendet.<br><br>Wird VMware vSphere vMotion zugeordnet. |
 
 ## Softwareteileliste für Cloud Foundation-Instanzen
+{: #sd_bom-software}
 
 Die folgende Tabelle enthält detaillierte Informationen zur Teileliste für die Cloud Foundation-Softwarekomponenten.
 
@@ -41,6 +44,7 @@ Tabelle 2. Teileliste für Softwarekomponenten in Cloud Foundation-Instanzen
 | Microsoft    | Windows Server Standard Edition (64-Bit) | 2012R2       |
 
 ## Erweiterte Konfigurationseinstellungen für ESXi-Server
+{: #sd_bom-esxi-server-advance-config}
 
 Die folgende Tabelle gibt Ihnen eine Übersicht über die erweiterten Konfigurationseinstellungen, die auf die ESXi-Server angewendet werden. Die Einstellungen unterscheiden sich, je nachdem, ob die Cloud Foundation-Instanz von einem früheren Release (Version 2.1 oder früher) in Version 2.2 oder höher installiert wurde (bzw. ein Upgrade auf diese Version durchgeführt wurde).
 
@@ -59,6 +63,7 @@ Tabelle 3. Erweiterte Konfigurationseinstellungen für ESXi-Server für Cloud Fo
 | Schwellenwert für volle Warteschlange | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
 ### Hinweise
+{: #sd_bom-notes}
 
 * Die Einstellung **MaxVolumes** ist für den Service "IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}" erforderlich, weil der Service möglicherweise mehr als die Standardanzahl von NFS-Mounts auf dem ESXi-Server verwendet.
 * Der Wert **Nicht festgelegt** für eine Konfigurationseinstellung gibt an, dass die neue Einstellung nicht automatisch angewendet wird, da dies einen Warmstart für die ESXi-Server erforderlich macht, der zu einer Unterbrechung des Betriebs führen könnte.
@@ -67,10 +72,11 @@ Tabelle 3. Erweiterte Konfigurationseinstellungen für ESXi-Server für Cloud Fo
 
   Weitere Informationen finden Sie unter [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
 
-### Zugehörige Links
+## Zugehörige Links
+{: #sd_bom-related}
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Übersicht über Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Cloud Foundation-Instanzen planen](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Übersicht über Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Cloud Foundation-Instanzen planen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)

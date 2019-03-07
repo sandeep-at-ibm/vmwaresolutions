@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Lift-and-shift für virtuelle Maschinen von Stock Trader in IBM Cloud durchführen
+{: #vcscontent-hcx}
+
 Als ersten Schritt im Modernisierungsprozess möchte Todd die lokale VMware SDDC-Instanz nahtlos in VMware vCenter Server on {{site.data.keyword.cloud}} erweitern. Die Geschäftsvorgänge müssen betriebsbereit bleiben und die Ausfallzeit muss auf ein Minimum beschränkt werden.
 
 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle ermöglicht die Erstellung einer nahtlosen Verbindung zwischen vCenter Server-Instanzen und einem lokalen virtuellen VMware-Rechenzentrum.
@@ -32,6 +34,7 @@ Hybridity Bundle erstellt eine flexible gegenseitige Verbindung zwischen dem lok
 
 Todd kann Stock Trader aus der lokalen VMware-Umgebung in die {{site.data.keyword.cloud_notm}}-Umgebung migrieren und hierbei die Anforderungen nach minimaler (bis hin zu keiner) Ausfallzeit und einer nicht erforderlichen Anwendungsrekonfiguration erfüllen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcscontent-hcx-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

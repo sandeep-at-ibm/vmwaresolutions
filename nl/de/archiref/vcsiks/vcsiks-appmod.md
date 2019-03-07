@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Übersicht über die Anwendungsmodernisierung
+{: #vcsiks-appmod}
 
 Das folgende Diagramm zeigt die Referenzarchitektur der Anwendungsmodernisierung, die Acme Skateboards bereitstellt und die in dieser Reihe von Dokumenten eingehend beschrieben wird.
 
@@ -40,6 +41,7 @@ HCX erweitert die lokalen Netze in die {{site.data.keyword.cloud_notm}}. Das erm
   - Datenverkehr zwischen traditionellen Systemen im lokalen Rechenzentrum und Cloud-VMs
 
 ## Wichtige Vorteile für Acme Skateboards
+{: #vcsiks-appmod-benefits}
 
 vCenter Server stellt die grundlegenden Bausteine zur Verfügung, wie z. B. VMware vSphere, vCenter Server, NSX und gemeinsame Speicheroptionen, darunter vSAN, die erforderlich sind, um eine VMware SDDC-Lösung (Software Defined Data Center) zu konzipieren, die Ihren Workloads möglichst optimal entspricht.
 
@@ -63,6 +65,7 @@ Kunden, die sich für cloudnative Anwendungsplattformen wie {{site.data.keyword.
 
 Diese Referenzarchitektur zeigt, wie VCS, {{site.data.keyword.icpfull_notm}} und {{site.data.keyword.containerlong_notm}} das Unternehmen Acme Skateboards zuverlässig beim Prozess der Anwendungsmodernisierung unterstützen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcsiks-appmod-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

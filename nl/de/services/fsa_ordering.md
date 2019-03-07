@@ -4,34 +4,38 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # FortiGate Security Appliance on IBM Cloud bestellen
+{: #fsa_ordering}
 
 Sie können den Service "FortiGate Security Appliance on {{site.data.keyword.cloud}}" durch Bestellen einer neuen Instanz, die das Hochverfügbarkeitspaar der FSA 300-Serie beinhaltet, oder durch Hinzufügen von FSA 300-Serie zu Ihrer vorhandenen Instanz bestellen.
 
 ## FortiGate Security Appliance on IBM Cloud für eine neue Instanz bestellen
+{: #fsa_ordering-new}
 
 Sie können mithilfe einer der folgenden Methoden eine neue Instanz mit FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} bestellen:
 * Wählen Sie beim Bestellen einer neuen Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole **FortiGate Security Appliance on IBM Cloud** im Abschnitt **Services** aus.
 * Wählen Sie im {{site.data.keyword.cloud_notm}}-Katalog **FortiGate Security Appliance on IBM Cloud** aus, geben Sie die Serviceeinstellungen an und wählen Sie **Zu neuer Instanz hinzufügen** aus.
 
 ## FortiGate Security Appliance on IBM Cloud für eine vorhandene Instanz bestellen
+{: #fsa_ordering-existing}
 
 Sie können den Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" mit einer der folgenden Methoden zu einer vorhandenen Instanz hinzufügen:
 * Zeigen Sie über die {{site.data.keyword.vmwaresolutions_short}}-Konsole die Instanz an, für die der Service hinzugefügt werden soll, klicken Sie im linken Navigationsfenster auf **Services** und anschließend auf **Hinzufügen**.
 * Wählen Sie im {{site.data.keyword.cloud_notm}}-Katalog **FortiGate Security Appliance on IBM Cloud** aus, geben Sie die Serviceeinstellungen an und wählen Sie **Zu vorhandener Instanz hinzufügen** aus.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #fsa_ordering-related}
 
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/fsa_considerations.html)
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managingfsa.html)
-* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
-* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
-* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
+* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Fortinet-Website](https://www.fortinet.com/){:new_window}
 * [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

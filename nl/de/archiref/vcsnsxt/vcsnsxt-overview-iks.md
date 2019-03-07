@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Kubernetes-Service
+{: #vcsnsxt-overview-iks}
 
 ## Übersicht über den IBM Cloud Kubernetes-Service
+{: #vcsnsxt-overview-iks-ovw}
 
 {{site.data.keyword.containerlong_notm}} bietet eine isolierte und sichere Plattform für das Management von Containern. Diese Plattform ist portierbar, erweiterbar und mit einer automatischen Fehlerbehebung ausgestattet.
 
@@ -34,10 +36,12 @@ Das Kubernetes-Netzmodell konstatiert drei grundlegende Voraussetzungen:
 * Die IP-Adresse, die ein Container für sich erkennt, ist dieselbe IP-Adresse, die auch von den anderen Containern erkannt wird.
 
 ### Namensbereiche
+{: #vcsnsxt-overview-iks-namespaces}
 
 Namensbereiche sind ein grundlegender Aspekt des Containernetzbetriebs. Namensbereiche sind eine Funktion des Linux-Kernels, die Kernelressourcen so partitioniert, dass eine Gruppe von Ressourcen für eine Gruppe von Prozessen erkennbar ist, während eine andere Gruppe von Ressourcen für eine andere Gruppe von Prozessen erkennbar ist. Zu Ressourcen gehören Mountpunkte, Prozess-IDs, der Netzstack, IPC und Benutzer-IDs. Jeder Namensbereich besitzt eine private Gruppe von IP-Adressen, seine eigene Routing-Tabelle, Socketliste, Verbindungsüberwachungstabelle, Firewall und andere netzbezogene Ressourcen.
 
 ### Containernetzschnittstelle
+{: #vcsnsxt-overview-iks-container-network-interfaces}
 
 Kubernetes verwendet die Containernetzschnittstelle (Container Network Interface, CNI) für seine plug-in-orientierte Lösung für den Netzbetrieb. Sie besteht aus einer Spezifikation und aus Bibliotheken für das Schreiben von Plug-ins zum Konfigurieren von Netzschnittstellen in Linux-Containern. Die CNI-Spezifikation ist einfach gehalten, da sie lediglich auf die Netzkonnektivität von Containern sowie auf die Garbage-Collection für Ressourcen abzielt, nachdem Container gelöscht wurden.
 
@@ -72,6 +76,7 @@ Für den Nord-Süd-Datenverkehr gibt es in {{site.data.keyword.containerlong_not
     - Eine Instanz von {{site.data.keyword.cloud_notm}} Virtual Router Appliance (VRA) kann als VPN-Gateway bereitgestellt werden, um eine sichere Verbindung zu einem externen Netz herzustellen. Der öffentliche oder private Datenaustausch im Netz kann über die VRA weitergeleitet werden. Die VRA erstellt einen verschlüsselten IPSec-Tunnel zum fernen VPN-Gateway.
 
 ## Komponenten des IBM Cloud Kubernetes-Service
+{: #vcsnsxt-overview-iks-components}
 
 Workerknoten werden durch einen Kubernetes-Masterknoten verwaltet, der alle Kubernetes-Ressourcen im Cluster zentral steuert und überwacht. Sobald ein Anwendungsentwickler Ressourcen für einen Container bereitstellt, entscheidet der Masterknoten, auf welchem Workerknoten diese Ressourcen bereitgestellt werden sollen, und berücksichtigt hierbei sowohl die Bereitstellungsanforderungen als auch die verfügbare Kapazität im Cluster. Der Masterknoten und die Workerknoten kommunizieren miteinander durch sichere TLS-Zertifikate und eine openVPN-Verbindung über das {{site.data.keyword.cloud_notm}} Public-Netz. Die Anwendungsentwickler greifen über das Internet auf die Komponente "kube-apiserver" zu, die auf dem Masterknoten gehostet wird.
 
@@ -90,6 +95,7 @@ Für das Netz werden die folgenden Komponenten auf dem Workerknoten bereitgestel
 -	**Lastausgleichsfunktion** - Eine Lastausgleichsfunktion (auch "Load Balancer" genannt) ist ein Kubernetes-Service, mit dem Sie die Netzverkehrworkloads in Ihrem Cluster ausgleichen können, indem öffentliche oder private Anforderungen an eine Anwendung weitergeleitet werden. Diese Komponente wird im Namensbereich "ibm-system" ausgeführt.
 
 ### Calico
+{: #vcsnsxt-overview-iks-calico}
 
 {{site.data.keyword.containerlong_notm}} verwendet Calico als Netzprovider. Calico nutzt anstelle von Overlay-Netzen ein Layer-3-Konzept. Calico wird über die CNI-Plug-ins bei Kubernetes integriert und stellt durch die Kombination eines reinen IP-Netzes mit Border Gateway Protocol (BGP) zur Routenverteilung einen Netzbetrieb bereit.
 
@@ -115,22 +121,27 @@ Das vorangehende Diagramm zeigt die folgenden Calico-Komponenten:
 Da das {{site.data.keyword.cloud_notm}} Private-Netz ausschließlich IP-Adressierungsschemas von {{site.data.keyword.cloud_notm}} weiterleitet, muss Calico die IP-in-IP-Kapselung des workloadinternen Datenverkehrs in {{site.data.keyword.containerlong_notm}} verwenden, um die IP-Adressen des Podnetzes zu verbergen. {{site.data.keyword.containerlong_notm}} verwendet den teilnetzübergreifenden Modus von IP-in-IP.
 
 ### Calico im IBM Cloud Kubernetes-Service
+{: #vcsnsxt-overview-iks-calico-iks}
 
 Calico wird automatisch in {{site.data.keyword.containerlong_notm}} installiert und konfiguriert. Zum Schutz des Kubernetes-Cluster werden Standardrichtlinien erstellt; Sie haben aber die Möglichkeit, eigene Richtlinien zu erstellen, um bestimmte Services zu schützen. Die IP-in-IP-Kapselung ist automatisch so konfiguriert, dass nur Pakete gekapselt werden, die zwischen Teilnetzen übertragen werden, und verwendet NAT für Verbindungen, die von Ihren Containern ausgehen. Der Datenverkehr von Workloads an das WAN ist ebenfalls automatisch im {{site.data.keyword.containerlong_notm}} aktiviert, sodass eine weitere Konfiguration von Calico nicht erforderlich ist.
 
 #### Netzskalierbarkeit mit Calico
+{: #vcsnsxt-overview-iks-net-scalability-calico}
 
 Calico baut auf einer verteilten Scale-out-Architektur auf und kann dadurch eine reibungslose Skalierung von einem einzigen Entwicklernotebook bis zu umfangreichen Unternehmensbereitstellungen vornehmen. Zur Bereitstellung von Bare-Metal-Leistung für virtuelle Workloads wird die Linux-Standarddatenebene verwendet.
 
 #### Sicherheit mit Calico
+{: #vcsnsxt-overview-iks-sec-calico}
 
 Calico verwendet eine Reihe von Richtlinien, die alle Komponenten des Systems steuern. Diese Richtlinien können so konfiguriert werden, dass die Kommunikation zwischen Services und Containerinstanzen nur bei Bedarf zulässig ist. Calico verwendet IP-Adressen, um Containerinstanzen anzugeben und erstellt Richtlinien auf der Grundlage dieser Adressen. Die Kubernetes-Integration mit Calico ist infrastrukturorientiert und kann Sicherheitsrichtlinien aufgrund von Infrastrukturänderungen skalieren.
 
 #### Integration mit Calico
+{: #vcsnsxt-overview-iks-integration-calico}
 
 Calico bietet eine hoch skalierbare Netzbetriebs- und Netzrichtlinienlösung für die Verbindung von Kubernetes-Pods, die auf denselben Prinzipien für den IP-Netzbetrieb wie das Internet basiert. Sie kann ohne Kapselung oder Overlays bereitgestellt werden, um einen leistungsstarken und hoch skalierbaren Netzbetrieb für Rechenzentren zu ermöglichen. Calico bietet über seine dezentrale Firewall differenzierte und zweckorientierte Netzsicherheitsrichtlinien für Kubernetes-Pods. Calico kann auch im Richtliniendurchsetzungsmodus zusammen mit anderen Netzbetrieblösungen wie Flannel (auch unter dem Namen "Canal" bekannt) oder dem nativen GCE-Netzbetrieb ausgeführt werden.
 
 ## Netzbetrieb des IBM Cloud Kubernetes-Service
+{: #vcsnsxt-overview-iks-networking}
 
 {{site.data.keyword.containerlong_notm}} richtet mit den folgenden Elementen für den Cluster standardmäßig den Zugriff auf ein öffentliches VLAN und ein privates VLAN ein.
 - Für jeden Workerknoten gibt es eine öffentliche IP-Adresse, wodurch Workerknoten eine Schnittstelle für das öffentliche Netz erhalten. Standardmäßig gilt Folgendes:
@@ -151,6 +162,7 @@ IP-Teilnetze für Workerknoten und Pods werden ebenfalls automatisch in VLANs be
     - Das primäre private Teilnetz bestimmt die privaten IP-Adressen, die den Workerknoten während der Clustererstellung zugeordnet werden. Mehrere Cluster in demselben VLAN können ein primäres privates Teilnetz gemeinsam nutzen.
     - Das portierbare private Teilnetz ist nur an einen einzigen Cluster gebunden und stellt dem Cluster acht private IP-Adressen zur Verfügung. Drei IP-Adressen sind für Netzfunktionen reserviert. Eine IP-Adresse wird vom Standard-ALB für die private Ingress-Instanz genutzt und vier IP-Adressen können zum Erstellen von privaten Netzservices für die Lastausgleichsfunktion verwendet werden. Portierbare private IP-Adressen sind permanente, festgelegte IP-Adressen, die für den Zugriff auf Lastausgleichsservices über das Internet verwendet werden können.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcsnsxt-overview-iks-links}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

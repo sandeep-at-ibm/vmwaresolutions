@@ -56,4 +56,4 @@ Nach erfolgreicher Bereitstellung der Paketkomponenten und nach mehreren Minuten
 ## Zugehörige Links
 {: #vcshcx-deployment-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

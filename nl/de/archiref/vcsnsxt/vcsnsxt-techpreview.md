@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Technologievorschau für VMware NSX-T unter VMware vCenter Server on IBM Cloud
+{: #vcsnsxt-techpreview}
 
 ## Übersicht über NSX-T
+{: #vcsnsxt-techpreview-nsx-t-ovw}
 
 VMware NSX-T wurde für Anwendungsframeworks und Architekturen mit heterogenen Endpunkten und Technologiestacks entworfen. Neben vSphere können diese Umgebungen weitere Hypervisoren, KVM, Container und Bare-Metal-Instanzen enthalten. NSX-T ermöglicht IT- und Entwicklungsteams die Auswahl der für ihre Anwendungen am besten geeigneten Technologien. NSX-T kann nicht nur für die IT, sondern auch von Entwicklungsorganisationen bei Verwaltung, Betrieb und Verarbeitung eingesetzt werden.
 
@@ -37,6 +39,7 @@ Abbildung 1. Layout der Managementkomponenten für NSX-V und NSX-T
 ![Layout der Managementkomponenten für NSX-V und NSX-T](vcsnsxt-combined-mgmt.svg)
 
 ### Erstkonfiguration
+{: #vcsnsxt-techpreview-init-config}
 
 Stellen Sie den NSX-T Manager, einen Controller-Cluster, der aus drei Controllern und einem Edge-Cluster besteht, im ersten vCenter Server-Cluster bereit. Ordnen Sie allen Komponenten IP-Adressen aus dem portierbaren Teilnetz **Privat A** zu.
 
@@ -77,6 +80,7 @@ Abbildung 2. Logischer VLAN-Switch zu VM-Kernel-Schnittstelle
 ![Logischer VLAN-Switch zu VM-Kernel-Schnittstelle](vcsnsxt-tnkernel.svg)
 
 ## NSX-T
+{: #vcsnsxt-techpreview-nsx-t}
 
 Dieses Design gibt die Konfiguration von NSX-T-Komponenten, dem VLAN und den Overlay-Transportzonen an, wendet jedoch keine Konfiguration von Overlay-Netzkomponenten an. Es ist Ihre Aufgabe, das Design des Netzoverlays entsprechend seinen Anforderungen festzulegen.
 
@@ -94,16 +98,19 @@ Die folgenden Komponenten werden NICHT konfiguriert:
 -	Verknüpftes NSX-Management mit anderen VMware-Instanzen.
 
 ### vCenter Server mit NSX-V und NSX-T
+{: #vcsnsxt-techpreview-vcs-nsx-v-nsx-t}
 
-Der ursprüngliche vCenter Server-Cluster enthält alle Managementkomponenten für NSX-V und NSX-T zusammen mit den vCenter Server-Appliances. Die Hosts in diesem Cluster werden für NSX-V wie im Abschnitt [Übersicht über NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-ic4vnsxv.html) beschrieben vorbereitet. Die Hosts im zweiten Cluster werden für NSX-T vorbereitet und als Transportknoten konfiguriert. Durch diese Konfiguration erhalten Kunden die Möglichkeit, auf Wunsch eine Migration von NSX-V auf NSX-T vorzunehmen.
+Der ursprüngliche vCenter Server-Cluster enthält alle Managementkomponenten für NSX-V und NSX-T zusammen mit den vCenter Server-Appliances. Die Hosts in diesem Cluster werden für NSX-V wie im Abschnitt [Übersicht über NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv) beschrieben vorbereitet. Die Hosts im zweiten Cluster werden für NSX-T vorbereitet und als Transportknoten konfiguriert. Durch diese Konfiguration erhalten Kunden die Möglichkeit, auf Wunsch eine Migration von NSX-V auf NSX-T vorzunehmen.
 
 ### NSX-T und NSX-V im Vergleich
+{: #vcsnsxt-techpreview-nsx-t-vs-nsx-v}
 
 Die folgenden Informationen beleuchten den Hauptunterschied zwischen den VMware-SDN-Produkten "NSX-V" und "NSX-T". Beide Lösungen bieten eine Mikrosegmentierung in einer VMware-Umgebung, wobei NSX-T hierbei ein wenig weiter geht, wie in den folgenden Abschnitten gezeigt.
 
 Ausführliche Informationen zu den Architekturunterschieden enthält das Dokument [VMware NSX-T Reference Design Guide](https://communities.vmware.com/servlet/JiveServlet/download/37591-3-195840/VMware%20NSX-T%20Reference%20Design%20Guide.pdf) (PDF-Download).
 
 #### NSX-V
+{: #vcsnsxt-techpreview-nsx-vsphere}
 
 NSX-V (kurz für "NSX for vSphere") ist ausschließlich für vSphere-Bereitstellungen konzipiert und so aufgebaut, dass ein einziger NSX-V Manager an eine einzige VMware vCenter-Instanz gebunden wird. Falls Sie in Ihrer VMware-Umgebung eine Netzvirtualisierung benötigen, ist NSX-V generell die geeignete Lösung.
 
@@ -115,6 +122,7 @@ Schwerpunkte von NSX-V:
 -	Terminologische Unterscheidung: Distributed Logical Router (DLR) für Ost-West-Datenverkehr und Edge Service Gateway (ESG) für Nord-Süd-Datenverkehr.
 
 #### NSX-T
+{: #vcsnsxt-techpreview-nsx-transformers}
 
 NSX-T (kurz für "NSX Transformers") ist eine eigenständige Lösung für vCenter- und vSphere-Umgebungen, unterstützt jedoch ebenfalls KVM, öffentliche Clouds sowie Container und kann in Frameworks wie {{site.data.keyword.containerlong_notm}} und {{site.data.keyword.icpfull_notm}}, Redhat OpenShift, Pivotal und andere integriert werden. NSX-T gibt Ihnen die Möglichkeit, Ihren softwaredefinierten Netzbetrieb (SDN) über mehrere Hypervisoren, Container und Clouds hinweg zu verwalten.
 
@@ -133,6 +141,7 @@ Besondere Merkmale von NSX-T
 -	Terminologische Unterscheidung: Logischer Tier-1-Router für Ost-West-Datenverkehr und logischer Tier-0-Router für Nord-Süd-Datenverkehr.
 
 ## Calico
+{: #vcsnsxt-techpreview-calico}
 
 Calico baut auf einer verteilten Scale-out-Architektur auf und kann dadurch eine reibungslose Skalierung von einem einzigen Entwicklernotebook bis zu umfangreichen Unternehmensbereitstellungen vornehmen. Zur Bereitstellung von Bare-Metal-Leistung für virtuelle Workloads wird die Linux-Standarddatenebene verwendet. Calico besteht aus mehreren voneinander abhängigen Komponenten:
 -	Der Dämonprozess "Felix" wird auf jedem Knoten ausgeführt, der einen Endpunkt, einen Container oder eine VM hostet. Er ist für das Schnittstellenmanagement, die Programmierung von Routen und Zugriffssteuerungslisten, die Weiterleitung an den Endpunkt, die Validierung des Datenverkehrs zwischen Endpunkten und die Statusmeldung (im Wesentlichen über den Allgemeinzustand des Netzes für den verwalteten Host) zuständig.
@@ -144,8 +153,10 @@ Abbildung 3. Übersicht über Calico
 ![Übersicht über Calico](vcsnsxt-calico-cni.svg)
 
 ### NSX-T und Calico
+{: #vcsnsxt-techpreview-nsx-t-calico}
 
 #### Details zu NSX-T-Komponenten
+{: #vcsnsxt-techpreview-nsx-t-comp-details}
 
 Die NSX-T-Architektur verfügt über eine integrierte Trennung von Datenebene, Steuerebene und Managementebene. Diese Trennung bietet mehrere Vorteile, unter anderem Skalierbarkeit, Leistung, Ausfallsicherheit und Heterogenität. Die Hauptschwerpunkte der Architektur sind Folgende:
 -	Managementebene: Die NSX-T-Managementebene ist von Grund auf mit erweiterter Clustering-Technologie konzipiert, was der Plattform die Verarbeitung umfangreicher gleichzeitiger API-Anforderungen ermöglicht.
@@ -153,6 +164,7 @@ Die NSX-T-Architektur verfügt über eine integrierte Trennung von Datenebene, S
 -	Datenebene: Die NSX-T-Datenebene stützt sich nicht auf den vSwitch, sondern führt einen Host-Switch ein, was sie vom Datenverarbeitungsmanager entkoppelt und die Konnektivität für den Netzbetrieb normalisiert. Alle Operationen für Erstellen, Lesen, Aktualisieren und Löschen (Create, Read, Update, Delete - CRUD) werden über den NSX-T Manager ausgeführt.
 
 #### Unterschiede zwischen Calico und NSX
+{: #vcsnsxt-techpreview-diff-calico-nsx}
 
 Calico ist ein Open-Source-Projekt von Tigera und wird primär durch das Tigera-Team betreut. Es wird als Containernetzschnittstelle (Container Network Interface, CNI) bereitgestellt, die Netzbetrieb und Sicherheit für Orchestrierungssysteme wie Kubernetes bietet, das sowohl von {{site.data.keyword.icpfull_notm}} als auch von {{site.data.keyword.containerlong_notm}} genutzt wird.
 
@@ -168,6 +180,7 @@ Abbildung 4. Allgemeiner Vergleich der Komponenten von NSX-T und Calico
 ![Netzbetrieb mit NSX-T und Kubernetes](vcsnsxt-calico.svg)
 
 ## NSX-T und Kubernetes
+{: #vcsnsxt-techpreview-nsx-t-kube}
 
 Kernkomponente für die Integration zwischen Kubernetes und dem NSX-Manager ist das NSX-Container-Plug-in (NCP). Das NCP wird als Container in einem Kubernetes-Pod ausgeführt und überwacht Änderungen von relevanten Objekten auf dem Kubernetes-API-Server (z. B. Namensbereiche und Pods). Wenn Entwickler auf der Kubernetes-Seite Tasks ausführen, erkennt das NCP diese Änderungen und reagiert durch eine Reihe von API-Aufrufen an den NSX-Manager mit der Erstellung der zugehören NSX-Objekte wie logischen Switches, logischen Routern und Firewallobjekten.
 
@@ -177,6 +190,7 @@ Abbildung 5. Kubernetes-NCP
 ![Kubernetes-NCP](vcsnsxt-ncpk8sapi.svg)
 
 ### NSX-Sicherheitsrichtlinienmanager
+{: #vcsnsxt-techpreview-nsx-sec-policy-manager}
 
 Zusätzlich zur Netzvirtualisierung dient NSX-T auch als erweiterte Sicherheitsplattform mit einer Vielzahl von Funktionen für die optimierte Bereitstellung von Sicherheitslösungen. In den folgenden Informationen werden die Mikrosegmentierungsfunktionen beschrieben, die auf mehrere Plattformen angewendet werden können.
 
@@ -196,28 +210,34 @@ Abbildung 6. Mikrosegmentierung von NSX-T
 ![Beispiel für Mikrosegmentierung von NSX-T](vcsnsxt-tsecurity.svg)
 
 ### Unterschiede zwischen NSX-T und NSX-V
+{: #vcsnsxt-techpreview-diff-nsx-t-nsx-v}
 
 NSX-V ist ausschließlich für vSphere-Bereitstellungen konzipiert und so aufgebaut, dass ein einziger NSX-V-Manager an eine einzige VMware vCenter-Instanz gebunden wird. Falls Sie in Ihrer VMware-Umgebung eine Netzvirtualisierung benötigen, ist NSX-V generell wahrscheinlich die geeignete Lösung.
 
 NSX-T ist eine eigenständige Lösung, die mehrere vCenter- und vSphere-Umgebungen unterstützen kann. Sie unterstützt auch KVM, öffentliche Clouds sowie Container und kann in Frameworks wie IBM {{site.data.keyword.containerlong_notm}} und {{site.data.keyword.icpfull_notm}}, Redhat OpenShift, Pivotal und andere integriert werden. Dies gibt Ihnen die Möglichkeit, Ihren softwaredefinierten Netzbetrieb (SDN) mit einer einheitlichen Gruppe von Tools über mehrere Hypervisoren, Container und Clouds hinweg zu verwalten.
 
 #### Netzskalierbarkeit mit NSX-V
+{: #vcsnsxt-techpreview-net-scalability-nsx-v}
 
 VMware NSX-V ist für Anwendungsframeworks und Architekturen mit Tausenden von Endpunkten und Technologiestacks konzipiert und kann daher für einen einzelnen vSphere-Cluster mit drei Hosts ebenso genutzt werden wie für eine vCenter-übergreifende Bereitstellung mit Tausenden von Hosts und virtuellen Maschinen.
 
 #### Netzskalierbarkeit mit NSX-T
+{: #vcsnsxt-techpreview-net-scalability-nsx-t}
 
 VMware NSX-T wurde für Anwendungsframeworks und Architekturen mit heterogenen Endpunkten und Technologiestacks konzipiert und kann daher für jede beliebige Site, Cloud oder Enpunkteinheit genutzt werden. Dies ermöglicht seine Skalierung von einem kleinen Rechenzentrum bis hin zu einer Umgebung mit mehreren Clouds.
 
 #### Sicherheit mit NSX-V
+{: #vcsnsxt-techpreview-sec-nsx-v}
 
 Mit VMware NSX-V können Sie konsistente Sicherheitsrichtlinien für die gesamte Umgebung definieren, die vom Typ der Anwendung oder von der Position unabhängig sind, an der NSX-V in Ihrer VMware-Infrastruktur bereitgestellt ist. Sobald neue Workloads bereitgestellt werden, übernehmen sie automatisch die Sicherheitsrichtlinien, die für den gesamten Lebenszyklus einer Workload unabhängig davon verwendet werden, wo sie bereitgestellt oder wohin sie versetzt wurde. NSX entkoppelt Sicherheitsrichtlinien von statischen Netzattributen wie IP-Adresse, Port und Protokoll und ermöglicht die Definition von Richtlinien basierend auf einem kontextbezogenen Verständnis der Anwendung und der Infrastruktur. NSX ermöglicht darüber hinaus die Einbeziehung von Sicherheitsservices anderer Anbieter in ein bestimmtes Mikrosegment, statt den gesamten Netzverkehr über eine physische Einheit oder virtuelle Appliance zu leiten. Hierdurch können erweiterte Sicherheitsservices positions- und zeitgerecht eingefügt werden, was die Effizienz des Netzverkehrs und somit auch der eigentlichen Sicherheitsservices erhöht.
 
 #### Sicherheit mit NSX-T
+{: #vcsnsxt-techpreview-sec-nsx-t}
 
 VMware NSX-T bietet dieselbe Funktionalität wie NSX-V in einer VMware vSphere-Umgebung. NSX-T bietet eine konsistente und skalierbare Mikrosegmentierungssicherheit für Anwendungen, die in privaten und öffentlichen Cloudumgebungen wie {{site.data.keyword.cloud}} Private und IBM {{site.data.keyword.containerlong_notm}} zusammen mit anderen Cloudangeboten ausgeführt werden.
 
 #### Integration mit NSX-V
+{: #vcsnsxt-techpreview-integration-nsx-v}
 
 Zur Integration von NSX-V bei Kubernetes installiert die {{site.data.keyword.cloud_notm}}-Automation {{site.data.keyword.icpfull_notm}} zusätzlich zu einer vCenter Server-Instanz. Ein dedizierter Switch/dediziertes VXLAN, DLR und ESG werden speziell für das Kubernetes-Netz erstellt. Das Day-1-Overlay-Netz für {{site.data.keyword.icpfull_notm}} ist ein Teilnetz mit dem Bereich 192.168.20.0/24 und konfiguriertem Routing durch das ESG für den Zugriff auf das Underlay-Netz.
 
@@ -225,6 +245,7 @@ Abbildung 7. NSX-V und Kubernetes
 ![NSX-V und Kubernetes](vcsnsxt-transitnet.svg)
 
 #### Integration mit NSX-T
+{: #vcsnsxt-techpreview-integration-nsx-t}
 
 Die Integration von NSX-T bei Kubernetes erfolgt durch das Container-Plug-in von NSX-T (NCP). Das NCP wird auf jedem Kubernetes-Knoten ausgeführt und kommuniziert mit dem NSX-Manager und der Kubernetes-Steuerebene. Das NSX T-Plug-in erstellt automatisch eine logische Topologie für den Kubernetes-Cluster, erstellt separate logische Netze für jeden Namensbereich, verbindet Kubernetes-Pods mit logischen Netzen und ordnet IP-und MAC-Adressen zu.
 
@@ -233,7 +254,9 @@ Die verteilte Firewall von NSX-T ermöglicht die Erstellung von Netzrichtlinien,
 Abbildung 8. NSX-T und Kubernetes
 ![NSX-T und Kubernetes](vcsnsxt-t1t0router.svg)
 
-### Weitere Ressourcen
+## Zugehörige Links
+{: #vcsnsxt-techpreview-related}
+
 * [VMware NSX-T Reference Design Guide](https://communities.vmware.com/servlet/JiveServlet/download/37591-3-195840/VMware%20NSX-T%20Reference%20Design%20Guide.pdf) (PDF-Download)
 * [Route to Cloud NSX-T](https://www.routetocloud.com/category/nsx-t/)
 * [VMware containers and container networking for network engineers](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-containers-and-container-networking-whitepaper.pdf)

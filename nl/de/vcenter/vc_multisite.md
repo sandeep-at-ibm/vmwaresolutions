@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,14 +13,15 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Konfiguration mit mehreren Standorten für vCenter Server on IBM Cloud-Instanzen
+{: #vc_multisite}
 
 Mit {{site.data.keyword.vmwaresolutions_full}} können Sie Instanzen an unterschiedlichen Standorten bereitstellen und zügig betriebsbereit machen.
 
-* Die Konfiguration mit mehreren Standorten für vCenter Server-Instanzen wird nur für Instanzen von V2.0 und höher unterstützt.
-* VMware Cloud Foundation- und VMware vCenter Server-Instanzen können nicht in einer Konfiguration mit mehreren Standorten verbunden werden.
+Die Konfiguration mit mehreren Standorten für vCenter Server-Instanzen wird nur für Instanzen von V2.0 und höher unterstützt. VMware Cloud Foundation- und VMware vCenter Server-Instanzen können nicht in einer Konfiguration mit mehreren Standorten verbunden werden.
 {:note}
 
 ## Komponenten von Bereitstellungen mit mehreren Standorten
+{: #vc_multisite-deployment-components}
 
 Eine Bereitstellung mit mehreren Standorten besteht aus den folgenden Komponenten.
 
@@ -37,10 +38,11 @@ Eine Bereitstellung mit mehreren Standorten besteht aus den folgenden Komponente
    *  Konfiguration von VMware vCenter in den sekundären Instanzen mit erweitertem Verbindungsmodus zu vCenter in der primären Instanz
 
 ## vCenter Server-Bereitstellung mit mehreren Standorten
+{: #vc_multisite-deployment}
 
 Die Funktion für die Konfiguration mit mehreren Standorten verwendet eine Hub- und Peripherietopologie mit einem primären Standort und maximal sieben sekundären Standorten. Es wird nur eine einzige Schicht von Standorten unterstützt; Sie können also keine nachfolgenden Standorte konfigurieren, die mit anderen sekundären Standorten verknüpft sind. In einer Konfiguration mit mehreren Standorten können insgesamt 128 ESXi-Server in allen Instanzen verwendet werden.
 
-Falls Ihre Konfiguration eine Bereitstellung mit mehreren Standorten mit mehr als 128 ESXi-Servern erforderlich macht, bitten Sie den IBM Support um Unterstützung. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Falls Ihre Konfiguration eine Bereitstellung mit mehreren Standorten mit mehr als 128 ESXi-Servern erforderlich macht, bitten Sie den IBM Support um Unterstützung. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 {:note}
 
 Die folgende Abbildung zeigt eine vollständige vCenter Server-Bereitstellung mit mehreren Standorten.
@@ -58,10 +60,11 @@ Sie können gleichzeitig jeweils nur eine einzige sekundäre Instanz zu einer pr
 
 Sie können maximal 8 Instanzen (1 primäre und 7 sekundäre) in einer Konfiguration mit mehreren Standorten bereitstellen.
 
-Das Löschen von vCenter Server-Instanzen, die Teil einer Konfiguration mit mehreren Standorten sind, erfordert eine besondere Planung. Weitere Informationen hierzu finden Sie im Abschnitt [vCenter Server-Instanzen in einer Konfiguration mit mehreren Standorten löschen](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance_multi.html).
+Das Löschen von vCenter Server-Instanzen, die Teil einer Konfiguration mit mehreren Standorten sind, erfordert eine besondere Planung. Weitere Informationen hierzu finden Sie im Abschnitt [vCenter Server-Instanzen in einer Konfiguration mit mehreren Standorten löschen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance_multi).
 {:note}
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vc_multisite-related}
 
 * [Assign Primary Role to NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configuring Secondary NSX Managers](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}

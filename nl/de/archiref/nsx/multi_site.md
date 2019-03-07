@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Architektur mit mehreren Standorten
+{: #nsx-multi_site}
 
 Ein wichtiges Differenzierungsmerkmal zwischen {{site.data.keyword.cloud}} und anderen Cloudangeboten ist die Fähigkeit, dedizierte Rechenleistung weltweit bereitzustellen und automatisch eine bedarfsgesteuerte Infrastruktur mit dem Netz in Ihrem privaten {{site.data.keyword.cloud_notm}}-Konto zu verbinden. Die softwaredefinierten Netzfunktionen von VMware vCenter Server und VMware Cloud Foundation zusammen mit {{site.data.keyword.cloud_notm}} stellen eine differenzierte globale Infrastruktur bereit, die innerhalb weniger Tage erstellt werden kann. In den folgenden Abschnitten wird ein Beispiel für eine Architektur mit mehreren Standorten beschrieben, das zeigt, was mit der Out-of-the-box-Funktionalität von vCenter Server oder Cloud Foundation erreicht werden kann.
 
 ## Cross-vCenter NSX-Umgebung
+{: #nsx-multi_site-cross-env}
 
 Die Cross-vCenter NSX-Funktionalität ermöglicht die Verknüpfung von bis zu neun NSX-Managern - in einer Beziehung von einem primären und acht sekundären NSX-Managern. vCenter Server in einer ELM-Beziehung (Enhanced Linked Mode) sind zwar nicht für den Betrieb von Cross-vCenter NSX erforderlich, sie bieten jedoch die folgenden Vorteile:
 
@@ -21,6 +23,7 @@ Die Cross-vCenter NSX-Funktionalität ermöglicht die Verknüpfung von bis zu ne
 * Zentrales Management auf einen Blick über alle Standorte hinweg für NSX- und normale vCenter-Funktionen
 
 ## Beispiel für mehrere Standorte
+{: #nsx-multi_site-example}
 
 Im folgenden Beispiel werden eine NSX Universal Transport Zone zu den Basismanagement- und Workloadtopologien hinzugefügt, die in den vorherigen Abschnitten beschrieben wurden, und außerdem die folgenden Merkmale umgesetzt:
 
@@ -34,6 +37,7 @@ Abbildung 1. Topologie mit mehreren Standorten
 
 ![Topologie mit mehreren Standorten](multisite_topology.svg "Topologie mit mehreren Standorten")
 
-### Zugehörige Links
+## Zugehörige Links
+{: #nsx-multi_site-related}
 
-* [Netzservices unter {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/nsx/networking_services.html)
+* [Netzservices unter {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-networking_services)

@@ -18,4 +18,4 @@ HCX ist ein Service. HCX wird pro Standort und pro virtuelle Maschine (VM) lizen
 ## Zugehörige Links
 {: #vcshcx-licensing-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

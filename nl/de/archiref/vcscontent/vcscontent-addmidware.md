@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Refactoring ausführen und Middleware in IBM Cloud Private hinzufügen
+{: #vcscontent-addmidware}
 
 Da Stock Trader in einem Container ausgeführt wird und Jane mit den aktuellen Mikroservices zufrieden ist, arbeitet sie mit Todd jetzt daran, wie die Anwendung durch zusätzliche Funktionalität erweitert werden kann. Beim Refactoring der Mikroservices für Stock Trader zur Abwicklung einer gestiegenen Aktivität und Skalierbarkeit stellen beide fest, dass Middleware in {{site.data.keyword.cloud}} Private hinzugefügt werden muss. Ein Teil der Middleware ist bereits im Rechenzentrum vorhanden, so dass es sich bei diesem Vorgang eher um eine Erneuerung der Plattform handelt, bei der einige Middleware hinzugefügt wird.
 
@@ -18,6 +19,7 @@ Abbildung 1. Refactoring von Stock Trader
 Dieses Refactoring der Lösung ergibt eine gemeinsame Plattform für die Ausführung der Anwendung und der erforderlichen Services und auf diese Weise eine einfachere Managementebene.
 
 ## Inhaltsoptionen
+{: #vcscontent-addmidware-content-choices}
 
 {{site.data.keyword.cloud_notm}} Private verfügt über eine große Auswahl an Inhalten; sowohl Todd als auch Jane müssen entscheiden, was ihre Anforderungen am besten erfüllt. Beim Blick in den {{site.data.keyword.cloud_notm}} Private-Katalog stellt Todd fest, dass ein Großteil des Inhaltes zum Ausprobieren verfügbar ist, jedoch einiger Inhalt gekauft und bei Passport Advantage heruntergeladen werden muss.
 
@@ -124,12 +126,15 @@ Netcool Insights-Produkt)
 Basierend auf der von Jane entwickelten Lösungsarchitektur verwendet Todd für Stock Trader anfänglich [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://console.cloud.ibm.com/catalog/services/mq) und [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis).
 
 ## Middleware hinzufügen
+{: #vcscontent-addmidware-add-middleware}
 
 Um Middleware in {{site.data.keyword.cloud_notm}} Private hinzuzufügen, suchen Sie im Katalog nach dem [Helm-Diagramm](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md), lesen Sie die Readme-Datei und fahren Sie dann mit der Installation fort.
 
 Für Stock Trader beschließt Todd, die gesamte Middleware hinzuzufügen. In den folgenden Abschnitten ist zusammengefasst, was Todd für jede Middleware ausführen muss, die Jane verwenden soll.
 
 ### Db2
+{: #vcscontent-addmidware-db2}
+
 Todd beginnt mit Db2, weil Db2 bereits verwendet wird und für jede Lösung eine containerbasierte Db2-Instanz dediziert werden kann.
 
 Da Todd {{site.data.keyword.icpfull_notm}} vorbereitet hat, hat er bereits seine Podsicherheitsrichtlinie definiert. Er kann sich nun auf die Erstellung eines geheimen Schlüssels für Docker-Images konzentrieren:
@@ -168,6 +173,7 @@ Unter "Konfigurieren" gibt es einen Abschnitt "Schnelleinstieg" und einen Abschn
 Nachdem Db2 aktiviert wurde, muss Todd oder Jane die Tabellen erstellen, die von der Lösung "Stock Trader" verwendet werden.
 
 ### MQ
+{: #vcscontent-addmidware-mq}
 
 Todd und Jane benötigen eine Messaging-Software, und da sie bereits MQ verwenden, ist dies eine sehr gute Möglichkeit. Darüber hinaus ist die Ausführung mit einem geringen Speicherbedarf möglich und für jeden Anwendungsentwickler kann die Entwicklerversion genutzt werden, was kostspieligen Produktionsdatenverkehr einspart. Die Installation von MQ ist relativ einfach. Todd erstellt den Speicher wie zuvor bei Db2 und installiert anschließend das Helm-Diagramm:
 
@@ -187,7 +193,8 @@ Zunächst wählt Todd "NodePort" aus, um die Middleware von der Benutzerschnitts
 
 Zum Konfigurieren von MQ für die Verwendung von Stock Trader öffnet Todd die Benutzerschnittstelle für das MQ-Management, die genau mit der Version für virtuelle Maschinen identisch ist.
 
-### 	Redis
+### Redis
+{: #vcscontent-addmidware-redis}
 
 Obwohl Stock Trader in {{site.data.keyword.cloud_notm}} Private Hosted ausgeführt wird, ist die Latenzzeit des Börsennotierungsservice weiterhin ein wichtiger Aspekt, denn für einen Großteil der Nutzer ist vor allem das Vortagsende der Börse von vorrangigem Interesse. Um die Leistung zu verbessern, fügen sie einen Redis-Cache hinzu.
 
@@ -198,6 +205,7 @@ Mit diesem Diagramm werden standardmäßig sechs Pods installiert, nämlich ein 
 Die Konfiguration ist einfach; Todd gibt daher den Namensbereich ein, in dem sie installiert werden soll, und beginnt mit der Installation.
 
 ## Refactoring von Stock Trader ausführen
+{: #vcscontent-addmidware-refactor-stock-trader}
 
 Das Refactoring von Stock Trader ist ein wichtiger Schritt für Jane. Während Todd damit beschäftigt war, die Middleware in {{site.data.keyword.cloud_notm}} Private hinzuzufügen, hat Jane ein Refactoring für ihre Lösung ausgeführt, um sie für Kubernetes und das Cloudverhalten zu optimieren.
 
@@ -213,17 +221,20 @@ Zur Optimierung hat Jane die folgenden Schritte ausgeführt:
 Das folgende Beispiel zeigt Janes [Code-Repository](https://github.com/IBMStockTrader/) zusammen mit der Jenkins-Datei "server.xml" und anderem. Auf dieser bestehenden Grundlage kann Jane nach Belieben zusätzliche Funktionalität über geheime Schlüssel für den Zugriff auf Services wie ODM und Watson sowie weitere Mikroservices als einzelne Repositorys in GitHub codieren.
 
 ### Geheime Schlüssel hinzufügen
+{: #vcscontent-addmidware-add-secrets}
 
 Nachdem Jane das Refactoring der Mikroservices für Stock Trader abgeschlossen hat, benötigt sie jetzt ein Verfahren, mit dem die Servicenamen, Benutzer-IDs und Kennwörter abstrahiert werden können, damit die Anwendung nach der Bereitstellung eindeutige Details über den Service abrufen kann, ohne dass bestimmte Namen fest codiert werden müssen und ein erneuter Build der Anwendung erforderlich ist.
 
 Mit geheimen Kubernetes-Schlüsseln konfiguriert Jane einen klar strukturierten Namen des geheimen Schlüssels und Parameter innerhalb jedes geheimen Schlüssels, um sicherzustellen, dass der Mikroservice nach seiner Bereitstellung die eindeutigen Werte für Hostname, Benutzer-ID, Kennwort oder andere sensible Berechtigungsnachweise abruft, wodurch ihre Anwendung portierbar wird.
 
-Obwohl Stock Trader möglicherweise in mehr als einer Cloud ausgeführt wird, strebt Jane eine vereinheitlichte Codebasis an. Der geheime Db2-Schlüssel in der folgenden Abbildung besitzt andere Routing-Details, jedoch in identischem Format. Nachdem der Portfolio-Mikroservice von Jane bereitgestellt wurde, sucht er nach dem Endpunktparameter des geheimen Db2-Schlüssels, um eine Verbindung zur entsprechenden Db2-Instanz herzustellen. Für die Anwendung "Stock Trader" ist es unerheblich, ob sie in einer virtuellen VMware-Maschine, einem containerisierten Service oder einem von der Cloud verwalteten Service ausgeführt wird.
+Obwohl Stock Trader möglicherweise in mehr als einer Cloud ausgeführt wird, strebt Jane eine vereinheitlichte Codebasis an. Der geheime Db2-Schlüssel in der folgenden Abbildung besitzt andere Routing-Details, jedoch in identischem Format. Nachdem der Portfolio-Mikroservice von Jane bereitgestellt wurde, sucht er nach dem Endpunktparameter des geheimen Db2-Schlüssels, um eine Verbindung zur entsprechenden Db2-Instanz herzustellen. Für die Anwendung "Stock Trader" ist es unerheblich, ob sie in einer virtuellen VMware-Maschine, einem containerisierten Service oder einem
+von der Cloud verwalteten Service ausgeführt wird.
 
 Abbildung 2. Stock Trader - Services umlagern
 ![Stock Trader - Services umlagern](vcscontent-pivot-services.svg)
 
 ## Ergebnis
+{: #vcscontent-addmidware-result}
 
 Da Jane das Refactoring ihrer Lösung "Stock Trader" festgeschrieben hat und Todd Middleware in {{site.data.keyword.cloud_notm}} Private Hosted installiert hat, wird die Lösung "Stock Trader" vollständig in einer privaten Cloud ausgeführt. Jane fügt jetzt weitere Mikroservices wie beispielsweise einen Benachrichtigungsservice für Twitter hinzu. Istio-Routing-Regeln ermöglichen das dynamische Messaging nach Kundentreuestufen über einen internen Slack-Kanal oder einen öffentlichen Twitter-Kanal.
 
@@ -231,6 +242,7 @@ Abbildung 3. Anreicherung von Stock Trader
 
 ![Anreicherung von Stock Trader](vcscontent-enrich.svg)
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcscontent-addmidware-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

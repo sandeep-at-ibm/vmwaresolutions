@@ -54,7 +54,8 @@ Bevor Sie VMs migrieren, führen Sie eine Bewertung der verwendeten Netzverbindu
 
 Dies ist dann angebracht, wenn Sie die Paketkomponenten in der HCX-Client-Benutzerschnittstelle bereitstellen, aber die Nachbereitstellung erfordert, dass Sie zur Benutzerschnittstelle für die WAN-Optimierung wechseln.
 
-Änderungen gehen verloren, wenn Sie den HCX-CGW über die HCX-Webbenutzerschnittstelle erneut bereitstellen. Dadurch werden Bandbreitengrenzwerte nur für den Migrationsdatenverkehr festgelegt. Erweiterter L2-Datenverkehr wird von dieser Einstellung nicht beeinflusst.
+Änderungen gehen verloren, wenn Sie den HCX-CGW über die HCX-Webbenutzerschnittstelle erneut bereitstellen.
+Dadurch werden Bandbreitengrenzwerte nur für den Migrationsdatenverkehr festgelegt. Erweiterter L2-Datenverkehr wird von dieser Einstellung nicht beeinflusst.
 {:note}
 
 1.	Melden Sie sich bei der Webbenutzerschnittstelle für das WAN-Optimierungsprogramm an.
@@ -103,4 +104,4 @@ Sie können den Datenverkehr über alle Schnittstellen überwachen, die die Regi
 ## Zugehörige Links
 {: #vcshcx-monitoring-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

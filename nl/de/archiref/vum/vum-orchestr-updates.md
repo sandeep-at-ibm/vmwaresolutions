@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-20"
+lastupdated: "2019-02-18"
 
 ---
 
-#	Koordinierte Upgrades
+# Koordinierte Upgrades
+{: #vum-orchestr-updates}
 
 Sie können koordinierte Upgrades verwenden, um die virtuelle Hardware und die VMware Tools virtueller Maschinen im Bestand aufzurüsten, nachdem die vSphere ESXi-Hosts aktualisiert wurden. Nachdem die Hosts aktualisiert wurden, wird zuerst die Upgrade-Baseline für VMware Tools und danach die Hardware-Upgrade-Baseline der virtuellen Maschine ausgeführt. Koordinierte Upgrades können auf Cluster-, Ordner- oder Rechenzentrumsebene verwendet werden.
 
@@ -33,6 +34,7 @@ Alternativ können Sie das Limit für die Anzahl der Hosts definieren, die währ
 Der folgende Workflow beschreibt den Prozess zur Durchführung eines koordinierten Upgrades:
 
 ## Schritt 1
+{: #vum-orchestr-updates-step1}
 
 1. Melden Sie sich mit dem vSphere Web Client bei der VCSA an.
 2. Wählen Sie **Home** > **Update Manager** in der Registerkarte **Objekte** aus und wählen Sie dann eine **Update Manager-Instanz** aus.
@@ -47,6 +49,7 @@ Der folgende Workflow beschreibt den Prozess zur Durchführung eines koordiniert
 11. Überprüfen Sie die Seite **Bereit zum Abschließen**, klicken Sie auf **Fertigstellen** und die Host-Baseline-Gruppe wird im Teilfenster "Baselinegruppen" angezeigt.
 
 ## Schritt 2
+{: #vum-orchestr-updates-step2}
 
 1. Erstellen Sie eine Baselinegruppe für virtuelle Maschinen, die die Baseline "VMware Tools-Upgrade übereinstimmend mit Host" und die Baseline "VM-Hardware-Upgrade übereinstimmend mit Host" (Ansicht "VUM-Verwaltung") enthält.
 2. Hängen Sie die Baselinegruppe an ein vCenter-Containerobjekt an, das die virtuellen Maschinen enthält, für die Sie ein Upgrade durchführen möchten.
@@ -58,7 +61,8 @@ Der folgende Workflow beschreibt den Prozess zur Durchführung eines koordiniert
 
 Sie können diese Baselinegruppen nun in Prozessen zum Prüfen und Auswerten, für das Staging und zur Korrektur verwenden.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vum-orchestr-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

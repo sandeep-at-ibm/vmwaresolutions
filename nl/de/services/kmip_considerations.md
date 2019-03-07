@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-20"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2018-12-20"
 {:deprecated: .deprecated}
 
 # KMIP for VMware on IBM Cloud - Übersicht - nicht mehr verwendet
+{: #kmip_considerations}
 
 Die aktuelle Version von KMIP for VMware on IBM Cloud wird nicht weiter unterstützt. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem IBM Support](../vmonic/trbl_support.html).
 {:deprecated}
@@ -21,6 +22,7 @@ Die aktuelle Version von KMIP for VMware on IBM Cloud wird nicht weiter unterst�
 Der Service "KMIP for VMware on {{site.data.keyword.cloud}}" stellt täglich rund um die Uhr einen hoch verfügbaren Service für das Management von Verschlüsselungsschlüsseln bereit, die von VMware in der {{site.data.keyword.cloud_notm}} verwendet werden. Dieser Service bietet Laufzeitfunktionalität, mit der Kunden die Verschlüsselungsschlüssel erstellen, abrufen, aktivieren, widerrufen und zerstören können. Außerdem stellt er Managementfunktionen zum Verwalten der Zuordnungen zwischen den Clientberechtigungsnachweisen und den Verschlüsselungsschlüsseln bereit.
 
 ## Technische Spezifikationen für KMIP for VMware on IBM Cloud
+{: #kmip_considerations-specs}
 
 Die folgenden Spezifikationen werden mit dem Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}" einbezogen:
 
@@ -30,6 +32,7 @@ Die folgenden Spezifikationen werden mit dem Service "KMIP for VMware on {{site.
 * Hochverfügbarer KMIP-Serviceendpunkt in jeder Region
 
 ## Hinweise zur Installation von KMIP for VMware on IBM Cloud
+{: #kmip_considerations-install}
 
 KMIP for VMware on {{site.data.keyword.cloud_notm}} verwendet den Service "IBM Key Protect for {{site.data.keyword.cloud_notm}}", um Verschlüsselungsschlüssel zu erstellen, zu verschlüsseln und zu entschlüsseln. Daher müssen Sie vor der Installation von KMIP for VMware on {{site.data.keyword.cloud_notm}} Folgendes sicherstellen:
 * Sie haben einen verwendbaren Key Protect-Service bestellt.
@@ -43,17 +46,21 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} verwendet den Service "IBM K
    **Wichtig:** Der Service kann nicht ohne Stammschlüssel für Kunden (Customer Root Key, CRK) bestellt werden. Es wird dringend empfohlen, das Verfahren für die Erstellung eines Stammschlüssels für Kunden unter Verwendung vorhandener Schlüsselinformationen zu verwenden und die erstellten Schlüsselinformationen zu sichern. Dadurch stellen Sie sicher, dass Sie Ihre Schlüssel im Falle eines Ausfalls des Rechenzentrums, in dem IBM Key Protect Ihre Stammschlüssel für Kunden speichert, wiederherstellen können.
 
 ## Hinweise zur Verwendung von KMIP for VMware on IBM Cloud
+{: #kmip_considerations-use}
 
 * Zur Verwendung eines bestellten Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}" als Schlüsselmanagementserver (Key Management Server, KMS), der bei VMware vCenter Server registriert ist, müssen Sie sicherstellen, dass die Netzkonnektivität von vCenter Server zum Endpunkt des bestellten Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}" betriebsfähig ist.
-* Zur Verwendung des Service für die VMware vSAN-Verschlüsselung müssen Sie sicherstellen, dass die Netzkonnektivität zwischen den Hosts im Ziel-vSAN und dem Endpunkt des bestellten Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}" betriebsfähig ist.
+* Zur Verwendung des Service mit der VMware vSAN-Verschlüsselung müssen Sie sicherstellen, dass die Netzkonnektivität zwischen den Hosts im Ziel-vSAN und dem Endpunkt des bestellten Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}" betriebsfähig ist.
+* Bei Verwendung der KMIP for VMware with vSAN-Verschlüsselung werden bei der vSAN-Statusprüfung möglicherweise in regelmäßigem Abstand Warnungen ausgegeben, die besagen, dass von keinem Ihrer vSphere-Hosts eine Verbindung zum KMS-Cluster hergestellt werden kann. Diese Warnungen treten auf, da es für die Verbindung der vSAN-Statusprüfung zu schnell zu einer Zeitlimitüberschreitung kommt. Sie können diese Warnungen ignorieren.
 
 ## Hinweise zum Entfernen von KMIP for VMware on IBM Cloud
+{: #kmip_considerations-remove}
 
 Das öffentliche VMware-Zertifikat, das Sie beim Bestellen oder Verwenden des Service angegeben haben, wird als Clientzertifikat für die Kommunikation mit der Serviceinstanz verwendet. Wenn der Service entfernt wird, werden damit auch alle Verschlüsselungsschlüssel entfernt, die von dieser Serviceinstanz für das zugehörige öffentliche VMware-Zertifikat erstellt wurden.
 
 Bevor Sie den Service entfernen, müssen Sie sicherstellen, dass keine virtuellen Maschinen oder vSANs mit den vom KMIP-Service erstellten Schlüsseln verschlüsselt werden.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #kmip_considerations-related}
 
 * [KMIP for VMware on {{site.data.keyword.cloud_notm}} bestellen](kmip_ordering.html)
 * [{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse](../vmonic/at-events.html)

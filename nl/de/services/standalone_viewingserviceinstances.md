@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Lokale VMware HCX on IBM Cloud-Instanzen anzeigen
+{: #standalone_viewingserviceinstances}
 
 Mit dem hier beschriebenen Verfahren können Sie die lokalen HCX on {{site.data.keyword.cloud}}-Instanzen, die Sie für die lokale Verwendung bestellt haben, und Informationen zu diesen Instanzen anzeigen.
 
 ## Vorgehensweise zum Anzeigen lokaler VMware HCX on IBM Cloud-Instanzen
+{: #standalone_viewingserviceinstances-procedure}
 
 Klicken Sie im linken Navigationsfenster auf **Bereitgestellte Instanzen** und blättern Sie abwärts zur Tabelle **Lokale HCX-Instanzen**, um die Informationen zu den von Ihnen bestellten Instanzen anzuzeigen:
 
@@ -36,9 +38,10 @@ Tabelle 2. Statusbeschreibungen der lokalen HCX on {{site.data.keyword.cloud_not
 | Installiert | Die Instanz ist zur Verwendung bereit. |
 | Wird entfernt | Die Instanz wird gerade gelöscht. |
 
-### Zugehörige Links
+## Zugehörige Links
+{: #standalone_viewingserviceinstances-related}
 
-* [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen bestellen](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
-* [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen löschen](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
-* [Glossar der HCX-Begriffe](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
+* [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen löschen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances)
+* [Glossar der HCX-Begriffe](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Dokumentation zu VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

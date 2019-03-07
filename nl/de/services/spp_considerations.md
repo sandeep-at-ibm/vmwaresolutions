@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Übersicht über IBM Spectrum Protect Plus on IBM Cloud
+{: #spp_considerations}
 
 Der Service "{{site.data.keyword.IBM}} Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" bietet eine effiziente und skalierbare Datensicherungs-, Datenwiederverwendungs- und Datenwiederherstellungslösung für virtuelle Umgebungen. Er kann als eigenständige Lösung implementiert oder in Ihre IBM Spectrum Protect-Umgebung integriert werden, um Kopien für die Langzeitspeicherung und Datengovernance auszulagern.
 
@@ -20,10 +21,12 @@ Dieser Service ist nur für Instanzen verfügbar, auf denen vSphere 6.5 ausgefü
 {:note}
 
 ## Technische Spezifikationen für IBM Spectrum Protect Plus on IBM Cloud
+{: #technical-specifications-for-ibm-spectrum-protect-plus-on-ibm-cloud}
 
 Mit dem Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" werden die folgenden Komponenten bestellt und einbezogen:
 
 ### vCenter-Ressourcen
+{: #spp_considerations-vcenter}
 
 * Server-VM mit dem IBM Spectrum Protect Plus-Server
    * Betriebssystem Linux 3.10.0-693.11.1.el7.x86_64
@@ -36,6 +39,7 @@ Mit dem Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" 
    * 150 GB Plattenspeicher
 
 ### Speicher für Sicherungen
+{: #spp_considerations-backup-storage}
 
 Anpassbarer Speicher für Sicherungen mit den folgenden Optionen:
 * Anzahl Dateispeicher: 1 - 10
@@ -45,19 +49,23 @@ Anpassbarer Speicher für Sicherungen mit den folgenden Optionen:
 Informationen zur Planung und Dimensionierung finden Sie unter [IBM Spectrum Protect Plus Blueprint and Sizing Tool](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints).
 
 ### Speicher für Management
+{: #spp_considerations-mgmt-storage}
 
 Ein Endurance-Dateispeicher (File Storage) mit 1000 GB, 2 IOPS/GB, der die virtuelle Maschine (VM) für IBM Spectrum Protect Plus hostet und im selben Teilnetz wie der Sicherungsspeicher aktiv ist.
 
 ### Vernetzung
+{: #spp_considerations-network}
 
 Zwei portierbare private IP-Adressen.
 
 ### Lizenzen und Gebühren
+{: #spp_considerations-license}
 
 * IBM Spectrum Protect Plus (10 bis zu maximal 1000 VM-Lizenzen in 10er-Inkrementen)
 * IBM Spectrum Protect Plus-Lizenz, die über die Konsole von {{site.data.keyword.vmwaresolutions_short}} angeboten wird (Anzahl von VMs in 10er-Paketen) oder als BYOL
 
 ## Hinweise zur Installation von IBM Spectrum Protect Plus on IBM Cloud
+{: #spp_considerations-install}
 
 Lesen Sie die folgenden Hinweise, bevor Sie den Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" installieren.
 
@@ -69,16 +77,18 @@ Lesen Sie die folgenden Hinweise, bevor Sie den Service "IBM Spectrum Protect Pl
   Der Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" kann bis zu 11 der NFS-Datenträger auf jedem ESXi-Server im Standardcluster Ihrer Instanz verwenden. Darüber hinaus erstellt der Service transiente NFS-Mounts für Sicherungs- und Wiederherstellungszwecke. Daher müssen Sie die Anzahl der NFS-Mounts auf mindestens 64 setzen, um sicherzustellen, dass der Service installiert und erfolgreich ausgeführt werden kann.
 
 ## Hinweise zum Entfernen von IBM Spectrum Protect Plus on IBM Cloud
+{: #spp_considerations-remove}
 
 Lesen Sie die folgenden Hinweise, bevor Sie den Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" entfernen:
 * Stellen Sie sicher, dass alle Sicherungsjobkonfigurationen zusammen mit den aktiven Sicherungs- oder Wiederherstellungsoperationen entfernt werden.
 * Wenn Sie den Service entfernen, wird der Speicher für das Sicherungsrepository aus der virtuellen Maschine von IBM Spectrum Protect Plus entfernt und die Speicherbestellung wird storniert, wodurch die Sicherungsrepositorydaten permanent gelöscht werden.
 * Wenn Sie den Service entfernen, wird der für den Service bestellte Sicherungsspeicher ebenfalls entfernt. Der Zugriff auf alle Sicherungen wird während des Entfernens des Service unmöglich.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #spp_considerations-related}
 
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service Planning](http://www.ibm.com/support/docview.wss?uid=swg22012650)
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managingspp.html)
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/spp_ordering.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_ordering)
 * [IBM Spectrum Protect Plus-Dokumentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
-* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

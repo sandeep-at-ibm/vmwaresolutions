@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-30"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2018-11-30"
 {:important: .important}
 
 # Löschprozess für Zerto on IBM Cloud
+{: #removingzertodr}
 
 Der Löschprozess für den Service "Zerto on {{site.data.keyword.cloud}}" ist automatisiert. Die folgenden Schritte werden für das erfolgreiche Entfernen des Service "Zerto on {{site.data.keyword.cloud_notm}}" ausgeführt.
 
 ## Zerto on IBM Cloud entfernen
+{: #removingzertodr-remove}
 
 1. Klicken Sie im linken Navigationsfenster auf **Bereitgestellte Instanzen** und klicken Sie auf die Instanz, aus der Sie den Service entfernen wollen.
 2. Klicken Sie auf die Registerkarte **Services**.
@@ -33,10 +35,12 @@ Der Löschprozess für den Service "Zerto on {{site.data.keyword.cloud}}" ist au
       {:note}
 
 ## Ergebnisse
+{: #removingzertodr-results}
 
 Nachdem das Entfernen des Service erfolgreich abgeschlossen wurde, werden Sie per E-Mail benachrichtigt und der Serviceeintrag wird auf der Registerkarte **Installierte Services** gelöscht.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #removingzertodr-related}
 
 * [Zerto on {{site.data.keyword.cloud_notm}} bestellen](zerto_ordering.html)
 * [Zerto on {{site.data.keyword.cloud_notm}} verwalten](managingzertodr.html)

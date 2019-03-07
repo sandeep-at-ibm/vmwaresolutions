@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # NetApp ONTAP Select-Instanzen löschen
+{: #np_deletinginstance}
 
 Wenn Sie eine NetApp ONTAP Select-Instanz löschen, werden die folgenden Komponenten nacheinander freigegeben:
 1. Bereitgestellte Cluster-VMs (virtuelle Maschinen) für NetApp ONTAP Select und virtuelle Maschine für NetApp ONTAP Select Deploy
@@ -28,6 +29,7 @@ Die gelöschte Instanz wird Ihnen bis zum Ende des Abrechnungszyklus berechnet.
 {:note}
 
 ## Vorgehensweise zum Löschen von Instanzen auf der Seite "Bereitgestellte Instanzen"
+{: #np_deletinginstance-procedure1}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Suchen Sie in der Tabelle **NetApp ONTAP Select-Instanzen** nach der Instanz, die gelöscht werden soll.
@@ -38,6 +40,7 @@ Die gelöschte Instanz wird Ihnen bis zum Ende des Abrechnungszyklus berechnet.
    2. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
 
 ## Vorgehensweise zum Löschen von Instanzen auf der Seite "Instanzdetails"
+{: #np_deletinginstance-procedure2}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **NetApp ONTAP Select-Instanzen** auf die Instanz, die gelöscht werden soll.
@@ -47,8 +50,9 @@ Die gelöschte Instanz wird Ihnen bis zum Ende des Abrechnungszyklus berechnet.
    1. Klicken Sie erneut auf das Überlaufmenüsymbol neben der **vCenter-Konsole** und klicken Sie auf **Instanz löschen**.
    2. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #np_deletinginstance-related}
 
-* [NetApp ONTAP Select-Instanzen bestellen](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [NetApp ONTAP Select-Instanzen anzeigen](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
-* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [NetApp ONTAP Select-Instanzen bestellen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [NetApp ONTAP Select-Instanzen anzeigen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

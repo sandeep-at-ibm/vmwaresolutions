@@ -16,4 +16,4 @@ Das Upgrade von HCX ist ein einfacher Prozess, der die Client-Webbenutzerschnitt
 ## Zugehörige Links
 {: #vcshcx-upgrade-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

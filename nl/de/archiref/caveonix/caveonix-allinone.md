@@ -17,13 +17,13 @@ Tabelle 1. Parameter der umfassenden Bereitstellung
 
 |Parameter	|Wert|
 |---|---|
-|Typ	|Basis |
+|Typ	|Basis|
 |Anzahl VMs	|1|
 |vCPU	|16|
 |RAM	|32 GB|
 |Platte	|80 GB|
 |BS	|CentOS 7|
-|Installierte Anwendungskomponenten	|	Benutzerschnittstelle, App, Plug-ins, zentraler Kollektor, Indexdatenspeicher, Messaging-Datenspeicher, relationaler Datenspeicher, Indexdatenspeicher, ferner Kollektor|
+|Installierte Anwendungskomponenten|	Benutzerschnittstelle, App, Plug-ins, zentraler Kollektor, Indexdatenspeicher, Messaging-Datenspeicher, relationaler Datenspeicher, Indexdatenspeicher, ferner Kollektor|
 
 Die Details zur VM des zusätzlichen fernen Kollektors werden in der folgenden Tabelle beschrieben.
 
@@ -31,14 +31,14 @@ Tabelle 2. Ferner Kollektor
 
 |Parameter	|Wert|
 |---|---|
-|Anzahl VMs	|Nach Bedarf |
+|Anzahl VMs	|Nach Bedarf|
 |vCPU	|8|
 |RAM	|8 GB|
-|Platte	|1 TB |
+|Platte	|1 TB|
 |BS	|CentOS 7|
 |Installierte Anwendungskomponenten	|Ferner Kollektor|
 
 ## Zugehörige Links
 {: #caveonix-allinone-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+*   [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

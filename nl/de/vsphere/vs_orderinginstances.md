@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,30 +13,36 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Neue vSphere-Cluster bestellen
+{: #vs_orderinginstances}
 
 Zur Bereitstellung einer hochanpassungsfähigen virtualisierten VMware-Plattform müssen Sie einen VMware vSphere on {{site.data.keyword.cloud}}-Cluster bestellen. In diesem Abschnitt ist beschrieben, wie Sie einen neuen vSphere-Cluster definieren.
 
 In dieser Prozedur werden Sie durch die Auswahl von VMware-Komponenten, {{site.data.keyword.cloud_notm}} Bare Metal Server-Einstellungen, Speichereinstellungen und Optionen für den Netzbetrieb geführt, um einen neuen Cluster zu erstellen. Nachdem Sie die Bestellung aufgegeben haben, wird die Clusterkonfiguration gespeichert, damit Sie den Cluster später ausgehend von dieser Konfiguration wie benötigt skalieren können. Nach der Bestellung können Sie den VMware-Cluster manuell gemäß Ihren Anforderungen konfigurieren.
 
 ## Voraussetzungen
+{: #vs_orderinginstances-req}
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](/docs/services/vmwaresolutions/vmonic/useraccount.html).
-*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für vSphere-Cluster](/docs/services/vmwaresolutions/vsphere/vs_planning.html) vertraut gemacht.
+*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen verwalten](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für vSphere-Cluster](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning) vertraut gemacht.
 
 ## Systemeinstellungen
+{: #vs_orderinginstances-sys-settings}
 
 Sie müssen die folgenden Systemeinstellungen angeben, wenn Sie einen neuen vSphere-Cluster bestellen.
 
 ### Clustername
+{: #vs_orderinginstances-cluster-name}
 
 Der Clustername muss innerhalb Ihres Kontos eindeutig sein.
 
 ## Lizenzierungseinstellungen
+{: #vs_orderinginstances-licensing-settings}
 
 Wählen Sie die VMware-Komponenten aus, die mit Ihrem Cluster bestellt werden sollen, und geben Sie die Lizenzierungsoption für die Komponenten an.
 
 ### Komponentenpakete für IBM Business Partner-Benutzer
+{: #vs_orderinginstances-component-bundles-for-bp-users}
 
 IBM Business Partner-Benutzer können bei der Bestellung eines neuen vSphere-Clusters ein Komponentenlizenzpaket auswählen. Folgende Pakete sind verfügbar:
 
@@ -58,6 +64,7 @@ Die BYOL-Option (Bring Your Own License) steht für IBM Business Partner-Benutze
 {:note}
 
 ### Einzelne Komponenten für Benutzer ohne Business Partner-Status
+{: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 Wenn Sie nicht Den IBM Business Partner-Status haben, können Sie für Ihren vSphere Cluster folgende Komponenten auswählen:
 * VMware vSphere Enterprise Plus
@@ -73,6 +80,7 @@ Die Komponente "VMware vSAN" ist nicht verfügbar, wenn Sie VMware vSphere Enter
 {:note}
 
 ### Lizenzierungsoptionen
+{: #vs_orderinginstances-licensing-options}
 
 Zur Lizenzierung der ausgewählten VMware-Komponenten gibt es die folgenden Optionen:
 * **Lizenz in Kauf einbeziehen**: In diesem Fall wird eine neue Lizenz für die VMware-Komponente in Ihrem Namen erworben. Es wird eine kombinierte VMware-Lizenz generiert, die mit der Clustergröße der Bestellung übereinstimmt.
@@ -84,8 +92,10 @@ Die Verwendung von einzelnen Lizenzschlüsseln zusammen mit den kombinierten Liz
 {:important}
 
 ## Einstellungen für Bare Metal Server
+{: #vs_orderinginstances-bare-metal-settings}
 
 ### Standort des Rechenzentrums
+{: #vs_orderinginstances-dc-location}
 
 Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} aus, das als Host für den Cluster verwendet werden soll.
 
@@ -95,6 +105,7 @@ Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} aus, das als Host für 
 * Das Rechenzentrum FRA05 bietet keine Unterstützung für SAP-zertifizierte und Broadwell-Bare-Metal-Server.
 
 ### Skylake
+{: #vs_orderinginstances-skylake}
 
 Wenn Sie **Skylake** auswählen, dann können Sie die Kombination aus CPU und RAM für den Bare Metal Server entsprechend Ihren Anforderungen auswählen. Welche Optionen verfügbar sind, ist davon abhängig, ob Sie die Komponente "VMware vSAN" ausgewählt haben.
 
@@ -107,6 +118,7 @@ Tabelle 2. Optionen für Skylake {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 ### SAP-zertifiziert
+{: #vs_orderinginstances-sap}
 
 Die Registerkarte **SAP-zertifiziert** ist nicht verfügbar, wenn Sie zuvor VMware vSAN ausgewählt haben. Wenn Sie **SAP-zertifiziert** auswählen, dann können Sie die CPU- oder RAM-Einstellungen nicht ändern.
 
@@ -120,6 +132,7 @@ Wählen Sie gemäß Ihren Anforderungen eine Bare Metal Server-Konfiguration aus
   * Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 4096 GB RAM
 
 ### Broadwell
+{: #vs_orderinginstances-broadwell}
 
 Wenn Sie **Broadwell** auswählen, dann können Sie die Kombination aus CPU und RAM für den Bare Metal Server entsprechend Ihren Anforderungen auswählen. Welche Optionen verfügbar sind, ist davon abhängig, ob Sie die Komponente "VMware vSAN" ausgewählt haben.
 
@@ -134,12 +147,14 @@ Tabelle 3. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Bare Metal Server-Anzahl
+{: #vs_orderinginstances-bare-metal-number}
 
 Die Anzahl der ESXi-Server, die Sie zum vSphere-Cluster hinzufügen wollen. Alle ESXi-Server verfügen über dieselbe Konfiguration.
 * Falls Sie die Komponente "VMware NSX" ausgewählt haben, sind mindestens drei Server erforderlich.
 * Falls Sie die Komponente "VMware vSAN" ausgewählt haben, sind mindestens vier Server erforderlich.
 
 ## Speichereinstellungen
+{: #vs_orderinginstances-storage-settings}
 
 Bei Bestellungen ohne vSAN werden ESXi-Server mit einem Chassis für zwölf Platten und zwei Platten für das ESXi-Betriebssystem (OS) bestellt.
 
@@ -156,10 +171,12 @@ Wenn Sie für den Cluster die Komponente "VMware vSAN" ausgewählt haben, müsse
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
 
 ## Netzschnittstelleneinstellungen
+{: #vs_orderinginstances-network-interface-settings}
 
 Sie müssen die folgenden Netzschnittstelleneinstellungen angeben, wenn Sie einen neuen vSphere-Cluster bestellen.
 
 ### Hostnamenspräfix
+{: #vs_orderinginstances-host-name-prefix}
 
 Der Hostname wird für alle Bare Metal Server-Bestellungen verwendet. Es wird empfohlen, den Hostnamen für alle Management-VMs wie vCenter Server oder NSX zu verwenden.
 
@@ -169,6 +186,7 @@ Das Hostnamenspräfix muss die folgenden Anforderungen erfüllen:
 * Die maximale Länge beträgt 10 Zeichen.
 
 ### Unterdomänenbezeichnung
+{: #vs_orderinginstances-subdomain-label}
 
 Die Unterdomänenbezeichnung muss die folgenden Anforderungen erfüllen:
 *  Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
@@ -177,6 +195,7 @@ Die Unterdomänenbezeichnung muss die folgenden Anforderungen erfüllen:
 *  Die Unterdomänenbezeichnung muss innerhalb Ihres Kontos eindeutig sein.
 
 ### Domänenname
+{: #vs_orderinginstances-domain-name}
 
 Der Domänenname wird für alle {{site.data.keyword.baremetal_short}}-Instanzen verwendet und muss die folgenden Anforderungen erfüllen:
 * Der Name muss aus zwei oder mehr Zeichenfolgen bestehen, die jeweils durch einen Punkt (.) voneinander getrennt sind.
@@ -187,6 +206,7 @@ Der Domänenname wird für alle {{site.data.keyword.baremetal_short}}-Instanzen 
 * Die maximale Länge des Domänennamens beträgt 189 Zeichen.
 
 ### Öffentliches oder privates Netz
+{: #vs_orderinginstances-public-private-network}
 
 Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
 
@@ -196,15 +216,20 @@ Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Networ
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### VLANs
+{: #vs_orderinginstances-vlans}
 
 Die Netzeinstellungen basieren auf Ihrer Auswahl von entweder **Neue VLANs bestellen** oder **Vorhandene VLANs auswählen**.
 
 Für Ihre Clusterbestellung sind 1 öffentliches VLAN und 2 private VLANs erforderlich. Die zwei privaten VLANs werden in jedem Bare Metal Server zusammengelegt.
 
 #### Neue VLANs bestellen
+{: #vs_orderinginstances-new-vlans}
+
 Wählen Sie diese Option aus, um ein neues öffentliches VLANs und zwei neue private VLANs zu bestellen.
 
-#### Vorhandene VLANs auswählen  
+#### Vorhandene VLANs auswählen
+{: #vs_orderinginstances-existing-vlans}
+
 Abhängig vom ausgewählten {{site.data.keyword.CloudDataCent_notm}} sind möglicherweise vorhandene öffentliche und private VLANs verfügbar.
 
   Wenn Sie vorhandene öffentliche und private VLANs wiederverwenden wollen, dann geben Sie die VLANs und Teilnetze an:
@@ -219,14 +244,17 @@ Abhängig vom ausgewählten {{site.data.keyword.CloudDataCent_notm}} sind mögli
 * Stellen Sie sicher, dass sich alle von Ihnen ausgewählten VLANs in demselben Pod befinden. ESXi-Server können nicht in VLANs mit unterschiedlichen Pods bereitgestellt werden.
 
 #### HA-Paar von FortiGate Physical Appliance 300 Series
+{: #vs_orderinginstances-fortigate-physical-appliance}
 
-Sie können außerdem auswählen, ob das HA-Paar von FortiGate Physical Appliance 300 Series zum Sichern der Cloudumgebung enthalten sein soll. Weitere Informationen enthält der Abschnitt [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/fsa_considerations.html). 
+Sie können außerdem auswählen, ob das HA-Paar von FortiGate Physical Appliance 300 Series zum Sichern der Cloudumgebung enthalten sein soll. Weitere Informationen enthält der Abschnitt [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
 
 ## Bestellübersicht
+{: #vs_orderinginstances-order-summary}
 
 Auf Basis Ihrer Konfigurationen werden die geschätzten Kosten sofort generiert und im rechten Fenster **Bestellübersicht** angezeigt. Klicken Sie auf **Preisdetails**, um ein PDF-Dokument zu generieren, das die Kostenschätzungsdetails enthält.
 
 ## Vorgehensweise zum Bestellen von vSphere-Cluster
+{: #vs_orderinginstances-procedure}
 
 1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und anschließend im Abschnitt **Virtuelle Rechenzentren** auf **VMware vSphere**.
 2. Klicken Sie auf der Seite **VMware vSphere on IBM Cloud** auf **Erstellen**.  
@@ -260,6 +288,7 @@ Auf Basis Ihrer Konfigurationen werden die geschätzten Kosten sofort generiert 
    {:note}
 
 ### Ergebnisse
+{: #vs_orderinginstances-results}
 
 Wenn Sie die Clusterkonfiguration als Vorlage gespeichert haben, erhalten Sie in der Konsole eine Benachrichtigung, dass die Konfiguration erfolgreich gespeichert wurde. Die Vorlage ist danach in der Liste **Clusterkonfigurationen** enthalten.
 
@@ -268,8 +297,9 @@ Falls Sie eine Bestellung aufgegeben haben, beginnt die Bereitstellung des Clust
 Die vSphere-Cluster werden (anders als die vCenter Server- und Cloud Foundation-Instanzen) auf der Seite **Bereitgestellte Instanzen** nicht angezeigt.
 {:note}
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vs_orderinginstances-related}
 
-* [Auf vorhandenen Konfigurationen basierenden vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
-* [Vorhandene Cluster skalieren](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
-* [Außerhalb der Konsole erstellte Cluster skalieren](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [Auf vorhandenen Konfigurationen basierenden vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
+* [Vorhandene Cluster skalieren](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [Außerhalb der Konsole erstellte Cluster skalieren](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

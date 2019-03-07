@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # Redundanz virtueller vSAN-Maschinen
+{: #vum-vsan-redundancy}
 
 Wenn Sie einen vSphere ESXi-Host in einem vSAN-Cluster in den Wartungsmodus versetzen, müssen Sie einen Datenevakuierungsmodus auswählen. Die Auswahl des Modus kann Auswirkungen auf die virtuellen Maschinen (VMs) und auf Appliances haben, die den vSAN-Datenspeicher verwenden:
 * Eine **vollständige Datenmigration** evakuiert alle Daten von einem Host und verschiebt sie auf die anderen vSphere ESXi-Hosts im vSAN-Cluster. Dieser Evakuierungsmodus erzeugt ein sehr hohes Datenvolumen und ist sehr zeit- und ressourcenintensiv. Alle Komponenten im lokalen Speicher des ausgewählten Hosts werden an eine andere Stelle im Cluster migriert. Wenn der Host in den Wartungsmodus wechselt, haben alle VMs und Appliances Zugriff auf ihre Speicherkomponenten und sind immer noch mit den zugeordneten Speicherrichtlinien kompatibel. Die vollständige Evakuierung der Daten kann lange dauern und auch das Wartungsfenster für ein Upgrade erheblich verlängern.
@@ -21,7 +22,8 @@ In diesem Abschnitt wird eine neue Speicherrichtlinie für virtuelle Maschinen (
 
 2. Warten Sie, bis das vSAN die Synchronisation abgeschlossen hat, bevor Sie mit den Korrekturaktionen beginnen. Der Fertigstellungsstatus kann überprüft werden, indem Sie zur Seite für die **Überwachung der virtuellen vSAN-Objekte** für den Cluster navigieren und den **Fertigstellungsstatus** überprüfen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vum-vsan-redundancy-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

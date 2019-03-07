@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-06-22"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-06-22"
 {:important: .important}
 
 # Releaseinformationen für V2.4
+{: #relnotes_v24}
 
 Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -24,7 +25,7 @@ Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserung
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Weitere Informationen enthält der Abschnitt [Gegenmaßnahmen für Sicherheitslücken "Spectre" und "Meltdown"](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
+Weitere Informationen enthält der Abschnitt [Gegenmaßnahmen für Sicherheitslücken "Spectre" und "Meltdown"](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre).
 
 ## Unterstützung in der Landessprache
 
@@ -44,29 +45,22 @@ Die folgenden Sprachen werden neben Englisch unterstützt:
 
 ## Unterstützung für Skylake Xeon-CPU
 
-Ab dem Release von V2.4 sind die folgenden neuen Bare Metal Server-CPU-Modelle zur Bereitstellung für VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}-, VMware vSphere on {{site.data.keyword.cloud_notm}}- und VMware Federal on {{site.data.keyword.cloud_notm}}-Instanzen und -Cluster verfügbar:
+Ab dem Release von V2.4 sind die folgenden neuen Bare Metal Server-CPU-Modelle zur Bereitstellung für VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}- und VMware vSphere on {{site.data.keyword.cloud_notm}}-Instanzen und -Cluster verfügbar:
 
-* Dual Intel Skylake Xeon Silver 4110-Prozessor / 16 Kerne insgesamt, 2,1 GHz
-* Dual Intel Skylake Xeon Gold 5120-Prozessor / 28 Kerne insgesamt, 2,2 GHz
-* Dual Intel Skylake Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz
+* Dual Intel Skylake Xeon Silver 4110-Prozessor / 16 Cores insgesamt, 2,1 GHz
+* Dual Intel Skylake Xeon Gold 5120-Prozessor / 28 Cores insgesamt, 2,2 GHz
+* Dual Intel Skylake Xeon Gold 6140-Prozessor / 36 Cores insgesamt, 2,3 GHz
 
 Weitere Informationen enthält der Abschnitt *Einstellungen für Bare Metal Server* unter:
 
-* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html#bare-metal-server-settings)
-* [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#bare-metal-server-settings)
-* [VMware Federal-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html#bare-metal-server-settings)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance#bare-metal-server-settings)
+* [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)
 
 ## Updates für VMware vCenter Server-Instanzen
 
 ### Leistungsverbesserung für Network File System
 
-Die Leistungsstufe von 10 E/A-Operationen pro Sekunde und GB, die für die anspruchsvollsten Workloadtypen konzipiert ist, ist nicht mehr auf bestimmte {{site.data.keyword.CloudDataCent_notm}} begrenzt, sondern ist nun für alle Rechenzentren verfügbar. Weitere Informationen finden Sie im Abschnitt *Speicher* unter [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
-
-## Updates für VMware Federal-Instanzen
-
-### Neue Option für IBM Cloud Data Center
-
-Sie können VMware Federal-Instanzen nun für das {{site.data.keyword.CloudDataCent_notm}} "DAL08 - Dallas, TX" bereitstellen. Weitere Informationen finden Sie im Abschnitt *Verfügbarkeit des IBM Cloud-Rechenzentrums* unter [Voraussetzungen und Planung für VMware Federal-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html#ibm-cloud-data-center-availability).
+Die Leistungsstufe von 10 E/A-Operationen pro Sekunde und GB, die für die anspruchsvollsten Workloadtypen konzipiert ist, ist nicht mehr auf bestimmte {{site.data.keyword.CloudDataCent_notm}} begrenzt, sondern ist nun für alle Rechenzentren verfügbar. Weitere Informationen finden Sie im Abschnitt *Speicher* unter [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
 
 ## Updates für Add-on-Services
 
@@ -76,13 +70,13 @@ Das aktuelle Release installiert IBM Spectrum Protect&trade; Plus V10.1.1 Patch 
 
 ### VMware HCX on IBM Cloud
 
-Bei der Bestellung dieses Service steht Ihnen nun eine neue Option für die Auswahl zwischen öffentlichem Netz und privatem Netz für HCX-Verbindungen zur Verfügung. Weitere Informationen enthält der Abschnitt [VMware HCX on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/hcx_ordering.html).
+Bei der Bestellung dieses Service steht Ihnen nun eine neue Option für die Auswahl zwischen öffentlichem Netz und privatem Netz für HCX-Verbindungen zur Verfügung. Weitere Informationen enthält der Abschnitt [VMware HCX on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering).
 
 ## Neue und aktualisierte Dokumentation
 
 ### Referenzdokumentation zur Architektur
 
-Das Dokument zur {{site.data.keyword.vmwaresolutions_short}}-Architektur steht nun im Abschnitt *Referenz* der Benutzerdokumentation zur Verfügung. Weitere Informationen enthält der Abschnitt [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
+Das Dokument zur {{site.data.keyword.vmwaresolutions_short}}-Architektur steht nun im Abschnitt *Referenz* der Benutzerdokumentation zur Verfügung. Weitere Informationen enthält der Abschnitt [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ### Servicedokumentation
 
@@ -90,15 +84,15 @@ Die Informationen zu den Services sind neu strukturiert und die Navigation ist v
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 
-* [F5 on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/f5_ordering.html)
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/fsa_ordering.html)
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
-* [Hytrust CloudControl on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/htcc_ordering.html)
-* [Hytrust DataControl on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/htdc_ordering.html)
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/spp_ordering.html)
+* [F5 on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_ordering)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_ordering)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_ordering)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_ordering)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_ordering)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_ordering)
 * [KMIP for VMware on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/kmip_ordering.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/veeam_ordering.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/zerto_ordering.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
+* [Zerto on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering)
 
 ## Updates und Erweiterungen der Benutzerschnittstelle
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Konfiguration und Einstellungen für angehängten Speicher
+{: #storage-settings}
 
 Dieses Design unterstützt nur die Zuordnung von gemeinsamem Speicher über NFS v3. NFS v4 und v4.1 werden nicht unterstützt.
 
@@ -22,6 +23,7 @@ Der angehängte Speicher dieses Designs ist auf den {{site.data.keyword.cloud_no
 Die Architektur gibt an, dass NFS v3-Datenspeicher unter Verwendung des DNS-Namens aus dem {{site.data.keyword.cloud_notm}}-Speicher angehängt werden, um eine Verbindung zur gemeinsam genutzten Ressource herzustellen. Die gemeinsam genutzte NFS-Ressource wird auf allen Hosts im vCenter Server-Cluster angehängt und in einem Datenspeichercluster platziert, in dem die Storage DRS-Funktion aktiviert wurde.
 
 ## vSphere Storage Distributed Resource Scheduler (Storage DRS)
+{: #storage-settings-vsphere-storage-drs}
 
 Mit Storage DRS können Sie die aggregierten Ressourcen eines Datenspeicherclusters verwalten. Wird Storage DRS aktiviert, dann bietet die Funktion Empfehlungen für die Platzierung von virtuellen Maschinen (VMs) und die Migration an, um den verfügbaren Speicherplatz und die E/A-Ressourcen gleichmäßig auf die Datenspeicher des Datenspeicherclusters zu verteilen.
 
@@ -33,6 +35,7 @@ Wenn Storage DRS aktiviert wird, dann stehen die folgenden Funktionen zur Verfü
 In diesem Design wird Storage DRS mit der Automatisierungsstufe **Vollständig automatisiert** aktiviert. Demzufolge werden Dateien automatisch migriert, um die Ressourcennutzung im Datencluster zu optimieren. Da der Cluster vollständig automatisiert ist, wird für alle anderen Storage DRS-Optionen die Einstellung **Clustereinstellungen verwenden** verwendet.
 
 ## Storage DRS-Laufzeiteinstellungen für NFS v3
+{: #storage-settings-drs-nfs3}
 
 Die Aggressivität von Storage DRS wird durch Angabe von Schwellenwerten für den verwendeten Speicherbereich und die E/A-Latenz bestimmt. Storage DRS erfasst Ressourcennutzungsinformationen für die Datenspeicher in einem Datenspeichercluster. vCenter Server verwendet diese Informationen zum Generieren von Empfehlungen für die Platzierung virtueller Platten in Datenspeichern.
 
@@ -58,6 +61,7 @@ Tabelle 1. Storage DRS-Laufzeiteinstellungen
 Weitere Informationen zur Konfiguration dieser Einstellungen in vSphere Web Client finden Sie im Abschnitt zum [Festlegen der Storage DRS-Laufzeitregeln in vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-AD2D13CE-539B-48C3-BBC9-E55A834874F0.html).
 
 ## Storage I/O Control für NFS v3
+{: #storage-settings-io-control-nfs-v3}
 
 Ist SIOC (Storage I/O Control) in der Umgebung aktiviert, ändert SIOC die Länge der Einheitenwarteschlange für einzelne virtuelle Maschinen (VMs). Durch die Änderung der Länge der Einheitenwarteschlange wird die Warteschlange des Speicherarrays für alle VMs auf einen gleichen Anteil reduziert und die Speicherwarteschlange gedrosselt. SIOC wird nur dann wirksam, wenn Ressourcen beschränkt sind und die E/A-Latenz des Speichers den definierten Schwellenwert überschreitet.
 
@@ -68,10 +72,12 @@ Sie können einzelne virtuelle Platten für unterschiedliche VMs beschränken od
 Gemeinsam genutzte Ressourcen virtueller Platten, für die **Hoch** (2.000 gemeinsam genutzte Ressourcen) festgelegt ist, erhalten doppelt so hohe E/A-Volumen wie Platten, für die **Normal** (1.000 gemeinsam genutzte Ressourcen) festgelegt ist, und viermal so viele wie bei der Angabe **Niedrig** (500 gemeinsam genutzte Ressourcen). **Normal** ist für alle virtuellen Maschinen der Standardwert; Sie müssen die **Normal**-Werte also für virtuelle Maschinen, für die dies erforderlich ist, anpassen.
 
 ## Zusätzlicher Speicher für NFS v3
+{: #storage-settings-additional-storage-nfs-v3}
 
 Wird aufgrund unzureichender Speicherplatzkapazitäten oder hoher Latenzzeiten mehr Speicher für die Umgebung benötigt, dann können Sie eine weitere gemeinsam genutzte NFS-Ressource über die Konsole bestellen. Nach der Bestellung der gemeinsam genutzten Ressource hängen Sie den Export an die vSphere ESXi-Hosts im Cluster an und platzieren Sie die Ressource im Speichercluster. Die Platzierung der neuen gemeinsam genutzten NFS-Ressource im Speichercluster skaliert den Speicher, der der Umgebung zugeordnet ist, effektiv und reibungslos in horizontaler Richtung, ohne dass es hierdurch zu einer Belastung durch Migrationen auf Speicherebene kommt.
 
 ## Erweiterte Konfigurationsparameter
+{: #storage-settings-adv-config-param}
 
 Bei diesem Design werden erweiterte Konfigurationsparameter hinzugefügt, deren Verwendung von {{site.data.keyword.cloud_notm}} empfohlen wird. Demzufolge werden die folgenden Parameter auf jedem vSphere ESXi-Host festgelegt, der an die gemeinsam genutzte {{site.data.keyword.cloud_notm}}-NFS-Ressource angehängt ist.
 
@@ -87,6 +93,7 @@ Tabelle 2. Erweiterte NFS-Konfigurationsparameter
 | NFS.HeartbeatTimeout | 5 |
 | NFS.MaxQueueDepth | 64 |
 
-### Zugehörige Links
+## Zugehörige Links
+{: #storage-settings-related}
 
-* [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

@@ -4,21 +4,24 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-15"
 
 ---
 
 # KMIP for VMware on IBM Cloud-Instanzen bestellen
+{: #kmip_standalone_ordering}
 
 Sie können eine KMIP for VMware on {{site.data.keyword.cloud}}-Instanz bestellen, ohne sie einer VMware-Instanz für die flexible Verwaltung des Service und der Instanzen zuzuordnen.
 
 ## Vorbereitende Schritte
+{: #kmip_standalone_ordering-req}
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen](/docs/services/vmwaresolutions/vmonic/useraccount.html).
-*  Sie haben alle Hinweise im Abschnitt [Hinweise zur Installation von KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanzen](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html) gelesen.
+* Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+* Sie haben alle Hinweise im Abschnitt [Hinweise zur Installation von KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanzen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) gelesen.
 
-## KMIP for VMware on IBM Cloud-Instanzen bestellen
+## Vorgehensweise zum Bestellen von KMIP for VMware on IBM Cloud-Instanzen
+{: #kmip_standalone_ordering-procedure}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Einführung**.
 2. Klicken Sie im Bereich **Zusätzliche Services bestellen** auf **KMIP for VMware on IBM Cloud**.
@@ -26,14 +29,17 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 4. Klicken Sie auf **Bereitstellung**.
 
 ## KMIP for VMware on IBM Cloud - Servicekonfiguration
+{: #kmip_standalone_ordering-config}
 
 Geben Sie beim Bestellen des Service die folgenden Einstellungen an:
 
 ### Instanzname
+{: #kmip_standalone_ordering-config-instance-name}
 
 Geben Sie einen Namen für Ihre KMIP for VMware {{site.data.keyword.cloud_notm}}-Instanz ein.
 
 ### Serviceregion
+{: #kmip_standalone_ordering-config-service-region}
 
 Wählen Sie die {{site.data.keyword.cloud_notm}}-Region aus, in der Ihre KMIP for VMware {{site.data.keyword.cloud_notm}}-Instanz gehostet werden soll.
 
@@ -48,29 +54,35 @@ Tabelle 1. Regionen mit Serviceendpunkten für KMIP for VMware on {{site.data.ke
 | USA (Süden)       |  <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
 ### API-Schlüssel für Service-ID
+{: #kmip_standalone_ordering-config-api-key}
 
 Geben Sie den API-Schlüssel für die {{site.data.keyword.cloud_notm}}-Service-ID ein, die für den Zugriff auf die IBM Key Protect Service-Instanz verwendet wird.
 
 ### Key Protect-Instanz
+{: #kmip_standalone_ordering-config-key-protect}
 
 Klicken Sie auf **Abrufen**, um eine Liste der verfügbaren IBM Key Protect Service-Instanzen abzurufen und wählen Sie dann die Instanz aus, die für das Schlüsselmanagement verwendet werden soll.
 
 ### Stammschlüssel für Kunden
+{: #kmip_standalone_ordering-config-root-key}
 
 Klicken Sie auf **Abrufen**, um den Stammschlüssel des Kunden abzurufen, der in der ausgewählten IBM Key Protect-Instanz gespeichert ist.
 
 ## Ergebnisse
+{: #kmip_standalone_ordering-results}
 
 Die Bestellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bestellung prüfen, indem Sie die Instanzdetails anzeigen.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Installiert** und Sie empfangen per E-Mail eine Benachrichtigung.
 
 ## Nächste Schritte
+{: #kmip_standalone_ordering-next}
 
-Fügen Sie Clientzertifikate für die bestellte KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanz hinzu. Weitere Informationen finden Sie unter [Zertifikate für KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/services/kmip_standalone_addingdeletingcert.html).
+Fügen Sie Clientzertifikate für die bestellte KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanz hinzu. Weitere Informationen finden Sie unter [Zertifikate für KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_addingdeletingcert).
 
-### Zugehörige Links
+## Zugehörige Links
+{: #kmip_standalone_ordering-related}
 
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanzen anzeigen](/docs/services/vmwaresolutions/services/kmip_standalone_viewing.html)
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanzen löschen](/docs/services/vmwaresolutions/services/kmip_standalone_deleting.html)
-* [Activity Tracker-Ereignisse](/docs/services/vmwaresolutions/vmonic/at-events.html)
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanzen anzeigen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanzen löschen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
+* [Activity Tracker-Ereignisse](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

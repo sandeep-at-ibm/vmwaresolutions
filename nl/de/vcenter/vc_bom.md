@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server-Teileliste
+{: #vc_bom}
 
 In diesem Abschnitt erhalten Sie Informationen zur Teileliste (Bill of Materials, BOM) für VMware vCenter Server-Instanzen.
 
 ## VLAN-Teileliste für vCenter Server-Instanzen
+{: #vc_bom-vlans}
 
 Die folgende Tabelle enthält detaillierte Informationen zur Teileliste für die vCenter Server-VLANs.
 
@@ -29,6 +31,7 @@ Tabelle 1. Teileliste für VLANs in vCenter Server-Instanzen
 | VLAN3     | VLAN "Privat B", Portierbar | Wird VMware vSAN zugeordnet, sofern verwendet.<br><br>Wird VMware NFS zugeordnet, sofern verwendet.<br><br>Wird VMware vSphere vMotion zugeordnet. |
 
 ## Softwareteileliste für vCenter Server-Instanzen
+{: #vc_bom-software}
 
 Die folgende Tabelle enthält detaillierte Informationen zur Teileliste für die vCenter Server-Softwarekomponenten.
 
@@ -47,6 +50,7 @@ VMware vSAN ist eine optionale Komponente.
 {:note}
 
 ## Erweiterte Konfigurationseinstellungen für ESXi-Server
+{: #vc_bom-esxi-server-advance-config}
 
 Die folgende Tabelle gibt Ihnen eine Übersicht über die erweiterten Konfigurationseinstellungen, die auf ESXi-Server angewendet werden. Die Auswahl dieser Einstellungen hängt davon ab, ob die vCenter Server-Instanz in V2.2 oder höher bereitgestellt oder für sie ein Upgrade von V2.1 oder älter auf V2.2 oder höher durchgeführt wird.
 
@@ -75,6 +79,7 @@ Tabelle 3. Erweiterte Konfigurationseinstellungen für ESXi-Server für vCenter 
   Weitere Informationen finden Sie unter [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239).
 
 ## Konfigurationseinstellungen für NSX und Portgruppe
+{: #vc_bom-nsx-port-group-config}
 
 Die folgende Tabelle gibt Ihnen eine Übersicht über die Konfigurationseinstellungen für VMware NSX und für Portgruppen bei vCenter Server-Instanzen sowie über die releaseabhängigen Unterschiede.
 
@@ -93,6 +98,7 @@ Tabelle 4. Konfigurationseinstellungen für NSX und Portgruppen bei vCenter Serv
 | SDDC-DPortGroup-External für Portgruppe | **Portbindung** auf **Ephemer - keine Bindung** gesetzt | **Portbindung** auf **Statische Bindung** gesetzt |
 
 ## Konfigurationseinstellungen für Netz-MTU
+{: #vc_bom-network-mtu-config}
 
 Der vSphere-Cluster verwendet zwei vSphere Distributed Switches (vDS), von denen einer für die Konnektivität zum öffentlichen Netz und der andere für die Konnektivität zum privaten Netz verwendet wird.
 
@@ -116,19 +122,22 @@ Die Einstellungen gelten nicht für neue Cluster in demselben {{site.data.keywor
 Für Instanzen, die in V2.0 oder älteren Releases bereitgestellt wurden, sollten Sie die MTU-Einstellung für den öffentlichen Switch auf 1500 festlegen.
 
 ### MTU-Einstellung für öffentlichen Switch aktualisieren
+{: #vc_bom-procedure-update-public-switch-mtu-setting}
 
 Führen Sie zum Aktualisieren der MTU-Einstellung für den öffentlichen Switch die folgenden Schritte in VMware vSphere Web Client aus:
 1. Klicken Sie mit der rechten Maustaste auf den vDS und klicken Sie dann auf **Einstellungen bearbeiten**.
 2. Wählen Sie auf der Registerkarte **Eigenschaften** die Option **Erweitert** aus.
 3. Stellen Sie sicher, dass für **Maximale MTU** der Wert 1500 festgelegt ist.
 
-   **Anmerkung:** Wenn die MTU-Größe in einem vSphere Distributed Switch (vDS) geändert wird, werden die angehängten Uplinks (physischen NICs) herunter- und wieder hochgefahren. Aus diesem Grund kommt es bei den VMs, die den betreffenden Uplink verwenden, zu einem kurzen Ausfall. Daher wird empfohlen, die Aktualisierung der MTU-Einstellung auf eine geplante Ausfallzeit zu legen.
+   Wenn die MTU-Größe in einem vSphere Distributed Switch (vDS) geändert wird, werden die angehängten Uplinks (physischen NICs) herunter- und wieder hochgefahren. Aus diesem Grund kommt es bei den VMs, die den betreffenden Uplink verwenden, zu einem kurzen Ausfall. Daher wird empfohlen, die Aktualisierung der MTU-Einstellung auf eine geplante Ausfallzeit zu legen.
+   {:note}
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vc_bom-related}
 
 * [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server-Instanzen planen](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [vCenter Server-Instanzen planen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

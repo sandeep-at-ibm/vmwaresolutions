@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Design der physischen Infrastruktur
+{: #design_physicalinfrastructure}
 
 Die physische Infrastruktur setzt sich aus den folgenden Komponenten zusammen:
 
@@ -25,15 +26,16 @@ Die physische Infrastruktur setzt sich aus den folgenden Komponenten zusammen:
   <dd class="dd">Das physische Netz stellt die Netzkonnektivität in die Umgebung bereit, die dann durch die Netzvirtualisierung genutzt wird. Das Netz wird durch das {{site.data.keyword.cloud_notm}}-Servicenetz bereitgestellt und es schließt weitere Services wie DNS und NTP ein.</dd>
 </dl>
 
-Weitere Informationen zu den physischen Komponenten finden Sie in der Teileliste für die [Cloud Foundation-Instanz](/docs/services/vmwaresolutions/sddc/sd_bom.html) bzw. [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
+Weitere Informationen zu den physischen Komponenten finden Sie in der Teileliste für die [Cloud Foundation-Instanz](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) bzw. [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 Weitere Informationen zum Speicher finden Sie im Dokument zur [Architektur des gemeinsam genutzten Speichers](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
 ## Physisches Host-Design
+{: #design_physicalinfrastructure-host-design}
 
 "Physischer Host" bezieht sich auf die {{site.data.keyword.baremetal_short}} in der Umgebung, in der Rechenressourcen bereitgestellt werden. Die in dieser Lösung eingesetzten {{site.data.keyword.baremetal_short}} sind von VMware zertifiziert und werden im [VMware Compatibility Guide (HCG)](http://www.vmware.com/resources/compatibility/search.php) aufgeführt.
 
-Die in der Lösung verfügbaren Serverkonfigurationen erfüllen oder überschreiten die Mindestanforderungen für die Installation, Konfiguration und Verwaltung von vSphere ESXi. Es stehen verschiedene Konfigurationen für unterschiedliche Anforderungen zur Verfügung. Eine detaillierte Liste der genauen Spezifikationen für die VMware on {{site.data.keyword.cloud_notm}}-Lösung finden Sie in der Teileliste für die [Cloud Foundation-Instanz](/docs/services/vmwaresolutions/sddc/sd_bom.html) bzw. [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
+Die in der Lösung verfügbaren Serverkonfigurationen erfüllen oder überschreiten die Mindestanforderungen für die Installation, Konfiguration und Verwaltung von vSphere ESXi. Es stehen verschiedene Konfigurationen für unterschiedliche Anforderungen zur Verfügung. Eine detaillierte Liste der genauen Spezifikationen für die VMware on {{site.data.keyword.cloud_notm}}-Lösung finden Sie in der Teileliste für die [Cloud Foundation-Instanz](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) bzw. [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 Die {{site.data.keyword.baremetal_short}} befindet sich in der {{site.data.keyword.cloud_notm}}.
 {:note}
@@ -50,12 +52,14 @@ Der Bare-Metal-Server weist die folgenden Spezifikationen auf:
 * Anzahl Laufwerke: 2 oder mehr
 
 ## Design des physischen Netzes
+{: #design_physicalinfrastructure-net-design}
 
 In diesem Abschnitt wird das physische Netz beschrieben, das von der {{site.data.keyword.cloud_notm}} und den physischen Hostverbindungen (VLANs, MTU) zur Verfügung gestellt wird, die den physischen Hosts zugeordnet sind.
 
 Das physische Netz von {{site.data.keyword.cloud_notm}} ist in drei verschiedenartige Netze unterteilt: öffentliches Netz, privates Netz und Managementnetz. Eine Illustration der drei Netze und ihrer Funktionsweise finden Sie unter [{{site.data.keyword.cloud_notm}}-Netz](https://www.ibm.com/cloud-computing/bluemix/our-network).
 
 ### Öffentliches Netz
+{: #design_physicalinfrastructure-public-net}
 
 {{site.data.keyword.CloudDataCents_notm}} und Netzbereitstellungspunkte haben mehrere Verbindungen mit 1 oder 10 Gb/s zu den Transit- und Peernetzbetreibern der höchsten Ebene.
 
@@ -66,16 +70,19 @@ Im Rechenzentrum stellt {{site.data.keyword.cloud_notm}} eine Netzbandbreite von
 Dieses mehrschichtige Design bietet dem Netz die Möglichkeit, in einem {{site.data.keyword.CloudDataCent_notm}} rack-, reihen und podübergreifend zu skalieren.
 
 ### Privates Netz
+{: #design_physicalinfrastructure-private-net}
 
 Alle {{site.data.keyword.CloudDataCents_notm}} und Bereitstellungspunkte (PoPs)  werden durch einen privaten Netzbackbone verbunden. Das private Netz ist vom öffentlichen Netz getrennt und ermöglicht Konnektivität zu Services in {{site.data.keyword.CloudDataCents_notm}} auf der ganzen Welt. Die Datenübertragung zwischen {{site.data.keyword.CloudDataCents_notm}} erfolgt über mehrere Verbindungen mit 10 oder 40 Gb/s, die zum privaten Netz bestehen.
 
 Ähnlich wie das öffentliche Netz ist das private Netz dadurch mehrschichtig gestaltet, dass Server und andere Infrastrukturkomponenten mit zusammengefassten Back-end-Kundenswitches (BCS - Back-end Customer Switch) verbunden sind. Diese zusammengefassten Switches sind mit einem Paar aus separaten Back-end-Kundenroutern (BCR - Back-end Customer Router) für L3-Netzbetrieb verbunden. Das private Netz unterstützt zudem die Möglichkeit, für physische Hostverbindungen Jumbo-Frames (MTU 9000) zu verwenden.
 
 ### Managementnetz
+{: #design_physicalinfrastructure-mgmt-net}
 
 Neben dem öffentlichen und dem privaten Netz ist jeder {{site.data.keyword.cloud_notm}}-Server mit einem Out-of-band-Managementnetz verbunden. Dieses Managementnetz, das über VPN zugänglich ist, ermöglicht zu Wartungs- und Verwaltungszwecken einen IPMI-Zugriff (IPMI - Intelligent Platform Management Interface) auf den Server, der von der zugehörigen CPU, der Firmware und dem Betriebssystem (BS) unabhängig ist.
 
 ### Primäre und portierbare IP-Blöcke
+{: #design_physicalinfrastructure-ip-blocks}
 
 {{site.data.keyword.cloud_notm}} ordnet zwei Typen von IP-Adressen zur Verwendung in der {{site.data.keyword.cloud_notm}}-Infrastruktur zu:
 * Primäre IP-Adressen werden Einheiten (Geräten), Bare Metal Servern und virtuellen Servern zugeordnet, die von {{site.data.keyword.cloud_notm}} bereitgestellt werden. Weisen Sie keine IP-Adressen in diesen Blöcken zu.
@@ -84,18 +91,21 @@ Neben dem öffentlichen und dem privaten Netz ist jeder {{site.data.keyword.clou
 Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN im Kundenkonto weiterleitbar gemacht werden, wenn das **VLAN-Spanning** im {{site.data.keyword.slportal}} aktiviert ist oder wenn das Konto als **VRF-Konto** (VRF - Virtual Routing and Forwarding) konfiguriert ist.
 
 ### VLAN-Spanning
+{: #design_physicalinfrastructure-vlan-spanning}
 
 **VLAN-Spanning** ist eine {{site.data.keyword.slportal}}-Kontoeinstellung, durch die der IP-Block des primären und portierbaren Teilnetzes aller VLANs im Konto untereinander weitergeleitet werden kann. Wenn die Einstellung **VLAN-Spanning** inaktiviert ist, können IP-Blöcke immer noch an {{site.data.keyword.cloud_notm}}-Services weiterleiten, jedoch nicht untereinander.
 
 Für eine transparente Verbindung über verschiedene Teilnetze hinweg, in denen sich die Lösungskomponenten befinden, müssen Sie das **VLAN-Spanning** in dem {{site.data.keyword.slportal}}-Konto aktivieren, in dem die Cloud Foundation- und die vCenter Server-Instanz bereitgestellt wurden.
 
-### Virtual Routing and Forwarding (VRF)
+### Virtual Routing and Forwarding
+{: #design_physicalinfrastructure-vrf}
 
-Sie können das {{site.data.keyword.slportal}}-Konto auch als VRF-Konto konfigurieren, um ähnliche Funktionen wie das VLAN-Spanning zur Verfügung zu stellen, sodass ein automatisches Routing zwischen IP-Teilnetzblöcken möglich wird. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
+Sie können das {{site.data.keyword.slportal}}-Konto auch als VRF-Konto (VRF = Virtual Routing and Forwarding) konfigurieren, um ähnliche Funktionen wie das VLAN-Spanning zur Verfügung zu stellen, sodass ein automatisches Routing zwischen IP-Teilnetzblöcken möglich wird. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
 
 Die Konsole von {{site.data.keyword.vmwaresolutions_short}} kann nicht erkennen, ob VRF im {{site.data.keyword.slportal}} aktiviert ist. Sie empfangen eine Warnung, die Sie daran erinnert, sicherzustellen, dass entweder das **VLAN-Spanning** oder VRF in Ihrem {{site.data.keyword.slportal}}-Konto aktiviert wird.
 
 ### Physische Hostverbindungen
+{: #design_physicalinfrastructure-host-connect}
 
 Jeder physische Host im Design verfügt über zwei redundante Paare von Ethernet-Verbindungen mit 10 Gb/s zu jedem (öffentlichen und privaten) {{site.data.keyword.cloud_notm}} Top of Rack-Switch (ToR-Switch). Die Adapter sind als einzelne Verbindungen (ohne Bonding) für Verbindungen mit insgesamt 4 x 10 Gb/s eingerichtet. Dies ermöglicht es NIC-Verbindungen (NIC - Networking Interface Card, Netzschnittstellenkarte), unabhängig voneinander zu arbeiten.
 
@@ -104,8 +114,9 @@ Abbildung 1. Physische NIC-Hostverbindungen
 ![Physische NIC-Hostverbindungen](physical_nic_connection.svg "Physische NIC-Hostverbindungen")
 
 ### VLANs
+{: #design_physicalinfrastructure-vlans}
 
-Die Angebote von {{site.data.keyword.vmwaresolutions_short}} beinhalten 3 VLANs, d. h. ein öffentliches und zwei private, die bei der Bereitstellung zugewiesen werden. Wie in Abbildung 2 zu sehen, werden das öffentliche VLAN den Verbindungen "eth1" und "eth3" und die privaten VLANs den Verbindungen "eth0" und "eth2" zugeordnet.
+Die Angebote von {{site.data.keyword.vmwaresolutions_short}} beinhalten 3 VLANs, d. h. ein öffentliches und zwei private, die bei der Bereitstellung zugewiesen werden. Wie in der vorherigen Abbildung zu sehen ist, werden das öffentliche VLAN den Verbindungen "eth1" und "eth3" und die privaten VLANs den Verbindungen "eth0" und "eth2" zugeordnet.
 
 Das öffentliche VLAN und das erste private VLAN, das in diesem Design erstellt und zugeordnet wird, sind in {{site.data.keyword.cloud_notm}} standardmäßig nicht mit Tags versehen. Das weitere private VLAN wird durch einen Trunk mit den physischen Switch-Ports verbunden und mit Tags in den VMware-Portgruppen versehen, die diese Teilnetze verwenden.
 
@@ -142,24 +153,29 @@ In diesem Design werden alle VLAN-gestützten Hosts und virtuellen Maschinen so 
 Die privaten Netzverbindungen werden so konfiguriert, dass sie eine Jumbo-Frame-MTU-Größe von 9000 verwenden, um die Leistung für große Datenübertragungen wie für Speicher- und vMotion-Operationen zu verbessern. Dies ist der maximale MTU-Wert, der in VMware und von {{site.data.keyword.cloud_notm}} zugelassen wird. Die öffentlichen Netzverbindungen verwenden den Standardwert für Ethernet-MTU von 1500. Dieser Wert muss beibehalten werden, da Änderungen zu einer Paketfragmentierung bei der Übertragung über das Internet führen können.
 
 ## Design des physischen Speichers
+{: #design_physicalinfrastructure-storage-design}
 
 Das Design des physischen Speichers besteht aus der Konfiguration der physischen Platten, die in den physischen Hosts installiert sind, und der Konfiguration des gemeinsam genutzten Speichers auf Dateiebene. Dazu gehören die Betriebssystemplatten des vSphere ESXi-Hypervisors und die Platten, die für Speicher der virtuellen Maschinen (VMs) verwendet werden. Speicher für virtuelle Platten kann aus lokalen Platten, die durch VMware vSAN virtualisiert werden, oder aus gemeinsam genutztem Speicher auf Dateiebene bestehen.
 
 ### Betriebssystemplatten
+{: #design_physicalinfrastructure-os-disks}
 
 Der vSphere ESXi-Hypervisor ist zur Installation an einer persistenten Position gedacht. Infolgedessen enthalten die physischen Hosts zwei 1 TB große SATA-Platten in einer RAID-1-Konfiguration, um Redundanz für den vSphere ESXi-Hypervisor zu unterstützen.
 
 ### VM-Speicher
+{: #design_physicalinfrastructure-vm-storage}
 
 Dieses Design bietet die Option, entweder VMware vSAN-Speicher oder gemeinsam genutzten Speicher auf Dateiebene als primären Datenspeicher für VMs zu verwenden.
 
 ### vSAN-Festplatten
+{: #design_physicalinfrastructure-vsan-disks}
 
 Für die Verwendung wird VMware vSAN mithilfe einer reinen Flashkonfiguration konfiguriert. Dieses Design bietet mehrere Konfigurationsoptionen, einschließlich 2U- und 4U-Chassis, verschiedener Plattenanzahlen und verschiedener Plattengrößen. Alle Konfigurationen verwenden zwei vSAN-Plattengruppen, wobei eine SSD-Platte (Solid State Disk) für Cachefunktionen und eine oder mehrere SSDs für Kapazität verwendet werden. Alle für vSAN-Nutzung zugeordneten Laufwerke werden in einer RAID-0-Konfiguration mit einer einzelnen Platte konfiguriert.
 
-Weitere Informationen zu den unterstützten Konfigurationen finden Sie in der Teileliste für die [Cloud Foundation-Instanz](/docs/services/vmwaresolutions/sddc/sd_bom.html) bzw. [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
+Weitere Informationen zu den unterstützten Konfigurationen finden Sie in der Teileliste für die [Cloud Foundation-Instanz](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) bzw. [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 ### Hostübergreifend gemeinsam genutzter Speicher auf Dateiebene
+{: #design_physicalinfrastructure-shared-storage}
 
 Bei Verwendung von gemeinsam genutztem Speicher auf Dateiebene wird eine zwei Terabyte große, gemeinsam genutzte NFS-Ressource an die Hosts angehängt, die den ersten VMware-Cluster bilden. Diese gemeinsam genutzte Ressource, die als gemeinsam genutzte Managementressource bezeichnet wird, wird für das Management von Komponenten wie VMware vCenter Server, Platform Services Controller (PSC) und VMware NSX verwendet. Der Speicher wird mithilfe des Protokolls NFSv3 angehängt und er kann bis zu 4000 E/A-Operationen pro Sekunde (IOPS) unterstützen.
 
@@ -171,9 +187,10 @@ Sie können beim Kauf oder später weitere gemeinsam genutzte Dateiressourcen f�
 
 {{site.data.keyword.CloudDataCents_notm}}, die das Leistungstier mit 10 IOPS/GB anbieten, schließen auch eine vom Provider verwaltete Verschlüsselung ruhender Daten (AES-256-Verschlüsselung) ein und werden mithilfe von reinem Flashspeicher gesichert. Die Leistungsstufe von 10 IOPS/GB ist auf eine maximale Kapazität von 4 TB beschränkt. Weitere Informationen zu gemeinsam genutztem NAS-Speicher in dieser Lösung finden Sie im Dokument [Architektur des gemeinsam genutzten Speichers](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
-### Zugehörige Links
+## Zugehörige Links
+{: #design_physicalinfrastructure-related}
 
-* [Cloud Foundation-Teileliste](/docs/services/vmwaresolutions/sddc/sd_bom.html)
-* [vCenter Server-Teileliste](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [Cloud Foundation-Teileliste](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
+* [vCenter Server-Teileliste](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Architektur des gemeinsam genutzten Speichers](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
 * [Architektur von NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

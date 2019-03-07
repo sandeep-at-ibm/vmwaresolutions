@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,18 +13,21 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Stock Trader unter WebSphere Application Server in Stock Trader in Containern umwandeln
+{: #vcscontent-stocktrmod}
 
 Der nächste Schritt im Modernisierungsprozess für Stock Trader ist die Umwandlung der Workloadausführung in virtuellen Maschinen (VMs) in eine Ausführung in Containern.
 
 Zur Fortsetzung des Prozesses führen Todd und Jane Transformation Advisor aus, um die Workload von Stock Trader zu analysieren, gegebenenfalls komplexe Aspekte der Migration zu ermitteln und Änderungen zu empfehlen. Nachdem alles vorbereitet ist, stellen sie Stock Trader mithilfe von Transformation Advisor in Liberty-Containern bereit, die unter {{site.data.keyword.icpfull_notm}} ausgeführt werden.
 
 ## IBM Cloud Private vorbereiten
+{: #vcscontent-stocktrmod-prep-icp}
 
 Todd muss zunächst {{site.data.keyword.icpfull_notm}} installieren. Da Todd über eine VMware on {{site.data.keyword.cloud_notm}}-Umgebung verfügt, beschließt er, das Produktangebot "{{site.data.keyword.cloud_notm}} Private Hosted" zu nutzen, das ihm eine vollständige {{site.data.keyword.icpfull_notm}}-Instanz zur Verfügung stellt, die auf virtuellen VMware-Maschinen in {{site.data.keyword.cloud_notm}} ausgeführt wird.
 
 Das Standarddashboard bietet eine umfassende Benutzerschnittstelle für die Verwaltung des Kubernetes-Clusters, der Sicherheit, des Speichers und der Bereitstellung aus dem Katalog.
 
 ### Speicher vorbereiten
+{: #vcscontent-stocktrmod-prep-storage}
 
 {{site.data.keyword.cloud_notm}} Private Hosted ist im Bereitstellungszustand mit GlusterFS konfiguriert und stellt Dateispeicher in virtuellen Maschinen als dedizierte GlusterFS-Knoten zur Verfügung. Besonders wertvoll an GlusterFS ist die Möglichkeit der dynamischen Bereitstellung. Todd kann auf Wunsch zusätzliche virtuelle Maschinen als NFS-Server einrichten.
 
@@ -67,6 +70,7 @@ Jedes Mal, wenn ein neuer NFS-Datenträger benötigt wird, führt Todd den folge
 `chmod 777 <foldername>`
 
 ### Imagesicherheit vorbereiten
+{: #vcscontent-stocktrmod-prep-img-sec}
 
 In {{site.data.keyword.icpfull_notm}} V3.1 wird die Sicherheit dadurch erweitert, dass eine Imagerichtlinie erstellt worden sein muss, bevor ein Image mit einer Pull-Operation in eine {{site.data.keyword.icpfull_notm}}-Instanz extrahiert werden kann. Die Erweiterung setzt voraus, dass Sie eine Imagerichtlinie für die Position der IBM Images (*dockerhub/ibmcom*) und im Docker-Speicher hinzufügen.
 
@@ -77,12 +81,14 @@ Für bestimmte Inhalte ist zusätzlich ein Podsicherheitsrichtliniensatz erforde
 Weitere Informationen finden Sie im [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/manage_cluster/enable_pod_security.html).
 
 ## Transformation Advisor und Microclimate bereitstellen
+{: #vcscontent-stocktrmod-deploy-tam}
 
 Nachdem Todd {{site.data.keyword.icpfull_notm}} in Betrieb genommen hat, installiert er Transformation Advisor zusammen mit Microclimate. Todd öffnet den [Katalog](https://www.ibm.com/cloud/private/developer) und zeigt den gesamten verfügbaren Inhalt an.
 
 Todd sucht nach Transformation Advisor und Microclimate und installiert beides anhand der in der Readme-Datei bereitstehenden Anweisungen, wenn er auf das Helm-Diagramm klickt.
 
 ### Transformation Advisor ausführen
+{: #vcscontent-stocktrmod-run-trans-advisor}
 
 Zur Ausführung von Transformation Advisor hat Jane den Datenkollektor in der VM hinzugefügt, in der Stock Trader in WebSphere ausgeführt wird. Sie öffnet die Benutzerschnittstelle von [Transformation Advisor](https://developer.ibm.com/recipes/tutorials/using-the-transformation-advisor-on-ibm-cloud-private/), um die Ergebnisse anzuzeigen.
 
@@ -95,6 +101,7 @@ Am Ende resultieren hieraus die folgenden Layoutoptionen für Stock Trader:
 Todd hat die Datenquelle während des Transformationsschritts nicht geändert. Transformation Advisor übernimmt die Datenquellenkonfiguration aus WebSphere Application Server Network Deployment und fügt sie zur Datei "server.xml" des Liberty-Containers hinzu.
 {:important}
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcscontent-stocktrmod-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

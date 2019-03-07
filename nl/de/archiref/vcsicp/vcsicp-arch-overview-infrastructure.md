@@ -4,32 +4,39 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 
 # IBM Cloud-Netzbetrieb und -Infrastruktur
+{: #vcsicp-arch-overview-infrastructure}
 
-## Virtual Routing and Forwarding (VRF)
+## Virtual Routing and Forwarding
+{: #vcsicp-arch-overview-infrastructure-vrf}
 
-Sie können {{site.data.keyword.cloud}}-Konten auch als VRF-Konto konfigurieren, um eine ähnliche Funktionalität wie das VLAN-Spanning zur  Verfügung zu stellen, sodass ein automatisches Routing zwischen IP-Teilnetzblöcken möglich wird. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
+Sie können {{site.data.keyword.cloud}}-Konten auch als VRF-Konto (VRF = Virtual Routing and Forwarding) konfigurieren, um eine ähnliche Funktion wie das VLAN-Spanning zur Verfügung zu stellen, sodass ein automatisches Routing zwischen IP-Teilnetzblöcken möglich wird. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
 
 ## Direct Link
+{: #vcsicp-arch-overview-infrastructure-direct-link}
 
 {{site.data.keyword.cloud_notm}} Direct Link Connect bietet privaten Zugriff auf Ihre {{site.data.keyword.cloud_notm}}-Infrastruktur und auf alle anderen Clouds, die mit Ihrem Netzserviceanbieter über Ihr lokales IBM Cloud-Rechenzentrum verbunden sind. Diese Option ist optimal für die Konnektivität zu mehreren Clouds in einer einzelnen Umgebung geeignet. Kunden werden mittels einer gemeinsam genutzten Bandbreitentopologie mit dem {{site.data.keyword.icpfull_notm}}-Netz verbunden. Wie bei allen Direct Link-Produkten können Sie globales Routing hinzufügen, das privaten Netzverkehr zu allen {{site.data.keyword.cloud_notm}}-Standorten ermöglicht.
 
 ## Virtuelle private Netze
+{: #vcsicp-arch-overview-infrastructure-vp-networks}
 
 ### strongSwan-VPN
+{: #vcsicp-arch-overview-infrastructure-strongswan}
 
 Der strongSwan-IPSec-VPN-Service stellt einen sicheren End-to-End-Kommunikationskanal über das Internet bereit, der auf der standardisierten IPSec-Protokollsuite (IPSec - Internet Protocol Security) basiert.
 
 ### Hybridität (HCX)
+{: #vcsicp-arch-overview-infrastructure-hcx}
 
 vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle erweitert die Netze von lokalen Rechenzentren nahtlos in die {{site.data.keyword.cloud_notm}}. Dies ermöglicht die Migration von virtuellen Maschinen in die und aus der {{site.data.keyword.cloud_notm}}, ohne dass hierzu eine Konvertierung oder Änderung erforderlich ist.
 
 ## Physische Struktur
+{: #vcsicp-arch-overview-infrastructure-phys-struct}
 
 Die physische Infrastruktur, die zur Bereitstellung einer {{site.data.keyword.icpfull_notm}}-Produktionsinstanz für einen VMware vCenter Server (VCS) on {{site.data.keyword.cloud_notm}}-Cluster erforderlich ist, setzt folgende Mindestspezifikationen voraus.
 
@@ -45,6 +52,7 @@ Speicher | 2000 GB 2IOPS/GB Management, 2000 GB 4 IOPS/GB Workload, 4000 GB 4 IO
 Zusätzlich zu der Hardware, die für {{site.data.keyword.icpfull_notm}} vorausgesetzt wird, müssen Sie persistente Datenträger in der {{site.data.keyword.icpfull_notm}}-Umgebung erstellen, um die CAM-Datenbank- und -Protokolldaten (CAM = Cloud Automation Manager) zu speichern. CAM unterstützt zwar alle persistenten Datenträgertypen, die von {{site.data.keyword.cloud_notm}} unterstützt werden, für CAM empfohlen werden aber die Speicherkonfigurationen NFS und GlusterFS.
 
 ## Virtuelle Struktur
+{: #vcsicp-arch-overview-infrastructure-virtual-struct}
 
 Abbildung 1. Physische Struktur der vCenter Server- und {{site.data.keyword.icpfull_notm}}-Bereitstellung
 ![Physische Struktur der VCS- und {{site.data.keyword.icpfull_notm}}-Bereitstellung](vcsicp-phy-ics-icp-deployment.svg)
@@ -55,6 +63,7 @@ Das ESG ist mit einer Quellen-NAT-Regel (SNAT) konfiguriert, um abgehenden Daten
 
 Das ESG ist zudem mit einer Ziel-NAT-Regel (DNAT) für die virtuellen {{site.data.keyword.icpfull_notm}}-Master-/Proxy-IP-Adressen vom {{site.data.keyword.cloud_notm}} 10.x-Netz bis zur VXLAN-Umgebung konfiguriert.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcsicp-arch-overview-infrastructure-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

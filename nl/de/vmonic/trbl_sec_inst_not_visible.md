@@ -4,17 +4,20 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # Sekundäres vCenter Server-System ist im Bestand von vSphere Web Client nicht angegeben
+{: #trbl_sec_inst_not_visible}
 
 ## Problem
+{: #trbl_sec_inst_not_visible-problem}
 
 Nachdem Sie in einer Konfiguration mit mehreren Standorten eine neue sekundäre Instanz hinzugefügt haben, ist deren vCenter Server-System nicht mehr sichtbar, wenn Sie bei VMware vSphere Web Client in einer zuvor bestellten Instanz angemeldet sind.
 
 ## Lösung
+{: #trbl_sec_inst_not_visible-resolution}
 
 Dies ist ein bekanntes Problem von VMware 6.5.
 

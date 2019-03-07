@@ -23,4 +23,4 @@ Dieser Leitfaden bezieht sich auf die Bereitstellung und Inbetriebnahme von HCX 
 ## Zugehörige Links
 {: #vcshcx-intro-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

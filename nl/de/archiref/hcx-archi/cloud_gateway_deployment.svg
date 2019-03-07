@@ -1,8 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 686 794" style="enable-background:new 0 0 686 794;" xml:space="preserve">
-<style type="text/css">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 686 794"
+   style="enable-background:new 0 0 686 794;"
+   xml:space="preserve"
+   id="svg404"
+   sodipodi:docname="cloud_gateway_deployment.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"><metadata
+   id="metadata410"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+   id="defs408">
+	
+	
+
+
+	
+	
+
+
+	
+
+		
+		
+
+	
+	
+	
+
+	
+		
+		
+
+	
+	
+	
+
+		
+		
+
+	
+	
+	
+	
+
+		
+		
+
+	
+	</defs><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="3391"
+   inkscape:window-height="1376"
+   id="namedview406"
+   showgrid="false"
+   inkscape:zoom="1.1889169"
+   inkscape:cx="-110.32854"
+   inkscape:cy="301.72538"
+   inkscape:window-x="49"
+   inkscape:window-y="27"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg404"
+   showguides="true"
+   inkscape:guide-bbox="true"><sodipodi:guide
+     position="622.41525,335.59958"
+     orientation="1,0"
+     id="guide363"
+     inkscape:locked="false" /></sodipodi:namedview>
+<style
+   type="text/css"
+   id="style2">
 	.st0{fill:#FFFFFF;}
 	.st1{fill:none;stroke:#000000;stroke-miterlimit:10;}
 	.st2{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9157,7.9157;}
@@ -30,270 +115,702 @@
 	.st24{fill:#1E4C66;}
 	.st25{font-size:16.5319px;}
 </style>
-<g id="Outter_dash_rectangle">
-	<g>
-		<rect x="9" y="64" class="st0" width="665" height="628"/>
-		<g>
-			<polyline class="st1" points="674,688 674,692 670,692 			"/>
-			<line class="st2" x1="662.08" y1="692" x2="16.96" y2="692"/>
-			<polyline class="st1" points="13,692 9,692 9,688 			"/>
-			<line class="st3" x1="9" y1="679.95" x2="9" y2="72.03"/>
-			<polyline class="st1" points="9,68 9,64 13,64 			"/>
-			<line class="st2" x1="20.92" y1="64" x2="666.04" y2="64"/>
-			<polyline class="st1" points="670,64 674,64 674,68 			"/>
-			<line class="st3" x1="674" y1="76.05" x2="674" y2="683.97"/>
+<g
+   id="Outter_dash_rectangle">
+	<g
+   id="g24">
+		<rect
+   x="9"
+   y="64"
+   class="st0"
+   width="665"
+   height="628"
+   id="rect4" />
+		<g
+   id="g22">
+			<polyline
+   class="st1"
+   points="674,688 674,692 670,692    "
+   id="polyline6" />
+			<line
+   class="st2"
+   x1="662.1"
+   y1="692"
+   x2="17"
+   y2="692"
+   id="line8" />
+			<polyline
+   class="st1"
+   points="13,692 9,692 9,688    "
+   id="polyline10" />
+			<line
+   class="st3"
+   x1="9"
+   y1="679.9"
+   x2="9"
+   y2="72"
+   id="line12" />
+			<polyline
+   class="st1"
+   points="9,68 9,64 13,64    "
+   id="polyline14" />
+			<line
+   class="st2"
+   x1="20.9"
+   y1="64"
+   x2="666"
+   y2="64"
+   id="line16" />
+			<polyline
+   class="st1"
+   points="670,64 674,64 674,68    "
+   id="polyline18" />
+			<line
+   class="st3"
+   x1="674"
+   y1="76.1"
+   x2="674"
+   y2="684"
+   id="line20" />
 		</g>
 	</g>
 </g>
-<g id="Public_address_space_rectangle">
-	<g>
-		<rect x="59.5" y="94.5" class="st4" width="574" height="146"/>
-		<g>
-			<polyline class="st1" points="633.5,236.5 633.5,240.5 629.5,240.5 			"/>
-			<line class="st5" x1="621.53" y1="240.5" x2="67.49" y2="240.5"/>
-			<polyline class="st1" points="63.5,240.5 59.5,240.5 59.5,236.5 			"/>
-			<line class="st6" x1="59.5" y1="228.38" x2="59.5" y2="102.56"/>
-			<polyline class="st1" points="59.5,98.5 59.5,94.5 63.5,94.5 			"/>
-			<line class="st5" x1="71.47" y1="94.5" x2="625.51" y2="94.5"/>
-			<polyline class="st1" points="629.5,94.5 633.5,94.5 633.5,98.5 			"/>
-			<line class="st6" x1="633.5" y1="106.62" x2="633.5" y2="232.44"/>
+<g
+   id="g47">
+		<rect
+   style="fill:#aadff2"
+   id="rect27"
+   height="146"
+   width="574"
+   class="st4"
+   y="94.5"
+   x="59.5" />
+		<g
+   id="g45">
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline29"
+   points="633.5,236.5 633.5,240.5 629.5,240.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9718, 7.9718"
+   id="line31"
+   y2="240.5"
+   x2="67.5"
+   y1="240.5"
+   x1="621.5"
+   class="st5" />
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline33"
+   points="63.5,240.5 59.5,240.5 59.5,236.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:8.1177, 8.1177"
+   id="line35"
+   y2="102.6"
+   x2="59.5"
+   y1="228.39999"
+   x1="59.5"
+   class="st6" />
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline37"
+   points="59.5,98.5 59.5,94.5 63.5,94.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9718, 7.9718"
+   id="line39"
+   y2="94.5"
+   x2="625.5"
+   y1="94.5"
+   x1="71.5"
+   class="st5" />
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline41"
+   points="629.5,94.5 633.5,94.5 633.5,98.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:8.1177, 8.1177"
+   id="line43"
+   y2="232.39999"
+   x2="633.5"
+   y1="106.6"
+   x1="633.5"
+   class="st6" />
 		</g>
-	</g>
-	<text transform="matrix(1 0 0 1 418 226)" class="st7 st8">Öffentlicher Adressraum</text>
-</g>
-<g id="Private_address_space_rectangle">
-	<g>
-		<rect x="59.5" y="251.5" class="st9" width="574" height="407"/>
-		<g>
-			<polyline class="st1" points="633.5,654.5 633.5,658.5 629.5,658.5 			"/>
-			<line class="st5" x1="621.53" y1="658.5" x2="67.49" y2="658.5"/>
-			<polyline class="st1" points="63.5,658.5 59.5,658.5 59.5,654.5 			"/>
-			<line class="st10" x1="59.5" y1="646.36" x2="59.5" y2="259.57"/>
-			<polyline class="st1" points="59.5,255.5 59.5,251.5 63.5,251.5 			"/>
-			<line class="st5" x1="71.47" y1="251.5" x2="625.51" y2="251.5"/>
-			<polyline class="st1" points="629.5,251.5 633.5,251.5 633.5,255.5 			"/>
-			<line class="st10" x1="633.5" y1="263.64" x2="633.5" y2="650.43"/>
+	</g><text
+   style="font-size:21px;font-family:MyriadPro-Regular"
+   id="text49"
+   class="st7 st8"
+   x="379.81592"
+   y="226"><tspan
+     y="226"
+     x="379.81592"
+     id="tspan29"
+     sodipodi:role="line">Öffentlicher Adressraum</tspan></text>
+
+<g
+   id="g72">
+		<rect
+   style="fill:#e1e5ba"
+   id="rect52"
+   height="407"
+   width="574"
+   class="st9"
+   y="251.5"
+   x="59.5" />
+		<g
+   id="g70">
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline54"
+   points="633.5,654.5 633.5,658.5 629.5,658.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9718, 7.9718"
+   id="line56"
+   y2="658.5"
+   x2="67.5"
+   y1="658.5"
+   x1="621.5"
+   class="st5" />
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline58"
+   points="63.5,658.5 59.5,658.5 59.5,654.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:8.1429, 8.1429"
+   id="line60"
+   y2="259.60001"
+   x2="59.5"
+   y1="646.40002"
+   x1="59.5"
+   class="st10" />
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline62"
+   points="59.5,255.5 59.5,251.5 63.5,251.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:7.9718, 7.9718"
+   id="line64"
+   y2="251.5"
+   x2="625.5"
+   y1="251.5"
+   x1="71.5"
+   class="st5" />
+			<polyline
+   style="fill:none;stroke:#000000;stroke-miterlimit:10"
+   id="polyline66"
+   points="629.5,251.5 633.5,251.5 633.5,255.5    "
+   class="st1" />
+			<line
+   style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:8.1429, 8.1429"
+   id="line68"
+   y2="650.40002"
+   x2="633.5"
+   y1="263.60001"
+   x1="633.5"
+   class="st10" />
 		</g>
-	</g>
-	<text transform="matrix(1 0 0 1 421 643)" class="st7 st8">Privater Adressraum</text>
+	</g><text
+   style="font-size:21px;font-family:MyriadPro-Regular"
+   id="text74"
+   class="st7 st8"
+   x="421.52881"
+   y="643"><tspan
+     y="643"
+     x="421.52881"
+     id="tspan44"
+     sodipodi:role="line">Privater Adressraum</tspan></text>
+
+<g
+   id="ibm_cloud">
+	<path
+   class="st11"
+   d="M141.2,59.9c0-11.4-13.4-20.6-29.9-20.6c-1.6,0-3.2,0.1-4.7,0.3c-1-2.2-2.6-4.2-4.6-5.8   c-4.7-3.8-10.8-4.5-15.7-2.3C83.5,16.9,72,6,58.2,6C43.8,6,32,17.8,29.8,33.2c-0.1,0-0.2,0-0.4,0c-11.6,0-21,10.6-21,23.7   c0,10,5.5,18.5,13.2,22v0.9h2.4c1.7,0.5,3.5,0.8,5.3,0.8c1.8,0,3.6-0.3,5.3-0.8h68.4c2.6,0.5,5.3,0.8,8.1,0.8   c2.8,0,5.5-0.3,8.1-0.8h2.4v-0.5C133.1,76.3,141.2,68.8,141.2,59.9z"
+   id="path77" />
+	<text
+   transform="matrix(1 0 0 1 21 62)"
+   class="st7 st8"
+   id="text79"><tspan
+     sodipodi:role="line"
+     id="tspan49">IBM Cloud</tspan></text>
+
+
 </g>
-<g id="ibm_cloud">
-	<path class="st11" d="M141.2,59.93c0-11.36-13.38-20.57-29.88-20.57c-1.62,0-3.2,0.09-4.75,0.26c-1.02-2.17-2.55-4.18-4.59-5.8
-		c-4.72-3.76-10.82-4.46-15.73-2.33C83.5,16.93,71.97,6,58.17,6C43.84,6,31.96,17.78,29.8,33.17c-0.12,0-0.23-0.01-0.35-0.01
-		c-11.57,0-20.95,10.6-20.95,23.67c0,9.97,5.46,18.5,13.19,21.99v0.91h2.43c1.7,0.5,3.49,0.78,5.33,0.78c1.84,0,3.63-0.27,5.33-0.78
-		h68.41c2.58,0.5,5.31,0.78,8.12,0.78c2.82,0,5.54-0.27,8.12-0.78h2.35V79.2C133.13,76.28,141.2,68.75,141.2,59.93z"/>
-	<text transform="matrix(1 0 0 1 21 62)" class="st7 st8">IBM Cloud</text>
+<g
+   id="lines">
+	<line
+   class="st1"
+   x1="128"
+   y1="190"
+   x2="128"
+   y2="503.5"
+   id="line82" />
+	<line
+   class="st1"
+   x1="221.5"
+   y1="407.5"
+   x2="221.5"
+   y2="503.5"
+   id="line84" />
+	<line
+   class="st1"
+   x1="361.5"
+   y1="190.5"
+   x2="361.5"
+   y2="565.5"
+   id="line86" />
+	<line
+   class="st1"
+   x1="346.5"
+   y1="407.5"
+   x2="346.5"
+   y2="504.5"
+   id="line88" />
+	<line
+   class="st1"
+   x1="376.5"
+   y1="407.5"
+   x2="376.5"
+   y2="438.5"
+   id="line90" />
 </g>
-<g id="lines">
-	<line class="st1" x1="128" y1="190" x2="128" y2="503.5"/>
-	<line class="st1" x1="221.5" y1="407.5" x2="221.5" y2="503.5"/>
-	<line class="st1" x1="361.5" y1="190.5" x2="361.5" y2="565.5"/>
-	<line class="st1" x1="346.5" y1="407.5" x2="346.5" y2="504.5"/>
-	<line class="st1" x1="376.5" y1="407.5" x2="376.5" y2="438.5"/>
-</g>
-<g id="pubic_VLAN_native">
-	<g>
-		<g>
-			<g>
-				<g>
-					<path class="st12" d="M103.5,190.5v-0.04l-0.43-0.06c-7.73-1.05-13.57-10.25-13.57-21.4s5.83-20.35,13.57-21.4l0.43-0.06v-0.04
-						h485.27l0.2,0.02c7.58,0.39,13.53,9.83,13.53,21.48s-5.94,21.09-13.53,21.48l-0.36,0.02H103.5z"/>
-					<path d="M588.6,148l0.35,0.02c7.2,0.37,13.05,9.78,13.05,20.98s-5.85,20.61-13.05,20.98L588.7,190H103.83l-0.7-0.1
-						C95.77,188.9,90,179.72,90,169s5.77-19.9,13.14-20.9l0.7-0.1H588.6 M589,147H103v0.1c-7.86,1.07-14,10.46-14,21.9
-						c0,11.43,6.14,20.82,14,21.9v0.1h486v-0.02c7.78-0.4,14-10.09,14-21.98c0-11.9-6.22-21.58-14-21.98V147L589,147z"/>
+<g
+   id="g107">
+			<g
+   id="g105">
+				<g
+   id="g97">
+					<path
+   class="st12"
+   d="m 103.5,190.5 v 0 l -0.4,-0.1 C 95.4,189.3 89.5,180.1 89.5,169 c 0,-11.1 5.8,-20.3 13.6,-21.4 l 0.4,-0.1 v 0 h 485.3 0.2 c 7.6,0.4 13.5,9.8 13.5,21.5 0,11.7 -5.9,21.1 -13.5,21.5 h -0.4 z"
+   id="path93"
+   inkscape:connector-curvature="0"
+   style="fill:#ff7bac" />
+					<path
+   d="m 588.6,148 h 0.3 c 7.2,0.4 13.1,9.8 13.1,21 0,11.2 -5.9,20.6 -13.1,21 h -0.2 -484.9 l -0.7,-0.1 C 95.7,188.9 90,179.7 90,169 c 0,-10.7 5.8,-19.9 13.1,-20.9 l 0.7,-0.1 h 484.8 m 0.4,-1 H 103 v 0.1 c -7.9,1.1 -14,10.5 -14,21.9 0,11.4 6.1,20.8 14,21.9 v 0.1 h 486 v 0 c 7.8,-0.4 14,-10.1 14,-22 0,-11.9 -6.2,-21.6 -14,-22 z"
+   id="path95"
+   inkscape:connector-curvature="0" />
 				</g>
-				<g>
-					<path class="st0" d="M587.5,186.91c-5.51,0-10-8.23-10-18.36c0-10.12,4.49-18.36,10-18.36c5.51,0,10,8.23,10,18.36
-						C597.5,178.67,593.01,186.91,587.5,186.91z"/>
-					<path d="M587.5,150.69c5.15,0,9.5,8.18,9.5,17.86c0,9.68-4.35,17.86-9.5,17.86c-5.15,0-9.5-8.18-9.5-17.86
-						C578,158.87,582.35,150.69,587.5,150.69 M587.5,149.69c-5.8,0-10.5,8.44-10.5,18.86c0,10.41,4.7,18.86,10.5,18.86
-						s10.5-8.44,10.5-18.86C598,158.14,593.3,149.69,587.5,149.69L587.5,149.69z"/>
+				<g
+   id="g103">
+					<path
+   class="st0"
+   d="m 587.5,186.9 c -5.5,0 -10,-8.2 -10,-18.4 0,-10.1 4.5,-18.4 10,-18.4 5.5,0 10,8.2 10,18.4 0,10.2 -4.5,18.4 -10,18.4 z"
+   id="path99"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
+					<path
+   d="m 587.5,150.7 c 5.1,0 9.5,8.2 9.5,17.9 0,9.7 -4.4,17.9 -9.5,17.9 -5.1,0 -9.5,-8.2 -9.5,-17.9 0,-9.7 4.4,-17.9 9.5,-17.9 m 0,-1 c -5.8,0 -10.5,8.4 -10.5,18.9 0,10.4 4.7,18.9 10.5,18.9 5.8,0 10.5,-8.5 10.5,-18.9 0,-10.5 -4.7,-18.9 -10.5,-18.9 z"
+   id="path101"
+   inkscape:connector-curvature="0" />
 				</g>
 			</g>
-		</g>
-		<text transform="matrix(1 0 0 1 247.75 174.75)" class="st13 st8">Öffentliches VLAN (nativ)</text>
-		<path d="M512,217"/>
-	</g>
-</g>
-<g id="security_lock_icon">
-	<g>
-		<path class="st14" d="M377,407.75h-30c-6.6,0-12-5.4-12-12v-25c0-6.6,5.4-12,12-12h30c6.6,0,12,5.4,12,12v25
-			C389,402.35,383.6,407.75,377,407.75z"/>
-		<g>
-			<g>
-				<path class="st0" d="M367.94,380.75h-10.88c-2.23,0-4.06-1.83-4.06-4.06v-5.88c0-2.23,1.83-4.06,4.06-4.06h10.88
-					c2.23,0,4.06,1.83,4.06,4.06v5.88C372,378.92,370.17,380.75,367.94,380.75z"/>
-				<path class="st14" d="M365.94,378.75h-6.88c-1.13,0-2.06-0.93-2.06-2.06v-4c0-1.13,0.93-2.06,2.06-2.06h6.88
-					c1.13,0,2.06,0.93,2.06,2.06v4C368,377.82,367.07,378.75,365.94,378.75z"/>
-				<path class="st0" d="M373.94,399.75h-22.88c-2.23,0-4.06-1.83-4.06-4.06v-13.88c0-2.23,1.83-4.06,4.06-4.06h22.88
-					c2.23,0,4.06,1.83,4.06,4.06v13.88C378,397.92,376.17,399.75,373.94,399.75z"/>
+		</g><text
+   class="st13 st8"
+   id="text109"
+   style="font-size:21px;font-family:IBMPlexSans"
+   x="213.81689"
+   y="175.75"><tspan
+     sodipodi:role="line"
+     id="tspan67"
+     x="213.81689"
+     y="175.75">Öffentliches VLAN (nativ)</tspan></text>
+
+<g
+   id="security_lock_icon">
+	<g
+   id="g138">
+		<path
+   class="st14"
+   d="M377,407.8h-30c-6.6,0-12-5.4-12-12v-25c0-6.6,5.4-12,12-12h30c6.6,0,12,5.4,12,12v25    C389,402.4,383.6,407.8,377,407.8z"
+   id="path114" />
+		<g
+   id="g136">
+			<g
+   id="g122">
+				<path
+   class="st0"
+   d="M367.9,380.8h-10.9c-2.2,0-4.1-1.8-4.1-4.1v-5.9c0-2.2,1.8-4.1,4.1-4.1h10.9c2.2,0,4.1,1.8,4.1,4.1v5.9      C372,378.9,370.2,380.8,367.9,380.8z"
+   id="path116" />
+				<path
+   class="st14"
+   d="M365.9,378.8h-6.9c-1.1,0-2.1-0.9-2.1-2.1v-4c0-1.1,0.9-2.1,2.1-2.1h6.9c1.1,0,2.1,0.9,2.1,2.1v4      C368,377.8,367.1,378.8,365.9,378.8z"
+   id="path118" />
+				<path
+   class="st0"
+   d="M373.9,399.8h-22.9c-2.2,0-4.1-1.8-4.1-4.1v-13.9c0-2.2,1.8-4.1,4.1-4.1h22.9c2.2,0,4.1,1.8,4.1,4.1v13.9      C378,397.9,376.2,399.8,373.9,399.8z"
+   id="path120" />
 			</g>
-			<g>
-				<ellipse class="st14" cx="363" cy="386.25" rx="4" ry="3.5"/>
-				<path class="st14" d="M362.5,396.75L362.5,396.75c-0.83,0-1.5-0.67-1.5-1.5v-7c0-0.83,0.67-1.5,1.5-1.5l0,0
-					c0.83,0,1.5,0.67,1.5,1.5v7C364,396.08,363.33,396.75,362.5,396.75z"/>
-				<path class="st14" d="M365.5,391.75h-2c-0.27,0-0.5-0.23-0.5-0.5l0,0c0-0.27,0.23-0.5,0.5-0.5h2c0.27,0,0.5,0.23,0.5,0.5l0,0
-					C366,391.52,365.77,391.75,365.5,391.75z"/>
-				<path class="st14" d="M365.5,393.75h-2c-0.27,0-0.5-0.23-0.5-0.5l0,0c0-0.27,0.23-0.5,0.5-0.5h2c0.27,0,0.5,0.23,0.5,0.5l0,0
-					C366,393.52,365.77,393.75,365.5,393.75z"/>
-				<path class="st14" d="M365.5,395.75h-2c-0.27,0-0.5-0.23-0.5-0.5l0,0c0-0.27,0.23-0.5,0.5-0.5h2c0.27,0,0.5,0.23,0.5,0.5l0,0
-					C366,395.52,365.77,395.75,365.5,395.75z"/>
-			</g>
-		</g>
-	</g>
-</g>
-<g id="security_lock_bottom">
-	<g>
-		<path class="st14" d="M506,759h-19.24c-6.6,0-12-5.4-12-12v-15.23c0-6.6,5.4-12,12-12H506c6.6,0,12,5.4,12,12V747
-			C518,753.6,512.6,759,506,759z"/>
-		<g>
-			<g>
-				<path class="st0" d="M500.33,737.38h-7.09c-2.23,0-4.06-1.83-4.06-4.06v-3.08c0-2.23,1.83-4.06,4.06-4.06h7.09
-					c2.23,0,4.06,1.83,4.06,4.06v3.08C504.39,735.55,502.56,737.38,500.33,737.38z"/>
-				<path class="st14" d="M499.12,735.78h-4.68c-1.13,0-2.06-0.93-2.06-2.06v-2.38c0-1.13,0.93-2.06,2.06-2.06h4.68
-					c1.13,0,2.06,0.93,2.06,2.06v2.38C501.18,734.85,500.26,735.78,499.12,735.78z"/>
-				<path class="st0" d="M505.13,752.59h-16.7c-2.23,0-4.06-1.83-4.06-4.06v-9.49c0-2.23,1.83-4.06,4.06-4.06h16.7
-					c2.23,0,4.06,1.83,4.06,4.06v9.49C509.19,750.77,507.36,752.59,505.13,752.59z"/>
-			</g>
-			<g>
-				<path class="st14" d="M500.38,741.78c0,1.55-1.43,2.8-3.2,2.8c-1.77,0-3.2-1.25-3.2-2.8c0-1.55,1.43-2.8,3.2-2.8
-					C498.95,738.98,500.38,740.24,500.38,741.78z"/>
-				<path class="st14" d="M496.8,750.19h-0.03c-0.65,0-1.19-0.53-1.19-1.19v-5.63c0-0.65,0.53-1.19,1.19-1.19h0.03
-					c0.65,0,1.19,0.53,1.19,1.19v5.63C497.98,749.66,497.45,750.19,496.8,750.19z"/>
-				<path class="st14" d="M499.19,746.19h-1.61c-0.22,0-0.4-0.18-0.4-0.4v-0.01c0-0.22,0.18-0.4,0.4-0.4h1.61
-					c0.22,0,0.4,0.18,0.4,0.4v0.01C499.58,746.01,499.41,746.19,499.19,746.19z"/>
-				<path class="st14" d="M499.19,747.79h-1.61c-0.22,0-0.4-0.18-0.4-0.4v-0.01c0-0.22,0.18-0.4,0.4-0.4h1.61
-					c0.22,0,0.4,0.18,0.4,0.4v0.01C499.58,747.61,499.41,747.79,499.19,747.79z"/>
-				<path class="st14" d="M499.19,749.39h-1.61c-0.22,0-0.4-0.18-0.4-0.4v-0.01c0-0.22,0.18-0.4,0.4-0.4h1.61
-					c0.22,0,0.4,0.18,0.4,0.4V749C499.58,749.21,499.41,749.39,499.19,749.39z"/>
-			</g>
-		</g>
-	</g>
-	<text transform="matrix(1 0 0 1 432 780)" class="st7 st15">Cloud-Gateway</text>
-</g>
-<g id="gear_bottom">
-</g>
-<g id="gear_icon">
-</g>
-<g id="vSAN_vMotion">
-	<g id="Layer_7">
-	</g>
-	<g>
-		<g>
-			<g>
-				<path class="st16" d="M103.5,608.5v-0.04l-0.43-0.06c-7.73-1.03-13.57-10.02-13.57-20.9s5.83-19.87,13.57-20.9l0.43-0.06v-0.04
-					h485.27l0.2,0.02c7.58,0.38,13.53,9.6,13.53,20.98s-5.94,20.6-13.53,20.98l-0.36,0.02H103.5z"/>
-				<path d="M588.6,567l0.35,0.02c7.2,0.36,13.05,9.55,13.05,20.48s-5.85,20.12-13.05,20.48L588.7,608H103.83l-0.7-0.09
-					C95.77,606.93,90,597.96,90,587.5c0-10.46,5.77-19.43,13.13-20.41l0.7-0.09H588.6 M589,566H103v0.1c-7.86,1.05-14,10.23-14,21.4
-					s6.14,20.35,14,21.4v0.1h486v-0.02c7.78-0.39,14-9.86,14-21.48s-6.22-21.09-14-21.48V566L589,566z"/>
-			</g>
-			<g>
-				<ellipse class="st0" cx="587.5" cy="587.06" rx="10" ry="17.93"/>
-				<path d="M587.5,569.63c5.15,0,9.5,7.98,9.5,17.43c0,9.45-4.35,17.43-9.5,17.43c-5.15,0-9.5-7.98-9.5-17.43
-					C578,577.61,582.35,569.63,587.5,569.63 M587.5,568.63c-5.8,0-10.5,8.25-10.5,18.43s4.7,18.43,10.5,18.43s10.5-8.25,10.5-18.43
-					S593.3,568.63,587.5,568.63L587.5,568.63z"/>
+			<g
+   id="g134">
+				<ellipse
+   class="st14"
+   cx="363"
+   cy="386.3"
+   rx="4"
+   ry="3.5"
+   id="ellipse124" />
+				<path
+   class="st14"
+   d="M362.5,396.8L362.5,396.8c-0.8,0-1.5-0.7-1.5-1.5v-7c0-0.8,0.7-1.5,1.5-1.5l0,0c0.8,0,1.5,0.7,1.5,1.5v7      C364,396.1,363.3,396.8,362.5,396.8z"
+   id="path126" />
+				<path
+   class="st14"
+   d="M365.5,391.8h-2c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h2c0.3,0,0.5,0.2,0.5,0.5l0,0      C366,391.5,365.8,391.8,365.5,391.8z"
+   id="path128" />
+				<path
+   class="st14"
+   d="M365.5,393.8h-2c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h2c0.3,0,0.5,0.2,0.5,0.5l0,0      C366,393.5,365.8,393.8,365.5,393.8z"
+   id="path130" />
+				<path
+   class="st14"
+   d="M365.5,395.8h-2c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h2c0.3,0,0.5,0.2,0.5,0.5l0,0      C366,395.5,365.8,395.8,365.5,395.8z"
+   id="path132" />
 			</g>
 		</g>
-		<text transform="matrix(1 0 0 1 201 596)" class="st7 st8">vSAN &amp; vMotion -- Privates VLAN B</text>
 	</g>
 </g>
-<g id="Logical_swiitch">
-	<g>
-		<g>
-			<g>
-				<g>
-					<path class="st14" d="M249.41,480.5v-0.02l-0.41-0.08c-5.33-1-9.51-10.19-9.51-20.91s4.18-19.9,9.51-20.91l0.41-0.08v-0.02
-						h343.48l0.16,0.02c5.21,0.37,9.45,9.78,9.45,20.98s-4.24,20.61-9.45,20.98l-0.24,0.02H249.41z"/>
-					<path d="M592.79,439l0.23,0.02c4.95,0.35,8.99,9.54,8.99,20.48s-4.03,20.13-8.99,20.48l-0.18,0.02H249.55l-0.45-0.08
-						c-5.1-0.96-9.1-9.93-9.1-20.42s4-19.46,9.1-20.42l0.45-0.08H592.79 M593.09,438H248.91v0.1c-5.56,1.05-9.91,10.23-9.91,21.4
-						s4.35,20.35,9.91,21.4v0.1h344.17v-0.02c5.51-0.39,9.91-9.86,9.91-21.48s-4.41-21.09-9.91-21.48V438L593.09,438z"/>
+<g
+   id="security_lock_bottom">
+	<g
+   id="g165">
+		<path
+   class="st14"
+   d="M506,759h-19.2c-6.6,0-12-5.4-12-12v-15.2c0-6.6,5.4-12,12-12H506c6.6,0,12,5.4,12,12V747    C518,753.6,512.6,759,506,759z"
+   id="path141" />
+		<g
+   id="g163">
+			<g
+   id="g149">
+				<path
+   class="st0"
+   d="M500.3,737.4h-7.1c-2.2,0-4.1-1.8-4.1-4.1v-3.1c0-2.2,1.8-4.1,4.1-4.1h7.1c2.2,0,4.1,1.8,4.1,4.1v3.1      C504.4,735.6,502.6,737.4,500.3,737.4z"
+   id="path143" />
+				<path
+   class="st14"
+   d="M499.1,735.8h-4.7c-1.1,0-2.1-0.9-2.1-2.1v-2.4c0-1.1,0.9-2.1,2.1-2.1h4.7c1.1,0,2.1,0.9,2.1,2.1v2.4      C501.2,734.9,500.3,735.8,499.1,735.8z"
+   id="path145" />
+				<path
+   class="st0"
+   d="M505.1,752.6h-16.7c-2.2,0-4.1-1.8-4.1-4.1V739c0-2.2,1.8-4.1,4.1-4.1h16.7c2.2,0,4.1,1.8,4.1,4.1v9.5      C509.2,750.8,507.4,752.6,505.1,752.6z"
+   id="path147" />
+			</g>
+			<g
+   id="g161">
+				<ellipse
+   class="st14"
+   cx="497.2"
+   cy="741.8"
+   rx="3.2"
+   ry="2.8"
+   id="ellipse151" />
+				<path
+   class="st14"
+   d="M496.8,750.2L496.8,750.2c-0.7,0-1.2-0.5-1.2-1.2v-5.6c0-0.7,0.5-1.2,1.2-1.2h0c0.7,0,1.2,0.5,1.2,1.2v5.6      C498,749.7,497.4,750.2,496.8,750.2z"
+   id="path153" />
+				<path
+   class="st14"
+   d="M499.2,746.2h-1.6c-0.2,0-0.4-0.2-0.4-0.4v0c0-0.2,0.2-0.4,0.4-0.4h1.6c0.2,0,0.4,0.2,0.4,0.4v0      C499.6,746,499.4,746.2,499.2,746.2z"
+   id="path155" />
+				<path
+   class="st14"
+   d="M499.2,747.8h-1.6c-0.2,0-0.4-0.2-0.4-0.4v0c0-0.2,0.2-0.4,0.4-0.4h1.6c0.2,0,0.4,0.2,0.4,0.4v0      C499.6,747.6,499.4,747.8,499.2,747.8z"
+   id="path157" />
+				<path
+   class="st14"
+   d="M499.2,749.4h-1.6c-0.2,0-0.4-0.2-0.4-0.4v0c0-0.2,0.2-0.4,0.4-0.4h1.6c0.2,0,0.4,0.2,0.4,0.4v0      C499.6,749.2,499.4,749.4,499.2,749.4z"
+   id="path159" />
+			</g>
+		</g>
+	</g>
+	<text
+   transform="matrix(1 0 0 1 432 780)"
+   class="st7 st15"
+   id="text167"><tspan
+     sodipodi:role="line"
+     id="tspan99">Cloud-Gateway</tspan></text>
+
+
+</g>
+<g
+   id="gear_bottom">
+</g>
+<g
+   id="gear_icon">
+</g>
+<g
+   id="g185"
+   transform="matrix(1.0863484,0,0,1,-32.076952,0)">
+			<g
+   id="g177">
+				<path
+   class="st16"
+   d="m 103.5,608.5 v 0 l -0.4,-0.1 c -7.7,-1 -13.6,-10 -13.6,-20.9 0,-10.9 5.8,-19.9 13.6,-20.9 l 0.4,-0.1 v 0 h 485.3 0.2 c 7.6,0.4 13.5,9.6 13.5,21 0,11.4 -5.9,20.6 -13.5,21 h -0.4 z"
+   id="path173"
+   inkscape:connector-curvature="0"
+   style="fill:#ef7c26" />
+				<path
+   d="m 588.6,567 h 0.3 c 7.2,0.4 13.1,9.6 13.1,20.5 0,10.9 -5.9,20.1 -13.1,20.5 h -0.2 -484.9 l -0.7,-0.1 C 95.7,606.9 90,598 90,587.5 90,577 95.8,568.1 103.1,567.1 l 0.7,-0.1 h 484.8 m 0.4,-1 H 103 v 0.1 c -7.9,1 -14,10.2 -14,21.4 0,11.2 6.1,20.4 14,21.4 v 0.1 h 486 v 0 c 7.8,-0.4 14,-9.9 14,-21.5 0,-11.6 -6.2,-21.1 -14,-21.5 z"
+   id="path175"
+   inkscape:connector-curvature="0" />
+			</g>
+			<g
+   id="g183">
+				<path
+   class="st0"
+   d="m 587.5,605 c -5.5,0 -10,-8 -10,-17.9 0,-9.9 4.5,-17.9 10,-17.9 5.5,0 10,8 10,17.9 0,9.8 -4.5,17.9 -10,17.9 z"
+   id="path179"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
+				<path
+   d="m 587.5,569.6 c 5.1,0 9.5,8 9.5,17.4 0,9.4 -4.4,17.4 -9.5,17.4 -5.1,0 -9.5,-8 -9.5,-17.4 0,-9.4 4.4,-17.4 9.5,-17.4 m 0,-1 c -5.8,0 -10.5,8.3 -10.5,18.4 0,10.1 4.7,18.4 10.5,18.4 5.8,0 10.5,-8.3 10.5,-18.4 0,-10.1 -4.7,-18.4 -10.5,-18.4 z"
+   id="path181"
+   inkscape:connector-curvature="0" />
+			</g>
+		</g><text
+   class="st7 st8"
+   id="text187"
+   style="font-size:21px;font-family:MyriadPro-Regular"
+   x="154.86478"
+   y="596"><tspan
+     sodipodi:role="line"
+     id="tspan113"
+     x="154.86478"
+     y="596">vSAN &amp; vMotion -- Privates VLAN B</tspan></text>
+
+<g
+   id="g206"
+   transform="matrix(1.0878074,0,0,1,-32.761373,0)">
+			<g
+   id="g204">
+				<g
+   id="g196">
+					<path
+   class="st14"
+   d="m 249.4,480.5 v 0 l -0.4,-0.1 c -5.3,-1 -9.5,-10.2 -9.5,-20.9 0,-10.7 4.2,-19.9 9.5,-20.9 l 0.4,-0.1 v 0 h 343.5 0.2 c 5.2,0.4 9.4,9.8 9.4,21 0,11.2 -4.2,20.6 -9.4,21 h -0.2 z"
+   id="path192"
+   inkscape:connector-curvature="0"
+   style="fill:#29abe2" />
+					<path
+   d="m 592.8,439 h 0.2 c 5,0.4 9,9.5 9,20.5 0,11 -4,20.1 -9,20.5 h -0.2 -343.3 l -0.5,-0.1 c -5.1,-1 -9.1,-9.9 -9.1,-20.4 0,-10.5 4,-19.5 9.1,-20.4 l 0.5,-0.1 h 343.3 m 0.3,-1 H 248.9 v 0.1 c -5.6,1 -9.9,10.2 -9.9,21.4 0,11.2 4.4,20.4 9.9,21.4 v 0.1 h 344.2 v 0 c 5.5,-0.4 9.9,-9.9 9.9,-21.5 0,-11.6 -4.4,-21.1 -9.9,-21.5 z"
+   id="path194"
+   inkscape:connector-curvature="0" />
 				</g>
-				<g>
-					<ellipse class="st0" cx="589.23" cy="459.06" rx="9.73" ry="17.93"/>
-					<path d="M589.23,441.63c5,0,9.23,7.98,9.23,17.43c0,9.45-4.23,17.43-9.23,17.43c-5,0-9.23-7.98-9.23-17.43
-						C580,449.61,584.23,441.63,589.23,441.63 M589.23,440.63c-5.65,0-10.23,8.25-10.23,18.43c0,10.18,4.58,18.43,10.23,18.43
-						c5.65,0,10.23-8.25,10.23-18.43C599.46,448.88,594.88,440.63,589.23,440.63L589.23,440.63z"/>
+				<g
+   id="g202">
+					<path
+   class="st0"
+   d="m 589.2,477 c -5.4,0 -9.7,-8 -9.7,-17.9 0,-9.9 4.4,-17.9 9.7,-17.9 5.4,0 9.7,8 9.7,17.9 0.1,9.8 -4.3,17.9 -9.7,17.9 z"
+   id="path198"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
+					<path
+   d="m 589.2,441.6 c 5,0 9.2,8 9.2,17.4 0,9.4 -4.2,17.4 -9.2,17.4 -5,0 -9.2,-8 -9.2,-17.4 0,-9.4 4.2,-17.4 9.2,-17.4 m 0,-1 c -5.6,0 -10.2,8.3 -10.2,18.4 0,10.2 4.6,18.4 10.2,18.4 5.6,0 10.2,-8.3 10.2,-18.4 0.1,-10.1 -4.5,-18.4 -10.2,-18.4 z"
+   id="path200"
+   inkscape:connector-curvature="0" />
 				</g>
 			</g>
-		</g>
-		<text transform="matrix(1 0 0 1 276 466)" class="st7 st8">Netz logischer Switches (VXLAN)</text>
-	</g>
-	<g id="Layer_9">
-	</g>
-</g>
-<g id="management_vxlan">
-	<g id="Layer_6">
-	</g>
-	<g>
-		<g>
-			<g>
-				<path class="st17" d="M103.5,547.5v-0.04l-0.43-0.06c-7.73-1.05-13.57-10.25-13.57-21.4s5.83-20.35,13.57-21.4l0.43-0.06v-0.04
-					h485.27l0.2,0.02c7.58,0.39,13.53,9.83,13.53,21.48s-5.94,21.09-13.53,21.48l-0.37,0.02H103.5z"/>
-				<path d="M588.6,505l0.35,0.02c7.2,0.37,13.05,9.78,13.05,20.98s-5.85,20.61-13.05,20.98L588.7,547H103.83l-0.7-0.1
-					C95.77,545.9,90,536.72,90,526s5.77-19.9,13.14-20.9l0.7-0.1H588.6 M589,504H103v0.1c-7.86,1.07-14,10.46-14,21.9
-					s6.14,20.82,14,21.9v0.1h486v-0.02c7.78-0.4,14-10.08,14-21.98c0-11.9-6.22-21.58-14-21.98V504L589,504z"/>
+		</g><text
+   class="st7 st8"
+   id="text208"
+   style="font-size:21px;font-family:MyriadPro-Regular"
+   x="247.10397"
+   y="466"><tspan
+     sodipodi:role="line"
+     id="tspan126"
+     x="247.10397"
+     y="466">Netz logischer Switches (VXLAN)</tspan></text>
+
+<g
+   id="g227"
+   transform="matrix(1.0896211,0,0,1,-34.050432,0)">
+			<g
+   id="g219">
+				<path
+   class="st17"
+   d="m 103.5,547.5 v 0 l -0.4,-0.1 C 95.4,546.3 89.5,537.1 89.5,526 c 0,-11.1 5.8,-20.3 13.6,-21.4 l 0.4,-0.1 v 0 h 485.3 0.2 c 7.6,0.4 13.5,9.8 13.5,21.5 0,11.7 -5.9,21.1 -13.5,21.5 h -0.4 z"
+   id="path215"
+   inkscape:connector-curvature="0"
+   style="fill:#f4ba51" />
+				<path
+   d="m 588.6,505 h 0.3 c 7.2,0.4 13.1,9.8 13.1,21 0,11.2 -5.9,20.6 -13.1,21 h -0.2 -484.9 l -0.7,-0.1 C 95.7,545.9 90,536.7 90,526 c 0,-10.7 5.8,-19.9 13.1,-20.9 l 0.7,-0.1 h 484.8 m 0.4,-1 H 103 v 0.1 c -7.9,1.1 -14,10.5 -14,21.9 0,11.4 6.1,20.8 14,21.9 v 0.1 h 486 v 0 c 7.8,-0.4 14,-10.1 14,-22 0,-11.9 -6.2,-21.6 -14,-22 z"
+   id="path217"
+   inkscape:connector-curvature="0" />
 			</g>
-			<g>
-				<path class="st0" d="M587.5,543.91c-5.51,0-10-8.24-10-18.36c0-10.12,4.49-18.36,10-18.36c5.51,0,10,8.23,10,18.36
-					C597.5,535.67,593.01,543.91,587.5,543.91z"/>
-				<path d="M587.5,507.69c5.15,0,9.5,8.18,9.5,17.86c0,9.68-4.35,17.86-9.5,17.86c-5.15,0-9.5-8.18-9.5-17.86
-					C578,515.87,582.35,507.69,587.5,507.69 M587.5,506.69c-5.8,0-10.5,8.44-10.5,18.86c0,10.41,4.7,18.86,10.5,18.86
-					s10.5-8.44,10.5-18.86C598,515.14,593.3,506.69,587.5,506.69L587.5,506.69z"/>
+			<g
+   id="g225">
+				<path
+   class="st0"
+   d="m 587.5,543.9 c -5.5,0 -10,-8.2 -10,-18.4 0,-10.1 4.5,-18.4 10,-18.4 5.5,0 10,8.2 10,18.4 0,10.2 -4.5,18.4 -10,18.4 z"
+   id="path221"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff" />
+				<path
+   d="m 587.5,507.7 c 5.1,0 9.5,8.2 9.5,17.9 0,9.7 -4.4,17.9 -9.5,17.9 -5.1,0 -9.5,-8.2 -9.5,-17.9 0,-9.7 4.4,-17.9 9.5,-17.9 m 0,-1 c -5.8,0 -10.5,8.4 -10.5,18.9 0,10.4 4.7,18.9 10.5,18.9 5.8,0 10.5,-8.5 10.5,-18.9 0,-10.5 -4.7,-18.9 -10.5,-18.9 z"
+   id="path223"
+   inkscape:connector-curvature="0" />
 			</g>
-		</g>
-		<text transform="matrix(1 0 0 1 115 533)" class="st7 st8">Management &amp; VXLAN -- Privates VLAN A (nativ)</text>
-	</g>
-</g>
-<g id="P_x2F_V">
-	<g>
-		<g>
-			<g>
-				<rect x="104.5" y="280" class="st18" width="47.29" height="47.29"/>
-				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="135.9627" y1="296.7212" x2="124.5096" y2="338.8456">
-					<stop  offset="0" style="stop-color:#CCE0F4"/>
-					<stop  offset="0.0775" style="stop-color:#C5DDF3"/>
-					<stop  offset="0.1918" style="stop-color:#B1D5EF"/>
-					<stop  offset="0.329" style="stop-color:#90C9EA"/>
-					<stop  offset="0.4838" style="stop-color:#63B7E2"/>
-					<stop  offset="0.6515" style="stop-color:#2AA1D9"/>
-					<stop  offset="0.6829" style="stop-color:#1E9CD7"/>
-					<stop  offset="0.8652" style="stop-color:#0075BE"/>
-					<stop  offset="0.9944" style="stop-color:#005B97"/>
+		</g><text
+   class="st7 st8"
+   id="text229"
+   style="font-size:21px;font-family:MyriadPro-Regular"
+   x="80.815887"
+   y="533"><tspan
+     sodipodi:role="line"
+     id="tspan140"
+     x="80.815887"
+     y="533">Management &amp; VXLAN -- Privates VLAN A (nativ)</tspan></text>
+
+<g
+   id="P_x2F_V">
+	<g
+   id="g301">
+		<g
+   id="g299">
+			<g
+   id="g257">
+				<rect
+   x="104.5"
+   y="280"
+   class="st18"
+   width="47.3"
+   height="47.3"
+   id="rect234" />
+				<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="135.9627"
+   y1="296.7212"
+   x2="124.5096"
+   y2="338.8456">
+					<stop
+   offset="0"
+   style="stop-color:#CCE0F4"
+   id="stop236" />
+					<stop
+   offset="7.748766e-02"
+   style="stop-color:#C5DDF3"
+   id="stop238" />
+					<stop
+   offset="0.1918"
+   style="stop-color:#B1D5EF"
+   id="stop240" />
+					<stop
+   offset="0.329"
+   style="stop-color:#90C9EA"
+   id="stop242" />
+					<stop
+   offset="0.4838"
+   style="stop-color:#63B7E2"
+   id="stop244" />
+					<stop
+   offset="0.6515"
+   style="stop-color:#2AA1D9"
+   id="stop246" />
+					<stop
+   offset="0.6829"
+   style="stop-color:#1E9CD7"
+   id="stop248" />
+					<stop
+   offset="0.8652"
+   style="stop-color:#0075BE"
+   id="stop250" />
+					<stop
+   offset="0.9944"
+   style="stop-color:#005B97"
+   id="stop252" />
 				</linearGradient>
-				<polygon class="st19" points="106.32,325.47 149.97,281.82 149.97,325.47 				"/>
+				<polygon
+   class="st19"
+   points="106.3,325.5 150,281.8 150,325.5     "
+   id="polygon255" />
 			</g>
-			<text transform="matrix(1 0 0 1 108.084 315.4692)" class="st0 st13 st20">P</text>
-			<text transform="matrix(1 0 0 1 116.6836 324.0688)" class="st0 st13 st20">V</text>
-			<g>
-				<g>
-					<g>
-						<g>
-							<polygon class="st0" points="110.14,288.61 112.78,297.83 119.2,291.77 							"/>
+			<text
+   transform="matrix(1 0 0 1 108.084 315.4692)"
+   class="st0 st13 st20"
+   id="text259"><tspan
+     sodipodi:role="line"
+     id="tspan158">P</tspan></text>
+
+
+			<text
+   transform="matrix(1 0 0 1 116.6836 324.0688)"
+   class="st0 st13 st20"
+   id="text261"><tspan
+     sodipodi:role="line"
+     id="tspan161">V</tspan></text>
+
+
+			<g
+   id="g279">
+				<g
+   id="g269">
+					<g
+   id="g267">
+						<g
+   id="g265">
+							<polygon
+   class="st0"
+   points="110.1,288.6 112.8,297.8 119.2,291.8        "
+   id="polygon263" />
 						</g>
 					</g>
 				</g>
-				<g>
-					<g>
-						<g>
+				<g
+   id="g277">
+					<g
+   id="g275">
+						<g
+   id="g273">
 							
-								<rect x="117" y="293.47" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -172.128 163.1521)" class="st0" width="4.09" height="9"/>
+								<rect
+   x="117"
+   y="293.5"
+   transform="matrix(0.7268 -0.6868 0.6868 0.7268 -172.128 163.1521)"
+   class="st0"
+   width="4.1"
+   height="9"
+   id="rect271" />
 						</g>
 					</g>
 				</g>
 			</g>
-			<g>
-				<g>
-					<g>
-						<g>
-							<polygon class="st0" points="142.58,322.14 132.46,318.19 139.21,311.81 							"/>
+			<g
+   id="g297">
+				<g
+   id="g287">
+					<g
+   id="g285">
+						<g
+   id="g283">
+							<polygon
+   class="st0"
+   points="142.6,322.1 132.5,318.2 139.2,311.8        "
+   id="polygon281" />
 						</g>
 					</g>
 				</g>
-				<g>
-					<g>
-						<g>
+				<g
+   id="g295">
+					<g
+   id="g293">
+						<g
+   id="g291">
 							
-								<rect x="130.23" y="306.08" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -177.6229 175.9507)" class="st0" width="4.3" height="10.38"/>
+								<rect
+   x="130.2"
+   y="306.1"
+   transform="matrix(0.7268 -0.6868 0.6868 0.7268 -177.6229 175.9507)"
+   class="st0"
+   width="4.3"
+   height="10.4"
+   id="rect289" />
 						</g>
 					</g>
 				</g>
@@ -301,83 +818,249 @@
 		</g>
 	</g>
 </g>
-<g id="Layer_15">
-	<g>
-		<g>
-			<g>
-				<rect x="170.5" y="720.93" class="st18" width="38.07" height="38.07"/>
-				<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="195.8253" y1="734.3933" x2="186.6063" y2="768.3004">
-					<stop  offset="0" style="stop-color:#CCE0F4"/>
-					<stop  offset="0.0775" style="stop-color:#C5DDF3"/>
-					<stop  offset="0.1918" style="stop-color:#B1D5EF"/>
-					<stop  offset="0.329" style="stop-color:#90C9EA"/>
-					<stop  offset="0.4838" style="stop-color:#63B7E2"/>
-					<stop  offset="0.6515" style="stop-color:#2AA1D9"/>
-					<stop  offset="0.6829" style="stop-color:#1E9CD7"/>
-					<stop  offset="0.8652" style="stop-color:#0075BE"/>
-					<stop  offset="0.9944" style="stop-color:#005B97"/>
+<g
+   id="Layer_15">
+	<g
+   id="g371">
+		<g
+   id="g369">
+			<g
+   id="g327">
+				<rect
+   x="170.5"
+   y="720.9"
+   class="st18"
+   width="38.1"
+   height="38.1"
+   id="rect304" />
+				<linearGradient
+   id="SVGID_2_"
+   gradientUnits="userSpaceOnUse"
+   x1="195.8253"
+   y1="734.3933"
+   x2="186.6063"
+   y2="768.3004">
+					<stop
+   offset="0"
+   style="stop-color:#CCE0F4"
+   id="stop306" />
+					<stop
+   offset="7.748766e-02"
+   style="stop-color:#C5DDF3"
+   id="stop308" />
+					<stop
+   offset="0.1918"
+   style="stop-color:#B1D5EF"
+   id="stop310" />
+					<stop
+   offset="0.329"
+   style="stop-color:#90C9EA"
+   id="stop312" />
+					<stop
+   offset="0.4838"
+   style="stop-color:#63B7E2"
+   id="stop314" />
+					<stop
+   offset="0.6515"
+   style="stop-color:#2AA1D9"
+   id="stop316" />
+					<stop
+   offset="0.6829"
+   style="stop-color:#1E9CD7"
+   id="stop318" />
+					<stop
+   offset="0.8652"
+   style="stop-color:#0075BE"
+   id="stop320" />
+					<stop
+   offset="0.9944"
+   style="stop-color:#005B97"
+   id="stop322" />
 				</linearGradient>
-				<polygon class="st21" points="171.96,757.54 207.1,722.4 207.1,757.54 				"/>
+				<polygon
+   class="st21"
+   points="172,757.5 207.1,722.4 207.1,757.5     "
+   id="polygon325" />
 			</g>
-			<text transform="matrix(1 0 0 1 173.3848 749.484)" class="st0 st13 st22">P</text>
-			<text transform="matrix(1 0 0 1 180.3071 756.4059)" class="st0 st13 st22">V</text>
-			<g>
-				<g>
-					<g>
-						<g>
-							<polygon class="st0" points="175.04,727.86 177.16,735.29 182.33,730.41 							"/>
+			<text
+   transform="matrix(1 0 0 1 173.3848 749.484)"
+   class="st0 st13 st22"
+   id="text329"><tspan
+     sodipodi:role="line"
+     id="tspan198">P</tspan></text>
+
+
+			<text
+   transform="matrix(1 0 0 1 180.3071 756.4059)"
+   class="st0 st13 st22"
+   id="text331"><tspan
+     sodipodi:role="line"
+     id="tspan201">V</tspan></text>
+
+
+			<g
+   id="g349">
+				<g
+   id="g339">
+					<g
+   id="g337">
+						<g
+   id="g335">
+							<polygon
+   class="st0"
+   points="175,727.9 177.2,735.3 182.3,730.4        "
+   id="polygon333" />
 						</g>
 					</g>
 				</g>
-				<g>
-					<g>
-						<g>
+				<g
+   id="g347">
+					<g
+   id="g345">
+						<g
+   id="g343">
 							
-								<rect x="180.56" y="731.78" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -455.3054 326.0244)" class="st0" width="3.29" height="7.24"/>
+								<rect
+   x="180.6"
+   y="731.8"
+   transform="matrix(0.7268 -0.6868 0.6868 0.7268 -455.3054 326.0244)"
+   class="st0"
+   width="3.3"
+   height="7.2"
+   id="rect341" />
 						</g>
 					</g>
 				</g>
 			</g>
-			<g>
-				<g>
-					<g>
-						<g>
-							<polygon class="st0" points="201.15,754.85 193,751.67 198.44,746.53 							"/>
+			<g
+   id="g367">
+				<g
+   id="g357">
+					<g
+   id="g355">
+						<g
+   id="g353">
+							<polygon
+   class="st0"
+   points="201.2,754.9 193,751.7 198.4,746.5        "
+   id="polygon351" />
 						</g>
 					</g>
 				</g>
-				<g>
-					<g>
-						<g>
+				<g
+   id="g365">
+					<g
+   id="g363">
+						<g
+   id="g361">
 							
-								<rect x="191.21" y="741.93" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -459.738 336.3406)" class="st0" width="3.46" height="8.35"/>
+								<rect
+   x="191.2"
+   y="741.9"
+   transform="matrix(0.7268 -0.6868 0.6868 0.7268 -459.738 336.3406)"
+   class="st0"
+   width="3.5"
+   height="8.4"
+   id="rect359" />
 						</g>
 					</g>
 				</g>
 			</g>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 153 780)" class="st7 st15">NSX Edge</text>
+	<text
+   transform="matrix(1 0 0 1 153 780)"
+   class="st7 st15"
+   id="text373"><tspan
+     sodipodi:role="line"
+     id="tspan224">NSX Edge</tspan></text>
+
+
 </g>
-<g id="Layer_16">
-	<g>
-		<g>
-			<rect x="273" y="722" class="st23" width="42.95" height="37"/>
-			<rect x="315.05" y="722" class="st24" width="93.95" height="37"/>
+<g
+   id="Layer_16">
+	<g
+   id="g386">
+		<g
+   id="g380">
+			<rect
+   x="273"
+   y="722"
+   class="st23"
+   width="42.9"
+   height="37"
+   id="rect376" />
+			<rect
+   x="315.1"
+   y="722"
+   class="st24"
+   width="93.9"
+   height="37"
+   id="rect378" />
 		</g>
-		<text transform="matrix(1 0 0 1 279.2979 746.4043)" class="st0 st7 st25">VM</text>
-		<text transform="matrix(1 0 0 1 317.9365 746.4043)" class="st0 st7 st25">HCX-Cloud</text>
+		<text
+   transform="matrix(1 0 0 1 279.2979 746.4043)"
+   class="st0 st7 st25"
+   id="text382"><tspan
+     sodipodi:role="line"
+     id="tspan231">VM</tspan></text>
+
+
+		<text
+   transform="matrix(1 0 0 1 317.9365 746.4043)"
+   class="st0 st7 st25"
+   id="text384"><tspan
+     sodipodi:role="line"
+     id="tspan234">HCX-Cloud</tspan></text>
+
+
 	</g>
-	<text transform="matrix(1 0 0 1 291 780)" class="st7 st15">HCX-Manager</text>
+	<text
+   transform="matrix(1 0 0 1 291 780)"
+   class="st7 st15"
+   id="text388"><tspan
+     sodipodi:role="line"
+     id="tspan238">HCX-Manager</tspan></text>
+
+
 </g>
-<g id="VM_HCX">
-	<g>
-		<g>
-			<rect x="146" y="360.75" class="st23" width="48" height="47"/>
-			<rect x="193" y="360.75" class="st24" width="126" height="47"/>
+<g
+   id="VM_HCX">
+	<g
+   id="g401">
+		<g
+   id="g395">
+			<rect
+   x="146"
+   y="360.8"
+   class="st23"
+   width="48"
+   height="47"
+   id="rect391" />
+			<rect
+   x="193"
+   y="360.8"
+   class="st24"
+   width="126"
+   height="47"
+   id="rect393" />
 		</g>
-		<text transform="matrix(1 0 0 1 154 391.75)" class="st0 st7 st8">VM</text>
-		<text transform="matrix(1 0 0 1 200 391.75)" class="st0 st7 st8">HCX-Cloud</text>
+		<text
+   transform="matrix(1 0 0 1 154 391.75)"
+   class="st0 st7 st8"
+   id="text397"><tspan
+     sodipodi:role="line"
+     id="tspan245">VM</tspan></text>
+
+
+		<text
+   transform="matrix(1 0 0 1 200 391.75)"
+   class="st0 st7 st8"
+   id="text399"><tspan
+     sodipodi:role="line"
+     id="tspan248">HCX-Cloud</tspan></text>
+
+
 	</g>
 </g>
 </svg>

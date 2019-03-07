@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # Zerto
+{: #vum-zerto}
 
 Wenn Sie feststellen, dass ein vSphere ESXi-Host während der Korrekturphase nicht in den Wartungsmodus wechseln kann, kann es daran liegen, dass er von Zerto gestoppt wird. Wenn Sie Zerto seit der ersten Bereitstellung aktualisiert haben, führen Sie die folgenden Schritte aus, um dies zu korrigieren. Wenn Sie keine Aktualisierung vorgenommen haben, befolgen Sie die Anweisungen im Abschnitt [How to place a host with an associated VRA into maintenance mode](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/).
 
@@ -17,7 +18,8 @@ Wenn Sie feststellen, dass ein vSphere ESXi-Host während der Korrekturphase nic
 3. Wählen Sie die Registerkarte **Policies** aus und stellen Sie sicher, dass **Allow Zerto to always enter hosts to maintenance mode during remediation** ausgewählt ist.
 4. Melden Sie sich bei Zerto ab.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vum-zerto-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

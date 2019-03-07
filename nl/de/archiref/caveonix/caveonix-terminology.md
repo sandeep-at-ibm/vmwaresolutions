@@ -16,7 +16,8 @@ Dieses Glossar enthält einige Beschreibungen für Begriffe, die nicht mit der C
 -	**NIST Special Publication 800-53:** Ein Risikomanagement-Framework für die Adressen-Sicherheitssteuerung.
 -	**Security Content Automation Protocol (SCAP):** Eine Methode zur Verwendung bestimmter Standards, die das automatisierte Schwachstellenmanagement, die Messung und die Bewertung der Richtlinienkonformität von Systemen ermöglichen, die in einer Organisation bereitgestellt sind. Prüflisten standardisieren und ermöglichen die Automatisierung der Verbindung zwischen Computer-Sicherheitskonfigurationen und dem Kontroll-Framework NIST Special Publication 800-53.
   - Die National Vulnerability Database (NVD) ist das Inhaltsrepository der US-Regierung für SCAP.
-  -	SCAP ermöglicht es Sicherheitsadministratoren, Computer, Software und andere Einheiten auf Grundlage einer vordefinierten Sicherheits-Baseline zu scannen, um zu ermitteln, ob die Konfigurations- und Software-Patches in dem Standard implementiert sind, mit dem sie verglichen werden. Die SCAP-Komponenten sind folgende:
+  -	SCAP ermöglicht es Sicherheitsadministratoren, Computer, Software und andere Einheiten auf Grundlage einer vordefinierten Sicherheits-Baseline zu scannen, um zu ermitteln, ob die Konfigurations- und Software-Patches in dem Standard implementiert sind, mit dem sie verglichen werden.
+  Die SCAP-Komponenten sind folgende:
   -	Common Vulnerabilities and Exposures (CVE) - Eine Liste der öffentlich bekannten Cybersicherheits-Schwachstellen.
   -	Common Configuration Enumeration (CCE) - Eine Liste der sicherheitsrelevanten Probleme der Systemkonfiguration.
   -	Common Platform Enumeration (CPE) - Ein strukturiertes Benennungsschema für Informationstechnologie-Systeme, -Software und -Pakete.
@@ -66,4 +67,4 @@ Dieses Glossar enthält einige Beschreibungen für Begriffe, die nicht mit der C
 ## Zugehörige Links
 {: #caveonix-terminology-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

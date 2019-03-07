@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-18"
 
 ---
 
 # Übersicht über VMware Update Manager
+{: #vum-overview}
 
 VMware Update Manager (VUM) verwendet einen mehrstufigen Prozess, um vSphere-Objekte zu aktualisieren und Patches oder Erweiterungen anzuwenden. Dieser Prozess ermöglicht eine reibungslose Aktualisierungsprozedur mit minimaler Systemausfallzeit. Zum Verständnis dieses Prozesses sind folgende Begriffe wichtig:
 * **Bestandsobjekt** - Ein Objekt in vCenter, wie z. B. eine virtuelle Maschine, eine virtuelle Appliance oder ein vSphere ESXi-Host.
@@ -44,7 +45,9 @@ Die VUM-Clientschnittstelle bietet zwei Hauptansichten:
 *	Administrationsansicht
 *	Konformitätsansicht
 
-##	Administrationsansicht
+## Administrationsansicht
+{: #vum-overview-admin-view}
+
 Sie rufen die Administrationsansicht auf, indem Sie zu **Home** > **Update Manager** navigieren und die IP-Adresse der Update Manager-Instanz auswählen. In der Administrationsansicht können Sie die folgenden Tasks ausführen:
 *	Einstellungen für Update Manager konfigurieren
 *	Baselines und Baselinegruppen erstellen und verwalten
@@ -53,7 +56,9 @@ Sie rufen die Administrationsansicht auf, indem Sie zu **Home** > **Update Manag
 *	Benachrichtigungen ansehen und überprüfen
 *	ESXi-Images importieren
 
-##	Konformitätsansicht
+## Konformitätsansicht
+{: #vum-overview-compliance-view}
+
 Sie rufen die Konformitätsansicht eines ausgewählten Bestandsobjekts auf, indem Sie zu **Hosts und Cluster** oder **VMs und Vorlagen** navigieren und auf die Registerkarte **Update Manager** klicken. In der Konformitätsansicht können Sie die folgenden Tasks ausführen:
 *	Konformitäts- und Prüfergebnisse für jedes ausgewählte Bestandsobjekt anzeigen
 *	Baselines und Baselinegruppen aus einem ausgewählten Bestandsobjekt anhängen und abhängen
@@ -61,7 +66,8 @@ Sie rufen die Konformitätsansicht eines ausgewählten Bestandsobjekts auf, inde
 *	Patches oder Erweiterungen auf Hosts zwischenspeichern
 *	Ausgewähltes Bestandsobjekt korrigieren
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

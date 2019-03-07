@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Übersicht über die Architektur
+{: #vcsiks-arch-overview}
+
 Die {{site.data.keyword.vmwaresolutions_full}}-Produktangebote stellen eine Automatisierung zur weltweiten Bereitstellung von VMware-Technologiekomponenten in {{site.data.keyword.CloudDataCents_notm}} bereit. Die Architektur besteht aus einer einzelnen Cloudregion und unterstützt die Erweiterung in weitere Cloudregionen, die sich in einem anderen geografischen Gebiet oder in einem anderen {{site.data.keyword.cloud_notm}}-Pod innerhalb desselben Rechenzentrums befinden.
 
 Die Produkte {{site.data.keyword.icpfull_notm}} und Cloud Automation Manager (CAM) können manuell auf Ihrer lokalen Virtualisierungsplattform bereitgestellt werden und ermöglichen so das Cloud-Management am lokalen Standort. Alternativ werden {{site.data.keyword.icpfull_notm}} und CAM als Serviceerweiterungen für eine vorhandene oder neue VMware vCenter Server on {{site.data.keyword.cloud_notm}}-Bereitstellung per Automation angeboten, wodurch das Cloud-Management über die {{site.data.keyword.cloud_notm}} ermöglicht wird.
@@ -20,6 +22,7 @@ IBM Multi-Cluster Manager (MCM) bietet Benutzertransparenz, anwendungsorientiert
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) ist eine Self-Service-Managementplattform für mehrere Clouds, die unter {{site.data.keyword.cloud_notm}} Private ausgeführt wird und es Entwicklern und Administratoren ermöglicht, die Anforderungen des Unternehmens zu erfüllen. Der Service Composer von Cloud Automation Manager ermöglicht es Ihnen, Hybrid-Cloud-Services im IBM Cloud Private-Katalog zugänglich zu machen.
 
 ## IBM Cloud-seitige Plattform für das Cloud-Management
+{: #vcsiks-arch-overview-ibm-cloud-side}
 
 Das folgende Diagramm zeigt {{site.data.keyword.icpfull_notm}} und CAM mit Bereitstellung in der {{site.data.keyword.cloud_notm}}-Infrastruktur und mit Verbindungen zum lokalen vCenter- und {{site.data.keyword.containerlong_notm}}-Service, der in {{site.data.keyword.cloud_notm}} bereitgestellt ist. Benutzer können virtuelle Maschinen (VMs) lokal und in vCenter Server-Instanzen sowie Container im {{site.data.keyword.icpfull_notm}}- und {{site.data.keyword.containerlong_notm}}-Cluster bereitstellen.
 
@@ -34,6 +37,7 @@ Bei {{site.data.keyword.icpfull_notm}} mit NSX-T können die Benutzer den Netzbe
 vcsnsxt/vcsnsxt-intro.html).
 
 ## Lokale Cloud-Management-Plattform
+{: #vcsiks-arch-overview-on-premises}
 
 Das folgende Diagramm zeigt {{site.data.keyword.icpfull_notm}} und CAM mit Bereitstellung in der lokalen Cloudinfrastruktur und Verbindungen zu vCenter und {{site.data.keyword.containerlong_notm}}, die in der {{site.data.keyword.cloud_notm}} bereitgestellt sind. Benutzer können VMs und Container lokal, VMs in vCenter Server-Instanzen sowie Container im {{site.data.keyword.containerlong_notm}}-Cluster bereitstellen.
 
@@ -44,6 +48,7 @@ Das strongSwan-VPN wird verwendet, um die Verbindung zu den bereitgestellten {{s
 
 Im Diagramm erstellt CAM logische Cloudverbindungen zu den vCenter-Instanzen, Cloud-Providern sowie den {{site.data.keyword.icpfull_notm}}- und {{site.data.keyword.containerlong_notm}}-Umgebungen. {{site.data.keyword.icpfull_notm}}-Cluster müssen in jedem Rechenzentrum oder jeder Cloudumgebung bereitgestellt werden. MCM stellt den Mechanismus zur Verfügung, mit dem die {{site.data.keyword.icpfull_notm}}-Cluster in einer Managementansicht verbunden werden können.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcsiks-arch-overview-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # OVF-Datei mit VMware vSphere Web Client bereitstellen
+{: #trbl_deploy_ovf}
 
 ## Lösung
+{: #trbl_deploy_ovf-resolution}
 
 Gehen Sie zur Bereitstellung einer OVF-Datei (Open Virtualization Format) mittels vSphere Web Client wie folgt vor:
 1. Bevor Sie versuchen, eine OVF-Datei bereitzustellen, fügen Sie die folgenden Hostinformationen zur Datei `/etc/hosts` hinzu:

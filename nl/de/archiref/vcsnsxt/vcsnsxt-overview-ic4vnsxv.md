@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Übersicht über NSX-V
+{: #vcsnsxt-overview-ic4vnsxv}
 
 Die Netzvirtualisierung stellt ein Netzoverlay zur Verfügung, das in der virtuellen Schicht vorhanden ist. NSX-V stattet die Architektur mit Funktionen wie schnelle Einrichtung, Bereitstellung, Rekonfiguration und Löschung von virtuellen On-Demand-Netzen aus. In diesem Design werden vSphere Distributed Switch (vDS) und VMware NSX for vSphere zur Implementierung eines virtuellen Netzes verwendet.
 
@@ -37,6 +38,7 @@ Neben den Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisier
 NSX Edge Services Gateway-Paare werden anschließend bereitgestellt. Für alle Bereitstellungen wird ein Gateway-Paar für den abgehenden Datenverkehr aus Automatisierungskomponenten verwendet, die sich im privaten Netz befinden. Instanzen von VMware vCenter Server on {{site.data.keyword.cloud_notm}} beinhalten ein zweites Gateway, das als vom Kunden verwaltete Edge bezeichnet wird. Dieses Gateway wird bereitgestellt und mit einem Uplink zum öffentlichen Netz sowie einer Schnittstelle, die dem privaten Netz zugeordnet ist, konfiguriert. Alle erforderlichen NSX-Komponenten, wie z. B. Distributed Logical Router (DLR), logische Switches und Firewalls, können vom Administrator konfiguriert werden.
 
 ## Design verteilter Switches
+{: #vcsnsxt-overview-ic4vnsxv-distributed-switch}
 
 In dem Design wird eine minimale Anzahl von virtuellen verteilten Switches (vDS) verwendet. Die Hosts im Cluster werden mit öffentlichen und privaten Netzen verbunden. Sie werden mit zwei virtuellen verteilten Switches konfiguriert. Die Verwendung von zwei Switches entspricht der physischen Trennung der öffentlichen und privaten Netze, die in {{site.data.keyword.cloud_notm}} implementiert ist.
 
@@ -88,6 +90,7 @@ SDDC-Dswitch-Private	|Von NSX automatisch generiert	|Virtueller Ursprungsport	|A
 SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|Virtueller Ursprungsport	|Aktiv: 0, 1	|VLAN3
 
 ## NSX-V
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v}
 
 Dieses Design spezifiziert die Konfiguration von NSX-Komponenten, wendet jedoch keine Konfiguration von Netzoverlay-Komponenten an. Es ist Aufgabe des Kunden, das Design des Netzoverlays entsprechend seinen Anforderungen festzulegen.
 
@@ -105,6 +108,7 @@ Die folgenden Komponenten werden NICHT konfiguriert:
 -	Verknüpftes NSX-Management mit anderen VMware-Instanzen.
 
 ### Sicherheit von NSX-V
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
 
 Mit NSX for vSphere können Organisationen das Rechenzentrum in separate Sicherheitssgemente aufteilen. Dies kann hinunter bis auf die Ebene einer einzelnen Workload erfolgen und unabhängig davon, wo die Workload ausgeführt wird. IT-Teams können für jede Workload basierend auf Anwendungs- und Benutzerkontext Richtlinien definieren, was sofortige Antworten auf Sicherheitsbedrohungen innerhalb des Rechenzentrums und deren Durchsetzung bis zur Anwendung  sicherstellt.
 
@@ -120,6 +124,7 @@ Die folgende Abbildung zeigt in einem übergeordneten Diagramm, wie Sie einige d
 Abbildung 3. Sicherheit von NSX-V
 ![Sicherheit von NSX-V](vcsnsxt-vsecurity.svg)
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcsnsxt-overview-ic4vnsxv-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

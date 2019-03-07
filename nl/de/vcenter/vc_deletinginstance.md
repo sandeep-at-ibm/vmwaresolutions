@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server-Instanzen löschen
+{: #vc_deletinginstance}
 
 Zum Freigeben der Komponenten, die Sie in einer VMware vCenter Server-Instanz bestellt haben, löschen Sie die Instanz.
 
@@ -30,6 +31,7 @@ Die gelöschten Instanzen werden Ihnen bis zum Ende des Abrechnungszyklus für d
 {:note}
 
 ## Vorgehensweise zum Löschen von Instanzen auf der Seite "Bereitgestellte Instanzen"
+{: #vc_deletinginstance-procedure1}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Suchen Sie in der Tabelle **vCenter Server-Instanzen** nach der Instanz, die Sie löschen wollen.
@@ -40,6 +42,7 @@ Die gelöschten Instanzen werden Ihnen bis zum Ende des Abrechnungszyklus für d
    2. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
 
 ## Vorgehensweise zum Löschen von Instanzen auf der Seite "Instanzdetails"
+{: #vc_deletinginstance-procedure2}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, die Sie löschen wollen.
@@ -49,10 +52,11 @@ Die gelöschten Instanzen werden Ihnen bis zum Ende des Abrechnungszyklus für d
    1. Klicken Sie erneut auf das Überlaufmenüsymbol neben der **vCenter-Konsole** und klicken Sie auf **Instanz löschen**.
    2. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vc_deletinginstance-related}
 
-* [vCenter Server-Instanzen in einer Konfiguration mit mehreren Standorten löschen](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance_multi.html)
-* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [vCenter Server-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
-* [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [vCenter Server-Instanzen in einer Konfiguration mit mehreren Standorten löschen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance_multi)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [vCenter Server-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

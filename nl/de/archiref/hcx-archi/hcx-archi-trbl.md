@@ -4,18 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Fehlerbehebung für HCX on IBM Cloud
+{: #hcx-archi-trbl}
 
 ## Cloud-Registrierung schlägt fehl
+{: #hcx-archi-trbl-cloud-reg}
 
 * Hybrid-Cloud-Services wiederholt den Versuch nicht, wenn die Berechtigungsnachweise falsch sind. Die Berechtigungsnachweise müssen authentifiziert werden, bevor Hybrid-Cloud-Services versucht, sich anzumelden und die Cloud-Registrierung zu starten.
 * Die Cloud-Registrierung kann fehlschlagen, wenn die Berechtigungsnachweise falsch eingegeben wurden oder wenn die Berechtigungsnachweise für VCF/VCS Hybrid-Cloud-Services Cloud geändert werden, nachdem sich Hybrid-Cloud-Services bei VCF/VCS Hybrid-Cloud-Services Cloud registriert hat, und so eine fehlende Übereinstimmung entsteht.
 * Um die Berechtigungsnachweise im Webclient zu aktualisieren, rufen Sie die Registerkarte "Erste Schritte mit Hybrid-Cloud-Services" auf und wählen Sie unter **Basistasks** die Option **Neue Cloud registrieren** aus.
 
 ## MAC-Adresse duplizieren
+{: #hcx-archi-trbl-dupl-mac-addr}
 
 Nach der Migration kann es zu Kommunikationsproblemen zwischen Ihren virtuellen Maschinen kommen. Wenn die MAC-Adresse während einer Migration beibehalten wird, kann versehentlich eine doppelte MAC-Adresse erstellt werden.
 
@@ -29,6 +32,7 @@ Zur Behebung dieses Problems kann die MAC-Adresse für die migrierte virtuelle M
 6. Überprüfen Sie, ob mit der eindeutigen MAC-Adresse das Kommunikationsproblem gelöst ist.
 
 ## Hoher Hostressourcenverbrauch
+{: #hcx-archi-trbl-high-host-resource}
 
 In seltenen Fällen, wenn sich alle virtuellen Service-Appliances auf demselben Host befinden, können die virtuellen Servicemaschinen von Hybrid-Cloud-Services die CPU- und Plattenressourcen eines Hosts vollständig beleben.
 
@@ -42,7 +46,8 @@ Führen Sie die folgenden Schritte aus, um das Problem zu beheben:
 1. Bevor Sie die Konfiguration des Rechenzentrums ändern, überprüfen Sie die Anforderungen an die Unterstützung eines stabilen Zustands.
 2. Wenden Sie sich an den Support für stabilen Zustand, wenn Ressourcen bis an ihre Grenzen ausgelastet sind. Hier kann man Sie beraten, wie die Umgebung bei minimaler Ausfallzeit zu rekonfigurieren ist.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #hcx-archi-trbl-related}
 
-* [HCX Manager bei vCenter registrieren](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-reg-vcenter.html)
-* [HCX ändern oder deinstallieren](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
+* [HCX Manager bei vCenter registrieren](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-reg-vcenter)
+* [HCX ändern oder deinstallieren](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

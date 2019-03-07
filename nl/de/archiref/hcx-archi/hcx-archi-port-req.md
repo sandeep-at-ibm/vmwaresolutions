@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # VMware HCX on IBM Cloud - Portzugriffsvoraussetzungen
+{: #hcx-archi-port-req}
 
 HCX muss das öffentliche Internet und Privatleitungen traversieren sowie Verbindungen zu Rechenzentrumskomponenten wie Netzwerke, Switches und Portgruppen herstellen.
 
@@ -39,6 +40,7 @@ Tabelle 1. Portzugriffsvoraussetzungen
 | Cloud-Gateway (lokal) | Cloud-Gateway</br>(fern) | 4500  | UDP | Internet key exchange (IKEv2) zum Kapseln von Workloads für den bidirektionalen Tunnnel | IPSEC |
 | Cloud-Gateway (lokal) | Cloud-Gateway</br>(fern) | 500  | UDP | Internet key exchange (ISAKMP) für den bidirektionalen Tunnel | IPSEC |
 
-### Zugehörige Links
+## Zugehörige Links
+{: #hcx-archi-port-req-related}
 
-* [Installation und Konfiguration von HCX für die Quelle](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
+* [Installation und Konfiguration von HCX für die Quelle](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)

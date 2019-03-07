@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,33 +13,39 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Single-node Trial für Migration und App-Modernisierung bestellen, anzeigen und löschen
+{: #cloud_modern_bundle_orderinginstance}
 
 Überprüfen Sie die Planungsvoraussetzungen, bevor Sie eine Single-Node Trial-Instanz für Migration und Anwendungsmodernisierung bestellen.
 
 ## Voraussetzungen und Planung für die Bestellung von Single-node Trial-Instanzen für Migration und Anwendungsmodernisierung
+{: #cloud_modern_bundle_orderinginstance-req}
 
 Überprüfen Sie die folgenden Voraussetzungen und führen Sie die folgenden Tasks aus.
 
 ### Voraussetzungen für lokale HCX-Instanzen
+{: #cloud_modern_bundle_orderinginstance-hcx-req}
 
 * Erfordert VMware vSphere und vCenter 5.5 oder höher.
 * Die vSphere-Umgebung muss über verteilte Switches für die VMs verfügen, die zu {{site.data.keyword.cloud_notm}} migriert werden.
 * HCX Manager Virtual Appliance muss in einem privaten Netzwerk in der lokalen Umgebung bereitgestellt werden können und auf das öffentliche Internet zugreifen dürfen.
 
 ### IBM Cloud-Infrastrukturkonto
+{: #cloud_modern_bundle_orderinginstance-account-req}
 
 * Um {{site.data.keyword.vmwaresolutions_short}} für die Bestellung von Instanzen verwenden zu können, müssen Sie ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) besitzen. Die Kosten der Komponenten, die in Ihren Instanzen bestellt werden, werden diesem {{site.data.keyword.cloud_notm}}-Konto in Rechnung gestellt.
 *  Konfigurieren Sie die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen**. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Einstellungen**.
 
 ### Voraussetzungen für Instanznamen
+{: #cloud_modern_bundle_orderinginstance-inst-name-req}
 
 Machen Sie sich mit den Anforderungen für die Instanznamen vertraut:
 * Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-* Der Instanzname muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden. 
+* Der Instanzname muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden.
 * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
 * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
 
 ## Vorgehensweise zum Bestellen von Single-node Trial-Instanzen für Migration und Anwendungsmodernisierung
+{: #cloud_modern_bundle_orderinginstance-procedure}
 
 1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und anschließend im Abschnitt **Virtuelle VMware-Rechenzentren** auf **Single-node Trial for Migration and App Modernization**.
 2. Klicken Sie auf der Seite **Single-node Trial for Migration and App Modernization** auf **Weiter**.
@@ -59,10 +65,12 @@ Machen Sie sich mit den Anforderungen für die Instanznamen vertraut:
    4. Klicken Sie auf **Bereitstellung**.
 
 ### Ergebnisse
+{: #cloud_modern_bundle_orderinginstance-results}
 
 Die Bereitstellung der Instanz wird automatisch gestartet und der Aktivierungsschlüssel für den lokalen HCX on {{site.data.keyword.cloud_notm}}-Service wird bestellt.
 
 #### Bereitstellungsprozess für HCX on IBM Cloud
+{: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
 
 Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert. Die folgenden Schritte werden durch den {{site.data.keyword.vmwaresolutions_short}}-Automatisierungsprozess ausgeführt:
 1. Über die {{site.data.keyword.cloud_notm}}-Infrastruktur werden drei Teilnetze für HCX bestellt:
@@ -90,6 +98,7 @@ Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert
 6. Der Hostname und die IP-Adresse des HCX-Managers werden beim DNS-Server von VMware vCenter Server on {{site.data.keyword.cloud_notm}} registriert.
 
 #### Instanzdetails anzeigen
+{: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
 Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen. Klicken Sie im linken Navigationsfenster auf **Bereitgestellte Instanzen** und suchen Sie die Tabelle **vCenter Server-Instanzen** oder **Lokale HCX-Instanzen**, um Informationen zu den bestellten Instanzen anzuzeigen.
 
@@ -98,6 +107,7 @@ Wenn die Instanz erfolgreich bereitgestellt wurde, werden die in den Abschnitten
 Der Status der Instanz ändert sich in **Bereit** und Sie erhalten eine Benachrichtigung per E-Mail.
 
 ### Nächste Schritte
+{: #cloud_modern_bundle_orderinginstance-next}
 
 Installieren Sie den lokalen HCX Enterprise Manager und konfigurieren Sie die Verbindung zu Ihrer HCX on {{site.data.keyword.cloud_notm}}-Instanz.
 
@@ -143,6 +153,7 @@ Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_sh
 {:important}
 
 ## Vorgehensweise zum Löschen von Single-node Trial-Instanzen für Migration und Anwendungsmodernisierung
+{: #cloud_modern_bundle_orderinginstance-deleting-procedure}
 
 Wenn Sie eine Single-node Trial-Instanz für Migration und Anwendungsmodernisierung löschen, werden die folgenden Komponenten nacheinander freigegeben:
 
@@ -167,9 +178,10 @@ Führen Sie folgende Schritte aus, um eine Single-node Trial-Instanz für Migrat
    1. Klicken Sie in der Spalte **Aktionen** erneut auf das Symbol "Löschen".
    2. Klicken Sie im Fenster **Instanz löschen** auf **OK**.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #cloud_modern_bundle_orderinginstance-related}
 
-* [vCenter Server und IBM Cloud Private - Leitfaden](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [vCenter Server und IBM Cloud Private - Leitfaden](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Ticket für IBM Cloud Private öffnen](https://www.ibm.com/mysupport/s/?language=en_US)
 * [Dokumentation zu VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
 * [HCX OVA anfordern](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

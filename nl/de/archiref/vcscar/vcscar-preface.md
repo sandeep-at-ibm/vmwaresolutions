@@ -4,16 +4,18 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Vorwort
+{: #vcscar-preface}
 
 Abbildung 1. Von uns selbst konzipierte Sprache
 ![Von uns selbst konzipierte Sprache](vcscar-alood.svg)
 
 ## Einführung in die Skater-Sprache
+{: #vcscar-preface-intro}
 
 Die Kombination, in der Skater Bewegungen und Teilbewegungen in Tricks zusammenführen, bringt eine Art Grammatik oder Syntax hervor, die auf den stattfindenden Bewegungsabläufen basiert (vergleichbar mit der aus ähnlichen Gründen entwickelten chemischen Nomenklatur). Heutzutage kann ein Skater auf der einen Seite der Erde eine SMS mit dem Namen eines Tricks an einen anderen Skater auf der entgegengesetzten Seite des Planeten schicken und sicher sein, dass seine komplexen Bewegungsabläufe verstanden werden.
 
@@ -36,12 +38,14 @@ Während sich die meisten Basistricks im Lauf der Jahre etabliert haben, werden 
 Durch das Training von Watson Assistant für die Nachahmung der Denkvorgänge von Topprofis konnte ein leistungsstarkes Tool zur Verfügung gestellt werden, das die Kreativität jedes Skaters weiterentwickeln kann, insbesondere im Spitzenbereich. Auch wenn die übrigen Board-Sportarten weit weniger komplex sind, sind sie doch insofern ein Beleg für den ungeheuren Einfluss des Skateboardings, als sie diese Konventionen ebenfalls übernehmen. Watson Assistant besitzt somit das Potenzial, den kreativen Ausdruck dieser jüngst zur olympischen Disziplin aufgestiegenen Sportart nicht nur zu fördern (oder sogar zu verwandeln), sondern auch andere künstlerische Vorhaben zu beeinflussen.
 
 ## Kodifizierung der Sprache
+{: #vcscar-preface-codification}
 
 Wie bei jeder Sprache fand auch im vorliegenden Fall die Entwicklung nach und nach statt, wobei sich unterwegs gelegentlich Redundanzen und Ausnahmen ergaben. Dennoch ist diese Nomenklatur bemerkenswert konsistent, beständig und spezifisch. Diese denotative Exaktheit und Konsistenz ändert das scheinbar unlösbare Problem, Fußbewegungen durch maschinelles Lernen in Text umzusetzen. Für Skater ist jede Nuance der komplexen Bewegung in die Nomenklatur selbst integriert. Faktisch ist diese Sprache so leistungsfähig, dass sie nicht nur von Snowboardern, sondern auch von Surfern übernommen wurde.
 
 Trotz dieser Komplexität und dieses Leistungsvermögens ist die Kodifizierung der Sprache unkompliziert und präzise. Jeder *Basistrick* beinhaltet je eine Komponente für die *Richtung* und für die *Drehung* sowie eine weitere für die *Landung*, die bestimmt, ob und wie zur Bildung von Kombinationen eine Verkettung mit dem nächsten Basistrick erfolgen kann. Dies sind die vier *Basiselemente*. Ergänzt werden sie durch zwei weitere *Modifikatoren*, einem *Drehungspräfix*, das sich auf die Drehung des Skaters bezieht (im oder gegen den Uhrzeigersinn), sowie einem *Varial*, das angibt, wie sich das Deck bezogen auf den Körper dreht (einwärts oder auswärts). Mithilfe dieser Kodifizierung kann ein präziser Regelsatz rekursiv angewendet werden, der Kombinationen in beliebiger Länge ermöglicht.
 
 ## Zusätzliche Variablen für die Umgebung
+{: #vcscar-preface-env-var}
 
 Heutzutage verbringen Profis häufig ebenso viel Zeit mit dem Suchen nach Spots wie mit dem Üben der Tricks. Tatsächlich zeichnet sich jeder Skater unter anderem durch seine kreative Fähigkeit aus, Tricks auf neue und phantasievolle Weise anzupassen, die ihn oft weltweit bekannt macht. Es gibt zwar Anwendungen für Skater, die von der Community beigesteuerte Spots katalogisieren, aber es gab bislang weder die Idee noch die Technologie zur Erstellung einer Anwendung, die in der Lage ist, jeden Skater und insbesondere Profis bei diesem kreativen Prozess zu unterstützen.
 
@@ -52,10 +56,12 @@ Watson Knowledge Studio aktualisiert basierend auf der Abfrage eines bestimmten 
 Ein Skater kann Watson Assistant beispielsweise nach einer Liste aller möglichen Variationen für einen *hardflip-to-backside-5-0* fragen. Diese Anforderung wird zur Eingabe für den Discovery-Service von Sprache in Text konvertiert, woraufhin der Service nicht nur mit Variationen des Typs *hardflip-to-grind*, sondern auch mit einer Liste der unterschiedlichen Geländeformen antwortet, die in den Variationen erfasst sind und wiederum weitere Variationen hervorbringen können, wozu beispielsweise eine Liste von nach Postleitzahl, Größe oder sogar Verfügbarkeit (Schulhof oder Betriebsgelände) gruppierten Geländern gehören kann. In den vorhandenen Anwendungsdaten gibt es Systeme zur Bewertung des Risikos, bei unerlaubtem Betreten erwischt zu werden. Eine solche Unterstützung hat einen enormen Einfluss auf die lawinenartigen Folgen von Variablen wie beispielsweise jene, die Profiskatern in ihrem kreativen Alltag helfen.
 
 ## Cloudplattform
+{: #vcscar-preface-cloud-platform}
 
 Die kreative Ebene von IT-Systemen für die Generierung neuer Kombinationen spricht den Kernpunkt des Skateboardings an. Sie ist in der Lage, sich allmählich im Leben von Kreativen auszubreiten und sie überall auf der  ganzen Welt zu Innovationen zu inspirieren.
 All dies wäre ohne die {{site.data.keyword.cloud}} nicht möglich.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcscar-preface-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

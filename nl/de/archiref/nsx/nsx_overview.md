@@ -4,17 +4,19 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # Produktinformation zu NSX Edge Services Gateway
+{: #nsx_overview}
 
 Die VMware NSX Edge Services Gateway-Lösung (ESG) ist eine Erweiterung der Angebote VMware Cloud Foundation on {{site.data.keyword.cloud}} und vCenter Server on {{site.data.keyword.cloud_notm}}, die derzeit für die {{site.data.keyword.cloud_notm}} verfügbar sind. In der Lösungsarchitektur für Cloud Foundation und vCenter Server werden die Komponenten der Lösung und die allgemeine Konfiguration aller Komponenten im Design beschrieben.
 
-Weitere Informationen zum Cloud Foundation- und vCenter Server-Design finden Sie in der [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
+Weitere Informationen zum Cloud Foundation- und vCenter Server-Design finden Sie in der [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Übersicht über NSX Edge Services Gateway
+{: #nsx_overview-nsx-esg}
 
 Das NSX Edge Services Gateway verbindet isolierte Stubnetze mit gemeinsam genutzten Netzen (Uplink) durch die Bereitstellung von allgemeinen Gateway-Services wie Dynamic Host Configuration Protocol (DHCP), Virtual Private Network (VPN), Network Address Translation (NAT), dynamischem Routing und Lastausgleich. Gängige Bereitstellungen von NSX Edge sind Demilitarized Zone (DMZ), VPN-Extranets und Multi-Tenant-Cloudumgebungen, in denen NSX Edge virtuelle Begrenzungen für alle Tenant-, Workload- oder Managementkomponenten erstellt. Die im Folgenden aufgeführten Features sind in NSX Edge Service Gateway verfügbar.
 
@@ -32,6 +34,7 @@ Tabelle 1. Features, die für NSX Edge Service Gateway verfügbar sind
 | Load Balancing | Stellt einfache und dynamisch konfigurierbare virtuelle IP-Adressen und Servergruppen bereit. |
 | High Availability | Stellt sicher, dass es eine aktive NSX Edge im Netz gibt, falls die primäre NSX Edge-Maschine nicht verfügbar ist. |
 
-### Zugehörige Links
+## Zugehörige Links
+{: #nsx_overview-related}
 
-* [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

@@ -4,18 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # HCX Manager bei vCenter registrieren
+{: #hcx-archi-reg-vcenter}
 
 Sie können das Hybrid-Cloud-Services-Plug-in bei VMware vSphere Web Client registrieren und den Management-Service für Hybrid-Cloud-Services starten.
 
 ## Vorbereitende Schritte
+{: #hcx-archi-reg-vcenter-prereq}
 
 Damit die virtuelle Hybrid-Cloud-Services-Appliance registriert werden kann, muss sie erst eingeschaltet werden.
 
 ## Vorgehensweise zum Registrieren von HCX Manager bei vCenter
+{: #hcx-archi-reg-vcenter-proc-register}
 
 1. Melden Sie sich bei der virtuellen Hybrid-Cloud-Services-Appliance an.
 2. Klicken Sie auf die Kachel **Einstellungen verwalten**.
@@ -35,9 +38,11 @@ Damit die virtuelle Hybrid-Cloud-Services-Appliance registriert werden kann, mus
 5. Um die Registrierung abzuschließen, melden Sie sich von vSphere Web Client ab. Melden Sie sich wieder an, um zu überprüfen, ob die Aktualisierung des Bildschirms erfolgt ist.
 
 ## Ergebnisse
+{: #hcx-archi-reg-vcenter-results}
 
 Beachten Sie, dass jetzt das Symbol für **Hybrid-Cloud** vorhanden ist, sowie das Menüelement **Hybrid-Cloud-Services** auf der linken Seite. Durch die Registrierung von Hybrid-Cloud-Services werden diese Bezeichnungen aktualisiert. Im Bestand ändert sich die Symbolbezeichnung in **Hybrid-Cloud-Services**.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #hcx-archi-reg-vcenter-related}
 
-* [Hybrid-Services installieren und konfigurieren](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-hybrid.html)
+* [Hybrid-Services installieren und konfigurieren](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-hybrid)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,17 +13,20 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Vorhandene vSphere-Cluster skalieren
+{: #vs_scalingexistingclusters}
 
 Sie können einen vorhandenen VMware vSphere-Cluster, den Sie bestellt oder gespeichert haben, in der {{site.data.keyword.vmwaresolutions_full}}-Konsole skalieren. Fügen Sie dazu ESXi-Server hinzu oder bestellen Sie ein HA-Paar (HA = High Availability) für FortiGate 300 Series Security Appliance für den Cluster.
 
 ## Voraussetzungen
+{: #vs_scalingexistingclusters-req}
 
 Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
-*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen](/docs/services/vmwaresolutions/vmonic/useraccount.html#managing-user-accounts-and-settings).
-*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für vSphere-Cluster](/docs/services/vmwaresolutions/vsphere/vs_planning.html) vertraut gemacht.
+*  Sie haben die Berechtigungsnachweise für die {{site.data.keyword.cloud_notm}}-Infrastruktur auf der Seite **Einstellungen** konfiguriert. Weitere Informationen finden Sie unter [Benutzerkonten und Einstellungen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount#managing-user-accounts-and-settings).
+*  Sie haben sich mit den Voraussetzungen und Hinweisen im Abschnitt [Voraussetzungen und Planung für vSphere-Cluster](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning) vertraut gemacht.
 *  Sie haben eine E-Mail mit der Bestätigung erhalten, dass der Cluster, den Sie skalieren möchten, zur Verwendung bereit ist.
 
 ## Vorgehensweise beim Skalieren vorhandener Cluster
+{: #vs_scalingexistingclusters-procedure}
 
 1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und anschließend im Abschnitt **Virtuelle Rechenzentren** auf **VMware vSphere**.
 2. Klicken Sie auf der Seite **VMware vSphere on IBM Cloud** auf **Erstellen**.  
@@ -36,6 +39,7 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
    * Wenn Sie die Bestellung aufgeben wollen, dann vergewissern Sie sich, dass das zu belastende Konto korrekt ist, überprüfen und akzeptieren Sie die Bedingungen und klicken Sie dann auf **Bereitstellung**.
 
 ### Ergebnisse
+{: #vs_scalingexistingclusters-results}
 
 Die Clusterskalierung wird automatisch gestartet. Sie erhalten eine E-Mail, in der die Bearbeitung der Bestellung bestätigt wird. Sobald der Cluster einsatzbereit ist, werden Sie per E-Mail benachrichtigt.
 
@@ -44,8 +48,9 @@ Wenn der Cluster, den Sie skalieren möchten, nicht zur Verwendung bereit ist, e
 Die vSphere-Cluster werden (anders als die vCenter Server- und Cloud Foundation-Instanzen) auf der Seite **Bereitgestellte Instanzen** nicht angezeigt.
 {:note}
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vs_scalingexistingclusters-related}
 
-* [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [Auf vorhandenen Konfigurationen basierenden vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
-* [Außerhalb der Konsole erstellte Cluster skalieren](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [Auf vorhandenen Konfigurationen basierenden vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
+* [Außerhalb der Konsole erstellte Cluster skalieren](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

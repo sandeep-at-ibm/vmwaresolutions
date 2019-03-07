@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # vSAN-Cluster aktualisieren
+{: #vum-updating-vsan}
 
 vSAN generiert Systembaselines und Baselinegruppen für die Verwendung mit VUM; Sie können diese empfohlenen Referenzkonfigurationen verwenden, um Software, Patches und Erweiterungen für die vSphere ESXi-Hosts in Ihrer {{site.data.keyword.cloud_notm}}-Instanz mit vSAN zu aktualisieren. vSAN 6.6.1 und höher generiert automatisierte Buildempfehlungen für vSAN-Cluster. vSAN kombiniert Informationen im VMware-Kompatibilitätshandbuch und im vSAN-Versionskatalog mit Informationen zu den installierten vSphere ESXi-Releases.
 
@@ -20,17 +21,18 @@ Diese empfohlenen Updates bieten das beste verfügbare Release, um Ihre Hardware
 Die Tasks des vSAN-Cluster-Upgrades werden in der folgenden Reihenfolge ausgeführt:
 * **Aktivierung des vSAN Online Health Workflow** - Dieser Workflow aktiviert die vSAN-Baselines in VUM, sodass Updates überprüft und korrigiert werden können. Er muss zunächst nur ausgeführt werden, um vSAN mit VUM zu aktivieren.
 * **Voraussetzungen** - Ermitteln Sie die Voraussetzungen, den Prozess und eventuelle Einschränkungen.
-* **Upgrade der vCenter Server Appliance**. Weitere Informationen finden Sie unter [VCSA-Update und über SSO angebundene vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html).
-* **Upgrade der vSphere ESXi-Hosts** – Weitere Informationen finden Sie in [Baselines erstellen und Bestandsobjekten zuordnen](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html). 
+* **Upgrade der vCenter Server Appliance**. Weitere Informationen finden Sie unter [VCSA-Update und über SSO angebundene vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa).
+* **Upgrade der vSphere ESXi-Hosts** – Weitere Informationen finden Sie in [Baselines erstellen und Bestandsobjekten zuordnen](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines).
 * **Upgrade des vSAN-Plattenformats** - Weitere Informationen finden Sie unter "Upgrade des vSAN-Plattenformats durchführen". Das Upgrade des Plattenformats ist optional, aber für ein bestmögliches Ergebnis sollten Sie ein Upgrade der Objekte durchführen, um die neueste Version zu verwenden. Das On-Disk-Format macht Ihre Umgebung für das gesamte Feature-Set von vSAN verfügbar.
 
 ## vSAN Online Health Workflow aktivieren
+{: #vum-updating-vsan-enable-vsan-workflow}
 
 Durch Ausführung der Tasks in diesem Abschnitt werden die vSAN-Baselines in VUM verfügbar gemacht. vSAN 6.6.1 und höher bietet einen nahtlosen automatisierten Aktualisierungsprozess, der sicherstellt, dass ein vSAN-Cluster stets über das beste erhältliche Release verfügt, damit sich die VMware vCenter Server on {{site.data.keyword.cloud_notm}}-Instanz in einem unterstützten Status befindet:
 * **vSAN-Versionsempfehlungen** - werden automatisch generiert, indem Informationen aus dem VMware-Kompatibilitätshandbuch, dem vSAN-Versionskatalog und Kenntnisse über die zugrunde liegende Hardwarekonfiguration verwendet werden. Dies umfasst auch die erforderlichen Treiber und Patch-Updates für das empfohlene Release in der Systembaseline.
 * **vSAN-Buildempfehlungen** - stellen sicher, dass für die Cluster der aktuelle Hardwarekompatibilitätsstatus erhalten bleibt oder verbessert wird.
 
-Stellen Sie sicher, dass die VCSA über vCenter 6.5 Patch 2 oder eine neuere Version verfügt, bevor Sie den Vorgang fortsetzen, da hierdurch bestimmte Probleme beim Proxy-Einsatz behoben werden. Weitere Informationen finden Sie unter [VCSA-Update und über SSO angebundene vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html).
+Stellen Sie sicher, dass die VCSA über vCenter 6.5 Patch 2 oder eine neuere Version verfügt, bevor Sie den Vorgang fortsetzen, da hierdurch bestimmte Probleme beim Proxy-Einsatz behoben werden. Weitere Informationen finden Sie unter [VCSA-Update und über SSO angebundene vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa).
 
 Um die vSAN-Updates in VUM sehen zu können, muss der vSAN Online Health Workflow befolgt werden. Daher muss vSAN Online Health eine Verbindung zu den Sites `vcsa.vmware.com` und `vmware.com` herstellen, um diese Onlinestatusprüfungen durchführen zu können. Zum Aktivieren von vSAN Online Health Workflow sind folgende Aktivitäten erforderlich:
 * VCSA für die Verwendung des Proxys konfigurieren
@@ -41,6 +43,7 @@ Um die vSAN-Updates in VUM sehen zu können, muss der vSAN Online Health Workflo
 Der erste Schritt besteht darin, Ihre my.vmware.com-Berechtigungsnachweise zur vSAN Build Recommendation Engine hinzuzufügen. Nach erfolgreicher Anmeldung generiert vSAN eine Baselinegruppe empfohlener Updates für jeden vSAN-Cluster. vSAN-Systembaselines werden im Teilfenster "Baselines" der Registerkarte "Baselines und Gruppen" aufgelistet.
 
 ### VCSA für die Verwendung des Proxys konfigurieren
+{: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	Stellen Sie von Ihrem Jump-Server-Web-Browser eine Verbindung zur VCSA-Managementschnittstelle `https://<vCenter ip>:5480` her.
 2.	Melden Sie sich mit den Berechtigungsnachweisen von der IC4VS-Konsole bei der VCSA-Managementschnittstelle als Root an.
@@ -54,14 +57,19 @@ Wenn die HTTPS-Parameter nicht definiert sind, verwenden Sie den folgenden Befeh
   `proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
 
 ### vSAN für die Verwendung des Proxys konfigurieren
+{: #vum-updating-vsan-config-vsan-proxy}
+
 1. Navigieren Sie zu **Home** > **Hosts und Cluster**, wählen Sie **vSAN-Cluster** im Navigationsfenster aus, wählen Sie dann die Registerkarte **Konfigurieren** aus und navigieren Sie zu **vSAN** und dann zu **Allgemein**. Blättern Sie zum Abschnitt **Internetkonnektivität** und klicken Sie auf **Bearbeiten**.
 2. Geben Sie die IP-Adresse und die Portnummer des Proxys ein und klicken Sie auf **OK**.
 
 ### Customer Experience Improvement Program (CEIP) aktivieren
+{: #vum-updating-vsan-enable-ceip}
 
 Dieser Schritt ist optional. Navigieren Sie mit dem vSphere-Web-Client zu **Home** > **Administration** > **Customer Experience Improvement Program** und klicken Sie dann auf **Teilnehmen**.
 
 ### Test-Upload ausführen und prüfen, ob er erfolgreich war
+{: #vum-updating-vsan-complete-upload}
+
 1. Bei Verwendung des vSphere Web Client wechseln Sie zu **Home** > **Hosts und Cluster**. Wählen Sie den erforderlichen Cluster aus und wählen Sie anschließend die Registerkarte **Überwachen** und die Seite **vSAN** aus. Klicken Sie anschließend auf **Status**. Klicken Sie auf **Onlinestatus aktivieren**.
 2. Klicken Sie auf **Erneut testen** und warten Sie, bis der Prozess abgeschlossen ist.
 3. Eine neue Option _Onlinestatuskonnektivität_ wird im Status angezeigt und die Schaltfläche **Onlinestatus aktivieren** ändert sich in **Mit Onlinestatus erneut testen**.
@@ -71,6 +79,7 @@ Dieser Schritt ist optional. Navigieren Sie mit dem vSphere-Web-Client zu **Home
 7. Klicken Sie auf die Registerkarte **Update Manager**. Hier sollte der vSAN-Cluster zu den Baselines hinzugefügt worden sein.
 
 ## Voraussetzungen
+{: #vum-updating-vsan-prereq}
 
 Stellen Sie vor dem Starten des vSAN-Upgradeprozesses sicher, dass die folgenden Voraussetzungen erfüllt sind:
 * Sie haben sich die Artikel in der VMware Knowledge Base angesehen und sich über alle bekannten Kompatibilitätsprobleme zwischen Ihrer aktuellen vSAN-Version und der gewünschten vSAN-Zielversion informiert.
@@ -93,14 +102,17 @@ Stellen Sie vor dem Starten des vSAN-Upgradeprozesses sicher, dass die folgenden
   - Da bestimmte vSAN-Verhaltensänderungen durch das On-Disk-Format gesteuert werden, ist es wichtig, dass neuere On-Disk-Formatversionen nicht in einen Cluster mit unterschiedlichen Versionen eingeführt werden.
 
 ## Upgrade für vCenter Server Appliance durchführen
+{: #vum-updating-vsan-upgrade-vcsa}
 
-Weitere Informationen finden Sie unter [VCSA-Update und über SSO angebundene vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html).
+Weitere Informationen finden Sie unter [VCSA-Update und über SSO angebundene vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa).
 
-##	Upgrade für vSphere ESXi-Hosts durchführen
+## Upgrade für vSphere ESXi-Hosts durchführen
+{: #vum-updating-vsan-upgrade-hosts}
 
-Weitere Informationen finden Sie unter [Baselines erstellen und an Bestandsobjekte anhängen](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html).
+Weitere Informationen finden Sie unter [Baselines erstellen und an Bestandsobjekte anhängen](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines).
 
-##	Upgrade des vSAN-Plattenformats durchführen
+## Upgrade des vSAN-Plattenformats durchführen
+{: #vum-updating-vsan-upgrade-vsan}
 
 Ruby vSphere Console (RVC) ist eine Ruby-basierte Befehlszeilenschnittstelle für vSphere und kann zur Verwaltung von VMware vSphere ESXi und vCenter verwendet werden. Der vSphere-Bestand wird in einer Baumstruktur dargestellt, die es Ihnen ermöglicht, zu navigieren und Befehle für vCenter-Objekte auszuführen.
 
@@ -134,7 +146,8 @@ Viele grundlegende Verwaltungstasks können so wesentlich effizienter ausgeführ
 
 11. Das Upgrade des VSAN-Clusters ist nun abgeschlossen. Geben Sie `exit` ein und drücken Sie die **Eingabetaste**, um RVC zu verlassen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vum-updating-vsan-related}
 
 * [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

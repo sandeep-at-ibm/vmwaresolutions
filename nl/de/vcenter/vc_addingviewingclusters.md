@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen
+{: #adding-and-viewing-clusters-for-vcenter-server-instances}
 
 Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, werden standardmäßig unter **cluster1** gruppiert.
 
@@ -22,6 +23,7 @@ Die Funktion zum Löschen von Clustern steht nur für Instanzen zur Verfügung, 
 {:note}
 
 ## Cluster zu vCenter Server-Instanzen hinzufügen
+{: #vc_addingviewingclusters-adding}
 
 Die Anzahl der Cluster, die zu einer Instanz hinzugefügt werden können, hängt von der Instanzversion ab:
 * Für Instanzen, die in (oder einem Upgrade auf) V2.5 und höher implementiert wurden, legt die Anzahl der Cluster, Hosts und VMs die maximale Begrenzung für die Anzahl der Cluster fest, die Sie hinzufügen können. Sie müssen die Richtlinien und Grenzwerte für die VMware-Dimensionierung für Ihre Implementierung beibehalten.
@@ -31,10 +33,12 @@ Die Anzahl der Cluster, die zu einer Instanz hinzugefügt werden können, hängt
 Weitere Informationen zu maximalen Grenzwerten finden Sie in [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
 
 ### Systemeinstellungen
+{: #vc_addingviewingclusters-adding-sys-settings}
 
 Wenn Sie einen Cluster für eine vCenter Server-Instanz hinzufügen, müssen Sie die folgenden Einstellungen angeben.
 
 #### Clustername
+{: #vc_addingviewingclusters-adding-cluster-name}
 
 Der Clustername muss die folgenden Anforderungen erfüllen:
 * Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
@@ -43,16 +47,19 @@ Der Clustername muss die folgenden Anforderungen erfüllen:
 * Der Clustername muss innerhalb der vCenter Server-Instanz eindeutig sein.
 
 #### Standort des Rechenzentrums
+{: #vc_addingviewingclusters-adding-dc-location}
 
 Der Standort des {{site.data.keyword.CloudDataCent}}s für den Cluster wird standardmäßig auf das {{site.data.keyword.CloudDataCent_notm}} der vCenter Server-Instanz gesetzt. Sie können den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}} als die bereitgestellte Instanz bereitstellen, müssen aber sicherstellen, dass die Netzlatenz zwischen den beiden {{site.data.keyword.CloudDataCents_notm}} weniger als 150 Millisekunden beträgt. Zur Überprüfung der Netzlatenz können Sie ein Tool wie [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/) verwenden.
 
 Wenn Sie den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}}- oder {{site.data.keyword.cloud_notm}}-Infrastrukturpod bereitstellen, werden drei weitere VLANs zur Verwendung mit den bestellten {{site.data.keyword.baremetal_short}}-Instanzen bestellt.
 
 ### Einstellungen für Bare Metal Server
+{: #vc_addingviewingclusters-bare-metal-settings}
 
 Sie können **Skylake**, **SAP-zertifiziert** oder **Broadwell** auswählen.
 
 #### Skylake
+{: #vc_addingviewingclusters-adding-skylake}
 
 Für die Einstellung **Skylake** stehen Ihnen Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
 
@@ -65,6 +72,7 @@ Tabelle 1. Optionen für Skylake {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### SAP-zertifiziert
+{: #vc_addingviewingclusters-adding-sap}
 
 Wenn Sie **SAP-zertifiziert** auswählen, dann können Sie die CPU- oder RAM-Einstellungen nicht ändern.
 
@@ -78,6 +86,7 @@ Wählen Sie gemäß Ihren Anforderungen eine Bare Metal Server-Konfiguration aus
 * Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 4096 GB RAM
 
 #### Broadwell
+{: #vc_addingviewingclusters-adding-broadwell}
 
 Für die Einstellung **Broadwell** steht eine Reihe von Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
 
@@ -92,6 +101,7 @@ Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Bare Metal Server-Anzahl
+{: #vc_addingviewingclusters-adding-bare-metal-number}
 
 Für Cluster sind mindestens zwei {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
 
@@ -102,10 +112,12 @@ Für vCenter Server-Instanzen, die in V2.0 oder früher bereitgestellt wurden, k
 Nach der Bereitstellung können Sie bis zu vier weitere Cluster erstellen. Wenn Sie die Bare Metal Server-Konfiguration **Skylake** oder **Broadwell** mit VMware vSAN-Speicher auswählen, werden für den ersten Cluster und die Cluster nach der Bereitstellung vier Server benötigt.
 
 ### Speichereinstellungen
+{: #vc_addingviewingclusters-adding-storage-settings}
 
 Die Speichereinstellungen sind von der Auswahl der Bare Metal Server-Konfiguration und des Speichertyps abhängig.
 
 #### vSAN-Speicher
+{: #vc_addingviewingclusters-adding-vsan-storage}
 
 Geben Sie die folgenden vSAN-Optionen an:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
@@ -121,6 +133,7 @@ Geben Sie die folgenden vSAN-Optionen an:
 Wenn Ihr erster Cluster ein vSAN-Cluster war, verwenden alle zusätzlichen vSAN-Cluster dieselbe vSAN-Lizenz und dieselbe Konfiguration wie der erste vSAN-Cluster. Dies gilt auch dann, wenn für einen (ersten oder zusätzlichen) Cluster in der Instanz die Bereitstellung von vSAN ausgewählt wurde. Beim ersten Mal wird von Ihnen die vSAN-Lizenz (eigene oder gekaufte Lizenz) und die Edition angefordert. Wenn Sie das nächste Mal vSAN für einen neuen Cluster auswählen, wird Ihre anfänglich getroffene Auswahl wiederverwendet.
 
 #### NFS-Speicher
+{: #vc_addingviewingclusters-adding-nfs-storage}
 
 Wenn Sie **NFS-Speicher** auswählen, können Sie gemeinsam genutzten Speicher auf Dateiebene für Ihre Instanz hinzufügen, wobei für alle gemeinsam genutzten Ressourcen dieselben Einstellungen verwendet werden; alternativ können Sie für die einzelnen gemeinsam genutzten Dateiressourcen jeweils unterschiedliche Konfigurationseinstellungen angeben. Geben Sie die folgenden NFS-Optionen an:
 
@@ -143,18 +156,21 @@ Tabelle 3. Optionen für die NFS-Leistungsstufe
   | 10 IOPS/GB | Diese Option ist für die aufwändigsten Workloadtypen wie beispielsweise die Analyse gedacht. Anwendungsbeispiele sind Hochtransaktionsdatenbanken und andere leistungskritische Datenbanken. Diese Leistungsstufe ist auf eine maximale Kapazität von 4 TB pro gemeinsam genutzte Dateiressource begrenzt. |
 
 ### Lokale Platten
+{: #vc_addingviewingclusters-adding-local-disks}
 
 Die Option für lokale Festplatten steht nur für die Bare-Metal-Konfiguration des **SAP-zertifizierten** Quad Intel Xeon E7-8890 v4-Prozessors zur Verfügung. Geben Sie die folgenden Optionen an:
 * **Plattenanzahl**: Wählen Sie die Anzahl der Platten aus, die hinzugefügt werden sollen.
 * **Plattentyp**: Wählen Sie eine Option für den Plattentyp aus, den Sie benötigen.
 
 ### Lizenzierungseinstellungen
+{: #vc_addingviewingclusters-adding-licensing-settings}
 
 Geben Sie die Lizenzierungsoption für die Komponente "VMware vSphere" im Cluster an:
 * Für Benutzer der Kategorie "Business Partner" ist die vSphere-Lizenz (Enterprise Plus Edition) enthalten und wird in Ihrem Namen erworben.
 * Für Nicht-Business-Partner-Benutzer können die von IBM bereitgestellten VMware-Lizenzen für diese Komponente benutzt werden. Wählen Sie hierzu **In Kauf einbeziehen** aus. Alternativ hierzu können Sie auch eine eigene Lizenz (Bring Your Own License; BYOL) verwenden, indem Sie **Lizenz selbst bereitstellen** auswählen und den eigenen Lizenzschlüssel angeben.
 
 ### Netzschnittstelleneinstellungen
+{: #vc_addingviewingclusters-adding-network-interface-settings}
 
 Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
 
@@ -164,10 +180,12 @@ Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Networ
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Bestellübersicht
+{: #vc_addingviewingclusters-adding-order-summary}
 
 Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzten Kosten sofort generiert und im rechten Fenster **Bestellübersicht** angezeigt.
 
 ## Vorgehensweise zum Hinzufügen von Clustern zu vCenter Server-Instanzen
+{: #vc_addingviewingclusters-adding-procedure}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, zu der Cluster hinzugefügt werden sollen.
@@ -199,6 +217,7 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
    4. Klicken Sie auf **Bereitstellung**.
 
 ### Ergebnisse nach Hinzufügen von Clustern zu vCenter Server-Instanzen
+{: #vc_addingviewingclusters-adding-results}
 
 1. Die Bereitstellung des Clusters wird automatisch gestartet und der Status des Clusters ändert sich in **Wird initialisiert**. Sie können den Status der Bereitstellung überprüfen, indem Sie den Bereitstellungsverlauf über die Seite **Zusammenfassung** der Instanz anzeigen.
 2. Sobald der Cluster einsatzbereit ist, ändert sich sein Status in **Bereit**. Der neu hinzugefügte Cluster wird mit vSphere High Availability (HA) und vSphere Distributed Resource Scheduler (DRS) aktiviert.
@@ -207,6 +226,7 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
 {:important}
 
 ## Vorgehensweise zum Anzeigen von Clustern in vCenter Server-Instanzen
+{: #vc_addingviewingclusters-viewing-procedure}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf eine Instanz, um die Cluster in dieser Instanz anzuzeigen.
@@ -232,42 +252,34 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
         <dd class="dd">Der Cluster wurde gelöscht.</dd>
     </dl>
   * **Aktionen**: Klicken Sie auf das Symbol **Löschen**, um den Cluster zu löschen.
-4. Klicken Sie auf einen Clusternamen, um die Details zu ESXi-Servern und Speicher anzuzeigen:
+4. Klicken Sie auf einen Clusternamen, um den ESXi-Server und den Speicher anzuzeigen:
 
-  * ESXi-Serverdetails:
-     * **Name**: Der Name des ESXi-Servers im Format `<host_prefix><n>.<subdomain_label>.<root_domain>`, wobei Folgendes gilt:
+Tabelle 4. Details zum ESXi-Server
 
-       `host_prefix` ist das Hostnamenspräfix,
+| Element        | Beschreibung       |  
+|:------------- |:------------- |
+| Name | Der Name des ESXi-Servers weist das folgende Format auf:<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> Hierbei gilt Folgendes:<br> `host_prefix` ist das Hostnamenspräfix,<br> `n` ist die Folgenummer des Servers,<br> `subdomain_label` ist die Unterdomänenbezeichnung und<br> `root_domain` ist der Rootdomänenname |
+| Version | Die Version des ESXi-Servers. |
+| Berechtigungsnachweise | Der Benutzername und das Kennwort für den Zugriff auf den ESXi-Server. |
+| Private IP | Die private IP-Adresse des ESXi-Servers. |
+| Status | Der Status des ESXi-Servers, der einen der folgenden Werte aufweisen kann:<br> **Hinzugefügt**: Der ESXi-Server wurde hinzugefügt und kann verwendet werden.<br> **Wird hinzugefügt**: Der ESXi-Server wird gerade hinzugefügt.<br> **Wird gelöscht**: Der ESXi-Server wird gerade gelöscht.|
 
-       `n` ist die Folgenummer des Servers,
+Tabelle 5. Speicherdetails
 
-       `subdomain_label` ist die Unterdomänenbezeichnung und
-
-       `root_domain` ist der Rootdomänenname.
-
-     * **Version**: Die Version des ESXi-Servers.
-     * **Berechtigungsnachweise**: Der Benutzername und das Kennwort für den Zugriff auf den ESXi-Server.
-     * **Private IP**: Die private IP-Adresse des ESXi-Servers.
-     * **Status**: Der Status des ESXi-Servers, der einen der folgenden Werte aufweisen kann:
-        <dl class="dl">
-        <dt class="dt dlterm">Hinzugefügt</dt>
-        <dd class="dd">Der ESXi-Server wurde hinzugefügt und kann verwendet werden. </dd>
-        <dt class="dt dlterm">Wird hinzugefügt</dt>
-        <dd class="dd">Der ESXi-Server wird gerade hinzugefügt. </dd>
-        <dt class="dt dlterm">Wird gelöscht</dt>
-        <dd class="dd">Der ESXi-Server wird gerade gelöscht.</dd>
-        </dl>
-  * Speicherdetails:
-    * **Name**: Der Name des Datenspeichers.
-    * **Größe**: Die Kapazität des Speichers.
-    * **IOPS/GB**: Die Leistungsstufe des Speichers.
-    * **NFS-Protokoll**: Die NFS-Version des Speichers.
+| Element        | Beschreibung       |  
+|:------------- |:------------- |
+| Name | Der Name des Datenspeichers. |
+| Größe | Die Kapazität des Speichers. |
+| IOPS/GB | Die Leistungsstufe des Speichers. |
+| NFS-Protokoll | Die NFS-Version des Speichers. |
 
 ## Cluster aus vCenter Server-Instanzen löschen
+{: #vc_addingviewingclusters-deleting}
 
 Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werden.
 
 ### Vorbereitende Schritte für die Löschung
+{: #vc_addingviewingclusters-deleting-prereq}
 
 * Gehen Sie wie folgt vor, um Cluster aus Instanzen zu löschen, die in V2.3 oder höher bereitgestellt werden.
 * Für Cluster, die in Instanzen der Version 2.2 oder älter bereitgestellt wurden, müssen Sie ein Upgrade der Instanz auf Version 2.3 durchführen, wenn Sie die Cluster löschen möchten, die Sie der Instanz hinzugefügt haben.
@@ -277,6 +289,7 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 * Der Standardcluster kann nicht gelöscht werden.
 
 ### Vorgehensweise zum Löschen von Clustern aus vCenter Server-Instanzen
+{: #vc_addingviewingclusters-deleting-procedure}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, aus der Cluster gelöscht werden sollen.
@@ -287,7 +300,8 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Suchen Sie in der Tabelle **CLUSTER** den Cluster, der gelöscht werden soll, und klicken Sie dann auf das Symbol **Löschen** in der Spalte **Aktionen**.
 4. Vergewissern Sie sich, dass die Migration der VMs auf andere Cluster (sofern erforderlich) durchgeführt wurde und dass der Cluster tatsächlich gelöscht werden soll.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vc_addingviewingclusters-related}
 
-* [vCenter Server-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
-* [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [vCenter Server-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)

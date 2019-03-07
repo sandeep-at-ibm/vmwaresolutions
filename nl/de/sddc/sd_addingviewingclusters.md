@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Cluster für Cloud Foundation-Instanzen hinzufügen, anzeigen und löschen
+{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
 
 Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, werden unter einem Standardcluster gruppiert. Der Standardclustername lautet wie folgt:
 * Bei in V2.1 oder höheren Releases bereitgestellten Instanzen: **MGMT-Cluster-`<subdomain_label>`**
@@ -21,19 +22,23 @@ Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, we
 Sie können eigene Cluster zu Ihren VMware Cloud Foundation-Instanzen hinzufügen, um die Rechen- und Speicherkapazität zu erweitern. In einem Cluster können Sie ESXi-Server verwalten, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Die hinzugefügten Cluster können aus Ihren Instanzen gelöscht werden, wenn sie nicht mehr benötigt werden.
 
 ## Verfügbarkeit
+{: #sd_addingviewingclusters-availability}
 
 * Die Funktion zum Hinzufügen von Clustern steht nur für Instanzen zur Verfügung, die in V2.0 oder höheren Releases bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden.
 * Die Funktion zum Löschen von Clustern steht nur für Instanzen zur Verfügung, die in V2.3 oder höheren Releases bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden.  
 
 ## Cluster zu Cloud Foundation-Instanzen hinzufügen
+{: #sd_addingviewingclusters-adding}
 
 Sie können bis zu fünf Cluster zu einer Cloud Foundation-Instanz hinzufügen.
 
 ### Systemeinstellungen
+{: #sd_addingviewingclusters-adding-sys-settings}
 
 Wenn Sie einen Cluster zu einer Cloud Foundation-Instanz hinzufügen, müssen Sie die folgenden Einstellungen angeben.
 
 #### Clustername
+{: #sd_addingviewingclusters-adding-cluster-name}
 
 Der Clustername muss die folgenden Anforderungen erfüllen:
 * Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
@@ -42,6 +47,7 @@ Der Clustername muss die folgenden Anforderungen erfüllen:
 * Der Clustername muss innerhalb der Cloud Foundation-Instanz eindeutig sein.
 
 #### Standort des Rechenzentrums
+{: #sd_addingviewingclusters-adding-dc-location}
 
 Der Standort des {{site.data.keyword.CloudDataCent}}s für den Cluster wird standardmäßig auf das {{site.data.keyword.CloudDataCent_notm}} der Cloud Foundation-Instanz gesetzt. Sie können den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}} als die bereitgestellte Instanz bereitstellen, müssen aber sicherstellen, dass die Netzlatenz zwischen den beiden {{site.data.keyword.CloudDataCents_notm}} weniger als 150 Millisekunden beträgt. Zur Überprüfung der Netzlatenz können Sie ein Tool wie [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} verwenden.
 
@@ -50,10 +56,12 @@ Welche Rechenzentren für Sie verfügbar sind, richtet sich nach der Bare Metal 
 Wenn Sie den Cluster in einem anderen Rechenzentrum oder Pod bereitstellen, werden drei weitere VLANs für die Verwendung mit den bestellten {{site.data.keyword.baremetal_short}}-Instanzen bestellt.
 
 ### Einstellungen für Bare Metal Server
+{: #sd_addingviewingclusters-adding-bare-metal-settings}
 
 Sie können **Skylake** oder **Broadwell** auswählen.
 
 #### Skylake
+{: #sd_addingviewingclusters-adding-skylake}
 
 Für die Einstellung **Skylake** steht eine Reihe von Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
 
@@ -66,6 +74,7 @@ Tabelle 1. Optionen für Skylake {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### Broadwell
+{: #sd_addingviewingclusters-adding-broadwell}
 
 Für die Einstellung **Broadwell** steht eine Reihe von Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
 
@@ -80,6 +89,7 @@ Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### vSAN-Speichereinstellungen
+{: #sd_addingviewingclusters-adding-vsan-storage-settings}
 
 Bei Bare Metal Server-Konfigurationen des Typs **Skylake** und **Broadwell** können Sie den vSAN-Speicher durch Angeben der folgenden Einstellungen anpassen:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
@@ -92,12 +102,14 @@ Bei Bare Metal Server-Konfigurationen des Typs **Skylake** und **Broadwell** kö
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
 
 ### Lizenzierungseinstellungen
+{: #sd_addingviewingclusters-adding-licensing-settings}
 
 Sie können die Lizenzierungsoptionen für die VMware-Komponenten im Cluster einschließlich VMware vSphere und VMware vSAN angeben:
 * Für Benutzer der Kategorie "IBM Business Partner" sind die vSphere-Lizenz (Enterprise Plus Edition) und die vSAN-Lizenz enthalten und werden in Ihrem Namen erworben. Für die vSAN-Lizenz muss allerdings die Edition angegeben werden.
 * Für Benutzer, die keine IBM Business Partner sind, können die von IBM bereitgestellten VMware-Lizenzen für die Komponenten verwendet werden. Wählen Sie hierzu **In Kauf einbeziehen** aus. Alternativ hierzu können Sie auch eigene Lizenzen (Bring Your Own License; BYOL) für die Komponenten verwenden, indem Sie **Lizenz selbst bereitstellen** auswählen und die eigenen Lizenzschlüssel angeben.
 
 ## Vorgehensweise zum Hinzufügen von Clustern zu Cloud Foundation-Instanzen
+{: #sd_addingviewingclusters-adding-procedure}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf die Instanz, zu der Cluster hinzugefügt werden sollen.
@@ -124,6 +136,7 @@ Sie können die Lizenzierungsoptionen für die VMware-Komponenten im Cluster ein
    4. Klicken Sie auf **Bereitstellung**.
 
 ### Ergebnisse nach Hinzufügen von Clustern zu Cloud Foundation-Instanzen
+{: #sd_addingviewingclusters-adding-results}
 
 1. Die Bereitstellung des Clusters wird automatisch gestartet und der Status des Clusters ändert sich in **Wird initialisiert**. Sie können den Status der Bereitstellung überprüfen, indem Sie den Bereitstellungsverlauf auf der Übersichtsseite für die Instanz anzeigen.
 2. Sobald der Cluster einsatzbereit ist, ändert sich sein Status in **Bereit**. Der neu hinzugefügte Cluster wird mit vSphere High Availability (HA) und vSphere Distributed Resource Scheduler (DRS) aktiviert.
@@ -132,6 +145,7 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
 {:important}
 
 ## Vorgehensweise zum Anzeigen von Clustern in Cloud Foundation-Instanzen
+{: #sd_addingviewingclusters-viewing-procedure}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf eine Instanz, um die Cluster in dieser Instanz anzuzeigen.
@@ -187,10 +201,12 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
        * **Freie Kapazität (CPU)**: Die Kapazität, die über die Lizenz verfügbar ist.
 
 ## Cluster aus Cloud Foundation-Instanzen löschen
+{: #sd_addingviewingclusters-deleting}
 
 Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werden.
 
 ### Vorbereitende Schritte für die Löschung
+{: #sd_addingviewingclusters-deleting-prereq}
 
 * Gehen Sie wie folgt vor, um Cluster aus Instanzen zu löschen, die in V2.3 oder höheren Releases bereitgestellt werden.
 * Für Cluster, die in Instanzen mit V2.2 oder älteren Releases bereitgestellt wurden, müssen Sie ein Upgrade der Instanz auf V2.3 durchführen, um die Cluster löschen zu können, die Sie zu der Instanz hinzugefügt haben.
@@ -200,6 +216,7 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 * Der Standardcluster kann nicht gelöscht werden.
 
 ## Vorgehensweise zum Löschen von Clustern aus Cloud Foundation-Instanzen
+{: #sd_addingviewingclusters-deleting-procedure}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf die Instanz, aus der Cluster gelöscht werden sollen.
@@ -210,7 +227,8 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Suchen Sie in der Tabelle **CLUSTER** den Cluster, der gelöscht werden soll, und klicken Sie dann auf das Symbol **Löschen**.
 4. Vergewissern Sie sich, dass die Migration der VMs auf andere Cluster (sofern erforderlich) durchgeführt wurde und dass der Cluster tatsächlich gelöscht werden soll.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #sd_addingviewingclusters-related}
 
-* [Cloud Foundation-Instanzen anzeigen](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Cloud Foundation-Instanzen anzeigen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)

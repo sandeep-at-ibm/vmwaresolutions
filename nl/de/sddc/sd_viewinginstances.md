@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Cloud Foundation-Instanzen anzeigen
+{: #sd_viewinginstances}
 
 Sie können die Zusammenfassung und die detaillierten Informationen der VMware Cloud Foundation-Instanzen anzeigen, die für verschiedene Benutzerkonten bereitgestellt wurden.
 
 ## Vorgehensweise zum Anzeigen einer Zusammenfassung der Cloud Foundation-Instanzen
+{: #sd_viewinginstances-procedure-view-inst-summary}
 
 Wenn Sie eine Zusammenfassung aller Cloud Foundation-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
 
@@ -50,6 +52,7 @@ Tabelle 2. Statusbeschreibungen der Cloud Foundation-Instanzen
 | Gelöscht | Die Instanz wurde gelöscht. |
 
 ## Vorgehensweise zum Anzeigen von Eigenschaftsdetails von Cloud Foundation-Instanzen
+{: #sd_viewinginstances-procedure-view-inst-property}
 
 Gehen Sie wie folgt vor, um die Eigenschaftsdetails einer Instanz anzuzeigen:
 
@@ -75,6 +78,7 @@ Tabelle 3. Cloud Foundation-Instanzeigenschaften
 | Status  | Der Status der Instanz.<br><br>Die angezeigten Informationen aktualisieren den Verarbeitungsfortschritt bei der Bereitstellung bzw. der für die Instanz ausgeführten Aktion. Falls Probleme auftreten, wird möglicherweise eine Nachricht angezeigt, die Sie bei der Untersuchung und Lösung des Problems unterstützt. |
 
 ## Vorgehensweise zum Anzeigen von Zugriffsinformationen für Cloud Foundation-Instanzen
+{: #sd_viewinginstances-procedure-view-access-info}
 
 Zeigen Sie unter **Zugriffsinformationen** die Zugriffsinformationen für die instanzbezogenen Komponenten an. Bei den angezeigten Kennwörtern handelt es sich um Anfangskennwörter, die vom System generiert werden. Wenn Sie sie außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden sie auf der Seite mit der Instanzzusammenfassung nicht aktualisiert.
 
@@ -99,6 +103,7 @@ Tabelle 4. Cloud Foundation-Zugriffsinformationen für instanzbezogene Komponent
 | vCenter-ADMIN  | Der SSO-Benutzername und das Kennwort für VMware vCenter, mit dem Sie sich unter Verwendung von vSphere Web Client bei vCenter Server anmelden können.  |
 
 ## Vorgehensweise zum Anzeigen des Bereitstellungsverlaufs für Cloud Foundation-Instanzen
+{: #sd_viewinginstances-procedure-view-deploy-history}
 
 Klicken Sie im linken Navigationsfenster auf **Bereitstellungsverlauf**, um den Bereitstellungsverlauf für die Instanz anzuzeigen.
 
@@ -110,10 +115,12 @@ Tabelle 5. Bereitstellungsverlauf der Cloud Foundation-Instanz
 | Zusammenfassung | Die Details der Änderung. |
 
 ## Nächste Schritte bei aufgetretenen Fehlern
+{: #sd_viewinginstances-if-errors-occur}
 
-Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, wird automatisch das {{site.data.keyword.cloud_notm}}-Support-Team benachrichtigt. Um den Status Ihres Tickets abzufragen, können Sie den [IBM Support kontaktieren](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, wird automatisch das {{site.data.keyword.cloud_notm}}-Support-Team benachrichtigt. Um den Status Ihres Tickets abzufragen, können Sie den [IBM Support kontaktieren](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Nächste Schritte
+{: #sd_viewinginstances-next}
 
 Nun können Sie Ihre Instanzen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole oder in vSphere Web Client verwalten.
 
@@ -122,12 +129,13 @@ Bevor Sie auf der Seite mit der Instanzzusammenfassung auf **vCenter-Konsole** k
 
 In den folgenden Abschnitten finden Sie Informationen, die Sie bei der Ausführung der Anmeldeanweisungen unterstützen:
 
-* Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
+* Informationen zu den Voraussetzungen und erforderlichen Schritten vor dem Zugriff auf vSphere Web Client finden Sie unter [Zeitlimitüberschreitung beim Herstellen einer Verbindung zu vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
 * Eine Liste der Zugriffspunkte für die Anmeldung beim privaten Netz von {{site.data.keyword.cloud_notm}} mittels VPN finden Sie unter [VPN-Zugriff](http://www.softlayer.com/vpn-access){:new_window}.
-* Falls Sie beim Bereitstellen einer Datei im Format OVF (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html) weitere Informationen.
+* Falls Sie beim Bereitstellen einer Datei im Format OVF (Open Virtualization Format) mit vSphere Web Client Probleme feststellen, finden Sie unter [OVF-Datei mit vSphere Web Client bereitstellen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf) weitere Informationen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #sd_viewinginstances-related}
 
-* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Cloud Foundation-Instanzen löschen](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Cloud Foundation-Instanzen löschen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

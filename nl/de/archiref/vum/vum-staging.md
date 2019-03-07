@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Staging und Korrektur
+{: #vum-staging}
 
 Patches und Erweiterungen können optional vor der Korrektur zwischengespeichert ("staged") werden, um sicherzustellen, dass sie von VUM auf den vSphere ESXi-Host heruntergeladen werden, ohne dass die Patches oder Erweiterungen sofort angewendet werden. Bei der Korrektur ("remediation") wendet VUM die Patches, Erweiterungen und Upgrades auf die Bestandsobjekte an. Das Staging von Patches und Erweiterungen beschleunigt den Korrekturprozess, da die Patches und Erweiterungen bereits lokal auf den Hosts verfügbar sind.
 
@@ -37,12 +38,14 @@ Die Korrektur ist der Prozess, in dem VUM Patches, Erweiterungen und Upgrades au
 Wenn es das Update erfordert, werden die Hosts vor der Korrektur in den Wartungsmodus versetzt. Die VCSA migriert die virtuellen Maschinen (VMs) auf andere Hosts innerhalb der VMware vCenter Server on {{site.data.keyword.cloud}}-Instanz, bevor der Host in den Wartungsmodus versetzt wird.
 
 ## Hinweis für Hosts in einem vSAN-Cluster
+{: #vum-staging-hosts-vsan}
+
 Beachten Sie das folgende Verhalten bei Hosts, die Teil eines vSAN-Clusters sind:
 * Der Hostkorrekturprozess nimmt möglicherweise sehr viel Zeit in Anspruch.
 * Designbedingt kann sich immer nur ein Host eines VSAN-Clusters im Wartungsmodus befinden.
 * VUM korrigiert Hosts, die Teil eines VSAN-Clusters sind, immer sequenziell, auch wenn Sie angegeben haben, dass die Hosts parallel korrigiert werden sollen.
 * Für jede virtuelle Maschine (VM) auf dem Host, die eine VM-Speicherrichtlinie mit einer Einstellung für **Anzahl der zu tolerierenden Fehler** = 0 verwendet, können beim Host ungewöhnliche Verzögerungen beim Wechseln in den Wartungsmodus auftreten. Die Verzögerung tritt auf, da vSAN die VM-Daten von einer Platte auf eine andere Platte im vSAN-Datenspeicher migrieren muss und dies viele Stunden dauern kann. Sie können dies umgehen, indem Sie für die VM-Speicherrichtlinie die **Anzahl der zu tolerierenden Fehler=1** festlegen. Dies bewirkt, dass zwei Kopien der VM-Dateien im vSAN-Datenspeicher erstellt werden.
-* Für jede virtuelle Maschine (VM) auf dem Host, die eine VM-Speicherrichtlinie mit einer Einstellung für **Number of failures to tolerate** = 1 verwendet, wird die virtuelle Maschine nicht redundant, wenn der Host in den Wartungsmodus wechselt. Wenn dies nicht akzeptabel ist, finden Sie weitere Informationen im Abschnitt [Redundanz virtueller vSAN-Maschinen](/docs/services/vmwaresolutions/archiref/vum/vum-vsan-redundancy.html).
+* Für jede virtuelle Maschine (VM) auf dem Host, die eine VM-Speicherrichtlinie mit einer Einstellung für **Number of failures to tolerate** = 1 verwendet, wird die virtuelle Maschine nicht redundant, wenn der Host in den Wartungsmodus wechselt. Wenn dies nicht akzeptabel ist, finden Sie weitere Informationen im Abschnitt [Redundanz virtueller vSAN-Maschinen](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-vsan-redundancy).
 
 Führen Sie die folgenden Schritte aus, um Hosts und Cluster zu korrigieren:
 1. Bei Verwendung des vSphere Web Client wählen Sie **Home** > **Hosts und Cluster** aus.
@@ -73,7 +76,8 @@ In einer vCenter Server-Instanz ist es nicht erforderlich, das Kontrollkästchen
 12. Auf der Seite "Bereit zum Abschließen" können Sie optional auf **Korrektur vorab prüfen** klicken, um einen Bericht für die Clusterkorrekturoptionen zu generieren. Klicken Sie anschließend auf **OK**. Ein Dialogfenster "Clusterkorrekturoptionen" wird geöffnet. Sie können diesen Bericht exportieren oder die Einträge für Ihre eigenen Zwecke kopieren und auf **Weiter** klicken.
 13. Überprüfen Sie die Seite **Bereit zum Abschließen** und klicken Sie auf **Fertigstellen**.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vum-staging-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

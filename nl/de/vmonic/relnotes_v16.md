@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-05-22"
 
 ---
 
 # Releaseinformationen für V1.6
+{: #relnotes_v16}
 
 Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -21,7 +22,7 @@ Die folgenden Komponenten sind neu verfügbar oder wurden aktualisiert:
 *  Neue Hardwarespezifikationen: **S (Klein)** oder **Standard**, abhängig von Ihren Anforderungen.
 *  Neue verfügbare Rechenzentren für die Bereitstellung: **HKG02 - Hongkong**, **OSL01 - Oslo**, **SEO01 - Seoul**, **SNG01 - Singapur** und **SYD04 - Sydney**.
 
-Die vollständige Liste der Komponenten enthält der Abschnitt [Übersicht über VMware Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html).
+Die vollständige Liste der Komponenten enthält der Abschnitt [Übersicht über VMware Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview).
 
 ## Updates für VMware vCenter Server-Instanzen
 
@@ -63,7 +64,7 @@ Alle anderen Aktionen sind für Instanzen aus Releases vor V1.6 nicht mehr verf�
    * VMware HA (HA steht für "High Availability", also Hochverfügbarkeit) ist so konfiguriert, dass eine neue Portgruppe genutzt wird, die von dem Management-ESG und dem vom Kunden verwalteten ESG gemeinsam genutzt wird.
 
    Dieses ESG wird für alle Instanzhardwaretypen bereitgestellt; die Konfiguration kann vom Kunden geändert werden. Weitere Informationen finden Sie in den folgenden Abschnitten:
-   *  [Netz zur Verwendung des vom Kunden verwalteten NSX Edge Services Gateway mit eigenen virtuellen Maschinen konfigurieren](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html)
+   *  [Netz zur Verwendung des vom Kunden verwalteten NSX Edge Services Gateway mit eigenen virtuellen Maschinen konfigurieren](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)
    *  [VMware NSX-Dokumentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## Erweiterungen beim Bedienungskomfort
@@ -73,4 +74,4 @@ In der gesamten Benutzerschnittstelle wurden Verbesserungen vorgenommen:
 *  Die Hauptnavigation in der Konsole wird durch die Einführung des linken Navigationsfensters erheblich verbessert, in dem Sie auf alle Bereiche der Benutzerschnittstelle zugreifen können. Hierdurch können Sie ohne Zeitaufwand eine neue Instanz bestellen, Ihre bereitgestellten Instanzen anzeigen, Systembenachrichtigungen prüfen, Einstellungen ändern und auf die Onlinedokumentation zugreifen.
 *  Auf der neuen, über das linke Navigationsfenster zugänglichen Seite **Einführung** erhalten Sie direkt in der Konsole genügend Details, um eine fundierte Entscheidung über die Komponenten der bestellten Instanz zu treffen. Auf der Seite **Einführung** werden Sie darüber hinaus Schritt für Schritt durch den Bestellprozess einer Instanz geführt, von der zu Beginn stattfindenden Überprüfung aller Voraussetzungen für die Bestellung einer Instanz (z. B. erforderliche Benutzerkonten) bis zur abschließenden Aufgabe einer Bestellung.
 *  Die Zusammenfassungsdetails für Cloud Foundation-Instanzen und vCenter Server-Instanzen werden auf einer einzigen Seite konsolidiert, auf die über das Menü **Bereitgestellte Instanzen** im linken Navigationsfenster zugegriffen werden kann. Von dieser Seite aus können Sie durch die Auswahl der entsprechenden Registerkarte entweder Cloud Foundation-Instanzen oder vCenter Server-Instanzen herausfiltern.
-* Wenn in Ihrer Instanz die Disaster-Recovery mit Zerto installiert ist, können Sie von der Seite mit den Servicedetails mit einem einzigen Klick direkt auf die Zerto-Konsole zugreifen. Weitere Informationen finden Sie unter [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html) und [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html).
+* Wenn in Ihrer Instanz die Disaster-Recovery mit Zerto installiert ist, können Sie von der Seite mit den Servicedetails mit einem einzigen Klick direkt auf die Zerto-Konsole zugreifen. Weitere Informationen finden Sie unter [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices) und [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).

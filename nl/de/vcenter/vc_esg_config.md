@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,8 +13,9 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Netz zur Verwendung des vom Kunden verwalteten NSX ESG mit eigenen virtuellen Maschinen konfigurieren
+{: #vc_esg_config}
 
-Konfigurieren Sie das Netz für Ihre virtuellen Maschinen, damit Sie die Vorteile von VMware NSX Edge Services Gateway (ESG) nutzen können, das in Ihren VMware vCenter Server-Instanzen bereitgestellt wird. Weitere Informationen zu den bestehenden Sicherheitsmaßnahmen, die Sicherheitsrisiken verringern, finden Sie im Abschnitt [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+Konfigurieren Sie das Netz für Ihre virtuellen Maschinen, damit Sie die Vorteile von VMware NSX Edge Services Gateway (ESG) nutzen können, das in Ihren VMware vCenter Server-Instanzen bereitgestellt wird. Weitere Informationen zu den bestehenden Sicherheitsmaßnahmen, die Sicherheitsrisiken verringern, finden Sie im Abschnitt [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX ist eine Plattform für die Netzvirtualisierung, die eine Virtualisierung von isolierten Netzen ermöglicht und verschiedene Netzservices wie Switches, Routing und Firewalls zur Verfügung stellt. Weitere Informationen zu NSX finden Sie unter [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
 
@@ -29,9 +30,10 @@ Im Rahmen des Bestellablaufs für Ihre vCenter Server-Instanz werden die folgend
   NXS Edge wird für ausschließlich private Instanzen nicht bereitgestellt.
   {:note}
 
-* Wenn Sie den Service "Veeam on {{site.data.keyword.cloud_notm}}" installiert haben, wird der NSX-Manager für eine tägliche Sicherung der NSX-Konfigurationen konfiguriert. Weitere Informationen finden Sie unter [Hinweise zur Installation von Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud).
+* Wenn Sie den Service "Veeam on {{site.data.keyword.cloud_notm}}" installiert haben, wird der NSX-Manager für eine tägliche Sicherung der NSX-Konfigurationen konfiguriert. Weitere Informationen finden Sie unter [Hinweise zur Installation von Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud).
 
 ## Vorgehensweise zum Konfigurieren der Netzeinstellungen für Ihre VMs
+{: #vc_esg_config-procedure-config-networking}
 
 Um die Vorteile von NSX für Ihre Workload-VMs nutzen zu können, müssen Sie eine Reihe von Einstellungen konfigurieren, indem Sie bei der Erstellung Ihrer VMs die folgenden Schritte ausführen:
 
@@ -53,6 +55,7 @@ Um die Vorteile von NSX für Ihre Workload-VMs nutzen zu können, müssen Sie ei
 3. Ordnen Sie das Standardgateway der VM als `192.168.10.1` zu. Diese Adresse ist die IP-Adresse des NSX-DLR auf demselben logischen Switch wie die Workload-VMs.
 
 ## Vorgehensweise zum Aktivieren der SNAT-Regel
+{: #vc_esg_config-procedure-enable-snat-rule}
 
 Falls Ihre Workload-VMs abgehenden Zugriff auf das Internet besitzen sollen, müssen Sie die zugehörige Regel für SNAT (Source Network Address Translation) aktivieren. Durch die Aktivierung der SNAT-Regel kann der Internetzugriff von Ihren VMs in eine einzige öffentliche IP-Adresse umgesetzt werden. Führen Sie die folgenden Schritte in VMware vSphere Web Client aus:
 
@@ -64,6 +67,7 @@ Falls Ihre Workload-VMs abgehenden Zugriff auf das Internet besitzen sollen, mü
 Weitere Informationen zu NAT-Regeln für NSX Edge finden Sie auf der Seite [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 
 ## Vorgehensweise zum Angeben von Details für Kundenteilnetze
+{: #vc_esg_config-procedure-identify-customer-subnets-details}
 
 Die Edge **customer-nsx-edge** ist für Ihre eigene Verwendung vorgesehen. Sie können sie daher ändern, um weitere NAT-Regeln für eingehenden oder abgehenden Datenverkehr zu definieren. Diese Regeln dürfen nur die IP-Adressen im öffentlichen oder privaten Kundenteilnetz verwenden, die in Ihrem Namen bestellt worden sind.
 
@@ -79,11 +83,12 @@ Weitere Details über die Kundenteilnetze können Sie außerdem mit den folgende
 2. Klicken Sie auf das Filtermenü und geben Sie im Feld "Teilnetz" die ID an, die Sie in der Beschreibung der Edge **customer-nsx-edge** auf der Registerkarte **Summary** in VMware vSphere Web Client ermittelt haben.
 3. Lesen Sie die Hinweise, die für die IP-Adressen angezeigt werden. Diese Hinweise geben an, welche der Teilnetze und IP-Adressen bestellt und während der Erstkonfiguration verwendet werden.
 
-   **Warnung:** Verwenden Sie nicht die IP-Adressen, die bestellt und während der Erstkonfiguration verwendet werden. Sie können jedoch nach Bedarf andere IP-Adressen in diesen Teilnetzen verwenden. Informationen zum Konfigurieren zusätzlicher Regeln für die Netzadressumsetzung finden Sie auf der Seite [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+   Verwenden Sie nicht die IP-Adressen, die bestellt und während der Erstkonfiguration verwendet werden. Sie können jedoch nach Bedarf andere IP-Adressen in diesen Teilnetzen verwenden. Informationen zum Konfigurieren zusätzlicher Regeln für die Netzadressumsetzung finden Sie auf der Seite [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
    {:important}
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vc_esg_config-related}
 
 * [Fehlerbehebung](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
-* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

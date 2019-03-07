@@ -53,5 +53,5 @@ Die drei wichtigsten Services, die über die GUI von RiskForesight zur Verfügun
 ## Zugehörige Links
 {: #caveonix-intro-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+*   [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
 *   [Caveonix-Website](https://www.caveonix.com/)

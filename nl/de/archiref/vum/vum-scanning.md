@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-18"
 
 ---
 
 # Prüfung und Auswertung
+{: #vum-scanning}
 
 Wenn Sie Hosts, virtuelle Maschinen (VMs) und virtuelle Einheiten scannen, bewerten Sie sie anhand von Baselines und Baselinegruppen, um deren Konformitätsstufe zu ermitteln. Die Bestandsobjekte werden geprüft und die Ergebnisse ausgewertet, um zu ermitteln, wie sie den Baselines und Baselinegruppen entsprechen. Die Prüfergebnisse können anhand von Textsuche, Gruppenauswahl, Baselineauswahl und Konformitätsstatusauswahl gefiltert werden. Sie können die folgenden Prüfungen initiieren:
 *	**Manuelles Initiieren einer Prüfung von vSphere ESXi-Hosts** - Sie können vSphere ESXi-Hosts im vSphere-Bestand anhand angehängter Baselines und Baselinegruppen prüfen.
@@ -17,6 +18,7 @@ Wenn Sie Hosts, virtuelle Maschinen (VMs) und virtuelle Einheiten scannen, bewer
 *	**Planen einer Prüfung** - Sie können den vSphere Web Client so konfigurieren, dass virtuelle Maschinen (VMs), virtuelle Appliances und ESXi-Hosts zu bestimmten Zeiten oder in den gewünschten Abständen durchsucht werden.
 
 ## Prüfung von vSphere ESXi-Hosts manuell initiieren
+{: #vum-scanning-scan-hosts}
 
 1. Klicken Sie auf **Auf Updates prüfen**, wählen Sie **Patches und Erweiterungen und Upgrades** aus und klicken Sie anschließend auf **OK**.
 2. Wenn die Prüfung abgeschlossen ist, wählen Sie **Kritische Host-Patches** aus. Überprüfen Sie im unteren Teilfenster die Patchdetails für die einzelnen Hosts, indem Sie auf die Zahl in **Anzahl der Patches** klicken. In einem Fenster werden die Patchinformationen angezeigt.
@@ -25,6 +27,7 @@ Wenn Sie Hosts, virtuelle Maschinen (VMs) und virtuelle Einheiten scannen, bewer
   Die VUM-Protokolldateien befinden sich unter _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
 ## Prüfung von virtuellen Maschinen und virtuellen Appliances manuell initiieren
+{: #vum-scanning-scan-vm-va}
 
 Sie können virtuelle Maschinen (VMs) und virtuelle Appliances anhand angehängter Baselines und Baselinegruppen prüfen. Die VMs und Appliances, die Sie auswählen, werden - je nach den von Ihnen ausgewählten Optionen - anhand der angehängten Baselines geprüft. Alle untergeordneten Objekte werden geprüft, d. h. je größer die virtuelle Infrastruktur ist und je weiter oben in der Objekthierarchie sie die Prüfung initiieren, umso länger dauert die Prüfung und umso genauer wird die Konformitätsansicht.
 
@@ -33,7 +36,8 @@ Sie können virtuelle Maschinen (VMs) und virtuelle Appliances anhand angehängt
 3.	Wählen Sie die Update-Typen aus, auf die geprüft werden soll. Die Optionen sind _Upgrades virtueller Appliances, VM-Hardware-Upgrades_ und _VMware Tools-Upgrades_.
 4.	Klicken Sie auf **Prüfen**.
 
-##	Prüfung eines Containerobjekts manuell initiieren
+## Prüfung eines Containerobjekts manuell initiieren
+{: #vum-scanning-scan-container}
 
 Sie können eine simultane Prüfung von Hosts, VMs und virtuellen Appliances starten, indem Sie ein Containerobjekt prüfen, das ein Rechenzentrum oder ein Rechenzentrumsordner ist.
 1.	Bei Verwendung des vSphere Web Client wählen Sie **Home** > **VMs und Vorlagen** aus.
@@ -41,7 +45,8 @@ Sie können eine simultane Prüfung von Hosts, VMs und virtuellen Appliances sta
 3.	Wählen Sie die Update-Typen aus, auf die geprüft werden soll. Die Optionen sind _Upgrades virtueller Appliances, VM-Hardware-Upgrades_ und _VMware Tools-Upgrades_.
 4.	Klicken Sie auf **Prüfen**.
 
-##	Prüfung planen
+## Prüfung planen
+{: #vum-scanning-schedule}
 
 Sie können den vSphere Web Client so konfigurieren, dass VMs, virtuelle Appliances und vSphere ESXi-Hosts zu bestimmten Zeiten oder in den gewünschten Abständen geprüft werden.
 
@@ -53,7 +58,8 @@ Sie können den vSphere Web Client so konfigurieren, dass VMs, virtuelle Applian
 6.	Geben Sie einen eindeutigen Namen und optional eine Beschreibung für die Prüftask ein. Klicken Sie auf **Ändern**, um die Häufigkeit und die Startzeit für die Prüftask festzulegen. Klicken Sie auf **OK**.
 7.	Die Prüftask wird in der Ansicht "Geplante Tasks" des vSphere Web Client aufgelistet.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vum-scanning-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

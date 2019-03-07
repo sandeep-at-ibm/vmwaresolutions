@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Design der virtuellen Infrastruktur
+{: #design_virtualinfrastructure}
 
 Die Schicht der virtuellen Infrastruktur umfasst die VMware-Softwarekomponenten, mit denen die Rechen-, Speicher- und Netzressourcen virtualisiert werden, die in der Schicht der physischen Infrastruktur bereitgestellt werden: VMware vSphere ESXi, VMware NSX und optional VMware vSAN.
 
 ## VMware vSphere-Design
+{: #design_virtualinfrastructure-vsphere-design}
 
 Die vSphere ESXi-Konfiguration umfasst die folgenden Aspekte:
 * Bootkonfiguration
@@ -39,7 +41,7 @@ Tabelle 1. vSphere ESXi-Konfiguration
 | Zeitsynchronisation   | Verwendet {{site.data.keyword.cloud}}-NTP-Server. |
 | Hostzugriff            | Unterstützt DCUI, ESXi Shell oder SSH. |
 | Benutzerzugriff            | Lokale Authentifizierung und MSAD. |
-| Auflösung von Domänennamen | Verwendet DNS wie in [Design der allgemeinen Services](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html) beschrieben. |
+| Auflösung von Domänennamen | Verwendet DNS wie in [Design der allgemeinen Services](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice) beschrieben. |
 
 Der vSphere-Cluster enthält die virtuellen Maschinen (VMs), die die zentrale Cloud und die Rechenressourcen für Benutzerworkloads verwalten.
 
@@ -59,6 +61,7 @@ Zur Unterstützung weiterer Benutzerworkloads kann die Umgebung wie folgt skalie
 Weitere Informationen zu Clustern finden Sie im [Dokument zur Architektur der VMware-Clusterlösung in {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf).
 
 ## VMware vSAN-Design
+{: #design_virtualinfrastructure-vsan-design}
 
 In diesem Design wird VMware vSAN-Speicher in Cloud Foundation-Instanzen und optional in vCenter Server-Instanzen verwendet, um gemeinsam genutzten Speicher für die vSphere-Hosts bereitzustellen.
 
@@ -66,24 +69,26 @@ Wie in Abbildung 1 zu sehen ist, fasst vSAN den lokalen Speicher über mehrere E
 
 Abbildung 1. vSAN-Konzept
 
-![vSAN-Konzept](virtual_vSAN.svg "vSAN fasst den lokalen Speicher über mehrere ESXi-Hosts in einem vSphere-Cluster zusammen und verwaltet den zusammengefassten Speicher als einzelnen VM-Datenspeicher")
+![vSAN-Konzept](virtual_vsan.svg "vSAN fasst den lokalen Speicher über mehrere ESXi-Hosts in einem vSphere-Cluster zusammen und verwaltet den zusammengefassten Speicher als einzelnen VM-Datenspeicher")
 
 vSAN arbeitet mit den folgenden Komponenten:
 * vSAN-Design mit zwei Plattengruppen; jede Plattengruppe besteht aus zwei oder mehr Platten. Eine SSD (Solid State Disk) der kleinsten Größe in der Gruppe dient als Cacheschicht, während die übrigen SSDs als Kapazitätsschicht verwendet werden.
 * Der Onboard-RAID-Controller wird für jedes Laufwerk außer den beiden Betriebssystemlaufwerken (BS-Laufwerken) auf der Ebene RAID-0 konfiguriert.
 * Aus allen Speicherressourcen wird ein einzelner vSAN-Datenspeicher erstellt.
 
-Die verfügbaren vSAN-Features hängen von der Lizenzedition ab, die Sie bei der Bestellung der Instanz auswählen. Weitere Informationen finden Sie unter [Vergleich der VMware vSAN-Editionen](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-vsan-edition-comparison).
+Die verfügbaren vSAN-Features hängen von der Lizenzedition ab, die Sie bei der Bestellung der Instanz auswählen. Weitere Informationen finden Sie unter [Vergleich der VMware vSAN-Editionen](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-vsan-edition-comparison).
 
 ### Einrichtung des virtuellen Netzes für vSAN
+{: #design_virtualinfrastructure-net-setup}
 
 Bei diesem Design fließt der vSAN-Datenverkehr zwischen ESXi-Hosts über ein dediziertes privates VLAN. Die beiden Netzadapter, die mit dem Switch des privaten Netzes verbunden sind, werden in vSphere als vSphere Distributed Switch (vDS) mit beiden Netzadaptern als Uplinks konfiguriert. Eine dedizierte vSAN-Kernelportgruppe, die für das vSAN-VLAN konfiguriert ist, befindet sich in dem vDS. Jumbo-Frames (MTU 9000) werden für den privaten vDS aktiviert.
 
 vSAN führt keinen Lastausgleich für den Datenverkehr zwischen Uplinks aus. Daher ist ein Adapter aktiv, während der andere im Standby-Modus ist, um hohe Verfügbarkeit (HA) zu unterstützen. Die Netzrichtlinie für die Funktionsübernahme (Failover) für vSAN ist als explizites Failover (**Explicit Failover**) zwischen physischen Netzports konfiguriert.
 
-Weitere Informationen zu physischen NIC-Verbindungen enthält Abbildung 2, "Physische NIC-Hostverbindungen im Abschnitt [Design der physischen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)".
+Weitere Informationen zu physischen NIC-Verbindungen enthält Abbildung 2, "Physische NIC-Hostverbindungen im Abschnitt [Design der physischen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)".
 
 ### Design von Speicherrichtlinien
+{: #design_virtualinfrastructure-storage-policy}
 
 Wenn vSAN aktiviert und konfiguriert ist, werden Speicherrichtlinien konfiguriert, um die VM-Speichermerkmale zu definieren. Speichermerkmale geben die verschiedenen Service-Level für verschiedene VMs an.
 
@@ -98,6 +103,7 @@ Eine Instanz verwendet die Standardrichtlinie, sofern nichts anderes über die v
 Speicherrichtlinien müssen nach dem Hinzufügen neuer ESXi-Hosts oder nach der Aktualisierung der ESXi-Hosts erneut angewendet werden.
 
 ### vSAN-Einstellungen
+{: #design_virtualinfrastructure-vsan-sett}
 
 vSAN-Einstellungen werden nach bewährten Verfahren für die Bereitstellung von VMware-Lösungen in {{site.data.keyword.cloud_notm}} festgelegt. Zu den VSAN-Einstellungen gehören SIOC-Einstellungen, Einstellungen für die Portgruppe für explizites Failover und Plattencacheeinstellungen.
 * SSD-Cacherichtlinieneinstellungen: Kein **Read Ahead** (Vorauslesen), **Write Through**, **Direct** (NRWTD)
@@ -109,10 +115,11 @@ vSAN-Einstellungen werden nach bewährten Verfahren für die Bereitstellung von 
 * vSAN-Kernel-Ports: **Explicit Failover**
 
 ## VMware NSX-Design
+{: #design_virtualinfrastructure-nsx-design}
 
 Die Netzvirtualisierung stellt ein Netzoverlay zur Verfügung, das in der virtuellen Schicht vorhanden ist. Die Netzvirtualisierung stattet die Architektur mit Funktionen wie schnelle Einrichtung, Bereitstellung, Rekonfiguration und Löschung von virtuellen On-Demand-Netzen aus. In diesem Design wird der vDS und VMware NSX for vSphere zur Implementierung eines virtuellen Netzes verwendet.
 
-In diesem Design wird der NSX-Manager im ersten Cluster bereitgestellt. Dem NSX-Manager wird eine VLAN-gestützte IP-Adresse aus dem privaten, portierbaren Adressblock zugeordnet, der für Managementkomponenten vorgesehen ist und der mit den unter [Design der allgemeinen Services](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html) behandelten DNS- und NTP-Servern konfiguriert wird. Der NSX-Manager wird mit den in Tabelle 2 aufgeführten Spezifikationen installiert.
+In diesem Design wird der NSX-Manager im ersten Cluster bereitgestellt. Dem NSX-Manager wird eine VLAN-gestützte IP-Adresse aus dem privaten, portierbaren Adressblock zugeordnet, der für Managementkomponenten vorgesehen ist und der mit den unter [Design der allgemeinen Services](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice) behandelten DNS- und NTP-Servern konfiguriert wird. Der NSX-Manager wird mit den in Tabelle 2 aufgeführten Spezifikationen installiert.
 
 Tabelle 2. NSX-Manager-Attribute
 
@@ -129,19 +136,20 @@ Die folgende Abbildung zeigt die Anordnung des NSX-Managers in Relation zu ander
 
 Abbildung 2. Netzübersicht für NSX-Manager
 
-![Netzübersicht für NSX-Manager](virtual_NSX.svg "NSX-Manager in Relation zu den anderen Komponenten in der Architektur")
+![Netzübersicht für NSX-Manager](virtual_nsx.svg "NSX-Manager in Relation zu den anderen Komponenten in der Architektur")
 
 Nach der Erstbereitstellung stellt die {{site.data.keyword.cloud_notm}}-Automatisierung drei NSX-Controller im ersten Cluster bereit. Jedem der Controller wird eine VLAN-gestützte IP-Adresse aus dem portierbaren Teilnetz **Privat A** zugeordnet, das für Managementkomponenten vorgesehen ist. Ferner werden in dem Design VM-VM-Anti-Affinitätsregeln erstellt, um die Controller unter den Hosts im Cluster zu separieren. Der erste Cluster muss mindestens drei Knoten enthalten, um hohe Verfügbarkeit für die Controller sicherzustellen.
 
-Neben den Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisierung die bereitgestellten vSphere-Hosts mit NSX-VIBs vor, um die Verwendung eines virtualisierten Netzes durch VXLAN-Tunnelendpunkte (VTEPs) einzurichten. Den VTEPs wird eine VLAN-gestützte IP-Adresse aus dem portierbaren IP-Adressbereich von **Privat A** zugeordnet, der für VTEPs angegeben ist, wie in *Tabelle 1. VLAN- und Teilnetzzusammenfassung* für das [Design der physischen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html) aufgeführt. Der VXLAN-Datenverkehr befindet sich im nicht mit Tags versehenen VLAN und wird dem privaten vDS zugewiesen.
+Neben den Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisierung die bereitgestellten vSphere-Hosts mit NSX-VIBs vor, um die Verwendung eines virtualisierten Netzes durch VXLAN-Tunnelendpunkte (VTEPs) einzurichten. Den VTEPs wird eine VLAN-gestützte IP-Adresse aus dem portierbaren IP-Adressbereich von **Privat A** zugeordnet, der für VTEPs angegeben ist, wie in *Tabelle 1. VLAN- und Teilnetzzusammenfassung* für das [Design der physischen Infrastruktur](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure) aufgeführt. Der VXLAN-Datenverkehr befindet sich im nicht mit Tags versehenen VLAN und wird dem privaten vDS zugewiesen.
 
 Anschließend wird ein Segment-ID-Pool zugeordnet und die Hosts in dem Cluster werden der Transportzone hinzugefügt. In der Transportzone wird nur Unicast verwendet, da die IGMP-Netzüberwachung (IGMP - Internet Group Management Protocol) in der {{site.data.keyword.cloud_notm}} nicht konfiguriert ist.
 
 Als Nächstes werden die NSX Edge Services Gateway-Paare bereitgestellt. In allen Fällen wird ein Gateway-Paar für den abgehenden Datenverkehr aus Automatisierungskomponenten verwendet, die sich im privaten Netz befinden. Für vCenter Server wird ein zweites Gateway, das als kundenverwaltetes Edge-Gateway bezeichnet wird, bereitgestellt und mit einem Uplink zum öffentlichen Netz sowie einer Schnittstelle, die dem privaten Netz zugeordnet ist, konfiguriert. Weitere Informationen zu NSX Edge Services Gateways, die als Teil der Lösung bereitgestellt werden, finden Sie im Dokument zur [Architektur der NSX Edge-Lösung in {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf).
 
-Cloudadministratoren können alle erforderlichen NSX-Komponenten wie Distributed Logical Router (DLR), logische Switches und Firewalls konfigurieren. Die verfügbaren NSX-Features sind von der NSX-Lizenzedition abhängig, die Sie bei der Bestellung der Instanz auswählen. Weitere Informationen finden Sie unter [Vergleich der VMware NSX-Editionen](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-nsx-edition-comparison). Für vCenter Server-Instanzen fügt die {{site.data.keyword.cloud_notm}}-Automatisierung die vCenter Server Appliance und PSC (Platform Services Controller) in der Ausschlussliste des NSX-Managers für verteilte Firewalls hinzu.
+Cloudadministratoren können alle erforderlichen NSX-Komponenten wie Distributed Logical Router (DLR), logische Switches und Firewalls konfigurieren. Die verfügbaren NSX-Features sind von der NSX-Lizenzedition abhängig, die Sie bei der Bestellung der Instanz auswählen. Weitere Informationen finden Sie unter [Vergleich der VMware NSX-Editionen](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-nsx-edition-comparison). Für vCenter Server-Instanzen fügt die {{site.data.keyword.cloud_notm}}-Automatisierung die vCenter Server Appliance und PSC (Platform Services Controller) in der Ausschlussliste des NSX-Managers für verteilte Firewalls hinzu.
 
 ### Design verteilter Switches
+{: #design_virtualinfrastructure-distr-switch}
 
 In dem Design wird eine minimale Anzahl von vDS-Switches verwendet. Die Hosts im Cluster werden mit den öffentlichen und privaten Netzen verbunden. Die Hosts werden mit zwei verteilten virtuellen Switches konfiguriert. Die Verwendung von zwei Switches basiert auf der Praxis im {{site.data.keyword.cloud_notm}}-Netz, dass öffentliche und private Netze getrennt werden. Das folgende Diagramm zeigt das vDS-Design.
 
@@ -212,6 +220,7 @@ Tabelle 7. VM-Kerneladapter für konvergierte Cluster
 | SDDC-Dswitch-Private | NAS | SDDC-DPortGroup-NFS | \-  | 9000 |
 
 ### NSX-Konfiguration
+{: #design_virtualinfrastructure-nsx-config}
 
 Dieses Design spezifiziert die Konfiguration von NSX-Komponenten, wendet jedoch keine Konfiguration von Netzoverlay-Komponenten an. Sie können das Netzoverlay Ihren Anforderungen entsprechend gestalten. Die folgenden Aspekte werden vorkonfiguriert:
 
@@ -227,7 +236,8 @@ Die folgenden Aspekte werden nicht konfiguriert:
 * VXLANs
 * Verknüpftes NSX-Management mit anderen VMware-Instanzen
 
-### Zugehörige Links
+## Zugehörige Links
+{: #design_virtualinfrastructure-related}
 
 * [Architektur der VMware-Clusterlösung in {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf)
 * [Architektur der NSX Edge-Lösung in {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)

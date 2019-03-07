@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # FortiGate Security Appliance on IBM Cloud verwalten
+{: #managingfsa}
 
 Nachdem der Service "FortiGate Security Appliance on {{site.data.keyword.cloud}}" erfolgreich installiert wurde, können Sie Firewallregeln für FSA über die FortiGate-Konsole verwalten und konfigurieren.
 
@@ -20,19 +21,21 @@ Sie müssen sicherstellen, dass die FSA-Firewallregeln so definiert sind, dass a
 {:important}
 
 ## Auf die Konsole der FortiGate 300-Serie zugreifen
+{: #managingfsa-access-console}
 
 Um den Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" zu verwalten, müssen Sie auf eine der folgenden Arten auf die Konsole der FortiGate® 300-Serie zugreifen:
 * Melden Sie sich beim FortiOS-Web-Client unter Verwendung der Berechtigungsnachweise an, die auf der Seite mit den Details für den Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" zu finden sind.
 * Greifen Sie über eine SSH-Verbindung unter Verwendung der Berechtigungsnachweise, die auf der Seite mit den Details für den Service "FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}" zu finden sind, auf die Konsole zu.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 
-### Zugehörige Links
+## Zugehörige Links
+{: #managingfsa-related}
 
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services/fsa_considerations.html)
-* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Website "fortinet.com"](https://www.fortinet.com/)
 * [Technische Dokumentation zu Fortinet](http://docs.fortinet.com/fortigate/admin-guides)

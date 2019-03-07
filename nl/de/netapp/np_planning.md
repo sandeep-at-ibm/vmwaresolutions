@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Voraussetzungen und Planung für NetApp ONTAP Select-Instanzen
+{: #np_planning}
 
 Überprüfen Sie die nachstehenden Voraussetzungen, bevor Sie Ihre NetApp ONTAP Select-Instanzen bestellen. Legen Sie der Planung für Ihre Instanz den Standort von {{site.data.keyword.CloudDataCent}} sowie Ihre Anforderungen an Workloadleistung und -kapazität zugrunde.
 
 ## Voraussetzungen für IBM Cloud-Konto
+{: #np_planning-account-req}
 
-Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Konto](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
+Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie unter [Voraussetzungen für das {{site.data.keyword.cloud_notm}}-Konto](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## Verfügbarkeit des IBM Cloud-Rechenzentrums
+{: #np_planning-dc-availability}
 
 Die NetApp ONTAP Select-Bereitstellung stellt strenge Anforderungen an die physische Infrastruktur. Sie können Instanzen daher nur in {{site.data.keyword.CloudDataCents_notm}} bereitstellen, die diese Anforderungen erfüllen. Die folgenden {{site.data.keyword.CloudDataCents_notm}} stehen für die Bereitstellung von NetApp ONTAP Select zur Verfügung:
 
@@ -55,7 +58,8 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für NetApp ONT
 | WDC06 | Washington, DC | NA Ost | Hohe Leistung (mittel), Hohe Leistung (groß), Hohe Kapazität
 | WDC07 | Washington, DC | NA Ost | Hohe Leistung (mittel), Hohe Leistung (groß), Hohe Kapazität
 
-### Zugehörige Links
+## Zugehörige Links
+{: #np_planning-related}
 
-* [Übersicht über NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
-* [NetApp ONTAP Select-Instanzen bestellen](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [Übersicht über NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)
+* [NetApp ONTAP Select-Instanzen bestellen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)

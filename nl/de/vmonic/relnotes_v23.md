@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-05-28"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-05-28"
 {:important: .important}
 
 # Releaseinformationen für V2.3
+{: #relnotes_v23}
 
 Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -24,19 +25,19 @@ Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserung
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Weitere Informationen enthält der Abschnitt [Gegenmaßnahmen für Sicherheitslücken "Spectre" und "Meltdown"](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
+Weitere Informationen enthält der Abschnitt [Gegenmaßnahmen für Sicherheitslücken "Spectre" und "Meltdown"](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre).
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
 In diesem Release wird das VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle-Angebot eingeführt. Das vCenter Server with Hybridity Bundle ist eine gehostete private Cloud und unterstützt Sie bei der schnellen und einfachen Erweiterung Ihrer lokalen Infrastruktur in die Cloud. Die VMware-Umgebung basiert auf von IBM bereitgestellten VMware Software Defined Data Center-Lizenzen und umfasst den Service "VMware HCX on {{site.data.keyword.cloud_notm}}" zur einfachen und sicheren Verbindung einer lokalen vSphere 5.0+-Umgebung mit {{site.data.keyword.cloud_notm}}-Standorten zur Erreichung einer reibungslosen Hybridität der Infrastruktur und einer realen Anwendungsmobilität.
 
-Der Service "HCX on {{site.data.keyword.cloud_notm}}" steht nur über die vCenter Server with Hybridity Bundle-Instanz zur Verfügung. Sie können für Ihre vorhandene vCenter Server-Instanz ein Upgrade auf eine vCenter Server with Hybridity Bundle-Instanz durchführen, nachdem Sie das Basis-Software-Update für vCenter Server V2.3 angewendet haben. Weitere Informationen enthält der Abschnitt [Updates auf vCenter Server-Instanzen anwenden](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html).
+Der Service "HCX on {{site.data.keyword.cloud_notm}}" steht nur über die vCenter Server with Hybridity Bundle-Instanz zur Verfügung. Sie können für Ihre vorhandene vCenter Server-Instanz ein Upgrade auf eine vCenter Server with Hybridity Bundle-Instanz durchführen, nachdem Sie das Basis-Software-Update für vCenter Server V2.3 angewendet haben. Weitere Informationen enthält der Abschnitt [Updates auf vCenter Server-Instanzen anwenden](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates).
 
 Weitere Informationen zu vCenter Server with Hybridity Bundle finden Sie in den folgenden Abschnitten:
 
-* [Übersicht über vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
-* [vCenter Server with Hybridity Bundle-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [Übersicht über vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
+* [vCenter Server with Hybridity Bundle-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 
 ## Clusterunterstützung für vCenter Server- und Cloud Foundation-Instanzen löschen
 
@@ -44,8 +45,8 @@ Sie können Cluster nun aus einer Instanz löschen, ohne dass hierzu die gesamte
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 
-* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
-* [Cluster für Cloud Foundation-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
+* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances#deleting-clusters-from-vcenter-server-instances)
+* [Cluster für Cloud Foundation-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances#deleting-clusters-from-cloud-foundation-instances)
 
 ## Updates für VMware vCenter Server-Instanzen
 
@@ -61,8 +62,8 @@ Ab Release V2.3 stehen die folgenden neuen CPU-Modelle für die Bereitstellung z
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 
-* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ## Updates für VMware Cloud Foundation-Instanzen
 
@@ -70,25 +71,6 @@ Mit diesem Release werden die folgenden Upgrades und Verbesserungen angewendet:
 *	VMware vSphere ESXi 6.5 U1g (ESXi 6.5u1 mit angewendetem Patch-Level ESXi650-201803001)
 *	VMware vCenter Server 6.5 Update 1g
 *	VMware NSX for vSphere 6.3.5
-
-## Updates für VMware Federal-Instanzen
-
-### DNS-Konfiguration für VMware Federal-Instanzen
-
-Sie haben jetzt die Möglichkeit, die Bereitstellung einer einzigen Virtual Server-Instanz (VSI) von Microsoft Windows für Microsoft Active Directory (AD) oder aber zwei virtuelle Microsoft Windows-Maschinen für die Hochverfügbarkeit im Management-Cluster auszuwählen. Für V2.2 wurde die einzelne Microsoft Windows-VSI für Microsoft AD standardmäßig automatisch bereitgestellt. Die neue Option zur Auswahl von zwei virtuellen Microsoft Windows-Maschinen bietet mehr Datenschutz und die Möglichkeit, die virtuellen Maschinen mit dem Veeam-Service zu sichern und wiederherzustellen.
-
-Sie müssen zwei Lizenzen für Microsoft Windows Server 2012 R2 bereitstellen, wenn Sie Ihre Instanz für die Verwendung der beiden virtuellen Microsoft Windows-Maschinen konfigurieren. Verwenden Sie die Lizenz für Microsoft Windows Server 2012 R2 Standard Edition und/oder die Lizenz für Microsoft Windows Server 2012 R2 Datacenter Edition. Sie haben 30 Tage Zeit, um die virtuellen Maschinen zu aktivieren.
-{:note}
-
-Weitere Informationen finden Sie unter *Netzschnittstelleneinstellungen* im Abschnitt [VMware Federal-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html#network-interface-settings).
-
-### Clusterunterstützung für VMware Federal-Instanzen hinzufügen und löschen
-
-Sie können jetzt ESXi-Server in VMware Federal-Instanzen, die in V2.3 und höheren Releases bereitgestellt werden, mithilfe von Clustern verwalten und so ein besseres Ressourcenmanagement und eine hohe Verfügbarkeit erreichen. Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, werden standardmäßig unter **cluster1** gruppiert. Auf der Seite mit der Instanzübersicht können Sie die Clusterdetails anzeigen oder bis zu insgesamt zehn Cluster zu einer Instanz hinzufügen. Wenn Sie die Kapazität für eine Instanz erweitern oder verringern, können Sie auswählen, in welchem Cluster ESXi-Server hinzugefügt oder entfernt werden sollen.
-
-Sie haben auch die Möglichkeit, einzelne oder mehrere Cluster aus einer Instanz zu löschen, ohne dass hierzu die gesamte Instanz gelöscht werden muss.
-
-Weitere Informationen finden Sie unter [Cluster für VMware Federal-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html).
 
 ## Updates für Add-on-Services
 
@@ -99,8 +81,8 @@ Der Service "HyTrust CloudControl on {{site.data.keyword.cloud_notm}}" ist nun f
 Sie können Instanzen bestellen, die den Service enthalten, oder diesen Service später zu Ihren vorhandenen Instanzen hinzufügen.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Komponenten und Hinweise für HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html)
-* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managinghtcc.html)
+* [Komponenten und Hinweise für HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtcc)
 
 ### HyTrust DataControl on IBM Cloud
 
@@ -109,8 +91,8 @@ Der Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" ist nun f�
 Sie können Instanzen bestellen, die den Service enthalten, oder diesen Service später zu Ihren vorhandenen Instanzen hinzufügen.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Komponenten und Hinweise für HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_considerations.html)
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managinghtdc.html)
+* [Komponenten und Hinweise für HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtdc)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 

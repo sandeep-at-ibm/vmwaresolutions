@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Native NIC-Treiber anwenden
+{: #vum-applying-nic}
 
 ESXi 6.5 enthält viele neue native Treiber, die die älteren vmklinux-Treiber ersetzen. Während die meisten der neuen nativen Treiber nach der Installation oder dem Upgrade standardmäßig aktiviert werden, sind drei der neuen nativen Treiber standardmäßig inaktiviert, da sie die Funktionen der entsprechenden vmklinux-Treiber nicht vollständig unterstützen.
 
@@ -34,7 +35,7 @@ Führen Sie die folgenden Schritte für jeden Host in der angegebenen Reihenfolg
 
 Wenn Sie den Vorgang rückgängig machen müssen und Sie nicht über SSH auf den vSphere ESXi-Host zugreifen können, müssen Sie sich bei der KVM-Konsole für den Host anmelden, der über das {{site.data.keyword.cloud_notm}}-Steuerfenster zurückgesetzt werden muss.
 
-Verwenden Sie die ID und das Kennwort, die im {{site.data.keyword.cloud_notm}}-Steuerfenster mit der IPMI-IP-Adresse aufgelistet sind, um sich an der IPMI-Webschnittstelle anzumelden. Sie müssen mit dem Rechenzentrum, in dem sich der Host befindet, über VPN verbunden sein. Weitere Informationen finden Sie unter [Einführung in die Arbeit mit VPN](/docs/infrastructure/iaas-vpn/getting-started.html).
+Verwenden Sie die ID und das Kennwort, die im {{site.data.keyword.cloud_notm}}-Steuerfenster mit der IPMI-IP-Adresse aufgelistet sind, um sich an der IPMI-Webschnittstelle anzumelden. Sie müssen mit dem Rechenzentrum, in dem sich der Host befindet, über VPN verbunden sein. Weitere Informationen finden Sie unter [Einführung in die Arbeit mit VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started-with-virtual-private-networking-vpn-).
 
 1. Wechseln Sie zur Seite "Gerätedetails, Fernverwaltung" für den vSphere ESXi-Host und wählen Sie **Aktionen** > **KVM-Konsole** aus. Ein anderes Fenster wird geöffnet, in dem Sie den IPMI-Benutzer und das zugehörige Kennwort eingeben können.
 2. Wählen Sie **Fernsteuerung** > **iKVM/HTML5** aus und klicken Sie auf **iKVM/HTML5**, um neu zu starten. Sie können nun auf die Konsole des vSphere ESXi-Hosts zugreifen.
@@ -45,7 +46,8 @@ Verwenden Sie die ID und das Kennwort, die im {{site.data.keyword.cloud_notm}}-S
 7. Geben Sie **"Y"** (Ja) ein, um den Wiederherstellungsmodus zu aktivieren, und starten Sie den ESXi-Server mit der vorherigen Version.
 8. Überwachen Sie den Fortschritt über die Konsole. Der Bootvorgang kann 10-20 Minuten dauern.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vum-applying-nic-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

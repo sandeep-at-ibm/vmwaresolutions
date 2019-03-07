@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Zertifikate für KMIP for VMware on IBM Cloud-Instanzen hinzufügen, anzeigen und löschen
+{: #kmip_standalone_addingdeletingcert}
 
 Wenn Ihre KMIP for VMware on {{site.data.keyword.cloud}}-Instanz bereit ist, müssen Sie ihr Zertifikate hinzufügen. Wenn Sie ein Zertifikat nicht mehr benötigen, löschen Sie es aus Ihrer Instanz.
 
 ## Vorgehensweise zum Hinzufügen von Zertifikaten zu KMIP for VMware on IBM Cloud-Instanzen
+{: #kmip_standalone_addingdeletingcert-add}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Blättern Sie in der Tabelle **KMIP for VMware on IBM Cloud-Instanzen** zu der Instanz, für die Sie Zertifikate hinzufügen wollen.
@@ -28,6 +30,7 @@ Wenn Ihre KMIP for VMware on {{site.data.keyword.cloud}}-Instanz bereit ist, mü
 5. Klicken Sie auf **Hinzufügen**.
 
 ## Vorgehensweise zum Anzeigen von Zertifikaten für KMIP for VMware on IBM Cloud-Instanzen
+{: #kmip_standalone_addingdeletingcert-view}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Blättern Sie in der Tabelle **KMIP for VMware on IBM Cloud-Instanzen** zu der Instanz, für die die Zertifikate angezeigt werden sollen.
@@ -35,6 +38,7 @@ Wenn Ihre KMIP for VMware on {{site.data.keyword.cloud}}-Instanz bereit ist, mü
 4. Zum Anzeigen des Inhalts eines bestimmten Zertifikats klicken Sie auf **Download**.
 
 ## Vorgehensweise zum Löschen von Zertifikaten aus KMIP for VMware on IBM Cloud-Instanzen
+{: #kmip_standalone_addingdeletingcert-delete}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
 2. Blättern Sie in der Tabelle **KMIP for VMware on IBM Cloud-Instanzen** auf die Instanz, aus der Sie Zertifikate löschen möchten.
@@ -43,9 +47,10 @@ Wenn Ihre KMIP for VMware on {{site.data.keyword.cloud}}-Instanz bereit ist, mü
    Der Client verliert unverzüglich den Zugriff auf alle Schlüssel zum Ver- und Entschlüsseln von Daten oder Sicherungsdaten. Damit der Client den Zugriff wiedererhält, müssen Sie das Client-SSL-Zertifikat wieder hinzufügen.
    {:note}
 
-### Zugehörige Links
+## Zugehörige Links
+{: #kmip_standalone_addingdeletingcert-related}
 
-* [KMIP for VMware on IBM Cloud-Instanzen anzeigen](/docs/services/vmwaresolutions/services/kmip_standalone_viewing.html)
-* [KMIP for VMware on IBM Cloud-Instanzen bestellen](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html)
-* [KMIP for VMware on IBM Cloud-Instanzen löschen](/docs/services/vmwaresolutions/services/kmip_standalone_deleting.html)
-* [Activity Tracker-Ereignisse](/docs/services/vmwaresolutions/vmonic/at-events.html)
+* [KMIP for VMware on IBM Cloud-Instanzen anzeigen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
+* [KMIP for VMware on IBM Cloud-Instanzen bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)
+* [KMIP for VMware on IBM Cloud-Instanzen löschen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
+* [Activity Tracker-Ereignisse](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

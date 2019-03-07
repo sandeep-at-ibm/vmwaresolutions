@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Logisches Design von Skate Advisor
+{: #vcscar-logical}
 
 Dieser Abschnitt enthält detaillierte Informationen zu den Anwendungselementen, die das logische Design des Systems bilden.
 
 ## Systemkomponenten
+{: #vcscar-logical-sys-comp}
 
 Abbildung 1. Komponenten von Skate Advisor
 ![Komponenten von Skate Advisor](vcscar-components.svg)
@@ -20,6 +22,7 @@ Abbildung 1. Komponenten von Skate Advisor
 Skate Advisor besteht in erster Linie aus einem Chatbot, der entweder Text- oder Spracherkennung akzeptieren kann, um auf strukturierte Weise mit dem System zu interagieren.
 
 ## Tricks
+{: #vcscar-logical-tricks}
 
 Das zentrale Datenelement von Skate Advisor ist der Trick. Ein Trick wird in der Sprache für Tricks eindeutig definiert. Diese Sprache ermöglicht die folgenden Tasks:
 - Dialoge über Tricks mit dem Chatbot
@@ -28,14 +31,17 @@ Das zentrale Datenelement von Skate Advisor ist der Trick. Ein Trick wird in der
 - Ermittlung eines Tricks für Spots und Medienwiedergabe
 
 ### Trickdefinition
+{: #vcscar-logical-trick-def}
 
 Ein Trick wird durch das Sprachkonstrukt, das ihn beschreibt, eindeutig definiert. Eine vollständige Definition können Sie der Regelengine für Tricks entnehmen.
 
 ### Liste der Tricks
+{: #vcscar-logical-list-tricks}
 
 Durch eine Abfrage des Basistricks oder der Landung, die in Sprachelementen definiert sind, wird eine Liste von Tricks zurückgegeben.
 
 ### Trickdaten
+{: #vcscar-logical-trick-data}
 
 Nach der Rückgabe können Tricks die folgenden Informationen enthalten:
 - Beschreibung des Tricks
@@ -43,6 +49,7 @@ Nach der Rückgabe können Tricks die folgenden Informationen enthalten:
 - Informationen zu Spots
 
 ## Dialogdatenströme
+{: #vcscar-logical-conv-streams}
 
 Der Chatbot verfügt über eine vordefinierte und begrenzte Anzahl von möglichen Dialogen. Die Dialoge werden durch die folgenden Informationen definiert:
 - Tricksuche: Hierbei wird anhand eines Parameters, der entweder den Basistrick oder die Landung darstellt, nach einer Gruppe von gültigen Tricks gesucht.
@@ -58,8 +65,10 @@ Spotsuche | Spot, an dem ein bestimmter Trick ausgeführt werden könnte | Liste
 Medienwiedergabe | Anzeige eines Videos für einen Trick |Liste mit Medienergebnissen
 
 ## Benutzerschnittstellenkomponenten
+{: #vcscar-logical-ui-comp}
 
 ### Chatbot
+{: #vcscar-logical-chatbot}
 
 Der Chatbot ist eine Webkomponente, die mit dem Benutzer kommuniziert. Der Chatbot kann als Eingabe entweder Text oder Sprache akzeptieren. Ergebnisse wie beispielsweise Listen werden als Text dargestellt und unter Umständen von einer Sprachausgabe der Ergebnisse begleitet.
 
@@ -85,18 +94,21 @@ Schritt | Beschreibung
 11 | Das Ergebnis wird über den Chatbot an den Benutzer gesendet.
 
 ### Videowiedergabe
+{: #vcscar-logical-video-render}
 
 Die Komponente für die Videowiedergabe spielt ein Video ab und zeigt ein Dokument an. Diese Artefakte stellen das Quellenartefakt dar, aus dem der Trick erkannt wurde.
 
 Die Komponente für die Videowiedergabe ist ein eingebettetes Widget in der Webschnittstelle, das ein Video anzeigt. Die Videos werden im Chatbot infolge einer Abfrage vom Systembenutzer angezeigt. Nach Auswahl des resultierenden Links zum Video wird die Videowiedergabe ausgelöst.
 
 ### Schnittstelle für Ort
+{: #vcscar-logical-location-interface}
 
 Skate Advisor enthält eine Schnittstelle für Systembenutzer, um einen Spot für einen bestimmten Trick aufzuzeichnen. Die Webschnittstellenkomponente umfasst zwei Hauptelemente:
 1. Sie akzeptiert einen vom Systembenutzer angegebenen Spot als besten Ort für die Ausführung eines bestimmten Tricks.
 2. Sie zeigt einen oder mehrere empfohlene Spots für einen bestimmten Trick an.
 
 ## Watson-Komponenten
+{: #vcscar-logical-watson-comp}
 
 Diese Architektur beinhaltet die folgenden Watson-Komponenten:
 * Knowledge Studio - Watson Studio ist ein Tool, mit dem die Skater-Sprache für das System entworfen und zum Erkennen von Dokumenten aus dem Web verwendet werden kann, die die Skater-Sprache implementieren. Knowledge Studio stellt ein Modell für die Verwendung von Watson Discovery bereit.
@@ -106,6 +118,7 @@ Diese Architektur beinhaltet die folgenden Watson-Komponenten:
 * Watson Assistant - Watson Assistant ist ein Tool, mit dem die Interaktionen zwischen Benutzern und der Maschine (Chatbot) gestaltet werden können. Es muss mit einer fachspezifischen Sprache (z. B. über das Skateboarding) in Form einer Serie von Grammatiken trainiert werden, für die Watson Assistant die entsprechenden Antworten erkennt und erstellt.
 
 ## Services von Skate Advisor
+{: #vcscar-logical-skate-advisor-services}
 
 Der Service "Skate Advisor" ist eine Anwendungskomponente, die eine Reihe von API-Services für die Ausgabe von Anforderungen bereitstellt. Die verfügbaren Services besitzen eine direkte Korrelation mit den oben beschriebenen Dialogdatenströmen. Die verfügbaren APIs umfassen die folgenden allgemeinen Kategorien:
 * get_tricks - Gibt aufgrund einer Abfrage in natürlicher Sprache (<query\>) eine Liste mit Tricks zurück, die für den Discovery-Service bereitgestellt wird.
@@ -114,6 +127,7 @@ Der Service "Skate Advisor" ist eine Anwendungskomponente, die eine Reihe von AP
 * accept_command - Akzeptiert einen Textbefehl aus dem Chatbot und bedient die Anforderung.
 
 ## Training für Discovery-Service
+{: #vcscar-logical-disc-service-training}
 
 Watson Discovery muss über ein Modell für maschinelles Lernen trainiert werden, das von einem Experten mithilfe von Watson Knowledge Studio iterativ erstellt wird.
 
@@ -127,6 +141,7 @@ Nach dem Training kann der Discovery-Service Abfragen wie beispielsweise Folgend
 - Alle Tricks anzeigen
 - Alle Tricks mit mehreren Combos anzeigen
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcscar-logical-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Übersicht über VMware vSphere on IBM Cloud
+{: #vs_vsphereclusteroverview}
 
 Bei VMware vSphere on {{site.data.keyword.cloud}} handelt es sich um eine optimierte Bestellplattform für VMware. Mit dieser Plattform können Sie Ihre eigene von IBM gehostete VMware-Umgebung aufbauen, indem Sie die VMware-kompatible Hardware anpassen und bestellen, die Sie für die von Ihnen ausgewählten VMware-Komponenten benötigen.
 
@@ -23,6 +24,7 @@ In der {{site.data.keyword.vmwaresolutions_short}}-Konsole wird die Hardware aut
 Verwenden Sie dieses Produktangebot, um einen neuen Cluster aus ESXi-Servern zu erstellen oder einen vorhandenen Cluster aus ESXi-Servern in einem {{site.data.keyword.CloudDataCent_notm}} zu skalieren. Abhängig von den VMware-Komponenten, die Sie auswählen, können Sie mit nur einem einzigen ESXi-Server beginnen und den Cluster später nach Bedarf skalieren.
 
 ## Technische Spezifikationen für VMware vSphere on IBM Cloud-Cluster
+{: #technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters}
 
 Überprüfen Sie die Komponenten von VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
@@ -30,6 +32,7 @@ Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen kön
 {:note}
 
 ### VMware-Komponenten
+{: #vs_vsphereclusteroverview-specs-vmware-components}
 
 Wählen Sie für folgende VMware-Komponenten (von IBM bereitgestellt oder eigene) Lizenzen aus:
 * VMware vSphere Enterprise Plus 6.0 Update 2, 6.5 Update 1 oder 6.5 Update 2
@@ -43,6 +46,7 @@ Wählen Sie für folgende VMware-Komponenten (von IBM bereitgestellt oder eigene
    * VMware vRealize Log Insight
 
 ### Bare Metal Server
+{: #vs_vsphereclusteroverview-specs-bare-metal}
 
 Wählen Sie eine oder mehrere {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen mit dem von Ihnen ausgewählten CPU-Modell und der ausgewählten RAM-Größe aus:
 * 2-CPU Intel Skylake Generation (Intel Xeon 4100/5100/6100 Series)
@@ -56,11 +60,13 @@ Zusätzlich folgende Platten- und Netzspezifikationen:
 * 1 RAID-Plattencontroller
 
 ### Vernetzung
+{: #vs_vsphereclusteroverview-specs-network}
 
 * 1 öffentliches VLAN (Virtual LAN) und zwei private VLANs
 * (Optional) 1 HA-Paar von FortiGate Security Appliance-Einheiten
 
 ### Speicher
+{: #vs_vsphereclusteroverview-specs-storage}
 
 Vom Benutzer angepasster Speicher für vSAN-Konfiguration bei Auswahl der Komponente "VMware vSAN":
 * Speicherplattenoptionen (960 GB SSD SED, 1.9 TB SSD SED oder 3.8 TB SSD SED)
@@ -73,28 +79,33 @@ Vom Benutzer angepasster Speicher für vSAN-Konfiguration bei Auswahl der Kompon
 * Option für "Hohe Leistung mit Intel Optane", die zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereitstellt. Diese Option hängt vom CPU-Modell ab.
 
 ## Technische Spezifikationen für vSphere-Clustererweiterungsknoten
+{: #vs_vsphereclusteroverview-expansion-node-specs}
 
 Jeder vSphere-Clustererweiterungsknoten stellt folgende Komponenten in Ihrem {{site.data.keyword.slportal}}-Konto mit den entsprechenden anfallenden Gebühren bereit.
 
 ### Hardware für Erweiterungsknoten
+{: #vs_vsphereclusteroverview-expansion-node-specs-hardware}
 
-1 {{site.data.keyword.cloud_notm}} Bare Metal Server mit der unter [Technische Spezifikationen für VMware vSphere on {{site.data.keyword.cloud_notm}}-Instanzen](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters) aufgeführten Hardwarekonfiguration.
+1 {{site.data.keyword.cloud_notm}} Bare Metal Server mit der unter [Technische Spezifikationen für VMware vSphere on {{site.data.keyword.cloud_notm}}-Instanzen](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters) aufgeführten Hardwarekonfiguration.
 
 ### Vernetzung für Erweiterungsknoten
+{: #vs_vsphereclusteroverview-expansion-node-specs-network}
 
-1 {{site.data.keyword.cloud_notm}} Bare Metal Server mit der unter [Technische Spezifikationen für VMware vSphere on {{site.data.keyword.cloud_notm}}-Instanzen](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters) aufgeführten Netzkonfiguration.
+1 {{site.data.keyword.cloud_notm}} Bare Metal Server mit der unter [Technische Spezifikationen für VMware vSphere on {{site.data.keyword.cloud_notm}}-Instanzen](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters) aufgeführten Netzkonfiguration.
 
 ### VMware-Komponenten für Erweiterungsknoten
+{: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
 * 1 {{site.data.keyword.cloud_notm}} Bare Metal Server mit VMware vSphere Enterprise Plus 6.0 Update 2 oder 6.5 Update 1  
-* Optionale VMware-Komponenten, die unter [Technische Spezifikationen für VMware vSphere on {{site.data.keyword.cloud_notm}}-Cluster](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters) aufgeführt sind. 
+* Optionale VMware-Komponenten, die unter [Technische Spezifikationen für VMware vSphere on {{site.data.keyword.cloud_notm}}-Cluster](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters) aufgeführt sind.
 
-Sie dürfen die ESXi-Server, die optionalen VMware-Komponenten und die zusätzliche Hardware, die bestellt und Ihrem {{site.data.keyword.cloud_notm}}-Konto übergeben wurden, nur im {{site.data.keyword.slportal}} verwalten. Nachdem Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole einen neuen Cluster erstellt haben, können Sie die Konsole erneut aufrufen, um den neuen Cluster unter Verwendung der gespeicherten Konfiguration zu skalieren. Weitere Informationen finden Sie unter [Vorhandene vSphere-Cluster skalieren](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html).
+Sie dürfen die ESXi-Server, die optionalen VMware-Komponenten und die zusätzliche Hardware, die bestellt und Ihrem {{site.data.keyword.cloud_notm}}-Konto übergeben wurden, nur im {{site.data.keyword.slportal}} verwalten. Nachdem Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole einen neuen Cluster erstellt haben, können Sie die Konsole erneut aufrufen, um den neuen Cluster unter Verwendung der gespeicherten Konfiguration zu skalieren. Weitere Informationen finden Sie unter [Vorhandene vSphere-Cluster skalieren](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters).
 {:important}
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vs_vsphereclusteroverview-related}
 
-* [VMware vSphere-Softwareteileliste](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
-* [vSphere-Cluster planen](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
-* [vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [Vorhandene vSphere-Cluster skalieren](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [VMware vSphere-Softwareteileliste](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_bom)
+* [vSphere-Cluster planen](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
+* [vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [Vorhandene vSphere-Cluster skalieren](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)

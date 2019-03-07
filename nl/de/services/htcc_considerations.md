@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Übersicht über HyTrust CloudControl on IBM Cloud
+{: #htcc_considerations}
 
 Der Service "HyTrust CloudControl on {{site.data.keyword.cloud}}" erzwingt und steuert die Einhaltung der Sicherheitsstandards und stellt Funktionen für die rollenbasierte Zugriffssteuerung (RBAC = Role-Based Access Control) sowie für die Genehmigung und Überprüfung zur Verfügung. In Kombination mit HyTrust DataControl kann der Service sicherstellen, dass virtuelle Maschinen und Workloaddaten eine bestimmte Region, einen bestimmten Cluster oder einen bestimmten ESXi-Server innerhalb von {{site.data.keyword.CloudDataCent_notm}} nicht verlassen.
 
@@ -20,10 +21,12 @@ Dieser Service ist nur für Instanzen verfügbar, auf denen vSphere 6.5 ausgefü
 {:note}
 
 ## Technische Spezifikationen für HyTrust CloudControl on IBM Cloud
+{: #technical-specifications-for-hytrust-cloudcontrol-on-ibm-cloud}
 
 Mit dem Service "HyTrust CloudControl on {{site.data.keyword.cloud_notm}}" werden die folgenden Komponenten bestellt und einbezogen:
 
 ### HyTrust CloudControl-Appliance
+{: #htcc_considerations-appliance}
 
 * CPU: 4 vCPU
 * RAM: 16 GB
@@ -31,21 +34,25 @@ Mit dem Service "HyTrust CloudControl on {{site.data.keyword.cloud_notm}}" werde
 * Netz: In VLAN-gestütztem privaten portierbaren Netz angeordnet, das für das Management spezifiziert ist
 
 ### Hochverfügbarkeit
+{: #htcc_considerations-ha}
 
 Zwei CloudControl-Appliances werden in einer Aktiv/Passiv-Konfiguration bereitgestellt.
 
 ### Lizenzen und Gebühren
+{: #htcc_considerations-licenses}
 
 Lizenz pro Host: Eine HyTrust CloudControl-Lizenz wird für jeden Host in der Umgebung bestellt.
 
 ## Hinweise zum Entfernen von HyTrust CloudControl on IBM Cloud
+{: #htcc_considerations-remove}
 
 Vor dem Entfernen des Service "HyTrust CloudControl on {{site.data.keyword.cloud_notm}}" müssen Sie sicherstellen, dass das **Root Password Vaulting** inaktiviert wurde, falls diese Funktion konfiguriert wurde, und dass alle geschützten Hosts aus HyTrust CloudControl gelöscht wurden.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #htcc_considerations-related}
 
-* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services/htcc_ordering.html)
-* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services/managinghtcc.html)
-* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_ordering)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtcc)
+* [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [HyTrust-Website](https://www.hytrust.com/)

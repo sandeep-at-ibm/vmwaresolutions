@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # Typen von VMware-Software-Updates
+{: #vum-type-updates}
 
 VMware verwendet die folgenden Begriffe, um Software-Updates zu beschreiben.
 
@@ -27,7 +28,8 @@ Tabelle 1. VMware-Software-Updates - Begriffsbestimmungen
 | VA-Upgrade |	Updates für eine virtuelle Appliance, die der Anbieter als Upgrade erachtet. |
 | VIB |	Ein VIB (vSphere Installation Bundle) ist ein einzelnes Softwarepaket. |
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vum-type-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

@@ -21,10 +21,10 @@ Wenn Sie die Option {{site.data.keyword.vmwaresolutions_full}} RiskForesight aus
 
 Die RiskForesight-Installation umfasst die folgenden übergeordneten Schritte:
 
-1. [Erste Planung sowie Voraussetzungen](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step1.html) – Kenntnis und Auswahl einer Bereitstellungsoption sowie Konfiguration von DNS, um eine FQDN/IP-Auflösung für die Anwendungskomponenten bereitzustellen.
-2. [Bereitstellung der virtuellen Maschine](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step2.html) - Bereitstellung der VMs über eine OVF-Vorlage. In der VM sind alle Anwendungskomponenten installiert.
-3. [Konfiguration der Anwendung](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step3.html) – Ausführung des Caveonix-Konfigurationsscripts, mit dem die Anwendungskomponente in jeder der VMs konfiguriert wird.
-4. [Einrichtung der Anwendung](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step4.html) – Einrichtung des Service-Providers und eines Tenants oder einer Organisation, um die Anwendung für Benutzer zugänglich zu machen.
+1. [Erste Planung sowie Voraussetzungen](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step1) – Kenntnis und Auswahl einer Bereitstellungsoption sowie Konfiguration von DNS, um eine FQDN/IP-Auflösung für die Anwendungskomponenten bereitzustellen.
+2. [Bereitstellung der virtuellen Maschine](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step2) - Bereitstellung der VMs über eine OVF-Vorlage. In der VM sind alle Anwendungskomponenten installiert.
+3. [Konfiguration der Anwendung](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step3) – Ausführung des Caveonix-Konfigurationsscripts, mit dem die Anwendungskomponente in jeder der VMs konfiguriert wird.
+4. [Einrichtung der Anwendung](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step4) – Einrichtung des Service-Providers und eines Tenants oder einer Organisation, um die Anwendung für Benutzer zugänglich zu machen.
 
 Mit der automatisierten Installation wird genau eine VM bereitgestellt, für die alle Anwendungskomponenten konfiguriert werden.
 {:note}
@@ -90,7 +90,7 @@ Die folgende Tabelle bildet eine Zusammenfassung der Bereitstellungen:
 
 Tabelle 4. Zusammenfassung
 
-|Bereitstellungsmodell	| umfassend	| Teilweise verteilt	| Vollständig verteilt |
+|Bereitstellungsmodell	|umfassend	|Teilweise verteilt	|Vollständig verteilt |
 |---|---|---|---|
 |Anzahl der Assets	|100	|500	|5000 |
 |Generierte Online-Daten von 30 Tagen (TB)	|4	|22	|219 |
@@ -104,4 +104,4 @@ Tabelle 4. Zusammenfassung
 ## Zugehörige Links
 {: #caveonix-deploy-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

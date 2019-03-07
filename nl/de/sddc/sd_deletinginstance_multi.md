@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Cloud Foundation-Instanzen in Konfiguration mit mehreren Standorten löschen
+{: #sd_deletinginstance_multi}
 
 Prüfen Sie folgende Aspekte, bevor Sie in einer Konfiguration mit mehreren Standorten planen, Cloud Foundation-Instanzen zu löschen.
 
@@ -30,6 +31,7 @@ Die gelöschte Instanz wird bis zum Ende des {{site.data.keyword.cloud_notm}}-Ab
 {:note}
 
 ## Vorgehensweise zum Löschen von Cloud Foundation-Instanzen in einer Konfiguration mit mehreren Standorten
+{: #sd_deletinginstance_multi-procedure}
 
 1. Entfernen Sie alle Services aus der sekundären Cloud Foundation-Instanz.
 2. Stellen Sie sicher, dass in die zu löschende sekundäre Instanz keine NSX-Objekte erweitert wurden.
@@ -39,7 +41,8 @@ Die gelöschte Instanz wird bis zum Ende des {{site.data.keyword.cloud_notm}}-Ab
 6. Wiederholen Sie die Schritte 1 bis 5 für alle sekundären Cloud Foundation-Instanzen in Ihrer Konfiguration mit mehreren Standorten.
 7. Nachdem Sie alle sekundären Instanzen gelöscht haben, können Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole auch die primäre Instanz löschen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #sd_deletinginstance_multi-related}
 
-* [Cloud Foundation-Instanzen löschen](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
-* [Services von Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Cloud Foundation-Instanzen löschen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)
+* [Services von Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)

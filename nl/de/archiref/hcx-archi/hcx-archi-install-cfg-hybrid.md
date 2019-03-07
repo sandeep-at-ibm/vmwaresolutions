@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Hybrid-Services installieren und konfigurieren
+{: #hcx-archi-install-cfg-hybrid}
 
 Das Installationsprogramm stellt für jede virtuelle Service-Appliance eine virtuelle Maschine bereit und konfiguriert diese. Die virtuellen Servicemaschinen werden sowohl lokal als auch in der Cloud bereitgestellt.
 
 ## Voraussetzungen
+{: #hcx-archi-install-cfg-hybrid-prereq}
 
 * Der HCX-Manager muss lokal installiert und bei einem für VCF/VCS HCX aktivierten Cloud-Endpunkt registriert werden.
 * Das virtuelle Zieldatenzentrum muss über genügend Ressourcen verfügen.
 
 ## Konfigurationsübersicht
+{: #hcx-archi-install-cfg-hybrid-config-ovw}
 
 Für den Konfigurationsvorgang wird davon ausgegangen, dass alle virtuellen Service-Appliances konfiguriert werden. Es sind jedoch nicht alle erforderlich.
 * Das Hybrid-Cloud-Gateway ist erforderlich.
@@ -24,14 +27,14 @@ Für den Konfigurationsvorgang wird davon ausgegangen, dass alle virtuellen Serv
 * Informationen zum Konfigurieren des Netzerweiterungsservice finden Sie im Abschnitt _Network Extension Service konfigurieren_. Die Implementierung der optionalen Appliance kann verzögert werden, indem Sie zur Seite "Hybrid-Services" zurückkehren und die Appliance später installieren.
 
 ## Installation und Konfiguration der virtuellen Hybrid-Services-Appliance starten
+{: #hcx-archi-install-cfg-hybrid-start-hsva}
 
 Die einfache Webschnittstelle wird zum Installieren der virtuellen Service-Appliance und zum Konfigurieren weiterer Layer-2-Konzentratoren verwendet.
-
-### Voraussetzung für die Installation und Konfiguration der virtuellen Hybrid-Services-Appliance
 
 Der HCX-Manager muss installiert und bei dem für VCF/VCS HCX aktivierten Cloud-Endpunkt registriert sein.
 
 ### Vorgehensweise zur Installation und Konfiguration der virtuellen Hybrid-Services-Appliance
+{: #hcx-archi-install-cfg-hybrid-proc-install}
 
 1. Melden Sie sich bei vSphere Web Client an.
 2. Klicken Sie auf der Registerkarte **Home** auf das Symbol **Hybrid-Cloud-Services**.
@@ -40,19 +43,18 @@ Der HCX-Manager muss installiert und bei dem für VCF/VCS HCX aktivierten Cloud-
 5. Wählen Sie auf der Seite **Hybrid-Services wählen** die zu installierenden Services aus und klicken Sie auf **Weiter**.
 
 ### Nächste Schritte
+{: #hcx-archi-install-cfg-hybrid-start-hsva-next}
 
 1. Der nächste Schritt besteht in der Konfiguration des Hybrid-Cloud-Gateways, falls erforderlich.
 2. Zu einer vorhandenen Installation kann jederzeit ein Layer-2-Konzentrator hinzugefügt werden, sofern genügend Ressourcen zur Unterstützung der Erweiterung verfügbar sind.
 
 ## Hybrid-Cloud-Gateway konfigurieren
+{: #hcx-archi-install-cfg-hybrid-config-hcg}
 
-Konfigurieren Sie die virtuelle Hybrid-Cloud-Gateway-Service-Appliance.
-
-### Voraussetzungen für die Konfiguration des Hybrid-Cloud-Gateways
-
-Befolgen Sie die Schritte im Abschnitt _Installation und Konfiguration der virtuellen Hybrid-Services-Appliance starten_ und überprüfen Sie das Hybrid-Cloud-Gateway.
+Konfigurieren Sie die virtuelle Hybrid-Cloud-Gateway-Service-Appliance. Bevor Sie beginnen, befolgen Sie die Schritte im Abschnitt _Installation und Konfiguration der virtuellen Hybrid-Services-Appliance starten_ und überprüfen Sie das Hybrid-Cloud-Gateway.
 
 ### Vorgehensweise zur Konfiguration des Hybrid-Cloud-Gateways
+{: #hcx-archi-install-cfg-hybrid-proc-config-hcg}
 
 Geben Sie auf der Seite **Hybrid-Cloud-Gateway** die folgenden Werte an und klicken Sie auf **Weiter**:
 * **Netz** - Der Switch, der die Verbindung zur Managementschnittstelle des Hybrid-Cloud-Gateways herstellt. In den Anwendungsfällen 1 und 2 kann es sich um einen standardmäßigen virtuellen Switch oder um einen virtuellen verteilten Switch handeln. Für jede Konfiguration, die die Layer-2-Erweiterung verwendet, muss es sich um einen virtuellen verteilten Switch handeln.
@@ -64,14 +66,12 @@ Geben Sie auf der Seite **Hybrid-Cloud-Gateway** die folgenden Werte an und klic
 * Unter **Erweitert (optional)** wählen Sie gegebenenfalls das vMotion-Netz und legen die Kennwörter für **admin** und **root** fest. Diese Kennwörter sind speziell für die Appliance "Hybrid-Cloud-Gateway" vorgesehen. Der Benutzername und das Kennwort müssen nicht mit denen für die Hybrid-Cloud-Services-Appliance konfigurierten übereinstimmen.
 
 ## Network Extension Service konfigurieren
+{: #hcx-archi-install-cfg-hybrid-config-nes}
 
-Konfigurieren Sie einen Network Extension Service entweder für die Einzelpfadbereitstellung oder für eine eigenständige Netzerweiterung in einem alternativen Pfad.
-
-### Voraussetzungen für die Konfiguration des Network Extension Service
-
-Wählen Sie den Network Extension Service aus. Wenn die Einzelpfadkonfiguration installiert ist, ist **Network Extension** die einzig verfügbare Auswahl.
+Konfigurieren Sie einen Network Extension Service entweder für die Einzelpfadbereitstellung oder für eine eigenständige Netzerweiterung in einem alternativen Pfad. Bevor Sie beginnen, wählen Sie den Network Extension Service aus. Wenn die Einzelpfadkonfiguration installiert ist, ist **Network Extension** die einzig verfügbare Auswahl.
 
 ### Vorgehensweise zur Konfiguration des Network Extension Service
+{: #hcx-archi-install-cfg-hybrid-proc-config-nes}
 
 1. Wählen Sie auf der Seite **Network Extension Service** einen virtuellen verteilten Switch aus dem Menü **Verteilter Switch** aus. Wenn Sie einen Standard-Layer-2-Konzentrator installieren, ist das Kontrollkästchen **Erweiterte Netze über das Hybrid-Cloud-Gateway weiterleiten** verfügbar. Für den Layer-2-Konzentrator mit hohem Durchsatz (High Throughput L2C) ist es nicht verfügbar.
 2. Wenn **Erweiterte Netze über das Hybrid-Cloud-Gateway weiterleiten** ausgewählt ist, bestimmt das Installationsprogramm für den Layer-2-Konzentrator (auf Grundlage des Switch) eine sinnvolle Platzierung und befüllt die entsprechenden Angaben. Andernfalls müssen die Platzierungsinformationen im nächsten Schritt manuell eingegeben werden.
@@ -87,10 +87,12 @@ Wählen Sie den Network Extension Service aus. Wenn die Einzelpfadkonfiguration 
 6. Klicken Sie auf **Weiter**. Auf der Seite **Bereit zum Abschließen** prüfen Sie die Angaben und klicken Sie auf **Fertigstellen**.
 
 ## Bereitstellung der Service-Appliance überwachen
+{: #hcx-archi-install-cfg-hybrid-monitor}
 
 Über die Taskkonsole kann der Fortschritt der Bereitstellung einer virtuellen Servicemaschine überwacht werden.
 
 ### Vorgehensweise zur Überwachung der Bereitstellung einer Service-Appliance
+{: #hcx-archi-install-cfg-hybrid-monitor-proc}
 
 1. Melden Sie sich bei vSphere Web Client an. Klicken Sie auf der Registerkarte **Home** auf das Symbol **Hybrid-Cloud-Services**.
 2. Klicken Sie im Teilfenster **Hybrid-Cloud-Services** auf die Registerkarte **Hybrid-Services**. Die Bereitstellung der virtuellen Appliance kann über die Taskkonsole überwacht werden.
@@ -102,14 +104,12 @@ Wählen Sie den Network Extension Service aus. Wenn die Einzelpfadkonfiguration 
 8. Überprüfen Sie die Konfigurationszusammenfassung für die virtuellen Hybrid-Services-Appliances.
 
 ## Tunnelstatus anzeigen
+{: #hcx-archi-install-cfg-hybrid-view-tunnel}
 
-Zeigen Sie den Status des Cloud-Gateway-Tunnels an.
-
-### Voraussetzungen für die Anzeige des Tunnelstatus
-
-Der Network Extension Service muss aktiv sein, damit Sie ein Netz erweitern können.
+Zeigen Sie den Status des Cloud-Gateway-Tunnels an. Der Network Extension Service muss aktiv sein, damit Sie ein Netz erweitern können.
 
 ### Vorgehensweise zur Anzeige des Tunnelstatus
+{: #hcx-archi-install-cfg-hybrid-proc-view-tunnel}
 
 1. Zum Überprüfen des Tunnelstatus über den Web-Client wählen Sie im Bestand die Option **Hybrid-Cloud-Services** aus und klicken Sie auf die Registerkarte **Hybrid-Services**.
 2. Um die erfolgreiche Erstellung eines Hybrid-Cloud-Gateway-Tunnels zu bestätigen, wird der Status des CGW (Akronym für das Hybrid-Cloud-Gateway) als **Aktiv** angezeigt. Ganz rechts ist der Tunnel grün dargestellt.
@@ -117,13 +117,16 @@ Der Network Extension Service muss aktiv sein, damit Sie ein Netz erweitern kön
 ## Layer-2-Netz hin zu IBM Cloud erweitern
 
 Sie können ein Layer-2-Netz vom lokalen Rechenzentrum aus in eine VCF/VCS HCX-fähige Cloud hinein erweitern.
+{: #hcx-archi-install-cfg-hybrid-stretch-layer-2}
 
 ### Voraussetzungen für die Erweiterung eines Layer-2-Netzes hin zu IBM Cloud
+{: #hcx-archi-install-cfg-hybrid-prereq-stretch-layer-2}
 
 * Nur mit VLAN-Tagging versehene Portgruppen (also nicht VLAN-Typ "None" oder VLAN-ID = 0) können erweitert werden. VXLANs werden als VLANs betrachtet.
 * Bei dieser Vorgehensweise wird der Assistent **Netz erweitern** verwendet. Dieser Assistent muss über die Netz-Bestandsansicht in vSphere® Web Client ausgeführt werden. Wenngleich der Assistent auch in anderen Ansichten angezeigt wird, muss er aus dem Bestandskontext heraus ausgeführt werden, damit die richtigen Informationen angezeigt werden.
 
 ### Vorgehensweise zum Vergrößern eines Layer-2-Netzes hin zu IBM Cloud
+{: #hcx-archi-install-cfg-hybrid-proc-stretch-layer-2}
 
 1. Melden Sie sich bei vSphere Web Client an. Klicken Sie im mittleren Teilfenster **Home** in der Liste **Bestand** auf das Symbol **Vernetzung**.
 2. Suchen Sie in der Hierarchie **Vernetzung** die Portgruppe für das zu erweiternde Netz.
@@ -138,6 +141,7 @@ Sie können ein Layer-2-Netz vom lokalen Rechenzentrum aus in eine VCF/VCS HCX-f
 7. Um den Fortschritt der Netzerweiterung zu verfolgen, gehen Sie zum Fenster **Letzte Tasks**, klicken auf die Registerkarte **Alle** und zeigen Sie die Ansicht **Tasks aller Benutzer** an.
 8. Zum Öffnen der Taskkonsole klicken Sie auf **Weitere Tasks**. Die Netzerweiterung ist abgeschlossen, wenn der Taskstatus **Netz erweitern** mit **Abgeschlossen** angezeigt wird.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #hcx-archi-install-cfg-hybrid-related}
 
-* [HCX ändern oder deinstallieren](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
+* [HCX ändern oder deinstallieren](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Übersicht über die Anwendungsmodernisierung
+{: #vcsnsxt-appmod}
 
 Das folgende Diagramm zeigt die Referenzarchitektur der Anwendungsmodernisierung, die Acme Skateboards bereitstellt und die in dieser Reihe von Dokumenten eingehend beschrieben wird.
 
@@ -35,6 +36,7 @@ Die Schlüsselkomponenten der Architektur sind Folgende:
   - Datenverkehr zwischen traditionellen Systemen im lokalen Rechenzentrum und Cloud-VMs
 
 ## Wichtige Vorteile für Acme Skateboards
+{: #vcsnsxt-appmod-benefits}
 
 - Beschleunigte Lieferung von IT-Projekten für Entwickler und Geschäftsbereiche durch Verringerung des Zeitaufwands für Beschaffung, Architektur, Implementierung und Bereitstellung von Ressourcen von Wochen oder sogar Monaten auf Stunden. Die Anwendungszeit bis zum Wert sinkt, wenn Kunden warten müssen, bis Netz- oder Sicherheitsteams Services wie Lastverteilungsfunktionen, Firewalls, Switches und Router bestellen können.
 - Verbesserte Sicherheit mit dedizierten Bare Metal Servern in einer gehosteten privaten Cloud, einschließlich Bereitstellung über einen privaten Endpunkt an {{site.data.keyword.cloud_notm}}-Services wie beispielsweise {{site.data.keyword.containerlong_notm}} und KMIP.
@@ -45,6 +47,7 @@ Kunden, die sich für cloudnative Anwendungsplattformen wie {{site.data.keyword.
 
 Diese Referenzarchitektur zeigt, wie VCS, {{site.data.keyword.icpfull_notm}} und {{site.data.keyword.containerlong_notm}} das Unternehmen Acme Skateboards zuverlässig beim Prozess der Anwendungsmodernisierung unterstützen.
 
-### Zugehörige Links
+## Zugehörige Links
+{: #vcsnsxt-appmod-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
