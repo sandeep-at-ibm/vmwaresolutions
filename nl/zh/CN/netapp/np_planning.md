@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # 针对 NetApp ONTAP Select 实例的需求和规划
+{: #np_planning}
 
 在订购 NetApp ONTAP Select 实例之前，请查看以下需求。根据 {{site.data.keyword.CloudDataCent}} 位置以及工作负载性能和容量需求来规划实例。
 
 ## IBM Cloud 帐户需求
+{: #np_planning-account-req}
 
-要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
+要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
 
 ## IBM Cloud Data Center 可用性
+{: #np_planning-dc-availability}
 
 NetApp ONTAP Select 部署对物理基础架构有严格要求。因此，只能将实例部署在满足这些需求的 {{site.data.keyword.CloudDataCents_notm}} 中。以下 {{site.data.keyword.CloudDataCents_notm}} 可用于部署 NetApp ONTAP Select：
 
@@ -56,7 +59,8 @@ NetApp ONTAP Select 部署对物理基础架构有严格要求。因此，只能
 |WDC07|华盛顿|北美东部|高性能（中型）、高性能（大型）、高容量
 
 
-### 相关链接
+## 相关链接
+{: #np_planning-related}
 
-* [NetApp ONTAP Select 概述](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
-* [订购 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [NetApp ONTAP Select 概述](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)
+* [订购 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)

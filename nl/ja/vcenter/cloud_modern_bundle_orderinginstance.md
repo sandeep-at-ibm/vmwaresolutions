@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,25 +13,30 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Single-node Trial for Migration and App Modernization インスタンスの注文、表示、および削除
+{: #cloud_modern_bundle_orderinginstance}
 
 Single-node Trial for Migration and App Modernization インスタンスを注文する前に、計画要件を確認してください。
 
 ## Single-node Trial for Migration and App Modernization インスタンスの注文の要件と計画
+{: #cloud_modern_bundle_orderinginstance-req}
 
 以下の要件を満たし、以下の作業を完了していることを確認してください。
 
 ### オンプレミス HCX インスタンスの前提条件
+{: #cloud_modern_bundle_orderinginstance-hcx-req}
 
 * VMware vSphere および vCenter 5.5 以降が必要です。
 * vSphere 環境には、{{site.data.keyword.cloud_notm}} にマイグレーションされる VM 用の分散スイッチが必要です。
 * HCX Manager 仮想アプライアンスが、オンプレミス環境のプライベート・ネットワークにデプロイできる状態であり、パブリック・インターネットにもアクセスできる状態でなければなりません。
 
 ### IBM Cloud インフラストラクチャー・アカウント
+{: #cloud_modern_bundle_orderinginstance-account-req}
 
 * {{site.data.keyword.vmwaresolutions_short}} を使用してインスタンスを注文するには、{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントが必要です。 インスタンス内で注文したコンポーネントの費用は、その {{site.data.keyword.cloud_notm}} アカウントに請求されます。
 *  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャー資格情報を構成します。 {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「設定」**をクリックします。
 
 ### インスタンス名の要件
+{: #cloud_modern_bundle_orderinginstance-inst-name-req}
 
 インスタンス名の要件を確認します。
 * 英数字とダッシュ (-) の文字だけを使用できます。
@@ -40,6 +45,7 @@ Single-node Trial for Migration and App Modernization インスタンスを注�
 * インスタンス名はアカウント内で固有である必要があります。
 
 ## Single-node Trial for Migration and App Modernization インスタンスを注文する手順
+{: #cloud_modern_bundle_orderinginstance-procedure}
 
 1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクションの**「Single-node Trial for Migration and App Modernization」**をクリックします。
 2. **「Single-node Trial for Migration and App Modernization」**ページで、**「続行」**をクリックします。
@@ -59,10 +65,12 @@ Single-node Trial for Migration and App Modernization インスタンスを注�
    4. **「プロビジョン」**をクリックします。
 
 ### 結果
+{: #cloud_modern_bundle_orderinginstance-results}
 
 インスタンスのデプロイメントが自動的に開始され、オンプレミスの HCX on {{site.data.keyword.cloud_notm}} サービス・アクティベーション・キーが注文されます。
 
 #### HCX on IBM Cloud のデプロイメント・プロセス
+{: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
 
 HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に行われます。 以下の手順が {{site.data.keyword.vmwaresolutions_short}} 自動化プロセスによって実行されます。
 1. {{site.data.keyword.cloud_notm}} インフラストラクチャー上の HCX 用に、次の 3 つのサブネットが注文されます。
@@ -90,6 +98,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 6. HCX Manager のホスト名と IP アドレスが VMware vCenter Server on {{site.data.keyword.cloud_notm}} の DNS サーバーに登録されます。
 
 #### インスタンスの詳細の表示
+{: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
 インスタンスの詳細を表示して、デプロイメントの状況を確認できます。 左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックし、**「vCenter Server インスタンス」**または**「オンプレミス HCX インスタンス」**表を見つけて、注文したインスタンスに関する情報を確認します。
 
@@ -98,6 +107,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 インスタンスの状況が**「使用可能」**に変わり、E メールで通知が届きます。
 
 ### 次に行うこと
+{: #cloud_modern_bundle_orderinginstance-next}
 
 オンプレミス HCX Enterprise Manager をインストールし、HCX on {{site.data.keyword.cloud_notm}} インスタンスへの接続を構成します。
 
@@ -143,6 +153,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 {:important}
 
 ## Single-node Trial for Migration and App Modernization インスタンスを削除する手順
+{: #cloud_modern_bundle_orderinginstance-deleting-procedure}
 
 Single-node Trial for Migration and App Modernization インスタンスを削除すると、以下のコンポーネントが順次解放されます。
 
@@ -167,9 +178,10 @@ Single-node Trial for Migration and App Modernization インスタンスを削�
    1. **「アクション」**列で削除アイコンをもう一度クリックします。
    2. **「インスタンスの削除」**ウィンドウで**「OK」**をクリックします。
 
-### 関連リンク
+## 関連リンク
+{: #cloud_modern_bundle_orderinginstance-related}
 
-* [vCenter Server および IBM Cloud Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [vCenter Server および IBM Cloud Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [IBM Cloud Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US)
 * [VMware Hybrid Cloud Extension の資料](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

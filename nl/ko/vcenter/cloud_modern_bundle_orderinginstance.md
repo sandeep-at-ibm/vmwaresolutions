@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,33 +13,39 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스의 주문, 보기 및 삭제
+{: #cloud_modern_bundle_orderinginstance}
 
 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스를 주문하기 전에 계획 요구사항을 검토하십시오.
 
 ## 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스 주문의 요구사항 및 계획
+{: #cloud_modern_bundle_orderinginstance-req}
 
 다음 요구사항을 확인하고 다음 태스크를 완료해야 합니다.
 
 ### 온프레미스 HCX 인스턴스에 대한 전제조건
+{: #cloud_modern_bundle_orderinginstance-hcx-req}
 
 * VMware vSphere 및 vCenter 5.5 이상이 필요합니다.
 * vSphere 환경에 {{site.data.keyword.cloud_notm}}로 마이그레이션될 VM에 대한 분배 스위치가 있어야 합니다.
 * HCX Manager Virtual Appliance가 온프레미스 환경의 사설 네트워크에 배치될 수 있어야 하고 공용 인터넷에 액세스하도록 허용되어야 합니다.
 
 ### IBM Cloud 인프라 계정
+{: #cloud_modern_bundle_orderinginstance-account-req}
 
 * {{site.data.keyword.vmwaresolutions_short}}를 사용하여 인스턴스를 주문하려면 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 있어야 합니다. 인스턴스에 주문된 컴포넌트의 비용이 해당 {{site.data.keyword.cloud_notm}} 계정으로 청구됩니다.
 *  **설정** 페이지에서 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성하십시오. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **설정**을 클릭하십시오.
 
 ### 인스턴스 이름 요구 사항
+{: #cloud_modern_bundle_orderinginstance-inst-name-req}
 
 인스턴스 이름 요구사항을 검토하십시오.
 * 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 인스턴스 이름은 영문자로 시작하고 영숫자로 끝나야 합니다. 
+* 인스턴스 이름은 영문자로 시작하고 영숫자로 끝나야 합니다.
 * 인스턴스 이름의 최대 길이는 10자입니다.
 * 인스턴스 이름은 계정 내에서 고유해야 합니다.
 
 ## 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스의 주문 프로시저
+{: #cloud_modern_bundle_orderinginstance-procedure}
 
 1. {{site.data.keyword.cloud_notm}} 카탈로그의 왼쪽 탐색 분할창에 있는 **VMware**를 클릭한 후 **가상 데이터 센터** 섹션에 있는 **마이그레이션 및 앱 현대화를 위한 단일 노드 평가판**을 클릭하십시오.
 2. **마이그레이션 및 앱 현대화를 위한 단일 노드 평가판** 페이지에서 **계속**을 클릭하십시오.
@@ -59,10 +65,12 @@ lastupdated: "2019-01-25"
    4. **프로비저닝**을 클릭하십시오.
 
 ### 결과
+{: #cloud_modern_bundle_orderinginstance-results}
 
 인스턴스의 배치가 자동으로 시작되고 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 서비스 활성 키가 주문됩니다.
 
 #### HCX on IBM Cloud에 대한 배치 프로세스
+{: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
 
 HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 단계는 {{site.data.keyword.vmwaresolutions_short}} 자동화 프로세스에 의해 완료됩니다.
 1. {{site.data.keyword.cloud_notm}} 인프라에서 HCX에 대해 3개의 서브넷이 주문됩니다.
@@ -90,6 +98,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 6. HCX Manager의 호스트 이름 및 IP 주소가 VMware vCenter Server on {{site.data.keyword.cloud_notm}}의 DNS 서버에 등록됩니다.
 
 #### 인스턴스 세부사항 보기
+{: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
 인스턴스 세부사항을 보고 배치 상태를 확인할 수 있습니다. 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하고 **vCenter Server 인스턴스** 또는 **온프레미스 HCX 인스턴스** 테이블을 찾아 주문한 인스턴스에 대한 정보를 보십시오.
 
@@ -98,6 +107,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
 ### 수행할 작업
+{: #cloud_modern_bundle_orderinginstance-next}
 
 온프레미스 HCX Enterprise Manager를 설치하고 HCX on {{site.data.keyword.cloud_notm}} 인스턴스에 대한 연결을 구성하십시오.
 
@@ -143,6 +153,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 {:important}
 
 ## 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스의 삭제 프로시저
+{: #cloud_modern_bundle_orderinginstance-deleting-procedure}
 
 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판을 삭제하는 경우 다음 컴포넌트가 순차적으로 릴리스됩니다.
 
@@ -167,9 +178,10 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
    1. **조치** 열에서 삭제 아이콘을 다시 클릭하십시오.
    2. **인스턴스 삭제** 창에서 **확인**을 클릭하십시오.
 
-### 관련 링크
+## 관련 링크
+{: #cloud_modern_bundle_orderinginstance-related}
 
-* [vCenter Server 및 IBM Cloud Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [vCenter Server 및 IBM Cloud Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [IBM Cloud Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US)
 * [VMware Hybrid Cloud Extension 문서](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

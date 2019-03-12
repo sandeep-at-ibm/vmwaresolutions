@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud への Stock Trader VM のリフトおよびシフト
+{: #vcscontent-hcx}
+
 Todd は、モダナイゼーション・ジャーニーの第 1 段階として、オンプレミスの VMware SDDC インスタンスを VMware vCenter Server on {{site.data.keyword.cloud}} にシームレスに拡張したいと考えています。 ビジネスを継続させ、ダウン時間を最小限に抑える必要があります。
 
 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle は、vCenter Server インスタンスとオンプレミスの VMware 仮想化データ・センターのシームレスな接続を可能にします。
@@ -32,6 +34,7 @@ Hybridity によって、オンプレミスと {{site.data.keyword.cloud_notm}} 
 
 Todd は Stock Trader をオンプレミスの VMware 環境から VMware on {{site.data.keyword.cloud_notm}} 環境にマイグレーションし、ダウン時間をゼロまたはほぼゼロにしてアプリケーションは再構成しないという要件に応えることができました。
 
-### 関連リンク
+## 関連リンク
+{: #vcscontent-hcx-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

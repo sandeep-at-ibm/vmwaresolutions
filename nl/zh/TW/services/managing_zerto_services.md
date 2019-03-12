@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # 要求 Zerto on IBM Cloud 的受管理服務
+{: #managing_zerto_services}
 
 Zerto on {{site.data.keyword.cloud}} 服務提供抄寫及災難回復功能。這些功能可以整合到部署供應項目，以保護及回復 {{site.data.keyword.cloud_notm}} 上 VMware 虛擬環境中的資料。
 
@@ -17,6 +18,7 @@ Zerto on {{site.data.keyword.cloud}} 服務提供抄寫及災難回復功能。�
 Zerto on {{site.data.keyword.cloud_notm}} 之受管理服務的下列模型可供使用。
 
 ## IBM Orchestrated Managed Services for Zerto
+{: #managing_zerto_services-orchestrated}
 
 如果您要使用 Zerto on {{site.data.keyword.cloud_notm}} 供應項目，則適合此模型。
 
@@ -27,23 +29,26 @@ Zerto on {{site.data.keyword.cloud_notm}} 之受管理服務的下列模型可�
 如需相關資訊，請參閱 [IBM Resiliency Orchestration](https://www.ibm.com/us-en/marketplace/disaster-recovery-orchestration)。
 
 ## IBM Managed Services for Zerto（無 Orchestration）
+{: #managing_zerto_services-without-orchestrated}
 
 在此模型中，會針對 Zerto on {{site.data.keyword.cloud_notm}} 佈建完整受管理的 DR 解決方案。如果您只要 Zerto Virtual Replication 的受管理服務（{{site.data.keyword.cloud_notm}} 上沒有 {{site.data.keyword.cloud_notm}} Resiliency Orchestration 服務），則適合此模型。
 
 如需相關資訊，請參閱 [IBM Resiliency Disaster Recovery 即服務](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top)。
 
 ## 要求 Zerto on IBM Cloud 受管理服務的程序
+{: #managing_zerto_services-procedure}
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**開始使用**。
 2. 向下捲動頁面，然後按一下**訂購其他受管理服務**下的 **Zerto on IBM Cloud 的受管理服務**卡片。
 3. 在 **Zerto on IBM Cloud** 頁面上，檢閱 Zerto on {{site.data.keyword.cloud_notm}} 即受管理服務的說明及技術規格，然後按一下**建立**。
 4. 根據您的需求指定配置設定，或接受預設值。
 5. 按一下 **vCenter Server** 或 **Cloud Foundation**，將服務新增至其中一個實例。
-6. 若要在訂購新實例時新增服務，請按一下**新增至新實例**，然後繼續訂購新的 [vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)、[vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html) 或 [Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html) 實例。
+6. 若要在訂購新實例時新增服務，請按一下**新增至新實例**，然後繼續訂購新的 [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)、[vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance) 或 [Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance) 實例。
 7. 若要將服務新增至現有實例，請按一下**新增至現有實例**，從清單中選取您要的實例，然後按一下**佈建**確認您要繼續訂購。
 
-### 相關鏈結
+## 相關鏈結
+{: #managing_zerto_services-related}
 
-* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
-* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

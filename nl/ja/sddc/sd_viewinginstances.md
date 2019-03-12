@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Cloud Foundation インスタンスの表示
+{: #sd_viewinginstances}
 
 異なるユーザー・アカウントについてプロビジョンされた VMware Cloud Foundation インスタンスのサマリーと詳細情報を表示します。
 
 ## Cloud Foundation インスタンスのサマリーを表示する手順
+{: #sd_viewinginstances-procedure-view-inst-summary}
 
 1 つのユーザー・アカウントについてプロビジョンされたすべての Cloud Foundation Select インスタンスのサマリーを表示するには、以下の手順を実行します。
 
@@ -50,6 +52,7 @@ lastupdated: "2019-01-24"
 | 削除済み | インスタンスは削除されました。 |
 
 ## Cloud Foundation インスタンスのプロパティーの詳細を表示する手順
+{: #sd_viewinginstances-procedure-view-inst-property}
 
 インスタンスのプロパティーの詳細を表示するには、次の手順を実行します。
 
@@ -75,6 +78,7 @@ lastupdated: "2019-01-24"
 | 状況  | インスタンスの状況<br><br>デプロイメント、またはインスタンスで実行したアクションの進行状況を示す情報が表示され、更新されます。 問題がある場合は、問題の調査と解決に役立つメッセージが表示されることがあります。 |
 
 ## Cloud Foundation インスタンスのアクセス情報を表示する手順
+{: #sd_viewinginstances-procedure-view-access-info}
 
 **「アクセス情報」**の下に、インスタンス関連コンポーネントのアクセス情報が表示されます。 表示されるパスワードは、システムによって生成される初期パスワードです。 それらを {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、インスタンスのサマリー・ページでは更新されません。
 
@@ -99,6 +103,7 @@ lastupdated: "2019-01-24"
 | vCenter ADMIN  | vSphere Web Client を使用して vCenter Server にログインするために使用できる VMware vCenter Single Sign-On ユーザー名とパスワード  |
 
 ## Cloud Foundation インスタンスのデプロイメント履歴を表示する手順
+{: #sd_viewinginstances-procedure-view-deploy-history}
 
 左側のナビゲーション・ペインで**「デプロイメント履歴」**をクリックすると、インスタンスのデプロイメント履歴が表示されます。
 
@@ -110,10 +115,12 @@ lastupdated: "2019-01-24"
 | Summary | 変更の詳細 |
 
 ## エラーが発生した場合の対処方法
+{: #sd_viewinginstances-if-errors-occur}
 
-インスタンスのデプロイメント中またはインスタンスの削除中にエラーが発生した場合、{{site.data.keyword.cloud_notm}} サポート・チームに自動的に通知されます。 チケットの状況については、[IBM サポートにお問い合わせください](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
+インスタンスのデプロイメント中またはインスタンスの削除中にエラーが発生した場合、{{site.data.keyword.cloud_notm}} サポート・チームに自動的に通知されます。 チケットの状況については、[IBM サポートにお問い合わせください](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
 
 ## 次に行うこと
+{: #sd_viewinginstances-next}
 
 {{site.data.keyword.vmwaresolutions_short}} コンソールまたは vSphere Web クライアントからインスタンスを管理します。
 
@@ -122,12 +129,13 @@ lastupdated: "2019-01-24"
 
 ログイン手順を実行するには、以下のトピックを参照してください。
 
-* vSphere Web Client にアクセスするための要件と必要な手順については、[Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html) を参照してください。
+* vSphere Web Client にアクセスするための要件と必要な手順については、[Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console) を参照してください。
 * VPN を使用して {{site.data.keyword.cloud_notm}} のプライベート・ネットワークにログインするためのアクセス・ポイントのリストについては、[VPN アクセス](http://www.softlayer.com/vpn-access){:new_window}を参照してください。
-* vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイする際に問題が発生した場合は、[vSphere Web Client を使用して OVF ファイルをデプロイする方法](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html)を参照してください。
+* vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイする際に問題が発生した場合は、[vSphere Web Client を使用して OVF ファイルをデプロイする方法](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf)を参照してください。
 
-### 関連リンク
+## 関連リンク
+{: #sd_viewinginstances-related}
 
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Cloud Foundation インスタンスの削除](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Cloud Foundation インスタンスの削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

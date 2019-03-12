@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # NetApp ONTAP Select 概述
+{: #np_netappoverview}
 
 查看 NetApp ONTAP Select on {{site.data.keyword.cloud}} 部署的体系结构和组件。
 
 ## NetApp ONTAP Select 体系结构
+{: #np_netappoverview-archi}
 
 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品通过提供存储虚拟化服务，完善了 vCenter Server 部署。
 
@@ -27,10 +29,12 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品通过提供存储
 ![NetApp ONTAP Select 体系结构](np_architecture.svg "NetApp ONTAP Select on IBM Cloud 的高级别体系结构")
 
 ### 物理基础架构
+{: #np_netappoverview-physical-infras}
 
 此层提供要由虚拟基础架构使用的物理基础架构（计算、网络和存储资源）。
 
 ### 虚拟化基础架构（计算、网络和 NetApp ONTAP Select）
+{: #np_netappoverview-virtual-infras}
 
 此层通过以下 VMware 产品和 NetApp ONTAP Select 产品对物理基础架构进行虚拟化：
 * VMware vSphere 对物理计算资源进行虚拟化。
@@ -44,6 +48,7 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品通过提供存储
 ![NetApp ONTAP Select 组件](np_netappcomponents.svg "NetApp ONTAP Select 的组件")
 
 ### 虚拟化管理
+{: #np_netappoverview-virtualization-mgmt}
 
 虚拟化管理层包含以下组件：
 
@@ -57,6 +62,7 @@ Manager
 NetApp ONTAP Select 在 VMware 集群中运行，并对主机上的本地存储器进行虚拟化。NetApp ONTAP Select 部署在专用模型中，其他工作负载不应与之共享集群。因此，NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品的硬件配置仅基于 NetApp ONTAP Select 的需求来设置大小。
 
 ## NetApp ONTAP Select 实例的技术规范
+{: #technical-specifications-for-netapp-ontap-select-instances}
 
 NetApp ONTAP Select 实例中包含以下组件。
 
@@ -64,6 +70,7 @@ NetApp ONTAP Select 实例中包含以下组件。
 {:note}
 
 ### 存储
+{: #np_netappoverview-storage}
 
 * 可从以下选项中进行选择：**高性能（中型）**、**高性能（大型）**和**高容量**
 * 具有热备用的 RAID 5
@@ -71,6 +78,7 @@ NetApp ONTAP Select 实例中包含以下组件。
 * 管理数据存储 - 500 GB（对于管理 VM）
 
 ### 预设置配置
+{: #np_netappoverview-preset-config}
 
 提供了带有以下配置选项的四个 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}：
 * **高性能（中型）**- 高级许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 128 GB RAM / 每节点 22 个 1.9 TB SSD 驱动器容量 / 4 节点集群的有效容量 - 59 TB
@@ -81,6 +89,7 @@ NetApp ONTAP Select 实例中包含以下组件。
 {:note}
 
 ### 硬件
+{: #np_netappoverview-hardware}
 
 * 三个 RAM 和磁盘选项：**高性能（中型）**、**高性能（大型）**和**高容量**
 * 两个 1 TB SATA 驱动器（ESXi 操作系统）
@@ -88,18 +97,21 @@ NetApp ONTAP Select 实例中包含以下组件。
 * VMware Server Virtualization 6.5
 
 ### 联网
+{: #np_netappoverview-network}
 
 * 10 Gbps 双公用和专用网络上行链路
 * 三个 VLAN（虚拟 LAN）：一个公用 VLAN 和两个专用 VLAN
 * 一个安全 VMware NSX Edge 服务网关
 
 ### 虚拟服务器实例
+{: #np_netappoverview-vsi}
 
 两个 VSI（虚拟服务器实例）：
 * 用于 Microsoft Active Directory (AD) 和域名系统 (DNS) 服务的 VSI。
 * 用于 IBM CloudBuilder 的 VSI，在完成实例部署后关闭。
 
 ### 许可证和费用
+{: #np_netappoverview-license-and-fee}
 
 *  四个 Premium 或 Standard Edition NetApp ONTAP Select 许可证（用户提供）
 *  VMware vSphere 6.5 Enterprise Plus Edition
@@ -118,12 +130,14 @@ NetApp ONTAP Select 实例中包含以下组件。
    这些活动的例外情况包括在 {{site.data.keyword.slportal}} 中管理共享存储器文件共享。此类活动包括：订购、删除（如果已安装，可能会影响数据存储）、授权和安装共享存储器文件共享。
 
 ## 防火墙注意事项
+{: #np_netappoverview-firewall-considerations}
 
 如果在使用防火墙，那么必须针对来自 {{site.data.keyword.IBM}} CloudDriver 虚拟服务器实例 (VSI) 和 SDDC Manager 虚拟机 (VM) 的所有通信配置规则。这些规则必须允许所有协议在 IP 地址 `10.0.0.0/8` 和 `161.26.0.0/16` 上进行通信。此类防火墙的示例为 NSX 分布式防火墙 (DFW) 或 Vyatta 防火墙。
 
-### 相关链接
+## 相关链接
+{: #np_netappoverview-related}
 
-* [规划 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_planning.html#requirements-and-planning-for-netapp-ontap-select-instances)
-* [订购 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [规划 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning#requirements-and-planning-for-netapp-ontap-select-instances)
+* [订购 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [NetApp ONTAP 文档中心](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){:new_window}

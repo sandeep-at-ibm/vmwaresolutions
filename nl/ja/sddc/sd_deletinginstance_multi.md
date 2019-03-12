@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # マルチサイト構成での Cloud Foundation インスタンスの削除
+{: #sd_deletinginstance_multi}
 
 マルチサイト構成で Cloud Foundation インスタンスを削除する前に、以下の考慮事項を確認してください。
 
@@ -30,6 +31,7 @@ Cloud Foundation インスタンスを削除すると、以下のコンポーネ
 {:note}
 
 ## マルチサイト構成で Cloud Foundation インスタンスを削除する手順
+{: #sd_deletinginstance_multi-procedure}
 
 1. 2 次 Cloud Foundation インスタンスからサービスをすべて削除します。
 2. 削除するセカンダリー・インスタンスに NSX オブジェクトを展開していないことを確認します。
@@ -39,7 +41,8 @@ Cloud Foundation インスタンスを削除すると、以下のコンポーネ
 6. マルチサイト構成のすべてのセカンダリー Cloud Foundation インスタンスについて手順 1 から 5 までを繰り返します。
 7. すべてのセカンダリー・インスタンスを削除したら、{{site.data.keyword.vmwaresolutions_short}} コンソールからプライマリー・インスタンスも削除できます。
 
-### 関連リンク
+## 関連リンク
+{: #sd_deletinginstance_multi-related}
 
-* [Cloud Foundation インスタンスの削除](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Cloud Foundation インスタンスの削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)
+* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)

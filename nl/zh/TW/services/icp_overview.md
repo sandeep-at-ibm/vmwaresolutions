@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # IBM Cloud Private Hosted 概觀
+{: #icp_overview}
 
 {{site.data.keyword.cloud}} Private Hosted 服務會自動將 {{site.data.keyword.cloud_notm}} Private Hosted 部署在 VMware vCenter Server 實例上。此服務會將微服務和容器的功能帶入 {{site.data.keyword.cloud_notm}} 上的 VMware 環境。使用此服務，您可以將熟悉的相同 VMware 與 {{site.data.keyword.cloud_notm}} Private 作業模型和工具，從內部部署延伸到 {{site.data.keyword.cloud_notm}}。
 
@@ -22,6 +23,7 @@ lastupdated: "2019-01-24"
 {:note}
 
 ## IBM Cloud Private Hosted 的技術規格
+{: #technical-specifications-for-ibm-cloud-private-hosted}
 
 下表列出為**正式作業就緒**環境和**開發/測試**環境訂購 IBM Cloud Private Hosted 服務的最低需求。
 
@@ -33,6 +35,7 @@ lastupdated: "2019-01-24"
 | 開發/測試 | 30 | 200 | 3 | 4,000 |
 
 ### IBM Cloud Private Hosted 的資源需求
+{: #resource-requirements-for-ibm-cloud-private-hosted}
 
 下表列出「正式作業就緒」和「開發/測試」環境中 {{site.data.keyword.cloud_notm}} Private Hosted 服務的資源需求。
 
@@ -69,10 +72,12 @@ lastupdated: "2019-01-24"
 | 記載的限制 | 30 | 200 |  | 4,000 |  |
 
 ### 計算 IBM Cloud Private Hosted 空間需求的公式
+{: #icp_overview-formulas}
 
 下列公式用來計算 IBM Cloud Private 的空間需求及管理上的額外需要。
 
 #### 公式 1
+{: #icp_overview-formulas-1}
 
 `AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
@@ -89,6 +94,7 @@ lastupdated: "2019-01-24"
 | HostVsanOverheadCorePercentage | vSAN 所使用的主機核心百分比，其等於 10% ，如果主機非 vSAN，則等於 0%| % | 10% |	0% |
 
 #### 公式 2
+{: #icp_overview-formulas-2}
 
 `AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
@@ -107,18 +113,21 @@ lastupdated: "2019-01-24"
 | HostVsanOverheadMemory | vSAN 管理所保留的記憶體 GB 數（不論磁碟大小為何）（等於 7 GB），如果主機非 vSAN，則等於 0 GB| GB |  7	| 0 |
 
 ## 安裝 IBM Cloud Private Hosted 時的考量
+{: #icp_overview-install}
 
 * 請先收集必要的授權，再安裝 {{site.data.keyword.cloud_notm}} Private Hosted 服務。建議您確保授權不僅可以支援起始 {{site.data.keyword.cloud_notm}} Private Hosted 部署，還可以支援基礎架構中未來的 {{site.data.keyword.cloud_notm}} Private Hosted 大小擴充。
 * 對於「正式作業就緒」環境中的 {{site.data.keyword.cloud_notm}} Private Hosted 部署，不支援每個主機 64 GB RAM。因此，您必須對 **RAM** 選取大於 64 GB 的選項。
 * 在您的環境中安裝 {{site.data.keyword.cloud_notm}} Private Hosted 服務之前，會針對環境中預設叢集的可用容量執行檢查，以確保服務元件適合。如果容量檢查未通過，則不會安裝該服務，且主控台上的服務狀態會設為**容量驗證失敗**。此外，還會顯示具有更多詳細資料的主控台訊息，並透過電子郵件通知您。若要安裝服務，您必須新增多個主機，或者透過釋放 RAM、CPU 或磁碟空間來增加預設叢集中的容量，然後在主控台中再次新增服務。之後，您可以按一下它旁邊的**刪除**圖示，來移除處於**容量驗證失敗**狀態中的現有服務。
 
 ## 移除 IBM Cloud Private Hosted 時的考量
+{: #icp_overview-remove}
 
 * {{site.data.keyword.cloud_notm}} 只會刪除 {{site.data.keyword.cloud_notm}} Private Hosted 服務起始安裝期間所部署的虛擬機器 (VM)，不會清除安裝後部署的任何節點。
 * {{site.data.keyword.cloud_notm}} 將會刪除 {{site.data.keyword.cloud_notm}} Private Hosted 服務起始部署期間所建立的 VXLAN、DLR 和邊緣閘道。開始移除 {{site.data.keyword.cloud_notm}} Private Hosted 服務之後，您部署在 VXLAN 上的 VM 就會失去連線功能。
 
-### 相關鏈結
+## 相關鏈結
+{: #icp_overview-related}
 
-* [訂購 IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services/icp_ordering.html)
-* [vCenter Server 和 IBM Cloud Private 手冊](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [訂購 IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
+* [vCenter Server 和 IBM Cloud Private 手冊](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [開立 IBM Cloud Private 的問題單](https://www.ibm.com/mysupport/s/?language=en_US)

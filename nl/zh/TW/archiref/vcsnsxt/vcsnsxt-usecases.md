@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 使用案例
+{: #vcsnsxt-usecases}
 
 ## VMware 工作負載移轉至 IBM Cloud
+{: #vcsnsxt-usecases-wkld-mig}
 
 Acme Skateboards 想要將其內部部署 VMware SDDC 實例無縫延伸到 VMware vCenter Server on {{site.data.keyword.cloud}} 實例。他們必須讓業務持續運作，並使關閉時間降到最低。重新配置其應用程式以便在雲端執行並不是最佳解決方案。
 
@@ -33,6 +35,7 @@ VMware HCX 元件部署為 vCenter Server 目標站台中的虛擬機器 (VM)，
 - **安全原則的移轉** - 如果在內部部署使用 NSX，則任何安全原則、防火牆等等，都會隨著工作負載一起移動。
 
 ## 混合式架構部署
+{: #vcsnsxt-usecases-hybrid-archi-deployment}
 
 Acme Skateboards 想要在由 vCenter Server with Hybridity Bundle 與 {{site.data.keyword.icpfull_notm}} 組成的 {{site.data.keyword.cloud_notm}} 上部署混合式架構，以進行應用程式現代化。他們的需求是在 VN 上執行其資料庫、在容器中執行應用程式和 Web 介面，而且想要使用一組共用的工具來進行網路和安全管理。
 
@@ -44,7 +47,7 @@ Acme Skateboards 想要在由 vCenter Server with Hybridity Bundle 與 {{site.da
 
 使用 {{site.data.keyword.cloud_notm}} 自動化，Acme Skateboards 可以佈建封裝 vCenter Server 的混合式解決方案，以在 vCenter Server 上執行其資料庫 VM 和 {{site.data.keyword.icpfull_notm}}，並在容器中執行其應用程式和前端系統 Web 服務。NSX 為其提供一組共用的管理工具，用來管理層疊網路中的網路和安全。
 
-如需 NSX-V 的相關資訊，請參閱 [NSX-V 概觀](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-ic4vnsxv.html)。如需 vCenter Server 及 {{site.data.keyword.icpfull_notm}} 供應項目的相關資訊，請參閱 [vCenter Server 及 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)。
+如需 NSX-V 的相關資訊，請參閱 [NSX-V 概觀](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)。如需 vCenter Server 及 {{site.data.keyword.icpfull_notm}} 供應項目的相關資訊，請參閱 [vCenter Server 及 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)。
 
 圖 2. 具有 {{site.data.keyword.icpfull_notm}} 的 vCenter Server
 ![具有 {{site.data.keyword.icpfull_notm}} 的 vCenter Server](vcsnsxt-nsxvhl.svg)
@@ -62,6 +65,7 @@ Acme Skateboards 想要在由 vCenter Server with Hybridity Bundle 與 {{site.da
 
 使用這個解決方案，Acme Skateboards 已順利將其內部部署 VMware 工作負載移轉至 {{site.data.keyword.cloud_notm}}，以滿足極短或沒有任何關閉時間且不需重新配置應用程式的需求。如需 vCenter Server with Hybridity Bundle 的相關資訊，請參閱 [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)。
 
-### 相關鏈結
+## 相關鏈結
+{: #vcsnsxt-usecases-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

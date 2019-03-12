@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # 查看 Cloud Foundation 实例
+{: #sd_viewinginstances}
 
 查看针对不同用户帐户供应的 VMware Cloud Foundation 实例的摘要和详细信息。
 
 ## 查看 Cloud Foundation 实例摘要的过程
+{: #sd_viewinginstances-procedure-view-inst-summary}
 
 要查看针对用户帐户供应的所有 Cloud Foundation 实例的摘要，请完成以下步骤：
 
@@ -50,6 +52,7 @@ lastupdated: "2019-01-24"
 |已删除|实例已删除。|
 
 ## 查看 Cloud Foundation 实例属性详细信息的过程
+{: #sd_viewinginstances-procedure-view-inst-property}
 
 要查看实例的属性详细信息，请执行以下操作：
 
@@ -75,6 +78,7 @@ lastupdated: "2019-01-24"
 |状态|实例的状态<br><br>显示的信息提供有关部署进度或对实例所执行操作的更新。如果发生问题，那么可能会显示一条消息以帮助您调查和解决问题。|
 
 ## 查看 Cloud Foundation 实例的访问信息的过程
+{: #sd_viewinginstances-procedure-view-access-info}
 
 在**访问信息**下，查看与实例相关的组件的访问信息。显示的密码是系统生成的初始密码。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部对这些信息进行更改，那么不会在实例摘要页面上更新这些信息。
 
@@ -99,6 +103,7 @@ lastupdated: "2019-01-24"
 |vCenter ADMIN|可用于通过 vSphere Web Client 登录到 vCenter Server 的 VMware vCenter Single Sign-On 用户名和密码|
 
 ## 查看 Cloud Foundation 实例的部署历史记录的过程
+{: #sd_viewinginstances-procedure-view-deploy-history}
 
 单击左侧导航窗格中的**部署历史记录**，以查看实例的部署历史记录。
 
@@ -110,10 +115,12 @@ lastupdated: "2019-01-24"
 |摘要|更改的详细信息|
 
 ## 发生错误时要执行的操作
+{: #sd_viewinginstances-if-errors-occur}
 
-如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
+如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
 
 ## 后续步骤
+{: #sd_viewinginstances-next}
 
 通过 {{site.data.keyword.vmwaresolutions_short}} 控制台或 vSphere Web Client 来管理实例。
 
@@ -122,12 +129,13 @@ lastupdated: "2019-01-24"
 
 查看以下主题，以获取有关帮助您完成登录指示信息的信息：
 
-* 有关访问 vSphere Web Client 之前的需求和必需步骤，请参阅[连接到 vSphere Web Client 时发生超时](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html)。
+* 有关访问 vSphere Web Client 之前的需求和必需步骤，请参阅[连接到 vSphere Web Client 时发生超时](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console)。
 * 有关使用 VPN 登录到 {{site.data.keyword.cloud_notm}} 专用网络的访问点列表，请参阅 [VPN 访问](http://www.softlayer.com/vpn-access){:new_window}。
-* 如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html)。
+* 如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf)。
 
-### 相关链接
+## 相关链接
+{: #sd_viewinginstances-related}
 
-* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [扩展和收缩 Cloud Foundation 实例的容量](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [删除 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [扩展和收缩 Cloud Foundation 实例的容量](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [删除 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

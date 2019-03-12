@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-30"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2018-11-30"
 {:important: .important}
 
 # Zerto on IBM Cloud에 대한 제거 프로세스
+{: #removingzertodr}
 
 Zerto on {{site.data.keyword.cloud}} 서비스의 제거 프로세스가 자동화되었습니다. Zerto on {{site.data.keyword.cloud_notm}} 서비스의 성공적인 제거를 위해 다음 단계가 완료됩니다.
 
 ## Zerto on IBM Cloud를 제거하는 방법
+{: #removingzertodr-remove}
 
 1. 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하고 서비스를 제거할 인스턴스를 클릭하십시오.
 2. **서비스** 탭을 클릭하십시오.
@@ -33,10 +35,12 @@ Zerto on {{site.data.keyword.cloud}} 서비스의 제거 프로세스가 자동�
       {:note}
 
 ## 결과
+{: #removingzertodr-results}
 
 서비스 제거가 완료된 후 이메일 및 **설치된 서비스** 탭에서 제거된 서비스 항목을 통해 알림을 받습니다.
 
-### 관련 링크
+## 관련 링크
+{: #removingzertodr-related}
 
 * [Zerto on {{site.data.keyword.cloud_notm}} 주문](zerto_ordering.html)
 * [Zerto on {{site.data.keyword.cloud_notm}} 관리](managingzertodr.html)

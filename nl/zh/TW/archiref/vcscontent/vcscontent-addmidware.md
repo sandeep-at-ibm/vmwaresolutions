@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 將中介軟體重構及新增至 IBM Cloud Private
+{: #vcscontent-addmidware}
 
 既然 Stock Trader 正在容器中執行，而且 Jane 滿意現行微服務，她及 Todd 就可以處理如何利用額外的功能來加強應用程式。藉由重構 Stock Trader 微服務來處理增加的活動及可調整性，他們都會看到將中介軟體新增至 {{site.data.keyword.cloud}} Private 的需求。某個中介軟體已存在於其資料中心，因此，在新增某個新中介軟體的情況下，會成為更換平台練習。
 
@@ -18,6 +19,7 @@ lastupdated: "2019-01-23"
 此解決方案重構可讓一般平台執行應用程式及必要服務，並引入更簡單的管理平面。
 
 ## 內容選項
+{: #vcscontent-addmidware-content-choices}
 
 {{site.data.keyword.cloud_notm}} Private 具有各種內容選擇，而 Todd 及 Jane 需要決定哪一個最符合其需求。Todd 查看 {{site.data.keyword.cloud_notm}} Private 型錄時，可試用大部分內容，但部分內容需要從 Passport Advantage 採購及下載。
 
@@ -108,7 +110,7 @@ lastupdated: "2019-01-23"
   -	Calico BGP-Peer（開放程式碼）
   -	strongSwan IPSec VPN（開放程式碼）
 
-* 儲存空間
+* Storage
   -	IBM PowerVC FlexVolume Driver（開放程式碼，並受 PowerVC 產品支援）
   - 含 Heketi 生命週期管理的 GlusterFS 儲存空間叢集（開放程式碼）
   -	容器儲存空間介面 (CSI) 範例 NFS
@@ -122,12 +124,15 @@ lastupdated: "2019-01-23"
 對於 Stock Trader，根據 Jane 的解決方案架構，Todd 將從 [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted)、[MQ](https://console.cloud.ibm.com/catalog/services/mq) 及 [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis) 開始。
 
 ## 新增中介軟體
+{: #vcscontent-addmidware-add-middleware}
 
 若要將中介軟體新增至 {{site.data.keyword.cloud_notm}} Private，請在型錄中尋找 [Helm 圖表](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md)，並閱讀 Readme 檔，然後繼續安裝。
 
 對於 Stock Trader，Todd 決定新增所有中介軟體。下列資訊彙總 Todd 必須針對他想要 Jane 使用之每個中介軟體所執行的作業。
 
 ### Db2
+{: #vcscontent-addmidware-db2}
+
 Todd 從 Db2 開始，因為他們已使用 Db2，而且可以針對每個解決方案專用容器型 Db2。
 
 Todd 已備妥 {{site.data.keyword.icpfull_notm}}，因此已定義其 Pod 安全原則。Todd 可以專注於建立 Docker 映像檔取回密碼：
@@ -167,6 +172,7 @@ path = /shared/db2trader1`
 在 Db2 執行之後，Todd 或 Jane 需要建立 Stock Trader 解決方案所使用的表格。
 
 ### MQ
+{: #vcscontent-addmidware-mq}
 
 Todd 及 Jane 需要傳訊軟體，而且，因為他們已使用 MQ，所以這是一個絕佳選項。此外，它還可以在小覆蓋區中執行，並可針對每個「開發人員」啟動開發版本，以節省寶貴的「正式作業」資料流量。安裝 MQ 相當簡單。Todd 建立儲存空間的方式就像使用 Db2 時一樣，然後安裝 Helm 圖表：
 
@@ -187,7 +193,8 @@ Todd 一開始會從使用者介面中選取要在中介軟體取得的 NodePort
 
 若要配置 MQ 以使用 Stock Trader，Todd 會開啟「MQ 管理」使用者介面，而這與 VM 版本的名稱完全相同。
 
-### 	Redis
+### Redis
+{: #vcscontent-addmidware-redis}
 
 即使 Stock Trader 正在 {{site.data.keyword.cloud_notm}} Private Hosted 上執行，只要他們真正關注的是大部分工作在前一天結束時的股票，他們還是會擔心股票報價服務延遲。為了協助改善效能，他們新增 Redis 快取。
 
@@ -198,6 +205,7 @@ Todd 一開始會從使用者介面中選取要在中介軟體取得的 NodePort
 配置很簡單，因此 Todd 會輸入要在其中安裝的名稱空間，並開始安裝。
 
 ## 重構 Stock Trader
+{: #vcscontent-addmidware-refactor-stock-trader}
 
 重構 Stock Trader 是 Jane 的重要步驟。Todd 在忙著將中介軟體新增至 {{site.data.keyword.cloud_notm}} Private 的同時，Jane 已重構她的解決方案，以針對 Kubernetes 及雲端行為進行最佳化。
 
@@ -213,6 +221,7 @@ Todd 一開始會從使用者介面中選取要在中介軟體取得的 NodePort
 下列是 Jane 的[程式碼儲存庫](https://github.com/IBMStockTrader/) 範例，以及 Jenkins 檔案、server.xml 及其他檔案。備妥之後，Jane 可以透過密碼自由地編碼額外功能，以存取 ODM 及 Watson 這類服務以及作為 GitHub 中個別儲存庫的其他微服務。
 
 ### 新增密碼
+{: #vcscontent-addmidware-add-secrets}
 
 既然 Jane 已重構 Stock Trader 微服務，她就需要一種摘錄服務名稱、使用者 ID 及密碼的方法，讓其應用程式在部署時可以在未將特定名稱寫在程式並重新建置應用程式的情況下挑選服務的唯一詳細資料。
 
@@ -224,6 +233,7 @@ Jane 想要統一的程式碼庫，即使 Stock Trader 可在多個雲端上執�
 ![Stock Trader 樞軸服務](vcscontent-pivot-services.svg)
 
 ## 結果
+{: #vcscontent-addmidware-result}
 
 因為 Jane 已確定重構其 Stock Trader 解決方案，而且 Todd 將中介軟體安裝至 {{site.data.keyword.cloud_notm}} Private Hosted，所以所有核心 Stock Trader 解決方案都是在專用雲端中執行。Jane 現在新增更多微服務，例如 Twitter 通知服務。Istio 遞送規則透過內部 Slack 頻道或公用 Twitter 頻道，啟用動態忠誠度層次傳訊。
 
@@ -231,6 +241,7 @@ Jane 想要統一的程式碼庫，即使 Stock Trader 可在多個雲端上執�
 
 ![Stock Trader 強化](vcscontent-enrich.svg)
 
-### 相關鏈結
+## 相關鏈結
+{: #vcscontent-addmidware-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

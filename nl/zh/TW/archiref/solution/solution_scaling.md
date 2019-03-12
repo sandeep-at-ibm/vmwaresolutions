@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 調整容量
+{: #solution_scaling}
 
 起始部署之後，您可以從 {{site.data.keyword.vmwaresolutions_full}} 主控台橫向擴充運算容量。此設計支援下列橫向擴充路徑：
 * 新增由個別 vCenter Server 管理的新站台
@@ -20,6 +21,7 @@ lastupdated: "2019-01-23"
 * 將新的主機新增至現有叢集
 
 ## 新增其他站台
+{: #solution_scaling-sites}
 
 {{site.data.keyword.vmwaresolutions_short}} 可以運用 {{site.data.keyword.cloud_notm}} 全球資料中心顯示狀態及整合式網路骨幹，容許在從頭開始建置這類基礎架構所需的一小段時間內部署及操作各種跨地理位置使用案例。
 
@@ -35,6 +37,7 @@ lastupdated: "2019-01-23"
 此外，次要站台中的 NSX Manager 可能設定為主要站台上 NSX Manager 的次要 NSX Manager。
 
 ## 新增叢集
+{: #solution_scaling-clusters}
 
 您也可以從 {{site.data.keyword.vmwaresolutions_short}} 主控台建立新的叢集，並訂購自動新增至新叢集的新主機，以橫向擴充運算容量。
 
@@ -48,11 +51,13 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## 將 ESXi 主機新增至現有叢集
+{: #solution_scaling-hosts}
 
 您可以從 {{site.data.keyword.vmwaresolutions_short}} 主控台訂購主機，以橫向擴充現有叢集。新的主機會自動新增至叢集。請注意，您可能需要根據保留需求來調整叢集的 HA 保留原則。
 
-### 相關鏈結
+## 相關鏈結
+{: #solution_scaling-related}
 
-* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [設計概觀](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [備份元件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [設計概觀](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [備份元件](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

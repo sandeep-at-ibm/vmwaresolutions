@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,14 +13,17 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Zerto on IBM Cloud 관리
+{: #managingzertodr}
 
 Zerto on {{site.data.keyword.cloud}} 서비스가 인스턴스에 배치된 후 Zerto Virtual Replication을 구성하거나 업데이트하고 추가 Virtual Replication Appliances를 새로 추가된 ESXi 서버에 배치할 수 있습니다.
 
 ## Zerto용 고유한 인증서 사용
+{: #managingzertodr-ssl-cert}
 
 우수 사례로서, ZVM(Zerto Virtual Manager)용 고유한 SSL 인증서를 사용하십시오. Zerto on {{site.data.keyword.cloud_notm}}를 배치한 후 ZVM용 SSL 인증서를 고유한 인증서로 대체하십시오. 자세한 정보는 [How to use a CER SSL Certificate to Replace the Self-Signed Certificate for the ZVM, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window}을 참조하십시오.
 
 ## Zerto 복제의 구성 관리
+{: #managingzertodr-manage}
 
 Zerto 복제의 구성을 관리하려면 관리자 권한으로 vCenter 인증서를 사용하여 Zerto Virtual Replication 콘솔에 로그인하십시오. 예를 들어, Zerto 인스턴스를 다시 페어링하거나 가상 머신을 복제하도록 가상 보호 그룹을 구성합니다.
 
@@ -32,17 +35,20 @@ Zerto 복제는 NAT(Network Address Translation) 순회를 지원하지 않습�
 {:note}
 
 ## Zerto Virtual Replication 업데이트
+{: #managingzertodr-update}
 
 Zerto Virtual Replication을 업데이트하려면 Zerto Virtual Replication 콘솔에 로그인하십시오.
 
 ## 새로 추가된 ESXi 서버에 VRA 배치
+{: #managingzertodr-deploy}
 
 인스턴스의 기본 클러스터에 대한 ESXi 서버를 추가하거나 제거하는 경우 VRA가 자동으로 배치되거나 제거됩니다. VRA가 인스턴스의 보조 클러스터에 있는 ESXi 서버에 자동으로 배치되지 않습니다. Zerto Virtual Replication 콘솔에서 자체적으로 VRA를 배치할 수 있습니다.
 
-### 관련 링크
+## 관련 링크
+{: #managingzertodr-related}
 
-* [Zerto on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/addingzertodr.html)
-* [Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스 요청](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
+* [Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스 요청](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [zerto.com 웹 사이트](https://www.zerto.com){:new_window}
 * [Zerto 기술 문서](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
 * [Zerto 재해 복구](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}

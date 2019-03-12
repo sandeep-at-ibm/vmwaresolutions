@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-05-28"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-05-28"
 {:important: .important}
 
 # V2.3 のリリース・ノート
+{: #relnotes_v23}
 
 このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
@@ -24,19 +25,19 @@ lastupdated: "2018-05-28"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-詳しくは、[Spectre および Meltdown 脆弱性への対処](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)を参照してください。
+詳しくは、[Spectre および Meltdown 脆弱性への対処](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)を参照してください。
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
 このリリースでは、VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle オファリングが導入されました。 vCenter Server with Hybridity Bundle は、オンプレミスのインフラストラクチャーを素早く簡単にクラウドに拡張できるホステッド・プライベート・クラウドです。 この VMware 環境は、IBM 提供の VMware Software Defined Data Center ライセンスに基づくものであり、VMware HCX on {{site.data.keyword.cloud_notm}} サービスが含まれています。このサービスを使用すると、オンプレミスの vSphere 5.0+ 環境を {{site.data.keyword.cloud_notm}} サイトに簡単かつ安全に接続して、シームレスなインフラストラクチャーのハイブリッド化と真のアプリケーション・モビリティーを実現できます。
 
-HCX on {{site.data.keyword.cloud_notm}} サービスは、vCenter Server with Hybridity Bundle インスタンスでのみ利用可能です。 既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードするには、まず基本 vCenter Server V2.3 のソフトウェア更新を適用しなければなりません。 詳しくは、[vCenter Server インスタンスへの更新の適用](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html)を参照してください。
+HCX on {{site.data.keyword.cloud_notm}} サービスは、vCenter Server with Hybridity Bundle インスタンスでのみ利用可能です。 既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードするには、まず基本 vCenter Server V2.3 のソフトウェア更新を適用しなければなりません。 詳しくは、[vCenter Server インスタンスへの更新の適用](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)を参照してください。
 
 vCenter Server with Hybridity Bundle について詳しくは、以下のトピックを参照してください。
 
-* [vCenter Server with Hybridity Bundle の概要](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [vCenter Server with Hybridity Bundle インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
-* [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [vCenter Server with Hybridity Bundle インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
+* [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 
 ## vCenter Server インスタンスおよび Cloud Foundation インスタンスのクラスター削除のサポート
 
@@ -44,8 +45,8 @@ vCenter Server with Hybridity Bundle について詳しくは、以下のトピ�
 
 詳しくは、以下のトピックを参照してください。
 
-* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
-* [Cloud Foundation インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
+* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances#deleting-clusters-from-vcenter-server-instances)
+* [Cloud Foundation インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances#deleting-clusters-from-cloud-foundation-instances)
 
 ## VMware vCenter Server インスタンスの更新
 
@@ -61,8 +62,8 @@ V2.3 リリース以降、**カスタマイズ型** のベア・メタル設定�
 
 詳しくは、以下のトピックを参照してください。
 
-* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ## VMware Cloud Foundation インスタンスの更新
 
@@ -70,25 +71,6 @@ V2.3 リリース以降、**カスタマイズ型** のベア・メタル設定�
 *	VMware vSphere ESXi 6.5 U1g (パッチ・レベル ESXi650-201803001 を適用済みの ESXi 6.5u1)
 *	VMware vCenter Server 6.5 Update 1g
 *	VMware NSX for vSphere 6.3.5
-
-## VMware Federal インスタンスの更新
-
-### VMware Federal インスタンスの DNS 構成
-
-管理クラスターに、Microsoft Active Directory (AD) として単一の Microsoft Windows Server 仮想サーバー・インスタンス (VSI) をデプロイするか、2 つの高可用性 Microsoft Windows 仮想マシンをデプロイするかを選択できるようになりました。 V2.2 は、デフォルトで単一の Microsoft Windows VSI が Microsoft AD として自動的にデプロイされていました。 2 つの Microsoft Windows 仮想マシンを選択する新しいオプションを使用すると、プライバシーを強化できるうえに、Veeam サービスを使用してそれらの仮想マシンをバックアップおよびリストアできます。
-
-2 つの Microsoft Windows 仮想マシンを使用するようにインスタンスを構成する場合は、2 つの Microsoft Windows Server 2012 R2 ライセンスを提供する必要があります。 Microsoft Windows Server 2012 R2 Standard エディションのライセンスと Microsoft Windows Server 2012 R2 Datacenter エディションのライセンスを使用してください。 仮想マシンは 30 日以内に有効にしてください。
-{:note}
-
-詳しくは、[VMware Federal インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html#network-interface-settings)の『*ネットワーク・インターフェースの設定*』セクションを参照してください。
-
-### VMware Federal インスタンスのクラスターの追加と削除のサポート
-
-V2.3 以降のリリースでデプロイされた VMware Federal インスタンスでは、クラスターを使用して ESXi サーバーを管理できるので、リソース管理と可用性が向上します。 インスタンスの注文時に構成した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 インスタンスの概要ページでクラスターの詳細を確認したり、最大で合計 10 個のクラスターをインスタンスに追加したりできます。 インスタンスの容量を拡張または縮小する場合は、ESXi サーバーを追加または削除するクラスターを選択できます。
-
-インスタンス全体を削除することなく 1 つ以上のクラスターをインスタンスから削除することもできます。
-
-詳しくは、[VMware Federal インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)を参照してください。
 
 ## アドオン・サービスの更新
 
@@ -99,8 +81,8 @@ V2.3 以降のリリースでデプロイまたは V2.3 以降のリリースに
 このサービスを組み込んだ形でインスタンスを注文することも、後から既存のインスタンスにこのサービスを追加することもできます。
 
 詳しくは、以下のトピックを参照してください。
-* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](/docs/services/vmwaresolutions/services/htcc_considerations.html)
-* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managinghtcc.html)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtcc)
 
 ### HyTrust DataControl on IBM Cloud
 
@@ -109,8 +91,8 @@ V2.3 以降のリリースでデプロイまたは V2.3 以降のリリースに
 このサービスを組み込んだ形でインスタンスを注文することも、後から既存のインスタンスにこのサービスを追加することもできます。
 
 詳しくは、以下のトピックを参照してください。
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](/docs/services/vmwaresolutions/services/htdc_considerations.html)
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managinghtdc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtdc)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 

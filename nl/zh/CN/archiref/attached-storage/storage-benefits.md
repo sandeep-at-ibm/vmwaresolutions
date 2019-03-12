@@ -4,17 +4,19 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
 # 关于 vCenter Server 的连接存储器
+{: #storage-benefits}
 
 连接的存储器是 VMware vCenter Server on {{site.data.keyword.cloud}} 产品的扩展。VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的连接存储器解决方案体系结构详细说明了设计中解决方案的组件以及每个组件的高级配置。
 
-有关 vCenter Server 设计的更多信息，请参阅[解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)。
+有关 vCenter Server 设计的更多信息，请参阅[解决方案概述](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)。
 
 ## vCenter Server 的连接存储器的主要优点
+{: #storage-benefits-key-benefits}
 
 虽然连接的存储器并不是 VMware 环境的必备设备，但将其用作共享存储设备可为用户进行 IT 操作提供许多好处。使用共享存储设备后，您可以通过启用下表中描述的 vSphere 功能，实现高可用性、启用分布式资源调度程序、高效利用存储容量以及简化管理。
 
@@ -27,6 +29,7 @@ lastupdated: "2019-01-23"
 |vSphere 数据存储集群|此功能提供一个数据存储集合，这些存储具有共享的资源和共享的管理界面。|
 |vSphere 容错|此功能通过消除停机时间和中断来提供持续的 VM 可用性，即使主机完全故障，也是如此。|
 
-### 相关链接
+## 相关链接
+{: #storage-benefits-related}
 
-* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

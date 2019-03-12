@@ -4,17 +4,20 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # 辅助 vCenter Server 系统未显示在 vSphere Web Client 库存中
+{: #trbl_sec_inst_not_visible}
 
 ## 问题
+{: #trbl_sec_inst_not_visible-problem}
 
 在多站点配置中，添加新的辅助实例后，当登录到先前所订购实例的 VMware vSphere Web Client 时，没有显示新实例的 vCenter Server 系统。
 
 ## 解决方法
+{: #trbl_sec_inst_not_visible-resolution}
 
 这是 VMware 6.5 的已知问题。
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 仮想インフラストラクチャー設計
+{: #design_virtualinfrastructure}
 
 仮想インフラストラクチャー層には、物理インフラストラクチャー層で提供されるコンピュート、ストレージ、ネットワーク・リソースを仮想化する VMware ソフトウェア・コンポーネント (VMware vSphere ESXi、VMware NSX、VMware vSAN (オプション)) が含まれます。
 
 ## VMware vSphere 設計
+{: #design_virtualinfrastructure-vsphere-design}
 
 vSphere ESXi 構成は、以下の側面から成ります。
 * ブート構成
@@ -39,7 +41,7 @@ vSphere ESXi 構成は、以下の側面から成ります。
 | 時刻同期   | {{site.data.keyword.cloud}} NTP サーバーを使用 |
 | ホスト・アクセス            | DCUI、ESXi Shell、または SSH をサポート |
 | ユーザー・アクセス            | ローカル認証と MSAD |
-| ドメイン・ネームの解決 | DNS を使用 ([共通サービス設計](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)を参照) |
+| ドメイン・ネームの解決 |DNS を使用 ([共通サービス設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)を参照) |
 
 vSphere クラスターには、中央クラウドおよびユーザー・ワークロード用コンピュート・リソースを管理する仮想マシン (VM) が収容されます。
 
@@ -59,6 +61,7 @@ vCenter Server インスタンスの場合
 クラスターについて詳しくは、[VMware クラスターを実行する {{site.data.keyword.cloud_notm}} ソリューション・アーキテクチャーに関する資料] (https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf) を参照してください。
 
 ## VMware vSAN 設計
+{: #design_virtualinfrastructure-vsan-design}
 
 この設計では、vSphere ホストの共有ストレージを提供するために、VMware vSAN ストレージが Cloud Foundation インスタンスで使用され、オプションで vCenter Server インスタンスでも使用されます。
 
@@ -66,24 +69,26 @@ vCenter Server インスタンスの場合
 
 図 1. vSAN の概念
 
-![vSAN の概念](virtual_vSAN.svg "vSAN は、vSphere クラスター内の複数の ESXi ホストそれぞれのローカル・ストレージを集約し、集約ストレージを単一の VM データ・ストアとして管理します")
+![vSAN の概念](virtual_vsan.svg "vSAN は、vSphere クラスター内の複数の ESXi ホストそれぞれのローカル・ストレージを集約し、集約ストレージを単一の VM データ・ストアとして管理します")
 
 vSAN では、以下のコンポーネントが使用されます。
 * 2 ディスク・グループ vSAN 設計。各ディスク・グループは 2 つ以上のディスクで構成されます。 グループ内の最小サイズの SSD 1 つがキャッシュ層として使用され、残りの SSD が容量層として使用されます。
 * 2 つの OS ドライブを除いて、ドライブごとにオンボード RAID コントローラーが RAID-0 レベルで構成されます。
 * すべてのストレージから単一の vSAN データ・ストアが作成されます。
 
-使用可能な vSAN の機能は、インスタンスの注文時に選択するライセンス・エディションによります。 詳しくは、[VMware vSAN エディションの比較](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-vsan-edition-comparison)を参照してください。
+使用可能な vSAN の機能は、インスタンスの注文時に選択するライセンス・エディションによります。 詳しくは、[VMware vSAN エディションの比較](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-vsan-edition-comparison)を参照してください。
 
 ### vSAN 用仮想ネットワークのセットアップ
+{: #design_virtualinfrastructure-net-setup}
 
 この設計では、vSAN トラフィックは専用プライベート VLAN 上の ESXi ホスト間を横断します。 プライベート・ネットワーク・スイッチに接続された 2 つのネットワーク・アダプターは、vSphere 内で vSphere 分散スイッチ (vDS) として構成され、どちらのネットワーク・アダプターもアップリンクとして指定されます。 vSAN VLAN 用に構成された専用 vSAN カーネル・ポート・グループは、vDS 内に常駐します。 プライベート vDS でジャンボ・フレーム (MTU 9000) が使用可能になります。
 
 vSAN はアップリンク上のトラフィックのロード・バランスを行いません。 結果として、一方のアダプターがアクティブの間、もう一方は高可用性 (HA) をサポートするためにスタンバイ状態になります。 vSAN のネットワーク・フェイルオーバー・ポリシーは、物理ネットワーク・ポート間の**明示的フェイルオーバー**として構成されます。
 
-物理 NIC 接続について詳しくは、[物理インフラストラクチャー設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)の図 2『物理ホストの NIC 接続』を参照してください。
+物理 NIC 接続について詳しくは、[物理インフラストラクチャー設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)の図 2『物理ホストの NIC 接続』を参照してください。
 
 ### ストレージ・ポリシー設計
+{: #design_virtualinfrastructure-storage-policy}
 
 vSAN が使用可能になって構成されると、VM ストレージ特性を定義するためにストレージ・ポリシーが構成されます。 ストレージ特性では、VM ごとに異なるサービス・レベルが指定されます。
 
@@ -98,6 +103,7 @@ vSphere コンソールから特に指定されない限り、インスタンス
 新しい ESXi ホストの追加後、または ESXi ホストのパッチ後は、ストレージ・ポリシーを再適用する必要があります。
 
 ### vSAN の設定
+{: #design_virtualinfrastructure-vsan-sett}
 
 vSAN の設定は、{{site.data.keyword.cloud_notm}} 内に VMware ソリューションをデプロイするためのベスト・プラクティスに基づいて設定されます。 vSAN の設定には、SIOC 設定、明示的フェイルオーバー設定のポート・グループ、ディスク・キャッシュ設定が含まれます。
 * SSD キャッシュ・ポリシーの設定: **「先読み (Read Ahead)」**、**「ライトスルー (Write Through)」**、**「直接 (Direct)」** (NRWTD) なし
@@ -109,10 +115,11 @@ vSAN の設定は、{{site.data.keyword.cloud_notm}} 内に VMware ソリュー�
 * vSAN カーネル・ポート: **「明示的フェイルオーバー (Explicit Failover)」**
 
 ## VMware NSX 設計
+{: #design_virtualinfrastructure-nsx-design}
 
 ネットワーク仮想化により、仮想レイヤー内にネットワーク・オーバーレイが存在するようになります。 ネットワーク仮想化により、オンデマンド仮想ネットワークの迅速なプロビジョニング、デプロイメント、再構成、消滅などの機能を備えたアーキテクチャーになります。 この設計では、vDS と VMware NSX for vSphere を使用して仮想ネットワーキングを実装します。
 
-この設計では、NSX Manager は初期クラスター内にデプロイされます。 NSX Manager には、管理コンポーネント用に指定されたプライベート・ポータブル・アドレス・ブロックから VLAN-backed IP アドレスが割り当てられ、[共通サービス設計](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)で説明されている DNS サーバーと NTP サーバーが構成されます。 NSX Manager は、表 2 に示す仕様でインストールされます。
+この設計では、NSX Manager は初期クラスター内にデプロイされます。 NSX Manager には、管理コンポーネント用に指定されたプライベート・ポータブル・アドレス・ブロックから VLAN-backed IP アドレスが割り当てられ、[共通サービス設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)で説明されている DNS サーバーと NTP サーバーが構成されます。 NSX Manager は、表 2 に示す仕様でインストールされます。
 
 表 2. NSX Manager の属性
 
@@ -129,19 +136,20 @@ vSAN の設定は、{{site.data.keyword.cloud_notm}} 内に VMware ソリュー�
 
 図 2. NSX Manager ネットワークの概要
 
-![NSX Manager ネットワークの概要](virtual_NSX.svg "NSX Manager とアーキテクチャー内の他のコンポーネントとの関係")
+![NSX Manager ネットワークの概要](virtual_nsx.svg "NSX Manager とアーキテクチャー内の他のコンポーネントとの関係")
 
 初期デプロイメント後、{{site.data.keyword.cloud_notm}} の自動化機能によって、初期クラスター内に 3 つの NSX コントローラーがデプロイされます。 コントローラーのそれぞれに、管理コンポーネント用に指定された**プライベート A** ポータブル・サブネットから VLAN-backed IP アドレスが割り当てられます。 さらに、この設計では、クラスター内のホストの中のコントローラーを分離するための VM-VM アンチアフィニティー・ルールが作成されます。 コントローラーの高可用性を確保するためには、初期クラスターに最低 3 つのノードが含まれなければなりません。
 
-コントローラーに加えて、VXLAN トンネル・エンドポイント (VTEP) を介して仮想化ネットワークを使用できるように、NSX VIBS を備えたデプロイ済み vSphere ホストが {{site.data.keyword.cloud_notm}} 自動化機能によって準備されます。 VTEP 用に指定された**プライベート A** ポータブル IP アドレス範囲 ([物理インフラストラクチャーの設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)の*表 1. VLAN とサブネットの要約*のリストを参照) から VLAN-backed IP アドレスが VTEP に割り当てられます。 VXLAN トラフィックはタグの外された VLAN 上に存在し、プライベート vDS に割り当てられます。
+コントローラーに加えて、VXLAN トンネル・エンドポイント (VTEP) を介して仮想化ネットワークを使用できるように、NSX VIBS を備えたデプロイ済み vSphere ホストが {{site.data.keyword.cloud_notm}} 自動化機能によって準備されます。 VTEP 用に指定された**プライベート A** ポータブル IP アドレス範囲 ([物理インフラストラクチャーの設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)の*表 1. VLAN とサブネットの要約*のリストを参照) から VLAN-backed IP アドレスが VTEP に割り当てられます。 VXLAN トラフィックはタグの外された VLAN 上に存在し、プライベート vDS に割り当てられます。
 
 続いて、セグメント ID プールが割り当てられ、クラスター内のホストがトランスポート・ゾーンに追加されます。 {{site.data.keyword.cloud_notm}} 内で Internet Group Management Protocol (IGMP) スヌープが構成されないため、トランスポート・ゾーンで使用されるのはユニキャストのみです。
 
 その後、NSX Edge Services Gateway ペアがデプロイされます。 すべての場合において、プライベート・ネットワークに常駐する自動化コンポーネントからのアウトバウンド・トラフィックにゲートウェイ・ペアが 1 つ使用されます。 vCenter Server の場合、2 つ目のゲートウェイ (カスタマー管理エッジと呼ばれる) がデプロイされ、パブリック・ネットワークへのアップリンクとプライベート・ネットワークに割り当てられるインターフェースが構成されます。 ソリューションの一部としてデプロイされる NSX Edge Services Gateway について詳しくは、[NSX Edge on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)を参照してください。
 
-クラウド管理者は、分散論理ルーター (DLR)、論理スイッチ、ファイアウォールなどの必要な NSX コンポーネントを構成できます。 使用可能な NSX の機能は、インスタンスの注文時に選択する NSX ライセンス・エディションによります。 詳しくは、[VMware NSX エディションの比較](/docs/services/vmwaresolutions/archiref/solution/appendix.html#vmware-nsx-edition-comparison)を参照してください。 vCenter Server インスタンスの場合、{{site.data.keyword.cloud_notm}} 自動化機能により、vCenter Server Appliance と Platform Services Controller (PSC) が NSX Manager 分散ファイアウォール除外リストに追加されます。
+クラウド管理者は、分散論理ルーター (DLR)、論理スイッチ、ファイアウォールなどの必要な NSX コンポーネントを構成できます。 使用可能な NSX の機能は、インスタンスの注文時に選択する NSX ライセンス・エディションによります。 詳しくは、[VMware NSX エディションの比較](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-nsx-edition-comparison)を参照してください。 vCenter Server インスタンスの場合、{{site.data.keyword.cloud_notm}} 自動化機能により、vCenter Server Appliance と Platform Services Controller (PSC) が NSX Manager 分散ファイアウォール除外リストに追加されます。
 
 ### 分散スイッチ設計
+{: #design_virtualinfrastructure-distr-switch}
 
 この設計では、最低限の数の vDS スイッチが使用されます。 クラスター内のホストはパブリック・ネットワークとプライベート・ネットワークに接続されます。 ホストには 2 つの分散仮想スイッチが構成されます。 2 つのスイッチの使用は、パブリック・ネットワークとプライベート・ネットワークを分離する {{site.data.keyword.cloud_notm}} ネットワークの手法に従います。 次の図は、vDS 設計を示しています。
 
@@ -212,6 +220,7 @@ vSphere クラスターは、以下の表のように構成された 2 つの vS
 | SDDC - 分散スイッチ - プライベート | NAS | SDDC - 分散ポート・グループ - NFS | \-  | 9,000 |
 
 ### NSX 構成
+{: #design_virtualinfrastructure-nsx-config}
 
 この設計では、NSX コンポーネントの構成を指定しますが、ネットワーク・オーバーレイ・コンポーネント構成は適用しません。 必要に応じてネットワーク・オーバーレイを設計できます。 以下の側面が事前構成されます。
 
@@ -227,7 +236,8 @@ vSphere クラスターは、以下の表のように構成された 2 つの vS
 * VXLAN
 * 他の VMware インスタンスに対するリンク NSX 管理
 
-### 関連リンク
+## 関連リンク
+{: #design_virtualinfrastructure-related}
 
 * [VMware クラスターを実行する {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf)
 * [NSX Edge on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)

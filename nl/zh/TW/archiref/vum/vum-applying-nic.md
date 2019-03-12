@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 套用原生 NIC 驅動程式
+{: #vum-applying-nic}
 
 ESXi 6.5 包含許多新的原生驅動程式，其為舊版 vmklinux 驅動程式的取代項目。在安裝或升級之後，依預設會啟用大部分的新原生驅動程式，但依預設會停用其中三個新的原生驅動程式，因為它們未完全支援對應 vmklinux 驅動程式的功能。
 
@@ -34,7 +35,7 @@ ixgben 是一種原生驅動程式，可取代 vmklinux net-ixgbe 驅動程式�
 
 如果您需要回復，而且無法 SSH 至 vSphere ESXi 主機，則需要透過 {{site.data.keyword.cloud_notm}} 主控台視窗登入需要回復之主機的 KVM 主控台。
 
-使用 {{site.data.keyword.cloud_notm}} 控制視窗中列出的 ID 及密碼與 IPMI IP 位址，以登入 IPMI Web 介面。您需要透過 VPN 連接至主機所在的資料中心。如需相關資訊，請參閱[開始使用 VPN](/docs/infrastructure/iaas-vpn/getting-started.html)。
+使用 {{site.data.keyword.cloud_notm}} 控制視窗中列出的 ID 及密碼與 IPMI IP 位址，以登入 IPMI Web 介面。您需要透過 VPN 連接至主機所在的資料中心。如需相關資訊，請參閱[開始使用 VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started-with-virtual-private-networking-vpn-)。
 
 1. 移至 vSphere ESXi 主機的「裝置詳細資料」、「遠端管理」頁面，然後選取**動作** > **KVM 主控台**。會開啟另一個視窗，供您輸入「IPMI 使用者」及「密碼」。
 2. 選取**遠端控制** > **iKVM/HTML5**，然後按一下 **iKVM/HTML5** 以重新啟動。您現在可以存取 vSphere ESXi 主機的主控台。
@@ -45,7 +46,8 @@ ixgben 是一種原生驅動程式，可取代 vmklinux net-ixgbe 驅動程式�
 7. 鍵入 **"Y"** 以進入回復模式，並使用舊版本啟動 ESXi 伺服器。
 8. 透過主控台監視其進度。開機可能需要 10 - 20 分鐘。
 
-### 相關鏈結
+## 相關鏈結
+{: #vum-applying-nic-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

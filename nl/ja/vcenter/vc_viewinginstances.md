@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server インスタンスの表示
+{: #vc_viewinginstances}
 
 さまざまなユーザー・アカウントに対してプロビジョンされる vCenter Server インスタンスのサマリーおよび詳細情報を表示します。
 
 ## vCenter Server インスタンスのサマリーを表示する手順
+{: #vc_viewinginstances-procedure-view-inst-summary}
 
 ユーザー・アカウントに対してプロビジョンされるすべての vCenter Server インスタンスのサマリーを表示するには、以下の手順を実行します。
 
@@ -51,6 +53,7 @@ lastupdated: "2019-01-23"
 | 削除済み | インスタンスは削除されました。 |
 
 ## vCenter Server インスタンスのプロパティーの詳細を表示する手順
+{: #vc_viewinginstances-procedure-view-inst-property}
 
 インスタンスのプロパティーの詳細を表示するには、次の手順を実行します。
 
@@ -76,6 +79,7 @@ lastupdated: "2019-01-23"
 | 状況  | インスタンスの状況。<br><br>デプロイメント、またはインスタンスで実行したアクションの進行状況を示す情報が表示され、更新されます。 問題がある場合は、問題の調査と解決に役立つメッセージが表示されることがあります。 |
 
 ## vCenter Server インスタンスのアクセス情報を表示する手順
+{: #vc_viewinginstances-procedure-view-access-info}
 
 **「アクセス情報」**の下に、インスタンス関連コンポーネントのアクセス情報が表示されます。 表示されるパスワードは、システムによって生成される初期パスワードです。 それらを {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、インスタンスのサマリー・ページでは更新されません。
 
@@ -95,6 +99,7 @@ lastupdated: "2019-01-23"
 | vCenter SSH  | SSH 接続で vCenter Server VM にアクセスするために使用できるユーザー名とパスワード。  |
 
 ## vCenter Server インスタンスのデプロイメント履歴を表示する手順
+{: #vc_viewinginstances-procedure-view-deploy-history}
 
 左側のナビゲーション・ペインで**「デプロイメント履歴」**をクリックすると、インスタンスのデプロイメント履歴が表示されます。
 
@@ -106,10 +111,12 @@ lastupdated: "2019-01-23"
 | サマリー | 変更の詳細 |
 
 ## エラーが発生した場合の対処方法
+{: #vc_viewinginstances-if-errors-occur}
 
-インスタンスのデプロイメント中またはインスタンスの削除中にエラーが発生した場合、{{site.data.keyword.cloud_notm}} サポート・チームに自動的に通知されます。 チケットの状況については、[IBM サポートにお問い合わせください](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
+インスタンスのデプロイメント中またはインスタンスの削除中にエラーが発生した場合、{{site.data.keyword.cloud_notm}} サポート・チームに自動的に通知されます。 チケットの状況については、[IBM サポートにお問い合わせください](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
 
 ## 次に行うこと
+{: #vc_viewinginstances-next}
 
 {{site.data.keyword.vmwaresolutions_short}} コンソールまたは VMware vSphere Web Client からインスタンスを管理します。
 
@@ -117,13 +124,14 @@ lastupdated: "2019-01-23"
 {:important}
 
 ログイン手順を実行するには、以下のトピックを参照してください。
-*  vSphere Web Client にアクセスするための要件と必要な手順については、[Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html) を参照してください。
+*  vSphere Web Client にアクセスするための要件と必要な手順については、[Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console) を参照してください。
 *  VPN を使用して {{site.data.keyword.cloud_notm}} インフラストラクチャーのプライベート・ネットワークにログインするためのアクセス・ポイントのリストについては、[VPN アクセス](http://www.softlayer.com/vpn-access){:new_window}を参照してください。
-*  vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイする際に問題が発生した場合は、[vSphere Web Client を使用して OVF ファイルをデプロイする方法](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html)を参照してください。
+*  vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイする際に問題が発生した場合は、[vSphere Web Client を使用して OVF ファイルをデプロイする方法](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf)を参照してください。
 
-### 関連リンク
+## 関連リンク
+{: #vc_viewinginstances-related}
 
-* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
-* [vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [vCenter Server インスタンスの削除](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [vCenter Server インスタンスの削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)

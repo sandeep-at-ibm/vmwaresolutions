@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-04-16"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-04-16"
 {:important: .important}
 
 # V2.1 릴리스 정보
+{: #relnotes_v21}
 
 이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
@@ -24,7 +25,7 @@ lastupdated: "2018-04-16"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-자세한 정보는 [스펙터(Spectre) 및 멜트다운(Meltdown) 취약점 해결](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)을 참조하십시오.
+자세한 정보는 [스펙터(Spectre) 및 멜트다운(Meltdown) 취약점 해결](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)을 참조하십시오.
 
 ## VMware HCX on IBM Cloud
 
@@ -35,10 +36,10 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSphere 6.5에서 �
 온프레미스 HCX 설치의 라이센스 부여 및 활성화를 위해 온프레미스 HCX 인스턴스도 주문할 수 있습니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [HCX on {{site.data.keyword.cloud_notm}}에 대한 고려사항](/docs/services/vmwaresolutions/services/hcx_considerations.html)
-* [HCX on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managinghcx.html)
-* [온프레미스 HCX 인스턴스에 대한 고려사항](/docs/services/vmwaresolutions/services/standalone_considerations.html)
-* [온프레미스 HCX 인스턴스 주문](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
+* [HCX on {{site.data.keyword.cloud_notm}}에 대한 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
+* [온프레미스 HCX 인스턴스에 대한 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations)
+* [온프레미스 HCX 인스턴스 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
 
 ## VMware Cloud Foundation 및 vCenter Server에 대한 좀 더 유연한 고유한 라이센스 모델 가져오기
 
@@ -48,21 +49,21 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSphere 6.5에서 �
 
 자세한 정보는 다음 주제를 참조하십시오.
 
-* [Cloud Foundation 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
-* [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
-* [BYOL에 대한 FAQ](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
+* [Cloud Foundation 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [BYOL에 대한 FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## Zerto on IBM Cloud 서비스 컴포넌트 업데이트
 
 V2.1 이상 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스에 배치되는 Zerto on {{site.data.keyword.cloud_notm}} 서비스의 경우, Zerto Virtual Replication 5.5u2가 프로비저닝됩니다. Zerto VRA(Virtual Replication Appliances)는 이제 성능상의 이유로 로컬 데이터 저장소가 아닌 관리 데이터 저장소(vSAN 또는 Endurance)에 배치됩니다. 기존 VRA가 있는 경우에는 더 나은 성능을 위해 스토리지를 관리 데이터 저장소로 마이그레이션하는 것을 고려하십시오.
 
-자세한 정보는 [Zerto on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/addingzertodr.html)를 참조하십시오.
+자세한 정보는 [Zerto on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)를 참조하십시오.
 
 ## VMware vCenter Server 인스턴스에 대한 업데이트
 
 ### 네트워크 MTU 구성 설정
 
-V2.1 이상 릴리스의 경우 새 vCenter Server 인스턴스는 공용 분산 가상 스위치(DVS)가 MTU 1500(기본값)으로 설정된 상태로 주문됩니다. 자세한 정보는 [vCenter Server 명세서](/docs/services/vmwaresolutions/vcenter/vc_bom.html)의 _네트워크 MTU 구성 설정_을 참조하십시오.
+V2.1 이상 릴리스의 경우 새 vCenter Server 인스턴스는 공용 분산 가상 스위치(DVS)가 MTU 1500(기본값)으로 설정된 상태로 주문됩니다. 자세한 정보는 [vCenter Server 명세서](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)의 _네트워크 MTU 구성 설정_을 참조하십시오.
 
 ### VMware ESXi 패치 및 업데이트를 호스트로 자동 적용
 
@@ -71,17 +72,17 @@ V2.0 이전 VMware vCenter Server 인스턴스에서 패치가 클러스터에 �
 V2.1 이상 인스턴스에서 패치 레벨이 초기 인스턴스가 프로비저닝되었던 때의 패치 레벨과 일치하도록 자동화가 패치를 새 ESXi 호스트에 적용합니다. 이후 패치 및 업데이트를 수동으로 적용해야 합니다.
 VMware 패치 및 업데이트가 향후 릴리스에서 사용 가능할 때 자동화 서비스에서 기존 인스턴스의 ESXi 호스트를 스캔하고 최신 패치 및 업데이트를 수동으로 적용하도록 이메일로 리마인더를 전송합니다.
 
-자세한 정보는 [vCenter Server 인스턴스에 업데이트 적용](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html)을 참조하십시오.
+자세한 정보는 [vCenter Server 인스턴스에 업데이트 적용](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)을 참조하십시오.
 
 ### VMware NSX 라이센스 업그레이드에 대한 가격 예상
 
 이제 VMware NSX Advanced 또는 Enterprise 에디션으로 업그레이드하도록 주문을 제출하기 전에 가격 예상을 확인할 수 있습니다. 가격은 vCenter Server 인스턴스의 ESXi 호스트 수를 기반으로 합니다. 이 구매는 NSX 라이센스 키만 변경하고 VMware NSX Base 에디션을 Advanced 또는 Enterprise 에디션으로 업그레이드합니다. 구매는 NSX 소프트웨어 버전을 업그레이드하지 않습니다.
 
-자세한 정보는 [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)를 참조하십시오.
+자세한 정보는 [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)를 참조하십시오.
 
 ### 클러스터 최대 서버가 32개에서 증가함
 
-인스턴스의 기본 클러스터의 경우, 최대 51개의 서버를 배치하거나 확장할 수 있습니다. 인스턴스의 모든 후속 클러스터의 경우, 최대 59개의 서버를 배치하거나 확장할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)를 참조하십시오.
+인스턴스의 기본 클러스터의 경우, 최대 51개의 서버를 배치하거나 확장할 수 있습니다. 인스턴스의 모든 후속 클러스터의 경우, 최대 59개의 서버를 배치하거나 확장할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)를 참조하십시오.
 
 이 기능은 V2.1 이상에 배치되는 인스턴스에 대해서만 사용 가능합니다. V2.1 이전 릴리스에서 V2.1로 업그레이드된 인스턴스에는 이 옵션이 없습니다.
 {:note}
@@ -91,17 +92,17 @@ VMware 패치 및 업데이트가 향후 릴리스에서 사용 가능할 때 �
 Bare Metal Server 구성을 사용자 정의한 사용자는 이제 듀얼 Intel Xeon Gold 6140(총 36개의 코어, 2.3 GHz 포함)를 제공합니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 
 ### 개별 NFS 파일 공유 구성
 
 이제 개별적으로 NFS 파일 공유를 구성할 수 있습니다. 각 개별 파일 공유에 대해 파일 크기 및 성능 레벨을 선택하거나 주문하는 모든 파일의 공유에 대해 동일한 파일 크기 및 성능 레벨을 선택하십시오.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ## 사용자 인터페이스 업데이트 및 개선사항
 

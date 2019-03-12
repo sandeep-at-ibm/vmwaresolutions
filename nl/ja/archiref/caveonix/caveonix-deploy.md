@@ -17,14 +17,14 @@ lastupdated: "2019-02-14"
 
 このセクションでは、Caveonix RiskForesight のデプロイメント・モデル、およびソリューションをインストールするためのインストール・プロセスについて説明します。
 
-{{site.data.keyword.vmwaresolutions_full}} RiskForesight オプションを選択する場合、デプロイメントの初期の手順は自動化されているので、すべての手順をユーザーが実行する必要はありません。ただし、デプロイメントとアーキテクチャーの全体像を理解するときや、初期デプロイメントの後にソリューションをスケールアウトするときには、詳細について理解しておく必要があります。
+{{site.data.keyword.vmwaresolutions_full}} RiskForesight オプションを選択する場合、デプロイメントの初期の手順は自動化されているので、すべての手順をユーザーが実行する必要はありません。 ただし、デプロイメントとアーキテクチャーの全体像を理解するときや、初期デプロイメントの後にソリューションをスケールアウトするときには、詳細について理解しておく必要があります。
 
 RiskForesight のインストールに含まれる手順の概要は以下のとおりです。
 
-1. [初期の計画立案と前提条件](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step1.html) – デプロイメント・オプションを理解して選択します。アプリケーション・コンポーネント用に FQDN/IP の解決を行うために DNS を構成します。
-2. [仮想マシンのデプロイメント](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step2.html) – OVF テンプレートから VM をデプロイします。VM にはすべてのアプリケーション・コンポーネントがインストールされています。
-3. [アプリケーションの構成](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step3.html) – 各 VM のアプリケーション・コンポーネントを構成する Caveonix 構成スクリプトを実行します。
-4. [アプリケーションのセットアップ](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step4.html) – サービス・プロバイダーと、テナントまたは組織をセットアップして、ユーザーがアプリケーションにアクセスできるようにします。
+1. [初期の計画立案と前提条件](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step1) – デプロイメント・オプションを理解して選択します。アプリケーション・コンポーネント用に FQDN/IP の解決を行うために DNS を構成します。
+2. [仮想マシンのデプロイメント](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step2) – OVF テンプレートから VM をデプロイします。 VM にはすべてのアプリケーション・コンポーネントがインストールされています。
+3. [アプリケーションの構成](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step3) – 各 VM のアプリケーション・コンポーネントを構成する Caveonix 構成スクリプトを実行します。
+4. [アプリケーションのセットアップ](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step4) – サービス・プロバイダーと、テナントまたは組織をセットアップして、ユーザーがアプリケーションにアクセスできるようにします。
 
 自動インストールによって、1 つの VM がプロビジョンされ、その VM にすべてのアプリケーション・コンポーネントが構成されます。
 {:note}
@@ -60,7 +60,7 @@ RiskForesight のインストールに含まれる手順の概要は以下のと
 |索引ストレージ合計 / 資産 / 日 (MB)	|1532	|1532	|1532 |
 |索引ストレージ合計 / 資産 / 30 日 (TB)	|4	|22	|219 |
 |スケーリング・ノードごとのサポートされるデータ (TB)	|0	|8	|8 |
-|必要なスケーリング VM |0	|3	|27 |
+|必要なスケーリング VM	|0	|3	|27 |
 
 必要なストレージの量は、以下の方法で計算されます。
 
@@ -90,7 +90,7 @@ RiskForesight のインストールに含まれる手順の概要は以下のと
 
 表 4. 要約
 
-|デプロイメント・モデル	|「オールインワン」|部分分散|完全分散|
+|デプロイメント・モデル	|「オールインワン」	|部分分散	|完全分散 |
 |---|---|---|---|
 |資産の数	|100	|500	|5000 |
 |30 日間に生成されたオンライン・データ (TB)	|4	|22	|219 |
@@ -104,4 +104,4 @@ RiskForesight のインストールに含まれる手順の概要は以下のと
 ## 関連リンク
 {: #caveonix-deploy-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

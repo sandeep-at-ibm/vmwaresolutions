@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-03-08"
 
@@ -13,6 +13,7 @@ lastupdated: "2017-03-08"
 {:important: .important}
 
 # V1.4 发行说明
+{: #relnotes_v14}
 
 此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
@@ -26,7 +27,7 @@ lastupdated: "2017-03-08"
 * VMware ESXi 6.0 u2 p04
 * 为 Microsoft Active Directory (AD) 和 DNS（域名系统）服务订购了新的 Windows VSI（虚拟服务器实例），在此发行版中，多站点配置支持需要此 VSI。此 VSI 具有以下规范：Windows 2012 R2（8 GB RAM / 2 个 CPU 核心 / 100 GB 磁盘 / 双 1 Gbps 专用上行链路）。
 
-有关更多信息，请参阅 [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)。
+有关更多信息，请参阅 [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)。
 
 ## vCenter Server 实例的组件更新
 
@@ -51,8 +52,8 @@ NSX Edge 现在包含在要订购的新 vCenter Server 实例中。NSX Edge 提�
 
 为了确保安全性，采用了防火墙规则，以仅允许由管理虚拟机发起的出站 HTTPS 通信。此 ESG 部署在大型配置中，只有 IBM 支持人员才能修改该配置。有关更多信息，请参阅以下主题：
 
-* [vCenter Server 技术规范](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [管理服务 NSX Edge 会构成安全风险吗？](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* [vCenter Server 技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [管理服务 NSX Edge 会构成安全风险吗？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [VMware NSX 文档](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ### NSX 许可证
@@ -78,21 +79,21 @@ NSX Edge 现在包含在要订购的新 vCenter Server 实例中。NSX Edge 提�
 * 对于 Cloud Foundation 实例和 vCenter Server 实例：优化了联网配置，即，仅 SoftLayer® 分配的主公共 IP 地址和专用 IP 地址会连接到 ESXi 服务器。不再为管理流量部署可移植专用地址。
 * 仅限 Cloud Foundation 实例：Windows AD SSO (Active Directory Single Sign-On) 和域名系统 (DNS) 服务器
 
-由于这些更改，您无法在当前发行版中使用 V1.4 之前的现有实例。要复用现有实例的配置，必须将其升级到当前版本。有关更多信息，请参阅[从 V1.4 之前的发行版升级实例](/docs/services/vmwaresolutions/vmonic/movinginstances.html)。
+由于这些更改，您无法在当前发行版中使用 V1.4 之前的现有实例。要复用现有实例的配置，必须将其升级到当前版本。
 {:note}
 
 ## Cloud Foundation 实例的多站点配置支持
 
 现在，您可以部署单个 Cloud Foundation 实例，就像在前发行版中那样，或者额外部署连接到主实例的辅助实例。多站点配置模型使用轴辐式拓扑，其中包含一个主站点和最多七个辅助站点。
 
-有关更多信息，请参阅 [Cloud Foundation 实例的多站点配置](/docs/services/vmwaresolutions/sddc/sd_multisite.html)。
+有关更多信息，请参阅 [Cloud Foundation 实例的多站点配置](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_multisite)。
 
 ## Zerto 灾难恢复部署的增强功能
 
 * 对于 Cloud Foundation 实例，Zerto 灾难恢复部署会自动执行，而不是通过支持凭单来处理。所有 Zerto 组件（例如，专用可移植子网、Windows VSI（虚拟服务实例）和 Zerto 许可证）的费用都会列在估算成本上，这样您可以在下订单之前进行复查。
 * 对于 vCenter Server 实例，Zerto 灾难恢复部署是通过支持凭单完成的（与前发行版一样）。但是，不再需要 NSX Edge 和公用可移植子网，因为这两项现在包含在基本部署中。专用可移植子网、Windows VSI（虚拟服务实例）和 Zerto 许可证的费用仍然适用。
 
-有关更多信息，请参阅 [Zerto 灾难恢复](/docs/services/vmwaresolutions/services/addingzertodr.html)。
+有关更多信息，请参阅 [Zerto 灾难恢复](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)。
 
 ## 实例订购过程
 
@@ -103,15 +104,15 @@ NSX Edge 现在包含在要订购的新 vCenter Server 实例中。NSX Edge 提�
 
 有关更多信息，请参阅以下主题：
 
-* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 
 ## 实例管理
 
 为实例管理过程提供了以下新功能和改进：
 
-* 对于 Cloud Foundation 实例，可以在实例详细信息页面上查看各种实例组件的用户名和密码。有关更多信息，请参阅[查看 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)。
-* 对于 vCenter Server 实例，可以直接在控制台中安装 IBM 组件的软件更新和补丁。有关更多信息，请参阅[对 vCenter Server 实例应用更新和补丁](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html)。
+* 对于 Cloud Foundation 实例，可以在实例详细信息页面上查看各种实例组件的用户名和密码。有关更多信息，请参阅[查看 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)。
+* 对于 vCenter Server 实例，可以直接在控制台中安装 IBM 组件的软件更新和补丁。有关更多信息，请参阅[对 vCenter Server 实例应用更新和补丁](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)。
 
 ## 控制台通知
 
@@ -119,5 +120,5 @@ NSX Edge 现在包含在要订购的新 vCenter Server 实例中。NSX Edge 提�
 
 有关更多信息，请参阅以下主题：
 
-* [用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)
-* [通知](/docs/services/vmwaresolutions/vmonic/notifications.html)
+* [用户帐户和设置](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
+* [通知](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 删除 vCenter Server 实例
+{: #vc_deletinginstance}
 
 要释放在 VMware vCenter Server 实例中订购的组件，请删除该实例。
 
@@ -30,6 +31,7 @@ lastupdated: "2019-01-23"
    {:note}
 
 ## 在“已部署的实例”页面中删除实例的过程
+{: #vc_deletinginstance-procedure1}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，找到要删除的实例。
@@ -40,6 +42,7 @@ lastupdated: "2019-01-23"
    2. 在**删除实例**窗口中，单击**确定**。
 
 ## 在实例详细信息页面中删除实例的过程
+{: #vc_deletinginstance-procedure2}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要删除的实例。
@@ -49,10 +52,11 @@ lastupdated: "2019-01-23"
    1. 再次单击 **vCenter 控制台**旁边的溢出菜单图标，然后单击**删除实例**。
    2. 在**删除实例**窗口中，单击**确定**。
 
-### 相关链接
+## 相关链接
+{: #vc_deletinginstance-related}
 
-* [删除多站点配置中的 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance_multi.html)
-* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [查看 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
-* [扩展和收缩 vCenter Server 实例的容量](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [删除多站点配置中的 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance_multi)
+* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [查看 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [扩展和收缩 vCenter Server 实例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

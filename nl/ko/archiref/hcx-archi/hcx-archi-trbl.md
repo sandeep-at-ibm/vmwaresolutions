@@ -4,18 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # HCX on IBM Cloud 문제점 해결
+{: #hcx-archi-trbl}
 
 ## 클라우드 등록 실패
+{: #hcx-archi-trbl-cloud-reg}
 
 * 인증 정보가 올바르지 않은 경우 하이브리드 클라우드 서비스는 재시도하지 않습니다. 인증 정보는 하이브리드 클라우드 서비스가 로그인하고 클라우드 등록을 시작하기 전에 인증해야 합니다.
 * 인증 정보가 잘못 입력되었거나 VCF/VCS 하이브리드 클라우드 서비스 클라우드 인증 정보가 하이브리드 클라우드 서비스 이후에 변경된 경우 클라우드 등록에 실패할 수 있습니다.
 * 웹 클라이언트에서 인증 정보를 업데이트하려면 하이브리드 클라우드 서비스 시작하기 탭으로 이동하여 **기본 태스크** 아래에서 **새 클라우드 등록**을 선택하십시오.
 
 ## 중복된 MAC 주소
+{: #hcx-archi-trbl-dupl-mac-addr}
 
 마이그레이션 후 가상 머신 간에 통신 문제점이 발생할 수 있습니다. 마이그레이션 중에 MAC 주소를 보유하고 있으면 의도하지 않게 중복 MAC 주소가 작성될 수 있습니다.
 
@@ -29,6 +32,7 @@ lastupdated: "2019-01-23"
 6. 고유한 MAC 주소로 통신 문제점이 해결되는지를 확인하십시오.
 
 ## 이용률이 높은 호스트 리소스
+{: #hcx-archi-trbl-high-host-resource}
 
 드문 경우 모든 서비스 가상 어플라이언스가 동일한 호스트에 상주하면 하이브리드 클라우드 서비스 서비스 가상 머신은 호스트의 CPU 및 디스크 리소스를 다 써버릴 수 있습니다.
 
@@ -42,7 +46,8 @@ lastupdated: "2019-01-23"
 1. 데이터 센터 구성을 변경하기 전에 고정 상태 지원에 대한 요구사항을 검토하십시오.
 2. 리소스를 다 써버리는 경우 고정 상태 지원에 문의하십시오. 작동 중단을 최소화하며 환경을 구성하는 방법에 대한 정보를 제공할 수 있습니다.
 
-### 관련 링크
+## 관련 링크
+{: #hcx-archi-trbl-related}
 
-* [vCenter에 HCX Manager 등록](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-reg-vcenter.html)
-* [HCX 수정 또는 설치 제거](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
+* [vCenter에 HCX Manager 등록](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-reg-vcenter)
+* [HCX 수정 또는 설치 제거](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

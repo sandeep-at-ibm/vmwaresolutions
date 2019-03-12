@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # 디자인 개요
+{: #design_overview}
 
 {{site.data.keyword.vmwaresolutions_full}}에서는 전세계에서 {{site.data.keyword.CloudDataCents_notm}}에 VMware 기술 컴포넌트를 배치하기 위한 자동화를 제공합니다.
 
 ## 솔루션 오퍼링
+{: #design_overview-offerings}
 
 솔루션 오퍼링에는 자동으로 배치되고 구성된 클러스터 내에 다음의 VMware vSphere 제품이 포함되어 있습니다.
 * VMware Cloud Foundation: vSphere ESXi, PSC(Platform Services Controller), VMware vCenter Server Appliance, SDDC Manager, VMware NSX 및 VMware vSAN.
@@ -22,13 +24,15 @@ lastupdated: "2019-01-23"
 이 디자인은 Cloud Foundation 또는 vCenter Server 인스턴스 내에서 가상 용량의 자동화된 확장과 축소도 허용합니다.
 
 ## VMware on IBM Cloud 컴포넌트
+{: #design_overview-comp}
 
 그림 1. {{site.data.keyword.cloud_notm}}에서 VMware의 컴포넌트
 ![ {{site.data.keyword.cloud_notm}}](design_overview.svg "이 솔루션은 실제 인프라, 가상 인프라, 인프라 관리 및 공통 서비스로 구성되어 있습니다.")
 
-### 관련 링크
+## 관련 링크
+{: #design_overview-related}
 
-* [실제 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
-* [가상 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
-* [공통 서비스 디자인](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)
-* [인프라 관리 디자인](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)
+* [실제 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
+* [가상 인프라 디자인](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
+* [공통 서비스 디자인](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)
+* [인프라 관리 디자인](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_infrastructuremgmt)

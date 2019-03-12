@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 多站台架構
+{: #nsx-multi_site}
 
 {{site.data.keyword.cloud}} 與其他雲端供應項目之間的一個關鍵差異因子，在於全球佈建專用運算功能並自動將隨需應變基礎架構連接至專用 {{site.data.keyword.cloud_notm}} 帳戶內之網路的能力。VMware vCenter Server 及 VMware Cloud Foundation 的軟體定義網路功能與 {{site.data.keyword.cloud_notm}} 一起，提供了可在數天內建置的精細廣域基礎架構。下列各節說明一個多站台架構的範例，它說明如何使用 vCenter Server 或 Cloud Foundation 的現成功能達成。
 
 ## 跨 vCenter NSX 環境
+{: #nsx-multi_site-cross-env}
 
 跨 vCenter NSX 功能容許在主要及次要關係中鏈結最多九個 NSNX 管理程式：一個主要及八個次要。雖然在「加強型鏈結模式 (ELM)」關係中不需要有 vCenter Server，跨 vCenter NSX 即可運作，但它提供下列好處：
 
@@ -21,6 +23,7 @@ lastupdated: "2019-01-23"
 * 針對 NSX 及一般 vCenter 功能，在所有站台之間使用單一管理畫面
 
 ## 多站台範例
+{: #nsx-multi_site-example}
 
 下列範例會將 NSX 通用傳輸區域新增至前幾節中討論的基本管理及工作負載拓蹼，同時包括下列特徵：
 
@@ -34,6 +37,7 @@ lastupdated: "2019-01-23"
 
 ![多站台拓蹼](multisite_topology.svg "多站台拓蹼")
 
-### 相關鏈結
+## 相關鏈結
+{: #nsx-multi_site-related}
 
-* [{{site.data.keyword.cloud_notm}} 上的網路服務](/docs/services/vmwaresolutions/archiref/nsx/networking_services.html)
+* [{{site.data.keyword.cloud_notm}} 上的網路服務](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-networking_services)

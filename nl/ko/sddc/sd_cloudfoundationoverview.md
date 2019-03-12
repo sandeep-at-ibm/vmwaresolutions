@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Cloud Foundation 개요
+{: #sd_cloudfoundationoverview}
 
 VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 VMware 환경이 자동으로 배치됩니다. 기본 배치는 통합된 소프트웨어 정의 데이터 센터(SDDC) 플랫폼을 제공하도록 VMware Cloud Foundation 스택이 사전 설치되고 구성된 네 개의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}로 구성됩니다. 기본적으로 Cloud Foundation은 VMware vSphere, VMware NSX, VMware Virtual SAN을 통합하고 VMware 유효성 검증 디자인을 기반으로 설계되었습니다.
 
 ## Cloud Foundation 아키텍처
+{: #sd_cloudfoundationoverview-archi}
 
 다음 그림은 Cloud Foundation 배치의 전체 아키텍처 및 컴포넌트에 대해 설명합니다.
 
@@ -25,10 +27,12 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 ![Cloud Foundation 아키텍처](sd_architecture.svg "Cloud Foundation 아키텍처")
 
 ### 실제 인프라
+{: #sd_cloudfoundationoverview-physical-infras}
 
 이 계층은 가상 인프라에서 사용할 실제 인프라(컴퓨팅, 스토리지 및 네트워크 리소스)를 제공합니다.
 
 ### 가상화 인프라(컴퓨팅, 스토리지 및 네트워크)
+{: #sd_cloudfoundationoverview-virtualization-infras}
 
 이 계층은 다른 VMware 제품을 통해 실제 인프라를 가상화합니다.
 * VMware vSphere는 실제 컴퓨팅 리소스를 가상화합니다.
@@ -36,14 +40,16 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 * VMware NSX는 논리 네트워킹 컴포넌트 및 가상 네트워크를 제공하는 네트워크 가상화 플랫폼입니다.
 
 ### 가상화 관리
+{: #sd_cloudfoundationoverview-virtualization-mgmt}
 
 이 계층은 가상화된 환경에 대한 관리 계층을 나타내는 vCenter Server로 구성됩니다. 동일한 vSphere API 호환 도구 및 스크립트는 IBM 호스팅 VMware 환경을 관리하는 데 사용될 수 있습니다.
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 ESXi 서버 기능의 추가 및 제거를 사용하여 인스턴스의 기능을 확장하고 축소할 수 있습니다. 또한 호스팅된 환경에서 VMware 컴포넌트의 업데이트 및 업그레이드 적용과 같이 라이프사이클 관리 기능도 사용할 수 있습니다.
 
-아키텍처에 대한 자세한 정보는 [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)를 참조하십시오.
+아키텍처에 대한 자세한 정보는 [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)를 참조하십시오.
 
 ## Cloud Foundation 인스턴스의 기술 스펙
+{: #technical-specifications-for-cloud-foundation-instances}
 
 다음 컴포넌트는 Cloud Foundation 인스턴스에 포함됩니다.
 
@@ -51,6 +57,7 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 {:note}
 
 ### Bare Metal Server
+{: #sd_cloudfoundationoverview-bare-metal}
 
 다음 구성 중 하나로 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
 *  **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)   
@@ -60,11 +67,12 @@ vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keywor
 {:note}
 
 ### 네트워킹
+{: #sd_cloudfoundationoverview-networking}
 
 다음 네트워킹 컴포넌트가 주문됩니다.
 * 10Gbps 듀얼 공용 및 사설 네트워크 업링크
 * 세 개의 VLAN(Virtual LANs): 한 개의 공용 VLAN 및 두 개의 사설 VLAN
-* 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 자세한 정보는 [관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)를 참조하십시오.
+* 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 자세한 정보는 [관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
   사용자는 이 ESG에 액세스할 수 없고 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 Cloud Foundation 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
   {:important}
@@ -72,6 +80,7 @@ vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keywor
 * 현재 VMware vSphere 버전에서 지원하는 ESXi 서버를 포함하는 기존 클러스터가 있는 경우에는 EVC(Enhanced vMotion Compatibility) 기능이 자동으로 사용 설정됩니다. EVC는 클러스터 내의 모든 ESXi 서버가 가상 머신에 동일한 CPU 사양 세트를 노출하도록 함으로써 클러스터 내의 모든 ESXi 서버에 vMotion 호환성을 제공합니다. EVC를 사용하면 ESXi 서버 간에 실제 CPU가 서로 다르더라도 가상 머신이 클러스터 내 임의의 ESXi 서버로 마이그레이션할 수 있습니다.
 
 ### Virtual Server 인스턴스
+{: #sd_cloudfoundationoverview-vsi}
 
 다음 VSI(Virtual Server Instances)가 주문됩니다.
 * Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스용 VSI. VSI는 다중 사이트 구성 지원에 필요합니다. 이 VSI 스펙은 Windows 2012 R2(8GB RAM / 두 개의 CPU 코어 / 100GB 디스크 / 듀얼 1Gbps 사설 업링크)입니다.
@@ -79,6 +88,7 @@ vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keywor
 * (Veeam on {{site.data.keyword.cloud_notm}}가 주문된 경우) Veeam 백업 서비스용 VSI가 주문됨
 
 ### 스토리지
+{: #sd_cloudfoundationoverview-storage}
 
 선택한 {{site.data.keyword.baremetal_short}} 구성에 따라 다음 스토리지가 주문됩니다.
 * 두 개의 1-TB SATA 부트 디스크
@@ -87,6 +97,7 @@ vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keywor
 * **Skylake** 및 **Broadwell** 구성의 경우에만, 요구사항에 따라 디스크 드라이브 수 및 디스크 유형과 용량을 설정할 수 있습니다. 또한 고성능 Intel Optane 옵션은 총 10개의 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공합니다. 고성능 Intel Optane 옵션은 CPU 모델에 따라 다릅니다.
 
 ### 라이센스(IBM 제공 또는 BYOL) 및 요금
+{: #sd_cloudfoundationoverview-license-and-fee}
 
 * 네 개의 VMware vSphere Enterprise Plus 6.5u1
 * 네 개의 VMware vCenter Server 6.5
@@ -96,14 +107,17 @@ vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keywor
 * 네 개의 지원 및 서비스 비용
 
 ## Cloud Foundation 확장 노드의 기술 스펙
+{: #sd_cloudfoundationoverview-expansion-node-specs}
 
 각 Cloud Foundation 확장 노드가 {{site.data.keyword.cloud_notm}} 계정에서 다음 컴포넌트를 배치하고 이에 대한 비용을 부과합니다.
 
 ### 확장 노드를 위한 하드웨어
+{: #sd_cloudfoundationoverview-expansion-node-hardware}
 
-[Cloud Foundation 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)에 제시된 구성을 지닌 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server.
+[Cloud Foundation 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances)에 제시된 구성을 지닌 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server.
 
 ### 확장 노드의 라이센스 및 요금
+{: #sd_cloudfoundationoverview-expansion-node-license-and-fee}
 
 * 하나의 VMware vSphere Enterprise Plus 6.5u1
 * 하나의 VMware vCenter Server 6.5
@@ -123,11 +137,12 @@ vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keywor
 
    이 활동에 대한 예외에는 {{site.data.keyword.slportal}}의 공유 스토리지 파일 공유 관리가 포함됩니다. 이러한 활동에는 공유 스토리지 파일 공유 주문, 삭제(마운트된 경우 데이터 저장소에 영향을 줄 수 있음), 권한 부여 및 마운트가 포함됩니다.
 
-### 관련 링크
+## 관련 링크
+{: #sd_cloudfoundationoverview-related}
 
-* [Cloud Foundation 소프트웨어 명세서](/docs/services/vmwaresolutions/sddc/sd_bom.html)
-* [Cloud Foundation 인스턴스 계획](/docs/services/vmwaresolutions/sddc/sd_planning.html)
-* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation 소프트웨어 명세서](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
+* [Cloud Foundation 인스턴스 계획](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [VMware vSphere Documentation Center](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [VMware NSX 6 Documentation Center](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764)

@@ -4,18 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # vCenter への HCX Manager の登録
+{: #hcx-archi-reg-vcenter}
 
 VMware vSphere Web Client でハイブリッド・クラウド・サービス・プラグインを登録し、ハイブリッド・クラウド・サービスの管理サービスを開始します。
 
 ## 始める前に
+{: #hcx-archi-reg-vcenter-prereq}
 
 登録の前に、ハイブリッド・クラウド・サービス仮想アプライアンスを電源オンにする必要があります。
 
 ## HCX Manager を vCenter に登録する手順
+{: #hcx-archi-reg-vcenter-proc-register}
 
 1. ハイブリッド・クラウド・サービスのサービス仮想アプライアンスにログインします。
 2. **「設定の管理 (Manage Settings)」**タイルをクリックします。
@@ -35,9 +38,11 @@ VMware vSphere Web Client でハイブリッド・クラウド・サービス・
 5. 登録を確定するには、vSphere Web Client をログアウトします。 もう一度ログインして、画面が更新されたことを確認してください。
 
 ## 結果
+{: #hcx-archi-reg-vcenter-results}
 
 左側に既存の**「ハイブリッド・クラウド (Hybrid Cloud)」**アイコンと**「ハイブリッド・クラウド・サービス (Hybrid Cloud Services)」**メニュー項目があることに注目してください。 ハイブリッド・クラウド・サービスを登録すると、これらのラベルが更新されます。 インベントリーで、アイコンのラベルが**「ハイブリッド・クラウド・サービス (Hybrid Cloud Services)」**になります。
 
-### 関連リンク
+## 関連リンク
+{: #hcx-archi-reg-vcenter-related}
 
-* [ハイブリッド・サービスのインストールおよび構成](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-hybrid.html)
+* [ハイブリッド・サービスのインストールおよび構成](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-hybrid)

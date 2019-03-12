@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # 檢視內部部署 VMware HCX on IBM Cloud 實例
+{: #standalone_viewingserviceinstances}
 
 使用此程序來檢視您針對內部部署使用所訂購的內部部署 HCX on {{site.data.keyword.cloud}} 實例及其相關資訊。
 
 ## 檢視內部部署 VMware HCX on IBM Cloud 實例的程序
+{: #standalone_viewingserviceinstances-procedure}
 
 從左導覽窗格中，按一下**已部署的實例**，並向下捲動至**內部部署 HCX 實例**表格，以檢視您所訂購實例的相關資訊：
 
@@ -36,9 +38,10 @@ lastupdated: "2019-01-24"
 |已安裝|實例已備妥可供使用。|
 |正在移除|正在刪除實例。|
 
-### 相關鏈結
+## 相關鏈結
+{: #standalone_viewingserviceinstances-related}
 
-* [訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
-* [刪除內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
-* [HCX 術語名詞解釋](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
+* [刪除內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances)
+* [HCX 術語名詞解釋](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources)

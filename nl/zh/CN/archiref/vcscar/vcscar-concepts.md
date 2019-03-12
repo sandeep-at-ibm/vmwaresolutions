@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 滑板语言概念
+{: #vcscar-concepts}
 
 ## 滑板手语言
+{: #vcscar-concepts-skater}
 
 Skate Advisor 的一个关键方面是可与 Watson 驱动的聊天机器人进行对话。以下部分详细描述了用于定义与 Skate Advisor 聊天机器人进行人机交互的对话规则。
 
@@ -20,8 +22,10 @@ Skate Advisor 的一个关键方面是可与 Watson 驱动的聊天机器人进�
 * 技巧分类：根据技巧的文本描述对该技巧进行存储和分类。通过此方式分类的技巧可以附加元数据，例如位置和视频参考。
 
 ## 语言元素
+{: #vcscar-concepts-lang-elem}
 
 ### 核心元素
+{: #vcscar-concepts-core-elem}
 
 下面是用于构造技巧的核心语言元素。
 
@@ -35,6 +39,7 @@ Skate Advisor 的一个关键方面是可与 Watson 驱动的聊天机器人进�
 着地|滑后轮（后两轮）<br>滑前轮（前两轮）<br>5-0（碾磨）<br>碾磨前桥<br>滑板尾<br>滑板鼻<br>歪磨<br>斯密磨<br>骑肋<br>反向骑肋<br>
 
 ### 元素修饰符
+{: #vcscar-concepts-elem-modifiers}
 
 元素修饰符是特殊的语言元素，用于将上下文提供给语言的特定方面。
 
@@ -46,12 +51,14 @@ Skate Advisor 的一个关键方面是可与 Watson 驱动的聊天机器人进�
 小乱|内转<br>外转|
 
 ## 语言规则
+{: #vcscar-concepts-lang-rules}
 
 以下规则集用于构造语言。技巧分为一个或多个元素组合，称为“组合”。除非另有说明，否则第一个组合和随后的组合之间的区别在于，假定第一个组合的方向与基本组合中的方向相同。
 
 有关以下规则的信息，请参阅“核心元素”和“元素修饰符”作为参考，因为会将它们用于构造语言。
 
 ### 技巧规则集
+{: #vcscar-concepts-trick-ruleset}
 
 ```
 base_combo = 'direction \+ \[varial | turn_prefix\] \+ \[rotation\] \+ \[base_trick\]'
@@ -61,6 +68,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
 ```
 
 ### 技巧规则引擎
+{: #vcscar-concepts-trick-rule-engine}
 
 下图是规则引擎的可视摘要。
 
@@ -68,6 +76,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
 ![滑板语言概览图](vcscar-skate-language.svg)
 
 ## 样本技巧语言
+{: #vcscar-concepts-sample-trick}
 
 以下示例是样本技巧的列表：
 
@@ -106,9 +115,11 @@ nollie-heelflip to frontside-boardslide
 ```
 
 ## 相关性
+{: #vcscar-concepts-relevance}
 
 技巧语言是一个关键的构造，用于训练 Watson 来识别和摄入滑板文档和媒体，同时形成与用户对话的基础。
 
-### 相关链接
+## 相关链接
+{: #vcscar-concepts-related}
 
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)  
+* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)  

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # システム・コンテキスト
+{: #vcsiks-systemcontext}
 
 図 1. システム・コンテキスト
 
@@ -26,6 +27,7 @@ lastupdated: "2019-01-23"
 - **{{site.data.keyword.cloud_notm}} サービス** – {{site.data.keyword.cloud_notm}} サービスは、分析、AI、IoT などのオファリングを含む、利用可能な広範囲のサービスです。
 
 ## アクター
+{: #vcsiks-systemcontext-actors}
 
 表 1. アクター
 
@@ -37,6 +39,7 @@ lastupdated: "2019-01-23"
 {{site.data.keyword.containerlong_notm}} | サービスの {{site.data.keyword.containerlong_notm}} マスター・ノードを管理する IBM の要員。
 
 ## システム
+{: #vcsiks-systemcontext-systems}
 
 表 2. システム
 
@@ -57,6 +60,7 @@ Watson | このリファレンス・アーキテクチャーの Acme Skateboards
 
 アプリケーション・モダナイゼーションにおいて最も難しい側面は、多くの場合、アプリケーションのマイグレーション、ネットワーキング、およびセキュリティーです。 VMware vCenter Server on {{site.data.keyword.cloud_notm}}、VMware Hybridity、VMware NSX、{{site.data.keyword.cloud_notm}} Private、および {{site.data.keyword.containerlong_notm}} により、これらの課題に対処して、弾力性、堅牢性、および機密保護機能を備えた最新のアプリケーションを構築できます。
 
-### 関連リンク
+## 関連リンク
+{: #vcsiks-systemcontext-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

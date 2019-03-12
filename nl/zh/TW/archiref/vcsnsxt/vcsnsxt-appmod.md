@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 應用程式現代化概觀
+{: #vcsnsxt-appmod}
 
 下圖顯示 Acme Skateboards 所部署的應用程式現代化參照架構，在此系列文件中會有深入說明。
 
@@ -35,6 +36,7 @@ lastupdated: "2019-01-23"
   - 內部部署資料中心與雲端 VM 中，舊式系統之間的資料流量。
 
 ## Acme Skateboards 的主要優點
+{: #vcsnsxt-appmod-benefits}
 
 - 已將採購、架構、實作及部署資源所需的時間從數週甚至數個月縮減為數小時，以加速將 IT 專案交付給開發人員和事業單位。如果客戶需要等待網路或安全團隊可訂購負載平衡器、防火牆、交換器及路由器這類服務，則會縮短應用程式創造價值的時間。
 - 已利用受管理專用雲端中的專用裸機伺服器來加強安全，包括將專用端點部署至 {{site.data.keyword.cloud_notm}} 服務（例如 {{site.data.keyword.containerlong_notm}} 和 KMIP）。
@@ -45,6 +47,7 @@ lastupdated: "2019-01-23"
 
 此參照架構顯示 VCS、{{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 如何安全地推動 Acme Skateboards 的應用程式現代化旅程。
 
-### 相關鏈結
+## 相關鏈結
+{: #vcsnsxt-appmod-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

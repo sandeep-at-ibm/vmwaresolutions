@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 애플리케이션 현대화 개요
+{: #vcsnsxt-appmod}
 
 다음 다이어그램은 Acme Skateboards에서 배치할 애플리케이션 현대화 참조 아키텍처를 보여주며 이 일련의 문서에서 자세히 설명합니다.
 
@@ -35,6 +36,7 @@ lastupdated: "2019-01-23"
   - 온프레미스 데이터 센터의 레거시 시스템과 클라우드 VM 간의 트래픽.
 
 ## Acme Skateboards의 주요 이점
+{: #vcsnsxt-appmod-benefits}
 
 - 리소스의 조달, 아키텍처, 구현 및 배치에 걸리는 시간을 몇 주나 심지어는 몇 달에서 몇 시간으로 줄임으로써 개발자 및 비즈니스 라인을 위한 IT 프로젝트의 제공을 가속화합니다. 네트워킹 또는 보안 팀에서 Load Balancer, 방화벽, 스위치, 라우터와 같은 서비스를 주문할 수 있을 때까지 고객이 대기해야 하는 경우 가치 창출을 위한 애플리케이션 시간이 줄어듭니다.
 - {{site.data.keyword.containerlong_notm}} 및 KMIP 등 {{site.data.keyword.cloud_notm}} 서비스에 대한 사설 엔드포인트 배치를 포함하여 호스팅되는 프라이빗 클라우드의 전용 Bare Metal Server를 사용하여 보안을 개선합니다.
@@ -46,6 +48,7 @@ Managed Services를 사용하여 전세계적으로 VMware 전문 지식을 사�
 
 이 참조 아키텍처는 VCS, {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}}가 애플리케이션 현대화 과정을 따라 Acme Skateboards로 안전하게 이동하는 방법을 보여줍니다.
 
-### 관련 링크
+## 관련 링크
+{: #vcsnsxt-appmod-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

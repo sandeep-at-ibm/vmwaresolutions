@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # キャパシティーの拡張
+{: #solution_scaling}
 
 初期デプロイメントの後に、{{site.data.keyword.vmwaresolutions_full}} コンソールからコンピュート・キャパシティーを拡張することができます。 この設計では、以下のような拡張方法がサポートされています。
 * 別々の vCenter Server が管理する新規サイトを追加する
@@ -20,6 +21,7 @@ lastupdated: "2019-01-23"
 * 既存クラスターに新規ホストを追加する
 
 ## その他のサイトの追加
+{: #solution_scaling-sites}
 
 {{site.data.keyword.vmwaresolutions_short}} は {{site.data.keyword.cloud_notm}} の世界規模のデータ・センターおよび統合されたネットワーク・バックボーンを利用して、地域をまたがるさまざまなユース・ケースをデプロイし、インフラストラクチャーを一から構築するよりもずっと短時間で機能できるようにします。
 
@@ -35,6 +37,7 @@ lastupdated: "2019-01-23"
 さらに、2 次サイトの NSX マネージャーが 1 次サイト上の NSX マネージャーの 2 次 NSX マネージャーとしてセットアップされることもあります。
 
 ## 新規クラスターの追加
+{: #solution_scaling-clusters}
 
 {{site.data.keyword.vmwaresolutions_short}} コンソールから新規クラスターを作成し、新規クラスターに自動的に追加される新規ホストを注文することによって、コンピュート・キャパシティーを拡張することもできます。
 
@@ -48,11 +51,13 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## ESXi ホストの既存クラスターへの追加
+{: #solution_scaling-hosts}
 
 {{site.data.keyword.vmwaresolutions_short}} コンソールからホストを注文することによって、既存のクラスターを拡張できます。  新規ホストはクラスターに自動的に追加されます。 予約要件に基づいて、クラスターの HA 予約ポリシーを調整する必要があることにご注意ください。
 
-### 関連リンク
+## 関連リンク
+{: #solution_scaling-related}
 
-* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [設計の概要](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [設計の概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

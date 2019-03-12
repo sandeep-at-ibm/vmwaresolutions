@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,12 +13,14 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server with Hybridity Bundle 인스턴스에 업데이트 적용
+{: #vc_hybrid_applyingupdates}
 
 vCenter Server with Hybridity Bundle 인스턴스에 패치 및 업데이트를 적용하는 프로세스는 관리 컴포넌트에 대해서만 자동화되어 있습니다. VMware 업데이트는 수동으로 적용해야 합니다.
 
 ## 시작하기 전에
+{: #vc_hybrid_applyingupdates-prereq}
 
-V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데이트는 더 이상 나열되지 않습니다. 호스트 추가, 클러스터 추가 및 서비스 주문과 같은 조치를 수행하면 인스턴스가 최신 버전으로 자동 업데이트됩니다. 자동 업데이트에 대한 자세한 정보는 [V2.5 릴리스 정보](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)에서 *IBM CloudDriver 복원성* 섹션을 참조하십시오.
+V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데이트는 더 이상 나열되지 않습니다. 호스트 추가, 클러스터 추가 및 서비스 주문과 같은 조치를 수행하면 인스턴스가 최신 버전으로 자동 업데이트됩니다. 자동 업데이트에 대한 자세한 정보는 [V2.5 릴리스 정보](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)에서 *IBM CloudDriver 복원성* 섹션을 참조하십시오.
 {:note}
 
 업데이트를 적용하기 전에 아래로 화살표를 클릭하여 업데이트 항목을 펼치고 다음 정보를 확인하십시오.
@@ -39,6 +41,7 @@ V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데
 |주요  |이 업데이트는 일부 또는 모든 시스템에 영향을 줍니다. 스케줄된 작동 중단 중에 업데이트를 적용해야 합니다. |  
 
 ## vCenter Server with Hybridity Bundle 인스턴스에 업데이트를 적용하는 프로시저
+{: #vc_hybrid_applyingupdates-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 업데이트할 인스턴스를 클릭하십시오.
@@ -63,13 +66,14 @@ V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데
 7. 다중 사이트 배치 구성의 vCenter Server 인스턴스에 업데이트를 적용하는 경우에는 **업데이트하는 데 필요한 단계**라는 제목의 섹션이 표시됩니다. 이 섹션은 다중 사이트 배치에서 모든 인스턴스에 필요한 업데이트 오퍼레이션을 나열합니다. 각 단계마다 **업데이트 적용**을 클릭하여 순서대로 단계를 완료해야 합니다. 다음 단계를 시작하기 전에 이전 단계가 완료될 때까지 기다려야 합니다.   
 
 ## 결과
+{: #vc_hybrid_applyingupdates-results}
 
-2. 업데이트를 적용한 후 자세한 진행상태 및 업데이트 상태를 볼 수 있는 소프트웨어 업데이트 상태 목록에 레코드가 표시됩니다. 업데이트가 완료되면 설치된 소프트웨어 업데이트 목록에 레코드가 표시됩니다.
+1. 업데이트를 적용한 후 자세한 진행상태 및 업데이트 상태를 볼 수 있는 소프트웨어 업데이트 상태 목록에 레코드가 표시됩니다. 업데이트가 완료되면 설치된 소프트웨어 업데이트 목록에 레코드가 표시됩니다.
 
   업데이트 작업의 최신 상태를 검색하려면 페이지의 오른쪽 상단에 있는 새로 고치기 아이콘을 클릭하십시오.
   {:tip}
 
-3. 업데이트 상태에 대한 세부사항은 다음 목록을 참조하십시오.
+2. 업데이트 상태에 대한 세부사항은 다음 목록을 참조하십시오.
 <dl class="dl">
 <dt class="dt dlterm">사용 가능</dt>
 <dd class="dd">업데이트는 적용될 수 있습니다. 이전 업데이트가 적용될 때까지 사용 가능한 업데이트를 선택할 수 없습니다.
@@ -88,10 +92,11 @@ V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데
 <dd class="dd">업데이트 작업의 상태를 가져올 수 없습니다. IBM 지원 센터에 문의하여 도움을 받으십시오.</dd>
 </dl>
 
-4. 특정 단계에서 업데이트 프로세스에 실패하는 경우 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)하여 도움을 받으십시오. 문제 해결 방법에 대한 정보를 얻고 실패한 단계에서 업그레이드를 다시 시도하도록 안내됩니다.
+3. 특정 단계에서 업데이트 프로세스에 실패하는 경우 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)하여 도움을 받으십시오. 문제 해결 방법에 대한 정보를 얻고 실패한 단계에서 업그레이드를 다시 시도하도록 안내됩니다.
 
-### 관련 링크
+## 관련 링크
+{: #vc_hybrid_applyingupdates-related}
 
-* [vCenter Server with Hybridity Bundle 개요](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [vCenter Server with Hybridity Bundle 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

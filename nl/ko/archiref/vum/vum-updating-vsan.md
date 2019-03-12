@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # vSAN 클러스터 업데이트
+{: #vum-updating-vsan}
 
 vSAN은 VUM에 사용할 시스템 기준선 및 기준선 그룹을 생성합니다. 이러한 권장 기준선을 통해 vSAN을 사용 중인 {{site.data.keyword.cloud_notm}} 인스턴스의 VMware vCenter Server에서 ESXi 호스트에 대한 소프트웨어, 패치 및 확장을 업데이트할 수 있습니다. vSAN 6.6.1 이상은 vSAN 클러스터에 대한 자동화된 빌드 권장사항을 생성합니다. vSAN은 VMware 호환성 안내서 및 vSAN 릴리스 카탈로그의 정보와 설치된 vSphere ESXi 릴리스에 대한 정보를 결합합니다.
 
@@ -20,17 +21,18 @@ vSAN은 VUM에 사용할 시스템 기준선 및 기준선 그룹을 생성합�
 vSAN 클러스터 업그레이드는 다음과 같은 태스크 순서로 진행됩니다.
 * **vSAN 온라인 상태 워크플로우 사용** – 이 워크플로우는 업데이트가 검토되고 수정될 수 있도록 VUM에서 vSAN 기준선을 사용으로 설정합니다. 이 워크플로우는 처음에 VUM에서 vSAN을 사용하도록 설정하기 위해서만 수행되어야 합니다.
 * **전제조건** – 전제조건, 프로세스 및 제한사항을 이해합니다.
-* **vCenter Server 어플라이언스 업그레이드** - 자세한 정보는 [VCSA 업데이트 및 SSO 링크된 vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html)를 참조하십시오.
-* **vSphere ESXi 호스트 업그레이드** – 자세한 정보는 [기준선 작성 및 인벤토리 오브젝트에 연결](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html)을 참조하십시오.
+* **vCenter Server 어플라이언스 업그레이드** - 자세한 정보는 [VCSA 업데이트 및 SSO 링크된 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)를 참조하십시오.
+* **vSphere ESXi 호스트 업그레이드** – 자세한 정보는 [기준선 작성 및 인벤토리 오브젝트에 연결](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines)을 참조하십시오.
 * **vSAN 디스크 형식 업그레이드** - vSAN 디스크 형식 업그레이드를 참조하십시오. 디스크 형식 업그레이드는 선택사항이지만 최상의 결과를 얻으려면 최신 버전을 사용하도록 오브젝트를 업그레이드하십시오. 온디스크 형식은 사용자 환경을 vSAN의 전체 기능 세트에 노출합니다.
 
 ## vSAN 온라인 상태 워크플로우 사용
+{: #vum-updating-vsan-enable-vsan-workflow}
 
 다음 섹션의 태스크를 통해 VUM에서 vSAN 기준선을 사용할 수 있습니다. vSAN 6.6.1 이상에서는 다음을 통해 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 인스턴스를 지원되는 상태로 유지하기 위해 vSAN 클러스터가 사용 가능한 최상의 릴리스로 최신 상태가 되도록 원활한 자동 업데이트 프로세스를 제공합니다.
 * **vSAN 버전 권장사항** - VMware 호환성 안내서, vSAN 릴리스 카탈로그 및 기본 하드웨어 구성 인식의 정보를 사용하여 자동으로 생성됩니다. 또한 권장 릴리스에 필요한 드라이버 및 패치 업데이트를 시스템 기준선에 포함시킵니다.
 * **vSAN 빌드 권장사항** - 클러스터가 현재 하드웨어 호환성 상태 또는 더 개선된 상태를 유지하도록 보장합니다.
 
-vCenter 6.5 패치 2 이상 버전은 일부 프록시 사용 문제를 수정하므로 계속하기 전에 VCSA가 이 버전인지 확인하십시오. 자세한 정보는 [VCSA 업데이트 및 SSO 링크된 vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html)를 참조하십시오.
+vCenter 6.5 패치 2 이상 버전은 일부 프록시 사용 문제를 수정하므로 계속하기 전에 VCSA가 이 버전인지 확인하십시오. 자세한 정보는 [VCSA 업데이트 및 SSO 링크된 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)를 참조하십시오.
 
 VUM에서 해당 vSAN 업데이트를 보기 위해 vSAN 온라인 상태 워크플로우가 이어집니다. 따라서 vSAN 온라인 상태를 사이트 `vcsa.vmware.com` 및 `vmware.com`에 연결하여 필요한 vSAN 온라인 상태 워크플로우를 사용으로 설정할 수 있도록 이러한 온라인 상태 검사를 수행해야 합니다.
 * 프록시를 사용하도록 VCSA 구성
@@ -41,6 +43,7 @@ VUM에서 해당 vSAN 업데이트를 보기 위해 vSAN 온라인 상태 워크
 첫 번째 단계는 vSAN 빌드 권장사항 엔진에 my.vmware.com 인증 정보를 추가하는 것입니다. 성공적으로 로그인되면 vSAN이 각 vSAN 클러스터에 대한 권장 업데이트의 기준선 그룹을 생성합니다. vSAN 시스템 기준선은 기준선 및 그룹 탭의 기준선 분할창에 나열됩니다.
 
 ### 프록시를 사용하도록 VCSA 구성
+{: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	점프 서버 웹 브라우저에서 VCSA 관리 인터페이스 `https://<vCenter ip>:5480`에 연결하십시오.
 2.	IC4VS 콘솔의 인증 정보를 사용하여 VCSA 관리 인터페이스에 루트로 로그인하십시오.
@@ -54,14 +57,19 @@ HTTPS 매개변수가 설정되지 않은 경우 다음 명령을 사용하십�
   `proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
 
 ### 프록시를 사용하도록 vSAN 구성
+{: #vum-updating-vsan-config-vsan-proxy}
+
 1. **홈** > **호스트 및 클러스터**로 이동하여 탐색 분할창에서 **vSAN 클러스터**를 선택한 후 **구성 탭**을 선택하고 **vSAN**으로 이동한 후 **일반**으로 이동하십시오. **인터넷 연결** 섹션으로 스크롤하여 **편집**을 클릭하십시오.
 2. 프록시의 IP 주소 및 포트 번호를 입력하고 **확인**을 클릭하십시오.
 
 ### 고객 환경 향상 프로그램(CEIP) 사용
+{: #vum-updating-vsan-enable-ceip}
 
 이 단계는 선택사항입니다. vSphere Web Client를 사용하여 **홈** > **관리** > **고객 환경 향상 프로그램**으로 이동한 후 **참여**를 클릭하십시오.
 
 ### 테스트 업로드를 완료하고 업로드가 작동했는지 유효성 검증
+{: #vum-updating-vsan-complete-upload}
+
 1. vSphere Web Client를 사용하여 **홈** > **호스트 및 클러스터**로 이동하십시오. 필수 클러스터를 선택하고 **모니터 탭** 및 **vSAN** 페이지를 선택한 후 **상태**를 클릭하십시오. **온라인 상태 사용**을 클릭하십시오.
 2. **다시 테스트**를 클릭하고 프로세스가 완료될 때까지 기다리십시오.
 3. 상태에 _온라인 상태 연결_이라는 새 검사가 표시되고 **온라인 상태 사용**이 **온라인 상태를 사용하여 다시 테스트**로 변경됩니다.
@@ -71,6 +79,7 @@ HTTPS 매개변수가 설정되지 않은 경우 다음 명령을 사용하십�
 7. **Update Manager 탭**을 누르면 vSAN 클러스터가 기준선에 추가됩니다.
 
 ## 전제조건
+{: #vum-updating-vsan-prereq}
 
 vSAN 업그레이드 프로세스를 시작하기 전에 다음 요구사항이 충족되었는지 확인하십시오.
 * VMware 기술 자료 문서를 검토하고 현재 vSAN 버전과 원하는 대상 vSAN 버전 간의 알려진 호환성 문제를 검토하십시오.
@@ -93,14 +102,17 @@ vSAN 업그레이드 프로세스를 시작하기 전에 다음 요구사항이 
   - 따라서 특정 vSAN 동작 변경사항은 온디스크 형식으로 제어되므로 새 온디스크 형식 버전을 혼합 버전 클러스터에 도입하지 않는 것이 중요합니다.
 
 ## vCenter Server 어플라이언스 업그레이드
+{: #vum-updating-vsan-upgrade-vcsa}
 
-자세한 정보는 [VCSA 업데이트 및 SSO 링크된 vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html)를 참조하십시오.
+자세한 정보는 [VCSA 업데이트 및 SSO 링크된 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)를 참조하십시오.
 
-##	vSphere ESXi 호스트 업그레이드
+## vSphere ESXi 호스트 업그레이드
+{: #vum-updating-vsan-upgrade-hosts}
 
-자세한 정보는 [기준선 작성 및 인벤토리 오브젝트에 연결](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html)을 참조하십시오.
+자세한 정보는 [기준선 작성 및 인벤토리 오브젝트에 연결](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines)을 참조하십시오.
 
-##	vSAN 디스크 형식 업그레이드
+## vSAN 디스크 형식 업그레이드
+{: #vum-updating-vsan-upgrade-vsan}
 
 RVC(Ruby vSphere Console)는 vSphere에 대한 Ruby 기반 명령행 인터페이스이며 VMware vSphere ESXi 및 vCenter를 관리하는 데 사용될 수 있습니다. vSphere 인벤토리는 트리 구조로 표시되어 vCenter 오브젝트에 대한 명령을 탐색하고 실행할 수 있습니다.
 
@@ -133,7 +145,8 @@ vSphere Client를 클릭하는 것보다 훨씬 더 효율적으로 많은 기�
 
 11. 이제 VSAN 클러스터 업그레이드가 완료되었습니다. `exit`를 입력하고 **Enter**를 눌러 RVC를 종료하십시오.
 
-### 관련 링크
+## 관련 링크
+{: #vum-updating-vsan-related}
 
 * [VMware HCX on IBM Cloud 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

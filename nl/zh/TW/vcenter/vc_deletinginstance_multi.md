@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 刪除多站台配置中的 vCenter Server 實例
+{: #vc_deletinginstance_multi}
 
 在規劃刪除屬於多站台配置的 vCenter Server 實例之前，請注意下列特殊考量。
 
@@ -30,6 +31,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## 在多站台配置中刪除 vCenter Server 實例的程序
+{: #vc_deletinginstance_multi-procedure}
 
 1. 從次要 vCenter Server 實例移除所有服務。
 2. 確定未將任何 NSX 物件擴充至您要刪除的次要實例。
@@ -39,7 +41,8 @@ lastupdated: "2019-01-23"
 6. 針對多站台配置中的所有次要 vCenter Server 實例，重複步驟 1 - 5。
 7. 刪除所有次要實例之後，您也可以從 {{site.data.keyword.vmwaresolutions_short}} 主控台刪除主要實例。
 
-### 相關鏈結
+## 相關鏈結
+{: #vc_deletinginstance_multi-related}
 
-* [刪除 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)
-* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [刪除 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)
+* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)

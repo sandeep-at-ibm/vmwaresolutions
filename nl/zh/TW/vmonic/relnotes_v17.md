@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-07-05"
 
@@ -13,6 +13,7 @@ lastupdated: "2017-07-05"
 {:important: .important}
 
 # 1.7 版的版本注意事項
+{: #relnotes_v17}
 
 此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
@@ -29,27 +30,27 @@ lastupdated: "2017-07-05"
   V4 伺服器上的任何現有部署或新部署，都未啟用 EVC 模式。
   {:note}
 
-* 在實例中新增節點時，在 5 月 22 日之前部署因而使用 V3 伺服器的 VMware Cloud Foundation 部署，現在將訂購 V4 伺服器。這些伺服器有 256 GB 記憶體；如果需要 512 GB 記憶體，在新增伺服器之後，請開立支援問題單來要求伺服器升級至 512 GB 記憶體。如需與「IBM 支援中心」聯絡的相關資訊，請參閱[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
+* 在實例中新增節點時，在 5 月 22 日之前部署因而使用 V3 伺服器的 VMware Cloud Foundation 部署，現在將訂購 V4 伺服器。這些伺服器有 256 GB 記憶體；如果需要 512 GB 記憶體，在新增伺服器之後，請開立支援問題單來要求伺服器升級至 512 GB 記憶體。如需與「IBM 支援中心」聯絡的相關資訊，請參閱[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
 
-如需元件的相關資訊，請參閱 [Cloud Foundation 實例的技術規格](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
+如需元件的相關資訊，請參閱 [Cloud Foundation 實例的技術規格](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances)。
 
 ### 更新程序需求
 
-視 Cloud Foundation 實例部署的複雜性以及您是否具有多站台配置而定，此更新程序可能需要一系列步驟，您必須依照主控台上的**更新及修補程式**標籤上所顯示來完成這些步驟。如需相關資訊，請參閱[將更新套用至 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html#applying-updates-to-cloud-foundation-instances)。
+視 Cloud Foundation 實例部署的複雜性以及您是否具有多站台配置而定，此更新程序可能需要一系列步驟，您必須依照主控台上的**更新及修補程式**標籤上所顯示來完成這些步驟。如需相關資訊，請參閱[將更新套用至 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_applyingupdates#applying-updates-to-cloud-foundation-instances)。
 
 ## VMware vCenter Server 實例的更新
 
 ### 叢集支援
 
-從 1.7 版開始，您可以使用叢集來管理 vCenter Server 實例中的 ESXi 伺服器，以取得更好的資源管理和高可用性。依預設，您訂購實例時所配置的 ESXi 伺服器會分組為 **cluster1**。您可以透過實例詳細資料頁面上新建立的**基礎架構**標籤檢視叢集詳細資料，或將最多五個叢集新增至實例。當您擴充或縮減實例的容量時，您可以選取要將 ESXi 伺服器新增至哪一個叢集，或從中移除 ESXi 伺服器。如需相關資訊，請參閱[新增及檢視 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)。
+從 1.7 版開始，您可以使用叢集來管理 vCenter Server 實例中的 ESXi 伺服器，以取得更好的資源管理和高可用性。依預設，您訂購實例時所配置的 ESXi 伺服器會分組為 **cluster1**。您可以透過實例詳細資料頁面上新建立的**基礎架構**標籤檢視叢集詳細資料，或將最多五個叢集新增至實例。當您擴充或縮減實例的容量時，您可以選取要將 ESXi 伺服器新增至哪一個叢集，或從中移除 ESXi 伺服器。如需相關資訊，請參閱[新增及檢視 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)。
 
 ### Zerto 災難回復部署的加強功能
 
-現在 Zerto 災難回復的部署已自動化，而不必透過支援問題單來處理。預估成本會列出所有 Zerto 元件，例如專用可攜式子網路、Windows VSI（虛擬服務實例）及 Zerto 授權費用，讓您在下訂單之前先檢閱。如需相關資訊，請參閱 [Zerto 災難回復的部署程序](/docs/services/vmwaresolutions/services/addingzertodr.html)。
+現在 Zerto 災難回復的部署已自動化，而不必透過支援問題單來處理。預估成本會列出所有 Zerto 元件，例如專用可攜式子網路、Windows VSI（虛擬服務實例）及 Zerto 授權費用，讓您在下訂單之前先檢閱。如需相關資訊，請參閱 [Zerto 災難回復的部署程序](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)。
 
 ### NSX 授權升級功能
 
-您可以從 vCenter Server 實例的**摘要**標籤升級 NSX 授權版本。授權升級會以新的授權取代您帳戶中的所有現有 NSX SoftLayer 授權。如需相關資訊，請參閱[檢視 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)。
+您可以從 vCenter Server 實例的**摘要**標籤升級 NSX 授權版本。授權升級會以新的授權取代您帳戶中的所有現有 NSX SoftLayer 授權。如需相關資訊，請參閱[檢視 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)。
 
 ## 可用性加強功能
 

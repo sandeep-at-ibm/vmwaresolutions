@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server with Hybridity Bundle 개요
+{: #vc_hybrid_overview}
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle은 V2.3 이상 릴리스에서 사용 가능한 인스턴스입니다. V2.6부터 vCenter Server with Hybridity Bundle 인스턴스를 비즈니스 파트너가 사용할 수 있습니다.
 
@@ -27,6 +28,7 @@ vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 
 가상화, 게스트 OS 또는 애플리케이션 계층의 일일 오퍼레이션 및 유지보수를 오프로드하려는 경우 IBM 관리 서비스를 추가할 수 있습니다. 또한 {{site.data.keyword.cloud_notm}} Professional Services 팀을 활용하면 마이그레이션, 구현, 계획 및 온보딩 서비스를 사용하여 클라우드로의 이동 속도를 높이는 데 도움이 됩니다.
 
 ## vCenter Server with Hybridity Bundle 아키텍처
+{: #vc_hybrid_overview-archi}
 
 다음 그림은 3-노드 vCenter Server with Hybridity Bundle 배치의 상위 레벨 아키텍처 및 컴포넌트를 나타냅니다.
 
@@ -35,10 +37,12 @@ vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 
 ![vCenter Server with Hybridity Bundle 아키텍처](hybrid_architecture.svg "vCenter Server with Hybridity Bundle 상위 레벨 아키텍처")
 
 ### 실제 인프라
+{: #vc_hybrid_overview-physical-infras}
 
 이 계층은 가상 인프라에서 사용할 실제 인프라(컴퓨팅, 스토리지 및 네트워크 리소스)를 제공합니다.
 
 ### 가상화 인프라(컴퓨팅, 스토리지 및 네트워크)
+{: #vc_hybrid_overview-virtualization-infras}
 
 이 계층은 다른 VMware 제품을 통해 실제 인프라를 가상화합니다.
 * VMware vSphere는 실제 컴퓨팅 리소스를 가상화합니다.
@@ -46,6 +50,7 @@ vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 
 * VMware NSX는 논리 네트워킹 컴포넌트 및 가상 네트워크를 제공하는 네트워크 가상화 플랫폼입니다.
 
 ### 가상화 관리
+{: #vc_hybrid_overview-virtualization-mgmt}
 
 이 계층은 vCenter Server Appliance(vCSA), NSX Manager, 2개의 NSX ESG, 3개의 NSX Controller 및 IBM CloudDriver VSI(Virtual Server Instance)로 구성됩니다. CloudDriver VSI는 환경에 호스트 추가 등과 같은 특정 오퍼레이션에 필요하면 요청 시에 배치됩니다.
 
@@ -53,15 +58,17 @@ vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 
 
 기본 오퍼링에는 가상화 관리 계층에 대해 예약된 총 38개의 vCPU와 67GB vRAM이 필요합니다. VM에 남아 있는 호스트 용량은 초과 구독 비율, VM 크기 조정 및 워크로드 성능 요구사항과 같은 여러 요인에 따라 달라집니다.
 
-HCX on {{site.data.keyword.cloud_notm}} 서비스 배치 시의 추가 관리 리소스 요구사항은 [VMware HCX on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/hcx_considerations.html)를 참조하십시오.
+HCX on {{site.data.keyword.cloud_notm}} 서비스 배치 시의 추가 관리 리소스 요구사항은 [VMware HCX on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)를 참조하십시오.
 
 ### 인프라 하이브리디티
+{: #vc_hybrid_overview-infras-hybrid}
 
 이 계층은 사용자가 해당 IP 주소와 같은 VM 특성을 변경할 필요 없이 안전하고 쉽게 워크로드를 여기저기로 이동할 수 있도록 온프레미스 사이트와 {{site.data.keyword.cloud_notm}} 사이트 간 리소스의 추상화를 제공합니다.
 
 VMware HCX(Hybrid Cloud Extension)를 기반으로, 온프레미스 및 {{site.data.keyword.cloud_notm}} 사이트 간에 느슨하게 결합된 상호연결을 작성하여 작동 중단 없는 VM의 라이브 vMotion 또는 VM의 대량 마이그레이션을 사용할 수 있습니다.
 
 ## vCenter Server with Hybridity Bundle 인스턴스의 기술 스펙
+{: #technical-specifications-for-vcenter-server-with-hybridity-bundle-instances}
 
 vCenter Server with Hybridity Bundle 인스턴스에는 다음 컴포넌트가 포함됩니다.
 
@@ -69,33 +76,37 @@ vCenter Server with Hybridity Bundle 인스턴스에는 다음 컴포넌트가 �
 {:note}
 
 ### Bare Metal Server
+{: #vc_hybrid_overview-bare-metal}
 
 4개의 **Skylake** 또는 **Broadwell** {{site.data.keyword.baremetal_short}}는 vCenter Server with Hybridity Bundle 인스턴스 주문에 포함됩니다. 다음 CPU 모델이 사용 가능합니다.
   * 두 개의 CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
   * 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600/E7-4800 시리즈)
 
 ### 네트워킹
+{: #vc_hybrid_overview-networking}
 
 다음 네트워킹 컴포넌트가 주문됩니다.
 *  10Gbps 듀얼 공용 및 사설 네트워크 업링크
 *  세 개의 VLAN(Virtual LANs): 한 개의 공용 VLAN 및 두 개의 사설 VLAN
 *  계층 2(L2) 네트워크에 연결된 로컬 워크로드 간의 잠재적인 동쪽-서쪽 통신을 위해 DLR(Distributed Logical Router)이 포함된 하나의 VXLAN(Virtual eXtensible LAN). VXLAN은 VXLAN을 수정하거나 VXLAN에 빌드하거나 VXLAN을 제거할 수 있는 샘플 라우팅 토폴로지로 배치됩니다. 또한 추가 VXLAN을 연결하여 DLR의 새 논리 인터페이스에 보안 구역을 추가할 수 있습니다.
 *  두 개의 VMware NSX Edge Services Gateway:
-  * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 VM에서 사용됩니다. 자세한 정보는 [고객 관리 ESG를 사용하도록 네트워크 구성](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)을 참조하십시오.
+  * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 VM에서 사용됩니다. 자세한 정보는 [고객 관리 ESG를 사용하도록 네트워크 구성](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)을 참조하십시오.
 
     사용자는 이 ESG에 액세스할 수 없고 사용할 수 없습니다. 이를 수정하면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server with Hybridity Bundle 인스턴스를 관리하지 못하게 될 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트와의 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
     {:important}
-  * VPN 액세스 또는 공용 액세스를 제공하도록 사용자가 수정할 수 있는 템플리트로 IBM에서 배치되는 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽을 위한 보안 고객 관리 VMware NSX Edge Services Gateway. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
+  * VPN 액세스 또는 공용 액세스를 제공하도록 사용자가 수정할 수 있는 템플리트로 IBM에서 배치되는 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽을 위한 보안 고객 관리 VMware NSX Edge Services Gateway. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
-HCX on {{site.data.keyword.cloud_notm}} 서비스를 배치할 때 주문된 네트워킹 컴포넌트에 대한 자세한 정보는 [HCX on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/hcx_considerations.html)를 참조하십시오.
+HCX on {{site.data.keyword.cloud_notm}} 서비스를 배치할 때 주문된 네트워킹 컴포넌트에 대한 자세한 정보는 [HCX on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)를 참조하십시오.
 
 ### Virtual Server 인스턴스
+{: #vc_hybrid_overview-vsi}
 
 다음 VSI(Virtual Server Instance)가 주문됩니다.
 * IBM CloudBuilder용 VSI는 인스턴스 배치가 완료된 후 취소됩니다.
 * 보안 및 강력한 추진력 향상을 위해 하나의 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI 또는 관리 클러스터에 있는 두 개의 고가용성 Microsoft Windows VM을 배치하도록 선택할 수 있습니다.
 
 ### vSAN 스토리지
+{: #vc_hybrid_overview-vsan-storage}
 
 vSAN 스토리지는 디스크 유형과 양에 대한 다양한 옵션을 포함하여 사용자 정의된 구성을 제공합니다.
 * 디스크 양: 2, 4, 6 또는 8.
@@ -105,6 +116,7 @@ vSAN 스토리지는 디스크 유형과 양에 대한 다양한 옵션을 포�
 * 고성능 Intel Optane 옵션은 총 10개의 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공합니다. 이 옵션은 CPU 모델에 따라 달라집니다.
 
 ### IBM 제공 라이센스 및 요금
+{: #vc_hybrid_overview-license-and-fee}
 
 vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 라이센스가 포함됩니다.
 
@@ -116,14 +128,17 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 라이센�
 추가 지원 및 서비스 요금이 적용될 수 있습니다.
 
 ## vCenter Server with Hybridity Bundle 확장 노드의 기술 스펙
+{: #vc_hybrid_overview-expansion-node-specs}
 
 각 vCenter Server with Hybridity Bundle 확장 노드는 사용자의 {{site.data.keyword.cloud_notm}} 계정에 배치되며 다음 컴포넌트에 대한 비용을 발생시킵니다.
 
 ### 확장 노드를 위한 하드웨어
+{: #vc_hybrid_overview-expansion-node-hardware}
 
-[vCenter Server with Hybridity Bundle 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)에 제시된 구성을 사용하는 하나의 Bare Metal Server.
+[vCenter Server with Hybridity Bundle 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)에 제시된 구성을 사용하는 하나의 Bare Metal Server.
 
 ### 확장 노드의 라이센스 및 요금
+{: #vc_hybrid_overview-expansion-node-license-and-fee}
 
 * 하나의 VMware vSphere Enterprise Plus 6.5u1
 * 하나의 VMware NSX Service Providers Edition(Advanced 또는 Enterprise) 6.4
@@ -141,10 +156,11 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 라이센�
 
    이 활동에 대한 예외에는 {{site.data.keyword.slportal}}의 공유 스토리지 파일 공유 관리가 포함됩니다. 이러한 활동에는 공유 스토리지 파일 공유 주문, 삭제(마운트된 경우 데이터 저장소에 영향을 줄 수 있음), 권한 부여 및 마운트가 포함됩니다.
 
-### 관련 링크
+## 관련 링크
+{: #vc_hybrid_overview-related}
 
-* [vCenter Server 소프트웨어 명세서](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
-* [vCenter Server with Hybridity Bundle 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
-* [vCenter Server with Hybridity Bundle 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [HCX on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/hcx_considerations.html)
-* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [vCenter Server 소프트웨어 명세서](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
+* [vCenter Server with Hybridity Bundle 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
+* [vCenter Server with Hybridity Bundle 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [HCX on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

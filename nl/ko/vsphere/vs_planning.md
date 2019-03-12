@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # VMware vSphere on IBM Cloud에 대한 요구사항 및 계획
+{: #vs_planning}
 
 VMware vSphere on {{site.data.keyword.cloud}}를 주문하기 전에 다음 요구사항을 검토하십시오. {{site.data.keyword.CloudDataCent_notm}} 위치와 워크로드 성능 및 용량 요구사항에 따라 VMware vSphere 클러스터를 계획하십시오.
 
@@ -20,10 +21,12 @@ VMware vSphere on {{site.data.keyword.cloud}}를 주문하기 전에 다음 요�
 {:note}
 
 ## IBM Cloud 계정 요구사항
+{: #vs_planning-account-req}
 
-사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)을 참조하십시오.
+사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)을 참조하십시오.
 
 ## IBM Cloud Data Center 가용성
+{: #vs_planning-dc-availability}
 
 vSphere 배치에는 실제 인프라에 대한 엄격한 요구사항이 있습니다. 그러므로, 요구사항을 충족하는 {{site.data.keyword.CloudDataCents_notm}}에만 클러스터를 배치할 수 있습니다. 다음 {{site.data.keyword.CloudDataCent_notm}}는 vSphere 배치에 사용 가능합니다.
 
@@ -67,8 +70,9 @@ vSAN 컴포넌트를 선택하면 위치 목록이 SSD(Solid-State Disk) 가용�
 |WDC06 |워싱턴, DC |북미 동부 |
 |WDC07 |워싱턴, DC |북미 동부 |
 
-### 관련 링크
+## 관련 링크
+{: #vs_planning-related}
 
-* [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [기존 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
-* [콘솔 외부에서 작성된 기존 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [기존 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [콘솔 외부에서 작성된 기존 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

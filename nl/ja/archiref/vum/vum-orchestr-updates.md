@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-20"
+lastupdated: "2019-02-18"
 
 ---
 
-#	組織的なアップグレード
+# 組織的なアップグレード
+{: #vum-orchestr-updates}
 
 組織的なアップグレードを使用して、vSphere ESXi ホストの更新後に、インベントリー内の仮想マシンの仮想ハードウェアおよび VMware Tools をアップグレードできます。 ホストが更新されると、まず VMware Tools のアップグレード・ベースラインが実行され、続いて仮想マシン・ハードウェアのアップグレード・ベースラインが実行されます。 組織的なアップグレードは、クラスター・レベル、フォルダー・レベル、またはデータ・センター・レベルで使用できます。
 
@@ -33,6 +34,7 @@ vSphere ESXI ホストが vSAN クラスターの一部である場合、修復�
 以下のワークフローでは、組織的なアップグレードを実行するプロセスについて説明します。
 
 ## ステップ 1
+{: #vum-orchestr-updates-step1}
 
 1. vSphere Web Client を使用して VCSA にログインします。
 2. **「Home」**>**「Update Manager」**を選択して、**「Objects」タブ**から **Update Manager インスタンス**を選択します。
@@ -47,6 +49,7 @@ vSphere ESXI ホストが vSAN クラスターの一部である場合、修復�
 11. **「Ready to Complete」**ページを確認し、**「Finish」**をクリックすると、「Baseline Groups」ペインにホスト・ベースライン・グループが表示されます。
 
 ## ステップ 2
+{: #vum-orchestr-updates-step2}
 
 1. VUM 管理ビューで、「ホストと整合するように VMware Tools をアップグレード」ベースラインと「ホストと整合するように仮想マシン・ハードウェアをアップグレード」ベースラインを含む仮想マシン・ベースライン・グループを作成します。
 2. アップグレードする仮想マシンを含む vCenter コンテナー・オブジェクトにベースライン・グループを添付します。
@@ -58,7 +61,8 @@ vSphere ESXI ホストが vSAN クラスターの一部である場合、修復�
 
 これで、これらのベースライン・グループをスキャン、レビュー、ステージング、および修復の各プロセスで使用できるようになりました。
 
-### 関連リンク
+## 関連リンク
+{: #vum-orchestr-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)

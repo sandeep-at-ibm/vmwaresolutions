@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud ネットワーキングの概要
+{: #vcsnsxt-overview-ic4vnetwork}
 
 {{site.data.keyword.cloud}} は物理ネットワーキングを処理します。 ここでは、{{site.data.keyword.cloud_notm}} によって提供される物理ネットワークと、前述の物理ホストに関連付けられる物理ホスト接続 (VLAN、MTU) について説明します。
 
@@ -18,18 +19,22 @@ lastupdated: "2019-01-23"
 ![{{site.data.keyword.cloud_notm}} ネットワークの概略](vcsnsxt-ic4vcloud.svg)
 
 ## パブリック・ネットワーク
+{: #vcsnsxt-overview-ic4vnetwork-public-net}
 
 {{site.data.keyword.CloudDataCents_notm}}とネットワーク Point of Presence (PoP) には、最上位の中継/ピアリング層のネットワーク・キャリアへの 1 Gbps または 10 Gbps 接続が複数存在します。 世界中のどこからのものであろうと、ネットワーク・トラフィックは最も近いネットワーク PoP に接続され、ネットワークを経由してデータ・センターに直接送られるので、ネットワークのホップ数とプロバイダー間のハンドオフ数は最小になります。 データ・センター内では、1 対のピア集約フロントエンド・カスタマー・スイッチ (FCS) を介して、個々のサーバーに 1 Gbps または 10 Gbps のネットワーク帯域幅が与えられます。 これらの集約スイッチは L3 ネットワーキング用の独立したルーター (つまり、フロントエンド・カスタマー・ルーター FCR) のペアに接続されます。 この多層設計により、ネットワークを {{site.data.keyword.CloudDataCent_notm}}内のラック、列、ポッドにわたって拡張したり縮小したりできます。
 
 ## プライベート・ネットワーク
+{: #vcsnsxt-overview-ic4vnetwork-private-net}
 
 {{site.data.keyword.CloudDataCents_notm}}と PoP はすべて、プライベート・ネットワーク・バックボーンによって接続されます。 このプライベート・ネットワークはパブリック・ネットワークとは別であり、世界中の {{site.data.keyword.CloudDataCents_notm}}内のサービスへの接続を可能にします。 データ・センター間のデータの移動は、プライベート・ネットワークへの複数の 10 Gbps 接続または 40 Gbps 接続を使用して行われます。 パブリック・ネットワークと同様に、プライベート・ネットワークも、サーバーや他のインフラストラクチャーが集約バックエンド・カスタマー・スイッチ (BCS) に接続される多層構造になっています。 これらの集約スイッチは L3 ネットワーキング用の独立したルーター (つまり、バックエンド・カスタマー・ルーター BCR) のペアに接続されます。 プライベート・ネットワークは、物理ホスト接続にジャンボ・フレーム (MTU 9000) を使用する機能もサポートします。
 
 ## 管理ネットワーク
+{: #vcsnsxt-overview-ic4vnetwork-mgmt-net}
 
 すべての {{site.data.keyword.cloud_notm}} サーバーが、パブリック・ネットワークとプライベート・ネットワークに加えて、アウト・オブ・バンド管理ネットワークに接続されます。 この管理ネットワークは VPN を介してアクセスでき、CPU、ファームウェア、オペレーティング・システムに関係なく、保守と管理の目的で Intelligent Platform Management Interface (IPMI) でサーバーにアクセスすることを可能にします。
 
 ## プライマリー IP ブロックとポータブル IP ブロック
+{: #vcsnsxt-overview-ic4vnetwork-ip-blocks}
 
 {{site.data.keyword.cloud_notm}} は、{{site.data.keyword.cloud_notm}} インフラストラクチャー内で使用される 2 つのタイプの IP アドレスを割り振ります。
 * プライマリー IP アドレスは、{{site.data.keyword.cloud_notm}} によってプロビジョンされるデバイス、ベア・メタル・サーバー、仮想サーバーに割り当てられます。 これらのブロックの IP アドレスをユーザーが割り当ててはいけません。
@@ -38,14 +43,17 @@ lastupdated: "2019-01-23"
 アカウント内で VLAN スパンニングを有効にするか、アカウントを Virtual Routing and Forwarding (VRF) アカウントとして構成すると、お客様のアカウントの VLAN にプライマリー IP アドレスまたはポータブル IP アドレスをルーティングできるようになります。
 
 ## VLAN スパンニング
+{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
 
 VLAN スパンニングとは、アカウント内のすべての VLAN のプライマリー/ポータブルの各サブネット IP ブロックを相互にルーティングできるようにする、{{site.data.keyword.cloud_notm}} のグローバルなアカウント設定です。 この設定を使用できない場合でも、IP ブロックは {{site.data.keyword.cloud_notm}} サービスにルーティングされますが、相互にはルーティングされません。 このアーキテクチャーでは、ソリューション・コンポーネントが存在するさまざまなサブネット間で透過的に接続を行えるように、VMware vCenter Server on {site.data.keyword.cloud_notm}} をデプロイしたアカウントの VLAN スパンニングを有効にする必要があります。
 
-## Virtual Routing and Forwarding (VRF)
+## Virtual Routing and Forwarding
+{: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} アカウントは、VRF アカウントとして構成することもできます。 VRF アカウントでは、VLAN スパンニングと同様の機能を使用できるので、サブネット IP ブロック間の自動ルーティングが可能になります。 Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
+{{site.data.keyword.cloud_notm}} アカウントは、Virtual Routing and Forwarding (VRF) アカウントとして構成することもできます。 VRF アカウントでは、VLAN スパンニングと同様の機能を使用できるので、サブネット IP ブロック間の自動ルーティングが可能になります。 Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
 
 ## 物理ホスト接続
+{: #vcsnsxt-overview-ic4vnetwork-host-connect}
 
 設計に含まれる各物理ホストは、各 {{site.data.keyword.cloud_notm}} 最上位ラック (ToR) スイッチ (パブリックとプライベート) への 10 Gbps イーサネット接続の冗長ペアを 2 つ備えています。 合計 4 つの 10 Gbps 接続のためのアダプターが個々の接続 (非結合) としてセットアップされます。 これにより、各ネットワーキング・インターフェース・カード (NIC) 接続が他の NIC から独立して機能できるようになります。
 
@@ -53,6 +61,7 @@ VLAN スパンニングとは、アカウント内のすべての VLAN のプラ
 ![物理ホスト接続](vcsnsxt-host-connections.svg)
 
 ## VLAN
+{: #vcsnsxt-overview-ic4vnetwork-vlans}
 
 VMware on {{site.data.keyword.cloud_notm}} オファリングは、デプロイメント時に 3 つの VLAN (パブリック が 1 つ、プライベートが 2 つ) が割り当てられるように設計されています。 パブリック VLAN は eth1 と eth3 に割り当てられ、プライベート接続は eth0 と eth2 に割り当てられます。 この設計で作成されて割り当てられたパブリック VLAN と最初のプライベート VLAN はデフォルトでタグが外されることに注意してください。 その後、追加のプライベート VLAN は物理スイッチ・ポートでトランキングされ、これらのサブネットを使用している VMware ポート・グループ内でタグ付けされます。
 
@@ -83,6 +92,7 @@ VLAN 	|サブネット・タイプ 	|説明
 
 プライベート・ネットワーク接続は、MTU サイズが 9000 のジャンボ・フレームを使用するように構成されます。これにより、ストレージや vMotion などの大規模データ転送のパフォーマンスが向上します。 これは、VMware 内で、および {{site.data.keyword.cloud_notm}} によって許可される最大の MTU です。 パブリック・ネットワーク接続には標準的なイーサネット MTU の 1500 が使用されます。 これは維持する必要があります。変更すると、インターネット上でパケットのフラグメント化が発生する可能性があります。
 
-### 関連リンク
+## 関連リンク
+{: #vcsnsxt-overview-ic4vnetwork-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

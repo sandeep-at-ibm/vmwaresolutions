@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud 联网概述
+{: #vcsnsxt-overview-ic4vnetwork}
 
 {{site.data.keyword.cloud}} 可处理物理联网。以下信息描述 {{site.data.keyword.cloud_notm}} 提供的物理网络以及与先前描述的物理主机关联的物理主机连接（VLAN 和 MTU）。
 
@@ -18,18 +19,22 @@ lastupdated: "2019-01-23"
 ![{{site.data.keyword.cloud_notm}} 高级别网络视图](vcsnsxt-ic4vcloud.svg)
 
 ## 公用网络
+{: #vcsnsxt-overview-ic4vnetwork-public-net}
 
 {{site.data.keyword.CloudDataCents_notm}} 和网络存在点 (PoP) 具有多个 1 Gbps 或 10 Gbps 连接，用于连接到顶层传输和对等网络运营商。来自世界任何地方的网络流量都会连接到离得最近的网络 PoP，并通过该网络直接传输到其数据中心，从而最大程度地减少提供者之间的网络中继段数和切换次数。在数据中心内部，通过一对同级聚集的前端客户交换机 (FCS)，为各个服务器提供 1 Gbps 或 10 Gbps 的网络带宽。这些聚集的交换机会连接到一对单独的路由器（即前端客户路由器 (FCR)）来进行 L3 联网。通过此多层设计，网络可以在 {{site.data.keyword.CloudDataCent_notm}} 内跨机架、机柜行和 pod 进行扩展。
 
 ## 专用网络
+{: #vcsnsxt-overview-ic4vnetwork-private-net}
 
 所有 {{site.data.keyword.CloudDataCents_notm}} 和 PoP 均通过专用网络主干进行连接。此专用网络独立于公用网络，支持连接到全球的 {{site.data.keyword.CloudDataCents_notm}} 中的服务。在数据中心之间移动数据是使用与专用网络的多个 10 Gbps 或 40 Gbps 连接完成的。与公用网络类似，专用网络也是多层的，其中服务器和其他基础架构连接到聚集的后端客户交换机 (BCS)。这些聚集的交换机会连接到一对单独的路由器（即后端客户路由器 (BCR)）来进行 L3 联网。专用网络还支持使用巨型帧 (MTU 9000) 进行物理主机连接的功能。
 
 ## 管理网络
+{: #vcsnsxt-overview-ic4vnetwork-mgmt-net}
 
 除了公用和专用网络之外，每个 {{site.data.keyword.cloud_notm}} 服务器还会连接到一个频带外管理网络。此管理网络可通过 VPN 进行访问，支持经由智能平台管理接口 (IPMI) 来对服务器（与其 CPU、固件和操作系统无关）进行访问，以进行维护和管理。
 
 ## 主 IP 块和可移植 IP 块
+{: #vcsnsxt-overview-ic4vnetwork-ip-blocks}
 
 {{site.data.keyword.cloud_notm}} 会分配要在 {{site.data.keyword.cloud_notm}} 基础架构中使用的两种类型的 IP 地址：
 * 主 IP 地址，分配给由 {{site.data.keyword.cloud_notm}} 供应的设备、裸机和虚拟服务器。用户不应分配这些块中的任何 IP 地址。
@@ -38,14 +43,17 @@ lastupdated: "2019-01-23"
 如果在客户帐户内启用了 VLAN 生成，或者该帐户配置为虚拟路由和转发 (VRF) 帐户，那么主 IP 地址或可移植 IP 地址可以设置为可路由到客户帐户内的任何 VLAN。
 
 ## VLAN 生成
+{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
 
 VLAN 生成是一个 {{site.data.keyword.cloud_notm}} 全局帐户设置，允许帐户中所有 VLAN 内的每个主子网 IP 块和可移植子网 IP 块可相互路由。此设置不可用时，IP 块仍可以路由到 {{site.data.keyword.cloud_notm}} 服务，但不能相互路由。此体系结构需要在部署了 VMware vCenter Server on {site.data.keyword.cloud_notm}} 的帐户内启用 VLAN 生成，以便跨解决方案组件所在的各个子网透明地建立连接。
 
-## 虚拟路由和转发 (VRF)
+## 虚拟路由和转发
+{: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} 帐户还可以配置为 VRF 帐户。VRF 帐户提供了与 VLAN 生成类似的功能，支持子网 IP 块之间的自动路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
+{{site.data.keyword.cloud_notm}} 帐户还可以配置为虚拟路由和转发 (VRF) 帐户。VRF 帐户提供了与 VLAN 生成类似的功能，支持子网 IP 块之间的自动路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
 
 ## 物理主机连接
+{: #vcsnsxt-overview-ic4vnetwork-host-connect}
 
 此设计中的每个物理主机都有两对冗余的 10 Gbps 以太网连接，用于连接到每个 {{site.data.keyword.cloud_notm}} 机顶接入 (ToR) 交换机（公共和专用）。适配器设置为独立连接（未绑定），共有 4 个 10 Gbps 连接。这允许每个网络接口卡 (NIC) 连接彼此独立工作。
 
@@ -53,6 +61,7 @@ VLAN 生成是一个 {{site.data.keyword.cloud_notm}} 全局帐户设置，允�
 ![物理主机连接](vcsnsxt-host-connections.svg)
 
 ## VLAN
+{: #vcsnsxt-overview-ic4vnetwork-vlans}
 
 VMware on {{site.data.keyword.cloud_notm}} 产品设计为在部署时分配三个 VLAN（一个公用 VLAN 和两个专用 VLAN）。公用 VLAN 分配给 eth1 和 eth3，而专用连接分配给 eth0 和 eth2。务必注意的是，缺省情况下，未标记此设计中创建和分配的公用 VLAN 和第一个专用 VLAN。稍后，另一个专用 VLAN 在物理交换机端口上中继，并在使用这些子网的 VMware 端口组中进行标记。
 
@@ -83,6 +92,7 @@ VLAN|子网类型|描述
 
 专用网络连接配置为使用 MTU 大小为 9000 的巨型帧，这将提高存储和 vMotion 等大型数据传输的性能。这是 VMware 和 {{site.data.keyword.cloud_notm}} 中允许的最大 MTU。公用网络连接使用标准以太网 MTU，即 1500。必须保留此设置不变，因为对此设置的任何更改都可能导致因特网上发生包分段。
 
-### 相关链接
+## 相关链接
+{: #vcsnsxt-overview-ic4vnetwork-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

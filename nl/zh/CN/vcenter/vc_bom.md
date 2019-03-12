@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server 材料清单
+{: #vc_bom}
 
 查看 VMware vCenter Server 实例的材料清单 (BOM) 信息。
 
 ## vCenter Server 实例的 VLAN BOM
+{: #vc_bom-vlans}
 
 下表详细描述了 vCenter Server VLAN 的 BOM 信息。
 
@@ -29,6 +31,7 @@ lastupdated: "2019-01-23"
 |VLAN3|专用 B，可移植|分配给 VMware vSAN（如果使用）。<br><br>分配给 VMware NFS（如果使用）。<br><br>分配给 VMware vSphere vMotion。|
 
 ## vCenter Server 实例的软件 BOM
+{: #vc_bom-software}
 
 下表详细描述了 vCenter Server 软件组件的 BOM 信息。
 
@@ -47,6 +50,7 @@ VMware vSAN 是可选组件。
 {:note}
 
 ## ESXi 服务器的高级配置设置
+{: #vc_bom-esxi-server-advance-config}
 
 查看下表以了解应用于 ESXi 服务器的高级配置设置的概述。这些设置取决于 vCenter Server 实例是部署在 V2.2 或更高版本中，还是从 V2.1 或更低版本升级到 V2.2 或更高版本。
 
@@ -75,6 +79,7 @@ VMware vSAN 是可选组件。
   有关更多信息，请参阅[增大定义 ESXi 主机上 NFS 最大安装数的缺省值](https://kb.vmware.com/s/article/2239)。
 
 ## NSX 和端口组配置设置
+{: #vc_bom-nsx-port-group-config}
 
 查看下表以了解 vCenter Server 实例的 VMware NSX 和端口组配置设置的概述，以及发行版之间的差异。
 
@@ -93,6 +98,7 @@ VMware vSAN 是可选组件。
 |端口组 SDDC-DPortGroup-External|**端口绑定**设置为**临时 - 无绑定**|**端口绑定**设置为**静态绑定**|
 
 ## 网络 MTU 配置设置
+{: #vc_bom-network-mtu-config}
 
 vSphere 集群使用两个 vSphere 分布式交换机 (vDS)，一个用于公用网络连接，另一个用于专用网络连接。
 
@@ -116,19 +122,22 @@ vSphere 集群使用两个 vSphere 分布式交换机 (vDS)，一个用于公用
 对于在 V2.0 或更低版本中部署的实例，建议将公共交换机 MTU 设置更新为 1500。
 
 ### 更新公共交换机 MTU 设置
+{: #vc_bom-procedure-update-public-switch-mtu-setting}
 
 要更新公共交换机的 MTU 设置，请在 VMware vSphere Web Client 中完成以下步骤：
 1. 右键单击 vDS，然后单击**编辑设置**。
 2. 在**属性**选项卡上，选择**高级**选项。
 3. 确保将**最大 MTU** 值设置为 1500。
 
-   **注**：更改 vDS 中的 MTU 大小后，连接的上行链路（物理 NIC）将停止，然后重新运行。这样一来，使用上行链路的 VM 会短暂中断。因此，建议在安排的停机时间内规划 MTU 设置更新。
+   更改 vDS 中的 MTU 大小后，连接的上行链路（物理 NIC）将停止，然后重新运行。这样一来，使用上行链路的 VM 会短暂中断。因此，建议在安排的停机时间内规划 MTU 设置更新。
+   {:note}
 
-### 相关链接
+## 相关链接
+{: #vc_bom-related}
 
 * [VMware ESXi 和 ESX 的构建号和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware vCenter Server 的构建号和版本 (2143838)](https://kb.vmware.com/s/article/2143838)
 * [在虚拟分布式交换机上启用巨型帧](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [规划 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [规划 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

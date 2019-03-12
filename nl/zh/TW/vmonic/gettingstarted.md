@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-06-07"
 
 ---
 
 # 開始使用
 
-在開始使用 {{site.data.keyword.vmwaresolutions_full}} 之前，請檢閱需求及使用者帳戶的重要相關資訊。
+請先檢閱需求及使用者帳戶的重要資訊，然後才開始使用 {{site.data.keyword.vmwaresolutions_full}}。
 
 ## IBM Cloud for VMware Solutions 主控台
 
-{{site.data.keyword.vmwaresolutions_short}} 主控台是您訂購及管理部署的介面。在主控台中，每一個部署都會當成實例進行管理。主控台是與 {{site.data.keyword.slportal}} 分開的獨立式使用者介面。
+{{site.data.keyword.vmwaresolutions_short}} 主控台是您訂購及管理部署的介面。在主控台中，每一個部署都會當成實例進行管理。主控台是與 {{site.data.keyword.slportal_full}} 分開的獨立式使用者介面。
 
 ## IBM ID 帳戶
 
@@ -28,13 +28,13 @@ lastupdated: "2018-07-19"
 
 ## IBM Cloud 帳戶
 
-若要使用部署供應項目，您必須具有 {{site.data.keyword.cloud_notm}} 帳戶。實體及虛擬基礎架構以及所產生授權的成本會記入您的 {{site.data.keyword.cloud_notm}} 帳戶。如需帳戶需求的相關資訊，請參閱[{{site.data.keyword.cloud_notm}} 帳戶需求](slaccountrequirement.html)。
+若要使用部署供應項目，您必須有 {{site.data.keyword.cloud_notm}} 帳戶。實體及虛擬基礎架構以及所產生授權的成本會記入您的 {{site.data.keyword.cloud_notm}} 帳戶。如需帳戶需求的相關資訊，請參閱[{{site.data.keyword.cloud_notm}} 帳戶需求](slaccountrequirement.html)。
 
-**附註**：您只能將一個 {{site.data.keyword.cloud_notm}} 帳戶與一個 {{site.data.keyword.vmwaresolutions_short}} 帳戶相關聯。
+**附註**：您只能將一個 {{site.data.keyword.cloud_notm}} 帳戶關聯至一個 {{site.data.keyword.vmwaresolutions_short}} 帳戶。
 
 ## 瀏覽器及解析度需求
 
-開始使用 {{site.data.keyword.vmwaresolutions_short}} 主控台之前，請檢閱所支援瀏覽器的清單。
+請先檢閱支援的瀏覽器清單，然後才開始使用 {{site.data.keyword.vmwaresolutions_short}} 主控台：
 *  Mozilla Firefox
 *  Google Chrome
 *  Apple Safari
@@ -43,10 +43,10 @@ lastupdated: "2018-07-19"
 
 為了在 {{site.data.keyword.vmwaresolutions_short}} 主控台上獲得最佳檢視及運作，請將螢幕解析度設為至少 1024 px（寬）x 500 px（高）。
 
-### 相關鏈結
+## 相關鏈結
 
 * [關於 {{site.data.keyword.vmwaresolutions_short}}](vmonic/prod_overview.html)
 * [Cloud Foundation 概觀](../sddc/sd_cloudfoundationoverview.html)
 * [vCenter Server 概觀](../vcenter/vc_vcenterserveroverview.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} 概觀](../services/addingzertodr.html)
+* [Zerto on IBM Cloud 概觀](../services/addingzertodr.html)
 * [疑難排解](troubleshooting.html)

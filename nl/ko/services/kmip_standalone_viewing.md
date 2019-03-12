@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # KMIP for VMware on IBM Cloud 인스턴스 보기
+{: #kmip_standalone_viewing}
 
 주문한 KMIP for VMware on {{site.data.keyword.cloud}} 인스턴스와 해당 정보를 보려면 이 프로시저를 사용하십시오.
 
 ## KMIP for VMware on IBM Cloud 인스턴스를 보는 프로시저
+{: #kmip_standalone_viewing-procedure}
 
 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하고 **KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스** 테이블로 스크롤하여 주문한 인스턴스에 대한 정보를 보십시오.
 
@@ -35,9 +37,10 @@ lastupdated: "2019-01-24"
 |설치됨 |인스턴스를 사용할 준비가 되었습니다. |
 |제거 중 |인스턴스가 삭제 중입니다. |
 
-### 관련 링크
+## 관련 링크
+{: #kmip_standalone_viewing-related}
 
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스 주문](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html)
-* [KMIP for VMware on IBM Cloud 인스턴스에 대한 인증서 추가, 보기 및 삭제](/docs/services/vmwaresolutions/services/kmip_standalone_addingdeletingcert.html)
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스 삭제](/docs/services/vmwaresolutions/services/kmip_standalone_deleting.html)
-* [활성 트래커 이벤트](/docs/services/vmwaresolutions/vmonic/at-events.html)
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)
+* [KMIP for VMware on IBM Cloud 인스턴스에 대한 인증서 추가, 보기 및 삭제](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_addingdeletingcert)
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스 삭제](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
+* [활성 트래커 이벤트](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

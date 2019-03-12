@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,14 +13,17 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 共用服務設計
+{: #design_commonservice}
 
 共用服務提供雲端管理平台中其他服務所使用的服務。解決方案的共用服務包括身分及存取服務、網域名稱服務、NTP 服務、SMTP 服務及憑證管理中心服務。
 
 ## 身分及存取服務
+{: #design_commonservice-identity-access}
 
 在此設計中，Microsoft Active Directory (AD) 用於「身分管理」。此設計會部署一或兩部 Windows Active Directory 虛擬機器，作為 Cloud Foundation 及 vCenter Server 部署自動化的一部分。vCenter 會配置成使用 AD 鑑別。
 
 ### Microsoft Active Directory
+{: #design_commonservice-msad}
 
 依預設，單一 Active Directory VSI 會部署至 {{site.data.keyword.cloud}} 基礎架構。此設計還提供選項，可將兩部高可用性 Microsoft Active Directory 伺服器部署為管理叢集裡的專用 Windows Server VM。
 
@@ -30,17 +33,20 @@ lastupdated: "2019-01-23"
 Active Directory 僅用來鑑別管理 VMware 實例的存取權，並不會將工作負載的使用者存放至已部署的實例中。Active Directory 伺服器的樹系根網域名稱等於您指定的 DNS 網域名稱。只有在鏈結多個實例時，才會針對主要 Cloud Foundation 及 vCenter Server 實例指定此網域名稱。如果是已鏈結的實例，則每個實例都會包含位於樹系根抄本環中的 Active Directory 伺服器。DNS 區域檔案也會在 Active Directory 伺服器上進行抄寫。
 
 ### vSphere SSO 網域
+{: #design_commonservice-vsphere-sso}
 
 vSphere Single Sign On (SSO) 網域用來作為單一實例或多個已鏈結實例的起始鑑別機制。SSO 網域也可用來將某個 VMware 實例或多個已鏈結實例連接至 Microsoft Active Directory 伺服器。會套用下列 SSO 配置：  
 * 一律使用 SSO 網域 `vsphere.local`
 * 對於與現有實例相關聯的 VMware 實例，PSC 會加入至現有實例的 SSO 網域
 * SSO 站台名稱等於實例名稱
 
-## 網域名稱服務 (DNS)
+## 網域名稱服務
+{: #design_commonservice-dns}
 
-此設計中的 DNS 僅適用於雲端管理及基礎架構元件。
+此設計中的網域名稱服務 (DNS) 僅適用於雲端管理及基礎架構元件。
 
 ### VMware vCenter Server
+{: #design_commonservice-vcenter}
 
 vCenter Server 部署會將已部署的 Active Directory 伺服器用作實例的 DNS 伺服器。所有已部署的元件（vCenter、PSC、NSX 及 ESXi 主機）都會配置成指向 Active Directory 伺服器，以作為其預設 DNS 伺服器。如果您的配置不會干擾已部署元件的配置，則您可以自訂 DNS 區域配置。
 
@@ -53,6 +59,7 @@ vCenter Server 部署會將已部署的 Active Directory 伺服器用作實例�
 * 任何要整合至現有目標實例的實例都必須使用與主要實例相同的網域名稱。
 
 ### VMware Cloud Foundation
+{: #design_commonservice-cf}
 
 Cloud Foundation 部署使用 VMware Cloud Foundation 自動化，以使用它自己在 SDDC Manager VM 元件內的 DNS 伺服器。SDDC Manager 所管理的 Cloud Foundation 元件（包括 vCenter、PSC、NSX 及 ESXi 主機）依設計會配置成使用 SDDC Manager VM IP 位址作為其預設 DNS。
 
@@ -70,6 +77,7 @@ Cloud Foundation 部署使用 VMware Cloud Foundation 自動化，以使用它�
 * 任何要整合至第一個或目標實例的次要實例都必須利用 SDDC Manager 子網域上方的相同 DNS 名稱結構。
 
 ## NTP 服務
+{: #design_commonservice-ntp}
 
 此設計利用 {{site.data.keyword.cloud_notm}} 基礎架構 NTP 伺服器。所有已部署的元件都已配置成利用這些 NTP 伺服器。為了讓憑證及 Active Directory 鑑別正常運作，使此設計內的所有元件都使用相同的 NTP 伺服器十分重要。
 
@@ -78,13 +86,15 @@ Cloud Foundation 部署使用 VMware Cloud Foundation 自動化，以使用它�
 ![NTP 服務](commonservice_ntp.svg "在此設計中，實例的所有元件都會透過 NTP 服務使用相同的 {{site.data.keyword.cloud_notm}} 基礎架構 NTP 伺服器。")
 
 ## 憑證管理中心服務
+{: #design_commonservice-cas}
 
 依預設，VMware vSphere 會使用位於 VMware Platform Services Controller 應用裝置之「VMware 憑證管理中心 (VMCA)」所簽署的 TLS 憑證。一般使用者裝置或瀏覽器不會信任這些憑證。將面對使用者的憑證取代為協力廠商或企業憑證管理中心 (CA) 所簽署的憑證，是一種安全最佳作法。機器對機器通訊的憑證可以保留作為 VMCA 所簽署的憑證，不過，建議您遵循組織的最佳作法，這通常涉及使用已識別的企業 CA。
 
 您可以使用此設計內的 Windows AD 伺服器來建立本端實例所簽署的憑證。不過，必要的話，您也可以選擇配置 CA 服務。
 
-### 相關鏈結
+## 相關鏈結
+{: #design_commonservice-related}
 
-* [實體基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
-* [虛擬基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
-* [基礎架構管理設計](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)
+* [實體基礎架構設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
+* [虛擬基礎架構設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
+* [基礎架構管理設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_infrastructuremgmt)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 單一節點試用版移轉及應用程式現代化概觀
+{: #single-node-trial-for-migration-and-app-modernization-overview}
 
 「單一節點試用版移轉及應用程式現代化」可讓您測試磁碟機 IBM Cloud 以將 VMware 工作負載移轉至 IBM Cloud，然後使用容器來現代化簡單工作負載。
 
@@ -29,6 +30,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## 單一節點試用版移轉及應用程式現代化實例的技術規格
+{: #cloud_modern_bundle_overview-tech-specs}
 
 下列元件內含在「單一節點試用版移轉及應用程式現代化」實例中。
 
@@ -36,26 +38,31 @@ lastupdated: "2019-01-23"
 {:note}
 
 ### Bare Metal Server
+{: #cloud_modern_bundle_overview-bare-metal}
 
 雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，含 384 GB RAM 的 2.2 GHz，最多大約 20 個 VM
 
 #### CPU 過度確認
+{: #cloud_modern_bundle_overview-cpu}
 
 * 16:1 CPU 過度確認，適用於 vCenter Server 管理、HCX 及 20 個客戶工作負載 VM
 * 11:1 CPU 過度確認，適用於 IBM Cloud Private
 
 #### RAM 過度確認
+{: #cloud_modern_bundle_overview-ram}
 
 * 1.22:1 RAM 過度確認，適用於各含 8 GB 之 20 個工作負載 VM 的客戶部署
 * 1:1（無過度確認），適用於各含 8 GB 之 9 個工作負載 VM 的客戶部署
 
 ### NFS 儲存空間
+{: #cloud_modern_bundle_overview-nfs-storage}
 
 * 2 TB 用於管理
 * 1 TB 用於客戶工作負載（適用於 20 個客戶 VM）
 * 4 TB 用於 IBM Cloud Private Hosted
 
 ### 單一節點試用版移轉及應用程式現代化實例的網路規格
+{: #cloud_modern_bundle_overview-networking-specs}
 
 訂購了下列網路元件：
 *  10 Gbps 雙重公用及專用網路上行鏈路
@@ -69,6 +76,7 @@ lastupdated: "2019-01-23"
   * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway，IBM 將它部署為範本，您可以修改它來提供 VPN 存取或公用存取。
 
 ### 虛擬伺服器實例
+{: #cloud_modern_bundle_overview-vsi}
 
 已訂購下列虛擬伺服器實例 (VSI)：
 
@@ -76,6 +84,7 @@ lastupdated: "2019-01-23"
 * 已部署並可查閱 Microsoft Windows Server VSI for Microsoft Active Directory (AD)。VSI 是作為登錄主機及 VM 之實例的 DNS。
 
 ### IBM 提供的授權及費用
+{: #cloud_modern_bundle_overview-license-and-fee}
 
 「單一節點試用版移轉及應用程式現代化」實例訂購隨附下列授權。
 
@@ -88,6 +97,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## VMware HCX on IBM Cloud 的技術規格
+{: #cloud_modern_bundle_overview-hcx-tech-specs}
 
 「單一節點試用版移轉及應用程式現代化」包括 HCX on {{site.data.keyword.cloud_notm}}。下列元件已訂購並包括在 HCX on {{site.data.keyword.cloud_notm}} 服務中。
 
@@ -95,12 +105,14 @@ lastupdated: "2019-01-23"
 {:note}
 
 ### 用於 HCX 管理的 VMware NSX Edge Services Gateway 主動/被動配對
+{: #cloud_modern_bundle_overview-esg}
 
 * CPU：6 個 vCPU
 * RAM：8 GB
 * 磁碟：3 GB VMDK
 
 ### HCX 管理應用裝置 - 虛擬機器
+{: #cloud_modern_bundle_overview-hcx-mgmt-appliance}
 
 * CPU：4 個 vCPU
 * RAM：12 GB
@@ -109,18 +121,21 @@ lastupdated: "2019-01-23"
 視需要，在配置進行 L2 連線功能、WAN 最佳化及閘道連線期間，會部署其他的 HCX 應用裝置。
 
 ### HCX on IBM Cloud 服務的網路規格
+{: #cloud_modern_bundle_overview-hcx-networking-specs}
 
 * 一個具有 16 個 IP 位址的公用可攜式子網路
 * 兩個具有 64 個 IP 位址的專用可攜式子網路
 * 來自專用可攜式 vMotion 子網路的八個 IP 位址
 
 ## IBM Cloud Private Hosted 的技術規格
+{: #cloud_modern_bundle_overview-icp-tech-specs}
 
-會在所有「單一節點試用版移轉及應用程式現代化」實例上使用「開發/測試」拓蹼來安裝 IBM Cloud Private Hosted 3.1 版。如需 IBM Cloud Private Hosted 的相關資訊，請參閱 [IBM Cloud Private Hosted 概觀](/docs/services/vmwaresolutions/services/icp_overview.html)。
+會在所有「單一節點試用版移轉及應用程式現代化」實例上使用「開發/測試」拓蹼來安裝 IBM Cloud Private Hosted 3.1 版。如需 IBM Cloud Private Hosted 的相關資訊，請參閱 [IBM Cloud Private Hosted 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)。
 
-### 相關鏈結
+## 相關鏈結
+{: #cloud_modern_bundle_overview-related}
 
-* [vCenter Server 和 IBM Cloud Private 手冊](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [vCenter Server 和 IBM Cloud Private 手冊](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [開立 IBM Cloud Private 的問題單](https://www.ibm.com/mysupport/s/?language=en_US)
 * [VMware Hybrid Cloud Extension 文件](https://hcx.vmware.com/#/vm-documentation)
 * [取得 HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

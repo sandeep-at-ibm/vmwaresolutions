@@ -4,17 +4,19 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
 # 關於 vCenter Server 的連接儲存空間
+{: #storage-benefits}
 
 連接儲存空間是 VMware vCenter Server on {{site.data.keyword.cloud}} 供應項目的延伸。VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的連接儲存空間解決方案架構，詳述了解決方案的元件，和本設計每個元件的高階配置。
 
-如需 vCenter Server 設計的相關資訊，請參閱[解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)。
+如需 vCenter Server 設計的相關資訊，請參閱[解決方案概觀](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)。
 
 ## vCenter Server 連接儲存空間的主要好處
+{: #storage-benefits-key-benefits}
 
 雖然連接儲存空間並不是 VMware 環境的必要條件，但它用來作為共用儲存裝置，可為使用者提供 IT 作業方面的許多好處。使用共用儲存裝置可透過啟用下表說明的 vSphere 功能來幫助您達到高可用性、分散式資源排程器、有效率地使用儲存空間容量，以及簡化管理。
 
@@ -27,6 +29,7 @@ lastupdated: "2019-01-23"
 | vSphere 資料儲存庫叢集 |此特性提供含有共用資源的資料儲存庫集合，以及共用管理介面。|
 | vSphere 容錯 |即使發生完全主機失敗，此特性也能免除關閉時間和中斷，為 VM 提供連續可用性。|
 
-### 相關鏈結
+## 相關鏈結
+{: #storage-benefits-related}
 
-* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

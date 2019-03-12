@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # 온프레미스 VMware HCX on IBM Cloud 인스턴스 보기
+{: #standalone_viewingserviceinstances}
 
 온프레미스 사용을 위해 주문한 온프레미스 HCX on {{site.data.keyword.cloud}} 인스턴스와 이에 대한 정보를 보려면 이 프로시저를 사용하십시오.
 
 ## 온프레미스 VMware HCX on IBM Cloud 인스턴스를 보는 프로시저
+{: #standalone_viewingserviceinstances-procedure}
 
 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하고 **온프레미스 HCX 인스턴스** 테이블로 스크롤하여 주문한 인스턴스에 대한 정보를 보십시오.
 
@@ -36,9 +38,10 @@ lastupdated: "2019-01-24"
 |설치됨 |인스턴스를 사용할 준비가 되었습니다. |
 |제거 중 |인스턴스가 삭제 중입니다. |
 
-### 관련 링크
+## 관련 링크
+{: #standalone_viewingserviceinstances-related}
 
-* [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 주문](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
-* [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 삭제](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
-* [HCX 용어집](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
+* [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 삭제](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances)
+* [HCX 용어집](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources)

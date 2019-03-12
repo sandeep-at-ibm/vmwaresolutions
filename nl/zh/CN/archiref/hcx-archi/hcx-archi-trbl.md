@@ -4,18 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # 关于 HCX on IBM Cloud 的故障诊断
+{: #hcx-archi-trbl}
 
 ## 云注册失败
+{: #hcx-archi-trbl-cloud-reg}
 
 * 如果凭证不正确，Hybrid Cloud Services 不会重试。在 Hybrid Cloud Services 尝试登录并启动云注册之前，凭证必须进行认证。
 * 如果凭证输入错误，或者如果在 Hybrid Cloud Services 向 VCF/VCS Hybrid Cloud Services Cloud 注册后更改了 VCF/VCS Hybrid Cloud Services Cloud 凭证，而导致凭证不匹配，那么云注册会失败。
 * 要在 Web Client 中更新凭证，请转至“Hybrid Cloud Services 入门”选项卡，然后在**基本任务**下，选择**注册新云**。
 
 ## MAC 地址重复
+{: #hcx-archi-trbl-dupl-mac-addr}
 
 迁移后，虚拟机之间可能会存在通信问题。在迁移期间保留 MAC 地址时，可能会无意中创建重复的 MAC 地址。
 
@@ -29,6 +32,7 @@ lastupdated: "2019-01-23"
 6. 检查以确定唯一的 MAC 地址是否解决了通信问题。
 
 ## 主机资源消耗量高
+{: #hcx-archi-trbl-high-host-resource}
 
 在极少数情况下，如果所有服务虚拟设备都位于同一主机上，那么 Hybrid Cloud Services 服务虚拟机可能会耗尽主机的 CPU 和磁盘资源。
 
@@ -42,7 +46,8 @@ lastupdated: "2019-01-23"
 1. 在更改数据中心配置之前，请查看稳态支持人员的需求。
 2. 如果资源即将耗尽，请联系稳态支持人员。他们可以建议如何以最短的停机时间重新配置环境。
 
-### 相关链接
+## 相关链接
+{: #hcx-archi-trbl-related}
 
-* [向 vCenter 注册 HCX Manager](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-reg-vcenter.html)
-* [修改或卸载 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
+* [向 vCenter 注册 HCX Manager](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-reg-vcenter)
+* [修改或卸载 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

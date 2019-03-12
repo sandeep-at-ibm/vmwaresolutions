@@ -90,8 +90,7 @@ VXLAN 트래픽을 전환하는 것을 나타냅니다.
 {: #vcshcx-planning-baseline-net-config}
 
 클라우드 측 vSphere 인스턴스에 강화된 주변 네트워크를
-작성하십시오. 이 네트워크는 일반적으로 NSX DLR 또는 Edge 어플라이언스로 구성됩니다.
-HCX 근접 라우팅을 사용하는 경우 확장 L2 트래픽에
+작성하십시오. 이 네트워크는 일반적으로 NSX DLR 또는 Edge 어플라이언스로 구성됩니다. HCX 근접 라우팅을 사용하는 경우 확장 L2 트래픽에
 영향을 주지 않고 나중에 또는 동시에 완료할 수 있으므로
 방화벽 규칙 또는 업링크 토폴로지를 작성할 필요가
 없습니다.
@@ -206,4 +205,4 @@ HCX 클라우드 측 설치는 기본적으로 공용 인터넷을 통해 연결
 ## 관련 링크
 {: #vcshcx-planning-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

@@ -2,17 +2,19 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
-# {{site.data.keyword.cloudaccesstrailshort}} イベント
+# Activity Tracker イベント
+{: #at-events}
 
 {{site.data.keyword.cloudaccesstrailfull}} サービスを使用すると、ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix_notm}} の {{site.data.keyword.vmwaresolutions_short}} とどのような対話を行っているかを追跡できます。
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳細については、[{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla) を参照してください。
+{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳細については、[{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla) を参照してください。
 
-## {{site.data.keyword.cloudaccesstrailshort}} イベント・テーブル
+## Activity Tracker イベント・テーブル
+{: #at-events-table}
 
 次の表に、Activity Tracker イベント・テーブルの各列の説明をまとめます。
 
@@ -29,9 +31,10 @@ lastupdated: "2019-01-23"
 | reason_reasonCode     | 整数    | 結果の理由コード。 |
 | initiator_host_address| ストリング     | 要求の発行元の IP アドレス。 |
 
-詳しくは、[Activity Tracker イベントのフィールド](/docs/services/cloud-activity-tracker/at_event.html)を参照してください。
+詳しくは、[Activity Tracker イベントのフィールド](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-at_event)を参照してください。
 
 ## インスタンス管理イベントの追跡
+{: #at-events-instance-mgmt}
 
 {{site.data.keyword.vmwaresolutions_short}} でユーザー・アカウント、インスタンス、クラスター、およびサービスの管理を行うと、イベントが生成され、Activity Tracker の**アカウント・ドメイン**に送信されます。
 
@@ -74,6 +77,7 @@ lastupdated: "2019-01-23"
 | `vmware-solutions.service.undeploy` | インスタンスからサービスを削除するアクションが実行されました。 | `success` |
 
 ## KMIP for VMware on IBM Cloud サービスのイベントの追跡
+{: #at-events-kmip}
 
 KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスで鍵の管理を行うと、イベントが生成され、Activity Tracker の**アカウント・ドメイン**に送信されます。
 
@@ -92,11 +96,13 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスで鍵の管理�
 | `vmware-solutions.key.discover_versions`    | <ul><li>KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスのバージョンの検出要求を受信しました。</li><li>KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスのバージョンの検出要求に応答しました。</li></ul> |  <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
 
 ## イベントの表示先
+{: #at-events-viewing}
 
 {{site.data.keyword.cloudaccesstrailshort}} イベントは、イベントが生成された {{site.data.keyword.Bluemix_notm}} 地域で使用可能な {{site.data.keyword.cloudaccesstrailshort}} **アカウント・ドメイン**で確認できます。
 
-### 関連リンク
+## 関連リンク
+{: #at-events-related}
 
-* [Activity Tracker のプロビジョン](/docs/services/cloud-activity-tracker/how-to/provision.html)
-* [{{site.data.keyword.cloud_notm}} コンソールでの Activity Tracker ダッシュボードへのナビゲート](/docs/services/cloud-activity-tracker/how-to/manage-events-ui/launch_at_ui.html)
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html)
+* [Activity Tracker のプロビジョン](/docs/services/cloud-activity-tracker/how-to?topic=cloud-activity-tracker-provision)
+* [{{site.data.keyword.cloud_notm}} コンソールでの Activity Tracker ダッシュボードへのナビゲート](/docs/services/cloud-activity-tracker/how-to/manage-events-ui?topic=cloud-activity-tracker-launch_at_ui)
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)

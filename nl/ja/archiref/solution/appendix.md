@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # VMware コンポーネント・エディションの比較チャート
+{: #solution-appendix}
 
 ## VMware NSX エディションの比較
+{: #solution-appendix-nsx-editions}
 
 表 1 には、ソリューションによってサポートされる、VMware NSX の **Base**、**Advanced**、および **Enterprise** エディションで使用可能な機能をリストしています。
 
@@ -41,12 +43,13 @@ lastupdated: "2019-01-23"
 \*L2、L3 & NSX Edge の統合のみ。 セキュリティー・グループは使用されません
 
 ## VMware vSAN エディションの比較
+{: #solution-appendix-vsan-editions}
 
 表 2 には、ソリューションによってサポートされる、VMware vSAN の **Advanced** および **Enterprise** エディションで使用可能な機能をリストしています。
 
 表 2. VMware vSAN エディションの比較チャート
 
-| vSAN 機能                                    | Advanced | エンタープライズ |
+| vSAN 機能                                    | Advanced | Enterprise |
 |-------------------------------------------------|----------|------------|
 | ストレージ・ポリシー・ベースの管理                 | •        | •          |
 | フラッシュの読み取り/書き込みキャッシュ                        | •        | •          |
@@ -63,8 +66,9 @@ lastupdated: "2019-01-23"
 | Data at Rest (保存されたデータ) の暗号化                         |          | •          |
 | ローカル障害保護のある拡張クラスター |          | •          |
 
-### 関連リンク
+## 関連リンク
+{: #solution-appendix-related}
 
-* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [設計の概要](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [設計の概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

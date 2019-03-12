@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 缩放容量
+{: #solution_scaling}
 
 初始部署后，您可以从 {{site.data.keyword.vmwaresolutions_full}} 控制台扩展计算容量。本设计支持以下扩展方法：
 * 添加由单独 vCenter Server 管理的新站点
@@ -20,6 +21,7 @@ lastupdated: "2019-01-23"
 * 向现有集群添加新主机
 
 ## 添加更多站点
+{: #solution_scaling-sites}
 
 {{site.data.keyword.vmwaresolutions_short}} 可以利用 {{site.data.keyword.cloud_notm}} 遍布全球的数据中心和集成网络主干，支持部署并运行各种跨地理位置的用例，所用时间只是从头开始构建此类基础架构所需时间的零头。
 
@@ -35,6 +37,7 @@ lastupdated: "2019-01-23"
 此外，可以将辅助站点中的 NSX Manager 设置为主站点上 NSX Manager 的辅助 NSX Manager。
 
 ## 添加新集群
+{: #solution_scaling-clusters}
 
 您还可以使用此方法来扩展计算容量：在 {{site.data.keyword.vmwaresolutions_short}} 控制台中创建新集群，并订购自动添加到新集群的新主机。
 
@@ -48,11 +51,13 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## 将 ESXi 主机添加到现有集群
+{: #solution_scaling-hosts}
 
 可以通过在 {{site.data.keyword.vmwaresolutions_short}} 控制台中订购主机来扩展现有集群。新主机会自动添加到该集群。请注意，您可能需要根据预留需求来调整集群的 HA 预留策略。
 
-### 相关链接
+## 相关链接
+{: #solution_scaling-related}
 
-* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [设计概述](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [备份组件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [设计概述](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [备份组件](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

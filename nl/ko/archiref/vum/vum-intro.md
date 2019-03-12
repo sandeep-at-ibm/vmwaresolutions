@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # VMware Update Manager 소개
+{: #vum-intro}
 
 이 문서의 목적은 {{site.data.keyword.vmwaresolutions_full}} vCenter Server 인스턴스의 시스템 관리자에게 vCenter Server 환경의 현재성을 유지하도록 VUM(VMware Update Manager)을 구성하는 방법에 대한 지시사항을 제공하는 것입니다.
 
@@ -38,20 +39,20 @@ vCenter Server는 현재 vSphere 6.5를 배치합니다. 즉, 이제 VUM이 VCSA
 vSphere 6.5에서는 별도의 Windows 시스템에 VUM 서버를 설치하는 동안 VUM을 VCSA에 등록하는 것이 더 이상 지원되지 않으므로 vCenter Server 환경 내의 VM에 VUM을 배치할 수 없습니다.
 
 이 문서는 다음 섹션으로 구성되어 있습니다.
-* [VMware Update Manager 개요](/docs/services/vmwaresolutions/archiref/vum/vum-overview.html) - VUM 프로세스에 대해 설명하고 도구의 운영 및 UI를 이해하는 데 필요한 주요 용어를 소개합니다.
+* [VMware Update Manager 개요](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-overview) - VUM 프로세스에 대해 설명하고 도구의 운영 및 UI를 이해하는 데 필요한 주요 용어를 소개합니다.
 * **설치, 구성 및 사용법** - vCenter Server 인스턴스에서 VUM을 작동하는 데 필요한 단계에 대해 설명합니다.
-  - [초기 구성](/docs/services/vmwaresolutions/archiref/vum/vum-init-config.html) - 다음을 수행하는 일회성 태스크입니다.
+  - [초기 구성](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config) - 다음을 수행하는 일회성 태스크입니다.
       - 인터넷에 대한 프록시 서버 액세스를 허용하도록 NSX 네트워킹 구성
       - 프록시 서버를 설치하고 VUM에 대한 인터넷 액세스를 제공하도록 구성
       - 프록시 서버를 사용하도록 VUM 초기 설정
-  - [메타데이터 수집](/docs/services/vmwaresolutions/archiref/vum/vum-metadata.html) - VUM은 수정할 수 있는 사전 정의된 자동 프로세스를 통해 업그레이드, 패치 또는 확장에 대한 메타데이터를 다운로드합니다. VUM은 구성 가능한 정규 간격으로 VMware 또는 서드파티 소스에 연결하여 사용 가능한 업그레이드, 패치 또는 확장에 대한 최신 메타데이터를 수집합니다.
-  - [기준선 작성](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html) - 사전 정의된 기준선 및 기준선 그룹을 사용하거나 사용자 정의 기준선을 작성합니다. 그런 다음 기준선 및 기준선 그룹이 인벤토리 그룹에 연결됩니다.
-  - [스캔 및 검토](/docs/services/vmwaresolutions/archiref/vum/vum-scanning.html) - 인벤토리 오브젝트를 스캔하고 해당 결과를 검토하여 오브젝트가 기준선과 기준선 그룹을 어떻게 준수하는지 판별합니다. 텍스트 검색, 그룹 선택, 기준선 선택 및 준수 상태 선택에 따라 스캔 결과를 필터링할 수 있습니다.
-  - [스테이징 및 조치방안](/docs/services/vmwaresolutions/archiref/vum/vum-staging.html) - 호스트에 다운로드되었는지 확인하기 위해 조치방안 전에 패치 및 확장을 선택적으로 스테이징할 수 있습니다. 조치방안 중에 VUM이 패치, 확장 및 업그레이드를 인벤토리 오브젝트에 적용합니다.
+  - [메타데이터 수집](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-metadata) - VUM은 수정할 수 있는 사전 정의된 자동 프로세스를 통해 업그레이드, 패치 또는 확장에 대한 메타데이터를 다운로드합니다. VUM은 구성 가능한 정규 간격으로 VMware 또는 서드파티 소스에 연결하여 사용 가능한 업그레이드, 패치 또는 확장에 대한 최신 메타데이터를 수집합니다.
+  - [기준선 작성](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines) - 사전 정의된 기준선 및 기준선 그룹을 사용하거나 사용자 정의 기준선을 작성합니다. 그런 다음 기준선 및 기준선 그룹이 인벤토리 그룹에 연결됩니다.
+  - [스캔 및 검토](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-scanning) - 인벤토리 오브젝트를 스캔하고 해당 결과를 검토하여 오브젝트가 기준선과 기준선 그룹을 어떻게 준수하는지 판별합니다. 텍스트 검색, 그룹 선택, 기준선 선택 및 준수 상태 선택에 따라 스캔 결과를 필터링할 수 있습니다.
+  - [스테이징 및 조치방안](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-staging) - 호스트에 다운로드되었는지 확인하기 위해 조치방안 전에 패치 및 확장을 선택적으로 스테이징할 수 있습니다. 조치방안 중에 VUM이 패치, 확장 및 업그레이드를 인벤토리 오브젝트에 적용합니다.
 
-이 문서에서는 하나의 기본 vCenter Server 인스턴스가 배치되었거나 다수의 별도 기본 vCenter Server 인스턴스가 있다고 가정합니다. 기본 및 보조 vCenter Server 인스턴스가 배치되고 싱글 사인온(SSO)을 사용하는 경우 [SSO 링크된 vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html)를 참조하십시오.
+이 문서에서는 하나의 기본 vCenter Server 인스턴스가 배치되었거나 다수의 별도 기본 vCenter Server 인스턴스가 있다고 가정합니다. 기본 및 보조 vCenter Server 인스턴스가 배치되고 싱글 사인온(SSO)을 사용하는 경우 [SSO 링크된 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)를 참조하십시오.
 
-vSAN을 사용하여 vCenter Server를 배치한 경우 먼저 [vSAN 클러스터 업데이트](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vsan.html)를 참조하십시오.
+vSAN을 사용하여 vCenter Server를 배치한 경우 먼저 [vSAN 클러스터 업데이트](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vsan)를 참조하십시오.
 
 {{site.data.keyword.cloud_notm}} 인프라 관리 자동화를 업데이트하려면 {{site.data.keyword.vmwaresolutions_short}} 콘솔을 사용하십시오.
 
@@ -63,7 +64,8 @@ vSAN을 사용하여 vCenter Server를 배치한 경우 먼저 [vSAN 클러스�
 
 이 기능을 사용하면 vCenter Server 인스턴스의 관리 컴포넌트에 대한 자동화된 업데이트만 수행할 수 있습니다. VMware 제품 업데이트는 이 문서에 자세히 설명된 프로시저를 사용하여 적용되어야 합니다.
 
-### 관련 링크
+## 관련 링크
+{: #vum-intro-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

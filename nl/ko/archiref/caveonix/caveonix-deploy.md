@@ -21,10 +21,10 @@ lastupdated: "2019-02-14"
 
 RiskForesight 설치는 다음과 같은 상위 레벨 단계로 구성됩니다.
 
-1. [초기 계획 및 전제조건](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step1.html) – 배치 옵션을 이해하고 선택하며 애플리케이션 컴포넌트에 맞는 FQDN/IP 분석을 제공하도록 DNS를 구성합니다.
-2. [가상 머신 배치](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step2.html) – OVF 템플리트에서 VM을 배치합니다. VM에서 모든 애플리케이션 컴포넌트를 설치했습니다.
-3. [애플리케이션 구성](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step3.html) – 각 VM에서 애플리케이션 컴포넌트를 구성하는 Caveonix 구성 스크립트를 실행합니다.
-4. [애플리케이션 설정](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step4.html) – 사용자가 애플리케이션에 액세스할 수 있도록 서비스 제공자와 테넌트 또는 조직을 설정합니다.
+1. [초기 계획 및 전제조건](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step1) – 배치 옵션을 이해하고 선택하며 애플리케이션 컴포넌트에 맞는 FQDN/IP 분석을 제공하도록 DNS를 구성합니다.
+2. [가상 머신 배치](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step2) – OVF 템플리트에서 VM을 배치합니다. VM에서 모든 애플리케이션 컴포넌트를 설치했습니다.
+3. [애플리케이션 구성](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step3) – 각 VM에서 애플리케이션 컴포넌트를 구성하는 Caveonix 구성 스크립트를 실행합니다.
+4. [애플리케이션 설정](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step4) – 사용자가 애플리케이션에 액세스할 수 있도록 서비스 제공자와 테넌트 또는 조직을 설정합니다.
 
 자동화된 설치에서는 하나의 VM을 프로비저닝하고 해당 VM에 모든 애플리케이션 컴포넌트를 구성합니다.
 {:note}
@@ -36,7 +36,7 @@ RiskForesight 설치는 다음과 같은 상위 레벨 단계로 구성됩니다
 
 표 1. 볼륨
 
-|데이터 유형 |볼륨 |
+|데이터 유형	|볼륨 |
 |---|---|
 |일별 스캔	|1 |
 |스캔 데이터(MB)	|20 |
@@ -44,7 +44,7 @@ RiskForesight 설치는 다음과 같은 상위 레벨 단계로 구성됩니다
 |플로우 데이터(MB)	| 200 |
 |자산 데이터(MB)	|46 |
 |일별 자산당 스토리지 총계(MB)	|766 |
-|데이터 복제 승수 |2 |
+|데이터 복제 승수	|2 |
 |총 인덱스 스토리지 / 자산 / 일(MB)	|1532 |
 
 인덱스 저장소(Elastic Search)에서는 기본적으로 인덱스의 n+1 복제를 사용하므로 데이터 복제 승수는 2로 설정됩니다.
@@ -54,23 +54,23 @@ RiskForesight 설치는 다음과 같은 상위 레벨 단계로 구성됩니다
 
 표 2. 스케일링 VM 매개변수
 
-|자산 수 |100	|500	|5000 |
+|자산 수	|100	|500	|5000 |
 |---|---|---|---|
-|데이터 일 수 |30	|30	| 30 |
+|데이터 일 수	|30	|30	| 30 |
 |총 인덱스 스토리지 / 자산 / 일(MB)	|1532	|1532	|1532 |
 |총 인덱스 스토리지 / 자산 / 30일(TB)	|4	|22	|219 |
 |스케일링 노드당 지원되는 데이터(TB)	|0	|8	|8 |
-|필요한 스케일링 VM |0	|3	|27 |
+|필요한 스케일링 VM	|0	|3	|27 |
 
 필요한 스토리지 크기는 다음과 같이 계산됩니다.
 
 표 3. 스토리지 매개변수
 
-|자산 수 |100	|500	|5000 |
+|자산 수	|100	|500	|5000 |
 |---|---|---|---|
 |장기 데이터 보유 기간(월)	|8	|8	|8 |
 |일별 자산당 스토리지 총계(MB)	|766	|766	|766 |
-|데이터 일 수 |30	|30	| 30 |
+|데이터 일 수	|30	|30	| 30 |
 |단기 데이터 보유(TB)	|  7	|33	|329 |
 |장기 데이터 보유(TB)	|18	|88	|877 |
 
@@ -90,9 +90,9 @@ RiskForesight 설치는 다음과 같은 상위 레벨 단계로 구성됩니다
 
 표 4. 요약
 
-|배치 모델	|“일체형”	|부분 분배 |완전 분배|
+|배치 모델	|“일체형”	|부분 분배	|완전 분배 |
 |---|---|---|---|
-|자산 수 |100	|500	|5000 |
+|자산 수	|100	|500	|5000 |
 |30일 내에 생성된 온라인 데이터(TB)	|4	|22	|219 |
 |니어라인 데이터 보유(90일)(TB)	|  7	|33	|329 |
 |오프라인 데이터 보유(8개월)(TB)	|18	|88	|877 |
@@ -104,4 +104,4 @@ RiskForesight 설치는 다음과 같은 상위 레벨 단계로 구성됩니다
 ## 관련 링크
 {: #caveonix-deploy-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

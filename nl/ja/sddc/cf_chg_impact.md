@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-21"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2018-01-21"
 {:faq: data-hd-content-type='faq'}
 
 # Cloud Foundation 成果物の変更に関する考慮事項
+{: #cf_chg_impact}
 
 {{site.data.keyword.vmwaresolutions_full}} 用に予約されているユーザー、リソース、またはサブネットを変更すると、VMware Cloud Foundation インスタンスに対する管理操作に影響する可能性があります。
 
@@ -22,6 +23,7 @@ VMware vSphere Web Client の**「ユーザーおよびグループ」**ペー�
 {:important}
 
 ## サービス固有のユーザー・アカウント
+{: #cf_chg_impact-service-usr-account}
 {: faq}
 
 サービスごとに、vCenter Server 内に内部ユーザー・アカウントが作成されます。 このアカウントは、サービスに関連付けられている管理操作が vCenter Server に接続できるようにすることで、サービスに対して操作を実行できるようにするために必要になります。
@@ -35,6 +37,7 @@ VMware vSphere Web Client の**「ユーザーおよびグループ」**ペー�
 {:note}
 
 ## Cloud Foundation インスタンスの VMware リソース
+{: #cf_chg_impact-vmware-resources}
 
 以下の表では、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で VMware リソースを変更すると影響を受ける可能性がある操作をリストします。 正常な状態に戻す解決方法がある場合は、その方法も示しています。
 
@@ -61,23 +64,21 @@ VMware vSphere Web Client の**「ユーザーおよびグループ」**ペー�
 SSH アクセスまたはシェル・アクセスを無効にした場合は、ここに示す操作を実行する前に、無効にしたアクセスを一時的に再有効化する必要があります。
 
 ## Cloud Foundation インスタンスの管理サブネット
+{: #cf_chg_impact-mgmt-subnets}
 
 {{site.data.keyword.vmwaresolutions_short}} によって注文されるサブネットについて以下に説明します。また、専用のサブネットを追加注文するオプションについても説明します。
 
 **注意:** これらのコンポーネントを他の目的で使用しないでください。環境の安定性が著しく損なわれます。
 
 {{site.data.keyword.cloud_notm}}でベア・メタル・サーバーを注文するたびに、デフォルトで以下の IP アドレス範囲が注文されます。
-
 *  32 個の IP アドレスを含むプライマリー・パブリック範囲
 *  64 個の IP アドレスを含むプライマリー・プライベート範囲
 
 さらに、{{site.data.keyword.vmwaresolutions_short}} 用に以下の管理サブネットが予約されます。
-
 *  最初の VLAN 上の 64 個の IP アドレスを含むポータブル・プライベート・サブネット 2 つ: 1 つが管理用、もう 1 つが VTEPS 用
 *  2 番目の VLAN 上の 64 個の IP アドレスを含むポータブル・プライベート・サブネット 2 つ: 1 つが VMotion 用、もう 1 つが vSAN 用
 *  パブリック VLAN 上の 16 個の IP アドレスを含むパブリック・ポータブル・サブネット。
 
 追加のサブネットを使用する必要がある場合は、以下のいずれかの方法で、使用する IP アドレスを取得できます。
-
 * **オプション 1 (推奨):** VMware NSX 仮想ネットワーク・オーバーレイを使用します。 注文時にサンプル VXLAN テンプレートが提供されます。 SDN を構築する際の開始点としてこの VXLAN テンプレートを使用できます。
 * **オプション 2:** IP アドレスを取得するために、独自のポータブル・パブリック・サブネットまたはプライベート・サブネットを注文します。 注文するサブネットと管理サブネットを区別するために、注文するすべてのサブネットにメモを追加することができます。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,17 +13,19 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 对 vCenter Server 实例应用更新
+{: #vc_applyingupdates}
 
 对 vCenter Server 实例应用补丁和更新的过程仅对管理组件自动执行。必须手动应用 VMware 更新。
 
 ## 开始之前
+{: #vc_applyingupdates-prereq}
 
 将 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例时，必须至少先应用基本 vCenter Server V2.3 软件更新。必须执行此操作后，才能对 Hybridity Bundle 执行许可证升级。
 {:important}
 
 业务合作伙伴用户无法选择将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例。
 
-从 V2.5 开始，不会再列出 IBM CloudDriver 更新，因为已启用自动更新。添加主机、添加集群和订购服务等操作会自动将实例更新到最新版本。有关自动更新的更多信息，请参阅 [V2.5 发行说明](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)中的 *IBM CloudDriver 弹性*部分。
+从 V2.5 开始，不会再列出 IBM CloudDriver 更新，因为已启用自动更新。添加主机、添加集群和订购服务等操作会自动将实例更新到最新版本。有关自动更新的更多信息，请参阅 [V2.5 发行说明](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)中的 *IBM CloudDriver 弹性*部分。
 {:note}
 
 尝试应用更新之前，请通过单击向下箭头来展开更新条目，然后验证以下信息：
@@ -55,6 +57,7 @@ lastupdated: "2019-01-23"
 </table>
 
 ## 对 vCenter Server 实例（V2.1 或更高版本）应用更新和补丁的过程
+{: #vc_applyingupdates-procedure}
 
 此过程适用于在 V2.1 或更高版本中部署的实例。对于在 V2.0 和更低版本中部署的实例，必须手动应用 VMware 更新。
 
@@ -82,6 +85,7 @@ lastupdated: "2019-01-23"
 7. 如果要在多站点部署配置中将更新应用于 vCenter Server 实例，那么会显示标题为**更新所需的步骤**的部分。此部分列出多站点部署中所有实例所需的更新操作。必须通过对每个步骤单击**应用更新**来按顺序完成这些步骤。必须等待上一步完成后，才能开始下一步。   
 
 ## 升级到 vCenter Server with Hybridity Bundle 实例的过程
+{: #vc_applyingupdates-procedure-upgrade-to-hybridity}
 
 在 Hybridity Bundle 的许可证升级期间，如果 vCenter Server 实例当前使用的是 VMware NSX Base Edition，那么会自动升级到 VMware NSX Advanced Edition。
 
@@ -103,13 +107,14 @@ lastupdated: "2019-01-23"
   4. 查看服务的适用条款，复查估算成本，然后单击**下订单**。
 
 ## 结果
+{: #vc_applyingupdates-results}
 
-2. 应用更新后，会在软件更新状态列表中显示一条记录，在其中可以查看更新的详细进度和状态。成功完成更新后，会在安装的软件更新列表中显示一条记录。
+1. 应用更新后，会在软件更新状态列表中显示一条记录，在其中可以查看更新的详细进度和状态。成功完成更新后，会在安装的软件更新列表中显示一条记录。
 
   要检索更新作业的最新状态，请单击页面右上角的“刷新”图标。
   {:tip}
 
-3. 有关更新状态的详细信息，请参阅下表。
+2. 有关更新状态的详细信息，请参阅下表。
 
    表 2. 更新状态的详细信息
 
@@ -144,10 +149,11 @@ lastupdated: "2019-01-23"
       </tr>
     </table>
 
-4. 如果更新过程在特定步骤失败，请[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)以获取帮助。IBM 支持人员将向您提供如何解决问题的建议，并指导您从失败的步骤重试升级。
+3. 如果更新过程在特定步骤失败，请[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)以获取帮助。IBM 支持人员将向您提供如何解决问题的建议，并指导您从失败的步骤重试升级。
 
-### 相关链接
+## 相关链接
+{: #vc_applyingupdates-related}
 
-* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

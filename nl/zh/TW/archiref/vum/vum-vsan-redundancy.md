@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # 虛擬機器 vSAN 備援
+{: #vum-vsan-redundancy}
 
 當您讓 vSAN 叢集上的 vSphere ESXi 主機進入維護模式時，需要選取資料撤除模式。模式選擇可能會影響將使用 vSAN 資料儲存庫的虛擬機器 (VM) 及應用裝置：
 * **完整資料移轉**會撤除主機中的所有資料，並將它移至 vSAN 叢集裡的其他 vSphere ESXi 主機。此撤除模式會導致最大資料傳送數量，並使用最多時間及資源。所選取主機之本端儲存空間上的所有元件都會移轉至叢集裡的其他位置。主機進入維護模式時，所有 VM 及應用裝置都可以存取其儲存空間元件，而且仍然遵循其指派的儲存空間原則。完整資料撤除可能需要很長的時間，而且可以讓升級的維護時間有較長的持續時間。
@@ -21,7 +22,8 @@ lastupdated: "2018-11-19"
 
 2. 先等待 vSAN 完成同步，再起始所有補救動作。導覽至叢集的 **vSAN Virtual Objects 監視**頁面，並檢閱**完成狀態**，來檢查完成狀態。
 
-### 相關鏈結
+## 相關鏈結
+{: #vum-vsan-redundancy-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

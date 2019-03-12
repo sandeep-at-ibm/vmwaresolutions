@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # 使用 VMware vSphere Web Client 部署 OVF 檔案
+{: #trbl_deploy_ovf}
 
 ## 解決方法
+{: #trbl_deploy_ovf-resolution}
 
 若要使用 vSphere Web Client 部署 OVF（開放式虛擬化格式）檔案，請使用下列程序：
 1. 在您嘗試部署 OVF 檔案之前，請將下列主機資訊新增至 `/etc/hosts` 檔案：

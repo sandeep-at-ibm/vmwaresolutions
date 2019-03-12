@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-20"
+lastupdated: "2019-02-18"
 
 ---
 
-#	오케스트레이션된 업그레이드
+# 오케스트레이션된 업그레이드
+{: #vum-orchestr-updates}
 
 오케스트레이션된 업그레이드를 사용하면 vSphere ESXi 호스트를 업데이트한 후 인벤토리에 있는 가상 머신의 가상 하드웨어 및 VMware Tools를 업그레이드할 수 있습니다. 호스트가 업데이트된 후 먼저 VMware Tools 업그레이드 기준선이 실행된 후 가상 머신 하드웨어 업그레이드 기준선이 뒤따릅니다. 클러스터, 폴더 또는 데이터 센터 레벨에서 오케스트레이션된 업그레이드를 사용할 수 있습니다.
 
@@ -33,6 +34,7 @@ vSphere ESXI 호스트가 vSAN 클러스터의 일부이면 조치방안 마법�
 다음 워크플로우는 오케스트레이션된 업그레이드를 수행하는 프로세스에 대해 설명합니다.
 
 ## 1단계
+{: #vum-orchestr-updates-step1}
 
 1. vSphere Web Client를 사용하여 VCSA에 로그인하십시오.
 2. **홈** > **Update Manager**를 선택하고 **오브젝트 탭**에서 **Update Manager 인스턴스**를 선택하십시오.
@@ -47,6 +49,7 @@ vSphere ESXI 호스트가 vSAN 클러스터의 일부이면 조치방안 마법�
 11. **완료 준비** 페이지를 검토하고 **완료**를 클릭하면 호스트 기준선 그룹이 기준선 그룹 분할창에 표시됩니다.
 
 ## 2단계
+{: #vum-orchestr-updates-step2}
 
 1. 호스트와 일치하도록 VMware Tools 업그레이드 기준선 및 호스트와 일치하도록 VM 하드웨어 업그레이드 기준선, VUM 관리 보기가 포함된 가상 머신 기준선 그룹을 작성하십시오.
 2. 업그레이드할 가상 머신이 포함된 vCenter 컨테이너 오브젝트에 기준선 그룹을 연결하십시오.
@@ -58,7 +61,8 @@ vSphere ESXI 호스트가 vSAN 클러스터의 일부이면 조치방안 마법�
 
 이제 스캔, 검토, 스테이징 및 조치방안 프로세스에서 이러한 기준선 그룹을 사용할 수 있습니다.
 
-### 관련 링크
+## 관련 링크
+{: #vum-orchestr-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

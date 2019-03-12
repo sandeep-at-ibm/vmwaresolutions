@@ -46,4 +46,4 @@ Caveonix RiskForesight 배치 모델은 다음과 같이 세 가지가 있습니
 ## 관련 링크
 {: #caveonix-step1-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

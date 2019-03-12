@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 시스템 컨텍스트
+{: #vcsicp-systemcontext}
 
 그림 1. 시스템 컨텍스트 다이어그램
 ![시스템 컨텍스트 다이어그램 - vCenter Server {{site.data.keyword.icpfull_notm}} CAM](vcsicp-syscontext-vcs-icp-cam.svg)
@@ -24,6 +25,7 @@ lastupdated: "2019-01-23"
 - **{{site.data.keyword.cloud_notm}} Services** – {{site.data.keyword.cloud_notm}} Services는 분석, AI 및 IoT 오퍼링을 포함하여 사용 가능한 다양한 서비스를 제공합니다.
 
 ## 액터
+{: #vcsicp-systemcontext-actors}
 
 표 1. 액터
 
@@ -35,6 +37,7 @@ lastupdated: "2019-01-23"
 {{site.data.keyword.containerlong_notm}} | 서비스에 대한 {{site.data.keyword.containerlong_notm}} 마스터 노드를 관리하는 IBM 리소스
 
 ## 시스템
+{: #vcsicp-systemcontext-systems}
 
 표 2. 시스템
 
@@ -55,6 +58,7 @@ Watson | 이 참조 아키텍처 및 Acme Skateboards의 경우, Watson은 "컨�
 
 애플리케이션 마이그레이션, 네트워킹 및 보안은 애플리케이션 현대화의 가장 어려운 과제입니다. vCenter Server, VMware Hybridity, VMware NSX, {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}}를 통해 이러한 과제를 해결하고 복원 가능한 안전하고 강력한 현대 애플리케이션을 빌드할 수 있습니다.
 
-### 관련 링크
+## 관련 링크
+{: #vcsicp-systemcontext-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

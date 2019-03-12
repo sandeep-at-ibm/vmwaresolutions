@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # VMware HCX on IBM Cloud 组件级别目标体系结构
+{: #hcx-archi-target}
 
 此部分描述 IBM Cloud 环境中部署的每个 HCX 组件的体系结构。将讨论 IBM Cloud 中的辐条（目标）部署模型。
 
 ## NSX Edge
+{: #hcx-archi-target-nsx-edge}
 
 IBM Cloud 中配置的第一个组件是一对 NSX Edge 虚拟机。务必注意的是，所有 IBM Cloud for VMware Solutions 部署都会安装并配置 Edge 设备，以用于 IBM CloudDriver 出站通信。但是，虽然此 ESG 可以复用于 Hybrid Cloud Services 通信，但建议部署一对新的 ESG。
 
@@ -91,6 +93,7 @@ NSX Edge 虚拟机配置为一对主动/被动超大型 NSX Edge 设备。这些
 |最小连接数|0|
 
 ## HCX Manager
+{: #hcx-archi-target-hcxm}
 
 在目标上配置 NSX Edge 设备后，部署的第一个设备是 HCX Manager 组件。此设备用作源组件的云环境的主接口，并提供抽象的联网用户界面，可以使用此界面来添加、编辑和删除网络，以及设计和配置路由，而无需直接使用 NSX。vCenter 与 NSX 集成后，会为 HCX Manager 设备分配管理 VLAN 上的专用可移植 IP 地址。
 
@@ -102,6 +105,7 @@ NSX Edge 虚拟机配置为一对主动/被动超大型 NSX Edge 设备。这些
 ![目标 - Hybrid Cloud Services 设备](target_hybrid_cloud_services_appliance.svg)
 
 ## 云网关
+{: #hcx-archi-target-cloud-gateway}
 
 建立了从源到目标云的连接后，会部署一个虚拟设备。此设备为云网关 (CGW)，用于在指定为源的 vSphere 环境与 IBM Cloud 之间维护一个安全通道。“表 3. 云网关部署”中列出了 IBM Cloud 中部署的 CGW 设备的大小调整规范。
 
@@ -123,6 +127,7 @@ NSX Edge 虚拟机配置为一对主动/被动超大型 NSX Edge 设备。这些
 ![云网关部署](cloud_gateway_deployment.svg)
 
 ## WAN Optimizer
+{: #hcx-archi-target-wan-opt}
 
 部署的第二个组件是 WAN 优化设备。虽然 WAN 优化设备是可选的，但此设备可执行 WAN 调节，以减少等待时间所产生的影响。它还包含前向纠错功能，可解决丢包问题，并可执行冗余流量模式去重。
 
@@ -142,8 +147,9 @@ NSX Edge 虚拟机配置为一对主动/被动超大型 NSX Edge 设备。这些
 ![WAN Optimizer 部署](wan_optimizer_deployment.svg)
 
 ## 第 2 层集中器
+{: #hcx-archi-target-layer-2-conc}
 
-第三个组件称为第 2 层集中器 (L2C)，是网络扩展服务的一部分。L2C 是允许将内部部署数据中心网络扩展到 IBM Cloud 的虚拟机。L2C 用于延伸内部部署 VLAN 和/或 VXLAN。每个 L2C 最多可以延伸到 4096 个 VLAN。每个 L2C 与其内部部署合作伙伴配对后，每个“流”最高可提供 1 Gbps，并且每个 VLAN（或 VXLAN）最高可提供总计 4 Gbps。如果需要更高网络吞吐量，支持部署更多 L2C 设备。
+第三个组件称为第 2 层集中器 (L2C)，是 Network Extension 服务的一部分。L2C 是允许将内部部署数据中心网络扩展到 IBM Cloud 的虚拟机。L2C 用于延伸内部部署 VLAN 和/或 VXLAN。每个 L2C 最多可以延伸到 4096 个 VLAN。每个 L2C 与其内部部署合作伙伴配对后，每个“流”最高可提供 1 Gbps，并且每个 VLAN（或 VXLAN）最高可提供总计 4 Gbps。如果需要更高网络吞吐量，支持部署更多 L2C 设备。
 
 作为此设计的一部分，将部署 L2C 设备，以便客户可以通过公用因特网或通过利用 Direct Link 的专用网络，将多个 VLAN 和 VXLAN 延伸到 IBM Cloud。下表中列出了 IBM Cloud 上 L2C 设备的大小调整规范。
 
@@ -160,6 +166,7 @@ L2C 设备部署在管理 VLAN 以及公用 VLAN 上。公共接口用于处理�
 图 4. L2 集中器部署
 ![L2 集中器部署](l2_concentrator_deployment.svg)
 
-### 相关链接
+## 相关链接
+{: #hcx-archi-target-related}
 
-* [在源上安装和配置](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-source.html)
+* [在源上安装和配置](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-source)

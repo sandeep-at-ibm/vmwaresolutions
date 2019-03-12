@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-06-22"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-06-22"
 {:important: .important}
 
 # V2.4 のリリース・ノート
+{: #relnotes_v24}
 
 このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
@@ -24,7 +25,7 @@ lastupdated: "2018-06-22"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-詳しくは、[Spectre および Meltdown 脆弱性への対処](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)を参照してください。
+詳しくは、[Spectre および Meltdown 脆弱性への対処](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)を参照してください。
 
 ## 各国語サポート
 
@@ -44,7 +45,7 @@ V2.4 リリースから、{{site.data.keyword.vmwaresolutions_short}} に各国�
 
 ## Skylake Xeon CPU のサポート
 
-V2.4 リリースから、VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}、VMware vSphere on {{site.data.keyword.cloud_notm}}、VMware Federal on {{site.data.keyword.cloud_notm}} のインスタンスとクラスターのデプロイメントで、以下の新しいベアメタル・サーバー CPU モデルを利用できるようになりました。
+V2.4 リリースから、VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} と VMware vSphere on {{site.data.keyword.cloud_notm}} のインスタンスとクラスターのデプロイメントで、以下の新しいベアメタル・サーバー CPU モデルを利用できるようになりました。
 
 * Dual Intel Skylake Xeon Silver 4110 プロセッサー / 合計 16 コア、2.1 GHz
 * Dual Intel Skylake Xeon Gold 5120 プロセッサー / 合計 28 コア、2.2 GHz
@@ -52,21 +53,14 @@ V2.4 リリースから、VMware Cloud Foundation on {{site.data.keyword.cloud_n
 
 詳しくは、以下の資料にある『*ベアメタル・サーバーの設定*』セクションを参照してください。
 
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html#bare-metal-server-settings)
-* [新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#bare-metal-server-settings)
-* [VMware Federal インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html#bare-metal-server-settings)
+* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance#bare-metal-server-settings)
+* [新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)
 
 ## VMware vCenter Server インスタンスの更新
 
 ### ネットワーク・ファイル・システムのパフォーマンスの強化
 
-ワークロードが非常に大きいタイプの処理に合わせて設計されている 10 IOPS/GB のパフォーマンス・レベルが、特定の {{site.data.keyword.CloudDataCent_notm}}に制限されずに、すべてのデータ・センターで利用できるようになりました。 詳しくは、[vCenter Server の概要](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)の『*ストレージ*』セクションを参照してください。
-
-## VMware Federal インスタンスの更新
-
-### IBM Cloud データ・センターの新しいオプション
-
-VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.CloudDataCent_notm}}にデプロイできるようになりました。 詳しくは、[VMware Federal インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html#ibm-cloud-data-center-availability)の『*IBM Cloud データ・センターの使用可否*』セクションを参照してください。
+ワークロードが非常に大きいタイプの処理に合わせて設計されている 10 IOPS/GB のパフォーマンス・レベルが、特定の {{site.data.keyword.CloudDataCent_notm}}に制限されずに、すべてのデータ・センターで利用できるようになりました。 詳しくは、[vCenter Server の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)の『*ストレージ*』セクションを参照してください。
 
 ## アドオン・サービスの更新
 
@@ -76,13 +70,13 @@ VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.Clou
 
 ### VMware HCX on IBM Cloud
 
-新しいオプションが用意され、このサービスの注文時に、HCX 相互接続のためにパブリック・ネットワークとプライベート・ネットワークのいずれかを選択できるようになりました。 詳しくは、[VMware HCX on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/hcx_ordering.html)を参照してください。
+新しいオプションが用意され、このサービスの注文時に、HCX 相互接続のためにパブリック・ネットワークとプライベート・ネットワークのいずれかを選択できるようになりました。 詳しくは、[VMware HCX on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering)を参照してください。
 
 ## 新規資料および更新された資料
 
 ### リファレンス・アーキテクチャー資料
 
-{{site.data.keyword.vmwaresolutions_short}} のアーキテクチャー資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。 詳しくは、[ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)を参照してください。
+{{site.data.keyword.vmwaresolutions_short}} のアーキテクチャー資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。 詳しくは、[ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)を参照してください。
 
 ### サービスの資料
 
@@ -90,15 +84,15 @@ VMware Federal インスタンスを DAL08 - Dallas, TX {{site.data.keyword.Clou
 
 詳しくは、以下のトピックを参照してください。
 
-* [F5 on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/f5_ordering.html)
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/fsa_ordering.html)
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
-* [Hytrust CloudControl on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/htcc_ordering.html)
-* [Hytrust DataControl on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/htdc_ordering.html)
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_ordering.html) の注文
+* [F5 on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_ordering)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_ordering)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_ordering)
+* [Hytrust CloudControl on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_ordering)
+* [Hytrust DataControl on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_ordering)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_ordering) の注文
 * [KMIP for VMware on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/kmip_ordering.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/veeam_ordering.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/zerto_ordering.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
+* [Zerto on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering)
 
 ## ユーザー・インターフェースの更新と向上
 

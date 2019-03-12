@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # ユース・ケース
+{: #vcsnsxt-usecases}
 
 ## IBM Cloud への VMware ワークロードのマイグレーション
+{: #vcsnsxt-usecases-wkld-mig}
 
 Acme Skateboards 社は、オンプレミスの VMware SDDC インスタンスを VMware vCenter Server on {{site.data.keyword.cloud}} インスタンスにシームレスに拡張したいと考えています。 ビジネスを継続させ、ダウン時間を最小限に抑える必要があります。 使用しているアプリケーションをクラウドで実行するように再構成することは、最適なソリューションではありません。
 
@@ -33,6 +35,7 @@ vCenter Server ターゲット・サイトに仮想マシン (VM) としてデ�
 - **セキュリティー・ポリシーのマイグレーション** - NSX をオンプレミスで使用する場合、セキュリティー・ポリシーやファイアウォールなどはすべてワークロードとともに移動されます。
 
 ## ハイブリッド・アーキテクチャーのデプロイメント
+{: #vcsnsxt-usecases-hybrid-archi-deployment}
 
 Acme Skateboards 社は、アプリケーション・モダナイゼーション・ジャーニーのために、vCenter Server with Hybridity Bundle と {{site.data.keyword.icpfull_notm}} で構成されるハイブリッド・アーキテクチャーを {{site.data.keyword.cloud_notm}} にデプロイしたいと考えています。 同社の要件は、VM でデータベースを実行し、コンテナーでアプリケーションと Web インターフェースを実行すること、そしてネットワークとセキュリティーの管理に共通のツール・セットを使用することです。
 
@@ -44,7 +47,7 @@ Acme Skateboards 社は、アプリケーション・モダナイゼーション
 
 {{site.data.keyword.cloud_notm}} 自動化機能を使用して、Acme Skateboards 社は vCenter Server を含むハイブリッド・ソリューションをプロビジョンし、vCenter Server 上のデータベース VM および {{site.data.keyword.icpfull_notm}} を実行して、アプリケーションおよびフロントエンド Web サービスをコンテナーで実行することができます。 NSX は、オーバーレイ・ネットワーク内のネットワーキングとセキュリティー用の共通の管理ツール・セットを提供します。
 
-NSX-V について詳しくは、[NSX-V の概要](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-ic4vnsxv.html)を参照してください。 vCenter Server および {{site.data.keyword.icpfull_notm}} オファリングについて詳しくは、[vCenter Server および {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html) を参照してください。
+NSX-V について詳しくは、[NSX-V の概要](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)を参照してください。vCenter Server および {{site.data.keyword.icpfull_notm}} オファリングについて詳しくは、[vCenter Server および {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro) を参照してください。
 
 図 2. {{site.data.keyword.icpfull_notm}} を使用する vCenter Server
 ![{{site.data.keyword.icpfull_notm}} を使用する vCenter Server](vcsnsxt-nsxvhl.svg)
@@ -62,6 +65,7 @@ NSX-V について詳しくは、[NSX-V の概要](/docs/services/vmwaresolution
 
 Acme Skateboards 社は、このソリューションを使用してオンプレミスの VMware ワークロードを {{site.data.keyword.cloud_notm}} に正常にマイグレーションし、ダウン時間をゼロまたはほぼゼロにしてアプリケーションは再構成しないという要件に応えることができました。 vCenter Server with Hybridity Bundle について詳しくは、[VMware HCX on {{site.data.keyword.cloud_notm}} ソリューション・アーキテクチャー](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)を参照してください。
 
-### 関連リンク
+## 関連リンク
+{: #vcsnsxt-usecases-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

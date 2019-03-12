@@ -23,4 +23,4 @@ VMware HCX(Hybrid Cloud Services)를 사용하면 vSphere 소프트웨어 정의
 ## 관련 링크
 {: #vcshcx-intro-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

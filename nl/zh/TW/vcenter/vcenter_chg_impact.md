@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2019-01-23"
 {:faq: data-hd-content-type='faq'}
 
 # 變更 vCenter Server 構件的考量
+{: #vcenter_chg_impact}
 
 變更已保留給 {{site.data.keyword.vmwaresolutions_full}} 的使用者、資源或子網路，會影響管理作業。
 
@@ -21,6 +22,7 @@ lastupdated: "2019-01-23"
 {:important}
 
 ## 自動化 ID
+{: #vcenter_chg_impact-automation-id}
 {: faq}
 
 **自動化** ID 是一個使用者帳戶，由 {{site.data.keyword.vmwaresolutions_short}} 主控台中所提供的自動化作業使用。
@@ -28,6 +30,7 @@ lastupdated: "2019-01-23"
 適用於主控台中的自動化作業的使用者和密碼不得變更，因為仰賴那些認證的主控台作業可能會失敗。
 
 ## 服務特定使用者帳戶
+{: #vcenter_chg_impact-service-usr-account}
 
 每一個服務都會在 vCenter Server 中建立內部使用者帳戶。此帳戶是必要的，因此與服務相關聯的管理作業可以連接至 vCenter Server，以在服務上執行作業。
 
@@ -40,10 +43,14 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## vCenter Server 實例的 VMware 資源（第 1.9 版以及更新版本）
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
 
-若為部署在 1.9 版以及更新版本中的實例，如果 vCenter Server 實例處於**備妥使用**狀態，您可以從 VMware vSphere Web Client 修改 VMware 虛擬資料中心、叢集、交換器、埠群組及客戶資料儲存庫名稱。不過，您不得變更管理資料儲存庫名稱的預設值：vSAN 實例為 **vsanDatastore**，而「網路檔案系統 (NFS)」實例則為 **management-share**。
+若為部署在 1.9 版以及更新版本中的實例，如果 vCenter Server 實例處於**備妥使用**狀態，您可以從 VMware vSphere Web Client 修改 VMware 虛擬資料中心、叢集、交換器、埠群組及客戶資料儲存庫名稱。
+
+不過，您不得變更管理資料儲存庫名稱的預設值：vSAN 實例為 **vsanDatastore**，而「網路檔案系統 (NFS)」實例則為 **management-share**。此外，您不得變更佈建期間建立的網路上行鏈路名稱。
 
 ## vCenter Server 實例的 VMware 資源（1.8 版及更早版本）
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
 
 下表列出當 SSO 管理者在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更 VMware vCenter Server 資源時可能受到影響的作業。如果有可用的回復解決方案，則也會提供它。
 
@@ -72,6 +79,7 @@ lastupdated: "2019-01-23"
 如果您選擇要停用 SSH 或 Shell 存取，在執行指示的作業之前您應該暫時將它重新啟用。
 
 ## vCenter Server 實例的管理子網路
+{: #vcenter_chg_impact-mgmt-subnets}
 
 下列資訊討論 {{site.data.keyword.vmwaresolutions_short}} 所訂購的子網路，並提供選項讓您訂購額外子網路以供您自己使用。
 
@@ -87,5 +95,5 @@ lastupdated: "2019-01-23"
 *  在公用 VLAN 上有一個包含 16 個 IP 位址的公用可攜式子網路
 
 如果您需要使用更多子網路，您可以用下列其中一種方式取得要使用的 IP 位址：
-*  **選項 1（建議）**：使用 VMware NSX 虛擬網路層疊。訂購時會提供範例的 VXLAN 範本。這個 VXLAN 可用來作為建置軟體定義網路 (SDN) 的起點。如需相關資訊，請參閱[將網路配置成使用客戶管理的 NSX Edge](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html)。
+*  **選項 1（建議）**：使用 VMware NSX 虛擬網路層疊。訂購時會提供範例的 VXLAN 範本。這個 VXLAN 可用來作為建置軟體定義網路 (SDN) 的起點。如需相關資訊，請參閱[將網路配置成使用客戶管理的 NSX Edge](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)。
 *  **選項 2**：訂購您自己的可攜式公用或專用子網路來取得 IP 位址。若要區別您訂購的子網路與管理子網路，您可以將附註新增至您訂購的所有子網路。

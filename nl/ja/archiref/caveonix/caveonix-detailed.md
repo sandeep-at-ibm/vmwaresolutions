@@ -17,19 +17,19 @@ lastupdated: "2019-02-14"
 ![アプリケーション・コンポーネント](caveonix-app-components.svg)
 
 -	グラフィカル・ユーザー・インターフェース - RiskForesight アプリケーションにアクセスするために使用できる Web インターフェース。
--	Central Collector - プラグインから送られてくるさまざまなタイプのデータ・ペイロードを収集して、メッセージング・ストアで使用できるようにします。RiskForesight は、以下のタイプのペイロードをサポートします。
+-	Central Collector - プラグインから送られてくるさまざまなタイプのデータ・ペイロードを収集して、メッセージング・ストアで使用できるようにします。 RiskForesight は、以下のタイプのペイロードをサポートします。
     - スキャン
     - ログ
     - Netflow
     - ソフトウェア
     - ワークロード・メタデータ
-- Central Router - VMware オーケストレーション層とのすべての統合タッチポイントを管理します。すべての RiskForesight プラグインは、RiskForesight エコシステムとの通信を許可してもらうために、Central Router と通信する必要があります。
--	API Server - GUI とバックエンド・データ・ストアを接続する REST エンドポイント・ミドルウェアです。さらに、ユーザー・アクセス要求を検証して RBAC を管理します。
--	vCenter Data Collector - このプラグインは、仮想マシン (VM) の詳細を vCenter から取り出します。この汎用プラグインは VMware API を使用して vCenter に接続し、ワークロードに関連した情報を取り出します。情報が使用可能になると、このプラグインはペイロードをパッケージして、Central Collector に送信します。
--	vCD Data Collector - このプラグインは、VM の詳細を VMware vCloud Director から取り出します。この汎用プラグインは VMware API を使用して VMware vCloud Director に接続し、ワークロードに関連した情報を取り出します。情報が使用可能になると、このプラグインはペイロードをパッケージして、Central Collector に送信します。
--	vCD Network Data Collector - このプラグインは、Netflow の詳細を VMware vCD から取り出します。この汎用プラグインは VMware API を使用して VMware NSX に接続し、ネットワーク、FW、セキュリティー・ルール、およびセキュリティー・グループを取り出します。情報が使用可能になると、このプラグインはペイロードをパッケージして、Central Collector に送信します。
--	Network Data Collector - このプラグインは、Netflow の詳細を VMware vCenter から取り出します。この汎用プラグインは VMware API を使用して VMware NSX に接続し、ネットワーク、ファイアウォール、セキュリティー・ルール、およびセキュリティー・グループの情報を取り出します。情報が使用可能になると、このプラグインはペイロードをパッケージして、Central Collector に送信します。
--	Remote Collector - テナント環境、またはテナント VM へのネットワーク・アクセスが可能な他の場所に常駐します。すべてのコンプライアンス・リスクとサイバー・リスクのスキャンを処理します。
+- Central Router - VMware オーケストレーション層とのすべての統合タッチポイントを管理します。 すべての RiskForesight プラグインは、RiskForesight エコシステムとの通信を許可してもらうために、Central Router と通信する必要があります。
+-	API Server - GUI とバックエンド・データ・ストアを接続する REST エンドポイント・ミドルウェアです。 さらに、ユーザー・アクセス要求を検証して RBAC を管理します。
+-	vCenter Data Collector - このプラグインは、仮想マシン (VM) の詳細を vCenter から取り出します。 この汎用プラグインは VMware API を使用して vCenter に接続し、ワークロードに関連した情報を取り出します。 情報が使用可能になると、このプラグインはペイロードをパッケージして、Central Collector に送信します。
+-	vCD Data Collector - このプラグインは、VM の詳細を VMware vCloud Director から取り出します。 この汎用プラグインは VMware API を使用して VMware vCloud Director に接続し、ワークロードに関連した情報を取り出します。 情報が使用可能になると、このプラグインはペイロードをパッケージして、Central Collector に送信します。
+-	vCD Network Data Collector - このプラグインは、Netflow の詳細を VMware vCD から取り出します。 この汎用プラグインは VMware API を使用して VMware NSX に接続し、ネットワーク、FW、セキュリティー・ルール、およびセキュリティー・グループを取り出します。 情報が使用可能になると、このプラグインはペイロードをパッケージして、Central Collector に送信します。
+-	Network Data Collector - このプラグインは、Netflow の詳細を VMware vCenter から取り出します。 この汎用プラグインは VMware API を使用して VMware NSX に接続し、ネットワーク、ファイアウォール、セキュリティー・ルール、およびセキュリティー・グループの情報を取り出します。 情報が使用可能になると、このプラグインはペイロードをパッケージして、Central Collector に送信します。
+-	Remote Collector - テナント環境、またはテナント VM へのネットワーク・アクセスが可能な他の場所に常駐します。 すべてのコンプライアンス・リスクとサイバー・リスクのスキャンを処理します。
 -	Relational Datastore - 以下のタイプのメタデータを保守します。
     - クラウド・サービス・プロバイダー
     - テナント
@@ -37,7 +37,7 @@ lastupdated: "2019-02-14"
     - スキャン結果
     - ソフトウェア
     - 日次または週次の集約データ・セット
--	Messaging Datastore - RiskForesight は永続メッセージ・キューを使用してデータ損失をゼロにし、コンポーネントへのバック・プレッシャーの負荷を軽減します。着信データ・ペイロードは最初に永続的なものとなり、その後、将来の処理のために永続性が解除されます。
+-	Messaging Datastore - RiskForesight は永続メッセージ・キューを使用してデータ損失をゼロにし、コンポーネントへのバック・プレッシャーの負荷を軽減します。 着信データ・ペイロードは最初に永続的なものとなり、その後、将来の処理のために永続性が解除されます。
 -	Index Datastore - マルチテナント機能をサポートするために、着信生データにテナントごとに索引を作成して保管し、さらに分析できるようにします。
 -	プラグイン – Application Routing Server 内に常駐します。すべての VM とそのテナント情報を同期させるために、セットアップ機能と VMware コンポーネントとの統合機能が含まれています。
 
@@ -65,7 +65,7 @@ lastupdated: "2019-02-14"
 
 表 2. VLAN とサブネット
 
-|VLAN 	|サブネット・タイプ |説明|
+|VLAN 	|サブネット・タイプ 	|説明|
 |---|---|---|
 |パブリック 	|プライマリー 	|パブリック・ネットワーク・アクセス用に物理ホストに割り当てられます。 初期デプロイメント時は使用されません。|
 |パブリック	|ポータブル 	|customer-nsx-esg のアップリンクおよび NAT 用に割り当てられます。|
@@ -88,4 +88,4 @@ lastupdated: "2019-02-14"
 ## 関連リンク
 {: #caveonix-detailed-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # インストール環境の準備
+{: #hcx-archi-prep-install}
 
 VMware HCX on IBM Cloud のインストールのソフトウェア要件は、以下のとおりです。
 * vSphere 5.5 U3、または vSphere 6.0u2 以上。
@@ -15,12 +16,14 @@ VMware HCX on IBM Cloud のインストールのソフトウェア要件は、�
 * クラウド間 vMotion を使用する場合は、オンプレミスの場合と同じアフィニティーの制限がクラウド間にも適用されます。 詳しくは、[VMware EVC and CPU Compatibility FAQ](http://bit.ly/2vK6Sp5) を参照してください。
 
 ## ネットワーク接続の構成
+{: #hcx-archi-port-req-config-net}
 
 HCX は、公衆インターネットと専用回線を経由して、ネットワーク、スイッチ、ポート・グループなどのデータ・センターのコンポーネントに接続する必要があります。
-* [ポートのアクセス要件](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-port-req.html)に、HCX 仮想アプライアンスを正常にインストールするために開く必要があるポートをリストしています。
+* [ポートのアクセス要件](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req)に、HCX 仮想アプライアンスを正常にインストールするために開く必要があるポートをリストしています。
 * オンプレミス vSphere 環境と VCF/VCS HCX クラウド環境の両方で、vSphere オンプレミス・デバイスと VCF/VCS HCX デバイスが Network Time Protocol (NTP) のクロック同期を実行できなければなりません。 UDP ポート 123 に、HCX の仮想アプライアンスとネットワークがアクセスできる必要があります。
 
 ## オンプレミス環境
+{: #hcx-archi-port-req-on-prem-env}
 
 HCX をインストールする前に、実行したいタスクがサポートされる環境であることを確認してください。 HCX をインストールするには、オンプレミス環境が、以下のタスクをサポートする環境でなければなりません。
 * vSphere 5.5 Update 3 または 6.0 Update 2 の仮想センター。
@@ -35,6 +38,7 @@ HCX をインストールする前に、実行したいタスクがサポート�
   * vCenter がリンク・モードになっている (この場合、2 次 vCenter は 1 次 vCenter の SSO サービスまたは外部 SSO サービスを使用します)。
 
 ## レイヤー 2 インストール環境の確認
+{: #hcx-archi-port-req-verify-layer-2-inst}
 
 レイヤー 2 ネットワーク拡張には、次の要件があります。
 * vSphere Enterprise Plus エディション。
@@ -45,7 +49,8 @@ HCX をインストールする前に、実行したいタスクがサポート�
   * 公衆インターネットまたは VPN を経由して (別のパスの) ネットワークを拡張する場合は、VCF/VCS 内の L2C 仮想マシンに IP アドレスが必要です。 そのリモート IP アドレスを使用して、レイヤー 2 コンセントレーターを構成する必要があります。
   * 複数台のレイヤー 2 コンセントレーターが必要な場合は、L2C ごとにオンプレミスとクラウドの両方の IP アドレスが必要です。
 
-### 関連リンク
+## 関連リンク
+{: #hcx-archi-port-req-related}
 
-* [ソースでの HCX の構成およびインストール](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
+* [ソースでの HCX の構成およびインストール](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
 * [VMware EVC and CPU Compatibility FAQ](http://bit.ly/2vK6Sp5)

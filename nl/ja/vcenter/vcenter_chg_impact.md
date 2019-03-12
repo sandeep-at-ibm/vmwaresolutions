@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,14 +14,16 @@ lastupdated: "2019-01-23"
 {:faq: data-hd-content-type='faq'}
 
 # vCenter Server 成果物の変更に関する考慮事項
+{: #vcenter_chg_impact}
 
 {{site.data.keyword.vmwaresolutions_full}} 用に予約されたユーザー、リソース、またはサブネットを変更すると、管理操作に影響を与える可能性があります。
 
 VMware vSphere Web Client の**「ユーザーおよびグループ」**ページで**「ic4v-vCenter」**グループのグローバル許可を編集しないでください。 例えば、ユーザー名を変更する、ユーザーを削除する、パスワードを変更するなどです。
-**root** ホスト・ユーザー ID を使用してください。**ic4vroot** ホスト・ユーザー ID は、IBM 専用に作成されたものです。
+**root** ホスト・ユーザー ID を使用してください。 **ic4vroot** ホスト・ユーザー ID は、IBM 専用に作成されたものです。
 {:important}
 
 ## 自動化 ID
+{: #vcenter_chg_impact-automation-id}
 {: faq}
 
 **自動化** ID は、{{site.data.keyword.vmwaresolutions_short}} コンソールで利用できる自動操作に使用されるユーザー・アカウントです。
@@ -29,6 +31,7 @@ VMware vSphere Web Client の**「ユーザーおよびグループ」**ペー�
 コンソールの自動操作用のユーザーおよびパスワードは、これらの資格情報に依存するコンソール操作が失敗する可能性があるため、変更しないでください。
 
 ## サービス固有のユーザー・アカウント
+{: #vcenter_chg_impact-service-usr-account}
 
 サービスごとに、vCenter Server 内に内部ユーザー・アカウントが作成されます。 このアカウントは、サービスに関連付けられている管理操作が vCenter Server に接続できるようにすることで、サービスに対して操作を実行できるようにするために必要になります。
 
@@ -41,10 +44,14 @@ VMware vSphere Web Client の**「ユーザーおよびグループ」**ペー�
 {:note}
 
 ## vCenter Server インスタンスの VMware リソース (V1.9 以降)
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
 
-V1.9 以降でデプロイされたインスタンスの場合は、vCenter Server インスタンスが**「使用可能」**状態であれば、VMware vSphere Web Client から VMware 仮想データ・センター、クラスター、スイッチ、ポート・グループ、およびカスタマー・データ・ストア名を変更できます。 ただし、管理データ・ストアの名前は、デフォルト値の **vsanDatastore** (vSAN インスタンスの場合) と **management-share** (ネットワーク・ファイル・システム (NFS) インスタンスの場合) から変更しないでください。
+V1.9 以降でデプロイされたインスタンスの場合は、vCenter Server インスタンスが**「使用可能」**状態であれば、VMware vSphere Web Client から VMware 仮想データ・センター、クラスター、スイッチ、ポート・グループ、およびカスタマー・データ・ストア名を変更できます。
+
+ただし、管理データ・ストアの名前は、デフォルト値の **vsanDatastore** (vSAN インスタンスの場合) と **management-share** (ネットワーク・ファイル・システム (NFS) インスタンスの場合) から変更しないでください。また、プロビジョニング中に作成されたネットワーク・アップリンクの名前も変更しないでください。
 
 ## vCenter Server インスタンスの VMware リソース (V1.8 以前)
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
 
 次の表に、SSO 管理者が {{site.data.keyword.vmwaresolutions_short}} コンソール以外で VMware vCenter Server リソースを変更した場合に影響を受ける可能性がある操作を示します。 正常な状態に戻す解決方法がある場合は、その方法も示しています。
 
@@ -73,6 +80,7 @@ V1.9 以降でデプロイされたインスタンスの場合は、vCenter Serv
 SSH アクセスまたはシェル・アクセスを無効にした場合は、ここに示す操作を実行する前に、無効にしたアクセスを一時的に再有効化する必要があります。
 
 ## vCenter Server インスタンスの管理サブネット
+{: #vcenter_chg_impact-mgmt-subnets}
 
 {{site.data.keyword.vmwaresolutions_short}} によって注文されるサブネットについて以下に説明します。また、専用のサブネットを追加注文するオプションについても説明します。
 
@@ -88,5 +96,5 @@ SSH アクセスまたはシェル・アクセスを無効にした場合は、�
 *  パブリック VLAN 上の 16 個の IP アドレスを含むパブリック・ポータブル・サブネット
 
 追加のサブネットを使用する必要がある場合は、以下のいずれかの方法で、使用する IP アドレスを取得できます。
-*  **オプション 1 (推奨)**: VMware NSX 仮想ネットワーク・オーバーレイを使用します。 注文時に、サンプルの VXLAN テンプレートが提供されます。 この VXLAN を、ソフトウェア定義ネットワーク (SDN) を構築するための開始点として使用できます。 詳しくは、[ユーザー管理の NSX Edge を使用するためのネットワークの構成](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html)を参照してください。
+*  **オプション 1 (推奨)**: VMware NSX 仮想ネットワーク・オーバーレイを使用します。 注文時に、サンプルの VXLAN テンプレートが提供されます。 この VXLAN を、ソフトウェア定義ネットワーク (SDN) を構築するための開始点として使用できます。 詳しくは、[ユーザー管理の NSX Edge を使用するためのネットワークの構成](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)を参照してください。
 *  **オプション 2**: IP アドレスを取得するために、独自のポータブル・パブリック・サブネットまたはプライベート・サブネットを注文します。 注文するサブネットと管理サブネットを区別するために、注文するすべてのサブネットにメモを追加することができます。

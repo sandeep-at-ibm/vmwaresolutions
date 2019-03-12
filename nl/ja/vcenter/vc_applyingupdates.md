@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,17 +13,19 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server インスタンスへの更新の適用
+{: #vc_applyingupdates}
 
 管理コンポーネントに限り、パッチと更新を vCenter Server インスタンスに適用するプロセスが自動化されています。 VMware の更新は手動で適用しなければなりません。
 
 ## 始める前に
+{: #vc_applyingupdates-prereq}
 
 vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードする場合は、まず少なくとも基本 vCenter Server V2.3 のソフトウェア更新を適用する必要があります。 これを先に行ってから、Hybridity Bundle へのライセンス・アップグレードを実行する必要があります。
 {:important}
 
 ビジネス・パートナーのユーザーには、既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードするためのオプションは提供されません。
 
-V2.5 以降は自動更新が有効になっているため、IBM CloudDriver の更新はリストされなくなりました。 ホストの追加、クラスターの追加、サービスの注文などの操作を行うと、自動的にインスタンスが最新バージョンに更新されます。 自動更新について詳しくは、[V2.5 のリリース・ノート](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)の『*IBM CloudDriver の回復力*』のセクションを参照してください。
+V2.5 以降は自動更新が有効になっているため、IBM CloudDriver の更新はリストされなくなりました。 ホストの追加、クラスターの追加、サービスの注文などの操作を行うと、自動的にインスタンスが最新バージョンに更新されます。 自動更新について詳しくは、[V2.5 のリリース・ノート](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)の『*IBM CloudDriver の回復力*』のセクションを参照してください。
 {:note}
 
 更新を適用する前に、下矢印をクリックして更新エントリーを展開し、以下の情報を確認します。
@@ -55,6 +57,7 @@ V2.5 以降は自動更新が有効になっているため、IBM CloudDriver �
 </table>
 
 ## vCenter Server インスタンスへの更新とパッチを適用する手順 (V2.1 以降)
+{: #vc_applyingupdates-procedure}
 
 この手順は、V2.1 以降でデプロイされたインスタンスに適用されます。 V2.0 以前でデプロイされたインスタンスの場合は、VMware の更新を手動で適用する必要があります。
 
@@ -81,6 +84,7 @@ V2.5 以降は自動更新が有効になっているため、IBM CloudDriver �
 7. マルチサイト・デプロイメント構成で vCenter サーバー・インスタンスに更新を適用する場合は、**「更新に必要なステップ」**セクションが表示されます。 このセクションには、マルチサイト・デプロイメント内のすべてのインスタンスにとって必要な更新操作がリストされます。 各手順の**「更新を適用」**をクリックして、手順を順番に実行していく必要があります。 前の手順が完了するのを待ってから、次の手順を開始する必要があります。   
 
 ## vCenter Server with Hybridity Bundle インスタンスへアップグレードする手順
+{: #vc_applyingupdates-procedure-upgrade-to-hybridity}
 
 vCenter Server インスタンスで現在 VMware NSX Base エディションを使用している場合は、Hybridity Bundle へのライセンス・アップグレード中に、VMware NSX Advanced エディションに自動的にアップグレードされます。
 
@@ -102,13 +106,14 @@ vCenter Server インスタンスを vCenter Server with Hybridity Bundle にア
   4. サービスに適用される使用条件を確認し、見積もりコストを確認して、**「注文」**をクリックします。
 
 ## 結果
+{: #vc_applyingupdates-results}
 
-2. 更新の適用後に、ソフトウェア更新状況リスト内にレコードが表示されます。このレコードで、更新の詳細な進行状況や状況を確認できます。 更新が正常に完了すると、インストール済みのソフトウェア更新のリストにレコードが表示されます。
+1. 更新の適用後に、ソフトウェア更新状況リスト内にレコードが表示されます。このレコードで、更新の詳細な進行状況や状況を確認できます。 更新が正常に完了すると、インストール済みのソフトウェア更新のリストにレコードが表示されます。
 
   更新ジョブの最新状況を取得するには、ページの右上隅にあるリフレッシュ・アイコンをクリックします。
   {:tip}
 
-3. 更新状況について詳しくは、次の表を参照してください。
+2. 更新状況について詳しくは、次の表を参照してください。
 
    表 2. 更新状況の詳細
 
@@ -143,10 +148,11 @@ vCenter Server インスタンスを vCenter Server with Hybridity Bundle にア
       </tr>
     </table>
 
-4. 特定のステップで更新プロセスが失敗する場合は、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)によって支援を得ることができます。 問題の解決方法についてアドバイスし、失敗した手順からもう一度アップグレードする方法をご案内します。
+3. 特定のステップで更新プロセスが失敗する場合は、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)によって支援を得ることができます。 問題の解決方法についてアドバイスし、失敗した手順からもう一度アップグレードする方法をご案内します。
 
-### 関連リンク
+## 関連リンク
+{: #vc_applyingupdates-related}
 
-* [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

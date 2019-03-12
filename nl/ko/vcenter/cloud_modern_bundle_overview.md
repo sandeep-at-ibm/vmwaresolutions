@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 개요
+{: #single-node-trial-for-migration-and-app-modernization-overview}
 
 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판을 사용하면 IBM Cloud를 시범 작동하여 VMware 워크로드를 IBM Cloud에 마이그레이션한 후 컨테이너의 사용을 통해 워크로드를 현대화할 수 있습니다.
 
@@ -29,6 +30,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스의 기술 스펙
+{: #cloud_modern_bundle_overview-tech-specs}
 
 다음 컴포넌트는 마이그레이션 및 현대화를 위한 단일 노드 평가판 인스턴스에 포함됩니다.
 
@@ -36,26 +38,31 @@ lastupdated: "2019-01-23"
 {:note}
 
 ### Bare Metal Server
+{: #cloud_modern_bundle_overview-bare-metal}
 
 듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2 GHz(384GB RAM 포함) 최대 약 20개의 VM
 
 #### CPU 과다 할당
+{: #cloud_modern_bundle_overview-cpu}
 
 * 16:1 CPU 과다 할당(vCenter Server 관리, HCX 및 20개의 고객 워크로드용)
 * 11:1 CPU 과다 할당(IBM Cloud Private용)
 
 #### RAM 과다 할당
+{: #cloud_modern_bundle_overview-ram}
 
 * 1.22:1 RAM 과다 할당(각 8GB인 20개의 워크로드 VM의 고객 배치용)
 * 1:1(과다 할당 없음)(각 8GB인 9개의 워크로드 VM의 고객 배치용)
 
 ### NFS 스토리지
+{: #cloud_modern_bundle_overview-nfs-storage}
 
 * 관리를 위한 2TB
 * 고객 워크로드를 위한 1TB(20개의 고객 VM용)
 * IBM Cloud Private Hosted를 위한 4TB
 
 ### 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스의 네트워킹 스펙
+{: #cloud_modern_bundle_overview-networking-specs}
 
 다음 네트워킹 컴포넌트가 주문됩니다.
 *  10Gbps 듀얼 공용 및 사설 네트워크 업링크
@@ -69,6 +76,7 @@ lastupdated: "2019-01-23"
   * VPN 액세스 또는 공용 액세스를 제공하도록 사용자가 수정할 수 있는 템플리트로 IBM에서 배치되는 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽을 위한 보안 고객 관리 VMware NSX Edge Services Gateway.
 
 ### Virtual Server 인스턴스
+{: #cloud_modern_bundle_overview-vsi}
 
 다음 VSI(Virtual Server Instance)가 주문됩니다.
 
@@ -76,6 +84,7 @@ lastupdated: "2019-01-23"
 * Microsoft Active Directory(AD)용 Microsoft Windows Server VSI가 배치되어 있으며 검색할 수 있습니다. VSI는 호스트와 VM이 등록되는 인스턴스에 대한 DNS의 역할을 합니다.
 
 ### IBM 제공 라이센스 및 요금
+{: #cloud_modern_bundle_overview-license-and-fee}
 
 다음 라이센스는 마이그레이션 및 현대화를 위한 단일 노드 평가판 인스턴스 주문에 포함됩니다.
 
@@ -88,6 +97,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## VMware HCX on IBM Cloud의 기술 스펙
+{: #cloud_modern_bundle_overview-hcx-tech-specs}
 
 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판에는 HCX on {{site.data.keyword.cloud_notm}}가 포함됩니다. 다음 컴포넌트가 주문되고 HCX on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
@@ -95,12 +105,14 @@ lastupdated: "2019-01-23"
 {:note}
 
 ### HCX 관리를 위한 VMware NSX Edge Services Gateway의 활성/수동 쌍
+{: #cloud_modern_bundle_overview-esg}
 
 * CPU: 6개의 vCPU
 * RAM: 8GB
 * 디스크: 3GB VMDK
 
 ### HCX 관리 어플라이언스 - 가상 머신
+{: #cloud_modern_bundle_overview-hcx-mgmt-appliance}
 
 * CPU: 4개의 vCPU
 * RAM: 12GB
@@ -109,18 +121,21 @@ lastupdated: "2019-01-23"
 L2 연결, WAN 최적화 및 게이트웨이 연결을 위해 필요에 따라 구성 중에 추가로 HCX 어플라이언스가 배치됩니다.
 
 ### HCX on IBM Cloud 서비스에 대한 네트워킹 스펙
+{: #cloud_modern_bundle_overview-hcx-networking-specs}
 
 * 16개 IP 주소가 포함된 한 개의 공인 포터블 서브넷
 * 64개 IP 주소가 포함된 두 개의 사설 포터블 서브넷
 * 사설 포터블 vMotion 서브넷의 8개 IP 주소
 
 ## IBM Cloud Private Hosted의 기술 스펙
+{: #cloud_modern_bundle_overview-icp-tech-specs}
 
-IBM Cloud Private Hosted V3.1은 마이그레이션 및 앱 현대화를 위한 모든 단일 노드 평가판 인스턴스의 문서/테스트 토폴로지를 사용하여 설치됩니다. IBM Cloud Private Hosted에 대한 자세한 정보는 [IBM Cloud Private Hosted 개요](/docs/services/vmwaresolutions/services/icp_overview.html)를 참조하십시오.
+IBM Cloud Private Hosted V3.1은 마이그레이션 및 앱 현대화를 위한 모든 단일 노드 평가판 인스턴스의 문서/테스트 토폴로지를 사용하여 설치됩니다. IBM Cloud Private Hosted에 대한 자세한 정보는 [IBM Cloud Private Hosted 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)를 참조하십시오.
 
-### 관련 링크
+## 관련 링크
+{: #cloud_modern_bundle_overview-related}
 
-* [vCenter Server 및 IBM Cloud Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [vCenter Server 및 IBM Cloud Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [IBM Cloud Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US)
 * [VMware Hybrid Cloud Extension 문서](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

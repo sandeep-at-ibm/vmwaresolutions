@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-11-20"
 
@@ -13,6 +13,7 @@ lastupdated: "2017-11-20"
 {:important: .important}
 
 # 2.0 版的版本注意事項
+{: #relnotes_v20}
 
 此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
@@ -23,8 +24,8 @@ lastupdated: "2017-11-20"
 在訂購實例時，請訂購內含 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務的實例，或稍後透過實例詳細資料頁面的**服務**標籤，將此服務新增至現有的實例。視您的需求而定，為此服務選取三種部署大小之一以及授權選項。在順利安裝此服務之後，從 FortiGate 主控台管理及配置 FortiGate Virtual Appliance 的防火牆規則。
 
 如需相關資訊，請參閱下列主題：
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的元件及考量](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)
-* [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的元件及考量](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)
+* [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
 
 ## F5 on IBM Cloud 及 FortiGate Virtual Appliance on IBM Cloud 的多重服務安裝
 
@@ -33,8 +34,8 @@ lastupdated: "2017-11-20"
 完成實例部署之後，您可以在實例詳細資料頁面的**新增服務**標籤上安裝服務，以新增 F5 或 FortiGate 服務的更多實例。您一次只能新增一個服務實例，而且您必須針對您要為服務新增的所有實例重複該程序。
 
 如需相關資訊，請參閱下列主題：
-* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 
 ## FortiGate Security Appliance on IBM Cloud 的更新
 
@@ -49,9 +50,9 @@ lastupdated: "2017-11-20"
 所有實例的完整網域名稱 (FQDN) 現在會以一致的方式來表示。下訂單時，您可以輸入自己的子網域字首和主機名稱字首，以確保遵循 FQDN 格式的業界慣例。例如，`host-name-prefix<n>.subdomain-prefix.domain-name`。
 
 如需相關資訊，請參閱下列主題：
-* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
 ## 訂購實例期間的工作負載及儲存空間預估
 
@@ -59,9 +60,9 @@ lastupdated: "2017-11-20"
 * 在 Cloud Foundation 和 vCenter Server 訂購期間，會提供您所訂購實例之可用儲存空間容量的預估。
 
 如需相關資訊，請參閱下列主題：
-* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
 ## VMware Cloud Foundation 實例的更新
 
@@ -77,13 +78,13 @@ lastupdated: "2017-11-20"
 現有實例（來自 1.9 版及更早版本）無法升級至此清單中的元件版本。
 {:note}
 
-如需元件的相關資訊，請參閱 [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)。
+如需元件的相關資訊，請參閱 [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)。
 
 ### Cloud Foundation 實例的叢集支援
 
 您現在可以使用叢集，在 2.0 版以及更新版本部署的 Cloud Foundation 實例中管理 ESXi 伺服器，以獲得更妥善的資源管理和高可用性。依預設，您訂購實例時所配置的 ESXi 伺服器會分組為 **SDDC-Cluster**。
 
-您可以在實例詳細資料頁面上的**基礎架構**標籤上檢視叢集詳細資料，或將最多五個叢集新增至實例。當您擴充或縮減實例的容量時，您可以選取要將 ESXi 伺服器新增至哪一個叢集，或從中移除 ESXi 伺服器。如需相關資訊，請參閱[新增及檢視 Cloud Foundation 實例的叢集](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)。
+您可以在實例詳細資料頁面上的**基礎架構**標籤上檢視叢集詳細資料，或將最多五個叢集新增至實例。當您擴充或縮減實例的容量時，您可以選取要將 ESXi 伺服器新增至哪一個叢集，或從中移除 ESXi 伺服器。如需相關資訊，請參閱[新增及檢視 Cloud Foundation 實例的叢集](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)。
 
 ### Cloud Foundation 實例的自訂 vSAN 儲存空間支援
 
@@ -91,12 +92,12 @@ lastupdated: "2017-11-20"
 
 如需相關資訊，請參閱下列主題：
 
-* [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 
 ### Cloud Foundation 實例的 VMware vSAN 授權版本選擇：Advanced 或 Enterprise
 
-您現在可以在 Cloud Foundation 實例訂購期間，選取您想要的 vSAN 授權版本。您可以購買該授權作為訂單的一部分，或「自帶授權 (BYOL)」。如需相關資訊，請參閱[訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)。
+您現在可以在 Cloud Foundation 實例訂購期間，選取您想要的 vSAN 授權版本。您可以購買該授權作為訂單的一部分，或「自帶授權 (BYOL)」。如需相關資訊，請參閱[訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)。
 
 ### Cloud Foundation 實例的新標準化 IBM Bare Metal Server 配置
 
@@ -107,8 +108,8 @@ lastupdated: "2017-11-20"
 機箱有 12 個磁碟的空間。並非所有插槽都已填滿。**小型**配置提供兩個 1.9 TB Micron 5100 MAX 磁碟機，**大型**配置提供四個 3.8 TB Micron 5100 PRO 磁碟機。{:note}
 
 如需相關資訊，請參閱下列主題：
-* [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 
 ## VMware vCenter Server 實例的更新
 
@@ -121,28 +122,28 @@ lastupdated: "2017-11-20"
 
 vCenter Server 自訂的訂單不管有沒有 VMware vSAN 元件，一律會包含一部具有 12 個磁碟的機箱伺服器。此伺服器在價格預估 PDF 中，會使得非 vSAN 訂單案例的 {{site.data.keyword.baremetal_short}} 成本略為提高。{:note}
 
-如需元件的相關資訊，請參閱 [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)。
+如需元件的相關資訊，請參閱 [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)。
 
 ### vCenter Server 實例的多站台配置支援
 
 除了連接至主要實例的次要實例之外，您現在還可以部署單一 vCenter Server 實例。多站台配置模型使用中心與分支拓蹼，其中會有一個主要站台及最多 7 個次要站台。
 
-如需相關資訊，請參閱 [vCenter Server 實例的多站台配置](/docs/services/vmwaresolutions/vcenter/vc_multisite.html)。
+如需相關資訊，請參閱 [vCenter Server 實例的多站台配置](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)。
 
 ### vCenter Server 實例的自訂 vSAN 儲存空間支援
 
 現在，vSAN 儲存空間可用於主要實例及次要實例的 vCenter Server 實例。只有在選取使用者自訂的配置時，才能使用它。您現在可以在 vCenter Server 實例訂購期間，選取想要的 vSAN 授權版本（Advanced 或 Enterprise）。您可以購買該授權作為訂單的一部分，或「自帶授權 (BYOL)」。
 
-如需相關資訊，請參閱[訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)。
+如需相關資訊，請參閱[訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)。
 
 ### VMware vCenter Server 實例的「自帶授權 (BYOL)」
 
 現在 vCenter Server 實例可以使用 BYOL。在訂購 vCenter Server 實例時，請使用一份以上您自己的 vCenter Server、vSphere、vSAN 及 NSX VMware 授權。
 
 如需相關資訊，請參閱下列主題：
-* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
 ## VMware vSphere on IBM Cloud 的更新
 
@@ -157,7 +158,7 @@ vCenter Server 自訂的訂單不管有沒有 VMware vSAN 元件，一律會包�
 * 當 3.8 TB SSD SED 磁碟機在正式提供於 {{site.data.keyword.CloudDataCent_notm}} 時就會予以支援。
 * 訂單不管有沒有 VMware vSAN 元件，一律會包含一部具有 12 個磁碟的機箱伺服器。此伺服器在價格預估 PDF 中，會使得非 vSAN 訂單案例的 {{site.data.keyword.baremetal_short}} 成本略為提高。
 
-如需相關資訊，請參閱[訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)。
+如需相關資訊，請參閱[訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)。
 
 ## NetApp ONTAP Select on IBM Cloud 的更新
 
@@ -172,8 +173,8 @@ vCenter Server 自訂的訂單不管有沒有 VMware vSAN 元件，一律會包�
 {:note}
 
 如需相關資訊，請參閱下列主題：
-* [NetApp ONTAP Select 概觀](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
-* [訂購 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [NetApp ONTAP Select 概觀](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)
+* [訂購 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
 
 ## 新文件與更新的文件
 

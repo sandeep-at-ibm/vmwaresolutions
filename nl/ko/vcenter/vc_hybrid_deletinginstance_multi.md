@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 다중 사이트 구성에서 vCenter Server with Hybridity Bundle 인스턴스 삭제
+{: #vc_hybrid_deletinginstance_multi}
 
 다중 사이트 구성의 일부인 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 인스턴스를 삭제하려 하는 경우에는 알고 있어야 하는 특수 고려사항이 있습니다.
 
@@ -30,6 +31,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 삭제하면 다음 컴포�
 {:note}
 
 ## 다중 사이트 구성에서 vCenter Server with Hybridity Bundle 인스턴스를 삭제하는 프로시저
+{: #vc_hybrid_deletinginstance_multi-procedure}
 
 1. 보조 vCenter Server with Hybridity Bundle 인스턴스에서 모든 서비스를 제거하십시오.
 2. 삭제할 보조 인스턴스로 확장되는 NSX 오브젝트가 없는지 확인하십시오.
@@ -39,7 +41,8 @@ vCenter Server with Hybridity Bundle 인스턴스를 삭제하면 다음 컴포�
 6. 다중 사이트 구성의 모든 보조 vCenter Server with Hybridity Bundle 인스턴스에 대해 1 - 5단계를 반복하십시오.
 7. 모든 보조 인스턴스를 삭제하고 나면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 기본 인스턴스도 삭제할 수 있습니다.
 
-### 관련 링크
+## 관련 링크
+{: #vc_hybrid_deletinginstance_multi-related}
 
-* [vCenter Server with Hybridity Bundle 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
-* [vCenter Server with Hybridity Bundle 인스턴스에서 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)
+* [vCenter Server with Hybridity Bundle 인스턴스에서 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)

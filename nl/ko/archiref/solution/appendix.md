@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # VMware 컴포넌트 에디션의 비교 차트
+{: #solution-appendix}
 
 ## VMware NSX 에디션 비교
+{: #solution-appendix-nsx-editions}
 
 표 1에는 솔루션이 지원하는 VMware NSX의 **Base**, **Advanced** 및 **Enterprise** 에디션의 사용 가능한 기능이 나열되어 있습니다.
 
@@ -41,6 +43,7 @@ lastupdated: "2019-01-23"
 \*L2, L3 & NSX Edge 통합에만 해당됩니다. 보안 그룹의 이용은 없습니다.
 
 ## VMware vSAN 에디션 비교
+{: #solution-appendix-vsan-editions}
 
 표 2에는 솔루션이 지원하는 VMware vSAN의 **Advanced** 및 **Enterprise** 에디션의 사용 가능한 기능이 나열되어 있습니다.
 
@@ -63,8 +66,9 @@ lastupdated: "2019-01-23"
 | 저장 데이터 암호화                         |          | •          |
 | 로컬 장애 보호의 확장 클러스터 |          | •          |
 
-### 관련 링크
+## 관련 링크
+{: #solution-appendix-related}
 
-* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [디자인 개요](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [디자인 개요](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # IBM Spectrum Protect Plus on IBM Cloud 概述
+{: #spp_considerations}
 
 {{site.data.keyword.IBM}} Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务为虚拟环境的数据保护、数据复用和数据恢复提供高效、可扩展的解决方案。可以将此服务作为独立解决方案实施，也可以与 IBM Spectrum Protect 环境集成，以便卸载用于长期存储和数据监管的副本。
 
@@ -20,10 +21,12 @@ lastupdated: "2019-01-24"
 {:note}
 
 ## IBM Spectrum Protect Plus on IBM Cloud 的技术规范
+{: #technical-specifications-for-ibm-spectrum-protect-plus-on-ibm-cloud}
 
 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
 
 ### vCenter 资源
+{: #spp_considerations-vcenter}
 
 * 运行 IBM Spectrum Protect Plus 服务器的服务器 VM
    * Linux 3.10.0-693.11.1.el7.x86_64 操作系统
@@ -36,6 +39,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并
    * 150 GB 磁盘
 
 ### 用于备份的存储器
+{: #spp_considerations-backup-storage}
 
 用于备份的可定制存储器具有以下选项：
 * 文件存储器数：1 - 10 个
@@ -45,19 +49,23 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并
 请参阅 [IBM Spectrum Protect Plus 蓝图和大小调整工具](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)以进行规划和大小调整。
 
 ### 用于管理的存储器
+{: #spp_considerations-mgmt-storage}
 
 一个 1000 GB、2 IOPS/GB 耐久性文件存储器，用于托管 IBM Spectrum Protect Plus 虚拟机并在备份存储器所在的子网上运行。
 
 ### 联网
+{: #spp_considerations-network}
 
 两个可移植专用 IP 地址。
 
 ### 许可证和费用
+{: #spp_considerations-license}
 
 * IBM Spectrum Protect Plus（10 个到最多 1000 个 VM 许可证，以 10 为单位递增）
 * 通过 {{site.data.keyword.vmwaresolutions_short}} 控制台提供的 IBM Spectrum Protect Plus 许可证（VM 数，以 10 为单位递增）或作为 BYOL 提供
 
 ## 安装 IBM Spectrum Protect Plus on IBM Cloud 时的注意事项
+{: #spp_considerations-install}
 
 安装 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务之前，请查看以下注意事项：
 
@@ -69,16 +77,18 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并
   在实例的缺省集群中的每个 ESXi 服务器上，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务最多可以使用 11 个 NFS 卷。此外，该服务将创建瞬态 NFS 安装以用于备份和复原。因此，必须将 NFS 安装数设置为最小值 64，以确保可以成功安装并运行此服务。
 
 ## 除去 IBM Spectrum Protect Plus on IBM Cloud 时的注意事项
+{: #spp_considerations-remove}
 
 除去 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务之前，请查看以下注意事项：
 * 确保除去所有备份作业配置以及活动的备份或复原操作。
 * 除去此服务时，将从 IBM Spectrum Protect Plus VM 中除去用于备份存储库的存储器，并取消存储器订单，这会永久删除备份存储库数据。
 * 除去此服务时，还会除去为此服务订购的备份存储器。在除去服务期间，所有备份都会变得不可访问。
 
-### 相关链接
+## 相关链接
+{: #spp_considerations-related}
 
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 预防性服务规划](http://www.ibm.com/support/docview.wss?uid=swg22012650)
-* [管理 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingspp.html)
-* [订购 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_ordering.html)
+* [管理 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)
+* [订购 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_ordering)
 * [IBM Spectrum Protect Plus 文档](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
-* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

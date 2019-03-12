@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 总体体系结构概述
+{: #vcsnsxt-overview}
 
 以下信息提供了有关此参考体系结构中使用的网络体系结构的更多详细信息，其中包含以下各部分：
 * **VMware vCenter Server on {{site.data.keyword.cloud}} 概述** - 描述 vCenter Server 平台的亮点。
@@ -23,6 +24,7 @@ lastupdated: "2019-01-23"
   - 网络流量流
 
 ## vCenter Server 概述
+{: #vcsnsxt-overview-vcs-ovw}
 
 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 是一种托管的专用云，可帮助您快速、轻松地将内部部署基础架构扩展到云中，以实现安全、无缝的基础架构混合和真正的应用程序移动性。
 
@@ -40,10 +42,11 @@ IBM、Veeam 和 Zerto 提供的备份和灾难恢复产品让您安心无忧，�
 
 vCenter Server Hybridity Bundle 不是受管服务，但您可以添加 IBM 管理的服务，以分担对虚拟化、访客操作系统或应用程序层的日常操作和维护。另外还有 {{site.data.keyword.cloud_notm}} 专业服务团队可通过迁移、实施、规划和上线服务，帮助您加速迁移到云。
 
-vCenter Server Hybridity Bundle 的平台集成选项不仅包含 VMware 提供的选项（例如，vRealize Suite 或 vSphere with Operations Management），还涵盖多种 {{site.data.keyword.cloud_notm}} 服务产品（例如，[vCenter Server 和 {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html) 以及 [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)），这些产品使用开放式源代码 Terraform 将基础架构作为代码进行管理和交付。
+vCenter Server Hybridity Bundle 的平台集成选项不仅包含 VMware 提供的选项（例如，vRealize Suite 或 vSphere with Operations Management），还涵盖多种 {{site.data.keyword.cloud_notm}} 服务产品（例如，[vCenter Server 和 {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro) 以及 [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)），这些产品使用开放式源代码 Terraform 将基础架构作为代码进行管理和交付。
 
 可用于 vCenter Server Hybridity Bundle 的广泛服务产品组合与多产品集成选项提供了一个真正的混合平台，使混合即服务成为可能。
 
-### 相关链接
+## 相关链接
+{: #vcsnsxt-overview-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

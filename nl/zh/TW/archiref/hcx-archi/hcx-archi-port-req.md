@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # VMware HCX on IBM Cloud 埠存取需求
+{: #hcx-archi-port-req}
 
 HCX 必須遍訪公用網際網路及專用線路，並連接至資料中心元件（例如網路、交換器及埠群組）。
 
@@ -39,6 +40,7 @@ HCX 必須遍訪公用網際網路及專用線路，並連接至資料中心元�
 | 雲端閘道（本端）| 雲端閘道</br>（遠端）| 4500 | UDP | 網際網路金鑰交換 (IKEv2) 以封裝雙向通道的工作負載 | IPSEC |
 | 雲端閘道（本端）| 雲端閘道</br>（遠端）| 500 | UDP | 用於雙向通道的網際網路金鑰交換 (ISAKMP) | IPSEC |
 
-### 相關鏈結
+## 相關鏈結
+{: #hcx-archi-port-req-related}
 
-* [在來源上安裝及配置 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
+* [在來源上安裝及配置 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)

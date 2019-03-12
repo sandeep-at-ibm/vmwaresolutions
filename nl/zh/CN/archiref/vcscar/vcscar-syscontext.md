@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 ## 系统上下文
+{: #vcscar-syscontext}
+
 下图显示了此参考体系结构的系统上下文。系统上下文图定义了系统的关键元素、系统的边界、与系统交互的实体以及交互。这是一个高级别图，为读取者提供了系统的初始视图。
 
 图 1. 系统上下文
@@ -22,6 +24,8 @@ lastupdated: "2019-01-23"
 -	Watson Knowledge Studio - Watson Knowledge Studio 提供了模型以供 Watson Discovery 使用。
 
 ### 参与者
+{: #vcscar-syscontext-actors}
+
 系统上下文图确定了以下参与者：
 
 * Acme 管理员 - 管理员负责应用程序的持续部署和维护，包括以下持续进行的任务：
@@ -41,5 +45,6 @@ Assistant - 系统使用 Watson Discovery 服务来检索与所请求参数匹�
 * NSX Edge - NSX Edge 是用于管理进出 vCenter Server 实例的南北流量的虚拟设备。
 
 ## 相关链接
+{: #vcscar-syscontext-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

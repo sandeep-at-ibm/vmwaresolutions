@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 应用程序现代化概述
+{: #vcsnsxt-appmod}
 
 下图显示了 Acme Skateboards 部署的应用程序现代化参考体系结构，在此系列文档中对该体系结构进行了深入描述。
 
@@ -35,6 +36,7 @@ lastupdated: "2019-01-23"
   - 内部部署数据中心内的遗留系统与云 VM 之间的流量。
 
 ## Acme Skateboards 的主要优点
+{: #vcsnsxt-appmod-benefits}
 
 - 通过将采购资源、构建资源体系结构、实施和部署资源所需的时间从数周甚至数月缩短到数小时，加速向开发者和业务线交付 IT 项目。对于客户需要等待联网或安全团队能够订购负载均衡器、防火墙、交换机和路由器等服务的情况，这可缩短应用程序的价值实现时间。
 - 通过托管的私有云中的专用裸机服务器来增强安全性，包括将专用端点部署到 {{site.data.keyword.cloud_notm}} 服务（例如，{{site.data.keyword.containerlong_notm}} 和 KMIP）。
@@ -45,6 +47,7 @@ lastupdated: "2019-01-23"
 
 此参考体系结构显示了 VCS、{{site.data.keyword.icpfull_notm}} 和 {{site.data.keyword.containerlong_notm}} 如何在应用程序现代化的旅程中安全地迁移 Acme Skateboards。
 
-### 相关链接
+## 相关链接
+{: #vcsnsxt-appmod-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

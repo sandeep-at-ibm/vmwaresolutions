@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # 虚拟机 vSAN 冗余
+{: #vum-vsan-redundancy}
 
 在 vSAN 集群上将 vSphere ESXi 主机置于维护模式时，需要选择数据转移方式。选择的方式可能会影响正在使用 vSAN 数据存储的虚拟机 (VM) 和设备：
 * **完全数据迁移**将转移主机中的所有数据，并将其移至 vSAN 集群中的其他 vSphere ESXi 主机。这种转移方式会生成最大的数据传输量，并且耗用的时间和资源最多。所选主机的本地存储器上的所有组件都会迁移到集群中的其他位置。主机进入维护模式时，所有 VM 和设备都可以访问其存储组件，并且仍然符合其所分配的存储策略。完全数据转移可能需要很长时间，并且可能会使升级的维护时段持续很长时间。
@@ -21,7 +22,8 @@ lastupdated: "2018-11-19"
 
 2. 等待 vSAN 完成同步后，再启动任何修复操作。可以通过浏览至集群的 **vSAN 虚拟对象监视页面**并查看**完成状态**来检查完成状态。
 
-### 相关链接
+## 相关链接
+{: #vum-vsan-redundancy-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）

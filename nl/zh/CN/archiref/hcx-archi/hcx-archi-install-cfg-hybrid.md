@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # 安装和配置混合服务
+{: #hcx-archi-install-cfg-hybrid}
 
 安装程序会为每个服务虚拟设备供应和配置虚拟机。服务虚拟机同时部署在内部部署和云中。
 
 ## 先决条件
+{: #hcx-archi-install-cfg-hybrid-prereq}
 
 * HCX Manager 必须以内部部署方式安装，并向支持 VCF/VCS HCX 的云端点进行注册。
 * 目标虚拟数据中心必须有足够的资源。
 
 ## 配置概述
+{: #hcx-archi-install-cfg-hybrid-config-ovw}
 
 配置过程假定将配置所有服务虚拟设备。但是，并非所有服务虚拟设备都需要配置。
 * Hybrid Cloud Gateway 是必需的。
@@ -24,14 +27,14 @@ lastupdated: "2019-01-23"
 * 要配置 Network Extension 服务，请参阅_配置 Network Extension 服务_部分。可选设备的部署可以通过返回到“混合服务”页面来延迟执行，日后再安装该设备。
 
 ## 开始混合服务虚拟设备的安装和配置
+{: #hcx-archi-install-cfg-hybrid-start-hsva}
 
 可使用简单的 Web 界面来安装服务虚拟设备，并配置更多第 2 层集中器。
-
-### 安装和配置混合服务虚拟设备的先决条件
 
 HCX Manager 必须已安装，并向支持 VCF/VCS HCX 的云端点进行注册。
 
 ### 安装和配置混合服务虚拟设备的过程
+{: #hcx-archi-install-cfg-hybrid-proc-install}
 
 1. 登录到 vSphere Web Client。
 2. 在**主页**选项卡上，单击 **Hybrid Cloud Services** 图标。
@@ -40,19 +43,18 @@ HCX Manager 必须已安装，并向支持 VCF/VCS HCX 的云端点进行注册�
 5. 在**选择混合服务**页面上，选择要安装的服务，然后单击**下一步**。
 
 ### 后续步骤
+{: #hcx-archi-install-cfg-hybrid-start-hsva-next}
 
 1. 下一步是根据需要配置 Hybrid Cloud Gateway。
 2. 如果有足够的资源可用于支持扩展，那么可以随时向现有安装添加第 2 层集中器。
 
 ## 配置 Hybrid Cloud Gateway
+{: #hcx-archi-install-cfg-hybrid-config-hcg}
 
-配置 Hybrid Cloud Gateway 服务虚拟设备。
-
-### 配置 Hybrid Cloud Gateway 的先决条件
-
-执行_开始混合服务虚拟设备的安装和配置_中的步骤，并选中 Hybrid Cloud Gateway。
+配置 Hybrid Cloud Gateway 服务虚拟设备。开始之前，执行_开始混合服务虚拟设备的安装和配置_中的步骤，并选中 Hybrid Cloud Gateway。
 
 ### 配置 Hybrid Cloud Gateway 的过程
+{: #hcx-archi-install-cfg-hybrid-proc-config-hcg}
 
 在 **Hybrid Cloud Gateway** 页面上，提供以下值，然后单击**下一步**：
 * **网络** - 用于连接 Hybrid Cloud Gateway 管理界面的交换机。在用例 1 和 2 中，此项可以是标准虚拟交换机或虚拟分布式交换机。对于使用第 2 层扩展的任何配置，此项必须是虚拟分布式交换机。
@@ -64,14 +66,12 @@ HCX Manager 必须已安装，并向支持 VCF/VCS HCX 的云端点进行注册�
 * 在**扩展（可选）**下，选择 vMotion 网络（如果适用），然后设置 **admin** 和 **root** 用户密码。这些密码专门用于 Hybrid Cloud Gateway 设备。该用户名和密码不必与为 Hybrid Cloud Services 设备配置的用户名和密码相匹配。
 
 ## 配置 Network Extension 服务
+{: #hcx-archi-install-cfg-hybrid-config-nes}
 
-针对单路径部署或针对备用路径上的独立网络扩展，配置 Network Extension 服务。
-
-### 配置 Network Extension 服务的先决条件
-
-选择 Network Extension 服务。如果安装了单路径配置，那么 **Network Extension** 是您唯一的选择。
+针对单路径部署或针对备用路径上的独立网络扩展，配置 Network Extension 服务。开始之前，选择 Network Extension 服务。如果安装了单路径配置，那么 **Network Extension** 是您唯一的选择。
 
 ### 配置 Network Extension 服务的过程
+{: #hcx-archi-install-cfg-hybrid-proc-config-nes}
 
 1. 在 **Network Extension 服务**页面上，从**分布式交换机**菜单中选择虚拟分布式交换机。安装标准第 2 层集中器时，**通过 Hybrid Cloud Gateway 路由延伸网络**复选框将可用。对于高吞吐量 L2C，没有此复选框。
 2. 如果选中**通过 Hybrid Cloud Gateway 路由延伸网络**，安装程序将确定第 2 层集中器的合理位置（根据交换机），并填充位置信息。否则，必须在下一步中手动输入位置信息。
@@ -87,10 +87,12 @@ HCX Manager 必须已安装，并向支持 VCF/VCS HCX 的云端点进行注册�
 6. 单击**下一步**。复查**即将完成**页面上的信息，然后单击**完成**。
 
 ## 监视服务设备部署
+{: #hcx-archi-install-cfg-hybrid-monitor}
 
 任务控制台可用于监视服务虚拟机的部署进度。
 
 ### 监视服务设备部署的过程
+{: #hcx-archi-install-cfg-hybrid-monitor-proc}
 
 1. 登录到 vSphere Web Client。在**主页**选项卡上，单击 **Hybrid Cloud Services** 图标。
 2. 在 **Hybrid Cloud Services** 窗格上，单击**混合服务**选项卡。可以在任务控制台中监视虚拟设备部署。
@@ -102,14 +104,12 @@ HCX Manager 必须已安装，并向支持 VCF/VCS HCX 的云端点进行注册�
 8. 复查混合服务虚拟设备的配置摘要。
 
 ## 查看隧道状态
+{: #hcx-archi-install-cfg-hybrid-view-tunnel}
 
-查看云网关隧道状态。
-
-### 查看隧道状态的先决条件
-
-Network Extension 服务必须正常运行后，才能延伸网络。
+查看云网关隧道状态。Network Extension 服务必须正常运行后，才能延伸网络。
 
 ### 查看隧道状态的过程
+{: #hcx-archi-install-cfg-hybrid-proc-view-tunnel}
 
 1. 要在 Web Client 中检查隧道状态，请选择清单中的 **Hybrid Cloud Services**，然后单击**混合服务**选项卡。
 2. 要确认 Hybrid Cloud Gateway 隧道是否成功，请查看 CGW（Hybrid Cloud Gateway 的首字母缩写）状态是否为**活动**，并且在最右侧，隧道的颜色编码为绿色。
@@ -117,13 +117,16 @@ Network Extension 服务必须正常运行后，才能延伸网络。
 ## 将第 2 层联网延伸到 IBM Cloud
 
 将第 2 层网络从内部部署数据中心扩展到支持 VCF/VCS HCX 的云。
+{: #hcx-archi-install-cfg-hybrid-stretch-layer-2}
 
 ### 将第 2 层网络延伸到 IBM Cloud 的先决条件
+{: #hcx-archi-install-cfg-hybrid-prereq-stretch-layer-2}
 
 * 只能延伸 VLAN 标记的端口组（“VLAN 类型”不为“无”或“VLAN 标识”不为 0）。VXLAN 被视为 VLAN。
 * 此过程使用**扩展网络**向导。此向导必须从 vSphere® Web Client 的“联网清单”视图运行。虽然此向导会在其他视图中显示，但必须从清单上下文运行才能获得正确的信息。
 
 ### 将第 2 层网络延伸到 IBM Cloud 的过程
+{: #hcx-archi-install-cfg-hybrid-proc-stretch-layer-2}
 
 1. 登录到 vSphere Web Client。在中央窗格的**主页**选项卡上，单击**清单**列表中的**联网**图标。
 2. 在**联网**层次结构中，识别要扩展的网络的端口组。
@@ -138,6 +141,7 @@ Network Extension 服务必须正常运行后，才能延伸网络。
 7. 要跟踪网络扩展的进度，请转至**最近任务**窗口，单击**所有**选项卡，然后查看**所有用户的任务**。
 8. 要打开任务控制台，请单击**更多任务**。**扩展网络**任务的状态为**完成**时，说明网络扩展已完成。
 
-### 相关链接
+## 相关链接
+{: #hcx-archi-install-cfg-hybrid-related}
 
-* [修改或卸载 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
+* [修改或卸载 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

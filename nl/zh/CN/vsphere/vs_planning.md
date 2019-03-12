@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 针对 VMware vSphere on IBM Cloud 的需求和规划
+{: #vs_planning}
 
 在订购 VMware vSphere on {{site.data.keyword.cloud}} 之前，请查看以下需求。根据 {{site.data.keyword.CloudDataCent_notm}} 位置以及工作负载容量需求来规划 VMware vSphere 集群。
 
@@ -20,10 +21,12 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## IBM Cloud 帐户需求
+{: #vs_planning-account-req}
 
-要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
+要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
 
 ## IBM Cloud Data Center 可用性
+{: #vs_planning-dc-availability}
 
 vSphere 部署对物理基础架构有严格要求。因此，只能将集群部署在满足这些需求的 {{site.data.keyword.CloudDataCents_notm}} 中。以下 {{site.data.keyword.CloudDataCent_notm}} 可用于 vSphere 部署。
 
@@ -67,8 +70,9 @@ vSphere 部署对物理基础架构有严格要求。因此，只能将集群部
 |WDC06|华盛顿|北美东部|
 |WDC07|华盛顿|北美东部|
 
-### 相关链接
+## 相关链接
+{: #vs_planning-related}
 
-* [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [缩放现有集群](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
-* [缩放在控制台外部创建的现有集群](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [扩展现有集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [扩展在控制台外部创建的现有集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

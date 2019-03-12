@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2018-09-27"
 {:deprecated: .deprecated}
 
 # IBM Cloud Private Hosted の要求 - 非推奨
+{: #managing_icp}
 
 このトピック内の情報は非推奨になっています。 IBM Cloud Private Hosted に関する最新の情報は、[IBM Cloud Private Hosted の概要](icp_overview.html)を参照してください。
 {:deprecated}
@@ -23,6 +24,7 @@ lastupdated: "2018-09-27"
 {{site.data.keyword.cloud_notm}} Private Hosted は、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。 このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。
 
 ## IBM Cloud Private Hosted の技術仕様
+{: #managing_icp-specs}
 
 {{site.data.keyword.cloud_notm}} Private Hosted サービスを要求するための最小要件を以下に示します。
 
@@ -37,6 +39,7 @@ lastupdated: "2018-09-27"
 * データ・バックアップ用に、Veeam on IBM Cloud サービスを推奨。
 
 ## IBM Cloud Private Hosted を要求する手順
+{: #managing_icp-procedure}
 
 1. [vCenter Server インスタンスの注文](../vcenter/vc_orderinginstance.html)の手順に従って、新規 vCenter Server インスタンスを注文します。 既存のインスタンス用に IBM Cloud Private Hosted を要求することもできます。
   **重要:** 使用する環境が、上記の最小要件を満たしていることを確認してください。

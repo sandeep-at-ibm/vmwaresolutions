@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # 更新 vSAN 集群
+{: #vum-updating-vsan}
 
 vSAN 会生成系统基线和基线组以与 VUM 配合使用，并且您可以使用这些建议的基线通过 vSAN 来更新 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 实例中 vSphere ESXi 主机的软件、补丁和扩展。vSAN 6.6.1 和更高版本会为 vSAN 集群生成自动构建建议。vSAN 将《VMware 兼容性指南》和 vSAN 发行版目录中的信息与有关已安装的 vSphere ESXi 发行版的信息结合使用。
 
@@ -20,17 +21,18 @@ vSAN 会生成系统基线和基线组以与 VUM 配合使用，并且您可以�
 vSAN 集群升级将按以下顺序执行任务：
 * **启用 vSAN 联机运行状况工作流程** - 此工作流程启用 VUM 中的 vSAN 基准，以便可以复查和修复更新。它只需要初始执行，以通过 VUM 启用 vSAN
 * **先决条件** - 了解先决条件、过程和限制
-* **升级 vCenter Server Appliance** - 有关更多信息，请参阅 [VCSA 更新和 SSO 链接的 vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html)。
-* **升级 vSphere ESXi 主机** - 有关更多信息，请参阅[创建基线并连接到库存对象](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html)。
+* **升级 vCenter Server Appliance** - 有关更多信息，请参阅 [VCSA 更新和 SSO 链接的 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)。
+* **升级 vSphere ESXi 主机** - 有关更多信息，请参阅[创建基线并连接到库存对象](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines)。
 * **升级 vSAN 磁盘格式** - 请参阅“升级 vSAN 磁盘格式”。升级磁盘格式是可选操作，但为了获得最佳结果，请升级对象以使用最新版本。通过磁盘上格式，环境可使用完整的 vSAN 功能集。
 
 ## 启用 vSAN 联机运行状况工作流程
+{: #vum-updating-vsan-enable-vsan-workflow}
 
 使用以下部分中的任务使 vSAN 基线在 VUM 中可用。vSAN 6.6.1 和更高版本提供了无缝的自动更新过程，可确保 vSAN 集群通过最佳可用发行版保持最新，从而使 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 实例保持受支持的状态，同时提供：
 * **vSAN 版本建议** - 使用《VMware 兼容性指南》、vSAN 发行版目录以及底层硬件配置感知中的信息自动生成。此外，还会在其系统基线中包含建议发行版的必需驱动程序和补丁更新。
 * **vSAN 构建建议** - 确保集群保持当前硬件兼容性状态或更佳状态。
 
-确保 VCSA 为 vCenter 6.5 补丁 2 或更高版本，然后再继续，因为这样会修复一些代理使用问题。有关更多信息，请参阅 [VCSA 更新和 SSO 链接的 vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html)。
+确保 VCSA 为 vCenter 6.5 补丁 2 或更高版本，然后再继续，因为这样会修复一些代理使用问题。有关更多信息，请参阅 [VCSA 更新和 SSO 链接的 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)。
 
 要查看 VUM 中的 vSAN 更新，请执行 vSAN 联机运行状况工作流程。因此，vSAN 联机运行状况需要连接到 `vcsa.vmware.com` 和 `vmware.com` 站点以执行这些联机运行状况检查，从而启用 vSAN 联机运行状况工作流程，我们需要执行以下操作：
 * 配置 VCSA 以使用代理。
@@ -41,6 +43,7 @@ vSAN 集群升级将按以下顺序执行任务：
 第一步是将 my.vmware.com 凭证添加到 vSAN 构建建议引擎。成功登录后，vSAN 将为每个 vSAN 集群生成建议更新基线组。vSAN 系统基线会列在“基线和组”选项卡的“基线”窗格中。
 
 ### 配置 VCSA 以使用代理
+{: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	通过跳板机 Web 浏览器连接到 VCSA 管理界面 `https://<vCenter ip>:5480`。
 2.	通过使用 IC4VS 控制台中的凭证，以 root 用户身份登录到 VCSA 管理界面。
@@ -54,14 +57,19 @@ vSAN 集群升级将按以下顺序执行任务：
   `proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
 
 ### 配置 vSAN 以使用代理
+{: #vum-updating-vsan-config-vsan-proxy}
+
 1. 浏览至**主页** > **主机和集群**，选择“导航”窗格中的 **vSAN 集群**，选择**配置**选项卡并浏览至 **vSAN**，然后选择**常规**。滚动到**因特网连接**部分，然后单击**编辑**。
 2. 输入代理的 IP 地址和端口号，然后单击**确定**。
 
 ### 启用客户体验改善计划 (CEIP)
+{: #vum-updating-vsan-enable-ceip}
 
 这是可选步骤。使用 vSphere Web Client，浏览至**主页** > **管理** > **客户体验改善计划**，然后单击**加入**。
 
 ### 完成测试上传并验证上传是否有效
+{: #vum-updating-vsan-complete-upload}
+
 1. 使用 vSphere Web Client，浏览至**主页** > **主机和集群**。选择所需的集群，然后选择**监视**选项卡和 **vSAN** 页面，然后单击**运行状况**。单击**启用联机运行状况**。
 2. 单击**重新测试**并等待此过程完成。
 3. “运行状况”中会显示名为_联机运行状况连接_的新检查，并且**启用联机运行状况**会更改为**重新测试联机运行状况**。
@@ -71,6 +79,7 @@ vSAN 集群升级将按以下顺序执行任务：
 7. 按 **Update Manager** 选项卡，vSAN 集群已添加到“基线”。
 
 ## 先决条件
+{: #vum-updating-vsan-prereq}
 
 启动 vSAN 升级过程之前，请确保满足以下需求：
 * 查看 VMware 知识库文章，并查看当前 vSAN 版本与所需目标 vSAN 版本之间的任何已知兼容性问题
@@ -93,14 +102,17 @@ vSAN 集群升级将按以下顺序执行任务：
   - 因此，某些 vSAN 行为更改可通过磁盘上格式进行控制，重要的是不要将新的磁盘上格式版本引入混合版本的集群。
 
 ## 升级 vCenter Server Appliance
+{: #vum-updating-vsan-upgrade-vcsa}
 
-有关更多信息，请参阅 [VCSA 更新和 SSO 链接的 vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html)。
+有关更多信息，请参阅 [VCSA 更新和 SSO 链接的 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)。
 
-##	升级 vSphere ESXi 主机
+## 升级 vSphere ESXi 主机
+{: #vum-updating-vsan-upgrade-hosts}
 
-有关更多信息，请参阅[创建基线并连接到库存对象](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html)。
+有关更多信息，请参阅[创建基线并连接到库存对象](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines)。
 
-##	升级 vSAN 磁盘格式
+## 升级 vSAN 磁盘格式
+{: #vum-updating-vsan-upgrade-vsan}
 
 Ruby vSphere Console (RVC) 是面向 vSphere 的基于 Ruby 的命令行界面，可用于管理 VMware vSphere ESXi 和 vCenter。vSphere 库存以树结构呈现，允许您浏览 vCenter 对象并对其运行命令。
 
@@ -133,7 +145,8 @@ Ruby vSphere Console (RVC) 是面向 vSphere 的基于 Ruby 的命令行界面�
 
 11. 现在，vSAN 集群升级已完成。请输入 `exit` 并按 **Enter** 键以退出 RVC。
 
-### 相关链接
+## 相关链接
+{: #vum-updating-vsan-related}
 
 * [VMware HCX on IBM Cloud 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）

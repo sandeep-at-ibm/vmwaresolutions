@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # VMware HCX on IBM Cloud 컴포넌트 레벨 대상 아키텍처
+{: #hcx-archi-target}
 
  이 절에서는 IBM Cloud 내에 배치된 각 HCX 컴포넌트의 아키텍처에 대해 설명합니다. IBM Cloud 내의 스포크(대상) 배치 모델이 논의됩니다.
 
 ## NSX Edge
+{: #hcx-archi-target-nsx-edge}
 
 IBM Cloud 내에 구성된 첫 번째 컴포넌트는 NSX Edge 가상 머신의 쌍입니다. 모든 IBM Cloud for VMware Solutions 배치가 IBM CloudDriver 아웃바운드 통신을 위해 에지 디바이스를 설치하고 구성한다는 점에 유의해야 합니다. 이 ESG가 하이브리드 클라우드 서비스 통신에 재사용될 수 있으나 새 쌍이 배치되는 것이 좋습니다.
 
@@ -55,7 +57,7 @@ IBM Cloud 내에 배치된 NSX Edge 어플라이언스 외에도 VMware HCX on I
 | 필드     |값         |
 |-----------|---------------|
 |설명 | LB-VIP |
-| 연결 제한 | 0 |
+| 연결 한계 | 0 |
 | 서비스 삽입 상태 | 사용 안함 |
 | 애플리케이션 프로파일 | applicationProfile-1 |
 | 연결 비율 제한 | 0 |
@@ -91,6 +93,7 @@ IBM Cloud 내에 배치된 NSX Edge 어플라이언스 외에도 VMware HCX on I
 | 최소 연결 수 | 0         |
 
 ## HCX Manager
+{: #hcx-archi-target-hcxm}
 
 HCX Manager 컴포넌트는 NSX Edge 어플라이언스가 대상에 구성된 후 배치되는 첫 번째 어플라이언스입니다. 이 어플라이언스는 소스 컴포넌트에 맞는 클라우드 환경에 대한 기본 인터페이스로 사용되며, NSX를 직접 사용하지 않고 라우팅을 설계하고 구성하는 것 외에도 네트워크를 추가, 편집 및 삭제하는 데 사용될 수 있는 추상화된 네트워킹 사용자 인터페이스를 제공합니다. vCenter 및 NSX 통합의 결과로 HCX Manager 어플라이언스는 관리 VLAN의 사설 포터블 IP 주소가 지정됩니다.
 
@@ -102,6 +105,7 @@ HCX Manager 클라우드 컴포넌트가 배치되고 구성된 후 소스 컴�
 ![대상 - 하이브리드 클라우드 서비스 어플라이언스](target_hybrid_cloud_services_appliance.svg)
 
 ## 클라우드 게이트웨이
+{: #hcx-archi-target-cloud-gateway}
 
 가상 어플라이언스는 연결이 소스에서 대상 클라우드로 설정된 후 배치됩니다. 이 어플라이언스는 클라우드 게이트웨이(CGW)이며 소스로 지정된 vSphere 환경과 IBM Cloud 간에 보안 채널을 유지보수하는 데 사용됩니다. IBM Cloud 내에 배치된 CGW 어플라이언스의 크기 지정 스펙은 표 3 클라우드 게이트웨이 배치에 나열되어 있습니다.
 
@@ -123,6 +127,7 @@ HCX Manager 클라우드 컴포넌트가 배치되고 구성된 후 소스 컴�
 ![클라우드 게이트웨이 배치](cloud_gateway_deployment.svg)
 
 ## WAN 최적화 프로그램
+{: #hcx-archi-target-wan-opt}
 
 배치되는 두 번째 컴포넌트는 WAN Optimization 어플라이언스입니다. WAN 최적화 어플라이언스는 선택적이지만 대기 시간의 영향을 줄이기 위해 WAN 조건 지정을 수행합니다. 패킷 유실 시나리오 및 중복되는 트래픽 패턴의 중복 제거를 무효화하도록 순방향 오류 정정도 통합합니다.
 
@@ -142,6 +147,7 @@ HCX Manager 클라우드 컴포넌트가 배치되고 구성된 후 소스 컴�
 ![WAN 최적화 프로그램 배치](wan_optimizer_deployment.svg)
 
 ## Layer 2 Concentrator
+{: #hcx-archi-target-layer-2-conc}
 
 세 번째 컴포넌트는 L2C(Layer 2 Concentrator)로 알려져 있으며 네트워크 확장 서비스의 일부입니다. L2C는 IBM Cloud에 대한 온프레미스 데이터 센터 네트워크의 확장을 허용하는 가상 머신입니다. L2C는 온프레미스 VLAN 및/또는 VXLAN을 확장합니다. 각 L2C는 최대 4096개의 VLAN까지 확장할 수 있습니다. 온프레미스 파트너와 페어링될 때 각 L2C는 "플로우"당 최대 1Gbps를 제공하고 VLAN(또는 VXLAN)당 최대 4Gbps의 집계를 제공할 수 있습니다. 추가 네트워크 처리량이 필요한 경우 추가 L2C 어플라이언스의 배치가 지원됩니다.
 
@@ -160,6 +166,7 @@ L2C 어플라이언스는 공용 VLAN을 비롯하여 관리 VLAN에 배치됩�
 그림 4. L2 Concentrator 배치
 ![L2 Concentrator 배치](l2_concentrator_deployment.svg)
 
-### 관련 링크
+## 관련 링크
+{: #hcx-archi-target-related}
 
-* [소스에 설치 및 구성](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-source.html)
+* [소스에 설치 및 구성](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-source)

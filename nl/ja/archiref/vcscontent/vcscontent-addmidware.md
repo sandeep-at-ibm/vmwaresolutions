@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # ミドルウェアのリファクタリングおよび IBM Cloud Private への追加
+{: #vcscontent-addmidware}
 
 Stock Trader をコンテナーで実行できるようになり、Jane も現在のマイクロサービスに問題がないことを確認したので、Jane と Todd は、機能を追加してアプリケーションを拡張する作業に取り掛かります。 アクティビティーの増加とスケーラビリティーの向上を実現するために Stock Trader マイクロサービスをリファクタリングすることで、2 人は、ミドルウェアを {{site.data.keyword.cloud}} Private に追加する必要性を認識しました。 そのミドルウェアの一部は自社データ・センターに存在するので、この作業は、新たにミドルウェアを追加してプラットフォームを再構築するという作業と言えます。
 
@@ -17,6 +18,7 @@ Stock Trader をコンテナーで実行できるようになり、Jane も現�
 このようにソリューションをリファクタリングすることで、アプリケーションと必要なサービスを 1 つの共通プラットフォームで実行できるので、管理プレーンがシンプルになります。
 
 ## コンテンツの選択
+{: #vcscontent-addmidware-content-choices}
 
 {{site.data.keyword.cloud_notm}} Private には幅広いコンテンツが用意されているので、Todd と Jane は自分たちのニーズに最適なコンテンツを決定する必要があります。 ほとんどのコンテンツは試すことができますが、一部のコンテンツはパスポート・アドバンテージから購入してダウンロードする必要があります。これについて Todd は {{site.data.keyword.cloud_notm}} Private カタログで確認しました。
 
@@ -122,12 +124,15 @@ Cloud Private (ディスカバリー用の ILAN ライセンス交付済み、�
 Stock Trader のために、Todd は Jane のソリューション・アーキテクチャーに基づいて、[Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted)、[MQ](https://console.cloud.ibm.com/catalog/services/mq)、および [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis) から取り掛かることにします。
 
 ## ミドルウェアの追加
+{: #vcscontent-addmidware-add-middleware}
 
 {{site.data.keyword.cloud_notm}} Private にミドルウェアを追加するには、カタログで [helm チャート](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md)を見つけ、README ファイルを読んでから、インストールに進みます。
 
 Stock Trader のために、Todd はすべてのミドルウェアを追加することにしました。 以下の情報は、Jane に使用してもらうミドルウェアごとに Todd が実行する必要がある作業を要約したものです。
 
 ### Db2
+{: #vcscontent-addmidware-db2}
+
 既に Db2 を使用しているので、Todd は Db2 から取り掛かります。ソリューションごとにコンテナー・ベースの専用の Db2 を用意できます。
 
 Todd が {{site.data.keyword.icpfull_notm}} を準備したので、ポッドのセキュリティー・ポリシーは既に定義済みです。 Todd は、Docker イメージのプル・シークレットの作成に集中できます。
@@ -166,6 +171,7 @@ path = /shared/db2trader1`
 Db2 を実行したら、Todd または Jane は、Stock Trader ソリューションで使用する表を作成する必要があります。
 
 ### MQ
+{: #vcscontent-addmidware-mq}
 
 Todd と Jane にはメッセージング・ソフトウェアが必要です。彼らは MQ を既に使用しているので、MQ を選択するのが適しています。 また、MQ はフットプリントが小さく、開発者ごとに開発用バージョンを実行できるので、実働環境用の貴重なトラフィックを節約できます。 MQ のインストールは非常に簡単です。 Todd は、Db2 の場合と同じようにストレージを作成してから、helm チャートをインストールします。
 
@@ -187,7 +193,8 @@ App password = LEAVE BLANK`
 
 Todd は、Stock Trader を使用するように MQ を構成するために、MQ 管理ユーザー・インターフェースを開きます。これは、VM バージョンとまったく同じです。
 
-### 	Redis
+### Redis
+{: #vcscontent-addmidware-redis}
 
 Stock Trader は {{site.data.keyword.cloud_notm}} Private Hosted で機能していますが、株価 (Stock Quote) サービスの待機時間についてまだ心配があります。ほとんどの処理に必要な前日の終値が返されるときの待機時間について本当に心配しています。 パフォーマンスを向上させるために、Redis キャッシュを追加します。
 
@@ -198,6 +205,7 @@ Stock Trader は {{site.data.keyword.cloud_notm}} Private Hosted で機能して
 構成は単純ですので、Todd はインストール先の名前空間を入力し、インストールを開始します。
 
 ## Stock Trader のリファクタリング
+{: #vcscontent-addmidware-refactor-stock-trader}
 
 Stock Trader をリファクタリングするという段階は、Jane にとって重要です。 Todd はミドルウェアを {{site.data.keyword.cloud_notm}} Private に追加する作業で忙しいので、Jane が、Kubernetes やクラウドの特性を最大限に活かせるようにソリューションをリファクタリングしました。
 
@@ -213,6 +221,7 @@ Kubernetes に合うように Jane のマイクロサービスを最適化する
 Jane の [コード・リポジトリー](https://github.com/IBMStockTrader/) の例と Jenkins ファイル、server.xml などを提供しています。 これにより、Jane は、ODM や Watson などのサービスや、GitHub の個々のリポジトリーである他のマイクロサービスにシークレットを使用してアクセスし、追加の機能を自由にコーディングできます。
 
 ### シークレットの追加
+{: #vcscontent-addmidware-add-secrets}
 
 Stock Trader マイクロ・サービスをリファクタリングしたので、次はサービスの名前、ユーザー ID、およびパスワードを抽象化する方法が必要です。抽象化により、サービスのデプロイ時に具体的な名前をハードコーディングしてアプリケーションを再構築しなくても、サービスに固有の詳細情報をアプリケーションが取得できるようになります。
 
@@ -224,6 +233,7 @@ Stock Trader は複数のクラウドで実行する可能性がありますが�
 ![Stock Trader サービスのピボット](vcscontent-pivot-services.svg)
 
 ## 結果
+{: #vcscontent-addmidware-result}
 
 Jane が Stock Trader ソリューションのリファクタリングに、Todd が {{site.data.keyword.cloud_notm}} Private Hosted へのミドルウェアのインストールに献身的に取り組んだ結果、中核の Stock Trader ソリューションを構成するすべての要素がプライベート・クラウドで実行されるようになりました。 Jane はさらに Twitter 通知サービスなどのマイクロサービスを追加します。 Istio ルーティング・ルールにより、Slack の社内チャネルや Twitter の公開チャネルでロイヤルティー・レベルのメッセージングを動的に行えるようにします。
 
@@ -231,6 +241,7 @@ Jane が Stock Trader ソリューションのリファクタリングに、Todd
 
 ![Stock Trader のエンリッチ](vcscontent-enrich.svg)
 
-### 関連リンク
+## 関連リンク
+{: #vcscontent-addmidware-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

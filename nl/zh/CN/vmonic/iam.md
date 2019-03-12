@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-21"
 
 ---
 
 # 使用 IAM 管理用户访问权
+{: #managing-user-access-with-iam}
 
 帐户中用户对 {{site.data.keyword.vmwaresolutions_full}} 服务实例的访问权通过 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 进行控制。对于访问帐户中 {{site.data.keyword.vmwaresolutions_short}} 服务的每个用户，必须为其分配定义了 IAM 用户角色的访问策略。
 
@@ -26,6 +27,7 @@ lastupdated: "2019-01-23"
 查看以下信息，其中概述了在 {{site.data.keyword.vmwaresolutions_short}} 服务中每个角色允许的操作。
 
 ## 平台管理角色和许可权
+{: #iam-roles}
 
 平台管理角色支持用户在平台级别对服务资源执行任务。例如，分配对服务的用户访问权，创建或删除服务标识，创建实例以及将实例绑定到应用程序。
 
@@ -53,24 +55,26 @@ lastupdated: "2019-01-23"
 |vmware-solutions.account.update|更新帐户设置|管理员|
 
 ## 管理用户的访问权
+{: #iam-users}
 
-可以将新用户添加到 {{site.data.keyword.cloud_notm}} 帐户，以便这些用户可以共享为帐户供应的服务和资源。有关更多信息，请参阅[邀请用户访问服务和资源](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)。
+可以将新用户添加到 {{site.data.keyword.cloud_notm}} 帐户，以便这些用户可以共享为帐户供应的服务和资源。有关更多信息，请参阅[邀请用户访问服务和资源](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)。
 
-您还可以管理现有用户的访问权，包括修改现有访问权、分配新访问权以及复查分配的访问权。要管理用户的访问权，您必须是帐户所有者，或者必须具有**管理员**平台管理角色。有关更多信息，请参阅[管理资源访问权](/docs/iam/mngiam.html)。
+您还可以管理现有用户的访问权，包括修改现有访问权、分配新访问权以及复查分配的访问权。要管理用户的访问权，您必须是帐户所有者，或者必须具有**管理员**平台管理角色。有关更多信息，请参阅[管理资源访问权](/docs/iam?topic=iam-iammanidaccser)。
 
 ## 将现有实例迁移到 IBM Cloud 帐户
+{: #iam-migrate}
 
 由于 {{site.data.keyword.vmwaresolutions_short}} 与 IAM 集成，在 {{site.data.keyword.cloud_notm}} 帐户中 V2.5 和更高发行版中部署的实例会自动添加到帐户，并由 IAM 进行管理。
 
 对于部署在 V2.4 和更低发行版中的现有实例，可以将其迁移到指定的 {{site.data.keyword.cloud_notm}} 帐户，以进行支持 IAM 的管理。有关更多信息，请参阅以下主题：
-* [将 V2.5 之前的 vCenter Server 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
-* [将 V2.5 之前的 vCenter Server with Hybridity Bundle 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
-* [将 V2.5 之前的 Cloud Foundation 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
-* [将 V2.5 之前的 NetApp ONTAP Select 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
-* [将 V2.5 之前的 VMware Federal 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)
+* [将 V2.5 之前的 vCenter Server 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
+* [将 V2.5 之前的 vCenter Server with Hybridity Bundle 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
+* [将 V2.5 之前的 Cloud Foundation 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addinstancetousraccount)
+* [将 V2.5 之前的 NetApp ONTAP Select 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)
 
-### 相关链接
+## 相关链接
+{: #iam-related}
 
-* [管理身份和访问权](/docs/iam/quickstart.html)
+* [管理身份和访问权](/docs/iam?topic=iam-getstarted)
 * [管理用户和访问权](/docs/iam/iamusermanage.html)
-* [什么是 IAM](/docs/iam/index.html)
+* [什么是 IAM](/docs/iam?topic=iam-iamoverview)

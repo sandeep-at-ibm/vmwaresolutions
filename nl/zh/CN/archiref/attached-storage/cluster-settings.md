@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
 # 集群设置
+{: #cluster-settings}
 
 在添加连接的存储器之前，vCenter Server 解决方案不会启用 vSphere 分布式资源调度程序 (DRS) 和 vSphere 高可用性 (HA) 等高级功能。在添加 NFS 连接的存储设备后，会在集群上启用这些功能，具体设置如以下部分所示。
 
 ## vSphere 分布式资源调度程序
+{: #cluster-settings-vsphere-drs}
 
 在集群上启用 vSphere DRS 时，会启用两个主要功能：负载均衡和电源管理。
 
 ### 负载均衡
+{: #cluster-settings-load-balance}
 
 使用负载均衡时，集群中所有主机和虚拟机 (VM) 的 CPU 和内存资源的分配和使用会持续受到监视。在给定集群的资源池和 VM 的属性以及当前需求的情况下，DRS 会将这些度量值与理想状态的资源使用率进行比较。然后，DRS 会根据需要完成 VM 迁移或给出迁移建议。
 
@@ -40,22 +43,27 @@ lastupdated: "2019-01-23"
 除了集群的自动化级别和迁移阈值，此设计还实现了 VM 自动化，因此可覆盖单个 VM 的值。通过更精确地控制 VM，可进一步划分 VM 负载均衡的优先级。
 
 ### 电源管理
+{: #cluster-settings-power-mgmt}
 
 在启用 VMware 分布式电源管理功能时，DRS 会将集群级别和主机级别的容量与集群的 VM 需求（包括最新的历史需求）进行比较。如果发现足够的过剩容量，电源管理功能会将（或建议将）主机置于备用电源方式。如果需要容量，那么电源管理功能会打开主机电源。对于 VM，可能需要将其迁移到主机或从主机中迁出，具体取决于生成的主机电源状态建议。在此设计中，电源管理为禁用状态，因为打开和关闭集群中主机的电源对运营或财务没有任何好处。
 
 ## vSphere 高可用性
+{: #cluster-settings-vsphere-ha}
 
 vSphere 通过将 VM 及其所在的主机聚集到一个集群中，为 VM 提供高可用性。集群中的主机会受到监视，如果发生故障，即会在备用主机上重新启动发生故障的主机上的 VM。在此设计中，vSphere 高可用性是通过在集群上执行主机监视和 VM 监视来实现的。
 
 ### 主机监视
+{: #cluster-settings-host-monitor}
 
 使用主机监视时，集群中的主机可以交换网络脉动信号，而且会在检测到故障时启用 vSphere HA。在此设计中，此功能为启用状态。
 
 ### 虚拟机监视
+{: #cluster-settings-machine-monitor}
 
 VM 监视功能使用 VMware Tools 代为捕获的脉动信号信息来提供访客操作系统可用性。通过 VM 监视，vSphere HA 可以自动重置或重新启动无法发出脉动信号的单个 VM。此设计支持 VM 监视和应用程序监视。
 
 #### 故障条件和 VM 响应
+{: #cluster-settings-failure-conditions}
 
 故障条件定义了 VM 的故障情况以及针对每个故障所提供的响应。在此设计中，VM 重新启动优先级设置为“中”。请复查此值并相应地调整设置，以使重新启动优先级与工作负载的重要性相匹配。此外，对主机隔离的响应设置为“关闭并重新启动 VM”，以便 VM 不会受到集群中隔离的主机的影响。此设置的其余值均为缺省设置。
 
@@ -79,13 +87,16 @@ VM 监视功能使用 VMware Tools 代为捕获的脉动信号信息来提供访
 有关在 vSphere Web Client 中配置这些设置的更多信息，请参阅 [Configure Virtual Machine Responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html)。
 
 #### 许可控制
+{: #cluster-settings-admission-control}
 
 vCenter Server 使用许可控制来确保集群中有足够的资源可用于提供故障转移保护，并且遵循 VM 资源保留协议。在此设计中，故障转移容量是通过指定集群资源的百分比来保留的。定义的故障转移容量设置为 25% CPU 和 25% 内存。
 
 #### 数据存储脉动信号
+{: #cluster-settings-datastore}
 
 vSphere HA 使用数据存储脉动信号来识别发生故障的主机和位于网络分区中的主机。通过使用数据存储脉动信号，vSphere HA 可以在发生管理网络分区时监视主机，并继续对发生的故障进行响应。在此设计中，脉动信号数据存储选择策略设置为“自动选择可从主机访问的数据存储”。
 
-### 相关链接
+## 相关链接
+{: #cluster-settings-related}
 
-* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

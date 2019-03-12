@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # 要求 Mission Critical VMware on IBM Cloud
+{: #managing_mcv}
 
 1. 從 {{site.data.keyword.vmwaresolutions_full}} 主控台，按一下左導覽窗格中的**開始使用**。
 2. 向下捲動頁面，然後按一下**訂購其他受管理服務**下的 **Mission Critical VMware on IBM Cloud** 卡片。
@@ -17,6 +18,7 @@ lastupdated: "2019-01-24"
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 業務代表將會使用您的聯絡資訊來與您聯絡，以協助提供您所需的解決方案。
 
-### 相關鏈結
+## 相關鏈結
+{: #managing_mcv-related}
 
-* [Mission Critical VMware on IBM Cloud 概觀](/docs/services/vmwaresolutions/services/mcv_overview.html)
+* [Mission Critical VMware on IBM Cloud 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-mcv_overview)

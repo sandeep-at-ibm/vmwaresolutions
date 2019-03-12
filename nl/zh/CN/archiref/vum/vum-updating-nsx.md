@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 更新 NSX
+{: #vum-updating-nsx}
 
 以下信息是 NSX 更新过程的示例。有关针对要升级到的 NSX 版本的相应更新过程，请参阅 VMware 指南。
 
@@ -17,7 +18,7 @@ lastupdated: "2019-01-23"
 1. **升级 ESXi** - ESXi 升级完成后，主机会退出维护模式，但是，要到下一步完成后，才能将连接到逻辑交换机的 VM 移至主机。
 2. **升级 NSX VIB** - VIB 已升级并且主机已退出维护模式后，可以将连接到逻辑交换机的 VM 移至主机。
 
-通过使用从 _my.vmware.com_ 下载的更新来更新 NSX Manager，从而可更新 NSX。为此，您需要帐户来下载更新。如果您是将 {{site.data.keyword.cloud}} 预订许可用于 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 实例，那么无法使用 **my.vmware.com** 帐户下载更新。因此，您需要[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
+通过使用从 _my.vmware.com_ 下载的更新来更新 NSX Manager，从而可更新 NSX。为此，您需要帐户来下载更新。如果您是将 {{site.data.keyword.cloud}} 预订许可用于 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 实例，那么无法使用 **my.vmware.com** 帐户下载更新。因此，您需要[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
 
 开始升级之前，请查看 NSX 说明以了解升级问题和解决方法。使用发行说明验证 vCenter 是否满足 NSX 的新系统需求。
 
@@ -61,7 +62,8 @@ Manager
   - 在 vSphere Web Client 中，选择**联网和安全性** > **NSX Edge**。对于每个 NSX Edge 实例，从**操作**菜单中选择**升级版本**。
   - NSX Edge 成功升级后，“状态”为“已部署”，并且“版本”列会显示新的 NSX 版本。如果 Edge 升级失败，并且未回滚到旧版本，请单击**重新部署 NSX Edge** 图标，然后重试升级。
 
-### 相关链接
+## 相关链接
+{: #vum-type-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Single-node Trial for VMware vCenter Server on IBM Cloud インスタンスの注文と削除
+{: #vc_trial_hybrid_orderinginstance}
 
 Single-node Trial for VMware vCenter Server on {{site.data.keyword.cloud}} は、VMware vSphere スタックをサービスとして提供する単一テナントのホステッド・プライベート・クラウドです。 クライアント管理環境は通常、最小で 3 つのノードを使用してデプロイされますが、この単一ノード・トライアルは、ハイブリッド・クラウド実装の利点を体験するために低コストのパスを提供しています。
 
@@ -26,6 +27,7 @@ Single-node Trial for VMware vCenter Server on {{site.data.keyword.cloud}} は�
 アーキテクチャー設計について詳しくは、[Single-node Trial for vCenter Server on IBM Cloud の HCX on IBM Cloud アーキテクチャー設計](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)を参照してください。
 
 ## Single-node Trial for vCenter Server インスタンスの技術仕様
+{: #vc_trial_hybrid_orderinginstance-tech-specs}
 
 Single-node Trial for vCenter Server インスタンスには以下のコンポーネントが含まれています。
 
@@ -33,10 +35,12 @@ Single-node Trial for vCenter Server インスタンスには以下のコンポ�
 {:note}
 
 ### ベア・メタル・サーバー
+{: #vc_trial_hybrid_orderinginstance-bare-metal}
 
 Dual Intel Xeon Gold 5120 (28 コア、2.20 GHz) プロセッサー、384 GB の RAM を搭載。
 
 ### Single-node Trial for vCenter Server インスタンスのネットワーキング仕様
+{: #vc_trial_hybrid_orderinginstance-networking-specs}
 
 以下のネットワーキング・コンポーネントが注文されます。
 *  10 Gbps デュアル・ネットワーク・アップリンク (パブリックとプライベート)
@@ -50,16 +54,16 @@ Dual Intel Xeon Gold 5120 (28 コア、2.20 GHz) プロセッサー、384 GB の
   * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。これは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。
 
 ### 仮想サーバー・インスタンス
+{: #vc_trial_hybrid_orderinginstance-vsi}
 
 以下の仮想サーバー・インスタンス (VSI) が注文されます。
-
 * IBM CloudBuilder の VSI。これは、インスタンスのデプロイメントが完了した後にキャンセルされます。
 * Microsoft Active Directory (AD) 用の Microsoft Windows Server VSI がデプロイされて参照可能になります。 この VSI がインスタンスの DNS として機能し、ここにホストと VM が登録されます。
 
 ### IBM 提供のライセンスおよび料金
+{: #vc_trial_hybrid_orderinginstance-license-and-fee}
 
-Single-node Trial for vCenter Server インスタンスの注文には、以下のライセンスが含められます。
-
+Single-node Trial for vCenter Server インスタンスの注文には、以下のライセンスが含まれています。
 * VMware vSphere Enterprise Plus 6.5
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
@@ -68,6 +72,7 @@ Single-node Trial for vCenter Server インスタンスは、ライセンス持�
 {:note}
 
 ## VMware HCX on IBM Cloud の技術仕様
+{: #vc_trial_hybrid_orderinginstance-hcx-tech-specs}
 
 Single-node Trial for vCenter Server には、HCX on {{site.data.keyword.cloud_notm}} が含まれています。 以下のコンポーネントが注文されて HCX on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
@@ -75,12 +80,14 @@ Single-node Trial for vCenter Server には、HCX on {{site.data.keyword.cloud_n
 {:note}
 
 ### HCX 管理用の VMware NSX Edge Services Gateways のアクティブ/パッシブ・ペア
+{: #vc_trial_hybrid_orderinginstance-esg}
 
 * CPU: 6 vCPU
 * RAM: 8 GB
 * ディスク: 3 GB VMDK
 
 ### HCX 管理アプライアンス - 仮想マシン
+{: #vc_trial_hybrid_orderinginstance-hcs-mgmt-appliance}
 
 * CPU: 4 vCPU
 * RAM: 12 GB
@@ -89,12 +96,14 @@ Single-node Trial for vCenter Server には、HCX on {{site.data.keyword.cloud_n
 構成時には必要に応じて、L2 接続、WAN 最適化、およびゲートウェイ接続のために追加の HCX アプライアンスがデプロイされます。
 
 ### HCX on IBM Cloud サービスのネットワーキング仕様
+{: #vc_trial_hybrid_orderinginstance-hcx-networking-specs}
 
 * 16 個の IP アドレスを持つ 1 つのパブリック・ポータブル・サブネット
 * 64 個の IP アドレスを持つ 2 つのプライベート・ポータブル・サブネット
 * プライベート・ポータブル vMotion サブネットからの 8 個の IP アドレス
 
 ## Single-node Trial for vCenter Server インスタンスの注文の要件と計画
+{: #vc_trial_hybrid_orderinginstance-req}
 
 以下の要件を満たし、以下の作業を完了していることを確認してください。
 * オンプレミス HCX インスタンスの前提条件:
@@ -110,6 +119,7 @@ Single-node Trial for vCenter Server には、HCX on {{site.data.keyword.cloud_n
     * インスタンス名はアカウント内で固有である必要があります。
 
 ## Single-node Trial for vCenter Server インスタンスを注文する手順
+{: #vc_trial_hybrid_orderinginstance-procedure}
 
 1. **「Single-node Trial for VMware vCenter Server on {{site.data.keyword.cloud_notm}}」**ページで、**「続行」**をクリックします。
 2. **「Single-node Trial for VMware vCenter Server (Single-node Trial for VMware vCenter Server)」**ページで、{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを要求するステップを実行するか、既存の**「ユーザー名」**と**「API キー」**を指定して**「取得」**をクリックします。
@@ -128,10 +138,12 @@ Single-node Trial for vCenter Server には、HCX on {{site.data.keyword.cloud_n
    4. **「プロビジョン」**をクリックします。
 
 ### 結果
+{: #vc_trial_hybrid_orderinginstance-results}
 
 インスタンスのデプロイメントが自動的に開始され、オンプレミスの HCX on {{site.data.keyword.cloud_notm}} サービス・アクティベーション・キーが注文されます。
 
 #### HCX on IBM Cloud のデプロイメント・プロセス
+{: #vc_trial_hybrid_orderinginstance-hcs-deploy-process}
 
 HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に行われます。 以下の手順が {{site.data.keyword.vmwaresolutions_short}} 自動化プロセスによって実行されます。
 1. {{site.data.keyword.cloud_notm}} インフラストラクチャー上の HCX 用に、次の 3 つのサブネットが注文されます。
@@ -159,6 +171,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 6. HCX Manager のホスト名と IP アドレスが VMware vCenter Server on {{site.data.keyword.cloud_notm}} の DNS サーバーに登録されます。
 
 #### インスタンスの詳細の表示
+{: #vc_trial_hybrid_orderinginstance-view-inst-details}
 
 インスタンスの詳細を表示して、デプロイメントの状況を確認できます。 左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックし、**「vCenter Server インスタンス」**または**「オンプレミス HCX インスタンス」**表を見つけて、注文したインスタンスに関する情報を確認します。
 
@@ -167,6 +180,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 インスタンスの状況が**「使用可能」**に変わり、E メールで通知が届きます。
 
 ### 次に行うこと
+{: #vc_trial_hybrid_orderinginstance-next}
 
 オンプレミス HCX Enterprise Manager をインストールし、HCX on {{site.data.keyword.cloud_notm}} インスタンスへの接続を構成します。
 
@@ -212,6 +226,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 {:important}
 
 ## Single-node Trial for vCenter Server インスタンスを削除する手順
+{: #vc_trial_hybrid_orderinginstance-deleting-procedure}
 
 Single-node Trial for vCenter Server インスタンスを削除すると、以下のコンポーネントが順次解放されます。
 
@@ -236,7 +251,8 @@ Single-node Trial for vCenter Server インスタンスを削除するには、�
    1. **「アクション」**列で削除アイコンをもう一度クリックします。
    2. **「インスタンスの削除」**ウィンドウで**「OK」**をクリックします。
 
-### 関連リンク
+## 関連リンク
+{: #vc_trial_hybrid_orderinginstance-related}
 
 * [Single-node Trial for vCenter Server on IBM Cloud の HCX on IBM Cloud アーキテクチャー設計](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [VMware Hybrid Cloud Extension の資料](https://hcx.vmware.com/#/vm-documentation)

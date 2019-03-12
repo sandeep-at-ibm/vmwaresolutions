@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-26"
+lastupdated: "2019-02-15"
 
 ---
 
 # 创建基线并连接到库存对象
+{: #vum-baselines}
 
 基线包含由一个或多个补丁、扩展、Service Pack、错误修订或升级构成的集合，可以分类为补丁、扩展或升级基线。基线组基于现有基线组合而成。主机基线组可以具有单个升级基线以及各种补丁和扩展基线。虚拟机和虚拟设备基线组最多可具有三个升级基线：一个 VMware Tools 升级基线、一个虚拟机硬件升级基线和一个虚拟设备升级基线。
 
@@ -32,7 +33,8 @@ VUM 包含缺省基线，您可以使用这些基线来扫描以下任何设备�
 2. 单击要扫描的集群对象。
 3. 单击**连接基线**，然后选择两个预定义的补丁基线，然后单击**确定**。
 
-### 相关链接
+## 相关链接
+{: #vum-baselines-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）

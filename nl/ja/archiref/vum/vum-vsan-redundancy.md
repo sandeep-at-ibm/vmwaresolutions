@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # 仮想マシン vSAN の冗長性
+{: #vum-vsan-redundancy}
 
 vSAN クラスターで vSphere ESXi ホストを保守モードにする場合は、データ退避モードを選択する必要があります。 モードの選択は、vSAN データ・ストアを消費している仮想マシン (VM) および仮想アプライアンスに影響を与える可能性があります。
 * **全データ・マイグレーション**では、ホストからすべてのデータを退避し、vSAN クラスター内の他の vSphere ESXi ホストに移動します。 この退避モードでは大量のデータが転送されるため、非常に多くの時間とリソースが消費されます。 選択したホストのローカル・ストレージ上にあるすべてのコンポーネントは、クラスター内の別の場所にマイグレーションされます。 ホストが保守モードにある場合、すべての VM および仮想アプライアンスはストレージ・コンポーネントにアクセスでき、割り当てられたストレージ・ポリシーに引き続き準拠します。 すべてのデータを退避するには長時間かかる場合があり、アップグレードの保守ウィンドウが長期間にわたる可能性があります。
@@ -21,7 +22,8 @@ vSAN クラスターで vSphere ESXi ホストを保守モードにする場合�
 
 2. vSAN で同期が完了するまで待機してから、修復アクションを開始します。 完了状況を確認するには、クラスターの**「vSAN Virtual Objects monitoring」ページ**にナビゲートして、**「Completion Status」**を確認します。
 
-### 関連リンク
+## 関連リンク
+{: #vum-vsan-redundancy-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)

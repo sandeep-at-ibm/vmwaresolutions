@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # Skate Advisor コンポーネント
+{: #vcscar-physical}
 
 {{site.data.keyword.vmwaresolutions_full}} は、世界中の {{site.data.keyword.CloudDataCents_notm}}に VMware テクノロジー・コンポーネントをデプロイするための自動化機能を備えています。 このアーキテクチャーは単一のクラウド領域に構築されていますが、以下の場所にある他のクラウド領域に拡張できます。
 
@@ -25,6 +26,7 @@ IBM Multi-Cluster Manager は、複数のクラウドおよびクラスターに
 {{site.data.keyword.cloud_notm}} Automation Manager は、開発者と管理者がビジネス要求を満たせるようにする {{site.data.keyword.cloud_notm}} Private 上で実行されるセルフサービスのマルチクラウド管理プラットフォームです。 Cloud Automation Manager Service Composer を使用すると、{{site.data.keyword.icpfull_notm}} カタログでハイブリッド・クラウド・サービスを公開できます。
 
 ## Skate Advisor 物理コンポーネント
+{: #vcscar-physical-skate-comp}
 
 以下の図は、アプリケーション・モダナイゼーション・インフラストラクチャーで Acme Skate Advisor アプリケーションを実装したリファレンス実装を示しています。
 
@@ -36,6 +38,7 @@ Skate Advisor アプリケーションは、既存の Acme Web アプリケー�
 Skate Advisor アプリケーションは、必要なホスティング・インフラストラクチャーを備えたアプリケーション・モダナイゼーション・プラットフォームを利用します。
 
 ### アプリケーションのパッケージ化およびデプロイメント
+{: #vcscar-physical-app-pack-depl}
 
 アプリケーションは、以下のエレメントを含む CAM オーケストレーションとしてデプロイされます。
 * サービス・オーケストレーション - CAM サービス・オーケストレーションは、サービスの一部としてデプロイする Terraform テンプレートおよび Helm チャートを表すワークフロー・リソースです。 サービスは、公開可能であり、デプロイメント全体のオーケストレーションの制御元になる成果物です。
@@ -54,6 +57,7 @@ Skate Advisor アプリケーションは、必要なホスティング・イン
 ![CAM オーケストレーション](vcscar-cam.svg)
 
 ### ロード・バランシングおよびプロキシー処理
+{: #vcscar-physical-load-balance-proxy}
 
 ロード・バランシングとプロキシー処理は、{{site.data.keyword.icpfull_notm}} Ingress Controller コンポーネントを介して実装されます。 このコンポーネントは、コンテナーのスケーリングとフェイルオーバーをシームレスな方法で処理します。
 
@@ -70,15 +74,23 @@ URL	|エンドポイント
 コンテナーには、システム要求に応じてスケールインおよびスケールアウトする可能性がある予測不能な IP アドレスがあります。 この問題に対処するために、{{site.data.keyword.icpfull_notm}} サービスを使用して、システム内で IP アドレスの解決をリアルタイムで実行します。
 
 ### Acme Skate Web アプリケーション
+{: #vcscar-physical-acme-skate-web-app}
+
 Acme Skate Web アプリケーションは、Spring Framework に基づく Java Platform, Enterprise Edition (Java EE) アプリケーションです。 このアプリケーションは、WebSphere Liberty コンテナーにデプロイされます。
 
 ### Acme Skate Advisor アプリケーション
+{: #vcscar-physical-acme-skate-advisor-app}
+
 Acme Skate Advisor アプリケーションは、WebSphere Liberty コンテナーにデプロイされるマイクロサービス・ベースのアプリケーションです。 nginx Web サーバーが、マイクロサービスのフロントエンドになります。
 
 ### Acme Skate データベース
+{: #vcscar-physical-acme-skate-db}
+
 Acme Skate データベースは、vSphere 管理対象仮想マシンにデプロイされる MySQL データベースです。
 
 ### 通信の概要
+{: #vcscar-physical-comm-overview}
+
 Skate Advisor には、以下の通信が必要です。
 -	Web コンテナーからシステム・ユーザーへの通信。
 -	Advisor および Web コンテナーから Watson サービスへの通信。
@@ -97,6 +109,7 @@ vCenter Server NSX Edge と {{site.data.keyword.containerlong_notm}} インフ�
 NSX VXLAN を定義する場合は、VRA アプライアンスへの静的ルートが {{site.data.keyword.containerlong_notm}} インフラストラクチャーに必要です。 NSX Edge から、プライベート・ネットワークを介した VRA との BGP ピアリングを構成し、NSX VXLAN のルートの通知と注入を有効にします。 このピアリングにより、NSX VXLAN オーバーレイ・ネットワークは {{site.data.keyword.cloud_notm}} バックボーンと通信できるようになります (その逆も可能です)。
 
 ### ソフトウェア・コンポーネント・マッピング
+{: #vcscar-physical-soft-comp-mapping}
 
 Skate Advisor アプリケーションは、以下のソフトウェア・コンポーネントを使用します。
 
@@ -113,6 +126,7 @@ Skate Advisor アプリケーションは、以下のソフトウェア・コン
 * JavaScript - チャットボットは、クライアントのブラウザーでホストされる JavaScript ベースのアプリケーションです。 チャットボットは、Node.js ベースのマイクロサービスを介して Watson と通信します。
 
 ## 管理の概要
+{: #vcscar-physical-mgmt-ovw}
 
 Acme Skate Advisor は {{site.data.keyword.cloud_notm}} に存在します。これはこのアーキテクチャーの重要な側面です。 {{site.data.keyword.cloud_notm}} のアーキテクチャーは以下のとおりです。
 
@@ -123,6 +137,7 @@ Acme Skate Advisor は {{site.data.keyword.cloud_notm}} に存在します。こ
 
 この図では、CAM は、vCenter、クラウド・プロバイダー、{{site.data.keyword.icpfull_notm}} 環境、および {{site.data.keyword.containerlong_notm}} 環境へのクラウド接続を論理的に作成します。 {{site.data.keyword.icpfull_notm}} クラスターを単一の管理ビューに接続するメカニズムを提供する MCM を使用して、各データ・センター/クラウド環境に {{site.data.keyword.icpfull_notm}} クラスターがデプロイされます。
 
-### 関連リンク
+## 関連リンク
+{: #vcscar-physical-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

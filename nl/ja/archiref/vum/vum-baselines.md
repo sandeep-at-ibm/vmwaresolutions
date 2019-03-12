@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-26"
+lastupdated: "2019-02-15"
 
 ---
 
 # ベースラインの作成とインベントリー・オブジェクトへの添付
+{: #vum-baselines}
 
 ベースラインには、1 つ以上のパッチ、拡張、サービス・パック、バグ修正、またはアップグレードのコレクションが含まれ、パッチ・ベースライン、拡張ベースライン、またはアップグレード・ベースラインとして分類できます。 ベースライン・グループは、既存のベースラインを集めたものです。 ホストのベースライン・グループには、単一のアップグレード・ベースラインと、さまざまなパッチ・ベースラインおよび拡張ベースラインを含めることができます。 仮想マシンおよび仮想アプライアンスのベースライン・グループには、最大 3 つのアップグレード・ベースライン (VMware Tools のアップグレード・ベースライン 1 つ、仮想マシン・ハードウェアのアップグレード・ベースライン 1 つ、仮想アプライアンスのアップグレード・ベースライン 1 つ) を含めることができます。
 
@@ -32,7 +33,8 @@ VUM には、以下のいずれかのデバイスをスキャンして、環境�
 2. スキャンするクラスター・オブジェクトをクリックします。
 3. **「Attach Baseline」**をクリックし、2 つの事前定義パッチ・ベースラインを選択して、**「OK」**をクリックします。
 
-### 関連リンク
+## 関連リンク
+{: #vum-baselines-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)

@@ -64,7 +64,7 @@ vMotion 및 복제(대량 마이그레이션) 트래픽을 지원하는 암호�
 쌍이 배치됩니다. 대역폭 기능은 ~4Gbps로
 제한되므로, 외부 대역폭 기능이 4Gbps보다 큰 경우
 추가 L2C 쌍을 사용하면 기본 네트워크의 활용도를
-높일 수 있습니다. 
+높일 수 있습니다.
 - WAN 최적화 프로그램 - HCX에는 선택적으로 배치된 Silver Peak™ WAN
 최적화 어플라이언스가 포함됩니다. 이는 VM 어플라이언스로 배치됩니다. 배치 시
 CGW 터널 트래픽은 WAN 최적화 프로그램 쌍을 순회하도록 경로가 재지정됩니다.
@@ -110,4 +110,4 @@ HCX 관리자 서비스를 시작하고 중지하며, 로그 모니터링 구성
 ## 관련 링크
 {: #vcshcx-components-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

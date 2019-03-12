@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Mission Critical VMware on IBM Cloud 概述
+{: #mcv_overview}
 
 Mission Critical VMware on {{site.data.keyword.cloud}} 交付多专区云体系结构，可帮助企业防止云应用程序发生停机时间，并可自动在云区域内执行故障转移。
 
@@ -19,6 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}} 交付多专区云体系�
 此体系结构涵盖各种企业服务，包括网络、存储器、弹性以及其他构建用于对基于云的应用程序进行监视和故障诊断的工具。此外，该体系结构还可与基于 {{site.data.keyword.cloud_notm}} 构建的 IBM Services Platform with Watson 相集成，以支持更广泛的服务用途。通过使用平台的认知能力，客户可以更有效地挖掘数据，以获取新的业务洞察，从而帮助保持持续运营。
 
 ## Mission Critical VMware on IBM Cloud 的技术规范
+{: #technical-specifications-for-mission-critical-vmware-on-ibm-cloud}
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 体系结构是一种端到端参考体系结构，可为客户的工作负载提供自动故障转移。此体系结构将 {{site.data.keyword.cloud_notm}} 多专区区域与涵盖以下组件的 IBM 管理的服务配合使用：
 
@@ -38,6 +40,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 在以下区域中�
 * 亚太地区：悉尼和东京的所有 IBM Cloud Data Center
 
 ### 基本基础架构体系结构规范
+{: #mcv_overview-base-specs}
 
 基本基础架构具有以下规范：
 * 每个站点都有自己的专用 Edge 和管理集群
@@ -48,6 +51,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 在以下区域中�
 * NSX Manager 恢复使用热/备用方法来同步备份文件
 
 ### 工具和技术体系结构规范
+{: #mcv_overview-tooling-specs}
 
 工具和技术体系结构具有以下规范：
 * vRealize Operations、vRealize Log Insight 和 vRealize Network Insight 用于提供特定于要使用的 VMware 产品（例如，NSX、vSAN 和 vSphere）的操作和管理功能
@@ -56,6 +60,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 在以下区域中�
 * Fortigate Security Appliance 或类似产品用于保护任何因特网访问以及方便与内部部署网络的活动/活动网络集成
 
 ### vSphere + vSAN 延伸集群体系结构规范
+{: #mcv_overview-stretched-cluster-specs}
 
 vSphere + vSAN 延伸集群体系结构具有以下规范：
 * 集群提供了跨两个站点的存储和计算功能，以增强可用性。
@@ -65,6 +70,7 @@ vSphere + vSAN 延伸集群体系结构具有以下规范：
 * vSAN 本机加密（用于静态加密）可以与此体系结构组合使用。
 
 ### 网络体系结构规范
+{: #mcv_overview-network-specs}
 
 网络体系结构具有以下规范：
 * Edge/DLR/VXLAN 与基于 BGP 度量值的路由组合使用，以方便将活动/活动站点设计为自动故障转移。
@@ -73,6 +79,7 @@ vSphere + vSAN 延伸集群体系结构具有以下规范：
 * 在 VM-A 的 vMotion 活动期间，流量仍会通过 {{site.data.keyword.cloud_notm}} 可用性专区 #1 流入流出。
 * 在站点或 Edge 故障期间，流量将从剩余的可用站点流出。
 
-### 相关链接
+## 相关链接
+{: #mcv_overview-related}
 
-* [请求 Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services/managing_mcv.html)
+* [请求 Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_mcv)

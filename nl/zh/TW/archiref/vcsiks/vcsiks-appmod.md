@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 應用程式現代化概觀
+{: #vcsiks-appmod}
 
 下圖顯示 Acme Skateboards 所部署的應用程式現代化參照架構，在此系列文件中會有深入說明。
 
@@ -40,6 +41,7 @@ HCX 會將內部部署網路延伸至 {{site.data.keyword.cloud_notm}}，讓客�
   - 內部部署資料中心與雲端 VM 中，舊式系統之間的資料流量。
 
 ## Acme Skateboards 的主要優點
+{: #vcsiks-appmod-benefits}
 
 vCenter Server 提供包括 VMware vSphere、vCenter Server、NSX 以及共用儲存空間選項（包含 vSAN）等必要的基礎構成要素，以設計最適合工作負載的「VMware 軟體定義資料中心 (SDDC)」彈性解決方案。
 
@@ -63,6 +65,7 @@ vCenter Server 提供包括 VMware vSphere、vCenter Server、NSX 以及共用�
 
 此參照架構顯示 VCS、{{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 如何安全地推動 Acme Skateboards 的應用程式現代化旅程。
 
-### 相關鏈結
+## 相關鏈結
+{: #vcsiks-appmod-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

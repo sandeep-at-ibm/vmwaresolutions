@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # FortiGate Security Appliance on IBM Cloud の概要
+{: #fsa_considerations}
 
 FortiGate Security Appliance on {{site.data.keyword.cloud}} サービスでは、FortiGate Security Appliance (FSA) 300 シリーズのデバイスのペアが高可用性モードでデプロイされます。これを使って、ファイアウォール、ルーティング、NAT、VPN の各サービスが提供され、ご使用のインスタンスのパブリック VLAN 上のすべてのサーバーと仮想マシンが保護されます。
 
@@ -22,24 +23,29 @@ FortiGate Security Appliance on {{site.data.keyword.cloud}} サービスでは�
 {:note}
 
 ## FortiGate Security Appliance on IBM Cloud の技術仕様
+{: #technical-specifications-for-fortigate-security-appliance-on-ibm-cloud}
 
 以下のコンポーネントが注文され、FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
 ### ハードウェア
+{: #fsa_considerations-hardware}
 
 FortiGate 300 シリーズの Security Appliance。
 
 ### 高可用性
+{: #fsa_considerations-ha}
 
 アクティブ-パッシブ構成で、2 つのアプライアンスがデプロイされます。
 
 ### ネットワーキング
+{: #fsa_considerations-networking}
 
 * アップストリームとダウンストリームの両方のネットワークに結合された Dual 1 GbE
 * 1 つの新しいアップストリーム {{site.data.keyword.cloud_notm}} パブリック VLAN
 * 1 つの既存のダウンストリーム {{site.data.keyword.cloud_notm}} パブリック VLAN
 
 ## FortiGate Security Appliance on IBM Cloud をインストールする際の考慮事項
+{: #fsa_considerations-install}
 
 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスをインストールする前に、以下の考慮事項を確認してください。
 * 使用する {{site.data.keyword.cloud_notm}} アカウントには、**「ハードウェア・ファイアウォール」**権限が必要です。 この権限は、ご使用のインスタンスの FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスのファイアウォールのログと設定を編集したり表示したりする場合に必要になります。
@@ -51,17 +57,19 @@ FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスを
 * 追加のクラスターを注文した場合、その新たに追加されたクラスターのためのパブリック VLAN には、Security Appliance の HA ペアが配置されません。
 
 ## FortiGate Security Appliance on IBM Cloud を削除する際の考慮事項
+{: #fsa_considerations-remove}
 
 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスを削除する前に、以下の考慮事項を確認してください。
 * FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスを削除すると、追加されたパブリック VLAN も削除されます。
 * サービスの削除中、インスタンスは一時的にインターネットにアクセスできないことがあります。
 * NAT トラフィックの許可、インスペクション、ブロック、ルーティングに関するすべての FortiGate ルールが、Fortinet サービスと一緒に削除されます。 何らかの NAT ルールが構成されている場合は、再構成する必要があります。
 
-### 関連リンク
+## 関連リンク
+{: #fsa_considerations-related}
 
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/fsa_ordering.html)
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managingfsa.html)
-* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_ordering)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Fortinet Web サイト](https://www.fortinet.com/){:new_window}
 * [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

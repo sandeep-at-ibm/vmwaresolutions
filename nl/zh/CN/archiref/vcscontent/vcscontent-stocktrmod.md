@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,18 +13,21 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 将 WebSphere Application Server 中的 Stock Trader 转换为容器中的 Stock Trader
+{: #vcscontent-stocktrmod}
 
 在 Stock Trader 现代化之旅中，下一步是将工作负载从在虚拟机 (VM) 中运行转换为在容器中运行。
 
 接着，Todd 和 Jane 运行了 Transformation Advisor 来分析 Stock Trader 工作负载，识别任何迁移复杂性并建议更改。准备就绪后，他们使用 Transformation Advisor 将 Stock Trader 部署到在 {{site.data.keyword.icpfull_notm}} 中运行的 Liberty 容器中。
 
 ## 准备 IBM Cloud Private
+{: #vcscontent-stocktrmod-prep-icp}
 
 Todd 首先需要安装 {{site.data.keyword.icpfull_notm}}。Todd 在 {{site.data.keyword.cloud_notm}} 环境中有 VMware，因此他决定使用 {{site.data.keyword.cloud_notm}} Private Hosted 产品来获得在 {{site.data.keyword.cloud_notm}} 中的 VMware VM 上运行的完整 {{site.data.keyword.icpfull_notm}} 实例。
 
 缺省仪表板提供了一个综合用户界面，用于通过目录来管理 Kubernetes 集群、安全性、存储和部署。
 
 ### 准备存储器
+{: #vcscontent-stocktrmod-prep-storage}
 
 {{site.data.keyword.cloud_notm}} Private Hosted 现成配置为使用 GlusterFS，并提供了跨 VM（作为专用 GlusterFS 节点）的文件存储器。GlusterFS 的价值在于它支持动态供应。Todd 可以根据需要将额外的 VM 设置为 NFS 服务器。
 
@@ -67,6 +70,7 @@ Todd 运行了以下命令以确认安装的版本：
 `chmod 777 <foldername>`
 
 ### 准备映像安全性
+{: #vcscontent-stocktrmod-prep-img-sec}
 
 在 {{site.data.keyword.icpfull_notm}} V3.1 中，通过要求在任何映像拉取到 {{site.data.keyword.icpfull_notm}} 实例之前落实映像策略，从而增强了安全性。此增强功能需要为 IBM 映像所在的位置 *dockerhub/ibmcom* 以及在 Docker 存储中添加映像策略。
 
@@ -77,12 +81,14 @@ Todd 运行了以下命令以确认安装的版本：
 请在 [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/manage_cluster/enable_pod_security.html) 中了解更多信息。
 
 ## 部署 Transformation Advisor 和 Microclimate
+{: #vcscontent-stocktrmod-deploy-tam}
 
 Todd 在 {{site.data.keyword.icpfull_notm}} 开始运行后，安装了 Transformation Advisor 以及 Microclimate。Todd 打开[目录](https://www.ibm.com/cloud/private/developer)并查看了所有可用内容。
 
 Todd 单击 Helm Chart 后，搜索 Transformation Advisor 和 Microclimate，并使用提供的自述文件指示信息安装了这两项。
 
 ### 运行 Transformation Advisor
+{: #vcscontent-stocktrmod-run-trans-advisor}
 
 为了运行 Transformation Advisor，Jane 在 WebSphere 中运行 Stock Trader 的 VM 中添加了数据收集器，然后打开 [Transformation
 Advisor](https://developer.ibm.com/recipes/tutorials/using-the-transformation-advisor-on-ibm-cloud-private/) 用户界面以查看结果。
@@ -96,6 +102,7 @@ Jane 单击 Stock Trader，并查看了在 Liberty 中运行每个 WAR 文件的
 Todd 在转换步骤期间未变更数据源。Transformation Advisor 获取了 WebSphere Application Server Network Deployment 数据源配置，并将其添加到 Liberty 容器的 server.xml。
 {:important}
 
-### 相关链接
+## 相关链接
+{: #vcscontent-stocktrmod-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

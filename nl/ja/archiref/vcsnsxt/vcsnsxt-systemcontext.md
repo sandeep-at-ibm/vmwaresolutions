@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # システム・コンテキスト
+{: #vcsnsxt-systemcontext}
 
 このシステム・コンテキスト図は、システムの主要な要素、システムの境界、システムと対話するエンティティー、およびその対話を表しています。 これは、システムの初期構想を読み手に伝えるための概要図です。
 
@@ -23,6 +24,7 @@ lastupdated: "2019-01-23"
 - **IBM Cloud Services** - {{site.data.keyword.cloud_notm}} で提供されている幅広いサービスです。 サービスには、例えば、分析、AI、IoT などの選択肢があります。
 
 ## アクター
+{: #vcsnsxt-systemcontext-actors}
 
 システム・コンテキスト図には、以下のアクターが表されています。
 
@@ -37,6 +39,7 @@ lastupdated: "2019-01-23"
 {{site.data.keyword.containerlong_notm}} | サービスの {{site.data.keyword.containerlong_notm}} マスター・ノードを管理する IBM の人的リソースです。
 
 ## システム
+{: #vcsnsxt-systemcontext-systems}
 
 システム・コンテキスト図には、以下のシステムが表されています。
 
@@ -47,11 +50,12 @@ lastupdated: "2019-01-23"
 vCenter | vCenter は、システム管理者がオンプレミス VM を管理したり、HCX プラグインにアクセスしてネットワークを拡張したり、VM をマイグレーションしたりできる主要なインターフェースです。 vCenter Server with Hybridity Bundle を使用すると、システム管理者は、オンプレミス vSphere ネットワークを {{site.data.keyword.cloud_notm}} で稼働する vCenter Server インスタンスにシームレスに統合できます。 Hybrid ネットワーキングにより、オンプレミス・ネットワークが {{site.data.keyword.cloud_notm}} に拡張されるので、お客様のアプリケーションを {{site.data.keyword.cloud_notm}} 上で稼働する vCenter Server インスタンスにマイグレーションしたり、必要に応じてオンプレミスに戻したりすることができます。 vCenter Server with Hybridity Bundle について詳しくは、[VMware HCX on {{site.data.keyword.cloud_notm}} ソリューション・アーキテクチャー](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)のドキュメントを参照してください。
 オンプレミス VM | オンプレミス VM は、クラウドにマイグレーションするアプリケーションをホストします。 最初は VM としてマイグレーションされますが、その後、アプリケーション・モダナイゼーション・ジャーニーを経て VM からコンテナーにマイグレーションされます。
 クラウド VM 上 | クラウド VM は、オンプレミスからマイグレーションされたアプリケーションをホストします。 拡張された L2 ネットワークを介して、オンプレミス・アプリケーションと通信します。 このリファレンス・アーキテクチャーの Acme Skateboards 社の例では、クラウド VM の 1 つは、オンライン・プレゼンス・ワークロードの一部であるデータベース・サーバーです。
-NSX-V | vCenter Server の NSX-V は、システム管理者が管理するソフトウェア定義オーバーレイ・ネットワークを提供します。 このオーバーレイ・ネットワークが、HCX で拡張されるネットワークのターゲットであり、{{site.data.keyword.icpfull_notm}} の VM からのトラフィックを処理します。 NSX-V には、vSphere 分散スイッチ (vDS) を使用した、VMware 内のオンデマンド仮想ネットワークおよびマイクロ・セグメンテーション・サービスのデプロイ、再構成、破棄などの機能を備えたリファレンス・アーキテクチャーが用意されています。 詳しくは、[NSX–V の概要](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-ic4vnsxv.html)を参照してください。
+NSX-V | vCenter Server の NSX-V は、システム管理者が管理するソフトウェア定義オーバーレイ・ネットワークを提供します。 このオーバーレイ・ネットワークが、HCX で拡張されるネットワークのターゲットであり、{{site.data.keyword.icpfull_notm}} の VM からのトラフィックを処理します。 NSX-V には、vSphere 分散スイッチ (vDS) を使用した、VMware 内のオンデマンド仮想ネットワークおよびマイクロ・セグメンテーション・サービスのデプロイ、再構成、破棄などの機能を備えたリファレンス・アーキテクチャーが用意されています。 詳しくは、[NSX–V の概要](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)を参照してください。
 CAM | {{site.data.keyword.cloud_notm}} Automation Manager (CAM) は、{{site.data.keyword.icpfull_notm}} 上で実行され、単一画面でテンプレートを使用して、Kubernetes ベースのワークロードと一緒に VM ベースのワークロードをプロビジョンできます。 開発者は、CAM を使用して以下を行うことができます。 <br> - vCenter Server、{{site.data.keyword.icpfull_notm}}、または {{site.data.keyword.containerlong_notm}} にワークロードをプロビジョンする。<br> - VM とコンテナーの両方から構成されるサービスを作成およびオーケストレーションする。 <br> - DevOps ツールチェーンと Day 2 の ITSM ソリューションを統合する。
 コンテナー化アプリケーション | アプリケーション・モダナイゼーション・ジャーニーを経て、コンテナーとして稼働するようになったアプリ。 このリファレンス・アーキテクチャーの Acme Skateboards 社の事例では、コンテナー化アプリケーションの 1 つは、オンライン・プレゼンス・ワークロードの一部である Web サーバーです。
 Watson | このリファレンス・アーキテクチャーの Acme Skateboards 社の例では、Watson が、「コンセプト・カー」アーキテクチャーで使用される AI サービスになります。
 
-### 関連リンク
+## 関連リンク
+{: #vcsnsxt-systemcontext-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

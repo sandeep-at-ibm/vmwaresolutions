@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-08-30"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-08-30"
 {:important: .important}
 
 # V2.5 のリリース・ノート
+{: #relnotes_v25}
 
 このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
@@ -24,11 +25,11 @@ lastupdated: "2018-08-30"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-詳しくは、[Spectre および Meltdown 脆弱性への対処](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)を参照してください。
+詳しくは、[Spectre および Meltdown 脆弱性への対処](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)を参照してください。
 
 ## NSX コンポーネントの更新
 
-このリリースは、VMware vCenter Server on {{site.data.keyword.cloud_notm}}、VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle、NetApp ONTAP Select、および VMware Federal on {{site.data.keyword.cloud_notm}} の新しいデプロイメントのための VMware NSX for vSphere 6.4.1 をインストールします。
+このリリースは、VMware vCenter Server on {{site.data.keyword.cloud_notm}}、VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle、NetApp ONTAP Select の新しいデプロイメントのための VMware NSX for vSphere 6.4.1 をインストールします。
 
 ## デフォルト・バックアップ構成の削除
 
@@ -36,7 +37,7 @@ lastupdated: "2018-08-30"
 
 V2.5 リリース以降、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} および Veeam on {{site.data.keyword.cloud_notm}} サービスは、デプロイ時に VM のバックアップの事前構成を行いません。 この変更により、スケジュール作成、保存期間、重複排除の使用、モニタリングとアラート、暗号キーの管理など、バックアップ・ジョブのすべての側面をユーザーが適切に構成できるようになりました。 さらに、IBM CloudDriver VM は、NSX バックアップ用の永続的なファイル・サーバーとしては構成されなくなります。
 
-お客様は、管理インフラストラクチャーとワークロードのバックアップと可用性など、すべてのソフトウェア・コンポーネントの構成、管理、およびモニタリングについての責任があります。 詳しくは、[コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#backing-up-components)を参照してください。
+お客様は、管理インフラストラクチャーとワークロードのバックアップと可用性など、すべてのソフトウェア・コンポーネントの構成、管理、およびモニタリングについての責任があります。 詳しくは、[コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#backing-up-components)を参照してください。
 
 この変更は、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} や Veeam on {{site.data.keyword.cloud_notm}} サービスがインストールされている、V2.5 より前にデプロイされたインスタンスには影響しません。
 {:note}
@@ -55,8 +56,8 @@ V2.5 リリースから、{{site.data.keyword.vmwaresolutions_short}} は IBM Id
 * V2.4 以前のリリースでデプロイされたインスタンスは、指定の {{site.data.keyword.cloud_notm}} アカウントにマイグレーションしてから、IAM を使用して管理できます。
 
 詳しくは、以下のトピックを参照してください。
-* [サービスとリソースにアクセスするようにユーザーを招待する](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
-* [IAM でのユーザー・アクセス権限の管理](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [サービスとリソースにアクセスするようにユーザーを招待する](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
+* [IAM でのユーザー・アクセス権限の管理](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
 
 ## VMware vCenter Server および VMware Cloud Foundation インスタンスのためのユーザー・アカウントとグループへの変更
 
@@ -64,14 +65,14 @@ V2.5 リリースから、{{site.data.keyword.vmwaresolutions_short}} は IBM Id
 
 VMware vSphere Web Client の**「ユーザーおよびグループ」**ページで**「ic4v-vCenter」**グループのグローバル許可を編集しないでください。 編集すると、管理操作が影響を受ける可能性があります。
 
-Cloud Foundation インスタンスの場合、**customerroot** ホスト・ユーザー ID を **root** ホスト・ユーザー ID の代わりに使用します。 
+Cloud Foundation インスタンスの場合、**customerroot** ホスト・ユーザー ID を **root** ホスト・ユーザー ID の代わりに使用します。
 
-vCenter Server インスタンスの場合、**root** ホスト・ユーザー ID を引き続き使用します。**ic4vroot** ホスト・ユーザー ID は、IBM 専用に作成されたものです。
+vCenter Server インスタンスの場合、**root** ホスト・ユーザー ID を引き続き使用します。 **ic4vroot** ホスト・ユーザー ID は、IBM 専用に作成されたものです。
 
 ユーザー・アカウントについて詳しくは、以下のトピックを参照してください。
 
-* [vCenter Server 成果物の変更に関する考慮事項](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
-* [Cloud Foundation 成果物の変更に関する考慮事項](/docs/services/vmwaresolutions/sddc/cf_chg_impact.html)
+* [vCenter Server 成果物の変更に関する考慮事項](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)
+* [Cloud Foundation 成果物の変更に関する考慮事項](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cf_chg_impact)
 
 ## アドオン・サービスの更新
 
@@ -99,7 +100,7 @@ V2.5 リリースから、IBM Spectrum Protect Plus on {{site.data.keyword.cloud
 
 ### 接続されたストレージの資料
 
-vCenter Server on IBM Cloud の接続されたストレージに関する技術資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。 詳しくは、[vCenter Server on IBM Cloud の接続されたストレージ](/docs/services/vmwaresolutions/archiref/attached-storage/storage-benefits.html)を参照してください。
+vCenter Server on IBM Cloud の接続されたストレージに関する技術資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。 詳しくは、[vCenter Server on IBM Cloud の接続されたストレージ](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits)を参照してください。
 
 ### 技術仕様
 
@@ -111,9 +112,9 @@ vCenter Server on IBM Cloud の接続されたストレージに関する技術�
 
 詳しくは、以下のトピックを参照してください。
 
-* [vCenter Server インスタンスで使用可能なサービス](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
-* [vCenter Server with Hybridity Bundle インスタンスで使用可能なサービス](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [Cloud Foundation インスタンス用の使用可能なサービス](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
+* [vCenter Server インスタンスで使用可能なサービス](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)
+* [vCenter Server with Hybridity Bundle インスタンスで使用可能なサービス](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [Cloud Foundation インスタンス用の使用可能なサービス](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices#available-services-for-cloud-foundation-instances)
 
 ## ユーザー・インターフェースの更新と向上
 

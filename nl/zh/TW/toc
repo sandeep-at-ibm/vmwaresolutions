@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="vmware-solutions" audience="infrastructure" arm="3662801" href="/docs/services/vmwaresolutions/index.html" path="services/vmwaresolutions"}
+{: .toc subcollection="vmware-solutions" audience="infrastructure" arm="3662801" href="/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started" path="services/vmwaresolutions"}
 IBM Cloud for VMware Solutions
 
     {: .navgroup id="learn"}
@@ -123,19 +123,6 @@ IBM Cloud for VMware Solutions
         netapp/np_deletinginstance.md
 
     {: .topicgroup}
-    VMware Federal on IBM Cloud
-        vcenter/vc_fed_overview.md
-        vcenter/vc_fed_planning.md
-        vcenter/fed_networking.md
-        vcenter/vc_fed_orderinginstance.md
-        vcenter/fed_addviewdeleteclusters.md
-        vcenter/vc_fed_addingremovingservers.md
-        vcenter/vc_fed_viewinginstance.md
-        vcenter/vc_fed_addinstancetousraccount.md
-        vcenter/vc_fed_securinginstance.md
-        vcenter/vc_fed_deletinginstance.md
-
-    {: .topicgroup}
     F5 on IBM Cloud
         services/f5_considerations.md
         services/f5_ordering.md
@@ -240,7 +227,6 @@ IBM Cloud for VMware Solutions
         vcenter/vc_networkingonvcenterserver.md
         vcenter/vc_hybrid_networkingonvcenterserver.md
         sddc/sd_networkingoncloudfoundation.md
-        vcenter/fed_networking.md
         vmonic/trbl_limitations.md
 
     {: .topicgroup}
@@ -253,8 +239,6 @@ IBM Cloud for VMware Solutions
         vmonic/trbl_host_displays_warning_msg.md
         vmonic/trbl_deploy_ovf.md
         vmonic/trbl_vsan_alerts.md
-        vmonic/trbl_mixed_multisite.md
-        vmonic/movinginstances.md
         vmonic/getting-started.md
         vmonic/trbl_fix_spectre.md
     {: .navgroup-end}
@@ -282,7 +266,22 @@ IBM Cloud for VMware Solutions
         archiref/attached-storage/storage-infra-mgmt.md
         archiref/attached-storage/storage-settings.md
         archiref/attached-storage/cluster-settings.md
-    
+
+    {: .topicgroup}
+    Caveonix RiskForesight 參照架構
+        archiref/caveonix/caveonix-intro.md
+        archiref/caveonix/caveonix-on-vcs.md
+        archiref/caveonix/caveonix-arch.md
+        archiref/caveonix/caveonix-detailed.md
+        archiref/caveonix/caveonix-deploy.md
+        archiref/caveonix/caveonix-allinone.md
+        archiref/caveonix/caveonix-partial.md
+        archiref/caveonix/caveonix-fully.md
+        archiref/caveonix/caveonix-step1.md
+        archiref/caveonix/caveonix-step2.md
+        archiref/caveonix/caveonix-step3.md
+        archiref/caveonix/caveonix-step4.md
+        archiref/caveonix/caveonix-terminology.md
 
     {: .topicgroup}
     NSX Edge Services Gateway 解決方案架構
@@ -395,5 +394,18 @@ IBM Cloud for VMware Solutions
         archiref/hcx-archi/hcx-archi-migrate-vm.md
         archiref/hcx-archi/hcx-archi-mod-uninstall.md
         archiref/hcx-archi/hcx-archi-trbl.md
+
+    {: .topicgroup}
+    HCX on IBM Cloud 部署與作業手冊
+        archiref/vcshcx/vcshcx-intro.md
+        archiref/vcshcx/vcshcx-planning.md
+        archiref/vcshcx/vcshcx-licensing.md
+        archiref/vcshcx/vcshcx-deployment.md
+        archiref/vcshcx/vcshcx-stretching.md
+        archiref/vcshcx/vcshcx-monitoring.md
+        archiref/vcshcx/vcshcx-upgrade.md
+        archiref/vcshcx/vcshcx-troubleshooting.md
+        archiref/vcshcx/vcshcx-removal.md
+        archiref/vcshcx/vcshcx-components.md
 
     {: .navgroup-end}

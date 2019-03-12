@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Private
+{: #vcsnsxt-overview-icp}
 
 {{site.data.keyword.icpfull_notm}} 是一個應用程式平台，用於開發及管理容器化應用程式。這是整合環境，其中包括容器編排程式 Kubernetes、專用映像檔儲存庫、管理主控台、監視架構和圖形使用者介面，您可以集中在此介面中部署、管理、監視及調整應用程式。
 
@@ -21,6 +22,7 @@ lastupdated: "2019-01-23"
 -	**使用 ELK 堆疊的健全監視及記載** - {{site.data.keyword.cloud_notm}} Private 使用 Elasticsearch、Logstash、Filebeat 及 Heapster 來收集、儲存及查詢日誌和度量值。此監視及記載處理程序會為所有日誌及度量值提供一個集中儲存庫，以及在您存取及查詢日誌和度量值時，提供較佳的效能並增加穩定性。
 
 ## IBM Cloud Private 元件
+{: #vcsnsxt-overview-icp-comp}
 
 {{site.data.keyword.cloud_notm}} Private 叢集具有四個主要類別的節點：啟動、主節點、工作者節點及 Proxy。您可以選擇性地在叢集中指定管理、「漏洞警告器 (VA)」及 etcd 節點。
 -	**啟動節點** - 啟動節點用於執行安裝、配置、節點調整及叢集更新。
@@ -32,11 +34,13 @@ lastupdated: "2019-01-23"
 -	**etcd** 節點 - etcd 節點是選用性節點，可用來執行 etcd 分散式鍵值儲存庫。
 
 ## IBM Cloud Private 網路
+{: #vcsnsxt-overview-icp-networking}
 
 使用 Calico 可促進 {{site.data.keyword.icpfull_notm}} 網路管理。Calico 使用 Open System Interconnection (OSI) 模型的第 3 層或網路層。Calico 使用「邊界閘道通訊協定 (BGP)」來建置遞送表，以促進代理程式節點之間的通訊。
 
-如需 Calico 網路的相關資訊，請參閱 [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-iks.html)。
+如需 Calico 網路的相關資訊，請參閱 [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks)。
 
-### 相關鏈結
+## 相關鏈結
+{: #vcsnsxt-overview-icp-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

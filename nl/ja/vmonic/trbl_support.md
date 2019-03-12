@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2018-12-11"
 {:important: .important}
 
 # IBM サポートへのお問い合わせ
+{: #trbl_support}
 
 {{site.data.keyword.vmwaresolutions_full}} に関するサポートが必要な場合は、{{site.data.keyword.vmwaresolutions_short}} コンソールで {{site.data.keyword.cloud_notm}} サポート・チケットを作成して、支援を受けてください。
 
 ## IBM Cloud for VMware Solutions コンソールでサポート・チケットを送信する手順
+{: #trbl_support-procedure}
 
 1. https://console.cloud.ibm.com/infrastructure/vmware-solutions/console にアクセスします。
 2. **IBM ID** アカウントでコンソールにログインします。

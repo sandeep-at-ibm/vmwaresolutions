@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Cloud Foundation の部品構成表
+{: #sd_bom}
 
 VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情報について説明します。
 
 ## Cloud Foundation インスタンスの VLAN の BOM
+{: #sd_bom-vlans}
 
 以下の表には、Cloud Foundation の VLAN に関する BOM 情報が詳述されています。
 
@@ -25,6 +27,7 @@ VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情�
 | VLAN3     | プライベート B、ポータブル | 使用される場合、VMware vSAN に割り当てられます。<br><br>使用される場合、VMware NFS に割り当てられます。<br><br>VMware vSphere vMotion に割り当てられます。 |
 
 ## Cloud Foundation インスタンスのソフトウェアの BOM
+{: #sd_bom-software}
 
 以下の表には、Cloud Foundation のソフトウェア・コンポーネントに関する BOM 情報が詳述されています。
 
@@ -41,6 +44,7 @@ VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情�
 | Microsoft    | Windows Server Standard Edition (64 ビット) | 2012R2       |
 
 ## ESXi サーバーの拡張構成の設定
+{: #sd_bom-esxi-server-advance-config}
 
 次の表で、ESXi サーバーで適用される拡張構成設定の概要を確認してください。 この設定は、Cloud Foundation インスタンスが以前のリリース (V2.1 以前) から V2.2 以降にデプロイ (またはアップグレード) されるかどうかによって異なります。
 
@@ -59,6 +63,7 @@ VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情�
 | キュー・フルのしきい値 | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
 ### メモ
+{: #sd_bom-notes}
 
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} サービスには **MaxVolumes** 設定が必要です。このサービスは、ESXi サーバーのデフォルトの NFS マウント数を超える NFS マウントを使用する可能性があるからです。
 * **「未設定」**という構成設定の値は、ESXi サーバーを再起動しないと新しい設定が自動では適用されないことを示していますが、混乱を招く可能性があります。
@@ -67,10 +72,11 @@ VMware Cloud Foundation インスタンスに関する部品構成表 (BOM) 情�
 
   詳しくは、[Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239) を参照してください。
 
-### 関連リンク
+## 関連リンク
+{: #sd_bom-related}
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Cloud Foundation の概要](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Cloud Foundation インスタンスの計画](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Cloud Foundation の概要](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Cloud Foundation インスタンスの計画](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)

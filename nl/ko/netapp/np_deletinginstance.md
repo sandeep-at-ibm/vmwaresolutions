@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # NetApp ONTAP Select 인스턴스 삭제
+{: #np_deletinginstance}
 
 NetApp ONTAP Select 인스턴스를 삭제하면 다음 컴포넌트가 순차적으로 릴리스됩니다.
 1. 가상 머신(VM) 및 NetApp ONTAP Select Deploy VM을 클러스터링한 배치된 NetApp ONTAP Select
@@ -28,6 +29,7 @@ NetApp ONTAP Select 인스턴스를 삭제하면 다음 컴포넌트가 순차�
 {:note}
 
 ## 배치된 인스턴스 페이지에서 인스턴스를 삭제하는 프로시저
+{: #np_deletinginstance-procedure1}
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **NetApp ONTAP Select 인스턴스** 테이블에서 삭제할 인스턴스를 찾으십시오.
@@ -38,6 +40,7 @@ NetApp ONTAP Select 인스턴스를 삭제하면 다음 컴포넌트가 순차�
    2. **인스턴스 삭제** 창에서 **확인**을 클릭하십시오.
 
 ## 인스턴스 세부사항 페이지에서 인스턴스를 삭제하는 프로시저
+{: #np_deletinginstance-procedure2}
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **NetApp ONTAP Select 인스턴스** 테이블에서 삭제할 인스턴스를 클릭하십시오.
@@ -47,8 +50,9 @@ NetApp ONTAP Select 인스턴스를 삭제하면 다음 컴포넌트가 순차�
    1. **vCenter 콘솔** 옆에 있는 오버플로우 메뉴 아이콘을 다시 클릭하고 **인스턴스 삭제**를 클릭하십시오.
    2. **인스턴스 삭제** 창에서 **확인**을 클릭하십시오.
 
-### 관련 링크
+## 관련 링크
+{: #np_deletinginstance-related}
 
-* [NetApp ONTAP Select 인스턴스 주문](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [NetApp ONTAP Select 인스턴스 보기](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
-* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [NetApp ONTAP Select 인스턴스 주문](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [NetApp ONTAP Select 인스턴스 보기](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

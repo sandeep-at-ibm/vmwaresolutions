@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # FortiGate Security Appliance on IBM Cloud 개요
+{: #fsa_considerations}
 
 FortiGate Security Appliance on {{site.data.keyword.cloud}} 서비스는 고가용성 모드에서 방화벽, 라우팅, NAT 및 VPN 서비스를 제공하도록 FSA(FortiGate Security Appliance) 300 시리즈 디바이스의 쌍을 배치하여 인스턴스의 공용 VLAN에서 모든 서버 및 가상 머신을 보호합니다.
 
@@ -22,24 +23,29 @@ SSH를 통해 FortiOS Web Client 또는 명령 인터페이스를 사용하여 �
 {:note}
 
 ## FortiGate Security Appliance on IBM Cloud의 기술 스펙
+{: #technical-specifications-for-fortigate-security-appliance-on-ibm-cloud}
 
 다음 컴포넌트가 주문되고 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
 ### 하드웨어
+{: #fsa_considerations-hardware}
 
 FortiGate 300 시리즈 Security Appliance.
 
 ### 고가용성
+{: #fsa_considerations-ha}
 
 2개의 어플라이언스가 활성-수동 구성에 배치됩니다.
 
 ### 네트워킹
+{: #fsa_considerations-networking}
 
 * 업스트림 및 다운스트림 네트워크 모두에 연결된 듀얼 1GbE
 * 하나의 새 업스트림 {{site.data.keyword.cloud_notm}} 공용 VLAN
 * 하나의 기존 다운스트림 {{site.data.keyword.cloud_notm}} 공용 VLAN
 
 ## FortiGate Security Appliance on IBM Cloud 설치 시 고려사항
+{: #fsa_considerations-install}
 
 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스를 설치하기 전에 다음 고려사항을 검토하십시오.
 * 사용 중인 {{site.data.keyword.cloud_notm}} 계정에 **Hardware Firewall** 권한이 있는지 확인하십시오. 이 권한은 인스턴스의 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스에 대한 방화벽 로그 및 설정을 편집하거나 보는 데 필요합니다.
@@ -51,17 +57,19 @@ FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스를 �
 * 추가 클러스터를 주문하는 경우, 이러한 새로 추가된 클러스터에 대한 공용 VLAN에는 Security Appliance의 HA 이중화가 없습니다.
 
 ## FortiGate Security Appliance on IBM Cloud 제거 시 고려사항
+{: #fsa_considerations-remove}
 
 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 다음 고려사항을 검토하십시오.
 * FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스를 제거하면 추가된 공용 VALN이 제거됩니다.
 * 서비스 제거 중에 일시적으로 인스턴스가 인터넷에 액세스할 수 없습니다.
 * NAT 트래픽을 허용, 검사, 차단 및 라우트할 모든 FortiGate 규칙이 Fortinet 서비스와 함께 제거됩니다. NAT 규칙이 있는 경우 다시 구성해야 합니다.
 
-### 관련 링크
+## 관련 링크
+{: #fsa_considerations-related}
 
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/fsa_ordering.html)
-* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managingfsa.html)
-* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_ordering)
+* [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Fortinet 웹 사이트](https://www.fortinet.com/){:new_window}
 * [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,13 +13,15 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 从 vCenter Server 实例中除去 Hybridity Bundle
+{: #vc_hybrid_deletingbundle}
 
 要从 vCenter Server 实例中除去 Hybridity Bundle 许可证，必须在 VMware vSphere Web Client 中将 VMware NSX 和 VMware vSAN 租用许可证密钥替换为自带许可证 (BYOL) 密钥。此外，您必须开具支持凭单以取消租用许可证的费用。
 
-对许可证降级可能会导致 vCenter Server 实例发生故障。您可以选择自行承担许可证降级风险，但请首先考虑降级时不可用的功能。有关更多信息，请参阅 [VMware 组件版本的比较图表](/docs/services/vmwaresolutions/archiref/solution/appendix.html)。
+对许可证降级可能会导致 vCenter Server 实例发生故障。您可以选择自行承担许可证降级风险，但请首先考虑降级时不可用的功能。有关更多信息，请参阅 [VMware 组件版本的比较图表](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix)。
 {:important}
 
 ## 从多站点环境中除去 Hybridity Bundle 之前的重要注意事项
+{: #vc_hybrid_deletingbundle-considerations}
 
 在从多站点环境中除去 Hybridity Bundle 之前，请查看以下注意事项：
 
@@ -31,6 +33,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## 除去 Hybridity Bundle 之前
+{: #vc_hybrid_deletingbundle-prereq}
 
 除去 Hybridity Bundle 之前，请先验证以下需求：
 
@@ -41,6 +44,7 @@ lastupdated: "2019-01-23"
 * （可选）如果尚未将可用的 BYOL 密钥应用于 VMware vCenter Server 和 VMware vSphere Enterprise Plus 许可证，请进行应用。
 
 ## 除去 Hybridity Bundle 的过程
+{: #vc_hybrid_deletingbundle-procedure}
 
 1. 以**管理员**身份登录到要除去 HHybridity Bundle 的 VMware vSphere Web Client。
 2. 单击**主页 > 管理 > 许可 > 许可证**。
@@ -107,8 +111,9 @@ lastupdated: "2019-01-23"
   IBM 支持团队和运营团队会访问您的 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户的 vCenter 管理层，以验证租用许可证是否已除去。如果确定租用许可证已除去，即会取消 Hybridity Bundle 租用许可证费用。
   {:note}
 
-### 相关链接
+## 相关链接
+{: #vc_hybrid_deletingbundle-related}
 
-* [订购 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [查看 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [订购 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [查看 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

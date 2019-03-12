@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,19 +13,23 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # 订购 VMware HCX on IBM Cloud
+{: #hcx_ordering}
 
 订购 VMware HCX on {{site.data.keyword.cloud}} 服务时，可订购包含此服务的新 VMware vCenter Server with Hybridity Bundle 实例，也可通过向现有实例添加此服务来进行订购。
 
 ## 为新实例订购 VMware HCX on IBM Cloud
+{: #hcx_ordering-new}
 
 要订购包含 VMware HCX on {{site.data.keyword.cloud_notm}} 的新 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 实例，请在从 {{site.data.keyword.vmwaresolutions_short}} 控制台订购该实例时在**服务**部分中选择 **VMware HCX on IBM Cloud**。
 
 
 ## 为现有实例订购 VMware HCX on IBM Cloud
+{: #hcx_ordering-existing}
 
 要将 VMware HCX on {{site.data.keyword.cloud_notm}} 服务添加到现有 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 实例，请查看要为其添加服务的实例，单击左侧导航窗格上的**服务**，然后单击**添加**。
 
 ## VMware HCX on IBM Cloud 配置
+{: #hcx_ordering-config}
 
 要安装 HCX on {{site.data.keyword.cloud_notm}}，请完成以下设置：
 1. 通过选择下列其中一个选项来指定 **HCX 互连类型**：
@@ -47,6 +51,7 @@ lastupdated: "2019-01-24"
   <!--Need enhancement, it is still not clear what the key pair is used for, is it for connecting to NSX? This is not in architecture doc either. -->
 
 ## HCX on IBM Cloud 的部署过程
+{: #hcx_ordering-deploy}
 
 部署 HCX on {{site.data.keyword.cloud_notm}} 会自动执行。无论是订购 vCenter Server with Hybridity Bundle 实例时包含此服务，还是稍后再将此服务部署到实例中，都会通过 {{site.data.keyword.vmwaresolutions_short}} 自动过程来完成以下步骤：
 1. 为 {{site.data.keyword.cloud_notm}} 基础架构中的 HCX 订购三个子网：
@@ -76,12 +81,13 @@ lastupdated: "2019-01-24"
    * 配置本地和远程 HCX 部署容器。
 7. 向 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的 DNS 服务器注册 HCX Manager 的主机名和 IP 地址。
 
-### 相关链接
+## 相关链接
+{: #hcx_ordering-related}
 
-* [HCX on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/hcx_considerations.html)
-* [管理 HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)
-* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
-* [HCX 术语的词汇表](/docs/services/vmwaresolutions/services/hcx_glossary.html)
-* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [HCX on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [管理 HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
+* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [HCX 术语的词汇表](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [VMware Hybrid Cloud Extension 概述](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension 文档](https://cloud.vmware.com/vmware-hcx/resources)

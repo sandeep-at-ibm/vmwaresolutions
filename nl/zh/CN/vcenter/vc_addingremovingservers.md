@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 扩展和收缩 vCenter Server 实例的容量
+{: #vc_addingremovingservers}
 
 可以根据业务需求，通过添加或除去 ESXi 服务器或网络文件系统 (NFS) 存储器，扩展或收缩 VMware vCenter Server 实例的容量。
 
@@ -22,17 +23,20 @@ lastupdated: "2019-01-23"
 如果初始集群将 vSAN 作为其存储器，那么在部署后添加一个或多个 ESXi 服务器可以增加集群存储容量。
 
 ## 向 vCenter Server 实例添加 ESXi 服务器
+{: #vc_addingremovingservers-adding}
 
 ### 在添加 ESXi 服务器之前
+{: #vc_addingremovingservers-adding-prereq}
 
 * 不要通过 VMware vSphere Web Client 来添加 ESXi 服务器。在 vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_full}} 控制台同步。
 * 使用 NFS 存储器的 vCenter Server 实例必须至少具有 2 个 ESXi 服务器。对于在 V2.1 或更高版本中部署的实例，可以将缺省集群扩展为最多具有 51 个 ESXi 服务器。每个非缺省集群可以扩展为最多具有 59 个 ESXi 服务器。
 * 使用 vSAN 存储器的 vCenter Server 实例必须至少具有 4 个 ESXi 服务器。
 * 对于在 V2.0 或更低版本中部署的 vCenter Server 实例，可以将每个集群扩展为最多具有 32 个 ESXi 服务器。一次可以添加的 {{site.data.keyword.baremetal_short}} 数量如下：
    * 对于**小型**、**中型**和**大型**配置，一次可以添加 1 到 10 个 ESXi 服务器。
-   * 对于 **Skylake** 和 **Broadwell** 配置，一次可以添加 1 到 20 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗？](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+   * 对于 **Skylake** 和 **Broadwell** 配置，一次可以添加 1 到 20 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ### 添加 ESXi 服务器的过程
+{: #vc_addingremovingservers-adding-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要扩展容量的实例。
@@ -42,14 +46,17 @@ lastupdated: "2019-01-23"
 6. 在**添加服务器**窗口中，输入要添加的服务器数，复查估算成本，然后单击**添加服务器**。
 
 ### 添加 ESXi 服务器后的结果
+{: #vc_addingremovingservers-adding-results}
 
 1. 当实例状态从**可供使用**变为**正在修改**时，您在控制台上可能会遇到轻微延迟。在对实例进行更多更改之前，请允许该操作完全完成。
 2. 系统将通过电子邮件通知您，正在处理添加 ESXi 服务器的请求。在控制台上，与 ESXi 服务器关联的集群的状态会更改为**正在修改**。
 3. 如果在集群中看不到添加到列表中的新 ESXi 服务器，请检查电子邮件或控制台通知以查找有关该故障的更多详细信息。
 
 ## 从 vCenter Server 实例中除去 ESXi 服务器
+{: #vc_addingremovingservers-removing}
 
 ### 在除去 ESXi 服务器之前
+{: #vc_addingremovingservers-removing-prereq}
 
 * 不要通过 VMware vSphere Web Client 来除去 ESXi 服务器。在 vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。
 * 使用 NFS 存储器的 vCenter Server 实例必须至少有 2 个 ESXi 服务器，使用 vSAN 存储器的 vCenter Server 实例必须至少有 4 个 ESXi 服务器。
@@ -58,6 +65,7 @@ lastupdated: "2019-01-23"
 * 除去 ESXi 服务器时，会将这些服务器置于维护模式，接着会迁移在这些服务器上运行的所有虚拟机 (VM)，然后从 vCenter Server 中除去这些服务器。为了最大程度地控制 VM 的重新定位，建议您先将要除去的 ESXi 服务器置于维护模式，然后使用 VMware vSphere Web Client 来手动迁移在这些 ESXi 服务器上运行的 VM。在此之后，使用 {{site.data.keyword.vmwaresolutions_short}} 控制台来除去 ESXi 服务器。
 
 ### 除去 ESXi 服务器的过程
+{: #vc_addingremovingservers-removing-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要压缩容量的实例。
@@ -66,6 +74,7 @@ lastupdated: "2019-01-23"
 5. 在 **ESXi 服务器**部分中，选择要除去的服务器，然后单击**除去**。
 
 ### 除去 ESXi 服务器后的结果
+{: #vc_addingremovingservers-removing-results}
 
 1. 当实例状态从**可供使用**变为**正在修改**时，您在控制台上可能会遇到轻微延迟。在对实例进行更多更改之前，请允许该操作完全完成。
 2. 系统将通过电子邮件通知您，正在处理除去 ESXi 服务器的请求。在控制台上，与 ESXi 服务器关联的集群的状态会更改为**正在修改**。
@@ -75,12 +84,15 @@ lastupdated: "2019-01-23"
    {:note}
 
 ## 向 vCenter Server 实例添加 NFS 存储器
+{: #section-adding-nfs-storage-to-vcenter-server-instances}
 
 ### 添加 NFS 存储器之前
+{: #vc_addingremovingservers-adding-nfs-storage-prereq}
 
 不要通过 VMware vSphere Web Client 来添加 NFS 存储器。在 vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。IBM 不会管理手动添加到实例的 NFS 文件共享。
 
 ### 添加 NFS 存储器的过程
+{: #vc_addingremovingservers-adding-nfs-storage-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要扩展容量的实例。
@@ -93,14 +105,17 @@ lastupdated: "2019-01-23"
 7. 单击**添加 NFS 存储器**。
 
 ### 添加 NFS 存储器后的结果
+{: #vc_addingremovingservers-adding-nfs-storage-results}
 
 1. 当实例状态从**可供使用**变为**正在修改**时，您在控制台上可能会遇到轻微延迟。在对实例进行更多更改之前，请允许该操作完全完成。
 2. 系统将通过电子邮件通知您，正在处理添加 NFS 存储器的请求。在控制台上，与 NFS 存储器关联的集群的状态会更改为**正在修改**。
 3. 如果在集群中看不到添加到列表中的新 NFS 存储器，请检查电子邮件或控制台通知以查找有关该故障的更多详细信息。
 
 ## 从 vCenter Server 实例中除去 NFS 存储器
+{: #vc_addingremovingservers-removing-nfs-storage}
 
 ### 除去 NFS 存储器之前
+{: #vc_addingremovingservers-removing-nfs-storage-prereq}
 
 * 不要通过 VMware vSphere Web Client 来除去 NFS 存储器。在 vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。
 * 除去 NFS 存储器之前，请确保已除去位于该存储器上的所有 VM。
@@ -108,6 +123,7 @@ lastupdated: "2019-01-23"
 * 该集群必须处于**可供使用**状态。
 
 ### 除去 NFS 存储器的过程
+{: #vc_addingremovingservers-removing-nfs-storage-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要压缩容量的实例。
@@ -117,6 +133,7 @@ lastupdated: "2019-01-23"
 6. 单击**除去存储器**窗口中的**除去**。
 
 ### 除去 NFS 存储器后的结果
+{: #vc_addingremovingservers-removing-nfs-storage-results}
 
 1. 当实例状态从**可供使用**变为**正在修改**时，您在控制台上可能会遇到轻微延迟。在对实例进行更多更改之前，请允许该操作完全完成。
 2. 系统将通过电子邮件通知您，正在处理除去 NFS 存储器的请求。在控制台上，与 NFS 存储器关联的集群的状态会更改为**正在修改**。
@@ -125,12 +142,12 @@ lastupdated: "2019-01-23"
    在所除去 NFS 存储器的 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束之前，仍然会对您计费。
 {:note}
 
+## 相关链接
+{: #vc_addingremovingservers-related}
 
-### 相关链接
-
-* [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
-* [针对 vCenter Server 实例的需求和规划](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
-* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
+* [针对 vCenter Server 实例的需求和规划](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
+* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 * [将主机置于维护模式](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) 处理器支持](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

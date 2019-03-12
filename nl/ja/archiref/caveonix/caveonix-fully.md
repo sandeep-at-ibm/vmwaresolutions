@@ -23,7 +23,7 @@ lastupdated: "2019-02-14"
 |RAM	|6 GB|
 |ディスク	|60 GB|
 |OS	|CentOS 7|
-|インストールされるアプリケーション・コンポーネント|UI|
+|インストールされるアプリケーション・コンポーネント	|UI|
 
 表 2. 基本 - アプリケーションとプラグイン
 
@@ -35,7 +35,7 @@ lastupdated: "2019-02-14"
 |RAM	|16 GB|
 |ディスク	|500 GB|
 |OS	|CentOS 7|
-|インストールされるアプリケーション・コンポーネント|アプリ、プラグイン|
+|インストールされるアプリケーション・コンポーネント	|アプリ、プラグイン|
 
 表 3. 基本 - Central Collector
 
@@ -46,8 +46,8 @@ lastupdated: "2019-02-14"
 |vCPU	|8 |
 |RAM	|16 GB |
 |ディスク	|500 GB |
-|OS	|CentOS 7|
-|インストールされるアプリケーション・コンポーネント|Central Collector (クラスター) |
+|OS	|CentOS 7 |
+|インストールされるアプリケーション・コンポーネント	|Central Collector (クラスター) |
 
 表 4. 基本 - リレーショナル・データベース
 
@@ -59,7 +59,7 @@ lastupdated: "2019-02-14"
 |RAM	|16 GB |
 |ディスク	|1 TB |
 |OS	C|entOS 7 |
-|インストールされるアプリケーション・コンポーネント|Relational Datastore (1 次 / 2 次) |
+|インストールされるアプリケーション・コンポーネント	|Relational Datastore (1 次 / 2 次) |
 
 表 5. 基本 - Messaging Datastore
 
@@ -70,8 +70,8 @@ lastupdated: "2019-02-14"
 |vCPU	|8 |
 |RAM	|16 GB |
 |ディスク	|1 TB |
-|OS	|CentOS 7|
-|インストールされるアプリケーション・コンポーネント|Messaging Datastore (クラスター) |
+|OS	|CentOS 7 |
+|インストールされるアプリケーション・コンポーネント	|Messaging Datastore (クラスター) |
 
 表 6. 基本 - Index Datastore (マスター・ノード)
 
@@ -82,8 +82,8 @@ lastupdated: "2019-02-14"
 |vCPU	|8 |
 |RAM	|16 GB |
 |ディスク	|1 TB |
-|OS	|CentOS 7|
-|インストールされるアプリケーション・コンポーネント|Index Datastore (マスター・ノード) |
+|OS	|CentOS 7 |
+|インストールされるアプリケーション・コンポーネント	|Index Datastore (マスター・ノード) |
 
 表 7. データベース - Index Datastore (データ・ノード)
 
@@ -94,8 +94,8 @@ lastupdated: "2019-02-14"
 |vCPU	|8 |
 |RAM	|16 GB |
 |ディスク	|4 TB |
-|OS	|CentOS 7|
-|インストールされるアプリケーション・コンポーネント|Index Datastore (データ・ノード) |
+|OS	|CentOS 7 |
+|インストールされるアプリケーション・コンポーネント	|Index Datastore (データ・ノード) |
 
 スケールアウト VM の詳細を以下の表に説明します。
 
@@ -108,8 +108,8 @@ lastupdated: "2019-02-14"
 |vCPU	|8 |
 |RAM	|16 GB |
 |ディスク	|4 TB |
-|OS	|CentOS 7|
-|インストールされるアプリケーション・コンポーネント|データ・ノード (スケールアウト) |
+|OS	|CentOS 7 |
+|インストールされるアプリケーション・コンポーネント	|データ・ノード (スケールアウト) |
 
 Remote Collector VM の詳細を以下の表に示します。
 
@@ -117,14 +117,14 @@ Remote Collector VM の詳細を以下の表に示します。
 
 |パラメーター	|値 |
 |---|---|
-|VM の数	|必要に応じた値|
+|VM の数	|必要に応じた値 |
 |vCPU	|8 |
 |RAM	|8 GB |
 |ディスク	|1 TB |
-|OS	|CentOS 7|
-|インストールされるアプリケーション・コンポーネント|Remote Collector|
+|OS	|CentOS 7 |
+|インストールされるアプリケーション・コンポーネント	|Remote Collector |
 
 ## 関連リンク
 {: #caveonix-fully-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

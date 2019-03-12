@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Mission Critical VMware on IBM Cloud 개요
+{: #mcv_overview}
 
 Mission Critical VMware on {{site.data.keyword.cloud}}는 다중 구역 클라우드 아키텍처를 제공하여 엔터프라이즈에서 클라우드 애플리케이션에 대한 가동 중단 시간이 발생하지 않도록 지원하고 클라우드 지역 내에서 장애 복구를 자동화합니다.
 
@@ -19,6 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}}는 다중 구역 클라�
 이 아키텍처에는 클라우드 기반 애플리케이션의 모니터링 및 문제점 해결을 위해 구축된 네트워크, 스토리지, 복원 및 기타 도구를 포함하여 다양한 엔터프라이즈 서비스가 포함됩니다. 또한 서비스를 폭넓게 사용할 수 있도록 {{site.data.keyword.cloud_notm}}에 구축된 IBM Services Platform with Watson과 이 아키텍처를 통합할 수 있습니다. 클라이언트는 플랫폼의 코그너티브 기능을 사용하여 지속적인 운영을 유지하는 데 도움이 되도록 새로운 비즈니스 인사이트를 위해 보다 효과적으로 데이터를 마이닝할 수 있습니다.
 
 ## Mission Critical VMware on IBM Cloud의 기술 스펙
+{: #technical-specifications-for-mission-critical-vmware-on-ibm-cloud}
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 아키텍처는 고객 워크로드에 대한 자동화된 장애 복구 기능을 제공하는 엔드-투-엔드 참조 아키텍처입니다. 이 제품은 다음 컴포넌트를 포함하는 IBM 관리 서비스와 함께 {{site.data.keyword.cloud_notm}} 다중 구역 지역을 사용합니다.
 
@@ -38,6 +40,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}}는 다음 지역에�
 * 아시아 태평양: 시드니 및 도쿄에 있는 모든 IBM Cloud 데이터 센터
 
 ### 기본 인프라 아키텍처 스펙
+{: #mcv_overview-base-specs}
 
 기본 인프라에는 다음과 같은 스펙이 포함되어 있습니다.
 * 각 사이트에 자체 전용 에지 및 관리 클러스터 포함
@@ -48,6 +51,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}}는 다음 지역에�
 * NSX Manager 복구는 백업 파일을 동기화하는 Hot/Standby 방법 사용
 
 ### 도구 및 기술 아키텍처 스펙
+{: #mcv_overview-tooling-specs}
 
 도구 및 기술 아키텍처에는 다음과 같은 스펙이 포함되어 있습니다.
 * 사용되는 VMware 제품(예: NSX, vSAN 및 vSphere)에 특정한 운영 및 관리 기능을 제공하는 vRealize Operations, vRealize Log Insight 및 vRealize Network Insight
@@ -56,6 +60,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}}는 다음 지역에�
 * 인터넷 액세스를 안전하게 보호하고 온프레미스 네트워크와 활성-활성 네트워크의 통합을 용이하게 하는 Fortigate Security Appliance 또는 유사 서비스
 
 ### vSphere + vSAN 확장 클러스터 아키텍처 스펙
+{: #mcv_overview-stretched-cluster-specs}
 
 vSphere + vSAN 확장 클러스터 아키텍처에는 다음과 같은 스펙이 포함되어 있습니다.
 * 클러스터는 두 개 사이트에 걸쳐 있는 스토리지 및 컴퓨팅 기능을 제공하여 향상된 가용성을 제공합니다.
@@ -65,6 +70,7 @@ vSphere + vSAN 확장 클러스터 아키텍처에는 다음과 같은 스펙이
 * vSAN 기본 암호화(나머지 암호화에 대해)를 이 아키텍처와 결합하여 사용할 수 있습니다.
 
 ### 네트워크 아키텍처 스펙
+{: #mcv_overview-network-specs}
 
 네트워크 아키텍처에는 다음과 같은 스펙이 포함되어 있습니다.
 * Edge/DLR/VXLAN을 BGP 메트릭 기반 라우팅과 결합하여 자동화된 장애 복구로 활성-활성 사이트 디자인을 쉽게 사용할 수 있습니다.
@@ -73,6 +79,7 @@ vSphere + vSAN 확장 클러스터 아키텍처에는 다음과 같은 스펙이
 * VM-A에 대한 vMotion 활동 중에 트래픽은 {{site.data.keyword.cloud_notm}} 가용성 구역 #1을 통해 계속 유입 및 유출됩니다.
 * 사이트 또는 에지 장애가 발생하는 경우 트래픽은 남아 있는 사용 가능한 사이트 외부로 라우팅됩니다.
 
-### 관련 링크
+## 관련 링크
+{: #mcv_overview-related}
 
-* [Mission Critical VMware on IBM Cloud 요청](/docs/services/vmwaresolutions/services/managing_mcv.html)
+* [Mission Critical VMware on IBM Cloud 요청](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_mcv)

@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # VMware vCenter Server on IBM Cloud 上的 VMware NSX-T 技術預覽
+{: #vcsnsxt-techpreview}
 
 ## NSX-T 概觀
+{: #vcsnsxt-techpreview-nsx-t-ovw}
 
 VMware NSX-T 設計成處理具有異質端點及技術堆疊的應用程式架構。除了 vSphere 之外，這些環境還可以包括其他 Hypervisor、KVM、容器及裸機。NSX-T 可讓 IT 及開發團隊選擇最適合其應用程式的技術。NSX-T 也設計為供開發組織及 IT 組織進行管理、作業及使用。
 
@@ -37,6 +39,7 @@ NSX-T Manager 會獲指派專用可攜式位址區塊中的 IP 位址，而此�
 ![NSX-V 及 T 管理元件佈置](vcsnsxt-combined-mgmt.svg)
 
 ### 起始配置
+{: #vcsnsxt-techpreview-init-config}
 
 部署 NSX-T Manager，此控制器叢集包含起始 vCenter Server 叢集內的三個控制器及一個邊緣叢集。將 IP 位址指派給**專用 A** 可攜式子網路中的所有元件。
 
@@ -77,6 +80,7 @@ vSAN 資料流量 |無限制	|100	| 0
 ![邏輯 VLAN 交換器到 vmkernel 介面](vcsnsxt-tnkernel.svg)
 
 ## NSX-T
+{: #vcsnsxt-techpreview-nsx-t}
 
 此設計指定 NSX-T 元件的配置、VLAN 及層疊傳輸區域，但不會套用任何層疊網路元件配置。您可以根據需求自行決定設計網路套版。
 
@@ -94,16 +98,19 @@ vSAN 資料流量 |無限制	|100	| 0
 -	將 NSX 管理鏈結至其他 VMware 實例。
 
 ### 具有 NSX-V 及 NSX-T 的 vCenter Server
+{: #vcsnsxt-techpreview-vcs-nsx-v-nsx-t}
 
-原始 vCenter Server 叢集包含適用於 NSX-V 及 NSX-T 的所有管理元件以及 vCenter Server 應用裝置。此叢集中的主機是針對 NSX-V 而準備，如 [NSX-V 概觀](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-ic4vnsxv.html)所述。第二個叢集中的主機是針對 NSX-T 而準備，並配置為傳輸節點。如果客戶選擇從 NSX-V 移轉至 NSX-T，則此配置可讓客戶這麼做。
+原始 vCenter Server 叢集包含適用於 NSX-V 及 NSX-T 的所有管理元件以及 vCenter Server 應用裝置。此叢集中的主機是針對 NSX-V 而準備，如 [NSX-V 概觀](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)所述。第二個叢集中的主機是針對 NSX-T 而準備，並配置為傳輸節點。如果客戶選擇從 NSX-V 移轉至 NSX-T，則此配置可讓客戶這麼做。
 
 ### NSX-T 與 NSX-V
+{: #vcsnsxt-techpreview-nsx-t-vs-nsx-v}
 
 下列資訊強調顯示 VMware SDN 產品（NSX-V 及 NSX-T）之間的主要差異。這兩個解決方案都提供 VMware 環境內的微分段，不過，NSX-T 可進行更多作業，如下列各節所述。
 
 如需詳細的架構差異，請參閱 [VMware NSX-T Reference Design Guide](https://communities.vmware.com/servlet/JiveServlet/download/37591-3-195840/VMware%20NSX-T%20Reference%20Design%20Guide.pdf)（PDF 下載）。
 
 #### NSX for vSphere                          
+{: #vcsnsxt-techpreview-nsx-vsphere}
 
 NSX-V 僅針對 vSphere 部署所設計並進行設計，因此單一 NSX-V Manager 會關聯至單一 VMware vCenter Server 實例。基本上，如果您在 VMware 環境內需要網路虛擬化，NSX-V 是適當的解決方案。
 
@@ -115,6 +122,7 @@ NSX-V 重點：
 -	用於東西向資料流量之「分散式邏輯路由器 (DLR)」與用於南北向資料流量之 Edge Service Gateway (ESG) 的術語差異。
 
 #### NSX 變形金剛
+{: #vcsnsxt-techpreview-nsx-transformers}
 
 NSX-T 是 vCenter 及 vSphere 環境的獨立式解決方案，但它也支援 KVM、公用雲端、容器，並且可以整合至 {{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}}、Redhat OpenShift、Pivotal 及其他這類架構。NSX-T 可讓您跨多個 Hypervisor、容器及雲端來管理 SDN。
 
@@ -133,6 +141,7 @@ NSX-T 重點
 -	用於東西向資料流量之「層級 1 邏輯路由器」與用於南北向資料流量之「層級 0 邏輯路由器」的術語差異。
 
 ## Calico
+{: #vcsnsxt-techpreview-calico}
 
 Calico 的建置根據為分散式橫向擴充架構，可讓您順利從單一「開發人員」記事本擴充至大型企業部署，並使用標準 Linux 資料平面來提供虛擬工作負載的裸機效能。Calico 由數個互相依賴的元件構成：
 -	Felix，此常駐程式是在管理端點、容器或 VM 的每個節點上執行。Felix 負責介面管理、路徑和 acl 程式設計、遞送至端點、端點之間的資料流量驗證以及狀態報告，基本上是它所管理主機的網路性能。
@@ -144,8 +153,10 @@ Calico 的建置根據為分散式橫向擴充架構，可讓您順利從單一�
 ![Calico 概觀](vcsnsxt-calico-cni.svg)
 
 ### NSX-T 及 Calico
+{: #vcsnsxt-techpreview-nsx-t-calico}
 
 #### NSX-T 元件詳細資料
+{: #vcsnsxt-techpreview-nsx-t-comp-details}
 
 NSX-T 架構具有資料平面、控制平面及管理平面的內建分隔。這種分隔提供多個優點，包括可調整性、效能、備援及異質。主要架構重點如下：
 -	管理平面：NSX-T 管理平面透過進階叢集技術從基礎設計，這可讓平台處理大規模的並行 API 要求。
@@ -153,6 +164,7 @@ NSX-T 架構具有資料平面、控制平面及管理平面的內建分隔。�
 -	資料平面：NSX-T 資料平面會引進主機交換器（而不是根據 vSwitch），以將它與運算管理程式取消連結，並正規化網路連線功能。透過 NSX-T Manager 執行所有建立、讀取、更新及刪除 (CRUD) 作業。
 
 #### Calico 與 NSX 的差異
+{: #vcsnsxt-techpreview-diff-calico-nsx}
 
 Calico 是一個 Tigera 開放程式碼專案，並且主要由 Tigera 團隊維護。它是以 CNI 提供，可讓 {{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 兩者所使用的編排系統（例如 Kubernetes）啟用網路及安全。
 
@@ -168,6 +180,7 @@ NSX-T 容許跨 VM 及容器環境在易於瞭解的 Web 介面中進行網路�
 ![NSX-T 及 Kubernetes 網路](vcsnsxt-calico.svg)
 
 ## NSX-T 及 Kubernetes
+{: #vcsnsxt-techpreview-nsx-t-kube}
 
 提供 Kubernetes 與 NSX Manager 之間整合的核心元件是「NSX 容器外掛程式 (NCP)」。NCP 會當成 Kubernetes Pod 內的容器執行，以及監視和監看 Kubernetes API 伺服器上相關物件（如名稱空間及 Pod）的變更。開發人員會在 Kubernetes 端執行作業，而 NCP 使用向 NSX Manager 發出的 API 呼叫集合來建立相關「NSX 物件」（例如邏輯交換器、邏輯路由器及防火牆物件），即可看到那些變更並進行反應。
 
@@ -177,6 +190,7 @@ NSX-T 容許跨 VM 及容器環境在易於瞭解的 Web 介面中進行網路�
 ![Kubernetes NCP](vcsnsxt-ncpk8sapi.svg)
 
 ### NSX 安全原則管理程式
+{: #vcsnsxt-techpreview-nsx-sec-policy-manager}
 
 除了提供網路虛擬化之外，NSX-T 也作為進階安全平台，並提供一組豐富的特性來簡化安全解決方案的部署。下列資訊概述可在多個平台上套用的微分段功能。
 
@@ -196,28 +210,34 @@ NSX-T 容許跨 VM 及容器環境在易於瞭解的 Web 介面中進行網路�
 ![範例 NSX-T 微分段](vcsnsxt-tsecurity.svg)
 
 ### NSX-T 與 NSX-V 之間的差異
+{: #vcsnsxt-techpreview-diff-nsx-t-nsx-v}
 
 NSX for vSphere (NSX-V) 僅針對 vSphere 部署所設計並進行設計，因此單一 NSX-V Manager 平台會關聯至單一 VMware vCenter Server 實例。基本上，如果您在 VMware 環境內需要網路虛擬化，則 NSX-V 很可能是適當的解決方案。
 
 NSX Transformers (NSX-T) 是可支援多個 vCenter 及 vSphere 環境的獨立式解決方案，同時支援 KVM、公用雲端、容器，並且可以整合至 {{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}}、Redhat OpenShift、Pivotal 及其他這類架構。這可讓您使用一組共用工具跨多個 Hypervisor、容器及雲端來管理 SDN。
 
 #### NSX-V 的網路可調整性
+{: #vcsnsxt-techpreview-net-scalability-nsx-v}
 
 VMware NSX-V 設計成處理具有數千個端點及技術堆疊的應用程式架構，可讓它橫跨具有三個主機的單一 vSphere 叢集到超過數千個主機及數千個虛擬機器的跨 vCenter 部署。
 
 #### NSX-T 的網路可調整性
+{: #vcsnsxt-techpreview-net-scalability-nsx-t}
 
 VMware NSX-T 設計成處理具有異質端點及技術堆疊的應用程式架構，可讓它橫跨任何站台、任何雲端或任何端點裝置。這可讓它從小型資料中心擴充至多重雲端環境。
 
 #### NSX-V 的安全
+{: #vcsnsxt-techpreview-sec-nsx-v}
 
 VMware NSX-V 可讓您定義在整個環境中一致定義的安全原則，不論應用程式類型或其在 VMware 基礎架構內部署之處為何。新的工作負載在部署時會自動繼承安全原則，並在整個生命週期保持這些工作負載，無論其佈建或移至何處。NSX 會取消安全原則與靜態網路屬性（例如 IP 位址、埠及通訊協定）的連結，並容許根據應用程式及基礎架構的環境定義瞭解來定義原則。NSX 也容許將進階協力廠商安全服務插入至特定微分段，而非透過實體裝置或虛擬應用裝置來遞送所有網路資料流量。藉由這麼做，可在正確的時間於正確的位置插入進階安全服務，以達到最大的網路資料流量效率，同時提高安全服務本身的效率。
 
 #### NSX-T 的安全
+{: #vcsnsxt-techpreview-sec-nsx-t}
 
 VMware NSX-T 在 VMware vSphere 環境中提供與 NSX-V 相同的功能。NSX-T 針對在專用及公用雲端環境（例如 {{site.data.keyword.cloud}} Private 及 {{site.data.keyword.containerlong_notm}}）以及其他雲端供應項目中執行的應用程式，提供一致及可擴充的微分段安全。
 
 #### 與 NSX-V 整合
+{: #vcsnsxt-techpreview-integration-nsx-v}
 
 對於與 Kubernetes {{site.data.keyword.cloud_notm}} 自動化的 NSX-V 整合，在 vCenter Server 實例上安裝 {{site.data.keyword.icpfull_notm}}。專用交換器/VXLAN、DLR 及 ESG 特別針對 Kubernetes 網路所建立。{{site.data.keyword.icpfull_notm}} 的 Day 1 層疊網路是 192.168.20.0/24 子網路，透過 ESG 進行遞送設定，以存取基礎網路。
 
@@ -225,6 +245,7 @@ VMware NSX-T 在 VMware vSphere 環境中提供與 NSX-V 相同的功能。NSX-T
 ![NSX-V 及 Kubernetes](vcsnsxt-transitnet.svg)
 
 #### 與 NSX-T 整合
+{: #vcsnsxt-techpreview-integration-nsx-t}
 
 與 Kubernetes 的 NSX-T 整合是透過 NSX-T 容器外掛程式 (NCP)。NCP 會在每個 Kubernetes 節點上執行，並與 NSX Manager 及 Kubernetes 控制平面通訊。NSX-T 外掛程式會自動建立 Kubernetes 叢集的邏輯拓蹼、為每個名稱空間建立個別邏輯網路、將 Kubernetes Pod 連接至邏輯網路，以及配置 IP 及 MAC 位址。
 
@@ -233,7 +254,9 @@ NSX-T 分散式防火牆容許建立網路原則，而這些原則是針對 Kube
 圖 8. NSX-T 及 Kubernetes
 ![NSX-T 及 Kubernetes](vcsnsxt-t1t0router.svg)
 
-### 其他資源
+## 相關鏈結
+{: #vcsnsxt-techpreview-related}
+
 * [VMware NSX-T Reference Design Guide](https://communities.vmware.com/servlet/JiveServlet/download/37591-3-195840/VMware%20NSX-T%20Reference%20Design%20Guide.pdf)（PDF 下載）
 * [遞送至雲端 NSX-T](https://www.routetocloud.com/category/nsx-t/)
 * [網路工程師的 VMware 容器及容器網路](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-containers-and-container-networking-whitepaper.pdf)

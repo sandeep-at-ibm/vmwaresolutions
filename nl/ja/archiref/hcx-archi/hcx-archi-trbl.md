@@ -4,18 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # HCX on IBM Cloud のトラブルシューティング
+{: #hcx-archi-trbl}
 
 ## クラウド登録が失敗する
+{: #hcx-archi-trbl-cloud-reg}
 
 * ハイブリッド・クラウド・サービスは、資格情報が正しくない場合に再試行を行いません。 ハイブリッド・クラウド・サービスがログインしてクラウドを登録するためには、その前に資格情報で認証を受ける必要があります。
 * 資格情報の入力が間違っていたり、ハイブリッド・クラウド・サービスが VCF/VCS ハイブリッド・クラウド・サービス・クラウドに登録された後に VCF/VCS ハイブリッド・クラウド・サービス・クラウドの資格情報が変更されていたりして、一致しない場合、クラウド登録は失敗します。
 * Web クライアントで資格情報を更新するには、ハイブリッド・クラウド・サービスの「開始 (Getting Started)」タブに移動し、**「基本タスク (Basic tasks)」**にある**「新規クラウドの登録 (Register new Cloud)」**を選択します。
 
 ## MAC アドレスが重複する
+{: #hcx-archi-trbl-dupl-mac-addr}
 
 マイグレーション後に、仮想マシン間で通信の問題が発生する場合があります。 マイグレーション時に MAC アドレスを保持する場合、重複した MAC アドレスが間違って作成されることがあります。
 
@@ -29,6 +32,7 @@ lastupdated: "2019-01-23"
 6. 固有の MAC アドレスによって通信の問題が解決したかどうかを確認します。
 
 ## ホスト・リソースの使用量が高くなる
+{: #hcx-archi-trbl-high-host-resource}
 
 ほとんどないケースですが、すべてのサービス仮想アプライアンスが同じホスト上にある場合、ハイブリッド・クラウド・サービスのサービス仮想マシンがホストの CPU とディスクのリソースを使い尽くすことがあります。
 
@@ -42,7 +46,8 @@ lastupdated: "2019-01-23"
 1. データ・センターの構成を変更する前に、通常時サポートの要件を確認します。
 2. リソースが大量に使用されている場合は、通常時サポートに連絡します。 サポート担当者から、最小のダウン時間で環境を再構成する方法についてアドバイスを受けることができます。
 
-### 関連リンク
+## 関連リンク
+{: #hcx-archi-trbl-related}
 
-* [vCenter への HCX Manager の登録](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-reg-vcenter.html)
-* [HCX の変更またはアンインストール](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
+* [vCenter への HCX Manager の登録](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-reg-vcenter)
+* [HCX の変更またはアンインストール](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

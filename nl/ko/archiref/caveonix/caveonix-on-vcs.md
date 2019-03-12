@@ -53,4 +53,4 @@ IC4VS의 Caveonix RiskForesight에서 제공하는 주요 이점에는 다음이
 ## 관련 링크
 {: #caveonix-on-vcs-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

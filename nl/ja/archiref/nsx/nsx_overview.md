@@ -4,17 +4,19 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # NSX Edge Services Gateway について
+{: #nsx_overview}
 
 VMware NSX Edge Services Gateway (ESG) ソリューションは、{{site.data.keyword.cloud_notm}} で現在使用可能な VMware Cloud Foundation on {{site.data.keyword.cloud}} および vCenter Server on {{site.data.keyword.cloud_notm}} オファリングの拡張です。 Cloud Foundation および vCenter Server のソリューション・アーキテクチャーに、このソリューションの各コンポーネントと、設計での各コンポーネントの構成概要が詳しく示されます。
 
-Cloud Foundation および vCenter Server の設計について詳しくは、[ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)を参照してください。
+Cloud Foundation および vCenter Server の設計について詳しくは、[ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)を参照してください。
 
 ## NSX Edge Services Gateway の概要
+{: #nsx_overview-nsx-esg}
 
 NSX Edge Services Gateway は、動的ホスト構成プロトコル (DHCP)、仮想プライベート・ネットワーク (VPN)、ネットワーク・アドレス変換 (NAT)、動的ルーティング、ロード・バランシングなどの共通ゲートウェイ・サービスを提供することにより、分離されたスタブ・ネットワークを共有 (アップリンク) ネットワークに接続します。 NSX Edge の一般的なデプロイメントには、非武装地帯 (DMZ)、VPN エクストラネット、およびテナント、ワークロード、または管理コンポーネントごとに NSX Edge が仮想境界を作成するマルチテナント・クラウド環境が含まれます。 NSX Edge Service Gateway では、以下の機能を使用できます。
 
@@ -32,6 +34,7 @@ NSX Edge Services Gateway は、動的ホスト構成プロトコル (DHCP)、�
 | ロード・バランシング | 単純で動的に構成可能な仮想 IP アドレスおよびサーバー・グループを提供します。 |
 | 高可用性 | プライマリー NSX Edge 仮想マシンが使用不可の場合に、ネットワーク上にアクティブな NSX Edge を確保します。 |
 
-### 関連リンク
+## 関連リンク
+{: #nsx_overview-related}
 
-* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

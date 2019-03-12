@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # 소스에 HCX 설치 및 구성
+{: #hcx-archi-install-cfg-src}
 
 온프레미스 설치에는 HCX 관리 어플라이언스 배치와 vCenter 및 하나 이상의 VCF/VCS HCX 사용 클라우드 엔드포인트에 HCX 관리 어플라이언스 등록이 포함됩니다.
 
 ## HCX Manager 어플라이언스 설치
+{: #hcx-archi-install-cfg-src-install-hma}
 
 온프레미스 vCenter에 HCX Manager 어플라이언스를 설치하십시오.
 
@@ -53,6 +55,7 @@ lastupdated: "2019-01-23"
   * **요약** 탭을 보십시오. 콘솔에 **전원 켜짐**이 표시되고 **재생** 단추는 녹색입니다.
 10. HCX Manager의 전원이 켜지고 vCenter에 등록할 준비가 됩니다.
 
-### 관련 링크
+## 관련 링크
+{: #hcx-archi-install-cfg-src-related}
 
-* [설치 환경 준비](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-prep-install.html)
+* [설치 환경 준비](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-prep-install)

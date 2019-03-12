@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,12 +13,14 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server with Hybridity Bundle インスタンスのクラスターの追加、表示、削除
+{: #vc_hybrid_addingviewingclusters}
 
 インスタンスの注文時に構成した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle インスタンスにクラスターを追加して、コンピュート能力やストレージ容量を拡張できます。 クラスター内で ESXi サーバーを管理して、リソース割り振りを改善し、高可用性を実現します。 不要になった場合は、追加したクラスターをインスタンスから削除します。
 
 ## vCenter Server with Hybridity Bundle インスタンスへのクラスターの追加
+{: #vc_hybrid_addingviewingclusters-adding}
 
 インスタンスに追加できるクラスターの数は、インスタンスのバージョンに応じて以下のように異なります。
 * V2.5 以降でデプロイ (または V2.5 以降にアップグレード) されたインスタンスの場合は、追加できるクラスター数の上限は、クラスター、ホスト、および VM の数によって決まります。 VMware のサイズ設定についてのガイドラインおよびデプロイに応じた上限を守る必要があります。
@@ -27,10 +29,12 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle イ�
 上限について詳しくは、[VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window} を参照してください。
 
 ### システム設定
+{: #vc_hybrid_addingviewingclusters-adding-sys-settings}
 
 vCenter Server with Hybridity Bundle インスタンスにクラスターを追加するときには、以下の設定を指定する必要があります。
 
 #### クラスター名
+{: #vc_hybrid_addingviewingclusters-adding-cluster-name}
 
 クラスター名は、以下の要件を満たしている必要があります。
 * 英数字とダッシュ (-) の文字だけを使用できます。
@@ -39,16 +43,19 @@ vCenter Server with Hybridity Bundle インスタンスにクラスターを追�
 * クラスター名は、vCenter Server with Hybridity Bundle インスタンス内で固有でなければなりません。
 
 #### データ・センターの場所
+{: #vc_hybrid_addingviewingclusters-adding-dc-location}
 
 クラスターの {{site.data.keyword.CloudDataCent_notm}}の場所はデフォルトで、vCenter Server インスタンスの {{site.data.keyword.CloudDataCent_notm}}に設定されます。 デプロイ済みのインスタンスとは異なる {{site.data.keyword.CloudDataCent_notm}}にクラスターをデプロイできますが、それら 2 カ所の {{site.data.keyword.CloudDataCents_notm}}間のネットワーク待ち時間が、150 ms 未満になるようにしてください。 ネットワーク待ち時間を確認するには、[SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} などのツールを使用します。
 
 別の {{site.data.keyword.CloudDataCent_notm}}または {{site.data.keyword.cloud_notm}} インフラストラクチャー・ポッドにクラスターをデプロイする場合は、注文した{{site.data.keyword.baremetal_short}}で使用するためにさらに 3 つの VLAN を注文します。
 
 ### ベア・メタル・サーバーの設定
+{: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
 ベア・メタル・サーバーの CPU モデルと RAM を指定します。 利用できるオプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
 
 #### Skylake
+{: #vc_hybrid_addingviewingclusters-adding-skylake}
 
 **「Skylake」**を選択した場合、必要に応じて CPU と RAM の組み合わせを選択できます。
 
@@ -61,6 +68,7 @@ vCenter Server with Hybridity Bundle インスタンスにクラスターを追�
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 #### Broadwell
+{: #vc_hybrid_addingviewingclusters-adding-broadwell}
 
 **「Broadwell」**を選択した場合、必要に応じて CPU と RAM の組み合わせを選択できます。
 
@@ -75,6 +83,7 @@ vCenter Server with Hybridity Bundle インスタンスにクラスターを追�
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.2 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 #### ベア・メタル・サーバーの数
+{: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
 
 クラスター 1 つにつき、2 つ以上の{{site.data.keyword.baremetal_short}}が必要です。
 
@@ -83,6 +92,7 @@ vCenter Server with Hybridity Bundle インスタンスにクラスターを追�
 デプロイメント後に、最大 4 つのクラスターを追加で作成できます。 VMware vSAN ストレージの場合、初期クラスターとデプロイメント後のクラスターの両方に 4 つのサーバーが必要です。
 
 ### vSAN ストレージ設定
+{: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
 
 vCenter Server with Hybridity Bundle インスタンスの注文には、VMware vSAN 6.6 が含められます。 以下の vSAN オプションを指定します。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
@@ -96,6 +106,7 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、VMware 
 * **vSAN ライセンス**: VMware vSAN 6.6 ライセンス・エディション (Advanced または Enterprise) を選択します。
 
 ### ライセンス交付の設定
+{: #vc_hybrid_addingviewingclusters-adding-licensing-settings}
 
 IBM では、以下の VMware コンポーネントのライセンスを提供しています。
   * vSphere Enterprise Plus 6.5u1
@@ -103,6 +114,7 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
   * NSX Service Providers 6.4 (Advanced または Enterprise エディション)
 
 ### ネットワーク・インターフェースの設定
+{: #vc_hybrid_addingviewingclusters-adding-network-interface-settings}
 
 ネットワーク・インターフェース・カード (NIC) の設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。 以下のアドオン・サービスはパブリック NIC を必要とするため、プライベート・オプションを選択した場合は利用できません。
 
@@ -112,10 +124,12 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 注文のサマリー
+{: #vc_hybrid_addingviewingclusters-adding-order-summary}
 
 選択したクラスター構成に基づいて、見積もりコストがすぐに生成され、右側のペインの**「注文の要約」**に表示されます。
 
 ## vCenter Server with Hybridity Bundle インスタンスにクラスターを追加する手順
+{: #vc_hybrid_addingviewingclusters-adding-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、クラスターを表示するインスタンスをクリックします。
@@ -137,6 +151,7 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
    4. **「プロビジョン」**をクリックします。
 
 ### vCenter Server with Hybridity Bundle インスタンスにクラスターを追加した結果
+{: #vc_hybrid_addingviewingclusters-adding-results}
 
 1. クラスターのデプロイメントが自動的に開始され、クラスターの状況が**「初期化中」**に変更されます。 インスタンスの**「サマリー」**ページでデプロイメント履歴を表示して、デプロイメントの状況を確認できます。
 2. クラスターを使用する準備ができると、状況が**「使用可能」**に変更されます。 新しく追加されたクラスターで、vSphere High Availability (HA) と vSphere Distributed Resource Scheduler (DRS) が有効になります。
@@ -145,6 +160,7 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 {:important}
 
 ## vCenter Server with Hybridity Bundle インスタンスでクラスターを表示する手順
+{: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、クラスターを表示するインスタンスをクリックします。
@@ -201,10 +217,12 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
     * **NFS プロトコル**: ストレージの NFS バージョン。
 
 ## vCenter Server with Hybridity Bundle インスタンスからのクラスターの削除
+{: #vc_hybrid_addingviewingclusters-deleting}
 
 不要になったクラスターをインスタンスから削除したい場合があります。
 
 ### 削除する前に
+{: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
 * クラスターは一度に 1 つしか削除できません。 複数のクラスターを削除する場合は、順番に削除する必要があります。つまり、前のクラスターが削除されるまで待ってから、次のクラスターを削除してください。
 * クラスターを削除する前に、クラスター内のすべてのノードが電源オンの状態で作動可能であることを確認します。
@@ -212,15 +230,17 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 * デフォルトのクラスターは削除できません。
 
 ## vCenter Server with Hybridity Bundle インスタンスからクラスターを削除する手順
+{: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、クラスターを削除するインスタンスをクリックします。
 
-   **注:** インスタンスの状況が**「使用可能」**であることを確認してください。 そうでない場合、インスタンスからクラスターを削除できません。
+   インスタンスの状況が**「使用可能」**であることを確認してください。 そうでない場合、インスタンスからクラスターを削除できません。{:note}
 
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。 **「クラスター」**テーブルで、削除するクラスターを見つけて、**「アクション」**列にある**「削除」**アイコンをクリックします。
 
-### 関連リンク
+## 関連リンク
+{: #vc_hybrid_addingviewingclusters-related}
 
-* [vCenter Server with Hybridity Bundle インスタンスの表示](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [vCenter Server with Hybridity Bundle インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [vCenter Server with Hybridity Bundle インスタンスの表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [vCenter Server with Hybridity Bundle インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)

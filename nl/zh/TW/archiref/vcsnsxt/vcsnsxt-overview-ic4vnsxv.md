@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # NSX-V 概觀
+{: #vcsnsxt-overview-ic4vnsxv}
 
 網路虛擬化提供存在於虛擬層內的網路層疊。NSX-V 提供具有快速佈建、部署、重新配置及毀損隨需應變虛擬網路這類特性的架構。此設計使用 vSphere Distributed Switch (vDS) 及 VMware NSX for vSphere 來實作虛擬網路。
 
@@ -37,6 +38,7 @@ lastupdated: "2019-01-23"
 接著會部署 NSX Edge Services Gateway (ESG) 配對。對於所有部署，都會將一個閘道配對用於來自位於專用網路之自動化元件的出埠資料流量。VMware vCenter Server on {{site.data.keyword.cloud_notm}} 實例包括第二個閘道（稱為客戶管理邊緣），其已部署並配置連往公用網路的上行鏈路，以及指派給專用網路的介面。管理者可以配置任何必要的 NSX 元件，例如「分散式邏輯路由器 (DLR)」、邏輯交換器和防火牆。
 
 ## 分散式交換器設計
+{: #vcsnsxt-overview-ic4vnsxv-distributed-switch}
 
 此設計使用最少數目的虛擬分散式交換器 (vDS)。叢集中的主機已連接至公用及專用網路。它們已配置兩個虛擬分散式交換器。兩台交換器的使用遵循 {{site.data.keyword.cloud_notm}} 內所實作公用及專用網路的實體網路區隔。
 
@@ -88,6 +90,7 @@ SDDC-Dswitch-Private	| 由 NSX 自動產生 |來源虛擬埠| 作用中：0、1 
 SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|來源虛擬埠| 作用中：0、1 |VLAN3     
 
 ## NSX-V
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v}
 
 此設計指定 NSX 元件的配置，但不會套用任何網路套版元件配置。客戶可根據需求自行決定設計網路套版。
 
@@ -105,6 +108,7 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|來源虛擬埠| 作用中：0�
 -	將「NSX 管理」鏈結至其他 VMware 實例。
 
 ### NSX-V 安全
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
 
 NSX for vSphere 可讓組織將資料中心劃分為不同的安全區段，並往下探查至個別工作負載的層次，但與工作負載執行所在無關。IT 團隊可以根據應用程式及使用者環境定義來定義每個工作負載的原則，這確保立即回應資料中心內的威脅，並向下強制執行到應用程式。
 
@@ -120,6 +124,7 @@ NSX for vSphere 可讓組織將資料中心劃分為不同的安全區段，並�
 圖 3. NSX-V 安全
 ![NSX-V 安全](vcsnsxt-vsecurity.svg)
 
-### 相關鏈結
+## 相關鏈結
+{: #vcsnsxt-overview-ic4vnsxv-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

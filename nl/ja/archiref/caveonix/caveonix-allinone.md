@@ -11,7 +11,7 @@ lastupdated: "2019-02-14"
 # オールインワン・デプロイメント
 {: #caveonix-allinone}
 
-すべての RiskForesight アプリケーション・コンポーネントをホストする単一の仮想マシン (VM) のデプロイメントと構成が自動で行われます。このデプロイメント・モデルは、資産数が 100 個以下で、索引作成の期間が 7 日から 30 日分である、小規模なデプロイメントに適しています。この「オールインワン」VM の詳細は以下の表に示されています。
+すべての RiskForesight アプリケーション・コンポーネントをホストする単一の仮想マシン (VM) のデプロイメントと構成が自動で行われます。 このデプロイメント・モデルは、資産数が 100 個以下で、索引作成の期間が 7 日から 30 日分である、小規模なデプロイメントに適しています。 この「オールインワン」VM の詳細は以下の表に示されています。
 
 表 1. オールインワン・パラメーター
 
@@ -36,9 +36,9 @@ Remote Collector VM のその他の詳細は以下の表に示されています
 |RAM	|8 GB|
 |ディスク	|1 TB|
 |OS	|CentOS 7|
-|インストールされるアプリケーション・コンポーネント|Remote Collector|
+|インストールされるアプリケーション・コンポーネント	|Remote Collector|
 
 ## 関連リンク
 {: #caveonix-allinone-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

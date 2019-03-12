@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Cloud Foundation 資料清單
+{: #sd_bom}
 
 檢閱 VMware Cloud Foundation 實例的「資料清單 (BOM)」資訊。
 
 ## Cloud Foundation 實例的 VLAN BOM
+{: #sd_bom-vlans}
 
 下表詳述 Cloud Foundation VLAN 的 BOM 資訊。
 
@@ -25,6 +27,7 @@ lastupdated: "2019-01-24"
 |VLAN3     |專用 B、可攜式|指派給 VMware vSAN（如果使用的話）。<br><br>指派給 VMware NFS（如果使用的話）。<br><br>指派給 VMware vSphere vMotion。|
 
 ## Cloud Foundation 實例的軟體 BOM
+{: #sd_bom-software}
 
 下表詳述 Cloud Foundation 軟體元件的 BOM 資訊。
 
@@ -41,6 +44,7 @@ lastupdated: "2019-01-24"
 |Microsoft    |Windows Server 標準版（64 位元）         |2012R2       |
 
 ## ESXi 伺服器的進階配置設定
+{: #sd_bom-esxi-server-advance-config}
 
 請檢閱下表，以取得套用至 ESXi 伺服器之進階配置設定的概觀。這些設定根據 Cloud Foundation 實例是部署在（或升級至）2.2 版或更新版本中，還是從舊版（2.1 版或更早版本）升級至 2.2 版或更新版本中，而有所不同。
 
@@ -59,6 +63,7 @@ lastupdated: "2019-01-24"
 |佇列已滿臨界值    |**QFullThreshold** = 8 |**/Disk/QFullThreshold** = 8 |
 
 ###  附註 
+{: #sd_bom-notes}
 
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服務需要 **MaxVolumes** 設定，因為服務可能會在 ESXi 伺服器上使用超過預設的 NFS 裝載數目。
 * 配置設定的**未設定**值指出未自動套用新設定，因為它需要重新啟動 ESXi 伺服器，這可能會造成干擾。
@@ -67,10 +72,11 @@ lastupdated: "2019-01-24"
 
   如需相關資訊，請參閱 [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239)。
 
-### 相關鏈結
+## 相關鏈結
+{: #sd_bom-related}
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [規劃 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [規劃 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)

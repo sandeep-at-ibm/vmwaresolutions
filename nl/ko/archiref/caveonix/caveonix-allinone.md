@@ -15,7 +15,7 @@ lastupdated: "2019-02-14"
 
 표 1. 일체형 매개변수
 
-|매개변수 |값|
+|매개변수	|값|
 |---|---|
 |유형	| Base|
 |VM 수량	|1|
@@ -23,22 +23,22 @@ lastupdated: "2019-02-14"
 |RAM	|32GB|
 |디스크	|80GB|
 |OS	|CentOS 7|
-|설치된 애플리케이션 컴포넌트 |	UI, App, Plugins, Central Collector, Index Datastore, Messaging Datastore, Relational Datastore, Index Datastore, Remote Collector|
+|설치된 애플리케이션 컴포넌트|	UI, App, Plugins, Central Collector, Index Datastore, Messaging Datastore, Relational Datastore, Index Datastore, Remote Collector|
 
 추가 원격 콜렉터 VM 세부사항은 다음 표에 표시되어 있습니다.
 
 표 2. 원격 콜렉터
 
-|매개변수 |값|
+|매개변수	|값|
 |---|---|
-|VM 수량	|As required |
+|VM 수량	|As required|
 |vCPU	|8|
 |RAM	| 8GB|
-|디스크	|1TB |
+|디스크	|1TB|
 |OS	|CentOS 7|
-|설치된 애플리케이션 컴포넌트 |원격 콜렉터|
+|설치된 애플리케이션 컴포넌트	|원격 콜렉터|
 
 ## 관련 링크
 {: #caveonix-allinone-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

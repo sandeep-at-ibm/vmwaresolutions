@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # Skate Advisor 元件
+{: #vcscar-physical}
 
 {{site.data.keyword.vmwaresolutions_full}} 提供自動化，以在全球的 {{site.data.keyword.CloudDataCents_notm}} 中部署 VMware 技術元件。架構由單一雲端地區組成，可支援延伸至位於下列其中一個選項的其他雲端地區：
 
@@ -25,6 +26,7 @@ IBM Multi-Cluster Manager 提供使用者可見性、以應用程式為中心的
 {{site.data.keyword.cloud_notm}} Automation Manager 是在 {{site.data.keyword.cloud_notm}} Private 上執行的多重雲端自助式管理平台，讓開發人員與管理者能夠滿足商業需求。Cloud Automation Manager 服務編製器可讓您在 {{site.data.keyword.icpfull_notm}} 型錄中公開混合式雲端服務。
 
 ## Skate Advisor 實體元件
+{: #vcscar-physical-skate-comp}
 
 下圖說明應用程式現代化基礎架構實作中 ACME Skate Advisor 應用程式的參照實作。
 
@@ -36,6 +38,7 @@ Skate Advisor 應用程式使用與 Watson 互動的微服務型元件以及 ngi
 Skate Advisor 應用程式利用應用程式現代化平台來提供必要的管理基礎架構。
 
 ### 應用程式包裝及部署
+{: #vcscar-physical-app-pack-depl}
 
 應用程式部署為「CAM 編排」，其包含下列元素：
 * 服務編排 - CAM 服務編排是一種工作流程資源，可說明要部署為服務資料類型的 Terraform 範本及 Helm 圖表。可以發佈服務，而且服務是可從中編排整個部署的控制構件。
@@ -54,6 +57,7 @@ Skate Advisor 應用程式利用應用程式現代化平台來提供必要的管
 ![CAM 編排](vcscar-cam.svg)
 
 ### 負載平衡與 Proxy 處理
+{: #vcscar-physical-load-balance-proxy}
 
 負載平衡與 Proxy 處理是透過 {{site.data.keyword.icpfull_notm}} Ingress Controller 元件所實作。此元件以無縫方式處理容器調整及失效接手。
 
@@ -70,15 +74,23 @@ URL	|端點
 容器具有可能依系統需求橫向縮減及橫向擴充的無法預期 IP 位址。為了克服此問題，請使用 {{site.data.keyword.icpfull_notm}} 服務，在系統內執行即時 IP 位址解析。
 
 ### Acme Skate Web 應用程式
+{: #vcscar-physical-acme-skate-web-app}
+
 Acme Skate Web 應用程式是以 Spring Framework 為基礎的 Java Platform Enterprise Edition 應用程式。此應用程式部署在 WebSphere Liberty 容器上。
 
 ### ACME Skate Advisor 應用程式
+{: #vcscar-physical-acme-skate-advisor-app}
+
 ACME Skate Advisor 應用程式是部署在 WebSphere Liberty 容器上的微服務型應用程式。nginx Web 伺服器提供微服務的前端。
 
 ### Acme Skate 資料庫
+{: #vcscar-physical-acme-skate-db}
+
 Acme Skate 資料庫是部署在 vSphere 受管理虛擬機器上的 MySQL 資料庫。
 
 ### 通訊概觀
+{: #vcscar-physical-comm-overview}
+
 Skate Advisor 需要下列通訊：
 -	從 Web 容器到系統使用者。
 -	從 Advisor 及 Web 容器到 Watson 服務。
@@ -96,6 +108,7 @@ Skate Advisor 需要下列通訊：
 針對已定義任何 NSX VXLAN 的 VRA 應用裝置，{{site.data.keyword.containerlong_notm}} 基礎架構需要靜態路徑。透過 NSX Edge，我們使用 VRA 透過專用網路配置 BGP 對等作業，以啟用 NSX VXLAN 的路徑公告及插播。此對等作業容許 NSX VXLAN 層疊網路與 {{site.data.keyword.cloud_notm}} 骨幹通訊，反之亦然。
 
 ### 軟體元件對映
+{: #vcscar-physical-soft-comp-mapping}
 
 Skate Advisor 應用程式使用下列軟體元件。
 
@@ -112,6 +125,7 @@ Skate Advisor 應用程式使用下列軟體元件。
 * JavaScript - 聊天機器人是在用戶端「瀏覽器」中管理的 JavaScript 型應用程式。聊天機器人透過 Node.js 型微服務與 Watson 通訊。
 
 ## 管理概觀
+{: #vcscar-physical-mgmt-ovw}
 
 Acme Skate Advisor 位於 {{site.data.keyword.cloud_notm}}，因此是「架構」的重要層面。{{site.data.keyword.cloud_notm}} 具有下列架構。
 
@@ -122,6 +136,7 @@ Acme Skate Advisor 位於 {{site.data.keyword.cloud_notm}}，因此是「架構�
 
 在圖表中，CAM 邏輯地建立與 vCenter、雲端提供者以及 {{site.data.keyword.icpfull_notm}} 和 {{site.data.keyword.containerlong_notm}} 環境的雲端連線。「{{site.data.keyword.icpfull_notm}} 叢集」部署至每個資料中心/雲端環境，並由 MCM 提供將 {{site.data.keyword.icpfull_notm}} 叢集連接至單一管理視圖的機制。
 
-### 相關鏈結
+## 相關鏈結
+{: #vcscar-physical-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

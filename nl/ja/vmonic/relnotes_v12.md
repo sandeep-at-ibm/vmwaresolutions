@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016
 
 lastupdated: "2016-12-12"
 
 ---
 
 # V1.2 のリリース・ノート
+{: #relnotes_v12}
 
 このリリースには、新機能、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
@@ -21,27 +22,27 @@ VMware ESXi のバージョンが、前のリリースの ESXi 6.0 u2 から、�
 {{site.data.keyword.vmwaresolutions_full}} は、IBM Bluemix® カタログのインフラストラクチャー・ソリューションとして提供されています。 **IBMid** アカウントを Bluemix アカウントに関連付け、**IBMid** アカウントを使用して {{site.data.keyword.vmwaresolutions_short}} コンソールにログインする必要があります。
 
 詳しくは、以下のトピックを参照してください。
-* [概説](/docs/services/vmwaresolutions/index.html)
-* [Bluemix へのアクセスに関するトラブルシューティング](/docs/account/ts_accessing.html){:new_window}
+* [概説](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)
+* [Bluemix へのアクセスに関するトラブルシューティング](/docs/account?topic=account-accessing){:new_window}
 
 ## Zerto 災害復旧
 
 VMware Cloud Foundation インスタンスも VMware vCenter Server インスタンスも、Zerto 災害復旧を組み込んだ形での注文が可能です。 また、インスタンスの詳細ページで、既存の Cloud Foundation インスタンスおよび vCenter Server インスタンスに Zerto 災害復旧を追加することもできます。
 
 詳しくは、以下のトピックを参照してください。
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Cloud Foundation インスタンスの表示](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [vCenter Server インスタンスの表示](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
-* [Zerto 災害復旧](/docs/services/vmwaresolutions/services/addingzertodr.html)
+* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Cloud Foundation インスタンスの表示](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [vCenter Server インスタンスの表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [Zerto 災害復旧](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
 
 ## 料金情報
 
 注文するインスタンスの見積もりコストを確認して検討してから、注文を決定できるようになりました。 インスタンスを注文する際にコンポーネントを選択すると、すべてのコンポーネントの合計コストと詳細な料金が**「サマリー」**ページに表示されます。
 
 詳しくは、以下のトピックを参照してください。
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 
 ## インスタンスの注文プロセスの機能強化
 
@@ -50,11 +51,11 @@ VMware Cloud Foundation インスタンスも VMware vCenter Server インスタ
 *  vCenter Server インスタンスについては、インスタンスのコンポーネントを選択する順序が最適化され、必要なハードウェアと ESXi サーバーを提供しているデータ・センターのみが表示されるようになりました。 この変更により、後になってエラーが発生する可能性が最小限に抑えられました。
 
 詳しくは、以下のトピックを参照してください。
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 
 ## 追加の E メール通知
 
 新規 ESXi サーバーがインスタンスに追加されたとき、および既存の ESXi サーバーが削除されたときに、E メールで通知されるようになりました。 また、インスタンスが削除されたときにも E メールで通知されます。 通知設定はデフォルトで有効になっています。 必要に応じて、受け取る通知を**「設定」**ページで設定できます。
 
-詳しくは、[ユーザー・アカウントと設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)を参照してください。
+詳しくは、[ユーザー・アカウントと設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)を参照してください。

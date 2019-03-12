@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,23 +13,27 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # 订购 Cloud Foundation 实例
+{: #sd_orderinginstance}
 
-要部署具有标准计算、存储和网络配置的统一软件定义数据中心 (SDDC) 平台，请订购 VMware Cloud Foundation 实例。在初始订购期间，还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html)。
+要部署具有标准计算、存储和网络配置的统一软件定义数据中心 (SDDC) 平台，请订购 VMware Cloud Foundation 实例。在初始订购期间，还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)。
 
 ## 需求
+{: #sd_orderinginstance-req}
 
 确保已完成以下任务：
-*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
-*  已查看[针对 Cloud Foundation 实例的需求和规划](/docs/services/vmwaresolutions/sddc/sd_planning.html)中的需求和注意事项。
+*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)。
+*  已查看[针对 Cloud Foundation 实例的需求和规划](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)中的需求和注意事项。
 
 不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。此外，在部署实例之后，不要更改实例名称、根域名、子域标签或主机名前缀。
 {:important}
 
 ## 系统设置
+{: #sd_orderinginstance-sys-settings}
 
 订购 Cloud Foundation 实例时，必须指定以下系统设置。
 
 ### 实例名称
+{: #sd_orderinginstance-inst-name}
 
 实例名称必须满足以下需求：
 * 只允许使用字母数字字符和短划线 (-) 字符。
@@ -38,10 +42,12 @@ lastupdated: "2019-01-25"
 * 实例名称在您的帐户中必须唯一。
 
 ### 主实例或辅助实例
+{: #sd_orderinginstance-primary-secondary}
 
 选择是订购新的主实例还是为现有主实例订购辅助实例。
 
 ## 许可证设置
+{: #sd_orderinginstance-licensing-settings}
 
 为实例中的以下 VMware 组件指定许可选项：  
 * vCenter Server 许可证 - 标准
@@ -54,12 +60,15 @@ lastupdated: "2019-01-25"
 对于非业务合作伙伴用户，可以通过选择**购买时包含**对这些组件使用 IBM 提供的 VMware 许可证，或者可以通过选择**我将提供**并输入您自己的许可证密钥以自带许可证 (BYOL)。
 
 ## 裸机服务器设置
+{: #sd_orderinginstance-bare-metal}
 
 ### 数据中心位置
+{: #sd_orderinginstance-dc-location}
 
 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
 
 ### Skylake
+{: #sd_orderinginstance-skylake}
 
 选择 **Skylake** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。
 
@@ -72,6 +81,7 @@ lastupdated: "2019-01-25"
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
 ### Broadwell
+{: #sd_orderinginstance-broadwell}
 
 选择 **Broadwell** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。
 
@@ -86,10 +96,12 @@ lastupdated: "2019-01-25"
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
 ### 裸机服务器的数量
+{: #sd_orderinginstance-bare-metal-number}
 
 一个 Cloud Foundation 实例的初始部署中包含 4 个裸机服务器。在下订单时，无法更改裸机服务器数。
 
 ## 存储设置
+{: #sd_orderinginstance-storage}
 
 对于 Cloud Foundation 实例，可以仅订购 VMware vSAN 存储器。
 
@@ -104,10 +116,12 @@ lastupdated: "2019-01-25"
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 
 ## 网络接口设置
+{: #sd_orderinginstance-network-interface}
 
 订购 Cloud Foundation 实例时，必须指定以下网络接口设置。
 
 ### 主机名前缀
+{: #sd_orderinginstance-hostname-prefix}
 
 主机名前缀必须满足以下需求：
 *  只允许使用字母数字字符和短划线 (-) 字符。
@@ -115,6 +129,7 @@ lastupdated: "2019-01-25"
 *  主机名前缀的最大长度为 10 个字符。
 
 ### 子域标签
+{: #sd_orderinginstance-subdomain-label}
 
 子域标签必须满足以下需求：
 *  只允许使用字母数字字符和短划线 (-) 字符。
@@ -123,6 +138,7 @@ lastupdated: "2019-01-25"
 *  子域标签在您的帐户中必须唯一。
 
 ### 域名
+{: #sd_orderinginstance-domain-name}
 
 根域名必须满足以下需求：
 * 域名必须包含两个或更多用句点 (.) 分隔的字符串。
@@ -135,6 +151,7 @@ lastupdated: "2019-01-25"
 {:note}
 
 ### 网络设置的值格式
+{: #sd_orderinginstance-network-settings-value-format}
 
 域名和子域标签用于生成实例的用户名和服务器名称，如下表中所示。
 
@@ -150,18 +167,23 @@ lastupdated: "2019-01-25"
   |Single Sign-On (SSO) 站点名称| `<subdomain_label>`
   |PSC FQDN|`PSC-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大长度为 50 个字符。|  
 
-  SDDC Manager FQDN 无法公开解析。否则，Cloud Foundation 实例配置可能会失败，并且不可恢复。在指定域名之前，请查看[选择根域名时的注意事项](/docs/services/vmwaresolutions/vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances)。
+  SDDC Manager FQDN 无法公开解析。否则，Cloud Foundation 实例配置可能会失败，并且不可恢复。在指定域名之前，请查看[选择根域名时的注意事项](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_limitations#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances)。
 
 ### VLAN
+{: #sd_orderinginstance-vlans}
 
 网络设置基于您选择的是**订购新 VLAN** 还是**选择现有 VLAN**。
 
 订购实例时，需要包含一个公用 VLAN 和两个专用 VLAN。两个专用 VLAN 用于中继到每个裸机服务器中。
 
 #### 订购新的 VLAN
+{: #sd_orderinginstance-new-vlans}
+
 选择此项可订购一个新的公用 VLAN 和两个新的专用 VLAN。
 
-#### 选择现有 VLAN  
+#### 选择现有 VLAN
+{: #sd_orderinginstance-existing-vlans}
+
 根据选择的 {{site.data.keyword.CloudDataCent_notm}}，可能会有现有公用和专用 VLAN 可用。
 
 选择复用现有公用和专用 VLAN 时，请指定 VLAN 和子网：
@@ -171,20 +193,21 @@ lastupdated: "2019-01-25"
   * **主子网**分配给物理主机以用于公用网络访问。
   * **专用主子网**分配给物理主机以用于管理流量。
 
-##### 重要
-
-* 确保所选 VLAN 上的防火墙配置不会阻止管理数据流量。
-* 确保选择的所有 VLAN 都在同一 pod 中，因为 ESXi 服务器不能在混合 pod VLAN 上进行供应。
+确保所选 VLAN 上的防火墙配置不会阻止管理数据流量。确保选择的所有 VLAN 都在同一 pod 中，因为 ESXi 服务器不能在混合 pod VLAN 上进行供应。
+{:important}
 
 ## 服务
+{: #sd_orderinginstance-addon-services}
 
-订购 Cloud Foundation 实例时，还可以订购附加组件服务。有关可用服务的更多信息，请参阅 [Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_planning.html#services-for-cloud-foundation-instances)。
+订购 Cloud Foundation 实例时，还可以订购附加组件服务。有关可用服务的更多信息，请参阅 [Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning#services-for-cloud-foundation-instances)。
 
 ## 订单摘要
+{: #sd_orderinginstance-order-summary}
 
 根据为实例和附加组件服务选择的配置，估算成本会立即生成并显示在右侧窗格中。单击右侧窗格的**定价详细信息**可生成提供估算详细信息的 PDF 文档。
 
 ## 订购 Cloud Foundation 实例的过程
+{: #sd_orderinginstance-procedure}
 
 1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **Cloud Foundation**。
 2. 在 **VMware Cloud Foundation on IBM Cloud** 页面上，单击**创建**。
@@ -220,16 +243,18 @@ lastupdated: "2019-01-25"
     5. 单击**供应**。
 
 ## 结果
+{: #sd_orderinginstance-results}
 
 实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
 
-成功部署实例后，[Cloud Foundation 实例的技术规范](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **SDDC-Cluster**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
+成功部署实例后，[Cloud Foundation 实例的技术规范](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **SDDC-Cluster**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
 
 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
 订购辅助实例时，在完成辅助实例订单后，可能会重新启动主实例（链接到辅助实例）的 VMware vSphere Web Client。
 
 ## 后续步骤
+{: #sd_orderinginstance-next}
 
 查看和管理订购的 Cloud Foundation 实例。
 
@@ -245,12 +270,13 @@ lastupdated: "2019-01-25"
 
    这些活动的例外情况包括在 {{site.data.keyword.slportal}} 中管理共享存储器文件共享。此类活动包括：订购、删除（如果已安装，可能会影响数据存储）、授权和安装共享存储器文件共享。
 
-### 相关链接
+## 相关链接
+{: #sd_orderinginstance-related}
 
-* [注册 {{site.data.keyword.cloud_notm}} 帐户](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
-* [查看 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [添加、查看和删除 Cloud Foundation 实例的集群](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
-* [扩展和收缩 Cloud Foundation 实例的容量](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [删除 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
-* [关于 BYOL 的常见问题](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
+* [注册 {{site.data.keyword.cloud_notm}} 帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [查看 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [添加、查看和删除 Cloud Foundation 实例的集群](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [扩展和收缩 Cloud Foundation 实例的容量](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [删除 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)
+* [关于 BYOL 的常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)

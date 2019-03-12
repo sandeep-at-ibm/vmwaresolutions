@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # NetApp ONTAP Select 實例的需求及規劃
+{: #np_planning}
 
 請先檢閱下列需求，再訂購 NetApp ONTAP Select 實例。根據 {{site.data.keyword.CloudDataCent}} 位置以及工作負載效能及容量需求，來規劃實例。
 
 ## IBM Cloud 帳戶需求
+{: #np_planning-account-req}
 
-您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶的需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
+您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶的需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
 
 ## IBM Cloud Data Center 可用性
+{: #np_planning-dc-availability}
 
 NetApp ONTAP Select 部署具有嚴格的實體基礎架構需求。因此，您只能在符合需求的 {{site.data.keyword.CloudDataCents_notm}} 中部署實例。下列 {{site.data.keyword.CloudDataCents_notm}} 適用於 NetApp ONTAP Select 部署：
 
@@ -55,7 +58,8 @@ NetApp ONTAP Select 部署具有嚴格的實體基礎架構需求。因此，您
 |WDC06 |華盛頓特區|NA 東部|高效能（中型）、高效能（大型）、高容量
 |WDC07 |華盛頓特區|NA 東部|高效能（中型）、高效能（大型）、高容量
 
-### 相關鏈結
+## 相關鏈結
+{: #np_planning-related}
 
-* [NetApp ONTAP Select 概觀](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
-* [訂購 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [NetApp ONTAP Select 概觀](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)
+* [訂購 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)

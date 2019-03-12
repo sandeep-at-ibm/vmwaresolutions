@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,23 +13,27 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # NetApp ONTAP Select インスタンスの注文
+{: #np_orderinginstances}
 
 ソフトウェアで定義できる可用性の高い専用ストレージ・アプライアンスを備えた VMware 仮想化プラットフォームをデプロイするには、NetApp ONTAP Select インスタンスを注文してください。
 
 ## 要件
+{: #np_orderinginstances-req}
 
 以下の作業を完了していることを確認してください。
-*  **「設定」**ページで {{site.data.keyword.cloud}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](/docs/services/vmwaresolutions/vmonic/useraccount.html)を参照してください。
-*  [NetApp ONTAP Select インスタンスの要件と計画](/docs/services/vmwaresolutions/netapp/np_planning.html)に記載されている要件と考慮事項を確認した。
+*  **「設定」**ページで {{site.data.keyword.cloud}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)を参照してください。
+*  [NetApp ONTAP Select インスタンスの要件と計画](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)に記載されている要件と考慮事項を確認した。
 
 インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
 {:important}
 
 ## システム設定
+{: #np_orderinginstances-sys-settings}
 
 NetApp ONTAP Select インスタンスを注文する際には、以下の基本設定を指定する必要があります。
 
 ### Instance name
+{: #np_orderinginstances-instance-name}
 
 インスタンス名は、次の要件を満たす必要があります。
 * 英数字とダッシュ (-) の文字だけを使用できます。
@@ -38,10 +42,12 @@ NetApp ONTAP Select インスタンスを注文する際には、以下の基本
 * インスタンス名はアカウント内で固有である必要があります。
 
 ## ネットワーク・インターフェースの設定
+{: #np_orderinginstances-network-interface-settings}
 
 NetApp ONTAP Select インスタンスを注文する際には、以下のネットワーク・インターフェース設定を指定する必要があります。
 
 ### Host name prefix
+{: #np_orderinginstances-host-name-prefix}
 
 ホスト名接頭部は、次の要件を満たす必要があります。
 *  英数字とダッシュ (-) の文字だけを使用できます。
@@ -49,6 +55,7 @@ NetApp ONTAP Select インスタンスを注文する際には、以下のネッ
 *  ホスト名接頭部の最大長は 10 文字です。
 
 ### Subdomain label
+{: #np_orderinginstances-subdomain-label}
 
 サブドメイン・ラベルは、次の要件を満たす必要があります。
 *  英数字とダッシュ (-) の文字だけを使用できます。
@@ -57,6 +64,7 @@ NetApp ONTAP Select インスタンスを注文する際には、以下のネッ
 *  サブドメイン・ラベルは、アカウント内で固有でなければなりません。
 
 ### Domain name
+{: #np_orderinginstances-domain-name}
 
 ルート・ドメイン・ネームは、次の要件を満たす必要があります。
 * ドメイン・ネームは、ピリオド (.) で区切られた 2 つ以上のストリングで構成されていなければなりません。
@@ -69,16 +77,20 @@ NetApp ONTAP Select インスタンスを注文する際には、以下のネッ
 {:note}
 
 ## ライセンス交付の設定
+{: #np_orderinginstances-licensing-settings}
 
 4 つの{{site.data.keyword.baremetal_short}}にそれぞれ 1 つのライセンスが必要であるため、4 つの NetApp ライセンス交付ファイルをアップロードする必要があります。 高性能または大容量のデプロイメントの場合は、NetApp 営業チームに問い合わせて、該当するライセンス交付を得てください。
 
 ## ベア・メタル・サーバーの設定
+{: #np_orderinginstances-bare-metal-settings}
 
 ### データ・センターの場所
+{: #np_orderinginstances-dc-location}
 
 インスタンスがホストされる {{site.data.keyword.CloudDataCent_notm}}を選択する必要があります。
 
 ### Bare Metal Server configuration
+{: #np_orderinginstances-bare-metal-config}
 
 要件に応じてベア・メタル・サーバー構成を選択します。
 * **ハイパフォーマンス (ミディアム)** – プレミアム・ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 128 GB RAM / ノードあたり 22 個の 1.9 TB SSD ドライブ容量 / 4 ノード・クラスターの実効容量 – 59 TB
@@ -89,10 +101,12 @@ NetApp ONTAP Select インスタンスを注文する際には、以下のネッ
 {:note}
 
 ### ベア・メタル・サーバーの数
+{: #np_orderinginstances-bare-metal-number}
 
 NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォルトで 4 台です。 これは変更できません。 すべての ESXi サーバーが構成を共有します。
 
 ## NetApp ONTAP Select インスタンスを注文する手順
+{: #ordering-netapp-ontap-select-instances}
 
 1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「Virtual Data Centers」**セクションの**「NetApp ONTAP Select」**をクリックします。
 2. **「NetApp ONTAP Select」**ページで、**「作成」**をクリックします。
@@ -110,14 +124,16 @@ NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォ
     5. **「プロビジョン」**をクリックします。
 
 ## 結果
+{: #np_orderinginstances-results}
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
 
-インスタンスが正常にデプロイされると、[NetApp ONTAP Select インスタンスの技術仕様](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。
+インスタンスが正常にデプロイされると、[NetApp ONTAP Select インスタンスの技術仕様](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#technical-specifications-for-netapp-ontap-select-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
 ## 次に行うこと
+{: #np_orderinginstances-next}
 
 注文した NetApp ONTAP Select インスタンスを表示して管理します。
 
@@ -130,9 +146,10 @@ NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォ
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
 
-### 関連リンク
+## 関連リンク
+{: #np_orderinginstances-related}
 
-* [NetApp ONTAP Select インスタンスの表示](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
-* [NetApp ONTAP Select インスタンスの削除](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
+* [NetApp ONTAP Select インスタンスの表示](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
+* [NetApp ONTAP Select インスタンスの削除](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
 * [　 NetApp ONTAP 9 ドキュメント・センター](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
 * [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

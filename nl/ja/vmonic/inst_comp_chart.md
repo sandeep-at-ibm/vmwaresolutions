@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # オファリングの比較表
+{: #inst_comp_chart}
 
 次の表で、VMware Cloud Foundation インスタンス、VMware vCenter Server インスタンス、VMware vCenter Server with Hybridity Bundle インスタンス、VMware vSphere クラスターの機能サポートの違いを確認してください。
 
@@ -23,7 +24,7 @@ lastupdated: "2019-01-24"
 | クラウド自動化マルチサイト・デプロイメント | V2.0 以降でデプロイされた新しいインスタンスでサポート | V2.0 以降でデプロイされた新しいインスタンスでサポート | サポートあり | サポートあり。 自動構成は含まない |
 | ESXi サーバーの追加 | サポートあり | サポートあり | サポートあり | サポートあり。 自動構成は含まない |
 | ESXi サーバーの削除 | サポートあり | サポートあり | サポートあり | サポートあり。 自動構成は含まない |
-| マルチクラスター・サポート | 5 クラスター | 10 クラスター | 10 クラスター | サポートあり。 自動構成は含まない |
+| マルチクラスター・サポート | 5 クラスター | 最大数は VMware のサイズ設定についてのガイドラインによる | 最大数は VMware のサイズ設定についてのガイドラインによる | サポートあり。 自動構成は含まない |
 | クライアント管理による VMware スタックの更新とパッチ適用 | 自動化機能で補助される更新:<br/>SDDC Manager | クライアント管理による更新:<br/>ネイティブ VMware ツール (VMware Update Manager) | クライアント管理による更新:<br/>ネイティブ VMware ツール (VMware Update Manager) | クライアント管理による更新:<br/>ネイティブ VMware ツール (VMware Update Manager) |
 | バックアップとリストア | IBM Spectrum Protect Plus または Veeam の手動使用 | IBM Spectrum Protect Plus または Veeam の手動使用 | IBM Spectrum Protect Plus または Veeam の手動使用 | バックアップとリストアのソリューションは含まれない |
 | ソフトウェア定義ネットワーキング | NSX Enterprise | NSX Base、Advanced、Enterprise | NSX Advanced または Enterprise | NSX Standard、Base、Enterprise。 自動構成は含まない |
@@ -34,18 +35,20 @@ lastupdated: "2019-01-24"
 | アドオン・サービス | HCX on {{site.data.keyword.cloud_notm}} 以外サポートあり。 | HCX on {{site.data.keyword.cloud_notm}} 以外サポートあり。 vCenter Server with Hybridity Bundle へのアップグレードが可能。 | HCX on {{site.data.keyword.cloud_notm}} を含めてサポートあり。 | このソリューションの自動化によってはサポートされませんが、独自のソフトウェアを持ち込んでインストールできます。 |
 
 ## メモ
+{: #inst_comp_chart-notes}
 
 <sup>1</sup> 設計の検証とデプロイメント時の検証に基づきます。
 
-<sup>2</sup> vSAN クラスターの ESXi サーバー数は最大 64 台まで増やすことができます。 詳しくは、[ESXi サーバーに関するよくある質問](/docs/services/vmwaresolutions/vmonic/faq_esxi.html)の_クラスターには ESXi サーバーをいくつ追加できますか?_ を参照してください。
+<sup>2</sup> vSAN クラスターの ESXi サーバー数は最大 64 台まで増やすことができます。 詳しくは、[ESXi サーバーに関するよくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_esxi)の_クラスターには ESXi サーバーをいくつ追加できますか?_ を参照してください。
 
-### 関連リンク
+## 関連リンク
+{: #inst_comp_chart-related}
 
-* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [Cloud Foundation の概要](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server Hybridity の概要](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [VMware vSphere の概要](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)
-* [Cloud Foundation の部品構成表](/docs/services/vmwaresolutions/sddc/sd_bom.html)
-* [vCenter Server の部品構成表](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
-* [VMware vSphere の部品構成表](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Cloud Foundation の概要](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [vCenter Server Hybridity の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [VMware vSphere の概要](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview)
+* [Cloud Foundation の部品構成表](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
+* [vCenter Server の部品構成表](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
+* [VMware vSphere の部品構成表](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_bom)

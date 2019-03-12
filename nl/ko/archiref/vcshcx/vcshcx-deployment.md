@@ -58,7 +58,7 @@ OVA를 다운로드하십시오.
     3. **관리** 탭에서 **요청 다운로드 링크**를 선택하여 클라이언트 측 OVA를 다운로드하십시오. OVA가 배치된 소스 vCenter에 로컬인 “점프 상자”를 사용하여 이 단계를 완료하십시오.
 2. vSphere C++ 클라이언트(또는 작동하는 클라이언트 통합 스냅인이 포함된 웹 클라이언트)에 로그인하여 vCenter 가져오기 마법사를 사용하는 OVA를 가져옵니다.
     1. HCX 관리자가 구성된 네트워크에서 소스 vCenter와 인터넷에 모두 액세스할 수 있는지 확인합니다.  
-    2. 프롬프트가 표시되면 등록 키를 입력합니다(클라이언트 도구 스냅인 설정이 있는 경우 웹 클라이언트 사용).  
+    2. 프롬프트가 표시되면 등록 키를 입력합니다 (클라이언트 도구 스냅인 설정이 있는 경우 웹 클라이언트 사용).  
 3. 로그아웃한 다음 vCenter 웹 클라이언트에 다시 로그인합니다. **HCX** 메뉴 선택 아이콘이 홈 화면 메뉴에 표시됩니다.
 4. 자체 서명 인증서의 경우 HCX 메뉴 항목을 선택하여 HCX 스냅인 UI에 액세스합니다. **관리** 탭을 선택합니다.
     1. URL에서 인증서를 가져오고 HCX용 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 제공한 HCX 클라우드 측 등록 URL의 키를 가져오도록 선택합니다.
@@ -79,4 +79,4 @@ CGW와 L2C 컴포넌트의 터널 상태가 **상호 연결** 탭에서 **가동
 ## 관련 링크
 {: #vcshcx-deployment-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

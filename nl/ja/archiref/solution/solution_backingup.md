@@ -4,21 +4,23 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # コンポーネントのバックアップ
+{: #solution_backingup}
 
 すべてのソフトウェア・コンポーネントの構成、管理、モニタリングに関する責任は、お客様側にあります。その中には、管理インフラストラクチャーとワークロードのバックアップと可用性も含まれます。
 
 ソリューションの一部として、IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} アドオン・サービスまたは Veeam on {{site.data.keyword.cloud_notm}} アドオン・サービスを必要に応じてデプロイできます。 Veeam と IBM Spectrum Protect Plus は、管理コンポーネントをバックアップするための要件を満たすことにつながります。
 
-これらのアドオン・サービスは、{{site.data.keyword.cloud_notm}} エンデュランス・ストレージとともにデプロイされます。 これらのサービスにより、管理コンポーネントおよびワークロードをバックアップしやすくなります。 [IBM Spectrum Protect Plus アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}と [Veeam アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}は、デプロイメントの計画とサイジングに関するガイダンスとして役立ちます。 Veeam デプロイメントには、[マネージド・サービス](/docs/services/vmwaresolutions/services/managing_veeam_services.html)も要求可能です。
+これらのアドオン・サービスは、{{site.data.keyword.cloud_notm}} エンデュランス・ストレージとともにデプロイされます。 これらのサービスにより、管理コンポーネントおよびワークロードをバックアップしやすくなります。 [IBM Spectrum Protect Plus アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window}と [Veeam アーキテクチャーの概要](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window}は、デプロイメントの計画とサイジングに関するガイダンスとして役立ちます。 Veeam デプロイメントには、[マネージド・サービス](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)も要求可能です。
 
 必要なバックアップ戦略はソリューション・コンポーネントによって異なります。 イメージ・レベルのバックアップを使用して保護されるコンポーネントもあれば、構成とデータのファイル・ベースのバックアップを使用して保護されるコンポーネントもあります。
 
 ## ファイル・ベースのバックアップ用のファイル・サーバー
+{: #solution_backingup-fileserver-backup}
 
 VMware vCenter Server、Platform Services Controller (PSC)、VMware NSX など、コンポーネントの中には、構成をファイル・サーバーにバックアップする必要があるものもあります。
 
@@ -31,19 +33,22 @@ VMware vCenter Server、Platform Services Controller (PSC)、VMware NSX など�
 5. この VM が Veeam または IBM Spectrum Protect Plus 管理バックアップ・ジョブに含まれているようにしてください。
 
 ## vCenter のファイル・ベースのバックアップ
+{: #solution_backingup-vcenter}
 
 VMware vCenter Server と PSC には、さまざまなプロトコルを使用して[データベースと構成をファイル・サーバーにエクスポートするためのアプライアンス管理用ユーザー・インターフェースと API](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} が用意されています。 VMware は、直接 vCenter Server Appliance と PSC 上で[クーロン・ジョブとして定期的に実行する](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window}ようにこれを構成する方法の例が記述されています。この例を適応させて使用できます。
 
-外部 PSC を使用している場合は、この手法を使用して、vCenter Server Appliance と PSC の両方を別々にバックアップする必要があります。組み込み PSC を使用している場合は、PSC のバックアップが vCenter のバックアップに組み込まれます。VMware が文書化した考慮事項と制限事項をよく理解し、それに基づいて計画を立ててください。 また、ファイル・サーバー上のファイル・バックアップの定期的ローテーションと有効期限の計画を立ててください。
+外部 PSC を使用している場合は、この手法を使用して、vCenter Server Appliance と PSC の両方を別々にバックアップする必要があります。 組み込み PSC を使用している場合は、PSC のバックアップが vCenter のバックアップに組み込まれます。 VMware が文書化した考慮事項と制限事項をよく理解し、それに基づいて計画を立ててください。 また、ファイル・サーバー上のファイル・バックアップの定期的ローテーションと有効期限の計画を立ててください。
 
 VMware のバックアップ・ロケーションは空のフォルダーでなければならないので、後続の各バックアップ・ジョブのためにロケーションを空にしておくようにバックアップ・ローテーションや自動化の計画を立ててください。
 {:note}
 
 ## NSX のファイル・ベースのバックアップ
+{: #solution_backingup-nsx}
 
 障害が発生した場合にシステムをその動作状態にリストアするためには、すべての NSX コンポーネントを適切にバックアップしておくことが不可欠です。 設計上、NSX マネージャーのバックアップ機能を使用して NSX バックアップを構成する必要があります。 この目的のために、ファイル・サーバーへの[バックアップを定期的に実行するように NSX マネージャーを構成する](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}ことができます。 ファイル・サーバーやそのデータが正しくバックアップされるようにして、古い NSX バックアップのローテーションが確実に行われるようにしてください。
 
 ## 管理仮想マシンのイメージ・ベースのバックアップ
+{: #solution_backingup-image}
 
 インスタンスをデプロイし、IBM Spectrum Protect Plus サービスまたは Veeam バックアップ・サービスのいずれかをデプロイしたら、管理仮想マシンのためのバックアップ・ジョブを構成します。 以下の VM を日次バックアップで少なくとも 7 日間バックアップすることを計画してください。
 
@@ -54,6 +59,7 @@ VMware のバックアップ・ロケーションは空のフォルダーでな�
 これらの仮想マシンをバックアップできるだけの Veeam ライセンスまたは IBM Spectrum Protect Plus ライセンスを割り振ることを計画し、VM 用として少なくとも 2 TB のバックアップ・ストレージを考慮に入れてください。
 
 ## アドオン・サービス
+{: #solution_backingup-addons}
 
 アドオン・ソリューション・コンポーネントをインスタンスにデプロイする場合は、以下のコンポーネントのバックアップも管理バックアップ戦略の一部として計画する必要があります。
 
@@ -63,13 +69,15 @@ VMware のバックアップ・ロケーションは空のフォルダーでな�
 * HyTrust Cloud Control および Data Control: HyTrust は、HyTrust サーバー・アプライアンスのイメージ・ベースのバックアップとファイル・ベースのバックアップの両方をサポートしています。 詳しくは、HyTrust 管理ガイドを参照してください。
 * VMware HCX: HCX アプライアンス管理インターフェースを使用することによって、vCenter Server Appliance に似た HCX マネージャー構成のファイル・ベースのバックアップを作成してダウンロードできます。
 
-## 追加の考慮事項
+## その他の考慮事項
+{: #solution_backingup-considerations}
 
 AD/DNS サーバーを {{site.data.keyword.cloud_notm}} 仮想サーバー・インスタンス (VSI) としてデプロイすることを選択した場合は、Veeam または IBM Spectrum Protect Plus のいずれでバックアップすることもできません。 この場合は、バックアップとリストアの操作を行うための任意の Windows バックアップ・ソリューションを使用するか、VMware クラスター内の AD/DNS VM を使用してインスタンスをデプロイすることを計画します (Veeam または IBM Spectrum Protect Plus でバックアップ可能) 。
 
 VMware vCenter 6.5u2 以降、VMware は、イメージ・ベースのバックアップを使用した vCenter Postgres データベースのバックアップをサポートするようになりました。データベース保全性を確保するために、バックアップ時間枠でデータベースの一時停止/再開統合スクリプトが使用されます。 VMware インスタンスを vCenter 6.5u2 にアップグレードする場合は、ファイル・ベースのバックアップを使用する代わりに Veeam または IBM Spectrum Protect Plus を使用して vCenter Server と PSC をバックアップすることを選択できます。 その場合は、Veeam または IBM Spectrum Protect Plus 静止機能を使用してデータベース保全性を確保する必要があります。
 
 ## バックアップからのリストア
+{: #solution_backingup-restore}
 
 管理バックアップをリストアする際の特別な考慮事項がいくつかあります。
 
@@ -80,11 +88,13 @@ VMware vCenter 6.5u2 以降、VMware は、イメージ・ベースのバック�
 * vCenter のバックアップとリストアに関する VMware の考慮事項と制限事項をよく理解しておいてください。
 
 ## サマリー
+{: #solution_backingup-summary}
 
 適切に計画すれば、VMware インスタンスはその管理コンポーネントを失うこともなく、正常にリカバリーできます。 管理インフラストラクチャーとワークロードの両方について、バックアップ・ジョブが成功していることとバックアップ・データが使用できることを定期的にモニターするようにしてください。またバックアップ計画とリストア計画も定期的に検証するようにしてください。
 
-### 関連リンク
+## 関連リンク
+{: #solution_backingup-related}
 
-* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [設計の概要](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [キャパシティーの拡張](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
+* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [設計の概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [キャパシティーの拡張](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)

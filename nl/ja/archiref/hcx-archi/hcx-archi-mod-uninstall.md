@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # HCX の変更またはアンインストール
+{: #hcx-archi-mod-uninstall}
 
 既存のインストール環境をアップグレードしたり、ハイブリッド・クラウド・サービスのデプロイメント環境の一部またはすべてを削除したりできます。
 
 ##  レイヤー 2 ネットワーク拡張の解除
+{: #hcx-archi-mod-uninstall-unstretch-layer2}
 
 レイヤー 2 コンセントレーター・サービス仮想アプライアンスを削除する前、またはハイブリッド・クラウド・サービスをアンインストールする前に、関連するレイヤー 2 ネットワーク拡張を解除しておく必要があります。
 
@@ -26,10 +28,12 @@ lastupdated: "2019-01-23"
 4. **「OK」**をクリックして確認します。
 
 ## HCX 仮想アプライアンスのアンインストール
+{: #hcx-archi-mod-uninstall-uninst-hva}
 
 ハイブリッド・クラウド・サービスをアンインストールするための準備やインストール・アーキテクチャーの変更のために、サービス・アプライアンスをアンインストールすることがあります。 以下の手順の中で大まかに説明しているように、アプライアンスの管理にはハイブリッド・クラウド・サービスを使用してください。
 
 ### HCX 仮想アプライアンスをアンインストールするための前提条件
+{: #hcx-archi-mod-uninstall-prereq-uninst-hva}
 
 * アンインストールの作業中に行われる可能性があるマイグレーションがある場合は、キャンセルするか実行時刻をリセットします。
 * vSphere Web Client のタスク・コンソールで実行中のマイグレーションがないか確認し、あった場合はそれらが完了するまで待ちます。
@@ -39,6 +43,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ### HCX 仮想アプライアンスをアンインストールする手順
+{: #hcx-archi-mod-uninstall-proc-uninst-hva}
 
 1. vSphere Web Client インターフェースで、左側のペインからハイブリッド・クラウド・サービス・プラグインを選択します。
 2. 中央のペインで、**「ハイブリッド・サービス (Hybrid Services)」**タブをクリックします。
@@ -49,6 +54,7 @@ lastupdated: "2019-01-23"
 ハイブリッド・クラウド・ゲートウェイと、ハイブリッド・クラウド・ゲートウェイを使用するすべてのハイブリッド・サービス仮想アプライアンスが、vCenter と VCF/VCS ハイブリッド・クラウド・サービスのクラウドから削除されます。
 
 ## HCX Manager のアンインストール
+{: #hcx-archi-mod-uninstall-unist-hcxm}
 
 オンプレミスのデータ・センターから HCX ソリューションを削除する前に、HCX Manager アプライアンスをアンインストールする必要があります。 以下の手順に従って、ハイブリッド・クラウド・サービス仮想マシンをアンインストールします。
 
@@ -62,10 +68,12 @@ lastupdated: "2019-01-23"
 * マイグレーション済み VM
 
 ### 次に行うこと
+{: #hcx-archi-mod-uninstall-what-next}
 
 マイグレーション済み VM とログは、手動でバックアップしたり、削除したりできます。
 
 ## HCX 管理ポータルへのログイン
+{: #hcx-archi-mod-uninstall-log-hcxmp}
 
 ハイブリッド・クラウド・サービス・デプロイメントは、ブラウザー・ベースのユーザー・インターフェースを使用して管理ポータルから管理できます。
 
@@ -73,6 +81,7 @@ lastupdated: "2019-01-23"
 2. SSL を使用すると、Web ブラウザー・ウィンドウにハイブリッド・クラウド・サービスのユーザー・インターフェースが開かれます。 必要に応じて、セキュリティー証明書を受け入れます。 VMware Hybridity and Networking のログイン画面が開きます。
 3. ユーザー名とパスワードを入力します。 デフォルトでは、ユーザー名は Admin です。 パスワードは、ハイブリッド・クラウド・サービス仮想アプライアンスのインストール時に指定した値です。
 
-### 関連リンク
+## 関連リンク
+{: #hcx-archi-mod-uninstall-related}
 
-* [HCX on IBM Cloud のトラブルシューティング](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-trbl.html)
+* [HCX on IBM Cloud のトラブルシューティング](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-trbl)

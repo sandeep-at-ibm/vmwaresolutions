@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-07-05"
 
@@ -13,6 +13,7 @@ lastupdated: "2017-07-05"
 {:important: .important}
 
 # V1.7 のリリース・ノート
+{: #relnotes_v17}
 
 このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
@@ -29,27 +30,27 @@ lastupdated: "2017-07-05"
   V4 サーバーでは、EVC モードは、既存のデプロイメントでも新規のデプロイメントでも有効になりません。
   {:note}
 
-* 5 月 22 日より前にデプロイされたために V3 サーバーを使用している VMware Cloud Foundation デプロイメントで、新規ノードをインスタンスに追加すると V4 サーバーが注文されます。 これらのサーバーのメモリーは 256 GB です。512 GB のメモリーが必要な場合は、サーバーを追加した後、サポート・チケットをオープンして、512 GB のメモリーへのサーバー・アップグレードを要求してください。 IBM サポートへの連絡について詳しくは、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)を参照してください。
+* 5 月 22 日より前にデプロイされたために V3 サーバーを使用している VMware Cloud Foundation デプロイメントで、新規ノードをインスタンスに追加すると V4 サーバーが注文されます。 これらのサーバーのメモリーは 256 GB です。512 GB のメモリーが必要な場合は、サーバーを追加した後、サポート・チケットをオープンして、512 GB のメモリーへのサーバー・アップグレードを要求してください。 IBM サポートへの連絡について詳しくは、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)を参照してください。
 
-コンポーネントについて詳しくは、[Cloud Foundation インスタンスの技術仕様](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)を参照してください。
+コンポーネントについて詳しくは、[Cloud Foundation インスタンスの技術仕様](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances)を参照してください。
 
 ### 更新処理の要件
 
-Cloud Foundation インスタンスのデプロイメントの複雑さと、マルチサイト構成かどうかに応じて、更新処理ではコンソールの**「更新およびパッチ」**タブに表示される一連の手順を実行する必要があります。 詳しくは、[Cloud Foundation インスタンスへの更新の適用](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html#applying-updates-to-cloud-foundation-instances)を参照してください。
+Cloud Foundation インスタンスのデプロイメントの複雑さと、マルチサイト構成かどうかに応じて、更新処理ではコンソールの**「更新およびパッチ」**タブに表示される一連の手順を実行する必要があります。 詳しくは、[Cloud Foundation インスタンスへの更新の適用](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_applyingupdates#applying-updates-to-cloud-foundation-instances)を参照してください。
 
 ## VMware vCenter Server インスタンスの更新
 
 ### クラスター・サポート
 
-V1.7 リリース以降、vCenter Server インスタンスではクラスターを使用して ESXi サーバーを管理できるので、リソース管理と可用性が向上します。 インスタンスの注文時に構成した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 インスタンスの詳細ページに新しく導入された**「インフラストラクチャー」**タブで、クラスターの詳細を表示したり、最大 5 つのクラスターをインスタンスに追加したりできます。 インスタンスの容量を拡張または縮小する場合は、ESXi サーバーを追加または削除するクラスターを選択できます。 詳しくは、[vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)を参照してください。
+V1.7 リリース以降、vCenter Server インスタンスではクラスターを使用して ESXi サーバーを管理できるので、リソース管理と可用性が向上します。 インスタンスの注文時に構成した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 インスタンスの詳細ページに新しく導入された**「インフラストラクチャー」**タブで、クラスターの詳細を表示したり、最大 5 つのクラスターをインスタンスに追加したりできます。 インスタンスの容量を拡張または縮小する場合は、ESXi サーバーを追加または削除するクラスターを選択できます。 詳しくは、[vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)を参照してください。
 
 ### Zerto 災害復旧のデプロイメントの機能拡張
 
-Zerto 災害復旧のデプロイメントが、サポート・チケットによって処理されるのではなく、自動化されました。 プライベート・ポータブル・サブネット、Windows VSI (仮想サービス・インスタンス)、Zerto ライセンス料など、すべての Zerto コンポーネントが見積もりコストにリストされるので、注文前に確認することができます。 詳しくは、[Zerto 災害復旧のデプロイメント・プロセス](/docs/services/vmwaresolutions/services/addingzertodr.html)を参照してください。
+Zerto 災害復旧のデプロイメントが、サポート・チケットによって処理されるのではなく、自動化されました。 プライベート・ポータブル・サブネット、Windows VSI (仮想サービス・インスタンス)、Zerto ライセンス料など、すべての Zerto コンポーネントが見積もりコストにリストされるので、注文前に確認することができます。 詳しくは、[Zerto 災害復旧のデプロイメント・プロセス](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)を参照してください。
 
 ### NSX ライセンス・アップグレード機能
 
-vCenter Server インスタンスの**「サマリー」**タブから NSX ライセンス・エディションをアップグレードできます。 ライセンスをアップグレードすると、アカウント内の既存の NSX SoftLayer ライセンスがすべて新しいライセンスに置き換えられます。 詳しくは、[vCenter Server インスタンスの表示](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)を参照してください。
+vCenter Server インスタンスの**「サマリー」**タブから NSX ライセンス・エディションをアップグレードできます。 ライセンスをアップグレードすると、アカウント内の既存の NSX SoftLayer ライセンスがすべて新しいライセンスに置き換えられます。 詳しくは、[vCenter Server インスタンスの表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)を参照してください。
 
 ## 使いやすさの向上
 

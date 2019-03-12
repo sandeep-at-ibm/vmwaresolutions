@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,12 +13,14 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 將更新套用至 vCenter Server with Hybridity Bundle 實例
+{: #vc_hybrid_applyingupdates}
 
 只會針對管理元件，將修補程式及更新套用至 vCenter Server with Hybridity Bundle 實例的處理程序自動化。必須手動套用 VMware 更新。
 
 ## 開始之前
+{: #vc_hybrid_applyingupdates-prereq}
 
-因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。例如新增主機、新增叢集及訂購服務等動作，會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)中的 *IBM CloudDriver 備援* 小節。{:note}
+因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。例如新增主機、新增叢集及訂購服務等動作，會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)中的 *IBM CloudDriver 備援* 小節。{:note}
 
 在您嘗試套用更新之前，請按一下向下箭頭來展開更新項目，並驗證下列資訊：
 * 更新的版本。您必須依最早到最新的時間順序來套用更新。套用最新的更新之前，請確定已套用所有先前的更新。例如，嘗試套用 2.4 版更新之前，您必須套用 2.3 版更新。
@@ -38,6 +40,7 @@ lastupdated: "2019-01-23"
 |重大|此更新會影響部分或所有系統。您必須在排定的關閉時間套用它。|  
 
 ## 將更新套用至 vCenter Server with Hybridity Bundle 實例的程序
+{: #vc_hybrid_applyingupdates-procedure}
 
 1. 從 {{site.data.keyword.vmwaresolutions_full}} 主控台，按一下左導覽窗格中的**已部署的實例**。
 2. 在 **vCenter Server 實例**表格中，按一下要更新的實例。
@@ -60,13 +63,14 @@ lastupdated: "2019-01-23"
 7. 如果您要在多站台部署配置中將更新套用至 vCenter Server 實例，則會顯示標題為**更新所需要的步驟**的區段。本節列出多站台部署中所有實例所需的更新作業。您必須對每個步驟按一下**套用更新**，來依序完成步驟。您必須先等待上一步完成，再開始下一步。   
 
 ## 結果
+{: #vc_hybrid_applyingupdates-results}
 
-2. 在您套用更新之後，軟體更新狀態清單中會出現一筆記錄，您可以在其中檢視更新的詳細進度及狀態。更新順利完成時，已安裝的軟體更新清單中會出現一筆記錄。
+1. 在您套用更新之後，軟體更新狀態清單中會出現一筆記錄，您可以在其中檢視更新的詳細進度及狀態。更新順利完成時，已安裝的軟體更新清單中會出現一筆記錄。
 
   若要擷取更新工作的最新狀態，請按一下頁面右上方的重新整理圖示。
   {:tip}
 
-3. 如需更新狀態的詳細資料，請參閱下列清單：
+2. 如需更新狀態的詳細資料，請參閱下列清單：
 <dl class="dl">
 <dt class="dt dlterm">可用</dt>
 <dd class="dd">更新可供套用。在套用所有先前的更新之前，您無法選取可用的更新。</dd>
@@ -82,10 +86,11 @@ lastupdated: "2019-01-23"
 <dd class="dd">無法取得更新工作的狀態。請與 IBM 支援中心聯絡，以取得協助。</dd>
 </dl>
 
-4. 如果更新處理程序在特定步驟失敗，請[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)以取得協助。會建議您如何解決問題，並引導您從失敗的步驟重新嘗試升級。
+3. 如果更新處理程序在特定步驟失敗，請[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)以取得協助。會建議您如何解決問題，並引導您從失敗的步驟重新嘗試升級。
 
-### 相關鏈結
+## 相關鏈結
+{: #vc_hybrid_applyingupdates-related}
 
-* [vCenter Server with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [vCenter Server with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

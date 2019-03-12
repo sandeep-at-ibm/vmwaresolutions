@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-10-01"
 
 ---
 
 # V2.6 のリリース・ノート
+{: #relnotes_v26}
 
 このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
@@ -20,7 +21,7 @@ lastupdated: "2018-10-01"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-詳しくは、[Spectre および Meltdown 脆弱性への対処](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)を参照してください。
+詳しくは、[Spectre および Meltdown 脆弱性への対処](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)を参照してください。
 
 ## High Performance with Intel Optane オプション
 
@@ -40,9 +41,9 @@ High Performance with Intel Optane オプションは、Dual Intel Xeon Gold 512
 
 詳しくは、以下のトピックの『_ネットワーク・インターフェースの設定_』セクションを参照してください。
 
-* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#network-interface-settings)
-* [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html#network-interface-settings)
-* [新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#network-interface-settings)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#network-interface-settings)
+* [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance#network-interface-settings)
+* [新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#network-interface-settings)
 
 ## ESXi サーバーの削除
 
@@ -50,9 +51,9 @@ High Performance with Intel Optane オプションは、Dual Intel Xeon Gold 512
 
 ESXi サーバーの要件について詳しくは、以下のトピックを参照してください。
 
-* [vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [vCenter Server with Hybridity Bundle インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [vCenter Server with Hybridity Bundle インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 
 ## VMware vCenter Server インスタンスの更新
 
@@ -69,7 +70,7 @@ ESXi サーバーの要件について詳しくは、以下のトピックを参
 
 vCenter Server インスタンスから Hybridity Bundle ライセンスを削除できるようになりました。 これを行うには、VMware NSX および VMware vSAN のレンタル・ライセンス・キーをライセンス持ち込み (BYOL) キーに置き換え、レンタル・ライセンスの料金を取り消すためのサポート・チケットを開く必要があります。
 
-詳しくは、[vCenter Server インスタンスからの Hybridity Bundle の削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletingbundle.html)を参照してください。
+詳しくは、[vCenter Server インスタンスからの Hybridity Bundle の削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletingbundle)を参照してください。
 
 ### vCenter Server with Hybridity Bundle の可用性
 
@@ -77,8 +78,8 @@ vCenter Server インスタンスから Hybridity Bundle ライセンスを削�
 
 詳しくは、以下のトピックを参照してください。
 
-* [vCenter Server with Hybridity Bundle の概要](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 
 ## VMware Cloud Foundation インスタンスの更新
 
@@ -98,8 +99,8 @@ V2.3 以降のリリースでデプロイまたは V2.3 以降のリリースに
 このサービスを組み込んだ形でインスタンスを注文することも、後から既存のインスタンスにこのサービスを追加することもできます。
 
 詳しくは、以下のトピックを参照してください。
-* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](/docs/services/vmwaresolutions/services/htkc_considerations.html)
-* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managinghtkc.html)
+* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)
+* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtkc)
 
 ### HyTrust CloudControl on IBM Cloud
 
@@ -115,7 +116,7 @@ V2.6 以降では、vSphere ESXi V6.5 Update 2c を使用して新しいイン�
 
 Veeam on {{site.data.keyword.cloud_notm}} がインストールされている既存の Cloud Foundation インスタンスも V9.5u3a 以降に更新することが推奨されています。
 
-Veeam on {{site.data.keyword.cloud_notm}} について詳しくは、[Veeam on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/veeam_considerations.html)を参照してください。
+Veeam on {{site.data.keyword.cloud_notm}} について詳しくは、[Veeam on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)を参照してください。
 
 ### VMware HCX on IBM Cloud
 
@@ -135,7 +136,7 @@ Veeam on {{site.data.keyword.cloud_notm}} について詳しくは、[Veeam on {
 ### リファレンス・アーキテクチャー資料
 {{site.data.keyword.vmwaresolutions_short}} アーキテクチャー資料が更新され、VMware インスタンスの管理と運用に関する責任を理解するための重要な考慮事項が記載されています。
 
-詳しくは、[デプロイメント後の VMware インスタンスの考慮事項](/docs/services/vmwaresolutions/archiref/solution/solution_considerations.html)を参照してください。
+詳しくは、[デプロイメント後の VMware インスタンスの考慮事項](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_considerations)を参照してください。
 
 ## ユーザー・インターフェースの更新と向上
 

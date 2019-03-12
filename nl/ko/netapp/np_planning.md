@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # NetApp ONTAP Select 인스턴스에 대한 요구사항 및 계획
+{: #np_planning}
 
 NetApp ONTAP Select 인스턴스를 주문하기 전에 다음 요구사항을 검토하십시오. {{site.data.keyword.CloudDataCent}} 위치와 워크로드 성능 및 용량 요구사항에 따라 인스턴스를 계획하십시오.
 
 ## IBM Cloud 계정 요구사항
+{: #np_planning-account-req}
 
-사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)을 참조하십시오.
+사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)을 참조하십시오.
 
 ## IBM Cloud Data Center 가용성
+{: #np_planning-dc-availability}
 
 NetApp ONTAP Select 배치에는 실제 인프라에 대한 엄격한 요구사항이 있습니다. 그러므로, 요구사항을 충족하는 {{site.data.keyword.CloudDataCents_notm}}에만 인스턴스를 배치할 수 있습니다. 다음 {{site.data.keyword.CloudDataCents_notm}}는 NetApp ONTAP Select 배치에 사용 가능합니다.
 
@@ -55,7 +58,8 @@ NetApp ONTAP Select 배치에는 실제 인프라에 대한 엄격한 요구사�
 |WDC06 |워싱턴, DC |북미 동부 |고성능(중형), 고성능(대형), 고용량
 |WDC07 |워싱턴, DC |북미 동부 |고성능(중형), 고성능(대형), 고용량
 
-### 관련 링크
+## 관련 링크
+{: #np_planning-related}
 
-* [NetApp ONTAP Select 개요](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
-* [NetApp ONTAP Select 인스턴스 주문](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [NetApp ONTAP Select 개요](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)
+* [NetApp ONTAP Select 인스턴스 주문](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)

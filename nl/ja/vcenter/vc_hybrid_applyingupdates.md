@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,12 +13,14 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server with Hybridity Bundle インスタンスへの更新の適用
+{: #vc_hybrid_applyingupdates}
 
 管理コンポーネントに限り、パッチと更新を vCenter Server with Hybridity Bundle インスタンスに適用するプロセスが自動化されています。 VMware の更新は手動で適用しなければなりません。
 
 ## 始める前に
+{: #vc_hybrid_applyingupdates-prereq}
 
-V2.5 以降は自動更新が有効になっているため、IBM CloudDriver の更新はリストされなくなりました。 ホストの追加、クラスターの追加、サービスの注文などの操作を行うと、自動的にインスタンスが最新バージョンに更新されます。 自動更新について詳しくは、[V2.5 のリリース・ノート](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)の『*IBM CloudDriver の回復力*』のセクションを参照してください。
+V2.5 以降は自動更新が有効になっているため、IBM CloudDriver の更新はリストされなくなりました。 ホストの追加、クラスターの追加、サービスの注文などの操作を行うと、自動的にインスタンスが最新バージョンに更新されます。 自動更新について詳しくは、[V2.5 のリリース・ノート](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)の『*IBM CloudDriver の回復力*』のセクションを参照してください。
 {:note}
 
 更新を適用する前に、下矢印をクリックして更新エントリーを展開し、以下の情報を確認します。
@@ -39,6 +41,7 @@ V2.5 以降は自動更新が有効になっているため、IBM CloudDriver �
 | 大  | この更新は、一部またはすべてのシステムに影響を与えます。 スケジュールされたダウン時間中に適用する必要があります。 |  
 
 ## vCenter Server with Hybridity Bundle インスタンスに更新を適用する手順
+{: #vc_hybrid_applyingupdates-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_full}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、更新するインスタンスをクリックします。
@@ -63,13 +66,14 @@ V2.5 以降は自動更新が有効になっているため、IBM CloudDriver �
 7. マルチサイト・デプロイメント構成で vCenter Server インスタンスに更新を適用する場合は、**「更新に必要なステップ」**セクションが表示されます。 このセクションには、マルチサイト・デプロイメント内のすべてのインスタンスにとって必要な更新操作がリストされます。 各手順の**「更新を適用」**をクリックして、手順を順番に実行していく必要があります。 前の手順が完了するのを待ってから、次の手順を開始する必要があります。   
 
 ## 結果
+{: #vc_hybrid_applyingupdates-results}
 
-2. 更新の適用後に、ソフトウェア更新状況リスト内にレコードが表示されます。このレコードで、更新の詳細な進行状況や状況を確認できます。 更新が正常に完了すると、インストール済みのソフトウェア更新のリストにレコードが表示されます。
+1. 更新の適用後に、ソフトウェア更新状況リスト内にレコードが表示されます。このレコードで、更新の詳細な進行状況や状況を確認できます。 更新が正常に完了すると、インストール済みのソフトウェア更新のリストにレコードが表示されます。
 
   更新ジョブの最新状況を取得するには、ページ右上のリフレッシュ・アイコンをクリックします。
   {:tip}
 
-3. 更新状況について詳しくは、次のリストを参照してください。
+2. 更新状況について詳しくは、次のリストを参照してください。
 <dl class="dl">
 <dt class="dt dlterm">使用可能</dt>
 <dd class="dd">更新は適用可能です。 これより前の更新がすべて適用されるまで、使用可能な更新を選択することはできません。
@@ -86,10 +90,11 @@ V2.5 以降は自動更新が有効になっているため、IBM CloudDriver �
 <dd class="dd">更新ジョブの状況を取得できません。 IBM サポートにお問い合わせください。</dd>
 </dl>
 
-4. 特定のステップで更新プロセスが失敗する場合は、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)によって支援を得ることができます。 問題の解決方法についてアドバイスし、失敗した手順からもう一度アップグレードする方法をご案内します。
+3. 特定のステップで更新プロセスが失敗する場合は、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)によって支援を得ることができます。 問題の解決方法についてアドバイスし、失敗した手順からもう一度アップグレードする方法をご案内します。
 
-### 関連リンク
+## 関連リンク
+{: #vc_hybrid_applyingupdates-related}
 
-* [vCenter Server with Hybridity Bundle の概要](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [vCenter Server with Hybridity Bundle の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

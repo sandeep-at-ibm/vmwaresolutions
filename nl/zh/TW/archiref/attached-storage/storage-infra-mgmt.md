@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -13,16 +13,19 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 連接儲存空間基礎架構管理
+{: #storage-infra-mgmt}
 
 基礎架構管理是指管理 vSphere ESXi 基礎架構的 VMware 元件。
 
-如需元件的相關資訊，請參閱[虛擬基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)中的「圖 2. NSX Manager 網路概觀」。
+如需元件的相關資訊，請參閱[虛擬基礎架構設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)中的「圖 2. NSX Manager 網路概觀」。
 
 ## 虛擬網路設計
+{: #storage-infra-mgmt-visual-net-design}
 
-本設計所使用的網路虛擬化，是使用現有的 vSphere Distributed Switch (vDS)，其與專用網路相關聯，並指定在 [{{site.data.keyword.vmwaresolutions_full}} 架構](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)中。
+本設計所使用的網路虛擬化，是使用現有的 vSphere Distributed Switch (vDS)，其與專用網路相關聯，並指定在 [{{site.data.keyword.vmwaresolutions_full}} 架構](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)中。
 
 ## vSphere Distributed Switch
+{: #storage-infra-mgmt-vsphere-ds}
 
 在 vCenter Server 解決方案內會建立另一個 VLAN，它用來將 NFS 裝載點連接至現有叢集中的 ESXi 主機。因為 vCenter Server 解決方案具有與專用網路相關聯的 vSphere Distributed Switch，所以會建立另一個埠群組，並用其他的 VLAN 號碼加上標籤，因為這個其他的 VLAN 不是原生 VLAN。
 
@@ -47,9 +50,11 @@ lastupdated: "2019-01-23"
 ![專用 vDS 埠群組及上行鏈路](private_vds_portgroups_and_uplinks.svg "專用 vDS 埠群組及上行鏈路")
 
 ### vSphere 主機靜態遞送
+{: #storage-infra-mgmt-vsphere-routing}
 
 雖然 vDS 是以新的埠群組配置，且 VMkernel 埠已指派給埠群組，但該解決方案會在部署的每一部 vSphere ESXi 主機上建立靜態路徑，使所有 NFS 資料流量遍訪 VLAN 和子網路中的 NFS。靜態路徑是建立在 `/etc/rc.local.d/local.sh` 中，以便能在主機重新啟動之間持續保存。
 
-### 相關鏈結
+## 相關鏈結
+{: #storage-infra-mgmt-related}
 
-* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

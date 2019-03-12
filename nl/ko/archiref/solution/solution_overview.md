@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
-# 솔루션 개요
+# IBM Cloud for VMware Solutions의 개요
+{: #solution_overview}
 
 {{site.data.keyword.vmwaresolutions_full}} 오퍼링을 사용하면 기존의 VMware 가상화된 데이터 센터를 {{site.data.keyword.cloud_notm}}로 확장하거나 클라우드 고유 애플리케이션을 수용할 수 있습니다.
 
@@ -18,12 +19,11 @@ lastupdated: "2019-01-23"
 
 이 디자인은 특정 유스 케이스를 위해 추가될 기타 내부 또는 공급업체 특정 컴포넌트에 대한 기초를 제공하는 베이스 라인 아키텍처로서의 역할을 합니다.
 
-## VMware on IBM Cloud 개요
-
 그림 1. VMware on {{site.data.keyword.cloud_notm}} 개요
 ![VMware on {{site.data.keyword.cloud_notm}}](solution_overview.svg "솔루션은 애플리케이션이 실행될 수 있는 VM에서 사용할 컴퓨팅, 네트워크 및 선택적으로 스토리지 리소스를 가상화합니다.")
 
-## 주요 이점
+## IBM Cloud for VMware Solutions의 주요 이점
+{: #solution_overview-benefits}
 
 VMware Cloud Foundation 및 vCenter Server on {{site.data.keyword.cloud_notm}}는 기본 구성 요소를 제공하며, 여기에는 vSAN을 포함한 공유 스토리지 옵션과 VMware vSphere, vCenter Server, NSX가 있습니다. 이러한 컴포넌트는 워크로드에 가장 적합한 VMware 소프트웨어 정의 데이터 센터 솔루션을 유연하게 구축하는 데 필요합니다.
 
@@ -38,8 +38,9 @@ VMware on {{site.data.keyword.cloud_notm}} 오퍼링은 다음과 같은 이점�
 * 가상화 관리에 대한 전체 관리 액세스를 제공하여 기존 VMware 도구, 스크립트 및 교육 투자를 그대로 유지함으로써 배치된 하이브리드 클라우드의 **지속적인 관리 및 통제 가능**.
 * 전세계 30여개의 {{site.data.keyword.CloudDataCents_notm}}에 걸쳐 있는 IBM Professional 및 Managed Services를 사용하여 **글로벌 규모로 VMware 전문지식을 최대한 활용**.
 
-### 관련 링크
+## 관련 링크
+{: #solution_overview-related}
 
-* [디자인 개요](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [용량 스케일링](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
-* [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [디자인 개요](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [용량 스케일링](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)
+* [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

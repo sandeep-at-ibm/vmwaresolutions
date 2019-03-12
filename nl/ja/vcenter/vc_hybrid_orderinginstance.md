@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,14 +13,16 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # vCenter Server with Hybridity Bundle インスタンスの注文
+{: #vc_hybrid_orderinginstance}
 
-ワークロードのニーズに合わせて最適化できる、柔軟でカスタマイズ可能な VMware 仮想化プラットフォームをデプロイするには、VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle インスタンスを注文します。 vCenter Server with Hybridity Bundle インスタンスの注文には VMware Hybrid Cloud Extension (HCX) のライセンスが含まれているので、VMware HCX on {{site.data.keyword.cloud_notm}} サービスを利用することができます。 災害復旧のための [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html) などのサービスも追加できます。
+ワークロードのニーズに合わせて最適化できる、柔軟でカスタマイズ可能な VMware 仮想化プラットフォームをデプロイするには、VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle インスタンスを注文します。 vCenter Server with Hybridity Bundle インスタンスの注文には VMware Hybrid Cloud Extension (HCX) のライセンスが含まれているので、VMware HCX on {{site.data.keyword.cloud_notm}} サービスを利用することができます。 災害復旧のための [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) などのサービスも追加できます。
 
 ## vCenter Server with Hybridity Bundle インスタンスを注文するための要件
+{: #vc_hybrid_orderinginstance-req}
 
 以下の作業を完了していることを確認してください。
-*  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](/docs/services/vmwaresolutions/vmonic/useraccount.html)を参照してください。
-*  [vCenter Server with Hybridity Bundle の要件と計画](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)の情報を確認する。
+*  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)を参照してください。
+*  [vCenter Server with Hybridity Bundle の要件と計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)の情報を確認する。
 * インスタンス名とドメイン・ネームの形式を確認する。 ドメイン・ネームとサブドメイン・ラベルは、インスタンスのユーザー名とサーバー名の生成に使用されます。
 
 表 1. インスタンス名とドメイン・ネームの値の形式
@@ -37,10 +39,12 @@ lastupdated: "2019-01-25"
 {:important}
 
 ## システム設定
+{: #vc_hybrid_orderinginstance-sys-settings}
 
 vCenter Server with Hybridity Bundle インスタンスを注文する際には、以下のシステム設定を指定する必要があります。
 
 ### インスタンス名
+{: #vc_hybrid_orderinginstance-inst-name}
 
 インスタンス名は、次の要件を満たす必要があります。
 * 英数字とダッシュ (-) の文字だけを使用できます。
@@ -49,10 +53,12 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 * インスタンス名はアカウント内で固有である必要があります。
 
 ### プライマリーまたはセカンダリー
+{: #vc_hybrid_orderinginstance-primary-secondary}
 
 新規プライマリー・インスタンスを注文するのか、既存のプライマリー・インスタンスのセカンダリー・インスタンスを注文するのかを選択します。
 
 ## ライセンス交付の設定
+{: #vc_hybrid_orderinginstance-licensing-settings}
 
 vCenter Server with Hybridity Bundle インスタンスの注文には、以下の VMware ライセンスが含められます。 NSX および vSAN のライセンスのエディションを指定する必要があります。
 
@@ -62,21 +68,25 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、以下�
 * vSAN 6.6 (Advanced または Enterprise エディション)
 
 ### 注意
+{: #vc_hybrid_orderinginstance-attention}
 
 * vCenter Server with Hybridity Bundle インスタンスはライセンス持ち込みをサポートしていません。
 * 最小のライセンス・エディションが、ユーザー・インターフェースに表示されます。 複数のコンポーネント・エディションがサポートされている場合は、必要なエディションを選択できます。
 
 ## ベア・メタル・サーバーの設定
+{: #vc_hybrid_orderinginstance-bare-metal-settings}
 
 ベアメタルの設定は、選択した{{site.data.keyword.CloudDataCent_notm}}やベアメタル・サーバーの構成に基づきます。
 
 vSAN 構成の場合、初期クラスターとデプロイメント後のクラスターの両方に 4 つの ESXi サーバーが必要です。 すべての ESXi サーバーが同じ構成を共有します。 デプロイメント後には、さらに 4 つのクラスターを追加できます。
 
 ### データ・センターの場所
+{: #vc_hybrid_orderinginstance-dc-location}
 
 インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
 
 ### Skylake
+{: #vc_hybrid_orderinginstance-skylake}
 
 **「Skylake」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。
 
@@ -89,6 +99,7 @@ vSAN 構成の場合、初期クラスターとデプロイメント後のクラ
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### Broadwell
+{: #vc_hybrid_orderinginstance-broadwell}
 
 **「Broadwell」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。
 
@@ -103,10 +114,12 @@ vSAN 構成の場合、初期クラスターとデプロイメント後のクラ
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.1 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 ### ベア・メタル・サーバーの数
+{: #vc_hybrid_orderinginstance-bare-metal-number}
 
 デフォルトで 4 つの ESXi サーバーが選択されます。変更はできません。
 
 ## ストレージ設定
+{: #vc_hybrid_orderinginstance-storage-settings}
 
 vCenter Server with Hybridity Bundle インスタンスの注文には、VMware vSAN 6.6 が含められます。 以下の vSAN オプションを指定します。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
@@ -119,10 +132,12 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、VMware 
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
 
 ## ネットワーク・インターフェースの設定
+{: #vc_hybrid_orderinginstance-network-interface-settings}
 
 vCenter Server with Hybridity Bundle インスタンスを注文する際には、以下のネットワーク・インターフェース設定を指定する必要があります。
 
 ### ホスト名接頭部
+{: #vc_hybrid_orderinginstance-host-name-prefix}
 
   ホスト名接頭部は、次の要件を満たす必要があります。
   *  英数字とダッシュ (-) の文字だけを使用できます。
@@ -130,6 +145,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
   *  ホスト名接頭部の最大長は 10 文字です。
 
 ### サブドメイン・ラベル
+{: #vc_hybrid_orderinginstance-subdomain-label}
 
 サブドメイン・ラベルは、次の要件を満たす必要があります。
 *  英数字とダッシュ (-) の文字だけを使用できます。
@@ -138,6 +154,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 *  サブドメイン・ラベルは、アカウント内で固有でなければなりません。
 
 ### ドメイン・ネーム
+{: #vc_hybrid_orderinginstance-domain-name}
 
 ルート・ドメイン・ネームは、次の要件を満たす必要があります。
 * ドメイン・ネームは、ピリオド (.) で区切られた 2 つ以上のストリングで構成されていなければなりません。
@@ -150,6 +167,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 {:note}
 
 ### パブリックまたはプライベート・ネットワーク
+{: #vc_hybrid_orderinginstance-public-private-network}
 
 ネットワーク・インターフェース・カード (NIC) の有効化設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。 以下のアドオン・サービスはパブリック NIC を必要とするため、プライベート・オプションを選択した場合は利用できません。
 
@@ -159,12 +177,14 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 新規 VLAN を注文
+{: #vc_hybrid_orderinginstance-new-vlans}
 
 **「新規 VLAN を注文」**を選択して、新しいパブリック VLAN 1 つと新しいプライベート VLAN 2 つを注文します。
 
 インスタンスの注文には、パブリック VLAN 1 つとプライベート VLAN 2 つが必要です。 2 つのプライベート VLAN は各ベア・メタル・サーバーにトランキングされます。
 
 ### 既存の VLAN を選択
+{: #vc_hybrid_orderinginstance-existing-vlans}
 
 選択した {{site.data.keyword.CloudDataCent_notm}}によっては、既存のパブリック VLAN とプライベート VLAN を使用できることがあります。
 
@@ -172,12 +192,12 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 
 **「既存の VLAN を選択」**を選択して、既存のパブリック VLAN とプライベート VLAN を再使用し、使用可能な VLAN とサブネットの中から選択します。
 
-
 * 選択した VLAN のファイアウォール構成が管理用データ・トラフィックをブロックしていないことを確認してください。
 * 選択したすべての VLAN が同じポッドに含まれていることを確認してください。複数のポッドの VLAN に ESXi サーバーをプロビジョンすることはできません。
 {:important}
 
 ### DNS 構成
+{: #vc_hybrid_orderinginstance-dns-config}
 
 インスタンスのドメイン・ネーム・システム (DNS) 構成を選択します。
 
@@ -194,14 +214,17 @@ VM は 30 日以内に有効にしてください。
 Windows ライセンスの注文方法について詳しくは、[Windows Server 2012 R2 の資料](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2)を参照してください。
 
 ## サービスの設定
+{: #vc_hybrid_orderinginstance-addon-services}
 
-vCenter Server with Hybridity Bundle インスタンスを注文するときに、追加のサービスも注文することができます。 サービスについて詳しくは、[vCenter Server with Hybridity Bundle インスタンスで使用可能なサービス](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)を参照してください。
+vCenter Server with Hybridity Bundle インスタンスを注文するときに、追加のサービスも注文することができます。 サービスについて詳しくは、[vCenter Server with Hybridity Bundle インスタンスで使用可能なサービス](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances)を参照してください。
 
 ## 注文のサマリー
+{: #vc_hybrid_orderinginstance-order-summary}
 
 選択したインスタンス構成とアドオン・サービス構成に基づいて、見積もりコストがすぐに生成され、右側のペインの**「注文の要約」**セクションに表示されます。 右側のペインの下部の**「料金詳細」**をクリックすると、見積もりの詳細を示す PDF 文書を生成できます。
 
 ## vCenter Server with Hybridity Bundle インスタンスを注文する手順
+{: #vc_hybrid_orderinginstance-procedure}
 
 1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクションの**「vCenter サーバー」**をクリックします。
 2. **「VMware vCenter Server on IBM Cloud」**ページで、**「vCenter Server with Hybridity Bundle」**カードをクリックし、**「作成」**をクリックします。
@@ -227,27 +250,29 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
      *  新規のパブリック VLAN とプライベート VLAN を注文する場合は、**「新規 VLAN を注文」**をクリックします。
      *  既存のパブリック VLAN とプライベート VLAN を使用できる場合に再利用するには、**「既存の VLAN を選択」**をクリックし、パブリック VLAN、プライマリー・サブネット、プライベート VLAN、プライベート・プライマリー・サブネット、セカンダリー・プライベート VLAN を選択します。
   4. DNS 構成を選択します。
-9. 組み込まれている HCX on {{site.data.keyword.cloud_notm}} サービスの構成を完了します。 サービスの設定方法について詳しくは、[VMware HCX on IBM Cloud の注文](/docs/services/vmwaresolutions/services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration)の『_VMware HCX on IBM Cloud の構成_』セクションを参照してください。
+9. 組み込まれている HCX on {{site.data.keyword.cloud_notm}} サービスの構成を完了します。 サービスの設定方法について詳しくは、[VMware HCX on IBM Cloud の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration)の『_VMware HCX on IBM Cloud の構成_』セクションを参照してください。
 10. インスタンスにデプロイするアドオン・サービスを、対応するサービス・カードをクリックして選択します。 サービスに構成が必要な場合は、サービス固有の設定を入力し、カードの**「サービスの追加」**をクリックします。  
 サービスの設定方法について詳しくは、対応するサービス注文トピックを参照してください。
 
-8. **「発注要約」**ペインで、インスタンス構成を確認してから注文を実行します。
+11. **「発注要約」**ペインで、インスタンス構成を確認してから注文を実行します。
    1. インスタンスの設定を確認します。
    2. インスタンスの見積もりコストを確認します。 PDF のサマリーを生成するには、**「料金詳細」**をクリックします。 注文のサマリーを保存または印刷するには、PDF ウィンドウの右上にある**「印刷」**アイコンまたは **「ダウンロード」**アイコンをクリックします。
    3. 注文に適用される使用条件のリンクをクリックして、インスタンスを注文する前にそれらの条件に同意することを確認する必要があります。
    4. **「プロビジョン」**をクリックします。
 
 ## 結果
+{: #vc_hybrid_orderinginstance-results}
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
 
-インスタンスが正常にデプロイされると、[vCenter Server with Hybridity Bundle インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 アドオン・サービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
+インスタンスが正常にデプロイされると、[vCenter Server with Hybridity Bundle インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 アドオン・サービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
 セカンダリー・インスタンスを注文した場合は、セカンダリー・インスタンスの注文が完了した後に、(セカンダリー・インスタンスにリンクされた) プライマリー・インスタンスの VMware vSphere Web Client が再始動されることがあります。
 
 ## 次に行うこと
+{: #vc_hybrid_orderinginstance-next}
 
 注文した vCenter Server with Hybridity Bundle インスタンスを表示して管理します。
 
@@ -263,12 +288,13 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
 
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
 
-### 関連リンク
+## 関連リンク
+{: #vc_hybrid_orderinginstance-related}
 
-* [{{site.data.keyword.cloud_notm}} アカウントの登録](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
-* [vCenter Server with Hybridity Bundle インスタンスの表示](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [vCenter Server with Hybridity Bundle インスタンスのマルチサイト構成](/docs/services/vmwaresolutions/vcenter/vc_hybrid_multisite.html)
-* [vCenter Server with Hybridity Bundle インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
-* [vCenter Server with Hybridity Bundle インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
-* [vCenter Server with Hybridity Bundle インスタンスの削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
+* [{{site.data.keyword.cloud_notm}} アカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [vCenter Server with Hybridity Bundle インスタンスの表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [vCenter Server with Hybridity Bundle インスタンスのマルチサイト構成](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_multisite)
+* [vCenter Server with Hybridity Bundle インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
+* [vCenter Server with Hybridity Bundle インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [vCenter Server with Hybridity Bundle インスタンスの削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)

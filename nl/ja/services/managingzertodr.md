@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,14 +13,17 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Zerto on IBM Cloud の管理
+{: #managingzertodr}
 
 インスタンスに Zerto on {{site.data.keyword.cloud}} サービスをデプロイすると、Zerto Virtual Replication の構成や更新が可能になり、新しく追加した ESXi サーバーにさらに Virtual Replication Appliance をデプロイできるようになります。
 
 ## 独自の証明書を Zerto に使用する
+{: #managingzertodr-ssl-cert}
 
 ベスト・プラクティスとして、Zerto Virtual Manager (ZVM) には独自の SSL 証明書を使用します。 Zerto on {{site.data.keyword.cloud_notm}} をデプロイした後、ZVM 用の SSL 証明書を独自の証明書に置き換えてください。 詳しくは、[How to use a CER SSL Certificate to Replace the Self-Signed Certificate for the ZVM, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window} を参照してください。
 
 ## Zerto レプリケーションの構成の管理
+{: #managingzertodr-manage}
 
 Zerto レプリケーションの構成を管理するには、vCenter 資格情報を使用して管理者権限で Zerto Virtual Replication コンソールにログインします。 例えば、仮想マシンを複製するには、Zerto インスタンスを再ペア化したり、仮想保護グループを構成したりします。
 
@@ -32,17 +35,20 @@ Zerto レプリケーションでは、ネットワーク・アドレス変換 (
 {:note}
 
 ## Zerto Virtual Replication の更新
+{: #managingzertodr-update}
 
 Zerto Virtual Replication を更新するには、Zerto Virtual Replication コンソールにログインします。
 
 ## 新しく追加した ESXi サーバーへの VRA のデプロイ
+{: #managingzertodr-deploy}
 
 インスタンスの 1 次クラスター用の ESXi サーバーを追加または削除すると、VRA は自動的にデプロイまたは削除されます。 インスタンスの 2 次クラスター内の ESXi サーバーには VRA が自動デプロイされません。 VRA は、Zerto Virtual Replication コンソールから自分でデプロイできます。
 
-### 関連リンク
+## 関連リンク
+{: #managingzertodr-related}
 
-* [Zerto on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/addingzertodr.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
+* [Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [zerto.com Web サイト](https://www.zerto.com){:new_window}
 * [Zerto 技術資料](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
 * [Zerto 災害復旧](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}

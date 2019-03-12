@@ -4,16 +4,18 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 머리말
+{: #vcscar-preface}
 
 그림 1. 자체적으로 고안한 언어
 ![자체적으로 고안한 언어](vcscar-alood.svg)
 
 ## 스케이트보딩 언어 소개
+{: #vcscar-preface-intro}
 
 스케이트 보더가 움직임과 하위 움직임을 트릭에 결합하는 방식은 현재 일어나고 있는 일에 대한 물리학적인 면을 기반으로 일종의 문법이나 구문을 부과합니다. 유사한 이유로 발전된 화학에 대한 명명법이 있습니다. 요즘에는 한 지역에 있는 스케이터가 다른 지역에 있는 스케이터에게 트릭의 이름을 텍스트로 보낼 수 있으며, 이를 통해 복잡한 움직임을 이해할 수 있습니다.
 
@@ -62,6 +64,7 @@ lastupdated: "2019-01-23"
 단지 도움을 주는 것만이 아닌 다른 잠재력을 가집니다.
 
 ## 언어의 체계화
+{: #vcscar-preface-codification}
 
 다른 언어와 마찬가지로 이 언어는 시간의 경과에 따라 점차적으로 발전되었으며, 새로운 단어와 사용법을 익히고
 그 과정에서 때로 중복과 예외를 만들어냈습니다. 즉, 이 명명법은 매우 일관되고 지속 가능하며 특수합니다. 이러한 명백한 엄격함과 일관성은 기계 학습이 어떤 장면을 텍스트로 변환하는,
@@ -76,6 +79,7 @@ lastupdated: "2019-01-23"
 어떤 길이의 조합도 허용할 수 있습니다.
 
 ## 추가 환경 변수
+{: #vcscar-preface-env-var}
 
 요즘의 프로 선수들은 종종 트릭을 연습할 때 장소를 찾기 위해 많은 노력을 기울이고 있습니다. 사실 스케이터를 구별 짓는 부분은 트릭을 새롭고 상상력이 풍부한 방식으로 적용하는 창의적인 능력입니다. 이것이 스케이터를 세계적인 선수로 만드는 요인입니다. 지역 사회에서 제공하는 장소를 카탈로그화하는 스케이트 애플리케이션은 있지만
 이러한 창의적인 과정에서 스케이터, 그 중에서도 특히 프로 선수들을 도울 수 있는 애플리케이션을 만들기 위한 아이디어나 기술은 없었습니다.
@@ -97,10 +101,12 @@ Watson Knowledge Studio는 특정 스케이터의 질의에 따라 트릭 설명
 Discovery Service에는 지역 우편 번호, 크기 또는 사용 가능 여부(예: 학교 운동장 또는 비즈니스 공간)로 분류되는 핸드레일 목록이 포함될 수 있어 더욱 유용합니다. 시스템은 침입에 대한 위험을 평가하는 기존 애플리케이션 데이터 내에 있습니다. 이러한 지원은 모든 프로 스케이터의 창의적인 일상에 도움이 되는 해당 변수들로 인한 연쇄적인 결과에 엄청난 영향을 줄 수 있습니다.
 
 ## 클라우드 플랫폼
+{: #vcscar-preface-cloud-platform}
 
 새로운 조합을 만들기 위한 IT 시스템의 창의적인 계층화는 스케이트보딩의 핵심입니다. 이는 전세계 어디에서든지 혁신에 영감을 주는 창의적인 삶에 파급되는 영향력을 가지고 있습니다.
 이 중 어느 것도 {{site.data.keyword.cloud}} 없이는 이루어지지 않을 것입니다.
 
-### 관련 링크
+## 관련 링크
+{: #vcscar-preface-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

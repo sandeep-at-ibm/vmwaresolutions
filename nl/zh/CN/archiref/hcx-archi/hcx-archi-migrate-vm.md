@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # 迁移虚拟机
+{: #hcx-archi-migrate-vm}
 
 HCX 支持双向迁移：从内部部署迁移到云，或从云迁移到内部部署数据中心。HCX 在迁移过程中使用复制技术。复制技术集成在 Hybrid Cloud Gateway 虚拟设备中。无需安装其他复制软件。
 
@@ -31,6 +32,7 @@ HCX 支持双向迁移：从内部部署迁移到云，或从云迁移到内部�
 7. 迁移完成。Hybrid Cloud Services 会将原始 VM 复制到“vSphere 模板”视图中的**已迁移 VM** 文件夹中。
 
 ## 零停机时间 vMotion
+{: #hcx-archi-migrate-vm-no-downtime-vm}
 
 vMotion 将活动虚拟机从 vSphere vCenter 传输到 VCF/VCS Cloud。此 vMotion 需要延伸网络。vMotion 传输会捕获虚拟机的活动内存、执行状态、IP 地址和 MAC 地址。
 
@@ -38,10 +40,12 @@ vMotion 将活动虚拟机从 vSphere vCenter 传输到 VCF/VCS Cloud。此 vMot
 {:note}
 
 ## 冷迁移
+{: #hcx-archi-migrate-vm-cold-mig}
 
 冷迁移使用与跨云 vMotion 相同的数据平面，通过扩展网络来传输已关闭电源的虚拟机。虚拟机的 IP 地址和 MAC 地址会保留。虚拟机的需求和限制与 vMotion 的相同。
 
 ### 使用双向向导迁移 VM
+{: #hcx-archi-migrate-vm-mig-bidir-wiz}
 
 通过使用 vSphere Web Client，可以在“Hybrid Cloud Services 入门”选项卡中访问双向迁移向导。此向导处理所有迁移详细信息，包括多个虚拟机。
 
@@ -50,6 +54,7 @@ vMotion 将活动虚拟机从 vSphere vCenter 传输到 VCF/VCS Cloud。此 vMot
 * 从 VCF/VCS HCX Cloud 迁移到 vSphere
 
 ### 迁移前检查 VM
+{: #hcx-archi-migrate-vm-check-vms}
 
 要迁移虚拟机，需要由 Hybrid Cloud Gateway 维护的安全连接，并且 VM 必须满足以下需求：
 * 虚拟机电源必须已打开。
@@ -65,6 +70,7 @@ vMotion 将活动虚拟机从 vSphere vCenter 传输到 VCF/VCS Cloud。此 vMot
 * 硬件版本低于 9。
 
 ### 监视迁移
+{: #hcx-archi-migrate-vm-monitor-mig}
 
 可以通过用户界面或命令行来监视基于复制的迁移的进度。查看任务控制台（如“监视服务设备部署”中所述），并查找**迁移 VM** 任务。状态为**完成**时，说明 VM 已迁移并已打开电源。
 
@@ -91,6 +97,7 @@ vMotion 将活动虚拟机从 vSphere vCenter 传输到 VCF/VCS Cloud。此 vMot
 转换期间，连续 ping 操作可能会发生中断。但是，在**迁移 VM** 任务完成后，测试 ping 会迅速恢复，这会反映在任务控制台中。
 
 ### 查看已迁移的 VM
+{: #hcx-archi-migrate-vm-view-vms}
 
 Hybrid Cloud Services 打开成功迁移的虚拟机的电源后，会关闭原始 VM 的电源，并将其存储在 vCenter 中的某个文件夹中。存储的虚拟机会保留，直到手动将其删除。
 
@@ -100,6 +107,7 @@ Hybrid Cloud Services 打开成功迁移的虚拟机的电源后，会关闭原�
 * 可以删除这两个文件夹中不需要的 VM。
 * 删除是不可改变的操作，除非落实了备份解决方案。
 
-### 相关链接
+## 相关链接
+{: #hcx-archi-migrate-vm-related}
 
-* [修改或卸载 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
+* [修改或卸载 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Mission Critical VMware on IBM Cloud 요청
+{: #managing_mcv}
 
 1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **시작하기**를 클릭하십시오.
 2. 페이지 아래로 스크롤하여 **추가 관리 서비스 주문** 아래 **Mission Critical VMware on IBM Cloud** 카드를 클릭하십시오.
@@ -17,6 +18,7 @@ lastupdated: "2019-01-24"
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 담당자는 사용자가 필요한 솔루션에 대한 도움을 드리기 위해 사용자의 연락처 정보를 사용하여 연락을 드립니다.
 
-### 관련 링크
+## 관련 링크
+{: #managing_mcv-related}
 
-* [Mission Critical VMware on IBM Cloud 개요](/docs/services/vmwaresolutions/services/mcv_overview.html)
+* [Mission Critical VMware on IBM Cloud 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-mcv_overview)

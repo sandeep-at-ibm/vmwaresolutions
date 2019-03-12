@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # インフラストラクチャーの管理の設計
+{: #design_infrastructuremgmt}
 
 インフラストラクチャーの管理とは、VMware インフラストラクチャーを管理するコンポーネントのことを指します。 この設計では 1 つの外部 Platform Services Controller (PSC) インスタンスと 1 つの vCenter Server インスタンスを使用します。
 * vCenter Server は vSphere 環境を管理するための中央プラットフォームで、このソリューションの基本的なコンポーネントの 1 つです。
@@ -21,6 +22,7 @@ lastupdated: "2019-01-23"
 PSC インスタンスと vCenter Server インスタンスは別々の仮想マシン (VM) です。
 
 ## PSC の設計
+{: #design_infrastructuremgmt-psc}
 
 この設計では、管理 VM と関連付けられたプライベート VLAN のポータブル・サブネット上に、1 つの外部 PSC が仮想アプライアンスとしてデプロイされます。 このデフォルト・ゲートウェイは、バックエンド・カスタマー・ルーター (BCR) に設定されます。 仮想アプライアンスは、次の表の仕様を使って構成されます。
 
@@ -40,6 +42,7 @@ PSC インスタンスと vCenter Server インスタンスは別々の仮想マ
 プライマリー・インスタンスにある PSC には、デフォルトの SSO ドメインである `vsphere.local` が割り当てられます。
 
 ## vCenter Server の設計
+{: #design_infrastructuremgmt-vcenter}
 
 vCenter Server も仮想アプライアンスとしてデプロイされます。 さらに、vCenter Server は管理 VM と関連付けられたプライベート VLAN のポータブル・サブネット上にインストールされます。 そのデフォルト・ゲートウェイは、その特定のサブネットの BCR に割り当てられた IP アドレスに設定されます。 仮想アプライアンスは、次の表の仕様を使って構成されます。
 
@@ -56,14 +59,17 @@ vCenter Server も仮想アプライアンスとしてデプロイされます�
 | ディスク・タイプ                    | シン (プロビジョン済み)                    |
 
 ### vCenter Server データベース
+{: #design_infrastructuremgmt-vcenter-db}
 
 vCenter Server の構成では、アプライアンスに含まれているローカルの組み込み PostgreSQL データベースを使用します。 この組み込みのデータベースは、外部データベースおよびライセンス交付の依存関係を削除するために使用されます。
 
 ### vCenter Server クラスターの仕様
+{: #design_infrastructuremgmt-vcenter-cluster}
 
 この設計では、ソリューションでプロビジョンされた vSphere ESXi ホストをクラスター化することができます。 ただし、クラスターを作成する前に、vSphere ESXi ホストとデータ・センター内のポッドの場所を指示するデータ・センター・オブジェクトを作成します。 クラスターは、データ・センター・オブジェクトが作成された後に作成されます。 クラスターは、VMware vSphere High Availability (HA) と VMware vSphere Distributed Resource Scheduler (DRS) を有効にした状態でデプロイされます。
 
 ### vSphere Distributed Resource Scheduler
+{: #design_infrastructuremgmt-vsphere-drs}
 
 この設計では、初期クラスターで vSphere Distributed Resource Scheduling (DRS) を使用して VM を配置し、追加のクラスターで DRS を使用して VM を動的にマイグレーションして、バランスのとれたクラスターを実現します。 自動化レベルを「完全自動化」に設定して、最初の配置とマイグレーションの推奨が vSphere によって自動的に実行されるようにします。 さらに、マイグレーションのしきい値を「中度」に設定することにより、vCenter が優先度 1、2、3 の推奨を適用して、クラスターのロード・バランシングにしかるべき程度以上の改善が見られるようにする必要があります。
 
@@ -71,6 +77,7 @@ vCenter Server の構成では、アプライアンスに含まれているロ�
 {:note}
 
 ### vSphere High Availability
+{: #design_infrastructuremgmt-vsphere-ha}
 
 この設計では、初期クラスターおよび追加クラスターで vSphere High Availability (HA) によりコンピューティングの障害が検出され、クラスター内で実行されている VM が修復されます。 この設計の vSphere HA 機能は、クラスター内で「**ホストのモニタリング (Host Monitoring)**」と「**アドミッション制御 (Admission Control)**」の両方のオプションを有効にして構成されます。 さらに、初期クラスターには、アドミッション制御ポリシーのための予備容量として 1 ノード分のリソースが予約されています。
 
@@ -80,6 +87,7 @@ vCenter Server の構成では、アプライアンスに含まれているロ�
 デフォルトで、「**VM 再起動優先順位 (VM restart priority)**」オプションは「中 (medium)」に、「**ホスト分離応答 (Host isolation response)**」オプションは無効に設定されています。 さらに、「**VM のモニタリング (VM monitoring)**」は無効に設定され、「**データストア・ハートビート (Datastore Heartbeating)**」フィーチャーはすべてのクラスター・データ・ストアを含めるように構成されます。 この方法では、NAS データ・ストアがあるときにはそれらを使用します。
 
 ## 自動化
+{: #design_infrastructuremgmt-automation}
 
 これらのソリューションの要となるのは自動化です。 自動化では次のようなメリットがあります。
 * デプロイメントの複雑性を軽減します。
@@ -89,6 +97,7 @@ vCenter Server の構成では、アプライアンスに含まれているロ�
 {{site.data.keyword.IBM}} CloudBuilder、IBM CloudDriver、および SDDC Manager の VM は、連携して新たな VMware インスタンスを開始し、ライフサイクル管理機能を実行します。
 
 ### IBM CloudBuilder と IBM CloudDriver
+{: #design_infrastructuremgmt-cloud-builder-driver}
 
 IBM CloudBuilder と IBM CloudDriver の仮想サーバー・インスタンス (VSI) は、ユーザーがアクセスできない IBM 開発コンポーネントです。
 * IBM CloudBuilder は、プロビジョニングされたベア・メタル ESXi ホスト内でソリューション・コンポーネントのデプロイメント、構成、妥当性検査をブートストラップする、一時的な {{site.data.keyword.cloud_notm}} 仮想サーバー・インスタンス (VSI) です。
@@ -102,6 +111,7 @@ IBM CloudBuilder と IBM CloudDriver の仮想サーバー・インスタンス 
 * パッチ適用
 
 ### SDDC Manager
+{: #design_infrastructuremgmt-sddc-manager}
 
 Cloud Foundation インスタンスの場合、SDDC Manager VM は、VMware によって開発され、保守されるコンポーネントです。 そのライフサイクル全体にわたって、インスタンスの一部となります。 これは、インスタンスの次のライフサイクル機能に対して責任を負います。
 * VMware コンポーネント (vCenter Server、Platform Services Controller (PSC)、vSAN、および NSX) の管理。これには、IP アドレスの割り振りとホスト名の解決などが含まれます。
@@ -110,6 +120,7 @@ Cloud Foundation インスタンスの場合、SDDC Manager VM は、VMware に�
 vCenter Server インスタンスでは SDDC Manager がないため、これらのアクティビティーは IBM CloudDriver によって実行されます。
 
 ### 自動化フロー
+{: #design_infrastructuremgmt-auto-flow}
 
 次の手順は、VMware インスタンスが {{site.data.keyword.vmwaresolutions_short}} コンソールを介して注文される場合のイベントの注文について説明しています。
 1.  {{site.data.keyword.cloud_notm}} からネットワーキングのための VLAN とサブネットの注文。
@@ -125,8 +136,9 @@ vCenter Server インスタンスでは SDDC Manager がないため、これら
 11. CloudBuilder VSI の削除。
 12. バックアップ・サーバーやストレージなど、オプション・サービスのデプロイメント。
 
-### 関連リンク
+## 関連リンク
+{: #design_infrastructuremgmt-related}
 
-* [物理インフラストラクチャー設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
-* [仮想インフラストラクチャー設計](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
-* [共通サービス設計](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)
+* [物理インフラストラクチャー設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
+* [仮想インフラストラクチャー設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
+* [共通サービス設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)

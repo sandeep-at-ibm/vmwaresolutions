@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server 인스턴스 보기
+{: #vc_viewinginstances}
 
 서로 다른 사용자 계정에 대해 프로비저닝된 VMware vCenter Server 인스턴스의 요약과 자세한 정보를 봅니다.
 
 ## vCenter Server 인스턴스 요약을 보는 프로시저
+{: #vc_viewinginstances-procedure-view-inst-summary}
 
 사용자 계정에 대해 프로비저닝된 모든 vCenter Server 인스턴스의 요약을 보려면 다음 단계를 완료하십시오.
 
@@ -51,6 +53,7 @@ lastupdated: "2019-01-23"
 |삭제됨 |인스턴스가 삭제됩니다. |
 
 ## vCenter Server 인스턴스 특성 세부사항을 보는 프로시저
+{: #vc_viewinginstances-procedure-view-inst-property}
 
 인스턴스의 특성 세부사항을 보려면 다음 작업을 수행하십시오.
 
@@ -76,6 +79,7 @@ lastupdated: "2019-01-23"
 |상태  |인스턴스의 상태입니다.<br><br>표시된 정보는 배치의 진행상태 또는 인스턴스에서 수행되는 조치에 대한 업데이트를 제공합니다. 문제가 있는 경우 문제점을 조사하고 해결하는 데 도움이 되는 메시지가 표시될 수 있습니다. |
 
 ## vCenter Server 인스턴스에 대한 액세스 정보를 보는 프로시저
+{: #vc_viewinginstances-procedure-view-access-info}
 
 **액세스 정보**에서 인스턴스 관련 컴포넌트의 액세스 정보를 보십시오. 표시된 비밀번호는 시스템에서 생성된 초기 비밀번호입니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 비밀번호를 변경하는 경우 이 비밀번호는 인스턴스 요약 페이지에서 업데이트되지 않습니다.
 
@@ -95,6 +99,7 @@ lastupdated: "2019-01-23"
 |vCenter SSH  |SSH 연결을 통해 vCenter Server VM에 액세스하는 데 사용할 수 있는 사용자 이름 및 비밀번호입니다.  |
 
 ## vCenter Server 인스턴스에 대한 배치 히스토리를 보는 프로시저
+{: #vc_viewinginstances-procedure-view-deploy-history}
 
 왼쪽 탐색 분할창에서 **배치 히스토리**를 클릭하여 인스턴스에 대한 배치 히스토리를 보십시오.
 
@@ -106,10 +111,12 @@ lastupdated: "2019-01-23"
 |요약 |변경의 세부사항입니다. |
 
 ## 오류 발생 시 수행할 작업
+{: #vc_viewinginstances-if-errors-occur}
 
-인스턴스 배치 또는 인스턴스 삭제 중에 오류가 발생하는 경우 {{site.data.keyword.cloud_notm}} 지원 팀에 자동으로 알림이 전송됩니다. 티켓의 상태에 대해 문의하려는 경우에는 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)할 수 있습니다.
+인스턴스 배치 또는 인스턴스 삭제 중에 오류가 발생하는 경우 {{site.data.keyword.cloud_notm}} 지원 팀에 자동으로 알림이 전송됩니다. 티켓의 상태에 대해 문의하려는 경우에는 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)할 수 있습니다.
 
 ## 수행할 작업
+{: #vc_viewinginstances-next}
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔 또는 VMware vSphere Web Client에서 인스턴스를 관리하십시오.
 
@@ -117,13 +124,14 @@ lastupdated: "2019-01-23"
 {:important}
 
 로그인 지시사항을 완료하는 데 도움이 되는 정보는 다음 주제를 검토하십시오.
-*  vSphere Web Client에 액세스하기 전의 요구사항 및 필요한 단계는 [vSphere Web Client에 연결하는 중에 제한시간이 초과함](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html)을 참조하십시오.
+*  vSphere Web Client에 액세스하기 전의 요구사항 및 필요한 단계는 [vSphere Web Client에 연결하는 중에 제한시간이 초과함](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console)을 참조하십시오.
 *  VPN을 사용하여 {{site.data.keyword.cloud_notm}} 인프라 사설 네트워크에 로그인하기 위한 액세스 지점의 목록은 [VPN 액세스](http://www.softlayer.com/vpn-access){:new_window}를 참조하십시오.
-*  vSphere Web Client를 사용하여 OVF(Open Virtualization Format) 파일을 배치할 때 문제점이 발생하면 [vSphere Web Client를 사용하여 OVF 파일 배치](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html)를 참조하십시오.
+*  vSphere Web Client를 사용하여 OVF(Open Virtualization Format) 파일을 배치할 때 문제점이 발생하면 [vSphere Web Client를 사용하여 OVF 파일 배치](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf)를 참조하십시오.
 
-### 관련 링크
+## 관련 링크
+{: #vc_viewinginstances-related}
 
-* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
-* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [vCenter Server 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [vCenter Server 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)

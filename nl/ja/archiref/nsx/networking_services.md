@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # IBM Cloud のネットワーキング・サービス
+{: #nsx-networking_services}
 
 {{site.data.keyword.cloud}} のネットワーキング・サービスは、{{site.data.keyword.cloud_notm}} と、仮想プライベート・ネットワーク (VPN) を介したパブリック・インターネットまたはカスタマー・オンプレミス・ネットワークとの間の通信用に、VMware NSX Edge Services Gateway (ESG) の 2 つのペアで構成されています。 これらの ESG は、内部 {{site.data.keyword.cloud_notm}} 管理機能、出口トラフィック、顧客関連ネットワーク・トラフィックの入口をサポートするために分離されます。
 
@@ -28,6 +29,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## IBM 管理サービス NSX Edge
+{: #nsx-networking_services-mgmt-serv-nsx-edge}
 
 IBM 管理 ESG は、{{site.data.keyword.cloud_notm}} 管理ネットワーク・トラフィックのみの専用 NSX Edge クラスターです。 Cloud Foundation または vCenter Server の自動化によってデプロイおよび管理されていないコンポーネントのトラフィック・トラバーサル用ではありません。
 
@@ -47,6 +49,7 @@ IBM 管理 ESG は、{{site.data.keyword.cloud_notm}} 管理ネットワーク�
 | IBM 管理 NSX ESG 2 | 2 | 1 GB | 1 GB | vSAN データ・ストア (Cloud Foundation)。管理のための共有接続ストレージ (vCenter Server) |
 
 ### 管理サービス
+{: #nsx-networking_services-mgmt-services}
 
 以下のサービスに対するアウトバウンド・アクセスが必要です。
 
@@ -56,6 +59,7 @@ IBM 管理 ESG は、{{site.data.keyword.cloud_notm}} 管理ネットワーク�
 * F5 on {{site.data.keyword.cloud_notm}} では、ライセンス交付アクティベーションのためにインターネットへのアウトバウンド・アクセスが必要です。
 
 ### Edge インターフェース
+{: #nsx-networking_services-edge-interfaces}
 
 ESG インターフェースの構成によって、ESG がアクセスできる L2 ネットワークが定義されます。 Cloud Foundation および vCenter Server のライフサイクル管理では、管理 VLAN に配置された特定の VM がパブリック VLAN への横断を許可されている必要があります。 以下のインターフェースがデプロイメント時に定義されます。
 
@@ -68,6 +72,7 @@ ESG インターフェースの構成によって、ESG がアクセスできる
 | 内部 | 内部 | ワークロード HA VXLAN | ESG HA ペアのハートビートに使用される内部インターフェース。**SDDC-Dswitch-Private** のポート・グループ |
 
 ### サブネット
+{: #nsx-networking_services-subnets}
 
 以下のサブネットが、管理 ESG に使用されます。
 
@@ -80,6 +85,7 @@ ESG インターフェースの構成によって、ESG がアクセスできる
 | 内部 | 内部 | リンク・ローカル | 169.254.0.0/16 | ESG HA ペアの通信に使用される内部インターフェース |
 
 ### ネットワーク・アドレス変換の定義
+{: #nsx-networking_services-nat-definitions}
 
 ネットワーク・アドレス変換 (NAT) は、ネットワーク・トラフィックが IP アドレス・スペース間を横断できるようにするために、管理 ESG 上で使用されます。 　これは通常、インターネット・ルーティング可能 IP を節約したり、セキュリティー上の理由から内部 IP を公開 IP から隠したりするために行われます。 NAT は、伝送制御プロトコル (TCP) およびユーザー・データグラム・プロトコル (UDP) ポートのリダイレクトを可能にするためにも使用されます。 管理トラフィックは常に Cloud Foundation および vCenter Server インスタンス内から開始されるため、管理 ESG でソース NAT (SNAT) のみが定義されている必要があります。 インスタンスから出る必要のあるサービスをホストする内部 VM ごとに、個別の SNAT は作成されません。
 
@@ -90,10 +96,11 @@ ESG インターフェースの構成によって、ESG がアクセスできる
 | パブリック・アップリンク | Management Portable /26 の個々の IP アドレス | {{site.data.keyword.cloud_notm}} ポータブル・パブリック |
 
 ### ルーティング
+{: #nsx-networking_services-routing}
 
 管理 ESG を横断する必要がある VM 内のサービスも、お客様の {{site.data.keyword.cloud_notm}} プライベート・ネットワーク内の {{site.data.keyword.cloud_notm}} サービスにアクセスする必要がある場合があるため、この通信を実現するために以下の構成が必要となります。
 
-インターネットへの接続の宛先として必要な宛先 IP 範囲を予測することは困難ですが、{{site.data.keyword.cloud_notm}} によってデプロイおよび管理されるサービスは、デフォルト・ゲートウェイとして管理 ESG を指します。 外部ネットワーク接続を必要とするサービスに対して {{site.data.keyword.cloud_notm}} BCR 全体のトラフィックを強制するには、静的ルートが必要です。
+インターネットへの接続の宛先として必要な宛先 IP 範囲を予測することは困難ですが、{{site.data.keyword.cloud_notm}} によってデプロイおよび管理されるサービスは、デフォルト・ゲートウェイとして管理 ESG を指します。 外部ネットワーク接続を必要とするサービスに関して {{site.data.keyword.cloud_notm}} BCR 全体のトラフィックを強制するには、静的ルートが必要です。
 
 管理 ESG を使用して Cloud Foundation または vCenter Server インスタンスから横断するサービスには、以下の構成をお勧めします。
 * デフォルト・ゲートウェイは管理 ESG です。
@@ -104,8 +111,9 @@ ESG インターフェースの構成によって、ESG がアクセスできる
 現在、管理 ESG 用に自動ルーティング・プロトコルは構成されていません。
 
 ### VXLAN 定義
+{: #nsx-networking_services-vlan-definitions}
 
-管理 HA ペアには、内部インターフェースの接続用のネットワークが必要です。 既存の vSwitch、ポート・グループ、または VXLAN を使用します。 この設計では、管理 ESG HA ペアの HA ハートビート通信用に専用の VXLAN が作成されます。
+管理 HA ペアには、内部インターフェースの接続用のネットワークが必要です。このネットワークでは、既存の vSwitch、ポート・グループ、VXLAN を使用できます。この設計では、管理 ESG HA ペアの HA ハートビート通信用に専用の VXLAN が作成されます。
 
 表 5. NSX ESG の VXLAN 定義
 
@@ -114,6 +122,7 @@ ESG インターフェースの構成によって、ESG がアクセスできる
 | Mgmt HA | transport-1 | global |
 
 ### ファイアウォール・ルール
+{: #nsx-networking_services-firewall-rules}
 
 デフォルトでは、管理 ESG はすべてのトラフィックを拒否するように構成されています。
 
@@ -132,6 +141,7 @@ ESG インターフェースの構成によって、ESG がアクセスできる
 | 任意 | 任意 | 任意 | 任意 | 拒否 |
 
 ## IBM ワークロード NSX Edge
+{: #nsx-networking_services-wkld-nsx-edge}
 
 IBM ワークロード ESG は、ワークロード・ネットワーク通信用の単純なトポロジーの一部です。 以下のセクションでは、Cloud Foundation または vCenter Server インスタンス内のネットワークにワークロードを接続する設計意図について説明します。 これは、オンプレミス・ネットワークおよび IP スペースを特定の Cloud Foundation または vCenter Center インスタンスに接続するための開始点であり、真のハイブリッド・クラウド・アーキテクチャーの基礎となります。
 
@@ -147,6 +157,7 @@ IBM ワークロード ESG は、ワークロード・ネットワーク通信�
 ![ネットワーク・フロー図](customer_network_flow_diagram.svg "ネットワーク・フロー図")
 
 ### IBM ワークロード NSX Edge の Edge インターフェース
+{: #nsx-networking_services-edge-interfaces-workload}
 
 管理 ESG と同様に、ESG インターフェースの構成によって、ESG がアクセスできる L2 ネットワークが定義されます。 ワークロード・トポロジーの設計意図の一部は、ソフトウェア定義ネットワーキング (SDN) オーバーレイを実現して、基礎となる {{site.data.keyword.cloud_notm}} アドレス・スペースからワークロードを分離することです。 この設計は、BYOIP 設計を実現するための基礎となります。 したがって、以下のインターフェースがデプロイメント時に定義されます。
 
@@ -170,6 +181,7 @@ IBM ワークロード ESG は、ワークロード・ネットワーク通信�
 | 内部 | 内部 | ワークロード HA VXLAN | ESG HA ペアのハートビートに使用される内部インターフェース |
 
 ### IBM ワークロード NSX Edge のサブネット
+{: #nsx-networking_services-subnets-workload}
 
 以下のサブネットが、ワークロード ESG に使用されます。
 
@@ -184,10 +196,11 @@ IBM ワークロード ESG は、ワークロード・ネットワーク通信�
 | ワークロード (DLR) | アップリンク | 顧客による割り当て | 未定 | ワークロード・サブネット |
 
 ### IBM ワークロード NSX Edge の NAT 定義
+{: #nsx-networking_services-nat-definitions-nsx-edge}
 
 NAT は、ネットワーク・トラフィックが IP アドレス・スペース間を横断できるようにするために、ワークロード ESG 上で使用されます。 ワークロード ESG の場合、インターネット宛先への通信を許可するだけでなく、任意の {{site.data.keyword.cloud_notm}} ソース IP 範囲と通信するためにも NAT が必要です。 この設計では、ワークロード・トラフィックはインターネットにアクセスできますが、管理ネットワークや {{site.data.keyword.cloud_notm}} ネットワークにはアクセスできません。 したがって、ワークロード ESG で SNAT のみを定義する必要があります。 ワークロードのポータブル・サブネット全体が SNAT を横断するように構成されています。
 
-NAT を使用して、Cloud Foundation または vCenter Server の複数のインスタンス間でのワークロード通信を可能にすることはできますが、多数のワークロードを複数のインスタンスにわたって接続する必要がある場合は、これは現実的ではありません。 高度な NSX 機能を使用して、Cloud Foundation または vCeter Server インスタンス全体で過度な L2 トランジット・ネットワークを作成する例については、[マルチサイト・アーキテクチャー](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)を参照してください。
+NAT を使用して、Cloud Foundation または vCenter Server の複数のインスタンス間でのワークロード通信を可能にすることはできますが、多数のワークロードを複数のインスタンスにわたって接続する必要がある場合は、これは現実的ではありません。 高度な NSX 機能を使用して、Cloud Foundation または vCeter Server インスタンス全体で過度な L2 トランジット・ネットワークを作成する例については、[マルチサイト・アーキテクチャー](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)を参照してください。
 
 表 10. ワークロード ESG の NAT ルール
 
@@ -196,6 +209,7 @@ NAT を使用して、Cloud Foundation または vCenter Server の複数のイ�
 | パブリック・アップリンク (ワークロード ESG) | 顧客定義 | {{site.data.keyword.cloud_notm}} ポータブル・パブリック IP | 顧客定義 (デフォルトは無効) |
 
 ### IBM ワークロード NSX Edge のルーティング
+{: #nsx-networking_services-routing-wkld}
 
 この設計では、ワークロード ESG まで DLR を横断するワークロードの唯一の要件は、インターネットにアクセスすることです。 ワークロード ESG は、ワークロード VXLAN と、DLR の内側で作成される将来のワークロード VXLAN/サブネットへのパスを認識する必要があります。 これは ESG の静的ルートによって達成できますが、このワークロード・トポロジーは、ベスト・プラクティスの設計を示すことを目的としています。 したがって、Open Shortest Path First (OSPF) は、ワークロード ESG とダウンストリーム DLR の間に構成されます。
 
@@ -208,6 +222,7 @@ NAT を使用して、Cloud Foundation または vCenter Server の複数のイ�
 | 51 | スタブ | トランジット RFC1918 ネットワークの DLR および ESG ごとに IP を割り当てます。 | なし |
 
 ### IBM ワークロード NSX Edge のファイアウォール・ルール
+{: #nsx-networking_services-firewall-wkld}
 
 デフォルトでは、ワークロード ESG はすべてのトラフィックを拒否するように構成されています。
 
@@ -223,6 +238,7 @@ NAT を使用して、Cloud Foundation または vCenter Server の複数のイ�
 | 任意 | 任意 | 任意 | 任意 | 拒否 |
 
 ### IBM ワークロード NSX Edge の VXLAN 定義
+{: #nsx-networking_services-vxlan-definitions}
 
 ワークロード・トポロジー ESG と DLR HA のペアには、内部インターフェースの接続、2 つの間のデータ中継、そしてワークロードのための L2 セグメント (VXLAN) が必要です。
 
@@ -235,10 +251,12 @@ NAT を使用して、Cloud Foundation または vCenter Server の複数のイ�
 | ワークロード | transit-1 | グローバル |
 
 ### IBM ワークロード NSX Edge の ESG DLR 設定
+{: #nsx-networking_services-esg-dlr-sett}
 
 デフォルトでは、すべての新規 NSX Edge アプライアンスでロギングが有効になっています。 デフォルトのロギング・レベルは NOTICE です。
 
-### 関連リンク
+## 関連リンク
+{: #nsx-networking_services-related}
 
-* [NSX Edge Services Gateway の設計](/docs/services/vmwaresolutions/archiref/nsx/nsx_design.html)
-* [マルチサイト・アーキテクチャー](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)
+* [NSX Edge Services Gateway の設計](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_design)
+* [マルチサイト・アーキテクチャー](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)

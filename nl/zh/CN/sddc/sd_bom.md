@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Cloud Foundation 材料清单
+{: #sd_bom}
 
 查看 VMware Cloud Foundation 实例的材料清单 (BOM) 信息。
 
 ## Cloud Foundation 实例的 VLAN BOM
+{: #sd_bom-vlans}
 
 下表详细描述了 Cloud Foundation VLAN 的 BOM 信息。
 
@@ -25,6 +27,7 @@ lastupdated: "2019-01-24"
 |VLAN3|专用 B，可移植|分配给 VMware vSAN（如果使用）。<br><br>分配给 VMware NFS（如果使用）。<br><br>分配给 VMware vSphere vMotion。|
 
 ## Cloud Foundation 实例的软件 BOM
+{: #sd_bom-software}
 
 下表详细描述了 Cloud Foundation 软件组件的 BOM 信息。
 
@@ -41,6 +44,7 @@ lastupdated: "2019-01-24"
 |Microsoft|Windows Server Standard Edition（64 位）|2012R2|
 
 ## ESXi 服务器的高级配置设置
+{: #sd_bom-esxi-server-advance-config}
 
 查看下表以了解在 ESXi 服务器上应用的高级配置设置的概述。根据 Cloud Foundation 实例是否是从先前版本（V2.1 或更低版本）部署到（或升级到）V2.2 或更高版本的，这些设置将有所不同。
 
@@ -59,6 +63,7 @@ lastupdated: "2019-01-24"
 |队列已满阈值|**QFullThreshold** = 8|**/Disk/QFullThreshold** = 8|
 
 ### 注释
+{: #sd_bom-notes}
 
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服务需要 **MaxVolumes** 设置，因为该服务可能会在 ESXi 服务器上使用超过缺省数量的 NFS 安装。
 * 配置设置的**未设置**值指示不会自动应用新设置，因为这需要重新引导 ESXi 服务器，这样可能有破坏性。
@@ -67,10 +72,11 @@ lastupdated: "2019-01-24"
 
   有关更多信息，请参阅[增大定义 ESXi/ESX 主机上 NFS 最大挂载量的默认值](https://kb.vmware.com/s/article/2239)。
 
-### 相关链接
+## 相关链接
+{: #sd_bom-related}
 
 * [VMware ESXi/ESX 的构建号和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware vCenter Server 的构建号和版本 (2143838)](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [规划 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [规划 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)

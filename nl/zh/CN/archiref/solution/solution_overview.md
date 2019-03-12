@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
-# 解决方案概述
+# IBM Cloud for VMware Solutions 概述
+{: #solution_overview}
 
 通过 {{site.data.keyword.vmwaresolutions_full}} 产品，您可以将现有 VMware 虚拟化数据中心扩展到 {{site.data.keyword.cloud_notm}} 中或容纳云本机应用程序。
 
@@ -18,12 +19,11 @@ lastupdated: "2019-01-23"
 
 此设计充当基线体系结构，为针对特定用例添加其他内部组件或特定于供应商的组件提供了基础。
 
-## VMware on IBM Cloud 概述
-
 图 1. VMware on {{site.data.keyword.cloud_notm}} 概述
 ![VMware on {{site.data.keyword.cloud_notm}}](solution_overview.svg "该解决方案用于对可在其中运行应用程序的 VM 所使用的计算、网络和（可选）存储资源进行虚拟化。")
 
-## 主要优点
+## IBM Cloud for VMware Solutions 的主要优点
+{: #solution_overview-benefits}
 
 VMware Cloud Foundation 和 vCenter Server on {{site.data.keyword.cloud_notm}} 提供了基本构建块，包括 VMware vSphere、vCenter Server、NSX 和包括 vSAN 在内的共享存储选项。要灵活地构建最符合您工作负载的由 VMware 软件定义的数据中心解决方案，就需要这些组件。
 
@@ -38,8 +38,9 @@ VMware on {{site.data.keyword.cloud_notm}} 产品提供了以下优点：
 * **支持一致的管理和监管** - 通过提供对虚拟化管理的全面管理访问权，支持对部署的混合云进行一致管理和监管，从而保护现有 VMware 工具、脚本和训练投资。
 * **利用全球范围的 VMware 专业知识** - 通过遍布全球 30 多家 {{site.data.keyword.CloudDataCents_notm}} 的 IBM 专业和受管服务来利用全球范围的 VMware 专业知识。
 
-### 相关链接
+## 相关链接
+{: #solution_overview-related}
 
-* [设计概述](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [缩放容量](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
-* [备份组件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [设计概述](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [缩放容量](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)
+* [备份组件](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

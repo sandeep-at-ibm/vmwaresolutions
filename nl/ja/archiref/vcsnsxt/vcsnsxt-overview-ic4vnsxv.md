@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # NSX-V の概要
+{: #vcsnsxt-overview-ic4vnsxv}
 
 ネットワーク仮想化により、仮想レイヤー内にネットワーク・オーバーレイが存在するようになります。 NSX-V により、オンデマンド仮想ネットワークの迅速なプロビジョニング、デプロイメント、再構成、消滅などの機能を備えたアーキテクチャーになります。 この設計では、vSphere 分散スイッチ (vDS) と VMware NSX for vSphere を使用して、仮想ネットワーキングが実装されます。
 
@@ -37,6 +38,7 @@ vCPU の数 | 4
 次に、NSX Edge Services Gateway (ESG) のペアがデプロイされます。 すべてのデプロイメントにおいて、プライベート・ネットワークに常駐する自動化コンポーネントからのアウトバウンド・トラフィックにゲートウェイ・ペアが 1 つ使用されます。 VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスには 2 つ目のゲートウェイ (カスタマー管理エッジと呼ばれる) が含まれています。このゲートウェイがデプロイされ、パブリック・ネットワークへのアップリンクとプライベート・ネットワークに割り当てられたインターフェースが構成されます。 分散論理ルーター (DLR)、論理スイッチ、ファイアウォールなどの必要な NSX コンポーネントは、管理者が構成できます。
 
 ## 分散スイッチ設計
+{: #vcsnsxt-overview-ic4vnsxv-distributed-switch}
 
 この設計では、最低限の数の仮想分散スイッチ (vDS) が使用されます。 クラスター内のホストはパブリック・ネットワークとプライベート・ネットワークに接続されます。 これらに 2 つの仮想分散スイッチが構成されます。 2 つのスイッチが使用されるのは、{{site.data.keyword.cloud_notm}} 内に実装されているパブリック・ネットワークとプライベート・ネットワークが物理的に分離されているからです。
 
@@ -88,6 +90,7 @@ SDDC-Dswitch-Private	|NSX が自動生成	|起点仮想ポート	|アクティ�
 SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|起点仮想ポート	|アクティブ: 0、1	|VLAN3
 
 ## NSX-V
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v}
 
 この設計では、NSX コンポーネントの構成を指定しますが、ネットワーク・オーバーレイ・コンポーネント構成は適用しません。 ネットワーク・オーバーレイは、お客様がニーズに応じて設計できるようになっています。
 
@@ -105,6 +108,7 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|起点仮想ポート	|アク�
 -	他の VMware インスタンスに対するリンク NSX 管理。
 
 ### NSX-V のセキュリティー
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
 
 NSX for vSphere を使用すると、組織は、実行場所とは無関係の個々のワークロードのレベルまで、データ・センターをセキュリティー・セグメントに細分化できます。 IT チームは、アプリケーションやユーザー・コンテキストに基づいてワークロードごとにポリシーを定義できるので、データ・センター内の脅威への即時対応と、アプリケーションへの適用が可能になります。
 
@@ -120,6 +124,7 @@ NSX for vSphere を使用すると、組織は、実行場所とは無関係の�
 図 3. NSX-V のセキュリティー
 ![NSX-V のセキュリティー](vcsnsxt-vsecurity.svg)
 
-### 関連リンク
+## 関連リンク
+{: #vcsnsxt-overview-ic4vnsxv-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

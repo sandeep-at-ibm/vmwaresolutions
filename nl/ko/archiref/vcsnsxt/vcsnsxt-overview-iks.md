@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-iks}
 
 ## IBM Cloud Kubernetes Service 개요
+{: #vcsnsxt-overview-iks-ovw}
 
 {{site.data.keyword.containerlong_notm}}에서는 컨테이너를 관리하기 위해 안전하고 격리된 플랫폼을 제공합니다. 장애 복구가 발생한 경우 이 플랫폼은 휴대 가능하고 확장 가능하며 자체 복구 가능합니다.
 
@@ -34,10 +36,12 @@ Kubernetes 네트워크 모델에는 세 가지 기본 요구사항만 있습니
 * 컨테이너가 자체 컨테이너를 보는 IP는 다른 컨테이너가 보는 것과 동일한 IP입니다.
 
 ### 네임스페이스
+{: #vcsnsxt-overview-iks-namespaces}
 
 네임스페이스는 컨테이너 네트워킹의 기본 요소입니다. 네임스페이스는 커널 리소스를 파티션하는 Linux 커널의 기능이며, 한 프로세스 세트는 한 리소스 세트를 보고 다른 프로세스 세트는 다른 리소스 세트를 봅니다. 리소스에는 마운트 지점, 프로세스 ID, 네트워크 스택, IPC 및 사용자 ID가 포함됩니다. 각 네임스페이스에는 IP 주소의 개인 세트, 자체 라우팅 테이블, 소켓 목록, 연결 추적 테이블, 방화벽 및 기타 네트워크 관련 리소스가 있습니다.
 
 ### 컨테이너 네트워크 인터페이스
+{: #vcsnsxt-overview-iks-container-network-interfaces}
 
 Kubernetes는 해당 플러그인 지향 네트워킹 솔루션으로 CNI(Container Network Interface)를 사용합니다. CNI는 Linux 컨테이너에서 네트워크 인터페이스를 구성하는 플러그인을 기록하기 위한 스펙과 라이브러리로 구성됩니다. 컨테이너가 삭제되면 컨테이너의 네트워크 연결 및 리소스의 가비지 콜렉션만 처리하기 때문에 CNI 스펙은 경량입니다.
 
@@ -72,6 +76,7 @@ CNI에서 컨테이너를 네트워크에 추가하는 경우, 컨테이너 런�
     - {{site.data.keyword.cloud_notm}} Virtual Router Appliance를 외부 네트워크에 안전하게 연결하기 위해 VPN 게이트웨이로 배치할 수 있습니다. 공용 또는 사설 네트워크 트래픽은 VRA를 통해 라우팅할 수 있습니다. VRA는 원격 VPN 게이트웨이에 암호화된 IP보호 터널을 작성합니다.
 
 ## IBM Cloud Kubernetes Service 컴포넌트
+{: #vcsnsxt-overview-iks-components}
 
 작업자 노드는 클러스터의 모든 Kubernetes 리소스를 중앙에서 제어하고 모니터하는 Kubernetes 마스터 노드에 의해 관리됩니다. 개발자가 컨테이너를 위한 리소스를 배치할 때, 마스터 노드는 클러스터의 배치 요구사항과 가용 용량을 고려하면서 해당 리소스를 배치할 작업자 노드를 결정합니다. 마스터와 작업자 노드는 보안 TLS 인증서 및 {{site.data.keyword.cloud_notm}} 공용 네트워크를 통한 openVPN 연결을 사용하여 서로 통신합니다. 개발자는 인터넷을 통해 마스터 노드에 호스팅되는 kube-apiserver에 액세스합니다.
 
@@ -90,6 +95,7 @@ CNI에서 컨테이너를 네트워크에 추가하는 경우, 컨테이너 런�
 -	**로드 밸런서** - 로드 밸런서는 공용 또는 개인용 요청을 한 앱에 전달하여 클러스터에서 네트워크 트래픽 워크로드를 밸런싱하는 데 사용할 수 있는 Kubernetes 서비스입니다. 이 컴포넌트는 ibm 시스템 네임스페이스에서 작동합니다.
 
 ### Calico
+{: #vcsnsxt-overview-iks-calico}
 
 {{site.data.keyword.containerlong_notm}}는 네트워크 제공자로 Calico를 사용합니다. Calico는 오버레이 네트워크 대신에 계층 3 접근법을 사용합니다. CNI 플러그인을 통해 Calico는 Kubernetes와 통합되어, 라우트 분배를 위해 BGP(Border Gateway Protocol)와 결합된 순수한 IP 네트워크를 사용하는 접근법을 이용하는 해당 사용자에게 네트워킹을 제공합니다.
 
@@ -115,22 +121,27 @@ Calico에서는 팟에서 보내고 받는 IP 패킷이 Linux 라우팅 테이�
 {{site.data.keyword.cloud_notm}} Private 네트워크는 {{site.data.keyword.cloud_notm}} IP 주소 지정 스키마만 전달하므로 Calico는 {{site.data.keyword.containerlong_notm}}의 워크로드 간 트래픽에 대한 IP-in-IP 캡슐화를 사용하여 팟(Pod) 네트워크 IP 주소를 숨겨야 합니다. {{site.data.keyword.containerlong_notm}}는 IP-in-IP 교차 서브넷 모드를 사용합니다.
 
 ### IBM Cloud Kubernetes Service 내의 Calico
+{: #vcsnsxt-overview-iks-calico-iks}
 
 Calico는 {{site.data.keyword.containerlong_notm}}에 자동으로 설치되고 구성됩니다. Kubernetes 클러스터를 보호하기 위한 기본 정책이 작성되고, 특정 서비스를 보호하기 위한 자체 정책을 작성하는 옵션도 제공됩니다. IP-in-IP 캡슐화는 서브넷을 이동하고 있는 패킷만 캡슐화하기 위해 자동으로 구성되고 컨테이너에서 나가는 연결을 위해 NAT를 사용합니다. 워크로드 대 WAN 트래픽도 {{site.data.keyword.containerlong_notm}}에서 자동으로 사용으로 설정되므로 Calico에 대한 추가 구성이 필요하지 않습니다.
 
 #### Calico를 사용한 네트워크 확장성
+{: #vcsnsxt-overview-iks-net-scalability-calico}
 
 Calico는 분산 스케일 확장 아키텍처를 기반으로 빌드되며, 단일 개발자 노트북에서 대형 엔터프라이즈 배치로 원활하게 확장할 수 있는 기능을 제공하고 표준 Linux 데이터 플레인을 사용하여 가상 워크로드에 대한 베어메탈 성능을 제공합니다.
 
 #### Calico를 사용한 보안
+{: #vcsnsxt-overview-iks-sec-calico}
 
 Calico는 시스템의 모든 컴포넌트를 제어하는 정책 세트를 사용하며, 이러한 정책은 서비스와 컨테이너 인스턴스가 필요할 경우에만 서로 통신하도록 구성할 수 있습니다. 컨테이너 인스턴스를 식별하기 위해 IP 주소를 사용하고, 이러한 주소를 기반으로 정책을 작성합니다. Calico와 Kubernetes의 통합으로 인프라를 인식할 수 있으며 인프라의 변경사항을 기반으로 보안 정책을 확장할 수 있습니다.
 
 #### Calico와의 통합
+{: #vcsnsxt-overview-iks-integration-calico}
 
 Calico는 인터넷과 동일한 IP 네트워킹 프린시펄을 기반으로 Kubernetes 팟(Pod)을 연결하기 위해 확장성이 뛰어난 네트워킹과 네트워크 정책 솔루션을 제공합니다. 이는 캡슐화 없이 배치될 수 있거나 확장성이 뛰어난 고성능의 데이터 센터 네트워킹을 제공하기 위해 오버레이됩니다. Calico는 분산 방화벽을 통해 Kubernetes 팟(Pod)에 대한 세분화된 의도 기반 네트워크 보안 정책을 제공합니다. Calico는 canal 또는 기본 GCE 네트워킹이라고 하는 Flannel과 같은 다른 네트워킹 솔루션과 함께 정책 강제 실행 모드로 실행할 수도 있습니다.
 
 ## IBM Cloud Kubernetes Service 네트워킹
+{: #vcsnsxt-overview-iks-networking}
 
 기본적으로 {{site.data.keyword.containerlong_notm}}는 다음을 사용하여 공용 VLAN 및 사설 VLAN에 대한 액세스 권한으로 클러스터를 설정합니다.
 - 각 작업자 노드의 공용 IP 주소. 이를 통해 작업자 노드에 공용 네트워크 인터페이스를 제공합니다. 기본적으로 다음과 같습니다.
@@ -151,6 +162,7 @@ Calico는 인터넷과 동일한 IP 네트워킹 프린시펄을 기반으로 Ku
     - 기본 사설 서브넷은 클러스터 작성 중에 작업자 노드에 지정되는 사설 IP 주소를 판별합니다. 동일한 VLAN에 있는 여러 클러스터는 하나의 기본 사설 서브넷을 공유할 수 있습니다.
     - 포터블 사설 서브넷은 한 클러스터에만 바인드되고 클러스터에 8개의 사설 IP 주소를 제공합니다. 3개의 IP는 네트워크 기능에 예약됩니다. 1개의 IP는 기본 사설 Ingress ALB에서 사용되고 4개의 IP는 사설 로드 밸런서 네트워킹 서비스를 작성하는 데 사용할 수 있습니다. 포터블 사설 IP는 인터넷을 통해 로드 밸런서 서비스에 액세스할 때 사용할 수 있는 영구적인 고정 IP 주소입니다.
 
-### 관련 링크
+## 관련 링크
+{: #vcsnsxt-overview-iks-links}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

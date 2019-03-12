@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # VMware vSphere on IBM Cloud の要件と計画
+{: #vs_planning}
 
 VMware vSphere on {{site.data.keyword.cloud}} を注文する前に、以下の要件を確認してください。 {{site.data.keyword.CloudDataCent_notm}}のロケーションとワークロードの容量要件に基づいて、VMware vSphere クラスターの計画を立ててください。
 
@@ -20,10 +21,12 @@ ESXi サーバーがデプロイされた後は、お客様が、環境をセッ
 {:note}
 
 ## IBM Cloud アカウントの要件
+{: #vs_planning-account-req}
 
-使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)を参照してください。
+使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)を参照してください。
 
 ## IBM Cloud データ・センターの使用可否
+{: #vs_planning-dc-availability}
 
 vSphere のデプロイメントには、物理インフラストラクチャーに関する厳密な要件があります。 そのため、要件を満たす {{site.data.keyword.CloudDataCents_notm}}にしかクラスターはデプロイできません。 vSphere のデプロイメントには、以下の {{site.data.keyword.CloudDataCent_notm}}を使用可能です。
 
@@ -67,8 +70,9 @@ vSAN コンポーネントを選択した場合は、SSD (ソリッド・ステ�
 | WDC06 | ワシントン、DC | 北米東部 |
 | WDC07 | ワシントン、DC | 北米東部 |
 
-### 関連リンク
+## 関連リンク
+{: #vs_planning-related}
 
-* [新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [既存クラスターの拡張](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
-* [コンソール以外で作成された既存クラスターの拡張](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [既存クラスターの拡張](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [コンソール以外で作成された既存クラスターの拡張](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

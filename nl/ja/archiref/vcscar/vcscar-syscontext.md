@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 ## システム・コンテキスト
+{: #vcscar-syscontext}
+
 次の図は、このリファレンス・アーキテクチャーのシステム・コンテキストを示しています。 システム・コンテキスト図は、システムの主要な要素、システムの境界、システムと対話するエンティティー、およびその相互作用を定義する図です。 この図は、システムの初期ビューを読者に提供する概要図です。
 
 図 1. システム・コンテキスト
@@ -27,6 +29,8 @@ Kubernetes ベースのワークロードをプロビジョンできる単一画
 -	Watson Knowledge Studio - Watson Knowledge Studio には、Watson Discovery で使用するモデルが用意されています。
 
 ### アクター
+{: #vcscar-syscontext-actors}
+
 システム・コンテキスト図には、以下のアクターが表されています。
 
 * Acme 管理者 - 管理者は、以下の進行中のタスクを含む、アプリケーションの継続的なデプロイメントと保守を担当します。
@@ -45,5 +49,6 @@ Kubernetes ベースのワークロードをプロビジョンできる単一画
 * NSX Edge - NSX Edge は、vCenter Server インスタンスとの間の North-South トラフィックを管理する仮想アプライアンスです。
 
 ## 関連リンク
+{: #vcscar-syscontext-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

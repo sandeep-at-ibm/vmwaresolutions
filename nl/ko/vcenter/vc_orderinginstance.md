@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,14 +13,16 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # vCenter Server 인스턴스 주문
+{: #vc_orderinginstance}
 
-워크로드 요구사항에 가장 적합한 유연하고 사용자 정의할 수 있는 VMware 가상화된 플랫폼을 배치하려면 VMware vCenter Server 인스턴스를 주문하십시오. 초기 주문 중에는 재해 복구를 위한 [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html)와 같은 서비스를 추가할 수도 있습니다.
+워크로드 요구사항에 가장 적합한 유연하고 사용자 정의할 수 있는 VMware 가상화된 플랫폼을 배치하려면 VMware vCenter Server 인스턴스를 주문하십시오. 초기 주문 중에는 재해 복구를 위한 [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)와 같은 서비스를 추가할 수도 있습니다.
 
 ## 요구사항
+{: #vc_orderinginstance-req}
 
 다음 태스크를 완료했는지 확인하십시오.
-* **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](/docs/services/vmwaresolutions/vmonic/useraccount.html)를 참조하십시오.
-* [vCenter Server 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter/vc_planning.html)의 정보를 검토했습니다.
+* **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)를 참조하십시오.
+* [vCenter Server 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)의 정보를 검토했습니다.
 * 인스턴스 및 도메인 이름 형식을 검토했습니다. 도메인 이름 및 하위 도메인 레이블은 인스턴스의 사용자 이름 및 서버 이름을 생성하는 데 사용됩니다.
 
 표 1. 인스턴스 및 도메인 이름의 값 형식
@@ -37,22 +39,26 @@ lastupdated: "2019-01-25"
 {:important}
 
 ## 시스템 설정
+{: #vc_orderinginstance-sys-settings}
 
 vCenter Server 인스턴스를 주문할 때는 다음 시스템 설정을 지정해야 합니다.
 
 ### 인스턴스 이름
+{: #vc_orderinginstance-inst-name}
 
 인스턴스 이름은 다음 요구사항을 충족해야 합니다.
 * 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 인스턴스 이름은 영문자로 시작하고 영숫자로 끝나야 합니다. 
+* 인스턴스 이름은 영문자로 시작하고 영숫자로 끝나야 합니다.
 * 인스턴스 이름의 최대 길이는 10자입니다.
 * 인스턴스 이름은 계정 내에서 고유해야 합니다.
 
 ### 기본 또는 보조
+{: #vc_orderinginstance-primary-secondary}
 
 새 기본 인스턴스를 주문할지 또는 기존 기본 인스턴스의 보조 인스턴스를 주문할지 선택하십시오.
 
 ## 라이센스 부여 설정
+{: #vc_orderinginstance-licensing-settings}
 
 인스턴스의 다음 VMware 컴포넌트에 대한 라이센싱 옵션을 지정하십시오.
 * vCenter Server 6.5 - Standard 에디션
@@ -63,24 +69,27 @@ vCenter Server 인스턴스를 주문할 때는 다음 시스템 설정을 지�
 
 비즈니스 파트너가 아닌 사용자의 경우에는 **구매에 포함**을 선택하여 이 컴포넌트에 대해 IBM 제공 VMware 라이센스를 사용하거나, **라이센스를 제공함**을 선택하고 고유한 라이센스 키를 입력하여 고유한 라이센스를 가져올(BYOL) 수 있습니다.
 
-### 주의
+### 라이센싱 참고
+{: #vc_orderinginstance-licensing-notes}
 
 * 최소 8개의 CPU가 있는 라이센스가 필요합니다. 즉, 서버당 2개의 CPU가 있는 4개의 서버용입니다. 각 VMware 컴포넌트의 라이센스 선택사항은 기본 인스턴스와 나중에 라이센스에 추가하는 ESXi 서버에 적용됩니다. 라이센스가 인프라의 향후 용량 확장을 지원하는지 확인하십시오.
 * 최소 라이센스 에디션은 사용자 인터페이스에 표시됩니다. 다른 컴포넌트 에디션이 지원되는 경우 원하는 에디션을 선택할 수 있습니다. 선택한 각 VMware 컴포넌트에 올바른 라이센스 키가 제공되었는지 확인해야 합니다.
 * vSphere의 경우 라이센스 비용은 주문 시 발생하지만 라이센스 비용이 나중에 사용자 계정으로 청구됩니다.
 * 인스턴스 배치가 완료되고 나면 VMware vSphere Web Client를 사용하여 제공한 라이센스를 변경할 수 있습니다.
 * 라이센스를 제공하는 VMware 컴포넌트에 대한 지원은 IBM 지원 센터가 아닌 VMware에서 제공합니다.
-{:important}
 
 ## Bare Metal Server 설정
+{: #vc_orderinginstance-bare-metal-settings}
 
 Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성을 기반으로 합니다.
 
 ### 데이터 센터 위치
+{: #vc_orderinginstance-dc-location}
 
 인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}를 선택하십시오.
 
 ### Skylake
+{: #vc_orderinginstance-skylake}
 
 **Skylake**를 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다.
 
@@ -93,6 +102,7 @@ Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성
 |듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 
 ### SAP 인증
+{: #vc_orderinginstance-sap}
 
 **SAP 인증**을 선택하는 경우 CPU 또는 RAM 설정을 변경할 수 없습니다.
 
@@ -106,6 +116,7 @@ Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성
   * 쿼드 Intel Xeon E7-8890 v4 프로세서 / 총 96개의 코어, 2.2GHz / 4096GB RAM
 
 ### Broadwell
+{: #vc_orderinginstance-broadwell}
 
 **Broadwell**을 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다.
 
@@ -120,19 +131,22 @@ Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성
 | 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.1GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 
 ### Bare Metal Server 수
+{: #vc_orderinginstance-bare-metal-number}
 
 인스턴스에 있는 초기 클러스터의 경우 ESXi 서버의 수를 2 - 20개 범위로 구성할 수 있습니다. 모든 ESXi 서버는 설정 구성을 공유한다.
 
-초기 배치 후에는 네 개의 클러스터를 추가할 수 있습니다. VMware vSAN에 대해 **Skylake** 또는 **Broadwell** 구성을 선택한 경우 초기 및 사후 배치 클러스터 둘 다를 위해 네 개의 ESXi 서버가 필요합니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
+초기 배치 후에는 네 개의 클러스터를 추가할 수 있습니다. VMware vSAN에 대해 **Skylake** 또는 **Broadwell** 구성을 선택한 경우 초기 및 사후 배치 클러스터 둘 다를 위해 네 개의 ESXi 서버가 필요합니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
 
 ## 스토리지 설정
+{: #vc_orderinginstance-storage-settings}
 
 스토리지 설정은 Bare Metal Server 구성의 선택 및 스토리지 유형에 따라 달라집니다.
 
-인스턴스 V2.8 이상의 경우에는 기존 NFS 또는 vSAN 클러스터에 NFS 스토리지 공유를 추가할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances)의 *NFS 스토리지를 vCenter Server 인스턴스에 추가* 섹션을 참조하십시오.
+인스턴스 V2.8 이상의 경우에는 기존 NFS 또는 vSAN 클러스터에 NFS 스토리지 공유를 추가할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers#adding-nfs-storage-to-vcenter-server-instances)의 *NFS 스토리지를 vCenter Server 인스턴스에 추가* 섹션을 참조하십시오.
 {:note}
 
 ### vSAN 스토리지
+{: #vc_orderinginstance-vsan-storage}
 
 vSAN은 **Skylake** 및 **Broadwell** Bare Metal Server 구성에만 사용할 수 있습니다. 다음 vSAN 옵션을 지정하십시오.
 * **vSAN 용량 디스크의 디스크 유형 및 크기**: 필요한 용량 디스크에 대한 옵션을 선택하십시오.
@@ -146,6 +160,7 @@ vSAN은 **Skylake** 및 **Broadwell** Bare Metal Server 구성에만 사용할 �
 * **vSAN 라이센스**: **구매에 포함**을 선택하여 vSAN 컴포넌트에 대한 IBM 제공 VMware 라이센스를 사용하거나, **라이센스를 제공함**을 선택하고 고유한 라이센스 키를 입력하여 고유한 라이센스를 가져오십시오(BYOL).
 
 ### NFS 스토리지
+{: #vc_orderinginstance-nfs-storage}
 
 **NFS 스토리지**를 선택할 때 모든 공유가 동일한 설정을 사용하는 인스턴스에 대한 파일 레벨 공유 스토리지를 추가하거나 각 파일 공유에 서로 다른 구성 설정을 지정할 수 있습니다. 다음 NFS 옵션을 지정하십시오.
 
@@ -168,16 +183,19 @@ vSAN은 **Skylake** 및 **Broadwell** Bare Metal Server 구성에만 사용할 �
   |10IOPS/GB |이 옵션은 분석과 같이 가장 처리가 어려운 워크로드 유형을 위해 설계되었습니다. 애플리케이션 예로 높은 트랜잭션 데이터베이스 및 기타 성능에 민감한 데이터베이스가 있습니다. 이 성능 레벨은 파일 공유당 4TB의 최대 용량으로 제한됩니다. |
 
 ### 로컬 디스크
+{: #vc_orderinginstance-local-disks}
 
 로컬 디스크 옵션은 **SAP 인증** 쿼드 Intel Xeon E7-8890 v4 프로세서 베어메탈 구성에만 사용할 수 있습니다. 다음 옵션을 지정하십시오.
 * **디스크 수**: 추가할 용량 디스크 수를 선택하십시오.
 * **디스크 유형**: 필요한 디스크 유형에 대한 옵션을 선택하십시오.
 
 ## 네트워크 인터페이스 설정
+{: #vc_orderinginstance-network-interface-settings}
 
 vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이스 설정을 지정해야 합니다.
 
 ### 호스트 이름 접두부
+{: #vc_orderinginstance-host-name-prefix}
 
 호스트 이름 접두부는 다음 요구사항을 충족해야 합니다.
 *  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
@@ -185,14 +203,16 @@ vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이
 *  호스트 이름 접두부의 최대 길이는 10자입니다.
 
 ### 하위 도메인 레이블
+{: #vc_orderinginstance-subdomain-label}
 
 하위 도메인 레이블은 다음 요구사항을 충족해야 합니다.
 *  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-*  하위 도메인 레이블은 영문자로 시작하고 영숫자로 끝나야 합니다. 
+*  하위 도메인 레이블은 영문자로 시작하고 영숫자로 끝나야 합니다.
 *  하위 도메인 레이블의 최대 길이는 10자입니다.
 *  하위 도메인 레이블은 계정 내에서 고유해야 합니다.
 
 ### 도메인 이름
+{: #vc_orderinginstance-domain-name}
 
 루트 도메인 이름은 다음 요구사항을 충족해야 합니다.
 * 도메인 이름은 마침표(.)로 구분된 두 개 이상의 문자열로 구성되어야 합니다.
@@ -205,6 +225,7 @@ vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이
 {:note}
 
 ### 공용 또는 사설 네트워크
+{: #vc_orderinginstance-public-private-network}
 
 네트워크 인터페이스 카드(NIC) 인에이블먼트 설정은 **공용 및 사설 네트워크** 또는 **사설 네트워크 전용** 중 사용자의 선택을 기반으로 합니다. 다음과 같은 추가 기능 서비스에는 공용 NIC가 필요하며 개인용 옵션을 선택하는 경우에는 서비스를 사용할 수 없습니다.
 
@@ -214,15 +235,19 @@ vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### VLAN
+{: #vc_orderinginstance-vlans}
 
 네트워크 설정은 **새 VLAN 주문** 또는 **기존 VLAN 선택**의 선택에 따라 달라집니다.
 
 인스턴스 주문에 한 개의 공용 VLAN 및 두 개의 사설 VLAN이 필요합니다. 두 개의 사설 VLAN이 각 Bare Metal Server에 선택됩니다.
 
 #### 새 VLAN 주문
+{: #vc_orderinginstance-new-vlans}
+
 하나의 새 공용 VLAN 및 두 개의 새 사설 VLAN 주문을 선택하십시오.
 
 #### 기존 VLAN 선택
+{: #vc_orderinginstance-existing-vlans}
 
 선택한 {{site.data.keyword.CloudDataCent_notm}}에 따라 기존 공용 및 사설 VLAN을 사용할 수 있습니다.
 
@@ -233,12 +258,11 @@ vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이
 * **기본 서브넷**은 공용 네트워크 액세스를 위한 실제 호스트에 지정됩니다.
 * **사설 기본 서브넷**은 관리 트래픽을 위한 실제 호스트에 지정됩니다.
 
-##### 중요
-
-* 선택된 VLAN의 방화벽 구성이 관리 데이터 트래픽을 차단하지 않는지 확인하십시오.
-* 선택한 모든 VLAN이 동일한 팟(Pod)에 있는지 확인하십시오. 혼합 팟(pod) VLAN에서 ESXi 서버를 프로비저닝할 수 없습니다.
+선택된 VLAN의 방화벽 구성이 관리 데이터 트래픽을 차단하지 않는지 확인하십시오. 또한 선택한 모든 VLAN이 동일한 팟(Pod)에 있는지 확인하십시오. 혼합 팟(pod) VLAN에서 ESXi 서버를 프로비저닝할 수 없습니다.
+{:important}
 
 ### DNS 구성
+{: #vc_orderinginstance-dns-config}
 
 인스턴스에 대한 DNS(Domain Name System) 구성을 선택하십시오.
 
@@ -255,14 +279,17 @@ VM을 활성화할 수 있는 30일의 기간이 제공됩니다.
 Windows 라이센싱에 대한 자세한 정보는 [Windows Server 2012 R2 문서](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2)를 참조하십시오.
 
 ## 서비스 설정
+{: #vc_orderinginstance-addon-services}
 
-vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 주문할 수 있습니다. 서비스에 대한 자세한 정보는 [vCenter Server 인스턴스에 대한 사용 가능 서비스](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)를 참조하십시오.
+vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 주문할 수 있습니다. 서비스에 대한 자세한 정보는 [vCenter Server 인스턴스에 대한 사용 가능 서비스](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)를 참조하십시오.
 
 ## 주문 요약
+{: #vc_orderinginstance-order-summary}
 
 인스턴스 및 추가 기능 서비스에 대해 선택한 구성에 따라 예상 비용이 즉시 생성되어 오른쪽 분할창에 있는 **주문 요약** 섹션에 표시됩니다. 예상 세부사항을 제공하는 PDF 문서를 생성하려면 오른쪽 분할창 하단에 있는 **가격 세부사항**을 클릭하십시오.
 
 ## vCenter Server 인스턴스를 주문하는 프로시저
+{: #vc_orderinginstance-procedure}
 
 1. {{site.data.keyword.cloud_notm}} 카탈로그의 왼쪽 탐색 분할창에서 **VMware**를 클릭한 후 **가상 데이터 센터** 섹션에 있는 **vCenter Server**를 클릭하십시오.
 2. **VMware vCenter Server on IBM Cloud** 페이지에서 **vCenter Server** 카드를 클릭하고 **작성**을 클릭하십시오.
@@ -305,17 +332,19 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
    3. 주문에 적용되는 이용 약관에 대한 링크를 클릭하고, 인스턴스를 주문하기 전에 이러한 이용 약관에 동의하는지 확인하십시오.
    4. **프로비저닝**을 클릭하십시오.
 
-## 결과
+## vCenter Server 인스턴스를 주문한 후의 결과
+{: #vc_orderinginstance-results}
 
 인스턴스의 배치가 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 배치의 상태를 확인할 수 있습니다.
 
-인스턴스가 성공적으로 배치된 경우에는 [vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
+인스턴스가 성공적으로 배치된 경우에는 [vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
 
 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
 보조 인스턴스를 주문하는 경우 보조 인스턴스 주문이 완료된 후 기본 인스턴스(보조 인스턴스로 링크됨)의 VMware vSphere Web Client가 다시 시작될 수 있습니다.
 
 ## 수행할 작업
+{: #vc_orderinginstance-next}
 
 주문한 vCenter Server 인스턴스를 보고 관리하십시오.
 
@@ -331,12 +360,13 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
 
    이 활동에 대한 예외에는 {{site.data.keyword.slportal}}의 공유 스토리지 파일 공유 관리가 포함됩니다. 이러한 활동에는 공유 스토리지 파일 공유 주문, 삭제(마운트된 경우 데이터 저장소에 영향을 줄 수 있음), 권한 부여 및 마운트가 포함됩니다.
 
-### 관련 링크
+## 관련 링크
+{: #vc_orderinginstance-related}
 
-* [{{site.data.keyword.cloud_notm}} 계정 등록](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
-* [vCenter Server 인스턴스 보기](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
-* [vCenter Server 인스턴스에 대한 다중 사이트 구성](/docs/services/vmwaresolutions/vcenter/vc_multisite.html)
-* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
-* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
-* [vCenter Server 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)
+* [{{site.data.keyword.cloud_notm}} 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [vCenter Server 인스턴스 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [vCenter Server 인스턴스에 대한 다중 사이트 구성](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [vCenter Server 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)

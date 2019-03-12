@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # 新增、檢視及刪除 Cloud Foundation 實例的叢集
+{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
 
 您在訂購實例時所配置的 ESXi 伺服器會依預設叢集進行分組。預設叢集名稱是：
 * 對於已部署在 2.1 版或更新版本中的實例：**MGMT-Cluster-`<subdomain_label>`**
@@ -21,19 +22,23 @@ lastupdated: "2019-01-24"
 您可以將自己的叢集新增至 VMware Cloud Foundation 實例，以擴充運算及儲存空間容量。在叢集內，您可以管理 ESXi 伺服器，以進行更適當的資源配置及高可用性。不再需要時，您可以從實例刪除新增的叢集。
 
 ##  可用性       
+{: #sd_addingviewingclusters-availability}
 
 * 只有已部署在（或升級至）2.0 版及更新版本的實例，才能使用新增叢集特性。
 * 只有部署在（或升級至）2.3 版及更新版本的實例，才能使用刪除叢集特性。  
 
 ## 將叢集新增至 Cloud Foundation 實例
+{: #sd_addingviewingclusters-adding}
 
 您最多可以將五個叢集新增至 Cloud Foundation 實例。
 
 ### 系統設定
+{: #sd_addingviewingclusters-adding-sys-settings}
 
 當您將叢集新增至 Cloud Foundation 實例時，必須指定下列設定。
 
 #### 叢集名稱
+{: #sd_addingviewingclusters-adding-cluster-name}
 
 叢集名稱必須滿足下列需求：
 * 只容許英數及橫線 (-) 字元。
@@ -42,6 +47,7 @@ lastupdated: "2019-01-24"
 * 叢集名稱在 Cloud Foundation 實例內必須是唯一的。
 
 #### 資料中心位置
+{: #sd_addingviewingclusters-adding-dc-location}
 
 依預設，叢集的 {{site.data.keyword.CloudDataCent}} 位置設為 Cloud Foundation 實例的 {{site.data.keyword.CloudDataCent_notm}}。您可以將叢集部署至不同於已部署實例的 {{site.data.keyword.CloudDataCent_notm}}，但您必須確定兩個 {{site.data.keyword.CloudDataCents_notm}} 之間的網路延遲少於 150 毫秒。若要檢查網路延遲，您可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 之類的工具。
 
@@ -50,10 +56,12 @@ lastupdated: "2019-01-24"
 如果您將叢集部署至不同的資料中心或 Pod，則會訂購其他三個 VLAN，以與已訂購的 {{site.data.keyword.baremetal_short}} 搭配使用。
 
 ### Bare Metal Server 設定
+{: #sd_addingviewingclusters-adding-bare-metal-settings}
 
 您可以選擇 **Skylake** 或 **Broadwell**。
 
 #### Skylake
+{: #sd_addingviewingclusters-adding-skylake}
 
 若為 **Skylake** 設定，您有數個選項可用於 **CPU 型號**和 **RAM**。可用的選項可能會根據一開始部署您實例所用的版本而不同。
 
@@ -66,6 +74,7 @@ lastupdated: "2019-01-24"
 |雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 #### Broadwell
+{: #sd_addingviewingclusters-adding-broadwell}
 
 若為 **Broadwell** 設定，您有數個選項可用於 **CPU 型號**和 **RAM**。可用的選項可能會根據一開始部署您實例所用的版本而不同。
 
@@ -80,6 +89,7 @@ lastupdated: "2019-01-24"
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.2 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 ### vSAN 儲存空間設定
+{: #sd_addingviewingclusters-adding-vsan-storage-settings}
 
 若為 **Skylake** 和 **Broadwell** Bare Metal Server 配置，您可以指定下列設定，以自訂 vSAN 儲存空間：
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
@@ -92,12 +102,14 @@ lastupdated: "2019-01-24"
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
 
 ### 授權設定
+{: #sd_addingviewingclusters-adding-licensing-settings}
 
 您可以在叢集裡指定 VMware 元件的授權選項（包括 VMware vSphere 及 VMware vSAN）：
 * 對於「IBM 事業夥伴」使用者，包括 vSphere 授權（Enterprise Plus 版本）及 vSAN 授權，並可代表您購買。不過，您必須指定 vSAN 授權的版本。
 * 對於不是「IBM 事業夥伴」的使用者，您可以選取**購買隨附**以將 IBM 提供的 VMware 授權用於這些元件，也可以選取**我將提供**並輸入自己的授權碼以針對元件「自帶授權 (BYOL)」。
 
 ## 將叢集新增至 Cloud Foundation 實例的程序
+{: #sd_addingviewingclusters-adding-procedure}
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
 2. 在 **Cloud Foundation 實例**表格中，按一下您要新增叢集的實例。
@@ -123,6 +135,7 @@ lastupdated: "2019-01-24"
    4. 按一下**佈建**。
 
 ### 將叢集新增至 Cloud Foundation 實例之後的結果
+{: #sd_addingviewingclusters-adding-results}
 
 1. 會自動啟動叢集的部署，而且叢集的狀態變更為**正在起始設定**。您可以在實例摘要頁面上檢視部署歷程，以檢查部署的狀態。
 2. 叢集備妥可用時，其狀態會變更為**備妥使用**。新增的叢集已啟用「vSphere 高可用性 (HA)」及「vSphere 分散式資源排程器 (DRS)」。
@@ -130,6 +143,7 @@ lastupdated: "2019-01-24"
 您不能變更叢集名稱。變更叢集名稱可能會導致在叢集裡新增或移除 ESXi 伺服器的作業失敗。{:important}
 
 ## 在 Cloud Foundation 實例中檢視叢集的程序
+{: #sd_addingviewingclusters-viewing-procedure}
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
 2. 在 **Cloud Foundation 實例**表格中，按一下實例來檢視其中的叢集。
@@ -183,10 +197,12 @@ lastupdated: "2019-01-24"
        * **可用容量 (CPU)**：授權中可用的容量。
 
 ## 從 Cloud Foundation 實例刪除叢集
+{: #sd_addingviewingclusters-deleting}
 
 不再需要叢集時，即可從實例刪除叢集。
 
 ### 刪除之前
+{: #sd_addingviewingclusters-deleting-prereq}
 
 * 使用此程序，從部署在 2.3 版或更新版本的實例刪除叢集。
 * 對於部署在 2.2 版或更早版本實例的叢集，您必須將實例升級至 2.3 版，才能刪除您新增至實例的叢集。
@@ -196,6 +212,7 @@ lastupdated: "2019-01-24"
 * 無法刪除預設叢集。
 
 ## 從 Cloud Foundation 實例刪除叢集的程序
+{: #sd_addingviewingclusters-deleting-procedure}
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
 2. 在 **Cloud Foundation 實例**表格中，按一下您要從中刪除叢集的實例。
@@ -205,7 +222,8 @@ lastupdated: "2019-01-24"
 3. 在左導覽窗格上，按一下**基礎架構**。在**叢集**表格中，找出您要刪除的叢集，然後按一下**刪除**圖示。
 4. 確認您已完成將 VM 移轉至其他叢集（適當的話），以及您要刪除叢集。
 
-### 相關鏈結
+## 相關鏈結
+{: #sd_addingviewingclusters-related}
 
-* [檢視 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [擴充及縮減 Cloud Foundation 實例的容量](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [檢視 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [擴充及縮減 Cloud Foundation 實例的容量](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)

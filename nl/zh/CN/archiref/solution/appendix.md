@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # VMware 组件版本的比较图表
+{: #solution-appendix}
 
 ## VMware NSX 版本比较
+{: #solution-appendix-nsx-editions}
 
 表 1 列出了解决方案支持的 VMware NSX 的 **Base**、**Advanced** 和 **Enterprise** 版本的可用功能。
 
@@ -41,12 +43,13 @@ lastupdated: "2019-01-23"
 \*仅限 L2、L3 和 NSX Edge 集成。不使用安全组
 
 ## VMware vSAN 版本比较
+{: #solution-appendix-vsan-editions}
 
 表 2 列出了解决方案支持的 VMware vSAN 的 **Advanced** 和 **Enterprise** 版本的可用功能。
 
 表 2. VMware vSAN 版本比较图表
 
-|vSAN 功能|高级|Enterprise|
+|vSAN 功能| Advanced | Enterprise |
 |-------------------------------------------------|----------|------------|
 |基于存储策略的管理| •        | •          |
 |读/写闪存| •        | •          |
@@ -63,8 +66,9 @@ lastupdated: "2019-01-23"
 |静态数据加密|          | •          |
 |具有本地故障保护功能的延伸集群|          | •          |
 
-### 相关链接
+## 相关链接
+{: #solution-appendix-related}
 
-* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [设计概述](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [备份组件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [设计概述](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [备份组件](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

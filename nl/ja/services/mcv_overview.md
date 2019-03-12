@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Mission Critical VMware on IBM Cloud の概要
+{: #mcv_overview}
 
 Mission Critical VMware on {{site.data.keyword.cloud}} では、企業がクラウド・アプリケーションのダウン時間をなくし、クラウド領域内でのフェイルオーバーを自動化できるようにするための、マルチゾーン・クラウド・アーキテクチャーを提供しています。
 
@@ -19,6 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}} では、企業がクラ�
 このアーキテクチャーは、さまざまなエンタープライズ・サービスを網羅し、クラウド・ベースのアプリケーションの監視とトラブルシューティングを行うために作成されたネットワーク、ストレージ、回復力などのツールを備えています。 さらに、このアーキテクチャーは、{{site.data.keyword.cloud_notm}} 上に構築された IBM Services Platform with Watson と統合することができますので、より広範囲にサービスを利用できます。 お客様はプラットフォームのコグニティブ機能を使用して、継続的運用の維持に役立つ新しいビジネス洞察を得るために、より効率的にデータをマイニングできます。
 
 ## Mission Critical VMware on IBM Cloud の技術仕様
+{: #technical-specifications-for-mission-critical-vmware-on-ibm-cloud}
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} のアーキテクチャーは、お客様のワークロードの自動フェイルオーバーを提供するエンドツーエンドのリファレンス・アーキテクチャーです。 IBM マネージド・サービスによる {{site.data.keyword.cloud_notm}} マルチゾーン領域を使用して、以下の構成要素をカバーします。
 
@@ -38,6 +40,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} は、以下の地�
 * アジア太平洋: シドニーと東京のすべての IBM Cloud データ・センター
 
 ### 基本インフラストラクチャー・アーキテクチャーの仕様
+{: #mcv_overview-base-specs}
 
 基のインフラストラクチャーには以下の仕様があります。
 * 各サイトには専用のエッジおよび管理クラスターがあります
@@ -48,6 +51,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} は、以下の地�
 * NSX Manager のリカバリーでは、バックアップ・ファイルを同期するホット/スタンバイ方式を使用します
 
 ### ツールおよびテクノロジー・アーキテクチャーの仕様
+{: #mcv_overview-tooling-specs}
 
 ツールおよびテクノロジー・アーキテクチャーには以下の仕様があります。
 * vRealize Operations、vRealize Log Insight、および vRealize Network Insight が、使用されている VMware 製品 (NSX、vSAN、vSphere など) に固有の操作と管理機能を提供します
@@ -56,6 +60,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} は、以下の地�
 * Fortigate Security Appliance などが、インターネット・アクセスを保護して、アクティブ/アクティブ・ネットワークとオンプレミス・ネットワークとの統合を実現します
 
 ### vSphere + vSAN 拡張クラスター・アーキテクチャーの仕様
+{: #mcv_overview-stretched-cluster-specs}
 
 vSphere + vSAN 拡張クラスター・アーキテクチャーには以下の仕様があります。
 * このクラスターは、2 つのサイトにまたがるストレージおよび計算機能を提供し、可用性を強化します。
@@ -65,6 +70,7 @@ vSphere + vSAN 拡張クラスター・アーキテクチャーには以下の�
 * vSAN ネイティブ暗号化 (Rest 暗号化用) は、このアーキテクチャーと組み合わせて使用できます。
 
 ### ネットワーク体系の仕様
+{: #mcv_overview-network-specs}
 
 ネットワーク体系には以下の仕様があります。
 * Edge/DLR/VXLAN を BGP メトリック・ベースのルーティングと組み合わせて使用すると、自動フェイルオーバーを使用したアクティブ/アクティブ・サイト設計が容易になります。
@@ -73,6 +79,7 @@ vSphere + vSAN 拡張クラスター・アーキテクチャーには以下の�
 * VM-A の vMotion アクティビティー時は、トラフィックは引き続き {{site.data.keyword.cloud_notm}} アベイラビリティー・ゾーン #1 を介して出入りします。
 * サイトやエッジの障害時には、トラフィックが残りの使用可能なサイトからルーティングされます。
 
-### 関連リンク
+## 関連リンク
+{: #mcv_overview-related}
 
-* [Mission Critical VMware on IBM Cloud の要求](/docs/services/vmwaresolutions/services/managing_mcv.html)
+* [Mission Critical VMware on IBM Cloud の要求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_mcv)

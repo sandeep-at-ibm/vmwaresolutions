@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,24 +13,28 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 添加、查看和删除 vCenter Server with Hybridity Bundle 实例的集群
+{: #vc_hybrid_addingviewingclusters}
 
 缺省情况下，订购实例时配置的 ESXi 服务器会分组为 **cluster1**。
 
 可以向 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 实例添加集群以扩展计算和存储容量。在集群中，管理 ESXi 服务器以获得更佳的资源分配和高可用性。不再需要添加的集群时，请从实例中将其删除。
 
 ## 向 vCenter Server with Hybridity Bundle 实例添加集群
+{: #vc_hybrid_addingviewingclusters-adding}
 
-可以添加到实例的集群数取决于实例版本：
+可添加到实例的集群数取决于实例版本：
 * 对于部署在（或已升级到）V2.5 和更高版本中的实例，集群数、主机数和 VM 数将决定可以添加的最大集群数限制。您必须遵守适用于部署的 VMware 大小调整准则和限制。
 * 对于部署在（或已升级到）V2.3 和更高版本中的实例，最多可以添加 10 个集群。
 
 有关最大限制的更多信息，请参阅 [VMware 配置最大值](https://configmax.vmware.com/home){:new_window}。
 
 ### 系统设置
+{: #vc_hybrid_addingviewingclusters-adding-sys-settings}
 
 为 vCenter Server with Hybridity Bundle 实例添加集群时，必须指定以下设置。
 
 #### 集群名称
+{: #vc_hybrid_addingviewingclusters-adding-cluster-name}
 
 集群名称必须满足以下需求：
 * 只允许使用字母数字字符和短划线 (-) 字符。
@@ -39,16 +43,19 @@ lastupdated: "2019-01-23"
 * 集群名称在 vCenter Server with Hybridity Bundle 实例中必须唯一。
 
 #### 数据中心位置
+{: #vc_hybrid_addingviewingclusters-adding-dc-location}
 
 缺省情况下，集群的 {{site.data.keyword.CloudDataCent_notm}} 位置设置为 vCenter Server 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，请使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 等工具。
 
 如果将集群部署到其他 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基础架构 pod，应再订购三个 VLAN 用于已订购的 {{site.data.keyword.baremetal_short}}。
 
 ### 裸机服务器设置
+{: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
 指定用于裸机服务器的 CPU 型号和 RAM。可用选项可能有所不同，具体取决于初始部署实例的版本。
 
 #### Skylake
+{: #vc_hybrid_addingviewingclusters-adding-skylake}
 
 选择 **Skylake** 时，可以根据需要选择 CPU 和 RAM 组合。
 
@@ -61,6 +68,7 @@ lastupdated: "2019-01-23"
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
 #### Broadwell
+{: #vc_hybrid_addingviewingclusters-adding-broadwell}
 
 选择 **Broadwell** 时，可以根据需要选择 CPU 和 RAM 组合。
 
@@ -75,6 +83,7 @@ lastupdated: "2019-01-23"
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.2 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
 #### 裸机服务器的数量
+{: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
 
 一个集群至少需要两个 {{site.data.keyword.baremetal_short}}。
 
@@ -83,6 +92,7 @@ lastupdated: "2019-01-23"
 部署后，最多可以再创建四个集群。对于 VMware vSAN 存储器，初始集群和部署后集群都需要 4 个服务器。
 
 ### vSAN 存储器设置
+{: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
 
 vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请指定以下 vSAN 选项：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
@@ -96,6 +106,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 * **vSAN 许可证**：选择 VMware vSAN 6.6 许可证版本（Advanced 或 Enterprise）。
 
 ### 许可证设置
+{: #vc_hybrid_addingviewingclusters-adding-licensing-settings}
 
 用于以下 VMware 组件的 IBM 提供的许可证：
   * vSphere Enterprise Plus 6.5u1
@@ -103,6 +114,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
   * NSX Service Providers 6.4（Advanced Edition 或 Enterprise Edition）
 
 ### 网络接口设置
+{: #vc_hybrid_addingviewingclusters-adding-network-interface-settings}
 
 网络接口卡 (NIC) 设置基于您选择的是**公用和专用网络**还是**仅专用网络**。以下附加组件服务需要公共 NIC，并且这些服务在选择了专用选项时不可用：
 
@@ -112,10 +124,12 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 订单摘要
+{: #vc_hybrid_addingviewingclusters-adding-order-summary}
 
 根据为集群选择的配置，估算成本会立即生成并显示在**订单摘要**右侧窗格中。
 
 ## 向 vCenter Server with Hybridity Bundle 实例添加集群的过程
+{: #vc_hybrid_addingviewingclusters-adding-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击实例以查看其中的集群。
@@ -137,6 +151,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
    4. 单击**供应**。
 
 ### 向 vCenter Server with Hybridity Bundle 实例添加集群后的结果
+{: #vc_hybrid_addingviewingclusters-adding-results}
 
 1. 集群部署会自动启动，并且集群的状态会更改为**正在初始化**。可以通过在实例的**摘要**页面上查看部署历史记录，以检查部署的状态。
 2. 集群准备就绪可供使用后，其状态会更改为**可供使用**。将对新添加的集群启用 vSphere 高可用性 (HA) 和 vSphere 分布式资源调度程序 (DRS)。
@@ -145,6 +160,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 {:important}
 
 ## 查看 vCenter Server with Hybridity Bundle 实例中集群的过程
+{: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击实例以查看其中的集群。
@@ -201,10 +217,12 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
     * **NFS 协议**：存储器的 NFS 版本。
 
 ## 从 vCenter Server with Hybridity Bundle 实例中删除集群
+{: #vc_hybrid_addingviewingclusters-deleting}
 
 当不再需要集群时，您可能希望将其从实例中删除。
 
 ### 删除之前
+{: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
 * 一次可以删除一个集群。要删除多个集群，必须按顺序依次执行；请等待前一个集群删除后，再删除下一个集群。
 * 删除集群之前，请确保集群中的所有节点都已打开电源且正常运行。
@@ -212,15 +230,18 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 * 无法删除缺省集群。
 
 ## 从 vCenter Server with Hybridity Bundle 实例中删除集群的过程
+{: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要从中删除集群的实例。
 
-   **注**：确保实例处于**可供使用**状态。否则，无法从实例中除去集群。
+   确保实例处于**可供使用**状态。否则，无法从实例中除去集群。
+   {:note}
 
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，找到要删除的集群，然后单击**操作**列中的**删除**图标。
 
-### 相关链接
+## 相关链接
+{: #vc_hybrid_addingviewingclusters-related}
 
-* [查看 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [扩展和收缩 vCenter Server with Hybridity Bundle 实例的容量](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [查看 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [扩展和收缩 vCenter Server with Hybridity Bundle 实例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)

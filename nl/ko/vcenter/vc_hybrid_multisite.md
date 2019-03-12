@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server with Hybridity Bundle 인스턴스에 대한 다중 사이트 구성
+{: #vc_hybrid_multisite}
 
 {{site.data.keyword.vmwaresolutions_full}}를 사용하여 다른 위치에 인스턴스를 배치할 수 있고 짧은 시간 동안 시작하고 실행할 수 있습니다.
 
 ## 다중 사이트 배치 컴포넌트
+{: #vc_hybrid_multisite-deployment-components}
 
 다중 사이트 배치는 다음 컴포넌트로 구성됩니다.
 
@@ -33,10 +35,11 @@ lastupdated: "2019-01-23"
    *  보조 인스턴스의 VMware vCenter가 기본 인스턴스에서 vCenter에 대한 향상된 연결 모드로 설정됨
 
 ## vCenter Server with Hybridity Bundle 다중 사이트 배치
+{: #vc_hybrid_multisite-deployment}
 
 다중 사이트 구성 기능은 기본 사이트와 최대 일곱 개의 보조 사이트로 허브 및 스포크 토폴로지를 사용합니다. 단일 사이트 계층이 지원되며, 이는 다른 보조 사이트에 연결된 후속 사이트를 구성할 수 없음을 의미합니다. 모든 인스턴스의 다중 사이트 구성에서 총 128개의 ESXi 서버를 보유할 수 있습니다.
 
-구성에 128개보다 많은 ESXi 서버가 포함된 다중 사이트 배치가 필요한 경우 IBM 지원 센터에 문의하여 도움을 받으십시오. 자세한 정보는 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)를 참조하십시오.
+구성에 128개보다 많은 ESXi 서버가 포함된 다중 사이트 배치가 필요한 경우 IBM 지원 센터에 문의하여 도움을 받으십시오. 자세한 정보는 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)를 참조하십시오.
 {:note}
 
 다음 그림은 vCenter Server with Hybridity Bundle 다중 사이트 배치의 전체 보기를 나타냅니다.
@@ -54,10 +57,11 @@ lastupdated: "2019-01-23"
 
 다중 사이트 구성에 배치된 최대 8개의(1개의 기본 및 7개의 보조) 인스턴스를 보유할 수 있습니다.
 
-다중 사이트 구성의 일부인 vCenter Server with Hybridity Bundle 인스턴스를 삭제하려면 특수 계획이 필요합니다. 자세한 정보는 [다중 사이트 구성에서 vCenter Server with Hybridity Bundle 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html)를 참조하십시오.
+다중 사이트 구성의 일부인 vCenter Server with Hybridity Bundle 인스턴스를 삭제하려면 특수 계획이 필요합니다. 자세한 정보는 [다중 사이트 구성에서 vCenter Server with Hybridity Bundle 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance_multi)를 참조하십시오.
 {:note}
 
-### 관련 링크
+## 관련 링크
+{: #vc_hybrid_multisite-related}
 
 * [Assign Primary Role to NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configuring Secondary NSX Managers](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}

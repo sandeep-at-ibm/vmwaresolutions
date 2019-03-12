@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 架構概觀
+{: #vcsicp-arch-overview}
 
 {{site.data.keyword.vmwaresolutions_full}} 供應項目提供自動化，以在全球的 {{site.data.keyword.CloudDataCents_notm}} 中部署 VMware 技術元件。架構由單一雲端地區組成，可支援延伸至位於另一個地理位置的其他雲端地區，或延伸至相同資料中心內的另一個 {{site.data.keyword.cloud_notm}} Pod。
 
@@ -21,6 +22,7 @@ IBM Multi-Cluster Manager (MCM) 提供使用者可見性、以應用程式為中
 使用 Cloud Automation Manager 服務編製器來顯示 {{site.data.keyword.cloud_notm}} Private 型錄中的混合式雲端服務。
 
 ## IBM Cloud 端的雲端管理平台
+{: #vcsicp-arch-overview-ibm-cloud-side-platform}
 
 下圖是 {{site.data.keyword.icpfull_notm}} 及 CAM 部署範例，而此部署具有 {{site.data.keyword.cloud_notm}} 基礎架構，並具有 {{site.data.keyword.cloud_notm}} 上所部署之內部部署 vCenter 及 {{site.data.keyword.containerlong_notm}} 的連線。使用者可以在內部部署虛擬機器 (VM)、將 VM 部署至 vCenter Server 實例，以及將容器部署至 {{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 叢集。
 
@@ -32,9 +34,10 @@ IBM Multi-Cluster Manager (MCM) 提供使用者可見性、以應用程式為中
 
 您可以部署具有 NSX-V 或 NSX-T 元件的 {{site.data.keyword.icpfull_notm}}。{{site.data.keyword.icpfull_notm}} 搭配 NSX-V 可讓 {{site.data.keyword.icpfull_notm}} VM 在 VXLAN 網路上執行，並使用 Kubernetes Calico 內部網路。
 
-{{site.data.keyword.icpfull_notm}} 搭配 NSX-T 可讓使用者從中央使用者介面 (NSX-T Manager) 控制及配置網路、子網路、原則。若要瞭解 NSX-V 與 NSX-T 之間的差異，請參閱 [vCenter Server 網路手冊](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html)。
+{{site.data.keyword.icpfull_notm}} 搭配 NSX-T 可讓使用者從中央使用者介面 (NSX-T Manager) 控制及配置網路、子網路、原則。若要瞭解 NSX-V 與 NSX-T 之間的差異，請參閱 [vCenter Server 網路手冊](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)。
 
 ## 內部部署雲端管理平台
+{: #vcsicp-arch-overview-on-premises-platform}
 
 下圖是內部部署基礎架構中的 {{site.data.keyword.icpfull_notm}} 及 CAM 部署範例，而此部署具有 {{site.data.keyword.cloud_notm}} 上所部署之 vCenter 及 {{site.data.keyword.containerlong_notm}} 的連線。使用者可以在內部部署 VM 和容器、將 VM 部署至 vCenter Server 實例，以及將容器部署至 {{site.data.keyword.containerlong_notm}} 叢集。
 
@@ -45,6 +48,7 @@ strongSwan VPN 可用來建立與已部署 {{site.data.keyword.containerlong_not
 
 在圖表中，CAM 邏輯地建立與 vCenter、雲端提供者、{{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 環境的雲端連線。{{site.data.keyword.icpfull_notm}} 叢集必須部署至每個資料中心雲端環境，並由 MCM 提供將 {{site.data.keyword.icpfull_notm}} 叢集連接至單一管理視圖的機制。
 
-### 相關鏈結
+## 相關鏈結
+{: #vcsicp-arch-overview-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

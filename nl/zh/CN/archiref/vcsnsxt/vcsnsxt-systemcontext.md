@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 系统上下文
+{: #vcsnsxt-systemcontext}
 
 系统上下文图定义了系统的关键元素、系统的边界、与系统交互的实体以及交互。这是一个高级别图，为读取者提供了系统的初始视图。
 
@@ -23,6 +24,7 @@ lastupdated: "2019-01-23"
 - **IBM Cloud 服务** - 可通过 {{site.data.keyword.cloud_notm}} 提供的广泛的可使用服务。服务选项包括 Analytics、AI 和 IoT，等等。
 
 ## 参与者
+{: #vcsnsxt-systemcontext-actors}
 
 系统上下文图确定了以下参与者。
 
@@ -37,6 +39,7 @@ lastupdated: "2019-01-23"
 {{site.data.keyword.containerlong_notm}} |这是 IBM 资源，负责管理服务的 {{site.data.keyword.containerlong_notm}} 主节点。
 
 ## 系统
+{: #vcsnsxt-systemcontext-systems}
 
 系统上下文图确定了以下系统。
 
@@ -47,11 +50,12 @@ lastupdated: "2019-01-23"
 vCenter|vCenter 是系统管理员用于管理内部部署 VM 和访问 HCX 插件以延伸网络和迁移 VM 的主要界面。通过 vCenter Server with Hybridity Bundle，系统管理员可以无缝地将内部部署 vSphere 网络集成到在 {{site.data.keyword.cloud_notm}} 上运行的 vCenter Server 实例中。混合联网将内部部署网络扩展到 {{site.data.keyword.cloud_notm}} 中，支持客户将自己的应用程序迁移到在 {{site.data.keyword.cloud_notm}} 上运行的 vCenter Server 实例中，并支持根据需要迁移回内部部署。有关 vCenter Server with Hybridity Bundle 的更多详细信息，请参阅 [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)文档。
 内部部署 VM|内部部署 VM 托管迁移到云的应用程序。最初，应用程序会迁移为 VM，然后通过应用程序现代化之旅从 VM 迁移到容器。
 云上的 VM|云上的 VM 托管从内部部署迁移的应用程序。它们通过延伸的 L2 网络与内部部署应用程序进行通信。对于此参考体系结构以及此 Acme Skateboards 示例，其中一个云上 VM 是数据库服务器，这是联机在线工作负载的一部分。
-NSX-V|vCenter Server 上的 NSX-V 提供软件定义的覆盖网络，该覆盖网络由系统管理员进行管理。覆盖网络是 HCX 延伸网络的目标，用于处理来自 {{site.data.keyword.icpfull_notm}} 的 VM 的流量。NSX-V 使用 vSphere 分布式交换机 (vDS) 为参考体系结构提供了部署、重新配置和销毁随需应变虚拟网络和 VMware 内微分段服务等功能。有关更多信息，请参阅 [NSX-V 概述](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-ic4vnsxv.html)。
+NSX-V|vCenter Server 上的 NSX-V 提供软件定义的覆盖网络，该覆盖网络由系统管理员进行管理。覆盖网络是 HCX 延伸网络的目标，用于处理来自 {{site.data.keyword.icpfull_notm}} 的 VM 的流量。NSX-V 使用 vSphere 分布式交换机 (vDS) 为参考体系结构提供了部署、重新配置和销毁随需应变虚拟网络和 VMware 内微分段服务等功能。有关更多信息，请参阅 [NSX-V 概述](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)。
 CAM|{{site.data.keyword.cloud_notm}} Automation Manager (CAM) 在 {{site.data.keyword.icpfull_notm}} 上运行，并提供了一个窗格，可使用模板来供应基于 VM 的工作负载以及基于 Kubernetes 的工作负载。CAM 支持开发者：<br> - 在 vCenter Server、{{site.data.keyword.icpfull_notm}} 或 {{site.data.keyword.containerlong_notm}} 上供应工作负载。<br> - 编写和编排由 VM 和容器组成的服务。<br> - 集成其 DevOps 工具链和 Day-2 ITSM 解决方案。
 容器化应用程序|完成了应用程序现代化之旅并且现在作为容器运行的应用程序。对于此参考体系结构以及此 Acme Skateboards 示例，其中一个容器化应用程序是 Web 服务器，这是联机在线工作负载的一部分。
 Watson|对于此参考体系结构以及此 Acme Skateboards 示例，Watson 表示“概念车”体系结构中使用的 AI 服务。
 
-### 相关链接
+## 相关链接
+{: #vcsnsxt-systemcontext-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

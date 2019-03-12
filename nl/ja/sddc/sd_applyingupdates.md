@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,15 +13,17 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Cloud Foundation インスタンスへの更新の適用
+{: #sd_applyingupdates}
 
 {{site.data.keyword.vmwaresolutions_full}} コンソールは、VMware 仮想環境に適用できるようになったソフトウェア更新を定期的に検出してリストします。
 
 使用できる更新は、インスタンスのソフトウェア更新リストに記録され、即時に適用することも後で行うようにスケジュールすることもできます。 更新は、IBM 管理コンポーネントや VMware コンポーネントを更新するための 1 つ以上のパッケージを収めたバンドルとして提供されます。
 
-V2.5 以降は自動更新が有効になっているため、IBM CloudDriver の更新はリストされなくなりました。 ホストの追加、クラスターの追加、サービスの注文などの操作を行うと、自動的にインスタンスが最新バージョンに更新されます。 自動更新について詳しくは、[V2.5 のリリース・ノート](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)の『*IBM CloudDriver の回復力*』のセクションを参照してください。
+V2.5 以降は自動更新が有効になっているため、IBM CloudDriver の更新はリストされなくなりました。 ホストの追加、クラスターの追加、サービスの注文などの操作を行うと、自動的にインスタンスが最新バージョンに更新されます。 自動更新について詳しくは、[V2.5 のリリース・ノート](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)の『*IBM CloudDriver の回復力*』のセクションを参照してください。
 {:note}
 
 ## 始める前に
+{: #sd_applyingupdates-prereq}
 
 更新を適用する前に、下矢印をクリックして更新エントリーを展開し、以下の情報を確認します。
 * 更新のバージョン。 最も古いものから順に更新を適用する必要があります。 最新の更新を適用する前に、それより前のすべての更新を適用済みであることを確認してください。 例えば、V2.5 の更新を適用する前に、V2.4 の更新を適用する必要があります。
@@ -52,6 +54,7 @@ V2.5 以降は自動更新が有効になっているため、IBM CloudDriver �
 </table>
 
 ## Cloud Foundation インスタンスに更新を適用する手順
+{: #sd_applyingupdates-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「Cloud Foundation インスタンス」**の表で、更新するインスタンスをクリックします。
@@ -64,6 +67,7 @@ V2.5 以降は自動更新が有効になっているため、IBM CloudDriver �
 6. マルチサイト・デプロイメント構成の Cloud Foundation インスタンスに更新を適用する場合は、**「更新に必要なステップ」**というタイトルのセクションが表示されます。このセクションには、マルチサイト・デプロイメントのすべてのインスタンスに必要な更新操作がリストされます。 各手順の**「更新を適用」**をクリックして、手順を順番に実行していく必要があります。 前の手順が完了するのを待ってから、次の手順を開始する必要があります。
 
 ## 結果
+{: #sd_applyingupdates-results}
 
 1. 更新操作の開始前に、インスタンスに関するヘルス・チェックが完了します。 ヘルス・チェックが失敗すると通知されるので、まず問題を修正してから更新を適用できます。
 2. VMware コンポーネントの更新が含まれる更新を行っている時には、VM を ESXi サーバーからマイグレーションして保守モードする必要が生じることがあります。 VM にローカル・データ・ストアまたは CD-ROM がマウントされている場合は、VM をマイグレーションできない可能性があります。
@@ -109,11 +113,12 @@ V2.5 以降は自動更新が有効になっているため、IBM CloudDriver �
       </tr>
     </table>
 
-6. 特定のステップで更新プロセスが失敗する場合は、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)によって支援を得ることができます。 問題の解決方法に関するアドバイスが与えられ、失敗したステップからアップグレードを再開する方法が提示されます。
+6. 特定のステップで更新プロセスが失敗する場合は、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)によって支援を得ることができます。 問題の解決方法に関するアドバイスが与えられ、失敗したステップからアップグレードを再開する方法が提示されます。
 
-### 関連リンク
+## 関連リンク
+{: #sd_applyingupdates-related}
 
-* [Cloud Foundation の概要](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/veeam_considerations.html)
-* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Cloud Foundation の概要](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Veeam on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

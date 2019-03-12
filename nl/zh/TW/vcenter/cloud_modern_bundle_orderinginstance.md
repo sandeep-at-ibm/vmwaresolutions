@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,25 +13,30 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # 訂購、檢視及刪除單一節點試用版移轉及應用程式現代化實例
+{: #cloud_modern_bundle_orderinginstance}
 
 請先檢閱規劃需求，再訂購「單一節點試用版移轉及應用程式現代化」實例。
 
 ## 訂購單一節點試用版移轉及應用程式現代化實例的需求及規劃
+{: #cloud_modern_bundle_orderinginstance-req}
 
 您務必確認下列需求並完成下列作業。
 
 ### 內部部署 HCX 實例的必要條件
+{: #cloud_modern_bundle_orderinginstance-hcx-req}
 
 * 需要 VMware vSphere 及 vCenter 5.5 或更新版本。
 * vSphere 環境必須具有將移轉至 {{site.data.keyword.cloud_notm}} 之 VM 的分散式交換器。
 * 「HCX Manager 虛擬應用裝置」必須能夠部署在內部部署環境的專用網路上，且必須能夠存取公用網際網路。
 
 ### IBM Cloud 基礎架構帳戶
+{: #cloud_modern_bundle_orderinginstance-account-req}
 
 * 若要使用 {{site.data.keyword.vmwaresolutions_short}} 來訂購實例，您必須具有 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶。實例中訂購的元件費用會向該 {{site.data.keyword.cloud_notm}}帳戶收費。
 *  在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**設定**。
 
 ### 實例名稱需求
+{: #cloud_modern_bundle_orderinginstance-inst-name-req}
 
 檢閱實例名稱需求：
 * 只容許英數及橫線 (-) 字元。
@@ -40,6 +45,7 @@ lastupdated: "2019-01-25"
 * 實例名稱在您的帳戶中必須是唯一的。
 
 ## 訂購單一節點試用版移轉及應用程式現代化實例的程序
+{: #cloud_modern_bundle_orderinginstance-procedure}
 
 1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware**，然後按一下**虛擬資料中心**區段中的**單一節點試用版移轉及應用程式現代化**。
 2. 在**單一節點試用版移轉及應用程式現代化**頁面上，按一下**繼續**。
@@ -58,10 +64,12 @@ lastupdated: "2019-01-25"
    4. 按一下**佈建**。
 
 ### 結果
+{: #cloud_modern_bundle_orderinginstance-results}
 
 自動啟動實例的部署作業，並且會訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 服務啟動金鑰。
 
 #### HCX on IBM Cloud 的部署處理程序
+{: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
 
 自動部署 HCX on {{site.data.keyword.cloud_notm}}。下列步驟是由 {{site.data.keyword.vmwaresolutions_short}} 自動化處理程序完成：
 1. 從 {{site.data.keyword.cloud_notm}} 基礎架構訂購三個 HCX 的子網路：
@@ -89,6 +97,7 @@ lastupdated: "2019-01-25"
 6. 向 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的 DNS 伺服器登錄 HCX Manager 的主機名稱及 IP 位址。
 
 #### 檢視實例詳細資料
+{: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
 您可以檢視實例詳細資料，以查看部署的狀態。從左導覽窗格中，按一下**已部署的實例**，然後找出 **vCenter Server 實例**或**內部部署 HCX 實例**表格，以檢視您所訂購實例的相關資訊。
 
@@ -97,6 +106,7 @@ lastupdated: "2019-01-25"
 實例的狀態會變更為**備妥使用**，且您會收到電子郵件通知。
 
 ### 下一步
+{: #cloud_modern_bundle_orderinginstance-next}
 
 安裝內部部署 HCX Enterprise Manager，並配置與 HCX on {{site.data.keyword.cloud_notm}} 實例的連線。
 
@@ -140,6 +150,7 @@ lastupdated: "2019-01-25"
 您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 基礎架構元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台之外變更這些元件，這些變更不會與主控台同步化，而且會使您的環境不穩定。{:important}
 
 ## 刪除單一節點試用版移轉及應用程式現代化實例的程序
+{: #cloud_modern_bundle_orderinginstance-deleting-procedure}
 
 當您刪除「單一節點試用版移轉及應用程式現代化」實例時，會循序釋出下列元件：
 
@@ -164,9 +175,10 @@ lastupdated: "2019-01-25"
    1. 在**動作**直欄中，再按一次「刪除」圖示。
    2. 在**刪除實例**視窗中，按一下**確定**。
 
-### 相關鏈結
+## 相關鏈結
+{: #cloud_modern_bundle_orderinginstance-related}
 
-* [vCenter Server 和 IBM Cloud Private 手冊](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [vCenter Server 和 IBM Cloud Private 手冊](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [開立 IBM Cloud Private 的問題單](https://www.ibm.com/mysupport/s/?language=en_US)
 * [VMware Hybrid Cloud Extension 文件](https://hcx.vmware.com/#/vm-documentation)
 * [取得 HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

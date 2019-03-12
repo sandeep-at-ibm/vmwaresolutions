@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,16 +13,19 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # VMware vSphere on IBM Cloud 的需求及規劃
+{: #vs_planning}
 
 在訂購 VMware vSphere on {{site.data.keyword.cloud}} 之前，請檢閱下列需求。根據 {{site.data.keyword.CloudDataCent_notm}} 位置及工作負載容量需求來規劃 VMware vSphere 叢集。
 
 部署 ESXi 伺服器之後，您要負責設定環境、安裝和配置各種 VMware 元件。下列範例是 VMware 元件：VMware vCenter Server、VMware NSX 及 VMware vSAN。{:note}
 
 ## IBM Cloud 帳戶需求
+{: #vs_planning-account-req}
 
-您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶的需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
+您使用的 {{site.data.keyword.cloud_notm}} 帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 帳戶的需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
 
 ## IBM Cloud Data Center 可用性
+{: #vs_planning-dc-availability}
 
 vSphere 部署對實體基礎架構有嚴格的需求。因此，您只能在符合需求的 {{site.data.keyword.CloudDataCents_notm}} 中部署叢集。下列 {{site.data.keyword.CloudDataCent_notm}} 可用於 vSphere 部署。
 
@@ -65,8 +68,9 @@ vSphere 部署對實體基礎架構有嚴格的需求。因此，您只能在符
 |WDC06 |華盛頓特區|NA 東部|
 |WDC07 |華盛頓特區|NA 東部|
 
-### 相關鏈結
+## 相關鏈結
+{: #vs_planning-related}
 
-* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [擴充現有的叢集](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
-* [擴充在主控台以外建立的叢集](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [擴充現有的叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [擴充在主控台以外建立的叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

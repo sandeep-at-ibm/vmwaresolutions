@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-06-22"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-06-22"
 {:important: .important}
 
 # V2.4 发行说明
+{: #relnotes_v24}
 
 此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
@@ -24,7 +25,7 @@ lastupdated: "2018-06-22"
 * CVEID：[CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID：[CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-有关更多信息，请参阅[解决 Spectre 和 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)。
+有关更多信息，请参阅[解决 Spectre 和 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)。
 
 ## 本地语言支持
 
@@ -43,7 +44,7 @@ lastupdated: "2018-06-22"
 
 ## Skylake Xeon CPU 支持
 
-从 V2.4 发行版开始，以下新的裸机服务器 CPU 型号可用于部署 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}、VMware vSphere on {{site.data.keyword.cloud_notm}} 和 VMware Federal on {{site.data.keyword.cloud_notm}} 实例与集群：
+从 V2.4 发行版开始，以下新的裸机服务器 CPU 型号可用于部署 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} 和 VMware vSphere on {{site.data.keyword.cloud_notm}} 实例与集群：
 
 * 双 Intel Skylake Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz
 * 双 Intel Skylake Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz
@@ -51,21 +52,14 @@ lastupdated: "2018-06-22"
 
 有关更多信息，请参阅以下内容中的*裸机服务器设置*部分：
 
-* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html#bare-metal-server-settings)
-* [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#bare-metal-server-settings)
-* [订购 VMware Federal 实例](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html#bare-metal-server-settings)
+* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance#bare-metal-server-settings)
+* [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)
 
 ## 对 VMware vCenter Server 实例的更新
 
 ### 网络文件系统性能增强
 
-设计用于要求最苛刻的工作负载类型的性能级别 10 IOPS/GB 不再仅限于特定 {{site.data.keyword.CloudDataCent_notm}}，现在可用于所有数据中心。有关更多信息，请参阅 [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)中的*存储*部分。
-
-## 对 VMware Federal 实例的更新
-
-### 新增 IBM Cloud Data Center 选项
-
-现在，您可以将 VMware Federal 实例部署到 DAL08 - 达拉斯（德克萨斯州）{{site.data.keyword.CloudDataCent_notm}}。有关更多信息，请参阅 [VMware Federal 实例的需求和规划](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html#ibm-cloud-data-center-availability)中的 *IBM Cloud Data Center 可用性*部分。
+设计用于要求最苛刻的工作负载类型的性能级别 10 IOPS/GB 不再仅限于特定 {{site.data.keyword.CloudDataCent_notm}}，现在可用于所有数据中心。有关更多信息，请参阅 [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)中的*存储*部分。
 
 ## 对附加组件服务的更新
 
@@ -75,13 +69,13 @@ lastupdated: "2018-06-22"
 
 ### VMware HCX on IBM Cloud
 
-现在，订购此服务时，有一个新选项可供您为 HCX 互连选择公用网络或专用网络。有关更多信息，请参阅[订购 VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_ordering.html)。
+现在，订购此服务时，有一个新选项可供您为 HCX 互连选择公用网络或专用网络。有关更多信息，请参阅[订购 VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering)。
 
 ## 新增和更新的文档
 
 ### 参考体系结构文档
 
-现在，用户文档的*参考*部分中提供了 {{site.data.keyword.vmwaresolutions_short}} 体系结构文档。有关更多信息，请参阅[解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)。
+现在，用户文档的*参考*部分中提供了 {{site.data.keyword.vmwaresolutions_short}} 体系结构文档。有关更多信息，请参阅[解决方案概述](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)。
 
 ### 服务文档
 
@@ -89,15 +83,15 @@ lastupdated: "2018-06-22"
 
 有关更多信息，请参阅以下主题：
 
-* [订购 F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_ordering.html)
-* [订购 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_ordering.html)
-* [订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
-* [订购 Hytrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_ordering.html)
-* [订购 Hytrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_ordering.html)
-* [订购 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_ordering.html)
+* [订购 F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_ordering)
+* [订购 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_ordering)
+* [订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_ordering)
+* [订购 Hytrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_ordering)
+* [订购 Hytrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_ordering)
+* [订购 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_ordering)
 * [订购 KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_ordering.html)
-* [订购 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_ordering.html)
-* [订购 Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/zerto_ordering.html)
+* [订购 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
+* [订购 Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering)
 
 ## 用户界面更新和增强功能
 

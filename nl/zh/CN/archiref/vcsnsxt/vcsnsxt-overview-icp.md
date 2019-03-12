@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Private
+{: #vcsnsxt-overview-icp}
 
 {{site.data.keyword.icpfull_notm}} 是一种用于开发和管理容器化应用程序的应用程序平台。ICP 是一个集成环境，包含容器编排器 Kubernetes、专用映像存储库、管理控制台、监视框架和图形用户界面，该界面提供了一个集中位置来部署、管理、监视和扩展应用程序。
 
@@ -21,6 +22,7 @@ lastupdated: "2019-01-23"
 -	**使用 ELK 堆栈实现稳健的监视和日志记录** - {{site.data.keyword.cloud_notm}} Private 使用 Elasticsearch、Logstash、Filebeat 和 Heapster 来收集、存储和查询日志与度量值。此监视和日志记录过程为所有日志和度量值提供集中存储，并在访问和查询日志和度量值时提高性能和增加稳定性。
 
 ## IBM Cloud Private 组件
+{: #vcsnsxt-overview-icp-comp}
 
 {{site.data.keyword.cloud_notm}} Private 集群有四种主要的节点类：引导节点、主节点、工作程序节点和代理节点。您可以选择在集群中指定管理节点、漏洞顾问程序 (VA) 节点和 etcd 节点。
 -	**引导节点** - 引导节点用于运行安装、配置、节点扩展和集群更新。
@@ -32,11 +34,13 @@ lastupdated: "2019-01-23"
 -	**etcd 节点** - etcd 节点是可选节点，用于运行 etcd 分布式密钥值存储。
 
 ## IBM Cloud Private 联网
+{: #vcsnsxt-overview-icp-networking}
 
 使用 Calico 可方便地进行 {{site.data.keyword.icpfull_notm}} 网络管理。Calico 使用开放式系统互连 (OSI) 模型的第 3 层，即网络层。Calico 使用边界网关协议 (BGP) 来构建路由表，以便于代理程序节点之间进行通信。
 
-有关 Calico 联网的更多信息，请参阅 [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-iks.html)。
+有关 Calico 联网的更多信息，请参阅 [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks)。
 
-### 相关链接
+## 相关链接
+{: #vcsnsxt-overview-icp-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

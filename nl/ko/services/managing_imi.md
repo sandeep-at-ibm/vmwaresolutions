@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # IMI의 관리 서비스 요청
+{: #managing_imi}
 
 {{site.data.keyword.IBM}} Integrated Managed Infrastructure(IMI)는 모듈화 서비스로 VMware 가상 인프라 관리를 간소화할 수 있습니다. IMI는 고급 자동화 및 분석을 사용하여 전세계적으로 중요 인프라 컴포넌트를 관리하고 광범위한 일반 및 클라우드 가상 인프라에 대한 동적 원격 관리 서비스를 제공합니다.
 
@@ -17,6 +18,7 @@ IMI는 VMware Cloud Foundation 및 VMware vCenter Server 환경에 대해 하나
 IMI는 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스에 대한 관리 서비스를 제공합니다. 이러한 관리 서비스에는 고가용성 및 안전한 가상 네트워크 인프라를 보장하는 고급 VMware vSphere 관리, 전체 VMware NSX 범위와 데이터의 가용성을 보장하는 VMware vSAN 모니터링이 포함됩니다.
 
 ## IMI의 기술 스펙
+{: #technical-specifications}
 
 다음 스펙이 IMI 관리 서비스에 포함되어 있습니다.
 
@@ -27,6 +29,7 @@ IMI는 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스에 대한 �
 * 지속적 개선에 대한 비용 증가 없는 부가 가치 서비스
 
 ## IMI의 관리 서비스를 요청하는 프로시저
+{: #managing_imi-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **시작하기**를 클릭하십시오.
 2. 페이지를 아래로 스크롤하여 **추가 관리 서비스 주문** 아래에 있는 **IMI의 관리 서비스** 카드를 클릭하십시오.
@@ -34,8 +37,9 @@ IMI는 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스에 대한 �
 
 IMI 사전 영업 담당자가 {{site.data.keyword.cloud_notm}} 연락처 정보를 사용하여 연락을 드려서 필요한 서비스에 대한 지원을 제공합니다.
 
-### 관련 링크
+## 관련 링크
+{: #managing_imi-related}
 
-* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

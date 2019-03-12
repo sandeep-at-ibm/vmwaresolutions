@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 아키텍처 개요
+{: #vcsiks-arch-overview}
+
 {{site.data.keyword.vmwaresolutions_full}} 오퍼링은 VMware 기술 컴포넌트를 전세계에 있는
 {{site.data.keyword.CloudDataCents_notm}}에 배치하는 자동화 기능을 제공합니다. 이 아키텍처는 단일 클라우드 지역으로 구성되며 동일한 데이터 센터 내의 다른 지역 또는 다른 {{site.data.keyword.cloud_notm}} 팟(Pod)에 위치한 여러 클라우드 지역으로 확장하는 기능을 지원합니다.
 
@@ -30,6 +32,7 @@ IBM Multi-Cluster Manager는 클라우드 및 클러스터에서 사용자 가�
 Cloud Private 카탈로그에서 하이브리드 클라우드 서비스를 노출시킬 수 있습니다.
 
 ## IBM Cloud 측 클라우드 관리 플랫폼
+{: #vcsiks-arch-overview-ibm-cloud-side}
 
 다음 다이어그램은 {{site.data.keyword.cloud_notm}}에 배치된 온프레미스 vCenter 및 {{site.data.keyword.containerlong_notm}}
 서비스와의 연결을 통해 {{site.data.keyword.cloud_notm}} 인프라로 배치된 {{site.data.keyword.icpfull_notm}} 및 CAM을 표시합니다. 사용자는 가상 머신(VM)을 온프레미스에, VM을
@@ -49,9 +52,10 @@ NSX-V 또는 NSX-T 컴포넌트로 {{site.data.keyword.icpfull_notm}}를 배치�
 
 NSX-T를 사용하는 {{site.data.keyword.icpfull_notm}}의 경우 사용자가 중앙 UI(NSX-T 관리자)에서
 네트워킹, 서브넷, 정책을 제어하고 구성할 수 있습니다. NSX-V와 NSX-T 간의 차이점에 대한 정보는 [{{site.data.keyword.cloud_notm}} VCS 네트워킹 참조 아키텍처](/docs/services/vmwaresolutions/archiref/
-vcsnsxt/vcsnsxt-intro.html)를 참조하십시오. 
+vcsnsxt/vcsnsxt-intro.html)를 참조하십시오.
 
 ## 온프레미스 클라우드 관리 플랫폼
+{: #vcsiks-arch-overview-on-premises}
 
 다음 다이어그램은 {{site.data.keyword.cloud_notm}}에 배치된 vCenter 및 {{site.data.keyword.containerlong_notm}}에 연결하여
 온프레미스 인프라에 배치되는 {{site.data.keyword.icpfull_notm}} 및 CAM을 표시합니다. 사용자는 VM과 컨테이너를 온프레미스에,
@@ -69,6 +73,7 @@ strongSwan VPN은 배치된 {{site.data.keyword.containerlong_notm}} 컨테이�
 단일 관리 보기로 연결하기 위한 메커니즘을 제공하는 MCM을 사용하여 각각의 데이터 센터 또는 클라우드 환경에
 {{site.data.keyword.icpfull_notm}} 클러스터를 배치해야 합니다.
 
-### 관련 링크
+## 관련 링크
+{: #vcsiks-arch-overview-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

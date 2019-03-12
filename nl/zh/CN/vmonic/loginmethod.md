@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # 访问 IBM Cloud for VMware Solutions 控制台
+{: #loginmethod}
 
 查看 {{site.data.keyword.vmwaresolutions_full}} 控制台的入口点。
 
 ## 直接访问控制台
+{: #loginmethod-direct}
 
 要直接访问控制台，请完成以下步骤：
 1. 转至
@@ -20,6 +22,7 @@ lastupdated: "2019-01-23"
 2. 使用 **IBM 标识**帐户登录到控制台。
 
 ## 通过 IBM Cloud 目录访问
+{: #loginmethod-cloud-catalog}
 
 要在 {{site.data.keyword.cloud_notm}}“目录”中访问该控制台，请完成以下步骤：
 1. 转至 https://console.cloud.ibm.com。
@@ -29,6 +32,7 @@ lastupdated: "2019-01-23"
 5. 单击 **VMware Solutions** 卡。
 
 ## 通过 ibm.com Web 站点访问
+{: #loginmethod-ibm-website}
 
 要通过 ibm.com Web 站点访问该控制台，请完成以下步骤：
 1. 转至 http://www.ibm.com。
@@ -38,7 +42,8 @@ lastupdated: "2019-01-23"
 4. 在页面上向下滚动，然后单击 **VMware 云解决方案**。
 5. 在 **IBM Cloud for VMware Solutions** 页面上，向下滚动到 **VMware 解决方案版本**部分，然后单击**入门**。
 
-### 相关链接
+## 相关链接
+{: #loginmethod-related}
 
-* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [有关访问 {{site.data.keyword.cloud_notm}} 的故障诊断](/docs/account/ts_accessing.html){:new_window}
+* [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [{{site.data.keyword.cloud_notm}} 访问故障诊断](/docs/account?topic=account-accessing){:new_window}

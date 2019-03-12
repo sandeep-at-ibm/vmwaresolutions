@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 刪除 vCenter Server with Hybridity Bundle 實例
+{: #vc_hybrid_deletinginstance}
 
 若要釋出您在 VMware vCenter Server with Hybridity Bundle 實例中訂購的元件，請刪除該實例。
 
@@ -30,6 +31,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## 從已部署的實例頁面刪除實例的程序
+{: #vc_hybrid_deletinginstance-procedure1}
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
 2. 在 **vCenter Server 實例**表格中，尋找要刪除的實例。
@@ -40,6 +42,7 @@ lastupdated: "2019-01-23"
    2. 在**刪除實例**視窗中，按一下**確定**。
 
 ## 從實例詳細資料頁面刪除實例的程序
+{: #vc_hybrid_deletinginstance-procedure2}
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
 2. 在 **vCenter Server 實例**表格中，按一下要刪除的實例。
@@ -48,10 +51,11 @@ lastupdated: "2019-01-23"
    1. 再按一次 **vCenter 主控台**旁的溢位功能表圖示，然後按一下**刪除實例**。
    2. 在**刪除實例**視窗中，按一下**確定**。
 
-### 相關鏈結
+## 相關鏈結
+{: #vc_hybrid_deletinginstance-related}
 
-* [刪除多站台配置中的 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html)
-* [訂購 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [檢視 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [擴充及縮減 vCenter Server with Hybridity Bundle 實例的容量](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [刪除多站台配置中的 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance_multi)
+* [訂購 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [檢視 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [擴充及縮減 vCenter Server with Hybridity Bundle 實例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

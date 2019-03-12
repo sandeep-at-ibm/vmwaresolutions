@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-18"
 
 ---
 
 # 掃描及檢閱
+{: #vum-scanning}
 
 當您掃描主機、虛擬機器 (VM) 和虛擬應用裝置時，可以根據基準線及基準線群組來評估它們，以判斷其法規遵循層次。掃描庫存物件，並檢閱結果來判斷它們符合基準線及基準線群組的程度。可以依文字搜尋、群組選項、基準線選項及法規遵循狀態選項來過濾掃描結果。您可以起始下列掃描：
 *	**手動起始 vSphere ESXi 主機的掃描** - 您可以根據連接的基準線及基準線群組，來掃描 vSphere 庫存中的 vSphere ESXi 主機。
@@ -17,6 +18,7 @@ lastupdated: "2018-11-19"
 *	**排定掃描** - 您可以將 vSphere Web Client 配置為在特定時間或依您方便的時間間隔來掃描 VM、虛擬應用裝置及 ESXi 主機。
 
 ## 手動起始 vSphere ESXi 主機的掃描
+{: #vum-scanning-scan-hosts}
 
 1. 按一下**掃描更新**，選取**修補程式、延伸規格及升級**，然後按一下**確定**。
 2. 掃描完成時，請選取**重要主機修補程式**。在下方窗格中，按一下**修補程式數**中的數目，以檢閱每個主機的修補程式詳細資料。視窗會顯示修補程式資訊。
@@ -25,6 +27,7 @@ lastupdated: "2018-11-19"
   VUM 日誌檔位於下列路徑：_/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
 ## 手動起始虛擬機器及虛擬應用裝置的掃描
+{: #vum-scanning-scan-vm-va}
 
 您可以根據連接的基準線及基準線群組，來掃描 vSphere 庫存中的 VM 及虛擬應用裝置。視選取的選項而定，會針對連接的基準線掃描您所選取的 VM 及應用裝置。會掃描所有子物件，因此虛擬基礎架構越大，且您起始掃描的物件階層越高，掃描所需的時間就越長，而且法規遵循視圖就越精確。
 
@@ -33,7 +36,8 @@ lastupdated: "2018-11-19"
 3.	選取要掃描的更新類型。選項為_虛擬應用裝置升級、VM 硬體升級_ 及 _VMware Tools 升級_。
 4.	按一下**掃描**。
 
-##	手動起始容器物件的掃描
+## 手動起始容器物件的掃描
+{: #vum-scanning-scan-container}
 
 藉由掃描作為資料中心或資料中心資料夾的容器物件，來開始同時掃描主機、VM 及虛擬應用裝置。
 1.	使用 vSphere Web Client，選取**首頁** > **VM 及範本**。
@@ -41,7 +45,8 @@ lastupdated: "2018-11-19"
 3.	選取要掃描的更新類型。選項為_虛擬應用裝置升級、VM 硬體升級_ 及 _VMware Tools 升級_。
 4.	按一下**掃描**。
 
-##	排定掃描
+## 排定掃描
+{: #vum-scanning-schedule}
 
 您可以將 vSphere Web Client 配置為在特定時間或依您方便的時間間隔來掃描 VM、虛擬應用裝置及 vSphere ESXi 主機。
 
@@ -53,7 +58,8 @@ lastupdated: "2018-11-19"
 6.	輸入掃描作業的唯一名稱及選用的說明。按一下**變更**，以設定掃描作業的頻率及開始時間。按一下**確定**。
 7.	掃描作業會列在 vSphere Web Client 的「排定的作業」視圖中。
 
-### 相關鏈結
+## 相關鏈結
+{: #vum-scanning-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

@@ -68,4 +68,4 @@ L2 집선기 조작에 문제가 발생하는 경우는 거의 없습니다. CGW
 ## 관련 링크
 {: #vcshcx-troubleshooting-related}
 
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

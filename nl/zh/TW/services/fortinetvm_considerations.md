@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # FortiGate Virtual Appliance on IBM Cloud 概觀
+{: #fortinetvm_considerations}
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 FortiGate Virtual Appliance 部署到您的環境，以協助您在虛擬基礎架構內實作重要安全控制來降低風險。
 
@@ -22,30 +23,37 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 Fo
 {:note}
 
 ## FortiGate Virtual Appliance on IBM Cloud 的技術規格
+{: #technical-specifications-for-fortigate-virtual-appliance-on-ibm-cloud}
+
 
 下列元件已訂購並包括在 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務中：
 
 ### 虛擬機器
+{: #fortinetvm_considerations-specs-vms}
 
 * 所有選項都包括虛擬機器的高可用性 (HA) 配對。
 * 每部虛擬機器有 2、4 或 8 個 vCPU（視部署大小及訂閱類型而定）。
 * 每部虛擬機器有 4、6 或 12 GB RAM（視部署大小及訂閱類型而定）。
 
 ### 高可用性
+{: #fortinetvm_considerations-specs-ha}
 
 已部署並備妥兩部虛擬機器，用於進行 HA 或「虛擬路由器備援通訊協定 (VRRP)」配置。
 
 ### 網路
+{: #fortinetvm_considerations-specs-network}
 
 透過專用管理網路即可存取 FortiGate® 主控台。
 
 ### 授權及費用
+{: #fortinetvm_considerations-specs-license}
 
 每部虛擬機器的授權費用都會套用至每個計費週期，取決於選取的部署大小及每月訂閱授權模型。
 
 您無法在安裝服務之後變更授權層次。若要變更授權層次，您必須移除現有服務，然後使用不同的授權選項來重新安裝服務。{:important}
 
 ## 安裝 FortiGate Virtual Appliance on IBM Cloud 時的考量
+{: #fortinetvm_considerations-install}
 
 請先檢閱下列考量，再安裝 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務：
 * FortiGate 虛擬機器 (VM) 只會部署至預設叢集。
@@ -64,6 +72,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 Fo
   基於這些需求，您必須仔細規劃 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 所需的空間。必要的話，在訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 之前，請將 1-2 部 ESXi 伺服器新增至實例，以及（或）減少 vSphere HA CPU 保留以進行失效接手。
 
 ## FortiGate Virtual Appliance on IBM Cloud 訂購範例
+{: #fortinetvm_considerations-example}
 
 您使用下列配置來訂購具有 2 部 ESXi 伺服器的 VMware vCenter Server **小型**實例：16 個 2.10 GHz 的核心，各有 128 GB RAM。針對 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}，您為部署大小及任何訂閱授權模型選取**大型**（8 個 vCPU/12 GB RAM）。
 
@@ -86,14 +95,16 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 Fo
 如果需要額外的資源執行 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務，您可以先新增其他 ESXi 伺服器，再安裝服務。
 
 ## 移除 FortiGate Virtual Appliance on IBM Cloud 時的考量
+{: #fortinetvm_considerations-remove}
 
 在您移除 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務之前，請確定已正確地移除現有 FortiGate Virtual Appliance 的配置。具體而言，網路資料流量必須遞送至 FortiGate Virtual Appliance，而不是透過 FortiGate Virtual Appliance 遞送。否則，您環境內的現有資料流量可能會受到影響。
 
-### 相關鏈結
+## 相關鏈結
+{: #fortinetvm_considerations-related}
 
-* [訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
-* [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
-* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_ordering)
+* [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Fortinet 網站](https://www.fortinet.com/){:new_window}
 * [Fortinet 文件庫](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-17"
+lastupdated: "2019-02-15"
 
 ---
 # VMware HCX on IBM Cloud 简介
+{: #hcx-archi-intro}
 
 通过 VMware HCX on IBM Cloud 服务，可以在 IBM Cloud for VMware Solutions 实例与内部部署 VMware 虚拟化数据中心之间创建无缝连接。
 
@@ -31,6 +32,7 @@ VMware HCX on IBM Cloud 组件（在 IBM Cloud VMware 目标站点中部署为�
 * 安排的迁移 - 可以将任意数量的虚拟机复制到目标站点，然后在该站点上的指定时间激活，以替换在源站点上运行的系统。
 * 安全策略迁移 - 如果 NSX 是以内部部署方式使用的，那么任何安全策略或防火墙都会随工作负载一起移动。
 
-### 相关链接
+## 相关链接
+{: #hcx-archi-intro-related}
 
 * [IBM Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture)

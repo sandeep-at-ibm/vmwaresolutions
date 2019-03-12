@@ -157,7 +157,7 @@ NFS는 일반적으로 웹 서버 컨텐츠와 같이 여러 서버에서 데이
 - 네트워크에서 모든 워크로드를 내보내고 비VM 네트워크 디바이스가 다른 네트워크로 이동되었거나 기능적으로 클라우드에 마이그레이션되었거나 더 이상 사용되지 않는지 확인합니다.
 - 네트워크 전환을 지원하기 위해 NSX 토폴로지 또는 {{site.data.keyword.cloud_notm}} 지원 네트워크 토폴로지가 완료되었는지 확인합니다. 예를 들어 동적 라우팅 프로토콜과 방화벽이 있습니다.
 - UI에서 HCX 확장 해제 네트워크 플로우를 실행하고 확장 해제 네트워크 기본 게이트웨이를 인계할 적절한 라우팅 NSX 디바이스를 선택합니다.
-- 다음과 같은 외부 라우팅 변경을 실행합니다. 마이그레이션된 네트워크의 변경된 라우팅을 삽입하고, 소스 사이트에서 마이그레이션된 네트워크로의 라우트를 제거하고, 필요한 경우 마이그레이션되지 않은 애플리케이션용으로 WAN 전체에 마이그레이션된 서브넷으로 라우팅하게 합니다. 
+- 다음과 같은 외부 라우팅 변경을 실행합니다. 마이그레이션된 네트워크의 변경된 라우팅을 삽입하고, 소스 사이트에서 마이그레이션된 네트워크로의 라우트를 제거하고, 필요한 경우 마이그레이션되지 않은 애플리케이션용으로 WAN 전체에 마이그레이션된 서브넷으로 라우팅하게 합니다.
 - 애플리케이션 소유자가 가능한 모든 액세스 지점(인터넷, 인트라넷 및 VPN)에서 마이그레이션 애플리케이션을 테스트합니다.
 
 모든 VM이 완전히 클라우드로 마이그레이션된 특정 애플리케이션에서 네트워크 전환을 수행하기 위한 고려사항은 다음과 같습니다.
@@ -173,4 +173,4 @@ NFS는 일반적으로 웹 서버 컨텐츠와 같이 여러 서버에서 데이
 ## 관련 링크
 {: #vcshcx-stretching-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

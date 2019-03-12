@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # VMware HCX on IBM Cloud 포트 액세스 요구사항
+{: #hcx-archi-port-req}
 
 HCX는 공용 인터넷 및 사설 회선을 순회하고 네트워크, 스위치 및 포트 그룹과 같은 데이터 센터 컴포넌트에 연결해야 합니다.
 
@@ -39,6 +40,7 @@ HCX는 공용 인터넷 및 사설 회선을 순회하고 네트워크, 스위�
 | 클라우드 게이트웨이(로컬) |클라우드 게이트웨이</br>(원격) | 4500  | UDP | 양방향 터널의 워크로드를 캡슐화하는 인터넷 키 교환(IKEv2) | IPSEC |
 | 클라우드 게이트웨이(로컬) |클라우드 게이트웨이</br>(원격) | 500  | UDP | 양방향 터널의 내부 키 교환(ISAKMP) | IPSEC |
 
-### 관련 링크
+## 관련 링크
+{: #hcx-archi-port-req-related}
 
-* [소스에 HCX 설치 및 구성](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
+* [소스에 HCX 설치 및 구성](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)

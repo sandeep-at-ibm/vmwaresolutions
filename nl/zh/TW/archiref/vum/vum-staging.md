@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 編譯打包及補救
+{: #vum-staging}
 
 在補救之前可以選擇性地編譯打包修補程式及延伸規格，確保將它們從 VUM 下載至 vSphere ESXi 主機，而不需要立即套用修補程式或延伸規格。在補救期間，VUM 會將修補程式、延伸規格及升級套用至庫存物件。編譯打包修補程式及延伸規格可加快補救處理程序，因為已可以在主機上本端使用這些修補程式及延伸規格。
 
@@ -37,12 +38,14 @@ lastupdated: "2019-01-23"
 如果更新需要它，則主機會在補救之前進入維護模式。在將主機置入維護模式之前，VCSA 會將 VM 移轉至 VMware vCenter Server on {{site.data.keyword.cloud}} 實例內的其他主機。
 
 ## 若為 vSAN 叢集中的主機
+{: #vum-staging-hosts-vsan}
+
 針對屬於 vSAN 叢集的主機，請注意下列行為：
 * 主機補救處理程序可能需要相當長的時間才能完成。
 * 根據設計，VSAN 叢集裡一次只能有一部主機處於維護模式。
 * 即使您設定平行重新修補主機的選項，VUM 仍會循序重新修補屬於 VSAN 叢集的主機。
 * 主機上若有任何 VM 的 VM 儲存空間原則將**要容忍的失敗次數**設定為 0，則主機可能會在進入維護模式時遇到不尋常的延遲。發生此延遲是因為 vSAN 必須將 VM 資料從某個磁碟移轉至 vSAN 資料儲存庫叢集中的另一個磁碟，而這可能需要數小時之久。您可以針對 VM 儲存空間原則將**要容忍的失敗次數**設定為 1 來暫時解決此問題，這會導致在 vSAN 資料儲存庫中建立兩份 VM 檔案。
-* 主機上若有任何 VM 的 VM 儲存空間原則將**要容忍的失敗次數**設定 1，則 VM 會在主機進入維護模式時變成非備用。如果這是不可接受的，請參閱[虛擬機器 vSAN 備援](/docs/services/vmwaresolutions/archiref/vum/vum-vsan-redundancy.html)。
+* 主機上若有任何 VM 的 VM 儲存空間原則將**要容忍的失敗次數**設定 1，則 VM 會在主機進入維護模式時變成非備用。如果這是不可接受的，請參閱[虛擬機器 vSAN 備援](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-vsan-redundancy)。
 
 若要重新修補主機及叢集，請遵循下列步驟：
 1. 使用 vSphere Web Client，選取**首頁** > **主機及叢集**。
@@ -73,7 +76,8 @@ lastupdated: "2019-01-23"
 12. 在「準備完成」頁面上，您可以選擇按一下**事先檢查補救**來產生叢集補救選項報告，然後按一下**確定**。即會開啟「叢集補救選項報告」對話框。您可以匯出這份報告，或複製您自己記錄的項目，然後按**下一步**。
 13. 檢閱**準備完成**頁面，然後按一下**完成**。
 
-### 相關鏈結
+## 相關鏈結
+{: #vum-staging-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

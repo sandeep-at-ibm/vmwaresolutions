@@ -4,18 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # 向 vCenter 注册 HCX Manager
+{: #hcx-archi-reg-vcenter}
 
 在 VMware vSphere Web Client 中注册 Hybrid Cloud Services 插件，然后启动 Hybrid Cloud Services 管理服务。
 
 ## 开始之前
+{: #hcx-archi-reg-vcenter-prereq}
 
 Hybrid Cloud Services 虚拟设备的电源必须打开后才能进行注册。
 
 ## 向 vCenter 注册 HCX Manager 的过程
+{: #hcx-archi-reg-vcenter-proc-register}
 
 1. 登录到 Hybrid Cloud Services 服务虚拟设备。
 2. 单击**管理设置**磁贴。
@@ -35,9 +38,11 @@ Hybrid Cloud Services 虚拟设备的电源必须打开后才能进行注册。
 5. 要最终完成注册，请从 vSphere Web Client 注销。然后，重新登录以验证是否已执行屏幕更新。
 
 ## 结果
+{: #hcx-archi-reg-vcenter-results}
 
 请注意现有**混合云**图标和左侧的 **Hybrid Cloud Services** 菜单项。Hybrid Cloud Services 注册会更新这些标签。在清单中，图标标签会变为 **Hybrid Cloud Services**。
 
-### 相关链接
+## 相关链接
+{: #hcx-archi-reg-vcenter-related}
 
-* [安装和配置混合服务](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-hybrid.html)
+* [安装和配置混合服务](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-hybrid)

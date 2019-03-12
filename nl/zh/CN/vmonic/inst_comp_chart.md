@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # 产品比较图表
+{: #inst_comp_chart}
 
 查看以下图表，以了解 VMware Cloud Foundation 实例、VMware vCenter Server 实例、VMware vCenter Server with Hybridity Bundle 实例和 VMware vSphere 集群在功能支持方面的差异。
 
@@ -23,7 +24,7 @@ lastupdated: "2019-01-24"
 |云自动化多站点部署|支持在 V2.0 或更高版本中部署的新实例|支持在 V2.0 或更高版本中部署的新实例|支持|支持。不包含自动化配置|
 |添加 ESXi 服务器|支持|支持|支持|支持。不包含自动化配置|
 |除去 ESXi 服务器|支持|支持|支持|支持。不包含自动化配置|
-|多集群支持| 五个集群 | 十个集群 | 十个集群 |支持。不包含自动化配置|
+|多集群支持|五个集群|最大数量取决于 VMware 大小调整准则|最大数量取决于 VMware 大小调整准则|支持。不包含自动化配置|
 |客户机管理的 VMware 堆栈更新和修补|自动辅助更新：<br/>SDDC Manager|客户机管理的更新：<br/>本机 VMware Tools (VMware Update Manager)|客户机管理的更新：<br/>本机 VMware Tools (VMware Update Manager)|客户机管理的更新：<br/>本机 VMware Tools (VMware Update Manager)|
 |备份与复原|手动使用 IBM Spectrum Protect Plus 或 Veeam|手动使用 IBM Spectrum Protect Plus 或 Veeam|手动使用 IBM Spectrum Protect Plus 或 Veeam|不包含备份和复原解决方案|
 |软件定义的联网|NSX Enterprise|NSX Base、Advanced 或 Enterprise|NSX Advanced 或 Enterprise|NSX Standard、Base 或 Enterprise。不包含自动化配置|
@@ -34,18 +35,20 @@ lastupdated: "2019-01-24"
 |附加组件服务|支持，不包括 HCX on {{site.data.keyword.cloud_notm}}。|支持，不包括 HCX on {{site.data.keyword.cloud_notm}}。可升级到 vCenter Server with Hybridity Bundle。|支持，包括 HCX on {{site.data.keyword.cloud_notm}}。|此解决方案的自动化不支持，但您可以使用并安装自己的软件。|
 
 ## 注释
+{: #inst_comp_chart-notes}
 
 <sup>1</sup> 根据经过验证的设计并在部署期间进行过验证。
 
-<sup>2</sup> 可以将 vSAN 集群中的 ESXi 服务器数增大到最大值 64 个。有关更多信息，请参阅[关于 ESXi 服务器的常见问题](/docs/services/vmwaresolutions/vmonic/faq_esxi.html)中的_可以向集群添加多少个 ESXi 服务器？_。
+<sup>2</sup> 可以将 vSAN 集群中的 ESXi 服务器数增大到最大值 64 个。有关更多信息，请参阅[关于 ESXi 服务器的常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_esxi)中的_可以向集群添加多少个 ESXi 服务器？_。
 
-### 相关链接
+## 相关链接
+{: #inst_comp_chart-related}
 
-* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server Hybridity 概述](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [VMware vSphere 概述](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)
-* [Cloud Foundation BOM](/docs/services/vmwaresolutions/sddc/sd_bom.html)
-* [vCenter Server BOM](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
-* [VMware vSphere BOM](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [vCenter Server Hybridity 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [VMware vSphere 概述](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview)
+* [Cloud Foundation BOM](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
+* [vCenter Server BOM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
+* [VMware vSphere BOM](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_bom)

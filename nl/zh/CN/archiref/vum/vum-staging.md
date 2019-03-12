@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 编译打包和修复
+{: #vum-staging}
 
 可以选择在修复之前对补丁和扩展进行编译打包，以确保在未直接应用补丁或扩展的情况下，将其从 VUM 下载到 vSphere ESXi 主机。在修复期间，VUM 会将补丁、扩展和升级应用于库存对象。对补丁和扩展编译打包可加速修复过程，因为补丁和扩展已在主机上以本地方式提供。
 
@@ -35,12 +36,14 @@ lastupdated: "2019-01-23"
 如果更新需要，可在修复之前将主机置于维护模式。在将主机置于维护模式之前，VCSA 会将 VM 迁移到 VMware vCenter Server on {{site.data.keyword.cloud}} 实例内的其他主机。
 
 ## 对于 vSAN 集群中的主机
+{: #vum-staging-hosts-vsan}
+
 请注意属于 vSAN 集群的主机的以下行为：
 * 主机修复过程可能需要很长时间才能完成。
 * 根据设计，任一时间 vSAN 集群中只能有一台主机可以处于维护模式。
 * 对于属于 vSAN 集群的主机，即便设置了用于并行修复主机的选项，VUM 也会按顺序修复这些主机。
 * 如果主机上有任何 VM 使用的 VM 存储策略的**容错数**设置为 0，那么主机在进入维护模式时可能会遇到异常延迟。发生此延迟的原因是，vSAN 必须将 VM 数据从 vSAN 数据存储集群中的一个磁盘迁移到另一个磁盘，这可能需要许多个小时。对此，可采用的变通方法是将 VM 存储策略的**容错数**设置为 1，这将在 vSAN 数据存储中创建 VM 文件的两个副本。
-* 如果主机上有任何 VM 使用的 VM 存储策略的**容错数**设置为 1，那么主机在进入维护模式时，VM 会变为非冗余。如果这是不可接受的情况，请参阅[虚拟机 vSAN 冗余](/docs/services/vmwaresolutions/archiref/vum/vum-vsan-redundancy.html)。
+* 如果主机上有任何 VM 使用的 VM 存储策略的**容错数**设置为 1，那么主机在进入维护模式时，VM 会变为非冗余。如果这是不可接受的情况，请参阅[虚拟机 vSAN 冗余](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-vsan-redundancy)。
 
 要修复主机和集群，请执行以下步骤：
 1. 使用 vSphere Web Client，选择**主页** > **主机和集群**。
@@ -71,7 +74,8 @@ lastupdated: "2019-01-23"
 12. 在“即将完成”页面上，可以选择单击**预检查修复**以生成集群修复选项报告，然后单击**确定**。这将打开“集群修复选项报告”对话框。您可以导出此报告，也可以复制自己的记录的条目，然后单击**下一步**。
 13. 复查**即将完成**页面，然后单击**完成**。
 
-### 相关链接
+## 相关链接
+{: #vum-staging-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）

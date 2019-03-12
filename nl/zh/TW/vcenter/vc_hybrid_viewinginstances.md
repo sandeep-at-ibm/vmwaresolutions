@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 檢視 vCenter Server with Hybridity Bundle 實例
+{: #vc_hybrid_viewinginstances}
 
 檢視針對不同使用者帳戶佈建之 VMware vCenter Server with Hybridity Bundle 實例的摘要及詳細資訊。
 
 ## 檢視 vCenter Server with Hybridity Bundle 實例摘要的程序
+{: #vc_hybrid_viewinginstances-procedure-view-inst-summary}
 
 若要檢視針對使用者帳戶佈建之所有 vCenter Server with Hybridity Bundle 實例的摘要，請完成下列步驟：
 1. 在 {{site.data.keyword.vmwaresolutions_full}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
@@ -50,6 +52,7 @@ lastupdated: "2019-01-23"
 |已刪除|已刪除實例。|
 
 ## 檢視 vCenter Server with Hybridity Bundle 實例內容詳細資料的程序
+{: #vc_hybrid_viewinginstances-procedure-view-inst-property}
 
 若要檢視 vCenter Server with Hybridity Bundle 實例的內容詳細資料，請執行下列動作：
 1. 在 **vCenter Server 實例**表格中，按一下實例名稱。
@@ -73,6 +76,7 @@ lastupdated: "2019-01-23"
 |狀態|實例的狀態。<br><br>顯示的資訊會提供關於部署進度或對實例所採取動作的更新。如果發生問題，可能會顯示訊息，以協助您調查及解決問題。|
 
 ## 檢視 vCenter Server with Hybridity Bundle 實例存取資訊的程序
+{: #vc_hybrid_viewinginstances-procedure-view-access-info}
 
 在**存取資訊**下，檢視實例相關元件的存取資訊。顯示的密碼是系統產生的起始密碼。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更它們，則不會在實例摘要頁面上更新它們。
 
@@ -92,6 +96,7 @@ lastupdated: "2019-01-23"
 |vCenter SSH  |您可以用來透過 SSH 連線存取 vCenter Server VM 的使用者名稱及密碼。|
 
 ## 檢視 vCenter Server with Hybridity Bundle 實例部署歷程的程序
+{: #vc_hybrid_viewinginstances-procedure-view-deploy-history}
 
 按一下左導覽窗格中的**部署歷程**，以檢視該實例的部署歷程。
 
@@ -103,23 +108,26 @@ lastupdated: "2019-01-23"
 |摘要 |變更的詳細資料|
 
 ## 發生錯誤時要執行的作業
+{: #vc_hybrid_viewinginstances-if-errors-occur}
 
-如果在部署實例或刪除實例期間發生錯誤，則會自動通知「{{site.data.keyword.cloud_notm}} 支援中心」團隊。若要查詢問題單的狀態，您可以[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
+如果在部署實例或刪除實例期間發生錯誤，則會自動通知「{{site.data.keyword.cloud_notm}} 支援中心」團隊。若要查詢問題單的狀態，您可以[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
 
 ## 下一步
+{: #vc_hybrid_viewinginstances-next}
 
 從 {{site.data.keyword.vmwaresolutions_short}} 主控台或 VMware vSphere Web Client 管理實例。
 
 您必須先登入 {{site.data.keyword.CloudDataCent_notm}} 的 VPN 入口網站，才能在實例摘要頁面上按一下 **vCenter 主控台**，以移至 vSphere Web Client 並開始管理 ESXi 伺服器。將游標移至 **vCenter 主控台**按鈕上方，並遵循指示以確保您符合所有需求，並在存取 vSphere Web Client 之前完成必要的步驟。{:important}
 
 如需可協助您完成登入指示的資訊，請檢閱下列主題：
-*  如需存取 vSphere Web Client 之前的需求及必要步驟，請參閱[連接至 vSphere Web Client 時發生逾時](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html)。
+*  如需存取 vSphere Web Client 之前的需求及必要步驟，請參閱[連接至 vSphere Web Client 時發生逾時](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console)。
 *  如需使用 VPN 登入 {{site.data.keyword.cloud_notm}} 基礎架構「專用網路」的存取點清單，請參閱 [VPN 存取](http://www.softlayer.com/vpn-access){:new_window}。
-*  如果您在使用 vSphere Web Client 部署 OVF（開放式虛擬化格式）檔案時發生問題，請參閱[使用 vSphere Web Client 部署 OVF 檔案](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html)。
+*  如果您在使用 vSphere Web Client 部署 OVF（開放式虛擬化格式）檔案時發生問題，請參閱[使用 vSphere Web Client 部署 OVF 檔案](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf)。
 
-### 相關鏈結
+## 相關鏈結
+{: #vc_hybrid_viewinginstances-related}
 
-* [訂購 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [新增、檢視及刪除 vCenter Server with Hybridity Bundle 實例的叢集](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
-* [擴充及縮減 vCenter Server with Hybridity Bundle 實例的容量](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [刪除 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
+* [訂購 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [新增、檢視及刪除 vCenter Server with Hybridity Bundle 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
+* [擴充及縮減 vCenter Server with Hybridity Bundle 實例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [刪除 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)

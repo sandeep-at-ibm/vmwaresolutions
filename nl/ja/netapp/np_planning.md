@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # NetApp ONTAP Select インスタンスの要件と計画
+{: #np_planning}
 
 NetApp ONTAP Select インスタンスを注文する前に、以下の要件を確認してください。 {{site.data.keyword.CloudDataCent}}のロケーション、ワークロードのパフォーマンスとキャパシティーの要件に基づいて、インスタンスを計画してください。
 
 ## IBM Cloud アカウントの要件
+{: #np_planning-account-req}
 
-使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)を参照してください。
+使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)を参照してください。
 
 ## IBM Cloud データ・センターの使用可否
+{: #np_planning-dc-availability}
 
 NetApp ONTAP Select のデプロイメントには、物理インフラストラクチャーに関して厳密な要件があります。 そのため、要件を満たす {{site.data.keyword.CloudDataCents_notm}}にしかインスタンスはデプロイできません。 NetApp ONTAP Select のデプロイメントには、以下の {{site.data.keyword.CloudDataCents_notm}}を使用できます。
 
@@ -55,7 +58,8 @@ NetApp ONTAP Select のデプロイメントには、物理インフラストラ
 | WDC06 | ワシントン、DC | 北米東部 | ハイパフォーマンス (ミディアム)、ハイパフォーマンス (ラージ)、大容量
 | WDC07 | ワシントン、DC | 北米東部 | ハイパフォーマンス (ミディアム)、ハイパフォーマンス (ラージ)、大容量
 
-### 関連リンク
+## 関連リンク
+{: #np_planning-related}
 
-* [NetApp ONTAP Select の概要](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
-* [NetApp ONTAP Select インスタンスの注文](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [NetApp ONTAP Select の概要](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)
+* [NetApp ONTAP Select インスタンスの注文](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)

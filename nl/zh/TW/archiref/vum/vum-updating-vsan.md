@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # 更新 vSAN 叢集
+{: #vum-updating-vsan}
 
 vSAN 會產生系統基準線及基準線群組以與 VUM 搭配使用，您可以使用這些建議的基準線，在您的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 實例中使用 vSAN 來更新 vSphere ESXi 主機的軟體、修補程式及延伸規格。vSAN 6.6.1 以及更新版本會針對 vSAN 叢集產生自動化建置建議。vSAN 會結合《VMware 相容性手冊》及「vSAN 版本」型錄中的資訊與已安裝 vSphere ESXi 版本的相關資訊。
 
@@ -20,17 +21,18 @@ vSAN 會產生系統基準線及基準線群組以與 VUM 搭配使用，您可�
 vSAN 叢集升級會依下列作業序列執行：
 * **啟用 vSAN 線上性能工作流程** – 此工作流程會在 VUM 中啟用 vSAN 基準線，以檢閱及重新修補更新。一開始只需要執行它，即可使用 VUM 來啟用 vSAN
 * **必要條件** – 瞭解必要條件、處理程序及限制
-* **升級 vCenter Server Appliance**。如需相關資訊，請參閱 [VCSA 更新及 SSO 鏈結的 vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html)。
-* **升級 vSphere ESXi 主機** – 如需相關資訊，請參閱[建立基準線並連接至庫存物件](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html)。
+* **升級 vCenter Server Appliance**。如需相關資訊，請參閱 [VCSA 更新及 SSO 鏈結的 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)。
+* **升級 vSphere ESXi 主機** – 如需相關資訊，請參閱[建立基準線並連接至庫存物件](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines)。
 * **升級 vSAN 磁碟格式** - 請參閱「升級 vSAN 磁碟格式」。升級磁碟格式是選用作業，但若要獲得最佳的結果，請升級物件以使用最新版本。磁碟內存格式會向完整 vSAN 特性集公開您的環境。
 
 ## 啟用 vSAN 線上性能工作流程
+{: #vum-updating-vsan-enable-vsan-workflow}
 
 使用下節中的作業，讓 vSAN 基準線可在 VUM 中使用。vSAN 6.6.1 以及更新版本會提供無縫自動更新處理程序，以確保 vSAN 叢集保持最新的可用版本，讓 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 實例維持在受支援狀態下，並提供：
 * **vSAN 版本建議** - 使用《VMware 相容性手冊》、「vSAN 版本型錄」及基礎硬體配置狀態提示中的資訊自動產生。這也包括其系統基準線中建議版本的必要驅動程式及修補程式更新。
 * **vSAN 建置建議** - 確保叢集維持現行硬體相容性狀態或更好的狀態。
 
-確定 VCSA 是 vCenter 6.5 Patch 2 或更新版本，再繼續執行，因為這會修正一些 Proxy 使用問題。如需相關資訊，請參閱 [VCSA 更新及 SSO 鏈結的 vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html)。
+確定 VCSA 是 vCenter 6.5 Patch 2 或更新版本，再繼續執行，因為這會修正一些 Proxy 使用問題。如需相關資訊，請參閱 [VCSA 更新及 SSO 鏈結的 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)。
 
 若要查看 VUM 中的 vSAN 更新，請遵循 vSAN 線上性能工作流程。因此，「vSAN 線上性能」需要連接至 `vcsa.vmware.com` 和 `vmware.com` 站台，才能執行這些線上性能檢查。為了啟用「vSAN 線上性能工作流程」，我們需要：
 * 配置 VCSA 來使用 Proxy。
@@ -41,6 +43,7 @@ vSAN 叢集升級會依下列作業序列執行：
 首要步驟是將 my.vmware.com 認證新增至「vSAN 建置建議引擎」。成功登入之後，vSAN 會針對每個 vSAN 叢集產生建議更新的基準線群組。vSAN 系統基準線會列在「基準線」及「群組」標籤的「基準線」窗格中。
 
 ### 配置 VCSA 來使用 Proxy
+{: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	從跳躍伺服器 Web 瀏覽器中，連接至「VCSA 管理介面」`https://<vCenter ip>:5480`
 2.	使用「IC4VS 主控台」中的認證，以 root 身分登入「VCSA 管理介面」。
@@ -53,14 +56,19 @@ vSAN 叢集升級會依下列作業序列執行：
 如果未設定 HTTPS 參數，則請使用下列指令：`proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
 
 ### 配置 vSAN 來使用 Proxy
+{: #vum-updating-vsan-config-vsan-proxy}
+
 1. 導覽至**首頁** > **主機及叢集**，選取「導覽」窗格中的 **vSAN 叢集**，然後選取**配置**標籤並導覽至 **vSAN**，再選取**一般**。捲動至**網際網路連線功能**區段，然後按一下**編輯**。
 2. 輸入 Proxy 的 IP 位址及埠號，然後按一下**確定**。
 
 ### 啟用客戶體驗改進計畫 (CEIP)
+{: #vum-updating-vsan-enable-ceip}
 
 這是選用步驟。使用 vSphere Web Client，導覽至**首頁** > **管理** > **客戶體驗改進計畫**，然後按一下**加入**。
 
 ### 完成測試上傳，並驗證上傳已作用
+{: #vum-updating-vsan-complete-upload}
+
 1. 使用 vSphere Web Client，導覽至**首頁** > **主機及叢集**。選取必要的叢集，並選取**監視**標籤及 **vSAN** 頁面，然後按一下**性能**。按一下**啟用線上性能**。
 2. 按一下**重新測試**，並等待處理程序完成。
 3. 新的檢查會出現在稱為 _Online health connectivity_ 的「性能」中，而且**啟用線上性能**會變更為**使用線上性能重新測試**。
@@ -70,6 +78,7 @@ vSAN 叢集升級會依下列作業序列執行：
 7. 按 **Update Manager** 標籤，而且「vSAN 叢集」會新增至「基準線」。
 
 ## 必要條件
+{: #vum-updating-vsan-prereq}
 
 啟動 vSAN 升級處理程序之前，請確定滿足下列需求：
 * 檢閱 VMware 知識庫文章，並檢閱現行 vSAN 版本與所需目標 vSAN 版本之間的任何已知相容性問題
@@ -92,14 +101,17 @@ vSAN 叢集升級會依下列作業序列執行：
   - 因此，某些 vSAN 行為變更是由磁碟內存格式所控制。重要的是，較新的磁碟內存格式版本並不會引入混合版本的叢集。
 
 ## 升級 vCenter Server Appliance
+{: #vum-updating-vsan-upgrade-vcsa}
 
-如需相關資訊，請參閱 [VCSA 更新及 SSO 鏈結的 vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html)。
+如需相關資訊，請參閱 [VCSA 更新及 SSO 鏈結的 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)。
 
-##	升級 vSphere ESXi 主機
+## 升級 vSphere ESXi 主機
+{: #vum-updating-vsan-upgrade-hosts}
 
-如需相關資訊，請參閱[建立基準線並連接至庫存物件](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html)。
+如需相關資訊，請參閱[建立基準線並連接至庫存物件](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines)。
 
-##	升級 vSAN 磁碟格式
+## 升級 vSAN 磁碟格式
+{: #vum-updating-vsan-upgrade-vsan}
 
 「Ruby vSphere 主控台 (RVC)」是 vSphere 的 Ruby 型指令行介面，可以用來管理 VMware vSphere ESXi 及 vCenter。vSphere 庫存會以樹狀結構呈現，可讓您針對 vCenter 物件導覽及執行指令。
 
@@ -132,7 +144,8 @@ vSAN 叢集升級會依下列作業序列執行：
 
 11. VSAN 叢集升級現在已完成。鍵入 `exit` 並按 **Enter** 鍵，以離開 RVC。
 
-### 相關鏈結
+## 相關鏈結
+{: #vum-updating-vsan-related}
 
 * [VMware HCX on IBM Cloud 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

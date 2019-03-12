@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,14 +13,17 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # 管理 Zerto on IBM Cloud
+{: #managingzertodr}
 
 Zerto on {{site.data.keyword.cloud}} 服务部署到实例后，可以配置或更新 Zerto Virtual Replication，并将更多的 Virtual Replication 设备部署到新添加的 ESXi 服务器。
 
 ## 使用您自己的 Zerto 证书
+{: #managingzertodr-ssl-cert}
 
 作为最佳实践，请对 Zerto Virtual Manager (ZVM) 使用您自己的 SSL 证书。部署了 Zerto on {{site.data.keyword.cloud_notm}} 后，请将 ZVM 的 SSL 证书替换为您自己的证书。有关更多信息，请参阅[如何使用 CER SSL 证书来替换 ZVM、ZSSP 或 ZCM 的自签名证书](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window}。
 
 ## 管理 Zerto 复制的配置
+{: #managingzertodr-manage}
 
 要管理 Zerto 复制的配置，请使用具有管理员许可权的 vCenter 凭证登录到 Zerto Virtual Replication 控制台。例如，重新配对 Zerto 实例或配置虚拟保护组以复制虚拟机。
 
@@ -32,17 +35,20 @@ Zerto 复制不支持网络地址转换 (NAT) 遍历。在 {{site.data.keyword.c
 {:note}
 
 ## 更新 Zerto Virtual Replication
+{: #managingzertodr-update}
 
 要更新 Zerto Virtual Replication，请登录到 Zerto Virtual Replication 控制台。
 
 ## 将 VRA 部署到新添加的 ESXi 服务器
+{: #managingzertodr-deploy}
 
 为实例的主集群添加或除去 ESXi 服务器时，将自动部署或除去 VRA。VRA 不会自动部署到实例的辅助集群中的 ESXi 服务器。您可以自行在 Zerto Virtual Replication 控制台中部署这些 VRA。
 
-### 相关链接
+## 相关链接
+{: #managingzertodr-related}
 
-* [Zerto on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/addingzertodr.html)
-* [请求 Zerto on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
+* [请求 Zerto on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [zerto.com Web 站点](https://www.zerto.com){:new_window}
 * [Zerto 技术文档](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
 * [Zerto 灾难恢复](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}

@@ -4,26 +4,30 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
 {:faq: data-hd-content-type='faq'}
 
 # Cloud Foundation 实例的联网注意事项
+{: #sd_networkingoncloudfoundation}
 
 请查看以下信息，以获取有关 Cloud Foundation 实例的联网注意事项和需求的详细信息。确保满足这些需求，以便实例能正常运行。
 
 ## Cloud Foundation 实例的联网组件
+{: #sd_networkingoncloudfoundation-networking-components}
 {: faq}
 
-要查看 Cloud Foundation 实例中包含的联网组件，请参阅 [Cloud Foundation 实例的技术规范](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)。
+要查看 Cloud Foundation 实例中包含的联网组件，请参阅 [Cloud Foundation 实例的技术规范](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances)。
 
 ## 防火墙注意事项
+{: #sd_networkingoncloudfoundation-firewall-considerations}
 
 如果在使用防火墙，那么必须针对来自 {{site.data.keyword.IBM}} CloudDriver 虚拟服务器实例 (VSI) 和 SDDC Manager 虚拟机 (VM) 的所有通信配置规则。这些规则必须允许所有协议在 IP 地址 `10.0.0.0/8` 和 `161.26.0.0/16` 上进行通信。此类防火墙的示例为 NSX 分布式防火墙 (DFW) 或 Vyatta 防火墙。
 
 ## 将 VMware NSX 用于 VM
+{: #sd_networkingoncloudfoundation-using-nsx-with-vm}
 
 在 Cloud Foundation 实例部署期间，将在该实例中订购、安装、许可和配置 VMware NSX。此外，还会设置 NSX Manager、NSX Controller 和 NSX 传输区域，并且每个 ESXi 服务器都会配置有 NSX 组件。
 
@@ -34,13 +38,15 @@ lastupdated: "2019-01-25"
 * 有关多站点 Cloud Foundation 实例的信息，请参阅[安全连接 {{site.data.keyword.cloud_notm}} 中的专用 VMware 工作负载](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}。
 
 ## 更改 NSX 组件密码时的注意事项
+{: #sd_networkingoncloudfoundation-considerations-when-change-nsx-component-password}
 
 在更改 NSX Manager、NSX Controller 和 NSX Edge 的密码之前，请查看以下注意事项：
 * 不要更改 NSX Manager 密码。可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台中实例的**摘要**页面上找到此密码。
 * 可以更改 NSX Controller 的密码。有关如何更改 NSX Controller 密码的指示信息，请参阅[更改控制器密码](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html)。
 * 不要更改管理 VMware NSX Edge 服务网关 (ESG) 的密码。
 
-### 相关链接
+## 相关链接
+{: #sd_networkingoncloudfoundation-related}
 
 * [NSX 概述](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}
 * [NSX Edge 服务网关](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

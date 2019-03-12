@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,13 +13,15 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server インスタンスからの Hybridity Bundle の削除
+{: #vc_hybrid_deletingbundle}
 
 vCenter Server インスタンスから Hybridity Bundle ライセンスを削除するには、VMware NSX および VMware vSAN のレンタル・ライセンス・キーを VMware vSphere Web Client のライセンス持ち込み (BYOL) キーに置き換える必要があります。 さらに、レンタル・ライセンスの料金を取り消すために、サポート・チケットを開く必要があります。
 
-ライセンスをダウングレードすると、vCenter Server インスタンスに障害が起こる可能性があります。 自己責任でのライセンスのダウングレードを選択することもできますが、ダウングレード時に利用できなくなる機能についてまず考慮する必要があります。 詳しくは、[VMware コンポーネント・エディションの比較チャート](/docs/services/vmwaresolutions/archiref/solution/appendix.html)を参照してください。
+ライセンスをダウングレードすると、vCenter Server インスタンスに障害が起こる可能性があります。 自己責任でのライセンスのダウングレードを選択することもできますが、ダウングレード時に利用できなくなる機能についてまず考慮する必要があります。 詳しくは、[VMware コンポーネント・エディションの比較チャート](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix)を参照してください。
 {:important}
 
 ## Hybridity Bundle をマルチサイト環境から削除する前の重要な考慮事項
+{: #vc_hybrid_deletingbundle-considerations}
 
 Hybridity Bundle をマルチサイト環境から削除する前に、以下の考慮事項を確認してください。
 
@@ -31,6 +33,7 @@ Hybridity Bundle をマルチサイト環境から削除する前に、以下の
 {:note}
 
 ## Hybridity Bundle を削除する前に
+{: #vc_hybrid_deletingbundle-prereq}
 
 Hybridity Bundle を削除する前に、以下の要件を確認してください。
 
@@ -41,6 +44,7 @@ Hybridity Bundle を削除する前に、以下の要件を確認してくださ
 * (オプション) VMware vCenter Server および VMware vSphere Enterprise Plus のライセンスに適用する BYOL キーがある (まだ適用していない場合)。
 
 ## Hybridity Bundle を削除する手順
+{: #vc_hybrid_deletingbundle-procedure}
 
 1. Hybridity Bundle を削除する VMware vSphere Web Client に、**管理者**としてログインします。
 2. **「ホーム」>「管理」>「ライセンス」>「ライセンス」**をクリックします。
@@ -106,8 +110,9 @@ Hybridity Bundle を削除する前に、以下の要件を確認してくださ
   IBM サポートおよびオペレーション・チームが、{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントの vCenter 管理レイヤーにアクセスし、レンタル・ライセンスが削除されたことを確認してから、Hybridity Bundle レンタル・ライセンス料金を取り消します。
   {:note}
 
-### 関連リンク
+## 関連リンク
+{: #vc_hybrid_deletingbundle-related}
 
-* [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [vCenter Server with Hybridity Bundle インスタンスの表示](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [vCenter Server with Hybridity Bundle インスタンスの表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

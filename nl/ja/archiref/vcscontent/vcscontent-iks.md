@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Kubernetes Service による真のハイブリッド
+{: #vcscontent-iks}
 
 Jane のテスト・チームが拡大するにつれて、アプリケーションの主要な部分を実行しつつも Jane の環境内のデータを使用するテスト環境を提供したいと考えています。 Jane は、自分のテスト・チームが Kubernetes クラスターの管理ではなくアプリケーションのテストに集中できるようにしたいと考えます。 Jane と Todd は [{{site.data.keyword.cloud}} Kubernetes
 Service](https://www.ibm.com/cloud/container-service) インスタンスを立ち上げることを決定し、Jane はコードを変更することなく、そこに Stock Trader をデプロイすることにします。
@@ -20,5 +21,6 @@ Service](https://www.ibm.com/cloud/container-service) インスタンスを立�
 ![真のハイブリッド・アプリケーションとしての Stock Trader](vcscontent-truehybrid.svg)
 
 ## 関連リンク
+{: #vcscontent-iks-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

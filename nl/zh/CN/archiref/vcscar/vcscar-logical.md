@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Skate Advisor 逻辑设计
+{: #vcscar-logical}
 
 以下信息详细说明了构成系统逻辑设计的应用程序元素。
 
 ## 系统组件
+{: #vcscar-logical-sys-comp}
 
 图 1. Skate Advisor 组件
 ![Skate Advisor 组件](vcscar-components.svg)
@@ -20,6 +22,7 @@ lastupdated: "2019-01-23"
 Skate Advisor 主要包含一个聊天机器人，它可接受文本或语音识别，以结构化的方式与系统进行交互。
 
 ## 技巧
+{: #vcscar-logical-tricks}
 
 Skate Advisor 的核心数据元素是技巧。技巧语言唯一地定义了技巧。此语言可用于完成以下任务：
 - 与聊天机器人就技巧进行交谈。
@@ -28,14 +31,17 @@ Skate Advisor 的核心数据元素是技巧。技巧语言唯一地定义了技
 - 识别适用于位置和媒体播放的技巧。
 
 ### 技巧定义
+{: #vcscar-logical-trick-def}
 
 技巧通过描述该技巧的语言构造唯一地定义。请参阅“技巧规则引擎”以获取完整定义。
 
 ### 技巧列表
+{: #vcscar-logical-list-tricks}
 
 通过查询语言元素中定义的“基本”技巧或“着地”，可返回技巧列表。
 
 ### 技巧数据
+{: #vcscar-logical-trick-data}
 
 返回的技巧可能包含以下信息：
 - 技巧描述
@@ -43,6 +49,7 @@ Skate Advisor 的核心数据元素是技巧。技巧语言唯一地定义了技
 - 位置信息
 
 ## 对话流
+{: #vcscar-logical-conv-streams}
 
 聊天机器人有数量有限的预定义的可能对话。对话由以下信息进行定义：
 - 技巧查找：查找基于查询参数（表示“基本”技巧或“着地”）的一组有效技巧。
@@ -58,8 +65,10 @@ Skate Advisor 的核心数据元素是技巧。技巧语言唯一地定义了技
 媒体显示|显示技巧视频|媒体结果列表
 
 ## 用户界面组件
+{: #vcscar-logical-ui-comp}
 
 ### 聊天机器人
+{: #vcscar-logical-chatbot}
 
 聊天机器人是用于与用户对话的 Web 组件。聊天机器人可以接受文本或语音。结果（如列表）以文本形式呈现，并可能附带语音用于陈述结果。
 
@@ -76,7 +85,7 @@ Skate Advisor 的核心数据元素是技巧。技巧语言唯一地定义了技
 2|聊天机器人将语音发送给 Speech to Text 服务。
 3|Speech to Text 服务将文本发送给聊天机器人。
 4|聊天机器人向 Skate Advisor 发送文本查询。
-5|Skate Advisor 评估请求并发送给 Watson Assistant。
+ 5 |Skate Advisor 评估请求并发送给 Watson Assistant。
 6|Watson Assistant 对请求分类，并向 Skate Advisor 回复要执行的操作。
 7|Skate Advisor 从 Discovery 服务请求数据集。
 8|Discovery 服务评估查询并发送响应。
@@ -85,18 +94,21 @@ Skate Advisor 的核心数据元素是技巧。技巧语言唯一地定义了技
 11|结果通过聊天机器人发送给用户。
 
 ### 视频呈现
+{: #vcscar-logical-video-render}
 
 视频呈现组件会播放视频或显示文档。这些工件代表了从中发现技巧的源工件。
 
 视频呈现组件是 Web 界面中用于显示视频的嵌入式窗口小部件。视频在聊天机器人中会显示为系统用户查询的结果。选择生成的视频链接会触发视频呈现。
 
 ### 位置界面
+{: #vcscar-logical-location-interface}
 
 Skate Advisor 包含一个界面，供系统用户记录练习特定技巧的位置。该 Web 界面组件有两个主要元素：
 1. 接受来自系统用户的位置，作为练习特定技巧的最佳位置。
 2. 显示建议用于练习特定技巧的一个或多个位置。
 
 ## Watson 组件
+{: #vcscar-logical-watson-comp}
 
 此体系结构中包含以下 Watson 组件。
 * Knowledge Studio - Watson Studio 是一个工具，我们可将其用于为系统设计滑板语言，并使用这种语言识别 Web 中实现滑板语言的文档。Knowledge Studio 提供了模型以供 Watson Discovery 使用。
@@ -106,6 +118,7 @@ Skate Advisor 包含一个界面，供系统用户记录练习特定技巧的位
 * Watson Assistant - Watson Assistant 是一个工具，用于设计用户与机器（聊天机器人）之间的交互。此工具必须使用特定于领域的语言（例如，滑板运动）进行训练，并采用 Assistant 可识别并构建相应响应的一系列语法。
 
 ## Skate Advisor 服务
+{: #vcscar-logical-skate-advisor-services}
 
 Skate Advisor 服务是一个应用程序组件，提供用于呈现请求的一组 API 服务。公开的服务与先前描述的对话流有直接的关联。公开的 API 具有以下常规类别：
 * get_tricks - 基于采用自然语言的 <query\> 返回技巧列表，此列表会提供给 Discovery 服务。
@@ -114,6 +127,7 @@ Skate Advisor 服务是一个应用程序组件，提供用于呈现请求的一
 * accept_command - 接受来自聊天机器人的文本命令，并为请求提供服务。
 
 ## Discovery 服务训练
+{: #vcscar-logical-disc-service-training}
 
 Watson Discovery 必须通过机器学习模型进行训练，该模型是由主题专家使用 Watson Knowledge Studio 以迭代方式创建的。
 
@@ -127,6 +141,7 @@ Watson Discovery 必须通过机器学习模型进行训练，该模型是由主
 - 显示所有技巧。
 - 显示包含多个组合的所有技巧。
 
-### 相关链接
+## 相关链接
+{: #vcscar-logical-related}
 
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

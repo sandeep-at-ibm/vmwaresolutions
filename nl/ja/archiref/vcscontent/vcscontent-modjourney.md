@@ -4,23 +4,27 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # モダナイゼーション・ジャーニー
+{: #vcscontent-modjourney}
 
 これは、{{site.data.keyword.cloud}} Private、IBM Middleware コンテンツ、{{site.data.keyword.containerlong_notm}}、および VMware vCenter Server on {{site.data.keyword.cloud_notm}} を使用して従来の WebSphere Application Server アプリケーションをモダナイズする方法を示す参考用のユース・ケースです。
 
 ## モダナイゼーションはアプリケーションだけの話ではない
+{: #vcscontent-modjourney-modernization}
 
 だれもがクラウド・ジャーニーの途上にいますが、ジャーニーのどの段階にいるかは人それぞれです。 このユース・ケースでは、アプリケーション設計者 Jane とクラウド・インフラストラクチャー設計者 Todd が段階的に手順を踏んで、Stock Trader という既存のアプリケーションをモダナイズしていく方法に焦点を当てています。 このユース・ケースでは、ジャーニーで各段階を進むときに参考になる例、および各段階の規模に関係なくビジネスに実現される価値を示します。
 
 このジャーニーで最も注目すべき点は、Stock Trader アプリケーションのモダナイズ方法です。 ビジネスを完全にモダナイズしてクラウド・ネイティブのビジネスにするには、アプリケーション、DevOps、統合、および管理というすべてのテーマについて検討する必要があります。 すべてのテーマが組み合わさって目標の実現を可能にします。 他を残して 1 つのテーマだけをモダナイズしてもうまくいかない可能性があります。
 
 ## モダナイズが必要な理由
+{: #vcscontent-modjourney-reasons}
 
 ### アプリケーションのモダナイゼーション
+{: #vcscontent-modjourney-app-mod}
 
 目的は、需要の急速な変化に反応して規模を拡大縮小できるクラウド・ネイティブのアプリケーションにすることです。
 
@@ -28,6 +32,7 @@ lastupdated: "2019-01-23"
 * スケーラブルで、世界中に到達可能で、需要に応じた調整、変化、拡張や迅速な方針転換が可能なアプリが必要です。
 
 ### DevOps のモダナイゼーション
+{: #vcscontent-modjourney-devops-mod}
 
 アプリケーションをモダナイズする工程の中で、そのアプリケーションの提供方法、すなわちデリバリー・パイプライン全体がモダナイズされるので、開発者が新たに築くクラウド・ネイティブのカルチャーを、アプリの提供方法に段階的に組み込んでいくことができます。
 
@@ -35,6 +40,7 @@ lastupdated: "2019-01-23"
 * スケーラブルで、世界中に到達可能で、需要に応じた調整、変化、拡張や迅速な方針転換が可能な DevOps チームが必要です。
 
 ###  統合のモダナイゼーション
+{: #vcscontent-modjourney-integration-mod}
 
 モダナイゼーション・ジャーニーの最初から最後まで、チームは既存の資産を新しいクラウド・サービス、データ、そしてそのデータの分析から得られる新しい洞察と統合する必要があります。
 
@@ -43,6 +49,7 @@ lastupdated: "2019-01-23"
 * データと、分析をそのデータに適用して得られる洞察を統合する必要があります。
 
 ### 管理
+{: #vcscontent-modjourney-mgmt}
 
 管理業務のモダナイズも、アプリケーションのモダナイズと並行して行われるもう 1 つのジャーニーです。 モダナイズしたアプリケーションの管理や保守に使用されるツール、カルチャー、中心的な特性は従来のものとはかなり異なっています。
 
@@ -51,12 +58,14 @@ lastupdated: "2019-01-23"
 * 複数のクラウドと、クラウドで実行されるアプリケーションやミドルウェアを管理する方法を自動化する必要があります。
 
 ## Todd および Jane の紹介
+{: #vcscontent-modjourney-todd-jane}
 
 この Stock Trader のジャーニーでは、Todd と Jane という 2 人の登場人物に焦点を当てます。 Todd は ACME 社の運用責任者であり、インフラストラクチャー、セキュリティー、クラウド環境、およびそれらの中で実行されるワークロードをさまざまな規制に準拠させるためのポリシーを管理しています。
 
 Jane は Stock Trader ソリューションの開発責任者であり、現在は Stock Trader をモダナイズしています。つまり、既存のモノリシックな Stock Trader ソリューションを、安定したクラウド・ネイティブ・ソリューションにモダナイズするために、複数の開発チームを率いて開発ツール、カルチャー、プラットフォームを変更します。
 
 ## Stock Trader の紹介
+{: #vcscontent-modjourney-meet-stock-trader}
 
 Todd と Jane は、WebSphere で実行する Stock Trader というアプリケーションを構築しました。 基本的なユーザー・インターフェースを備えただけのものですが、株式の売買や内部ロイヤルティー・レベルの表示などのポートフォリオ管理のために資産管理者が使用する安定したアプリケーションです。
 
@@ -65,6 +74,7 @@ WebSphere で実行する Stock Trader は、少ない数の .war ファイル�
 Stock Trader に問題はないのですが、会社のだれもが何かしらの改善を望んでいました。 プロダクト・マネージャーはロイヤルティー・プログラムにソーシャル・メディアを追加したいと考えています。 Jane は、アプリをマイクロサービスにリファクタリングできるので、依存関係が減って拡張機能の継続的デリバリーが可能になると喜んでいます。 Todd はクラウドで効率を向上するという考えを気に入っていますが、企業ポリシーのコンプライアンスを維持するためにはやはりガバナンスが必要です。
 
 ## ジャーニーの各段階
+{: #vcscontent-modjourney-steps}
 
 Todd と Jane は、ソリューションのモダナイズ・ジャーニーを成功させるには、まずはロードマップが必要であるということを経験から知っています。 計画が変わっても、先の見通しについて熟考し、目的を達成するための現実的な道筋を描くことが常に必要です。 すべての段階が会社に価値をもたらすものでなければならず、クライアントに大きな損害を与えるようなものであってはなりません。
 
@@ -83,6 +93,7 @@ Todd と Jane は、Stock Trader のジャーニーとして次の段階を踏�
 
 7. 管理をモダナイズします。 Todd と Jane は協力して、Stock Trader 自体と、クラスター環境やクラウド環境さえいくつもまたいだ Stock Trader の実行プラットフォームの管理方法を改善しました。
 
-### 関連リンク
+## 関連リンク
+{: #vcscontent-modjourney-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

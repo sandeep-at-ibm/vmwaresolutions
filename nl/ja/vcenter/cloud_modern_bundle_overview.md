@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Single-node Trial for Migration and App Modernization の概要
+{: #single-node-trial-for-migration-and-app-modernization-overview}
 
 Single-node Trial for Migration and App Modernization では、VMware ワークロードを IBM Cloud にマイグレーションしてから、コンテナーを使用して単純なワークロードをモダナイズする、という IBM Cloud のテスト・ドライブを行うことができます。
 
@@ -29,6 +30,7 @@ Single-node Trial インスタンスを最大限に利用するには、[IBM Ana
 {:note}
 
 ## Single-node Trial for Migration and App Modernization インスタンスの技術仕様
+{: #cloud_modern_bundle_overview-tech-specs}
 
 Single-node Trial for Migration and App Modernization インスタンスには以下のコンポーネントが含まれています。
 
@@ -36,26 +38,31 @@ Single-node Trial for Migration and App Modernization インスタンスには�
 {:note}
 
 ### ベア・メタル・サーバー
+{: #cloud_modern_bundle_overview-bare-metal}
 
 Dual Intel Xeon Gold 5120 プロセッサー / 合計 28 コア、2.2 GHz、384 GB RAM (VM は最大約 20 台)
 
 #### CPU オーバーコミット
+{: #cloud_modern_bundle_overview-cpu}
 
 * vCenter Server 管理、HCX、およびカスタマー・ワークロード VM 20 台用に 16:1 CPU オーバーコミット
 * IBM Cloud Private 用に 11:1 CPU オーバーコミット
 
 #### RAM オーバーコミット
+{: #cloud_modern_bundle_overview-ram}
 
 * ワークロード VM 20 台 (8 GB/VM) のカスタマー・デプロイメントの場合は 1.22:1 RAM オーバーコミット
 * ワークロード VM 9 台 (8 GB/VM) のカスタマー・デプロイメントの場合は 1:1 (オーバーコミットなし)
 
 ### NFS ストレージ
+{: #cloud_modern_bundle_overview-nfs-storage}
 
 * 管理用に 2 TB
 * カスタマー・ワークロード用に 1 TB (カスタマー VM 20 台の場合)
 * IBM Cloud Private Hosted 用に 4 TB
 
 ### Single-node Trial for Migration and App Modernization インスタンスのネットワーキング仕様
+{: #cloud_modern_bundle_overview-networking-specs}
 
 以下のネットワーキング・コンポーネントが注文されます。
 *  10 Gbps デュアル・ネットワーク・アップリンク (パブリックとプライベート)
@@ -69,6 +76,7 @@ Dual Intel Xeon Gold 5120 プロセッサー / 合計 28 コア、2.2 GHz、384 
   * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。これは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。
 
 ### 仮想サーバー・インスタンス
+{: #cloud_modern_bundle_overview-vsi}
 
 以下の仮想サーバー・インスタンス (VSI) が注文されます。
 
@@ -76,6 +84,7 @@ Dual Intel Xeon Gold 5120 プロセッサー / 合計 28 コア、2.2 GHz、384 
 * Microsoft Active Directory (AD) 用の Microsoft Windows Server VSI がデプロイされて参照可能になります。 この VSI がインスタンスの DNS として機能し、ここにホストと VM が登録されます。
 
 ### IBM 提供のライセンスおよび料金
+{: #cloud_modern_bundle_overview-license-and-fee}
 
 Single-node Trial for Migration and App Modernization インスタンスの注文には、以下のライセンスが含まれています。
 
@@ -88,6 +97,7 @@ Single-node Trial for Migration and App Modernization インスタンスは、�
 {:note}
 
 ## VMware HCX on IBM Cloud の技術仕様
+{: #cloud_modern_bundle_overview-hcx-tech-specs}
 
 Single-node Trial for Migration and App Modernization には、HCX on {{site.data.keyword.cloud_notm}} が含まれています。 以下のコンポーネントが注文されて HCX on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
@@ -95,12 +105,14 @@ Single-node Trial for Migration and App Modernization には、HCX on {{site.dat
 {:note}
 
 ### HCX 管理用の VMware NSX Edge Services Gateways のアクティブ/パッシブ・ペア
+{: #cloud_modern_bundle_overview-esg}
 
 * CPU: 6 vCPU
 * RAM: 8 GB
 * ディスク: 3 GB VMDK
 
 ### HCX 管理アプライアンス - 仮想マシン
+{: #cloud_modern_bundle_overview-hcx-mgmt-appliance}
 
 * CPU: 4 vCPU
 * RAM: 12 GB
@@ -109,18 +121,21 @@ Single-node Trial for Migration and App Modernization には、HCX on {{site.dat
 構成時には必要に応じて、L2 接続、WAN 最適化、およびゲートウェイ接続のために追加の HCX アプライアンスがデプロイされます。
 
 ### HCX on IBM Cloud サービスのネットワーキング仕様
+{: #cloud_modern_bundle_overview-hcx-networking-specs}
 
 * 16 個の IP アドレスを持つ 1 つのパブリック・ポータブル・サブネット
 * 64 個の IP アドレスを持つ 2 つのプライベート・ポータブル・サブネット
 * プライベート・ポータブル vMotion サブネットからの 8 個の IP アドレス
 
 ## IBM Cloud Private Hosted の技術仕様
+{: #cloud_modern_bundle_overview-icp-tech-specs}
 
-すべての Single-node Trial for Migration and App Modernization インスタンスに、IBM Cloud Private Hosted V3.1 が開発/テスト用のトポロジーでインストールされます。 IBM Cloud Private Hosted について詳しくは、[IBM Cloud Private Hosted の概要](/docs/services/vmwaresolutions/services/icp_overview.html)を参照してください。
+すべての Single-node Trial for Migration and App Modernization インスタンスに、IBM Cloud Private Hosted V3.1 が開発/テスト用のトポロジーでインストールされます。 IBM Cloud Private Hosted について詳しくは、[IBM Cloud Private Hosted の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)を参照してください。
 
-### 関連リンク
+## 関連リンク
+{: #cloud_modern_bundle_overview-related}
 
-* [vCenter Server および IBM Cloud Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [vCenter Server および IBM Cloud Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [IBM Cloud Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US)
 * [VMware Hybrid Cloud Extension の資料](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

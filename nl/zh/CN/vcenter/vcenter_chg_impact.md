@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2019-01-23"
 {:faq: data-hd-content-type='faq'}
 
 # 关于更改 vCenter Server 工件的注意事项
+{: #vcenter_chg_impact}
 
 更改保留用于 {{site.data.keyword.vmwaresolutions_full}} 的用户、资源或子网可能会影响管理操作。
 
@@ -21,6 +22,7 @@ lastupdated: "2019-01-23"
 {:important}
 
 ## automation 标识
+{: #vcenter_chg_impact-automation-id}
 {: faq}
 
 **automation** 标识是由 {{site.data.keyword.vmwaresolutions_short}} 控制台中提供的自动化操作使用的用户帐户。
@@ -28,6 +30,7 @@ lastupdated: "2019-01-23"
 不能更改用于控制台中自动化操作的用户和密码，否则依赖于这些凭证的控制台操作可能会失败。
 
 ## 特定于服务的用户帐户
+{: #vcenter_chg_impact-service-usr-account}
 
 每个服务在 vCenter Server 中都会创建一个内部用户帐户。此帐户是必需的，有了此帐户，与服务关联的管理操作才能连接到 vCenter Server 以对该服务执行操作。
 
@@ -40,10 +43,14 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## vCenter Server 实例（V1.9 和更高版本）的 VMware 资源
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
 
-对于 V1.9 和更高版本中部署的实例，如果 vCenter Server 实例处于**可供使用**状态，那么可以在 VMware vSphere Web Client 中修改 VMware 虚拟数据中心、集群、交换机、端口组和客户数据存储名称。但是，不能更改管理数据存储的缺省值：**vsanDatastore**（对于 vSAN 实例）和 **management-share**（对于网络文件系统 (NFS) 实例）。
+对于 V1.9 和更高版本中部署的实例，如果 vCenter Server 实例处于**可供使用**状态，那么可以在 VMware vSphere Web Client 中修改 VMware 虚拟数据中心、集群、交换机、端口组和客户数据存储名称。
+
+但是，不能更改管理数据存储名称的缺省值：**vsanDatastore**（对于 vSAN 实例）和 **management-share**（对于网络文件系统 (NFS) 实例）。此外，还不能更改在供应期间创建的网络上行链路的名称。
 
 ## vCenter Server 实例（V1.8 和更低版本）的 VMware 资源
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
 
 下表列出了 SSO 管理员在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改 VMware vCenter Server 资源时，可能会影响的操作。如果用于恢复的解决方案可用，那么还会提供该解决方案。
 
@@ -72,6 +79,7 @@ lastupdated: "2019-01-23"
 如果选择禁用 SSH 或 shell 访问，那么应该在执行指示的操作之前，临时重新启用 SSH 或 shell 访问。
 
 ## vCenter Server 实例的管理子网
+{: #vcenter_chg_impact-mgmt-subnets}
 
 以下信息讨论了 {{site.data.keyword.vmwaresolutions_short}} 订购的子网，并提供了一些选项，供您订购额外子网以供自己使用。
 
@@ -87,5 +95,5 @@ lastupdated: "2019-01-23"
 *  公用 VLAN 上包含 16 个 IP 地址的公用可移植子网
 
 如果需要使用更多子网，可以通过下列其中一种方式来获取要使用的 IP 地址：
-*  **选项 1（建议）**：使用 VMware NSX 虚拟网络覆盖。订购时提供了样本 VXLAN 模板。此 VXLAN 可用作构建软件定义的联网 (SDN) 的起点。有关更多信息，请参阅[配置网络以使用客户管理的 NSX Edge](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html)。
+*  **选项 1（建议）**：使用 VMware NSX 虚拟网络覆盖。订购时提供了样本 VXLAN 模板。此 VXLAN 可用作构建软件定义的联网 (SDN) 的起点。有关更多信息，请参阅[配置网络以使用客户管理的 NSX Edge](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)。
 *  **选项 2**：订购您自己的可移植公用子网或专用子网以获取 IP 地址。要使订购的子网区别于管理子网，可以向订购的所有子网添加注释。

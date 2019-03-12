@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # 管理系统通知
+{: #notifications}
 
 您可以检查系统或用户操作的状态的通知。还可以使用这些信息对可能发生的问题进行调查。
 
 ## 查看通知
+{: #notifications-view}
 
 1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**通知**。
 2. 查看有关所有通知的摘要。
@@ -67,10 +69,12 @@ lastupdated: "2019-01-23"
 3. 单击通知所在行可查看该通知的详细信息。
 
 ## 过滤通知
+{: #notifications-filter}
 
 缺省情况下，将显示所有未读通知。可以按状态、严重性和类型来过滤通知。要过滤通知，请在**状态**、**严重性**或**类型**列表中仅选中要显示的项所对应的复选框。
 
-### 相关链接
+## 相关链接
+{: #notifications-related}
 
-* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [用户帐户和设置](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 重构中间件并将中间件添加到 IBM Cloud Private 中
+{: #vcscontent-addmidware}
 
 既然 Stock Trader 已在一个容器中运行，并且 Jane 对目前的微服务感到满意，因此她和 Todd 继续研究如何利用额外的功能来提高应用程序的性能。通过重构 Stock Trader 微服务来处理增加的活动和可扩展性，他们两人都认为需要将中间件添加到 {{site.data.keyword.cloud}} Private 中。其中一些中间件存在于其数据中心内，因此这更像是在添加一些新中间件的情况下重新构建平台的做法。
 
@@ -18,6 +19,7 @@ lastupdated: "2019-01-23"
 此解决方案重构将提供一个公共平台来运行应用程序和必需的服务，从而引入更简单的管理平面。
 
 ## 内容选项
+{: #vcscontent-addmidware-content-choices}
 
 {{site.data.keyword.cloud_notm}} Private 拥有广泛的内容可供选择，Todd 和 Jane 都需要决定最适合自己需求的内容。如 Todd 在 {{site.data.keyword.cloud_notm}} Private 目录中所见，大多数内容可供试用，但某些内容需要购买并从 Passport Advantage 下载。
 
@@ -119,17 +121,20 @@ lastupdated: "2019-01-23"
 
 * 工具
   -	Web Terminal（开放式源代码）
-  -	Skydive - 网络分析器（开放式源代码）
+  -	Skydive – 网络分析器（开放式源代码）
 
 对于 Stock Trader，根据 Jane 的解决方案体系结构，Todd 将从 [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted)、[MQ](https://console.cloud.ibm.com/catalog/services/mq) 和 [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis) 着手。
 
 ## 添加中间件
+{: #vcscontent-addmidware-add-middleware}
 
 要将中间件添加到 {{site.data.keyword.cloud_notm}} Private，请在目录中找到 [Helm Chart](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md)，阅读自述文件，然后继续安装。
 
 对于 Stock Trader，Todd 决定添加所有中间件。以下信息总结了 Todd 必须对他希望 Jane 使用的每个中间件执行的操作。
 
 ### Db2
+{: #vcscontent-addmidware-db2}
+
 Todd 从 Db2 着手，因为他们已经在使用 Db2，并可以为每个解决方案提供一个基于容器的专用 Db2。
 
 Todd 已准备好 {{site.data.keyword.icpfull_notm}}，因此已经定义了自己的 pod 安全策略。Todd 可以将重点放在创建 Docker 映像拉取私钥上：
@@ -169,6 +174,7 @@ path = /shared/db2trader1`
 Db2 运行后，Todd 或 Jane 需要创建 Stock Trader 解决方案使用的表。
 
 ### MQ
+{: #vcscontent-addmidware-mq}
 
 Todd 和 Jane 需要消息传递软件，他们已经使用了 MQ，这个选择很不错。此外，MQ 运行占用的空间很小，并且可以为每个开发者启动开发版本，从而节省宝贵的生产流量。安装 MQ 相当简单。Todd 如同使用 Db2 一样创建了存储器，然后安装了 Helm Chart：
 
@@ -190,7 +196,8 @@ App password = LEAVE BLANK`
 
 为了将 MQ 配置为使用 Stock Trader，Todd 打开了“MQ 管理”用户界面，该界面与 VM 版本完全相同。
 
-### 	Redis
+### Redis
+{: #vcscontent-addmidware-redis}
 
 虽然 Stock Trader 是在 {{site.data.keyword.cloud_notm}} Private Hosted 上运行，但他们仍担心股票报价服务延迟，而对于他们的大部分工作，他们真正关心的是前一天收盘股价。为了帮助提高性能，他们添加了 Redis 高速缓存。
 
@@ -201,6 +208,7 @@ App password = LEAVE BLANK`
 该配置很简单，因此 Todd 进入了要在其中进行安装的名称空间，并开始安装。
 
 ## 重构 Stock Trader
+{: #vcscontent-addmidware-refactor-stock-trader}
 
 重构 Stock Trader 对 Jane 来说是非常重要的一步。Todd 忙着将中间件添加到 {{site.data.keyword.cloud_notm}} Private 时，Jane 重构了解决方案，针对 Kubernetes 和云行为对解决方案进行了优化。
 
@@ -216,17 +224,19 @@ App password = LEAVE BLANK`
 下面是 Jane 的[代码存储库](https://github.com/IBMStockTrader/)以及 Jenkins 文件、server.xml 等的示例。这些就绪后，Jane 即可以通过私钥自由地对额外功能进行编码，以访问 ODM 和 Watson 等服务，同时将更多微服务作为 GitHub 中的单个存储库。
 
 ### 添加私钥
+{: #vcscontent-addmidware-add-secrets}
 
 既然 Jane 已重构了 Stock Trader 微服务，她现在需要一种方法来提取服务名称、用户标识和密码，以便其应用程序在部署后可获取有关该服务的独特详细信息，而无需对特定名称硬编码，也不必重建应用程序。
 
 通过使用 Kubernetes 私钥，Jane 在每个私钥中配置了明确定义的私钥名称和参数，以确保在部署微服务时，可选取唯一的主机名、用户标识、密码或其他任何敏感凭证，从而使其应用程序可移植。
 
-Jane 需要一个统一的代码库，即使 Stock Trader 可能会在多个云上运行。下图中的私钥 DB2 具有不同的路由详细信息，但格式相同。在 Jane 的投资组合微服务部署时，该微服务会查找 Db2 私钥端点参数以连接到相应的 Db2 实例。Stock Trader 应用程序不关心自己是在 VMware 虚拟机中运行、容器化服务中运行还是作为云管理的服务运行。
+Jane 需要一个统一的代码库，即使 Stock Trader 可能会在多个云上运行。下图中的私钥 DB2 具有不同的路由详细信息，但格式相同。在 Jane 的投资组合微服务部署时，该微服务会查找 Db2 私钥端点参数以连接到相应的 Db2 实例。Stock Trader 应用程序不关心自己是在 VMware 虚拟机中运行、容器化服务中运行，还是作为云管理的服务运行。
 
 图 2. Stock Trader - 数据透视服务
 ![Stock Trader 数据透视服务](vcscontent-pivot-services.svg)
 
 ## 结果
+{: #vcscontent-addmidware-result}
 
 Jane 致力于重构了自己的 Stock Trader 解决方案，而 Todd 则致力于将中间件安装到 {{site.data.keyword.cloud_notm}} Private Hosted 中，因此整个核心 Stock Trader 解决方案都在私有云中运行。Jane 现在添加了更多微服务，例如推特通知服务。Istio 路由规则通过内部 Slack 通道或公共推特通道，支持动态忠诚度消息传递。
 
@@ -234,6 +244,7 @@ Jane 致力于重构了自己的 Stock Trader 解决方案，而 Todd 则致力�
 
 ![Stock Trader 扩充](vcscontent-enrich.svg)
 
-### 相关链接
+## 相关链接
+{: #vcscontent-addmidware-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

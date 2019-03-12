@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # IBM Cloud for VMware Solutions コンソールへのアクセス
+{: #loginmethod}
 
 ここには、{{site.data.keyword.vmwaresolutions_full}} コンソールへのエントリー・ポイントを記載します。
 
 ## コンソールに直接アクセスする
+{: #loginmethod-direct}
 
 コンソールに直接アクセスするには、以下の手順を実行します。
 1. 次の URL にアクセスします。
@@ -20,6 +22,7 @@ lastupdated: "2019-01-23"
 2. **IBM ID** アカウントでコンソールにログインします。
 
 ## IBM Cloud カタログからアクセスする
+{: #loginmethod-cloud-catalog}
 
 {{site.data.keyword.cloud_notm}} カタログからコンソールにアクセスするには、以下の手順を実行します。
 1. https://console.cloud.ibm.com にアクセスします。
@@ -29,6 +32,7 @@ lastupdated: "2019-01-23"
 5. **「VMware Solutions」**カードをクリックします。
 
 ## ibm.com Web サイトからアクセスする
+{: #loginmethod-ibm-website}
 
 ibm.com Web サイトからコンソールにアクセスするには、以下の手順を実行します。
 1. http://www.ibm.com にアクセスします。
@@ -38,7 +42,8 @@ ibm.com Web サイトからコンソールにアクセスするには、以下�
 4. ページをスクロールダウンして、**「VMware Cloud Solutions」**をクリックします。
 5. **「IBM Cloud for VMware Solutions」**ページで、**「VMware Solutions のバージョン (VMware solutions versions)」**セクションにスクロールダウンして、**「開始」**をクリックします。
 
-### 関連リンク
+## 関連リンク
+{: #loginmethod-related}
 
-* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [{{site.data.keyword.cloud_notm}} へのアクセスに関するトラブルシューティング](/docs/account/ts_accessing.html){:new_window}
+* [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [{{site.data.keyword.cloud_notm}} へのアクセスに関するトラブルシューティング](/docs/account?topic=account-accessing){:new_window}

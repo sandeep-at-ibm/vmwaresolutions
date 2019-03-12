@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # HCX 수정 또는 설치 제거
+{: #hcx-archi-mod-uninstall}
 
 기존 설치가 업그레이드되거나 일부 또는 전체 하이브리드 클라우드 서비스 배치가 제거될 수 있습니다.
 
 ##  계층 2 네트워크 확장 해제
+{: #hcx-archi-mod-uninstall-unstretch-layer2}
 
 연관된 Layer 2 Concentrator 서비스 가상 어플라이언스를 제거하거나 하이브리드 클라우드 서비스를 설치 제거하기 전에 계층 2 네트워크를 확장 해제해야 합니다.
 
@@ -26,10 +28,12 @@ lastupdated: "2019-01-23"
 4. 확인하려면 **확인**을 클릭하십시오.
 
 ## HCX 가상 어플라이언스 설치 제거
+{: #hcx-archi-mod-uninstall-uninst-hva}
 
 서비스 어플라이언스는 하이브리드 클라우드 서비스 설치 제거를 준비하기 위해 설치 제거되거나 설치 아키텍처의 변경으로 인해 설치 제거될 수 있습니다. 다음 프로시저에 설명된 대로 하이브리드 클라우드 서비스를 사용하여 어플라이언스를 관리하십시오.
 
 ### HCX 가상 어플라이언스 설치 제거에 대한 전제조건
+{: #hcx-archi-mod-uninstall-prereq-uninst-hva}
 
 * 설치 제거 태스크 중에 발생할 수 있는 마이그레이션의 실행 시간을 취소하거나 재설정하십시오.
 * 실행 중인 마이그레이션의 vSphere Web Client 태스크 콘솔을 확인하고 마이그레이션이 완료될 때까지 기다리십시오.
@@ -39,6 +43,7 @@ vSphere 인벤토리에서 가상 어플라이언스를 삭제하지 마십시�
 {:note}
 
 ### HCX 가상 어플라이언스를 설치 제거하는 프로시저
+{: #hcx-archi-mod-uninstall-proc-uninst-hva}
 
 1. vSphere Web Client 인터페이스의 왼쪽 분할창에서 하이브리드 클라우드 서비스 플러그인을 선택하십시오.
 2. 가운데 분할창에서 **하이브리드 서비스** 탭을 클릭하십시오.
@@ -49,6 +54,7 @@ vSphere 인벤토리에서 가상 어플라이언스를 삭제하지 마십시�
 하이브리드 클라우드 게이트웨이와 하이브리드 클라우드 게이트웨이를 사용하는 하이브리드 서비스 가상 어플라언스는 vCenter 및 VCF/VCS 하이브리드 클라우드 서비스 클라우드 모두에서 제거됩니다.
 
 ## HCX Manager 설치 제거
+{: #hcx-archi-mod-uninstall-unist-hcxm}
 
 온프레미스 데이터 센터에서 HCX 솔루션을 제거하기 전에 HCX Manager 어플라이언스를 설치 제거해야 합니다. 하이브리드 클라우드 서비스 가상 머신을 설치 제거하려면 다음 단계를 따르십시오.
 
@@ -62,10 +68,12 @@ vSphere 인벤토리에서 가상 어플라이언스를 삭제하지 마십시�
 * 마이그레이션된 VM
 
 ### 수행할 작업
+{: #hcx-archi-mod-uninstall-what-next}
 
 마이그레이션된 VM 및 로그는 수동으로 백업되거나 삭제될 수 있습니다.
 
 ## HCX 관리 포털에 로그인
+{: #hcx-archi-mod-uninstall-log-hcxmp}
 
 하이브리드 클라우드 서비스 배치는 브라우저 기반 사용자 인터페이스를 사용하여 관리 포털에서 관리될 수 있습니다.
 
@@ -73,6 +81,7 @@ vSphere 인벤토리에서 가상 어플라이언스를 삭제하지 마십시�
 2. 하이브리드 클라우드 서비스 사용자 인터페이스는 SSL을 사용하여 웹 브라우저 창에서 열립니다. 필요한 경우, 보안 인증서를 승인하십시오. VMware Hybridity 및 네트워킹 로그인 화면이 열립니다.
 3. 사용자 이름 및 비밀번호를 입력하십시오. 기본적으로 사용자 이름은 Admin입니다. 비밀번호는 하이브리드 클라우드 서비스 가상 어플라이언스가 설치될 때 제공되는 값입니다.
 
-### 관련 링크
+## 관련 링크
+{: #hcx-archi-mod-uninstall-related}
 
-* [HCX on IBM Cloud 문제점 해결](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-trbl.html)
+* [HCX on IBM Cloud 문제점 해결](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-trbl)

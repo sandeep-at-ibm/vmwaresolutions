@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-02-18"
 
 ---
 
 # 其他资源
+{: #additional_resources}
 
 查看以下资源可更快入门。
 * 体系结构参考信息
@@ -18,10 +19,12 @@ lastupdated: "2018-11-08"
 * 教程
 
 ## 数据表
+{: #additional_resources-data-sheets}
 
 * [{{site.data.keyword.vmwaresolutions_full}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
 
 ## 平台扩展
+{: #additional_resources-plat-extensions}
 
 查看所有[虚拟化平台扩展](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions)的体系结构，如：
 * FortiGate Security Appliance
@@ -33,20 +36,24 @@ lastupdated: "2018-11-08"
 * Zerto 灾难恢复
 
 ## 视频和演示
+{: #additional_resources-demos}
 
 * [资源和视频](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources)
 * [数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)
 * [特色资源和案例研究](https://www.ibm.com/cloud/vmware/resources)
 
 ## 试用 IBM Cloud for VMware Solutions
+{: #additional_resources-test-drive}
 
 想亲眼看看吗？按照 {{site.data.keyword.vmwaresolutions_short}} 逐步指导演示“[试用 VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions)”，快速试用本产品。
 
 ## developerWorks 诀窍
+{: #additional_resources-dwrecipes}
 
 * [{{site.data.keyword.vmwaresolutions_short}} - 看看底层](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
 * [为 VMware Solutions on {{site.data.keyword.cloud_notm}} 附加专用存储器的步骤](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
 
 ## VMware 文档
+{: #additional_resources-vmware-doc}
 
 * [VMware Hybrid Cloud Extension 文档](https://cloud.vmware.com/vmware-hcx/resources)

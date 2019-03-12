@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # KMIP for VMware on IBM Cloud インスタンスの証明書の追加、表示、削除
+{: #kmip_standalone_addingdeletingcert}
 
 KMIP for VMware on {{site.data.keyword.cloud}} インスタンスの準備ができたら、インスタンスに証明書を追加する必要があります。 不要になった証明書は、インスタンスから削除してください。
 
 ## KMIP for VMware on IBM Cloud インスタンスに証明書を追加する手順
+{: #kmip_standalone_addingdeletingcert-add}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「KMIP for VMware on IBM Cloud インスタンス」**表までスクロールダウンし、証明書を追加するインスタンスをクリックします。
@@ -28,6 +30,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} インスタンスの準備がで
 5. **「追加」**をクリックします。
 
 ## KMIP for VMware on IBM Cloud インスタンスの証明書を表示する手順
+{: #kmip_standalone_addingdeletingcert-view}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「KMIP for VMware on IBM Cloud インスタンス」**表までスクロールダウンし、証明書を表示するインスタンスをクリックします。
@@ -35,6 +38,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} インスタンスの準備がで
 4. 特定の証明書の内容を表示するには、**「ダウンロード」**をクリックします。
 
 ## KMIP for VMware on IBM Cloud インスタンスから証明書を削除する手順
+{: #kmip_standalone_addingdeletingcert-delete}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「KMIP for VMware on IBM Cloud インスタンス」**表までスクロールダウンし、証明書を削除するインスタンスをクリックします。
@@ -43,9 +47,10 @@ KMIP for VMware on {{site.data.keyword.cloud}} インスタンスの準備がで
    ただちに、そのクライアントは、データの暗号化/復号またはバックアップの目的に鍵を利用することが一切できなくなります。 クライアントに再び鍵を利用させるためには、クライアント SSL 証明書をもう一度追加する必要があります。
    {:note}
 
-### 関連リンク
+## 関連リンク
+{: #kmip_standalone_addingdeletingcert-related}
 
-* [KMIP for VMware on IBM Cloud インスタンスの参照](/docs/services/vmwaresolutions/services/kmip_standalone_viewing.html)
-* [KMIP for VMware on IBM Cloud インスタンスの注文](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html)
-* [KMIP for VMware on IBM Cloud インスタンスの削除](/docs/services/vmwaresolutions/services/kmip_standalone_deleting.html)
-* [Activity Tracker イベント](/docs/services/vmwaresolutions/vmonic/at-events.html)
+* [KMIP for VMware on IBM Cloud インスタンスの参照](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
+* [KMIP for VMware on IBM Cloud インスタンスの注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)
+* [KMIP for VMware on IBM Cloud インスタンスの削除](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
+* [Activity Tracker イベント](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

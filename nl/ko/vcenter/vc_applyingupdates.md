@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,17 +13,19 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server 인스턴스에 업데이트 적용
+{: #vc_applyingupdates}
 
 vCenter Server 인스턴스에 패치 및 업데이트를 적용하는 프로세스는 관리 컴포넌트에 대해서만 자동화되어 있습니다. VMware 업데이트는 수동으로 적용해야 합니다.
 
 ## 시작하기 전에
+{: #vc_applyingupdates-prereq}
 
 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하는 경우 먼저 최소한 기본 vCenter Server V2.3 소프트웨어 업데이트를 적용해야 합니다. 해당 작업을 수행해야 Hybridity Bundle로의 라이센스 업그레이드를 수행할 수 있습니다.
 {:important}
 
 비즈니스 파트너 사용자에게는 기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하기 위한 옵션이 없습니다.
 
-V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데이트는 더 이상 나열되지 않습니다. 호스트 추가, 클러스터 추가 및 서비스 주문과 같은 조치를 수행하면 인스턴스가 최신 버전으로 자동 업데이트됩니다. 자동 업데이트에 대한 자세한 정보는 [V2.5 릴리스 정보](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)에서 *IBM CloudDriver 복원성* 섹션을 참조하십시오.
+V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데이트는 더 이상 나열되지 않습니다. 호스트 추가, 클러스터 추가 및 서비스 주문과 같은 조치를 수행하면 인스턴스가 최신 버전으로 자동 업데이트됩니다. 자동 업데이트에 대한 자세한 정보는 [V2.5 릴리스 정보](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)에서 *IBM CloudDriver 복원성* 섹션을 참조하십시오.
 {:note}
 
 업데이트를 적용하기 전에 아래로 화살표를 클릭하여 업데이트 항목을 펼치고 다음 정보를 확인하십시오.
@@ -55,6 +57,7 @@ V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데
 </table>
 
 ## vCenter Server 인스턴스(V2.1 이상)에 업데이트 및 패치를 적용하는 프로시저
+{: #vc_applyingupdates-procedure}
 
 이 프로시저는 2.1 이상에 배치된 인스턴스에 적용됩니다. V2.0 이전에 배치된 인스턴스의 경우, VMware 업데이트를 수동으로 적용해야 합니다.
 
@@ -81,6 +84,7 @@ V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데
 7. 다중 사이트 배치 구성에서 업데이트를 vCenter Server 인스턴스에 적용하는 경우 **업데이트하는 데 필요한 단계**라는 제목의 섹션이 표시됩니다. 이 섹션은 다중 사이트 배치에서 모든 인스턴스에 필요한 업데이트 오퍼레이션을 나열합니다. 각 단계마다 **업데이트 적용**을 클릭하여 순서대로 단계를 완료해야 합니다. 다음 단계를 시작하기 전에 이전 단계가 완료될 때까지 기다려야 합니다.   
 
 ## vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하는 프로시저
+{: #vc_applyingupdates-procedure-upgrade-to-hybridity}
 
 사용자의 vCenter Server 인스턴스가 현재 VMware NSX Base 에디션을 사용하고 있는 경우 Hybridity Bundle로의 라이센스 업그레이드 중에 자동으로 VMware NSX Advanced 에디션으로 업그레이드됩니다.
 
@@ -102,13 +106,14 @@ vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle로 업그레
   4. 서비스에 적용되는 이용 약관과 예상 비용을 검토하고 **주문하기**를 클릭하십시오.
 
 ## 결과
+{: #vc_applyingupdates-results}
 
-2. 업데이트를 적용한 후 자세한 진행상태 및 업데이트 상태를 볼 수 있는 소프트웨어 업데이트 상태 목록에 레코드가 표시됩니다. 업데이트가 완료되면 설치된 소프트웨어 업데이트 목록에 레코드가 표시됩니다.
+1. 업데이트를 적용한 후 자세한 진행상태 및 업데이트 상태를 볼 수 있는 소프트웨어 업데이트 상태 목록에 레코드가 표시됩니다. 업데이트가 완료되면 설치된 소프트웨어 업데이트 목록에 레코드가 표시됩니다.
 
   업데이트 작업의 최신 상태를 검색하려면 페이지의 오른쪽 상단 모서리에 있는 새로 고치기 아이콘을 클릭하십시오.
   {:tip}
 
-3. 업데이트 상태에 대한 세부사항은 다음 표를 참조하십시오.
+2. 업데이트 상태에 대한 세부사항은 다음 표를 참조하십시오.
 
    표 2. 업데이트 상태의 세부사항
 
@@ -143,10 +148,11 @@ vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle로 업그레
       </tr>
     </table>
 
-4. 특정 단계에서 업데이트 프로세스에 실패하는 경우 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)하여 도움을 받으십시오. 문제 해결 방법에 대한 정보를 얻고 실패한 단계에서 업그레이드를 다시 시도하도록 안내됩니다.
+3. 특정 단계에서 업데이트 프로세스에 실패하는 경우 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)하여 도움을 받으십시오. 문제 해결 방법에 대한 정보를 얻고 실패한 단계에서 업그레이드를 다시 시도하도록 안내됩니다.
 
-### 관련 링크
+## 관련 링크
+{: #vc_applyingupdates-related}
 
-* [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

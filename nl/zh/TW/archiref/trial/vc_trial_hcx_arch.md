@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-27"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-11-27"
 {:important: .important}
 
 # 單一節點試用版 vCenter Server on IBM Cloud 的 HCX on IBM Cloud 架構設計
+{: #vc_trial_hcx_arch}
 
 具有單一節點試用版 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的 VMware HCX on {{site.data.keyword.cloud}} 是新的供應項目，可啟用 {{site.data.keyword.vmwaresolutions_short}} 實例與內部部署 VMware 虛擬化資料中心之間的無縫連線。雖然建議 vCenter Server 最少具有三個節點，但是單一節點試用版可讓您以低廉的價格來測試並體驗混合式雲端實作的好處。
 
@@ -27,12 +28,14 @@ HCX on {{site.data.keyword.cloud_notm}} 服務會混合 vCenter Server 實例與
 下列資訊提供 HCX on {{site.data.keyword.cloud_notm}} 服務實作的設計。它包括目標端 {{site.data.keyword.vmwaresolutions_short}} 實例上的元件以及來源內部部署上所部署的元件。
 
 ## HCX on IBM Cloud 概觀
+{: #vc_trial_hcx_arch-ovw}
 
 {{site.data.keyword.cloud_notm}} 將內部部署 vSphere vCenter 網路無縫整合至 {{site.data.keyword.vmwaresolutions_short}} 部署。混合式網路將內部部署 vSphere vCenter 網路擴充至 {{site.data.keyword.cloud_notm}}，並支援雙向 VM 行動性。
 
 HCX 擁有來源及目的地加密和解密處理程序，以確定一致安全並提供 VM 移轉及網路延伸這類混合式工作流程的許可。此供應項目建立最佳化的軟體定義廣域網路 (WAN) 來增加延伸網路效能，以使效能達到區域網路 (LAN) 速度。HCX 支援雙向工作負載和 VMware NSX 安全原則移轉至 {{site.data.keyword.cloud_notm}}、與 vSphere vCenter 整合，並從 vSphere Web Client 進行管理。
 
 ### 第 2 層網路延伸
+{: #vc_trial_hcx_arch-layer-2-extension}
 
 HCX 容許現有內部部署 vSphere 財產將網路從其內部部署 vCenter 安全地延伸至執行 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} 或 vCenter Server 的 {{site.data.keyword.CloudDataCent_notm}}。下列項目會啟用此特性：
 
@@ -42,6 +45,7 @@ HCX 容許現有內部部署 vSphere 財產將網路從其內部部署 vCenter �
 * 透過「雲端閘道」及透過延伸第 2 層移轉的 VM 可以保留其 IP 及 MAC 位址。
 
 ### 虛擬機器移轉
+{: #vc_trial_hcx_arch-vm-mig}
 
 HCX 提供下列三種 VM 移動方法：
 
@@ -50,18 +54,22 @@ HCX 提供下列三種 VM 移動方法：
 * 冷移轉
 
 #### 低關閉時間移轉
+{: #vc_trial_hcx_arch-low-downtime-mig}
 
 低關閉時間移轉根據「vSphere 抄寫」，這是 VMware ESX 或 VMware ESXi Hypervisor 中所實作的分散式技術。內部部署 HCX 部署會在 {{site.data.keyword.cloud_notm}} 中建立即時 VM 的抄本、執行切換以關閉來源 VM 的電源，以及開啟所移轉 VM 的電源。移轉路徑一律是透過「雲端閘道」。傳輸可以是網際網路、第 2 層延伸網路或 Direct Connect 線路。您可以在任一方向多次移轉 VM。
 
 #### vSphere vMotion 移轉
+{: #vc_trial_hcx_arch-vmotion-mig}
 
 透過延伸至 {{site.data.keyword.cloud_notm}} 的網路使用 vSphere vMotion 移轉，即可傳送即時 VM。vMotion 移轉也稱為零關閉時間移轉或跨雲端 vMotion。
 
 #### 冷移轉
+{: #vc_trial_hcx_arch-cold-mig}
 
 冷移轉可以透過「第 2 層集中器」所建立的延伸網路，將關閉電源的 VM 傳送至 {{site.data.keyword.cloud_notm}}。
 
 #### 一般移轉特性
+{: #vc_trial_hcx_arch-common-feat}
 
 下列是這三種移轉類型可用的特性：
 
@@ -70,14 +78,17 @@ HCX 提供下列三種 VM 移動方法：
 * 保留主機名稱、VM 名稱或兩者。
 
 ### 網路
+{: #vc_trial_hcx_arch-network}
 
 下列網路特性會建置到「雲端閘道」及「第 2 層集中器」。
 
 #### 智慧型流程遞送
+{: #vc_trial_hcx_arch-intel-flow}
 
 智慧型流程遞送根據網際網路路徑自動選取最佳連線，有效率地溢出整個連線，以盡快移動工作負載。備份或抄寫這類較大的流程導致 CPU 競用時，會將較小的流程遞送至較不忙碌的 CPU，以改善互動式傳輸的效能。
 
 #### 鄰近遞送
+{: #vc_trial_hcx_arch-prox-routing}
 
 鄰近遞送確定在內部部署及雲端連接至延伸和遞送網路之 VM 間的轉遞是對稱的。此特性需要在客戶內部部署與雲端之間配置具有「動態遞送」的「進階網路服務」。
 
@@ -92,6 +103,7 @@ HCX 提供下列三種 VM 移動方法：
 * 建立於雲端中（在延伸網路上）
 
 #### 安全
+{: #vc_trial_hcx_arch-sec}
 
 「雲端閘道」提供符合「套組 B」標準的 AES-GCM，其具有 IKEv2、AES-NI 卸載及流程型許可控制。HCX 也擁有來源及目的地加密和解密處理程序，以確定 VM 移轉及網路延伸這類混合式工作流程的一致安全及管理。您可以移轉安全原則，這些安全原則會定義並指派給具有 {{site.data.keyword.cloud_notm}} 之 VM 的 VM 內部部署。
 
@@ -103,25 +115,30 @@ HCX 提供下列三種 VM 移動方法：
 * 「MAC 組」或「IP 組」的名稱不能超過 218 個字元。
 * 支援的規則將第 3 層 IP 位址或「IP 組」或是第 2 層 MAC 位址或「MAC 組」指定為來源或目的地。
 
-### HCX 的元件
+### HCX 元件
+{: #vc_trial_hcx_arch-hcx-comp}
 
 HCX on {{site.data.keyword.cloud_notm}} 服務會部署在內部部署資料中心和 IBM Cloud 目標上安裝及配置的四個虛擬應用裝置。下列資訊說明這四個必要虛擬應用裝置。或者，根據實作設計，可能需要邊緣裝置。
 
 #### HCX Manager
+{: #vc_trial_hcx_arch-hcx-manager}
 
 HCX Manager 虛擬應用裝置是內部部署 vCenter 的延伸。該應用裝置會部署為 VM，而其檔案結構包含其他混合式服務虛擬應用裝置。HCX Manager 會監督內部部署及 {{site.data.keyword.cloud_notm}} 內的「雲端閘道」、「第 2 層集中器」及「WAN 最佳化」虛擬應用裝置的部署和配置。
 
 #### 混合式雲端閘道
+{: #vc_trial_hcx_arch-hcg}
 
 「混合式雲端閘道 (CGW)」會維護內部部署 vSphere 財產與 {{site.data.keyword.cloud_notm}} 之間的安全頻道。HCX 使用高度加密來引導與 {{site.data.keyword.cloud_notm}} 的站台對站台連線。vSphere 與 {{site.data.keyword.cloud_notm}} 之間的安全頻道防止網路「中程傳輸」安全問題。「雲端閘道」也會納入 vSphere 抄寫技術，以執行雙向移轉。
 
 #### WAN 最佳化
+{: #vc_trial_hcx_arch-wan-opt}
 
 「WAN 最佳化」應用裝置是執行 WAN 調節來減少延遲效果的元件。它也納入「轉遞錯誤更正」以使封包流失情境無效，以及刪除重複的備用資料流量型樣。總而言之，這些會減少頻寬使用，並確定最佳使用可用的網路容量來加速與 {{site.data.keyword.cloud_notm}} 之間的資料傳送。
 
 VM 移轉根據「雲端閘道」與「WAN 最佳化」應用裝置的組合，以達到 vSphere 內部部署與 {{site.data.keyword.cloud_notm}} 之間的不平行行動性。此外，透過「雲端閘道」遞送資料路徑時，第 2 層延伸會獲益於 WAN 最佳化。{:important}
 
 #### 第 2 層集中器
+{: #vc_trial_hcx_arch-layer-2-conc}
 
 「第 2 層集中器 (L2C)」應用裝置容許將第 2 層網路從內部部署 vSphere 資料中心擴充至 {{site.data.keyword.cloud_notm}}。
 
@@ -131,5 +148,6 @@ VM 移轉根據「雲端閘道」與「WAN 最佳化」應用裝置的組合，�
 * **上行鏈路介面**：HCX 使用此介面來傳送與 {{site.data.keyword.cloud_notm}} 之間的封裝套版資料流量。應用程式資料會流過「上行鏈路」介面。
 
 ### 部署架構
+{: #vc_trial_hcx_arch-deployment}
 
 如需 HCX on {{site.data.keyword.cloud_notm}} 部署的相關資訊，請參閱 [VMware HCX on {{site.data.keyword.cloud_notm}} 部署及作業](https://www.ibm.com/cloud/garage/files/VMware-HCX-on-IBM-Cloud-Deployment-and-Operations.pdf)。

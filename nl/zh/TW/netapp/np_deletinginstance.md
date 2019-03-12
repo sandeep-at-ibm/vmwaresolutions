@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # 刪除 NetApp ONTAP Select 實例
+{: #np_deletinginstance}
 
 如果您刪除 NetApp ONTAP Select 實例，則會循序釋放下列元件：
 1. 已部署的 NetApp ONTAP Select 叢集 VM（虛擬機器）及「NetApp ONTAP Select 部署 VM」
@@ -28,6 +29,7 @@ lastupdated: "2019-01-24"
 {:note}
 
 ## 從已部署的實例頁面刪除實例的程序
+{: #np_deletinginstance-procedure1}
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
 2. 在 **NetApp ONTAP Select 實例**表格中，尋找要刪除的實例。
@@ -38,6 +40,7 @@ lastupdated: "2019-01-24"
    2. 在**刪除實例**視窗中，按一下**確定**。
 
 ## 從實例詳細資料頁面刪除實例的程序
+{: #np_deletinginstance-procedure2}
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
 2. 在 **NetApp ONTAP Select 實例**表格中，按一下要刪除的實例。
@@ -46,8 +49,9 @@ lastupdated: "2019-01-24"
    1. 再按一次 **vCenter 主控台**旁的溢位功能表圖示，然後按一下**刪除實例**。
    2. 在**刪除實例**視窗中，按一下**確定**。
 
-### 相關鏈結
+## 相關鏈結
+{: #np_deletinginstance-related}
 
-* [訂購 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [檢視 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
-* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [訂購 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [檢視 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

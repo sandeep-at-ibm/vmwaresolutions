@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,22 +13,26 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # 訂購 Cloud Foundation 實例
+{: #sd_orderinginstance}
 
-若要使用標準運算、儲存空間及網路配置來部署統一軟體定義的資料中心 (SDDC) 平台，請訂購 VMware Cloud Foundation 實例。在起始訂購期間，您也可以新增服務，例如 [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html)，來進行災難回復。
+若要使用標準運算、儲存空間及網路配置來部署統一軟體定義的資料中心 (SDDC) 平台，請訂購 VMware Cloud Foundation 實例。在起始訂購期間，您也可以新增服務，例如 [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)，來進行災難回復。
 
 ## 需求
+{: #sd_orderinginstance-req}
 
 請確定您已完成下列作業：
-*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
-*  您已檢閱 [Cloud Foundation 實例的需求及規劃](/docs/services/vmwaresolutions/sddc/sd_planning.html)中的需求及考量。
+*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)。
+*  您已檢閱 [Cloud Foundation 實例的需求及規劃](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)中的需求及考量。
 
 請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。此外，在部署實例之後，請不要變更實例名稱、根網域名稱、子網域標籤或主機名稱字首。{:important}
 
 ## 系統設定
+{: #sd_orderinginstance-sys-settings}
 
 訂購 Cloud Foundation 實例時，您必須指定下列系統設定。
 
 ### 實例名稱
+{: #sd_orderinginstance-inst-name}
 
 實例名稱必須滿足下列需求：
 * 只容許英數及橫線 (-) 字元。
@@ -37,10 +41,12 @@ lastupdated: "2019-01-25"
 * 實例名稱在您的帳戶中必須是唯一的。
 
 ### 主要或次要
+{: #sd_orderinginstance-primary-secondary}
 
 選取要訂購新的主要實例，還是要為現有的主要實例訂購次要實例。
 
 ## 授權設定
+{: #sd_orderinginstance-licensing-settings}
 
 在實例中，指定下列 VMware 元件的授權選項：  
 * vCenter Server 授權 - Standard
@@ -53,12 +59,15 @@ lastupdated: "2019-01-25"
 對於非「事業夥伴」使用者，您可以選取**購買隨附**以將 IBM 提供的 VMware 授權用於這些元件，也可以選取**我將提供**並輸入自己的授權碼以「自帶授權 (BYOL)」。
 
 ## Bare Metal Server 設定
+{: #sd_orderinginstance-bare-metal}
 
 ### 資料中心位置
+{: #sd_orderinginstance-dc-location}
 
 選取要在其中管理實例的 {{site.data.keyword.CloudDataCent_notm}}。
 
 ### Skylake
+{: #sd_orderinginstance-skylake}
 
 當您選取 **Skylake** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。
 
@@ -71,6 +80,7 @@ lastupdated: "2019-01-25"
 |雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### Broadwell
+{: #sd_orderinginstance-broadwell}
 
 當您選取 **Broadwell** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。
 
@@ -85,10 +95,12 @@ lastupdated: "2019-01-25"
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.1 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 ### Bare Metal Server 數目
+{: #sd_orderinginstance-bare-metal-number}
 
 Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂單時，無法變更 Bare Metal Server 數目。
 
 ## 儲存空間設定
+{: #sd_orderinginstance-storage}
 
 對於 Cloud Foundation 實例，您只能訂購 VMware vSAN 儲存空間。
 
@@ -103,10 +115,12 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
 
 ## 網路介面設定
+{: #sd_orderinginstance-network-interface}
 
 訂購 Cloud Foundation 實例時，您必須指定下列網路介面設定。
 
 ### 主機名稱字首
+{: #sd_orderinginstance-hostname-prefix}
 
 主機名稱字首必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
@@ -114,6 +128,7 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 *  主機名稱字首的長度上限為 10 個字元。
 
 ### 子網域標籤
+{: #sd_orderinginstance-subdomain-label}
 
 子網域標籤必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
@@ -122,6 +137,7 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 *  子網域標籤在您的帳戶內必須是唯一的。
 
 ### 網域名稱
+{: #sd_orderinginstance-domain-name}
 
 根網域名稱必須滿足下列需求：
 * 網域名稱必須包含兩個以上以句點 (.) 區隔的字串
@@ -134,6 +150,7 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 {:note}
 
 ### 網路設定的值格式
+{: #sd_orderinginstance-network-settings-value-format}
 
 網域名稱及子網域標籤用來產生實例的使用者名稱及伺服器名稱，如下表所示。
 
@@ -149,18 +166,23 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
   |單一登入 (SSO) 站台名稱| `<subdomain_label>`
   |PSC FQDN |`PSC-<subdomain_label>.<subdomain_label>.<root_domain>`。長度上限為 50 個字元。|  
 
-  SDDC Manager FQDN 不能是可公開解析的。否則，Cloud Foundation 實例配置可能會失敗，且無法回復。請先檢閱[選擇根網域名稱時的考量](/docs/services/vmwaresolutions/vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances)，再指定網域名稱。
+  SDDC Manager FQDN 不能是可公開解析的。否則，Cloud Foundation 實例配置可能會失敗，且無法回復。請先檢閱[選擇根網域名稱時的考量](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_limitations#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances)，再指定網域名稱。
 
 ### VLAN
+{: #sd_orderinginstance-vlans}
 
 網路設定是根據您選取**訂購新的 VLAN** 或**選取現有的 VLAN** 而定。
 
 您的實例訂單需要一個公用 VLAN 及兩個專用 VLAN。兩個專用 VLAN 成為每部 Bare Metal Server 的主幹。
 
 #### 訂購新的 VLAN
+{: #sd_orderinginstance-new-vlans}
+
 選取訂購一個新的公用 VLAN 和兩個新的專用 VLAN。
 
-#### 選取現有的 VLAN  
+#### 選取現有的 VLAN
+{: #sd_orderinginstance-existing-vlans}
+
 視您選取的 {{site.data.keyword.CloudDataCent_notm}} 而定，可能會提供現有的公用和專用 VLAN。
 
 當您選擇重複使用現有的公用及專用 VLAN 時，請指定 VLAN 及子網路：
@@ -170,20 +192,20 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
   * **主要子網路**已指派給實體主機，以進行公用網路存取。
   * **專用主要子網路**已指派給實體主機，以處理管理資料流量。
 
-##### 重要
-
-* 確保所選取 VLAN 上的防火牆配置未封鎖管理資料流量。
-* 確保您選取的所有 VLAN 都在相同的 Pod 中，因為無法在混合 Pod VLAN 上佈建 ESXi 伺服器。
+確保所選取 VLAN 上的防火牆配置未封鎖管理資料流量。確保您選取的所有 VLAN 都在相同的 Pod 中，因為無法在混合 Pod VLAN 上佈建 ESXi 伺服器。{:important}
 
 ## 服務
+{: #sd_orderinginstance-addon-services}
 
-當您訂購 Cloud Foundation 實例時，也可以訂購附加程式服務。如需可用服務的相關資訊，請參閱 [Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc/sd_planning.html#services-for-cloud-foundation-instances)。
+當您訂購 Cloud Foundation 實例時，也可以訂購附加程式服務。如需可用服務的相關資訊，請參閱 [Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning#services-for-cloud-foundation-instances)。
 
 ## 訂單摘要
+{: #sd_orderinginstance-order-summary}
 
 根據您選取的實例及附加程式服務配置，預估成本會立即產生並顯示在右窗格中。按一下右窗格的**定價詳細資料**，以產生提供預估詳細資料的 PDF 文件。
 
 ## 訂購 Cloud Foundation 實例的程序
+{: #sd_orderinginstance-procedure}
 
 1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware**，然後按一下**虛擬資料中心**區段中的 **Cloud Foundation**。
 2. 在 **VMware Cloud Foundation on IBM Cloud** 頁面上，按一下**建立**。
@@ -219,16 +241,18 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
     5. 按一下**佈建**。
 
 ## 結果
+{: #sd_orderinginstance-results}
 
 實例的部署會自動啟動。您會收到正在處理訂單的確認，並且可以檢視實例詳細資料來檢查部署的狀態。
 
-順利部署實例之後，會在 VMware 虛擬平台上安裝 [Cloud Foundation 實例的技術規格](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **SDDC-Cluster**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
+順利部署實例之後，會在 VMware 虛擬平台上安裝 [Cloud Foundation 實例的技術規格](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **SDDC-Cluster**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
 
 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 
 當您訂購次要實例時，可能會在您完成次要實例訂單之後重新啟動主要實例（鏈結至次要實例）的 VMware vSphere Web Client。
 
 ## 下一步
+{: #sd_orderinginstance-next}
 
 檢視及管理您訂購的 Cloud Foundation 實例。
 
@@ -243,12 +267,13 @@ Cloud Foundation 實例在起始部署時包含四部 Bare Metal Server。下訂
 
    這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
 
-### 相關鏈結
+## 相關鏈結
+{: #sd_orderinginstance-related}
 
-* [註冊 {{site.data.keyword.cloud_notm}} 帳戶](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
-* [檢視 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [新增、檢視及刪除 Cloud Foundation 實例的叢集](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
-* [擴充及縮減 Cloud Foundation 實例的容量](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [刪除 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
-* [關於 BYOL 的常見問題](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
+* [註冊 {{site.data.keyword.cloud_notm}} 帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [檢視 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [新增、檢視及刪除 Cloud Foundation 實例的叢集](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [擴充及縮減 Cloud Foundation 實例的容量](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [刪除 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)
+* [關於 BYOL 的常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)

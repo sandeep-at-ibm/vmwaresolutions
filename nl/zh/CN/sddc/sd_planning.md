@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
-# Cloud Foundation 实例的需求和规划
+# 针对 Cloud Foundation 实例的需求和规划
+{: #sd_planning}
 
 在订购 VMware Cloud Foundation 实例之前，请查看以下需求。根据 {{site.data.keyword.CloudDataCent}} 位置、工作负载容量需求和服务需求来规划实例。
 
 ## IBM Cloud 帐户需求
+{: #sd_planning-account-req}
 
-要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
+要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
 
 ## IBM Cloud Data Center 可用性
+{: #sd_planning-dc-availability}
 
 Cloud Foundation 部署对物理基础架构有严格要求。因此，只能将实例部署在满足这些需求的 {{site.data.keyword.CloudDataCents_notm}} 中。以下 {{site.data.keyword.CloudDataCents_notm}} 可用于 Cloud Foundation 部署：
 
@@ -66,20 +69,24 @@ Cloud Foundation 部署对物理基础架构有严格要求。因此，只能将
 |有限库存|{{site.data.keyword.CloudDataCent_notm}} 具有有限可用性，并且订单可能未完成。|
 
 ## 备份管理组件
+{: #sd_planning-backup-mgmt-components}
 
-您负责维护和确保所有实例组件的可用性。建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)。
+您负责维护和确保所有实例组件的可用性。建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)。
 
 ## Cloud Foundation 实例的服务
+{: #sd_planning-addon-services}
 
-您可以根据需要订购适用于实例的附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)。
+您可以根据需要订购适用于实例的附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)。
 
 ## 容量注意事项
+{: #sd_planning-capacity-considerations}
 
-有关容量的更多信息，请参阅[缩放容量](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)。
+有关容量的更多信息，请参阅[缩放容量](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)。
 
-### 相关链接
+## 相关链接
+{: #sd_planning-related}
 
-* [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [扩展和收缩 Cloud Foundation 实例的容量](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [扩展和收缩 Cloud Foundation 实例的容量](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)

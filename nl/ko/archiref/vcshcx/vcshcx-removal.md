@@ -24,4 +24,4 @@ HCX 제거에서는 확장 네트워크가 더 이상 사용되지 않는다고 
 ## 관련 링크
 {: #vcshcx-removal-related}
 
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,14 +13,16 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # 订购 vCenter Server with Hybridity Bundle 实例
+{: #vc_hybrid_orderinginstance}
 
-要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 实例。vCenter Server with Hybridity Bundle 实例订单中包含 VMware Hybrid Cloud Extension (HCX) 许可，并授权您使用 VMware HCX on {{site.data.keyword.cloud_notm}} 服务。您还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html)。
+要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 实例。vCenter Server with Hybridity Bundle 实例订单中包含 VMware Hybrid Cloud Extension (HCX) 许可，并授权您使用 VMware HCX on {{site.data.keyword.cloud_notm}} 服务。您还可以添加服务，例如用于灾难恢复的 [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)。
 
 ## 订购 vCenter Server with Hybridity Bundle 实例的需求
+{: #vc_hybrid_orderinginstance-req}
 
 确保已完成以下任务：
-*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
-*  已查看[针对 vCenter Server with Hybridity Bundle 的需求和规划](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)中的信息。
+*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)。
+*  已查看[针对 vCenter Server with Hybridity Bundle 的需求和规划](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)中的信息。
 * 已复查实例和域名格式。域名和子域标签用于生成实例的用户名和服务器名称。
 
 表 1. 实例和域名的值格式
@@ -37,10 +39,12 @@ lastupdated: "2019-01-25"
 {:important}
 
 ## 系统设置
+{: #vc_hybrid_orderinginstance-sys-settings}
 
 订购 vCenter Server with Hybridity Bundle 实例时，必须指定以下系统设置。
 
 ### 实例名称
+{: #vc_hybrid_orderinginstance-inst-name}
 
 实例名称必须满足以下需求：
 * 只允许使用字母数字字符和短划线 (-) 字符。
@@ -49,10 +53,12 @@ lastupdated: "2019-01-25"
 * 实例名称在您的帐户中必须唯一。
 
 ### 主实例或辅助实例
+{: #vc_hybrid_orderinginstance-primary-secondary}
 
 选择是订购新的主实例还是为现有主实例订购辅助实例。
 
 ## 许可证设置
+{: #vc_hybrid_orderinginstance-licensing-settings}
 
 vCenter Server with Hybridity Bundle 实例订单中包含以下 VMware 许可证。您必须指定 NSX 和 vSAN 许可证的版本。
 
@@ -62,21 +68,25 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下 VMware 许可�
 * vSAN 6.6（Advanced Edition 或 Enterprise Edition）
 
 ### 注意
+{: #vc_hybrid_orderinginstance-attention}
 
 * vCenter Server with Hybridity Bundle 实例不支持自带许可证。
 * 用户界面上指示了最低许可证版本。如果支持不同的组件版本，那么可以选择所需的版本。
 
 ## 裸机服务器设置
+{: #vc_hybrid_orderinginstance-bare-metal-settings}
 
 裸机设置基于您选择的 {{site.data.keyword.CloudDataCent_notm}} 以及裸机服务器配置。
 
 对于 vSAN 配置，初始集群和部署后集群都需要 4 个 ESXi 服务器。所有 ESXi 服务器共享相同的配置。部署后，可以再添加四个集群。
 
 ### 数据中心位置
+{: #vc_hybrid_orderinginstance-dc-location}
 
 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
 
 ### Skylake
+{: #vc_hybrid_orderinginstance-skylake}
 
 选择 **Skylake** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。
 
@@ -89,6 +99,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下 VMware 许可�
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
 ### Broadwell
+{: #vc_hybrid_orderinginstance-broadwell}
 
 选择 **Broadwell** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。
 
@@ -103,10 +114,12 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下 VMware 许可�
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
 ### 裸机服务器的数量
+{: #vc_hybrid_orderinginstance-bare-metal-number}
 
 缺省情况下已选择 4 个 ESXi 服务器，对此无法进行更改。
 
 ## 存储设置
+{: #vc_hybrid_orderinginstance-storage-settings}
 
 vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请指定以下 vSAN 选项：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
@@ -119,10 +132,12 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 
 ## 网络接口设置
+{: #vc_hybrid_orderinginstance-network-interface-settings}
 
 订购 vCenter Server with Hybridity Bundle 实例时，必须指定以下网络接口设置。
 
 ### 主机名前缀
+{: #vc_hybrid_orderinginstance-host-name-prefix}
 
   主机名前缀必须满足以下需求：
   *  只允许使用字母数字字符和短划线 (-) 字符。
@@ -130,6 +145,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
   *  主机名前缀的最大长度为 10 个字符。
 
 ### 子域标签
+{: #vc_hybrid_orderinginstance-subdomain-label}
 
 子域标签必须满足以下需求：
 *  只允许使用字母数字字符和短划线 (-) 字符。
@@ -138,6 +154,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 *  子域标签在您的帐户中必须唯一。
 
 ### 域名
+{: #vc_hybrid_orderinginstance-domain-name}
 
 根域名必须满足以下需求：
 * 域名必须包含两个或更多用句点 (.) 分隔的字符串。
@@ -150,6 +167,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 {:note}
 
 ### 公用或专用网络
+{: #vc_hybrid_orderinginstance-public-private-network}
 
 网络接口卡 (NIC) 启用设置基于您选择的是**公用和专用网络**还是**仅专用网络**。以下附加组件服务需要公共 NIC，并且这些服务在您选择专用选项时不可用：
 
@@ -159,12 +177,14 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 订购新的 VLAN
+{: #vc_hybrid_orderinginstance-new-vlans}
 
 选择**订购新的 VLAN** 可订购一个新的公用 VLAN 和两个新的专用 VLAN。
 
 订购实例时，需要包含一个公用 VLAN 和两个专用 VLAN。两个专用 VLAN 用于中继到每个裸机服务器中。
 
 ### 选择现有 VLAN
+{: #vc_hybrid_orderinginstance-existing-vlans}
 
 根据选择的 {{site.data.keyword.CloudDataCent_notm}}，可能会有现有公用和专用 VLAN 可用。
 
@@ -172,12 +192,12 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 
 选择**选择现有 VLAN** 可复用现有公用 VLAN 和专用 VLAN，并可从可用的 VLAN 和子网中进行选择。
 
-
 * 确保所选 VLAN 上的防火墙配置不会阻止管理数据流量。
 * 确保选择的所有 VLAN 都在同一 pod 中，因为 ESXi 服务器不能在混合 pod VLAN 上进行供应。
 {:important}
 
 ### DNS 配置
+{: #vc_hybrid_orderinginstance-dns-config}
 
 为实例选择域名系统 (DNS) 配置：
 
@@ -194,14 +214,17 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 有关订购 Windows 许可的更多信息，请参阅 [Windows Server 2012 R2 文档](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2)。
 
 ## 服务设置
+{: #vc_hybrid_orderinginstance-addon-services}
 
-订购 vCenter Server with Hybridity Bundle 实例时，还可以订购其他服务。有关服务的更多信息，请参阅 [vCenter Server with Hybridity Bundle 实例的可用服务](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)。
+订购 vCenter Server with Hybridity Bundle 实例时，还可以订购其他服务。有关服务的更多信息，请参阅 [vCenter Server with Hybridity Bundle 实例的可用服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances)。
 
 ## 订单摘要
+{: #vc_hybrid_orderinginstance-order-summary}
 
 根据为实例和附加组件服务选择的配置，估算成本会立即生成并显示在右侧窗格的**订单摘要**部分中。单击右侧窗格底部的**定价详细信息**可生成提供估算详细信息的 PDF 文档。
 
 ## 订购 vCenter Server with Hybridity Bundle 实例的过程
+{: #vc_hybrid_orderinginstance-procedure}
 
 1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 页面上，单击 **vCenter Server with Hybridity Bundle** 卡，然后单击**创建**。
@@ -227,27 +250,29 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
      *  如果要订购新的公用和专用 VLAN，请单击**订购新的 VLAN**。
      *  如果要复用可用的现有公用和专用 VLAN，请单击**选择现有 VLAN**，然后选择公用 VLAN、主子网、专用 VLAN、专用主子网和辅助专用 VLAN。
   4. 选择 DNS 配置。
-9. 完成对包含的 HCX on {{site.data.keyword.cloud_notm}} 服务的配置。有关如何为该服务提供设置的更多信息，请参阅[订购 VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration) 中的 _VMware HCX on IBM Cloud 配置_部分。
+9. 完成对包含的 HCX on {{site.data.keyword.cloud_notm}} 服务的配置。有关如何为该服务提供设置的更多信息，请参阅[订购 VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration) 中的 _VMware HCX on IBM Cloud 配置_部分。
 10. 通过单击相应的服务卡，选择要部署到实例中的附加组件服务。如果服务需要配置，请完成特定于服务的设置，然后单击相应卡上的**添加服务**。  
 有关如何为服务提供设置的更多信息，请参阅相应的服务订购主题。
 
-8. 在**订单摘要**窗格上，验证实例配置，然后再下订单。
+11. 在**订单摘要**窗格上，验证实例配置，然后再下订单。
    1. 复查实例的设置。
    2. 复查实例的估算成本。单击**定价详细信息**以生成 PDF 摘要。要保存或打印订单摘要，请单击 PDF 窗口右上角的**打印**或**下载**图标。
    3. 单击订单适用条款的链接，并在订购实例之前确认您同意这些条款。
    4. 单击**供应**。
 
 ## 结果
+{: #vc_hybrid_orderinginstance-results}
 
 实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
 
-成功部署实例后，[vCenter Server with Hybridity Bundle 实例的技术规范](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
+成功部署实例后，[vCenter Server with Hybridity Bundle 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
 
 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
 订购辅助实例时，在完成辅助实例订单后，可能会重新启动主实例（链接到辅助实例）的 VMware vSphere Web Client。
 
 ## 后续步骤
+{: #vc_hybrid_orderinginstance-next}
 
 查看和管理订购的 vCenter Server with Hybridity Bundle 实例。
 
@@ -262,12 +287,13 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 
    这些活动的例外情况包括在 {{site.data.keyword.slportal}} 中管理共享存储器文件共享。此类活动包括：订购、删除（如果已安装，可能会影响数据存储）、授权和安装共享存储器文件共享。
 
-### 相关链接
+## 相关链接
+{: #vc_hybrid_orderinginstance-related}
 
-* [注册 {{site.data.keyword.cloud_notm}} 帐户](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
-* [查看 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [vCenter Server with Hybridity Bundle 实例的多站点配置](/docs/services/vmwaresolutions/vcenter/vc_hybrid_multisite.html)
-* [添加和查看 vCenter Server with Hybridity Bundle 实例的集群](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
-* [扩展和收缩 vCenter Server with Hybridity Bundle 实例的容量](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
-* [删除 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
+* [注册 {{site.data.keyword.cloud_notm}} 帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [查看 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [vCenter Server with Hybridity Bundle 实例的多站点配置](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_multisite)
+* [添加和查看 vCenter Server with Hybridity Bundle 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
+* [扩展和收缩 vCenter Server with Hybridity Bundle 实例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [删除 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)

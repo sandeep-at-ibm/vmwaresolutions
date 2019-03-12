@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 스테이징 및 조치방안
+{: #vum-staging}
 
 선택적으로 조치방안 전에 패치 및 확장을 스테이징하여 패치 또는 확장을 즉시 적용하지 않고 VUM에서 vSphere ESXi 호스트에서 다운로드되도록 할 수 있습니다. 조치방안 중에 VUM이 패치, 확장 및 업그레이드를 인벤토리 오브젝트에 적용합니다. 패치 및 확장이 이미 호스트에서 로컬로 사용 가능하므로 패치 및 확장을 스테이징하면 조치방안 프로세스가 가속화됩니다.
 
@@ -37,12 +38,14 @@ lastupdated: "2019-01-23"
 업데이트에 필요한 경우 조치방안 전에 호스트가 유지보수 모드로 전환됩니다. VCSA는 호스트가 유지보수 모드로 전환되기 전에 VM을 VMware vCenter Server on {{site.data.keyword.cloud}} 인스턴스 내의 다른 호스트로 마이그레이션합니다.
 
 ## vSAN 클러스터에 있는 호스트의 경우
+{: #vum-staging-hosts-vsan}
+
 vSAN 클러스터의 일부인 호스트의 경우 다음 동작에 유의하십시오.
 * 호스트 조치방안 프로세스를 완료하는 데 많은 시간이 걸릴 수 있습니다.
 * 디자인에 따라 언제든지 vSAN 클러스터의 호스트 중 하나만 유지보수 모드에 있을 수 있습니다.
 * 병렬로 호스트를 수정하는 옵션을 설정하는 경우에도 VLM이 vSAN 클러스터의 일부인 호스트를 순차적으로 수정합니다.
 * **허용되는 장애 수**를 0으로 설정하여 VM 스토리지 정책을 사용하는 호스트에 있는 모든 VM의 경우 호스트가 유지보수 모드로 전환될 때 비정상적인 지연을 경험할 수 있습니다. vSAN이 vSAN 데이터 저장소 클러스터에 있는 한 디스크에서 다른 디스크로 VM 데이터를 마이그레이션해야 하고 이 작업에는 많은 시간이 걸릴 수 있으므로 지연이 발생합니다. VM 스토리지 정책에 대해 **허용하는 장애 수**를 1로 설정하여 이를 해결할 수 있습니다. 그러면 vSAN 데이터 저장소에 두 개의 VM 파일 사본이 작성됩니다.
-* **허용되는 장애 수**를 1로 설정하여 VM 스토리지 정책을 사용하는 호스트에 있는 모든 VM의 경우 호스트가 유지보수로 전환될 때 VM이 비중복 상태가 됩니다. 이것이 허용되지 않는 경우 [가상 머신 vSAN 중복성](/docs/services/vmwaresolutions/archiref/vum/vum-vsan-redundancy.html)을 참조하십시오.
+* **허용되는 장애 수**를 1로 설정하여 VM 스토리지 정책을 사용하는 호스트에 있는 모든 VM의 경우 호스트가 유지보수로 전환될 때 VM이 비중복 상태가 됩니다. 이것이 허용되지 않는 경우 [가상 머신 vSAN 중복성](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-vsan-redundancy)을 참조하십시오.
 
 호스트 및 클러스터를 수정하려면 다음 단계를 따르십시오.
 1. vSphere Web Client를 사용하여 **홈** > **호스트 및 클러스터**를 선택하십시오.
@@ -73,7 +76,8 @@ vCenter Server 인스턴스에서는 Update Manager가 전원이 켜진 PXE 부�
 12. 완료 준비 페이지에서 선택적으로 **조치방안 사전 확인**을 클릭하여 클러스터 조치방안 옵션 보고서를 생성하고 **확인**을 클릭하십시오. 클러스터 조치방안 옵션 보고서 대화 상자가 열립니다. 이 보고서를 내보내거나 자체 보고서를 위해 항목을 복사하고 **다음**을 클릭하십시오.
 13. **완료 준비** 페이지를 검토하고 **완료**를 클릭하십시오.
 
-### 관련 링크
+## 관련 링크
+{: #vum-staging-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

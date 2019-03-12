@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -12,7 +12,8 @@ lastupdated: "2019-01-23"
 {:note: .note}
 {:important: .important}
 
-# IBM Cloud 基础架构帐户的需求
+# IBM Cloud 基础架构帐户需求
+{: #slaccountrequirement}
 
 要使用 {{site.data.keyword.vmwaresolutions_full}} 订购实例，您必须具有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户。在实例中订购的组件的成本将计入到该 {{site.data.keyword.cloud_notm}} 帐户。
 
@@ -20,10 +21,11 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## IBM Cloud 基础架构帐户的许可权
+{: #slaccountrequirement-permissions}
 
 使用的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须具有特定许可权，才能订购实例中的组件并代表您执行操作。许可权需求适用于要在 {{site.data.keyword.vmwaresolutions_short}} 控制台中订购的所有类型的实例和服务。
 
-授权用户可以在 {{site.data.keyword.slportal}} 中验证和更新 {{site.data.keyword.cloud_notm}} 基础架构帐户的许可权。有关更多信息，请参阅[编辑用户的客户门户网站许可权](/docs/customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}。
+授权用户可以在 {{site.data.keyword.slportal}} 中验证和更新 {{site.data.keyword.cloud_notm}} 基础架构帐户的许可权。有关更多信息，请参阅[编辑用户的客户门户网站许可权](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:new_window}。
 
 表 1. {{site.data.keyword.cloud_notm}} 基础架构帐户的必需许可权
 
@@ -46,18 +48,21 @@ lastupdated: "2019-01-23"
 |管理服务器监视|下订单时不需要此许可权，但需要此许可权来检索和验证实例中运行 VMware ESXi 服务器的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 的监视状态。|
 
 ## 虚拟路由和转发 (VRF) 需求
+{: #slaccountrequirement-vrf}
 
-{{site.data.keyword.cloud_notm}} 基础架构帐户必须是 VRF 帐户，或者如果是非 VRF 帐户，那么必须启用 VLAN 生成。有关将帐户从非 VRF 转换为 VRF 的更多信息，请参阅 [VRF on IBM Cloud 概述](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)。
+{{site.data.keyword.cloud_notm}} 基础架构帐户必须是 VRF 帐户，或者如果是非 VRF 帐户，那么必须启用 VLAN 生成。有关将帐户从非 VRF 转换为 VRF 的更多信息，请参阅 [VRF on IBM Cloud 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)。
 
 ## 非 VRF 帐户的 VLAN 生成
+{: #slaccountrequirement-vlan-spanning}
 
 如果使用的是非 VRF {{site.data.keyword.cloud_notm}} 基础架构帐户，那么必须启用 VLAN 生成。如果非 VRF 帐户未启用 VLAN 生成，那么 VMware 虚拟化环境的各种组件可能无法相互通信。
 
-要启用帐户中的 VLAN 生成，请参阅 [VLAN 生成](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}。
+要启用帐户中的 VLAN 生成，请参阅 [VLAN 生成](/docs/infrastructure/vlans?topic=vlans-vlan-spanning){:new_window}。
 
-### 相关链接
+## 相关链接
+{: #slaccountrequirement-related}
 
-* [Cloud Foundation 实例的需求](/docs/services/vmwaresolutions/sddc/sd_planning.html)
-* [vCenter Server 实例的需求](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
-* [用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)
-* [VRF on IBM Cloud 概述](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)
+* [Cloud Foundation 实例的需求](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
+* [vCenter Server 实例的需求](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
+* [用户帐户和设置](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
+* [VRF on IBM Cloud 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-18"
 
 ---
 
 # VMware Update Manager の概要
+{: #vum-overview}
 
 VMware Update Manager (VUM) は、マルチステージ・プロセスを使用して、vSphere オブジェクトをアップグレードし、パッチや拡張を適用します。 このプロセスにより、最小限のシステム・ダウン時間のスムーズな更新手順が可能になります。 このプロセスを確認する前に、以下の用語を理解しておく必要があります。
 * **インベントリー・オブジェクト** - vCenter 内のオブジェクト (仮想マシン、仮想アプライアンス、vSphere ESXi ホストなど)。
@@ -44,7 +45,9 @@ VUM クライアント・インターフェースには、以下の 2 つのメ�
 *	管理ビュー
 *	コンプライアンス・ビュー
 
-##	管理ビュー
+## 管理ビュー
+{: #vum-overview-admin-view}
+
 管理ビューにアクセスするには、**「Home」**>**「Update Manager」**にナビゲートし、Update Manager インスタンスの IP アドレスを選択します。 管理ビューでは、以下のタスクを実行できます。
 *	Update Manager 設定の構成
 *	ベースラインおよびベースライン・グループの作成と管理
@@ -53,7 +56,9 @@ VUM クライアント・インターフェースには、以下の 2 つのメ�
 *	通知のレビューとチェック
 *	ESXi イメージのインポート
 
-##	コンプライアンス・ビュー
+## コンプライアンス・ビュー
+{: #vum-overview-compliance-view}
+
 選択したインベントリー・オブジェクトのコンプライアンス・ビューにアクセスするには、**「Hosts and Clusters」**または**「VMs and Templates」**にナビゲートして、**「Update Manager」タブ**をクリックします。 Update Manager のコンプライアンス・ビューでは、以下のタスクを実行できます。
 *	選択した各インベントリー・オブジェクトのコンプライアンスおよびスキャン結果の表示
 *	選択したインベントリー・オブジェクトからのベースラインおよびベースライン・グループの添付および切り離し
@@ -61,7 +66,8 @@ VUM クライアント・インターフェースには、以下の 2 つのメ�
 *	ホストへのパッチまたは拡張のステージング
 *	選択したインベントリー・オブジェクトの修復
 
-### 関連リンク
+## 関連リンク
+{: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)

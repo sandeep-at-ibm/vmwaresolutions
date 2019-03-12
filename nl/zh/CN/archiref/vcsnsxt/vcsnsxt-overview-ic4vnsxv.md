@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # NSX-V 概述
+{: #vcsnsxt-overview-ic4vnsxv}
 
 网络虚拟化提供了存在于虚拟层中的网络覆盖。NSX-V 为体系结构提供了快速供应、部署、重新配置和销毁随需应变虚拟网络等功能。此设计使用 vSphere 分布式交换机 (vDS) 和 VMware NSX for vSphere 来实现虚拟联网。
 
@@ -38,6 +39,7 @@ vCPU 数量|4
 随后将部署 NSX Edge 服务网关 (ESG) 对。对于所有部署，都会使用一个网关对来处理位于专用网络中的自动化组件的出站流量。VMware vCenter Server on {{site.data.keyword.cloud_notm}} 实例包含另一个网关（称为客户管理的 Edge），该网关部署并配置为使用上行链路连接到公用网络，还会配置一个分配给专用网络的接口。管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。
 
 ## 分布式交换机设计
+{: #vcsnsxt-overview-ic4vnsxv-distributed-switch}
 
 该设计使用最少数量的虚拟分布式交换机 (vDS)。集群中的主机会连接到公用和专用网络。这些主机均配置有两个虚拟分布式交换机。两个交换机的使用遵循 {{site.data.keyword.cloud_notm}} 中实施的公用和专用网络的物理网络分隔。
 
@@ -88,6 +90,7 @@ SDDC-Dswitch-Private|由 NSX 自动生成|发起虚拟端口|活动：0、1|VLAN
 SDDC-Dswitch-Public|SDDC-DPortGroup-External|发起虚拟端口|活动：0、1|VLAN3
 
 ## NSX-V
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v}
 
 此设计指定 NSX 组件的配置，但不会应用任何网络覆盖组件配置。由客户来决定根据自己的需求设计网络覆盖。
 
@@ -105,6 +108,7 @@ SDDC-Dswitch-Public|SDDC-DPortGroup-External|发起虚拟端口|活动：0、1|V
 -	将 NSX Management 链接到其他 VMware 实例。
 
 ### NSX-V 安全性
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
 
 通过 NSX for vSphere，组织能够将数据中心划分为不同的安全分段，可一直向下划分到单个工作负载的级别，而与运行工作负载的位置无关。IT 团队可以根据应用程序和用户上下文为每个工作负载定义策略，这将确保即时响应数据中心内部的威胁并强制向下实施到应用程序。
 
@@ -120,6 +124,7 @@ SDDC-Dswitch-Public|SDDC-DPortGroup-External|发起虚拟端口|活动：0、1|V
 图 3. NSX-V 安全性
 ![NSX-V 安全性](vcsnsxt-vsecurity.svg)
 
-### 相关链接
+## 相关链接
+{: #vcsnsxt-overview-ic4vnsxv-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

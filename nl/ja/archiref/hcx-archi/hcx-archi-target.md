@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # VMware HCX on IBM Cloud のコンポーネント・レベルのターゲット・アーキテクチャー
+{: #hcx-archi-target}
 
 このセクションでは、IBM Cloud 環境にデプロイされる各 HCX コンポーネントのアーキテクチャーについて説明します。 IBM Cloud 内のスポーク (ターゲット) デプロイメント・モデルについて説明します。
 
 ## NSX Edge
+{: #hcx-archi-target-nsx-edge}
 
 IBM Cloud 内に最初に構成されるコンポーネントは、NSX Edge 仮想マシンのペアです。 すべての IBM Cloud for VMware Solutions デプロイメントで、IBM CloudDriver アウトバウンド通信用にエッジ・デバイスがインストールされ、構成されることは留意すべき重要な点です。 しかし、その ESG をハイブリッド・クラウド・サービス通信に再使用することも可能ですが、新しいペアをデプロイすることをお勧めします。
 
@@ -91,6 +93,7 @@ VMware HCX on IBM Cloud サービスを注文すると、これらの NSX Edge �
 | 最小接続数 (Min Connections) | 0         |
 
 ## HCX Manager
+{: #hcx-archi-target-hcxm}
 
 HCX Manager コンポーネントは、NSX Edge アプライアンスがターゲット上に構成された後、最初にデプロイされるアプライアンスです。 このアプライアンスは、クラウド環境へのメイン・インターフェースとしてソースの各コンポーネントで使用されます。HCX Manager に装備された抽象的なネットワーキング・ユーザー・インターフェースにより、NSX を直接使用することなくネットワークの追加/編集/削除およびルーティングの設計/構成を行うことができます。 vCenter と NSX が統合されるので、HCX Manager アプライアンスには管理 VLAN 上のポータブルなプライベート IP アドレスが割り当てられます。
 
@@ -102,6 +105,7 @@ HCX Manager クラウド・コンポーネントがデプロイされて構成�
 ![ターゲット - ハイブリッド・クラウド・サービス・アプライアンス](target_hybrid_cloud_services_appliance.svg)
 
 ## クラウド・ゲートウェイ
+{: #hcx-archi-target-cloud-gateway}
 
 ソースからターゲット・クラウドへの接続が確立されると、仮想アプライアンスが 1 つデプロイされます。 このアプライアンスが、クラウド・ゲートウェイ (CGW) です。これは、ソースとして指定された vSphere 環境と IBM Cloud の間にセキュアなチャネルを維持するために使用されます。 IBM Cloud 内にデプロイされる CGW アプライアンスのサイズ仕様を「表 8. クラウド・ゲートウェイのデプロイメント」にリストします。
 
@@ -123,6 +127,7 @@ HCX Manager クラウド・コンポーネントがデプロイされて構成�
 ![クラウド・ゲートウェイのデプロイメント](cloud_gateway_deployment.svg)
 
 ## WAN 最適化プログラム
+{: #hcx-archi-target-wan-opt}
 
 2 番目にデプロイされるコンポーネントは、WAN 最適化アプライアンスです。 WAN 最適化アプライアンスはオプションですが、WAN の調整を行って遅延の影響を軽減します。 また、これにはパケット・ロスのシナリオを回避するための Forward Error Correction と、冗長トラフィック・パターンの重複排除も組み込まれています。
 
@@ -142,6 +147,7 @@ HCX Manager クラウド・コンポーネントがデプロイされて構成�
 ![WAN 最適化プログラムのデプロイメント](wan_optimizer_deployment.svg)
 
 ## レイヤー 2 コンセントレーター
+{: #hcx-archi-target-layer-2-conc}
 
 3 番目のコンポーネントは、レイヤー 2 コンセントレーター (L2C) と呼ばれ、ネットワーク拡張サービスの一部です。 L2C は、オンプレミスのデータ・センター・ネットワークを IBM Cloud まで拡張できるようにする仮想マシンです。 L2C は、オンプレミスの VLAN または VXLAN、あるいはその両方を拡張します。 L2C 1 つで最大 4096 個の VLAN を拡張できます。 各 L2C は、オンプレミスのパートナーとペアになり、「1 フロー」あたり最大 1 Gbps、および VLAN (または VXLAN) 1 つあたり合計で最大 4 Gbps を提供できます。 より高いネットワーク・スループットが必要な場合は、追加の L2C アプライアンスをデプロイできます。
 
@@ -160,6 +166,7 @@ L2C アプライアンスは、管理 VLAN にもパブリック VLAN にも存�
 図 4. L2 コンセントレーターのデプロイメント
 ![L2 コンセントレーターのデプロイメント](l2_concentrator_deployment.svg)
 
-### 関連リンク
+## 関連リンク
+{: #hcx-archi-target-related}
 
-* [ソースでのインストールおよび構成](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-source.html)
+* [ソースでのインストールおよび構成](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-source)

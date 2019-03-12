@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server 명세서
+{: #vc_bom}
 
 VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 검토하십시오.
 
 ## vCenter Server 인스턴스에 대한 VLAN BOM
+{: #vc_bom-vlans}
 
 다음 표에는 vCenter Server VLAN에 대한 BOM 정보의 세부사항이 있습니다.
 
@@ -29,6 +31,7 @@ VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 �
 |VLAN3     |사설 B, 포터블 |VMware vSAN에 지정됩니다(사용된 경우).<br><br>VMware NFS에 지정됩니다(사용된 경우).<br><br>VMware vSphere vMotion에 지정됩니다. |
 
 ## vCenter Server 인스턴스에 대한 소프트웨어 BOM
+{: #vc_bom-software}
 
 다음 표에는 vCenter Server 소프트웨어 컴포넌트에 대한 BOM 정보의 세부사항이 있습니다.
 
@@ -47,6 +50,7 @@ VMware vSAN은 선택적 컴포넌트입니다.
 {:note}
 
 ## ESXi 서버의 고급 구성 설정
+{: #vc_bom-esxi-server-advance-config}
 
 ESXi 서버에 적용되는 고급 구성 설정의 개요에 대해서는 아래 표를 검토하십시오. 이러한 설정은 vCenter Server 인스턴스가 V2.2 이상에 배치되는지 또는 V2.1 이하에서 V2.2 이상으로 업그레이드되는지에 따라 달라집니다.
 
@@ -75,6 +79,7 @@ ESXi 서버에 적용되는 고급 구성 설정의 개요에 대해서는 아�
   자세한 정보는 [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239)를 참조하십시오.
 
 ## NSX 및 포트 그룹 구성 설정
+{: #vc_bom-nsx-port-group-config}
 
 다음 표에서 vCenter Server 인스턴스에 대한 VMware NSX 및 포트 그룹 구성 설정의 개요와 릴리스 간의 차이점을 검토하십시오.
 
@@ -93,6 +98,7 @@ ESXi 서버에 적용되는 고급 구성 설정의 개요에 대해서는 아�
 |포트 그룹 SDDC-DPortGroup-External |**포트 바인딩**이 **Ephemeral - 바인딩 없음**으로 설정됨 |**포트 바인딩**이 **정적 바인딩**으로 설정됨 |
 
 ## 네트워크 MTU 구성 설정
+{: #vc_bom-network-mtu-config}
 
 vSphere 클러스터는 두 개의 vDS(vSphere Distributed Switch)를 사용합니다(하나는 공용 네트워크 연결용이고 다른 하나는 사설 네트워크 연결용).
 
@@ -116,19 +122,22 @@ V2.0 이하의 기존 인스턴스 또는 V2.1 이상으로 업그레이드된 �
 V2.0 이하로 배치된 인스턴스의 경우에는 공용 스위치 MTU 설정을 1500으로 업데이트하는 것이 좋습니다.
 
 ### 공용 스위치 MTU 설정 업데이트
+{: #vc_bom-procedure-update-public-switch-mtu-setting}
 
 공용 스위치의 MTU 설정을 업데이트하려면 VMware vSphere Web Client에서 다음 단계를 완료하십시오.
 1. vDS를 마우스 오른쪽 단추로 클릭하고 **설정 편집**을 클릭하십시오.
 2. **특성 탭**에서 **고급** 옵션을 선택하십시오.
 3. **최대 MTU** 값이 1500으로 설정되었는지 확인하십시오.
 
-   **참고:** vDS의 MTU 크기가 변경되면 연결된 업링크(실제 NIC)의 작동이 중지되었다가 재개됩니다. 따라서 해당 업링크를 사용 중인 VM에서 잠시 동안의 가동 중단이 발생합니다. 따라서 MTU 설정 업데이트는 스케줄된 작동 중단 동안 수행하도록 계획하는 것이 좋습니다.
+   vDS의 MTU 크기가 변경되면 연결된 업링크(실제 NIC)의 작동이 중지되었다가 재개됩니다. 따라서 해당 업링크를 사용 중인 VM에서 잠시 동안의 가동 중단이 발생합니다. 따라서 MTU 설정 업데이트는 스케줄된 작동 중단 동안 수행하도록 계획하는 것이 좋습니다.
+   {:note}
 
-### 관련 링크
+## 관련 링크
+{: #vc_bom-related}
 
 * [빌드 번호 및 VMware ESXi와 ESX(2143832)의 버전](https://kb.vmware.com/s/article/2143832)
 * [빌드 번호 및 VMware vCenter Server(2143838)의 버전](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server 인스턴스 계획](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [vCenter Server 인스턴스 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

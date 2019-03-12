@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 將 Stock Trader VM 提昇及轉移至 IBM Cloud
+{: #vcscontent-hcx}
+
 Todd 想要將其內部部署 VMware SDDC 實例無縫延伸到 VMware vCenter Server on {{site.data.keyword.cloud}}，以作為其現代化旅程中的第一個步驟。企業必須持續啟動及執行，而且關閉時間必須保持最低。
 
 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 能夠在 vCenter Server 實例與內部部署 VMware 虛擬化資料中心之間建立無縫連線。
@@ -32,6 +34,7 @@ Hybridity 會建立內部部署與 {{site.data.keyword.cloud_notm}} 之間的鬆
 
 Todd 可以將 Stock Trader 從其內部部署 VMware 環境移轉至 VMware on {{site.data.keyword.cloud_notm}} 環境，並滿足極短或沒有任何關閉時間且不需重新配置應用程式的需求。
 
-### 相關鏈結
+## 相關鏈結
+{: #vcscontent-hcx-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

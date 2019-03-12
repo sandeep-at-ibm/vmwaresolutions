@@ -4,17 +4,20 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # 次要 vCenter Server 系統未出現在 vSphere Web Client 庫存中
+{: #trbl_sec_inst_not_visible}
 
 ## 問題
+{: #trbl_sec_inst_not_visible-problem}
 
 在多站台配置中，當您新增次要實例之後，並登入先前所訂購實例的 VMware vSphere Web Client 時，它的 vCenter Server 系統並未出現。
 
 ## 解決方法
+{: #trbl_sec_inst_not_visible-resolution}
 
 這是 VMware 6.5 已知問題。
 

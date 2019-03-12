@@ -4,17 +4,19 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # 管理 Veeam on IBM Cloud
+{: #managingveeam}
 
 將服務部署至實例之後，您可以使用 RDP 來存取 Veeam 主控台，以管理環境中所有虛擬機器的備份及還原（包括管理元件的備份及還原）。您也可以從 Veeam 網站下載並安裝 Veeam 更新，以升級服務。
 
 針對 1.8 版之前版本中所部署的實例，如果您要使用 Veeam on {{site.data.keyword.cloud}} 服務，則必須取代實例中的現有 Veeam VSI。如需相關資訊，請參閱_將 1.8 版之前的實例的 Veeam VSI 取代為 Veeam on IBM Cloud_ 小節。
 
 ## 使用 RDP 來存取 Veeam 主控台
+{: #managingveeam-accessing}
 
 若要管理 Veeam on {{site.data.keyword.cloud_notm}} 服務，請完成下列步驟來存取 Veeam 主控台：
 1. 使用「遠端桌面通訊協定 (RDP)」，可以連接至 Windows IP 位址。
@@ -24,40 +26,48 @@ lastupdated: "2019-01-24"
 您可以在 Veeam on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上找到 Windows IP 位址及「管理者」認證。
 
 如需相關資訊，請參閱下列主題：
-* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 
 ## 備份及還原已安裝 Veeam on IBM Cloud 之實例的管理元件
+{: #managing-veeam-backup-and-replication}
 
-Veeam on {{site.data.keyword.cloud_notm}} 服務可以配置成使用 Veeam 主控台來備份管理元件。如需相關資訊，請參閱[備份元件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)。
+Veeam on {{site.data.keyword.cloud_notm}} 服務可以配置成使用 Veeam 主控台來備份管理元件。如需相關資訊，請參閱[備份元件](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)。
 
 對於部署在（或升級至）1.8 版或更新版本的實例，不會自動備份環境的配置變更。因此，在變更環境的配置之前，建議您在 Veeam 主控台中執行管理備份工作，以手動備份管理元件。如需手動備份的相關資訊，請參閱 [Veeam 技術指示](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}。
 
 管理元件失敗時，您可以使用 Veeam 主控台將管理元件還原至先前備份。如需手動還原的相關資訊，請參閱 [Veeam 技術指示]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:new_window}。
 
 ## 將更新套用至 Veeam on IBM Cloud
+{: #managingveeam-updates}
 
 您負責維護 Veeam 軟體，以保持更新至最新版本。
 
 ### 針對已部署公用和專用網路的實例套用更新
+{: #managingveeam-updates-public-private}
 
 如果 Veeam 服務安裝在具有公用和專用網路的實例上，您可以使用 Veeam 軟體本身來檢查及下載更新項目。
 
 ### 針對只部署專用網路的實例套用更新
+{: #managingveeam-updates-private}
 
 如果 Veeam 服務安裝在只有專用網路的實例上，則因為 Veeam VSI 未配置任何公用網路存取權，所以您無法使用 Veeam 軟體本身來檢查或下載更新項目。您只能從 Veeam 網站下載更新項目，將其傳送至 Veeam VM，然後再加以安裝。
 
 ## 更新 Veeam 授權
+{: #managingveeam-update-license}
 
 ### 針對已部署公用和專用網路的實例更新 Veeam 授權
+{: #managingveeam-update-license-public-private}
 
 如果 Veeam 服務安裝在具有公用和專用網路的實例上，您可以遵循[更新授權]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html)的 Veeam 指示，自動或手動更新您的 Veeam 授權。
 
 ### 針對只部署專用網路的實例更新 Veeam 授權
+{: #managingveeam-update-license-private}
 
-如果 Veeam 服務安裝在只有專用網路的實例上，您必須記下授權到期日，並在需要更新時，[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)，以協助您更新授權碼。
+如果 Veeam 服務安裝在只有專用網路的實例上，您必須記下授權到期日，並在需要更新時，[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)，以協助您更新授權碼。
 
 ## 將 1.8 版之前的實例的 Veeam VSI 取代為 Veeam on IBM Cloud
+{: #managingveeam-replace-vsi}
 
 Veeam on {{site.data.keyword.cloud_notm}} 服務可以備份管理元件及工作負載，並取代舊版 Veeam VSI，而其已整合至 1.8 版之前版本中的 VMware Cloud Foundation 及 VMware vCenter Server，並且僅用於備份管理元件。
 
@@ -73,10 +83,11 @@ Veeam on {{site.data.keyword.cloud_notm}} 服務可以備份管理元件及工�
 
 部署新的 Veeam on {{site.data.keyword.cloud_notm}} 服務並完成您管理元件的成功備份之後，即可建立 {{site.data.keyword.cloud_notm}} 支援問題單，以從您的帳戶移除現有 Veeam VSI。「IBM 支援中心」會識別並刪除現有 Veeam VSI 及儲存空間。
 
-### 相關鏈結
+## 相關鏈結
+{: #managingveeam-related}
 
-* [Veeam on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/veeam_considerations.html)
-* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Veeam.com 網站](https://www.veeam.com/)
 * [Veeam 技術文件](https://www.veeam.com/documentation-guides-datasheets.html)

@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-08-30"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-08-30"
 {:important: .important}
 
 # V2.5 发行说明
+{: #relnotes_v25}
 
 此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
@@ -24,11 +25,11 @@ lastupdated: "2018-08-30"
 * CVEID：[CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID：[CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-有关更多信息，请参阅[解决 Spectre 和 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)。
+有关更多信息，请参阅[解决 Spectre 和 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)。
 
 ## NSX 组件更新
 
-此发行版安装了 VMware NSX for vSphere 6.4.1，以用于 VMware vCenter Server on {{site.data.keyword.cloud_notm}}、VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle、NetApp ONTAP Select 和 VMware Federal on {{site.data.keyword.cloud_notm}} 的新部署。
+此发行版会安装 VMware NSX for vSphere 6.4.1，以用于 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 与带有 Hybridity Bundle 和 NetApp ONTAP Select 的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的新部署。
 
 ## 除去了缺省备份配置
 
@@ -36,7 +37,7 @@ lastupdated: "2018-08-30"
 
 从 V2.5 发行版开始，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 和 Veeam on {{site.data.keyword.cloud_notm}} 服务在部署时，不再预先配置任何 VM 的备份。此更改可确保您能够正确配置备份作业的所有方面，包括安排计划、设置保留期、使用去重功能、监视和警报以及管理加密密钥。此外，IBM CloudDriver VM 不再配置为 NSX 备份的持久文件服务器。
 
-您负责所有软件组件的配置、管理和监视，包括管理基础架构和工作负载的备份和可用性。有关更多信息，请参阅[备份组件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#backing-up-components)。
+您负责所有软件组件的配置、管理和监视，包括管理基础架构和工作负载的备份和可用性。有关更多信息，请参阅[备份组件](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#backing-up-components)。
 
 此更改不会影响已安装 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 服务且在 V2.5 之前部署的实例。
 {:note}
@@ -55,8 +56,8 @@ lastupdated: "2018-08-30"
 * 对于部署在 V2.4 和前发行版中的实例，可以将其迁移到指定的 {{site.data.keyword.cloud_notm}} 帐户，然后同样使用 IAM 来管理这些实例。
 
 有关更多信息，请参阅以下主题：
-* [邀请用户访问服务和资源](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
-* [使用 IAM 管理用户访问权](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [邀请用户访问服务和资源](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
+* [使用 IAM 管理用户访问权](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
 
 ## 更改了 VMware vCenter Server 和 VMware Cloud Foundation 实例的用户帐户和组
 
@@ -70,8 +71,8 @@ lastupdated: "2018-08-30"
 
 有关用户帐户的更多信息，请参阅以下主题：
 
-* [关于更改 vCenter Server 工件的注意事项](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
-* [关于更改 Cloud Foundation 工件的注意事项](/docs/services/vmwaresolutions/sddc/cf_chg_impact.html)
+* [关于更改 vCenter Server 工件的注意事项](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)
+* [关于更改 Cloud Foundation 工件的注意事项](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cf_chg_impact)
 
 ## 对附加组件服务的更新
 
@@ -99,7 +100,7 @@ lastupdated: "2018-08-30"
 
 ### 连接的存储器文档
 
-现在，用户文档的*参考*部分中提供了“vCenter Server on IBM Cloud 的连接存储器”技术文档。有关更多信息，请参阅 [vCenter Server on IBM Cloud 的连接存储器](/docs/services/vmwaresolutions/archiref/attached-storage/storage-benefits.html)。
+现在，用户文档的*参考*部分中提供了“vCenter Server on IBM Cloud 的连接存储器”技术文档。有关更多信息，请参阅 [vCenter Server on IBM Cloud 的连接存储器](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits)。
 
 ### 技术规范
 
@@ -111,9 +112,9 @@ lastupdated: "2018-08-30"
 
 有关更多信息，请参阅以下主题：
 
-* [可用于 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
-* [vCenter Server with Hybridity Bundle 实例的可用服务](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [可用于 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
+* [可用于 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)
+* [vCenter Server with Hybridity Bundle 实例的可用服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [可用于 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices#available-services-for-cloud-foundation-instances)
 
 ## 用户界面更新和增强功能
 

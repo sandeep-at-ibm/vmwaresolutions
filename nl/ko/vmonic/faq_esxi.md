@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,19 +14,21 @@ lastupdated: "2019-01-23"
 {:faq: data-hd-content-type='faq'}
 
 # ESXi 서버에 대한 FAQ
+{: #faq_esxi}
 
 {{site.data.keyword.vmwaresolutions_full}} 콘솔에서 관리되는 ESXi 서버에 대한 자주 묻는 질문의 답을 찾으십시오.
 
 ## 몇 개의 ESXi 서버를 내 인스턴스에 추가할 수 있습니까?
-{: faq}
+{: #faq_esxi-instance}
 
 * vCenter Server 인스턴스의 경우, 최대 51개의 ESXi 서버를 보유하도록 기본 클러스터를 확장할 수 있습니다. 기본이 아닌 각 클러스터는 최대 59개의 ESXi 서버를 보유하도록 확장할 수 있습니다. 최대 10개의 클러스터를 인스턴스에 추가할 수 있으므로 모든 클러스터의 각 배치된 인스턴스에는 최대 51 + 9x59 = 582개의 ESXi 서버가 있을 수 있습니다.
 * Cloud Foundation 인스턴스의 경우, 표준 구성에 네 개의 ESXi 서버가 있습니다. 최대 28개의 서버를(총 32개의 서버에) 추가할 수 있습니다. 다중 사이트 구성에 있는 Cloud Foundation 인스턴스의 경우, 모든 인스턴스에 최대 128개의 ESXi 서버를 보유할 수 있습니다.
 
-  Cloud Foundation 구성에서 128개를 초과하는 ESXi 서버가 포함된 다중 사이트 배치가 필요한 경우 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)하여 도움을 받으십시오.
+  Cloud Foundation 구성에서 128개를 초과하는 ESXi 서버가 포함된 다중 사이트 배치가 필요한 경우 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)하여 도움을 받으십시오.
   {:note}
 
 ## 몇 개의 ESXi 서버를 클러스터에 추가할 수 있습니까?
+{: #faq_esxi-cluster}
 
 V2.2 이상에 배치된 인스턴스의 경우, 최대 51개의 ESXi 서버를 초기 클러스터에 추가하고 최대 59개의 ESXi 서버를 추가된 클러스터에 추가할 수 있습니다.
 
@@ -43,6 +45,7 @@ V2.1 이전에 배치된 인스턴스의 경우, 필요한 vSAN 지원을 사용
 4. IBM 지원 센터 티켓을 열어 1 - 3단계를 완료하여 vSAN 변경사항을 수동으로 적용했음을 표시하십시오. 티켓에서 업그레이드된 인스턴스가 32개가 넘는 ESXi 서버에 사용되도록 요청하십시오.
 
 ## ESXi 서버 이름 및 IP 주소를 변경할 수 있습니까?
+{: #faq_esxi-change-name-ip}
 
 ESXi 서버 이름 및 IP 주소는 Windows DNS 해석을 위해 등록되었으므로 변경할 수 없습니다. 변경하면 배치 중에 실패가 발생하거나 vCenter Server 기능의 실패가 발생할 수 있습니다.
 
@@ -50,6 +53,7 @@ ESXi 서버 이름 및 IP 주소는 Windows DNS 해석을 위해 등록되었으
 {:note}
 
 ## ESXi 서버에 루트 액세스를 사용 안함으로 설정할 수 있습니까?
+{: #faq_esxi-disable-root}
 
 ESXi 서버에서 루트 액세스가 계속해서 사용으로 설정되는 것이 좋습니다. 그렇지 않으면 {{site.data.keyword.vmwaresolutions_short}} 기능의 실패가 발생할 수 있습니다.
 
@@ -58,16 +62,18 @@ ESXi 서버에서 루트 액세스가 계속해서 사용으로 설정되는 것
 후속 자동화 오퍼레이션(예: 파일 공유를 추가하거나 제거하는 경우 또는 Zerto on {{site.data.keyword.cloud_notm}}와 같은 추가 기능 서비스를 설치하는 경우)에 대한 루트 액세스를 다시 사용으로 설정해야 합니다.
 
 ## 다른 위치에서 스토리지를 마운트하도록 내 ESXi 서버에서 정적 라우트를 추가할 수 있습니까?
+{: #faq_esxi-static-routes}
 
 스토리지에 맞는 정적 라우트를 추가할 수 있지만 주의하여 수행해야 합니다. 그렇지 않으면 기존 공유가 마운트 해제될 수 있습니다.
 
 vMotion에 대한 정적 라우트 추가는 지원되지 않습니다. vMotion 서브넷 구성을 변경하면 {{site.data.keyword.vmwaresolutions_short}} 기능의 실패가 발생할 수 있습니다.
 {:note}
 
-### 관련 링크
+## 관련 링크
+{: #faq_esxi-related}
 
-* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
-* [Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
-* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

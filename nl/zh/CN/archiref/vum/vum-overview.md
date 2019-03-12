@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-18"
 
 ---
 
 # VMware Update Manager 概述
+{: #vum-overview}
 
 VMware Update Manager (VUM) 使用多阶段过程来升级 vSphere 对象以及应用补丁或扩展。通过此过程，能以最少的系统停机时间顺利更新。在查看此过程之前，需要先了解以下术语：
 * **库存对象** - vCenter 中的对象，例如虚拟机、虚拟设备或 vSphere ESXi 主机。
@@ -44,7 +45,9 @@ VUM 客户机界面提供了两个主视图：
 *	管理视图
 *	一致性视图
 
-##	管理视图
+## 管理视图
+{: #vum-overview-admin-view}
+
 “管理”视图可通过浏览至**主页** > **Update Manager**，然后选择 Update Manager 实例的 IP 地址进行访问。在“管理”视图中，可以执行以下任务：
 *	配置 Update Manager 设置
 *	创建和管理基线与基线组
@@ -53,7 +56,9 @@ VUM 客户机界面提供了两个主视图：
 *	查看和检查通知
 *	导入 ESXi 映像
 
-##	一致性视图
+## 一致性视图
+{: #vum-overview-compliance-view}
+
 所选库存对象的“一致性”视图可通过浏览至**主机和集群**或 **VM 和模板**，然后单击 **Update Manager** 选项卡进行访问。在 Update Manager 的“一致性”视图中，可以执行以下任务：
 *	查看每个所选库存对象的一致性和扫描结果
 *	将基线和基线组连接到所选库存对象，以及从所选库存对象拆离基线和基线组
@@ -61,7 +66,8 @@ VUM 客户机界面提供了两个主视图：
 *	将补丁或扩展编译打包到主机
 *	修复所选库存对象
 
-### 相关链接
+## 相关链接
+{: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）

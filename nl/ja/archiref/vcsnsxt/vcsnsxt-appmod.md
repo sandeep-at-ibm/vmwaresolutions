@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # アプリケーション・モダナイゼーションの概要
+{: #vcsnsxt-appmod}
 
 以下の図は、Acme Skateboards 社がデプロイするアプリケーション・モダナイゼーションのリファレンス・アーキテクチャーを示しており、この文書シリーズで詳しく説明されています。
 
@@ -36,6 +37,7 @@ lastupdated: "2019-01-23"
   - オンプレミス・データ・センター内のレガシー・システムとクラウド VM との間のトラフィック。
 
 ## Acme Skateboards 社にとっての主な利点
+{: #vcsnsxt-appmod-benefits}
 
 - リソースの調達、設計、実装、デプロイメントに数週間から数カ月もかかっていた時間を数時間に短縮し、IT プロジェクトが開発者および基幹業務に迅速にデリバリーされます。 ロード・バランサー、ファイアウォール、スイッチ、ルーターなどのサービスをネットワーキング・チームやセキュリティー・チームが注文するまで待たなければならないとしたら、アプリケーションの時間対価値は下がってしまいます。
 - ホステッド・プライベート・クラウドの専用ベアメタル・サーバーでセキュリティーが強化されます。{{site.data.keyword.containerlong_notm}} や KMIP などの {{site.data.keyword.cloud_notm}} サービスへのプライベート・エンドポイントのデプロイメントを含みます。
@@ -46,6 +48,7 @@ lastupdated: "2019-01-23"
 
 このリファレンス・アーキテクチャーでは、VCS、{{site.data.keyword.icpfull_notm}}、{{site.data.keyword.containerlong_notm}} を利用して Acme Skateboards 社のアプリケーション・モダナイゼーション・ジャーニーを安全に進めていく方法を示します。
 
-### 関連リンク
+## 関連リンク
+{: #vcsnsxt-appmod-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

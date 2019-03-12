@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-02-15"
 
 ---
 
 # HCX の用語集
+{: #hcx_glossary}
 
 この用語集には、VMware HCX on {{site.data.keyword.cloud}} サービスに関連する用語の定義が記載されています。
 
@@ -20,6 +21,7 @@ lastupdated: "2018-11-08"
 * **HCX Manager Admin Console**: これは、サービスの開始と停止やサポート・ログの収集など、管理の目的で HCX アプライアンスを管理するためのユーザー・インターフェースです。
 * **HCX Cloud Console**: これは、仮想データ・センターや災害復旧など、クラウド・サイドの HCX 機能を構成するためのユーザー・インターフェースです。
 
-### 関連リンク
+## 関連リンク
+{: #hcx_glossary-related}
 
 * [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)

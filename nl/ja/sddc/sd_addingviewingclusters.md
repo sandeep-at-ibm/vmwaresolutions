@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Cloud Foundation インスタンスのクラスターの追加、表示、削除
+{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
 
 インスタンスの注文時に構成した ESXi サーバーは、デフォルトのクラスターの下にグループ化されます。 デフォルトのクラスター名は次のとおりです。
 * V2.1 以降のリリースでデプロイされたインスタンスの場合: **MGMT-Cluster-`<subdomain_label>`**
@@ -21,19 +22,23 @@ lastupdated: "2019-01-24"
 VMware Cloud Foundation インスタンスに独自のクラスターを追加して、コンピュート能力やストレージ容量を拡張できます。 クラスター内で ESXi サーバーを管理すると、リソース割り振りを改善したり高可用性を実現したりできます。 不要になった場合は、追加したクラスターをインスタンスから削除できます。
 
 ## 可用性
+{: #sd_addingviewingclusters-availability}
 
 * クラスターの追加機能は、V2.0 以降のリリースでデプロイ (または V2.0 以降のリリースにアップグレード) されたインスタンスでのみ利用できます。
 * クラスターの削除機能は、V2.3 以降のリリースでデプロイ (または V2.3 以降のリリースにアップグレード) されたインスタンスでのみ利用できます。  
 
 ## Cloud Foundation インスタンスへのクラスターの追加
+{: #sd_addingviewingclusters-adding}
 
 1 つの Cloud Foundation インスタンスに最大 5 つのクラスターを追加できます。
 
 ### システム設定
+{: #sd_addingviewingclusters-adding-sys-settings}
 
 Cloud Foundation インスタンスにクラスターを追加するときには、以下の設定を指定する必要があります。
 
 #### クラスター名
+{: #sd_addingviewingclusters-adding-cluster-name}
 
 クラスター名は、以下の要件を満たしている必要があります。
 * 英数字とダッシュ (-) の文字だけを使用できます。
@@ -42,6 +47,7 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 * クラスター名は、Cloud Foundation インスタンス内で固有でなければなりません。
 
 #### データ・センターの場所
+{: #sd_addingviewingclusters-adding-dc-location}
 
 クラスターの {{site.data.keyword.CloudDataCent}}の場所は、デフォルトでは Cloud Foundation インスタンスの {{site.data.keyword.CloudDataCent_notm}}に設定されます。 デプロイ済みのインスタンスとは異なる {{site.data.keyword.CloudDataCent_notm}}にクラスターをデプロイできますが、それら 2 カ所の {{site.data.keyword.CloudDataCents_notm}}間のネットワーク待ち時間が、150 ms 未満になるようにしてください。 ネットワーク待ち時間を確認するには、[SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} などのツールを使用できます。
 
@@ -50,10 +56,12 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 クラスターを別のデータ・センターまたはポッドにデプロイする場合は、注文した{{site.data.keyword.baremetal_short}}で使用するためにさらに 3 つの VLAN を注文します。
 
 ### ベア・メタル・サーバーの設定
+{: #sd_addingviewingclusters-adding-bare-metal-settings}
 
 **「Skylake」**または**「Broadwell」**のいずれかを選択できます。
 
 #### Skylake
+{: #sd_addingviewingclusters-adding-skylake}
 
 **「Skylake」**設定の場合、**「CPU モデル」**と**「RAM」**には複数のオプションがあります。 利用できるオプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
 
@@ -66,6 +74,7 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 #### Broadwell
+{: #sd_addingviewingclusters-adding-broadwell}
 
 **「Broadwell」**設定の場合、**「CPU モデル」**と**「RAM」**には複数のオプションがあります。 利用できるオプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
 
@@ -80,6 +89,7 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.2 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 ### vSAN ストレージ設定
+{: #sd_addingviewingclusters-adding-vsan-storage-settings}
 
 **「Skylake」**および**「Broadwell」**ベアメタル・サーバー構成の場合は、以下の設定を指定して vSAN ストレージをカスタマイズできます。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
@@ -92,12 +102,14 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
 
 ### ライセンス交付の設定
+{: #sd_addingviewingclusters-adding-licensing-settings}
 
 クラスター内の VMware コンポーネント (VMware vSphere と VMware vSAN を含む) のライセンス・オプションを指定できます。
 * IBM ビジネス・パートナーであるユーザーの場合、vSphere ライセンス (Enterprise Plus エディション) と vSAN ライセンスが自動的に含められて購入されます。 ただし、vSAN ライセンスのエディションは指定する必要があります。
 * IBM ビジネス・パートナーでないユーザーの場合、**「購入に含める (Include with purchase)」**を選択してコンポーネントに IBM 提供 VMware ライセンスを使用することも、**「自分で提供する (I will provide)」**を選択し、所有するライセンス・キーを入力してライセンス持ち込み (BYOL) を適用することもできます。
 
 ## Cloud Foundation インスタンスにクラスターを追加する手順
+{: #sd_addingviewingclusters-adding-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「Cloud Foundation インスタンス」**テーブルで、クラスターを追加するインスタンスをクリックします。
@@ -124,6 +136,7 @@ Cloud Foundation インスタンスにクラスターを追加するときには
    4. **「プロビジョン」**をクリックします。
 
 ### Cloud Foundation インスタンスにクラスターを追加した結果
+{: #sd_addingviewingclusters-adding-results}
 
 1. クラスターのデプロイメントが自動的に開始され、クラスターの状況が**「初期化中」**に変更されます。 デプロイメントの状況を、インスタンスのサマリー・ページでデプロイメント履歴を参照して確認できます。
 2. クラスターを使用する準備ができると、状況が**「使用可能」**に変更されます。 新しく追加されたクラスターで、vSphere High Availability (HA) と vSphere Distributed Resource Scheduler (DRS) が有効になります。
@@ -132,6 +145,7 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 {:important}
 
 ## Cloud Foundation インスタンスでクラスターを表示する手順
+{: #sd_addingviewingclusters-viewing-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「Cloud Foundation インスタンス」**テーブルで、クラスターを表示するインスタンスをクリックします。
@@ -187,10 +201,12 @@ Cloud Foundation インスタンスにクラスターを追加するときには
        * **空きキャパシティー (CPU)**: ライセンスで使用できるキャパシティー。
 
 ## Cloud Foundation インスタンスからのクラスターの削除
+{: #sd_addingviewingclusters-deleting}
 
 不要になったクラスターをインスタンスから削除したい場合があります。
 
 ### 削除する前に
+{: #sd_addingviewingclusters-deleting-prereq}
 
 * この手順を使用して、V2.3 以降のリリースでデプロイされたインスタンスからクラスターを削除できます。
 * V2.2 以前のインスタンスでデプロイしたクラスターの場合に、インスタンスに追加したクラスターを削除するには、インスタンスを V2.3 にアップグレードする必要があります。
@@ -200,6 +216,7 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 * デフォルトのクラスターは削除できません。
 
 ## Cloud Foundation インスタンスからクラスターを削除する手順
+{: #sd_addingviewingclusters-deleting-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「Cloud Foundation インスタンス」**テーブルで、クラスターを削除するインスタンスをクリックします。
@@ -210,7 +227,8 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。 **「クラスター」**テーブルで、削除するクラスターを見つけて**「削除」**アイコンをクリックします。
 4. 他のクラスターに VM を移行する場合は、その移行が完了したことを確認し、クラスターを削除することを確認します。
 
-### 関連リンク
+## 関連リンク
+{: #sd_addingviewingclusters-related}
 
-* [Cloud Foundation インスタンスの表示](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Cloud Foundation インスタンスの表示](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)

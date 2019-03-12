@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # VMware HCX on IBM Cloud 端口访问需求
+{: #hcx-archi-port-req}
 
 HCX 必须遍历公用因特网和专用线路，并连接到数据中心组件，例如网络、交换机和端口组。
 
@@ -39,6 +40,7 @@ HCX 必须遍历公用因特网和专用线路，并连接到数据中心组件�
 |云网关（本地）|云网关</br>（远程）|4500|UDP|因特网密钥交换 (IKEv2)，用于封装双向隧道的工作负载|IPSEC|
 |云网关（本地）|云网关</br>（远程）|500|UDP|用于双向隧道的因特网密钥交换 (ISAKMP)|IPSEC|
 
-### 相关链接
+## 相关链接
+{: #hcx-archi-port-req-related}
 
-* [在源上安装和配置 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
+* [在源上安装和配置 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)

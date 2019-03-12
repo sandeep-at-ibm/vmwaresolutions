@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-30"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2018-11-30"
 {:important: .important}
 
 # Zerto on IBM Cloud 的移除處理程序
+{: #removingzertodr}
 
 自動化 Zerto on {{site.data.keyword.cloud}} 服務的移除處理程序。請完成下列步驟，以順利移除 Zerto on {{site.data.keyword.cloud_notm}} 服務。
 
 ## 如何移除 Zerto on IBM Cloud
+{: #removingzertodr-remove}
 
 1. 從左導覽窗格中，按一下**已部署的實例**，然後按一下您要從中移除服務的實例。
 2. 按一下**服務**標籤。
@@ -33,10 +35,12 @@ lastupdated: "2018-11-30"
       {:note}
 
 ## 結果
+{: #removingzertodr-results}
 
 順利完成服務移除之後，會透過電子郵件通知您，而且會從**已安裝的服務**標籤刪除服務項目。
 
-### 相關鏈結
+## 相關鏈結
+{: #removingzertodr-related}
 
 * [訂購 Zerto on {{site.data.keyword.cloud_notm}}](zerto_ordering.html)
 * [管理 Zerto on {{site.data.keyword.cloud_notm}}](managingzertodr.html)

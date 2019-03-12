@@ -4,21 +4,23 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # 備份元件
+{: #solution_backingup}
 
 您負責配置、管理及監視所有軟體元件（包括管理基礎架構及工作負載的備份和可用性）。
 
 在解決方案當中，您可以選擇部署 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 附加程式服務。Veeam 及 IBM Spectrum Protect Plus 可協助您滿足備份管理元件的需求。
 
-這些附加程式服務會與「{{site.data.keyword.cloud_notm}} 耐久性」儲存空間一起部署。這些服務可協助您備份工作負載及管理元件。[IBM Spectrum Protect Plus architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} 及 [Veeam architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} 提供有關規劃及調整部署大小的有用指引。您也可以要求[受管理服務](/docs/services/vmwaresolutions/services/managing_veeam_services.html)以進行 Veeam 部署。
+這些附加程式服務會與「{{site.data.keyword.cloud_notm}} 耐久性」儲存空間一起部署。這些服務可協助您備份工作負載及管理元件。[IBM Spectrum Protect Plus architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} 及 [Veeam architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} 提供有關規劃及調整部署大小的有用指引。您也可以要求[受管理服務](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)以進行 Veeam 部署。
 
 不同的解決方案元件需要不同的備份策略。部分元件是使用映像檔層次備份進行保護，其他元件的保護則是針對其配置及資料使用檔案型備份。
 
 ## 檔案型備份用的檔案伺服器
+{: #solution_backingup-fileserver-backup}
 
 部分元件（例如 VMware vCenter Server、Platform Services Controller (PSC) 及 VMware NSX）需要將其配置備份至檔案伺服器。
 
@@ -31,6 +33,7 @@ lastupdated: "2019-01-24"
 5. 確定此 VM 包含在您的 Veeam 或 IBM Spectrum Protect Plus 管理備份工作中。
 
 ## vCenter 檔案型備份
+{: #solution_backingup-vcenter}
 
 VMware vCenter Server 及 PSC 提供[應用裝置管理使用者介面及 API，以便使用各種通訊協定將資料庫及配置匯出至檔案伺服器](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window}。VMware 記載了如何將此作業配置成直接在 vCenter Server Appliance 及 PSC 上[以 Cron 工作的方式定期執行](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window}，且您可以針對用途進行調整的範例。
 
@@ -40,10 +43,12 @@ VMware 需要備份位置是空的資料夾，因此，請規劃備份輪替或�
 {:note}
 
 ## NSX 檔案型備份
+{: #solution_backingup-nsx}
 
 發生故障時，所有 NSX 元件的適當備份對於將系統還原到工作狀態而言十分重要。此設計需要您透過 NSX Manager 備份功能來配置 NSX 備份。基於此目的，您可以[配置 NSX Manager 定期執行備份](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}至檔案伺服器。請確定正確地備份您的檔案伺服器或其資料，並確定輪替舊的 NSX 備份。
 
 ## 管理虛擬機器的映像檔型備份
+{: #solution_backingup-image}
 
 部署實例並部署 IBM Spectrum Protect Plus 服務或 Veeam 備份服務之後，請配置管理虛擬機器的備份工作。請規劃備份下列 VM，至少要有 7 天的每日備份：
 
@@ -54,6 +59,7 @@ VMware 需要備份位置是空的資料夾，因此，請規劃備份輪替或�
 規劃配置足夠的 Veeam 或 IBM Spectrum Protect Plus 授權來備份這些虛擬機器，並為 VM 規劃至少 2 TB 的備份儲存空間。
 
 ## 附加服務               
+{: #solution_backingup-addons}
 
 如果您將附加程式解決方案元件部署至實例，則也應該規劃這些元件的備份，作為管理備份策略的一部分：
 
@@ -64,12 +70,14 @@ VMware 需要備份位置是空的資料夾，因此，請規劃備份輪替或�
 * VMware HCX：HCX 應用裝置管理介面容許您建立及下載與 vCenter Server Appliance 類似的 HCX 管理程式配置檔案型備份。
 
 ## 其他考量
+{: #solution_backingup-considerations}
 
 如果您選擇將 AD/DNS 伺服器部署為 {{site.data.keyword.cloud_notm}} 虛擬伺服器實例 (VSI)，則無法使用 Veeam 或 IBM Spectrum Protect Plus 進行備份。在此情況下，請使用偏好的 Windows 備份解決方案來進行備份及還原作業，或規劃使用 VMware 叢集內的 AD/DNS VM 來部署實例，如此便可藉由 Veeam 或 IBM Spectrum Protect Plus 進行備份。
 
 從 VMware vCenter 6.5u2 開始，VMware 支援使用映像檔型備份來備份 vCenter Postgres 資料庫，並且在備份時間範圍期間可以使用資料庫的整合式暫停及繼續 Script，以確保資料庫完整性。如果您將 VMware 實例升級至 vCenter 6.5u2，則可以選擇使用 Veeam 或 IBM Spectrum Protect Plus 來備份 vCenter Server 及 PSC，而不使用檔案型備份。如果您這麼做，則必須使用 Veeam 或 IBM Spectrum Protect Plus 靜止特性，以確保資料庫完整性。
 
 ## 從備份還原
+{: #solution_backingup-restore}
 
 當您還原管理備份時，有數個特殊考量：
 
@@ -80,11 +88,13 @@ VMware 需要備份位置是空的資料夾，因此，請規劃備份輪替或�
 * 確定您充分瞭解 vCenter 備份及還原的 VMware 考量和限制。
 
 ## 摘要 
+{: #solution_backingup-summary}
 
 經過適當的規劃，您可以確保 VMware 實例能夠承受遺失其管理元件，並順利回復。請務必定期監視備份工作的成功執行，以及備份資料的可用性，並且務必針對您的管理基礎架構及工作負載定期測試備份及還原方案。
 
-### 相關鏈結
+## 相關鏈結
+{: #solution_backingup-related}
 
-* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [設計概觀](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [調整容量](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
+* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [設計概觀](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [調整容量](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)

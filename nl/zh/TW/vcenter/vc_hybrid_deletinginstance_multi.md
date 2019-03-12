@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 刪除多站台配置中的 vCenter Server with Hybridity Bundle 實例
+{: #vc_hybrid_deletinginstance_multi}
 
 您需要先知道一些特殊考量，才能規劃刪除屬於多站台配置一部分的 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 實例。
 
@@ -30,6 +31,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## 刪除多站台配置中的 vCenter Server with Hybridity Bundle 實例的程序
+{: #vc_hybrid_deletinginstance_multi-procedure}
 
 1. 從次要 vCenter Server with Hybridity Bundle 實例移除所有服務。
 2. 確定您未將任何 NSX 物件擴充至要刪除的次要實例。
@@ -39,7 +41,8 @@ lastupdated: "2019-01-23"
 6. 針對多站台配置中的所有次要 vCenter Server with Hybridity Bundle 實例，重複步驟 1 - 5。
 7. 刪除所有次要實例之後，您也可以從 {{site.data.keyword.vmwaresolutions_short}} 主控台刪除主要實例。
 
-### 相關鏈結
+## 相關鏈結
+{: #vc_hybrid_deletinginstance_multi-related}
 
-* [刪除 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
-* [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [刪除 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)
+* [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)

@@ -127,11 +127,11 @@ DB 데이터 및 디지털 매체와 같이 압축 불가능 데이터를
 동시에 진행될 수 있으므로 vMotion 마이그레이션보다
 대역폭을 많이 사용합니다. ESX 호스트에 1Gbps vMotion 링크가 되어 있는
 고객 측에서 관찰된 비율은 8개의 복제 = 1 vMotion의 대역폭
-사용입니다. 
+사용입니다.
 - 디스크에서 비어 있는 공간을 이동하면 높은 비율의
 높은 LAN 사용이 표시되므로 WAN 사용이 낮아집니다. 1Gbps가 한계인 것으로
 보입니다. 물론 이 특정 경우에는 vMotion 네트워크에서
-병목 현상인 1Gbps만 가능합니다. 
+병목 현상인 1Gbps만 가능합니다.
 - 다중 TB Oracle DB의 vMotion 마이그레이션입니다. 1Gbps의 WAN 링크를 사용하면
 한계는 1Gbps의 vMotion 네트워크입니다.
 
@@ -161,4 +161,4 @@ L2C VM의 모니터링 탭을 사용하는 모든 인터페이스에서 트래�
 ## 관련 링크
 {: #vcshcx-monitoring-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

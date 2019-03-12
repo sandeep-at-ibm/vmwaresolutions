@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # 設計概觀
+{: #design_overview}
 
 {{site.data.keyword.vmwaresolutions_full}} 提供自動化，以將 VMware 技術元件部署至全球的 {{site.data.keyword.CloudDataCents_notm}}。
 
 ## 解決方案供應項目
+{: #design_overview-offerings}
 
 解決方案供應項目包括自動部署及配置的叢集內的下列 VMware vSphere 產品：
 * VMware Cloud Foundation：vSphere ESXi、Platform Services Controller (PSC)、VMware vCenter Server Appliance、SDDC Manager、VMware NSX 及 VMware vSAN。
@@ -22,13 +24,15 @@ lastupdated: "2019-01-23"
 此設計也容許在 Cloud Foundation 或 vCenter Server 實例內自動擴充及縮減虛擬容量。
 
 ## VMware on IBM Cloud 元件
+{: #design_overview-comp}
 
 圖 1. VMware on {{site.data.keyword.cloud_notm}} 的元件
 ![VMware on {{site.data.keyword.cloud_notm}} 的元件](design_overview.svg "此解決方案包含實體基礎架構、虛擬基礎架構、基礎架構管理及共用服務。")
 
-### 相關鏈結
+## 相關鏈結
+{: #design_overview-related}
 
-* [實體基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
-* [虛擬基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
-* [共用服務設計](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)
-* [基礎架構管理設計](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)
+* [實體基礎架構設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
+* [虛擬基礎架構設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
+* [共用服務設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)
+* [基礎架構管理設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_infrastructuremgmt)

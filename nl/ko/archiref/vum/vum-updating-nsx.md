@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # NSX 업데이트
+{: #vum-updating-nsx}
 
 다음 정보는 NSX에 대한 업데이트 프로세스의 예입니다. 업그레이드 중인 NSX 버전에 대한 업데이트 프로세스는 VMware 안내서를 참조하십시오.
 
@@ -17,7 +18,7 @@ NSX 및 vSphere를 모두 업그레이드해야 하는 경우 VMware에서는 �
 1. **ESXi 업그레이드** - ESXi 업그레이드가 완료된 후 호스트가 유지보수 모드를 종료하지만 다음 단계가 완료될 때까지 논리 스위치에 연결된 VM을 호스트로 이동할 수 없습니다.
 2. **NSX VIB 업그레이드** - VIB가 업그레이드되고 호스트가 유지보수 모드에서 제거된 후 논리 스위치에 연결된 VM을 호스트로 이동할 수 있습니다.
 
-NSX는 _my.vmware.com_에서 받은 다운로드로 NSX Manager를 업데이트하여 업데이트됩니다. 따라서 업데이트를 다운로드하려면 계정이 필요합니다. VMware vCenter Server on {{site.data.keyword.cloud_notm}} 인스턴스에 {{site.data.keyword.cloud}} 구독 라이센싱을 이용하는 경우 **my.vmware.com** 계정을 사용하여 업데이트를 다운로드할 수 없습니다. 따라서 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)해야 합니다.
+NSX는 _my.vmware.com_에서 받은 다운로드로 NSX Manager를 업데이트하여 업데이트됩니다. 따라서 업데이트를 다운로드하려면 계정이 필요합니다. VMware vCenter Server on {{site.data.keyword.cloud_notm}} 인스턴스에 {{site.data.keyword.cloud}} 구독 라이센싱을 이용하는 경우 **my.vmware.com** 계정을 사용하여 업데이트를 다운로드할 수 없습니다. 따라서 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)해야 합니다.
 
 업그레이드를 시작하기 전에 업그레이드 문제 및 임시 해결책에 대한 NSX 참고사항을 확인하십시오. 릴리스 정보를 사용하여 vCenter가 NSX에 대한 새로운 시스템 요구사항을 충족하는지 확인하십시오.
 
@@ -61,7 +62,8 @@ NSX Manager를 업그레이드된 후 NSX를 다운그레이드할 수 없습니
   - vSphere Web Client에서 **네트워킹 및 보안** > **NSX Edge**를 선택하십시오. 각 NSX Edge 인스턴스에 대해 **조치** 메뉴에서 **버전 업그레이드**를 선택하십시오.
   - NSX Edge가 성공적으로 업그레이드되면 상태가 배치됨이 되고 버전 열에 새 NSX 버전이 표시됩니다. Edge 업그레이드에 실패하고 이전 버전으로 롤백되지 않은 경우 **NSX Edge 다시 배치** 아이콘을 클릭한 후 업그레이드를 재시도하십시오.
 
-### 관련 링크
+## 관련 링크
+{: #vum-type-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

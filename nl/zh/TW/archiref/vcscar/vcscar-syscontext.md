@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 ## 系統環境定義
+{: #vcscar-syscontext}
+
 下圖顯示此參照架構的系統環境定義。系統環境定義圖是一個圖表，它定義系統的主要元素、系統界限、與它互動的實體以及互動。它是高階圖，提供讀者系統起始視圖。
 
 圖 1. 系統環境定義
@@ -22,6 +24,8 @@ lastupdated: "2019-01-23"
 -	Watson Knowledge Studio - Watson Knowledge Studio 提供一個模型供 Watson Discovery 使用。
 
 ### 動作者
+{: #vcscar-syscontext-actors}
+
 系統環境定義圖識別下列動作者：
 
 * Acme 管理者 - 管理者負責應用程式的進行中部署及維護，包括下列進行中作業：
@@ -40,5 +44,6 @@ lastupdated: "2019-01-23"
 * NSX Edge - NSX Edge 是虛擬應用裝置，管理進出 vCenter Server 實例的南北向資料流量。
 
 ## 相關鏈結
+{: #vcscar-syscontext-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

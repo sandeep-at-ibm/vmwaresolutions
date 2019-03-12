@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # Skate Advisor 컴포넌트
+{: #vcscar-physical}
 
 {{site.data.keyword.vmwaresolutions_full}}은 VMware 기술 컴포넌트를 전세계에 있는
 {{site.data.keyword.CloudDataCents_notm}}에 배치하는 자동화 기능을 제공합니다. 이 아키텍처는 단일 클라우드 지역으로 구성되며 다음 옵션 중 하나에 있는 여러 클라우드 지역으로 확장하는 기능을
@@ -34,6 +35,7 @@ IBM Multi-Cluster Manager는 클라우드 및 클러스터에서 사용자 가�
 통해 {{site.data.keyword.icpfull_notm}} 카탈로그에서 하이브리드 클라우드 서비스를 노출시킬 수 있습니다.
 
 ## Skate Advisor 물리적 컴포넌트
+{: #vcscar-physical-skate-comp}
 
 다음 다이어그램은 애플리케이션 현대화 인프라 구현에서 Acme Skate Advisor 애플리케이션의 참조 구현을 설명합니다.
 
@@ -46,13 +48,14 @@ Skate Advisor 애플리케이션은 웹과 마이크로 서비스 컨테이너�
 Skate Advisor 애플리케이션은 필수 호스팅 인프라를 제공하는 애플리케이션 현대화 플랫폼을 활용합니다.
 
 ### 애플리케이션 패키징 및 배치
+{: #vcscar-physical-app-pack-depl}
 
 애플리케이션은 다음 요소가 포함된 CAM Orchestration으로 배치됩니다.
 * 서비스 오케스트레이션 - CAM 서비스 오케스트레이션은 서비스 패싯으로 배치할 Terraform 템플리트 및 Helm 차트를 설명하는 워크플로우 리소스입니다. 서비스는 공개될 수 있고 전체 배치를 오케스트레이션하는 제어 아티팩트입니다.
 * Helm 차트 - Helm 차트는 로컬 {{site.data.keyword.icpfull_notm}} 저장소에 상주하며 컨테이너와 기타 리소스를 {{site.data.keyword.icpfull_notm}}에 배치합니다. Helm 차트는
 포함된 Kubernetes 리소스를 설명합니다.
   - 컨테이너 배치
-  - 서비스
+  - Services
   - Ingress
   - 규칙
   - 엔드포인트
@@ -66,6 +69,7 @@ Skate Advisor와 Skate Store 코드가 포함됩니다. Docker 이미지는 실�
 ![CAM 오케스트레이션](vcscar-cam.svg)
 
 ### 로드 밸런싱 및 프록싱
+{: #vcscar-physical-load-balance-proxy}
 
 로드 밸런싱과 프록싱은 {{site.data.keyword.icpfull_notm}} Ingress 제어기 컴포넌트를
 통해 구현됩니다. 이 컴포넌트는 컨테이너 스케일링과 장애 복구를 원활하게 처리합니다.
@@ -84,16 +88,24 @@ URL	|엔드포인트
 실시간 IP 주소 분석을 수행하는 데 사용됩니다.
 
 ### Acme Skate 웹 애플리케이션
+{: #vcscar-physical-acme-skate-web-app}
+
 Acme Skate 웹 애플리케이션은 Spring Framework를 기반으로 하는 Java 플랫폼, 엔터프라이즈 에디션(Java 플랫폼, 엔터프라이즈 에디션)
 애플리케이션입니다. 이 애플리케이션은 WebSphere Liberty 컨테이너에 배치됩니다.
 
 ### Acme Skate Advisor 애플리케이션
+{: #vcscar-physical-acme-skate-advisor-app}
+
 Acme Skate Advisor 애플리케이션은 WebSphere Liberty 컨테이너에 배치되는 마이크로 서비스 기반 애플리케이션입니다. nginx 웹 서버는 마이크로 서비스에 프론트 엔드를 제공합니다.
 
 ### Acme Skate 데이터베이스
+{: #vcscar-physical-acme-skate-db}
+
 Acme Skate 데이터베이스는 vSphere 관리 가상 머신에 배치되는 MySQL 데이터베이스입니다.
 
 ### 통신 개요
+{: #vcscar-physical-comm-overview}
+
 Skate Advisor에는 다음 통신이 필요합니다.
 -	웹 컨테이너에서 시스템 사용자로의 통신.
 -	Advisor 및 웹 컨테이너에서 Watson 서비스로의 통신.
@@ -118,6 +130,7 @@ vCenter Server 서버 NSX Edge와 {{site.data.keyword.containerlong_notm}} 인�
 백본으로 그리고 그 반대로 통신할 수 있습니다.
 
 ### 소프트웨어 컴포넌트 맵핑
+{: #vcscar-physical-soft-comp-mapping}
 
 Skate Advisor 애플리케이션은 다음 소프트웨어 컴포넌트를 사용합니다.
 
@@ -135,6 +148,7 @@ Java 플랫폼, 엔터프라이즈 에디션 애플리케이션인 Acme 애플�
 * JavaScript - 챗봇은 클라이언트 브라우저에 호스트되는 JavaScript 기반 애플리케이션입니다. 챗봇은 Node.js 기반 마이크로 서비스를 통해 Watson과 통신합니다.
 
 ## 관리 개요
+{: #vcscar-physical-mgmt-ovw}
 
 Acme Skate Advisor는 {{site.data.keyword.cloud_notm}}에 상주하며
 Architecture의 중요한 부분입니다. {{site.data.keyword.cloud_notm}}에는 다음 아키텍처가 있습니다.
@@ -152,6 +166,7 @@ Server 인스턴스에 배치된 {{site.data.keyword.icpfull_notm}} 및 CAM을 �
 클러스터는 각 데이터 센터/클라우드 환경에 배치되며, MCM은 {{site.data.keyword.icpfull_notm}} 클러스터를 단일 관리 보기에
 연결하는 메커니즘을 제공합니다.
 
-### 관련 링크
+## 관련 링크
+{: #vcscar-physical-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # VMware 元件版本的比較圖表
+{: #solution-appendix}
 
 ## VMware NSX 版本比較
+{: #solution-appendix-nsx-editions}
 
 表 1 列出解決方案所支援之 VMware NSX **Base**、**Advanced** 及 **Enterprise** 版本的可用特性。
 
@@ -41,6 +43,7 @@ lastupdated: "2019-01-23"
 \*僅限 L2、L3 & NSX Edge 整合。不使用安全群組
 
 ## VMware vSAN 版本比較
+{: #solution-appendix-vsan-editions}
 
 表 2 列出解決方案所支援之 VMware vSAN 的 **Advanced** 及 **Enterprise** 版本的可用特性。
 
@@ -63,8 +66,9 @@ lastupdated: "2019-01-23"
 | 靜止中資料加密                                  |          | •          |
 | 含有本端失敗保護的延伸叢集                      |          | •          |
 
-### 相關鏈結
+## 相關鏈結
+{: #solution-appendix-related}
 
-* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [設計概觀](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [備份元件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [解決方案概觀](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [設計概觀](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [備份元件](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

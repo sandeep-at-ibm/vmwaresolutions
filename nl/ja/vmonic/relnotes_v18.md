@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-08-28"
 
 ---
 
 # V1.8 のリリース・ノート
+{: #relnotes_v18}
 
 このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
@@ -19,8 +20,8 @@ Fortinet on {{site.data.keyword.cloud_notm}} サービスを、Cloud Foundation 
 Fortinet サービスが正常にインストールされたら、FortiGate コンソールから FSA のファイアウォール・ルールを管理および構成できます。 インターネットを介して IBM Bluemix® の外部管理データベースと通信するために IBM CloudDriver 仮想マシンや Zerto Virtual Manager などの管理コンポーネントが開始するアウトバウンド HTTPS 通信を許可するように、FSA ファイアウォール・ルールが定義されていることを確認する必要があります。 アウトバウンド HTTPS 通信は、インスタンス内の管理サービス VMware NSX Edge Services Gateway (ESG) のパブリック IP アドレスから発信されます。
 
 詳しくは、以下のトピックを参照してください。
-* [Fortinet on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/fsa_considerations.html)
-* [Fortinet on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managingfsa.html)
+* [Fortinet on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)
+* [Fortinet on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
 
 ## Veeam on IBM Cloud サービス
 
@@ -31,8 +32,8 @@ Fortinet サービスが正常にインストールされたら、FortiGate コ�
 また、V1.8 より前の Veeam VSI のライセンスは、2017 年 10 月 14 日に失効します。 したがって、可能な限り早く古い Veeam VSI を新しい Veeam サービスに置き換える必要があります。
 
 詳しくは、以下のトピックを参照してください。
-* [Veeam on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/veeam_considerations.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managingveeam.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [Veeam on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
 ## VMware Cloud Foundation インスタンスの更新
 
@@ -43,8 +44,8 @@ V1.8 リリース以降、Cloud Foundation インスタンスを注文する際�
 所有している VMware ライセンスをコンポーネントに使用することもできます。そのためにはライセンス・キーを提供する必要があります。 この場合、ライセンスを提供した VMware コンポーネントのサポートは、IBM サポートからではなく VMware から提供されます。
 
 詳しくは、以下のトピックを参照してください。
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [BYOL に関するよくある質問](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
+* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [BYOL に関するよくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## VMware vCenter Server インスタンスの更新
 
@@ -53,27 +54,27 @@ V1.8 リリース以降、Cloud Foundation インスタンスを注文する際�
 事前に構築され、テストされた「スモール」、「ミディアム」、「ラージ」オプションのほか、カスタマイズ可能なサーバーのオプションも用意されています。 デュアル CPU ベースの VMware HCL 互換サーバー、コアの合計数、RAM の容量をリストから選択できます。 ローカル・ストレージはカスタマイズできません。
 
 詳しくは、以下のトピックを参照してください。
-* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### 7 つを超える NFS ファイル共有を追加するためのサポート
 
  クラスター内のすべての ESXi サーバーで最大 32 個のファイル共有を接続できます。
 
  詳しくは、以下のトピックを参照してください。
-* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### データ・センターの更新
 
 デプロイメントに利用できる新しいデータ・センターは、**DAL-09、DAL-12、DAL-13 - ダラス**、**LON-04、LON-06 - ロンドン**、**SJC-04 - サンノゼ**、**WDC-06、WDC-07 - ワシントン、DC** です。
 
-詳しくは、[vCenter Server インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter/vc_planning.html)を参照してください。
+詳しくは、[vCenter Server インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)を参照してください。
 
 ## 使いやすさの向上
 
 ユーザー・インターフェース全体が以下のように改善されました。
-* 左側のナビゲーション・ペインの**「開始」**ページで、サービスの内容を確認してインスタンスを注文できます。 
+* 左側のナビゲーション・ペインの**「開始」**ページで、サービスの内容を確認してインスタンスを注文できます。
 * インスタンスの詳細ページでオーバーフロー・メニューを使用して、**「使用可能」**状態のインスタンスを削除できます。
 * NSX ライセンス・エディションをアップグレードするオプションが、**「更新およびパッチ」**タブに追加されました。 ライセンスをアップグレードすると、IBM SoftLayer アカウントの既存の NSX ライセンスがすべて新規ライセンスに置き換えられます。
 * インスタンスの詳細ページの**「バックアップとリストア」**タブがなくなりました。

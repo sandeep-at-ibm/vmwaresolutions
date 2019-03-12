@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,19 +13,23 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # VMware HCX on IBM Cloud 주문
+{: #hcx_ordering}
 
 서비스가 포함된 새 VMware vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 또는 기존 인스턴스에 서비스를 추가하여 VMware HCX on {{site.data.keyword.cloud}} 서비스를 주문할 수 있습니다.
 
 ## 새 인스턴스에 대한 VMware HCX on IBM Cloud 주문
+{: #hcx_ordering-new}
 
 새 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스를 VMware HCX on {{site.data.keyword.cloud_notm}}와 함께 주문하려면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 인스턴스를 주문할 때 **서비스** 섹션에서 **VMware HCX on IBM Cloud**를 선택하십시오.
 
 
 ## 기존 인스턴스에 대한 VMware HCX on IBM Cloud 주문
+{: #hcx_ordering-existing}
 
 기존 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스에 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 추가하려면 해당 서비스가 추가될 인스턴스를 보고 왼쪽 탐색 분할창에서 **서비스**를 클릭한 후에 **추가**를 클릭하십시오.
 
 ## VMware HCX on IBM Cloud 구성
+{: #hcx_ordering-config}
 
 HCX on {{site.data.keyword.cloud_notm}}를 설치하려면 다음 설정을 완료하십시오.
 1. 다음 옵션 중 하나를 선택하여 **HCX 상호연결 유형**을 지정하십시오.
@@ -47,6 +51,7 @@ HCX on {{site.data.keyword.cloud_notm}}를 설치하려면 다음 설정을 완�
   <!--Need enhancement, it is still not clear what the key pair is used for, is it for connecting to NSX? This is not in architecture doc either. -->
 
 ## HCX on IBM Cloud에 대한 배치 프로세스
+{: #hcx_ordering-deploy}
 
 HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 서비스가 포함된 vCenter Server with Hybridity Bundle 인스턴스를 주문하거나 나중에 인스턴스에 서비스를 배치할 때 {{site.data.keyword.vmwaresolutions_short}} 자동화 프로세스를 통해 다음 단계가 완료됩니다.
 1. {{site.data.keyword.cloud_notm}} 인프라에서 HCX에 대해 3개의 서브넷이 주문됩니다.
@@ -76,12 +81,13 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 서비�
    * 로컬 및 원격 HCX 배치 컨테이너가 구성됩니다.
 7. HCX Manager의 호스트 이름 및 IP 주소가 VMware vCenter Server on {{site.data.keyword.cloud_notm}}의 DNS 서버에 등록됩니다.
 
-### 관련 링크
+## 관련 링크
+{: #hcx_ordering-related}
 
-* [HCX on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/hcx_considerations.html)
-* [HCX on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managinghcx.html)
-* [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
-* [HCX 용어집](/docs/services/vmwaresolutions/services/hcx_glossary.html)
-* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [HCX on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
+* [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [HCX 용어집](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [VMware Hybrid Cloud Extension 개요](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources)

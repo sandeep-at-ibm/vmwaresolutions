@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2018-09-27"
 {:deprecated: .deprecated}
 
 # 要求 IBM Cloud Private Hosted - 已淘汰
+{: #managing_icp}
 
 本主題中的資訊即將淘汰。如需 IBM Cloud Private Hosted 的最新資訊，請參閱 [IBM Cloud Private Hosted 概觀](icp_overview.html)。
 {:deprecated}
@@ -23,6 +24,7 @@ vCenter Server on {{site.data.keyword.cloud_notm}} 的 {{site.data.keyword.cloud
 {{site.data.keyword.cloud_notm}} Private Hosted 為您在 {{site.data.keyword.cloud_notm}} 上的 VMware 環境帶來微服務及容器的功能。使用此服務，您可以將熟悉的相同 VMware 與 {{site.data.keyword.cloud_notm}} Private 作業模型和工具，從內部部署延伸到 {{site.data.keyword.cloud_notm}}。
 
 ## IBM Cloud Private Hosted 的技術規格
+{: #managing_icp-specs}
 
 以下是要求 {{site.data.keyword.cloud_notm}} Private Hosted 服務的最低需求：
 
@@ -36,6 +38,7 @@ vCenter Server on {{site.data.keyword.cloud_notm}} 的 {{site.data.keyword.cloud
 * 以資料備份而言，建議使用 Veeam on IBM Cloud 服務。
 
 ## 要求 IBM Cloud Private Hosted 的程序
+{: #managing_icp-procedure}
 
 1. 遵循[訂購 vCenter Server 實例](../vcenter/vc_orderinginstance.html)中的步驟來訂購新的 vCenter Server 實例。您也可以針對現有的實例來要求 IBM Cloud Private Hosted。
   **重要事項：**確定您的環境符合上述最低需求。

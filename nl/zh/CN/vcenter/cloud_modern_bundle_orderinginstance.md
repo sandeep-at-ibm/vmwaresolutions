@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,25 +13,30 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # 订购、查看和删除 Migration and App Modernization 单节点试用版实例
+{: #cloud_modern_bundle_orderinginstance}
 
 订购 Migration and App Modernization 单节点试用版实例之前，请复查规划需求。
 
 ## 订购 Migration and App Modernization 单节点试用版实例的需求和规划
+{: #cloud_modern_bundle_orderinginstance-req}
 
 确保确认以下需求并完成以下任务。
 
 ### 内部部署 HCX 实例的先决条件
+{: #cloud_modern_bundle_orderinginstance-hcx-req}
 
 * 需要 VMware vSphere 和 vCenter 5.5 或更高版本。
 * vSphere 环境必须具有用于将迁移到 {{site.data.keyword.cloud_notm}} 的 VM 的分布式交换机。
 * HCX Manager 虚拟设备必须能够部署在内部部署环境中的专用网络上，并且必须允许它访问公用因特网。
 
 ### IBM Cloud 基础架构帐户
+{: #cloud_modern_bundle_orderinginstance-account-req}
 
 * 要使用 {{site.data.keyword.vmwaresolutions_short}} 订购实例，您必须具有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户。在实例中订购的组件的成本将计入到该 {{site.data.keyword.cloud_notm}} 帐户。
 *  在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**设置**。
 
 ### 实例名称需求
+{: #cloud_modern_bundle_orderinginstance-inst-name-req}
 
 复查实例名称需求：
 * 只允许使用字母数字字符和短划线 (-) 字符。
@@ -40,6 +45,7 @@ lastupdated: "2019-01-25"
 * 实例名称在您的帐户中必须唯一。
 
 ## 订购 Migration and App Modernization 单节点试用版实例的过程
+{: #cloud_modern_bundle_orderinginstance-procedure}
 
 1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **Migration and App Modernization 单节点试用版**。
 2. 在 **Migration and App Modernization 单节点试用版**页面上，单击**继续**。
@@ -59,10 +65,12 @@ lastupdated: "2019-01-25"
    4. 单击**供应**。
 
 ### 结果
+{: #cloud_modern_bundle_orderinginstance-results}
 
 实例的部署会自动启动，并会订购内部部署 HCX on {{site.data.keyword.cloud_notm}} 服务激活密钥。
 
 #### HCX on IBM Cloud 的部署过程
+{: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
 
 部署 HCX on {{site.data.keyword.cloud_notm}} 会自动执行。以下步骤由 {{site.data.keyword.vmwaresolutions_short}} 自动化过程完成：
 1. 为 {{site.data.keyword.cloud_notm}} 基础架构中的 HCX 订购三个子网：
@@ -90,6 +98,7 @@ lastupdated: "2019-01-25"
 6. 向 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的 DNS 服务器注册 HCX Manager 的主机名和 IP 地址。
 
 #### 查看实例详细信息
+{: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
 您可以通过查看实例详细信息来检查部署的状态。在左侧导航窗格中，单击**已部署的实例**，然后找到 **vCenter Server 实例**或**内部部署 HCX 实例**表，以查看有关所订购实例的信息。
 
@@ -98,6 +107,7 @@ lastupdated: "2019-01-25"
 实例的状态会更改为**可供使用**，并且您收到相关电子邮件通知。
 
 ### 后续步骤
+{: #cloud_modern_bundle_orderinginstance-next}
 
 安装内部部署 HCX Enterprise Manager，并配置与 HCX on {{site.data.keyword.cloud_notm}} 实例的连接。
 
@@ -142,6 +152,7 @@ lastupdated: "2019-01-25"
 {:important}
 
 ## 删除 Migration and App Modernization 单节点试用版实例的过程
+{: #cloud_modern_bundle_orderinginstance-deleting-procedure}
 
 删除 Migration and App Modernization 单节点试用版实例时，会按顺序释放以下组件：
 
@@ -166,9 +177,10 @@ lastupdated: "2019-01-25"
    1. 在**操作**列中，再次单击“删除”图标。
    2. 在**删除实例**窗口中，单击**确定**。
 
-### 相关链接
+## 相关链接
+{: #cloud_modern_bundle_orderinginstance-related}
 
-* [vCenter Server 和 IBM Cloud Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [vCenter Server 和 IBM Cloud Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [开具有关 IBM Cloud Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US)
 * [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#/vm-documentation)
 * [获取 HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

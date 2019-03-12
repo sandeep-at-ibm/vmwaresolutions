@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-08-30"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-08-30"
 {:important: .important}
 
 # 2.5 版的版本注意事項
+{: #relnotes_v25}
 
 此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
@@ -24,11 +25,11 @@ lastupdated: "2018-08-30"
 * CVEID：[CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID：[CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-如需相關資訊，請參閱[處理 Spectre 及 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)。
+如需相關資訊，請參閱[處理 Spectre 及 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)。
 
 ## NSX 元件更新
 
-針對 VMware vCenter Server on {{site.data.keyword.cloud_notm}}、VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle、NetApp ONTAP Select 及 VMware Federal on {{site.data.keyword.cloud_notm}} 的新部署，此版本會安裝 VMware NSX for vSphere 6.4.1。
+針對 VMware vCenter Server on {{site.data.keyword.cloud_notm}}、VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 及 NetApp ONTAP Select 的新部署，此版本會安裝 VMware NSX for vSphere 6.4.1。
 
 ## 移除預設備份配置
 
@@ -36,7 +37,7 @@ lastupdated: "2018-08-30"
 
 從 2.5 版開始，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 及 Veeam on {{site.data.keyword.cloud_notm}} 服務，在部署時將不再預先配置任何 VM 的備份。此變更容許您確保適當地配置備份工作的所有層面，包括排程、保留期間、使用刪除重複、監視和警示，以及加密金鑰的管理。此外，IBM CloudDriver VM 不再配置為 NSX 備份的持續性檔案伺服器。
 
-您負責配置、管理及監視所有軟體元件（包括管理基礎架構及工作負載的備份和可用性）。如需相關資訊，請參閱[備份元件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#backing-up-components)。
+您負責配置、管理及監視所有軟體元件（包括管理基礎架構及工作負載的備份和可用性）。如需相關資訊，請參閱[備份元件](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#backing-up-components)。
 
 此變更不會影響 2.5 版之前所部署並且已安裝 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 服務的實例。
 {:note}
@@ -55,8 +56,8 @@ lastupdated: "2018-08-30"
 * 對於已部署在 2.4 版及舊版中的實例，您可以將它們移轉至指定的 {{site.data.keyword.cloud_notm}} 帳戶，然後使用 IAM 來管理它們。
 
 如需相關資訊，請參閱下列主題：
-* [邀請使用者存取服務及資源](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
-* [利用 IAM 管理使用者存取](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [邀請使用者存取服務及資源](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
+* [利用 IAM 管理使用者存取](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
 
 ## VMware vCenter Server 及 VMware Cloud Foundation 實例的使用者帳戶及群組變更
 
@@ -70,8 +71,8 @@ lastupdated: "2018-08-30"
 
 如需使用者帳戶的相關資訊，請參閱下列主題：
 
-* [變更 vCenter Server 構件的考量](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
-* [變更 Cloud Foundation 構件的考量](/docs/services/vmwaresolutions/sddc/cf_chg_impact.html)
+* [變更 vCenter Server 構件的考量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)
+* [變更 Cloud Foundation 構件的考量](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cf_chg_impact)
 
 ## 附加服務的更新
 
@@ -99,7 +100,7 @@ lastupdated: "2018-08-30"
 
 ### 連接儲存空間文件
 
-vCenter Server on IBM Cloud 連接儲存空間技術文件現在位於使用者文件的*參照* 小節中。如需相關資訊，請參閱 [vCenter Server on IBM Cloud 的連接儲存空間](/docs/services/vmwaresolutions/archiref/attached-storage/storage-benefits.html)。
+vCenter Server on IBM Cloud 連接儲存空間技術文件現在位於使用者文件的*參照* 小節中。如需相關資訊，請參閱 [vCenter Server on IBM Cloud 的連接儲存空間](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits)。
 
 ### 技術規格
 
@@ -111,9 +112,9 @@ vCenter Server on IBM Cloud 連接儲存空間技術文件現在位於使用者�
 
 如需相關資訊，請參閱下列主題：
 
-* [vCenter Server 實例可用的服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
-* [vCenter Server with Hybridity Bundle 實例的可用服務](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [Cloud Foundation 實例的可用服務](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
+* [vCenter Server 實例可用的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)
+* [vCenter Server with Hybridity Bundle 實例的可用服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [Cloud Foundation 實例的可用服務](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices#available-services-for-cloud-foundation-instances)
 
 ## 使用者介面更新和加強功能
 

@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # 在來源上安裝及配置 HCX
+{: #hcx-archi-install-cfg-src}
 
 內部部署安裝需要部署 HCX 管理應用裝置，並向 vCenter 及一個以上已啟用 VCF/VCS HCX 功能的雲端端點進行登錄。
 
 ## 安裝 HCX Manager 應用裝置
+{: #hcx-archi-install-cfg-src-install-hma}
 
 在內部部署 vCenter 中安裝 HCX Manager 應用裝置。
 
@@ -53,6 +55,7 @@ lastupdated: "2019-01-23"
   * 檢視**摘要**標籤，主控台會顯示**已開啟電源**，而且**播放**按鈕是綠色的。
 10. HCX Manager 已開啟電源，並準備好向 vCenter 進行登錄。
 
-### 相關鏈結
+## 相關鏈結
+{: #hcx-archi-install-cfg-src-related}
 
-* [準備安裝環境](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-prep-install.html)
+* [準備安裝環境](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-prep-install)

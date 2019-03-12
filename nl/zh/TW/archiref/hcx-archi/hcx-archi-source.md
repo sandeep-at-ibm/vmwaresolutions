@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # VMware HCX on IBM Cloud 來源端架構
+{: #hcx-archi-source}
 
 本節說明來源環境中所部署之每個 HCX 元件的架構。
 
 ## HCX 簡介
+{: #hcx-archi-source-intro-hcx}
 
 HCX 技術將 vSphere vCenter 網路無縫整合至 IBM Cloud VCF 或 VCS 平台。混合式網路將內部部署 vSphere vCenter 網路擴充至 IBM Cloud，並支援雙向虛擬機器 (VM) 行動性。
 
@@ -28,6 +30,7 @@ HCX 技術將 vSphere vCenter 網路無縫整合至 IBM Cloud VCF 或 VCS 平台
 * HCX 與 vSphere vCenter 整合，並從 vSphere Web Client 進行管理。
 
 ## 第 2 層網路延伸
+{: #hcx-archi-source-layer-2-ext}
 
 * 安全地將網路從 vCenter 延伸至 IBM Cloud。
 * HCX 提供「高傳輸量第 2 層集中器 (HT L2C)」。
@@ -36,48 +39,43 @@ HCX 技術將 vSphere vCenter 網路無縫整合至 IBM Cloud VCF 或 VCS 平台
 * 透過「雲端閘道」及透過延伸第 2 層移轉的虛擬機器可以保留其 IP 及 MAC 位址。
 
 ## 虛擬機器移轉方法
+{: #hcx-archi-source-vm-mig-methods}
 
 ### 低關閉時間移轉
+{: #hcx-archi-source-low-downtime-mig}
 
 低關閉時間移轉根據「vSphere 抄寫」，這是 VMware ESX/ESXi Hypervisor 中所實作的分散式技術。HCX 會建立即時虛擬機器的抄本、將它移至 IBM Cloud、執行切換以關閉來源虛擬機器的電源，以及開啟所移轉虛擬機器的電源。
 * 移轉路徑一律是透過「雲端閘道」。傳輸可以是網際網路、第 2 層延伸網路或 Direct Connect 線路。
 * 虛擬機器可以在任一方向多次移轉。
 
 ### vMotion 移轉
+{: #hcx-archi-source-vmotion-mig}
 
 vMotion 移轉會看到 vMotion 透過延伸至 IBM Cloud 的網路傳送即時虛擬機器。vMotion 移轉也稱為零關閉時間移轉或跨雲端 vMotion。
 
 ### 冷移轉
+{: #hcx-archi-source-cold-mig}
 
 透過延伸網路，將關閉電源的虛擬機器傳送至 IBM Cloud。
 
 ### 共用特性
+{: #hcx-archi-source-common-feat}
 
 * 選用性軟體定義 WAN 最佳化，如果已安裝，即可增加移轉、傳輸量及速度。
 * 移轉可以排程於指定的時間發生。
 * 移轉的虛擬機器可以保留其主機名稱、虛擬機器名稱或兩者。
 
 ## 網路特性
+{: #hcx-archi-source-net-feat}
 
 下列網路特性會建置到「雲端閘道」及「第 2 層集中器」。
 
-### 智慧型流程遞送
-
-根據網際網路路徑自動選取最佳連線，有效率地溢出整個連線，以盡快移動工作負載。備份或抄寫這類較大的流程導致 CPU 競用時，會將較小的流程遞送至較不忙碌的 CPU，以改善互動式傳輸的效能。
-
-### 鄰近遞送
-
-確定在內部部署及雲端連接至延伸和遞送網路之虛擬機器間的轉遞是對稱的。
-
-### 安全
-
-「雲端閘道」提供符合「套組 B」標準的 AES-GCM，其具有 IKEv2、AES-NI 卸載及流程型許可控制。
-
-HCX 擁有來源及目的地加密和解密處理程序，以確定一致安全並提供虛擬機器移轉及網路延伸這類混合式工作流程的許可。
-
-在內部部署 vCenter 中定義且指派給虛擬機器的安全原則可以隨著虛擬機器一起移轉。
+* 智慧型流程遞送 - 根據網際網路路徑自動選取最佳連線，有效率地溢出整個連線，以盡快移動工作負載。備份或抄寫這類較大的流程導致 CPU 競用時，會將較小的流程遞送至較不忙碌的 CPU，以改善互動式傳輸的效能。
+* 鄰近遞送 - 確定在內部部署及雲端連接至延伸和遞送網路之虛擬機器間的轉遞是對稱的。
+* 安全 - 「雲端閘道」提供符合「套組 B」標準的 AES-GCM，其具有 IKEv2、AES-NI 卸載及流程型許可控制。HCX 擁有來源及目的地加密和解密處理程序，以確定一致安全並提供虛擬機器移轉及網路延伸這類混合式工作流程的許可。在內部部署 vCenter 中定義且指派給虛擬機器的安全原則可以隨著虛擬機器一起移轉。
 
 ## 瞭解 HCX
+{: #hcx-archi-source-understand-hcx}
 
 HCX 支援內部部署 vCenter 與 IBM Cloud 之間的多對多關係。支援處於「鏈結模式」的 vCenter Server。本主題所提供的進階概觀說明安裝程式如何與內部部署資料中心及 IBM Cloud 互動。
 
@@ -88,6 +86,7 @@ HCX 支援內部部署 vCenter 與 IBM Cloud 之間的多對多關係。支援�
 * 網路必須允許應用裝置同時與本端及遠端虛擬應用裝置以及其他 VM 進行通訊。
 
 ## 部署概觀
+{: #hcx-archi-source-deployment-ovw}
 
 首先安裝 HCX Manager 虛擬機器，而且它管理在內部部署及雲端的任何其他服務虛擬機器應用裝置安裝。
 
@@ -100,18 +99,21 @@ HCX 支援內部部署 vCenter 與 IBM Cloud 之間的多對多關係。支援�
 6. 安裝之後，HCX Manager 會控制本端及遠端服務虛擬應用裝置。在 IBM Cloud 中，HCX 會將佈建的軟體定義 WAN 元件作為服務進行管理。
 
 ### 部署元件效能考量
+{: #hcx-archi-source-perf-consid}
 
 架構規劃包括要移轉的 VM、用於虛擬機器資料流量的網路，以及要延伸的網路。本主題彙總部署元件的一些最大值及最小值。
 * vSphere vCenter。HCX Manager 應用裝置必須安裝於需要混合式服務的 vCenter 上。一個 vCenter 只能有一個 HCX 部署。此限制適用於鏈結模式：HCX 管理應用裝置僅安裝於主要 vCenter 中。HCX 支援最多五個處於鏈結模式的已登錄 vCenter。
 * 雲端登錄。雲端端點數目上限為 10。為了尋找端點數目，Hybrid Cloud Services 會追蹤與雲端的 vCenter 連線。
 
 ### 移轉及網路延伸次數上限
+{: #hcx-archi-source-max-mig-net-extension}
 
 * 最大並行低關閉時間移轉作業 - 15
 * 最大並行 L2C 延伸作業 - 1
 * 最大並行 vMotion 移轉作業 - 1
 
 ### HCX Management Enterprise
+{: #hcx-archi-source-hcxme}
 
 HCX Management Enterprise OVA 部署於來源環境，並登錄為管理來源 vSphere 基礎架構之 vCenter Server 的外掛程式。然後，會使用此外掛程式，以配置啟用跨雲端移轉及 L2 網路延伸所需的移轉及網路服務。
 
@@ -122,6 +124,7 @@ HCX Management Enterprise OVA 部署於來源環境，並登錄為管理來源 v
 ![來源 Hybrid Cloud Services](source_hybrid_cloud_services.svg)
 
 ### HCX 虛擬應用裝置
+{: #hcx-archi-source-hcxva}
 
 安裝套件是包含 Hybrid Cloud Services 外掛程式的 OVA 檔案。安裝及配置此 Hybrid Cloud Services 管理應用裝置，然後使用它來配置服務應用裝置虛擬機器。
 * HCX Manager
@@ -130,6 +133,7 @@ HCX Management Enterprise OVA 部署於來源環境，並登錄為管理來源 v
 * WAN 最佳化工具
 
 ### HCX Manager
+{: #hcx-archi-source-hcxm}
 
 HCX Manager 外掛程式僅部署在內部部署。它會管理 SD-WAN 的服務虛擬應用裝置。HCX Manager 虛擬應用裝置是來源 vCenter 的延伸，並且部署為虛擬機器。此應用裝置的檔案結構包含所有混合式服務虛擬應用裝置。HCX Manager 會監督內部部署及雲端中的「雲端閘道」、「第 2 層集中器」及「WAN 最佳化」虛擬應用裝置的部署和配置。
 
@@ -138,6 +142,7 @@ HCX Manager 外掛程式僅部署在內部部署。它會管理 SD-WAN 的服務
 在完成服務虛擬應用裝置配置及部署之後，請登入此虛擬機器以使用「Hybrid Cloud Services 管理入口網站」。
 
 ### HCX 雲端閘道
+{: #hcx-archi-source-hcg}
 
 「HCX 雲端閘道」會建立及維護 vSphere 與 IBM Cloud 之間的安全頻道。
 
@@ -148,7 +153,8 @@ HCX 使用高度加密來引導與 IBM Cloud 的站台對站台連線。vSphere 
 圖 2. 來源雲端閘道
 ![來源雲端閘道](source_cloud_gateway.svg)
 
-### WAN 最佳化工具
+### WAN 最佳化程式
+{: #hcx-archi-source-wan-opt}
 
 HCX 也提供軟體定義「WAN 最佳化」。「WAN 最佳化」應用裝置是高度建議的元件，可執行 WAN 調節來減少延遲效果。它也納入「轉遞錯誤更正」以使封包流失情境無效，以及刪除重複的備用資料流量型樣。總而言之，這些會減少頻寬使用，並確定最佳使用可用的網路容量來加速與 IBM Cloud 之間的資料傳送。
 
@@ -158,6 +164,7 @@ HCX 也提供軟體定義「WAN 最佳化」。「WAN 最佳化」應用裝置�
 ![來源 WAN 最佳化工具](source_wan_optimizer.svg)
 
 ### 第 2 層集中器
+{: #hcx-archi-source-layer-2-conc}
 
 「網路延伸服務」是由「第 2 層集中器 (L2C)」所提供。它會將第 2 層網路從內部部署 vSphere 資料中心擴充至 IBM Cloud，並啟用資料中心與雲端之間的無縫移轉。需要有第 2 層集中器，才能將內部部署網路延伸至 IBM。
 
@@ -169,6 +176,7 @@ HCX 也提供軟體定義「WAN 最佳化」。「WAN 最佳化」應用裝置�
 ![來源 L2 集中器](source_l2_concentrator.svg)
 
 ### 僅限移轉
+{: #hcx-archi-source-mig-only}
 
 僅執行移轉的最小配置需要 HCX Manager 及「雲端閘道」應用裝置。沒有網路延伸，也可以移轉虛擬機器。在此情況下，虛擬機器會在移轉之後使用「來賓自訂」服務來取得新的 IP 位址。
 
@@ -179,6 +187,7 @@ HCX 也提供軟體定義「WAN 最佳化」。「WAN 最佳化」應用裝置�
 將延伸網路上的虛擬機器移轉至 IBM Cloud 十分有用，因為它可減少關閉時間，而且虛擬機器上的配置不會變更。虛擬機器可以保留 IP 位址、MAC 位址、電腦名稱及虛擬機器名稱。保留這些內容可大幅簡化移轉至 IBM Cloud 的作業，並可輕鬆地返回內部部署資料中心。「網路延伸」特性需要 vSphere Distributed Switch，該版本隨 vSphere Enterprise Plus Edition 一起提供。
 
 ### IP 位址需求
+{: #hcx-archi-source-ip-req}
 
 若要部署 HCX，內部部署及目標 IBM Cloud 中必須有適當的 IP 位址數目。
 
@@ -194,7 +203,8 @@ HCX 也提供軟體定義「WAN 最佳化」。「WAN 最佳化」應用裝置�
   * 每個連接至 IBM Cloud 的 HCX Manager 應用裝置都有兩個 IP 位址。這些位址可以用來連接至網際網路或一個以上的 Direct Connect 線路。
   * 如果有不同的 vMotion 網路連線，則請新增一個。
 
-### 鄰近遞送
+### 鄰近遞送特性
+{: #hcx-archi-source-prox-routing-feat}
 
 「鄰近遞送」是可在配置了「雲端閘道」時啟用的網路特性。
 
@@ -210,8 +220,9 @@ HCX 也提供軟體定義「WAN 最佳化」。「WAN 最佳化」應用裝置�
 * 建立於雲端中（在延伸網路上）。
 
 ### 使用鄰近遞送的非對稱遞送解決方案
+{: #hcx-archi-source-asymm-routing}
 
-在此圖中，左側的 N*a 元件位於內部部署資料中心內，而右側的 N*b 元件位於雲端中。
+在此圖中，左側的 `N*a` 元件位於內部部署資料中心內，而右側的 `N*b` 元件位於雲端中。
 
 R1 是 N1-b 的預設閘道，因此，N1-b 必須回到 R1，才能透過 R2 來遞送資料流量。為了防止非對稱遞送，HCX 會將主機路徑注入至 IBM Cloud VCS/VCF 部署的 NSX 套版。如果在雲端中新建立虛擬機器，或在低關閉時間移轉時移動它，則會立即注入主機路徑。
 
@@ -223,6 +234,7 @@ R1 是 N1-b 的預設閘道，因此，N1-b 必須回到 R1，才能透過 R2 �
 ![使用鄰近遞送的非對稱遞送解決方案](asymmetric_routing_proximity_routing_solution.svg)
 
 ### MAC 位址保留
+{: #hcx-archi-source-mac-addr-ret}
 
 * 保留 MAC 位址的選項是移轉精靈中的勾選框。這僅適用於抄寫型移轉。
 * 依預設，如果來源虛擬機器是延伸網路，則會啟用**保留 MAC**，但未延伸網路時，則會予以停用。如果未保留 MAC 位址，則虛擬機器會在移轉完成時取得新的位址。保留 MAC 位址或獲得新 MAC 位址的決策可能會影響移轉處理程序及後移轉網路資料流量流程。
@@ -233,6 +245,7 @@ R1 是 N1-b 的預設閘道，因此，N1-b 必須回到 R1，才能透過 R2 �
   * 在移轉作業期間，此勾選框位於「選取目的地網路」頁面上。
 
 ### 安全原則移轉
+{: #hcx-archi-source-sec-policy-mig}
 
 「原則移轉」特性會將 NSX Distributed Firewall 規則從內部部署 vCenter 移至已啟用 VCF/VCS HCX 功能的「雲端」。使用低關閉時間移轉或 vMotion 以透過使用「高傳輸量第 2 層集中器」延伸的網路來移動虛擬機器時，可能會執行「原則移轉」。
 * 內部部署資料中心必須執行 NSX 6.2.2 或更新版本。
@@ -246,6 +259,7 @@ R1 是 N1-b 的預設閘道，因此，N1-b 必須回到 R1，才能透過 R2 �
 
 任何對已移轉原則的變更都會延伸到所有使用該原則的 VM。
 
-### 相關鏈結
+## 相關鏈結
+{: #hcx-archi-source-related}
 
-* [在來源上安裝及配置](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
+* [在來源上安裝及配置](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)

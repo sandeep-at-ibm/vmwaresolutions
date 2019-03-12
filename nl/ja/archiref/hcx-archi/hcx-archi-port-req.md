@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # VMware HCX on IBM Cloud ポートのアクセス要件
+{: #hcx-archi-port-req}
 
 HCX は、公衆インターネットと専用回線を経由して、ネットワーク、スイッチ、ポート・グループなどのデータ・センターのコンポーネントに接続する必要があります。
 
@@ -39,6 +40,7 @@ HCX は、公衆インターネットと専用回線を経由して、ネット�
 | Cloud Gateway (ローカル) | クラウド・ゲートウェイ</br>(リモート) | 4500  | UDP | 双方向トンネルでワークロードをカプセル化するための Internet Key Exchange (IKEv2) | IPSEC |
 | Cloud Gateway (ローカル) | クラウド・ゲートウェイ</br>(リモート) | 500  | UDP | 双方向トンネルの Internet Key Exchange (ISAKMP) | IPSEC |
 
-### 関連リンク
+## 関連リンク
+{: #hcx-archi-port-req-related}
 
-* [ソースでの HCX の構成およびインストール](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
+* [ソースでの HCX の構成およびインストール](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)

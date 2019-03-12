@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # NetApp ONTAP Select の概要
+{: #np_netappoverview}
 
 {{site.data.keyword.cloud}} デプロイメント上の NetApp ONTAP Select のアーキテクチャーとコンポーネントについて説明します。
 
 ## NetApp ONTAP Select のアーキテクチャー
+{: #np_netappoverview-archi}
 
 {{site.data.keyword.cloud_notm}} オファリング上の NetApp ONTAP Select は、vCenter Server デプロイメントを補完するためのストレージ仮想化サービスを提供します。
 
@@ -27,10 +29,12 @@ lastupdated: "2019-01-24"
 ![NetApp ONTAP Select のアーキテクチャー](np_architecture.svg "NetApp ONTAP Select on IBM Cloud のアーキテクチャーの全体像")
 
 ### 物理インフラストラクチャー
+{: #np_netappoverview-physical-infras}
 
 この層は、仮想インフラストラクチャーで使用される物理インフラストラクチャー (コンピュート、ネットワーク、ストレージの各リソース) を提供します。
 
 ### 仮想化インフラストラクチャー (コンピュート、ネットワーク、NetApp ONTAP Select)
+{: #np_netappoverview-virtual-infras}
 
 この層は、以下の VMware 製品と NetApp ONTAP Select 製品により、物理インフラストラクチャーを仮想化します。
 * VMware vSphere は、物理コンピュート・リソースを仮想化します。
@@ -44,6 +48,7 @@ lastupdated: "2019-01-24"
 ![NetApp ONTAP Select のコンポーネント](np_netappcomponents.svg "NetApp ONTAP Select のコンポーネント")
 
 ### 仮想化管理
+{: #np_netappoverview-virtualization-mgmt}
 
 仮想化管理レイヤーは、以下のコンポーネントで構成されています。
 
@@ -56,6 +61,7 @@ lastupdated: "2019-01-24"
 NetApp ONTAP Select は、VMware クラスター内で実行され、ホスト上のローカル・ストレージを仮想化します。 NetApp ONTAP Select は専用モデルでデプロイされます。つまり、他のワークロードとクラスターを共有するという想定にはなっていません。 そのため、{{site.data.keyword.cloud_notm}} オファリング上の NetApp ONTAP Select のハードウェア構成のサイズは、NetApp ONTAP Select の要件のみに基づいて決まります。
 
 ## NetApp ONTAP Select インスタンスの技術仕様
+{: #technical-specifications-for-netapp-ontap-select-instances}
 
 NetApp ONTAP Select インスタンスには以下のコンポーネントが含まれます。
 
@@ -63,6 +69,7 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
 {:note}
 
 ### ストレージ
+{: #np_netappoverview-storage}
 
 * **ハイパフォーマンス (ミディアム)**、**ハイパフォーマンス (ラージ)**、**大容量**のいずれかを選択します。
 * RAID 5 とホット・スペア
@@ -70,6 +77,7 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
 * 管理データ・ストア – 管理 VM 用に 500 GB
 
 ### 事前設定構成
+{: #np_netappoverview-preset-config}
 
 以下の構成オプションがある 4 つの {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}が提供されています。
 * **ハイパフォーマンス (ミディアム)** – プレミアム・ライセンス / Dual Intel Xeon E5-2650 v4 (合計 24 コア、2.2 GHz) / 128 GB RAM / ノードあたり 22 個の 1.9 TB SSD ドライブ容量 / 4 ノード・クラスターの実効容量 – 59 TB
@@ -80,6 +88,7 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
 {:note}
 
 ### ハードウェア
+{: #np_netappoverview-hardware}
 
 * 3 つの RAM とディスクのオプション: **ハイパフォーマンス (ミディアム)**、**ハイパフォーマンス (ラージ)**、**大容量**
 * 2 台の 1 TB SATA ドライブ ESXi OS
@@ -87,18 +96,21 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
 * VMware Server Virtualization 6.5
 
 ### ネットワーキング
+{: #np_netappoverview-network}
 
 * 10 Gbps デュアル・ネットワーク・アップリンク (パブリックとプライベート)
 * VLAN (仮想 LAN) 3 つ: パブリック VLAN 1 つとプライベート VLAN 2 つ
 * セキュア VMware NSX Edge Services Gateway 1 つ
 
 ### 仮想サーバー・インスタンス
+{: #np_netappoverview-vsi}
 
 2 つの VSI (仮想サーバー・インスタンス):
 * Microsoft Active Directory (AD) とドメイン・ネーム・システム (DNS) サービス用に 1 つの VSI。
 * IBM CloudBuilder の VSI。これは、インスタンスのデプロイメントが完了した後にシャットダウンされます。
 
 ### ライセンスと料金
+{: #np_netappoverview-license-and-fee}
 
 *  NetApp ONTAP Select の 4 つの Premium または Standard エディションのライセンス (ユーザー提供)
 *  VMware vSphere 6.5 Enterprise Plus エディション
@@ -117,12 +129,14 @@ NetApp ONTAP Select インスタンスには以下のコンポーネントが含
    {{site.data.keyword.slportal}}での共有ストレージのファイル共有の管理は、上記アクティビティーに該当しません。 これには、共有ストレージのファイル共有の注文、削除 (マウントされている場合はデータ・ストアに影響する可能性があります)、承認、マウントなどのアクティビティーが含まれます。
 
 ## ファイアウォールに関する考慮事項
+{: #np_netappoverview-firewall-considerations}
 
 ファイアウォールを使用している場合は、{{site.data.keyword.IBM}} CloudDriver 仮想サーバー・インスタンス (VSI) と SDDC Manager 仮想マシン (VM) からのすべての通信に関してルールを構成する必要があります。 これらのルールでは、すべてのプロトコルが IP アドレス `10.0.0.0/8` と `161.26.0.0/16` 上で通信できるよう許可する必要があります。 このようなファイアウォールの例としては、NSX Distributed Firewalls (DFW)、Vyatta ファイアウォールなどがあります。
 
-### 関連リンク
+## 関連リンク
+{: #np_netappoverview-related}
 
-* [NetApp ONTAP Select インスタンスの計画](/docs/services/vmwaresolutions/netapp/np_planning.html#requirements-and-planning-for-netapp-ontap-select-instances)
-* [NetApp ONTAP Select インスタンスの注文](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [NetApp ONTAP Select インスタンスの計画](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning#requirements-and-planning-for-netapp-ontap-select-instances)
+* [NetApp ONTAP Select インスタンスの注文](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [NetApp ONTAP 9 ドキュメント・センター](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){:new_window}

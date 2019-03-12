@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,30 +13,36 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 订购新的 vSphere 集群
+{: #vs_orderinginstances}
 
 要部署高度可定制的 VMware 虚拟化平台，请订购 VMware vSphere on {{site.data.keyword.cloud}} 集群。使用此过程可定义新的 vSphere 集群。
 
 此过程将引导您选择 VMware 组件、{{site.data.keyword.cloud_notm}} 裸机服务器设置、存储设置和联网选项，以创建新集群。下订单后，系统将捕获集群配置，以便您可以返回并继续根据需要向外扩展集群。完成订单后，可以根据需求手动配置 VMware 集群。
 
 ## 需求
+{: #vs_orderinginstances-req}
 
 确保已完成以下任务：
-*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
-*  已查看[针对 vSphere 集群的需求和规划](/docs/services/vmwaresolutions/vsphere/vs_planning.html)中的需求和注意事项。
+*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)。
+*  已查看[针对 vSphere 集群的需求和规划](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)中的需求和注意事项。
 
 ## 系统设置
+{: #vs_orderinginstances-sys-settings}
 
 订购新的 vSphere 集群时，必须指定以下系统设置。
 
 ### 集群名称
+{: #vs_orderinginstances-cluster-name}
 
 集群名称在您的帐户中必须唯一。
 
 ## 许可证设置
+{: #vs_orderinginstances-licensing-settings}
 
 选择要随集群一起订购的 VMware 组件，并指定组件的许可选项。
 
 ### 针对 IBM 业务合作伙伴用户的组件捆绑软件
+{: #vs_orderinginstances-component-bundles-for-bp-users}
 
 如果您是 IBM 业务合作伙伴用户，那么可以在订购新的 vSphere 集群时选择组件许可证捆绑软件。以下捆绑软件可用：
 
@@ -58,6 +64,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ### 针对非业务合作伙伴用户的单独组件
+{: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 如果您是非业务合作伙伴，那么可以为 vSphere 集群选择以下组件：
 * VMware vSphere Enterprise Plus
@@ -73,6 +80,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ### 许可选项
+{: #vs_orderinginstances-licensing-options}
 
 可以选择以下选项来对所选 VMware 组件进行许可：
 * **购买时包含许可证**：选择此项时，系统将以您的名义为 VMware 组件购买新许可证。将生成组合 VMware 许可证以匹配订单的集群大小。
@@ -84,8 +92,10 @@ lastupdated: "2019-01-23"
 {:important}
 
 ## 裸机服务器设置
+{: #vs_orderinginstances-bare-metal-settings}
 
 ### 数据中心位置
+{: #vs_orderinginstances-dc-location}
 
 选择要托管集群的 {{site.data.keyword.CloudDataCent_notm}}。
 
@@ -96,6 +106,7 @@ lastupdated: "2019-01-23"
 * LON05 数据中心不支持 SAP 认证或 Broadwell 裸机服务器。
 
 ### Skylake
+{: #vs_orderinginstances-skylake}
 
 选择 **Skylake** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。可用的选项取决于是否选择了 VMware vSAN 组件。
 
@@ -108,6 +119,7 @@ lastupdated: "2019-01-23"
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
 ### SAP 认证
+{: #vs_orderinginstances-sap}
 
 如果先前选择的是 VMware vSAN，那么 **SAP 认证**选项卡不可用。选择 **SAP 认证**后，无法变更 CPU 或 RAM 设置。
 
@@ -121,6 +133,7 @@ lastupdated: "2019-01-23"
   * 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 4096 GB RAM
 
 ### Broadwell
+{: #vs_orderinginstances-broadwell}
 
 选择 **Broadwell** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。可用的选项取决于是否选择了 VMware vSAN 组件。
 
@@ -135,12 +148,14 @@ lastupdated: "2019-01-23"
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
 ### 裸机服务器的数量
+{: #vs_orderinginstances-bare-metal-number}
 
 要添加到 vSphere 集群的 ESXi 服务器数。所有 ESXi 服务器的配置都相同。
 * 如果选择了 VMware NSX 组件，那么至少需要三个服务器。
 * 如果选择了 VMware vSAN 组件，那么至少需要四个服务器。
 
 ## 存储设置
+{: #vs_orderinginstances-storage-settings}
 
 对于不包含 vSAN 的订单，将随 ESXi 服务器一起订购一个可容纳 12 个磁盘的机箱，其中两个磁盘用于 ESXi 操作系统 (OS)。
 
@@ -157,10 +172,12 @@ lastupdated: "2019-01-23"
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 
 ## 网络接口设置
+{: #vs_orderinginstances-network-interface-settings}
 
 订购新的 vSphere 集群时，必须指定以下网络接口设置。
 
 ### 主机名前缀
+{: #vs_orderinginstances-host-name-prefix}
 
 主机名用于所有裸机服务器订单。建议将主机名用于所有管理虚拟机，例如 vCenter Server 和 NSX。
 
@@ -170,6 +187,7 @@ lastupdated: "2019-01-23"
 * 最大长度为 10 个字符。
 
 ### 子域标签
+{: #vs_orderinginstances-subdomain-label}
 
 子域标签必须满足以下需求：
 *  只允许使用字母数字字符和短划线 (-) 字符。
@@ -178,6 +196,7 @@ lastupdated: "2019-01-23"
 *  子域标签在您的帐户中必须唯一。
 
 ### 域名
+{: #vs_orderinginstances-domain-name}
 
 域名用于所有 {{site.data.keyword.baremetal_short}} 且必须满足以下需求：
 * 名称必须包含两个或更多用句点 (.) 分隔的字符串。
@@ -188,6 +207,7 @@ lastupdated: "2019-01-23"
 * 域名的最大长度为 189 个字符。
 
 ### 公用或专用网络
+{: #vs_orderinginstances-public-private-network}
 
 网络接口卡 (NIC) 启用设置基于您选择的是**公用和专用网络**还是**仅专用网络**。以下附加组件服务需要公共 NIC，并且这些服务在您选择专用选项时不可用：
 
@@ -197,15 +217,20 @@ lastupdated: "2019-01-23"
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### VLAN
+{: #vs_orderinginstances-vlans}
 
 网络设置基于您选择的是**订购新 VLAN** 还是**选择现有 VLAN**。
 
 订购集群时，需要包含一个公用 VLAN 和两个专用 VLAN。两个专用 VLAN 用于中继到每个裸机服务器中。
 
 #### 订购新的 VLAN
+{: #vs_orderinginstances-new-vlans}
+
 选择此项可订购一个新的公用 VLAN 和两个新的专用 VLAN。
 
-#### 选择现有 VLAN  
+#### 选择现有 VLAN
+{: #vs_orderinginstances-existing-vlans}
+
 根据选择的 {{site.data.keyword.CloudDataCent_notm}}，可能会有现有公用和专用 VLAN 可用。
 
   选择复用现有公用和专用 VLAN 时，请指定 VLAN 和子网：
@@ -220,14 +245,17 @@ lastupdated: "2019-01-23"
 * 确保您选择的所有 VLAN 都在相同的 pod 上。在混合 pod VLAN 上无法供应 ESXi 服务器。
 
 #### FortiGate Physical Appliance 300 序列 HA 对
+{: #vs_orderinginstances-fortigate-physical-appliance}
 
-您还可以选择是否包含 FortiGate Physical Appliance 300 系列 HA 对以确保云环境安全。有关更多信息，请参阅 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services/fsa_considerations.html)。
+您还可以选择是否包含 FortiGate Physical Appliance 300 系列 HA 对以确保云环境安全。有关更多信息，请参阅 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)。
 
 ## 订单摘要
+{: #vs_orderinginstances-order-summary}
 
 根据配置，估算成本会立即生成并显示在右侧的**订单摘要**窗格中。单击**定价详细信息**以生成提供估算详细信息的 PDF 文档。
 
 ## 订购 vSphere 集群的过程
+{: #vs_orderinginstances-procedure}
 
 1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **VMware vSphere**。
 2. 在 **VMware vSphere on IBM Cloud** 页面上，单击**创建**。  
@@ -260,6 +288,7 @@ lastupdated: "2019-01-23"
    {:note}
 
 ### 结果
+{: #vs_orderinginstances-results}
 
 如果已将集群配置另存为模板，那么会收到控制台通知，指示配置已成功保存，然后您可以在**集群配置**列表中找到该模板。
 
@@ -268,8 +297,9 @@ lastupdated: "2019-01-23"
 与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**已部署的实例**页面上。
 {:note}
 
-### 相关链接
+## 相关链接
+{: #vs_orderinginstances-related}
 
-* [基于现有配置订购 vSphere 集群](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
-* [缩放现有集群](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
-* [缩放在控制台外部创建的集群](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [基于现有配置订购 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
+* [扩展现有集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [扩展在控制台外部创建的集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

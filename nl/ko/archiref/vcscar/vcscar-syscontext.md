@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 ## 시스템 컨텍스트
+{: #vcscar-syscontext}
+
 다음 다이어그램은 이 참조 아키텍처를 위한 시스템 컨텍스트를 보여줍니다. 시스템 컨텍스트 다이어그램은 시스템의 핵심 요소, 시스템의 경계, 상호작용과 함께 상호작용하는 엔티티를 정의하는 다이어그램입니다. 독자에게 시스템에 대한 초기 보기를 제공하는 상위 레벨 다이어그램입니다.
 
 그림 1. 시스템 컨텍스트
@@ -32,6 +34,8 @@ Kubernetes, 개인용 이미지 저장소, 관리 콘솔, 모니터링 프레임
 -	Watson Knowledge Studio - Watson Knowledge Studio는 사용할 Watson Discovery의 모델을 제공합니다.
 
 ### 액터
+{: #vcscar-syscontext-actors}
+
 시스템 컨텍스트 다이어그램은 다음 액터를 식별합니다.
 
 * Acme 관리자 - 관리자는 진행 중인 다음 태스크를 포함하여 진행 중인 애플리케이션 배치와 유지보수에 대한 책임이 있습니다.
@@ -52,5 +56,6 @@ Assistant - 시스템에서 Watson Discovery Service를 사용하여 요청 매�
 * NSX Edge - NSX Edge는 vCenter Server 인스턴스에서 들어가고 나가는 north-south 트랙픽을 관리하는 가상 어플라이언스입니다.
 
 ## 관련 링크
+{: #vcscar-syscontext-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

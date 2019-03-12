@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-26"
+lastupdated: "2019-02-15"
 
 ---
 
 # 建立基準線並連接至庫存物件
+{: #vum-baselines}
 
 基準線具有一個以上修補程式、延伸規格、服務套件、錯誤修正程式或升級的集合，而且可以分類為修補程式、延伸規格或升級基準線。基準線群組是從現有基準線組合而成。主機基準線群組可以具有單一升級基準線，以及各種修補程式和延伸規格基準線。虛擬機器及虛擬應用裝置基準線群組最多可以具有三個升級基準線：一個 VMware Tools 升級基準線、一個虛擬機器硬體升級基準線，以及一個虛擬應用裝置升級基準線。
 
@@ -32,7 +33,8 @@ VUM 包括的預設基準線可以用來掃描下列任何裝置，以判斷是�
 2. 按一下您要掃描的叢集物件。
 3. 按一下**連接基準線**，選取兩個預先定義的「修補程式基準線」，然後按一下**確定**。
 
-### 相關鏈結
+## 相關鏈結
+{: #vum-baselines-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

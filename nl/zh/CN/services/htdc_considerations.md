@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # HyTrust DataControl on IBM Cloud 概述
+{: #htdc_considerations}
 
 HyTrust DataControl on {{site.data.keyword.cloud}} 服务通过集成密钥管理提供高强度加密功能，以确保工作负载在整个生命周期中的安全。此服务可以提供操作系统级别和数据级别的加密。这意味着可以对工作负载中的任何目录、文件夹或文件进行加密和解密。
 
@@ -20,30 +21,38 @@ HyTrust DataControl on {{site.data.keyword.cloud}} 服务通过集成密钥管�
 {:note}
 
 ## HyTrust DataControl on IBM Cloud 的技术规范
+{: #technical-specifications-for-hytrust-datacontrol-on-ibm-cloud}
 
 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
 
 ### HyTrust DataControl 设备
+{: #htdc_considerations-appliance}
+
 * CPU：2 个 vCPU
 * RAM：8 GB
 * 磁盘：在融合集群中的 vSAN 上常驻 20 GB VMDK
 * 网络：位于为管理指定的支持 VLAN 的专用可移植网络上
 
 ### 高可用性
+{: #htdc_considerations-ha
+}
 两个 DataControl 设备以主动/主动配置方式进行部署。
 
 ### 许可证和费用
+{: #htdc_considerations-licenses}
 
 按主机订购许可证：为环境中的每个主机订购了一个 HyTrust DataControl 许可证。
 
 ## 除去 HyTrust DataControl on IBM Cloud 时的注意事项
+{: #htdc_considerations-remove}
 
 除去 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服务之前，请使用 DataControl 对所有客户机解耦。除去该服务后，可能会删除密钥，并且可能会将您锁定在 VM 之外。
 
-### 相关链接
+## 相关链接
+{: #htdc_considerations-related}
 
-* [订购 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_ordering.html)
-* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtdc.html)
-* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [订购 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_ordering)
+* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtdc)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [HyTrust Web 站点](https://www.hytrust.com/)

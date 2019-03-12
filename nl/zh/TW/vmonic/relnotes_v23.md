@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-05-28"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-05-28"
 {:important: .important}
 
 # 2.3 版的版本注意事項
+{: #relnotes_v23}
 
 此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
@@ -24,19 +25,19 @@ lastupdated: "2018-05-28"
 * CVEID：[CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID：[CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-如需相關資訊，請參閱[處理 Spectre 及 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)。
+如需相關資訊，請參閱[處理 Spectre 及 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)。
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
 此版本引進 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 供應項目。vCenter Server with Hybridity Bundle 是一種受管理的專用雲端，有助於快速且輕鬆地將內部部署基礎架構擴充到雲端。VMware 環境根據 IBM 提供的「VMware 軟體定義資料中心」授權，並包括 VMware HCX on {{site.data.keyword.cloud_notm}} 服務，以透過內部部署方式輕鬆且安全地連接 vSphere 5.0+ 環境與 {{site.data.keyword.cloud_notm}} 站台，來獲得無縫的基礎架構混合及實際應用程式行動性。
 
-只有透過 vCenter Server with Hybridity Bundle 實例才能取得 HCX on {{site.data.keyword.cloud_notm}} 服務。在第一次套用基礎 vCenter Server 2.3 版軟體更新之後，您可以將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。如需相關資訊，請參閱[將更新套用至 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html)。
+只有透過 vCenter Server with Hybridity Bundle 實例才能取得 HCX on {{site.data.keyword.cloud_notm}} 服務。在第一次套用基礎 vCenter Server 2.3 版軟體更新之後，您可以將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。如需相關資訊，請參閱[將更新套用至 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)。
 
 如需 vCenter Server with Hybridity Bundle 的相關資訊，請參閱下列主題：
 
-* [vCenter Server with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [vCenter Server with Hybridity Bundle 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
-* [訂購 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [vCenter Server with Hybridity Bundle 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
+* [訂購 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 
 ## 刪除 vCenter Server 及 Cloud Foundation 實例的叢集支援
 
@@ -44,8 +45,8 @@ lastupdated: "2018-05-28"
 
 如需相關資訊，請參閱下列主題：
 
-* [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
-* [新增、檢視及刪除 Cloud Foundation 實例的叢集](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
+* [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances#deleting-clusters-from-vcenter-server-instances)
+* [新增、檢視及刪除 Cloud Foundation 實例的叢集](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances#deleting-clusters-from-cloud-foundation-instances)
 
 ## VMware vCenter Server 實例的更新
 
@@ -61,8 +62,8 @@ lastupdated: "2018-05-28"
 
 如需相關資訊，請參閱下列主題：
 
-* [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ## VMware Cloud Foundation 實例的更新
 
@@ -70,24 +71,6 @@ lastupdated: "2018-05-28"
 *	VMware vSphere ESXi 6.5 U1g（已套用修補程式層次 ESXi650-201803001 的 ESXi 6.5u1）
 *	VMware vCenter Server 6.5 Update 1g
 *	VMware NSX for vSphere 6.3.5
-
-## VMware Federal 實例的更新
-
-### VMware Federal 實例的 DNS 配置
-
-現在，您可以選擇在管理叢集裡選取適用於 Microsoft Active Directory (AD) 的單一 Microsoft Windows Server 虛擬伺服器實例 (VSI)，或兩部高可用性 Microsoft Windows 虛擬機器的部署。對於 2.2 版，依預設，會自動部署適用於 Microsoft AD 的單一 Microsoft Windows VSI。能選取兩部 Microsoft Windows 虛擬機器的新選項提供更多隱私權，並可選擇使用 Veeam 服務來備份及還原虛擬機器。
-
-如果您將實例配置為使用兩部 Microsoft Windows 虛擬機器，則必須提供 2 份 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及/或 Microsoft Windows Server 2012 R2 Datacenter 版本授權。您有 30 天的時間可啟動 (activate) 虛擬機器。{:note}
-
-如需相關資訊，請參閱[訂購 VMware Federal 實例](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html#network-interface-settings)中的*網路介面設定* 小節。
-
-### 新增及刪除 VMware Federal 實例的叢集支援
-
-您現在可以使用叢集來管理在 2.3 版及更新版本中部署的 VMware Federal 實例中的 ESXi 伺服器，以獲得更好的資源管理和高可用性。依預設，您訂購實例時所配置的 ESXi 伺服器會分組為 **cluster1**。您可以在實例概觀頁面上檢視叢集詳細資料，或最多將總計 10 個叢集新增至一個實例。當您擴充或縮減實例的容量時，您可以選取要將 ESXi 伺服器新增至哪一個叢集，或從中移除 ESXi 伺服器。
-
-您也可以選擇從實例刪除一個以上的叢集，而不刪除整個實例。
-
-如需相關資訊，請參閱[新增、檢視及刪除 VMware Federal 實例的叢集](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)。
 
 ## 附加服務的更新
 
@@ -98,8 +81,8 @@ lastupdated: "2018-05-28"
 您可以在訂購實例時訂購包含此服務的實例，或稍後將此服務新增至現有實例。
 
 如需相關資訊，請參閱下列主題：
-* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 的元件及考量](/docs/services/vmwaresolutions/services/htcc_considerations.html)
-* [管理 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtcc.html)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 的元件及考量](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)
+* [管理 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtcc)
 
 ### HyTrust DataControl on IBM Cloud
 
@@ -108,8 +91,8 @@ lastupdated: "2018-05-28"
 您可以在訂購實例時訂購包含此服務的實例，或稍後將此服務新增至現有實例。
 
 如需相關資訊，請參閱下列主題：
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 的元件及考量](/docs/services/vmwaresolutions/services/htdc_considerations.html)
-* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtdc.html)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 的元件及考量](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)
+* [管理 HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtdc)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 

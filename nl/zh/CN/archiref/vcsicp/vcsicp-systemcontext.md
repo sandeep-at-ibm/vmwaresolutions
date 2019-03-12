@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 系统上下文
+{: #vcsicp-systemcontext}
 
 图 1. 系统上下文图
 ![系统上下文图 - vCenter Server {{site.data.keyword.icpfull_notm}} CAM](vcsicp-syscontext-vcs-icp-cam.svg)
@@ -24,6 +25,7 @@ lastupdated: "2019-01-23"
 - **{{site.data.keyword.cloud_notm}} 服务** - {{site.data.keyword.cloud_notm}} 服务是种类丰富的可使用服务，包括 Analytics、AI 和 IoT 产品。
 
 ## 参与者
+{: #vcsicp-systemcontext-actors}
 
 表 1. 参与者
 
@@ -35,6 +37,7 @@ lastupdated: "2019-01-23"
 {{site.data.keyword.containerlong_notm}} |IBM 资源，管理服务的 {{site.data.keyword.containerlong_notm}} 主节点。
 
 ## 系统
+{: #vcsicp-systemcontext-systems}
 
 表 2. 系统
 
@@ -55,6 +58,7 @@ Watson|对于此参考体系结构和 Acme Skateboards，Watson 表示“概念�
 
 应用程序迁移、联网和安全性通常是应用程序现代化中最难对付的方面。vCenter Server、VMware Hybridity、VMware NSX、{{site.data.keyword.icpfull_notm}} 和 {{site.data.keyword.containerlong_notm}} 能应对这些困难，并支持您构建弹性、安全和稳健的现代应用程序。
 
-### 相关链接
+## 相关链接
+{: #vcsicp-systemcontext-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

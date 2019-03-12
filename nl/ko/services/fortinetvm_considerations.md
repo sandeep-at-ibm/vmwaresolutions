@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # FortiGate Virtual Appliance on IBM Cloud 개요
+{: #fortinetvm_considerations}
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 서비스는 가상 인프라 내에서 중요한 보안 제어를 구현하여 위험을 줄일 수 있는 FortiGate Virtual Appliances 쌍을 사용자 환경에 배치합니다.
 
@@ -22,24 +23,30 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 서비스는 가상 �
 {:note}
 
 ## FortiGate Virtual Appliance on IBM Cloud의 기술 스펙
+{: #technical-specifications-for-fortigate-virtual-appliance-on-ibm-cloud}
+
 
 다음 컴포넌트가 주문되고 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
 ### 가상 머신
+{: #fortinetvm_considerations-specs-vms}
 
 * 모든 옵션에는 가상 머신의 고가용성(HA) 이중화가 포함됨
 * 배치 크기와 구독 유형에 따라 가상 머신당 2, 4 또는 8개 vCPU
 * 배치 크기와 구독 유형에 따라 가상 머신당 4, 6 또는 12GB RAM
 
 ### 고가용성
+{: #fortinetvm_considerations-specs-ha}
 
 2개의 가상 머신이 배치되어 있으며 HA 또는 VRRP(Virtual Router Redundancy Protocol) 구성을 위해 준비되어 있습니다.
 
 ### 네트워킹
+{: #fortinetvm_considerations-specs-network}
 
 FortiGate® 콘솔에 대한 액세스는 사설 관리 네트워크를 통해 제공됩니다.
 
 ### 라이센스 및 요금
+{: #fortinetvm_considerations-specs-license}
 
 각 가상 머신에 대한 라이센스 요금은 선택된 배치 크기와 월별 구독 라이센스 모델에 따라 각 청구 주기에 적용됩니다.
 
@@ -47,6 +54,7 @@ FortiGate® 콘솔에 대한 액세스는 사설 관리 네트워크를 통해 �
 {:important}
 
 ## FortiGate Virtual Appliance on IBM Cloud 설치 시 고려사항
+{: #fortinetvm_considerations-install}
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 설치하기 전에 다음 고려사항을 검토하십시오.
 * FortiGate 가상 머신(VM)은 기본 클러스터에만 배치됩니다.
@@ -65,6 +73,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 설
   이러한 요구사항이 있으므로, FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}에 필요한 공간은 주의깊게 계획되어야 합니다. 필요한 경우에는 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}를 주문하기 전에 1 - 2개의 ESXi 서버를 인스턴스에 추가하거나, 장애 복구를 위한 vSphere HA CPU 예약을 줄이십시오(또는 둘 다 수행).
 
 ## FortiGate Virtual Appliance on IBM Cloud 주문 예
+{: #fortinetvm_considerations-example}
 
 2.10GHz의 16개 코어(각 128GB RAM 포함)로 구성된 두 개의 ESXi 서버와 VMware vCenter Server **소형** 인스턴스를 주문합니다. FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}의 경우 배치 크기 및 구독 라이센스 모델에 **대형**(8개의 vCPU / 12GB RAM)을 선택합니다.
 
@@ -87,14 +96,16 @@ VMware vCenter Server, VMware NSX Controller 또는 VMware NSX Edge 등의 다�
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 실행하는 데 추가 리소스가 필요한 경우에는 이 서비스를 설치하기 전에 더 많은 ESXi 서버를 추가할 수 있습니다.
 
 ## FortiGate Virtual Appliance on IBM Cloud 제거 시 고려사항
+{: #fortinetvm_considerations-remove}
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 기존 FortiGate Virtual Appliances의 구성이 올바르게 제거되었는지 확인하십시오. 특히, FortiGate Virtual Appliances를 통하는 대신 FortiGate Virtual Appliances 주변에서 네트워크 트래픽을 라우트해야 합니다. 그렇지 않으면, 기존 데이터 그래픽은 환경 내에서 영향을 받을 수 있습니다.
 
-### 관련 링크
+## 관련 링크
+{: #fortinetvm_considerations-related}
 
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
-* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_ordering)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Fortinet 웹 사이트](https://www.fortinet.com/){:new_window}
 * [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

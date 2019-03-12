@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # IBM Cloud Private Hosted の概要
+{: #icp_overview}
 
 {{site.data.keyword.cloud}} Private Hosted サービスは、自動的に {{site.data.keyword.cloud_notm}} Private Hosted を VMware vCenter Server インスタンスにデプロイします。 このサービスは、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。 このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。
 
@@ -22,6 +23,7 @@ lastupdated: "2019-01-24"
 {:note}
 
 ## IBM Cloud Private Hosted の技術仕様
+{: #technical-specifications-for-ibm-cloud-private-hosted}
 
 **「実動対応 (Production-Ready)」**環境および**「開発/テスト (Development/Test)」**環境用に IBM Cloud Private Hosted サービスを注文するための最小要件を以下の表にリストします。
 
@@ -33,6 +35,7 @@ lastupdated: "2019-01-24"
 | 開発/テスト | 30 | 200 | 3 | 4,000 |
 
 ### IBM Cloud Private Hosted のリソース要件
+{: #resource-requirements-for-ibm-cloud-private-hosted}
 
 実動対応環境および開発/テスト環境での {{site.data.keyword.cloud_notm}} Private Hosted サービスのリソース要件を次の表にリストします。
 
@@ -69,10 +72,12 @@ lastupdated: "2019-01-24"
 | 文書化された制約 | 30 | 200 |  | 4,000 |  |
 
 ### IBM Cloud Private Hosted のスペース所要量の計算式
+{: #icp_overview-formulas}
 
 IBM Cloud Private および管理オーバーヘッドのスペース所要量を計算するには、以下の計算式を使用します。
 
 #### 計算式 1
+{: #icp_overview-formulas-1}
 
 `AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
@@ -89,6 +94,7 @@ IBM Cloud Private および管理オーバーヘッドのスペース所要量�
 | HostVsanOverheadCorePercentage | vSAN で使用するホストのコアの割合 (10%。ホストが vSAN でない場合は 0%) | % | 10% |	0% |
 
 #### 計算式 2
+{: #icp_overview-formulas-2}
 
 `AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
@@ -107,18 +113,21 @@ IBM Cloud Private および管理オーバーヘッドのスペース所要量�
 | HostVsanOverheadMemory | ディスク・サイズに関係なく vSAN 管理に予約するメモリーの GB 数 (7 GB。ホストが VSAN でない場合は 0 GB)	| GB |  7	| 0 |
 
 ## IBM Cloud Private Hosted をインストールする際の考慮事項
+{: #icp_overview-install}
 
 * {{site.data.keyword.cloud_notm}} Private Hosted サービスをインストールする前に、必要なライセンスを収集してください。ライセンスでは、{{site.data.keyword.cloud_notm}} Private Hosted の初期デプロイメントだけではなく、インフラストラクチャー内の将来の {{site.data.keyword.cloud_notm}} Private Hosted のサイズ拡張もサポートできるようにすることをお勧めします。
 * 実動対応環境の {{site.data.keyword.cloud_notm}} Private Hosted デプロイメントの場合、ホスト 1 台に 64 GB RAM はサポートされません。 そのため、**RAM** に 64 GB より高いオプションを選択する必要があります。
 * {{site.data.keyword.cloud_notm}} Private Hosted サービスが環境にインストールされる前に、環境内のデフォルト・クラスターの空き容量が検査され、サービス・コンポーネントを収容できるか確認されます。 容量検査に失格した場合、サービスはインストールされず、コンソールのサービス状態が**「容量検査失格 (Capacity Validation Failed)」**に設定されます。 さらに、詳しい情報を示すコンソール・メッセージが表示され、E メールで通知されます。 サービスをインストールするためには、ホストを追加するか、RAM、 CPU、またはディスク・スペースを解放することで、デフォルト・クラスターの容量を増やしてから、もう一度コンソールでサービスを追加してください。 その後で、**「容量検査失格 (Capacity Validation Failed)」**状態の既存のサービスを、その横にある**「削除」**アイコンをクリックして削除できます。
 
 ## IBM Cloud Private Hosted を削除する際の考慮事項
+{: #icp_overview-remove}
 
 * {{site.data.keyword.cloud_notm}} は、{{site.data.keyword.cloud_notm}} Private Hosted サービスの初期インストール時にデプロイされた仮想マシン (VM) のみを削除します。 インストール後にデプロイされたノードはクリーンアップされません。
 * {{site.data.keyword.cloud_notm}} は、{{site.data.keyword.cloud_notm}} Private Hosted サービスの初期デプロイメント時に作成された VXLAN、DLR、およびエッジ・ゲートウェイを削除します。 VXLAN にデプロイされた VM は、{{site.data.keyword.cloud_notm}} Private Hosted サービスの削除が開始すると、接続を失います。
 
-### 関連リンク
+## 関連リンク
+{: #icp_overview-related}
 
-* [IBM Cloud Private Hosted の注文](/docs/services/vmwaresolutions/services/icp_ordering.html)
-* [vCenter Server および IBM Cloud Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [IBM Cloud Private Hosted の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
+* [vCenter Server および IBM Cloud Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [IBM Cloud Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US)

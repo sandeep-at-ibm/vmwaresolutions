@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # ソースでの HCX の構成およびインストール
+{: #hcx-archi-install-cfg-src}
 
 オンプレミスへのインストールでは、HCX 管理アプライアンスをデプロイし、それを vCenter と VCF/VCS HCX 対応クラウドの 1 つ以上のエンドポイントに登録する必要があります。
 
 ## HCX Manager アプライアンスのインストール
+{: #hcx-archi-install-cfg-src-install-hma}
 
 HCX Manager アプライアンスをオンプレミス vCenter にインストールします。
 
@@ -53,6 +55,7 @@ HCX Manager アプライアンスをオンプレミス vCenter にインスト�
   * **「サマリ」**タブを表示すると、コンソールに**「パワーオン」**と表示され、**「再生」**ボタンが緑色になっています。
 10. HCX Manager が電源オンになり、vCenter に登録する準備ができました。
 
-### 関連リンク
+## 関連リンク
+{: #hcx-archi-install-cfg-src-related}
 
-* [インストール環境の準備](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-prep-install.html)
+* [インストール環境の準備](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-prep-install)

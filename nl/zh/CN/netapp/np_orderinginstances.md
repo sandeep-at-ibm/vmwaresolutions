@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,23 +13,27 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # 订购 NetApp ONTAP Select 实例
+{: #np_orderinginstances}
 
 要部署具有专用、高度可用的软件定义存储设备的 VMware 虚拟化平台，请订购 NetApp ONTAP Select 实例。
 
 ## 需求
+{: #np_orderinginstances-req}
 
 确保已完成以下任务：
-*  已在**设置**页面上配置 {{site.data.keyword.cloud}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
-*  已查看[针对 NetApp ONTAP Select 实例的需求和规划](/docs/services/vmwaresolutions/netapp/np_planning.html)中的需求和注意事项。
+*  已在**设置**页面上配置 {{site.data.keyword.cloud}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)。
+*  已查看[针对 NetApp ONTAP Select 实例的需求和规划](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)中的需求和注意事项。
 
 不要修改在实例订购或部署期间设置的任何值。这样做会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。
 {:important}
 
 ## 系统设置
+{: #np_orderinginstances-sys-settings}
 
 订购 NetApp ONTAP Select 实例时，必须指定以下基本设置。
 
 ### 实例名称
+{: #np_orderinginstances-instance-name}
 
 实例名称必须满足以下需求：
 * 只允许使用字母数字字符和短划线 (-) 字符。
@@ -38,10 +42,12 @@ lastupdated: "2019-01-25"
 * 实例名称在您的帐户中必须唯一。
 
 ## 网络接口设置
+{: #np_orderinginstances-network-interface-settings}
 
 订购 NetApp ONTAP Select 实例时，必须指定以下网络接口设置。
 
 ### 主机名前缀
+{: #np_orderinginstances-host-name-prefix}
 
 主机名前缀必须满足以下需求：
 *  只允许使用字母数字字符和短划线 (-) 字符。
@@ -49,6 +55,7 @@ lastupdated: "2019-01-25"
 *  主机名前缀的最大长度为 10 个字符。
 
 ### 子域标签
+{: #np_orderinginstances-subdomain-label}
 
 子域标签必须满足以下需求：
 *  只允许使用字母数字字符和短划线 (-) 字符。
@@ -57,6 +64,7 @@ lastupdated: "2019-01-25"
 *  子域标签在您的帐户中必须唯一。
 
 ### 域名
+{: #np_orderinginstances-domain-name}
 
 根域名必须满足以下需求：
 * 域名必须包含两个或更多用句点 (.) 分隔的字符串。
@@ -69,16 +77,20 @@ lastupdated: "2019-01-25"
 {:note}
 
 ## 许可证设置
+{: #np_orderinginstances-licensing-settings}
 
 必须上传四个 NetApp 许可文件，四个 {{site.data.keyword.baremetal_short}} 各自需要一个许可文件。请联系 NetApp 销售团队，以获取针对高性能或高容量部署的相应许可。
 
 ## 裸机服务器设置
+{: #np_orderinginstances-bare-metal-settings}
 
 ### 数据中心位置
+{: #np_orderinginstances-dc-location}
 
 必须选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
 
 ### 裸机服务器配置
+{: #np_orderinginstances-bare-metal-config}
 
 可以根据需求选择裸机服务器配置：
 * **高性能（中型）**- 高级许可证 / 双 Intel Xeon E5-2650 V4（共 24 个核心，2.2 GHz）/ 128 GB RAM / 每节点 22 个 1.9 TB SSD 驱动器容量 / 4 节点集群的有效容量 - 59 TB
@@ -89,10 +101,12 @@ lastupdated: "2019-01-25"
 {:note}
 
 ### 裸机服务器的数量
+{: #np_orderinginstances-bare-metal-number}
 
 缺省情况下，NetApp ONTAP Select 实例的 ESXi 服务器数为 4 个。您不能对其进行更改。所有 ESXi 服务器都共享配置。
 
 ## 订购 NetApp ONTAP Select 实例的过程
+{: #ordering-netapp-ontap-select-instances}
 
 1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **NetApp ONTAP Select**。
 2. 在 **NetApp ONTAP Select** 页面上，单击**创建**。
@@ -110,14 +124,16 @@ lastupdated: "2019-01-25"
     5. 单击**供应**。
 
 ## 结果
+{: #np_orderinginstances-results}
 
 实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
 
-成功部署实例后，[NetApp ONTAP Select 实例的技术规范](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances)中描述的组件已安装在 VMware 虚拟平台上。
+成功部署实例后，[NetApp ONTAP Select 实例的技术规范](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#technical-specifications-for-netapp-ontap-select-instances)中描述的组件已安装在 VMware 虚拟平台上。
 
 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
 ## 后续步骤
+{: #np_orderinginstances-next}
 
 查看和管理订购的 NetApp ONTAP Select 实例。
 
@@ -130,9 +146,10 @@ lastupdated: "2019-01-25"
 
    这些活动的例外情况包括在 {{site.data.keyword.slportal}} 中管理共享存储器文件共享。此类活动包括：订购、删除（如果已安装，可能会影响数据存储）、授权和安装共享存储器文件共享。
 
-### 相关链接
+## 相关链接
+{: #np_orderinginstances-related}
 
-* [查看 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
-* [删除 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
+* [查看 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
+* [删除 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
 * [NetApp ONTAP 文档中心](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
 * [将专用存储器连接到 NetApp ONTAP Select 部署](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

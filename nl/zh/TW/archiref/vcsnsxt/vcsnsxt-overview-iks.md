@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-iks}
 
 ## IBM Cloud Kubernetes Service 概觀
+{: #vcsnsxt-overview-iks-ovw}
 
 {{site.data.keyword.containerlong_notm}} 提供隔離的安全平台來管理容器。此平台在失效接手時具有可攜性、可延伸及自我修復功能。
 
@@ -34,10 +36,12 @@ Kubernetes 網路模型會陳述三個基礎需求：
 * 容器本身所看到的 IP 與其他人看到該容器的 IP 相同。
 
 ### 名稱空間
+{: #vcsnsxt-overview-iks-namespaces}
 
 名稱空間是容器網路的基礎層面。名稱空間是用來分割核心資源的 Linux 核心特性，讓一組處理程序可以看到一組資源，而另一組處理程序則會看到一組不同的資源。資源包括裝載點、處理程序 ID、網路堆疊、IPC 及使用者 ID。每個名稱空間都有一組專用 IP 位址、其自己的遞送表、Socket 清單、連線追蹤表格、防火牆，以及其他網路相關資源。
 
 ### 容器網路介面
+{: #vcsnsxt-overview-iks-container-network-interfaces}
 
 Kubernetes 會使用「容器網路介面 (CNI)」作為其外掛程式導向的網路解決方案。它包含用於撰寫外掛程式的一個規格及多個程式庫，以在 Linux 容器中配置網路介面。CNI 規格是輕量型規格，只能處理容器網路連線功能，以及刪除容器之後的資源記憶體回收。
 
@@ -71,6 +75,7 @@ Kubernetes 的 CNI 環境定義中有下列兩個核心定義：
     - {{site.data.keyword.cloud_notm}} Virtual Router Appliance 可以部署為 VPN 閘道，以安全地連接至外部網路。公用或專用網路資料流量可以透過 VRA 進行遞送。VRA 會建立遠端 VPN 閘道的已加密 IPSec 通道。
 
 ## IBM Cloud Kubernetes Service 元件
+{: #vcsnsxt-overview-iks-components}
 
 工作者節點是由 Kubernetes 主節點所管理，Kubernetes 主節點會集中控制及監視叢集中的所有 Kubernetes 資源。「開發人員」部署容器的資源時，主節點可決定要在其上部署這些資源的工作者節點，並考慮叢集中的部署需求及可用容量。主節點及工作者節點透過安全的 TLS 憑證以及透過 {{site.data.keyword.cloud_notm}} 公用網路的 openVPN 連線彼此通訊。「開發人員」可存取透過網際網路在「主節點」上管理的 kube-apiserver。
 
@@ -89,6 +94,7 @@ Kubernetes 的 CNI 環境定義中有下列兩個核心定義：
 -	**負載平衡器** - 負載平衡器是一種 Kubernetes 服務，可用來將公用或專用要求轉遞至應用程式，以平衡叢集中的網路資料流量工作負載。此元件在 ibm-system 名稱空間中運作。
 
 ### Calico
+{: #vcsnsxt-overview-iks-calico}
 
 {{site.data.keyword.containerlong_notm}} 使用 Calico 作為其網路提供者。Calico 使用第 3 層方法，而非層疊網路。透過 CNI 外掛程式，Calico 會與 Kubernetes 整合，以提供網路，讓使用者利用搭配使用純正 IP 網路與「邊界閘道通訊協定」的方法來進行路徑分佈。
 
@@ -114,22 +120,27 @@ Calico 提供一種 L3 Fabric 網路架構解決方案，而非 vSwitch，而 Ca
 因為 {{site.data.keyword.cloud_notm}} Private 網路只會轉遞 {{site.data.keyword.cloud_notm}} IP 定址綱目，所以需要有 Calico，才能使用 {{site.data.keyword.containerlong_notm}} 中工作負載間資料流量的 IP-in-IP 封裝來隱藏 Pod 網路 IP 位址。{{site.data.keyword.containerlong_notm}} 使用 IP-in-IP 跨子網路模式。
 
 ### IBM Cloud Kubernetes Service 中的 Calico
+{: #vcsnsxt-overview-iks-calico-iks}
 
 Calico 會自動安裝並配置在 {{site.data.keyword.containerlong_notm}} 中。會使用建立您自己的原則來保護特定服務的選項，建立預設原則以保護 Kubernetes 叢集。自動配置 IP-in-IP 封裝，只封裝跨子網路流動的封包，以及使用 NAT 進行來自容器的送出連線。也會在 {{site.data.keyword.containerlong_notm}} 中自動啟用「工作負載到 WAN 資料流量」，因此不需要額外配置 Calico。
 
 #### Calico 的網路可調整性
+{: #vcsnsxt-overview-iks-net-scalability-calico}
 
 Calico 的建置根據為分散式橫向擴充架構，可讓您順利從單一「開發人員」記事本擴充至大型企業部署，並使用標準 Linux 資料平面來提供虛擬工作負載的裸機效能。
 
 #### Calico 的安全
+{: #vcsnsxt-overview-iks-sec-calico}
 
 Calico 使用一組原則來控制系統的每個元件，而這些原則可以配置為容許服務及容器實例只在需要時才彼此交談。它使用 IP 位址來識別容器實例，並根據這些位址來建立原則。與 Calico 的 Kubernetes 整合是基礎架構察覺的，而且可以根據基礎架構變更來擴充安全原則。
 
 #### 與 Calico 整合
+{: #vcsnsxt-overview-iks-integration-calico}
 
 Calico 提供一種高度可擴充網路及網路原則解決方案，以根據與網際網路相同的 IP 網路原則來連接 Kubernetes Pod。部署時，不需要封裝或層疊即可提供高效能且大規模的資料中心網路。Calico 透過其分散式防火牆，為 Kubernetes Pod 提供精細的意圖型「網路」安全原則。Calico 的執行也可以透過原則強制執行模式以及其他網路解決方案（例如 Flannel，也稱為 canal）或原生 GCE 網路。
 
 ## IBM Cloud Kubernetes Service 網路
+{: #vcsnsxt-overview-iks-networking}
 
 依預設，{{site.data.keyword.containerlong_notm}} 會搭配使用公用 VLAN 及專用 VLAN 的存取權與下列項目來設定叢集。
 - 每一個工作者節點的公用 IP 位址，其為工作者節點提供公用網路介面。依預設：
@@ -150,6 +161,7 @@ Calico 提供一種高度可擴充網路及網路原則解決方案，以根據�
     - 主要專用子網路會決定在建立叢集期間指派給工作者節點的專用 IP 位址。相同 VLAN 上的多個叢集可以共用一個主要專用子網路。
     - 可攜式專用子網路只會連結至一個叢集，並提供該叢集 8 個專用 IP 位址。3 個 IP 保留給網路功能使用。1 個 IP 由預設專用 Ingress ALB 使用，而 4 個 IP 可以用來建立專用負載平衡器網路服務。可攜式專用 IP 是永久性的固定 IP 位址，可以用來透過網際網路存取負載平衡器服務。
 
-### 相關鏈結
+## 相關鏈結
+{: #vcsnsxt-overview-iks-links}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

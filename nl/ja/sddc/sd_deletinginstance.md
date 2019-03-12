@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Cloud Foundation インスタンスの削除
+{: #sd_deletinginstance}
 
 VMware Cloud Foundation インスタンス内で注文したコンポーネントを解放するには、このインスタンスを削除します。
 
@@ -30,6 +31,7 @@ Cloud Foundation インスタンスを削除すると、以下のコンポーネ
 {:note}
 
 ## 「デプロイ済みインスタンス」ページからインスタンスを削除する手順
+{: #sd_deletinginstance-procedure1}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「Cloud Foundation インスタンス」**の表で、削除するインスタンスを見つけます。
@@ -40,6 +42,7 @@ Cloud Foundation インスタンスを削除すると、以下のコンポーネ
    2. **「インスタンスの削除」**ウィンドウで**「OK」**をクリックします。
 
 ## インスタンスの詳細ページからインスタンスを削除する手順
+{: #sd_deletinginstance-procedure2}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「Cloud Foundation インスタンス」**の表で、削除するインスタンスをクリックします。
@@ -49,11 +52,12 @@ Cloud Foundation インスタンスを削除すると、以下のコンポーネ
    1. **vCenter コンソール**の横にあるオーバーフロー・メニュー・アイコンをもう一度クリックしてから、**「インスタンスの削除」**をクリックします。
    2. **「インスタンスの削除」**ウィンドウで**「OK」**をクリックします。
 
-### 関連リンク
+## 関連リンク
+{: #sd_deletinginstance-related}
 
-* [マルチサイト構成での Cloud Foundation インスタンスの削除](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Cloud Foundation インスタンスの表示](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [マルチサイト構成の削除](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
-* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [マルチサイト構成での Cloud Foundation インスタンスの削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
+* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Cloud Foundation インスタンスの表示](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [マルチサイト構成の削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

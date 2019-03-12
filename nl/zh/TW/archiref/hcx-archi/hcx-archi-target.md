@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # VMware HCX on IBM Cloud 元件層次目標架構
+{: #hcx-archi-target}
 
 本節說明 IBM Cloud 環境內所部署之每個 HCX 元件的架構。討論 IBM Cloud 內的分支（目標）部署模型。
 
 ## NSX Edge
+{: #hcx-archi-target-nsx-edge}
 
 IBM Cloud 內所配置的第一個元件是 NSX Edge 虛擬機器配對。請務必注意，所有 IBM Cloud for VMware Solutions 部署都會安裝及配置 IBM CloudDriver 出埠通訊的邊緣裝置。不過，雖然此 ESG 可以重複用於 Hybrid Cloud Services 通訊，但建議部署新的配對。
 
@@ -91,6 +93,7 @@ NSX Edge 虛擬機器會配置為超大型 NSX Edge 裝置的「主動/被動」
 | 連線數下限 | 0 |
 
 ## HCX Manager
+{: #hcx-archi-target-hcxm}
 
 HCX Manager 元件是在目標上配置 NSX Edge 應用裝置之後所部署的第一個應用裝置。此應用裝置用來作為來源元件之雲端環境的主要介面，並提供抽象網路使用者介面，可用來新增、編輯和刪除網路，以及設計和配置遞送，而不需要直接使用 NSX。在整合 vCenter 與 NSX 之後，HCX Manager 應用裝置會獲指派管理 VLAN 上的專用可攜式 IP 位址。
 
@@ -102,6 +105,7 @@ HCX Manager 元件是在目標上配置 NSX Edge 應用裝置之後所部署的�
 ![目標 - Hybrid Cloud Services 應用裝置](target_hybrid_cloud_services_appliance.svg)
 
 ## 雲端閘道
+{: #hcx-archi-target-cloud-gateway}
 
 建立從來源到目標雲端的連線之後，會部署虛擬應用裝置。此應用裝置是「雲端閘道 (CGW)」，用來維護指定為來源之 vSphere 環境與 IBM Cloud 之間的安全頻道。IBM Cloud 內所部署之 CGW 應用裝置的大小規格列在「表 3 雲端閘道部署」中。
 
@@ -122,7 +126,8 @@ HCX Manager 元件是在目標上配置 NSX Edge 應用裝置之後所部署的�
 圖 2. 雲端閘道部署
 ![雲端閘道部署](cloud_gateway_deployment.svg)
 
-## WAN 最佳化工具
+## WAN 最佳化程式
+{: #hcx-archi-target-wan-opt}
 
 所部署的第二個元件是「WAN 最佳化」應用裝置。雖然「WAN 最佳化」應用裝置是選用項目，但它會執行 WAN 調節來減少延遲效果。它也納入「轉遞錯誤更正」以使封包流失情境無效，以及刪除重複的備用資料流量型樣。
 
@@ -142,6 +147,7 @@ HCX Manager 元件是在目標上配置 NSX Edge 應用裝置之後所部署的�
 ![WAN 最佳化工具部署](wan_optimizer_deployment.svg)
 
 ## 第 2 層集中器
+{: #hcx-archi-target-layer-2-conc}
 
 第三個元件稱為「第 2 層集中器 (L2C)」，而且是「網路延伸服務」的一部分。L2C 是容許將內部部署資料中心網路擴充至 IBM Cloud 的虛擬機器。L2C 會延伸內部部署 VLAN 及（或）VXLAN。每個 L2C 最多可以延伸至 4096 個 VLAN。當每個 L2C 與其內部部署友機配對時，可以提供一個「流程」最多 1 Gbps，並且一個 VLAN（或 VXLAN）最高可達 4 Gbps 聚集。如果需要其他網路傳輸量，則支援部署其他 L2C 應用裝置。
 
@@ -160,6 +166,7 @@ L2C 應用裝置部署於管理 VLAN 以及公用 VLAN 上。公用介面用於�
 圖 4. L2 集中器部署
 ![L2 集中器部署](l2_concentrator_deployment.svg)
 
-### 相關鏈結
+## 相關鏈結
+{: #hcx-archi-target-related}
 
-* [在來源上安裝及配置](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-source.html)
+* [在來源上安裝及配置](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-source)

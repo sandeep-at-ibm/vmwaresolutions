@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,30 +13,36 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 新規 vSphere クラスターの注文
+{: #vs_orderinginstances}
 
 高度にカスタマイズ可能な VMware 仮想化プラットフォームをデプロイするには、VMware vSphere cluster on {{site.data.keyword.cloud}} を注文します。 次の手順を使用して、新規の vSphere クラスターを定義してください。
 
 この手順では、新規クラスターを作成するための VMware コンポーネントの選択、{{site.data.keyword.cloud_notm}} ベア・メタル・サーバーの設定、ストレージ設定、およびネットワーキングの選択について説明します。 注文を実行すると、そのクラスター構成が取り込まれるので、必要なときに構成に戻ってクラスターをスケールアウトできます。 注文が完了したら、要件に応じて VMware クラスターを手動で構成できます。
 
 ## 要件
+{: #vs_orderinginstances-req}
 
 以下の作業を完了していることを確認してください。
-*  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](/docs/services/vmwaresolutions/vmonic/useraccount.html)を参照してください。
-*  [vSphere クラスターの要件と計画](/docs/services/vmwaresolutions/vsphere/vs_planning.html)に記載されている要件と考慮事項を確認する。
+*  **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定の管理](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)を参照してください。
+*  [vSphere クラスターの要件と計画](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)に記載されている要件と考慮事項を確認する。
 
 ## システム設定
+{: #vs_orderinginstances-sys-settings}
 
 新しい vSphere クラスターを注文する際には、以下のシステム設定を指定する必要があります。
 
 ### クラスター名
+{: #vs_orderinginstances-cluster-name}
 
 クラスター名は、アカウント内で固有でなければなりません。
 
 ## ライセンス交付の設定
+{: #vs_orderinginstances-licensing-settings}
 
 クラスターと一緒に注文する VMware コンポーネントを選択し、それらのコンポーネントのライセンス・オプションを指定します。
 
 ### IBM ビジネス・パートナーのユーザー用のコンポーネント・バンドル
+{: #vs_orderinginstances-component-bundles-for-bp-users}
 
 IBM ビジネス・パートナーのユーザーは、新規 vSphere クラスターを注文するときにコンポーネント・ライセンス・バンドルを選択できます。 使用可能なバンドルは次のとおりです。
 
@@ -58,6 +64,7 @@ IBM ビジネス・パートナーのユーザーの場合、ライセンス持�
 {:note}
 
 ### 非ビジネス・パートナーのユーザー用の個別コンポーネント
+{: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 非ビジネス・パートナーは、vSphere クラスターに以下のコンポーネントを選択できます。
 * VMware vSphere Enterprise Plus
@@ -73,6 +80,7 @@ VMware vSphere Enterprise Plus 6.0 を注文する場合、VMware vSAN コンポ
 {:note}
 
 ### ライセンス・オプション
+{: #vs_orderinginstances-licensing-options}
 
 選択した VMware コンポーネントにライセンスを適用するには、次の方法があります。
 * **購入にライセンスを含める**: この場合、自動的に VMware コンポーネントの新規ライセンスを購入します。 結合された VMware ライセンスが、注文のクラスター・サイズに一致するように生成されます。
@@ -84,8 +92,10 @@ vSphere Enterprise Plus と vCenter Server を除き、ライセンスを購入�
 {:important}
 
 ## ベア・メタル・サーバーの設定
+{: #vs_orderinginstances-bare-metal-settings}
 
 ### データ・センターの場所
+{: #vs_orderinginstances-dc-location}
 
 クラスターをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
 
@@ -95,6 +105,7 @@ vSphere Enterprise Plus と vCenter Server を除き、ライセンスを購入�
 * LON05 データ・センターは、SAP 認証ベアメタル・サーバーも Broadwell ベアメタル・サーバーもサポートしていません。
 
 ### Skylake
+{: #vs_orderinginstances-skylake}
 
 **「Skylake」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。 使用できるオプションは、VMware vSAN コンポーネントを選択したかどうかによって異なります。
 
@@ -107,6 +118,7 @@ vSphere Enterprise Plus と vCenter Server を除き、ライセンスを購入�
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### SAP 認定
+{: #vs_orderinginstances-sap}
 
 VMware vSAN を以前に選択した場合、**「SAP 認定」**タブは使用できません。 **「SAP 認定」**を選択した場合、CPU や RAM の設定は変更できません。
 
@@ -120,6 +132,7 @@ VMware vSAN を以前に選択した場合、**「SAP 認定」**タブは使用
   * Quad Intel Xeon E7-8890 v4 プロセッサー / 合計 96 コア、2.2 GHz / 4096 GB RAM
 
 ### Broadwell
+{: #vs_orderinginstances-broadwell}
 
 **「Broadwell」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。 使用できるオプションは、VMware vSAN コンポーネントを選択したかどうかによって異なります。
 
@@ -134,12 +147,14 @@ VMware vSAN を以前に選択した場合、**「SAP 認定」**タブは使用
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.1 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 ### ベア・メタル・サーバーの数
+{: #vs_orderinginstances-bare-metal-number}
 
 vSphere クラスターに追加する ESXi サーバーの数。 すべての ESXi サーバーが同じ構成です。
 * VMware NSX コンポーネントを選択した場合は、最少 3 台のサーバーが必要です。
 * VMware vSAN コンポーネントを選択した場合は、最少 4 台のサーバーが必要です。
 
 ## ストレージ設定
+{: #vs_orderinginstances-storage-settings}
 
 vSAN なしの注文の場合、ESXi サーバー用に 12 ディスクのシャーシと 2 基のディスク (ESXi オペレーティング・システム (OS) 用) が注文されます。
 
@@ -156,10 +171,12 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
 
 ## ネットワーク・インターフェースの設定
+{: #vs_orderinginstances-network-interface-settings}
 
 新しい vSphere クラスターを注文する際には、以下のネットワーク・インターフェース設定を指定する必要があります。
 
 ### ホスト名接頭部
+{: #vs_orderinginstances-host-name-prefix}
 
 ホスト名は、すべてのベア・メタル・サーバーの注文で使用されます。 vCenter Server および NSX などのすべての管理仮想マシンで、このホスト名を使用することをお勧めします。
 
@@ -169,6 +186,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 * 最大長は 10 文字です。
 
 ### サブドメイン・ラベル
+{: #vs_orderinginstances-subdomain-label}
 
 サブドメイン・ラベルは、次の要件を満たす必要があります。
 *  英数字とダッシュ (-) の文字だけを使用できます。
@@ -177,6 +195,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 *  サブドメイン・ラベルは、アカウント内で固有でなければなりません。
 
 ### ドメイン・ネーム
+{: #vs_orderinginstances-domain-name}
 
 ドメイン・ネームは、すべての{{site.data.keyword.baremetal_short}}で使用されます。次の要件を満たす必要があります。
 * ピリオド (.) で区切られた 2 つ以上の文字列で構成された名前である必要があります。
@@ -187,6 +206,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 * ドメイン・ネームの最大長は 189 文字です。
 
 ### パブリックまたはプライベート・ネットワーク
+{: #vs_orderinginstances-public-private-network}
 
 ネットワーク・インターフェース・カード (NIC) の有効化設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。 以下のアドオン・サービスはパブリック NIC を必要とするため、プライベート・オプションを選択した場合は利用できません。
 
@@ -196,15 +216,20 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### VLAN
+{: #vs_orderinginstances-vlans}
 
 ネットワーク設定は、**「新規 VLAN を注文」**と**「既存の VLAN を選択」**のどちらを選択するかによって異なります。
 
 クラスターの注文には、パブリック VLAN 1 つとプライベート VLAN 2 つが必要です。 2 つのプライベート VLAN は各ベア・メタル・サーバーにトランキングされます。
 
 #### 新規 VLAN を注文
+{: #vs_orderinginstances-new-vlans}
+
 新規パブリック VLAN 1 つと新規プライベート VLAN 2 つを注文することを選択します。
 
-#### 既存の VLAN を選択  
+#### 既存の VLAN を選択
+{: #vs_orderinginstances-existing-vlans}
+
 選択した {{site.data.keyword.CloudDataCent_notm}}によっては、既存のパブリック VLAN とプライベート VLAN を使用できることがあります。
 
   既存のパブリック VLAN とプライベート VLAN を再使用することを選択した場合は、それらの VLAN とサブネットを指定します。
@@ -219,14 +244,17 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 * 選択したすべての VLAN が同じポッドに含まれていることを確認してください。 複数のポッドの VLAN に ESXi サーバーをプロビジョンすることはできません。
 
 #### FortiGate 物理アプライアンス 300 シリーズ HA ペア
+{: #vs_orderinginstances-fortigate-physical-appliance}
 
-また、クラウド環境を保護するために FortiGate 物理アプライアンス 300 シリーズ HA ペアを含めるかどうかも選択できます。 詳しくは、[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/fsa_considerations.html)を参照してください。
+また、クラウド環境を保護するために FortiGate 物理アプライアンス 300 シリーズ HA ペアを含めるかどうかも選択できます。 詳しくは、[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)を参照してください。
 
 ## 注文のサマリー
+{: #vs_orderinginstances-order-summary}
 
 構成に基づいて、見積もりコストがすぐに生成され、右側の**「注文の要約」**ペインに表示されます。 **「料金詳細」**をクリックすると、見積もりの詳細を示す PDF 文書を生成できます。
 
 ## vSphere クラスターを注文する手順
+{: #vs_orderinginstances-procedure}
 
 1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクションの**「VMware vSphere」**をクリックします。
 2. **「VMware vSphere on IBM Cloud」**ページで、**「作成」**をクリックします。  
@@ -260,6 +288,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
    {:note}
 
 ### 結果
+{: #vs_orderinginstances-results}
 
 クラスター構成をテンプレートとして保存した場合は、その構成が正常に保存されたことを示すコンソール通知を受け取ります。そして、**「クラスター構成」**リストにそのテンプレートが表示されます。
 
@@ -268,8 +297,9 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスとは異なり、**「デプロイ済みインスタンス」**ページに表示されません。
 {:note}
 
-### 関連リンク
+## 関連リンク
+{: #vs_orderinginstances-related}
 
-* [既存の構成を基にした vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
-* [既存クラスターの拡張](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
-* [コンソール以外で作成されたクラスターの拡張](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [既存の構成を基にした vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
+* [既存クラスターの拡張](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [コンソール以外で作成されたクラスターの拡張](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

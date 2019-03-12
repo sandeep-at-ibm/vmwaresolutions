@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # 针对 vCenter Server with Hybridity Bundle 实例的需求和规划
+{: #vc_hybrid_planning}
 
 在订购 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 实例之前，请查看以下需求。根据 {{site.data.keyword.CloudDataCent_notm}} 位置、工作负载容量需求和其他服务需求来规划实例。
 
 ## IBM Cloud 帐户需求
+{: #vc_hybrid_planning-account-req}
 
-要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
+要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
 
 ## IBM Cloud Data Center 可用性
+{: #vc_hybrid_planning-dc-availability}
 
 vCenter Server with Hybridity Bundle 部署对物理基础架构有严格要求。因此，只能将实例部署在满足这些需求的 {{site.data.keyword.CloudDataCents_notm}} 中。以下 {{site.data.keyword.CloudDataCents_notm}} 可用于 vCenter Server with Hybridity Bundle 部署：
 
@@ -66,10 +69,12 @@ vCenter Server with Hybridity Bundle 部署对物理基础架构有严格要求�
 |有限库存|{{site.data.keyword.CloudDataCent_notm}} 具有有限可用性，并且订单可能未完成。|
 
 ## 备份管理组件
+{: #vc_hybrid_planning-backup-mgmt-components}
 
-您负责维护和确保所有实例组件的可用性。强烈建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)。
+您负责维护和确保所有实例组件的可用性。强烈建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)。
 
 ## vCenter Server with Hybridity Bundle 实例的服务
+{: #vc_hybrid_planning-addon-services}
 
 vCenter Server with Hybridity Bundle 实例包含授权您使用 VMware HCX on {{site.data.keyword.cloud_notm}} 服务的 VMware Hybrid Cloud Extension (HCX) 许可。此服务可以将内部部署数据中心的网络无缝扩展到 {{site.data.keyword.cloud_notm}}，这允许虚拟机 (VM) 在不进行任何转换或更改的情况下，迁移到 {{site.data.keyword.cloud_notm}} 或从中迁移出来。
 
@@ -84,15 +89,17 @@ vCenter Server with Hybridity Bundle 实例包含授权您使用 VMware HCX on {
   * （可选）**重新输入密码**：重新输入专用密钥的密码。
   * （可选）**主机名**：输入要映射到 CA 证书的公共名称 (CN) 的主机名。HCX on {{site.data.keyword.cloud_notm}} 需要 CA 证书采用 NSX Edge 接受的格式。有关 NSX Edge 证书格式的更多信息，请参阅[导入 SSL 证书](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)。
 
-您可以根据需要订购适用于实例的其他附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)。
+您可以根据需要订购适用于实例的其他附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)。
 
 ## 容量注意事项
+{: #vc_hybrid_planning-capacity-considerations}
 
-有关容量注意事项的更多信息，请参阅[缩放容量](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)。
+有关容量注意事项的更多信息，请参阅[缩放容量](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)。
 
-### 相关链接
+## 相关链接
+{: #vc_hybrid_planning-related}
 
-* [vCenter Server with Hybridity Bundle 概述](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [订购 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [扩展和收缩 vCenter Server with Hybridity Bundle 实例的容量](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [vCenter Server with Hybridity Bundle 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [订购 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [扩展和收缩 vCenter Server with Hybridity Bundle 实例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)

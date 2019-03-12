@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server の部品構成表
+{: #vc_bom}
 
 ここには、VMware vCenter Server インスタンスの部品構成表 (BOM) 情報を記載します。
 
 ## vCenter Server インスタンスの VLAN の BOM
+{: #vc_bom-vlans}
 
 次の表に、vCenter Server の VLAN の BOM 情報の詳細を示します。
 
@@ -29,6 +31,7 @@ lastupdated: "2019-01-23"
 | VLAN3     | プライベート B、ポータブル | 使用する場合は、VMware vSAN に割り当てられます。<br><br>使用する場合は、VMware NFS に割り当てられます。<br><br>VMware vSphere vMotion に割り当てられます。 |
 
 ## vCenter Server インスタンスのソフトウェアの BOM
+{: #vc_bom-software}
 
 次の表に、vCenter Server のソフトウェア・コンポーネントの BOM 情報の詳細を示します。
 
@@ -47,6 +50,7 @@ VMware vSAN はオプションのコンポーネントです。
 {:note}
 
 ## ESXi サーバーの拡張構成の設定
+{: #vc_bom-esxi-server-advance-config}
 
 次の表で、ESXi サーバーに適用される拡張構成設定の概要を確認してください。 これらの設定は、vCenter Server インスタンスが V2.2 以降にデプロイされているか、または V2.1 以前から V2.2 以降にアップグレードされたかによって異なります。
 
@@ -75,6 +79,7 @@ VMware vSAN はオプションのコンポーネントです。
   詳しくは、[Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239) を参照してください。
 
 ## NSX とポート・グループの構成設定
+{: #vc_bom-nsx-port-group-config}
 
 次の表で、vCenter Server インスタンス用の VMware NSX とポート・グループの構成設定の概要、リリース間の相違点を確認してください。
 
@@ -93,6 +98,7 @@ VMware vSAN はオプションのコンポーネントです。
 | ポート・グループ SDDC-DPortGroup-External | **「ポート・バインディング」**を **「一時的 - バインディングなし」**に設定 | **「ポート・バインディング」**を**「静的バインディング」** に設定 |
 
 ## ネットワーク MTU の構成設定
+{: #vc_bom-network-mtu-config}
 
 vSphere クラスターは 2 つの vSphere 分散スイッチ (vDS) を使用します。1 つはパブリック・ネットワーク接続用で、もう 1 つはプライベート・ネットワーク接続用です。
 
@@ -116,19 +122,21 @@ V2.0 以前の既存インスタンスまたは V2.1 以降にアップグレー
 V2.0 以前でデプロイされたインスタンスの場合は、パブリック・スイッチ MTU 設定を 1500 に更新することをお勧めします。
 
 ### パブリック・スイッチ MTU 設定の更新
+{: #vc_bom-procedure-update-public-switch-mtu-setting}
 
 パブリック・スイッチの MTU 設定を更新するには、VMware vSphere Web Client で以下の手順を実行します。
 1. vDS を右クリックし、**「設定の編集」**をクリックします。
 2. **「プロパティ」**タブで、**「詳細」**オプションを選択します。
 3. **「最大 MTU」**値を 1500 に設定します。
 
-   **注:** vDS の MTU サイズを変更すると、接続アップリンク (物理 NIC) が停止した後で再開されます。 結果として、アップリンクを使用している VM に短時間の停止が発生します。 そのため、スケジュールされたダウン時間中に MTU 設定更新を計画することをお勧めします。
+   vDS の MTU サイズを変更すると、接続アップリンク (物理 NIC) が停止した後で再開されます。結果として、アップリンクを使用している VM に短時間の停止が発生します。 そのため、スケジュールされたダウン時間中に MTU 設定更新を計画することをお勧めします。{:note}
 
-### 関連リンク
+## 関連リンク
+{: #vc_bom-related}
 
 * [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server インスタンスの計画](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [vCenter Server インスタンスの計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

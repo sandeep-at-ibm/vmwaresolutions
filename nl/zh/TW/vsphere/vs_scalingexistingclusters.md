@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,17 +13,20 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 擴充現有的 vSphere 叢集
+{: #vs_scalingexistingclusters}
 
 您可以橫向擴充已訂購或儲存在 {{site.data.keyword.vmwaresolutions_full}} 主控台中的 VMware vSphere 叢集。若要這樣做，請新增 ESXi 伺服器，或為叢集訂購 FortiGate 300 系列 Security Appliance HA 配對。
 
 ## 需求
+{: #vs_scalingexistingclusters-req}
 
 請確定您已完成下列作業：
-*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic/useraccount.html#managing-user-accounts-and-settings)。
-*  您已檢閱 [vSphere 叢集的需求及規劃](/docs/services/vmwaresolutions/vsphere/vs_planning.html)中的需求及考量。
+*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount#managing-user-accounts-and-settings)。
+*  您已檢閱 [vSphere 叢集的需求及規劃](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)中的需求及考量。
 *  您已收到電子郵件，內含您想要擴充之叢集已經可以使用的確認。
 
 ## 擴充現有叢集的程序
+{: #vs_scalingexistingclusters-procedure}
 
 1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware**，然後按一下**虛擬資料中心**區段中的 **VMware vSphere**。
 2. 在 **VMware vSphere on IBM Cloud** 頁面上，按一下**建立**。  
@@ -36,6 +39,7 @@ lastupdated: "2019-01-23"
    * 若要下訂單，請確定要收費的帳戶正確，請檢閱並接受條款，然後按一下**佈建**。
 
 ### 結果
+{: #vs_scalingexistingclusters-results}
 
 自動啟動叢集擴充。您會收到電子郵件確認，指出正在處理該訂單。當叢集已備妥可供使用時，會透過電子郵件通知您。
 
@@ -44,8 +48,9 @@ lastupdated: "2019-01-23"
 vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。
 {:note}
 
-### 相關鏈結
+## 相關鏈結
+{: #vs_scalingexistingclusters-related}
 
-* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [根據現有配置來訂購 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
-* [擴充在主控台之外建立的叢集](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [根據現有配置來訂購 vSphere 叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
+* [擴充在主控台之外建立的叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

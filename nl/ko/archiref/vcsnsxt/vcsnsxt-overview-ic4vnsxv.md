@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # NSX-V 개요
+{: #vcsnsxt-overview-ic4vnsxv}
 
 네트워크 가상화는 가상 계층 내에 존재하는 네트워크 오버레이를 제공합니다. NSX-V는 On-Demand 가상 네트워크의 빠른 프로비저닝, 배치, 재구성 및 폐기 등의 기능을 아키텍처에 제공합니다. 이 디자인은 vDS(vSphere Distributed Switch) 및 VMware NSX for vSphere를 사용하여 가상 네트워킹을 구현합니다.
 
@@ -37,6 +38,7 @@ lastupdated: "2019-01-23"
 그런 다음 NSX Edge Services Gateway(ESG) 쌍이 배치됩니다. 모든 배치의 경우, 하나의 게이트웨이 쌍은 사설 네트워크에 상주하는 자동화 컴포넌트의 아웃바운드 트래픽에 사용됩니다. VMware vCenter Server on {{site.data.keyword.cloud_notm}} 인스턴스에는 ICP 관리 에지라고 하는 두 번째 게이트웨이가 있으며, 이 관리 에지는 사설 네트워크에 지정된 인터페이스와 공용 네트워크에 대한 업링크로 배치되고 구성됩니다. 관리자는 DLR(Distributed Logical Routers), 논리 스위치 및 방화벽과 같은 필수 컴포넌트를 구성할 수 있습니다.
 
 ## 분배 스위치 디자인
+{: #vcsnsxt-overview-ic4vnsxv-distributed-switch}
 
 이 디자인에서는 최소한의 vDS(virtual Distributed Switch)를 사용합니다. 클러스터의 호스트는 공용 및 사설 네트워크에 연결됩니다. 호스트는 2개의 vDS로 구성되어 있습니다. 2개 스위치의 사용은 {{site.data.keyword.cloud_notm}} 내에 구현된 공용 및 사설 네트워크의 실제 네트워크 분리를 따릅니다.
 
@@ -88,6 +90,7 @@ SDDC-Dswitch-Private	| NSX에 의해 자동으로 생성됨	| 원래 가상 포�
 SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	| 원래 가상 포트	| 활성: 0, 1	|VLAN3
 
 ## NSX-V
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v}
 
 이 디자인은 NSX 컴포넌트의 구성을 지정하지만 네트워크 오버레이 컴포넌트 구성은 적용하지 않습니다. 고객은 직접 자신의 요구에 맞게 네트워크 오버레이를 설계할 수 있습니다.
 
@@ -105,6 +108,7 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	| 원래 가상 포트	| 활성:
 -	다른 VMware 인스턴스에 링크된 NSX 관리.
 
 ### NSX-V 보안
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
 
 NSX for vSphere를 사용하면 조직은 데이터 센터를 별개의 보안 세그먼트로 나눌 수 있습니다. 워크로드 실행 위치와 관계없이 개별 워크로드 레벨로 나눕니다. IT 팀은 애플리케이션과 사용자 컨텍스트를 기반으로 각 워크로드를 위한 정책을 정의할 수 있습니다. 이를 통해 데이터 센터 내부의 위협에 즉각적으로 반응하여 애플리케이션에 적용합니다.
 
@@ -120,6 +124,7 @@ NSX for vSphere를 사용하면 조직은 데이터 센터를 별개의 보안 �
 그림 3. NSX-V 보안
 ![NSX-V 보안](vcsnsxt-vsecurity.svg)
 
-### 관련 링크
+## 관련 링크
+{: #vcsnsxt-overview-ic4vnsxv-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 连接的存储器配置和设置
+{: #storage-settings}
 
 此设计支持仅通过 NFS V3 来连接共享存储器。不支持 NFS V4 和 V4.1。
 
@@ -22,6 +23,7 @@ lastupdated: "2019-01-23"
 体系结构指定使用 DNS 名称将 NFS V3 数据存储从 {{site.data.keyword.cloud_notm}} 存储器连接到共享。NFS 共享会连接到 vCenter Server 集群中的所有主机，并放置在已启用 Storage DRS 的数据存储集群中。
 
 ## vSphere 存储器分布式资源调度程序 (Storage DRS)
+{: #storage-settings-vsphere-storage-drs}
 
 使用 Storage DRS 可管理数据存储集群的聚集资源。启用 Storage DRS 后，其会针对虚拟机 (VM) 磁盘放置和迁移提供一些建议，以使数据存储集群中各数据存储上的空间和 I/O 资源均衡。
 
@@ -33,6 +35,7 @@ lastupdated: "2019-01-23"
 在此设计中，Storage DRS 为启用状态，且自动化级别设置为**完全自动化**。因此，会自动迁移文件来优化数据集群上的资源使用情况。因为集群已完全自动化，因此所有其他 Storage DRS 选项均设置为**使用集群设置**。
 
 ## NFS v3 的 Storage DRS 运行时设置
+{: #storage-settings-drs-nfs3}
 
 Storage DRS 的积极性可通过指定所使用空间和 I/O 等待时间的阈值来进行确定。Storage DRS 会收集数据存储集群中数据存储的资源使用情况信息。vCenter Server 使用此信息来生成有关在数据存储上如何放置虚拟磁盘的建议。
 
@@ -58,6 +61,7 @@ Storage DRS 的积极性可通过指定所使用空间和 I/O 等待时间的阈
 有关在 vSphere Web Client 中配置这些设置的更多信息，请参阅 [Set Storage DRS Runtime Rules in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-AD2D13CE-539B-48C3-BBC9-E55A834874F0.html)。
 
 ## NFS v3 的 Storage I/O Control
+{: #storage-settings-io-control-nfs-v3}
 
 在环境中启用 SIOC (Storage I/O Control) 后，SIOC 会更改单个 VM 的设备队列长度。更改设备队列长度会使所有 VM 的存储阵列队列的份额和调速限制减少到与存储队列的相同。仅当资源受到约束且存储器 I/O 等待时间超过定义的阈值时，SIOC 才会起作用。
 
@@ -68,10 +72,12 @@ SIOC 需要有定义的阈值，才能确定存储设备何时拥堵或受到约
 份额设置为**高**（2,000 个份额）的虚拟磁盘收到的 I/O 是设置为**正常**（1,000 个份额）的磁盘的 2 倍，是设置为**低**（500 个份额）的磁盘的 4 倍。**正常**是所有 VM 的缺省值，因此您应当为需要该值的 VM 调整**正常**设置。
 
 ## 使用 NFS v3 时的存储器添加
+{: #storage-settings-additional-storage-nfs-v3}
 
 由于空间不足或等待时间较长而需要向环境添加更多存储器时，可以通过控制台订购另一个 NFS 共享。订购该共享后，请将相应的导出连接到集群中的 vSphere ESXi 主机，并将其放置在存储器集群中。将新的 NFS 共享放置在存储器集群中可以有效且无缝地扩展与环境相关联的存储器，而无需进行存储器级别的迁移。
 
 ## 高级配置参数
+{: #storage-settings-adv-config-param}
 
 此设计会添加 {{site.data.keyword.cloud_notm}} 建议的高级配置参数。因此，在连接到 {{site.data.keyword.cloud_notm}} NFS 共享的每个 vSphere ESXi 主机上，会设置以下参数。
 
@@ -87,6 +93,7 @@ SIOC 需要有定义的阈值，才能确定存储设备何时拥堵或受到约
 | NFS.HeartbeatTimeout | 5 |
 | NFS.MaxQueueDepth | 64 |
 
-### 相关链接
+## 相关链接
+{: #storage-settings-related}
 
-* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [解决方案概述](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # アプリケーション・モダナイゼーションの概要
+{: #vcsiks-appmod}
 
 以下の図は、Acme Skateboards 社がデプロイするアプリケーション・モダナイゼーションのリファレンス・アーキテクチャーを示しており、この文書シリーズで詳しく説明されています。
 
@@ -41,6 +42,7 @@ HCX はオンプレミス・ネットワークを {{site.data.keyword.cloud_notm
   - オンプレミス・データ・センター内のレガシー・システムとクラウド VM との間のトラフィック。
 
 ## Acme Skateboards 社にとっての主な利点
+{: #vcsiks-appmod-benefits}
 
 vCenter Server には、お客様のワークロードに最も合う VMware Software Defined Data Center (SDDC) ソリューションを柔軟に設計できるように、基本的なビルディング・ブロック (VMware vSphere、vCenter Server、NSX、および vSAN などの共有ストレージ・オプション) が用意されています。
 
@@ -64,6 +66,7 @@ vCenter Server には、お客様のワークロードに最も合う VMware Sof
 
 このリファレンス・アーキテクチャーでは、VCS、{{site.data.keyword.icpfull_notm}}、{{site.data.keyword.containerlong_notm}} を利用して Acme Skateboards 社のアプリケーション・モダナイゼーション・ジャーニーを安全に進めていく方法を示します。
 
-### 関連リンク
+## 関連リンク
+{: #vcsiks-appmod-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

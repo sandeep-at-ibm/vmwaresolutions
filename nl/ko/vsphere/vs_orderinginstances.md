@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,30 +13,36 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 새 vSphere 클러스터 주문
+{: #vs_orderinginstances}
 
 원하는 대로 사용자 정의할 수 있는 VMware 가상화된 플랫폼을 배치하려면 VMware vSphere on {{site.data.keyword.cloud}} 클러스터를 주문하십시오. 새 vSphere 클러스터를 정의하려면 이 프로시저를 수행하십시오.
 
 이 프로시저는 새 클러스터를 작성하기 위해 VMware 컴포넌트, {{site.data.keyword.cloud_notm}} Bare Metal Server 설정, 스토리지 설정 및 네트워킹 선택사항을 선택하는 과정을 안내합니다. 주문 후 필요에 따라 돌아와서 클러스터 스케일링을 계속할 수 있도록 클러스터 구성이 캡처됩니다. 주문이 완료되면 자신의 요구사항에 따라 수동으로 VMware 클러스터를 구성할 수 있습니다.
 
 ## 요구사항
+{: #vs_orderinginstances-req}
 
 다음 태스크를 완료했는지 확인하십시오.
-*  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](/docs/services/vmwaresolutions/vmonic/useraccount.html)를 참조하십시오.
-*  [vSphere 클러스터에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vsphere/vs_planning.html)의 요구사항 및 고려사항을 검토했습니다.
+*  **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정 관리](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)를 참조하십시오.
+*  [vSphere 클러스터에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)의 요구사항 및 고려사항을 검토했습니다.
 
 ## 시스템 설정
+{: #vs_orderinginstances-sys-settings}
 
 새 vSphere 클러스터를 주문할 때 다음 시스템 설정을 지정해야 합니다.
 
 ### 클러스터 이름
+{: #vs_orderinginstances-cluster-name}
 
 클러스터 이름은 계정 내에서 고유해야 합니다.
 
 ## 라이센스 부여 설정
+{: #vs_orderinginstances-licensing-settings}
 
 클러스터와 함께 주문할 VMware 컴포넌트를 선택하고, 해당 컴포넌트에 대한 라이센싱 옵션을 지정하십시오.
 
 ### IBM 비즈니스 파트너 사용자용 컴포넌트 번들
+{: #vs_orderinginstances-component-bundles-for-bp-users}
 
 IBM 비즈니스 파트너인 경우 새 vSphere 클러스터를 주문할 때 컴포넌트 라이센스 번들을 선택할 수 있습니다. 다음 번들이 사용 가능합니다.
 
@@ -58,6 +64,7 @@ IBM 비즈니스 파트너 사용자의 경우 BYOL(Bring Your Own License) 옵�
 {:note}
 
 ### 비즈니스 파트너가 아닌 사용자를 위한 개별 컴포넌트
+{: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 비즈니스 파트너가 아닌 사용자는 vSphere 클러스터에 대해 다음 컴포넌트를 선택할 수 있습니다.
 * VMware vSphere Enterprise Plus
@@ -73,6 +80,7 @@ VMware vSphere Enterprise Plus 6.0을 주문할 때 VMware vSAN 컴포넌트를 
 {:note}
 
 ### 라이센싱 옵션
+{: #vs_orderinginstances-licensing-options}
 
 선택된 VMware 컴포넌트에 라이센스를 부여하기 위한 다음 옵션이 제공됩니다.
 * **구매가 포함된 라이센스 포함**: 이 옵션의 경우, 사용자 대신 VMware 컴포넌트의 새 라이센스가 구매됩니다. 주문의 클러스터 크기와 일치하도록 결합된 VMware 라이센스가 생성됩니다.
@@ -84,8 +92,10 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 {:important}
 
 ## Bare Metal Server 설정
+{: #vs_orderinginstances-bare-metal-settings}
 
 ### 데이터 센터 위치
+{: #vs_orderinginstances-dc-location}
 
 클러스터가 호스팅될 {{site.data.keyword.CloudDataCent_notm}}를 선택하십시오.
 
@@ -95,6 +105,7 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 * LON05 데이터 센터는 SAP 인증 또는 Broadwell Bare Metal Server를 지원하지 않습니다.
 
 ### Skylake
+{: #vs_orderinginstances-skylake}
 
 **Skylake**를 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다. 사용 가능한 옵션은 선택한 VMware vSAN 컴포넌트에 따라 달라집니다.
 
@@ -107,6 +118,7 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 |듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 
 ### SAP 인증
+{: #vs_orderinginstances-sap}
 
 이전에 VMware vSAN을 선택한 경우에는 **SAP 인증** 탭을 사용할 수 없습니다. **SAP 인증**을 선택하는 경우 CPU 또는 RAM 설정을 변경할 수 없습니다.
 
@@ -120,6 +132,7 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
   * 쿼드 Intel Xeon E7-8890 v4 프로세서 / 총 96개의 코어, 2.2GHz / 4096GB RAM
 
 ### Broadwell
+{: #vs_orderinginstances-broadwell}
 
 **Broadwell**을 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다. 사용 가능한 옵션은 선택한 VMware vSAN 컴포넌트에 따라 달라집니다.
 
@@ -134,12 +147,14 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 | 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.1GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 
 ### Bare Metal Server 수
+{: #vs_orderinginstances-bare-metal-number}
 
 vSphere 클러스터에 추가할 ESXi 서버의 수입니다. 모든 ESXi 서버는 동일한 구성을 갖습니다.
 * VMware NSX 컴포넌트를 선택한 경우 최소 세 개의 서버가 필요합니다.
 * VMware vSAN 컴포넌트를 선택한 경우 최소 네 개의 서버가 필요합니다.
 
 ## 스토리지 설정
+{: #vs_orderinginstances-storage-settings}
 
 vSAN을 제외한 주문의 경우, 12개의 디스크 섀시, ESXi 운영 체제(OS)용 2개의 디스크와 함께 ESXi 서버가 주문됩니다.
 
@@ -156,10 +171,12 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 * **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **고성능 Intel Optane** 상자를 선택했는지 여부에 따라 달라집니다.
 
 ## 네트워크 인터페이스 설정
+{: #vs_orderinginstances-network-interface-settings}
 
 새 vSphere 클러스터를 주문할 때 다음 네트워크 인터페이스 설정을 지정해야 합니다.
 
 ### 호스트 이름 접두부
+{: #vs_orderinginstances-host-name-prefix}
 
 호스트 이름은 베어메탈 서버 주문에 사용됩니다. vCenter Server 및 NSX와 같이 모든 관리 가상 머신에 호스트 이름을 사용하는 것이 좋습니다.
 
@@ -169,6 +186,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 * 최대 길이는 10자입니다.
 
 ### 하위 도메인 레이블
+{: #vs_orderinginstances-subdomain-label}
 
 하위 도메인 레이블은 다음 요구사항을 충족해야 합니다.
 *  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
@@ -177,6 +195,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 *  하위 도메인 레이블은 계정 내에서 고유해야 합니다.
 
 ### 도메인 이름
+{: #vs_orderinginstances-domain-name}
 
 도메인 이름이 모든 {{site.data.keyword.baremetal_short}}에 사용되고 다음 요구사항을 충족해야 합니다.
 * 이름은 마침표(.)로 구분된 두 개 이상의 문자열로 구성되어야 합니다.
@@ -187,6 +206,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 * 도메인 이름의 최대 길이는 189자입니다.
 
 ### 공용 또는 사설 네트워크
+{: #vs_orderinginstances-public-private-network}
 
 네트워크 인터페이스 카드(NIC) 인에이블먼트 설정은 **공용 및 사설 네트워크** 또는 **사설 네트워크 전용** 중 사용자의 선택을 기반으로 합니다. 다음과 같은 추가 기능 서비스에는 공용 NIC가 필요하며 개인용 옵션을 선택하는 경우에는 서비스를 사용할 수 없습니다.
 
@@ -196,15 +216,20 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### VLAN
+{: #vs_orderinginstances-vlans}
 
 네트워크 설정은 **새 VLAN 주문** 또는 **기존 VLAN 선택**의 선택에 따라 달라집니다.
 
 클러스터 주문에 한 개의 공용 VLAN 및 두 개의 사설 VLAN이 필요합니다. 두 개의 사설 VLAN이 각 Bare Metal Server에 선택됩니다.
 
 #### 새 VLAN 주문
+{: #vs_orderinginstances-new-vlans}
+
 하나의 새 공용 VLAN 및 두 개의 새 사설 VLAN 주문을 선택하십시오.
 
-#### 기존 VLAN 선택  
+#### 기존 VLAN 선택
+{: #vs_orderinginstances-existing-vlans}
+
 선택한 {{site.data.keyword.CloudDataCent_notm}}에 따라 기존 공용 및 사설 VLAN을 사용할 수 있습니다.
 
   기존 공용 및 사설 VLAN을 재사용하도록 선택하는 경우에는 VLAN 및 서브넷을 지정하십시오.
@@ -219,14 +244,17 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 * 선택한 모든 VLAN이 동일한 팟(Pod)에 있는지 확인하십시오. 혼합 팟(pod) VLAN에서 ESXi 서버를 프로비저닝할 수 없습니다.
 
 #### FortiGate Physical Appliance 300 시리즈 HA 이중화
+{: #vs_orderinginstances-fortigate-physical-appliance}
 
-클라우드 환경을 보호하기 위해 FortiGate Physical Appliance 300 Series HA 이중화를 포함시킬지 선택할 수도 있습니다. 자세한 정보는 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/fsa_considerations.html)를 참조하십시오.
+클라우드 환경을 보호하기 위해 FortiGate Physical Appliance 300 Series HA 이중화를 포함시킬지 선택할 수도 있습니다. 자세한 정보는 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)를 참조하십시오.
 
 ## 주문 요약
+{: #vs_orderinginstances-order-summary}
 
 구성에 따라 예상 비용이 즉시 생성되어 오른쪽에 있는 **주문 요약** 분할창에 표시됩니다. 예상 세부사항을 제공하는 PDF 문서를 생성하려면 **가격 세부사항**을 클릭하십시오.
 
 ## vSphere 클러스터를 주문하는 프로시저
+{: #vs_orderinginstances-procedure}
 
 1. {{site.data.keyword.cloud_notm}} 카탈로그의 왼쪽 탐색 분할창에 있는 **VMware**를 클릭한 다음 **가상 데이터 센터** 섹션에 있는 **VMware vSphere**를 클릭하십시오.
 2. **VMware vSphere on IBM Cloud** 페이지에서 **작성**을 클릭하십시오.  
@@ -260,6 +288,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
    {:note}
 
 ### 결과
+{: #vs_orderinginstances-results}
 
 클러스터 구성을 템플리트로 저장한 경우에는 구성이 저장되었다는 콘솔 알림을 받은 후 **클러스터 구성** 목록에서 해당 템플리트를 찾을 수 있습니다.
 
@@ -268,8 +297,9 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 vSphere 클러스터는 vCenter Server 및 Cloud Foundation 인스턴스와 달리 **배치된 인스턴스** 페이지에 표시되지 않습니다.
 {:note}
 
-### 관련 링크
+## 관련 링크
+{: #vs_orderinginstances-related}
 
-* [기존 구성에 따라 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
-* [기존 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
-* [콘솔 외부에서 작성된 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [기존 구성에 따라 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
+* [기존 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [콘솔 외부에서 작성된 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

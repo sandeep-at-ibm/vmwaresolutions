@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # vCenter Server ネットワーキングの概要
+{: #vcsnsxt-intro}
 
 このドキュメントでは、{{site.data.keyword.cloud}} へのアプリケーション・モダナイゼーション・ジャーニーについて、マルチクラウド統合環境をアプリケーション・モダナイゼーションで使用できるようにする次のプラットフォームのネットワークの側面に焦点を当てて説明します。
 
@@ -18,9 +19,10 @@ lastupdated: "2019-01-23"
 
 アプリケーション・モダナイゼーションの最大の課題は、マイグレーション、ネットワーキング、およびセキュリティーです。 vCenter Server、VMware Hybrid Cloud Extension (HCX)、VMware NSX、{{site.data.keyword.containerlong_notm}}、{{site.data.keyword.icpfull_notm}} を利用してこれらの課題をいくつか解決することができます。 以下のネットワーク・アーキテクチャーでは、Acme Skateboards 社を例として使用して、クラウド環境とオンプレミス環境に分かれたコンポーネントを接続する方法について説明します。
 
-[NSX-T プレビュー](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-techpreview.html)は、将来のリファレンス・アーキテクチャーで VMware NSX Transformers (NSX-T) を使用する方法を説明するためのテクノロジー・プレビューです。 NSX-T は、異種のエンドポイントや技術スタックが混在したアプリケーション・フレームワークおよびアーキテクチャー向けに設計されています。 このような環境には、vSphere の他にも異種のハイパーバイザー、KVM、コンテナー、ベアメタルが存在することがあります。 NSX-T を使用すると、IT チームも開発チームも自分たちのアプリケーションに最適なテクノロジーを選択できます。 NSX-T は、ネットワーク・チームだけでなく開発組織も管理、運用、利用できるように設計されています。
+[NSX-T プレビュー](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-techpreview)は、将来のリファレンス・アーキテクチャーで VMware NSX Transformers (NSX-T) を使用する方法を説明するためのテクノロジー・プレビューです。NSX-T は、異種のエンドポイントや技術スタックが混在したアプリケーション・フレームワークおよびアーキテクチャー向けに設計されています。 このような環境には、vSphere の他にも異種のハイパーバイザー、KVM、コンテナー、ベアメタルが存在することがあります。 NSX-T を使用すると、IT チームも開発チームも自分たちのアプリケーションに最適なテクノロジーを選択できます。 NSX-T は、ネットワーク・チームだけでなく開発組織も管理、運用、利用できるように設計されています。
 
 ## IBM Cloud でのアプリケーション・モダナイゼーション
+{: #vcsnsxt-intro-app-mod}
 
 アプリケーション・モダナイゼーションとは、クラウドの新しい開発・デリバリー手法を使用するように既存のアプリケーションを移行するプロセスを表す用語です。 昨今のお客様は、ビジネスやアプリケーションの複雑さに基づいてこの移行を行うために役立つ革新的で効率的なアプローチを模索しています。
 
@@ -47,17 +49,18 @@ IT インフラストラクチャー・ニーズとビジネス・ニーズは�
 
 このドキュメントは、{{site.data.keyword.cloud_notm}} へのアプリケーション・モダナイゼーション・ジャーニーで使用するテクノロジーについてさまざまな観点で説明しています。
 
-* [vCenter Server および {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html) - 以下のプラットフォームをデプロイするためのリファレンス・アーキテクチャー。
+* [vCenter Server および {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro) - 以下のプラットフォームをデプロイするためのリファレンス・アーキテクチャー。
    - **VMware vCenter Server on IBM Cloud** - {{site.data.keyword.vmwaresolutions_short}} のオファリングであり、{{site.data.keyword.cloud_notm}} に自動的にプロビジョンされる VMware ベースのプラットフォームです。
    - **{{site.data.keyword.icpfull_notm}}** – {{site.data.keyword.icpfull_notm}} は、コンテナー化されたアプリケーションを開発して管理するためのアプリケーション・プラットフォームです。 これは、コンテナー・オーケストレーター Kubernetes、プライベート・イメージ・リポジトリー、管理コンソール、モニター・フレームワーク、グラフィカル・ユーザー・インターフェースで構成される統合環境であり、ユーザーがアプリケーションのデプロイ、管理、モニター、スケーリングを行うことができる一元的な場所を提供します。
    - **IBM Cloud Automation Manager** – CAM は、エンタープライズ対応の Infrastructure as Code プラットフォームであり、リポジトリーで保管およびバージョン管理されるテンプレートを使用して、単一画面で VM ベースのワークロードと Kubernetes ベースのワークロードをプロビジョンできます。
-* [vCenter Server および {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html) - 以下のプラットフォームをデプロイするためのリファレンス・アーキテクチャー。
+* [vCenter Server および {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro) - 以下のプラットフォームをデプロイするためのリファレンス・アーキテクチャー。
    - **VMware vCenter Server on IBM Cloud** - {{site.data.keyword.vmwaresolutions_short}} のオファリングであり、{{site.data.keyword.cloud_notm}} に自動的にプロビジョンされる VMware ベースのプラットフォームです。
    - **{{site.data.keyword.containerlong_notm}}** – シングル・テナント・クラスターを対象としたアプリケーション・コンテナーのデプロイメント自動化、スケーリング、および運用を行うオーケストレーション・エンジンとして Kubernetes を使用する、{{site.data.keyword.cloud_notm}} 上の管理対象サービスです。
 * _vCenter Server networking_ - 最新のガイドでは、vCenter Server、{{site.data.keyword.icpfull_notm}}、および {{site.data.keyword.containerlong_notm}} 間の統合で使用されるネットワーク・テクノロジー (NSX-V や Calico など) と NSX-T のテクノロジー・プレビューに焦点を当てています。
-* [VMware および Skate Advisor コンセプト・カー](/docs/services/vmwaresolutions/archiref/vcscar/vcscar-intro.html) - このリファレンス・アーキテクチャーは、「コンセプト・カー」です。つまり、現実の世界の問題を解決するテクノロジーに焦点を当てて見せるためのメカニズムです。 IBM が実演したかったのは、Watson AI と機械学習の対話です。 スケートボードの文化を通してユニークな方法でクラウド・サービスを披露しています。 この「コンセプト・カー」は、Skate Advisor という Acme Skateboard アプリケーションの機能拡張として実装されています。 Skate Advisor は、Watson 駆動型エンジンとの間でスケートボードの技についての会話ができるツールです。
-* [VMware: Stock Trader のモダナイゼーション・ジャーニー](/docs/services/vmwaresolutions/archiref/vcscontent/vcscontent-modjourney.html) - このリファレンス・ユース・ケースでは、クラシックな WebSphere Application Server アプリケーションを、{{site.data.keyword.cloud_notm}} Private、IBM Middleware コンテンツ、{{site.data.keyword.containerlong_notm}}、および vCenter Server on {{site.data.keyword.cloud_notm}} を利用してモダナイズする方法について説明しています。 だれもがクラウド・ジャーニーの途上にいますが、ジャーニーのどの段階にいるかは人それぞれです。 アプリケーション設計者 Jane とクラウド・インフラストラクチャー設計者 Todd が段階的に手順を踏んで、Stock Trader という既存のアプリケーションをモダナイズしていきます。 ここでは、ジャーニーで各段階を進むときに参考になる例、および各段階の規模に関係なくビジネスに実現される価値を示します。 アプリケーション、DevOps、統合、および管理という 4 つのテーマに焦点を当てています。 すべてのテーマが組み合わさって目標の実現を可能にします。 他を残して 1 つのテーマだけをモダナイズしてもうまくいかない可能性があります。
+* [VMware および Skate Advisor コンセプト・カー](/docs/services/vmwaresolutions/archiref/vcscar?topic=vmware-solutions-vcscar-intro) - このリファレンス・アーキテクチャーは、「コンセプト・カー」です。つまり、現実の世界の問題を解決するテクノロジーに焦点を当てて見せるためのメカニズムです。 IBM が実演したかったのは、Watson AI と機械学習の対話です。 スケートボードの文化を通してユニークな方法でクラウド・サービスを披露しています。 この「コンセプト・カー」は、Skate Advisor という Acme Skateboard アプリケーションの機能拡張として実装されています。 Skate Advisor は、Watson 駆動型エンジンとの間でスケートボードの技についての会話ができるツールです。
+* [VMware: Stock Trader のモダナイゼーション・ジャーニー](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney) - このリファレンス・ユース・ケースでは、クラシックな WebSphere Application Server アプリケーションを、{{site.data.keyword.cloud_notm}} Private、IBM Middleware コンテンツ、{{site.data.keyword.containerlong_notm}}、および vCenter Server on {{site.data.keyword.cloud_notm}} を利用してモダナイズする方法について説明しています。 だれもがクラウド・ジャーニーの途上にいますが、ジャーニーのどの段階にいるかは人それぞれです。 アプリケーション設計者 Jane とクラウド・インフラストラクチャー設計者 Todd が段階的に手順を踏んで、Stock Trader という既存のアプリケーションをモダナイズしていきます。 ここでは、ジャーニーで各段階を進むときに参考になる例、および各段階の規模に関係なくビジネスに実現される価値を示します。 アプリケーション、DevOps、統合、および管理という 4 つのテーマに焦点を当てています。 すべてのテーマが組み合わさって目標の実現を可能にします。 他を残して 1 つのテーマだけをモダナイズしてもうまくいかない可能性があります。
 
-### 関連リンク
+## 関連リンク
+{: #vcsnsxt-intro-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

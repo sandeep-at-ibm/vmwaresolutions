@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,14 +13,16 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # 訂購 vCenter Server 實例
+{: #vc_orderinginstance}
 
-若要部署彈性且可自訂的 VMware 虛擬化平台，以符合您的工作負載需求，請訂購 VMware vCenter Server 實例。在起始訂購期間，您也可以新增服務，例如 [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html)，來進行災難回復。
+若要部署彈性且可自訂的 VMware 虛擬化平台，以符合您的工作負載需求，請訂購 VMware vCenter Server 實例。在起始訂購期間，您也可以新增服務，例如 [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)，來進行災難回復。
 
 ## 需求
+{: #vc_orderinginstance-req}
 
 請確定您已完成下列作業：
-* 您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
-* 您已檢閱 [vCenter Server 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter/vc_planning.html)中的資訊。
+* 您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)。
+* 您已檢閱 [vCenter Server 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)中的資訊。
 * 您已檢閱實例及網域名稱格式。網域名稱及子網域標籤已用來產生實例的使用者名稱及伺服器名稱。
 
 表 1. 實例及網域名稱的值格式
@@ -36,10 +38,12 @@ lastupdated: "2019-01-25"
 請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。{:important}
 
 ## 系統設定
+{: #vc_orderinginstance-sys-settings}
 
 訂購 vCenter Server 實例時，您必須指定下列系統設定。
 
 ### 實例名稱
+{: #vc_orderinginstance-inst-name}
 
 實例名稱必須滿足下列需求：
 * 只容許英數及橫線 (-) 字元。
@@ -48,10 +52,12 @@ lastupdated: "2019-01-25"
 * 實例名稱在您的帳戶中必須是唯一的。
 
 ### 主要或次要
+{: #vc_orderinginstance-primary-secondary}
 
 選取要訂購新的主要實例，還是要為現有的主要實例訂購次要實例。
 
 ## 授權設定
+{: #vc_orderinginstance-licensing-settings}
 
 在實例中，指定下列 VMware 元件的授權選項：
 * vCenter Server 6.5 - Standard 版本
@@ -62,23 +68,27 @@ lastupdated: "2019-01-25"
 
 對於非「事業夥伴」使用者，您可以選取**購買隨附**以將 IBM 提供的 VMware 授權用於這些元件，也可以選取**我將提供**並輸入自己的授權碼以「自帶授權 (BYOL)」。
 
-### 警示
+### 授權注意事項
+{: #vc_orderinginstance-licensing-notes}
 
 * 需要最少有 8 個 CPU 的授權，這是針對 4 部伺服器，而每部伺服器都有 2 個 CPU。每個 VMware 元件的授權選項適用於基礎實例，以及之後新增至該實例的任何 ESXi 伺服器。請確保您的授權支援基礎架構中的未來容量擴充。
 * 使用者介面上會指出最低授權版本。如果支援不同的元件版本，您可以選取您想要的版本。您必須負責確保所提供的授權碼對於每一個選取的 VMware 元件都是正確的。
 * 對於 vSphere，會在訂購時產生授權費用，但授權費用接著會記入您的帳戶中。
 * 實例部署完成之後，您可以使用 VMware vSphere Web Client 來變更所提供的任何授權。
-* 您為其提供授權之 VMware 元件的支援是由 VMware 所提供，而不是由「IBM 支援中心」所提供。{:important}
+* 您為其提供授權之 VMware 元件的支援是由 VMware 所提供，而不是由「IBM 支援中心」所提供。
 
 ## Bare Metal Server 設定
+{: #vc_orderinginstance-bare-metal-settings}
 
 Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server 配置。
 
 ### 資料中心位置
+{: #vc_orderinginstance-dc-location}
 
 選取要在其中管理實例的 {{site.data.keyword.CloudDataCent_notm}}。
 
 ### Skylake
+{: #vc_orderinginstance-skylake}
 
 當您選取 **Skylake** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。
 
@@ -91,6 +101,7 @@ Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server �
 |雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### SAP 認證
+{: #vc_orderinginstance-sap}
 
 當您選取 **SAP 認證**時，無法變更 CPU 或 RAM 設定。
 
@@ -104,6 +115,7 @@ Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server �
   * 四重 Intel Xeon E7-8890 v4 處理器 / 總計 96 核心，2.2 GHz / 4096 GB RAM
 
 ### Broadwell
+{: #vc_orderinginstance-broadwell}
 
 當您選取 **Broadwell** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。
 
@@ -118,19 +130,22 @@ Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server �
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.1 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 ### Bare Metal Server 數目
+{: #vc_orderinginstance-bare-metal-number}
 
 對於實例中的起始叢集，您可以配置在 2 - 20 範圍內的 ESXi 伺服器數目。所有 ESXi 伺服器都會共用設定的配置。
 
-起始部署之後，您可以再新增四個叢集。如果您對 VMware vSAN 選取 **Skylake** 或 **Broadwell** 配置，則起始叢集和部署後的叢集都需要 4 部 ESXi 伺服器。如需最少 ESXi 伺服器數目的相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)。
+起始部署之後，您可以再新增四個叢集。如果您對 VMware vSAN 選取 **Skylake** 或 **Broadwell** 配置，則起始叢集和部署後的叢集都需要 4 部 ESXi 伺服器。如需最少 ESXi 伺服器數目的相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)。
 
 ## 儲存空間設定
+{: #vc_orderinginstance-storage-settings}
 
 儲存空間設定是根據您選取的 Bare Metal Server 配置及儲存空間類型而定。
 
-若為實例 2.8 版及更新版本，您可以將 NFS 儲存空間共用新增至現有 NFS 或 vSAN 叢集。如需相關資訊，請參閱[擴充及縮減 vCenter Server 實例的容量](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances)中的*將 NFS 儲存空間新增至 vCenter Server 實例* 小節。
+若為實例 2.8 版及更新版本，您可以將 NFS 儲存空間共用新增至現有 NFS 或 vSAN 叢集。如需相關資訊，請參閱[擴充及縮減 vCenter Server 實例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers#adding-nfs-storage-to-vcenter-server-instances)中的*將 NFS 儲存空間新增至 vCenter Server 實例* 小節。
 {:note}
 
 ### vSAN 儲存空間
+{: #vc_orderinginstance-vsan-storage}
 
 vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下列 vSAN 選項：
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
@@ -144,6 +159,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 * **vSAN 授權**：選取**購買隨附**以將 IBM 提供的 VMware 授權用於 vSAN 元件，也可以選取**我將提供**並輸入自己的授權碼以「自帶授權 (BYOL)」。
 
 ### NFS 儲存空間
+{: #vc_orderinginstance-nfs-storage}
 
 當您選取 **NFS 儲存空間**時，可以為所有共用使用相同設定的實例新增檔案層次共用儲存空間，也可以為每一個檔案共用指定不同的配置設定。請指定下列 NFS 選項：
 
@@ -166,16 +182,19 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
   |10 IOPS/GB |這個選項是為要求最嚴苛的工作負載類型而設計，例如分析。應用的範例包括：高交易量資料庫，以及其他對效能敏感的資料庫。此效能層次限制為每個檔案共用的容量上限為 4 TB。|
 
 ### 本端磁碟
+{: #vc_orderinginstance-local-disks}
 
 本端磁碟選項僅適用於 **SAP 認證**四重 Intel Xeon E7-8890 v4 處理器「裸機」配置。指定下列選項：
 * **磁碟計數**：選取您要新增的磁碟數目。
 * **磁碟類型**：選取所需磁碟類型的選項。
 
 ## 網路介面設定
+{: #vc_orderinginstance-network-interface-settings}
 
 訂購 vCenter Server 實例時，您必須指定下列網路介面設定。
 
 ### 主機名稱字首
+{: #vc_orderinginstance-host-name-prefix}
 
 主機名稱字首必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
@@ -183,6 +202,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 *  主機名稱字首的長度上限為 10 個字元。
 
 ### 子網域標籤
+{: #vc_orderinginstance-subdomain-label}
 
 子網域標籤必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
@@ -191,6 +211,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 *  子網域標籤在您的帳戶內必須是唯一的。
 
 ### 網域名稱
+{: #vc_orderinginstance-domain-name}
 
 根網域名稱必須滿足下列需求：
 * 網域名稱必須包含兩個以上以句點 (.) 區隔的字串
@@ -202,6 +223,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 主機和 VM 的「完整網域名稱 (FQDN)」長度上限為 50 個字元。網域名稱必須在這個長度上限以內。{:note}
 
 ### 公用或專用網路
+{: #vc_orderinginstance-public-private-network}
 
 網路介面卡 (NIC) 啟用設定是根據您選取**公用及專用網路**或**僅限專用網路**而定。下列附加程式服務需要公用 NIC，如果您選取專用選項，則無法使用：
 
@@ -211,15 +233,19 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### VLAN
+{: #vc_orderinginstance-vlans}
 
 網路設定是根據您選取**訂購新的 VLAN** 或**選取現有的 VLAN** 而定。
 
 您的實例訂單需要一個公用 VLAN 及兩個專用 VLAN。兩個專用 VLAN 成為每部 Bare Metal Server 的主幹。
 
 #### 訂購新的 VLAN
+{: #vc_orderinginstance-new-vlans}
+
 選取訂購一個新的公用 VLAN 和兩個新的專用 VLAN。
 
 #### 選取現有的 VLAN
+{: #vc_orderinginstance-existing-vlans}
 
 視您選取的 {{site.data.keyword.CloudDataCent_notm}} 而定，可能會提供現有的公用和專用 VLAN。
 
@@ -230,12 +256,10 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 * **主要子網路**已指派給實體主機，以進行公用網路存取。
 * **主要專用子網路**已指派給實體主機，以處理管理資料流量。
 
-##### 重要
-
-* 確保所選取 VLAN 上的防火牆配置未封鎖管理資料流量。
-* 確保您選取的所有 VLAN 都在相同的 Pod 中。無法在混合 Pod VLAN 上佈建 ESXi 伺服器。
+確保所選取 VLAN 上的防火牆配置未封鎖管理資料流量。也請確保您選取的所有 VLAN 都在相同的 Pod 中。無法在混合 Pod VLAN 上佈建 ESXi 伺服器。{:important}
 
 ### DNS 配置
+{: #vc_orderinginstance-dns-config}
 
 選取實例的「網域名稱系統 (DNS)」配置：
 
@@ -251,14 +275,17 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 如需 Windows 授權的相關資訊，請參閱 [Windows Server 2012 R2 文件](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2)。
 
 ## 服務設定
+{: #vc_orderinginstance-addon-services}
 
-當您訂購 vCenter Server 實例時，也可以訂購附加程式服務。如需服務的相關資訊，請參閱 [vCenter Server 實例的可用服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)。
+當您訂購 vCenter Server 實例時，也可以訂購附加程式服務。如需服務的相關資訊，請參閱 [vCenter Server 實例的可用服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)。
 
 ## 訂單摘要
+{: #vc_orderinginstance-order-summary}
 
 根據您選取的實例及附加程式服務配置，預估成本會立即產生並顯示在右窗格的**訂單摘要**區段中。按一下右窗格底端的**定價詳細資料**，以產生提供預估詳細資料的 PDF 文件。
 
 ## 訂購 vCenter Server 實例的程序
+{: #vc_orderinginstance-procedure}
 
 1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 頁面上，按一下 **vCenter Server** 卡片，然後按一下**建立**。
@@ -300,17 +327,19 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
    3. 按一下適用於您的訂單的條款鏈結，並先確認您同意這些條款，再訂購實例。
    4. 按一下**佈建**。
 
-## 結果
+## 訂購 vCenter Server 實例之後的結果
+{: #vc_orderinginstance-results}
 
 實例的部署會自動啟動。您會收到正在處理訂單的確認，並且可以檢視實例詳細資料來檢查部署的狀態。
 
-順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server 實例的技術規格](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
+順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
 
 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 
 當您訂購次要實例時，可能會在您完成次要實例訂單之後重新啟動主要實例（鏈結至次要實例）的 VMware vSphere Web Client。
 
 ## 下一步
+{: #vc_orderinginstance-next}
 
 檢視及管理您訂購的 vCenter Server 實例。
 
@@ -324,12 +353,13 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 
    這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
 
-### 相關鏈結
+## 相關鏈結
+{: #vc_orderinginstance-related}
 
-* [註冊 {{site.data.keyword.cloud_notm}} 帳戶](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
-* [檢視 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
-* [vCenter Server 實例的多站台配置](/docs/services/vmwaresolutions/vcenter/vc_multisite.html)
-* [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
-* [擴充及縮減 vCenter Server 實例的容量](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
-* [刪除 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)
+* [註冊 {{site.data.keyword.cloud_notm}} 帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [檢視 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [vCenter Server 實例的多站台配置](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
+* [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [擴充及縮減 vCenter Server 實例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [刪除 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)

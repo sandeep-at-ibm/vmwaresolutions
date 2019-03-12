@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # 安裝及配置混合式服務
+{: #hcx-archi-install-cfg-hybrid}
 
 安裝程式會會每個服務虛擬應用裝置佈建及配置虛擬機器。服務虛擬機器同時部署在內部部署及雲端。
 
 ## 必要條件
+{: #hcx-archi-install-cfg-hybrid-prereq}
 
 * HCX Manager 必須安裝在內部部署，並向已啟用 VCF/VCS HCX 功能的雲端端點進行登錄。
 * 目標虛擬資料中心必須具有足夠的資源。
 
 ## 配置概觀
+{: #hcx-archi-install-cfg-hybrid-config-ovw}
 
 配置程序假設會配置所有服務虛擬應用裝置。不過，它們並非全部都是必要項目。
 * 「混合式雲端閘道」是必要項目。
@@ -24,35 +27,34 @@ lastupdated: "2019-01-23"
 * 若要配置「網路延伸」服務，請參閱_配置網路延伸服務_ 小節。回到「混合式服務」頁面可以延遲選用性應用裝置的部署，並且於稍後安裝應用裝置。
 
 ## 啟動混合式服務虛擬應用裝置安裝及配置
+{: #hcx-archi-install-cfg-hybrid-start-hsva}
 
 簡單的 Web 介面用來安裝服務虛擬應用裝置，以及配置其他「第 2 層集中器」。
-
-### 混合式服務虛擬應用裝置的安裝及配置必要條件
 
 必須安裝 HCX Manager，並向已啟用 VCF/VCS HCX 功能的雲端端點進行登錄。
 
 ### 混合式服務虛擬應用裝置的安裝及配置程序
+{: #hcx-archi-install-cfg-hybrid-proc-install}
 
 1. 登入 vSphere Web Client。
-2. 在**首頁**標籤上，按一下**Hybrid Cloud Services**圖示。
+2. 在**首頁**標籤上，按一下 **Hybrid Cloud Services** 圖示。
 3. 按一下**混合式服務**標籤。
 4. 按一下**安裝服務**。
 5. 在**選擇混合式服務**頁面上，選取要安裝的服務，然後按**下一步**。
 
 ### 下一步
+{: #hcx-archi-install-cfg-hybrid-start-hsva-next}
 
 1. 下一步是在必要時配置「混合式雲端閘道」。
 2. 如果有足夠的資源可用於支援延伸，則隨時可以將第 2 層集中器新增至現有安裝。
 
 ## 配置混合式雲端閘道
+{: #hcx-archi-install-cfg-hybrid-config-hcg}
 
-配置「混合式雲端閘道」服務虛擬應用裝置。
-
-### 混合式雲端閘道的配置必要條件
-
-請遵循_啟動混合式服務虛擬應用裝置安裝及配置_ 中的步驟，並檢查「混合式雲端閘道」。
+配置「混合式雲端閘道」服務虛擬應用裝置。開始之前，請遵循_啟動混合式服務虛擬應用裝置安裝及配置_ 中的步驟，並檢查「混合式雲端閘道」。
 
 ### 混合式雲端閘道的配置程序
+{: #hcx-archi-install-cfg-hybrid-proc-config-hcg}
 
 在**混合式雲端閘道**頁面上，提供下列值，然後按**下一步**：
 * **網路** - 連接「混合式雲端閘道」管理介面的交換器。在使用案例 1 及 2 中，它可以是標準虛擬交換器或虛擬分散式交換器。對於任何使用第 2 層延伸的配置，它必須是虛擬分散式交換器。
@@ -64,14 +66,12 @@ lastupdated: "2019-01-23"
 * 在**延伸（選用）**下，選擇 vMotion 網路（適用時），並設定 **admin** 及 **root** 密碼。這些密碼專門用於「混合式雲端閘道」應用裝置。使用者名稱及密碼不需要符合為 Hybrid Cloud Services 應用裝置所配置的使用者名稱及密碼。
 
 ## 配置網路延伸服務
+{: #hcx-archi-install-cfg-hybrid-config-nes}
 
-針對單一路徑部署，或是替代路徑上的獨立式網路延伸，配置「網路延伸」服務。
-
-### 網路延伸服務的配置必要條件
-
-選取「網路延伸」服務。如果安裝「單一路徑」配置，則只能選擇**網路延伸**。
+針對單一路徑部署，或是替代路徑上的獨立式網路延伸，配置「網路延伸」服務。開始之前，請選取「網路延伸」服務。如果安裝「單一路徑」配置，則只能選擇**網路延伸**。
 
 ### 網路延伸服務的配置程序
+{: #hcx-archi-install-cfg-hybrid-proc-config-nes}
 
 1. 在**網路延伸服務**頁面上，從**分散式交換器**功能表中選取虛擬分散式交換器。當您安裝標準「第 2 層集中器」時，將可使用**透過混合式雲端閘道遞送延伸網路**勾選框。高傳輸量 L2C 則未提供此項目。
 2. 如果選取**透過混合式雲端閘道遞送延伸網路**，則安裝程式會（根據交換器）判斷「第 2 層集中器」的合理放置，並移入放置資訊。否則，必須在下一步中手動輸入放置資訊。
@@ -87,10 +87,12 @@ lastupdated: "2019-01-23"
 6. 按**下一步**。在**準備完成**頁面上，檢閱資訊，然後按一下**完成**。
 
 ## 監視服務應用裝置部署
+{: #hcx-archi-install-cfg-hybrid-monitor}
 
 作業主控台可以用來監視服務虛擬機器的部署進度。
 
 ### 服務應用裝置部署的監視程序
+{: #hcx-archi-install-cfg-hybrid-monitor-proc}
 
 1. 登入 vSphere Web Client。在**首頁**標籤上，按一下 **Hybrid Cloud Services** 圖示。
 2. 在 **Hybrid Cloud Services** 窗格上，按一下**混合式服務**標籤。您可以從「作業」主控台監視虛擬應用裝置部署。
@@ -102,14 +104,12 @@ lastupdated: "2019-01-23"
 8. 檢閱「混合式服務虛擬應用裝置」的配置摘要。
 
 ## 檢視通道狀態
+{: #hcx-archi-install-cfg-hybrid-view-tunnel}
 
-檢視「雲端閘道」通道狀態。
-
-### 通道狀態的檢視必要條件
-
-如果您可以延伸網路，則必須啟動網路延伸服務。
+檢視「雲端閘道」通道狀態。您必須先啟動網路延伸服務，才能延伸網路。
 
 ### 通道狀態的檢視程序
+{: #hcx-archi-install-cfg-hybrid-proc-view-tunnel}
 
 1. 若要從 Web 用戶端檢查通道狀態，請在庫存中選取 **Hybrid Cloud Services**，然後按一下**混合式服務**標籤。
 2. 若要確認成功的「混合式雲端閘道」通道，請檢視 CGW（「混合式雲端閘道」的字首語）狀態為**作用中**，且在最右邊，通道的顏色為綠色。
@@ -117,13 +117,16 @@ lastupdated: "2019-01-23"
 ## 將第 2 層網路延伸至 IBM Cloud
 
 將第 2 層網路從內部部署資料中心擴充至已啟用 VCF/VCS HCX 功能的雲端。
+{: #hcx-archi-install-cfg-hybrid-stretch-layer-2}
 
 ### 將第 2 層網路延伸至 IBM Cloud 的必要條件
+{: #hcx-archi-install-cfg-hybrid-prereq-stretch-layer-2}
 
 * 只能延伸 VLAN 標籤埠群組（VLAN 類型「無」以外的值，或 VLAN ID 0）。VXLAN 被視為 VLAN。
 * 此程序使用**擴充網路**精靈。您必須從 vSphere® Web Client 網路庫存視圖執行此精靈。雖然可從其他視圖看到此精靈，但是必須從庫存環境定義執行它，才能取得正確資訊。
 
 ### 將第 2 層網路延伸至 IBM Cloud 的程序
+{: #hcx-archi-install-cfg-hybrid-proc-stretch-layer-2}
 
 1. 登入 vSphere Web Client。在中央窗格的**首頁**標籤上，按一下**庫存**清單中的**網路**圖示。
 2. 在**網路**階層中，識別要擴充之網路的埠群組。
@@ -138,6 +141,7 @@ lastupdated: "2019-01-23"
 7. 若要追蹤網路延伸的進度，請移至**最近作業**視窗，按一下**全部**標籤，然後檢視**所有使用者的作業**。
 8. 若要開啟「作業」主控台，請按一下**其他作業**。**擴充網路**作業狀態為**已完成**時，即已完成網路延伸。
 
-### 相關鏈結
+## 相關鏈結
+{: #hcx-archi-install-cfg-hybrid-related}
 
-* [修改或解除安裝 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
+* [修改或解除安裝 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

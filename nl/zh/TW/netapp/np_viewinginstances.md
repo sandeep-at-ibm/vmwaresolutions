@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # 檢視 NetApp ONTAP Select 實例
+{: #np_viewinginstances}
 
 檢視針對不同使用者帳戶佈建之 NetApp ONTAP Select 實例的摘要及詳細資訊。
 
 ## 檢視 NetApp ONTAP Select 實例摘要的程序
+{: #np_viewinginstances-procedure-view-inst-summary}
 
 若要檢視針對使用者帳戶佈建之所有 NetApp ONTAP Select 實例的摘要，請完成下列步驟：
 
@@ -29,13 +31,14 @@ lastupdated: "2019-01-24"
 |項目        |說明       |  
 |:------------- |:--------------- |
 |名稱 |實例的名稱。|
-|版本 |實例的版本。|  
+|版本|實例的版本。|  
 |位置|管理實例所在的資料中心。|
 |建立時間|建立實例的日期和時間。|   
 |狀態|實例的狀態。狀態可以具有下列其中一個值：
      <ul><li>正在建立：正在建立實例。</li><li>正在建置：正在配置實例。</li><li>備妥使用：實例已備妥可供使用。</li><li>正在修改：正在修改實例。</li><li>失敗：建立、配置或修改程序失敗。</li><li>正在刪除：正在刪除實例。</li><li>刪除錯誤：刪除實例時發生錯誤。</li><li>已刪除：已刪除實例。</li></ul>|
 
 ## 檢視 NetApp ONTAP Select 實例內容詳細資料的程序
+{: #np_viewinginstances-procedure-view-inst-property}
 
 若要檢視實例的內容詳細資料，請執行下列動作：
 
@@ -61,6 +64,7 @@ lastupdated: "2019-01-24"
 |狀態|實例的狀態。|
 
 ## 檢視 NetApp ONTAP Select 實例存取資訊的程序
+{: #np_viewinginstances-procedure-view-inst-access-info}
 
 在**存取資訊**下，檢視實例相關元件的存取資訊。這些密碼是系統所產生的起始密碼。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更它們，則不會在實例摘要頁面上更新它們。
 
@@ -86,6 +90,7 @@ lastupdated: "2019-01-24"
 |vCenter SSH  |您可用來透過 SSH 連線存取 vCenter Server VM 的使用者名稱及密碼。|
 
 ## 檢視 NetApp ONTAP Select 實例部署歷程的程序
+{: #np_viewinginstances-procedure-view-inst-deploy-history}
 
 按一下左導覽窗格中的**部署歷程**，以檢視該實例的部署歷程。
 
@@ -96,9 +101,10 @@ lastupdated: "2019-01-24"
 |日期 |變更實例狀態的日期和時間|
 |摘要 |變更的詳細資料|
 
-如果在部署實例或刪除實例期間發生錯誤，則會自動通知「{{site.data.keyword.cloud_notm}} 支援中心」團隊。若要查詢問題單的狀態，您可以[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
+如果在部署實例或刪除實例期間發生錯誤，則會自動通知「{{site.data.keyword.cloud_notm}} 支援中心」團隊。若要查詢問題單的狀態，您可以[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
 
-## 檢視 NetApp ONTAP Select 叢集
+## 檢視 NetApp ONTAP Select 叢集的程序
+{: #np_viewinginstances-procedure-view-cluster}
 
 1. 從左導覽窗格中，按一下**基礎架構**。
 2. 在**叢集**下，檢視 NetApp ONTAP Select 叢集的相關摘要。
@@ -156,12 +162,13 @@ lastupdated: "2019-01-24"
 |項目        |說明       |  
 |:------------|:----------------- |
 |名稱 |ESXi 伺服器的名稱格式為 `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中：<br><br>`host_prefix` 是主機名稱字首、`n` 是伺服器的序列、`subdomain_label` 是子網域標籤，而 `root_domain` 是根網域名稱。|
-|版本 |ESXi 伺服器的版本。|
+|版本|ESXi 伺服器的版本。|
 |認證|用來存取 ESXi 伺服器的使用者名稱和密碼。|
 |專用 IP |ESXi 伺服器的專用 IP 位址。|
 |狀態|ESXi 伺服器的狀態，可以是下列其中一個值：<ul><li>作用中：ESXi 伺服器已備妥可供使用。</li><li>正在刪除：正在刪除 ESXi 伺服器。</li></ul> |
 
 ## 下一步
+{: #np_viewinginstances-next}
 
 從 {{site.data.keyword.vmwaresolutions_short}} 主控台、VMware vSphere Web Client 或 NetApp 主控台管理實例。
 
@@ -169,12 +176,13 @@ lastupdated: "2019-01-24"
 
 如需協助您完成登入指示的相關資訊，請檢閱下列主題：
 
-*  如需存取 vSphere Web Client 之前的需求及必要步驟，請參閱[連接至 vSphere Web Client 時發生逾時](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html)。
+*  如需存取 vSphere Web Client 之前的需求及必要步驟，請參閱[連接至 vSphere Web Client 時發生逾時](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console)。
 *  如需使用 VPN 登入 {{site.data.keyword.cloud_notm}} 基礎架構「專用網路」的存取點清單，請參閱 [VPN 存取](http://www.softlayer.com/vpn-access){:new_window}。
-*  如果您在使用 vSphere Web Client 部署 OVF（開放式虛擬化格式）檔案時發生問題，請參閱[使用 vSphere Web Client 部署 OVF 檔案](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html)。
+*  如果您在使用 vSphere Web Client 部署 OVF（開放式虛擬化格式）檔案時發生問題，請參閱[使用 vSphere Web Client 部署 OVF 檔案](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf)。
 
-### 相關鏈結
+## 相關鏈結
+{: #np_viewinginstances-related}
 
-* [訂購 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [刪除 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
+* [訂購 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [刪除 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
 * [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

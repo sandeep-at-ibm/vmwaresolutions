@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server インスタンスのクラスターの追加、表示、削除
+{: #adding-and-viewing-clusters-for-vcenter-server-instances}
 
 インスタンスの注文時に構成した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。
 
@@ -22,6 +23,7 @@ VMware vCenter Server インスタンスに独自のクラスターを追加し�
 {:note}
 
 ## vCenter Server インスタンスへのクラスターの追加
+{: #vc_addingviewingclusters-adding}
 
 インスタンスに追加できるクラスターの数は、インスタンスのバージョンに応じて以下のように異なります。
 * V2.5 以降でデプロイ (または V2.5 以降にアップグレード) されたインスタンスの場合は、追加できるクラスター数の上限は、クラスター、ホスト、および VM の数によって決まります。 VMware のサイズ設定についてのガイドラインおよびデプロイに応じた上限を守る必要があります。
@@ -31,10 +33,12 @@ VMware vCenter Server インスタンスに独自のクラスターを追加し�
 上限について詳しくは、[VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window} を参照してください。
 
 ### システム設定
+{: #vc_addingviewingclusters-adding-sys-settings}
 
 vCenter Server インスタンスにクラスターを追加するときには、以下の設定を指定する必要があります。
 
 #### クラスター名
+{: #vc_addingviewingclusters-adding-cluster-name}
 
 クラスター名は、以下の要件を満たしている必要があります。
 * 英数字とダッシュ (-) の文字だけを使用できます。
@@ -43,16 +47,19 @@ vCenter Server インスタンスにクラスターを追加するときには�
 * クラスター名は、vCenter Server インスタンス内で固有のものでなければなりません。
 
 #### データ・センターの場所
+{: #vc_addingviewingclusters-adding-dc-location}
 
 クラスターの {{site.data.keyword.CloudDataCent}}の場所はデフォルトで、vCenter Server インスタンスの {{site.data.keyword.CloudDataCent_notm}}に設定されます。 デプロイ済みのインスタンスとは異なる {{site.data.keyword.CloudDataCent_notm}}にクラスターをデプロイできますが、それら 2 カ所の {{site.data.keyword.CloudDataCents_notm}}間のネットワーク待ち時間が、150 ms 未満になるようにしてください。 ネットワーク待ち時間を確認するには、[SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/) などのツールを使用できます。
 
 別の {{site.data.keyword.CloudDataCent_notm}}または {{site.data.keyword.cloud_notm}} インフラストラクチャー・ポッドにクラスターをデプロイする場合は、注文した{{site.data.keyword.baremetal_short}}で使用するために 3 つの追加の VLAN を注文します。
 
 ### ベア・メタル・サーバーの設定
+{: #vc_addingviewingclusters-bare-metal-settings}
 
 **「Skylake」**、**「SAP 認定」**、または**「Broadwell」**のいずれかを選択できます。
 
 #### Skylake
+{: #vc_addingviewingclusters-adding-skylake}
 
 **「Skylake」**設定の場合、**「CPU モデル」**と**「RAM」**には複数のオプションがあります。 利用できるオプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
 
@@ -65,6 +72,7 @@ vCenter Server インスタンスにクラスターを追加するときには�
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 #### SAP 認定
+{: #vc_addingviewingclusters-adding-sap}
 
 **「SAP 認定」**を選択した場合、CPU や RAM の設定は変更できません。
 
@@ -78,6 +86,7 @@ vCenter Server インスタンスにクラスターを追加するときには�
 * Quad Intel Xeon E7-8890 v4 プロセッサー / 合計 96 コア、2.2 GHz / 4096 GB RAM
 
 #### Broadwell
+{: #vc_addingviewingclusters-adding-broadwell}
 
 **「Broadwell」**設定の場合、**「CPU モデル」**と**「RAM」**には複数のオプションがあります。 利用できるオプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
 
@@ -92,6 +101,7 @@ vCenter Server インスタンスにクラスターを追加するときには�
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.2 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 #### ベア・メタル・サーバーの数
+{: #vc_addingviewingclusters-adding-bare-metal-number}
 
 クラスターには 2 台以上の{{site.data.keyword.baremetal_short}}が必要です。
 
@@ -102,10 +112,12 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
 デプロイメント後に、最大 4 つのクラスターを追加で作成できます。 **「Skylake」**または**「Broadwell」**のベアメタル・サーバー構成と VMware vSAN ストレージを選択した場合は、初期クラスターとデプロイメント後のクラスターの両方に 4 つのサーバーが必要です。
 
 ### ストレージ設定
+{: #vc_addingviewingclusters-adding-storage-settings}
 
 ストレージ設定は、選択したベア・メタル・サーバー構成とストレージ・タイプによって異なります。
 
 #### vSAN ストレージ
+{: #vc_addingviewingclusters-adding-vsan-storage}
 
 以下の vSAN オプションを指定します。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
@@ -121,6 +133,7 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
 初期クラスターが vSAN クラスターであった場合、追加の vSAN クラスターは同じ vSAN ライセンスを使用し、初期クラスターと同じ構成になります。 インスタンス内のいずれかのクラスター (初期または追加) に対し、vSAN を選択してデプロイした場合も同様になります。 初回は、vSAN ライセンス (BYOL または購入) とエディションを入力するように求められます。 次回に新規クラスター用に vSAN を選択するときには、初回に選択したライセンスが再使用されます。
 
 #### NFS ストレージ
+{: #vc_addingviewingclusters-adding-nfs-storage}
 
 **「NFS Storage」**を選択する場合は、インスタンスにファイル・レベルの共有ストレージを追加し、すべての共有で同じ設定を使用することも、ファイル共有ごとに別々の構成設定を指定することもできます。 以下の NFS オプションを指定します。
 
@@ -143,18 +156,21 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
   | 10 IOPS/GB | このオプションは、分析などの最も要求の厳しいワークロード・タイプ用に設計されています。 例えば、トランザクションの多いデータベースやその他のパフォーマンス重視のデータベースなどの用途があります。 このパフォーマンス・レベルは、ファイル共有あたり最大 4 TB の容量に制限されています。 |
 
 ### ローカル・ディスク
+{: #vc_addingviewingclusters-adding-local-disks}
 
 ローカル・ディスク・オプションは、**SAP 認定**のクワッド Intel Xeon E7-8890 v4 プロセッサーのベアメタル構成でのみ使用できます。 以下のオプションを指定します。
 * **ディスク数 (Disk Count)**: 追加するディスクの数を選択します。
 * **ディスク・タイプ**: 必要なディスク・タイプのオプションを選択します。
 
 ### ライセンス交付の設定
+{: #vc_addingviewingclusters-adding-licensing-settings}
 
 クラスター内の VMware vSphere コンポーネントには以下のライセンス・オプションを指定します。
 * ビジネス・パートナーであるユーザーの場合、vSphere ライセンス (Enterprise Plus エディション) が自動的に含められて購入されます。
 * ビジネス・パートナーでないユーザーの場合、**「購入に含める」**を選択してこのコンポーネントに IBM 提供 VMware ライセンスを使用することも、**「自分で提供する」**を選択し、所有するライセンス・キーを入力してライセンス持ち込み (BYOL) を適用することもできます。
 
 ### ネットワーク・インターフェースの設定
+{: #vc_addingviewingclusters-adding-network-interface-settings}
 
 ネットワーク・インターフェース・カード (NIC) の有効化設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。 以下のアドオン・サービスはパブリック NIC を必要とするため、プライベート・オプションを選択した場合は利用できません。
 
@@ -164,10 +180,12 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 注文のサマリー
+{: #vc_addingviewingclusters-adding-order-summary}
 
 選択したクラスター構成に基づいて、見積もりコストがすぐに生成され、右側のペインの**「注文の要約」**に表示されます。
 
 ## vCenter Server インスタンスにクラスターを追加する手順
+{: #vc_addingviewingclusters-adding-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、クラスターを追加するインスタンスをクリックします。
@@ -199,6 +217,7 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
    4. **「プロビジョン」**をクリックします。
 
 ### vCenter Server インスタンスにクラスターを追加した結果
+{: #vc_addingviewingclusters-adding-results}
 
 1. クラスターのデプロイメントが自動的に開始され、クラスターの状況が**「初期化中」**に変更されます。 インスタンスの**「サマリー」**ページでデプロイメント履歴を表示して、デプロイメントの状況を確認できます。
 2. クラスターを使用する準備ができると、状況が**「使用可能」**に変更されます。 新しく追加されたクラスターで、vSphere High Availability (HA) と vSphere Distributed Resource Scheduler (DRS) が有効になります。
@@ -207,6 +226,7 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
 {:important}
 
 ## vCenter Server インスタンスでクラスターを表示する手順
+{: #vc_addingviewingclusters-viewing-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、クラスターを表示するインスタンスをクリックします。
@@ -232,42 +252,34 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
         <dd class="dd">クラスターが削除された場合。</dd>
     </dl>
   * **アクション**: **「削除」**アイコンをクリックしてクラスターを削除できます。
-4. クラスター名をクリックして、ESXi サーバーとストレージの詳細を表示します。
+4. クラスター名をクリックして、ESXi サーバーとストレージを表示します。
 
-  * ESXi サーバーの詳細:
-     * **名前**: ESXi サーバーの名前は、`<host_prefix><n>.<subdomain_label>.<root_domain>` という形式です。各部の意味は次のとおりです。
+表 4. ESXi サーバーの詳細
 
-       `host_prefix` はホスト名の接頭部です。
+| 項目        | 説明       |  
+|:------------- |:------------- |
+| 名前 | ESXi サーバーの名前は以下の形式です。<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> 各部の意味は、次のとおりです。<br> `host_prefix` はホスト名の接頭部です<br> `n` はサーバーの順序です<br> `subdomain_label` はサブドメイン・ラベルです<br> `root_domain` はルート・ドメイン名です|
+| バージョン | ESXi サーバーのバージョン。 |
+| 資格情報 | ESXi サーバーにアクセスするために使用するユーザー名とパスワード。 |
+| プライベート IP | ESXi サーバーのプライベート IP アドレス。 |
+| 状況 | ESXi サーバーの状況。次の値のいずれかになります。<br> **追加済み**: ESXi サーバーが追加され、使用可能な状態です。<br> **追加中**: ESXi サーバーが追加されています。<br> **削除中**: ESXi サーバーが削除されています。 |
 
-       `n` はサーバーの順序です。
+表 5. ストレージの詳細
 
-       `subdomain_label` はサブドメイン・ラベルです。
-
-       `root_domain` はルート・ドメイン名です。
-
-     * **バージョン**: ESXi サーバーのバージョン。
-     * **資格情報**: ESXi サーバーにアクセスするためのユーザー名とパスワード。
-     * **プライベート IP**: ESXi サーバーのプライベート IP アドレス。
-     * **状況**: ESXi サーバーの状況。以下の値のいずれかになります。
-        <dl class="dl">
-        <dt class="dt dlterm">追加済み</dt>
-        <dd class="dd">ESXi サーバーが追加され、使用可能な状態です。 </dd>
-        <dt class="dt dlterm">追加中</dt>
-        <dd class="dd">ESXi サーバーが追加されています。 </dd>
-        <dt class="dt dlterm">削除中</dt>
-        <dd class="dd">ESXi サーバーが削除されています。</dd>
-        </dl>
-  * ストレージの詳細:
-    * **名前**: データ・ストア名。
-    * **サイズ**: ストレージの容量。
-    * **IOPS/GB**: ストレージのパフォーマンス・レベル。
-    * **NFS プロトコル**: ストレージの NFS バージョン。
+| 項目        | 説明       |  
+|:------------- |:------------- |
+| 名前 | データ・ストア名。 |
+| サイズ | ストレージの容量。 |
+| IOPS/GB | ストレージのパフォーマンス・レベル。 |
+| NFS プロトコル | ストレージの NFS バージョン。 |
 
 ## vCenter Server インスタンスからのクラスターの削除
+{: #vc_addingviewingclusters-deleting}
 
 不要になったクラスターをインスタンスから削除したい場合があります。
 
 ### 削除する前に
+{: #vc_addingviewingclusters-deleting-prereq}
 
 * この手順を使用して、V2.3 以降でデプロイされたインスタンスからクラスターを削除できます。
 * V2.2 以前のインスタンスでデプロイしたクラスターの場合、インスタンスに追加したクラスターを削除するには、インスタンスを V2.3 にアップグレードする必要があります。
@@ -277,6 +289,7 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
 * デフォルトのクラスターは削除できません。
 
 ### vCenter Server インスタンスからクラスターを削除する手順
+{: #vc_addingviewingclusters-deleting-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、クラスターを削除するインスタンスをクリックします。
@@ -287,7 +300,8 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。 **「クラスター」**テーブルで、削除するクラスターを見つけて、**「アクション」**列にある**「削除」**アイコンをクリックします。
 4. 他のクラスターに VM を移行する必要がある場合は、その移行が完了したことを確認し、クラスターを削除することを確認します。
 
-### 関連リンク
+## 関連リンク
+{: #vc_addingviewingclusters-related}
 
-* [vCenter Server インスタンスの表示](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
-* [vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [vCenter Server インスタンスの表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)

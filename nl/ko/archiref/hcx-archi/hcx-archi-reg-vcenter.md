@@ -4,18 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # vCenter에 HCX Manager 등록
+{: #hcx-archi-reg-vcenter}
 
 VMware vSphere Web Client에 하이브리드 클라우드 서비스 플러그인을 등록하고 하이브리드 클라우드 서비스 관리 서비스를 시작하십시오.
 
 ## 시작하기 전에
+{: #hcx-archi-reg-vcenter-prereq}
 
 하이브리드 클라우드 서비스 가상 어플라이언스를 등록하려면 전원을 켜야 합니다.
 
 ## vCenter에 HCX Manager를 등록하는 프로시저
+{: #hcx-archi-reg-vcenter-proc-register}
 
 1. 하이브리드 클라우드 서비스 서비스 가상 어플라이언스에 로그인하십시오.
 2. **설정 관리** 타일을 클릭하십시오.
@@ -35,9 +38,11 @@ VMware vSphere Web Client에 하이브리드 클라우드 서비스 플러그인
 5. 등록을 완료하려면 vSphere Web Client를 로그아웃하십시오. 화면 업데이트가 발생했는지 확인하려면 다시 로그인하십시오.
 
 ## 결과
+{: #hcx-archi-reg-vcenter-results}
 
 기존의 **하이브리드 클라우드** 아이콘과 왼쪽에 있는 **하이브리드 클라우드 서비스** 메뉴 항목에 유의하십시오. 하이브리드 클라우드 서비스 등록에서 이 레이블을 업데이트합니다. 인벤토리에서 아이콘 레이블은 **하이브리드 클라우드 서비스**가 됩니다.
 
-### 관련 링크
+## 관련 링크
+{: #hcx-archi-reg-vcenter-related}
 
-* [하이브리드 서비스 설치 및 구성](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-hybrid.html)
+* [하이브리드 서비스 설치 및 구성](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-hybrid)

@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Skate Advisor の論理設計
+{: #vcscar-logical}
 
 ここでは、このシステムの論理設計を形成するアプリケーション・エレメントについて詳しく説明します。
 
 ## システム・コンポーネント
+{: #vcscar-logical-sys-comp}
 
 図 1. Skate Advisor コンポーネント
 ![Skate Advisor コンポーネント](vcscar-components.svg)
@@ -20,6 +22,7 @@ lastupdated: "2019-01-23"
 Skate Advisor の主要な構成要素は、認識したテキストまたは音声を受け入れて、構造化された方法でシステムと対話できるチャットボットです。
 
 ## トリック
+{: #vcscar-logical-tricks}
 
 Skate Advisor の中核となるデータ・エレメントはトリックです。 トリックは、トリック言語によって一意的に定義されます。 この言語を使用して、以下のタスクを実行できます。
 - トリックについてチャットボットと会話する。
@@ -28,14 +31,17 @@ Skate Advisor の中核となるデータ・エレメントはトリックです
 - ロケーションおよびメディアを表示する目的でトリックを識別する。
 
 ### トリックの定義
+{: #vcscar-logical-trick-def}
 
 トリックは、トリックを表す言語構造体によって一意的に定義されます。 完全な定義については、『トリック・ルール・エンジン』を参照してください。
 
 ### トリックのリスト
+{: #vcscar-logical-list-tricks}
 
 言語エレメントで定義された基本トリックまたは着地を照会すると、トリックのリストが返されます。
 
 ### トリック・データ
+{: #vcscar-logical-trick-data}
 
 返されたトリックには、以下の情報が含まれています。
 - トリックの説明
@@ -43,6 +49,7 @@ Skate Advisor の中核となるデータ・エレメントはトリックです
 - ロケーション情報
 
 ## 会話ストリーム
+{: #vcscar-logical-conv-streams}
 
 チャットボットには、限られた数の会話が事前定義されています。 会話は次の情報で定義されます。
 - トリックの検索: 基本トリックまたは着地を表す照会パラメーターに基づいて、該当する一連のトリックを見つけます。
@@ -58,8 +65,10 @@ Skate Advisor の中核となるデータ・エレメントはトリックです
 メディア表示 | トリックのビデオを見せて |メディア結果のリスト
 
 ## ユーザー・インターフェース・コンポーネント
+{: #vcscar-logical-ui-comp}
 
 ### チャットボット
+{: #vcscar-logical-chatbot}
 
 チャットボットは、ユーザーと会話する Web コンポーネントです。 チャットボットはテキストも音声も受け入れることができます。 リストのような結果はテキストで表示されますが、結果を説明する音声が付く場合もあります。
 
@@ -85,18 +94,21 @@ Skate Advisor の中核となるデータ・エレメントはトリックです
 11 | 結果がチャットボットからユーザーに送信されます。
 
 ### ビデオ・レンダリング
+{: #vcscar-logical-video-render}
 
 ビデオ・レンダリング・コンポーネントは、ビデオを再生したり、文書を表示したりします。 それらの成果物は、トリックが検出されたソース成果物に相当します。
 
 ビデオ・レンダリング・コンポーネントは、ビデオを表示する、Web インターフェースの埋め込みウィジェットです。 ビデオは、システム・ユーザーからの照会の結果としてチャットボットに表示されます。 結果として表示するビデオ・リンクが選択されると、ビデオのレンダリングが開始されます。
 
 ### ロケーション・インターフェース
+{: #vcscar-logical-location-interface}
 
 Skate Advisor には、システム・ユーザーが特定のトリックのロケーションを記録するためのインターフェースが含まれています。 この Web インターフェース・コンポーネントには、以下の 2 つの主要な要素があります。
 1. 特定のトリックを実行するために最適な場所として、システム・ユーザーのロケーションを受け入れます。
 2. 特定のトリックに推奨される 1 つ以上のロケーションを表示します。
 
 ## Watson コンポーネント
+{: #vcscar-logical-watson-comp}
 
 このアーキテクチャーには、以下の Watson コンポーネントが含まれています。
 * Knowledge Studio - Watson Studio をツールとして使用することで、システム用のスケート言語を設計し、スケート言語が実装された Web 上のドキュメントを認識することができます。 Knowledge Studio には、Watson Discovery で使用するモデルが用意されています。
@@ -106,6 +118,7 @@ Skate Advisor には、システム・ユーザーが特定のトリックのロ
 * Watson Assistant - Watson Assistant は、ユーザーとマシン (チャットボット) の間の対話を設計するツールです。 このツールは、分野 (スケートボードなど) に固有の言語を使用して、適切な応答を認識して生成するための一連の文法の形式についてトレーニングする必要があります。
 
 ## Skate Advisor サービス
+{: #vcscar-logical-skate-advisor-services}
 
 Skate Advisor サービスは、要求に応えるための一連の API サービスを提供するアプリケーション・コンポーネントです。 公開されるサービスは、前述の会話ストリームに直接関係します。 公開される API は、大きく次のように分類されます。
 * get_tricks - Discovery Service に渡される自然言語の <照会\> に基づいて、トリックのリストを返します。
@@ -114,6 +127,7 @@ Skate Advisor サービスは、要求に応えるための一連の API サー�
 * accept_command - チャットボットからテキスト・コマンドを受け入れて、要求を処理します。
 
 ## Discovery Service のトレーニング
+{: #vcscar-logical-disc-service-training}
 
 Watson Discovery は、機械学習モデルを使用してトレーニングする必要があります。機械学習モデルは、対象分野の専門家が Watson Knowledge Studio を使用して繰り返し作成します。
 
@@ -127,6 +141,7 @@ Skate Advisor のモデルは、モデルを作成するためのルール・ベ
 - トリックをすべて見せて。
 - コンボがいくつも含まれたトリックをすべて見せて。
 
-### 関連リンク
+## 関連リンク
+{: #vcscar-logical-related}
 
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

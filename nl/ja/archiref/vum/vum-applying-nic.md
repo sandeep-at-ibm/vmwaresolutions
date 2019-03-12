@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # ネイティブ NIC ドライバーの適用
+{: #vum-applying-nic}
 
 ESXi 6.5 には、以前の vmklinux ドライバーに置き換わる新しいネイティブ・ドライバーが多数含まれています。 ほとんどの新規ネイティブ・ドライバーは、インストールまたはアップグレード後にデフォルトで有効になっていますが、3 つの新規ネイティブ・ドライバーは、対応する vmklinux ドライバーの機能を完全にはサポートしないため、デフォルトで無効になっています。
 
@@ -35,7 +36,7 @@ ixgben ドライバーが「loaded」(最初の列) および「enabled」(2 番
 
 戻す必要があり、vSphere ESXi ホストに SSH で接続できない場合は、{{site.data.keyword.cloud_notm}} コントロール・ウィンドウを使用して、戻す必要があるホストの KVM コンソールにログインする必要があります。
 
-{{site.data.keyword.cloud_notm}} コントロール・ウィンドウにリストされている ID とパスワードを IPMI IP アドレスと共に使用して、IPMI Web インターフェースにログインします。 VPN を介してホストが配置されているデータ・センターに接続する必要があります。 詳しくは、[VPN の概要](/docs/infrastructure/iaas-vpn/getting-started.html)を参照してください。
+{{site.data.keyword.cloud_notm}} コントロール・ウィンドウにリストされている ID とパスワードを IPMI IP アドレスと共に使用して、IPMI Web インターフェースにログインします。 VPN を介してホストが配置されているデータ・センターに接続する必要があります。 詳しくは、[VPN の概要](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started-with-virtual-private-networking-vpn-)を参照してください。
 
 1. vSphere ESXi ホストの「デバイスの詳細、リモート管理 (Device Details, Remote Mgmt)」ページに移動し、**「Actions」**>**「KVM Console」**を選択します。 IPMI ユーザーとパスワードを入力するための別のウィンドウが開きます。
 2. **「Remote Control」** > **「iKVM/HTML5」**を選択し、**「iKVM/HTML5」**をクリックして再起動します。 これで、vSphere ESXi ホストのコンソールにアクセスできるようになります。
@@ -46,7 +47,8 @@ ixgben ドライバーが「loaded」(最初の列) および「enabled」(2 番
 7. **"Y"** と入力してリカバリー・モードにし、前のバージョンで ESXi サーバーをブートします。
 8. コンソールを使用して進行状況をモニターします。 ブートには、10 分から 20 分かかることがあります。
 
-### 関連リンク
+## 関連リンク
+{: #vum-applying-nic-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)

@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
 # クラスター設定
+{: #cluster-settings}
 
 接続ストレージが追加されるまで、vCenter Server ソリューションでは、vSphere Distributed Resource Scheduler (DRS) や vSphere High Availability (HA) などの拡張機能は有効ではありません。 NFS 接続ストレージ・デバイスを追加することで、これらの機能はクラスターで有効になります。各機能の設定値を以下のセクションにリストしています。
 
 ## vSphere Distributed Resource Scheduler
+{: #cluster-settings-vsphere-drs}
 
 クラスターで vSphere DRS をオンにすると、「ロード・バランシング」と「パワー・マネジメント」という 2 つの主要な機能が有効になります。
 
 ### ロード・バランシング
+{: #cluster-settings-load-balance}
 
 ロード・バランシングを使用すると、クラスター内のすべてのホストと仮想マシン (VM) の CPU およびメモリー・リソースの分配と使用の状況が、絶えずモニターされます。 DRS は、クラスターのリソース・プールと VM の属性および現在の需要を考慮し、理想的なリソース使用量とこれらのメトリックを比較します。 その後、必要に応じて VM の移行を実行または推奨します。
 
@@ -40,24 +43,29 @@ vSphere Web Client のこれらの設定に関して詳しくは、[vSphere Web 
 クラスターの自動化レベルや移行しきい値に加えて、この設計では、個々の VM の値をオーバーライドできる VM 自動化も可能です。 VM を細かく制御することで、VM のロード・バランシングの優先順位を細かく設定できます。
 
 ### 電源管理
+{: #cluster-settings-power-mgmt}
 
 VMware Distributed Power Management 機能が有効な場合、DRS は、クラスターの VM の需要 (最近の需要履歴を含む) と、クラスター・レベルおよびホスト・レベルの容量を比較します。 電源管理機能は、容量が十分余っている場合はホストをスタンバイ・パワー・モードに移すかそうすることを推奨し、容量が必要な場合は、ホストを起動します。 ホストの電源状態について生成された推奨情報に基づいて、VM をホスト間で移動しなければならない場合もあります。
 この設計では、クラスター内でホストの電源をオン/オフする運用上、財政上のメリットがないため、電源管理は無効になっています。
 
 ## vSphere High Availability
+{: #cluster-settings-vsphere-ha}
 
 vSphere は、VM および VM が配置されるホストをクラスターとしてプールすることで、VM の高可用性を実現します。 クラスター内のホストはモニターされ、障害が発生すると、障害が発生したホストの VM が別のホストで再起動されます。
 この設計では、クラスター上のホスト・モニタリングおよび VM モニタリングとともに、vSphere High Availability が有効になっています。
 
 ### ホスト・モニタリング
+{: #cluster-settings-host-monitor}
 
 ホスト・モニタリングによって、クラスター内のホストはネットワーク・ハートビートを交換できるので、障害検出時に vSphere HA を実行できます。 この設計では、この機能が有効になっています。
 
 ### 仮想マシンのモニタリング
+{: #cluster-settings-machine-monitor}
 
 VM のモニタリング機能では、ゲストのオペレーティング・システムの可用性を実現するためのプロキシーとして、VMware Tools がキャプチャーするハートビート情報が使用されます。 VM モニタリングによって、vSphere HA は、ハートビートを出せなくなった個々の VM を自動的にリセットまたは再起動できます。 この設計では VM とアプリケーションの両方のモニタリングが有効になっています。
 
 #### 障害状況および VM 対応
+{: #cluster-settings-failure-conditions}
 
 障害状況では、VM の障害状況と、各障害に対する対応を定義します。 この設計では、VM 再始動優先順位は「中」に設定されます。 この値を見直し、再起動の優先順位がワークロードの重要性に一致するように設定を調整してください。 さらに、ホスト隔離時の対応は、「仮想マシンをパワーオフして再起動する」に設定されるので、クラスター内の隔離されたホストの影響を VM が受けることはありません。 この設定の残りの値はデフォルトに設定されます。
 
@@ -81,13 +89,16 @@ VM のモニタリング機能では、ゲストのオペレーティング・�
 vSphere Web Client のこれらの設定に関して詳しくは、[仮想マシンの対応の構成](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html)を参照してください。
 
 #### アドミッション制御
+{: #cluster-settings-admission-control}
 
 vCenter Server では、クラスターに十分なリソースを確保してフェイルオーバー保護を実現するため、また、VM リソース予約が尊重されるようにするために、アドミッション制御を使用します。 この設計では、クラスター・リソースのパーセントを指定してフェイルオーバー容量を予約しています。 定義されるフェイルオーバー容量は、25% の CPU および 25% のメモリーです。
 
 #### データ・ストア・ハートビート
+{: #cluster-settings-datastore}
 
 vSphere HA は、データ・ストア・ハートビートを使用して、障害が発生したホストやネットワーク・パーティション状態のホストを検出します。 データ・ストア・ハートビートによって、vSphere HA は、管理ネットワーク・パーティション障害の発生時にホストをモニターし、発生した障害に対する対応を継続できます。 この設計では、ハートビート・データ・ストア選択ポリシーが、「ホストからアクセス可能なデータ・ストアを自動的に選択する」に設定されます。
 
-### 関連リンク
+## 関連リンク
+{: #cluster-settings-related}
 
-* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

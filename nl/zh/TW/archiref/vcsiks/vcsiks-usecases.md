@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # 使用案例
+{: #vcsiks-usecases}
 
 ## 工作負載移轉至 IBM Cloud
+{: #vcsiks-usecases-workload-mig}
 
 Acme Skateboards 想要將其內部部署 VMware SDDC 無縫延伸到 VMware vCenter Server on {{site.data.keyword.cloud}} 實例。他們需要讓業務持續運作，並使關閉時間降到最低。重新配置其應用程式以便在雲端執行並不是最佳解決方案。
 
@@ -35,6 +37,7 @@ vCenter Server with Hybridity Bundle 會在內部部署與 {{site.data.keyword.c
 使用這個解決方案，Acme Skateboards 已順利將其內部部署 VMware 工作負載移轉至 {{site.data.keyword.cloud_notm}}，以滿足極短或沒有任何關閉時間且不需重新配置應用程式的需求。
 
 ## 混合式架構部署
+{: #vcsiks-usecases-hybrid-archi-deployment}
 
 Acme Skateboards 想要在由 vCenter Server 和 {{site.data.keyword.icpfull_notm}} 組成的 {{site.data.keyword.cloud_notm}} 上部署混合式架構，以進行應用程式現代化。他們的需求是在虛擬機器上執行其資料庫、在容器中執行應用程式和 Web 服務，並使用一組共用的工具來進行網路和安全管理。
 
@@ -49,6 +52,7 @@ Acme Skateboards 想要在由 vCenter Server 和 {{site.data.keyword.icpfull_not
 
 使用 {{site.data.keyword.cloud_notm}} 自動化，Acme Skateboards 可以佈建封裝 VMware on {{site.data.keyword.cloud_notm}} 的混合式解決方案，以在 VMware on {{site.data.keyword.cloud_notm}} 上執行其資料庫 VM 和 {{site.data.keyword.icpfull_notm}}，並在容器中執行其應用程式和前端系統 Web 服務。NSX 為其提供一組共用的管理工具，用來管理層疊網路中的網路和安全。
 
-### 相關鏈結
+## 相關鏈結
+{: #vcsiks-usecases-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

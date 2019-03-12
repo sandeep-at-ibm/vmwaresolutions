@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server on IBM Cloud 인스턴스에 대한 단일 노드 평가판 주문 및 삭제
+{: #vc_trial_hybrid_orderinginstance}
 
 VMware vCenter Server on {{site.data.keyword.cloud}}에 대한 단일 노드 평가판은 서비스로 VMware vSphere 스택을 제공하는 싱글 테넌트 호스팅 프라이빗 클라우드입니다. 일반적으로 클라이언트 관리 환경은 최소 3개의 노드로 배치되지만, 이 단일 노드 평가판은 하이브리드 클라우드 구현의 이점을 경험할 수 있는 저비용 경로를 제공합니다.
 
@@ -26,6 +27,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}}에 대한 단일 노드 평
 아키텍처 디자인에 대한 자세한 정보는 [vCenter Server on IBM Cloud에 대한 단일 노드 평가판의 HCX on IBM Cloud 아키텍처 디자인](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)을 참조하십시오.
 
 ## vCenter Server 인스턴스에 대한 단일 노드 평가판의 기술 스펙
+{: #vc_trial_hybrid_orderinginstance-tech-specs}
 
 다음 컴포넌트가 vCenter Server 인스턴스에 대한 단일 노드 평가판에 포함됩니다.
 
@@ -33,10 +35,12 @@ VMware vCenter Server on {{site.data.keyword.cloud}}에 대한 단일 노드 평
 {:note}
 
 ### Bare Metal Server
+{: #vc_trial_hybrid_orderinginstance-bare-metal}
 
 듀얼 Intel Xeon Gold 5120 (28개 코어, 2.20GHz) 프로세서, 384GB RAM 포함.
 
 ### vCenter Server에 대한 단일 노드 평가판 인스턴스의 네트워킹 스펙
+{: #vc_trial_hybrid_orderinginstance-networking-specs}
 
 다음 네트워킹 컴포넌트가 주문됩니다.
 *  10Gbps 듀얼 공용 및 사설 네트워크 업링크
@@ -50,16 +54,16 @@ VMware vCenter Server on {{site.data.keyword.cloud}}에 대한 단일 노드 평
   * VPN 액세스 또는 공용 액세스를 제공하도록 사용자가 수정할 수 있는 템플리트로 IBM에서 배치되는 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽을 위한 보안 고객 관리 VMware NSX Edge Services Gateway.
 
 ### Virtual Server 인스턴스
+{: #vc_trial_hybrid_orderinginstance-vsi}
 
 다음 VSI(Virtual Server Instance)가 주문됩니다.
-
 * IBM CloudBuilder용 VSI는 인스턴스 배치가 완료된 후 취소됩니다.
 * Microsoft Active Directory(AD)용 Microsoft Windows Server VSI가 배치되어 있으며 검색할 수 있습니다. VSI는 호스트와 VM이 등록되는 인스턴스에 대한 DNS의 역할을 합니다.
 
 ### IBM 제공 라이센스 및 요금
+{: #vc_trial_hybrid_orderinginstance-license-and-fee}
 
 다음 라이센스가 vCenter Server 인스턴스 주문에 대한 단일 노드 평가판에 포함됩니다.
-
 * VMware vSphere Enterprise Plus 6.5
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
@@ -68,6 +72,7 @@ vCenter Server 인스턴스에 대한 단일 노드 평가판은 BYOL(Bring Your
 {:note}
 
 ## VMware HCX on IBM Cloud의 기술 스펙
+{: #vc_trial_hybrid_orderinginstance-hcx-tech-specs}
 
 vCenter Server에 대한 단일 노드 평가판에는 HCX on {{site.data.keyword.cloud_notm}}가 포함됩니다. 다음 컴포넌트가 주문되고 HCX on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
@@ -75,12 +80,14 @@ vCenter Server에 대한 단일 노드 평가판에는 HCX on {{site.data.keywor
 {:note}
 
 ### HCX 관리를 위한 VMware NSX Edge Services Gateway의 활성/수동 쌍
+{: #vc_trial_hybrid_orderinginstance-esg}
 
 * CPU: 6개의 vCPU
 * RAM: 8GB
 * 디스크: 3GB VMDK
 
 ### HCX 관리 어플라이언스 - 가상 머신
+{: #vc_trial_hybrid_orderinginstance-hcs-mgmt-appliance}
 
 * CPU: 4개의 vCPU
 * RAM: 12GB
@@ -89,12 +96,14 @@ vCenter Server에 대한 단일 노드 평가판에는 HCX on {{site.data.keywor
 L2 연결, WAN 최적화 및 게이트웨이 연결을 위해 필요에 따라 구성 중에 추가로 HCX 어플라이언스가 배치됩니다.
 
 ### HCX on IBM Cloud 서비스에 대한 네트워킹 스펙
+{: #vc_trial_hybrid_orderinginstance-hcx-networking-specs}
 
 * 16개 IP 주소가 포함된 한 개의 공인 포터블 서브넷
 * 64개 IP 주소가 포함된 두 개의 사설 포터블 서브넷
 * 사설 포터블 vMotion 서브넷의 8개 IP 주소
 
 ## vCenter Server 인스턴스에 대한 단일 노드 평가판 주문의 요구사항 및 계획
+{: #vc_trial_hybrid_orderinginstance-req}
 
 다음 요구사항을 확인하고 다음 태스크를 완료해야 합니다.
 * 온프레미스 HCX 인스턴스에 대한 전제조건:
@@ -110,6 +119,7 @@ L2 연결, WAN 최적화 및 게이트웨이 연결을 위해 필요에 따라 �
     * 인스턴스 이름은 계정 내에서 고유해야 합니다.
 
 ## vCenter Server 인스턴스에 대한 단일 노드 평가판의 주문 프로시저
+{: #vc_trial_hybrid_orderinginstance-procedure}
 
 1. **VMware vCenter Server on {{site.data.keyword.cloud_notm}}에 대한 단일 노드 평가판** 페이지에서 **계속**을 클릭하십시오.
 2. **VMware vCenter Server에 대한 단일 노드 평가판** 페이지에서 {{site.data.keyword.cloud_notm}} 인프라 계정을 요청하는 단계를 완료하거나 기존의 **사용자 이름** 및 **API 키**를 제공하고 **검색**을 클릭하십시오.
@@ -128,10 +138,12 @@ L2 연결, WAN 최적화 및 게이트웨이 연결을 위해 필요에 따라 �
    4. **프로비저닝**을 클릭하십시오.
 
 ### 결과
+{: #vc_trial_hybrid_orderinginstance-results}
 
 인스턴스의 배치가 자동으로 시작되고 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 서비스 활성 키가 주문됩니다.
 
 #### HCX on IBM Cloud에 대한 배치 프로세스
+{: #vc_trial_hybrid_orderinginstance-hcs-deploy-process}
 
 HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 단계는 {{site.data.keyword.vmwaresolutions_short}} 자동화 프로세스에 의해 완료됩니다.
 1. {{site.data.keyword.cloud_notm}} 인프라에서 HCX에 대해 3개의 서브넷이 주문됩니다.
@@ -159,6 +171,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 6. HCX Manager의 호스트 이름 및 IP 주소가 VMware vCenter Server on {{site.data.keyword.cloud_notm}}의 DNS 서버에 등록됩니다.
 
 #### 인스턴스 세부사항 보기
+{: #vc_trial_hybrid_orderinginstance-view-inst-details}
 
 인스턴스 세부사항을 보고 배치 상태를 확인할 수 있습니다. 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하고 **vCenter Server 인스턴스** 또는 **온프레미스 HCX 인스턴스** 테이블을 찾아 주문한 인스턴스에 대한 정보를 보십시오.
 
@@ -167,6 +180,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
 ### 수행할 작업
+{: #vc_trial_hybrid_orderinginstance-next}
 
 온프레미스 HCX Enterprise Manager를 설치하고 HCX on {{site.data.keyword.cloud_notm}} 인스턴스에 대한 연결을 구성하십시오.
 
@@ -212,6 +226,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 {:important}
 
 ## vCenter Server 인스턴스에 대한 단일 노드 평가판 삭제 프로시저
+{: #vc_trial_hybrid_orderinginstance-deleting-procedure}
 
 vCenter Server 인스턴스에 대한 단일 노드 평가판을 삭제하는 경우 다음 컴포넌트가 순차적으로 릴리스됩니다.
 
@@ -236,7 +251,8 @@ vCenter Server 인스턴스에 대한 단일 노드 평가판을 삭제하려면
    1. **조치** 열에서 삭제 아이콘을 다시 클릭하십시오.
    2. **인스턴스 삭제** 창에서 **확인**을 클릭하십시오.
 
-### 관련 링크
+## 관련 링크
+{: #vc_trial_hybrid_orderinginstance-related}
 
 * [vCenter Server on IBM Cloud에 대한 단일 노드 평가판의 HCX on IBM Cloud 아키텍처 디자인](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [VMware Hybrid Cloud Extension 문서](https://hcx.vmware.com/#/vm-documentation)

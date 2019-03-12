@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Zerto on IBM Cloud の概要
+{: #addingzertodr}
 
 Zerto on {{site.data.keyword.cloud}} サービスは、レプリケーション機能と災害復旧機能をデプロイメント・オファリングに統合して、{{site.data.keyword.cloud_notm}} 上の VMware 仮想環境内のデータを保護および復旧します。
 
@@ -20,6 +21,7 @@ Zerto on {{site.data.keyword.cloud}} サービスは、レプリケーション�
 {:note}
 
 ## Zerto on IBM Cloud の技術仕様
+{: #technical-considerations-for-zerto-on-ibm-cloud}
 
 以下のコンポーネントが注文されて Zerto on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
@@ -27,6 +29,7 @@ Zerto Virtual Replication Appliance (VRA) のコンポーネントは、デフ�
 {:note}
 
 ### VSI
+{: #addingzertodr-specs-vsi}
 
 * 1 つの仮想サービス・インスタンス (VSI) - Zerto Virtual Manager
 * 2 x 2.0 GHz コア
@@ -34,23 +37,27 @@ Zerto Virtual Replication Appliance (VRA) のコンポーネントは、デフ�
 * Windows Server 2016 Standard Edition (64 ビット)
 
 ### ストレージ
+{: #addingzertodr-specs-storage}
 
 100 GB (SAN) ディスク
 
 ### ネットワーキング
+{: #addingzertodr-specs-network}
 
 * 1 つのプライマリー・プライベート IP アドレス
 * 1 Gbps のプライベート・ネットワーク・アップリンク
 
 ### ライセンスと料金
+{: #addingzertodr-specs-licenses}
 
 Zerto Replication V6.0 更新 3 ライセンス
 
-### 関連リンク
+## 関連リンク
+{: #addingzertodr-related}
 
-* [{{site.data.keyword.vmwaresolutions_short}} について](/docs/services/vmwaresolutions/vmonic/prod_overview.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/zerto_ordering.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managingzertodr.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
+* [{{site.data.keyword.vmwaresolutions_short}} について](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-prod_overview)
+* [Zerto on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering)
+* [Zerto on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
+* [Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [zerto.com Web サイト](https://www.zerto.com){:new_window}
 * [Zerto 技術資料](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

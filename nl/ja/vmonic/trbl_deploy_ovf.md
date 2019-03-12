@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # VMware vSphere Web Client を使用した OVF ファイルのデプロイ
+{: #trbl_deploy_ovf}
 
 ## 解決方法
+{: #trbl_deploy_ovf-resolution}
 
 vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイするには、次の手順を使用します。
 1. OVF ファイルをデプロイする前に、`/etc/hosts` ファイルに以下のホスト情報を追加します。

@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # 用例
+{: #vcsicp-usecases}
 
 ## 工作负载迁移到 IBM Cloud
+{: #vcsicp-usecases-wkld-mig}
 
 Acme Skateboards 希望将其内部部署 VMware SDDC 无缝扩展到 VMware vCenter Server on {{site.data.keyword.cloud}} 实例。他们需要业务保持正常运行，并尽可能减少停机时间。但将其应用程序重新配置为在云中运行并不是最佳解决方案。
 
@@ -36,6 +38,7 @@ VMware Hybrid Cloud Extension 服务将在内部部署和 {{site.data.keyword.cl
 通过使用此解决方案，Acme Skateboards 成功地将其内部部署 VMware 工作负载迁移到 {{site.data.keyword.cloud_notm}}，满足了几乎或完全不发生停机时间，也无需重新配置应用程序的要求。
 
 ## 混合体系结构部署
+{: #vcsicp-usecases-hybrid-archi-deployment}
 
 Acme Skateboards 希望在其应用程序现代化之旅中，在 {{site.data.keyword.cloud_notm}} 上部署由 vCenter Server 和 {{site.data.keyword.icpfull_notm}} 组成的混合体系结构。其需求是在虚拟机上运行其数据库，在容器中运行应用程序和 Web Service，并使用一组通用工具进行网络和安全管理。
 
@@ -55,6 +58,7 @@ Acme Skateboards 希望在其应用程序现代化之旅中，在 {{site.data.ke
 
 ![使用 {{site.data.keyword.icpfull_notm}} 的 vCenter Server](vcsicp-virtual-icp-deployment-vcs.svg)
 
-### 相关链接
+## 相关链接
+{: #vcsicp-usecases-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

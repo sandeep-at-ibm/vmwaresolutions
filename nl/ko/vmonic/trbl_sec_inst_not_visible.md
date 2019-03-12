@@ -4,17 +4,20 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # vSphere Web Client 자원 명세에 보조 vCenter Server 시스템이 표시되지 않음
+{: #trbl_sec_inst_not_visible}
 
 ## 문제점
+{: #trbl_sec_inst_not_visible-problem}
 
 다중 사이트 구성에서 새 보조 인스턴스를 추가한 후 이전에 주문된 인스턴스의 VMware vSphere Web Client에 로그인할 때 vCenter Server 시스템이 표시되지 않습니다.
 
 ## 해결
+{: #trbl_sec_inst_not_visible-resolution}
 
 이는 VMware 6.5의 알려진 문제입니다.
 

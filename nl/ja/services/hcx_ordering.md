@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,19 +13,23 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # VMware HCX on IBM Cloud の注文
+{: #hcx_ordering}
 
 VMware HCX on {{site.data.keyword.cloud}} サービスを注文するには、そのサービスを組み込む形で新しい VMware vCenter Server with Hybridity Bundle インスタンスを注文するか、そのサービスを既存のインスタンスに追加します。
 
 ## 新しいインスタンスでの VMware HCX on IBM Cloud の注文
+{: #hcx_ordering-new}
 
 VMware HCX on {{site.data.keyword.cloud_notm}} を組み込む形で新しい VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスを注文する場合は、{{site.data.keyword.vmwaresolutions_short}} コンソールからインスタンスを注文する時に、**「サービス」**セクションで**「VMware HCX on IBM Cloud」**を選択します。
 
 
 ## 既存のインスタンスでの VMware HCX on IBM Cloud の注文
+{: #hcx_ordering-existing}
 
 既存の VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスに VMware HCX on {{site.data.keyword.cloud_notm}} サービスを追加する場合は、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
 
 ## VMware HCX on IBM Cloud の構成
+{: #hcx_ordering-config}
 
 HCX on {{site.data.keyword.cloud_notm}} をインストールするには、以下の設定を行います。
 1. **「HCX interconnect type」**を指定します。以下のいずれかのオプションを選択します。
@@ -47,6 +51,7 @@ HCX on {{site.data.keyword.cloud_notm}} をインストールするには、以�
   <!--Need enhancement, it is still not clear what the key pair is used for, is it for connecting to NSX? This is not in architecture doc either. -->
 
 ## HCX on IBM Cloud のデプロイメント・プロセス
+{: #hcx_ordering-deploy}
 
 HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に行われます。 このサービスを組み込む形で vCenter Server with Hybridity Bundle インスタンスを注文する場合でも、このサービスを後でインスタンスにデプロイする場合でも、{{site.data.keyword.vmwaresolutions_short}} の自動化プロセスによって以下の手順が実行されます。
 1. {{site.data.keyword.cloud_notm}} インフラストラクチャー上の HCX 用に、次の 3 つのサブネットが注文されます。
@@ -76,12 +81,13 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
    * ローカルとリモートの HCX デプロイメント・コンテナーが構成されます。
 7. HCX Manager のホスト名と IP アドレスが VMware vCenter Server on {{site.data.keyword.cloud_notm}} の DNS サーバーに登録されます。
 
-### 関連リンク
+## 関連リンク
+{: #hcx_ordering-related}
 
-* [HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services/hcx_considerations.html)
-* [HCX on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managinghcx.html)
-* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
-* [HCX の用語集](/docs/services/vmwaresolutions/services/hcx_glossary.html)
-* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
+* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [HCX の用語集](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [VMware Hybrid Cloud Extension の概要](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)

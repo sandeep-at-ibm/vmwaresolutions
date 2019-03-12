@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-08-30"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-08-30"
 {:important: .important}
 
 # V2.5의 릴리스 정보
+{: #relnotes_v25}
 
 이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
@@ -24,11 +25,11 @@ lastupdated: "2018-08-30"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-자세한 정보는 [스펙터(Spectre) 및 멜트다운(Meltdown) 취약점 해결](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html)을 참조하십시오.
+자세한 정보는 [스펙터(Spectre) 및 멜트다운(Meltdown) 취약점 해결](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)을 참조하십시오.
 
 ## NSX 컴포넌트 업데이트
 
-이 릴리스에서는 VMware vCenter Server on {{site.data.keyword.cloud_notm}}, VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle, NetApp ONTAP Select 및 VMware Federal on {{site.data.keyword.cloud_notm}}의 새 배치를 위한 VMware NSX for vSphere 6.4.1을 설치합니다.
+이 릴리스에서는 VMware vCenter Server on {{site.data.keyword.cloud_notm}}, VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 및 NetApp ONTAP Select의 새 배치를 위한 VMware NSX for vSphere 6.4.1을 설치합니다.
 
 ## 기본 백업 구성의 제거
 
@@ -36,7 +37,7 @@ lastupdated: "2018-08-30"
 
 V2.5 릴리스 이상에서 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 및 Veeam on {{site.data.keyword.cloud_notm}} 서비스는 배치 시에 더 이상 VM의 백업을 사전 구성하지 않습니다. 이러한 변경에 따라 스케줄, 보존 기간, 중복 제거 사용, 모니터링 및 경보, 그리고 암호화 키 관리를 포함하여 백업 작업의 모든 측면에 대해 일맞은 구성을 보장할 수 있습니다. 또한 IBM CloudDriver VM은 더 이상 NSX 백업을 위한 지속적 파일 서버로서 구성되지 않습니다.
 
-사용자는 관리 인프라 및 워크로드의 백업과 가용성을 포함하여 모든 소프트웨어 컴포넌트의 구성, 관리 및 모니터링에 책임이 있습니다. 자세한 정보는 [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#backing-up-components)을 참조하십시오.
+사용자는 관리 인프라 및 워크로드의 백업과 가용성을 포함하여 모든 소프트웨어 컴포넌트의 구성, 관리 및 모니터링에 책임이 있습니다. 자세한 정보는 [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#backing-up-components)을 참조하십시오.
 
 이 변경사항은 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 또는 Veeam on {{site.data.keyword.cloud_notm}} 서비스가 설치된 V2.5 전에 배치된 인스턴스에는 적용되지 않습니다.
 {:note}
@@ -55,8 +56,8 @@ V2.5 릴리스 이상에서 {{site.data.keyword.vmwaresolutions_short}}는 {{sit
 * V2.4 이하 릴리스에 배치된 인스턴스의 경우, 이를 지정된 {{site.data.keyword.cloud_notm}} 계정으로 마이그레이션한 후에 역시 IAM을 사용하여 이를 관리할 수 있습니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [서비스 및 리소스에 액세스하기 위한 사용자 초대](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
-* [IAM에서 사용자 액세스 관리](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [서비스 및 리소스에 액세스하기 위한 사용자 초대](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
+* [IAM에서 사용자 액세스 관리](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
 
 ## VMware vCenter Server 및 VMware Cloud Foundation 인스턴스의 사용자 계정 및 그룹에 대한 변경사항
 
@@ -66,12 +67,12 @@ VMware vSphere Web Client의 **사용자 및 그룹** 페이지에서 **ic4v-vCe
 
 Cloud Foundation 인스턴스의 경우에는 **root** 호스트 사용자 ID 대신에 **customerroot** 호스트 사용자 ID를 사용하십시오.
 
-vCenter Server 인스턴스에 대해서는 계속해서 **root** 호스트 사용자 ID를 사용하십시오. **ic4vroot** 호스트 사용자 ID는 IBM 전용으로 작성되었습니다. 
+vCenter Server 인스턴스에 대해서는 계속해서 **root** 호스트 사용자 ID를 사용하십시오. **ic4vroot** 호스트 사용자 ID는 IBM 전용으로 작성되었습니다.
 
 사용자 계정에 대한 자세한 정보는 다음 주제를 참조하십시오.
 
-* [vCenter Server 아티팩트 변경에 대한 고려사항](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
-* [Cloud Foundation 아티팩트 변경에 대한 고려사항](/docs/services/vmwaresolutions/sddc/cf_chg_impact.html)
+* [vCenter Server 아티팩트 변경에 대한 고려사항](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)
+* [Cloud Foundation 아티팩트 변경에 대한 고려사항](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cf_chg_impact)
 
 ## 추가 서비스에 대한 업데이트
 
@@ -99,7 +100,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스에 대해 이제 �
 
 ### 연결된 스토리지 문서
 
-vCenter Server on IBM Cloud의 연결 스토리지 기술 문서를 이제 사용자 문서의 *참조* 섹션에서 사용할 수 있습니다. 자세한 정보는 [vCenter Server on IBM Cloud의 연결 스토리지](/docs/services/vmwaresolutions/archiref/attached-storage/storage-benefits.html)를 참조하십시오.
+vCenter Server on IBM Cloud의 연결 스토리지 기술 문서를 이제 사용자 문서의 *참조* 섹션에서 사용할 수 있습니다. 자세한 정보는 [vCenter Server on IBM Cloud의 연결 스토리지](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits)를 참조하십시오.
 
 ### 기술 스펙
 
@@ -111,9 +112,9 @@ vCenter Server on IBM Cloud의 연결 스토리지 기술 문서를 이제 사�
 
 자세한 정보는 다음 주제를 참조하십시오.
 
-* [vCenter Server 인스턴스에 사용 가능한 서비스](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
-* [vCenter Server with Hybridity Bundle 인스턴스에 사용 가능한 서비스](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [Cloud Foundation 인스턴스에 사용 가능한 서비스](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
+* [vCenter Server 인스턴스에 사용 가능한 서비스](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)
+* [vCenter Server with Hybridity Bundle 인스턴스에 사용 가능한 서비스](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [Cloud Foundation 인스턴스에 사용 가능한 서비스](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices#available-services-for-cloud-foundation-instances)
 
 ## 사용자 인터페이스 업데이트 및 개선사항
 

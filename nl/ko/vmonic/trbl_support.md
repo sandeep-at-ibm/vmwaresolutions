@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2018-12-11"
 {:important: .important}
 
 # IBM 지원 센터에 문의
+{: #trbl_support}
 
 {{site.data.keyword.vmwaresolutions_full}}에 대한 지원이 필요한 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 {{site.data.keyword.cloud_notm}} 지원 티켓을 작성하여 도움을 받으십시오.
 
 ## IBM Cloud for VMware Solutions 콘솔에서 지원 티켓을 제출하는 프로시저
+{: #trbl_support-procedure}
 
 1. https://console.cloud.ibm.com/infrastructure/vmware-solutions/console로 이동하십시오.
 2. **IBM ID** 계정으로 콘솔에 로그인하십시오.

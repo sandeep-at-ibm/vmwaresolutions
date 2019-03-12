@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-11-20"
 
@@ -13,6 +13,7 @@ lastupdated: "2017-11-20"
 {:important: .important}
 
 # V2.0 릴리스 정보
+{: #relnotes_v20}
 
 이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
@@ -23,8 +24,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 인스턴스를 주문할 때 포함된 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스와 함께 인스턴스를 주문하거나 인스턴스 세부사항 페이지에 있는 **서비스** 탭에서 나중에 이 서비스를 기존 인스턴스에 추가하십시오. 사용자 요구사항에 따라 이 서비스에 대한 세 가지 배치 크기 및 라이센싱 옵션 중 하나를 선택하십시오. 서비스가 설치되고 나면 FortiGate 콘솔에서 FortiGate 가상 어플라이언스의 방화벽 규칙을 관리하고 구성하십시오.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}에 대한 컴포넌트 및 고려사항](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}에 대한 컴포넌트 및 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
 
 ## F5 on IBM Cloud and FortiGate Virtual Appliance on IBM Cloud에 대한 다중 서비스 설치
 
@@ -33,8 +34,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 인스턴스 배치가 완료된 후 인스턴스 세부사항 페이지의 **서비스 추가** 탭에 서비스를 설치하여 F5 또는 FortiGate 서비스의 더 많은 인스턴스를 추가할 수 있습니다. 동시에 하나의 서비스만 추가할 수 있고, 서비스에 대해 추가할 모든 인스턴스에 대한 프로세스를 반복해야 합니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 
 ## FortiGate Security Appliance on IBM Cloud에 대한 업데이트
 
@@ -49,9 +50,9 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 이제 FQDN(Fully Qualified Domain Name)은 모든 인스턴스에 대해 일관성 있는 방식으로 표시됩니다. 주문할 때 FQDN 형식에 대한 업계 규칙을 따르도록 고유한 하위 도메인 접두부 및 호스트 이름 접두부를 입력할 수 있습니다. (예: `host-name-prefix<n>.subdomain-prefix.domain-name`).
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
 ## 인스턴스를 주문하는 동안 워크로드 및 스토리지 예상
 
@@ -59,9 +60,9 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 * Cloud Foundation 및 vCenter Server 주문 중에 주문된 인스턴스에 사용 가능한 스토리지 용량의 예상 값이 제공됩니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
 ## VMware Cloud Foundation 인스턴스에 대한 업데이트
 
@@ -77,13 +78,13 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 기존 인스턴스(V1.9 이전 릴리스에서)를 이 목록의 컴포넌트 버전으로 업그레이드할 수 없습니다.
 {:note}
 
-컴포넌트에 대한 자세한 정보는 [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)를 참조하십시오.
+컴포넌트에 대한 자세한 정보는 [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)를 참조하십시오.
 
 ### Cloud Foundation 인스턴스에 대한 클러스터 지원
 
 이제 더 나은 리소스 관리 및 고가용성을 위해 클러스터를 사용하여 V2.0 이상 릴리스에 배치되는 Cloud Foundation 인스턴스의 ESXi 서버를 관리할 수 있습니다. 인스턴스를 주문할 때 구성한 ESXi 서버는 기본적으로 **SDDC-Cluster**로 그룹화됩니다.
 
-클러스터 새부사항을 보거나 인스턴스 세부사항 페이지에 있는 **인프라** 탭의 인스턴스에 총 다섯 개의 클러스터를 추가할 수 있습니다. 인스턴스의 용량을 확장하거나 축소하는 경우 ESXi 서버를 추가할 클러스터 또는 ESXi 서버를 제거할 클러스터를 선택할 수 있습니다. 자세한 정보는 [Cloud Foundation 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)를 참조하십시오.
+클러스터 새부사항을 보거나 인스턴스 세부사항 페이지에 있는 **인프라** 탭의 인스턴스에 총 다섯 개의 클러스터를 추가할 수 있습니다. 인스턴스의 용량을 확장하거나 축소하는 경우 ESXi 서버를 추가할 클러스터 또는 ESXi 서버를 제거할 클러스터를 선택할 수 있습니다. 자세한 정보는 [Cloud Foundation 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)를 참조하십시오.
 
 ### Cloud Foundation 인스턴스에 대한 사용자 정의 vSAN 스토리지 지원
 
@@ -91,12 +92,12 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 
 자세한 정보는 다음 주제를 참조하십시오.
 
-* [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 
 ### Cloud Foundation 인스턴스에 대한 VMware vSAN 라이센스 에디션의 선택사항: Advanced 또는 Enterprise
 
-이제 Cloud Foundation 인스턴스 주문 중에 원하는 vSAN 라이센스 에디션을 선택할 수 있습니다. 주문의 일부로 라이센스를 구매하거나 고유한 라이센스를 가져올(BYOL) 수 있습니다. 자세한 정보는 [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)을 참조하십시오.
+이제 Cloud Foundation 인스턴스 주문 중에 원하는 vSAN 라이센스 에디션을 선택할 수 있습니다. 주문의 일부로 라이센스를 구매하거나 고유한 라이센스를 가져올(BYOL) 수 있습니다. 자세한 정보는 [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)을 참조하십시오.
 
 ### Cloud Foundation 인스턴스에 대해 새로 표준화된 IBM Bare Metal Server 구성
 
@@ -108,8 +109,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 {:note}
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 
 ## VMware vCenter Server 인스턴스에 대한 업데이트
 
@@ -123,28 +124,28 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 vSAN 컴포넌트가 포함되거나 포함되지 않은 vCenter Server 사용자 정의된 주문은 항상 12개의 디스크 섀시 서버를 포함합니다. 이 서버는 가격 예상 PDF에서 비vSAN 주문 케이스에 대한 {{site.data.keyword.baremetal_short}}의 비용이 약간 높아질 수 있습니다.
 {:note}
 
-컴포넌트에 대한 자세한 정보는 [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)를 참조하십시오.
+컴포넌트에 대한 자세한 정보는 [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)를 참조하십시오.
 
 ### vCenter Server 인스턴스에 대한 다중 사이트 구성 지원
 
 이제 단일 vCenter Server 인스턴스와 기본 인스턴스에 연결되는 보조 인스턴스를 배치할 수 있습니다. 다중 사이트 구성 모델은 기본 사이트와 최대 일곱 개의 보조 사이트로 허브 및 스포크 토폴로지를 사용합니다.
 
-자세한 정보는 [vCenter Server 인스턴스에 대한 다중 사이트 구성](/docs/services/vmwaresolutions/vcenter/vc_multisite.html)을 참조하십시오.
+자세한 정보는 [vCenter Server 인스턴스에 대한 다중 사이트 구성](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)을 참조하십시오.
 
 ### vCenter Server 인스턴스에 대한 사용자 정의 vSAN 스토리지 지원
 
 vSAN 스토리지는 이제 기본 및 보조 인스턴스 모두에 대한 vCenter Server 인스턴스에 사용할 수 있습니다. 사용자 정의 구성을 선택하는 경우에만 사용할 수 있습니다. 이제 vCenter Server 인스턴스 주문 중에 원하는 vSAN 라이센스 에디션(Advanced 또는 Enterprise)을 선택할 수 있습니다. 주문의 일부로 라이센스를 구매하거나 고유한 라이센스를 가져올(BYOL) 수 있습니다.
 
-자세한 정보는 [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)을 참조하십시오.
+자세한 정보는 [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)을 참조하십시오.
 
 ### VMware vCenter Server 인스턴스에 고유한 라이센스 가져오기(BYOL)
 
 BYOL은 이제 vCenter Server 인스턴스에 사용할 수 있습니다. vCenter Server 라이센스를 주문할 떄 하나 이상의 고유 vCenter Server, vSphere, vSAN 및 NSX VMware 라이센스를 사용하십시오.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
 ## VMware vSphere on IBM Cloud에 대한 업데이트
 
@@ -159,7 +160,7 @@ VMware vSAN 컴포넌트의 경우 이제 {{site.data.keyword.baremetal_short}}�
 * 3.8TB SSD SED 드라이브는 {{site.data.keyword.CloudDataCent_notm}}에서 일반적으로 사용 가능하게 되면 지원됩니다.
 * VMware vSAN 컴포넌트가 포함되거나 포함되지 않은 주문은 항상 12개 디스크 섀시 서버를 포함합니다. 이 서버는 가격 예상 PDF에서 비vSAN 주문 케이스에 대한 {{site.data.keyword.baremetal_short}}의 비용이 약간 높아질 수 있습니다.
 
-자세한 정보는 [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)을 참조하십시오.
+자세한 정보는 [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)을 참조하십시오.
 
 ## NetApp ONTAP Select on IBM Cloud에 대한 업데이트
 
@@ -174,8 +175,8 @@ VMware vSAN 컴포넌트의 경우 이제 {{site.data.keyword.baremetal_short}}�
 {:note}
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [NetApp ONTAP Select 개요](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
-* [NetApp ONTAP Select 인스턴스 주문](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [NetApp ONTAP Select 개요](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)
+* [NetApp ONTAP Select 인스턴스 주문](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
 
 ## 새로 작성되고 업데이트된 문서
 

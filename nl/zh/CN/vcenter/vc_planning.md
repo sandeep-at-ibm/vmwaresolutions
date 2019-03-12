@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # 针对 vCenter Server 实例的需求和规划
+{: #vc_planning}
 
 在订购 VMware vCenter Server 实例之前，请查看以下需求。根据 {{site.data.keyword.CloudDataCent}} 位置、工作负载容量需求和附加组件服务需求来规划实例。
 
 ## IBM Cloud 帐户需求
+{: #vc_planning-account-req}
 
-要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)。
+要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
 
 ## IBM Cloud Data Center 可用性
+{: #vc_planning-dc-availability}
 
 vCenter Server 部署对物理基础架构有严格要求。因此，只能将实例部署在满足这些需求的 {{site.data.keyword.CloudDataCents_notm}} 中。以下 {{site.data.keyword.CloudDataCents_notm}} 可用于 vCenter Server 部署：
 
@@ -66,20 +69,24 @@ vCenter Server 部署对物理基础架构有严格要求。因此，只能将�
 |有限库存|{{site.data.keyword.CloudDataCent_notm}} 具有有限可用性，并且订单可能未完成。|
 
 ## 备份管理组件
+{: #vc_planning-backup-mgmt-components}
 
-您负责维护和确保所有实例组件的可用性。强烈建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)。
+您负责维护和确保所有实例组件的可用性。强烈建议您计划所有管理组件的备份或高可用性。有关更多信息，请参阅[备份组件](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)。
 
 ## vCenter Server 实例的服务
+{: #vc_planning-addon-services}
 
-您可以根据需要订购适用于实例的附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)。
+您可以根据需要订购适用于实例的附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。
 
 ## 容量注意事项
+{: #vc_planning-capacity-considerations}
 
-有关容量注意事项的更多信息，请参阅[缩放容量](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)。
+有关容量注意事项的更多信息，请参阅[缩放容量](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)。
 
-### 相关链接
+## 相关链接
+{: #vc_planning-related}
 
-* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [扩展和收缩 vCenter Server 实例的容量](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [扩展和收缩 vCenter Server 实例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)

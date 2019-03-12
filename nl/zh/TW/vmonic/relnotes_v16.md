@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-05-22"
 
 ---
 
 # 1.6 版的版本注意事項
+{: #relnotes_v16}
 
 此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
@@ -21,7 +22,7 @@ lastupdated: "2017-05-22"
 *  視您的需求而定，新硬體規格為：**小型**或**標準**。
 *  可用於部署的新資料中心：**HKG02 - 香港**、**OSL01 - 奧斯陸**、**SEO01 - 首爾**、**SNG01 - 新加坡**及 **SYD04 - 雪梨**。
 
-如需完整的元件清單，請參閱 [VMware Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)。
+如需完整的元件清單，請參閱 [VMware Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)。
 
 ## VMware vCenter Server 實例的更新
 
@@ -61,7 +62,7 @@ lastupdated: "2017-05-22"
    * VMware HA（高可用性）已配置為使用在管理 ESG 與客戶管理的 ESG 之間共用的新埠群組。
 
    這個 ESG 是針對所有實例硬體類型而部署的，客戶可以修改配置。如需相關資訊，請參閱下列主題：
-   *  [配置網路以使用客戶管理的 NSX Edge Services Gateway 來搭配您的 VM](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html)
+   *  [配置網路以使用客戶管理的 NSX Edge Services Gateway 來搭配您的 VM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)
    *  [VMware NSX 文件](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## 可用性加強功能
@@ -71,4 +72,4 @@ lastupdated: "2017-05-22"
 *  透過建立左導覽窗格來存取使用者介面的所有區域，使主控台的主要導覽大幅改進。您可以快速訂購新實例、檢視已部署的實例、檢閱系統通知、變更設定，以及存取線上文件。
 *  可從左導覽窗格中存取的新**開始使用**頁面，在主控台上直接提供足夠的詳細資料，以協助您對所要訂購的實例的元件做出明智的決策。在**開始使用**頁面上，也會逐步引導您完成實例的訂購處理程序，從滿足訂購實例的所有必要條件（例如所需的使用者帳戶）開始，一直到下訂單為止。
 *  Cloud Foundation 實例及 vCenter Server 實例的摘要詳細資料已合併至單一頁面（可從左導覽窗格的**已部署的實例**功能表中進行存取）。您可以從該頁面選取適當的標籤，以過濾 Cloud Foundation 實例或 vCenter Server 實例。
-* 如果您的實例上已安裝 Zerto 災難回復，您只要按一下就可以直接從服務詳細資料頁面存取 Zerto 主控台。如需相關資訊，請參閱[訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)及[訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)。
+* 如果您的實例上已安裝 Zerto 災難回復，您只要按一下就可以直接從服務詳細資料頁面存取 Zerto 主控台。如需相關資訊，請參閱[訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)及[訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。

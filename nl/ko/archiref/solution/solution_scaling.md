@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 용량 스케일링
+{: #solution_scaling}
 
 초기 배치 이후에 사용자는 {{site.data.keyword.vmwaresolutions_full}} 콘솔에서 컴퓨팅 용량을 확장할 수 있습니다. 이 디자인에서는 다음의 용량 확장 경로를 지원합니다.
 * 개별 vCenter Server가 관리하는 새 사이트 추가
@@ -20,6 +21,7 @@ lastupdated: "2019-01-23"
 * 기존 클러스터에 새 호스트 추가
 
 ## 더 많은 사이트 추가
+{: #solution_scaling-sites}
 
 {{site.data.keyword.vmwaresolutions_short}}는 해당 인프라를 맨 처음부터 빌드하는 데 걸리는 시간보다 빠르게 다양한 지역 간 유스 케이스가 배치되고 작동되도록 하기 위해 {{site.data.keyword.cloud_notm}} 전세계 데이터 센터 존재와 통합 네트워크 백본을 최대한 활용할 수 있습니다.
 
@@ -35,6 +37,7 @@ lastupdated: "2019-01-23"
 또한 보조 사이트의 NSX 관리자는 기본 사이트에서 NSX 관리자의 보조 NSX 관리자로 설정될 수 있습니다.
 
 ## 새 클러스터 추가
+{: #solution_scaling-clusters}
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 새 클러스터를 작성하고 새 클러스터에 자동으로 추가되는 새 호스트를 주문하여 컴퓨팅 용량을 확장할 수도 있습니다.
 
@@ -48,11 +51,13 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## 기존 클러스터에 ESXi 호스트 추가
+{: #solution_scaling-hosts}
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 호스트를 주문하여 기존 클러스터의 용량을 확장할 수 있습니다.  새 호스트는 자동으로 클러스터에 추가됩니다. 참고로, 예약 요구사항에 따라 클러스터에 대한 HA 예약 정책을 조정해야 할 수 있습니다.
 
-### 관련 링크
+## 관련 링크
+{: #solution_scaling-related}
 
-* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [디자인 개요](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [디자인 개요](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

@@ -4,18 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # 向 vCenter 登錄 HCX Manager
+{: #hcx-archi-reg-vcenter}
 
 在 VMware vSphere Web Client 中登錄 Hybrid Cloud Services 外掛程式，並啟動 Hybrid Cloud Services 管理服務。
 
 ## 開始之前
+{: #hcx-archi-reg-vcenter-prereq}
 
 必須先開啟 Hybrid Cloud Services 虛擬應用裝置的電源，才能進行登錄。
 
 ## 向 vCenter 登錄 HCX Manager 的程序
+{: #hcx-archi-reg-vcenter-proc-register}
 
 1. 登入 Hybrid Cloud Services 服務虛擬應用裝置。
 2. 按一下**管理設定**磚。
@@ -35,9 +38,11 @@ lastupdated: "2019-01-23"
 5. 若要終結登錄，請登出 vSphere Web Client。重新登入，以驗證已進行畫面更新。
 
 ## 結果
+{: #hcx-archi-reg-vcenter-results}
 
 請注意現有 **Hybrid Cloud** 圖示及左側的 **Hybrid Cloud Services** 功能表項目。Hybrid Cloud Services 登錄會更新這些標籤。在庫存中，圖示標籤會變成 **Hybrid Cloud Services**。
 
-### 相關鏈結
+## 相關鏈結
+{: #hcx-archi-reg-vcenter-related}
 
-* [安裝及配置混合式服務](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-hybrid.html)
+* [安裝及配置混合式服務](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-hybrid)

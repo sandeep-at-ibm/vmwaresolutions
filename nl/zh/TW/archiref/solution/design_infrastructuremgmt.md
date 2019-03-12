@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 基礎架構管理設計
+{: #design_infrastructuremgmt}
 
 基礎架構管理是指管理 VMware 基礎架構的元件。此設計使用單一外部 Platform Services Controller (PSC) 實例及單一 vCenter Server 實例：
 * vCenter Server 是用於管理 vSphere 環境的集中化平台，並且是此解決方案中的其中一個基礎元件。
@@ -21,6 +22,7 @@ lastupdated: "2019-01-23"
 PSC 實例及 vCenter Server 實例是不同的虛擬機器 (VM)。
 
 ## PSC 設計
+{: #design_infrastructuremgmt-psc}
 
 此設計會在與管理 VM 相關聯之專用 VLAN 的可攜式子網路上，將單一外部 PSC 部署為虛擬應用裝置。其預設閘道設為後端客戶路由器 (BCR)。虛擬應用裝置已配置下表中的規格。
 
@@ -40,6 +42,7 @@ PSC 實例及 vCenter Server 實例是不同的虛擬機器 (VM)。
 位於主要實例的 PSC 會獲指派預設 SSO 網域 `vsphere.local`。
 
 ## vCenter Server 設計
+{: #design_infrastructuremgmt-vcenter}
 
 vCenter Server 也會部署為虛擬應用裝置。此外，vCenter Server 會安裝在與管理 VM 相關聯之專用 VLAN 的可攜式子網路上。其預設閘道設為該特定子網路之 BCR 上所指派的 IP 位址。虛擬應用裝置已配置下表中的規格。
 
@@ -56,14 +59,17 @@ vCenter Server 也會部署為虛擬應用裝置。此外，vCenter Server 會�
 | 磁碟類型                     | 精簡佈建                            |
 
 ### vCenter Server 資料庫
+{: #design_infrastructuremgmt-vcenter-db}
 
 vCenter Server 配置會使用應用裝置隨附的本端內嵌 PostgreSQL 資料庫。內嵌資料庫用來移除任何與外部資料庫及授權的相依關係。
 
 ### vCenter Server 叢集規格
+{: #design_infrastructuremgmt-vcenter-cluster}
 
 此設計可讓您將佈建在整個解決方案中的 vSphere ESXi 主機進行叢集處理。不過，建立叢集之前，會先建立資料中心物件，用於表示 vSphere ESXi 主機的位置以及資料中心內的 Pod。建立資料中心物件之後，會建立叢集。叢集已部署啟用「VMware vSphere 高可用性 (HA)」及「VMware vSphere 分散式資源排程器 (DRS)」。
 
 ### vSphere 分散式資源排程器
+{: #design_infrastructuremgmt-vsphere-drs}
 
 此設計使用起始叢集裡的「vSphere 分散式資源排程 (DRS)」來放置 VM，並在其他叢集裡使用 DRS 動態移轉 VM，以達到平衡的叢集。自動化層次設為完全自動化，以由 vSphere 自動執行起始放置及移轉建議。此外，移轉臨界值設為 moderate，因此 vCenter 會在叢集的負載平衡中套用優先順序 1、2、3 建議，以達到至少適當的改善。
 
@@ -71,6 +77,7 @@ vCenter Server 配置會使用應用裝置隨附的本端內嵌 PostgreSQL 資�
 {:note}
 
 ### vSphere 高可用性
+{: #design_infrastructuremgmt-vsphere-ha}
 
 此設計使用起始叢集及額外叢集中的「vSphere 高可用性 (HA)」來偵測運算失敗，以及回復在叢集內執行的 VM。此設計中的 vSphere HA 特性配置為在叢集中啟用**主機監視**和**許可控制**選項。此外，起始叢集會保留其中一個節點的資源，作為許可控制原則的備用容量。
 
@@ -80,6 +87,7 @@ vCenter Server 配置會使用應用裝置隨附的本端內嵌 PostgreSQL 資�
 依預設，**VM 重新啟動優先順序**選項設為 medium，並停用**主機隔離回應**選項。此外，還會停用 **VM 監視**，而且**資料儲存庫活動訊號**特性配置成包括任何叢集資料儲存庫。此方式會使用 NAS 資料儲存庫（如果它們已存在）。
 
 ## 自動化
+{: #design_infrastructuremgmt-automation}
 
 這些解決方案的基礎是自動化。自動化具有下列優點：
 * 減少部署的複雜性。
@@ -89,6 +97,7 @@ vCenter Server 配置會使用應用裝置隨附的本端內嵌 PostgreSQL 資�
 {{site.data.keyword.IBM}} CloudBuilder、IBM CloudDriver 與 SDDC Manager VM 會搭配運作，以啟動新的 VMware 實例，並執行生命週期管理功能。
 
 ### IBM CloudBuilder 及 IBM CloudDriver
+{: #design_infrastructuremgmt-cloud-builder-driver}
 
 IBM CloudBuilder 及 IBM CloudDriver 虛擬伺服器實例 (VSI) 是您無法存取的 IBM 開發元件。
 * IBM CloudBuilder 是一個暫時的 {{site.data.keyword.cloud_notm}} 虛擬伺服器實例 (VSI)，可引導部署、配置及驗證已佈建之裸機 ESXi 主機內的解決方案元件。
@@ -102,6 +111,7 @@ IBM CloudBuilder 及 IBM CloudDriver 虛擬伺服器實例 (VSI) 是您無法存
 * 修補
 
 ### SDDC Manager                             
+{: #design_infrastructuremgmt-sddc-manager}
 
 對於 Cloud Foundation 實例，SDDC Manager VM 是 VMware 所開發及維護的元件。在實例的整個生命週期期間，它仍然會保留為實例的一部分。它負責下列實例生命週期功能：
 * 管理 VMware 元件：vCenter Server、Platform Services Controller (PSC)、vSAN 及 NSX（包括 IP 位址配置及主機名稱解析）。
@@ -110,6 +120,7 @@ IBM CloudBuilder 及 IBM CloudDriver 虛擬伺服器實例 (VSI) 是您無法存
 對於 vCenter Server 實例，IBM CloudDriver 會執行這些活動，因為沒有 SDDC Manager。
 
 ### 自動化流程
+{: #design_infrastructuremgmt-auto-flow}
 
 下列程序說明透過 {{site.data.keyword.vmwaresolutions_short}} 主控台訂購 VMware 實例時的事件順序：
 1.  從 {{site.data.keyword.cloud_notm}} 訂購 VLAN 及子網路來連接網路。
@@ -125,8 +136,9 @@ IBM CloudBuilder 及 IBM CloudDriver 虛擬伺服器實例 (VSI) 是您無法存
 11. 移除 CloudBuilder VSI。
 12. 部署選用服務（例如備份伺服器及儲存空間）。
 
-### 相關鏈結
+## 相關鏈結
+{: #design_infrastructuremgmt-related}
 
-* [實體基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
-* [虛擬基礎架構設計](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
-* [共用服務設計](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)
+* [實體基礎架構設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
+* [虛擬基礎架構設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
+* [共用服務設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)

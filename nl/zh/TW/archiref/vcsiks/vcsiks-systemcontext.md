@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 系統環境定義
+{: #vcsiks-systemcontext}
 
 圖 1. 系統環境定義
 
@@ -25,6 +26,7 @@ lastupdated: "2019-01-23"
 - **{{site.data.keyword.cloud_notm}} Services** - {{site.data.keyword.cloud_notm}} Services 是範圍廣泛的可用消耗性服務，包括分析、AI 和 IoT 供應項目。
 
 ## 動作者
+{: #vcsiks-systemcontext-actors}
 
 表 1. 動作者
 
@@ -36,6 +38,7 @@ lastupdated: "2019-01-23"
 {{site.data.keyword.containerlong_notm}} | IBM 人力資源，負責管理該服務的「{{site.data.keyword.containerlong_notm}} 主節點」。
 
 ## 系統
+{: #vcsiks-systemcontext-systems}
 
 表 2. 系統
 
@@ -56,6 +59,7 @@ Watson | 對於此參照架構和 Acme Skateboards，Watson 代表「概念車�
 
 應用程式移轉、網路和安全往往是應用程式現代化最具挑戰性的層面。VMware vCenter Server on {{site.data.keyword.cloud_notm}}、VMware Hybridity、VMware NSX、{{site.data.keyword.cloud_notm}} Private 和 {{site.data.keyword.containerlong_notm}} 可因應這些挑戰，並讓您能建置具復原力、安全且健全的現代應用程式。
 
-### 相關鏈結
+## 相關鏈結
+{: #vcsiks-systemcontext-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

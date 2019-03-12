@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server with Hybridity Bundle 인스턴스 삭제
+{: #vc_hybrid_deletinginstance}
 
 VMware vCenter Server with Hybridity Bundle 인스턴스에서 주문한 컴포넌트를 릴리스하려면 인스턴스를 삭제하십시오.
 
@@ -30,6 +31,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 삭제하면 다음 컴포�
 {:note}
 
 ## 배치된 인스턴스 페이지에서 인스턴스를 삭제하는 프로시저
+{: #vc_hybrid_deletinginstance-procedure1}
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 삭제할 인스턴스를 찾으십시오.
@@ -40,6 +42,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 삭제하면 다음 컴포�
    2. **인스턴스 삭제** 창에서 **확인**을 클릭하십시오.
 
 ## 인스턴스 세부사항 페이지에서 인스턴스를 삭제하는 프로시저
+{: #vc_hybrid_deletinginstance-procedure2}
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 삭제할 인스턴스를 클릭하십시오.
@@ -49,10 +52,11 @@ vCenter Server with Hybridity Bundle 인스턴스를 삭제하면 다음 컴포�
    1. **vCenter 콘솔** 옆에 있는 오버플로우 메뉴 아이콘을 다시 클릭하고 **인스턴스 삭제**를 클릭하십시오.
    2. **인스턴스 삭제** 창에서 **확인**을 클릭하십시오.
 
-### 관련 링크
+## 관련 링크
+{: #vc_hybrid_deletinginstance-related}
 
-* [다중 사이트 구성에서 vCenter Server with Hybridity Bundle 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html)
-* [vCenter Server with Hybridity Bundle 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [vCenter Server with Hybridity Bundle 인스턴스 보기](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [vCenter Server with Hybridity Bundle 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [다중 사이트 구성에서 vCenter Server with Hybridity Bundle 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance_multi)
+* [vCenter Server with Hybridity Bundle 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [vCenter Server with Hybridity Bundle 인스턴스 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [vCenter Server with Hybridity Bundle 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

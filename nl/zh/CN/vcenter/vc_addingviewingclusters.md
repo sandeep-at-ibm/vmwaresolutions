@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 添加、查看和删除 vCenter Server 实例的集群
+{: #adding-and-viewing-clusters-for-vcenter-server-instances}
 
 缺省情况下，订购实例时配置的 ESXi 服务器会分组为 **cluster1**。
 
@@ -22,8 +23,9 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## 向 vCenter Server 实例添加集群
+{: #vc_addingviewingclusters-adding}
 
-可以添加到实例的集群数取决于实例版本：
+可添加到实例的集群数取决于实例版本：
 * 对于部署在（或已升级到）V2.5 和更高版本中的实例，集群数、主机数和 VM 数将决定可以添加的最大集群数限制。您必须遵守适用于部署的 VMware 大小调整准则和限制。
 * 对于部署在（或已升级到）V2.2 和更高版本中的实例，最多可以添加 10 个集群。
 * 对于部署在 V2.1 或更低版本中的实例，最多可以添加 5 个集群。
@@ -31,10 +33,12 @@ lastupdated: "2019-01-23"
 有关最大限制的更多信息，请参阅 [VMware 配置最大值](https://configmax.vmware.com/home){:new_window}。
 
 ### 系统设置
+{: #vc_addingviewingclusters-adding-sys-settings}
 
 为 vCenter Server 实例添加集群时，必须指定以下设置。
 
 #### 集群名称
+{: #vc_addingviewingclusters-adding-cluster-name}
 
 集群名称必须满足以下需求：
 * 只允许使用字母数字字符和短划线 (-) 字符。
@@ -43,16 +47,19 @@ lastupdated: "2019-01-23"
 * 集群名称在 vCenter Server 实例中必须唯一。
 
 #### 数据中心位置
+{: #vc_addingviewingclusters-adding-dc-location}
 
 缺省情况下，集群的 {{site.data.keyword.CloudDataCent}} 位置设置为 vCenter Server 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/) 等工具。
 
 如果将集群部署到其他 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基础架构 pod，那么可订购三个额外的 VLAN 以用于订购的 {{site.data.keyword.baremetal_short}}。
 
 ### 裸机服务器设置
+{: #vc_addingviewingclusters-bare-metal-settings}
 
 您可以选择 **Skylake**、**SAP 认证**或 **Broadwell**。
 
 #### Skylake
+{: #vc_addingviewingclusters-adding-skylake}
 
 对于 **Skylake** 设置，您有各种 **CPU 型号**和 **RAM** 选项。可用选项可能有所不同，具体取决于初始部署实例的版本。
 
@@ -65,6 +72,7 @@ lastupdated: "2019-01-23"
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
 #### SAP 认证
+{: #vc_addingviewingclusters-adding-sap}
 
 选择 **SAP 认证**后，无法变更 CPU 或 RAM 设置。
 
@@ -78,6 +86,7 @@ lastupdated: "2019-01-23"
 * 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 4096 GB RAM
 
 #### Broadwell
+{: #vc_addingviewingclusters-adding-broadwell}
 
 对于 **Broadwell** 设置，您有多个 **CPU 型号**和 **RAM** 选项。可用选项可能有所不同，具体取决于初始部署实例的版本。
 
@@ -92,6 +101,7 @@ lastupdated: "2019-01-23"
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.2 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
 #### 裸机服务器的数量
+{: #vc_addingviewingclusters-adding-bare-metal-number}
 
 集群至少需要两个 {{site.data.keyword.baremetal_short}}。
 
@@ -102,10 +112,12 @@ lastupdated: "2019-01-23"
 部署后，最多可以再创建四个集群。如果选择使用 VMware vSAN 存储器的 **Skylake** 或 **Broadwell** 裸机服务器配置，那么初始集群和部署后集群都需要 4 个服务器。
 
 ### 存储设置
+{: #vc_addingviewingclusters-adding-storage-settings}
 
 存储设置基于您选择的裸机服务器配置和存储类型。
 
 #### vSAN 存储器
+{: #vc_addingviewingclusters-adding-vsan-storage}
 
 请指定以下 vSAN 选项：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
@@ -121,6 +133,7 @@ lastupdated: "2019-01-23"
 如果初始集群为 vSAN 集群，那么其他任何 vSAN 集群都会使用与初始 vSAN 集群相同的 vSAN 许可证，并具有与初始 vSAN 集群相同的配置。如果实例中的任何集群选择了要部署 vSAN（初始或其他集群），也是如此。第一次系统会提示您提供 vSAN 许可证（BYOL 或购买的许可证）和版本。下次您为新集群选择 vSAN 时，将复用最初选择的许可证。
 
 #### NFS 存储器
+{: #vc_addingviewingclusters-adding-nfs-storage}
 
 选择 **NFS 存储器**时，可以为实例添加文件级别的共享存储器，其中所有共享使用相同的设置，也可以对每个文件共享指定不同的配置设置。请指定以下 NFS 选项：
 
@@ -143,6 +156,7 @@ lastupdated: "2019-01-23"
   |10 IOPS/GB|此选项旨在用于要求最苛刻的工作负载类型（如分析）。示例应用包括：高事务数据库和其他性能敏感型数据库。此性能级别限制为每个文件共享的最大容量为 4 TB。|
 
 ### 本地磁盘
+{: #vc_addingviewingclusters-adding-local-disks}
 
 本地磁盘选项仅可用于 **SAP 认证**的四核 Intel Xeon E7-8890 V4 处理器裸机配置。
 请指定以下选项：
@@ -150,12 +164,14 @@ lastupdated: "2019-01-23"
 * **磁盘类型**：选择与所需磁盘类型相应的选项。
 
 ### 许可证设置
+{: #vc_addingviewingclusters-adding-licensing-settings}
 
 为集群中的 VMware vSphere 组件指定许可选项：
 * 对于业务合作伙伴用户，会包含 vSphere 许可证 (Enterprise Plus Edition)，该许可证以您的名义购买。
 * 对于非业务合作伙伴用户，可以通过选择**购买时包含**对此组件使用 IBM 提供的 VMware 许可证，或者可以通过选择**我将提供**并输入您自己的许可证密钥以自带许可证 (BYOL)。
 
 ### 网络接口设置
+{: #vc_addingviewingclusters-adding-network-interface-settings}
 
 网络接口卡 (NIC) 启用设置基于您选择的是**公用和专用网络**还是**仅专用网络**。以下附加组件服务需要公共 NIC，并且这些服务在您选择专用选项时不可用：
 
@@ -165,10 +181,12 @@ lastupdated: "2019-01-23"
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 订单摘要
+{: #vc_addingviewingclusters-adding-order-summary}
 
 根据为集群选择的配置，估算成本会立即生成并显示在**订单摘要**右侧窗格中。
 
 ## 向 vCenter Server 实例添加集群的过程
+{: #vc_addingviewingclusters-adding-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要添加集群的实例。
@@ -200,6 +218,7 @@ lastupdated: "2019-01-23"
    4. 单击**供应**。
 
 ### 向 vCenter Server 实例添加集群后的结果
+{: #vc_addingviewingclusters-adding-results}
 
 1. 集群部署会自动启动，并且集群的状态会更改为**正在初始化**。可以通过在实例的**摘要**页面中查看部署历史记录，以检查部署的状态。
 2. 集群准备就绪可供使用后，其状态会更改为**可供使用**。将对新添加的集群启用 vSphere 高可用性 (HA) 和 vSphere 分布式资源调度程序 (DRS)。
@@ -208,6 +227,7 @@ lastupdated: "2019-01-23"
 {:important}
 
 ## 查看 vCenter Server 实例中集群的过程
+{: #vc_addingviewingclusters-viewing-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击实例以查看其中的集群。
@@ -233,42 +253,34 @@ lastupdated: "2019-01-23"
         <dd class="dd">集群已删除。</dd>
     </dl>
   * **操作**：单击**删除**图标以删除集群。
-4. 单击集群名称以查看 ESXi 服务器及其存储的详细信息：
+4. 单击集群名称以查看 ESXi 服务器及其存储：
 
-  * ESXi 服务器详细信息：
-     * **名称**：ESXi 服务器名称的格式为 `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中：
+表 4. ESXi 服务器详细信息
 
-       `host_prefix` 是主机名前缀，
+|项|描述|  
+|:------------- |:------------- |
+|名称|ESXi 服务器的名称采用以下格式：<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> 其中：<br> `host_prefix` 是主机名前缀<br> `n` 是服务器的序列号<br> `subdomain_label` 是子域标签<br> `root_domain` 是根域名|
+|版本|ESXi 服务器的版本。|
+|凭证|用于访问 ESXi 服务器的用户名和密码。|
+|专用 IP|ESXi 服务器的专用 IP 地址。|
+|状态|ESXi 服务器的状态，可以是下列某个值：<br> **已添加**：ESXi 服务器已添加并随时可供使用。<br> **正在添加**：正在添加 ESXi 服务器。<br> **正在删除**：正在删除 ESXi 服务器。|
 
-       `n` 是服务器的序列，
+表 5. 存储详细信息
 
-       `subdomain_label` 是子域标签，
-
-       `root_domain` 是根域名。
-
-     * **版本**：ESXi 服务器的版本。
-     * **凭证**：用于访问 ESXi 服务器的用户名和密码。
-     * **专用 IP**：ESXi 服务器的专用 IP 地址。
-     * **状态**：ESXi 服务器的状态，可以是下列其中一个值：
-        <dl class="dl">
-        <dt class="dt dlterm">已添加</dt>
-        <dd class="dd">ESXi 服务器已添加并准备就绪可供使用。</dd>
-        <dt class="dt dlterm">正在添加</dt>
-        <dd class="dd">正在添加 ESXi 服务器。</dd>
-        <dt class="dt dlterm">正在删除</dt>
-        <dd class="dd">正在删除 ESXi 服务器。</dd>
-        </dl>
-  * 存储详细信息：
-    * **名称**：数据存储名称。
-    * **大小**：存储器的容量。
-    * **IOPS/GB**：存储器的性能级别。
-    * **NFS 协议**：存储器的 NFS 版本。
+|项|描述|  
+|:------------- |:------------- |
+|名称|数据存储名称。|
+|大小|存储的容量。|
+|IOPS/GB|存储的性能级别。|
+|NFS 协议|存储的 NFS 版本。|
 
 ## 从 vCenter Server 实例中删除集群
+{: #vc_addingviewingclusters-deleting}
 
 当不再需要集群时，您可能希望将其从实例中删除。
 
 ### 删除之前
+{: #vc_addingviewingclusters-deleting-prereq}
 
 * 使用此过程从部署在 V2.3 或更高版本中的实例中删除集群。
 * 对于在 V2.2 或更低版本实例中部署的集群，如果要删除已添加到实例的集群，必须将实例升级到 V2.3。
@@ -278,6 +290,7 @@ lastupdated: "2019-01-23"
 * 无法删除缺省集群。
 
 ### 从 vCenter Server 实例中删除集群的过程
+{: #vc_addingviewingclusters-deleting-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要从中删除集群的实例。
@@ -288,7 +301,8 @@ lastupdated: "2019-01-23"
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，找到要删除的集群，然后单击**操作**列中的**删除**图标。
 4. 确认已完成将 VM 迁移到其他集群的操作（如果需要），并确认要删除该集群。
 
-### 相关链接
+## 相关链接
+{: #vc_addingviewingclusters-related}
 
-* [查看 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
-* [扩展和收缩 vCenter Server 实例的容量](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [查看 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [扩展和收缩 vCenter Server 实例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)

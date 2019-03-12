@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 다중 사이트 구성에서 vCenter Server 인스턴스 삭제
+{: #vc_deletinginstance_multi}
 
 다중 사이트 구성의 일부인 vCenter Server 인스턴스를 삭제하려고 계획하기 전에 다음의 특수 고려사항을 확인하십시오.
 
@@ -30,6 +31,7 @@ vCenter Server 인스턴스를 삭제하는 경우 다음 컴포넌트가 순차
 {:note}
 
 ## 다중 사이트 구성에서 vCenter Server 인스턴스를 삭제하는 프로시저
+{: #vc_deletinginstance_multi-procedure}
 
 1. 보조 vCenter Server 인스턴스에서 모든 서비스를 제거하십시오.
 2. 삭제할 보조 인스턴스로 NSX 오브젝트가 확장되지 않는지 확인하십시오.
@@ -39,7 +41,8 @@ vCenter Server 인스턴스를 삭제하는 경우 다음 컴포넌트가 순차
 6. 다중 사이트 구성에서 모든 보조 vCenter Server 인스턴스에 대해 1 - 5단계를 반복하십시오.
 7. 모든 보조 인스턴스를 삭제한 후 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 기본 인스턴스도 삭제할 수 있습니다.
 
-### 관련 링크
+## 관련 링크
+{: #vc_deletinginstance_multi-related}
 
-* [vCenter Server 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)
-* [vCenter Server 인스턴스에서 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [vCenter Server 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)
+* [vCenter Server 인스턴스에서 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)

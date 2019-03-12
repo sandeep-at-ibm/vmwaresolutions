@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # オンプレミス VMware HCX on IBM Cloud インスタンスの参照
+{: #standalone_viewingserviceinstances}
 
 オンプレミスで使用するために注文したオンプレミス HCX on {{site.data.keyword.cloud}} インスタンスとその情報を参照するには、以下の手順に従います。
 
 ## オンプレミス VMware HCX on IBM Cloud インスタンスを参照する手順
+{: #standalone_viewingserviceinstances-procedure}
 
 左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックし、**「オンプレミス HCX インスタンス」**テーブルまでスクロールダウンして、注文したインスタンスに関する情報を確認します。
 
@@ -36,9 +38,10 @@ lastupdated: "2019-01-24"
 | インストール済み | インスタンスは使用可能です。 |
 | 削除中 | インスタンスは削除中です。 |
 
-### 関連リンク
+## 関連リンク
+{: #standalone_viewingserviceinstances-related}
 
-* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの注文](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
-* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの削除](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
-* [HCX の用語集](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
+* [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの削除](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances)
+* [HCX の用語集](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)

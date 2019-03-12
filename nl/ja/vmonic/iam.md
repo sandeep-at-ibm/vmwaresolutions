@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-21"
 
 ---
 
 # IAM でのユーザー・アクセス権限の管理
+{: #managing-user-access-with-iam}
 
 アカウント内のユーザーの {{site.data.keyword.vmwaresolutions_full}} サービス・インスタンスへのアクセス権限は、{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) によって制御されます。 アカウント内で {{site.data.keyword.vmwaresolutions_short}} サービスにアクセスするすべてのユーザーには、IAM ユーザー役割の定義されたアクセス・ポリシーが割り当てられている必要があります。
 
@@ -26,6 +27,7 @@ lastupdated: "2019-01-23"
 {{site.data.keyword.vmwaresolutions_short}} サービス内で各役割で実行できる操作をまとめた以下の情報を確認してください。
 
 ## プラットフォーム管理の役割および許可
+{: #iam-roles}
 
 プラットフォーム管理の役割を持つユーザーは、プラットフォーム・レベルでサービス・リソースに対してタスクを実行することができます。 これには、例えば、サービスに対するユーザー・アクセス権限の割り当て、サービス ID の作成または削除、インスタンスの作成、アプリケーションへのインスタンスのバインドなどがあります。
 
@@ -53,24 +55,26 @@ lastupdated: "2019-01-23"
 | vmware-solutions.account.update | アカウント設定の更新 | 管理者 |
 
 ## ユーザーのアクセス権限の管理
+{: #iam-users}
 
-新しいユーザーを {{site.data.keyword.cloud_notm}} アカウントに追加して、それらのユーザーがアカウントに対してプロビジョンされているサービスやリソースを共有できるようにすることができます。 詳しくは、[サービスとリソースにアクセスするようにユーザーを招待する](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)を参照してください。
+新しいユーザーを {{site.data.keyword.cloud_notm}} アカウントに追加して、それらのユーザーがアカウントに対してプロビジョンされているサービスやリソースを共有できるようにすることができます。 詳しくは、[サービスとリソースにアクセスするようにユーザーを招待する](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)を参照してください。
 
-既存のユーザーのアクセス権限を管理することもできます。これには、既存のアクセス権限の変更、新しいアクセス権限の割り当て、割り当て済みのアクセス権限の検討などが含まれます。 ユーザーのアクセス権限を管理するには、アカウント所有者であるか、または**「管理者」**のプラットフォーム管理役割を持つ必要があります。 詳しくは、[リソースに対するアクセス権限の管理](/docs/iam/mngiam.html)を参照してください。
+既存のユーザーのアクセス権限を管理することもできます。これには、既存のアクセス権限の変更、新しいアクセス権限の割り当て、割り当て済みのアクセス権限の検討などが含まれます。 ユーザーのアクセス権限を管理するには、アカウント所有者であるか、または**「管理者」**のプラットフォーム管理役割を持つ必要があります。 詳しくは、[リソースに対するアクセス権限の管理](/docs/iam?topic=iam-iammanidaccser)を参照してください。
 
 ## IBM Cloud アカウントへの既存のインスタンスのマイグレーション
+{: #iam-migrate}
 
 {{site.data.keyword.vmwaresolutions_short}} を IAM と統合したために、V2.5 以降のリリースで {{site.data.keyword.cloud_notm}} アカウントにデプロイされたインスタンスは、自動的にアカウントに追加されて IAM によって管理されます。
 
 V2.4 以前のリリースでデプロイされた既存のインスタンスは、IAM 対応の管理のために指定された {{site.data.keyword.cloud_notm}} アカウントにマイグレーションできます。 詳しくは、以下のトピックを参照してください。
-* [IBM Cloud アカウントへの V2.5 より前の vCenter Server インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
-* [IBM Cloud アカウントへの V2.5 より前の vCenter Server with Hybridity Bundle インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
-* [V2.5 以前の Cloud Foundation インスタンスの IBM Cloud アカウントへのマイグレーション](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
-* [V2.5 以前の NetApp ONTAP Select インスタンスの IBM Cloud アカウントへのマイグレーション](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
-* [IBM Cloud アカウントへの V2.5 より前の VMware Federal インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)
+* [IBM Cloud アカウントへの V2.5 より前の vCenter Server インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
+* [IBM Cloud アカウントへの V2.5 より前の vCenter Server with Hybridity Bundle インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
+* [V2.5 以前の Cloud Foundation インスタンスの IBM Cloud アカウントへのマイグレーション](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addinstancetousraccount)
+* [V2.5 以前の NetApp ONTAP Select インスタンスの IBM Cloud アカウントへのマイグレーション](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)
 
-### 関連リンク
+## 関連リンク
+{: #iam-related}
 
-* [ID およびアクセス権限の管理](/docs/iam/quickstart.html)
+* [ID およびアクセス権限の管理](/docs/iam?topic=iam-getstarted)
 * [ユーザーおよびアクセス権限の管理](/docs/iam/iamusermanage.html)
-* [IAM とは](/docs/iam/index.html)
+* [IAM とは](/docs/iam?topic=iam-iamoverview)

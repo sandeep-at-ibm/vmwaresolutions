@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-17"
+lastupdated: "2019-02-15"
 
 ---
 # VMware HCX on IBM Cloud の紹介
+{: #hcx-archi-intro}
 
 VMware HCX on IBM Cloud サービスを使用すると、IBM Cloud for VMware ソリューション・インスタンスとオンプレミスの VMware 仮想データ・センターの間にシームレスな接続を構築できます。
 
@@ -30,6 +31,7 @@ IBM Cloud VMware のターゲット・サイトに仮想マシンとしてデプ
 * マイグレーションのスケジュール – 任意の数の仮想マシンを宛先サイトにレプリケーションしておき、指定した時刻にそのサイトでアクティブ化することで、元のサイトで実行されているシステムを置換できます。
 * セキュリティー・ポリシーのマイグレーション – NSX をオンプレミスで使用している場合は、セキュリティー・ポリシーまたはファイアウォールがワークロードと一緒に移行されます。
 
-### 関連リンク
+## 関連リンク
+{: #hcx-archi-intro-related}
 
 * [IBM Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture)

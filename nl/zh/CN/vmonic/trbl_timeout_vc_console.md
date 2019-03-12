@@ -4,18 +4,23 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # 连接到 VMware vSphere Web Client 时发生超时
+{: #trbl_timeout_vc_console}
 
 ## 问题
+{: #trbl_timeout_vc_console-problem}
+
 尝试连接到 vSphere Web Client 时，可能会收到以下超时错误：
 
 `位于 <IP_address> 的服务器太长时间没有响应。`
 
 ## 解决方法
+{: #trbl_timeout_vc_console-resolution}
+
 使用以下步骤来调查并解决问题。
 
 1. 确保已完成将鼠标悬停在 **vCenter 控制台**按钮上时显示的工具提示中的步骤。为了方便起见，下面也列出了这些步骤：   

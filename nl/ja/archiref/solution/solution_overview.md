@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
-# ソリューションの概要
+# IBM Cloud for VMware Solutions の概要
+{: #solution_overview}
 
 {{site.data.keyword.vmwaresolutions_full}} オファリングを使用して、既存の VMware 仮想化データ・センターを {{site.data.keyword.cloud_notm}} に拡張したり、クラウド・ネイティブ・アプリケーションを保管したりすることができます。
 
@@ -18,12 +19,11 @@ VMware Cloud Foundation や VMware vCenter Server など、ターゲット・ワ
 
 この設計は、特定のユースケースのために追加されるその他の内部コンポーネントまたはベンダー固有コンポーネントの基盤を提供する基本的なアーキテクチャーとして機能します。
 
-## VMware on IBM Cloud の概要
-
 図 1. VMware on {{site.data.keyword.cloud_notm}} の概要
 ![VMware on {{site.data.keyword.cloud_notm}} の概要](solution_overview.svg "このソリューションは、アプリケーションを実行できる VM で消費されるコンピュート・リソース、ネットワーク・リソース、およびオプションのストレージ・リソースを仮想化します。")
 
-## 主な利点
+## IBM Cloud for VMware Solutions の主なメリット
+{: #solution_overview-benefits}
 
 {{site.data.keyword.cloud_notm}} 上の VMware Cloud Foundation および vCenter Server は、基本的なビルディング・ブロックを提供します。これには、VMware vSphere、vCenter Server、NSX や、vSAN などの共有ストレージ・オプションが含まれます。 これらのコンポーネントは、ワークロードに最適な VMware ソフトウェア定義のデータ・センター・ソリューションを柔軟に設計するのに必要です。
 
@@ -38,8 +38,9 @@ VMware on {{site.data.keyword.cloud_notm}} オファリングには、以下の�
 * **一貫性のある管理およびガバナンスの実現**。仮想化管理への完全な管理アクセス権限を付与し、デプロイされたハイブリッド・クラウドに対して一貫性のある管理およびガバナンスを行うことで、既存の VMware ツール、スクリプト、研修への投資を保持できます。
 * **世界規模での VMware 専門知識の利用**。世界 30 以上の {{site.data.keyword.CloudDataCents_notm}} にわたる IBM プロフェッショナル・サービスおよびマネージド・サービスで、世界規模の VMware 専門知識を利用できます。
 
-### 関連リンク
+## 関連リンク
+{: #solution_overview-related}
 
-* [設計の概要](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [キャパシティーの拡張](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
-* [コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [設計の概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [キャパシティーの拡張](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)
+* [コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

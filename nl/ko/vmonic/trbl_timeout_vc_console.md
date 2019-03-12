@@ -4,18 +4,23 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # VMware vSphere Web Client에 연결하는 중에 제한시간 초과
+{: #trbl_timeout_vc_console}
 
 ## 문제점
+{: #trbl_timeout_vc_console-problem}
+
 vSphere Web Client로 연결을 시도할 때 다음 제한시간 초과 오류가 발생할 수 있습니다.
 
 `The server at <IP_address> is taking too long to respond.`
 
 ## 해결
+{: #trbl_timeout_vc_console-resolution}
+
 다음 단계를 사용하여 문제점을 조사하고 수정하십시오.
 
 1. **vCenter 콘솔** 단추 위에 마우스를 올려 놓을 때 표시되는 단계를 완료했는지 확인하십시오. 사용자의 편의를 위해

@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # 集成、IP 寻址和网络流
+{: #vcsnsxt-overview-integration}
 
 ## IBM Cloud Private 与 VMware vCenter Server on IBM Cloud 集成
+{: #vcsnsxt-overview-integration-icp-vcs-integration}
 
 {{site.data.keyword.cloud}} Private 安装在一个 vCenter Server 实例上的多个虚拟机 (VM) 上。在 vCenter Server 实例中，{{site.data.keyword.icpfull_notm}} 实例会部署有专用 NSX Edge 服务网关 (ESG) 和分布式逻辑路由器 (DLR)，并使用 VXLAN。
 
 ESG 配置了源 NAT (SNAT) 规则以允许出站流量，支持因特网连接以下载 {{site.data.keyword.icpfull_notm}} 必备软件，以及连接到 GitHub 和 Docker。或者，可以使用 Web 代理进行因特网连接。ESG 配置为使用专用连接来访问 DNS 和 NTP 服务。ESG 还配置了 DNAT 规则，用于支持通过 {{site.data.keyword.cloud_notm}} 10.x 网络来访问 {{site.data.keyword.icpfull_notm}} 主节点和代理 vIP。
 
 ## IBM Cloud Kubernetes Service 与 vCenter Server 集成
+{: #vcsnsxt-overview-integration-iks-vcs-integration}
 
 目前，以下方案可用于集成 {{site.data.keyword.containerlong_notm}} 与 vCenter Server 联网：
 - **公共 VLAN** - 需要 {{site.data.keyword.containerlong_notm}} 工作程序节点部署到 vCenter Server 实例所在的 VLAN 上。公共 VLAN 允许 ESG 作为工作程序节点的 BGP 同级。
@@ -25,10 +28,12 @@ ESG 配置了源 NAT (SNAT) 规则以允许出站流量，支持因特网连接�
 - **BGP 对等连接** - BGP 对等连接不是 {{site.data.keyword.cloud_notm}} 中的缺省产品，因此必须请求该产品并得到核准。BGP 对等连接启用后，允许 Calico vRouter 和 ESG 将路径公布到 BCR。
 
 ## IBM Cloud Kubernetes Service 与 IBM Cloud Private 集成
+{: #vcsnsxt-overview-integration-iks-icp-integration}
 
 {{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}} 集成将使用与 {{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}} 中 strongSwan 容器的 strongSwan VPN 连接。
 
 ## IP 地址分配
+{: #vcsnsxt-overview-integration-ip-address-allocation}
 
 从管理角度而言，参考体系结构具有以下概念性网络范围：
 -	**{{site.data.keyword.containerlong_notm}} pod 网络** - 部署到工作程序节点的所有 pod 都会分配有一个位于 172.30.0.0/16 范围内的专用 IP 地址，并且这些 pod 仅在工作程序节点之间进行路由。为了避免冲突，不要在与工作程序节点通信的任何节点上使用此 IP 范围。工作程序节点和 pod 可以使用专用 IP 地址在专用网络上进行安全通信。但是，pod 崩溃或需要重新创建工作程序节点时，会分配新的专用 IP 地址。
@@ -50,6 +55,7 @@ ESG 配置了源 NAT (SNAT) 规则以允许出站流量，支持因特网连接�
 -	**{{site.data.keyword.icpfull_notm}} 工作程序节点网络** - 一个企业 IP 地址范围，使用与 {{site.data.keyword.cloud_notm}} 提供的任何子网都不冲突的 BYOIP 范围。
 
 ## 网络流量流
+{: #vcsnsxt-overview-integration-net-traffic-flows}
 
 将对以下流量流进行描述：
 -	从因特网上的外部用户到 {{site.data.keyword.containerlong_notm}} 的容器中托管的 Web 层
@@ -59,6 +65,7 @@ ESG 配置了源 NAT (SNAT) 规则以允许出站流量，支持因特网连接�
 -	企业网络上的企业用户对 vCenter Server 中 VM 的访问。
 
 ### 从因特网上的外部用户到 IBM Cloud Kubernetes Service 的容器中托管的 Web 层
+{: #vcsnsxt-overview-integration-web-tier-iks}
 
 1.	外部用户使用 URL 向 Web 层发出请求。
 2.	使用 DNS 确定 IP 地址。此 IP 地址是可移植子网上已分配给 ALB 或 Ingress 服务的 {{site.data.keyword.cloud_notm}} 公共地址。
@@ -68,6 +75,7 @@ ESG 配置了源 NAT (SNAT) 规则以允许出站流量，支持因特网连接�
 6.	如果应用程序位于同一工作程序节点上，那么将使用 iptables 来确定哪个内部接口用于转发请求。如果应用程序位于其他工作程序节点上，那么仅当该工作程序节点位于不同子网上时，Calico vRouter 才会使用 IP-in-IP 封装来路由到适用的工作程序节点。
 
 ### 从因特网上的外部用户到 IBM Cloud Private 的容器中托管的 Web 层
+{: #vcsnsxt-overview-integration-web-tier-icp}
 
 1.	外部用户使用 URL 向 Web 层发出请求。
 2.	使用 DNS 确定 IP 地址。此 IP 地址是可移植子网上分配给 vCenter Server 实例的 {{site.data.keyword.cloud_notm}} 公共地址。
@@ -77,6 +85,7 @@ ESG 配置了源 NAT (SNAT) 规则以允许出站流量，支持因特网连接�
 6.	如果应用程序位于同一工作程序节点上，那么将使用 iptables 来确定哪个内部接口用于转发请求。如果应用程序位于其他工作程序节点上，那么 Calico vRouter 会使用 IP-in-IP 封装来路由到适用的工作程序节点。IP-in-IP 包封装在 VXLAN 帧中，以传输到工作程序节点所在的 vSphere ESXi 主机。
 
 ### 从 IBM Cloud Kubernetes Service 的容器中托管的 Web 层到 vCenter Server 的 VM 中托管的数据库层
+{: #vcsnsxt-overview-integration-iks-db-tier-vcs}
 
 ESG 和 vRouter 中的路由表填充方式取决于集成方法。请参阅“{{site.data.keyword.containerlong_notm}} 与 vCenter Server 集成”。
 1.	在 {{site.data.keyword.containerlong_notm}} 的容器中运行的 Web 层向在该 vCenter Server 实例中的 VM 上运行的数据库发出请求。
@@ -91,6 +100,7 @@ ESG 和 vRouter 中的路由表填充方式取决于集成方法。请参阅“{
 10.	数据库 VM 收到请求。
 
 ### 从 IBM Cloud Private 的容器中托管的 Web 层到 vCenter Server 的 VM 中托管的数据库层
+{: #vcsnsxt-overview-integration-icp-db-tier-vcs}
 
 ESG 和 vRouter 中的路由表填充方式取决于集成方法。请参阅“{{site.data.keyword.icpfull_notm}} 与 vCenter Server 集成”。
 1.	在 {{site.data.keyword.icpfull_notm}} 的容器中运行的 Web 层向在同一 vCenter Server 实例中的 VM 上运行的数据库发出请求。
@@ -104,6 +114,7 @@ ESG 和 vRouter 中的路由表填充方式取决于集成方法。请参阅“{
 9.	数据库 VM 收到请求。
 
 ### 企业网络上的企业用户对 vCenter Server 中 VM 的访问
+{: #vcsnsxt-overview-integration-corporate-network-vcs}
 
 1.	连接到企业内部网络的企业用户向 vCenter Server 中托管的 VM 上的资源发出请求。
 2.	DNS 用于确定 VM 的 IP 地址。此 IP 地址位于延伸到 {{site.data.keyword.cloud_notm}} 的网络上。
@@ -113,7 +124,8 @@ ESG 和 vRouter 中的路由表填充方式取决于集成方法。请参阅“{
 6.	L2 集中器收到请求，并将其置于托管延伸网络的 VXLAN 上。
 7.	VM 收到请求。
 
-### 更多资源
+## 相关链接
+{: #vcsnsxt-overview-integration-related}
 
 * [{{site.data.keyword.cloud_notm}} 网络](https://www.ibm.com/cloud-computing/bluemix/our-network)
 * [容器白皮书](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf)（下载 PDF）
@@ -122,7 +134,7 @@ ESG 和 vRouter 中的路由表填充方式取决于集成方法。请参阅“{
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [NSX for vSphere 6.4.3 配置最大值](https://configmax.vmware.com/guest)
 * [{{site.data.keyword.cloud_notm}} 平台文档](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html)
-* [{{site.data.keyword.containerlong_notm}}](/docs/containers/container_index.html)
+* [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-container_index)
 * [Project Calico](https://www.projectcalico.org/)
 * [GitHub-Calico](https://github.com/projectcalico/calico)
 * [Kubernetes](https://kubernetes.io/)

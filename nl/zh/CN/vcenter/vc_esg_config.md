@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,8 +13,9 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 将网络配置为将客户管理的 NSX ESG 用于 VM
+{: #vc_esg_config}
 
-为虚拟机配置网络，以便您可以利用 VMware vCenter Server 实例中部署的 VMware NSX Edge 服务网关 (ESG)。有关为帮助最大限度降低安全风险而实施的安全措施的更多信息，请参阅[管理服务 NSX Edge 会构成安全风险吗？](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+为虚拟机配置网络，以便您可以利用 VMware vCenter Server 实例中部署的 VMware NSX Edge 服务网关 (ESG)。有关为帮助最大限度降低安全风险而实施的安全措施的更多信息，请参阅[管理服务 NSX Edge 会构成安全风险吗？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟化，并提供多种联网服务，例如交换机、路由和防火墙。有关 NSX 的更多信息，请参阅 [NSX 概述](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}。
 
@@ -29,9 +30,10 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
   不会为仅供专用的实例部署 NSX Edge。
   {:note}
 
-* 如果已安装 Veeam on {{site.data.keyword.cloud_notm}} 服务，那么会将 NSX Manager 配置为每天备份 NSX 配置。有关更多信息，请参阅[安装 Veeam on {{site.data.keyword.cloud_notm}} 时的注意事项](/docs/services/vmwaresolutions/services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud)。
+* 如果已安装 Veeam on {{site.data.keyword.cloud_notm}} 服务，那么会将 NSX Manager 配置为每天备份 NSX 配置。有关更多信息，请参阅[安装 Veeam on {{site.data.keyword.cloud_notm}} 时的注意事项](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud)。
 
 ## 配置 VM 联网设置的过程
+{: #vc_esg_config-procedure-config-networking}
 
 要将 NSX 用于工作负载 VM，必须在创建 VM 时完成以下步骤来配置一些设置：
 
@@ -53,6 +55,7 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
 3. 将 VM 的缺省网关分配为 `192.168.10.1`。此地址是工作负载 VM 所在逻辑交换机上的 NSX DLR 的 IP 地址。
 
 ## 启用 SNAT 规则的过程
+{: #vc_esg_config-procedure-enable-snat-rule}
 
 如果希望工作负载 VM 具有对因特网的出站访问权，那么必须启用关联的 SNAT（源网络地址转换）规则。通过启用 SNAT 规则，可将 VM 对因特网的访问转换到单个公共 IP 地址。在 VMware vSphere Web Client 中完成以下步骤：
 
@@ -64,6 +67,7 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
 有关 NSX Edge NAT 规则的更多信息，请参阅[管理 NAT 规则](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}。
 
 ## 确定客户子网详细信息的过程
+{: #vc_esg_config-procedure-identify-customer-subnets-details}
 
 **customer-nsx-edge** 边缘旨在供您自己使用，因此您可以对其进行修改，以定义更多 NAT 规则用于入站或出站流量。这些规则必须仅使用以您的名义订购的公用或专用客户子网上的 IP 地址。
 
@@ -79,11 +83,12 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
 2. 单击过滤器菜单，并在“子网”字段中输入标识，如 VMware vSphere Web Client 中**摘要**选项卡上 **customer-nsx-edge** 边缘的描述中所示。
 3. 查看为 IP 地址显示的注释。这些注释用于确定在初始设置期间订购和使用的子网和 IP 地址。
 
-   **警告**：不要使用初始设置期间订购和使用的 IP 地址。但是，可以根据需求使用这些子网上的其他 IP 地址。要设置其他网络地址转换规则，请参阅[管理 NAT 规则](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}。
+   不要使用初始设置期间订购和使用的 IP 地址。但是，可以根据需求使用这些子网上的其他 IP 地址。要设置其他网络地址转换规则，请参阅[管理 NAT 规则](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}。
    {:important}
 
-### 相关链接
+## 相关链接
+{: #vc_esg_config-related}
 
 * [故障诊断](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
-* [常见问题](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [NSX Edge 服务网关](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

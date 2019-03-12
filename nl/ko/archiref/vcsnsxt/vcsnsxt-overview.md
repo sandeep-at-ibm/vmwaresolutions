@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 전체 아키텍처 개요
+{: #vcsnsxt-overview}
 
 다음 정보에서는 이 참조 아키텍처에서 사용되는 네트워크 아키텍처를 자세히 설명합니다. 다음 섹션으로 구성됩니다.
 * **VMware vCenter Server on {{site.data.keyword.cloud}} 개요** – vCenter Server 플랫폼의 중요 사항에 대해 설명합니다.
@@ -23,6 +24,7 @@ lastupdated: "2019-01-23"
   - 네트워크 트래픽 플로우
 
 ## vCenter Server 개요
+{: #vcsnsxt-overview-vcs-ovw}
 
 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle은 호스팅되는 프라이빗 클라우드로 안전하고 원활한 인프라 하이브리디티 및 애플리케이션 이동성을 위해 온프레미스 인프라를 쉽고 빠르게 클라우드로 확장하도록 도와줍니다.
 
@@ -40,10 +42,11 @@ IBM, Veeam 및 Zerto의 백업 및 재해 복구 오퍼링은 재해가 발생�
 
 vCenter Server Hybridity Bundle은 IBM 관리 서비스를 추가하여 일상적인 운영 및 가상화, 게스트 OS 또는 애플리케이션 계층의 유지보수를 오프로드할 수 있지만 관리 서비스는 아닙니다. 또한 {{site.data.keyword.cloud_notm}} Professional Services 팀을 활용하면 마이그레이션, 구현, 계획 및 온보딩 서비스를 사용하여 클라우드로의 이동 속도를 높이는 데 도움이 됩니다.
 
-vCenter Server Hybridity Bundle의 플랫폼 통합 옵션은 vRealize Suite 또는 vSphere with Operations Management와 같이 VMware에서 사용 가능한 옵션으로 제한되지 않지만, 오픈 소스 Terraform을 사용하여 IaC(Infrastructure as Code)를 관리하고 제공하는 [vCenter Server 및 {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html)와 [vCenter Server 및 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)과 같은 여러 {{site.data.keyword.cloud_notm}} 서비스 오퍼링으로 확장됩니다.
+vCenter Server Hybridity Bundle의 플랫폼 통합 옵션은 vRealize Suite 또는 vSphere with Operations Management와 같이 VMware에서 사용 가능한 옵션으로 제한되지 않지만, 오픈 소스 Terraform을 사용하여 IaC(Infrastructure as Code)를 관리하고 제공하는 [vCenter Server 및 {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro)와 [vCenter Server 및 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)과 같은 여러 {{site.data.keyword.cloud_notm}} 서비스 오퍼링으로 확장됩니다.
 
 vCenter Server Hybridity Bundle에 사용 가능한 서비스 및 다중 오퍼링 통합 옵션의 광범위한 포트폴리오는 서비스로서의 하이브리드를 가능하게 하는 진정한 하이브리드 플랫폼을 제공합니다.
 
-### 관련 링크
+## 관련 링크
+{: #vcsnsxt-overview-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

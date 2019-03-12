@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-18"
 
 ---
 
 # VMware Update Manager 概觀
+{: #vum-overview}
 
 VMware Update Manager (VUM) 使用多階段處理程序來升級 vSphere 物件以及套用修補程式或延伸規格。此處理程序會啟用具有最小系統關閉時間的順利更新程序。在我們查看此處理程序之前，必須瞭解下列術語：
 * **庫存物件** - vCenter 內的物件，例如虛擬機器、虛擬應用裝置或 vSphere ESXi 主機。
@@ -44,7 +45,9 @@ VUM 用戶端介面提供兩個主視圖：
 *	管理視圖
 *	法規遵循視圖
 
-##	管理視圖
+## 管理視圖
+{: #vum-overview-admin-view}
+
 管理視圖的存取方式是導覽至：**首頁** > **Update Manager**，然後選取 Update Manager 實例的 IP 位址。在「管理」視圖中，您可以執行下列作業：
 *	配置 Update Manager 設定
 *	建立及管理基準線和基準線群組
@@ -53,7 +56,9 @@ VUM 用戶端介面提供兩個主視圖：
 *	檢閱及檢查通知
 *	匯入 ESXi 映像檔
 
-##	法規遵循視圖
+## 法規遵循視圖
+{: #vum-overview-compliance-view}
+
 所選取庫存物件之法規遵循視圖的存取方式是導覽至**主機及叢集**或 **VM 及範本**，然後按一下 **Update Manager** 標籤。在「Update Manager 法規遵循」視圖中，您可以執行下列作業：
 *	檢視每個所選取庫存物件的法規遵循及掃描結果
 *	連接及分離基準線和基準線群組與選取的庫存物件
@@ -61,7 +66,8 @@ VUM 用戶端介面提供兩個主視圖：
 *	將修補程式或延伸規格編譯打包至主機
 *	重新修補選取的庫存物件
 
-### 相關鏈結
+## 相關鏈結
+{: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-26"
+lastupdated: "2019-02-15"
 
 ---
 
 # 기준선 작성 및 인벤토리 오브젝트에 연결
+{: #vum-baselines}
 
 기준선에는 하나 이상의 패치, 확장, 서비스 팩, 버그 수정 또는 업그레이드의 콜렉션이 있으며 패치, 확장 또는 업그레이드 기준선으로 분류될 수 있습니다. 기준선 그룹은 기존 기준선에서 구성됩니다. 호스트 기준선 그룹에는 단일 업그레이드 기준선과 다양한 패치 및 확장 기준선이 있을 수 있습니다. 가상 머신 및 가상 어플라이언스 기준선 그룹에는 최대 세 개의 업그레이드 기준선(하나의 VMware Tools 업그레이드 기준선, 하나의 가상 머신 하드웨어 업그레이드 기준선 및 하나의 가상 어플라이언스 업그레이드 기준선)이 있을 수 있습니다.
 
@@ -32,7 +33,8 @@ VUM에는 다음 디바이스 중 하나를 스캔하여 사용자 환경의 호
 2. 스캔할 클러스터 오브젝트를 클릭하십시오.
 3. **기준선 연결**을 클릭하고 두 개의 사전 정의된 패치 기준선을 선택한 후 **확인**을 클릭하십시오.
 
-### 관련 링크
+## 관련 링크
+{: #vum-baselines-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

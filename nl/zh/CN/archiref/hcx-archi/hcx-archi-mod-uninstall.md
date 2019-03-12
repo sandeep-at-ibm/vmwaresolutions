@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 修改或卸载 HCX
+{: #hcx-archi-mod-uninstall}
 
 可以升级现有安装，也可以除去部分或全部 Hybrid Cloud Services 部署。
 
 ##  取消延伸第 2 层网络
+{: #hcx-archi-mod-uninstall-unstretch-layer2}
 
 必须先取消延伸第 2 层网络，然后才能除去关联的第 2 层集中器服务虚拟设备或卸载 Hybrid Cloud Services。
 
@@ -26,10 +28,12 @@ lastupdated: "2019-01-23"
 4. 单击**确定**以确认。
 
 ## 卸载 HCX 虚拟设备
+{: #hcx-archi-mod-uninstall-uninst-hva}
 
 为了准备好卸载 Hybrid Cloud Services，或者因为安装体系结构中发生更改，可能需要卸载服务设备。请使用 Hybrid Cloud Services 来管理设备，如以下过程所概述。
 
 ### 卸载 HCX 虚拟设备的先决条件
+{: #hcx-archi-mod-uninstall-prereq-uninst-hva}
 
 * 取消或重置卸载任务期间可能发生的任何迁移的执行时间。
 * 检查 vSphere Web Client 任务控制台中是否有任何迁移正在运行，如果有，请等待迁移完成。
@@ -39,6 +43,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ### 卸载 HCX 虚拟设备的过程
+{: #hcx-archi-mod-uninstall-proc-uninst-hva}
 
 1. 在 VMware vSphere Web Client 界面的左窗格中，选择 Hybrid Cloud Services 插件。
 2. 在中央窗格中，单击**混合服务**选项卡。
@@ -49,6 +54,7 @@ lastupdated: "2019-01-23"
 Hybrid Cloud Gateway 和使用 Hybrid Cloud Gateway 的任何混合服务虚拟设备都将从 vCenter 和 VCF/VCS Hybrid Cloud Services Cloud 中除去。
 
 ## 卸载 HCX Manager
+{: #hcx-archi-mod-uninstall-unist-hcxm}
 
 在从内部部署数据中心除去 HCX 解决方案之前，应先卸载 HCX Manager 设备。执行以下步骤来卸载 Hybrid Cloud Services 虚拟机。
 
@@ -62,10 +68,12 @@ Hybrid Cloud Gateway 和使用 Hybrid Cloud Gateway 的任何混合服务虚拟�
 * 已迁移的 VM
 
 ### 后续步骤
+{: #hcx-archi-mod-uninstall-what-next}
 
 可以手动备份或删除已迁移的 VM 和日志。
 
 ## 登录到 HCX 管理门户网站
+{: #hcx-archi-mod-uninstall-log-hcxmp}
 
 可以使用基于浏览器的用户界面通过管理门户网站来管理 Hybrid Cloud Services 部署。
 
@@ -73,6 +81,7 @@ Hybrid Cloud Gateway 和使用 Hybrid Cloud Gateway 的任何混合服务虚拟�
 2. Hybrid Cloud Services 用户界面使用 SSL 在 Web 浏览器窗口中打开。如果需要，请接受安全证书。这将打开 VMware Hybridity and Networking 登录屏幕。
 3. 输入用户名和密码。缺省情况下，用户名为 Admin。密码是安装 Hybrid Cloud Services 虚拟设备时提供的值。
 
-### 相关链接
+## 相关链接
+{: #hcx-archi-mod-uninstall-related}
 
-* [关于 HCX on IBM Cloud 的故障诊断](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-trbl.html)
+* [关于 HCX on IBM Cloud 的故障诊断](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-trbl)

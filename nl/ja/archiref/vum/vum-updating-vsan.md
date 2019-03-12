@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # vSAN クラスターの更新
+{: #vum-updating-vsan}
 
 vSAN では、VUM で使用するシステム・ベースラインおよびベースライン・グループを生成します。これらの推奨されるベースラインを使用して、vSAN を使用する VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンス内の vSphere ESXi ホストのソフトウェア、パッチ、および拡張機能を更新できます。 vSAN 6.6.1 以降では、vSAN クラスター用の自動化されたビルド推奨が生成されます。 vSAN では、「VMware Compatibility Guide」と vSAN リリース・カタログの情報を、インストールされている vSphere ESXi リリースに関する情報と組み合わせます。
 
@@ -20,17 +21,18 @@ vSAN では、VUM で使用するシステム・ベースラインおよびベ�
 vSAN クラスターのアップグレードは、以下の一連のタスクで進行します。
 * **vSAN オンライン・ヘルス・ワークフローの有効化** - このワークフローを使用すると、VUM 内の vSAN ベースラインが有効になり、更新を確認および修復できます。 このワークフローは、VUM で vSAN を有効にするためにのみ、最初に実行する必要があります。
 * **前提条件** - 前提条件、プロセス、および制約事項を理解します。
-* **vCenter Server Appliance をアップグレードします**。 詳しくは、[VCSA 更新および SSO がリンクされた vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html) を参照してください。
-* **vSphere ESXi ホストのアップグレード** - 詳しくは、[ベースラインの作成とインベントリー・オブジェクトへの接続](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html)を参照してください。
+* **vCenter Server Appliance をアップグレードします**。 詳しくは、[VCSA 更新および SSO がリンクされた vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa) を参照してください。
+* **vSphere ESXi ホストのアップグレード** - 詳しくは、[ベースラインの作成とインベントリー・オブジェクトへの接続](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines)を参照してください。
 * **vSAN ディスク・フォーマットのアップグレード** - 『vSAN ディスク・フォーマットのアップグレード』を参照してください。 ディスク・フォーマットのアップグレードはオプションですが、最良の結果を得るために、最新バージョンを使用するようオブジェクトをアップグレードします。 オンディスク・フォーマットでは、vSAN の機能セット全体に環境が公開されます。
 
 ## vSAN オンライン・ヘルス・ワークフローの有効化
+{: #vum-updating-vsan-enable-vsan-workflow}
 
 VUM で vSAN ベースラインを使用可能にするには、以下のセクションのタスクを使用します。 vSAN 6.6.1 以降では、VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスをサポートされている状態に保つために、使用可能な最良のリリースを使用して vSAN クラスターが最新の状態となるよう、シームレスな自動更新プロセスを提供します。
 * **vSAN バージョン推奨** - 「VMware Compatibility Guide」、vSAN リリース・カタログ、および基礎となるハードウェア構成の認識からの情報を使用して、自動的に生成されます。 このシステム・ベースラインには、推奨リリースに必要なドライバーおよびパッチ更新も含まれています。
 * **vSAN ビルド推奨** - クラスターが現在のハードウェア互換性状況以上の状態を保持することが保証されます。
 
-続行する前に、VCSA が vCenter 6.5 パッチ 2 以降のバージョンであることを確認してください。これにより、プロキシーの使用に関する問題が修正されます。 詳しくは、[VCSA 更新および SSO がリンクされた vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html) を参照してください。
+続行する前に、VCSA が vCenter 6.5 パッチ 2 以降のバージョンであることを確認してください。これにより、プロキシーの使用に関する問題が修正されます。 詳しくは、[VCSA 更新および SSO がリンクされた vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa) を参照してください。
 
 VUM で vSAN が更新されたことを確認するには、vSAN オンライン・ヘルス・ワークフローに従います。 したがって、vSAN オンライン・ヘルス・ワークフローを有効にするために、vSAN オンライン・ヘルスで `vcsa.vmware.com` および `vmware.com` の各サイトに接続し、以下のオンライン・ヘルス・チェックを実行する必要があります。
 * プロキシーを使用するための VCSA の構成
@@ -41,6 +43,7 @@ VUM で vSAN が更新されたことを確認するには、vSAN オンライ�
 最初のステップでは、vSAN ビルド推奨エンジンに my.vmware.com 資格情報を追加します。 正常にログインすると、vSAN では、vSAN クラスターごとに推奨される更新のベースライン・グループが生成されます。 vSAN システム・ベースラインは、「Baselines and Groups」タブの「Baselines」ペインにリストされます。
 
 ### プロキシーを使用するための VCSA の構成
+{: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	ジャンプ・サーバーの Web ブラウザーから、VCSA 管理インターフェース (`https://<vCenter ip>:5480`) に接続します。
 2.	IC4VS コンソールから資格情報を使用して、VCSA 管理インターフェースに root としてログインします。
@@ -54,14 +57,19 @@ HTTPS パラメーターが設定されていない場合は、次のコマン�
   `proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
 
 ### プロキシーを使用するための vSAN の構成
+{: #vum-updating-vsan-config-vsan-proxy}
+
 1. **「Home」** > **「Hosts and Clusters」**にナビゲートし、ナビゲーション・ペインで**「vSAN cluster」**を選択してから、**「Configure」タブ**を選択して**「vSAN」**、**「General」**の順にナビゲートします。 **「Internet Connectivity」**セクションまでスクロールして、**「Edit」**をクリックします。
 2. プロキシーの IP アドレスとポート番号を入力し、**「OK」**をクリックします。
 
 ### カスタマー・エクスペリエンス向上プログラム (CEIP) の有効化
+{: #vum-updating-vsan-enable-ceip}
 
 これはオプション・ステップです。 vSphere Web Client を使用して、**「Home」** > **「Administration」** > **「Customer Experience Improvement Program」**にナビゲートしてから、**「Join」**をクリックします。
 
 ### テスト・アップロードを実行し、アップロードが成功したことを確認する
+{: #vum-updating-vsan-complete-upload}
+
 1. vSphere Web Client を使用して、**「Home」** > **「Hosts and Clusters」**にナビゲートします。 必要なクラスターを選択して、**「Monitor」タブ**および**「vSAN」**ページを選択してから、**「Health」**をクリックします。 **「Enable Online Health」**をクリックします。
 2. **「Retest」**をクリックし、プロセスが完了するまで待機します。
 3. _「Online health connectivity」_という新しいチェックが「Health」に表示され、**「Enable Online Health」**が**「Retest with Online Health」**に変わります。
@@ -71,6 +79,7 @@ HTTPS パラメーターが設定されていない場合は、次のコマン�
 7. **「Update Manager」タブ**を押すと、vSAN クラスターがベースラインに追加されます。
 
 ## 前提条件
+{: #vum-updating-vsan-prereq}
 
 vSAN アップグレード・プロセスを開始する前に、以下の要件が満たされていることを確認してください。
 * VMware 知識ベースの記事を確認し、現在の vSAN バージョンと必要なターゲット vSAN バージョンとの間の既知の互換性に関するすべての問題を確認します。
@@ -93,14 +102,17 @@ vSAN アップグレード・プロセスを開始する前に、以下の要件
   - したがって、特定の vSAN 動作変更はオンディスク・フォーマットによって制御されるため、より新しいオンディスク・フォーマット・バージョンを混合バージョン・クラスターに導入しないようにすることが重要です。
 
 ## vCenter Server Appliance のアップグレード
+{: #vum-updating-vsan-upgrade-vcsa}
 
-詳しくは、[VCSA 更新および SSO がリンクされた vCenter](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html) を参照してください。
+詳しくは、[VCSA 更新および SSO がリンクされた vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa) を参照してください。
 
-##	vSphere ESXi ホストのアップグレード
+## vSphere ESXi ホストのアップグレード
+{: #vum-updating-vsan-upgrade-hosts}
 
-詳しくは、[ベースラインの作成とインベントリー・オブジェクトへの接続](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html)を参照してください。
+詳しくは、[ベースラインの作成とインベントリー・オブジェクトへの接続](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines)を参照してください。
 
-##	vSAN ディスク・フォーマットのアップグレード
+## vSAN ディスク・フォーマットのアップグレード
+{: #vum-updating-vsan-upgrade-vsan}
 
 Ruby vSphere Console (RVC) は、vSphere 用の Ruby ベースのコマンド・ライン・インターフェースであり、VMware vSphere ESXi および vCenter の管理に使用できます。 vSphere インベントリーはツリー構造で表示されるため、vCenter オブジェクトにナビゲートしてコマンドを実行できます。
 
@@ -134,7 +146,8 @@ vSphere Client でクリックするよりも、より効率的に多くの基�
 
 11. これで VSAN クラスターのアップグレードが完了しました。 `exit` と入力して **Enter** キーを押し、RVC を終了します。
 
-### 関連リンク
+## 関連リンク
+{: #vum-updating-vsan-related}
 
 * [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)

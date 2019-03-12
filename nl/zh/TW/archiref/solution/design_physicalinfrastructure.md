@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 實體基礎架構設計
+{: #design_physicalinfrastructure}
 
 實體基礎架構包含下列元件：
 
@@ -25,15 +26,16 @@ lastupdated: "2019-01-23"
   <dd class="dd">實體網路會提供與環境的網路連線功能，而之後網路虛擬化會使用該環境。網路由 {{site.data.keyword.cloud_notm}} 服務網路提供，並包含額外服務（例如 DNS 及 NTP）。</dd>
 </dl>
 
-如需實體元件的相關資訊，請參閱 [Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_bom.html)或 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_bom.html)的「資料清單」。
+如需實體元件的相關資訊，請參閱 [Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)或 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的「資料清單」。
 
 如需儲存空間的相關資訊，請參閱[共用儲存空間架構](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)。
 
 ## 實體主機設計
+{: #design_physicalinfrastructure-host-design}
 
 實體主機是指環境中用來提供運算資源的 {{site.data.keyword.baremetal_short}}。此解決方案中所套用的 {{site.data.keyword.baremetal_short}} 已經過 VMware 認證，並列在 [VMware HCG](http://www.vmware.com/resources/compatibility/search.php) 中。
 
-解決方案中可用的伺服器配置符合或超出安裝、配置及管理 vSphere ESXi 的最低需求。有各種配置可用來滿足不同的需求。如需用於 VMware on {{site.data.keyword.cloud_notm}} 解決方案之確切規格的詳細清單，請參閱 [Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_bom.html)或 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_bom.html)的「資料清單」。
+解決方案中可用的伺服器配置符合或超出安裝、配置及管理 vSphere ESXi 的最低需求。有各種配置可用來滿足不同的需求。如需用於 VMware on {{site.data.keyword.cloud_notm}} 解決方案之確切規格的詳細清單，請參閱 [Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)或 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的「資料清單」。
 
 {{site.data.keyword.baremetal_short}} 位於 {{site.data.keyword.cloud_notm}}。
 {:note}
@@ -49,12 +51,14 @@ Bare Metal Server 的規格如下：
 * 磁碟機數目：2 台以上
 
 ## 實體網路設計
+{: #design_physicalinfrastructure-net-design}
 
 本節說明 {{site.data.keyword.cloud_notm}} 所提供的實體網路，以及與實體主機相關聯的實體主機連線（VLAN、MTU）。
 
 {{site.data.keyword.cloud_notm}} 的實體網路分成三個不同的網路：公用、專用和管理。如需這三個網路及其運作方式的圖解，請參閱 [The {{site.data.keyword.cloud_notm}} Network](https://www.ibm.com/cloud-computing/bluemix/our-network)。
 
 ### 公用網路
+{: #design_physicalinfrastructure-public-net}
 
 {{site.data.keyword.CloudDataCents_notm}} 及網路存在點 (PoP) 具有多個 1 Gbps 或 10 Gbps 最上層傳輸及對等網路營運商連線。
 
@@ -65,16 +69,19 @@ Bare Metal Server 的規格如下：
 這種多層式的設計，容許網路在 {{site.data.keyword.CloudDataCent_notm}} 內的機架、列及 Pod 之間進行調整。
 
 ### 專用網路
+{: #design_physicalinfrastructure-private-net}
 
 所有 {{site.data.keyword.CloudDataCents_notm}} 及 PoP 都是藉由專用網路骨幹進行連接。專用網路與公用網路分開，而且可以啟用全球各地之 {{site.data.keyword.CloudDataCents_notm}} 中服務的連線功能。透過多個 10 Gbps 或 40 Gbps 專用網路連線，可以在 {{site.data.keyword.CloudDataCents_notm}} 之間移動資料。
 
 與公用網路類似，專用網路在該伺服器中為多層式，而其他基礎架構元件則連接至聚集的後端客戶交換器 (BCS)。這些聚集的交換器會連接至一對個別的後端客戶路由器 (BCR)，以連接 L3 網路。專用網路也支援使用巨大訊框 (MTU 9000) 來進行實體主機連線的功能。
 
 ### 管理網路
+{: #design_physicalinfrastructure-mgmt-net}
 
 除了公用及專用網路之外，每部 {{site.data.keyword.cloud_notm}} 伺服器都會連接至頻外管理網路。這個可透過 VPN 存取的管理網路，容許「智慧型平台管理介面 (IPMI)」存取伺服器以進行維護及管理，而不論其 CPU、韌體及作業系統為何。
 
 ### 主要及可攜式 IP 區塊
+{: #design_physicalinfrastructure-ip-blocks}
 
 {{site.data.keyword.cloud_notm}} 配置兩種類型的 IP 位址，以在 {{site.data.keyword.cloud_notm}} 基礎架構內使用：
 * 主要 IP 位址會被指派給 {{site.data.keyword.cloud_notm}} 所佈建的裝置、Bare Metal Server 及虛擬伺服器。不要指派這些區塊中的任何 IP 位址。
@@ -83,18 +90,21 @@ Bare Metal Server 的規格如下：
 若在 {{site.data.keyword.slportal}} 內啟用 **VLAN Spanning**，或將帳戶配置為**虛擬遞送及轉遞 (VRF)** 帳戶，則可以將主要或可攜式 IP 位址變成可遞送給客戶帳戶內的任何 VLAN。
 
 ### VLAN Spanning
+{: #design_physicalinfrastructure-vlan-spanning}
 
 **VLAN Spanning** 是一種 {{site.data.keyword.slportal}} 帳戶設定，容許將帳戶內所有 VLAN 的主要及可攜式子網路 IP 區塊遞送給彼此。停用 **VLAN Spanning** 設定時，IP 區塊仍然可以遞送給 {{site.data.keyword.cloud_notm}} 服務，但不能遞送給彼此。
 
 若要容許在解決方案元件所在的各種子網路之間進行透通連線，您需要在已部署 Cloud Foundation 及 vCenter Server 實例的 {{site.data.keyword.slportal}} 帳戶中啟用 **VLAN Spanning**。
 
-### 虛擬遞送及轉遞 (VRF)
+### 虛擬遞送及轉遞
+{: #design_physicalinfrastructure-vrf}
 
-您也可以將 {{site.data.keyword.slportal}} 帳戶配置為 VRF 帳戶來提供與 VLAN Spanning 類似的功能，以啟用子網路 IP 區塊之間的自動遞送。所有具有 Direct-Link 連線的帳戶都必須轉換或建立為 VRF 帳戶。
+您也可以將 {{site.data.keyword.slportal}} 帳戶配置為虛擬遞送及轉遞 (VRF) 帳戶來提供與 VLAN Spanning 類似的功能，以啟用子網路 IP 區塊之間的自動遞送。所有具有 Direct Link 連線的帳戶都必須轉換或建立為 VRF 帳戶。
 
 {{site.data.keyword.vmwaresolutions_short}} 主控台無法偵測 {{site.data.keyword.slportal}} 中是否已啟用 VRF。您會收到警告，提醒您確定已在 {{site.data.keyword.slportal}} 帳戶中啟用 **VLAN Spanning** 或 VRF。
 
 ### 實體主機連線
+{: #design_physicalinfrastructure-host-connect}
 
 此設計中的每部實體主機都會有兩對備用的 10 Gbps 乙太網路連線，以連接至每台 {{site.data.keyword.cloud_notm}} Top of Rack (ToR) 交換器（公用及專用）。配接卡會設定為總共 4 個 10 Gbps 連線的個別連線（未結合）。這樣可讓網路介面卡 (NIC) 連線彼此獨立地運作。
 
@@ -103,8 +113,9 @@ Bare Metal Server 的規格如下：
 ![實體主機 NIC 連線](physical_nic_connection.svg "實體主機 NIC 連線")
 
 ### VLAN
+{: #design_physicalinfrastructure-vlans}
 
-{{site.data.keyword.vmwaresolutions_short}} 供應項目設計成在部署時指派 3 個 VLAN（一個公用及兩個專用）。如圖 2 所示，公用 VLAN 會指派給 eth1 及 eth3，而專用 VLAN 會指派給 eth0 及 eth2。
+{{site.data.keyword.vmwaresolutions_short}} 供應項目設計成在部署時指派 3 個 VLAN（一個公用及兩個專用）。如前一個圖中所示，公用 VLAN 會指派給 eth1 及 eth3，而專用 VLAN 會指派給 eth0 及 eth2。
 
 依預設，在此設計中，{{site.data.keyword.cloud_notm}} 內建立及指派的公用 VLAN 及第一個專用 VLAN 不會加上標籤。額外的專用 VLAN 會成為實體交換器埠的主幹，並在使用這些子網路的 VMware 埠群組內加上標籤。
 
@@ -141,24 +152,29 @@ Bare Metal Server 的規格如下：
 專用網路連線配置成使用巨大訊框 MTU 大小 9000，以改善大型資料傳送（例如儲存空間及 vMotion）的效能。這是 VMware 內及 {{site.data.keyword.cloud_notm}} 容許的最大 MTU。公用網路連線使用標準乙太網路 MTU 1500。必須維護此值，因為任何變更都可能導致透過網際網路傳送時發生封包片段化。
 
 ## 實體儲存空間設計
+{: #design_physicalinfrastructure-storage-design}
 
 實體儲存空間設計包含實體主機中所安裝實體磁碟的配置，以及共用檔案層次儲存空間的配置。這包括 vSphere ESXi Hypervisor 的作業系統磁碟，以及用於虛擬機器 (VM) 儲存空間的磁碟。VM 的儲存空間可以包含 VMware vSAN 所虛擬化的本端磁碟，或是包含共用檔案層次儲存空間。
 
 ### 作業系統磁碟
+{: #design_physicalinfrastructure-os-disks}
 
 vSphere ESXi Hypervisor 設計成安裝於持續性位置中。因此，實體主機在 RAID-1 配置中包含兩個 1 TB 的 SATA 磁碟，以支援 vSphere ESXi Hypervisor 的備援。
 
 ### 虛擬機器儲存空間
+{: #design_physicalinfrastructure-vm-storage}
 
 此設計容許使用 VMware vSAN 或共用檔案層次儲存空間作為 VM 之主要資料儲存庫的選項。
 
 ### vSAN 磁碟
+{: #design_physicalinfrastructure-vsan-disks}
 
 使用時，會使用全快閃記憶體的配置來配置 VMware vSAN。此設計容許數個配置選項（包括 2U 和 4U 機箱）、各種磁碟數量，以及各種磁碟大小。所有配置都會使用兩個 vSAN 磁碟群組，搭配一個固態硬碟 (SSD) 用於快取，和一個以上的 SSD 用於容量。所有配置供 vSAN 耗用的磁碟機，都以單一磁碟 RAID-0 進行配置。
 
-如需所支援配置的相關資訊，請參閱 [Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc/sd_bom.html)或 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_bom.html)的「資料清單」。
+如需所支援配置的相關資訊，請參閱 [Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)或 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的「資料清單」。
 
 ### 跨主機的共用檔案層次儲存空間
+{: #design_physicalinfrastructure-shared-storage}
 
 使用共用檔案層次儲存空間時，會將一個 2 TB 的 NFS 共用連接至構成起始 VMware 叢集的主機。這個共用（稱為管理共用）會用於管理元件（例如 VMware vCenter Server、Platform Services Controller 及 VMware NSX）。儲存空間是使用 NFS 第 3 版通訊協定所連接，而且最多可支援 4000 IOPS。
 
@@ -170,9 +186,10 @@ vSphere ESXi Hypervisor 設計成安裝於持續性位置中。因此，實體�
 
 提供 10 IOPS/GB 效能層級的 {{site.data.keyword.CloudDataCents_notm}} 也包含由提供者管理的靜態資料加密（AES-256 加密），並且由全快閃記憶體儲存空間加以備份。10 IOPS/GB 效能層級的容量上限為 4 TB。如需此解決方案中使用之共用 NAS 的相關資訊，請參閱[共用儲存空間架構](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)。
 
-### 相關鏈結
+## 相關鏈結
+{: #design_physicalinfrastructure-related}
 
-* [Cloud Foundation 資料清單](/docs/services/vmwaresolutions/sddc/sd_bom.html)
-* [vCenter Server 資料清單](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [Cloud Foundation 資料清單](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
+* [vCenter Server 資料清單](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [共用儲存空間架構](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
 * [NetApp ONTAP Select 架構](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

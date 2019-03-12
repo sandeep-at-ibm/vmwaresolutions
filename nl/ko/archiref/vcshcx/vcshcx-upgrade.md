@@ -22,4 +22,4 @@ HCX 업그레이드는 클라이언트 측 HCX 관리자 업데이트 시에는
 ## 관련 링크
 {: #vcshcx-upgrade-related}
 
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

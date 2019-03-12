@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # VMware 소프트웨어 업데이트 유형
+{: #vum-type-updates}
 
 VMware에서는 다음 용어를 사용하여 소프트웨어 업데이트에 대해 설명합니다.
 
@@ -27,7 +28,8 @@ VMware에서는 다음 용어를 사용하여 소프트웨어 업데이트에 �
 |VA 업그레이드 |	공급업체에서 업그레이드로 간주하는 가상 어플라이언스에 대한 업데이트입니다. |
 |VIB |	VIB는 단일 소프트웨어 패키지입니다. |
 
-### 관련 링크
+## 관련 링크
+{: #vum-type-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

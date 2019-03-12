@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2018-12-11"
 {:important: .important}
 
 # 联系 IBM 支持人员
+{: #trbl_support}
 
 如果您需要有关 {{site.data.keyword.vmwaresolutions_full}} 的帮助，请通过 {{site.data.keyword.vmwaresolutions_short}} 控制台创建 {{site.data.keyword.cloud_notm}} 支持凭单以获取帮助。
 
 ## 通过 IBM Cloud for VMware Solutions 控制台提交支持凭单的过程
+{: #trbl_support-procedure}
 
 1. 转至 https://console.cloud.ibm.com/infrastructure/vmware-solutions/console。
 2. 使用 **IBM 标识**帐户登录到控制台。

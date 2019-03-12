@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # vCenter Server インスタンスのサービスの注文、表示、削除
+{: #vc_addingremovingservices}
 
 災害復旧ソリューションなど、VMware vCenter Server インスタンス向けのサービスを注文できます。 これらのサービスが不要になった場合は、インスタンスから削除できます。
 
 ## vCenter Server インスタンスで使用可能なサービス
+{: #vc_addingremovingservices-available-services}
 
 vCenter Server インスタンスで使用できるサービスと、インストール済みのサービスのバージョンを以下の表にまとめます。
 
@@ -24,27 +26,30 @@ vCenter Server インスタンスで使用できるサービスと、インス�
 
 | サービス名 | 現在のサービスのバージョン | インスタンスのバージョン |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/f5_considerations.html) | BIG-IP VE v13.1.1.2 | V1.9 以降 |
-| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_considerations.html) | 300 シリーズ | V2.0 以降 |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html) | 6.0.3 | V2.0 以降 |
-| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html) | 5.4.0 | V2.3 以降 |
-| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_considerations.html)  | 4.2.1 | V2.3 以降 |
-| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_considerations.html)              | 4.2 | V2.5 以降 |
-| [{{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services/icp_overview.html) | 3.1 | V2.5 以降 |
-| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_considerations.html) | 10.1.2 | V2.2 以降 |
-| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html) | 2.0  | N/A  |
-| [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html) | 9.5u3 | V1.8 以降 |
-| [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html) | 6.0 update 3 | V1.2 以降 |
+| [F5 on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations) | BIG-IP VE v13.1.1.2 | V1.9 以降 |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations) | 300 シリーズ | V2.0 以降 |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | V2.0 以降 |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations) | 5.4.0 | V2.3 以降 |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)  | 4.2.1 | V2.3 以降 |
+| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)              | 4.2 | V2.5 以降 |
+| [{{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview) | 3.1 | V2.5 以降 |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations) | 10.1.2 | V2.2 以降 |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) | 2.0  | N/A  |
+| [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) | 9.5u3 | V1.8 以降 |
+| [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) | 6.0 update 3 | V1.2 以降 |
 
 ## vCenter Server インスタンスにサービスを追加する手順
+{: #vc_addingremovingservices-adding-procedure}
 
 vCenter Server インスタンスにサービスを追加するには、前のテーブルで該当サービスのリンクをクリックし、そのサービスに関する考慮事項を確認し、デプロイするコンポーネントにチェック・マークを付けます。 その後、サービス注文トピックに記されている指示に従って、インスタンスにサービスを追加します。
 
 ### サービスのインストールの結果
+{: #vc_addingremovingservices-adding-results}
 
 サービスのインストールが正常に完了すると、E メールで通知が届きます。また、そのサービスがインスタンスの**「サービス」**ページに表示され、サービスの状況が**「インストール済み」**になります。
 
 ## vCenter Server インスタンス用サービスを表示する手順
+{: #vc_addingremovingservices-viewing-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、サービスを表示するインスタンスをクリックします。
@@ -53,6 +58,7 @@ vCenter Server インスタンスにサービスを追加するには、前の�
 5. 表示したサービスによっては、サービスの詳細情報に記されている資格情報を使用してサービス・コンソールにアクセスし、そこからサービスを管理することもできます。
 
 ## vCenter Server インスタンス用サービスを削除する手順
+{: #vc_addingremovingservices-removing-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、サービスを削除するインスタンスをクリックします。
@@ -61,6 +67,7 @@ vCenter Server インスタンスにサービスを追加するには、前の�
 5. **「サービスの削除」**ウィンドウで、考慮事項または警告が示されているなら、それを確認します。 **「了解」**を選択し、**「削除」**をクリックします。
 
 ### サービスの削除結果
+{: #vc_addingremovingservices-removing-results}
 
 サービスの削除要求が受け入れられると、サービス状況が**「削除中」**に変更されます。
 
@@ -69,6 +76,7 @@ vCenter Server インスタンスにサービスを追加するには、前の�
 削除したサービスは、{{site.data.keyword.cloud_notm}} インフラストラクチャーの請求サイクルの最後まで課金されます。
 {:note}
 
-### 関連リンク
+## 関連リンク
+{: #vc_addingremovingservices-related}
 
-* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

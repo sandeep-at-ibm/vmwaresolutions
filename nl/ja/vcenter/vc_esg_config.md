@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,8 +13,9 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # ユーザー管理の NSX ESG を VM で使用するためのネットワークの構成
+{: #vc_esg_config}
 
-VMware vCenter Server インスタンスにデプロイされている VMware NSX Edge Services Gateway (ESG) を活用できるように、仮想マシンのネットワークを構成します。 セキュリティー・リスクを最小化するために適用されるセキュリティー対策について詳しくは、[管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-) を参照してください。
+VMware vCenter Server インスタンスにデプロイされている VMware NSX Edge Services Gateway (ESG) を活用できるように、仮想マシンのネットワークを構成します。 セキュリティー・リスクを最小化するために適用されるセキュリティー対策について詳しくは、[管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-) を参照してください。
 
 VMware NSX は、分離したネットワークの仮想化を可能にし、スイッチ、ルーティング、ファイアウォールなどの複数のネットワーク・サービスを提供するネットワーク仮想化プラットフォームです。 NSX について詳しくは、[NSX の概要](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}を参照してください。
 
@@ -29,9 +30,10 @@ vCenter Server インスタンスの注文プロセスの中で、以下のア�
   プライベート専用であるインスタンスの場合、NSX edge はデプロイされません。
   {:note}
 
-* {{site.data.keyword.cloud_notm}} サービスに Veeam をインストールした場合は、NSX Manager が NSX 構成の日次バックアップを実行するように構成されます。 詳しくは、[{{site.data.keyword.cloud_notm}} に Veeam をインストールする際の考慮事項](/docs/services/vmwaresolutions/services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud)を参照してください。
+* {{site.data.keyword.cloud_notm}} サービスに Veeam をインストールした場合は、NSX Manager が NSX 構成の日次バックアップを実行するように構成されます。 詳しくは、[{{site.data.keyword.cloud_notm}} に Veeam をインストールする際の考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud)を参照してください。
 
 ## VM のネットワーク設定を構成する手順
+{: #vc_esg_config-procedure-config-networking}
 
 ワークロード VM に NSX を利用するには、VM の作成時に次の手順を実行して、いくつかの設定を構成する必要があります。
 
@@ -53,6 +55,7 @@ vCenter Server インスタンスの注文プロセスの中で、以下のア�
 3. VM のデフォルト・ゲートウェイに `192.168.10.1` を割り当てます。 このアドレスは、ワークロード VM と同じ論理スイッチ上の NSX DLR の IP アドレスです。
 
 ## SNAT ルールを有効にする手順
+{: #vc_esg_config-procedure-enable-snat-rule}
 
 ワークロード VM にインターネットへのアウトバウンド・アクセスを許可するには、関連付けられた SNAT (送信元ネットワーク・アドレス変換) ルールを有効にする必要があります。 SNAT ルールを有効にすると、VM からのインターネット・アクセスを単一のパブリック IP アドレスに変換できます。 VMware vSphere Web Client で以下の手順を実行します。
 
@@ -64,6 +67,7 @@ vCenter Server インスタンスの注文プロセスの中で、以下のア�
 NSX Edge NAT ルールについて詳しくは、[NAT ルールの管理](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}を参照してください。
 
 ## カスタマー・サブネットの詳細を指定する手順
+{: #vc_esg_config-procedure-identify-customer-subnets-details}
 
 **customer-nsx-edge** はお客様専用のエッジであるため、変更して、インバウンドまたはアウトバウンドのトラフィックに対する追加の NAT ルールを定義できます。 それらのルールでは、自動的に注文されたパブリックまたはプライベートのカスタマー・サブネットの IP アドレスだけを使用する必要があります。
 
@@ -79,11 +83,12 @@ NSX Edge NAT ルールについて詳しくは、[NAT ルールの管理](https:
 2. フィルター・メニューをクリックし、「サブネット」フィールドに、VMware vSphere Web Client の**「サマリ」**タブの **customer-nsx-edge** エッジの説明に記載されていた識別子を入力します。
 3. IP アドレスについて表示されるメモを確認します。 これらのメモに、初期セットアップ時に注文され、使用されたサブネットと IP アドレスが示されています。
 
-   **警告:** 初期セットアップ時に注文され、使用された IP アドレスは使用しないでください。 ただし、必要に応じてこれらのサブネット上の他の IP アドレスを使用できます。 追加のネットワーク・アドレス変換ルールをセットアップするには、[NAT ルールの管理](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}を参照してください。
+   初期セットアップ時に注文され、使用された IP アドレスは使用しないでください。ただし、必要に応じてこれらのサブネット上の他の IP アドレスを使用できます。追加のネットワーク・アドレス変換ルールをセットアップするには、[NAT ルールの管理](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}を参照してください。
    {:important}
 
-### 関連リンク
+## 関連リンク
+{: #vc_esg_config-related}
 
 * [トラブルシューティング](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

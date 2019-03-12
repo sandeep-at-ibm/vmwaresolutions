@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # VMware 軟體更新類型
+{: #vum-type-updates}
 
 VMware 使用下列術語來說明軟體更新。
 
@@ -27,7 +28,8 @@ VMware 使用下列術語來說明軟體更新。
 | VA 升級 |	供應商視為升級的虛擬應用裝置更新。|
 | VIB |	VIB 是單一軟體套件。|
 
-### 相關鏈結
+## 相關鏈結
+{: #vum-type-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

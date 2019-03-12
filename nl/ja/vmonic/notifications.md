@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # システム通知の管理
+{: #notifications}
 
 システムまたはユーザーによる操作の状況の通知を確認できます。 この情報を使用して、発生する可能性のある問題を調査することもできます。
 
 ## 通知の表示
+{: #notifications-view}
 
 1. {{site.data.keyword.vmwaresolutions_full}} コンソールで、左側のナビゲーション・ペインの**「通知」**をクリックします。
 2. すべての通知に関するサマリーを表示します。
@@ -68,10 +70,12 @@ lastupdated: "2019-01-23"
 3. 通知の行をクリックすると、通知の詳細が表示されます。
 
 ## 通知のフィルタリング
+{: #notifications-filter}
 
 デフォルトでは、すべての未読の通知が表示されます。 状況、重大度、タイプで通知をフィルタリングできます。 通知をフィルタリングするには、**「Status」**、**「Severity」**、**「Type」**のリストで、表示する項目のチェック・ボックスだけを選択します。
 
-### 関連リンク
+## 関連リンク
+{: #notifications-related}
 
-* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [ユーザー・アカウントと設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [ユーザー・アカウントと設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 애플리케이션 현대화 개요
+{: #vcsiks-appmod}
 
 다음 다이어그램은 Acme Skateboards에서 배치할 애플리케이션 현대화 참조 아키텍처를 보여주며 이 일련의 문서에서 자세히 설명합니다.
 
@@ -40,6 +41,7 @@ HCX는 고객이 {{site.data.keyword.cloud_notm}}에서 실행 중인 VMware vCe
   - 온프레미스 데이터 센터의 레거시 시스템과 클라우드 VM 간의 트래픽.
 
 ## Acme Skateboards의 주요 이점
+{: #vcsiks-appmod-benefits}
 
 vCenter Server는 사용자의 워크로드에 가장 적합하며 유연한 VMware SDDC(Software Defined Data Center) 솔루션을 설계하는 데 필요한 vSAN을 포함한 공유 스토리지 옵션과 VMware vSphere, vCenter Server, NSX이 포함된 기본 빌딩 블록을 제공합니다.
 
@@ -67,6 +69,7 @@ Kubernetes 클러스터 내에 경량 DNS를 제공합니다. 로드 밸런싱�
 
 이 참조 아키텍처는 VCS, {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}}가 애플리케이션 현대화 과정을 따라 Acme Skateboards로 안전하게 이동하는 방법을 보여줍니다.
 
-### 관련 링크
+## 관련 링크
+{: #vcsiks-appmod-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

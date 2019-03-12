@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,15 +13,17 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # 업데이트를 Cloud Foundation 인스턴스에 적용
+{: #sd_applyingupdates}
 
 {{site.data.keyword.vmwaresolutions_full}} 콘솔은 VMware 가상 환경에 적용할 수 있는 사용 가능한 소프트웨어 업데이트를 주기적으로 발견하고 나열합니다.
 
 사용 가능한 업데이트는 인스턴스의 소프트웨어 업데이트 목록에 있는 레코드로, 즉시 적용되거나 나중에 실행되도록 스케줄될 수 있습니다. 업데이트는 IBM 관리 컴포넌트 및 VMware 컴포넌트를 업데이트하기 위해 하나 이상의 패키지가 포함된 번들입니다.
 
-V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데이트는 더 이상 나열되지 않습니다. 호스트 추가, 클러스터 추가 및 서비스 주문과 같은 조치를 수행하면 인스턴스가 최신 버전으로 자동 업데이트됩니다. 자동 업데이트에 대한 자세한 정보는 [V2.5 릴리스 정보](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)에서 *IBM CloudDriver 복원성* 섹션을 참조하십시오.
+V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데이트는 더 이상 나열되지 않습니다. 호스트 추가, 클러스터 추가 및 서비스 주문과 같은 조치를 수행하면 인스턴스가 최신 버전으로 자동 업데이트됩니다. 자동 업데이트에 대한 자세한 정보는 [V2.5 릴리스 정보](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)에서 *IBM CloudDriver 복원성* 섹션을 참조하십시오.
 {:note}
 
 ## 시작하기 전에
+{: #sd_applyingupdates-prereq}
 
 업데이트를 적용하기 전에 아래로 화살표를 클릭하여 업데이트 항목을 펼치고 다음 정보를 확인하십시오.
 * 업데이트의 버전입니다. 가장 이전 업데이트부터 최신 업데이트까지 시간 순으로 업데이트를 적용해야 합니다. 최신 업데이트를 적용하기 전에 이전 업데이트를 모두 적용했는지 확인하십시오. 예를 들어, V2.5 업데이트를 적용하기 전에 V2.4 업데이트를 적용해야 합니다.
@@ -52,6 +54,7 @@ V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데
 </table>
 
 ## Cloud Foundation 인스턴스에 업데이트를 적용하는 프로시저
+{: #sd_applyingupdates-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
 2. **Cloud Foundation 인스턴스** 테이블에서 업데이트할 인스턴스를 클릭하십시오.
@@ -64,6 +67,7 @@ V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데
 6. 다중 사이트 배치 구성에서 업데이트를 Cloud Foundation 인스턴스에 적용하는 경우 **업데이트하는 데 필요한 단계**라는 제목의 섹션이 표시되며, 다중 사이트 배치에서 모든 인스턴스에 필요한 업데이트 오퍼레이션이 나열됩니다. 각 단계마다 **업데이트 적용**을 클릭하여 순서대로 단계를 완료해야 합니다. 다음 단계를 시작하기 전에 이전 단계가 완료될 때까지 기다려야 합니다.
 
 ## 결과
+{: #sd_applyingupdates-results}
 
 1. 업데이트 오퍼레이션이 시작되기 전에 인스턴스의 상태 검사가 완료됩니다. 상태 검사에 실패하면 업데이트를 적용하기 전에 문제점을 수정할 수 있도록 알림을 받습니다.
 2. VMware 컴포넌트 업데이트를 포함하는 업데이트 중에, 유지보수 모드로 전환하려면 VM을 ESXi 서버로부터 마이그레이션해야 할 수 있습니다. VM에 로컬 데이터 저장소 또는 마운트된 CD-ROM이 있는 경우 VM 마이그레이션이 수행되지 않을 수 있습니다.
@@ -109,11 +113,12 @@ V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데
       </tr>
     </table>
 
-6. 특정 단계에서 업데이트 프로세스에 실패하는 경우 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)하여 도움을 받으십시오. 문제 해결 방법에 대한 정보를 얻고 실패한 단계에서 업그레이드를 다시 시작하도록 안내됩니다.
+6. 특정 단계에서 업데이트 프로세스에 실패하는 경우 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)하여 도움을 받으십시오. 문제 해결 방법에 대한 정보를 얻고 실패한 단계에서 업그레이드를 다시 시작하도록 안내됩니다.
 
-### 관련 링크
+## 관련 링크
+{: #sd_applyingupdates-related}
 
-* [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services/veeam_considerations.html)
-* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Veeam on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

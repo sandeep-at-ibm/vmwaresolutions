@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-02-15"
 
 ---
 
 # HCX 용어집
+{: #hcx_glossary}
 
 이 용어집은 VMware HCX on {{site.data.keyword.cloud}} 서비스와 연관된 용어의 정의를 제공합니다.
 
@@ -20,6 +21,7 @@ lastupdated: "2018-11-08"
 * **HCX Manager 관리 콘솔(HCX Manager Admin Console)**: 관리 목적(예: 서비스 시작 및 중지, 지원 로그 수집)으로 HCX 어플라이언스를 관리하기 위한 사용자 인터페이스입니다.
 * **HCX Cloud 콘솔(HCX Cloud Console)**: HCX 클라우드 측 기능(예: 가상 데이터 센터 및 재해 복구)을 구성하기 위한 사용자 인터페이스입니다.
 
-### 관련 링크
+## 관련 링크
+{: #hcx_glossary-related}
 
 * [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources)

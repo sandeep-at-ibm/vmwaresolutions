@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud
 Kubernetes
 Service
+{: #vcsnsxt-overview-iks}
 
 ## IBM Cloud Kubernetes Service の概要
+{: #vcsnsxt-overview-iks-ovw}
 
 {{site.data.keyword.containerlong_notm}} は、コンテナーを管理するための独立したセキュアなプラットフォームです。 このプラットフォームは、ポータブルで拡張性に優れ、フェイルオーバー時の自己修復機能も備えています。
 
@@ -36,10 +38,12 @@ Kubernetes ネットワーク・モデルでは、以下の 3 つの基本要件
 * コンテナーが認識する自己 IP は、他のコンテナーに認識される IP と同じである
 
 ### 名前空間
+{: #vcsnsxt-overview-iks-namespaces}
 
 名前空間は、コンテナー・ネットワーキングの基礎的な側面です。 名前空間は、プロセス・セットごとに別のリソース・セットが見えるようにカーネル・リソースを区分化する Linux カーネルの機能です。 リソースとしては、マウント・ポイント、プロセス ID、ネットワーク・スタック、IPC、ユーザー ID があります。 名前空間ごとに、独自の IP アドレス・セット、独自のルーティング・テーブル、ソケット・リスト、接続トラッキング・テーブル、ファイアウォールなどのネットワーク関連リソースを持ちます。
 
 ### コンテナー・ネットワーク・インターフェース
+{: #vcsnsxt-overview-iks-container-network-interfaces}
 
 Kubernetes は、プラグイン指向のネットワーキング・ソリューションとして、コンテナー・ネットワーク・インターフェース (CNI) を使用します。 これは、Linux コンテナーのネットワーク・インターフェースを構成するためのプラグインの作成に関する仕様とライブラリーで構成されています。 CNI 仕様は、コンテナーのネットワーク接続と、コンテナーが削除された後のリソースのガーベッジ・コレクションだけを扱うので、軽量です。
 
@@ -74,6 +78,7 @@ CNI でコンテナーをネットワークに追加するためには、コン�
     - {{site.data.keyword.cloud_notm}} 仮想ルーター・アプライアンスを VPN ゲートウェイとしてデプロイすることにより、外部ネットワークに安全に接続できます。 VRA を介してパブリックまたはプライベートのネットワーク・トラフィックをルーティングできます。 VRA は、リモート VPN ゲートウェイへの暗号化 IPSec トンネルを作成します。
 
 ## IBM Cloud Kubernetes Service コンポーネント
+{: #vcsnsxt-overview-iks-components}
 
 ワーカー・ノードは、クラスター内のすべての Kubernetes リソースを一元的に制御してモニターする Kubernetes マスター・ノードによって管理されます。 開発者がコンテナーのリソースをデプロイすると、マスター・ノードが、デプロイメント要件とクラスターの空き容量を考慮して、それらのリソースをデプロイするワーカー・ノードを決定します。 マスター・ノードとワーカー・ノードは、安全な TLS 証明書と、{{site.data.keyword.cloud_notm}} ネットワークを介した openVPN 接続を使用して相互に通信します。 開発者は、マスター・ノードでホストされる kube-apiserver にインターネットを介してアクセスします。
 
@@ -92,6 +97,7 @@ CNI でコンテナーをネットワークに追加するためには、コン�
 -	**ロード・バランサー** - ロード・バランサーは、パブリック要求またはプライベート要求をアプリに転送してクラスター内のネットワーク・トラフィックを負荷分散するために使用できる Kubernetes サービスです。 このコンポーネントは ibm-system 名前空間で機能します。
 
 ### Calico
+{: #vcsnsxt-overview-iks-calico}
 
 {{site.data.keyword.containerlong_notm}} はネットワーク・プロバイダーとして Calico を使用します。 Calico は、オーバーレイ・ネットワークではなくレイヤー 3 アプローチを使用します。 Calico は、CNI プラグインを介して Kubernetes と統合されて、純粋な IP ネットワークと、ルート配布のための Border Gateway Protocol とを組み合わせて使用するアプローチでネットワーキングを提供します。
 
@@ -117,22 +123,27 @@ Calico では、ポッドと送受信される IP パケットのルーティン
 {{site.data.keyword.cloud_notm}} Private ネットワークは {{site.data.keyword.cloud_notm}} IP アドレッシング・スキーマだけを転送するので、Calico は、{{site.data.keyword.containerlong_notm}} 内のワークロード間トラフィックに IP-in-IP カプセル化を使用してポッド・ネットワークの IP アドレスを隠蔽する必要があります。 {{site.data.keyword.containerlong_notm}} は IP-in-IP クロスサブネット・モードを使用します。
 
 ### IBM Cloud Kubernetes Service における Calico
+{: #vcsnsxt-overview-iks-calico-iks}
 
 Calico は {{site.data.keyword.containerlong_notm}} に自動的にインストールされて構成されます。 Kubernetes クラスターを保護するためのデフォルト・ポリシーが作成されますが、特定のサービスを保護するための独自のポリシーを必要に応じて作成することもできます。 サブネット間を移動するパケットだけをカプセル化し、コンテナーからの発信接続には NAT を使用するように IP-in-IP カプセル化が自動的に構成されます。 ワークロードから WAN へのトラフィックも {{site.data.keyword.containerlong_notm}} で自動的に有効になるので、Calico の追加構成は必要ありません。
 
 #### Calico のネットワーク・スケーラビリティー
+{: #vcsnsxt-overview-iks-net-scalability-calico}
 
 Calico は分散スケールアウト・アーキテクチャーを基にしているので、開発者の 1 台のノートブックから大規模なエンタープライズ・デプロイメントにスムーズにスケーリングできます。また、標準の Linux データ・プレーンを使用して仮想ワークロードでベアメタルのパフォーマンスを実現できます。
 
 #### Calico のセキュリティー
+{: #vcsnsxt-overview-iks-sec-calico}
 
 Calico では、システムのあらゆるコンポーネントを制御するポリシーのセットを使用できます。サービスやコンテナー・インスタンスの相互通信が必要最低限になるようにそれらのポリシーを構成できます。 Calico は、IP アドレスを使用してコンテナー・インスタンスを識別し、それらのアドレスに基づいてポリシーを作成します。 Calico と統合された Kubernetes は、インフラストラクチャーを認識し、インフラストラクチャーの変更に応じてセキュリティー・ポリシーをスケーリングできます。
 
 #### Calico との統合
+{: #vcsnsxt-overview-iks-integration-calico}
 
 Calico は、インターネットと同じ IP ネットワーキング原則に基づいて Kubernetes ポッドを接続するための、高度にスケーラブルなネットワーキングおよびネットワーク・ポリシー・ソリューションを提供します。 カプセル化またはオーバーレイなしでデプロイして大規模で高性能なデータ・センター・ネットワーキングを実現できます。 Calico では、分散ファイアウォールを介して、目的別の細かいネットワーク・セキュリティー・ポリシーを Kubernetes ポッドに使用できます。 Calico は、Flannel (別名 canal) やネイティブ GCE ネットワーキングなどの他のネットワーキング・ソリューションと一緒にポリシー適用モードで実行することもできます。
 
 ## IBM Cloud Kubernetes Service ネットワーキング
+{: #vcsnsxt-overview-iks-networking}
 
 デフォルトでは、{{site.data.keyword.containerlong_notm}} は、パブリック VLAN およびプライベート VLAN にアクセスできるクラスターに以下をセットアップします。
 - ワーカー・ノードにパブリック・ネットワーク・インターフェースを与える、各ワーカー・ノードのパブリック IP アドレス。 デフォルトでは次のようになります。
@@ -153,6 +164,7 @@ Calico は、インターネットと同じ IP ネットワーキング原則に
     - 1 次プライベート・サブネットでは、クラスター作成時にワーカー・ノードに割り当てられるプライベート IP アドレスを決定します。 同じ VLAN に参加している複数のクラスターでは、1 つの 1 次プライベート・サブネットを共有することができます。
     - ポータブル・プライベート・サブネットは 1 つのクラスターだけにバインドされ、そのクラスターに 8 つのプライベート IP アドレスを提供します。 ネットワーク機能用に 3 つの IP が予約されています。 1 つの IP がデフォルトのプライベート Ingress ALB によって使用され、4 つの IP をプライベート・ロード・バランサー・ネットワーク・サービスを作成するために使用できます。 ポータブル・プライベート IP は固定された永続的な IP アドレスであり、このアドレスを使用して、インターネットを介してロード・バランサー・サービスにアクセスできます。
 
-### 関連リンク
+## 関連リンク
+{: #vcsnsxt-overview-iks-links}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

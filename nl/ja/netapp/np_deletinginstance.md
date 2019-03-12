@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # NetApp ONTAP Select インスタンスの削除
+{: #np_deletinginstance}
 
 NetApp ONTAP Select インスタンスを削除すると、以下のコンポーネントが順次解放されます。
 1. デプロイ済みの NetApp ONTAP Select クラスター化 VM (仮想マシン) と NetApp ONTAP Select Deploy VM
@@ -28,6 +29,7 @@ NetApp ONTAP Select インスタンスを削除すると、以下のコンポー
 {:note}
 
 ## 「デプロイ済みインスタンス」ページからインスタンスを削除する手順
+{: #np_deletinginstance-procedure1}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「NetApp ONTAP Select インスタンス」**の表で、削除するインスタンスを見つけます。
@@ -38,6 +40,7 @@ NetApp ONTAP Select インスタンスを削除すると、以下のコンポー
    2. **「インスタンスの削除」**ウィンドウで**「OK」**をクリックします。
 
 ## インスタンスの詳細ページからインスタンスを削除する手順
+{: #np_deletinginstance-procedure2}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「NetApp ONTAP Select インスタンス」**テーブルで、削除するインスタンスをクリックします。
@@ -47,8 +50,9 @@ NetApp ONTAP Select インスタンスを削除すると、以下のコンポー
    1. **vCenter コンソール**の横にあるオーバーフロー・メニュー・アイコンをもう一度クリックしてから、**「インスタンスの削除」**をクリックします。
    2. **「インスタンスの削除」**ウィンドウで**「OK」**をクリックします。
 
-### 関連リンク
+## 関連リンク
+{: #np_deletinginstance-related}
 
-* [NetApp ONTAP Select インスタンスの注文](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [NetApp ONTAP Select インスタンスの表示](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
-* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [NetApp ONTAP Select インスタンスの注文](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [NetApp ONTAP Select インスタンスの表示](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

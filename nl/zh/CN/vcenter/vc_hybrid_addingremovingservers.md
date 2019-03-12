@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 扩展和收缩 vCenter Server with Hybridity Bundle 实例的容量
+{: #vc_hybrid_addingremovingservers}
 
 可以根据业务需求，通过添加或除去 ESXi 服务器，扩展或收缩 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 实例的容量。
 
@@ -21,11 +22,13 @@ lastupdated: "2019-01-23"
 ## 向 vCenter Server with Hybridity Bundle 实例添加 ESXi 服务器
 
 ### 在添加 ESXi 服务器之前
+{: #vc_hybrid_addingremovingservers-adding-prereq}
 
 * 不要通过 VMware vSphere Web Client 来添加 ESXi 服务器。在 vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。
 * vSAN 存储器至少需要 4 个 ESXi 服务器。
 
 ## 添加 ESXi 服务器的过程
+{: #vc_hybrid_addingremovingservers-adding-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要扩展容量的实例。
@@ -35,14 +38,17 @@ lastupdated: "2019-01-23"
 6. 在**添加服务器**窗口中，选择要添加的服务器数，单击价格链接以复查估算成本，然后单击**添加**。
 
 ### 添加 ESXi 服务器后的结果
+{: #vc_hybrid_addingremovingservers-adding-results}
 
 1. 当实例状态从**可供使用**变为**正在修改**时，您在控制台上可能会遇到轻微延迟。在对实例进行更多更改之前，请允许该操作完全完成。
 2. 系统将通过电子邮件通知您，正在处理添加 ESXi 服务器的请求。在控制台上，与 ESXi 服务器关联的集群的状态会更改为**正在修改**。
 3. 如果在集群中看不到添加到列表中的新 ESXi 服务器，请检查电子邮件或控制台通知以查找有关该故障的更多详细信息。
 
 ## 从 vCenter Server with Hybridity Bundle 实例中除去 ESXi 服务器
+{: #vc_hybrid_addingremovingservers-removing}
 
 ### 在除去 ESXi 服务器之前
+{: #vc_hybrid_addingremovingservers-removing-prereq}
 
 * 不要通过 VMware vSphere Web Client 来除去 ESXi 服务器。在 vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。
 * vSAN 存储器至少需要 4 个 ESXi 服务器。
@@ -51,6 +57,7 @@ lastupdated: "2019-01-23"
 * 除去 ESXi 服务器时，会将这些服务器置于维护模式，接着会迁移在这些服务器上运行的所有虚拟机 (VM)，然后从 vCenter Server 中除去这些服务器。为了最大程度地控制 VM 的重新定位，建议您先将要除去的 ESXi 服务器置于维护模式，然后使用 VMware vSphere Web Client 来手动迁移在这些 ESXi 服务器上运行的 VM。在此之后，使用 {{site.data.keyword.vmwaresolutions_short}} 控制台来除去 ESXi 服务器。
 
 ## 除去 ESXi 服务器的过程
+{: #vc_hybrid_addingremovingservers-removing-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 在 **vCenter Server 实例**表中，单击要压缩容量的实例。
@@ -59,6 +66,7 @@ lastupdated: "2019-01-23"
 5. 在 **ESXi 服务器**表中，选择要除去的服务器，然后单击**除去**。
 
 ### 除去 ESXi 服务器后的结果
+{: #vc_hybrid_addingremovingservers-removing-results}
 
 1. 当实例状态从**可供使用**变为**正在修改**时，您在控制台上可能会遇到轻微延迟。在对实例进行其他更改之前，请允许该操作完全完成。
 2. 系统将通过电子邮件通知您，正在处理除去 ESXi 服务器的请求。在控制台上，与 ESXi 服务器关联的集群的状态会更改为**正在修改**。
@@ -67,10 +75,11 @@ lastupdated: "2019-01-23"
    在所除去 ESXi 服务器的 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束之前，仍然会对您计费。
    {:note}
 
-### 相关链接
+## 相关链接
+{: #vc_hybrid_addingremovingservers-related}
 
-* [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
-* [针对 vCenter Server with Hybridity Bundle 实例的需求和规划](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
-* [添加、查看和删除 vCenter Server with Hybridity Bundle 实例的集群](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
+* [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
+* [针对 vCenter Server with Hybridity Bundle 实例的需求和规划](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
+* [添加、查看和删除 vCenter Server with Hybridity Bundle 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
 * [将主机置于维护模式](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) 处理器支持](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

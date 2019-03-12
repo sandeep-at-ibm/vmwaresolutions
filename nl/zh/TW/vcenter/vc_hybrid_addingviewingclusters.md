@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,12 +13,14 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 新增、檢視及刪除 vCenter Server with Hybridity Bundle 實例的叢集
+{: #vc_hybrid_addingviewingclusters}
 
 依預設，您訂購實例時所配置的 ESXi 伺服器會分組為 **cluster1**。
 
 您可以將叢集新增至 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 實例，以擴充運算及儲存空間容量。在叢集內，管理 ESXi 伺服器，以進行更適當的資源配置及高可用性。不再需要時，請從實例刪除新增的叢集。
 
 ## 將叢集新增至 vCenter Server with Hybridity Bundle 實例
+{: #vc_hybrid_addingviewingclusters-adding}
 
 可新增至實例的叢集數目，取決於實例版本：
 * 對於已部署在（或升級至）2.5 版及更新版本的實例，叢集、主機及 VM 數目決定您可新增的叢集數目上限。您必須遵守 VMware 大小準則及部署限制。
@@ -27,10 +29,12 @@ lastupdated: "2019-01-23"
 如需上限的相關資訊，請參閱 [VMware 配置上限](https://configmax.vmware.com/home){:new_window}。
 
 ### 系統設定
+{: #vc_hybrid_addingviewingclusters-adding-sys-settings}
 
 新增 vCenter Server with Hybridity Bundle 實例的叢集時，您必須指定下列設定。
 
 #### 叢集名稱
+{: #vc_hybrid_addingviewingclusters-adding-cluster-name}
 
 叢集名稱必須滿足下列需求：
 * 只容許英數及橫線 (-) 字元。
@@ -39,16 +43,19 @@ lastupdated: "2019-01-23"
 * 叢集名稱在 vCenter Server with Hybridity Bundle 實例內必須是唯一的。
 
 #### 資料中心位置
+{: #vc_hybrid_addingviewingclusters-adding-dc-location}
 
 依預設，叢集的 {{site.data.keyword.CloudDataCent_notm}} 位置是設為 vCenter Server 實例的 {{site.data.keyword.CloudDataCent_notm}}。您可以將叢集部署至不同於已部署實例的 {{site.data.keyword.CloudDataCent_notm}}，但您必須確定兩個 {{site.data.keyword.CloudDataCents_notm}} 之間的網路延遲少於 150 毫秒。若要檢查網路延遲，請使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 這類工具。
 
 如果您將叢集部署至不同的 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基礎架構 Pod，則會訂購其他三個 VLAN，以與已訂購的 {{site.data.keyword.baremetal_short}} 搭配使用。
 
 ### Bare Metal Server 設定
+{: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
 指定 Bare Metal Server 的 CPU 型號及 RAM。可用的選項可能會根據一開始部署您實例所用的版本而不同。
 
 #### Skylake
+{: #vc_hybrid_addingviewingclusters-adding-skylake}
 
 當您選取 **Skylake** 時，可以根據需求來選擇 CPU 與 RAM 組合。
 
@@ -61,6 +68,7 @@ lastupdated: "2019-01-23"
 |雙重 Intel Xeon Gold 6140 Processor / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 #### Broadwell
+{: #vc_hybrid_addingviewingclusters-adding-broadwell}
 
 當您選取 **Broadwell** 時，可以根據需求來選擇 CPU 與 RAM 組合。
 
@@ -75,6 +83,7 @@ lastupdated: "2019-01-23"
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.2 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 #### Bare Metal Server 數目
+{: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
 
 一個叢集至少需要兩部 {{site.data.keyword.baremetal_short}}。
 
@@ -83,6 +92,7 @@ lastupdated: "2019-01-23"
 部署之後，您最多可以另外建立四個叢集。對於 VMware vSAN 儲存空間，起始叢集及部署後的叢集都需要四部伺服器。
 
 ### vSAN 儲存空間設定
+{: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
 
 vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指定下列 vSAN 選項：
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
@@ -96,6 +106,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 * **vSAN 授權**：選取 VMware vSAN 6.6 授權版本（Advanced 或 Enterprise）。
 
 ### 授權設定
+{: #vc_hybrid_addingviewingclusters-adding-licensing-settings}
 
 由 IBM 提供的下列 VMware 元件授權：
   * vSphere Enterprise Plus 6.5u1
@@ -103,6 +114,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
   * NSX Service Providers 6.4（Advanced 或 Enterprise 版本）
 
 ### 網路介面設定
+{: #vc_hybrid_addingviewingclusters-adding-network-interface-settings}
 
 網路介面卡 (NIC) 設定是根據您選取**公用及專用網路**或**僅限專用網路**而定。下列附加程式服務需要公用 NIC，而且在使用專用選項時無法使用：
 
@@ -112,12 +124,14 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 訂單摘要
+{: #vc_hybrid_addingviewingclusters-adding-order-summary}
 
 根據您選取的叢集配置，預估成本會立即產生並顯示在**訂單摘要**右窗格中。
 
 ## 將叢集新增至 vCenter Server with Hybridity Bundle 實例的程序
+{: #vc_hybrid_addingviewingclusters-adding-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
 2. 在 **vCenter Server 實例**表格中，按一下實例來檢視其中的叢集。
 
    請確定實例狀態處於**備妥使用**。否則，您無法將叢集新增至實例。
@@ -137,6 +151,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
    4. 按一下**佈建**。
 
 ### 將叢集新增至 vCenter Server with Hybridity Bundle 實例之後的結果
+{: #vc_hybrid_addingviewingclusters-adding-results}
 
 1. 會自動啟動叢集的部署，而且叢集的狀態變更為**正在起始設定**。您可以在實例的**摘要**頁面上檢視部署歷程，以檢查部署的狀態。
 2. 叢集備妥可用時，其狀態會變更為**備妥使用**。新增的叢集已啟用「vSphere 高可用性 (HA)」及「vSphere 分散式資源排程器 (DRS)」。
@@ -144,6 +159,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 您不能變更叢集名稱。變更叢集名稱可能會導致在叢集裡新增或移除 ESXi 伺服器的作業失敗。{:important}
 
 ## 檢視 vCenter Server with Hybridity Bundle 實例中叢集的程序
+{: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
 2. 在 **vCenter Server 實例**表格中，按一下實例來檢視其中的叢集。
@@ -200,10 +216,12 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
     * **NFS 通訊協定**：儲存空間的 NFS 版本。
 
 ## 從 vCenter Server with Hybridity Bundle 實例刪除叢集
+{: #vc_hybrid_addingviewingclusters-deleting}
 
 不再需要叢集時，即可從實例刪除叢集。
 
 ### 刪除之前
+{: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
 * 您一次可以刪除單一叢集。若要刪除多個叢集，您必須依序執行它；請等待前一個叢集刪除後，再刪除下一個叢集。
 * 在您刪除叢集之前，請確定叢集裡的所有節點都已開啟電源且正常運作。
@@ -211,15 +229,17 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 * 無法刪除預設叢集。
 
 ## 從 vCenter Server with Hybridity Bundle 實例刪除叢集的程序
+{: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
 2. 在 **vCenter Server 實例**表格中，按一下您要從中刪除叢集的實例。
 
-   **附註：**請確定實例處於**備妥使用**狀態。否則，您無法從實例移除叢集。
+   請確定實例處於**備妥使用**狀態。否則，您無法從實例移除叢集。{:note}
 
 3. 在左導覽窗格上，按一下**基礎架構**。在**叢集**表格中，找出您要刪除的叢集，然後按一下**動作**直欄中的**刪除**圖示。
 
-### 相關鏈結
+## 相關鏈結
+{: #vc_hybrid_addingviewingclusters-related}
 
-* [檢視 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [擴充及縮減 vCenter Server with Hybridity Bundle 實例的容量](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [檢視 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [擴充及縮減 vCenter Server with Hybridity Bundle 實例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)

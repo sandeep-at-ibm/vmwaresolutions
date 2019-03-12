@@ -4,18 +4,23 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # VMware vSphere Web Client に接続中にタイムアウトになる
+{: #trbl_timeout_vc_console}
 
 ## 問題
+{: #trbl_timeout_vc_console-problem}
+
 vSphere Web Client に接続しようとすると、次のタイムアウト・エラーが表示されることがあります。
 
 `The server at <IP_address> is taking too long to respond.`
 
 ## 解決方法
+{: #trbl_timeout_vc_console-resolution}
+
 この問題を調査して解決するには、以下の手順を使用します。
 
 1. **「vCenter コンソール」**ボタンにマウスオーバーすると表示されるツールチップの手順を実行したことを確認します。 参考までに、それらの手順も以下にリストします。   

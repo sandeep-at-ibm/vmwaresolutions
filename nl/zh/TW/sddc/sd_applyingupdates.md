@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,14 +13,16 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # 將更新套用至 Cloud Foundation 實例
+{: #sd_applyingupdates}
 
 {{site.data.keyword.vmwaresolutions_full}} 主控台會定期偵測並列出您可套用至 VMware 虛擬環境的可用軟體更新。
 
 可用的更新是實例的軟體更新清單中的記錄，可立即套用或排定稍後進行。更新是一個組合，包含一個以上用來更新 IBM 管理元件及 VMware 元件的套件。
 
-因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。例如新增主機、新增叢集及訂購服務等動作，會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html)中的 *IBM CloudDriver 備援* 小節。{:note}
+因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。例如新增主機、新增叢集及訂購服務等動作，會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)中的 *IBM CloudDriver 備援* 小節。{:note}
 
 ## 開始之前
+{: #sd_applyingupdates-prereq}
 
 在您嘗試套用更新之前，請按一下向下箭頭來展開更新項目，並驗證下列資訊：
 * 更新的版本。您必須依最早到最新的時間順序來套用更新。套用最新的更新之前，請確定已套用所有先前的更新。例如，嘗試套用 2.5 版更新之前，您必須套用 2.4 版更新。
@@ -51,6 +53,7 @@ lastupdated: "2019-01-24"
 </table>
 
 ## 套用 Cloud Foundation 實例更新的程序
+{: #sd_applyingupdates-procedure}
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
 2. 在 **Cloud Foundation 實例**表格中，按一下要更新的實例。
@@ -62,6 +65,7 @@ lastupdated: "2019-01-24"
 6. 如果您要在多站台部署配置中套用 Cloud Foundation 實例的更新，則會顯示標題為**更新所需的步驟**的區段，其中列出多站台部署中所有實例所需的更新作業。您必須對每個步驟按一下**套用更新**，來依序完成步驟。您必須先等待上一步完成，再開始下一步。
 
 ## 結果
+{: #sd_applyingupdates-results}
 
 1. 啟動更新作業之前，會完成實例的性能檢查。如果性能檢查失敗，則會通知您，讓您可以在套用更新之前修正問題。
 2. 在包括 VMware 元件更新的更新期間，可能需要從 ESXi 伺服器移轉 VM，才能進入維護模式。如果 VM 已有本端資料儲存庫，或已裝載 CD-ROM，則可能會阻礙 VM 移轉。
@@ -107,11 +111,12 @@ lastupdated: "2019-01-24"
       </tr>
     </table>
 
-6. 如果更新處理程序在特定步驟失敗，請[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)以取得協助。將會建議您解決問題的方式，並引導您從失敗的步驟重新啟動升級。
+6. 如果更新處理程序在特定步驟失敗，請[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)以取得協助。將會建議您解決問題的方式，並引導您從失敗的步驟重新啟動升級。
 
-### 相關鏈結
+## 相關鏈結
+{: #sd_applyingupdates-related}
 
-* [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Veeam on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/veeam_considerations.html)
-* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [常見問題](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Veeam on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

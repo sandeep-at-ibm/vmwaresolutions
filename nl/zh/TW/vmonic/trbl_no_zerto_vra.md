@@ -4,16 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # 未針對新建的 ESXi 伺服器顯示 Zerto Virtual Replication Appliance
+{: #trbl_no_zerto_vra}
 
 ## 問題
+{: #trbl_no_zerto_vra-problem}
+
 在您將 ESXi 伺服器新增至已安裝 Zerto 災難回復的 VMware vCenter Server 實例之後，Virtual Replication Appliances (VRA) 並未顯示在 Zerto Virtual Replication 主控台上。
 
 ## 解決方法
+{: #trbl_no_zerto_vra-resolution}
+
 對於 vCenter Server 實例，Zerto 災難回復服務只從預設叢集 **cluster1** 安裝在 ESXi 伺服器上。不是建立其他叢集，或是將 ESXi 伺服器新增至其他叢集，相同 vCenter Server 環境中的任何其他叢集都不會自動安裝 Zerto 災難回復。
 
 在其他叢集上，您必須個別安裝 Zerto 災難回復。

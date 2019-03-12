@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Mission Critical VMware on IBM Cloud 概觀
+{: #mcv_overview}
 
 Mission Critical VMware on {{site.data.keyword.cloud}} 提供多區域雲端架構，可協助企業避免雲端應用程式的關閉，以及在雲端地區內自動失效接手。
 
@@ -19,6 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}} 提供多區域雲端架�
 此架構涵蓋各種企業服務，包括網路、儲存空間、備援，以及為了監視和疑難排解雲端型應用程式而建置的其他工具。此外，此架構可以與 IBM Services Platform with Watson（以 {{site.data.keyword.cloud_notm}} 為建置基礎）整合，以容許更廣泛地使用服務。藉由使用平台的認知功能，用戶端可以對新的商業洞察進行更有效的資料採礦，以協助維護持續運作。
 
 ## Mission Critical VMware on IBM Cloud 的技術規格
+{: #technical-specifications-for-mission-critical-vmware-on-ibm-cloud}
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 架構是端對端參照架構，可為客戶的工作負載提供自動化失效接手。它會使用 {{site.data.keyword.cloud_notm}} 多區域地區來搭配 IBM 管理的服務，其中涵蓋下列元件：
 
@@ -38,6 +40,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 適用於下列地�
 * 亞太地區：雪梨和東京的所有 IBM Cloud Data Center
 
 ### 基礎架構的架構規格
+{: #mcv_overview-base-specs}
 
 基礎架構具有下列規格：
 * 每個站台都有自己的專用邊緣和管理叢集
@@ -48,6 +51,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 適用於下列地�
 * NSX Manager 回復是使用向上同步備份檔的「快速待命」方法
 
 ### 工具與技術架構規格
+{: #mcv_overview-tooling-specs}
 
 工具與技術架構具有下列規格：
 * vRealize Operations、vRealize Log Insight 和 vRealize Network Insight，可提供所使用之 VMware 產品的特定作業和管理功能，例如 NSX、vSAN 和 vSphere
@@ -56,6 +60,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 適用於下列地�
 * Fortigate Security Appliance 或類似的安全應用裝置，以保護任何網際網路存取，並促進「主動-主動」網路與內部部署網路的整合
 
 ### vSphere + vSAN 延伸叢集架構規格
+{: #mcv_overview-stretched-cluster-specs}
 
 vSphere + vSAN 延伸叢集架構具有下列規格：
 * 此叢集提供跨越兩個站台的儲存和運算功能，以加強可用性。
@@ -65,6 +70,7 @@ vSphere + vSAN 延伸叢集架構具有下列規格：
 * 「vSAN 原生加密」（用於靜態加密）可與此架構組合使用。
 
 ### 網路架構規格
+{: #mcv_overview-network-specs}
 
 網路架構具有下列規格：
 * Edge/DLR/VXLAN 與 BGP 度量型遞送組合，有助於採用自動化失效接手的「主動-主動」站台設計。
@@ -73,6 +79,7 @@ vSphere + vSAN 延伸叢集架構具有下列規格：
 * 在 VM-A 的 vMotion 活動期間，資料傳輸仍會透過 {{site.data.keyword.cloud_notm}} 可用性區域 #1 進出。
 * 在站台或邊緣故障期間，資料流量會遞送至剩下可用的站台之外。
 
-### 相關鏈結
+## 相關鏈結
+{: #mcv_overview-related}
 
-* [要求 Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services/managing_mcv.html)
+* [要求 Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_mcv)

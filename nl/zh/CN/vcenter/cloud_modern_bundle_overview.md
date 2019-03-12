@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Migration and App Modernization 单节点试用版概述
+{: #single-node-trial-for-migration-and-app-modernization-overview}
 
 通过 Migration and App Modernization 单节点试用版，您可以试用 IBM Cloud，以将 VMware 工作负载迁移到 IBM Cloud，然后使用容器对简单工作负载进行现代化。
 
@@ -29,6 +30,7 @@ Migration and App Modernization 单节点试用版仅适用于概念验证 (POC)
 {:note}
 
 ## Migration and App Modernization 单节点试用版实例技术规范
+{: #cloud_modern_bundle_overview-tech-specs}
 
 Migration and App Modernization 单节点试用版实例中包含以下组件。
 
@@ -36,26 +38,31 @@ Migration and App Modernization 单节点试用版实例中包含以下组件。
 {:note}
 
 ### 裸机服务器
+{: #cloud_modern_bundle_overview-bare-metal}
 
 双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz（带 384 GB RAM），最多支持约 20 个 VM
 
 #### CPU 超配
+{: #cloud_modern_bundle_overview-cpu}
 
 * 16:1 CPU 超配，适用于 vCenter Server 管理、HCX 和 20 个客户工作负载 VM
 * 11:1 CPU 超配，适用于 IBM Cloud Private
 
 #### RAM 超配
+{: #cloud_modern_bundle_overview-ram}
 
 * 1.22:1 RAM 超配，适用于 20 个工作负载 VM（每个 VM 8 GB）的客户部署
 * 1:1（无超配），适用于 9 个工作负载 VM（每个 VM 8 GB）的客户部署
 
 ### NFS 存储器
+{: #cloud_modern_bundle_overview-nfs-storage}
 
 * 2 TB，用于管理
 * 1 TB，用于客户工作负载（20 个客户 VM）
 * 4 TB，用于 IBM Cloud Private Hosted
 
 ### Migration and App Modernization 单节点试用版实例联网规范
+{: #cloud_modern_bundle_overview-networking-specs}
 
 订购了以下联网组件：
 *  10 Gbps 双公用和专用网络上行链路
@@ -69,6 +76,7 @@ Migration and App Modernization 单节点试用版实例中包含以下组件。
   * 用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX Edge 服务网关，由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。
 
 ### 虚拟服务器实例
+{: #cloud_modern_bundle_overview-vsi}
 
 订购了以下虚拟服务器实例 (VSI)：
 
@@ -76,6 +84,7 @@ Migration and App Modernization 单节点试用版实例中包含以下组件。
 * 用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server VSI 已部署并且可进行查找。此 VSI 充当在其中注册主机和 VM 的实例的 DNS。
 
 ### IBM 提供的许可证和费用
+{: #cloud_modern_bundle_overview-license-and-fee}
 
 Migration and App Modernization 单节点试用版实例订单随附以下许可证。
 
@@ -88,6 +97,7 @@ Migration and App Modernization 单节点试用版实例不支持自带许可证
 {:note}
 
 ## VMware HCX on IBM Cloud 的技术规范
+{: #cloud_modern_bundle_overview-hcx-tech-specs}
 
 Migration and App Modernization 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}。HCX on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
 
@@ -95,12 +105,14 @@ Migration and App Modernization 单节点试用版包含 HCX on {{site.data.keyw
 {:note}
 
 ### VMware NSX Edge 服务网关 (ESG) 的主动/被动对，以用于 HCX 管理
+{: #cloud_modern_bundle_overview-esg}
 
 * CPU：6 个 vCPU
 * RAM：8 GB
 * 磁盘：3 GB VMDK
 
 ### HCX Management Appliance - 虚拟机
+{: #cloud_modern_bundle_overview-hcx-mgmt-appliance}
 
 * CPU：4 个 vCPU
 * RAM：12 GB
@@ -109,18 +121,21 @@ Migration and App Modernization 单节点试用版包含 HCX on {{site.data.keyw
 配置期间根据需要部署了更多 HCX 设备，以用于 L2 连接、WAN 优化和网关连接。
 
 ### HCX on IBM Cloud 服务的联网规范
+{: #cloud_modern_bundle_overview-hcx-networking-specs}
 
 * 一个具有 16 个 IP 地址的公用可移植子网
 * 两个具有 64 个 IP 地址的专用可移植子网
 * 专用可移植 vMotion 子网中的 8 个 IP 地址
 
 ## IBM Cloud Private Hosted 的技术规范
+{: #cloud_modern_bundle_overview-icp-tech-specs}
 
-在所有 Migration and App Modernization 单节点试用版实例上，都会使用开发/测试拓扑安装 IBM Cloud Private Hosted V3.1。有关 IBM Cloud Private Hosted 的更多信息，请参阅 [IBM Cloud Private Hosted 概述](/docs/services/vmwaresolutions/services/icp_overview.html)。
+在所有 Migration and App Modernization 单节点试用版实例上，都会使用开发/测试拓扑安装 IBM Cloud Private Hosted V3.1。有关 IBM Cloud Private Hosted 的更多信息，请参阅 [IBM Cloud Private Hosted 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)。
 
-### 相关链接
+## 相关链接
+{: #cloud_modern_bundle_overview-related}
 
-* [vCenter Server 和 IBM Cloud Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [vCenter Server 和 IBM Cloud Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [开具有关 IBM Cloud Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US)
 * [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#/vm-documentation)
 * [获取 HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

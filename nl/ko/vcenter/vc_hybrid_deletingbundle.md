@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,13 +13,15 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server 인스턴스에서 Hybridity Bundle 제거
+{: #vc_hybrid_deletingbundle}
 
 vCenter Server 인스턴스에서 Hybridity Bundle 라이센스를 제거하려면, VMware vSphere Web Client에서 VMware NSX 및 VMware vSAN 임대 라이센스 키를 BYOL(Bring Your Own License) 키로 대체해야 합니다. 또한 임대 라이센스 비용을 취소하려면 지원 티켓을 열어야 합니다.
 
-라이센스를 다운그레이드하면 vCenter Server 인스턴스가 실패할 수 있습니다. 사용자 책임 하에 라이센스를 다운그레이드하도록 선택할 수 있지만 먼저 다운그레이드하는 경우 사용할 수 없는 기능에 대해 고려하십시오. 자세한 정보는 [VMware 컴포넌트 에디션의 비교 차트](/docs/services/vmwaresolutions/archiref/solution/appendix.html)를 참조하십시오.
+라이센스를 다운그레이드하면 vCenter Server 인스턴스가 실패할 수 있습니다. 사용자 책임 하에 라이센스를 다운그레이드하도록 선택할 수 있지만 먼저 다운그레이드하는 경우 사용할 수 없는 기능에 대해 고려하십시오. 자세한 정보는 [VMware 컴포넌트 에디션의 비교 차트](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix)를 참조하십시오.
 {:important}
 
 ## 다중 사이트 환경에서 Hybridity Bundle을 제거하기 전의 중요한 고려사항
+{: #vc_hybrid_deletingbundle-considerations}
 
 다중 사이트 환경에서 Hybridity Bundle을 제거하기 전에 다음 고려사항을 검토하십시오.
 
@@ -31,6 +33,7 @@ vCenter Server 인스턴스에서 Hybridity Bundle 라이센스를 제거하려�
 {:note}
 
 ## Hybridity Bundle을 제거하기 전에
+{: #vc_hybrid_deletingbundle-prereq}
 
 Hybridity Bundle을 제거하기 전에 다음 요구사항을 확인하십시오.
 
@@ -41,6 +44,7 @@ Hybridity Bundle을 제거하기 전에 다음 요구사항을 확인하십시�
 * 선택사항으로 이미 적용되지 않은 경우 VMware vCenter Server 및 각 VMware vSphere Enterprise Plus 라이센스에 적용하는 데 사용 가능한 BYOL키가 있습니다.
 
 ## Hybridity Bundle을 제거하는 프로시저
+{: #vc_hybrid_deletingbundle-procedure}
 
 1. **관리자**로 Hybridity Bundle을 제거할 VMware vSphere Web Client에 로그인하십시오.
 2. **홈 > 관리 > 라이센싱 > 라이센스**를 클릭하십시오.
@@ -106,8 +110,9 @@ Hybridity Bundle을 제거하기 전에 다음 요구사항을 확인하십시�
   IBM 지원 센터 및 운영 팀에서는 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정의 vCenter 관리 계층에 액세스하여 Hybridity Bundle 임대 라이센스 비용을 취소하기 전에 임대 라이센스가 제거되었는지 확인합니다.
   {:note}
 
-### 관련 링크
+## 관련 링크
+{: #vc_hybrid_deletingbundle-related}
 
-* [vCenter Server with Hybridity Bundle 인스턴스 주문](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [vCenter Server with Hybridity Bundle 인스턴스 보기](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [vCenter Server with Hybridity Bundle 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [vCenter Server with Hybridity Bundle 인스턴스 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

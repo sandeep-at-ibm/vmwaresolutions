@@ -4,32 +4,39 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 
 # IBM Cloud 联网和基础架构
+{: #vcsicp-arch-overview-infrastructure}
 
-## 虚拟路由和转发 (VRF)
+## 虚拟路由和转发
+{: #vcsicp-arch-overview-infrastructure-vrf}
 
-您可以将 {{site.data.keyword.cloud}} 帐户配置为 VRF 帐户，以提供与 VLAN 生成类似的功能，从而使子网 IP 块之间能够自动路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
+您可以将 {{site.data.keyword.cloud}} 帐户配置为虚拟路由和转发 (VRF) 帐户，以提供与 VLAN 生成类似的功能，从而使子网 IP 块之间能够自动路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
 
 ## 直接链路
+{: #vcsicp-arch-overview-infrastructure-direct-link}
 
 {{site.data.keyword.cloud_notm}} Direct Link Connect 通过本地 IBM Cloud Data Center，提供对 {{site.data.keyword.cloud_notm}} 基础架构以及其他任何与网络服务供应商相链接的云的专用访问。此选项最适合于在单个环境中创建多云连接。共享带宽拓扑用于将客户连接到 {{site.data.keyword.icpfull_notm}} 网络。与所有直接链路产品一样，您也可以添加全局路由，这将使专用网络流量能够流至所有 {{site.data.keyword.cloud_notm}} 位置。
 
 ## 虚拟专用网
+{: #vcsicp-arch-overview-infrastructure-vp-networks}
 
 ### strongSwan VPN
+{: #vcsicp-arch-overview-infrastructure-strongswan}
 
 strongSwan IPSec VPN 服务通过因特网提供基于业界标准因特网协议安全性 (IPSec) 协议套件的安全端到端通信信道。
 
 ### Hybridity (HCX)
+{: #vcsicp-arch-overview-infrastructure-hcx}
 
 vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 可以将内部部署数据中心的网络无缝扩展到 {{site.data.keyword.cloud_notm}}，这允许虚拟机 (VM) 在不进行任何转换或更改的情况下，迁移到 {{site.data.keyword.cloud_notm}} 或从中迁移出来。
 
 ## 物理结构
+{: #vcsicp-arch-overview-infrastructure-phys-struct}
 
 将 {{site.data.keyword.icpfull_notm}} 生产实例部署到 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 集群上所需的物理基础架构需要满足以下最低规范。
 
@@ -45,6 +52,7 @@ CPU|28 个核心，2.2 GHz| 28 个核心，2.2 GHz
 除了 {{site.data.keyword.icpfull_notm}} 硬件需求外，您还必须在 {{site.data.keyword.icpfull_notm}} 环境中创建持久性卷，以用于存储 Cloud Automation Manager (CAM) 数据库和日志数据。虽然 CAM 支持 {{site.data.keyword.icpfull_notm}} 所支持的全部持久性卷类型，但建议用于 CAM 的两种存储配置是 NFS 和 GlusterFS。
 
 ## 虚拟结构
+{: #vcsicp-arch-overview-infrastructure-virtual-struct}
 
 图 1. vCenter Server 和 {{site.data.keyword.icpfull_notm}} 部署的物理结构
 ![VCS 和 {{site.data.keyword.icpfull_notm}} 部署的物理结构](vcsicp-phy-ics-icp-deployment.svg)
@@ -55,6 +63,7 @@ ESG 配置了源 NAT (SNAT) 规则以允许出站流量，支持因特网连接�
 
 ESG 还配置了目标 NAT 规则 (DNAT)，用于从 {{site.data.keyword.cloud_notm}} 10.x 网络中的 {{site.data.keyword.icpfull_notm}} 主/代理虚拟 IP 地址路由到 VXLAN 环境。
 
-### 相关链接
+## 相关链接
+{: #vcsicp-arch-overview-infrastructure-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

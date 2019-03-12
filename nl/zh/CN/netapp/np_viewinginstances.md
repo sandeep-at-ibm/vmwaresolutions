@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # 查看 NetApp ONTAP Select 实例
+{: #np_viewinginstances}
 
 查看针对不同用户帐户供应的 NetApp ONTAP Select 实例的摘要和详细信息。
 
 ## 查看 NetApp ONTAP Select 实例摘要的过程
+{: #np_viewinginstances-procedure-view-inst-summary}
 
 要查看针对用户帐户供应的所有 NetApp ONTAP Select 实例的摘要，请完成以下步骤：
 
@@ -36,6 +38,7 @@ lastupdated: "2019-01-24"
     <ul><li>正在创建：正在创建实例。</li><li>正在构建：正在配置实例。</li><li>可供使用：实例准备就绪，可供使用。</li><li>正在修改：正在修改实例。</li><li>失败：创建、配置或修改过程失败。</li><li>正在删除：正在删除实例。</li><li>删除错误：删除实例时发生错误。</li><li>已删除：实例已删除。</li></ul>|
 
 ## 查看 NetApp ONTAP Select 实例属性详细信息的过程
+{: #np_viewinginstances-procedure-view-inst-property}
 
 要查看实例的属性详细信息，请执行以下操作：
 
@@ -61,6 +64,7 @@ lastupdated: "2019-01-24"
 |状态|实例的状态。|
 
 ## 查看 NetApp ONTAP Select 实例的访问信息的过程
+{: #np_viewinginstances-procedure-view-inst-access-info}
 
 在**访问信息**下，查看与实例相关的组件的访问信息。这些密码是系统生成的初始密码。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部对这些信息进行更改，那么不会在实例摘要页面上更新这些信息。
 
@@ -86,6 +90,7 @@ lastupdated: "2019-01-24"
 |vCenter SSH|可用于通过 SSH 连接访问 vCenter Server VM 的用户名和密码。|
 
 ## 查看 NetApp ONTAP Select 实例的部署历史记录的过程
+{: #np_viewinginstances-procedure-view-inst-deploy-history}
 
 单击左侧导航窗格中的**部署历史记录**，以查看实例的部署历史记录。
 
@@ -96,9 +101,10 @@ lastupdated: "2019-01-24"
 |日期|更改实例状态的日期和时间|
 |摘要|更改的详细信息|
 
-如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
+如果在实例部署或实例删除期间发生错误，就会自动通知 {{site.data.keyword.cloud_notm}} 支持团队。要查询凭单的状态，您可以[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
 
-## 查看 NetApp ONTAP Select 集群
+## 查看 NetApp ONTAP Select 集群的过程
+{: #np_viewinginstances-procedure-view-cluster}
 
 1. 单击左侧导航窗格中的**基础架构**。
 2. 在**集群**下，查看有关 NetApp ONTAP Select 集群的摘要。
@@ -162,6 +168,7 @@ lastupdated: "2019-01-24"
 |状态|ESXi 服务器的状态，可以是下列某个值：<ul><li>活动：ESXi 服务器准备就绪，可供使用。</li><li>正在删除：正在删除 ESXi 服务器。</li></ul> |
 
 ## 后续步骤
+{: #np_viewinginstances-next}
 
 通过 {{site.data.keyword.vmwaresolutions_short}} 控制台、VMware vSphere Web Client 或 NetApp 控制台来管理实例。
 
@@ -170,12 +177,13 @@ lastupdated: "2019-01-24"
 
 有关帮助您完成登录的指示信息的更多信息，请查看以下主题：
 
-*  有关访问 vSphere Web Client 之前的需求和必需步骤，请参阅[连接到 vSphere Web Client 时发生超时](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html)。
+*  有关访问 vSphere Web Client 之前的需求和必需步骤，请参阅[连接到 vSphere Web Client 时发生超时](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console)。
 *  有关使用 VPN 登录到 {{site.data.keyword.cloud_notm}} 基础架构专用网络的访问点的列表，请参阅 [VPN 访问](http://www.softlayer.com/vpn-access){:new_window}。
-*  如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html)。
+*  如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf)。
 
-### 相关链接
+## 相关链接
+{: #np_viewinginstances-related}
 
-* [订购 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [删除 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
+* [订购 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [删除 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
 * [将专用存储器连接到 NetApp ONTAP Select 部署](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

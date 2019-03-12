@@ -11,12 +11,12 @@ lastupdated: "2019-02-14"
 # Caveonix RiskForesight on IBM Cloud for VMware Solutions
 {: #caveonix-on-vcs}
 
-Caveonix RiskForesight on {{site.data.keyword.vmwaresolutions_full}} は、「オールインワン」仮想マシン (VM) デプロイメントでの、Caveonix RiskForesight ソリューションの自動デプロイメントを行います。これは最初にサービス・プロバイダーとテナントで構成されてから、vCenter と NSX Manager に統合されます。資産リポジトリーに VMware vCenter Server インフラストラクチャー・コンポーネントが取り込まれ、VMware インフラストラクチャー・プラットフォームに相当するアプリケーションとサブアプリケーションが構成されます。ダッシュボードでは、サイバー・リスク・スコアとコンプライアンス・リスク・スコアに加えて、必要なコンプライアンス制度を表示するコンプライアンス・レポートを利用できます。
+Caveonix RiskForesight on {{site.data.keyword.vmwaresolutions_full}} は、「オールインワン」仮想マシン (VM) デプロイメントでの、Caveonix RiskForesight ソリューションの自動デプロイメントを行います。 これは最初にサービス・プロバイダーとテナントで構成されてから、vCenter と NSX Manager に統合されます。 資産リポジトリーに VMware vCenter Server インフラストラクチャー・コンポーネントが取り込まれ、VMware インフラストラクチャー・プラットフォームに相当するアプリケーションとサブアプリケーションが構成されます。 ダッシュボードでは、サイバー・リスク・スコアとコンプライアンス・リスク・スコアに加えて、必要なコンプライアンス制度を表示するコンプライアンス・レポートを利用できます。
 
 初期ワークフローの概要を以下のリストに示します。
 1.	お客様はサービスを注文し、RiskForesight アプリケーションの自動インストールを開始します。
 2.	サービス・プロバイダー・データが構成されます。
-3.	テナント組織と資産の初期構成が vCenter によって行われます。アプリケーションとサブアプリケーションが VMware vCenter Server インスタンス用に構成されます。
+3.	テナント組織と資産の初期構成が vCenter によって行われます。 アプリケーションとサブアプリケーションが VMware vCenter Server インスタンス用に構成されます。
 4.	テナントでサイバー・リスクとコンプライアンス状況を管理する以下のコンポーネントがダッシュボードに取り込まれます。
     - コンプライアンス管理
     - Risk Management
@@ -53,4 +53,4 @@ Caveonix RiskForesight on IC4VS がもたらす主なメリットは以下のと
 ## 関連リンク
 {: #caveonix-on-vcs-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # ユース・ケース
+{: #vcsiks-usecases}
 
 ## IBM Cloud へのワークロードのマイグレーション
+{: #vcsiks-usecases-workload-mig}
 
 Acme Skateboards 社は、オンプレミスの VMware SDDC を VMware vCenter Server on {{site.data.keyword.cloud}} インスタンスにシームレスに拡張したいと考えています。 その際には、ビジネスを継続して、ダウン時間を最小限に抑える必要があります。 使用しているアプリケーションをクラウドで実行するように再構成することは、最適なソリューションではありません。
 
@@ -35,6 +37,7 @@ vCenter Server with Hybridity Bundle では、オンプレミスと {{site.data.
 Acme Skateboards 社はこのソリューションを使用して、オンプレミスの VMware ワークロードを {{site.data.keyword.cloud_notm}} に正常にマイグレーションし、ダウン時間がほとんどなく、アプリケーションの再構成も必要ないという要件を満たすことができました。
 
 ## ハイブリッド・アーキテクチャーのデプロイメント
+{: #vcsiks-usecases-hybrid-archi-deployment}
 
 Acme Skateboards 社は、アプリケーション・モダナイゼーションに至る過程で、vCenter Server と {{site.data.keyword.icpfull_notm}} で構成されるハイブリッド・アーキテクチャーを {{site.data.keyword.cloud_notm}} にデプロイしたいと考えています。 この際の要件は、仮想マシン上でデータベースを実行し、コンテナー内でアプリケーションと Web サービスを実行するとともに、ネットワークとセキュリティーの管理に共通のツール・セットを使用することです。
 
@@ -49,6 +52,7 @@ Acme Skateboards 社は、アプリケーション・モダナイゼーション
 
 Acme Skateboards 社は、{{site.data.keyword.cloud_notm}} 自動化を使用して、データベース VM を実行するための VMware on {{site.data.keyword.cloud_notm}} と、アプリとフロントエンド Web サービスをコンテナー内で実行するための VMware on {{site.data.keyword.cloud_notm}} 上の {{site.data.keyword.icpfull_notm}} で構成されるハイブリッド・ソリューションをプロビジョンできます。 NSX は、オーバーレイ・ネットワーク内のネットワークとセキュリティー用の共通の管理ツール・セットを提供します。
 
-### 関連リンク
+## 関連リンク
+{: #vcsiks-usecases-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

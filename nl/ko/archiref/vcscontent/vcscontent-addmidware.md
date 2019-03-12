@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Private
+{: #vcscontent-addmidware}
 
 이제 Stock Trader가 컨테이너에서 실행되고 Jane이 현재 마이크로 서비스에 만족하며 Jane과 Todd는 추가 기능으로 애플리케이션을 향상시키는 데 대한 작업을 수행합니다. 증가된 활동과 확장성을 처리하기 위해 Stock Trader 마이크로 서비스를 리팩토링함으로써 둘 다 미들웨어를 {{site.data.keyword.cloud}} Private에 추가해야 함을 알게 됩니다. 일부 미들웨어가 해당 데이터 센터에 이미 있으므로 일부 새로운 미들웨어가 추가된 리플랫폼 연습이 됩니다.
 
@@ -18,6 +19,7 @@ lastupdated: "2019-01-23"
 이 솔루션 리팩토링은 애플리케이션 및 필수 서비스를 실행하는 공통 플랫폼을 가져오므로 보다 단순한 관리 플레인을 가져옵니다.
 
 ## 컨텐츠 선택
+{: #vcscontent-addmidware-content-choices}
 
 {{site.data.keyword.cloud_notm}} Private은 다양한 컨텐츠 선택사항을 가지고 있으며 Todd와 Jane 모두 그들의 필요에 가장 적합한 컨텐츠를 결정해야 합니다. Todd가 {{site.data.keyword.cloud_notm}} Private 카탈로그에서 본 것처럼, 대부분의 컨텐츠를 시도해 볼 수는 있지만 일부 컨텐츠는 Passport Advantage에서 구매하고 다운로드해야 합니다.
 
@@ -127,12 +129,15 @@ Cloud Private(카탈로그에서의 검색 및 시도를 위해 ILAN 라이센�
 Stock Trader의 경우 Jane의 솔루션 아키텍처를 기반으로 Todd는 [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://console.cloud.ibm.com/catalog/services/mq) 및 [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis)를 사용하여 시작합니다.
 
 ## 미들웨어 추가
+{: #vcscontent-addmidware-add-middleware}
 
 미들웨어를 {{site.data.keyword.cloud_notm}} Private에 추가하고 카탈로그에서 [helm 차트](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md)를 찾으려면 readme 파일을 읽은 다음 계속 설치하십시오.
 
 Stock Trader의 경우 Todd는 모든 미들웨어를 추가하기로 결정했습니다. 다음 정보는 Todd가 Jane이 사용하기를 원한 각 미들웨어에 대해 수행해야 하는 작업을 요약합니다.
 
 ### Db2
+{: #vcscontent-addmidware-db2}
+
 이미 Db2를 사용 중이고 각 솔루션에 대해 컨테이너 기반 Db2를 전용으로 사용할 수 있으므로 Todd는 Db2를 사용하여 시작합니다.
 
 Todd는 {{site.data.keyword.icpfull_notm}}를 준비했으므로 정의된 팟(Pod) 보안 정책이 이미 있습니다. Todd는 Docker 이미지 풀 시크릿을 작성하는 것에 집중할 수 있습니다.
@@ -173,6 +178,7 @@ Db2가 실행되면, Todd나 Jane이
 Stock Trader 솔루션에서 사용하는 테이블을 작성해야 합니다.
 
 ### MQ
+{: #vcscontent-addmidware-mq}
 
 Todd와 Jane은 메시징 소프트웨어가 필요하고, 이미 MQ를 사용하고 있으므로 이는 좋은 옵션입니다. 또한 작은 설치 공간에서 실행할 수 있고 각 개발자별로 개발자 버전을 돌려서 귀중한 프로덕션 트래픽을 절약합니다. MQ 설치는 매우 간단합니다. Todd는 Db2에서와 같이 스토리지를 작성한 다음 helm 차트를 설치합니다.
 
@@ -194,7 +200,8 @@ ibm-mqadvanced-server-dev 선택. readme 파일을 검토한 다음 구성을 �
 
 Stock Trader를 사용하도록 MQ를 구성하기 위해 Todd는 MQ 관리 사용자 인터페이스를 엽니다. 이는 VM 버전과 동일합니다.
 
-### 	Redis
+### Redis
+{: #vcscontent-addmidware-redis}
 
 Stock Trader가 {{site.data.keyword.cloud_notm}} Private Hosted에서 실행되고 있지만 모두가 정말로 관심을 가지는 것은 대부분의 업무에서 전날 주식 거래 종료 시 주식 시세 서비스가 지연되는 것에 대한 걱정입니다. 성능을 높이기 위해 Redis 캐시를 추가합니다.
 
@@ -205,6 +212,7 @@ Stock Trader가 {{site.data.keyword.cloud_notm}} Private Hosted에서 실행되�
 구성이 단순하기 때문에 Todd는 설치할 위치의 네임스페이스를 입력하고 설치를 시작합니다.
 
 ## Stock Trader 리팩터
+{: #vcscontent-addmidware-refactor-stock-trader}
 
 Stock Trader 리팩토링은 Jane에게 있어서 중요한 단계입니다. Todd가 미들웨어를
 {{site.data.keyword.cloud_notm}} Private에 추가하고 있는 동안 Jane은
@@ -222,6 +230,7 @@ Kubernetes 세계에서 Jane의 마이크로 서비스(코드 다시 작성 및 
 다음은 Jane의 [코드 저장소](https://github.com/IBMStockTrader/)의 예입니다. Jenkins 파일, server.xml 등도 함께 제공됩니다. 이를 사용하면 Jane은 GitHub의 개별 저장소로의 더 많은 마이크로 서비스와 함께 ODM 및 Watson과 같은 서비스에 액세스하기 위해 시크릿을 통해 추가 기능을 자유롭게 코드화할 수 있습니다.
 
 ### 시크릿 추가
+{: #vcscontent-addmidware-add-secrets}
 
 Jane이 Stock Trader 마이크로 서비스를 리팩토링했기 때문에,
 특정한 이름을 하드코딩하고 애플리케이션을 다시 빌드하지 않고 배치할 때 애플리케이션에서 서비스에 대한 고유한 세부사항을 선택할 수 있도록
@@ -229,12 +238,14 @@ Jane이 Stock Trader 마이크로 서비스를 리팩토링했기 때문에,
 
 Kubernetes 시크릿을 사용하여 Jane은 각 시크릿 내에 잘 정의된 시크릿 이름 및 매개변수를 구성합니다. 이를 통해 마이크로 서비스가 배치될 때 고유한 호스트 이름, 사용자 ID, 비밀번호 또는 기타 민감한 인증 정보를 선택하여 애플리케이션을 이식 가능하게 만듭니다.
 
-Stock Trader가 둘 이상의 클라우드에서 실행되는 경우에도 Jane은 통합된 코드 베이스를 원합니다. 다음 그림에서 시크릿 DB2는 라우팅 세부사항이 다르지만 형식은 동일합니다. Jane의 포트폴리오 마이크로 서비스가 배치될 때 적절한 Db2 인스턴스에 연결할 DB2 시크릿 엔드포인트 매개변수를 찾습니다. Stock Trader 애플리케이션은 VMware 가상 머신에서 실행되는지 컨테이너화된 서비스인지 또는 클라우드 관리 서비스인지 여부를 상관하지 않습니다.
+Stock Trader가 둘 이상의 클라우드에서 실행되는 경우에도 Jane은 통합된 코드 베이스를 원합니다. 다음 그림에서 시크릿 DB2는 라우팅 세부사항이 다르지만 형식은 동일합니다. Jane의 포트폴리오 마이크로 서비스가 배치될 때 적절한 Db2 인스턴스에 연결할 DB2 시크릿 엔드포인트 매개변수를 찾습니다. Stock Trader 애플리케이션은 VMware 가상 머신에서 실행되는지, 컨테이너화된 서비스에서 실행되는지 또는
+클라우드 관리 서비스로서 실행되는지와 관계없습니다.
 
 그림 2. Stock Trader - 피벗 서비스
 ![Stock Trader 피벗 서비스](vcscontent-pivot-services.svg)
 
 ## 결과
+{: #vcscontent-addmidware-result}
 
 Jane은 Stock Trader 솔루션을 리팩토링하고
 Todd는 미들웨어를 {{site.data.keyword.cloud_notm}} Private Hosted에 설치했기 때문에
@@ -247,6 +258,7 @@ Slack 채널이나 공용 Twitter 채널을 통해 동적 로열티 레벨 메�
 
 ![Stock Trader 인리치먼트](vcscontent-enrich.svg)
 
-### 관련 링크
+## 관련 링크
+{: #vcscontent-addmidware-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

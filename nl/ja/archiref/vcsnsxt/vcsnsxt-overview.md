@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # アーキテクチャー全体の概要
+{: #vcsnsxt-overview}
 
 ここでは、このリファレンス・アーキテクチャーで使用しているネットワーク・アーキテクチャーについて詳しく説明します。 以下のセクションで構成されています。
 * **VMware vCenter Server on {{site.data.keyword.cloud}} の概要** – vCenter Server プラットフォームの特長について説明します。
@@ -23,6 +24,7 @@ lastupdated: "2019-01-23"
   - ネットワーク・トラフィック・フロー
 
 ## vCenter Server の概要
+{: #vcsnsxt-overview-vcs-ovw}
 
 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle は、セキュアでシームレスなインフラストラクチャー・ハイブリッド性と真のアプリケーション・モビリティーを実現するために、素早く簡単にオンプレミス・インフラストラクチャーをクラウドに拡張するために役立つ、ホステッド・プライベート・クラウドです。
 
@@ -40,10 +42,11 @@ IBM、Veeam、および Zerto のバックアップおよび災害復旧オフ�
 
 vCenter Server Hybridity Bundle は、マネージド・サービスではありませんが、IBM-Managed Services を追加して、仮想化層、ゲスト OS 層、またはアプリケーション層の日常の運用と保守をオフロードできます。 クラウドの利用をすぐに開始できるように移行、実装、計画、オンボーディングのサービスを提供してお客様を支援する、{{site.data.keyword.cloud_notm}} プロフェッショナル・サービス・チームも用意されています。
 
-vCenter Server Hybridity Bundle のプラットフォーム統合オプションは、vRealize Suite や vSphere with Operations Management などの VMware 提供のオプションに限定されず、[vCenter Server と {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html) や [vCenter Server と {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html) など、オープン・ソースの Terraform を使用してインフラストラクチャーをコードとして管理、提供する複数の {{site.data.keyword.cloud_notm}} サービス・オファリングにわたります。
+vCenter Server Hybridity Bundle のプラットフォーム統合オプションは、vRealize Suite や vSphere with Operations Management などの VMware 提供のオプションに限定されず、[vCenter Server と {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro) や [vCenter Server と {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro) など、オープン・ソースの Terraform を使用してインフラストラクチャーをコードとして管理、提供する複数の {{site.data.keyword.cloud_notm}} サービス・オファリングにわたります。
 
 vCenter Server Hybridity Bundle で使用可能な広範なサービス・ポートフォリオとマルチオファリング統合オプションは、真のハイブリッド・プラットフォームを提供し、「サービスとしてのハイブリッド性」を可能にします。
 
-### 関連リンク
+## 関連リンク
+{: #vcsnsxt-overview-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

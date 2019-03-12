@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-21"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2018-01-21"
 {:faq: data-hd-content-type='faq'}
 
 # 變更 Cloud Foundation 構件的考量
+{: #cf_chg_impact}
 
 變更保留給 {{site.data.keyword.vmwaresolutions_full}} 的使用者、資源或子網路，可能會影響 VMware Cloud Foundation 實例的管理作業。
 
@@ -21,6 +22,7 @@ lastupdated: "2018-01-21"
 {:important}
 
 ## 服務特定使用者帳戶
+{: #cf_chg_impact-service-usr-account}
 {: faq}
 
 每一個服務都會在 vCenter Server 中建立內部使用者帳戶。此帳戶是必要的，因此與服務相關聯的管理作業可以連接至 vCenter Server，以在服務上執行作業。
@@ -34,6 +36,7 @@ lastupdated: "2018-01-21"
 {:note}
 
 ## Cloud Foundation 實例的 VMware 資源
+{: #cf_chg_impact-vmware-resources}
 
 下表列出在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更 VMware 資源時可能會受到影響的作業。如果有可用的回復解決方案，則也會提供它。
 
@@ -60,23 +63,21 @@ lastupdated: "2018-01-21"
 如果您選擇要停用 SSH 或 Shell 存取，在執行指示的作業之前您應該暫時將它重新啟用。
 
 ## Cloud Foundation 實例的管理子網路
+{: #cf_chg_impact-mgmt-subnets}
 
 下列資訊討論 {{site.data.keyword.vmwaresolutions_short}} 所訂購的子網路，並提供選項讓您訂購額外子網路以供您自己使用。
 
 **警告：**請不要將這些元件用於其他用途，否則，您環境的穩定性會受到嚴重影響。
 
 在每一張 {{site.data.keyword.cloud_notm}} Bare Metal Server 訂單中，依預設，會訂購下列 IP 位址範圍：
-
 *  32 個 IP 位址的主要公用範圍
 *  64 個 IP 位址的主要專用範圍
 
 此外，也會保留下列管理子網路供 {{site.data.keyword.vmwaresolutions_short}} 使用：
-
 *  第一個 VLAN 上有兩個含 64 個 IP 位址的可攜式專用子網路：一個用於管理，另一個用於 VTEPS。
 *  第二個 VLAN 上有兩個含 64 個 IP 位址的可攜式專用子網路：一個用於 vMotion，一個用於 vSAN。
 *  公用 VLAN 上有 16 個 IP 位址的公用可攜式子網路。
 
 如果您需要使用更多子網路，您可以用下列其中一種方式取得要使用的 IP 位址：
-
 * **選項 1（建議）：**使用 VMware NSX 虛擬網路覆蓋。訂購時會提供範例 VXLAN 範本。此 VXLAN 範本可以用作建置 SDN 的起點。
 * **選項 2：**訂購您自己的可攜式公用或專用子網路來取得 IP 位址。若要區別您訂購的子網路與管理子網路，您可以將附註新增至您訂購的所有子網路。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server 資料清單
+{: #vc_bom}
 
 檢閱 VMware vCenter Server 實例的資料清單 (BOM) 資訊。
 
 ## vCenter Server 實例的 VLAN BOM
+{: #vc_bom-vlans}
 
 下表詳述 vCenter Server VLAN 的 BOM 資訊。
 
@@ -29,6 +31,7 @@ lastupdated: "2019-01-23"
 |VLAN3     |專用 B、可攜式|指派給 VMware vSAN（如果使用的話）。<br><br>指派給 VMware NFS（如果使用的話）。<br><br>指派給 VMware vSphere vMotion。|
 
 ## vCenter Server 實例的軟體 BOM
+{: #vc_bom-software}
 
 下表詳述 vCenter Server 軟體元件的 BOM 資訊。
 
@@ -47,6 +50,7 @@ VMware vSAN 是選用元件。
 {:note}
 
 ## ESXi 伺服器的進階配置設定
+{: #vc_bom-esxi-server-advance-config}
 
 請檢閱下表，以取得套用至 ESXi 伺服器之進階配置設定的概觀。這些設定取決於 vCenter Server 實例是部署在 2.2 版或更新版本，還是從 2.1 版或更早版本升級至 2.2 版或更新版本。
 
@@ -75,6 +79,7 @@ VMware vSAN 是選用元件。
   如需相關資訊，請參閱 [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239)。
 
 ## NSX 和埠群組配置設定
+{: #vc_bom-nsx-port-group-config}
 
 請檢閱下表，以取得 vCenter Server 實例的 VMware NSX 及埠群組配置設定的概觀，以及版本之間的差異。
 
@@ -93,6 +98,7 @@ VMware vSAN 是選用元件。
 |埠群組 SDDC-DPortGroup-External |**埠連結**設為**暫時 - 無連結** |**埠連結**設為**靜態連結** |
 
 ## 網路 MTU 配置設定
+{: #vc_bom-network-mtu-config}
 
 vSphere 叢集使用兩個 vSphere Distributed Switch (vDS)：一個用於公用網路連線功能，另一個用於專用網路連線功能。
 
@@ -116,19 +122,22 @@ vSphere 叢集使用兩個 vSphere Distributed Switch (vDS)：一個用於公用
 對於已部署在 2.0 版或更早版本中的實例，建議您將公用交換器 MTU 設定更新為 1500。
 
 ### 更新公用交換器 MTU 設定
+{: #vc_bom-procedure-update-public-switch-mtu-setting}
 
 若要更新公用交換器的 MTU 設定，請在 VMware vSphere Web Client 中完成下列步驟：
 1. 在 vDS 上按一下滑鼠右鍵，然後按一下**編輯設定**。
 2. 在**內容**標籤上，選取**進階**選項。
 3. 確定**最大 MTU** 值已設為 1500。
 
-   **附註**：當 vDS 中的 MTU 大小變更時，會將連接的上行鏈路（實體 NIC）卸下再重新連接。因此，使用此上行鏈路的 VM 會短暫的中斷。所以，建議您在排定的關閉時間計劃 MTU 設定更新。
+   當 vDS 中的 MTU 大小變更時，會將連接的上行鏈路（實體 NIC）卸下再重新連接。因此，使用此上行鏈路的 VM 會短暫的中斷。所以，建議您在排定的關閉時間計劃 MTU 設定更新。
+   {:note}
 
-### 相關鏈結
+## 相關鏈結
+{: #vc_bom-related}
 
 * [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware vCenter Server 的建置號碼和版本 (2143838)](https://kb.vmware.com/s/article/2143838)
 * [在虛擬分散式交換器上啟用巨大訊框](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} 保護資料表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [規劃 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [規劃 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

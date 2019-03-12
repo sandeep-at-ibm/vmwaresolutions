@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # NetApp ONTAP Select インスタンスの表示
+{: #np_viewinginstances}
 
 異なるユーザー・アカウントについてプロビジョンされた NetApp ONTAP Select インスタンスのサマリーと詳細情報を表示します。
 
 ## NetApp ONTAP Select インスタンスのサマリーを表示する手順
+{: #np_viewinginstances-procedure-view-inst-summary}
 
 1 つのユーザー・アカウントについてプロビジョンされたすべての NetApp ONTAP Select インスタンスのサマリーを表示するには、以下の手順を実行します。
 
@@ -35,6 +37,7 @@ lastupdated: "2019-01-24"
 | 状況 | インスタンスの状況。 状況は、以下のいずれかの値になります。<ul><li>作成中: インスタンスは作成中です。</li><li>構築中: インスタンスは構成中です。</li><li>使用可能: インスタンスは使用可能です。</li><li>変更中: インスタンスは変更中です。</li><li>失敗: 作成、構成、または変更のプロセスが失敗しました。</li><li>削除中: インスタンスは削除中です。</li><li>削除エラー: インスタンスの削除中にエラーが発生しました。</li><li>削除済み: インスタンスは削除されました。</li></ul>|
 
 ## NetApp ONTAP Select インスタンスのプロパティーの詳細を表示する手順
+{: #np_viewinginstances-procedure-view-inst-property}
 
 インスタンスのプロパティーの詳細を表示するには、次の手順を実行します。
 
@@ -60,6 +63,7 @@ lastupdated: "2019-01-24"
 | 状況 | インスタンスの状況。 |
 
 ## NetApp ONTAP Select インスタンスのアクセス情報を表示する手順
+{: #np_viewinginstances-procedure-view-inst-access-info}
 
 **「アクセス情報」**の下に、インスタンス関連コンポーネントのアクセス情報が表示されます。 以下のパスワードは、システムで生成される初期パスワードです。 それらを {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、インスタンスのサマリー・ページでは更新されません。
 
@@ -85,6 +89,7 @@ lastupdated: "2019-01-24"
 | vCenter SSH | SSH 接続で vCenter Server VM にアクセスするために使用できるユーザー名とパスワード。 |
 
 ## NetApp ONTAP Select インスタンスのデプロイメント履歴を表示する手順
+{: #np_viewinginstances-procedure-view-inst-deploy-history}
 
 左側のナビゲーション・ペインで**「デプロイメント履歴」**をクリックすると、インスタンスのデプロイメント履歴が表示されます。
 
@@ -95,9 +100,10 @@ lastupdated: "2019-01-24"
 | 日付 | インスタンスの状況が変更された日時 |
 | サマリー | 変更の詳細 |
 
-インスタンスのデプロイメント中またはインスタンスの削除中にエラーが発生した場合、{{site.data.keyword.cloud_notm}} サポート・チームに自動的に通知されます。 チケットの状況については、[IBM サポートにお問い合わせください](/docs/services/vmwaresolutions/vmonic/trbl_support.html)。
+インスタンスのデプロイメント中またはインスタンスの削除中にエラーが発生した場合、{{site.data.keyword.cloud_notm}} サポート・チームに自動的に通知されます。 チケットの状況については、[IBM サポートにお問い合わせください](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
 
-## NetApp ONTAP Select クラスターの表示
+## NetApp ONTAP Select クラスターを表示する手順
+{: #np_viewinginstances-procedure-view-cluster}
 
 1. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。
 2. **「クラスター」**の下で、NetApp ONTAP Select クラスターに関するサマリーを確認します。
@@ -160,6 +166,7 @@ lastupdated: "2019-01-24"
 | 状況 | ESXi サーバーの状況。次の値のいずれかになります。<ul><li>アクティブ: ESXi サーバーを使用する準備ができています。</li><li>削除中: ESXi サーバーが削除されています。</li></ul> |
 
 ## 次に行うこと
+{: #np_viewinginstances-next}
 
 {{site.data.keyword.vmwaresolutions_short}} コンソール、VMware vSphere Web クライアント、または NetApp コンソールからインスタンスを管理します。
 
@@ -168,12 +175,13 @@ lastupdated: "2019-01-24"
 
 ログイン手順を実行するには、以下のトピックを参照してください。
 
-*  vSphere Web Client にアクセスするための要件と必要な手順については、[Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html) を参照してください。
+*  vSphere Web Client にアクセスするための要件と必要な手順については、[Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console) を参照してください。
 *  VPN を使用して {{site.data.keyword.cloud_notm}} インフラストラクチャーのプライベート・ネットワークにログインするためのアクセス・ポイントのリストについては、[VPN アクセス](http://www.softlayer.com/vpn-access){:new_window}を参照してください。
-*  vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイする際に問題が発生した場合は、[vSphere Web Client を使用して OVF ファイルをデプロイする方法](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html)を参照してください。
+*  vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイする際に問題が発生した場合は、[vSphere Web Client を使用して OVF ファイルをデプロイする方法](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf)を参照してください。
 
-### 関連リンク
+## 関連リンク
+{: #np_viewinginstances-related}
 
-* [NetApp ONTAP Select インスタンスの注文](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [NetApp ONTAP Select インスタンスの削除](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
+* [NetApp ONTAP Select インスタンスの注文](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [NetApp ONTAP Select インスタンスの削除](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
 * [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

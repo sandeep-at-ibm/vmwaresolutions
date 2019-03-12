@@ -4,17 +4,19 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
 # vCenter Server의 연결된 스토리지 정보
+{: #storage-benefits}
 
 연결된 스토리지는 VMware vCenter Server on {{site.data.keyword.cloud}} 오퍼링의 확장입니다. VMware vCenter Server on {{site.data.keyword.cloud_notm}}에 대한 연결된 스토리지 솔루션 아키텍처는 디자인에서 각 컴포넌트의 상위 레벨 구성 및 솔루션의 컴포넌트를 자세히 보여줍니다.
 
-vCenter Server 디자인에 대한 자세한 정보는 [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)를 참조하십시오.
+vCenter Server 디자인에 대한 자세한 정보는 [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)를 참조하십시오.
 
 ## vCenter Server에 대한 연결된 스토리지의 주요 이점
+{: #storage-benefits-key-benefits}
 
 연결된 스토리지가 VMware 환경의 전제조건이 아닌 반면 공유 스토리지 디바이스로 사용 시 IT 오퍼레이션에 대해 사용자에게 많은 이점이 제공됩니다. 공유 스토리지 디바이스를 사용하면 고가용성, 분배된 리소스 스케줄러, 스토리지 용량의 효율적인 사용 및 다음 표에 설명된 vSphere 기능 사용을 통한 단순화된 관리가 가능합니다.
 
@@ -27,6 +29,7 @@ vCenter Server 디자인에 대한 자세한 정보는 [솔루션 개요](/docs/
 | vSphere Datastore Clusters | 이 기능은 데이터 저장소 콜렉션에 공유 리소스 및 공유 관리 인터페이스를 제공합니다. |
 | vSphere Fault Tolerance | 이 기능은 전체 호스트에 장애가 발생한 경우에도 작동 중단을 없애 VM에 지속적 가용성을 제공합니다. |
 
-### 관련 링크
+## 관련 링크
+{: #storage-benefits-related}
 
-* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

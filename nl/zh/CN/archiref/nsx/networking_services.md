@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # IBM Cloud 上的联网服务
+{: #nsx-networking_services}
 
 {{site.data.keyword.cloud}} 上的联网服务由两对 VMware NSX Edge 服务网关 (ESG) 组成，用于通过虚拟专用网 (VPN) 在 {{site.data.keyword.cloud_notm}} 和公用因特网或客户内部部署网络之间进行通信。这些 ESG 已隔离，以支持内部 {{site.data.keyword.cloud_notm}} 管理功能和流出流量（即与客户相关的网络流量的流入）。
 
@@ -28,6 +29,7 @@ lastupdated: "2019-01-23"
 {:note}
 
 ## IBM 管理服务 NSX Edge
+{: #nsx-networking_services-mgmt-serv-nsx-edge}
 
 IBM 管理 ESG 是一种专用 NSX Edge 集群，仅用于 {{site.data.keyword.cloud_notm}} 管理网络流量。它不适用于非 Cloud Foundation 或 vCenter Server 自动化所部署和管理的任何组件的流量遍历。
 
@@ -47,6 +49,7 @@ IBM 管理 ESG 是一种专用 NSX Edge 集群，仅用于 {{site.data.keyword.c
 |IBM 管理 NSX ESG 2|2|1 GB|1 GB|vSAN 数据存储 (Cloud Foundation)；用于管理的共享连接存储器 (vCenter Server)|
 
 ### 管理服务
+{: #nsx-networking_services-mgmt-services}
 
 需要对以下服务进行出站访问：
 
@@ -56,6 +59,7 @@ IBM 管理 ESG 是一种专用 NSX Edge 集群，仅用于 {{site.data.keyword.c
 * F5 on {{site.data.keyword.cloud_notm}} 需要对因特网进行出站访问以获取许可激活。
 
 ### Edge 接口
+{: #nsx-networking_services-edge-interfaces}
 
 ESG 接口的配置定义了 ESG 有权访问的 L2 网络。要实现 Cloud Foundation 和 vCenter Server 生命周期管理，需要允许放置在管理 VLAN 上的特定 VM 遍历到公用 VLAN。部署时定义了以下接口：
 
@@ -68,6 +72,7 @@ ESG 接口的配置定义了 ESG 有权访问的 L2 网络。要实现 Cloud Fou
 |内部|内部|工作负载 HA VXLAN|用于 ESG HA 对脉动信号的内部接口；**SDDC-Dswitch-Private** 上的端口组|
 
 ### 子网
+{: #nsx-networking_services-subnets}
 
 以下子网用于管理 ESG：
 
@@ -80,6 +85,7 @@ ESG 接口的配置定义了 ESG 有权访问的 L2 网络。要实现 Cloud Fou
 |内部|内部|本地链接|169.254.0.0/16|用于 ESG HA 对通信的内部接口|
 
 ### 网络地址转换定义
+{: #nsx-networking_services-nat-definitions}
 
 在管理 ESG 上，网络地址转换 (NAT) 用于允许网络流量在不同 IP 地址空间之间遍历。这样做通常是为了保护因特网可路由 IP 地址，或出于安全原因对公共 IP 地址隐藏内部 IP 地址。NAT 还用于支持传输控制协议 (TCP) 和用户数据报协议 (UDP) 端口重定向。管理流量始终从 Cloud Foundation 和 vCenter Server 实例内部发起，只需要在管理 ESG 上定义源 NAT (SNAT) 即可。对于托管需要从实例中流出流量的服务的每个内部 VM，不会为其创建单独的 SNAT。
 
@@ -90,10 +96,11 @@ ESG 接口的配置定义了 ESG 有权访问的 L2 网络。要实现 Cloud Fou
 |公共上行链路|管理可移植 /26 上的各个 IP 地址|{{site.data.keyword.cloud_notm}} 可移植公共|
 
 ### 路由
+{: #nsx-networking_services-routing}
 
 由于通过管理 ESG 遍历所需的 VM 中的服务还可能需要访问客户 {{site.data.keyword.cloud_notm}} 专用网络中的 {{site.data.keyword.cloud_notm}} 服务，因此需要以下配置来实现此通信。
 
-虽然难以预测需要哪个目标 IP 范围来作为面向因特网的连接的目标，但由 {{site.data.keyword.cloud_notm}} 部署并管理的任何服务都会指向作为其缺省网关的管理 ESG。对于需要外部网络连接的服务，需要静态路由在 {{site.data.keyword.cloud_notm}} BCR 上强制执行流量。
+虽然难以预测需要哪个目标 IP 范围来作为面向因特网的连接的目标，但由 {{site.data.keyword.cloud_notm}} 部署并管理的任何服务都会指向作为其缺省网关的管理 ESG。对于需要外部网络连接的服务，需要使用静态路由强制通过 {{site.data.keyword.cloud_notm}} BCR 进行通信。
 
 对于使用管理 ESG 来遍历 Cloud Foundation 或 vCenter Server 实例流出流量的任何服务，都建议使用以下配置：
 * 缺省网关为管理 ESG。
@@ -104,8 +111,9 @@ ESG 接口的配置定义了 ESG 有权访问的 L2 网络。要实现 Cloud Fou
 当前未配置管理 ESG 的自动路由协议。
 
 ### VXLAN 定义
+{: #nsx-networking_services-vlan-definitions}
 
-管理 HA 对需要内部接口连接的网络。请使用现有 vSwitch、端口组或 VXLAN。对于此设计，将为管理 ESG HA 对的 HA 脉动信号通信创建专用 VXLAN。
+“管理 HA”对需要通过网络连接到内部接口，支持使用现有 vSwitch、端口组或 VXLAN。对于此设计，将为管理 ESG HA 对的 HA 脉动信号通信创建专用 VXLAN。
 
 表 5. NSX ESG VXLAN 定义
 
@@ -114,6 +122,7 @@ ESG 接口的配置定义了 ESG 有权访问的 L2 网络。要实现 Cloud Fou
 |管理 HA|transport-1|全局|
 
 ### 防火墙规则
+{: #nsx-networking_services-firewall-rules}
 
 缺省情况下，管理 ESG 配置为拒绝所有流量。
 
@@ -132,6 +141,7 @@ ESG 接口的配置定义了 ESG 有权访问的 L2 网络。要实现 Cloud Fou
 |任意|任意|任意|任意|拒绝|
 
 ## IBM 工作负载 NSX Edge
+{: #nsx-networking_services-wkld-nsx-edge}
 
 IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部分。以下部分描述了在何处将工作负载连接到 Cloud Foundation 或 vCenter Server 实例中网络的设计意图。这是将内部部署网络和 IP 空间连接到特定 Cloud Foundation 或 vCenter Center 实例的起点，也是真正的混合云体系结构的基础。
 
@@ -147,6 +157,7 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 ![网络流程图](customer_network_flow_diagram.svg "网络流程图")
 
 ### IBM 工作负载 NSX Edge 的 Edge 接口
+{: #nsx-networking_services-edge-interfaces-workload}
 
 与管理 ESG 一样，ESG 接口的配置也会定义 ESG 有权访问的 L2 网络。工作负载拓扑的设计意图中，有一部分是实现软件定义的联网 (SDN) 覆盖，以将工作负载与底层的 {{site.data.keyword.cloud_notm}} 地址空间相隔离。此设计是实现 BYOIP 设计的基础。因此，部署时定义了以下接口：
 
@@ -170,6 +181,7 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 |内部|内部|工作负载 HA VXLAN|用于 ESG HA 对脉动信号的内部接口|
 
 ### IBM 工作负载 NSX Edge 的子网
+{: #nsx-networking_services-subnets-workload}
 
 以下子网用于工作负载 ESG：
 
@@ -184,10 +196,11 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 |工作负载 (DLR)|上行链路|由客户分配|待定|工作负载子网|
 
 ### IBM 工作负载 NSX Edge 的 NAT 定义
+{: #nsx-networking_services-nat-definitions-nsx-edge}
 
 在工作负载 ESG 上，NAT 用于允许网络流量在不同 IP 地址空间之间遍历。对于工作负载 ESG, 需要 NAT 不仅允许与因特网目标进行通信，还允许与任何以 {{site.data.keyword.cloud_notm}} 为源的 IP 范围进行通信。对于此设计，允许工作负载流量流出到因特网，但不允许流出到管理或任何 {{site.data.keyword.cloud_notm}} 网络。因此，只需要在工作负载 ESG 上定义 SNAT。整个工作负载可移植子网会配置为遍历 SNAT。
 
-虽然可以使用 NAT 来支持在 Cloud Foundation 或 vCenter Server 的多个实例之间进行工作负载通信，但当许多工作负载需要跨实例进行连接时，这种做法会变得不切实际。有关使用高级 NSX 功能在 Cloud Foundation 或 vCeter Server 实例中创建 L2 覆盖传输网络的示例，请参阅[多站点体系结构](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)。
+虽然可以使用 NAT 来支持在 Cloud Foundation 或 vCenter Server 的多个实例之间进行工作负载通信，但当许多工作负载需要跨实例进行连接时，这种做法会变得不切实际。有关使用高级 NSX 功能在 Cloud Foundation 或 vCeter Server 实例中创建 L2 覆盖传输网络的示例，请参阅[多站点体系结构](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)。
 
 表 10. 工作负载 ESG NAT 规则
 
@@ -196,6 +209,7 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 |公共上行链路（工作负载 ESG）|客户定义|{{site.data.keyword.cloud_notm}} 可移植公共 IP|客户定义（缺省为禁用）|
 
 ### IBM 工作负载 NSX Edge 的路由
+{: #nsx-networking_services-routing-wkld}
 
 在此设计中，对于遍历 DLR 到工作负载 ESG 的工作负载，唯一要求是可访问因特网。工作负载 ESG 需要了解在 DLR 后面创建的工作负载 VXLAN 的路径以及任何未来工作负载 VXLAN/子网的路径。虽然这可以通过 ESG 上的静态路由实现，但工作负载拓扑的目的是展示最佳实践设计。因此，将在工作负载 ESG 与下游 DLR 之间配置开放式最短路径优先协议 (OSPF)。
 
@@ -208,6 +222,7 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 |51|存根|为传输 RFC1918 网络上的每个 DLR 和 ESG 分配一个 IP|无|
 
 ### IBM 工作负载 NSX Edge 的防火墙规则
+{: #nsx-networking_services-firewall-wkld}
 
 缺省情况下，工作负载 ESG 配置为拒绝所有流量。
 
@@ -223,6 +238,7 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 |任意|任意|任意|任意|拒绝|
 
 ### IBM 工作负载 NSX Edge 的 VXLAN 定义
+{: #nsx-networking_services-vxlan-definitions}
 
 工作负载拓扑 ESG 和 DLR HA 对需要 L2 分段 (VXLAN) 来连接内部接口、在两个接口之间传输数据，以及用于工作负载。
 
@@ -235,10 +251,12 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 |工作负载|transit-1|全局|
 
 ### IBM 工作负载 NSX Edge 的 ESG DLR 设置
+{: #nsx-networking_services-esg-dlr-sett}
 
 缺省情况下，在所有新的 NSX Edge 设备上都会启用日志记录。缺省日志记录级别为 NOTICE。
 
-### 相关链接
+## 相关链接
+{: #nsx-networking_services-related}
 
-* [NSX Edge 服务网关设计](/docs/services/vmwaresolutions/archiref/nsx/nsx_design.html)
-* [多站点体系结构](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)
+* [NSX Edge 服务网关设计](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_design)
+* [多站点体系结构](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)

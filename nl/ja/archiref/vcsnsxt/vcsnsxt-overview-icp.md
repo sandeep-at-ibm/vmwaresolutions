@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Private
+{: #vcsnsxt-overview-icp}
 
 {{site.data.keyword.icpfull_notm}} は、コンテナー化されたアプリケーションを開発して管理するためのアプリケーション・プラットフォームです。 これは、コンテナー・オーケストレーター Kubernetes、プライベート・イメージ・リポジトリー、管理コンソール、モニター・フレームワーク、グラフィカル・ユーザー・インターフェースで構成される統合環境であり、ユーザーがアプリケーションのデプロイ、管理、モニター、スケーリングを行うことができる一元的な場所を提供します。
 
@@ -21,6 +22,7 @@ lastupdated: "2019-01-23"
 -	**ELK スタックによる堅固なモニターとロギング** - {{site.data.keyword.cloud_notm}} Private は、ログとメトリックの収集、保管、照会に、Elasticsearch、Logstash、Filebeat、Heapster を使用します。 このモニターとロギングのプロセスでは、すべてのログとメトリックを一元的に保管し、パフォーマンスを向上させ、より安定したログやメトリックのアクセスおよび照会が可能になります。
 
 ## IBM Cloud Private コンポーネント
+{: #vcsnsxt-overview-icp-comp}
 
 {{site.data.keyword.cloud_notm}} Private クラスターには、4 つの主要なノード・クラス (ブート、マスター、ワーカー、プロキシー) があります。 必要に応じて、クラスター内に管理ノード、脆弱性アドバイザー (VA) ノード、etcd ノードを指定できます。
 -	**ブート・ノード** - ブート・ノードは、インストール、構成、ノード・スケーリング、クラスター更新の実行に使用されます。
@@ -32,12 +34,14 @@ lastupdated: "2019-01-23"
 -	**etcd** ノード - etcd ノードは、etcd 分散キー値ストアの実行に使用されるオプション・ノードです。
 
 ## IBM Cloud Private ネットワーキング
+{: #vcsnsxt-overview-icp-networking}
 
 Calico を使用すると {{site.data.keyword.icpfull_notm}} ネットワーク管理が簡単になります。
 Calico は、Open System Interconnection (OSI) モデルのレイヤー 3 (つまりネットワーク層) を使用します。 Calico は、Border Gateway Protocol (BGP) を使用して、エージェント・ノード間の通信を容易にするルーティング・テーブルを構築します。
 
-Calico ネットワーキングについて詳しくは、[{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-iks.html) を参照してください。
+Calico ネットワーキングについて詳しくは、[{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks) を参照してください。
 
-### 関連リンク
+## 関連リンク
+{: #vcsnsxt-overview-icp-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

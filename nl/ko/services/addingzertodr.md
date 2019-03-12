@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Zerto on IBM Cloud 개요
+{: #addingzertodr}
 
 Zerto on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm}}의 VMware virtual 환경에서 데이터를 보호하고 복구하도록 복제 및 재해 복구 기능을 배치 오퍼링에 통합합니다.
 
@@ -20,6 +21,7 @@ Zerto on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm
 {:note}
 
 ## Zerto on IBM Cloud의 기술 스펙
+{: #technical-considerations-for-zerto-on-ibm-cloud}
 
 다음 컴포넌트가 주문되고 Zerto on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
@@ -27,6 +29,7 @@ Zerto VRA(Virtual Replication Appliance) 컴포넌트는 기본 클러스터에�
 {:note}
 
 ### VSI
+{: #addingzertodr-specs-vsi}
 
 * 하나의 VSI(Virtual Service Instance) - ZVM(Zerto Virtual Manager)
 * 2 x 2.0GHz 코어
@@ -34,23 +37,27 @@ Zerto VRA(Virtual Replication Appliance) 컴포넌트는 기본 클러스터에�
 * Windows Server 2016 Standard Edition(64비트)
 
 ### 스토리지
+{: #addingzertodr-specs-storage}
 
 100GB (SAN) 디스크
 
 ### 네트워킹
+{: #addingzertodr-specs-network}
 
 * 한 개의 기본 사설 IP 주소
 * 1Gbps 사설 네트워크 업링크
 
 ### 라이센스 및 요금
+{: #addingzertodr-specs-licenses}
 
 Zerto Replication V6.0 update 3 라이센스
 
-### 관련 링크
+## 관련 링크
+{: #addingzertodr-related}
 
-* [{{site.data.keyword.vmwaresolutions_short}} 정보](/docs/services/vmwaresolutions/vmonic/prod_overview.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services/zerto_ordering.html)
-* [Zerto on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services/managingzertodr.html)
-* [Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스 요청](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
+* [{{site.data.keyword.vmwaresolutions_short}} 정보](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-prod_overview)
+* [Zerto on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering)
+* [Zerto on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
+* [Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스 요청](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [zerto.com 웹 사이트](https://www.zerto.com){:new_window}
 * [Zerto 기술 문서](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

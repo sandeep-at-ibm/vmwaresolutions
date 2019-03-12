@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # 다중 사이트 구성에서 Cloud Foundation 인스턴스 삭제
+{: #sd_deletinginstance_multi}
 
 다중 사이트 구성에서 Cloud Foundation 인스턴스를 삭제하려고 계획하기 전에, 다음 고려사항을 검토하십시오.
 
@@ -30,6 +31,7 @@ Cloud Foundation 인스턴스를 삭제하는 경우 다음 컴포넌트가 순�
 {:note}
 
 ## 다중 사이트 구성에서 Cloud Foundation 인스턴스를 삭제하는 프로시저
+{: #sd_deletinginstance_multi-procedure}
 
 1. 보조 Cloud Foundation 인스턴스에서 모든 서비스를 제거하십시오.
 2. 삭제할 보조 인스턴스로 확장되는 NSX 오브젝트가 없는지 확인하십시오.
@@ -39,7 +41,8 @@ Cloud Foundation 인스턴스를 삭제하는 경우 다음 컴포넌트가 순�
 6. 다중 사이트 구성에서 모든 보조 Cloud Foundation 인스턴스에 대해 1 - 5단계를 반복하십시오.
 7. 모든 보조 인스턴스를 삭제하고 나면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 기본 인스턴스도 삭제할 수 있습니다.
 
-### 관련 링크
+## 관련 링크
+{: #sd_deletinginstance_multi-related}
 
-* [Cloud Foundation 인스턴스 삭제](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
-* [Cloud Foundation 인스턴스에서 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Cloud Foundation 인스턴스 삭제](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)
+* [Cloud Foundation 인스턴스에서 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)

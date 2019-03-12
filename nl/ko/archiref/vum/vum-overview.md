@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-18"
 
 ---
 
 # VMware Update Manager 개요
+{: #vum-overview}
 
 VUM(VMware Update Manager)은 다단계 프로세스를 사용하여 vSphere 오브젝트를 업그레이드하고 패치 또는 확장을 적용합니다. 이 프로세스를 사용하면 시스템 중단 시간을 최소화하여 업데이트 프로시저를 원활하게 수행할 수 있습니다. 이 프로세스를 살펴보기 전에 다음 용어를 이해해야 합니다.
 * **인벤토리 오브젝트** - 가상 머신, 가상 어플라이언스 또는 vSphere ESXi 호스트와 같은 vCenter 내의 오브젝트입니다.
@@ -44,7 +45,9 @@ VUM 클라이언트 인터페이스는 두 가지 기본 보기를 제공합니�
 *	관리 보기
 *	준수 보기
 
-##	관리 보기
+## 관리 보기
+{: #vum-overview-admin-view}
+
 관리 보기에는 **홈** > **Update Manager**로 이동하고 Update Manager 인스턴스의 IP 주소를 선택하여 액세스합니다. 관리 보기에서 다음 태스크를 수행할 수 있습니다.
 *	Update Manager 설정 구성
 *	기준선과 기준선 그룹 작성 및 관리
@@ -53,7 +56,9 @@ VUM 클라이언트 인터페이스는 두 가지 기본 보기를 제공합니�
 *	알림 검토 및 확인
 *	ESXi 이미지 가져오기
 
-##	준수 보기
+## 준수 보기
+{: #vum-overview-compliance-view}
+
 **호스트 및 클러스터** 또는 **VM 및 템플리트**로 이동하고 **Update Manager 탭**을 클릭하여 선택한 인벤토리 오브젝트의 준수 보기에 액세스합니다. Update Manager 준수 보기에서 다음 태스크를 수행할 수 있습니다.
 *	각각의 선택한 인벤토리 오브젝트에 대한 준수 및 스캔 결과 보기
 *	선택한 인벤토리 오브젝트에서 기준선 및 기준선 그룹 연결 및 분리
@@ -61,7 +66,8 @@ VUM 클라이언트 인터페이스는 두 가지 기본 보기를 제공합니�
 *	호스트에 패치 또는 확장 스테이징
 *	선택한 인벤토리 오브젝트 수정
 
-### 관련 링크
+## 관련 링크
+{: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

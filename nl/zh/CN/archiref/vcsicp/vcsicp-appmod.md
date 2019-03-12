@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # 应用程序现代化概述
+{: #vcsicp-appmod}
 
 下图显示了 Acme Skateboards 部署的应用程序现代化参考体系结构。该体系结构在此系列文档中进行了深入描述。
 
@@ -40,6 +41,7 @@ lastupdated: "2019-01-23"
     - 内部部署数据中心内的遗留系统与云 VM 之间的流量。
 
 ## Acme Skateboards 的主要优点
+{: #vcsicp-appmod-benefits}
 
 vCenter Server 提供了设计最适合工作负载的 VMware 软件定义的数据中心 (SDDC) 灵活解决方案所需的基本构建块（包括 VMware vSphere、vCenter Server 和 NSX）和共享存储选项（包括 vSAN）。
 
@@ -54,6 +56,7 @@ vCenter Server 提供了设计最适合工作负载的 VMware 软件定义的数
 
 此参考体系结构显示了 VCS、{{site.data.keyword.icpfull_notm}} 和 {{site.data.keyword.containerlong_notm}} 如何在应用程序现代化的旅程中安全地迁移 Acme Skateboards。
 
-### 相关链接
+## 相关链接
+{: #vcsicp-appmod-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # NetApp ONTAP Select 概觀
+{: #np_netappoverview}
 
 檢閱 NetApp ONTAP Select on {{site.data.keyword.cloud}} 部署的架構及元件。
 
 ## NetApp ONTAP Select 架構
+{: #np_netappoverview-archi}
 
 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目能提供儲存空間虛擬化服務，進而補足 vCenter Server 部署。
 
@@ -27,10 +29,12 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目能提供儲
 ![NetApp ONTAP Select 架構](np_architecture.svg "NetApp ONTAP Select on IBM Cloud 高階架構")
 
 ### 實體基礎架構
+{: #np_netappoverview-physical-infras}
 
 這層提供要供虛擬基礎架構使用的實體基礎架構（運算、網路及儲存空間資源）。
 
 ### 虛擬化基礎架構（運算、網路及 NetApp ONTAP Select）
+{: #np_netappoverview-virtual-infras}
 
 這層透過下列 VMware 產品及 NetApp ONTAP Select 產品來將實體基礎架構虛擬化：
 * VMware vSphere 將實體運算資源虛擬化
@@ -44,6 +48,7 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目能提供儲
 ![NetApp ONTAP Select 元件](np_netappcomponents.svg "NetApp ONTAP Select 的元件")
 
 ### 虛擬化管理
+{: #np_netappoverview-virtualization-mgmt}
 
 虛擬化管理層包含下列元件：
 
@@ -56,6 +61,7 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目能提供儲
 NetApp ONTAP Select 是在 VMware 叢集裡執行，並將主機上的本端儲存空間虛擬化。NetApp ONTAP Select 部署在專用模型中，其中其他工作負載預期不會與其共用叢集。因此，NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目的硬體配置僅根據 NetApp ONTAP Select 的需求調整大小。
 
 ## NetApp ONTAP Select 實例的技術規格
+{: #technical-specifications-for-netapp-ontap-select-instances}
 
 NetApp ONTAP Select 實例中包含下列元件。
 
@@ -63,6 +69,7 @@ NetApp ONTAP Select 實例中包含下列元件。
 {:note}
 
 ### Storage
+{: #np_netappoverview-storage}
 
 * 在**高效能（中型）**、**高效能（大型）**及**高容量**之間進行選擇
 * 具有緊急備用的 RAID 5
@@ -70,6 +77,7 @@ NetApp ONTAP Select 實例中包含下列元件。
 * 管理資料儲存庫 - 500 GB 用於管理 VM
 
 ### 預設配置
+{: #np_netappoverview-preset-config}
 
 已提供四部具有下列配置選項的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}：
 * **高效能（中型）**- 超值授權 / 雙重 Intel Xeon E5-2650 v4（總計 24 核心，2.2 GHz）/ 128 GB RAM / 每個節點有 22 個 1.9 TB SSD 磁碟機容量 / 4 節點叢集的有效容量 - 59 TB
@@ -80,6 +88,7 @@ NetApp ONTAP Select 實例中包含下列元件。
 {:note}
 
 ### 硬體
+{: #np_netappoverview-hardware}
 
 * 三個 RAM 及磁碟選項：**高效能（中型）**、**高效能（大型）**及**高容量**
 * 兩個 1 TB SATA 磁碟機 ESXi OS
@@ -87,18 +96,21 @@ NetApp ONTAP Select 實例中包含下列元件。
 * VMware Server Virtualization 6.5
 
 ### 網路
+{: #np_netappoverview-network}
 
 * 10 Gbps 雙重公用及專用網路上行鏈路
 * 三個 VLAN（虛擬 LAN）：一個公用 VLAN 和兩個專用 VLAN
 * 一個安全的 VMware NSX Edge Services Gateway
 
 ### 虛擬伺服器實例
+{: #np_netappoverview-vsi}
 
 兩個 VSI（虛擬伺服器實例）：
 * Microsoft Active Directory (AD) 及「網域名稱系統 (DNS)」服務的 VSI。
 * IBM CloudBuilder 的 VSI，在完成實例部署之後會關閉它。
 
 ### 授權及費用
+{: #np_netappoverview-license-and-fee}
 
 *  四個超值或標準版 NetApp ONTAP Select 授權（由使用者提供）
 *  VMware vSphere 6.5 Enterprise Plus 版本
@@ -116,12 +128,14 @@ NetApp ONTAP Select 實例中包含下列元件。
    這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
 
 ## 防火牆考量
+{: #np_netappoverview-firewall-considerations}
 
 如果您使用防火牆，則必須針對來自 {{site.data.keyword.IBM}} CloudDriver 虛擬伺服器實例 (VSI) 及 SDDC Manager 虛擬機器 (VM) 的所有通訊配置規則。這些規則必須容許所有通訊協定在 IP 位址 `10.0.0.0/8` 及 `161.26.0.0/16` 上進行通訊。這類防火牆的範例包含 NSX Distributed Firewall (DFW) 或 Vyatta 防火牆。
 
-### 相關鏈結
+## 相關鏈結
+{: #np_netappoverview-related}
 
-* [規劃 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp/np_planning.html#requirements-and-planning-for-netapp-ontap-select-instances)
-* [訂購 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [規劃 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning#requirements-and-planning-for-netapp-ontap-select-instances)
+* [訂購 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [NetApp ONTAP 文件中心](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){:new_window}

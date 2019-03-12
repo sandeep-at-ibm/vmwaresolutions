@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # 添加、查看和删除 KMIP for VMware on IBM Cloud 实例的证书
+{: #kmip_standalone_addingdeletingcert}
 
 KMIP for VMware on {{site.data.keyword.cloud}} 实例准备就绪后，必须向其添加证书。不再需要证书时，可以将其从实例中删除。
 
 ## 向 KMIP for VMware on IBM Cloud 实例添加证书的过程
+{: #kmip_standalone_addingdeletingcert-add}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 向下滚动到 **KMIP for VMware on IBM Cloud 实例**表，然后找到要为其添加证书的实例。
@@ -28,6 +30,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} 实例准备就绪后，必须向
 5. 单击**添加**。
 
 ## 查看 KMIP for VMware on IBM Cloud 实例证书的过程
+{: #kmip_standalone_addingdeletingcert-view}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 向下滚动到 **KMIP for VMware on IBM Cloud 实例**表，然后找到要查看其证书的实例。
@@ -35,6 +38,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} 实例准备就绪后，必须向
 4. 要查看特定证书的内容，请单击**下载**。
 
 ## 从 KMIP for VMware on IBM Cloud 实例中删除证书的过程
+{: #kmip_standalone_addingdeletingcert-delete}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
 2. 向下滚动到 **KMIP for VMware on IBM Cloud 实例**表，然后单击要删除其证书的实例。
@@ -43,9 +47,10 @@ KMIP for VMware on {{site.data.keyword.cloud}} 实例准备就绪后，必须向
    对于加密和解密数据或备份数据的用途，客户机会立即失去对所有密钥的访问权。要使客户机重新获得访问权，您必须重新添加客户机 SSL 证书。
 {:note}
 
-### 相关链接
+## 相关链接
+{: #kmip_standalone_addingdeletingcert-related}
 
-* [查看 KMIP for VMware on IBM Cloud 实例](/docs/services/vmwaresolutions/services/kmip_standalone_viewing.html)
-* [订购 KMIP for VMware on IBM Cloud 实例](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html)
-* [删除 KMIP for VMware on IBM Cloud 实例](/docs/services/vmwaresolutions/services/kmip_standalone_deleting.html)
-* [Activity Tracker 事件](/docs/services/vmwaresolutions/vmonic/at-events.html)
+* [查看 KMIP for VMware on IBM Cloud 实例](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
+* [订购 KMIP for VMware on IBM Cloud 实例](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)
+* [删除 KMIP for VMware on IBM Cloud 实例](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
+* [Activity Tracker 事件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

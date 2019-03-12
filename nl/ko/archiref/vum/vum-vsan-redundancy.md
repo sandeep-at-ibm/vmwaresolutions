@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # 가상 머신 vSAN 중복성
+{: #vum-vsan-redundancy}
 
 vSAN 클러스터에서 vSphere ESXi 호스트를 유지보수 모드로 전환하는 경우 데이터 제거 모드를 선택해야 합니다. 이 모드를 선택하면 vSAN 데이터 저장소를 이용하는 가상 머신(VM) 및 어플라이언스에 영향이 미칠 수 있습니다.
 * **전체 데이터 마이그레이션**은 호스트에서 모든 데이터를 제거하고 vSAN 클러스터의 다른 vSphere ESXi 호스트로 이동합니다. 이 제거 모드를 선택하면 가장 많은 양의 데이터가 전송되므로 가장 많은 시간과 리소스가 이용됩니다. 선택한 호스트의 로컬 스토리지에 있는 모든 컴포넌트가 클러스터의 다른 위치로 마이그레이션됩니다. 호스트가 유지보수 모드로 전환되면 모든 VM 및 어플라이언스가 해당 스토리지 컴포넌트에 액세스할 수 있고 지정된 스토리지 정책을 계속 준수합니다. 전체 데이터 제거는 오랜 시간이 걸릴 수 있으며 업그레이드를 위한 유지보수 기간의 지속 시간이 길어질 수 있습니다.
@@ -21,7 +22,8 @@ vSAN 클러스터에서 vSphere ESXi 호스트를 유지보수 모드로 전환�
 
 2. 조치방안 조치를 시작하기 전에 vSAN 동기화가 완료될 때까지 기다리십시오. 클러스터에 대한 **vSAN 가상 오브젝트 모니터링 페이지**로 이동하고 **완료 상태**를 검토하여 완료 상태를 확인할 수 있습니다.
 
-### 관련 링크
+## 관련 링크
+{: #vum-vsan-redundancy-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

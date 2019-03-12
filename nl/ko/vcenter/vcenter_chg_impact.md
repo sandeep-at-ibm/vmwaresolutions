@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2019-01-23"
 {:faq: data-hd-content-type='faq'}
 
 # vCenter Server 아티팩트 변경에 대한 고려사항
+{: #vcenter_chg_impact}
 
 {{site.data.keyword.vmwaresolutions_full}}에 대해 예약된 사용자, 리소스 또는 서브넷을 변경하면 관리 오퍼레이션에 영향을 줄 수 있습니다.
 
@@ -22,6 +23,7 @@ VMware vSphere Web Client의 **사용자 및 그룹** 페이지에서 **ic4v-vCe
 {:important}
 
 ## 자동화 ID
+{: #vcenter_chg_impact-automation-id}
 {: faq}
 
 **자동화** ID는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 제공된 자동화된 오퍼레이션에 의해 사용되는 사용자 계정입니다.
@@ -29,6 +31,7 @@ VMware vSphere Web Client의 **사용자 및 그룹** 페이지에서 **ic4v-vCe
 해당 인증 정보를 기반으로 하는 콘솔 오퍼레이션이 실패할 수 있으므로 콘솔에서 자동화된 오퍼레이션의 사용자 및 비밀번호를 변경하면 안 됩니다.
 
 ## 서비스 고유 사용자 계정
+{: #vcenter_chg_impact-service-usr-account}
 
 각 서비스는 vCenter Server에 내부 사용자 계정을 작성합니다. 이 계정은 서비스와 연관된 관리 조작이 서비스에 대해 해당 조작을 수행하기 위해 vCenter Server에 연결하는 데 필요합니다.
 
@@ -41,10 +44,14 @@ VMware vSphere Web Client의 **사용자 및 그룹** 페이지에서 **ic4v-vCe
 {:note}
 
 ## vCenter Server 인스턴스용 VMware 리소스(V1.9 이상)
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
 
-V1.9 이상에 배치된 인스턴스의 경우, vCenter Server 인스턴스가 **사용할 준비가 됨** 상태에 있으면 VMware vSphere Web Client에서 VMware 가상 데이터 센터, 클러스터, 스위치, 포트 그룹 및 고객 데이터 저장소 이름을 수정할 수 있습니다. 그러나 관리 데이터 저장소의 이름은 기본값(vSAN 인스턴스의 경우 **vsanDatastore**, Network File System(NFS) 인스턴스의 경우 **management-share**)을 변경하지 않아야 합니다.
+V1.9 이상에 배치된 인스턴스의 경우, vCenter Server 인스턴스가 **사용할 준비가 됨** 상태에 있으면 VMware vSphere Web Client에서 VMware 가상 데이터 센터, 클러스터, 스위치, 포트 그룹 및 고객 데이터 저장소 이름을 수정할 수 있습니다.
+
+그러나 관리 데이터 저장소의 이름은 기본값(vSAN 인스턴스의 경우 **vsanDatastore**, NFS(Network File System) 인스턴스의 경우 **management-share**)을 변경하지 않아야 합니다. 또한 프로비저닝 중에 작성된 네트워크 업링크의 이름도 변경하지 않아야 합니다.
 
 ## vCenter Server 인스턴스용 VMware 리소스(V1.8 이상)
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
 
 다음 표는 SSO 관리자가 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 VMware vCenter Server 리소스를 변경하는 경우 영향을 받을 수 있는 오퍼레이션을 나열합니다. 복구하기 위한 솔루션을 사용할 수 있는 경우 해당 솔루션도 제공됩니다.
 
@@ -73,6 +80,7 @@ V1.9 이상에 배치된 인스턴스의 경우, vCenter Server 인스턴스가 
 SSH 또는 쉘 액세스를 사용 안함으로 선택하는 경우 표시된 오퍼레이션을 수행하기 전에 임시로 다시 사용으로 설정해야 합니다.
 
 ## vCenter Server 인스턴스에 대한 관리 서브넷
+{: #vcenter_chg_impact-mgmt-subnets}
 
 다음 정보는 {{site.data.keyword.vmwaresolutions_short}}에서 주문된 서브넷에 대해 설명하고 사용자 전용의 추가 서브넷을 주문할 수 있는 옵션을 제공합니다.
 
@@ -88,5 +96,5 @@ SSH 또는 쉘 액세스를 사용 안함으로 선택하는 경우 표시된 �
 *  공용 VLAN에서 16개 IP 주소의 공인 포터블 서브넷
 
 사용할 추가 서브넷이 필요한 경우 다음 방법 중 하나로 사용할 IP 주소를 얻을 수 있습니다.
-*  **옵션 1(권장)**: VMware NSX 가상 네트워크 오버레이를 사용하십시오. 샘플 VXLAN 템플리트는 주문 시 제공됩니다. 이 VXLAN은 소프트웨어 정의 네트워킹(SDN)을 빌드하기 위한 시작 지점으로 사용될 수 있습니다. 자세한 정보는 [고객 관리 NSX Edge를 사용하도록 네트워크 구성](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html)을 참조하십시오.
+*  **옵션 1(권장)**: VMware NSX 가상 네트워크 오버레이를 사용하십시오. 샘플 VXLAN 템플리트는 주문 시 제공됩니다. 이 VXLAN은 소프트웨어 정의 네트워킹(SDN)을 빌드하기 위한 시작 지점으로 사용될 수 있습니다. 자세한 정보는 [고객 관리 NSX Edge를 사용하도록 네트워크 구성](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)을 참조하십시오.
 *  **옵션 2**: 고유한 포터블 공인 또는 사설 서브넷을 주문하여 IP 주소를 가져오십시오. 주문한 서브넷을 관리 서브넷과 구별하기 위해 주문 중인 모든 서브넷에 참고사항을 추가할 수 있습니다.

@@ -21,7 +21,7 @@ VM의 규모는 다음과 같이 지정합니다.
 
 표 1. 기본 매개변수
 
-|매개변수 |값|
+|매개변수	|값|
 |---|---|
 |유형	| Base|
 |VM 수량	|1|
@@ -29,13 +29,13 @@ VM의 규모는 다음과 같이 지정합니다.
 |RAM	|64GB|
 |디스크	|1000GB|
 |OS	|CentOS 7|
-|설치된 애플리케이션 컴포넌트 |UI, App, Plugins, Central Collector, Index Datastore, Messaging Datastore, Relational Datastore, Remote Collector|
+|설치된 애플리케이션 컴포넌트	|UI, App, Plugins, Central Collector, Index Datastore, Messaging Datastore, Relational Datastore, Remote Collector|
 
 스케일 확장 VM 세부사항은 다음과 같습니다.
 
 표 2. 스케일 확장 매개변수
 
-|매개변수 |값 |
+|매개변수	|값 |
 |---|---|
 |유형	|Scale-out |
 |VM 수량	| 3 |
@@ -43,22 +43,22 @@ VM의 규모는 다음과 같이 지정합니다.
 |RAM	| 16GB |
 |디스크	|4TB |
 |OS	| CentOS 7 |
-|설치된 애플리케이션 컴포넌트 |Data Nodes(scale-out) |
+|설치된 애플리케이션 컴포넌트	|Data Nodes(scale-out) |
 
 원격 콜렉터 VM 세부사항은 다음 표에 표시되어 있습니다.
 
 표 3. 원격 콜렉터 매개변수
 
-|매개변수 |값|
+|매개변수	|값|
 |---|---|
-|VM 수량	|As required |
+|VM 수량	|As required|
 |vCPU	|8|
 |RAM	| 8GB|
-|디스크	|1TB |
+|디스크	|1TB|
 |OS	|CentOS 7|
-|설치된 애플리케이션 컴포넌트 |원격 콜렉터|
+|설치된 애플리케이션 컴포넌트	|원격 콜렉터|
 
 ## 관련 링크
 {: #caveonix-partially-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

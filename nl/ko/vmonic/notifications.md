@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # 시스템 알림 관리
+{: #notifications}
 
 시스템 또는 사용자 오퍼레이션의 상태에 대한 알림을 확인할 수 있습니다. 또한 정보를 사용하여 발생할 수 있는 문제점을 조사할 수도 있습니다.
 
 ## 알림 보기
+{: #notifications-view}
 
 1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **알림**을 클릭하십시오.
 2. 모든 알림에 대한 요약을 보십시오.
@@ -49,7 +51,7 @@ lastupdated: "2019-01-23"
        </tr>
        <tr>
          <td>유형</td>
-         <td>보고된 이벤트가 관련된 컴포넌트의 유형입니다.<ul><li>vCenter Server 인스턴스</li><li>Cloud Foundation 인스턴스</li><li>서비스</li><li>시스템</li></ul></td>
+         <td>보고된 이벤트가 관련된 컴포넌트의 유형입니다.<ul><li>vCenter Server 인스턴스</li><li>Cloud Foundation 인스턴스</li><li>Services</li><li>시스템</li></ul></td>
        </tr>
        <tr>
          <td>리소스</td>
@@ -68,10 +70,12 @@ lastupdated: "2019-01-23"
 3. 알림 행을 클릭하여 알림의 세부사항을 보십시오.
 
 ## 알림 필터링
+{: #notifications-filter}
 
 기본적으로 읽지 않은 모든 알림이 표시됩니다. 상태, 심각도 및 유형별로 알림을 필터링할 수 있습니다. 알림을 필터링하려면 **상태**, **심각도** 또는 **유형** 목록에서 표시할 항목에 대해서만 선택란을 선택하십시오.
 
-### 관련 링크
+## 관련 링크
+{: #notifications-related}
 
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [사용자 계정 및 설정](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [사용자 계정 및 설정](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,30 +13,36 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 訂購新的 vSphere 叢集
+{: #vs_orderinginstances}
 
 若要部署可高度自訂的 VMware 虛擬化平台，請訂購 {{site.data.keyword.cloud}} 上的 VMware vSphere 叢集。使用此程序來定義新的 vSphere 叢集。
 
 此程序引導您完成選取 VMware 元件、{{site.data.keyword.cloud_notm}} Bare Metal Server 設定、儲存空間設定及網路選項，以建立新叢集。在下單之後，會擷取叢集配置，以便您可以返回並視需要繼續擴充叢集。完成訂單之後，您可以根據需求，手動配置 VMware 叢集。
 
 ## 需求
+{: #vs_orderinginstances-req}
 
 請確定您已完成下列作業：
-*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic/useraccount.html)。
-*  您已檢閱 [vSphere 叢集的需求及規劃](/docs/services/vmwaresolutions/vsphere/vs_planning.html)中的需求及考量。
+*  您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[管理使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)。
+*  您已檢閱 [vSphere 叢集的需求及規劃](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)中的需求及考量。
 
 ## 系統設定
+{: #vs_orderinginstances-sys-settings}
 
 當您訂購新的 vSphere 叢集時，必須指定下列系統設定。
 
 ### 叢集名稱
+{: #vs_orderinginstances-cluster-name}
 
 叢集名稱在您的帳戶中必須是唯一的。
 
 ## 授權設定
+{: #vs_orderinginstances-licensing-settings}
 
 選取要隨叢集訂購的 VMware 元件，並指定元件的授權選項。
 
 ### IBM 事業夥伴使用者的元件組合
+{: #vs_orderinginstances-component-bundles-for-bp-users}
 
 如果您是「IBM 事業夥伴」使用者，則可以在訂購新的 vSphere 叢集時選取元件授權組合。可用的組合如下：
 
@@ -57,6 +63,7 @@ lastupdated: "2019-01-23"
 對於「IBM 事業夥伴」使用者，無法使用「自帶授權 (BYOL)」選項。{:note}
 
 ### 非事業夥伴使用者的個別元件
+{: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 如果您是非「事業夥伴」，則可以針對 vSphere 叢集選取下列元件：
 * VMware vSphere Enterprise Plus
@@ -71,6 +78,7 @@ lastupdated: "2019-01-23"
 當您訂購 VMware vSphere Enterprise Plus 6.0 時，VMware vSAN 元件無法使用。如果您打算使用自己的 VMware vSphere Enterprise Plus 6.0 授權，則會代表您開立 {{site.data.keyword.cloud_notm}} 基礎架構問題單。此問題單要求將已訂購的 {{site.data.keyword.baremetal_short}} 的 vSphere 授權取代為您提供的授權。{:note}
 
 ### 授權選項
+{: #vs_orderinginstances-licensing-options}
 
 您在授權已選取的 VMWare 元件時有下列選項：
 * **購買隨附授權**：在此情況下，會代表您購買 VMware 元件的新授權。會產生結合的 VMware 授權，以符合訂單的叢集大小。
@@ -81,8 +89,10 @@ lastupdated: "2019-01-23"
 將個別授權碼與結合的授權碼一起使用，不符合您所需授權的付款需求。{:important}
 
 ## Bare Metal Server 設定
+{: #vs_orderinginstances-bare-metal-settings}
 
 ### 資料中心位置
+{: #vs_orderinginstances-dc-location}
 
 選取要在其中管理叢集的 {{site.data.keyword.CloudDataCent_notm}}。
 
@@ -92,6 +102,7 @@ lastupdated: "2019-01-23"
 * LON05 資料中心不支援 SAP 認證或 Broadwell Bare Metal Server。
 
 ### Skylake
+{: #vs_orderinginstances-skylake}
 
 當您選取 **Skylake** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。可用的選項取決於您是否已選取 VMware vSAN 元件。
 
@@ -104,6 +115,7 @@ lastupdated: "2019-01-23"
 |雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
 ### SAP 認證
+{: #vs_orderinginstances-sap}
 
 如果您先前已選取 VMware vSAN，則無法使用 **SAP 認證**標籤。當您選取 **SAP 認證**時，無法變更 CPU 或 RAM 設定。
 
@@ -117,6 +129,7 @@ lastupdated: "2019-01-23"
   * 四重 Intel Xeon E7-8890 v4 處理器 / 總計 96 核心，2.2 GHz / 4096 GB RAM
 
 ### Broadwell
+{: #vs_orderinginstances-broadwell}
 
 當您選取 **Broadwell** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。可用的選項取決於您是否已選取 VMware vSAN 元件。
 
@@ -131,12 +144,14 @@ lastupdated: "2019-01-23"
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.1 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 ### Bare Metal Server 數目
+{: #vs_orderinginstances-bare-metal-number}
 
 您要新增至 vSphere 叢集的 ESXi 伺服器數目。所有 ESXi 伺服器都有相同的配置。
 * 如果您選取 VMware NSX 元件，則至少需要三部伺服器。
 * 如果您選取 VMware vSAN 元件，則至少需要四部伺服器。
 
 ## 儲存空間設定
+{: #vs_orderinginstances-storage-settings}
 
 對於不包含 vSAN 的訂單，會訂購具有 12 磁碟機箱的 ESXi 伺服器，以及用於 ESXi 作業系統 (OS) 的兩個磁碟。
 
@@ -153,10 +168,12 @@ lastupdated: "2019-01-23"
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
 
 ## 網路介面設定
+{: #vs_orderinginstances-network-interface-settings}
 
 當您訂購新的 vSphere 叢集時，必須指定下列網路介面設定。
 
 ### 主機名稱字首
+{: #vs_orderinginstances-host-name-prefix}
 
 主機名稱使用於所有 Bare Metal Server 訂單。建議您對所有管理虛擬機器使用主機名稱（例如 vCenter Server 及 NSX）。
 
@@ -166,6 +183,7 @@ lastupdated: "2019-01-23"
 * 最大長度是 10 個字元。
 
 ### 子網域標籤
+{: #vs_orderinginstances-subdomain-label}
 
 子網域標籤必須滿足下列需求：
 *  只容許英數及橫線 (-) 字元。
@@ -174,6 +192,7 @@ lastupdated: "2019-01-23"
 *  子網域標籤在您的帳戶內必須是唯一的。
 
 ### 網域名稱
+{: #vs_orderinginstances-domain-name}
 
 網域名稱使用於所有 {{site.data.keyword.baremetal_short}}，且必須滿足下列需求：
 * 名稱必須包含兩個以上以句點 (.) 區隔的字串
@@ -184,6 +203,7 @@ lastupdated: "2019-01-23"
 * 網域名稱的長度上限為 189 個字元。
 
 ### 公用或專用網路
+{: #vs_orderinginstances-public-private-network}
 
 網路介面卡 (NIC) 啟用設定是根據您選取**公用及專用網路**或**僅限專用網路**而定。下列附加程式服務需要公用 NIC，如果您選取專用選項，則無法使用：
 
@@ -193,15 +213,20 @@ lastupdated: "2019-01-23"
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### VLAN
+{: #vs_orderinginstances-vlans}
 
 網路設定是根據您選取**訂購新的 VLAN** 或**選取現有的 VLAN** 而定。
 
 您的叢集訂單需要一個公用 VLAN 及兩個專用 VLAN。兩個專用 VLAN 成為每部 Bare Metal Server 的主幹。
 
 #### 訂購新的 VLAN
+{: #vs_orderinginstances-new-vlans}
+
 選取訂購一個新的公用 VLAN 和兩個新的專用 VLAN。
 
-#### 選取現有的 VLAN  
+#### 選取現有的 VLAN
+{: #vs_orderinginstances-existing-vlans}
+
 視您選取的 {{site.data.keyword.CloudDataCent_notm}} 而定，可能會提供現有的公用和專用 VLAN。
 
   當您選擇重複使用現有的公用及專用 VLAN 時，請指定 VLAN 及子網路：
@@ -216,14 +241,17 @@ lastupdated: "2019-01-23"
 * 確保您選取的所有 VLAN 都在相同的 Pod 中。無法在混合 Pod VLAN 上佈建 ESXi 伺服器。
 
 #### FortiGate Physical Appliance 300 系列 HA 配對
+{: #vs_orderinginstances-fortigate-physical-appliance}
 
-您也可以選取是否包括「FortiGate Physical Appliance 300 系列 HA 配對」來保護雲端環境安全。如需相關資訊，請參閱 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services/fsa_considerations.html)。
+您也可以選取是否包括「FortiGate Physical Appliance 300 系列 HA 配對」來保護雲端環境安全。如需相關資訊，請參閱 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)。
 
 ## 訂單摘要
+{: #vs_orderinginstances-order-summary}
 
 根據您的配置，預估成本會立即產生並顯示在右側的**訂單摘要**窗格中。按一下**定價詳細資料**，以產生提供預估詳細資料的 PDF 文件。
 
 ## 訂購 vSphere 叢集的程序
+{: #vs_orderinginstances-procedure}
 
 1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware**，然後按一下**虛擬資料中心**區段中的 **VMware vSphere**。
 2. 在 **VMware vSphere on IBM Cloud** 頁面上，按一下**建立**。  
@@ -255,6 +283,7 @@ lastupdated: "2019-01-23"
    僅安裝 {{site.data.keyword.baremetal_short}}。您負責在叢集部署之後安裝及配置各種元件，例如 VMware vCenter、VMware NSX、VMware vSAN。{:note}
 
 ### 結果
+{: #vs_orderinginstances-results}
 
 如果您將叢集配置儲存為範本，則會收到主控台通知，指出已順利儲存配置，然後您可以在**叢集配置**清單中找到該範本。
 
@@ -262,8 +291,9 @@ lastupdated: "2019-01-23"
 
 vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。{:note}
 
-### 相關鏈結
+## 相關鏈結
+{: #vs_orderinginstances-related}
 
-* [根據現有配置來訂購 vSphere 叢集](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
-* [擴充現有的叢集](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
-* [擴充在主控台之外建立的叢集](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [根據現有配置來訂購 vSphere 叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
+* [擴充現有的叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [擴充在主控台之外建立的叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

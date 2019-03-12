@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 订购和删除 VMware vCenter Server on IBM Cloud 单节点试用版实例
+{: #vc_trial_hybrid_orderinginstance}
 
 VMware vCenter Server on {{site.data.keyword.cloud}} 单节点试用版是一种托管的单租户专用云，可将 VMware vSphere 堆栈作为服务交付。虽然客户机管理的环境通常至少部署有 3 个节点，但通过此单节点试用版，能以低成本来体验混合云实施的优点。
 
@@ -26,6 +27,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} 单节点试用版是一种
 有关体系结构设计的信息，请参阅[针对 vCenter Server on IBM Cloud 单节点试用版的 HCX on IBM Cloud 体系结构设计](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)。
 
 ## vCenter Server 单节点试用版实例的技术规范
+{: #vc_trial_hybrid_orderinginstance-tech-specs}
 
 vCenter Server 单节点试用版实例中包含以下组件：
 
@@ -33,10 +35,12 @@ vCenter Server 单节点试用版实例中包含以下组件：
 {:note}
 
 ### 裸机服务器
+{: #vc_trial_hybrid_orderinginstance-bare-metal}
 
 双 Intel Xeon Gold 5120（28 个核心，2.20 GHz）处理器，384 GB RAM。
 
 ### vCenter Server 单节点试用版实例的联网规范
+{: #vc_trial_hybrid_orderinginstance-networking-specs}
 
 订购了以下联网组件：
 *  10 Gbps 双公用和专用网络上行链路
@@ -50,16 +54,16 @@ vCenter Server 单节点试用版实例中包含以下组件：
   * 用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX Edge 服务网关，由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。
 
 ### 虚拟服务器实例
+{: #vc_trial_hybrid_orderinginstance-vsi}
 
 订购了以下虚拟服务器实例 (VSI)：
-
 * 用于 IBM CloudBuilder 的 VSI，在完成实例部署后取消。
 * 用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server VSI 已部署并且可进行查找。此 VSI 充当在其中注册主机和 VM 的实例的 DNS。
 
 ### IBM 提供的许可证和费用
+{: #vc_trial_hybrid_orderinginstance-license-and-fee}
 
-vCenter Server 单节点试用版实例订单中包含以下许可证。
-
+vCenter Server 单节点试用版实例订单中包含以下许可证：
 * VMware vSphere Enterprise Plus 6.5
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
@@ -68,6 +72,7 @@ vCenter Server 单节点试用版实例不支持自带许可证。
 {:note}
 
 ## VMware HCX on IBM Cloud 的技术规范
+{: #vc_trial_hybrid_orderinginstance-hcx-tech-specs}
 
 vCenter Server 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}。HCX on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
 
@@ -75,12 +80,14 @@ vCenter Server 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}�
 {:note}
 
 ### VMware NSX Edge 服务网关 (ESG) 的主动/被动对，以用于 HCX 管理
+{: #vc_trial_hybrid_orderinginstance-esg}
 
 * CPU：6 个 vCPU
 * RAM：8 GB
 * 磁盘：3 GB VMDK
 
 ### HCX Management Appliance - 虚拟机
+{: #vc_trial_hybrid_orderinginstance-hcs-mgmt-appliance}
 
 * CPU：4 个 vCPU
 * RAM：12 GB
@@ -89,12 +96,14 @@ vCenter Server 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}�
 配置期间根据需要部署了更多 HCX 设备，以用于 L2 连接、WAN 优化和网关连接。
 
 ### HCX on IBM Cloud 服务的联网规范
+{: #vc_trial_hybrid_orderinginstance-hcx-networking-specs}
 
 * 一个具有 16 个 IP 地址的公用可移植子网
 * 两个具有 64 个 IP 地址的专用可移植子网
 * 专用可移植 vMotion 子网中的 8 个 IP 地址
 
 ## 订购 vCenter Server 单节点试用版实例的需求和规划
+{: #vc_trial_hybrid_orderinginstance-req}
 
 确保确认以下需求并完成以下任务：
 * 内部部署 HCX 实例的先决条件：
@@ -110,6 +119,7 @@ vCenter Server 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}�
     * 实例名称在您的帐户中必须唯一。
 
 ## 订购 vCenter Server 单节点试用版实例的过程
+{: #vc_trial_hybrid_orderinginstance-procedure}
 
 1. 在 **VMware vCenter Server on {{site.data.keyword.cloud_notm}} 单节点试用版**页面上，单击**继续**。
 2. 在 **VMware vCenter Server 单节点试用版**页面上，完成请求 {{site.data.keyword.cloud_notm}} 基础架构帐户或提供现有**用户名**和 **API 密钥**的步骤，然后单击**检索**。
@@ -128,10 +138,12 @@ vCenter Server 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}�
    4. 单击**供应**。
 
 ### 结果
+{: #vc_trial_hybrid_orderinginstance-results}
 
 实例的部署会自动启动，并会订购内部部署 HCX on {{site.data.keyword.cloud_notm}} 服务激活密钥。
 
 #### HCX on IBM Cloud 的部署过程
+{: #vc_trial_hybrid_orderinginstance-hcs-deploy-process}
 
 部署 HCX on {{site.data.keyword.cloud_notm}} 会自动执行。以下步骤由 {{site.data.keyword.vmwaresolutions_short}} 自动化过程完成：
 1. 为 {{site.data.keyword.cloud_notm}} 基础架构中的 HCX 订购三个子网：
@@ -159,6 +171,7 @@ vCenter Server 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}�
 6. 向 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的 DNS 服务器注册 HCX Manager 的主机名和 IP 地址。
 
 #### 查看实例详细信息
+{: #vc_trial_hybrid_orderinginstance-view-inst-details}
 
 您可以通过查看实例详细信息来检查部署的状态。在左侧导航窗格中，单击**已部署的实例**，然后找到 **vCenter Server 实例**或**内部部署 HCX 实例**表，以查看有关所订购实例的信息。
 
@@ -167,6 +180,7 @@ vCenter Server 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}�
 实例的状态会更改为**可供使用**，并且您收到相关电子邮件通知。
 
 ### 后续步骤
+{: #vc_trial_hybrid_orderinginstance-next}
 
 安装内部部署 HCX Enterprise Manager，并配置与 HCX on {{site.data.keyword.cloud_notm}} 实例的连接。
 
@@ -211,6 +225,7 @@ vCenter Server 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}�
 {:important}
 
 ## 删除 vCenter Server 单节点试用版实例的过程
+{: #vc_trial_hybrid_orderinginstance-deleting-procedure}
 
 删除 vCenter Server 单节点试用版实例时，会按顺序释放以下组件：
 
@@ -235,7 +250,8 @@ vCenter Server 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}�
    1. 在**操作**列中，再次单击“删除”图标。
    2. 在**删除实例**窗口中，单击**确定**。
 
-### 相关链接
+## 相关链接
+{: #vc_trial_hybrid_orderinginstance-related}
 
 * [针对 vCenter Server on IBM Cloud 单节点试用版的 HCX on IBM Cloud 体系结构设计](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#/vm-documentation)

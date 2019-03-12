@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2018-09-27"
 {:deprecated: .deprecated}
 
 # IBM Cloud Private Hosted 요청 - 더 이상 사용되지 않음
+{: #managing_icp}
 
 이 주제의 정보는 더 이상 사용되지 않습니다. IBM Cloud Private Hosted에 대한 최신 정보는 [IBM Cloud Private Hosted 개요](icp_overview.html)를 참조하십시오.
 {:deprecated}
@@ -23,6 +24,7 @@ lastupdated: "2018-09-27"
 {{site.data.keyword.cloud_notm}} Private Hosted는 마이크로서비스 및 컨테이너의 기능을 {{site.data.keyword.cloud_notm}}의 VMware 환경에 제공합니다. 이 서비스를 사용하면 익숙한 동일 VMware 및 {{site.data.keyword.cloud_notm}} Private 운영 모델과 도구를 온프레미스에서 {{site.data.keyword.cloud_notm}}로 확장할 수 있습니다.
 
 ## IBM Cloud Private Hosted의 기술 스펙
+{: #managing_icp-specs}
 
 다음은 {{site.data.keyword.cloud_notm}} Private Hosted 서비스를 요청하기 위한 최소 요구사항입니다.
 
@@ -37,6 +39,7 @@ lastupdated: "2018-09-27"
 * 데이터 백업의 경우 Veeam on IBM Cloud 서비스가 권장됩니다.
 
 ## IBM Cloud Private Hosted 요청 프로시저
+{: #managing_icp-procedure}
 
 1. [vCenter Server 인스턴스 주문](../vcenter/vc_orderinginstance.html)의 단계에 따라 새 vCenter Server 인스턴스를 주문하십시오. 또한 기존 인스턴스를 위한 IBM Cloud Private Hosted를 요청할 수 있습니다.
   **중요:** 사용자 환경이 이전에 나열된 최소 요구사항을 충족하는지 확인하십시오.

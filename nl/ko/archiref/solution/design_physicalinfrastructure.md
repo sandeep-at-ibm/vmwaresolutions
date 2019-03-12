@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # 실제 인프라 디자인
+{: #design_physicalinfrastructure}
 
 실제 인프라는 다음 컴포넌트로 구성되어 있습니다.
 
@@ -25,15 +26,16 @@ lastupdated: "2019-01-23"
   <dd class="dd">실제 네트워크는 해당 환경으로의 네트워크 연결을 제공하며, 이는 다시 네트워크 가상화에 의해 사용됩니다. 네트워크는 {{site.data.keyword.cloud_notm}} 서비스 네트워크에서 제공하며 여기에는 DNS 및 NTP 등의 추가 서비스가 포함되어 있습니다.</dd>
 </dl>
 
-실제 컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스](/docs/services/vmwaresolutions/sddc/sd_bom.html) 또는 [vCenter Server 인스턴스](/docs/services/vmwaresolutions/vcenter/vc_bom.html)의 명세서를 참조하십시오.
+실제 컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) 또는 [vCenter Server 인스턴스](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)의 명세서를 참조하십시오.
 
 스토리지에 대한 자세한 정보는 [공유 스토리지 아키텍처](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)를 참조하십시오.
 
 ## 실제 호스트 디자인
+{: #design_physicalinfrastructure-host-design}
 
 실제 호스트는 컴퓨팅 리소스를 제공하는 환경의 {{site.data.keyword.baremetal_short}}를 의미합니다. 이 솔루션에서 적용된 {{site.data.keyword.baremetal_short}}는 VMware에 의해 인증되며 [VMware HCG](http://www.vmware.com/resources/compatibility/search.php)에 나열되어 있습니다.
 
-솔루션에서 사용 가능한 서버 구성은 vSphere ESXi를 설치, 구성하고 관리하기 위한 최소 요구사항을 충족하거나 초과합니다. 서로 다른 요구사항을 충족하기 위해 다양한 구성을 사용할 수 있습니다. VMware on {{site.data.keyword.cloud_notm}} 솔루션에 사용되는 정확한 스펙의 세부 목록은 [Cloud Foundation 인스턴스](/docs/services/vmwaresolutions/sddc/sd_bom.html) 또는 [vCenter Server 인스턴스](/docs/services/vmwaresolutions/vcenter/vc_bom.html)의 명세서를 참조하십시오.
+솔루션에서 사용 가능한 서버 구성은 vSphere ESXi를 설치, 구성하고 관리하기 위한 최소 요구사항을 충족하거나 초과합니다. 서로 다른 요구사항을 충족하기 위해 다양한 구성을 사용할 수 있습니다. VMware on {{site.data.keyword.cloud_notm}} 솔루션에 사용되는 정확한 스펙의 세부 목록은 [Cloud Foundation 인스턴스](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) 또는 [vCenter Server 인스턴스](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)의 명세서를 참조하십시오.
 
 {{site.data.keyword.baremetal_short}}는 {{site.data.keyword.cloud_notm}}에 상주합니다.
 {:note}
@@ -49,12 +51,14 @@ Bare Metal Server의 스펙은 다음과 같습니다.
 * 드라이브 수: 2개 이상
 
 ## 실제 네트워크 디자인
+{: #design_physicalinfrastructure-net-design}
 
 이 섹션에서는 {{site.data.keyword.cloud_notm}}에서 제공하는 실제 네트워크 및 실제 호스트와 연관된 실제 호스트 연결(VLAN, MTU)에 대해 설명합니다.
 
 {{site.data.keyword.cloud_notm}}의 실제 네트워크는 3개의 개별 네트워크(공용, 사설 및 관리)로 분류됩니다. 3개의 네트워크와 이의 작동 방법에 대한 예시는 [{{site.data.keyword.cloud_notm}} 네트워크](https://www.ibm.com/cloud-computing/bluemix/our-network)를 참조하십시오.
 
 ### 공용 네트워크
+{: #design_physicalinfrastructure-public-net}
 
 {{site.data.keyword.CloudDataCents_notm}} 및 네트워크 PoP(Points of Presence)에는 피어링 네트워크 캐리어 및 최상위 티어 전송에 대한 다중 1Gbps 또는 10Gbps 연결이 있습니다.
 
@@ -65,16 +69,19 @@ Bare Metal Server의 스펙은 다음과 같습니다.
 이 다중 티어 디자인은 {{site.data.keyword.CloudDataCent_notm}} 내의 랙, 행 및 팟(Pod)에서 네트워크의 스케일링을 허용합니다.
 
 ### 사설 네트워크
+{: #design_physicalinfrastructure-private-net}
 
 모든 {{site.data.keyword.CloudDataCents_notm}} 및 PoP는 사설 네트워크 백본에 의해 연결되어 있습니다. 사설 네트워크는 공용 네트워크와는 분리되며, 이는 전세계에서 {{site.data.keyword.CloudDataCents_notm}}의 서비스에 대한 연결을 가능하게 합니다. {{site.data.keyword.CloudDataCents_notm}} 간의 데이터 이동은 사설 네트워크에 대한 다중 10Gbps 또는 40Gbps 연결을 통해 이루어집니다.
 
 공용 네트워크와 유사하게 사설 네트워크는 해당 서버에서 다중 티어이며, 기타 인프라 컴포넌트는 집계된 백엔드 고객 스위치(BCS)에 연결됩니다. 집계된 해당 스위치는 L3 네트워킹을 위해 개별 백엔드 고객 라우터(BCR)에 연결됩니다. 사설 네트워크는 실제 호스트 연결을 위한 점보 프레임(MTU 9000)을 사용하는 기능도 지원합니다.
 
 ### 관리 네트워크
+{: #design_physicalinfrastructure-mgmt-net}
 
 공용 및 사설 네트워크에 추가하여, 각각의 {{site.data.keyword.cloud_notm}} 서버는 대역외(out-of-band) 관리 네트워크에 연결되어 있습니다. VPN을 통해 액세스 가능한 이 관리 네트워크는 유지보수 및 관리 용도로 해당 CPU, 펌웨어 및 운영 체제와 독립적으로 서버에 대한 IPMI(Intelligent Platform Management Interface) 액세스를 허용합니다.
 
 ### 기본 및 포터블 IP 블록
+{: #design_physicalinfrastructure-ip-blocks}
 
 {{site.data.keyword.cloud_notm}}는 {{site.data.keyword.cloud_notm}} 인프라 내에서 사용되는 두 가지 유형의 IP 주소를 할당합니다.
 * 기본 IP 주소는 디바이스, 베어메탈 및 {{site.data.keyword.cloud_notm}}에서 프로비저닝하는 가상 서버에 지정됩니다. 이러한 블록에 IP 주소를 지정하지 마십시오.
@@ -83,18 +90,21 @@ Bare Metal Server의 스펙은 다음과 같습니다.
 기본 및 포터블 IP 주소는 **VLAN Spanning**이 {{site.data.keyword.slportal}} 내에서 사용되거나 계정이 **VRF(Virtual Routing and Forwarding)** 계정으로 구성된 경우에 고객 계정 내에서 임의의 VLAN으로 라우팅 가능합니다.
 
 ### VLAN Spanning
+{: #design_physicalinfrastructure-vlan-spanning}
 
 **VLAN Spanning**은 계정 내의 모든 VLAN의 기본 및 포터블 서브넷 IP 블록이 서로 간에 라우팅 가능하도록 허용하는 {{site.data.keyword.slportal}} 계정 설정입니다. **VLAN Spanning** 설정을 사용하지 않는 경우, IP 블록은 계속해서 {{site.data.keyword.cloud_notm}} 서비스에 라우팅할 수 있지만 서로 간에는 라우팅할 수 없습니다.
 
 솔루션 컴포넌트가 상주하는 다양한 서브넷 간에 투명한 연결을 허용하려면 Cloud Foundation 및 vCenter Server 인스턴스가 배치된 {{site.data.keyword.slportal}} 계정에서 **VLAN Spanning**을 사용해야 합니다.
 
 ### VRF(Virtual Routing and Forwarding)
+{: #design_physicalinfrastructure-vrf}
 
-서브넷 IP 블록 간에 자동 라우팅을 사용하여 VLAN Spanning과 유사한 기능을 제공하도록 {{site.data.keyword.slportal}} 계정을 VRF 계정으로서 구성할 수도 있습니다. Direct-Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
+또한 서브넷 IP 블록 간에 자동 라우팅을 사용하여 VLAN Spanning과 유사한 기능을 제공하도록 {{site.data.keyword.slportal}} 계정을 VRF(Virtual Routing and Forwarding) 계정으로서 구성할 수 있습니다. Direct-Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔은 VRF가 {{site.data.keyword.slportal}}에서 사용되는지 여부를 감지할 수 없습니다. 사용자는 {{site.data.keyword.slportal}} 계정에서 **VLAN Spanning** 또는 VRF를 사용하는지 확인하도록 상기시키는 경고를 받습니다.
 
 ### 실제 호스트 연결
+{: #design_physicalinfrastructure-host-connect}
 
 디자인에서 각각의 실제 호스트에는 각 {{site.data.keyword.cloud_notm}} ToR(Top of Rack) 스위치(공용 및 사설)로 유입되는 10Gbps 이더넷 연결의 2개 중복 쌍이 있습니다. 어댑터는 총 4 x 10Gbps 연결을 위해 개별 연결(비부착)로 설정됩니다. 이렇게 하면 네트워크 인터페이스 카드(NIC) 연결이 서로 간에 독립적으로 작동할 수 있습니다.
 
@@ -103,8 +113,9 @@ Bare Metal Server의 스펙은 다음과 같습니다.
 ![실제 호스트 NIC 연결](physical_nic_connection.svg "실제 호스트 NIC 연결")
 
 ### VLAN
+{: #design_physicalinfrastructure-vlans}
 
-{{site.data.keyword.vmwaresolutions_short}} 오퍼링은 배치 시에 지정된 3개의 VLAN(1개의 공용 및 2개의 사설)으로 디자인되어 있습니다. 그림 2에 표시된 대로, 공용 VLAN은 eth1 및 eth3에 지정되어 있으며 사설 VLAN은 eth0 및 eth2에 지정되어 있습니다.
+{{site.data.keyword.vmwaresolutions_short}} 오퍼링은 배치 시에 지정된 3개의 VLAN(1개의 공용 및 2개의 사설)으로 디자인되어 있습니다. 이전 그림에 표시된 대로, 공용 VLAN은 eth1 및 eth3에 지정되어 있으며 사설 VLAN은 eth0 및 eth2에 지정되어 있습니다.
 
 이 디자인에서 작성되고 지정된 첫 번째 사설 VLAN 및 공용 VLAN은 {{site.data.keyword.cloud_notm}} 내에서 기본적으로 태그 지정이 없습니다. 추가적인 사설 VLAN은 실제 스위치 포트에서 선택되며 이러한 서브넷을 사용 중인 VMware 포트 내에서 태그 지정됩니다.
 
@@ -141,24 +152,29 @@ vCenter Server 또는 Cloud Foundation 자동화된 배치의 일부로 구성�
 사설 네트워크 연결은 스토리지 및 vMotion 등의 대형 데이터 전송의 성능 개선을 위해 9000의 점보 프레임 MTU 크기를 사용하도록 구성되어 있습니다. 이는 {{site.data.keyword.cloud_notm}}에 의해 VMware 내에서 허용되는 최대 MTU입니다. 공용 네트워크 연결은 1500의 표준 이더넷 MTU를 사용합니다. 이를 변경하면 인터넷 상에서 패킷 단편화가 발생할 수 있으므로 이를 그대로 유지해야 합니다.
 
 ## 실제 스토리지 디자인
+{: #design_physicalinfrastructure-storage-design}
 
 실제 스토리지 디자인은 실제 호스트에 설치된 실제 디스크의 구성 및 공유 파일 스토리지의 구성으로 이루어져 있습니다. 여기에는 vSphere ESXi 하이퍼바이저의 운영 체제 디스크와 가상 머신(VM)의 스토리지에 사용되는 디스크가 포함됩니다. VM용 스토리지는 공유 파일 스토리지로 또는 VMware vSAN에 의해 가상화된 로컬 디스크로 구성할 수 있습니다.
 
 ### 운영 체제 디스크
+{: #design_physicalinfrastructure-os-disks}
 
 vSphere ESXi 하이퍼바이저는 지속적 위치에 설치되도록 디자인되어 있습니다. 따라서 실제 호스트에는 vSphere ESXi 하이퍼바이저에 대한 중복성을 지원하기 위해 RAID-1 구성에 2개의 1TB SATA 디스크가 포함되어 있습니다.
 
 ### 가상 머신 스토리지
+{: #design_physicalinfrastructure-vm-storage}
 
 이 디자인에서는 VM에 대한 기본 데이터 저장소로서 VMware vSAN 또는 공유 파일-레벨 스토리지를 사용하는 옵션을 허용합니다.
 
 ### vSAN 디스크
+{: #design_physicalinfrastructure-vsan-disks}
 
 사용되는 경우, VMware vSAN은 올플래시(all-flash) 구성을 사용하여 구성됩니다. 이 디자인에서는 2U 및 4U 섀시, 여러 개의 디스크 및 다양한 디스크 크기를 포함하여 여러 구성 옵션을 허용합니다. 모든 구성에서는 2개의 vSAN 디스크 그룹을 사용합니다(캐시용 1개의 SSD(Solid State Disk) 및 용량용 2개 이상의 SSD). vSAN 사용을 위해 할당된 모든 드라이브는 단일 디스크 RAID-0으로 구성됩니다.
 
-지원되는 구성에 대한 자세한 정보는 [Cloud Foundation 인스턴스](/docs/services/vmwaresolutions/sddc/sd_bom.html) 또는 [vCenter Server 인스턴스](/docs/services/vmwaresolutions/vcenter/vc_bom.html)의 명세서를 참조하십시오.
+지원되는 구성에 대한 자세한 정보는 [Cloud Foundation 인스턴스](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) 또는 [vCenter Server 인스턴스](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)의 명세서를 참조하십시오.
 
 ### 호스트 간의 공유 파일 스토리지
+{: #design_physicalinfrastructure-shared-storage}
 
 공유 파일 스토리지를 사용하는 경우에는 2TB NFS 공유가 초기 VMware 클러스터를 구성하는 호스트에 연결됩니다. 관리 공유라고 하는 이 공유는 VMware vCenter Server, Platform Services Controller 및 VMware NSX 등의 관리 컴포넌트에 사용됩니다. 이 스토리지는 NFSv3 프로토콜을 사용하여 연결되며 최대 4000 IOPS까지 지원할 수 있습니다.
 
@@ -170,9 +186,10 @@ vSphere ESXi 하이퍼바이저는 지속적 위치에 설치되도록 디자인
 
 10 IOPS/GB 성능 티어를 제공하는 {{site.data.keyword.CloudDataCents_notm}}에는 저장 데이터의 제공자 관리 암호화(AES-256 암호화)도 포함되어 있으며, 올플래시(all-flash) 스토리지에 의해 백업됩니다. 10 IOPS/GB 성능 티어는 4TB의 최대 용량으로 제한됩니다. 이 스토리지에서 사용된 공유 NAS에 대한 자세한 정보는 [공유 스토리지 아키텍처](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)를 참조하십시오.
 
-### 관련 링크
+## 관련 링크
+{: #design_physicalinfrastructure-related}
 
-* [Cloud Foundation 명세서](/docs/services/vmwaresolutions/sddc/sd_bom.html)
-* [vCenter Server 명세서](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
+* [Cloud Foundation 명세서](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
+* [vCenter Server 명세서](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [공유 스토리지 아키텍처](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
 * [NetApp ONTAP Select 아키텍처](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

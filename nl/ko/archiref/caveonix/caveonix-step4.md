@@ -42,7 +42,7 @@ lastupdated: "2019-02-14"
 
 |설정 단계 |매개변수 |
 |---|---|
-|조직 / 자산 저장소 |조직 이름 |
+|조직 / 자산 저장소  |조직 이름 |
 |조직 |전화번호 |
 |조직 |이메일 |
 |조직 / 자산 저장소 |주소 행 1 |
@@ -67,9 +67,9 @@ lastupdated: "2019-02-14"
 |자산 저장소 |두 개의 자산(vCenter 및 NSX 관리자)이 구성되며, 둘 다 동일한 비밀번호를 사용합니다. 한 저장소의 유형은 vCenter로 다른 저장소의 유형은 NSX로 설정됩니다.
 |태스크 |자산 스캔, NSX 플로우, VMware 인프라 스캔 및 VMware 취약성의 4가지 태스크가 설정됩니다. ScanName은 DC1AssetScan, NSXFlows, VMWInfraScan, VMWVulnScan으로 설정됩니다. |
 |태스크 |자산 스캔, NSX 플로우, VMware 인프라 스캔 및 VMware 취약성의 4가지 태스크가 설정됩니다. 유형은 vCenter, NSX, VMWareInfrastructureScan, VMWareVulnerabilityScan으로 설정됩니다. |
-|태스크 |DC1AssetScan의 스케줄은 매시간, 다른 태스크의 스케줄은 매일로 설정됩니다.|
+|태스크 |DC1AssetScan의 스케줄은 매시간, 다른 태스크의 스케줄은 매일로 설정됩니다. |
 
 ## 관련 링크
 {: #caveonix-step4-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

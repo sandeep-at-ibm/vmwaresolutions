@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # vCenter Server インスタンスの削除
+{: #vc_deletinginstance}
 
 VMware vCenter Server インスタンスで注文したコンポーネントを解放するには、インスタンスを削除します。
 
@@ -30,6 +31,7 @@ vCenter Server インスタンスを削除すると、以下のコンポーネ�
 {:note}
 
 ## 「デプロイ済みインスタンス」ページからインスタンスを削除する手順
+{: #vc_deletinginstance-procedure1}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、削除するインスタンスを見つけます。
@@ -40,6 +42,7 @@ vCenter Server インスタンスを削除すると、以下のコンポーネ�
    2. **「インスタンスの削除」**ウィンドウで**「OK」**をクリックします。
 
 ## インスタンスの詳細ページからインスタンスを削除する手順
+{: #vc_deletinginstance-procedure2}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、削除するインスタンスをクリックします。
@@ -49,10 +52,11 @@ vCenter Server インスタンスを削除すると、以下のコンポーネ�
    1. **vCenter コンソール**の横にあるオーバーフロー・メニュー・アイコンをもう一度クリックしてから、**「インスタンスの削除」**をクリックします。
    2. **「インスタンスの削除」**ウィンドウで**「OK」**をクリックします。
 
-### 関連リンク
+## 関連リンク
+{: #vc_deletinginstance-related}
 
-* [マルチサイト構成での vCenter Server インスタンスの削除](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance_multi.html)
-* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [vCenter Server インスタンスの表示](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
-* [vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [マルチサイト構成での vCenter Server インスタンスの削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance_multi)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [vCenter Server インスタンスの表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

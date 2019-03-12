@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # 添加、查看和删除 Cloud Foundation 实例的集群
+{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
 
 订购实例时配置的 ESXi 服务器会分组到缺省集群下。缺省集群名称为：
 * 对于在 V2.1 或更高发行版中部署的实例：**MGMT-Cluster-`<subdomain_label>`**
@@ -21,19 +22,23 @@ lastupdated: "2019-01-24"
 可以向 VMware Cloud Foundation 实例添加您自己的集群以扩展计算和存储容量。在集群中，可以管理 ESXi 服务器以获得更佳的资源分配和高可用性。不再需要添加的集群时，可以从实例中将其删除。
 
 ## 可用性
+{: #sd_addingviewingclusters-availability}
 
 * 添加集群功能仅可用于部署在（或已升级到）V2.0 和更高发行版中的实例。
 * 删除集群功能仅可用于部署在（或已升级到）V2.3 和更高发行版中的实例。  
 
 ## 向 Cloud Foundation 实例添加集群
+{: #sd_addingviewingclusters-adding}
 
 最多可以向一个 Cloud Foundation 实例添加五个集群。
 
 ### 系统设置
+{: #sd_addingviewingclusters-adding-sys-settings}
 
 向 Cloud Foundation 实例添加集群时，必须指定以下设置。
 
 #### 集群名称
+{: #sd_addingviewingclusters-adding-cluster-name}
 
 集群名称必须满足以下需求：
 * 只允许使用字母数字字符和短划线 (-) 字符。
@@ -42,6 +47,7 @@ lastupdated: "2019-01-24"
 * 集群名称在 Cloud Foundation 实例中必须唯一。
 
 #### 数据中心位置
+{: #sd_addingviewingclusters-adding-dc-location}
 
 缺省情况下，集群的 {{site.data.keyword.CloudDataCent}} 位置设置为 Cloud Foundation 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 等工具。
 
@@ -50,10 +56,12 @@ lastupdated: "2019-01-24"
 如果将集群部署到其他数据中心或 pod，应再订购三个 VLAN 用于已订购的 {{site.data.keyword.baremetal_short}}。
 
 ### 裸机服务器设置
+{: #sd_addingviewingclusters-adding-bare-metal-settings}
 
 可以选择 **Skylake** 或 **Broadwell**。
 
 #### Skylake
+{: #sd_addingviewingclusters-adding-skylake}
 
 对于 **Skylake** 设置，您有多个 **CPU 型号**和 **RAM** 选项。可用选项可能有所不同，具体取决于初始部署实例的版本。
 
@@ -66,6 +74,7 @@ lastupdated: "2019-01-24"
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
 #### Broadwell
+{: #sd_addingviewingclusters-adding-broadwell}
 
 对于 **Broadwell** 设置，您有多个 **CPU 型号**和 **RAM** 选项。可用选项可能有所不同，具体取决于初始部署实例的版本。
 
@@ -80,6 +89,7 @@ lastupdated: "2019-01-24"
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.2 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
 ### vSAN 存储器设置
+{: #sd_addingviewingclusters-adding-vsan-storage-settings}
 
 对于 **Skylake** 和 **Broadwell** 裸机服务器配置，可以通过指定以下设置来定制 vSAN 存储器：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
@@ -92,12 +102,14 @@ lastupdated: "2019-01-24"
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 
 ### 许可证设置
+{: #sd_addingviewingclusters-adding-licensing-settings}
 
 可以为集群中的 VMware 组件（包括 VMware vSphere 和 VMware vSAN）指定许可选项：
 * 对于 IBM 业务合作伙伴用户，会包含 vSphere 许可证 (Enterprise Plus Edition) 和 vSAN 许可证，该许可证以您的名义购买。但是，您必须指定 vSAN 许可证的版本。
 * 对于非 IBM 业务合作伙伴用户，可以通过选择**购买时包含**对组件使用 IBM 提供的 VMware 许可证，或者可以通过选择**我将提供**并输入您自己的许可证密钥以自带许可证 (BYOL)。
 
 ## 向 Cloud Foundation 实例添加集群的过程
+{: #sd_addingviewingclusters-adding-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在 **Cloud Foundation 实例**表中，单击要添加集群的实例。
@@ -124,6 +136,7 @@ lastupdated: "2019-01-24"
    4. 单击**供应**。
 
 ### 向 Cloud Foundation 实例添加集群后的结果
+{: #sd_addingviewingclusters-adding-results}
 
 1. 集群部署会自动启动，并且集群的状态会更改为**正在初始化**。可以通过在实例摘要页面上查看部署历史记录，以检查部署的状态。
 2. 集群准备就绪可供使用后，其状态会更改为**可供使用**。将对新添加的集群启用 vSphere 高可用性 (HA) 和 vSphere 分布式资源调度程序 (DRS)。
@@ -132,6 +145,7 @@ lastupdated: "2019-01-24"
 {:important}
 
 ## 查看 Cloud Foundation 实例中集群的过程
+{: #sd_addingviewingclusters-viewing-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在 **Cloud Foundation 实例**表中，单击实例以查看其中的集群。
@@ -188,10 +202,12 @@ lastupdated: "2019-01-24"
        * **可用容量 (CPU)**：许可证中可用的容量。
 
 ## 从 Cloud Foundation 实例中删除集群
+{: #sd_addingviewingclusters-deleting}
 
 当不再需要集群时，您可能希望将其从实例中删除。
 
 ### 删除之前
+{: #sd_addingviewingclusters-deleting-prereq}
 
 * 使用此过程从部署在 V2.3 或更高发行版中的实例中删除集群。
 * 对于在 V2.2 或更低版本实例中部署的集群，必须将实例升级到 V2.3，才能删除已添加到实例的集群。
@@ -201,6 +217,7 @@ lastupdated: "2019-01-24"
 * 无法删除缺省集群。
 
 ## 从 Cloud Foundation 实例中删除集群的过程
+{: #sd_addingviewingclusters-deleting-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
 2. 在 **Cloud Foundation 实例**表中，单击要从中删除集群的实例。
@@ -211,7 +228,8 @@ lastupdated: "2019-01-24"
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，找到要删除的集群，然后单击**删除**图标。
 4. 确认已完成将 VM 迁移到其他集群（如果适用），并确认要删除该集群。
 
-### 相关链接
+## 相关链接
+{: #sd_addingviewingclusters-related}
 
-* [查看 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [扩展和收缩 Cloud Foundation 实例的容量](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [查看 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [扩展和收缩 Cloud Foundation 实例的容量](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)

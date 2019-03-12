@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # FortiGate Virtual Appliance on IBM Cloud の概要
+{: #fortinetvm_considerations}
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud}} サービスでは、ご使用の環境に FortiGate Virtual Appliances のペアがデプロイされます。これによって、仮想インフラストラクチャー内に重要なセキュリティー管理が実装されるので、リスクを軽減するのに役立ちます。
 
@@ -22,24 +23,30 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} サービスでは、
 {:note}
 
 ## FortiGate Virtual Appliance on IBM Cloud の技術仕様
+{: #technical-specifications-for-fortigate-virtual-appliance-on-ibm-cloud}
+
 
 以下のコンポーネントが注文され、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
 ### 仮想マシン
+{: #fortinetvm_considerations-specs-vms}
 
 * すべてのオプションには、仮想マシンの高可用性 (HA) ペアが含まれます
 * デプロイメント・サイズとサブスクリプション・タイプに応じて、仮想マシンあたり 2、4、または 8 個の vCPU
 * デプロイメント・サイズとサブスクリプション・タイプに応じて、仮想マシンあたり 4、6、または 12 GB の RAM
 
 ### 高可用性
+{: #fortinetvm_considerations-specs-ha}
 
 2 台の仮想マシンがデプロイされ、HA または Virtual Router Redundancy Protocol (VRRP) の構成ができる状態になっています。
 
 ### ネットワーキング
+{: #fortinetvm_considerations-specs-network}
 
 FortiGate® コンソールへのアクセス権限がプライベート管理ネットワークを介して提供されます。
 
 ### ライセンスと料金
+{: #fortinetvm_considerations-specs-license}
 
 選択したデプロイメント・サイズと月ごとのサブスクリプション・ライセンス・モデルに応じて、各仮想マシンのライセンス料金が各課金サイクルに適用されます。
 
@@ -47,6 +54,7 @@ FortiGate® コンソールへのアクセス権限がプライベート管理�
 {:important}
 
 ## FortiGate Virtual Appliance on IBM Cloud をインストールする際の考慮事項
+{: #fortinetvm_considerations-install}
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスをインストールする前に、以下の考慮事項を確認してください。
 * FortiGate 仮想マシン (VM) はデフォルト・クラスターにのみデプロイされます。
@@ -66,6 +74,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを�
   これらの要件を考慮して、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} に必要なスペースの計画を注意深く立てる必要があります。 必要であれば、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} を注文する前に、インスタンスに ESXi サーバーを 1、2 台追加するか、フェイルオーバー用の vSphere HA CPU 予約を減らす、あるいはその両方を行ってください。
 
 ## FortiGate Virtual Appliance on IBM Cloud の注文例
+{: #fortinetvm_considerations-example}
 
 16 コア (それぞれ 2.10 GHz) で 128 GB RAM という構成の 2 台の ESXi サーバーを持つ VMware vCenter Server の**「スモール」**インスタンスを注文するとします。 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} では、デプロイメント・サイズとして**「ラージ」**(8 vCPU / 12 GB RAM) を選択し、任意のサブスクリプション・ライセンス・モデルを選択します。
 
@@ -88,14 +97,16 @@ ESXi サーバー上には、VMware vCenter Server、VMware NSX Controller、VMw
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを実行するために追加のリソースが必要な場合は、サービスをインストールする前に、さらに ESXi サーバーを追加できます。
 
 ## FortiGate Virtual Appliance on IBM Cloud を削除する際の考慮事項
+{: #fortinetvm_considerations-remove}
 
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを削除する前に、既存の FortiGate Virtual Appliance の構成を正しく削除しておく必要があります。 特に、ネットワーク・トラフィックは、FortiGate Virtual Appliance を経由するのではなく、FortiGate Virtual Appliance を迂回してルーティングする必要があります。 そうしないと、ご使用の環境内の既存のデータ・トラフィックが影響を受ける可能性があります。
 
-### 関連リンク
+## 関連リンク
+{: #fortinetvm_considerations-related}
 
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html)
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
-* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [よくある質問](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_ordering)
+* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Fortinet Web サイト](https://www.fortinet.com/){:new_window}
 * [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

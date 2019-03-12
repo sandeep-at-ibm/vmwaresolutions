@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # VMware vSphere Web Client를 사용하여 OVF 파일 배치
+{: #trbl_deploy_ovf}
 
 ## 해결
+{: #trbl_deploy_ovf-resolution}
 
 vSphere Web Client를 사용하여 OVF(Open Virtualization Format) 파일을 배치하려면 다음 프로시저를 수행하십시오.
 1. OVF 파일 배치 시도 전에 다음 호스트 정보를 `/etc/hosts` 파일에 추가하십시오.

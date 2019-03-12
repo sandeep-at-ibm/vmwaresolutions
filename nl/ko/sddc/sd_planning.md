@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Cloud Foundation 인스턴스에 대한 요구사항 및 계획
+{: #sd_planning}
 
 VMware Cloud Foundation 인스턴스를 주문하기 전에 다음 요구사항을 검토하십시오. {{site.data.keyword.CloudDataCent}} 위치, 워크로드 용량 요구사항 및 서비스 요구사항에 따라 인스턴스를 계획하십시오.
 
 ## IBM Cloud 계정 요구사항
+{: #sd_planning-account-req}
 
-사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)을 참조하십시오.
+사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)을 참조하십시오.
 
 ## IBM Cloud Data Center 가용성
+{: #sd_planning-dc-availability}
 
 Cloud Foundation 배치에는 실제 인프라에 대한 엄격한 요구사항이 있습니다. 그러므로, 요구사항을 충족하는 {{site.data.keyword.CloudDataCents_notm}}에만 인스턴스를 배치할 수 있습니다. 다음 {{site.data.keyword.CloudDataCents_notm}}는 Cloud Foundation 배치에 사용 가능합니다.
 
@@ -66,20 +69,24 @@ Cloud Foundation 배치에는 실제 인프라에 대한 엄격한 요구사항�
 |제한된 자원 명세             |{{site.data.keyword.CloudDataCent_notm}}에는 제한된 가용성이 있으며 주문이 완료되지 않을 수 있습니다. |
 
 ## 관리 컴포넌트의 백업
+{: #sd_planning-backup-mgmt-components}
 
-사용자는 모든 인스턴스 컴포넌트의 가용성을 유지보수하고 보장할 책임이 있습니다. 모든 관리 컴포넌트의 백업 또는 고가용성에 대해 계획을 세우는 것이 좋습니다. 자세한 정보는 [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)을 참조하십시오.
+사용자는 모든 인스턴스 컴포넌트의 가용성을 유지보수하고 보장할 책임이 있습니다. 모든 관리 컴포넌트의 백업 또는 고가용성에 대해 계획을 세우는 것이 좋습니다. 자세한 정보는 [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)을 참조하십시오.
 
 ## Cloud Foundation 인스턴스에 대한 서비스
+{: #sd_planning-addon-services}
 
-사용자의 요구(재해 복구)에 따라 인스턴스에 추가 기능 서비스를 주문할 수 있습니다. 자세한 정보는 [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)를 참조하십시오.
+사용자의 요구(재해 복구)에 따라 인스턴스에 추가 기능 서비스를 주문할 수 있습니다. 자세한 정보는 [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)를 참조하십시오.
 
 ## 용량 고려사항
+{: #sd_planning-capacity-considerations}
 
-용량에 대한 자세한 정보는 [용량 스케일링](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)을 참조하십시오.
+용량에 대한 자세한 정보는 [용량 스케일링](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)을 참조하십시오.
 
-### 관련 링크
+## 관련 링크
+{: #sd_planning-related}
 
-* [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)

@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # スケートボード言語の概念
+{: #vcscar-concepts}
 
 ## スケーター言語
+{: #vcscar-concepts-skater}
 
 Skate Advisor の重要な側面は、Watson 駆動のチャットボットと会話ができることです。 以下のセクションでは、Skate Advisor チャットボットのヒューマン・インタラクションを定義する会話ルールについて詳しく説明します。
 
@@ -20,8 +22,10 @@ Skate Advisor の重要な側面は、Watson 駆動のチャットボットと�
 * トリックの分類: トリックを表すテキストに基づいて、そのトリックを保管および分類します。 この方法で分類されたトリックに、ロケーション・リファレンスやビデオ・リファレンスなどのメタデータを追加できます。
 
 ## 言語エレメント
+{: #vcscar-concepts-lang-elem}
 
 ### コア・エレメント
+{: #vcscar-concepts-core-elem}
 
 トリックを構成する主要な言語エレメントを次に示します。
 
@@ -35,6 +39,7 @@ Skate Advisor の重要な側面は、Watson 駆動のチャットボットと�
 着地 | manual (後輪 2 つ)<br>nosemanual (前輪 2 つ)<br>5-0 (グラインド)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
 
 ### エレメント修飾子
+{: #vcscar-concepts-elem-modifiers}
 
 エレメント修飾子は、言語の特定の側面のコンテキストを表す特殊な言語エレメントです。
 
@@ -46,12 +51,14 @@ Skate Advisor の重要な側面は、Watson 駆動のチャットボットと�
 バリアル | Inward<br>outward |
 
 ## 言語ルール
+{: #vcscar-concepts-lang-rules}
 
 この言語は、以下のルール・セットによって構成されます。 トリックは、エレメントを組み合わせた 1 つ以上のコンビネーション (「コンボ」と呼ばれます) に分けられます。 最初のコンボと後続のコンボには、特に指定がなければ基本コンボと同じ方向であると見なされるという違いがあります。
 
 以下のルールで、言語の構成に使用されるコア・エレメントとエレメント修飾子の基準を確認してください。
 
 ### トリック・ルール・セット
+{: #vcscar-concepts-trick-ruleset}
 
 ```
 base_combo = 'direction \+ \[varial | turn_prefix\] \+ \[rotation\] \+ \[base_trick\]'
@@ -61,6 +68,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
 ```
 
 ### トリック・ルール・エンジン
+{: #vcscar-concepts-trick-rule-engine}
 
 次の図は、ルール・エンジンを視覚的に要約した図です。
 
@@ -68,6 +76,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
 ![スケート言語の概要](vcscar-skate-language.svg)
 
 ## トリック言語のサンプル
+{: #vcscar-concepts-sample-trick}
 
 以下の例は、サンプル・トリックのリストです。
 
@@ -106,9 +115,11 @@ nollie-heelflip to frontside-boardslide
 ```
 
 ## 関連性
+{: #vcscar-concepts-relevance}
 
 トリック言語は、スケートに関する文書やメディアを認識して取り込めるように Watson をトレーニングするための重要な構成概念です。また、ユーザーとの会話の基礎を形成するものでもあります。
 
-### 関連リンク
+## 関連リンク
+{: #vcscar-concepts-related}
 
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)  
+* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)  

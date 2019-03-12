@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # vCenter Server on IBM Cloud with Hybridity Bundle の概要
+{: #vcs-hybridity-intro}
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle は、セキュアでシームレスなインフラストラクチャー・ハイブリッド性と真のアプリケーション・モビリティーを実現するために、素早く簡単にオンプレミス・インフラストラクチャーをクラウドに拡張するために役立つ、ホステッド・プライベート・クラウドです。
 
@@ -25,10 +26,11 @@ IBM、Veeam、および Zerto のバックアップおよび災害復旧オフ�
 
 vCenter Server Hybridity Bundle は、マネージド・サービスではありませんが、IBM-Managed Services を追加して、仮想化層、ゲスト OS 層、またはアプリケーション層の日常の運用と保守をオフロードできます。 クラウドの利用をすぐに開始できるように移行、実装、計画、オンボーディングのサービスを提供してお客様を支援する、{{site.data.keyword.cloud_notm}} プロフェッショナル・サービス・チームも用意されています。
 
-vCenter Server Hybridity Bundle のプラットフォーム統合オプションは、Operations Management を備えた vRealize Suite や vSphere など、VMware で使用可能なオプションに限定されず、[{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html) や [{{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html) など、オープン・ソースの Terraform を使用してインフラストラクチャーをコードとして管理、提供する複数の {{site.data.keyword.cloud_notm}} サービスにわたります。
+vCenter Server Hybridity Bundle のプラットフォーム統合オプションは、Operations Management を備えた vRealize Suite や vSphere など、VMware で使用可能なオプションに限定されず、[{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro) や [{{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro) など、オープン・ソースの Terraform を使用してインフラストラクチャーをコードとして管理、提供する複数の {{site.data.keyword.cloud_notm}} サービスにわたります。
 
 vCenter Server Hybridity Bundle で使用可能な広範なサービス・ポートフォリオとマルチオファリング統合オプションは、真のハイブリッド・プラットフォームを提供し、「サービスとしてのハイブリッド性」を可能にします。
 
-### 関連リンク
+## 関連リンク
+{: #vcs-hybridity-intro-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
