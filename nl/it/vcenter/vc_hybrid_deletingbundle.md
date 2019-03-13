@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,13 +13,15 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Rimozione di Hybridity Bundle da un'istanza vCenter Server
+{: #vc_hybrid_deletingbundle}
 
 Per rimuovere la licenza di Hybridity Bundle dalla tua istanza vCenter Server, devi sostituire le chiavi di licenza a noleggio di VMware NSX e VMware vSAN con le chiavi BYOL (Bring Your Own License) nel client web VMware vSphere. Inoltre, devi aprire un ticket di supporto per annullare i costi per le licenze a noleggio.
 
-Il downgrade della tua licenza potrebbe causare errori nell'istanza vCenter Server. Puoi scegliere di effettuare il downgrade di una licenza a tuo proprio rischio, ma prima considera le funzioni che non sono disponibili quando esegui il downgrade. Per ulteriori informazioni, vedi [Tabella di confronto per le edizioni dei componenti VMware](/docs/services/vmwaresolutions/archiref/solution/appendix.html).
+Il downgrade della tua licenza potrebbe causare errori nell'istanza vCenter Server. Puoi scegliere di effettuare il downgrade di una licenza a tuo proprio rischio, ma prima considera le funzioni che non sono disponibili quando esegui il downgrade. Per ulteriori informazioni, vedi [Tabella di confronto per le edizioni dei componenti VMware](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix).
 {:important}
 
 ## Considerazioni importanti prima di rimuovere Hybridity Bundle da un ambiente multisito
+{: #vc_hybrid_deletingbundle-considerations}
 
 Esamina le seguenti considerazioni prima di rimuovere Hybridity Bundle da un ambiente multisito:
 
@@ -31,6 +33,7 @@ Mentre si rimuove Hybridity Bundle da un ambiente multisito, vengono applicate l
 {:note}
 
 ## Prima di rimuovere Hybridity Bundle
+{: #vc_hybrid_deletingbundle-prereq}
 
 Verifica i seguenti requisiti prima di rimuovere Hybridity Bundle:
 
@@ -41,6 +44,7 @@ Verifica i seguenti requisiti prima di rimuovere Hybridity Bundle:
 * Facoltativamente e se non già applicate, hai a disposizione le chiavi BYOL da applicare per le licenze di VMware vCenter Server e VMware vSphere Enterprise Plus.
 
 ## Procedura per rimuovere Hybridity Bundle
+{: #vc_hybrid_deletingbundle-procedure}
 
 1. Accedi come **Amministratore** al client web VMware in cui vuoi rimuovere Hybridity Bundle.
 2. Fai clic su **Home > Administration > Licensing > Licenses**.
@@ -48,7 +52,7 @@ Verifica i seguenti requisiti prima di rimuovere Hybridity Bundle:
 4. Completa la seguente procedura per installare una BYOL VMware NSX:
    1. Fai clic sulla scheda **Solutions**.
    2. Seleziona NSX for vSphere e fai clic su **All Actions > Assign license**.
-   3. Fai clic sull'icona **Add** e immetti la chiave di licenza. Fai clic su **Next**.
+   3. Fai clic sull'icona **Add** e immetti la chiave di licenza. Fai clic su **Avanti**.
    4. Digita il nome per la licenza e fai clic su **Next**. Fai clic su **Finish** per aggiungere la licenza.
    5. Seleziona la nuova chiave di licenza.
    6. Annota le chiavi di licenza complete per la licenza che viene applicata e la licenza che viene sostituita.
@@ -60,7 +64,7 @@ Verifica i seguenti requisiti prima di rimuovere Hybridity Bundle:
    1. Fai clic sulla scheda **Clusters**.
    2. Completa la seguente procedura per ogni cluster vSAN associato alla tua istanza vCenter Server:
     1. Seleziona un cluster vSAN e fai clic su **All Actions > Assign license**.
-    2. Fai clic sull'icona **Add** e immetti la chiave di licenza. Fai clic su **Next**.
+    2. Fai clic sull'icona **Add** e immetti la chiave di licenza. Fai clic su **Avanti**.
     3. Digita il nome per la licenza e fai clic su **Next**. Fai clic su **Finish** per aggiungere la licenza.
     4. Seleziona la nuova chiave di licenza.
     5. Annota il nome del cluster e le chiavi di licenza complete per la licenza che viene applicata e la licenza che viene sostituita.
@@ -71,7 +75,7 @@ Verifica i seguenti requisiti prima di rimuovere Hybridity Bundle:
 6. Facoltativamente, completa la seguente procedura per installare una BYOL VMware vCenter Server:
    1. Fai clic sulla scheda **vCenter Server systems**.
    2. Seleziona vCenter Server e fai clic su **All Actions > Assign license**.
-   3. Fai clic sull'icona **Add** e immetti la chiave di licenza. Fai clic su **Next**.
+   3. Fai clic sull'icona **Add** e immetti la chiave di licenza. Fai clic su **Avanti**.
    4. Digita il nome per la licenza e fai clic su **Next**. Fai clic su **Finish** per aggiungere la licenza.
    5. Seleziona la nuova chiave di licenza.
    6. Annota le chiavi di licenza complete per la licenza che viene applicata e la licenza che viene sostituita.
@@ -84,7 +88,7 @@ Verifica i seguenti requisiti prima di rimuovere Hybridity Bundle:
   1. Fai clic sulla scheda **Hosts**.
   2. Completa la seguente procedura per ogni cluster associato alla tua istanza vCenter Server o per tutti i cluster contemporaneamente se viene applicata la stessa licenza a tutti i cluster associati al tuo server vCenter:
     1. Seleziona tutti gli host associati al cluster e fai clic su **All Actions > Assign license**.
-    2. Fai clic sull'icona **Add** e immetti la chiave di licenza. Fai clic su **Next**.
+    2. Fai clic sull'icona **Add** e immetti la chiave di licenza. Fai clic su **Avanti**.
     3. Digita il nome per la licenza e fai clic su **Next**. Fai clic su **Finish** per aggiungere la licenza.
     4. Seleziona la nuova chiave di licenza.
     5. Annota il nome del cluster e le chiavi di licenza complete per la licenza che viene applicata e la licenza che viene sostituita.
@@ -106,8 +110,9 @@ Verifica i seguenti requisiti prima di rimuovere Hybridity Bundle:
   I team di supporto e operazioni IBM accedono al livello di gestione vCenter del tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) per verificare che le licenze a noleggio siano state rimosse prima di annullare i costi della licenza a noleggio di Hybridity Bundle.
   {:note}
 
-### Link correlati
+## Link correlati
+{: #vc_hybrid_deletingbundle-related}
 
-* [Ordine di istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [Visualizzazione delle istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Ordine di istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [Visualizzazione delle istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

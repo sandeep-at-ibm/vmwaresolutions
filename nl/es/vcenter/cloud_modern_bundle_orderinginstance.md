@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,33 +13,39 @@ lastupdated: "2019-01-14"
 {:important: .important}
 
 # Solicitud, visualización y supresión de instancias de prueba de un solo nodo para migración y modernización de apps
+{: #cloud_modern_bundle_orderinginstance}
 
 Revise los requisitos de planificación antes de solicitar una instancia de prueba de un solo nodo para migración y modernización de apps.
 
 ## Requisitos y planificación para solicitar instancias de prueba de un solo nodo para migración y modernización de apps
+{: #cloud_modern_bundle_orderinginstance-req}
 
 Asegúrese de cumplir con los siguientes requisitos y de haber completado las tareas siguientes.
 
 ### Requisitos para instancias locales de HCX
+{: #cloud_modern_bundle_orderinginstance-hcx-req}
 
 * Requiere VMware vSphere y vCenter 5.5 o superior.
 * El entorno de vSphere debe tener conmutadores distribuidos para las VM que se van a migrar a {{site.data.keyword.cloud_notm}}.
 * El dispositivo virtual de HCX Manager debe poder desplegarse en una red privada en el entorno local y debe tener permiso para acceder a internet público.
 
 ### Cuenta de la infraestructura IBM Cloud
+{: #cloud_modern_bundle_orderinginstance-account-req}
 
 * Para utilizar {{site.data.keyword.vmwaresolutions_short}} para solicitar instancias, debe tener una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer). El coste de los componentes que se solicitan en las instancias se factura a dicha cuenta de {{site.data.keyword.cloud_notm}}.
 *  Configure las credenciales de la infraestructura {{site.data.keyword.cloud_notm}} en la página **Configuración**. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Valores** en el panel de navegación de la izquierda.
 
 ### Requisitos de nombre de instancia
+{: #cloud_modern_bundle_orderinginstance-inst-name-req}
 
 Revise los requisitos del nombre de la instancia:
 * Solo se permiten caracteres alfanuméricos y el guión (-).
-* El nombre de instancia debe empezar y terminar por un carácter alfanumérico.
+* El nombre de instancia debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
 * La longitud máxima del nombre de instancia es de 10 caracteres.
 * El nombre de instancia debe ser exclusivo dentro de su cuenta.
 
 ## Procedimiento para solicitar instancias de prueba de un solo nodo para migración y modernización de apps
+{: #cloud_modern_bundle_orderinginstance-procedure}
 
 1. En el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** en el panel de navegación de la izquierda y, a continuación, pulse **Prueba de un solo nodo para migración y modernización de apps** en la sección **Centros de datos virtuales**.
 2. En la página **Prueba de un solo nodo para migración y modernización de apps**, pulse **Continuar**.
@@ -59,10 +65,12 @@ Revise los requisitos del nombre de la instancia:
    4. Pulse **Suministro**.
 
 ### Resultados
+{: #cloud_modern_bundle_orderinginstance-results}
 
 El despliegue de la instancia comienza automáticamente y solicita la clave de activación del servicio HCX on {{site.data.keyword.cloud_notm}} local.
 
 #### Proceso de despliegue de HCX on IBM Cloud
+{: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
 
 El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. El proceso de automatización de {{site.data.keyword.vmwaresolutions_short}} lleva a cabo los siguientes pasos:
 1. Se solicitan tres subredes para HCX desde la infraestructura de {{site.data.keyword.cloud_notm}}:
@@ -90,6 +98,7 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. El proc
 6. Se registra el nombre de host y la dirección IP de HCX Manager con el servidor DNS de VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 #### Visualización de detalles de una instancia
+{: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
 Puede comprobar el estado del despliegue visualizando los detalles de la instancia. Pulse **Instancias desplegadas** en el panel de navegación de la izquierda y localice la tabla **Instancias de vCenter Server** o **Instancias de HCX locales** para
 ver información sobre las instancias que ha solicitado.
@@ -99,6 +108,7 @@ Cuando la instancia se ha desplegado correctamente, los componentes que se descr
 El estado de la instancia pasa a ser **Listo para su uso** y el usuario recibe una notificación por correo electrónico.
 
 ### Qué hacer a continuación
+{: #cloud_modern_bundle_orderinginstance-next}
 
 Instale HCX Enterprise Manager local y configure la conexión con el HCX en la instancia de {{site.data.keyword.cloud_notm}}.
 
@@ -144,6 +154,7 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 {:important}
 
 ## Procedimiento para suprimir instancias de prueba de un solo nodo para migración y modernización de apps
+{: #cloud_modern_bundle_orderinginstance-deleting-procedure}
 
 Cuando suprima una instancia de prueba de un solo nodo para migración y modernización de apps, los siguientes componentes se liberarán en esta secuencia:
 
@@ -168,9 +179,10 @@ Siga los pasos siguientes para suprimir una instancia de prueba de un solo nodo 
    1. En la columna **Acciones**, pulse el icono Suprimir de nuevo.
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #cloud_modern_bundle_orderinginstance-related}
 
-* [Guía de vCenter Server e IBM Cloud Private](../archiref/vcsicp/vcsicp-intro.html)
+* [Guía de vCenter Server e IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Apertura de una incidencia para IBM Cloud privado](https://www.ibm.com/mysupport/s/?language=en_US)
 * [Documentación de VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
 * [Obtención de HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

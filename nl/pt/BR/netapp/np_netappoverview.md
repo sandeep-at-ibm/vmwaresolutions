@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Visão geral do NetApp ONTAP Select
+{: #np_netappoverview}
 
 Revise a arquitetura e os componentes do NetApp ONTAP Select na implementação do {{site.data.keyword.cloud}}.
 
 ## Arquitetura do NetApp ONTAP Select
+{: #np_netappoverview-archi}
 
 O NetApp ONTAP Select na oferta do {{site.data.keyword.cloud_notm}} complementa a implementação do vCenter Server fornecendo serviços de virtualização de armazenamento.
 
@@ -27,10 +29,12 @@ Figura 1. Arquitetura de alto nível do NetApp ONTAP Select no {{site.data.keywo
 ![Arquitetura do NetApp ONTAP Select](np_architecture.svg "Arquitetura de alto nível do NetApp ONTAP Select no IBM Cloud")
 
 ### Infraestrutura física
+{: #np_netappoverview-physical-infras}
 
 Essa camada fornece a infraestrutura física (recursos de cálculo, rede e armazenamento) a ser usada pela infraestrutura virtual.
 
 ### Infraestrutura de virtualização (Cálculo, Rede e NetApp ONTAP Select)
+{: #np_netappoverview-virtual-infras}
 
 Essa camada virtualiza a infraestrutura física por meio dos produtos VMware a seguir e do produto NetApp ONTAP Select:
 * O VMware vSphere virtualizará os recursos de cálculo físico
@@ -44,6 +48,7 @@ Figura 2. Componentes do NetApp ONTAP Select
 ![Componentes do NetApp ONTAP Select](np_netappcomponents.svg "Componentes do NetApp ONTAP Select")
 
 ### Gerenciamento de virtualização
+{: #np_netappoverview-virtualization-mgmt}
 
 A camada de gerenciamento de virtualização consiste nos seguintes componentes:
 
@@ -56,6 +61,7 @@ A camada de gerenciamento de virtualização consiste nos seguintes componentes:
 O NetApp ONTAP Select é executado em um cluster VMware e virtualiza o armazenamento local nos hosts. O NetApp ONTAP Select é implementado no modelo dedicado, em que outras cargas de trabalho não são esperadas compartilhar o cluster com ele. Como resultado, a configuração de hardware do NetApp ONTAP Select na oferta do {{site.data.keyword.cloud_notm}} é dimensionada apenas com base nos requisitos do NetApp ONTAP Select.
 
 ## Especificações técnicas para instâncias do NetApp ONTAP Select
+{: #technical-specifications-for-netapp-ontap-select-instances}
 
 Os componentes a seguir estão incluídos em sua instância do NetApp ONTAP Select.
 
@@ -63,6 +69,7 @@ A disponibilidade e a precificação de configurações padronizadas podem varia
 {:note}
 
 ### Armazenamento
+{: #np_netappoverview-storage}
 
 * Escolha entre **Alto desempenho (Médio)**, **Alto desempenho (Grande)** e **Alta capacidade**
 * RAID 5 com hot spare
@@ -70,6 +77,7 @@ A disponibilidade e a precificação de configurações padronizadas podem varia
 * Armazenamento de dados de gerenciamento – 500 GB para MVs de gerenciamento
 
 ### Configurações predefinidas
+{: #np_netappoverview-preset-config}
 
 Quatro {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} com as opções de configuração a seguir são fornecidos:
 * **Alto desempenho (Médio)** – Licença Premium/Dual Intel Xeon E5-2650 v4 (total de 24 núcleos, 2.2 GHz)/128 GB de RAM/Capacidade de 22 unidades SSD de 1,9 TB por nó/Capacidade efetiva de um cluster de 4 nós – 59 TB
@@ -80,25 +88,29 @@ As unidades SSD de 3,8 TB (Disco de estado sólido) são suportadas quando são 
 {:note}
 
 ### Hardware
+{: #np_netappoverview-hardware}
 
 * Três opções de RAM e disco: **Alto desempenho (médio)**, **Alto desempenho (grande)** e **Alta capacidade**
 * Duas unidades SATA 1 TB ESXi OS
 * Um controlador de disco RAID
 * VMware Server Virtualization 6.5
 
-### Redes
+### Rede
+{: #np_netappoverview-network}
 
 * Uplinks duais de rede pública e privada de 10 Gbps
 * Três VLANs (Virtual LANs): uma VLAN pública e duas VLANs privadas
 * Um gateway de serviços do VMware NSX Edge seguro
 
 ### Virtual Server Instances
+{: #np_netappoverview-vsi}
 
 Duas VSIs (Virtual Server Instances):
 * Um VSI para o Active Directory (AD) da Microsoft e serviços do Sistema de Nomes de Domínio (DNS).
 * Um VSI for IBM CloudBuilder, que será encerrado depois que a implementação da instância for concluída.
 
 ### Licenças e taxas
+{: #np_netappoverview-license-and-fee}
 
 *  Quatro licenças Premium ou Standard Edition do NetApp ONTAP Select (fornecidas pelo usuário)
 *  VMware vSphere 6.5 Enterprise Plus Edition
@@ -118,12 +130,14 @@ Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhado.
 
 ## Considerações de firewall
+{: #np_netappoverview-firewall-considerations}
 
 Caso esteja usando firewalls, deve-se configurar regras para todas as comunicações por meio da instância de servidor virtual (VSI) do {{site.data.keyword.IBM}} CloudDriver e das máquinas virtuais (MVs) do SDDC Manager. Essas regras devem permitir que todos os protocolos se comuniquem nos endereços IP `10.0.0.0/8` e `161.26.0.0/16`. Exemplos desses firewalls são os NSX Distributed Firewalls (DFW) ou os firewalls Vyatta.
 
-### Links relacionados
+## Links relacionados
+{: #np_netappoverview-related}
 
-* [Planejando instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_planning.html#requirements-and-planning-for-netapp-ontap-select-instances)
-* [Pedindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Planejando instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning#requirements-and-planning-for-netapp-ontap-select-instances)
+* [Pedindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Centro de Documentação do NetApp ONTAP](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){:new_window}

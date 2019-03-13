@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Nomenclature de Cloud Foundation
+{: #sd_bom}
 
 Passez en revue les informations liées à la nomenclature des instances VMware Cloud Foundation.
 
 ## Nomenclature des réseaux locaux virtuels des instances Cloud Foundation
+{: #sd_bom-vlans}
 
 Le tableau suivant fournit des informations de nomenclature détaillées concernant les réseaux locaux virtuels de Cloud Foundation.
 
@@ -25,6 +27,7 @@ Tableau 1. Nomenclature des réseaux locaux virtuels des instances Cloud Foundat
 | VLAN3     | Privé B, Portable | Affectés à VMware vSAN, si utilisés.<br><br>Affectés à VMware NFS, si utilisés.<br><br>Affectés à VMware vSphere vMotion. |
 
 ## Nomenclature logicielle des instances Cloud Foundation
+{: #sd_bom-software}
 
 Le tableau suivant fournit des informations de nomenclature détaillées concernant les composants logiciels de Cloud Foundation.
 
@@ -41,6 +44,7 @@ Tableau 2. Nomenclature des composants logiciels des instances Cloud Foundation
 | Microsoft    | Windows Server édition Standard (64 bits) | 2012R2       |
 
 ## Paramètres de configuration avancée pour les serveurs ESXi
+{: #sd_bom-esxi-server-advance-config}
 
 Consultez le tableau suivant pour obtenir une présentation des paramètres de configuration avancée appliqués aux serveurs ESXi. Les paramètres varient selon que l'instance Cloud Foundation est déployée dans (ou mise à niveau vers) la version 2.2 ou une version ultérieure à partir d'une édition précédente (V2.1 ou antérieure).
 
@@ -59,6 +63,7 @@ Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les inst
 | Queue Full Threshold | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
 ### Remarques
+{: #sd_bom-notes}
 
 * Le paramètre **MaxVolumes** est obligatoire pour le service IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} car ce service risque d'utiliser plus que le nombre de montages NFS par défaut sur le serveur ESXi.
 * La valeur **Non défini** d'un paramètre de configuration indique que le nouveau paramètre n'est pas automatiquement appliqué car il nécessite un réamorçage des serveurs ESXi, ce qui risque de provoquer une interruption.
@@ -67,10 +72,11 @@ Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les inst
 
   Pour plus d'informations, voir [Augmentation de la valeur par défaut qui définit le nombre maximum de montages NFS sur un hôte ESXi/ESX](https://kb.vmware.com/s/article/2239).
 
-### Liens connexes
+## Liens connexes
+{: #sd_bom-related}
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Feuille de données de protection de VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Planification des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Planification des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)

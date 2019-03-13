@@ -107,4 +107,4 @@ Supervise el tráfico en todas las interfaces que utilizan el separador Supervis
 ## Enlaces relacionados
 {: #vcshcx-monitoring-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

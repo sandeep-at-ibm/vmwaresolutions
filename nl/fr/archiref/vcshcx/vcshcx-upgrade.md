@@ -17,4 +17,4 @@ La mise à niveau de HCX est un processus simple qui utilise l'interface utilisa
 ## Liens connexes
 {: #vcshcx-upgrade-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Présentation de vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

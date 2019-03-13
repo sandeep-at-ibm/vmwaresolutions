@@ -61,4 +61,4 @@ Tabla 3. Parámetros del recopilador remoto
 ## Enlaces relacionados
 {: #caveonix-partially-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-02-14"
 
 ---
 
 # Lista de materiales de Cloud Foundation
+{: #sd_bom}
 
 Revise la información de la Lista de materiales (BOM) de las instancias de VMware Cloud Foundation.
 
 ## Lista de materiales de VLAN para instancias de Cloud Foundation
+{: #sd_bom-vlans}
 
 En la tabla siguiente se muestra la información de la lista de materiales para las VLAN de Cloud Foundation.
 
@@ -25,6 +27,7 @@ Tabla 1. Lista de materiales para las VLAN de instancias de Cloud Foundation
 | VLAN3     | Privada B, Portátil | Asignada a VMware vSAN, si se utiliza.<br><br>Asignada a VMware NFS, si se utiliza.<br><br>Asignada a VMware vSphere vMotion. |
 
 ## Lista de materiales de software para instancias de Cloud Foundation
+{: #sd_bom-software}
 
 En la tabla siguiente se muestra la información de la lista de materiales para los componentes de software de Cloud Foundation.
 
@@ -41,6 +44,7 @@ Tabla 2. Lista de materiales para los componentes de software de instancias de C
 | Microsoft    | Windows Server Standard Edition (64 bits) | 2012R2       |
 
 ## Valores de configuración avanzada para servidores ESXi
+{: #sd_bom-esxi-server-advance-config}
 
 Revise la tabla siguiente para obtener una visión general de los valores de configuración avanzada que se aplican en los servidores ESXi. Los valores son diferentes en función de si la instancia de Cloud Foundation se ha desplegado en (o actualizado a) V2.2 o posterior a partir de un release anterior (V2.1 o anterior).
 
@@ -59,6 +63,7 @@ Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e
 | Umbral cola completa | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
 ### Notes
+{: #sd_bom-notes}
 
 * El valor **MaxVolumes** es obligatorio para el servicio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} porque el servicio puede utilizar más del número predeterminado de montajes de NFS en el servidor ESXi.
 * Un valor de **No definido** para un valor de configuración indica que el nuevo valor no se aplica automáticamente porque requiere que se rearranquen los servidores ESXi, lo que puede suponer una interrupción.
@@ -67,10 +72,11 @@ Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e
 
   Para obtener más información, consulte [Cómo aumentar el valor predeterminado que define el número máximo de montajes de NFS en un host ESXi/ESX](https://kb.vmware.com/s/article/2239).
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #sd_bom-related}
 
 * [Números de compilación y versiones de VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Números de compilación y versiones de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Visión general de Cloud Foundation](sd_cloudfoundationoverview.html)
-* [Planificación de instancias de Cloud Foundation](sd_planning.html)
+* [Visión general de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Planificación de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2018-12-11"
 {:important: .important}
 
 # Entrando em contato com o Suporte IBM
+{: #trbl_support}
 
 Se você precisar de ajuda com o {{site.data.keyword.vmwaresolutions_full}}, crie um chamado de Suporte do {{site.data.keyword.cloud_notm}} por meio do console do {{site.data.keyword.vmwaresolutions_short}} para obter assistência.
 
 ## Procedimento para enviar um chamado de Suporte por meio do console do IBM Cloud for VMware Solutions
+{: #trbl_support-procedure}
 
 1. Acesse https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Efetue login no console com sua conta **IBMid**.

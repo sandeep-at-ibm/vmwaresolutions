@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Configuração multissite para instâncias do vCenter Server with Hybridity Bundle
+{: #vc_hybrid_multisite}
 
 O {{site.data.keyword.vmwaresolutions_full}} permite que as instâncias sejam implementadas em locais diferentes e fiquem funcionais em pouco tempo.
 
 ## Componentes de implementação de vários sites
+{: #vc_hybrid_multisite-deployment-components}
 
 Uma implementação de vários sites consiste nos componentes a seguir.
 
@@ -29,15 +31,16 @@ Uma implementação de vários sites consiste nos componentes a seguir.
    *  Nome do site SSO
    *  Subdomínio do DNS que é vinculado ao domínio-raiz na instância primária
    *  Configuração de replicação DNS e AD entre as máquinas virtuais AD nas instâncias primárias e secundárias.
-   *  Para instâncias primárias implementadas na V2.8 ou mais recente: o vCenter Server Appliance (vCSA) com o
-Platform Services Controller (PSC) integrado é implementado e configurado.
+   *  Para instâncias primárias implementadas na V2.8 ou mais recente: o vCenter Server Appliance (vCSA) com o Platform
+Services Controller (PSC) integrado é implementado e configurado.
    *  O VMware vCenter nas instâncias secundárias é configurado com o Modo vinculado avançado para o vCenter na instância primária.
 
 ## Implementação multissite do vCenter Server with Hybridity Bundle
+{: #vc_hybrid_multisite-deployment}
 
 O recurso de configuração de vários sites usa uma topologia de hub e spoke com um site primário e um máximo de sete sites secundários. Uma única camada de sites é suportada, ou seja, não é possível configurar sites subsequentes vinculados a outros sites secundários. É possível ter um total de 128 servidores ESXi em uma configuração de vários sites em todas as instâncias.
 
-Se a sua configuração requerer uma implementação de vários sites com mais de 128 servidores ESXi, entre em contato com o Suporte IBM para obter assistência. Para obter mais informações, veja [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Se a sua configuração requerer uma implementação de vários sites com mais de 128 servidores ESXi, entre em contato com o Suporte IBM para obter assistência. Para obter mais informações, veja [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 {:note}
 
 O gráfico a seguir descreve a visão geral da implementação multissite do vCenter Server with Hybridity Bundle.
@@ -55,10 +58,11 @@ O modelo contém as camadas a seguir:
 
 É possível ter um máximo de 8 instâncias (1 primária e 7 secundárias) que serão implementadas em uma configuração de vários sites.
 
-A exclusão de instâncias do vCenter Server with Hybridity Bundle que fazem parte de uma configuração multisite requer planejamento especial. Para obter mais informações, veja [Excluindo instâncias do vCenter Server with Hybridity Bundle em uma configuração multisite](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html).
+A exclusão de instâncias do vCenter Server with Hybridity Bundle que fazem parte de uma configuração multisite requer planejamento especial. Para obter mais informações, veja [Excluindo instâncias do vCenter Server with Hybridity Bundle em uma configuração multisite](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance_multi).
 {:note}
 
-### Links relacionados
+## Links relacionados
+{: #vc_hybrid_multisite-related}
 
 * [Designar função principal ao NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configurando gerenciadores NSX secundários](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}

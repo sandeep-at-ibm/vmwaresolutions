@@ -4,45 +4,53 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Commande d'IBM Spectrum Protect Plus on IBM Cloud
+{: #spp_ordering}
 
 Vous pouvez commander le service {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} lors de la commande d'une nouvelle instance avec le service inclus ou vous pouvez ajouter le service à votre instance existante.
 
 ## Commande d'IBM Spectrum Protect Plus on IBM Cloud pour une nouvelle instance
+{: #spp_ordering-new}
 
 Vous pouvez commander une nouvelle instance avec IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} en utilisant l'une des méthodes suivantes :
 * Depuis la console {{site.data.keyword.vmwaresolutions_short}}, lorsque vous commandez une nouvelle instance, sélectionnez **IBM Spectrum Protect Plus on IBM Cloud** dans la section **Services**.
 * Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **IBM Spectrum Protect Plus on IBM Cloud**, spécifiez les paramètres de service, puis choisissez **Ajouter à une nouvelle instance**.
 
 ## Commande d'IBM Spectrum Protect Plus on IBM Cloud pour une instance existante
+{: #spp_ordering-existing}
 
 Vous pouvez ajouter le service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} dans une instance existante en utilisant l'une des méthodes suivantes :
 * Depuis la console {{site.data.keyword.vmwaresolutions_short}}, affichez l'instance pour laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter**.
 * Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **IBM Spectrum Protect Plus on IBM Cloud**, spécifiez les paramètres de service, puis choisissez **Ajouter à une instance existante**.
 
 ## Configuration du service IBM Spectrum Protect Plus on IBM Cloud
+{: #spp_ordering-config}
 
 Lorsque vous commandez le service, indiquez les paramètres suivants :
 
 ### Nombre de volumes de stockage
+{: #spp_ordering-config-number-vol}
 
 Nombre de volumes répondant à vos besoins en stockage.
 
 ### Taille de stockage par volume
+{: #spp_ordering-config-size}
 
 Capacité de stockage par volume.
 
 ### Performances de stockage
+{: #spp_ordering-config-performance}
 
 Valeur IOPS (Input/output Operations Per Second) par Go adaptée à vos besoins en matière de charge de travail.
 * Si vous voulez commander des licences pour IBM Spectrum Protect Plus, renseignez la zone **Nombre de machines virtuelles pour lesquelles concéder une licence** dans l'onglet **Commander des licences**.
 * Si vous voulez fournir votre propre licence (BYOL, Bring Your Own License), cliquez sur l'onglet **Licence IBM Spectrum Protect Plus**, puis sur **Ajouter une licence** pour télécharger les fichiers de licence IBM Spectrum Protect Plus que vous possédez.
 
 ## Processus de déploiement du service IBM Spectrum Protect Plus on IBM Cloud
+{: #spp_ordering-deploy}
 
 Le processus de déploiement du service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} est automatisé. Que vous commandiez une instance avec ce service inclus ou que vous déployez le service ultérieurement dans votre instance, les étapes suivantes sont réalisées par le processus d'automatisation de {{site.data.keyword.vmwaresolutions_short}} :
 
@@ -54,13 +62,14 @@ Le processus de déploiement du service IBM Spectrum Protect Plus on {{site.data
 6. Le stockage NFS qui a été commandé pour ce service est connecté à la machine virtuelle IBM Spectrum Protect Plus et le référentiel de sauvegarde est configuré.
 7. Le nom d'hôte et l'adresse IP de la machine virtuelle IBM Spectrum Protect Plus sont enregistrés auprès du serveur DNS de l'instance.
 
-### Liens connexes
+## Liens connexes
+{: #spp_ordering-related}
 
-* [Présentation d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_considerations.html)
+* [Présentation de IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations)
 * [Planification préventive du service IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](http://www.ibm.com/support/docview.wss?uid=swg22012650)
-* [Gestion d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingspp.html)
-* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Gestion d'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)
+* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Documentation IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
-* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

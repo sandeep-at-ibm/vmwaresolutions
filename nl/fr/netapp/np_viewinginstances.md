@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Affichage des instances NetApp ONTAP Select
+{: #np_viewinginstances}
 
 Affichez les informations récapitulatives et détaillées des instances NetApp ONTAP Select qui sont mises à disposition pour différents comptes utilisateur.
 
 ## Procédure d'affichage du récapitulatif des instances NetApp ONTAP
+{: #np_viewinginstances-procedure-view-inst-summary}
 
 Pour afficher un récapitulatif de toutes les instances NetApp ONTAP Select qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 
@@ -35,6 +37,7 @@ Tableau 1. Eléments d'une instance NetApp ONTAP Select
 | Statut | Statut de l'instance. Ce statut peut prendre l'une des valeurs suivantes :<ul><li>Création en cours : l'instance est en cours de création.</li><li>Génération en cours ; l'instance est en cours de configuration.</li><li>Prêt à l'emploi : l'instance est prête à l'emploi.</li><li>Modification en cours : l'instance est en cours de modification.</li><li>Echec : le processus de création, de configuration ou de modification a échoué.</li><li>Suppression en cours : l'instance est en cours de suppression.</li><li>Erreur de suppression : une erreur s'est produite au cours de la suppression de l'instance.</li><li>Supprimé : l'instance est supprimée.</li></ul>|
 
 ## Procédure d'affichage des détails des propriétés des instances NetApp ONTAP
+{: #np_viewinginstances-procedure-view-inst-property}
 
 Pour afficher les détails des propriétés d'une instance :
 
@@ -60,6 +63,7 @@ Tableau 2. Propriétés d'instance NetApp ONTAP Select
 | Statut | Statut de l'instance. |
 
 ## Procédure d'affichage des informations d'accès aux instances NetApp ONTAP
+{: #np_viewinginstances-procedure-view-inst-access-info}
 
 Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance.
 
@@ -85,6 +89,7 @@ Tableau 3. Informations d'accès relatives aux composants des instances NetApp O
 | vCenter SSH | Nom d'utilisateur et mot de passe que vous pouvez utiliser pour accéder à la machine virtuelle vCenter Server via une connexion SSH. |
 
 ## Procédure d'affichage de l'historique de déploiement des instances NetApp ONTAP
+{: #np_viewinginstances-procedure-view-inst-deploy-history}
 
 Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance.
 
@@ -95,9 +100,10 @@ Tableau 4. Historique de déploiement d'une instance NetApp ONTAP Select
 | Date | Date et heure de changement du statut de l'instance |
 | Récapitulatif | Détails du changement |
 
-Si des erreurs se produisent lors du déploiement ou de la suppression d'une instance, l'équipe de support {{site.data.keyword.cloud_notm}} est automatiquement prévenue. Pour connaître le statut de votre ticket, vous pouvez [contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Si des erreurs se produisent lors du déploiement ou de la suppression d'une instance, l'équipe de support {{site.data.keyword.cloud_notm}} est automatiquement prévenue. Pour connaître le statut de votre ticket, vous pouvez [contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
-## Affichage des clusters NetApp ONTAP Select
+## Procédure à utiliser pour afficher des clusters NetApp ONTAP Select
+{: #np_viewinginstances-procedure-view-cluster}
 
 1. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche.
 2. Sous **CLUSTERS**, affichez le récapitulatif concernant les clusters NetApp ONTAP Select.
@@ -160,6 +166,7 @@ Tableau 6. Détails des serveurs ESXi d'un cluster NetApp ONTAP Select
 | Statut | Statut du serveur ESXi, qui peut avoir l'une des valeurs suivantes :<ul><li>Actif : le serveur ESXi est prêt à l'emploi.</li><li>Suppression en cours : le serveur ESXi est en cours de suppression.</li></ul> |
 
 ## Etape suivante
+{: #np_viewinginstances-next}
 
 Gérez vos instances depuis la console {{site.data.keyword.vmwaresolutions_short}}, le client Web VMware vSphere ou la console NetApp.
 
@@ -168,12 +175,13 @@ Avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instan
 
 Consultez les rubriques suivantes pour plus d'informations sur l'exécution des instructions de connexion :
 
-*  Pour les exigences et procédures à effectuer avant d'accéder au client vSphere Web Client, voir [Dépassement du délai d'attente lors de la connexion au client vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
+*  Pour les exigences et procédures à effectuer avant d'accéder au client vSphere Web Client, voir [Dépassement du délai d'attente lors de la connexion au client vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
 *  Pour la liste des points d'accès de connexion au réseau privé de l'infrastructure {{site.data.keyword.cloud_notm}} à l'aide du réseau privé virtuel (VPN), voir [Accès VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client vSphere Web Client, voir [Déploiement d'un fichier OVF à l'aide du client vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
+*  Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client vSphere Web Client, voir [Déploiement d'un fichier OVF à l'aide du client vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
-### Liens connexes
+## Liens connexes
+{: #np_viewinginstances-related}
 
-* [Commande d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [Suppression d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
+* [Commande d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [Suppression d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
 * [Liaison d'un stockage dédié à des déploiements NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

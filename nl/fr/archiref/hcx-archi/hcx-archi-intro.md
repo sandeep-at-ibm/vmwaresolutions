@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-17"
+lastupdated: "2019-02-15"
 
 ---
 # Présentation de VMware HCX on IBM Cloud
+{: #hcx-archi-intro}
 
 Le service VMware HCX on IBM Cloud permet de créer une connexion ininterrompue entre des instances IBM Cloud for VMware Solutions et un centre de données virtuel VMware local.
 
@@ -21,7 +22,7 @@ Figure 1. VMware Cloud Foundation – Services cloud hybrides
 ![VMware Cloud Foundation – Services cloud hybrides](cloudfoundation_hybrid_cloud_services.svg)
 
 Cette connexion crée une interconnectivité à couplage lâche entre le site local et IBM Cloud et active des fonctions telles que :
-* Interconnectivité simple – Des connexions de réseau logique sont facilement établies sur n'importe quelle connexion physique, y compris l'Internet public, le VPN privé ou Direct Link. 
+* Interconnectivité simple – Des connexions de réseau logique sont facilement établies sur n'importe quelle connexion physique, y compris l'Internet public, le VPN privé ou Direct Link.
 * Extension de couche 2 - Les réseaux locaux sont étendus au cloud. Ils incluent les sous-réseaux locaux et l'adressage IP.
 * Chiffrement – Le trafic réseau est chiffré entre les deux sites.
 * Réseau optimisé – Sélectionne la meilleure connexion et achemine efficacement la connexion de sorte que le trafic réseau soit déplacé le plus rapidement possible.
@@ -30,6 +31,7 @@ Cette connexion crée une interconnectivité à couplage lâche entre le site lo
 * Migration planifiée – N'importe quel nombre de machines virtuelles peut être répliqué vers le site de destination, puis activé sur ce site à une heure précise afin de remplacer les systèmes qui s'exécutent sur le site d'origine.
 * Migration de règles de sécurité – Si NSX est utilisé sur site, toutes les règles de sécurité ou tous les pare-feux sont déplacés en même temps que la charge de travail.
 
-### Liens connexes
+## Liens connexes
+{: #hcx-archi-intro-related}
 
 * [IBM Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture)

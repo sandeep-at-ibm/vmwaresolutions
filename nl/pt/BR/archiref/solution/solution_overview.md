@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
-# Visão geral da solução
+# Visão geral do IBM Cloud for VMware Solutions
+{: #solution_overview}
 
 As ofertas do {{site.data.keyword.vmwaresolutions_full}} permitem que você amplie seu data center virtualizado do VMware existente para o {{site.data.keyword.cloud_notm}} ou hospede os aplicativos nativos de nuvem.
 
@@ -18,12 +19,11 @@ Revise estas informações para o design das ofertas do {{site.data.keyword.vmwa
 
 Esse design serve como uma arquitetura de linha de base que fornece a base para outros componentes internos ou específicos do fornecedor serem incluídos para casos de uso específicos.
 
-## Visão geral do VMware on IBM Cloud
-
 Figura 1. Visão geral do VMware on {{site.data.keyword.cloud_notm}}
 ![Visão geral do VMware on {{site.data.keyword.cloud_notm}}](solution_overview.svg "A solução virtualiza o cálculo, a rede e opcionalmente os recursos de armazenamento a serem consumidos pelas MVs nas quais é possível executar seus aplicativos.")
 
-## Principais benefícios
+## Benefícios principais do IBM Cloud for VMware Solutions
+{: #solution_overview-benefits}
 
 O VMware Cloud Foundation e o vCenter Server on {{site.data.keyword.cloud_notm}} fornecem os blocos de construção fundamentais, o que inclui VMware vSphere, vCenter Server, NSX e opções de armazenamento compartilhado, incluindo vSAN. Esses componentes são necessários para arquitetar flexivelmente uma solução de data center definida pelo software VMware que melhor se ajuste às cargas de trabalho.
 
@@ -38,8 +38,9 @@ As ofertas do VMware on {{site.data.keyword.cloud_notm}} trazem os benefícios a
 * **Ativando gerenciamento e controle consistentes** da nuvem híbrida implementada, fornecendo acesso administrativo total ao gerenciamento de virtualização, preservando, assim, seus conjuntos de ferramentas, scripts e investimentos existentes do VMware em treinamento.
 * **Alavancar o conhecimento do VMware em escala global** com o IBM Professional e Managed Services abrangendo 30 + {{site.data.keyword.CloudDataCents_notm}} no mundo todo.
 
-### Links relacionados
+## Links relacionados
+{: #solution_overview-related}
 
-* [Visão geral do design](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [ Capacidade de Escalação ](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
-* [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [Visão geral do design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [ Capacidade de Escalação ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)
+* [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

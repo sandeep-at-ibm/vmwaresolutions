@@ -4,23 +4,27 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Percorso di modernizzazione
+{: #vcscontent-modjourney}
 
 Questo è un caso di utilizzo di riferimento che descrive come viene modernizzata una classica applicazione WebSphere Application Server utilizzando {{site.data.keyword.cloud}} Private, il contenuto di IBM Middleware, {{site.data.keyword.containerlong_notm}} e VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 ## La modernizzazione va oltre le applicazioni
+{: #vcscontent-modjourney-modernization}
 
 Siamo tutti su un percorso cloud e a diversi punti del percorso. Questo caso di utilizzo si concentra sul modo in cui un'applicazione esistente, Stock Trader, viene modernizzata attraverso dei passi incrementali pianificati dall'architetto dell'applicazione, Jane, e dall'architetto dell'infrastruttura cloud, Todd. Questo caso di utilizzo mostra esempi che ti aiutano ad affrontare ogni passo del tuo percorso e il valore che viene realizzato per il tuo business, indipendentemente da quanto grande o piccolo sia ciascun passo.
 
 La maggior parte della nostra attenzione in questo percorso è rivolta alla modernizzazione dell'applicazione Stock Trader. Per modernizzare completamente il tuo business in un business nativo cloud, è necessario discutere i temi relativi ad applicazioni, DevOps, integrazione e gestione. Tutti i temi operano insieme per aiutarti a raggiungere i tuoi obiettivi. Modernizzare un tema e non gli altri potrebbe creare dei problemi.
 
 ## Motivi per modernizzare
+{: #vcscontent-modjourney-reasons}
 
 ### Modernizzazione dell'applicazione
+{: #vcscontent-modjourney-app-mod}
 
 L'obiettivo sono applicazioni native cloud in grado di adeguarsi e rispondere alle richieste in continua evoluzione.
 
@@ -28,6 +32,7 @@ L'obiettivo sono applicazioni native cloud in grado di adeguarsi e rispondere al
 * Hai bisogno di applicazioni in grado di scalare, raggiungere tutto il mondo, adattarsi alle richieste, cambiare, migliorare e rinnovarsi rapidamente.
 
 ### Modernizzazione di DevOps
+{: #vcscontent-modjourney-devops-mod}
 
 Mentre modernizzi la tua applicazione, la forma in cui distribuisci l'applicazione, l'intera pipeline di distribuzione, viene modernizzata in modo che la nuova cultura nativa cloud che i tuoi sviluppatori stanno creando possa ridimensionare il modo in cui l'applicazione viene distribuita.
 
@@ -35,6 +40,7 @@ Mentre modernizzi la tua applicazione, la forma in cui distribuisci l'applicazio
 * Hai bisogno di team DevOps in grado di scalare, raggiungere tutto il mondo, adattarsi alla domanda, cambiare, migliorare e rinnovarsi rapidamente.
 
 ###  Modernizzazione dell'integrazione
+{: #vcscontent-modjourney-integration-mod}
 
 Lungo tutto il percorso di modernizzazione, i tuoi team devono integrarsi con risorse esistenti, nuovi servizi cloud, i tuoi dati e nuove informazioni approfondite dalle analisi eseguite su tali dati.
 
@@ -43,6 +49,7 @@ Lungo tutto il percorso di modernizzazione, i tuoi team devono integrarsi con ri
 * Devi integrare i tuoi dati e le informazioni approfondite ottenute dall'applicazione dell'analisi ai tuoi dati.
 
 ### Gestione
+{: #vcscontent-modjourney-mgmt}
 
 La modernizzazione delle procedure di gestione è un altro percorso parallelo da intraprendere mentre modernizzi le tue applicazioni. Gli strumenti, la cultura e i comportamenti principali su come gestire e mantenere un'applicazione modernizzata sono molto diversi rispetto a prima.
 
@@ -51,12 +58,14 @@ La modernizzazione delle procedure di gestione è un altro percorso parallelo da
 * Devi automatizzare il modo in cui gestisci più di un cloud e le applicazioni e il middleware che vengono eseguiti su di essi.
 
 ## Conosci Todd e Jane
+{: #vcscontent-modjourney-todd-jane}
 
 Per il nostro percorso di Stock Trader, ci concentriamo su due personaggi: Todd e Jane. Todd è capo operativo per l'azienda ACME ed è responsabile dell'infrastruttura, della sicurezza, degli ambienti cloud e delle politiche che garantiscono che i carichi di lavoro eseguiti in tali ambienti rispettino le varie normative.
 
 Jane è il lead di sviluppo per la soluzione Stock Trader ed ha ora la responsabilità di modernizzare Stock Trader, il che significa lavorare con tutti i suoi team di sviluppo per modificare gli strumenti, la cultura e le piattaforme di sviluppo, in modo che la soluzione Stock Trader monolitica esistente venga modernizzata in una soluzione nativa cloud ben gestita.
 
 ## Conosci Stock Trader
+{: #vcscontent-modjourney-meet-stock-trader}
 
 Todd e Jane hanno creato un'applicazione che viene eseguita in WebSphere chiamata Stock Trader. Sebbene abbia un'interfaccia utente di base, è un'applicazione affidabile in cui i gestori di portafoglio vanno a gestire i portafogli, compreso l'acquisto e la vendita di azioni e la visualizzazione dei livelli di fedeltà interni.
 
@@ -65,6 +74,7 @@ Stock Trader viene eseguito in WebSphere, è creato con alcuni file .war e utili
 Ma, anche se Stock Trader funziona bene, tutti in azienda vogliono qualcosa di meglio. I gestori prodotti vogliono aggiungere i social media al loro programma di fedeltà. Jane è contenta perché può eseguire il refactoring dell'applicazione in microservizi, che consente loro di fornire continuamente funzionalità migliorate con meno dipendenze. A Todd piace l'idea dell'efficienza del cloud, ma necessita ancora della governance per mantenere la conformità con le politiche aziendali.
 
 ## Passi lungo il percorso
+{: #vcscontent-modjourney-steps}
 
 Todd e Jane sanno per esperienza che un buon percorso per modernizzare le soluzioni inizia con una tabella di marcia strategica. Mentre i piani possono cambiare, è sempre bene riflettere sulla visione di insieme e definire un percorso realistico per arrivarci. Ogni passo deve apportare valore all'azienda e i passi non sono così significativi da causare costose interruzioni ai propri clienti.
 
@@ -84,7 +94,8 @@ a essere interamente portatile per l'uso in altri ambienti Kubernetes.
 
 7. Modernizzazione della gestione. Todd e Jane hanno lavorato per migliorare il modo in cui gestiscono Stock Trader e la piattaforma su cui viene eseguito, anche in più di un cluster e in un ambiente cloud.
 
-### Link correlati
+## Link correlati
+{: #vcscontent-modjourney-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

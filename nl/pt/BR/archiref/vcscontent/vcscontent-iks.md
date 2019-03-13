@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Híbrido verdadeiro com o IBM Cloud Kubernetes Service
+{: #vcscontent-iks}
 
 Conforme a equipe de teste de Jane se expande, ela deseja fornecer um ambiente de teste
 que execute grandes partes de seu aplicativo e ainda use os dados que ela tem
@@ -25,5 +26,6 @@ Figura 1. Stock Trader como um aplicativo híbrido verdadeiro
 ![Stock Trader como um aplicativo híbrido verdadeiro](vcscontent-truehybrid.svg)
 
 ## Links relacionados
+{: #vcscontent-iks-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

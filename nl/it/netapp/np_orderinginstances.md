@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,35 +13,41 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Ordine di istanze NetApp ONTAP Select
+{: #np_orderinginstances}
 
 Per distribuire una piattaforma virtualizzata VMware con un'applicazione di archiviazione definita dal software dedicata e altamente disponibile, ordina un'istanza NetApp ONTAP Select.
 
 ## Requisiti
+{: #np_orderinginstances-req}
 
 Assicurati di aver completato le seguenti attività:
-*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html).
-*  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_planning.html).
+*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+*  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning).
 
 Non modificare alcun valore impostato durante l'ordine o la distribuzione dell'istanza. La modifica rende inutilizzabile la tua istanza. Ad esempio, se la rete pubblica si interrompe, se i server e le VSI (Virtual Server Instance) vanno dietro una fornitura media di Vyatta o se la VSI di IBM CloudBuilder si arresta o viene eliminata.
 {:important}
 
 ## Impostazioni di sistema
+{: #np_orderinginstances-sys-settings}
 
 Quando ordini un'istanza NetApp ONTAP Select, devi specificare le seguenti impostazioni di base.
 
 ### Nome istanza
+{: #np_orderinginstances-instance-name}
 
 Il nome dell'istanza deve rispettare i seguenti requisiti:
 * Sono consentiti solo caratteri alfanumerici e trattini (-).
-* Il nome istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
+* Il nome dell'istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
 * La lunghezza massima del nome dell'istanza è di 10 caratteri.
 * Il nome dell'istanza deve essere univoco all'interno del tuo account.
 
 ## Impostazioni dell'interfaccia di rete
+{: #np_orderinginstances-network-interface-settings}
 
 Quando ordini un'istanza NetApp ONTAP Select, devi specificare le seguenti impostazioni dell'interfaccia di rete.
 
 ### Prefisso nome host
+{: #np_orderinginstances-host-name-prefix}
 
 Il prefisso del nome host deve rispettare i seguenti requisiti:
 *  Sono consentiti solo caratteri alfanumerici e trattini (-).
@@ -49,6 +55,7 @@ Il prefisso del nome host deve rispettare i seguenti requisiti:
 *  La lunghezza massima del prefisso del nome host è di 10 caratteri.
 
 ### Etichetta dominio secondario
+{: #np_orderinginstances-subdomain-label}
 
 L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
 *  Sono consentiti solo caratteri alfanumerici e trattini (-).
@@ -57,6 +64,7 @@ L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
 *  L'etichetta del dominio secondario deve essere univoca all'interno del tuo account.
 
 ### Nome dominio
+{: #np_orderinginstances-domain-name}
 
 Il nome del dominio root deve rispettare i seguenti requisiti:
 * Il nome del dominio deve essere composto da due o più stringhe separate da un punto (.)
@@ -69,16 +77,20 @@ La lunghezza massima del nome di dominio completo (o FQDN, Fully Qualified Domai
 {:note}
 
 ## Impostazioni di licenza
+{: #np_orderinginstances-licensing-settings}
 
 Devi caricare quattro file di licenza NetApp, uno per ciascuno dei quattro {{site.data.keyword.baremetal_short}}. Contatta il tuo team di vendite NetApp per ottenere le licenze appropriate per la tua distribuzione ad alte prestazioni o ad alta capacità.
 
 ## Impostazioni di Bare Metal Server
+{: #np_orderinginstances-bare-metal-settings}
 
 ### Ubicazione data center
+{: #np_orderinginstances-dc-location}
 
 Devi selezionare il {{site.data.keyword.CloudDataCent_notm}} in cui deve essere ospitata l'istanza.
 
 ### Configurazione Bare Metal Server
+{: #np_orderinginstances-bare-metal-config}
 
 Seleziona una configurazione Bare Metal Server in base ai tuoi requisiti:
 * **Alte prestazioni (Medium)** – Licenza Premium / Dual Intel Xeon E5-2650 v4 (24 core totali, 2,2 GHz) / 128 GB di RAM / Capacità di 22 unità SSD da 1,9 TB per nodo / Capacità effettiva di un cluster a 4 nodi – 59 TB
@@ -89,10 +101,12 @@ Le unità SSD (Solid-State Disk) da 3,8 TB sono supportate quando vengono rese g
 {:note}
 
 ### Numero di server Bare Metal
+{: #np_orderinginstances-bare-metal-number}
 
 Il numero di server ESXi di un'istanza NetApp ONTAP Select è 4 per impostazione predefinita. Non puoi modificare questo valore. Tutti i server ESXi condividono la configurazione.
 
 ## Procedura per ordinare le istanze NetApp ONTAP Select
+{: #ordering-netapp-ontap-select-instances}
 
 1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **NetApp ONTAP Select** nella sezione **Data center virtuali**.
 2. Nella pagina **NetApp ONTAP Select**, fai clic su **Crea**.
@@ -110,14 +124,16 @@ Il numero di server ESXi di un'istanza NetApp ONTAP Select è 4 per impostazione
     5. Fai clic su **Fornitura**.
 
 ## Risultati
+{: #np_orderinginstances-results}
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances) vengono installati sulla tua piattaforma virtuale VMware.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#technical-specifications-for-netapp-ontap-select-instances) vengono installati sulla tua piattaforma virtuale VMware.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 
 ## Operazioni successive
+{: #np_orderinginstances-next}
 
 Visualizza e gestisci l'istanza NetApp ONTAP Select che hai ordinato.
 
@@ -130,9 +146,10 @@ Devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel
 
    Le eccezioni a queste attività includono la gestione delle condivisioni file di archiviazione condivisa dal {{site.data.keyword.slportal}}. Tali attività includono: l'ordine, l'eliminazione (che potrebbe influire sugli archivi di dati, se montati), l'autorizzazione e il montaggio di condivisioni file di archiviazione condivisa.
 
-### Link correlati
+## Link correlati
+{: #np_orderinginstances-related}
 
-* [Visualizzazione delle istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
-* [Eliminazione di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
+* [Visualizzazione delle istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
+* [Eliminazione di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
 * [Centro di documentazione di NetApp ONTAP](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
 * [Collega l'archiviazione dedicata alle distribuzioni di NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

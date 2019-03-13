@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Exigences et planification pour les instances Cloud Foundation
+{: #sd_planning}
 
 Passez en revue les exigences suivantes avant de commander vos instances VMware Cloud Foundation. Planifiez votre instance en fonction de l'emplacement de l'{{site.data.keyword.CloudDataCent}}, de vos besoins en capacité de charge de travail et de vos besoins en services.
 
 ## Exigences liées au compte IBM Cloud
+{: #sd_planning-account-req}
 
-Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
+Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## Disponibilité du centre de données IBM Cloud
+{: #sd_planning-dc-availability}
 
 Des exigences très strictes sont liées au déploiement Cloud Foundation sur l'infrastructure physique. Par conséquent, vous ne pouvez déployer des instances que dans des {{site.data.keyword.CloudDataCents_notm}} qui répondent à ces exigences. Les {{site.data.keyword.CloudDataCents_notm}} suivants sont disponibles pour un déploiement Cloud Foundation :
 
@@ -66,20 +69,24 @@ Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_not
 | Limited Inventory             | L'{{site.data.keyword.CloudDataCent_notm}} a une disponibilité limitée et la commande risque de ne pas être honorée. |
 
 ## Sauvegarde des composants de gestion
+{: #sd_planning-backup-mgmt-components}
 
-Vous êtes chargé de gérer et d'assurer la disponibilité de tous les composants d'instance. Il est recommandé de planifier la sauvegarde ou la haute disponibilité de tous les composants de gestion. Pour plus d'informations, voir [Sauvegarde des composants](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
+Vous êtes chargé de gérer et d'assurer la disponibilité de tous les composants d'instance. Il est recommandé de planifier la sauvegarde ou la haute disponibilité de tous les composants de gestion. Pour plus d'informations, voir [Sauvegarde des composants](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup).
 
 ## Services pour les instances Cloud Foundation
+{: #sd_planning-addon-services}
 
-Vous pouvez commander des services complémentaires pour votre instance en fonction de vos besoins, par exemple, la reprise après incident. Pour plus d'informations, voir [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html).
+Vous pouvez commander des services complémentaires pour votre instance en fonction de vos besoins, par exemple, la reprise après incident. Pour plus d'informations, voir [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices).
 
 ## Remarques sur la capacité
+{: #sd_planning-capacity-considerations}
 
-Pour plus d'informations sur la capacité, voir [Mise à l'échelle de la capacité](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
+Pour plus d'informations sur la capacité, voir [Mise à l'échelle de la capacité](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling).
 
-### Liens connexes
+## Liens connexes
+{: #sd_planning-related}
 
-* [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)

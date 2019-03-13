@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Architecture cible de niveau composant VMware HCX on IBM Cloud
+{: #hcx-archi-target}
 
 Cette section décrit l'architecture de chaque composant HCX qui est déployé au sein de l'environnement IBM Cloud. Le modèle de déploiement spoke (cible) au sein d'IBM Cloud est présenté.
 
 ## NSX Edge
+{: #hcx-archi-target-nsx-edge}
 
 Le premier composant qui est configuré au sein d'IBM Cloud est une paire de machines virtuelles NSX Edge. Il est important de noter que tous les déploiements de solutions IBM Cloud for VMware installent et configurent une unité de périphérie pour une communication sortante IBM CloudDriver. Toutefois, alors que cet ESG pourrait être réutilisé pour des communications Hybrid Cloud Services, il est conseillé de déployer une nouvelle paire.
 
@@ -91,6 +93,7 @@ Tableau 7. Configuration de pool pour NSX Edge - Détails de pool
 | Nbre min connexions | 0         |
 
 ## HCX Manager
+{: #hcx-archi-target-hcxm}
 
 Le composant HCX Manager est le premier dispositif qui est déployé une fois les dispositifs NSX Edge configurés sur la cible. Ce dispositif est utilisé comme interface principale dans l'environnement de cloud pour les composants source, et il fournit une interface utilisateur de réseau abstraite qui peut être utilisée pour ajouter, éditer et supprimer des réseaux ainsi que pour concevoir et configurer le routage sans utilisation directe de NSX. Suite à l'intégration de vCenter et NSX, une adresse IP portable est affectée au dispositif HCX Manager sur le réseau VLAN de gestion.
 
@@ -102,6 +105,7 @@ Figure 1. Cible - Dispositif des Services cloud hybrides
 ![Cible - Dispositif des Services cloud hybrides](target_hybrid_cloud_services_appliance.svg)
 
 ## Passerelle cloud
+{: #hcx-archi-target-cloud-gateway}
 
 Un dispositif virtuel est déployé dès qu'une connexion est établie entre la source et le cloud cible. Ce dispositif est la passerelle cloud (CGW) et il est utilisé pour gérer un canal sécurisé entre l'environnement vSphere qui est désigné comme source et IBM Cloud. La spécification de dimensionnement du dispositif CGW qui est déployé au sein d'IBM Cloud est répertoriée dans le Tableau 3 Déploiement de passerelle cloud.
 
@@ -123,6 +127,7 @@ Figure 2. Déploiement de passerelle cloud
 ![Déploiement de passerelle cloud](cloud_gateway_deployment.svg)
 
 ## Optimiseur de réseau WAN
+{: #hcx-archi-target-wan-opt}
 
 Le second composant qui est déployé est le dispositif d'optimisation de réseau WAN. Ce dispositif d'optimisation du réseau WAN est optionnel et il effectue un conditionnement de réseau WAN pour réduire les effets de latence. Il incorpore également la correction d'erreur en aval (Forward Error Correction) pour annuler les scénarios de perte de paquet, et le dédoublonnage de modèles de trafic redondant.
 
@@ -142,6 +147,7 @@ Figure 3. Déploiement de l'optimiseur de réseau WAN
 ![Déploiement de l'optimiseur de réseau WAN](wan_optimizer_deployment.svg)
 
 ## Concentrateur de couche 2
+{: #hcx-archi-target-layer-2-conc}
 
 Le troisième composant est appelé concentrateur de couche 2 (L2C) et il fait partie des services d'extension réseau. Le concentrateur L2C est la machine virtuelle qui permet l'extension de réseaux de centre de données locaux vers IBM Cloud. Il étend les réseaux VLAN et/ou VXLAN locaux. Chaque concentrateur L2C peut étendre jusqu'à 4096 réseaux VLAN. Lorsqu'il est appairé avec son partenaire local, chaque concentrateur L2C peut fournir jusqu'à 1 Gbps par “flux” et jusqu'à 4 Gbps par VLAN (ou VXLAN). Le déploiement de dispositifs L2C supplémentaires est possible si davantage de débit réseau est nécessaire.
 
@@ -160,6 +166,7 @@ Le dispositif L2C est déployé sur le réseau VLAN de gestion ainsi que le rés
 Figure 4. Déploiement de concentrateur L2
 ![Déploiement de concentrateur L2](l2_concentrator_deployment.svg)
 
-### Liens connexes
+## Liens connexes
+{: #hcx-archi-target-related}
 
-* [Installation et configuration sur la source](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-source.html)
+* [Installation et configuration sur la source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-source)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Requisitos para a conta de infraestrutura do IBM Cloud
+{: #slaccountrequirement}
 
 Para usar {{site.data.keyword.vmwaresolutions_full}} para pedir instâncias, deve-se ter uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer). O custo dos componentes que são pedidos em suas instâncias é faturado para aquela conta {{site.data.keyword.cloud_notm}}.
 
@@ -20,10 +21,11 @@ A conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) era co
 {:note}
 
 ## Permissões para a conta de infraestrutura do IBM Cloud
+{: #slaccountrequirement-permissions}
 
 A conta de infraestrutura do {{site.data.keyword.cloud_notm}} que você está usando deve ter determinadas permissões para poder pedir os componentes em suas instâncias e executar operações em seu nome. Os requisitos de permissão são aplicáveis a todos os tipos de instâncias e serviços que você está pedindo do console do {{site.data.keyword.vmwaresolutions_short}}.
 
-Os usuários autorizados podem verificar e atualizar as permissões para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} no {{site.data.keyword.slportal}}. Para obter mais informações, consulte [Editando permissões do portal do cliente de um usuário](/docs/customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
+Os usuários autorizados podem verificar e atualizar as permissões para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} no {{site.data.keyword.slportal}}. Para obter mais informações, consulte [Editando permissões do portal do cliente de um usuário](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:new_window}.
 
 Tabela 1. Permissões necessárias para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}
 
@@ -46,22 +48,25 @@ Tabela 1. Permissões necessárias para a conta de infraestrutura do {{site.data
 | Gerenciar Monitoramento do Servidor | Essa permissão não é necessária para fazer um pedido, mas é necessária para recuperar e validar o status de monitoramento do {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} no qual os servidores VMware ESXi estão em execução em sua instância. |
 
 ## Requisito de roteamento e encaminhamento virtual (VRF)
+{: #slaccountrequirement-vrf}
 
 A conta de infraestrutura do {{site.data.keyword.cloud_notm}} deve ser uma conta VRF ou, caso seja uma conta não VRF, deve ter a ampliação de VLAN ativada. Para obter mais informações sobre como converter sua conta de não VRF para VRF,
-consulte [Visão geral do VRF on IBM Cloud](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html).
+consulte [Visão geral do VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
 
 ## Ampliação de VLAN para contas não VRF
+{: #slaccountrequirement-vlan-spanning}
 
 Se você estiver usando uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} não VRF, a
 ampliação de VLAN deve ser ativada. Se a ampliação de VLAN não estiver ativada para contas não VRF, os vários
 componentes do ambiente de virtualização do VMware podem não ser capazes de se comunicar uns com os outros.
 
 Para ativar a ampliação de VLAN em sua conta, consulte
-[Ampliação de VLAN](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}.
+[Ampliação de VLAN](/docs/infrastructure/vlans?topic=vlans-vlan-spanning){:new_window}.
 
-### Links relacionados
+## Links relacionados
+{: #slaccountrequirement-related}
 
-* [Requisitos para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)
-* [Requisitos para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
-* [Conta do usuário e configurações](/docs/services/vmwaresolutions/vmonic/useraccount.html)
-* [ Visão geral do VRF no IBM Cloud ](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)
+* [Requisitos para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
+* [Requisitos para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
+* [Conta do usuário e configurações](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
+* [ Visão geral do VRF no IBM Cloud ](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-02-15"
 
 ---
 
 # Refactorizar y añadir middleware a IBM Cloud Private
+{: #vcscontent-addmidware}
 
 Ahora que Stock Trader se ejecutan en un contenedor y que Jane está satisfecha con los microservicios actuales, ella y Todd trabajan en cómo mejorar la aplicación con prestaciones adicionales. Mediante la refactorización de los microservicios de Stock Trader para manejar la actividad y la escalabilidad en aumento, ambos ven la necesidad de añadir middleware a {{site.data.keyword.cloud}} Private. Parte del middleware ya existía en su centro de datos, por lo que se trata de un ejercicio de replanteamiento de la plataforma con la adición de cierto middleware.
 
@@ -18,6 +19,7 @@ Figura 1. Refactorización de Stock Trader
 Esta refactorización de la solución genera una plataforma común en la que ejecutar la aplicación y los servicios necesarios, combinados en un plano de gestión más sencillo.
 
 ## Opciones de contenido
+{: #vcscontent-addmidware-content-choices}
 
 {{site.data.keyword.cloud_notm}} ofrece una amplia selección de contenidos, y tanto Todd como Jane deben decidir cuál se adapta mejor a sus necesidades. Según observa Todd en el catálogo de {{site.data.keyword.cloud_notm}}, la mayor parte del contenido se puede probar, aunque cierto contenido se tiene que adquirir y descargar desde Passport Advantage.
 
@@ -126,13 +128,16 @@ PowerVC)
 
 Para Stock Trader, que se basa en la arquitectura de la solución de Jane, Todd empezará con [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://console.cloud.ibm.com/catalog/services/mq) y [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis).
 
-## Añadir middleware
+## Adición de middleware
+{: #vcscontent-addmidware-add-middleware}
 
 Para añadir el middleware a {{site.data.keyword.cloud_notm}} Private, busque el [diagrama de helm](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md) en el catálogo, lea el archivo léame y luego continúe con la instalación.
 
 Para Stock Trader, Todd ha decidido añadir todo el middleware. En la siguiente información se resume todo lo que ha tenido que llevar a cabo Todd para cada middleware que quería que Jane utilizara.
 
 ### Db2
+{: #vcscontent-addmidware-db2}
+
 Todd empieza con Db2 porque ya están utilizando Db2 y pueden dedicar un Db2 basado en contenedor a cada solución.
 
 Puesto que Todd ha preparado {{site.data.keyword.icpfull_notm}}, ya tiene definida su política de seguridad de pod. Todd se puede centrar en la creación de un secreto de extracción de imágenes de docker:
@@ -173,6 +178,7 @@ Cuando Db2 se está ejecutando, Todd o Jane tiene que crear las tablas que utili
 Stock Trader.
 
 ### MQ
+{: #vcscontent-addmidware-mq}
 
 Todd y Jane necesitan software de mensajería, y, como ya utilizan MQ, esta constituye una excelente opción. Además, ocupa poco y la versión de desarrollo se puede poner a disponibilidad de cada desarrollador, lo que ahorra un tráfico de producción valioso. La instalación de MQ es muy sencilla. Todd crea el almacenamiento igual que ha hecho con
 Db2 y luego instala el diagrama de helm:
@@ -195,7 +201,8 @@ Inicialmente, Todd selecciona NodePort para acceder al middleware desde la inter
 
 Para configurar MQ de modo que utilice Stock Trader, Todd abre la interfaz de usuario de MQ Management, que es la misma que la versión de VM.
 
-### 	Redis
+### Redis
+{: #vcscontent-addmidware-redis}
 
 Aunque Stock Trader se está ejecutando en {{site.data.keyword.cloud_notm}} Private Hosted, todavía les preocupa la latencia del servicio de cotización bursátil, cuando todo lo que realmente les importa es el cierre de bolsa de día anterior para la mayor parte de su trabajo. Para ayudar a mejorar el rendimiento, añaden una memoria caché Redis.
 
@@ -206,6 +213,7 @@ De forma predeterminada, este diagrama instala seis pods: uno maestro, dos escla
 La configuración es sencilla, por lo que Todd especifica el espacio de nombres en el que lo quiere instalar e inicia la instalación.
 
 ## Refactorización de Stock Trader
+{: #vcscontent-addmidware-refactor-stock-trader}
 
 La refactorización de Stock Trader es un paso importante para Jane. Mientras Todd se ocupaba de añadir el middleware a {{site.data.keyword.cloud_notm}} Private, Jane refactorizó su solución para optimizarla para los comportamientos de Kubernetes y de la nube.
 
@@ -225,6 +233,7 @@ para acceder a servicios como ODM y
 Watson, junto con más microservicios como repositorios individuales en GitHub.
 
 ### Adición de secretos
+{: #vcscontent-addmidware-add-secrets}
 
 Ahora que Jane ha refactorizado los microservicios de Stock Trader, necesita una forma de obtener los nombres de servicio, los ID de usuario y las contraseñas, para que su aplicación pueda obtener detalles exclusivos sobre el servicio cuando se despliega sin codificar nombres específicos y volver a crear la aplicación.
 
@@ -236,6 +245,7 @@ Figura 2. Stock Trader - servicios centrales
 ![Servicios centrales de Stock Trader](vcscontent-pivot-services.svg)
 
 ## Resultado
+{: #vcscontent-addmidware-result}
 
 Puesto que Jane se ha comprometido en refactorizar la solución de Stock Trader y Todd ha instalado middleware en {{site.data.keyword.cloud_notm}} Private Hosted, toda la solución básica de Stock Trader se ejecuta en una nube privada. Jane añade más microservicios como un servicio de notificación de Twitter. Las reglas de direccionamiento de Istio permiten la mensajería de nivel de fidelidad dinámica a través de un canal de Slack interno o de un canal de Twitter público.
 
@@ -243,6 +253,7 @@ Figura 3. Optimización de Stock Trader
 
 ![Optimización de Stock Trader](vcscontent-enrich.svg)
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vcscontent-addmidware-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

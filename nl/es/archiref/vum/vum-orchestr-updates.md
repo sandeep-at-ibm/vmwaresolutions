@@ -4,13 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-20"
+lastupdated: "2019-02-18"
 
 ---
 
-#	Actualizaciones coordinadas
+# Actualizaciones coordinadas
+{: #vum-orchestr-updates}
 
-Puede utilizar actualizaciones coordinadas para actualizar el hardware virtual y las herramientas de VMware de máquinas virtuales en el inventario después de actualizar los hosts ESXi de vSphere. Una vez que se han actualizado los hosts, primero se ejecuta la línea base de actualización de VMware Tools, seguido de la línea base de actualización de hardware de la máquina. Puede utilizar actualizaciones coordinadas a nivel de clúster, de carpeta o de centro de datos.
+Puede utilizar actualizaciones coordinadas para actualizar el hardware virtual y las herramientas de VMware de máquinas virtuales en el inventario después de actualizar los hosts ESXi de vSphere. Una vez que se han actualizado los hosts, primero se ejecuta la línea base de actualización de VMware Tools, seguido de la línea base de actualización de hardware de la máquina virtual. Puede utilizar actualizaciones coordinadas a nivel de clúster, de carpeta o de centro de datos.
 
 VUM le permite realizar actualizaciones coordinadas de hosts y de máquinas virtuales utilizando grupos de línea base. Se utiliza un grupo de línea base que contiene una sola línea base de actualización de host y varias líneas base de parche o extensión. VUM primero actualiza los hosts y después aplica el parche o las líneas base de extensión. Para realizar una actualización coordinada de máquinas virtuales, utilice un grupo de línea base de máquina virtual que contenga las siguientes líneas base:
 * Actualización de VM Hardware para que coincida con el host
@@ -33,6 +34,7 @@ De forma alternativa, puede definir el límite para el número de hosts que se p
 El flujo de trabajo siguiente describe el proceso para realizar una actualización coordinada:
 
 ## Paso 1
+{: #vum-orchestr-updates-step1}
 
 1. Utilice el cliente web de vSphere para iniciar la sesión en VCSA.
 2. Seleccione **Inicio** > **Actualizar gestor** y en el **separador Objetos**, seleccione una **instancia de Update Manager**.
@@ -47,18 +49,20 @@ El flujo de trabajo siguiente describe el proceso para realizar una actualizaci�
 11. Revise la página **Preparado para completar**, pulse **Finalizar** y el grupo de línea base de host se muestra en el panel Grupos de línea base.
 
 ## Paso 2
+{: #vum-orchestr-updates-step2}
 
 1. Cree un grupo de línea base de máquina virtual que contenga la línea base de actualización de VMware Tools para que coincida con la línea base de host y la actualización de hardware de VM para que coincida con la línea base del host, vista VMware Tools.
 2. Adjunte el grupo de línea base a un objeto contenedor de vCenter que contenga las máquinas virtuales que desee actualizar.
 3. Explore el objeto contenedor para ver el estado de conformidad de las máquinas virtuales en el contenedor. Puede iniciar la exploración manualmente o planificar una tarea de exploración.
 4. Revise los resultados de la exploración que se muestran en la vista Conformidad de cliente VUM.
 5. Corrija las máquinas virtuales no conformes en el objeto contenedor para que cumplan con el grupo de línea base adjunto. Puede iniciar la corrección manualmente o planificar una tarea de corrección.
-* Durante una actualización de VMware Tools, las máquinas virtuales deben estar encendidos. Si una máquina virtual está en un estado apagado o suspendido antes de la corrección, VUM enciende en la máquina. Una vez finalizada la actualización, VUM reinicia la máquina y restaura el estado de alimentación original de la máquina virtual.
-* Durante una actualización de hardware de máquina virtual, deben cerrarse las máquinas virtuales. Una vez finalizada la corrección, VUM restaura el estado de alimentación original de las máquinas virtuales. Si una máquina virtual está encendida, VUM se desactiva de la máquina, actualiza el hardware virtual y, a continuación, se enciende en la máquina virtual.
+* Durante una actualización de VMware Tools, las máquinas virtuales deben estar encendidos. Si una máquina virtual está en un estado apagado o suspendido antes de la corrección, VUM enciende la máquina. Una vez finalizada la actualización, VUM reinicia la máquina y restaura el estado de alimentación original de la máquina virtual.
+* Durante una actualización de hardware de máquina virtual, deben cerrarse las máquinas virtuales. Una vez finalizada la corrección, VUM restaura el estado de alimentación original de las máquinas virtuales. Si una máquina virtual está encendida, VUM apaga la máquina, actualiza el hardware virtual y, a continuación, enciende la máquina virtual.
 
 Ahora puede utilizar estos grupos de línea base en los procesos de exploración, revisión, transferencia y corrección.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vum-orchestr-updates-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

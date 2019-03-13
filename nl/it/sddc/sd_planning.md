@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Requisiti e pianificazione per le istanze Cloud Foundation
+{: #sd_planning}
 
 Esamina i seguenti requisiti prima di ordinare le tue istanze VMware Cloud Foundation. Pianifica la tua istanza in base all'ubicazione del {{site.data.keyword.CloudDataCent}}, ai requisiti di capacità del tuo carico di lavoro e ai requisiti del servizio.
 
 ## Requisiti dell'account IBM Cloud
+{: #sd_planning-account-req}
 
-L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
+L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## Disponibilità dei data center IBM Cloud
+{: #sd_planning-dc-availability}
 
 La distribuzione di Cloud Foundation ha requisiti rigorosi sull'infrastruttura fisica. Pertanto, puoi distribuire le istanze solo nei {{site.data.keyword.CloudDataCents_notm}} che soddisfano i requisiti. Per la distribuzione di Cloud Foundation sono disponibili i seguenti {{site.data.keyword.CloudDataCents_notm}}:
 
@@ -66,20 +69,24 @@ Tabella 2. Indicatori di stato per i {{site.data.keyword.CloudDataCents_notm}} q
 | Limited Inventory             | Il {{site.data.keyword.CloudDataCent_notm}} ha una disponibilità limitata e l'ordine potrebbe non essere completato. |
 
 ## Backup dei componenti di gestione
+{: #sd_planning-backup-mgmt-components}
 
-Sei responsabile del mantenimento e della verifica della disponibilità di tutti i componenti dell'istanza. Si consiglia di pianificare il backup o l'alta disponibilità di tutti i componenti di gestione. Per ulteriori informazioni, vedi [Backup dei componenti](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
+Sei responsabile del mantenimento e della verifica della disponibilità di tutti i componenti dell'istanza. Si consiglia di pianificare il backup o l'alta disponibilità di tutti i componenti di gestione. Per ulteriori informazioni, vedi [Backup dei componenti](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup).
 
 ## Servizi per le istanze Cloud Foundation
+{: #sd_planning-addon-services}
 
-Puoi ordinare servizi aggiuntivi per la tua istanza in base alle tue esigenze, ad esempio il ripristino di emergenza. Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html).
+Puoi ordinare servizi aggiuntivi per la tua istanza in base alle tue esigenze, ad esempio il ripristino di emergenza. Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices).
 
 ## Considerazioni sulla capacità
+{: #sd_planning-capacity-considerations}
 
-Per ulteriori informazioni sulla capacità, vedi [Ridimensionamento della capacità](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
+Per ulteriori informazioni sulla capacità, vedi [Ridimensionamento della capacità](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling).
 
-### Link correlati
+## Link correlati
+{: #sd_planning-related}
 
-* [Panoramica di Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Panoramica di Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)

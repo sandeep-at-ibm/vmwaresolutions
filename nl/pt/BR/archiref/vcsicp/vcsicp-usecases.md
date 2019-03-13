@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # Casos de uso
+{: #vcsicp-usecases}
 
 ## Migração de carga de trabalho para o IBM Cloud
+{: #vcsicp-usecases-wkld-mig}
 
 A Acme Skateboards deseja ampliar de forma contínua seu VMware SDDC no local para uma instância do VMware vCenter Server on {{site.data.keyword.cloud}}. Ela precisa manter seus negócios em funcionamento e manter seu tempo de inatividade para o mínimo. Reconfigurar seus aplicativos para execução na nuvem não é uma solução ideal.
 
@@ -36,6 +38,7 @@ O VMware Hybrid Cloud Extension Services cria uma interconectividade fracamente 
 Usando essa solução, a Acme Skateboards migrou com êxito suas cargas de trabalho do VMware no local para o {{site.data.keyword.cloud_notm}} atendendo a seus requisitos de pouco a nenhum tempo de inatividade e nenhuma reconfiguração de aplicativo.
 
 ## Implementação de arquitetura híbrida
+{: #vcsicp-usecases-hybrid-archi-deployment}
 
 O Acme Skateboards deseja implementar uma arquitetura híbrida no {{site.data.keyword.cloud_notm}} que consiste no vCenter Server e no {{site.data.keyword.icpfull_notm}}, para sua jornada para a modernização do aplicativo. Seus requisitos devem executar seus bancos de dados em máquinas virtuais, os aplicativos e os serviços da web em contêineres e usar um conjunto comum de ferramentas para gerenciamento de rede e segurança.
 
@@ -55,6 +58,7 @@ Figura 3. vCenter Server com  {{site.data.keyword.icpfull_notm}}
 
 ![vCenter Server with {}](vcsicp-virtual-icp-deployment-vcs.svg)
 
-### Links relacionados
+## Links relacionados
+{: #vcsicp-usecases-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

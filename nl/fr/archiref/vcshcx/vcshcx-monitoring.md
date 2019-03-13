@@ -26,7 +26,7 @@ Seul le trafic de tunnel WAN de la passerelle CGW de HCX transite via le disposi
 ### Configuration de l'interface utilisateur
 {: #vcshcx-monitoring-config-ui}
 
-Hormis la configuration d'une adresse IP pour l'interface utilisateur Web, ne modifiez pas la configuration de l'optimiseur de réseau WAN à moins d'y être invité par le personnel de support d'{{site.data.keyword.IBM}} ou de VMware.    
+Hormis la configuration d'une adresse IP pour l'interface utilisateur Web, ne modifiez pas la configuration de l'optimiseur de réseau WAN à moins d'y être invité par le personnel de support d'{{site.data.keyword.IBM}} ou de VMware.   
 
 Pour configurer l'interface utilisateur Web de l'optimiseur de réseau WAN :
 1.	Localisez la machine virtuelle de l'optimiseur de réseau WAN sur le client vCenter.
@@ -76,7 +76,7 @@ Pour surveiller les composants HCX, telles que les opérations de HCX Manager, d
 - Configurez HCX Manager pour envoyer des journaux à un serveur syslog. Utilisez l'utilitaire de gestion de HCX Manager pour exécuter la commande `https://<hcxhostname or
 IP>:9443`.
 - Configurez une commande ping vers une machine virtuelle migrée avant le basculement du réseau pour chaque réseau L2 étendu.
-- Surveillez l'état de santé de la machine virtuelle du composant HCX à l'aide de l'outil VMware vRealize Operations Manager ou d'autres outils de surveillance des machines virtuelles VMware. 
+- Surveillez l'état de santé de la machine virtuelle du composant HCX à l'aide de l'outil VMware vRealize Operations Manager ou d'autres outils de surveillance des machines virtuelles VMware.
 
 ## Utilisation de la bande passante
 {: #vcshcx-monitoring-band-use}
@@ -104,4 +104,4 @@ Surveillez le trafic sur toutes les interfaces qui utilisent l'onglet Monitoring
 ## Liens connexes
 {: #vcshcx-monitoring-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

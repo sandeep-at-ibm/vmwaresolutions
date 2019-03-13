@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-02-15"
 
 ---
 
 # Contexto del sistema
+{: #vcsnsxt-systemcontext}
 
 El diagrama de contexto de sistema define los elementos principales de un sistema, el límite del sistema, las entidades que interactúan con el mismo, junto con las interacciones. Se trata de un diagrama general que proporciona al lector una vista inicial del sistema.
 
@@ -23,6 +24,7 @@ Los cuatro componentes principales, desde una perspectiva de red, son los siguie
 - **IBM Cloud Services**: una amplia gama de servicios disponibles desde {{site.data.keyword.cloud_notm}} que son consumibles. Las opciones de servicio incluyen análisis, IA e IoT como ejemplos.
 
 ## Actores
+{: #vcsnsxt-systemcontext-actors}
 
 El diagrama del contexto del sistema identifica los siguientes actores.
 
@@ -37,6 +39,7 @@ Cliente | El cliente es un actor externo que quiere consumir servicios de la emp
 {{site.data.keyword.containerlong_notm}} | Se trata de un recurso de IBM que gestiona el nodo maestro {{site.data.keyword.containerlong_notm}} del servicio.
 
 ## Sistemas
+{: #vcsnsxt-systemcontext-systems}
 
 El diagrama del contexto del sistema identifica los siguientes sistemas.
 
@@ -47,11 +50,12 @@ Actor | Descripción
 vCenter | vCenter es la interfaz primaria que utiliza el administrador del sistema para gestionar las VM locales y para acceder al plugin HCX para ampliar las redes y migrar las VM. Con vCenter Server con el paquete híbrido (Hybridity), el administrador del sistema puede integrar fácilmente redes vSphere locales en instancias de vCenter Server que se ejecutan en {{site.data.keyword.cloud_notm}}. La red híbrida amplía las redes locales a {{site.data.keyword.cloud_notm}}, lo que permite a los clientes migrar sus aplicaciones a una instancia de vCenter Server que se ejecuta en {{site.data.keyword.cloud_notm}} y de nuevo al entorno local si es necesario. Para ver detalles sobre vCenter Server con el paquete híbrido (Hybridity), consulte el documento sobre la [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
 VM locales | Las VM locales alojan las aplicaciones que se migran a la nube. Inicialmente, se migran como VM y luego mediante el proceso de modernización de aplicaciones migradas desde las VM a los contenedores.
 VM en la nube | Las VM en la nube alojan las aplicaciones que se han migrado desde el entorno local. Se comunican con aplicaciones locales a través de la red L2 ampliada. En el caso de esta arquitectura de referencia y en este ejemplo de Acme Skateboards, una de las VM de la nube es un servidor de bases de datos, que forma parte de la carga de trabajo con presencia en línea.
-NSX-V | NSX-V en vCenter Server proporciona la red de superposición definida por software que gestiona el administrador del sistema. La red de superposición es el destino de las redes ampliadas HCX, ya que maneja el tráfico procedente de las VM para {{site.data.keyword.icpfull_notm}}. NSX-V proporciona la arquitectura de referencia con características como, por ejemplo, el despliegue, la reconfiguración y la destrucción de redes virtuales bajo demanda y servicios de microsegmentación dentro de VMware utilizando los conmutadores distribuidos de vSphere (vDS). Para obtener más información, consulte [Visión general de NSX-V](vcsnsxt-overview-ic4vnsxv.html).
+NSX-V | NSX-V en vCenter Server proporciona la red de superposición definida por software que gestiona el administrador del sistema. La red de superposición es el destino de las redes ampliadas HCX, ya que maneja el tráfico procedente de las VM para {{site.data.keyword.icpfull_notm}}. NSX-V proporciona la arquitectura de referencia con características como, por ejemplo, el despliegue, la reconfiguración y la destrucción de redes virtuales bajo demanda y servicios de microsegmentación dentro de VMware utilizando los conmutadores distribuidos de vSphere (vDS). Para obtener más información, consulte [Visión general de NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv).
 CAM | {{site.data.keyword.cloud_notm}} Automation Manager (CAM) se ejecuta en {{site.data.keyword.icpfull_notm}} y proporciona un único panel para suministrar cargas de trabajo basadas en VM junto con cargas de trabajo basadas en Kubernetes utilizando plantillas. CAM permite al desarrollador: <br> - Suministrar cargas de trabajo en vCenter Server, {{site.data.keyword.icpfull_notm}} o {{site.data.keyword.containerlong_notm}}.<br> - Componer y coordinar servicios que procedentes tanto de VM como de contenedores. <br> - Integrar sus cadenas de herramientas de DevOps y la solución ITSM del segundo día.
 Aplicaciones contenerizadas | Las apps que han pasado por el proceso de modernización de aplicaciones y que ahora se ejecutan como contenedores. En el caso de esta arquitectura de referencia y en este ejemplo de Acme Skateboards, una de las apps contenerizadas es un servidor web que forma parte de la carga de trabajo con presencia en línea.
 Watson | En el caso de esta arquitectura de referencia y en este ejemplo de Acme Skateboards, Watson representa el servicio de IA que se utiliza en la arquitectura "Concept Car".
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vcsnsxt-systemcontext-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

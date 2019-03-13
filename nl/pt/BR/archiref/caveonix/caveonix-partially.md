@@ -27,7 +27,7 @@ Tabela 1. Parâmetros base
 |VM qty	|1|
 |vCPU	|16|
 |RAM	|64 GB|
-|Disco	|1000 GB|
+|Disk	|1000 GB|
 |OS	|CentOS 7|
 |Componentes do Aplicativo Instalados	|UI, App, Plugins, Central Collector, Index Datastore, Messaging Datastore, Relational Datastore, Remote Collector|
 
@@ -61,4 +61,4 @@ Tabela 3. Parâmetros do coletor remoto
 ## Links relacionados
 {: #caveonix-partially-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

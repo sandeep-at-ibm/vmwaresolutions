@@ -2,17 +2,19 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
-# Eventi di {{site.data.keyword.cloudaccesstrailshort}}
+# Eventi del Programma di traccia dell'attività
+{: #at-events}
 
 Utilizza il servizio {{site.data.keyword.cloudaccesstrailfull}} per tenere traccia di come utenti e applicazioni interagiscono con {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.Bluemix_notm}}.
 
-Il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} registra le attività avviate dall'utente che modificano lo stato di un servizio in {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
+Il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} registra le attività avviate dall'utente che modificano lo stato di un servizio in {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla).
 
-## Tabella eventi di {{site.data.keyword.cloudaccesstrailshort}}
+## Tabella degli eventi del Programma di traccia dell'attività
+{: #at-events-table}
 
 Controlla la seguente tabella per la descrizione delle colonne nella tabella degli eventi di Activity Tracker.
 
@@ -29,9 +31,10 @@ Tabella 1. Descrizione della tabella degli eventi di Activity Tracker
 | reason_reasonCode     | Intero    | Il codice motivo del risultato. |
 | initiator_host_address| Stringa     | L'indirizzo IP da cui proviene la richiesta. |
 
-Per ulteriori informazioni, vedi [Campi evento di Activity Tracker](/docs/services/cloud-activity-tracker/at_event.html).
+Per ulteriori informazioni, vedi [Campi evento di Activity Tracker](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-at_event).
 
 ## Traccia degli eventi di gestione dell'istanza
+{: #at-events-instance-mgmt}
 
 Quando gestisci gli account utente, le istanze, i cluster e i servizi in {{site.data.keyword.vmwaresolutions_short}}, viene generato un evento che viene inviato al **dominio dell'account** in Activity Tracker.
 
@@ -74,6 +77,7 @@ Tabella 2. Descrizione delle azioni che generano eventi di gestione
 | `vmware-solutions.service.undeploy` | Viene eseguita l'azione per rimuovere un servizio da un'istanza. | `success` |
 
 ## Traccia di eventi per il servizio KMIP for VMware on IBM Cloud
+{: #at-events-kmip}
 
 Quando gestisci le chiavi per il servizio KMIP for VMware on {{site.data.keyword.cloud_notm}}, viene generato un evento che viene inviato al **dominio dell'account** in Activity Tracker.
 
@@ -92,11 +96,13 @@ Tabella 3. Descrizione delle azioni che generano eventi per il servizio KMIP for
 | `vmware-solutions.key.discover_versions`    | <ul><li>Viene ricevuta la richiesta di trovare la versione del servizio KMIP for VMware on {{site.data.keyword.cloud_notm}}.</li><li>Viene data risposta alla richiesta di trovare la versione del servizio KMIP for VMware on {{site.data.keyword.cloud_notm}}.</li></ul> |  <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 
 ## Dove visualizzare gli eventi
+{: #at-events-viewing}
 
 Gli eventi di {{site.data.keyword.cloudaccesstrailshort}} si trovano nel **dominio dell'account** di {{site.data.keyword.cloudaccesstrailshort}} disponibile nella regione {{site.data.keyword.Bluemix_notm}} in cui vengono generati gli eventi.
 
-### Link correlati
+## Link correlati
+{: #at-events-related}
 
-* [Provisioning di Activity Tracker](/docs/services/cloud-activity-tracker/how-to/provision.html)
-* [Passaggio al dashboard Activity Tracker nella console {{site.data.keyword.cloud_notm}}](/docs/services/cloud-activity-tracker/how-to/manage-events-ui/launch_at_ui.html)
-* [Panoramica di KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html)
+* [Provisioning di Activity Tracker](/docs/services/cloud-activity-tracker/how-to?topic=cloud-activity-tracker-provision)
+* [Passaggio al dashboard Activity Tracker nella console {{site.data.keyword.cloud_notm}}](/docs/services/cloud-activity-tracker/how-to/manage-events-ui?topic=cloud-activity-tracker-launch_at_ui)
+* [Panoramica di KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)

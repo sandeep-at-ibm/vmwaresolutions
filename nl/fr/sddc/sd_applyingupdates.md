@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,15 +13,17 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Application de mises à jour à des instances Cloud Foundation
+{: #sd_applyingupdates}
 
 La console {{site.data.keyword.vmwaresolutions_full}} détecte et répertorie régulièrement les mises à jour logicielles disponibles que vous pouvez appliquer à votre environnement virtuel VMware.
 
 Une mise à jour disponible est un enregistrement dans la liste des mises à jour logicielles disponibles de l'instance, qui peut être appliquée immédiatement ou planifiée pour une application ultérieure. La mise à jour est une offre groupée qui contient un ou plusieurs packages pour la mise à jour des composants de gestion IBM et des composants VMware.
 
-A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
+A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25).
 {:note}
 
 ## Avant de commencer
+{: #sd_applyingupdates-prereq}
 
 Avant d'appliquer une mise à jour, développez l'entrée de mise à jour en cliquant sur la flèche vers le bas et vérifiez les informations suivantes :
 * La version de la mise à jour. Vous devez appliquer les mises à jour par ordre chronologique, c'est-à-dire de la plus ancienne à la plus récente. Assurez-vous d'avoir appliqué toutes les mises à jour précédentes avant d'appliquer la plus récente. Par exemple, vous devez appliquer la mise à jour V2.4 avant de tenter d'appliquer la mise à jour V2.5.
@@ -52,6 +54,7 @@ Tableau 1. Niveaux de mise à jour et impact
 </table>
 
 ## Procédure d'application de mises à jour à des instances Cloud Foundation
+{: #sd_applyingupdates-procedure}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance à supprimer.
@@ -64,6 +67,7 @@ Tableau 1. Niveaux de mise à jour et impact
 6. Si vous appliquez des mises à jour à des instances Cloud Foundation dans une configuration de déploiement multisite, une section intitulée **Etapes de mise à jour obligatoires** s'affiche, dans laquelle sont répertoriées les opérations de mise à jour qui sont requises pour toutes les instances du déploiement multisite. Effectuez les étapes dans l'ordre en cliquant sur **Appliquer la mise à jour** pour chaque étape. Vous devez attendre la fin de chaque étape avant de passer à la suivante.
 
 ## Résultats
+{: #sd_applyingupdates-results}
 
 1. Avant le démarrage d'une opération de mise à jour, un diagnostic d'intégrité de l'instance est effectué. Si le diagnostic d'intégrité échoue, vous recevez une notification et vous pouvez corriger le problème avant d'appliquer la mise à jour.
 2. Au cours des mises à jour qui incluent des mises à jour de composants VMware, il peut s'avérer nécessaire de migrer les machines virtuelles depuis les serveurs ESXi pour passer en mode maintenance. Si une machine virtuelle dispose d'un magasin de données local ou si un CD-ROM est monté, la migration de la machine virtuelle peut se révéler impossible.
@@ -109,11 +113,12 @@ Tableau 1. Niveaux de mise à jour et impact
       </tr>
     </table>
 
-6. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à reprendre la mise à niveau à partir de l'étape où elle a échoué.
+6. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à reprendre la mise à niveau à partir de l'étape où elle a échoué.
 
-### Liens connexes
+## Liens connexes
+{: #sd_applyingupdates-related}
 
-* [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html)
-* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

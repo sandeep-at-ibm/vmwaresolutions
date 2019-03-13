@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Enriquecer com AI, analítica e outros serviços de nuvem pública
+{: #vcscontent-aianalytics}
 
 Enriquecer o Stock Trader não é uma etapa única. Para Todd e Jane, isso é um processo iterativo. Na figura a seguir, você vê que Jane incluiu o serviço Watson Tone Analyzer e uma regra de nível de fidelidade usando o centro de decisão do ODM. Os itens a seguir destacam como o Stock Trader foi enriquecido.
 
@@ -16,6 +17,7 @@ Figura 1. Maior enriquecimento do Stock Trader
 ![Resultados da iteração de enriquecimento do Stock Trader](vcscontent-enriched.svg)
 
 ## AI Watson Tone Analyzer
+{: #vcscontent-aianalytics-ai-watson}
 
 A amostra a seguir é uma maneira simples de enriquecer um aplicativo, mas é aparentemente poderosa. Jane procura no [catálogo do {{site.data.keyword.cloud}}](https://console.cloud.ibm.com/catalog/) os serviços [AI](https://console.cloud.ibm.com/catalog/?category=ai) e [Analytics](https://console.cloud.ibm.com/catalog/?category=analytics) e acha o catálogo rico em conteúdo.
 
@@ -27,6 +29,7 @@ Graças à refatoração, Jane experimentou várias estruturas de interface com 
 No futuro, Jane pode fornecer recomendações preditivas de ações com base na variedade de serviços de analítica disponíveis para execução na instância da nuvem privada, {{site.data.keyword.cloud_notm}} Private.
 
 ## Regra de negócios de Nível de fidelidade
+{: #vcscontent-aianalytics-loyalty-rule}
 
 Originalmente, Jane tinha a lógica em seu código para determinar a quantia monetária
 que provavelmente resultaria em um aumento de fidelidade. No entanto, após repetidas solicitações para
@@ -40,6 +43,7 @@ Jane falou com Todd, que incluiu o
 Agora, Margaret, a diretora de marketing, pode efetuar login e mudar os intervalos de níveis de fidelidade sempre que uma campanha está ocorrendo sem mudar nenhum código.
 
 ## Novo serviço de ações
+{: #vcscontent-aianalytics-new-stock-service}
 
 Você pode observar que o serviço de ações foi mudado.
 Isso pode acontecer quando um serviço público muda o proprietário ou sua estrutura
@@ -57,6 +61,7 @@ as mudanças na API foram mascaradas nos bastidores.
 Além disso, com o monitoramento e a medição no API Connect, Jane é capaz de
 rastrear quem está usando sua API simplificada.
 
-### Links relacionados
+## Links relacionados
+{: #vcscontent-aianalytics-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

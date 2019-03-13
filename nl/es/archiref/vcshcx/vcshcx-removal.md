@@ -23,4 +23,4 @@ La eliminación de HCX presupone que las redes extendidas ya no están en uso. U
 ## Enlaces relacionados
 {: #vcshcx-removal-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Visión general de vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

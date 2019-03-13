@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Présentation de F5 on IBM Cloud
+{: #f5_considerations}
 
 Le service F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) fournit des services intelligents d'équilibrage de charge L4-L7 et de gestion du trafic à l'échelle locale et globale, une protection maximale via pare-feu des applications Web et réseau et un accès sécurisé aux applications fédérées.
 
@@ -22,25 +23,33 @@ Ce service est disponible uniquement sur les instances déployées en version 1.
 {:note}
 
 ## Spécifications techniques relatives à F5 on IBM Cloud
+{: #technical-specifications-for-f5-on-ibm-cloud}
 
 Les composants suivants sont inclus avec le service F5 on {{site.data.keyword.cloud_notm}} :
 
 ### Machines virtuelles
+{: #f5_considerations-specs-vms}
+
 * Deux machines virtuelles avec toutes les options disponibles.
 * 2, 4 ou 8 UC virtuelles par machine virtuelle en fonction de l'option de l'octroi de licence
 * 4, 8 ou 16 Go de mémoire RAM par machine virtuelle en fonction de l'option de l'octroi de licence
 
 ### Utilisation en réseau
+{: #f5_considerations-specs-network}
+
 * VXLAN (Private Virtual Extensible LAN) pour la synchronisation haute disponibilité.
 * Accès à TMSH (Traffic Management Shell) et à la console de gestion via un réseau de gestion privé.
 
 ### Licences et frais
+{: #f5_considerations-specs-license}
+
 Des frais de licence sont appliqués pour chaque machine virtuelle à chaque cycle de facturation en fonction de l'option d'octroi de licence (Bien, Mieux ou Meilleur) et de la bande passante choisie.
 
 Vous ne pouvez pas modifier le niveau d'octroi de licence après installation du service. Pour modifier le niveau d'octroi de licence, vous devez supprimer le service existant, puis le réinstaller en sélectionnant une autre option d'octroi de licence.
 {:important}
 
 ## Remarques relatives à l'installation du service F5 on IBM Cloud
+{: #f5_considerations-install}
 
 Avant d'installer le service F5 on {{site.data.keyword.cloud_notm}}, passez en revue les remarques suivantes.
 
@@ -58,6 +67,7 @@ Tableau 1. Déploiements d'UC et de RAM selon la bande passante et le modèle de
 | 10 Gbit/s           | 8 UC virtuelles, 16 Go de RAM   | 8 UC virtuelles, 16 Go de RAM     | 8 UC virtuelles, 16 Go de RAM   |
 
 ### Autres remarques
+{: #f5_considerations-additional}
 
 * F5 BIG–IP limite le débit du dispositif en fonction de la bande passante maximale sélectionnée. Etant donnée que de nombreux facteurs affectent les performances réseau, toutes les configurations et topologies ne sont pas à même d'offrir la bande passante maximale sélectionnée.
 * La paire de machines virtuelles BIG-IP VE à haute disponibilité ne sera déployée que dans le cluster par défaut.
@@ -71,6 +81,8 @@ Tableau 1. Déploiements d'UC et de RAM selon la bande passante et le modèle de
   `réservation de RAM = taille de la RAM` (voir Tableau 1)
 
 ### Remarques relatives à la planification
+{: #f5_considerations-planning}
+
 Vous devez respecter les exigences suivantes afin d'éviter les incidents avec le service F5 on {{site.data.keyword.cloud_notm}} :
 * Au moins deux serveurs ESXi actifs sont disponibles pour les deux machines virtuelles BIG-IP VE à déployer avec la règle d'anti-affinité de conservation des machines virtuelles sur des serveurs distincts.
 * Les deux serveurs ESXi actifs disposent de suffisamment de ressources pour héberger une machine virtuelle BIG-IP VE sur chaque serveur ESXi avec une réservation de 100 % d'UC et de RAM.
@@ -79,6 +91,7 @@ Vous devez respecter les exigences suivantes afin d'éviter les incidents avec l
 Compte tenu de ces exigences, vous devez prévoir l'espace requis pour F5 on {{site.data.keyword.cloud_notm}}. Au besoin, avant de commander F5 on {{site.data.keyword.cloud_notm}}, ajoutez 1 à 2 serveurs ESXi à votre instance et/ou réduisez la réservation d'UC de vSphere HA pour basculement.
 
 ## Exemple de commande de F5 on IBM Cloud
+{: #f5_considerations-example}
 
 Vous commandez une instance VMware vCenter Server **Petite** avec 2 serveurs ESXI et la configuration suivante : seize coeurs à 2,10 GHz avec chacun 128 Go de RAM. Pour F5 on {{site.data.keyword.cloud_notm}}, vous sélectionnez le modèle de licence **Meilleur** et une valeur de 5 Gbit/s pour la **bande passante maximale**.
 
@@ -99,13 +112,15 @@ Etant donné que d'autres charges de travail figureront sur les serveurs ESXi (p
 Dans ce cas, l'installation de F5 on {{site.data.keyword.cloud_notm}} risque d'échouer, sauf si au moins un serveur ESXi est ajouté à l'environnement et que les réservations de vSphere HA pour basculement sont mises à jour de manière à garantir un nombre suffisant de ressources disponibles pour les deux machines virtuelles BIG-IP VE. Si des ressources supplémentaires sont nécessaires pour exécuter le service F5 on {{site.data.keyword.cloud_notm}}, vous pouvez ajouter d'autres serveurs ESXi avant d'installer F5 on {{site.data.keyword.cloud_notm}}.
 
 ## Remarques relatives au retrait de F5 on IBM Cloud
+{: #f5_considerations-remove}
 
 Avant de supprimer le service F5 on {{site.data.keyword.cloud_notm}}, vérifiez que la configuration BIG-IP VE existante a été correctement supprimée. Plus précisément, que le trafic réseau a été routé de manière à contourner BIG-IP VE au lieu de traverser BIG-IP VE. Sinon, le trafic de données existant à partir de votre environnement risque d'être impacté.
 
-### Liens connexes
+## Liens connexes
+{: #f5_considerations-related}
 
-* [Commande de F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_ordering.html)
-* [Gestion de F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_f5.html)
-* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Commande de F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_ordering)
+* [Gestion de F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Site Web de F5](https://f5.com/){:new_window}

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Pedindo serviços gerenciados do IMI
+{: #managing_imi}
 
 {{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) pode simplificar o gerenciamento de infraestrutura virtual do VMware com serviços modulares. O IMI usa a automação avançada e a analítica para gerenciar componentes de infraestrutura crítica em todo o mundo e entregar serviços de gerenciamento remoto dinâmicos para uma ampla variedade de infraestruturas virtuais em nuvem e tradicionais.
 
@@ -17,6 +18,7 @@ O IMI pode servir como um provedor único e confiável para reduzir a complexida
 O IMI fornece serviços gerenciados para as instâncias do Cloud Foundation e do vCenter Server. Esses serviços gerenciados incluem gerenciamento avançado do VMware vSphere, cobertura integral do VMware NSX para assegurar a infraestrutura de rede virtual altamente disponível e segura e o monitoramento do VMware vSAN para assegurar a disponibilidade de dados.
 
 ## Especificações técnicas do IMI
+{: #technical-specifications}
 
 As especificações a seguir estão incluídas no serviço gerenciado IMI:
 
@@ -27,6 +29,7 @@ As especificações a seguir estão incluídas no serviço gerenciado IMI:
 * Serviços com valor agregado sem aumento de custos para melhoria continuada
 
 ## Procedimento para solicitar serviços gerenciados do IMI
+{: #managing_imi-procedure}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Introdução** na área de janela de navegação esquerda.
 2. Role para baixo na página e clique no cartão **Serviços gerenciados do IMI** que está localizado em **Pedir serviços gerenciados adicionais**.
@@ -34,8 +37,9 @@ As especificações a seguir estão incluídas no serviço gerenciado IMI:
 
 Um representante de pré-vendas do IMI entra em contato com você usando suas informações de contato do {{site.data.keyword.cloud_notm}} para ajudá-lo com os serviços necessários.
 
-### Links relacionados
+## Links relacionados
+{: #managing_imi-related}
 
-* [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

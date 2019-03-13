@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Visualizzazione delle istanze NetApp ONTAP Select
+{: #np_viewinginstances}
 
 Visualizza il riepilogo e le informazioni dettagliate delle istanze NetApp ONTAP Select fornite per account utente diversi.
 
 ## Procedura per visualizzare il riepilogo delle istanze NetApp ONTAP Select
+{: #np_viewinginstances-procedure-view-inst-summary}
 
 Per visualizzare un riepilogo di tutte le istanze NetApp ONTAP Select fornite per un account utente, completa la seguente procedura:
 
@@ -35,6 +37,7 @@ Tabella 1. Elementi dell'istanza NetApp ONTAP Select
 | Stato | Lo stato dell'istanza. Lo stato può assumere uno dei seguenti valori:<ul><li>In fase di creazione: l'istanza è in fase di creazione.</li><li>In fase di build: l'istanza è in fase di configurazione.</li><li>Pronto per l'utilizzo: l'istanza è pronta per l'uso.</li><li>In fase di modifica: l'istanza è in fase di modifica.</li><li>Non riuscito: il processo di creazione, configurazione o modifica non è riuscito.</li><li>In fase di eliminazione: l'istanza è in fase di eliminazione.</li><li>Errore di eliminazione: si è verificato un errore durante l'eliminazione dell'istanza.</li><li>Eliminato: l'istanza è stata eliminata.</li></ul>|
 
 ## Procedura per visualizzare i dettagli delle proprietà delle istanze NetApp ONTAP Select
+{: #np_viewinginstances-procedure-view-inst-property}
 
 Per visualizzare i dettagli delle proprietà di un'istanza:
 
@@ -60,6 +63,7 @@ Tabella 2. Proprietà dell'istanza NetApp ONTAP Select
 | Stato | Lo stato dell'istanza. |
 
 ## Procedura per visualizzare le informazioni di accesso per le istanze NetApp ONTAP Select
+{: #np_viewinginstances-procedure-view-inst-access-info}
 
 In **Informazioni sull'accesso**, visualizza le informazioni di accesso per i componenti relativi all'istanza. Queste password sono password iniziali generate dal sistema. Se le modifichi all'esterno della console {{site.data.keyword.vmwaresolutions_short}}, non vengono aggiornate nella pagina di riepilogo dell'istanza.
 
@@ -85,6 +89,7 @@ Tabella 3. Informazioni di accesso per i componenti relativi alle istanze NetApp
 | SSH vCenter | Il nome utente e la password che puoi utilizzare per accedere alla VM di vCenter Server tramite una connessione SSH. |
 
 ## Procedura per visualizzare la cronologia di distribuzione per le istanze NetApp ONTAP Select
+{: #np_viewinginstances-procedure-view-inst-deploy-history}
 
 Fai clic su **Cronologia distribuzione** dal riquadro di navigazione a sinistra per visualizzare la cronologia di distribuzione per l'istanza.
 
@@ -95,9 +100,10 @@ Tabella 4. Cronologia di distribuzione delle istanze NetApp ONTAP Select
 | Data | La data e l'ora in cui lo stato dell'istanza è stato modificato |
 | Riepilogo | I dettagli della modifica |
 
-Se si verificano degli errori durante la distribuzione o l'eliminazione dell'istanza, il team di supporto {{site.data.keyword.cloud_notm}} viene automaticamente informato. Per informazioni sullo stato del tuo ticket, puoi [contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Se si verificano degli errori durante la distribuzione o l'eliminazione dell'istanza, il team di supporto {{site.data.keyword.cloud_notm}} viene automaticamente informato. Per informazioni sullo stato del tuo ticket, puoi [contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
-## Visualizzazione dei cluster NetApp ONTAP Select
+## Procedura per visualizzare i cluster NetApp ONTAP Select
+{: #np_viewinginstances-procedure-view-cluster}
 
 1. Fai clic su **Infrastruttura** dal riquadro di navigazione a sinistra.
 2. In **CLUSTER**, visualizza il riepilogo dei cluster NetApp ONTAP Select.
@@ -160,6 +166,7 @@ Tabella 6. Dettagli del server ESXi di un cluster NetApp ONTAP Select
 | Stato | Lo stato del server ESXi, che può assumere uno dei seguenti valori:<ul><li>Attivo: il server ESXi è pronto per l'uso.</li><li>In fase di eliminazione: il server ESXi è in fase di eliminazione.</li></ul> |
 
 ## Operazioni successive
+{: #np_viewinginstances-next}
 
 Gestisci le tue istanze dalla console {{site.data.keyword.vmwaresolutions_short}}, dal client web VMware vSphere o dalla console NetApp.
 
@@ -168,12 +175,13 @@ Prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza
 
 Per ulteriori informazioni che ti consentono di completare le istruzioni di accesso, consulta i seguenti argomenti:
 
-*  Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
+*  Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
 *  Per un elenco di punti di accesso per accedere alla rete privata dell'infrastruttura {{site.data.keyword.cloud_notm}} tramite VPN, vedi [Accesso VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
+*  Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
-### Link correlati
+## Link correlati
+{: #np_viewinginstances-related}
 
-* [Ordine di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [Eliminazione di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
+* [Ordine di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [Eliminazione di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
 * [Collega l'archiviazione dedicata alle distribuzioni di NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

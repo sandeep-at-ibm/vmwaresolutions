@@ -64,7 +64,7 @@ As designações de VLAN da sub-rede IP são descritas na tabela a seguir.
 
 Tabela 2. VLAN e sub-redes
 
-|VLAN 	|Tipo de sub-rede  |Descrição|
+|VLAN 	|Tipo de sub-rede 	|Descrição|
 |---|---|---|
 |Pública 	|Primária 	|Designada a hosts físicos para acesso à rede pública. Não usada na implementação inicial.|
 |Pública	|Móvel 	|Designada ao uso de uplink e NAT no customer-nsx-esg.|
@@ -87,4 +87,4 @@ Tabela 2. VLAN e sub-redes
 ## Links relacionados
 {: #caveonix-detailed-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

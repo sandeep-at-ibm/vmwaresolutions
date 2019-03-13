@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2018-09-27"
 {:deprecated: .deprecated}
 
 # Solicitud de IBM Cloud Private Hosted - en desuso
+{: #managing_icp}
 
 La información de este ha quedado en desuso. Para obtener la información más reciente acerca de IBM Cloud Private Hosted, consulte [Visión general de IBM Cloud Private Hosted](icp_overview.html).
 {:deprecated}
@@ -23,6 +24,7 @@ La información de este ha quedado en desuso. Para obtener la información más 
 {{site.data.keyword.cloud_notm}} Private Hosted incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware e {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}.
 
 ## Especificaciones técnicas de IBM Cloud Private Hosted
+{: #managing_icp-specs}
 
 Estos son los requisitos mínimos para solicitar el servicio {{site.data.keyword.cloud_notm}} Private Hosted:
 
@@ -37,6 +39,7 @@ Estos son los requisitos mínimos para solicitar el servicio {{site.data.keyword
 * Para la copia de seguridad de datos, se recomienda el servicio Veeam on IBM Cloud.
 
 ## Procedimiento para solicitar IBM Cloud Private Hosted
+{: #managing_icp-procedure}
 
 1. Solicite una nueva instancia de vCenter Server siguiendo los pasos del apartado [Solicitud de instancias de vCenter Server](../vcenter/vc_orderinginstance.html). También puede solicitar IBM Cloud Private Hosted para una instancia existente.
   **Importante:** Asegúrese de que el entorno cumple con los requisitos mínimos que se listan anteriormente.

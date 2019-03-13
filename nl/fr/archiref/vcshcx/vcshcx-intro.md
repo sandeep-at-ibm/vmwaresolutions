@@ -23,4 +23,4 @@ Ce guide est conçu pour le déploiement et les opérations de HCX, et il compre
 ## Liens connexes
 {: #vcshcx-intro-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

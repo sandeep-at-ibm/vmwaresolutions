@@ -4,16 +4,18 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Préface
+{: #vcscar-preface}
 
 Figure 1. Un langage de notre propre invention
 ![Un langage de notre propre invention](vcscar-alood.svg)
 
 ## Présentation du langage relatif au skateboard
+{: #vcscar-preface-intro}
 
 La manière dont les skateurs combinent des mouvements et des sous-mouvements pour former des tricks nécessite de mettre au point une grammaire ou une syntaxe spécifique, basée sur la physique de ce qui se produit, la nomenclature de chimie élaborée pour des raisons similaires. Aujourd'hui, un skateur peut envoyer par texto le nom d'un trick à un autre skateur vivant à l'autre bout de la planète, et le second comprend parfaitement les mouvements complexes décrits par le premier.
 
@@ -37,6 +39,7 @@ Alors que la majeure partie des tricks de base a été développée au fil des a
 En entraînant Watson Assistant pour qu'il imite la façon de penser des professionnels de haut niveau, nous pouvons fournir un outil puissant permettant de faire progresser la pensée créative de n'importe quel skateur, en particulier pour les skateurs d'élite. Bien que les autres sports de glisse soient nettement moins complexes, cet outil témoigne de l'influence démesurée du skateboard car ils adoptent également nos conventions. Par conséquent, Watson Assistant est non seulement en mesure de promouvoir, pour ne pas dire transformer, l'expression créative de cette nouvelle discipline sportive olympique, mais également d'influencer d'autres projets artistiques.
 
 ## Codification du langage
+{: #vcscar-preface-codification}
 
 A l'instar d'autres langages, le nôtre s'est développé au fil du temps, en récupérant de nouveaux mots et usages, en restituant des redondances et des exceptions occasionnelles au fur et à mesure. Cela étant, cette nomenclature est étonnamment cohérente, durable et spécifique. Ce sont cette rigueur et cette cohérence dénotatives qui permettent de résoudre ce problème apparemment insurmontable qu'est la conversion de métrage en texte par l'apprentissage automatique. Pour les skateurs, chaque nuance du mouvement complexe est créée dans la nomenclature proprement dite. En fait, ce langage est tellement robuste qu'il a été adopté non seulement par les skateurs, mais également par les surfeurs.
 
@@ -44,6 +47,7 @@ Pourtant, malgré toute cette complexité et toute cette puissance, la codificat
 un *préfixe de retournement* qui oriente la rotation du skateur (dans le sens des aiguilles du montre ou dans le sens contraire aux aiguilles d'une montre), tandis que l'autre composant *varial* permet de spécifier la façon dont la planche tourne, par rapport au corps (vers l'intérieur ou vers l'extérieur). A l'aide de cette codification, un jeu de règles concis peut être appliqué de façon récurrente afin de permettre des combinaisons de n'importe quelle longueur.
 
 ## Autres variables d'environnement
+{: #vcscar-preface-env-var}
 
 Aujourd'hui, les professionnels passent souvent autant de temps à rechercher de nouveaux spots qu'à pratiquer les tricks. En effet, un skateur se distingue en partie par sa capacité créative à trouver des moyens nouveaux et imaginatifs de pratiquer les tricks, ce qui le conduit souvent aux quatre coins du monde. S'il existe des applications de skate qui répertorient les spots, alimentées par la communauté, aucun concept ou aucune technologie n'a jamais été mis en oeuvre pour créer une application capable s'assister les skateurs, plus spécifiquement les professionnels, dans leur démarche créatrice.
 
@@ -55,10 +59,12 @@ Watson Knowledge Studio met à jour le service de reconnaissance avec des descri
 Par exemple, un skateur peut demander à Watson Assistant la liste de toutes les variations possibles d'un *hardflip-to-backside-5-0*. Cette demande est convertie de la parole en texte dans le service de reconnaissance, qui répond en indiquant non seulement les variations *hardflip-to-grind*, mais également une liste des différents terrains capturés par les variations, induisant d'autres informations, par exemple, une liste de rambardes pouvant être regroupées par code postal local, par taille, ou même par disponibilité, par exemple dans une cour d'école ou une entreprise. Les systèmes sont dans des données d'application existantes qui évaluent le risque d'être pris pour violation de propriété privée. Ce type d'assistance a un énorme impact sur les répercussions en cascade de variables telles que celles-ci et améliore les vies créatives de tous les skateurs professionnels.
 
 ## Plateforme cloud
+{: #vcscar-preface-cloud-platform}
 
 La superposition créative des systèmes informatiques pour générer de nouvelles combinaisons est au coeur du skateboard. Elle a des répercussions sur les vies de personnes créatives et favorise l'innovation partout dans le monde, où que nous allions.
 Rien de tout cela ne serait possible sans {{site.data.keyword.cloud}}.
 
-### Liens connexes
+## Liens connexes
+{: #vcscar-preface-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

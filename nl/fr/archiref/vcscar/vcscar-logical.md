@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Conception logique de Skate Advisor
+{: #vcscar-logical}
 
 Les informations suivantes décrivent en détail les éléments d'application qui constituent la conception logique du système.
 
 ## Composants système
+{: #vcscar-logical-sys-comp}
 
 Figure 1. Composants Skate Advisor
 ![Composants Skate Advisor](vcscar-components.svg)
@@ -20,6 +22,7 @@ Figure 1. Composants Skate Advisor
 Skate Advisor est principalement constitué d'un agent conversationnel capable d'accepter la reconnaissance de texte ou la reconnaissance vocale afin d'interagir avec le système de manière structurée.
 
 ## Tricks
+{: #vcscar-logical-tricks}
 
 Le principal élément de données de Skate Advisor est le trick. Le langage de trick permet de définir un trick de manière unique. Ce langage peut être utilisé pour accomplir les tâches suivantes :
 - Converser avec l'agent conversationnel à propos de tricks.
@@ -28,14 +31,17 @@ Le principal élément de données de Skate Advisor est le trick. Le langage de 
 - Identifier un trick en matière de lieu et d'affichage multimédia.
 
 ### Définition de trick
+{: #vcscar-logical-trick-def}
 
 Un trick est défini de manière unique par les éléments de langage qui le décrivent. Pour obtenir une définition complète, voir la rubrique sur le modèle de règle de trick.
 
 ### Liste de tricks
+{: #vcscar-logical-list-tricks}
 
 Une liste de tricks est renvoyée par une requête du trick Base ou Landing défini dans des éléments de langage.
 
 ### Données de trick
+{: #vcscar-logical-trick-data}
 
 Une fois renvoyés, les tricks peuvent comporter les informations suivantes :
 - Description de trick
@@ -43,6 +49,7 @@ Une fois renvoyés, les tricks peuvent comporter les informations suivantes :
 - Informations de lieu
 
 ## Flux conversationnels
+{: #vcscar-logical-conv-streams}
 
 L'agent conversationnel comporte un nombre prédéfini et limité de conversations possibles. Mes conversations sont définies par les informations suivantes :
 - Recherche de trick : Rechercher un ensemble de tricks valides à partir d'un paramètre de requête qui représente le trick Base ou Landing.
@@ -58,8 +65,10 @@ Recherche de lieu | Où effectuer ce trick ? | Liste de lieux pour un trick spé
 Affichage multimédia | Afficher une vidéo de trick |Liste de résultats multimédia
 
 ## Composants d'interface utilisateur
+{: #vcscar-logical-ui-comp}
 
 ### Agent conversationnel
+{: #vcscar-logical-chatbot}
 
 L'agent conversationnel est un composant Web qui converse avec l'utilisateur. L'agent conversationnel peut accepter du texte ou la parole. Des résultats, tels que des listes, sont rendus en texte accompagné éventuellement de paroles.
 
@@ -85,18 +94,21 @@ Etape | Description
 11 | Le résultat est envoyé à l'utilisateur via l'agent conversationnel.
 
 ### Rendu vidéo
+{: #vcscar-logical-video-render}
 
 Le composant de rendu vidéo lit une vidéo ou affiche un document. Ces artefacts représentent l'artefact source à partir duquel le trick a été découvert.
 
 Le composant de rendu vidéo est un widget imbriqué dans l'interface Web qui affiche une vidéo. Les vidéos sont affichées dans l'agent conversationnel comme résultat d'une requête émise par l'utilisateur système. Le lien de vidéo obtenu, après sélection, déclenche le rendu de la vidéo.
 
 ### Interface de localisation
+{: #vcscar-logical-location-interface}
 
 Skate Advisor inclut une interface permettant aux utilisateurs système d'enregistrer le lieu d'un trick spécifique. Le composant d'interface Web comprend deux principaux éléments :
 1. Accepter un lieu émanant de l'utilisateur système comme endroit idéal pour effectuer un trick spécifique.
 2. Afficher un ou plusieurs lieux recommandés pour un trick spécifique.
 
 ## Composants Watson
+{: #vcscar-logical-watson-comp}
 
 Les composants Watson suivants sont inclus dans cette architecture :
 * Knowledge Studio - Watson Studio est un outil qui permet de concevoir le langage relatif au Skate pour le système et d'utiliser ce langage pour reconnaître des documents du Web qui implémentent ce langage. Knowledge Studio fournit un modèle qui sera utilisé par le service Watson Discovery.
@@ -107,6 +119,7 @@ Discovery utilise des techniques d'apprentissage automatique avancées pour fair
 * Watson Assistant - Watson Assistant est un outil permettant de concevoir les interactions entre les utilisateurs et la machine (agent conversationnel). Il doit être entraîné avec un langage spécifique d'un domaine, par exemple, le skateboard, sous la forme d'une série de grammaires pour lesquelles l'Assistant reconnaît et génère les réponses appropriées.
 
 ## Services Skate Advisor
+{: #vcscar-logical-skate-advisor-services}
 
 Skate Advisor est un composant d'application qui fournit un ensemble de services d'API afin de rendre des demandes. Les services qui sont exposés ont une corrélation directe avec les flux conversationnels décrits précédemment. L'API exposée possède les catégories générales suivantes :
 * get_tricks - Renvoyer une liste de tricks à partir d'une <requête\> en langage naturel, qui est présentée au service de reconnaissance.
@@ -115,6 +128,7 @@ Skate Advisor est un composant d'application qui fournit un ensemble de services
 * accept_command - Accepter une commande textuelle à partir de l'agent conversationnel et servir la demande.
 
 ## Entraînement du service de reconnaissance
+{: #vcscar-logical-disc-service-training}
 
 Watson Discovery doit être entraîné au moyen d'un modèle d'apprentissage automatique, qui est créé de manière itérative par un expert de domaine à l'aide de Watson Knowledge Studio.
 
@@ -128,6 +142,7 @@ Une fois entraîné, le service de reconnaissance peut répondre à des requête
 - Montre-moi tous les tricks.
 - Montre-moi tous les tricks avec plusieurs combinaisons.
 
-### Liens connexes
+## Liens connexes
+{: #vcscar-logical-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Présentation de vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

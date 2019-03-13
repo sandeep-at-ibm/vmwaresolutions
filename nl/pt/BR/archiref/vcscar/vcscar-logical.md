@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Design lógico do Skate Advisor
+{: #vcscar-logical}
 
 As informações a seguir detalham os elementos de aplicativo que formam o design lógico do sistema.
 
 ## Componentes do sistema
+{: #vcscar-logical-sys-comp}
 
 Figura 1. Componentes do Skate Advisor
 ![Componentes do Skate Advisor](vcscar-components.svg)
@@ -20,6 +22,7 @@ Figura 1. Componentes do Skate Advisor
 O Skate Advisor consiste principalmente em um robô de bate-papo que pode aceitar o reconhecimento de texto ou fala para interagir com o sistema de uma maneira estruturada.
 
 ## Manobras
+{: #vcscar-logical-tricks}
 
 O elemento central de dados do Skate Advisor é a manobra. A linguagem de manobra define exclusivamente uma manobra. Essa linguagem pode ser usada para realizar as tarefas a seguir:
 - Conversar com o robô de bate-papo sobre manobras.
@@ -28,14 +31,17 @@ O elemento central de dados do Skate Advisor é a manobra. A linguagem de manobr
 - Identificar uma manobra para propósitos de exibição de local e mídia.
 
 ### Definição de manobra
+{: #vcscar-logical-trick-def}
 
 Uma manobra é definida exclusivamente pelas construções de linguagem que a descrevem. Veja o Mecanismo de regras de manobra para obter uma definição completa.
 
 ### Lista de manobras
+{: #vcscar-logical-list-tricks}
 
 Uma lista de manobras é retornada por uma consulta da Manobra de base ou Aterrissagem que está definida nos elementos de linguagem.
 
 ### Dados de manobra
+{: #vcscar-logical-trick-data}
 
 Após serem retornadas, as manobras podem ter as informações a seguir:
 - Descrição da manobra
@@ -43,6 +49,7 @@ Após serem retornadas, as manobras podem ter as informações a seguir:
 - Informações de local
 
 ## Fluxos de conversação
+{: #vcscar-logical-conv-streams}
 
 O robô de bate-papo tem um número predefinido e limitado de possíveis conversas. As conversas são definidas pelas informações a seguir:
 - Localização de manobra: localize um conjunto de manobras válidas com base em um parâmetro de consulta que representa a Manobra de base ou a Aterrissagem.
@@ -58,8 +65,10 @@ Descoberta de local | Onde devo executar essa manobra? | Lista de locais para um
 Exibição de mídia | Exibir um vídeo de manobra |Uma lista de resultados de mídia
 
 ## Componentes de interface com o usuário
+{: #vcscar-logical-ui-comp}
 
 ### Robô de bate-papo
+{: #vcscar-logical-chatbot}
 
 O robô de bate-papo é um componente da web que conversa com o usuário. O robô de bate-papo pode aceitar texto ou fala. Os resultados, como listas, são renderizados em texto com uma possível fala de acompanhamento para representar os resultados.
 
@@ -85,18 +94,21 @@ Etapa | Descrição
 11 | O resultado é enviado para o usuário por meio do Robô de bate-papo.
 
 ### Renderização de vídeo
+{: #vcscar-logical-video-render}
 
 O componente de renderização de vídeo reproduz um vídeo ou exibe um documento. Esses artefatos representam o artefato de origem por meio qual a manobra foi descoberta.
 
 O componente de renderização de vídeo é um widget integrado na interface da web que exibe um vídeo. Os vídeos são exibidos no robô de bate-papo como resultado de uma consulta do usuário do sistema. O link de vídeo resultante, depois de selecionado, aciona a renderização de vídeo.
 
 ### Interface de local
+{: #vcscar-logical-location-interface}
 
 O Skate Advisor inclui uma interface para os usuários do sistema registrarem o local de uma manobra específica. O componente de interface da web tem dois elementos principais:
 1. Aceitar um local do usuário do sistema como o melhor local para executar uma manobra específica.
 2. Exibir um ou mais locais que são recomendados para uma manobra específica.
 
 ## Componentes do Watson
+{: #vcscar-logical-watson-comp}
 
 Os componentes do Watson a seguir estão incluídos nesta arquitetura.
 * Knowledge Studio - o Watson Studio é uma ferramenta pela qual podemos projetar a Linguagem de skate para o sistema e usar essa linguagem para reconhecer os documentos da web que implementam a Linguagem de skate. O Knowledge Studio fornece um modelo para ser usado pelo Watson Discovery.
@@ -106,6 +118,7 @@ Os componentes do Watson a seguir estão incluídos nesta arquitetura.
 * Watson Assistant - o Watson Assistant é uma ferramenta para projetar as interações entre os usuários e a máquina (robô de bate-papo). Ele deve ser treinado com uma linguagem específica do domínio, por exemplo, skateboarding, na forma de uma série de gramáticas para as quais o Assistente reconhece e constrói as respostas apropriadas.
 
 ## Serviços do Skate Advisor
+{: #vcscar-logical-skate-advisor-services}
 
 O Skate Advisor Service é um componente de aplicativo que fornece um conjunto de serviços de API para renderizar solicitações. Os serviços que são expostos têm uma correlação direta com os fluxos de conversação descritos anteriormente. A
 API exposta tem as categorias gerais a seguir:
@@ -115,6 +128,7 @@ API exposta tem as categorias gerais a seguir:
 * accept_command - aceite um comando textual do robô de bate-papo e atenda a solicitação.
 
 ## Treinamento do serviço de descoberta
+{: #vcscar-logical-disc-service-training}
 
 O Watson Discovery deve ser treinado por meio de um modelo de aprendizado de máquina, que é criado de forma iterativa por um especialista no assunto, usando o Watson Knowledge Studio.
 
@@ -128,6 +142,7 @@ Depois de treinado, o Discovery Service pode responder a consultas, como:
 - Mostre-me todas as manobras.
 - Mostre-me todas as manobras com múltiplas combinações.
 
-### Links relacionados
+## Links relacionados
+{: #vcscar-logical-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

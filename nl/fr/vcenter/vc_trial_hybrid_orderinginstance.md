@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Commande et suppression d'instances Version d'essai à noeud unique pour VMware vCenter Server on IBM Cloud
+{: #vc_trial_hybrid_orderinginstance}
 
 La version d'essai à noeud unique pour VMware vCenter Server on {{site.data.keyword.cloud}} est un cloud privé hébergé à service exclusif qui fournit la pile VMware vSphere en tant que service. Alors que l'environnement géré par le client est généralement déployé avec trois noeuds au minimum, cette version d'essai à noeud unique permet d'expérimenter à moindres frais les avantages d'une implémentation de cloud hybride.
 
@@ -26,6 +27,7 @@ Cette version d'essai peut être utilisée pendant 90 jours au maximum. Une fois
 Pour plus d'informations sur la conception d'architecture, voir [Conception d'architecture HCX on IBM Cloud pour la version d'essai à noeud unique vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html).
 
 ## Spécifications techniques relatives aux instances Version d'essai à noeud unique pour vCenter Server
+{: #vc_trial_hybrid_orderinginstance-tech-specs}
 
 Les composants suivants sont inclus dans votre instance Version d'essai à noeud unique pour vCenter Server :
 
@@ -33,10 +35,12 @@ La disponibilité et la tarification des configurations matérielles normalisée
 {:note}
 
 ### Serveur bare metal
+{: #vc_trial_hybrid_orderinginstance-bare-metal}
 
 Un processeur Dual Intel Xeon Gold 5120 (28 coeurs, 2,20 GHz) avec 384 Go de mémoire RAM.
 
 ### Spécifications relatives à la mise en réseau pour les instances Version d'essai à noeud unique pour vCenter Server
+{: #vc_trial_hybrid_orderinginstance-networking-specs}
 
 Les composants réseau suivants sont commandés :
 *  Liaisons montantes réseau public et privé double de 10 Gbps
@@ -50,16 +54,16 @@ Les composants réseau suivants sont commandés :
   * Une passerelle VMware NSX Edge Services Gateway sécurisée gérée par le client pour le trafic de charge de travail HTTPS sortant et entrant, déployée par IBM en tant que modèle que vous pouvez modifier pour fournir un accès au réseau privé virtuel ou un accès public.
 
 ### Instance de serveur virtuel
+{: #vc_trial_hybrid_orderinginstance-vsi}
 
 Les instances de serveur virtuel suivantes sont commandées :
-
 * Une instance de serveur virtuel pour IBM CloudBuilder, annulée une fois le déploiement de l'instance terminé.
 * Une instance de serveur virtuel Microsoft Windows Server pour Microsoft Active Directory (AD) est déployée et peut être interrogée. L'instance de serveur virtuel fonctionne en tant que serveur de noms de domaine pour l'instance où sont enregistrés les hôtes et les machines virtuelles.
 
 ### Licences fournies par IBM et frais
+{: #vc_trial_hybrid_orderinginstance-license-and-fee}
 
 Les licences suivantes sont incluses avec votre commande d'instance Version d'essai à noeud unique pour vCenter Server :
-
 * VMware vSphere Enterprise Plus 6.5
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
@@ -68,6 +72,7 @@ Les instances Version d'essai à noeud unique pour vCenter Server ne prennent pa
 {:note}
 
 ## Spécifications techniques relatives à VMware HCX on IBM Cloud
+{: #vc_trial_hybrid_orderinginstance-hcx-tech-specs}
 
 L'instance Version d'essai à noeud unique pour vCenter Server comprend HCX on {{site.data.keyword.cloud_notm}}. Les composants suivants sont commandés et inclus dans le service HCX on {{site.data.keyword.cloud_notm}} :
 
@@ -75,12 +80,14 @@ Les instances HCX locales incluent uniquement l'octroi de licence et l'activatio
 {:note}
 
 ### Paire active/passive de passerelles VMware NSX Edge Services Gateway pour HCX Management
+{: #vc_trial_hybrid_orderinginstance-esg}
 
 * UC : 6 vCPU
 * Mémoire RAM : 8 Go
 * Disque : VMDK 3 Go
 
 ### HCX Management Appliance - Machine virtuelle
+{: #vc_trial_hybrid_orderinginstance-hcs-mgmt-appliance}
 
 * UC : 4 vCPU
 * Mémoire RAM : 12 Go
@@ -89,12 +96,14 @@ Les instances HCX locales incluent uniquement l'octroi de licence et l'activatio
 Des dispositifs HCX supplémentaires sont déployés durant la configuration s'il y a lieu pour la connectivité L2, l'optimisation WAN et les connexions de passerelle.
 
 ### Spécifications relatives à la mise en réseau du service HCX on IBM Cloud
+{: #vc_trial_hybrid_orderinginstance-hcx-networking-specs}
 
 * Un sous-réseau portable public avec 16 adresses IP
 * Deux sous-réseaux portables privés avec 64 adresses IP
 * Huit adresses IP issues du sous-réseau vMotion portable privé
 
 ## Exigences et planification pour la commande d'instances Version d'essai à noeud unique pour vCenter Server
+{: #vc_trial_hybrid_orderinginstance-req}
 
 Assurez-vous que les conditions requises suivantes sont réunies et exécutez les tâches suivantes :
 * Conditions requises pour les instances HCX sur site :
@@ -110,6 +119,7 @@ Assurez-vous que les conditions requises suivantes sont réunies et exécutez le
     * Le nom d'instance doit être unique au sein de votre compte.
 
 ## Procédure de commande d'instances Version d'essai à noeud unique pour vCenter Server
+{: #vc_trial_hybrid_orderinginstance-procedure}
 
 1. Sur la page **Version d'essai à noeud unique pour VMware vCenter Server on {{site.data.keyword.cloud_notm}}**, cliquez sur **Continuer**.
 2. Sur la page **Version d'essai à noeud unique pour VMware vCenter Server**, exécutez les étapes permettant de demander un compte d'infrastructure {{site.data.keyword.cloud_notm}} ou indiquez votre **nom d'utilisateur** et votre **clé d'API** existants, puis cliquez sur **Extraire**.
@@ -128,10 +138,12 @@ Assurez-vous que les conditions requises suivantes sont réunies et exécutez le
    4. Cliquez sur **Mettre à disposition**.
 
 ### Résultats
+{: #vc_trial_hybrid_orderinginstance-results}
 
 Le déploiement de l'instance commence automatiquement et la clé d'activation du service HCX on {{site.data.keyword.cloud_notm}} sur site est commandée.
 
 #### Processus de déploiement du service HCX on IBM Cloud
+{: #vc_trial_hybrid_orderinginstance-hcs-deploy-process}
 
 Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatisé. Les étapes suivantes sont exécutées par le processus d'automatisation {{site.data.keyword.vmwaresolutions_short}} :
 1. Trois sous-réseaux sont commandés pour le service HCX à partir de l'infrastructure {{site.data.keyword.cloud_notm}} :
@@ -159,6 +171,7 @@ Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatis
 6. Le nom d'hôte et l'adresse IP de HCX Manager sont enregistrés auprès du serveur DNS de VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 #### Affichage des détails d'instance
+{: #vc_trial_hybrid_orderinginstance-view-inst-details}
 
 Vous pouvez vérifier le statut du déploiement en affichant les détails de l'instance. Cliquez sur **Instances déployées** dans le panneau de navigation de gauche, puis recherchez le tableau **Instances vCenter Server** ou **Instances HCX locales** pour afficher des informations relatives aux instances que vous avez commandées .
 
@@ -167,6 +180,7 @@ Une fois l'instance correctement déployée, les composants décrits dans les se
 L'instance prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 
 ### Etape suivante
+{: #vc_trial_hybrid_orderinginstance-next}
 
 Installez HCX Enterprise Manager sur site et configurez la connexion à votre instance HCX on {{site.data.keyword.cloud_notm}}.
 
@@ -188,7 +202,7 @@ Installez HCX Enterprise Manager sur site et configurez la connexion à votre in
       1. Cliquez sur l'onglet **Administration**.
       2. Sur l'onglet **Mises à jour système**, cliquez sur **Demander le lien de téléchargement**.
       3. Cliquez sur **Copier le lien**, puis utilisez ce lien pour télécharger le client HCX Enterprise sur un environnement local avec accès à votre environnement vSphere local.
-3. Dans le client Web VMware vSphere, déployez le client HCX Enterprise en tant que dispositif virtuel HCX Manager dans votre environnement local. Pour plus d'informations, voir [Installing the HCX Enterprise Manager OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html).
+3. Dans le client VMware vSphere Web Client, déployez le client HCX Enterprise en tant que dispositif virtuel HCX Manager dans votre environnement local. Pour plus d'informations, voir [Installing the HCX Enterprise Manager OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html).
 
     Vous devez déployer le gestionnaire HCX Manager local dans un réseau privé et l'autoriser à accéder au réseau public. Vous pouvez utiliser une passerelle NSX Edge, Vyatta ou autre pour accorder l'accès Internet au gestionnaire HCX Manager local. Si les passerelles utilisées pour l'accès au réseau privé et l'accès au réseau public sont différentes, il est recommandé d'utiliser la passerelle par défaut pour autoriser l'accès au réseau public et permettre, depuis la **console d'administration de HCX Manager**, de créer une route statique pour l'accès au réseau privé.  
     {:note}
@@ -201,7 +215,7 @@ Installez HCX Enterprise Manager sur site et configurez la connexion à votre in
 5. Un certificat SSL autosigné a été généré par le service HCX on {{site.data.keyword.cloud_notm}}. Vous devez importer le certificat dans le gestionnaire HCX Manager sur site en procédant comme suit :
     1. Sur la **console d'administration de HCX Manager** sur site, cliquez sur l'onglet **Administration**.
     2. Dans le panneau de navigation de gauche, cliquez sur **Certificat d'autorité de certification digne de confiance**, puis sur **Importer** sur la droite.
-    3. Cliquez sur **URL** et entrez l'adresse URL du certificat à appliquer, c'est-à-dire **HCX Cloud IP** (``https://<cloud-side public IP>``), dont les détails se trouvent sur la page des détails du service HCX on {{site.data.keyword.cloud_notm}} dans la console {{site.data.keyword.vmwaresolutions_short}}.
+    3. Cliquez sur **URL** et entrez l'adresse URL du certificat à appliquer, c'est-à-dire l'**adresse IP HCX Cloud** (``https://<cloud-side public IP>``), dont les détails se trouvent sur la page des détails du service HCX on {{site.data.keyword.cloud_notm}} dans la console {{site.data.keyword.vmwaresolutions_short}}.
     4. Cliquez sur **Appliquer**.
 6. Continuez la configuration initiale et créez l'interconnexion. Pour plus d'informations, voir [Installing and Configuring VMware HCX Enterprise](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html).
 7. Etendez les réseaux de l'environnement VMware HCX sur site à {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir [Extending Networks with VMware HCX](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-DD9C3316-D01C-4088-B3EA-84ADB9FED573.html?hWord=N4IghgNiBcIKIA8AuBTAdgEwJZoOYAI0UkB3AewCcBrAZxAF8g).
@@ -212,6 +226,7 @@ Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwa
 {:important}
 
 ## Procédure de suppression d'instances Version d'essai à noeud unique pour vCenter Server
+{: #vc_trial_hybrid_orderinginstance-deleting-procedure}
 
 Lorsque vous supprimez une instance Version d'essai à noeud unique pour vCenter Server, les composants suivants sont libérés, dans cet ordre :
 
@@ -236,7 +251,8 @@ Procédez comme suit pour supprimer une instance Version d'essai à noeud unique
    1. Dans la colonne **Actions**, cliquez à nouveau sur l'icône Supprimer.
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
-### Liens connexes
+## Liens connexes
+{: #vc_trial_hybrid_orderinginstance-related}
 
 * [Conception d'architecture HCX on IBM Cloud pour la version d'essai à noeud unique vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [Documentation VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)

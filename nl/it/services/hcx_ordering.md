@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,19 +13,23 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Ordine di VMware HCX on IBM Cloud
+{: #hcx_ordering}
 
 Puoi ordinare il servizio VMware HCX on {{site.data.keyword.cloud}} mentre ordini una nuova istanza VMware vCenter Server with Hybridity Bundle con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
 
 ## Ordine di VMware HCX on IBM Cloud per una nuova istanza
+{: #hcx_ordering-new}
 
 Per ordinare una nuova istanza VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle con VMware HCX on {{site.data.keyword.cloud_notm}}, seleziona **VMware HCX on IBM Cloud** nella sezione **Servizi** quando ordini l'istanza dalla console {{site.data.keyword.vmwaresolutions_short}}.
 
 
 ## Ordine di VMware HCX on IBM Cloud per un'istanza esistente
+{: #hcx_ordering-existing}
 
 Per aggiungere il servizio VMware HCX on {{site.data.keyword.cloud_notm}} in un'istanza esistente di VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi**.
 
 ## Configurazione di VMware HCX on IBM Cloud
+{: #hcx_ordering-config}
 
 Per installare HCX on {{site.data.keyword.cloud_notm}}, completa le seguenti impostazioni:
 1. Specifica il **Tipo di interconnessione HCX** selezionando una delle seguenti opzioni:
@@ -47,6 +51,7 @@ Per installare HCX on {{site.data.keyword.cloud_notm}}, completa le seguenti imp
   <!--Need enhancement, it is still not clear what the key pair is used for, is it for connecting to NSX? This is not in architecture doc either. -->
 
 ## Processo di distribuzione per HCX on IBM Cloud
+{: #hcx_ordering-deploy}
 
 La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Sia che tu scelga di ordinare un'istanza vCenter Server with Hybridity Bundle con il servizio incluso o di distribuire il servizio nella tua istanza in un secondo momento, i seguenti passi sono completati dal processo di automazione {{site.data.keyword.vmwaresolutions_short}}:
 1. Dall'infrastruttura {{site.data.keyword.cloud_notm}}, vengono ordinate tre sottoreti per HCX:
@@ -76,12 +81,13 @@ La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Si
    * Vengono configurati i contenitori di distribuzione HCX locali e remoti.
 7. Il nome host e l'indirizzo IP di HCX Manager vengono registrati con il server DNS di VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
-### Link correlati
+## Link correlati
+{: #hcx_ordering-related}
 
-* [Panoramica di HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_considerations.html)
-* [Gestione di HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
-* [Glossario dei termini HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
-* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Panoramica di HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [Gestione di HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [Glossario dei termini HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Panoramica di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
 * [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

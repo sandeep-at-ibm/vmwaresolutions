@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,25 +13,30 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Commande, affichage et suppression des instances d'essai à noeud unique pour la migration et la modernisation des applications
+{: #cloud_modern_bundle_orderinginstance}
 
 Passez en revue les exigences de planification avant de commander une instance d'essai à noeud unique pour la migration et la modernisation des applications
 
 ## Exigences de planification pour la commander d'une instance d'essai à noeud unique pour la migration et la modernisation des applications
+{: #cloud_modern_bundle_orderinginstance-req}
 
 Assurez-vous que les conditions requises suivantes sont réunies et exécutez les tâches suivantes.
 
 ### Conditions requises pour les instances HCX sur site
+{: #cloud_modern_bundle_orderinginstance-hcx-req}
 
 * VMware vSphere et vCenter 5.5 ou de niveau ultérieur sont requis.
 * L'environnement vSphere doit comporter des commutateurs distribués pour les machines virtuelles qui seront migrées vers {{site.data.keyword.cloud_notm}}.
 * Le dispositif HCX Manager Virtual Appliance doit pouvoir être déployé sur un réseau privé dans l'environnement sur site et doit être autorisé à accéder à l'Internet public.
 
 ### Compte d'infrastructure IBM Cloud
+{: #cloud_modern_bundle_orderinginstance-account-req}
 
 * Pour pouvoir utiliser {{site.data.keyword.vmwaresolutions_short}} en vue de commander des instances, vous devez disposer d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer). Le coût des composants commandés dans vos instances est facturé sur ce compte {{site.data.keyword.cloud_notm}}.
 *  Configurez les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Paramètres** dans le panneau de navigation de gauche.
 
 ### Exigences relatives au nom d'instance
+{: #cloud_modern_bundle_orderinginstance-inst-name-req}
 
 Passez en revue les exigences relatives au nom d'instance :
 * Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
@@ -40,6 +45,7 @@ Passez en revue les exigences relatives au nom d'instance :
 * Le nom d'instance doit être unique au sein de votre compte.
 
 ## Procédure de commande d'instances d'essai à noeud unique pour la migration et la modernisation des applications
+{: #cloud_modern_bundle_orderinginstance-procedure}
 
 1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur **VMware** dans le panneau de navigation de gauche, puis cliquez sur **Version d'essai à noeud unique pour la migration et la modernisation des applications** dans la section **Centres de données virtuels**.
 2. Sur la page **Version d'essai à noeud unique pour la migration et la modernisation des applications**, cliquez sur **Continuer**.
@@ -59,10 +65,12 @@ Passez en revue les exigences relatives au nom d'instance :
    4. Cliquez sur **Mettre à disposition**.
 
 ### Résultats
+{: #cloud_modern_bundle_orderinginstance-results}
 
 Le déploiement de l'instance commence automatiquement et la clé d'activation du service HCX on {{site.data.keyword.cloud_notm}} sur site est commandée.
 
 #### Processus de déploiement du service HCX on IBM Cloud
+{: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
 
 Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatisé. Les étapes suivantes sont exécutées par le processus d'automatisation {{site.data.keyword.vmwaresolutions_short}} :
 1. Trois sous-réseaux sont commandés pour le service HCX à partir de l'infrastructure {{site.data.keyword.cloud_notm}} :
@@ -90,6 +98,7 @@ Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatis
 6. Le nom d'hôte et l'adresse IP de HCX Manager sont enregistrés auprès du serveur DNS de VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 #### Affichage des détails d'instance
+{: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
 Vous pouvez vérifier le statut du déploiement en affichant les détails de l'instance. Cliquez sur **Instances déployées** dans le panneau de navigation de gauche, puis recherchez le tableau **Instances vCenter Server** ou **Instances HCX locales** pour afficher des informations relatives aux instances que vous avez commandées .
 
@@ -98,6 +107,7 @@ Une fois l'instance correctement déployée, les composants décrits dans les se
 L'instance prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 
 ### Etape suivante
+{: #cloud_modern_bundle_orderinginstance-next}
 
 Installez HCX Enterprise Manager sur site et configurez la connexion à votre instance HCX on {{site.data.keyword.cloud_notm}}.
 
@@ -119,7 +129,7 @@ Installez HCX Enterprise Manager sur site et configurez la connexion à votre in
       1. Cliquez sur l'onglet **Administration**.
       2. Sur l'onglet **Mises à jour système**, cliquez sur **Demander le lien de téléchargement**.
       3. Cliquez sur **Copier le lien**, puis utilisez ce lien pour télécharger le client HCX Enterprise sur un environnement local avec accès à votre environnement vSphere local.
-3. Dans le client Web VMware vSphere, déployez le client HCX Enterprise en tant que dispositif virtuel HCX Manager dans votre environnement local. Pour plus d'informations, voir [Installing the HCX Enterprise Manager OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html).
+3. Dans le client VMware vSphere Web Client, déployez le client HCX Enterprise en tant que dispositif virtuel HCX Manager dans votre environnement local. Pour plus d'informations, voir [Installing the HCX Enterprise Manager OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html).
 
     Vous devez déployer le gestionnaire HCX Manager local dans un réseau privé et l'autoriser à accéder au réseau public. Vous pouvez utiliser une passerelle NSX Edge, Vyatta ou autre pour accorder l'accès Internet au gestionnaire HCX Manager local. Si les passerelles utilisées pour l'accès au réseau privé et l'accès au réseau public sont différentes, il est recommandé d'utiliser la passerelle par défaut pour autoriser l'accès au réseau public et permettre, depuis la **console d'administration de HCX Manager**, de créer une route statique pour l'accès au réseau privé.  
     {:note}
@@ -132,7 +142,7 @@ Installez HCX Enterprise Manager sur site et configurez la connexion à votre in
 5. Un certificat SSL autosigné a été généré par le service HCX on {{site.data.keyword.cloud_notm}}. Vous devez importer le certificat dans le gestionnaire HCX Manager sur site en procédant comme suit :
     1. Sur la **console d'administration de HCX Manager**, cliquez sur l'onglet **Administration**.
     2. Dans le panneau de navigation de gauche, cliquez sur **Certificat d'autorité de certification digne de confiance**, puis sur **Importer** sur la droite.
-    3. Cliquez sur **URL** et entrez l'adresse URL du certificat à appliquer, c'est-à-dire **HCX Cloud IP** (``https://<cloud-side public IP>``), dont les détails se trouvent sur la page des détails du service HCX on {{site.data.keyword.cloud_notm}} dans la console {{site.data.keyword.vmwaresolutions_short}}.
+    3. Cliquez sur **URL** et entrez l'adresse URL du certificat à appliquer, c'est-à-dire l'**adresse IP HCX Cloud** (``https://<cloud-side public IP>``), dont les détails se trouvent sur la page des détails du service HCX on {{site.data.keyword.cloud_notm}} dans la console {{site.data.keyword.vmwaresolutions_short}}.
     4. Cliquez sur **Appliquer**.
 6. Continuez la configuration initiale et créez l'interconnexion. Pour plus d'informations, voir [Installing and Configuring VMware HCX Enterprise](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html).
 7. Etendez les réseaux de l'environnement VMware HCX sur site à {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir [Extending Networks with VMware HCX](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-DD9C3316-D01C-4088-B3EA-84ADB9FED573.html?hWord=N4IghgNiBcIKIA8AuBTAdgEwJZoOYAI0UkB3AewCcBrAZxAF8g).
@@ -143,6 +153,7 @@ Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwa
 {:important}
 
 ## Procédure pour la suppression des instances Version d'essai à noeud unique pour la migration et la modernisation des applications
+{: #cloud_modern_bundle_orderinginstance-deleting-procedure}
 
 Lorsque vous supprimez une instance Version d'essai à noeud unique pour la migration et la modernisation des applications, les composants suivants sont libérés, dans cet ordre :
 
@@ -167,9 +178,10 @@ Procédez comme suit pour supprimer une instance Version d'essai à noeud unique
    1. Dans la colonne **Actions**, cliquez à nouveau sur l'icône Supprimer.
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
-### Liens connexes
+## Liens connexes
+{: #cloud_modern_bundle_orderinginstance-related}
 
-* [Guide vCenter Server et IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [Guide vCenter Server et IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Ouvrir un ticket au sujet d'IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=fr_FR)
 * [Documentation VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

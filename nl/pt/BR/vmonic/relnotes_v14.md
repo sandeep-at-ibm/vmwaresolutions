@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-03-08"
 
@@ -13,6 +13,7 @@ lastupdated: "2017-03-08"
 {:important: .important}
 
 # Notas sobre a liberação para V1.4
+{: #relnotes_v14}
 
 Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte o [{{site.data.keyword.vmwaresolutions_short}}dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -26,7 +27,7 @@ Os componentes a seguir são novos ou atualizados:
 * VMware ESXi 6.0 u2 p04
 * Um novo VSI (Virtual Server Instance) do Windows é pedido para os serviços Microsoft Active Directory (AD) e DNS (Domain Name System), que são necessários para o suporte de configuração de vários sites nesta liberação. Este VSI tem as seguintes especificações: Windows 2012 R2 (8 GB de RAM / 2 núcleos de CPU / 100 GB de disco / uplinks privados dual de 1 Gbps).
 
-Para obter mais informações, veja [Visão geral do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html).
+Para obter mais informações, veja [Visão geral do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview).
 
 ## Atualizações de componentes para instâncias do vCenter Server
 
@@ -51,8 +52,8 @@ Durante a implementação da instância, um Management VMware NSX Edge Services 
 
 Para garantir a segurança, as regras de firewall estão em vigor para permitir apenas comunicações HTTPS de saída iniciadas pelas máquinas virtuais de gerenciamento. Este ESG é implementado em uma configuração Grande e somente o Suporte IBM pode modificar a configuração. Para obter mais informações, veja os tópicos a seguir:
 
-* [especificações técnicas do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [O NSX Edge de serviços de gerenciamento representa um risco de segurança?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* [especificações técnicas do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [O NSX Edge de serviços de gerenciamento representa um risco de segurança?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [Documentação do VMware NSX](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ### Licença do NSX
@@ -79,21 +80,21 @@ Esta liberação inclui os seguintes aprimoramentos de topologia para suas inst�
 * Para instâncias do Cloud Foundation e do vCenter Server: a configuração de rede otimizada, ou seja, apenas os endereços IP públicos e privados primários que são designados pelo SoftLayer® são conectados aos servidores ESXi. Endereços privados móveis não são mais implementados para o tráfego de gerenciamento.
 * Para instâncias do Cloud Foundation apenas: servidor Windows AD SSO (Active Directory Single Sign-On) e servidor DNS (Sistema de Nomes de Domínio)
 
-Por causa dessas mudanças, não é possível usar as instâncias pré-V1.4 existentes na liberação atual. Para reutilizar a configuração de suas instâncias existentes, deve-se fazer upgrade delas para a versão atual. Para obter mais informações, veja [Fazendo upgrade de instâncias da pré-V1.4](/docs/services/vmwaresolutions/vmonic/movinginstances.html).
+Por causa dessas mudanças, não é possível usar as instâncias pré-V1.4 existentes na liberação atual. Para reutilizar a configuração de suas instâncias existentes, deve-se fazer upgrade delas para a versão atual.
 {:note}
 
 ## Suporte de configuração de vários sites para instâncias do Cloud Foundation
 
 Agora, é possível implementar uma única instância do Cloud Foundation, como em liberações anteriores ou, além disso, implementar instâncias secundárias que estão conectadas a uma instância primária. O modelo de configuração multisite usa uma topologia hub-and-spoke com um site primário e um máximo de sete sites secundários.
 
-Para obter mais informações, veja [Configuração de vários sites para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_multisite.html).
+Para obter mais informações, veja [Configuração de vários sites para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_multisite).
 
 ## Aprimoramentos para a implementação de recuperação de desastre do Zerto
 
 * Para instâncias do Cloud Foundation, a implementação da recuperação de desastre Zerto é automatizada em vez de ser manipulada por meio de um chamado de suporte. Todos os componentes do Zerto, como uma sub-rede móvel privada, uma VSI (Virtual Service Instance) do Windows e os encargos de licença do Zerto são listados no custo estimado para que você possa revisar antes de fazer o seu pedido.
 * Para instâncias do vCenter Server, a implementação da recuperação de desastre Zerto é feita por meio de um chamado de suporte, como na liberação anterior. No entanto, o NSX Edge e a sub-rede móvel pública não são mais necessários, pois são incluídos, agora, na implementação base. Os encargos para uma sub-rede móvel privada, um VSI (Virtual Service Instance) do Windows e a licença do Zerto ainda se aplicam.
 
-Para obter mais informações, veja [Recuperação de desastre do Zerto](/docs/services/vmwaresolutions/services/addingzertodr.html).
+Para obter mais informações, veja [Recuperação de desastre do Zerto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
 
 ## Processo de pedido da instância
 
@@ -104,15 +105,15 @@ O processo de pedido da instância é muito simplificado:
 
 Para obter mais informações, veja os tópicos a seguir:
 
-* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 
 ## Gerenciamento de Instância
 
 Novos recursos e aprimoramentos são feitos no processo de gerenciamento da instância:
 
-* Para instâncias do Cloud Foundation, é possível visualizar o nome do usuário e as senhas para vários componentes da instância na página de detalhes da instância. Para obter mais informações, veja [Visualizando instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html).
-* Para instâncias do vCenter Server, é possível instalar atualizações e correções de software para componentes IBM diretamente do console. Para obter mais informações, veja [Aplicando atualizações e correções a instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html).
+* Para instâncias do Cloud Foundation, é possível visualizar o nome do usuário e as senhas para vários componentes da instância na página de detalhes da instância. Para obter mais informações, veja [Visualizando instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances).
+* Para instâncias do vCenter Server, é possível instalar atualizações e correções de software para componentes IBM diretamente do console. Para obter mais informações, veja [Aplicando atualizações e correções a instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates).
 
 ## Notificações do console
 
@@ -120,5 +121,5 @@ Agora, é possível configurar notificações do console na página **Configura�
 
 Para obter mais informações, veja os tópicos a seguir:
 
-* [Configurações e contas do usuário](/docs/services/vmwaresolutions/vmonic/useraccount.html)
-* [Notificações](/docs/services/vmwaresolutions/vmonic/notifications.html)
+* [Configurações e contas do usuário](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
+* [Notificações](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)

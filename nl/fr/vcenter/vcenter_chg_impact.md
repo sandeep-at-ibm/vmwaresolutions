@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,6 +14,7 @@ lastupdated: "2019-01-23"
 {:faq: data-hd-content-type='faq'}
 
 # Remarques relatives à la modification des artefacts vCenter Server
+{: #vcenter_chg_impact}
 
 Modifier des utilisateurs, des ressources ou des sous-réseaux réservés à {{site.data.keyword.vmwaresolutions_full}} peut avoir une incidence sur des opérations de gestion.
 
@@ -22,6 +23,7 @@ Utilisez l'ID utilisateur hôte **root**. L'ID utilisateur hôte **ic4vroot** a 
 {:important}
 
 ## ID d'automatisation
+{: #vcenter_chg_impact-automation-id}
 {: faq}
 
 L'ID d'**automatisation** est un compte utilisateur qu'utilisent les opérations automatisées fournies par la console {{site.data.keyword.vmwaresolutions_short}}.
@@ -29,6 +31,7 @@ L'ID d'**automatisation** est un compte utilisateur qu'utilisent les opérations
 Les noms utilisateur et mots de passe des opérations automatisées dans la console ne doivent pas être modifiés, sinon les opérations effectuées à l'aide de la console qui dépendent de ces données d'identification risquent d'échouer.
 
 ## Comptes utilisateur de service
+{: #vcenter_chg_impact-service-usr-account}
 
 Chaque service crée un compte utilisateur interne dans vCenter Server. Ce compte est nécessaire pour que les opérations de gestion associées à un service puissent se connecter à vCenter Server afin d'effectuer les opérations sur le service.
 
@@ -41,10 +44,14 @@ Le `<service_name>` avec `<service_uuid>` tronque à 20 caractères.
 {:note}
 
 ## Ressources VMware pour des instances vCenter Server (version 1.9 et ultérieures)
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
 
-Pour les instances déployées en version 1.9 et ultérieures, si l'instance vCenter Server a le statut **Prêt à l'emploi**, vous pouvez modifier le centre de données virtuel VMware, le cluster, les commutateurs, les groupes de ports et le nom du magasin de données client à partir du client Web VMware vSphere. Toutefois, vous ne devez pas modifier la valeur par défaut du nom du magasin de données de gestion : **vsanDatastore** pour les instances vSAN et **management-share** pour les instances NFS (Network File System).
+Pour les instances déployées en version 1.9 et ultérieures, si l'instance vCenter Server a le statut **Prêt à l'emploi**, vous pouvez modifier le centre de données virtuel VMware, le cluster, les commutateurs, les groupes de ports et le nom du magasin de données client à partir du client Web VMware vSphere.
+
+Toutefois, vous ne devez pas modifier la valeur par défaut du nom du magasin de données de gestion, à savoir **vsanDatastore** pour les instances vSAN et **management-share** pour les instances NFS (Network File System). De plus, vous ne devez pas changer le nom des liaisons montantes du réseau qui sont créées durant la mise à disposition.
 
 ## Ressources VMware pour des instances vCenter Server (version 1.8 et antérieures)
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
 
 Le tableau suivant répertorie les opérations susceptibles d'être affectées lorsque l'administrateur de la connexion unique modifie des ressources VMware vCenter Server en dehors de la console {{site.data.keyword.vmwaresolutions_short}}. Si une solution de récupération est disponible, elle est également fournie.
 
@@ -73,6 +80,7 @@ Tableau 2. Opérations affectées pour l'accès à SSH et à l'interpréteur de 
 Si vous choisissez de désactiver l'accès à SSH ou à l'interpréteur de commandes, vous devez le réactiver temporairement avant d'effectuer les opérations indiquées.
 
 ## Sous-réseaux de gestion pour des instances vCenter Server
+{: #vcenter_chg_impact-mgmt-subnets}
 
 Les informations suivantes concernent les sous-réseaux commandés par {{site.data.keyword.vmwaresolutions_short}} et indiquent les options de commande de sous-réseaux supplémentaires à votre usage personnel dont vous disposez.
 
@@ -88,5 +96,5 @@ De plus, les sous-réseaux de gestion suivants sont également réservés pour {
 *  Un sous-réseau public portable de 16 adresses IP sur le réseau local virtuel public
 
 Si vous avez besoin de davantage de sous-réseaux, vous pouvez obtenir des adresses IP à utiliser de l'une des manières suivantes :
-*  **Option 1 (recommandée)** : utilisez les superpositions de réseaux virtuels VMware NSX. Un exemple de modèle VXLAN est fourni lors de la commande. Ce modèle VXLAN peut être utilisé comme point de départ pour la génération de la mise en réseau définie par logiciel. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle NSX Edge gérée par le client](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html).
+*  **Option 1 (recommandée)** : utilisez les superpositions de réseaux virtuels VMware NSX. Un exemple de modèle VXLAN est fourni lors de la commande. Ce modèle VXLAN peut être utilisé comme point de départ pour la génération de la mise en réseau définie par logiciel. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle NSX Edge gérée par le client](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config).
 *  **Option 2** : commandez vos propres sous-réseaux portables publics ou privés afin d'obtenir des adresses IP. Pour différentier les sous-réseaux que vous commandez des sous-réseaux de gestion, vous pouvez ajouter des notes aux sous-réseaux commandés.

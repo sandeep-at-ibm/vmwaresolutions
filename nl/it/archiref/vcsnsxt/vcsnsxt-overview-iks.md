@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-iks}
 
 ## Panoramica di IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-iks-ovw}
 
 {{site.data.keyword.containerlong_notm}} fornisce una piattaforma isolata e sicura per la gestione dei contenitori. Questa piattaforma è portatile, estensibile e riparabile automaticamente se si verifica un failover.
 
@@ -34,10 +36,12 @@ Il modello di rete Kubernetes sostiene tre requisiti fondamentali:
 * L'IP con cui un contenitore vede se stesso è lo stesso IP con cui lo vedono gli altri.
 
 ### Spazi dei nomi
+{: #vcsnsxt-overview-iks-namespaces}
 
 Gli spazi dei nomi sono un aspetto fondamentale della rete del contenitore. Gli spazi dei nomi sono una funzione del kernel Linux che partiziona le risorse del kernel in modo tale che una serie di processi veda una serie di risorse, mentre un'altra serie di processi ne veda una diversa. Le risorse includono punti di montaggio, ID processo, stack di rete, IPC e ID utente. Ogni spazio dei nomi ha una serie privata di indirizzi IP, una propria tabella di instradamento, un elenco socket, una tabella di tracciamento delle connessioni, firewall e altre risorse correlate alla rete.
 
 ### Container Network Interface
+{: #vcsnsxt-overview-iks-container-network-interfaces}
 
 Kubernetes utilizza il CNI (Container Network Interface) come propria soluzione di rete orientata al plug-in. È costituito da una specifica e dalle librerie per scrivere i plug-in per configurare le interfacce di rete nei contenitori Linux. La specifica CNI è leggera poiché si occupa solo della connettività di rete dei contenitori e della raccolta di dati inutili dopo che i contenitori sono stati eliminati.
 
@@ -72,6 +76,7 @@ In {{site.data.keyword.containerlong_notm}} esistono tre opzioni per il traffico
     - È possibile distribuire un dispositivo {{site.data.keyword.cloud_notm}} Virtual Router Appliance (VRA) come gateway VPN per stabilire una connessione sicura a una rete esterna. Il traffico della rete pubblica o privata può essere instradato tramite il VRA. Il VRA crea un tunnel IPSec crittografato al gateway VPN remoto.
 
 ## Componenti di IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-iks-components}
 
 I nodi di lavoro sono gestiti da un nodo master Kubernetes che controlla e monitora centralmente tutte le risorse Kubernetes presenti nel cluster. Quando uno sviluppatore distribuisce le risorse per un contenitore, il nodo master decide su quale nodo di lavoro distribuire tali risorse, tenendo conto dei requisiti di distribuzione e della capacità disponibile nel cluster. I nodi master e di lavoro possono comunicare tra loro tramite certificati TLS protetti e una connessione openVPN tramite la rete pubblica {{site.data.keyword.cloud_notm}}. Gli sviluppatori accedono al kube-apiserver ospitato sul nodo master tramite Internet.
 
@@ -90,6 +95,7 @@ Da una prospettiva di rete, sul nodo di lavoro vengono distribuiti i seguenti co
 -	**Programma di bilanciamento del carico** - Un programma di bilanciamento del carico è un servizio Kubernetes che può essere utilizzato per bilanciare i carichi di lavoro del traffico di rete nel tuo cluster inoltrando richieste pubbliche o private a un'applicazione. Questo componente opera nello spazio dei nomi ibm-system.
 
 ### Calico
+{: #vcsnsxt-overview-iks-calico}
 
 {{site.data.keyword.containerlong_notm}} utilizza Calico come proprio provider di rete. Calico utilizza un approccio di livello 3 anziché le reti di sovrapposizione. Attraverso i plug-in CNI, Calico si integra con Kubernetes per fornire agli utenti una rete che utilizza un approccio basato sull'uso di una rete IP pura combinata con il Border Gateway Protocol per la distribuzione delle rotte.
 
@@ -115,22 +121,27 @@ Il diagramma precedente mostra i seguenti componenti Calico:
 Poiché la rete {{site.data.keyword.cloud_notm}} Private inoltra solo gli schemi di indirizzamento IP di {{site.data.keyword.cloud_notm}}, a Calico è richiesto di utilizzare l'incapsulamento IP-in-IP del traffico tra carichi di lavoro in {{site.data.keyword.containerlong_notm}} per nascondere gli indirizzi IP della rete pod. {{site.data.keyword.containerlong_notm}} utilizza la modalità di sottorete incrociata IP-in-IP.
 
 ### Calico in IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-iks-calico-iks}
 
 Calico viene installato e configurato automaticamente in {{site.data.keyword.containerlong_notm}}. Le politiche predefinite vengono create per proteggere il cluster Kubernetes, con la possibilità di creare le tue proprie politiche per proteggere specifici servizi. L'incapsulamento IP-in-IP viene configurato automaticamente per incapsulare solo i pacchetti che attraversano le sottoreti e utilizza NAT per le connessioni in uscita dai tuoi contenitori. Anche il traffico dal carico di lavoro a WAN viene abilitato automaticamente in {{site.data.keyword.containerlong_notm}}, quindi non è necessaria alcuna ulteriore configurazione di Calico.
 
 #### Scalabilità di rete con Calico
+{: #vcsnsxt-overview-iks-net-scalability-calico}
 
 Calico si basa su un'architettura a scalabilità distribuita che gli consente di scalare agevolmente da un singolo notebook dello sviluppatore a distribuzioni aziendali di grandi dimensioni e utilizza il piano dati Linux standard per offrire prestazioni bare metal per i carichi di lavoro virtuali.
 
 #### Sicurezza con Calico
+{: #vcsnsxt-overview-iks-sec-calico}
 
 Calico utilizza una serie di politiche che controllano ogni componente del sistema; queste politiche possono essere configurate per consentire a servizi e istanze del contenitore di comunicare tra loro solo quando necessario. Utilizza gli indirizzi IP per identificare le istanze del contenitore e crea le politiche in base a questi indirizzi. L'integrazione di Kubernetes con Calico è consapevole dell'infrastruttura e può ridimensionare le politiche di sicurezza in base alle modifiche con l'infrastruttura.
 
 #### Integrazione con Calico
+{: #vcsnsxt-overview-iks-integration-calico}
 
 Calico fornisce una soluzione di rete e politiche di rete altamente scalabile per la connessione di pod Kubernetes basata sugli stessi principi di rete IP dell'Internet. Può essere distribuito senza incapsulamento o sovrapposizioni per fornire reti di data center ad alte prestazioni e su vasta scala. Calico fornisce una politica di sicurezza di rete dettagliata e basata sugli intenti per i pod Kubernetes tramite il suo firewall distribuito. Calico può anche essere eseguito in modalità di applicazione delle politiche insieme ad altre soluzioni di rete come Flannel, noto anche come Canal o rete GCE nativa.
 
 ## Rete di IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-iks-networking}
 
 Per impostazione predefinita, {{site.data.keyword.containerlong_notm}} configura il cluster con accesso a una VLAN pubblica e a una VLAN privata con quanto segue.
 - Un indirizzo IP pubblico per ciascun nodo di lavoro, che fornisce ai nodi di lavoro un'interfaccia di rete pubblica. Per impostazione predefinita:
@@ -151,7 +162,8 @@ Anche le sottoreti IP per i nodi di lavoro e i pod vengono fornite automaticamen
     - La sottorete privata primaria determina gli indirizzi IP privati che vengono assegnati ai nodi di lavoro durante la creazione del cluster. Più cluster sulla stessa VLAN possono condividere una sottorete privata primaria.
     - La sottorete privata portatile è associata a un solo cluster e fornisce al cluster 8 indirizzi IP privati. 3 IP sono riservati per le funzioni di rete. 1 IP viene utilizzato dall'ALB Ingress privato predefinito e 4 IP possono essere utilizzati per creare servizi di rete del programma di bilanciamento del carico privato. Gli IP privati portatili sono indirizzi IP fissi e permanenti che possono essere utilizzati per accedere ai servizi del programma di bilanciamento del carico su Internet.
 
-### Link correlati
+## Link correlati
+{: #vcsnsxt-overview-iks-links}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

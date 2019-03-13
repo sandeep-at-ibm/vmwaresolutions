@@ -50,7 +50,7 @@ Si des correctifs et des mises à jour ont été appliqués aux gestionnaires HC
 5. Spécifiez l'ID de flotte du ccli en tapant l'ID indiqué pour le composant de flotte. Par exemple, `go 8`.
 6. Exécutez la commande `debug remoteaccess enable` pour vous connecter au composant de flotte désiré via SSH.
 7. Sortez de l'interface ccli et connectez-vous via SSH à l'adresse IP du composant de flotte activé pour SSH.
-9. Poursuivez le traitement des incidents. 
+9. Poursuivez le traitement des incidents.
 10. Retournez à l'interface ccli et désactivez le service ssh pour le composant.
 11. Si nécessaire, utilisez la commande ccli `hc` pour exécuter un diagnostic d'intégrité sur les composants.
 
@@ -67,4 +67,4 @@ Peu ou aucun problème n'a été rencontré avec le fonctionnement du concentrat
 ## Liens connexes
 {: #vcshcx-troubleshooting-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Présentation de vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-11-08"
 {:important: .important}
 
 # Consideraciones para las instancias locales de VMware HCX on IBM Cloud
+{: #standalone_considerations}
 
 Revise las siguientes consideraciones antes de instalar o suprimir las instancias locales de HCX on {{site.data.keyword.cloud}} que ha solicitado para su uso local.
 
@@ -20,17 +21,20 @@ Una instancia de vCenter Server con HCX on {{site.data.keyword.cloud_notm}} est�
 {:note}
 
 ## Consideraciones al instalar instancias locales de HCX on IBM Cloud
+{: #standalone_considerations-install}
 
-Los componentes de HCX on {{site.data.keyword.cloud_notm}} deben estar instalados en {{site.data.keyword.cloud_notm}} y en el entorno local de vSphere. Se recomienda instalar el servicio HCX on {{site.data.keyword.cloud_notm}} en la instancia de vCenter Server con el paquete híbrido (Hybridity) en {{site.data.keyword.cloud_notm}} antes de instalar la instancia local de HCX on {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Consideraciones sobre HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_considerations.html).
+Los componentes de HCX on {{site.data.keyword.cloud_notm}} deben estar instalados en {{site.data.keyword.cloud_notm}} y en el entorno local de vSphere. Se recomienda instalar el servicio HCX on {{site.data.keyword.cloud_notm}} en la instancia de vCenter Server con el paquete híbrido (Hybridity) en {{site.data.keyword.cloud_notm}} antes de instalar la instancia local de HCX on {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Consideraciones sobre HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview).
 
 ### Requisitos sobre direcciones IP
+{: #standalone_considerations-IP}
 
 Para obtener todas las funciones de HCX, necesita al menos cinco direcciones IP privadas y debe otorgarles acceso a Internet.
 
 ### Proceso de despliegue de instancias locales de HCX on IBM Cloud
+{: #standalone_considerations-deploy}
 
 Debe completar las tareas siguientes para realizar una instalación correcta de la instancia local de HCX on {{site.data.keyword.cloud_notm}}:
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, solicite la instancia local de HCX on {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Solicitud de instancias locales de VMware HCX on IBM Cloud](standalone_orderingserviceinstances.html).
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, solicite la instancia local de HCX on {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Solicitud de instancias locales de VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances).
 2. En la **consola de HCX Cloud**, siga estos pasos:
     1. Pulse el separador **Administración**.
     2. En el separador **Actualizaciones del sistema**, pulse **SOLICITAR ENLACE DE DESCARGA**.
@@ -39,7 +43,7 @@ Debe completar las tareas siguientes para realizar una instalación correcta de 
 
    Debe desplegar HCX Manager local en una red privada y debe otorgarle acceso a la red pública. Puede utilizar NSX Edge, Vyatta o pasarelas similares para permitir el acceso Internet al HCX Manager local. Si las pasarelas utilizadas para el acceso a la red privada y a la red pública son distintas, se recomienda utilizar la pasarela predeterminada para permitir el acceso a la red pública y a la **consola de administración de HCX Manager** privada para crear una ruta estática para el acceso a la red privada.
    {:note}
-4. Una vez completado el despliegue de Manager HCX, utilice la **consola de administración de HCX Manager** para activar el HCX Manager local. Para obtener una clave de activación para el HCX Manager local, solicite una instancia de HCX on {{site.data.keyword.cloud_notm}} local en la consola de {{site.data.keyword.vmwaresolutions_short}}. Para obtener más información, consulte [Solicitud de instancias locales de HCX](../services/standalone_orderingserviceinstances.html).
+4. Una vez completado el despliegue de Manager HCX, utilice la **consola de administración de HCX Manager** para activar el HCX Manager local. Para obtener una clave de activación para el HCX Manager local, solicite una instancia de HCX on {{site.data.keyword.cloud_notm}} local en la consola de {{site.data.keyword.vmwaresolutions_short}}. Para obtener más información, consulte [Solicitud de instancias locales de HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances).
 5. Si ha utilizado un certificado SSL autofirmado al solicitar el servicio HCX on {{site.data.keyword.cloud_notm}}, debe importar el certificado en el HCX Manager local siguiendo los siguientes pasos:
     1. En la **consola de administración de HCX Manager** local, pulse el separador **Administración**.
     2. En el panel de navegación de la izquierda, pulse **Certificado de CA de confianza** y luego pulse **IMPORTAR** a la derecha.
@@ -51,6 +55,7 @@ Ahora ha completado la configuración básica del HCX Manager local. Puede conti
 Para obtener más información, consulte [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx).
 
 ## Consideraciones para suprimir instancias de locales de HCX on IBM Cloud
+{: #considerations-when-deleting-on-premises-hcx-instances}
 
 Revise las siguientes consideraciones antes de suprimir una instancia de HCX on {{site.data.keyword.cloud_notm}} solicitada para su uso local:
 1. En el cliente web de VMware vSphere, vaya a la interfaz de usuario HCX y compruebe los siguientes elementos:
@@ -62,12 +67,13 @@ Revise las siguientes consideraciones antes de suprimir una instancia de HCX on 
    {:important}
 2. En la consola de {{site.data.keyword.vmwaresolutions_short}}, suprima la instancia local de HCX on {{site.data.keyword.cloud_notm}} que se ha solicitado para obtener la clave de activación para el HCX Manager local. Asegúrese de que la instancia suprimida deja de estar disponible en la consola antes de continuar con el siguiente paso.
 
-   Para obtener más información, consulte [Supresión de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](../services/standalone_deletingserviceinstances.html).
+   Para obtener más información, consulte [Supresión de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances).
 3. En el cliente web de VMware vSphere, suprima el HCX Manager local.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #standalone_considerations-related}
 
-* [Visualización de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](../services/standalone_viewingserviceinstances.html)
-* [Glosario de términos de HCX](hcx_glossary.html)
+* [Visualización de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_viewingserviceinstances)
+* [Glosario de términos de HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Documentación de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
-* [Cómo ponerse en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html)
+* [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

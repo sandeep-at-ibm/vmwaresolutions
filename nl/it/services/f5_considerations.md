@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Panoramica di F5 on IBM Cloud
+{: #f5_considerations}
 
 Il servizio F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) fornisce servizi intelligenti di bilanciamento del carico L4-L7 e di gestione del traffico su scala locale e globale, una solida protezione firewall per reti e applicazioni web e accesso sicuro e federato alle applicazioni.
 
@@ -22,25 +23,33 @@ Questo servizio è disponibile solo per le istanze distribuite nella V1.9 o succ
 {:note}
 
 ## Specifiche tecniche per F5 on IBM Cloud
+{: #technical-specifications-for-f5-on-ibm-cloud}
 
 Con il servizio F5 on {{site.data.keyword.cloud_notm}} sono inclusi i seguenti componenti:
 
 ### Macchine virtuali
+{: #f5_considerations-specs-vms}
+
 * Due macchine virtuali (VM) con tutte le opzioni disponibili.
 * 2, 4 o 8 vCPU per macchina virtuale in base all'opzione di licenza.
 * 4, 8 o 16 GB di RAM per macchina virtuale in base all'opzione di licenza.
 
 ### Rete
+{: #f5_considerations-specs-network}
+
 * VXLAN (Virtual Extensible LAN) privata per la sincronizzazione ad alta disponibilità (HA).
 * Accesso a TMSH (Traffic Management Shell) e alla Console di gestione tramite la rete di gestione privata.
 
 ### Licenze e tariffe
+{: #f5_considerations-specs-license}
+
 Le tariffe della licenza per ciascuna VM vengono applicate a ciascun ciclo di fatturazione in base all'opzione di licenza (Buono, Migliore o Massimo) e alla larghezza di banda selezionata.
 
 Non puoi modificare il livello di licenza dopo l'installazione del servizio. Per modificare il livello di licenza, devi rimuovere il servizio esistente e reinstallare il servizio utilizzando un'opzione di licenza diversa.
 {:important}
 
 ## Considerazioni sull'installazione per F5 on IBM Cloud
+{: #f5_considerations-install}
 
 Prima di installare il servizio F5 on {{site.data.keyword.cloud_notm}}, esamina le seguenti considerazioni.
 
@@ -58,6 +67,7 @@ Tabella 1. distribuzioni di CPU e RAM per diverse selezioni di larghezza di band
 | 10 Gbps           | 8 vCPU, 16 GB di RAM   | 8 vCPU, 16 GB di RAM     | 8 vCPU, 16 GB di RAM   |
 
 ### Ulteriori considerazioni
+{: #f5_considerations-additional}
 
 * F5 BIG–IP limita la velocità effettiva dell'applicazione in base alla larghezza di banda massima scelta. Poiché le prestazioni della rete sono influenzate da molti fattori, non tutte le configurazioni e topologie possono essere in grado di raggiungere la larghezza di banda massima scelta.
 * La coppia HA (alta disponibilità) di VM BIG-IP VE verrà distribuita solo nel cluster predefinito.
@@ -71,6 +81,8 @@ Tabella 1. distribuzioni di CPU e RAM per diverse selezioni di larghezza di band
   `Prenotazione RAM = dimensione RAM` (dalla tabella 1)
 
 ### Considerazioni sulla pianificazione
+{: #f5_considerations-planning}
+
 Per evitare errori con F5 on {{site.data.keyword.cloud_notm}}, devi soddisfare i seguenti requisiti:
 * Sono disponibili almeno due server ESXi attivi per le due VM BIG-IP VE da distribuire con la regola di anti-affinità di mantenere le VM su server separati.
 * I due server ESXi attivi hanno sufficienti risorse disponibili in modo che una VM BIG-IP VE possa essere ospitata su ciascun server ESXi con prenotazione del 100% di CPU e RAM.
@@ -79,6 +91,7 @@ Per evitare errori con F5 on {{site.data.keyword.cloud_notm}}, devi soddisfare i
 A causa di questi requisiti, devi pianificare lo spazio che serve per F5 on {{site.data.keyword.cloud_notm}}. Se necessario, prima di ordinare F5 on {{site.data.keyword.cloud_notm}}, aggiungi 1-2 server ESXi alla tua istanza e/o riduci la prenotazione di CPU di vSphere HA per il failover.
 
 ## Esempio di ordine di F5 on IBM Cloud
+{: #f5_considerations-example}
 
 Ordini un'istanza **Small** di VMware vCenter Server con 2 server ESXI con la seguente configurazione: sedici core a 2,10 GHz ciascuno con 128 GB di RAM. Per F5 on {{site.data.keyword.cloud_notm}}, selezioni il modello di licenza **Massimo** e un valore di 5 Gbps per **Larghezza di banda massima**.
 
@@ -99,13 +112,15 @@ Poiché ci saranno altri carichi di lavoro presenti sui server ESXi, ad esempio,
 In questo caso, l'installazione di F5 on {{site.data.keyword.cloud_notm}} potrebbe non riuscire, a meno che almeno un server ESXi venga aggiunto all'ambiente e le prenotazioni di failover di vSphere HA vengano aggiornate in modo appropriato per garantire che ci siano risorse sufficienti per due VM BIG-IP VE. Se sono necessarie risorse aggiuntive per eseguire il servizio F5 on {{site.data.keyword.cloud_notm}}, puoi aggiungere altri server ESXi prima di installare F5 on {{site.data.keyword.cloud_notm}}.
 
 ## Considerazioni sulla rimozione di F5 on IBM Cloud
+{: #f5_considerations-remove}
 
 Prima di rimuovere il servizio F5 on {{site.data.keyword.cloud_notm}}, assicurati che la configurazione esistente di BIG-IP VE sia stata rimossa correttamente. In particolare, il traffico di rete deve essere instradato attorno a BIG-IP VE anziché tramite BIG-IP VE. In caso contrario, il traffico di dati esistente dal tuo ambiente potrebbe essere influenzato.
 
-### Link correlati
+## Link correlati
+{: #f5_considerations-related}
 
-* [Ordine di F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_ordering.html)
-* [Gestione di F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_f5.html)
-* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Ordine di F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_ordering)
+* [Gestione di F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Sito web F5](https://f5.com/){:new_window}

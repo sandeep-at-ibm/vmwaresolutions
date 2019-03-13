@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # Accesso alla console IBM Cloud for VMware Solutions
+{: #loginmethod}
 
 Esamina i punti di ingresso nella console {{site.data.keyword.vmwaresolutions_full}}.
 
 ## Accesso diretto alla console
+{: #loginmethod-direct}
 
 Per accedere direttamente alla console, completa la seguente procedura:
 1. Vai a
@@ -20,6 +22,7 @@ Per accedere direttamente alla console, completa la seguente procedura:
 2. Accedi alla console con il tuo account **ID IBM**.
 
 ## Accesso dal catalogo IBM Cloud
+{: #loginmethod-cloud-catalog}
 
 Per accedere alla console dal catalogo {{site.data.keyword.cloud_notm}}, completa la seguente procedura:
 1. Vai all'indirizzo https://console.cloud.ibm.com.
@@ -29,6 +32,7 @@ Per accedere alla console dal catalogo {{site.data.keyword.cloud_notm}}, complet
 5. Fai clic sulla scheda **VMware Solutions**.
 
 ## Accesso dal sito web ibm.com
+{: #loginmethod-ibm-website}
 
 Per accedere alla console dal sito web ibm.com, completa la seguente procedura:
 1. Vai all'indirizzo http://www.ibm.com.
@@ -38,7 +42,8 @@ Per accedere alla console dal sito web ibm.com, completa la seguente procedura:
 4. Scorri verso il basso nella pagina e fai clic su **VMware Cloud Solutions**.
 5. Nella pagina **IBM Cloud for VMware Solutions**, scorri fino alla sezione **VMware solutions versions** e fai clic su **Get Started**.
 
-### Link correlati
+## Link correlati
+{: #loginmethod-related}
 
-* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [Risoluzione dei problemi relativi all'accesso a {{site.data.keyword.cloud_notm}}](/docs/account/ts_accessing.html){:new_window}
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Risoluzione dei problemi relativi all'accesso a {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-accessing){:new_window}

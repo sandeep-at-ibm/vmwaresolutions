@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Demande de Mission Critical VMware on IBM Cloud
+{: #managing_mcv}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Initiation** dans le panneau de navigation de gauche.
 2. Faites défiler la page vers le bas et sous **Commander des services gérés supplémentaires**, cliquez sur la carte **Mission Critical VMware on IBM Cloud**.
@@ -17,6 +18,7 @@ lastupdated: "2019-01-24"
 
 Vous serez contacté par un représentant de Mission Critical VMware on {{site.data.keyword.cloud_notm}} à l'aide de vos informations de contact pour vous aider à choisir les solution qu'il vous faut.
 
-### Liens connexes
+## Liens connexes
+{: #managing_mcv-related}
 
-* [Présentation de Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services/mcv_overview.html)
+* [Présentation de Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-mcv_overview)

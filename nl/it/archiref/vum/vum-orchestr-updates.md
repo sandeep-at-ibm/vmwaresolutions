@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-20"
+lastupdated: "2019-02-18"
 
 ---
 
-#	Aggiornamenti orchestrati
+# Aggiornamenti orchestrati
+{: #vum-orchestr-updates}
 
 Puoi utilizzare gli aggiornamenti orchestrati per aggiornare l'hardware virtuale e i VMware Tools delle macchine virtuali nell'inventario dopo aver eseguito l'aggiornamento degli host vSphere ESXi. Dopo l'aggiornamento degli host, viene eseguita prima la baseline di aggiornamento di VMware Tools, seguita dalla baseline di aggiornamento hardware delle macchine virtuali. Puoi utilizzare gli aggiornamenti orchestrati a livello di cluster, cartella o data center.
 
@@ -33,6 +34,7 @@ In alternativa, puoi definire il limite per il numero di host che possono essere
 Il seguente flusso di lavoro descrive il processo per eseguire un aggiornamento orchestrato:
 
 ## Passo 1
+{: #vum-orchestr-updates-step1}
 
 1. Utilizza il client web vSphere per accedere al VCSA.
 2. Seleziona **Home** > **Update Manager** e, dalla **scheda Objects**, seleziona un'**istanza Update Manager**.
@@ -47,6 +49,7 @@ Il seguente flusso di lavoro descrive il processo per eseguire un aggiornamento 
 11. Esamina la pagina **Ready to Complete**, fai clic su **Finish** e il gruppo di baseline dell'host viene visualizzato nel riquadro Baseline Groups.
 
 ## Passo 2
+{: #vum-orchestr-updates-step2}
 
 1. Crea un gruppo di baseline della macchina virtuale, che contiene le baseline VMware Tools Upgrade to Match Host e VM Hardware Upgrade to Match Host, nella vista di amministrazione VUM.
 2. Collega il gruppo di baseline a un oggetto contenitore vCenter contenente le macchine virtuali che vuoi aggiornare.
@@ -58,7 +61,8 @@ Il seguente flusso di lavoro descrive il processo per eseguire un aggiornamento 
 
 Puoi ora utilizzare questi gruppi di baseline nei processi di scansione, revisione, preparazione e correzione.
 
-### Link correlati
+## Link correlati
+{: #vum-orchestr-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)

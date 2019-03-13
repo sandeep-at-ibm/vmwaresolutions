@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # Componenti di Skate Advisor
+{: #vcscar-physical}
 
 {{site.data.keyword.vmwaresolutions_full}} fornisce l'automazione per distribuire
 i componenti con tecnologia VMware nei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. L'architettura
@@ -45,6 +46,7 @@ agli amministratori di soddisfare le richieste di business. Cloud Automation Man
 Service Composer ti consente di esporre i servizi cloud ibridi nel catalogo {{site.data.keyword.icpfull_notm}}.
 
 ## Componenti fisici di Skate Advisor
+{: #vcscar-physical-skate-comp}
 
 Il seguente diagramma descrive l'implementazione di riferimento dell'applicazione Acme
 Skate Advisor in un'implementazione dell'infrastruttura di modernizzazione
@@ -63,6 +65,7 @@ dell'applicazione che fornisce l'infrastruttura di hosting
 necessaria.
 
 ### Assemblaggio e distribuzione dell'applicazione
+{: #vcscar-physical-app-pack-depl}
 
 L'applicazione viene distribuita come orchestrazione CAM che contiene
 i seguenti elementi:
@@ -94,6 +97,7 @@ Figura 2. Orchestrazione CAM
 ![Orchestrazione CAM](vcscar-cam.svg)
 
 ### Bilanciamento del carico e proxy
+{: #vcscar-physical-load-balance-proxy}
 
 Il bilanciamento del carico e il proxy vengono implementati attraverso il componente
 del controller Ingress {{site.data.keyword.icpfull_notm}}. Questo componente gestisce il ridimensionamento e il failover
@@ -115,18 +119,26 @@ incrementale secondo quanto richiesto dal sistema. Per superare questo problema,
 eseguire la risoluzione degli indirizzi IP in tempo reale all'interno del sistema.
 
 ### Applicazione web Acme Skate
+{: #vcscar-physical-acme-skate-web-app}
+
 L'applicazione web Acme Skate è un'applicazione Java EE (Java Platform, Enterprise Edition) basata su Spring
 Framework. L'applicazione viene distribuita su un contenitore WebSphere Liberty.
 
 ### Applicazione Acme Skate Advisor
+{: #vcscar-physical-acme-skate-advisor-app}
+
 L'applicazione Acme Skate Advisor è un'applicazione basata sui microservizi che viene distribuita su un contenitore WebSphere Liberty. Un server web nginx fornisce
 un frontend ai microservizi.
 
 ### Database Acme Skate
+{: #vcscar-physical-acme-skate-db}
+
 Il database Acme Skate è un database MySQL che viene distribuito su
 una macchina virtuale gestita da vSphere.
 
 ### Panoramica delle comunicazioni
+{: #vcscar-physical-comm-overview}
+
 Skate Advisor richiede le seguenti comunicazioni:
 -	Dal contenitore web all'utente del sistema.
 -	Dal contenitore Advisor e web ai servizi Watson.
@@ -157,6 +169,7 @@ rete di sovrapposizione VXLAN NSX di comunicare con il backbone di {{site.data.k
 viceversa.
 
 ### Associazione dei componenti software
+{: #vcscar-physical-soft-comp-mapping}
 
 L'applicazione Skate Advisor utilizza i seguenti componenti
 software.
@@ -179,6 +192,7 @@ che è ospitata nel browser del client. Il chatbot
 comunica con Watson tramite i microservizi basati su Node.js.
 
 ## Panoramica della gestione
+{: #vcscar-physical-mgmt-ovw}
 
 Acme Skate Advisor risiede su {{site.data.keyword.cloud_notm}} e, per questo motivo,
 è un aspetto critico dell'architettura. {{site.data.keyword.cloud_notm}} ha la seguente
@@ -198,7 +212,8 @@ ai provider cloud e agli ambienti {{site.data.keyword.icpfull_notm}} e {{site.da
 distribuiti in ciascun data center/ambiente cloud, con MCM che fornisce il
 meccanismo per connettere i cluster {{site.data.keyword.icpfull_notm}} in un'unica vista di gestione.
 
-### Link correlati
+## Link correlati
+{: #vcscar-physical-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

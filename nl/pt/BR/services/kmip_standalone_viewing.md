@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Visualizando instâncias do KMIP for VMware on IBM Cloud
+{: #kmip_standalone_viewing}
 
 Use este procedimento para visualizar as instâncias do KMIP for VMware on {{site.data.keyword.cloud}} que você pediu e informações sobre elas.
 
 ## Procedimento para visualizar instâncias do KMIP for VMware on IBM Cloud
+{: #kmip_standalone_viewing-procedure}
 
 Clique em **Instâncias implementadas** na área de janela de navegação à esquerda e role para baixo até a tabela **Instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}** para visualizar informações sobre as instâncias que você pediu:
 
@@ -29,16 +31,16 @@ O status da instância pode ter uma gama de opções.
 
 Tabela 2. Descrições de status de instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
-| Status | Descrição       |
+| Status        | Descrição       |
 |:------------- |:------------- |
 | Instalando | A instância está sendo criada. |
 | Instalado | A instância está pronta para uso. |
 | Removendo | A instância está sendo excluída. |
 
-### Links relacionados
+## Links relacionados
+{: #kmip_standalone_viewing-related}
 
-* [Pedindo instâncias do KMIP for
-VMware on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html)
-* [Incluindo, visualizando e excluindo certificados para instâncias do KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services/kmip_standalone_addingdeletingcert.html)
-* [ Excluindo o KMIP for VMware em  {{site.data.keyword.cloud_notm}}  instâncias ](/docs/services/vmwaresolutions/services/kmip_standalone_deleting.html)
-* [ Eventos do Activity Tracker ](/docs/services/vmwaresolutions/vmonic/at-events.html)
+* [Solicitando instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)
+* [Incluindo, visualizando e excluindo certificados para instâncias do KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_addingdeletingcert)
+* [Excluindo o KMIP for VMware em {{site.data.keyword.cloud_notm}} instâncias](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
+* [Eventos de rastreador de atividade](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Arricchimento con l'intelligenza artificiale, l'analisi e altri servizi di cloud pubblico
+{: #vcscontent-aianalytics}
 
 L'arricchimento di Stock Trader non è un passo da compiere solo una volta. Per Todd e Jane, si tratta di un processo iterativo. Nella seguente figura, vedi che Jane ha aggiunto il servizio Watson Tone Analyzer e una regola del livello di fedeltà utilizzando il centro decisionale ODM. I seguenti elementi evidenziano come è stato arricchito Stock Trader.
 
@@ -16,6 +17,7 @@ Figura 1. Ulteriore arricchimento di Stock Trader
 ![Risultati dell'iterazione di arricchimento di Stock Trader](vcscontent-enriched.svg)
 
 ## AI Watson Tone Analyzer
+{: #vcscontent-aianalytics-ai-watson}
 
 Il seguente esempio è un modo semplice per arricchire un'applicazione, ma è ingannevolmente potente. Jane sfoglia il [catalogo {{site.data.keyword.cloud}}](https://console.cloud.ibm.com/catalog/) per i servizi [AI](https://console.cloud.ibm.com/catalog/?category=ai) e [Analytics](https://console.cloud.ibm.com/catalog/?category=analytics) e trova il catalogo ricco di contenuti.
 
@@ -27,6 +29,7 @@ Grazie al refactoring, Jane ha sperimentato vari framework di interfacce utente 
 In futuro, Jane può fornire consigli su azioni predittive in base alla varietà di servizi di analisi disponibili per l'esecuzione nell'istanza del cloud privato, {{site.data.keyword.cloud_notm}} Private.
 
 ## Regola di business del livello di fedeltà
+{: #vcscontent-aianalytics-loyalty-rule}
 
 Originariamente, Jane aveva una logica nel suo codice per determinare quale importo
 monetario avrebbe potuto causare un ostacolo alla fedeltà. Tuttavia, dopo ripetute richieste
@@ -40,6 +43,7 @@ Jane ha parlato con Todd, che ha aggiunto il
 Ora, Margaret, il direttore marketing, può accedere e modificare gli intervalli del livello di fedeltà ogni volta che è in corso una campagna senza modificare alcun codice.
 
 ## Nuovo servizio azionario
+{: #vcscontent-aianalytics-new-stock-service}
 
 Potresti notare che il servizio azionario è stato modificato.
 Questo può accadere quando un servizio pubblico cambia proprietario o la sua struttura
@@ -57,7 +61,8 @@ le modifiche API sono state mascherate dietro le quinte.
 Inoltre, con il monitoraggio e la misurazione in API Connect, Jane è in grado di rintracciare
 chi utilizza la sua API semplificata.
 
-### Link correlati
+## Link correlati
+{: #vcscontent-aianalytics-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

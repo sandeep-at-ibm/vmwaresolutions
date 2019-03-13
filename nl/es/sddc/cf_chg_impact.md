@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,13 +14,16 @@ lastupdated: "2018-12-11"
 {:faq: data-hd-content-type='faq'}
 
 # Consideraciones sobre el cambio de artefactos de Cloud Foundation
+{: #cf_chg_impact}
 
 El cambio de usuarios, recursos o subredes reservados para {{site.data.keyword.vmwaresolutions_full}} puede afectar a las operaciones de gestión de las instancias de VMware Cloud Foundation.
 
 No cambie los permisos globales del grupo **ic4v-vCenter** en la página **Usuarios y grupos** del cliente web de VMware vSphere. Los ejemplos siguientes son cambios de permiso global: cambiar el nombre de usuario, suprimir el usuario o cambiar su contraseña.
+Utilice el ID de usuario de host **customerroot** en lugar del ID de usuario de host **root**.
 {:important}
 
 ## Cuentas de usuario específicas de servicio
+{: #cf_chg_impact-service-usr-account}
 {: faq}
 
 Cada servicio crea una cuenta de usuario interna en vCenter Server. Esta cuenta es necesaria para que las operaciones de gestión que están asociadas a un servicio se puedan conectar con vCenter Server para realizar las operaciones en el servicio.
@@ -34,6 +37,7 @@ El ID de usuario de esta cuenta está en el formato `<service_name>-<truncated s
 {:note}
 
 ## Recursos de VMware correspondientes a instancias de Cloud Foundation
+{: #cf_chg_impact-vmware-resources}
 
 En la tabla siguiente se muestran las operaciones que podrían verse afectadas si cambia los recursos de VMware fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}. Si se dispone de una solución de recuperación, también se muestra.
 
@@ -60,23 +64,21 @@ Tabla 2. Operaciones afectadas por el acceso SSH y shell (local)
 Si opta por inhabilitar el acceso SSH o shell, debe volver a habilitarlo temporalmente antes de realizar las operaciones indicadas.
 
 ## Gestión de subredes correspondientes a instancias de Cloud Foundation
+{: #cf_chg_impact-mgmt-subnets}
 
 En la siguiente información se describen las subredes solicitadas por {{site.data.keyword.vmwaresolutions_short}} y se muestran opciones para que pueda solicitar subredes adicionales para su propio uso.
 
-** PRECAUCIÓN: ** No utilice estos componentes para otros fines, o la estabilidad de su entorno se vea gravemente comprometida.
+**PRECAUCIÓN:** No utilice estos componentes para otros fines, o la estabilidad de su entorno se vea gravemente comprometida.
 
 Con cada pedido de servidor nativo de {{site.data.keyword.cloud_notm}}, se solicitan de forma predeterminada los siguientes rangos de direcciones IP:
-
 *  Un rango público primario de 32 direcciones IP
 *  Un rango privado primario de 64 direcciones IP
 
 Además, las siguientes subredes de gestión también están reservadas para {{site.data.keyword.vmwaresolutions_short}}:
-
 *  Dos subredes privadas portátiles de 64 direcciones IP en la primera VLAN: uno para la gestión y la otra para VTEPS.
 *  Dos subredes privadas portátiles de 64 direcciones IP en la segunda VLAN: uno para vMotion y una para vSAN.
 *  Una subred pública portátil de 16 direcciones IP en la VLAN pública.
 
 Si necesita utilizar más subredes, puede obtener las direcciones IP que puede utilizar de una de las siguientes formas:
-
 * **Opción 1 (recomendada):** utilice superposiciones de red virtual VMware NSX. Se proporciona una plantilla de VXLAN de muestra cuando se realiza el pedido. Esta plantilla de VXLAN se puede utilizar como punto de partida para crear SDN.
 * **Opción 2:** Solicite sus propias subredes públicas o privadas portátiles para obtener direcciones IP. Para distinguir las subredes que solicita de las subredes de gestión, puede añadir notas a todas las subredes que solicite.

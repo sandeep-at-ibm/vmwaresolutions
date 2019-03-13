@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Lista de materiais do vCenter Server
+{: #vc_bom}
 
 Revise as informações da Lista de materiais (BOM) para instâncias do VMware vCenter Server.
 
 ## BOM de VLANs para instâncias do vCenter Server
+{: #vc_bom-vlans}
 
 A tabela a seguir detalha as informações da BOM para as VLANs do vCenter Server.
 
@@ -29,6 +31,7 @@ Tabela 1. BOM para as VLANs em instâncias do vCenter Server
 | VLAN3     | B privado, móvel | Designado ao VMware vSAN, se usado.<br><br>Designado ao VMware NFS, se usado.<br><br>Designado ao VMware vSphere vMotion. |
 
 ## BOM do software para instâncias do vCenter Server
+{: #vc_bom-software}
 
 A tabela a seguir detalha as informações da BOM para componentes de software do vCenter Server.
 
@@ -47,6 +50,7 @@ VMware vSAN é um componente opcional.
 {:note}
 
 ## Definições de configuração avançada para servidores ESXi
+{: #vc_bom-esxi-server-advance-config}
 
 Revise a tabela a seguir para obter uma visão geral das definições de configuração avançada aplicadas a servidores ESXi. Essas configurações dependem se a instância do vCenter Server foi implementada na V2.2 ou mais recente ou submetida a upgrade para a V2.2 ou mais recente da V2.1 ou anterior.
 
@@ -75,6 +79,7 @@ Tabela 3. Definições de configuração avançadas de servidores ESXi para inst
   Para obter mais informações, consulte [Aumentando o valor padrão que define o número máximo de montagens do NFS em um host ESXi](https://kb.vmware.com/s/article/2239).
 
 ## Definições de configuração do grupo da porta e NSX
+{: #vc_bom-nsx-port-group-config}
 
 Revise a tabela a seguir para obter uma visão geral das definições de configuração do grupo da porta e VMware NSX para instâncias do vCenter Server e as diferenças entre as liberações.
 
@@ -93,6 +98,7 @@ Tabela 4. Definições de configuração do grupo da porta e NSX para instância
 | Grupo da porta SDDC-DPortGroup-External | **Ligação da porta** configurada como **Ephemeral - sem ligação** | **Ligação da porta** configurada como **Ligação estática** |
 
 ## NetworkMTU as definições de configuração
+{: #vc_bom-network-mtu-config}
 
 O cluster do vSphere usa dois vSphere Distributed Switches (vDS), um para conectividade de rede pública e outro para conectividade de rede privada.
 
@@ -117,20 +123,23 @@ Para instâncias que foram implementadas na versão V2.0 ou anterior, é recomen
 comutador público para 1500.
 
 ### Atualizando a configuração de MTU do comutador público
+{: #vc_bom-procedure-update-public-switch-mtu-setting}
 
 Para atualizar a configuração de MTU para o comutador público, conclua as seguintes etapas no VMware vSphere Web Client:
 1. Clique com o botão direito no vDS e clique em **Configurações de edição**.
 2. Na **guia Propriedades**, selecione a opção **Avançado**.
 3. Certifique-se de que o valor de **MTU máximo** esteja configurado para 1500.
 
-   **Nota:** quando o tamanho de MTU em um vDS é mudado, os uplinks conectados (NICs físicos) são desativados e ativados novamente. Como resultado, uma breve interrupção ocorre para as MVs que estão usando o uplink. Portanto, é
+   Quando o tamanho de MTU em um vDS é mudado, os uplinks anexos (NICs físicos) são desativados e ativados novamente. Como resultado, uma breve interrupção ocorre para as MVs que estão usando o uplink. Portanto, é
 recomendável planejar a atualização de configuração do MTU durante o tempo de inatividade planejado.
+   {:note}
 
-### Links relacionados
+## Links relacionados
+{: #vc_bom-related}
 
 * [Números de compilação e versões do VMware ESXi e do ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Números de compilação e versões do VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Ativando quadros gigantes em comutadores virtuais distribuídos](https://kb.vmware.com/s/article/1038827)
 * [Planilha de dados de proteção do VMware vCenter Server on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [Planejando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Planejando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

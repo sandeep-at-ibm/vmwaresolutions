@@ -68,4 +68,4 @@ Nel funzionamento di L2C (L2 Concentrator) sono stati riscontrati pochi o zero p
 {: #vcshcx-troubleshooting-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html) 
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro) 

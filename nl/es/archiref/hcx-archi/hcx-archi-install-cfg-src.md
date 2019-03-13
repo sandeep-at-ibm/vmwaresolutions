@@ -4,18 +4,20 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-18"
+lastupdated: "2019-02-15"
 
 ---
 # Instalación y configuración de HCX en el origen
+{: #hcx-archi-install-cfg-src}
 
 La instalación local implica desplegar el dispositivo de gestión de HCX y registrarlo con el vCenter y uno o más puntos finales de nube habilitados para VCF/VCS HCX.
 
 ## Instalación del dispositivo HCX Manager
+{: #hcx-archi-install-cfg-src-install-hma}
 
 Instale el dispositivo HCX Manager en el vCenter local.
 
-1. Inicie una la sesión en **Mi VMware** y descargue el archivo OVA de Hybrid Cloud Services desde la página de descargas del producto.
+1. Inicie la sesión en **Mi VMware** y descargue el archivo OVA de Hybrid Cloud Services desde la página de descargas del producto.
 2. Abra un navegador e inicie una sesión en el cliente web de vSphere. Esta tarea no se puede realizar desde el cliente de vSphere. Visualice el separador **Inicio**.
 3. En la lista **Árboles de inventario**, pulse **Host y clústeres**.
 4. Expanda la jerarquía para mostrar los centros de datos.
@@ -54,6 +56,7 @@ continuar.
   * Examine el separador **Resumen**; la consola muestra **Encendido** y el botón **Reproducir** está verde.
 10. HCX Manager está encendido y listo para que se registre con vCenter.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #hcx-archi-install-cfg-src-related}
 
-* [Preparación del entorno de instalación](hcx-archi-prep-install.html)
+* [Preparación del entorno de instalación](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-prep-install)

@@ -4,17 +4,19 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # Sobre o NSX Edge Services Gateway
+{: #nsx_overview}
 
 A solução VMware NSX Edge Services Gateway (ESG) é uma extensão das VMware Cloud Foundation on {{site.data.keyword.cloud}} e vCenter Server on {{site.data.keyword.cloud_notm}} que estão atualmente disponíveis no {{site.data.keyword.cloud_notm}}. A arquitetura de solução para o Cloud Foundation e o vCenter Server detalha os componentes da solução e a configuração de alto nível de cada componente no design.
 
-Para obter mais informações sobre o design do Cloud Foundation e do vCenter Server, veja [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
+Para obter mais informações sobre o design do Cloud Foundation e do vCenter Server, veja [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Visão geral do NSX Edge Services Gateway
+{: #nsx_overview-nsx-esg}
 
 O NSX Edge Services Gateway conecta redes de stub isoladas a redes compartilhadas (uplink), fornecendo serviços comuns de gateway, como o Protocolo de Configuração de Host Dinâmico (DHCP), Rede Privada Virtual (VPN), Conversão de Endereço de Rede (NAT), roteamento dinâmico e balanceamento de carga. As implementações comuns do NSX Edge incluem zona desmilitarizada (DMZ), Extranets de VPN e ambientes de nuvem de diversos locatários em que o NSX Edge cria limites virtuais para cada componente de locatário, carga de trabalho ou gerenciamento. Os recursos a seguir estão disponíveis dentro do NSX Edge Service Gateway.
 
@@ -32,6 +34,7 @@ Tabela 1. Recursos disponíveis com o NSX Edge Service Gateway
 | Balanceamento de Car | Fornece endereços IP virtuais simples e dinamicamente configuráveis e grupos de servidores. |
 | Alta Disponibilidade | Assegura um NSX Edge ativo na rede no caso de a máquina virtual NSX Edge primária estar indisponível. |
 
-### Links relacionados
+## Links relacionados
+{: #nsx_overview-related}
 
-* [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # Cas d'utilisation
+{: #vcsicp-usecases}
 
 ## Migration de charge de travail vers IBM Cloud
+{: #vcsicp-usecases-wkld-mig}
 
 L'entreprise Acme Skateboards souhaite étendre de façon transparente son environnement VMware SDDC sur site dans une instance VMware vCenter Server on {{site.data.keyword.cloud}}. Elle doit faire en sorte de rester opérationnelle et de réduire le plus possible ses temps d'indisponibilité. Reconfigurer ses applications pour qu'elles s'exécutent dans le cloud n'est pas une solution optimale.
 
@@ -36,6 +38,7 @@ Les services VMware Hybrid Cloud Extension créent une interconnectivité à cou
 Grâce à cette solution, Acme Skateboards a pu faire migrer ses charges de travail VMware locales vers {{site.data.keyword.cloud_notm}} tout en respectant ses deux exigences, à savoir réduire le plus possible ses temps d'indisponibilité et ne pas avoir à reconfigurer les applications.
 
 ## Déploiement d'architecture hybride
+{: #vcsicp-usecases-hybrid-archi-deployment}
 
 L'entreprise Acme Skateboards souhaite déployer une architecture hybride sur {{site.data.keyword.cloud_notm}} composée de vCenter et d'{{site.data.keyword.icpfull_notm}}, pour son parcours vers la modernisation de ses applications. Ses exigences sont les suivantes : exécuter ses bases de données sur des machines virtuelles, les applications et les services Web dans des conteneurs, et utiliser un jeu commun d'outils pour la gestion du réseau et de la sécurité.
 
@@ -55,6 +58,7 @@ Figure 3. vCenter Server avec {{site.data.keyword.icpfull_notm}}
 
 ![vCenter Server avec {{site.data.keyword.icpfull_notm}}](vcsicp-virtual-icp-deployment-vcs.svg)
 
-### Liens connexes
+## Liens connexes
+{: #vcsicp-usecases-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

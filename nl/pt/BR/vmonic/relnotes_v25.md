@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-08-30"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-08-30"
 {:important: .important}
 
 # Notas sobre a Liberação para V2.5
+{: #relnotes_v25}
 
 Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte o [{{site.data.keyword.vmwaresolutions_short}}dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -24,11 +25,11 @@ O {{site.data.keyword.vmwaresolutions_short}} liberou correções do VMware em r
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Para obter mais informações, veja [Tratando as vulnerabilidades Spectre e Meltdown](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
+Para obter mais informações, veja [Tratando as vulnerabilidades Spectre e Meltdown](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre).
 
 ## Atualização de componente NSX
 
-Esta liberação instala o VMware NSX for vSphere 6.4.1 para novas implementações do VMware vCenter Server on {{site.data.keyword.cloud_notm}}, VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle, NetApp ONTAP Select e VMware Federal on {{site.data.keyword.cloud_notm}}.
+Essa liberação instala o VMware NSX for vSphere 6.4.1 para novas implementações do VMware vCenter Server on {{site.data.keyword.cloud_notm}}, do VMware vCenter Server on {{site.data.keyword.cloud_notm}} com Hybridity Bundle e do NetApp ONTAP Select.
 
 ## Remoção da configuração de backup padrão
 
@@ -36,7 +37,7 @@ O {{site.data.keyword.vmwaresolutions_short}} oferece dois serviços de compleme
 
 Iniciando com a liberação da V2.5, os serviços IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} e Veeam on {{site.data.keyword.cloud_notm}}, quando implementados, não pré-configuram mais o backup de quaisquer MVs. Com essa mudança, é possível assegurar uma configuração adequada de todos os aspectos de suas tarefas de backup, incluindo planejamento, período de retenção, uso de deduplicação, monitoramento e alertas e gerenciamento de chaves de criptografia. Além disso, a MV do IBM CloudDriver não é mais configurada como um servidor de arquivos persistente para backups do NSX.
 
-Você é responsável pela configuração, gerenciamento e monitoramento de todos os componentes de software, incluindo o backup e a disponibilidade da infraestrutura de gerenciamento e das cargas de trabalho. Para obter mais informações, consulte [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html#backing-up-components).
+Você é responsável pela configuração, gerenciamento e monitoramento de todos os componentes de software, incluindo o backup e a disponibilidade da infraestrutura de gerenciamento e das cargas de trabalho. Para obter mais informações, consulte [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#backing-up-components).
 
 Essa mudança não afeta as instâncias que são implementadas antes da V2.5 que têm o serviço IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}} instalado.
 {:note}
@@ -55,8 +56,8 @@ Iniciando com a liberação V2.5, o {{site.data.keyword.vmwaresolutions_short}} 
 * Para instâncias que foram implementadas nas liberações V2.4 e anteriores, é possível migrá-las para uma conta especificada do {{site.data.keyword.cloud_notm}} e, em seguida, gerenciá-las usando o IAM também.
 
 Para obter mais informações, veja os tópicos a seguir:
-* [Convidando usuários para acessar serviços e recursos](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
-* [Gerenciando o acesso de usuário com o IAM](/docs/services/vmwaresolutions/vmonic/iam.html)
+* [Convidando usuários para acessar serviços e recursos](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
+* [Gerenciando o acesso de usuário com o IAM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
 
 ## Mudanças nas contas do usuário e grupos para instâncias do VMware vCenter Server e do VMware Cloud Foundation
 
@@ -71,8 +72,8 @@ de usuário do host **ic4vroot** foi criada apenas para uso da IBM.
 
 Para obter mais informações sobre contas do usuário, consulte os tópicos a seguir:
 
-* [Considerações sobre como alterar os artefatos do vCenter Server](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html)
-* [Considerações sobre como alterar os artefatos do Cloud Foundation](/docs/services/vmwaresolutions/sddc/cf_chg_impact.html)
+* [Considerações sobre como alterar os artefatos do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)
+* [Considerações sobre como alterar os artefatos do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cf_chg_impact)
 
 ## Atualizações para serviços complementares
 
@@ -102,7 +103,7 @@ de serviço do KMIP for VMware on {{site.data.keyword.cloud_notm}} ](/docs/servi
 
 ### Documentação de armazenamento anexado
 
-O armazenamento Anexado para o vCenter Server no documento técnico do IBM Cloud agora está disponível na seção *Referência* da documentação do usuário. Para obter mais informações, veja [Armazenamento anexado para o vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/attached-storage/storage-benefits.html).
+O armazenamento Anexado para o vCenter Server no documento técnico do IBM Cloud agora está disponível na seção *Referência* da documentação do usuário. Para obter mais informações, veja [Armazenamento anexado para o vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits).
 
 ### Especificações técnicas
 
@@ -114,9 +115,9 @@ As informações de serviços são melhoradas para identificar facilmente o supo
 
 Para obter mais informações, veja os tópicos a seguir:
 
-* [Serviços disponíveis para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html#available-services-for-vcenter-server-instances)
-* [Serviços disponíveis para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [Serviços disponíveis para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html#available-services-for-cloud-foundation-instances)
+* [Serviços disponíveis para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)
+* [Serviços disponíveis para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [Serviços disponíveis para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices#available-services-for-cloud-foundation-instances)
 
 ## Atualizações e aprimoramentos da interface com o usuário
 

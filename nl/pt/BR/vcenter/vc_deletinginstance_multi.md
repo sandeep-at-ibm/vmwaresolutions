@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Excluindo instâncias do vCenter Server em uma configuração de vários sites
+{: #vc_deletinginstance_multi}
 
 Esteja ciente das seguintes considerações especiais antes de planejar a exclusão de instâncias do vCenter Server que fazem parte de uma configuração multisite.
 
@@ -30,6 +31,7 @@ Você é faturado até o final do ciclo de faturamento da infraestrutura do {{si
 {:note}
 
 ## Procedimento para excluir instâncias do vCenter Server em uma configuração multisite
+{: #vc_deletinginstance_multi-procedure}
 
 1. Remova todos os serviços da instância secundária do vCenter Server.
 2. Assegure-se de que nenhum objeto NSX seja expandido para a instância secundária que você deseja excluir.
@@ -39,7 +41,8 @@ Você é faturado até o final do ciclo de faturamento da infraestrutura do {{si
 6. Repita as etapas 1 a 5 para todas as instâncias secundárias do vCenter Server em sua configuração multisite.
 7. Depois de excluir todas as instâncias secundárias, também será possível excluir a instância primária do console do {{site.data.keyword.vmwaresolutions_short}}.
 
-### Links relacionados
+## Links relacionados
+{: #vc_deletinginstance_multi-related}
 
-* [Excluindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)
-* [Pedindo, visualizando e removendo serviços de instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Excluindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)
+* [Pedindo, visualizando e removendo serviços de instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)

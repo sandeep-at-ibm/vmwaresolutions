@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,14 +13,16 @@ lastupdated: "2019-01-14"
 {:important: .important}
 
 # Pedido de instancias de vCenter Server
+{: #vc_orderinginstance}
 
-Para desplegar una plataforma virtualizada VMware flexible y personalizable que se adapte perfectamente a sus necesidades de carga de trabajo, solicite una instancia de VMware vCenter. Durante el pedido inicial, también puede añadir servicios, como [Zerto on {{site.data.keyword.cloud}} para la recuperación tras desastre](../services/addingzertodr.html).
+Para desplegar una plataforma virtualizada VMware flexible y personalizable que se adapte perfectamente a sus necesidades de carga de trabajo, solicite una instancia de VMware vCenter. Durante el pedido inicial, también puede añadir servicios, como [Zerto on {{site.data.keyword.cloud}} para la recuperación tras desastre](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
 
 ## Requisitos
+{: #vc_orderinginstance-req}
 
 Asegúrese de haber realizado las tareas siguientes:
-* Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
-* Ha revisado la información de [Requisitos y planificación de instancias de vCenter Server](vc_planning.html).
+* Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+* Ha revisado la información de [Requisitos y planificación de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning).
 * Ha revisado el formato del nombre de dominio e instancia. El nombre de dominio y la etiqueta de subdominio se utilizan para generar el nombre de usuario y los nombres de servidor de la instancia.
 
 Tabla 1. Formato del valor de nombres de instancia y de dominio
@@ -37,22 +39,26 @@ No modifique ningún valor definido durante la solicitud o el despliegue de la i
 {:important}
 
 ## Valores del sistema
+{: #vc_orderinginstance-sys-settings}
 
 Debe especificar los valores del sistema siguientes cuando solicite una instancia de vCenter Server.
 
 ### Nombre de instancia
+{: #vc_orderinginstance-inst-name}
 
 El nombre de instancia debe cumplir los siguientes requisitos:
 * Solo se permiten caracteres alfanuméricos y el guión (-).
-* El nombre de instancia debe empezar y terminar por un carácter alfanumérico.
+* El nombre de instancia debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
 * La longitud máxima del nombre de instancia es de 10 caracteres.
 * El nombre de instancia debe ser exclusivo dentro de su cuenta.
 
 ### Primaria o secundaria
+{: #vc_orderinginstance-primary-secondary}
 
 Seleccione si desea solicitar una nueva instancia primaria o una instancia secundaria para una instancia primaria existente.
 
 ## Valores de licencia
+{: #vc_orderinginstance-licensing-settings}
 
 Especifique las opciones de licencia para los siguientes componentes de VMware de la instancia:
 * vCenter Server 6.5 - edición Standard
@@ -63,24 +69,27 @@ Para los usuarios de Business Partners, se incluyen y se adquieren en su nombre 
 
 Para usuarios que no son Business Partner, puede utilizar las licencias de VMware que proporciona IBM para estos componentes seleccionando **Incluir con la compra** o puede traer su propia licencia (BYOL) seleccionando **Proporcionaré** e indicando sus propias claves de licencia.
 
-### Atención:
+### Notas de licencia
+{: #vc_orderinginstance-licensing-notes}
 
 * Se necesita una licencia con un mínimo de ocho CPU, lo que equivale a cuatro servidores con dos CPU por servidor. La opción de licencia de cada componente de VMware se aplica a la instancia básica y a cualquier servidor ESXi que añada a la instancia posteriormente. Asegúrese de que su licencia da soporte a la expansión de capacidad futura en su infraestructura.
 * Las ediciones de licencia mínimas se indican en la interfaz de usuario. Si se da soporte a distintas ediciones de componentes, puede seleccionar la edición que desee. El usuario es el responsable de asegurar que la clave de licencia proporcionada es correcta para cada componente de VMware seleccionado.
 * Para vSphere, se incurre en un cargo de licencia en el momento de realizar el pedido, pero el cargo por licencia se abonará entonces a su cuenta.
 * Puede cambiar cualquier licencia que haya suministrado mediante el cliente web de VMware vSphere una vez finalizado el despliegue de la instancia.
 * El soporte para los componentes de VMware para los que suministre licencias lo ofrece VMware, no el equipo de soporte de IBM.
-{:important}
 
 ## Valores de Servidor nativo
+{: #vc_orderinginstance-bare-metal-settings}
 
 Los valores del servidor nativo dependen del centro de datos seleccionado y de la configuración del servidor nativo.
 
 ### Ubicación del centro de datos
+{: #vc_orderinginstance-dc-location}
 
 Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se alojará la instancia.
 
 ### Skylake
+{: #vc_orderinginstance-skylake}
 
 Si selecciona **Skylake**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades.
 
@@ -93,6 +102,7 @@ Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Skylake
 | Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 ### Certificado por SAP
+{: #vc_orderinginstance-sap}
 
 Si selecciona **Certificado por SAP**, no puede modificar los valores de CPU o RAM.
 
@@ -106,6 +116,7 @@ En función de sus requisitos, seleccione una configuración de servidor nativo:
   * Procesador Quad Intel Xeon E7-8890 v4 / 96 núcleos en total, 2,2 GHz / 4096 GB de RAM
 
 ### Broadwell
+{: #vc_orderinginstance-broadwell}
 
 Si selecciona **Broadwell**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades.
 
@@ -120,16 +131,22 @@ Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Número de servidores nativos
+{: #vc_orderinginstance-bare-metal-number}
 
 Para el clúster inicial de la instancia, puede configurar un número de servidores ESXi comprendido entre 2 y 20. Todos los servidores ESXi comparten la configuración del conjunto.
 
-Después del despliegue inicial, puede añadir cuatro clústeres más. Si ha seleccionado la configuración **Skylake** o **Broadwell** para VMware vSAN, se necesitan 4 servidores ESXi para el clúster inicial y para los posteriores al despliegue. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+Después del despliegue inicial, puede añadir cuatro clústeres más. Si ha seleccionado la configuración **Skylake** o **Broadwell** para VMware vSAN, se necesitan 4 servidores ESXi para el clúster inicial y para los posteriores al despliegue. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Valores de almacenamiento
+{: #vc_orderinginstance-storage-settings}
 
 Los valores de almacenamiento dependen de la opción que seleccione de configuración de Servidor nativo y de tipo de almacenamiento.
 
+Para instancias V2.8 y posteriores, puede añadir comparticiones de almacenamiento NFS a un clúster NFS o vSAN existente. Para obtener más información, consulte la sección *Adición de almacenamiento NFS a instancias de vCenter Server* en [Expansión y contracción de la capacidad de las instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers#adding-nfs-storage-to-vcenter-server-instances).
+{:note}
+
 ### Almacenamiento vSAN
+{: #vc_orderinginstance-vsan-storage}
 
 vSAN está disponible solo para la configuración de servidor nativo **Skylake** o **Broadwell**. Especifique las siguientes opciones de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
@@ -143,6 +160,7 @@ vSAN está disponible solo para la configuración de servidor nativo **Skylake**
 * **Licencia de vSAN**: Utilice la licencia de VMware que proporciona IBM para el componente vSAN seleccionando **Incluir con la compra**, o traiga su propia licencia (BYOL) seleccionando **Proporcionaré** e indicando su propia clave de licencia.
 
 ### Almacenamiento NFS
+{: #vc_orderinginstance-nfs-storage}
 
 Cuando seleccione **Almacenamiento de NFS**, puede añadir almacenamiento compartido a nivel de archivo para la instancia donde todas las comparticiones utilizan los mismos valores o pueden especificar distintos valores de configuración para cada compartición de archivos. Especifique las siguientes opciones de NFS:
 
@@ -165,16 +183,19 @@ Tabla 4. Opciones de nivel de rendimiento de NFS
   | 10 IOPS/GB | Esta opción está diseñada para los tipos de carga de trabajo más exigentes, como las analíticas. Las aplicaciones de ejemplo incluyen bases de datos con un gran número de transacciones y otras bases de datos sensibles al rendimiento. Este nivel de rendimiento está limitado a una capacidad máxima de 4 TB por compartición de archivo. |
 
 ### Discos locales
+{: #vc_orderinginstance-local-disks}
 
 La opción de discos locales solo está disponible para la configuración de tipo procesador nativo Quad Intel Xeon E7-8890 v4 **certificado por SAP**. Especifique las siguientes opciones:
 * **Recuento de discos**: seleccione el número de discos que desea añadir.
 * **Tipo de disco**: seleccione una opción para el tipo de disco que necesita.
 
 ## Valores de interfaz de red
+{: #vc_orderinginstance-network-interface-settings}
 
 Debe especificar los siguientes valores de interfaz de red cuando solicite una instancia de vCenter Server.
 
 ### Prefijo de nombre de host
+{: #vc_orderinginstance-host-name-prefix}
 
 El prefijo del nombre de host debe cumplir los siguientes requisitos:
 *  Solo se permiten caracteres alfanuméricos y el guión (-).
@@ -182,18 +203,20 @@ El prefijo del nombre de host debe cumplir los siguientes requisitos:
 *  La longitud máxima del prefijo de nombre de host es de 10 caracteres.
 
 ### Etiqueta de subdominio
+{: #vc_orderinginstance-subdomain-label}
 
 La etiqueta de subdominio debe cumplir los siguientes requisitos:
 *  Solo se permiten caracteres alfanuméricos y el guión (-).
-*  La etiqueta de subdominio debe empezar y terminar por un carácter alfanumérico.
+*  La etiqueta de subdominio debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
 *  La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
 *  La etiqueta de subdominio debe ser exclusiva dentro de su cuenta.
 
 ### Nombre de dominio
+{: #vc_orderinginstance-domain-name}
 
 El nombre del dominio raíz debe cumplir los siguientes requisitos:
 * El nombre de dominio debe constar de dos o más series de caracteres separadas por un punto (.)
-* La primera serie debe comenzar por un carácter alfabético y terminar por un carácter alfanumérico.
+* La primera serie debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
 * Todas las series, excepto la última, solo pueden contener caracteres alfanuméricos y caracteres de guión (-).
 * La última serie solo puede contener caracteres alfabéticos.
 * La longitud de la última serie debe estar comprendida entre 2 y 24 caracteres.
@@ -202,6 +225,7 @@ La longitud máxima del nombre de dominio completo (FQDN) para hosts y VM es de 
 {:note}
 
 ### Red pública o privada
+{: #vc_orderinginstance-public-private-network}
 
 Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en la selección de **Red pública y privada** o de **Solo red privada**. Los siguientes servicios de complemento necesitan NIC públicos y no están disponibles si selecciona la opción privada:
 
@@ -211,15 +235,19 @@ Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en 
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### VLAN
+{: #vc_orderinginstance-vlans}
 
 Los valores del sistema de redes dependen de si ha seleccionado **Realizar pedido de nuevas VLAN** o **Seleccionar las VLAN existentes**.
 
 Se necesita una VLAN pública y dos VLAN privadas para el pedido de la instancia. Las dos VLAN privadas se conectan en modalidad troncal en cada servidor nativo.
 
 #### Realizar pedido de nuevas VLAN
+{: #vc_orderinginstance-new-vlans}
+
 Seleccione esta opción para solicitar una VLAN pública nueva y dos VLAN privadas nuevas.
 
 #### Seleccionar las VLAN existentes
+{: #vc_orderinginstance-existing-vlans}
 
 En función del {{site.data.keyword.CloudDataCent_notm}} que haya seleccionado, puede que haya VLAN públicas y privadas existentes disponibles.
 
@@ -230,12 +258,11 @@ Cuando seleccione reutilizar las VLAN públicas y privadas existentes, especifiq
 * **Subred primaria** se asigna a hosts físicos para acceder a la red pública.
 * **Subred primaria privada** se asigna a hosts físicos para el tráfico de gestión.
 
-##### Importante
-
-* Asegúrese de que la configuración del cortafuegos en las VLAN seleccionadas no bloquee el tráfico de datos de gestión.
-* Asegúrese de que todas las VLAN que seleccione estén en el mismo pod. Los servidores ESXi no se pueden suministrar en VLAN en pods mixtos.
+Asegúrese de que la configuración del cortafuegos en las VLAN seleccionadas no bloquee el tráfico de datos de gestión. También asegúrese de que todas las VLAN que seleccione estén en el mismo pod. Los servidores ESXi no se pueden suministrar en VLAN en pods mixtos.
+{:important}
 
 ### Configuración DNS
+{: #vc_orderinginstance-dns-config}
 
 Seleccione la configuración de DNS (sistema de nombres de dominio) para la instancia:
 
@@ -252,14 +279,17 @@ Tiene 30 días para activar las VM.
 Para obtener más información sobre las licencias de Windows, consulte [Documentación de Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Valores de servicios
+{: #vc_orderinginstance-addon-services}
 
-Cuando solicite una instancia de vCenter Server, también puede solicitar servicios adicionales. Para obtener más información sobre los servicios, consulte [Servicios disponibles para instancias de vCenter Server](vc_addingremovingservices.html#available-services-for-vcenter-server-instances).
+Cuando solicite una instancia de vCenter Server, también puede solicitar servicios adicionales. Para obtener más información sobre los servicios, consulte [Servicios disponibles para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances).
 
 ## Resumen del pedido
+{: #vc_orderinginstance-order-summary}
 
 En función de la configuración seleccionada para la instancia y los servicios de complementos, el coste estimado se genera y se muestra al instante en la sección **Resumen de pedido** en el panel derecho. Pulse **Detalles sobre precios** en la parte inferior del panel derecho para generar un documento PDF que proporcione la información estimada.
 
 ## Procedimiento para solicitar instancias de vCenter Server
+{: #vc_orderinginstance-procedure}
 
 1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** desde el panel de navegación de la izquierda y, a continuación, pulse **vCenter Server** en la sección **Centros de datos virtuales**.
 2. En la página **VMware vCenter Server on IBM Cloud**, pulse la tarjeta **vCenter Server** y pulse **Crear**.
@@ -302,17 +332,19 @@ Para obtener más información sobre cómo proporcionar valores para un servicio
    3. Pulse el enlace o enlaces de los términos que se aplican a su pedido y confirme que acepta estos términos antes de solicitar la instancia.
    4. Pulse **Suministro**.
 
-## Resultados
+## Resultados después de solicitar instancias de vCenter Server
+{: #vc_orderinginstance-results}
 
 El despliegue de la instancia comienza automáticamente. Recibirá una confirmación de que el pedido se está procesando y puede comprobar el estado del despliegue consultando los detalles de la instancia.
 
-Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server](vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
+Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
 
 Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 
 Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se rearranque cuando finalice el pedido de la instancia secundaria.
 
 ## Qué hacer a continuación
+{: #vc_orderinginstance-next}
 
 Puede ver y gestionar la instancia de vCenter Server que ha solicitado.
 
@@ -328,12 +360,13 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 
    Las excepciones a estas actividades incluyen la gestión de comparticiones del archivo de almacenamiento compartido desde el {{site.data.keyword.slportal}}. Estas actividades incluyen: solicitar, suprimir (lo que puede afectar los almacenes de datos si están montados), autorizar y montar comparticiones del archivo de almacenamiento compartido.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vc_orderinginstance-related}
 
-* [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
-* [Visualización de instancias de vCenter Server](vc_viewinginstances.html)
-* [Configuración de varios sitios de instancias de vCenter Server](vc_multisite.html)
-* [Adición, visualización y supresión de clústeres para instancias de vCenter Server](vc_addingviewingclusters.html)
-* [Ampliación y reducción de la capacidad para instancias de vCenter Server](vc_addingremovingservers.html)
-* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](vc_addingremovingservices.html)
-* [Supresión de instancias de vCenter Server](vc_deletinginstance.html)
+* [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Visualización de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [Configuración de varios sitios de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
+* [Adición, visualización y supresión de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Ampliación y reducción de la capacidad para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [Supresión de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)

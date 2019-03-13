@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # Redundância da máquina virtual vSAN
+{: #vum-vsan-redundancy}
 
 Ao colocar um host do vSphere ESXi no modo de manutenção em um cluster vSAN, é necessário selecionar um modo de evacuação de dados. A seleção do modo pode ter um impacto sobre as máquinas virtuais (MVs) e os dispositivos que estão consumindo o armazenamento de dados vSAN:
 * Uma **migração de dados integral** evita todos os dados do host e os move para os outros hosts vSphere ESXi no cluster vSAN. Esse modo de evacuação resulta na maior quantia de transferência de dados e consome mais tempo e recursos. Todos os componentes no armazenamento local do host selecionado são migrados em outro lugar no cluster. Quando o host entra no modo de manutenção, todas as MVs e os dispositivos têm acesso aos seus componentes de armazenamento e ainda estão em conformidade com suas políticas de armazenamento designadas. A evacuação de dados integral pode levar muito tempo e pode fazer com que a janela de manutenção para um upgrade tenha uma duração longa.
@@ -21,7 +22,8 @@ Esta seção cria uma nova política de armazenamento da MV que permite que o mo
 
 2. Aguarde até que o vSAN tenha concluído a sincronização antes de iniciar qualquer ação de correção. O status de conclusão pode ser verificado navegando para a **página de monitoramento de Objetos Virtuais de vSAN** para o cluster e revisando o **Status de conclusão**.
 
-### Links relacionados
+## Links relacionados
+{: #vum-vsan-redundancy-related}
 
 * [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)

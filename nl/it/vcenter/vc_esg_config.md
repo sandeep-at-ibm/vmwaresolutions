@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,8 +13,9 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Configurazione della rete per utilizzare l'ESG NSX gestito dal cliente con le tue VM
+{: #vc_esg_config}
 
-Configura la rete per le tue macchine virtuali in modo da poter usufruire del gateway dei servizi edge (ESG) VMware NSX che viene distribuito nelle tue istanze VMware vCenter Server. Per ulteriori informazioni sulle misure di sicurezza implementate per ridurre al minimo il rischio di sicurezza, vedi [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+Configura la rete per le tue macchine virtuali in modo da poter usufruire del gateway dei servizi edge (ESG) VMware NSX che viene distribuito nelle tue istanze VMware vCenter Server. Per ulteriori informazioni sulle misure di sicurezza implementate per ridurre al minimo il rischio di sicurezza, vedi [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX è una piattaforma di virtualizzazione di rete che consente la virtualizzazione di reti isolate e fornisce numerosi servizi
 di rete come switch, instradamento e firewall. Per ulteriori informazioni su NSX, vedi [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
@@ -28,12 +29,13 @@ Come parte del processo di ordine per la tua istanza di vCenter Server, le segue
 * Un dispositivo Edge NSX viene distribuito e configurato per eseguire la conversione degli indirizzi di rete (NAT) dall'intervallo di indirizzi IP
 dello switch logico del carico di lavoro a un indirizzo IP pubblico sulle regole NAT.
 
-  NXS Edge non viene distribuito per le istanze che sono solo private.
+  L'edge NXS non viene distribuito per le istanze che sono solo private.
   {:note}
 
-* Se hai installato il servizio Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager è configurato per eseguire un backup giornaliero delle configurazioni NSX. Per ulteriori informazioni, vedi [Considerazioni sull'istallazione di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud).
+* Se hai installato il servizio Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager è configurato per eseguire un backup giornaliero delle configurazioni NSX. Per ulteriori informazioni, vedi [Considerazioni sull'istallazione di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud).
 
 ## Procedura per configurare le impostazioni di rete per le tue VM
+{: #vc_esg_config-procedure-config-networking}
 
 Per usufruire di NSX per le tue VM del carico di lavoro, devi configurare una serie di impostazioni completando le seguenti operazioni quando crei le VM:
 
@@ -57,6 +59,7 @@ Per usufruire di NSX per le tue VM del carico di lavoro, devi configurare una se
 3. Assegna il gateway predefinito della VM come `192.168.10.1`. Questo è l'indirizzo IP del DLR NSX sullo stesso switch logico delle VM del carico di lavoro.
 
 ## Procedura per abilitare la regola SNAT
+{: #vc_esg_config-procedure-enable-snat-rule}
 
 Se vuoi che le tue VM del carico di lavoro abbiano accesso in uscita a Internet, devi abilitare la regola SNAT (Source Network Address Translation) associata. L'abilitazione della regola SNAT consente di convertire l'accesso Internet dalle tue VM in un unico indirizzo IP pubblico. Completa la seguente procedura nel client web VMware vSphere:
 
@@ -68,6 +71,7 @@ Se vuoi che le tue VM del carico di lavoro abbiano accesso in uscita a Internet,
 Per ulteriori informazioni sulle regole NAT dell'edge NSX, vedi [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 
 ## Procedura per identificare i dettagli delle sottoreti del cliente
+{: #vc_esg_config-procedure-identify-customer-subnets-details}
 
 L'edge **customer-nsx-edge** è destinato al tuo utilizzo personale, quindi puoi modificarlo per definire più regole NAT per il traffico in entrata o in uscita. Queste regole devono utilizzare solo gli indirizzi IP sulle sottoreti del cliente pubbliche o private ordinate a tuo nome.
 
@@ -83,12 +87,13 @@ Inoltre, puoi trovare ulteriori dettagli sulle sottoreti del cliente completando
 2. Fai clic sul menu del filtro e nel campo della sottorete immetti l'identificativo come mostrato nella descrizione dell'edge **customer-nsx-edge** sulla scheda **Riepilogo** nel client web VMware vSphere.
 3. Riesamina le note che vengono visualizzate per gli indirizzi IP. Queste note identificano quali sottoreti e indirizzi IP vengono ordinati e utilizzati durante la configurazione iniziale.
 
-   **Avvertenza:** non utilizzare gli indirizzi IP che vengono ordinati e utilizzati durante la configurazione iniziale. Puoi comunque utilizzare altri indirizzi IP
+   Non utilizzare gli indirizzi IP che vengono ordinati e utilizzati durante la configurazione iniziale. Puoi comunque utilizzare altri indirizzi IP
    su queste sottoreti in base ai tuoi requisiti. Per configurare ulteriori regole NAT (network address translation), vedi [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
    {:important}
 
-### Link correlati
+## Link correlati
+{: #vc_esg_config-related}
 
 * [Risoluzione dei problemi](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
-* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Gateway dei servizi edge NSX](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

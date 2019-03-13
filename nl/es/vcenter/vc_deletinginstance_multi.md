@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-14"
 {:important: .important}
 
 # Supresión de instancias de vCenter Server en una configuración de varios sitios
+{: #vc_deletinginstance_multi}
 
 Tenga en cuenta las siguientes consideraciones especiales antes de planificar la supresión de instancias de vCenter Server que forman parte de una configuración de varios sitios.
 
@@ -30,6 +31,7 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 {:note}
 
 ## Procedimiento para suprimir instancias de vCenter Server en una configuración de varios sitios
+{: #vc_deletinginstance_multi-procedure}
 
 1. Elimine todos los servicios desde la instancia secundaria de vCenter Server.
 2. Asegúrese de que no hay ningún objeto NSX expandido en la instancia secundaria que desea suprimir.
@@ -39,7 +41,8 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 6. Repita los pasos 1 a 5 para todas las instancias secundarias de vCenter Server de la configuración de varios sitios.
 7. Después de suprimir todas las instancias secundarias, también puede suprimir la instancia primaria desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vc_deletinginstance_multi-related}
 
-* [Supresión de instancias de vCenter Server](vc_deletinginstance.html)
-* [Solicitud, visualización y eliminación de servicios de instancias de vCenter Server](vc_addingremovingservices.html)
+* [Supresión de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)
+* [Solicitud, visualización y eliminación de servicios de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)

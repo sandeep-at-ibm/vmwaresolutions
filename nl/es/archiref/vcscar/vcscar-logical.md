@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-02-15"
 
 ---
 
 # Diseño lógico de Skate Advisor
+{: #vcscar-logical}
 
 En la información siguiente se detallan los elementos de la aplicación que forman el diseño lógico del sistema.
 
 ## Componentes del sistema
+{: #vcscar-logical-sys-comp}
 
 Figura 1. Componentes de Skate Advisor
 ![Componentes de Skate Advisor](vcscar-components.svg)
@@ -20,6 +22,7 @@ Figura 1. Componentes de Skate Advisor
 Skate Advisor consiste principalmente de un chatbot que acepta texto o reconocimiento de voz para interactuar con el sistema de forma estructurada.
 
 ## Trucos
+{: #vcscar-logical-tricks}
 
 El elemento de datos principal de Skate Advisor es el truco. El lenguaje de truco define un truco de forma exclusiva. Este lenguaje se puede utilizar para llevar a cabo las tareas siguientes:
 - Conversar con el chatbot sobre los trucos.
@@ -28,14 +31,17 @@ El elemento de datos principal de Skate Advisor es el truco. El lenguaje de truc
 - Identificar un truco para ver la ubicación y mostrarlo en los medios.
 
 ### Definición de truco
+{: #vcscar-logical-trick-def}
 
 Un truco se define exclusivamente por las construcciones del lenguaje que lo describen. Consulte el motor de reglas de trucos para ver una definición completa.
 
 ### Lista de trucos
+{: #vcscar-logical-list-tricks}
 
 Una consulta del Truco base o de Aterrizaje definida en elementos del lenguaje devuelve una lista de trucos.
 
 ### Datos de los trucos
+{: #vcscar-logical-trick-data}
 
 Una vez devueltos, los trucos pueden contener la siguiente información:
 - Descripción del truco
@@ -43,6 +49,7 @@ Una vez devueltos, los trucos pueden contener la siguiente información:
 - Información sobre ubicación
 
 ## Secuencias de la conversación
+{: #vcscar-logical-conv-streams}
 
 El chatbot tiene un número limitado y predefinido de posibles conversaciones. Las conversaciones se definen por la siguiente información:
 - Búsqueda de trucos: buscar un conjunto de trucos válidos basados en un parámetro de consulta que representa el Truco base o el Aterrizaje.
@@ -58,8 +65,10 @@ Búsqueda de ubicación | ¿Dónde debería realizar este truco? | Lista de ubic
 Visualización en medios | Mostrar un vídeo de un truco |Una lista de resultados en medios
 
 ## Componentes de la interfaz de usuario
+{: #vcscar-logical-ui-comp}
 
 ### Chatbot
+{: #vcscar-logical-chatbot}
 
 El chatbot es un componente web que conversa con el usuario. El chatbot puede aceptar texto o voz. Los resultados, como por ejemplo listas, se representan en texto con un posible discurso de acompañamiento para representar los resultados.
 
@@ -85,18 +94,21 @@ Paso | Descripción
 11 | Los resultados se envían al usuario a través del chatbot.
 
 ### Representación de vídeo
+{: #vcscar-logical-video-render}
 
 El componente de representación de vídeo reproduce un vídeo o muestra un documento. Estos artefactos representan el artefacto de origen a partir del que se ha descubierto el truco.
 
 El componente de representación de vídeo es un widget incorporado en la interfaz web que muestra un vídeo. Los vídeos se muestran en el chatbot como resultado de una consulta del usuario del sistema. Una vez seleccionado, el enlace de vídeo resultante activa la representación del vídeo.
 
 ### Interfaz de ubicación
+{: #vcscar-logical-location-interface}
 
 Skate Advisor incluye una interfaz para que los usuarios del sistema graben la ubicación de un truco específico. El componente de interfaz web tiene dos elementos principales:
 1. Aceptar una ubicación del usuario del sistema como el mejor lugar en el que realizar un truco específico.
 2. Mostrar una o varias ubicaciones recomendadas para un truco específico.
 
 ## Componentes de Watson
+{: #vcscar-logical-watson-comp}
 
 En esta arquitectura se incluyen los siguientes componentes de Watson.
 * Knowledge Studio: Watson Studio es una herramienta con la que podemos diseñar el lenguaje de skate para el sistema y utilizar este lenguaje para reconocer documentos de la web que implementan el lenguaje de skate. Knowledge Studio ofrece un modelo que Watson Discovery utiliza.
@@ -106,6 +118,7 @@ En esta arquitectura se incluyen los siguientes componentes de Watson.
 * Watson Assistant: Watson Assistant es una herramienta para diseñar las interacciones entre los usuarios y la máquina (chatbot). Se debe entrenar con un lenguaje específico del dominio, por ejemplo específico de skateboarding, mediante series gramaticales a partir de las que Assistant reconoce y genera las respuestas adecuadas.
 
 ## Skate Advisor Service
+{: #vcscar-logical-skate-advisor-services}
 
 Skate Advisor Service es un componente de la aplicación que proporciona un conjunto de servicios de API para responder a las solicitudes. Los servicios que se exponen tienen una correlación directa con las secuencias de conversaciones que se han descrito anteriormente. La API expuesta tiene las siguientes categorías generales:
 * get_tricks - Devolver una lista de trucos basados en una <query\> (consulta) en lenguaje natural, que se presenta a Discovery Service.
@@ -114,6 +127,7 @@ Skate Advisor Service es un componente de la aplicación que proporciona un conj
 * accept_command - Aceptar un mandato de texto del chatbot y servir la solicitud.
 
 ## Entrenamiento de Discovery Service
+{: #vcscar-logical-disc-service-training}
 
 Watson Discovery se debe entrenar con un modelo de machine learning, que crea de forma iterativa un experto en el tema utilizando Watson Knowledge Studio.
 
@@ -127,6 +141,7 @@ Después del entrenamiento, Discovery Service puede responder a consultas como:
 - Enséñame todos los trucos.
 - Enséñame todos los trucos con varios combos.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vcscar-logical-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

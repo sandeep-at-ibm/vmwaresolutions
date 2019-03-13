@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Transfert et résolution
+{: #vum-staging}
 
 Les correctifs et les extensions peuvent être éventuellement transférés avant toute résolution pour garantir qu'ils sont téléchargés de VUM vers l'hôte vSphere ESXi sans appliquer les correctifs ou les extensions immédiatement. Lors de la résolution, VUM applique les correctifs, les extensions et les mises à niveau aux objets d'inventaire. Le transfert des correctifs et des extensions accélère le processus de résolution car les correctifs et les extensions sont déjà disponibles en local sur les hôtes.
 
@@ -37,12 +38,14 @@ La résolution est un processus au cours duquel VUM applique des correctifs, des
 Si la mise à jour l'exige, les hôtes sont placés en mode maintenance avant la résolution. Le dispositif VCSA effectue la migration des machines virtuelles vers d'autres hôtes au sein de l'instance VMware vCenter Server on {{site.data.keyword.cloud}} avant que l'hôte soit placé en mode maintenance.
 
 ## Pour les hôtes figurant dans un cluster vSAN
+{: #vum-staging-hosts-vsan}
+
 Tenez compte du comportement suivant des hôtes faisant partie d'un cluster vSAN :
 * L'exécution du processus de résolution d'hôte peut prendre énormément de temps.
 * Conformément à la conception, il ne peut y avoir qu'un seul hôte d'un cluster VSAN en mode maintenance à la fois.
 * VUM résout les hôtes faisant partie d'un cluster VSAN de manière séquentielle même si vous avez défini l'option pour les résoudre en parallèle.
 * Si une machine virtuelle sur l'hôte utilise une règle de stockage de machine virtuelle avec le paramètre **Number of failures to tolerate** défini sur 0, cela peut entraîner des retards inhabituels pour le passage en mode maintenance de l'hôte. Ce retard est dû au fait que vSAN doit migrer les données de la machine virtuelle d'un disque à un autre dans le cluster du magasin de données vSAN, ce qui peut prendre plusieurs heures. Vous pouvez contourner ce problème en définissant le paramètre **Number of failures to tolerate** défini sur 1 pour la règle de stockage de la machine virtuelle, ce qui entraîne la création de deux copies des fichiers de la machine virtuelle dans le magasin de données vSAN.
-* Si une machine virtuelle sur l'hôte utilise une règle de stockage de machine virtuelle avec le paramètre **Number of failures to tolerate** défini sur 1, la machine virtuelle devient non redondante lorsque l'hôte bascule en mode maintenance. Si cela n'est pas inacceptable, voir [Redondance de machine virtuelle vSAN](/docs/services/vmwaresolutions/archiref/vum/vum-vsan-redundancy.html).
+* Si une machine virtuelle sur l'hôte utilise une règle de stockage de machine virtuelle avec le paramètre **Number of failures to tolerate** défini sur 1, la machine virtuelle devient non redondante lorsque l'hôte bascule en mode maintenance. Si cela n'est pas inacceptable, voir [Redondance de machine virtuelle vSAN](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-vsan-redundancy).
 
 Pour résoudre des hôtes et des clusters, procédez comme suit :
 1. Dans le client vSphere Web Client, sélectionnez **Home** > **Hosts and Clusters**.
@@ -73,7 +76,8 @@ Il n'y a aucune condition requise dans une instance vCenter Server pour sélecti
 12. Sur la page Ready to complete, vous pouvez éventuellement cliquer sur **Pre-check Remediation** pour générer un rapport d'options de résolution de cluster, puis cliquer sur **OK**. La boîte de dialogue correspondant à ce rapport s'ouvre. Vous pouvez exporter ce rapport ou copier les entrées pour votre propre enregistrement et cliquer sur **Next**.
 13. Consultez la page **Ready to Complete** et cliquez sur **Finish**.
 
-### Liens connexes
+## Liens connexes
+{: #vum-staging-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

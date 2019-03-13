@@ -72,4 +72,4 @@ Tabla 2. Información predeterminada utilizada en la configuración de la aplica
 ## Enlaces relacionados
 {: #caveonix-step4-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

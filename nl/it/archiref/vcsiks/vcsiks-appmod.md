@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Panoramica sulla modernizzazione dell'applicazione
+{: #vcsiks-appmod}
 
 Il seguente diagramma mostra l'architettura di riferimento di modernizzazione dell'applicazione che Acme Skateboards distribuisce ed è descritta approfonditamente in questa serie di documenti.
 
@@ -24,15 +25,15 @@ L'infrastruttura di riferimento dispone dei seguenti componenti chiave:
 - **Virtualizzazione in loco** - La virtualizzazione in loco è un cluster VMware che attualmente ospita le VM Acme Skateboards. Queste VM stanno attualmente ospitando le applicazioni da modernizzare. Questo cluster è necessario per soddisfare i prerequisiti dell'architettura [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) in modo da poter eseguire HCX.
 
 HCX estende le reti in loco in {{site.data.keyword.cloud_notm}} consentendo ai clienti di migrare le VM nell'istanza VMware vCenter Server on {{site.data.keyword.cloud_notm}} che viene eseguita su {{site.data.keyword.cloud_notm}} e nell'altro senso, se necessario.
-- **{{site.data.keyword.cloud_notm}} for VWware Solutions** – L'istanza vCenter Server fornisce i blocchi di creazione di VMware fondamentali, quali vSphere, vCenter Server, NSX-V, e le opzioni di archiviazione che includono vSAN oppure l'archiviazione {{site.data.keyword.cloud_notm}} Endurance, che occorrono per distribuire automaticamente una soluzione VMware SDDC (Software Defined Data Center). Il cluster VMware è la destinazione per le VM migrate e per alcune applicazioni modernizzate nei contenitori ospitati in {{site.data.keyword.icpfull_notm}}. I componenti chiave in vCenter Server sono i seguenti:
+- **{{site.data.keyword.cloud_notm}} for VWware Solutions** – L'istanza vCenter Server fornisce i blocchi di creazione di VMware fondamentali, quali vSphere, vCenter Server, NSX-V, e le opzioni di archiviazione che includono vSAN oppure l'archiviazione {{site.data.keyword.cloud_notm}} Endurance, che occorrono per distribuire automaticamente una soluzione VMware SDDC (Software Defined Data Center). Il cluster VMware è la destinazione per le VM migrate e alcune applicazioni modernizzate nei contenitori ospitati in {{site.data.keyword.icpfull_notm}}. I componenti chiave in vCenter Server sono i seguenti:
   - **NSX-V** - NSX-V fornisce il livello di virtualizzazione di rete in vCenter Server che fornisce una sovrapposizione di rete per le VM Acme Skateboards. NSX-V abilita BYOIP e isola le reti del carico di lavoro dalle reti {{site.data.keyword.cloud_notm}} NSX-V è programmato da HCX per creare le reti che Acme Skateboards estende da locale.
-  - **NSX-T** - NSX-T fornisce una serie comune di strumenti per la gestione della rete e della sicurezza nei contenitori e nelle VM. NSX-T è completamente compatibile con Kubernetes CNI (Container Networking Interface) e si integra con CNI per fornire la rete del contenitore. NSX-T fornisce la rete di sovrapposizione utilizzata dalle applicazioni modernizzate e sostituisce Calico, che viene utilizzato in modo nativo da {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
+  - **NSX-T** - NSX-T fornisce una serie comune di strumenti per la gestione della rete e della sicurezza nei contenitori e nelle VM. NSX-T è completamente compatibile con Kubernetes CNI (Container Networking Interface) e si integra con CNI per fornire la rete del contenitore. NSX-T fornisce la rete di sovrapposizione che utilizzano le applicazioni modernizzate e sta sostituendo Calico, che viene utilizzato in modo nativo da {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
 - **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}} è una piattaforma dell'applicazione per lo sviluppo e la gestione delle applicazioni inserite nei contenitori. {{site.data.keyword.icpfull_notm}} è un ambiente integrato che include l'orchestrazione del contenitore Kubernetes, un repository di immagini privato, una console di gestione, i framework di monitoraggio e un'interfaccia utente grafica che fornisce un'ubicazione centralizzata da cui Acme Skateboards può distribuire, gestire, monitorare e ridimensionare le proprie applicazioni. L'istanza vCenter Server ospita i componenti {{site.data.keyword.icpfull_notm}}, i nodi master, i nodi di lavoro e così via, eseguendoli come VM. {{site.data.keyword.icpfull_notm}} ospita:
-- **{{site.data.keyword.cloud_notm}} Automation Manager** – CAM è una piattaforma IaC (infrastructure as code) pronta per le aziende che fornisce un unico pannello di controllo per il provisioning dei carichi di lavoro della VM, in loco o su vCenter Server, insieme ai carichi di lavoro di Kubernetes, in {{site.data.keyword.icpfull_notm}} o {{site.data.keyword.containerlong_notm}}, utilizzando i template. CAM è un'applicazione di Docker eseguita su un'installazione di {{site.data.keyword.icpfull_notm}} ed è strettamente integrata per l'autorizzazione, il controllo dell'accesso basato sul ruolo (RBAC) e altre funzioni.
+- **{{site.data.keyword.cloud_notm}} Automation Manager** – CAM è una piattaforma IaC (infrastructure as code) pronta per le aziende che fornisce un unico pannello di controllo per il provisioning dei carichi di lavoro della VM, in loco o su vCenter Server, insieme ai carichi di lavoro di Kubernetes, in {{site.data.keyword.icpfull_notm}} o {{site.data.keyword.containerlong_notm}}, utilizzando i template. CAM è un'applicazione di Docker eseguita su un'installazione {{site.data.keyword.icpfull_notm}} ed è strettamente integrata per l'autorizzazione, il controllo dell'accesso basato sul ruolo (RBAC) e altre funzioni.
     - Le applicazioni Acme Skateboards inserite nel contenitore che i clienti vogliono distribuire in questo ambiente.
 
-- **{{site.data.keyword.containerlong_notm}}** – {{site.data.keyword.containerlong_notm}} consente ad Acme Skateboards di distribuire le proprie applicazioni modernizzate in contenitori Docker che vengono eseguiti in cluster Kubernetes. Le modalità principali sono gestite completamente da IBM mentre i nodi di lavoro nel pool di lavoro vengono distribuiti nello stesso account di {{site.data.keyword.cloud_notm}} dell'istanza vCenter Server. I nodi di lavoro possono essere: istanze bare metal, pubbliche o del server virtuale dedicate. Calico viene installato e configurato automaticamente in {{site.data.keyword.containerlong_notm}}. Calico fornisce la connettività di rete sicura per i contenitori e viene configurato in {{site.data.keyword.containerlong_notm}} per utilizzare l'incapsulamento IP-in-IP per i pacchetti trasmessi attraverso le sottoreti e per utilizzare NAT per le connessioni in uscita dai contenitori.
+- **{{site.data.keyword.containerlong_notm}}** – {{site.data.keyword.containerlong_notm}} consente a Acme Skateboards di distribuire le proprie applicazioni modernizzate in contenitori Docker che vengono eseguiti in cluster Kubernetes. Le modalità principali sono gestite completamente da IBM mentre i nodi di lavoro nel pool di lavoro vengono distribuiti nello stesso account di {{site.data.keyword.cloud_notm}} dell'istanza vCenter Server. I nodi di lavoro possono essere: istanze bare metal, pubbliche o del server virtuale dedicate. Calico viene installato e configurato automaticamente in {{site.data.keyword.containerlong_notm}}. Calico fornisce la connettività di rete sicura per i contenitori e viene configurato in {{site.data.keyword.containerlong_notm}} per utilizzare l'incapsulamento IP-in-IP per i pacchetti trasmessi attraverso le sottoreti e per utilizzare NAT per le connessioni in uscita dai contenitori.
 
 - **Direct Link** - {{site.data.keyword.cloud_notm}} Direct Link utilizza il provider WAN di Acme Skateboards per connettere il relativo data center a {{site.data.keyword.cloud_notm}} per fornire una connessione di rete sicura, a bassa latenza e affidabile. Questa connessione fornisce:
   - Accesso alle applicazioni ospitate cloud dai tuoi utenti Enterprise.
@@ -40,8 +41,9 @@ HCX estende le reti in loco in {{site.data.keyword.cloud_notm}} consentendo ai c
   - Traffico tra i sistemi legacy nel data center in loco e le VM cloud.
 
 ## Vantaggi chiave di Acme Skateboards
+{: #vcsiks-appmod-benefits}
 
-vCenter Server fornisce i blocchi di creazione fondamentali che includono VMware vSphere, vCenter Server, NSX e le opzioni di archiviazione condivisa che includono vSAN, necessario per progettare una soluzione VMware SDDC (Software Defined Data Center) flessibile che meglio si adatta ai tuoi carichi di lavoro.
+vCenter Server fornisce i blocchi di creazione fondamentali che includono VMware vSphere, vCenter Server, NSX e le opzioni di archiviazione condivisa che includono vSAN, necessario per progettare una soluzione flessibile VMware SDDC (Software Defined Data Center) che meglio si adatta ai tuoi carichi di lavoro.
 
 In sintesi, le offerte {{site.data.keyword.cloud_notm}} for VMware:
 * Accelerano la fornitura di progetti IT per sviluppatori e linee di business riducendo il tempo necessario per approvvigionamento, architettura, implementazione e distribuzione di risorse da settimane, o anche mesi, ad alcune ore.
@@ -66,7 +68,8 @@ I clienti che passano a piattaforme dell'applicazione native cloud come {{site.d
 
 Questa architettura di riferimento mostra come VCS, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}} muovano in modo sicuro Acme Skateboards lungo il percorso di modernizzazione dell'applicazione.
 
-### Link correlati
+## Link correlati
+{: #vcsiks-appmod-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

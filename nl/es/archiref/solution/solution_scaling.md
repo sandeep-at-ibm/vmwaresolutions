@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-07-25"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-07-25"
 {:important: .important}
 
 # Capacidad de escalado
+{: #solution_scaling}
 
 Después del despliegue inicial, puede ampliar la capacidad de cálculo de la consola de {{site.data.keyword.vmwaresolutions_full}}. El diseño da soporte a las siguientes vías de acceso de escalado:
 * Adición de nuevos sitios gestionados por servidores de vCenter independientes
@@ -20,6 +21,7 @@ Después del despliegue inicial, puede ampliar la capacidad de cálculo de la co
 * Adición de nuevos hosts a un clúster existente
 
 ## Adición de más sitios
+{: #solution_scaling-sites}
 
 {{site.data.keyword.vmwaresolutions_short}} puede aprovechar la presencia del centro de datos a nivel mundial de {{site.data.keyword.cloud_notm}} y la red troncal integrada para permitir que varios casos de uso entre geografía se desplieguen y funcionen dentro de una fracción del tiempo que tomaría para crear dicha infraestructura desde cero.
 
@@ -35,6 +37,7 @@ En este diseño, la definición de un despliegue de varios sitios se compone de 
 Adicionalmente, el gestor de NSX en los sitios secundarios puede configurarse como gestores NSX secundarios para el gestor NSX en el sitio primario.
 
 ## Adición de nuevos clústeres
+{: #solution_scaling-clusters}
 
 También puede ampliar la capacidad de cálculo creando un nuevo clúster desde la consola de {{site.data.keyword.vmwaresolutions_short}} y solicitando nuevos hosts que se añaden automáticamente al nuevo clúster.
 
@@ -48,11 +51,13 @@ Cuando el clúster inicial se convierte en un clúster de solo gestión, la migr
 {:note}
 
 ## Adición de hosts ESXi en clústeres existentes
+{: #solution_scaling-hosts}
 
 Puede ampliar un clúster existente solicitando hosts desde la consola de {{site.data.keyword.vmwaresolutions_short}}.  Los nuevos hosts se añaden automáticamente al clúster. Tenga en cuenta que es posible que tenga que ajustar la política de reserva de HA para el clúster en función de los requisitos de la reserva.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #solution_scaling-related}
 
-* [Visión general de la solución](solution_overview.html)
-* [Visión general del diseño](design_overview.html)
-* [Copia de seguridad de los componentes](solution_backingup.html)
+* [Visión general de la solución](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [Visión general del diseño](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [Copia de seguridad de los componentes](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

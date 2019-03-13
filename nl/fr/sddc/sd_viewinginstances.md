@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Affichage d'instances Cloud Foundation
+{: #sd_viewinginstances}
 
 Affichez les informations récapitulatives et détaillées des instances VMware Cloud Foundation qui sont mises à disposition pour différents comptes utilisateur.
 
 ## Procédure d'affichage du récapitulatif des instances Cloud Foundation
+{: #sd_viewinginstances-procedure-view-inst-summary}
 
 Pour afficher un récapitulatif de toutes les instances Cloud Foundation qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 
@@ -50,6 +52,7 @@ Tableau 2. Description des statuts des instances Cloud Foundation
 | Supprimé | L'instance a été supprimée. |
 
 ## Procédure d'affichage des détails des propriétés des instances Cloud Foundation
+{: #sd_viewinginstances-procedure-view-inst-property}
 
 Pour afficher les détails des propriétés d'une instance :
 
@@ -75,6 +78,7 @@ Tableau 3. Propriétés d'instance Cloud Foundation
 | Statut  | Statut de l'instance<br><br>Les informations affichées fournissent une mise à jour de la progression du déploiement ou de l'action appliquée à l'instance. En cas de problème, un message peut s'afficher pour vous aider à identifier et résoudre le problème. |
 
 ## Procédure d'affichage des informations d'accès aux instances Cloud Foundation
+{: #sd_viewinginstances-procedure-view-access-info}
 
 Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance.
 
@@ -99,6 +103,7 @@ Tableau 4. Informations d'accès Cloud Foundation pour les composants liés à l
 | vCenter ADMIN  | Le nom d'utilisateur et le mot de passe de connexion unique VMware vCenter que vous pouvez utiliser pour vous connecter au serveur vCenter Server à l'aide du client Web vSphere  |
 
 ## Procédure d'affichage de l'historique de déploiement des instances Cloud Foundation
+{: #sd_viewinginstances-procedure-view-deploy-history}
 
 Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance.
 
@@ -110,10 +115,12 @@ Tableau 5. Historique de déploiement d'une instance Cloud Foundation
 | Récapitulatif | Les détails du changement |
 
 ## Que faire en cas d'erreurs
+{: #sd_viewinginstances-if-errors-occur}
 
-Si des erreurs se produisent lors du déploiement ou de la suppression d'une instance, l'équipe de support {{site.data.keyword.cloud_notm}} est automatiquement prévenue. Pour connaître le statut de votre ticket, vous pouvez [contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Si des erreurs se produisent lors du déploiement ou de la suppression d'une instance, l'équipe de support {{site.data.keyword.cloud_notm}} est automatiquement prévenue. Pour connaître le statut de votre ticket, vous pouvez [contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Etape suivante
+{: #sd_viewinginstances-next}
 
 Gérez vos instances depuis la console {{site.data.keyword.vmwaresolutions_short}} ou le client Web vSphere.
 
@@ -122,12 +129,13 @@ Avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instan
 
 Passez en revue les rubriques suivantes pour obtenir des informations qui vous aideront à exécuter les instructions de connexion :
 
-* Pour les exigences et procédures à effectuer avant d'accéder au client vSphere Web Client, voir [Dépassement du délai d'attente lors de la connexion au client vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
+* Pour les exigences et procédures à effectuer avant d'accéder au client vSphere Web Client, voir [Dépassement du délai d'attente lors de la connexion au client vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
 * Pour obtenir la liste des points d'accès de connexion au réseau privé {{site.data.keyword.cloud_notm}} à l'aide du réseau privé virtuel, voir [Accès VPN](http://www.softlayer.com/vpn-access){:new_window}.
-* Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client Web vSphere, voir [Déploiement d'un fichier OVF à l'aide du client Web vSphere](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
+* Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client Web vSphere, voir [Déploiement d'un fichier OVF à l'aide du client Web vSphere](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
-### Liens connexes
+## Liens connexes
+{: #sd_viewinginstances-related}
 
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Suppression d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Suppression d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

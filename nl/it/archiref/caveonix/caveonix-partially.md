@@ -29,7 +29,7 @@ Tabella 1. Parametri di base
 |RAM	|64 GB|
 |Disco	|1000 GB|
 |SO	|CentOS 7|
-|Componenti dell'applicazione installati |IU, applicazione, plugin, raccoglitore centrale, archivio dati indice, archivio dati di messaggistica, archivio dati relazionale, raccoglitore remoto|
+|Componenti dell'applicazione installati	|IU, applicazione, plugin, raccoglitore centrale, archivio dati indice, archivio dati di messaggistica, archivio dati relazionale, raccoglitore remoto|
 
 I dettagli delle VM di ridimensionamento incrementale sono i seguenti:
 
@@ -43,7 +43,7 @@ Tabella 2. Parametri di ridimensionamento incrementale
 | RAM	| 16 GB |
 | Disco	| 4 TB |
 | SO	| CentOS 7 |
-|Componenti dell'applicazione installati | Nodi di dati (ridimensionamento incrementale) |
+| Componenti dell'applicazione installati	| Nodi di dati (ridimensionamento incrementale) |
 
 I dettagli della VM del raccoglitore remoto sono visualizzati nella seguente tabella.
 
@@ -56,9 +56,9 @@ Tabella 3. Parametri del raccoglitore remoto
 |RAM	|8 GB|
 |Disco	|1 TB|
 |SO	|CentOS 7|
-|Componenti dell'applicazione installati |Raccoglitore remoto|
+|Componenti dell'applicazione installati	|Raccoglitore remoto|
 
 ## Link correlati
 {: #caveonix-partially-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

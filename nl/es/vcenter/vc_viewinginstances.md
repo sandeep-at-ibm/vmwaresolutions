@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-04"
 {:important: .important}
 
 # Visualización de instancias de vCenter Server
+{: #vc_viewinginstances}
 
 Visualice el resumen y la información detallada de las instancias de VMware vCenter Server que se suministran para cuentas de usuario diferentes.
 
 ## Procedimiento para visualizar el resumen de instancias de vCenter Server
+{: #vc_viewinginstances-procedure-view-inst-summary}
 
 Para ver un resumen de todas las instancias de vCenter Server que se han suministrado para una cuenta de usuario, complete los pasos siguientes:
 
@@ -51,6 +53,7 @@ Tabla 2. Descripciones de los estados de las instancias de vCenter Server
 | Suprimido | La instancia se ha suprimido. |
 
 ## Procedimiento para visualizar los detalles de propiedad de la instancia de vCenter Server
+{: #vc_viewinginstances-procedure-view-inst-property}
 
 Para ver los detalles de las propiedades de una instancia:
 
@@ -76,6 +79,7 @@ Tabla 3. Propiedades de la instancia de vCenter Server
 | Estado  | El estado de la instancia.<br><br>La información que se muestra proporciona una actualización sobre el progreso del despliegue o de la acción que se realiza sobre la instancia. Si hay algún problema, se muestra un mensaje para ayudarle a investigar y a resolver el problema. |
 
 ## Procedimiento para visualizar la información de acceso para las instancias de vCenter Server
+{: #vc_viewinginstances-procedure-view-access-info}
 
 En **Información de acceso**, consulte la información de acceso para los componentes relacionados con la instancia. Las contraseñas que se muestran son contraseñas iniciales que genera el sistema. Si las cambia fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, no se actualizarán en la página de resumen de la instancia.
 
@@ -95,6 +99,7 @@ Tabla 4. Información de acceso de vCenter Server correspondiente a los componen
 | vCenter SSH  | El nombre de usuario y la contraseña que puede utilizar para acceder a vCenter Server VM mediante una conexión SSH.  |
 
 ## Procedimiento para visualizar el historial de despliegues de las instancias de vCenter Server
+{: #vc_viewinginstances-procedure-view-deploy-history}
 
 Pulse **Historial de despliegue** en el panel de navegación izquierdo para ver el historial de despliegue de la instancia.
 
@@ -106,10 +111,12 @@ Tabla 5. Historial de despliegues de la instancia de vCenter Server
 | Resumen | Los detalles del cambio |
 
 ## Qué hacer si se producen errores
+{: #vc_viewinginstances-if-errors-occur}
 
-Si se producen errores durante el despliegue o durante la supresión de la instancia, se notifica automáticamente al equipo de soporte de {{site.data.keyword.cloud_notm}}. Para informarse sobre el estado de la incidencia, puede [ponerse en contacto con el servicio de soporte de IBM](../vmonic/trbl_support.html).
+Si se producen errores durante el despliegue o durante la supresión de la instancia, se notifica automáticamente al equipo de soporte de {{site.data.keyword.cloud_notm}}. Para informarse sobre el estado de la incidencia, puede [ponerse en contacto con el servicio de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Qué hacer a continuación
+{: #vc_viewinginstances-next}
 
 Gestione sus instancias desde la consola de {{site.data.keyword.vmwaresolutions_short}} o desde el cliente web de VMware vSphere.
 
@@ -117,13 +124,14 @@ Antes de pulsar la **Consola de vCenter** en la página de resumen de la instanc
 {:important}
 
 Revise los temas siguientes para obtener información que le ayudará a seguir las instrucciones de inicio de sesión:
-*  Para ver los requisitos y pasos necesarios antes de acceder al cliente web de vSphere, consulte [Se ha alcanzado el tiempo de espera al conectar con el cliente web de vSphere](../vmonic/trbl_timeout_vc_console.html).
+*  Para ver los requisitos y pasos necesarios antes de acceder al cliente web de vSphere, consulte [Se ha alcanzado el tiempo de espera al conectar con el cliente web de vSphere](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
 *  Para ver una lista de puntos de acceso para iniciar una sesión en la red privada de la infraestructura de {{site.data.keyword.cloud_notm}} utilizando VPN, consulte [Acceso VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Si tiene problemas al desplegar un archivo OVF (Open Virtualization Format) mediante el cliente web de vSphere, consulte [Despliegue de un archivo OVF mediante el cliente web de vSphere](../vmonic/trbl_deploy_ovf.html).
+*  Si tiene problemas al desplegar un archivo OVF (Open Virtualization Format) mediante el cliente web de vSphere, consulte [Despliegue de un archivo OVF mediante el cliente web de vSphere](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vc_viewinginstances-related}
 
-* [Pedido de instancias de vCenter Server](vc_orderinginstance.html)
-* [Adición, visualización y supresión de clústeres para instancias de vCenter Server](vc_addingviewingclusters.html)
-* [Ampliación y reducción de la capacidad para instancias de vCenter Server](vc_addingremovingservers.html)
-* [Supresión de instancias de vCenter Server](vc_deletinginstance.html)
+* [Pedido de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Adición, visualización y supresión de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Ampliación y reducción de la capacidad para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Supresión de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # Configuración inicial
+{: #vum-init-config}
 
 La automatización de IC4VS configura el VCSA con una pasarela establecida en {{site.data.keyword.cloud}} Backend Customer Router (BCR). Sin embargo, no hay vía de acceso a internet a través del BCR. La ruta estándar a internet desde la instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}} se realiza a través de Management ESG. Como no se aconseja cambiar la configuración del VCSA o el ESG de gestión, se recomienda implementar el servidor proxy en la subred del cliente para habilitar VUM.
 
@@ -40,10 +41,12 @@ Tabla 1. Valores de despliegue
 | IP de BCR | ip de bcr | Es la dirección IP del direccionador de cliente de {{site.data.keyword.cloud_notm}} Backend y es la pasarela para 10.0.0.0/8 y 161.26.0.0/16. Esta dirección se utiliza en una ruta estática en el servidor proxy para que pueda llegar a la VCSA y al servidor de AD/DNS. |
 
 ## Configuración de NSX
+{: #vum-init-config-config-nsx}
 
 Los valores de NSX Customer ESG y de NAT son necesarios para habilitar el tráfico del servidor proxy.
 
 ### Cortafuegos
+{: #vum-init-config-firewall}
 
 1. Vaya a **Inicio** > **Redes y seguridad**.
 2. Seleccione **NSX Edges**, customer-nsx-edge y, a continuación, **Cortafuegos**.
@@ -64,6 +67,7 @@ Tabla 2. Regla de cortafuegos
 Una vez que se hayan proporcionado los parámetros, pulse **Publicar cambios**.
 
 ### Instalación y configuración de un servidor proxy
+{: #vum-init-config-inst-cfg-proxy}
 
 El proceso siguiente despliega una VM para alojar CentOS y Squid desde la Biblioteca de contenido y consta de los pasos siguientes. Se da por supuesto que tiene un VSI de Windows suministrado para su uso como un salto y que utiliza el protocolo de escritorio remoto para conectarse a la interfaz pública de VSI:
 
@@ -72,10 +76,12 @@ El proceso siguiente despliega una VM para alojar CentOS y Squid desde la Biblio
 * Configure la VM de proxy, instale CentOS y Squid
 
 ### Descarga del archivo ISO CentOS-Minimal
+{: #vum-init-config-downloading-centos}
 
 Utilice un navegador en el servidor de saltos para descargar el archivo ISO de CentOS-Minimal de [CentOS](https://www.centos.org/download/). Tenga en cuenta que {{site.data.keyword.cloud_notm}} mantiene un duplicado de muchas distribuciones de Linux populares. Este duplicado solo está disponible en la red privada, y los ISO de CentOS están disponibles en la dirección siguiente: `http://mirrors.service.softlayer.com/centos/7/isos/x86_64/`
 
 ### Configurar una biblioteca de contenido y llenarla con el archivo ISO de CentOS
+{: #vum-init-config-config-conent-library}
 
 Cree una biblioteca de contenido de vCenter local. Solo se puede acceder a la biblioteca en la instancia de vCenter Server en la que se crea. Rellene la biblioteca con plantillas e ISO necesarias para desplegar VM.
 
@@ -86,6 +92,7 @@ Cree una biblioteca de contenido de vCenter local. Solo se puede acceder a la bi
 5. Revise la información de la página **Preparado para completar** y pulse **Finalizar**.
 
 ### Configuración de la VM de proxy, instalación de CentOS y Squid
+{: #vum-init-config-config-proxy}
 
 Esta actividad tiene las tareas siguientes:
 
@@ -94,6 +101,7 @@ Esta actividad tiene las tareas siguientes:
 *	Instalar Squid
 
 #### Crear una VM nueva
+{: #vum-init-config-create-new-vm}
 
 Esta tarea crea una nueva máquina virtual lista para su uso como servidor proxy. Los valores de la tabla 1 Valores de despliegue debería utilizarse para rellenar la configuración.
 
@@ -102,20 +110,21 @@ Esta tarea crea una nueva máquina virtual lista para su uso como servidor proxy
 3.	Seleccione **Crear una nueva máquina virtual** y, a continuación, pulse **Siguiente**.
 4.	Especifique un nombre para la máquina virtual, por ejemplo Proxy01, y seleccione **datacenter1** y, a continuación, pulse **Siguiente**.
 5.	Seleccione **cluster1** y, a continuación, pulse **Siguiente**.
-6.	Seleccione un almacén de datos adecuado, por ejemplo, vsanDatastore y pulse **Siguiente** y ** Siguiente ** de nuevo.
-7.	En **Familia de SO invitado**, seleccione ** Linux ** y, en **Versión de sistema operativo invitado**, seleccione **CentOS 7 (64 bits)** y pulse **Siguiente**.
+6.	Seleccione un almacén de datos adecuado, por ejemplo, vsanDatastore y pulse **Siguiente** y **Siguiente** de nuevo.
+7.	En **Familia de SO invitado**, seleccione **Linux** y, en **Versión de sistema operativo invitado**, seleccione **CentOS 7 (64 bits)** y pulse **Siguiente**.
 8.	Establezca **CPU en 1**, **Memoria en 2048 MB** y **Nuevo disco duro en 25 GB**. Seleccione **Archivo ISO de la biblioteca de contenido** y, a continuación, **CentOS-7-x86_64-Minimal**, pulse **Aceptar** y la marca del recuadro **Conectado**.
 9.	En el recuadro Nuevo dispositivo, seleccione **Red** y, a continuación, pulse **Añadir**.
 10.	Seleccione la red **SDDC-DPortGroup-Mgmt**, asegúrese de que el recuadro de selección Conectar esté marcado y pulse **Siguiente**.
 11.	Revise las opciones y pulse **Finalizar**.
 
 #### Instalar CentOS
+{: #vum-init-config-install-centos}
 
 Esta tarea instala y configura la máquina virtual recién creada lista para la instalación de Squid
 
 1.	En el panel Navegador del cliente web de vSphere, seleccione la **VM** que acaba de crear, Proxy01 y, a continuación, seleccione el **Separador de resumen**.
 2.	Pulse **"Reproducir"** para encender la VM.
-3.	La máquina virtual se enciende y arranca desde CentOS 7 ISO. Inicie una ** Consola remota o una consola web** en la máquina virtual. Debe instalar la consola remota y el sistema que ejecuta el navegador web debe resolver por nombre los hosts ESXi de vSphere.
+3.	La máquina virtual se enciende y arranca desde CentOS 7 ISO. Inicie una **Consola remota o una consola web** en la máquina virtual. Debe instalar la consola remota y el sistema que ejecuta el navegador web debe resolver por nombre los hosts ESXi de vSphere.
 4.	En la pantalla Bienvenido a CentOS 7, seleccione el idioma necesario y pulse **Continuar**.
 5.	En la pantalla **LOCALIZACIÓN**, pulse **FECHA Y HORA** y seleccione el huso horario; a continuación, pulse **Terminado**.
 6.	En la pantalla **LOCALIZACIÓN**, pulse **TECLADO** para cambiar el valor predeterminado si es necesario y, a continuación, pulse **Terminado**.
@@ -130,6 +139,7 @@ Esta tarea instala y configura la máquina virtual recién creada lista para la 
 15.	Cuando finalice la instalación, inicie sesión como el usuario y, a continuación, escriba el mandato _ping vmware.com_. El nombre se resuelve en una dirección IP y el usuario recibe una respuesta. Si no obtiene respuestas, compruebe las direcciones IP, las reglas de cortafuegos y los valores de NAT.
 
 #### Instalar y configurar Squid
+{: #vum-init-config-install-cfg-squid}
 
 Squid no tiene ningún requisito mínimo de hardware, pero la cantidad de RAM puede variar en función de los usuarios que acceden a internet mediante su proxy y de los objetos almacenados en la memoria caché. Como solo la VUM acceda al servidor proxy y la caché no esté habilitada, solo se configura una VM pequeña.
 
@@ -150,6 +160,7 @@ Squid no tiene ningún requisito mínimo de hardware, pero la cantidad de RAM pu
 10.	Para guardar la regla y reiniciar el servicio, utilice el mandato siguiente: `firewall-cmd –reload`.
 
 ## Configuración inicial de VUM
+{: #vum-init-config-init-setup-vum}
 
 Configure VUM para que utilice el servidor proxy para acceder a los repositorios de internet.
 1. Con el cliente web de vSphere, vaya a **Inicio** > **Actualizar gestor**. Pulse el servidor de vCenter.
@@ -158,7 +169,8 @@ Configure VUM para que utilice el servidor proxy para acceder a los repositorios
 4. Marque el recuadro **Utilizar proxy** y especifique la _dirección IP del servidor proxy_ y el _puerto 3128_, pulse **Aceptar**. El estado de conectividad cambia a _Validación_ y, a continuación, a _Conectado_.
 5. Pulse **Descargar ahora**. En el panel _Tareas recientes_, debería ver esta actividad completada.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vum-init-config-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

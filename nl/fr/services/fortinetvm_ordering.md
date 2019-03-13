@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,26 +13,31 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Commande de FortiGate Virtual Appliance on IBM Cloud
+{: #fortinetvm_ordering}
 
 Vous pouvez commander le service FortiGate Virtual Appliance on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance avec le service inclus ou vous pouvez ajouter le service à votre instance existante.
 
 ## Commande de FortiGate Virtual Appliance on IBM Cloud pour une nouvelle instance
+{: #fortinetvm_ordering-new}
 
 Vous pouvez commander une nouvelle instance avec FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} en utilisant l'une des méthodes suivantes :
 * Depuis la console {{site.data.keyword.vmwaresolutions_short}}, lorsque vous commandez une nouvelle instance, sélectionnez **FortiGate Virtual Appliance on IBM Cloud** dans la section **Services**.
 * Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **FortiGate Virtual Appliance on IBM Cloud**, spécifiez les paramètres de service et sélectionnez **Ajouter à une nouvelle instance**.
 
 ## Commande de FortiGate Virtual Appliance on IBM Cloud pour une instance existante
+{: #fortinetvm_ordering-existing}
 
 Vous pouvez ajouter le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} dans une instance existante en utilisant l'une des méthodes suivantes :
 * Depuis la console {{site.data.keyword.vmwaresolutions_short}}, affichez l'instance pour laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter**.
 * Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **FortiGate Virtual Appliance on IBM Cloud**, spécifiez les paramètres de service et sélectionnez **Ajouter à une instance existante**.
 
 ## Configuration du service FortiGate Virtual Appliance on IBM Cloud
+{: #fortinetvm_ordering-config}
 
 Lorsque vous commandez le service, indiquez les paramètres suivants :
 
 ### Connexion réseau FortiGuard
+{: #fortinetvm_ordering-config-network-connect}
 
 Sélectionnez **Réseau public** ou **Réseau privé** pour FortiGuard. Si le cluster cible est configuré avec des interfaces de réseau privé uniquement, seule l'option **Réseau privé** est disponible. Cette sélection détermine de quelle façon FortiGuard contactera le serveur de licences Fortinet pour activer la licence et pour télécharger les correctifs de sécurité ; elle n'a aucune incidence sur le plan des données de charge de travail.
 
@@ -43,10 +48,12 @@ Si vous sélectionnez **Réseau privé**, spécifiez les paramètres suivants :
 * **Mot de passe proxy** : si vous avez besoin de l'authentification proxy, entrez le mot de passe du serveur proxy.
 
 ### Nom
+{: #fortinetvm_ordering-config-name}
 
 Entrez le nom du service.
 
 ### Taille de déploiement
+{: #fortinetvm_ordering-config-size}
 
 {{site.data.keyword.cloud_notm}} fournit les options de taille de déploiement suivantes :
 * Petite (2 UC virtuelles/4 Go de RAM)
@@ -54,6 +61,7 @@ Entrez le nom du service.
 * Grande (8 UC virtuelles/12 Go de RAM)
 
 ### Modèle de licence
+{: #fortinetvm_ordering-config-license}
 
 Le modèle de licence pour le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} propose les options suivantes :
 <dl class="dl">
@@ -71,14 +79,15 @@ Au cours du troisième trimestre 2018, Fortinet a ajouté trois nouveaux service
 Vous ne pouvez pas modifier le modèle de licence après installation du service. Pour modifier le modèle de licence, vous devez retirer le service existant, puis le réinstaller en sélectionnant une autre option de licence.
 {:important}
 
-### Liens connexes
+## Liens connexes
+{: #fortinetvm_ordering-related}
 
-* [Présentation de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)
-* [Gestion de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
-* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
-* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Présentation de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)
+* [Gestion de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
+* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Site Web Fortinet](https://www.fortinet.com/){:new_window}
 * [Bibliothèque de documents Fortinet](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

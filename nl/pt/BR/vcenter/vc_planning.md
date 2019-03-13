@@ -4,21 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # Requisitos e planejamento para instâncias do vCenter Server
+{: #vc_planning}
 
 Revise os seguintes requisitos antes de pedir suas instâncias do VMware vCenter Server. Planeje sua instância com base no local do {{site.data.keyword.CloudDataCent}}, nos requisitos de capacidade de carga de trabalho e nos requisitos de serviço complementares.
 
 ## Requisitos da conta do IBM Cloud
+{: #vc_planning-account-req}
 
-A conta do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para
-obter mais informações, consulte [Requisitos
-para a conta do {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
+A conta do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, consulte [Requisitos para a conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## Disponibilidade do data center do IBM Cloud
+{: #vc_planning-dc-availability}
 
 A implementação do vCenter Server tem requisitos rigorosos na infraestrutura física. Portanto, é possível implementar instâncias apenas em {{site.data.keyword.CloudDataCents_notm}} que atendam aos requisitos. Os {{site.data.keyword.CloudDataCents_notm}} a seguir estão disponíveis para implementação do vCenter Server:
 
@@ -68,20 +69,24 @@ Tabela 2. Indicadores de status para {{site.data.keyword.CloudDataCents_notm}} a
 | Inventário limitado             | O {{site.data.keyword.CloudDataCent_notm}} limitou a disponibilidade e o pedido pode não estar concluído. |
 
 ## Backup de componentes de gerenciamento
+{: #vc_planning-backup-mgmt-components}
 
-Você é responsável por manter e assegurar a disponibilidade de todos os componentes da instância. É altamente recomendável planejar o backup ou a alta disponibilidade de todos os componentes de gerenciamento. Para obter mais informações, consulte [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
+Você é responsável por manter e assegurar a disponibilidade de todos os componentes da instância. É altamente recomendável planejar o backup ou a alta disponibilidade de todos os componentes de gerenciamento. Para obter mais informações, consulte [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup).
 
 ## Serviços para instâncias do vCenter Server
+{: #vc_planning-addon-services}
 
-É possível pedir serviços complementares para a sua instância com base em suas necessidades, por exemplo, recuperação de desastre. Para obter mais informações, veja [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html).
+É possível pedir serviços complementares para a sua instância com base em suas necessidades, por exemplo, recuperação de desastre. Para obter mais informações, veja [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Considerações sobre capacidade
+{: #vc_planning-capacity-considerations}
 
-Para obter mais informações sobre considerações de capacidade, consulte [Capacidade de ajuste de escala](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html).
+Para obter mais informações sobre considerações de capacidade, consulte [Capacidade de ajuste de escala](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling).
 
-### Links relacionados
+## Links relacionados
+{: #vc_planning-related}
 
-* [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Expandindo e contraindo a capacidade para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Expandindo e contraindo a capacidade para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)

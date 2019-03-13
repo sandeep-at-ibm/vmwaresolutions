@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Graphique de comparaison des éditions de composant VMware
+{: #solution-appendix}
 
 ## Comparaison des éditions VMware NSX
+{: #solution-appendix-nsx-editions}
 
 Le tableau 1 répertorie les fonctions disponibles pour les éditions **Base**, **Advanced** et **Enterprise** de VMware NSX qui sont prises en charge par la solution.
 
@@ -41,6 +43,7 @@ Tableau 1. Graphique de comparaison des éditions VMware NSX
 \*Intégration L2, L3 & NSX Edge uniquement. Pas de consommation de groupes de sécurité.
 
 ## Comparaison des éditions VMware vSAN
+{: #solution-appendix-vsan-editions}
 
 Le tableau 2 répertorie les fonctions disponibles pour les éditions **Advanced** et **Enterprise** de VMware vSAN qui sont prises en charge par la solution.
 
@@ -63,8 +66,9 @@ Tableau 2. Graphique de comparaison des éditions VMware vSAN
 | Chiffrement des données au repos                         |          | •          |
 | Cluster étendu avec protection locale contre les pannes |          | •          |
 
-### Liens connexes
+## Liens connexes
+{: #solution-appendix-related}
 
-* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [Présentation de la conception](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [Sauvegarde des composants](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [Présentation de la conception](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [Sauvegarde des composants](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

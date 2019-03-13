@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-06-07"
 
 ---
 
@@ -14,7 +14,7 @@ Consulta le informazioni importanti su requisiti e account utente prima di inizi
 
 ## Console IBM Cloud for VMware Solutions
 
-La console {{site.data.keyword.vmwaresolutions_short}} è l'interfaccia in cui ordini e gestisci le tue distribuzioni. Nella console, ogni distribuzione è gestita come un'istanza. La console è un'interfaccia utente autonoma separata dal {{site.data.keyword.slportal}}.
+La console {{site.data.keyword.vmwaresolutions_short}} è l'interfaccia in cui ordini e gestisci le tue distribuzioni. Nella console, ogni distribuzione è gestita come un'istanza. La console è un'interfaccia utente autonoma separata dal {{site.data.keyword.slportal_full}}.
 
 ## Account ID IBM
 
@@ -44,10 +44,10 @@ Esamina l'elenco dei browser supportati prima di iniziare a lavorare con la cons
 
 Per una visualizzazione e un funzionamento ottimali della console {{site.data.keyword.vmwaresolutions_short}}, imposta la risoluzione dello schermo su almeno 1024 pixel di larghezza per 500 pixel di altezza.
 
-### Link correlati
+## Link correlati
 
 * [Informazioni su {{site.data.keyword.vmwaresolutions_short}}](vmonic/prod_overview.html)
 * [Panoramica di Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Panoramica di vCenter Server](../vcenter/vc_vcenterserveroverview.html)
-* [Panoramica di Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)
+* [Panoramica di Zerto on IBM Cloud](../services/addingzertodr.html)
 * [Risoluzione dei problemi](troubleshooting.html)

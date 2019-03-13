@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-21"
 
 ---
 
 # Gestione dell'accesso utente con IAM
+{: #managing-user-access-with-iam}
 
 L'accesso alle istanze del servizio {{site.data.keyword.vmwaresolutions_full}} per gli utenti nel tuo account è controllato da {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). A ogni utente che accede ai servizi {{site.data.keyword.vmwaresolutions_short}} nel tuo account deve essere assegnata una politica di accesso con un ruolo utente IAM definito.
 
@@ -26,6 +27,7 @@ Dopo aver definito l'ambito della politica di accesso, potrai assegnare un ruolo
 Rivedi le seguenti informazioni che descrivono le azioni consentite da ciascun ruolo all'interno del servizio {{site.data.keyword.vmwaresolutions_short}}.
 
 ## Ruoli e autorizzazioni di gestione della piattaforma
+{: #iam-roles}
 
 I ruoli di gestione della piattaforma consentono agli utenti di eseguire attività sulle risorse del servizio a livello di piattaforma. Ad esempio, assegnare l'accesso utente al servizio, creare o eliminare ID servizio, creare istanze e associare le istanze alle applicazioni.
 
@@ -53,24 +55,26 @@ Tabella 2. Descrizione delle azioni e ruoli richiesti
 | vmware-solutions.account.update | Aggiornare le impostazioni account | Amministratore |
 
 ## Gestione dell'accesso per gli utenti
+{: #iam-users}
 
-Puoi aggiungere nuovi utenti all'account {{site.data.keyword.cloud_notm}} in modo che questi utenti possano condividere i servizi e le risorse forniti per l'account. Per ulteriori informazioni, vedi [Come invitare gli utenti ad accedere a servizi e risorse](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html).
+Puoi aggiungere nuovi utenti all'account {{site.data.keyword.cloud_notm}} in modo che questi utenti possano condividere i servizi e le risorse forniti per l'account. Per ulteriori informazioni, vedi [Come invitare gli utenti ad accedere a servizi e risorse](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite).
 
-Puoi anche gestire l'accesso per gli utenti esistenti, inclusa la modifica dell'accesso esistente, l'assegnazione di un nuovo accesso e la revisione dell'accesso assegnato. Per gestire l'accesso per gli utenti, devi essere il proprietario dell'account o avere il ruolo di gestione della piattaforma di **Amministratore**. Per ulteriori informazioni, vedi [Gestione dell'accesso alle risorse](/docs/iam/mngiam.html).
+Puoi anche gestire l'accesso per gli utenti esistenti, inclusa la modifica dell'accesso esistente, l'assegnazione di un nuovo accesso e la revisione dell'accesso assegnato. Per gestire l'accesso per gli utenti, devi essere il proprietario dell'account o avere il ruolo di gestione della piattaforma di **Amministratore**. Per ulteriori informazioni, vedi [Gestione dell'accesso alle risorse](/docs/iam?topic=iam-iammanidaccser).
 
 ## Migrazione di istanze esistenti agli account IBM Cloud
+{: #iam-migrate}
 
 A causa dell'integrazione di {{site.data.keyword.vmwaresolutions_short}} con IAM, le istanze che sono state distribuite nelle release della V2.5 e successive nel tuo account {{site.data.keyword.cloud_notm}} vengono aggiunte automaticamente al tuo account e sono gestite da IAM.
 
 Le istanze esistenti distribuite nelle release della V2.4 e precedenti possono essere migrate ad account {{site.data.keyword.cloud_notm}} specificati per la gestione abilitata a IAM. Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Migrazione di istanze vCenter Server precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
-* [Migrazione di istanze vCenter Server with Hybridity Bundle precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
-* [Migrazione di istanze Cloud Foundation precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
-* [Migrazione di istanze NetApp ONTAP Select precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
-* [Migrazione di istanze VMware Federal precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)
+* [Migrazione di istanze vCenter Server precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
+* [Migrazione di istanze vCenter Server with Hybridity Bundle precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
+* [Migrazione di istanze Cloud Foundation precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addinstancetousraccount)
+* [Migrazione di istanze NetApp ONTAP Select precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)
 
-### Link correlati
+## Link correlati
+{: #iam-related}
 
-* [Gestione di identità e accesso](/docs/iam/quickstart.html)
+* [Gestione di identità e accesso](/docs/iam?topic=iam-getstarted)
 * [Gestione di utenti e accesso](/docs/iam/iamusermanage.html)
-* [Cos'è IAM](/docs/iam/index.html)
+* [Cos'è IAM](/docs/iam?topic=iam-iamoverview)

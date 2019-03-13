@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-18"
 
 ---
 
 #	Recopilación de los metadatos
+{: #vum-metadata}
 
 VUM descarga metadatos sobre las actualizaciones, parches o extensiones mediante un proceso automático predefinido que puede modificar. A intervalos regulares configurables, VUM se pone en contacto con VMware o con orígenes de terceros, para recopilar los metadatos más recientes sobre actualizaciones, parches o extensiones disponibles. Sin embargo, los valores predeterminados de VMware son aceptables para su uso en la instancia de VMware vCenter Server en {{site.data.keyword.cloud}}. Puede cambiarlos según sea necesario para ajustarlos a los requisitos de la empresa.
 
@@ -18,19 +19,28 @@ Puede utilizar las líneas base gestionadas por el sistema para actualizar los c
 
 Para la mayoría de las empresas, los valores predeterminados de VMware para VUM se consideran adecuados. A continuación se proporciona información sobre cómo cambiar estos valores si desea utilizar valores distintos para su empresa.
 
-##	Descargar planificación
+## Descargar planificación
+{: #vum-metadata-download-schedule}
+
 Las actualizaciones son actualizaciones de dispositivos virtuales, parches de host y extensiones y, de forma predeterminada, se descargan diariamente las actualizaciones de VUM. Para cambiar la planificación de la descarga, acceda al cliente web de vSphere; para ello vaya a **Inicio** > **Gestor de actualizaciones** > **Gestionar** > **Valores** y seleccione **Descargar planificación** y, a continuación, pulse **Editar**.
 
-##	Planificación de comprobación de notificación
+## Planificación de comprobación de notificación
+{: #vum-metadata-notif-check-schedule}
+
 Las notificaciones son información sobre los retiros de parches, los nuevos arreglos y las alertas, y, de forma predeterminada, VUM descarga las notificaciones por hora. Para cambiarlo, es necesario acceder al cliente web de vSphere. Para ello, vaya a **Inicio** > **Gestor de actualizaciones** > **Gestionar** > **Valores** y seleccione **Planificación de comprobación de notificación** y, a continuación, pulse **Editar**.
 
-##	Valores de máquina virtual
+## Configuración de máquina virtual
+{: #vum-metadata-vm-settings}
+
 Para cambiar los valores de la máquina virtual (VM), acceda al cliente web de vSphere. Vaya a **Inicio** > **Gestor de actualizaciones** > **Gestionar** > **Valores** y **Valores de VM** y, a continuación, pulse **Editar**.
 
-##	Valores de host/clúster
+## Valores de host/clúster
+{: #vum-metadata-host-settings}
+
 Para cambiar los valores de Host/Clúster, acceda al cliente web de vSphere, vaya a **Inicio** > **Actualizar gestor** > **Gestionar** > **Valores** y **Host/Configuración de clúster** y, a continuación, pulse **Editar**.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vum-metadata-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

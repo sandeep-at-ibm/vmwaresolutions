@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Suppression d'instances Cloud Foundation dans une configuration multisite
+{: #sd_deletinginstance_multi}
 
 Avant de prévoir de supprimer des instances Cloud Foundation dans une configuration multisite, passez en revue les remarques ci-après.
 
@@ -30,6 +31,7 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 {:note}
 
 ## Procédure de suppression d'instances Cloud Foundation dans une configuration multisite
+{: #sd_deletinginstance_multi-procedure}
 
 1. Supprimez tous les services de l'instance Cloud Foundation secondaire.
 2. Vérifiez qu'aucun objet NSX n'est développé dans l'instance secondaire que vous voulez supprimer.
@@ -39,7 +41,8 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 6. Répétez les étapes 1 à 5 pour toutes les instances Cloud Foundation secondaires de votre configuration multisite.
 7. Après avoir supprimé toutes les instances secondaires, vous pouvez également supprimer l'instance principale de la console {{site.data.keyword.vmwaresolutions_short}}.
 
-### Liens connexes
+## Liens connexes
+{: #sd_deletinginstance_multi-related}
 
-* [Suppression d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
-* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Suppression d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)
+* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)

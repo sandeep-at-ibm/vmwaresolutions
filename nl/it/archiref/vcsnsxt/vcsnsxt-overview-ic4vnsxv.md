@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Panoramica di NSX-V
+{: #vcsnsxt-overview-ic4vnsxv}
 
 La virtualizzazione di rete fornisce una sovrapposizione di rete che esiste all'interno del livello virtuale. NSX-V fornisce all'architettura funzioni quali provisioning rapido, distribuzione, riconfigurazione ed eliminazione di reti virtuali su richiesta. Questa progettazione utilizza il VDS (vSphere distributed switch) e VMware NSX for vSphere per implementare la rete virtuale.
 
@@ -37,6 +38,7 @@ Insieme ai controller, l'automazione di {{site.data.keyword.cloud_notm}} prepara
 Vengono quindi distribuite le coppie di ESG (Edge Services Gateway) NSX. Per tutte le distribuzioni, viene utilizzata una sola coppia di gateway per il traffico in uscita dai componenti di automazione che risiedono sulla rete privata. Le istanze VMware vCenter Server on {{site.data.keyword.cloud_notm}} includono un secondo gateway, noto come edge gestito dal cliente, che viene distribuito e configurato con un uplink alla rete pubblica e un'interfaccia che è assegnata alla rete privata. Tutti i componenti NSX necessari, come i DLR (Distributed Logical Router), gli switch logici e i firewall, possono essere configurati dall'amministratore.
 
 ## Progettazione di switch distribuiti
+{: #vcsnsxt-overview-ic4vnsxv-distributed-switch}
 
 La progettazione utilizza un numero minimo di vDS (virtual distributed switch). Gli host nel cluster sono connessi alle reti pubbliche e private. Sono configurati con due switch distribuiti virtuali. L'uso di due switch segue la separazione di rete fisica delle reti pubbliche e private implementate in {{site.data.keyword.cloud_notm}}.
 
@@ -88,6 +90,7 @@ SDDC-Dswitch-Private	|Generato automaticamente da NSX	|Porta virtuale di origine
 SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|Porta virtuale di origine	|Attivo: 0, 1	|VLAN3
 
 ## NSX-V
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v}
 
 Questa progettazione specifica la configurazione dei componenti NSX ma non applica alcuna configurazione dei componenti della sovrapposizione di rete. È compito del cliente progettare la sovrapposizione di rete in base alle proprie esigenze.
 
@@ -105,6 +108,7 @@ Cosa NON è configurato:
 -	Gestione NSX collegata ad altre istanze VMware.
 
 ### Sicurezza NSX-V
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
 
 NSX for vSphere abilita le organizzazioni a dividere il data center in segmenti di sicurezza distinti, fino al livello del singolo carico di lavoro indipendentemente da dove quest'ultimo è in esecuzione. I team IT possono definire le politiche per ciascun carico di lavoro in base al contesto di applicazione e utente, il che garantisce risposte immediate alle minacce internamente al data center e un'implementazione fino al livello dell'applicazione.
 
@@ -120,7 +124,8 @@ Il seguente diagramma mostra un diagramma di alto livello di come puoi implement
 Figura 3. Sicurezza NSX-V
 ![Sicurezza NSX-V](vcsnsxt-vsecurity.svg)
 
-### Link correlati
+## Link correlati
+{: #vcsnsxt-overview-ic4vnsxv-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

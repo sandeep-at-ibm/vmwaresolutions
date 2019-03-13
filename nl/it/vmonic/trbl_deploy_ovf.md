@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # Distribuzione di un file OVF mediante il client web VMware vSphere
+{: #trbl_deploy_ovf}
 
 ## Risoluzione
+{: #trbl_deploy_ovf-resolution}
 
 Per distribuire un file OVF (Open Virtualization Format) mediante il client web vSphere, utilizza la seguente procedura:
 1. Prima di tentare la distribuzione di un file OVF, aggiungi le seguenti informazioni host al file `/etc/hosts`:

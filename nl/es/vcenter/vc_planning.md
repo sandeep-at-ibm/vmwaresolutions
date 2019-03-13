@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-02-14"
 
 ---
 
 # Requisitos y planificación de instancias de vCenter Server
+{: #vc_planning}
 
 Revise los siguientes requisitos antes de solicitar sus instancias de VMware vCenter Server. Planifique la instancia en función de la ubicación del {{site.data.keyword.CloudDataCent}}, de sus requisitos de capacidad de carga de trabajo y de los requisitos de servicio adicionales.
 
 ## Requisitos de la cuenta de IBM Cloud
+{: #vc_planning-account-req}
 
-La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## Disponibilidad del centro de datos de IBM Cloud
+{: #vc_planning-dc-availability}
 
 El despliegue de vCenter Server impone requisitos estrictos en cuanto a la infraestructura física. Por lo tanto, en {{site.data.keyword.CloudDataCents_notm}} solo puede desplegar instancias que cumplan los requisitos. Están disponibles los siguientes {{site.data.keyword.CloudDataCents_notm}} para el despliegue de vCenter Server:
 
@@ -66,20 +69,24 @@ Tabla 2. Indicadores de estado para {{site.data.keyword.CloudDataCents_notm}} cu
 | Limited Inventory             | El {{site.data.keyword.CloudDataCent_notm}} ofrece disponibilidad limitada y es posible que el pedido no se complete. |
 
 ## Copia de seguridad de los componentes de gestión
+{: #vc_planning-backup-mgmt-components}
 
-El usuario es responsable de mantener y garantizar la disponibilidad de todos los componentes de instancia. Se recomienda encarecidamente que planee la copia de seguridad o la alta disponibilidad de todos los componentes de gestión. Para obtener más información, consulte [Copia de seguridad de componentes](../archiref/solution/solution_backingup.html).
+El usuario es responsable de mantener y garantizar la disponibilidad de todos los componentes de instancia. Se recomienda encarecidamente que planee la copia de seguridad o la alta disponibilidad de todos los componentes de gestión. Para obtener más información, consulte [Copia de seguridad de componentes](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup).
 
 ## Servicios para instancias de vCenter Server
+{: #vc_planning-addon-services}
 
-Puede solicitar servicios complementarios para su instancia en función de sus necesidades, por ejemplo, la recuperación tras desastre. Para obtener más información, consulte [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](vc_addingremovingservices.html).
+Puede solicitar servicios complementarios para su instancia en función de sus necesidades, por ejemplo, la recuperación tras desastre. Para obtener más información, consulte [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Consideraciones de capacidad
+{: #vc_planning-capacity-considerations}
 
-Para obtener más información sobre las consideraciones sobre la capacidad, consulte [Capacidad de escalado](../archiref/solution/solution_scaling.html).
+Para obtener más información sobre las consideraciones sobre la capacidad, consulte [Capacidad de escalado](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling).
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vc_planning-related}
 
-* [Visión general de vCenter Server](vc_vcenterserveroverview.html)
-* [Pedido de instancias de vCenter Server](vc_orderinginstance.html)
-* [Ampliación y reducción de la capacidad para instancias de vCenter Server](vc_addingremovingservers.html)
-* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](vc_addingremovingservices.html)
+* [Visión general de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Pedido de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Ampliación y reducción de la capacidad para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)

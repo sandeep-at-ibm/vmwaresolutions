@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -13,16 +13,19 @@ lastupdated: "2018-11-13"
 {:important: .important}
 
 # Gestión de la infraestructura de almacenamiento adjunto
+{: #storage-infra-mgmt}
 
 La gestión de infraestructura hace referencia a los componentes de VMware que gestionan la infraestructura de vSphere ESXi.
 
-Para obtener más información acerca de los componentes, consulte la Figura 2. Visión general de la red de NSX Manager en el apartado sobre [Diseño de la infraestructura virtual](../solution/design_virtualinfrastructure.html).
+Para obtener más información acerca de los componentes, consulte la Figura 2. Visión general de la red de NSX Manager en [Diseño de la infraestructura virtual](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure).
 
 ## Diseño de la red virtual
+{: #storage-infra-mgmt-visual-net-design}
 
-La virtualización de red que se utiliza en este diseño usa el conmutador distribuido de vSphere (vDS) existente asociado a la red privada y especificado en la [arquitectura de {{site.data.keyword.vmwaresolutions_full}}](../solution/solution_overview.html).
+La virtualización de red que se utiliza en este diseño usa el conmutador distribuido de vSphere (vDS) existente asociado a la red privada y especificado en la [arquitectura de {{site.data.keyword.vmwaresolutions_full}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Conmutador distribuido de vSphere
+{: #storage-infra-mgmt-vsphere-ds}
 
 Se crea otra VLAN dentro de la solución vCenter Server y se utiliza para conectar el punto de montaje NFS a los hosts ESXi del clúster existente. Puesto que la solución de vCenter Server tiene un conmutador distribuido de vSphere asociado con la red privada, se crea otro grupo de puertos y se etiqueta con el número de VLAN adicional, ya que esta VLAN adicional no es nativa.
 
@@ -47,9 +50,11 @@ Figura 1. Grupos de puertos vDS privados y enlaces ascendentes
 ![Grupos de puertos vDS privados y enlaces ascendentes](private_vds_portgroups_and_uplinks.svg "Grupos de puertos vDS privados y enlaces ascendentes")
 
 ### Direccionamiento estático de host vSphere
+{: #storage-infra-mgmt-vsphere-routing}
 
 Aunque vDS se configura con un grupo de puertos nuevo y se asigna un puerto VMkernel al grupo de puertos, la solución crea una ruta estática en cada host vSphere ESXi del despliegue para que todo el tráfico NFS atraviese la VLAN y la subred para NFS. La ruta estática se crea en `/etc/rc.local.d/local.sh` para que permanezca entre reinicios.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #storage-infra-mgmt-related}
 
-* [Visión general de la solución](../solution/solution_overview.html)
+* [Visión general de la solución](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

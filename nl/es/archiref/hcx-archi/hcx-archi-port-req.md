@@ -4,14 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-14"
+lastupdated: "2019-02-15"
 
 ---
 # Requisitos de acceso a puertos de HCX on IBM Cloud
+{: #hcx-archi-port-req}
 
 HCX debe cruzar internet público y líneas privadas, y conectar con los componentes del centro de datos, como redes, conmutadores y grupos de puertos.
 
-en la tabla siguiente encontrará los puertos que deben estar abiertos para que los dispositivos virtuales de Hybrid Cloud Services se puedan instalar correctamente. Tanto el entorno de vSphere como el entorno de IBM Cloud deben permitir la sincronización de reloj de Network Time Protocol (NTP) entre los dispositivos locales de vSphere y los dispositivos de IBM Cloud. El puerto UDP 123 debe resultar accesible para los dispositivos virtuales y las redes de Hybrid Cloud Services. Se pueden especificar servidores NTP instalados cuando se instalada el dispositivo Hybrid Cloud Services.
+En la tabla siguiente encontrará los puertos que deben estar abiertos para que los dispositivos virtuales de Hybrid Cloud Services se puedan instalar correctamente. Tanto el entorno de vSphere como el entorno de IBM Cloud deben permitir la sincronización de reloj de Network Time Protocol (NTP) entre los dispositivos locales de vSphere y los dispositivos de IBM Cloud. El puerto UDP 123 debe resultar accesible para los dispositivos virtuales y las redes de Hybrid Cloud Services. Se pueden especificar servidores NTP instalados cuando se instalada el dispositivo Hybrid Cloud Services.
 
 Tabla 1. Requisitos de acceso a puertos
 
@@ -39,6 +40,7 @@ Tabla 1. Requisitos de acceso a puertos
 | Cloud Gateway (local) | Pasarela de nube</br>(remoto) | 4500  | UDP | Intercambio de claves de (IKEv2) para encapsular cargas de trabajo para el túnel bidireccional | IPSEC |
 | Cloud Gateway (local) | Pasarela de nube</br>(remoto) | 500  | UDP | Intercambio de claves de Internet (ISAKMP) para el túnel bidireccional | IPSEC |
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #hcx-archi-port-req-related}
 
-* [Instalación y configuración de HCX en el origen](hcx-archi-install-cfg-src.html)
+* [Instalación y configuración de HCX en el origen](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)

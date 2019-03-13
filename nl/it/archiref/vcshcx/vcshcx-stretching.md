@@ -17,7 +17,7 @@ lastupdated: "2019-02-16"
 ### Concetti e prassi ottimali per l'estensione di rete
 {: #vcshcx-stretching-best-practices-network}
 
-La rete lato client è collegata alla VXLAN lato cloud da una sofisticata VPN multitunnel che consiste in tecnologia HCX proprietaria. Non è basata su NSX ma funziona con NSX e ne estende la capacità. Questo processo è controllato dall'IU (interfaccia utente) web vCenter lato client e automatizza la distribuzione e l'attivazione di entrambi gli endpoint sul lato client e su quello cloud.La selezione della rete da estendere viene eseguito singolarmente o in batch.
+La rete lato client è collegata alla VXLAN lato cloud da una sofisticata VPN multitunnel che consiste in tecnologia HCX proprietaria. Non è basata su NSX ma funziona con NSX e ne estende la capacità. Questo processo è controllato dall'IU (interfaccia utente) web vCenter lato client e automatizza la distribuzione e l'attivazione di entrambi gli endpoint sul lato client e su quello cloud. La selezione della rete da estendere viene eseguito singolarmente o in batch.
 
 Inoltre, come parte del flusso di lavoro di estensione di rete, NSX sul lato cloud è tenuto a creare una VXLAN che viene quindi connessa a un'interfaccia creta sul dispositivo L3 lato cloud specificato (DLR o ESG lasciato in uno stato di non connesso) e il dispositivo L2C lato cloud.
 
@@ -25,7 +25,7 @@ Quando migri una specifica applicazione, tutte le reti utilizzate dalle macchine
 
 Perché di norma e non sempre? Può essere vantaggioso disconnettere del traffico specifico dal lato client dopo la migrazione della VM. Un esempio sono i client di backup guest VM, che possono causare un elevato utilizzo della larghezza di banda quando sono spostati al cloud. Il client di backup in-guest non è necessario quando la VM viene migrata e viene selezionato automaticamente da un backup a livello di blocco più moderno sul lato cloud.
 
-Invece di accedere a ciascuna VM per disattivare la pianificazione di backup del client in-guest, la mancata connessione dell'adattatore di rete di backup del client (se viene utilizzata la rete di backup) causa una mancata riuscita del backup  Questa è una situazione temporanea finché non sarà possibile raggiungere tutte le VM post-migrazione per disabilitare il client di backup in-guest.
+Invece di accedere a ciascuna VM per disattivare la pianificazione di backup del client in-guest, la mancata connessione dell'adattatore di rete di backup del client (se viene utilizzata la rete di backup) causa una mancata riuscita del backup Questa è una situazione temporanea finché non sarà possibile raggiungere tutte le VM post-migrazione per disabilitare il client di backup in-guest.
 
 La larghezza di banda di una singola L2C è teoricamente di 4 Gbps, tuttavia, questo può essere il limite per tutte le rete estese in una singola coppia L2C e non può essere raggiunto da una singola rete estesa. Una singola rete estesa può raggiungere ~1 Gbps, a condizione che la larghezza di banda sottostante assegnata sia sufficiente e che la latenza sia bassa (<~10 ms).
 
@@ -173,4 +173,4 @@ Sono di seguito riportate delle considerazioni e delle implicazioni:
 {: #vcshcx-stretching-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html) 
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro) 

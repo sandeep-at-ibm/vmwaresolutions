@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-06-07"
 
 ---
 
@@ -14,7 +14,7 @@ Revise informações importantes sobre requisitos e contas do usuário antes de 
 
 ## Console do IBM Cloud for VMware Solutions
 
-O console do {{site.data.keyword.vmwaresolutions_short}} é a interface em que você pede e gerencia suas implementações. Cada implementação é gerenciada como uma instância no console. O console é uma interface com o usuário independente separada do {{site.data.keyword.slportal}}.
+O console do {{site.data.keyword.vmwaresolutions_short}} é a interface em que você pede e gerencia suas implementações. Cada implementação é gerenciada como uma instância no console. O console é uma interface com o usuário independente separada do {{site.data.keyword.slportal_full}}.
 
 ## Conta IBMid
 
@@ -44,10 +44,10 @@ Revise a lista de navegadores suportados antes de começar a trabalhar com o con
 
 Para obter uma visualização ideal e trabalhar no console do {{site.data.keyword.vmwaresolutions_short}}, configure a resolução da tela para pelo menos 1024 px de largura por 500 px de altura.
 
-### Links relacionados
+## Links relacionados
 
 * [Sobre o {{site.data.keyword.vmwaresolutions_short}}](vmonic/prod_overview.html)
 * [Visão geral do Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Visão geral do vCenter Server](../vcenter/vc_vcenterserveroverview.html)
-* [ Zerto on  {{site.data.keyword.cloud_notm}}  visão geral ](../services/addingzertodr.html)
+* [Visão geral do Zerto on IBM Cloud](../services/addingzertodr.html)
 * [Resolução de problemas](troubleshooting.html)

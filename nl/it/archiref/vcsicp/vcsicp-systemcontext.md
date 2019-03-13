@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Contesto di sistema
+{: #vcsicp-systemcontext}
 
 Figura 1. Diagramma del contesto di sistema
 ![Diagramma del contesto di sistema - CAM {{site.data.keyword.icpfull_notm}} vCenter Server](vcsicp-syscontext-vcs-icp-cam.svg)
@@ -25,6 +26,7 @@ lo sviluppo e la gestione delle applicazioni inserite nei contenitori. {{site.da
 - **{{site.data.keyword.cloud_notm}} Services** - {{site.data.keyword.cloud_notm}} Services è un'ampia gamma di servizi utilizzabili disponibili, comprese le offerte di analisi, AI e IoT.
 
 ## Attori
+{: #vcsicp-systemcontext-actors}
 
 Tabella 1. Attori
 
@@ -36,6 +38,7 @@ Cliente | Attore esterno che consuma i servizi dall'azienda. Per Acme Skateboard
 {{site.data.keyword.containerlong_notm}} | La risorsa IBM che gestisce il nodo master {{site.data.keyword.containerlong_notm}} per il servizio.
 
 ## Sistemi
+{: #vcsicp-systemcontext-systems}
 
 Tabella 2. Sistemi
 
@@ -56,7 +59,8 @@ Watson | Per questa architettura di riferimento e per Acme Skateboards, Watson r
 
 La rete, la sicurezza e la migrazione dell'applicazione sono spesso gli aspetti più impegnativi della modernizzazione dell'applicazione. vCenter Server, VMware Hybridity, VMware NSX, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}} affrontano queste sfide e ti consentono di creare applicazioni moderne, robuste, sicure e resilienti.
 
-### Link correlati
+## Link correlati
+{: #vcsicp-systemcontext-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

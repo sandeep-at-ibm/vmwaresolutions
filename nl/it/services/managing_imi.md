@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Richiesta di servizi gestiti da IMI
+{: #managing_imi}
 
 {{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) può semplificare la gestione dell'infrastruttura virtuale VMware con servizi modulari. IMI utilizza automazione e analisi avanzate per gestire componenti di infrastrutture critiche in tutto il mondo e per offrire servizi di gestione remota dinamici per una vasta gamma di infrastrutture virtuali tradizionali e cloud.
 
@@ -17,6 +18,7 @@ IMI può fungere da unico provider attendibile per ridurre la complessità del m
 IMI fornisce servizi gestiti per le tue istanze Cloud Foundation e vCenter Server. Questi servizi gestiti includono la gestione avanzata di VMware vSphere, la completa copertura di VMware NSX per garantire un'infrastruttura di rete virtuale altamente disponibile e sicura e il monitoraggio di VMware vSAN per garantire la disponibilità dei dati.
 
 ## Specifiche tecniche per IMI
+{: #technical-specifications}
 
 Nel servizio gestito IMI sono incluse le seguenti specifiche:
 
@@ -27,6 +29,7 @@ Nel servizio gestito IMI sono incluse le seguenti specifiche:
 * Servizi con valore aggiunto senza aumento dei costi per il miglioramento continuo
 
 ## Procedura per richiedere i servizi gestiti da IMI
+{: #managing_imi-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Introduzione** nel riquadro di navigazione a sinistra.
 2. Scorri la pagina e fai clic sulla scheda **Servizi gestiti da IMI** che si trova in **Ordina servizi gestiti aggiuntivi**.
@@ -34,8 +37,9 @@ Nel servizio gestito IMI sono incluse le seguenti specifiche:
 
 Un rappresentante di prevendita IMI ti contatterà utilizzando le tue informazioni di contatto {{site.data.keyword.cloud_notm}} per aiutarti con i servizi di cui hai bisogno.
 
-### Link correlati
+## Link correlati
+{: #managing_imi-related}
 
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

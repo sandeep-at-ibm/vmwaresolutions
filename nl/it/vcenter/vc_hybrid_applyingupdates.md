@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,12 +13,14 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Applicazione di aggiornamenti alle istanze vCenter Server with Hybridity Bundle
+{: #vc_hybrid_applyingupdates}
 
 Il processo di applicazione di patch e aggiornamenti alle istanze vCenter Server with Hybridity Bundle è automatizzato solo per i componenti di gestione. Gli aggiornamenti di VMware devono essere applicati manualmente.
 
 ## Prima di iniziare
+{: #vc_hybrid_applyingupdates-prereq}
 
-A partire dalla V2.5, gli aggiornamenti di IBM CloudDriver non sono più elencati perché sono abilitati gli aggiornamenti automatici. Azioni come l'aggiunta di un host, l'aggiunta di un cluster e l'ordine di un servizio aggiornano automaticamente l'istanza all'ultima versione. Per ulteriori informazioni sugli aggiornamenti automatici, consulta la sezione *Resilienza di IBM CloudDriver* in [Note sulla release per la V2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
+A partire dalla V2.5, gli aggiornamenti di IBM CloudDriver non sono più elencati perché sono abilitati gli aggiornamenti automatici. Azioni come l'aggiunta di un host, l'aggiunta di un cluster e l'ordine di un servizio aggiornano automaticamente l'istanza all'ultima versione. Per ulteriori informazioni sugli aggiornamenti automatici, consulta la sezione *Resilienza di IBM CloudDriver* in [Note sulla release per la V2.5](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25).
 {:note}
 
 Prima di tentare di applicare un aggiornamento, espandi la voce di aggiornamento facendo clic sulla freccia in giù e verifica le seguenti informazioni:
@@ -35,12 +37,13 @@ Tabella 1. Livelli di aggiornamento e impatto
 | Livello di aggiornamento  | Impatto        |  
 |:------------- |:------------- |
 | Basso    | Questo aggiornamento non influisce su alcun sistema. Non devi applicarlo durante i tempi di inattività
-pianificati. |  
+    pianificati. |  
 | Medium | Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività
-pianificati. |  
+    pianificati. |  
 | Maggiore  | Questo aggiornamento influisce su alcuni o tutti i sistemi. Devi applicarlo durante i tempi di inattività pianificati. |  
 
 ## Procedura per applicare aggiornamenti alle istanze vCenter Server with Hybridity Bundle
+{: #vc_hybrid_applyingupdates-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza da aggiornare.
@@ -65,13 +68,14 @@ pianificati. |
 7. Se applichi aggiornamenti alle istanze vCenter Server nella configurazione di distribuzione multisito, viene visualizzata una sezione intitolata **Passi necessari per l'aggiornamento**. Questa sezione elenca le operazioni di aggiornamento richieste per tutte le istanze nella distribuzione multisito. Devi completare i passi in sequenza facendo clic su **Applica aggiornamento** per ciascun passo. Devi attendere il completamento del passo precedente prima di iniziare il passo successivo.   
 
 ## Risultati
+{: #vc_hybrid_applyingupdates-results}
 
-2. Dopo aver applicato un aggiornamento, viene visualizzato un record nell'elenco di stato degli aggiornamenti software, in cui puoi visualizzare l'avanzamento dettagliato e lo stato dell'aggiornamento. Al termine dell'aggiornamento, viene visualizzato un record nell'elenco degli aggiornamenti software installati.
+1. Dopo aver applicato un aggiornamento, viene visualizzato un record nell'elenco di stato degli aggiornamenti software, in cui puoi visualizzare l'avanzamento dettagliato e lo stato dell'aggiornamento. Al termine dell'aggiornamento, viene visualizzato un record nell'elenco degli aggiornamenti software installati.
 
   Per recuperare lo stato più recente per un lavoro di aggiornamento, fai clic sull'icona di aggiornamento nella parte superiore destra della pagina.
   {:tip}
 
-3. Per i dettagli sugli stati degli aggiornamenti, consulta il seguente elenco:
+2. Per i dettagli sugli stati degli aggiornamenti, consulta il seguente elenco:
 <dl class="dl">
 <dt class="dt dlterm">Disponibile</dt>
 <dd class="dd">L'aggiornamento è disponibile per l'applicazione. Non puoi selezionare un aggiornamento disponibile finché non vengono applicati tutti gli aggiornamenti precedenti.
@@ -90,10 +94,11 @@ di riapplicare l'aggiornamento.</dd>
 <dd class="dd">Non è possibile ottenere lo stato del lavoro di aggiornamento. Contatta il supporto IBM per assistenza.</dd>
 </dl>
 
-4. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato a tentare nuovamente l'aggiornamento dal passo non riuscito.
+3. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato a tentare nuovamente l'aggiornamento dal passo non riuscito.
 
-### Link correlati
+## Link correlati
+{: #vc_hybrid_applyingupdates-related}
 
-* [Panoramica di vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Panoramica di vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

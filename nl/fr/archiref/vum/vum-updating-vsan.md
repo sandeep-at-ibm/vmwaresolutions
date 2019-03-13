@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # Mise à jour des clusters vSAN
+{: #vum-updating-vsan}
 
 vSAN génère des lignes de base de système et des groupes de lignes de base pour les utiliser avec vSphere Update Manager (VUM). Vous pouvez vous servir de ces lignes de base recommandées pour mettre à jour des logiciels, des correctifs et des extensions pour les hôtes vSphere ESXi figurant dans votre instance VMware vCenter Server on {{site.data.keyword.cloud_notm}} à l'aide de vSAN. vSAN 6.6.1 (et versions ultérieures) génère des recommandations de build automatisées pour les clusters vSAN. vSAN combine les informations du guide de compatibilité VMware et du catalogue de versions de vSAN avec des informations sur les versions de vSphere ESXi installées.
 
@@ -20,17 +21,18 @@ Ces mises à jour recommandées offrent la meilleure édition disponible pour co
 La mise à niveau du cluster vSAN s'effectue selon la séquence de tâches suivante :
 * **Activation de vSAN Online Health Workflow** – Ce workflow active les lignes de base vSAN dans VUM de sorte que les mises à jour puissent être consultées et corrigées. Il doit être réalisé uniquement au début pour activer vSAN avec VUM
 * **Prérequis** – Familiarisez-vous avec les prérequis, le processus et les restrictions
-* **Mise à niveau de vCenter Server Appliance**. Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html).
-* **Mise à niveau des hôtes vSphere ESXi** – Pour plus d'informations, voir [Création de lignes de base et association à des objets d'inventaire](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html).
+* **Mise à niveau de vCenter Server Appliance**. Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa).
+* **Mise à niveau des hôtes vSphere ESXi** – Pour plus d'informations, voir [Création de lignes de base et association à des objets d'inventaire](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines).
 * **Mise à niveau du format de disque vSAN** - Reportez-vous à Mise à jour du format de disque vSAN. La mise à niveau du format de disque est facultative mais pour obtenir les meilleurs résultats, mettez à niveaux les objets pour utiliser la version la plus récente. Le format de disque expose votre environnement à la panoplie complète des fonctions de vSAN.
 
 ## Activation de vSAN Online Health Workflow
+{: #vum-updating-vsan-enable-vsan-workflow}
 
 Exécutez les tâches présentées dans cette section pour rendre les lignes de base vSAN disponibles dans VUM. vSAN 6.6.1 (et versions ultérieures) fournit un processus de mise à jour automatisé sans faille pour garantir qu'un cluster vSAN est à jour avec la meilleure version disponible pour que votre instance VMware vCenter Server on {{site.data.keyword.cloud_notm}} reste dans un état pris en charge selon les recommandations suivantes :
 * **Recommandations de version vSAN** - ces recommandations sont automatiquement générées à l'aide des informations du Guide de compatibilité VMware, du catalogue des versions de vSAN et en tenant compte de la configuration matérielle sous-jacente. Cela comprend également les pilotes et les mises à jour de correctifs nécessaires pour la version recommandée dans sa ligne de base de système.
 * **Recommandations de build vSAN** - ces recommandations garantissent que les clusters restent à l'état de compatibilité actuel ou amélioré du matériel.
 
-Vérifiez que VCSA correspond à vCenter 6.5 Patch 2 ou une version plus récente avant de continuer car ces versions corrigent des erreurs liées à l'utilisation d'un proxy. Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html).
+Vérifiez que VCSA correspond à vCenter 6.5 Patch 2 ou une version plus récente avant de continuer car ces versions corrigent des erreurs liées à l'utilisation d'un proxy. Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa).
 
 Pour voir les mises à jour de vSAN dans VUM et vérifier que le workflow vSAN online Health est suivi, procédez comme suit. Par conséquent, vSAN Online Health doit se connecter aux sites `vcsa.vmware.com` et `vmware.com` pour effectuer ces contrôles de santé en ligne. Pour activer vSAN Online Health Workflow, nous devons :
 * Configurer VCSA pour utiliser le proxy.
@@ -41,10 +43,11 @@ Pour voir les mises à jour de vSAN dans VUM et vérifier que le workflow vSAN o
 La première étape consiste à ajouter vos données d'identification my.vmware.com au moteur des recommandations de build de vSAN (vSAN Build Recommendation Engine). Lorsque la connexion est établie, vSAN génère un groupe de lignes de base de mises à jour recommandées pour chaque cluster vSAN. Les lignes de base de système vSAN sont répertoriées dans le panneau Baselines de l'onglet Baselines and Groups.
 
 ### Configuration de VCSA pour utiliser le proxy
+{: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	Dans le navigateur de votre serveur intermédiaire, connectez-vous à l'interface de gestion de VCSA `https://<vCenter ip>:5480`
 2.	En utilisant les données d'identification de la console IC4VS, connectez-vous à l'interface de gestion VCSA en tant qu'utilisateur racine (root).
-3.	Dans l'interface de gestion de vCenter Server Appliance, cliquez sur **Networking**, puis sur **Manage**.
+3.	Dans l'interface de gestion de dispositif de vCenter Server, cliquez sur **Networking**, puis sur **Manage**.
 4.	Pour configurer un serveur proxy, dans le panneau Paramètres proxy, cliquez sur **Edit**.
 5.	Sélectionnez **Use a proxy server**, entrez les paramètres du serveur proxy et cliquez sur **OK**.
 
@@ -54,14 +57,19 @@ Si les paramètres HTTPS ne sont pas définis, utilisez la commande suivante :
   `proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
 
 ### Configuration de vSAN pour utiliser le proxy
+{: #vum-updating-vsan-config-vsan-proxy}
+
 1. Accédez à **Home** > **Hosts and Clusters**, sélectionnez **vSAN cluster** dans le panneau de navigation, puis sélectionnez l'onglet **Configure** et accédez à **vSAN**, puis **General**. Faites défiler l'écran jusqu'à la section **Internet Connectivity** et cliquez sur **Edit**.
 2. Entrez l'adresse IP et le numéro de port du proxy, puis cliquez sur **OK**.
 
 ### Activation du programme d'amélioration de l'expérience client (CEIP)
+{: #vum-updating-vsan-enable-ceip}
 
 Cette étape est facultative. En utilisant le client vSphere Web Client, accédez à **Home** > **Administration** > **Customer Experience Improvement Program**, puis cliquez sur **Join**.
 
 ### Effectuer un test de téléchargement et confirmer que le téléchargement a abouti
+{: #vum-updating-vsan-complete-upload}
+
 1. Dans vSphere Web Client, accédez à **Home** > **Hosts and Clusters**. Sélectionnez le cluster nécessaire, puis sélectionnez l'onglet **Monitor** et la page **vSAN**, puis cliquez sur **Health**. Cliquez sur **Enable Online Health**.
 2. Cliquez sur le bouton **Retest** et patientez jusqu'à la fin du processus.
 3. Une nouvelle vérification apparaît dans Health pour _Online health connectivity_ et le bouton **Enable Online Health** devient **Retest with Online Health**.
@@ -71,6 +79,7 @@ Cette étape est facultative. En utilisant le client vSphere Web Client, accéde
 7. Cliquez sur l'onglet **Update Manager** et le cluster vSAN est ajouté aux lignes de base.
 
 ## Prérequis
+{: #vum-updating-vsan-prereq}
 
 Avant de lancer le processus de mise à niveau de vSAN, vérifiez que les conditions requises suivantes sont remplies :
 * Consultez les articles de la base de connaissances de VMware, ainsi que les problèmes de compatibilité connus entre votre version actuelle de vSAN et la version vSAN cible souhaitée
@@ -93,14 +102,17 @@ Avant de lancer le processus de mise à niveau de vSAN, vérifiez que les condit
   - Par conséquent, certains changements de comportement de vSAN sont contrôlés par le format sur disque et il est important que des versions de format sur disque plus récentes ne soient pas introduites dans un cluster avec un mélange de versions.
 
 ## Mise à niveau de vCenter Server Appliance
+{: #vum-updating-vsan-upgrade-vcsa}
 
-Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](/docs/services/vmwaresolutions/archiref/vum/vum-updating-vcsa.html).
+Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa).
 
-##	Mise à niveau des hôtes vSphere ESXi
+## Mise à niveau des hôtes vSphere ESXi
+{: #vum-updating-vsan-upgrade-hosts}
 
-Pour plus d'informations, voir [Création de lignes de base et association à des objets d'inventaire](/docs/services/vmwaresolutions/archiref/vum/vum-baselines.html).
+Pour plus d'informations, voir [Création de lignes de base et association à des objets d'inventaire](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines).
 
-##	Mise à niveau du format de disque vSAN
+## Mise à niveau du format de disque vSAN
+{: #vum-updating-vsan-upgrade-vsan}
 
 La console RVC (Ruby vSphere Console) est une interface de ligne de commande Ruby pour vSphere. Elle peut être utilisée pour gérer VMware vSphere ESXi et vCenter. L'inventaire vSphere est présenté sous forme d'arborescence, ce qui vous permet de naviguer et d'exécuter des commandes sur les objets vCenter.
 
@@ -134,7 +146,8 @@ De nombreuses tâches administratives de base peuvent s'effectuer avec plus d'ef
 
 11. La mise à niveau du cluster VSAN est à présent terminée. Entrez `exit` et appuyez sur **Entrée** pour quitter la console RVC.
 
-### Liens connexes
+## Liens connexes
+{: #vum-updating-vsan-related}
 
 * [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

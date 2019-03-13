@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Présentation d'IBM Cloud Private Hosted
+{: #icp_overview}
 
 Le service {{site.data.keyword.cloud}} Private Hosted déploie automatiquement {{site.data.keyword.cloud_notm}} Private Hosted sur vos instances VMware vCenter Server. Ce service fournit la puissance des microservices et des conteneurs à votre environnement VMware sur {{site.data.keyword.cloud_notm}}. Grâce à ce service, vous pouvez déployer le même modèle opérationnel et les mêmes outils VMware et {{site.data.keyword.cloud_notm}} locaux dans {{site.data.keyword.cloud_notm}}.
 
@@ -22,6 +23,7 @@ Ce service est disponible pour les instances suivantes :
 {:note}
 
 ## Spécifications techniques pour IBM Cloud Private Hosted
+{: #technical-specifications-for-ibm-cloud-private-hosted}
 
 Le tableau ci-après répertorie les exigences minimales requises pour commander le service IBM Cloud Private Hosted pour l'environnement **Prêt pour la production** et l'environnement **Développement/Test**.
 
@@ -33,6 +35,7 @@ Tableau 1. Exigences minimales requises pour les environnements Prêt pour la pr
 | Développement/Test | 30 | 200 | 3 | 4 000 |
 
 ### Besoins en ressources d'IBM Cloud Private Hosted
+{: #resource-requirements-for-ibm-cloud-private-hosted}
 
 Les tableaux ci-après répertorient les besoins en ressources du service {{site.data.keyword.cloud_notm}} Private Hosted dans les environnements Prêt pour la production et Développement/Test.
 
@@ -69,10 +72,12 @@ Tableau 3. Besoins en ressources d'{{site.data.keyword.cloud_notm}} Private Host
 | Contraintes documentées | 30 | 200 |  | 4 000 |  |
 
 ### Formules de calcul des exigences d'espace pour IBM Cloud Private Hosted
+{: #icp_overview-formulas}
 
 Les formules suivantes sont utilisées pour calculer l'espace requis pour IBM Cloud Private et les surcharges de gestion :
 
 #### Formule 1
+{: #icp_overview-formulas-1}
 
 `AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
@@ -89,6 +94,7 @@ Tableau 4. Description des variables de la formule 1
 | HostVsanOverheadCorePercentage | Pourcentage de coeurs d'un hôte utilisé par vSAN, égal à 10 % ou à 0 % pour un hôte hors VSAN | % | 10 % |	0 % |
 
 #### Formule 2
+{: #icp_overview-formulas-2}
 
 `AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
@@ -107,18 +113,21 @@ Tableau 5. Description des variables de la formule 2
 | HostVsanOverheadMemory | Nombre de Go de mémoire réservés par la gestion vSAN quelle que soit la taille du disque, égal à 7 Go ou à 0 Go pour un hôte hors VSAN	| Go |  7	| 0 |
 
 ## Considérations à prendre en compte lorsque vous installez IBM Cloud Private Hosted
+{: #icp_overview-install}
 
 * Procurez-vous la licence requise avant d'installer le service {{site.data.keyword.cloud_notm}} Private Hosted.Nous vous conseillons de vérifier que votre licence peut prendre en charge non seulement le déploiement {{site.data.keyword.cloud_notm}} Private Hosted initial, mais également la future extension de taille d'{{site.data.keyword.cloud_notm}} Private Hosted dans votre infrastructure.
 * Pour les déploiements {{site.data.keyword.cloud_notm}} Private Hosted en environnement prêt pour la production, 64 Go de mémoire RAM par hôte ne sont pas pris en charge. Par conséquent, vous devez sélectionner une option de plus de 64 Go pour la mémoire **RAM**.
 * Avant l'installation du service {{site.data.keyword.cloud_notm}} Private Hosted dans votre environnement, la capacité disponible sur le cluster par défaut dans l'environnement est vérifiée afin de s'assurer qu'il y aura suffisamment de place pour les composants de service. Si la vérification de la capacité échoue, le service n'est pas installé et l'état **La validation de la capacité a échoué** apparaît sur la console pour le service. De plus, un message de console contenant davantage de détails apparaît et vous êtes averti par courrier électronique. Pour installer le service, vous devez augmenter la capacité dans votre cluster par défaut en ajoutant d'autres hôtes ou en libérant de la mémoire RAM, de l'UC ou de l'espace disque, puis vous devez rajouter le service dans la console. Après cela, vous pouvez retirer le service qui est à l'état **La validation de la capacité a échoué** en cliquant sur l'icône **Supprimer** figurant en regard de son nom.
 
 ## Considérations à prendre en compte lorsque vous retirez IBM Cloud Private Hosted
+{: #icp_overview-remove}
 
 * {{site.data.keyword.cloud_notm}} supprime uniquement les machines virtuelles qui ont été déployées durant l'installation initiale du service {{site.data.keyword.cloud_notm}} Private Hosted. Tout noeud qui est déployé après l'installation ne sera pas nettoyé.
 * {{site.data.keyword.cloud_notm}} supprimera le réseau VXLAN, le routeur DLR et la passerelle de périphérie qui ont été créés durant le déploiement initial du service {{site.data.keyword.cloud_notm}} Private Hosted. Les machines virtuelles que vous avez déployées sur le réseau VXLAN perdent la connectivité une fois le retrait du service {{site.data.keyword.cloud_notm}} Private Hosted commencé.
 
-### Liens connexes
+## Liens connexes
+{: #icp_overview-related}
 
-* [Commande d'IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services/icp_ordering.html)
-* [Guide vCenter Server et IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [Commande d'IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
+* [Guide vCenter Server et IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Ouvrir un ticket au sujet d'IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=fr_FR)

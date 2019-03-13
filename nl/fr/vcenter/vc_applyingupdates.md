@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,17 +13,19 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Application de mises à jour à des instances vCenter Server
+{: #vc_applyingupdates}
 
 Le processus d'application de modules de correction et de mises à jour aux instances vCenter Server est automatisé uniquement pour les composants de gestion. Les mises à jour VMware doivent être appliquées manuellement.
 
 ## Avant de commencer
+{: #vc_applyingupdates-prereq}
 
 Lors de la mise à niveau d'une instance vCenter Server vers une instance vCenter Server with Hybridity Bundle, vous devez d'abord appliquer au moins la mise à jour logicielle vCenter Server V2.3 de base. Vous devez le faire avant de pouvoir effectuer la mise à niveau de licence vers Hybridity Bundle.
 {:important}
 
 Les partenaires commerciaux n'ont pas la possibilité de mettre à niveau une instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle.
 
-A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
+A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25).
 {:note}
 
 Avant d'appliquer une mise à jour, développez l'entrée de mise à jour en cliquant sur la flèche vers le bas et vérifiez les informations suivantes :
@@ -55,6 +57,7 @@ Tableau 1. Niveaux de mise à jour et impact
 </table>
 
 ## Procédure d'application de mises à jour et de modules de correction à des instances vCenter Server (version 2.1 ou ultérieures)
+{: #vc_applyingupdates-procedure}
 
 Cette procédure s'applique aux instances déployées en version 2.1 et ultérieures. Pour les instances déployées en version 2.0 et antérieures, vous devez appliquer les mises à jour VMware manuellement.
 
@@ -81,6 +84,7 @@ Cette procédure s'applique aux instances déployées en version 2.1 et ultérie
 7. Si vous appliquez des mises à jour à des instances de serveurs vCenter dans une configuration de déploiement multisite, une section intitulée **Etapes de mise à jour obligatoires** s'affiche. Cette section répertorie les opérations de mise à jour requises pour toutes les instances du déploiement multisite. Effectuez les étapes dans l'ordre en cliquant sur **Appliquer la mise à jour** pour chaque étape. Vous devez attendre la fin de chaque étape avant de passer à la suivante.   
 
 ## Procédure de mise à niveau vers l'instance vCenter Server with Hybridity Bundle
+{: #vc_applyingupdates-procedure-upgrade-to-hybridity}
 
 Durant la mise à niveau de licence vers Hybridity Bundle, une mise à niveau vers l'édition VMware NSX Advanced s'effectue immédiatement si votre instance vCenter Server utilise l'édition VMware NSX Base.
 
@@ -102,13 +106,14 @@ Procédez comme suit pour mettre à niveau d'une instance vCenter Server vers vC
   4. Passez en revue les conditions qui s'appliquent au service, ainsi que le coût estimé, puis cliquez sur **Passer une commande**.
 
 ## Résultats
+{: #vc_applyingupdates-results}
 
-2. Lorsque vous appliquez une mise à jour, un enregistrement s'affiche dans la liste des statuts de mise à jour logicielle, où vous pouvez visualiser la progression et le statut détaillés de la mise à jour. Lorsque la mise à jour a réussi, un enregistrement s'affiche dans la liste des mises à jour logicielles installées.
+1. Lorsque vous appliquez une mise à jour, un enregistrement s'affiche dans la liste des statuts de mise à jour logicielle, où vous pouvez visualiser la progression et le statut détaillés de la mise à jour. Lorsque la mise à jour a réussi, un enregistrement s'affiche dans la liste des mises à jour logicielles installées.
 
   Pour extraire le statut le plus récent d'une tâche de mise à jour, cliquez sur l'icône d'actualisation dans l'angle supérieur droit de la page.
   {:tip}
 
-3. Pour plus d'informations sur les statuts de mise à jour, voir le tableau suivant.
+2. Pour plus d'informations sur les statuts de mise à jour, voir le tableau suivant.
 
    Tableau 2. Détails relatifs aux statuts de mise à jour
 
@@ -143,10 +148,11 @@ Procédez comme suit pour mettre à niveau d'une instance vCenter Server vers vC
       </tr>
     </table>
 
-4. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à relancer la mise à niveau à partir de l'étape où elle a échoué.
+3. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à relancer la mise à niveau à partir de l'étape où elle a échoué.
 
-### Liens connexes
+## Liens connexes
+{: #vc_applyingupdates-related}
 
-* [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

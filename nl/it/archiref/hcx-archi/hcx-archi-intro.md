@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-17"
+lastupdated: "2019-02-15"
 
 ---
 # Introduzione di VMware HCX on IBM Cloud
+{: #hcx-archi-intro}
 
 Il servizio VMware HCX on IBM Cloud abilita la creazione di una connessione trasparente tra le istanze di IBM Cloud for VMware Solutions e il data center virtualizzato VMware in loco.
 
@@ -33,6 +34,7 @@ la connessione in modo che il traffico di rete venga spostato il più velocement
 * Migrazione delle politiche di sicurezza – se viene utilizzato NSX in loco, tutti i firewall o le politiche di sicurezza
 di sicurezza vengono spostati insieme al carico di lavoro.
 
-### Link correlati
+## Link correlati
+{: #hcx-archi-intro-related}
 
 * [IBM Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture)

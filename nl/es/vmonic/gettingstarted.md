@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-06-07"
 
 ---
 
@@ -14,7 +14,7 @@ Revise la información importante sobre los requisitos y las cuentas de usuario 
 
 ## Consola de IBM Cloud for VMware Solutions
 
-La consola de {{site.data.keyword.vmwaresolutions_short}} es la interfaz con la que solicita y gestiona sus despliegues. Cada despliegue se gestiona como una instancia en la consola. La consola es una interfaz de usuario autónoma, independiente del {{site.data.keyword.slportal}}.
+La consola de {{site.data.keyword.vmwaresolutions_short}} es la interfaz con la que solicita y gestiona sus despliegues. Cada despliegue se gestiona como una instancia en la consola. La consola es una interfaz de usuario autónoma, independiente del {{site.data.keyword.slportal_full}}.
 
 ## Cuenta de IBMid
 
@@ -43,10 +43,10 @@ Revise la lista de navegadores soportados antes de empezar a trabajar con la con
 
 Para ver y trabajar mejor con la consola de {{site.data.keyword.vmwaresolutions_short}}, defina una resolución de pantalla de al menos 1024 px de anchura por 500 px de altura.
 
-### Enlaces relacionados
+## Enlaces relacionados
 
 * [Acerca de {{site.data.keyword.vmwaresolutions_short}}](vmonic/prod_overview.html)
 * [Visión general de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Visión general de vCenter Server](../vcenter/vc_vcenterserveroverview.html)
-* [Visión general de Zerto on {{site.data.keyword.cloud_notm}}](../services/addingzertodr.html)
+* [Visión general de Zerto on IBM Cloud](../services/addingzertodr.html)
 * [Resolución de problemas](troubleshooting.html)

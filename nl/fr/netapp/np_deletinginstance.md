@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Suppression d'instances NetApp ONTAP Select
+{: #np_deletinginstance}
 
 Si vous supprimez une instance NetApp ONTAP Select, les composants suivants sont libérés, dans cet ordre :
 1. Machines virtuelles en cluster NetApp ONTAP Select déployées et machine virtuelle NetApp ONTAP Select Deploy
@@ -28,6 +29,7 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 {:note}
 
 ## Procédure de suppression d'instances dans la page Instances déployées
+{: #np_deletinginstance-procedure1}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances NetApp ONTAP Select**, recherchez l'instance à supprimer.
@@ -38,6 +40,7 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
 ## Procédure de suppression d'instances dans la page des détails de l'instance
+{: #np_deletinginstance-procedure2}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances NetApp ONTAP Select**, cliquez sur l'instance à supprimer.
@@ -47,8 +50,9 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
    1. Cliquez à nouveau sur l'icône de menu déroulant dynamique en regard de **Console vCenter**, puis cliquez sur **Supprimer une instance**.
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
-### Liens connexes
+## Liens connexes
+{: #np_deletinginstance-related}
 
-* [Commande d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [Affichage des instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
-* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Commande d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [Affichage des instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

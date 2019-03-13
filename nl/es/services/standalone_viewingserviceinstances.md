@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-08"
+lastupdated: "2019-02-15"
 
 ---
 
 # Visualización de instancias locales de VMware HCX on IBM Cloud
+{: #standalone_viewingserviceinstances}
 
 Utilice este procedimiento para ver las instancias locales de HCX on {{site.data.keyword.cloud}} que ha solicitado para su uso local e información sobre las mismas.
 
 ## Procedimiento para visualizar instancias locales de VMware HCX on IBM Cloud
+{: #standalone_viewingserviceinstances-procedure}
 
 Pulse **Instancias desplegadas** en el panel de navegación izquierdo y desplácese a la tabla **Instancias locales de HCX** para ver información sobre las instancias que ha solicitado:
 
@@ -36,9 +38,10 @@ Tabla 2. Descripciones de los estados de las instancias locales de HCX on {{site
 | Instalado | La instancia está lista para ser utilizada. |
 | Eliminando | La instancia se está suprimiendo. |
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #standalone_viewingserviceinstances-related}
 
-* [Solicitud de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](standalone_orderingserviceinstances.html)
-* [Supresión de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](standalone_deletingserviceinstances.html)
-* [Glosario de términos de HCX](hcx_glossary.html)
+* [Solicitud de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
+* [Supresión de instancias locales de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances)
+* [Glosario de términos de HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Documentación de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

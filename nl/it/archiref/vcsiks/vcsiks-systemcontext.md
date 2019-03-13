@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Contesto di sistema
+{: #vcsiks-systemcontext}
 
 Figura 1. Contesto di sistema
 
@@ -19,12 +20,13 @@ I componenti principali sono i seguenti:
 - **Virtualizzazione in loco** - Questo componente è un ambiente VMware ospitato presso il cliente o in un'ubicazione di terze parti e al momento ospita le VM che eseguono le applicazioni da modernizzare. Virtualizzazione in loco è l'ambiente di origine per le migrazioni di VM ed è debolmente accoppiato a un'istanza di {{site.data.keyword.cloud}} mediante VMware Hybridity (HCX).
 - **vCenter Server** – VMware vCenter Server on {{site.data.keyword.cloud_notm}} è un'istanza {{site.data.keyword.cloud_notm}} for VMware Services che è la destinazione delle VM migrate dall'ambiente in loco. Insieme all'ambiente virtualizzato in loco forma un ambiente ibrido che consente alle VM di spostarsi da un sito all'altro.
 - **{{site.data.keyword.containerlong_notm}}** - {{site.data.keyword.containerlong_notm}} utilizza Kubernetes come soluzione di orchestrazione del contenitore. IBM agisce e gestisce il nodo master Kubernetes mentre i nodi di lavoro vengono distribuiti all'infrastruttura gestita dal cliente. IBM fornisce gli strumenti di gestione per la distribuzione della patch del sistema operativo, gli aggiornamenti del motore Docker e le nuove versioni di Kubernetes. {{site.data.keyword.containerlong_notm}} fornisce una piattaforma isolata e sicura per la gestione dei contenitori che sia portatile, estensibile e riparabile automaticamente in caso di failover.
-- **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}} è una piattaforma dell'applicazione per lo sviluppo e la gestione delle applicazioni inserite nei contenitori. {{site.data.keyword.icpfull_notm}} è un ambiente integrato che include l'orchestrazione del contenitore Kubernetes, un repository di immagini privato, una console di gestione, i framework di monitoraggio e un'interfaccia utente grafica che fornisce un'ubicazione centralizzata da cui puoi distribuire, gestire, monitorare e ridimensionare le applicazioni.
+- **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}} è una piattaforma dell'applicazione per lo sviluppo e la gestione delle applicazioni inserite nei contenitori. {{site.data.keyword.icpfull_notm}} è un ambiente integrato che include l'orchestrazione del contenitore Kubernetes, un repository di immagini privato, una console di gestione, i framework di monitoraggio e un'interfaccia utente grafica che fornisce una posizione centralizzata da cui puoi distribuire, gestire, monitorare e ridimensionare le applicazioni.
 - **{{site.data.keyword.cloud_notm}} Automation Manager** - CAM è una piattaforma IaC (Infrastructure as Code) pronta per le aziende che fornisce un unico pannello di controllo per eseguire il provisioning di carichi di lavoro basati su VMware insieme a quelli basati su Kubernetes. L'automazione del provisioning del carico di lavoro per le macchine virtuali, i contenitori e i relativi prerequisiti dell'infrastruttura viene abilitata tramite CAM.
 - **IBM Multi Cloud Manager** – MCM fornisce la visibilità utente, la gestione incentrata sull'applicazione (politica, distribuzioni, integrità, operazioni) e conformità basata sulle politiche tra i cloud e i cluster. Con MCM, hai il controllo dei tuoi cluster Kubernetes.
 - **{{site.data.keyword.cloud_notm}} Services** - {{site.data.keyword.cloud_notm}} Services è un'ampia gamma di servizi utilizzabili disponibili, comprese le offerte di analisi, AI e IoT.
 
 ## Attori
+{: #vcsiks-systemcontext-actors}
 
 Tabella 1. Attori
 
@@ -36,6 +38,7 @@ Cliente | Attore esterno che consuma i servizi dall'azienda. Per Acme Skateboard
 {{site.data.keyword.containerlong_notm}} | Risorsa IBM che gestisce il nodo master {{site.data.keyword.containerlong_notm}} per il servizio.
 
 ## Sistemi
+{: #vcsiks-systemcontext-systems}
 
 Tabella 2. Sistemi
 
@@ -56,7 +59,8 @@ Watson | Per questa architettura di riferimento e per Acme Skateboards, Watson r
 
 La rete, la sicurezza e la migrazione dell'applicazione sono spesso gli aspetti più impegnativi della modernizzazione dell'applicazione. VMware vCenter Server on {{site.data.keyword.cloud_notm}}, VMware Hybridity, VMware NSX, {{site.data.keyword.cloud_notm}} Private e {{site.data.keyword.containerlong_notm}} affrontano queste sfide e ti consentono di creare applicazioni moderne solide, sicure e resilienti.
 
-### Link correlati
+## Link correlati
+{: #vcsiks-systemcontext-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

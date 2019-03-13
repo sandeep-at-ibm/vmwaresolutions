@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Migrazione delle VM Stock Trader in IBM Cloud
+{: #vcscontent-hcx}
+
 Per il primo passo nel percorso di modernizzazione, Todd vuole estendere senza problemi l'istanza VMware SDDC in loco
 in un'istanza VMware vCenter Server
 on {{site.data.keyword.cloud}}. L'azienda deve restare operativa
@@ -54,7 +56,8 @@ Todd è in grado di migrare Stock Trader dal proprio
 ambiente VMware in loco all'ambiente VMware on {{site.data.keyword.cloud_notm}} e soddisfa i loro requisiti di tempo di inattività minimo o inesistente
 e di nessuna riconfigurazione dell'applicazione.
 
-### Link correlati
+## Link correlati
+{: #vcscontent-hcx-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

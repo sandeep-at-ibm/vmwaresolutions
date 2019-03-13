@@ -4,21 +4,24 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-28"
+lastupdated: "2019-02-08"
 
 ---
 
 # Notes sur l'édition pour la version 2.8
+{: #relnotes_v28}
 
 Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour obtenir la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des astuces relatives à l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Instances de la version d'essai à noeud unique pour la migration et la modernisation des applications
+{: #relnotes_v28-single-node-trial}
 
 La version d'essai à noeud unique pour la migration et la modernisation des applications permet de tester rapidement comment utiliser {{site.data.keyword.cloud_notm}} pour migrer les charges de travail VMware dans {{site.data.keyword.cloud_notm}}, puis moderniser ces charges de travail à l'aide de conteneurs. Il s'agit d'une version d'essai de {{site.data.keyword.icpfull_notm}} Hosted sur VMware vCenter Server on {{site.data.keyword.cloud_notm}} qui fournit la plateforme de gestion Kubernetes pour les conteneurs et la plateforme VMware à service exclusif qui peut être gérée à l'aide des mêmes outils connus que dans les environnements locaux.
 
-Pour plus d'informations, voir [Présentation de la version d'essai à noeud unique pour la migration et la modernisation des applications](/docs/services/vmwaresolutions/vcenter/cloud_modern_bundle_overview.html).
+Pour plus d'informations, voir [Présentation de la version d'essai à noeud unique pour la migration et la modernisation des applications](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-single-node-trial-for-migration-and-app-modernization-overview).
 
 ## Ajout et suppression de stockage de système NFS
+{: #relnotes_v28-nfs}
 
 Dans la version 2.8, vous pouvez désormais ajouter des partages de stockage NFS sur un cluster NFS ou vSAN vCenter Server existant, mais également supprimer des partages de fichiers NFS d'un cluster vCenter Server existant.
 
@@ -27,9 +30,10 @@ Les options suivantes pour le stockage de niveau fichier personnalisé sont main
 * Tailles de partage NFS à partir de 20 Go jusqu'à 12 To, par incréments de 1 Go
 * 0,25 IOPS/Go
 
-Pour plus d'informations, voir les sections *Ajout de stockage NFS aux instances vCenter Server* et *Suppression de stockage NFS des instances vCenter Server* dans [Extension et réduction de capacité pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances).
+Pour plus d'informations, voir les sections *Ajout de stockage NFS aux instances vCenter Server* et *Suppression de stockage NFS des instances vCenter Server* dans [Extension et réduction de capacité pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers#adding-nfs-storage-to-vcenter-server-instances).
 
 ## Prise en charge du serveur Broadwell E5-2690 et E7-8890 certifié SAP
+{: #relnotes_v28-broadwell-e5-e7}
 
 A compter de la version 2.8, les nouveaux modèles d'UC de serveur {{site.data.keyword.baremetal_short_sing}} {{site.data.keyword.cloud_notm}} sont disponibles pour déploiement pour les instances et les clusters VMware vCenter Server on {{site.data.keyword.cloud_notm}} et VMware vSphere on {{site.data.keyword.cloud_notm}} :
 
@@ -39,10 +43,11 @@ A compter de la version 2.8, les nouveaux modèles d'UC de serveur {{site.data.k
 * Processeur Quad Intel Xeon E7-8890 v4/96 coeurs au total, 2,20 GHz/4096 Go de mémoire RAM
 
 Pour plus d'informations, voir la section *Paramètres de serveur {{site.data.keyword.baremetal_short_sing}}* dans :
-* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#bare-metal-server-settings)
-* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#bare-metal-server-settings)
+* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#bare-metal-server-settings)
+* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)
 
 ## Prise en charge du serveur Broadwell E7-4820 et E7-4850
+{: #relnotes_v28-broadwell-e7}
 
 A compter de la version 2.8, les nouveaux modèles d'UC de serveur {{site.data.keyword.baremetal_short_sing}} {{site.data.keyword.cloud_notm}} sont disponibles pour déploiement pour les instances et les clusters vCenter Server, vCenter Server avec Hybridity Bundle, Cloud Foundation et vSphere on {{site.data.keyword.cloud_notm}} :
 
@@ -50,12 +55,13 @@ A compter de la version 2.8, les nouveaux modèles d'UC de serveur {{site.data.k
 * Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,1 GHz
 
 Pour plus d'informations, voir la section *Paramètres de serveur {{site.data.keyword.baremetal_short_sing}}* dans :
-* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#bare-metal-server-settings)
-* [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html#bare-metal-server-settings)
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html#bare-metal-server-settings)
-* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#bare-metal-server-settings)
+* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#bare-metal-server-settings)
+* [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance#bare-metal-server-settings)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance#bare-metal-server-settings)
+* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)
 
 ## Platform Services Controller intégré
+{: #relnotes_v28-psc}
 
 A compter de la version 2.8, vCenter Server est déployé avec une version intégrée de PSC (Platform Services Controller), ce qui signifie que vCenter Server, les composants vCenter Server et PSC sont déployés sur une machine virtuelle unique. Cette modification concerne toutes les instances de vCenter Server, vCenter Server avec Hybridity et NetApp nouvellement déployées.
 
@@ -63,9 +69,10 @@ Pour les instances qui sont mises à niveau à partir d'une version antérieure 
 
 Dans une configuration multisite où l'instance principale est une instance mise à niveau pour laquelle PSC a été converti manuellement en externe vers une version intégrée, les instances secondaires en version 2.8 nouvellement déployées intégreront PSC.
 
-Pour plus d'informations, voir la section *Architecture vCenter Server* dans [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#vcenter-server-architecture).
+Pour plus d'informations, voir la section *Architecture vCenter Server* dans [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#vcenter-server-architecture).
 
 ## Mises à jour des instances VMware vCenter Server
+{: #relnotes_v28-vcs}
 
 Cette édition applique les mises à niveau et améliorations suivantes :
 
@@ -74,6 +81,7 @@ Cette édition applique les mises à niveau et améliorations suivantes :
 * Platform Services Controller 6.5 U2d (build 6.5.0-10964411)
 
 ## Mises à jour des instances VMware Cloud Foundation
+{: #relnotes_v28-cf}
 
 Cette édition applique les mises à niveau et améliorations suivantes :
 
@@ -82,26 +90,33 @@ Cette édition applique les mises à niveau et améliorations suivantes :
 * Platform Services Controller 6.5 U2c (build 6.5.0-9451637)
 
 ## Mises à jour apportées aux services complémentaires
+{: #relnotes_v28-services}
 
 ### IBM Spectrum Protect Plus on IBM Cloud
+{: #relnotes_v28-spp}
 
 L'édition en cours installe IBM Spectrum Protect™ Plus V10.1.2 sur toutes les instances nouvellement déployées. Pour plus d'informations sur les nouvelles fonctions dans IBM Spectrum Protect Plus V10.1.2, voir [Mises à jour d'IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.2/spp/r_techchg_spp.html){:new_window}.
 
 ### KMIP for VMware on IBM Cloud
+{: #relnotes_v28-kmip}
 
 Auparavant, vous pouviez commander une instance Cloud Foundation ou vCenter Server avec le service KMIP for VMware on {{site.data.keyword.cloud_notm}} inclus ou ajouter le service à une instance Cloud Foundation ou vCenter Server existante après le déploiement initial.
 
 A compter de la version 2.8, le service est disponible en tant que service autonome sans être associé à une instance VMware. Chaque instance du service peut servir une ou plusieurs instances Cloud Foundation, vCenter Server ou clusters vSphere.
 
-**Remarque **: Dans cette édition, KMIP for VMware on {{site.data.keyword.cloud_notm}} est limité au chiffrement vSphere uniquement.
-
-Pour plus d'informations, voir [Présentation de KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html).
+Pour plus d'informations, voir [Présentation de KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
 
 ## Documentation d'architecture de référence
+{: #relnotes_v28-ref}
 
-Un nouveau document technique relatif à l'architecture de solution KMIP for VMware on {{site.data.keyword.cloud_notm}} est disponible dans la section *Référence* de la documentation utilisateur. Pour plus d'informations, voir [Présentation de KMIP for VMware](/docs/services/vmwaresolutions/archiref/kmip/overview.html).
+(mis à jour le 8 février 2019) Les documents techniques suivants sont maintenant disponibles dans la section *Référence* de la documentation utilisateur :
+
+* [Architecture {{site.data.keyword.vmwaresolutions_short}} avec NSX-T](/docs/services/vmwaresolutions/archiref/vcsarch?topic=vmware-solutions-vcsarch-overview)
+* [Architecture de référence de Caveonix RiskForesight](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
+* [Guide de déploiement et d'opération de HCX sur {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
 
 ## Améliorations et mises à jour apportées à l'interface utilisateur
+{: #relnotes_v28-ui}
 
 L'interface utilisateur a été mise à jour et présente les améliorations suivantes :
 

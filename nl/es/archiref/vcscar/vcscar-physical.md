@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-02-18"
 
 ---
 
 # Componentes de Skate Advisor
+{: #vcscar-physical}
 
 {{site.data.keyword.vmwaresolutions_full}} proporciona la automatización para desplegar componentes de tecnología VMware en {{site.data.keyword.CloudDataCents_notm}} en todo el mundo. La arquitectura consta de una sola región de nube y permite la ampliación a más regiones de nube ubicadas en una de las siguientes opciones:
 
@@ -26,6 +27,7 @@ IBM Multi-Cluster Manager proporciona visibilidad de usuario, gestión centrada 
 {{site.data.keyword.cloud_notm}} Automation Manager es una plataforma de gestión de autoservicio multinube que se ejecuta en {{site.data.keyword.cloud_notm}} Private que permite a los desarrolladores y a los administradores satisfacer las necesidades de la empresa. Cloud Automation Manager Service Composer le permite exponer los servicios de nube híbrida en el catálogo de {{site.data.keyword.icpfull_notm}}.
 
 ## Componentes físicos de Skate Advisor
+{: #vcscar-physical-skate-comp}
 
 En el diagrama siguiente se describe la implementación de referencia de la aplicación Acme Skate Advisor en una implementación de infraestructura de modernización de aplicaciones.
 
@@ -37,6 +39,7 @@ La aplicación Skate Advisor amplía la aplicación web de Acme existente con un
 La aplicación Skate Advisor aprovecha la plataforma de modernización de aplicaciones que proporciona la infraestructura de alojamiento necesaria.
 
 ### Empaquetado y despliegue de aplicaciones
+{: #vcscar-physical-app-pack-depl}
 
 La aplicación se despliega como una coordinación de CAM que contiene los siguientes elementos:
 * Coordinación de servicios: una coordinación de servicios CAM es un recurso de flujo de trabajo que describe
@@ -60,6 +63,7 @@ Figura 2. Coordinación de CAM
 ![Coordinación de CAM](vcscar-cam.svg)
 
 ### Equilibrio de carga y proceso sustitución (proxy)
+{: #vcscar-physical-load-balance-proxy}
 
 El equilibrio de carga y el proceso de sustitución (proxy) se implementan mediante el componente {{site.data.keyword.icpfull_notm}} Ingress Controller. Este componente maneja el escalado del contenedor y la migración tras error de forma transparente.
 
@@ -76,15 +80,23 @@ URL	|Punto final
 Los contenedores tienen direcciones IP impredecibles, cuyo número puede aumentar o disminuir según la exigencia del sistema. Para solucionar este problema, se utilizan servicios de {{site.data.keyword.icpfull_notm}} para realizar la resolución de direcciones IP en tiempo real dentro del sistema.
 
 ### Aplicación web de Acme Skate
+{: #vcscar-physical-acme-skate-web-app}
+
 La aplicación web de Acme Skate es una aplicación de Java Platform, Enterprise Edition (Java Platform, Enterprise Edition) basada en la infraestructura Spring. La aplicación se despliega en un contenedor WebSphere Liberty.
 
 ### Aplicación Acme Skate Advisor
+{: #vcscar-physical-acme-skate-advisor-app}
+
 La aplicación Acme Skate Advisor es una aplicación basada en microservicios que se despliega en un contenedor de WebSphere Liberty. Un servidor web nginx proporciona un extremo frontal a los microservicios.
 
 ### Base de datos de Acme Skate
+{: #vcscar-physical-acme-skate-db}
+
 La base de datos de Acme Skate es una base de datos MySQL que se despliega en una máquina virtual gestionada por vSphere.
 
 ### Visión general de las comunicaciones
+{: #vcscar-physical-comm-overview}
+
 Skate Advisor necesita las siguientes comunicaciones:
 -	Entre el contenedor web y el usuario del sistema.
 -	Entre Advisor y el contenedor web y los servicios Watson.
@@ -108,6 +120,7 @@ de las NSX VXLAN. Este igual permite que la red de
 NSX VXLAN se comunique con la red troncal de {{site.data.keyword.cloud_notm}} y viceversa.
 
 ### Correlación de componentes de software
+{: #vcscar-physical-soft-comp-mapping}
 
 La aplicación Skate Advisor utiliza los siguientes componentes de software.
 
@@ -124,6 +137,7 @@ Las solicitudes a los microservicios y a las aplicaciones se distribuyen a los p
 * JavaScript: el chatbot es una aplicación basada en JavaScript alojada en el navegador del cliente. El chatbot se comunica con Watson a través de los microservicios basados en Node.js.
 
 ## Visión general de la gestión
+{: #vcscar-physical-mgmt-ovw}
 
 Acme Skate Advisor reside en {{site.data.keyword.cloud_notm}} y, como tal, constituye un aspecto crítico de la arquitectura. {{site.data.keyword.cloud_notm}} tiene la arquitectura siguiente.
 
@@ -134,6 +148,7 @@ Este diagrama representa {{site.data.keyword.icpfull_notm}} y CAM desplegados en
 
 En el diagrama, CAM crea de forma lógica conexiones en la nube con los entornos de vCenters, proveedores de nube, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. Los clústeres de {{site.data.keyword.icpfull_notm}} se despliegan en cada entorno de centro de datos/nube, y MCM proporciona el mecanismo para conectar los clústeres de {{site.data.keyword.icpfull_notm}} en una única vista de gestión.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vcscar-physical-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

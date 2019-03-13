@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-05-22"
 
 ---
 
 # Notes sur l'édition pour la version 1.6
+{: #relnotes_v16}
 
 Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour obtenir la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des astuces relatives à l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -21,7 +22,7 @@ Les composants suivants sont nouveaux ou ont été mis à jour :
 *  Nouvelles spécifications matérielles : **Petite** ou **Standard**, en fonction de vos besoins.
 *  Nouveaux centres de données disponibles pour déploiement : **HKG02 - Hong Kong**, **OSL01 - Oslo**, **SEO01 - Séoul**, **SNG01 - Singapour** et **SYD04 - Sydney**.
 
-Pour la liste complète des composants, voir [Présentation de VMware Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html).
+Pour la liste complète des composants, voir [Présentation de VMware Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview).
 
 ## Mises à jour des instances VMware vCenter Server
 
@@ -63,7 +64,7 @@ Toutes les autres actions des instances antérieures à la version 1.6 ne sont p
    par le client.
 
    Cette passerelle ESG est déployée pour tous les types matériel d'instance et les client peuvent modifier la configuration. Pour plus d'informations, voir les rubriques suivantes :
-   *  [Configuration du réseau en vue d'utiliser la passerelle NSX Edge gérée par le client avec vos machines virtuelles](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html)
+   *  [Configuration du réseau en vue d'utiliser la passerelle NSX Edge gérée par le client avec vos machines virtuelles](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)
    *  [Documentation VMware NSX](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## Améliorations de la convivialité
@@ -73,4 +74,4 @@ Des améliorations ont été apportées à l'interface utilisateur, à savoir :
 *  Le panneau de navigation principal de la console a été grandement amélioré via l'introduction du panneau de navigation de gauche avec accès à toutes les zones de l'interface utilisateur. Vous pouvez rapidement commander un nouvelle instance, afficher vos instances déployées, passer en revue les notifications système, modifier des paramètres et accéder à la documentation en ligne.
 *  La nouvelle page **Initiation**, accessible depuis le panneau de navigation de gauche, affiche suffisamment de détails sur la console pour vous aider à prendre une décision éclairée concernant les composants de l'instance que vous commandez. Sur la page **Initiation**, vous êtes également guidé pas à pas dans le processus de commande d'une instance, de l'adéquation aux exigences liées à la commande d'une instance (par exemple, les comptes utilisateur requis) jusqu'à passation de la commande.
 *  Les détails récapitulatifs des instances Cloud Foundation et vCenter Server sont regroupés sur une seule page, accessible depuis le menu **Instances déployées** du panneau de navigation de gauche. A partir de cette page, vous pouvez sélectionner l'onglet approprié pour filtrer les instances Cloud Foundation ou vCenter Server.
-* Si la reprise après incident Zerto est installée sur votre instance, vous pouvez accéder directement à la console Zerto depuis la page des détails du service en un seul clic. Pour plus d'informations, voir [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html) and [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html).
+* Si la reprise après incident Zerto est installée sur votre instance, vous pouvez accéder directement à la console Zerto depuis la page des détails du service en un seul clic. Pour plus d'informations, voir [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices) and [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).

@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Integrazione, indirizzamento IP e flussi di rete
+{: #vcsnsxt-overview-integration}
 
 ## Integrazione di IBM Cloud Private e VMware vCenter Server on IBM Cloud
+{: #vcsnsxt-overview-integration-icp-vcs-integration}
 
 {{site.data.keyword.cloud}} Private viene installato su diverse macchine virtuali (VM) su un'istanza vCenter Server. All'interno dell'istanza vCenter Server, l'istanza {{site.data.keyword.icpfull_notm}} viene distribuita con un DLR (Distributed Logical Router) ed ESG (Edge Services Gateway) NSX dedicato e utilizza una VXLAN.
 
-L'ESG è configurato con una regola NAT di origine (SNAT) per consentire il traffico in uscita, che abilita la connettività Internet per scaricare i prerequisiti di {{site.data.keyword.icpfull_notm}} e per connettersi a GitHub e Docker. In alternativa, puoi utilizzare un proxy web per la connettività Internet. L'ESG è configurato con la connettività privata per accedere ai servizi DNS e NTP. L'ESG è anche configurato con una regola DNAT per abilitare l'accesso ai vIP Proxy e Master {{site.data.keyword.icpfull_notm}} dalla rete {{site.data.keyword.cloud_notm}} 10.x.
+L'ESG è configurato con una regola NAT di origine (SNAT) per consentire il traffico in uscita, che abilita la connettività per scaricare i prerequisiti {{site.data.keyword.icpfull_notm}} e la connessione a GitHub e Docker. In alternativa, puoi utilizzare un proxy web per la connettività internet. L'ESG è configurato con la connettività privata per accedere ai servizi DNS e NTP. L'ESG è anche configurato con una regola DNAT per abilitare l'accesso ai vIP Proxy e Master {{site.data.keyword.icpfull_notm}} dalla rete {{site.data.keyword.cloud_notm}} 10.x.
 
 ## Integrazione di IBM Cloud Kubernetes Service e vCenter Server
+{: #vcsnsxt-overview-integration-iks-vcs-integration}
 
 Attualmente, i seguenti scenari consentono di integrare la rete di {{site.data.keyword.containerlong_notm}} e vCenter Server:
 - **VLAN comune** - Richiede che i nodi di lavoro {{site.data.keyword.containerlong_notm}} siano distribuiti sulla stessa VLAN dell'istanza vCenter Server. La VLAN comune consente a un ESG di essere un peer BGP per i nodi di lavoro.
@@ -25,10 +28,12 @@ Attualmente, i seguenti scenari consentono di integrare la rete di {{site.data.k
 - **Peering BGP** – Il peering BGP non è un'offerta predefinita in {{site.data.keyword.cloud_notm}} e deve essere richiesta e approvata. Una volta abilitato, il peering BGP consente ai vRouter Calico e all'ESG di annunciare le rotte al BCR.
 
 ## Integrazione di IBM Cloud Kubernetes Service e IBM Cloud Private
+{: #vcsnsxt-overview-integration-iks-icp-integration}
 
 L'integrazione di {{site.data.keyword.containerlong_notm}} e {{site.data.keyword.icpfull_notm}} utilizza la connettività VPN strongSwan con un contenitore strongSwan in {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
 ## Assegnazione di indirizzi IP
+{: #vcsnsxt-overview-integration-ip-address-allocation}
 
 Da una prospettiva amministrativa, l'architettura di riferimento ha i seguenti intervalli di rete concettuali:
 -	**Rete di pod {{site.data.keyword.containerlong_notm}}** - a tutti i pod distribuiti a un nodo di lavoro viene assegnato un indirizzo IP privato nell'intervallo 172.30.0.0/16 e sono instradati solo tra i nodi di lavoro. Per evitare conflitti, non utilizzare questo intervallo IP su qualsiasi nodo che comunica con i tuoi nodi di lavoro. I nodi di lavoro e i pod possono comunicare in modo protetto sulla rete privata utilizzando indirizzi IP privati. Tuttavia, quando si verifica un arresto anomalo di un pod o quando occorre creare nuovamente un nodo di lavoro, viene assegnato un nuovo indirizzo IP privato.
@@ -50,6 +55,7 @@ Da una prospettiva amministrativa, l'architettura di riferimento ha i seguenti i
 -	**Rete di nodi di lavoro {{site.data.keyword.icpfull_notm}}** – un intervallo di indirizzi IP aziendali che utilizza un intervallo BYOIP che non va in conflitto con alcuna sottorete fornita da {{site.data.keyword.cloud_notm}}.
 
 ## Flussi di traffico di rete
+{: #vcsnsxt-overview-integration-net-traffic-flows}
 
 Sono descritti i seguenti flussi di traffico:
 -	Utente esterno su internet a un livello web ospitato in un contenitore in {{site.data.keyword.containerlong_notm}}.
@@ -59,6 +65,7 @@ Sono descritti i seguenti flussi di traffico:
 -	Utente aziendale sull'accesso di rete aziendale a una VM in vCenter Server.
 
 ### Utente esterno su internet a un livello web ospitato in un contenitore in IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-integration-web-tier-iks}
 
 1.	L'utente esterno effettua una richiesta al livello web utilizzando l'URL.
 2.	Viene utilizzato DNS per determinare l'indirizzo IP. Questo indirizzo IP è un indirizzo pubblico di {{site.data.keyword.cloud_notm}} su una sottorete portatile assegnata al servizio ALB o Ingress.
@@ -68,6 +75,7 @@ Sono descritti i seguenti flussi di traffico:
 6.	Se l'applicazione si trova sullo stesso nodo di lavoro, vengono utilizzate le iptable per determinare quale interfaccia interna viene utilizzata per inoltrare la richiesta. Se l'applicazione si trova su un nodo di lavoro differente, il vRouter Calico esegue l'instradamento al nodo di lavoro applicabile, utilizzando l'incapsulamento IP-in-IP solo se il nodo di lavoro si trova su una sottorete diversa.
 
 ### Utente esterno su internet a un livello web ospitato in un contenitore in IBM Cloud Private
+{: #vcsnsxt-overview-integration-web-tier-icp}
 
 1.	L'utente esterno effettua una richiesta al livello web utilizzando l'URL.
 2.	Viene utilizzato DNS per determinare l'indirizzo IP. Questo indirizzo IP è un indirizzo pubblico di {{site.data.keyword.cloud_notm}} su una sottorete portatile che è assegnata all'istanza vCenter Server.
@@ -77,6 +85,7 @@ Sono descritti i seguenti flussi di traffico:
 6.	Se l'applicazione si trova sullo stesso nodo di lavoro, vengono utilizzate le iptable per determinare quale interfaccia interna viene utilizzata per inoltrare la richiesta. Se l'applicazione si trova su un nodo di lavoro differente, allora il Calico vRouter esegue l'instradamento verso il nodo di lavoro applicabile, utilizzando l'incapsulamento IP-in-IP. Il pacchetto IP-in-IP viene incapsulato in un frame VXLAN per il trasporto verso l'host vSphere ESXi in cui si trova il nodo di lavoro.
 
 ### Livello web ospitato in un contenitore in IBM Cloud Kubernetes Service al livello del database ospitato in una VM in vCenter Server
+{: #vcsnsxt-overview-integration-iks-db-tier-vcs}
 
 Il modo in cui le tabelle di instradamento nell'ESG e i vRouter vengono popolate dipende dal metodo di integrazione. Vedi Integrazione di {{site.data.keyword.containerlong_notm}} e vCenter Server.
 1.	Il livello web che è in esecuzione in un contenitore in {{site.data.keyword.containerlong_notm}} effettua una richiesta a un database in esecuzione su una VM nell'istanza vCenter Server.
@@ -91,6 +100,7 @@ Il modo in cui le tabelle di instradamento nell'ESG e i vRouter vengono popolate
 10.	La VM del database riceve la richiesta.
 
 ### Livello web ospitato in un contenitore in IBM Cloud Private al livello del database ospitato in una VM in vCenter Server
+{: #vcsnsxt-overview-integration-icp-db-tier-vcs}
 
 Il modo in cui le tabelle di instradamento nell'ESG e i vRouter vengono popolate dipende dal metodo di integrazione. Vedi Integrazione di {{site.data.keyword.icpfull_notm}} e vCenter Server.
 1.	Il livello web in esecuzione in un contenitore in {{site.data.keyword.icpfull_notm}} effettua una richiesta a un database in esecuzione su una VM nella stessa istanza vCenter Server.
@@ -104,6 +114,7 @@ Il modo in cui le tabelle di instradamento nell'ESG e i vRouter vengono popolate
 9.	La VM del database riceve la richiesta.
 
 ### Utente aziendale sull'accesso di rete aziendale a una VM in vCenter Server
+{: #vcsnsxt-overview-integration-corporate-network-vcs}
 
 1.	Un utente aziendale collegato alla rete interna aziendale effettua una richiesta di una risorsa che si trova su una VM ospitata in vCenter Server.
 2.	Viene utilizzato DNS per determinare l'indirizzo IP della VM. Questo indirizzo IP si trova su una rete che è stata estesa a {{site.data.keyword.cloud_notm}}.
@@ -113,7 +124,8 @@ Il modo in cui le tabelle di instradamento nell'ESG e i vRouter vengono popolate
 6.	Il concentratore L2 riceve la richiesta e la colloca sulla VXLAN che ospita la rete estesa.
 7.	La VM riceve la richiesta.
 
-### Ulteriori risorse
+## Link correlati
+{: #vcsnsxt-overview-integration-related}
 
 * [Rete {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud-computing/bluemix/our-network)
 * [White paper dei contenitori](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf) (Download del PDF)
@@ -122,7 +134,7 @@ Il modo in cui le tabelle di instradamento nell'ESG e i vRouter vengono popolate
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [Valori massimi di configurazione di NSX for vSphere 6.4.3](https://configmax.vmware.com/guest)
 * [Documentazione della piattaforma {{site.data.keyword.cloud_notm}}](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html)
-* [{{site.data.keyword.containerlong_notm}}](/docs/containers/container_index.html)
+* [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-container_index)
 * [Project Calico](https://www.projectcalico.org/)
 * [GitHub-Calico](https://github.com/projectcalico/calico)
 * [Kubernetes](https://kubernetes.io/)

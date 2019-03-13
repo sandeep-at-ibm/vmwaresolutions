@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-22"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-11-22"
 {:important: .important}
 
 # Transferencia y corrección
+{: #vum-staging}
 
 Los parches y las extensiones se pueden realizar opcionalmente antes de la corrección para asegurarse de que se descarguen de VUM al host de vSphere ESXi sin aplicar los parches o las extensiones inmediatamente. Durante la corrección, VUM aplica los parches, las extensiones y las actualizaciones a los objetos de inventario. Los parches de transferencia y las extensiones aceleran el proceso de corrección porque los parches y las extensiones ya están disponibles localmente en los hosts.
 
@@ -37,17 +38,19 @@ La corrección es el proceso en el que VUM aplica parches, extensiones y actuali
 Si la actualización lo requiere, los hosts se colocan en modalidad de mantenimiento antes de la corrección. El VCSA migra las VM a otros hosts dentro de la instancia de VMware vCenter Server on {{site.data.keyword.cloud}} antes de que el host se ponga en modalidad de mantenimiento.
 
 ## Para hosts de un clúster vSAN
+{: #vum-staging-hosts-vsan}
+
 Tenga en cuenta el comportamiento siguiente para los hosts que forman parte de un clúster vSAN:
 * El proceso de corrección del host puede tardar mucho tiempo en completarse.
 * Por diseño, solo el host de un clúster vSAN puede estar en modalidad de mantenimiento en cualquier momento.
 * VUM corrige hosts que forman parte de un clúster VSAN de forma secuencial, incluso si establece la opción de corregir los hosts en paralelo.
 * Las VM del host que utilicen una política de almacenamiento de VM con el valor 0 para **Número de anomalías tolerables**, es posible que el host experimente retrasos inusuales al entrar en la modalidad de mantenimiento. El retraso se produce porque la vSAN debe migrar los datos de la VM de un disco a otro en el clúster de almacén de datos de vSAN, y esto puede tardar muchas horas. Puede solucionarlo estableciendo el **Número de anomalías tolerables** en "1" para la política de almacenamiento de la máquina virtual, lo que dará lugar a la creación de dos copias de los archivos de la VM en el almacén de datos de vSAN.
-* Si alguna VM del host utiliza una política de almacenamiento de VM con el valor 1 para **Número de anomalías tolerables**, la VM pasará a ser no redundante cuando el host entre en modalidad de mantenimiento. Si esto no es aceptable, consulte [Redundancia de vSAN de máquina Virtual](vum-vsan-redundancy.html).
+* Si alguna VM del host utiliza una política de almacenamiento de VM con el valor 1 para **Número de anomalías tolerables**, la VM pasará a ser no redundante cuando el host entre en modalidad de mantenimiento. Si esto no es aceptable, consulte [Redundancia de vSAN de máquina Virtual](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-vsan-redundancy).
 
 Para corregir los hosts y clústeres, siga estos pasos:
 1. Utilice el cliente web de vSphere, seleccione **Inicio** > **Hosts y Clústeres**.
 2. Desde el navegador de objetos de inventario, seleccione un centro de datos, un clúster o un host, pulse el separador **Actualizar gestor** y pulse **Corregir**. Si ha seleccionado un objeto contenedor, se corrigen todos los hosts bajo el objeto seleccionado. Se abre el asistente Corregir.
-3. Seleccione **Líneas base de parche** o **Líneas base de extensión** en función del tipo de actualización que desee realizar en el host. En la página Seleccionar línea base del asistente Corregir, seleccione el **grupo de línea base ** y las **líneas base** que desee aplicar.
+3. Seleccione **Líneas base de parche** o **Líneas base de extensión** en función del tipo de actualización que desee realizar en el host. En la página Seleccionar línea base del asistente Corregir, seleccione el **grupo de línea base** y las **líneas base** que desee aplicar.
 4. Seleccione los hosts de destino que desee corregir y pulse **Siguiente**. Si opta por corregir un único host y no un objeto contenedor, el host está seleccionado de forma predeterminada.
 5. De forma opcional, en la página **Parches y extensiones**, desmarque los parches o extensiones específicos para excluirlos del proceso de corrección y pulse **Siguiente**.
 6. De forma opcional, en la página **Opciones avanzadas**, seleccione la opción de programar la corrección para más tarde y especifique un nombre único y una descripción opcional para la tarea. El tiempo que se establece para la tarea planificada es el tiempo en el VCSA. Opcionalmente, seleccione la opción para ignorar los avisos sobre los dispositivos no admitidos en el host ni los que ya no admitan el almacén de datos VMFS para continuar con la corrección. Pulse **Siguiente**.
@@ -60,9 +63,9 @@ Para corregir los hosts y clústeres, siga estos pasos:
 8. Opcionalmente, seleccione **Inhabilitar cualquier dispositivo de soporte extraíble conectado a la máquina virtual en el host**. VUM no corrige los hosts en los que las VM tienen unidades de CD, DVD o disquete conectadas. En entornos de clúster, los dispositivos de soporte conectados pueden impedir la vMotion si el host de destino no tiene un dispositivo idéntico o una imagen ISO montada, lo que a su vez impide que el host de origen entre en modalidad de mantenimiento. Después de la corrección, VUM vuelve a conectar los dispositivos de soporte extraíbles si todavía están disponibles.
 9. Opcionalmente, seleccione **Volver a intentar especificar la modalidad de mantenimiento en caso de error**, especifique el número de reintentos y especifique el tiempo que se debe esperar entre reintentos. VUM espera el período de retraso de reintento y vuelva a intentar poner el host en modo de mantenimiento las veces que lo indique en el campo Número de reintentos.
 
-No hay ningún requisito en una instancia de vCenter Server para seleccionar el recuadro de selección en Valores de parche de ESXi para permitir que el gestor de actualizaciones se active con los hosts ESXi alimentados con PXE.
+No hay ningún requisito en una instancia de vCenter Server para seleccionar el recuadro de selección en Valores de parche de ESXi para permitir que el gestor de actualizaciones se active con los hosts ESXi encendidos con arranque PXE.
 10. Pulse **Siguiente**.
-11. Si ha corregido los hosts en un clúster, edite las opciones de corrección del clúster. La página **Opciones de corrección del clúster ** solo está disponible cuando se corrigen los clústeres. Puede seleccionar las opciones siguientes:
+11. Si ha corregido los hosts en un clúster, edite las opciones de corrección del clúster. La página **Opciones de corrección del clúster** solo está disponible cuando se corrigen los clústeres. Puede seleccionar las opciones siguientes:
 * **Inhabilite la gestión de alimentación distribuida (DPM)** si está habilitada para cualquiera de los clústeres seleccionados: VUM no corregirá los clústeres con DPM activo. DPM supervisa el uso de recursos de las VM en ejecución en el clúster. Si hay suficiente exceso de capacidad, el DPM recomienda mover las VM a otros hosts del clúster y colocar el host original en modalidad de espera para conservar la alimentación. La extracción de hosts en modalidad de espera puede interrumpir la corrección.
 * **Inhabilite el control de admisión de alta disponibilidad** si está habilitado para cualquiera de los clústeres seleccionados: VUM no corregirá clústeres con el control de admisión de alta disponibilidad activo. El control de admisión es una política que utiliza la alta disponibilidad de VMware para garantizar la capacidad de migración tras error dentro de un clúster. Si el control de admisión de alta disponibilidad durante la corrección, es posible que las VM dentro de un clúster no se migren con vMotion.
 * **Inhabilite la tolerancia a errores** si está habilitada. Esto afecta a todas las VM con tolerancia a errores en los clústeres seleccionados. Si se activa la tolerancia a errores para cualquiera de las VM de un host, VUM no corregirá dicho host. Para habilitar la tolerancia a errores, los hosts en los que se ejecutan las VM primarias y secundarias deben ser de la misma versión y tener el mismo parche instalado. Si aplica parches diferentes a estos hosts, no se puede volver a habilitar la tolerancia a errores.
@@ -73,7 +76,8 @@ No hay ningún requisito en una instancia de vCenter Server para seleccionar el 
 12. En la página Preparado para completar, puede pulsar **Prever corrección** para generar un informe de opciones de corrección de clúster y pulsar **Aceptar**. Se abre un recuadro de diálogo de opciones de corrección del clúster. Puede exportar el informe o copiar las entradas de su propio registro y pulsar **Siguiente**.
 13. Revise la página **Preparado para completar** y pulse **Finalizar**.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vum-staging-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

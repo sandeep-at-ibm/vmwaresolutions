@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-14"
+lastupdated: "2019-02-15"
 
 ---
 
-# Visión general de la solución
+# Visión general de IBM Cloud for VMware Solutions
+{: #solution_overview}
 
 Las ofertas de {{site.data.keyword.vmwaresolutions_full}} le permiten ampliar el centro de datos virtualizado de VMware existente en el {{site.data.keyword.cloud_notm}} o en las aplicaciones nativas de nube de alojamiento.
 
@@ -18,12 +19,11 @@ Revise esta información para el diseño de las ofertas de {{site.data.keyword.v
 
 Este diseño sirve como una arquitectura de línea base que proporciona la base para que otros componentes internos o específicos del proveedor se añadan para casos de uso específicos.
 
-## Visión general de VMware on IBM Cloud
-
 Figura 1. Visión general de VMware on {{site.data.keyword.cloud_notm}}
 ![Visión general de VMware on {{site.data.keyword.cloud_notm}}](solution_overview.svg "La solución virtualiza los recursos de cálculo, red y, opcionalmente, el almacenamiento que deben consumir las máquinas virtuales donde puede ejecutar las aplicaciones.")
 
-## Beneficios clave
+## Principales ventajas de IBM Cloud for VMware Solutions
+{: #solution_overview-benefits}
 
 VMware Cloud Foundation y vCenter Server on {{site.data.keyword.cloud_notm}} proporcionan los bloques de construcción fundamentales, que incluye VMware vSphere, vCenter Server, NSX y las opciones de almacenamiento compartidas, entre las que se incluyen vSAN. Estos componentes son necesarios para diseñar de forma flexible una solución de centro de datos definida por software de VMware que se adapte mejor a sus cargas de trabajo.
 
@@ -38,8 +38,9 @@ Las ofertas de VMware on {{site.data.keyword.cloud_notm}} ofrecen las siguientes
 * **Habilitando la gestión y el gobierno coherentes** de la nube híbrida desplegada proporcionando acceso administrativo completo a la gestión de virtualización, conservando así las herramientas de VMware existentes, los scripts y las inversiones en formación.
 * **Aproveche la experiencia de VMware a escala global** con IBM Professional y Servicios gestionados que abarcan 30+ {{site.data.keyword.CloudDataCents_notm}} en todo el mundo.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #solution_overview-related}
 
-* [Visión general del diseño](design_overview.html)
-* [Capacidad de escalado](solution_scaling.html)
-* [Copia de seguridad de los componentes](solution_backingup.html)
+* [Visión general del diseño](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [Capacidad de escalado](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)
+* [Copia de seguridad de los componentes](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

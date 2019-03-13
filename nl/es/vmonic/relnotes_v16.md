@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-05-22"
 
 ---
 
 # Notas del release para V1.6
+{: #relnotes_v16}
 
 Este release incluye nuevas características, actualizaciones de componentes, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -21,7 +22,7 @@ Los siguientes componentes son nuevos o se han actualizado:
 *  Nuevas especificaciones de hardware: **Pequeño** o **Estándar**, dependiendo de sus requisitos.
 *  Nuevos centros de datos disponibles para el despliegue: **HKG02 - Hong Kong**, **OSL01 - Oslo**, **SEO01 - Seúl**, **SNG01 - Singapur** y **SYD04 - Sídney**.
 
-Para la lista completa de componentes, consulte [Visión general de VMware Cloud Foundation](../sddc/sd_cloudfoundationoverview.html).
+Para la lista completa de componentes, consulte [Visión general de VMware Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview).
 
 ## Actualizaciones de instancias de VMware vCenter Server
 
@@ -61,7 +62,7 @@ Las demás acciones ya no están disponibles en instancias anteriores a V1.6.
    * Se configura VMware HA (alta disponibilidad) para utilizar un nuevo grupo de puertos que se comparte entre la ESG de gestión y la ESG gestionada por el cliente.
 
    Esta ESG se despliega para todos los tipos de hardware de la instancia y los clientes pueden modificar la configuración. Para obtener más información, consulte los temas siguientes:
-   *  [Configuración de la red para que utilice NSX Edge Services Gateway gestionada por el cliente con sus máquinas virtuales](../vcenter/vc_esg_config.html)
+   *  [Configuración de la red para que utilice NSX Edge Services Gateway gestionada por el cliente con sus máquinas virtuales](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)
    *  [Documentación de VMware NSX](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## Mejoras en la usabilidad
@@ -71,4 +72,4 @@ Se han realizado mejoras en la interfaz de usuario:
 *  La navegación principal de la consola se ha mejorado significativamente con la incorporación del panel de navegación izquierdo con acceso a todas las áreas de la interfaz de usuario. Puede solicitar rápidamente una nueva instancia, ver las instancias desplegadas, revisar las notificaciones del sistema, cambiar valores y acceder a la documentación en línea.
 *  La nueva página **Cómo comenzar**, a la que se accede desde el panel de navegación izquierdo, le proporciona suficientes detalles directamente en la consola para ayudarle a tomar una decisión informada sobre los componentes de la instancia que va a solicitar. En la página **Cómo comenzar** también se le guía paso a paso por el proceso de solicitar una instancia, empezando por el cumplimiento de los requisitos previos para solicitar una instancia, como las cuentas de usuario necesarias, y terminando por la realización de un pedido.
 *  Los detalles de resumen de las instancias de Cloud Foundation y de las instancias de vCenter Server se han consolidado en una sola página, a la que se accede desde el menú **Instancias desplegadas** del panel de navegación izquierdo. Desde esta página, puede seleccionar el separador adecuado para filtrar instancias de Cloud Foundation o instancias de vCenter Server.
-* Si tiene el servicio de recuperación tras desastre de Zerto que está instalado en la instancia, puede acceder a la consola de Zerto desde la página de detalles del servicio directamente con una sola pulsación. Para obtener más información, consulte [Solicitud, visualización y eliminación de servicios para instancias de Cloud Foundation](../sddc/sd_addingremovingservices.html) y [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](../vcenter/vc_addingremovingservices.html).
+* Si tiene el servicio de recuperación tras desastre de Zerto que está instalado en la instancia, puede acceder a la consola de Zerto desde la página de detalles del servicio directamente con una sola pulsación. Para obtener más información, consulte [Solicitud, visualización y eliminación de servicios para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices) y [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).

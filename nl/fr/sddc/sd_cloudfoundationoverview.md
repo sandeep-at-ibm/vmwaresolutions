@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Présentation de Cloud Foundation
+{: #sd_cloudfoundationoverview}
 
 Lorsque vous commandez VMware Cloud Foundation on {{site.data.keyword.cloud}}, un environnement VMware complet est automatiquement déployé. Le déploiement de base se compose de quatre serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} avec la pile VMware Cloud Foundation préinstallée et configurée de manière à fournir une plateforme de centre de données défini par les logiciels (SDDC, Software-Defined Data Center). Cloud Foundation intègre en natif VMware vSphere, VMware NSX, VMware Virtual SAN et son architecture est basée sur des conceptions validées par VMware.
 
 ## Architecture Cloud Foundation
+{: #sd_cloudfoundationoverview-archi}
 
 Le graphique suivant décrit l'architecture globale et les composants du déploiement Cloud Foundation.
 
@@ -25,10 +27,12 @@ Figure 1. Architecture Cloud Foundation
 ![Architecture de Cloud Foundation](sd_architecture.svg "Architecture de Cloud Foundation")
 
 ### Infrastructure physique
+{: #sd_cloudfoundationoverview-physical-infras}
 
 Cette couche fournit l'infrastructure physique (ressources de calcul, de stockage et réseau) qu'utilise l'infrastructure virtuelle.
 
 ### Infrastructure de virtualisation (calcul, stockage et réseau)
+{: #sd_cloudfoundationoverview-virtualization-infras}
 
 Cette couche virtualise l'infrastructure physique par le biais de différents produits VMware :
 * VMware vSphere virtualise les ressources de calcul physiques.
@@ -36,14 +40,16 @@ Cette couche virtualise l'infrastructure physique par le biais de différents pr
 * VMware NSX est la plateforme de virtualisation réseau qui fournit les composants de mise en réseau logique et les réseaux virtuels.
 
 ### Gestion de la virtualisation
+{: #sd_cloudfoundationoverview-virtualization-mgmt}
 
 Cette couche se compose de vCenter Server, qui représente la couche de gestion de l'environnement virtualisé. Les mêmes outils et scripts habituels compatibles API vSphere peuvent être utilisés pour gérer l'environnement VMware hébergé par IBM.
 
 Sur la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez augmenter et réduire la capacité de vos instances à l'aide des fonctions d'ajout et de suppression de serveurs ESXi. De plus, des fonctions de gestion du cycle de vie, telles que l'application de mises à jour et de mises à niveau des composants VMware dans l'environnement hébergé sont également disponibles.
 
-Pour plus d'informations sur l'architecture, voir [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
+Pour plus d'informations sur l'architecture, voir [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Spécifications techniques relatives aux instances Cloud Foundation
+{: #technical-specifications-for-cloud-foundation-instances}
 
 Les composants suivants sont inclus dans votre instance Cloud Foundation.
 
@@ -51,6 +57,7 @@ Les frais encourus pour le matériel, la mise en réseau, les machines virtuelle
 {:note}
 
 ### Serveur bare metal
+{: #sd_cloudfoundationoverview-bare-metal}
 
 Vous pouvez commander les serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} dans l'une des configurations suivantes :
 *  **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.   
@@ -60,11 +67,12 @@ Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre 
 {:note}
 
 ### Utilisation en réseau
+{: #sd_cloudfoundationoverview-networking}
 
 Les composants réseau suivants sont commandés :
 * Liaisons montantes réseau public et privé double de 10 Gbps
 * Trois VLAN (réseaux locaux virtuels) : un VLAN public et deux VLAN privés
-* Passerelle de gestion sécurisée VMware NSX Edge Services Gateway (ESG) pour le trafic de gestion HTTPS sortant, déployée par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* Passerelle de gestion sécurisée VMware NSX Edge Services Gateway (ESG) pour le trafic de gestion HTTPS sortant, déployée par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
   Vous n'avez pas accès à cette passerelle ESG et vous ne pouvez pas l'utiliser. Si vous la modifiez, vous ne pourrez plus gérer l'instance Cloud Foundation depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
   {:important}
@@ -72,6 +80,7 @@ Les composants réseau suivants sont commandés :
 * La fonction EVC (Enhanced vMotion Compatibility) est automatiquement activée si vous disposez d'un cluster existant avec des serveurs ESXi qui sont pris en charge par la version en cours de VMware vSphere. EVC fournit la compatibilité vMotion pour tous les serveurs ESXi d'un cluster en s'assurant que tous les serveurs ESXi d'un cluster exposent le même jeu de fonctions d'UC aux machines virtuelles. Grâce à EVC, les machines virtuelles peuvent migrer d'un serveur ESXi à l'autre dans le cluster, même si les UC réelles sur les serveurs ESXi sont potentiellement différentes.
 
 ### Instance de serveur virtuel
+{: #sd_cloudfoundationoverview-vsi}
 
 Les instances de serveur virtuel suivantes sont commandées :
 * Une pour les services Microsoft Active Directory (AD) et système de noms de domaine (DNS, Domain Name System). L'instance de serveur virtuel est requise pour le support de configuration multisite. La spécification de cette instance de serveur virtuel est la suivante : Windows 2012 R2 (8 Go de RAM / 2 coeurs d'UC / disque de 100 Go / liaisons montantes privées doubles de 1 Gbps).
@@ -79,6 +88,7 @@ Les instances de serveur virtuel suivantes sont commandées :
 * (Si vous commandez Veeam on {{site.data.keyword.cloud_notm}}) Une instance de serveur virtuel pour le service de sauvegarde Veeam est commandée.
 
 ### Stockage
+{: #sd_cloudfoundationoverview-storage}
 
 Le stockage suivant est commandé selon la configuration des serveurs {{site.data.keyword.baremetal_short}} sélectionnée :
 * Deux disques d'amorçage SATA de 1 To
@@ -87,6 +97,7 @@ Le stockage suivant est commandé selon la configuration des serveurs {{site.dat
 * Pour les configurations **Skylake** et **Broadwell** uniquement, vous pouvez définir le nombre d'unités de disque ainsi que le type et la capacité des disques en fonction de vos besoins. De plus, vous disposez de l'option Hautes performances avec Intel Optane, qui fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. L'option Hautes performances avec Intel Optane dépend du modèle d'UC.
 
 ### Licences (fournies par IBM ou BYOL) et frais
+{: #sd_cloudfoundationoverview-license-and-fee}
 
 * Quatre pour VMware vSphere Enterprise Plus 6.5u1
 * Quatre pour VMware vCenter Server 6.5
@@ -96,14 +107,17 @@ Le stockage suivant est commandé selon la configuration des serveurs {{site.dat
 * Frais de quatre licences de support et services
 
 ## Spécifications techniques relatives aux noeuds d'extension Cloud Foundation
+{: #sd_cloudfoundationoverview-expansion-node-specs}
 
 Chaque noeud d'extension Cloud Foundation déploie et génère des frais, imputés à votre compte {{site.data.keyword.cloud_notm}}, pour les composants suivants.
 
 ### Matériel pour les noeuds d'extension
+{: #sd_cloudfoundationoverview-expansion-node-hardware}
 
-Un serveur bare metal {{site.data.keyword.cloud_notm}} doté de la configuration présentée dans [Spécifications techniques relatives aux instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+Un serveur bare metal {{site.data.keyword.cloud_notm}} doté de la configuration présentée dans [Spécifications techniques relatives aux instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances).
 
 ### Licences et frais pour les noeuds d'extension
+{: #sd_cloudfoundationoverview-expansion-node-license-and-fee}
 
 * Une pour VMware vSphere Enterprise Plus 6.5u1
 * Une pour VMware vCenter Server 6.5
@@ -123,11 +137,12 @@ Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} cr�
 
    Seules les activités de gestion des partages de fichiers du stockage partagé depuis le portail {{site.data.keyword.slportal}} font exception. Il s'agit des activités suivantes : commande, suppression (pouvant avoir un impact sur des magasins de données éventuellement montés), accord d'autorisation et montage de partages de fichiers de stockage partagé.
 
-### Liens connexes
+## Liens connexes
+{: #sd_cloudfoundationoverview-related}
 
-* [Nomenclature du logiciel Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html)
-* [Planification des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Nomenclature du logiciel Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
+* [Planification des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Centre de documentation VMware vSphere](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [Centre de documentation VMware NSX 6](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [Foire aux questions sur la comptabilité entre EVC et les UC](https://kb.vmware.com/s/article/1005764)

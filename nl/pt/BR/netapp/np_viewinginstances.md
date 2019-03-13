@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Visualizando instâncias do NetApp ONTAP Select
+{: #np_viewinginstances}
 
 Visualize o resumo e as informações detalhadas das instâncias do NetApp ONTAP Select que são provisionadas para diferentes contas do usuário.
 
 ## Procedimento para visualizar o resumo de instâncias do NetApp ONTAP Select
+{: #np_viewinginstances-procedure-view-inst-summary}
 
 Para visualizar um resumo de todas as instâncias do NetApp ONTAP Select que são provisionadas para uma conta do usuário, conclua as etapas a seguir:
 
@@ -35,6 +37,7 @@ Tabela 1. Itens de instâncias do NetApp ONTAP Select
 | Status | O status da instância. O status pode ter um dos valores a seguir:<ul><li>Criando: A instância está sendo criada.</li><li>Prédio: A instância está sendo configurada.</li><li>Pronta para uso: A instância está pronta para uso.</li><li>Modificando: A instância está sendo modificada.</li><li>Com falha: o processo de criação, configuração ou modificação falhou.</li><li>Excluindo: A instância está sendo excluída.</li><li>Erro de exclusão: ocorreu um erro quando a instância estava sendo excluída.</li><li>Excluído: A instância foi excluída.</li></ul>|
 
 ## Procedimento para visualizar detalhes da propriedade de instâncias do NetApp ONTAP Select
+{: #np_viewinginstances-procedure-view-inst-property}
 
 Para visualizar os detalhes da propriedade de uma instância:
 
@@ -60,6 +63,7 @@ Tabela 2. Propriedades de instância do NetApp ONTAP Select
 | Status | O status da instância. |
 
 ## Procedimento para visualizar informações de acesso para instâncias do NetApp ONTAP Select
+{: #np_viewinginstances-procedure-view-inst-access-info}
 
 Em **Informações de acesso**, visualize as informações de acesso dos componentes relacionados à instância. Essas senhas são senhas iniciais que são geradas pelo sistema. Se você as mudar fora do console do {{site.data.keyword.vmwaresolutions_short}}, elas não serão atualizadas na página de resumo da instância.
 
@@ -82,9 +86,10 @@ Tabela 3. Informações de acesso para componentes relacionados à instância do
 | IP do vCenter | O endereço IP do vCenter Server. |
 | FQDN do vCenter | O nome completo do domínio do vCenter Server. |
 | ADMINISTRADOR do vCenter | O nome do usuário e a senha do VMware vCenter Single Sign-On que podem ser usados para efetuar login no vCenter Server usando o vSphere Web Client. |
-| SSH do vCenter | O nome do usuário e a senha que podem ser usados para acessar a MV do vCenter Server por meio da conexão SSH. |
+| SSH do vCenter | O nome do usuário e a senha que podem ser usados para acessar a VM do vCenter Server por meio da conexão SSH. |
 
 ## Procedimento para visualizar o histórico de implementação para instâncias do NetApp ONTAP Select
+{: #np_viewinginstances-procedure-view-inst-deploy-history}
 
 Clique em **Histórico de implementação** na área de janela de navegação esquerda para visualizar o histórico de implementação da instância.
 
@@ -95,9 +100,10 @@ Tabela 4. Histórico de implementação de instância do NetApp ONTAP Select
 | Data | A data e hora em que o status da instância muda |
 | Resumo | Os detalhes da mudança |
 
-Se ocorrerem erros durante a implementação ou exclusão da instância, a equipe de Suporte do {{site.data.keyword.cloud_notm}} será notificada automaticamente. Para consultar o status de seu chamado, é possível [entrar em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Se ocorrerem erros durante a implementação ou exclusão da instância, a equipe de Suporte do {{site.data.keyword.cloud_notm}} será notificada automaticamente. Para consultar o status de seu chamado, é possível [entrar em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
-## Visualizando clusters do NetApp ONTAP Select
+## Procedimento para visualizar os clusters do NetApp ONTAP Select
+{: #np_viewinginstances-procedure-view-cluster}
 
 1. Clique em **Infraestrutura** na área de janela de navegação esquerda.
 2. Em **CLUSTERS**, visualize o resumo sobre os clusters do NetApp ONTAP Select.
@@ -138,7 +144,7 @@ Se ocorrerem erros durante a implementação ou exclusão da instância, a equip
 			 <td>O pod no qual o cluster é criado.</td>
 		 </tr>
 		 <tr>
-		  <td> Status </td>
+		  <td>Status</td>
 			<td>O status do cluster. O status pode ter um dos valores a seguir:<ul><li>Inicializando: o cluster está sendo criado e configurado.</li><li>Modificando: O cluster está sendo modificado.</li><li>Pronto para uso: o cluster está pronto para uso.</li></ul></td>
 		 </tr>
 		 <tr>
@@ -157,9 +163,10 @@ Tabela 6. Detalhes do servidor ESXi de um cluster do NetApp ONTAP Select
 | Versão | A versão do servidor ESXi. |
 | Credenciais | O nome de usuário e a senha para acessar o servidor ESXi. |
 | IP privado | O endereço IP privado do servidor ESXi. |
-| Status | O status do servidor ESXi, que pode ser um dos valores a seguir:<ul><li>Ativo: o servidor ESXi está pronto para uso.</li><li>Excluindo: o servidor ESXi está sendo excluído.</li></ul> |
+| Status | O status do servidor ESXi, que pode ser um dos valores a seguir:<ul><li>Active: o servidor ESXi está pronto para uso.</li><li>Deleting: o servidor ESXi está sendo excluído.</li></ul> |
 
 ## O que fazer a seguir
+{: #np_viewinginstances-next}
 
 Gerencie suas instâncias do console do {{site.data.keyword.vmwaresolutions_short}}, do VMware vSphere Web Client ou do console do NetApp.
 
@@ -168,12 +175,13 @@ Antes de clicar no **Console do vCenter** na página de resumo da instância par
 
 Para obter mais informações para ajudar a concluir as instruções de login, revise os tópicos a seguir:
 
-*  Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
+*  Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
 *  Para obter uma lista de pontos de acesso para efetuar login na Rede Privada da infraestrutura do {{site.data.keyword.cloud_notm}} usando a VPN, veja [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, veja [Implementando um arquivo OVF usando o vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
+*  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, veja [Implementando um arquivo OVF usando o vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
-### Links relacionados
+## Links relacionados
+{: #np_viewinginstances-related}
 
-* [Pedindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [Excluindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_deletinginstance.html)
+* [Pedindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [Excluindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
 * [Anexar armazenamento dedicado a implementações do NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)

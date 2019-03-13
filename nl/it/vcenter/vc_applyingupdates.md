@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,17 +13,19 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Applicazione di aggiornamenti alle istanze vCenter Server
+{: #vc_applyingupdates}
 
 Il processo di applicazione di patch e aggiornamenti alle istanze vCenter Server è automatizzato solo per i componenti di gestione. Gli aggiornamenti di VMware devono essere applicati manualmente.
 
 ## Prima di iniziare
+{: #vc_applyingupdates-prereq}
 
 Quando aggiorni un'istanza vCenter Server a un'istanza vCenter Server with Hybridity Bundle, devi prima applicare almeno l'aggiornamento del software vCenter Server V2.3 di base. Devi applicarlo prima di poter eseguire l'aggiornamento della licenza a Hybridity Bundle.
 {:important}
 
 Gli utenti Business Partner non hanno l'opzione di aggiornare un'istanza vCenter Server esistente a un'istanza vCenter Server with Hybridity Bundle.
 
-A partire dalla V2.5, gli aggiornamenti di IBM CloudDriver non sono più elencati perché sono abilitati gli aggiornamenti automatici. Azioni come l'aggiunta di un host, l'aggiunta di un cluster e l'ordine di un servizio aggiornano automaticamente l'istanza all'ultima versione. Per ulteriori informazioni sugli aggiornamenti automatici, consulta la sezione *Resilienza di IBM CloudDriver* in [Note sulla release per la V2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
+A partire dalla V2.5, gli aggiornamenti di IBM CloudDriver non sono più elencati perché sono abilitati gli aggiornamenti automatici. Azioni come l'aggiunta di un host, l'aggiunta di un cluster e l'ordine di un servizio aggiornano automaticamente l'istanza all'ultima versione. Per ulteriori informazioni sugli aggiornamenti automatici, consulta la sezione *Resilienza di IBM CloudDriver* in [Note sulla release per la V2.5](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25).
 {:note}
 
 Prima di tentare di applicare un aggiornamento, espandi la voce di aggiornamento facendo clic sulla freccia in giù e verifica le seguenti informazioni:
@@ -43,12 +45,12 @@ Tabella 1. Livelli di aggiornamento e impatto
   <tr>
     <td>Basso</td>
     <td>Questo aggiornamento non influisce su alcun sistema. Non devi applicarlo durante i tempi di inattività
-pianificati.</td>
+    pianificati.</td>
   </tr>
   <tr>
     <td>Medio</td>
   <td>Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività
-pianificati.</td>
+    pianificati.</td>
   </tr>
     <tr>
     <td>Maggiore</td>
@@ -57,6 +59,7 @@ pianificati.</td>
 </table>
 
 ## Procedura per applicare aggiornamenti e patch alle istanze vCenter Server (V2.1 o successive)
+{: #vc_applyingupdates-procedure}
 
 Questa procedura si applica alle istanze distribuite nella V2.1 o successive. Per le istanze distribuite nella V2.0 e precedenti, devi applicare gli aggiornamenti VMware manualmente.
 
@@ -83,6 +86,7 @@ Questa procedura si applica alle istanze distribuite nella V2.1 o successive. Pe
 7. Se applichi aggiornamenti alle istanze di vCenter Server nella configurazione di distribuzione multisito, viene visualizzata una sezione intitolata **Passi necessari per l'aggiornamento**. Questa sezione elenca le operazioni di aggiornamento richieste per tutte le istanze nella distribuzione multisito. Devi completare i passi in sequenza facendo clic su **Applica aggiornamento** per ciascun passo. Devi attendere il completamento del passo precedente prima di iniziare il passo successivo.   
 
 ## Procedura per effettuare l'aggiornamento all'istanza vCenter Server with Hybridity Bundle
+{: #vc_applyingupdates-procedure-upgrade-to-hybridity}
 
 Durante l'aggiornamento della licenza a Hybridity Bundle, viene eseguito automaticamente l'aggiornamento all'edizione VMware NSX Advanced se la tua istanza vCenter Server utilizza attualmente l'edizione VMware NSX Base.
 
@@ -104,13 +108,14 @@ Completa la seguente procedura per aggiornare un'istanza vCenter Server a vCente
   4. Controlla i termini che si applicano al servizio, esamina il costo stimato e fai clic su **Effettua ordine**.
 
 ## Risultati
+{: #vc_applyingupdates-results}
 
-2. Dopo aver applicato un aggiornamento, viene visualizzato un record nell'elenco di stato degli aggiornamenti software, in cui puoi visualizzare l'avanzamento dettagliato e lo stato dell'aggiornamento. Al termine dell'aggiornamento, viene visualizzato un record nell'elenco degli aggiornamenti software installati.
+1. Dopo aver applicato un aggiornamento, viene visualizzato un record nell'elenco di stato degli aggiornamenti software, in cui puoi visualizzare l'avanzamento dettagliato e lo stato dell'aggiornamento. Al termine dell'aggiornamento, viene visualizzato un record nell'elenco degli aggiornamenti software installati.
 
   Per recuperare lo stato più recente per un lavoro di aggiornamento, fai clic sull'icona di aggiornamento nell'angolo superiore destro della pagina.
   {:tip}
 
-3. Per i dettagli sugli stati di aggiornamento, consulta la seguente tabella.
+2. Per i dettagli sugli stati di aggiornamento, consulta la seguente tabella.
 
    Tabella 2. Dettagli degli stati di aggiornamento
 
@@ -145,10 +150,11 @@ Completa la seguente procedura per aggiornare un'istanza vCenter Server a vCente
       </tr>
     </table>
 
-4. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato a tentare nuovamente l'aggiornamento dal passo non riuscito.
+3. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato a tentare nuovamente l'aggiornamento dal passo non riuscito.
 
-### Link correlati
+## Link correlati
+{: #vc_applyingupdates-related}
 
-* [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

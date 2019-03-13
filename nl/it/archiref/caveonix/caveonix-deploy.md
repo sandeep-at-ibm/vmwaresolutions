@@ -21,10 +21,10 @@ Quando selezioni l'opzione {{site.data.keyword.vmwaresolutions_full}} RiskForesi
 
 L'installazione di RiskForesight consiste nei seguenti passi di livello superiore:
 
-1. [Pianificazione iniziale e prerequisiti](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step1.html) – Comprensione e selezione di un'opzione di distribuzione, configurando DNS per fornire la risoluzione di FQDN/IP per i componenti dell'applicazione.
-2. [Distribuzione della macchina virtuale](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step2.html) – Distribuzione delle macchine virtuali (VM, Virtual Machine) da un modello OVF. Sulla VM sono installati tutti i componenti dell'applicazione.
-3. [Configurazione dell'applicazione](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step3.html) – Esecuzione dello script di configurazione Caveonix che configura il componente dell'applicazione su ciascuna delle VM.
-4. [Impostazione dell'applicazione](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step4.html) – Impostazione del provider di servizi e di un tenant o un'organizzazione in modo che l'applicazione diventi accessibile per gli utenti.
+1. [Pianificazione iniziale e prerequisiti](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step1) – Comprensione e selezione di un'opzione di distribuzione, configurando DNS per fornire la risoluzione di FQDN/IP per i componenti dell'applicazione.
+2. [Distribuzione della macchina virtuale](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step2) – Distribuzione delle macchine virtuali (VM, Virtual Machine) da un modello OVF. Sulla VM sono installati tutti i componenti dell'applicazione.
+3. [Configurazione dell'applicazione](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step3) – Esecuzione dello script di configurazione Caveonix che configura il componente dell'applicazione su ciascuna delle VM.
+4. [Impostazione dell'applicazione](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step4) – Impostazione del provider di servizi e di un tenant o un'organizzazione in modo che l'applicazione diventi accessibile per gli utenti.
 
 L'installazione automatica esegue il provisioning di una singola VM e configura tutti i componenti dell'applicazione su tale VM.
 {:note}
@@ -36,9 +36,9 @@ Il dimensionamento della distribuzione viene calcolato utilizzando i seguenti vo
 
 Tabella 1. Volumi
 
-|Tipo di dati |Volume |
+|Tipo di dati	|Volume |
 |---|---|
-|Scansioni al giorno |1 |
+|Scansioni al giorno	|1 |
 |Dati scansione (MB)	|20 |
 |Dati log (MB)	|500 |
 |Dati flusso (MB)	|200 |
@@ -54,19 +54,19 @@ Il numero di VM di ridimensionamento è calcolato dal numero di asset e dal nume
 
 Tabella 2. Parametri della VM di ridimensionamento
 
-|Numero di asset |100	|500	|5000 |
+|Numero di asset	|100	|500	|5000 |
 |---|---|---|---|
 |Giorni di dati	|30	|30	|30 |
 |Totale archiviazione indice per asset al giorno (MB)	|1532	|1532	|1532 |
 |Totale archiviazione indice per asset per 30 giorni (TB)	|4	|22	|219 |
 |Dati supportati per il nodo di ridimensionamento (TB)	|0	|8	|8 |
-|VM di ridimensionamento richieste |0	|3	|27 |
+|VM di ridimensionamento richieste	|0	|3	|27 |
 
 La quantità di archiviazione richiesta è calcolata come segue:
 
 Tabella 3. Parametri di archiviazione
 
-|Numero di asset |100	|500	|5000 |
+|Numero di asset	|100	|500	|5000 |
 |---|---|---|---|
 |Conservazione dati a lungo termine (mesi)	|8	|8	|8 |
 |Archiviazione totale per ogni asset al giorno (MB)	|766	|766	|766 |
@@ -90,18 +90,18 @@ La seguente tabella fornisce un riepilogo delle distribuzioni:
 
 Tabella 4. Riepilogo
 
-|Modello di distribuzione |“tutto-in-uno”	|Parzialmente distribuito	|Completamente distribuito |
+|Modello di distribuzione	|“tutto-in-uno”	|Parzialmente distribuito	|Completamente distribuito |
 |---|---|---|---|
-|Numero di asset |100	|500	|5000 |
+|Numero di asset	|100	|500	|5000 |
 |Dati online generati in 30 giorni (TB)	|4	|22	|219 |
 |Conservazione dati nearline (90 giorni) (TB)	|7	|33	|329 |
 |Conservazione dati offline (8 mesi) (TB)	|18	|88	|877 |
 |Totale conservazione archivio dati (1 anno) (TB)	|28	|142	|1425 |
 |VM di base	|1	|1	|20 |
-|VM di ridimensionamento |0	|3	|28 |
+|VM di ridimensionamento	|0	|3	|28 |
 |Totale VM	|1	|4	|48 |
 
 ## Link correlati
 {: #caveonix-deploy-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

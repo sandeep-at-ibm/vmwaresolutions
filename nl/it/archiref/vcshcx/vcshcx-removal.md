@@ -24,4 +24,4 @@ La rimozione di HCX presume che le reti estese non siano più in uso. Utilizza l
 {: #vcshcx-removal-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html) 
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro) 

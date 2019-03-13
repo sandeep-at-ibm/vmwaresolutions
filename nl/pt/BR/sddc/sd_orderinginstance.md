@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,23 +13,27 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Pedindo instâncias do Cloud Foundation
+{: #sd_orderinginstance}
 
-Para implementar uma plataforma unificada de data center definido por software (SDDC) com configuração padrão de cálculo, armazenamento e rede, peça uma instância do VMware Cloud Foundation. Durante o pedido inicial, também é possível incluir serviços, como o [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html) para recuperação de desastre.
+Para implementar uma plataforma unificada de data center definido por software (SDDC) com configuração padrão de cálculo, armazenamento e rede, peça uma instância do VMware Cloud Foundation. Durante o pedido inicial, também é possível incluir serviços, como o [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) para recuperação de desastre.
 
 ## Requisitos
+{: #sd_orderinginstance-req}
 
 Assegure-se de que tenha concluído as tarefas a seguir:
-*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](/docs/services/vmwaresolutions/vmonic/useraccount.html).
-*  Você revisou os requisitos e considerações em [Requisitos e planejamento para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html).
+*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+*  Você revisou os requisitos e considerações em [Requisitos e planejamento para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning).
 
 Não modifique nenhum valor que seja configurado durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído. Além disso, não mude o nome da instância, o nome do domínio-raiz, o rótulo do subdomínio ou o prefixo de nome do host depois que a instância for implementada.
 {:important}
 
 ## Configurações do sistema
+{: #sd_orderinginstance-sys-settings}
 
 Deve-se especificar as seguintes configurações do sistema ao pedir uma instância do Cloud Foundation.
 
 ### Nome da instância
+{: #sd_orderinginstance-inst-name}
 
 O nome da instância deve atender aos requisitos a seguir:
 * Apenas caracteres alfanuméricos e o traço (-) são permitidos.
@@ -38,10 +42,12 @@ O nome da instância deve atender aos requisitos a seguir:
 * O nome da instância deve ser exclusivo dentro de sua conta.
 
 ### Principal ou secundário
+{: #sd_orderinginstance-primary-secondary}
 
 Selecione se pedirá uma nova instância primária ou uma instância secundária para uma instância primária existente.
 
 ## Configurações de licenciamento
+{: #sd_orderinginstance-licensing-settings}
 
 Especifique as opções de licenciamento para os seguintes componentes do VMware na instância:  
 * Licença do vCenter Server - Padrão
@@ -54,12 +60,15 @@ Para usuários do Parceiro de Negócios, a licença do vCenter Server (Standard 
 Para usuários que não são do Parceiros de negócios, é possível usar as licenças do VMware fornecidas pela IBM para esses componentes selecionando **Incluir com a compra** ou é possível usar Bring Your Own License (BYOL) selecionando **Eu fornecerei** e inserindo as suas próprias chaves de licença.
 
 ## Configurações do Bare Metal Server
+{: #sd_orderinginstance-bare-metal}
 
 ### Local do datacenter
+{: #sd_orderinginstance-dc-location}
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
 
 ### Skylake
+{: #sd_orderinginstance-skylake}
 
 Quando você seleciona **Skylake**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades.
 
@@ -72,6 +81,7 @@ Tabela 1. Opções para Skylake  {{site.data.keyword.baremetal_short}}
 | Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 ### Broadwell
+{: #sd_orderinginstance-broadwell}
 
 Quando você seleciona **Broadwell**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades.
 
@@ -86,10 +96,12 @@ Tabela 2. Opções para Broadwell  {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4/total de 64 núcleos, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Número de Bare Metal Servers
+{: #sd_orderinginstance-bare-metal-number}
 
 Uma instância do Cloud Foundation inclui quatro Bare Metal Servers na implementação inicial. Não é possível mudar o número de Bare Metal Servers quando você coloca a ordem.
 
 ## Configurações de armazenamento
+{: #sd_orderinginstance-storage}
 
 Para instâncias do Cloud Foundation, é possível pedir somente o armazenamento VMware vSAN.
 
@@ -104,10 +116,12 @@ Quando você seleciona a configuração **Skylake** ou **Broadwell** do Bare Met
 * Revise os valores **Tipo de disco para discos de cache vSAN** e **Número de discos de cache vSAN**. Esses valores dependem de a caixa **Intel Optane de alto desempenho** estar ou não marcada.
 
 ## Configurações da interface de rede
+{: #sd_orderinginstance-network-interface}
 
 Deve-se especificar as seguintes configurações de interface de rede ao pedir uma instância do Cloud Foundation.
 
 ### Prefixo de Nome do Host
+{: #sd_orderinginstance-hostname-prefix}
 
 O prefixo de nome do host deve atender aos requisitos a seguir:
 *  Apenas caracteres alfanuméricos e o traço (-) são permitidos.
@@ -115,6 +129,7 @@ O prefixo de nome do host deve atender aos requisitos a seguir:
 *  O comprimento máximo do prefixo do nome do host é de 10 caracteres.
 
 ### Rótulo do subdomínio
+{: #sd_orderinginstance-subdomain-label}
 
 O rótulo do subdomínio deve atender aos requisitos a seguir:
 *  Apenas caracteres alfanuméricos e o traço (-) são permitidos.
@@ -123,6 +138,7 @@ O rótulo do subdomínio deve atender aos requisitos a seguir:
 *  O rótulo do subdomínio deve ser exclusivo em sua conta.
 
 ### Nome de domínio
+{: #sd_orderinginstance-domain-name}
 
 O nome do domínio-raiz deve atender aos requisitos a seguir:
 * O nome de domínio deve consistir em duas ou mais sequências separadas por ponto (.)
@@ -135,6 +151,7 @@ O comprimento máximo do nome completo do domínio (FQDN) para hosts e máquinas
 {:note}
 
 ### Formato de valor para as configurações de rede
+{: #sd_orderinginstance-network-settings-value-format}
 
 O nome de domínio e o rótulo do subdomínio são usados para gerar o nome do usuário e nomes de servidor da instância, conforme mostrado na tabela a seguir.
 
@@ -150,18 +167,23 @@ Tabela 3. Formato do valor para nomes de usuário, nomes de domínio e nomes de 
   | Nome do site de Conexão única (SSO) | `<subdomain_label>`
   | FQDN do PSC | `PSC-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é de 50 caracteres. |  
 
-  O FQDN do SDDC Manager não pode ser resolvido publicamente. Caso contrário, a configuração da instância do Cloud Foundation pode falhar e não é recuperável. Antes de especificar um nome de domínio, revise [Considerações ao escolher um nome de domínio-raiz](/docs/services/vmwaresolutions/vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances).
+  O FQDN do SDDC Manager não pode ser resolvido publicamente. Caso contrário, a configuração da instância do Cloud Foundation pode falhar e não é recuperável. Antes de especificar um nome de domínio, revise [Considerações ao escolher um nome de domínio-raiz](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_limitations#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances).
 
 ### VLANs
+{: #sd_orderinginstance-vlans}
 
 As configurações de rede se baseiam em sua seleção de **Pedir novas VLANs** ou **Selecionar VLANs existentes**.
 
 São necessárias uma VLAN pública e duas VLANs privadas para o seu pedido de instância. As duas VLANs privadas são truncadas em cada Bare Metal Server.
 
 #### Pedir novas VLANs
+{: #sd_orderinginstance-new-vlans}
+
 Selecione para pedir uma nova VLAN pública e duas novas VLANs privadas.
 
-#### Selecionar VLANs existentes  
+#### Selecionar VLANs existentes
+{: #sd_orderinginstance-existing-vlans}
+
 Dependendo do {{site.data.keyword.CloudDataCent_notm}} selecionado, VLANs públicas e privadas existentes podem estar disponíveis.
 
 Ao selecionar para reutilizar VLANs públicas e privadas existentes, especifique as VLANs e as sub-redes:
@@ -171,20 +193,21 @@ Ao selecionar para reutilizar VLANs públicas e privadas existentes, especifique
   * **Sub-rede primária** é designada a hosts físicos para o acesso à rede pública.
   * **Sub-rede primária privada** é designada a hosts físicos para tráfego de gerenciamento.
 
-##### Importante
-
-* Assegure-se de que a configuração de firewall nas VLANs selecionadas não bloqueie o tráfego de dados de gerenciamento.
-* Assegure-se de que todas as VLANs selecionadas estejam no mesmo pod, porque os servidores ESXi não podem ser provisionados em VLANs de pods mistos.
+Assegure-se de que a configuração de firewall nas VLANs selecionadas não bloqueie o tráfego de dados de gerenciamento. Assegure-se de que todas as VLANs selecionadas estejam no mesmo pod, porque os servidores ESXi não podem ser provisionados em VLANs de pods mistos.
+{:important}
 
 ## Serviços
+{: #sd_orderinginstance-addon-services}
 
-Ao pedir uma instância do Cloud Foundation, também é possível pedir serviços complementares. Para obter mais informações sobre os serviços disponíveis, veja [Serviços para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html#services-for-cloud-foundation-instances).
+Ao pedir uma instância do Cloud Foundation, também é possível pedir serviços complementares. Para obter mais informações sobre os serviços disponíveis, veja [Serviços para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning#services-for-cloud-foundation-instances).
 
 ## Resumo do Pedido
+{: #sd_orderinginstance-order-summary}
 
 Com base em sua configuração selecionada para a instância e os serviços de complemento, o custo estimado é gerado instantaneamente e exibido na área de janela à direita. Clique em **Detalhes de precificação** na área de janela direita para gerar um documento PDF que forneça os detalhes da estimativa.
 
 ## Procedimento para pedir instâncias do Cloud Foundation
+{: #sd_orderinginstance-procedure}
 
 1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **Cloud Foundation** na seção **Data centers virtuais**.
 2. Na página **VMware Cloud Foundation on IBM Cloud**, clique em **Criar**.
@@ -220,16 +243,18 @@ Com base em sua configuração selecionada para a instância e os serviços de c
     5. Clique em **Provisão**.
 
 ## Resultados
+{: #sd_orderinginstance-results}
 
 A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
 
-Quando a instância for implementada com êxito, os componentes descritos em [Especificações técnicas para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) serão instalados em sua plataforma virtual do VMware. Os servidores ESXi que você pediu são agrupados como **SDDC-Cluster** por padrão. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
+Quando a instância for implementada com êxito, os componentes descritos em [Especificações técnicas para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances) serão instalados em sua plataforma virtual do VMware. Os servidores ESXi que você pediu são agrupados como **SDDC-Cluster** por padrão. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
 
 Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 
 Quando você pedir uma instância secundária, o VMware vSphere Web Client da instância primária (vinculado à secundária) poderá ser reiniciado depois que o pedido da instância secundária estiver concluído.
 
 ## O que fazer a seguir
+{: #sd_orderinginstance-next}
 
 Visualizar e gerenciar a instância do Cloud Foundation que você pediu.
 
@@ -246,12 +271,13 @@ Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} 
 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhados.
 
-### Links relacionados
+## Links relacionados
+{: #sd_orderinginstance-related}
 
-* [Inscrevendo-se em uma conta do {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
-* [Visualizando instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Incluindo, visualizando e excluindo clusters para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
-* [Expandindo e contraindo a capacidade para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [Excluindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
-* [Pergunta mais frequente sobre BYOL](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
+* [Inscrevendo-se em uma conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Visualizando instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [Incluindo, visualizando e excluindo clusters para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [Expandindo e contraindo a capacidade para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [Excluindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)
+* [Pergunta mais frequente sobre BYOL](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)

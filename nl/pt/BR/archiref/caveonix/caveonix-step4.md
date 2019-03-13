@@ -74,4 +74,4 @@ Vulnerabilidade do VMware. O tipo é configurado como vCenter, NSX, VMWareInfras
 ## Links relacionados
 {: #caveonix-step4-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

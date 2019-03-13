@@ -4,16 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Vue d'ensemble de l'architecture générale
+{: #vcsnsxt-overview}
 
 Les informations suivantes fournissent davantage de détails sur l'architecture de réseau qui est utilisée dans cette architecture de référence. Elles comprennent les sections suivantes :
 * Présentation de **VMware vCenter Server on {{site.data.keyword.cloud}}** – Décrit les points forts de la plateforme vCenter Server.
 * **Présentation du réseau** – Fournit des informations sur les composants réseau qui sont utilisés dans cette architecture de référence :
-  - **Mise en réseau d'{{site.data.keyword.cloud_notm}}** – {{site.data.keyword.cloud_notm}} fournit le réseau physique et est entièrement géré par {{site.data.keyword.cloud_notm}}. Passez en revue les caractéristiques principales de la mise en réseau d'{{site.data.keyword.cloud_notm}} pour appréhender les flots réseau entre l'environnement sur site et l'environnement hors site et entre les charges de travail qui sont hébergées dans différents services.
+  - **Mise en réseau d'{{site.data.keyword.cloud_notm}}** – {{site.data.keyword.cloud_notm}} fournit le réseau physique et est entièrement géré par {{site.data.keyword.cloud_notm}}. Passez en revue les caractéristiques principales de la mise en réseau d'{{site.data.keyword.cloud_notm}} pour appréhender les flux réseau entre l'environnement sur site et l'environnement hors site et entre les charges de travail qui sont hébergées dans différents services.
   - **NSX-V** – La mise en réseau de vCenter Server repose sur le réseau {{site.data.keyword.cloud_notm}} avec un réseau dissocié qui est fourni par VMware NSX-V. Ce réseau dissocié segmente le trafic à partir du réseau sous-jacent d'{{site.data.keyword.cloud_notm}} pour davantage de contrôle et de configurabilité incluant le mode BYOIP.
   - **{{site.data.keyword.containerlong_notm}}** - {{site.data.keyword.containerlong_notm}} utilise Calico comme plug-in d'interface CNI (Container Network Interface).
   - **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}} utilise Calico comme plug-in d'interface CNI (Container Network Interface).
@@ -23,6 +24,7 @@ Les informations suivantes fournissent davantage de détails sur l'architecture 
   - Flux de trafic réseau
 
 ## Présentation de vCenter Server
+{: #vcsnsxt-overview-vcs-ovw}
 
 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle est un cloud privé hébergé qui vous permet de déployer rapidement et facilement votre infrastructure locale dans le cloud pour obtenir une hybridité d'infrastructure transparente et sécurisée et une véritable mobilité d'application.
 
@@ -40,10 +42,11 @@ Les offres de sauvegarde et de reprise après incident fournies par IBM, Veeam e
 
 vCenter Server Hybridity Bundle n'est pas un service géré, mais vous pouvez ajouter des services gérés par IBM si vous voulez décharger les opérations quotidiennes et la maintenance de la virtualisation, du système d'exploitation invité ou des couches application. L'équipe {{site.data.keyword.cloud_notm}} Professional Services est également disponible pour vous aider à accélérer votre transition vers le cloud en vous offrant des services de migration, d'implémentation, de planification et d'intégration.
 
-Les options d'intégration de plateforme de vCenter Server Hybridity Bundle ne se limitent pas aux options disponibles à partir de VMware, telles que vRealize Suite ou vSphere with Operations Management, mais couvrent plusieurs offres de service {{site.data.keyword.cloud_notm}}, telles que [vCenter Server et {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html) et [vCenter Server et {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html), qui utilisent open source Terraform pour gérer et fournir une infrastructure en tant que code.
+Les options d'intégration de plateforme de vCenter Server Hybridity Bundle ne se limitent pas aux options disponibles à partir de VMware, telles que vRealize Suite ou vSphere with Operations Management, mais couvrent plusieurs offres de service {{site.data.keyword.cloud_notm}}, telles que [vCenter Server et {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro) et [vCenter Server et {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro), qui utilisent open source Terraform pour gérer et fournir une infrastructure en tant que code.
 
 Le portefeuille complet de services et d'offres d'intégration multi-offre disponible pour vCenter Server Hybridity Bundle fournit une plateforme véritablement hybride qui fait de l'hybridité un Service possible.
 
-### Liens connexes
+## Liens connexes
+{: #vcsnsxt-overview-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

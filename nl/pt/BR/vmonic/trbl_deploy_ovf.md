@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # Implementando um arquivo OVF usando o VMware vSphere Web Client
+{: #trbl_deploy_ovf}
 
 ## Resolução
+{: #trbl_deploy_ovf-resolution}
 
 Para implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, use o seguinte procedimento:
 1. Antes de tentar implementar um arquivo OVF, inclua as informações do host a seguir no arquivo `/etc/hosts`:

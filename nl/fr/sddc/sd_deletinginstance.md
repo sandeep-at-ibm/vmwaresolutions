@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Suppression d'instances Cloud Foundation
+{: #sd_deletinginstance}
 
 Pour libérer les composants commandés dans le cadre d'une instance VMware Cloud Foundation, supprimez celle-ci.
 
@@ -30,6 +31,7 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 {:note}
 
 ## Procédure de suppression d'instances dans la page Instances déployées
+{: #sd_deletinginstance-procedure1}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, recherchez l'instance à supprimer.
@@ -40,6 +42,7 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
 ## Procédure de suppression d'instances dans la page des détails de l'instance
+{: #sd_deletinginstance-procedure2}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance à supprimer.
@@ -49,11 +52,12 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
    1. Cliquez à nouveau sur l'icône de menu déroulant dynamique en regard de **Console vCenter**, puis cliquez sur **Supprimer une instance**.
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
-### Liens connexes
+## Liens connexes
+{: #sd_deletinginstance-related}
 
-* [Suppression d'instances Cloud Foundation dans une configuration multisite](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Affichage d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Suppression de configurations multisite](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
-* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Suppression d'instances Cloud Foundation dans une configuration multisite](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Affichage d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Suppression de configurations multisite](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

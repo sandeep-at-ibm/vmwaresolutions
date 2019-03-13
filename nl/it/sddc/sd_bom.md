@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Distinta base di Cloud Foundation
+{: #sd_bom}
 
 Esamina le informazioni relative alla distinta base (Diba) per le istanze VMware Cloud Foundation.
 
 ## Diba di VLAN per le istanze Cloud Foundation
+{: #sd_bom-vlans}
 
 La seguente tabella mostra in dettaglio le informazioni sulla Diba per le VLAN di Cloud Foundation.
 
@@ -25,6 +27,7 @@ Tabella 1. Diba per le VLAN nelle istanze Cloud Foundation
 | VLAN3     | Privata B, Portatile | Assegnata a VMware vSAN, se utilizzato.<br><br>Assegnata a VMware NFS, se utilizzato.<br><br>Assegnata a VMware vSphere vMotion. |
 
 ## Diba di software per le istanze Cloud Foundation
+{: #sd_bom-software}
 
 La seguente tabella mostra in dettaglio le informazioni sulla Diba per i componenti software di Cloud Foundation.
 
@@ -41,6 +44,7 @@ Tabella 2. Diba per i componenti software nelle istanze Cloud Foundation
 | Microsoft    | Windows Server Standard edition (64-bit) | 2012R2       |
 
 ## Impostazioni di configurazione avanzate per i server ESXi
+{: #sd_bom-esxi-server-advance-config}
 
 Esamina la seguente tabella per una panoramica delle impostazioni di configurazione avanzate che vengono applicate ai server ESXi. Le impostazioni sono diverse a seconda che l'istanza Cloud Foundation sia distribuita o aggiornata alla V2.2 o successive da una release precedente (V2.1 o precedenti).
 
@@ -59,6 +63,7 @@ Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanz
 | Soglia completa della coda | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
 ### Note
+{: #sd_bom-notes}
 
 * L'impostazione **MaxVolumes** è obbligatoria per il servizio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} perché il servizio potrebbe utilizzare più del numero predefinito di montaggi NFS sul server ESXi.
 * Il valore **Non impostato** per un'impostazione di configurazione indica che la nuova impostazione non viene applicata automaticamente perché richiede il riavvio dei server ESXi, il che potrebbe causare un'interruzione.
@@ -67,10 +72,11 @@ Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanz
 
   Per ulteriori informazioni, vedi [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
 
-### Link correlati
+## Link correlati
+{: #sd_bom-related}
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Panoramica di Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Pianificazione per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Panoramica di Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Pianificazione per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)

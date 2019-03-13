@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-18"
 
 ---
 
 # Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation
+{: #sd_addingremovingservices}
 
 É possível pedir serviços para suas instâncias do VMware Cloud Foundation, como uma solução de recuperação de desastre. Quando você não precisar mais desses serviços, será possível removê-los de suas instâncias.
 
 ## Serviços disponíveis para instâncias do Cloud Foundation
+{: #sd_addingremovingservices-available-services}
 
 A tabela a seguir mostra os serviços que estão disponíveis para instâncias do Cloud Foundation, junto com as versões de serviço instaladas.
 
@@ -20,26 +22,29 @@ Tabela 1. Serviços disponíveis para instâncias do Cloud Foundation
 
 | Nome do Serviço | Versão do serviço atual | Versão da instância |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/f5_considerations.html)                                 | BIG-IP VE v13.1.1.2 | V1.9 e mais recentes |
-| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_considerations.html)       | Série 300 | V1.8 e mais recentes |
-| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html) | 6.0.3 | V2.0 e mais recentes |
-| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html)              | 5.4.0 | V2.3 e mais recentes |
-| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_considerations.html)              | 4.2.1 | V2.3 e mais recentes |
-| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_considerations.html)              | 4.2 | V2.5 e mais recente |
-| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/spp_considerations.html)  | 10.1.2 | V2.2 e mais recentes |
-| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html) |  2.0 | N/A |
-| [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html)                          | 9.5u3 | V1.8 e mais recentes |
-| [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html)                                 | 6.0 atualização 3 | V1.2 e mais recentes |
+| [F5 on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)                                 | BIG-IP VE v13.1.1.2 | V1.9 e mais recentes |
+| [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)       | Série 300 | V1.8 e mais recentes |
+| [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | V2.0 e mais recentes |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)              | 5.4.0 | V2.3 e mais recentes |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)              | 4.2.1 | V2.3 e mais recentes |
+| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)              | 4.2 | V2.5 e mais recente |
+| [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations)  | 10.1.2 | V2.2 e mais recentes |
+| [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) |  2.0 | N/A |
+| [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)                          | 9.5u3 | V1.8 e mais recentes |
+| [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)                                 | 6.0 atualização 3 | V1.2 e mais recentes |
 
 ## Procedimento para incluir serviços em instâncias do Cloud Foundation
+{: #sd_addingremovingservices-adding-procedure}
 
 Para incluir um serviço em sua instância do Cloud Foundation, clique no link de serviço apropriado na tabela anterior para revisar as considerações para o serviço e verifique os componentes que estão implementados. Depois, siga as instruções no tópico apropriado de serviços de solicitação para incluir o serviço em sua instância.
 
 ### Resultados da instalação de serviço
+{: #sd_addingremovingservices-adding-results}
 
 Quando a instalação do serviço for concluída com êxito, você será notificado por e-mail e o serviço será exibido na página **Serviços** da instância com o status **Instalado**.
 
 ## Procedimento para visualizar serviços para instâncias do Cloud Foundation
+{: #sd_addingremovingservices-viewing-procedure}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do Cloud Foundation**, clique na instância para a qual você deseja visualizar serviços.
@@ -48,6 +53,7 @@ Quando a instalação do serviço for concluída com êxito, você será notific
 5. Dependendo do serviço visualizado, é possível acessar os consoles de serviço usando as credenciais fornecidas nos detalhes do serviço e gerenciar o serviço por meio deles.
 
 ## Procedimento para remover serviços para instâncias do Cloud Foundation
+{: #sd_addingremovingservices-removing-procedure}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do Cloud Foundation**, clique na instância para a qual você deseja remover serviços.
@@ -56,6 +62,7 @@ Quando a instalação do serviço for concluída com êxito, você será notific
 5. Na janela **Excluir serviços**, revise as considerações ou os avisos, se houver algum. Selecione **Eu entendo** e clique em **Excluir**.
 
 ### Resultados da remoção de serviço
+{: #sd_addingremovingservices-removing-results}
 
 Depois que sua solicitação para remoção do serviço for aceita, o status do serviço mudará para **Removendo**.
 
@@ -64,6 +71,7 @@ Quando a remoção do serviço for concluída com êxito, você será notificado
 Você é faturado até o término do ciclo de faturamento do {{site.data.keyword.cloud_notm}} para os serviços removidos.
 {:note}
 
-### Links relacionados
+## Links relacionados
+{: #sd_addingremovingservices-related}
 
-* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

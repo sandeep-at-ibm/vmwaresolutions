@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # Configurazione iniziale
+{: #vum-init-config}
 
 L'automazione di IC4VS configura il VCSA con un gateway predefinito impostato sul BCR (Backend Customer Router) di {{site.data.keyword.cloud}}. Tuttavia, non esiste una rotta a Internet tramite il BCR. La rotta standard a Internet dall'istanza VMware vCenter Server on {{site.data.keyword.cloud_notm}} avviene tramite l'ESG di gestione. Poiché non è consigliabile modificare la configurazione di VCSA o dell'ESG di gestione, è più opportuno implementare un server proxy sulla sottorete del cliente per abilitare VUM.
 
@@ -40,10 +41,12 @@ Tabella 1. Valori di distribuzione
 | IP BCR | ip bcr | Questo è l'indirizzo IP del BCR (Backend Customer Router) di {{site.data.keyword.cloud_notm}} ed è il gateway per 10.0.0.0/8 e 161.26.0.0/16. Questo indirizzo viene utilizzato in una rotta statica nel server proxy in modo che possa raggiungere il VCSA e il server AD/DNS. |
 
 ## Configurazione di NSX
+{: #vum-init-config-config-nsx}
 
 Le impostazioni NAT e firewall dell'ESG del cliente NSX sono necessarie per abilitare il traffico del server proxy.
 
 ### Firewall
+{: #vum-init-config-firewall}
 
 1. Passa a **Home** > **Networking & Security**.
 2. Seleziona **NSX Edges**, customer-nsx-edge e quindi **Firewall**.
@@ -64,6 +67,7 @@ Tabella 2. Regola del firewall
 Dopo aver fornito i parametri, fai clic su **Publish Changes**.
 
 ### Installazione e configurazione di un server proxy
+{: #vum-init-config-inst-cfg-proxy}
 
 Il seguente processo distribuisce una VM per ospitare CentOS e Squid dalla libreria di contenuti e comprende i seguenti passi. Si presuppone che tu disponga di una VSI di Windows da utilizzare come jumpbox e che utilizzi un Remote Desktop Protocol per connetterti all'interfaccia pubblica della VSI:
 
@@ -72,10 +76,12 @@ Il seguente processo distribuisce una VM per ospitare CentOS e Squid dalla libre
 * Configura la VM proxy, installa CentOS e Squid
 
 ### Download del file ISO CentOS-Minimal
+{: #vum-init-config-downloading-centos}
 
 Utilizzando un browser sul tuo server jump, scarica il file ISO CentOS-Minimal da [CentOS](https://www.centos.org/download/). Nota che {{site.data.keyword.cloud_notm}} mantiene un mirror di diverse distribuzioni Linux diffuse. Questo mirror è disponibile solo sulla rete privata e gli ISO CentOS sono disponibili al seguente indirizzo: `http://mirrors.service.softlayer.com/centos/7/isos/x86_64/`
 
 ### Configurazione di una libreria di contenuti e inserimento del file ISO CentOS
+{: #vum-init-config-config-conent-library}
 
 Crea una libreria di contenuti vCenter locale. La libreria è accessibile solo nell'istanza vCenter Server in cui viene creata. Popola la libreria con i template e gli ISO richiesti per distribuire le VM.
 
@@ -86,6 +92,7 @@ Crea una libreria di contenuti vCenter locale. La libreria è accessibile solo n
 5. Esamina le informazioni nella pagina **Ready to Complete** e fai clic su **Finish**.
 
 ### Configurazione della VM proxy, installazione di CentOS e Squid
+{: #vum-init-config-config-proxy}
 
 Questa attività include le seguenti operazioni:
 
@@ -94,6 +101,7 @@ Questa attività include le seguenti operazioni:
 *	Installa Squid
 
 #### Crea una nuova VM
+{: #vum-init-config-create-new-vm}
 
 Questa attività crea una nuova VM pronta per l'uso come server proxy. Per popolare la configurazione, utilizza le impostazioni indicate nella Tabella 1. Valori di distribuzione.
 
@@ -110,6 +118,7 @@ Questa attività crea una nuova VM pronta per l'uso come server proxy. Per popol
 11.	Esamina le informazioni e fai clic su **Finish**.
 
 #### Installa CentOS
+{: #vum-init-config-install-centos}
 
 Questa attività installa e configura la VM appena creata pronta per l'installazione di Squid
 
@@ -130,6 +139,7 @@ Questa attività installa e configura la VM appena creata pronta per l'installaz
 15.	Al termine dell'installazione, accedi come utente e immetti il comando _ping vmware.com_. Il nome viene risolto in un indirizzo IP e ricevi una risposta. Se non ottieni risposte, verifica gli indirizzi IP, le regole del firewall e le impostazioni NAT.
 
 #### Installa e configura Squid
+{: #vum-init-config-install-cfg-squid}
 
 Squid non ha requisiti hardware minimi, ma la quantità di RAM può variare a seconda degli utenti che accedono a Internet tramite il tuo proxy e degli oggetti che sono memorizzati nella cache. Poiché al server proxy accede solo VUM e la cache non è abilitata, viene configurata solo una piccola VM.
 
@@ -153,6 +163,7 @@ Squid non ha requisiti hardware minimi, ma la quantità di RAM può variare a se
 10.	Per salvare la regola e riavviare il servizio, utilizza il seguente comando: `firewall-cmd –reload`.
 
 ## Configurazione iniziale di VUM
+{: #vum-init-config-init-setup-vum}
 
 Configura VUM per utilizzare il server proxy per l'accesso ai repository su Internet.
 1. Utilizzando il client web vSphere, passa a **Home** > **Update Manager**. Fai clic sul tuo vCenter Server.
@@ -161,7 +172,8 @@ Configura VUM per utilizzare il server proxy per l'accesso ai repository su Inte
 4. Spunta la casella **Use Proxy** e immetti l'_indirizzo IP del server proxy_ e la _porta 3128_, quindi fai clic su **OK**. Lo stato di connettività diventa _Validating_ e poi _Connected_.
 5. Fai clic su **Download Now**. Nel pannello _Recent Tasks_ dovresti visualizzare questa attività completa.
 
-### Link correlati
+## Link correlati
+{: #vum-init-config-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)

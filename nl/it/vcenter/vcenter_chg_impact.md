@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,14 +14,16 @@ lastupdated: "2019-01-23"
 {:faq: data-hd-content-type='faq'}
 
 # Considerazioni sulla modifica delle risorse vCenter Server
+{: #vcenter_chg_impact}
 
 La modifica di utenti, risorse o sottoreti riservati a {{site.data.keyword.vmwaresolutions_full}} può influire sulle operazioni di gestione.
 
 Non modificare le autorizzazioni globali del gruppo **ic4v-vCenter** nella pagina **Utenti e gruppi** sul client web VMware vSphere. Tali modifiche includono la modifica del nome utente, l'eliminazione dell'utente o la modifica della sua password.
-Utilizza l'ID utente host **root**. L'ID utente host **ic4vroot** è stato creato per un utilizzo solo da parte di IBM.
+Utilizza l'ID utente host **root**. L'ID utente host **ic4vroot** è stato creato solo per utilizzo da parte di IBM.
 {:important}
 
 ## ID automazione
+{: #vcenter_chg_impact-automation-id}
 {: faq}
 
 L'ID **automazione** è un account utente che viene utilizzato dalle operazioni automatizzate fornite nella console {{site.data.keyword.vmwaresolutions_short}}.
@@ -29,6 +31,7 @@ L'ID **automazione** è un account utente che viene utilizzato dalle operazioni 
 Gli utenti e le password per le operazioni automatizzate nella console non devono essere modificati perché le operazioni della console che dipendono da quelle credenziali potrebbero non riuscire.
 
 ## Account utente specifici del servizio
+{: #vcenter_chg_impact-service-usr-account}
 
 Ogni servizio crea un account utente interno in vCenter Server. Questo account è necessario affinché le operazioni di gestione associate a un servizio possano connettersi a vCenter Server per eseguire le operazioni sul servizio.
 
@@ -41,10 +44,14 @@ Il `<service_name>` insieme al `<service_uuid>` viene troncato a 20 caratteri.
 {:note}
 
 ## Risorse VMware per le istanze vCenter Server (V1.9 e successive)
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
 
-Per le istanze distribuite nella V1.9 e successive, se l'istanza vCenter Server è nello stato **Pronto per l'utilizzo**, puoi modificare il data center virtuale VMware, il cluster, gli switch, i gruppi di porte e i nomi di archivio dati del cliente dal client web VMware vSphere. Tuttavia, non devi modificare il nome dell'archivio dati di gestione dal suo valore predefinito: **vsanDatastore** per le istanze vSAN e **management-share** per le istanze NFS (Network File System).
+Per le istanze distribuite nella V1.9 e successive, se l'istanza vCenter Server è nello stato **Pronto per l'utilizzo**, puoi modificare il data center virtuale VMware, il cluster, gli switch, i gruppi di porte e i nomi di archivio dati del cliente dal client web VMware vSphere.
+
+Tuttavia, non devi modificare il nome dell'archivio dati di gestione dal suo valore predefinito, cioè **vsanDatastore** per le istanze vSAN e **management-share** per le istanze NFS (Network File System). Inoltre, non devi modificare il nome degli uplink di rete che sono stati creati durante il provisioning.
 
 ## Risorse VMware per le istanze vCenter Server (V1.8 e precedenti)
+{: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
 
 La seguente tabella elenca le operazioni che potrebbero essere interessate se l'amministratore SSO modifica le risorse VMware vCenter Server all'esterno della console {{site.data.keyword.vmwaresolutions_short}}. Se disponibile, verrà fornita anche una soluzione per il recupero.
 
@@ -67,12 +74,13 @@ Tabella 2. Operazioni interessate dall'accesso shell e SSH (locale)
 
 | Tentativo di modifica  | Operazioni interessate  | Severità  | Metodo di recupero  |
 |:------------- |:------------- |:--------------|:--------------|
-| Disabilita l'accesso SSH o shell per vCenter Server o PSC.    | L'accoppiamento di un'istanza primaria e secondaria potrebbe non riuscire.    | Importante    | N/A    |
+| Disabilita l'accesso SSH o shell per vCenter Server o PSC.    | L'accoppiamento di un istanza primaria e secondaria potrebbe non riuscire.    | Importante    | N/A    |
 | Disabilita l'accesso SSH o shell per ESXi.    | L'aggiunta e la rimozione degli host, dei servizi e della memoria di rete per l'istanza potrebbe non riuscire.    | Importante    | N/A    |
 
 Se scegli di disabilitare l'accesso shell o SSH, puoi riabilitarlo temporaneamente prima di eseguire le operazioni indicate.
 
 ## Sottoreti di gestione per le istanze vCenter Server
+{: #vcenter_chg_impact-mgmt-subnets}
 
 Le seguenti informazioni trattano le sottoreti ordinate da {{site.data.keyword.vmwaresolutions_short}} e forniscono opzioni per ordinare sottoreti aggiuntive per uso personale.
 
@@ -88,5 +96,5 @@ Inoltre, a {{site.data.keyword.vmwaresolutions_short}} sono anche riservate le s
 *  Una sottorete portatile pubblica di 16 indirizzi IP sulla VLAN pubblica
 
 Se hai bisogno di utilizzare più sottoreti, puoi ottenere gli indirizzi IP da utilizzare in uno dei seguenti modi:
-*  **Opzione 1 (consigliata)**: utilizza le sovrapposizioni della rete virtuale VMware NSX. Viene fornito un template VXLAN di esempio al momento dell'ordine. Questo template VXLAN può essere utilizzato come punto di partenza per la creazione di SDN (Software-Defined Networking). Per ulteriori informazioni, vedi [Configurazione della rete per utilizzare l'edge NSX gestito dal cliente](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html).
+*  **Opzione 1 (consigliata)**: utilizza le sovrapposizioni della rete virtuale VMware NSX. Viene fornito un template VXLAN di esempio al momento dell'ordine. Questo template VXLAN può essere utilizzato come punto di partenza per la creazione di SDN (Software-Defined Networking). Per ulteriori informazioni, vedi [Configurazione della rete per utilizzare l'edge NSX gestito dal cliente](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config).
 *  **Opzione 2**: ordina le tue proprie sottoreti pubbliche o private portatili per ottenere gli indirizzi IP. Per distinguere le sottoreti che ordini da quelle di gestione, puoi aggiungere delle note a tutte le sottoreti che stai ordinando.

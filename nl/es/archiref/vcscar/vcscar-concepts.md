@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-02-15"
 
 ---
 
 # Conceptos sobre el lenguaje de skateboarding
+{: #vcscar-concepts}
 
 ## Lenguaje de skater
+{: #vcscar-concepts-skater}
 
 Un aspecto clave de Skate Advisor son las conversaciones posibles gracias al chatbot guiado por Watson. En la sección siguiente se detallan las reglas de conversación que definen una interacción humana con el chatbot de Skate Advisor.
 
@@ -20,8 +22,10 @@ El lenguaje de skater es el núcleo del sistema y se utiliza de la forma siguien
 * Clasificación de trucos: almacenar y clasificar un truco en función de la descripción textual del truco. Los trucos que se clasifican de esta forma pueden tener metadatos adjuntos, como referencias de ubicación y vídeos.
 
 ## Elementos del lenguaje
+{: #vcscar-concepts-lang-elem}
 
 ### Elementos principales
+{: #vcscar-concepts-core-elem}
 
 Estos son los elementos principales de lenguaje para crear un truco.
 
@@ -35,6 +39,7 @@ Base | kickflip<br>heelflip<br>hardflip<br>bigspin<br>shuvit<br>impossible
 landing | manual (2 ruedas posteriores)<br>nosemanual (2 ruedas frontales)<br>5-0 (grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
 
 ### Modificadores de elementos
+{: #vcscar-concepts-elem-modifiers}
 
 Los modificadores de elementos son elementos especiales del lenguaje que dan el contexto a determinados aspectos del lenguaje.
 
@@ -46,12 +51,14 @@ Turn Prefix | Frontside<br>backside | Turn Prefix se refiere al sentido de un gi
 Varial | Inward<br>outward |
 
 ## Reglas del lenguaje
+{: #vcscar-concepts-lang-rules}
 
 El siguiente conjunto de reglas construye el lenguaje. Los trucos se dividen en una o varias combinaciones de elementos a los que se hace referencia como "Combo". Existe una diferencia entre el primer Combo y los siguientes Combos: se supone que el sentido (direction) es el mismo que en el Combo base, a menos que se especifique lo contrario.
 
 Para las reglas siguientes, examine los Elementos principales y los Modificadores de elementos como referencia, ya que se utilizan para construir el lenguaje.
 
 ### Conjunto de reglas de trucos
+{: #vcscar-concepts-trick-ruleset}
 
 ```
 base_combo = 'direction \+ \[varial | turn_prefix\] \+ \[rotation\] \+ \[base_trick\]'
@@ -61,6 +68,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
 ```
 
 ### Motor de reglas de trucos
+{: #vcscar-concepts-trick-rule-engine}
 
 El diagrama siguiente es un resumen visual del motor de reglas.
 
@@ -68,6 +76,7 @@ Figura 1. Visión general del lenguaje de skate
 ![Visión general del lenguaje de skate](vcscar-skate-language.svg)
 
 ## Lenguaje de truco de ejemplo
+{: #vcscar-concepts-sample-trick}
 
 A continuación se muestra un ejemplo de una lista de trucos de muestra:
 
@@ -106,9 +115,11 @@ nollie-heelflip to frontside-boardslide
 ```
 
 ## Relevancia
+{: #vcscar-concepts-relevance}
 
 El lenguaje de trucos es la construcción principal que se utiliza para enseñar a Watson a reconocer y a ingerir documentos e información en medios sobre skating y también constituye la base de las conversaciones con el usuario.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vcscar-concepts-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)  
+* [Visión general de vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)  

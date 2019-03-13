@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Eliminazione di istanze vCenter Server in una configurazione multisito
+{: #vc_deletinginstance_multi}
 
 Tieni presente le seguenti considerazioni speciali prima di pianificare l'eliminazione delle istanze vCenter Server che fanno parte di una configurazione multisito.
 
@@ -30,6 +31,7 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 {:note}
 
 ## Procedura per eliminare le istanze vCenter Server in una configurazione multisito
+{: #vc_deletinginstance_multi-procedure}
 
 1. Rimuovi tutti i servizi dall'istanza secondaria di vCenter Server.
 2. Assicurarti che nessun oggetto NSX sia espanso nell'istanza secondaria che vuoi eliminare.
@@ -39,7 +41,8 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 6. Ripeti i passi da 1 a 5 per tutte le istanze vCenter Server secondarie nella tua configurazione multisito.
 7. Dopo aver eliminato tutte le istanze secondarie, puoi anche eliminare l'istanza primaria dalla console {{site.data.keyword.vmwaresolutions_short}}.
 
-### Link correlati
+## Link correlati
+{: #vc_deletinginstance_multi-related}
 
-* [Eliminazione di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)
-* [Ordine, visualizzazione e rimozione dei servizi dalle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Eliminazione di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)
+* [Ordine, visualizzazione e rimozione dei servizi dalle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)

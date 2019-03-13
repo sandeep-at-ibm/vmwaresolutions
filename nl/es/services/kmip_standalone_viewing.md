@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-11"
+lastupdated: "2019-02-15"
 
 ---
 
 # Visualización de instancias de KMIP for VMware on IBM Cloud
+{: #kmip_standalone_viewing}
 
 Utilice este procedimiento para ver las instancias de KMIP for VMware on {{site.data.keyword.cloud}} que ha solicitado e información sobre las mismas.
 
 ## Procedimiento para ver instancias de KMIP for VMware on IBM Cloud
+{: #kmip_standalone_viewing-procedure}
 
 Pulse **Instancias desplegadas** en el panel de navegación izquierdo y desplácese a la tabla **Instancias de KMIP for VMware on {{site.data.keyword.cloud_notm}}** para ver información sobre las instancias que ha solicitado:
 
@@ -35,9 +37,10 @@ Tabla 2. Descripciones de los estados de las instancias de KMIP for VMware on {{
 | Instalada | La instancia está lista para ser utilizada. |
 | Eliminando | La instancia se está suprimiendo. |
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #kmip_standalone_viewing-related}
 
-* [Solicitud de instancias de KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip_standalone_ordering.html)
-* [Adición, visualización y supresión de certificados para instancias de KMIP for VMware on IBM Cloud](kmip_standalone_addingdeletingcert.html)
-* [Supresión de instancias de KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip_standalone_deleting.html)
-* [Sucesos de Activity Tracker](../vmonic/at-events.html)
+* [Solicitud de instancias de KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)
+* [Adición, visualización y supresión de certificados para instancias de KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_addingdeletingcert)
+* [Supresión de instancias de KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
+* [Sucesos de Activity Tracker](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

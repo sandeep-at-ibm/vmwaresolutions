@@ -46,4 +46,4 @@ Todos los componentes deben tener un FQDN y registrarse en DNS antes de cualquie
 ## Enlaces relacionados
 {: #caveonix-step1-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-06"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2018-12-06"
 {:important: .important}
 
 # Modificación o desinstalación de HCX
+{: #hcx-archi-mod-uninstall}
 
 Las instalaciones existentes se pueden actualizar, y es posible eliminar todo o parte de un despliegue de Hybrid Cloud Services.
 
 ##  Eliminación de la extensión de una red de capa 2
+{: #hcx-archi-mod-uninstall-unstretch-layer2}
 
 Es necesario eliminar la extensión de una red de capa 2 antes de eliminar el dispositivo virtual asociado del servicio concentrador de capa 2 o antes de desinstalar Hybrid Cloud Services.
 
@@ -26,10 +28,12 @@ Es necesario eliminar la extensión de una red de capa 2 antes de eliminar el di
 4. Pulse **Aceptar** para confirmar.
 
 ## Desinstalación de dispositivos virtuales HCX
+{: #hcx-archi-mod-uninstall-uninst-hva}
 
 Un dispositivo de servicio se puede desinstalar para preparar la desinstalación de Hybrid Cloud Services o debido a un cambio en la arquitectura de la instalación. Utilice Hybrid Cloud Services para administrar dispositivos, tal como se describe en el siguiente procedimiento.
 
 ### Requisitos previos para desinstalar dispositivos virtuales HCX
+{: #hcx-archi-mod-uninstall-prereq-uninst-hva}
 
 * Cancele o restablezca el tiempo de ejecución de las migraciones que se puedan producir durante la tarea de desinstalación.
 * Compruebe en la consola de tareas del cliente web de vSphere si hay migraciones en ejecución y espere hasta que se hayan completado.
@@ -39,6 +43,7 @@ Nunca suprima dispositivos virtuales desde el inventario de vSphere. Utilice sie
 {:note}
 
 ### Procedimiento para desinstalar dispositivos virtuales HCX
+{: #hcx-archi-mod-uninstall-proc-uninst-hva}
 
 1. En la interfaz del cliente web de vSphere, seleccione el plugin Hybrid Cloud Services en el panel de la izquierda.
 2. En el panel central, pulse el separador **Servicios híbridos**.
@@ -49,6 +54,7 @@ Nunca suprima dispositivos virtuales desde el inventario de vSphere. Utilice sie
 Hybrid Cloud Gateway y cualquier dispositivo virtual de servicio híbrido que utilice Hybrid Cloud Gateway se eliminan tanto de vCenter como de VCF/VCS Hybrid Cloud Services Cloud.
 
 ## Desinstalación de HCX Manager
+{: #hcx-archi-mod-uninstall-unist-hcxm}
 
 El dispositivo HCX Manager se debe desinstalar antes de eliminar la solución HCX desde el centro de datos local. Siga estos pasos para desinstalar la máquina virtual de Hybrid Cloud Services.
 
@@ -62,10 +68,12 @@ Se eliminan todos los dispositivos de servicio virtual. Es posible que se conser
 * MV migradas
 
 ### Qué hacer a continuación
+{: #hcx-archi-mod-uninstall-what-next}
 
 Se puede hacer copia de seguridad o se pueden suprimir manualmente las VM y los registros migrados.
 
 ## Inicio de sesión en el portal de gestión de HCX
+{: #hcx-archi-mod-uninstall-log-hcxmp}
 
 El despliegue de Hybrid Cloud Services se puede administrar desde el portal de gestión mediante una interfaz de usuario basada en navegador.
 
@@ -73,6 +81,7 @@ El despliegue de Hybrid Cloud Services se puede administrar desde el portal de g
 2. La interfaz de usuario de Hybrid Cloud Services se abre en una ventana de navegador web utilizando SSL. Si es necesario, acepte el certificado de seguridad. Se abre la pantalla de inicio de sesión de VMware Hybridity and Networking.
 3. Escriba el nombre de usuario y la contraseña. De forma predeterminada, el nombre de usuario es Admin. La contraseña es el valor que se ha proporcionado al instalar el dispositivo virtual de Hybrid Cloud Services.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #hcx-archi-mod-uninstall-related}
 
-* [Resolución de problemas de HCX on IBM Cloud](hcx-archi-trbl.html)
+* [Resolución de problemas de HCX on IBM Cloud](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-trbl)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Ajout, affichage et suppression de clusters pour des instances Cloud Foundation
+{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
 
 Les serveurs ESXi que vous avez configurés lors de la commande d'une instance sont regroupés dans un cluster par défaut. Le nom du cluster par défaut est le suivant :
 * Pour les instances déployées dans la version 2.1 ou des éditions ultérieures : **MGMT-Cluster-`<subdomain_label>`**
@@ -21,19 +22,23 @@ Les serveurs ESXi que vous avez configurés lors de la commande d'une instance s
 Vous pouvez ajouter vos propres clusters à vos instances VMware Cloud Foundation afin d'étendre la capacité de calcul et de stockage. Au sein d'un cluster, vous pouvez gérer des serveurs ESXi afin d'optimiser l'allocation des ressources et la haute disponibilité. Lorsque vous n'en avez plus besoin, vous pouvez supprimer les clusters que vous avez ajoutés à vos instances.
 
 ## Disponibilité
+{: #sd_addingviewingclusters-availability}
 
 * La fonction d'ajout de cluster est disponible uniquement pour les instances qui ont été déployées dans (ou mises à niveau vers) la version 2.0 et des éditions ultérieures.
 * La fonction de suppression de cluster est disponible uniquement pour les instances qui ont été déployées dans (ou mises à niveau vers) la version 2.3 et des éditions ultérieures.  
 
 ## Ajout de clusters à des instances Cloud Foundation
+{: #sd_addingviewingclusters-adding}
 
 Vous pouvez ajouter jusqu'à cinq clusters à une instance Cloud Foundation.
 
 ### Paramètres système
+{: #sd_addingviewingclusters-adding-sys-settings}
 
 Lorsque vous ajoutez un cluster à une instance Cloud Foundation, vous devez spécifier les paramètres énumérés ci-après.
 
 #### Nom de cluster
+{: #sd_addingviewingclusters-adding-cluster-name}
 
 Le nom du cluster qui doit respecter les règles suivantes :
 * Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
@@ -42,6 +47,7 @@ Le nom du cluster qui doit respecter les règles suivantes :
 * Le nom de cluster doit être unique au sein de l'instance Cloud Foundation.
 
 #### Emplacement de centre de données
+{: #sd_addingviewingclusters-adding-dc-location}
 
 L'{{site.data.keyword.CloudDataCent}} du cluster est, par défaut, l'{{site.data.keyword.CloudDataCent_notm}} de l'instance Cloud Foundation. Vous pouvez déployer le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui de l'instance déployée, sous réserve que la latence du réseau entre les deux {{site.data.keyword.CloudDataCents_notm}} soit inférieure à 150 ms. Pour vérifier la latence du réseau, utilisez un outil tel que [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
@@ -50,10 +56,12 @@ Les centres de données dont vous disposez dépendent de la configuration de ser
 Si vous déployez le cluster dans un autre centre de données ou pod, au moins trois VLAN supplémentaires sont commandés pour une utilisation avec les serveurs {{site.data.keyword.baremetal_short}} commandés.
 
 ### Paramètres de serveur bare metal
+{: #sd_addingviewingclusters-adding-bare-metal-settings}
 
 Vous pouvez choisir l'option **Skylake** ou **Broadwell**.
 
 #### Skylake
+{: #sd_addingviewingclusters-adding-skylake}
 
 Avec l'option **Skylake**, un certain nombre d'options est disponible pour les paramètres **Modèle UC** et **Mémoire RAM**. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
 
@@ -66,6 +74,7 @@ Tableau 1. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short
 | Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
 
 #### Broadwell
+{: #sd_addingviewingclusters-adding-broadwell}
 
 Avec l'option **Broadwell**, un certain nombre d'options est disponible pour les paramètres **Modèle UC** et **Mémoire RAM**. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
 
@@ -80,6 +89,7 @@ Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 
 ### Paramètres de stockage vSAN
+{: #sd_addingviewingclusters-adding-vsan-storage-settings}
 
 Pour les configurations de serveur bare metal **Skylake** et **Broadwell**, vous pouvez personnaliser le stockage vSAN en spécifiant les paramètres suivants :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
@@ -92,12 +102,14 @@ Pour les configurations de serveur bare metal **Skylake** et **Broadwell**, vous
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 
 ### Paramètres d'octroi de licence
+{: #sd_addingviewingclusters-adding-licensing-settings}
 
 Vous pouvez spécifier les options d'octroi de licence pour les composants VMware du cluster, y compris VMware vSphere et VMware vSAN :
 * Si vous êtes un partenaire commercial IBM, la licence vSphere (Enterprise Plus edition) et la licence vSAN sont incluses et achetées en votre nom. Vous devez néanmoins spécifier l'édition pour la licence vSAN.
 * Si vous n'êtes pas un partenaire commercial IBM, vous pouvez utiliser les licences VMware fournies par IBM pour les composants en sélectionnant **Inclure avec achat** ou vous pouvez fournir votre propre licence (mode BYOL) en sélectionnant **Je fournirai** et en entrant vos propres clés de licence.
 
 ## Procédure d'ajout de clusters à des instances Cloud Foundation
+{: #sd_addingviewingclusters-adding-procedure}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance à laquelle vous souhaitez ajouter des clusters.
@@ -124,6 +136,7 @@ Vous pouvez spécifier les options d'octroi de licence pour les composants VMwar
    4. Cliquez sur **Mettre à disposition**.
 
 ### Résultats après l'ajout de clusters à des instances Cloud Foundation
+{: #sd_addingviewingclusters-adding-results}
 
 1. Le déploiement du cluster démarre automatiquement et le cluster prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page récapitulative de l'instance.
 2. Lorsque le cluster est prêt pour utilisation, il prend le statut **Prêt à l'emploi**. Le cluster qui vient d'être ajouté est activé avec vSphere haute disponibilité et vSphere Distributed Resource Scheduler (DRS).
@@ -132,6 +145,7 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
 {:important}
 
 ## Procédure d'affichage des clusters dans les instances Cloud Foundation
+{: #sd_addingviewingclusters-viewing-procedure}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur une instance dont vous voulez afficher les clusters.
@@ -187,10 +201,12 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
        * **Capacité disponible (UC)** : capacité actuellement disponible pour la licence.
 
 ## Suppression de clusters des instances Cloud Foundation
+{: #sd_addingviewingclusters-deleting}
 
 Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous n'en avez plus besoin.
 
 ### Avant de supprimer
+{: #sd_addingviewingclusters-deleting-prereq}
 
 * Cette procédure permet de supprimer des clusters des instances qui sont déployées dans la version 2.3 ou des éditions ultérieures.
 * Pour les clusters déployés dans des instances V2.2 ou antérieures, vous devez mettre à niveau l'instance vers la version 2.3 pour pouvoir supprimer les clusters que vous lui avez ajoutés.
@@ -200,6 +216,7 @@ Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous 
 * Le cluster par défaut ne peut pas être supprimé.
 
 ## Procédure de suppression de clusters des instances Cloud Foundation
+{: #sd_addingviewingclusters-deleting-procedure}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance dont vous souhaitez supprimer des clusters.
@@ -210,7 +227,8 @@ Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous 
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, localisez le cluster que vous souhaitez supprimer et cliquez sur l'icône **Supprimer**.
 4. Confirmez que vous avez terminé la migration de machines virtuelles vers d'autres clusters, le cas échéant, et que vous souhaitez supprimer le cluster.
 
-### Liens connexes
+## Liens connexes
+{: #sd_addingviewingclusters-related}
 
-* [Affichage d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Affichage d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)

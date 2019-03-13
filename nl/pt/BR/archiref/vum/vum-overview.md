@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-18"
 
 ---
 
 # Visão geral do VMware Update Manager
+{: #vum-overview}
 
 O VMware Update Manager (VUM) usa um processo multiestágio para fazer upgrade de objetos do vSphere e aplicar correções ou extensões. Esse processo permite um procedimento de atualização suave com um mínimo de tempo de inatividade do sistema. Antes de olharmos para este processo, precisamos entender os termos a seguir:
 * **Objeto de inventário** - um objeto no vCenter, como uma máquina virtual, dispositivos virtuais ou um host vSphere ESXi.
@@ -44,7 +45,9 @@ A interface do cliente VUM fornece duas visualizações principais:
 *	Visualização de Administração
 *	Visualização de conformidade
 
-##	Visualização de Administração
+## Visualização de Administração
+{: #vum-overview-admin-view}
+
 A visualização de administração é acessada navegando para **Página inicial** > **Update Manager** e selecionando o endereço IP da instância do Update Manager. Na visualização Administração, é possível executar as tarefas a seguir:
 *	Configure as configurações do Update Manager
 *	Criar e gerenciar linhas de base e grupos de linhas de base
@@ -53,7 +56,9 @@ A visualização de administração é acessada navegando para **Página inicial
 *	Revisar e Verificar Notificações
 *	Importar imagens do ESXi
 
-##	Visualização de conformidade
+## Visualização de conformidade
+{: #vum-overview-compliance-view}
+
 A visualização de conformidade de um objeto de inventário selecionado é acessada navegando para **Hosts e clusters** ou **MVs e modelos** e clicando na **guia Update Manager**. Na visualização Conformidade do Update Manager, é possível executar as tarefas a seguir:
 *	Visualizar a conformidade e varrer os resultados para cada objeto de inventário selecionado
 *	Anexar e remover linhas de base e grupos de linhas de base de um objeto de inventário selecionado
@@ -61,7 +66,8 @@ A visualização de conformidade de um objeto de inventário selecionado é aces
 *	Correções de estágio ou extensões para hosts
 *	Remediar um objeto de inventário selecionado
 
-### Links relacionados
+## Links relacionados
+{: #vum-overview-related}
 
 * [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)

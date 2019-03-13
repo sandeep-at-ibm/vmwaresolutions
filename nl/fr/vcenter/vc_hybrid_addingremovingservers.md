@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_addingremovingservers}
 
 Vous pouvez accroître ou réduire la capacité de votre instance VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle en fonction de vos besoins métier, en ajoutant ou en retirant des serveurs ESXi.
 
@@ -21,11 +22,13 @@ Etant donné que votre cluster initial dispose d'un stockage vSAN, l'ajout d'un 
 ## Ajout de serveurs ESXi à des instances vCenter Server avec Hybridity Bundle
 
 ### Avant d'ajouter des serveurs ESXi
+{: #vc_hybrid_addingremovingservers-adding-prereq}
 
 * N'ajoutez pas de serveurs ESXi depuis le client Web VMware vSphere. Les modifications apportées sur le client Web vSphere ne sont pas synchronisées avec la console {{site.data.keyword.vmwaresolutions_short}}.
 * Le stockage vSAN nécessite au moins 4 serveurs ESXi.
 
 ## Procédure d'ajout de serveurs ESXi
+{: #vc_hybrid_addingremovingservers-adding-procedure}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous désirez accroître la capacité.
@@ -35,14 +38,17 @@ Etant donné que votre cluster initial dispose d'un stockage vSAN, l'ajout d'un 
 6. Dans la fenêtre **Ajouter un serveur**, indiquez le nombre de serveurs que vous voulez ajouter, cliquez sur le lien correspondant au prix pour passer en revue le coût estimé, puis cliquez sur **Ajouter**.
 
 ### Résultats après l'ajout de serveurs ESXi
+{: #vc_hybrid_addingremovingservers-adding-results}
 
 1. Un bref délai peut être observé sur la console entre le passage du statut **Prêt à l'emploi** au statut **Modification en cours**. Laissez l'opération s'exécuter complètement avant d'apporter d'autres modifications à l'instance.
 2. Un courrier électronique vous avise que votre demande d'ajout de serveurs ESXi est en cours de traitement. Sur la console, le statut du cluster qui est associé aux serveurs ESXi passe à **Modification en cours**.
 3. Si vous ne voyez pas les nouveaux serveurs ESXi ajoutés dans la liste du cluster, consultez vos courriers électroniques ou les notifications de la console pour obtenir plus de détails sur la cause de l'échec.
 
 ## Retrait de serveurs ESXi sur des instances vCenter Server avec Hybridity Bundle
+{: #vc_hybrid_addingremovingservers-removing}
 
 ### Avant de retirer des serveurs ESXi
+{: #vc_hybrid_addingremovingservers-removing-prereq}
 
 * Ne retirez pas de serveurs ESXi depuis le client Web VMware vSphere. Les modifications apportées sur le client Web vSphere ne sont pas synchronisées avec la console {{site.data.keyword.vmwaresolutions_short}}.
 * Le stockage vSAN nécessite au moins 4 serveurs ESXi.
@@ -51,6 +57,7 @@ Etant donné que votre cluster initial dispose d'un stockage vSAN, l'ajout d'un 
 * Lorsque vous retirez des serveurs ESXi, ceux-ci sont placés en mode maintenance, puis toutes les machines virtuelles qui s'exécutent sur les serveurs sont migrées avant d'être retirées de vCenter Server. Pour un contrôle maximum de la réimplantation des machines virtuelles, il est recommandé de placer les serveurs ESXi à supprimer en mode maintenance et de migrer manuellement les machines virtuelles qui s'exécutent sur ces serveur à l'aide du client Web VMware vSphere. Ensuite, supprimez les serveurs ESXi à l'aide de la console {{site.data.keyword.vmwaresolutions_short}}.
 
 ## Procédure de retrait de serveurs ESXi
+{: #vc_hybrid_addingremovingservers-removing-procedure}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le panneau **Instances vCenter Server**, cliquez sur l'instance dont vous désirez réduire la capacité.
@@ -59,6 +66,7 @@ Etant donné que votre cluster initial dispose d'un stockage vSAN, l'ajout d'un 
 5. Dans le tableau **Serveurs ESXi**, sélectionnez les serveurs que vous désirez supprimer et cliquez sur **Retirer**.
 
 ### Conséquences du retrait de serveurs ESXi
+{: #vc_hybrid_addingremovingservers-removing-results}
 
 1. Un bref délai peut être observé sur la console entre le passage du statut **Prêt à l'emploi** au statut **Modification en cours**. Laissez l'opération s'exécuter complètement avant d'apporter d'autres modifications à l'instance.
 2. Un courrier électronique vous avise que votre demande de retrait de serveurs ESXi est en cours de traitement. Sur la console, le statut du cluster associé aux serveurs ESXi passe à **Modification en cours**.
@@ -67,10 +75,11 @@ Etant donné que votre cluster initial dispose d'un stockage vSAN, l'ajout d'un 
    Les serveurs ESXi retirés vous sont facturés jusqu'à échéance du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}.
    {:note}
 
-### Liens connexes
+## Liens connexes
+{: #vc_hybrid_addingremovingservers-related}
 
-* [Nomenclature de vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
-* [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
-* [Ajout, affichage et suppression de clusters pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
+* [Nomenclature de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
+* [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
+* [Ajout, affichage et suppression de clusters pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
 * [Activer le mode maintenance sur un hôte](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

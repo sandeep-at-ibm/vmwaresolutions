@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,19 +14,21 @@ lastupdated: "2018-12-11"
 {:faq: data-hd-content-type='faq'}
 
 # Preguntas frecuentes sobre servidores ESXi
+{: #faq_esxi}
 
 Encuentre las respuestas a preguntas frecuentes sobre los servidores ESXi que se gestionan en la consola de {{site.data.keyword.vmwaresolutions_full}}.
 
 ## ¿Cuántos servidores ESXi puedo añadir a mi instancia?
-{: faq}
+{: #faq_esxi-instance}
 
 * Para instancias de vCenter Server, puede expandir el clúster predeterminado para tener hasta 51 servidores ESXi. Cada uno de los clústeres no predeterminados se puede ampliar hasta tener un máximo de 59 servidores ESXi. Dado que puede añadir hasta 10 clústeres a una instancia, cada instancia desplegada puede tener un máximo de 51 + 9x59 = 582 servidores ESXi en todos los clústeres.
 * Para instancias de Cloud Foundation, la configuración estándar tiene cuatro servidores ESXi. Puede añadir un máximo de 28 servidores (hasta un total de 32 servidores). Para las instancias de Cloud Foundation de una configuración de varios sitios, puede tener un máximo de 128 servidores ESXi en todas las instancias.
 
-  Si la configuración de Cloud Foundation requiere un despliegue de varios sitios con más de 128 servidores ESXi, [póngase en contacto con el equipo de soporte de IBM](trbl_support.html) para obtener ayuda.
+  Si la configuración de Cloud Foundation requiere un despliegue de varios sitios con más de 128 servidores ESXi, [póngase en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) para obtener ayuda.
   {:note}
 
 ## ¿Cuántos servidores ESXi puedo añadir a un clúster?
+{: #faq_esxi-cluster}
 
 Para instancias desplegadas en V2.2 y posteriores, puede añadir un máximo de 51 servidores ESXi a un clúster inicial y un máximo de 59 servidores ESXi a clústeres añadidos.
 
@@ -43,6 +45,7 @@ Para instancias desplegadas en V2.1 o anteriores, debe habilitar el soporte de v
 4. Abra un tíquet de IBM Support para indicar que ha aplicado los cambios de vSAN manualmente completando los pasos 1 al 3. En el tíquet, solicite que la instancia actualizada esté habilitada para servidores ESXi más allá de 32.
 
 ## ¿Puedo cambiar las direcciones IP y los nombres de los servidores ESXi?
+{: #faq_esxi-change-name-ip}
 
 Los nombres de servidor de ESXi y las direcciones IP no se pueden cambiar porque están registrados para la resolución de DNS de Windows. Los cambios podrían dar lugar a errores durante el despliegue o a errores en funciones de vCenter Server.
 
@@ -50,6 +53,7 @@ No utilice la característica **Renombrar dispositivo** en la interfaz de usuari
 {:note}
 
 ## ¿Puedo inhabilitar el acceso raíz de mis servidores ESXi?
+{: #faq_esxi-disable-root}
 
 Se recomienda mantener el acceso raíz habilitado en los servidores ESXi; de lo contrario podrían producirse anomalías en las funciones de {{site.data.keyword.vmwaresolutions_short}}.
 
@@ -58,16 +62,18 @@ Si es necesario, puede inhabilitar el acceso raíz después de que los servidore
 Debe volver a habilitar el acceso raíz para las operaciones de automatización posteriores, por ejemplo al añadir o eliminar comparticiones de archivos o al instalar servicios adicionales, como por ejemplo Zerto on {{site.data.keyword.cloud_notm}}.
 
 ## ¿Puedo añadir rutas estáticas en mis servidores ESXi para montar el almacenamiento de otras ubicaciones?
+{: #faq_esxi-static-routes}
 
 Puede añadir rutas estáticas para el almacenamiento, pero debe hacerlo con extrema precaución. De lo contrario, se podrían desmontar las comparticiones existentes.
 
 No se da soporte a la adición de rutas estáticas para vMotion. Los cambios en la configuración de subred de vMotion podrían provocar anomalías en las funciones de {{site.data.keyword.vmwaresolutions_short}}.
 {:note}
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #faq_esxi-related}
 
-* [Ampliación y reducción de la capacidad para instancias de vCenter Server](../vcenter/vc_addingremovingservers.html)
-* [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](../sddc/sd_addingremovingservers.html)
-* [Adición, visualización y supresión de clústeres para instancias de vCenter Server](../vcenter/vc_addingviewingclusters.html)
-* [Adición, visualización y supresión de clústeres para instancias de Cloud Foundation](../sddc/sd_addingviewingclusters.html)
-* [Cómo ponerse en contacto con el equipo de soporte de IBM](trbl_support.html)
+* [Ampliación y reducción de la capacidad para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Adición, visualización y supresión de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Adición, visualización y supresión de clústeres para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

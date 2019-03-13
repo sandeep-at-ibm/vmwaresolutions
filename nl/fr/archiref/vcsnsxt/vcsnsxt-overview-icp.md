@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Private
+{: #vcsnsxt-overview-icp}
 
 {{site.data.keyword.icpfull_notm}} est une plateforme applicative pour le développement et la gestion d'applications conteneurisées. Il s'agit d'un environnement intégré qui inclut l'orchestrateur de conteneurs Kubernetes, un registre d'images privé, une console de gestion, ainsi que des infrastructures préfabriquées de surveillance et une interface graphique à partir de laquelle vous pouvez déployer, gérer, surveiller et mettre à l'échelle vos applications de façon centralisée.
 
@@ -21,6 +22,7 @@ lastupdated: "2019-01-23"
 -	**Surveillance et journalisation robustes avec la pile ELK** - {{site.data.keyword.cloud_notm}} Private utilise Elasticsearch, Logstash, Filebeat et Heapster pour la collecte, le stockage et l'interrogation des journaux et des métriques. Ce processus de surveillance et de journalisation fournit un magasin centralisé pour tous les journaux et métriques, de meilleures performances, ainsi qu'une stabilité accrue lorsque vous accédez à et analysez des journaux et métriques.
 
 ## Composants IBM Cloud Private
+{: #vcsnsxt-overview-icp-comp}
 
 Un cluster {{site.data.keyword.cloud_notm}} Private comporte quatre classes de noeuds : amorçage, maître, worker et proxy. Vous pouvez éventuellement spécifier des noeuds de gestion, Vulnerability Advisor et etcd dans votre cluster.
 -	**Noeud d'amorçage** - Un noeud d'amorçage est utilisé pour exécuter l'installation, la configuration, la mise à l'échelle du noeud et les mises à jour de cluster.
@@ -32,12 +34,14 @@ Un cluster {{site.data.keyword.cloud_notm}} Private comporte quatre classes de n
 -	Noeud **etcd** - Un noeud etcd est un noeud facultatif, utilisé pour l'exécution du magasin de valeurs de clé distribuées etcd.
 
 ## Mise en réseau IBM Cloud Private
+{: #vcsnsxt-overview-icp-networking}
 
 La gestion de réseau {{site.data.keyword.icpfull_notm}} est facilitée par l'utilisation de Calico.
 Calico utilise la couche 3 ou la couche réseau du modèle Open System Interconnection (OSI). Calico utilise le protocole BGP (Border Gateway Protocol) pour créer des tables de routage qui facilitent la communication entre les noeuds worker.
 
-Pour plus d'informations sur la mise en réseau Calico, voir [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-iks.html).
+Pour plus d'informations sur la mise en réseau Calico, voir [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks).
 
-### Liens connexes
+## Liens connexes
+{: #vcsnsxt-overview-icp-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

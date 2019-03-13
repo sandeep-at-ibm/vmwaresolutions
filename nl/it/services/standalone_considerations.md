@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Considerazioni sulle istanze VMware HCX on IBM Cloud in loco
+{: #standalone_considerations}
 
 Esamina le seguenti considerazioni prima di installare o eliminare le istanze HCX on {{site.data.keyword.cloud}} che hai ordinato per l'utilizzo in loco.
 
@@ -20,17 +21,20 @@ Un'istanza vCenter Server con HCX on {{site.data.keyword.cloud_notm}} è limitat
 {:note}
 
 ## Considerazioni sull'istallazione delle istanze HCX on IBM Cloud in loco
+{: #standalone_considerations-install}
 
-I componenti di HCX on {{site.data.keyword.cloud_notm}} devono essere installati sia su {{site.data.keyword.cloud_notm}} che nel tuo ambiente vSphere in loco. Si consiglia di installare il servizio HCX on {{site.data.keyword.cloud_notm}} nella tua istanza vCenter Server with Hybridity Bundle su {{site.data.keyword.cloud_notm}} prima di installare l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco. Per ulteriori informazioni, vedi [Considerazioni su HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_considerations.html).
+I componenti di HCX on {{site.data.keyword.cloud_notm}} devono essere installati sia su {{site.data.keyword.cloud_notm}} che nel tuo ambiente vSphere in loco. Si consiglia di installare il servizio HCX on {{site.data.keyword.cloud_notm}} nella tua istanza vCenter Server with Hybridity Bundle su {{site.data.keyword.cloud_notm}} prima di installare l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco. Per ulteriori informazioni, vedi [Considerazioni su HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview).
 
 ### Requisiti sugli indirizzi IP
+{: #standalone_considerations-IP}
 
 Per la piena funzionalità di HCX, hai bisogno di almeno cinque indirizzi IP privati a cui devi concedere l'accesso a Internet.
 
 ### Processo di distribuzione per le istanze HCX on IBM Cloud in loco
+{: #standalone_considerations-deploy}
 
 Per una corretta installazione dell'istanza HCX on {{site.data.keyword.cloud_notm}} in loco, devi completare le seguenti attività:
-1. Nella console {{site.data.keyword.vmwaresolutions_short}}, ordina l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco. Per ulteriori informazioni, vedi [Ordine di istanze VMware HCX on IBM Cloud in loco](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html).
+1. Nella console {{site.data.keyword.vmwaresolutions_short}}, ordina l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco. Per ulteriori informazioni, vedi [Ordine di istanze VMware HCX on IBM Cloud in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances).
 2. Nella **Console cloud HCX**, completa la seguente procedura:
     1. Fai clic sulla scheda **Amministrazione**.
     2. Nella scheda **Aggiornamenti di sistema**, fai clic su **RICHIEDI LINK DI DOWNLOAD**.
@@ -39,7 +43,7 @@ Per una corretta installazione dell'istanza HCX on {{site.data.keyword.cloud_not
 
    Devi distribuire l'HCX Manager in loco su una rete privata e consentirgli l'accesso alla rete pubblica. Puoi utilizzare un gateway Edge NSX, Vyatta o simile per consentire l'accesso Internet all'HCX Manager in loco. Se i gateway utilizzati per l'accesso alla rete privata e l'accesso alla rete pubblica sono diversi, si consiglia di utilizzare il gateway predefinito per consentire l'accesso alla rete pubblica e la **Console di gestione HCX Manager** per creare una rotta statica per l'accesso alla rete privata.
    {:note}
-4. Una volta completata la distribuzione di HCX Manager, utilizza la **Console di gestione HCX Manager** per attivare HCX Manager in loco. Per ottenere una chiave di attivazione per l'HCX Manager in loco, ordina un'istanza HCX on {{site.data.keyword.cloud_notm}} in loco nella console {{site.data.keyword.vmwaresolutions_short}}. Per ulteriori informazioni, vedi [Ordine di istanze HCX in loco](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html).
+4. Una volta completata la distribuzione di HCX Manager, utilizza la **Console di gestione HCX Manager** per attivare HCX Manager in loco. Per ottenere una chiave di attivazione per l'HCX Manager in loco, ordina un'istanza HCX on {{site.data.keyword.cloud_notm}} in loco nella console {{site.data.keyword.vmwaresolutions_short}}. Per ulteriori informazioni, vedi [Ordine di istanze HCX in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances).
 5. Se hai utilizzato un certificato SSL autofirmato al momento dell'ordine del servizio HCX on {{site.data.keyword.cloud_notm}}, devi importare il certificato nell'HCX Manager in loco completando la seguente procedura:
     1. Nella **Console di gestione HCX Manager** in loco, fai clic sulla scheda **Amministrazione**.
     2. Dal riquadro di navigazione a sinistra, fai clic su **Certificato CA attendibile** e quindi su **IMPORTA** sulla destra.
@@ -51,6 +55,7 @@ Hai completato la configurazione di base dell'HCX Manager in loco. Puoi proceder
 Per ulteriori informazioni, vedi [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx).
 
 ## Considerazioni sull'eliminazione delle istanze HCX on IBM Cloud in loco
+{: #considerations-when-deleting-on-premises-hcx-instances}
 
 Esamina le seguenti considerazioni prima di eliminare un'istanza HCX on {{site.data.keyword.cloud_notm}} che è stata ordinata per l'utilizzo in loco:
 1. Nel client web VMware vSphere, vai all'interfaccia utente HCX e controlla i seguenti elementi:
@@ -62,12 +67,13 @@ Esamina le seguenti considerazioni prima di eliminare un'istanza HCX on {{site.d
    {:important}
 2. Nella console {{site.data.keyword.vmwaresolutions_short}}, elimina l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco che era stata ordinata per ottenere la chiave di attivazione per l'HCX Manager in loco. Assicurati che l'istanza eliminata non sia più disponibile nella console prima di procedere al passo successivo.
 
-   Per ulteriori informazioni, vedi [Eliminazione di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html).
+   Per ulteriori informazioni, vedi [Eliminazione di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances).
 3. Nel client web VMware vSphere, elimina l'HCX Manager in loco.
 
-### Link correlati
+## Link correlati
+{: #standalone_considerations-related}
 
-* [Visualizzazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
-* [Glossario dei termini HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [Visualizzazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_viewingserviceinstances)
+* [Glossario dei termini HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
-* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

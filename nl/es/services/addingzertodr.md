@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-11-07"
 {:important: .important}
 
 # Visión general de Zerto on IBM Cloud
+{: #addingzertodr}
 
 El servicio Zerto on {{site.data.keyword.cloud}} integra las funciones de réplica y de recuperación en caso de desastre en las ofertas de despliegue para proteger y recuperar datos en el entorno virtual de VMware en {{site.data.keyword.cloud_notm}}.
 
@@ -20,6 +21,7 @@ Este servicio sólo está disponible para las instancias desplegadas en la versi
 {:note}
 
 ## Especificaciones técnicas para Zerto on IBM Cloud
+{: #technical-considerations-for-zerto-on-ibm-cloud}
 
 Los siguientes componentes se solicitan y se incluyen en el servicio Zerto on {{site.data.keyword.cloud_notm}}.
 
@@ -27,6 +29,7 @@ Los componentes de Zerto Virtual Replication Appliance (VRA) se despliegan solo 
 {:note}
 
 ### VSI
+{: #addingzertodr-specs-vsi}
 
 * Una VSI (instancia de servicio virtual) - Zerto Virtual Manager
 * 2 núcleos x 2.0 GHz
@@ -34,23 +37,27 @@ Los componentes de Zerto Virtual Replication Appliance (VRA) se despliegan solo 
 * Windows Server 2016 Standard Edition (64 bits)
 
 ### Almacenamiento
+{: #addingzertodr-specs-storage}
 
 Disco de 100 GB (SAN)
 
 ### Redes
+{: #addingzertodr-specs-network}
 
 * Una dirección IP privada primaria
 * Enlace ascendente de red privada de 1 Gbps
 
 ### Licencias y tarifas
+{: #addingzertodr-specs-licenses}
 
 Licencia de Zerto Replication V6.0 actualización 3
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #addingzertodr-related}
 
-* [Acerca de {{site.data.keyword.vmwaresolutions_short}}](../vmonic/prod_overview.html)
-* [Solicitud de Zerto on {{site.data.keyword.cloud_notm}}](zerto_ordering.html)
-* [Gestión de Zerto on {{site.data.keyword.cloud_notm}}](managingzertodr.html)
-* [Solicitud de servicios gestionados para Zerto on {{site.data.keyword.cloud_notm}}](managing_zerto_services.html)
+* [Acerca de {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-prod_overview)
+* [Solicitud de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering)
+* [Gestión de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
+* [Solicitud de servicios gestionados para Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [Sitio web zerto.com](https://www.zerto.com){:new_window}
 * [Documentación técnica de Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

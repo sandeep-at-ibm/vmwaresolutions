@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2019-02-15"
 
 ---
 
 # Redondance des machines virtuelles vSAN
+{: #vum-vsan-redundancy}
 
 Lorsque vous placez un hôte vSphere ESXi en mode maintenance sur un cluster vSAN, vous devez sélectionner un mode d'évacuation des données. La sélection de ce mode peut avoir un impact sur les machines virtuelles et les dispositifs virtuels qui utilisent le magasin de données vSAN :
 * L'option de **migration des données complète** évacue toutes les données de l'hôte et les supprime sur les autres hôtes vSphere ESXi figurant dans le cluster vSAN. Ce mode d'évacuation entraîne le transfert de la plus grande quantité de données et consomme la plupart du temps et des ressources. Tous les composants dans le stockage local de l'hôte sélectionné sont migrés ailleurs dans le cluster. Lorsque l'hôte passe en mode maintenance, toutes les machines virtuelles et les dispositifs virtuels ont accès à leurs composants de stockage et restent conformes aux règles de stockage qui leur sont affectées. L'évacuation des données complète peut prendre beaucoup de temps et peut rallonger la durée de la fenêtre de maintenance d'une mise à niveau.
@@ -21,7 +22,8 @@ Cette section crée une nouvelle règle de stockage de machine virtuelle qui per
 
 2. Patientez jusqu'à ce que la synchronisation de vSAN soit terminée avant d'effectuer des actions de résolution. Le statut d'achèvement peut être vérifié en accédant à la page **vSAN Virtual Objects Monitoring** du cluster et en examinant le statut **Completion Status**.
 
-### Liens connexes
+## Liens connexes
+{: #vum-vsan-redundancy-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

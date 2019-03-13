@@ -21,10 +21,10 @@ Lorsque vous sélectionnez l'option {{site.data.keyword.vmwaresolutions_full}} R
 
 L'installation de RiskForesight comprend les principales étapes suivantes :
 
-1. [Planification initiale et pré-requis](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step1.html) – Connaissance et sélection d'une option de déploiement, configuration du DNS pour fournir une résolution FQDN/IP pour les composants d'application.
-2. [Déploiement de machine virtuelle](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step2.html) – Déploiement de machines virtuelles à partir d'un modèle OVF. La machine virtuelle a tous les composants d'applications installés sur elle.
-3. [Configuration d'application](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step3.html) – Exécution du script de configuration Caveonix qui configure le composant d'application sur chacune des machines virtuelles.
-4. [Paramétrage d'application](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step4.html) – Configuration du fournisseur de service et d'un locataire ou d'une organisation pour que l'application devienne accessible aux utilisateurs.
+1. [Planification initiale et pré-requis](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step1) – Connaissance et sélection d'une option de déploiement, configuration du DNS pour fournir une résolution FQDN/IP pour les composants d'application.
+2. [Déploiement de machine virtuelle](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step2) – Déploiement de machines virtuelles à partir d'un modèle OVF. La machine virtuelle a tous les composants d'applications installés sur elle.
+3. [Configuration d'application](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step3) – Exécution du script de configuration Caveonix qui configure le composant d'application sur chacune des machines virtuelles.
+4. [Paramétrage d'application](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step4) – Configuration du fournisseur de service et d'un locataire ou d'une organisation pour que l'application devienne accessible aux utilisateurs.
 
 L'installation automatique met à disposition une machine virtuelle et configure tous les composants d'application sur cette machine virtuelle.
 {:note}
@@ -36,9 +36,9 @@ Le dimensionnement du déploiement est calculé à l'aide de volumes suivants.
 
 Tableau 1. Volumes
 
-|Type de données |Volume |
+|Type de données	|Volume |
 |---|---|
-|Analyses par jour |1 |
+|Analyses par jour	|1 |
 |Données d'analyse (Mo)	|20 |
 |Données de journal (Mo)	|500 |
 |Données de flux (Mo)	|200 |
@@ -54,9 +54,9 @@ Le nombre de machines virtuelle de mise à l'échelle est calculé en fonction d
 
 Tableau 2. Mise à l'échelle des paramètres de machine virtuelle
 
-|Nombre d'actifs |100	|500	|5000 |
+|Nombre d'actifs	|100	|500	|5000 |
 |---|---|---|---|
-|Jours de données |30	|30	|30 |
+|Jours de données	|30	|30	|30 |
 |Stockage d'index total/actif/jour (Mo)	|1532	|1532	|1532 |
 |Stockage d'index total/actif/30 jours (TB)	|4	|22	|219 |
 |Données prises en charge par noeud de mise à l'échelle (To)	|0	|8	|8 |
@@ -66,11 +66,11 @@ La quantité de stockage requise est calculée comme suit :
 
 Tableau 3. Paramètres de stockage
 
-|Nombre d'actifs |100	|500	|5000 |
+|Nombre d'actifs	|100	|500	|5000 |
 |---|---|---|---|
 |Conservation des données à long terme (mois)	|8	|8	|8 |
 |Stockage total par actif par jour (Mo)	|766	|766	|766 |
-|Jours de données |30	|30	|30 |
+|Jours de données	|30	|30	|30 |
 |Conservation des données à court terme (To)	|7	|33	|329 |
 |Conservation des données à long terme (To)	|18	|88	|877 |
 
@@ -92,16 +92,16 @@ Tableau 4. Récapitulatif
 
 |Modèle de déploiement	|“tout en un”	|Partiellement distribué	|Entièrement distribué |
 |---|---|---|---|
-|Nombre d'actifs |100	|500	|5000 |
+|Nombre d'actifs	|100	|500	|5000 |
 |Données en ligne générées en 30 jours (To)	|4	|22	|219 |
 |Conservation de données quasi en ligne (90 jours) (To)	|7	|33	|329 |
 |Conservation des données hors ligne (8 mois) (To)	|18	|88	|877 |
 |Conservation du stockage de données total (1 an) (To)	|28	|142	|1425 |
-|Machines virtuelles de base |1	|1	|20 |
-|Machines virtuelles de mise à l'échelle |0	|3	|28 |
-|Nombre total de machines virtuelles |1	|4	|48 |
+|Machines virtuelles de base	|1	|1	|20 |
+|Machines virtuelles de mise à l'échelle	|0	|3	|28 |
+|Nombre total de machines virtuelles	|1	|4	|48 |
 
 ## Liens connexes
 {: #caveonix-deploy-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

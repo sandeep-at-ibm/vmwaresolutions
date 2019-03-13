@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Concepts du langage relatif au skateboard
+{: #vcscar-concepts}
 
 ## Langage du skateur
+{: #vcscar-concepts-skater}
 
 Un aspect essentiel de Skate Advisor concerne les conversations possibles avec l'agent conversationnel piloté par Watson. La section ci-après décrit en détail les règles de conversation qui définissent une interaction humaine avec l'agent conversationnel skate Advisor.
 
@@ -20,8 +22,10 @@ Le langage du skateur est au coeur du système et il est utilisé de la façon s
 * Classification de trick : stocker et classifier un trick en fonction de son descriptif. Les tricks classifiés de cette façon peuvent se voir associer des métadonnées, telles que des références de lieu et de vidéo.
 
 ## Eléments de langage
+{: #vcscar-concepts-lang-elem}
 
 ### Eléments principaux
+{: #vcscar-concepts-core-elem}
 
 Les éléments de langage principaux pour construire un trick sont les suivants :
 
@@ -35,6 +39,7 @@ Base | kickflip<br>heelflip<br>hardflip<br>bigspin<br>shuvit<br>impossible
 Landing | manual (truck arrière)<br>nosemanual (truck avant)<br>5-0 (grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
 
 ### Modificateurs d'élément
+{: #vcscar-concepts-elem-modifiers}
 
 Les modificateurs d'élément sont des éléments de langage spéciaux qui apportent du contexte à certains aspects du langage.
 
@@ -46,12 +51,14 @@ Turn Prefix | Frontside<br>backside | Turn Prefix fait référence au sens d'un 
 Varial | vers l'intérieur<br>vers l'extérieur |
 
 ## Règles de langage
+{: #vcscar-concepts-lang-rules}
 
 Le jeu de règles ci-après construit le langage. Les tricks sont divisés en une ou plusieurs combinaisons d'éléments appelées "Combo". Il y a une différence entre la première combo et les combo suivantes dans la mesure où l'on part du principe que le sens est le même que dans la combo de base sauf indication contraire.
 
 Pour les règles suivantes, voir les sections relatives aux éléments principaux et modificateurs d'élément car ceux-ci sont utilisés pour construire le langage.
 
 ### Jeu de règles pour les tricks
+{: #vcscar-concepts-trick-ruleset}
 
 ```
 base_combo = 'direction \+ \[varial | turn_prefix\] \+ \[rotation\] \+ \[base_trick\]'
@@ -61,6 +68,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
 ```
 
 ### Moteur de règles pour les tricks
+{: #vcscar-concepts-trick-rule-engine}
 
 Le diagramme ci-après est un récapitulatif graphique du moteur de règles.
 
@@ -68,6 +76,7 @@ Figure 1. Présentation du langage relatif au skate
 ![Présentation du langage relatif au skate](vcscar-skate-language.svg)
 
 ## Exemple de langage associé aux tricks
+{: #vcscar-concepts-sample-trick}
 
 Liste d'exemples de tricks :
 
@@ -106,9 +115,11 @@ nollie-heelflip to frontside-boardslide
 ```
 
 ## Langage de pertinence
+{: #vcscar-concepts-relevance}
 
 Le langage associé aux tricks est l'élément essentiel utilisé pour entraîner Watson à reconnaître et ingérer des documents et des éléments multimédia relatifs au skate et également pour former la base des conversations avec l'utilisateur.
 
-### Liens connexes
+## Liens connexes
+{: #vcscar-concepts-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)  
+* [Présentation de vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)  

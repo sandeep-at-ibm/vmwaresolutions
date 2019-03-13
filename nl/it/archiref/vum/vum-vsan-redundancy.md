@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # Ridondanza vSAN della macchina virtuale
+{: #vum-vsan-redundancy}
 
 Quando metti un host vSphere ESXi in modalità di manutenzione su un cluster vSAN, ti viene richiesto di selezionare una modalità di rimozione dei dati. La selezione della modalità può avere un impatto sulle macchine e sui dispositivi virtuali che utilizzano l'archivio dati vSAN:
 * Una **migrazione completa dei dati** rimuove tutti i dati dall'host e li trasferisce agli altri host vSphere ESXi nel cluster vSAN. Questa modalità di rimozione comporta la maggiore quantità di trasferimento dati e consuma più tempo e risorse. Tutti i componenti presenti sull'archiviazione locale dell'host selezionato vengono migrati altrove nel cluster. Quando l'host entra in modalità di manutenzione, tutte le macchine e i dispositivi virtuali hanno accesso ai loro componenti di archiviazione e sono ancora conformi alle politiche di archiviazione assegnate. La rimozione completa dei dati può richiedere molto tempo e prolungare la durata della finestra di manutenzione per un aggiornamento.
@@ -21,7 +22,8 @@ Questa sezione crea una nuova politica di archiviazione della VM che consente di
 
 2. Attendi che vSAN abbia completato la sincronizzazione prima di iniziare qualsiasi azione di correzione. Lo stato di completamento può essere verificato passando alla **pagina vSAN Virtual Objects monitoring** per il cluster ed esaminando il **Completion Status**.
 
-### Link correlati
+## Link correlati
+{: #vum-vsan-redundancy-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)

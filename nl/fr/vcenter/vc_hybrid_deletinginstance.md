@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Suppression des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_deletinginstance}
 
 Pour libérer les composants que vous avez commandés dans le cadre d'une instance VMware vCenter Server with Hybridity Bundle, supprimez celle-ci.
 
@@ -30,6 +31,7 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 {:note}
 
 ## Procédure de suppression d'instances dans la page Instances déployées
+{: #vc_hybrid_deletinginstance-procedure1}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, recherchez l'instance à supprimer.
@@ -40,6 +42,7 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
 ## Procédure de suppression d'instances dans la page des détails de l'instance
+{: #vc_hybrid_deletinginstance-procedure2}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance à supprimer.
@@ -49,10 +52,11 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
    1. Cliquez à nouveau sur l'icône de menu déroulant dynamique en regard de **Console vCenter**, puis cliquez sur **Supprimer une instance**.
    2. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.
 
-### Liens connexes
+## Liens connexes
+{: #vc_hybrid_deletinginstance-related}
 
-* [Suppression d'instances vCenter Server with Hybridity Bundle dans une configuration multisite](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance_multi.html)
-* [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Suppression d'instances vCenter Server with Hybridity Bundle dans une configuration multisite](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance_multi)
+* [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

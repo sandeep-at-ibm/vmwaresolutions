@@ -23,4 +23,4 @@ La suppression de HCX suppose que les réseaux étendus ne sont plus utilisés. 
 ## Liens connexes
 {: #vcshcx-removal-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Présentation de vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

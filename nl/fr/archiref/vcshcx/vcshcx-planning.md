@@ -17,14 +17,15 @@ Alors que les projets de migration des systèmes d'information prennent généra
 ## Eviter la paralysie d'analyse
 {: #vcshcx-planning-avoiding}
 
-La plupart des obstacles et du temps nécessaire à la migration d'une machine virtuelle ou d'un groupe de machines virtuelles sont dus à la nécessité de modifier certaines parties de l'environnement d'application, à la conception de ces changements et à la programmation des temps d'arrêt nécessaires pour effectuer ces changements. Une fois ces changements apportés, la migration devient difficile à annuler, ce qui accentue la paralysie de l'analyse. Essayer de saisir tous les aspects de la migration, de coordonner les différentes équipes et de changer les principaux intervenants dans les délais requis pour finaliser le plan peut retarder ou contraindre la réalisation du projet. 
+La plupart des obstacles et du temps nécessaire à la migration d'une machine virtuelle ou d'un groupe de machines virtuelles sont dus à la nécessité de modifier certaines parties de l'environnement d'application, à la conception de ces changements et à la programmation des temps d'arrêt nécessaires pour effectuer ces changements. Une fois ces changements apportés, la migration devient difficile à annuler, ce qui accentue la paralysie de l'analyse. Essayer de saisir tous les aspects de la migration, de coordonner les différentes équipes et de changer les principaux intervenants dans les délais requis pour finaliser le plan peut retarder ou contraindre la réalisation du projet.
 
 HCX permet la migration croisée d'instances vSphere d'une machine virtuelle ou d'un groupe de machines virtuelles qui représentent une application composite partielle ou complète, sans aucune modification de l'application. Pour cette raison, abandonner une migration signifie déplacer les machines virtuelles vers l'arrière ou redéployer les réseaux. Cela élimine la nécessité d'une grande partie de la planification de la migration et permet un certain parallélisme dans le processus de planification. Après avoir sélectionné les applications à déplacer et créé une conception de réseau de haut niveau, les applications peuvent commencer la migration avec une configuration minimale sur l'instance de cloud pendant que la connectivité et la conception finales du réseau sont élaborées.
 
 ## Réseaux étendus
 {: #vcshcx-planning-stretched-net}
 
-Les composants d'extension du réseau de la flotte HCX sont très stables. Chez un client particulier ayant plus de 20 VLANs répartis dans le {{site.data.keyword.cloud}} sur un réseau WAN de 1 Gbit/s partagé avec d'autres tunnels de trafic et de migration HCX, il n'y a aucun problème applicatif attribué au réseau. Les liaisons réseau ont une durée de vie supérieure à 6 mois de cette façon.
+Les composants d'extension du réseau de la flotte HCX sont très stables. Chez un client particulier ayant plus de 20 VLANs répartis dans le {{site.data.keyword.cloud}} sur un réseau WAN de 1 Gbit/s partagé avec d'autres tunnels de trafic et de migration HCX, il n'y a aucun problème applicatif attribué au réseau.
+Les liaisons réseau ont une durée de vie supérieure à 6 mois de cette façon.
 D'autres réseaux étendus ont été ajoutés et supprimés sans problème.
 Le choix d'un {{site.data.keyword.CloudDataCent_notm}} à proximité immédiate (latence < 6 ms pour ce client particulier) joue également un rôle dans la stabilité réseau d'un réseau étendu. Laisser les réseaux étendus à long terme ne devrait pas être un facteur négatif dans votre conception étant donné que vous disposez d'une bande passante suffisante et d'une latence suffisamment faible pour vos applications.
 
@@ -64,7 +65,7 @@ Les tests pré-implémentation consistent à effectuer une migration HCX avec la
 A ce stade, la migration des machines virtuelles commence avec les vagues prévues de machines virtuelles moins critiques. Le développement, les tests, etc., utilisent la connectivité Internet pour la migration et le trafic L2 étendu.
 
 
-## Début de la conception et de l'implantation du réseau cloud 
+## Début de la conception et de l'implantation du réseau cloud
 {: #vcshcx-planning-cloud-net-begins}
 
 Pendant que les migrations se poursuivent, les conceptions de réseau côté cloud sont finalisées et implémentées dans l'instance vSphere côté cloud.
@@ -72,7 +73,7 @@ Pendant que les migrations se poursuivent, les conceptions de réseau côté clo
 ## Autres considérations relatives à la connectivité du réseau
 {: #vcshcx-planning-connect-considerations}
 
-Pendant que les migrations se poursuivent, la connectivité du réseau WAN privé est commandée, car il faut généralement de quelques semaines à quelques mois pour établir une connexion avec le fournisseur de cloud.  Une fois la connectivité réseau privée terminée, HCX peut être configuré pour utiliser à la fois la liaison réseau privée dédiée et Internet pour la migration et le trafic L2 étendu.
+Pendant que les migrations se poursuivent, la connectivité du réseau WAN privé est commandée, car il faut généralement de quelques semaines à quelques mois pour établir une connexion avec le fournisseur de cloud. Une fois la connectivité réseau privée terminée, HCX peut être configuré pour utiliser à la fois la liaison réseau privée dédiée et Internet pour la migration et le trafic L2 étendu.
 
 ## Serveurs physiques
 {: #vcshcx-planning-physical-servers}
@@ -119,4 +120,4 @@ La connexion sur le réseau privé {{site.data.keyword.cloud_notm}} peut être s
 ## Liens connexes
 {: #vcshcx-planning-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

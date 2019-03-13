@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,8 +13,9 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Configurando sua rede para usar o NSX ESG gerenciado pelo cliente com suas MVs
+{: #vc_esg_config}
 
-Configure a rede para suas máquinas virtuais para que você possa aproveitar o VMware NSX Edge Services Gateway (ESG) que é implementado em suas instâncias do VMware vCenter Server. Para obter mais informações sobre as medidas de segurança em vigor para ajudar a minimizar o risco de segurança, consulte [Os serviços de gerenciamento do NSX Edge representam um risco de segurança?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+Configure a rede para suas máquinas virtuais para que você possa aproveitar o VMware NSX Edge Services Gateway (ESG) que é implementado em suas instâncias do VMware vCenter Server. Para obter mais informações sobre as medidas de segurança em vigor para ajudar a minimizar o risco de segurança, consulte [Os serviços de gerenciamento do NSX Edge representam um risco de segurança?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX é uma plataforma de virtualização de rede que permite a virtualização de redes isoladas e fornece vários serviços de rede,
 como comutadores, roteamento e firewalls. Para obter mais informações sobre NSX, veja [Visão geral de NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
@@ -31,9 +32,10 @@ comutador lógico de carga de trabalho até um endereço IP público nas regras 
   A borda NXS não é implementada para instâncias que são apenas privadas.
   {:note}
 
-* Se você instalou o serviço Veeam on {{site.data.keyword.cloud_notm}}, o NSX Manager será configurado para fazer um backup diário das configurações do NSX. Para obter mais informações, veja [Considerações ao instalar o Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud).
+* Se você instalou o serviço Veeam on {{site.data.keyword.cloud_notm}}, o NSX Manager será configurado para fazer um backup diário das configurações do NSX. Para obter mais informações, veja [Considerações ao instalar o Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud).
 
 ## Procedimento para configurar as definições de rede para suas MVs
+{: #vc_esg_config-procedure-config-networking}
 
 Para aproveitar o NSX para suas MVs de carga de trabalho, deve-se definir várias configurações concluindo as etapas a seguir quando você cria suas MVs:
 
@@ -57,6 +59,7 @@ Para aproveitar o NSX para suas MVs de carga de trabalho, deve-se definir vária
 3. Designe o gateway padrão da MV como `192.168.10.1`. Este é o endereço IP do NSX DLR no mesmo comutador lógico das MVs de carga de trabalho.
 
 ## Procedimento para ativar a regra SNAT
+{: #vc_esg_config-procedure-enable-snat-rule}
 
 Se você quiser que suas MVs de carga de trabalho tenham acesso de saída para a Internet, deverá ativar a regra SNAT (Source Network Address Translation) associada. Ativar a regra SNAT permite que o acesso à Internet de suas MVs seja convertido em um único endereço IP público. Conclua as seguintes etapas no VMware vSphere Web Client:
 
@@ -68,6 +71,7 @@ Se você quiser que suas MVs de carga de trabalho tenham acesso de saída para a
 Para obter mais informações sobre as regras NAT do NSX Edge, veja [Gerenciando regras NAT](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 
 ## Procedimento para identificar detalhes de sub-redes do cliente
+{: #vc_esg_config-procedure-identify-customer-subnets-details}
 
 O limite **customer-nsx-edge** destina-se ao seu próprio uso, então, você pode modificá-lo para definir mais regras NAT para o tráfego de entrada ou de saída. Essas regras devem usar apenas os endereços IP nas sub-redes públicas ou privadas do cliente que são ordenadas em seu nome.
 
@@ -83,12 +87,13 @@ Além disso, é possível localizar mais detalhes sobre as sub-redes do cliente 
 2. Clique no menu de filtro e, no campo Sub-rede, insira o identificador como visto na descrição do limite **customer-nsx-edge** na guia **Resumo** no VMware vSphere Web Client.
 3. Revise as notas que são mostradas para os endereços IP. Essas notas identificam quais das sub-redes e endereços IP são ordenados e usados durante a configuração inicial.
 
-   **Aviso:** não use os endereços IP que são ordenados e usados durante a configuração inicial. No entanto, é possível usar outros endereços IP nessas
+   Não use os endereços IP que são pedidos e usados durante a configuração inicial. No entanto, é possível usar outros endereços IP nessas
    sub-redes de acordo com os seus requisitos. Para configurar regras adicionais de conversão de endereço de rede, veja [Gerenciando regras NAT](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
    {:important}
 
-### Links relacionados
+## Links relacionados
+{: #vc_esg_config-related}
 
 * [Resolução de problemas](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
-* [Perguntas Mais Frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Perguntas Mais Frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Gateway de Serviços de Edge NSX](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

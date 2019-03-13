@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-iks}
 
 ## Visão geral do IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-iks-ovw}
 
 O {{site.data.keyword.containerlong_notm}} fornece uma plataforma isolada e segura para gerenciar contêineres. Essa plataforma é móvel, extensível e com capacidade de recuperação automática se ocorrer um failover.
 
@@ -35,10 +37,12 @@ O modelo de rede do Kubernetes estabelece três requisitos fundamentais:
 * O IP que um próprio contêiner vê é o mesmo IP que outros veem.
 
 ### Espaços de Tabelas
+{: #vcsnsxt-overview-iks-namespaces}
 
 Os namespaces são um aspecto fundamental de redes de contêineres. Os namespaces são um recurso do kernel do Linux que particiona os recursos do kernel de modo que um conjunto de processos veja um conjunto de recursos, enquanto outro conjunto de processos vê um conjunto diferente de recursos. Os recursos incluem pontos de montagem, processIDs, pilha de rede, IPC e IDs do usuário. Cada namespace tem um conjunto privado de endereços IP, sua própria tabela de roteamento, listagem de soquetes, tabela de rastreamento de conexão, firewall e outros recursos relacionados à rede.
 
 ### Container Network Interface
+{: #vcsnsxt-overview-iks-container-network-interfaces}
 
 O Kubernetes usa o Container Network Interface (CNI) como sua solução de rede orientada por plug-in. Ele consiste em uma especificação e bibliotecas para gravar plug-ins para configurar interfaces de rede em contêineres do Linux. A especificação CNI é leve, pois ela lida somente com a conectividade de rede de contêineres e a coleta de lixo de recursos depois que os contêineres são excluídos.
 
@@ -73,6 +77,7 @@ Há três opções para o tráfego norte-sul no {{site.data.keyword.containerlon
     - Um {{site.data.keyword.cloud_notm}} Virtual Router Appliance pode ser implementado como um gateway VPN para se conectar com segurança a uma rede externa. O tráfego de rede pública ou privada pode ser roteado por meio do VRA. O VRA cria um túnel IPSec criptografado para o gateway VPN remoto.
 
 ## Componentes do IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-iks-components}
 
 Os nós do trabalhador são gerenciados por um nó principal do Kubernetes que controla e monitora centralmente todos os recursos do Kubernetes no cluster. Quando um Desenvolvedor implementa os recursos para um contêiner, o nó principal decide em qual nó do trabalhador implementar esses recursos, levando em conta os requisitos de implementação e a capacidade disponível no cluster. Os nós principais e do trabalhador se comunicam entre si por meio de certificados TLS seguros e uma conexão openVPN por meio da rede pública do {{site.data.keyword.cloud_notm}}. Os Desenvolvedores acessam o kube-apiserver, hospedado no Nó Principal via Internet.
 
@@ -91,6 +96,7 @@ De uma perspectiva de rede, os componentes a seguir são implementados no nó do
 -	**Balanceador de carga** - um balanceador de carga é um serviço do Kubernetes que pode ser usado para equilibrar cargas de trabalho de tráfego de rede em seu cluster, encaminhando solicitações públicas ou privadas para um app. Esse componente opera no espaço de nomes ibm-system.
 
 ### Calico
+{: #vcsnsxt-overview-iks-calico}
 
 O {{site.data.keyword.containerlong_notm}}  usa o Calico como seu provedor de rede. O Calico usa uma abordagem de Camada 3 em vez de redes de sobreposição. Por meio dos plug-ins CNI, o Calico integra-se ao Kubernetes para fornecer uma rede em que os usuários usam uma abordagem de uso de uma rede IP pura combinada com o Protocolo de Roteamento de Borda para distribuição de rota.
 
@@ -116,22 +122,27 @@ O diagrama anterior mostra os componentes do Calico a seguir:
 Como a rede do {{site.data.keyword.cloud_notm}} Private encaminha somente os esquemas de endereçamento IP do {{site.data.keyword.cloud_notm}}, o Calico precisa usar o encapsulamento IP-in-IP do tráfego entre cargas de trabalho no {{site.data.keyword.containerlong_notm}} para ocultar os endereços IP de rede de pod. O {{site.data.keyword.containerlong_notm}}  usa o modo de sub-rede cruzada IP-in-IP.
 
 ### Calico no IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-iks-calico-iks}
 
 O Calico é instalado e configurado automaticamente no {{site.data.keyword.containerlong_notm}}. As políticas padrão são criadas para proteger o cluster do Kubernetes, com a opção de criar suas próprias políticas para proteger serviços específicos. O encapsulamento IP-in-IP é configurado automaticamente para encapsular somente pacotes que viajam entre sub-redes e usa o NAT para conexões de saída de seus contêineres. O tráfego de Carga de trabalho para WAN também é ativado automaticamente no {{site.data.keyword.containerlong_notm}}, portanto, nenhuma configuração adicional do Calico é necessária.
 
 #### Escalabilidade de rede com o Calico
+{: #vcsnsxt-overview-iks-net-scalability-calico}
 
 O Calico baseia-se em uma arquitetura de ampliação de escala distribuída que fornece a capacidade de escalar suavemente de um único bloco de notas do Desenvolvedor para grandes implementações corporativas e usa o plano de dados padrão do Linux para entregar desempenho bare metal para cargas de trabalho virtuais.
 
 #### Segurança com Calico
+{: #vcsnsxt-overview-iks-sec-calico}
 
 O Calico usa um conjunto de políticas que controla cada componente do sistema, essas políticas podem ser configuradas para permitir que os serviços e as instâncias de contêiner conversem entre si somente quando necessário. Ele usa endereços IP para identificar instâncias de contêiner e cria políticas com base nesses endereços. A integração de Kubernetes com o Calico é uma infraestrutura ciente e pode escalar políticas de segurança com base em mudanças com infraestrutura.
 
 #### Integração com o Calico
+{: #vcsnsxt-overview-iks-integration-calico}
 
 O Calico fornece uma rede altamente escalável e uma solução de política de rede para conectar pods do Kubernetes com base nos mesmos princípios de rede de IP que a Internet. Ele pode ser implementado sem encapsulamento ou sobreposições para fornecer uma rede de data center de alta escala e alto desempenho. O Calico fornece uma política de segurança de Rede de baixa granularidade, baseada na intenção, para pods do Kubernetes por meio de seu firewall distribuído. O Calico também pode ser executado no modo de cumprimento de política juntamente com outras soluções de rede, como o Flannel, conhecido como canal ou rede GCE nativa.
 
 ## IBM Cloud Kubernetes Service Networking
+{: #vcsnsxt-overview-iks-networking}
 
 Por padrão, o {{site.data.keyword.containerlong_notm}} configura o cluster com acesso a uma VLAN pública e a uma VLAN privada com os itens a seguir.
 - Um endereço IP público para cada nó do trabalhador, que fornece aos nós do trabalhador uma interface de rede pública. Por padrão:
@@ -152,6 +163,7 @@ As sub-redes de IP para os nós e os pods do trabalhador também são provisiona
     - A sub-rede privada primária determina os endereços IP privados que são designados aos nós do trabalhador durante a criação do cluster. Múltiplos clusters na mesma VLAN podem compartilhar uma sub-rede privada primária.
     - A sub-rede privada móvel é ligada a somente um cluster e fornece o cluster com 8 endereços IP privados. Três IPs são reservados para funções de rede. 1 IP é usado pelo ALB do Ingresso privado padrão e 4 IPs podem ser usados para criar serviços de rede do balanceador de carga privado. Os IPs privados móveis são endereços IP fixos permanentes que podem ser usados para acessar serviços de balanceador de carga na Internet.
 
-### Links relacionados
+## Links relacionados
+{: #vcsnsxt-overview-iks-links}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

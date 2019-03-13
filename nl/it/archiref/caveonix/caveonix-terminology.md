@@ -67,4 +67,4 @@ Questo glossario fornisce alcune descrizioni per i termini che non sono associat
 ## Link correlati
 {: #caveonix-terminology-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

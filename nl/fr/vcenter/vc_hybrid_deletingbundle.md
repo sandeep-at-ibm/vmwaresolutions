@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,13 +13,15 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Retrait d'Hybridity Bundle d'une instance vCenter Server
+{: #vc_hybrid_deletingbundle}
 
 Pour retirer la licence Hybridity Bundle de votre instance vCenter Server, vous devez remplacer les clés de licence locative VMware NSX et VMware vSAN par des clés BYOL (Bring Your Own License) dans le client Web VMware vSphere. De plus, vous devez ouvrir un ticket de demande de service pour annuler les frais liés aux licences locatives.
 
-Le fait de rétromigrer votre licence peut provoquer l'échec de votre instance vCenter Server. Vous pouvez choisir de rétromigrer une licence à vos risques et périls, mais avant, examinez attentivement les fonctions qui ne seront plus disponibles à l'issue de cette opération. Pour plus d'informations, voir [Graphique de comparaison des éditions de composant VMware](/docs/services/vmwaresolutions/archiref/solution/appendix.html).
+Le fait de rétromigrer votre licence peut provoquer l'échec de votre instance vCenter Server. Vous pouvez choisir de rétromigrer une licence à vos risques et périls, mais avant, examinez attentivement les fonctions qui ne seront plus disponibles à l'issue de cette opération. Pour plus d'informations, voir [Graphique de comparaison des éditions de composant VMware](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix).
 {:important}
 
 ## Considérations importantes à prendre en compte lorsque vous retirez Hybridity Bundle d'un environnement multisite
+{: #vc_hybrid_deletingbundle-considerations}
 
 Voici les considérations que vous devez prendre en compte avant de retirer Hybridity Bundle d'un environnement multisite :
 
@@ -31,6 +33,7 @@ Lors du retrait de Hybridity Bundle d'un environnement multisite, les licences B
 {:note}
 
 ## Avant de retirer Hybridity Bundle
+{: #vc_hybrid_deletingbundle-prereq}
 
 Vérifiez que les conditions requises suivantes sont respectées avant de retirer Hybridity Bundle :
 
@@ -41,6 +44,7 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
 * Vous pouvez éventuellement appliquer des clés BYOL pour les licences VMware vCenter Server et VMware vSphere Enterprise Plus.
 
 ## Procédure de retrait d'Hybridity Bundle
+{: #vc_hybrid_deletingbundle-procedure}
 
 1. Connectez-vous en tant qu'**Administrateur** au client VMware vSphere Web Client sur lequel vous voulez retirer Hybridity Bundle.
 2. Cliquez sur **Accueil > Administration > Octroi de licence > Licences**.
@@ -106,8 +110,9 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
   Avant d'annuler les frais liés à la licence locative Hybridity Bundle, les équipes chargées du support et des opérations IBM accèdent à la couche de gestion vCenter de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) pour s'assurer que les licences locatives ont été retirées.
   {:note}
 
-### Liens connexes
+## Liens connexes
+{: #vc_hybrid_deletingbundle-related}
 
-* [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

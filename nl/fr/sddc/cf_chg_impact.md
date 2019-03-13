@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-21"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -14,13 +14,16 @@ lastupdated: "2018-01-21"
 {:faq: data-hd-content-type='faq'}
 
 # Remarques relatives à la modification des artefacts Cloud Foundation
+{: #cf_chg_impact}
 
 Modifier des utilisateurs, des ressources ou des sous-réseaux réservés à {{site.data.keyword.vmwaresolutions_full}} peut avoir une incidence sur des opérations de gestion des instances VMware Cloud Foundation.
 
 N'éditez pas les droits globaux du groupe **ic4v-vCenter** sur la page **Utilisateurs et groupes** du client Web VMware vSphere. Les modifications de droits globaux incluent la modification du nom d'utilisateur, la suppression de l'utilisateur ou la modification de son mot de passe.
-Utilisez l'ID utilisateur d'hôte **customerroot** à la place de l'ID utilisateur d'hôte **root**.{:important}
+Utilisez l'ID utilisateur d'hôte **customerroot** à la place de l'ID utilisateur d'hôte **root**.
+{:important}
 
 ## Comptes utilisateur de service
+{: #cf_chg_impact-service-usr-account}
 {: faq}
 
 Chaque service crée un compte utilisateur interne dans vCenter Server. Ce compte est nécessaire pour que les opérations de gestion associées à un service puissent se connecter à vCenter Server afin d'effectuer les opérations sur le service.
@@ -34,6 +37,7 @@ Le `<service_name>` avec `<service_uuid>` tronque à 20 caractères.
 {:note}
 
 ## Ressources VMware pour les instances Cloud Foundation
+{: #cf_chg_impact-vmware-resources}
 
 Le tableau suivant répertorie les opérations susceptibles d'être affectées lorsque vous modifiez des ressources VMware en dehors de la console {{site.data.keyword.vmwaresolutions_short}}. Si une solution de récupération est disponible, elle est également fournie.
 
@@ -60,23 +64,21 @@ Tableau 2. Opérations affectées pour l'accès à SSH et à l'interpréteur de 
 Si vous choisissez de désactiver l'accès à SSH ou à l'interpréteur de commandes, vous devez le réactiver temporairement avant d'effectuer les opérations indiquées.
 
 ## Gestion de sous-réseaux pour les instances Cloud Foundation
+{: #cf_chg_impact-mgmt-subnets}
 
 Les informations suivantes concernent les sous-réseaux commandés par {{site.data.keyword.vmwaresolutions_short}} et indiquent les options de commande de sous-réseaux supplémentaires à votre usage personnel dont vous disposez.
 
 **ATTENTION :** n'utilisez pas ces composants à d'autres fins ; vous risqueriez de compromettre grandement la stabilité de votre environnement.
 
 Avec chaque commande de serveur bare metal {{site.data.keyword.cloud_notm}}, les plages d'adresses IP suivantes sont commandées par défaut :
-
 *  Une plage publique principale de 32 adresses IP
 *  Une plage privée principale de 64 adresses IP
 
 De plus, les sous-réseaux de gestion suivants sont également réservés pour {{site.data.keyword.vmwaresolutions_short}} :
-
 *  Deux sous-réseaux privés portables de 64 adresses IP sur le premier réseau local virtuel : un pour la gestion et l'autre pour le noeud final VTEPS.
 *  Deux sous-réseaux privés portables de 64 adresses IP sur le second réseau local virtuel : un pour vMotion et l'autre pour vSAN.
 *  Un sous-réseau public portable de 16 adresses IP sur le réseau local virtuel public.
 
 Si vous avez besoin de davantage de sous-réseaux, vous pouvez obtenir des adresses IP à utiliser de l'une des manières suivantes :
-
 * **Option 1 (recommandée) :** utilisez les superpositions de réseaux virtuels de VMware NSX. Un exemple de modèle VXLAN est fourni lors de la commande. Ce modèle VXLAN peut être utilisé comme point de départ pour la génération de la mise en réseau définie par logiciel.
 * **Option 2 :** commandez vos propres sous-réseaux portables publics ou privés afin d'obtenir des adresses IP. Pour différentier les sous-réseaux que vous commandez des sous-réseaux de gestion, vous pouvez ajouter des notes aux sous-réseaux commandés.

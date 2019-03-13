@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,14 +13,17 @@ lastupdated: "2018-10-29"
 {:important: .important}
 
 # Diseño de servicios comunes
+{: #design_commonservice}
 
-Los servicios comunes proporcionan los servicios que utilizan otros servicios en la plataforma de gestión de nube. Los servicios comunes de la solución incluyen servicios de identidad y acceso, servicios de nombre de dominio, servicios NTP, servicios SMTP y servicios de autoridad de certificados.
+Los servicios comunes proporcionan los servicios que utilizan otros servicios en la plataforma de gestión de nube. Los servicios comunes de la solución incluyen servicios de identidad y acceso, servicios de nombres de dominio, servicios NTP, servicios SMTP y servicios de autoridad de certificados.
 
 ## Servicios de identidad y acceso
+{: #design_commonservice-identity-access}
 
 En este diseño, Microsoft Active Directory (AD) se utiliza para la gestión de identidades. El diseño despliega una o dos máquinas virtuales de Windows Active Directory como parte de la automatización de despliegue de Cloud Foundation y vCenter Server. vCenter se configura de modo que utilice la autenticación de AD.
 
 ### Microsoft Active Directory
+{: #design_commonservice-msad}
 
 De forma predeterminada, un único VSI de Active Directory se despliega en la infraestructura de {{site.data.keyword.cloud}}. El diseño también proporciona la opción de desplegar dos servidores de Microsoft Active Directory de alta disponibilidad como VM de Windows Server dedicadas en el clúster de gestión.
 
@@ -30,17 +33,20 @@ Es responsable de proporcionar la licencia y activación de Microsoft si elige e
 Active Directory sirve para autenticar los accesos para gestionar solo la instancia de VMware y no para alojar a los usuarios de las cargas de trabajo en las instancias desplegadas. El nombre de dominio raíz del bosque del servidor de Active Directory es igual al nombre de dominio DNS que especifique. Este nombre de dominio se especifica únicamente para la instancia de Cloud Foundation y vCenter Server primaria si se enlazan varias instancias. En el caso de las instancias enlazadas, cada instancia contiene un servidor de Active Directory que se encuentra en el anillo de réplica raíz del grupo. Los archivos de la zona de DNS también se replican en los servidores de Active Directory.
 
 ### Dominio SSO de vSphere
+{: #design_commonservice-vsphere-sso}
 
 El dominio de inicio de sesión único de vSphere (SSO) se utiliza como el mecanismo de autenticación inicial para una única instancia o varias instancias enlazadas. El dominio SSO también sirve para conectar una instancia de VMware o varias instancias enlazadas con el servidor de Microsoft Active Directory. Se aplica la siguiente configuración de SSO:  
 * El dominio de SSO de `vsphere.local` siempre se utiliza
 * Para las instancias de VMware que están enlazadas a una instancia existente, el PSC se une al dominio SSO de la instancia existente
 * El nombre de sitio SSO es igual al nombre de instancia
 
-## Servicios de nombre de dominio (DNS)
+## Servicios de nombres de dominio
+{: #design_commonservice-dns}
 
-DNS en este diseño es solo para los componentes de gestión de nube y de infraestructura.
+Los servicios de nombres de dominio (DNS) en este diseño son solo para los componentes de gestión de nube y de infraestructura.
 
 ### VMware vCenter Server
+{: #design_commonservice-vcenter}
 
 El despliegue de vCenter Server utiliza los servidores desplegados de Active Directory como servidores DNS para la instancia. Todos los componentes desplegados (vCenter, PSC, NSX, y hosts de ESXi) están configurados para apuntar al servidor de Active Directory como su servidor DNS predeterminado. Puede personalizar la configuración de zona de DNS si la configuración no interfiere con la configuración de los componentes desplegados.
 
@@ -53,6 +59,7 @@ Este diseño integra los servicios DNS en los servidores de Active Directory a t
 * Cualquier instancia que se va a integrar en una instancia de destino existente debe utilizar el mismo nombre de dominio que la instancia primaria.
 
 ### VMware Cloud Foundation
+{: #design_commonservice-cf}
 
 El despliegue de Cloud Foundation utiliza la automatización de VMware Cloud Foundation, que utiliza su propio servidor DNS que reside dentro del componente VM de SDDC Manager. Los componentes de Cloud Foundation gestionados por SDDC Manager, incluidos vCenter, PSC, NSX, y hosts de ESXi, están configurados para utilizar la dirección IP de VM de SDDC Manager como su DNS predeterminado por diseño.
 
@@ -70,6 +77,7 @@ Este diseño integra los servicios DNS en los servidores de Active Directory con
 * Cualquier instancia secundaria que se va a integrar en la primera instancia o en la instancia de destino debe utilizar la misma estructura de nombres DNS sobre el subdominio de SDDC Manager.
 
 ## Servicios NTP
+{: #design_commonservice-ntp}
 
 Este diseño utiliza los servidores NTP de la infraestructura de {{site.data.keyword.cloud_notm}}. Todos los componentes desplegados se configuran para utilizar estos servidores NTP. El hecho de tener todos los componentes dentro del diseño utilizando el mismo servidor NTP es crítico para que los certificados y la autenticación de Active Directory funcionen correctamente.
 
@@ -78,13 +86,15 @@ Figura 1. Servicios NTP
 ![Servicios de NTP](commonservice_ntp.svg "En este diseño, todos los componentes de una instancia utilizan el mismo servidor NTP de la infraestructura de {{site.data.keyword.cloud_notm}} mediante el servicio NTP.")
 
 ## Servicio de entidad emisora de certificados
+{: #design_commonservice-cas}
 
 De forma predeterminada, VMware vSphere utiliza certificados TLS que están firmados por VMware Certificate Authority (VMCA), que reside en el dispositivo VMware Platform Services Controller. Estos certificados no son de confianza para los dispositivos de usuario final ni los navegadores. Es una práctica recomendada de seguridad sustituir los certificados de cara al usuario por los certificados firmados por una entidad emisora de certificados de terceros o de empresa (CA). Los certificados para la comunicación de máquina a máquina pueden permanecer como certificados firmados por VMCA; sin embargo, se recomienda seguir las prácticas recomendadas para su organización, que normalmente implican el uso de una CA de empresa identificada.
 
 Puede utilizar los servidores AD de Windows dentro de este diseño para crear certificados que estén firmados por la instancia local. Sin embargo, también puede optar por configurar los servicios de CA si es necesario.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #design_commonservice-related}
 
-* [Diseño de infraestructura física](design_physicalinfrastructure.html)
-* [Diseño de infraestructura virtual](design_virtualinfrastructure.html)
-* [Diseño de gestión de infraestructura](design_infrastructuremgmt.html)
+* [Diseño de infraestructura física](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
+* [Diseño de infraestructura virtual](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
+* [Diseño de gestión de infraestructura](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_infrastructuremgmt)

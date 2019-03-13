@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-04-16"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-04-16"
 {:important: .important}
 
 # Note sulla release per la V2.1
+{: #relnotes_v21}
 
 Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -24,7 +25,7 @@ Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramen
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Per ulteriori informazioni, vedi [Risoluzione delle vulnerabilità Spectre e Meltdown](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
+Per ulteriori informazioni, vedi [Risoluzione delle vulnerabilità Spectre e Meltdown](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre).
 
 ## VMware HCX on IBM Cloud
 
@@ -35,10 +36,10 @@ Puoi ordinare le istanze Cloud Foundation o vCenter Server con il servizio HCX o
 Puoi anche ordinare un'istanza HCX in loco per la licenza e l'attivazione dell'installazione di HCX in loco.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Considerazioni su HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_considerations.html)
-* [Gestione di HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)
-* [Considerazioni sulle istanze HCX in loco](/docs/services/vmwaresolutions/services/standalone_considerations.html)
-* [Ordine di istanze HCX in loco](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
+* [Considerazioni su HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [Gestione di HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
+* [Considerazioni sulle istanze HCX in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations)
+* [Ordine di istanze HCX in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
 
 ## Modello BYOL (Bring Your Own License) più flessibile per VMware Cloud Foundation e vCenter Server
 
@@ -48,21 +49,21 @@ Inoltre, quando aggiungi nodi a un cluster concesso in licenza con la tua chiave
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
 
-* [Aggiunta e visualizzazione di cluster per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
-* [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
-* [Domande frequenti su BYOL](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
+* [Aggiunta e visualizzazione di cluster per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Domande frequenti su BYOL](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## Aggiornamenti dei componenti del servizio Zerto on IBM Cloud
 
 Per il servizio Zerto on {{site.data.keyword.cloud_notm}} distribuito nelle istanze Cloud Foundation e vCenter Server della V2.1 e successive, viene fornito Zerto Virtual Replication 5.5u2. I dispositivi Zerto Virtual Replication Appliance (VRA) vengono ora distribuiti nell'archivio dati di gestione (vSAN o Endurance) anziché nell'archivio dati locale per motivi di prestazioni. Se disponi di VRA esistenti, valuta la possibilità di migrare la loro archiviazione nell'archivio dati di gestione per ottenere prestazioni migliori.
 
-Per ulteriori informazioni, vedi [Panoramica di Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html).
+Per ulteriori informazioni, vedi [Panoramica di Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
 
 ## Aggiornamenti per le istanze VMware vCenter Server
 
 ### Impostazioni di configurazione MTU della rete
 
-Per le release della V2.1 o successive, le nuove istanze vCenter Server vengono ordinate con l'impostazione DVS (Distributed Virtual Switch) pubblico con dimensione MTU di 1500 (predefinito). Per ulteriori informazioni, vedi la sezione _Impostazioni di configurazione MTU della rete_ in [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
+Per le release della V2.1 o successive, le nuove istanze vCenter Server vengono ordinate con l'impostazione DVS (Distributed Virtual Switch) pubblico con dimensione MTU di 1500 (predefinito). Per ulteriori informazioni, vedi la sezione _Impostazioni di configurazione MTU della rete_ in [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 ### Applicazione automatica di patch e aggiornamenti di VMware ESXi agli host
 
@@ -71,17 +72,17 @@ Nelle istanze VMware vCenter Server della V2.0 e precedenti, le patch non veniva
 Nelle istanze della V2.1 e successive, l'automazione applica le patch ai nuovi host ESXi in modo che il livello di patch corrisponda al livello esistente al momento del provisioning dell'istanza iniziale. Sei responsabile dell'applicazione manuale di eventuali patch e aggiornamenti futuri.
 Quando le patch e gli aggiornamenti VMware diventano disponibili nelle release future, l'automazione esegue la scansione degli host ESXi delle tue istanze esistenti e ti invia un promemoria via e-mail per applicare manualmente le patch e gli aggiornamenti più recenti.
 
-Per ulteriori informazioni, vedi [Applicazione di aggiornamenti alle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html).
+Per ulteriori informazioni, vedi [Applicazione di aggiornamenti alle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates).
 
 ### Stime dei prezzi per gli aggiornamenti delle licenze VMware NSX
 
 Puoi ora visualizzare una stima dei prezzi prima di inoltrare un ordine per l'aggiornamento all'edizione Advanced o Enterprise di VMware NSX. Il prezzo si basa sul numero di host ESXi nell'istanza vCenter Server. Questo acquisto modifica solo la chiave di licenza NSX e aggiorna la tua edizione di base di VMware NSX all'edizione Advanced o Enterprise. L'acquisto non aggiorna la versione del software NSX.
 
-Per ulteriori informazioni, vedi [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html).
+Per ulteriori informazioni, vedi [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview).
 
 ### Aumento del numero massimo di server per cluster a più di 32
 
-Per il cluster predefinito in un'istanza, puoi distribuire o espandere fino a 51 server. Per tutti i cluster successivi in un'istanza, puoi distribuire o espandere fino a 59 server. Per ulteriori informazioni, vedi [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html).
+Per il cluster predefinito in un'istanza, puoi distribuire o espandere fino a 51 server. Per tutti i cluster successivi in un'istanza, puoi distribuire o espandere fino a 59 server. Per ulteriori informazioni, vedi [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
 
 Questa funzionalità è disponibile solo per le istanze distribuite nella V2.1 e successive. Le istanze che vengono aggiornate alla V2.1 da release precedenti non dispongono di questa opzione.
 {:note}
@@ -91,17 +92,17 @@ Questa funzionalità è disponibile solo per le istanze distribuite nella V2.1 e
 La configurazione dei server bare metal personalizzata dall'utente ora offre il processore Dual Intel Xeon Gold 6140 con 36 core totali, 2,3 GHz.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 
 ### Configurazioni di singole condivisioni file NFS
 
 Puoi ora configurare le condivisioni file NFS su base individuale. Seleziona la dimensione del file e il livello di prestazioni per ogni singola condivisione file o seleziona la stessa dimensione del file e lo stesso livello di prestazioni per tutte le condivisioni file che devi ordinare.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ## Aggiornamenti e miglioramenti dell'interfaccia utente
 
@@ -115,4 +116,4 @@ Sono stati apportati miglioramenti in tutta l'interfaccia utente:
 
 ## Documentazione nuova e aggiornata
 
-È disponibile una nuova indicazione di developerWorks con istruzioni dettagliate su come collegare l'archiviazione dedicata alle distribuzioni esistenti di {{site.data.keyword.vmwaresolutions_full}} che utilizzano NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi la [procedura per collegare l'archiviazione dedicata a VMware Solutions on IBM Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).
+È disponibile una nuova indicazione di developerWorks con istruzioni dettagliate su come collegare l'archiviazione dedicata alle distribuzioni esistenti di {{site.data.keyword.vmwaresolutions_full}} che utilizzano NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi la [procedura per collegare l'archiviazione dedicata a VMware Solutions on IBM  Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).

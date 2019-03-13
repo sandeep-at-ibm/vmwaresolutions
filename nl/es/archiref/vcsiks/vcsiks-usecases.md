@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-02-18"
 
 ---
 
 # Casos prácticos
+{: #vcsiks-usecases}
 
 ## Migración de cargas de trabajo a IBM Cloud
+{: #vcsiks-usecases-workload-mig}
 
 Acme Skateboards desea extender su VMware SDDC local a una instancia de VMware vCenter Server on {{site.data.keyword.cloud}}. Necesitan mantener su negocio activo y en funcionamiento y reducir al mínimo el tiempo de inactividad. Volver a configurar sus aplicaciones para que se ejecuten en la nube no es la solución óptima.
 
@@ -35,6 +37,7 @@ vCenter Server con el paquete híbrido (Hybridity) crea una interconectividad li
 Con esta solución, Acme Skateboards ha migrado correctamente sus cargas de trabajo locales de VMware a {{site.data.keyword.cloud_notm}}, cumpliendo con los requisitos de tiempo de inactividad bajo y sin tener que volver a configurar las aplicaciones.
 
 ## Despliegue de una arquitectura híbrida
+{: #vcsiks-usecases-hybrid-archi-deployment}
 
 Acme Skateboards desea desplegar una arquitectura híbrida en {{site.data.keyword.cloud_notm}}, consistente en vCenter Server e {{site.data.keyword.icpfull_notm}}, para su proceso de modernización de aplicaciones. Los requisitos son ejecutar sus bases de datos en máquinas virtuales y las aplicaciones y los servicios web en contenedores y utilizar un conjunto común de herramientas para la gestión de red y de la seguridad.
 
@@ -49,6 +52,7 @@ El diagrama siguiente representa {{site.data.keyword.icpfull_notm}} que se ejecu
 
 Mediante la automatización de {{site.data.keyword.cloud_notm}}, Acme Skateboards puede ofrecer una solución híbrida que incluye VMware on {{site.data.keyword.cloud_notm}} para ejecutar sus VM de base de datos e {{site.data.keyword.icpfull_notm}} on VMware en {{site.data.keyword.cloud_notm}} para ejecutar sus apps y servicios web de cara al cliente en contenedores. NSX les ofrece un conjunto común de herramientas de gestión para red y seguridad en la red subyacente.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vcsiks-usecases-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

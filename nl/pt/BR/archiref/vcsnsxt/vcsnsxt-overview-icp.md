@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Private
+{: #vcsnsxt-overview-icp}
 
 O {{site.data.keyword.icpfull_notm}} é uma plataforma de aplicativo para desenvolver e gerenciar aplicativos conteinerizados. É um ambiente integrado que inclui o orquestrador de contêineres Kubernetes, um repositório de imagem privada, um console de gerenciamento, estruturas de monitoramento e uma interface gráfica com o usuário, que fornece um local centralizado por meio do qual é possível implementar, gerenciar, monitorar e escalar seus aplicativos.
 
@@ -21,6 +22,7 @@ O {{site.data.keyword.cloud_notm}} Private tem os recursos a seguir:
 -	**Monitoramento robusto e criação de log com pilha ELK** - o {{site.data.keyword.cloud_notm}} Private usa o Elasticsearch, Logstash, Filebeat e Heapster para a coleta, armazenamento e consulta de logs e métricas. Esse processo de monitoramento e criação de log fornece um armazenamento centralizado para todos os logs e métricas, melhor desempenho e maior estabilidade ao acessar e consultar logs e métricas.
 
 ## Componentes do IBM Cloud Private
+{: #vcsnsxt-overview-icp-comp}
 
 Um cluster do {{site.data.keyword.cloud_notm}} Private tem quatro classes principais de nós: inicialização, principal, trabalhador e proxy. Opcionalmente, é possível especificar o gerenciamento, o Vulnerability Advisor (VA) e os nós etcd em seu cluster.
 -	**Nó de inicialização** - um nó de inicialização é usado para executar instalação, configuração, ajuste de escala do nó e atualizações de cluster.
@@ -32,12 +34,14 @@ Um cluster do {{site.data.keyword.cloud_notm}} Private tem quatro classes princi
 -	Nó **etcd** - um nó etcd é um nó opcional que é usado para executar o armazenamento de valor de chave distribuída etcd.
 
 ## Rede Privada do IBM Cloud
+{: #vcsnsxt-overview-icp-networking}
 
 O gerenciamento de rede do {{site.data.keyword.icpfull_notm}} é facilitado pelo uso do Calico.
 O Calico usa a camada 3 ou a camada de rede do modelo Open System Interconnection (OSI). O Calico usa o Protocolo de Roteamento de Borda (BGP) para construir tabelas de roteamento que facilitam a comunicação entre os nós do agente.
 
-Para obter mais informações sobre a rede Calico, veja [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-iks.html).
+Para obter mais informações sobre a rede Calico, veja [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks).
 
-### Links relacionados
+## Links relacionados
+{: #vcsnsxt-overview-icp-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

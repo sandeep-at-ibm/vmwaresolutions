@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Atualizando o NSX
+{: #vum-updating-nsx}
 
 As informações a seguir são um exemplo do processo de atualização para NSX. Consulte o guia do VMware para obter o processo de atualização para a versão do NSX para a qual você está fazendo upgrade.
 
@@ -17,7 +18,7 @@ Caso seja necessário fazer upgrade do NSX e do vSphere, o VMware recomenda conc
 1. **Fazer upgrade do ESXi** - depois que o upgrade do ESXi for concluído, o host sairá do modo de manutenção, no entanto, não será possível mover MVs conectadas a comutadores lógicos para o host até que a próxima etapa seja concluída.
 2. **Fazer upgrade de VIBs NSX** - depois que os VIBs forem submetidos a upgrade e o host for removido do modo de manutenção, será possível mover MVs conectadas a comutadores lógicos para o host.
 
-O NSX é atualizado por meio da atualização do NSX Manager usando um download em _my.vmware.com_. Portanto, você precisa de uma conta para o download da atualização. Se você estiver consumindo o licenciamento de assinatura do {{site.data.keyword.cloud}} com sua instância do VMware vCenter Server on {{site.data.keyword.cloud_notm}}, não será possível fazer download das atualizações com sua conta **my.vmware.com**. Portanto, será necessário [entrar em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+O NSX é atualizado por meio da atualização do NSX Manager usando um download em _my.vmware.com_. Portanto, você precisa de uma conta para o download da atualização. Se você estiver consumindo o licenciamento de assinatura do {{site.data.keyword.cloud}} com sua instância do VMware vCenter Server on {{site.data.keyword.cloud_notm}}, não será possível fazer download das atualizações com sua conta **my.vmware.com**. Portanto, será necessário [entrar em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 Antes de iniciar o upgrade, verifique as notas do NSX para problemas de upgrade e soluções alternativas. Usando as notas sobre a liberação, verifique se o vCenter atende aos novos requisitos do sistema para NSX.
 
@@ -61,7 +62,8 @@ O fluxo de trabalho é o seguinte:
   - No vSphere Web Client, selecione **Rede e segurança** > **NSX Edges**. Para cada instância do NSX Edge, selecione **Fazer upgrade da versão** no menu **Ações**.
   - Após o upgrade do NSX Edge ser feito com êxito, o Status será Implementado e a coluna Versão exibirá a nova versão do NSX. Se um Edge falhar ao fazer upgrade e não retroceder para a versão antiga, clique no ícone **Reimplementar o NSX Edge** e, em seguida, tente novamente o upgrade.
 
-### Links relacionados
+## Links relacionados
+{: #vum-type-updates-related}
 
 * [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)

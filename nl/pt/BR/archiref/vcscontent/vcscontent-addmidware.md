@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Refatorar e incluir middleware no IBM Cloud Private
+{: #vcscontent-addmidware}
 
 Agora que o Stock Trader está em execução em um contêiner e Jane está satisfeita
 com os microsserviços atuais, ela e Todd trabalham em como aprimorar o
@@ -24,6 +25,7 @@ e os serviços necessários, trazendo um plano de gerenciamento
 mais simples.
 
 ## Opções de conteúdo
+{: #vcscontent-addmidware-content-choices}
 
 O {{site.data.keyword.cloud_notm}} Private tem uma ampla seleção de conteúdo e tanto Todd quanto Jane precisam decidir qual melhor se adéqua às suas necessidades. Como Todd vê no catálogo do {{site.data.keyword.cloud_notm}} Private, a maioria do conteúdo está disponível para ser experimentado, mas algum conteúdo requer compra e download por meio do Passport Advantage.
 
@@ -136,13 +138,16 @@ livre)
 
 Para o Stock Trader, com base na arquitetura de solução de Jane, Todd iniciará com o [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), o [MQ](https://console.cloud.ibm.com/catalog/services/mq) e o [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis).
 
-## Incluir middleware
+## Incluindo middleware
+{: #vcscontent-addmidware-add-middleware}
 
 Para incluir middleware no {{site.data.keyword.cloud_notm}} Private, localize o [gráfico helm](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md) no catálogo, leia o arquivo leia-me e, em seguida, continue a instalação.
 
 Para o Stock Trader, Todd decidiu incluir todo o middleware. As informações a seguir resumem o que Todd teve que executar para cada middleware que ele desejava que Jane usasse.
 
 ### DB2
+{: #vcscontent-addmidware-db2}
+
 Todd inicia com o Db2 porque ele já está usando o Db2 e pode
 dedicar um Db2 baseado em contêiner para cada solução.
 
@@ -188,6 +193,7 @@ Após o Db2 estar em execução, Todd ou Jane precisa criar as tabelas que a
 solução Stock Trader usa.
 
 ### MQ
+{: #vcscontent-addmidware-mq}
 
 Todd e Jane precisam de software de sistema de mensagens e, como eles já usam o MQ,
 essa é uma ótima opção. Além disso, ele pode ser executado em uma área de cobertura pequena, e
@@ -216,7 +222,8 @@ os pods dentro do cluster possam chegar ao middleware.
 Para configurar o MQ para usar o Stock Trader, Todd abre a interface com o usuário
 do MQ Management, que é exatamente a mesma que aquela da versão da MV.
 
-### 	Redis
+### Redis
+{: #vcscontent-addmidware-redis}
 
 Mesmo que o Stock Trader esteja em execução no {{site.data.keyword.cloud_notm}} Private Hosted, eles
 ainda estão preocupados com a latência do serviço de cotação de ações quando tudo o que eles
@@ -233,6 +240,7 @@ A configuração é simples, portanto, Todd insere em qual namespace
 instalá-lo e inicia a instalação.
 
 ## Refatorar o Stock Trader
+{: #vcscontent-addmidware-refactor-stock-trader}
 
 A refatoração do Stock Trader é uma etapa importante para Jane. Enquanto Todd estava ocupado incluindo o
 middleware no {{site.data.keyword.cloud_notm}} Private, Jane refatorou sua solução
@@ -259,7 +267,8 @@ recursos extras por meio de segredos para acessar serviços como o ODM e
 o Watson, juntamente com mais microsserviços como repositórios individuais
 no GitHub.
 
-### Incluir segredos
+### Incluindo segredos
+{: #vcscontent-addmidware-add-secrets}
 
 Agora que Jane refatorou os microsserviços do Stock Trader, ela
 requer uma maneira de abstrair os nomes de serviço, IDs de usuário e senhas, para que seu aplicativo possa captar detalhes exclusivos sobre o serviço quando implementado
@@ -273,13 +282,13 @@ quaisquer outras credenciais sensíveis, tornando seu aplicativo móvel.
 Jane deseja um código base unificado, mesmo quando o Stock Trader pode ser executado em
 mais de uma nuvem. O DB2 secreto na figura a seguir tem detalhes
 de roteamento diferentes, mas no mesmo formato. Quando o microsserviço de portfólio de Jane é implementado, ele procura o parâmetro de terminal secreto do DB2 para se conectar
-à instância apropriada do DB2. Para o aplicativo Stock Trader, não faz diferença se ele está em execução em uma máquina virtual VMware, em um serviço conteinerizado
-ou como um serviço gerenciado por nuvem.
+à instância apropriada do DB2. O aplicativo Stock Trader não se importa se está sendo executado em uma máquina virtual do VMware, um serviço conteinerizado ou como um serviço gerenciado por nuvem.
 
 Figura 2. Stock Trader - serviços de tabela dinâmica
 ![Serviços de tabela dinâmica do Stock Trader](vcscontent-pivot-services.svg)
 
 ## Resultado
+{: #vcscontent-addmidware-result}
 
 Como Jane se comprometeu a refatorar sua solução Stock Trader
 e Todd a instalar o middleware no {{site.data.keyword.cloud_notm}} Private Hosted, toda a solução
@@ -292,6 +301,7 @@ Figura 3. Enriquecimento do Stock Trader
 
 ![Enriquecimento do Stock Trader](vcscontent-enrich.svg)
 
-### Links relacionados
+## Links relacionados
+{: #vcscontent-addmidware-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

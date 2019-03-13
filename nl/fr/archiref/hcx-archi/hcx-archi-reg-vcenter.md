@@ -4,18 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Enregistrement de HCX Manager auprès de vCenter
+{: #hcx-archi-reg-vcenter}
 
-Enregistrez le plug-in Services cloud hybrides dans le client Web VMware vSphere et démarrez le service Services cloud hybrides.
+Enregistrez le plug-in Services cloud hybrides dans VMware vSphere Web Client et démarrez le service de gestion Services cloud hybrides.
 
 ## Avant de commencer
+{: #hcx-archi-reg-vcenter-prereq}
 
 Le dispositif virtuel Services cloud hybrides doit être sous tension pour pouvoir être enregistré.
 
 ## Procédure pour l'enregistrement de HCX Manager auprès de vCenter
+{: #hcx-archi-reg-vcenter-proc-register}
 
 1. Connectez-vous au dispositif virtuel du service Services cloud hybrides.
 2. Cliquez sur la vignette **Manage Settings**.
@@ -32,12 +35,14 @@ Le dispositif virtuel Services cloud hybrides doit être sous tension pour pouvo
     * Pour vCenter Server 6.0u2, `https://ssoip/lookupservice/sdk`
   4. Cliquez sur **OK**. Ne redémarrez pas lorsqu'un message demandant le redémarrage du moteur Web s'affiche.
 4. Cliquez sur l'onglet **Summary** et recherchez la section **Hybridity Management Components**. Arrêtez et redémarrez à la fois le moteur d'applications et le moteur Web.
-5. Pour finaliser l'enregistrement, déconnectez-vous du client web vSphere. Connectez-vous à nouveau pour vérifier que la mise à jour de l'écran a bien été effectuée.
+5. Pour finaliser l'enregistrement, déconnectez-vous du client vSphere Web Client. Connectez-vous à nouveau pour vérifier que la mise à jour de l'écran a bien été effectuée.
 
 ## Résultats
+{: #hcx-archi-reg-vcenter-results}
 
 Notez la présence de l'icône **Hybrid Cloud** et de l'élément de menu **Hybrid Cloud Services** sur la gauche. L'enregistrement des Services cloud hybrides met à jour ces étiquettes. Dans l'inventaire, l'étiquette d'icône devient **Services cloud hybrides**.
 
-### Liens connexes
+## Liens connexes
+{: #hcx-archi-reg-vcenter-related}
 
-* [Installation et configuration de services hybrides](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-hybrid.html)
+* [Installation et configuration de services hybrides](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-hybrid)

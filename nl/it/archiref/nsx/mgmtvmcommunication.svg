@@ -44,10 +44,10 @@
 		</image>
 	</g>
 	<text transform="translate(344.5 172.5)"><tspan class="st2 st6" x="0" y="0">       </tspan><tspan class="st2 st8" x="13.4" y="0">      NSX</tspan><tspan class="st2 st8" x="0" y="13.2">Controller</tspan></text>
-	<text transform="translate(263.5 171)"><tspan class="st2 st8" x="0" y="0">    NSX</tspan><tspan class="st2 st8" x="0" y="13.2">Manager</tspan></text>
+	<text transform="translate(263.5 171)"><tspan class="st2 st8" x="0" y="0">   NSX</tspan><tspan class="st2 st8" x="0" y="13.2">Manager</tspan></text>
 	<text transform="translate(187 156)"><tspan class="st2 st8" x="0" y="0"> Platform</tspan><tspan class="st2 st8" x="0" y="13.2"> Services</tspan><tspan class="st2 st8" x="0" y="26.4">Controller</tspan></text>
 	<text transform="translate(121 154)"><tspan class="st2 st8" x="0" y="0"> Applicazione</tspan><tspan class="st2 st8" x="0" y="13.2">   vCenter</tspan><tspan class="st2 st8" x="0" y="26.4">Server</tspan></text>
-	<text x="29.5" y="180.5"><tspan class="st2 st8" x="29.5" y="180.5" font-family="MyriadPro-Regular" font-size="11px"> VM del servizio </tspan></text>
+	<text x="29.5" y="180.5"><tspan class="st2 st8" x="29.5" y="180.5" font-family="MyriadPro-Regular" font-size="11px">  VM del servizio </tspan></text>
 				<rect class="st9" x="178.5" y="79" width="27.2" height="27.2"/>
 				<linearGradient id="SVGID_1_" x1="196.61" x2="190.02" y1="88.627" y2="112.88" gradientUnits="userSpaceOnUse">
 					<stop stop-color="#CCE0F4" offset="0"/>

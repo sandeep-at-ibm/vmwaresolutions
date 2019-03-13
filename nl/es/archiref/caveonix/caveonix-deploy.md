@@ -21,10 +21,10 @@ Cuando selecciona la opción {{site.data.keyword.vmwaresolutions_full}} RiskFore
 
 La instalación de RiskForesight consta de los siguientes pasos de alto nivel:
 
-1. [Planificación inicial y requisitos previos](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step1.html) – Comprender y seleccionar una opción de despliegue, configurar DNS para proporcionar la resolución de FQDN/IP para los componentes de la aplicación.
-2. [Despliegue de máquina virtual](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step2.html) – Desplegar las máquinas virtuales desde una plantilla de OVF. La máquina virtual ha instalado en ella todos los componentes de la aplicación.
-3. [Configuración de la aplicación](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step3.html) – Ejecutar el script de configuración de Caveonix que configura el componente de la aplicación en cada una de las máquinas virtuales.
-4. [Configuración de la aplicación](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step4.html) – Configurar el proveedor de servicios y un Arrendatario u Organización, para que la aplicación sea accesible para los usuarios.
+1. [Planificación inicial y requisitos previos](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step1) – Comprender y seleccionar una opción de despliegue, configurar DNS para proporcionar la resolución de FQDN/IP para los componentes de la aplicación.
+2. [Despliegue de máquina virtual](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step2) – Desplegar las máquinas virtuales desde una plantilla de OVF. La máquina virtual ha instalado en ella todos los componentes de la aplicación.
+3. [Configuración de la aplicación](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step3) – Ejecutar el script de configuración de Caveonix que configura el componente de la aplicación en cada una de las máquinas virtuales.
+4. [Configuración de la aplicación](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step4) – Configurar el proveedor de servicios y un Arrendatario u Organización, para que la aplicación sea accesible para los usuarios.
 
 La instalación automatizada suministra una máquina virtual y configura todos los componentes de la aplicación en dicha máquina virtual.
 {:note}
@@ -104,4 +104,4 @@ Tabla 4. Resumen
 ## Enlaces relacionados
 {: #caveonix-deploy-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

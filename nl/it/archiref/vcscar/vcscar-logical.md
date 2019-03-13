@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Progettazione logica di Skate Advisor
+{: #vcscar-logical}
 
 Le seguenti informazioni descrivono gli elementi dell'applicazione che formano la progettazione logica del sistema.
 
 ## Componenti di sistema
+{: #vcscar-logical-sys-comp}
 
 Figura 1. Componenti di Skate Advisor
 ![Componenti di Skate Advisor](vcscar-components.svg)
@@ -20,6 +22,7 @@ Figura 1. Componenti di Skate Advisor
 Skate Advisor è costituito principalmente da un chatbot che può accettare il riconoscimento testuale o vocale per interagire con il sistema in modo strutturato.
 
 ## Trick
+{: #vcscar-logical-tricks}
 
 L'elemento dati principale di Skate Advisor è il trick. Il linguaggio di trick definisce univocamente un trick. Questo linguaggio può essere utilizzato per svolgere le seguenti attività:
 - Conversare con il chatbot in merito ai trick.
@@ -28,14 +31,17 @@ L'elemento dati principale di Skate Advisor è il trick. Il linguaggio di trick 
 - Identificare un trick per scopi di visualizzazione di posizioni e supporti multimediali.
 
 ### Definizione di trick
+{: #vcscar-logical-trick-def}
 
 Un trick è definito in modo univoco dai costrutti del linguaggio che lo descrivono. Per una definizione completa, vedi Motore di regole dei trick.
 
 ### Elenco di trick
+{: #vcscar-logical-list-tricks}
 
 Un elenco di trick viene restituito da una query del trick di base o dell'atterraggio definito negli elementi del linguaggio.
 
 ### Dati di trick
+{: #vcscar-logical-trick-data}
 
 Una volta restituiti, i trick possono avere le seguenti informazioni:
 - Descrizione del trick
@@ -43,6 +49,7 @@ Una volta restituiti, i trick possono avere le seguenti informazioni:
 - Informazioni sulla posizione
 
 ## Flussi di conversazione
+{: #vcscar-logical-conv-streams}
 
 Il chatbot ha un numero predefinito e limitato di possibili conversazioni. Le conversazioni sono definite dalle seguenti informazioni:
 - Ricerca trick: trova una serie di trick validi in base a un parametro di query che rappresenta il trick di base o l'atterraggio.
@@ -58,8 +65,10 @@ Ricerca posizione | Dove devo eseguire questo trick? | Elenco di posizioni per u
 Visualizzazione supporto multimediale | Visualizza un video dei trick |Un elenco di risultati dei supporti multimediali
 
 ## Componenti dell'interfaccia utente
+{: #vcscar-logical-ui-comp}
 
 ### Chatbot
+{: #vcscar-logical-chatbot}
 
 Il chatbot è un componente web che conversa con l'utente. Il chatbot può accettare testo o voce. I risultati come gli elenchi sono resi in testo con una possibile voce di accompagnamento per rappresentare i risultati.
 
@@ -85,18 +94,21 @@ Passo | Descrizione
 11 | Il risultato viene inviato all'utente tramite il chatbot.
 
 ### Rendering video
+{: #vcscar-logical-video-render}
 
 Il componente di rendering video riproduce un video o visualizza un documento. Queste risorse rappresentano la risorsa di origine da cui è stato rilevato il trick.
 
 Il componente di rendering video è un widget incorporato nell'interfaccia web che visualizza un video. I video vengono visualizzati nel chatbot come risultato di una query eseguita dall'utente di sistema. Il link al video risultante, una volta selezionato, attiva il rendering video.
 
-### Interfaccia di ubicazione
+### Interfaccia di posizione
+{: #vcscar-logical-location-interface}
 
 Skate Advisor include un'interfaccia che consente agli utenti del sistema di registrare la posizione di un trick specifico. Il componente dell'interfaccia web ha due elementi principali:
 1. Accettare una posizione dall'utente del sistema come il luogo migliore per eseguire un trick specifico.
 2. Visualizzare una o più posizioni consigliate per un trick specifico.
 
 ## Componenti Watson
+{: #vcscar-logical-watson-comp}
 
 In questa architettura sono inclusi i seguenti componenti Watson.
 * Knowledge Studio - Watson Studio è uno strumento con cui possiamo progettare il linguaggio di skate per il sistema e utilizzare questo linguaggio per riconoscere i documenti provenienti dal web che implementano il linguaggio di skate. Knowledge Studio fornisce un modello da utilizzare con Watson Discovery.
@@ -106,6 +118,7 @@ In questa architettura sono inclusi i seguenti componenti Watson.
 * Watson Assistant - Watson Assistant è uno strumento utilizzato per progettare le interazioni tra gli utenti e la macchina (chatbot). Deve essere formato con un linguaggio specifico per il dominio, ad esempio skateboarding, sotto forma di una serie di grammatiche per le quali l'Assistant riconosce e crea le risposte appropriate.
 
 ## Servizi Skate Advisor
+{: #vcscar-logical-skate-advisor-services}
 
 Il servizio Skate Advisor è un componente dell'applicazione che fornisce una serie di servizi API per il rendering delle richieste. I servizi esposti hanno una correlazione diretta con i flussi di conversazione descritti in precedenza. L'API
 esposta ha le seguenti categorie generali:
@@ -115,6 +128,7 @@ esposta ha le seguenti categorie generali:
 * accept_command - Accetta un comando testuale dal chatbot e assiste la richiesta.
 
 ## Formazione del Discovery Service
+{: #vcscar-logical-disc-service-training}
 
 Watson Discovery deve essere formato tramite un modello di machine learning, che viene creato in modo iterativo da un esperto in materia utilizzando Watson Knowledge Studio.
 
@@ -128,7 +142,8 @@ Dopo la formazione, il Discovery Service può rispondere a query come:
 - Mostrami tutti i trick.
 - Mostrami tutti i trick con più combo.
 
-### Link correlati
+## Link correlati
+{: #vcscar-logical-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

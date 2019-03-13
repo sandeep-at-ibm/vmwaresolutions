@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Restructuration et ajout de logiciels intermédiaires dans IBM Cloud Private
+{: #vcscontent-addmidware}
 
 A présent que Stock Trader s'exécute dans un conteneur et que Jane est satisfaite avec les micro-services en cours, elle et Todd cherchent un moyen d'améliorer l'application avec des fonctions supplémentaires. En restructurant les micro-services Stock Trader pour gérer une augmentation des activités et une évolutivité accrue, ils constatent tous les deux qu'il est nécessaire d'ajouter des logiciels intermédiaires dans {{site.data.keyword.cloud}} Private. Certains des logiciels intermédiaires existaient dans leur centre de données, par conséquent, il s'agit plutôt d'un changement de plateforme avec l'ajout de nouveaux logiciels intermédiaires.
 
@@ -18,6 +19,7 @@ Figure 1. Restructuration de Stock Trader
 Cette restructuration de la solution voit émerger une plateforme commune pour exécuter l'application et les services requis, dans un plan de gestion simplifié.
 
 ## Choix de contenus
+{: #vcscontent-addmidware-content-choices}
 
 {{site.data.keyword.cloud_notm}} Private propose un vaste choix de contenus, et Todd et Jane doivent décider lequel de ces contenus répond le mieux à leurs besoins. Comme Todd peut le constater dans le catalogue {{site.data.keyword.cloud_notm}}, la plupart des contenus peuvent être testés, mais pour certains d'entre eux, l'achat et le téléchargement à partir de Passport Advantage sont nécessaires.
 
@@ -124,12 +126,15 @@ Cloud Private (ILAN sous licence pour découverte et tests à partir du catalogu
 Pour Stock Trader, à partir de l'architecture de solution de Jane, Todd va commencer avec [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://console.cloud.ibm.com/catalog/services/mq) et [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis).
 
 ## Ajout de logiciels intermédiaires
+{: #vcscontent-addmidware-add-middleware}
 
 Pour ajouter des logiciels intermédiaires dans {{site.data.keyword.cloud_notm}} Private, recherchez la [charte Helm](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md) dans le catalogue, lisez le fichier Readme, puis poursuivez l'installation.
 
 Pour Stock Trader, Todd a décidé d'ajouter tous les logiciels intermédiaires. Les informations ci-après récapitulent ce que Todd a dû effectuer pour chaque logiciel intermédiaire qu'il souhaitait que Jane utilise.
 
 ### Db2
+{: #vcscontent-addmidware-db2}
+
 Todd commence avec Db2 car il utilise déjà Db2 et il peut dédier un environnement Db2 basé sur un conteneur à chaque solution.
 
 Dans la mesure où Todd a préparé {{site.data.keyword.icpfull_notm}}, sa politique de sécurité de pod est déjà définie. Il peut se consacrer à la création d'un secret d'extraction d'image Docker :
@@ -169,6 +174,7 @@ La section Configuration comporte une section Démarrage rapide et une section T
 Une fois Db2 actif, Todd ou Jane doit créer les tableaux que la solution Stock Trader utilise.
 
 ### MQ
+{: #vcscontent-addmidware-mq}
 
 Todd et Jane ont besoin d'un logiciel de messagerie, et puisqu'ils utilisent déjà MQ, celui-ci sera parfait. De plus, il peut s'exécuter avec un faible encombrement et la version de développement peut être mise en place pour chaque développeur, ce qui permet d'économiser beaucoup de trafic de production. L'installation de MQ est plutôt simple. Todd crée le stockage comme il l'a fait avec Db2, puis il installe la charte Helm :
 
@@ -190,7 +196,8 @@ Initialement, Todd sélectionne NodePort pour accéder au logiciel intermédiair
 
 Pour configurer MQ pour l'utilisation de Stock Trader, Todd ouvre l'interface utilisateur MQ Management, qui porte exactement le même nom que la version de machine virtuelle.
 
-### 	Redis
+### Redis
+{: #vcscontent-addmidware-redis}
 
 Bien que Stock Trader s'exécute sur {{site.data.keyword.cloud_notm}} Private Hosted, ils s'interrogent tout de même sur les temps d'attente du service de courtage car la seule chose qui leur importe, c'est le cours des actions à la fin du jour précédent pour la plupart de leur travail. Pour améliorer les performances, un cache Redis est ajouté.
 
@@ -201,6 +208,7 @@ Par défaut, cette charte installe six pods : un maître, deux esclaves et trois
 La configuration est simple, aussi Todd indique l'espace de nom dans lequel l'installation doit avoir lieu, puis il commence l'installation.
 
 ## Restructuration de Stock Trader
+{: #vcscontent-addmidware-refactor-stock-trader}
 
 La restructuration de Stock Trader est une étape importante pour Jane. Tandis que Todd était occupé à ajouter les logiciels intermédiaires dans {{site.data.keyword.cloud_notm}} Private, Jane structurait sa solution afin de l'optimiser pour les comportements de cloud et de Kubernetes.
 
@@ -216,6 +224,7 @@ Pour l'optimisation, Jane a procédé comme suit :
 Voici un exemple illustrant le [référentiel de code](https://github.com/IBMStockTrader/) de Jane, ainsi que le fichier Jenkins, server.xml, etc. Avec ces éléments en place, Jane peut librement coder des fonctionnalités supplémentaires via des secrets pour accéder à des services, tels que ODM et Watson, avec davantage de micro-services comme référentiels individuels dans GitHub.
 
 ### Ajout de secrets
+{: #vcscontent-addmidware-add-secrets}
 
 A présent qu'elle a restructuré les micro-services Stock Trader, Jane doit trouver le moyen d'extraire les noms de service, les ID utilisateur et les mots de passe de sorte que son application puisse sélectionner des détails uniques sur le service lorsqu'il est déployé, sans avoir à coder en dur des noms spécifiques et régénérer l'application.
 
@@ -227,6 +236,7 @@ Figure 2. Stock Trader - Services pivot
 ![Services pivot de Stock Trader](vcscontent-pivot-services.svg)
 
 ## Résultat
+{: #vcscontent-addmidware-result}
 
 Jane ayant restructuré sa solution Stock Trader et Todd ayant installé des logiciels intermédiaires dans {{site.data.keyword.cloud_notm}} Private Hosted, l'ensemble de la solution Stock Trader s'exécute dans un cloud privé. Jane ajoute à présent d'autres micro-services, tels qu'un service de notification Twitter. Les règles de routage Istio activent une messagerie de niveau de fidélité dynamique via un canal Slack interne ou un canal Twitter public.
 
@@ -234,6 +244,7 @@ Figure 3. Enrichissement de Stock Trader
 
 ![Enrichissement de Stock Trader](vcscontent-enrich.svg)
 
-### Liens connexes
+## Liens connexes
+{: #vcscontent-addmidware-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

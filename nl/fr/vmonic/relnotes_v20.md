@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-11-20"
 
@@ -13,6 +13,7 @@ lastupdated: "2017-11-20"
 {:important: .important}
 
 # Notes sur l'édition pour la version 2.0
+{: #relnotes_v20}
 
 Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour obtenir la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des astuces relatives à l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -23,8 +24,8 @@ Le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} est d
 Commandez des instances avec le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} déjà inclus ou ajoutez ultérieurement ce service à vos instances existantes à partir de l'onglet **Services** de la page des détails d'instance. En fonction de vos besoins, sélectionnez pour ce service l'une des trois tailles de déploiement et options d'octroi de licence. Une fois le service correctement installé, gérez et configurez des règles de pare-feu pour les dispositifs FortiGate Virtual Appliance depuis la console FortiGate.
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Composants et remarques pour FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)
-* [Gestion de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfortinetvm.html)
+* [Composants et remarques pour FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)
+* [Gestion de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
 
 ## Installation de plusieurs services pour F5 on IBM Cloud et le service FortiGate Virtual Appliance on IBM Cloud
 
@@ -33,8 +34,8 @@ Vous pouvez désormais installer plusieurs instances du service F5 on {{site.dat
 Une fois le déploiement de l'instance achevé, vous pouvez ajouter d'autres instances du service F5 ou FortiGate en installant le service à partir de l'onglet **Ajouter des services** de la page des détails de l'instance. Vous ne pouvez ajouter qu'une seule instance de service à la fois et répéter le processus pour toutes les instances que vous voulez ajouter pour un service.
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 
 ## Mises à jour pour le service FortiGate Security Appliance on IBM Cloud
 
@@ -49,9 +50,9 @@ Dans tous les cas, vous devez gérer la configuration des dispositifs FSA avec l
 Le nom de domaine complet est désormais représenté de manière cohérente pour toutes les instances. Lorsque vous passez une commande, vous pouvez entrer vos propres préfixe de sous-domaine et préfixe de nom d'hôte pour faire en sorte que la convention sur le format de nom de domaine complet (industrie) soit appliquée. Par exemple, `préfixe-nom-hôte<n>.préfixe-sousdomaine.nom-domaine`.
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
 ## Estimation de la charge de travail et du stockage en cours de commande d'une instance
 
@@ -59,9 +60,9 @@ Pour plus d'informations, voir les rubriques suivantes :
 * Lors d'une commande d'une instance Cloud Foundation et vCenter Server, une estimation de la capacité de stockage utilisable pour l'instance commandée vous est fournie.
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
 ## Mises à jour des instances VMware Cloud Foundation
 
@@ -77,13 +78,13 @@ L'édition actuelle applique les améliorations et mises à jour de composant su
 Les instances existantes (à partir des éditions V1.9 et de niveau antérieur) ne peuvent pas être mises à niveau vers les versions de composant figurant dans cette liste.
 {:note}
 
-Pour plus d'informations sur les composants, voir [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html).
+Pour plus d'informations sur les composants, voir [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview).
 
 ### Prise en charge des clusters pour les instances Cloud Foundation
 
 Vous pouvez désormais utiliser des clusters pour gérer des serveurs ESXi dans les instances Cloud Foundation déployées en version 2.0 et éditions ultérieures de manière à bénéficier d'une meilleure gestion des ressources et de la haute disponibilité. Les serveurs ESXi que vous avez configurés lors de la commande d'une instance sont, par défaut, regroupés en **SDDC-Cluster**.
 
-Vous pouvez afficher les détails du cluster et ajouter jusqu'à cinq clusters à une instance à partir de l'onglet **Infrastructure** de la page des détails de l'instance. Lorsque vous augmentez ou réduisez la capacité d'une instance, vous pouvez sélectionner le cluster dans lequel ajouter ou retirer des serveurs ESXi. Pour plus d'informations, voir [Ajout et affichage des clusters des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html).
+Vous pouvez afficher les détails du cluster et ajouter jusqu'à cinq clusters à une instance à partir de l'onglet **Infrastructure** de la page des détails de l'instance. Lorsque vous augmentez ou réduisez la capacité d'une instance, vous pouvez sélectionner le cluster dans lequel ajouter ou retirer des serveurs ESXi. Pour plus d'informations, voir [Ajout et affichage des clusters des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances).
 
 ### Prise en charge du stockage vSAN personnalisé pour des instances Cloud Foundation
 
@@ -91,12 +92,12 @@ Vous pouvez désormais personnaliser la configuration du stockage vSAN en sélec
 
 Pour plus d'informations, voir les rubriques suivantes :
 
-* [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 
 ### Choix de l'édition de licence VMware vSAN pour des instances Cloud Foundation : Advanced ou Enterprise
 
-Vous pouvez désormais sélectionner l'édition de licence vSAN qui vous convient lors de la commande d'une instance Cloud Foundation. Vous pouvez acheter la licence dans le cadre de votre commande ou fournir votre propre licence (BYOL, Bring Your Own License). Pour plus d'informations, voir [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html).
+Vous pouvez désormais sélectionner l'édition de licence vSAN qui vous convient lors de la commande d'une instance Cloud Foundation. Vous pouvez acheter la licence dans le cadre de votre commande ou fournir votre propre licence (BYOL, Bring Your Own License). Pour plus d'informations, voir [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance).
 
 ### Nouvelles configurations normalisées de serveur IBM bare metal pour les instances Cloud Foundation
 
@@ -108,8 +109,8 @@ Le châssis dispose de suffisamment d'espace pour 12 disques. Tous les emplaceme
 {:note}
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Présentation de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 
 ## Mises à jour des instances VMware vCenter Server
 
@@ -123,28 +124,28 @@ L'édition actuelle applique les mises à jour de composant suivantes au nouveau
 Les commandes personnalisées de vCenter Server avec ou sans le composant VMware vSAN incluent toujours un serveur de châssis de 12 disques. Ce serveur laisse apparaître un coût légèrement supérieur pour les serveurs {{site.data.keyword.baremetal_short}} de la commande sans vSAN dans le PDF du coût estimé.
 {:note}
 
-Pour plus d'informations sur les composants, voir [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html).
+Pour plus d'informations sur les composants, voir [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview).
 
 ### Prise en charge de configuration multisite pour des instances vCenter Server
 
 Vous pouvez désormais déployer une instance vCenter Server en plus des instances secondaires associées à l'instance principale. Le modèle de configuration multisite utilise un concentrateur et une topologie en étoile (hub and spoke) avec un site principal et un maximum de sept sites secondaires.
 
-Pour plus d'informations, voir [Configuration multisite pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_multisite.html).
+Pour plus d'informations, voir [Configuration multisite pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite).
 
 ### Prise en charge du stockage vSAN personnalisé pour des instances vCenter Server
 
 Le stockage vSAN est désormais disponible sur les instances vCenter Server pour les instances principales comme secondaires. Il n'est disponible que lorsque vous sélectionnez une configuration personnalisée par l'utilisateur. Vous pouvez désormais sélectionner l'édition de licence vSAN (Advanced ou Enterprise) qui vous convient lors de la commande d'une instance vCenter Server. Vous pouvez acheter la licence dans le cadre de votre commande ou fournir votre propre licence (BYOL, Bring Your Own License).
 
-Pour plus d'informations, voir [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html).
+Pour plus d'informations, voir [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance).
 
 ### Apport de votre propre licence (BYOL, Bring Your Own License) pour les instances VMware vCenter Server
 
 BYOL est désormais disponible pour les instances vCenter Server. utilisez une ou plusieurs de vos propres licences vCenter Server, vSphere, vSAN et NSX VMware lorsque vous commandez des instances vCenter Server.
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
+* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
 ## Mises à jour pour VMware vSphere on IBM Cloud
 
@@ -159,7 +160,7 @@ Pour le composant VMware vSAN, les types de disque suivants sont désormais disp
 * Les unités SSD SED de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un {{site.data.keyword.CloudDataCent_notm}}.
 * Les commandes avec ou sans le composant VMware vSAN incluent toujours un serveur de châssis de 12 disques. Ce serveur laisse apparaître un coût légèrement supérieur pour les serveurs {{site.data.keyword.baremetal_short}} de la commande sans vSAN dans le PDF du coût estimé.
 
-Pour plus d'informations, voir [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html).
+Pour plus d'informations, voir [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances).
 
 ## Mises à jour pour NetApp ONTAP Select on IBM Cloud
 
@@ -174,8 +175,8 @@ Les unités SSD de 3,8 To sont prises en charge une fois qu'elles sont officiell
 {:note}
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Présentation de NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
-* [Commande d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [Présentation de NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)
+* [Commande d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
 
 ## Documentation nouvelle et mise à jour
 

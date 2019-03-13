@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-10-29"
 {:important: .important}
 
 # Supresión de instancias de vCenter Server con el paquete híbrido (Hybridity)
+{: #vc_hybrid_deletinginstance}
 
 Para liberar los componentes que ha solicitado en una instancia de VMware vCenter Server con el paquete híbrido (Hybridity), suprima la instancia.
 
@@ -30,6 +31,7 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 {:note}
 
 ## Procedimiento para suprimir instancias de la página Instancias desplegadas
+{: #vc_hybrid_deletinginstance-procedure1}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, busque la instancia que desea suprimir.
@@ -40,6 +42,7 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
 ## Procedimiento para suprimir instancias de la página de detalles de la instancia
+{: #vc_hybrid_deletinginstance-procedure2}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia que desea suprimir.
@@ -49,10 +52,11 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
    1. Pulse el icono de menú de desbordamiento junto a **Consola de vCenter** de nuevo y pulse **Suprimir instancia**.
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vc_hybrid_deletinginstance-related}
 
-* [Supresión de las instancias de vCenter Server con el paquete híbrido (Hybridity) en una configuración de varios sitios](vc_hybrid_deletinginstance_multi.html)
-* [Solicitud de instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_orderinginstance.html)
-* [Visualización de instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_viewinginstances.html)
-* [Ampliación y reducción de la capacidad para instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_addingremovingservers.html)
-* [Cómo ponerse en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html)
+* [Supresión de las instancias de vCenter Server con el paquete híbrido (Hybridity) en una configuración de varios sitios](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance_multi)
+* [Solicitud de instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [Visualización de instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [Ampliación y reducción de la capacidad para instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

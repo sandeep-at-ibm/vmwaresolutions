@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-10-29"
 {:important: .important}
 
 # Diseño de gestión de infraestructura
+{: #design_infrastructuremgmt}
 
 La gestión de infraestructura hace referencia a los componentes que están gestionando la infraestructura de VMware. Este diseño utiliza una única instancia de controlador de servicios de plataforma externa (PSC) y una sola instancia de servidor de vCenter:
 * El vCenter Server es la plataforma centralizada para la gestión de entornos de vSphere y es uno de los componentes fundamentales de esta solución.
@@ -21,6 +22,7 @@ La gestión de infraestructura hace referencia a los componentes que están gest
 Las instancias de PSC y de vCenter Server son máquinas virtuales (VM) independientes.
 
 ## Diseño de PSC
+{: #design_infrastructuremgmt-psc}
 
 Este diseño despliega un único PSC externo como un dispositivo virtual en una subred portátil en la VLAN privada que está asociada con las máquinas virtuales de gestión. Su pasarela predeterminada se establece en el direccionador de cliente de fondo (BCR). El dispositivo virtual se configura con las especificaciones de la tabla siguiente.
 
@@ -40,6 +42,7 @@ Tabla 1. Especificaciones del controlador de servicios de plataforma
 El PSC ubicado en la instancia primaria tiene asignado el dominio de SSO predeterminado de `vsphere.local`.
 
 ## Diseño de vCenter Server
+{: #design_infrastructuremgmt-vcenter}
 
 El vCenter Server también se despliega como un dispositivo virtual. Además, el vCenter Server se instala en una subred portátil en la VLAN privada que está asociada con las VM de gestión. Su pasarela predeterminada se establece en la dirección IP asignada en el BCR para dicha subred determinada. El dispositivo virtual se configura con las especificaciones de la tabla siguiente.
 
@@ -56,14 +59,17 @@ Tabla 2. Especificaciones del dispositivo de vCenter Server
 | Tipo de disco                    | Ligero suministrado                    |
 
 ### Base de datos de vCenter Server
+{: #design_infrastructuremgmt-vcenter-db}
 
 La configuración del vCenter Server utiliza una base de datos local e incorporada de PostgreSQL incluida con el dispositivo. La base de datos incorporada se utiliza para eliminar las dependencias sobre bases de datos y licencias externas.
 
 ### Especificación de clúster de vCenter Server
+{: #design_infrastructuremgmt-vcenter-cluster}
 
 Con este diseño, puede agrupar los hosts ESXi de vSphere que se suministran a través de la solución. Sin embargo, para que se puedan crear clústeres, se crea un objeto de centro de datos que significa la ubicación de los hosts ESXi de vSphere, así como el pod dentro del centro de datos. Se crea un clúster una vez creado el objeto de centro de datos. El clúster se despliega con la alta disponibilidad (HA) de VMware vSphere y con el planificador de recursos distribuidos (DRS) de VMware vSphere habilitado.
 
 ### Planificador de recursos distribuidos de vSphere
+{: #design_infrastructuremgmt-vsphere-drs}
 
 Este diseño utiliza la planificación de recursos distribuidos (DRS) de vSphere en el clúster inicial para colocar las VM y utiliza DRS en clústeres adicionales para migrar dinámicamente las máquinas virtuales para lograr clústeres equilibrados. El nivel de automatización se establece en totalmente automatizado para que la ubicación inicial y las recomendaciones de migración sean ejecutadas automáticamente por vSphere. Además, el umbral de migración se establece en moderado, de modo que vCenter aplica las recomendaciones de prioridad 1, 2 y 3 para lograr al menos una mejora decente en el equilibrio de carga del clúster.
 
@@ -71,6 +77,7 @@ La gestión de alimentación a través de la característica **Distributed Power
 {:note}
 
 ### Alta disponibilidad de vSphere
+{: #design_infrastructuremgmt-vsphere-ha}
 
 Este diseño utiliza la alta disponibilidad (HA) de vSphere en el clúster inicial y los clústeres adicionales para detectar anomalías de cálculo y recuperar las VM que se ejecutan dentro de un clúster. La característica de HA de vSphere en este diseño se configura con las opciones **Supervisión de host** y **Control de admisión** habilitadas dentro del clúster. Además, el clúster inicial reserva los recursos de un nodo como capacidad de reserva para la política de control de admisión.
 
@@ -80,6 +87,7 @@ Usted es responsable de ajustar la política de control de admisión cuando el c
 De forma predeterminada, la opción **Prioridad de reinicio de VM** se establece en medio y la opción **Respuesta de aislamiento de host** está inhabilitada. Además, la **supervisión de VM** está inhabilitada y la característica **Latido del almacén de datos** se configura para incluir cualquiera de los almacenes de datos del clúster. Este enfoque utiliza los almacenes de datos NAS si están presentes.
 
 ## Automatización
+{: #design_infrastructuremgmt-automation}
 
 La piedra angular de estas soluciones es la automatización. La automatización trae las siguientes ventajas:
 * Reduce la complejidad del despliegue.
@@ -89,6 +97,7 @@ La piedra angular de estas soluciones es la automatización. La automatización 
 Las VM de {{site.data.keyword.IBM}} CloudBuilder, IBM CloudDriver y SDDC Manager trabajan juntas para iniciar una nueva instancia de VMware y realizar funciones de gestión del ciclo de vida.
 
 ### IBM CloudBuilder e IBM CloudDriver
+{: #design_infrastructuremgmt-cloud-builder-driver}
 
 La instancia de servidor virtual de IBM CloudBuilder e IBM CloudDriver (VSI) son componentes desarrollados por IBM a los que no puede acceder.
 * IBM CloudBuilder es una instancia de servidor virtual (VSI) de {{site.data.keyword.cloud_notm}} temporal que arranca el despliegue, la configuración y la validación de los componentes de solución dentro de los hosts ESXi nativos suministrados.
@@ -102,6 +111,7 @@ Es posible que el usuario suprima o dañe las máquinas virtuales descritas en l
 * Parches
 
 ### SDDC Manager
+{: #design_infrastructuremgmt-sddc-manager}
 
 Para las instancias de Cloud Foundation, la VM de SDDC Manager es un componente desarrollado y mantenido por VMware. Se mantiene como parte de la instancia durante todo su ciclo de vida. Es responsable de las siguientes funciones de ciclo de vida de las instancias:
 * Gestión de los componentes de VMware: vCenter Server, Platform Services Controller (PSC), vSAN y NSX, incluida la asignación de direcciones IP y la resolución de nombre de host.
@@ -110,6 +120,7 @@ Para las instancias de Cloud Foundation, la VM de SDDC Manager es un componente 
 Para las instancias de vCenter Server, estas actividades las realiza IBM CloudDriver, ya que no hay ningún Gestor de SDDC.
 
 ### Flujo de automatización
+{: #design_infrastructuremgmt-auto-flow}
 
 El procedimiento siguiente describe el pedido de los sucesos cuando se solicita una instancia de VMware a través de la consola de {{site.data.keyword.vmwaresolutions_short}}:
 1.  Pedido de VLAN y subredes para la red desde {{site.data.keyword.cloud_notm}}.
@@ -125,8 +136,9 @@ El procedimiento siguiente describe el pedido de los sucesos cuando se solicita 
 11. Eliminación del VSI de CloudBuilder.
 12. Despliegue de servicios opcionales como, por ejemplo, el servidor de copia de seguridad y el almacenamiento.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #design_infrastructuremgmt-related}
 
-* [Diseño de infraestructura física](design_physicalinfrastructure.html)
-* [Diseño de infraestructura virtual](design_virtualinfrastructure.html)
-* [Diseño de servicios comunes](design_commonservice.html)
+* [Diseño de infraestructura física](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
+* [Diseño de infraestructura virtual](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
+* [Diseño de servicios comunes](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)

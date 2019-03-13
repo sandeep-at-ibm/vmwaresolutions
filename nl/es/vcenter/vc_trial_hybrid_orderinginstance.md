@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-11"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-11"
 {:important: .important}
 
 # Solicitud y supresión de la prueba de un solo nodo para instancias de VMware vCenter Server on IBM Cloud
+{: #vc_trial_hybrid_orderinginstance}
 
 La prueba de un solo nodo de VMware vCenter Server on {{site.data.keyword.cloud}} es una nube privada alojada de un solo arrendatario que proporciona la pila de VMware vSphere como servicio. Aunque el entorno gestionado por el cliente se suele desplegar con un mínimo de tres nodos, esta versión de prueba de un solo nodo proporciona un método de bajo coste para experimentar las ventajas de una implementación de nube híbrida.
 
@@ -23,9 +24,10 @@ La prueba de un solo nodo solo es para prueba de concepto. No ejecute cargas de 
 
 Esta versión de prueba está pensada para utilizarla durante un máximo de 90 días. Cuando finalice el periodo de prueba, puede suprimir este entorno y luego suministrar un entorno de alta disponibilidad que se ajuste a sus necesidades de capacidad.
 
-Para obtener información sobre el diseño de la arquitectura, consulte [Diseño de la arquitectura de HCX on IBM Cloud para la prueba de un solo nodo de vCenter Server on IBM Cloud ](../archiref/trial/vc_trial_hcx_arch.html).
+Para obtener información sobre el diseño de la arquitectura, consulte [Diseño de la arquitectura de HCX on IBM Cloud para la prueba de un solo nodo de vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html).
 
 ## Especificaciones técnicas de la versión de prueba de un solo nodo de instancias de vCenter Server
+{: #vc_trial_hybrid_orderinginstance-tech-specs}
 
 En la versión de prueba de un solo nodo de la instancia de vCenter Server se incluyen los siguientes componentes:
 
@@ -33,10 +35,12 @@ La disponibilidad y los precios de las configuraciones estandarizadas de hardwar
 {:note}
 
 ### Servidor nativo
+{: #vc_trial_hybrid_orderinginstance-bare-metal}
 
 Un procesador Dual Intel Xeon Gold 5120 (28 núcleos, 2,20 GHz) con 384 GB de RAM.
 
 ### Especificaciones de red de la versión de prueba de un solo nodo de instancias de vCenter Server
+{: #vc_trial_hybrid_orderinginstance-networking-specs}
 
 Se solicitan los siguientes componentes del sistema de redes:
 *  Enlaces ascendentes de red pública y privada de 10 Gbps
@@ -50,16 +54,16 @@ Se solicitan los siguientes componentes del sistema de redes:
   * Una Edge Services Gateway de NSX de VMware gestionada por el cliente para el tráfico de salida y de entrada de carga de trabajo HTTPS, que IBM despliega como plantilla que puede modificar para proporcionar acceso VPN o acceso público.
 
 ### Instancias de servidor virtual
+{: #vc_trial_hybrid_orderinginstance-vsi}
 
 Se solicitan las siguientes instancias de servidor virtual (VSI):
-
 * Una VSI para IBM CloudBuilder, que se cancela una vez completado el despliegue de la instancia.
 * Se despliega y se puede consultar una VSI de Microsoft Windows Server para Microsoft Active Directory (AD). La VSI funciona como el DNS para la instancia en la que se han registrado los hosts y las máquinas virtuales.
 
 ### Licencias proporcionadas por IBM y tarifas
+{: #vc_trial_hybrid_orderinginstance-license-and-fee}
 
 En la versión de prueba de un solo nodo de la solicitud de una instancia de vCenter Server se incluyen las siguientes licencias:
-
 * VMware vSphere Enterprise Plus 6.5
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
@@ -68,6 +72,7 @@ La versión de prueba de un solo nodo de instancias de vCenter Server no admiten
 {:note}
 
 ## Especificaciones técnicas de VMware HCX on IBM Cloud
+{: #vc_trial_hybrid_orderinginstance-hcx-tech-specs}
 
 La prueba de un solo nodo para vCenter Server incluye HCX on {{site.data.keyword.cloud_notm}}. Los componentes siguientes se solicitan y se incluyen en el servicio HCX on {{site.data.keyword.cloud_notm}}.
 
@@ -75,12 +80,14 @@ Las instancias de HCX locales incluyen solo la licencia y la activación.
 {:note}
 
 ### Un par activo/pasivo de pasarelas de servicio VMware NSX Edge para la gestión de HCX
+{: #vc_trial_hybrid_orderinginstance-esg}
 
 * CPU: 6 vCPU
 * RAM: 8 GB
 * Disco: 3 GB VMDK
 
 ### Dispositivo de gestión HCX - máquina virtual
+{: #vc_trial_hybrid_orderinginstance-hcs-mgmt-appliance}
 
 * CPU: 4 vCPU
 * RAM: 12 GB
@@ -89,12 +96,14 @@ Las instancias de HCX locales incluyen solo la licencia y la activación.
 Los dispositivos HCX adicionales se despliegan durante la configuración, según sean necesarios para la conectividad de L2, la optimización de WAN y las conexiones de pasarela.
 
 ### Especificaciones de red para el servicio HCX on IBM Cloud
+{: #vc_trial_hybrid_orderinginstance-hcx-networking-specs}
 
 * Una subred portátil pública con 16 direcciones IP
 * Dos subredes portátiles privadas con 64 direcciones IP
 * Ocho direcciones IP desde una subred vMotion portátil privada
 
 ## Requisitos y planificación para solicitar una versión de prueba de un solo nodo para instancias de vCenter Server
+{: #vc_trial_hybrid_orderinginstance-req}
 
 Asegúrese de cumplir con los siguientes requisitos y de haber completado las tareas siguientes:
 * Requisitos para instancias locales de HCX:
@@ -110,6 +119,7 @@ Asegúrese de cumplir con los siguientes requisitos y de haber completado las ta
     * El nombre de instancia debe ser exclusivo dentro de su cuenta.
 
 ## Procedimiento para solicitar la versión de prueba de un solo nodo para instancias de vCenter Server
+{: #vc_trial_hybrid_orderinginstance-procedure}
 
 1. En la página **Prueba de un solo nodo para VMware vCenter Server on {{site.data.keyword.cloud_notm}}**, pulse **Continuar**.
 2. En la página **Prueba de un solo nodo para VMware vCenter Server**, siga los pasos para solicitar una cuenta de la infraestructura {{site.data.keyword.cloud_notm}} o especifique su **Nombre de usuario** y **Clave de API** existentes y pulse **Recuperar**.
@@ -128,10 +138,12 @@ Asegúrese de cumplir con los siguientes requisitos y de haber completado las ta
    4. Pulse **Suministro**.
 
 ### Resultados
+{: #vc_trial_hybrid_orderinginstance-results}
 
 El despliegue de la instancia comienza automáticamente y solicita la clave de activación del servicio HCX on {{site.data.keyword.cloud_notm}} local.
 
 #### Proceso de despliegue de HCX on IBM Cloud
+{: #vc_trial_hybrid_orderinginstance-hcs-deploy-process}
 
 El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. El proceso de automatización de {{site.data.keyword.vmwaresolutions_short}} lleva a cabo los siguientes pasos:
 1. Se solicitan tres subredes para HCX desde la infraestructura de {{site.data.keyword.cloud_notm}}:
@@ -159,6 +171,7 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. El proc
 6. Se registra el nombre de host y la dirección IP de HCX Manager con el servidor DNS de VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 #### Visualización de detalles de una instancia
+{: #vc_trial_hybrid_orderinginstance-view-inst-details}
 
 Puede comprobar el estado del despliegue visualizando los detalles de la instancia. Pulse **Instancias desplegadas** en el panel de navegación de la izquierda y localice la tabla **Instancias de vCenter Server** o **Instancias de HCX locales** para
 ver información sobre las instancias que ha solicitado.
@@ -168,6 +181,7 @@ Cuando la instancia se ha desplegado correctamente, los componentes que se descr
 El estado de la instancia pasa a ser **Listo para su uso** y el usuario recibe una notificación por correo electrónico.
 
 ### Qué hacer a continuación
+{: #vc_trial_hybrid_orderinginstance-next}
 
 Instale HCX Enterprise Manager local y configure la conexión con el HCX en la instancia de {{site.data.keyword.cloud_notm}}.
 
@@ -213,6 +227,7 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 {:important}
 
 ## Procedimiento para suprimir la versión de prueba de un solo nodo para instancias de vCenter Server
+{: #vc_trial_hybrid_orderinginstance-deleting-procedure}
 
 Cuando suprima una instancia de prueba de un solo nodo de vCenter Server, los siguientes componentes se liberarán en esta secuencia:
 
@@ -237,8 +252,9 @@ Siga los pasos siguientes para suprimir una instancia de prueba de un solo nodo 
    1. En la columna **Acciones**, pulse el icono Suprimir de nuevo.
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vc_trial_hybrid_orderinginstance-related}
 
-* [Diseño de la arquitectura de HCX on IBM Cloud para la versión de prueba de un solo nodo para vCenter Server on IBM Cloud](../archiref/trial/vc_trial_hcx_arch.html)
+* [Diseño de la arquitectura de HCX on IBM Cloud para la versión de prueba de un solo nodo para vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [Documentación de VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
 * [Obtención de HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-11"
+lastupdated: "2019-02-15"
 
 ---
 
 # Visión general de NSX-V
+{: #vcsnsxt-overview-ic4vnsxv}
 
 La virtualización de red proporciona una superposición de red que existe dentro de la capa virtual. NSX-V proporciona la arquitectura con características tales como el aprovisionamiento rápido, el despliegue, la reconfiguración y la destrucción de las redes virtuales bajo demanda. Este diseño utiliza el conmutador distribuido de vSphere (vDS) y VMware NSX for vSphere para implementar la red virtual.
 
@@ -37,6 +38,7 @@ Junto con los controladores, la automatización de {{site.data.keyword.cloud_not
 Luego se despliegan pares NSX Edge Services Gateway (ESG). Para cualquier despliegue, se utiliza un par de pasarela para el tráfico de salida de los componentes de automatización que residen en la red privada. Las instancias de VMware vCenter Server on {{site.data.keyword.cloud_notm}} incluyen una segunda pasarela, conocida como el borde gestionado por el cliente, que se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada. El administrador puede configurar los componentes NSX necesarios como, por ejemplo, direccionadores lógicos distribuidos (DLR), conmutadores lógicos y cortafuegos.
 
 ## Diseño de conmutadores distribuidos
+{: #vcsnsxt-overview-ic4vnsxv-distributed-switch}
 
 El diseño utiliza un número mínimo de conmutadores distribuidos virtuales (vDS). Los hosts del clúster están conectados a redes públicas y privadas. Se configuran con dos conmutadores distribuidos virtuales. El uso de dos conmutadores sigue el enfoque de separación de red física de las redes públicas y privadas que se implementan en {{site.data.keyword.cloud_notm}}.
 
@@ -88,6 +90,7 @@ SDDC-Dswitch-Private	|Generado automáticamente por NSX	|Puerto virtual de orige
 SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|Puerto virtual de origen	|Activo: 0, 1	|VLAN3
 
 ## NSX-V
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v}
 
 Este diseño especifica la configuración de los componentes de NSX, pero no aplica ninguna configuración de componente de superposición de red. El cliente diseña la superposición de red según sus necesidades.
 
@@ -105,6 +108,7 @@ Lo que NO se configura:
 -	Gestión de NSX enlazada con otras estancias de VMware.
 
 ### Seguridad de NSX-V
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
 
 NSX for vSphere permite a las organizaciones dividir el centro de datos en distintos segmentos de seguridad, hasta el nivel de carga de trabajo individual independiente del lugar en el que se ejecuta la carga de trabajo. Los equipos de TI pueden definir políticas para cada carga de trabajo en función de la aplicación y del contexto de usuario, lo que garantiza respuestas inmediatas frente a las amenazas dentro del centro de datos y aplicación de políticas a nivel de aplicación.
 
@@ -120,6 +124,7 @@ En el siguiente diagrama se muestra cómo puede implementar algunas de las carac
 Figura 3. Seguridad de NSX-V
 ![Seguridad de NSX-V](vcsnsxt-vsecurity.svg)
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vcsnsxt-overview-ic4vnsxv-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

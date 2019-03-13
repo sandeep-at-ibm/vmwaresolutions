@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,16 +13,18 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Configuration multisite pour des instances Cloud Foundation
+{: #sd_multisite}
 
 {{site.data.keyword.vmwaresolutions_full}} permet de déployer des instances dans différents emplacements et de les rendre actives et opérationnelles très rapidement.
 
 ## Remarques
+{: #sd_multisite-notes}
 
 * Vous ne pouvez pas lier des instances VMware Cloud Foundation à des instances VMware vCenter Server dans une configuration multisite.
 * Vous ne pouvez pas lier des instances déployées en version 2.0 à des instances d'éditions antérieures (même si ces dernières ont été mises à niveau vers la version 2.0).
 
-
 ## Composants d'un déploiement multisite
+{: #sd_multisite-deployment-components}
 
 Un déploiement multisite est constitué des composants suivants.
 
@@ -39,10 +41,11 @@ Un déploiement multisite est constitué des composants suivants.
    *  VMware vCenter sur les instances secondaires configuré en mode lien étendu (Enhanced Linked) sur le serveur vCenter de l'instance principale
 
 ## Déploiement multisite Cloud Foundation
+{: #sd_multisite-deployment}
 
 Le modèle de configuration multisite utilise un concentrateur et une topologie en étoile (hub and spoke) avec un site principal et un maximum de sept sites secondaires. Une seule couche de sites est prise en charge, c'est-à-dire que vous ne pouvez pas configurer de sites supplémentaires qui sont liés à d'autres sites secondaires. Une configuration multisite accepte jusqu'à 128 serveurs ESXi répartis dans toutes les instances.
 
-Si votre configuration nécessite un déploiement multisite de plus de 128 serveurs ESXi, contactez le support IBM pour obtenir de l'aide. Pour plus d'informations, voir [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Si votre configuration nécessite un déploiement multisite de plus de 128 serveurs ESXi, contactez le support IBM pour obtenir de l'aide. Pour plus d'informations, voir [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 {:note}
 
 Le graphique suivant décrit l'architecture globale d'un déploiement Cloud Foundation multisite.
@@ -60,10 +63,11 @@ Vous ne pouvez affecter qu'une seule instance secondaire à la fois à une insta
 
 Vous pouvez avoir jusqu'à 8 instances (1 principale et 7 secondaires) au maximum déployées dans une configuration multisite.
 
-La suppression d'instances Cloud Foundation qui font partie d'une configuration multisite requiert une planification spéciale. Pour plus d'informations, voir [Suppression d'instances Cloud Foundation dans une configuration multisite](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html).
+La suppression d'instances Cloud Foundation qui font partie d'une configuration multisite requiert une planification spéciale. Pour plus d'informations, voir [Suppression d'instances Cloud Foundation dans une configuration multisite](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi).
 {:note}
 
-### Liens connexes
+## Liens connexes
+{: #sd_multisite-related}
 
 * [Attribuer un rôle principal à NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configurer les NSX Manager secondaires](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}

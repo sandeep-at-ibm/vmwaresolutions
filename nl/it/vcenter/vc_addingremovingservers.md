@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Espansione e contrazione della capacità per le istanze vCenter Server
+{: #vc_addingremovingservers}
 
 Puoi espandere o contrarre la capacità della tua istanza VMware vCenter Server in base alle tue esigenze aziendali, aggiungendo o rimuovendo i server ESXi o l'archiviazione NFS (network file system).
 
@@ -22,17 +23,20 @@ Puoi aggiungere o rimuovere condivisioni di archiviazione NFS in un cluster vCen
 Se il tuo cluster iniziale ha vSAN come archiviazione, l'aggiunta di uno o più server ESXi dopo la distribuzione può aumentare la capacità di archiviazione del cluster.
 
 ## Aggiunta di server ESXi alle istanze vCenter Server
+{: #vc_addingremovingservers-adding}
 
 ### Prima di aggiungere i server ESXi
+{: #vc_addingremovingservers-adding-prereq}
 
 * Non aggiungere i server ESXi dal client web VMware vSphere. Le modifiche che apporti al client web vSphere non vengono sincronizzate con la console {{site.data.keyword.vmwaresolutions_full}}.
 * Un'istanza vCenter Server con l'archiviazione NFS deve avere almeno 2 server ESXi. Per le istanze distribuite nella V2.1 o successive, puoi espandere il cluster predefinito per avere fino a 51 server ESXi. Ciascuno dei cluster non predefiniti può essere espanso per avere fino a 59 server ESXi.
 * Un'istanza vCenter Server con l'archiviazione vSAN deve avere almeno 4 server ESXi.
 * Per le istanze vCenter Server distribuite nella V2.0 o precedenti, puoi espandere ciascun cluster per avere fino a 32 server ESXi. Il numero di {{site.data.keyword.baremetal_short}} che puoi aggiungere alla volta è il seguente:
    * Per le configurazioni **Small**, **Medium** e **Large**, puoi aggiungere da 1 a 10 server ESXi alla volta.
-   * Per le configurazioni **Skylake** e **Broadwell**, puoi aggiungere da 1 a 20 server ESXi alla volta. Per ulteriori informazioni sul numero minimo di server ESXi, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+   * Per le configurazioni **Skylake** e **Broadwell**, puoi aggiungere da 1 a 20 server ESXi alla volta. Per ulteriori informazioni sul numero minimo di server ESXi, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ### Procedura per aggiungere i server ESXi
+{: #vc_addingremovingservers-adding-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza per la quale vuoi espandere la capacità.
@@ -42,14 +46,17 @@ Se il tuo cluster iniziale ha vSAN come archiviazione, l'aggiunta di uno o più 
 6. Nella finestra **Aggiungi server**, immetti il numero di server che vuoi aggiungere, esamina il costo stimato e fai quindi clic su **Aggiungi server**.
 
 ### Risultati dopo l'aggiunta dei server ESXi
+{: #vc_addingremovingservers-adding-results}
 
 1. Si potrebbe verificare un leggero ritardo sulla console mentre lo stato dell'istanza cambia da **Pronto per l'utilizzo** a **In fase di modifica**. Consenti il completamento dell'operazione prima di apportare altre modifiche all'istanza.
 2. Ti viene inviata una notifica via e-mail che indica che la richiesta di aggiunta dei server ESXi è in fase di elaborazione. Sulla console, lo stato del cluster associato ai server ESXi diventa **In fase di modifica**.
 3. Se non vedi i nuovi server ESXi aggiunti all'elenco nel cluster, controlla le notifiche e-mail o della console per trovare ulteriori dettagli sull'errore.
 
 ## Rimozione di server ESXi dalle istanze vCenter Server
+{: #vc_addingremovingservers-removing}
 
 ### Prima di rimuovere i server ESXi
+{: #vc_addingremovingservers-removing-prereq}
 
 * Non rimuovere i server ESXi dal client web VMware vSphere. Le modifiche che apporti al client web vSphere non vengono sincronizzate con la console {{site.data.keyword.vmwaresolutions_short}}.
 * Un'istanza vCenter Server con l'archiviazione NFS deve avere almeno 2 server ESXi e un'istanza vCenter Server con l'archiviazione vSAN deve avere almeno 4 server ESXi.
@@ -58,6 +65,7 @@ Se il tuo cluster iniziale ha vSAN come archiviazione, l'aggiunta di uno o più 
 * Quando rimuovi i server ESXi, i server vengono messi in modalità di manutenzione e, successivamente, tutte le macchine virtuali (VM) in esecuzione sui server vengono migrate prima di essere rimosse da vCenter Server. Per il massimo controllo sulla ricollocazione delle VM, si consiglia di mettere in modalità di manutenzione i server ESXi da rimuovere e di migrare manualmente le VM in esecuzione sui server utilizzando il client web VMware vSphere. Dopo di che, rimuovi i server ESXi utilizzando la console {{site.data.keyword.vmwaresolutions_short}}.
 
 ### Procedura per rimuovere i server ESXi
+{: #vc_addingremovingservers-removing-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza per la quale vuoi contrarre la capacità.
@@ -66,6 +74,7 @@ Se il tuo cluster iniziale ha vSAN come archiviazione, l'aggiunta di uno o più 
 5. Nella sezione **Server ESXi**, seleziona i server che vuoi rimuovere e fai clic su **Rimuovi**.
 
 ### Risultati dopo la rimozione dei server ESXi
+{: #vc_addingremovingservers-removing-results}
 
 1. Si potrebbe verificare un leggero ritardo sulla console mentre lo stato dell'istanza cambia da **Pronto per l'utilizzo** a **In fase di modifica**. Consenti il completamento dell'operazione prima di apportare altre modifiche all'istanza.
 2. Ti viene inviata una notifica via e-mail che indica che la richiesta di rimozione dei server ESXi è in fase di elaborazione. Sulla console, lo stato del cluster associato ai server ESXi diventa **In fase di modifica**.
@@ -75,12 +84,15 @@ Se il tuo cluster iniziale ha vSAN come archiviazione, l'aggiunta di uno o più 
    {:note}
 
 ## Aggiunta dell'archiviazione NFS alle istanze vCenter Server
+{: #section-adding-nfs-storage-to-vcenter-server-instances}
 
 ### Prima di aggiungere l'archiviazione NFS
+{: #vc_addingremovingservers-adding-nfs-storage-prereq}
 
 Non aggiungere l'archiviazione NFS dal client web VMware vSphere. Le modifiche che apporti al client web vSphere non vengono sincronizzate con la console {{site.data.keyword.vmwaresolutions_short}}. IBM non gestirà le condivisioni file NFS che aggiungi manualmente a un'istanza.
 
 ### Procedura per aggiungere l'archiviazione NFS
+{: #vc_addingremovingservers-adding-nfs-storage-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza per la quale vuoi espandere la capacità.
@@ -93,21 +105,25 @@ Non aggiungere l'archiviazione NFS dal client web VMware vSphere. Le modifiche c
 7. Fai clic su **Aggiungi storage NFS**.
 
 ### Risultati dopo l'aggiunta dell'archiviazione NFS
+{: #vc_addingremovingservers-adding-nfs-storage-results}
 
 1. Si potrebbe verificare un leggero ritardo sulla console mentre lo stato dell'istanza cambia da **Pronto per l'utilizzo** a **In fase di modifica**. Consenti il completamento dell'operazione prima di apportare altre modifiche all'istanza.
 2. Ti viene inviata una notifica via e-mail che indica che la richiesta di aggiunta dell'archiviazione NFS è in fase di elaborazione. Sulla console, lo stato del cluster associato all'archiviazione NFS diventa **In fase di modifica**.
 3. Se non vedi la nuova archiviazione NFS aggiunta all'elenco nel cluster, controlla le notifiche e-mail o della console per trovare ulteriori dettagli sull'errore.
 
 ## Rimozione dell'archiviazione NFS dalle istanze vCenter Server
+{: #vc_addingremovingservers-removing-nfs-storage}
 
 ### Prima di rimuovere l'archiviazione NFS
+{: #vc_addingremovingservers-removing-nfs-storage-prereq}
 
 * Non rimuovere l'archiviazione NFS dal client web VMware vSphere. Le modifiche che apporti al client web vSphere non vengono sincronizzate con la console {{site.data.keyword.vmwaresolutions_short}}.
-* Prima di rimuovere l'archiviazione NFS, assicurati di aver rimosso tutte le VM che risiedono nell'archiviazione.
-* Assicurati che le condivisioni che intendi rimuovere siano associate all'istanza vCenter Server corretta.
+* Prima di rimuovere l'archiviazione NFS, assicurati di aver rimosso tutte le VM che risiedono sull'archiviazione.
+* Assicurati che le condivisioni che pensi di rimuovere siano associate all'istanza vCenter Server corretta.
 * Lo stato del cluster deve essere **Pronto per l'utilizzo**.
 
 ### Procedura per rimuovere l'archiviazione NFS
+{: #vc_addingremovingservers-removing-nfs-storage-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza per la quale vuoi contrarre la capacità.
@@ -117,20 +133,21 @@ Non aggiungere l'archiviazione NFS dal client web VMware vSphere. Le modifiche c
 6. Fai clic su **Rimuovi** nella finestra **Rimuovi storage**.
 
 ### Risultati dopo la rimozione dell'archiviazione NFS
+{: #vc_addingremovingservers-removing-nfs-storage-results}
 
 1. Si potrebbe verificare un leggero ritardo sulla console mentre lo stato dell'istanza cambia da **Pronto per l'utilizzo** a **In fase di modifica**. Consenti il completamento dell'operazione prima di apportare altre modifiche all'istanza.
-2. Ti viene inviata una notifica via e-mail che indica che la tua richiesta di rimozione dell'archiviazione NFS è in fase di elaborazione. Sulla console, lo stato del cluster associato all'archiviazione NFS diventa **In fase di modifica**.
+2. Ti viene inviata una notifica via e-mail che indica che la richiesta di rimozione dell'archiviazione NFS è in fase di elaborazione. Sulla console, lo stato del cluster associato all'archiviazione NFS diventa **In fase di modifica**.
 3. L'archiviazione NFS viene completamente recuperata dall'infrastruttura {{site.data.keyword.cloud_notm}} alla fine del ciclo di fatturazione dell'infrastruttura {{site.data.keyword.cloud_notm}}, che in genere è di 30 giorni.
 
    Per l'archiviazione NFS rimossa ti vengono addebitati costi fino alla fine del ciclo di fatturazione dell'infrastruttura di {{site.data.keyword.cloud_notm}}.
    {:note}
 
+## Link correlati
+{: #vc_addingremovingservers-related}
 
-### Link correlati
-
-* [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
-* [Requisiti e pianificazione per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
-* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
+* [Requisiti e pianificazione per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
+* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 * [Metti un host in modalità di manutenzione](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Supporto del processore EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

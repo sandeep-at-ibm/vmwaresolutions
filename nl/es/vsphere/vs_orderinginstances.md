@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-10"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,30 +13,36 @@ lastupdated: "2019-01-10"
 {:important: .important}
 
 # Solicitud de clústeres nuevos de vSphere
+{: #vs_orderinginstances}
 
 Para desplegar una plataforma virtualizada de VMware altamente personalizable, solicite un clúster de VMware vSphere on {{site.data.keyword.cloud}}. Siga este procedimiento para definir un clúster nuevo de vSphere.
 
 Este procedimiento le guía por la selección de componentes de VMware, los valores de Servidor nativo de {{site.data.keyword.cloud_notm}}, los valores de almacenamiento y las opciones de red para crear un nuevo clúster. Después de realizar el pedido, la configuración del clúster se captura, de modo que puede volver y continuar para escalar el clúster si es necesario. Una vez finalizado el pedido, puede configurar manualmente el clúster de VMware en función de sus requisitos.
 
 ## Requisitos
+{: #vs_orderinginstances-req}
 
 Asegúrese de haber realizado las tareas siguientes:
-*  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
-*  Ha revisado los requisitos y las consideraciones del apartado [Requisitos y planificación de clústeres de vSphere](vs_planning.html).
+*  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+*  Ha revisado los requisitos y las consideraciones del apartado [Requisitos y planificación de clústeres de vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning).
 
 ## Valores del sistema
+{: #vs_orderinginstances-sys-settings}
 
 Debe especificar los siguientes valores de sistema cuando solicite un nuevo clúster de vSphere.
 
 ### Nombre de clúster
+{: #vs_orderinginstances-cluster-name}
 
 El nombre del clúster debe ser exclusivo dentro de su cuenta.
 
 ## Valores de licencia
+{: #vs_orderinginstances-licensing-settings}
 
 Seleccione los componentes de VMware que desea solicitar con el clúster y especifique la opción de licencia de los componentes.
 
 ### Paquetes de componentes para los usuarios de IBM Business Partner
+{: #vs_orderinginstances-component-bundles-for-bp-users}
 
 Si es un usuario de IBM Business Partner, puede seleccionar un paquete de licencias de componente al solicitar un nuevo clúster de vSphere. Están disponibles los paquetes siguientes:
 
@@ -58,6 +64,7 @@ Para los usuarios de IBM Business Partner, la opción Traiga su propia licencia 
 {:note}
 
 ### Componentes individuales para usuarios que no sean de Business Partner
+{: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 Si no es un Business Partner, puede seleccionar los siguientes componentes para el clúster de vSphere:
 * VMware vSphere Enterprise Plus
@@ -73,6 +80,7 @@ El componente de VMware vSAN no está disponible cuando realiza el pedido de VMw
 {:note}
 
 ### Opciones de licencia
+{: #vs_orderinginstances-licensing-options}
 
 Tiene las siguientes opciones para las licencias de los componentes seleccionados de VMware:
 * **Incluir licencia con la compra**: en este caso, se adquiere una nueva licencia para el componente VMware en su nombre. Se genera una licencia de VMware combinada que se adapte al tamaño del clúster del pedido.
@@ -84,8 +92,10 @@ El uso de claves de licencia individuales junto con las claves de licencia combi
 {:important}
 
 ## Valores de Servidor nativo
+{: #vs_orderinginstances-bare-metal-settings}
 
 ### Ubicación del centro de datos
+{: #vs_orderinginstances-dc-location}
 
 Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar el clúster.
 
@@ -95,6 +105,7 @@ Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar 
 * El centro de datos LON05 no da soporte al servidor nativo Certificado por SAP ni Broadwell.
 
 ### Skylake
+{: #vs_orderinginstances-skylake}
 
 Si selecciona **Skylake**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades. Las opciones disponibles dependen de si ha seleccionado el componente VMware vSAN.
 
@@ -107,6 +118,7 @@ Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Skylake
 | Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 ### Certificado por SAP
+{: #vs_orderinginstances-sap}
 
 El separador **Certificado por SAP** no está disponible si ha seleccionado previamente VMware vSAN. Si selecciona **Certificado por SAP**, no puede modificar los valores de CPU o RAM.
 
@@ -120,6 +132,7 @@ En función de sus requisitos, seleccione una configuración de servidor nativo:
   * Procesador Quad Intel Xeon E7-8890 v4 / 96 núcleos en total, 2,2 GHz / 4096 GB de RAM
 
 ### Broadwell
+{: #vs_orderinginstances-broadwell}
 
 Si selecciona **Broadwell**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades. Las opciones disponibles dependen de si ha seleccionado el componente VMware vSAN.
 
@@ -134,12 +147,14 @@ Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Número de servidores nativos
+{: #vs_orderinginstances-bare-metal-number}
 
 El número de servidores ESXi que desea añadir al clúster vSphere. Todos los servidores ESXi tienen la misma configuración.
 * Si ha seleccionado el componente VMware NSX, se necesitan un mínimo de tres servidores.
 * Si ha seleccionado el componente VMware vSAN, se necesitan un mínimo de cuatro servidores.
 
 ## Valores de almacenamiento
+{: #vs_orderinginstances-storage-settings}
 
 Para pedidos sin vSAN, se solicitan servidores ESXi con un chasis de 12 discos, con dos discos para el sistema operativo (SO) ESXi.
 
@@ -156,10 +171,12 @@ Si selecciona el componente VMware vSAN para el clúster, especifique los valore
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
 
 ## Valores de interfaz de red
+{: #vs_orderinginstances-network-interface-settings}
 
 Debe especificar los siguientes valores de interfaz de red cuando solicite un nuevo clúster de vSphere.
 
 ### Prefijo de nombre de host
+{: #vs_orderinginstances-host-name-prefix}
 
 El nombre de host se utiliza para todos los pedidos de servidores nativos. Se recomienda utilizar el nombre de host para todas las máquinas virtuales de gestión, como por ejemplo vCenter Server y NSX.
 
@@ -169,6 +186,7 @@ El prefijo del nombre de host debe cumplir los siguientes requisitos:
 * La longitud máxima es de 10 caracteres.
 
 ### Etiqueta de subdominio
+{: #vs_orderinginstances-subdomain-label}
 
 La etiqueta de subdominio debe cumplir los siguientes requisitos:
 *  Solo se permiten caracteres alfanuméricos y el guión (-).
@@ -177,6 +195,7 @@ La etiqueta de subdominio debe cumplir los siguientes requisitos:
 *  La etiqueta de subdominio debe ser exclusiva dentro de su cuenta.
 
 ### Nombre de dominio
+{: #vs_orderinginstances-domain-name}
 
 El nombre de dominio se utiliza para todos los {{site.data.keyword.baremetal_short}} y debe cumplir los siguientes requisitos:
 * El nombre debe constar de dos o más series de caracteres separadas por un punto (.)
@@ -187,6 +206,7 @@ El nombre de dominio se utiliza para todos los {{site.data.keyword.baremetal_sho
 * La longitud máxima del nombre de dominio es de 189 caracteres.
 
 ### Red pública o privada
+{: #vs_orderinginstances-public-private-network}
 
 Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en la selección de **Red pública y privada** o de **Solo red privada**. Los siguientes servicios de complemento necesitan NIC públicos y no están disponibles si selecciona la opción privada:
 
@@ -196,15 +216,20 @@ Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en 
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### VLAN
+{: #vs_orderinginstances-vlans}
 
 Los valores del sistema de redes dependen de si ha seleccionado **Realizar pedido de nuevas VLAN** o **Seleccionar las VLAN existentes**.
 
 Se necesita una VLAN pública y dos VLAN privadas para el pedido del clúster. Las dos VLAN privadas se conectan en modalidad troncal en cada servidor nativo.
 
 #### Realizar pedido de nuevas VLAN
+{: #vs_orderinginstances-new-vlans}
+
 Seleccione esta opción para solicitar una VLAN pública nueva y dos VLAN privadas nuevas.
 
-#### Seleccionar las VLAN existentes  
+#### Seleccionar las VLAN existentes
+{: #vs_orderinginstances-existing-vlans}
+
 En función del {{site.data.keyword.CloudDataCent_notm}} que haya seleccionado, puede que haya VLAN públicas y privadas existentes disponibles.
 
   Cuando seleccione reutilizar las VLAN públicas y privadas existentes, especifique las VLAN y las subredes:
@@ -219,14 +244,17 @@ En función del {{site.data.keyword.CloudDataCent_notm}} que haya seleccionado, 
 * Asegúrese de que todas las VLAN que seleccione estén en el mismo pod. Los servidores ESXi no se pueden suministrar en VLAN en pods mixtos.
 
 #### Par de alta disponibilidad de FortiGate Physical Appliance 300 Series
+{: #vs_orderinginstances-fortigate-physical-appliance}
 
-También puede seleccionar si desea incluir el par de alta disponibilidad de dispositivos físicos FortiGate serie 300 para proteger el entorno de nube. Para obtener más información, consulte [Visión general de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html).
+También puede seleccionar si desea incluir el par de alta disponibilidad de dispositivos físicos FortiGate serie 300 para proteger el entorno de nube. Para obtener más información, consulte [Visión general de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
 
 ## Resumen del pedido
+{: #vs_orderinginstances-order-summary}
 
 En función de sus configuraciones, el coste estimado se genera y se muestra al instante en el panel **Resumen de pedido** a la derecha. Pulse **Detalles sobre precios** para generar un documento PDF que proporcione los detalles de la estimación.
 
 ## Procedimiento para solicitar clústeres de vSphere
+{: #vs_orderinginstances-procedure}
 
 1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** en el panel de navegación izquierdo y pulse **VMware vSphere** en la sección **Centros de datos virtuales**.
 2. En la página **VMware vSphere on IBM Cloud**, pulse **Crear**.  
@@ -260,6 +288,7 @@ En función de sus configuraciones, el coste estimado se genera y se muestra al 
    {:note}
 
 ### Resultados
+{: #vs_orderinginstances-results}
 
 Si ha guardado la configuración del clúster como una plantilla, recibirá una notificación en la consola que indicará que la configuración se ha guardado correctamente; luego podrá encontrar la plantilla en la lista **Configuraciones de clúster**.
 
@@ -268,8 +297,9 @@ Si ha realizado un pedido, el despliegue del clúster se inicia automáticamente
 A diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Instancias desplegadas**.
 {:note}
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vs_orderinginstances-related}
 
-* [Solicitud de clústeres de vSphere en función de configuraciones existentes](vs_orderingbasedonexistingconfig.html)
-* [Escalado de clústeres existentes](vs_scalingexistingclusters.html)
-* [Escalado de clústeres creados fuera de la consola](vs_orderingforclustersoutside.html)
+* [Solicitud de clústeres de vSphere en función de configuraciones existentes](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
+* [Escalado de clústeres existentes](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [Escalado de clústeres creados fuera de la consola](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

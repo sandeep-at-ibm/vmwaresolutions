@@ -457,7 +457,7 @@
 	<text transform="translate(70.334 388.67)"><tspan class="st2 st5" x="0" y="0">  SDDC</tspan><tspan class="st2 st5" x="0" y="14.4">Manager</tspan></text>
 	<text transform="translate(231.33 374.33)"><tspan class="st2 st5" x="0" y="0"> Applicazione</tspan><tspan class="st2 st5" x="0" y="14.4">   vCenter</tspan><tspan class="st2 st5" x="0" y="28.8">Server</tspan></text>
 <text x="157.29842" y="389.90515"><tspan class="st2 st5" x="157.29842" y="389.90515" font-family="IBMPlexSans" font-size="12px">IBM</tspan></text>
-<text x="140.46999" y="403.13916"><tspan class="st2 st5" x="140.46999" y="403.13916" font-family="IBMPlexSans" font-size="12px">CloudDriver</tspan></text>
+<text x="140.46999" y="403.13916"><tspan class="st2 st5" x="140.46999" y="403.13916" font-family="IBMPlexSans" font-size="12px"> CloudDriver                     </tspan></text>
 <g id="Softlayer_file_storage">
 					<linearGradient id="SVGID_13_" x1="806" x2="841.99" y1="499.7" y2="499.7" gradientTransform="matrix(.866 -.5 .5 .866 -198.9 56.26)" gradientUnits="userSpaceOnUse">
 					<stop stop-color="#fff" offset="0"/>

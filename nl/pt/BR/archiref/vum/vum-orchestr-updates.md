@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-20"
+lastupdated: "2019-02-18"
 
 ---
 
-#	Upgrades Orquestrados
+# Upgrades Orquestrados
+{: #vum-orchestr-updates}
 
 É possível usar upgrades orquestrados para fazer upgrade do hardware virtual e do VMware Tools de máquinas virtuais no inventário após a atualização dos hosts vSphere ESXi. Depois que os hosts são atualizados, a linha de base de upgrade do VMware Tools é executada primeiro, seguida pela linha de base de upgrade de hardware da máquina virtual. É possível usar upgrades orquestrados em um nível de cluster, pasta ou data center.
 
@@ -33,6 +34,7 @@ Como alternativa, é possível definir o limite para o número de hosts que pode
 O fluxo de trabalho a seguir descreve o processo para executar um upgrade orquestrado:
 
 ## Etapa 1
+{: #vum-orchestr-updates-step1}
 
 1. Use o vSphere Web Client para efetuar login no VCSA.
 2. Selecione **Página inicial** > **Update Manager**, na guia **Objetos**, selecione uma **instância do Update Manager**.
@@ -47,6 +49,7 @@ O fluxo de trabalho a seguir descreve o processo para executar um upgrade orques
 11. Revise a página **Pronto para concluir**, clique em **Concluir** e o grupo de linhas de base do host será exibido na área de janela Grupos de linhas de base.
 
 ## Etapa 2
+{: #vum-orchestr-updates-step2}
 
 1. Crie um grupo de linhas de base da máquina virtual, contendo a linha de base Upgrade do VMware Tools para corresponder ao host e a linha de base Upgrade de hardware da MV para corresponder ao host, visualização Administração do VUM.
 2. Anexe o grupo de linhas de base a um objeto contêiner do vCenter que contenha as máquinas virtuais das quais você deseja fazer upgrade.
@@ -58,7 +61,8 @@ O fluxo de trabalho a seguir descreve o processo para executar um upgrade orques
 
 Agora é possível usar esses grupos de linha de base nos processos de varredura, revisão, preparação e correção.
 
-### Links relacionados
+## Links relacionados
+{: #vum-orchestr-updates-related}
 
 * [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)

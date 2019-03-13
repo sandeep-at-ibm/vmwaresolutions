@@ -673,7 +673,7 @@ GAARzQAAAABJRU5ErkJggg==" transform="matrix(0.7785 0 0 0.7818 506.0419 392.349)"
 <rect x="107" y="21" class="st45" width="173" height="63.3"/>
 <text transform="matrix(1 0 0 1 107 34.3198)"><tspan x="0" y="0" class="st46 st47">Active Directory, DNS </tspan><tspan x="0" y="21.6" class="st46 st47">e server NTP</tspan></text>
 <rect x="313.4" y="21" class="st45" width="79.6" height="51.6"/>
-<text transform="matrix(1 0 0 1 313.356 34.3197)"><tspan x="0" y="0" class="st46 st47">NSX</tspan><tspan x="0" y="21.6" class="st46 st47">Manager</tspan></text>
+<text transform="matrix(1 0 0 1 313.356 34.3197)"><tspan x="0" y="0" class="st46 st47">   NSX</tspan><tspan x="0" y="21.6" class="st46 st47">Manager</tspan></text>
 <rect x="413.4" y="21" class="st45" width="149.6" height="57.3"/>
 <text transform="matrix(1 0 0 1 413.356 34.3198)"><tspan x="0" y="0" class="st46 st47">Applicazione VMware vCenter</tspan><tspan x="0" y="21.6" class="st46 st47">Server</tspan></text>
 <rect x="588.4" y="21" class="st45" width="155.6" height="55.3"/>

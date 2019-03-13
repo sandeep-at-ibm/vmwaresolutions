@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Preparazione dell'ambiente di installazione
+{: #hcx-archi-prep-install}
 
 L'installazione di VMware HCX on IBM Cloud ha i seguenti requisiti software:
 * vSphere 5.5 U3 o vSphere 6.0u2 o superiore.
@@ -15,12 +16,14 @@ L'installazione di VMware HCX on IBM Cloud ha i seguenti requisiti software:
 * Per utilizzare il vMotion tra cloud, si applicano le stesse limitazioni dell'affinità tra i cloud come se fossero in loco. Per ulteriori informazioni, consulta [VMware EVC and CPU Compatibility FAQ](http://bit.ly/2vK6Sp5).
 
 ## Configurazione della connettività di rete
+{: #hcx-archi-port-req-config-net}
 
 HCX deve attraversare internet pubblico e le linee private e connettersi ai componenti del data center, come ad esempio le reti, gli switch e i gruppi di porte.
-* [Requisiti di accesso alla porta](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-port-req.html) elenca le porte che devono essere aperte in modo che le applicazioni virtuali HCX possano essere installate correttamente.
+* [Requisiti di accesso alla porta](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req) elenca le porte che devono essere aperte in modo che le applicazioni virtuali HCX possano essere installate correttamente.
 * Sia l'ambiente vSphere in loco che VCF/VCS HCX Cloud devono consentire la sincronizzazione dell'orologio NTP (Network Time Protocol) con i dispositivi in loco vSphere e VCF/VCS HCX. La porta UDP 123 deve essere accessibile alle reti e alle applicazioni virtuali HCX.
 
 ## Ambiente in loco
+{: #hcx-archi-port-req-on-prem-env}
 
 Prima di installare HCX, verifica che il tuo ambiente possa supportare le attività che desideri eseguire. L'ambiente in loco deve supportare le seguenti attività prima che possa essere installato HCX.
 * Virtual Center con vSphere 5.5 Aggiornamento 3 o 6.0 Aggiornamento 2.
@@ -35,6 +38,7 @@ Prima di installare HCX, verifica che il tuo ambiente possa supportare le attivi
   * Il vCenter è nella modalità di collegamento (in cui il vCenter secondario utilizza il servizio SSO dal vCenter primario o da un servizio SSO esterno).
 
 ## Verifica dell'ambiente di installazione di livello 2
+{: #hcx-archi-port-req-verify-layer-2-inst}
 
 L'estensione della rete di livello 2 ha i seguenti requisiti:
 * Un vSphere Enterprise Plus Edition.
@@ -45,7 +49,8 @@ L'estensione della rete di livello 2 ha i seguenti requisiti:
   * Se la rete deve essere estesa su internet pubblico o su una VPN (su un percorso alternativo) la macchina virtuale L2C in VCF/VCS richiede un indirizzo IP. L'indirizzo IP remoto è obbligatorio per configurare il concentratore di livello 2.
   * Se vuoi più concentratori di livello 2, ognuno di essi deve avere un indirizzo IP in loco e nel cloud.
 
-### Link correlati
+## Link correlati
+{: #hcx-archi-port-req-related}
 
-* [Installazione e configurazione dell'HCX sull'origine](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
+* [Installazione e configurazione dell'HCX sull'origine](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
 * [VMware EVC and CPU Compatibility FAQ](http://bit.ly/2vK6Sp5)

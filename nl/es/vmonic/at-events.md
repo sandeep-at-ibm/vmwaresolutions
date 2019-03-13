@@ -2,18 +2,20 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-01-09"
+lastupdated: "2019-02-14"
 
 ---
 
-# Sucesos de {{site.data.keyword.cloudaccesstrailshort}}
+# Sucesos de Activity Tracker
+{: #at-events}
 
 Utilice el servicio {{site.data.keyword.cloudaccesstrailfull}} para realizar el seguimiento de cómo interactúan los usuarios y las aplicaciones con {{site.data.keyword.vmwaresolutions_short}} en {{site.data.keyword.Bluemix_notm}}.
 
 El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra las actividades iniciadas por el usuario que cambian el estado de un servicio en {{site.data.keyword.Bluemix_notm}}. Para obtener
-más información, consulte [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
+más información, consulte [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla).
 
-## Tabla de sucesos de {{site.data.keyword.cloudaccesstrailshort}}
+## Tabla de sucesos de Activity Tracker
+{: #at-events-table}
 
 Consulte la tabla siguiente para ver la descripción de las columnas en la tabla de sucesos de Activity Tracker.
 
@@ -30,9 +32,10 @@ Tabla 1. Descripción de la tabla de sucesos de Activity Tracker
 | reason_reasonCode     | Entero    | El código de razón del resultado. |
 | initiator_host_address| Serie     | La dirección IP de la que procede la solicitud. |
 
-Para obtener más información, consulte [Campos de sucesos de Activity Tracker](https://console.bluemix.net/docs/services/cloud-activity-tracker/at_event.html#at_event).
+Para obtener más información, consulte [Campos de sucesos de Activity Tracker](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-at_event).
 
 ## Seguimiento de sucesos de gestión de instancias
+{: #at-events-instance-mgmt}
 
 Cuando gestiona las cuentas de usuario, las instancias, los clústeres y los servicios en {{site.data.keyword.vmwaresolutions_short}}, se genera un suceso y se envía al **dominio de la cuenta** en Activity Tracker.
 
@@ -75,10 +78,11 @@ Tabla 2. Descripción de las acciones que generan sucesos de gestión
 | `vmware-solutions.service.undeploy` | Se ha ejecutado la acción de eliminar un servicio de una instancia. | `success` |
 
 ## Seguimiento de sucesos para el servicio KMIP for VMware on IBM Cloud
+{: #at-events-kmip}
 
 Cuando gestiona claves para el servicio KMIP for VMware on {{site.data.keyword.cloud_notm}}, se genera un suceso y se envía al **dominio de cuenta** de Activity Tracker.
 
-Consulte la tabla siguiente para ver las acciones que generan y envían sucesos para el servicio KMIP for VMware on {{site.data.keyword.cloud_notm}} .
+Consulte la tabla siguiente para ver las acciones que generan y envían sucesos para el servicio KMIP for VMware on {{site.data.keyword.cloud_notm}}.
 
 Tabla 3. Descripción de las acciones que generan sucesos para el servicio KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
@@ -90,14 +94,16 @@ Tabla 3. Descripción de las acciones que generan sucesos para el servicio KMIP 
 | `vmware-solutions.key.activate`             | <ul><li>Se ha recibido la solicitud de activar una clave.</li><li>Se ha respondido a la solicitud de activar una clave.</li></ul> |  <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.key.revoke`               | <ul><li>Se ha recibido la solicitud de revocar una clave.</li><li>Se ha respondido a la solicitud de revocar una clave.</li></ul> |  <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.key.destroy`              | <ul><li>Se ha recibido la solicitud de destruir una clave.</li><li>Se ha respondido a la solicitud de destruir una clave.</li></ul> |  <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
-| `vmware-solutions.key.discover_versions`    | <ul><li>Se ha recibido la solicitud de buscar la versión de KMIP for VMware on {{site.data.keyword.cloud_notm}}.</li><li>Se ha respondido a la solicitud de buscar la versión de KMIP for VMware on {{site.data.keyword.cloud_notm}}.</li></ul> |  <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
+| `vmware-solutions.key.discover_versions`    | <ul><li>Se ha recibido la solicitud de buscar la versión del servicio KMIP for VMware on {{site.data.keyword.cloud_notm}}.</li><li>Se ha respondido a la solicitud de buscar la versión del servicio KMIP for VMware on {{site.data.keyword.cloud_notm}}.</li></ul> |  <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 
 ## Dónde ver los sucesos
+{: #at-events-viewing}
 
 Los sucesos de {{site.data.keyword.cloudaccesstrailshort}} están disponibles en el **dominio de la cuenta** de {{site.data.keyword.cloudaccesstrailshort}} que está disponible en la región de {{site.data.keyword.Bluemix_notm}} en la que se han generado los sucesos.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #at-events-related}
 
-* [Suministro de Activity Tracker](../../cloud-activity-tracker/how-to/provision.html)
-* [Navegación al panel de control de Activity Tracker en la consola de {{site.data.keyword.cloud_notm}}](../../cloud-activity-tracker/how-to/manage-events-ui/launch_at_ui.html)
-* [Visión general de KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_standalone_considerations.html)
+* [Suministro de Activity Tracker](/docs/services/cloud-activity-tracker/how-to?topic=cloud-activity-tracker-provision)
+* [Navegación al panel de control de Activity Tracker en la consola de {{site.data.keyword.cloud_notm}}](/docs/services/cloud-activity-tracker/how-to/manage-events-ui?topic=cloud-activity-tracker-launch_at_ui)
+* [Visión general de KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)

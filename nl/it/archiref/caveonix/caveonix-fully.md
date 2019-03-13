@@ -23,7 +23,7 @@ Tabella 1. Base - interfaccia utente
 |RAM	|6 GB|
 |Disco	|60 GB|
 |SO	|CentOS 7|
-|Componenti dell'applicazione installati |IU|
+|Componenti dell'applicazione installati	|IU|
 
 Tabella 2. Base - applicazioni e plug-in
 
@@ -35,7 +35,7 @@ Tabella 2. Base - applicazioni e plug-in
 |RAM	|16 GB|
 |Disco	|500 GB|
 |SO	|CentOS 7|
-|Componenti dell'applicazione installati |Applicazione, plugin|
+|Componenti dell'applicazione installati	|Applicazione, plugin|
 
 Tabella 3. Base - raccoglitore centrale
 
@@ -45,9 +45,9 @@ Tabella 3. Base - raccoglitore centrale
 |Quantità VM	|3 |
 |vCPU	|8 |
 |RAM	|16 GB |
-|Disco	|500 GB|
-|SO	|CentOS 7|
-|Componenti dell'applicazione installati |Raccoglitore centrale (cluster) |
+|Disco	|500 GB |
+|SO	|CentOS 7 |
+|Componenti dell'applicazione installati	|Raccoglitore centrale (cluster) |
 
 Tabella 4. Base - database relazionale
 
@@ -58,8 +58,8 @@ Tabella 4. Base - database relazionale
 |vCPU	|8 |
 |RAM	|16 GB |
 |Disco	|1 TB |
-|SO	|CentOS 7 |
-|Componenti dell'applicazione installati |Archivio dati relazionale (primario/secondario) |
+|SO|CentOS 7 |
+|Componenti dell'applicazione installati	|Archivio dati relazionale (primario/secondario) |
 
 Tabella 5. Base - archivio dati di messaggistica
 
@@ -70,8 +70,8 @@ Tabella 5. Base - archivio dati di messaggistica
 |vCPU	|8 |
 |RAM	|16 GB |
 |Disco	|1 TB |
-|SO	|CentOS 7|
-|Componenti dell'applicazione installati |Archivio dati di messaggistica (cluster) |
+|SO	|CentOS 7 |
+|Componenti dell'applicazione installati	|Archivio dati di messaggistica (cluster) |
 
 Tabella 6. Base - archivio dati indice (nodi master)
 
@@ -82,8 +82,8 @@ Tabella 6. Base - archivio dati indice (nodi master)
 |vCPU	|8 |
 |RAM	|16 GB |
 |Disco	|1 TB |
-|SO	|CentOS 7|
-|Componenti dell'applicazione installati |Archivio dati indice (nodi master) |
+|SO	|CentOS 7 |
+|Componenti dell'applicazione installati	|Archivio dati indice (nodi master) |
 
 Tabella 7. Database - archivio dati indice (nodi di dati)
 
@@ -93,9 +93,9 @@ Tabella 7. Database - archivio dati indice (nodi di dati)
 |Quantità VM	|5 |
 |vCPU	|8 |
 |RAM	|16 GB |
-|Disco	| 4 TB |
-|SO	|CentOS 7|
-|Componenti dell'applicazione installati |Archivio dati indice (nodi di dati) |
+|Disco	|4 TB |
+|SO	|CentOS 7 |
+|Componenti dell'applicazione installati	|Archivio dati indice (nodi di dati) |
 
 I dettagli della VM di ridimensionamento incrementale sono descritti nella seguente tabella.
 
@@ -108,8 +108,8 @@ Tabella 8. Ridimensionamento incrementale - nodi di dati
 |vCPU	|8 |
 |RAM	|16 GB |
 |Disco	|4 TB |
-|SO	|CentOS 7|
-|Componenti dell'applicazione installati |Nodi di dati (ridimensionamento incrementale) |
+|SO	|CentOS 7 |
+|Componenti dell'applicazione installati	|Nodi di dati (ridimensionamento incrementale) |
 
 I dettagli della VM del raccoglitore remoto sono visualizzati nella seguente tabella.
 
@@ -121,10 +121,10 @@ Tabella 9. Raccoglitore remoto
 |vCPU	|8 |
 |RAM	|8 GB |
 |Disco	|1 TB |
-|SO	|CentOS 7|
-|Componenti dell'applicazione installati |Raccoglitore remoto |
+|SO	|CentOS 7 |
+|Componenti dell'applicazione installati	|Raccoglitore remoto |
 
 ## Link correlati
 {: #caveonix-fully-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,12 +13,14 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Application de mises à jour à des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_applyingupdates}
 
 Le processus d'application de modules de correction et de mises à jour aux instances vCenter Server with Hybridity Bundle est automatisé uniquement pour les composants de gestion. Les mises à jour VMware doivent être appliquées manuellement.
 
 ## Avant de commencer
+{: #vc_hybrid_applyingupdates-prereq}
 
-A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
+A compter de la version 2.5, les mises à jour d'IBM CloudDriver ne sont plus répertoriées car les mises à jour automatiques sont activées. Les actions telles que l'ajout d'un hôte, l'ajout d'un cluster et la commande d'un service entraînent la mise à jour automatique de l'instance vers la version la plus récente. Pour plus d'informations sur les mises à jour automatiques, voir la section *Résilience IBM CloudDriver* dans [Notes sur l'édition pour la version 2.5](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25).
 {:note}
 
 Avant d'appliquer une mise à jour, développez l'entrée de mise à jour en cliquant sur la flèche vers le bas et vérifiez les informations suivantes :
@@ -39,6 +41,7 @@ Tableau 1. Niveaux de mise à jour et impact
 | Majeur  | Cette mise à jour affecte certains ou tous les systèmes. Vous devez l'appliquer pendant un temps d'indisponibilité planifié. |  
 
 ## Procédure d'application de mises à jour à des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_applyingupdates-procedure}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance à mettre à jour.
@@ -63,13 +66,14 @@ Tableau 1. Niveaux de mise à jour et impact
 7. Si vous appliquez des mises à jour à des instances vCenter Server dans une configuration de déploiement multisite, une section intitulée **Etapes de mise à jour obligatoires** s'affiche. Cette section répertorie les opérations de mise à jour requises pour toutes les instances du déploiement multisite. Effectuez les étapes dans l'ordre en cliquant sur **Appliquer la mise à jour** pour chaque étape. Vous devez attendre la fin de chaque étape avant de passer à la suivante.   
 
 ## Résultats
+{: #vc_hybrid_applyingupdates-results}
 
-2. Lorsque vous appliquez une mise à jour, un enregistrement s'affiche dans la liste des statuts de mise à jour logicielle, où vous pouvez visualiser la progression et le statut détaillés de la mise à jour. Lorsque la mise à jour a réussi, un enregistrement s'affiche dans la liste des mises à jour logicielles installées.
+1. Lorsque vous appliquez une mise à jour, un enregistrement s'affiche dans la liste des statuts de mise à jour logicielle, où vous pouvez visualiser la progression et le statut détaillés de la mise à jour. Lorsque la mise à jour a réussi, un enregistrement s'affiche dans la liste des mises à jour logicielles installées.
 
   Pour extraire le statut le plus récent d'un travail de mise à jour, cliquez sur l'icône d'actualisation dans l'angle supérieur droit de la page.
   {:tip}
 
-3. Pour des détails sur les statuts de mise à jour, voir la liste suivante :
+2. Pour des détails sur les statuts de mise à jour, voir la liste suivante :
 <dl class="dl">
 <dt class="dt dlterm">Disponible</dt>
 <dd class="dd">La mise à jour est disponible pour application. Vous ne pouvez pas sélectionner une mise à jour disponible tant que toutes ses mises à jour précédentes n'ont pas été appliquées.
@@ -88,10 +92,11 @@ avant d'appliquer de nouveau la mise à jour.</dd>
 <dd class="dd">Le statut du travail de mise à jour est inconnu. Contactez le support IBM pour obtenir de l'aide.</dd>
 </dl>
 
-4. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à relancer la mise à niveau à partir de l'étape où elle a échoué.
+3. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à relancer la mise à niveau à partir de l'étape où elle a échoué.
 
-### Liens connexes
+## Liens connexes
+{: #vc_hybrid_applyingupdates-related}
 
-* [Présentation de vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Présentation de vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

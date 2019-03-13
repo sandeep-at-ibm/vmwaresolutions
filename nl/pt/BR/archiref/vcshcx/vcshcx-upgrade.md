@@ -22,4 +22,4 @@ ID do sistema, forneça tanto o lado do cliente quanto o da nuvem. Use SSH para 
 ## Links relacionados
 {: #vcshcx-upgrade-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

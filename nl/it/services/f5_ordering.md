@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -13,26 +13,31 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Ordine di F5 on IBM Cloud
+{: #f5_ordering}
 
 Puoi ordinare il servizio F5 on {{site.data.keyword.cloud}} quando ordini una nuova istanza con il servizio incluso o aggiungendo il servizio alla tua istanza esistente.
 
 ## Ordine di F5 on IBM Cloud per una nuova istanza
+{: #f5_ordering-new}
 
 Puoi ordinare una nuova istanza con F5 on {{site.data.keyword.cloud_notm}} utilizzando uno dei seguenti metodi:
 * Dalla console {{site.data.keyword.vmwaresolutions_short}}, quando ordini una nuova istanza, seleziona **F5 on IBM Cloud** nella sezione **Servizi**.
 * Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **F5 on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi alla nuova istanza**.
 
 ## Ordine di F5 on IBM Cloud per un'istanza esistente
+{: #f5_ordering-existing}
 
 Puoi aggiungere il servizio F5 on {{site.data.keyword.cloud_notm}} in un'istanza esistente utilizzando uno dei seguenti metodi:
 * Dalla console {{site.data.keyword.vmwaresolutions_short}}, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi**.
 * Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **F5 on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi all'istanza esistente**.
 
 ## Configurazione del servizio F5 on IBM Cloud
+{: #f5_ordering-config}
 
 Quando ordini il servizio, fornisci le seguenti impostazioni.
 
 ### Connessione attivazione licenza F5
+{: #f5_ordering-config-license}
 
 Seleziona **Rete pubblica** o **Rete privata** per l'attivazione della licenza. Se il cluster di destinazione è configurato con interfacce di rete solo private, è disponibile solo l'opzione **Rete privata**. Questa selezione determina il modo in cui i server virtuali F5 contatteranno il server di licenza F5 e non influirà sul piano dati del carico di lavoro.
 
@@ -44,14 +49,17 @@ Il proxy autenticato non è supportato.
 {:note}
 
 ### Nome
+{: #f5_ordering-config-name}
 
 Immetti il nome del servizio.
 
 ### Larghezza di banda massima
+{: #f5_ordering-config-bandwidth}
 
 Specifica la velocità effettiva massima del dispositivo F5 BIG–IP.
 
 ### Modello di licenza
+{: #f5_ordering-config-license-model}
 
 Il modello di licenza per il servizio F5 on {{site.data.keyword.cloud_notm}} offre le seguenti opzioni:
 <dl class="dl">
@@ -66,13 +74,14 @@ Il modello di licenza per il servizio F5 on {{site.data.keyword.cloud_notm}} off
 Non puoi modificare il modello di licenza dopo l'installazione del servizio. Per modificare il modello di licenza, devi rimuovere il servizio esistente e reinstallare il servizio scegliendo un modello di licenza diverso.
 {:important}
 
-### Link correlati
+## Link correlati
+{: #f5_ordering-related}
 
-* [Panoramica di F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_considerations.html)
-* [Gestione di F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_f5.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
-* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Panoramica di F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)
+* [Gestione di F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Guide di distribuzione F5](https://f5.com/solutions/deployment-guides){:new_window}

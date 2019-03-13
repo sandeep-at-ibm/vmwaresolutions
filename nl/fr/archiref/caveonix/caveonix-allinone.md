@@ -21,9 +21,9 @@ Tableau 1. Paramètres tout en un
 |Nombre de machines virtuelles	|1|
 |vCPU	|16|
 |RAM	|32 Go|
-|Disque |80 Go|
+|Disque	|80 Go|
 |Système d'exploitation	|CentOS 7|
-|Composants d'application installés |	Interface utilisateur, application, plug-in, collecteur central, magasin de données d'index, magasin de données de messagerie, magasin de données relationnel, contrôleur distant|
+|Composants d'application installés|	Interface utilisateur, application, plug-in, collecteur central, magasin de données d'index, magasin de données de messagerie, magasin de données relationnel, contrôleur distant|
 
 Le tableau suivant décrit les caractéristiques des machines virtuelles du collecteur distant additionnel.
 
@@ -35,10 +35,10 @@ Tableau 2. Collecteur distant
 |vCPU	|8|
 |RAM	|8 Go|
 |Disque	|1 To|
-|Système d'exploitation |CentOS 7|
-|Composants d'application installés |Collecteur distant|
+|Système d'exploitation	|CentOS 7|
+|Composants d'application installés	|Collecteur distant|
 
 ## Liens connexes
 {: #caveonix-allinone-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

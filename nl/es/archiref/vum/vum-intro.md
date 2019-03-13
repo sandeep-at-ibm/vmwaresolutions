@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # Introducción a VMware Update Manager
+{: #vum-intro}
 
 La finalidad de este documento es proporcionarle, como administrador del sistema de la instancia de {{site.data.keyword.vmwaresolutions_full}} vCenter Server, instrucciones sobre cómo configurar VMware Update Manager (VUM) para mantener la moneda del entorno de vCenter Server.
 
@@ -38,20 +39,20 @@ Aunque VUM se puede configurar para importar actualizaciones desde un repositori
 En vSphere 6.5, ya no se da soporte al registro de VUM en un VCSA durante la instalación del servidor VUM en un sistema Windows independiente en el que no puede desplegar VUM en una VM dentro del entorno de vCenter Server.
 
 Este documento está organizado en las secciones siguientes:
-* [Visión general de VMware Update Manager](vum-overview.html): se describe el proceso VUM y se ofrece una introducción a los términos clave necesarios para comprender las operaciones y la interfaz de usuario de la herramienta.
+* [Visión general de VMware Update Manager](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-overview): se describe el proceso VUM y se ofrece una introducción a los términos clave necesarios para comprender las operaciones y la interfaz de usuario de la herramienta.
 * **Instalación, configuración y uso**: se describen los pasos necesarios para que VUM funcione en una instancia de vCenter Server:
-  - [Configuración inicial](vum-init-config.html): una tarea que se realiza una sola vez para:
+  - [Configuración inicial](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config): una tarea que se realiza una sola vez para:
       - Configurar la red NSX para permitir que el servidor proxy acceda a internet.
       - Instalar y configurar un servidor proxy para proporcionar acceso a internet para VUM.
       - Que la configuración inicial de VUM utilice el servidor proxy.
-  - [Recopilación de los metadatos](vum-metadata.html): VUM descarga metadatos sobre las actualizaciones, parches o extensiones mediante un proceso automático predefinido que puede modificar. A intervalos regulares configurables, VUM se pone en contacto con VMware o con orígenes de terceros, para recopilar los metadatos más recientes sobre actualizaciones, parches o extensiones disponibles.
-  - [Creación de líneas base](vum-baselines.html): utilice las líneas base predefinidas y los grupos de línea base o cree unos personalizados. Las líneas base y los grupos de línea base se adjuntan a los objetos de inventario.
-  - [Exploración y revisión](vum-scanning.html): se escanean los objetos de inventario y se revisan los resultados para determinar cómo cumplen con las líneas base y los grupos de línea base. Los resultados de la exploración se pueden filtrar por búsqueda de texto, selección de grupos, selección de línea base y selección de estado de conformidad.
-  - [Transferencia y corrección](vum-staging.html): los parches y las extensiones se pueden transferir opcionalmente en etapas antes de la corrección para asegurarse de que se descarguen en el host. Durante la corrección, VUM aplica los parches, las extensiones y las actualizaciones a los objetos de inventario.
+  - [Recopilación de los metadatos](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-metadata): VUM descarga metadatos sobre las actualizaciones, parches o extensiones mediante un proceso automático predefinido que puede modificar. A intervalos regulares configurables, VUM se pone en contacto con VMware o con orígenes de terceros, para recopilar los metadatos más recientes sobre actualizaciones, parches o extensiones disponibles.
+  - [Creación de líneas base](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines): utilice las líneas base predefinidas y los grupos de línea base o cree unos personalizados. Las líneas base y los grupos de línea base se adjuntan a los objetos de inventario.
+  - [Exploración y revisión](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-scanning): se escanean los objetos de inventario y se revisan los resultados para determinar cómo cumplen con las líneas base y los grupos de línea base. Los resultados de la exploración se pueden filtrar por búsqueda de texto, selección de grupos, selección de línea base y selección de estado de conformidad.
+  - [Transferencia y corrección](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-staging): los parches y las extensiones se pueden transferir opcionalmente en etapas antes de la corrección para asegurarse de que se descarguen en el host. Durante la corrección, VUM aplica los parches, las extensiones y las actualizaciones a los objetos de inventario.
 
-En este documento se da por supuesto que ha desplegado una instancia de vCenter Server primaria o varias instancias de vCenter Server primarias separadas. Si tiene instancias de vCenter Server primarias y secundarias desplegadas y que utilizan el inicio de sesión único (SSO), consulte [vCenters enlazados por SSO](vum-updating-vcsa.html).
+En este documento se da por supuesto que ha desplegado una instancia de vCenter Server primaria o varias instancias de vCenter Server primarias separadas. Si tiene instancias de vCenter Server primarias y secundarias desplegadas y que utilizan el inicio de sesión único (SSO), consulte [vCenters enlazados por SSO](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa).
 
-Si ha desplegado un vCenter Server mediante vSAN, consulte primero [Actualización de clústeres vSAN](vum-updating-vsan.html).
+Si ha desplegado un vCenter Server mediante vSAN, consulte primero [Actualización de clústeres vSAN](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vsan).
 
 Si desea actualizar la automatización de la gestión de la infraestructura de {{site.data.keyword.cloud_notm}}, utilice la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
@@ -63,7 +64,8 @@ La [consola de {{site.data.keyword.vmwaresolutions_short}}](https://console.clou
 
 Este recurso solo habilita la actualización automatizada de los componentes de gestión de las instancias de vCenter Server. Las actualizaciones de producto de VMware deben aplicarse siguiendo los procedimientos que se detallan en este documento.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vum-intro-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

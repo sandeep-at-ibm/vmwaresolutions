@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-02-14"
 
 ---
 
 # Requisitos y planificación de instancias de Cloud Foundation
+{: #sd_planning}
 
 Revise los siguientes requisitos antes de solicitar sus instancias de VMware Cloud Foundation. Planifique la instancia en función de la ubicación del {{site.data.keyword.CloudDataCent}}, de sus requisitos de capacidad de carga de trabajo y de los requisitos de servicio.
 
 ## Requisitos de la cuenta de IBM Cloud
+{: #sd_planning-account-req}
 
-La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## Disponibilidad del centro de datos de IBM Cloud
+{: #sd_planning-dc-availability}
 
 El despliegue de Cloud Foundation impone requisitos estrictos en cuanto a la infraestructura física. Por lo tanto, en {{site.data.keyword.CloudDataCents_notm}} solo puede desplegar instancias que cumplan los requisitos. Están disponibles los siguientes {{site.data.keyword.CloudDataCents_notm}} para el despliegue de Cloud Foundation:
 
@@ -66,20 +69,24 @@ Tabla 2. Indicadores de estado para {{site.data.keyword.CloudDataCents_notm}} cu
 | Limited Inventory             | El {{site.data.keyword.CloudDataCent_notm}} ofrece disponibilidad limitada y es posible que el pedido no se complete. |
 
 ## Copia de seguridad de los componentes de gestión
+{: #sd_planning-backup-mgmt-components}
 
-El usuario es responsable de mantener y garantizar la disponibilidad de todos los componentes de instancia. Se recomienda planificar la copia de seguridad o la alta disponibilidad de todos los componentes de gestión. Para obtener más información, consulte [Copia de seguridad de componentes](../archiref/solution/solution_backingup.html).
+El usuario es responsable de mantener y garantizar la disponibilidad de todos los componentes de instancia. Se recomienda planificar la copia de seguridad o la alta disponibilidad de todos los componentes de gestión. Para obtener más información, consulte [Copia de seguridad de componentes](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup).
 
 ## Servicios para instancias de Cloud Foundation
+{: #sd_planning-addon-services}
 
-Puede solicitar servicios complementarios para su instancia en función de sus necesidades, por ejemplo, la recuperación tras desastre. Para obtener más información, consulte [Adición, visualización y eliminación de servicios para instancias de Cloud Foundation](sd_addingremovingservices.html).
+Puede solicitar servicios complementarios para su instancia en función de sus necesidades, por ejemplo, la recuperación tras desastre. Para obtener más información, consulte [Adición, visualización y eliminación de servicios para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices).
 
 ## Consideraciones de capacidad
+{: #sd_planning-capacity-considerations}
 
-Para obtener más información sobre la capacidad, consulte [Capacidad de escalado](../archiref/solution/solution_scaling.html).
+Para obtener más información sobre la capacidad, consulte [Capacidad de escalado](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling).
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #sd_planning-related}
 
-* [Visión general de Cloud Foundation](sd_cloudfoundationoverview.html)
-* [Pedido de instancias de Cloud Foundation](sd_orderinginstance.html)
-* [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](sd_addingremovingservers.html)
-* [Solicitud, visualización y eliminación de servicios para instancias de Cloud Foundation](sd_addingremovingservices.html)
+* [Visión general de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Pedido de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Solicitud, visualización y eliminación de servicios para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)

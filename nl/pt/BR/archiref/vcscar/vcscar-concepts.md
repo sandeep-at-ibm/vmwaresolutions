@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Conceitos de linguagem de skateboarding
+{: #vcscar-concepts}
 
 ## Linguagem do skatista
+{: #vcscar-concepts-skater}
 
 Um aspecto chave do Skate Advisor são as conversas possíveis com o robô de bate-papo orientado pelo Watson. A seção a seguir detalha as regras de conversação que definem uma interação humana com o robô de bate-papo do Skate Advisor.
 
@@ -20,8 +22,10 @@ A Linguagem do Skatista é o núcleo do sistema e é usada da maneira a seguir:
 * Classificação de manobra: armazenar e classificar uma manobra com base em sua descrição textual. As manobras que são classificadas dessa maneira podem ter metadados anexados a elas, como referências de local e vídeo.
 
 ## Elementos de linguagem
+{: #vcscar-concepts-lang-elem}
 
 ### Elementos principais
+{: #vcscar-concepts-core-elem}
 
 A seguir, estão os elementos principais de linguagem para construir uma Manobra.
 
@@ -35,6 +39,7 @@ Base | kickflip<br>heelflip<br>hardflip<br>bigspin<br>shuvit<br>impossible
 Aterrissagem | manual (2 rodas de trás)<br>nosemanual (2 rodas da frente)<br>5-0 (grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
 
 ### Modificadores de elementos
+{: #vcscar-concepts-elem-modifiers}
 
 Os modificadores de elementos são elementos de linguagem especiais que fornecem contexto para determinados aspectos da linguagem.
 
@@ -46,12 +51,14 @@ Prefixo de giro | Frontside<br>backside | O Prefixo de giro está relacionado à
 Varial | Inward<br>outward |
 
 ## Regras de linguagem
+{: #vcscar-concepts-lang-rules}
 
 O conjunto de regras a seguir constrói a linguagem. As manobras são divididas em uma ou mais combinações de elementos que são referidos como uma "Combinação". Há uma diferença entre a primeira Combinação e as Combinações seguintes no sentido em que a direção é presumida como sendo a mesma que na Combinação de base, a menos que seja especificado de outra forma.
 
 Para as regras a seguir, veja os Elementos principais e os Modificadores de elementos como uma referência porque eles são usados para construir a linguagem.
 
 ### Conjunto de regras de manobra
+{: #vcscar-concepts-trick-ruleset}
 
 ```
 base_combo = 'direction \+ \[varial | turn_prefix\] \+ \[rotation\] \+ \[base_trick\]'
@@ -61,6 +68,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
 ```
 
 ### Mecanismo de regras de manobra
+{: #vcscar-concepts-trick-rule-engine}
 
 O diagrama a seguir é um resumo visual do mecanismo de regras.
 
@@ -68,6 +76,7 @@ Figura 1. Visão geral da linguagem de skate
 ![Visão geral da linguagem de skate](vcscar-skate-language.svg)
 
 ## Linguagem de manobra de amostra
+{: #vcscar-concepts-sample-trick}
 
 O exemplo a seguir é uma lista de manobras de amostra:
 
@@ -106,9 +115,11 @@ nollie-heelflip to frontside-boardslide
 ```
 
 ## Relevância
+{: #vcscar-concepts-relevance}
 
 A Linguagem de manobra é a construção chave usada para treinar o Watson para reconhecer e alimentar documentos e mídia de skating e também formar a base de conversas com o usuário.
 
-### Links relacionados
+## Links relacionados
+{: #vcscar-concepts-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)  
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)  

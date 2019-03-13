@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Incluindo, visualizando e excluindo clusters para instâncias do Cloud Foundation
+{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
 
 Os servidores ESXi que você configurou quando pediu uma instância são agrupados em um cluster padrão. O nome do cluster padrão é:
 * Para instâncias que foram implementadas na V2.1 ou liberações mais recentes: **MGMT-Cluster-`<subdomain_label>`**
@@ -21,19 +22,23 @@ Os servidores ESXi que você configurou quando pediu uma instância são agrupad
 É possível incluir seus próprios clusters em instâncias do VMware Cloud Foundation para expandir a capacidade de cálculo e armazenamento. Em um cluster, é possível gerenciar servidores ESXi para melhor alocação de recurso e alta disponibilidade. Quando não for mais necessário, será possível excluir os clusters incluídos de suas instâncias.
 
 ## Disponibilidade
+{: #sd_addingviewingclusters-availability}
 
 * O recurso incluir cluster está disponível somente para instâncias que foram implementadas na (ou submetidas a upgrade para a) V2.0 e liberações mais recentes.
 * O recurso excluir cluster está disponível somente para instâncias que são implementadas na (ou submetidas a upgrade para a) V2.3 e liberações mais recentes.  
 
 ## Incluindo clusters para instâncias do Cloud Foundation
+{: #sd_addingviewingclusters-adding}
 
 É possível incluir até cinco clusters em uma instância do Cloud Foundation.
 
 ### Configurações do sistema
+{: #sd_addingviewingclusters-adding-sys-settings}
 
 Quando você inclui um cluster em uma instância do Cloud Foundation, deve-se especificar as configurações a seguir.
 
 #### Nome do cluster
+{: #sd_addingviewingclusters-adding-cluster-name}
 
 O nome do cluster deve atender aos requisitos a seguir:
 * Apenas caracteres alfanuméricos e o traço (-) são permitidos.
@@ -42,6 +47,7 @@ O nome do cluster deve atender aos requisitos a seguir:
 * O nome do cluster deve ser exclusivo dentro da instância do Cloud Foundation.
 
 #### Local do datacenter
+{: #sd_addingviewingclusters-adding-dc-location}
 
 O local do {{site.data.keyword.CloudDataCent}} do cluster é configurado como o {{site.data.keyword.CloudDataCent_notm}} da instância do Cloud Foundation por padrão. É possível implementar o cluster em um {{site.data.keyword.CloudDataCent_notm}} diferente da instância implementada, mas deve-se assegurar que a latência de rede entre os dois {{site.data.keyword.CloudDataCents_notm}} seja menor que 150 ms. Para verificar a latência de rede, é possível usar uma ferramenta, como o [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
@@ -50,10 +56,12 @@ Os data centers disponíveis a você dependem da configuração do Bare Metal Se
 Se você implementar o cluster em um datacenter ou pod diferente, mais três VLANs serão pedidas para uso com o {{site.data.keyword.baremetal_short}} pedido.
 
 ### Configurações do Bare Metal Server
+{: #sd_addingviewingclusters-adding-bare-metal-settings}
 
 É possível escolher **Skylake** ou **Broadwell**.
 
 #### Skylake
+{: #sd_addingviewingclusters-adding-skylake}
 
 Para a configuração do **Skylake**, há várias opções para o **Modelo de CPU** e a **RAM**. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
 
@@ -66,6 +74,7 @@ Tabela 1. Opções para Skylake  {{site.data.keyword.baremetal_short}}
 | Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### Broadwell
+{: #sd_addingviewingclusters-adding-broadwell}
 
 Para a configuração do **Broadwell**, há várias opções para o **Modelo de CPU** e a **RAM**. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
 
@@ -80,6 +89,7 @@ Tabela 2. Opções para Broadwell  {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4/total de 64 núcleos, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Configurações do armazenamento vSAN
+{: #sd_addingviewingclusters-adding-vsan-storage-settings}
 
 Para a configuração **Skylake** e **Broadwell** do Bare Metal Server, é possível customizar o armazenamento vSAN especificando as configurações a seguir:
 * **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
@@ -92,12 +102,14 @@ Para a configuração **Skylake** e **Broadwell** do Bare Metal Server, é poss�
 * Revise os valores **Tipo de disco para discos de cache vSAN** e **Número de discos de cache vSAN**. Esses valores dependem de a caixa **Intel Optane de alto desempenho** estar ou não marcada.
 
 ### Configurações de licenciamento
+{: #sd_addingviewingclusters-adding-licensing-settings}
 
 É possível especificar as opções de licenciamento para os componentes do VMware no cluster, incluindo VMware vSphere e VMware vSAN:
 * Para usuários Parceiros de Negócios do IBM, a licença do vSphere (Enterprise Plus Edition) e a licença do vSAN são incluídas e compradas em seu nome. No entanto, deve-se especificar a edição da licença vSAN.
 * Para usuários que não são Parceiros de Negócios IBM, é possível usar as licenças do VMware fornecidas pela IBM para os componentes selecionando **Incluir com a compra** ou usar Bring Your Own License (BYOL) para os componentes selecionando **Eu fornecerei** e inserindo suas próprias chaves de licença.
 
 ## Procedimento para incluir clusters em instâncias do Cloud Foundation
+{: #sd_addingviewingclusters-adding-procedure}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do Cloud Foundation**, clique na instância na qual você deseja incluir clusters.
@@ -124,6 +136,7 @@ Para a configuração **Skylake** e **Broadwell** do Bare Metal Server, é poss�
    4. Clique em **Provisão**.
 
 ### Resultados após a inclusão de clusters em instâncias do Cloud Foundation
+{: #sd_addingviewingclusters-adding-results}
 
 1. A implementação do cluster é iniciada automaticamente e o status do cluster muda para **Inicializando**. É possível verificar o status da implementação visualizando o histórico de implementação na página de resumo da instância.
 2. Quando o cluster estiver pronto para usar, seu status mudará para **Pronto para usar**. O cluster recém-incluído é ativado com a Alta disponibilidade (HA) do vSphere e o Distributed Resource Scheduler (DRS) do vSphere.
@@ -132,6 +145,7 @@ Não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar f
 {:important}
 
 ## Procedimento para visualizar clusters em instâncias do Cloud Foundation
+{: #sd_addingviewingclusters-viewing-procedure}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do Cloud Foundation**, clique em uma instância para visualizar os clusters contidos.
@@ -187,10 +201,12 @@ Não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar f
        * **Capacidade livre (CPU)**: a capacidade disponível na licença.
 
 ## Excluindo clusters de instâncias do Cloud Foundation
+{: #sd_addingviewingclusters-deleting}
 
 Talvez você queira excluir um cluster de uma instância quando ela não for mais necessária.
 
 ### Antes de excluir
+{: #sd_addingviewingclusters-deleting-prereq}
 
 * Use este procedimento para excluir clusters de instâncias implementadas na V2.3 ou liberações mais recentes.
 * Para clusters implementados em instâncias da V2.2 ou anteriores, deve-se fazer upgrade da instância para a V2.3 para ser possível excluir os clusters incluídos na instância.
@@ -200,6 +216,7 @@ Talvez você queira excluir um cluster de uma instância quando ela não for mai
 * O cluster padrão não pode ser excluído.
 
 ## Procedimento para excluir clusters de instâncias do Cloud Foundation
+{: #sd_addingviewingclusters-deleting-procedure}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do Cloud Foundation**, clique na instância da qual você deseja excluir clusters.
@@ -210,7 +227,8 @@ Talvez você queira excluir um cluster de uma instância quando ela não for mai
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda. Na tabela **CLUSTERS**, localize o cluster que você deseja excluir e clique no ícone **Excluir**.
 4. Confirme que você concluiu a migração de MVs para outros clusters, se apropriado, e que deseja excluir o cluster.
 
-### Links relacionados
+## Links relacionados
+{: #sd_addingviewingclusters-related}
 
-* [Visualizando instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Expandindo e contraindo a capacidade para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Visualizando instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [Expandindo e contraindo a capacidade para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)

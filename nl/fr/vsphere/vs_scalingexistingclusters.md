@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,17 +13,20 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Mise à l'échelle de clusters vSphere existants
+{: #vs_scalingexistingclusters}
 
 Vous pouvez mettre à l'échelle un cluster VMware vSphere existant commandé ou sauvegardé dans la console {{site.data.keyword.vmwaresolutions_full}}. Pour ce faire, ajoutez des serveurs ESXi ou commandez une paire de dispositifs FortiGate Security Appliance série 300 à haute disponibilité pour le cluster.
 
 ## Conditions requises
+{: #vs_scalingexistingclusters-req}
 
 Assurez-vous que :
-*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html#managing-user-accounts-and-settings).
-*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
+*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount#managing-user-accounts-and-settings).
+*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour les clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning).
 *  Vous avez reçu un courrier électronique vous confirmant que le cluster que vous souhaitez mettre à échelle est prêt à être utilisé.
 
 ## Procédure de mise à l'échelle de clusters existants
+{: #vs_scalingexistingclusters-procedure}
 
 1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur **VMware** dans le panneau de navigation de gauche, puis cliquez sur **VMware vSphere** dans la section **Centres de données virtuels**.
 2. Sur la page **VMware vSphere on IBM Cloud**, cliquez sur **Créer**.  
@@ -36,6 +39,7 @@ Assurez-vous que :
    * Pour passer la commande, assurez-vous que le compte qui devra être facturé est correct, passez en revue et acceptez les conditions, puis cliquez sur **Mettre à disposition**.
 
 ### Résultats
+{: #vs_scalingexistingclusters-results}
 
 La mise à l'échelle du cluster démarre automatiquement. Une conformation par courrier électronique vous avise que la commande est en cours de traitement. Lorsque le cluster est prêt pour utilisation, un courrier électronique vous en avertit.
 
@@ -44,8 +48,9 @@ Si le cluster que vous mettez à l'échelle n'est pas prêt à être utilisé, i
 Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.
 {:note}
 
-### Liens connexes
+## Liens connexes
+{: #vs_scalingexistingclusters-related}
 
-* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [Commande de clusters vSphere on la base de configurations existantes](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
-* [Mise à l'échelle de clusters créés en dehors de la console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [Commande de clusters vSphere on la base de configurations existantes](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
+* [Mise à l'échelle de clusters créés en dehors de la console](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Exigences et planification pour VMware vSphere on IBM Cloud
+{: #vs_planning}
 
 Passez en revue les exigences suivantes avant de commander VMware vSphere on {{site.data.keyword.cloud}}. Planifiez vos clusters VMware vSphere en fonction de l'emplacement de l'{{site.data.keyword.CloudDataCent_notm}} et de vos besoins en matière de capacité de charge de travail.
 
@@ -20,10 +21,12 @@ Vous êtes responsable de la configuration de l'environnement, de l'installation
 {:note}
 
 ## Exigences liées au compte IBM Cloud
+{: #vs_planning-account-req}
 
-Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
+Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## Disponibilité du centre de données IBM Cloud
+{: #vs_planning-dc-availability}
 
 Un déploiement vSphere a des exigences strictes quant à l'infrastructure physique. Par conséquent, vous ne pouvez déployer des clusters que dans les {{site.data.keyword.CloudDataCents_notm}} qui répondent à ces exigences. Les {{site.data.keyword.CloudDataCent_notm}} suivants sont disponibles pour un déploiement vSphere.
 
@@ -67,8 +70,9 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les cluste
 | WDC06 | Washington, DC | Est des Etats-Unis |
 | WDC07 | Washington, DC | Est des Etats-Unis |
 
-### Liens connexes
+## Liens connexes
+{: #vs_planning-related}
 
-* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [Mise à l'échelle de clusters existants](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
-* [Mise à l'échelle de clusters existants créés en dehors de la console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [Mise à l'échelle de clusters existants](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [Mise à l'échelle de clusters existants créés en dehors de la console](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

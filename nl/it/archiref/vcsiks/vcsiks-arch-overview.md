@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Panoramica sull'architettura
+{: #vcsiks-arch-overview}
+
 Le offerte {{site.data.keyword.vmwaresolutions_full}} forniscono l'automazione per distribuire
-i componenti di tecnologia VMware nei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. L'architettura è costituita da una singola regione cloud e supporta la capacità di estendersi in più regioni cloud che si trovano in un'altra area geografia o in un altro pod di {{site.data.keyword.cloud_notm}} all'interno dello stesso data center.
+i componenti di tecnologia VMware nei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. L'architettura consiste in una singola regione cloud e supporta la capacità di estensione in più regioni cloud che si trovano in un'altra area geografica o in un altro pod di {{site.data.keyword.cloud_notm}} all'interno dello stesso data center.
 
 Puoi distribuire manualmente i prodotti {{site.data.keyword.icpfull_notm}} e CAM (Cloud Automation Manager) nella tua piattaforma di virtualizzazione in loco,
 abilitando la gestione cloud dalle ubicazioni in loco. In alternativa, {{site.data.keyword.icpfull_notm}}
@@ -38,6 +40,7 @@ Service Composer ti consente di esporre i servizi cloud ibridi nel catalogo IBM
 Cloud Private.
 
 ## Piattaforma di gestione cloud lato IBM Cloud
+{: #vcsiks-arch-overview-ibm-cloud-side}
 
 Il seguente diagramma visualizza {{site.data.keyword.icpfull_notm}} e CAM distribuiti con l'infrastruttura {{site.data.keyword.cloud_notm}},
 con connessioni al vCenter in loco e al servizio {{site.data.keyword.containerlong_notm}} distribuiti su {{site.data.keyword.cloud_notm}}. Gli utenti possono distribuire macchine virtuali (VM) in loco, VM nelle istanze
@@ -56,10 +59,11 @@ consente alle VM {{site.data.keyword.icpfull_notm}} l'esecuzione sulla rete VXLA
 la rete interna Kubernetes Calico.
 
 {{site.data.keyword.icpfull_notm}} con NSX-T consente agli utenti di controllare e configurare la rete,
-la sottorete e le politiche dall'IU centrale (NSX-T Manager). Per informazioni sulle differenze tra NSX-V e NSX-T, vedi l'[architettura di riferimento di rete VCS {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/
+la sottorete e le politiche dall'IU centrale (NSX-T Manager). Per informazioni sulle differenze tra NSX-V e NSX-T, vedi l'[architettura di riferimento di rete {{site.data.keyword.cloud_notm}} VCS](/docs/services/vmwaresolutions/archiref/
 vcsnsxt/vcsnsxt-intro.html).
 
 ## Piattaforma di gestione cloud in loco
+{: #vcsiks-arch-overview-on-premises}
 
 Il seguente diagramma visualizza {{site.data.keyword.icpfull_notm}} e CAM distribuiti nell'infrastruttura
 in loco, con connessioni a vCenter e {{site.data.keyword.containerlong_notm}} distribuiti su {{site.data.keyword.cloud_notm}}. Gli utenti possono distribuire VM e contenitori
@@ -78,7 +82,8 @@ ai provider cloud e agli ambienti {{site.data.keyword.icpfull_notm}} e {{site.da
 distribuiti in ciascun data center o ambiente cloud, con MCM che fornisce il
 meccanismo per connettere i cluster {{site.data.keyword.icpfull_notm}} in un'unica vista di gestione.
 
-### Link correlati
+## Link correlati
+{: #vcsiks-arch-overview-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Présentation de la version d'essai à noeud unique pour la migration et la modernisation des applications
+{: #single-node-trial-for-migration-and-app-modernization-overview}
 
 La version d'essai à noeud unique pour la migration et la modernisation des applications permet de tester l'utilisation d'IBM Cloud pour migrer les charges de travail VMware vers IBM Cloud, puis de moderniser ces simples charges de travail à l'aide de conteneurs.
 
@@ -29,6 +30,7 @@ Cette version d'essai peut être utilisée pendant 90 jours au maximum. Une fois
 {:note}
 
 ## Spécifications techniques relatives aux instances Version d'essai à noeud unique pour la migration et la modernisation des applications
+{: #cloud_modern_bundle_overview-tech-specs}
 
 Les composants suivants sont inclus dans votre instance Version d'essai à noeud unique pour la migration et la modernisation des applications.
 
@@ -36,26 +38,31 @@ La disponibilité et la tarification des configurations matérielles normalisée
 {:note}
 
 ### Serveur bare metal
+{: #cloud_modern_bundle_overview-bare-metal}
 
 Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz avec 384 GB de mémoire RAM, pour jusqu'à 20 MV
 
 #### Surallocations d'UC
+{: #cloud_modern_bundle_overview-cpu}
 
 * Surallocation d'UC 16:1 pour la gestion vCenter Server, HCX et 20 MV de charge de travail client
 * Surallocation d'UC 11:1 pour IBM Cloud Private
 
 #### Surallocations de mémoire RAM
+{: #cloud_modern_bundle_overview-ram}
 
 * Surallocation de mémoire RAM 1.22:1 pour un déploiement client de 20 MV de charge de travail avec 8 Go chacune
 * 1:1 (pas de surallocation) pour un déploiement client de neuf MV de charge de travail avec 8 Go chacune
 
 ### Stockage NFS
+{: #cloud_modern_bundle_overview-nfs-storage}
 
 * 2 To pour la gestion
 * 1 To pour la charge de travail client (pour 20 MV client)
 * 4 To pour IBM Cloud Private Hosted
 
 ### Spécifications de mise en réseau relatives aux instances Version d'essai à noeud unique pour la migration et la modernisation des applications
+{: #cloud_modern_bundle_overview-networking-specs}
 
 Les composants réseau suivants sont commandés :
 *  Liaisons montantes réseau public et privé double de 10 Gbps
@@ -69,6 +76,7 @@ Les composants réseau suivants sont commandés :
   * Une passerelle VMware NSX Edge Services Gateway sécurisée gérée par le client pour le trafic de charge de travail HTTPS sortant et entrant, déployée par IBM en tant que modèle que vous pouvez modifier pour fournir un accès au réseau privé virtuel ou un accès public.
 
 ### Instance de serveur virtuel
+{: #cloud_modern_bundle_overview-vsi}
 
 Les instances de serveur virtuel suivantes sont commandées :
 
@@ -76,6 +84,7 @@ Les instances de serveur virtuel suivantes sont commandées :
 * Une instance de serveur virtuel Microsoft Windows Server pour Microsoft Active Directory (AD) est déployée et peut être interrogée. L'instance de serveur virtuel fonctionne en tant que serveur de noms de domaine pour l'instance où sont enregistrés les hôtes et les machines virtuelles.
 
 ### Licences fournies par IBM et frais
+{: #cloud_modern_bundle_overview-license-and-fee}
 
 Les licences suivantes sont incluses avec votre commande d'instance Version d'essai à noeud unique pour la migration et la modernisation des applications :
 
@@ -88,6 +97,7 @@ Les instances Version d'essai à noeud unique pour la migration et la modernisat
 {:note}
 
 ## Spécifications techniques relatives à VMware HCX on IBM Cloud
+{: #cloud_modern_bundle_overview-hcx-tech-specs}
 
 L'instance Version d'essai à noeud unique pour la migration et la modernisation des applications comprend HCX on {{site.data.keyword.cloud_notm}}. Les composants suivants sont commandés et inclus dans le service HCX on {{site.data.keyword.cloud_notm}} :
 
@@ -95,12 +105,14 @@ Les instances HCX locales incluent uniquement l'octroi de licence et l'activatio
 {:note}
 
 ### Paire active/passive de passerelles VMware NSX Edge Services Gateway pour HCX Management
+{: #cloud_modern_bundle_overview-esg}
 
 * UC : 6 vCPU
 * Mémoire RAM : 8 Go
 * Disque : VMDK 3 Go
 
 ### HCX Management Appliance - Machine virtuelle
+{: #cloud_modern_bundle_overview-hcx-mgmt-appliance}
 
 * UC : 4 vCPU
 * Mémoire RAM : 12 Go
@@ -109,18 +121,21 @@ Les instances HCX locales incluent uniquement l'octroi de licence et l'activatio
 Des dispositifs HCX supplémentaires sont déployés durant la configuration s'il y a lieu pour la connectivité L2, l'optimisation WAN et les connexions de passerelle.
 
 ### Spécifications relatives à la mise en réseau du service HCX on IBM Cloud
+{: #cloud_modern_bundle_overview-hcx-networking-specs}
 
 * Un sous-réseau portable public avec 16 adresses IP
 * Deux sous-réseaux portables privés avec 64 adresses IP
 * Huit adresses IP issues du sous-réseau vMotion portable privé
 
-## Spécifications techniques pour IBM Cloud Private Hosted
+## Spécifications techniques relatives à IBM Cloud Private Hosted
+{: #cloud_modern_bundle_overview-icp-tech-specs}
 
-IBM Cloud Private Hosted V3.1 est installé à l'aide de la topologie Développement/Test sur toutes les instances Version d'essai à noeud unique pour la migration et la modernisation des applications. Pour plus d'informations sur IBM Cloud Private Hosted, voir [Présentation d'IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services/icp_overview.html).
+IBM Cloud Private Hosted V3.1 est installé à l'aide de la topologie Développement/Test sur toutes les instances Version d'essai à noeud unique pour la migration et la modernisation des applications. Pour plus d'informations sur IBM Cloud Private Hosted, voir [Présentation d'IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview).
 
-### Liens connexes
+## Liens connexes
+{: #cloud_modern_bundle_overview-related}
 
-* [Guide vCenter Server et IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [Guide vCenter Server et IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Ouvrir un ticket au sujet d'IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=fr_FR)
 * [Documentation VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-02-14"
 
 ---
 
 # Gestión de notificaciones del sistema
+{: #notifications}
 
 Puede comprobar las notificaciones sobre el estado del sistema o sobre las operaciones de los usuarios. También puede utilizar la información para investigar problemas que puedan producirse.
 
 ## Visualización de notificaciones
+{: #notifications-view}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Notificaciones** en el panel de navegación izquierdo.
 2. Vea el resumen sobre todas las notificaciones.
@@ -68,10 +70,12 @@ Puede comprobar las notificaciones sobre el estado del sistema o sobre las opera
 3. Pulse la fila de una notificación para ver los detalles de la notificación.
 
 ## Filtrado de notificaciones
+{: #notifications-filter}
 
 De forma predeterminada, se muestran todas las notificaciones no leídas. Puede filtrar las notificaciones por estado, gravedad y tipo. Para filtrar las notificaciones, marque solo los recuadros de selección de los elementos que desea visualizar en las listas **Estado**, **Gravedad** o **Tipo**.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #notifications-related}
 
-* [Preguntas frecuentes](faq.html)
-* [Cuenta de usuario y valores](useraccount.html)
+* [Preguntas frecuentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Cuenta de usuario y valores](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)

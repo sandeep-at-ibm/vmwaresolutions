@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Accès aux ports requis pour VMware HCX on IBM Cloud
+{: #hcx-archi-port-req}
 
 HCX doit traverser l'Internet public et des lignes privées, et se connecter à des composants de centre de données, comme des réseaux, des commutateurs et des groupes de ports.
 
@@ -39,6 +40,7 @@ Table 1. Accès aux ports requis
 | Passerelle cloud (locale) | Passerelle cloud</br>(distante) | 4500  | UDP | Echange de clés Internet (IKEv2) pour l'encapsulage des charges de travail pour le tunnel bidirectionnel | IPSEC |
 | Passerelle cloud (locale) | Passerelle cloud</br>(distante) | 500  | UDP | Echange de clés Internet (ISAKMP) pour le tunnel bidirectionnel | IPSEC |
 
-### Liens connexes
+## Liens connexes
+{: #hcx-archi-port-req-related}
 
-* [Installation et configuration de HCX sur la source](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
+* [Installation et configuration de HCX sur la source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)

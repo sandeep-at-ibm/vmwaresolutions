@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,16 +13,18 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Configurazione multisito per le istanze Cloud Foundation
+{: #sd_multisite}
 
 {{site.data.keyword.vmwaresolutions_full}} consente alle istanze di essere distribuite in ubicazioni diverse e di renderle operative in breve tempo.
 
 ## Note
+{: #sd_multisite-notes}
 
 * Non puoi creare collegamenti tra le istanze VMware Cloud Foundation e VMware vCenter Server in una configurazione multisito.
 * Non puoi collegare le istanze distribuite nella V2.0 con le istanze di release precedenti (anche se sono state aggiornate alla V2.0).
 
-
 ## Componenti della distribuzione multisito
+{: #sd_multisite-deployment-components}
 
 Una distribuzione multisito è costituita dai seguenti componenti.
 
@@ -39,10 +41,11 @@ Una distribuzione multisito è costituita dai seguenti componenti.
    *  VMware vCenter sulle istanze secondarie è configurato con la modalità di collegamento migliorata per vCenter sull'istanza primaria
 
 ## Distribuzione multisito di Cloud Foundation
+{: #sd_multisite-deployment}
 
 La funzione di configurazione multisito utilizza una topologia "hub and spoke" con un sito primario e un massimo di sette siti secondari. È supportato un singolo livello di siti, ovvero non puoi configurare siti successivi collegati ad altri siti secondari. Puoi avere un totale di 128 server ESXi in una configurazione multisito tra tutte le istanze.
 
-Se la tua configurazione richiede una distribuzione multisito con più di 128 server ESXi, contatta il supporto IBM per assistenza. Per ulteriori informazioni, vedi [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Se la tua configurazione richiede una distribuzione multisito con più di 128 server ESXi, contatta il supporto IBM per assistenza. Per ulteriori informazioni, vedi [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 {:note}
 
 Il seguente grafico illustra la vista generale della distribuzione multisito di Cloud Foundation.
@@ -60,10 +63,11 @@ Puoi assegnare solo un'istanza secondaria a un'istanza primaria alla volta. Non 
 
 Puoi avere un massimo di 8 istanze (1 primaria e 7 secondarie) che vengono distribuite in una configurazione multisito.
 
-L'eliminazione delle istanze Cloud Foundation che fanno parte di una configurazione multisito richiede una pianificazione speciale. Per ulteriori informazioni, vedi [Eliminazione di istanze Cloud Foundation in una configurazione multisito](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html).
+L'eliminazione delle istanze Cloud Foundation che fanno parte di una configurazione multisito richiede una pianificazione speciale. Per ulteriori informazioni, vedi [Eliminazione di istanze Cloud Foundation in una configurazione multisito](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi).
 {:note}
 
-### Link correlati
+## Link correlati
+{: #sd_multisite-related}
 
 * [Assign Primary Role to NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configuring Secondary NSX Managers](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}

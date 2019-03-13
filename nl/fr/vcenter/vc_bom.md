@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Nomenclature de vCenter Server
+{: #vc_bom}
 
 Passez en revue les informations de nomenclature des instances VMware vCenter Server.
 
 ## Nomenclature des réseaux locaux virtuels (VLAN) pour les instances vCenter Server
+{: #vc_bom-vlans}
 
 Le tableau suivant fournit des informations de nomenclature détaillées concernant les réseaux locaux virtuels de vCenter Server.
 
@@ -29,6 +31,7 @@ Tableau 1. Nomenclature des réseaux locaux virtuels des instances vCenter Serve
 | VLAN3     | Privé B, Portable | Affectés à VMware vSAN, si utilisés.<br><br>Affectés à VMware NFS, si utilisés.<br><br>Affectés à VMware vSphere vMotion. |
 
 ## Nomenclature logicielle pour les instances vCenter Server
+{: #vc_bom-software}
 
 Le tableau suivant fournit des informations de nomenclature détaillées concernant les composants logiciels vCenter Server.
 
@@ -47,6 +50,7 @@ VMware vSAN est un composant optionnel.
 {:note}
 
 ## Paramètres de configuration avancée pour les serveurs ESXi
+{: #vc_bom-esxi-server-advance-config}
 
 Consultez le tableau suivant pour obtenir une présentation des paramètres de configuration avancée appliqués aux serveurs ESXi. Ces paramètres varient selon que l'instance vCenter Server est déployée dans la version V2.2 ou dans une version ultérieure, ou mise à niveau vers la version 2.2 ou une version ultérieure à partir de la version 2.1 ou d'une version antérieure.
 
@@ -75,6 +79,7 @@ Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les inst
   Pour plus d'informations, voir [Augmentation de la valeur par défaut qui définit le nombre maximum de montages NFS sur un hôte ESXi](https://kb.vmware.com/s/article/2239).
 
 ## Paramètres de configuration de NSX et des groupes de ports
+{: #vc_bom-nsx-port-group-config}
 
 Consultez le tableau suivant pour une présentation des paramètres de configuration de VMware NSX et des groupes de ports pour des instances vCenter Server, et pour les différences entre les éditions.
 
@@ -93,6 +98,7 @@ Tableau 4. Paramètres de configuration de NSX et des groupes de ports pour des 
 | Port group SDDC-DPortGroup-External | **Port binding** défini sur **Ephemeral - no binding** | **Port binding** défini sur **Static binding** |
 
 ## Paramètres de configuration de MTU réseau
+{: #vc_bom-network-mtu-config}
 
 Le cluster vSphere utilise deux commutateurs VdS (vSphere Distributed Switches) vSphere, un pour la connectivité de réseau public et l'autre pour la connectivité de réseau privé.
 
@@ -116,19 +122,22 @@ Ils ne s'appliquent pas aux nouveaux clusters présents dans le même {{site.dat
 Pour les instances déployées en V2.0 ou dans une édition antérieure, nous vous conseillons de mettre à niveau le paramètre de MTU de commutateur public vers 1500.
 
 ### Mise à jour du paramètre de MTU de commutateur public
+{: #vc_bom-procedure-update-public-switch-mtu-setting}
 
 Afin de mettre à jour le paramètre de MTU pour le commutateur public, procédez comme suit dans le client Web VMware vSphere :
 1. Cliquez avec le bouton droit de la souris sur le commutateur vDS, puis cliquez sur **Editer les paramètres**.
 2. Sur l'onglet **Propriétés**, sélectionnez l'option **Avancé**.
 3. Assurez-vous que la valeur maximale indiquée pour **MTU** est 1500.
 
-   **Remarque :** lorsque la taille de MTU dans un commutateur vDS est modifiée, les liaisons montantes connectées (NIC physiques) sont désactivées, puis réactivées. Il en résulte une brève indisponibilité pour les machines virtuelles qui utilisent la liaison montante. Par conséquent, il est recommandé de planifier la mise à jour du paramètre de MTU durant le temps d'indisponibilité planifié.
+   Lorsque la taille de MTU dans un commutateur vDS est modifiée, les liaisons montantes connectées (NIC physiques) sont désactivées, puis réactivées. Il en résulte une brève indisponibilité pour les machines virtuelles qui utilisent la liaison montante. Par conséquent, il est recommandé de planifier la mise à jour du paramètre de MTU durant le temps d'indisponibilité planifié.
+   {:note}
 
-### Liens connexes
+## Liens connexes
+{: #vc_bom-related}
 
 * [Numéros et versions de génération de VMware ESXi et ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Numéros et versions de génération de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Activation de trames Jumbo sur des commutateurs distribués virtuels](https://kb.vmware.com/s/article/1038827)
 * [Feuille de données de protection de VMware vCenter Server on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [Planification des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Planification des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-12-14"
 
@@ -14,19 +14,20 @@ lastupdated: "2018-12-14"
 {:deprecated: .deprecated}
 
 # Note sulla release per la V2.7
+{: #relnotes_v27}
 
 Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Supporto server 6140 certificato SAP
 
-A partire dalla release della V2.7, i seguenti nuovi modelli di CPU {{site.data.keyword.baremetal_short_sing}} {{site.data.keyword.cloud_notm}} sono disponibili per la distribuzione per le istanze e i cluster di VMware vCenter Server on {{site.data.keyword.cloud_notm}} e di VMware vSphere on {{site.data.keyword.cloud_notm}}:
-* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz / 192 GB di RAM
-* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,2 GHz / 384 GB di RAM
-* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz / 768 GB di RAM
+A partire dalla release V2.7, i seguenti nuovi modelli CPU {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short_sing}} sono disponibili per la distribuzione delle istanze e dei cluster di di VMware vCenter Server on {{site.data.keyword.cloud_notm}} e di VMware vSphere on {{site.data.keyword.cloud_notm}}:
+* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 192 GB RAM
+* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.2 GHz / 384 GB RAM
+* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 768 GB RAM
 
 Per ulteriori informazioni, vedi la sezione *Impostazioni di {{site.data.keyword.baremetal_short_sing}}* in:
-* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#bare-metal-server-settings)
-* [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#bare-metal-server-settings)
+* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#bare-metal-server-settings)
+* [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)
 
 ## Aggiornamenti per i servizi aggiuntivi
 
@@ -35,8 +36,8 @@ Per ulteriori informazioni, vedi la sezione *Impostazioni di {{site.data.keyword
 Il servizio {{site.data.keyword.cloud_notm}} Private Hosted è ora disponibile per le istanze VMware vCenter Server with Hybridity Bundle, oltre che per le istanze VMware vCenter Server distribuite nella (o aggiornate alla) V2.5 e nelle release successivi. Puoi ora ordinare un'istanza vCenter Server o un'istanza vCenter Server with Hybridity Bundle con il servizio incluso. Puoi inoltre aggiungere il servizio a un'istanza vCenter Server o vCenter Server with Hybridity Bundle esistente dopo la distribuzione iniziale.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
-* [{{site.data.keyword.cloud_notm}}Panoramica su Private Hosted](/docs/services/vmwaresolutions/services/icp_overview.html)
-* [Ordine di {{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services/icp_ordering.html)
+* [{{site.data.keyword.cloud_notm}}Panoramica su Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)
+* [Ordine di {{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
 
 ### Mission Critical VMware on IBM Cloud
 
@@ -44,23 +45,23 @@ Il servizio Mission Critical VMware on {{site.data.keyword.cloud_notm}} è ora d
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} offre un'architettura a più zone per aiutare le aziende ad evitare il tempo di inattività delle applicazioni cloud e ad automatizzare i failover in una regione cloud. Con questa architettura cloud, puoi raggiungere una maggiore disponibilità e una percentuale di successo di failover rispetto a quella che la maggior parte dei client VMware possono raggiungere con gli ambienti in loco o con le piattaforme cloud concorrenti.
 
-Per ulteriori informazioni, vedi [Panoramica di Mission Critical VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/mcv_overview.html).
+Per ulteriori informazioni, vedi [Panoramica di Mission Critical VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-mcv_overview).
 
 ### F5 on IBM Cloud
 
-Ora quando ordini il servizio F5 on {{site.data.keyword.cloud_notm}}, puoi selezionare se desideri che F5 applichi la licenza sulla rete pubblica o sulla rete privata con un server proxy. Per ulteriori informazioni, vedi [Ordine di F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_ordering.html).
+Ora quando ordini il servizio F5 on {{site.data.keyword.cloud_notm}}, puoi selezionare se desideri che F5 applichi la licenza sulla rete pubblica o sulla rete privata con un server proxy. Per ulteriori informazioni, vedi [Ordine di F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_ordering).
 
 ### FortiGate Virtual Appliance on IBM Cloud
 
-Nel terzo trimestre del 2018, Fortinet ha modificato i propri pacchetti di sottoscrizione. Per ulteriori informazioni, vedi [Ordine di FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html).
+Nel terzo quadrimestre del 2018, Fortinet ha modificato i propri pacchetti di sottoscrizione. Per ulteriori informazioni, vedi [Ordine di FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_ordering).
 
-Per FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} distribuito nelle istanze Cloud Foundation e vCenter Server della V2.7 e successive, viene fornito FortiOS 6.0.3.
+Per FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} distribuito nelle istanze Cloud Foundation e vCenter Server della V2.1 e successive, viene fornito FortiOS 6.0.3.
 
-Quando ordini FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, puoi selezionare se desideri che FortiGuard applichi la licenza e gli aggiornamenti di sicurezza sulla rete pubblica o sulla rete privata con un server proxy. Per ulteriori informazioni, vedi [Ordine di FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fortinetvm_ordering.html).
+Quando ordini FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, puoi selezionare se desideri che FortiGuard applichi la licenza e gli aggiornamenti di sicurezza sulla rete pubblica o sulla rete privata con un server proxy. Per ulteriori informazioni, vedi [Ordine di FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_ordering).
 
 ### Aggiornamenti dei componenti del servizio Zerto on IBM Cloud
 
-Per il servizio Zerto on {{site.data.keyword.cloud_notm}} distribuito nelle istanze Cloud Foundation e vCenter Server della V2.7 e successive, viene fornito Zerto Virtual Replication 6.0 aggiornamento 3. Per ulteriori informazioni, vedi [Panoramica di Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html).
+Per il servizio Zerto on {{site.data.keyword.cloud_notm}} distribuito nelle istanze Cloud Foundation e vCenter Server della V2.1 e successive, viene fornito Zerto Virtual Replication 6.0 aggiornamento 3. Per ulteriori informazioni, vedi [Panoramica di Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
 
 ### Integrazione di KMIP for VMware on IBM Cloud con il programma di traccia dell'attività IBM Cloud
 
@@ -68,7 +69,7 @@ In aggiunta agli eventi dell'istanza VMware, gli eventi di KMIP for VMware on {{
 
 ### KMIP for VMware on IBM Cloud - Obsoleto
 
-(Aggiornato il 14 dicembre 2018) La versione corrente di KMIP for VMware on {{site.data.keyword.cloud_notm}} è obsoleta. Per ulteriori informazioni, [contatta il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+(Aggiornato il 14 dicembre 2018) La versione corrente di KMIP for VMware on {{site.data.keyword.cloud_notm}} è obsoleta. Per ulteriori informazioni, [contatta il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 {:deprecated}
 
 ## Documentazione nuova e aggiornata
@@ -77,13 +78,13 @@ In aggiunta agli eventi dell'istanza VMware, gli eventi di KMIP for VMware on {{
 
 La seguente documentazione tecnica è ora disponibile nella sezione *Riferimento* della documentazione dell'utente:
 
-* [Architettura della soluzione NSX Edge Services Gateway](/docs/services/vmwaresolutions/archiref/nsx/nsx_overview.html)
-* [Guida di VMware Update Manager](/docs/services/vmwaresolutions/archiref/vum/vum-intro.html)
-* [Guida di rete di vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html)
-* [Guida di vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
-* [Guida del servizio vCenter Server e IBM Kubernetes](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html)
-* [Guida di VMware e Skate Advisor Concept Car](/docs/services/vmwaresolutions/archiref/vcscar/vcscar-intro.html)
-* [VMware - Percorso di modernizzazione di Stock Trader](/docs/services/vmwaresolutions/archiref/vcscontent/vcscontent-modjourney.html)
+* [Architettura della soluzione NSX Edge Services Gateway](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)
+* [Guida di VMware Update Manager](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro)
+* [Guida di rete di vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)
+* [Guida di vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [Guida del servizio vCenter Server e IBM Kubernetes](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro)
+* [Guida di VMware e Skate Advisor Concept Car](/docs/services/vmwaresolutions/archiref/vcscar?topic=vmware-solutions-vcscar-intro)
+* [VMware - Percorso di modernizzazione di Stock Trader](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney)
 
 ## Aggiornamenti e miglioramenti dell'interfaccia utente
 

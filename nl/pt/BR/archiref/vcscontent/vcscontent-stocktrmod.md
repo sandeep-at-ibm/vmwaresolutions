@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,18 +13,21 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Transformar o Stock Trader do WebSphere Application Server em Stock Trader em contêineres
+{: #vcscontent-stocktrmod}
 
 A próxima etapa na jornada de modernização do Stock Trader é transformar a carga de trabalho de execução em máquinas virtuais (MVs) para execução em contêineres.
 
 Para continuar, Todd e Jane executam o Transformation Advisor para analisar a carga de trabalho do Stock Trader, identificar qualquer complexidade de migração e recomendar mudanças. Quando pronto, eles usam o Transformation Advisor para implementar o Stock Trader em contêineres do Liberty que são executados no {{site.data.keyword.icpfull_notm}}.
 
 ## Preparar o IBM Cloud Private
+{: #vcscontent-stocktrmod-prep-icp}
 
 Todd precisa primeiro instalar o  {{site.data.keyword.icpfull_notm}}. Como Todd tem seu ambiente do VMware on {{site.data.keyword.cloud_notm}}, ele decide usar a oferta {{site.data.keyword.cloud_notm}} Private Hosted que fornece a ele uma instância completa do {{site.data.keyword.icpfull_notm}} que é executada em MVs do VMware no {{site.data.keyword.cloud_notm}}.
 
 O painel padrão fornece uma interface com o usuário abrangente para gerenciar o cluster do Kubernetes, segurança, armazenamento e implementação por meio do catálogo.
 
 ### Preparar o armazenamento
+{: #vcscontent-stocktrmod-prep-storage}
 
 O {{site.data.keyword.cloud_notm}} Private Hosted está configurado pronto para utilização com o GlusterFS e fornece armazenamento de arquivo entre MVs como nós dedicados do GlusterFS. O valor de GlusterFS é que ele permite o fornecimento dinâmico. Se Todd desejar, ele poderá configurar MVs extras como servidores NFS.
 
@@ -68,6 +71,7 @@ Sempre que um novo volume NFS for necessário, Todd executa o comando a seguir p
 `chmod 777 <foldername>`
 
 ### Preparar a segurança de imagem
+{: #vcscontent-stocktrmod-prep-img-sec}
 
 No {{site.data.keyword.icpfull_notm}} V3.1, a segurança é aprimorada, requerendo uma política de imagem no local antes que qualquer imagem seja puxada para uma instância do {{site.data.keyword.icpfull_notm}}. O aprimoramento requer que você inclua uma política de imagem onde as imagens da IBM residem, *dockerhub/ibmcom*, e no armazenamento do docker.
 
@@ -79,12 +83,14 @@ Saiba mais no [IBM Knowledge
 Center](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/manage_cluster/enable_pod_security.html).
 
 ## Implementar o Transformation Advisor e o Microclimate
+{: #vcscontent-stocktrmod-deploy-tam}
 
 Depois que Todd tiver o {{site.data.keyword.icpfull_notm}} em execução, ele instalará o Transformation Advisor junto com o Microclimate. Todd abre o [catálogo](https://www.ibm.com/cloud/private/developer) e visualiza todo o conteúdo disponível.
 
 Todd procura o Transformation Advisor e o Microclimate e os instala usando as instruções do arquivo leia-me fornecido quando ele clica no gráfico helm.
 
 ### Executar o Transformation Advisor
+{: #vcscontent-stocktrmod-run-trans-advisor}
 
 Para executar o Transformation Advisor, Jane incluiu o coletor de dados na MV que executa o Stock Trader no WebSphere e abre a interface com o usuário [Transformation
 Advisor](https://developer.ibm.com/recipes/tutorials/using-the-transformation-advisor-on-ibm-cloud-private/) para visualizar os resultados.
@@ -98,6 +104,7 @@ No final, as opções de layout resultantes do Stock Trader são:
 Todd não alterou a origem de dados durante a etapa de transformação. O Transformation Advisor toma a configuração de origem de dados do WebSphere Application Server Network Deployment e a inclui no server.xml do contêiner do Liberty.
 {:important}
 
-### Links relacionados
+## Links relacionados
+{: #vcscontent-stocktrmod-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

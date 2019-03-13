@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-02-15"
 
 ---
 
 # Contexto del sistema
+{: #vcsiks-systemcontext}
 
 Figura 1. Contexto del sistema
 
@@ -25,6 +26,7 @@ Los componentes principales son los siguientes:
 - **{{site.data.keyword.cloud_notm}} Services**: {{site.data.keyword.cloud_notm}} Services es una amplia gama de servicios consumibles disponibles, que incluyen ofertas de analíticas, IA e IoT.
 
 ## Actores
+{: #vcsiks-systemcontext-actors}
 
 Tabla 1. Actores
 
@@ -36,6 +38,7 @@ Cliente | Actor externo que consume los servicios de la empresa. Para Acme Skate
 {{site.data.keyword.containerlong_notm}} | Recurso de IBM que gestiona el nodo maestro {{site.data.keyword.containerlong_notm}} para el servicio.
 
 ## Sistemas
+{: #vcsiks-systemcontext-systems}
 
 Tabla 2. Sistemas
 
@@ -56,6 +59,7 @@ Watson | En el caso de esta arquitectura de referencia y Acme Skateboards, Watso
 
 La migración de aplicaciones, la red y la seguridad suelen ser son los puntos que presentan mayor dificultad en el proceso de modernización de aplicaciones. VMware vCenter Server on {{site.data.keyword.cloud_notm}}, VMware Hybridity, VMware NSX, {{site.data.keyword.cloud_notm}} Private e {{site.data.keyword.containerlong_notm}} abordan estos retos y le permiten crear aplicaciones moderas resistentes, seguras y potentes.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vcsiks-systemcontext-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

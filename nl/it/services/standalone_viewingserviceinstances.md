@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Visualizzazione delle istanze VMware HCX on IBM Cloud in loco
+{: #standalone_viewingserviceinstances}
 
 Utilizza questa procedura per visualizzare le istanze HCX on {{site.data.keyword.cloud}} in loco che hai ordinato per l'utilizzo in loco e informazioni su di esse.
 
 ## Procedura per visualizzare le istanze VMware HCX on IBM Cloud in loco
+{: #standalone_viewingserviceinstances-procedure}
 
 Fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra e scorri fino alla tabella **Istanze HCX on-premise** per visualizzare informazioni sulle istanze che hai ordinato:
 
@@ -36,9 +38,10 @@ Tabella 2. Descrizioni dello stato delle istanze HCX on {{site.data.keyword.clou
 | Installato | L'istanza è pronta per l'uso. |
 | In fase di rimozione | L'istanza è in fase di eliminazione. |
 
-### Link correlati
+## Link correlati
+{: #standalone_viewingserviceinstances-related}
 
-* [Ordine di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
-* [Eliminazione di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
-* [Glossario dei termini HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [Ordine di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
+* [Eliminazione di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances)
+* [Glossario dei termini HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

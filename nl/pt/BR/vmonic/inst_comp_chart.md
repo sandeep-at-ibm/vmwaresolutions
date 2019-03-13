@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Gráfico de comparação Oferta
+{: #inst_comp_chart}
 
 Revise o gráfico a seguir para entender as diferenças no suporte de funções para instâncias do VMware Cloud Foundation, instâncias do VMware vCenter Server, instâncias do VMware vCenter Server with Hybridity Bundle e clusters do VMware vSphere.
 
@@ -23,7 +24,7 @@ Tabela 1. Funções suportadas para os clusters do Cloud Foundation, vCenter Ser
 | Implementação de vários sites automatizada em nuvem | Suportado para novas instâncias que são implementadas na V2.0 ou mais recente | Suportado para novas instâncias que são implementadas na V2.0 ou mais recente | Suportado | Suportado. Configuração automatizada não incluída |
 | Incluir servidores ESXi | Suportado | Suportado | Suportado | Suportado. Configuração automatizada não incluída |
 | Remover servidores ESXi | Suportado | Suportado | Suportado | Suportado. Configuração automatizada não incluída |
-| Suporte multi-cluster | Cinco clusters | Dez clusters | Dez clusters | Suportado. Configuração automatizada não incluída |
+| Suporte multi-cluster | Cinco clusters | O número máximo depende das diretrizes de dimensionamento do VMware | O número máximo depende das diretrizes de dimensionamento do VMware | Suportado. Configuração automatizada não incluída |
 | Atualização e correção gerenciadas pelo cliente da pilha do VMware | Atualizações assistidas por automação:<br/>SDDC Manager | Atualizações gerenciadas pelo cliente:<br/>Ferramentas nativas do VMware (VMware Update Manager) | Atualizações gerenciadas pelo cliente:<br/>Ferramentas nativas do VMware (VMware Update Manager) | Atualizações gerenciadas pelo cliente:<br/>Ferramentas nativas do VMware (VMware Update Manager) |
 | Backup e restauração | Usando manualmente o IBM Spectrum Protect Plus ou o Veeam | Usando manualmente o IBM Spectrum Protect Plus ou o Veeam | Usando manualmente o IBM Spectrum Protect Plus ou o Veeam | Solução de backup e restauração não incluída |
 | Rede definida por software | NSX Enterprise | NSX Base, Advanced ou Enterprise | NSX Advanced ou Enterprise | NSX Standard, Base ou Enterprise. Configuração automatizada não incluída |
@@ -34,18 +35,20 @@ Tabela 1. Funções suportadas para os clusters do Cloud Foundation, vCenter Ser
 | Serviços de complemento | Suportados, não incluindo o HCX no {{site.data.keyword.cloud_notm}}. | Suportados, não incluindo o HCX no {{site.data.keyword.cloud_notm}}. O upgrade para o Pacote configurável vCenter Server with Hybridity está disponível. | Suportado, incluindo o HCX no {{site.data.keyword.cloud_notm}}. | Não suportado pela automação dessa solução, mas é possível trazer e instalar o seu próprio software. |
 
 ## Notas
+{: #inst_comp_chart-notes}
 
 <sup>1</sup> Segundo um design validado e com a verificação durante a implementação.
 
-<sup>2</sup> É possível aumentar o número de servidores ESXi em um cluster vSAN para um máximo de 64. Para obter mais informações, consulte _Quantos servidores ESXi posso incluir em um cluster?_ em [Perguntas mais frequentes sobre servidores ESXi](/docs/services/vmwaresolutions/vmonic/faq_esxi.html).
+<sup>2</sup> É possível aumentar o número de servidores ESXi em um cluster vSAN para um máximo de 64. Para obter mais informações, consulte _Quantos servidores ESXi posso incluir em um cluster?_ em [Perguntas mais frequentes sobre servidores ESXi](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_esxi).
 
-### Links relacionados
+## Links relacionados
+{: #inst_comp_chart-related}
 
-* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [Visão geral do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server sua visão geral](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [Visão geral do VMware vSphere](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)
-* [BOM do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html)
-* [BOM do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
-* [ BOM do VMware vSphere ](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
+* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Visão geral do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [vCenter Server sua visão geral](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [Visão geral do VMware vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview)
+* [BOM do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
+* [BOM do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
+* [ BOM do VMware vSphere ](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_bom)

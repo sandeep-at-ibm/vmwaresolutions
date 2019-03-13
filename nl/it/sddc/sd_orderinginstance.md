@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,35 +13,41 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Ordine di istanze Cloud Foundation
+{: #sd_orderinginstance}
 
-Per distribuire una piattaforma SDDC (Software-Defined Data Center) unificata con una configurazione di calcolo, archiviazione e rete standard, ordina un'istanza VMware Cloud Foundation. Durante l'ordine iniziale, puoi anche aggiungere servizi, come [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services/addingzertodr.html) per il ripristino di emergenza.
+Per distribuire una piattaforma SDDC (Software-Defined Data Center) unificata con una configurazione di calcolo, archiviazione e rete standard, ordina un'istanza VMware Cloud Foundation. Durante l'ordine iniziale, puoi anche aggiungere servizi, come [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) per il ripristino di emergenza.
 
 ## Requisiti
+{: #sd_orderinginstance-req}
 
 Assicurati di aver completato le seguenti attività:
-*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html).
-*  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html).
+*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+*  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning).
 
 Non modificare alcun valore impostato durante l'ordine o la distribuzione dell'istanza. La modifica può rendere inutilizzabile la tua istanza. Ad esempio, se la rete pubblica si interrompe, se i server e le VSI (Virtual Server Instance) vanno dietro una fornitura media di Vyatta o se la VSI di IBM CloudBuilder si arresta o viene eliminata. Inoltre, non modificare il nome dell'istanza, il nome del dominio root, l'etichetta del dominio secondario o il prefisso del nome host, dopo che l'istanza è stata distribuita.
 {:important}
 
 ## Impostazioni di sistema
+{: #sd_orderinginstance-sys-settings}
 
 Quando ordini un'istanza Cloud Foundation, devi specificare le seguenti impostazioni di sistema.
 
 ### Nome istanza
+{: #sd_orderinginstance-inst-name}
 
 Il nome dell'istanza deve rispettare i seguenti requisiti:
 * Sono consentiti solo caratteri alfanumerici e trattini (-).
-* Il nome istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
+* Il nome dell'istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
 * La lunghezza massima del nome dell'istanza è di 10 caratteri.
 * Il nome dell'istanza deve essere univoco all'interno del tuo account.
 
 ### Primaria o secondaria
+{: #sd_orderinginstance-primary-secondary}
 
 Scegli se ordinare un nuova istanza primaria o un'istanza secondaria per un'istanza primaria esistente.
 
 ## Impostazioni di licenza
+{: #sd_orderinginstance-licensing-settings}
 
 Specifica le opzioni di licenza per i seguenti componenti VMware nell'istanza:  
 * Licenza vCenter Server - Standard
@@ -54,12 +60,15 @@ Per gli utenti Business Partner, la licenza vCenter Server (Standard edition), l
 Per gli utenti non Business Partner, puoi utilizzare le licenze VMware fornite da IBM per questi componenti selezionando **Includi con l'acquisto** o puoi utilizzare l'opzione Bring Your Own License (BYOL) selezionando **Fornita dall'utente** e immettendo le tue chiavi di licenza.
 
 ## Impostazioni di Bare Metal Server
+{: #sd_orderinginstance-bare-metal}
 
 ### Ubicazione data center
+{: #sd_orderinginstance-dc-location}
 
 Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui deve essere ospitata l'istanza.
 
 ### Skylake
+{: #sd_orderinginstance-skylake}
 
 Se selezioni **Skylake**, puoi scegliere la combinazione di CPU e RAM del Bare Metal Server in base alle tue esigenze.
 
@@ -72,6 +81,7 @@ Tabella 1. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
 | Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 ### Broadwell
+{: #sd_orderinginstance-broadwell}
 
 Se selezioni **Broadwell**, puoi scegliere la combinazione di CPU e RAM del Bare Metal Server in base alle tue esigenze.
 
@@ -86,10 +96,12 @@ Tabella 2. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4 / 64 core totali, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Numero di server Bare Metal
+{: #sd_orderinginstance-bare-metal-number}
 
 Un'istanza Cloud Foundation comprende quattro server bare metal nella distribuzione iniziale. Non puoi modificare il numero di server bare metal quando effettui l'ordine.
 
 ## Impostazioni di archiviazione
+{: #sd_orderinginstance-storage}
 
 Per le istanze Cloud Foundation, puoi ordinare solo l'archiviazione VMware vSAN.
 
@@ -104,10 +116,12 @@ Se selezioni la configurazione **Skylake** o **Broadwell** di Bare Metal Server,
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
 
 ## Impostazioni dell'interfaccia di rete
+{: #sd_orderinginstance-network-interface}
 
 Quando ordini un'istanza Cloud Foundation, devi specificare le seguenti impostazioni dell'interfaccia di rete.
 
 ### Prefisso nome host
+{: #sd_orderinginstance-hostname-prefix}
 
 Il prefisso del nome host deve rispettare i seguenti requisiti:
 *  Sono consentiti solo caratteri alfanumerici e trattini (-).
@@ -115,6 +129,7 @@ Il prefisso del nome host deve rispettare i seguenti requisiti:
 *  La lunghezza massima del prefisso del nome host è di 10 caratteri.
 
 ### Etichetta dominio secondario
+{: #sd_orderinginstance-subdomain-label}
 
 L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
 *  Sono consentiti solo caratteri alfanumerici e trattini (-).
@@ -123,6 +138,7 @@ L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
 *  L'etichetta del dominio secondario deve essere univoca all'interno del tuo account.
 
 ### Nome dominio
+{: #sd_orderinginstance-domain-name}
 
 Il nome del dominio root deve rispettare i seguenti requisiti:
 * Il nome del dominio deve essere composto da due o più stringhe separate da un punto (.)
@@ -135,6 +151,7 @@ La lunghezza massima del nome di dominio completo (o FQDN, Fully Qualified Domai
 {:note}
 
 ### Formato del valore per le impostazioni di rete
+{: #sd_orderinginstance-network-settings-value-format}
 
 Il nome del dominio e l'etichetta del dominio secondario vengono utilizzati per generare il nome utente e i nomi server dell'istanza, come mostrato nella seguente tabella.
 
@@ -150,18 +167,23 @@ Tabella 3. Formato del valore per i nomi utente, nomi dominio e nomi server
   | Nome del sito SSO (Single Sign-On) | `<subdomain_label>`
   | Nome di dominio completo PSC | `PSC-<subdomain_label>.<subdomain_label>.<root_domain>`. La lunghezza massima è di 50 caratteri. |  
 
-  Il nome di dominio completo di SDDC Manager non può essere risolto pubblicamente. In caso contrario, la configurazione dell'istanza Cloud Foundation potrebbe non riuscire e non può essere ripristinata. Prima di specificare un nome di dominio, consulta [Considerazioni sulla scelta del nome del dominio root](/docs/services/vmwaresolutions/vmonic/trbl_limitations.html#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances).
+  Il nome di dominio completo di SDDC Manager non può essere risolto pubblicamente. In caso contrario, la configurazione dell'istanza Cloud Foundation potrebbe non riuscire e non può essere ripristinata. Prima di specificare un nome di dominio, consulta [Considerazioni sulla scelta del nome del dominio root](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_limitations#considerations-when-choosing-a-root-domain-name-for-cloud-foundation-instances).
 
 ### VLAN
+{: #sd_orderinginstance-vlans}
 
 Le impostazioni di rete si basano sulla tua selezione di **Ordina nuove VLAN** o **Seleziona VLAN esistenti**.
 
 Per l'ordine della tua istanza sono richieste una VLAN pubblica e due VLAN private. Le due VLAN private sono collegate a ogni Bare Metal Server.
 
 #### Ordina nuove VLAN
+{: #sd_orderinginstance-new-vlans}
+
 Seleziona questa opzione per ordinare una nuova VLAN pubblica e due nuove VLAN private.
 
-#### Seleziona VLAN esistenti  
+#### Seleziona VLAN esistenti
+{: #sd_orderinginstance-existing-vlans}
+
 A seconda del {{site.data.keyword.CloudDataCent_notm}} che hai selezionato, potrebbero essere disponibili VLAN pubbliche e private esistenti.
 
 Se scegli di riutilizzare VLAN pubbliche e private esistenti, specifica le VLAN e le sottoreti:
@@ -171,20 +193,21 @@ Se scegli di riutilizzare VLAN pubbliche e private esistenti, specifica le VLAN 
   * La **Sottorete primaria** è assegnata agli host fisici per l'accesso alla rete pubblica.
   * La **Sottorete primaria privata** è assegnata agli host fisici per il traffico di gestione.
 
-##### Importante
-
-* Assicurati che la configurazione del firewall sulle VLAN selezionate non blocchi il traffico dei dati di gestione.
-* Assicurati che tutte le VLAN che selezioni si trovino nello stesso pod, poiché i server ESXi non possono essere forniti su VLAN di pod misti.
+Assicurati che la configurazione del firewall sulle VLAN selezionate non blocchi il traffico dei dati di gestione. Assicurati che tutte le VLAN che selezioni si trovino nello stesso pod, poiché i server ESXi non possono essere forniti su VLAN di pod misti.
+{:important}
 
 ## Servizi
+{: #sd_orderinginstance-addon-services}
 
-Quando ordini un'istanza Cloud Foundation, puoi ordinare anche i servizi aggiuntivi. Per ulteriori informazioni sui servizi disponibili, vedi [Servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_planning.html#services-for-cloud-foundation-instances).
+Quando ordini un'istanza Cloud Foundation, puoi ordinare anche i servizi aggiuntivi. Per ulteriori informazioni sui servizi disponibili, vedi [Servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning#services-for-cloud-foundation-instances).
 
 ## Riepilogo ordine
+{: #sd_orderinginstance-order-summary}
 
 In base alla tua configurazione selezionata per l'istanza e i servizi aggiuntivi, il costo stimato viene generato e visualizzato immediatamente nel riquadro di destra. Fai clic su **Dettagli sui prezzi** nel riquadro di destra per generare un documento PDF che fornisce i dettagli della stima.
 
 ## Procedura per ordinare le istanze Cloud Foundation
+{: #sd_orderinginstance-procedure}
 
 1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **Cloud Foundation** nella sezione **Data center virtuali**.
 2. Nella pagina **VMware Cloud Foundation on IBM Cloud**, fai clic su **Crea**.
@@ -200,7 +223,7 @@ In base alla tua configurazione selezionata per l'istanza e i servizi aggiuntivi
    *  Per utilizzare la tua propria licenza, seleziona **Fornita dall'utente** e immetti la chiave di licenza.  
 6. Completa le impostazioni di Bare Metal Server:
    1. Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui ospitare l'istanza.
-   2. Seleziona la configurazione Bare Metal Server e specifica il modello di CPU e la dimensione della RAM.
+   2. Selena la configurazione Bare Metal Server e specifica il modello di CPU e la dimensione della RAM.
 7. Completa la configurazione di archiviazione.
    1. Specifica i tipi di disco per i dischi di capacità vSAN e cache e il numero di dischi.
    2. Se vuoi più spazio di archiviazione, seleziona la casella di spunta **Alte prestazioni con Intel Optane**.
@@ -215,22 +238,24 @@ In base alla tua configurazione selezionata per l'istanza e i servizi aggiuntivi
 10. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza prima di effettuare l'ordine.
     1. Esamina le impostazioni per l'istanza.
     2. Esamina il costo stimato dell'istanza. Fai clic su **Dettagli sui prezzi** per generare un riepilogo in formato PDF. Per salvare o stampare il riepilogo
-del tuo ordine, fai clic sull'icona **Stampa** o **Download** nella parte superiore destra della finestra PDF.
+   del tuo ordine, fai clic sull'icona **Stampa** o **Download** nella parte superiore destra della finestra PDF.
     3. Assicurati che l'account da addebitare sia corretto e seleziona quindi la casella di spunta **Accetto che all'account riportato di seguito venga addebitato un corrispettivo**.
     4. Fai clic sul link o sui link dei termini che si applicano al tuo ordine. Assicurati di accettare questi termini e quindi seleziona la casella di spunta **Ho letto e accetto gli accordi di servizio di terze parti elencati di seguito**.
     5. Fai clic su **Fornitura**.
 
 ## Risultati
+{: #sd_orderinginstance-results}
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **SDDC-Cluster** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **SDDC-Cluster** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 
 Se ordini un'istanza secondaria, il client web VMware vSphere per l'istanza primaria (collegata a quella secondaria) potrebbe essere riavviato una volta completato l'ordine della tua istanza secondaria.
 
 ## Operazioni successive
+{: #sd_orderinginstance-next}
 
 Visualizza e gestisci l'istanza Cloud Foundation che hai ordinato.
 
@@ -246,12 +271,13 @@ Devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel
 
    Le eccezioni a queste attività includono la gestione delle condivisioni file di archiviazione condivisa dal {{site.data.keyword.slportal}}. Tali attività includono: l'ordine, l'eliminazione (che potrebbe influire sugli archivi di dati, se montati), l'autorizzazione e il montaggio di condivisioni file di archiviazione condivisa.
 
-### Link correlati
+## Link correlati
+{: #sd_orderinginstance-related}
 
-* [Registrazione di un account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
-* [Visualizzazione delle istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
-* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [Eliminazione di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
-* [Domande frequenti su BYOL](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
+* [Registrazione di un account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Visualizzazione delle istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [Eliminazione di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)
+* [Domande frequenti su BYOL](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)

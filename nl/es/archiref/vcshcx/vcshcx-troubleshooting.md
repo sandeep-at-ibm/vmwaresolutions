@@ -67,4 +67,4 @@ Pocos, si es que se ha experimentado algún problema con la operación del conce
 ## Enlaces relacionados
 {: #vcshcx-troubleshooting-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Visión general de vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

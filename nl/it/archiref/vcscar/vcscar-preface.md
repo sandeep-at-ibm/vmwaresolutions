@@ -4,16 +4,18 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Prefazione
+{: #vcscar-preface}
 
 Figura 1. Un linguaggio di nostra invenzione
 ![Un linguaggio di nostra invenzione](vcscar-alood.svg)
 
 ## Introduzione al linguaggio di skateboarding
+{: #vcscar-preface-intro}
 
 Il modo in cui gli skateboarder combinano movimenti e submovimenti in trick
 impone una sorta di grammatica o di sintassi, che si basano sulla fisica di ciò che sta
@@ -105,6 +107,7 @@ sport olimpico appena adottato, ma di influenzare anche altri sforzi
 artistici.
 
 ## Codificazione del linguaggio
+{: #vcscar-preface-codification}
 
 Come con qualsiasi linguaggio, il nostro è stato sviluppato nel tempo, raccogliendo nuove parole
 e utilizzi, rendendo occasionali ridondanze ed eccezioni lungo
@@ -115,7 +118,7 @@ machine learning. Per gli skater, ogni sfumatura del movimento complesso è
 incorporata nella nomenclatura stessa. In effetti, questo linguaggio è così solido
 che è stato adottato non solo dagli snowboarder, ma anche dai surfisti.
 
-Tuttavia, nonostante tutta questa complessità e potenza, la codifica del linguaggio
+Tuttavia, nonostante tutta questa complessità e potenza, la codificazione del linguaggio
 è semplice e concisa. Ogni *trick di base* ha un componente *direzionale* e
 *rotazionale*, insieme a un *atterraggio*, che determina se
 e come si concatena con il successivo trick di base per formare delle combinazioni;
@@ -123,10 +126,11 @@ questi sono i quattro *elementi fondamentali*. Vengono aggiunti altri due *modif
 un *turn prefix* per orientare la rotazione del rider (in senso orario o
 antiorario) e un altro componente *varial* per specificare come
 ruota la tavola, rispetto al corpo (verso l'interno o verso l'esterno). Utilizzando questa
-codifica , è possibile applicare in modo ricorsivo una serie di regole concisa per consentire
+codificazione, è possibile applicare in modo ricorsivo una serie di regole concisa per consentire
 combinazioni di qualsiasi lunghezza.
 
 ## Ulteriori variabili di ambiente
+{: #vcscar-preface-env-var}
 
 Spesso i professionisti di oggi dedicano il massimo sforzo alla ricerca di posti
 in cui praticare i trick. In effetti, parte di ciò che distingue ogni skater è la capacità creativa di adattare i trick a modi nuovi e fantasiosi, che spesso portano lo skater in tutto il mondo. Mentre esistono applicazioni di skate
@@ -165,13 +169,15 @@ conseguenze a cascata di variabili come queste, che aiutano la
 vita creativa di tutti gli skater professionisti.
 
 ## La piattaforma cloud
+{: #vcscar-preface-cloud-platform}
 
 La stratificazione creativa dei sistemi IT per generare nuove combinazioni parla
 al cuore dello skateboarding. Ha il potere di incastrarsi nella vita
 dei creativi per ispirare l'innovazione, in tutto il mondo, ovunque andiamo.
 Niente di tutto ciò potrebbe essere ottenuto senza {{site.data.keyword.cloud}}.
 
-### Link correlati
+## Link correlati
+{: #vcscar-preface-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

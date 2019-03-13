@@ -4,45 +4,53 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-07-20"
+lastupdated: "2019-02-15"
 
 ---
 
 # Solicitud de IBM Spectrum Protect Plus on IBM Cloud
+{: #spp_ordering}
 
 Puede solicitar el servicio de {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} al pedir una instancia nueva incluida con el servicio o añadiendo el servicio a la instancia existente.
 
 ## Solicitud de IBM Spectrum Protect Plus on IBM Cloud para una instancia nueva
+{: #spp_ordering-new}
 
 Puede solicitar una instancia nueva con IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} utilizando uno de los métodos siguientes:
 * Desde la consola de {{site.data.keyword.vmwaresolutions_short}}, al solicitar una instancia nueva, seleccione **IBM Spectrum Protect Plus on IBM Cloud** en la sección **Servicios**.
 * Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **IBM Spectrum Protect Plus on IBM Cloud**, especifique los valores de servicio y seleccione **Añadir a instancia nueva**.
 
 ## Solicitud de IBM Spectrum Protect Plus on IBM Cloud para una instancia existente
+{: #spp_ordering-existing}
 
 Puede añadir el servicio de IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} en una instancia existente utilizando uno de los métodos siguientes:
 * Desde la consola de {{site.data.keyword.vmwaresolutions_short}}, visualice la instancia para la que desea añadir el servicio, pulse **Servicios** en el panel de navegación izquierdo y pulse **Añadir**.
 * Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **IBM Spectrum Protect Plus on IBM Cloud**, especifique los valores de servicio y seleccione **Añadir a instancia existente**.
 
 ## Configuración del servicio de IBM Spectrum Protect Plus on IBM Cloud
+{: #spp_ordering-config}
 
 Al solicitar el servicio, proporcione los valores siguientes:
 
 ### Número de volúmenes de almacenamiento
+{: #spp_ordering-config-number-vol}
 
 El número de volúmenes que satisfagan sus necesidades de almacenamiento.
 
 ### Tamaño de almacenamiento por volumen
+{: #spp_ordering-config-size}
 
 La capacidad de almacenamiento por volumen.
 
 ### Rendimiento de almacenamiento
+{: #spp_ordering-config-performance}
 
 El valor de IOPS (operaciones de entrada/salida por segundo) por GB en función de los requisitos de carga de trabajo.
 * Si desea solicitar licencias para IBM Spectrum Protect Plus, especifique **Número de máquinas virtuales para licencia** en el separador **Pedido de licencias**.
 * Si desea traer su propia licencia (BYOL), pulse el separador **Licencias de IBM Spectrum Protect Plus** y luego pulse **Añadir archivos de licencia** para cargar sus propios archivos de licencia de IBM Spectrum Protect Plus.
 
 ## Proceso de despliegue de IBM Spectrum Protect Plus on IBM Cloud
+{: #spp_ordering-deploy}
 
 El despliegue de IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} es automático. Tanto si solicita una instancia con este servicio incluido como si despliega el servicio posteriormente en la instancia, se llevan a cabo los siguientes pasos mediante el proceso de automatización de {{site.data.keyword.vmwaresolutions_short}}:
 
@@ -54,13 +62,14 @@ El despliegue de IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} e
 6. El almacenamiento NFS solicitado para este servicio se adjunta a la máquina virtual de IBM Spectrum Protect Plus y se configura el repositorio de copia de seguridad.
 7. Se registra el nombre de host y la dirección IP de la máquina virtual de IBM Spectrum Protect Plus con el servidor DNS de la instancia.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #spp_ordering-related}
 
-* [Visión general de IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](spp_considerations.html)
+* [Visión general de IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations)
 * [Planificación del servicio preventivo de IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](http://www.ibm.com/support/docview.wss?uid=swg22012650)
-* [Gestión de IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](managingspp.html)
-* [Solicitud, visualización y eliminación de servicios para instancias de Cloud Foundation](../sddc/sd_addingremovingservices.html)
-* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](../vcenter/vc_addingremovingservices.html)
-* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server con el paquete híbrido (Hybridity)](../vcenter/vc_hybrid_addingremovingservices.html)
+* [Gestión de IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)
+* [Solicitud, visualización y eliminación de servicios para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Documentación de IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
-* [Cómo ponerse en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html)
+* [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

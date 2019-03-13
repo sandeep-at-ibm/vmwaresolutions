@@ -2,19 +2,29 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-02-15"
 
 ---
 
-# Demande d'IBM Cloud Private Hosted
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+
+# Demande d'IBM Cloud Private Hosted - Obsolète
+{: #managing_icp}
+
+Les informations de cette rubrique seront bientôt obsolètes. Pour des informations plus à jour sur IBM Cloud Private Hosted, voir [Présentation d'IBM Cloud Private Hosted](icp_overview.html).
+{:deprecated}
 
 {{site.data.keyword.cloud}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} déploie automatiquement {{site.data.keyword.cloud_notm}} Private Hosted sur vos instances VMware vCenter Server.
 
 Le service {{site.data.keyword.cloud_notm}} Private Hosted fournit la puissance des microservices et des conteneurs à votre environnement VMware sur {{site.data.keyword.cloud_notm}}. Grâce à ce service, vous pouvez déployer le même modèle opérationnel et les mêmes outils VMware et {{site.data.keyword.cloud_notm}} locaux dans {{site.data.keyword.cloud_notm}}.
 
 ## Spécifications techniques pour IBM Cloud Private Hosted
+{: #managing_icp-specs}
 
 La configuration minimale requise pour pouvoir demander le service {{site.data.keyword.cloud_notm}} Private Hosted est la suivante :
 
@@ -29,6 +39,7 @@ La configuration minimale requise pour pouvoir demander le service {{site.data.k
 * Pour la sauvegarde des données, le service Veeam on IBM Cloud est recommandé.
 
 ## Procédure de demande d'IBM Cloud Private Hosted
+{: #managing_icp-procedure}
 
 1. Commandez une nouvelle instance vCenter Server en suivant les étapes décrites dans [Commande d'instances vCenter Server](../vcenter/vc_orderinginstance.html). Vous pouvez également demander IBM Cloud Private Hosted pour une instance existante.
   **Important :** assurez-vous que votre environnement répond à la configuration minimale décrite précédemment.
@@ -39,8 +50,3 @@ La configuration minimale requise pour pouvoir demander le service {{site.data.k
 6. Sur la page **IBM Cloud Private Hosted on vCenter Server on IBM Cloud**, dans la zone **Contactez l'équipe DevOps d'IBM Cloud Private Hosted**, entrez une description de vos exigences et cliquez sur **Demander un rendez-vous**.
 
 Un représentant {{site.data.keyword.cloud_notm}} Private Hosted DevOps vous contacte à l'aide de vos informations de contact {{site.data.keyword.cloud_notm}} et vous aide à démarrer.
-
-### Liens connexes
-
-* [IBM Cloud Private Hosted](https://www.ibm.com/developerworks/community/files/form/anonymous/api/library/eafb752c-55f3-4b07-9b20-b61c8ea980b9/document/af203658-30c0-40ba-81b5-46c393fb723f/media/IBM_Cloud_Private_Hosted-IBM_Cloud.pdf) (téléchargement de fichier PDF)
-* [Ouvrir un ticket au sujet d'IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=fr_FR)

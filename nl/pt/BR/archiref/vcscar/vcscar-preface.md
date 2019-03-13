@@ -4,16 +4,18 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Prefácio
+{: #vcscar-preface}
 
 Figura 1. Uma linguagem de nossa própria concepção
 ![Uma linguagem de nossa própria concepção](vcscar-alood.svg)
 
 ## Introdução sobre a linguagem de skateboarding
+{: #vcscar-preface-intro}
 
 A forma como os skatistas combinam movimentos e submovimentos em manobras
 impõe um tipo de gramática ou sintaxe, que se baseia na física do que está
@@ -103,6 +105,7 @@ recém-adotado, mas também para influenciar outros empreendimentos
 artísticos.
 
 ## Codificação da linguagem
+{: #vcscar-preface-codification}
 
 Como em qualquer outra linguagem, a nossa foi desenvolvida ao longo do tempo, captando novas palavras
 e uso, renderizando redundâncias e exceções ocasionais ao longo do
@@ -124,6 +127,7 @@ codificação, um conjunto de regras conciso pode ser aplicado recursivamente pa
 combinações de qualquer comprimento.
 
 ## Variáveis ambientais adicionais
+{: #vcscar-preface-env-var}
 
 Os profissionais de hoje dedicam tanto esforço procurando pontos quanto
 praticando as manobras. De fato, parte do que distingue qualquer skatista é a capacidade criativa de adaptar manobras a maneiras novas e imaginativas, que muitas vezes levam o skatista para o mundo todo. Embora existam aplicativos de skate
@@ -162,12 +166,14 @@ consequências em cascata de variáveis como essas, que ajudam a
 vida criativa de todos os skatistas profissionais.
 
 ## A plataforma de nuvem
+{: #vcscar-preface-cloud-platform}
 
 A definição de camadas criativas de sistemas de TI para gerar novas combinações fala
 ao coração do skateboarding. Isso tem o poder de ondulação na vida de
 pessoas criativas para inspirar inovação, em todo o mundo, onde quer que nós formos.
 Nada disso seria alcançado sem o {{site.data.keyword.cloud}}.
 
-### Links relacionados
+## Links relacionados
+{: #vcscar-preface-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

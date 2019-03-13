@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Incluindo, visualizando e excluindo certificados para instâncias do KMIP for VMware on IBM Cloud
+{: #kmip_standalone_addingdeletingcert}
 
 Depois que a instância do KMIP for VMware on {{site.data.keyword.cloud}} estiver pronta, certificados deverão ser incluídos nela. Quando você não precisar mais de um certificado, exclua-o de sua instância.
 
 ## Procedimento para incluir certificados em instâncias do KMIP for VMware on IBM Cloud
+{: #kmip_standalone_addingdeletingcert-add}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Role para baixo até a tabela **Instâncias do KMIP for VMware on IBM Cloud**, clique na instância na qual você deseja incluir certificados.
@@ -28,6 +30,7 @@ Depois que a instância do KMIP for VMware on {{site.data.keyword.cloud}} estive
 5. Clique em  ** Incluir **.
 
 ## Procedimento para visualizar certificados para instâncias do KMIP for VMware on IBM Cloud
+{: #kmip_standalone_addingdeletingcert-view}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Role para baixo até a tabela **Instâncias do KMIP for VMware on IBM Cloud**, clique na instância para a qual visualizar os certificados.
@@ -35,6 +38,7 @@ Depois que a instância do KMIP for VMware on {{site.data.keyword.cloud}} estive
 4. Para visualizar o conteúdo de um certificado específico, clique em **Download**.
 
 ## Procedimento para excluir certificados de instâncias do KMIP for VMware on IBM Cloud
+{: #kmip_standalone_addingdeletingcert-delete}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Role para baixo até a tabela **Instâncias do KMIP for VMware on IBM Cloud**, clique na instância da qual você deseja excluir certificados.
@@ -43,9 +47,10 @@ Depois que a instância do KMIP for VMware on {{site.data.keyword.cloud}} estive
    O cliente perde imediatamente o acesso a todas as chaves com o propósito de criptografar e decriptografar dados ou dados de backup. Para que o cliente obtenha acesso novamente, deve-se incluir o certificado SSL do cliente novamente.
    {:note}
 
-### Links relacionados
+## Links relacionados
+{: #kmip_standalone_addingdeletingcert-related}
 
-* [Visualizando instâncias do KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services/kmip_standalone_viewing.html)
-* [Pedindo instâncias do KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html)
-* [Excluindo instâncias do KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services/kmip_standalone_deleting.html)
-* [ Eventos do Activity Tracker ](/docs/services/vmwaresolutions/vmonic/at-events.html)
+* [Visualizando instâncias do KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
+* [Pedindo instâncias do KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)
+* [Excluindo instâncias do KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
+* [Eventos do Activity Tracker](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

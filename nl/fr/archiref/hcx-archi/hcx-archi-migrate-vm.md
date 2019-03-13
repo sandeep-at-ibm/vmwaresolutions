@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Migration d'une machine virtuelle
+{: #hcx-archi-migrate-vm}
 
 HCX permet la migration bidirectionnelle : d'un site vers le cloud, ou du cloud vers le centre de données sur site. HCX utilise la technologie de réplication pendant le processus de migration. La technologie de réplication est intégrée dans le dispositif virtuel Passerelle de cloud hybride. Aucun logiciel de réplication supplémentaire ne doit être installé.
 
@@ -31,25 +32,29 @@ La migration avec peu d'interruption utilise la réplication basée sur l'hôte 
 7. La migration est effectuée. Le service Services cloud hybrides copie la machine virtuelle d'origine dans le dossier **Migrated VMs** dans la vue vSphere Templates.
 
 ## vMotion sans interruption
+{: #hcx-archi-migrate-vm-no-downtime-vm}
 
 vMotion transfère une machine virtuelle réelle d'un vSphere vCenter vers un cloud VCF/VCS. Ce vMotion requiert un réseau étendu. Le transfert de vMotion capture la mémoire active de la machine virtuelle, son état d'exécution, son adresse IP et son adresse MAC.
 
-La version matérielle de la machine virtuelle doit être au moins égale à 9, ou le vMotion entre clouds risque d'échouer.
+La version matérielle de la machine virtuelle doit être au moins égale à 9, ou la migration vMotion entre clouds risque d'échouer.
 {:note}
 
 ## Migration à froid
+{: #hcx-archi-migrate-vm-cold-mig}
 
 La migration à froid utilise le même plan de données que le vMotion entre clouds pour le transfert d'une machine virtuelle hors tension sur un réseau étendu. Son adresse IP et son adresse MAC sont conservées. Les exigences et les restrictions de la machine virtuelle et de vMotion sont identiques.
 
 ### Migration de machines virtuelles à l'aide de l'assistant bidirectionnel
+{: #hcx-archi-migrate-vm-mig-bidir-wiz}
 
-Avec le client Web vSphere, l'assistant de migration bidirectionnel est accessible depuis l'onglet de mise en route des services Services cloud hybrides. Cet assistant gère tous les détails de la migration, y compris les machines virtuelles multiples.
+Avec le client vSphere Web Client, l'assistant de migration bidirectionnel est accessible depuis l'onglet de mise en route des services Services cloud hybrides. Cet assistant gère tous les détails de la migration, y compris les machines virtuelles multiples.
 
-Depuis le client web vsphere, l'assistant de migration bidirectionnelle est accessible à partir de l'onglet guide d'initiation hybride des services de cloud. Cet assistant gère tous les détails de la migration, y compris les machines virtuelles multiples.
+Depuis le client vSphere Web Client, l'assistant de migration bidirectionnelle est accessible à partir de l'onglet guide d'initiation hybride des services de cloud. Cet assistant gère tous les détails de la migration, y compris les machines virtuelles multiples.
 * Depuis vSphere vers le service Services cloud hybrides VCF/VCS
-* Depuis le cloud HCX VCF/VCS HCX vers vSphere
+* Depuis VCF/VCS HCX Cloud vers vSphere
 
 ### Vérification des machines virtuelles avant la migration
+{: #hcx-archi-migrate-vm-check-vms}
 
 Pour migrer une machine virtuelle, il est nécessaire de disposer d'une connexion sécurisée gérée par la passerelle de cloud hybride, et ka machine virtuelle doit répondre aux exigences suivantes :
 * La machine virtuelle doit être sous tension.
@@ -65,6 +70,7 @@ Les machines virtuelles avec les attributs suivants ne sont pas prises en charge
 * Machines virtuelles dont la version matérielle est inférieure à 9.
 
 ### Surveillance d'une migration
+{: #hcx-archi-migrate-vm-monitor-mig}
 
 La progression d'un migration basée sur la réplication peut être surveillée depuis l'interface utilisateur ou depuis la ligne de commande. Vous pouvez consulter la console des tâches, comme décrit dans la procédure relative à la surveillance du déploiement d'un dispositif de service et rechercher la tâche relative à la **migration d'une machine virtuelle**. Lorsque l'état est **Completed**, la machine virtuelle est migrée et sous tension.
 
@@ -91,6 +97,7 @@ Cette procédure utilise une machine virtuelle non liée dans le même vCenter p
 Une interruption peut avoir lieu dans le ping continu pendant le basculement. Toutefois, le ping de test reprend rapidement la tâche **Migrate VM**, comme indiqué dans la console des tâches.
 
 ### Affichage des machines virtuelles migrées
+{: #hcx-archi-migrate-vm-view-vms}
 
 Lorsque le service Services cloud hybrides met sous tension une machine virtuelle migrée avec succès, il met hors tension la machine virtuelle en cours de migration d'origine et l'enregistre dans un dossier dans vCenter. Les machines virtuelles stockées restent ainsi jusqu'à ce qu'elles soient supprimées manuellement.
 
@@ -100,6 +107,7 @@ A l'issue de la migration, consultez le vCenter et notez les dossier libellés *
 * Les machines virtuelles non souhaitées dans ces dossiers peuvent être supprimées.
 * La suppression est finale, à moins qu'une solution de sauvegarde ne soit en place.
 
-### Liens connexes
+## Liens connexes
+{: #hcx-archi-migrate-vm-related}
 
-* [Modification ou désinstallation de HCX](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
+* [Modification ou désinstallation de HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

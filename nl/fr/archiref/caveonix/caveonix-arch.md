@@ -54,5 +54,5 @@ Figure 2. Zones de Caveonix RiskForesight
 {: #caveonix-arch-related}
 
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
-*   [Conception détaillée de Caveonix](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-detailed.html)
+*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+*   [Conception détaillée de Caveonix](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-detailed)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-14"
 {:important: .important}
 
 # Visión general de la prueba de un solo nodo para migración y modernización de apps
+{: #single-node-trial-for-migration-and-app-modernization-overview}
 
 La prueba de un solo nodo para la migración y modernización de apps le permite realizar una prueba de IBM Cloud para migrar cargas de trabajo de VMware a IBM Cloud y, a continuación, modernizar cargas de trabajo simples utilizando contenedores.
 
@@ -29,6 +30,7 @@ Esta versión de prueba está pensada para utilizarla durante un máximo de 90 d
 {:note}
 
 ## Especificaciones técnicas de instancias de prueba de un solo nodo para migración y modernización de apps
+{: #cloud_modern_bundle_overview-tech-specs}
 
 En la instancia de prueba de un solo nodo para la migración y modernización de apps se incluyen los siguientes componentes.
 
@@ -36,26 +38,31 @@ La disponibilidad y los precios de las configuraciones estandarizadas de hardwar
 {:note}
 
 ### Servidor nativo
+{: #cloud_modern_bundle_overview-bare-metal}
 
 Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz con 384 GB de RAM) para un máximo de unas 20 VM
 
 #### Sobrecargas de CPU
+{: #cloud_modern_bundle_overview-cpu}
 
 * Sobrecarga de 16:1 de CPU para gestión de vCenter Server, HCX y 20 VM de carga de trabajo de cliente
 * Sobrecarga de 11:1 de CPU para IBM Cloud Private
 
 #### Sobrecargas de RAM
+{: #cloud_modern_bundle_overview-ram}
 
 * Sobrecarga de 1.22:1 de RAM para un despliegue de cliente de 20 VM de carga de trabajo con 8 GB cada una
 * 1:1 (sin sobrecarga) para un despliegue de cliente de nueve VM de carga de trabajo con 8 GB cada una
 
 ### Almacenamiento NFS
+{: #cloud_modern_bundle_overview-nfs-storage}
 
 * 2 TB para gestión
 * 1 TB para carga de trabajo de cliente (para 20 VM de cliente)
 * 4 TB para IBM Cloud Private Hosted
 
 ### Especificaciones de red de las instancias de prueba de un solo nodo para migración y modernización de apps
+{: #cloud_modern_bundle_overview-networking-specs}
 
 Se solicitan los siguientes componentes del sistema de redes:
 *  Enlaces ascendentes de red pública y privada de 10 Gbps
@@ -69,6 +76,7 @@ Se solicitan los siguientes componentes del sistema de redes:
   * Una Edge Services Gateway de NSX de VMware gestionada por el cliente para el tráfico de salida y de entrada de carga de trabajo HTTPS, que IBM despliega como plantilla que puede modificar para proporcionar acceso VPN o acceso público.
 
 ### Instancias de servidor virtual
+{: #cloud_modern_bundle_overview-vsi}
 
 Se solicitan las siguientes instancias de servidor virtual (VSI):
 
@@ -76,6 +84,7 @@ Se solicitan las siguientes instancias de servidor virtual (VSI):
 * Se despliega y se puede consultar una VSI de Microsoft Windows Server para Microsoft Active Directory (AD). La VSI funciona como el DNS para la instancia en la que se han registrado los hosts y las máquinas virtuales.
 
 ### Licencias proporcionadas por IBM y tarifas
+{: #cloud_modern_bundle_overview-license-and-fee}
 
 En el pedido de la instancia de prueba de un solo nodo para la migración y modernización de apps se incluyen las siguientes licencias.
 
@@ -88,6 +97,7 @@ Las instancias de prueba de un solo nodo para la migración y modernización de 
 {:note}
 
 ## Especificaciones técnicas de VMware HCX on IBM Cloud
+{: #cloud_modern_bundle_overview-hcx-tech-specs}
 
 La prueba de un solo nodo para la migración y modernización de apps incluye HCX on {{site.data.keyword.cloud_notm}}. Los componentes siguientes se solicitan y se incluyen en el servicio HCX on {{site.data.keyword.cloud_notm}}.
 
@@ -95,12 +105,14 @@ Las instancias de HCX locales incluyen solo la licencia y la activación.
 {:note}
 
 ### Un par activo/pasivo de pasarelas de servicio VMware NSX Edge para la gestión de HCX
+{: #cloud_modern_bundle_overview-esg}
 
 * CPU: 6 vCPU
 * RAM: 8 GB
 * Disco: 3 GB VMDK
 
 ### Dispositivo de gestión HCX - máquina virtual
+{: #cloud_modern_bundle_overview-hcx-mgmt-appliance}
 
 * CPU: 4 vCPU
 * RAM: 12 GB
@@ -109,18 +121,21 @@ Las instancias de HCX locales incluyen solo la licencia y la activación.
 Los dispositivos HCX adicionales se despliegan durante la configuración, según sean necesarios para la conectividad de L2, la optimización de WAN y las conexiones de pasarela.
 
 ### Especificaciones de red para el servicio HCX on IBM Cloud
+{: #cloud_modern_bundle_overview-hcx-networking-specs}
 
 * Una subred portátil pública con 16 direcciones IP
 * Dos subredes portátiles privadas con 64 direcciones IP
 * Ocho direcciones IP desde una subred vMotion portátil privada
 
 ## Especificaciones técnicas de IBM Cloud Private Hosted
+{: #cloud_modern_bundle_overview-icp-tech-specs}
 
-IBM Cloud Private Hosted V3.1 se instala utilizando la topología de desarrollo o de prueba en todas las instancias de prueba de un solo nodo para la migración y modernización de apps. Para obtener más información acerca de IBM Cloud Private Hosted, consulte [Visión general de IBM Cloud Private Hosted](../services/icp_overview.html).
+IBM Cloud Private Hosted V3.1 se instala utilizando la topología de desarrollo o de prueba en todas las instancias de prueba de un solo nodo para la migración y modernización de apps. Para obtener más información acerca de IBM Cloud Private Hosted, consulte [Visión general de IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview).
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #cloud_modern_bundle_overview-related}
 
-* [Guía de vCenter Server e IBM Cloud Private](../archiref/vcsicp/vcsicp-intro.html)
+* [Guía de vCenter Server e IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Apertura de una incidencia para IBM Cloud privado](https://www.ibm.com/mysupport/s/?language=en_US)
 * [Documentación de VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
 * [Obtención de HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Conception de gestion d'infrastructure
+{: #design_infrastructuremgmt}
 
 La gestion d'infrastructure fait référence aux composants qui gèrent l'infrastructure VMware. Cette conception utilise une seule instance PSC (Platform Services Controller) externe et une seule instance vCenter Server :
 * vCenter Server est la plateforme centralisée dédiée à la gestion des environnements vSphere ; il s'agit de l'un des composants fondamentaux de cette solution.
@@ -21,6 +22,7 @@ La gestion d'infrastructure fait référence aux composants qui gèrent l'infras
 Les instances PSC et les instances vCenter Server sont des machines virtuelles distinctes.
 
 ## Conception de PSC
+{: #design_infrastructuremgmt-psc}
 
 Cette conception déploie une seule instance PSC externe en tant que dispositif virtuel sur un sous-réseau portable, sur le VLAN privé qui est associé aux machines virtuelles de gestion. Le routeur BCR (Back-end Customer Router) lui sert de passerelle par défaut. Le dispositif virtuel est configuré avec les spécifications décrites dans le tableau suivant.
 
@@ -40,6 +42,7 @@ Tableau 1. Spécifications PSC (Platform Services Controller)
 Le domaine SSO par défaut `vsphere.local` est affecté au contrôleur PSC situé dans l'instance principale.
 
 ## Conception de vCenter Server
+{: #design_infrastructuremgmt-vcenter}
 
 vCenter Server est également déployé en tant que dispositif virtuel. En outre, vCenter Server est installé sur un sous-réseau portable, sur le VLAN privé qui est associé aux machines virtuelles de gestion. L'adresse IP affectée sur le routeur BCR pour ce sous-réseau spécifique lui sert de passerelle par défaut. Le dispositif virtuel est configuré avec les spécifications décrites dans le tableau suivant.
 
@@ -56,14 +59,17 @@ Tableau 2. Spécifications vCenter Server Appliance
 | Type de disque                    | A allocation dynamique                    |
 
 ### Base de données vCenter Server
+{: #design_infrastructuremgmt-vcenter-db}
 
 La configuration de vCenter Server utilise une base de données PostgreSQL imbriquée locale qui est incluse avec le dispositif. La base de données imbriquée est utilisée pour retirer les dépendances sur les bases de données externes et l'octroi de licence.
 
 ### Spécification de cluster vCenter Server
+{: #design_infrastructuremgmt-vcenter-cluster}
 
 Cette conception vous permet de regrouper en cluster les hôtes vSphere ESXi qui sont mis à disposition via la solution. Toutefois, avant les clusters, un objet de centre de données est créé afin de signifier l'emplacement des hôtes vSphere ESXi, ainsi que celui du pod dans le centre de données. Un cluster est créé une fois l'objet de centre de données créé. Le cluster est déployé avec la haute disponibilité VMware vSphere et le planificateur DRS (Distributed Resource Scheduler) VMware vSphere activés.
 
 ### Planificateur DRS (Distributed Resource Scheduler) vSphere
+{: #design_infrastructuremgmt-vsphere-drs}
 
 Cette conception utilise la planification DRS (Distributed Resource Scheduling) vSphere dans le cluster initial pour placer les machines virtuelles et dans les autres clusters pour faire migrer dynamiquement des machines virtuelles afin d'obtenir des clusters équilibrés. La valeur "Fully Automated" est affectée au paramètre Automation Level, par conséquent, les recommandations de placement initial et de migration sont automatiquement exécutées par vSphere. En outre, le seuil de migration défini est modéré, ainsi, vCenter applique les recommandations de priorité 1, 2, 3 pour obtenir au moins une amélioration décente de l'équilibrage de charge du cluster.
 
@@ -71,6 +77,7 @@ La gestion de l'alimentation via la fonction **Distributed Power Management** n'
 {:note}
 
 ### Haute disponibilité vSphere
+{: #design_infrastructuremgmt-vsphere-ha}
 
 Cette conception utilise la haute disponibilité vSphere dans le cluster initial et les autres clusters pour détecter les pannes de traitement et récupérer les machines virtuelles qui s'exécutent dans un cluster. La haute disponibilité vSphere dans cette conception est configurée avec les options de **surveillance hôte** et de **contrôle d'admission** activées dans le cluster. De plus, le cluster initial réserve les ressources d'un noeud comme capacité de secours pour la règle de contrôle d'admission.
 
@@ -80,6 +87,7 @@ Vous êtes chargé d'ajuster la règle de contrôle d'admission lorsque le clust
 Par défaut, une valeur moyenne est affectée à l'option de **priorité de redémarrage des machines virtuelles** et l'option de **réponse d'isolement hôte** est désactivée. De plus, l'option de **surveillance des machines virtuelles** est désactivée et la fonction de **pulsation de magasin de données** est configurée pour inclure n'importe lequel des magasins de données de cluster. Cette approche utilise les magasins de données NAS éventuellement présents.
 
 ## Automatisation
+{: #design_infrastructuremgmt-automation}
 
 L'automatisation est l'élément central de ces solutions. Elle offre les avantages suivants :
 * Elle réduit la complexité du déploiement
@@ -89,6 +97,7 @@ L'automatisation est l'élément central de ces solutions. Elle offre les avanta
 Les machines virtuelles {{site.data.keyword.IBM}} CloudBuilder, IBM CloudDriver et SDDC Manager fonctionnent conjointement pour démarrer une nouvelle instance VMware et effectuer des fonctions de gestion de cycle de vie.
 
 ### IBM CloudBuilder et IBM CloudDriver
+{: #design_infrastructuremgmt-cloud-builder-driver}
 
 Les instances de serveur virtuel IBM CloudBuilder et IBM CloudDriver sont des composants développés par IBM auxquels vous ne pouvez pas accéder.
 * IBM CloudBuilder est une instance de serveur virtuel {{site.data.keyword.cloud_notm}} temporaire qui amorce le déploiement, la configuration et la validation des composants de solution dans les hôtes ESXi bare metal mis à disposition.
@@ -102,6 +111,7 @@ L'utilisateur peut supprimer ou endommager les machines virtuelles décrites dan
 * Application de correctif
 
 ### SDDC Manager
+{: #design_infrastructuremgmt-sddc-manager}
 
 Pour les instances Cloud Foundation, la machine virtuelle SDDC Manager est un composant qui est développé et géré par VMware. Il continue de faire partie de l'instance tout au long de son cycle de vie. Il est responsable des fonctions de cycle de vie suivantes pour les instances :
 * Gestion des composants VMware : vCenter Server, Platform Services Controller (PSC), vSAN et NSX, y compris l'allocation d'adresse IP et la résolution de nom d'hôte
@@ -110,6 +120,7 @@ Pour les instances Cloud Foundation, la machine virtuelle SDDC Manager est un co
 Pour les instances vCenter Server, ces activités sont effectuées par IBM CloudDriver en l'absence de gestionnaire SDDC Manager.
 
 ### Flux d'automatisation
+{: #design_infrastructuremgmt-auto-flow}
 
 La procédure suivante décrit l'ordre dans lequel les événements se déroulent lorsqu'une instance VMware est commandée via la console {{site.data.keyword.vmwaresolutions_short}} :
 1.  Commande de VLAN et de sous-réseaux pour la mise en réseau à partir d'{{site.data.keyword.cloud_notm}}
@@ -125,8 +136,9 @@ La procédure suivante décrit l'ordre dans lequel les événements se déroulen
 11. Retrait de l'instance de serveur virtuel CloudBuilder
 12. Déploiement de services facultatifs, tels que le serveur de sauvegarde et le stockage
 
-### Liens connexes
+## Liens connexes
+{: #design_infrastructuremgmt-related}
 
-* [Conception d'infrastructure physique](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
-* [Conception d'infrastructure virtuelle](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
-* [Conception des services communs](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)
+* [Conception d'infrastructure physique](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
+* [Conception d'infrastructure virtuelle](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
+* [Conception des services communs](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)

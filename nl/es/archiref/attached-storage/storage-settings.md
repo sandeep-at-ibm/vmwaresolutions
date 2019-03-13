@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-21"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -12,16 +12,18 @@ lastupdated: "2018-11-21"
 {:note: .note}
 {:important: .important}
 
-# Valores de almacenamiento
+# Configuración y valores para el almacenamiento adjunto
+{: #storage-settings}
 
 Este diseño da soporte a la conexión del almacenamiento compartido mediante NFS v3 únicamente. NFS v4 y v4.1 no reciben soporte.
 
-Todo el almacenamiento adjunto para este diseño se limita al almacenamiento de {{site.data.keyword.cloud_notm}} disponible en el mismo {{site.data.keyword.CloudDataCent_notm}} que la solución vCenter Server. Además, de forma predeterminada todos los discos virtuales que se almacenan en el almacén de datos son de aprovisionamiento ligero.
+El almacenamiento adjunto para este diseño se limita al almacenamiento de {{site.data.keyword.cloud_notm}} disponible en el mismo {{site.data.keyword.CloudDataCent_notm}} que la solución vCenter Server. Además, de forma predeterminada todos los discos virtuales que se almacenan en el almacén de datos son de aprovisionamiento ligero.
 {:note}
 
 La arquitectura especifica que los almacenes de datos NFS v3 se adjuntan utilizando el nombre de DNS del almacenamiento de {{site.data.keyword.cloud_notm}} para conectarse a la compartición. El recurso compartido NFS se conecta a todos los hosts del clúster de vCenter Server y se coloca en un clúster de almacén de datos con el DRS de almacenamiento habilitado.
 
 ## Planificador de recursos distribuidos de almacenamiento (DRS de almacenamiento) de vSphere
+{: #storage-settings-vsphere-storage-drs}
 
 Utilice el DRS de almacenamiento para gestionar los recursos agregados de un clúster de almacén de datos. Cuando DRS de almacenamiento está habilitado, proporciona recomendaciones sobre la ubicación de disco de la máquina virtual (VM) y la migración para equilibrar el espacio y los recursos de E/S entre los almacenes de datos del clúster de almacén de datos.
 
@@ -33,6 +35,7 @@ Las siguientes características están disponibles cuando el DRS de almacenamien
 En este diseño, el DRS de almacenamiento se habilita con el nivel de automatización establecido en **Totalmente automatizado**. Como resultado, los archivos se migran automáticamente para optimizar el uso de recursos en el clúster de datos. Puesto que el clúster está totalmente automatizado, todas las demás opciones de DRS de almacenamiento se establecen en **Utilizar valores de clúster**.
 
 ## Valores de tiempo de ejecución de DRS de almacenamiento para NFS v3
+{: #storage-settings-drs-nfs3}
 
 La agresividad del DRS de almacenamiento se determina especificando umbrales para el espacio que se utiliza y la latencia de E/S. El DRS de almacenamiento recopila información de uso de recursos para los almacenes de datos en un clúster de almacén de datos. vCenter Server utiliza esta información para generar recomendaciones sobre la colocación de discos virtuales en almacenes de datos.
 
@@ -58,6 +61,7 @@ Tabla 1. Valores de tiempo de ejecución de DRS de almacenamiento
 Para obtener más información sobre la configuración de estos valores en el cliente web de vSphere, consulte [Establecimiento de reglas de tiempo de ejecución de DRS de almacenamiento en el cliente web de vSphere](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-AD2D13CE-539B-48C3-BBC9-E55A834874F0.html).
 
 ## Control de E/S de almacenamiento para NFS v3
+{: #storage-settings-io-control-nfs-v3}
 
 Si SIOC (Control de E/S de almacenamiento, Storage I/O Control) está habilitado en el entorno, cambia la longitud de la cola de dispositivos para la máquina virtual única. El cambio en la longitud de cola del dispositivo reduce la cola de matriz de almacenamiento para todas las máquinas virtuales en una proporción igual y regula la cola de almacenamiento. SIOC solo interviene si los recursos están restringidos y la latencia de E/S del almacenamiento es superior a un umbral definido.
 
@@ -68,10 +72,12 @@ Puede limitar los discos virtuales individuales para máquinas virtuales individ
 Las comparticiones de discos virtuales establecidas en **Alto** (2.000 comparticiones) reciben el doble de E/S que un disco establecido en **Normal** (1.000 comparticiones) y cuatro veces el de uno establecido en **Bajo** (500 comparticiones). **Normal** es el valor predeterminado para todas las máquinas virtuales, por lo que es necesario ajustar los valores **Normal** para las máquinas virtuales que lo requieran.
 
 ## Almacenamiento adicional para NFS v3
+{: #storage-settings-additional-storage-nfs-v3}
 
 Cuando sea necesario añadir más almacenamiento al entorno por falta de espacio o por latencia alta, puede solicitar otra compartición NFS de la consola. Una vez solicitada la compartición, adjunte la exportación a los hosts vSphere ESXi del clúster y colóquela en el clúster de almacenamiento. El hecho de colocar la nueva compartición NFS en el clúster de almacenamiento permite escalar de forma efectiva y sin interrupciones el almacenamiento asociado al entorno sin sobrecargarle con migraciones de nivel de almacenamiento.
 
 ## Parámetros de configuración avanzada
+{: #storage-settings-adv-config-param}
 
 Este diseño añade parámetros de configuración avanzados recomendados por {{site.data.keyword.cloud_notm}}. Como resultado, se establecen los siguientes parámetros en cada host ESXi de vSphere que está conectado a la unidad compartida NFS de {{site.data.keyword.cloud_notm}}.
 
@@ -87,6 +93,7 @@ Tabla 2. Parámetros de configuración avanzada de NFS
 | NFS.HeartbeatTimeout | 5 |
 | NFS.MaxQueueDepth | 64 |
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #storage-settings-related}
 
-* [Visión general de la solución](../solution/solution_overview.html)
+* [Visión general de la solución](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

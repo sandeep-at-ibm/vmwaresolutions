@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Eliminazione di istanze Cloud Foundation
+{: #sd_deletinginstance}
 
 Per rilasciare i componenti che hai ordinato in un'istanza VMware Cloud Foundation, elimina l'istanza.
 
@@ -30,6 +31,7 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 {:note}
 
 ## Procedura per eliminare le istanze dalla pagina Istanze distribuite
+{: #sd_deletinginstance-procedure1}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, trova l'istanza da eliminare.
@@ -40,6 +42,7 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
    2. Nella finestra **Elimina istanza**, fai clic su **OK**.
 
 ## Procedura per eliminare le istanze dalla pagina dei dettagli dell'istanza
+{: #sd_deletinginstance-procedure2}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza da eliminare.
@@ -49,11 +52,12 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
    1. Fai di nuovo clic sull'icona del menu di overflow accanto a **Console vCenter** e quindi su **Elimina istanza**.
    2. Nella finestra **Elimina istanza**, fai clic su **OK**.
 
-### Link correlati
+## Link correlati
+{: #sd_deletinginstance-related}
 
-* [Eliminazione di istanze Cloud Foundation in una configurazione multisito](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
-* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Visualizzazione delle istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Eliminazione di configurazioni multisito](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
-* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Eliminazione di istanze Cloud Foundation in una configurazione multisito](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
+* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Visualizzazione delle istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Eliminazione di configurazioni multisito](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

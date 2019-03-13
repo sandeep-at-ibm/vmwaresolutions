@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Excluindo instâncias do vCenter Server
+{: #vc_deletinginstance}
 
 Para liberar os componentes que você pediu em uma instância do VMware vCenter Server, exclua a instância.
 
@@ -30,6 +31,7 @@ Você é faturado até o final do ciclo de faturamento da infraestrutura do {{si
 {:note}
 
 ## Procedimento para excluir instâncias da página Instâncias implementadas
+{: #vc_deletinginstance-procedure1}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, localize a instância a ser excluída.
@@ -40,6 +42,7 @@ Você é faturado até o final do ciclo de faturamento da infraestrutura do {{si
    2. Na janela **Excluir instância**, clique em **OK**.
 
 ## Procedimento para excluir instâncias da página Detalhes da instância
+{: #vc_deletinginstance-procedure2}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância a ser excluída.
@@ -49,10 +52,11 @@ Você é faturado até o final do ciclo de faturamento da infraestrutura do {{si
    1. Clique no ícone do menu overflow próximo ao **Console do vCenter** novamente e clique em **Excluir instância**.
    2. Na janela **Excluir instância**, clique em **OK**.
 
-### Links relacionados
+## Links relacionados
+{: #vc_deletinginstance-related}
 
-* [Excluindo instâncias do vCenter Server em uma configuração de vários sites](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance_multi.html)
-* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Visualizando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
-* [Expandindo e contraindo a capacidade para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Excluindo instâncias do vCenter Server em uma configuração de vários sites](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance_multi)
+* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Visualizando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [Expandindo e contraindo a capacidade para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

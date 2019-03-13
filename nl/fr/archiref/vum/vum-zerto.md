@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-01"
+lastupdated: "2019-02-15"
 
 ---
 
 # Zerto
+{: #vum-zerto}
 
 Si vous constatez qu'un hôte vSphere ESXi ne peut pas passer en mode maintenance lors d'une opération de résolution, il est possible que Zerto l'en empêche. Si vous avez mis à jour Zerto depuis le déploiement initial, procédez selon les étapes suivantes pour y remédier. Si vous ne l'avez pas mis à jour, suivez les instructions indiquées sur la page [How to place a host with an associated VRA into maintenance mode](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/).
 
@@ -17,7 +18,8 @@ Si vous constatez qu'un hôte vSphere ESXi ne peut pas passer en mode maintenanc
 3. Sélectionnez l'onglet **Policies** et vérifiez que l'option **Allow Zerto to always enter hosts to maintenance mode during remediation** est sélectionnée.
 4. Déconnectez-vous de Zerto.
 
-### Liens connexes
+## Liens connexes
+{: #vum-zerto-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

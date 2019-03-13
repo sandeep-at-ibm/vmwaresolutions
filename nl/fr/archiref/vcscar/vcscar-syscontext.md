@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 ## Contexte système
+{: #vcscar-syscontext}
+
 Le diagramme ci-après illustre le contexte système pour cette architecture de référence. Un diagramme de contexte système définit les principaux éléments d'un système, les limites du système et les entités qui interagissent avec lui parallèlement aux interactions. Il s'agit d'un diagramme de haut niveau qui fournit au lecteur une vue initiale du système.
 
 Figure 1. Contexte système
@@ -22,6 +24,8 @@ Les principaux composants d'un contexte système sont les suivants :
 -	Watson Knowledge Studio - Watson Knowledge Studio fournit un modèle qui sera utilisé par le service Watson Discovery.
 
 ### Acteurs
+{: #vcscar-syscontext-actors}
+
 Le diagramme de contexte système identifie les acteurs suivants :
 
 * Administrateur Acme - L'administrateur est chargé du déploiement et de la maintenance en continu de l'application, y compris des tâches permanentes suivantes :
@@ -43,5 +47,6 @@ Discovery utilise des techniques d'apprentissage automatique avancées pour fair
 * NSX Edge - Les serveurs de périphérie NSX sont des dispositifs virtuels qui gèrent le trafic nord-sud vers et depuis l'instance vCenter Server.
 
 ## Liens connexes
+{: #vcscar-syscontext-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

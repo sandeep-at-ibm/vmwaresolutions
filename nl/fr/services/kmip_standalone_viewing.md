@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Affichage des instances KMIP for VMware on IBM Cloud
+{: #kmip_standalone_viewing}
 
 Cette procédure permet d'afficher les instances KMIP for VMware on {{site.data.keyword.cloud}} que vous avez commandées, ainsi que des informations sur celles-ci.
 
 ## Procédure pour l'affichage des instances KMIP for VMware on IBM Cloud
+{: #kmip_standalone_viewing-procedure}
 
 Cliquez sur **Instances déployées** dans le panneau de navigation de gauche, puis faites défiler l'écran vers le tableau **KMIP for VMware on {{site.data.keyword.cloud_notm}} Instances** pour afficher des informations relatives aux instances que vous avez commandées :
 
@@ -35,9 +37,10 @@ Table 2. Description du statut des instances KMIP for VMware on {{site.data.keyw
 | Installé | L'instance est prête pour utilisation. |
 | Retrait en cours | L'instance est en cours de suppression. |
 
-### Liens connexes
+## Liens connexes
+{: #kmip_standalone_viewing-related}
 
-* [Commande des instances KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html)
-* [Ajout, affichage et suppression de certificats pour des instances KMIP for VMware on IBM Cloud ](/docs/services/vmwaresolutions/services/kmip_standalone_addingdeletingcert.html)
-* [Suppression des instances KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/kmip_standalone_deleting.html)
-* [Evénements du service Activity Tracker](/docs/services/vmwaresolutions/vmonic/at-events.html)
+* [Commande des instances KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)
+* [Ajout, affichage et suppression de certificats pour des instances KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_addingdeletingcert)
+* [Suppression des instances KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
+* [Evénements du service Activity Tracker](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

@@ -4,18 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-06"
+lastupdated: "2019-02-15"
 
 ---
 # Resolución de problemas de HCX on IBM Cloud
+{: #hcx-archi-trbl}
 
 ## El registro de nube falla
+{: #hcx-archi-trbl-cloud-reg}
 
 * Hybrid Cloud Services no realiza un reintento si las credenciales son incorrectas. Las credenciales deben autenticarse antes de que Hybrid Cloud Services intente iniciar la sesión e iniciar el registro de la nube.
 * El registro de nube puede fallar si las credenciales están mal escritas o si las credenciales de VCF/VCS Hybrid Cloud Services Cloud se modifican después de que Hybrid Cloud Services se registre con VCF/VCS Hybrid Cloud Services Cloud, lo que ocasiona una discrepancia.
 * Para actualizar las credenciales en el cliente web, vaya al separador Iniciación a Hybrid Cloud Services y, en **Tareas básicas**, seleccione **Registrar nueva nube**.
 
 ## Dirección MAC duplicada
+{: #hcx-archi-trbl-dupl-mac-addr}
 
 Después de la migración, es posible que haya problemas de comunicación entre las máquinas virtuales. Cuando se conserva la dirección MAC durante una migración, es posible que se cree una dirección MAC duplicada.
 
@@ -29,6 +32,7 @@ La dirección MAC de la máquina virtual migrada se puede cambiar para resolver 
 6. Compruebe que la dirección MAC exclusiva solucione el problema de comunicación.
 
 ## Alto consumo de recursos de host
+{: #hcx-archi-trbl-high-host-resource}
 
 En casos excepcionales, si todos los dispositivos virtuales de servicio residen en el mismo host, las máquinas virtuales del servicio Hybrid Cloud Services pueden agotar los recursos de CPU y de disco de un host.
 
@@ -42,7 +46,8 @@ Para resolver el problema, siga estos pasos:
 1. Antes de cambiar la configuración del centro de datos, revise los requisitos para mantener el soporte de estado estable.
 2. Póngase en contacto con el soporte de estado estable si se están agotando los recursos. Pueden aconsejarle sobre cómo volver a configurar el entorno con una cantidad mínima de tiempo de inactividad.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #hcx-archi-trbl-related}
 
-* [Registro de HCX Manager con vCenter](hcx-archi-reg-vcenter.html)
-* [Modificación o desinstalación de HCX](hcx-archi-mod-uninstall.html)
+* [Registro de HCX Manager con vCenter](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-reg-vcenter)
+* [Modificación o desinstalación de HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

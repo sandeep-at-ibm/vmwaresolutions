@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-15"
 
 ---
 
 # Atualização do VCSA e vCenters vinculados à SSO
+{: #vum-updating-vcsa}
 
 ## Atualização de PSC e VCSA
+{: #vum-updating-vcsa-psc-vcsa-update}
 
 Essa seção se relaciona com o vCenter Server Appliance (VCSA) e o Platform Services Controller (PSC). Ambos os
 dispositivos são dispositivos VCSA, mas com funções diferentes. Ao fazer upgrade do vSphere com um PSC externo, faça
@@ -42,13 +44,15 @@ PSC) ou `https://vcenterip:5480` (para o VCSA)
 9. Efetue login de volta no Web client do vSphere e verifique qualquer erro. Conclua uma varredura manual de VUM, **Página inicial** > **Hosts e cluster**, em seguida, selecione um data center ou cluster e selecione **guia Update Manager** e, em seguida, clique em **Varrer para atualizações**. Se a varredura manual resultar em um erro, veja [Reconfigurando o banco de dados do VMware Update Manager em um dispositivo vCenter Server 6.5 (2147284)](https://kb.vmware.com/s/article/2147284).
 10. Após o teste, se precisar voltar, reverta para captura instantânea ou restaure o vCenter com um backup anterior.
 
-## vCenters vinculados à SSO
+## Instâncias do vCenter Server vinculadas por SSO
+{: #vum-updating-vcsa-sso-vcenter}
 
 Se você tiver instâncias primárias e secundárias do vCenter Server, os VCSAs serão configurados para estarem em um único domínio de Conexão única (SSO) do vCenter. Cada VCSA tem uma instância do VUM implementada. As propriedades de configuração que você modifica são aplicadas somente à instância do VUM especificada e que não são propagadas para as outras instâncias no grupo.
 
 É possível especificar uma instância do VUM selecionando o nome do VCSA com o qual a instância do VUM é registrada na barra de navegação. Também é possível gerenciar linhas de base, grupos de linhas de base, varrer e corrigir somente os objetos de inventário que são gerenciados pelo VCSA com o qual a instância do VUM está registrada.
 
-### Links relacionados
+## Links relacionados
+{: #vum-updating-vcsa-related}
 
 * [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)

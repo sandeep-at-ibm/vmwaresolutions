@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-10"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-01-10"
 {:important: .important}
 
 # Adición, visualización y supresión de clústeres para instancias de vCenter Server
+{: #adding-and-viewing-clusters-for-vcenter-server-instances}
 
 Los servidores ESXi que ha configurado al solicitar una instancia se agrupan como **cluster1** de forma predeterminada.
 
@@ -22,6 +23,7 @@ La característica de supresión de clúster solo está disponible para las inst
 {:note}
 
 ## Adición de clústeres a instancias de vCenter Server
+{: #vc_addingviewingclusters-adding}
 
 El número de clústeres que pueden añadirse a una instancia depende de la versión de la instancia:
 * Para las instancias que se han desplegado en V2.5 y posteriores o que se han actualizado a las mismas, el número de clústeres, hosts y máquinas virtuales determina el límite máximo para el número de clústeres que puede añadir. Debe respetar las directrices de dimensionamiento de VMware y los límites para el despliegue.
@@ -31,10 +33,12 @@ El número de clústeres que pueden añadirse a una instancia depende de la vers
 Para obtener más información sobre los límites máximos, consulte [Máximos de configuración de VMware](https://configmax.vmware.com/home){:new_window}.
 
 ### Valores del sistema
+{: #vc_addingviewingclusters-adding-sys-settings}
 
 Cuando añada un clúster a una instancia de vCenter Server, debe especificar los valores siguientes.
 
 #### Nombre de clúster
+{: #vc_addingviewingclusters-adding-cluster-name}
 
 El nombre del clúster debe cumplir los siguientes requisitos:
 * Solo se permiten caracteres alfanuméricos y el guión (-).
@@ -43,16 +47,19 @@ El nombre del clúster debe cumplir los siguientes requisitos:
 * El nombre del clúster debe ser exclusivo dentro de la instancia de vCenter Server.
 
 #### Ubicación del centro de datos
+{: #vc_addingviewingclusters-adding-dc-location}
 
 La ubicación del {{site.data.keyword.CloudDataCent}} del clúster está definido en {{site.data.keyword.CloudDataCent_notm}} en la instancia de vCenter Server de forma predeterminada. Puede desplegar el clúster en un {{site.data.keyword.CloudDataCent_notm}} distinto del de la instancia desplegada, pero debe asegurarse de que la latencia de red entre los dos {{site.data.keyword.CloudDataCents_notm}} sea inferior a 150 ms. Para comprobar la latencia de red, puede utilizar una herramienta como [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/).
 
 Si despliega el clúster en otro {{site.data.keyword.CloudDataCent_notm}} o en otro pod de la infraestructura de {{site.data.keyword.cloud_notm}}, se solicitan tres VLAN adicionales para su uso con el {{site.data.keyword.baremetal_short}} solicitado.
 
 ### Valores de Servidor nativo
+{: #vc_addingviewingclusters-bare-metal-settings}
 
 Puede elegir **Skylake**, **Certificado por SAP** o **Broadwell**.
 
 #### Skylake
+{: #vc_addingviewingclusters-adding-skylake}
 
 Para el valor **Skylake**, dispone de varias opciones para **Modelo de CPU** y **RAM**. Las opciones disponibles pueden variar dependiendo de la versión en que se desplegó inicialmente la instancia.
 
@@ -65,6 +72,7 @@ Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} Skylake
 | Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### Certificado por SAP
+{: #vc_addingviewingclusters-adding-sap}
 
 Si selecciona **Certificado por SAP**, no puede modificar los valores de CPU o RAM.
 
@@ -78,6 +86,7 @@ En función de sus requisitos, seleccione una configuración de servidor nativo:
 * Procesador Quad Intel Xeon E7-8890 v4 / 96 núcleos en total, 2,2 GHz / 4096 GB de RAM
 
 #### Broadwell
+{: #vc_addingviewingclusters-adding-broadwell}
 
 Para el valor **Broadwell**, dispone de varias opciones para **Modelo de CPU** y **RAM**. Las opciones disponibles pueden variar dependiendo de la versión en que se desplegó inicialmente la instancia.
 
@@ -92,6 +101,7 @@ Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Número de servidores nativos
+{: #vc_addingviewingclusters-adding-bare-metal-number}
 
 Los clústeres necesitan al menos dos {{site.data.keyword.baremetal_short}}.
 
@@ -102,10 +112,12 @@ Para instancias de vCenter Server desplegadas en V2.0 o anteriores, puede añadi
 Después del despliegue, puede crear un máximo de cuatro clústeres más. Si selecciona la configuración de servidor nativo **Skylake** o **Broadwell** con el almacenamiento VMware vSAN, se necesitan cuatro servidores para el clúster inicial y los clústeres posteriores al despliegue.
 
 ### Valores de almacenamiento
+{: #vc_addingviewingclusters-adding-storage-settings}
 
 Los valores de almacenamiento dependen de la opción que seleccione de configuración de Servidor nativo y de tipo de almacenamiento.
 
 #### Almacenamiento vSAN
+{: #vc_addingviewingclusters-adding-vsan-storage}
 
 Especifique las siguientes opciones de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
@@ -121,6 +133,7 @@ Especifique las siguientes opciones de vSAN:
 Si el clúster inicial era un clúster vSAN, los clústeres vSAN adicionales utilizan la misma licencia de vSAN y tienen la misma configuración que el inicial. Esto también se aplica si se ha elegido que se despliegue vSAN en cualquier clúster de la instancia (inicial o adicional). La primera vez se le solicitará la licencia de vSAN (BYOL o adquirida) y la edición. La próxima vez que seleccione vSAN para un nuevo clúster, la licencia que se seleccione inicialmente se reutilizará.
 
 #### Almacenamiento NFS
+{: #vc_addingviewingclusters-adding-nfs-storage}
 
 Cuando seleccione **Almacenamiento de NFS**, puede añadir almacenamiento compartido a nivel de archivo para la instancia donde todas las comparticiones utilizan los mismos valores o pueden especificar distintos valores de configuración para cada compartición de archivos. Especifique las siguientes opciones de NFS:
 
@@ -143,18 +156,21 @@ Tabla 3. Opciones de nivel de rendimiento de NFS
   | 10 IOPS/GB | Esta opción está diseñada para los tipos de carga de trabajo más exigentes, como las analíticas. Las aplicaciones de ejemplo incluyen bases de datos con un gran número de transacciones y otras bases de datos sensibles al rendimiento. Este nivel de rendimiento está limitado a una capacidad máxima de 4 TB por compartición de archivo. |
 
 ### Discos locales
+{: #vc_addingviewingclusters-adding-local-disks}
 
 La opción de discos locales solo está disponible para la configuración de tipo procesador nativo Quad Intel Xeon E7-8890 v4 **certificado por SAP**. Especifique las siguientes opciones:
 * **Recuento de discos**: seleccione el número de discos que desea añadir.
 * **Tipo de disco**: seleccione una opción para el tipo de disco que necesita.
 
 ### Valores de licencia
+{: #vc_addingviewingclusters-adding-licensing-settings}
 
 Especifique la opción de licencia para el componente VMware vSphere en el clúster:
 * Para los usuarios de Business Partners, se incluye y se adquiere en su nombre la licencia de vSphere (edición Enterprise Plus).
 * Para usuarios que no son Business Partners, puede utilizar las licencias de VMware que proporciona IBM para este componente seleccionando **Incluir con la compra** o puede traer su propia licencia (BYOL) seleccionando **Proporcionaré** e indicando su propia clave de licencia.
 
 ### Valores de interfaz de red
+{: #vc_addingviewingclusters-adding-network-interface-settings}
 
 Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en la selección de **Red pública y privada** o de **Solo red privada**. Los siguientes servicios de complemento necesitan NIC públicos y no están disponibles si selecciona la opción privada:
 
@@ -164,10 +180,12 @@ Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en 
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Resumen del pedido
+{: #vc_addingviewingclusters-adding-order-summary}
 
 En función de la configuración seleccionada para el clúster, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**.
 
 ## Procedimiento para añadir clústeres a instancias de vCenter Server
+{: #vc_addingviewingclusters-adding-procedure}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia a la que desea añadir clústeres.
@@ -199,6 +217,7 @@ En función de la configuración seleccionada para el clúster, el coste estimad
    4. Pulse **Suministro**.
 
 ### Resultados después de añadir clústeres a instancias de vCenter Server
+{: #vc_addingviewingclusters-adding-results}
 
 1. El despliegue del clúster se inicia automáticamente y el estado del clúster pasa a ser **Inicializando**. Puede comprobar el estado del despliegue viendo el historial de despliegue desde la página **Resumen** de la instancia.
 2. Cuando el clúster esté listo para ser utilizado, su estado pasará a ser **Listo para su uso**. El clúster recién añadido está habilitado con alta disponibilidad (HA) de vSphere y con el planificador de recursos distribuidos (DRS) de vSphere.
@@ -207,6 +226,7 @@ No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es 
 {:important}
 
 ## Procedimiento para visualizar clústeres en las instancias de vCenter Server
+{: #vc_addingviewingclusters-viewing-procedure}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse una instancia para ver los clústeres que contiene.
@@ -232,42 +252,34 @@ No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es 
         <dd class="dd">El clúster se ha suprimido.</dd>
     </dl>
   * **Acciones**: Pulse el icono **Suprimir** para suprimir el clúster.
-4. Pulse un nombre de clúster para ver los detalles de los servidores ESXi y el almacenamiento:
+4. Pulse un nombre de clúster para ver el servidor y el almacenamiento:
 
-  * Detalles de servidores ESXi:
-     * **Nombre**: el nombre del servidor ESXi está en el formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde:
+Tabla 4. Detalles del servidor ESXi
 
-       `host_prefix` es el prefijo del nombre de host,
+| Elemento        | Descripción       |  
+|:------------- |:------------- |
+| Nombre | El nombre del servidor ESXi está en el formato siguiente:<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> donde:<br> `host_prefix` es el prefijo del nombre de host<br> `n` es la secuencia del servidor<br> `subdomain_label` es la etiqueta de subdominio<br> `root_domain` es el nombre de dominio raíz |
+| Versión | La versión del servidor ESXi. |
+| Credenciales | El nombre de usuario y la contraseña para acceder al servidor ESXi. |
+| IP privada | La dirección IP privada del servidor ESXi. |
+| Estado | El estado del servidor ESXi, que puede tener uno de estos valores:<br> **Añadido**: El servidor ESXi se ha añadido y está listo para ser utilizado.<br> **Añadiendo**: El servidor ESXi se está añadiendo.<br> **Suprimiendo**: El servidor ESXi se está suprimiendo. |
 
-       `n` es la secuencia del servidor,
+Tabla 5. Detalles de almacenamiento
 
-       `subdomain_label` es la etiqueta de subdominio, y
-
-       `root_domain` es el nombre de dominio raíz.
-
-     * **Versión**: la versión del servidor ESXi.
-     * **Credenciales**: el nombre de usuario y la contraseña para acceder al servidor ESXi.
-     * **IP privada**: la dirección IP privada del servidor ESXi.
-     * **Estado**: el estado del servidor ESXi, que puede tener uno de estos valores:
-        <dl class="dl">
-        <dt class="dt dlterm">Añadido</dt>
-        <dd class="dd">El servidor ESXi se ha añadido y está listo para ser utilizado. </dd>
-        <dt class="dt dlterm">Añadiendo</dt>
-        <dd class="dd">El servidor ESXi se está añadiendo. </dd>
-        <dt class="dt dlterm">Suprimiendo</dt>
-        <dd class="dd">El servidor ESXi se está suprimiendo.</dd>
-        </dl>
-  * Detalles de almacenamiento:
-    * **Nombre**: el nombre del almacén de datos.
-    * **Tamaño**: la capacidad del almacenamiento.
-    * **IOPS/GB**: el nivel de rendimiento del almacenamiento.
-    * **Protocolo NFS**: la versión de NFS del almacenamiento.
+| Elemento        | Descripción       |  
+|:------------- |:------------- |
+| Nombre | El nombre de almacén de datos. |
+| Tamaño | La capacidad de almacenamiento. |
+| IOPS/GB | El nivel de rendimiento del almacenamiento. |
+| Protocolo NFS | La versión NFS del almacenamiento. |
 
 ## Supresión de clústeres de instancias de vCenter Server
+{: #vc_addingviewingclusters-deleting}
 
 Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario.
 
 ### Antes de suprimir
+{: #vc_addingviewingclusters-deleting-prereq}
 
 * Utilice este procedimiento para suprimir clústeres de instancias que se han desplegado en V2.3 o posterior.
 * Para los clústeres desplegados en V2.2 o instancias anteriores, debe actualizar la instancia a V2.3 si desea suprimir los clústeres que ha añadido a la instancia.
@@ -277,6 +289,7 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 * El clúster predeterminado no se puede suprimir.
 
 ### Procedimiento para suprimir clústeres de instancias de vCenter Server
+{: #vc_addingviewingclusters-deleting-procedure}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia de la que desea suprimir clústeres.
@@ -287,7 +300,8 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 3. Pulse **Infraestructura** en el panel de navegación izquierdo. En la tabla **CLÚSTERES**, localice el clúster que desea suprimir y pulse el icono **Suprimir** en la columna **Acciones**.
 4. Confirme que ha completado la migración de las VM a otros clústeres, si es necesario, y que desea suprimir el clúster.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vc_addingviewingclusters-related}
 
-* [Visualización de instancias de vCenter Server](vc_viewinginstances.html)
-* [Ampliación y reducción de la capacidad para instancias de vCenter Server](vc_addingremovingservers.html)
+* [Visualización de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [Ampliación y reducción de la capacidad para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)

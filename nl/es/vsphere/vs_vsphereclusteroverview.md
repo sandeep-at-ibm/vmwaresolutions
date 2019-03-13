@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-10"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-12-10"
 {:important: .important}
 
 # Visión general de VMware vSphere on IBM Cloud
+{: #vs_vsphereclusteroverview}
 
 VMware vSphere on {{site.data.keyword.cloud}} es una plataforma de solicitud racional y optimizada para VMware. Con esta plataforma, puede crear su propio entorno de VMware alojado por IBM personalizando y solicitando el hardware compatible con VMware en función de los componentes de VMware seleccionados.
 
@@ -23,6 +24,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} no automatiza la instalación
 Utilice esta oferta para crear un nuevo clúster de servidores ESXi o para escalar un clúster existente de servidores ESXi en un {{site.data.keyword.CloudDataCent_notm}}. Dependiendo de los componentes de VMware que seleccione, puede empezar con un solo servidor ESXi y luego escalar el clúster más adelante cuando sea necesario.
 
 ## Especificaciones técnicas para clústeres de VMware vSphere on IBM Cloud
+{: #technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters}
 
 Revise los componentes de VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
@@ -30,6 +32,7 @@ La disponibilidad y los precios de las configuraciones estandarizadas de hardwar
 {:note}
 
 ### Componentes de VMware
+{: #vs_vsphereclusteroverview-specs-vmware-components}
 
 Seleccione licencias (proporcionadas por IBM o BYOL) para los siguientes componentes de VMware:
 * VMware vSphere Enterprise Plus 6.0u2, 6.5u1 o 6.5u2
@@ -43,6 +46,7 @@ Seleccione licencias (proporcionadas por IBM o BYOL) para los siguientes compone
    * VMware vRealize Log Insight
 
 ### Servidor nativo
+{: #vs_vsphereclusteroverview-specs-bare-metal}
 
 Seleccione uno o varios {{site.data.keyword.baremetal_short}} de {{site.data.keyword.cloud_notm}} con el modelo de CPU y el tamaño de RAM que seleccione.
 * Generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100)
@@ -56,11 +60,13 @@ Adicionalmente, las siguientes especificaciones de disco y de red:
 * Un controlador de disco RAID
 
 ### Redes
+{: #vs_vsphereclusteroverview-specs-network}
 
 * Una VLAN (LAN virtual) pública y dos VLAN privadas
 * (Opcional) Un par de alta disponibilidad de dispositivos de seguridad FortiGate
 
 ### Almacenamiento
+{: #vs_vsphereclusteroverview-specs-storage}
 
 Almacenamiento personalizado por el usuario para la configuración de vSAN cuando se selecciona el componente VMware vSAN:
 * Opciones de disco de almacenamiento de SSD SED de 960 GB, SSD SED de 1,9 TB o SSD SED de 3,8 TB
@@ -73,28 +79,33 @@ Almacenamiento personalizado por el usuario para la configuración de vSAN cuand
 * Opción de Intel Optane de alto rendimiento, que proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad. Esta opción depende del modelo de CPU.
 
 ## Especificaciones técnicas para nodos de expansión de clúster de vSphere
+{: #vs_vsphereclusteroverview-expansion-node-specs}
 
 Cada nodo de expansión de clúster de vSphere desplegará e incurrirá en cargos por los siguientes componentes en su cuenta de {{site.data.keyword.slportal}}.
 
 ### Hardware para nodos de expansión
+{: #vs_vsphereclusteroverview-expansion-node-specs-hardware}
 
-Un servidor nativo de {{site.data.keyword.cloud_notm}} con la configuración de hardware presentada en [Especificaciones técnicas para clústeres de VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+Un servidor nativo de {{site.data.keyword.cloud_notm}} con la configuración de hardware presentada en [Especificaciones técnicas para clústeres de VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### Sistema de redes para nodos de expansión
+{: #vs_vsphereclusteroverview-expansion-node-specs-network}
 
-Un servidor nativo de {{site.data.keyword.cloud_notm}} con la configuración de red presentada en [Especificaciones técnicas para clústeres de VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+Un servidor nativo de {{site.data.keyword.cloud_notm}} con la configuración de red presentada en [Especificaciones técnicas para clústeres de VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### Componentes de VMware para nodos de expansión
+{: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
 * Un servidor nativo {{site.data.keyword.cloud_notm}} con VMware vSphere Enterprise Plus 6.0u2 o 6.5u1  
-* Componentes opcionales de VMware que se presentan en [Especificaciones técnicas para clústeres de VMware vSphere on {{site.data.keyword.cloud_notm}}](vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+* Componentes opcionales de VMware que se presentan en [Especificaciones técnicas para clústeres de VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
-Debe gestionar los servidores ESXi, los componentes opcionales de VMware y el hardware adicional solicitados y distribuidos a su cuenta de {{site.data.keyword.cloud_notm}} solo desde el {{site.data.keyword.slportal}}. Después de crear un nuevo clúster en la consola de {{site.data.keyword.vmwaresolutions_short}}, puede volver a la consola y utilizar la información guardada para escalar el nuevo clúster. Para obtener más información, consulte [Escalado de clústeres existentes de vSphere](vs_scalingexistingclusters.html).
+Debe gestionar los servidores ESXi, los componentes opcionales de VMware y el hardware adicional solicitados y distribuidos a su cuenta de {{site.data.keyword.cloud_notm}} solo desde el {{site.data.keyword.slportal}}. Después de crear un nuevo clúster en la consola de {{site.data.keyword.vmwaresolutions_short}}, puede volver a la consola y utilizar la información guardada para escalar el nuevo clúster. Para obtener más información, consulte [Escalado de clústeres existentes de vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters).
 {:important}
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vs_vsphereclusteroverview-related}
 
-* [Lista de materiales de software de VMware vSphere](vs_bom.html)
-* [Planificación de clústeres de vSphere](vs_planning.html)
-* [Solicitud de clústeres de vSphere](vs_orderinginstances.html)
-* [Escalado de clústeres existentes de vSphere](vs_scalingexistingclusters.html)
+* [Lista de materiales de software de VMware vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_bom)
+* [Planificación de clústeres de vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
+* [Solicitud de clústeres de vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [Escalado de clústeres existentes de vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)

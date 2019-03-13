@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Escalando a capacidade
+{: #solution_scaling}
 
 Após a implementação inicial, é possível ampliar a capacidade de cálculo por meio do console do {{site.data.keyword.vmwaresolutions_full}}. O design suporta os caminhos de ampliação a seguir:
 * Adição de novos sites gerenciados por servidores vCenter separados
@@ -20,6 +21,7 @@ Após a implementação inicial, é possível ampliar a capacidade de cálculo p
 * Adição de novos hosts a um cluster existente
 
 ## Incluindo mais sites
+{: #solution_scaling-sites}
 
 O {{site.data.keyword.vmwaresolutions_short}} pode alavancar a presença mundial do data center {{site.data.keyword.cloud_notm}} e o backbone de rede integrada para permitir que vários casos de uso de geografia cruzada sejam implementados e funcionem dentro de uma fração do tempo que levaria para construir tal infraestrutura do zero.
 
@@ -35,6 +37,7 @@ Nesse design, a definição de uma implementação multissite é composta do seg
 Além disso, o NSX Manager em sites secundários pode ser configurado como NSX Managers secundários para o NSX Manager no site primário.
 
 ## Incluindo novos clusters
+{: #solution_scaling-clusters}
 
 Também é possível ampliar a capacidade de cálculo criando um novo cluster por meio do console do {{site.data.keyword.vmwaresolutions_short}} e pedindo novos hosts que são incluídos automaticamente no novo cluster.
 
@@ -48,11 +51,13 @@ Quando o cluster inicial for convertido em um cluster somente de gerenciamento, 
 {:note}
 
 ## Incluindo hosts ESXi em clusters existentes
+{: #solution_scaling-hosts}
 
 É possível ampliar um cluster existente pedindo hosts por meio do console do {{site.data.keyword.vmwaresolutions_short}}.  Os novos hosts são incluídos automaticamente no cluster. Observe que você pode precisar ajustar a política de reserva de HA para o cluster com base em seus requisitos de reserva.
 
-### Links relacionados
+## Links relacionados
+{: #solution_scaling-related}
 
-* [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [Visão geral do design](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [Visão geral do design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

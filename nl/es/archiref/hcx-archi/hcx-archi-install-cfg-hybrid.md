@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-18"
+lastupdated: "2019-02-15"
 
 ---
 # Instalación y configuración de servicios híbridos
+{: #hcx-archi-install-cfg-hybrid}
 
 El instalador suministra y configura una máquina virtual para cada dispositivo virtual de servicio. Las máquinas virtuales de servicio se despliegan tanto en el entorno local como en la nube.
 
 ## Requisitos previos
+{: #hcx-archi-install-cfg-hybrid-prereq}
 
 * HCX Manager debe estar instalado de forma local y registrado con un punto final de nube habilitado para HCX de VCF/VCS.
 * El centro de datos virtual de destino debe tener recursos suficientes.
 
 ## Visión general de la configuración
+{: #hcx-archi-install-cfg-hybrid-config-ovw}
 
 En el procedimiento de configuración se supone que se configurarán todos los dispositivos virtuales de servicio. Sin embargo, no todos son necesarios.
 * El dispositivo Hybrid Cloud Gateway es necesario.
@@ -25,14 +28,14 @@ adicional.
 * Para configurar el servicio de extensión de red, consulte la sección _Configuración del servicio de extensión de red_. El despliegue del dispositivo opcional se puede diferir volviendo a la página Servicios híbridos e instalando el dispositivo más adelante.
 
 ## Inicio de la instalación y configuración del dispositivo virtual de servicio híbrido
+{: #hcx-archi-install-cfg-hybrid-start-hsva}
 
 Se utiliza la interfaz web sencilla para instalar los dispositivos virtuales de servicio y para configurar más concentradores de capa 2.
-
-### Requisito previo para instalar y configurar el dispositivo virtual de servicio híbrido
 
 HCX Manager debe estar instalado y registrado con el punto final de nube habilitado para HCX de VCF/VCS.
 
 ### Procedimiento para instalar y configurar el dispositivo virtual de servicio híbrido
+{: #hcx-archi-install-cfg-hybrid-proc-install}
 
 1. Inicie una sesión en el cliente web de vSphere.
 2. En el separador **Inicio**, pulse el icono **Hybrid Cloud Services**.
@@ -41,19 +44,18 @@ HCX Manager debe estar instalado y registrado con el punto final de nube habilit
 5. En la página **Elegir servicios híbridos**, seleccione los servicios que se van a instalar y pulse **Siguiente**.
 
 ### Qué hacer a continuación
+{: #hcx-archi-install-cfg-hybrid-start-hsva-next}
 
 1. El siguiente paso consiste en configurar el dispositivo Hybrid Cloud Gateway, si es necesario.
 2. Se puede añadir un concentrador de capa 2 a una instalación existente en cualquier momento si hay suficientes recursos disponibles para dar soporte a la extensión.
 
 ## Configuración de Hybrid Cloud Gateway
+{: #hcx-archi-install-cfg-hybrid-config-hcg}
 
-Configure el dispositivo virtual de servicio Hybrid Cloud Gateway.
-
-### Requisitos previos para la configuración de Hybrid Cloud Gateway
-
-Siga los pasos del apartado _Inicio de la instalación y configuración del dispositivo virtual de servicio híbrido_ y marque Hybrid Cloud Gateway.
+Configure el dispositivo virtual de servicio Hybrid Cloud Gateway. Antes de empezar, siga los pasos del apartado _Inicio de la instalación y configuración del dispositivo virtual de servicio híbrido_ y marque Hybrid Cloud Gateway.
 
 ### Procedimiento para configurar Hybrid Cloud Gateway
+{: #hcx-archi-install-cfg-hybrid-proc-config-hcg}
 
 En la página **Hybrid Cloud Gateway**, especifique los siguientes valores y pulse **Siguiente**:
 * **Red**: el conmutador que conecta la interfaz de gestión de Hybrid Cloud Gateway. En los casos de uso 1 y 2, puede ser un conmutador virtual estándar o un conmutador distribuido virtual. Para cualquier configuración que utilice la extensión de capa 2, debe ser un conmutador distribuido virtual.
@@ -65,14 +67,12 @@ En la página **Hybrid Cloud Gateway**, especifique los siguientes valores y pul
 * En **Ampliado (opcional)**, elija la red vMotion, si procede, y defina las contraseñas de **admin** y de **root**. Estas contraseñas son específicas del dispositivo Hybrid Cloud Gateway. El nombre de usuario y la contraseña no tienen que coincidir con los configurados para el dispositivo Hybrid Cloud Services.
 
 ## Configuración del servicio de extensión de red
+{: #hcx-archi-install-cfg-hybrid-config-nes}
 
-Configure un servicio de extensión de red para el despliegue de una sola vía de acceso o para una extensión de red autónoma en una vía de acceso alternativa.
-
-### Requisitos previos para configurar el servicio de extensión de red
-
-Seleccione el servicio de extensión de red. Si se ha instalado la configuración de una sola vía de acceso, **Extensión de red** es la única opción.
+Configure un servicio de extensión de red para el despliegue de una sola vía de acceso o para una extensión de red autónoma en una vía de acceso alternativa. Antes de empezar, seleccione el servicio de extensión de red. Si se ha instalado la configuración de una sola vía de acceso, **Extensión de red** es la única opción.
 
 ### Procedimiento para configurar el servicio de extensión de red
+{: #hcx-archi-install-cfg-hybrid-proc-config-nes}
 
 1. En la página **Servicio de extensión de red**, seleccione un conmutador distribuido virtual en el menú **Conmutador distribuido**. Cuando instale un concentrador de capa 2 estándar, estará disponible el recuadro de selección **Direccionar redes extendidas a través de Hybrid Cloud Gateway**. No aparecerá para L2C de alto rendimiento.
 2. Si se selecciona **Direccionar redes extendidas a través de Hybrid Cloud Gateway**, el instalador determina una ubicación razonable para el concentrador de capa 2 (en función en el conmutador) y rellena la información de ubicación. De lo contrario, la información de ubicación se debe especificar manualmente en el paso siguiente.
@@ -88,10 +88,12 @@ Seleccione el servicio de extensión de red. Si se ha instalado la configuració
 6. Pulse **Siguiente**. En la página **Preparado para completar**, revise la información y pulse **Finalizar**.
 
 ## Supervisión del despliegue del dispositivo de servicio
+{: #hcx-archi-install-cfg-hybrid-monitor}
 
 Se puede utilizar la a consola de tareas para supervisar el progreso del despliegue de una máquina virtual de servicio.
 
 ### Procedimiento para supervisar el despliegue del dispositivo de servicio
+{: #hcx-archi-install-cfg-hybrid-monitor-proc}
 
 1. Inicie una sesión en el cliente web de vSphere. En el separador **Inicio**, pulse el icono **Hybrid Cloud Services**.
 2. En el panel **Hybrid Cloud Services**, pulse el separador **Servicios híbridos**. El despliegue del dispositivo virtual se puede supervisar desde la consola de tareas.
@@ -103,14 +105,12 @@ Se puede utilizar la a consola de tareas para supervisar el progreso del desplie
 8. Revise el resumen de configuración correspondiente a los dispositivos virtuales de servicio híbrido.
 
 ## Visualización del estado del túnel
+{: #hcx-archi-install-cfg-hybrid-view-tunnel}
 
-Consulte el estado del túnel de la pasarela de nube.
-
-### Requisitos previos para ver el estado del túnel
-
-El servicio de extensión de red debe estar activo para poder ampliar una red.
+Consulte el estado del túnel de la pasarela de nube. El servicio de extensión de red debe estar activo para poder ampliar una red.
 
 ### Procedimiento para ver el estado del túnel
+{: #hcx-archi-install-cfg-hybrid-proc-view-tunnel}
 
 1. Para comprobar el estado del túnel desde el cliente web, seleccione **Hybrid Cloud Services** en el inventario y pulse el separador **Servicios híbridos**.
 2. Para confirmar un túnel de Hybrid Cloud Gateway correcto, compruebe que el estado de CGW (acrónimo de Hybrid Cloud Gateway) sea **Activo** y que, en la parte derecha, el túnel esté codificado en verde.
@@ -118,13 +118,16 @@ El servicio de extensión de red debe estar activo para poder ampliar una red.
 ## Extensión de una red de capa 2 a IBM Cloud
 
 Amplíe una red de capa 2 desde el centro de datos local a la nube habilitada para VCF/VCS HCX.
+{: #hcx-archi-install-cfg-hybrid-stretch-layer-2}
 
 ### Requisitos previos para extender una red de capa 2 a IBM Cloud
+{: #hcx-archi-install-cfg-hybrid-prereq-stretch-layer-2}
 
 * Solo se pueden extender los grupos de puertos etiquetados como VLAN (que no sean el tipo de VLAN Ninguno ni el ID de VLAN 0). Las VXLAN se consideran VLAN.
 * En este procedimiento se utiliza el asistente para **Ampliar red**. Este asistente se debe ejecutar desde la vista de inventario de red del cliente web de vSphere®. Aunque el asistente se puede ver desde otras vistas, se debe ejecutar desde el contexto de inventario para obtener la información correcta.
 
 ### Procedimiento para extender una red de capa 2 a IBM Cloud
+{: #hcx-archi-install-cfg-hybrid-proc-stretch-layer-2}
 
 1. Inicie una sesión en el cliente web de vSphere. En el separador **Inicio** del panel central, pulse el icono **Redes** en la lista **Inventarios**.
 2. En la jerarquía de **Redes**, identifique el grupo de puertos correspondiente a la red que se va a ampliar.
@@ -139,6 +142,7 @@ Amplíe una red de capa 2 desde el centro de datos local a la nube habilitada pa
 7. Para realizar un seguimiento del progreso de la extensión de red, vaya a la ventana **Tareas recientes**, pulse el separador **Todas** y visualice **Todas las tareas de usuario**.
 8. Para abrir la consola de tareas, pulse **Más tareas**. La extensión de red se realiza cuando el estado de la tarea **Ampliar red** es **Completado**.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #hcx-archi-install-cfg-hybrid-related}
 
-* [Modificación o desinstalación de HCX](hcx-archi-mod-uninstall.html)
+* [Modificación o desinstalación de HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Integração, endereçamento IP e fluxos de rede
+{: #vcsnsxt-overview-integration}
 
 ## Integração do IBM Cloud Private e do VMware vCenter Server on IBM Cloud
+{: #vcsnsxt-overview-integration-icp-vcs-integration}
 
 O {{site.data.keyword.cloud}} Private está instalado em várias máquinas virtuais (MVs) em uma instância do vCenter Server. Na instância do vCenter Server, a instância do {{site.data.keyword.icpfull_notm}} é implementada com um NSX Edge Services Gateway (ESG) e um Distributed Logical Router (DLR) dedicados e usa uma VXLAN.
 
 O ESG é configurado com uma regra NAT de origem (SNAT) para permitir tráfego de saída, que permite que a conectividade de Internet faça download dos pré-requisitos do {{site.data.keyword.icpfull_notm}} e se conecte ao GitHub e ao Docker. Como alternativa, é possível usar um proxy da web para conectividade de Internet. O ESG é configurado com conectividade privada para acessar serviços DNS e NTP. O ESG também está configurado com uma regra DNAT para permitir que os vIPs Principal e de Proxy do {{site.data.keyword.icpfull_notm}} sejam acessados por meio da rede do {{site.data.keyword.cloud_notm}} 10.x.
 
 ## Integração do IBM Cloud Kubernetes Service e do vCenter Server
+{: #vcsnsxt-overview-integration-iks-vcs-integration}
 
 Atualmente, os cenários a seguir para integrar a rede do {{site.data.keyword.containerlong_notm}} e do vCenter Server:
 - **VLAN comum** - requer que os nós do trabalhador do {{site.data.keyword.containerlong_notm}} sejam implementados na mesma VLAN que a instância do vCenter Server. A VLAN comum permite que um ESG seja um peer do BGP para os nós do trabalhador.
@@ -25,10 +28,12 @@ Atualmente, os cenários a seguir para integrar a rede do {{site.data.keyword.co
 - **Peering do BGP** - o peering do BGP não é uma oferta padrão no {{site.data.keyword.cloud_notm}} e deve ser solicitado e aprovado. Após ativado, o peering do BGP permite que o Calico vRouters e o ESG anunciem rotas para o BCR.
 
 ## Integração do IBM Cloud Kubernetes Service e do IBM Cloud Private
+{: #vcsnsxt-overview-integration-iks-icp-integration}
 
 A integração do {{site.data.keyword.containerlong_notm}} e do {{site.data.keyword.icpfull_notm}} usa a conectividade de VPN strongSwan com um contêiner do strongSwan no {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
 ## Alocação de endereço IP
+{: #vcsnsxt-overview-integration-ip-address-allocation}
 
 De uma perspectiva administrativa, a arquitetura de referência tem os intervalos de rede conceitual a seguir:
 -	**Rede de pod do {{site.data.keyword.containerlong_notm}}** - todos os pods que são implementados em um nó do trabalhador são designados a um endereço IP privado no intervalo 172.30.0.0/16 e são roteados somente entre os nós do trabalhador. Para evitar conflitos, não use esse intervalo de IPs em quaisquer nós que se comunicam com os nós do trabalhador. Os nós do trabalhador e os pods podem se comunicar com segurança na rede privada usando endereços IP privados. No entanto, quando um pod trava ou um nó do trabalhador precisa ser recriado, um novo endereço IP privado
@@ -51,6 +56,7 @@ De uma perspectiva administrativa, a arquitetura de referência tem os intervalo
 -	**Rede de nós do trabalhador do {{site.data.keyword.icpfull_notm}}** - um intervalo de endereço IP corporativo que usa um intervalo BYOIP que não colide com nenhuma sub-rede fornecida pelo {{site.data.keyword.cloud_notm}}.
 
 ## Fluxos de tráfego de rede
+{: #vcsnsxt-overview-integration-net-traffic-flows}
 
 Os fluxos de tráfego a seguir são descritos:
 -	Usuário externo na Internet para uma camada da web hospedada em um contêiner no {{site.data.keyword.containerlong_notm}}.
@@ -60,6 +66,7 @@ Os fluxos de tráfego a seguir são descritos:
 -	Usuário corporativo no acesso à rede corporativa para uma MV no vCenter Server.
 
 ### Usuário externo na Internet para uma camada da web hospedada em um contêiner no IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-integration-web-tier-iks}
 
 1.	O usuário externo faz uma solicitação para a camada da web usando a URL.
 2.	O DNS é usado para determinar o endereço IP. Esse endereço IP é um endereço público do {{site.data.keyword.cloud_notm}} em uma sub-rede móvel que é designada ao Serviço ALB ou Ingress.
@@ -69,6 +76,7 @@ Os fluxos de tráfego a seguir são descritos:
 6.	Se o aplicativo estiver no mesmo nó do trabalhador, o iptables será usado para determinar qual interface interna será usada para encaminhar a solicitação. Se o aplicativo estiver em um nó do trabalhador diferente, o Calico vRouter roteará para o nó do trabalhador aplicável, usando o encapsulamento IP-in-IP somente se o nó do trabalhador estiver em uma sub-rede diferente.
 
 ### Usuário externo na Internet para uma camada da web hospedada em um contêiner no IBM Cloud Private
+{: #vcsnsxt-overview-integration-web-tier-icp}
 
 1.	O usuário externo faz uma solicitação para a camada da web usando a URL.
 2.	O DNS é usado para determinar o endereço IP. Esse endereço IP é um endereço público do {{site.data.keyword.cloud_notm}} em uma sub-rede móvel que é designada à instância do vCenter Server.
@@ -78,6 +86,7 @@ Os fluxos de tráfego a seguir são descritos:
 6.	Se o aplicativo estiver no mesmo nó do trabalhador, o iptables será usado para determinar qual interface interna será usada para encaminhar a solicitação. Se o aplicativo estiver em um nó trabalhador diferente, o Calico vRouter roteará para o nó do trabalhador aplicável, usando encapsulamento IP-in-IP. O pacote IP-in-IP é encapsulado em um quadro VXLAN para transporte para o host do vSphere ESXi em que o nó do trabalhador está localizado.
 
 ### Camada da web hospedada em um contêiner no IBM Cloud Kubernetes Service para a camada de banco de dados hospedada em uma MV no vCenter Server
+{: #vcsnsxt-overview-integration-iks-db-tier-vcs}
 
 Como as tabelas de rotas no ESG e vRouters são preenchidas depende do método de integração. Consulte a integração do  {{site.data.keyword.containerlong_notm}}  e do vCenter Server.
 1.	A camada da web em execução em um contêiner no {{site.data.keyword.containerlong_notm}} faz uma solicitação para um banco de dados em execução em uma MV na instância do vCenter Server.
@@ -92,6 +101,7 @@ Como as tabelas de rotas no ESG e vRouters são preenchidas depende do método d
 10.	A MV do banco de dados recebe a solicitação.
 
 ### Camada da web hospedada em um contêiner no IBM Cloud Private para a camada de banco de dados hospedada em uma MV no vCenter Server
+{: #vcsnsxt-overview-integration-icp-db-tier-vcs}
 
 Como as tabelas de rotas no ESG e vRouters são preenchidas depende do método de integração. Consulte a integração do  {{site.data.keyword.icpfull_notm}}  e do vCenter Server.
 1.	A camada da web em execução em um contêiner no {{site.data.keyword.icpfull_notm}} faz uma solicitação para um banco de dados em execução em uma MV na mesma instância do vCenter Server.
@@ -105,6 +115,7 @@ Como as tabelas de rotas no ESG e vRouters são preenchidas depende do método d
 9.	A MV do banco de dados recebe a solicitação.
 
 ### Usuário corporativo no acesso à rede corporativa para uma MV no vCenter Server
+{: #vcsnsxt-overview-integration-corporate-network-vcs}
 
 1.	Um usuário corporativo conectado à rede interna corporativa faz uma solicitação de um recurso que está em uma MV hospedada no vCenter Server.
 2.	O DNS é usado para determinar o endereço IP da MV. Esse endereço IP está em uma rede que foi estendida para o {{site.data.keyword.cloud_notm}}.
@@ -114,7 +125,8 @@ Como as tabelas de rotas no ESG e vRouters são preenchidas depende do método d
 6.	O Concentrador L2 recebe a solicitação e a coloca na VXLAN que hospeda a rede estendida.
 7.	A MV recebe a solicitação.
 
-### Mais recursos
+## Links relacionados
+{: #vcsnsxt-overview-integration-related}
 
 * [Rede do {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud-computing/bluemix/our-network)
 * [White Paper do contêiner](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf) (download de PDF)
@@ -123,7 +135,7 @@ Como as tabelas de rotas no ESG e vRouters são preenchidas depende do método d
 * [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [Máximo de configuração do NSX for vSphere 6.4.3](https://configmax.vmware.com/guest)
 * [Documentação da plataforma {{site.data.keyword.cloud_notm}}](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html)
-* [{{site.data.keyword.containerlong_notm}}](/docs/containers/container_index.html)
+* [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-container_index)
 * [Projeto Calico](https://www.projectcalico.org/)
 * [GitHub-Calico](https://github.com/projectcalico/calico)
 * [Kubernetes](https://kubernetes.io/)

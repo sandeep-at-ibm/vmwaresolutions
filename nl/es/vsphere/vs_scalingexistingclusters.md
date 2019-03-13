@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,17 +13,20 @@ lastupdated: "2018-10-29"
 {:important: .important}
 
 # Escalado de clústeres existentes de vSphere
+{: #vs_scalingexistingclusters}
 
 Puede escalar un clúster de VMware vSphere que ha solicitado o guardado en la consola de {{site.data.keyword.vmwaresolutions_full}}. Para ello, añada servidores ESXi o solicite un par de alta disponibilidad de FortiGate 300 Series Security Appliance para el clúster.
 
 ## Requisitos
+{: #vs_scalingexistingclusters-req}
 
 Asegúrese de haber realizado las tareas siguientes:
-*  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Cuentas de usuario y valores](../vmonic/useraccount.html).
-*  Ha revisado los requisitos y las consideraciones del apartado [Requisitos y planificación de clústeres de vSphere](vs_planning.html).
+*  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Cuentas de usuario y valores](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount#managing-user-accounts-and-settings).
+*  Ha revisado los requisitos y las consideraciones del apartado [Requisitos y planificación de clústeres de vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning).
 *  Ha recibido un correo electrónico con la confirmación de que el clúster que desea escalar está listo para que lo utilice.
 
 ## Procedimiento para escalar clústeres existentes
+{: #vs_scalingexistingclusters-procedure}
 
 1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** en el panel de navegación izquierdo y pulse **VMware vSphere** en la sección **Centros de datos virtuales**.
 2. En la página **VMware vSphere on IBM Cloud**, pulse **Crear**.  
@@ -36,6 +39,7 @@ Asegúrese de haber realizado las tareas siguientes:
    * Para realizar el pedido, asegúrese de que la cuenta a la que se va a realizar el cobro es correcta; revise y acepte los términos y, a continuación, pulse **Suministro**.
 
 ### Resultados
+{: #vs_scalingexistingclusters-results}
 
 El escalado de clúster se inicia automáticamente. El usuario recibirá una confirmación por correo electrónico de que el pedido se está procesando. Cuando el clúster esté listo para ser utilizado, se le notificará por correo electrónico.
 
@@ -44,8 +48,9 @@ Si el clúster que está escalando no está listo para que lo utilice, es posibl
 A diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Instancias desplegadas**.
 {:note}
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vs_scalingexistingclusters-related}
 
-* [Solicitud de clústeres nuevos de vSphere](vs_orderinginstances.html)
-* [Solicitud de clústeres de vSphere en función de configuraciones existentes](vs_orderingbasedonexistingconfig.html)
-* [Escalado de clústeres creados fuera de la consola](vs_orderingforclustersoutside.html)
+* [Solicitud de clústeres nuevos de vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [Solicitud de clústeres de vSphere en función de configuraciones existentes](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
+* [Escalado de clústeres creados fuera de la consola](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

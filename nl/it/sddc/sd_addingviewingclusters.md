@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Aggiunta, visualizzazione ed eliminazione di cluster per le istanze Cloud Foundation
+{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
 
 I server ESXi che hai configurato quando hai ordinato un'istanza sono raggruppati in un cluster predefinito. Il nome del cluster predefinito è:
 * Per le istanze distribuite nelle release della V2.1 o successive: **MGMT-Cluster-`<subdomain_label>`**
@@ -21,19 +22,23 @@ I server ESXi che hai configurato quando hai ordinato un'istanza sono raggruppat
 Puoi aggiungere i tuoi propri cluster alle istanze VMware Cloud Foundation per espandere la capacità di calcolo e archiviazione. All'interno di un cluster, puoi gestire i server ESXi per una migliore allocazione delle risorse e alta disponibilità. Quando non sono più necessari, puoi eliminare i cluster aggiunti dalle tue istanze.
 
 ## Disponibilità
+{: #sd_addingviewingclusters-availability}
 
 * La funzione di aggiunta cluster è disponibile solo per le istanze che sono state distribuite o aggiornate alle release della V2.0 e successive.
 * La funzione di eliminazione cluster è disponibile solo per le istanze che sono state distribuite o aggiornate alle release della V2.3 e successive.  
 
 ## Aggiunta di cluster alle istanze Cloud Foundation
+{: #sd_addingviewingclusters-adding}
 
 A un'istanza Cloud Foundation puoi aggiungere fino a cinque cluster.
 
 ### Impostazioni di sistema
+{: #sd_addingviewingclusters-adding-sys-settings}
 
 Quando aggiungi un cluster a un'istanza Cloud Foundation, devi specificare le seguenti impostazioni.
 
 #### Nome cluster
+{: #sd_addingviewingclusters-adding-cluster-name}
 
 Il nome del cluster deve rispettare i seguenti requisiti:
 * Sono consentiti solo caratteri alfanumerici e trattini (-).
@@ -42,6 +47,7 @@ Il nome del cluster deve rispettare i seguenti requisiti:
 * Il nome del cluster deve essere univoco all'interno dell'istanza Cloud Foundation.
 
 #### Ubicazione data center
+{: #sd_addingviewingclusters-adding-dc-location}
 
 L'ubicazione del {{site.data.keyword.CloudDataCent}} del cluster è impostata sul {{site.data.keyword.CloudDataCent_notm}} dell'istanza Cloud Foundation per impostazione predefinita. Puoi distribuire il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso rispetto a quello dell'istanza distribuita, ma devi assicurarti che la latenza di rete tra i due {{site.data.keyword.CloudDataCents_notm}} sia inferiore a 150 ms. Per controllare la latenza di rete, puoi utilizzare uno strumento come [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
@@ -50,10 +56,12 @@ I data center disponibili dipendono dalla configurazione Bare Metal Server selez
 Se distribuisci il cluster in un diverso data center o pod, vengono ordinate altre tre VLAN da utilizzare con i {{site.data.keyword.baremetal_short}} ordinati.
 
 ### Impostazioni di Bare Metal Server
+{: #sd_addingviewingclusters-adding-bare-metal-settings}
 
 Puoi scegliere **Skylake** o **Broadwell**.
 
 #### Skylake
+{: #sd_addingviewingclusters-adding-skylake}
 
 Per l'impostazione **Skylake**, hai una serie di opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
 
@@ -66,6 +74,7 @@ Tabella 1. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
 | Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### Broadwell
+{: #sd_addingviewingclusters-adding-broadwell}
 
 Per l'impostazione **Broadwell**, hai una serie di opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
 
@@ -80,6 +89,7 @@ Tabella 2. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4 / 64 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Impostazioni di archiviazione vSAN
+{: #sd_addingviewingclusters-adding-vsan-storage-settings}
 
 Per la configurazione **Skylake** e **Broadwell** di Bare Metal Server, puoi personalizzare l'archiviazione vSAN specificando le seguenti impostazioni:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
@@ -92,12 +102,14 @@ Per la configurazione **Skylake** e **Broadwell** di Bare Metal Server, puoi per
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
 
 ### Impostazioni di licenza
+{: #sd_addingviewingclusters-adding-licensing-settings}
 
 Puoi specificare le opzioni di licenza per i componenti VMware nel cluster, inclusi VMware vSphere e VMware vSAN:
 * Per gli utenti Business Partner IBM, la licenza vSphere (Enterprise Plus edition) e la licenza vSAN sono incluse e acquistate per tuo conto. Tuttavia, devi specificare l'edizione per la licenza vSAN.
 * Per gli utenti che non sono Business Partner IBM, puoi utilizzare le licenze VMware fornite da IBM per i componenti selezionando **Includi con l'acquisto** o puoi utilizzare l'opzione BYOL (Bring Your Own License) selezionando **Fornita dall'utente** e immettendo le tue chiavi di licenza.
 
 ## Procedura per aggiungere i cluster alle istanze Cloud Foundation
+{: #sd_addingviewingclusters-adding-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza a cui vuoi aggiungere i cluster.
@@ -124,6 +136,7 @@ Puoi specificare le opzioni di licenza per i componenti VMware nel cluster, incl
    4. Fai clic su **Fornitura**.
 
 ### Risultati dopo l'aggiunta di cluster alle istanze Cloud Foundation
+{: #sd_addingviewingclusters-adding-results}
 
 1. La distribuzione del cluster viene avviata automaticamente e lo stato del cluster viene modificato in **Inizializzazione**. Puoi controllare lo stato della distribuzione visualizzando la cronologia di distribuzione nella pagina di riepilogo dell'istanza.
 2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere High Availability (HA) e vSphere Distributed Resource Scheduler (DRS).
@@ -132,6 +145,7 @@ Non puoi modificare il nome del cluster. La modifica del nome del cluster potreb
 {:important}
 
 ## Procedura per visualizzare i cluster nelle istanze Cloud Foundation
+{: #sd_addingviewingclusters-viewing-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic su un'istanza per visualizzare i cluster al suo interno.
@@ -184,13 +198,15 @@ Non puoi modificare il nome del cluster. La modifica del nome del cluster potreb
        * **Edizione licenza**: l'edizione della licenza.
        * **Chiave di licenza**: la chiave di licenza.
        * **Capacità totale (CPU)**: la capacità totale o il numero di CPU fornite dalla licenza.
-       * **Capacità libera (CPU)**: la capacità disponibile nella licenza.
+       * **Capacità libera  (CPU)**: la capacità disponibile nella licenza.
 
 ## Eliminazione di cluster dalle istanze Cloud Foundation
+{: #sd_addingviewingclusters-deleting}
 
 Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 
 ### Prima di eliminare
+{: #sd_addingviewingclusters-deleting-prereq}
 
 * Utilizza questa procedura per eliminare i cluster dalle istanze distribuite nelle release della V2.3 o successive.
 * Per i cluster distribuiti nelle istanze della V2.2 o precedenti, devi aggiornare l'istanza alla V2.3 per poter eliminare i cluster che hai aggiunto all'istanza.
@@ -200,6 +216,7 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 * Il cluster predefinito non può essere eliminato.
 
 ## Procedura per eliminare i cluster dalle istanze Cloud Foundation
+{: #sd_addingviewingclusters-deleting-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza da cui vuoi eliminare i cluster.
@@ -210,7 +227,8 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, individua il cluster che vuoi eliminare e fai clic sull'icona **Elimina**.
 4. Conferma di aver completato la migrazione delle VM in altri cluster, se appropriato, e di voler eliminare il cluster.
 
-### Link correlati
+## Link correlati
+{: #sd_addingviewingclusters-related}
 
-* [Visualizzazione delle istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Visualizzazione delle istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)

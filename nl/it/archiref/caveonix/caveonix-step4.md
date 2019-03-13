@@ -45,7 +45,7 @@ Tabella 1. Informazioni raccolte dall'utente.
 |Organizzazione / Repository di asset  |Nome organizzazione |
 |Organizzazione |Numero di telefono |
 |Organizzazione |Email |
-|Organizzazione / Repository di asset  |Riga 1 indirizzo |
+|Organizzazione / Repository di asset |Riga 1 indirizzo |
 |Provider cloud / Repository di asset |Nome |
 |Provider cloud |Descrizione |
 |Provider cloud |Email POC |
@@ -63,7 +63,8 @@ Tabella 2. Informazioni predefinite utilizzate nell'impostazione dell'applicazio
 |Ambiente | Il punteggio è impostato su 5|
 |Repository di asset |Sono configurati due repository di asset: vCenter e NSX Manager. URL host impostato su https://*vCenter fqdn* e https://*NSX Manager fqdn*|
 |Repository di asset |Sono configurati due repository di asset: vCenter e NSX Manager; entrambi utilizzano lo stesso nome utente. Il nome utente è impostato sul nome utente dell'amministratore vCenter|
-|Repository di asset |Sono configurati due repository di asset: vCenter e NSX Manager; entrambi utilizzano la stessa password. La password è impostata sulla password dell'amministratore vCenter. |Repository di asset |Sono configurati due repository di asset: vCenter e NSX Manager; entrambi utilizzano la stessa password. Il tipo (Type) è impostato su vCenter per un repository e NSX per l'altro
+|Repository di asset |Sono configurati due repository di asset: vCenter e NSX Manager; entrambi utilizzano la stessa password. La password è impostata sulla password dell'amministratore vCenter.
+|Repository di asset |Sono configurati due repository di asset: vCenter e NSX Manager; entrambi utilizzano la stessa password. Il tipo (Type) è impostato su vCenter per un repository e NSX per l'altro
 |Attività |Sono impostate quattro attività: scansione degli asset (Asset Scan), flussi NSX (NSX Flows), scansione dell'infrastruttura VMware (VMware Infrastructure Scan) e vulnerabilità WMware (VMware Vulnerability). Il nome della scansione (ScanName) è impostato su DC1AssetScan, NSXFlows, VMWInfraScan, VMWVulnScan |
 |Attività |Sono impostate quattro attività: scansione degli asset (Asset Scan), flussi NSX (NSX Flows), scansione dell'infrastruttura VMware (VMware Infrastructure Scan) e vulnerabilità WMware (VMware Vulnerability). Il tipo (Type) è impostato su vCenter, NSX, VMWareInfrastructureScan, VMWareVulnerabilityScan |
 |Attività |La pianificazione (Schedule) è impostata su Hourly (Oraria) per DC1AssetScan e Daily (Giornaliera) per le altre. |
@@ -71,4 +72,4 @@ Tabella 2. Informazioni predefinite utilizzate nell'impostazione dell'applicazio
 ## Link correlati
 {: #caveonix-step4-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

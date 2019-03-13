@@ -4,13 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-26"
+lastupdated: "2019-02-15"
 
 ---
 
 # Creazione di baseline e collegamento agli oggetti di inventario
+{: #vum-baselines}
 
-Le baseline hanno una raccolta di una o più patch, estensioni, service pack, correzioni di bug o aggiornamenti e possono essere classificate come baseline di patch, estensione o aggiornamento. I gruppi di baseline vengono assemblati dalle baseline esistenti. I gruppi di baseline dell'host possono avere una singola baseline di aggiornamento e varie baseline di patch ed estensione. I gruppi di baseline di macchine virtuali e dispositivi virtuali possono avere fino a tre baseline di aggiornamento: una baseline di aggiornamento per VMware Tools, una baseline di aggiornamento per l'hardware della macchina virtuale e una baseline di aggiornamento per il dispositivo virtuale.
+Le baseline hanno una raccolta di una o più patch, estensioni, service pack, correzioni di bug o aggiornamenti e possono essere classificate come baseline di patch, estensione o aggiornamento. I gruppi di baseline vengono assemblate dalle baseline esistenti. I gruppi di baseline dell'host possono avere una singola baseline di aggiornamento e varie baseline di patch ed estensione. I gruppi di baseline di macchine virtuali e dispositivi virtuali possono avere fino a tre baseline di aggiornamento: una baseline di aggiornamento per VMware Tools, una baseline di aggiornamento per l'hardware della macchina virtuale e una baseline di aggiornamento per il dispositivo virtuale.
 
 VUM include baseline predefinite che non possono essere modificate o eliminate. Puoi utilizzare le baseline predefinite oppure creare baseline di patch, estensione e aggiornamento che soddisfino i tuoi criteri. Le baseline personalizzate che crei e le baseline predefinite possono essere combinate in gruppi di baseline.
 
@@ -32,7 +33,8 @@ Per utilizzare le baseline e i gruppi di baseline, devi collegarli agli oggetti 
 2. Fai clic sull'oggetto cluster di cui vuoi eseguire la scansione.
 3. Fai clic su **Attach Baseline**, seleziona le due baseline di patch predefinite e fai clic su **OK**.
 
-### Link correlati
+## Link correlati
+{: #vum-baselines-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)

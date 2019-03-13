@@ -36,9 +36,9 @@ Tabella 2. Raccoglitore remoto
 |RAM	|8 GB|
 |Disco	|1 TB|
 |SO	|CentOS 7|
-|Componenti dell'applicazione installati |Raccoglitore remoto|
+|Componenti dell'applicazione installati	|Raccoglitore remoto|
 
 ## Link correlati
 {: #caveonix-allinone-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

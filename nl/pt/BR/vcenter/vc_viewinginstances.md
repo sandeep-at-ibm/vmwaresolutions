@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Visualizando instâncias do vCenter Server
+{: #vc_viewinginstances}
 
 Visualize o resumo e as informações detalhadas das instâncias do VMware vCenter Server que são provisionadas para diferentes contas do usuário.
 
 ## Procedimento para visualizar o resumo de instâncias do vCenter Server
+{: #vc_viewinginstances-procedure-view-inst-summary}
 
 Para visualizar um resumo de todas as instâncias do vCenter Server que são provisionadas para uma conta do usuário, conclua as etapas a seguir:
 
@@ -39,7 +41,7 @@ A instância pode ter um intervalo de status.
 
 Tabela 2. Descrições do status de instâncias do vCenter Server
 
-| Status | Descrição       |
+| Status        | Descrição       |
 |:------------- |:------------- |
 | Criando | A instância está sendo criada. |
 | Construindo | A instância está sendo configurada. |
@@ -51,6 +53,7 @@ Tabela 2. Descrições do status de instâncias do vCenter Server
 | Excluído | A instância foi excluída. |
 
 ## Procedimento para visualizar os detalhes da propriedade de instância do vCenter Server
+{: #vc_viewinginstances-procedure-view-inst-property}
 
 Para visualizar os detalhes da propriedade de uma instância:
 
@@ -73,9 +76,10 @@ Tabela 3. Propriedades da instância do vCenter Server
 | DNS, domínio SSO | O domínio SSO é o domínio de Conexão única do vSphere. O nome de domínio SSO é corrigido para todas as instâncias implementadas do vCenter Server com um valor de <samp class="ph codeph">vsphere.local</samp>. |
 | DNS, subdomínio | O subdomínio é o nome do subdomínio do DNS no nome de domínio-raiz no qual os nomes de host da instância local do vCenter Server residem. O nome do subdomínio está no formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 | Hybridity Bundle | Indica se o Pacote configurável vCenter Server with Hybridity está instalado. |
-| Status | O status da instância.<br><br>As informações exibidas fornecem uma atualização sobre o progresso da implementação ou a ação que é executada na instância. Se houver problemas, uma mensagem poderá ser exibida para ajudá-lo a investigar e resolver o problema. |
+| Status  | O status da instância.<br><br>As informações exibidas fornecem uma atualização sobre o progresso da implementação ou a ação que é executada na instância. Se houver problemas, uma mensagem poderá ser exibida para ajudá-lo a investigar e resolver o problema. |
 
 ## Procedimento para visualizar as informações de acesso para instâncias do vCenter Server
+{: #vc_viewinginstances-procedure-view-access-info}
 
 Em **Informações de acesso**, visualize as informações de acesso dos componentes relacionados à instância. As senhas exibidas são senhas iniciais geradas pelo sistema. Se você as mudar fora do console do {{site.data.keyword.vmwaresolutions_short}}, elas não serão atualizadas na página de resumo da instância.
 
@@ -92,9 +96,10 @@ Tabela 4. Informações de acesso do vCenter Server para componentes relacionado
 | IP do vCenter  | O endereço IP do vCenter Server.  |
 | FQDN do vCenter  | O nome completo do domínio (FQDN) do vCenter Server.  |
 | ADMINISTRADOR do vCenter  | O nome do usuário e a senha do VMware vCenter Single Sign-On que podem ser usados para efetuar login no vCenter Server usando o vSphere Web Client.  |
-| SSH do vCenter  | O nome do usuário e a senha que podem ser usados para acessar a MV do vCenter Server por meio da conexão SSH.  |
+| SSH do vCenter  | O nome do usuário e a senha que podem ser usados para acessar a VM do vCenter Server por meio da conexão SSH.  |
 
 ## Procedimento para visualizar o histórico de implementação para instâncias do vCenter Server
+{: #vc_viewinginstances-procedure-view-deploy-history}
 
 Clique em **Histórico de implementação** na área de janela de navegação esquerda para visualizar o histórico de implementação da instância.
 
@@ -106,10 +111,12 @@ Tabela 5. Histórico de implementação da instância do vCenter Server
 | Resumo | Os detalhes da mudança |
 
 ## O que fazer se ocorrerem erros
+{: #vc_viewinginstances-if-errors-occur}
 
-Se ocorrerem erros durante a implementação ou exclusão da instância, a equipe de Suporte do {{site.data.keyword.cloud_notm}} será notificada automaticamente. Para consultar o status de seu chamado, é possível [entrar em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Se ocorrerem erros durante a implementação ou exclusão da instância, a equipe de Suporte do {{site.data.keyword.cloud_notm}} será notificada automaticamente. Para consultar o status de seu chamado, é possível [entrar em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## O que fazer a seguir
+{: #vc_viewinginstances-next}
 
 Gerencie suas instâncias do console do {{site.data.keyword.vmwaresolutions_short}} ou do VMware vSphere Web Client.
 
@@ -117,13 +124,14 @@ Antes de clicar no **Console do vCenter** na página de resumo da instância par
 {:important}
 
 Revise os tópicos a seguir para obter informações que ajudarão a concluir as instruções de login:
-*  Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
+*  Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
 *  Para obter uma lista de pontos de acesso para efetuar login na Rede Privada da infraestrutura do {{site.data.keyword.cloud_notm}} usando a VPN, veja [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, veja [Implementando um arquivo OVF usando o vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
+*  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, veja [Implementando um arquivo OVF usando o vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
-### Links relacionados
+## Links relacionados
+{: #vc_viewinginstances-related}
 
-* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
-* [Expandindo e contraindo a capacidade para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [Excluindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)
+* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Expandindo e contraindo a capacidade para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Excluindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)

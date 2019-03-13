@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Migrando uma máquina virtual
+{: #hcx-archi-migrate-vm}
 
 O HCX permite a migração bidirecional: de no local para a nuvem ou da nuvem para o data center no local. O HCX usa a tecnologia de replicação durante o processo de migração. A tecnologia de replicação está integrada ao dispositivo virtual do Hybrid Cloud Gateway. Nenhum software de replicação adicional precisa ser instalado.
 
@@ -31,6 +32,7 @@ A migração de tempo de inatividade baixo usa a replicação baseada em host pa
 7. A migração é feita. O Hybrid Cloud Services copia a MV original para a pasta **MVs migradas** na visualização de Modelos do vSphere.
 
 ## Nenhum vMotion de tempo de inatividade
+{: #hcx-archi-migrate-vm-no-downtime-vm}
 
 O vMotion transfere uma máquina virtual em tempo real de um vSphere vCenter para uma Nuvem do VCF/VCS. Este vMotion requer uma rede esticada. A transferência do vMotion captura a memória ativa da máquina virtual, seu estado de execução, seu endereço IP e seu endereço MAC.
 
@@ -38,10 +40,12 @@ A versão de hardware da máquina virtual deve ser pelo menos a versão 9 ou o c
 {:note}
 
 ## Migração fria
+{: #hcx-archi-migrate-vm-cold-mig}
 
 A migração fria usa o mesmo plano de dados que o cross-cloud vMotion para transferir uma máquina virtual desligada por meio de uma rede estendida. Seu endereço IP e endereço MAC são preservados. Os requisitos e as restrições da máquina virtual são os mesmos que para o vMotion.
 
 ### Migrando MVs usando o assistente bidirecional
+{: #hcx-archi-migrate-vm-mig-bidir-wiz}
 
 Usando o vSphere Web Client, o assistente de migração bidirecional é acessível por meio da guia Introdução ao Hybrid Cloud Services. Esse assistente manipula todos os detalhes de migração, incluindo múltiplas máquinas virtuais.
 
@@ -50,6 +54,7 @@ No vSphere Web Client, o assistente de migração bidirecional pode ser acessado
 * Do VCF/VCS HCX Cloud para vSphere
 
 ### Verificando as MVs antes da migração
+{: #hcx-archi-migrate-vm-check-vms}
 
 Para migrar uma máquina virtual, uma conexão segura que é mantida pelo Hybrid Cloud Gateway é necessária e a MV deve atender aos requisitos a seguir:
 * A máquina virtual deve estar ligada.
@@ -65,6 +70,7 @@ As MVs com os atributos a seguir não são suportadas para migração:
 * Versão de hardware inferior a 9.
 
 ### Monitorando uma Migração
+{: #hcx-archi-migrate-vm-monitor-mig}
 
 O progresso de uma migração baseada em replicação pode ser monitorado por meio da interface com o usuário ou por meio da linha de comandos. Visualize o console de Tarefa, conforme descrito em Monitorar implementação do dispositivo de serviço, e procure a tarefa **Migrar MV**. Quando
 o status é **Concluído**, a MV é migrada e ligada.
@@ -93,6 +99,7 @@ Uma interrupção pode ocorrer no ping contínuo durante a comutação. No entan
 após a tarefa **Migrar MV** ser concluída, conforme refletido no console da tarefa.
 
 ### Visualizando MVs migradas
+{: #hcx-archi-migrate-vm-view-vms}
 
 Quando o Hybrid Cloud Services liga uma máquina virtual migrada com êxito, ele desliga a MV original e armazena-a em uma pasta no vCenter. As máquinas virtuais armazenadas permanecem até que ela seja excluída manualmente.
 
@@ -103,6 +110,7 @@ diferente e ligadas.
 * É possível excluir as MVs não desejadas nessas pastas.
 * A exclusão é final, a menos que uma solução de backup esteja em vigor.
 
-### Links relacionados
+## Links relacionados
+{: #hcx-archi-migrate-vm-related}
 
-* [Modificando ou desinstalando o HCX](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
+* [Modificando ou desinstalando o HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

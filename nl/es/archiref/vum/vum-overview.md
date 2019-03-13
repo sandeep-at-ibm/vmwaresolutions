@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-18"
 
 ---
 
 # Visión general de VMware Update Manager
+{: #vum-overview}
 
 VMware Update Manager (VUM) utiliza un proceso de varias etapas para actualizar objetos de vSphere y para aplicar parches o extensiones. Este proceso permite un procedimiento de actualización sin problemas con un mínimo de tiempo de inactividad del sistema. Antes de examinar este proceso, tenemos que comprender los términos siguientes:
 * **Objeto de inventario**: un objeto dentro de vCenter, como por ejemplo máquina virtual, dispositivos virtuales o host ESXi de vSphere.
@@ -44,8 +45,10 @@ La interfaz de cliente VUM proporciona dos vistas principales:
 *	Vista de administración
 *	Vista de conformidad
 
-##	Vista de administración
-Se accede a la vista de administración navegando a **Inicio ** > **Gestor de actualizaciones** y seleccionando las direcciones IP de la instancia de Update Manager. En la vista Administración, puede realizar las tareas siguientes:
+## Vista de administración
+{: #vum-overview-admin-view}
+
+Se accede a la vista de administración navegando a **Inicio** > **Gestor de actualizaciones** y seleccionando las direcciones IP de la instancia de Update Manager. En la vista Administración, puede realizar las tareas siguientes:
 *	Configurar los valores del gestor de actualizaciones
 *	Crear y gestionar las líneas base y los grupos de línea base
 *	Ver sucesos de Update Manager
@@ -53,15 +56,18 @@ Se accede a la vista de administración navegando a **Inicio ** > **Gestor de ac
 *	Revisar y comprobar notificaciones
 *	Importar imágenes ESXi
 
-##	Vista de conformidad
-Se accede a la vista de conformidad de un objeto de inventario seleccionado desde **Hosts y clústeres** o ** Máquinas y plantillas ** y pulsando el **separador Update Manager**. En la vista Conformidad de Update Manager, puede realizar las tareas siguientes:
+## Vista de conformidad
+{: #vum-overview-compliance-view}
+
+Se accede a la vista de conformidad de un objeto de inventario seleccionado desde **Hosts y clústeres** o **Máquinas y plantillas** y pulsando el **separador Update Manager**. En la vista Conformidad de Update Manager, puede realizar las tareas siguientes:
 *	Ver la conformidad y los resultados de la exploración de cada objeto de inventario seleccionado
 *	Adjuntar y desconectar las líneas base y los grupos de línea base de un objeto de inventario seleccionado
 *	Explorar un objeto de inventario seleccionado
 *	Parches de transferencia o extensiones a hosts
 *	Corregir un objeto de inventario seleccionado
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vum-overview-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

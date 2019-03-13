@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Arquitetura de destino de nível de componente do VMware HCX on IBM Cloud
+{: #hcx-archi-target}
 
 Esta seção descreve a arquitetura de cada componente do HCX que é implementado dentro do ambiente IBM Cloud. O modelo de implementação spoke (destino) dentro do IBM Cloud é discutido.
 
 ## NSX Edge
+{: #hcx-archi-target-nsx-edge}
 
 O primeiro componente que está configurado dentro do IBM Cloud é um par de máquinas virtuais NSX Edge. É importante observar que todas as implementações do IBM Cloud for VMware Solutions instalam e configuram um dispositivo de borda para a comunicação de saída do IBM CloudDriver. No entanto, embora esse ESG possa ser reutilizado para comunicações do Hybrid Cloud Services, é aconselhável que um novo par seja implementado.
 
@@ -91,6 +93,7 @@ Tabela 7. Configuração do conjunto para NSX Edge - Detalhes do conjunto
 | Min Conexões | 0         |
 
 ## Gerenciador de HCX
+{: #hcx-archi-target-hcxm}
 
 O componente HCX Manager é o primeiro dispositivo implementado após os dispositivos NSX Edge serem configurados no destino. Esse dispositivo é usado como a interface principal para o ambiente de nuvem para os componentes de origem e fornece uma interface com o usuário de rede abstrata que pode ser usada para incluir, editar e excluir redes, bem como projetar e configurar roteamento sem o uso direto de NSX. Como resultado da integração do vCenter e do NSX, o dispositivo HCX Manager é designado a um endereço IP móvel privado na VLAN de gerenciamento.
 
@@ -102,6 +105,7 @@ Figura 1. Destino - Dispositivo do Hybrid Cloud Services
 ![Destino - Dispositivo do Hybrid Cloud Services](target_hybrid_cloud_services_appliance.svg)
 
 ## Gateway em nuvem
+{: #hcx-archi-target-cloud-gateway}
 
 Um dispositivo virtual é implementado após uma conexão ser estabelecida da origem com a nuvem de destino. Esse dispositivo é o Cloud Gateway (CGW) e é usado para manter um canal seguro entre o ambiente vSphere que é designado como a origem e o IBM Cloud. A especificação de dimensionamento do dispositivo CGW que é implementada dentro do IBM Cloud é listada na Tabela 3 Implementação do Cloud Gateway.
 
@@ -123,6 +127,7 @@ Figura 2. Implementação do Cloud Gateway
 ![Implementação do Cloud Gateway](cloud_gateway_deployment.svg)
 
 ## Otimizador WAN
+{: #hcx-archi-target-wan-opt}
 
 O segundo componente implementado é o dispositivo WAN Optimization. Embora o dispositivo WAN Optimization seja opcional, ele executa o condicionamento de WAN para reduzir os efeitos de latência. Ele também incorpora a Correção de erro de encaminhamento para negar cenários de perda de pacote e deduplicação de padrões de tráfego redundantes.
 
@@ -142,6 +147,7 @@ Figura 3. Implementação do WAN Optimizer
 ![Implementação do WAN Optimizer](wan_optimizer_deployment.svg)
 
 ## Concentrador de Camada 2
+{: #hcx-archi-target-layer-2-conc}
 
 O terceiro componente é conhecido como Layer 2 Concentrator (L2C) e faz parte dos Serviços Network Extension. O L2C é a máquina virtual que permite a extensão das redes do data center no local para o IBM Cloud. O L2C estende VLANs e/ou VXLANs no local. Cada L2C pode estender até 4096 VLANs. Cada L2C, quando emparelhado com seu parceiro no local, pode fornecer até 1 Gbps por "fluxo" e até um agregado de 4 Gbps por VLAN (ou VXLAN). A implementação de mais dispositivos L2C será suportada se mais rendimentos de rede forem necessários.
 
@@ -160,6 +166,7 @@ O dispositivo L2C é implementado na VLAN de gerenciamento, bem como na VLAN pú
 Figura 4. Implementação do L2 Concentrator
 ![Implementação do L2 Concentrator](l2_concentrator_deployment.svg)
 
-### Links relacionados
+## Links relacionados
+{: #hcx-archi-target-related}
 
-* [ Instalando e configurando na origem ](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-source.html)
+* [ Instalando e configurando na origem ](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-source)

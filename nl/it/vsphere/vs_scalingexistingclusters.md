@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,17 +13,20 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Ridimensionamento di cluster vSphere esistenti
+{: #vs_scalingexistingclusters}
 
 Puoi ridimensionare un cluster VMware vSphere che hai ordinato o salvato nella console {{site.data.keyword.vmwaresolutions_full}}. Per farlo, aggiungi i server ESXi oppure ordina una coppia HA di dispositivi FortiGate Security Appliance della serie 300 per il cluster.
 
 ## Requisiti
+{: #vs_scalingexistingclusters-req}
 
 Assicurati di aver completato le seguenti attività:
-*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html#managing-user-accounts-and-settings).
-*  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per i cluster vSphere](/docs/services/vmwaresolutions/vsphere/vs_planning.html).
+*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount#managing-user-accounts-and-settings).
+*  Hai esaminato i requisiti e le considerazioni in [Requisiti e pianificazione per i cluster vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning).
 *  Hai ricevuto un'e-mail con la conferma che il cluster che vuoi ridimensionare è pronto per l'utilizzo.
 
 ## Procedura per ridimensionare i cluster esistenti
+{: #vs_scalingexistingclusters-procedure}
 
 1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e poi su **VMware vSphere** nella sezione **Data center virtuali**.
 2. Nella pagina **VMware vSphere on IBM Cloud**, fai clic su **Crea**.  
@@ -36,6 +39,7 @@ Assicurati di aver completato le seguenti attività:
    * Per effettuare l'ordine, assicurati che l'account da addebitare sia corretto, esamina e accetta i termini e infine fai clic su **Fornitura**.
 
 ### Risultati
+{: #vs_scalingexistingclusters-results}
 
 Il ridimensionamento del cluster inizia automaticamente. Riceverai un'e-mail di conferma che ti indica che l'ordine è in fase di elaborazione. Quando il cluster è pronto per l'uso, ti viene inviata una notifica via e-mail.
 
@@ -44,8 +48,9 @@ Se il cluster che stai ridimensionando non è pronto per l'utilizzo, potresti ri
 I cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Istanze distribuite**.
 {:note}
 
-### Link correlati
+## Link correlati
+{: #vs_scalingexistingclusters-related}
 
-* [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [Ordine di cluster vSphere in base alle configurazioni esistenti](/docs/services/vmwaresolutions/vsphere/vs_orderingbasedonexistingconfig.html)
-* [Ridimensionamento di cluster creati all'esterno della console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [Ordine di cluster vSphere in base alle configurazioni esistenti](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
+* [Ridimensionamento di cluster creati all'esterno della console](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

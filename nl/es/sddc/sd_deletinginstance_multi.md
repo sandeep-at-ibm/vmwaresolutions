@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-10-29"
 {:important: .important}
 
 # Supresión de instancias de Cloud Foundation en una configuración de varios sitios
+{: #sd_deletinginstance_multi}
 
 Antes de planificar la supresión de instancias de Cloud Foundation en una configuración de varios sitios, revise las consideraciones siguientes.
 
@@ -30,6 +31,7 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 {:note}
 
 ## Procedimiento para suprimir instancias de Cloud Foundation en una configuración de varios sitios
+{: #sd_deletinginstance_multi-procedure}
 
 1. Elimine todos los servicios desde la instancia secundaria de Cloud Foundation.
 2. Asegúrese de que no tiene ningún objeto NSX ampliado en la instancia secundaria que desea suprimir.
@@ -39,7 +41,8 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 6. Repita los pasos 1 a 5 para todas las instancias secundarias de Cloud Foundation en una configuración de varios sitios.
 7. Después de suprimir todas las instancias secundarias, también puede suprimir la instancia secundaria desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #sd_deletinginstance_multi-related}
 
-* [Supresión de instancias de Cloud Foundation](sd_deletinginstance.html)
-* [Solicitud, visualización y eliminación de servicios de instancias de Cloud Foundation](sd_addingremovingservices.html)
+* [Supresión de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)
+* [Solicitud, visualización y eliminación de servicios de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)

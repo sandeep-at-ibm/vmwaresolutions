@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Excluindo instâncias do NetApp ONTAP Select
+{: #np_deletinginstance}
 
 Se você excluir uma instância do NetApp ONTAP Select, os componentes a seguir serão liberados sequencialmente:
 1. As MVs (máquinas virtuais) implementadas em cluster do NetApp ONTAP Select e a MV de implementação do NetApp ONTAP Select
@@ -28,6 +29,7 @@ Você é faturado até o final do ciclo de faturamento da instância excluída.
 {:note}
 
 ## Procedimento para excluir instâncias da página Instâncias implementadas
+{: #np_deletinginstance-procedure1}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do NetApp ONTAP Select**, localize a instância a ser excluída.
@@ -39,6 +41,7 @@ Você é faturado até o final do ciclo de faturamento da instância excluída.
    2. Na janela **Excluir instância**, clique em **OK**.
 
 ## Procedimento para excluir instâncias da página Detalhes da instância
+{: #np_deletinginstance-procedure2}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do NetApp ONTAP Select**, clique na instância a ser excluída.
@@ -48,8 +51,9 @@ Você é faturado até o final do ciclo de faturamento da instância excluída.
    1. Clique no ícone do menu overflow próximo ao **Console do vCenter** novamente e clique em **Excluir instância**.
    2. Na janela **Excluir instância**, clique em **OK**.
 
-### Links relacionados
+## Links relacionados
+{: #np_deletinginstance-related}
 
-* [Pedindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [Visualizando instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
-* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Pedindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [Visualizando instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Panoramica di Single-node Trial for Migration and App Modernization
+{: #single-node-trial-for-migration-and-app-modernization-overview}
 
 Single-node Trial for Migration and App Modernization ti consente di eseguire un test drive di IBM Cloud per migrare i carichi di lavoro VMware in IBM Cloud e quindi modernizzare semplici carichi di lavoro utilizzando i contenitori.
 
@@ -29,6 +30,7 @@ Questa versione di prova è destinata ad essere utilizzata per un massimo di 90 
 {:note}
 
 ## Specifiche tecniche per le istanze Single-node Trial for Migration and App Modernization
+{: #cloud_modern_bundle_overview-tech-specs}
 
 I seguenti componenti sono inclusi nella tua istanza Single-node Trial for Migration and App Modernization.
 
@@ -36,26 +38,31 @@ La disponibilità e il prezzo delle configurazioni hardware standardizzate posso
 {:note}
 
 ### Bare Metal Server
+{: #cloud_modern_bundle_overview-bare-metal}
 
 Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz con 384 GB di RAM) per un massimo di 20 VM
 
 #### Overcommit della CPU
+{: #cloud_modern_bundle_overview-cpu}
 
 * Overcommit della CPU 16:1 per la gestione di vCenter Server, HCX e 20 VM del carico di lavoro del cliente
 * Overcommit della CPU 11:1 per IBM Cloud Private
 
 #### Overcommit della RAM
+{: #cloud_modern_bundle_overview-ram}
 
 * Overcommit della RAM 1.22:1 per una distribuzione del cliente di 20 VM del carico di lavoro con 8 GB ciascuna
 * 1:1 (nessun overcommit) per una distribuzione del cliente di nove VM del carico di lavoro con 8 GB ciascuna
 
 ### Archiviazione NFS
+{: #cloud_modern_bundle_overview-nfs-storage}
 
 * 2 TB per la gestione
 * 1 TB per il carico di lavoro del cliente (per 20 VM del cliente)
 * 4 TB per IBM Cloud Private Hosted
 
 ### Specifiche di rete per le istanze Single-node Trial for Migration and App Modernization
+{: #cloud_modern_bundle_overview-networking-specs}
 
 Vengono ordinati i seguenti componenti di rete:
 *  Doppi uplink di rete privata e pubblica da 10 Gbps
@@ -69,6 +76,7 @@ Vengono ordinati i seguenti componenti di rete:
   * Un gateway dei servizi edge VMware NSX sicuro gestito dal cliente per il traffico del carico di lavoro HTTPS in uscita e in entrata, distribuito da IBM come template che puoi modificare per fornire l'accesso VPN o l'accesso pubblico.
 
 ### VSI (Virtual Server Instance)
+{: #cloud_modern_bundle_overview-vsi}
 
 Vengono ordinate le seguenti VSI (Virtual Server Instance):
 
@@ -76,6 +84,7 @@ Vengono ordinate le seguenti VSI (Virtual Server Instance):
 * Viene distribuita una VSI di Microsoft Windows Server per Microsoft Active Directory (AD) che può essere consultata. La VSI funziona come DNS per l'istanza in cui sono registrati gli host e le VM.
 
 ### Licenze fornite da IBM e tariffe
+{: #cloud_modern_bundle_overview-license-and-fee}
 
 Con il tuo ordine dell'istanza Single-node Trial for Migration and App Modernization sono incluse le seguenti licenze.
 
@@ -88,6 +97,7 @@ Le istanze Single-node Trial for Migration and App Modernization non supportano 
 {:note}
 
 ## Specifiche tecniche per VMware HCX on IBM Cloud
+{: #cloud_modern_bundle_overview-hcx-tech-specs}
 
 Single-node Trial for Migration and App Modernization include HCX on {{site.data.keyword.cloud_notm}}. Nel servizio HCX on {{site.data.keyword.cloud_notm}} vengono ordinati e inclusi i seguenti componenti.
 
@@ -95,12 +105,14 @@ Le istanze HCX in loco includono solo la licenza e l'attivazione.
 {:note}
 
 ### Una coppia attivo/passivo di gateway dei servizi edge (ESG) VMware NSX per la gestione HCX
+{: #cloud_modern_bundle_overview-esg}
 
 * CPU: 6 vCPU
 * RAM: 8 GB
 * Disco: 3 GB VMDK
 
 ### Dispositivo di gestione HCX - macchina virtuale
+{: #cloud_modern_bundle_overview-hcx-mgmt-appliance}
 
 * CPU: 4 vCPU
 * RAM: 12 GB
@@ -109,18 +121,21 @@ Le istanze HCX in loco includono solo la licenza e l'attivazione.
 Ulteriori dispositivi HCX vengono distribuiti durante la configurazione in base alle esigenze di connettività L2, ottimizzazione WAN e connessioni gateway.
 
 ### Specifiche di rete per il servizio HCX on IBM Cloud
+{: #cloud_modern_bundle_overview-hcx-networking-specs}
 
 * Una sottorete portatile pubblica con 16 indirizzi IP
 * Due sottoreti portatili private con 64 indirizzi IP
 * Otto indirizzi IP dalla sottorete vMotion portatile privata
 
 ## Specifiche tecniche per IBM Cloud Private Hosted
+{: #cloud_modern_bundle_overview-icp-tech-specs}
 
-IBM Cloud Private Hosted V3.1 viene installato utilizzando la topologia di sviluppo/test su tutte le istanze Single-node Trial for Migration and App Modernization. Per ulteriori informazioni su IBM Cloud Private Hosted, vedi [Panoramica su IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services/icp_overview.html).
+IBM Cloud Private Hosted V3.1 viene installato utilizzando la topologia di sviluppo/test su tutte le istanze Single-node Trial for Migration and App Modernization. Per ulteriori informazioni su IBM Cloud Private Hosted, vedi [Panoramica su IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview).
 
-### Link correlati
+## Link correlati
+{: #cloud_modern_bundle_overview-related}
 
-* [Guida di vCenter Server e IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [Guida di vCenter Server e IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Apri un ticket per IBM Cloud privato](https://www.ibm.com/mysupport/s/?language=en_US)
 * [Documentazione di VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

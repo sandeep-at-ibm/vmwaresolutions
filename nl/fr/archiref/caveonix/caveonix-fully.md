@@ -23,7 +23,7 @@ Tableau 1. Machines virtuelles de base - interface utilisateur
 |RAM	|6 Go|
 |Disque	|60 Go|
 |Système d'exploitation	|CentOS 7|
-|Composants d'application installés |Interface utilisateur|
+|Composants d'application installés	|Interface utilisateur|
 
 Tableau 2. Machines virtuelles de base - Applications et plug-in
 
@@ -33,9 +33,9 @@ Tableau 2. Machines virtuelles de base - Applications et plug-in
 |Nombre de machines virtuelles	|2|
 |vCPU	|8|
 |RAM	|16 Go|
-|Disque|500 Go|
+|Disque	|500 Go|
 |Système d'exploitation	|CentOS 7|
-|Composants d'application installés |Application, Plug-in|
+|Composants d'application installés	|Application, Plug-in|
 
 Tableau 3. Machines virtuelles de base - Collecteur central
 
@@ -47,7 +47,7 @@ Tableau 3. Machines virtuelles de base - Collecteur central
 |RAM	|16 Go |
 |Disque	|500 Go |
 |Système d'exploitation	|CentOS 7 |
-|Composants d'application installés |Collecteur central (cluster) |
+|Composants d'application installés	|Collecteur central (cluster) |
 
 Tableau 4. Machines virtuelles de base - Base de données relationnelle
 
@@ -59,7 +59,7 @@ Tableau 4. Machines virtuelles de base - Base de données relationnelle
 |RAM	|16 Go |
 |Disque	|1 To |
 |Système d'exploitation|CentOS 7 |
-|Composants d'application installés |Magasin de données relationnel (principal / secondaire) |
+|Composants d'application installés	|Magasin de données relationnel (principal / secondaire) |
 
 Tableau 5. Machines virtuelles de base - Magasin de données de messagerie
 
@@ -69,9 +69,9 @@ Tableau 5. Machines virtuelles de base - Magasin de données de messagerie
 |Nombre de machines virtuelles	|3 |
 |vCPU	|8 |
 |RAM	|16 Go |
-|Disque |1 To |
+|Disque	|1 To |
 |Système d'exploitation	|CentOS 7 |
-|Composants d'application installés |Magasin de données de messagerie (cluster) |
+|Composants d'application installés	|Magasin de données de messagerie (cluster) |
 
 Tableau 6. Machines virtuelles de base - Magasin de données d'index (noeuds maître)
 
@@ -83,7 +83,7 @@ Tableau 6. Machines virtuelles de base - Magasin de données d'index (noeuds ma�
 |RAM	|16 Go |
 |Disque	|1 To |
 |Système d'exploitation	|CentOS 7 |
-|Composants d'application installés |Magasin de données d'index (noeuds maître) |
+|Composants d'application installés	|Magasin de données d'index (noeuds maître) |
 
 Tableau 7. Base de données - Magasin de données d'index (noeuds de données)
 
@@ -95,7 +95,7 @@ Tableau 7. Base de données - Magasin de données d'index (noeuds de données)
 |RAM	|16 Go |
 |Disque	|4 To |
 |Système d'exploitation	|CentOS 7 |
-|Composants d'application installés |Magasin de données d'index (noeuds de données) |
+|Composants d'application installés	|Magasin de données d'index (noeuds de données) |
 
 Le tableau suivant décrit les caractéristiques des machines virtuelles d'extension.
 
@@ -109,7 +109,7 @@ Tableau 8. Machines virtuelles d'extension - Noeuds de données
 |RAM	|16 Go |
 |Disque	|4 To |
 |Système d'exploitation	|CentOS 7 |
-|Composants d'application installés |Noeuds de données (extension) |
+|Composants d'application installés	|Noeuds de données (extension) |
 
 Le tableau suivant décrit les caractéristiques des machines virtuelles du collecteur distant.
 
@@ -117,14 +117,14 @@ Tableau 9. Collecteur distant
 
 |Paramètre	|Valeur |
 |---|---|
-|Nombre de machines virtuelles	|Selon les besoins|
+|Nombre de machines virtuelles	|Selon les besoins |
 |vCPU	|8 |
 |RAM	|8 Go |
 |Disque	|1 To |
 |Système d'exploitation	|CentOS 7 |
-|Composants d'application installés |Collecteur distant|
+|Composants d'application installés	|Collecteur distant |
 
 ## Liens connexes
 {: #caveonix-fully-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

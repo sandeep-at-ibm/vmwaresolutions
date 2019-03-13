@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Eliminazione di istanze NetApp ONTAP Select
+{: #np_deletinginstance}
 
 Se elimini un'istanza NetApp ONTAP Select, i seguenti componenti vengono rilasciati in modo sequenziale:
 1. Le VM (macchine virtuali) organizzate in cluster NetApp ONTAP distribuite e la VM di distribuzione NetApp ONTAP Select
@@ -28,6 +29,7 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 {:note}
 
 ## Procedura per eliminare le istanze dalla pagina Istanze distribuite
+{: #np_deletinginstance-procedure1}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze di NetApp ONTAP Select**, trova l'istanza da eliminare.
@@ -38,6 +40,7 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
    2. Nella finestra **Elimina istanza**, fai clic su **OK**.
 
 ## Procedura per eliminare le istanze dalla pagina dei dettagli dell'istanza
+{: #np_deletinginstance-procedure2}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze di NetApp ONTAP Select**, fai clic sull'istanza da eliminare.
@@ -47,8 +50,9 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
    1. Fai di nuovo clic sull'icona del menu di overflow accanto a **Console vCenter** e quindi su **Elimina istanza**.
    2. Nella finestra **Elimina istanza**, fai clic su **OK**.
 
-### Link correlati
+## Link correlati
+{: #np_deletinginstance-related}
 
-* [Ordine di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [Visualizzazione delle istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
-* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Ordine di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [Visualizzazione delle istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,12 +13,14 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Ajout, affichage et suppression de clusters pour des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_addingviewingclusters}
 
 Les serveurs ESXi que vous avez configurés lors de la commande d'une instance sont, par défaut, regroupés sous **cluster1**.
 
 Vous pouvez ajouter des clusters à votre instance VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle afin d'étendre la capacité de calcul et de stockage. Au sein d'un cluster, gérez les serveurs ESXi afin d'optimiser l'allocation des ressources et la haute disponibilité. Lorsque vous n'en avez plus besoin, supprimez les clusters que vous avez ajoutés à votre instance.
 
 ## Ajout de clusters à des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_addingviewingclusters-adding}
 
 Le nombre de clusters pouvant être ajoutés à une instance varie en fonction de la version de l'instance :
 * Pour les instances déployées dans (ou mises à niveau vers) la version 2.5 et des versions ultérieures, le nombre de clusters, d'hôtes et de machines virtuelles détermine la limite maximum relative au nombre de clusters que vous pouvez ajouter. Vous devez respecter les règles et limites de dimensionnement VMware pour votre déploiement.
@@ -27,10 +29,12 @@ Le nombre de clusters pouvant être ajoutés à une instance varie en fonction d
 Pour plus d'informations sur les limites maximum, voir [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
 
 ### Paramètres système
+{: #vc_hybrid_addingviewingclusters-adding-sys-settings}
 
 Lorsque vous ajoutez un cluster pour une instance vCenter Server with Hybridity Bundle, vous devez spécifier les paramètres suivants :
 
 #### Nom de cluster
+{: #vc_hybrid_addingviewingclusters-adding-cluster-name}
 
 Le nom du cluster qui doit respecter les règles suivantes :
 * Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
@@ -39,16 +43,19 @@ Le nom du cluster qui doit respecter les règles suivantes :
 * Le nom de cluster doit être unique au sein de l'instance vCenter Server with Hybridity Bundle.
 
 #### Emplacement de centre de données
+{: #vc_hybrid_addingviewingclusters-adding-dc-location}
 
 L'emplacement de l'{{site.data.keyword.CloudDataCent_notm}} du cluster est, par défaut, l'{{site.data.keyword.CloudDataCent_notm}} de l'instance vCenter Server. Vous pouvez déployer le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui de l'instance déployée, sous réserve que la latence du réseau entre les deux {{site.data.keyword.CloudDataCents_notm}} soit inférieure à 150 ms. Pour vérifier la latence du réseau, utilisez un outil tel que [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
 Si vous déployez le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} ou pod d'infrastructure {{site.data.keyword.cloud_notm}}, trois VLAN supplémentaires sont commandés pour être utilisés avec les serveurs {{site.data.keyword.baremetal_short}} commandés.
 
 ### Paramètres de serveur bare metal
+{: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
 Indiquez le modèle d'UC et la mémoire RAM du serveur bare metal. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
 
 #### Skylake
+{: #vc_hybrid_addingviewingclusters-adding-skylake}
 
 Lorsque vous sélectionnez **Skylake**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM adaptée à vos besoins.
 
@@ -61,6 +68,7 @@ Tableau 1. Options pour les serveurs Skylake bare metal
 | Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
 
 #### Broadwell
+{: #vc_hybrid_addingviewingclusters-adding-broadwell}
 
 Lorsque vous sélectionnez **Broadwell**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM adaptée à vos besoins.
 
@@ -75,6 +83,7 @@ Tableau 2. Options pour les serveurs Broadwell bare metal
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 
 #### Nombre de serveurs bare metal
+{: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
 
 Au moins deux serveurs {{site.data.keyword.baremetal_short}} sont requis pour un cluster.
 
@@ -83,6 +92,7 @@ Vous pouvez ajouter jusqu'à 59 serveurs {{site.data.keyword.baremetal_short}} p
 Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Pour le stockage VMware vSAN, quatre serveurs sont requis pour le cluster initial et pour les clusters post-déploiement.
 
 ### Paramètres de stockage vSAN
+{: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
 
 VMware vSAN 6.6 est inclus avec votre commande d'instance vCenter Server with Hybridity Bundle. Spécifiez les options vSAN suivantes :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
@@ -96,6 +106,7 @@ VMware vSAN 6.6 est inclus avec votre commande d'instance vCenter Server with Hy
 * **Licence vSAN** : sélectionnez l'édition de licence VMware vSAN 6.6 (Advanced ou Enterprise).
 
 ### Paramètres d'octroi de licence
+{: #vc_hybrid_addingviewingclusters-adding-licensing-settings}
 
 Licences fournies par IBM pour les composants VMware suivants :
   * vSphere Enterprise Plus 6.5u1
@@ -103,6 +114,7 @@ Licences fournies par IBM pour les composants VMware suivants :
   * NSX Service Providers 6.4 (édition Advanced ou Enterprise)
 
 ### Paramètres d'interface réseau
+{: #vc_hybrid_addingviewingclusters-adding-network-interface-settings}
 
 Les paramètres de carte d'interface réseau varient selon que vous sélectionnez **Réseau public et réseau privé** ou **Réseau privé uniquement**. Les services complémentaires suivants requièrent des cartes d'interface réseau public et ne sont pas disponibles avec l'option de réseau privé :
 
@@ -112,10 +124,12 @@ Les paramètres de carte d'interface réseau varient selon que vous sélectionne
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Récapitulatif de la commande
+{: #vc_hybrid_addingviewingclusters-adding-order-summary}
 
 Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite.
 
 ## Procédure d'ajout de clusters à des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_addingviewingclusters-adding-procedure}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous voulez afficher les clusters.
@@ -137,6 +151,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
    4. Cliquez sur **Mettre à disposition**.
 
 ### Résultats après l'ajout de clusters à des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_addingviewingclusters-adding-results}
 
 1. Le déploiement du cluster démarre automatiquement et celui-ci prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page **Récapitulatif** de l'instance.
 2. Lorsque le cluster est prêt pour utilisation, il prend le statut **Prêt à l'emploi**. Le cluster qui vient d'être ajouté est activé avec vSphere haute disponibilité et vSphere Distributed Resource Scheduler (DRS).
@@ -145,6 +160,7 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
 {:important}
 
 ## Procédure d'affichage des clusters dans les instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous voulez afficher les clusters.
@@ -201,10 +217,12 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
     * **Protocole NFS** : version NFS du stockage.
 
 ## Suppression de clusters des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_addingviewingclusters-deleting}
 
 Vous souhaiterez peut-être supprimer un cluster d'une instance si vous n'en avez plus besoin.
 
 ### Avant de supprimer
+{: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
 * Vous ne pouvez supprimer qu'un seul cluster à la fois. Pour supprimer plusieurs clusters, vous devez le faire de manière séquentielle et attendre que le cluster précédent soit supprimé avant de supprimer le cluster suivant.
 * Assurez-vous que tous les noeuds présents dans un cluster sont sous tension et opérationnels avant de supprimer le cluster.
@@ -212,15 +230,18 @@ Vous souhaiterez peut-être supprimer un cluster d'une instance si vous n'en ave
 * Le cluster par défaut ne peut pas être supprimé.
 
 ## Procédure de suppression de clusters des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous souhaitez supprimer les clusters.
 
-   **Remarque** : assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas retirer de clusters de l'instance.
+   Assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas retirer de clusters de l'instance.
+   {:note}
 
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, localisez le cluster que vous souhaitez supprimer et cliquez sur l'icône **Supprimer** dans la colonne **Actions**.
 
-### Liens connexes
+## Liens connexes
+{: #vc_hybrid_addingviewingclusters-related}
 
-* [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
+* [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)

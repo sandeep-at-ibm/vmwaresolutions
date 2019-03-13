@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Requisiti e pianificazione per le istanze NetApp ONTAP Select
+{: #np_planning}
 
 Esamina i seguenti requisiti prima di ordinare le tue istanze NetApp ONTAP Select. Pianifica la tua istanza in base all'ubicazione del {{site.data.keyword.CloudDataCent}} e ai requisiti di prestazioni e capacità del tuo carico di lavoro.
 
 ## Requisiti dell'account IBM Cloud
+{: #np_planning-account-req}
 
-L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
+L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## Disponibilità dei data center IBM Cloud
+{: #np_planning-dc-availability}
 
 La distribuzione di NetApp ONTAP Select ha requisiti rigorosi sull'infrastruttura fisica. Pertanto, puoi distribuire le istanze solo nei {{site.data.keyword.CloudDataCents_notm}} che soddisfano i requisiti. Per la distribuzione di NetApp ONTAP Select sono disponibili i seguenti {{site.data.keyword.CloudDataCents_notm}}:
 
@@ -55,7 +58,8 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze 
 | WDC06 | Washington, DC | Nord America orientale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | WDC07 | Washington, DC | Nord America orientale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 
-### Link correlati
+## Link correlati
+{: #np_planning-related}
 
-* [Panoramica di NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
-* [Ordine di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [Panoramica di NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)
+* [Ordine di istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)

@@ -21,4 +21,4 @@ La automatización de {{site.data.keyword.vmwaresolutions_full}} solicita una su
 ## Enlaces relacionados
 {: #caveonix-step2-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

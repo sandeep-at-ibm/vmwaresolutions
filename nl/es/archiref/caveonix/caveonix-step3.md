@@ -26,4 +26,4 @@ Al final de este paso, los componentes de la aplicación se instalan en las máq
 ## Enlaces relacionados
 {: #caveonix-step3-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

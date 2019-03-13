@@ -4,28 +4,39 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-02-15"
 
 ---
 
 # Redes e infraestructura de IBM Cloud
+{: #vcsiks-arch-overview-infrastructure}
 
-## Direccionamiento y reenvío virtual (VRF)
-Las cuentas de {{site.data.keyword.cloud}} también se pueden configurar como cuentas de VRF. Las cuentas VRF proporcionan funciones similares a la expansión de VLAN, que permite el direccionamiento automático entre bloques IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
+## Direccionamiento virtual y reenvío
+{: #vcsiks-arch-overview-infrastructure-vrf}
+
+Las cuentas de {{site.data.keyword.cloud}} también se pueden configurar como cuentas de direccionamiento virtual y reenvío (VRF). Las cuentas VRF proporcionan funciones similares a la expansión de VLAN, que permite el direccionamiento automático entre bloques IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
 
 ## Direct Link
+{: #vcsiks-arch-overview-infrastructure-direct-link}
+
 {{site.data.keyword.cloud_notm}} Direct Link Connect ofrece acceso privado a su infraestructura de {{site.data.keyword.cloud_notm}} y a cualquier otra nube enlazada a su proveedor de servicios de red, a través de su {{site.data.keyword.CloudDataCent_notm}}. Esta opción es perfecta para crear conectividad multinube en un entorno único.
 Conectamos a los clientes con la red {{site.data.keyword.cloud_notm}} Private, utilizando una topología de ancho de banda compartida. Al igual que sucede con todos los productos de Direct-Link, puede añadir direccionamiento global, que permite el tráfico de red privada a todas las ubicaciones de {{site.data.keyword.cloud_notm}}.
 
 ## Redes privadas virtuales
+{: #vcsiks-arch-overview-infrastructure-virt-private-network}
 
 ### strongSwan VPN
+{: #vcsiks-arch-overview-infrastructure-strongswan}
+
 El servicio strongSwan IPSec VPN ofrece un canal de comunicación seguro de extremo a extremo sobre internet que se basa en la suite de protocolos Internet Protocol Security (IPSec) estándar del sector.
 
 ### Hybridity (HCX)
+{: #vcsiks-arch-overview-infrastructure-hcx}
+
 VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity) permite ampliar fácilmente las redes de centros de datos locales en {{site.data.keyword.cloud_notm}}, lo que permite migrar las máquinas virtuales (VM) de {{site.data.keyword.cloud_notm}} y al mismo sin realizar ninguna conversión ni cambio.
 
 ## Estructura física
+{: #vcsiks-arch-overview-infrastructure-physical-structure}
 
 La infraestructura física necesaria para desplegar un clúster de vCenter Server requiere la siguiente especificación mínima.
 
@@ -50,6 +61,7 @@ Memoria | 4 GB - 242 GB | 32 GB - 512 GB
 Almacenamiento | 100 GB |  SATA: 2 TB / SSD: 960 GB
 
 ## Estructura virtual
+{: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
 Figura 1. Estructura física de los despliegues {{site.data.keyword.containerlong_notm}} e {{site.data.keyword.icpfull_notm}}
 
@@ -60,26 +72,37 @@ Dentro de la instancia de vCenter Server, las VMS del cliente se despliegan en N
 El ESG se configura con una regla NAT de origen (SNAT) para permitir el tráfico de salida, lo que permite la conectividad a Internet para descargar los requisitos previos de {{site.data.keyword.icpfull_notm}} y para conectarse a GitHub y Docker. De forma alternativa, puede utilizar un proxy web para la conectividad de Internet. El ESG se configura para acceder a los servicios DNS y NTP a través de la red privada. La integración con la instancia de {{site.data.keyword.containerlong_notm}} está disponible a través de la red de {{site.data.keyword.cloud_notm}} entre la instancia de vCenter Server e {{site.data.keyword.containerlong_notm}}.
 
 ## Componentes de vCenter Server
+{: #vcsiks-arch-overview-infrastructure-vcs-comp}
 
 Figura 2. Componentes de la plataforma vCenter Server
 ![Diagrama del entorno de vCenter Server](vcsiks-vcs-env.svg)
 
 ### Controlador de servicios de la plataforma
+{: #vcsiks-arch-overview-infrastructure-psc}
+
 El despliegue de vCenter Server utiliza un único controlador externo de servicios de la plataforma (PSC) instalado en una subred portátil en la VLAN privada asociada a las VM de gestión. Su pasarela predeterminada se establece en el direccionador del cliente de fondo (BCR).
 
 ### vCenter Server
+{: #vcsiks-arch-overview-infrastructure-vcs}
+
 Al igual que el PSC, vCenter Server se despliega como un dispositivo.
 Además, el vCenter se instala en una subred portátil en la VLAN privada que está asociada con las VM de gestión. Su pasarela predeterminada se establece en BCR.
 
 ### NSX Manager
+{: #vcsiks-arch-overview-infrastructure-nsx-manager}
+
 NSX Manager se despliega en el clúster inicial de vCenter Server. Además se asigna a NSX Manager una dirección IP desde el bloque de direcciones portátiles privadas, que está destinado a los componentes de gestión.
 
 ### Controladores NSX
+{: #vcsiks-arch-overview-infrastructure-nsx-controllers}
+
 La automatización de {{site.data.keyword.cloud_notm}} despliega tres controladores NSX dentro del clúster inicial. Se asigna a los controladores direcciones IP desde la subred portátil privada que está destinada para los componentes de gestión.
 
 ### NSX ESG / DLR
+{: #vcsiks-arch-overview-infrastructure-nsx-esg}
+
 Se despliegan pares NSX Edge Services Gateway (ESG). En todos los casos, se utiliza un par de pasarela para el tráfico de salida de los componentes de automatización que residen en la red privada. Para vCenter Server e {{site.data.keyword.icpfull_notm}}, una segunda pasarela, conocida como el borde gestionado por el cliente, se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada.
-El administrador puede configurar los componentes NSX necesarios como, por ejemplo, el direccionador lógico distribuido (DLR), los conmutadores lógicos y los cortafuegos. Para obtener más información sobre los NSX Edges que se despliegan como parte de la solución, consulte la [Guía de red de vCenter Server](../vcsnsxt/vcsnsxt-intro.html).
+El administrador puede configurar los componentes NSX necesarios como, por ejemplo, el direccionador lógico distribuido (DLR), los conmutadores lógicos y los cortafuegos. Para obtener más información sobre los NSX Edges que se despliegan como parte de la solución, consulte la [Guía de red de vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
 En la tabla siguiente se resumen las especificaciones de {{site.data.keyword.icpfull_notm}} ESG/DLR.
 
@@ -102,17 +125,22 @@ Memoria	| 512 MB
 Disco	| 1000 GB en almacén de datos local
 
 ## Componentes del servicio IBM Cloud Kubernetes
+{: #vcsiks-arch-overview-infrastructure-iks-comp}
 
 Figura 3. Componentes de {{site.data.keyword.containerlong_notm}}
 ![Diagrama de componentes de {{site.data.keyword.containerlong_notm}}](vcsiks-iks-components.svg)
 
 ### Kubernetes maestro
+{: #vcsiks-arch-overview-infrastructure-kube-master}
 
 El nodo maestro de Kubernetes se encarga de gestionar todos los recursos de cálculo, de red y de almacenamiento del clúster. El nodo maestro de Kubernetes garantiza que las apps y servicios contenerizados se despliegan de forma equitativa en los nodos de trabajador del clúster.
 
 ###	Nodo trabajador
+{: #vcsiks-arch-overview-infrastructure-worker-node}
+
 Cada nodo trabajador es una máquina física (nativa) o una máquina virtual que se ejecuta en el hardware físico en el entorno de nube. Cuando suministra un nodo trabajador, determina los recursos que están disponibles para los contenedores que están alojados en dicho nodo trabajador. De forma automática, los nodos trabajadores se configuran con un motor de Docker gestionado por IBM, recursos de cálculo independientes, redes y un servicio de volúmenes. Las características integradas de seguridad ofrecen aislamiento, funciones de gestión de recursos y conformidad con la seguridad de los nodos trabajadores.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vcsiks-arch-overview-infrastructure-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

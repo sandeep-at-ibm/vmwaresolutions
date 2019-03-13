@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-12-21"
+lastupdated: "2019-02-15"
 
 ---
 # Arquitectura de destino a nivel de componente de VMware HCX on IBM Cloud
+{: #hcx-archi-target}
 
 En esta sección se describe la arquitectura de cada componente de HCX que se despliega en el entorno de IBM Cloud. Se describe el modelo de despliegue de estrella (destino) en IBM Cloud.
 
 ## NSX Edge
+{: #hcx-archi-target-nsx-edge}
 
 El primer componente que se configura en IBM Cloud es un par de máquinas virtuales NSX Edge. Es importante tener en cuenta que todos los despliegues de soluciones IBM Cloud for VMware instalan y configuran un dispositivo de extremo (Edge) para la comunicación de salida de IBM CloudDriver. Sin embargo, si bien este ESG se puede reutilizar para las comunicaciones de Hybrid Cloud Services, se recomienda que se despliegue un par nuevo.
 
@@ -91,6 +93,7 @@ Tabla 7. Configuración de Pool para NSX Edge - Detalles de la agrupación
 | Número mínimo de conexiones | 0         |
 
 ## HCX Manager
+{: #hcx-archi-target-hcxm}
 
 El componente HCX Manager es el primer dispositivo que se despliega después de que se hayan configurado los dispositivos NSX Edge en el destino. Este dispositivo se utiliza como interfaz principal en el entorno de nube para los componentes de origen y proporciona una interfaz de usuario de red abstraída que se puede utilizar para añadir, editar y suprimir redes, así como para diseñar y configurar el direccionamiento sin uso directo de NSX. Como resultado de la integración de vCenter y NSX, se asigna al dispositivo HCX Manager una dirección IP portátil privada en la VLAN de gestión.
 
@@ -102,6 +105,7 @@ Figura 1. Destino - Dispositivo Hybrid Cloud Services
 ![Destino - Dispositivo Hybrid Cloud Services](target_hybrid_cloud_services_appliance.svg)
 
 ## Pasarela de nube
+{: #hcx-archi-target-cloud-gateway}
 
 Se despliega un dispositivo virtual después de que se haya establecido una conexión entre el origen a la nube de destino. Este dispositivo es la pasarela de nube (CGW) y se utiliza para mantener un canal seguro entre el entorno de vSphere que se ha designado como origen y el entorno de IBM Cloud. La especificación del tamaño del dispositivo CGW que se despliega en IBM Cloud se muestra en la Tabla 3. Despliegue de pasarela de nube.
 
@@ -123,6 +127,7 @@ Figura 2. Despliegue de la pasarela de nube
 ![Despliegue de la pasarela de nube](cloud_gateway_deployment.svg)
 
 ## Optimizador de WAN
+{: #hcx-archi-target-wan-opt}
 
 El segundo componente que se despliega es el dispositivo de optimización de WAN. Aunque el dispositivo de optimización de WAN es opcional, realiza el acondicionamiento de la WAN para reducir los efectos de la latencia. También incorpora correcciones de errores de reenvío para evitar escenarios de pérdida de paquetes y desduplicación de los patrones de tráfico redundantes.
 
@@ -142,6 +147,7 @@ Figura 3. Despliegue del optimizador de WAN
 ![Despliegue del optimizador de WAN](wan_optimizer_deployment.svg)
 
 ## Concentrador de capa 2
+{: #hcx-archi-target-layer-2-conc}
 
 El tercer componente se conoce como concentrador de capa 2 (L2C) y forma parte de los servicios de extensión de red. El L2C es la máquina virtual que permite la extensión de las redes del centro de datos local a IBM Cloud. El L2C extiende las VLAN locales y/o VXLAN locales. Cada L2C puede extender hasta 4096 VLAN. Cada L2C, cuando se emparejan con su homólogo local, puede proporcionar un máximo de 1 Gbps por "flujo" y hasta un agregado de 4 Gbps por VLAN (o VXLAN). Se pueden desplegar más dispositivos L2C si se necesita más rendimiento de red.
 
@@ -160,6 +166,7 @@ El dispositivo L2C se despliega en la VLAN de gestión, así como en la VLAN pú
 Figura 4. Despliegue del concentrador L2
 ![Despliegue del concentrador L2](l2_concentrator_deployment.svg)
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #hcx-archi-target-related}
 
-* [Instalación y configuración en el origen](hcx-archi-source.html)
+* [Instalación y configuración en el origen](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-source)

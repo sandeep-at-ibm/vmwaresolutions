@@ -68,7 +68,7 @@ Utilisez vMotion lorsque :
 ### Fonctionnement
 {: #vcshcx-stretching-operation}
 
-Utilisez le portail snap-in de l'interface Web HCX ou les menus d'extension contextuels du client vSphere Web Client pour initier une migration vMotion entre clouds. Dans les deux cas, le même assistant de migration démarre. Dans les menus contextuels, une seule machine virtuelle est sélectionnée pour les opérations de migration. Dans le portail, plusieurs machines virtuelles peuvent être sélectionnées. 
+Utilisez le portail snap-in de l'interface Web HCX ou les menus d'extension contextuels du client vSphere Web Client pour initier une migration vMotion entre clouds. Dans les deux cas, le même assistant de migration démarre. Dans les menus contextuels, une seule machine virtuelle est sélectionnée pour les opérations de migration. Dans le portail, plusieurs machines virtuelles peuvent être sélectionnées.
 
 La migration inverse des machines virtuelles n'est possible qu'à partir du portail de l'interface utilisateur Web, en cochant la case **Reverse migration** dans l'assistant de migration HCX.
 
@@ -80,7 +80,7 @@ La migration inverse des machines virtuelles n'est possible qu'à partir du port
 
 La fonction de migration en bloc de HCX utilise la réplication vSphere pour migrer les données du disque tout en recréant la machine virtuelle sur l'instance vSphere HCX de destination. Une migration d'une machine virtuelle implique les actions suivantes :
 - Création d'une nouvelle machine virtuelle du côté de la destination et de ses disques virtuels correspondants.
-- Réplication des données de machine virtuelle sur la nouvelle machine virtuelle. La réplication démarre dès que l'assistant termine, indépendamment du basculement de la planification. 
+- Réplication des données de machine virtuelle sur la nouvelle machine virtuelle. La réplication démarre dès que l'assistant termine, indépendamment du basculement de la planification.
 - Mise hors tension de la machine virtuelle d'origine.
 - Durant la période de mise hors tension, la réplication finale de toutes les données modifiées se produit.
 - Mise sous tension de la nouvelle machine virtuelle du côté de la destination.
@@ -104,7 +104,7 @@ Les inconvénients de la migration en bloc par rapport à la migration vMotion s
 ### Clusters à disque partagé
 {: #vcshcx-stretching-shared-disk-clusters}
 
-Les clusters Oracle RAC, MS Exchange et MS-SQL sont des exemples d'applications où deux machines virtuelles ou plus participent à un cluster qui nécessite un disque partagé entre toutes les machines virtuelles ou noeuds de cluster. L'indicateur d'écriture multiple de VMware doit être activé sur tous les noeuds des machines virtuelles pour les disques qui font partie du cluster d'applications (disques virtuels autres que ceux du système d'exploitation). Les machines virtuelles dont l'indicateur d'écriture multiple est activé pour tous les disques virtuels ne sont pas prises en charge. 
+Les clusters Oracle RAC, MS Exchange et MS-SQL sont des exemples d'applications où deux machines virtuelles ou plus participent à un cluster qui nécessite un disque partagé entre toutes les machines virtuelles ou noeuds de cluster. L'indicateur d'écriture multiple de VMware doit être activé sur tous les noeuds des machines virtuelles pour les disques qui font partie du cluster d'applications (disques virtuels autres que ceux du système d'exploitation). Les machines virtuelles dont l'indicateur d'écriture multiple est activé pour tous les disques virtuels ne sont pas prises en charge.
 
 Migration d'un cluster ayant activé les disques virtuels à écriture multiple :
 - vMotion est utilisée car les mappages d'origine du disque de machine virtuelle et de l'UUID sont maintenus.
@@ -145,7 +145,7 @@ Après la migration, les volumes iSCSI peuvent être dupliqués avec le système
 - Bande passante (~1 Gbits/s pour un réseau étendu)
 - Bande passante sous-jacente de la liaison
 
-Après le cycle de vie de la migration, assurez-vous de tester avec les applications de développement ou de mise à disposition avant d'essayer avec la production. La QoS peut être utilisée pour le trafic tunnel sous-jacent (udp 500/4500) entre les dispositifs L2C de HCX qui prennent en charge des réseaux L2 étendus sensibles à la latence. 
+Après le cycle de vie de la migration, assurez-vous de tester avec les applications de développement ou de mise à disposition avant d'essayer avec la production. La QoS peut être utilisée pour le trafic tunnel sous-jacent (udp 500/4500) entre les dispositifs L2C de HCX qui prennent en charge des réseaux L2 étendus sensibles à la latence.
 
 ## Basculement du réseau
 {: #vcshcx-stretching-network-swing}
@@ -166,10 +166,10 @@ Solution : il est courant pour les fournisseurs WAN de filtrer les routes /32 qu
 
 Tenez compte des considérations et implications suivantes :
 - Les applications qui partagent un sous-réseau, un réseau vLAN et un réseau VXLAN doivent être déplacées ensemble.
-- Les applications se trouvant derrière un équilibreur de charge utilisant une adresse IP interne routable peuvent nécessiter des changements au niveau du routage si elles ne peuvent pas être déplacées ensemble ou s'il n'est pas souhaitable de le faire. Par exemple, si le fait d'impliquer un trop grand nombre d'applications dans un seul basculement représente un risque trop important. 
-- Les administrateurs VMware, les administrateurs de réseau (y compris les clients/fournisseurs de WAN) et les propriétaires d'applications doivent être impliqués. Même si vous ne prévoyez pas que les changements aient un impact sur un système ou un équipement de réseau particulier. 
+- Les applications se trouvant derrière un équilibreur de charge utilisant une adresse IP interne routable peuvent nécessiter des changements au niveau du routage si elles ne peuvent pas être déplacées ensemble ou s'il n'est pas souhaitable de le faire. Par exemple, si le fait d'impliquer un trop grand nombre d'applications dans un seul basculement représente un risque trop important.
+- Les administrateurs VMware, les administrateurs de réseau (y compris les clients/fournisseurs de WAN) et les propriétaires d'applications doivent être impliqués. Même si vous ne prévoyez pas que les changements aient un impact sur un système ou un équipement de réseau particulier.
 
 ## Liens connexes
 {: #vcshcx-stretching-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

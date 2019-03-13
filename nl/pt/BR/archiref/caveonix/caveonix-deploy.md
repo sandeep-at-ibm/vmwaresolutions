@@ -21,10 +21,10 @@ Ao selecionar a opção {{site.data.keyword.vmwaresolutions_full}} RiskForesight
 
 A instalação do RiskForesight consiste nas etapas de alto nível a seguir:
 
-1. [Planejamento inicial e pré-requisitos](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step1.html) - Entender e selecionar uma opção de implementação, configurar o DNS para fornecer a resolução do FQDN/IP para os componentes do aplicativo.
-2. [Implementação da máquina virtual](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step2.html) - Implementar as MVs por meio de um modelo OVF. A MV instalou nela todos os componentes do aplicativo.
-3. [Configuração do aplicativo](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step3.html) - Executar o script de configuração do Caveonix que configura o componente de aplicativo em cada uma das MVs.
-4. [Configuração do aplicativo](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-step4.html) - Configurar o Provedor de serviços e um Locatário ou uma Organização para que o aplicativo se torne acessível para os usuários.
+1. [Planejamento inicial e pré-requisitos](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step1) - Entender e selecionar uma opção de implementação, configurar o DNS para fornecer a resolução do FQDN/IP para os componentes do aplicativo.
+2. [Implementação da máquina virtual](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step2) - Implementar as MVs por meio de um modelo OVF. A MV instalou nela todos os componentes do aplicativo.
+3. [Configuração do aplicativo](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step3) - Executar o script de configuração do Caveonix que configura o componente de aplicativo em cada uma das MVs.
+4. [Configuração do aplicativo](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step4) - Configurar o Provedor de serviços e um Locatário ou uma Organização para que o aplicativo se torne acessível para os usuários.
 
 A instalação automatizada provisiona uma MV e configura todos os componentes do aplicativo nessa MV.
 {:note}
@@ -36,10 +36,10 @@ O dimensionamento da implementação é calculado usando os volumes a seguir.
 
 Tabela 1. Volumes
 
-|Tipo de dados |Volume |
+|Tipo de dados	|Volume |
 |---|---|
 |Varreduras por dia	|1 |
-|Dados de varredura (MB) |20 |
+|Dados de varredura (MB)	|20 |
 |Dados de Log (MB)	|500 |
 |Dados de Fluxo (MB)	|200 |
 |Dados do Ativo (MB)	|46 |
@@ -90,7 +90,7 @@ A tabela a seguir fornece um resumo das implementações:
 
 Tabela 4. Resumo
 
-|Modelo de implementação|"tudo em um"	|Parcialmente distribuída	|Totalmente distribuído |
+|Modelo de implementação	|"tudo em um"	|Parcialmente distribuída	|Totalmente distribuído |
 |---|---|---|---|
 |Número de Ativos	|100	|500	|5000 |
 |Dados on-line gerados em 30 dias (TB)	|4	|22	|219 |
@@ -98,10 +98,10 @@ Tabela 4. Resumo
 |Retenção de Dados Off-line (8 Meses) (TB)	|18	|88	|877 |
 |Total de Retenção de armazenamento de dados (1 ano) (TB)	|28	|142	|1425 |
 |MVs de base	|1	|1	|20 |
-|Ajuste de escala de MVs |0	|3	|28 |
+|Ajuste de escala de MVs	|0	|3	|28 |
 |Total de MVs	|1	|4	|48 |
 
 ## Links relacionados
 {: #caveonix-deploy-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

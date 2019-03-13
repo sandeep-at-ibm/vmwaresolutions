@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 ## Contexto do sistema
+{: #vcscar-syscontext}
+
 O diagrama a seguir mostra o contexto de sistema para essa arquitetura de
 referência. Um diagrama de contexto de sistema é um diagrama que define os elementos
 chave de um sistema, o limite do sistema, as entidades que
@@ -39,6 +41,8 @@ seus pré-requisitos de infraestrutura.
 pelo Watson Discovery.
 
 ### Atores
+{: #vcscar-syscontext-actors}
+
 O diagrama de contexto de sistema identifica os agentes a seguir:
 
 * Administrador do Acme - o administrador é responsável pela
@@ -68,5 +72,6 @@ virtual que é gerenciada pelo vCenter Server.
 * NSX Edge - os NSX Edges são dispositivos virtuais que gerenciam o tráfego norte-sul para dentro e para fora da instância do vCenter Server.
 
 ## Links relacionados
+{: #vcscar-syscontext-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Suppression d'instances vCenter Server with Hybridity Bundle dans une configuration multisite
+{: #vc_hybrid_deletinginstance_multi}
 
 Vous devez tenir compte de certaines remarques lorsque vous planifiez la suppression d'instances VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle qui font partie d'une configuration multisite.
 
@@ -30,6 +31,7 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 {:note}
 
 ## Procédure de suppression d'instances vCenter Server with Hybridity Bundle dans une configuration multisite
+{: #vc_hybrid_deletinginstance_multi-procedure}
 
 1. Retirez tous les services de l'instance vCenter Server with Hybridity Bundle secondaire.
 2. Vérifiez qu'aucun objet NSX n'est développé dans l'instance secondaire que vous voulez supprimer.
@@ -39,7 +41,8 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 6. Répétez les étapes 1 à 5 pour toutes les instances vCenter Server with Hybridity Bundle secondaires de votre configuration multisite.
 7. Après avoir supprimé toutes les instances secondaires, vous pouvez également supprimer l'instance principale de la console {{site.data.keyword.vmwaresolutions_short}}.
 
-### Liens connexes
+## Liens connexes
+{: #vc_hybrid_deletinginstance_multi-related}
 
-* [Suppression des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Suppression des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)
+* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)

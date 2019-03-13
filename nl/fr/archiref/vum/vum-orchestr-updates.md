@@ -2,15 +2,16 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-11-07"
+lastupdated: "2019-02-18"
 
 ---
 
-#	Mises à niveau orchestrées
+# Mises à niveau orchestrées
+{: #vum-orchestr-updates}
 
-Vous pouvez utiliser des mises à niveau orchestrées pour mettre à niveau le matériel virtuel et les outils VMware Tools des machines virtuelles dans l'inventaire après la mise à jour des hôtes vSphere ESXi. Une fois les hôtes mis à jour, la ligne de base de mise à niveau de VMware Tools s'exécute en premier, suivie par la ligne de base de mise à niveau du matériel des machines virtuelles. Les mises à niveau orchestrées peuvent être effectuées au niveau d'un cluster, d'un dossier ou d'un centre de données.
+Vous pouvez utiliser des mises à niveau orchestrées pour mettre à niveau le matériel virtuel et les outils VMware Tools des machines virtuelles dans l'inventaire après la mise à jour des hôtes vSphere ESXi. Une fois les hôtes mis à jour, la ligne de base de mise à niveau de VMware Tools s'exécute en premier, suivie par la ligne de base de mise à niveau du matériel des machines virtuelles. Vous pouvez utiliser les mises à niveau orchestrées au niveau d'un cluster, d'un dossier ou d'un centre de données.
 
 VUM vous permet d'effectuer des mises à niveau orchestrées des hôtes, puis des machines virtuelles en utilisant des groupes de lignes de base. Un groupe de lignes de base contenant une ligne de base de mise à niveau d'un seul hôte et plusieurs lignes de base de correctifs ou d'extensions est utilisé. VUM commence par mettre à niveau les hôtes et applique ensuite les lignes de base de correctifs ou d'extensions. Pour effectuer une mise à niveau orchestrée des machines virtuelles, utilisez un groupe de lignes de base de machine virtuelle contenant les lignes de base suivantes :
 * Mise à niveau de matériel de machine virtuelle pour correspondre à l'hôte (VM Hardware Upgrade to Match Host)
@@ -33,6 +34,7 @@ Autrement, vous pouvez définir le nombre limite d'hôtes pouvant être résolus
 La procédure suivante décrit le processus pour exécuter une mise à niveau orchestrée :
 
 ## Etape 1
+{: #vum-orchestr-updates-step1}
 
 1. Utilisez le client vSphere Web Client pour vous connecter au dispositif VCSA.
 2. Sélectionnez **Home** > **Update Manager**, dans l'onglet **Objects**, sélectionnez une **instance Update Manager**.
@@ -44,9 +46,10 @@ La procédure suivante décrit le processus pour exécuter une mise à niveau or
 8. Créez éventuellement une nouvelle ligne de base de correctifs en cliquant sur **Create a new Host Patch Baseline** au bas de la page Patches et exécutez l'assistant de nouvelle ligne de base. Cliquez sur **Next**.
 9. Sélectionnez les lignes de base d'extensions à inclure dans le groupe de lignes de base.
 10. Créez éventuellement une nouvelle ligne de base d'extension en cliquant sur **Create a new Extension Baseline** au bas de la page Extensions et exécutez l'assistant nouvelle ligne de base.
-11. Passez en revue la page Ready to Complete, cliquez sur **Finish** et le groupe de lignes de base d'hôte s'affiche dans le panneau Baseline Groups.
+11. Passez en revue la page **Ready to Complete**, cliquez sur **Finish** et le groupe de lignes de base d'hôte s'affiche dans le panneau Baseline Groups.
 
 ## Etape 2
+{: #vum-orchestr-updates-step2}
 
 1. Créez un groupe de lignes de base de machines virtuelles, contenant la ligne de base VMware Tools Upgrade to Match Host et la ligne de base VM Hardware Upgrade to Match Host, dans la vue d'administration VUM.
 2. Rattachez le groupe de lignes de base à un objet conteneur vCenter contenant les machines virtuelles que vous souhaitez mettre à niveau.
@@ -58,7 +61,8 @@ La procédure suivante décrit le processus pour exécuter une mise à niveau or
 
 Vous pouvez désormais utiliser ces groupes de lignes de base dans les processus d'analyse, de révision, de transfert et de résolution.
 
-### Liens connexes
+## Liens connexes
+{: #vum-orchestr-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demos)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

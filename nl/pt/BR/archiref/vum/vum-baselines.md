@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-26"
+lastupdated: "2019-02-15"
 
 ---
 
 # Criando linhas de base e anexando a objetos de inventário
+{: #vum-baselines}
 
 As linhas de base têm uma coleção de uma ou mais correções, extensões, service packs, correções de bug ou upgrades e podem ser classificadas como linhas de base de correção, extensão ou upgrade. Os grupos de linhas de base são montados por meio de linhas de base existentes. Os grupos de linhas de base do host podem ter uma única linha de base de upgrade e várias linhas de base de correção e extensão. Os grupos de linhas de base da máquina virtual e do dispositivo virtual podem ter até três linhas de base de upgrade: uma linha de base de upgrade do VMware Tools, uma linha de base de upgrade de hardware de máquina virtual e uma linha de base de upgrade de dispositivo virtual.
 
@@ -32,7 +33,8 @@ Para usar linhas de base e grupos de linhas de base, deve-se anexá-los a objeto
 2. Clique no objeto de cluster que você deseja varrer.
 3. Clique em **Anexar linha de base** e, em seguida, selecione as duas Linhas de base de correção predefinidas, em seguida, clique em **OK**.
 
-### Links relacionados
+## Links relacionados
+{: #vum-baselines-related}
 
 * [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)

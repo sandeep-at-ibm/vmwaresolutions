@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-15"
 
 ---
 
 # Actualización de NSX
+{: #vum-updating-nsx}
 
 La información siguiente es un ejemplo del proceso de actualización para NSX. Consulte la guía de VMware correspondiente al proceso de actualización de la versión de NSX a la que está actualizando.
 
@@ -17,7 +18,7 @@ Si tiene que actualizar NSX y vSphere, VMware recomienda completar primero la ac
 1. **Actualizar ESXi**: después de que finalice la actualización de ESXi, el host sale de la modalidad de mantenimiento; sin embargo, no puede mover las VM conectadas a los conmutadores lógicos al host hasta que se haya completado el siguiente paso.
 2. **Actualizar VIB de NSX**: después de que se hayan actualizado los VIB y de que el host se elimine de la modalidad de mantenimiento, puede mover las VM conectadas a los conmutadores lógicos al host.
 
-NSX se actualiza mediante la actualización de NSX Manager, que se descarga de _my.vmware.com_. Por lo tanto, necesita una cuenta en la descarga de la actualización. Si consume licencias de suscripción de {{site.data.keyword.cloud}} con la instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}}, no podrá descargar las actualizaciones con la cuenta de **my.vmware.com**. Por lo tanto, debe [ponerse en contacto con el soporte de IBM](../../vmonic/trbl_support.html).
+NSX se actualiza mediante la actualización de NSX Manager, que se descarga de _my.vmware.com_. Por lo tanto, necesita una cuenta en la descarga de la actualización. Si consume licencias de suscripción de {{site.data.keyword.cloud}} con la instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}}, no podrá descargar las actualizaciones con la cuenta de **my.vmware.com**. Por lo tanto, debe [ponerse en contacto con el soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 Antes de empezar la actualización, consulte las notas de NSX para ver los problemas de actualización y las soluciones temporales. Mediante las notas del release, verifique que vCenter cumple con los nuevos requisitos del sistema para NSX.
 
@@ -50,7 +51,7 @@ El flujo de trabajo es el siguiente:
   - Cuando se complete la carga, se le redirigirá a la página de inicio de sesión de NSX Manager. Inicie la sesión de nuevo y verifique que la versión de software actual que se muestra es correcta.
 7. **Actualizar el clúster de controlador NSX**:
   - Utilice el cliente web de vSphere e inicie sesión en VCSA.
-  - Vaya a **Inicio** > **Redes y seguridad** > **Instalación**, seleccione el **separador Gestión ** y pulse **Actualizar disponible** en la columna Estado de clúster del controlador.
+  - Vaya a **Inicio** > **Redes y seguridad** > **Instalación**, seleccione el **separador Gestión** y pulse **Actualizar disponible** en la columna Estado de clúster del controlador.
   - Los controladores del entorno se actualizan y se rearrancan uno por uno. Después de iniciar la actualización, el sistema descarga el archivo de actualización, actualiza los controladores, los vuelve a iniciar y actualiza su estado de actualización.
 8. **Actualizar clústeres de host NSX**:
   - Después de actualizar los controladores NSX Manager y NSX, los clústeres de host se actualizan con los VIB de NSX en los hosts ESXi de vSphere.
@@ -61,7 +62,8 @@ El flujo de trabajo es el siguiente:
   - En el cliente web de vSphere, seleccione **Redes y seguridad** > **NSX Edges**. Para cada instancia de NSX Edge, seleccione **Versión de actualización** en el menú **Acciones**.
   - Después de que el NSX Edge se actualice correctamente, el estado está Desplegado y la columna Versión muestra la nueva versión de NSX. Si un Edge no se actualiza y no vuelve a la versión antigua, pulse el icono **Redesplegar Edge NSX Edge** y, a continuación, vuelva a intentar la actualización.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vum-type-updates-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

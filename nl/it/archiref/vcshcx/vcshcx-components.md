@@ -62,4 +62,4 @@ sia sul lato client che su quello cloud come se stesse eseguendo un vMotion loca
 {: #vcshcx-components-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html) 
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro) 

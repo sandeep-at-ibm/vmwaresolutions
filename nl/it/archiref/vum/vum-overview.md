@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-19"
+lastupdated: "2019-02-18"
 
 ---
 
 # Panoramica di VMware Update Manager
+{: #vum-overview}
 
 VMware Update Manager (VUM) utilizza un processo a più fasi per aggiornare gli oggetti vSphere e applicare patch o estensioni. Questo processo consente una procedura di aggiornamento uniforme con un tempo di inattività minimo del sistema. Prima di esaminare questo processo, dobbiamo comprendere i seguenti termini:
 * **Oggetto di inventario** - Un oggetto all'interno di vCenter come, ad esempio, la macchina virtuale, i dispositivi virtuali o l'host vSphere ESXi.
@@ -44,7 +45,9 @@ L'interfaccia del client VUM fornisce due viste principali:
 *	Vista di amministrazione (Administration)
 *	Vista di compatibilità (Compliance)
 
-##	Vista di amministrazione (Administration)
+## Vista di amministrazione (Administration)
+{: #vum-overview-admin-view}
+
 Per accedere alla vista di amministrazione, passa a **Home** > **Update Manager** e seleziona l'indirizzo IP dell'istanza Update Manager. Nella vista di amministrazione, puoi effettuare le seguenti attività:
 *	Configurare le impostazioni di Update Manager
 *	Creare e gestire baseline e gruppi di baseline
@@ -53,7 +56,9 @@ Per accedere alla vista di amministrazione, passa a **Home** > **Update Manager*
 *	Esaminare e controllare le notifiche
 *	Importare immagini ESXi
 
-##	Vista di compatibilità (Compliance)
+## Vista di compatibilità (Compliance)
+{: #vum-overview-compliance-view}
+
 Per accedere alla vista di conformità di un oggetto di inventario selezionato, passa a **Hosts and Clusters** o **VMs and Templates** e fai clic sulla **scheda Update Manager**. Nella vista di conformità di Update Manager, puoi effettuare le seguenti attività:
 *	Visualizzare la conformità ed eseguire la scansione dei risultati per ogni oggetto di inventario selezionato
 *	Collegare e scollegare baseline e gruppi di baseline da un oggetto di inventario selezionato
@@ -61,7 +66,8 @@ Per accedere alla vista di conformità di un oggetto di inventario selezionato, 
 *	Preparare patch o estensioni negli host
 *	Correggere un oggetto di inventario selezionato
 
-### Link correlati
+## Link correlati
+{: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)

@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Visão geral da arquitetura
+{: #vcsicp-arch-overview}
 
 As ofertas do {{site.data.keyword.vmwaresolutions_full}} fornecem automação para implementar componentes de tecnologia do VMware em {{site.data.keyword.CloudDataCents_notm}} em todo o mundo.
 A arquitetura consiste em uma única região de nuvem e suporta a capacidade de ampliação para mais regiões de nuvem localizadas em outra geografia ou em outro pod do {{site.data.keyword.cloud_notm}} dentro do mesmo data center.
@@ -22,6 +23,7 @@ O IBM Multi-Cluster Manager (MCM) fornece visibilidade do usuário, gerenciament
 Use o Cloud Automation Manager Service Composer para exibir os serviços de nuvem híbrida no catálogo do {{site.data.keyword.cloud_notm}} Private.
 
 ## Plataforma de gerenciamento de nuvem do IBM Cloud
+{: #vcsicp-arch-overview-ibm-cloud-side-platform}
 
 O diagrama a seguir é um exemplo de uma implementação do {{site.data.keyword.icpfull_notm}} e do CAM com a infraestrutura do {{site.data.keyword.cloud_notm}}, com conexões com o vCenter no local e o {{site.data.keyword.containerlong_notm}} implementado no {{site.data.keyword.cloud_notm}}. Os usuários podem implementar máquinas virtuais (MVs) no local e MVs em uma instância do vCenter Server e contêineres para o cluster do {{site.data.keyword.icpfull_notm}} e do {{site.data.keyword.containerlong_notm}}.
 
@@ -33,9 +35,10 @@ No diagrama, o CAM cria conexões em nuvem logicamente para os vCenters, os prov
 
 É possível implementar o {{site.data.keyword.icpfull_notm}} com os componentes NSX-V ou NSX-T. O {{site.data.keyword.icpfull_notm}} com NSX-V permite que as MVs do {{site.data.keyword.icpfull_notm}} sejam executadas na rede VXLAN e usem a rede interna Calico do Kubernetes.
 
-O {{site.data.keyword.icpfull_notm}} com NSX-T, que permite que os usuários controlem e configurem a rede, a sub-rede, as políticas da IU central (Gerenciador NSX-T). Consulte o [Guia de rede do vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html) para ver as diferenças entre NSX-V e NSX-T.
+O {{site.data.keyword.icpfull_notm}} com NSX-T, que permite que os usuários controlem e configurem a rede, a sub-rede, as políticas da IU central (Gerenciador NSX-T). Consulte o [Guia de rede do vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) para ver as diferenças entre NSX-V e NSX-T.
 
-## Plataforma de gerenciamento de nuvem na pré-mise
+## Plataforma de gerenciamento de nuvem no local
+{: #vcsicp-arch-overview-on-premises-platform}
 
 O diagrama a seguir em um exemplo de uma implementação do {{site.data.keyword.icpfull_notm}} e do CAM na infraestrutura no local, com conexões com o vCenter e o {{site.data.keyword.containerlong_notm}} implementado no {{site.data.keyword.cloud_notm}}. Os usuários podem implementar MVs e contêineres no local, MVs em instâncias do vCenter Server e contêineres para o cluster do {{site.data.keyword.containerlong_notm}}.
 
@@ -45,6 +48,7 @@ A VPN do strongSwan é usada para estabelecer conectividade com os contêineres 
 
 No diagrama, o CAM cria conexões em nuvem logicamente para os vCenters, os provedores em nuvem, o {{site.data.keyword.icpfull_notm}} e os ambientes do {{site.data.keyword.containerlong_notm}}. Os clusters do {{site.data.keyword.icpfull_notm}} devem ser implementados em cada ambiente de nuvem do data center, com o MCM fornecendo o mecanismo para conectar os clusters do {{site.data.keyword.icpfull_notm}} a uma única visualização de gerenciamento.
 
-### Links relacionados
+## Links relacionados
+{: #vcsicp-arch-overview-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

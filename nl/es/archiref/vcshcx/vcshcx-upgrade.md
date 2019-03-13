@@ -16,4 +16,4 @@ La actualización de HCX es un proceso sencillo que utiliza la interfaz de usuar
 ## Enlaces relacionados
 {: #vcshcx-upgrade-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Visión general de vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

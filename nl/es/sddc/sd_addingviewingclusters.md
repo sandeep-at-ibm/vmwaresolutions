@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-10"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-10"
 {:important: .important}
 
 # Adición, visualización y supresión de clústeres para instancias de Cloud Foundation
+{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
 
 Los servidores ESXi que ha configurado al solicitar una instancia se agrupan bajo un clúster predeterminado. El nombre del clúster predeterminado es:
 * Para las instancias desplegadas en V2.1 o releases posteriores: **MGMT-Cluster-`<subdomain_label>`**
@@ -21,19 +22,23 @@ Los servidores ESXi que ha configurado al solicitar una instancia se agrupan baj
 Puede añadir sus propios clústeres a las instancias de VMware Cloud Foundation para ampliar la capacidad de cálculo y de almacenamiento. Dentro de un clúster, puede gestionar los servidores ESXi para mejorar la asignación de recursos y la alta disponibilidad. Cuando ya no sea necesario, puede suprimir los clústeres añadidos de las instancias.
 
 ## Disponibilidad
+{: #sd_addingviewingclusters-availability}
 
 * La característica de adición de clúster solo está disponible para las instancias que se han desplegado en la V2.0 y posteriores releases o que se han actualizado a estos.
 * La característica de supresión de clúster solo está disponible para las instancias que se han desplegado en la V2.3 y posteriores releases o que se han actualizado a estos.  
 
 ## Adición de clústeres a instancias de Cloud Foundation
+{: #sd_addingviewingclusters-adding}
 
 Puede añadir hasta cinco clústeres a una instancia de Cloud Foundation.
 
 ### Valores del sistema
+{: #sd_addingviewingclusters-adding-sys-settings}
 
 Cuando añada un clúster a una instancia de Cloud Foundation, debe especificar los valores siguientes.
 
 #### Nombre de clúster
+{: #sd_addingviewingclusters-adding-cluster-name}
 
 El nombre del clúster debe cumplir los siguientes requisitos:
 * Solo se permiten caracteres alfanuméricos y el guión (-).
@@ -42,6 +47,7 @@ El nombre del clúster debe cumplir los siguientes requisitos:
 * El nombre del clúster debe ser exclusivo dentro de la instancia de Cloud Foundation.
 
 #### Ubicación del centro de datos
+{: #sd_addingviewingclusters-adding-dc-location}
 
 La ubicación del {{site.data.keyword.CloudDataCent}} del clúster está definido en {{site.data.keyword.CloudDataCent_notm}} en la instancia de Cloud Foundation de forma predeterminada. Puede desplegar el clúster en un {{site.data.keyword.CloudDataCent_notm}} distinto del de la instancia desplegada, pero debe asegurarse de que la latencia de red entre los dos {{site.data.keyword.CloudDataCents_notm}} sea inferior a 150 ms. Para comprobar la latencia de red, puede utilizar una herramienta como [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
@@ -50,10 +56,12 @@ Los centros de datos de los que dispone dependen de la configuración del servid
 Si despliega el clúster en un centro de datos o pod diferente, se solicitan otras tres VLAN para que se utilicen con el {{site.data.keyword.baremetal_short}} solicitado.
 
 ### Valores de Servidor nativo
+{: #sd_addingviewingclusters-adding-bare-metal-settings}
 
 Puede elegir **Skylake** o **Broadwell**.
 
 #### Skylake
+{: #sd_addingviewingclusters-adding-skylake}
 
 Para el valor **Skylake**, dispone de varias opciones para **Modelo de CPU** y **RAM**. Las opciones disponibles pueden variar dependiendo de la versión en que se desplegó inicialmente la instancia.
 
@@ -66,6 +74,7 @@ Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} Skylake
 | Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### Broadwell
+{: #sd_addingviewingclusters-adding-broadwell}
 
 Para el valor **Broadwell**, dispone de varias opciones para **Modelo de CPU** y **RAM**. Las opciones disponibles pueden variar dependiendo de la versión en que se desplegó inicialmente la instancia.
 
@@ -80,6 +89,7 @@ Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Valores de almacenamiento vSAN
+{: #sd_addingviewingclusters-adding-vsan-storage-settings}
 
 Para la configuración de servidor nativo **Skylake** y **Broadwell**, puede
 personalizar el almacenamiento vSAN especificando los valores siguientes:
@@ -93,12 +103,14 @@ personalizar el almacenamiento vSAN especificando los valores siguientes:
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
 
 ### Valores de licencia
+{: #sd_addingviewingclusters-adding-licensing-settings}
 
 Puede especificar las opciones de licencia para los componentes de VMware en el clúster, incluidos VMware vSphere y VMware vSAN:
 * Para los usuarios de IBM Business Partners, se incluyen y se adquieren en su nombre la licencia de vSphere (edición Enterprise Plus) y la licencia de vSAN. Sin embargo, debe especificar la edición para la licencia de vSAN.
 * Para usuarios que no son IBM Business Partners, puede utilizar las licencias de VMware que proporciona IBM para los componentes seleccionando **Incluir con la compra** o puede traer su propia licencia (BYOL) para los componentes seleccionando **Proporcionaré** e indicando sus propias claves de licencia.
 
 ## Procedimiento para añadir clústeres a instancias de Cloud Foundation
+{: #sd_addingviewingclusters-adding-procedure}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia a la que desea añadir clústeres.
@@ -125,6 +137,7 @@ Puede especificar las opciones de licencia para los componentes de VMware en el 
    4. Pulse **Suministro**.
 
 ### Resultados después de añadir clústeres a instancias de Cloud Foundation
+{: #sd_addingviewingclusters-adding-results}
 
 1. El despliegue del clúster se inicia automáticamente y el estado del clúster pasa a ser **Inicializando**. Puede comprobar el estado del despliegue consultando el historial de despliegue en la página de resumen de la instancia.
 2. Cuando el clúster esté listo para ser utilizado, su estado pasará a ser **Listo para su uso**. El clúster recién añadido está habilitado con alta disponibilidad (HA) de vSphere y con el planificador de recursos distribuidos (DRS) de vSphere.
@@ -133,6 +146,7 @@ No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es 
 {:important}
 
 ## Procedimiento para visualizar clústeres en instancias de Cloud Foundation
+{: #sd_addingviewingclusters-viewing-procedure}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse una instancia para ver los clústeres que contiene.
@@ -188,10 +202,12 @@ No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es 
        * **Capacidad libre (CPU)**: La capacidad que está disponible en la licencia.
 
 ## Supresión de clústeres de instancias de Cloud Foundation
+{: #sd_addingviewingclusters-deleting}
 
 Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario.
 
 ### Antes de suprimir
+{: #sd_addingviewingclusters-deleting-prereq}
 
 * Utilice este procedimiento para suprimir clústeres de instancias que se han desplegado en V2.3 o releases posteriores.
 * Para los clústeres desplegados en V2.2 o instancias anteriores, debe actualizar la instancia a V2.3 para poder suprimir los clústeres que ha añadido a la instancia.
@@ -201,6 +217,7 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 * El clúster predeterminado no se puede suprimir.
 
 ## Procedimiento para suprimir clústeres de instancias de Cloud Foundation
+{: #sd_addingviewingclusters-deleting-procedure}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia de la que desea suprimir clústeres.
@@ -211,7 +228,8 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 3. Pulse **Infraestructura** en el panel de navegación izquierdo. En la tabla **CLÚSTERES**, localice el clúster que desea suprimir y pulse el icono **Suprimir**.
 4. Confirme que ha completado la migración de las VM a otros clústeres, si corresponde, y que desea suprimir el clúster.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #sd_addingviewingclusters-related}
 
-* [Visualización de instancias de Cloud Foundation](sd_viewinginstances.html)
-* [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](sd_addingremovingservers.html)
+* [Visualización de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)

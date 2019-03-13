@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,18 +13,21 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Trasformazione di Stock Trader da WebSphere Application Server in Stock Trader nei contenitori
+{: #vcscontent-stocktrmod}
 
 Il passo successivo nel percorso di modernizzazione di Stock Trader consiste nel trasformare il carico di lavoro dall'esecuzione nelle macchine virtuali (VM) all'esecuzione nei contenitori.
 
 Per continuare, Todd e Jane eseguono Transformation Advisor per analizzare il carico di lavoro di Stock Trader, identificare qualsiasi complessità di migrazione e consigliare delle modifiche. Quando sono pronti, utilizzano Transformation Advisor per distribuire Stock Trader nei contenitori Liberty eseguiti in {{site.data.keyword.icpfull_notm}}.
 
 ## Prepara IBM Cloud Private
+{: #vcscontent-stocktrmod-prep-icp}
 
 Todd deve innanzitutto installare {{site.data.keyword.icpfull_notm}}. Dal momento che Todd ha il suo proprio ambiente VMware on {{site.data.keyword.cloud_notm}}, decide di utilizzare l'offerta {{site.data.keyword.cloud_notm}} Private Hosted che gli fornisce un'istanza {{site.data.keyword.icpfull_notm}} completa che viene eseguita sulle VM VMware in {{site.data.keyword.cloud_notm}}.
 
 Il dashboard predefinito fornisce un'interfaccia utente completa per gestire il cluster, la sicurezza, l'archiviazione e la distribuzione di Kubernetes dal catalogo.
 
 ### Prepara l'archiviazione
+{: #vcscontent-stocktrmod-prep-storage}
 
 {{site.data.keyword.cloud_notm}} Private Hosted è configurato per impostazione predefinita con GlusterFS e fornisce l'archiviazione file sulle VM come nodi GlusterFS dedicati. Il valore di GlusterFS è che abilita il provisioning dinamico. Se Todd lo desidera, può configurare VM aggiuntive come server NFS.
 
@@ -68,6 +71,7 @@ Ogni volta che è necessario un nuovo volume NFS, Todd esegue il seguente comand
 `chmod 777 <foldername>`
 
 ### Prepara la sicurezza delle immagini
+{: #vcscontent-stocktrmod-prep-img-sec}
 
 In {{site.data.keyword.icpfull_notm}} V3.1, la sicurezza viene migliorata richiedendo di applicare una politica di immagine prima che una qualsiasi immagine venga trasferita in un'istanza {{site.data.keyword.icpfull_notm}}. Il miglioramento richiede l'aggiunta di una politica di immagine per il luogo in cui risiedono le immagini IBM, *dockerhub/ibmcom* e nell'archivio docker.
 
@@ -79,12 +83,14 @@ Scopri di più in [IBM Knowledge
 Center](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/manage_cluster/enable_pod_security.html).
 
 ## Distribuisci Transformation Advisor e Microclimate
+{: #vcscontent-stocktrmod-deploy-tam}
 
 Una volta che Todd ha eseguito {{site.data.keyword.icpfull_notm}}, installa Transformation Advisor insieme a Microclimate. Todd apre il [catalogo](https://www.ibm.com/cloud/private/developer) e visualizza tutti i contenuti disponibili.
 
 Todd cerca Transformation Advisor e Microclimate e li installa utilizzando le istruzioni del file readme fornite quando fa clic sul grafico Helm.
 
 ### Esegui Transformation Advisor
+{: #vcscontent-stocktrmod-run-trans-advisor}
 
 Per eseguire Transformation Advisor, Jane ha aggiunto il raccoglitore di dati nella VM in cui è in esecuzione Stock Trader in WebSphere e apre l'interfaccia utente di [Transformation
 Advisor](https://developer.ibm.com/recipes/tutorials/using-the-transformation-advisor-on-ibm-cloud-private/) per visualizzare i risultati.
@@ -98,7 +104,8 @@ Alla fine, le opzioni di layout di Stock Trader risultanti sono:
 Todd non ha modificato l'origine dati durante la fase di trasformazione. Transformation Advisor prende la configurazione dell'origine dati di WebSphere Application Server Network Deployment e la aggiunge al file server.xml del contenitore Liberty.
 {:important}
 
-### Link correlati
+## Link correlati
+{: #vcscontent-stocktrmod-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

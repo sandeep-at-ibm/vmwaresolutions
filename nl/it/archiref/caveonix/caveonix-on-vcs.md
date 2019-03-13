@@ -47,10 +47,10 @@ I principali vantaggi forniti da Caveonix RiskForesight on IC4VS includono:
 -	la creazione e l'implementazione delle politiche di sicurezza e conformità basate sul motore di analisi predittiva che utilizza i flussi di traffico di rete in tutte le applicazioni.
 -	La rapida identificazione delle azioni necessarie per eliminare i rischi dovuti a minacce informatiche, vulnerabilità e configurazioni non conformi.
 -	La gestione proattiva dei rischi complessivi all'interno del cloud ibrido prima che se ne possa fare uso.
--	Il mantenimento di una comprensione “full-stack” delle vulnerabilità dei carichi di lavoro e dei problemi di configurazione a livello di infrastruttura, piattaforma e applicazioni nel contesto delle minacce e dei requisiti di conformità. 
+-	Il mantenimento di una comprensione “full-stack” delle vulnerabilità dei carichi di lavoro e dei problemi di configurazione a livello di infrastruttura, piattaforma e applicazioni nel contesto delle minacce e dei requisiti di conformità.
 -	L'abilitazione dell'azienda a implementare l'RMF (Risk Management Framework) proattivo NIST (National Institute of Standards and Technology).
 
 ## Link correlati
 {: #caveonix-on-vcs-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

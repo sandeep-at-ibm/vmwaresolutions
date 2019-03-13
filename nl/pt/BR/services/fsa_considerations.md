@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Visão geral do FortiGate Security Appliance on IBM Cloud
+{: #fsa_considerations}
 
 O serviço FortiGate Security Appliance on {{site.data.keyword.cloud}} implementa um par de dispositivos FortiGate Security Appliance (FSA) série 300 em um modo altamente disponível para fornecer serviços de firewall, roteamento, NAT e VPN para proteger todos os servidores e máquinas virtuais na VLAN pública de suas instâncias.
 
@@ -22,24 +23,29 @@ Este serviço está disponível somente para instâncias implementadas na V1.8 o
 {:note}
 
 ## Especificações técnicas para o FortiGate Security Appliance on IBM Cloud
+{: #technical-specifications-for-fortigate-security-appliance-on-ibm-cloud}
 
 Os componentes a seguir são pedidos e incluídos no serviço FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}:
 
 ### Hardware
+{: #fsa_considerations-hardware}
 
 O dispositivo de segurança FortiGate série 300.
 
 ### Alta disponibilidade
+{: #fsa_considerations-ha}
 
 Dois dispositivos são implementados na configuração ativa/passiva.
 
 ### Rede
+{: #fsa_considerations-networking}
 
 * Dual 1 GbE ligado nas redes de envio de dados e de recebimento de dados
 * Uma nova VLAN pública do {{site.data.keyword.cloud_notm}} de envio de dados
 * Uma VLAN pública do {{site.data.keyword.cloud_notm}} de recebimento de dados existente
 
 ## Considerações ao instalar o FortiGate Security Appliance on IBM Cloud
+{: #fsa_considerations-install}
 
 Revise as considerações a seguir antes de instalar o serviço FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}:
 * Assegure-se de que a conta do {{site.data.keyword.cloud_notm}} que você está usando tenha a permissão **Hardware Firewall**. Essa permissão é necessária para editar ou visualizar logs e configurações de firewall para o serviço FortiGate Security Appliance no {{site.data.keyword.cloud_notm}} de sua instância.
@@ -51,17 +57,19 @@ Revise as considerações a seguir antes de instalar o serviço FortiGate Securi
 * Se você pedir clusters adicionais, as VLANs públicas para esses clusters recém-incluídos não terão o par de HA de dispositivos de segurança.
 
 ## Considerações ao remover o FortiGate Security Appliance on IBM Cloud
+{: #fsa_considerations-remove}
 
 Revise as considerações a seguir antes de remover o serviço FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}:
 * A remoção do serviço FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} remove a VLAN pública que foi incluída.
 * Durante a remoção do serviço, sua instância pode não ser capaz de acessar a Internet temporariamente.
 * Todas as regras do FortiGate para permitir, inspecionar, bloquear e rotear o tráfego do NAT são removidas junto com o serviço Fortinet. Se você tiver quaisquer regras NAT, deverá reconfigurá-las.
 
-### Links relacionados
+## Links relacionados
+{: #fsa_considerations-related}
 
-* [Solicitando FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_ordering.html)
-* [Gerenciando o FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfsa.html)
-* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Solicitando FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_ordering)
+* [Gerenciando o FortiGate Security Appliance no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Website do Fortinet](https://www.fortinet.com/){:new_window}
 * [Biblioteca de documentos do Fortinet](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

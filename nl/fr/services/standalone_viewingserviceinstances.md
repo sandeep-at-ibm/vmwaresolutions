@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Affichage des instances VMware HCX on IBM Cloud locales
+{: #standalone_viewingserviceinstances}
 
 Cette procédure permet d'afficher les instances HCX on {{site.data.keyword.cloud}} locales que vous avez commandées, ainsi que des informations détaillées les concernant.
 
 ## Procédure d'affichage des instances VMware HCX on IBM Cloud locales
+{: #standalone_viewingserviceinstances-procedure}
 
 Cliquez sur **Instances déployées** dans le panneau de navigation de gauche, puis faites défiler l'écran vers le tableau **Instances HCX locales** pour afficher des informations relatives aux instances que vous avez commandées :
 
@@ -36,9 +38,10 @@ Tableau 2. Description des statuts des instances HCX on {{site.data.keyword.clou
 | Installé | L'instance est prête pour utilisation. |
 | Retrait en cours | L'instance est en cours de suppression. |
 
-### Liens connexes
+## Liens connexes
+{: #standalone_viewingserviceinstances-related}
 
-* [Commande d'instances HCX on {{site.data.keyword.cloud_notm}} locales](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
-* [Suppression d'instances HCX on {{site.data.keyword.cloud_notm}} locales](/docs/services/vmwaresolutions/services/standalone_deletingserviceinstances.html)
-* [Glossaire des termes HCX](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [Commande d'instances HCX on {{site.data.keyword.cloud_notm}} locales](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
+* [Suppression d'instances HCX on {{site.data.keyword.cloud_notm}} locales](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances)
+* [Glossaire des termes HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Documentation VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

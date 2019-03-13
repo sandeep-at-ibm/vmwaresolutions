@@ -21,7 +21,7 @@ Les modèles de déploiement sont basés à la fois sur les exigences de disponi
 Caveonix RiskForesight offre trois modèles de déploiement :
 
 -	Déploiement “tout en un” – Déploiement et configuration automatisé d'une machine virtuelle qui héberge tous les composants d'application :
-  - Tous les composants d'application sont installés sur une machine virtuelle. 
+  - Tous les composants d'application sont installés sur une machine virtuelle.
   - Des collecteurs distants peuvent être installés sur des machines virtuelles séparées.
   - Petits déploiements - jusqu'à 100 actifs avec une 7 à 30 jours d'indexation.
 -	Déploiement partiellement distribué – Une fois que le déploiement automatisé est terminé, vous pouvez effectuer une mise à l'échelle manuelle en augmentant la mémoire RAM et le disque dans la machine virtuelle initiale et en ajoutant trois machines virtuelles d'extension.
@@ -41,9 +41,9 @@ Caveonix RiskForesight offre trois modèles de déploiement :
   -	Le magasin de données d'index est déployé avec des noeuds de données et des noeuds maître.
   -	Le nombre de nœuds de données utilisés pour la mise à l'échelle augmente à mesure que le nombre d'actifs augmente.
 
-Tous les composants doivent avoir un nom de domaine complet FQDN et un DNS enregistré avant tout déploiement de machine virtuelle. Cette étape est réalisée par l'automatisation IC4VS lors du déploiement "tout en un" initial, mais elle doit être exécutée par le client lors de la mise à l'échelle du déploiement. 
+Tous les composants doivent avoir un nom de domaine complet FQDN et un DNS enregistré avant tout déploiement de machine virtuelle. Cette étape est réalisée par l'automatisation IC4VS lors du déploiement "tout en un" initial, mais elle doit être exécutée par le client lors de la mise à l'échelle du déploiement.
 
 ## Liens connexes
 {: #caveonix-step1-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

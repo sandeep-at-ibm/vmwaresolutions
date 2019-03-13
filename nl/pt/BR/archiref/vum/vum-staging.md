@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Temporariedade e remediação
+{: #vum-staging}
 
 As correções e extensões podem ser opcionalmente montadas antes da correção para assegurar que sejam transferidas por download do VUM para o host do vSphere ESXi sem aplicar as correções ou extensões imediatamente. Durante a correção, o VUM aplica as correções, as extensões e os upgrades aos objetos de inventário. Montar as correções e extensões acelera o processo de correção porque as correções e extensões já estão disponíveis localmente nos hosts.
 
@@ -37,12 +38,14 @@ Correção é o processo no qual o VUM aplica correções, extensões e upgrades
 Se a atualização requerer, os hosts serão colocados no modo de manutenção antes da correção. O VCSA migra as MVs para outros hosts da instância do VMware vCenter Server on {{site.data.keyword.cloud}} antes de o host ser colocado no modo de manutenção.
 
 ## Para hosts em um cluster vSAN
+{: #vum-staging-hosts-vsan}
+
 Esteja ciente do comportamento a seguir para hosts que fazem parte de um cluster vSAN:
 * O processo de correção do host pode levar uma quantia extensiva de tempo para ser concluída.
 * Por design, somente um host de um cluster VSAN pode estar em um modo de manutenção a qualquer momento.
 * O VUM corrige hosts que fazem parte de um cluster VSAN sequencialmente, mesmo se você configura a opção para corrigir os hosts em paralelo.
 * Qualquer MV no host que use uma política de armazenamento da MV com uma configuração de 0 para **Número de falhas a serem toleradas**. Nesse caso, o host pode ter atrasos incomuns quando ele entra no modo de manutenção. O atraso ocorre porque o vSAN deve migrar os dados da MV de um disco para outro no cluster de armazenamento de dados do vSAN e isso pode levar muitas horas. É possível trabalhar em torno disso configurando **Número de falhas a serem toleradas** como 1 para a política de armazenamento da MV, que resulta na criação de duas cópias dos arquivos de MV no armazenamento de dados vSAN.
-* Qualquer MV no host que use uma política de armazenamento da MV com uma configuração de 1 para **Número de falhas a serem toleradas**. Nesse caso, a MV se torna não redundante quando o host entra no modo de manutenção. Se isso não for aceitável, veja [Redundância de vSAN da máquina virtual](/docs/services/vmwaresolutions/archiref/vum/vum-vsan-redundancy.html).
+* Qualquer MV no host que use uma política de armazenamento da MV com uma configuração de 1 para **Número de falhas a serem toleradas**. Nesse caso, a MV se torna não redundante quando o host entra no modo de manutenção. Se isso não for aceitável, veja [Redundância de vSAN da máquina virtual](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-vsan-redundancy).
 
 Para corrigir hosts e clusters, siga estas etapas:
 1. Use o vSphere Web Client, selecione **Página inicial** > **Hosts e clusters**.
@@ -73,7 +76,8 @@ Não há nenhum requisito em uma instância do vCenter Server para marcar a caix
 12. Na página Pronto para concluir, é possível, opcionalmente, clicar em **Pré-verificar a correção** para gerar um relatório de opções de correção de cluster e clicar em **OK**. Uma caixa de diálogo Relatório de opções de correção de cluster é aberta. É possível exportar esse relatório ou copiar as entradas para seu próprio registro e clicar e **Avançar**.
 13. Revise a página **Pronto para concluir** e clique em **Concluir**.
 
-### Links relacionados
+## Links relacionados
+{: #vum-staging-related}
 
 * [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)

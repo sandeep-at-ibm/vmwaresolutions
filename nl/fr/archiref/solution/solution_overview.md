@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
-# Présentation de la solution
+# Présentation d'IBM Cloud for VMware Solutions
+{: #solution_overview}
 
 Les offres {{site.data.keyword.vmwaresolutions_full}} vous permettent d'étendre votre centre de données virtuel VMware existant dans {{site.data.keyword.cloud_notm}} ou d'héberger vos applications natives en cloud.
 
@@ -18,12 +19,11 @@ Consultez ces informations pour la conception des offres {{site.data.keyword.vmw
 
 Cette conception sert d'architecture de référence pour les autres composants internes ou spécifiques des fournisseurs qui doivent être ajoutés pour des cas d'utilisation spécifiques.
 
-## Présentation de VMware on IBM Cloud
-
 Figure 1. Présentation de VMware on {{site.data.keyword.cloud_notm}}
 ![Présentation de VMware on {{site.data.keyword.cloud_notm}}](solution_overview.svg "La solution virtualise les ressources de calcul, de réseau et éventuellement de stockage qui seront consommées par les machines virtuelles sur lesquelles vous pouvez exécuter vos applications.")
 
-## Principaux avantages
+## Principaux avantages d'IBM Cloud for VMware Solutions
+{: #solution_overview-benefits}
 
 VMware Cloud Foundation et vCenter Server sur {{site.data.keyword.cloud_notm}} fournissent les blocs de construction fondamentaux, notamment VMware vSphere, vCenter Server, NSX, et des options de stockage partagé, telles que vSAN. Ces composants sont nécessaires pour concevoir une architecture de solution de centre de données VMware souple et définie par le logiciel qui soit la mieux adaptée à vos charges de travail.
 
@@ -38,8 +38,9 @@ Les offres VMware on {{site.data.keyword.cloud_notm}} présentent les avantages 
 * Une **gestion et une gouvernance cohérentes** du cloud hybride déployé grâce à des droits d'accès administrateur complets à la gestion de la virtualisation, ce qui permet de préserver vos outils et vos scripts VMware existants, ainsi que les efforts réalisés en matière de formation.
 * Une **optimisation de l'expertise VMware à l'échelle mondiale** grâce aux services professionnels et gérés d'IBM qui couvrent plus de 30 {{site.data.keyword.CloudDataCents_notm}} dans le monde entier.
 
-### Liens connexes
+## Liens connexes
+{: #solution_overview-related}
 
-* [Présentation de la conception](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [Mise à l'échelle de la capacité](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
-* [Sauvegarde des composants](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [Présentation de la conception](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [Mise à l'échelle de la capacité](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)
+* [Sauvegarde des composants](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

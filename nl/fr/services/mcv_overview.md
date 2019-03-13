@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
-# Présentation de Critical VMware on IBM Cloud
+# Présentation de Mission Critical VMware on IBM Cloud
+{: #mcv_overview}
 
 Mission Critical VMware on {{site.data.keyword.cloud}} fournit une architecture de cloud multi-zone qui permet aux entreprises d'empêcher les temps d'indisponibilité pour les applications en cloud et qui permet d'automatiser les basculements dans une région de cloud.
 
@@ -19,6 +20,7 @@ Cette architecture prend en charge des charges de travail existantes indispensab
 L'architecture couvre divers services d'entreprise, y compris les réseaux, le stockage, la résilience et d'autres outils créés pour la surveillance et le traitement des incidents liés aux applications cloud. De plus, cette architecture peut être intégrée à IBM Services Platform with Watson, créé sur {{site.data.keyword.cloud_notm}}, afin de permettre une plus grande consommation de services. Grâce aux fonctions cognitives de la plateforme, les clients peuvent exploiter des données de manière plus efficace et obtenir de nouvelles connaissances métier permettant la continuité des opérations.
 
 ## Spécifications techniques relatives à Mission Critical VMware on IBM Cloud
+{: #technical-specifications-for-mission-critical-vmware-on-ibm-cloud}
 
 L'architecture Mission Critical VMware on {{site.data.keyword.cloud_notm}} est une architecture de référence de bout en bout qui fournit un basculement automatique pour les charges de travail client. Elle utilise une région {{site.data.keyword.cloud_notm}} multi-zone avec un service géré par IBM qui couvre les composants suivants :
 
@@ -38,6 +40,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} est disponible dans 
 * Asie-Pacifique : tous les centres de données IBM Cloud situés à Sydney et à Tokyo
 
 ### Spécifications d'architecture de l'infrastructure de base :
+{: #mcv_overview-base-specs}
 
 Les spécifications de l'infrastructure de base sont les suivantes :
 * Chaque site possède son propre cluster de gestion et Edge dédié
@@ -48,6 +51,7 @@ Les spécifications de l'infrastructure de base sont les suivantes :
 * La reprise NSX Manager utilise une méthodologie de secours automatique qui synchronise les fichiers de sauvegarde
 
 ### Spécifications de l'architecture des outils et des technologies
+{: #mcv_overview-tooling-specs}
 
 Les spécifications de l'architecture des outils et des technologies sont les suivantes :
 * vRealize Operations, vRealize Log Insight et vRealize Network Insight fournissent des opérations et des fonctions de gestion propres aux produits VMware utilisés, par exemple, NSX, vSAN et vSphere
@@ -56,6 +60,7 @@ Les spécifications de l'architecture des outils et des technologies sont les su
 * Fortigate Security Appliance ou un dispositif similaire est utilisé pour sécuriser les accès Internet et faciliter l'intégration de réseau active-active au réseau sur site
 
 ### Spécifications de l'architecture de cluster vSphere + vSAN étendu
+{: #mcv_overview-stretched-cluster-specs}
 
 Les spécifications de l'architecture de cluster vSphere + vSAN étendu sont les suivantes :
 * Le cluster fournit des fonctions de stockage et de calcul sur deux sites pour assurer une plus grande disponibilité
@@ -65,6 +70,7 @@ Les spécifications de l'architecture de cluster vSphere + vSAN étendu sont les
 * Le chiffrement natif vSAN (pour le chiffrement des données au repos) peut être utilisé conjointement avec cette architecture
 
 ### Spécifications de l'architecture de réseau
+{: #mcv_overview-network-specs}
 
 Les spécifications de l'architecture de réseau sont les suivantes :
 * L'ensemble Edge/DLR/VXLAN est utilisé conjointement au routage basé sur les métriques BGP pour faciliter une conception de site active-active avec basculement automatisé
@@ -73,6 +79,7 @@ Les spécifications de l'architecture de réseau sont les suivantes :
 * Durant une activité vMotion pour VM-A, le trafic sera toujours entrant et sortant via la zone de disponibilité {{site.data.keyword.cloud_notm}} numéro 1
 * Durant une panne de site ou de cluster Edge, le trafic sera acheminé vers le site disponible restant
 
-### Liens connexes
+## Liens connexes
+{: #mcv_overview-related}
 
-* [Demande de Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services/managing_mcv.html)
+* [Demande de Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_mcv)

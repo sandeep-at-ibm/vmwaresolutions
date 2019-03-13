@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Présentation de FortiGate Security Appliance on IBM Cloud
+{: #fsa_considerations}
 
 Le service FortiGate Security Appliance on {{site.data.keyword.cloud}} déploie une paire de dispositifs FortiGate Security Appliance (FSA) série 300 en mode haute disponibilité, qui fournissent des services de pare-feu, de routage, de conversion d'adresses réseau (NAT) et de réseau privé virtuel (VPN) afin de protéger tous les serveurs et machines virtuelles sur le réseau local virtuel (VLAN) de vos instances.
 
@@ -22,24 +23,29 @@ Ce service est disponible uniquement sur les instances déployées en version 1.
 {:note}
 
 ## Spécifications techniques relatives à FortiGate Security Appliance on IBM Cloud
+{: #technical-specifications-for-fortigate-security-appliance-on-ibm-cloud}
 
 Les composants suivants sont commandés et inclus dans le service FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} :
 
 ### Matériel
+{: #fsa_considerations-hardware}
 
 Dispositif FortiGate Security Appliance série 300
 
 ### Haute disponibilité
+{: #fsa_considerations-ha}
 
 Deux dispositifs sont déployés dans une configuration active-passive
 
 ### Utilisation en réseau
+{: #fsa_considerations-networking}
 
 * Liaison Dual 1 GbE sur les réseaux en amont et en aval
 * Un nouveau VLAN public {{site.data.keyword.cloud_notm}} en amont
 * Un VLAN public {{site.data.keyword.cloud_notm}} en aval existant
 
 ## Considérations à prendre en compte lorsque vous installez FortiGate Security Appliance on IBM Cloud
+{: #fsa_considerations-install}
 
 Passez en revue les remarques suivantes avant d'installer le service FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} :
 * Vérifiez que le compte {{site.data.keyword.cloud_notm}} que vous utilisez dispose du droit **Pare-feu matériel**. Ce droit est nécessaire pour éditer ou afficher les paramètres et journaux de pare-feu du service FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} de votre instance.
@@ -51,17 +57,19 @@ Passez en revue les remarques suivantes avant d'installer le service FortiGate S
 * Si vous commandez d'autres clusters, les VLAN publics pour ces clusters nouvellement ajoutés ne disposeront pas de la paire à haute disponibilité de dispositifs Security Appliance.
 
 ## Considérations à prendre en compte lorsque vous retirez FortiGate Security Appliance on IBM Cloud
+{: #fsa_considerations-remove}
 
 Passez en revue les remarques suivantes avant de supprimer le service FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} :
 * La suppression du service FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} supprime le VLAN public qui avait été ajouté.
 * Lors de la suppression du service, il est possible que votre instance ne puisse temporairement pas accéder à Internet.
 * Toutes les règles FortiGate d'autorisation, d'inspection, de blocage et de routage du trafic NAT sont supprimées en même temps que le service Fortinet. Si vous aviez des règles NAT, vous devez les reconfigurer.
 
-### Liens connexes
+## Liens connexes
+{: #fsa_considerations-related}
 
-* [Commande de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/fsa_ordering.html)
-* [Gestion de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfsa.html)
-* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Commande de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_ordering)
+* [Gestion de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Site Web Fortinet](https://www.fortinet.com/){:new_window}
 * [Bibliothèque de documents Fortinet](http://docs.fortinet.com/fortigate/admin-guides){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Ridimensionamento della capacità
+{: #solution_scaling}
 
 Dopo la distribuzione iniziale, puoi ridimensionare la capacità di calcolo dalla console {{site.data.keyword.vmwaresolutions_full}}. La progettazione supporta i seguenti percorsi di ridimensionamento:
 * Aggiunta di nuovi siti gestiti da vCenter Server separati
@@ -20,6 +21,7 @@ Dopo la distribuzione iniziale, puoi ridimensionare la capacità di calcolo dall
 * Aggiunta di nuovi host a un cluster esistente
 
 ## Aggiunta di più siti
+{: #solution_scaling-sites}
 
 {{site.data.keyword.vmwaresolutions_short}} può sfruttare la presenza di data center {{site.data.keyword.cloud_notm}} in tutto il mondo e il backbone di rete integrato per consentire la distribuzione e il funzionamento di vari casi di utilizzo di più aree geografiche in solo una frazione del tempo che servirebbe a costruire da zero un'infrastruttura di questo tipo.
 
@@ -35,6 +37,7 @@ In questa progettazione, la definizione di una distribuzione multisito è compos
 Inoltre, il gestore NSX nei siti secondari può essere configurato come gestore NSX secondario per il gestore NSX sul sito primario.
 
 ## Aggiunta di nuovi cluster
+{: #solution_scaling-clusters}
 
 Per ridimensionare la capacità di calcolo puoi anche creare un nuovo cluster dalla console {{site.data.keyword.vmwaresolutions_short}} e ordinare nuovi host che vengono aggiunti automaticamente al nuovo cluster.
 
@@ -48,11 +51,13 @@ Quando il cluster iniziale viene convertito in un cluster di sola gestione, la m
 {:note}
 
 ## Aggiunta di host ESXi nei cluster esistenti
+{: #solution_scaling-hosts}
 
 Puoi ridimensionare un cluster esistente ordinando gli host dalla console {{site.data.keyword.vmwaresolutions_short}}.  I nuovi host vengono aggiunti automaticamente al cluster. Tieni presente che potresti dover regolare la politica di prenotazione dell'alta disponibilità (HA) per il cluster in base ai tuoi requisiti di prenotazione.
 
-### Link correlati
+## Link correlati
+{: #solution_scaling-related}
 
-* [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [Panoramica della progettazione](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [Backup dei componenti](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [Panoramica della progettazione](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [Backup dei componenti](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

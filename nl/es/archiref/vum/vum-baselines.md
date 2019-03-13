@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-26"
+lastupdated: "2019-02-15"
 
 ---
 
 # Creación de líneas base y conexión a objetos de inventario
+{: #vum-baselines}
 
 Las líneas base tienen una colección de uno o varios parches, extensiones, paquetes de servicio, arreglos de errores o actualizaciones, y se pueden clasificar como líneas base de parches, extensiones o actualización. Los grupos de línea base se ensamblan desde las líneas base existentes. Los grupos de línea base de host pueden tener una sola línea base de actualización y varias líneas base de parche y extensión. Los grupos de línea base de la máquina virtual y del dispositivo virtual pueden tener hasta tres líneas base de actualización: una línea base de actualización de VMware Tools, una línea base de actualización de hardware de máquina virtual y una línea base de actualización de dispositivo virtual.
 
@@ -28,11 +29,12 @@ Estas líneas base predefinidas son las siguientes:
 
 Para utilizar las líneas base y los grupos de línea base, debe adjuntarlos a los objetos de inventario seleccionados, como los objetos de contenedor, las máquinas virtuales, los dispositivos virtuales o los hosts. Aunque puede adjuntar líneas base y grupos de línea base a objetos individuales, hay un método más eficiente que consiste en adjuntarlos a objetos de contenedor, como por ejemplo carpetas, vApps, clústeres o centros de datos. En este paso, utilizaremos las líneas base predefinidas contra los hosts del clúster.
 
-1. Mediante el cliente web de vSphere, vaya a **Inicio ** > **Hosts y clústeres**.
+1. Mediante el cliente web de vSphere, vaya a **Inicio** > **Hosts y clústeres**.
 2. Pulse el objeto de clúster que desee explorar.
 3. Pulse **Adjuntar línea base**, seleccione las dos líneas base de parches predefinidas y, a continuación, pulse **Aceptar**.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vum-baselines-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

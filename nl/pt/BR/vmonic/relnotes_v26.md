@@ -2,13 +2,14 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-10-01"
 
 ---
 
 # Notas sobre a liberação da V2.6
+{: #relnotes_v26}
 
 Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte o [{{site.data.keyword.vmwaresolutions_short}}dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -20,7 +21,7 @@ O {{site.data.keyword.vmwaresolutions_short}} liberou correções do VMware em r
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Para obter mais informações, veja [Tratando as vulnerabilidades Spectre e Meltdown](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
+Para obter mais informações, veja [Tratando as vulnerabilidades Spectre e Meltdown](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre).
 
 ## Alto desempenho com a opção Intel Optane
 
@@ -40,9 +41,9 @@ Alguns serviços complementares requerem NICs públicas e não estarão disponí
 
 Para obter mais informações, consulte a seção _Configurações da interface de rede_ nos tópicos a seguir:
 
-* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#network-interface-settings)
-* [Pedindo instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html#network-interface-settings)
-* [Pedindo novos clusters do vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#network-interface-settings)
+* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#network-interface-settings)
+* [Pedindo instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance#network-interface-settings)
+* [Pedindo novos clusters do vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#network-interface-settings)
 
 ## Excluindo servidores ESXi
 
@@ -50,9 +51,9 @@ Agora será possível excluir qualquer servidor ESXi da instância do vCenter Se
 
 Para obter mais informações sobre os requisitos do servidor ESXi, consulte os tópicos a seguir:
 
-* [Expandindo e contraindo a capacidade para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [Expandindo e contraindo a capacidade para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [Expandindo e contraindo a capacidade para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Expandindo e contraindo a capacidade para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Expandindo e contraindo a capacidade para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [Expandindo e contraindo a capacidade para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 
 ## Atualizações para instâncias do VMware vCenter Server
 
@@ -69,7 +70,7 @@ Esta liberação aplica os upgrades e melhorias a seguir:
 
 Agora é possível remover a licença do Hybridity Bundle de sua instância do vCenter Server. Para isso, será necessário substituir as chaves de licença de aluguel do VMware NSX e do VMware vSAN pelas chaves de Bring Your Own License (BYOL) e abrir um chamado de suporte para cancelar os encargos das licenças de aluguel.
 
-Para obter mais informações, consulte [Removendo o Hybridity Bundle de uma instância do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletingbundle.html).
+Para obter mais informações, consulte [Removendo o Hybridity Bundle de uma instância do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletingbundle).
 
 ### Disponibilidade do vCenter Server with Hybridity Bundle
 
@@ -77,8 +78,8 @@ Os Parceiros de Negócios podem agora pedir uma instância do vCenter Server wit
 
 Para obter mais informações, veja os tópicos a seguir:
 
-* [VCenter Server with Hybridity Bundle Visão Geral](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [Pedindo instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [VCenter Server with Hybridity Bundle Visão Geral](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [Pedindo instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 
 ## Atualizações para instâncias do VMware Cloud Foundation
 
@@ -98,8 +99,8 @@ O serviço HyTrust KeyControl on {{site.data.keyword.cloud_notm}} está agora di
 É possível pedir instâncias com o serviço incluído quando você pede a sua instância ou incluir esse serviço em suas instâncias existentes posteriormente.
 
 Para obter mais informações, veja os tópicos a seguir:
-* [Componentes e considerações para o HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_considerations.html)
-* [Gerenciando o HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtkc.html)
+* [Componentes e considerações para o HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)
+* [Gerenciando o HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtkc)
 
 ### HyTrust CloudControl on IBM Cloud
 
@@ -115,7 +116,7 @@ A partir da V2.6, novas instâncias e novos hosts foram provisionados usando o v
 
 Recomenda-se que as instâncias existentes do Cloud Foundation que têm o Veeam on {{site.data.keyword.cloud_notm}} instalado também sejam atualizadas para a V9.5u3a ou mais recente.
 
-Para obter mais informações sobre o Veeam on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html).
+Para obter mais informações sobre o Veeam on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations).
 
 ### VMware HCX on IBM Cloud
 
@@ -136,7 +137,7 @@ Para obter mais informações sobre como resolver essa mensagem de aviso, veja:
 ### Arquitetura de Referência da documentação
 O documento de arquitetura do {{site.data.keyword.vmwaresolutions_short}} foi atualizado para incluir considerações importantes para entender suas responsabilidades de gerenciamento e operação da instância do VMware.
 
-Para obter mais informações, veja [Considerações pós-implementação para sua instância do VMware](/docs/services/vmwaresolutions/archiref/solution/solution_considerations.html).
+Para obter mais informações, veja [Considerações pós-implementação para sua instância do VMware](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_considerations).
 
 ## Atualizações e aprimoramentos da interface com o usuário
 

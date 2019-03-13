@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Flussi e accesso di rete
+{: #vcsicp-detail-design-network}
 
 ## Accesso all'applicazione del contenitore – IBM Cloud Private
+{: #vcsicp-detail-design-network-container-icp}
 
 Ci sono tre modi principali per ottenere il traffico esterno e l'accesso alle applicazioni del cluster Kubernetes:
 
@@ -19,18 +21,22 @@ Ci sono tre modi principali per ottenere il traffico esterno e l'accesso alle ap
 - Ingress
 
 ### NodePort - IBM Cloud Private
+{: #vcsicp-detail-design-network-nodeport-icp}
 
 Le Nodeport sono un modo semplice di esporre l'accesso esterno ad un carico di lavoro per la verifica e lo sviluppo iniziale ma non è consigliato per la produzione. Ingress o LoadBalancer sono il percorso consigliato.
 
 ### LoadBalancer - IBM Cloud Private
+{: #vcsicp-detail-design-network-loadbalancer-icp}
 
 Al momento, la piattaforma {{site.data.keyword.icpfull_notm}} supporta un LoadBalancer esterno per il carico di lavoro dell'applicazione.
 
 ### Ingress - IBM Cloud Private
+{: #vcsicp-detail-design-network-ingress-icp}
 
 Un Ingress è una raccolta di regole che consentono alle connessioni in entrata di raggiungere i servizi cluster. Può essere configurato per fornire URL raggiungibili esternamente dai servizi, il traffico di bilanciamento del carico, terminare l'SSL, offrire un host virtuale basato sul nome e altro ancora.  Il nodo Proxy nell'infrastruttura {{site.data.keyword.icpfull_notm}} esegue questa funzione.
 
 ## Accesso all'applicazione del contenitore – Servizio Kubernetes IBM Cloud
+{: #vcsicp-detail-design-network-container-iks}
 
 Ci sono tre modi principali per ottenere il traffico esterno e l'accesso alle applicazioni del cluster Kubernetes:
 
@@ -39,18 +45,22 @@ Ci sono tre modi principali per ottenere il traffico esterno e l'accesso alle ap
 - Ingress
 
 ### NodePort - Servizio Kubernetes IBM Cloud
+{: #vcsicp-detail-design-network-nodeport-iks}
 
 Le Nodeport sono un modo semplice di esporre l'accesso esterno ad un carico di lavoro per la verifica e lo sviluppo iniziale ma non è consigliato per la produzione. Ingress o LoadBalancer sono il percorso consigliato.
 
 ### LoadBalancer - Servizio Kubernetes IBM Cloud
+{: #vcsicp-detail-design-network-loadbalancer-iks}
 
 Ogni cluster {{site.data.keyword.containerlong_notm}} viene fornito con un programma di bilanciamento del carico dell'applicazione (ALB) pubblico o privato. L'ALB utilizza un punto di ingresso pubblico o privato sicuro e univoco per instradare le richieste in entrata alle tue applicazioni.
 
 ### Ingress - Servizio Kubernetes IBM Cloud
+{: #vcsicp-detail-design-network-ingress-iks}
 
 Un Ingress è una raccolta di regole che consentono alle connessioni in entrata di raggiungere i servizi cluster. Può essere configurato per fornire URL raggiungibili esternamente dai servizi, il traffico di bilanciamento del carico, terminare l'SSL, offrire un host virtuale basato sul nome e altro ancora.
 
 ## Flussi del traffico
+{: #vcsicp-detail-design-network-traffic-flows}
 
 Sono descritti i seguenti flussi di traffico:
 
@@ -59,6 +69,7 @@ Sono descritti i seguenti flussi di traffico:
 - Utente aziendale sull'accesso di rete aziendale a una VM in vCenter Server.
 
 ### Utente esterno su internet a un livello web ospitato in un contenitore in IBM Cloud Private
+{: #vcsicp-detail-design-network-external-user}
 
 1. L'utente esterno effettua una richiesta al livello web utilizzando l'URL.
 2.	Viene utilizzato DNS per determinare l'indirizzo IP. Questo indirizzo IP è un indirizzo pubblico di {{site.data.keyword.cloud_notm}} su una sottorete portatile che è assegnata all'istanza vCenter Server.
@@ -68,6 +79,7 @@ Sono descritti i seguenti flussi di traffico:
 6.	Se l'applicazione si trova sullo stesso nodo di lavoro, vengono utilizzate le iptable per determinare quale interfaccia interna viene utilizzata per inoltrare la richiesta. Se l'applicazione si trova su un nodo di lavoro differente, allora il Calico vRouter esegue l'instradamento verso il nodo di lavoro applicabile, utilizzando l'incapsulamento IP-in-IP. Il pacchetto IP-in-IP viene incapsulato in un frame VXLAN per il trasporto verso l'host vSphere ESXi in cui si trova il nodo di lavoro.
 
 ### Livello web ospitato in un contenitore in IBM Cloud Private al livello del database ospitato in una VM in vCenter Server
+{: #vcsicp-detail-design-network-web-tier}
 
 Il modo in cui le tabelle di instradamento nell'ESG e i vRouter vengono popolate dipende dal metodo di integrazione. Vedi l'integrazione di {{site.data.keyword.icpfull_notm}} e vCenter Server.
 
@@ -81,7 +93,8 @@ Il modo in cui le tabelle di instradamento nell'ESG e i vRouter vengono popolate
 8.	Il DLR inserisce la richiesta nella VXLAN richiesta.
 9.	La VM del database riceve la richiesta.
 
-### 	Utente aziendale sull'accesso di rete aziendale a una VM in vCenter Server
+### Utente aziendale sull'accesso di rete aziendale a una VM in vCenter Server
+{: #vcsicp-detail-design-network-enterprise-user}
 
 1.	Un utente aziendale collegato alla rete interna aziendale effettua una richiesta di una risorsa su una VM ospitata in vCenter Server.
 2.	Viene utilizzato DNS per determinare l'indirizzo IP della VM. Questo indirizzo IP si trova su una rete che è estesa a {{site.data.keyword.cloud_notm}}.
@@ -92,11 +105,13 @@ Il modo in cui le tabelle di instradamento nell'ESG e i vRouter vengono popolate
 7.	La VM riceve la richiesta.
 
 ## Rete di accesso pubblica
+{: #vcsicp-detail-design-network-public-access-net}
 
 {{site.data.keyword.icpfull_notm}} e CAM, per impostazione predefinita, richiedono la connettività internet per richiamare le immagini Docker, i grafici Helm, i modelli Terraform e i gestori del pacchetto del sistema operativo.
 Nelle ultime release, è ora presente il supporto per le installazioni basate sul proxy non direttamente collegate a internet e che dispongono di opzioni per l'installazione in una modalità offline.
 
 ###	Firewall NSX
+{: #vcsicp-detail-design-network-nsx-firewall}
 
 Il firewall Edge NSX {{site.data.keyword.icpfull_notm}} è configurato con le regole per poter:
 *	Abilitare l'accesso alle reti VXLAN all'accesso pubblico.
@@ -104,13 +119,15 @@ Il firewall Edge NSX {{site.data.keyword.icpfull_notm}} è configurato con le re
 *	Abilitare l'accesso alla rete {{site.data.keyword.cloud_notm}} privata alle reti VXLAN.
 
 ### NAT NSX
+{: #vcsicp-detail-design-network-nsx-nat}
 
 NAT NSX {{site.data.keyword.icpfull_notm}} è configurato con i seguenti NAT:
 *	SNAT per l'accesso alle reti VXLAN per l'accesso pubblico.
 *	SNAT per l'accesso alle reti VXLAN per l'accesso di rete {{site.data.keyword.cloud_notm}} privata.
 *	DNAT per i vIP del cluster {{site.data.keyword.icpfull_notm}}.
 
-### Link correlati
+## Link correlati
+{: #vcsicp-detail-design-network-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

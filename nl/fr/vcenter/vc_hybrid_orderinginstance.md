@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,14 +13,16 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Commande d'instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_orderinginstance}
 
-Afin de déployer une plateforme virtuelle VMware personnalisable et flexible totalement adaptée à vos besoins en charge de travail, commandez une instance VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle. L'instance vCenter Server with Hybridity Bundle inclut la licence VMware Hybrid Cloud Extension (HCX) qui vous autorise à utiliser le service VMware HCX on {{site.data.keyword.cloud_notm}}. Vous pouvez également ajouter des services, tels que [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html) pour la reprise après incident.
+Afin de déployer une plateforme virtuelle VMware personnalisable et flexible totalement adaptée à vos besoins en charge de travail, commandez une instance VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle. L'instance vCenter Server with Hybridity Bundle inclut la licence VMware Hybrid Cloud Extension (HCX) qui vous autorise à utiliser le service VMware HCX on {{site.data.keyword.cloud_notm}}. Vous pouvez également ajouter des services, tels que [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) pour la reprise après incident.
 
 ## Exigences relatives à la commande d'instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_orderinginstance-req}
 
 Assurez-vous que :
-*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic/useraccount.html).
-*  Vous avez passé en revue les informations décrites dans la rubrique [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html).
+*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+*  Vous avez passé en revue les informations décrites dans la rubrique [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning).
 * Vous avez passé en revue le format des noms d'instance et de domaine. Le nom de domaine et le libellé de sous-domaine sont utilisés pour générer le nom d'utilisateur et les noms de serveur de l'instance.
 
 Tableau 1. Format de la valeur des noms d'instance et de domaine
@@ -37,10 +39,12 @@ Ne modifiez aucune des valeurs définies lors de la commande ou du déploiement 
 {:important}
 
 ## Paramètres système
+{: #vc_hybrid_orderinginstance-sys-settings}
 
 Vous devez spécifier les paramètres système répertoriés ci-après lorsque vous commandez une instance vCenter Server with Hybridity Bundle.
 
 ### Nom d'instance
+{: #vc_hybrid_orderinginstance-inst-name}
 
 Le nom de l'instance qui doit respecter les règles suivantes :
 * Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
@@ -49,10 +53,12 @@ Le nom de l'instance qui doit respecter les règles suivantes :
 * Le nom d'instance doit être unique au sein de votre compte.
 
 ### Principale ou secondaire
+{: #vc_hybrid_orderinginstance-primary-secondary}
 
 Indiquez si vous souhaitez commander une nouvelle instance principale ou une instance secondaire pour une instance principale existante.
 
 ## Paramètres d'octroi de licence
+{: #vc_hybrid_orderinginstance-licensing-settings}
 
 Les licences VMware suivantes sont incluses avec votre commande d'instance vCenter Server with Hybridity Bundle. Vous devez spécifier l'édition pour les licences NSX et vSAN.
 
@@ -62,21 +68,25 @@ Les licences VMware suivantes sont incluses avec votre commande d'instance vCent
 * vSAN 6.6 (édition Advanced ou Enterprise)
 
 ### Attention
+{: #vc_hybrid_orderinginstance-attention}
 
 * Les instances vCenter Server with Hybridity Bundle ne prennent pas en charge le mode BYOL (Bring Your Own License).
 * Les éditions de licence minimum sont indiquées sur l'interface utilisateur. Si différentes éditions de composant sont prises en charge, vous pouvez sélectionner celle qui vous convient.
 
 ## Paramètres de serveur bare metal
+{: #vc_hybrid_orderinginstance-bare-metal-settings}
 
 Les paramètres bare metal dépendent de l'{{site.data.keyword.CloudDataCent_notm}} que vous sélectionnez et de la configuration de serveur bare metal.
 
 Quatre serveurs ESXi sont nécessaires pour le cluster initial et pour les clusters post-déploiement dans le cadre des configurations vSAN. Tous les serveurs ESXi se partagent la même configuration. Après le déploiement, vous pouvez ajouter quatre clusters supplémentaires.
 
 ### Emplacement de centre de données
+{: #vc_hybrid_orderinginstance-dc-location}
 
 Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} où l'instance doit être hébergée.
 
 ### Skylake
+{: #vc_hybrid_orderinginstance-skylake}
 
 Lorsque vous sélectionnez **Skylake**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM de serveur bare metal adaptée à vos besoins.
 
@@ -89,6 +99,7 @@ Tableau 2. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short
 | Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
 
 ### Broadwell
+{: #vc_hybrid_orderinginstance-broadwell}
 
 Lorsque vous sélectionnez **Broadwell**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM de serveur bare metal adaptée à vos besoins.
 
@@ -103,10 +114,12 @@ Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 
 ### Nombre de serveurs bare metal
+{: #vc_hybrid_orderinginstance-bare-metal-number}
 
 Quatre serveurs ESXi sont sélectionnés par défaut et ne sont pas modifiables.
 
 ## Paramètres de stockage
+{: #vc_hybrid_orderinginstance-storage-settings}
 
 VMware vSAN 6.6 est inclus avec votre commande d'instance vCenter Server with Hybridity Bundle. Spécifiez les options vSAN suivantes :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
@@ -119,10 +132,12 @@ VMware vSAN 6.6 est inclus avec votre commande d'instance vCenter Server with Hy
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
 
 ## Paramètres d'interface réseau
+{: #vc_hybrid_orderinginstance-network-interface-settings}
 
 Vous devez spécifier les paramètres d'interface réseau répertoriés ci-après lorsque vous commandez une instance vCenter Server with Hybridity Bundle.
 
 ### Préfixe de nom d'hôte
+{: #vc_hybrid_orderinginstance-host-name-prefix}
 
   Le préfixe du nom d'hôte qui doit respecter les règles suivantes :
   *  Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
@@ -130,14 +145,16 @@ Vous devez spécifier les paramètres d'interface réseau répertoriés ci-aprè
   *  Le préfixe de nom d'hôte ne doit pas dépasser 10 caractères.
 
 ### Libellé de sous-domaine
+{: #vc_hybrid_orderinginstance-subdomain-label}
 
 Le libellé du sous-domaine qui doit respecter les règles suivantes :
 *  Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-*  Le libellé de sous-domaine doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique. 
+*  Le libellé de sous-domaine doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
 *  Le libellé de sous-domaine ne doit pas dépasser 10 caractères.
 *  Le libellé de sous-domaine doit être unique au sein de votre compte.
 
 ### Nom de domaine
+{: #vc_hybrid_orderinginstance-domain-name}
 
 Le nom du domaine racine qui doit respecter les règles suivantes :
 * Le nom de domaine doit être composé d'au moins deux chaînes séparées par un point (.)
@@ -150,6 +167,7 @@ La longueur maximale du nom de domaine complet des hôtes et des machines virtue
 {:note}
 
 ### Réseau public ou privé
+{: #vc_hybrid_orderinginstance-public-private-network}
 
 Les paramètres d'activation de carte d'interface réseau varient selon que vous sélectionnez **Réseau public et réseau privé** ou **Réseau privé uniquement**. Les services complémentaires suivants requièrent des cartes d'interface réseau public et ne sont pas disponibles si vous sélectionnez l'option de réseau privé :
 
@@ -159,12 +177,14 @@ Les paramètres d'activation de carte d'interface réseau varient selon que vous
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Commander de nouveaux VLAN
+{: #vc_hybrid_orderinginstance-new-vlans}
 
 Sélectionnez **Commander de nouveaux VLAN** pour commander un nouveau VLAN public et deux nouveaux VLAN privés.
 
 Un VLAN public et deux VLAN privés sont nécessaires pour votre commande d'instance. Les deux VLAN privés sont liés respectivement à chaque serveur bare metal.
 
 ### Sélectionner des VLAN existants
+{: #vc_hybrid_orderinginstance-existing-vlans}
 
 En fonction de l'{{site.data.keyword.CloudDataCent_notm}} que vous avez sélectionné, des VLAN publics et privés existants peuvent être disponibles.
 
@@ -172,12 +192,12 @@ Un VLAN public et deux VLAN privés sont nécessaires pour votre commande d'inst
 
 Choisissez **Sélectionner des VLAN existants** pour réutiliser des VLAN publics et privés existants et faites votre choix parmi les VLAN et les sous-réseaux disponibles.
 
-
 * Vérifiez que la configuration de pare-feu sur les VLAN sélectionnés ne bloque pas le trafic des données de gestion.
 * Vérifiez que tous les VLAN sélectionnés se trouvent dans le même pod, car les serveurs ESXi ne peuvent pas être mis à disposition sur des VLAN multi-pods.
 {:important}
 
 ### Configuration DNS
+{: #vc_hybrid_orderinginstance-dns-config}
 
 Sélectionnez la configuration de système de noms de domaine (DNS, Domain Name System) de votre instance :
 
@@ -194,14 +214,17 @@ Vous disposez de 30 jours pour activer les machines virtuelles.
 Pour plus d'informations sur la commande de licence Windows, voir la [documentation Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Paramètres de services
+{: #vc_hybrid_orderinginstance-addon-services}
 
-Lorsque vous commandez une instance vCenter Server with Hybridity Bundle, vous pouvez également commander des services supplémentaires. Pour plus d'informations sur les services, voir [Services disponibles pour les instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances).
+Lorsque vous commandez une instance vCenter Server with Hybridity Bundle, vous pouvez également commander des services supplémentaires. Pour plus d'informations sur les services, voir [Services disponibles pour les instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances).
 
 ## Récapitulatif de la commande
+{: #vc_hybrid_orderinginstance-order-summary}
 
 Selon la configuration que vous avez sélectionnée pour l'instance et les services complémentaires, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** en bas à droite du panneau pour générer un document PDF contenant les détails relatifs à l'estimation.
 
 ## Procédure de commande d'instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_orderinginstance-procedure}
 
 1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur **VMware** dans le panneau de navigation de gauche, puis cliquez sur **vCenter Server** dans la section **Centres de données virtuels**.
 2. Sur la page **VMware vCenter Server on IBM Cloud**, cliquez sur la carte **vCenter Server with Hybridity Bundle**, puis sur **Créer**.
@@ -227,27 +250,29 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
      *  Si vous voulez commander de nouveaux VLAN publics et privés, cliquez sur **Commander de nouveaux VLAN**.
      *  Si vous voulez réutiliser les VLAN publics et privés existants lorsqu'ils sont disponibles, cliquez sur **Sélectionner des VLAN existants**, puis sélectionnez le VLAN public, le sous-réseau principal, le VLAN privé, le sous-réseau principal privé et le VLAN privé secondaire.
   4. Sélectionnez la configuration DNS.
-9. Effectuez la configuration du service HCX on {{site.data.keyword.cloud_notm}} inclus. Pour savoir comment indiquer les paramètres d'un service, voir la section _Configuration de VMware HCX on IBM Cloud_ dans [Commande de VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration).
+9. Effectuez la configuration du service HCX on {{site.data.keyword.cloud_notm}} inclus. Pour savoir comment indiquer les paramètres d'un service, voir la section _Configuration de VMware HCX on IBM Cloud_ dans [Commande de VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
 10. Sélectionnez les services complémentaires à déployer dans l'instance en cliquant sur la carte de service correspondante. Si un service nécessite de la configuration, spécifiez les paramètres qui lui sont propres et cliquez sur **Ajouter un service** sur la carte.  
 Pour savoir comment indiquer les paramètres d'un service, voir la rubrique de commande de service correspondante.
 
-8. Sur la page **Récapitulatif de la commande**, vérifiez la configuration de l'instance avant de passer la commande.
+11. Sur la page **Récapitulatif de la commande**, vérifiez la configuration de l'instance avant de passer la commande.
    1. Passez en revue les paramètres de l'instance.
    2. Passez en revue le coût estimé de l'instance. Cliquez sur **Détails concernant la tarification** pour générer un récapitulatif au format PDF. Pour sauvegarder ou imprimer votre récapitulatif de commande, cliquez sur l'icône d'**impression** ou de **téléchargement** dans l'angle supérieur droit de la fenêtre du PDF.
    3. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant de commander l'instance.
    4. Cliquez sur **Mettre à disposition**.
 
 ## Résultats
+{: #vc_hybrid_orderinginstance-results}
 
 Le déploiement de l'instance commence automatiquement. Vous recevez une confirmation que la commande est en cours de traitement et vous pouvez vérifier l'état du déploiement en affichant les détails de l'instance.
 
-Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**. Si vous avez commandé des services complémentaires, le déploiement des services commence une fois votre commande honorée.
+Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**. Si vous avez commandé des services complémentaires, le déploiement des services commence une fois votre commande honorée.
 
 Lorsque l'instance est prête pour utilisation, elle prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 
 Lorsque vous commandez une instance secondaire, le client Web VMware vSphere de l'instance principale (liée à l'instance secondaire) devra peut-être être redémarré une fois la commande d'instance secondaire honorée.
 
 ## Etape suivante
+{: #vc_hybrid_orderinginstance-next}
 
 Affichez et gérez l'instance vCenter Server with Hybridity Bundle que vous avez commandée.
 
@@ -263,12 +288,13 @@ Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwa
 
    Seules les activités de gestion des partages de fichiers du stockage partagé depuis le portail {{site.data.keyword.slportal}} font exception. Il s'agit des activités suivantes : commande, suppression (pouvant avoir un impact sur des magasins de données éventuellement montés), accord d'autorisation et montage de partages de fichiers de stockage partagé.
 
-### Liens connexes
+## Liens connexes
+{: #vc_hybrid_orderinginstance-related}
 
-* [Inscription à un compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
-* [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [Configuration multisite pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_multisite.html)
-* [Ajout et affichage de clusters pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
-* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
-* [Suppression des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
+* [Inscription à un compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [Configuration multisite pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_multisite)
+* [Ajout et affichage de clusters pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
+* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [Suppression des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)

@@ -4,18 +4,23 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # Tempo limite atingido ao se conectar ao VMware vSphere Web Client
+{: #trbl_timeout_vc_console}
 
 ## Problema
+{: #trbl_timeout_vc_console-problem}
+
 Ao tentar se conectar ao vSphere Web Client, você pode obter o seguinte erro de tempo limite:
 
 `O servidor em <IP_address> está demorando muito para responder.`
 
 ## Resolução
+{: #trbl_timeout_vc_console-resolution}
+
 Use as etapas a seguir para investigar e corrigir o problema.
 
 1. Assegure-se de ter concluído as etapas da dica de ferramenta que é exibida quando você passa o mouse sobre o botão **Console do vCenter**. Para

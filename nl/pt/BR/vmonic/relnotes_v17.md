@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2017
 
 lastupdated: "2017-07-05"
 
@@ -13,6 +13,7 @@ lastupdated: "2017-07-05"
 {:important: .important}
 
 # Notas sobre a liberação para V1.7
+{: #relnotes_v17}
 
 Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte o [{{site.data.keyword.vmwaresolutions_short}}dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -29,27 +30,27 @@ Essa atualização se aplica aos seguintes upgrades e melhorias:
   O modo EVC não está ativado para implementações novas ou existentes em servidores V4.
   {:note}
 
-* As implementações do VMware Cloud Foundation que foram implementadas antes de 22 de maio e, portanto, estão usando servidores V3 agora pedirão servidores V4 ao incluir um novo nó na instância. Esses servidores têm 256 GB de memória; se você precisar de 512 GB de memória, depois de incluir os servidores, abra um chamado de suporte para solicitar um upgrade do servidor para 512 GB de memória. Para obter mais informações sobre como entrar em contato com o Suporte IBM, consulte [Contatando o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+* As implementações do VMware Cloud Foundation que foram implementadas antes de 22 de maio e, portanto, estão usando servidores V3 agora pedirão servidores V4 ao incluir um novo nó na instância. Esses servidores têm 256 GB de memória; se você precisar de 512 GB de memória, depois de incluir os servidores, abra um chamado de suporte para solicitar um upgrade do servidor para 512 GB de memória. Para obter mais informações sobre como entrar em contato com o Suporte IBM, consulte [Contatando o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
-Para obter mais informações sobre componentes, consulte [Especificações técnicas para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+Para obter mais informações sobre componentes, consulte [Especificações técnicas para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances).
 
 ### Requisitos do processo de atualização
 
-Dependendo da complexidade de sua implementação de instância do Cloud Foundation e de você ter uma configuração de vários sites, o processo de atualização pode exigir uma sequência de etapas que devem ser concluídas conforme exibido na guia **Atualização e Correção** no console. Para obter mais informações, veja [Aplicando atualizações a instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html#applying-updates-to-cloud-foundation-instances).
+Dependendo da complexidade de sua implementação de instância do Cloud Foundation e de você ter uma configuração de vários sites, o processo de atualização pode exigir uma sequência de etapas que devem ser concluídas conforme exibido na guia **Atualização e Correção** no console. Para obter mais informações, veja [Aplicando atualizações a instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_applyingupdates#applying-updates-to-cloud-foundation-instances).
 
 ## Atualizações para instâncias do VMware vCenter Server
 
 ### Suporte de cluster
 
-Começando com a liberação V1.7, é possível usar clusters para gerenciar servidores ESXi em instâncias do vCenter Server para um melhor gerenciamento de recursos e alta disponibilidade. Os servidores ESXi configurados quando você pediu uma instância são agrupados como **cluster1** por padrão. É possível visualizar os detalhes do cluster ou incluir até um total de cinco clusters em uma instância da guia **Infraestrutura** recém-introduzida na página de detalhes da instância. Quando você estiver expandindo ou contraindo a capacidade de uma instância, será possível selecionar em qual cluster incluir ou de qual cluster remover servidores ESXi. Para obter mais informações, veja [Incluindo e visualizando clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html).
+Começando com a liberação V1.7, é possível usar clusters para gerenciar servidores ESXi em instâncias do vCenter Server para um melhor gerenciamento de recursos e alta disponibilidade. Os servidores ESXi configurados quando você pediu uma instância são agrupados como **cluster1** por padrão. É possível visualizar os detalhes do cluster ou incluir até um total de cinco clusters em uma instância da guia **Infraestrutura** recém-introduzida na página de detalhes da instância. Quando você estiver expandindo ou contraindo a capacidade de uma instância, será possível selecionar em qual cluster incluir ou de qual cluster remover servidores ESXi. Para obter mais informações, veja [Incluindo e visualizando clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
 
 ### Aprimoramentos para a implementação de recuperação de desastre do Zerto
 
-A implementação da recuperação de desastre do Zerto é, agora, automatizada em vez de ser manipulada por meio de um chamado de suporte. Todos os componentes do Zerto, como uma sub-rede móvel privada, uma VSI (Virtual Service Instance) do Windows e os encargos de licença do Zerto são listados no custo estimado para que você possa revisar antes de fazer o seu pedido. Para obter mais informações, veja [Processo de implementação da recuperação de desastre do Zerto](/docs/services/vmwaresolutions/services/addingzertodr.html).
+A implementação da recuperação de desastre do Zerto é, agora, automatizada em vez de ser manipulada por meio de um chamado de suporte. Todos os componentes do Zerto, como uma sub-rede móvel privada, uma VSI (Virtual Service Instance) do Windows e os encargos de licença do Zerto são listados no custo estimado para que você possa revisar antes de fazer o seu pedido. Para obter mais informações, veja [Processo de implementação da recuperação de desastre do Zerto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
 
 ### Recursos de upgrade de licença do NSX
 
-É possível fazer upgrade de sua edição de licença do NSX da guia **Resumo** de sua instância do vCenter Server. O upgrade de licença substitui todas as licenças existentes do NSX SoftLayer em sua conta com a nova licença. Para obter mais informações, veja [Visualizando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html).
+É possível fazer upgrade de sua edição de licença do NSX da guia **Resumo** de sua instância do vCenter Server. O upgrade de licença substitui todas as licenças existentes do NSX SoftLayer em sua conta com a nova licença. Para obter mais informações, veja [Visualizando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances).
 
 ## Aprimoramentos de usabilidade
 

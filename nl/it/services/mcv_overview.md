@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Panoramica di Mission Critical VMware on IBM Cloud
+{: #mcv_overview}
 
 Mission Critical VMware on {{site.data.keyword.cloud}} offre un'architettura a più zone per aiutare le aziende ad evitare il tempo di inattività delle applicazioni cloud e ad automatizzare i failover in una regione cloud.
 
@@ -19,6 +20,7 @@ Questa architettura supporta i carichi di lavoro esistenti di importanza critica
 L'architettura comprende vari servizi aziendali, tra cui reti, archiviazione, resilienza e altri strumenti creati per il monitoraggio e la risoluzione dei problemi delle applicazioni basate sul cloud. Inoltre, questa architettura può essere integrata con IBM Services Platform with Watson, creata su {{site.data.keyword.cloud_notm}}, per consentire un più ampio utilizzo dei servizi. Utilizzando le funzionalità cognitive della piattaforma, i client possono estrarre i dati in modo più efficace per le nuove informazioni aziendali per aiutare a mantenere le operazioni continue.
 
 ## Specifiche tecniche per Mission Critical VMware on IBM Cloud
+{: #technical-specifications-for-mission-critical-vmware-on-ibm-cloud}
 
 L'architettura Mission Critical VMware on {{site.data.keyword.cloud_notm}} è un'architettura di riferimento end-to-end che fornisce il failover automatizzato per i carichi di lavoro del cliente. Utilizza una regione a più zone {{site.data.keyword.cloud_notm}} on un servizio gestito da IBM che comprende i seguenti componenti:
 
@@ -38,6 +40,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} è disponibile nelle
 * Asia Pacifico: tutti i data center IBM Cloud in Sydney e Tokyo
 
 ### Specifiche dell'architettura dell'infrastruttura di base
+{: #mcv_overview-base-specs}
 
 L'infrastruttura di base ha le seguenti specifiche:
 * Ogni sito ha il proprio cluster di gestione e edge dedicato
@@ -48,6 +51,7 @@ L'infrastruttura di base ha le seguenti specifiche:
 * Il ripristino NSX Manager sta utilizzando una metodologia Hot/Standby che sincronizza i file di backup
 
 ### Specifiche dell'architettura dell'infrastruttura dello strumento e della tecnologia
+{: #mcv_overview-tooling-specs}
 
 L'architettura dello strumento e della tecnologia ha le seguenti specifiche:
 * vRealize Operations, vRealize Log Insight e vRealize Network Insight per fornire le funzionalità di gestione e operative specifiche per i prodotti VMware che stai utilizzando, ad esempio NSX, vSAN e vSphere
@@ -56,15 +60,17 @@ L'architettura dello strumento e della tecnologia ha le seguenti specifiche:
 * Fortigate Security Appliance o simile per garantire un accesso a internet sicuro e per facilitare l'integrazione di rete attiva-attiva con la rete in loco
 
 ### Specifiche dell'architettura cluster estesa vSphere + vSAN
+{: #mcv_overview-stretched-cluster-specs}
 
 L'architettura cluster estesa vSphere + vSAN ha le seguenti specifiche:
 * Il cluster fornisce le funzionalità di archiviazione e di calcolo che si estendono su due siti per fornire una maggiore disponibilità.
 * Le richieste di scrittura da macchine virtuali (VM) sono scritte in modo sincrono su entrambi i siti incorrendo nella latenza della rete site-to-site.
 * Le richieste di lettura dalle VM sono realizzate localmente nell'ubicazione fisica in cui è ubicata la VM, evitando ulteriore latenza.
 * Il sito e l'host di controllo agiscono come split brain/quorum.
-* La crittografia nativa vSAN (per la crittografia inattiva) può essere utilizzata insieme a questa architettura.
+* La codifica nativa vSAN (per la crittografia inattiva) può essere utilizzata insieme a questa architettura.
 
 ### Specifiche dell'architettura di rete
+{: #mcv_overview-network-specs}
 
 L'architettura di rete ha le seguenti specifiche:
 * Edge/DLR/VXLAN in combinazione con l'instradamento basato sulla metrica BGP per facilitare un progetto di sito attivo-attivo con il failover automatico.
@@ -73,6 +79,7 @@ L'architettura di rete ha le seguenti specifiche:
 * Durante un'attività vMotion per VM-A, il traffico continuerà ad entrare ed uscire tramite la zona di disponibilità {{site.data.keyword.cloud_notm}} #1.
 * Durante un malfunzionamento del sito o dell'edge, il traffico sarà instradato al sito disponibile rimanente.
 
-### Link correlati
+## Link correlati
+{: #mcv_overview-related}
 
-* [Richiesta di Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services/managing_mcv.html)
+* [Richiesta di Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_mcv)

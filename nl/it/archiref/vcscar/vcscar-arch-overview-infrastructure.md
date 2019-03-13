@@ -4,33 +4,40 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Rete e infrastruttura di IBM Cloud
+{: #vcscar-arch-overview-infrastructure}
 
 ## VRF (Virtual Routing and Forwarding)
+{: #vcscar-arch-overview-infrastructure-vrf}
 
 Gli account {{site.data.keyword.cloud}} possono anche essere configurati come account VRF (Virtual Routing and Forwarding). Un account VRF fornisce funzioni simili allo spanning della VLAN, abilitando l'instradamento automatico tra blocchi di IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
 
 ## Direct Link
+{: #vcscar-arch-overview-infrastructure-direct-link}
 
 {{site.data.keyword.cloud_notm}} Direct Link Connect offre l'accesso privato alla tua infrastruttura {{site.data.keyword.cloud_notm}} e a qualsiasi altro cloud collegato al Network Service Provider tramite il tuo {{site.data.keyword.CloudDataCent_notm}} locale. Questa opzione è perfetta per la creazione della connettività multicloud in un unico ambiente.
 
 Connettiamo i clienti alla rete {{site.data.keyword.cloud_notm}} Private utilizzando una topologia di larghezza di banda condivisa. Come con tutti i prodotti Direct Link, puoi aggiungere l'instradamento globale, che abilita il traffico di rete privato a tutte le ubicazioni di {{site.data.keyword.cloud_notm}}.
 
 ## VPN (Virtual Private Network)
+{: #vcscar-arch-overview-infrastructure-virt-private-net}
 
 ### VPN strongSwan
+{: #vcscar-arch-overview-infrastructure-strongswan}
 
 Il servizio VPN strongSwan IPSec fornisce un canale di comunicazione end-to-end sicuro su internet che si basa sulla suite di protocolli standard del settore Internet Protocol Security (IPSec).
 
 ### Hybridity (HCX)
+{: #vcscar-arch-overview-infrastructure-hcx}
 
 Il servizio VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle può estendere senza soluzione di continuità le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione delle macchine virtuali (VM) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
 
 ## Struttura fisica
+{: #vcscar-arch-overview-infrastructure-phys-structure}
 
 L'infrastruttura fisica richiesta per distribuire un'istanza di produzione {{site.data.keyword.icpfull_notm}} su un cluster VMware vCenter Server on {{site.data.keyword.cloud_notm}} richiede la seguente specifica minima.
 
@@ -46,6 +53,7 @@ Archiviazione | Gestione 2000 GB 2IOPS/GB, Carico di lavoro 2000 GB 4IOPS/GB, {{
 Oltre ai requisiti hardware di {{site.data.keyword.cloud_notm}} Private, devi creare volumi persistenti nell'ambiente {{site.data.keyword.icpfull_notm}} per archiviare i dati database e log di CAM (Cloud Automation Manager). Mentre CAM supporta tutti i tipi di volumi persistenti supportati da {{site.data.keyword.icpfull_notm}}, le due configurazioni di archiviazione consigliate per CAM sono NFS e GlusterFS.
 
 ## Struttura virtuale
+{: #vcscar-arch-overview-infrastructure-virt-structure}
 
 Figura 1. Struttura di vCenter Server e distribuzione {{site.data.keyword.icpfull_notm}}
 ![Struttura di vCenter Server e distribuzione {{site.data.keyword.icpfull_notm}} ](vcscar-icp.svg)
@@ -57,7 +65,8 @@ L'ESG è configurato con una regola NAT di origine (SNAT) per consentire il traf
 
 L'ESG è anche configurato con una regola NAT di destinazione (DNAT) agli indirizzi IP virtuali Master/Proxy {{site.data.keyword.icpfull_notm}} dalla rete {{site.data.keyword.cloud_notm}} 10.x all'ambiente VXLAN.
 
-### Link correlati
+## Link correlati
+{: #vcscar-arch-overview-infrastructure-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

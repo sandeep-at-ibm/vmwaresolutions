@@ -4,16 +4,18 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-22"
+lastupdated: "2019-02-15"
 
 ---
 
 # Prólogo
+{: #vcscar-preface}
 
 Figura 1. El lenguaje que hemos concebido
 ![El lenguaje que hemos concebido](vcscar-alood.svg)
 
 ## Introducción al lenguaje de skateboarding
+{: #vcscar-preface-intro}
 
 La forma en que los skaters combinan movimientos y submovimientos en sus trucos impone una especie de gramática o sintaxis, que se basa en la física de lo que está pasando; la nomenclatura de la química ha evolucionado por razones similares. Hoy en día, un skater en un lado del planeta puede enviar por texto el nombre de un truco a otro patinador situado en el otro lado, y sus complejos movimientos se entienden.
 
@@ -41,12 +43,14 @@ Mediante el entrenamiento de Watson Assistant para que copie el proceso de los e
 skateboarding también pueden adoptar nuestros convenios. Por tanto, Watson Assistant puede no solo ayudar, sino también transformar, la expresión creativa de este deporte, recientemente olímpico, así como aportar ideas para otros movimientos artísticos.
 
 ## Codificación del lenguaje
+{: #vcscar-preface-codification}
 
 Como en cualquier otro lenguaje, el nuestro se ha ido desarrollando a lo largo del tiempo, adoptando nuevas palabras y usos, lo que ha ocasionado redundancias ocasionales y excepciones. Dicho esto, esta nomenclatura es notablemente coherente, duradera y específica. Es este rigor y consistencia lo que afronta el problema, aparentemente insuperable, de convertir grabaciones en texto mediante machine learning. Para los skaters, cada matiz de un movimiento completo tiene su propia nomenclatura. De hecho, este lenguaje es tan potente que también lo han adoptado no solo los esquiadores de snowboard, sino también los surferos.
 
-Sin embargo, a pesar de toda esta complejidad y potencia, la codificación del lenguaje es sencilla y concisa. Cada *truco básico* tiene un componente de sentido (*directional*) y de rotación (*rotational*), junto con uno de aterrizaje (*landing*), que determina si se concatena o no con el siguiente truco básico y cómo lo hace para formar combinaciones; estos son los cuatro *elementos principales*. Se utilizan otros dos modificadores (*modifiers*): un prefijo de giro (*turn prefix*) para orientar el giro del skater (en el sentido de las agujas del reloj o en el sentido contrario), y un componente *varial* que especifica cómo gira la tabla, en relación con el cuerpo (hacia dentro o inward o hacia fuera o outward). Con esta codificación, se puede aplicar de forma repetida un conjunto de reglas concisas que permiten combinaciones tan largas como se desee.
+Sin embargo, a pesar de toda esta complejidad y potencia, la codificación del lenguaje es sencilla y concisa. Cada *truco básico* tiene un componente de sentido (*directional*) y de rotación (*rotational*), junto con uno de aterrizaje (*landing*), que determina si se concatena o no con el siguiente truco básico y cómo lo hace para formar combinaciones; estos son los cuatro *elementos principales*. Se utilizan otros dos modificadores (*modifiers*): un prefijo de giro (*turn prefix*) para orientar el giro del skater (en el sentido de las agujas del reloj o en el sentido contrario), y un componente *varial* que especifica cómo gira la tabla, en relación con el cuerpo (hacia dentro o inward, o hacia fuera u outward). Con esta codificación, se puede aplicar de forma repetida un conjunto de reglas concisas que permiten combinaciones tan largas como se desee.
 
 ## Variables de entorno adicionales
+{: #vcscar-preface-env-var}
 
 Los expertos suelen emplear mucho tiempo en localizar lugares en los que practicar sus trucos. De hecho, un factor que diferencia a un skater es su capacidad creativa de adaptar los trucos de formas nuevas e imaginativas, lo que a menudo les lleva por todo el mundo. Aunque existen aplicaciones de skate que catalogan lugares y que se alimentan de información de la comunidad, nunca ha existido la idea o la tecnología para crear una aplicación que tenga capacidad para ayudar a cualquier skater, especialmente a los expertos, en este proceso creativo.
 
@@ -61,10 +65,12 @@ el asistente puede responder con el lugar más cercano o con el mejor a un truco
 Por ejemplo, un skater puede pedir a Watson Assistant una lista de todas las variaciones posibles de un truco *hardflip-to-backside-5-0*. Esta solicitud de convierte de voz a texto en Discovery Service, el cual responde no solo con variaciones de *hardflip-to-grind*, sino también con una lista de distintos lugares que capturan las variaciones, lo que conduce a más lugares que pueden incluir un listado de barandillas que se pueden agrupar por código postal, por tamaño o incluso por disponibilidad, si están por ejemplo en el patio de un colegio o en una empresa. Los datos de la aplicación ofrecen sistemas que clasifican el riesgo a ser pillado por invasión de propiedad privada. Esta ayuda tiene un gran impacto sobre las múltiples consecuencias de variables como estas, lo que supone una gran ayuda para la creatividad de todos los skaters expertos.
 
 ## La plataforma de nube
+{: #vcscar-preface-cloud-platform}
 
 La capa creativa de los sistemas de TI para generar nuevas combinaciones constituye la parte más apreciada para los skaters. Tiene la capacidad de conectar con su creatividad para inspirar formas de innovar, en cualquier punto del globo.
 Nada de esto se habría conseguido sin {{site.data.keyword.cloud}}.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vcscar-preface-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

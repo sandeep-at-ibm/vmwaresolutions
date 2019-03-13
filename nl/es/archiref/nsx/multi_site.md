@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-13"
+lastupdated: "2019-02-15"
 
 ---
 
 # Arquitectura de varios sitios
+{: #nsx-multi_site}
 
 Un diferenciador de claves entre {{site.data.keyword.cloud}} y otras ofertas de nube es la capacidad de suministrar capacidad de cálculo dedicada en todo el mundo y de conectar automáticamente la infraestructura a petición con la red dentro de su cuenta privada de {{site.data.keyword.cloud_notm}}. Las funciones de red definidas por software de VMware vCenter Server y de VMware Cloud Foundation, junto con {{site.data.keyword.cloud_notm}} proporcionan una infraestructura global granular que se puede crear en cuestión de días. En las secciones siguientes se describe un ejemplo de arquitectura de varios sitios de lo que se puede lograr con la capacidad disponible de vCenter Server o Cloud Foundation.
 
 ## Entorno entre vCenter NSX
+{: #nsx-multi_site-cross-env}
 
 La función de NSX de vCenter permite enlazar en una relación primaria y secundaria de hasta nueve gestores de NSX: uno primario y ocho secundarios. Aunque no es necesario, tener los servidores vCenter en una relación de modalidad enlazada mejorada (ELM) para que la función entre vCenter NSX entre en funcionamiento proporciona las siguientes ventajas:
 
@@ -21,6 +23,7 @@ La función de NSX de vCenter permite enlazar en una relación primaria y secund
 * Panel único de gestión de vidrio en todos los sitios para las funciones de NSX y vCenter normales
 
 ## Ejemplo de varios sitios
+{: #nsx-multi_site-example}
 
 El ejemplo siguiente añade una zona de transporte universal NSX a las topologías de gestión básica y de carga de trabajo que se tratan en las secciones anteriores, y también incluye las siguientes características:
 
@@ -34,6 +37,7 @@ Figura 1. Topología de varios sitios
 
 ![Tipología multisitio](multisite_topology.svg "Topología multisitio")
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #nsx-multi_site-related}
 
-* [Servicios de red en {{site.data.keyword.cloud_notm}}](networking_services.html)
+* [Servicios de red en {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-networking_services)

@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
-# Intégration, adressage IP et flot réseau
+# Intégration, adressage IP et flux réseau
+{: #vcsnsxt-overview-integration}
 
 ## Intégration d'IBM Cloud Private et VMware vCenter Server on IBM Cloud
+{: #vcsnsxt-overview-integration-icp-vcs-integration}
 
 {{site.data.keyword.cloud}} Private est installé sur plusieurs machines virtuelles sur une instance vCenter Server. Dans l'instance vCenter Server, l'instance {{site.data.keyword.icpfull_notm}} est déployée avec une passerelle ESG (NSX Edge Services Gateway) dédiée et un routeur logique distribué (DLR) et elle utilisé un réseau VXLAN.
 
 La passerelle ESG est configurée avec une règle SNAT pour autoriser le trafic sortant, activant ainsi la connectivité pour télécharger les prérequis {{site.data.keyword.icpfull_notm}} et la connectivité à GitHub et Docker. Vous pouvez aussi utiliser un proxy Web pour la connectivité Internet. La passerelle ESG est configurée avec une connectivité privée pour accéder aux services DNS et NTP. La passerelle ESG est également configurée avec une règle NAT pour permettre l'accès aux adresses IP virtuelles proxy et maître {{site.data.keyword.icpfull_notm}} à partir du réseau {{site.data.keyword.cloud_notm}} 10.x.
 
 ## Intégration d'IBM Cloud Kubernetes Service et vCenter Server
+{: #vcsnsxt-overview-integration-iks-vcs-integration}
 
 Actuellement, les scénarios suivants permettent d'intégrer la mise en réseau {{site.data.keyword.containerlong_notm}} et vCenter Server :
 - **Réseau VLAN commun** - nécessite que les noeuds worker {{site.data.keyword.containerlong_notm}} soient déployés sur le même VLAN que l'instance vCenter Server. Avec un réseau VLAN, une passerelle ESG peut être un homologue BGP vers les noeuds worker.
@@ -25,10 +28,12 @@ Actuellement, les scénarios suivants permettent d'intégrer la mise en réseau 
 - **Appairage BGP** – L'appairage BGP n'est pas une offre fournie par défaut dans {{site.data.keyword.cloud_notm}}. Elle doit être demandée et approuvée. Une fois activé, l'appairage BGP permet aux routeurs Calico vRouter et à la passerelle ESG de faire la promotion des routes vers le routeur BCR.
 
 ## Intégration d'IBM Cloud Kubernetes Service et IBM Cloud Private
+{: #vcsnsxt-overview-integration-iks-icp-integration}
 
 L'intégration {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}} utilise la connectivité VPN strongSwan avec un conteneur strongSwan dans {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}.
 
 ## Affectation d'adresse IP
+{: #vcsnsxt-overview-integration-ip-address-allocation}
 
 D'un point de vue administratif, l'architecture de référence est dotée des plages réseau conceptuelles suivantes :
 -	**Réseau de pods {{site.data.keyword.containerlong_notm}}** - Tous les pods qui sont déployés sur un noeud worker se voient affecter une adresse IP privée comprise dans la plage 172.30.0.0/16 et ils sont routés uniquement entre les noeuds worker. Pour éviter des conflits, n'utilisez pas cette plage d'adresses IP sur des noeuds qui communiquent avec vos noeuds worker. Les noeuds worker et les pods peuvent communiquer de manière sécurisée sur le réseau privé en utilisant des adresses IP privées. Toutefois, lorsqu'un pod tombe en panne ou qu'un noeud worker a besoin d'être recréé, une nouvelle adresse IP privée lui est affectée.
@@ -50,6 +55,7 @@ D'un point de vue administratif, l'architecture de référence est dotée des pl
 -	**Réseau de noeuds worker {{site.data.keyword.icpfull_notm}} ** – Plage d'adresses IP d'entreprise utilisant une plage BYOIP qui n'est en conflit avec aucun des sous-réseaux fournis par {{site.data.keyword.cloud_notm}}.
 
 ## Flux de trafic réseau
+{: #vcsnsxt-overview-integration-net-traffic-flows}
 
 Les flux de trafic suivants sont décrits :
 -	Utilisateur externe sur Internet vers un niveau Web hébergé dans un conteneur dans {{site.data.keyword.containerlong_notm}}.
@@ -59,6 +65,7 @@ Les flux de trafic suivants sont décrits :
 -	Utilisateur d'entreprise sur l'accès au réseau d'entreprise vers une machine virtuelle dans vCenter Server.
 
 ### Utilisateur externe sur Internet vers un niveau Web hébergé dans un conteneur dans IBM Cloud Kubernetes Service
+{: #vcsnsxt-overview-integration-web-tier-iks}
 
 1.	L'utilisateur externe émet une demande vers le niveau Web à l'aide de l'URL.
 2.	Le serveur de noms de domaine est utilisé pour déterminer l'adresse IP. Cette adresse IP est une adresse publique {{site.data.keyword.cloud_notm}} sur un sous-réseau portable qui est affecté au service ALB ou Ingress.
@@ -68,6 +75,7 @@ Les flux de trafic suivants sont décrits :
 6.	Si l'application figure sur le même noeud worker, iptables est utilisé pour déterminer quelle interface interne est utilisée pour acheminer la demande. Si l'application figure sur un autre noeud worker, Calico vRouter est acheminé vers le noeud worker qui s'applique à l'aide de l'encapsulation IP-in-IP, uniquement si le noeud worker se trouve sur un autre sous-réseau.
 
 ### Utilisateur externe sur Internet vers un niveau Web hébergé dans un conteneur dans IBM Cloud Private.
+{: #vcsnsxt-overview-integration-web-tier-icp}
 
 1.	L'utilisateur externe émet une demande vers le niveau Web à l'aide de l'URL.
 2.	Le serveur de noms de domaine est utilisé pour déterminer l'adresse IP. Cette adresse IP est une adresse publique {{site.data.keyword.cloud_notm}} sur un sous-réseau portable qui est affecté à l'instance vCenter Server.
@@ -77,6 +85,7 @@ Les flux de trafic suivants sont décrits :
 6.	Si l'application figure sur le même noeud worker, iptables est utilisé pour déterminer quelle interface interne est utilisée pour acheminer la demande. Si l'application figure sur un autre noeud worker, Calico vRouter est acheminé vers le noeud worker qui s'applique à l'aide de l'encapsulation IP-in-IP. Le paquet IP-in-IP est encapsulé dans un cadre VXLAN pour le transport vers l'hôte vSphere ESXi sur lequel figure le noeud worker.
 
 ### Niveau Web hébergé dans un conteneur dans IBM Cloud Kubernetes Service vers un groupe de serveurs d'application de base de données hébergé dans une machine virtuelle dans vCenter Server.
+{: #vcsnsxt-overview-integration-iks-db-tier-vcs}
 
 La façon dont les tables de routage dans la passerelle et les routeurs vRouter sont renseignées varient en fonction de la méthode d'intégration. Voir l'intégration {{site.data.keyword.containerlong_notm}} et vCenter Server.
 1.	Le niveau Web qui s'exécute dans un conteneur dans {{site.data.keyword.containerlong_notm}} émet une demande vers une base de données qui s'exécute sur une machine virtuelle dans la même instance vCenter Server.
@@ -91,6 +100,7 @@ La façon dont les tables de routage dans la passerelle et les routeurs vRouter 
 10.	La machine virtuelle de base de données reçoit la demande.
 
 ### Niveau Web hébergé dans un conteneur dans IBM Cloud Private vers un groupe de serveurs d'application de base de données hébergé dans une machine virtuelle dans vCenter Server.
+{: #vcsnsxt-overview-integration-icp-db-tier-vcs}
 
 La façon dont les tables de routage dans la passerelle et les routeurs vRouter sont renseignées varient en fonction de la méthode d'intégration. Voir l'intégration {{site.data.keyword.icpfull_notm}} et vCenter Server.
 1.	Le niveau Web qui s'exécute dans un conteneur dans {{site.data.keyword.icpfull_notm}} émet une demande vers une base de données qui s'exécute sur une machine virtuelle dans la même instance vCenter Server.
@@ -104,6 +114,7 @@ La façon dont les tables de routage dans la passerelle et les routeurs vRouter 
 9.	La machine virtuelle de base de données reçoit la demande.
 
 ### Utilisateur d'entreprise sur l'accès au réseau d'entreprise vers une machine virtuelle dans vCenter Server
+{: #vcsnsxt-overview-integration-corporate-network-vcs}
 
 1.	Un utilisateur d'entreprise connecté au réseau interne de l'entreprise émet une demande d'une ressource sur une machine virtuelle hébergée dans vCenter Server.
 2.	Le serveur de noms de domaine est utilisé pour déterminer l'adresse IP de la machine virtuelle. Cette adresse IP figure sur un réseau qui a été étendu à {{site.data.keyword.cloud_notm}}.
@@ -113,7 +124,8 @@ La façon dont les tables de routage dans la passerelle et les routeurs vRouter 
 6.	Le concentrateur L2 reçoit la demande et la place sur le réseau VXLAN qui héberge le réseau étendu.
 7.	La machine virtuelle reçoit la demande.
 
-### Autres ressources
+## Liens connexes
+{: #vcsnsxt-overview-integration-related}
 
 * [Réseau {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud-computing/bluemix/our-network)
 * [Container white paper](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf) (téléchargement de fichier PDF)
@@ -122,7 +134,7 @@ La façon dont les tables de routage dans la passerelle et les routeurs vRouter 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [NSX for vSphere 6.4.3 configuration maximums](https://configmax.vmware.com/guest)
 * [Documentation de la plateforme {{site.data.keyword.cloud_notm}}](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html)
-* [{{site.data.keyword.containerlong_notm}}](/docs/containers/container_index.html)
+* [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-container_index)
 * [Projet Calico](https://www.projectcalico.org/)
 * [GitHub-Calico](https://github.com/projectcalico/calico)
 * [Kubernetes](https://kubernetes.io/)

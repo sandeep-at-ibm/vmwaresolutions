@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-26"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-10-26"
 {:important: .important}
 
 # Supresión de instancias de vCenter Server
+{: #vc_deletinginstance}
 
 Para liberar los componentes que ha solicitado en una instancia de VMware vCenter Server, suprima la instancia.
 
@@ -30,6 +31,7 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 {:note}
 
 ## Procedimiento para suprimir instancias de la página Instancias desplegadas
+{: #vc_deletinginstance-procedure1}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, busque la instancia que desea suprimir.
@@ -40,6 +42,7 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
 ## Procedimiento para suprimir instancias de la página de detalles de la instancia
+{: #vc_deletinginstance-procedure2}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia que desea suprimir.
@@ -49,10 +52,11 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
    1. Pulse el icono de menú de desbordamiento junto a **Consola de vCenter** de nuevo y pulse **Suprimir instancia**.
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vc_deletinginstance-related}
 
-* [Supresión de instancias de vCenter Server en una configuración de varios sitios](vc_deletinginstance_multi.html)
-* [Pedido de instancias de vCenter Server](vc_orderinginstance.html)
-* [Visualización de instancias de vCenter Server](vc_viewinginstances.html)
-* [Ampliación y reducción de la capacidad para instancias de vCenter Server](vc_addingremovingservers.html)
-* [Cómo ponerse en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html)
+* [Supresión de instancias de vCenter Server en una configuración de varios sitios](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance_multi)
+* [Pedido de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Visualización de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [Ampliación y reducción de la capacidad para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

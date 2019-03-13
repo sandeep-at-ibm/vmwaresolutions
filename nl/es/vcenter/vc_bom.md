@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2018-01-14"
 {:important: .important}
 
 # Lista de materiales de vCenter Server
+{: #vc_bom}
 
 Revise la información de la Lista de materiales (BOM) de las instancias de VMware vCenter Server.
 
 ## Lista de materiales de VLAN para instancias de vCenter Server
+{: #vc_bom-vlans}
 
 En la tabla siguiente se muestra la información de la lista de materiales para las VLAN de vCenter Server.
 
@@ -29,6 +31,7 @@ Tabla 1. Lista de materiales para las VLAN de instancias de vCenter Server
 | VLAN3     | Privada B, Portátil | Asignada a VMware vSAN, si se utiliza.<br><br>Asignada a VMware NFS, si se utiliza.<br><br>Asignada a VMware vSphere vMotion. |
 
 ## Lista de materiales de software para instancias de vCenter Server
+{: #vc_bom-software}
 
 En la tabla siguiente se muestra la información de la lista de materiales para los componentes de software de vCenter Server.
 
@@ -47,6 +50,7 @@ VMware vSAN es un componente opcional.
 {:note}
 
 ## Valores de configuración avanzada para servidores ESXi
+{: #vc_bom-esxi-server-advance-config}
 
 Revise la tabla siguiente para obtener una visión general de los valores de configuración avanzada que se aplican a los servidores ESXi. Estos valores dependen de si la instancia de vCenter Server se ha desplegado en V2.2 o posterior, o se ha actualizado a V2.2 o posterior desde V2.1 o anterior.
 
@@ -75,6 +79,7 @@ Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e
   Para obtener más información, consulte [Cómo aumentar el valor predeterminado que define el número máximo de montajes NFS en un host ESXi](https://kb.vmware.com/s/article/2239).
 
 ## Valores de configuración de grupos de puertos y NSX
+{: #vc_bom-nsx-port-group-config}
 
 Revise la tabla siguiente para obtener una visión general de los valores de configuración de grupos de puertos y NSX de VMware para instancias de vCenter Server y las diferencias entre releases.
 
@@ -93,6 +98,7 @@ Tabla 4. Valores de configuración de grupos de puertos y NSX para instancias de
 | Grupo puertos SDDC-DPortGroup-Externo | **Enlace de puertos** establecido en **Efímero - sin enlace** | **Enlace de puertos** establecido en **Enlace estático** |
 
 ## Valores de configuración de MTU de red
+{: #vc_bom-network-mtu-config}
 
 El clúster de vSphere utiliza dos conmutadores distribuidos de vSphere (vDS), uno para la conectividad de red pública y el otro para la conectividad de red privada.
 
@@ -116,19 +122,22 @@ Los valores no se aplican a clústeres nuevos en el mismo {{site.data.keyword.Cl
 Para instancias desplegadas en V2.0 o anterior, se recomienda que actualice usted mismo el valor de MTU del conmutador público a 1500.
 
 ### Actualización del valor de MTU del conmutador público
+{: #vc_bom-procedure-update-public-switch-mtu-setting}
 
 Para actualizar el valor de MTU del conmutador público, siga estos pasos en el cliente web de VMware vSphere:
 1. Pulse con el botón derecho del ratón en el vDS y pulse **Editar valores**.
 2. En el separador **Propiedades**, seleccione la opción **Avanzadas**.
 3. Asegúrese de que el valor de **MTU máxima** está establecido en 1500.
 
-   **Nota:** Cuando se cambia el tamaño de MTU en un vDS, los enlaces ascendentes adjuntos (NIC físicos) se detienen y se vuelven a iniciar. Como resultado se produce una breve parada para las máquinas virtuales que están utilizando el enlace ascendente. Por lo tanto se recomienda planear la actualización del valor de la MTU durante una parada planificada.
+   Cuando se cambia el tamaño de MTU en un vDS, los enlaces ascendentes adjuntos (NIC físicos) se detienen y se vuelven a iniciar. Como resultado se produce una breve parada para las máquinas virtuales que están utilizando el enlace ascendente. Por lo tanto se recomienda planear la actualización del valor de la MTU durante una parada planificada.
+   {:note}
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vc_bom-related}
 
 * [Números de compilación y versiones de VMware ESXi y ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Números de compilación y versiones de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Habilitación de tramas de gran tamaño en conmutadores distribuidos virtuales](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [Visión general de vCenter Server](vc_vcenterserveroverview.html)
-* [Planificación de instancias de vCenter Server](vc_planning.html)
+* [Visión general de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Planificación de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

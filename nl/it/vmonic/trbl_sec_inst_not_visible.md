@@ -4,17 +4,20 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # Il sistema vCenter Server secondario non viene visualizzato nell'inventario del client web vSphere
+{: #trbl_sec_inst_not_visible}
 
 ## Problema
+{: #trbl_sec_inst_not_visible-problem}
 
 In una configurazione multisito, dopo aver aggiunto una nuova istanza secondaria, il suo sistema vCenter Server non è visibile quando accedi al client web VMware vSphere di un'istanza ordinata in precedenza.
 
 ## Risoluzione
+{: #trbl_sec_inst_not_visible-resolution}
 
 Questo è un problema noto di VMware 6.5.
 

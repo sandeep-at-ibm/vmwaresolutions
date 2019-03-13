@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
 # Richiesta di servizi gestiti per Veeam on IBM Cloud
+{: #managing_veeam_services}
 
 Il servizio Veeam on {{site.data.keyword.cloud}} si integra perfettamente con i tuoi hypervisor VMware per aiutare la tua azienda a raggiungere l'alta disponibilità (HA). Questo servizio fornisce obiettivi di tempo e punti di ripristino per le tue applicazioni e i tuoi dati. Gli obiettivi di tempo e punti di ripristino possono essere forniti in meno di 15 minuti dopo il completamento della configurazione. Utilizza questo servizio per controllare sia il backup che il ripristino di tutte le macchine virtuali per la tua infrastruttura direttamente dalla console Veeam.
 
@@ -19,18 +20,20 @@ Quando richiedi i servizi gestiti per Veeam on {{site.data.keyword.cloud_notm}},
 * Ottieni inoltre una soluzione di protezione dei dati scalabile e flessibile per ridurre il costo totale di proprietà e gestire i tuoi requisiti di conformità.
 
 ## Procedura per richiedere i servizi gestiti per Veeam on IBM Cloud
+{: #managing_veeam_services-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Introduzione** nel riquadro di navigazione a sinistra.
 2. Scorri la pagina e fai clic sulla scheda **Servizi gestiti per Veeam on IBM Cloud**, che si trova in **Ordina servizi gestiti aggiuntivi**.
 3. Apri la pagina **Veeam on IBM Cloud**, controlla la descrizione e le specifiche tecniche per Veeam on {{site.data.keyword.cloud_notm}} come servizio gestito e fai clic su **Crea**.
 4. Specifica le impostazioni di configurazione in base ai tuoi requisiti o accetta i valori predefiniti.
 5. Fai clic su **vCenter Server** o **Cloud Foundation** per aggiungere il servizio a una delle tue istanze.
-6. Per aggiungere il servizio mentre ordini una nuova istanza, fai clic su **Aggiungi alla nuova istanza** e procedi quindi con l'ordine di una nuova istanza [vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html), [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html) o [Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html).
+6. Per aggiungere il servizio mentre ordini una nuova istanza, fai clic su **Aggiungi alla nuova istanza** e procedi quindi con l'ordine di una nuova istanza [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance), [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance) o [Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance).
 7. Per aggiungere il servizio a un'istanza esistente, fai clic su **Aggiungi all'istanza esistente**, seleziona l'istanza desiderata dall'elenco, quindi conferma di voler procedere con l'ordine facendo clic su **Fornitura**.
 
-### Link correlati
+## Link correlati
+{: #managing_veeam_services-related}
 
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
+* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Servizi di backup e protezione dei dati](https://www-935.ibm.com/services/business-continuity/backup-and-data-protection-services/)

@@ -4,15 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
 # Gestione delle notifiche di sistema
+{: #notifications}
 
 Puoi controllare le notifiche per verificare lo stato delle operazioni di sistema o dell'utente. Puoi anche utilizzare le informazioni per analizzare i problemi che potrebbero verificarsi.
 
 ## Visualizzazione delle notifiche
+{: #notifications-view}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Notifiche** nel riquadro di navigazione a sinistra.
 2. Visualizza il riepilogo su tutte le notifiche.
@@ -68,10 +70,12 @@ Puoi controllare le notifiche per verificare lo stato delle operazioni di sistem
 3. Fai clic su una riga di notifica per visualizzarne i dettagli.
 
 ## Filtraggio delle notifiche
+{: #notifications-filter}
 
 Per impostazione predefinita, vengono visualizzate tutte le notifiche non lette. Puoi filtrare le notifiche per stato, severità e tipo. Per filtrare le notifiche, seleziona le caselle di spunta solo per gli elementi che vuoi visualizzare negli elenchi **Stato**, **Severità** o **Tipo**.
 
-### Link correlati
+## Link correlati
+{: #notifications-related}
 
-* [Domande frequenti](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)

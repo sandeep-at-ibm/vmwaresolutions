@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,14 +13,16 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Ordine di istanze vCenter Server with Hybridity Bundle
+{: #vc_hybrid_orderinginstance}
 
-Per distribuire una piattaforma virtualizzata VMware flessibile e personalizzabile che soddisfi al meglio le tue esigenze del carico di lavoro, ordina un'istanza VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle. Il tuo ordine dell'istanza vCenter Server with Hybridity Bundle include la licenza di VMware Hybrid Cloud Extension (HCX) e ti dà diritto al servizio VMware HCX on {{site.data.keyword.cloud_notm}}. Puoi anche aggiungere dei servizi, come [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html) per il ripristino di emergenza.
+Per distribuire una piattaforma virtualizzata VMware flessibile e personalizzabile che soddisfi al meglio le tue esigenze del carico di lavoro, ordina un'istanza VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle. Il tuo ordine dell'istanza vCenter Server with Hybridity Bundle include la licenza di VMware Hybrid Cloud Extension (HCX) e ti dà diritto al servizio VMware HCX on {{site.data.keyword.cloud_notm}}. Puoi anche aggiungere dei servizi, come [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) per il ripristino di emergenza.
 
 ## Requisiti per ordinare le istanze vCenter Server with Hybridity Bundle
+{: #vc_hybrid_orderinginstance-req}
 
 Assicurati di aver completato le seguenti attività:
-*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](/docs/services/vmwaresolutions/vmonic/useraccount.html).
-*  Hai esaminato le informazioni in [Requisiti e pianificazione per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html).
+*  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Gestione di account utente e impostazioni](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+*  Hai esaminato le informazioni in [Requisiti e pianificazione per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning).
 * Hai esaminato il formato del nome di istanza e di dominio. Il nome del dominio e l'etichetta del dominio secondario vengono utilizzati per generare il nome utente e i nomi server dell'istanza.
 
 Tabella 1. Formato del valore per i nomi di istanza e di dominio
@@ -37,22 +39,26 @@ Non modificare alcun valore impostato durante l'ordine o la distribuzione dell'i
 {:important}
 
 ## Impostazioni di sistema
+{: #vc_hybrid_orderinginstance-sys-settings}
 
 Quando ordini un'istanza vCenter Server with Hybridity Bundle, devi specificare le seguenti impostazioni di sistema.
 
 ### Nome istanza
+{: #vc_hybrid_orderinginstance-inst-name}
 
 Il nome dell'istanza deve rispettare i seguenti requisiti:
 * Sono consentiti solo caratteri alfanumerici e trattini (-).
-* Il nome istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
+* Il nome dell'istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
 * La lunghezza massima del nome dell'istanza è di 10 caratteri.
 * Il nome dell'istanza deve essere univoco all'interno del tuo account.
 
 ### Primaria o secondaria
+{: #vc_hybrid_orderinginstance-primary-secondary}
 
 Scegli se ordinare un nuova istanza primaria o un'istanza secondaria per un'istanza primaria esistente.
 
 ## Impostazioni di licenza
+{: #vc_hybrid_orderinginstance-licensing-settings}
 
 Con il tuo ordine dell'istanza vCenter Server with Hybridity Bundle sono incluse le seguenti licenze VMware. Devi specificare l'edizione per le licenze NSX e vSAN.
 
@@ -62,21 +68,25 @@ Con il tuo ordine dell'istanza vCenter Server with Hybridity Bundle sono incluse
 * vSAN 6.6 (Edizione Advanced o Enterprise)
 
 ### Attenzione
+{: #vc_hybrid_orderinginstance-attention}
 
 * Le istanze vCenter Server with Hybridity Bundle non supportano l'opzione BYOL (Bring Your Own License).
 * Le edizioni minime della licenza sono indicate sull'interfaccia utente. Se sono supportate edizioni diverse per i componenti, puoi selezionare l'edizione che vuoi.
 
 ## Impostazioni di Bare Metal Server
+{: #vc_hybrid_orderinginstance-bare-metal-settings}
 
 Le impostazioni di Bare Metal sono basate sulla tua selezione del {{site.data.keyword.CloudDataCent_notm}} e sulla configurazione del server bare metal.
 
 Per le configurazioni vSAN, sono richiesti quattro server ESXi per i cluster iniziali e di post-distribuzione. Tutti i server ESXi condividono la stessa configurazione. Nella post distribuzione, puoi aggiungere altri quattro cluster.
 
 ### Ubicazione data center
+{: #vc_hybrid_orderinginstance-dc-location}
 
 Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui deve essere ospitata l'istanza.
 
 ### Skylake
+{: #vc_hybrid_orderinginstance-skylake}
 
 Se selezioni **Skylake**, puoi scegliere la combinazione di CPU e RAM del Bare Metal Server in base alle tue esigenze.
 
@@ -89,6 +99,7 @@ Tabella 2. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
 | Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 ### Broadwell
+{: #vc_hybrid_orderinginstance-broadwell}
 
 Se selezioni **Broadwell**, puoi scegliere la combinazione di CPU e RAM del Bare Metal Server in base alle tue esigenze.
 
@@ -103,10 +114,12 @@ Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4 / 64 core totali, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Numero di server Bare Metal
+{: #vc_hybrid_orderinginstance-bare-metal-number}
 
 Sono selezionati quattro server ESXi per impostazione predefinita e non possono essere modificati.
 
 ## Impostazioni di archiviazione
+{: #vc_hybrid_orderinginstance-storage-settings}
 
 VMware vSAN 6.6 è incluso con il tuo ordine dell'istanza vCenter Server with Hybridity Bundle. Specifica le seguenti opzioni vSAN:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
@@ -119,10 +132,12 @@ VMware vSAN 6.6 è incluso con il tuo ordine dell'istanza vCenter Server with Hy
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
 
 ## Impostazioni dell'interfaccia di rete
+{: #vc_hybrid_orderinginstance-network-interface-settings}
 
 Quando ordini un'istanza vCenter Server with Hybridity Bundle, devi specificare le seguenti impostazioni dell'interfaccia di rete.
 
 ### Prefisso nome host
+{: #vc_hybrid_orderinginstance-host-name-prefix}
 
   Il prefisso del nome host deve rispettare i seguenti requisiti:
   *  Sono consentiti solo caratteri alfanumerici e trattini (-).
@@ -130,6 +145,7 @@ Quando ordini un'istanza vCenter Server with Hybridity Bundle, devi specificare 
   *  La lunghezza massima del prefisso del nome host è di 10 caratteri.
 
 ### Etichetta dominio secondario
+{: #vc_hybrid_orderinginstance-subdomain-label}
 
 L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
 *  Sono consentiti solo caratteri alfanumerici e trattini (-).
@@ -138,6 +154,7 @@ L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
 *  L'etichetta del dominio secondario deve essere univoca all'interno del tuo account.
 
 ### Nome dominio
+{: #vc_hybrid_orderinginstance-domain-name}
 
 Il nome del dominio root deve rispettare i seguenti requisiti:
 * Il nome del dominio deve essere composto da due o più stringhe separate da un punto (.)
@@ -150,6 +167,7 @@ La lunghezza massima del nome di dominio completo (o FQDN, Fully Qualified Domai
 {:note}
 
 ### Rete pubblica o privata
+{: #vc_hybrid_orderinginstance-public-private-network}
 
 Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC) si basano sulla tua selezione di **Rete pubblica e privata** o **Solo rete privata**. I seguenti servizi aggiuntivi richiedono NIC pubbliche e non sono disponibili se selezioni l'opzione privata:
 
@@ -159,12 +177,14 @@ Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC) si bas
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Ordina nuove VLAN
+{: #vc_hybrid_orderinginstance-new-vlans}
 
 Seleziona **Ordina nuove VLAN** per ordinare una nuova VLAN pubblica e due nuove VLAN private.
 
 Per l'ordine della tua istanza sono richieste una VLAN pubblica e due VLAN private. Le due VLAN private sono collegate a ogni Bare Metal Server.
 
 ### Seleziona VLAN esistenti
+{: #vc_hybrid_orderinginstance-existing-vlans}
 
 A seconda del {{site.data.keyword.CloudDataCent_notm}} che hai selezionato, potrebbero essere disponibili VLAN pubbliche e private esistenti.
 
@@ -172,12 +192,12 @@ Per l'ordine della tua istanza sono richieste una VLAN pubblica e due VLAN priva
 
 Seleziona **Seleziona VLAN esistenti** per riutilizzare VLAN pubbliche e private esistenti e scegliere tra le VLAN e sottoreti disponibili.
 
-
 * Assicurati che la configurazione del firewall sulle VLAN selezionate non blocchi il traffico dei dati di gestione.
 * Assicurati che tutte le VLAN che selezioni si trovino nello stesso pod, poiché i server ESXi non possono essere forniti su VLAN di pod misti.
 {:important}
 
 ### Configurazione DNS
+{: #vc_hybrid_orderinginstance-dns-config}
 
 Seleziona la configurazione DNS (Domain Name System) per la tua istanza:
 
@@ -194,14 +214,17 @@ Hai 30 giorni per attivare le VM.
 Per ulteriori informazioni su come ordinare le licenze di Windows, vedi la [documentazione di Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
 
 ## Impostazioni dei servizi
+{: #vc_hybrid_orderinginstance-addon-services}
 
-Quando ordini un'istanza vCenter Server with Hybridity Bundle, puoi anche ordinare servizi aggiuntivi. Per ulteriori informazioni sui servizi, vedi [Servizi disponibili per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances).
+Quando ordini un'istanza vCenter Server with Hybridity Bundle, puoi anche ordinare servizi aggiuntivi. Per ulteriori informazioni sui servizi, vedi [Servizi disponibili per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances).
 
 ## Riepilogo ordine
+{: #vc_hybrid_orderinginstance-order-summary}
 
 In base alla configurazione che hai selezionato per l'istanza e i servizi aggiuntivi, il costo stimato viene generato e visualizzato immediatamente nella sezione **Riepilogo ordine** nel riquadro di destra. Fai clic su **Dettagli sui prezzi** nella parte inferiore del riquadro di destra per generare un documento PDF che fornisce i dettagli della stima.
 
 ## Procedura per ordinare le istanze vCenter Server with Hybridity Bundle
+{: #vc_hybrid_orderinginstance-procedure}
 
 1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **vCenter Server** nella sezione **Data center virtuali**.
 2. Nella pagina **VMware vCenter Server on IBM Cloud**, fai clic sulla scheda **vCenter Server with Hybridity Bundle** e quindi su **Crea**.
@@ -227,27 +250,29 @@ In base alla configurazione che hai selezionato per l'istanza e i servizi aggiun
      *  Se vuoi ordinare nuove VLAN pubbliche e private, fai clic su **Ordina nuove VLAN**.
      *  Se vuoi riutilizzare le VLAN pubbliche e private esistenti quando sono disponibili, fai clic su **Seleziona VLAN esistenti** e quindi seleziona la VLAN pubblica, la sottorete primaria, la VLAN privata, la sottorete primaria privata e la VLAN privata secondaria.
   4. Seleziona la configurazione DNS.
-9. Completa la configurazione per il servizio HCX on {{site.data.keyword.cloud_notm}} incluso. Per ulteriori informazioni su come fornire le impostazioni per il servizio, vedi la sezione _Configurazione di VMware HCX on IBM Cloud_ in [Ordine di VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration).
+9. Completa la configurazione per il servizio HCX on {{site.data.keyword.cloud_notm}} incluso. Per ulteriori informazioni su come fornire le impostazioni per il servizio, vedi la sezione _Configurazione di VMware HCX on IBM Cloud_ in [Ordine di VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
 10. Seleziona i servizi aggiuntivi da distribuire nell'istanza facendo clic sulla scheda del servizio corrispondente. Se un servizio richiede la configurazione, completa le impostazioni specifiche del servizio e fai clic su **Aggiungi servizio** sulla scheda.  
 Per ulteriori informazioni su come fornire le impostazioni per un servizio, vedi l'argomento relativo all'ordine del servizio corrispondente.
 
-8. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza prima di effettuare l'ordine.
+11. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza prima di effettuare l'ordine.
    1. Esamina le impostazioni per l'istanza.
    2. Esamina il costo stimato dell'istanza. Fai clic su **Dettagli sui prezzi** per generare un riepilogo in formato PDF. Per salvare o stampare il riepilogo del tuo ordine, fai clic sull'icona **Stampa** o **Download** nella parte superiore destra della finestra PDF.
    3. Fai clic sul link o sui link dei termini che si applicano al tuo ordine e conferma di accettare questi termini prima di ordinare l'istanza.
    4. Fai clic su **Fornitura**.
 
 ## Risultati
+{: #vc_hybrid_orderinginstance-results}
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 
 Se ordini un'istanza secondaria, il client web VMware vSphere per l'istanza primaria (collegata a quella secondaria) potrebbe essere riavviato una volta completato l'ordine della tua istanza secondaria.
 
 ## Operazioni successive
+{: #vc_hybrid_orderinginstance-next}
 
 Visualizza e gestisci l'istanza vCenter Server with Hybridity Bundle che hai ordinato.
 
@@ -263,12 +288,13 @@ Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmw
 
    Le eccezioni a queste attività includono la gestione delle condivisioni file di archiviazione condivisa dal {{site.data.keyword.slportal}}. Tali attività includono: l'ordine, l'eliminazione (che potrebbe influire sugli archivi di dati, se montati), l'autorizzazione e il montaggio di condivisioni file di archiviazione condivisa.
 
-### Link correlati
+## Link correlati
+{: #vc_hybrid_orderinginstance-related}
 
-* [Registrazione di un account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
-* [Visualizzazione delle istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [Configurazione multisito per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_multisite.html)
-* [Aggiunta e visualizzazione di cluster per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
-* [Espansione e contrazione della capacità per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
-* [Eliminazione di istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
+* [Registrazione di un account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Visualizzazione delle istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [Configurazione multisito per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_multisite)
+* [Aggiunta e visualizzazione di cluster per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
+* [Espansione e contrazione della capacità per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [Eliminazione di istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)

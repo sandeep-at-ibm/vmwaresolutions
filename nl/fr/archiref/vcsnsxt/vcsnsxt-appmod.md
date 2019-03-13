@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Présentation de la modernisation des applications
+{: #vcsnsxt-appmod}
 
 Le diagramme ci-après présente l'architecture de référence de la modernisation des applications qui est déployée par Acme Skateboards et qui est décrite en détail dans cette documentation.
 
@@ -35,6 +36,7 @@ Les principaux composants de l'architecture sont les suivants :
   - Le trafic entre les systèmes existants du centre de données sur site et les machines virtuelles du cloud.
 
 ## Principaux avantages pour l'entreprise Acme Skateboards
+{: #vcsnsxt-appmod-benefits}
 
 - Une livraison plus rapide des projets informatiques pour les développeurs et les secteurs d'activité. En effet, le temps nécessaire à l'approvisionnement, à l'architecture, à l'implémentation et au déploiement des ressources passe de quelques semaines ou quelques mois à quelques heures. Attendre que les équipes dédiées à la mise en réseau ou à la sécurité commandent des services, tels que les équilibreurs de charge, les pare-feux, les commutateurs et les routeurs, a pour conséquence de réduire leur délai de rentabilisation.
 - Une sécurité renforcée au moyen de serveurs bare metal dédiés dans un cloud privé hébergé, y compris le déploiement de noeud final privé dans des services {{site.data.keyword.cloud_notm}}, tels qu'{{site.data.keyword.containerlong_notm}} et KMIP.
@@ -45,6 +47,7 @@ Les clients qui se tournent vers des plateformes applicatives natives en cloud, 
 
 Cette architecture de référence montre comment VCS, {{site.data.keyword.icpfull_notm}} et {{site.data.keyword.containerlong_notm}} permettent à l'entreprise Acme Skateboards de se déplacer en toute sécurité tout au long de son parcours de modernisation des applications.
 
-### Liens connexes
+## Liens connexes
+{: #vcsnsxt-appmod-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

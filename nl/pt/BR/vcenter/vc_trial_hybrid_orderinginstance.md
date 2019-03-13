@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Pedindo e excluindo instâncias do Single-node Trial for VMware vCenter Server on IBM Cloud
+{: #vc_trial_hybrid_orderinginstance}
 
 O Single-node Trial for VMware vCenter Server on {{site.data.keyword.cloud}} é uma nuvem privada hospedada em um único locatário que entrega a pilha do VMware vSphere como um serviço. Embora o ambiente gerenciado pelo cliente seja geralmente implementado com um mínimo de três nós, essa avaliação de nó único fornece um caminho de baixo custo para obter benefícios de uma implementação de nuvem híbrida.
 
@@ -26,6 +27,7 @@ Essa avaliação é destinada ao uso de até 90 dias. Quando tiver concluído a 
 Para obter informações sobre o design de arquitetura, veja [Arquitetura do HCX on IBM Cloud para o Single-node Trial for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html).
 
 ## Especificações técnicas para instâncias do Single-node Trial for vCenter Server
+{: #vc_trial_hybrid_orderinginstance-tech-specs}
 
 Os componentes a seguir são incluídos em sua instância do Single-node Trial for vCenter Server:
 
@@ -33,10 +35,12 @@ A disponibilidade e a precificação de configurações padronizadas de hardware
 {:note}
 
 ### Bare Metal Server
+{: #vc_trial_hybrid_orderinginstance-bare-metal}
 
 Um processador Dual Intel Xeon Gold 5120 (28 Núcleos, 2.20 GHz) com 384 GB de RAM.
 
 ### Especificações de rede para instâncias do Single-node Trial for vCenter Server
+{: #vc_trial_hybrid_orderinginstance-networking-specs}
 
 Os componentes de rede a seguir são pedidos:
 *  Uplinks duais de rede pública e privada de 10 Gbps
@@ -50,16 +54,16 @@ Os componentes de rede a seguir são pedidos:
   * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público.
 
 ### Virtual Server Instances
+{: #vc_trial_hybrid_orderinginstance-vsi}
 
 Os virtual server instances (VSIs) a seguir são pedidos:
-
 * Uma VSI para o IBM CloudBuilder, que é cancelada após a conclusão da implementação da instância.
 * Um VSI do Microsoft Windows Server para o Microsoft Active Directory (AD) é implementado e pode ser consultado. O VSI funciona como o DNS para a instância em que os hosts e as MVs são registrados.
 
 ### Licenças e taxas fornecidas pela IBM
+{: #vc_trial_hybrid_orderinginstance-license-and-fee}
 
-As licenças a seguir são incluídas com a sua ordem de instância do Single-node Trial for vCenter Server.
-
+As licenças a seguir estão incluídas com seu pedido de instância do Single-node Trial for vCenter Server:
 * VMware vSphere Enterprise Plus 6.5
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
@@ -68,6 +72,7 @@ As instâncias do Single-node Trial for vCenter Server não suportam o Bring You
 {:note}
 
 ## Especificações técnicas para o VMware HCX on IBM Cloud
+{: #vc_trial_hybrid_orderinginstance-hcx-tech-specs}
 
 O Single-node Trial for vCenter Server inclui o HCX on {{site.data.keyword.cloud_notm}}. Os componentes a seguir são ordenados e incluídos no serviço HCX on {{site.data.keyword.cloud_notm}}.
 
@@ -75,12 +80,14 @@ As instâncias do HCX local incluem apenas licenciamento e ativação.
 {:note}
 
 ### Um par ativo/passivo de VMware NSX Edge Services Gateways para gerenciamento do HCX
+{: #vc_trial_hybrid_orderinginstance-esg}
 
 * CPU: 6 vCPU
 * RAM: 8 GB
 * Disco: 3 GB VMDK
 
 ### HCX Management Appliance-máquina virtual
+{: #vc_trial_hybrid_orderinginstance-hcs-mgmt-appliance}
 
 * CPU: 4 vCPU
 * RAM: 12 GB
@@ -89,12 +96,14 @@ As instâncias do HCX local incluem apenas licenciamento e ativação.
 Os dispositivos HCX adicionais são implementados durante a configuração, conforme necessário, para conectividade L2, otimização de WAN e conexões de gateway.
 
 ### Especificações de rede para o serviço HCX on IBM Cloud
+{: #vc_trial_hybrid_orderinginstance-hcx-networking-specs}
 
 * Uma sub-rede móvel pública com 16 endereços IP
 * Duas sub-redes portáteis privadas com 64 endereços IP
 * Oito endereços IP da sub-rede vMotion móvel privada
 
 ## Requisitos e planejamento para pedir instâncias do Single-node Trial for vCenter Server
+{: #vc_trial_hybrid_orderinginstance-req}
 
 Assegure-se de confirmar os requisitos a seguir e conclua as tarefas a seguir:
 * Pré-requisitos para instâncias do HCX no local:
@@ -110,6 +119,7 @@ Assegure-se de confirmar os requisitos a seguir e conclua as tarefas a seguir:
     * O nome da instância deve ser exclusivo dentro de sua conta.
 
 ## Procedimento para pedir instâncias do Single-node Trial for vCenter Server
+{: #vc_trial_hybrid_orderinginstance-procedure}
 
 1. Na página **Single-node Trial for VMware vCenter Server on {{site.data.keyword.cloud_notm}}**, clique em **Continuar**.
 2. Na página **Single-node Trial for VMware vCenter Server**, conclua as etapas para solicitar uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} ou forneça seu **Nome do usuário** e **Chave API** existentes e clique em **Recuperar**.
@@ -128,10 +138,12 @@ Assegure-se de confirmar os requisitos a seguir e conclua as tarefas a seguir:
    4. Clique em **Provisão**.
 
 ### Resultados
+{: #vc_trial_hybrid_orderinginstance-results}
 
 A implementação da instância é iniciada automaticamente e o HCX no local na chave de ativação de serviço do {{site.data.keyword.cloud_notm}} é pedido.
 
 #### Processo de implementação para HCX no IBM Cloud
+{: #vc_trial_hybrid_orderinginstance-hcs-deploy-process}
 
 A implementação do HCX no {{site.data.keyword.cloud_notm}} é automatizada. As etapas a seguir são concluídas pelo processo de automação do {{site.data.keyword.vmwaresolutions_short}}:
 1. Três sub-redes são pedidas para o HCX por meio da infraestrutura do {{site.data.keyword.cloud_notm}}:
@@ -160,6 +172,7 @@ HCX, os componentes do HCX local e os componentes do HCX remoto.
 6. O nome do host e o endereço IP do HCX Manager está registrado com o servidor DNS do VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 #### Visualizando detalhes da instância
+{: #vc_trial_hybrid_orderinginstance-view-inst-details}
 
 É possível verificar o status da implementação visualizando os detalhes da instância. Clique em **Instâncias implementadas** na área de janela de navegação esquerda e localize a tabela **Instâncias do vCenter Server** ou **Instâncias do HCX no local** para visualizar informações sobre as instâncias que você pediu.
 
@@ -168,6 +181,7 @@ Quando a instância é implementada com êxito, os componentes que são descrito
 O status da instância muda para **Pronto para uso** e você recebe uma notificação por e-mail.
 
 ### O que fazer a seguir
+{: #vc_trial_hybrid_orderinginstance-next}
 
 Instale o HCX Enterprise Manager local e configure a conexão com a instância do HCX on {{site.data.keyword.cloud_notm}}.
 
@@ -213,6 +227,7 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 {:important}
 
 ## Procedimento para excluir as instâncias do Single-node Trial for vCenter Server
+{: #vc_trial_hybrid_orderinginstance-deleting-procedure}
 
 Quando você exclui uma instância do Single-node Trial for vCenter Server, os componentes a seguir são liberados sequencialmente:
 
@@ -237,7 +252,8 @@ Conclua as etapas a seguir para excluir uma instância do Single-node Trial for 
    1. Na coluna **Ações**, clique no ícone Excluir novamente.
    2. Na janela **Excluir instância**, clique em **OK**.
 
-### Links relacionados
+## Links relacionados
+{: #vc_trial_hybrid_orderinginstance-related}
 
 * [Design de arquitetura do HCX on IBM Cloud para o Single-node Trial for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [Documentação do VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)

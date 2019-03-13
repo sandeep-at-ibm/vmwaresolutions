@@ -4,10 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Panoramica di vCenter Server on IBM Cloud with Hybridity Bundle
+{: #vcs-hybridity-intro}
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle è un cloud privato ospitato che consente di estendere in modo semplice e rapido la tua infrastruttura in loco nel cloud per un'ibridità dell'infrastruttura senza interruzioni e sicura e una reale mobilità dell'applicazione.
 
@@ -25,10 +26,11 @@ L'offerta di backup e ripristino di emergenza da IBM, Veeam e Zerto fornisce sic
 
 vCenter Server Hybridity Bundle non è un servizio gestito, anche se puoi aggiungere servizi gestiti da IBM per scaricare le operazioni quotidiane e la manutenzione dei livelli di virtualizzazione, sistemi operativi guest o applicazioni. Il team {{site.data.keyword.cloud_notm}} Professional Services è anche disponibile per aiutarti ad accelerare il tuo viaggio verso il cloud con servizi di migrazione, implementazione, pianificazione e incorporazione.
 
-Le opzioni di integrazione della piattaforma di vCenter Server Hybridity Bundle non sono limitate a quelle disponibili da VMware come vRealize Suite o vSphere with Operations Management, ma si estendono a più offerte di servizi di {{site.data.keyword.cloud_notm}} come [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks/vcsiks-intro.html) e [{{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html), che utilizzano Terraform open source per gestire e fornire l'infrastruttura come codice.
+Le opzioni di integrazione della piattaforma di vCenter Server Hybridity Bundle non sono limitate a quelle disponibili da VMware come vRealize Suite o vSphere with Operations Management, ma si estendono a più offerte di servizi di {{site.data.keyword.cloud_notm}} come [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro) e [{{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro), che utilizzano Terraform open source per gestire e fornire l'infrastruttura come codice.
 
 Il vasto portafoglio di servizi e opzioni di integrazione di più offerte disponibili per vCenter Server Hybridity Bundle forniscono una piattaforma davvero ibrida che rende l'ibridità un servizio possibile.
 
-### Link correlati
+## Link correlati
+{: #vcs-hybridity-intro-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-30"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2018-11-30"
 {:important: .important}
 
 # Processo di rimozione per Zerto on IBM Cloud
+{: #removingzertodr}
 
 Il processo di rimozione del servizio Zerto on {{site.data.keyword.cloud}} è automatizzato. Per la corretta rimozione del servizio Zerto on {{site.data.keyword.cloud_notm}}, viene completata la seguente procedura.
 
 ## Come rimuovere Zerto on IBM Cloud
+{: #removingzertodr-remove}
 
 1. Fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra e seleziona l'istanza da cui vuoi rimuovere il servizio.
 2. Fai clic sulla scheda **Servizi**.
@@ -33,10 +35,12 @@ Il processo di rimozione del servizio Zerto on {{site.data.keyword.cloud}} è au
       {:note}
 
 ## Risultati
+{: #removingzertodr-results}
 
 Una volta completata correttamente la rimozione del servizio, riceverai una notifica via e-mail e la voce del servizio verrà eliminata dalla scheda **Servizi installati**.
 
-### Link correlati
+## Link correlati
+{: #removingzertodr-related}
 
 * [Ordine di Zerto on {{site.data.keyword.cloud_notm}}](zerto_ordering.html)
 * [Gestione di Zerto on {{site.data.keyword.cloud_notm}}](managingzertodr.html)

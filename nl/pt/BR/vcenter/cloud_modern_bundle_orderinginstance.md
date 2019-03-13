@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,25 +13,30 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Pedindo, visualizando e excluindo instâncias do Single-node Trial for Migration and App Modernization
+{: #cloud_modern_bundle_orderinginstance}
 
 Revise os requisitos de planejamento antes de pedir uma instância do Single-node Trial for Migration and App Modernization.
 
 ## Requisitos e planejamento para pedir instâncias de Single-node Trial for Migration and App Modernization
+{: #cloud_modern_bundle_orderinginstance-req}
 
 Assegure-se de que você confirme os requisitos a seguir e conclua as tarefas a seguir.
 
 ### Pré-requisitos para Instâncias do HCX no local
+{: #cloud_modern_bundle_orderinginstance-hcx-req}
 
 * Requer o VMware vSphere e o vCenter 5.5 ou superior.
 * O ambiente do vSphere deve ter comutadores distribuídos para as MVs que serão migradas para o {{site.data.keyword.cloud_notm}}.
 * O dispositivo virtual HCX Manager deve estar apto a ser implementado em uma rede privada no ambiente no local e deve ter permissão para acessar a Internet pública.
 
 ### Conta de infraestrutura do IBM Cloud
+{: #cloud_modern_bundle_orderinginstance-account-req}
 
 * Para usar {{site.data.keyword.vmwaresolutions_short}} para pedir instâncias, deve-se ter uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer). O custo dos componentes que são pedidos em suas instâncias é faturado para aquela conta {{site.data.keyword.cloud_notm}}.
 *  Configure as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Configurações** na área de janela de navegação esquerda.
 
 ### Requisitos de nome da instância
+{: #cloud_modern_bundle_orderinginstance-inst-name-req}
 
 Revise os requisitos de nome da instância:
 * Apenas caracteres alfanuméricos e o traço (-) são permitidos.
@@ -40,6 +45,7 @@ Revise os requisitos de nome da instância:
 * O nome da instância deve ser exclusivo dentro de sua conta.
 
 ## Procedimento para pedir instâncias do Single-node Trial for Migration and App Modernization
+{: #cloud_modern_bundle_orderinginstance-procedure}
 
 1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **Single-node Trial for Migration and App Modernization** na seção **Datacenters virtuais**.
 2. Na página **Single-node Trial for Migration and App Modernization**, clique em **Continuar**.
@@ -59,10 +65,12 @@ Revise os requisitos de nome da instância:
    4. Clique em **Provisão**.
 
 ### Resultados
+{: #cloud_modern_bundle_orderinginstance-results}
 
 A implementação da instância é iniciada automaticamente e o HCX no local na chave de ativação de serviço do {{site.data.keyword.cloud_notm}} é pedido.
 
 #### Processo de implementação para HCX no IBM Cloud
+{: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
 
 A implementação do HCX no {{site.data.keyword.cloud_notm}} é automatizada. As etapas a seguir são concluídas pelo processo de automação do {{site.data.keyword.vmwaresolutions_short}}:
 1. Três sub-redes são pedidas para o HCX por meio da infraestrutura do {{site.data.keyword.cloud_notm}}:
@@ -91,6 +99,7 @@ HCX, os componentes do HCX local e os componentes do HCX remoto.
 6. O nome do host e o endereço IP do HCX Manager está registrado com o servidor DNS do VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 #### Visualizando detalhes da instância
+{: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
 É possível verificar o status da implementação visualizando os detalhes da instância. Clique em **Instâncias implementadas** na área de janela de navegação esquerda e localize a tabela **Instâncias do vCenter Server** ou **Instâncias do HCX no local** para visualizar informações sobre as instâncias que você pediu.
 
@@ -99,6 +108,7 @@ Quando a instância é implementada com êxito, os componentes que são descrito
 O status da instância muda para **Pronto para uso** e você recebe uma notificação por e-mail.
 
 ### O que fazer a seguir
+{: #cloud_modern_bundle_orderinginstance-next}
 
 Instale o HCX Enterprise Manager local e configure a conexão com a instância do HCX on {{site.data.keyword.cloud_notm}}.
 
@@ -144,6 +154,7 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 {:important}
 
 ## Procedimento para excluir instâncias do Single-node Trial for Migration and App Modernization
+{: #cloud_modern_bundle_orderinginstance-deleting-procedure}
 
 Quando você exclui uma instância do Single-node Trial for Migration and App Modernization, os componentes a seguir são liberados sequencialmente:
 
@@ -168,9 +179,10 @@ Conclua as etapas a seguir para excluir uma instância do Single-node Trial for 
    1. Na coluna **Ações**, clique no ícone Excluir novamente.
    2. Na janela **Excluir instância**, clique em **OK**.
 
-### Links relacionados
+## Links relacionados
+{: #cloud_modern_bundle_orderinginstance-related}
 
-* [Guia do vCenter Server e do IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [Guia do vCenter Server e do IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Abra um chamado para o IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US)
 * [Documentação do VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
 * [Obtendo o HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-10"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,13 +13,15 @@ lastupdated: "2019-01-10"
 {:important: .important}
 
 # Eliminación del paquete híbrido (Hybridity) de una instancia de vCenter Server
+{: #vc_hybrid_deletingbundle}
 
 Para eliminar la licencia del paquete híbrido (Hybridity) de la instancia de vCenter Server, debe sustituir las claves de licencia de alquiler de VMware NSX y VMware vSAN con las claves de Traiga su propia licencia (BYOL) en el cliente web de VMware vSphere. Además, debe abrir una incidencia de soporte para cancelar los cargos de las licencias de alquiler.
 
-La degradación de la licencia puede hacer que falle la instancia de vCenter Server. Puede optar por degradar una licencia bajo su propio riesgo, pero en primer lugar tenga en cuenta las funciones que no están disponibles cuando degrade. Para obtener más información, consulte [Gráfico de comparación para las ediciones de componentes de VMware](../archiref/solution/appendix.html).
+La degradación de la licencia puede hacer que falle la instancia de vCenter Server. Puede optar por degradar una licencia bajo su propio riesgo, pero en primer lugar tenga en cuenta las funciones que no están disponibles cuando degrade. Para obtener más información, consulte [Gráfico de comparación para las ediciones de componentes de VMware](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix).
 {:important}
 
 ## Consideraciones importantes antes de eliminar el paquete de Hybridity de un entorno de varios sitios
+{: #vc_hybrid_deletingbundle-considerations}
 
 Revise las consideraciones siguientes antes de eliminar el paquete de Hybridity de un entorno de varios sitios:
 
@@ -31,6 +33,7 @@ Al eliminar el paquete de híbrido de un entorno de varios sitios, se aplican la
 {:note}
 
 ## Antes de eliminar el paquete híbrido (Hybridity)
+{: #vc_hybrid_deletingbundle-prereq}
 
 Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybridity):
 
@@ -41,6 +44,7 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
 * Opcionalmente, y si todavía no se ha aplicado, tiene las claves BYOL disponibles para aplicar a las licencias VMware vCenter Server y VMware vSphere Enterprise Plus.
 
 ## Procedimiento para eliminar el paquete híbrido (Hybridity)
+{: #vc_hybrid_deletingbundle-procedure}
 
 1. Inicie la sesión como **Administrador** en el cliente web de VMware vSphere en el que desea eliminar el paquete de Hybridity.
 2. Pulse **Inicio > Administración > Licencia > Licencias**.
@@ -106,8 +110,9 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
   Los equipos de operaciones y soporte de IBM acceden a la capa de gestión de vCenter de la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) para verificar que se han eliminado las licencias de alquiler antes de cancelar los cargos de licencia de alquiler del paquete híbrido (Hybridity).
   {:note}
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vc_hybrid_deletingbundle-related}
 
-* [Solicitud de instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_orderinginstance.html)
-* [Visualización de instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_viewinginstances.html)
-* [Cómo ponerse en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html)
+* [Solicitud de instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [Visualización de instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

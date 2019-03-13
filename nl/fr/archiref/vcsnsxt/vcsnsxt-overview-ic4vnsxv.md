@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Présentation de NSX-V
+{: #vcsnsxt-overview-ic4vnsxv}
 
 La virtualisation de réseau fournit un réseau dissocié qui existe dans la couche virtuelle. NSX-V offre à l'architecture des fonctions telles que la mise à disposition, le déploiement, la reconfiguration et la destruction rapides de réseaux virtuels à la demande. Cette conception utilise le commutateur vDS et VMware NSX for vSphere pour implémenter la mise en réseau virtuelle.
 
@@ -37,6 +38,7 @@ Outre les contrôleurs, l'automatisation d'{{site.data.keyword.cloud_notm}} pré
 Des paires de passerelles NSX ESG (Edge Services Gateway) sont ensuite déployées. Pour tous les déploiements, une paire de passerelles est utilisée pour le trafic sortant des composants d'automatisation qui résident sur le réseau privé. Les instances VMware vCenter Server on {{site.data.keyword.cloud_notm}} incluent une seconde passerelle, appelée serveur de périphérie géré par le client, qui est déployée et configurée avec une liaison montante au réseau public et une interface qui est affectée au réseau privé. Les composants NSX requis, tels que les routeurs DLR (Distributed Logical Router), les commutateurs logiques et les pare-feux peuvent être configurés par l'administrateur.
 
 ## Conception de commutateur distribué
+{: #vcsnsxt-overview-ic4vnsxv-distributed-switch}
 
 La conception utilise un nombre minimal de commutateurs vDS. Les hôtes du cluster sont connectés aux réseaux public et privé. Ils sont configurés avec deux commutateurs distribués virtuels. L'utilisation de deux commutateurs est conforme à la séparation de réseau physique des réseaux public et privé qui sont implémentés dans {{site.data.keyword.cloud_notm}}.
 
@@ -88,6 +90,7 @@ SDDC-Dswitch-Private	|Généré automatiquement par NSX	|Port virtuel d'origine	
 SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|Port virtuel d'origine	|Actives : 0, 1	|VLAN3
 
 ## NSX-V
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v}
 
 Cette conception spécifie la configuration des composants NSX mais n'applique aucune configuration de réseau dissocié. Il appartient au client de concevoir le réseau dissocié en fonction de ses besoins.
 
@@ -105,6 +108,7 @@ Qu'est-ce qui n'est PAS configuré :
 -	Gestion NSX liée à d'autres instances VMware
 
 ### Sécurité NSX-V
+{: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
 
 NSX for vSphere permet aux organisations de diviser le centre de données en segments de sécurité distincts, jusqu'au niveau de la charge de travail individuelle, indépendamment de l'emplacement de l'exécution de celle-ci. Les équipes informatiques peuvent définir des règles pour chaque charge de travail en fonction du contexte d'utilisateur et du contexte d'application, pour une réponse immédiate aux menaces qui pèsent dans le centre de données et une mise en application au niveau des applications.
 
@@ -120,6 +124,7 @@ Le diagramme de haut niveau illustré ci-après montre comment implémenter cert
 Figure 3. Sécurité NSX-V
 ![Sécurité NSX-V](vcsnsxt-vsecurity.svg)
 
-### Liens connexes
+## Liens connexes
+{: #vcsnsxt-overview-ic4vnsxv-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

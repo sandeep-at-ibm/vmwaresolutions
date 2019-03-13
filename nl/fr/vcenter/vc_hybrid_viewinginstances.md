@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Affichage des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_viewinginstances}
 
 Affichez les informations récapitulatives et détaillées des instances VMware vCenter Server with Hybridity Bundle qui sont mises à disposition pour différents comptes utilisateur.
 
 ## Procédure d'affichage du récapitulatif des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_viewinginstances-procedure-view-inst-summary}
 
 Pour afficher un récapitulatif de toutes les instances vCenter Server with Hybridity Bundle qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
@@ -50,6 +52,7 @@ Tableau 2. Description des statuts des instances vCenter Server with Hybridity B
 | Supprimé | L'instance a été supprimée. |
 
 ## Procédure d'affichage des détails des propriétés des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_viewinginstances-procedure-view-inst-property}
 
 Pour afficher les détails des propriétés d'une instance vCenter Server with Hybridity Bundle :
 1. Dans le tableau **Instances vCenter Server**, cliquez sur un nom d'instance.
@@ -73,6 +76,7 @@ Tableau 3. Propriétés d'instance vCenter Server with Hybridity Bundle
 | Statut  | Statut de l'instance.<br><br>Les informations affichées fournissent une mise à jour de la progression du déploiement ou de l'action appliquée à l'instance. En cas de problème, un message peut s'afficher pour vous aider à identifier et résoudre le problème. |
 
 ## Procédure d'affichage des informations d'accès aux instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_viewinginstances-procedure-view-access-info}
 
 Sous **Informations d'accès**, affichez les informations d'accès relatives aux composants d'instance. Les mots de passe affichés sont les mots de passe initiaux générés par le système. Si vous les modifiez en dehors de la console {{site.data.keyword.vmwaresolutions_short}}, ils ne sont pas mis à jour sur la page récapitulative de l'instance.
 
@@ -92,6 +96,7 @@ Tableau 4. Informations d'accès relatives à vCenter Server with Hybridity Bund
 | vCenter SSH  | Le nom d'utilisateur et le mot de passe que vous pouvez utiliser pour accéder à la machine virtuelle vCenter Server via une connexion SSH.  |
 
 ## Procédure d'affichage de l'historique de déploiement des instances vCenter Server with Hybridity Bundle
+{: #vc_hybrid_viewinginstances-procedure-view-deploy-history}
 
 Cliquez sur **Historique de déploiement** dans le panneau de navigation de gauche pour afficher l'historique de déploiement de l'instance.
 
@@ -103,10 +108,12 @@ Tableau 5. Historique de déploiement d'une instance vCenter Server with Hybridi
 | Récapitulatif | Détails du changement |
 
 ## Que faire en cas d'erreurs
+{: #vc_hybrid_viewinginstances-if-errors-occur}
 
-Si des erreurs se produisent lors du déploiement ou de la suppression d'une instance, l'équipe de support {{site.data.keyword.cloud_notm}} est automatiquement prévenue. Pour connaître le statut de votre ticket, vous pouvez [contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Si des erreurs se produisent lors du déploiement ou de la suppression d'une instance, l'équipe de support {{site.data.keyword.cloud_notm}} est automatiquement prévenue. Pour connaître le statut de votre ticket, vous pouvez [contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Etape suivante
+{: #vc_hybrid_viewinginstances-next}
 
 Gérez vos instances depuis la console {{site.data.keyword.vmwaresolutions_short}} ou le client Web VMware vSphere.
 
@@ -114,13 +121,14 @@ Avant de cliquer sur **Console vCenter** sur la page récapitulative de l'instan
 {:important}
 
 Passez en revue les rubriques suivantes pour obtenir des informations qui vous aideront à exécuter les instructions de connexion :
-*  Pour les exigences et procédures à effectuer avant d'accéder au client vSphere Web Client, voir [Dépassement du délai d'attente lors de la connexion au client vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
+*  Pour les exigences et procédures à effectuer avant d'accéder au client vSphere Web Client, voir [Dépassement du délai d'attente lors de la connexion au client vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
 *  Pour la liste des points d'accès de connexion au réseau privé de l'infrastructure {{site.data.keyword.cloud_notm}} à l'aide du réseau privé virtuel (VPN), voir [Accès VPN](http://www.softlayer.com/vpn-access){:new_window}.
-*  Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client vSphere Web Client, voir [Déploiement d'un fichier OVF à l'aide du client vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
+*  Si vous rencontrez des problèmes lors du déploiement d'un fichier OVF (Open Virtualization Format) à l'aide du client vSphere Web Client, voir [Déploiement d'un fichier OVF à l'aide du client vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
-### Liens connexes
+## Liens connexes
+{: #vc_hybrid_viewinginstances-related}
 
-* [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [Ajout, affichage et suppression de clusters pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
-* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [Suppression des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
+* [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+* [Ajout, affichage et suppression de clusters pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
+* [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [Suppression des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Serviços de rede no IBM Cloud
+{: #nsx-networking_services}
 
 Os serviços de rede no {{site.data.keyword.cloud}} consistem em dois pares de Edge Services Gateways (ESGs) do VMware NSX para comunicação entre o {{site.data.keyword.cloud_notm}} e a Internet pública ou a rede no local do cliente por meio de uma Rede Privada Virtual (VPN). Esses ESGs são segregados para suportar a função de gerenciamento interno do {{site.data.keyword.cloud_notm}}, o tráfego egresso e o ingresso do tráfego de rede relacionado ao cliente.
 
@@ -28,6 +29,7 @@ A configuração incorreta ou a desativação do ESG de gerenciamento não imped
 {:note}
 
 ## NSX Edge de serviços de gerenciamento IBM
+{: #nsx-networking_services-mgmt-serv-nsx-edge}
 
 O ESG de gerenciamento IBM é um cluster dedicado do NSX Edge somente para o tráfego de rede de gerenciamento do {{site.data.keyword.cloud_notm}}. Ele não é destinado à passagem de tráfego de nenhum componente que não seja implementado e gerenciado pela automação do Cloud Foundation ou do vCenter Server.
 
@@ -47,6 +49,7 @@ Tabela 1. Especificações do NSX ESG de gerenciamento IBM
 | NSX ESG de gerenciamento IBM 2 | 2 | 1 GB | 1 GB | Armazenamento de dados vSAN (Cloud Foundation); Armazenamento conectado compartilhado para gerenciamento (vCenter Server) |
 
 ### Serviços de gerenciamento
+{: #nsx-networking_services-mgmt-services}
 
 O acesso de saída é necessário para os serviços a seguir:
 
@@ -56,6 +59,7 @@ O acesso de saída é necessário para os serviços a seguir:
 * O F5 on {{site.data.keyword.cloud_notm}} requer acesso de saída para a Internet para ativação de licenciamento.
 
 ### Interfaces de Edge
+{: #nsx-networking_services-edge-interfaces}
 
 A configuração de interfaces ESG define a quais redes L2 o ESG tem acesso. Para o gerenciamento de ciclo de vida do Cloud Foundation e do vCenter Server, é necessário que MVs específicas colocadas na VLAN de gerenciamento tenham permissão para atravessar para a VLAN pública. As interfaces a seguir são definidas na implementação:
 
@@ -68,6 +72,7 @@ Tabela 2. Configuração da interface NSX ESG
 | Interno | Interno | Workload HA VXLAN | Interface interna usada para pulsação de par de HA do ESG; grupo da porta em **SDDC-Dswitch-Private** |
 
 ### Subnets
+{: #nsx-networking_services-subnets}
 
 As sub-redes a seguir são usadas para os propósitos do ESG de Gerenciamento:
 
@@ -80,6 +85,7 @@ Tabela 3. Configuração de IP do NSX ESX
 | Interno | Interno | Link local | 169.254.0.0/ 16 | Interface interna usada para comunicação de pares de HA do ESG |
 
 ### Definições de Conversão de Endereço de Rede
+{: #nsx-networking_services-nat-definitions}
 
 A Conversão de Endereço de Rede (NAT) é empregada no ESG de Gerenciamento para permitir que o tráfego de rede atravesse entre um espaço de endereço IP e outro. Isso é normalmente feito para conservar endereços IP roteáveis da Internet ou para ocultar endereços IP internos de públicos por razões de segurança. A NAT também é usada para permitir o redirecionamento de porta do Protocolo de Controle de Transmissões (TCP) e User Datagram Protocol (UDP). O tráfego de gerenciamento é sempre iniciado de dentro da instância do Cloud Foundation e do vCenter Server, requerendo que somente uma NAT de origem (SNAT) seja definida no ESG de Gerenciamento. Um SNAT individual não é criado para cada MV interna que hospeda um serviço que precisa sair da instância.
 
@@ -90,10 +96,11 @@ Tabela 4. Configuração NAT do NSX ESG
 | Uplink público | Endereços IP individuais no Gerenciamento Móvel /26 | Pública móvel do {{site.data.keyword.cloud_notm}} |
 
 ### Roteamento
+{: #nsx-networking_services-routing}
 
 Como os serviços dentro de MVs necessários para atravessar o ESG de Gerenciamento também podem precisar chegar aos serviços do {{site.data.keyword.cloud_notm}} dentro da rede privada do {{site.data.keyword.cloud_notm}} do cliente, a configuração a seguir é necessária para alcançar essa comunicação.
 
-Embora seja difícil prever qual intervalo de IPs de destino é necessário como um destino para conexões voltadas à Internet, qualquer serviço implementado e gerenciado pelo {{site.data.keyword.cloud_notm}} aponta para o ESG de Gerenciamento como seu gateway padrão. Uma rota estática é necessária para forçar o tráfego ao longo do {{site.data.keyword.cloud_notm}} BCR para as conexões de rede externas requeridas pelos serviços.
+Embora seja difícil prever qual intervalo de IPs de destino é necessário como um destino para conexões voltadas à Internet, qualquer serviço implementado e gerenciado pelo {{site.data.keyword.cloud_notm}} aponta para o ESG de Gerenciamento como seu gateway padrão. Uma rota estática é necessária para forçar o tráfego ao longo do BCR do {{site.data.keyword.cloud_notm}} para os serviços que requerem conexões de rede externa.
 
 As configurações a seguir são recomendadas para qualquer serviço que esteja usando o ESG de gerenciamento para atravessar uma instância do Cloud Foundation ou do vCenter Server:
 * O gateway padrão é um ESG de gerenciamento.
@@ -104,8 +111,9 @@ Se houver uma necessidade de o serviço ou a MV acessar o ESG do cliente, as rot
 Nenhum protocolo de roteamento automático está configurado para o ESG de Gerenciamento atualmente.
 
 ### Definições de VXLAN
+{: #nsx-networking_services-vlan-definitions}
 
-O par de HA de Gerenciamento requer uma rede para a conexão das interfaces internas. Use um vSwitch existente, um grupo de portas ou VXLAN existente. Para esse design, uma VXLAN dedicada é criada para a comunicação de pulsação de HA do par de HA do ESG de Gerenciamento.
+O par de alta disponibilidade de gerenciamento requer uma rede para a conexão das interfaces internas, que podem usar um vSwitch, um grupo da porta ou uma VXLAN existente. Para esse design, uma VXLAN dedicada é criada para a comunicação de pulsação de HA do par de HA do ESG de Gerenciamento.
 
 Tabela 5. Definições de VXLAN do NSX ESG
 
@@ -114,6 +122,7 @@ Tabela 5. Definições de VXLAN do NSX ESG
 | Mgmt HA | transport-1 | global |
 
 ### Regras de firewall
+{: #nsx-networking_services-firewall-rules}
 
 Por padrão, o ESG de Gerenciamento é configurado para negar todo o tráfego.
 
@@ -132,6 +141,7 @@ Tabela 6. Configuração de firewall NSX ESG
 | Qualquer | Qualquer | Qualquer | Qualquer | Negar |
 
 ## Borda do NSX de carga de trabalho
+{: #nsx-networking_services-wkld-nsx-edge}
 
 O ESG de carga de trabalho IBM faz parte de uma topologia simples que é destinada à comunicação de rede de carga de trabalho. A seção a seguir descreve a intenção de design de onde conectar cargas de trabalho a uma rede dentro de uma instância do Cloud Foundation ou do vCenter Server. Esse é um ponto de início para conectar redes e espaços IP no local a uma determinada instância do Cloud Foundation ou do vCenter Center e é a base para uma arquitetura verdadeira de Nuvem Híbrida.
 
@@ -147,6 +157,7 @@ Figura 3. Fluxograma de rede de exemplo
 ![Network flow diagram](customer_network_flow_diagram.svg "Network flow diagram")
 
 ### Interfaces Edge para o NSX Edge de carga de trabalho IBM
+{: #nsx-networking_services-edge-interfaces-workload}
 
 Assim como com o ESG de gerenciamento, a configuração de interfaces ESG define a quais redes L2 o ESG tem acesso. Parte da intenção de design da topologia de carga de trabalho é alcançar uma sobreposição de rede definida por software (SDN) para isolar cargas de trabalho do espaço de endereço subjacente do {{site.data.keyword.cloud_notm}}. Esse design é a base para alcançar o design de BYOIP. Portanto, as interfaces a seguir são definidas na implementação:
 
@@ -170,6 +181,7 @@ Tabela 8. interfaces DLR
 | Interno | Interno | Workload HA VXLAN | Interface interna usada para pulsação de pares de HA do ESG |
 
 ### Sub-redes para o NSX Edge de carga de trabalho IBM
+{: #nsx-networking_services-subnets-workload}
 
 As sub-redes a seguir são usadas para os propósitos do ESG de Carga de Trabalho:
 
@@ -184,10 +196,11 @@ Tabela 9. Configuração de DLR e de IP do ESG de Carga de Trabalho
 | Carga de trabalho (DLR) | Uplink | Designado pelo cliente | TBD | Sub-rede de carga |
 
 ### Definições de NAT para o NSX Edge de carga de trabalho IBM
+{: #nsx-networking_services-nat-definitions-nsx-edge}
 
 A NAT é empregada no ESG de Carga de Trabalho para permitir que o tráfego de rede atravesse em um espaço de endereço IP e outro. Para o ESG de carga de trabalho, a NAT é necessária não somente para permitir a comunicação com destinos da Internet, mas também para comunicar-se com qualquer intervalo de IP de origem do {{site.data.keyword.cloud_notm}}. Para esse design, o tráfego de carga de trabalho tem permissão para sair para a Internet, mas não para o gerenciamento ou quaisquer redes do {{site.data.keyword.cloud_notm}}. Como tal, somente uma SNAT precisa ser definida no ESG da Carga de Trabalho. A sub-rede móvel de carga de trabalho inteira é configurada para atravessar o SNAT.
 
-Embora seja possível usar NAT para permitir a comunicação de carga de trabalho entre múltiplas instâncias do Cloud Foundation ou do vCenter Server, isso se torna impraticável quando muitas cargas de trabalho precisam ser conectadas entre as instâncias. Para obter exemplos de uso de recursos NSX avançados para criar uma rede de trânsito de sobreposição L2 ao longo das instâncias do Cloud Foundation ou do vCenter Server, veja [Arquitetura multisite](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html).
+Embora seja possível usar NAT para permitir a comunicação de carga de trabalho entre múltiplas instâncias do Cloud Foundation ou do vCenter Server, isso se torna impraticável quando muitas cargas de trabalho precisam ser conectadas entre as instâncias. Para obter exemplos de uso de recursos NSX avançados para criar uma rede de trânsito de sobreposição L2 ao longo das instâncias do Cloud Foundation ou do vCenter Server, veja [Arquitetura multisite](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site).
 
 Tabela 10. Regras NAT do Workload ESG
 
@@ -196,6 +209,7 @@ Tabela 10. Regras NAT do Workload ESG
 | Uplink público (Workload ESG) | Definido pelo cliente | IP público móvel do {{site.data.keyword.cloud_notm}} | Definido pelo cliente (padrão desativado) |
 
 ### Roteamento para o NSX Edge de carga de trabalho IBM
+{: #nsx-networking_services-routing-wkld}
 
 Dentro desse design, o único requisito para cargas de trabalho que atravessam o DLR para o ESG de carga de trabalho é acessar a Internet. O ESG de Carga de Trabalho precisa entender o caminho para a VXLAN de carga de trabalho e quaisquer futuras VXLAN/sub-redes de carga de trabalho criadas por trás do DLR. Embora isso possa ser alcançado por meio de rotas estáticas no ESG, a intenção da topologia de carga de trabalho é a de um design de melhor prática demonstrada. Portanto, o Open Shortest Path First (OSPF) é configurado entre o ESG de Carga de Trabalho e o DLR de recebimento de dados.
 
@@ -208,6 +222,7 @@ Tabela 11. Roteamento dinâmico
 | 51 | stub | Designar um IP para cada DLR e ESG na rede de RFC1918 de trânsito | Nenhum |
 
 ### Regras de firewall para o NSX Edge de carga de trabalho IBM
+{: #nsx-networking_services-firewall-wkld}
 
 Por padrão, o ESG de Carga de Trabalho é configurado para negar todo o tráfego.
 
@@ -223,6 +238,7 @@ Tabela 12. Regras de firewall do Workload ESG
 | Qualquer | Qualquer | Qualquer | Qualquer | Negar |
 
 ### Definições de VXLAN para o NSX Edge de carga de trabalho IBM
+{: #nsx-networking_services-vxlan-definitions}
 
 Os pares de HA de topologia de carga de trabalho ESG e DLR requerem segmentos L2 (VXLAN) para a conexão das interfaces internas, para o trânsito de dados entre os dois e para cargas de trabalho.
 
@@ -235,10 +251,12 @@ Tabela 13. Interfaces internas do Workload ESG
 | Carga de trabalho | transitório -1 | Global |
 
 ### Configurações de ESG DLR para o NSX Edge de carga de trabalho IBM
+{: #nsx-networking_services-esg-dlr-sett}
 
 Por padrão, a criação de log é ativada em todos os novos dispositivos NSX Edge. O nível de criação de log padrão é NOTICE.
 
-### Links relacionados
+## Links relacionados
+{: #nsx-networking_services-related}
 
-* [ Design do NSX Edge Services Gateway ](/docs/services/vmwaresolutions/archiref/nsx/nsx_design.html)
-* [Arquitetura multissite](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)
+* [ Design do NSX Edge Services Gateway ](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_design)
+* [Arquitetura multissite](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)

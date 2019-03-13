@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,21 +13,24 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Architettura lato di origine di VMware HCX on IBM Cloud
+{: #hcx-archi-source}
 
 Questa sezione descrive l'architettura di ogni componente HCX distribuito nell'ambiente di origine.
 
 ## Introduzione a HCX
+{: #hcx-archi-source-intro-hcx}
 
 La tecnologia HCX integra rapidamente le reti vSphere vCenter nelle piattaforme VCF o VCS di IBM Cloud. La rete ibrida estende le reti vSphere vCenter in loco in IBM Cloud, supportando la mobilità della macchina virtuale (VM) bidirezionale.
 
 Questa introduzione riepiloga le attività che possono essere eseguite e le funzioni che supportano la migrazione avanzata e l'estensione di rete.
 
-* HCX gestisce i processi di crittografia e decrittografia dell'origine e della destinazione, garantendo una protezione coerente e fornendo l'ammissione per i flussi di lavoro ibridi come la migrazione della macchina virtuale e l'estensione della rete.
+* HCX gestisce i processi di codifica e decodifica dell'origine e della destinazione, garantendo una protezione coerente e fornendo l'ammissione per i flussi di lavoro ibridi come la migrazione della macchina virtuale e l'estensione della rete.
 * HCX crea una WAN definita dal software e ottimizzata per aumentare le prestazioni della rete estesa, consentendo delle prestazioni che si avvicinano alla velocità della LAN.
 * HCX abilita inoltre il carico di lavoro bidirezionale e la migrazione della politica di sicurezza VMware NSX ai servizi di rete IBM Cloud.
 * HCX si integra con vSphere vCenter ed è gestito dal client web vSphere.
 
 ## Estensione della rete di livello 2
+{: #hcx-archi-source-layer-2-ext}
 
 * Estendi in modo sicuro una rete da un vCenter a IBM Cloud.
 * HCX fornisce l'High Throughput Layer 2 Concentrator (HT L2C).
@@ -36,48 +39,44 @@ Questa introduzione riepiloga le attività che possono essere eseguite e le funz
 * Le macchine virtuali migrate tramite il gateway cloud e attraverso il livello 2 esteso possono conservare i propri indirizzi IP e MAC.
 
 ## Metodi di migrazione della macchina virtuale
+{: #hcx-archi-source-vm-mig-methods}
 
 ### Migrazione con basso tempo di inattività
+{: #hcx-archi-source-low-downtime-mig}
 
 La migrazione con basso tempo di inattività si basa su vSphere Replication, che è una tecnologia distribuita implementata nell'hypervisor VMware ESX/ESXi/ESXi. HCX crea una replica di una macchina virtuale live, la sposta in IBM Cloud ed esegue un cambio per spegnere la macchina virtuale di origine ed accendere la macchina virtuale migrata.
 * Il percorso di migrazione è sempre tramite il gateway cloud. Il trasporto può essere internet, una rete estesa di livello 2 o una riga Direct Connect.
 * Una macchina virtuale può essere migrata più volte in entrambe le direzioni.
 
 ### Migrazione vMotion
+{: #hcx-archi-source-vmotion-mig}
 
 La migrazione vMotion utilizza vMotion per trasferire una macchina virtuale live attraverso una rete estesa a IBM Cloud. La migrazione vMotion è anche nota come migrazione senza tempo di inattività o vMotion tra cloud.
 
 ### Migrazione di tipo cold (a freddo)
+{: #hcx-archi-source-cold-mig}
 
 Trasferisci una macchina virtuale spenta a IBM Cloud su una rete estesa.
 
 ### Funzioni comuni
+{: #hcx-archi-source-common-feat}
 
 * L'ottimizzazione WAN definita dal software facoltativa, se installata, aumenta la migrazione, la velocità effettiva e la velocità.
 * La migrazione può essere pianificata in modo da verificarsi in un momento specifico.
 * Una macchina virtuale migrata può conservare i propri nome host, nome della macchina virtuale o entrambi.
 
 ## Funzioni di rete
+{: #hcx-archi-source-net-feat}
 
 Le seguenti funzioni di rete sono integrate nel gateway cloud e nei concentratori di livello 2.
 
-### Instradamento del flusso intelligente
-
-Seleziona automaticamente la connessione migliore in base al percorso internet, caricando in modo efficiente l'intera connessione in modo che i carichi di lavoro vengano spostati il più velocemente possibile. Quando i flussi più grandi, come ad esempio il backup o la replica, causano un conflitto con la CPU, i flussi più piccoli vengono instradati alle CPU meno occupate, migliorando le prestazioni del traffico interattivo
-
-### Instradamento di prossimità
-
-Garantisce che l'inoltro tra le macchine virtuali connesse alle reti estese ed instradate, sia in loco che nel cloud, sia simmetrico.
-
-### Sicurezza
-
-Il gateway cloud offre AES-GCM conforme con Suite B con IKEv2, offload AES-NI e controllo di ammissione basato sul flusso.
-
-HCX gestisce i processi di crittografia e decrittografia dell'origine e della destinazione, garantendo una protezione coerente e fornendo l'ammissione per i flussi di lavoro ibridi come la migrazione della macchina virtuale e l'estensione della rete.
-
-Una politica di sicurezza definita nel vCenter in loco e assegnata a una macchina virtuale, può essere migrata con la macchina virtuale.
+* Instradamento del flusso intelligente - Seleziona automaticamente la connessione migliore in base al percorso internet, caricando in modo efficiente l'intera connessione in modo che i carichi di lavoro vengano spostati il più velocemente possibile. Quando i flussi più grandi, come ad esempio il backup o la replica, causano un conflitto con la CPU, i flussi più piccoli vengono instradati alle CPU meno occupate, migliorando le prestazioni del traffico interattivo.
+* Instradamento di prossimità - Garantisce che l'inoltro tra le macchine virtuali connesse alle reti estese ed instradate, sia in loco che nel cloud, sia simmetrico. 
+* Sicurezza - Il gateway cloud offre AES-GCM conforme con Suite B con IKEv2, offload AES-NI e controllo di ammissione basato sul flusso. HCX gestisce i processi di codifica e decodifica dell'origine e della destinazione, garantendo una protezione coerente e fornendo l'ammissione per i flussi di lavoro ibridi come la migrazione della macchina virtuale e l'estensione della rete.
+  Una politica di sicurezza definita nel vCenter in loco e assegnata a una macchina virtuale, può essere migrata con la macchina virtuale.
 
 ## Descrizione dell'HCX
+{: #hcx-archi-source-understand-hcx}
 
 HCX supporta una relazione many-to-many tra i vCenter in loco e IBM Cloud. vCenter Server nella modalità di collegamento è supportato. Questo argomento fornisce una panoramica di alto livello su come il programma di installazione interagisce con il data center in loco e IBM Cloud.
 
@@ -88,6 +87,7 @@ Una distribuzione corretta richiede:
 * La rete deve consentire alle applicazioni di comunicare con le applicazioni virtuali remote e locali e con altre VM.
 
 ## Panoramica della distribuzione
+{: #hcx-archi-source-deployment-ovw}
 
 La macchina virtuale HCX Manager viene installata per prima e gestisce l'installazione di tutte le altre applicazioni di macchina virtuale in loco e nel cloud.
 
@@ -100,18 +100,21 @@ Il seguente è un riepilogo delle attività di installazione di base:
 6. Dopo l'installazione, HCX Manager controlla le applicazioni virtuali del servizio remota e locale. In IBM Cloud, HCX gestisce i componenti WAN definiti dal software di cui è stato eseguito il provisioning come un servizio.
 
 ### Considerazioni sulle prestazioni del componente della distribuzione
+{: #hcx-archi-source-perf-consid}
 
 La pianificazione dell'architettura include le VM che devono essere migrate, le reti utilizzate per il traffico della macchina virtuale e le reti che devono essere estese. Questo argomento riepiloga alcuni valori massimi e minimi per i componenti della distribuzione.
 * vSphere vCenter. L'applicazione HCX Manager deve essere installata sul vCenter che necessita dei servizi ibridi. Può esserci soltanto una distribuzione HCX per vCenter. Questa limitazione si applica alla modalità di collegamento, l'applicazione di gestione HCX è installata solo sul vCenter primario. HCX supporta fino a cinque vCenter registrati nella modalità di collegamento.
 * Registrazioni cloud. Il numero massimo di endpoint cloud è dieci. Per trovare il numero di endpoint, Hybrid Cloud Services traccia le connessioni vCenter al cloud.
 
 ### Numero massimo di migrazioni ed estensioni di rete
+{: #hcx-archi-source-max-mig-net-extension}
 
 * Numero massimo di attività di migrazione con basso tempo di inattività simultanee - 15
 * Numero massimo di attività di estensione L2C simultanee - 1
 * Numero massimo di attività di migrazione vMotion simultanee - 1
 
 ### HCX Management Enterprise
+{: #hcx-archi-source-hcxme}
 
 L'HCX Management Enterprise OVA viene distribuito sull'ambiente di origine e registrato come un plugin per il vCenter Server che gestisce l'infrastruttura vSphere di origine. Questo plugin viene poi utilizzato per configurare i servizi di migrazione e di rete necessari per abilitare la migrazione tra cloud e l'estensione di rete L2.
 
@@ -123,6 +126,7 @@ Figura 1. Hybrid Cloud services di origine
 ![Hybrid Cloud services di origine](source_hybrid_cloud_services.svg)
 
 ### Applicazioni virtuali HCX
+{: #hcx-archi-source-hcxva}
 
 Il pacchetto di installazione è un file OVA che contiene il plugin Hybrid Cloud Services. Questa applicazione di gestione Hybrid Cloud
 Services viene installata e configurata e poi utilizzata per configurare le macchine virtuali dell'applicazione del servizio.
@@ -132,6 +136,7 @@ Services viene installata e configurata e poi utilizzata per configurare le macc
 * WAN Optimizer
 
 ### HCX Manager
+{: #hcx-archi-source-hcxm}
 
 Il plugin HCX Manager viene distribuito solo in loco. Gestisce le applicazioni virtuali del servizio per la WAN definita dal software (SD-WAN). L'applicazione virtuale HCX Manager è un'estensione al vCenter di origine e viene distribuita come una macchina virtuale. Questa struttura file dell'applicazione, contiene tutte le applicazioni virtuali del servizio ibrido. HCX Manager controlla la distribuzione e la configurazione del gateway cloud, i concentratori di livello 2 e l'applicazione virtuale WAN Optimization sia in loco che nel cloud.
 
@@ -140,6 +145,7 @@ L'applicazione virtuale può essere installata con il provisioning di tipo thin 
 Dopo aver completato la configurazione e la distribuzione dell'applicazione virtuale del servizio, accedi a questa macchina virtuale per utilizzare il portale di gestione di Hybrid Cloud Services.
 
 ### HCX Cloud Gateway
+{: #hcx-archi-source-hcg}
 
 L'HCX Cloud Gateway stabilisce e mantiene un canale sicuro tra vSphere e IBM Cloud.
 
@@ -151,6 +157,7 @@ Figura 2. Gateway cloud di origine
 ![Gateway cloud di origine](source_cloud_gateway.svg)
 
 ### WAN Optimizer
+{: #hcx-archi-source-wan-opt}
 
 HCX fornisce inoltre la WAN Optimization definita dal software. L'applicazione WAN Optimization è un componente fortemente consigliato che esegue il condizionamento WAN per ridurre gli effetti della latenza. Incorpora inoltre Forward Error Correction per negare gli scenari di perdita dei pacchetti e la deduplicazione dei pattern di traffico ridondanti. Complessivamente, viene ridotto l'utilizzo della larghezza di banda e garantito il migliore utilizzo della capacità di rete disponibile per velocizzare il trasferimento dei dati da/a IBM Cloud.
 
@@ -160,6 +167,7 @@ Figura 3. WAN Optimizer di origine
 ![WAN Optimizer di origine](source_wan_optimizer.svg)
 
 ### Concentratore di livello 2
+{: #hcx-archi-source-layer-2-conc}
 
 Il Network Extension Service viene fornito dal concentratore di livello 2 (L2C). Estende una rete di livello 2 dal data center vSphere in loco a IBM Cloud e abilita la migrazione rapida tra il data center e il cloud. Il concentratore di livello 2 è obbligatorio per estendere la rete in loco a IBM.
 
@@ -171,6 +179,7 @@ Figura 4. Concentratore L2 di origine
 ![Concentratore L2 di origine](source_l2_concentrator.svg)
 
 ### Solo migrazione
+{: #hcx-archi-source-mig-only}
 
 La configurazione minima per eseguire soltanto la migrazione richiede le applicazioni HCX Manager e Gateway cloud. È possibile migrare le macchine virtuali senza l'estensione di rete. In questo caso, la macchina virtuale ottiene un nuovo indirizzo IP utilizzando il servizio Guest Customization dopo la migrazione.
 
@@ -181,6 +190,7 @@ WAN Optimization può migliorare la velocità nelle situazioni descritte; config
 La migrazione delle macchine virtuali sulle reti estese in IBM Cloud è conveniente perché riduce il tempo di inattività e la configurazione non viene modificata sulla macchina virtuale. La macchina virtuale può conservare gli indirizzi IP, gli indirizzi MAC, i nomi di computer e di macchine virtuali. Conservando queste proprietà si semplifica enormemente la migrazione a IBM Cloud e si stabiliscono dei facili percorsi di ritorno al data center in loco. La funzione Network Extension richiede un vDS (vSphere Distributed Switch), disponibile con vSphere Enterprise Plus Edition.
 
 ### Requisiti dell'indirizzo IP
+{: #hcx-archi-source-ip-req}
 
 Per distribuire l'HCX, deve essere disponibile il numero corretto di indirizzi IP in loco
 e nell'IBM Cloud di destinazione.
@@ -197,7 +207,8 @@ e nell'IBM Cloud di destinazione.
   * Due indirizzi IP per l'applicazione HCX Manager connessa a IBM Cloud. Gli indirizzi possono venire utilizzati per il collegamento a internet o a una o più righe Direct Connect.
   * Aggiungine un altro se è presente una rete vMotion separata.
 
-### Instradamento di prossimità
+### Funzione Proximity Routing (Instradamento di prossimità)
+{: #hcx-archi-source-prox-routing-feat}
 
 L'instradamento di prossimità è una funzione di rete che può essere abilitata quando viene configurato il gateway cloud.
 
@@ -214,8 +225,9 @@ Per evitare il tromboning, HCX utilizza la gestione dell'instradamento intellige
 * Creata nel cloud (su una rete estesa).
 
 ### Istradamento asimmetrico con la soluzione dell'instradamento di prossimità
+{: #hcx-archi-source-asymm-routing}
 
-Nel diagramma, i componenti N*a sulla sinistra risiedono nel data center in loco e il componente N*b
+Nel diagramma, i componenti `N*a` sulla sinistra risiedono nel data center in loco e il componente `N*b`
 sulla destra risiede nel cloud.
 
 R1 è il gateway predefinito per N1-b, pertanto, N1-b deve tornare a R1 per instradare il traffico tramite R2. Per evitare l'instradamento asimmetrico, HCX inserisce delle rotte host all'interno della sovrapposizione NSX della distribuzione VCS/VCF IBM Cloud se la macchina virtuale è appena stata creata nel cloud oppure se è stata spostata con la migrazione con basso tempo di inattività, la rotta host viene inserita immediatamente.
@@ -229,6 +241,7 @@ Figura 5. Istradamento asimmetrico con la soluzione dell'instradamento di prossi
 ![Istradamento asimmetrico con la soluzione dell'instradamento di prossimità](asymmetric_routing_proximity_routing_solution.svg)
 
 ### Conservazione dell'indirizzo MAC
+{: #hcx-archi-source-mac-addr-ret}
 
 * L'opzione per conservare l'indirizzo MAC è una casella di spunta nella procedura guidata di migrazione. È visibile solo per la migrazione basata sulla replica.
 * Per impostazione predefinita, **Retain MAC** è abilitato se la macchina virtuale di origine è in una rete estesa e disabilitato quando la rete non è estesa. Se l'indirizzo MAC non viene conservato, la macchina virtuale ottiene un nuovo indirizzo al termine della migrazione. La decisione di conservare un indirizzo MAC o di acquisirne uno nuovo può influenzare il processo di migrazione e il flusso del traffico di rete successivo alla migrazione.
@@ -239,6 +252,7 @@ Figura 5. Istradamento asimmetrico con la soluzione dell'instradamento di prossi
   * La casella di spunta si trova nella pagina Select destination network durante l'operazione di migrazione.
 
 ### Migrazione della politica di sicurezza
+{: #hcx-archi-source-sec-policy-mig}
 
 La funzione di migrazione della politica consente alle regole del firewall distribuite NSX di essere spostate da un vCenter in loco a un cloud abilitato VCF/VCS HCX. La migrazione della politica è possibile durante l'utilizzo della migrazione con basso tempo di inattività o vMotion per spostare una macchina virtuale su una rete estesa con l'High Throughput Layer 2 Concentrator.
 * Il data center in loco deve eseguire NSX 6.2.2 o superiore.
@@ -252,6 +266,7 @@ Le regole che specificano i gruppi di sicurezza o di applicazioni per l'origine 
 
 Tutte le modifiche alla politica migrata vengono propagate a tutte le VM che utilizzano la politica.
 
-### Link correlati
+## Link correlati
+{: #hcx-archi-source-related}
 
-* [Installazione e configurazione sull'origine](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
+* [Installazione e configurazione sull'origine](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)

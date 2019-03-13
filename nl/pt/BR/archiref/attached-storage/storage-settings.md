@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Configuração e definições para o armazenamento conectado
+{: #storage-settings}
 
 Esse design suporta a conexão de armazenamento compartilhado somente por meio do NFS v3. O NFS v4 e a v4.1 não são suportados.
 
@@ -22,6 +23,7 @@ O armazenamento conectado para esse design é limitado ao armazenamento do {{sit
 A arquitetura especifica que os armazenamentos de dados do NFS v3 são conectados usando o nome do DNS do armazenamento do {{site.data.keyword.cloud_notm}} para se conectar ao compartilhamento. O compartilhamento do NFS é conectado a todos os hosts no cluster do vCenter Server e colocado em um cluster de armazenamento de dados com o DRS de armazenamento ativado.
 
 ## vSphere Storage Distributed Resource Scheduler (Storage DRS)
+{: #storage-settings-vsphere-storage-drs}
 
 Use o Storage DRS para gerenciar os recursos agregados de um cluster de armazenamento de dados. Quando o Storage DRS está ativado, ele fornece recomendações para posicionamento e migração de disco da máquina virtual (MV) para equilibrar o espaço e os recursos de E/S nos armazenamentos de dados no cluster de armazenamento de dados.
 
@@ -33,6 +35,7 @@ Os recursos a seguir estão disponíveis quando o Storage DRS está ativado:
 Nesse design, o Storage DRS é ativado com o nível de automação configurado como **Totalmente automatizado**. Como resultado, os arquivos são migrados automaticamente para otimizar o uso do recurso no cluster de dados. Como o cluster é totalmente automatizado, todas as outras opções de Storage DRS são configuradas como **Usar configurações do cluster**.
 
 ## Configurações de tempo de execução do Storage DRS para o NFS v3
+{: #storage-settings-drs-nfs3}
 
 A agressividade do Storage DRS é determinada ao especificar limites para o espaço usado e a latência de E/S. O Storage DRS coleta informações de uso do recurso para os armazenamentos de dados em um cluster de armazenamento de dados. O vCenter Server usa essas informações para gerar recomendações para o posicionamento de discos virtuais em armazenamentos de dados.
 
@@ -58,6 +61,7 @@ Tabela 1. Configurações de tempo de execução do Storage DRS
 Para obter mais informações sobre como configurar essas definições no vSphere Web Client, consulte [Configurar regras de tempo de execução do Storage DRS no vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-AD2D13CE-539B-48C3-BBC9-E55A834874F0.html).
 
 ## Controle de E/S de Armazenamento para NFS v3
+{: #storage-settings-io-control-nfs-v3}
 
 Quando o SIOC (Storage I/O Control) é ativado no ambiente, ele muda o comprimento da fila de dispositivo da única MV. A mudança para o comprimento da fila de dispositivo reduz a fila de matriz de armazenamento de todas as MVs para um compartilhamento e regulador iguais da fila de armazenamento. O SIOC será encaixado apenas se os recursos forem restritos e a latência de E/S de armazenamento for maior que um limite definido.
 
@@ -68,10 +72,12 @@ Para que o SIOC determine quando um dispositivo de armazenamento está congestio
 Compartilhamentos de discos virtuais configurados como **Alto** (2.000 compartilhamentos) recebem duas vezes mais E/S do que um disco configurado como **Normal** (1.000 compartilhamentos) e quatro vezes mais do que um configurado como **Baixo** (500 compartilhamentos). **Normal** é o valor padrão para todas as MVs, portanto, será necessário ajustar as configurações **Normal** das MVs que precisarem.
 
 ## Armazenamento adicional para NFS v3
+{: #storage-settings-additional-storage-nfs-v3}
 
 Quando surge a necessidade de incluir mais armazenamento no ambiente devido a espaço insuficiente ou latência alta, é possível pedir outro compartilhamento do NFS por meio do console. Depois que o compartilhamento for pedido, anexe a exportação aos hosts ESXi do vSphere no cluster e coloque-a no cluster de armazenamento. Colocar o novo compartilhamento de NFS no cluster de armazenamento dimensiona de forma eficiente e uniforme o armazenamento que está associado ao ambiente sem sobrecarregá-lo com migrações no nível de armazenamento.
 
 ## Parâmetros de Configuração Avançados
+{: #storage-settings-adv-config-param}
 
 Esse design inclui parâmetros de configuração avançados que são recomendados pelo {{site.data.keyword.cloud_notm}}. Como resultado, os parâmetros a seguir são configurados em cada host do vSphere ESXi que está conectado ao compartilhamento de NFS do {{site.data.keyword.cloud_notm}}.
 
@@ -87,6 +93,7 @@ Tabela 2. Parâmetros de configuração avançados do NFS
 | NFS.HeartbeatTimeout | 5 |
 | NFS.MaxQueueDepth | 64 |
 
-### Links relacionados
+## Links relacionados
+{: #storage-settings-related}
 
-* [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

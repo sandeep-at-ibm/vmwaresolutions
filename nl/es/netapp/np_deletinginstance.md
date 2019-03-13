@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-30"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-10-30"
 {:important: .important}
 
 # Supresión de instancias de NetApp ONTAP Select
+{: #np_deletinginstance}
 
 Si suprime una instancia de NetApp ONTAP Select, los componentes siguientes se publican secuencialmente:
 1. Las máquinas virtuales (VM) en clúster desplegadas de NetApp ONTAP Select y la máquina virtual de NetApp ONTAP Select Deploy
@@ -28,6 +29,7 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 {:note}
 
 ## Procedimiento para suprimir instancias de la página Instancias desplegadas
+{: #np_deletinginstance-procedure1}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de NetApp ONTAP Select**, localice la instancia que desea suprimir.
@@ -38,6 +40,7 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
 ## Procedimiento para suprimir instancias de la página de detalles de la instancia
+{: #np_deletinginstance-procedure2}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de NetApp ONTAP Select**, pulse la instancia que desea suprimir.
@@ -47,8 +50,9 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
    1. Pulse el icono de menú de desbordamiento junto a **Consola de vCenter** de nuevo y pulse **Suprimir instancia**.
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #np_deletinginstance-related}
 
-* [Solicitud de instancias de NetApp ONTAP Select](np_orderinginstances.html)
-* [Visualización de instancias de NetApp ONTAP Select](np_viewinginstances.html)
-* [Cómo ponerse en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html)
+* [Solicitud de instancias de NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
+* [Visualización de instancias de NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
+* [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

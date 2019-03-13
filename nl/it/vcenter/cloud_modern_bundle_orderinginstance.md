@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-25"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,33 +13,39 @@ lastupdated: "2019-01-25"
 {:important: .important}
 
 # Ordine, visualizzazione ed eliminazione delle istanze Single-node Trial for Migration and App Modernization
+{: #cloud_modern_bundle_orderinginstance}
 
 Controlla i requisiti di pianificazione prima di ordinare un'istanza Single-node Trial for Migration and App Modernization.
 
 ## Requisiti e pianificazione per ordinare le istanze Single-node Trial for Migration and App Modernization
+{: #cloud_modern_bundle_orderinginstance-req}
 
 Assicurati di confermare i seguenti requisiti e di completare le seguenti attività.
 
 ### Prerequisiti per le istanze HCX in loco
+{: #cloud_modern_bundle_orderinginstance-hcx-req}
 
 * Richiede VMware vSphere e vCenter 5.5 o superiore.
 * L'ambiente vSphere deve disporre di switch distribuiti per le VM che verranno migrate a {{site.data.keyword.cloud_notm}}.
 * Il dispositivo virtuale HCX Manager deve poter essere distribuito su una rete privata nell'ambiente in loco e deve essere autorizzato ad accedere a Internet pubblico.
 
 ### Account dell'infrastruttura IBM Cloud
+{: #cloud_modern_bundle_orderinginstance-account-req}
 
 * Per utilizzare {{site.data.keyword.vmwaresolutions_short}} per effettuare l'ordine di istanze, devi disporre di un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer). Il costo dei componenti ordinati nelle tue istanze viene addebitato su tale account {{site.data.keyword.cloud_notm}}.
 *  Configura le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Impostazioni** dal riquadro di navigazione a sinistra.
 
 ### Requisiti del nome dell'istanza
+{: #cloud_modern_bundle_orderinginstance-inst-name-req}
 
 Controlla i requisiti del nome dell'istanza:
 * Sono consentiti solo caratteri alfanumerici e trattini (-).
-* Il nome istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
+* Il nome dell'istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
 * La lunghezza massima del nome dell'istanza è di 10 caratteri.
 * Il nome dell'istanza deve essere univoco all'interno del tuo account.
 
 ## Procedura per ordinare le istanze Single-node Trial for Migration and App Modernization
+{: #cloud_modern_bundle_orderinginstance-procedure}
 
 1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **Single-node Trial for Migration and App Modernization** nella sezione **Data center virtuali**.
 2. Nella pagina **Single-node Trial for Migration and App Modernization**, fai clic su **Continua**.
@@ -55,15 +61,17 @@ Controlla i requisiti del nome dell'istanza:
 6. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza prima di effettuare l'ordine.
    1. Esamina le impostazioni per l'istanza.
    2. Esamina il costo stimato dell'istanza. Fai clic su **Dettagli sui prezzi** per generare un riepilogo in formato PDF. Per salvare o stampare il riepilogo
-del tuo ordine, fai clic sull'icona **Stampa** o **Download** nella parte superiore destra della finestra PDF.
+   del tuo ordine, fai clic sull'icona **Stampa** o **Download** nella parte superiore destra della finestra PDF.
    3. Fai clic sul link o sui link dei termini che si applicano al tuo ordine e conferma di accettare questi termini prima di ordinare l'istanza.
    4. Fai clic su **Fornitura**.
 
 ### Risultati
+{: #cloud_modern_bundle_orderinginstance-results}
 
 La distribuzione dell'istanza inizia automaticamente e viene ordinata la chiave di attivazione del servizio HCX on {{site.data.keyword.cloud_notm}}.
 
 #### Processo di distribuzione per HCX on IBM Cloud
+{: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
 
 La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Le seguenti istruzioni vengono completate dal processo automatico di {{site.data.keyword.vmwaresolutions_short}}:
 1. Dall'infrastruttura {{site.data.keyword.cloud_notm}}, vengono ordinate tre sottoreti per HCX:
@@ -91,6 +99,7 @@ La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Le
 6. Il nome host e l'indirizzo IP di HCX Manager vengono registrati con il server DNS di VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 #### Visualizzazione dei dettagli dell'istanza
+{: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
 Puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza. Fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra e individua la tabella **Istanze vCenter Server** o **Istanze HCX on-premise** per visualizzare informazioni sulle istanze che hai ordinato.
 
@@ -99,6 +108,7 @@ Una volta che l'istanza è stata distribuita correttamente, i componenti descrit
 Lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e ricevi una notifica per email.
 
 ### Operazioni successive
+{: #cloud_modern_bundle_orderinginstance-next}
 
 Installa HCX Enterprise Manager in loco e configura la connessione alla tua istanza HCX on {{site.data.keyword.cloud_notm}}.
 
@@ -113,7 +123,7 @@ Installa HCX Enterprise Manager in loco e configura la connessione alla tua ista
     2. In **Informazioni di accesso**, individua e prendi nota delle credenziali vCenter.
     3. Fai clic su **Servizi** dal riquadro di navigazione a sinistra.
     4. Nella pagina **Servizi**, fai clic su **Servizi installati**.
-    5. Nella pagina dei dettagli **HCX on IBM Cloud**, individua e prendi nota dell'**IP cloud HCX**.
+    5. Nella pagina dei dettagli **HCX on IBM Cloud**, individua e prendi nota dell'**HCX Cloud IP**.
     6. Assicurati di essere collegato alla VPN per accedere alla tua rete privata {{site.data.keyword.cloud_notm}}.
     7. Fai clic su **Visualizza console cloud HCX**.
   2. Nella **Console cloud HCX**, completa la seguente procedura:
@@ -144,6 +154,7 @@ Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmw
 {:important}
 
 ## Procedura per eliminare le istanze Single-node Trial for Migration and App Modernization
+{: #cloud_modern_bundle_orderinginstance-deleting-procedure}
 
 Quando elimini un'istanza Single-node Trial for Migration and App Modernization, i seguenti componenti vengono rilasciati in modo sequenziale:
 
@@ -168,9 +179,10 @@ Completa la seguente procedura per eliminare un'istanza Single-node Trial for Mi
    1. Nella colonna **Azioni**, fai di nuovo clic sull'icona Elimina.
    2. Nella finestra **Elimina istanza**, fai clic su **OK**.
 
-### Link correlati
+## Link correlati
+{: #cloud_modern_bundle_orderinginstance-related}
 
-* [Guida di vCenter Server e IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [Guida di vCenter Server e IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Apri un ticket per IBM Cloud privato](https://www.ibm.com/mysupport/s/?language=en_US)
 * [Documentazione di VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

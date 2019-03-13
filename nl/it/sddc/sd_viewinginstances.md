@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Visualizzazione delle istanze Cloud Foundation
+{: #sd_viewinginstances}
 
 Visualizza il riepilogo e le informazioni dettagliate delle istanze VMware Cloud Foundation fornite per account utente diversi.
 
 ## Procedura per visualizzare il riepilogo delle istanze Cloud Foundation
+{: #sd_viewinginstances-procedure-view-inst-summary}
 
 Per visualizzare un riepilogo di tutte le istanze Cloud Foundation fornite per un account utente, completa la seguente procedura:
 
@@ -50,6 +52,7 @@ Tabella 2. Descrizioni dello stato delle istanze Cloud Foundation
 | Eliminato | L'istanza è stata eliminata. |
 
 ## Procedura per visualizzare i dettagli delle proprietà delle istanze Cloud Foundation
+{: #sd_viewinginstances-procedure-view-inst-property}
 
 Per visualizzare i dettagli delle proprietà di un'istanza:
 
@@ -75,6 +78,7 @@ Tabella 3. Proprietà dell'istanza Cloud Foundation
 | Stato  | Lo stato dell'istanza<br><br>Le informazioni visualizzate forniscono un aggiornamento sullo stato di avanzamento della distribuzione o sull'azione eseguita sull'istanza. Se si verificano problemi, potrebbe essere visualizzato un messaggio per aiutarti ad analizzare e risolvere il problema. |
 
 ## Procedura per visualizzare le informazioni di accesso per le istanze Cloud Foundation
+{: #sd_viewinginstances-procedure-view-access-info}
 
 In **Informazioni sull'accesso**, visualizza le informazioni di accesso per i componenti relativi all'istanza. Le password visualizzate sono le password iniziali generate dal sistema. Se le modifichi all'esterno della console {{site.data.keyword.vmwaresolutions_short}}, non vengono aggiornate nella pagina di riepilogo dell'istanza.
 
@@ -99,6 +103,7 @@ Tabella 4. Informazioni di accesso di Cloud Foundation per i componenti relativi
 | ADMIN vCenter  | Il nome utente e la password di VMware vCenter Single Sign-On che puoi utilizzare per accedere a vCenter Server utilizzando il client web vSphere  |
 
 ## Procedura per visualizzare la cronologia di distribuzione per le istanze Cloud Foundation
+{: #sd_viewinginstances-procedure-view-deploy-history}
 
 Fai clic su **Cronologia distribuzione** dal riquadro di navigazione a sinistra per visualizzare la cronologia di distribuzione per l'istanza.
 
@@ -110,10 +115,12 @@ Tabella 5. Cronologia di distribuzione delle istanze Cloud Foundation
 | Riepilogo | I dettagli della modifica |
 
 ## Cosa fare se si verificano errori
+{: #sd_viewinginstances-if-errors-occur}
 
-Se si verificano degli errori durante la distribuzione o l'eliminazione dell'istanza, il team di supporto {{site.data.keyword.cloud_notm}} viene automaticamente informato. Per informazioni sullo stato del tuo ticket, puoi [contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Se si verificano degli errori durante la distribuzione o l'eliminazione dell'istanza, il team di supporto {{site.data.keyword.cloud_notm}} viene automaticamente informato. Per informazioni sullo stato del tuo ticket, puoi [contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Operazioni successive
+{: #sd_viewinginstances-next}
 
 Gestisci le tue istanze dalla console {{site.data.keyword.vmwaresolutions_short}} o dal client web vSphere.
 
@@ -122,12 +129,13 @@ Prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza
 
 Rivedi i seguenti argomenti per informazioni utili per completare le istruzioni di accesso:
 
-* Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
+* Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
 * Per un elenco di punti di accesso per accedere alla rete privata di {{site.data.keyword.cloud_notm}} utilizzando la VPN, vedi [Accesso VPN](http://www.softlayer.com/vpn-access){:new_window}.
-* Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
+* Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
-### Link correlati
+## Link correlati
+{: #sd_viewinginstances-related}
 
-* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Eliminazione di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Eliminazione di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

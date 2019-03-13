@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Visão geral de modernização do
+{: #vcsnsxt-appmod}
 
 O diagrama a seguir mostra a arquitetura de referência de modernização do aplicativo que a Acme Skateboards implementa e é descrita detalhadamente nesta série de documentos.
 
@@ -35,6 +36,7 @@ Os componentes principais da arquitetura são:
   - Tráfego entre sistemas legados no data center no local e nas MVs de nuvem.
 
 ## Benefícios importantes para a Acme Skateboards
+{: #vcsnsxt-appmod-benefits}
 
 - Entrega acelerada de projetos de TI para desenvolvedores e linhas de negócios, reduzindo o tempo que leva para compras, arquitetura, implementação e implementação de recursos de semanas ou mesmo meses até horas. O tempo de maturação do aplicativo diminuirá se os clientes precisarem esperar até que as equipes de rede ou segurança possam pedir serviços, como balanceadores de carga, firewalls, comutadores e roteadores.
 - Segurança aprimorada com servidores bare metal dedicados em uma nuvem particular hospedada, incluindo a implementação de terminal privado para serviços do {{site.data.keyword.cloud_notm}}, como {{site.data.keyword.containerlong_notm}} e KMIP.
@@ -45,6 +47,7 @@ Os clientes voltados para plataformas de aplicativos nativos de nuvem, como o {{
 
 Essa arquitetura de referência mostra como o VCS, o {{site.data.keyword.icpfull_notm}} e o {{site.data.keyword.containerlong_notm}} movem o Acme Skateboards de forma segura pela jornada de modernização do aplicativo.
 
-### Links Relacionados
+## Links relacionados
+{: #vcsnsxt-appmod-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

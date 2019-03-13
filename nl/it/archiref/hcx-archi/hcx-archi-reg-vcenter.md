@@ -4,18 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Registrazione dell'HCX Manager con vCenter
+{: #hcx-archi-reg-vcenter}
 
 Registra il plugin Hybrid Cloud Services nel client web VMware vSphere e avvia il servizio di gestione Hybrid Cloud Services.
 
 ## Prima di iniziare
+{: #hcx-archi-reg-vcenter-prereq}
 
 L'applicazione virtuale Hybrid Cloud Services deve essere accesa prima di poter essere registrata.
 
 ## Procedura per registrare HCX Manager con vCenter
+{: #hcx-archi-reg-vcenter-proc-register}
 
 1. Accedi all'applicazione virtuale del servizio Hybrid Cloud Services.
 2. Fai clic sul tile **Manage Settings**.
@@ -35,9 +38,11 @@ L'applicazione virtuale Hybrid Cloud Services deve essere accesa prima di poter 
 5. Per finalizzare la registrazione, disconnettiti dal client web vSphere. Riaccedi per verificare che si è verificato l'aggiornamento della schermata.
 
 ## Risultati
+{: #hcx-archi-reg-vcenter-results}
 
 Nota l'icona **Hybrid Cloud** esistente e la voce di menu **Hybrid Cloud Services** sulla sinistra. La registrazione a Hybrid Cloud Services aggiorna queste etichette. Nell'inventario, l'etichetta dell'icona diventa **Hybrid Cloud Services**.
 
-### Link correlati
+## Link correlati
+{: #hcx-archi-reg-vcenter-related}
 
-* [Installazione e configurazione dei servizi ibridi](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-hybrid.html)
+* [Installazione e configurazione dei servizi ibridi](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-hybrid)

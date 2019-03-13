@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Installazione e configurazione dell'HCX sull'origine
+{: #hcx-archi-install-cfg-src}
 
 L'installazione in loco implica la distribuzione dell'applicazione di gestione HCX e la sua registrazione con il vCenter e uno o più endpoint cloud abilitati VCF/VCS HCX.
 
 ## Installazione dell'applicazione HCX Manager
+{: #hcx-archi-install-cfg-src-install-hma}
 
 Installa l'applicazione HCX Manager nel vCenter in loco.
 
@@ -21,10 +23,10 @@ Installa l'applicazione HCX Manager nel vCenter in loco.
 4. Espandi la gerarchia per mostrare i data center.
 5. Fai clic con il tasto destro sul data center di destinazione e seleziona **Deploy OVF Template** dal menu. La visualizzazione della voce di menu **Deploy OVF template** potrebbe richiedere alcuni secondi.
 6. Scegli **Deploy OVF template**.
-  1. Seleziona **Local file** e fai clic su **Browse** per trovare il file OVA scaricato sul computer. Fai clic su **Next**.
+  1. Seleziona **Local file** e fai clic su **Browse** per trovare il file OVA scaricato sul computer. Fai clic su **Avanti**.
   2. Sulla pagina **Review details**, seleziona la casella **Accept extra configuration options** e fai clic su **Next**.
   3. Sulla pagina **Accept EULAs**, scorri in basso per controllare l'accordo di licenza utente VMware. Fai clic su **Accept** e **Next**.
-  4. Sulla pagina **Select name and folder**, modifica il nome se necessario e seleziona l'ubicazione per Hybrid Cloud Services. Fai clic su **Next**.
+  4. Sulla pagina **Select name and folder**, modifica il nome se necessario e seleziona l'ubicazione per Hybrid Cloud Services. Fai clic su **Avanti**.
   5. Sulla pagina **Select a resource**, seleziona l'ubicazione di installazione.
   6. Sulla pagina **Select storage**, seleziona l'archiviazione per Hybrid Cloud Services e fai clic su **Next**. Dall'elenco **Select virtual disk format**, puoi selezionare **thin provisioning** o **thick provisioning**.
   7. Sulla pagina **Setup networks**, associa l'adattatore Hybrid Cloud Services a una rete host scelta dall'elenco **Destination**.
@@ -53,6 +55,7 @@ Tabella 1. Valori di esempio per le proprietà di rete
   * Visualizza la scheda **Summary**, la console legge **Powered On** e il pulsante **Play** è verde.
 10. L'HCX Manager è acceso ed è pronto per essere registrato con il vCenter.
 
-### Link correlati
+## Link correlati
+{: #hcx-archi-install-cfg-src-related}
 
-* [Preparazione dell'ambiente di installazione ](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-prep-install.html)
+* [Preparazione dell'ambiente di installazione ](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-prep-install)

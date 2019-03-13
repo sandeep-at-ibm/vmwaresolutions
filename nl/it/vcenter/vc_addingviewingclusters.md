@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server
+{: #adding-and-viewing-clusters-for-vcenter-server-instances}
 
 I server ESXi che hai configurato quando hai ordinato un'istanza vengono raggruppati sotto forma di **cluster1** per impostazione predefinita.
 
@@ -22,6 +23,7 @@ La funzione di eliminazione cluster è disponibile solo per le istanze che sono 
 {:note}
 
 ## Aggiunta di cluster alle istanze vCenter Server
+{: #vc_addingviewingclusters-adding}
 
 Il numero di cluster che possono essere aggiunti a un'istanza dipende dalla versione dell'istanza:
 * Per le istanze che sono state distribuite o aggiornate alla V2.5 e versioni successive, il numero di cluster, host e VM determina il limite massimo per il numero di cluster che puoi aggiungere. Devi rispettare le direttive e i limiti di dimensionamento VMware per la tua distribuzione.
@@ -31,10 +33,12 @@ Il numero di cluster che possono essere aggiunti a un'istanza dipende dalla vers
 Per ulteriori informazioni sui limiti massimi, vedi [Valori massimi di configurazione di VMware](https://configmax.vmware.com/home){:new_window}.
 
 ### Impostazioni di sistema
+{: #vc_addingviewingclusters-adding-sys-settings}
 
 Quando aggiungi un cluster a un'istanza vCenter Server, devi specificare le seguenti impostazioni.
 
 #### Nome cluster
+{: #vc_addingviewingclusters-adding-cluster-name}
 
 Il nome del cluster deve rispettare i seguenti requisiti:
 * Sono consentiti solo caratteri alfanumerici e trattini (-).
@@ -43,16 +47,19 @@ Il nome del cluster deve rispettare i seguenti requisiti:
 * Il nome del cluster deve essere univoco all'interno dell'istanza vCenter Server.
 
 #### Ubicazione data center
+{: #vc_addingviewingclusters-adding-dc-location}
 
 L'ubicazione del {{site.data.keyword.CloudDataCent}} del cluster è impostata sul {{site.data.keyword.CloudDataCent_notm}} dell'istanza vCenter Server per impostazione predefinita. Puoi distribuire il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso rispetto a quello dell'istanza distribuita, ma devi assicurarti che la latenza di rete tra i due {{site.data.keyword.CloudDataCents_notm}} sia inferiore a 150 ms. Per controllare la latenza di rete, puoi utilizzare uno strumento come [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/).
 
 Se distribuisci il cluster in un diverso {{site.data.keyword.CloudDataCent_notm}} o pod dell'infrastruttura {{site.data.keyword.cloud_notm}}, vengono ordinate tre VLAN supplementari da utilizzare con i {{site.data.keyword.baremetal_short}} ordinati.
 
 ### Impostazioni di Bare Metal Server
+{: #vc_addingviewingclusters-bare-metal-settings}
 
 Puoi scegliere **Skylake**, **Certificato SAP** o **Broadwell**.
 
 #### Skylake
+{: #vc_addingviewingclusters-adding-skylake}
 
 Per l'impostazione **Skylake**, hai opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
 
@@ -65,19 +72,21 @@ Tabella 1. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
 | Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
 #### Certificato SAP
+{: #vc_addingviewingclusters-adding-sap}
 
 Se selezioni **Certificato SAP**, non puoi modificare le impostazioni di CPU o RAM.
 
 In base ai tuoi requisiti, seleziona una configurazione di Bare Metal Server:
-* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz / 192 GB di RAM
-* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz / 384 GB di RAM
-* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz / 768 GB di RAM
+* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 192 GB RAM
+* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 384 GB RAM
+* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 768 GB RAM
 * Processore Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz / 512 GB di RAM
 * Processore Quad Intel Xeon E7-8890 v4 / 96 core totali, 2,2 GHz / 1024 GB di RAM
 * Processore Quad Intel Xeon E7-8890 v4 / 96 core totali, 2,2 GHz / 2048 GB di RAM
 * Processore Quad Intel Xeon E7-8890 v4 / 96 core totali, 2,2 GHz / 4096 GB di RAM
 
 #### Broadwell
+{: #vc_addingviewingclusters-adding-broadwell}
 
 Per l'impostazione **Broadwell**, hai una serie di opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
 
@@ -92,6 +101,7 @@ Tabella 2. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 | Quad Intel Xeon E7-4850 v4 / 64 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Numero di server Bare Metal
+{: #vc_addingviewingclusters-adding-bare-metal-number}
 
 I cluster richiedono almeno due {{site.data.keyword.baremetal_short}}.
 
@@ -102,10 +112,12 @@ Per le istanze vCenter Server distribuite nella V2.0 o precedenti, puoi aggiunge
 Dopo la distribuzione, puoi creare fino a quattro ulteriori cluster. Se selezioni la configurazione **Skylake** o **Broadwell** di Bare Metal Server con l'archiviazione VMware vSAN, sono richiesti quattro server sia per il cluster iniziale che per i cluster di post-distribuzione.
 
 ### Impostazioni di archiviazione
+{: #vc_addingviewingclusters-adding-storage-settings}
 
 Le impostazioni di archiviazione si basano sulla tua selezione della configurazione Bare Metal Server e sul tipo di archiviazione.
 
 #### Archiviazione vSAN
+{: #vc_addingviewingclusters-adding-vsan-storage}
 
 Specifica le seguenti opzioni vSAN:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
@@ -121,6 +133,7 @@ Specifica le seguenti opzioni vSAN:
 Se il tuo cluster iniziale era un cluster vSAN, qualsiasi ulteriore cluster vSAN utilizza la stessa licenza vSAN e ha la stessa configurazione di quello iniziale. Questo vale anche se in qualsiasi cluster (iniziale o aggiuntivo) dell'istanza è stato scelto di distribuire vSAN. La prima volta, ti viene richiesta la licenza vSAN (BYOL o acquistata) e l'edizione. La prossima volta che selezioni vSAN per un nuovo cluster, viene riutilizzata la licenza scelta inizialmente.
 
 #### Archiviazione NFS
+{: #vc_addingviewingclusters-adding-nfs-storage}
 
 Se selezioni **Storage NFS**, puoi aggiungere l'archiviazione condivisa a livello di file per la tua istanza in cui tutte le condivisioni utilizzano le stesse impostazioni o puoi specificare impostazioni di configurazione diverse per ogni condivisione file. Specifica le seguenti opzioni NFS:
 
@@ -143,18 +156,21 @@ Tabella 3. Opzioni del livello di prestazioni NFS
   | 10 IOPS/GB | Questa opzione è progettata per i tipi di carichi di lavoro più impegnativi, come l'analisi. Applicazioni di esempio includono: database ad alte transazioni e altri database sensibili alle prestazioni. Questo livello di prestazioni è limitato a una capacità massima di 4 TB per condivisione file. |
 
 ### Dischi locali
+{: #vc_addingviewingclusters-adding-local-disks}
 
 L'opzione dischi locali è disponibile solo per la configurazione Bare Metal del processore Quad Intel Xeon E7-8890 v4 con **Certificato SAP**. Specifica le seguenti opzioni:
 * **Numero di dischi**: seleziona il numero di dischi che vuoi aggiungere.
 * **Tipo di disco**: seleziona un'opzione per il tipo di disco di cui hai bisogno.
 
 ### Impostazioni di licenza
+{: #vc_addingviewingclusters-adding-licensing-settings}
 
 Specifica l'opzione di licenza per il componente VMware vSphere nel cluster:
 * Per gli utenti Business Partner, la licenza vSphere (Enterprise Plus edition) viene inclusa e acquistata per tuo conto.
 * Per gli utenti non Business Partner, puoi utilizzare le licenze VMware fornite da IBM per questo componente selezionando **Includi con l'acquisto** o puoi utilizzare l'opzione Bring Your Own License (BYOL) selezionando **Fornita dall'utente** e immettendo la tua propria chiave di licenza.
 
 ### Impostazioni dell'interfaccia di rete
+{: #vc_addingviewingclusters-adding-network-interface-settings}
 
 Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC) si basano sulla tua selezione di **Rete pubblica e privata** o **Solo rete privata**. I seguenti servizi aggiuntivi richiedono NIC pubbliche e non sono disponibili se selezioni l'opzione privata:
 
@@ -164,10 +180,12 @@ Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC) si bas
 * Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Riepilogo ordine
+{: #vc_addingviewingclusters-adding-order-summary}
 
 In base alla configurazione che hai selezionato per il cluster, il costo stimato viene generato e visualizzato immediatamente nel riquadro **Riepilogo ordine** sulla destra.
 
 ## Procedura per aggiungere i cluster alle istanze vCenter Server
+{: #vc_addingviewingclusters-adding-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza a cui vuoi aggiungere i cluster.
@@ -199,6 +217,7 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
    4. Fai clic su **Fornitura**.
 
 ### Risultati dopo l'aggiunta di cluster alle istanze vCenter Server
+{: #vc_addingviewingclusters-adding-results}
 
 1. La distribuzione del cluster viene avviata automaticamente e lo stato del cluster viene modificato in **Inizializzazione**. Puoi controllare lo stato della distribuzione visualizzando la cronologia di distribuzione dalla pagina **Riepilogo** dell'istanza.
 2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere High Availability (HA) e vSphere Distributed Resource Scheduler (DRS).
@@ -207,6 +226,7 @@ Non puoi modificare il nome del cluster. La modifica del nome del cluster potreb
 {:important}
 
 ## Procedura per visualizzare i cluster nelle istanze vCenter Server
+{: #vc_addingviewingclusters-viewing-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic su un'istanza per visualizzare i cluster al suo interno.
@@ -232,42 +252,34 @@ Non puoi modificare il nome del cluster. La modifica del nome del cluster potreb
         <dd class="dd">Il cluster è stato eliminato.</dd>
     </dl>
   * **Azioni**: fai clic sull'icona **Elimina** per eliminare il cluster.
-4. Fai clic sul nome di un cluster per visualizzare i dettagli dei server ESXi e di archiviazione:
+4. Fai clic sul nome di un cluster per visualizzare il server ESXi e l'archiviazione:
 
-  * Dettagli dei server ESXi:
-     * **Nome**: il nome del server ESXi è nel formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, dove:
+Tabella 4. Dettagli del server ESXi
 
-       `host_prefix` è il prefisso del nome host,
+| Elemento        | Descrizione       |  
+|:------------- |:------------- |
+| Nome | Il nome del server ESXi è nel seguente formato:<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> dove:<br> `host_prefix` è il prefisso del nome host<br> `n` è la sequenza del server<br> `subdomain_label` è l'etichetta del dominio secondario<br> `root_domain` è il nome del dominio root|
+| Versione | La versione del server ESXi. |
+| Credenziali | Il nome utente e la password per accedere al server ESXi. |
+| IP privato | L'indirizzo IP privato del server ESXi. |
+| Stato | Lo stato del server ESXi, che può assumere uno dei seguenti valori:<br> **Aggiunto**: il server ESXi è stato aggiunto ed è pronto per l'uso. <br> **In fase di aggiunta**: il server ESXi è in fase di aggiunta.<br> **In fase di eliminazione**: il server ESXi è in fase di eliminazione. |
 
-       `n` è la sequenza del server,
+Tabella 5. Dettagli dell'archiviazione
 
-       `subdomain_label` è l'etichetta del dominio secondario e
-
-       `root_domain` è il nome del dominio root.
-
-     * **Versione**: la versione del server ESXi.
-     * **Credenziali**: il nome utente e la password per accedere al server ESXi.
-     * **IP privato**: l'indirizzo IP privato del server ESXi.
-     * **Stato**: lo stato del server ESXi, che può assumere uno dei seguenti valori:
-        <dl class="dl">
-        <dt class="dt dlterm">Aggiunto</dt>
-        <dd class="dd">Il server ESXi è stato aggiunto ed è pronto per l'uso. </dd>
-        <dt class="dt dlterm">In fase di aggiunta</dt>
-        <dd class="dd">Il server ESXi è in fase di aggiunta. </dd>
-        <dt class="dt dlterm">In fase di eliminazione</dt>
-        <dd class="dd">Il server ESXi è in fase di eliminazione.</dd>
-        </dl>
-  * Dettagli di archiviazione:
-    * **Nome**: il nome dell'archivio dati.
-    * **Dimensione**: la capacità di archiviazione.
-    * **IOPS/GB**: il livello di prestazioni dell'archiviazione.
-    * **Protocollo NFS**: la versione NFS dell'archiviazione.
+| Elemento        | Descrizione       |  
+|:------------- |:------------- |
+| Nome | Il nome dell'archivio dati. |
+| Dimensione | La capacità di archiviazione. |
+| IOPS/GB | Il livello di prestazioni dell'archiviazione. |
+| Protocollo NFS | La versione NFS dell'archiviazione. |
 
 ## Eliminazione di cluster dalle istanze vCenter Server
+{: #vc_addingviewingclusters-deleting}
 
 Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 
 ### Prima di eliminare
+{: #vc_addingviewingclusters-deleting-prereq}
 
 * Utilizza questa procedura per eliminare i cluster dalle istanze distribuite nella V2.3 o versioni successive.
 * Per i cluster distribuiti nelle istanze della V2.2 o precedenti, devi aggiornare l'istanza alla V2.3 se vuoi eliminare i cluster che hai aggiunto all'istanza.
@@ -277,6 +289,7 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 * Il cluster predefinito non può essere eliminato.
 
 ### Procedura per eliminare i cluster dalle istanze vCenter Server
+{: #vc_addingviewingclusters-deleting-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza da cui vuoi eliminare i cluster.
@@ -287,7 +300,8 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, individua il cluster che vuoi eliminare e fai clic sull'icona **Elimina** nella colonna **Azioni**.
 4. Conferma di aver completato la migrazione delle VM ad altri cluster e, se necessario, di voler eliminare il cluster.
 
-### Link correlati
+## Link correlati
+{: #vc_addingviewingclusters-related}
 
-* [Visualizzazione delle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
-* [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
+* [Visualizzazione delle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
+* [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)

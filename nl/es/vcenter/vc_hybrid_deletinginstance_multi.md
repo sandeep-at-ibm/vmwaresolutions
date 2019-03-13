@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-14"
 {:important: .important}
 
 # Supresión de las instancias de vCenter Server con el paquete híbrido (Hybridity) en una configuración de varios sitios
+{: #vc_hybrid_deletinginstance_multi}
 
 Existen consideraciones especiales a tener en cuenta antes de suprimir instancias de VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity) que forman parte de una configuración de varios sitios.
 
@@ -30,6 +31,7 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 {:note}
 
 ## Procedimiento para suprimir las instancias de vCenter Server con el paquete híbrido (Hybridity) en una configuración de varios sitios
+{: #vc_hybrid_deletinginstance_multi-procedure}
 
 1. Elimine todos los servicios desde la instancia secundaria de vCenter Server con el paquete híbrido (Hybridity).
 2. Asegúrese de que no tiene ningún objeto NSX ampliado en la instancia secundaria que desea suprimir.
@@ -39,7 +41,8 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 6. Repita los pasos 1 a 5 para todas las instancias secundarias de vCenter Server con el paquete híbrido (Hybridity) de la configuración de varios sitios.
 7. Después de suprimir todas las instancias secundarias, también puede suprimir la instancia secundaria desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vc_hybrid_deletinginstance_multi-related}
 
-* [Supresión de instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_deletinginstance.html)
-* [Solicitud, visualización y eliminación de servicios desde instancias de vCenter Server con el paquete híbrido (Hybridity)](vc_hybrid_addingremovingservices.html)
+* [Supresión de instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)
+* [Solicitud, visualización y eliminación de servicios desde instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)

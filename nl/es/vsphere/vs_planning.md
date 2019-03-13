@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-31"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-10-31"
 {:important: .important}
 
 # Requisitos y planificación de VMware vSphere on IBM Cloud
+{: #vs_planning}
 
 Revise los siguientes requisitos antes de solicitar VMware vSphere on {{site.data.keyword.cloud}}. Planifique los clústeres de VMware vSphere en función de la ubicación del {{site.data.keyword.CloudDataCent_notm}} y de sus requisitos de capacidad de la carga de trabajo.
 
@@ -20,10 +21,12 @@ El usuario es el responsable de configurar el entorno y de instalar y configurar
 {:note}
 
 ## Requisitos de la cuenta de IBM Cloud
+{: #vs_planning-account-req}
 
-La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/slaccountrequirement.html).
+La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## Disponibilidad del centro de datos de IBM Cloud
+{: #vs_planning-dc-availability}
 
 El despliegue de vSphere impone requisitos estrictos en cuanto a la infraestructura física. Por lo tanto, en {{site.data.keyword.CloudDataCents_notm}} solo puede desplegar clústeres que cumplan los requisitos. Están disponibles los siguientes {{site.data.keyword.CloudDataCent_notm}} para el despliegue de vSphere.
 
@@ -67,8 +70,9 @@ Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para clústeres d
 | WDC06 | Washington, DC | América del Norte este |
 | WDC07 | Washington, DC | América del Norte este |
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vs_planning-related}
 
-* [Solicitud de clústeres nuevos de vSphere](vs_orderinginstances.html)
-* [Escalado de clústeres existentes](vs_scalingexistingclusters.html)
-* [Escalado de clústeres existentes creados fuera de la consola](vs_orderingforclustersoutside.html)
+* [Solicitud de clústeres nuevos de vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [Escalado de clústeres existentes](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [Escalado de clústeres existentes creados fuera de la consola](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Excluindo instâncias do Cloud Foundation em uma configuração de vários sites
+{: #sd_deletinginstance_multi}
 
 Antes de planejar a exclusão de instâncias do Cloud Foundation em uma configuração multisite, revise as considerações a seguir.
 
@@ -30,6 +31,7 @@ Você é faturado até o final do ciclo de faturamento do {{site.data.keyword.cl
 {:note}
 
 ## Procedimento para excluir instâncias do Cloud Foundation em uma configuração multisite
+{: #sd_deletinginstance_multi-procedure}
 
 1. Remova todos os serviços da instância secundária do Cloud Foundation.
 2. Assegure-se de que não tenha objetos NSX expandidos na instância secundária que deseja excluir.
@@ -39,7 +41,8 @@ Você é faturado até o final do ciclo de faturamento do {{site.data.keyword.cl
 6. Repita as etapas 1 a 5 para todas as instâncias secundárias do Cloud Foundation em sua configuração multisite.
 7. Depois de excluir todas as instâncias secundárias, também será possível excluir a instância primária do console do {{site.data.keyword.vmwaresolutions_short}}.
 
-### Links relacionados
+## Links relacionados
+{: #sd_deletinginstance_multi-related}
 
-* [Excluindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
-* [Pedindo, visualizando e removendo serviços de instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Excluindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)
+* [Pedindo, visualizando e removendo serviços de instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)

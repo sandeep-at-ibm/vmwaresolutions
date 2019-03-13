@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
-# Panoramica della soluzione
+# Panoramica su IBM Cloud for VMware Solutions
+{: #solution_overview}
 
 Le offerte {{site.data.keyword.vmwaresolutions_full}} ti consentono di estendere il tuo data center virtualizzato VMware esistente in {{site.data.keyword.cloud_notm}} o di ospitare le applicazioni native cloud.
 
@@ -18,12 +19,11 @@ Esamina queste informazioni per la progettazione delle offerte {{site.data.keywo
 
 Questa progettazione funge da architettura di base che fornisce le fondamenta per l'aggiunta di altri componenti interni o specifici del fornitore per casi di utilizzo particolari.
 
-## Panoramica di VMware on IBM Cloud
-
 Figura 1. Panoramica di VMware on {{site.data.keyword.cloud_notm}}
 ![Panoramica di VMware on {{site.data.keyword.cloud_notm}}](solution_overview.svg "La soluzione virtualizza le risorse di calcolo, di rete e, facoltativamente, di archiviazione che devono essere utilizzate dalle VM in cui puoi eseguire le tue applicazioni.")
 
-## Vantaggi principali
+## Vantaggi principali di IBM Cloud for VMware Solutions
+{: #solution_overview-benefits}
 
 VMware Cloud Foundation e vCenter Server on {{site.data.keyword.cloud_notm}} forniscono gli elementi costitutivi fondamentali, tra cui VMware vSphere, vCenter Server, NSX e le opzioni di archiviazione condivisa, incluso vSAN. Questi componenti sono necessari per architettare in modo flessibile una soluzione di data center definito dal software VMware che meglio si adatta ai tuoi carichi di lavoro.
 
@@ -38,8 +38,9 @@ Le offerte VMware on {{site.data.keyword.cloud_notm}} forniscono i seguenti vant
 * **Abilitazione di una gestione e una governance coerenti** del cloud ibrido distribuito fornendo un accesso amministrativo completo alla gestione della virtualizzazione, preservando così gli strumenti, gli script e gli investimenti VMware esistenti nella formazione.
 * **Sfrutta le competenze VMware su scala globale** con i servizi professionali e gestiti di IBM disponibili in più di 30 {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo.
 
-### Link correlati
+## Link correlati
+{: #solution_overview-related}
 
-* [Panoramica della progettazione](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [Ridimensionamento della capacità](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
-* [Backup dei componenti](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [Panoramica della progettazione](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [Ridimensionamento della capacità](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)
+* [Backup dei componenti](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

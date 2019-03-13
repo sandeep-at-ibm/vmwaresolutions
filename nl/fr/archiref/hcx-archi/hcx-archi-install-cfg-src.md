@@ -4,19 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 # Installation et configuration de HCX sur la source
+{: #hcx-archi-install-cfg-src}
 
 L'installation sur site implique le déploiement du dispositif de gestion HCX et son enregistrement auprès de vCenter et auprès d'un ou de plusieurs noeuds finaux du cloud compatibles VCF/VCS HCX.
 
 ## Installation du dispositif HCX Manager
+{: #hcx-archi-install-cfg-src-install-hma}
 
 Installez le dispositif HCX Manager dans le vCenter sur site.
 
 1. Connectez-vous à **My VMware** et téléchargez le fichier OVA des Services cloud hybrides depuis la page de téléchargement du produit.
-2. Ouvrez un navigateur et connectez-vous au client vSphere Web. Cette tâche ne peut pas être effectuée depuis le client vSphere. Consultez l'onglet **Home**.
+2. Ouvrez un navigateur et connectez-vous au client vSphere Web Client. Cette tâche ne peut pas être effectuée depuis le client vSphere. Consultez l'onglet **Home**.
 3. Dans la liste **Inventories Trees**, cliquez sur **Host and Clusters**.
 4. Développez la hiérarchie pour afficher les centres de données.
 5. Cliquez avec le bouton droit de la souris et sélectionnez **Deploy OVF Template** dans le menu. Quelques secondes peuvent être nécessaires pour que l'élément de menu **Deploy OVF template** apparaisse.
@@ -49,10 +51,11 @@ Tableau 1. Valeurs exemple pour les propriétés réseau
 9. Dans la page **Ready to complete**, procédez comme suit :
   * Sélectionnez l'option **Power on after deployment**.
   * Passez en revue les paramètres des Services cloud hybrides, puis cliquez sur **Finish**. Plusieurs minutes peuvent être nécessaires pour que le dispositif des Services cloud hybrides se mette sous tension.
-  * Pour vérifier l'état, accédez à la page d'accueil du client Web vSphere, et, sous l'onglet **Home**, accédez à **Inventories** et cliquez sur **Hosts and Clusters**. Développez la hiérarchie du centre de données, puis cliquez sur la machine virtuelle du service Services cloud hybrides pour afficher un récapitulatif dans le volet central.
+  * Pour vérifier l'état, accédez à la page d'accueil de vSphere Web Client, et, sous l'onglet **Home**, accédez à **Inventories** et cliquez sur **Hosts and Clusters**. Développez la hiérarchie du centre de données, puis cliquez sur la machine virtuelle du service Services cloud hybrides pour afficher un récapitulatif dans le volet central.
   * Consultez l'onglet **Summary**, la console indique **Powered On** et le bouton **Play** est vert.
 10. HCX Manager est sous tension et prêt pour un enregistrement auprès de vCenter.
 
-### Liens connexes
+## Liens connexes
+{: #hcx-archi-install-cfg-src-related}
 
-* [Préparation de l'environnement d'installation](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-prep-install.html)
+* [Préparation de l'environnement d'installation](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-prep-install)

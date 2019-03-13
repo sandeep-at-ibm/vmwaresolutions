@@ -4,32 +4,39 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-01-14"
+lastupdated: "2019-02-18"
 
 ---
 
 
 # Redes e infraestructura de IBM Cloud
+{: #vcsicp-arch-overview-infrastructure}
 
-## Direccionamiento y reenvío virtual (VRF)
+## Direccionamiento virtual y reenvío
+{: #vcsicp-arch-overview-infrastructure-vrf}
 
-Puede configurar cuentas de {{site.data.keyword.cloud}} como cuentas de VRF para proporcionar funciones similares a la distribución de VLAN, habilitando así el direccionamiento automático entre los bloques de IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
+Puede configurar cuentas de {{site.data.keyword.cloud}} como cuentas de direccionamiento virtual y reenvío (VRF) para proporcionar funciones similares a la distribución de VLAN, habilitando así el direccionamiento automático entre los bloques de IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
 
 ## Direct Link
+{: #vcsicp-arch-overview-infrastructure-direct-link}
 
 {{site.data.keyword.cloud_notm}} Direct Link Connect ofrece acceso privado a su infraestructura de {{site.data.keyword.cloud_notm}} y a cualquier otra nube enlazada a su proveedor de servicios de red, a través de su centro de datos de IBM Cloud local. Esta opción es perfecta para crear conectividad multinube en un entorno único. Se utiliza una topología de ancho de banda compartida para conectar clientes a la red de {{site.data.keyword.icpfull_notm}}. Al igual que sucede con todos los productos de Direct-Link, puede añadir direccionamiento global, que permite el tráfico de red privada a todas las ubicaciones de {{site.data.keyword.cloud_notm}}.
 
 ## Redes privadas virtuales
+{: #vcsicp-arch-overview-infrastructure-vp-networks}
 
 ### strongSwan VPN
+{: #vcsicp-arch-overview-infrastructure-strongswan}
 
 El servicio strongSwan IPSec VPN ofrece un canal de comunicación seguro de extremo a extremo sobre internet que se basa en la suite de protocolos Internet Protocol Security (IPSec) estándar del sector.
 
 ### Hybridity (HCX)
+{: #vcsicp-arch-overview-infrastructure-hcx}
 
 vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity) permite ampliar fácilmente las redes de centros de datos locales en {{site.data.keyword.cloud_notm}}, lo que permite migrar las máquinas virtuales (VM) de {{site.data.keyword.cloud_notm}} y al mismo sin realizar ninguna conversión ni cambio.
 
 ## Estructura física
+{: #vcsicp-arch-overview-infrastructure-phys-struct}
 
 La infraestructura física necesaria para desplegar una instancia de producción de {{site.data.keyword.icpfull_notm}} en un clúster de VMware vCenter Server on {{site.data.keyword.cloud_notm}} requiere la siguiente especificación mínima.
 
@@ -45,6 +52,7 @@ Almacenamiento | 2000 GB 2IOPS/GB de gestión, 2000 GB 4IOPS/GB de carga de trab
 Además de los requisitos de hardware de {{site.data.keyword.icpfull_notm}}, debe crear volúmenes persistentes en el entorno {{site.data.keyword.icpfull_notm}} para almacenar la base de datos de Cloud Automation Manager (CAM) y los datos de registro. Aunque CAM da soporte a todos los tipos de volúmenes persistentes a los que da soporte {{site.data.keyword.icpfull_notm}}, las dos configuraciones de almacenamiento recomendadas para CAM son NFS y GlusterFS.
 
 ## Estructura virtual
+{: #vcsicp-arch-overview-infrastructure-virtual-struct}
 
 Figura 1. Estructura física de vCenter Server y despliegue de {{site.data.keyword.icpfull_notm}}
 ![Estructura física de VCS y despliegue de {{site.data.keyword.icpfull_notm}}](vcsicp-phy-ics-icp-deployment.svg)
@@ -55,6 +63,7 @@ El ESG se configura con una regla NAT de origen (SNAT) para permitir el tráfico
 
 El ESG también se configura con una regla NAT de destino (DNAT) a las direcciones IP virtuales de {{site.data.keyword.icpfull_notm}} Master/Proxy entre la red de {{site.data.keyword.cloud_notm}} 10.x y el entorno VXLAN.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vcsicp-arch-overview-infrastructure-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

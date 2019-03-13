@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Panoramica sulla modernizzazione dell'applicazione
+{: #vcsicp-appmod}
 
 Il seguente diagramma mostra l'architettura di riferimento di modernizzazione dell'applicazione distribuita da Acme Skateboards. L'architettura è descritta in modo approfondito in questa serie di documenti.
 
@@ -41,6 +42,7 @@ lo sviluppo e la gestione delle applicazioni inserite nei contenitori. {{site.da
     - Traffico tra i sistemi heritage nel data center in loco e le VM cloud.
 
 ## Vantaggi chiave di Acme Skateboards
+{: #vcsicp-appmod-benefits}
 
 vCenter Server fornisce i blocchi di creazione fondamentali che includono VMware vSphere, vCenter Server, NSX e le opzioni di archiviazione condivisa che includono vSAN, necessario per progettare una soluzione flessibile VMware SDDC (Software Defined Data Center) che meglio si adatta ai tuoi carichi di lavoro.
 
@@ -55,7 +57,8 @@ I clienti che passano a piattaforme dell'applicazione native cloud come {{site.d
 
 Questa architettura di riferimento mostra come VCS, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}} muovano in modo sicuro Acme Skateboards lungo il percorso di modernizzazione dell'applicazione.
 
-### Link correlati
+## Link correlati
+{: #vcsicp-appmod-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

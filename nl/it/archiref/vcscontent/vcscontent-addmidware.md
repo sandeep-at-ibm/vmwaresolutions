@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Refactoring e aggiunta del middleware in IBM Cloud Private
+{: #vcscontent-addmidware}
 
 Ora che Stock Trader è in un contenitore e Jane è soddisfatta
 degli attuali microservizi, lei e Todd lavorano su come migliorare
@@ -26,6 +27,7 @@ e i servizi richiesti, introducendo un piano di gestione
 più semplice.
 
 ## Scelte dei contenuti
+{: #vcscontent-addmidware-content-choices}
 
 {{site.data.keyword.cloud_notm}} Private ha una vasta selezione di contenuti e sia Todd che Jane devono decidere quali si adattano meglio alle loro esigenze. Come Todd vede nel
 catalogo {{site.data.keyword.cloud_notm}} Private, la maggior parte dei contenuti è disponibile per la prova,
@@ -141,12 +143,15 @@ source)
 Per Stock Trader, basato sull'architettura della soluzione di Jane, Todd inizierà con [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://console.cloud.ibm.com/catalog/services/mq) e [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis).
 
 ## Aggiunta del middleware
+{: #vcscontent-addmidware-add-middleware}
 
 Per aggiungere il middleware in {{site.data.keyword.cloud_notm}} Private, trova il [grafico Helm](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md) nel catalogo, leggi il file readme e quindi procedi con l'installazione.
 
 Per Stock Trader, Todd ha deciso di aggiungere tutto il middleware. Le seguenti informazioni riassumono ciò che Todd ha dovuto eseguire per ogni middleware che voleva che Jane usasse.
 
 ### Db2
+{: #vcscontent-addmidware-db2}
+
 Todd inizia con Db2 perché lo stanno già utilizzando e possono
 dedicare un Db2 basato su contenitore per ogni soluzione.
 
@@ -192,6 +197,7 @@ Una volta che Db2 è in esecuzione, Todd o Jane devono creare le tabelle
 utilizzate dalla soluzione Stock Trader.
 
 ### MQ
+{: #vcscontent-addmidware-mq}
 
 Todd e Jane hanno bisogno di un software di messaggistica e, dato che usano già MQ,
 questa è un'ottima opzione. Inoltre, può essere eseguito in dimensioni ridotte e
@@ -220,7 +226,8 @@ che solo i pod all'interno del cluster possano accedere al middleware.
 Per configurare MQ per l'utilizzo di Stock Trader, Todd apre l'interfaccia utente MQ Management,
 che è esattamente la stessa della versione VM.
 
-### 	Redis
+### Redis
+{: #vcscontent-addmidware-redis}
 
 Anche se Stock Trader è in esecuzione su {{site.data.keyword.cloud_notm}} Private Hosted, sono
 ancora preoccupati per la latenza del servizio di quotazione azionaria quando
@@ -237,6 +244,7 @@ La configurazione è semplice, quindi Todd immette uno spazio dei nomi
 per installarlo e inizia l'installazione.
 
 ## Refactoring di Stock Trader
+{: #vcscontent-addmidware-refactor-stock-trader}
 
 Il refactoring Stock Trader è un passo importante per Jane. Mentre Todd era impegnato ad aggiungere il
 middleware in {{site.data.keyword.cloud_notm}} Private, Jane ha eseguito il refactoring della sua soluzione
@@ -248,7 +256,7 @@ per puntare all'origine dati. È stato un buon
 inizio e l'applicazione di Jane ottiene immediatamente il valore dalla pianificazione
 e dall'orchestrazione di Kubernetes.
 
-Esistono molti altri vantaggi dall'ottimizzazione dei microservizi di Jane (riesecuzione della codifica
+Esistono molti altri vantaggi dall'ottimizzazione dei microservizi di Jane (ricodifica
 e creazione) per il mondo di Kubernetes.
 
 Per ottimizzare, Jane ha compiuto i seguenti passi:
@@ -263,11 +271,12 @@ funzionalità aggiuntive tramite segreti per accedere ai servizi come ODM e
 Watson, insieme ad altri microservizi come singoli repository
 in GitHub.
 
-### Aggiunta di segreti
+### Aggiunta dei segreti
+{: #vcscontent-addmidware-add-secrets}
 
 Ora che Jane ha eseguito il refactoring dei microservizi di Stock Trader, ha bisogno di un modo
 per astrarre i nomi, gli ID utente e le password del servizio, in modo che la sua applicazione possa raccogliere dettagli univoci sul servizio quando viene distribuito
-senza impostare come hardcoded specifici nomi e ricreare l'applicazione.
+senza codificare in modo permanente specifici nomi e ricreare l'applicazione.
 
 Utilizzando i segreti Kubernetes, Jane configura un nome segreto ben definito
 e i parametri all'interno di ciascun segreto per garantire che quando il microservizio viene
@@ -284,6 +293,7 @@ Figura 2. Stock Trader - servizi pivot
 ![Servizi pivot Stock Trader](vcscontent-pivot-services.svg)
 
 ## Risultato
+{: #vcscontent-addmidware-result}
 
 Poiché Jane si è dedicata al refactoring della sua soluzione Stock Trader e
 Todd all'installazione del middleware in {{site.data.keyword.cloud_notm}} Private Hosted, tutta la soluzione
@@ -296,7 +306,8 @@ Figura 3. Arricchimento di Stock Trader
 
 ![Arricchimento di Stock Trader](vcscontent-enrich.svg)
 
-### Link correlati
+## Link correlati
+{: #vcscontent-addmidware-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

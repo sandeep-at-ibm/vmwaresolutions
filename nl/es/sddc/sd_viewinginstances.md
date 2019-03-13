@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2018-10-29"
 {:important: .important}
 
 # Visualización de instancias de Cloud Foundation
+{: #sd_viewinginstances}
 
 Visualice el resumen y la información detallada de las instancias de VMware Cloud Foundation que se suministran para cuentas de usuario diferentes.
 
 ## Procedimiento para ver el resumen de instancias de Cloud Foundation
+{: #sd_viewinginstances-procedure-view-inst-summary}
 
 Para ver un resumen de todas las instancias de Cloud Foundation que se han suministrado para una cuenta de usuario, complete los pasos siguientes:
 
@@ -50,6 +52,7 @@ Tabla 2. Descripciones de los estados de las instancias de Cloud Foundation
 | Suprimido | La instancia se ha suprimido. |
 
 ## Procedimiento para ver los detalles de la propiedad de instancias de Cloud Foundation
+{: #sd_viewinginstances-procedure-view-inst-property}
 
 Para ver los detalles de las propiedades de una instancia:
 
@@ -75,6 +78,7 @@ Tabla 3. Propiedades de instancias de Cloud Foundation
 | Estado  | El estado de la instancia<br><br>La información que se muestra proporciona una actualización sobre el progreso del despliegue o de la acción que se realiza sobre la instancia. Cuando se producen problemas, es posible que se visualice un mensaje que le ayude a investigar y resolver el problema. |
 
 ## Procedimiento para ver información de acceso para las instancias de Cloud Foundation
+{: #sd_viewinginstances-procedure-view-access-info}
 
 En **Información de acceso**, consulte la información de acceso para los componentes relacionados con la instancia. Las contraseñas que se muestran son contraseñas iniciales generadas por el sistema. Si las cambia fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, no se actualizarán en la página de resumen de la instancia.
 
@@ -99,6 +103,7 @@ Tabla 4. Información de acceso de Fundación Cloud correspondiente a los compon
 | vCenter ADMIN  | El nombre de usuario y la contraseña de inicio de sesión único de VMware vCenter que puede utilizar para iniciar una sesión en vCenter Server mediante el cliente web de vSphere  |
 
 ## Procedimiento para ver el historial de despliegues de las instancias de Cloud Foundation
+{: #sd_viewinginstances-procedure-view-deploy-history}
 
 Pulse **Historial de despliegue** en el panel de navegación izquierdo para ver el historial de despliegue de la instancia.
 
@@ -110,10 +115,12 @@ Tabla 5. Historial de despliegues de la instancia de Cloud Foundation
 | Resumen | Los detalles del cambio |
 
 ## Qué hacer si se producen errores
+{: #sd_viewinginstances-if-errors-occur}
 
-Si se producen errores durante el despliegue o durante la supresión de la instancia, se notifica automáticamente al equipo de soporte de {{site.data.keyword.cloud_notm}}. Para informarse sobre el estado de la incidencia, puede [ponerse en contacto con el servicio de soporte de IBM](../vmonic/trbl_support.html).
+Si se producen errores durante el despliegue o durante la supresión de la instancia, se notifica automáticamente al equipo de soporte de {{site.data.keyword.cloud_notm}}. Para informarse sobre el estado de la incidencia, puede [ponerse en contacto con el servicio de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Qué hacer a continuación
+{: #sd_viewinginstances-next}
 
 Gestione sus instancias desde la consola de {{site.data.keyword.vmwaresolutions_short}} o desde el cliente web de vSphere.
 
@@ -122,12 +129,13 @@ Antes de pulsar la **Consola de vCenter** en la página de resumen de la instanc
 
 Revise los temas siguientes para obtener información que le ayudará a seguir las instrucciones de inicio de sesión:
 
-* Para ver los requisitos y pasos necesarios antes de acceder al cliente web de vSphere, consulte [Se ha alcanzado el tiempo de espera al conectar con el cliente web de vSphere](../vmonic/trbl_timeout_vc_console.html).
+* Para ver los requisitos y pasos necesarios antes de acceder al cliente web de vSphere, consulte [Se ha alcanzado el tiempo de espera al conectar con el cliente web de vSphere](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
 * Para obtener una lista de puntos de acceso para iniciar sesión en la red privada de {{site.data.keyword.cloud_notm}} utilizando VPN, consulte [Acceso a VPN](http://www.softlayer.com/vpn-access){:new_window}.
-* Si tiene problemas al desplegar un archivo OVF (Open Virtualization Format) utilizando el cliente web de vSphere, consulte [Despliegue de un archivo OVF mediante el cliente web de vSphere](../vmonic/trbl_deploy_ovf.html).
+* Si tiene problemas al desplegar un archivo OVF (Open Virtualization Format) utilizando el cliente web de vSphere, consulte [Despliegue de un archivo OVF mediante el cliente web de vSphere](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #sd_viewinginstances-related}
 
-* [Pedido de instancias de Cloud Foundation](sd_orderinginstance.html)
-* [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](sd_addingremovingservers.html)
-* [Supresión de instancias de Cloud Foundation](sd_deletinginstance.html)
+* [Pedido de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Supresión de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

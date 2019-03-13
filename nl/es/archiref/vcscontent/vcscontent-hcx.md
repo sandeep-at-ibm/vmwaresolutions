@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-14"
+lastupdated: "2019-02-15"
 
 ---
 
 # Traspaso de las VM de Stock Trader a IBM Cloud
+{: #vcscontent-hcx}
+
 Todd desea ampliar su instancia VMware SDDC local a
 VMware vCenter Server on {{site.data.keyword.cloud}} como primer paso de su proceso de modernización. El negocio debe permanecer activo y el tiempo de inactividad se debe reducir al mínimo.
 
@@ -35,6 +37,7 @@ La hibridación crea una interconexión ligeramente acoplada entre {{site.data.k
 
 Todd puede migrar Stock Trader de su entorno VMware local al entorno VMware on {{site.data.keyword.cloud_notm}}, cumpliendo con sus requisitos de poco tiempo de inactividad, o nada, y de no tener que volver a configurar las aplicaciones.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #vcscontent-hcx-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](../vcs/vcs-hybridity-intro.html)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

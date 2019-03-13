@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # Despliegue de un archivo OVF utilizando el cliente web de VMware vSphere
+{: #trbl_deploy_ovf}
 
 ## Solución
+{: #trbl_deploy_ovf-resolution}
 
 Para desplegar un archivo OVF (Open Virtualization Format) utilizando el cliente web de vSphere, siga el procedimiento siguiente:
 1. Antes de intentar desplegar un archivo OVF, añada la información de host siguiente al archivo `/etc/hosts`:

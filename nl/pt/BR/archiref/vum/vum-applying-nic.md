@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Aplicando drivers NIC nativos
+{: #vum-applying-nic}
 
 O ESXi 6.5 contém muitos novos drivers nativos que são uma substituição aos drivers vmklinux anteriores. Embora a maioria dos novos drivers nativos seja ativada por padrão após a instalação ou o upgrade, três dos novos drivers nativos são desativados por padrão, porque eles não suportam totalmente as funções dos drivers vmklinux correspondentes.
 
@@ -34,7 +35,7 @@ Para cada host, sucessivamente:
 
 Se for necessário reverter e não for possível usar SSH para o host vSphere ESXi, será necessário efetuar login no console do KVM para o host que precisa da reversão por meio da janela de controle do {{site.data.keyword.cloud_notm}}.
 
-Use o ID e a senha listados na janela de controle do {{site.data.keyword.cloud_notm}} com o endereço IP IPMI para efetuar login na interface da web do IPMI. É necessário estar conectado ao data center no qual o host está localizado por meio da VPN. Para obter mais informações, veja [Introdução à VPN](/docs/infrastructure/iaas-vpn/getting-started.html).
+Use o ID e a senha listados na janela de controle do {{site.data.keyword.cloud_notm}} com o endereço IP IPMI para efetuar login na interface da web do IPMI. É necessário estar conectado ao data center no qual o host está localizado por meio da VPN. Para obter mais informações, veja [Introdução à VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started-with-virtual-private-networking-vpn-).
 
 1. Acesse a página Detalhes do dispositivo, gerenciamento remoto para o host vSphere ESXi e selecione **Ações** > **Console do KVM**. Outra janela é aberta para você inserir o Usuário e a Senha do IPMI.
 2. Selecione **Controle remoto** > **iKVM/HTML5** e clique em **iKVM/HTML5** para ativar novamente. Agora é possível você acessar o console do host vSphere ESXi.
@@ -45,7 +46,8 @@ Use o ID e a senha listados na janela de controle do {{site.data.keyword.cloud_n
 7. Digite **"Y"** para entrar no modo de recuperação e inicialize o servidor ESXi com a versão anterior.
 8. Monitore seus progressos por meio do console. A inicialização pode levar de 10 a 20 minutos.
 
-### Links relacionados
+## Links relacionados
+{: #vum-applying-nic-related}
 
 * [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)

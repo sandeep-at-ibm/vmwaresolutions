@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Visualizando instâncias do Cloud Foundation
+{: #sd_viewinginstances}
 
 Visualize o resumo e as informações detalhadas das instâncias do VMware Cloud Foundation que são provisionadas para diferentes contas do usuário.
 
 ## Procedimento para visualizar o resumo de instâncias do Cloud Foundation
+{: #sd_viewinginstances-procedure-view-inst-summary}
 
 Para visualizar um resumo de todas as instâncias do Cloud Foundation que são provisionadas para uma conta do usuário, conclua as etapas a seguir:
 
@@ -32,13 +34,13 @@ Tabela 1. Cloud Foundation instância itens
 | Versão | A versão de liberação na qual a instância foi implementada ou submetida a upgrade |
 | Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada |
 | Horário de criação | A data e hora em que a instância foi criada |
-| Status | O status da instância |
+| Barra de Status | O status da instância |
 
 A instância pode ter um intervalo de status.
 
 Tabela 2. Descrições do status de instâncias do Cloud Foundation
 
-| Status | Descrição       |
+| Barra de Status        | Descrição       |
 |:------------- |:------------- |
 | Criando | A instância está sendo criada. |
 | Construindo | A instância está sendo configurada. |
@@ -50,6 +52,7 @@ Tabela 2. Descrições do status de instâncias do Cloud Foundation
 | Excluído | A instância foi excluída. |
 
 ## Procedimento para visualizar detalhes da propriedade de instâncias do Cloud Foundation
+{: #sd_viewinginstances-procedure-view-inst-property}
 
 Para visualizar os detalhes da propriedade de uma instância:
 
@@ -72,9 +75,10 @@ Tabela 3. Cloud Foundation propriedades da instância
 | DNS, domínio SSO | O domínio SSO é o domínio de Conexão única do vSphere. O nome de domínio SSO é fixo para todas as instâncias implementadas do Cloud Foundation com um valor de <samp class="ph codeph">vsphere.local</samp>. |
 | DNS, subdomínio | O subdomínio é o nome do subdomínio DNS do nome do domínio-raiz em que residem os nomes de host da instância do Cloud Foundation local. O nome do subdomínio está no formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 | Versão do SDDC Manager  |  A versão do SDDC Manager da instância |
-| Status | O status da instância<br><br>As informações exibidas fornecem uma atualização sobre o progresso da implementação ou a ação que é executada na instância. Quando ocorrem problemas, uma mensagem pode ser exibida para ajudar a investigar e resolver o problema. |
+| Barra de Status  | O status da instância<br><br>As informações exibidas fornecem uma atualização sobre o progresso da implementação ou a ação que é executada na instância. Quando ocorrem problemas, uma mensagem pode ser exibida para ajudar a investigar e resolver o problema. |
 
 ## Procedimento para visualizar informações de acesso para instâncias do Cloud Foundation
+{: #sd_viewinginstances-procedure-view-access-info}
 
 Em **Informações de acesso**, visualize as informações de acesso dos componentes relacionados à instância. As senhas exibidas são senhas iniciais geradas pelo sistema. Se você as mudar fora do console do {{site.data.keyword.vmwaresolutions_short}}, elas não serão atualizadas na página de resumo da instância.
 
@@ -99,6 +103,7 @@ Tabela 4. Informações de acesso do Cloud Foundation para componentes relaciona
 | ADMINISTRADOR do vCenter  | O nome do usuário e a senha de Conexão Única do VMware vCenter que você pode usar para efetuar login no vCenter Server usando o vSphere Web Client  |
 
 ## Procedimento para visualizar o histórico de implementação para instâncias do Cloud Foundation
+{: #sd_viewinginstances-procedure-view-deploy-history}
 
 Clique em **Histórico de implementação** na área de janela de navegação esquerda para visualizar o histórico de implementação da instância.
 
@@ -110,10 +115,12 @@ Tabela 5. Histórico de implementação da instância do Cloud Foundation
 | Resumo | Os detalhes da mudança |
 
 ## O que fazer se ocorrerem erros
+{: #sd_viewinginstances-if-errors-occur}
 
-Se ocorrerem erros durante a implementação ou exclusão da instância, a equipe de Suporte do {{site.data.keyword.cloud_notm}} será notificada automaticamente. Para consultar o status de seu chamado, é possível [entrar em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+Se ocorrerem erros durante a implementação ou exclusão da instância, a equipe de Suporte do {{site.data.keyword.cloud_notm}} será notificada automaticamente. Para consultar o status de seu chamado, é possível [entrar em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## O que fazer a seguir
+{: #sd_viewinginstances-next}
 
 Gerencie suas instâncias do console do {{site.data.keyword.vmwaresolutions_short}} ou do vSphere Web Client.
 
@@ -122,12 +129,13 @@ Antes de clicar no **Console do vCenter** na página de resumo da instância par
 
 Revise os tópicos a seguir para obter informações que ajudarão a concluir as instruções de login:
 
-* Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
+* Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
 * Para obter uma lista de pontos de acesso para efetuar login na Rede privada do {{site.data.keyword.cloud_notm}} usando a VPN, consulte [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
-* Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, consulte [Implementando um arquivo OVF usando o vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
+* Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, consulte [Implementando um arquivo OVF usando o vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
-### Links relacionados
+## Links relacionados
+{: #sd_viewinginstances-related}
 
-* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Expandindo e contraindo a capacidade para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Excluindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Expandindo e contraindo a capacidade para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Excluindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

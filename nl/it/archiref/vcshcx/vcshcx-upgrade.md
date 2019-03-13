@@ -18,4 +18,4 @@ L'upgrade di HCX è un semplice processo che utilizza l'interfaccia utente (IU) 
 {: #vcshcx-upgrade-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html) 
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro) 

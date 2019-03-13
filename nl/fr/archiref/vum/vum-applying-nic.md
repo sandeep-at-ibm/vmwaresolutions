@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Application de pilotes NIC natifs
+{: #vum-applying-nic}
 
 ESXi 6.5 contient de nombreux nouveaux pilotes natifs qui remplacent les anciens pilotes vmklinux. Alors que la plupart de ces nouveaux pilotes sont activés par défaut après l'installation ou la mise à niveau, trois de ces pilotes sont désactivés par défaut, car ils ne prennent pas en charge toutes les fonctions des pilotes vmklinux correspondants.
 
@@ -34,7 +35,7 @@ Pour chaque hôte, procédez comme suit :
 
 Si vous souhaitez revenir à l'état antérieur et que vous ne pouvez pas vous connecter via SSH à l'hôte vSphere ESXi, vous devez vous connecter à la console KVM pour l'hôte qui doit être rétabli via la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}}.
 
-Utilisez l'ID et le mot de passe répertoriés dans la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}} avec l'adresse IP IPMI pour vous connecter à l'interface Web d'IPMI. Vous devez être connecté au centre de données dans lequel se trouve l'hôte via le réseau privé virtuel (VPN). Pour plus d'informations, voir [Initiation au VPN](/docs/infrastructure/iaas-vpn/getting-started.html).
+Utilisez l'ID et le mot de passe répertoriés dans la fenêtre de contrôle d'{{site.data.keyword.cloud_notm}} avec l'adresse IP IPMI pour vous connecter à l'interface Web d'IPMI. Vous devez être connecté au centre de données dans lequel se trouve l'hôte via le réseau privé virtuel (VPN). Pour plus d'informations, voir [Initiation au VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started-with-virtual-private-networking-vpn-).
 
 1. Accédez à la section Détails de l'unité, page Gestion à distance correspondant à l'hôte vSphere ESXi et sélectionnez **Actions** > **Console KVM**. Une autre fenêtre s'affiche en vous demandant le nom d'utilisateur et le mot de passe IPMI.
 2. Sélectionnez **Contrôle à distance** > **iKVM/HTML5** et cliquez sur **iKVM/HTML5** pour relancer. Vous pouvez maintenant accéder à la console de l'hôte vSphere ESXi.
@@ -45,7 +46,8 @@ Utilisez l'ID et le mot de passe répertoriés dans la fenêtre de contrôle d'{
 7. Entrez **“Y”** pour passer en mode reprise et démarrer le serveur ESXi avec la version précédente.
 8. Surveillez sa progression dans la console. L'amorçage peut prendre de 10 à 20 minutes.
 
-### Liens connexes
+## Liens connexes
+{: #vum-applying-nic-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

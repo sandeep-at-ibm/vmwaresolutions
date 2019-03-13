@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Elevar e deslocar MVs do Stock Trader para o IBM Cloud
+{: #vcscontent-hcx}
+
 Todd deseja ampliar continuamente sua instância do VMware SDDC no local
 para um VMware vCenter Server no {{site.data.keyword.cloud}} para a primeira etapa em sua
 jornada de modernização. O negócio deve permanecer funcionando
@@ -53,6 +55,7 @@ Todd é capaz de migrar o Stock Trader de seu
 ambiente do VMware no local para o VMware no ambiente do {{site.data.keyword.cloud_notm}} e atende seus requisitos de pouco a nenhum tempo de inatividade e nenhuma
 reconfiguração de aplicativo.
 
-### Links relacionados
+## Links relacionados
+{: #vcscontent-hcx-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

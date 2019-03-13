@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Eliminazione di istanze Cloud Foundation in una configurazione multisito
+{: #sd_deletinginstance_multi}
 
 Prima di pianificare l'eliminazione delle istanze Cloud Foundation in una configurazione multisito, esamina le seguenti considerazioni.
 
@@ -30,6 +31,7 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 {:note}
 
 ## Procedura per eliminare le istanze Cloud Foundation in una configurazione multisito
+{: #sd_deletinginstance_multi-procedure}
 
 1. Rimuovi tutti i servizi dall'istanza secondaria di Cloud Foundation.
 2. Assicurati di non avere oggetti NSX espansi nell'istanza secondaria che vuoi eliminare.
@@ -39,7 +41,8 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 6. Ripeti i passi da 1 a 5 per tutte le istanze Cloud Foundation secondarie nella tua configurazione multisito.
 7. Dopo aver eliminato tutte le istanze secondarie, puoi anche eliminare l'istanza primaria dalla console {{site.data.keyword.vmwaresolutions_short}}.
 
-### Link correlati
+## Link correlati
+{: #sd_deletinginstance_multi-related}
 
-* [Eliminazione di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
-* [Ordine, visualizzazione e rimozione dei servizi dalle istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Eliminazione di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)
+* [Ordine, visualizzazione e rimozione dei servizi dalle istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)

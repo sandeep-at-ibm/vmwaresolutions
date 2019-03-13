@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Panoramica della rete di IBM Cloud
+{: #vcsnsxt-overview-ic4vnetwork}
 
 {{site.data.keyword.cloud}} gestisce la rete fisica. Le seguenti informazioni descrivono la rete fisica fornita da {{site.data.keyword.cloud_notm}} e le connessioni all'host fisico (VLAN, MTU) associate agli host fisici descritti in precedenza.
 
@@ -18,18 +19,22 @@ Figura 1. Vista di rete di livello superiore di {{site.data.keyword.cloud_notm}}
 ![{{site.data.keyword.cloud_notm}} - Vista di rete di livello superiore](vcsnsxt-ic4vcloud.svg)
 
 ## Rete pubblica
+{: #vcsnsxt-overview-ic4vnetwork-public-net}
 
 I {{site.data.keyword.CloudDataCents_notm}} e i PoP (point of presence) di rete dispongono di più di una connessione da 1 Gbps o 10 Gbps ai vettori di rete di transito e peering di livello principale. Il traffico di rete proveniente da qualsiasi parte del mondo si collega al PoP di rete più vicino e viaggia direttamente attraverso la rete verso il suo data center, riducendo al minimo il numero di hop e handoff di rete tra i provider. All'interno del data center, viene fornita una larghezza di banda di rete da 1 Gbps o 10 Gbps ai singoli server tramite una coppia di switch FCS (front-end customer switch) aggregati e collegati. Questi switch aggregati sono collegati a una coppia di router separati (ossia, gli FCR o front-end customer router) per la rete L3. Questa progettazione multilivello consente alla rete di ridimensionarsi tra rack, righe e pod all'interno di un {{site.data.keyword.CloudDataCent_notm}}.
 
 ## Rete privata
+{: #vcsnsxt-overview-ic4vnetwork-private-net}
 
 Tutti i {{site.data.keyword.CloudDataCents_notm}} e i PoP sono connessi mediante il backbone di rete privata. Questa rete privata è separata dalla rete pubblica e abilita la connettività ai servizi nei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. Lo spostamento dei dati tra i data center avviene utilizzando più di una connessione da 10 Gbps o 40 Gbps alla rete privata. Analogamente alla rete pubblica, la rete privata è multilivello in quanto i server ed altra infrastruttura sono connessi a switch BCS (backend customer switch) aggregati. Questi switch aggregati sono collegati a una coppia di router separati (ossia, i BCR o backend customer router) per la rete L3. La rete privata supporta anche la possibilità di utilizzare i frame Jumbo (MTU 9000) per connessioni all'host fisico.
 
 ## Rete di gestione
+{: #vcsnsxt-overview-ic4vnetwork-mgmt-net}
 
 Oltre alle reti pubbliche e private, ogni server {{site.data.keyword.cloud_notm}} è connesso a una rete di gestione fuori banda. Questa rete di gestione, accessibile tramite VPN, consente l'accesso IPMI (Intelligent Platform Management Interface) al server indipendentemente dalla CPU, dal firmware e dal sistema operativo per scopi di manutenzione e amministrazione.
 
 ## Blocchi di IP primari e portatili
+{: #vcsnsxt-overview-ic4vnetwork-ip-blocks}
 
 {{site.data.keyword.cloud_notm}} assegna due tipi di indirizzi IP da utilizzare all'interno dell'infrastruttura {{site.data.keyword.cloud_notm}}:
 * Gli indirizzi IP primari sono assegnati a dispositivi, server bare metal e virtuali forniti da {{site.data.keyword.cloud_notm}}. Gli utenti non devono assegnare alcun indirizzo IP in questi blocchi.
@@ -38,14 +43,17 @@ Oltre alle reti pubbliche e private, ogni server {{site.data.keyword.cloud_notm}
 Gli indirizzi IP primari o portatili possono essere resi instradabili a qualsiasi VLAN all'interno dell'account del cliente se il VLAN Spanning è abilitato nell'account o se l'account è configurato come un account VRF (virtual routing and forwarding).
 
 ## Spanning della VLAN
+{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
 
 Lo spanning della VLAN è un'impostazione di account globale di {{site.data.keyword.cloud_notm}} che consente a ogni blocco di IP della sottorete primaria e portatile all'interno di tutte le VLAN nell'account di essere instradabili tra loro. Se questa impostazione non è disponibile, i blocchi di IP possono ancora essere instradati ai servizi {{site.data.keyword.cloud_notm}} ma non l'uno all'altro. Questa architettura richiede che l'impostazione VLAN Spanning sia abilitata all'interno dell'account in cui è distribuito VMware vCenter Server on {site.data.keyword.cloud_notm}} in modo che le connessioni siano effettuate in modo trasparente attraverso le varie sottoreti in cui risiedono i componenti della soluzione.
 
 ## VRF (Virtual Routing and Forwarding)
+{: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-Gli account {{site.data.keyword.cloud_notm}} possono essere configurati come account VRF. Un account VRF fornisce funzioni simili allo spanning della VLAN, abilitando l'instradamento automatico tra blocchi di IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
+Gli account {{site.data.keyword.cloud_notm}} possono anche essere configurati come account VRF (Virtual Routing and Forwarding). Un account VRF fornisce funzioni simili allo spanning della VLAN, abilitando l'instradamento automatico tra blocchi di IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
 
 ## Connessioni all'host fisico
+{: #vcsnsxt-overview-ic4vnetwork-host-connect}
 
 Ogni host fisico all'interno della progettazione ha due coppie ridondanti di connessioni Ethernet da 10 Gbps in ogni switch ToR (Top of Rack) {{site.data.keyword.cloud_notm}} (pubblico e privato). Gli adattatori sono configurati come connessioni individuali (non collegate) per un totale di 4 connessioni da 10 Gbps. Ciò consente a ciascuna connessione della scheda di interfaccia di rete (NIC) di funzionare indipendentemente dalle altre.
 
@@ -53,6 +61,7 @@ Figura 2. Connessioni all'host fisico
 ![Connessioni all'host fisico](vcsnsxt-host-connections.svg)
 
 ## VLAN
+{: #vcsnsxt-overview-ic4vnetwork-vlans}
 
 Le offerte VMware on {{site.data.keyword.cloud_notm}} sono progettate con tre VLAN (una pubblica e due private) assegnate al momento della distribuzione. La VLAN pubblica è assegnata a eth1 ed eth3, mentre le connessioni private sono assegnate a eth0 ed eth2. È importante notare che la VLAN pubblica e la prima VLAN privata create e assegnate a questa progettazione sono prive di tag per impostazione predefinita. Successivamente, la VLAN privata aggiuntiva viene trascinata sulle porte dello switch fisico e contrassegnata con tag all'interno dei gruppi di porte VMware che consumano queste sottoreti.
 
@@ -83,7 +92,8 @@ Questa progettazione è implementata con host fisici e VSI (virtual system insta
 
 Le connessioni alla rete privata sono configurate per utilizzare frame jumbo con una dimensione MTU di 9000, che migliora le prestazioni per i trasferimenti di dati di grandi dimensioni come l'archiviazione e vMotion. Questa è la MTU massima consentita in VMware e da {{site.data.keyword.cloud_notm}}. Le connessioni alla rete pubblica utilizzano una MTU Ethernet standard di 1500. Questo valore deve essere mantenuto poiché qualsiasi modifica potrebbe causare la frammentazione dei pacchetti su Internet.
 
-### Link correlati
+## Link correlati
+{: #vcsnsxt-overview-ic4vnetwork-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,17 +4,19 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
 # A propos du stockage pour vCenter Server
+{: #storage-benefits}
 
 Le stockage connecté est une extension de l'offre VMware vCenter Server on {{site.data.keyword.cloud}}. L'architecture de la solution de stockage connecté pour l'offre VMware vCenter Server on {{site.data.keyword.cloud_notm}} détaille les composants de la solution et la configuration de haut niveau de chaque composant de la conception.
 
-Pour plus d'informations sur la conception vCenter Server, voir [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
+Pour plus d'informations sur la conception vCenter Server, voir [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Principaux avantages du stockage connecté pour vCenter Server
+{: #storage-benefits-key-benefits}
 
 Si le stockage connecté n'est pas un élément prérequis pour les environnements VMware, son utilisation en tant qu'unité de stockage partagé offre de nombreux avantages aux utilisateurs pour des opérations informatiques. L'utilisation d'unités de stockage partagé peut vous aider à obtenir la haute disponibilité, la fonction DRS, à utiliser efficacement la capacité de stockage et à effectuer des opérations de gestion simplifiée en activant les fonctions vSphere décrites dans le tableau ci-après.
 
@@ -27,6 +29,7 @@ Tableau 1. Description des fonctions du stockage connecté pour vCenter Server
 | vSphere Datastore Clusters | Cette fonction fournit un ensemble de magasins de données avec des ressources partagées et une interface de gestion partagée. |
 | vSphere Fault Tolerance | Cette fonction fournit une disponibilité continue pour des machines virtuelles, en éliminant les temps d'arrêt et les interruptions, même en cas d'arrêt anormal de l'hôte. |
 
-### Liens connexes
+## Liens connexes
+{: #storage-benefits-related}
 
-* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

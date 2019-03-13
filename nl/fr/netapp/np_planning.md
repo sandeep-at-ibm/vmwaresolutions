@@ -4,19 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
 # Exigences et planification pour les instances NetApp ONTAP Select
+{: #np_planning}
 
 Passez en revue les exigences suivantes avant de commander vos instances NetApp ONTAP Select. Planifiez votre instance en fonction de l'emplacement de l'{{site.data.keyword.CloudDataCent}} et de vos besoins en matière de performances et de capacité pour vos charges de travail.
 
 ## Exigences liées au compte IBM Cloud
+{: #np_planning-account-req}
 
-Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
+Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Exigences liées au compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## Disponibilité du centre de données IBM Cloud
+{: #np_planning-dc-availability}
 
 Un déploiement NetApp ONTAP Select a des exigences strictes quant à l'infrastructure physique. Par conséquent, vous ne pouvez déployer des instances que dans des {{site.data.keyword.CloudDataCents_notm}} qui répondent à ces exigences. Les {{site.data.keyword.CloudDataCents_notm}} suivants sont disponibles pour un déploiement NetApp ONTAP Select :
 
@@ -55,7 +58,8 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instan
 | WDC06 | Washington, DC | Est des Etats-Unis | Hautes performances (Moyenne), Hautes performances (Grande), Haute capacité
 | WDC07 | Washington, DC | Est des Etats-Unis | Hautes performances (Moyenne), Hautes performances (Grande), Haute capacité
 
-### Liens connexes
+## Liens connexes
+{: #np_planning-related}
 
-* [Présentation de NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)
-* [Commande d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
+* [Présentation de NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)
+* [Commande d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)

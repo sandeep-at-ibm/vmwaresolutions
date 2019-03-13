@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Présentation de HyTrust CloudControl on IBM Cloud
+{: #htcc_considerations}
 
 Le service HyTrust CloudControl on {{site.data.keyword.cloud}} applique et contrôle la conformité par rapport aux normes de sécurité standard, notamment le contrôle d'accès à base de rôles (RBAC) et les fonctions d'approbation et d'audit. Combiné à HyTrust DataControl, ce service garantit que les machines virtuelles et les données de charge de travail ne sortent pas d'une région, d'un cluster ou d'un serveur ESXi spécifique au sein de l'{{site.data.keyword.CloudDataCent_notm}}.
 
@@ -20,10 +21,12 @@ Ce service n'est disponible que pour les instances qui exécutent vSphere 6.5 et
 {:note}
 
 ## Spécifications techniques relatives à HyTrust CloudControl on IBM Cloud
+{: #technical-specifications-for-hytrust-cloudcontrol-on-ibm-cloud}
 
 Les composants suivants sont commandés et inclus dans le service HyTrust CloudControl on {{site.data.keyword.cloud_notm}} :
 
 ### Dispositif HyTrust CloudControl
+{: #htcc_considerations-appliance}
 
 * UC : 4 vCPU
 * Mémoire RAM : 16 Go
@@ -31,21 +34,25 @@ Les composants suivants sont commandés et inclus dans le service HyTrust CloudC
 * Réseau : Placé sur un réseau portable privé VLAN spécifié pour la gestion
 
 ### Haute disponibilité
+{: #htcc_considerations-ha}
 
 Deux dispositifs CloudControl déployés dans une configuration active-passive
 
 ### Licences et frais
+{: #htcc_considerations-licenses}
 
 Licence par hôte : une licence HyTrust CloudControl est commandée pour chaque hôte de l'environnement
 
 ## Considérations à prendre en compte lorsque vous retirez HyTrust CloudControl on IBM Cloud
+{: #htcc_considerations-remove}
 
 Avant de retirer le service HyTrust CloudControl on {{site.data.keyword.cloud_notm}}, prenez soin de désactiver la **mise en lieu sûr par mot de passe root**, si elle est configurée, et de supprimer tous les hôtes protégés sur HyTrust CloudControl.
 
-### Liens connexes
+## Liens connexes
+{: #htcc_considerations-related}
 
-* [Commande de HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_ordering.html)
-* [Gestion de HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtcc.html)
-* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Foire aux questions](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Commande de HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_ordering)
+* [Gestion de HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtcc)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Site Web HyTrust](https://www.hytrust.com/)

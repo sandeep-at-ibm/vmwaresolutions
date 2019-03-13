@@ -2,17 +2,23 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2019
 
-lastupdated: "2018-09-27"
+lastupdated: "2019-02-15"
 
 ---
 
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
 # Processus de suppression du service Zerto on IBM Cloud
+{: #removingzertodr}
 
 Le processus de retrait du service Zerto on {{site.data.keyword.cloud}} est automatisé. Les opérations suivantes sont effectuées pour retirer le service Zerto on {{site.data.keyword.cloud_notm}}.
 
 ## Procédure de suppression de Zerto on IBM Cloud
+{: #removingzertodr-remove}
 
 1. Cliquez sur **Instances déployées** dans le panneau de navigation de gauche, puis cliquez sur l'instance sur laquelle vous voulez retirer le service.
 2. Cliquez sur l'onglet **Services**.
@@ -25,13 +31,16 @@ Le processus de retrait du service Zerto on {{site.data.keyword.cloud}} est auto
    4. Retour du sous-réseau portable privé qui avait été commandé pour la communication de la réplication virtuelle Zerto avec l'infrastructure {{site.data.keyword.cloud_notm}}.   
    5. Suppression des frais liés au service de reprise après incident Zerto de votre relevé de facturation {{site.data.keyword.cloud_notm}}.
 
-      **Remarque :** le service de reprise après incident Zerto supprimé vous est facturé jusqu'à échéance du cycle de facturation.
+      Le service de reprise après incident Zerto supprimé vous est facturé jusqu'à échéance du cycle de facturation.
+      {:note}
 
 ## Résultats
+{: #removingzertodr-results}
 
 Une fois le service correctement supprimé, vous recevez une notification par courrier électronique et le service ne s'affiche plus l'onglet **Services installés**.
 
-### Liens connexes
+## Liens connexes
+{: #removingzertodr-related}
 
 * [Commande de Zerto on {{site.data.keyword.cloud_notm}}](zerto_ordering.html)
 * [Gestion de Zerto on {{site.data.keyword.cloud_notm}}](managingzertodr.html)

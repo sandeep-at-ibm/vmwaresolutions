@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-04-16"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-04-16"
 {:important: .important}
 
 # Notes sur l'édition pour la version 2.1
+{: #relnotes_v21}
 
 Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour obtenir la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des astuces relatives à l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -24,21 +25,21 @@ Cette édition inclut de nouvelles fonctionnalités, des mises à jour de compos
 * CVEID : [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID : [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Pour plus d'informations, voir [Résolution des vulnérabilités Spectre et Meltdown](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
+Pour plus d'informations, voir [Résolution des vulnérabilités Spectre et Meltdown](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre).
 
 ## VMware HCX on IBM Cloud
 
-Le service HCX on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances VMware Cloud Foundation et VMware vCenter Server qui exécutent vSphere 6.5 et qui sont déployées dans ou mises à niveau vers la version 2.1 ou des éditions ultérieures. Ce service peut en toute transparence étendre les réseaux de vos centres de données locaux dans {{site.data.keyword.cloud_notm}}, ce qui permet la migration bidirectionnelle des machines virtuelles entre vos centres de données locaux et {{site.data.keyword.cloud_notm}} sans aucune modification. En établissant un pont à 2 couches, HCX utilise l'optimisation, la déduplication, la compression et le chiffrement de WAN pour faire migrer les données plus rapidement et en toute sécurité via un tunnel VPN ou Direct Link. La migration en vrac des machines virtuelles est compatible en amont avec VMware vSphere version 5.1 ou ultérieure. Si vous utilisez une version 6.0 ou ultérieure de vSphere en local, vous pouvez activer des machines virtuelles via vMotion depuis des centres de données locaux vers un {{site.data.keyword.CloudDataCent_notm}}. Il n'est pas nécessaire d'installer VMware NSX dans votre centre de données lorsque vous utilisez HCX.
+Le service HCX on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances VMware Cloud Foundation et VMware vCenter Server qui exécutent vSphere 6.5 et qui sont déployées dans ou mises à niveau vers la version 2.1 ou des éditions ultérieures. Ce service peut en toute transparence étendre les réseaux de vos centres de données locaux dans {{site.data.keyword.cloud_notm}}, ce qui permet la migration bidirectionnelle des machines virtuelles entre vos centres de données locaux et {{site.data.keyword.cloud_notm}} sans aucune modification. En établissant un pont à 2 couches, HCX utilise l'optimisation, la déduplication, la compression et le chiffrement de WAN pour faire migrer les données plus rapidement et en toute sécurité via un tunnel VPN ou Direct Link. La migration en bloc des machines virtuelles est compatible en amont avec VMware vSphere version 5.1 ou ultérieure. Si vous utilisez une version 6.0 ou ultérieure de vSphere en local, vous pouvez activer des machines virtuelles via vMotion depuis des centres de données locaux vers un {{site.data.keyword.CloudDataCent_notm}}. Il n'est pas nécessaire d'installer VMware NSX dans votre centre de données lorsque vous utilisez HCX.
 
 Vous pouvez commander des instances Cloud Foundation ou vCenter Server avec le service HCX on {{site.data.keyword.cloud_notm}} déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes à partir de l'onglet **Services** de la page des détails d'instance.
 
 Vous pouvez également commander une instance HCX locale pour l'octroi de licence et l'activation de votre installation HCX locale.
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Remarques relatives au service HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/hcx_considerations.html)
-* [Gestion de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghcx.html)
-* [Remarques relatives aux instances HCX locales](/docs/services/vmwaresolutions/services/standalone_considerations.html)
-* [Commande d'instances HCX locales](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
+* [Remarques relatives au service HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [Gestion de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
+* [Remarques relatives aux instances HCX locales](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations)
+* [Commande d'instances HCX locales](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
 
 ## Modèle BYOL (Bring Your Own License) plus souple pour VMware Cloud Foundation et vCenter Server
 
@@ -48,21 +49,21 @@ De plus, lorsque vous ajoutez des noeuds à un cluster sous licence avec votre c
 
 Pour plus d'informations, voir les rubriques suivantes :
 
-* [Ajout et affichage des clusters des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html)
-* [Ajout et affichage des clusters des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
-* [Foire aux questions sur le mode BYOL](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
+* [Ajout et affichage des clusters des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [Ajout et affichage des clusters des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Foire aux questions sur le mode BYOL](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## Mises à jour du composant de service Zerto on IBM Cloud
 
 Zerto Virtual Replication 5.5u2 est mis à disposition pour le service Zerto on {{site.data.keyword.cloud_notm}} qui est déployé dans des instances Cloud Foundation et vCenter Server version 2.1 et ultérieures. Des dispositifs de réplication virtuels Zerto (VRA, Virtual Replication Appliance) sont désormais déployés dans le magasin de données de gestion (vSAN ou Endurance) au lieu du magasin de données local pour de meilleures performances. Si vous disposez de dispositifs VRA existants, envisagez de faire migrer leur stockage vers le magasin de données de gestion pour améliorer les performances.
 
-Pour plus d'informations, voir [Présentation de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html).
+Pour plus d'informations, voir [Présentation de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
 
 ## Mises à jour des instances VMware vCenter Server
 
 ### Paramètres de configuration de MTU réseau
 
-A partir de la version 2.1, de nouvelles instances vCenter Server sont commandées avec la valeur MTU 1500 définie par défaut pour le paramètre Distributed Virtual Switch (DVS) public. Pour plus d'informations, voir la section _Paramètres de configuration de MTU réseau_ dans la rubrique [Nomenclature vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
+A partir de la version 2.1, de nouvelles instances vCenter Server sont commandées avec la valeur MTU 1500 définie par défaut pour le paramètre Distributed Virtual Switch (DVS) public. Pour plus d'informations, voir la section _Paramètres de configuration de MTU réseau_ dans la rubrique [Nomenclature vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 ### Réplication automatique des mises à jour et modules de correction VMware ESXi sur les hôtes
 
@@ -71,17 +72,17 @@ Sur les instances VMware vCenter Server version 2.0 et antérieures, les modules
 Sur les instances version 2.1 et ultérieures, l'automatisation applique des modules de correction aux nouveaux hôtes ESXi de manière à faire correspondre le niveau de correctif à celui en vigueur lors de la mise à disposition de l'instance initiale. C'est à vous d''appliquer manuellement tous les modules de correction et mises à jour ultérieurs.
 Lorsque des modules de correction et des mises à jour VMware sont disponibles dans des éditions ultérieures, l'automatisation analyse les hôtes ESXi de vos instances existantes et vous envoie un courrier électronique pour vous rappeler d'appliquer manuellement les derniers modules de correction et les dernières mises à jour.
 
-Pour plus d'informations, voir [Application de mises à jour à des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html).
+Pour plus d'informations, voir [Application de mises à jour à des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates).
 
 ### Mises à jour des estimations de prix des licences VMware NSX
 
 Vous pouvez désormais afficher une estimation de prix avant de soumettre une commande de mise à niveau vers l'édition VMware NSX Advanced ou Enterprise. La tarification est basée sur le nombre d'hôtes ESXi de l'instance vCenter Server. Cet achat modifie uniquement la clé de licence NSX et effectue une mise à niveau de votre édition VMware NSX Base vers l'édition Advanced ou Enterprise. L'achat n'effectue pas de mise à niveau de la version du logiciel NSX.
 
-Pour plus d'informations, voir [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html).
+Pour plus d'informations, voir [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview).
 
 ### Augmentation du nombre maximum de 32 serveurs par cluster
 
-Vous pouvez déployer ou augmenter le nombre de serveurs du cluster par défaut d'une instance jusqu'à 51 serveurs. Pour tous les clusters suivants d'une instance, vous pouvez déployer ou augmenter jusqu'à 59 serveurs. Pour plus d'informations, voir [Ajout et affichage des clusters des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html).
+Vous pouvez déployer ou augmenter le nombre de serveurs du cluster par défaut d'une instance jusqu'à 51 serveurs. Pour tous les clusters suivants d'une instance, vous pouvez déployer ou augmenter jusqu'à 59 serveurs. Pour plus d'informations, voir [Ajout et affichage des clusters des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
 
 Cette fonction est disponible uniquement sur les instances qui sont déployées en version 2.1 ou dans des versions ultérieures. Les instances mises à niveau vers la version 2.1 depuis des éditions antérieures ne disposent pas de cette option.
 {:note}
@@ -91,17 +92,17 @@ Cette fonction est disponible uniquement sur les instances qui sont déployées 
 La configuration des serveurs bare metal personnalisée par l'utilisateur offre désormais une configuration Dual Intel Xeon Gold 6140 de 36 coeurs au total, à 2,3 GHz.
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
+* [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 
 ### Configurations de partage de fichiers NFS individuel
 
 Vous pouvez désormais configurer des partages de fichiers NFS individuellement. Sélectionnez une taille de fichier et un niveau de performance pour chaque partage de fichiers individuel ou sélectionnez les mêmes taille de fichier et niveau de performance pour tous les partages de fichiers que vous commandez.
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Ajout et affichage des clusters des instances vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Ajout et affichage des clusters des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ## Améliorations et mises à jour apportées à l'interface utilisateur
 

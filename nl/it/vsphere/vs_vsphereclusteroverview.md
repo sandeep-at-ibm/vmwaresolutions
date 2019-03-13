@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Panoramica di VMware vSphere on IBM Cloud
+{: #vs_vsphereclusteroverview}
 
 VMware vSphere on {{site.data.keyword.cloud}} è una piattaforma di ordinazione semplificata e ottimizzata per VMware. Con questa piattaforma, puoi creare il tuo proprio ambiente VMware ospitato su IBM personalizzando e ordinando l'hardware compatibile con VMware in base ai tuoi componenti VMware selezionati.
 
@@ -23,6 +24,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} non automatizza l'istallazion
 Utilizza questa offerta per creare un nuovo cluster di server ESXi o ridimensionare un cluster esistente di server ESXi in un {{site.data.keyword.CloudDataCent_notm}}. A seconda dei componenti VMware che selezioni, puoi iniziare con un solo server ESXi e ridimensionare successivamente il cluster in base alle esigenze.
 
 ## Specifiche tecniche per i cluster VMware vSphere on IBM Cloud
+{: #technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters}
 
 Esamina i componenti di VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
@@ -30,6 +32,7 @@ La disponibilità e il prezzo delle configurazioni hardware standardizzate posso
 {:note}
 
 ### Componenti VMware
+{: #vs_vsphereclusteroverview-specs-vmware-components}
 
 Seleziona le licenze (fornite da IBM o BYOL) per i seguenti componenti VMware:
 * VMware vSphere Enterprise Plus 6.0u2, 6.5u1 o 6.5u2
@@ -43,6 +46,7 @@ Seleziona le licenze (fornite da IBM o BYOL) per i seguenti componenti VMware:
    * VMware vRealize Log Insight
 
 ### Bare Metal Server
+{: #vs_vsphereclusteroverview-specs-bare-metal}
 
 Seleziona uno o più {{site.data.keyword.baremetal_short}} {{site.data.keyword.cloud_notm}} con il modello di CPU e la dimensione della RAM da te selezionati:
 * 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series)
@@ -56,11 +60,13 @@ Inoltre, le seguenti specifiche di rete e disco:
 * Un controller disco RAID
 
 ### Rete
+{: #vs_vsphereclusteroverview-specs-network}
 
 * Una VLAN (Virtual LAN) pubblica e due VLAN private
 * (Facoltativo) Una coppia HA di dispositivi FortiGate Security Appliance
 
 ### Archiviazione
+{: #vs_vsphereclusteroverview-specs-storage}
 
 Archiviazione personalizzata dall'utente per la configurazione vSAN quando è selezionato il componente VMware vSAN:
 * Opzioni per disco di archiviazione di SED SSD da 960 GB, SED SSD da 1,9 TB o SED SSD da 3,8 TB
@@ -73,28 +79,33 @@ Archiviazione personalizzata dall'utente per la configurazione vSAN quando è se
 * Opzione Alte prestazioni con Intel Optane, che fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità. Questa opzione dipende dal modello di CPU.
 
 ## Specifiche tecniche per i nodi di espansione del cluster vSphere
+{: #vs_vsphereclusteroverview-expansion-node-specs}
 
 Ogni nodo di espansione del cluster vSphere distribuisce e comporta addebiti per i seguenti componenti nel tuo account {{site.data.keyword.slportal}}.
 
 ### Hardware per i nodi di espansione
+{: #vs_vsphereclusteroverview-expansion-node-specs-hardware}
 
-Un Bare Metal Server {{site.data.keyword.cloud_notm}} con la configurazione hardware presentata in [Specifiche tecniche per i cluster VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+Un Bare Metal Server {{site.data.keyword.cloud_notm}} con la configurazione hardware presentata in [Specifiche tecniche per i cluster VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### Rete per i nodi di espansione
+{: #vs_vsphereclusteroverview-expansion-node-specs-network}
 
-Un Bare Metal Server {{site.data.keyword.cloud_notm}} con la configurazione di rete presentata in [Specifiche tecniche per i cluster VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+Un Bare Metal Server {{site.data.keyword.cloud_notm}} con la configurazione di rete presentata in [Specifiche tecniche per i cluster VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### Componenti VMware per i nodi di espansione
+{: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
 * Un Bare Metal Server {{site.data.keyword.cloud_notm}} con VMware vSphere Enterprise Plus 6.0u2 o 6.5u1  
-* Componenti VMware facoltativi presentati in [Specifiche tecniche per i cluster VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+* Componenti VMware facoltativi presentati in [Specifiche tecniche per i cluster VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
-Devi gestire i server ESXi, i componenti VMware facoltativi e l'hardware aggiuntivo ordinato e consegnato al tuo account {{site.data.keyword.cloud_notm}} solo attraverso il {{site.data.keyword.slportal}}. Dopo aver creato un nuovo cluster nella console {{site.data.keyword.vmwaresolutions_short}}, puoi tornare alla console e utilizzare le informazioni salvate per ridimensionare il nuovo cluster. Per ulteriori informazioni, vedi [Ridimensionamento di cluster vSphere esistenti](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html).
+Devi gestire i server ESXi, i componenti VMware facoltativi e l'hardware aggiuntivo ordinato e consegnato al tuo account {{site.data.keyword.cloud_notm}} solo attraverso il {{site.data.keyword.slportal}}. Dopo aver creato un nuovo cluster nella console {{site.data.keyword.vmwaresolutions_short}}, puoi tornare alla console e utilizzare le informazioni salvate per ridimensionare il nuovo cluster. Per ulteriori informazioni, vedi [Ridimensionamento di cluster vSphere esistenti](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters).
 {:important}
 
-### Link correlati
+## Link correlati
+{: #vs_vsphereclusteroverview-related}
 
-* [Distinta base del software VMware vSphere](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
-* [Pianificazione per i cluster vSphere](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
-* [Ordine di cluster vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [Ridimensionamento di cluster vSphere esistenti](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [Distinta base del software VMware vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_bom)
+* [Pianificazione per i cluster vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
+* [Ordine di cluster vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [Ridimensionamento di cluster vSphere esistenti](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)

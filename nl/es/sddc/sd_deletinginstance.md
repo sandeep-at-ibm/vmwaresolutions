@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-10-29"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2018-10-29"
 {:important: .important}
 
 # Supresión de instancias de Cloud Foundation
+{: #sd_deletinginstance}
 
 Para liberar los componentes que ha solicitado en una instancia de VMware Cloud Foundation, suprima la instancia.
 
@@ -30,6 +31,7 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 {:note}
 
 ## Procedimiento para suprimir instancias de la página Instancias desplegadas
+{: #sd_deletinginstance-procedure1}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, busque la instancia que desea suprimir.
@@ -40,6 +42,7 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
 ## Procedimiento para suprimir instancias de la página de detalles de la instancia
+{: #sd_deletinginstance-procedure2}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia que desea suprimir.
@@ -49,11 +52,12 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
    1. Pulse el icono de menú de desbordamiento junto a **Consola de vCenter** de nuevo y pulse **Suprimir instancia**.
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #sd_deletinginstance-related}
 
-* [Supresión de instancias de Cloud Foundation en una configuración de varios sitios](sd_deletinginstance_multi.html)
-* [Pedido de instancias de Cloud Foundation](sd_orderinginstance.html)
-* [Visualización de instancias de Cloud Foundation](sd_viewinginstances.html)
-* [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](sd_addingremovingservers.html)
-* [Supresión de configuraciones de varios sitios](sd_deletinginstance_multi.html)
-* [Cómo ponerse en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html)
+* [Supresión de instancias de Cloud Foundation en una configuración de varios sitios](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
+* [Pedido de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Visualización de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Supresión de configuraciones de varios sitios](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
+* [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

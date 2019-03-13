@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # Visão geral da arquitetura
+{: #vcsiks-arch-overview}
+
 As ofertas do {{site.data.keyword.vmwaresolutions_full}} fornecem automação para implementar componentes de tecnologia do VMware em {{site.data.keyword.CloudDataCents_notm}} em todo o mundo. A arquitetura consiste em uma única região de nuvem e suporta a capacidade de ampliação para mais regiões de nuvem localizadas em outra geografia ou em outro pod do {{site.data.keyword.cloud_notm}} dentro do mesmo data center.
 
 É possível implementar manualmente os produtos {{site.data.keyword.icpfull_notm}} e Cloud Automation Manager (CAM) em sua plataforma de virtualização no local,
@@ -27,6 +29,7 @@ Service Composer permite que você exponha os serviços de nuvem híbrida no
 catálogo do IBM Cloud Private.
 
 ## Plataforma de gerenciamento de nuvem do IBM Cloud
+{: #vcsiks-arch-overview-ibm-cloud-side}
 
 O diagrama a seguir exibe o {{site.data.keyword.icpfull_notm}} e o CAM implementados com a infraestrutura
 do {{site.data.keyword.cloud_notm}}, com conexões com o vCenter no local e o serviço {{site.data.keyword.containerlong_notm}} implementado no {{site.data.keyword.cloud_notm}}. Os usuários podem implementar máquinas virtuais (MVs) no local e MVs em instâncias e contêineres
@@ -46,6 +49,7 @@ a sub-rede, as políticas da IU central (Gerenciador NSX-T). Para obter informa�
 vcsnsxt/vcsnsxt-intro.html).
 
 ## Plataforma de gerenciamento de nuvem no local
+{: #vcsiks-arch-overview-on-premises}
 
 O diagrama a seguir exibe o {{site.data.keyword.icpfull_notm}} e o CAM implementados na infraestrutura
 no local, com conexões com o vCenter e o {{site.data.keyword.containerlong_notm}} implementado no {{site.data.keyword.cloud_notm}}. Os usuários podem implementar MVs e contêineres
@@ -62,6 +66,7 @@ No diagrama, o CAM cria conexões em nuvem logicamente para os vCenters, os prov
 implementados em cada data center ou ambiente de nuvem, com o MCM fornecendo o
 mecanismo para conectar os clusters do {{site.data.keyword.icpfull_notm}} a uma única visualização de gerenciamento.
 
-### Links relacionados
+## Links relacionados
+{: #vcsiks-arch-overview-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

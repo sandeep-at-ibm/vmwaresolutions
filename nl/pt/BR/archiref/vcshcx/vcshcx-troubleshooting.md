@@ -68,4 +68,4 @@ Poucos problemas, se algum, foram enfrentados com a operação do concentrador L
 ## Links relacionados
 {: #vcshcx-troubleshooting-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

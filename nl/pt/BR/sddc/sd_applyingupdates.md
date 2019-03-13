@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,15 +13,17 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Aplicando atualizações a instâncias do Cloud Foundation
+{: #sd_applyingupdates}
 
 O console do {{site.data.keyword.vmwaresolutions_full}} periodicamente detecta e lista as atualizações de software disponíveis que podem ser aplicadas ao seu ambiente virtual do VMware.
 
 Uma atualização disponível é um registro na lista de atualizações de software da instância, que pode ser aplicado imediatamente ou planejado para um horário posterior. A atualização é um pacote configurável que contém um ou mais pacotes para atualizar os componentes de gerenciamento da IBM e os componentes do VMware.
 
-Iniciando com a V2.5, as atualizações do IBM CloudDriver não são mais listadas porque as atualizações automáticas estão ativadas. Ações como a inclusão de um host, a inclusão de um cluster e a solicitação de um serviço atualizam automaticamente a instância para a versão mais recente. Para obter mais informações sobre atualizações automáticas, consulte a seção *Resiliência do IBM CloudDriver* em Notas sobre a liberação do [ para a V2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
+Iniciando com a V2.5, as atualizações do IBM CloudDriver não são mais listadas porque as atualizações automáticas estão ativadas. Ações como a inclusão de um host, a inclusão de um cluster e a solicitação de um serviço atualizam automaticamente a instância para a versão mais recente. Para obter mais informações sobre atualizações automáticas, consulte a seção *Resiliência do IBM CloudDriver* em Notas sobre a liberação do [ para a V2.5](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25).
 {:note}
 
 ## Antes de iniciar
+{: #sd_applyingupdates-prereq}
 
 Antes de tentar aplicar uma atualização, expanda a entrada de atualização clicando na seta para baixo e verifique as informações a seguir:
 * A versão da atualização. Deve-se aplicar as atualizações em sequência cronológica que é da mais antiga para a mais recente. Assegure-se de que tenha aplicado todas as atualizações anteriores antes de aplicar a mais recente. Por exemplo, deve-se aplicar a atualização V2.4 antes de tentar aplicar a atualização V2.5.
@@ -52,6 +54,7 @@ Tabela 1. Atualize os níveis e o impacto
 </table>
 
 ## Procedimento para aplicar atualizações a instâncias do Cloud Foundation
+{: #sd_applyingupdates-procedure}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do Cloud Foundation**, clique na instância a ser atualizada.
@@ -64,6 +67,7 @@ Tabela 1. Atualize os níveis e o impacto
 6. Se estiver aplicando atualizações em instâncias do Cloud Foundation na configuração de implementação multisite, será exibida uma seção intitulada **Etapas necessárias para atualizar**, que lista as operações de atualização necessárias para todas as instâncias na implementação multisite. Deve-se concluir as etapas em sequência clicando em **Aplicar atualização** para cada etapa. Deve-se aguardar a conclusão da etapa anterior antes de iniciar a próxima etapa.
 
 ## Resultados
+{: #sd_applyingupdates-results}
 
 1. Antes de uma operação de atualização ser iniciada, uma verificação de funcionamento da instância será concluída. Se a verificação de funcionamento falhar, você será notificado para poder corrigir o problema antes de aplicar a atualização.
 2. Durante atualizações que incluem atualizações de componentes VMware, as MVs podem precisar ser migradas dos servidores ESXi para entrar no modo de manutenção. A migração da MV poderá ser evitada se uma MV tiver um armazenamento de dados local ou um CD-ROM montado.
@@ -80,7 +84,7 @@ Tabela 1. Atualize os níveis e o impacto
 
     <table>
       <tr>
-        <th> Status </th>
+        <th>Status</th>
         <th>Detalhes</th>
       </tr>
       <tr>
@@ -109,11 +113,12 @@ Tabela 1. Atualize os níveis e o impacto
       </tr>
     </table>
 
-6. Se o processo de atualização falhar em uma etapa específica, [entre em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html) para obter assistência. Você será avisado sobre como resolver o problema e será orientado a reiniciar o upgrade a partir da etapa que falhou.
+6. Se o processo de atualização falhar em uma etapa específica, [entre em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) para obter assistência. Você será avisado sobre como resolver o problema e será orientado a reiniciar o upgrade a partir da etapa que falhou.
 
-### Links relacionados
+## Links relacionados
+{: #sd_applyingupdates-related}
 
-* [Visão geral do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Veeam no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services/veeam_considerations.html)
-* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [Perguntas Mais Frequentes](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Visão geral do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
+* [Veeam no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Perguntas Mais Frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

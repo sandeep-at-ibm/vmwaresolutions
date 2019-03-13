@@ -4,17 +4,20 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # Le système vCenter Server secondaire ne figure pas dans l'inventaire du client Web vSphere
+{: #trbl_sec_inst_not_visible}
 
 ## Problème
+{: #trbl_sec_inst_not_visible-problem}
 
 Dans une configuration multisite, après que vous ajoutez une instance secondaire, son système vCenter Server n'est pas visible lorsque vous vous connectez au client Web VMware vSphere d'une instance commandée auparavant.
 
 ## Résolution
+{: #trbl_sec_inst_not_visible-resolution}
 
 Il s'agit d'un problème connu de VMware 6.5.
 

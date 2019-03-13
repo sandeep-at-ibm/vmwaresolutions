@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-18"
 
 ---
 
 # Componentes do Skate Advisor
+{: #vcscar-physical}
 
 O {{site.data.keyword.vmwaresolutions_full}} fornece automação para implementar componentes de tecnologia do VMware em {{site.data.keyword.CloudDataCents_notm}} em todo o mundo. A
 arquitetura consiste em uma única região de nuvem e suporta a capacidade
@@ -37,6 +38,7 @@ administradores atendam às demandas de negócios. O Cloud Automation Manager
 Service Composer permite que você exponha os serviços de nuvem híbrida no catálogo do {{site.data.keyword.icpfull_notm}}.
 
 ## Componentes físicos do Skate Advisor
+{: #vcscar-physical-skate-comp}
 
 O diagrama a seguir descreve a implementação de referência do aplicativo
 Acme Skate Advisor em uma implementação de infraestrutura de modernização de
@@ -55,6 +57,7 @@ modernização de aplicativo que fornece a infraestrutura de hospedagem
 necessária.
 
 ### Empacotamento e implementação de aplicativo
+{: #vcscar-physical-app-pack-depl}
 
 O aplicativo é implementado como uma Orquestração do CAM que contém os elementos a seguir:
 * Orquestração de serviço - uma orquestração de serviço do CAM é um recurso de
@@ -84,6 +87,7 @@ Figura 2. Orquestração do CAM
 ![Orquestração do CAM](vcscar-cam.svg)
 
 ### Balanceamento de carga e proxy
+{: #vcscar-physical-load-balance-proxy}
 
 O balanceamento de carga e o proxying são implementados por meio do componente {{site.data.keyword.icpfull_notm}} Ingress
 Controller. Esse componente manipula o ajuste de escala e o failover
@@ -105,18 +109,26 @@ as demandas do sistema. Para superar esse problema, os serviços do {{site.data.
 executar a resolução de endereço IP em tempo real dentro do sistema.
 
 ### Aplicativo da web Acme Skate
+{: #vcscar-physical-acme-skate-web-app}
+
 O aplicativo da web Acme Skate é um aplicativo Java Platform, Enterprise Edition (Java Platform, Enterprise Edition) com base no Spring
 Framework. O aplicativo é implementado em um contêiner do WebSphere Liberty.
 
 ### Aplicativo Acme Skate Advisor
+{: #vcscar-physical-acme-skate-advisor-app}
+
 O aplicativo Acme Skate Advisor é um aplicativo baseado em microsserviço implementado em um contêiner do WebSphere Liberty. Um servidor da web nginx fornece
 um front-end para os microsserviços.
 
 ### Banco de dados Acme Skate
+{: #vcscar-physical-acme-skate-db}
+
 O banco de dados Acme Skate é um banco de dados MySQL implementado em uma
 máquina virtual gerenciada pelo vSphere.
 
 ### Visão geral de comunicações
+{: #vcscar-physical-comm-overview}
+
 O Skate Advisor requer as comunicações a seguir:
 -	Do contêiner da web para o usuário do sistema.
 -	Do Advisor e do contêiner da qeb para os serviços do Watson.
@@ -145,6 +157,7 @@ rede de sobreposição VXLAN do NSX se comunique com o backbone do {{site.data.k
 vice-versa.
 
 ### Mapeamento de componente de software
+{: #vcscar-physical-soft-comp-mapping}
 
 O aplicativo Skate Advisor usa os componentes de software
 a seguir.
@@ -167,6 +180,7 @@ JavaScript que é hospedado no Navegador do cliente. O robô de bate-papo
 se comunica com o Watson por meio de microsserviços baseados no Node.js.
 
 ## Visão geral de gerenciamento
+{: #vcscar-physical-mgmt-ovw}
 
 O Acme Skate Advisor reside no {{site.data.keyword.cloud_notm}} e, como tal, é um
 aspecto crítico da Arquitetura. O {{site.data.keyword.cloud_notm}} tem a arquitetura
@@ -186,6 +200,7 @@ os provedores em nuvem e os ambientes do {{site.data.keyword.icpfull_notm}} e do
 implementados em cada data center /ambiente de nuvem, com o MCM fornecendo o
 mecanismo para conectar os clusters do {{site.data.keyword.icpfull_notm}} a uma única visualização de gerenciamento.
 
-### Links relacionados
+## Links relacionados
+{: #vcscar-physical-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

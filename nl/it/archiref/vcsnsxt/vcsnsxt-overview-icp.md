@@ -4,11 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-15"
 
 ---
 
 # IBM Cloud Private
+{: #vcsnsxt-overview-icp}
 
 {{site.data.keyword.icpfull_notm}} è una piattaforma dell'applicazione per lo sviluppo e la gestione di applicazioni inserite nei contenitori. È un ambiente integrato che include l'orchestrazione del contenitore Kubernetes, un repository di immagini privato, una console di gestione, i framework di monitoraggio e un'interfaccia utente grafica che fornisce una posizione centralizzata da cui puoi distribuire, gestire, monitorare e ridimensionare le tue applicazioni.
 
@@ -20,7 +21,8 @@ lastupdated: "2019-01-23"
 -	**Reti tenant isolate** - Calico offre prestazioni migliorate e isolamento della rete all'interno del tuo cluster. Con Calico, puoi creare una sottorete isolata per ogni progetto all'interno del tuo cluster. Questo isolamento della rete ti fornisce maggiore sicurezza durante la trasmissione dei dati e riduce le possibilità di compromettere le applicazioni e i loro dati. Calico facilita inoltre la creazione di nuove politiche di rete che possono abilitare il controllo dettagliato sulla condivisione di oggetti all'interno di un singolo spazio dei nomi.
 -	**Monitoraggio e registrazione solidi con lo stack ELK** - {{site.data.keyword.cloud_notm}} Private utilizza Elasticsearch, Logstash, Filebeat ed Heapster per la raccolta, l'archiviazione e l'esecuzione di query di log e metriche. Questo processo di monitoraggio e registrazione fornisce un archivio centralizzato per tutti i log e le metriche, prestazioni migliori e una maggiore stabilità quando accedi ed esegui query di log e metriche.
 
-## Componenti di IBM Cloud Private
+## Componenti IBM Cloud Private
+{: #vcsnsxt-overview-icp-comp}
 
 Un cluster {{site.data.keyword.cloud_notm}} Private ha quattro classi principali di nodi: di avvio, master, di lavoro e proxy. Puoi facoltativamente specificare i nodi di gestione, VA (Vulnerability Advisor) ed etcd nel tuo cluster.
 -	**Nodo di avvio** - Un nodo di avvio viene utilizzato per eseguire l'installazione, la configurazione, il ridimensionamento dei nodi e gli aggiornamenti del cluster.
@@ -32,13 +34,15 @@ Un cluster {{site.data.keyword.cloud_notm}} Private ha quattro classi principali
 -	Nodo **etcd** - Un nodo etcd è un nodo facoltativo utilizzato per l'esecuzione dell'archivio chiave/valore distribuito etcd.
 
 ## Rete di IBM Cloud Private
+{: #vcsnsxt-overview-icp-networking}
 
 La gestione della rete di {{site.data.keyword.icpfull_notm}} è facilitata dall'uso di Calico.
 Calico utilizza il livello 3 o il livello di rete, del modello OSI (Open System Interconnection). Calico utilizza BGP (Border Gateway Protocol) per creare tabelle di instradamento che facilitano la comunicazione tra i nodi agent.
 
-Per ulteriori informazioni sulla rete di Calico, vedi [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-iks.html).
+Per ulteriori informazioni sulla rete di Calico, vedi [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks).
 
-### Link correlati
+## Link correlati
+{: #vcsnsxt-overview-icp-related}
 
 * [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

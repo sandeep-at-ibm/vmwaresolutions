@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2018
 
 lastupdated: "2018-10-19"
 
@@ -13,6 +13,7 @@ lastupdated: "2018-10-19"
 {:important: .important}
 
 # Note sulla release per la V2.2
+{: #relnotes_v22}
 
 Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
@@ -24,7 +25,7 @@ Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramen
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Per ulteriori informazioni, vedi [Risoluzione delle vulnerabilità Spectre e Meltdown](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
+Per ulteriori informazioni, vedi [Risoluzione delle vulnerabilità Spectre e Meltdown](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre).
 
 ## Aggiornamento della macchina virtuale IBM CloudDriver
 
@@ -36,22 +37,8 @@ Durante il processo di aggiornamento alla V2.2, la macchina virtuale IBM CloudDr
 * Prima di eseguire l'aggiornamento alla V2.2, assicurati di sostituire la VSI Veeam legacy con il servizio Veeam on {{site.data.keyword.cloud_notm}}. Veeam legacy non è più supportato nella V2.2 e release future, pertanto i backup dei componenti di gestione associati a Veeam legacy non sono disponibili per un ripristino.
 
 Per ulteriori informazioni sull'utilizzo del servizio Veeam on {{site.data.keyword.cloud_notm}}, vedi i seguenti argomenti:
-* [Componenti e considerazioni per Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html)
-* [Gestione di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingveeam.html)
-
-## Supporto per VMware Federal on IBM Cloud
-
-VMware Federal on {{site.data.keyword.cloud_notm}} fornisce l'opzione per ordinare un'istanza vCenter Server di base in WDC03 Federal su {{site.data.keyword.CloudDataCent_notm}}. Oltre a supportare un sottoinsieme di offerte di istanze vCenter Server, VMware Federal on {{site.data.keyword.cloud_notm}} offre alle agenzie del Governo federale degli Stati Uniti l'opzione per proteggere le istanze VMware vCenter Server distribuite. La selezione dell'opzione per proteggere le istanze distribuite rimuove le informazioni sensibili memorizzate relative all'istanza e rimuove la connessione di gestione aperta per l'accesso continuo all'istanza per le funzioni di gestione, come l'aggiunta e la rimozione di host e cluster. Dopo aver selezionato l'opzione di protezione, tutte le funzioni di gestione non sono più disponibili ad eccezione dell'eliminazione completa dell'istanza.
-
-Per importanti considerazioni prima di proteggere un'istanza VMware Federal, vedi [Protezione di istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html).
-
-(Aggiornato il 2 aprile 2018) Puoi ora espandere o contrarre la capacità della tua istanza VMware Federal aggiungendo o rimuovendo i server ESXi. Questa opzione è disponibile solo per le istanze VMware Federal che non sono state protette.
-
-Per ulteriori informazioni, consulta i seguenti argomenti:
-
-* [Panoramica di VMware Federal on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
-* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
-* [Espansione e contrazione della capacità per le istanze VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [Componenti e considerazioni per Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [Gestione di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
 ## Impostazioni di configurazione avanzate sui server ESXi
 
@@ -61,14 +48,14 @@ Per le istanze che vengono aggiornate da una release precedente alla V2.2 o rele
 Si consiglia di modificare le restanti impostazioni di configurazione nei nuovi valori per garantire coerenza tra tutte le istanze e per consentire il supporto adeguato per l'espansione dell'archiviazione. IBM prevede di eseguire test solo con queste nuove impostazioni per tutte le release future di {{site.data.keyword.cloud_notm}} for VMware Solutions.
 
 Per ulteriori informazioni, vedi _Impostazioni di configurazione avanzate per i server ESXi_ in:
-* [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html#advanced-configuration-settings-for-esxi-servers)
-* [Distinta base di Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html#advanced-configuration-settings-for-esxi-servers)
+* [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#advanced-configuration-settings-for-esxi-servers)
+* [Distinta base di Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom#advanced-configuration-settings-for-esxi-servers)
 
 ## Supporto per un massimo di 51 server ESXi per un cluster iniziale e un massimo di 59 server ESXi per i cluster aggiuntivi
 
 Per le release della V2.2 e successive, puoi ora aumentare il numero di server ESXi a un massimo di 51 per un cluster iniziale e a un massimo di 59 per i cluster aggiuntivi.
 
-Per le istanze distribuite nelle release della V2.1 o precedenti, devi abilitare il supporto vSAN necessario per aumentare la dimensione del cluster a più di 32. Per ulteriori informazioni sulle procedure per aumentare il numero di server ESXi, vedi _Quanti server ESXi posso aggiungere a un cluster?_ in [Domande frequenti sui server ESXi](/docs/services/vmwaresolutions/vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-).
+Per le istanze distribuite nelle release della V2.1 o precedenti, devi abilitare il supporto vSAN necessario per aumentare la dimensione del cluster a più di 32. Per ulteriori informazioni sulle procedure per aumentare il numero di server ESXi, vedi _Quanti server ESXi posso aggiungere a un cluster?_ in [Domande frequenti sui server ESXi](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_esxi#how-many-esxi-servers-can-i-add-to-a-cluster-).
 {:important}
 
 ## Altre opzioni di configurazione di rete per le istanze vCenter Server e Cloud Foundation
@@ -76,16 +63,16 @@ Per le istanze distribuite nelle release della V2.1 o precedenti, devi abilitare
 Per gli ordini delle istanze vCenter Server e Cloud Foundation, puoi ora riutilizzare le VLAN pubbliche e private esistenti per la tua configurazione di rete. Se non sono disponibili VLAN esistenti, puoi ordinare una nuova VLAN pubblica e due nuove VLAN private.
 
 Per importanti considerazioni prima di selezionare le VLAN esistenti, vedi le sezioni *Impostazioni dell'interfaccia di rete* in:
-* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 
 ## Aggiornamenti per le istanze VMware vCenter Server
 
 ### Aggiornamenti delle impostazioni di configurazione del componente NSX e del gruppo di porte
 
-La release corrente applica l'aggiornamento del componente VMware NSX per vSphere 6.3.5. Per ulteriori informazioni sui componenti, vedi [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
+La release corrente applica l'aggiornamento del componente VMware NSX per vSphere 6.3.5. Per ulteriori informazioni sui componenti, vedi [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
-Per le istanze VMware vCenter Server distribuite nelle release della V2.2 o successive, le impostazioni di configurazione di NSX e del gruppo di porte sono state modificate. Per ulteriori informazioni, vedi la sezione *Impostazioni di configurazione di NSX e del gruppo di porte* in [Distinta base del software vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
+Per le istanze VMware vCenter Server distribuite nelle release della V2.2 o successive, le impostazioni di configurazione di NSX e del gruppo di porte sono state modificate. Per ulteriori informazioni, vedi la sezione *Impostazioni di configurazione di NSX e del gruppo di porte* in  [Distinta base del software vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#nsx-and-port-group-configuration-settings).
 
 ### Nuova opzione per la configurazione DNS
 
@@ -94,11 +81,11 @@ Puoi ora selezionare la distribuzione di una singola VSI (Virtual Server Instanc
 Se configuri la tua istanza per utilizzare le due macchine virtuali di Microsoft Windows, devi fornire 2 licenze Microsoft Windows Server 2012 R2. Utilizza la licenza di Microsoft Windows Server 2012 R2 Standard Edition e/o la licenza di Microsoft Windows Server 2012 R2 Datacenter Edition. Hai 30 giorni per attivare le macchine virtuali.
 {:note}
 
-Per ulteriori informazioni, vedi la sezione *Impostazioni di sistema* in [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#system-settings).
+Per ulteriori informazioni, vedi la sezione *Impostazioni di sistema* in [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#system-settings).
 
 ### Aumento del numero di cluster per istanza
 
-Puoi ora aggiungere fino a 10 cluster alle istanze VMware vCenter Server distribuite o aggiornate alle release della V2.2 e successive. Per ulteriori informazioni, vedi [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html).
+Puoi ora aggiungere fino a 10 cluster alle istanze VMware vCenter Server distribuite o aggiornate alle release della V2.2 e successive. Per ulteriori informazioni, vedi [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
 
 ## Aggiornamenti per i cluster VMware vSphere
 
@@ -106,7 +93,7 @@ Puoi ora aggiungere fino a 10 cluster alle istanze VMware vCenter Server distrib
 
 Gli utenti Business Partner possono ora scegliere tra quattro bundle di licenze per i componenti quando ordinano un nuovo cluster vSphere. Scegli tra Standard con gestione, Avanzata, Avanzata con rete o Avanzata con rete e gestione. Puoi anche includere ulteriori componenti VMware al tuo ordine. Tuttavia, l'opzione BYOL (Bring Your Own License) non è disponibile.
 
-Per ulteriori informazioni, vedi la sezione *Impostazioni di licenza* in [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html).
+Per ulteriori informazioni, vedi la sezione *Impostazioni di licenza* in [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances).
 
 ## Aggiornamenti per le istanze NetApp ONTAP Select
 
@@ -114,13 +101,13 @@ La release corrente applica l'aggiornamento di NetApp ONTAP Select 9.3.
 
 ### Aumento del numero di unità SATA per i server bare metal IBM Cloud ad alta disponibilità
 
-Sono ora disponibili trentaquattro unità SATA per i {{site.data.keyword.baremetal_short}} ad alta disponibilità di NetApp ONTAP Select. Per ulteriori informazioni, vedi [Specifiche tecniche per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances).
+Sono ora disponibili trentaquattro unità SATA per i {{site.data.keyword.baremetal_short}} ad alta disponibilità di NetApp ONTAP Select. Per ulteriori informazioni, vedi [Specifiche tecniche per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#technical-specifications-for-netapp-ontap-select-instances).
 
 ## Aggiornamenti per i servizi aggiuntivi
 
 ### Opzione per l'aumento della larghezza di banda per F5 on IBM Cloud
 
-Puoi ora selezionare una larghezza di banda massima di 10 Gbps quando installi il servizio F5 on {{site.data.keyword.cloud_notm}} per le istanze Cloud Foundation e vCenter Server. Per ulteriori informazioni, vedi [Considerazioni su F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_considerations.html).
+Puoi ora selezionare una larghezza di banda massima di 10 Gbps quando installi il servizio F5 on {{site.data.keyword.cloud_notm}} per le istanze Cloud Foundation e vCenter Server. Per ulteriori informazioni, vedi [Considerazioni su F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations).
 
 ### KMIP for VMware on IBM Cloud
 
@@ -138,7 +125,7 @@ Questo servizio fornisce una soluzione efficiente e scalabile per la protezione 
 
 Il servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} fornisce la protezione dei dati solo per le VM del carico di lavoro.
 
-Per ulteriori informazioni, vedi [Gestione di IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingspp.html).
+Per ulteriori informazioni, vedi [Gestione di IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp).
 
 ### Servizi gestiti
 
@@ -151,20 +138,20 @@ Il servizio Zerto on {{site.data.keyword.cloud_notm}} fornisce funzionalità di 
 Puoi richiedere i servizi gestiti per le tue istanze attraverso la pagina **Introduzione**, effettuando un nuovo ordine di istanza o aggiungendo il servizio a un'istanza esistente.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Richiesta di servizi per Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_veeam_services.html)
-* [Richiesta di servizi per Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
+* [Richiesta di servizi per Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Richiesta di servizi per Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 
 ## Documentazione nuova e aggiornata
 
-* Nella documentazione è ora disponibile una tabella di confronto con le funzioni supportate per le istanze Cloud Foundation e vCenter Server, così come per i cluster VMware vSphere. Puoi vedere, a colpo d'occhio, le differenze tra le funzioni fornite da ciascun tipo di istanza. Per ulteriori informazioni, vedi [Tabella di confronto delle offerte](/docs/services/vmwaresolutions/vmonic/inst_comp_chart.html).
+* Nella documentazione è ora disponibile una tabella di confronto con le funzioni supportate per le istanze Cloud Foundation e vCenter Server, così come per i cluster VMware vSphere. Puoi vedere, a colpo d'occhio, le differenze tra le funzioni fornite da ciascun tipo di istanza. Per ulteriori informazioni, vedi [Tabella di confronto delle offerte](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inst_comp_chart).
 
 * Nella documentazione viene ora fornita la Distinta base di VLAN e software per i cluster Cloud Foundation, vCenter Server e VMware vSphere.
 
   Per ulteriori informazioni, consulta i seguenti argomenti:
 
-  * [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
-  * [Distinta base di Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_bom.html)
-  * [Distinta base di VMware vSphere](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
+  * [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
+  * [Distinta base di Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
+  * [Distinta base di VMware vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_bom)
 
 ## Aggiornamenti e miglioramenti dell'interfaccia utente
 

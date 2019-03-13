@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-14"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-14"
 {:important: .important}
 
 # Adición, visualización y supresión de certificados para instancias de KMIP for VMware on IBM Cloud
+{: #kmip_standalone_addingdeletingcert}
 
 Cuando la instancia de KMIP for VMware on {{site.data.keyword.cloud}} esté lista, debe añadirle certificados. Cuando ya no necesite un certificado, lo puede suprimir de la instancia.
 
 ## Procedimiento para añadir certificados a instancias de KMIP for VMware on IBM Cloud
+{: #kmip_standalone_addingdeletingcert-add}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. Desplácese hacia abajo en la tabla **Instancias de KMIP for VMware on IBM Cloud** y pulse la instancia a la que desea añadir certificados.
@@ -28,6 +30,7 @@ Cuando la instancia de KMIP for VMware on {{site.data.keyword.cloud}} esté list
 5. Pulse **Añadir**.
 
 ## Procedimiento para ver certificados de instancias de KMIP for VMware on IBM Cloud
+{: #kmip_standalone_addingdeletingcert-view}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. Desplácese hacia abajo en la tabla **Instancias de KMIP for VMware on IBM Cloud** y pulse la instancia cuyos certificados desea ver.
@@ -35,6 +38,7 @@ Cuando la instancia de KMIP for VMware on {{site.data.keyword.cloud}} esté list
 4. Para ver el contenido de un determinado certificado, pulse **Descargar**.
 
 ## Procedimiento para suprimir certificados de instancias de KMIP for VMware on IBM Cloud
+{: #kmip_standalone_addingdeletingcert-delete}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. Desplácese hacia abajo en la tabla **Instancias de KMIP for VMware on IBM Cloud** y pulse la instancia cuyos certificados desea suprimir.
@@ -43,9 +47,10 @@ Cuando la instancia de KMIP for VMware on {{site.data.keyword.cloud}} esté list
    El cliente pierde de forma inmediata el acceso a todas las claves con el fin de cifrar y descifrar datos o datos de copia de seguridad. Para que el cliente obtenga acceso de nuevo, debe volver a añadir el certificado SSL del cliente.
    {:note}
 
-### Enlaces relacionados
+## Enlaces relacionados
+{: #kmip_standalone_addingdeletingcert-related}
 
-* [Visualización de instancias de KMIP for VMware on IBM Cloud](kmip_standalone_viewing.html)
-* [Solicitud de instancias de KMIP for VMware on IBM Cloud](kmip_standalone_ordering.html)
-* [Supresión de instancias de KMIP for VMware on IBM Cloud](kmip_standalone_deleting.html)
-* [Sucesos de Activity Tracker](../vmonic/at-events.html)
+* [Visualización de instancias de KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
+* [Solicitud de instancias de KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)
+* [Supresión de instancias de KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
+* [Sucesos de Activity Tracker](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

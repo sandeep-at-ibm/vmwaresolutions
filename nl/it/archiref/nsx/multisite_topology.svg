@@ -155,7 +155,7 @@
 									<rect class="st2" transform="matrix(.7268 -.6868 .6868 .7268 20.221 145.09)" x="191.8" y="45.6" width="1.4" height="3"/>
 								<polygon class="st2" points="200.3 55.1 196.9 53.8 199.2 51.7"/>
 									<rect class="st2" transform="matrix(.7268 -.6868 .6868 .7268 18.406 149.31)" x="196.2" y="49.8" width="1.4" height="3.4"/>
-		<text transform="translate(206.59 40.534)"><tspan class="st3 st6" x="0" y="0">ESG-Workload-NS</tspan><tspan class="st3 st6" x="0" y="7.2">(X Large)</tspan></text>
+		<text transform="translate(206.59 40.534)"><tspan class="st3 st6" x="0" y="0">ESG-Workload-NS</tspan><tspan class="st3 st6" x="0" y="7.2">        (X Large)</tspan></text>
 	<g id="PV_ESG_workload_right">
 					<rect class="st0" x="571" y="39" width="15.6" height="15.6"/>
 					<linearGradient id="SVGID_5_" x1="581.4" x2="577.62" y1="44.526" y2="58.448" gradientUnits="userSpaceOnUse">
@@ -195,7 +195,7 @@
 									<rect class="st2" transform="matrix(.7268 -.6868 .6868 .7268 123.46 412.66)" x="579.8" y="49.6" width="1.4" height="3"/>
 								<polygon class="st2" points="588.3 59.1 584.9 57.8 587.2 55.7"/>
 									<rect class="st2" transform="matrix(.7268 -.6868 .6868 .7268 121.65 416.89)" x="584.2" y="53.8" width="1.4" height="3.4"/>
-		<text transform="translate(517.59 44.534)"><tspan class="st3 st6" x="0" y="0">ESG-Workload-NS</tspan><tspan class="st3 st6" x="0" y="7.2">  (X Large)</tspan></text>
+		<text transform="translate(517.59 44.534)"><tspan class="st3 st6" x="0" y="0">ESG-Workload-NS</tspan><tspan class="st3 st6" x="0" y="7.2">        (X Large)</tspan></text>
 	</g>
 	<g id="PV_ESG_mgmt_right">
 					<rect class="st0" x="746" y="39" width="15.6" height="15.6"/>
@@ -365,7 +365,7 @@
 		<line class="st31" x1="119.5" x2="119.5" y1="71.5" y2="43.5"/>
 			<rect class="st26" x="69.1" y="254.3" width="9.5" height="9.5"/>
 			<text class="st27 st3 st32" transform="translate(70.804 260.75)">VM</text>
-		<text transform="translate(56 243.5)"><tspan class="st3 st6" x="0" y="0">VSI-Backup</tspan><tspan class="st3 st6" x="0" y="7.2">Server (Veeam)</tspan></text>
+		<text transform="translate(56 243.5)"><tspan class="st3 st6" x="0" y="0">    VSI-Backup</tspan><tspan class="st3 st6" x="0" y="7.2">Server (Veeam)</tspan></text>
 			<rect class="st26" x="118.8" y="254.3" width="9.5" height="9.5"/>
 			<text class="st27 st3 st32" transform="translate(120.47 260.75)">VM</text>
 		<text transform="translate(106.25 243.75)"><tspan class="st3 st6" x="0" y="0">VSI-NFS Server</tspan><tspan class="st3 st6" x="0" y="7.2">for Backup</tspan></text>
@@ -710,7 +710,7 @@
 	</g>
 			<rect class="st26" x="546.1" y="254.3" width="9.5" height="9.5"/>
 			<text class="st27 st3 st32" transform="translate(547.8 260.75)">VM</text>
-		<text transform="translate(533 243.5)"><tspan class="st3 st6" x="0" y="0">VSI-Backup</tspan><tspan class="st3 st6" x="0" y="7.2">Server (Veeam)</tspan></text>
+		<text transform="translate(533 243.5)"><tspan class="st3 st6" x="0" y="0">    VSI-Backup</tspan><tspan class="st3 st6" x="0" y="7.2">Server (Veeam)</tspan></text>
 			<rect class="st26" x="595.8" y="254.3" width="9.5" height="9.5"/>
 			<text class="st27 st3 st32" transform="translate(597.47 260.75)">VM</text>
 		<text transform="translate(583.25 243.75)"><tspan class="st3 st6" x="0" y="0">VSI-NFS Server</tspan><tspan class="st3 st6" x="0" y="7.2">for Backup</tspan></text>

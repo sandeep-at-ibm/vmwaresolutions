@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -13,16 +13,19 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Gestion d'infrastructure de stockage connecté
+{: #storage-infra-mgmt}
 
 La gestion d'infrastructure fait référence aux composants VMware qui gèrent l'infrastructure vSphere ESXi.
 
-Pour plus d'informations sur les composants, voir Figure 2. Présentation du réseau NSX Manager dans [Conception d'infrastructure virtuelle](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html).
+Pour plus d'informations sur les composants, voir Figure 2. Présentation du réseau NSX Manager dans [Conception d'infrastructure virtuelle](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure).
 
 ## Conception de mise en réseau virtuelle
+{: #storage-infra-mgmt-visual-net-design}
 
-La virtualisation de réseau qui est utilisée dans cette conception utilise le commutateur vDS (vSphere Distributed Switch) existant qui est associé au réseau privé et qui est spécifié dans la rubrique[Architecture {{site.data.keyword.vmwaresolutions_full}}](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
+La virtualisation de réseau qui est utilisée dans cette conception utilise le commutateur vDS (vSphere Distributed Switch) existant qui est associé au réseau privé et qui est spécifié dans la rubrique [Architecture {{site.data.keyword.vmwaresolutions_full}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Commutateur vDS (vSphere Distributed Switch)
+{: #storage-infra-mgmt-vsphere-ds}
 
 Un autre réseau local virtuel est créé dans la solution vCenter Server et utilisé pour connecter le point de montage NFS aux hôtes ESXi du cluster existant. Dans la mesure où la solution vCenter Server comporte un commutateur vDS (vSphere Distributed Switch) associé au réseau privé, un autre groupe de ports est créé et balisé avec le numéro du réseau local virtuel supplémentaire car ce dernier n'est pas natif.
 
@@ -47,9 +50,11 @@ Figure 1. Groupes de ports et liaisons montantes vDS privés
 ![Groupes de ports et liaisons montantes vDS privés](private_vds_portgroups_and_uplinks.svg "Groupes de ports et liaisons montantes vDS privés")
 
 ### Routage statique d'hôte vSphere
+{: #storage-infra-mgmt-vsphere-routing}
 
 Bien que le commutateur vDS soit configuré avec un nouveau groupe de ports et qu'un port VMkernel soit affecté au groupe de ports, la solution crée une route statique sur chaque hôte vSphere ESXi du déploiement de sorte que la totalité du trafic NFS traverse le réseau local virtuel et le sous-réseau pour NFS. La route statique est créée dans `/etc/rc.local.d/local.sh`, par conséquent, elle est conservée à chaque redémarrage de l'hôte.
 
-### Liens connexes
+## Liens connexes
+{: #storage-infra-mgmt-related}
 
-* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

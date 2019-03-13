@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,6 +13,7 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Excluindo instâncias do Cloud Foundation
+{: #sd_deletinginstance}
 
 Para liberar os componentes que você pediu em uma instância do VMware Cloud Foundation, exclua a instância.
 
@@ -30,6 +31,7 @@ Você é faturado até o final do ciclo de faturamento do {{site.data.keyword.cl
 {:note}
 
 ## Procedimento para excluir instâncias da página Instâncias implementadas
+{: #sd_deletinginstance-procedure1}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do Cloud Foundation**, localize a instância a excluir.
@@ -40,6 +42,7 @@ Você é faturado até o final do ciclo de faturamento do {{site.data.keyword.cl
    2. Na janela **Excluir instância**, clique em **OK**.
 
 ## Procedimento para excluir instâncias da página Detalhes da instância
+{: #sd_deletinginstance-procedure2}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do Cloud Foundation**, clique na instância a excluir.
@@ -49,11 +52,12 @@ Você é faturado até o final do ciclo de faturamento do {{site.data.keyword.cl
    1. Clique no ícone do menu overflow próximo ao **Console do vCenter** novamente e clique em **Excluir instância**.
    2. Na janela **Excluir instância**, clique em **OK**.
 
-### Links relacionados
+## Links relacionados
+{: #sd_deletinginstance-related}
 
-* [Excluindo instâncias do Cloud Foundation em uma configuração de vários sites](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
-* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Visualizando instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Expandindo e contraindo a capacidade para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Excluindo configurações de vários sites](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
-* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Excluindo instâncias do Cloud Foundation em uma configuração de vários sites](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
+* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+* [Visualizando instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
+* [Expandindo e contraindo a capacidade para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
+* [Excluindo configurações de vários sites](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

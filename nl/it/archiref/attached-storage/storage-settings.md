@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -12,7 +12,8 @@ lastupdated: "2019-01-23"
 {:note: .note}
 {:important: .important}
 
-# Configurazione e impostazioni per l'archiviazione collegata
+# Configurazione e impostazione dell'archiviazione collegata
+{: #storage-settings}
 
 Questa progettazione supporta il collegamento dell'archiviazione condivisa solo tramite NFS v3. NFS v4 e v4.1 non sono supportati.
 
@@ -22,6 +23,7 @@ L'archiviazione collegata per questa progettazione è limitata all'archiviazione
 L'architettura specifica che gli archivi dati NFS v3 vengono collegati utilizzando il nome DNS dall'archiviazione {{site.data.keyword.cloud_notm}} per connettersi alla condivisione. La condivisione NFS viene collegata a tutti gli host nel cluster di vCenter Server e posizionata in un cluster di archivi dati con Storage DRS abilitato.
 
 ## vSphere Storage DRS (Distributed Resource Scheduler)
+{: #storage-settings-vsphere-storage-drs}
 
 Utilizza Storage DRS per gestire le risorse aggregate di un cluster di archivi dati. Quando Storage DRS è attivato, fornisce suggerimenti per la migrazione e il posizionamento dei dischi delle macchine virtuali (VM) per bilanciare spazio e risorse di I/O tra gli archivi dati nel cluster di archivi dati.
 
@@ -33,6 +35,7 @@ Quando Storage DRS è attivato, sono disponibili le seguenti funzioni:
 In questa progettazione, Storage DRS è abilitato con il livello di automazione impostato su **Fully Automated**. Di conseguenza, i file vengono migrati automaticamente per ottimizzare l'utilizzo delle risorse nel cluster di dati. Poiché il cluster è completamente automatizzato, tutte le altre opzioni di Storage DRS sono impostate su **Use cluster settings**.
 
 ## Impostazioni di runtime di Storage DRS per NFS v3
+{: #storage-settings-drs-nfs3}
 
 L'aggressività di Storage DRS è determinata specificando le soglie per lo spazio utilizzato e la latenza I/O. Storage DRS raccoglie le informazioni sull'utilizzo delle risorse per gli archivi dati in un cluster di archivi dati. vCenter Server utilizza queste informazioni per generare suggerimenti per il posizionamento di dischi virtuali sugli archivi dati.
 
@@ -59,6 +62,7 @@ Per ulteriori informazioni sulla configurazione di queste impostazioni nel clien
 [Set Storage DRS Runtime Rules in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-AD2D13CE-539B-48C3-BBC9-E55A834874F0.html).
 
 ## SIOC (Storage I/O Control) per NFS v3
+{: #storage-settings-io-control-nfs-v3}
 
 Quando SIOC (Storage I/O Control) viene abilitato nell'ambiente, modifica la lunghezza della coda del dispositivo per la singola VM. La modifica alla lunghezza della coda del dispositivo riduce la coda dell'array di archiviazione per tutte le VM a una condivisione e una frequenza uguali della coda di archiviazione. SIOC si collega solo se le risorse sono vincolate e la latenza dell'I/O di archiviazione è superiore a una soglia definita.
 
@@ -69,10 +73,12 @@ Puoi limitare i singoli dischi virtuali per le singole VM oppure concedere loro 
 Le condivisioni di dischi virtuali impostate su **High** (2000 condivisioni) ricevono il doppio di I/O di un disco impostato su **Normal** (1.000 condivisioni) e quattro volte di più rispetto a un disco impostato su **Low** (500 condivisioni). **Normal** è il valore predefinito per tutte le VM, pertanto devi regolare le impostazioni di **Normal** per le VM che lo richiedono.
 
 ## Archiviazione aggiuntiva per NFS v3
+{: #storage-settings-additional-storage-nfs-v3}
 
 Quando occorre aggiungere dell'ulteriore archiviazione all'ambiente a causa di spazio insufficiente o di una latenza elevata, puoi ordinare un'altra condivisione NFS dalla console. Dopo aver ordinato la condivisione, collega l'esportazione agli host vSphere ESXi nel cluster e posizionale nel cluster di archiviazione. Posizionare la nuova condivisione NFS nel cluster di archiviazione ridimensiona in modo incrementale, efficacemente e senza soluzione di continuità, l'archiviazione associata all'ambiente senza lasciarti l'incombenza delle migrazioni a livello di archiviazione.
 
 ## Parametri di configurazione avanzata
+{: #storage-settings-adv-config-param}
 
 Questa progettazione aggiunge parametri di configurazione avanzata consigliati da {{site.data.keyword.cloud_notm}}. Di conseguenza, i seguenti parametri sono impostati su ogni host vSphere ESXi collegato alla condivisione NFS {{site.data.keyword.cloud_notm}}.
 
@@ -88,6 +94,7 @@ Tabella 2. Parametri di configurazione avanzata di NFS
 | NFS.HeartbeatTimeout | 5 |
 | NFS.MaxQueueDepth | 64 |
 
-### Link correlati
+## Link correlati
+{: #storage-settings-related}
 
-* [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)

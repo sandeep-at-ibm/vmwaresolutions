@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-23"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -13,10 +13,12 @@ lastupdated: "2019-01-23"
 {:important: .important}
 
 # Distinta base di vCenter Server
+{: #vc_bom}
 
 Esamina le informazioni relative alla distinta base (Diba) per le istanze VMware vCenter Server.
 
 ## Diba di VLAN per le istanze vCenter Server
+{: #vc_bom-vlans}
 
 La seguente tabella mostra in dettaglio le informazioni sulla Diba per le VLAN di vCenter Server.
 
@@ -29,6 +31,7 @@ Tabella 1. Diba per le VLAN nelle istanze vCenter Server
 | VLAN3     | Privata B, Portatile | Assegnata a VMware vSAN, se utilizzato.<br><br>Assegnata a VMware NFS, se utilizzato.<br><br>Assegnata a VMware vSphere vMotion. |
 
 ## Diba di software per le istanze vCenter Server
+{: #vc_bom-software}
 
 La seguente tabella mostra in dettaglio le informazioni sulla Diba per i componenti software di vCenter Server.
 
@@ -47,6 +50,7 @@ VMware vSAN è un componente facoltativo.
 {:note}
 
 ## Impostazioni di configurazione avanzate per i server ESXi
+{: #vc_bom-esxi-server-advance-config}
 
 Esamina la seguente tabella per una panoramica delle impostazioni di configurazione avanzate che vengono applicate ai server ESXi. Queste impostazioni variano a seconda che l'istanza vCenter Server sia distribuita nella V2.2 o successive o aggiornata alla V2.2 o successive dalla V2.1 o precedenti.
 
@@ -75,6 +79,7 @@ Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanz
   Per ulteriori informazioni, vedi [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239).
 
 ## Impostazioni di configurazione di NSX e del gruppo di porte
+{: #vc_bom-nsx-port-group-config}
 
 Esamina la seguente tabella per una panoramica delle impostazioni di configurazione di VMware NSX e del gruppo di porte per le istanze vCenter Server e le differenze tra le release.
 
@@ -93,6 +98,7 @@ Tabella 4. Impostazioni di configurazione di NSX e del gruppo di porte per le is
 | Gruppo di porte SDDC-DPortGroup-External | **Port binding** impostato su **Ephemeral - no binding** | **Port binding** impostato su **Static binding** |
 
 ## Impostazioni di configurazione MTU della rete
+{: #vc_bom-network-mtu-config}
 
 Il cluster vSphere utilizza due vDS (vSphere Distributed Switch), uno per la connettività di rete pubblica e l'altro per la connettività di rete privata.
 
@@ -116,19 +122,22 @@ Le impostazioni non si applicano ai nuovi cluster nello stesso {{site.data.keywo
 Per le istanze che sono state distribuite nella V2.0 o precedenti, si consiglia di aggiornare l'impostazione MTU dello Switch pubblico su 1500.
 
 ### Aggiornamento dell'impostazione MTU dello Switch pubblico
+{: #vc_bom-procedure-update-public-switch-mtu-setting}
 
 Per aggiornare l'impostazione MTU per lo Switch pubblico, completa la seguente procedura nel client web VMware vSphere:
 1. Fai clic con il tasto destro del mouse su vDS e seleziona **Modifica impostazioni**.
 2. Nella **scheda Proprietà**, seleziona l'opzione **Avanzate**.
 3. Assicurati che il valore **MTU massima** sia impostato su 1500.
 
-   **Nota:** quando si modifica la dimensione MTU in un vDS, gli uplink collegati (NIC fisiche) vengono disattivati e riattivati. Di conseguenza, si verifica una breve interruzione per le VM che utilizzano l'uplink. Pertanto, si consiglia si pianificare l'aggiornamento dell'impostazione MTU durante i tempi di inattività pianificati.
+   Quando si modifica la dimensione MTU in un vDS, gli uplink collegati (NIC fisiche) vengono disattivati e riattivati. Di conseguenza, si verifica una breve interruzione per le VM che utilizzano l'uplink. Pertanto, si consiglia si pianificare l'aggiornamento dell'impostazione MTU durante i tempi di inattività pianificati.
+   {:note}
 
-### Link correlati
+## Link correlati
+{: #vc_bom-related}
 
 * [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
 * [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
-* [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [Pianificazione per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+* [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Pianificazione per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

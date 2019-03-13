@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-24"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -13,14 +13,17 @@ lastupdated: "2019-01-24"
 {:important: .important}
 
 # Gestione di Zerto on IBM Cloud
+{: #managingzertodr}
 
 Dopo aver distribuito il servizio Zerto on {{site.data.keyword.cloud}} nella tua istanza, puoi configurare o aggiornare Zerto Virtual Replication e distribuire più dispositivi Virtual Replication Appliance ai server ESXi appena aggiunti.
 
 ## Utilizzo del tuo certificato per Zerto
+{: #managingzertodr-ssl-cert}
 
 Come procedura consigliata, utilizza il tuo certificato SSL per Zerto Virtual Manager (ZVM). Dopo aver distribuito Zerto on {{site.data.keyword.cloud_notm}}, sostituisci il certificato SSL per ZVM con il tuo certificato. Per ulteriori informazioni, vedi [How to use a CER SSL Certificate to Replace the Self-Signed Certificate for the ZVM, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window}.
 
 ## Gestione della configurazione delle repliche Zerto
+{: #managingzertodr-manage}
 
 Per gestire la configurazione delle repliche Zerto, accedi alla console di Zerto Virtual Replication utilizzando le credenziali di vCenter con autorizzazioni di amministratore. Ad esempio, la riassociazione delle istanze Zerto o la configurazione dei gruppi di protezione virtuali per replicare le macchine virtuali.
 
@@ -32,17 +35,20 @@ L'ESG (Edge Services Gateway) VMware NSX di gestione delle istanze Cloud Foundat
 {:note}
 
 ## Aggiornamento di Zerto Virtual Replication
+{: #managingzertodr-update}
 
 Per aggiornare Zerto Virtual Replication, accedi alla console di Zerto Virtual Replication.
 
 ## Distribuzione di VRA ai server ESXi appena aggiunti
+{: #managingzertodr-deploy}
 
 Quando aggiungi o rimuovi i server ESXi per il cluster primario della tua istanza, i VRA vengono distribuiti o rimossi automaticamente. I VRA non vengono distribuiti automaticamente ai server ESXi nei cluster secondari della tua istanza. Puoi distribuire i VRA autonomamente utilizzando la console di Zerto Virtual Replication.
 
-### Link correlati
+## Link correlati
+{: #managingzertodr-related}
 
-* [Panoramica di Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html)
-* [Richiesta di servizi gestiti per Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
+* [Panoramica di Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
+* [Richiesta di servizi gestiti per Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [Sito web zerto.com](https://www.zerto.com){:new_window}
 * [Documentazione tecnica di Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
 * [Ripristino di emergenza Zerto](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}

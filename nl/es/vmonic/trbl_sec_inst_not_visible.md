@@ -4,17 +4,20 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # El sistema vCenter Server secundario no aparece en el inventario del cliente web de vSphere
+{: #trbl_sec_inst_not_visible}
 
 ## Problema
+{: #trbl_sec_inst_not_visible-problem}
 
 En una configuración de varios sitios, después de añadir una nueva instancia secundaria, su sistema vCenter Server no resulta visible cuando se inicia una sesión en el cliente web de VMware vSphere de una instancia solicitada anteriormente.
 
 ## Solución
+{: #trbl_sec_inst_not_visible-resolution}
 
 Este es un problema conocido de VMware 6.5.
 

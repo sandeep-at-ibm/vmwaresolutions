@@ -4,17 +4,20 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-08-16"
+lastupdated: "2019-02-14"
 
 ---
 
 # O sistema secundário vCenter Server não aparece no inventário do vSphere Web Client
+{: #trbl_sec_inst_not_visible}
 
 ## Problema
+{: #trbl_sec_inst_not_visible-problem}
 
 Em uma configuração de vários sites, depois de incluir uma nova instância secundária, seu sistema vCenter Server não fica visível ao efetuar login no VMware vSphere Web Client de uma instância solicitada anteriormente.
 
 ## Resolução
+{: #trbl_sec_inst_not_visible-resolution}
 
 Esse é um problema conhecido do VMware 6.5.
 
