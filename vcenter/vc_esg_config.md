@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-15"
 
 ---
 
@@ -28,7 +28,7 @@ As part of the ordering process for your vCenter Server instance, the following 
 * A sample NSX Distributed Logical Router (DLR) is deployed for potential east-west communication between local workloads that are connected to layer 2 (L2) networks.
 * An NSX Edge appliance is deployed and configured to perform network address translation (NAT) from the range of IP addresses of the workload logical switch to a public IP address on the NAT rules.
 
-  The NXS edge is not deployed for instances that are private only.
+  The NSX edge is not deployed for instances that are private only.
   {:note}
 
 * If you installed the Veeam on {{site.data.keyword.cloud_notm}} service, the NSX Manager is configured to do a daily backup of the NSX configurations. For more information, see [Considerations when installing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud).
