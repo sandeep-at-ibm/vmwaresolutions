@@ -76,7 +76,7 @@ For more information, see the *vCenter Server architecture* section in [vCenter 
 
 This release applies the following upgrades and improvements:
 
-* vSphere ESXi 6.5 Update P3 (build 6.5.0-10884925)
+* vSphere ESXi 6.5 Update EP11 (build 6.5.0-10719125)
 * vCenter Server 6.5 U2d (build 6.5.0-10964411)
 * Platform Services Controller 6.5 U2d (build 6.5.0-10964411)
 
