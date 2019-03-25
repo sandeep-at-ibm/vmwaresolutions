@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,7 +18,7 @@ lastupdated: "2019-02-14"
 # Cloud Foundation overview
 {: #sd_cloudfoundationoverview}
 
-When you order VMware Cloud Foundation on {{site.data.keyword.cloud}}, an entire VMware environment is deployed automatically. The base deployment consists of four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with the VMware Cloud Foundation stack preinstalled and configured to provide a unified software-defined data center (SDDC) platform. Cloud Foundation natively integrates VMware vSphere, VMware NSX, VMware Virtual SAN, and is architected based on VMware-validated designs.
+The base deployment of VMware Cloud Foundation on {{site.data.keyword.cloud}} consists of four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with the VMware Cloud Foundation stack preinstalled and configured to provide a unified software-defined data center (SDDC) platform. Cloud Foundation natively integrates VMware vSphere, VMware NSX, VMware Virtual SAN, and is architected based on VMware-validated designs.
 
 ## Cloud Foundation architecture
 {: #sd_cloudfoundationoverview-archi}
@@ -49,7 +52,7 @@ On the {{site.data.keyword.vmwaresolutions_short}} console, you can expand and c
 For more information about the architecture, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Technical specifications for Cloud Foundation instances
-{: #technical-specifications-for-cloud-foundation-instances}
+{: #sd_cloudfoundationoverview-specs}
 
 The following components are included in your Cloud Foundation instance.
 
@@ -59,7 +62,7 @@ Charges that are incurred for the hardware, networking, virtual machines, and st
 ### Bare Metal Server
 {: #sd_cloudfoundationoverview-bare-metal}
 
-You can order {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with one of the following configurations:
+Your instance can have {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with one of the following configurations:
 *  **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.   
 *  **Broadwell**: 2-CPU Intel Broadwell generation servers (Intel Xeon E5-2600/E7-4800 series) with your selected CPU model and RAM size.
 
@@ -69,7 +72,7 @@ If you plan to use vSAN storage, the configuration requires four {{site.data.key
 ### Networking
 {: #sd_cloudfoundationoverview-networking}
 
-The following networking components are ordered:
+Your instance contains the following networking components:
 * 10 Gbps dual public and private network uplinks
 * Three VLANs (Virtual LANs): one public VLAN and two private VLANs
 * Secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -82,7 +85,7 @@ The following networking components are ordered:
 ### Virtual Server Instances
 {: #sd_cloudfoundationoverview-vsi}
 
-The following VSIs (Virtual Server Instances) are ordered:
+Your instance has the following VSIs (Virtual Server Instances):
 * A VSI for Microsoft Active Directory (AD) and Domain Name System (DNS) services. The VSI is required for multi-site configuration support. This VSI specification is: Windows 2012 R2 (8 GB RAM / 2 CPU cores / 100 GB disk / Dual 1 Gbps private uplinks).
 * A VSI for IBM CloudBuilder, which is shut down after the instance deployment is completed.
 * (If Veeam on {{site.data.keyword.cloud_notm}} is ordered) A VSI for the Veeam backup service is ordered.
@@ -90,7 +93,7 @@ The following VSIs (Virtual Server Instances) are ordered:
 ### Storage
 {: #sd_cloudfoundationoverview-storage}
 
-The following storage is ordered, depending on the {{site.data.keyword.baremetal_short}} configuration that you select:
+Your instance can have the following storage, depending on the selected {{site.data.keyword.baremetal_short}} configuration:
 * Two 1-TB SATA boot disks
 * Two 960-GB SSD (Solid-State Disk) cache disks
 * One RAID disk controller
@@ -141,8 +144,6 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 {: #sd_cloudfoundationoverview-related}
 
 * [Cloud Foundation Software Bill of Materials](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
-* [Planning Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
-* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [VMware vSphere Documentation Center](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [VMware NSX 6 Documentation Center](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764)

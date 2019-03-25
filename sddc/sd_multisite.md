@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -52,14 +55,12 @@ The following graphic depicts the overall view of the Cloud Foundation multi-sit
 
 Figure 1. Cloud Foundation multi-site deployment
 
-![Cloud Foundation multi-site deployment](multisite-hub-spoke.svg "Cloud Foundation multi-site deployment")
+![Cloud Foundation multi-site deployment](../vcenter/multisite-hub-spoke.svg "Cloud Foundation multi-site deployment")
 
 The model contains the following layers:
 
-* **Primary instance**: In a multi-site configuration, to deploy the first instance, you define that instance as primary during the instance order process.
-* **Secondary instances**: In a multi-site configuration, you define the instances that are attached to the primary instance as secondary instances during the order process.
-
-You can assign only one secondary instance to a primary instance at a time. You cannot assign multiple secondary instances to a primary instance at the same time. To do that, you must go through the order process again and select the previously defined primary instance as a primary instance for the secondary instance. You must repeat the process for all secondary instances that you want to create.
+* **Primary instance**: In a multi-site configuration, the first instance was defined as primary during the instance order process.
+* **Secondary instances**: In a multi-site configuration, the instances that are attached to the primary instance were defined as secondary during the order process.
 
 You can have a maximum of 8 (1 primary and 7 secondary) instances that are deployed in a multi-site configuration.
 

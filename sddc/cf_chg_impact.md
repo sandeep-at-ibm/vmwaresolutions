@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-14"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -38,6 +41,7 @@ The `<service_name>` together with the `<service_uuid>` truncates to 20 characte
 
 ## VMware resources for Cloud Foundation instances
 {: #cf_chg_impact-vmware-resources}
+{: faq}
 
 The following table lists the operations that might be impacted if you change VMware resources outside of the {{site.data.keyword.vmwaresolutions_short}} console. If a solution to recover is available, it is provided as well.
 
@@ -59,12 +63,12 @@ Table 2. Operations that are impacted by SSH and shell access (local)
 | Attempted change  | Impacted operations  | Severity  | Recovery method  |
 |:------------- |:------------- |:--------------|:--------------|
 | Disable SSH or shell access for vCenter Server or PSC.    | Pairing a primary and secondary instance might fail. Applying patches to the resources might fail.    | Important    | N/A    |
-| Disable SSH or shell access for ESXi.    | Adding and removing hosts, services, and network storage to the instance might fail. Applying patches to the resources might fail.    | Important    | N/A    |
 
 If you choose to disable SSH or shell access, you should re-enable it temporarily before performing the indicated operations.
 
 ## Management subnets for Cloud Foundation instances
 {: #cf_chg_impact-mgmt-subnets}
+{: faq}
 
 The following information discusses the subnets that are ordered by {{site.data.keyword.vmwaresolutions_short}} and it provides options for you to order extra subnets for your own use.
 
