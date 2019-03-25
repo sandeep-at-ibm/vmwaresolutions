@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -41,7 +44,7 @@ There are three Caveonix RiskForesight deployment models:
   -	Index Datastore that is deployed with Master and Data Nodes.
   -	More Data Nodes that are used for Scale Out as number of assets increases.
 
-All components must have an FQDN and registered in DNS before any VM deployment. This step is carried out by the IC4VS automation for the initial "all-in-one" deployment, but is a client responsibility when scaling the deployment.
+All components must have an FQDN and registered in DNS before any VM deployment. This step is completed by the IBM Cloud for VMware Solutions automation for the initial "all-in-one" deployment, but is your responsibility when scaling the deployment.
 
 ## Related links
 {: #caveonix-step1-related}

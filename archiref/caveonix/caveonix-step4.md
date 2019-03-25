@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,8 +21,8 @@ The Service Provider is the top-level organization and there are one or more Ten
 This step is initially completed by the IC4VS automation that uses information that is supplied by the client during the ordering process and default information. The setup process can be started by the client, post deployment, to modify the Service Provider or Tenant Organization as required post installation.
 
 The Service Provider setup has eight substeps:
--	Step 1: Organization Detail - Add the details for the over-all parent organization for your cloud service provider. This organization can have multiple physical locations and multiple data centers. Organizations for your tenants and sub-organizations for your service provider are added later.
--	Step 2: Locations – Map the infrastructure into RiskForesight "Locations” as the Assets are grouped by location, cloud provider, and asset repository.
+-	Step 1: Organization Detail - Add the details for the parent organization for your cloud service provider. This organization can have multiple physical locations and multiple data centers. Organizations for your tenants and sub-organizations for your service provider are added later.
+-	Step 2: Locations – Map the infrastructure into RiskForesight "Locations”. The Assets are grouped by location, cloud provider, and asset repository.
 -	Step 3: Environments - Optional. Environments are a way to group assets. For example, DevOps, DR Site, Production.
 -	Step 4: Cloud Provider - Add the “providers” that provide the infrastructure that your application runs on.
 -	Step 5: Asset Repositories - An Asset Repository associates a set of assets with an Organization, a Cloud Provider, and a Location.

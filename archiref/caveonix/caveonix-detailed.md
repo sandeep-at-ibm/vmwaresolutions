@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -37,9 +40,9 @@ Figure 1. Application components
     - Scan Results
     - Software
     - Daily or weekly aggregated data set
--	Messaging Datastore - RiskForesight uses persistent messaging queue to provide zero data loss and offload back pressure to the components. The incoming data payload is persistent on the first and then taken from the persistent for future processing.
--	Index Datastore - It indexes and stores the incoming raw data for each tenant for further analytics to support the multi-tenant capability.
--	Plug-ins – Reside in the Application Routing serve and includes the setup and integration with VMware components to synchronize all VMs along with their tenant information.
+- Messaging Datastore - RiskForesight uses persistent messaging queue to provide zero data loss and offload back pressure to the components.
+- Index Datastore - It indexes and stores the incoming raw data for each tenant for further analysis to support the multi-tenant capability.
+- Plug-ins – Reside in the Application Routing server and include the setup and integration with VMware components to synchronize all VMs along with their tenant information.
 
 The following table shows the ports and protocols that are required for each component.
 

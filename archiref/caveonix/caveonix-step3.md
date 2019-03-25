@@ -4,22 +4,27 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
 # Step 3 - Application configuration
 {: #caveonix-step3}
 
-This step uses the Caveonix RiskForesight configuration script. For the “all-in-one” deployment, this script is started through the IC4VS automation. For scaling, the client needs to call the script to deploy the partially or fully distributed deployment topologies. The script configures the RiskForesight services:
--	Caveonix Apps (API, Central Collector)
--	Elastic Search
+This step uses the Caveonix RiskForesight configuration script. For the “all-in-one” deployment, this script is started through the IC4VS automation.
+
+For scaling, the client needs to call the script to provision the partially or fully distributed topologies. The script configures the RiskForesight services:
+- Caveonix Apps (API, Central Collector)
+- Elastic Search
 - PostgresSQL
--	Remote Collector
--	UI
--	Kafka
--	Kibana
--	Certificates for all services
+- Remote Collector
+- UI
+- Kafka
+- Kibana
+- Certificates for all services
 
 At the end of this step, the application components are installed on the required virtual machines (VMs).
 
