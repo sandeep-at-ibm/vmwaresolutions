@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,13 +21,10 @@ lastupdated: "2019-02-16"
 ## Using the WAN Optimizer for monitoring
 {: #vcshcx-monitoring-using-wan}
 
-The Silver Peak WAN optimization appliance that is deployed as part of
-HCX does not get its management interface configured. The web user interface (UI) is a
-valuable tool to use when you base line traffic throughput and throttling
-network migration bandwidth use.
+The Silver Peak WAN optimization appliance that is deployed as part of HCX does not get its management interface configured. The web user interface (UI) is a
+valuable tool to use when you base line traffic throughput and throttling network migration bandwidth use.
 
-Only the HCX CGW Gateway WAN tunnel traffic flows through the WAN
-Optimizer appliance. Therefore, it cannot monitor stretched L2 traffic.
+Only the HCX CGW Gateway WAN tunnel traffic flows through the WAN Optimizer appliance. Therefore, it cannot monitor stretched L2 traffic.
 {:note}
 
 ### Configuring the UI
@@ -52,8 +52,7 @@ range and default gateway.
 14.	Go to `https://<configured_WAN_OPT_IP>`.
 15.	Log in with the `admin` default user and the `admin` password.
 
-You can now use the WAN Opt web UI to monitor throughput
-rates, compression ratios, and set bandwidth restrictions.
+You can now use the WAN Opt web UI to monitor throughput rates, compression ratios, and to set bandwidth restrictions.
 
 ### Migration bandwidth throttling
 {: #vcshcx-monitoring-mig-bandwidth}
@@ -74,15 +73,10 @@ This sets bandwidth limits for the migration traffic only. Stretched L2
 traffic is not affected by this setting.
 {:note}
 
-1.	Log in to the wan opt web UI.
-2.	From the **Configuration** tab, select **Shaper** from the drop-down menu.
-3.	In the max bandwidth box, set the maximum bandwidth available to the
-wan opt appliance in kbps. Do not exceed the max bandwidth of the WAN
-link.     
-  - To set for Mbps (base 10) = Mbps x 1000
-  - To set for Gbps = 1000^2 = Gbps x 1000^2
-  - Default = 10 Gbps (10000000)
-4.	Click **Apply**.
+1. Log in to the WAN Opt Web UI.
+2. From the **Configuration** tab, select **Shaper** from the drop-down menu.
+3. In the **Max bandwidth** box, set the maximum bandwidth available to the WAN Opt appliance in Kbps. Do not exceed the maximum bandwidth of the WAN link. To set the value in Mbps, multiply by 1,000. To set the value in Gbps, multiply by 1,000,000. The default value is 10 Gbps (10,000,000 Kbps).
+4. Click **Apply**.
 
 For stretched L2 bandwidth throttling, QoS can be employed for UDP 500
 and 4500 for the tunnel traffic between the L2C appliances.
@@ -106,28 +100,13 @@ Manager or other VMware VM monitoring tools.
 
 Use the following methods to monitor bandwidth use and latency.
 
-- vMotion Traffic is best accomplished by using the WAN Opt web UI. The WAN
-Opt dramatically reduces the traffic that is going over the WAN and reduces
-packet loss by sending redundant packets. It has been observed that the
-typic ratio LAN to WAN bandwidth use is ~ 3:1 (350 Mbps LAN =
-90-120Mbps WAN).
+- vMotion Traffic is best accomplished by using the WAN Opt web UI. The WAN Opt dramatically reduces the traffic that is going over the WAN and reduces packet loss by sending redundant packets. It has been observed that the typical ratio LAN to WAN bandwidth usage is approximately 3:1 (350 Mbps LAN = 90-120Mbps WAN).
 
-- Replication-based (bulk) migration of VMs within HCX results in
-VMs being moved thick. While this cannot be desirable, the WAN opt UI
-reveals a high ratio between LAN and WAN when you move
-“empty” disk data. Conversely, it is observed that when
-non-compressible data is migrated, such as DB data and digital media, WAN
-use is at its highest as it comes closer to LAN input
-use.
+- Replication-based (bulk) migration of VMs within HCX results in VMs being moved with thick provisioning. While this is not desirable, the WAN opt UI reveals a high ratio between LAN and WAN use when you move unused disk data. Conversely, it is observed that when non-compressible data is migrated, such as DB data and digital media, WAN use is at its highest and it comes closer to LAN use.
 
 Observations:
-- vMotion of a VM within HCX results in no more than the throughput
-of the vMotion network to a single ESX host.
-- As bulk migration can have multiple migrations in flight
-simultaneously, it achieves higher bandwidth use than a
-vMotion migration. The ratio observed at a customer side with 1 Gbps
-vMotion links to the ESX hosts was: Eight replications = bandwidth
-use of 1 vMotion.
+- The vMotion migration of a VM within HCX does not generate more throughput than the vMotion networking for a single ESXi host.
+- As bulk migration can have multiple migrations in flight simultaneously, it achieves higher bandwidth use than a vMotion migration. The ratio observed at a customer side with 1 Gbps vMotion links to the ESX hosts was: Eight replications = bandwidth use of 1 vMotion.
 - Moving empty space on disk results in displaying a high LAN use with a
 high ratio and subsequently low WAN use. Note that 1 Gbps seems
 to be the limit. Indeed, in this particular case the vMotion network is
@@ -138,28 +117,13 @@ the limitation is the vMotion network of 1 Gbps.
 ## Stretched Layer 2 traffic
 {: #vcshcx-monitoring-stretched-layer-2-traffic}
 
-The HCX fleet component Layer 2 Concentrator has a bandwidth limitation
-of ~4 Gbps aggregate for all L2 network traffic that traverses it. Individual
-stretched networks have a bandwidth limit of ~ 1 Gbps or less
-depending on the traffic type. It is possible to have many stretched L2
-networks across a single L2C pair (theoretical allowable max of 4096
-networks per L2C pair). While the L2C is engineered to detect and
-protect small traffic flows to not be overcame by large flows within the
-same L2C pair, it can be advantageous to identify if this situation is
-occurring and bring up more L2Cs to increase overall bandwidth
-capability. Deploying multiple L2Cs can also be advantageous where
-multiple paths exist between the customer site and {{site.data.keyword.cloud}}, such as direct link and internet, such that both can be used, given that you
-have more than one network to spread across them. A single network cannot be made redundant or given increased bandwidth across multiple L2C
-pairs.
+The HCX fleet component Layer 2 Concentrator has a bandwidth limitation of approximately 4 Gbps for all L2 network traffic that traverses it. Individually stretched networks have a bandwidth limit of approximately 1 Gbps or less depending on the traffic type. It is possible to have many stretched L2 networks across a single L2C pair (theoretical allowable max of 4096 networks per L2C pair). While the L2C is engineered to detect and protect small traffic flows to not be overcame by large flows within the same L2C pair, it can be advantageous to identify if this situation is occurring and bring up more L2Cs to increase overall bandwidth capability.
 
-Monitor the traffic across all interfaces that use the Monitoring tab of
-the L2C VM. If the total data rate is approaching 8 Gbps (4 Gbps in / out)
-consider adding another L2 pair and redistribute stretched networks to
-rebalance.
+Deploying multiple L2Cs can also be advantageous where multiple paths exist between the customer site and {{site.data.keyword.cloud}}, such as direct link and internet. A single network cannot be made redundant or given increased bandwidth across multiple L2C pairs.
 
+Monitor the traffic across all interfaces that use the Monitoring tab of the L2C VM. If the total data rate is approaching 8 Gbps (4 Gbps in / out) consider adding another L2 pair and redistribute stretched networks to rebalance.
 
 ## Related links
 {: #vcshcx-monitoring-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

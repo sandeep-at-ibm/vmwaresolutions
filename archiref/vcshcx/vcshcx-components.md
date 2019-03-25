@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -67,14 +70,14 @@ more L2C pairs allows greater utilization of the underlying
 network.
 - WAN Optimizer - HCX includes an optionally deployed Silver Peak™ WAN
 optimization appliance. It is deployed as a VM appliance. When deployed,
-the CGW tunnel traffic is redirected to traverse the WAN Optimizer pair.
+the CGW tunnel traffic is redirected to traverse the WAN Optimizer.
 Since the WAN optimizer significantly decreases traffic across the WAN
 (typically 3:1 to 6:1 observed) while increasing connection reliability,
 it is recommended to always deploy the WAN optimizer with the CGW. The
 added benefit of deploying the WAN optimizer is extended to limiting the
 WAN bandwidth consumed by VM migration traffic. The WAN optimizer
 management interface is not configured by default.
-- Proxy ESX host - Whenever the CGW is configured to connect to the cloud
+- Proxy ESXi host - Whenever the CGW is configured to connect to the cloud
 side HCX site, a proxy ESXi host appears in the vCenter outside of any
 cluster. This ESXi host has the same management and vMotion IP address
 as the corresponding CGW appliance. This allows for the vSphere
@@ -87,9 +90,7 @@ with no loss in functionality.
 ## HCX user portals
 {: #vcshcx-components-hcx-user-portals}
 
-- Client web UI – The HCX client web portal is the main UI for HCX. Once the client-side HCX manager is installed, it
-shows up as a snap-in to the vCenter web UI. It controls remote cloud
-HCX registration (site pairing), fleet component deployment, network stretching, and VM migration into and out of the Cloud.
+- Client web UI – The HCX client web portal is the main UI for HCX. Once the client-side HCX manager is installed, it shows up as a snap-in to the vCenter web UI. It controls remote cloud HCX registration (site pairing), fleet component deployment, network stretching, and VM migration into and out of the Cloud.
 
 - Cloud side UI – The cloud side HCX UI is accessible through the public
 registration URL given for HCX client registration. By default, it
@@ -97,15 +98,7 @@ uses the cloud side vSphere SSO login (` administrator@vsphere.local`). It is ty
 installation and modifying some network configuration. It is also used
 to build virtual networks within HCX.
 
-- Client / Cloud HCX manager appliance management UI – Access the
-appliance management UI for either the cloud or the client side through the
-VM private IP address as viewed in vCenter.
-`https://<hcxmanager_IP>:9443`. The ID (typically “admin”) and password
-are provided through the {{site.data.keyword.vmwaresolutions_short}} portal. The management UI is
-used start and stop HCX Manager services, configure log monitoring,
-basic networking configuration, manual upgrades, support log gathering
-when the web UI is not functioning, registration with vSphere components
-(vCenter, PSC, NSX Manager) and certificate management.
+- Client / Cloud HCX manager appliance management UI – Access the appliance management UI for either the cloud or the client side through the VM private IP address as viewed in vCenter `https://<hcxmanager_IP>:9443`. The ID (typically “admin”) and password are provided through the {{site.data.keyword.vmwaresolutions_short}} portal. The management UI is used to start and stop HCX Manager services, configure log monitoring, basic networking configuration, manual upgrades, support log gathering when the web UI is not functioning, registration with vSphere components (vCenter, PSC, NSX Manager), and certificate management.
 
 ## Related links
 {: #vcshcx-components-related}
