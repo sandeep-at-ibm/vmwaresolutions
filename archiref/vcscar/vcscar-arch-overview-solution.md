@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -104,7 +107,7 @@ A worker node is a node that provides a containerized environment for running ta
 ### Proxy node
 {: #vcscar-arch-overview-solution-proxy-node}
 
-A proxy node is a node that transmits external request to the services created inside your cluster. Because a high availability (HA) environment has more than one proxy node, if the leading proxy node fails, failover logic automatically promotes a different node to the proxy role. 
+A proxy node is a node that transmits external request to the services created inside your cluster. Because a high availability (HA) environment has more than one proxy node, if the leading proxy node fails, failover logic automatically promotes a different node to the proxy role.
 
 While you can use a single node as both master and proxy, it's best to use dedicated proxy nodes to reduce the load on the master node. A cluster must have at least one proxy node if load balancing is required inside the cluster.
 
@@ -156,8 +159,7 @@ Provides a nginx proxy access into CAM.
 ### CAM user interface
 {: #vcscar-arch-overview-solution-cam-ui}
 
-The CAM user interface components are split across more than one container: cloud
-connections user interface, Library of Templates user interface and deployed instances user interface.
+The CAM user interface components are split across more than one container: cloud connections user interface, Library of Templates user interface and deployed instances user interface.
 
 ### CAM API
 {: #vcscar-arch-overview-solution-cam-api}

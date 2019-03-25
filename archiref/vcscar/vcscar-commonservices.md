@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -13,7 +16,7 @@ lastupdated: "2019-02-15"
 
 Common services provide the services that are used by other services in the cloud management platform. Common services include identity and access services, domain name services, and NTP services.
 
-Figure 1. {{site.data.keyword.icpfull_notm}} common services
+Figure 1. {{site.data.keyword.icpfull_notm}} common services</br>
 ![{{site.data.keyword.icpfull_notm}} common services](vcscar-common-services.svg)
 
 ## Identity and access services
