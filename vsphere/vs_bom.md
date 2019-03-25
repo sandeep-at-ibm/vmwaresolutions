@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -17,7 +20,7 @@ Table 1. BOM for VMware vSphere clusters
 
 | Manufacturer | Component                       | Version |
 |:-------------|:--------------------------------|:--------|
-| VMware       | vSphere ESXi                    | Either 6.5 Update 1 or 6.0 Update 2 |
+| VMware       | vSphere ESXi                    | Either 6.7 Update 1 or 6.5 Update 2 |
 
 ## Related links
 {: #vs_bom-related}

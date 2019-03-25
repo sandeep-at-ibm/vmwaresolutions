@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-01"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -36,7 +39,7 @@ If you select a vSAN component, the location list is filtered by SSD (Solid-Stat
 Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vSphere clusters
 
 | {{site.data.keyword.CloudDataCent_notm}} | Location | Region |
-|:----------------------|:---------|:-------|
+|:----------------------|:---------|:---------------|
 | AMS03 | Amsterdam | Europe |
 | CHE01 | Chennai | Asia-Pacific |
 | DAL09 | Dallas | NA South |
@@ -65,6 +68,7 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vSphere cluster
 | SYD01 | Sydney | Asia-Pacific |
 | SYD04 | Sydney | Asia-Pacific |
 | TOK02 | Tokyo | Asia-Pacific |
+| TOK04 | Tokyo | Asia-Pacific |
 | TOR01 | Toronto | NA East |
 | WDC04 | Washington, DC | NA East |
 | WDC06 | Washington, DC | NA East |
