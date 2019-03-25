@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-25"
 
 subcollection: vmwaresolutions
 
@@ -21,7 +21,7 @@ Review the entry points into the {{site.data.keyword.vmwaresolutions_full}} cons
 
 To access the console directly, complete the following steps:
 1. Go to
-   https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
+   https://cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Log in to the console with your **IBMid** account.
 
 ## Accessing from the IBM Cloud catalog
