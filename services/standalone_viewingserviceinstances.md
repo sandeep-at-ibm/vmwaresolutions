@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -16,7 +19,7 @@ Use this procedure to view the on-premises HCX on {{site.data.keyword.cloud}} in
 ## Procedure to view on-premises VMware HCX on IBM Cloud instances
 {: #standalone_viewingserviceinstances-procedure}
 
-Click **Deployed Instances** from the left navigation pane and scroll down to the **On-premises HCX Instances** table to view information about the instances that you ordered:
+Click **Resources** from the left navigation pane and scroll down to the **On-premises HCX Instances** table to view information about the instances that you ordered:
 
 Table 1. On-premises HCX on {{site.data.keyword.cloud_notm}} instances items
 

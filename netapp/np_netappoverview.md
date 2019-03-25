@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -61,7 +64,7 @@ The virtualization management layer consists of the following components:
 NetApp ONTAP Select runs in a VMware cluster and virtualizes the local storage on the hosts. NetApp ONTAP Select is deployed in the dedicated model, where other workloads are not expected to share the cluster with it. As a result, the hardware configuration of the NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} offering is sized only based on the requirements of NetApp ONTAP Select.
 
 ## Technical specifications for NetApp ONTAP Select instances
-{: #technical-specifications-for-netapp-ontap-select-instances}
+{: #np_netappoverview-specs}
 
 The following components are included in your NetApp ONTAP Select instance.
 

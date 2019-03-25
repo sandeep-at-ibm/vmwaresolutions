@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-15"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,7 @@ This hybrid architecture allows Acme Skateboards to achieve the following goals:
 - Use {{site.data.keyword.cloud_notm}} Automation Manager (CAM) to script infrastructure as code (IaC) to compose and orchestrate services that are made from both VMs and containers to integrate with their DevOps toolchains and their ITSM solution.
 
 The reference architecture has the following key components:
-- **On-premises virtualization** – A VMware cluster that currently hosts the Acme Skateboards VMs. These VMs currently host the applications to be modernized. This cluster is required to meet the prerequisites of the [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) architecture so that it can run HCX. HCX extends the on-premises networks into the {{site.data.keyword.cloud_notm}} allowing customers to migrate VMs into the VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance that is running on {{site.data.keyword.cloud_notm}}, and back if required.
+- **On-premises virtualization** – A VMware cluster that currently hosts the Acme Skateboards VMs. These VMs currently host the applications to be modernized. This cluster is required to meet the prerequisites of the [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) architecture so that it can run HCX. HCX extends the on-premises networks into the {{site.data.keyword.cloud_notm}} allowing customers to migrate VMs into the VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance that is running on {{site.data.keyword.cloud_notm}}, and back if required.
 
 - **{{site.data.keyword.vmwaresolutions_short}}** – The vCenter Server instance provides the fundamental VMware building blocks, such as vSphere, vCenter Server, NSX-V, and storage options that include vSAN or {{site.data.keyword.cloud_notm}} Endurance storage, needed to automatically deploy a VMware Software Defined Data Center (SDDC) solution. The VMware cluster is the target for the migrated VMs and some of the modernized applications in containers hosted in {{site.data.keyword.icpfull_notm}}. The following are key components in vCenter Server:
     - **NSX-V** - NSX-V provides the network virtualization layer in VCS that provides a network overlay for Acme Skateboards VMs. NSX-V enables BYOIP and isolates the workload networks from the IBM Cloud networks. NSX-V is programmed by HCX to create the networks that Acme Skateboards extend from on-premises.
@@ -48,7 +51,7 @@ vCenter Server provides the fundamental building blocks that include VMware vSph
 In summary, the {{site.data.keyword.vmwaresolutions_short}} offerings provide the following benefits:
 
 * Accelerates delivery of IT projects to Developers and lines of business by reducing the time that it takes for procurement, architecture, implementation, and deployment of resources from weeks or months, to hours.
-* Enhances security with dedicated bare metal servers in a hosted private cloud, including private endpoint deployment to {{site.data.keyword.cloud_notm}} services, including {{site.data.keyword.containerlong_notm}} and KMIP.
+* Enhances security with dedicated bare metal servers in a hosted private cloud, including private network service endpoint deployment to {{site.data.keyword.cloud_notm}} services, including {{site.data.keyword.containerlong_notm}} and KMIP.
 * Enables consistent management and governance of the deployed hybrid cloud by providing full administrative access to virtualization management, preserving your existing VMware tools, scripts, and investments in training.
 * Uses VMware expertise at global scale with IBM Professional and Managed Services spanning 30+ {{site.data.keyword.CloudDataCents_notm}} worldwide.
 

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -28,10 +31,10 @@ Because of resource dependencies, the components in your instance are not releas
 You are billed until the end of the billing cycle for the deleted instance.
 {:note}
 
-## Procedure to delete instances from the Deployed Instances page
+## Procedure to delete instances from the Resources page
 {: #np_deletinginstance-procedure1}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** on the left navigation pane.
 2. In the **NetApp ONTAP Select Instances** table, find the instance to delete.
 3. In the **Actions** column, click the Delete icon.
    The status of the instance is changed to **Deleting**. When the instance is deleted successfully and its status is changed to **Deleted**, click the delete icon in the **Actions** column again.
@@ -42,7 +45,7 @@ You are billed until the end of the billing cycle for the deleted instance.
 ## Procedure to delete instances from the instance details page
 {: #np_deletinginstance-procedure2}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** on the left navigation pane.
 2. In the **NetApp ONTAP Select Instances** table, click the instance to delete.
 3. Click the overflow menu icon next to **NetApp console**, and click **Delete Instance**.
    The status of the instance is changed to **Deleting**. When the instance is deleted successfully, the components of the instance are released, and the status of the instance is changed to **Deleted**.

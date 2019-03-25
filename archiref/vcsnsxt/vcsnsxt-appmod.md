@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,7 @@ This hybrid architecture allows Acme Skateboards to:
 -	Use Cloud Automation Manager (CAM) to script Infrastructure as code (IaC) to compose and orchestrate services that are made from both VMs and containers to integrate with their DevOps toolchains and their ITSM solution.
 
 Focusing on the network architecture, the reference architecture has the following key components:
-- **On-premise virtualization** – A VMware cluster that currently hosts the Acme Skateboards VMs. It's these VMs that are currently hosting the applications that will be modernized. This cluster is required to meet the prerequisites as documented in the [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) document to allow customers to migrate VMs into the VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance running on {{site.data.keyword.cloud_notm}}, and back if required.
+- **On-premise virtualization** – A VMware cluster that currently hosts the Acme Skateboards VMs. It's these VMs that are currently hosting the applications that will be modernized. This cluster is required to meet the prerequisites as documented in the [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) to allow customers to migrate VMs into the VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance running on {{site.data.keyword.cloud_notm}}, and back if required.
 - **VMware vCenter Server on IBM Cloud** – vCenter Server provides the fundamental VMware building blocks: vSphere, vCenter Server, NSX-V, and storage options that include vSAN or {{site.data.keyword.cloud_notm}} Endurance storage, needed to automatically deploy a VMware Software Defined Data Center (SDDC) solution. This VMware cluster is the target of the migrated VMs and some of the modernized applications in containers hosted in {{site.data.keyword.icpfull_notm}}.
 
 Key components of the architecture are:
@@ -39,7 +42,7 @@ Key components of the architecture are:
 {: #vcsnsxt-appmod-benefits}
 
 - Accelerated delivery of IT projects to developers and lines of business by reducing the time that it takes for procurement, architecture, implementation, and deployment of resources from weeks or even months, to hours. Application time to value decreases if customers need to wait until networking or security teams can order services like load balancers, firewalls, switches, and routers.
-- Enhanced security with dedicated bare metal servers in a hosted private cloud, including private endpoint deployment to {{site.data.keyword.cloud_notm}} services such as {{site.data.keyword.containerlong_notm}} and KMIP.
+- Enhanced security with dedicated bare metal servers in a hosted private cloud, including private network service endpoint deployment to {{site.data.keyword.cloud_notm}} services such as {{site.data.keyword.containerlong_notm}} and KMIP.
 - Consistent management and governance of the deployed hybrid cloud by providing full administrative access to virtualization management, preserving your existing VMware tools, scripts, and investments in training.
 - VMware expertise at global scale with IBM Professional and Managed Services spanning 30+ {{site.data.keyword.CloudDataCents_notm}} worldwide.
 

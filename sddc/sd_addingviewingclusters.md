@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-07"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -13,7 +16,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Adding, viewing, and deleting clusters for Cloud Foundation instances
-{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
+{: #sd_addingviewingclusters}
 
 The ESXi servers that you configured when you ordered an instance are grouped under a default cluster. The default cluster name is:
 * For instances that were deployed in V2.1 or later releases: **MGMT-Cluster-`<subdomain_label>`**
@@ -111,7 +114,7 @@ You can specify the licensing options for the VMware components in the cluster, 
 ## Procedure to add clusters to Cloud Foundation instances
 {: #sd_addingviewingclusters-adding-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** on the left navigation pane.
 2. In the **Cloud Foundation instances** table, click the instance that you want to add clusters to.
 
    Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
@@ -147,7 +150,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
 ## Procedure to view clusters in Cloud Foundation instances
 {: #sd_addingviewingclusters-viewing-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** on the left navigation pane.
 2. In the **Cloud Foundation instances** table, click an instance to view the clusters in it.
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, view the summary about the clusters:
    * **Name**: The name of the cluster.
@@ -218,7 +221,7 @@ You might want to delete a cluster from an instance when it is no longer needed.
 ## Procedure to delete clusters from Cloud Foundation instances
 {: #sd_addingviewingclusters-deleting-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** on the left navigation pane.
 2. In the **Cloud Foundation instances** table, click the instance that you want to delete clusters from.
 
    Ensure that the instance is in the **Ready to Use** status. Otherwise, you can't delete clusters from the instance.

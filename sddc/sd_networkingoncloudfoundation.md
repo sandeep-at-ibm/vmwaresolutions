@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,13 +26,15 @@ To review the networking components that are included in your Cloud Foundation i
 
 ## Firewall considerations
 {: #sd_networkingoncloudfoundation-firewall-considerations}
+{: faq}
 
 If you're using firewalls, you must configure rules for all communications from the {{site.data.keyword.IBM}} CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs). These rules must allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`. Examples of such firewalls are NSX Distributed Firewalls (DFW) or Vyatta firewalls.
 
 ## Using VMware NSX with your VMs
 {: #sd_networkingoncloudfoundation-using-nsx-with-vm}
+{: faq}
 
-During Cloud Foundation instance deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
+During Cloud Foundation instance deployment, VMware NSX was ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
 
 However, if your workload VMs need to communicate with each other and to access the internet, it is your responsibility to configure NSX for use by your VMs.
 
@@ -39,6 +44,7 @@ For more information about how to set up NSX, see the following topics:
 
 ## Considerations when you change passwords for NSX components
 {: #sd_networkingoncloudfoundation-considerations-when-change-nsx-component-password}
+{: faq}
 
 Review the following considerations before you change the passwords for the NSX Manager, NSX Controllers, and NSX Edge:
 * Do not change the NSX Manager password. You can find this password on the **Summary** page of the instance in the {{site.data.keyword.vmwaresolutions_short}} console.

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-08"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -26,9 +29,7 @@ To access the HTCC console from the vSphere Web Client, use the following proced
 2. Right-click **CC1** or **CC2**, and then click **Open Console**.
 3. Log in to the console by using the console credentials that you can find on the HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service details page.
 
-For more information, see the following topics:
-* [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Related links
 {: #managinghtcc-related}

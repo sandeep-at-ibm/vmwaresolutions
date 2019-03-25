@@ -4,11 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
-# Orchestrated upgrades
+#	Orchestrated upgrades
 {: #vum-orchestr-updates}
 
 You can use orchestrated upgrades to upgrade the virtual hardware and VMware Tools of virtual machines in the inventory after the updating the vSphere ESXi hosts. After the hosts are updated, the VMware Tools upgrade baseline runs first, followed by the virtual machine hardware upgrade baseline. You can use orchestrated upgrades at a cluster, folder, or a data center level.
@@ -64,5 +67,5 @@ You can now use these baseline groups in the scan, review, staging, and remediat
 ## Related links
 {: #vum-orchestr-updates-related}
 
-* [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

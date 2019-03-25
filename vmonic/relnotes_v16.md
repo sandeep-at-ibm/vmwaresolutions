@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2017-05-22"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Release notes for V1.6
@@ -14,6 +17,7 @@ lastupdated: "2017-05-22"
 This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Updates for VMware Cloud Foundation instances
+{: #relnotes_v16-vcf}
 
 The following components are new or updated:
 
@@ -22,11 +26,11 @@ The following components are new or updated:
 *  New hardware specifications: **Small** or **Standard**, depending on your requirements.
 *  New data centers available for deployment: **HKG02 - Hong Kong**, **OSL01 - Oslo**, **SEO01 - Seoul**, **SNG01 - Singapore**, and **SYD04 - Sydney**.
 
-For the complete list of components, see [VMware Cloud Foundation overview](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview).
-
 ## Updates for VMware vCenter Server instances
+{: #relnotes_v16-vcs}
 
 ### Hardware enhancements for vCenter Server instances
+{: #relnotes_v16-hw-vcs}
 
 Starting with the V1.6 release, several enhancements are available for your vCenter Server instances.
 
@@ -48,6 +52,7 @@ The following actions are available on the pre-V1.6 vCenter Server instances:
 All other actions on pre-V1.6 instances are no longer available.
 
 ### Networking enhancements for vCenter Server instances
+{: #relnotes_v16-network-vcs}
 
 *  A public subnet with 16 IP addresses on the public VLAN is ordered on your behalf to allow your VMs (virtual machines) to access the internet.
 *  A private subnet with 64 IP addresses on the private VLAN is ordered on your behalf to allow your VMs to access the SoftLayer® internal network.
@@ -71,10 +76,11 @@ All other actions on pre-V1.6 instances are no longer available.
    *  [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## Usability enhancements
+{: #relnotes_v16-ui}
 
 Improvements are made throughout the user interface:
 
 *  The main navigation on the console is greatly improved through the introduction of the left navigation pane with access to all areas of the user interface. You can quickly order a new instance, view your deployed instances, review system notifications, change settings, and access the online documentation.
 *  The new **Getting Started** page accessible from the left navigation pane provides you enough details directly on the console to help you make an informed decision about the components of the instance you are ordering. On the **Getting Started** page, you are also guided step-by-step through the process of ordering an instance, starting with meeting all prerequisites for ordering an instance, such as required user accounts, and ending with placing an order.
-*  The summary details for both Cloud Foundation instances and vCenter Server instances are consolidated onto a single page, which is accessible from the **Deployed Instances** menu on the left navigation pane. From that page, you can select the appropriate tab to filter either Cloud Foundation instances or vCenter Server instances.
-* If you have Zerto disaster recovery that is installed on your instance, you can access the Zerto console from the service details page directly with a single click. For more information, see [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices) and [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
+*  The summary details for both Cloud Foundation instances and vCenter Server instances are consolidated onto a single page, which is accessible from the **Resources** menu on the left navigation pane. From that page, you can select the appropriate tab to filter either Cloud Foundation instances or vCenter Server instances.
+* If you have Zerto disaster recovery that is installed on your instance, you can access the Zerto console from the service details page directly with a single click. For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).

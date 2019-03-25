@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -36,7 +39,7 @@ You can scan VMs and virtual appliances in the vSphere inventory against attache
 3.	Select the types of updates to scan for. The options are _Virtual Appliance upgrades, VM Hardware upgrades_, and _VMware Tools upgrades_.
 4.	Click **Scan**.
 
-## Manually initiating a scan of a container object
+##	Manually initiating a scan of a container object
 {: #vum-scanning-scan-container}
 
 Start a simultaneous scan of hosts, VMs, and virtual appliances, by scanning a container object that is a data center or a data center folder.
@@ -45,7 +48,7 @@ Start a simultaneous scan of hosts, VMs, and virtual appliances, by scanning a c
 3.	Select the types of updates to scan for. The options are _Virtual Appliance upgrades, VM Hardware upgrades_, and _VMware Tools upgrades_.
 4.	Click **Scan**.
 
-## Scheduling a scan
+##	Scheduling a scan
 {: #vum-scanning-schedule}
 
 You can configure the vSphere Web Client to scan VMs, virtual appliances, and vSphere ESXi hosts at specific times or at intervals that are convenient for you.
@@ -61,5 +64,5 @@ You can configure the vSphere Web Client to scan VMs, virtual appliances, and vS
 ## Related links
 {: #vum-scanning-related}
 
-* [VMware HCX on 	{{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -52,7 +55,7 @@ If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}
 ### Bare Metal Server settings
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
-Specify the CPU model and RAM for the Bare Metal Server. Available options might differ depending on the version that your instance was initially deployed in.
+You can choose **Skylake** or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
 
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
@@ -131,7 +134,7 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 ## Procedure to add clusters to vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to view the clusters in it.
 
    Ensure that the instance status is **Ready to Use**. Otherwise, you can't add clusters to the instance.
@@ -162,7 +165,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
 ## Procedure to view clusters in vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to view the clusters in it.
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, view the summary about the clusters:
   * **Name**: The name of the cluster.
@@ -185,7 +188,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
         <dt class="dt dlterm">Deleted</dt>
         <dd class="dd">The cluster is deleted.</dd>
     </dl>
-4. Click a cluster name to view the details of ESXi servers and storage:
+4. Click a cluster name to view the ESXi servers, storage, and network interface details:
 
   * ESXi servers details:
      * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
@@ -215,6 +218,20 @@ You can't change the cluster name. Changing the cluster name might cause the add
     * **Size**: The capacity of the storage.
     * **IOPS/GB**: The performance level of the storage.
     * **NFS Protocol**: The NFS version of the storage.
+  * Network Interface - VLAN details:
+    * **VLAN Number**: The unique VLAN number.
+    * **Description**: The description of the VLAN.
+    * **Location**: The data center location.
+    * **Primary Route**: The primary route of the VLAN.
+    Click **View Resource** to access the VLAN details.
+  * Network Interface - Subnet details:
+    * **Name**: The subnet name. Click the name to access the subnet details.
+    * **Type**: The type of subnet: primary or portable.
+    * **Description**: The description of the subnet.
+  * Network Interface - IP details:
+    * **IP**: The IP address.
+    * **Status**: The status of the IP address.
+    * **Description**: The description of the IP address.
 
 ## Deleting clusters from vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-deleting}
@@ -232,7 +249,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 ## Procedure to delete clusters from vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to delete clusters from.
 
    Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot remove clusters from the instance.

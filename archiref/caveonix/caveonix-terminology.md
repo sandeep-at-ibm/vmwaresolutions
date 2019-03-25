@@ -4,14 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
+
+subcollection: vmwaresolutions
+
 
 ---
 
 # Glossary of Caveonix terms
 {: #caveonix-terminology}
 
-This glossary provides some descriptions for terms that are unassociated with the Caveonix RiskForesight solution:
+This glossary provides some descriptions for terms that are associated with the Caveonix RiskForesight solution:
 
 -	**NIST Special Publication 800-53:** A Risk Management Framework that address security control.
 -	**Security Content Automation Protocol (SCAP):** A method for using specific standards to enable the automated vulnerability management, measurement, and policy compliance evaluation of systems deployed in an organization. Checklists standardize and enable automation of the linkage between computer security configurations and the NIST Special Publication 800-53 controls framework.
@@ -30,13 +33,13 @@ This glossary provides some descriptions for terms that are unassociated with th
       -	Reporting the results of this assessment.
 -	**Security Technical Implementation Guide (STIG):** A cybersecurity methodology for standardizing security protocols within networks, servers, computers, and logical designs to enhance overall security. These guides, when implemented, enhance security for software, hardware, physical and logical architectures to further reduce vulnerabilities.
 -	**Service Provider:** The top-level organization.
--	Cloud Provider - Provides the infrastructure that the software defined cloud operates on. RiskForesight can be configured for multiple Cloud Providers.
+-	**Cloud Provider** - Provides the infrastructure that the software defined cloud operates on. RiskForesight can be configured for multiple Cloud Providers.
 -	**Organizations:** Tenant organizations and sub-organizations of the Service Provider. If the Asset Repository is vCenter, the Organization / Tenant List must be created manually.
 -	**Roles:** Pre-configured Roles and Service Provider created Roles. Preconfigured roles are not editable by the Service Provider.
 -	**Organization Users:** Users of the Tenant Organizations and Sub-Organizations.
 -	**Asset Repository:** An integration point that enables RiskForesight to synchronize the current asset across the CSP management zone and customer zone. The current version of RiskForesight supports the synchronization for VMware vCloud Director and vCenter Servers. It also supports data collection from VMware NSX Manager. Assets	are collected from the Asset Repository. The Service Provider assigns Assets that are collected from vCenter to Tenant Organizations and Sub-Organizations of the Service Provider. An Asset can be assigned only to one Organization.
--	**Remote Access:** Provides end machine credentials to enable scans for vulnerability and compliance monitoring and to collect system events logs. The SP can only enable remote access for their own assets. Tenants have control over remote access from their Assets.
--	**Applications and sub applications:** A logical way to group assets. Example Application: SAP, example Sub-Applications: SAP Front End, SAP Middle Tier, SAP Back End.
+-	**Remote Access:** Provides end machine credentials to enable scans for vulnerability and compliance monitoring and to collect system events logs. The Service Provider can only enable remote access for their own assets. Tenants have control over remote access from their Assets.
+-	**Applications and Subapplications:** A logical way to group assets. Example Application: SAP, example Sub-Applications: SAP Front End, SAP Middle Tier, SAP Back End.
 -	**Locations:** Assets are uniquely grouped by Location, Cloud Provider, and Asset Repository.
 -	**Environments:** A way to group Assets and Applications. Each Environment is assigned a risk factor 1 - 10. This factor is applied in the risk score calculation. Service Provider defines the Environments
 -	**Tasks:** Used in RiskForesight to:
@@ -56,13 +59,15 @@ This glossary provides some descriptions for terms that are unassociated with th
   - **VMware Infrastructure Scan:** This scan carries out an infrastructure scan of the VMware Assets.
   -	**VMware Vulnerability Scan:** This scan carries out a Vulnerability scan of the VMware Assets.
 -	**Compliance Regime:** Available through license; NIST, NESA, PCI, ISO, HIPAA, GDPR, Custom, FFIEC, FedRAMP Low, FedRAMP Moderate, FedRAMP High
--	**Policy Manager:** The Policy Manager serves policy creation function for an Organization based on the machine learning output. Caveonix provides by default three types of machine learning jobs per Organization. Those are non-editable and additional jobs are not supported yet. Those will be available in a future release. The currently supported types of machine learning jobs are:
+-	**Policy Manager:** The Policy Manager serves policy creation function for an Organization based on the machine learning output. Caveonix provides by default three types of machine learning jobs per Organization. Those are non-editable and additional jobs are not supported yet. The currently supported types of machine learning jobs are:
   -	Caveo Logs
   -	Caveo Networks
   -	Caveo Scan
 -	**Anomaly:** Based on the anomalies that are found in the data we can configure the policies to take action based on the user-defined conditions. You can select the job type and configure Boolean conditions for the anomaly score and define action when condition is true. For example:
-  -	Job: "Caveo Logs" Anomaly score is > 90 then Mark asset for quarantine and send Notification to slack Channel.
-  -	Job: "Caveo Network" Anomaly score is > 95 then quarantine the asset and send email notification and also send UI notification.
+```
+Job: "Caveo Logs" Anomaly score is > 90 then Mark asset for quarantine and send Notification to slack Channel.`
+Job: "Caveo Network" Anomaly score is > 95 then quarantine the asset and send email notification and also send UI notification.
+```
 
 ## Related links
 {: #caveonix-terminology-related}

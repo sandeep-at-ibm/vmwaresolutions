@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -52,6 +55,14 @@ The instance name must meet the following requirements:
 * The maximum length of the instance name is 10 characters.
 * The instance name must be unique within your account.
 
+### VMware vSphere licenses
+{: #vc_hybrid_orderinginstance-vsphere-license}
+
+Select whether to order vSphere Enterprise Plus 6.7u1 or vSphere Enterprise Plus 6.5u2.
+
+vSphere Enterprise Plus 6.7u1 is available for only Broadwell and Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
+{:note}
+
 ### Primary or secondary
 {: #vc_hybrid_orderinginstance-primary-secondary}
 
@@ -63,7 +74,7 @@ Select whether to order a new primary instance or a secondary instance for an ex
 The following VMware licenses are included with your vCenter Server with Hybridity Bundle instance order. You must specify the edition for the NSX and vSAN licenses.
 
 * vCenter Server 6.5
-* vSphere Enterprise Plus 6.5u1
+* vSphere Enterprise Plus 6.5 or 6.7
 * NSX Service Providers 6.4 (Advanced or Enterprise edition)
 * vSAN 6.6 (Advanced or Enterprise edition)
 
@@ -229,32 +240,33 @@ Based on your selected configuration for the instance and add-on services, the e
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
 2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server with Hybridity Bundle** card and click **Create**.
 3. On the **vCenter Server** page, enter the instance name.
+5. Select the vSphere version.
 4. Select the instance type:
    * Click **Primary Instance** to deploy a single instance in the environment or to deploy the first instance in a multi-site topology.
    * Click **Secondary Instance** to connect the instance with an existing (primary) instance in the environment for high availability and complete the following steps:
      1. Select the primary instance that you want the secondary instance to be connected with.
      2. For primary instances V2.8 or later, enter the vCenter Server administrator password for the primary instance.
      3. For primary instances V2.7 or earlier, enter the PSC administrator password for the primary instance.
-5. Select the NSX license edition and the vSAN license edition.
-6. Complete the Bare Metal Server settings.
+6. Select the NSX license edition and the vSAN license edition.
+7. Complete the Bare Metal Server settings.
   1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
   2. Select the **Skylake** or **Broadwell** CPU model and the amount of **RAM**.
 
   The **Number of Bare Metal Servers** is set to four by default and cannot be changed.
   {:note}
-7. Complete the storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
-8. Complete the network interface configuration.
+8. Complete the storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
+9. Complete the network interface configuration.
   1. Enter the host name prefix, subdomain label, and root domain name.
   2. Select the network setting of either **Public and Private Network** or **Private Network Only**.
   3. Select the VLAN configuration.
      *  If you want to order new public and private VLANs, click **Order New VLANs**.
      *  If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs**, and then select the public VLAN, the primary subnet, the private VLAN, the private primary subnet, and the secondary private VLAN.
   4. Select the DNS configuration.
-9. Complete the configuration for the included HCX on {{site.data.keyword.cloud_notm}} service. For more information about how to provide settings for the service, see the _VMware HCX on IBM Cloud configuration_ section in [Ordering VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
-10. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.  
+10. Complete the configuration for the included HCX on {{site.data.keyword.cloud_notm}} service. For more information about how to provide settings for the service, see the _VMware HCX on IBM Cloud configuration_ section in [Ordering VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
+11. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.  
 For more information about how to provide settings for a service, see the corresponding service ordering topic.
 
-11. On the **Order Summary** pane, verify the instance configuration before you place the order.
+12. On the **Order Summary** pane, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
    2. Review the estimated cost of the instance. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you order the instance.
@@ -265,7 +277,7 @@ For more information about how to provide settings for a service, see the corres
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
+When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 

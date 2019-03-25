@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -26,7 +29,7 @@ The vCenter Server with Hybridity Bundle deployment has strict requirements on t
 Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server with Hybridity Bundle instances
 
 | {{site.data.keyword.CloudDataCent_notm}} | Location | Region |
-|:-----|:----------------|
+|:----------------------|:---------|:---------------|
 | AMS03 | Amsterdam | Europe |
 | CHE01 | Chennai | Asia-Pacific |
 | DAL09 | Dallas | NA South |
@@ -35,9 +38,11 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server 
 | DAL13 | Dallas | NA South |
 | FRA02 | Frankfurt | Europe |
 | FRA04 | Frankfurt | Europe |
+| FRA05 | Frankfurt | Europe |
 | HKG02 | Hong Kong | Asia-Pacific |
 | LON02 | London | Europe |
 | LON04 | London | Europe |
+| LON05 | London | Europe |
 | LON06 | London | Europe |
 | MEL01 | Melbourne | Asia-Pacific |
 | MEX01 | Queretaro | NA South |
@@ -53,6 +58,7 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server 
 | SYD01 | Sydney | Asia-Pacific |
 | SYD04 | Sydney | Asia-Pacific |
 | TOK02 | Tokyo | Asia-Pacific |
+| TOK04 | Tokyo | Asia-Pacific |
 | TOR01 | Toronto | NA East |
 | WDC04 | Washington, DC | NA East |
 | WDC06 | Washington, DC | NA East |

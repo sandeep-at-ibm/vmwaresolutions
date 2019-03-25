@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -50,7 +53,7 @@ Service Composer enables you to expose hybrid cloud services in the {{site.data.
 
 The following diagram describes the reference implementation of the Acme Skate Advisor application in an application modernization infrastructure implementation.
 
-Figure 1. Skate Advisor physical components
+Figure 1. Skate Advisor physical components</br>
 ![Skate Advisor physical components](vcscar-physical.svg)
 
 The Skate Advisor application extends the existing Acme web application
@@ -79,7 +82,7 @@ into running containers.
 * Terraform Template - A Terraform template is a file that describes cloud resources to be deployed. For Skate Advisor, a ubuntu template, which is preinstalled with mysql and the database schema is described.
 * VMWare Template - The VMWare template is an Ubuntu template with mysql and the database schema preinstalled.
 
-Figure 2. CAM orchestration
+Figure 2. CAM orchestration</br>
 ![CAM orchestration](vcscar-cam.svg)
 
 ### Load balancing and proxying
@@ -133,7 +136,7 @@ The Skate Advisor requires the following communications:
 The application modernization platform is designed with the
 following components to achieve this goal.
 
-Figure 3. Public network access
+Figure 3. Public network access</br>
 ![Public network access](vcscar-network.svg)
 
 {{site.data.keyword.cloud_notm}} has two networks. The public network allows servers to be
@@ -159,7 +162,7 @@ vice versa.
 The Skate Advisor application uses the following software
 components.
 
-Figure 4. Skate Advisor software-mapping
+Figure 4. Skate Advisor software-mapping</br>
 ![Skate Advisor software mapping](vcscar-sw-mapping.svg)
 
 The following software components are used:

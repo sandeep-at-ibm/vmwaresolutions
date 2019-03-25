@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -16,6 +19,13 @@ lastupdated: "2019-02-14"
 {: #vc_addingremovingservers}
 
 You can expand or contract the capacity of your VMware vCenter Server instance according to your business needs, by adding or removing ESXi servers or network file system (NFS) storage.
+
+Starting with the V2.9 release, you can add new ESXi servers to a cluster while the servers are in maintenance mode. Additionally, you can simultaneously add or remove ESXi servers across multiple clusters. The following simultaneous operations are available:
+
+* Add hosts to a cluster and add hosts to additional clusters.
+* Remove hosts from a cluster and remove hosts from additional clusters.
+* Add hosts to a cluster and remove hosts from additional clusters.
+* Remove hosts from a cluster and add hosts to additional clusters.
 
 You can add or remove NFS storage shares to or from an existing NFS or vSAN vCenter Server cluster.
 {:note}
@@ -31,19 +41,20 @@ If your initial cluster has vSAN as its storage, adding one or more ESXi servers
 * Do not add ESXi servers from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_full}} console.
 * A vCenter Server instance with NFS storage must have at least 2 ESXi servers. For instances that are deployed in V2.1 or later, you can expand the default cluster to have up to 51 ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers.
 * A vCenter Server instance with vSAN storage must have at least 4 ESXi servers.
-* For vCenter Server instances that were deployed in V2.0 or earlier, you can expand each cluster to have up to 32 ESXi servers. The number of {{site.data.keyword.baremetal_short}} that you can add at a time is as follows:
-   * For the **Small**, **Medium**, and **Large** configurations, you can add 1 - 10 ESXi servers at a time.
-   * For the **Skylake** and **Broadwell** configurations, you can add 1 - 20 ESXi servers at a time. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
+* For vCenter Server instances that were deployed in V2.0 or earlier, you can expand each cluster to have up to 32 ESXi servers.
+* You can add 1 - 20 ESXi servers at a time. For more information about the minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ### Procedure to add ESXi servers
 {: #vc_addingremovingservers-adding-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance for which you want to expand capacity.
 3. Click **Infrastructure** on the left navigation pane.
 4. In the **CLUSTERS** table, click the cluster to which you want to add ESXi servers.
-5. In the **ESXi Servers** section, click **Add Server**.
-6. In the **Add Server** window, enter the number of servers that you want to add, review the estimated cost, and then click **Add Server**.
+5. In the **ESXi Servers** section, click **Add**.
+6. In the **Add Server** window, enter the number of servers that you want to add.
+7. Optionally, select the checkbox to add servers during maintenance mode.
+8. Review the estimated cost and click **Add**.
 
 ### Results after you add ESXi servers
 {: #vc_addingremovingservers-adding-results}
@@ -51,6 +62,12 @@ If your initial cluster has vSAN as its storage, adding one or more ESXi servers
 1. You might experience a slight delay on the console while the instance status changes from **Ready to Use** to **Modifying**. Allow the operation to fully complete before you make more changes to the instance.
 2. You are notified by email that your request to add ESXi servers is being processed. On the console, the status of the cluster that is associated with the ESXi servers is changed to **Modifying**.
 3. If you do not see the new ESXi servers added to the list in the cluster, check the email or console notifications to find more details about the failure.
+4. You must use the Zerto Virtual Manager (ZVM) console and the pre-populated Zerto Virtual Replication Appliance (VRA) IP address to manually deploy the VRA virtual machine (VM) in the following circumstances:
+   * If you add ESXi servers to a default cluster while the servers are in maintenance mode and Zerto for {{site.data.keyword.cloud_notm}} is installed.
+   * If you add Zerto for {{site.data.keyword.cloud_notm}} to a vCenter Server instance that has an ESXi server that is in maintenance mode.
+
+If you are adding ESXi servers during maintenance mode, virtual machines are not migrated to the new servers until you remove maintenance mode.   
+{:important}
 
 ## Removing ESXi servers from vCenter Server instances
 {: #vc_addingremovingservers-removing}
@@ -67,7 +84,7 @@ If your initial cluster has vSAN as its storage, adding one or more ESXi servers
 ### Procedure to remove ESXi servers
 {: #vc_addingremovingservers-removing-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance for which you want to contract capacity.
 3. Click **Infrastructure** on the left navigation pane.
 4. In the **CLUSTERS** table, click the cluster from which you want to remove ESXi servers.
@@ -89,12 +106,12 @@ If your initial cluster has vSAN as its storage, adding one or more ESXi servers
 ### Before you add NFS storage
 {: #vc_addingremovingservers-adding-nfs-storage-prereq}
 
-Do not add NFS storage from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. IBM will not manage NFS  file shares that you manually add to an instance.
+Do not add NFS storage from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. IBM will not manage NFS file shares that you manually add to an instance.
 
 ### Procedure to add NFS storage
 {: #vc_addingremovingservers-adding-nfs-storage-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance for which you want to expand capacity.
 3. Click **Infrastructure** on the left navigation pane.
 4. In the **CLUSTERS** table, click the cluster to which you want to add NFS storage.
@@ -125,7 +142,7 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 ### Procedure to remove NFS storage
 {: #vc_addingremovingservers-removing-nfs-storage-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance for which you want to contract capacity.
 3. Click **Infrastructure** on the left navigation pane.
 4. In the **CLUSTERS** table, click the cluster from which you want to remove NFS storage.

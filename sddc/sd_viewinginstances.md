@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,7 @@ View the summary and detailed information of the VMware Cloud Foundation instanc
 
 To view a summary of all the Cloud Foundation instances that are provisioned for a user account, complete the following steps:
 
-1. In the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** from the left navigation pane.
+1. In the {{site.data.keyword.vmwaresolutions_full}} console, click **Resources** from the left navigation pane.
 2. From the console banner, click your user account icon, and then click the **Account** field to select the user account that you want to check instances for.
 3. In the **Cloud Foundation Instances** table, view the list of your instances:
 
@@ -136,6 +139,5 @@ Review the following topics for information to help you complete the login instr
 ## Related links
 {: #sd_viewinginstances-related}
 
-* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [Deleting Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

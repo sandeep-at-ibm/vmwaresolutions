@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
+
+subcollection: vmwaresolutions
+
 
 ---
 
 # Cloud and client deployment
 {: #vcshcx-deployment}
 
-As described at the beginning of this document, a minimal HCX installation
-consists of a single cloud and client-side deployment. The HCX client
-side can install on any version of vSphere supported by HCX assuming that
-there is network connectivity between the client and cloud sides.
+A minimal HCX installation consists of a single cloud and client-side deployment. The HCX client side can install on any version of vSphere supported by HCX assuming that there is network connectivity between the client and cloud sides.
 
 ## Requirements
 {: #vcshcx-deployment-req}
@@ -27,27 +27,13 @@ there is network connectivity between the client and cloud sides.
 ## Cloud
 {: #vcshcx-deployment-cloud}
 
-The cloud side HCX deployment is handled by the {{site.data.keyword.vmwaresolutions_full}} automation. The default configuration uses the public port
-group for configuring any fleet components end-point connectivity. The
-fleet components on the cloud side are deployed with their end point
-interfaces configured with public IP addresses as they are security hardened
-appliances. It is possible to deploy them behind a firewall. It is not
-supported to have the client and cloud sides connect to
-each other across an existing VPN tunnel. If you want to use
-the private network for HCX endpoint connectivity, you can order HCX
-cloud side for private network fleet deployment for use across dedicated
-link such as MPLS.
+The cloud side HCX deployment is handled by the {{site.data.keyword.vmwaresolutions_full}} automation. The default configuration uses the public port group for configuring any fleet components endpoint connectivity. The fleet components on the cloud side are deployed with their endpoint interfaces configured with public IP addresses as they are security hardened appliances. It is possible to deploy them behind a firewall. It is not supported to have the client and cloud sides connect to each other across an existing VPN tunnel. If you want to use the private network for HCX endpoint connectivity, you can order HCX
+cloud side for private network fleet deployment for use on a dedicated link such as MPLS.
 
 ## Client
 {: #vcshcx-deployment-client}
 
-The client-side HCX is user deployed and requires administrator
-level permissions to the source vCenter. As of this writing, the HCX
-client-side manager ova is approximately 1.7 GB. When use the {{site.data.keyword.vmwaresolutions_short}} console to order
-HCX, a URL is provided with
-a link to download the version of HCX for the client-side that matches
-the version of HCX deployed on the cloud side. This link is provided in
-the cloud side manager HCX user interface (UI).
+The client-side HCX is user deployed and requires administrator level permissions to the source vCenter. As of this writing, the HCX client-side manager ova is approximately 1.7 GB. When use the {{site.data.keyword.vmwaresolutions_short}} console to order HCX, a URL is provided with a link to download the version of HCX for the client-side that matches the version of HCX deployed on the cloud side. This link is provided in the cloud side HCX Manager user interface (UI).
 
 A one-time use registration key is also provided. Use the following steps to configure the use registration.
 
@@ -68,16 +54,11 @@ cloud side HCX UI.
 
 For the client-side, use the **Tasks** menu to monitor the deployment of the Fleet components. For the cloud side deployment, use the **Tasks** menu in the vCenter web UI for the particular vCenter Server instance.
 
-If there is a deployment failure on
-either side, the fleet component deployments are backed out and
-deleted. Upon determining the cause of the failure, click the **Interconnect** tab in the HCX vCenter web UI on the client-side, then
-select **Install HCX Components** at the top of the screen.
+If there is a deployment failure on either side, the fleet component deployments are backed out and deleted. After you determine the cause of the failure, click the **Interconnect** tab in the HCX vCenter web UI on the client-side, then select **Install HCX Components** at the top of the screen.
 
-Upon successful deployment of Fleet components and after several
-minutes, the tunnel status for CGW and L2C components are in the **Up** status in the **Interconnect** tab.
+After successful deployment of the fleet components and after several minutes, the tunnel status for CGW and the L2C components is displayed as **Up** in the **Interconnect** tab.
 
 ## Related links
 {: #vcshcx-deployment-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

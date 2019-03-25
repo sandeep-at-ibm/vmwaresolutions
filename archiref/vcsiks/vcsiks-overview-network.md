@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-01"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -54,11 +57,11 @@ The following information applies to private VLAN subnets:
 
 Every Kubernetes cluster is set up with a network plug-in called Calico.
 
-Default network policies are set up to secure the public network interface of every worker node in the {{site.data.keyword.containerlong_notm}}. If you have unique security requirements or you have a multizone cluster with VLAN spanning enabled, you can use Calico and Kubernetes to create network policies for a cluster. With Kubernetes network policies, you can specify the network traffic that you want to allow or block to and from a pod within a cluster. 
+Default network policies are set up to secure the public network interface of every worker node in the {{site.data.keyword.containerlong_notm}}. If you have unique security requirements or you have a multizone cluster with VLAN spanning or Virtual Routing and Forwarding (VRF) enabled, you can use Calico and Kubernetes to create network policies for a cluster. With Kubernetes network policies, you can specify the network traffic that you want to allow or block to and from a pod within a cluster.
 
 To set more advanced network policies such as blocking inbound (ingress) traffic to LoadBalancer services, use Calico network policies.
 
-Kubernetes network policies specify how pods can communicate with other pods and with external endpoints. Traffic can also be filtered based on pod and namespace labels. Kubernetes network policies are applied by using kubectl commands or the Kubernetes APIs. When these policies are applied, they're automatically converted into Calico network policies and Calico enforces these policies.
+Kubernetes network policies specify how pods can communicate with other pods and with public network service endpoints. Traffic can also be filtered based on pod and namespace labels. Kubernetes network policies are applied by using kubectl commands or the Kubernetes APIs. When these policies are applied, they're automatically converted into Calico network policies and Calico enforces these policies.
 
 Calico network policies for Kubernetes are a superset of the Kubernetes network policies and are applied by using calicoctl commands.
 

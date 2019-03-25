@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -67,7 +70,7 @@ For IBM Business Partner users, the Bring Your Own License (BYOL) option is not 
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 If you're a non-Business Partner, you can select the following components for your vSphere cluster:
-* VMware vSphere Enterprise Plus
+* VMware vSphere Enterprise Plus 6.7 U1 or 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -270,7 +273,7 @@ Based on your configurations, the estimated cost is instantly generated and disp
    1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the cluster.
    2. Select the Bare Metal Server configuration.
       * When you select **Skylake** or **Broadwell**, specify the CPU model and the RAM size.
-      * When you select **SAP-certified**, choose the CPU model.
+      * When you select **SAP-certified**, choose one of the preset configurations.
    3. Specify the number of Bare Metal Servers.
 6. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
 7. Complete the network interface settings:
@@ -294,7 +297,7 @@ If you saved the cluster configuration as a template, you get a console notifica
 
 If you placed an order, the deployment of the cluster starts automatically, and you receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email.
 
-The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Deployed Instances** page.
+The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Resources** page.
 {:note}
 
 ## Related links

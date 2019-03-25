@@ -4,14 +4,24 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
+
+subcollection: vmwaresolutions
+
 
 ---
 
-# Compliance information for vCenter Server and vCenter Server with Hybridity Bundle instances
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# Compliance information for vCenter Server instances
 {: #vc_compl_info}
 
-Review the following information for details about compliance for VMware vCenter Server and vCenter Server with Hybridity Bundle instances.
+Review the following information for details about compliance for VMware vCenter Server instances.
+
+The VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T offering is not supported for HIPAA customers.
+{:important}
 
 ## Customer versus IBM responsibility for vCenter Server on IBM Cloud
 {: #vc_compl_info-responsibility}
@@ -45,7 +55,7 @@ This Cloud Service is not designed to any specific security requirements for reg
 ## Policy for accessing clients instances
 {: #vc_compl_info-policy-for-access-client-inst}
 
-VMware Cloud Foundation and vCenter Server environments, which are delivered as {{site.data.keyword.vmwaresolutions_short}}, provide a VMware management platform layer for our clients to manage the virtualization capabilities. Throughout the lifecycle of IBM Cloud for VMware products and services, IBM Support may be required to help guarantee their success. For the most part, intervention by IBM Support is the result of a client request (that is, a support ticket). However, on rare occasions, IBM Support may assist proactively and without a client–written support ticket to prevent future issues. This access is through the IBM Cloud internal support network and is documented through a support ticket opened by IBM Support and continuously monitored by IBM Cloud SOC. At no time will IBM Support modify instance configuration without prior consent from the client. Access is to VMware management components and/or IBM Cloud management components and never to the client virtual machines or applications.
+VMware vCenter Server environments, which are delivered as {{site.data.keyword.vmwaresolutions_short}}, provide a VMware management platform layer for our clients to manage the virtualization capabilities. Throughout the lifecycle of IBM Cloud for VMware products and services, IBM Support may be required to help guarantee their success. For the most part, intervention by IBM Support is the result of a client request (that is, a support ticket). However, on rare occasions, IBM Support may assist proactively and without a client–written support ticket to prevent future issues. This access is through the IBM Cloud internal support network and is documented through a support ticket opened by IBM Support and continuously monitored by IBM Cloud SOC. At no time will IBM Support modify instance configuration without prior consent from the client. Access is to VMware management components and/or IBM Cloud management components and never to the client virtual machines or applications.
 
 ## Proactive support
 {: #vc_compl_info-proactive-support}
@@ -67,7 +77,7 @@ VMware Cloud Foundation and vCenter Server environments, which are delivered as 
 ### Support tickets
 {: #vc_compl_info-support-tickets}
 
-* Cloud Foundation and vCenter Server environments are not actively monitored by IBM, and IBM Support will not enter the VMware management layer under normal operations without a client–written support ticket.
+* vCenter Server environments are not actively monitored by IBM, and IBM Support will not enter the VMware management layer under normal operations without a client–written support ticket.
 * When a client opens a support ticket for an instance, service, or provisioning issue, the ticket is quickly assigned to the appropriate IBM Support team, who will be the primary party responsible for resolving the issue.
 * Due to the level of specialization that is required to maintain superior technical expertise at the team level, it is sometimes necessary to involve more than one support team in resolving a particular software problem. This is easily handled, as our support teams are all networked together and work as one to resolve whatever problems or issues arise.
 * In order to investigate the issue, IBM may need to access information on your system relative to the failure or may need to re-create the failure to get additional information.
@@ -136,5 +146,4 @@ If the client has not granted consent to proactive support for an instance in th
 {: #vc_compl_info-related}
 
 * [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

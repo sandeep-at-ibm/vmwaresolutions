@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -124,7 +127,7 @@ worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) is a multi-cloud, self-service management platform that runs on {{site.data.keyword.icpfull_notm}} that empowers Developers and administrators to meet business demands.
 
-Fig 3. CAM component reference
+Figure 3. CAM component reference</br>
 ![CAM component reference](vcsicp-cam-component-ref.svg)
 
 ### CAM proxy

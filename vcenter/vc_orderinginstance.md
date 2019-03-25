@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -52,6 +55,14 @@ The instance name must meet the following requirements:
 * The maximum length of the instance name is 10 characters.
 * The instance name must be unique within your account.
 
+### VMware vSphere licenses
+{: #vc_orderinginstance-vsphere-license}
+
+Select whether to order vSphere Enterprise Plus 6.7u1 or vSphere Enterprise Plus 6.5u2.
+
+vSphere Enterprise Plus 6.7u1 is available for only Broadwell and Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
+{:note}
+
 ### Primary or secondary
 {: #vc_orderinginstance-primary-secondary}
 
@@ -61,8 +72,8 @@ Select whether to order a new primary instance or a secondary instance for an ex
 {: #vc_orderinginstance-licensing-settings}
 
 Specify the licensing options for the following VMware components in the instance:
-* vCenter Server 6.5 - Standard edition
-* vSphere 6.5u1 - Enterprise Plus edition
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5 or 6.7
 * NSX Service Providers 6.4 (Base, Advanced, or Enterprise edition)
 
 For Business Partner users, the vCenter Server license (Standard edition), the vSphere license (Enterprise Plus edition), and the NSX license are included and purchased on your behalf. However, you must specify the edition for the NSX license.
@@ -294,6 +305,7 @@ Based on your selected configuration for the instance and add-on services, the e
 1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
 2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server** card and click **Create**.
 3. On the **vCenter Server** page, enter the instance name.
+5. Select the vSphere version.
 4. Select the instance type:
    * Click **Primary Instance** to deploy a single instance in the environment or to deploy the first instance in a multi-site topology.
    * Click **Secondary Instance** to connect the instance with an existing (primary) instance in the environment for high availability and complete the following steps:
@@ -301,21 +313,21 @@ Based on your selected configuration for the instance and add-on services, the e
      2. For primary instances V2.8 or later, enter the vCenter Server administrator password for the primary instance.
      3. For primary instances V2.5, 2.6, or 2.7, enter the PSC administrator password for the primary instance.
      4. For primary instances V2.4 or earlier, verify that the prefilled value for the PSC administrator password for the primary instance is correct.
-5. Complete the license settings for the instance components.
+6. Complete the license settings for the instance components.
    *  To use IBM-provided licenses, select **Include with purchase** and select the license edition, if necessary.
    *  To use your own license, select **I will provide** and enter the license key.
-6. Complete the Bare Metal Server settings.
+7. Complete the Bare Metal Server settings.
     1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
     2. Select the Bare Metal Server configuration.
        * When you select **Skylake** or **Broadwell**, specify the CPU model and the RAM size.
-       * When you select **SAP-certified**, choose the CPU model.
+       * When you select **SAP-certified**, choose one of the preset configurations.
     3. Specify the number of {{site.data.keyword.baremetal_short}}. If you are planning to use vSAN as your storage solution, a minimum of 4 {{site.data.keyword.baremetal_short}} are needed.  
-7. Complete the storage configuration.
+8. Complete the storage configuration.
   * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
   * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
   * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add Shared Storage** label and select the **Performance** and **Size (GB)** for each file share. You must select at least one file share.
   * If you select **Local Disks**, specify the disk count and disk type.
-8. Complete the network interface settings.
+9. Complete the network interface settings.
    1. Enter the host name prefix, subdomain label, and root domain name. For a secondary instance, the domain name is automatically completed.
    2. Select the network setting of either **Public and Private Network** or **Private Network Only**.
    3. Select the VLAN settings:
@@ -323,10 +335,10 @@ Based on your selected configuration for the instance and add-on services, the e
       * If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs** and specify the VLANs and the subnets.
    4. Specify the DNS configuration.
 
-9. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.
+10. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.
 For more information about how to provide settings for a service, see the corresponding service ordering topic.
 
-10. On the **Order Summary** pane, verify the instance configuration before you place the order.
+11. On the **Order Summary** pane, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
    2. Review the estimated cost of the instance. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you order the instance.
@@ -337,7 +349,7 @@ For more information about how to provide settings for a service, see the corres
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
+When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 

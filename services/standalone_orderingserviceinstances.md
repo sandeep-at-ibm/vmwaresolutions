@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ Ensure that you completed the following tasks:
 ## Procedure to order on-premises VMware HCX on IBM Cloud instances
 {: #standalone_orderingserviceinstances-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. Scroll to the **On-premises HCX Instances** table and click **Provision New**.
 3. Specify the **On-premises Instance Name**.
 4. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the instance.

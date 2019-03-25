@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -27,7 +30,7 @@ The following specifications are included with the KMIP for VMware on {{site.dat
 * A VMware-compatible Key Management Interoperability Protocol (KMIP)
 * A managed service
 * Available in multiple geographic regions worldwide
-* Two KMIP service endpoints provided in each region for high availability
+* Two KMIP network service endpoints provided in each region for high availability
 
 ## Considerations when installing KMIP for VMware on IBM Cloud instances
 {: #kmip_standalone_considerations-install}

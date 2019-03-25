@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -149,7 +152,7 @@ Calico is built on a distributed scale-out architecture that gives it the abilit
 -	etcd, provides the communication between components and stored in a consistent data store, which ensures Calico can always build an accurate network.
 -	BIRD, provides BGP client functions on every node that also hosts Felix. When Felix inserts a route into the Linux kernel, the BGP client picks up the routes and distributes them to other nodes in the deployment. For large environments, a BGP route reflector is also deployed which acts as a central point for BGP clients to connect. This prevents each client from needing to talk to every other client and distribute the routes to the other nodes in the deployment.
 
-Figure 3. Calico overview
+Figure 3. Calico overview</br>
 ![Calico overview](vcsnsxt-calico-cni.svg)
 
 ### NSX-T and Calico
@@ -186,7 +189,7 @@ The core component that provides the integration between the Kubernetes and the 
 
 In the following, two Kubernetes namespaces are provided, Acme and Skateboards, for each namespace we have a dedicated logical switch, Tier-1 router, and an IP segment that connects it to a T0 logical router.
 
-Figure 5. Kubernetes NCP
+Figure 5. Kubernetes NCP</br>
 ![Kubernetes NCP](vcsnsxt-ncpk8sapi.svg)
 
 ### NSX Security Policy Manager
@@ -206,7 +209,7 @@ Key concepts for examination include:
 -	SpoofGuard blocks IP spoofing at vNIC level.
 -	Switch security provides storm control and security against unauthorized traffic.
 
-Figure 6. NSX-T Micro-segmentation
+Figure 6. NSX-T Micro-segmentation</br>
 ![Example NSX-T Micro-segmentation](vcsnsxt-tsecurity.svg)
 
 ### Differences between NSX–T and NSX-V
@@ -241,7 +244,7 @@ VMware NSX-T provides the same capabilities as NSX-V with in a VMware vSphere en
 
 For NSX-V integration with Kubernetes {{site.data.keyword.cloud_notm}} automation installs {{site.data.keyword.icpfull_notm}} on a vCenter Server instance. A dedicated switch/VXLAN, DLR, and ESG are created specifically for the Kubernetes network. Day 1 overlay network for {{site.data.keyword.icpfull_notm}} is a 192.168.20.0/24 subnet with routing setup through the ESG for access to the underlay network.
 
-Figure 7. NSX-V and Kubernetes
+Figure 7. NSX-V and Kubernetes</br>
 ![NSX-V and Kubernetes](vcsnsxt-transitnet.svg)
 
 #### Integration with NSX-T
@@ -251,7 +254,7 @@ NSX-T integration with Kubernetes is through the NSX-T container plug-in (NCP). 
 
 NSX-T distributed firewall allows creation of network policies, which are implemented for the Kubernetes cluster. It supports ingress and egress policies, label, and expression matching policies and has load balancer capabilities, which can all be applied to the Kubernetes infrastructure.
 
-Figure 8. NSX-T and Kubernetes
+Figure 8. NSX-T and Kubernetes</br>
 ![NSX-T and Kubernetes](vcsnsxt-t1t0router.svg)
 
 ## Relater links

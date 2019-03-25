@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -30,10 +33,10 @@ Because of resource dependencies, the components in your instance are not releas
 You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cycle for the deleted instance.
 {:note}
 
-## Procedure to delete instances from the Deployed Instances page
+## Procedure to delete instances from the Resources page
 {: #sd_deletinginstance-procedure1}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** on the left navigation pane.
 2. In the **Cloud Foundation Instances** table, find the instance to delete.
 3. In the **Actions** column, click the Delete icon.
    The status of the instance is changed to **Deleting**. When the instance is deleted successfully, the components of the instance are released, and the status of the instance is changed to **Deleted**.
@@ -44,7 +47,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cyc
 ## Procedure to delete instances from the instance details page
 {: #sd_deletinginstance-procedure2}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** on the left navigation pane.
 2. In the **Cloud Foundation Instances** table, click the instance to delete.
 3. Click the overflow menu icon next to **vCenter console** and click **Delete Instance**.
    The status of the instance is changed to **Deleting**. When the instance is deleted successfully, the components of the instance are released, and the status of the instance is changed to **Deleted**.
@@ -56,7 +59,6 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cyc
 {: #sd_deletinginstance-related}
 
 * [Deleting Cloud Foundation instances in a multi-site configuration](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
-* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Viewing Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
 * [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [Deleting multi-site configurations](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -74,7 +77,7 @@ The chatbot is a web component that converses with the user. The chatbot can eit
 
 Chatbots interact with the system in the following manner:
 
-Figure 2. Typical chatbot query
+Figure 2. Typical chatbot query</br>
 ![Typical Chatbot Query](vcscar-query.svg)
 
 Table 2. Chatbot interactions
@@ -132,7 +135,7 @@ API exposed has the following general categories:
 
 Watson Discovery must be trained via a machine learning model, which is created in an iterative fashion by a subject matter expert by using the Watson Knowledge Studio.
 
-Figure 3. Discovery service training
+Figure 3. Discovery service training</br>
 ![Discovery Service Training](vcscar-training.svg)
 
 For Skate Advisor, the model consists of the relationship between entity types with a combination of rule-based training and dictionary-based training to create a model. This model allows the Discovery Service to recognize and classify tricks that are ingested from articles and video descriptions that are used as the training set.
@@ -145,5 +148,4 @@ After trained, the Discovery Service can respond to queries such as:
 ## Related links
 {: #vcscar-logical-related}
 
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle overview
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

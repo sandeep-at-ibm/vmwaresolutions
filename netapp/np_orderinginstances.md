@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -128,7 +131,7 @@ The number of ESXi servers of a NetApp ONTAP Select instance is 4 by default. Yo
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [Technical specifications for NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#technical-specifications-for-netapp-ontap-select-instances) are installed on your VMware virtual platform.
+When the instance is successfully deployed, the components that are described in [Technical specifications for NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs) are installed on your VMware virtual platform.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 

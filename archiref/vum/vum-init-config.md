@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -37,7 +40,7 @@ Table 1. Deployment values
 | Address | proxy ip | A spare IP address must be used from the Customer, private portable subnet assigned during the provisioning process. Only two IP addresses would have been reserved on this subnet; one for the BCR and the other for the customer-esg
 | Netmask | 255.255.255.192 | |
 | Gateway| customer-nsx-edge private uplink ip | This is the default gateway setting for the proxy server, which is the private uplink IP address of customer-nsx-edge. The IP address can be found by reviewing the **Settings** tab for **customer-nsx-edge**. |
-| DNS Server | AD/DNS ip | This IP address can be found on the instance page in the {{site.data.keyword.vmwaresolutions_short}} console, the **Deployed Instances** page. |
+| DNS Server | AD/DNS ip | This IP address can be found on the instance page in the {{site.data.keyword.vmwaresolutions_short}} console, the **Resources** page. |
 | BCR IP | bcr ip | This is the IP address of the {{site.data.keyword.cloud_notm}} Backend Customer Router and is the gateway for 10.0.0.0/8 and 161.26.0.0/16. This address is used in a static route in the proxy server so that it can reach the VCSA and the AD/DNS server. |
 
 ## Configuring NSX
@@ -175,5 +178,5 @@ Configure VUM to use the proxy server to access the repositories on the internet
 ## Related links
 {: #vum-init-config-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)

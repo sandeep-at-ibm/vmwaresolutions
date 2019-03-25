@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ This service is available to the following instances:
 {:note}
 
 ## Technical specifications for IBM Cloud Private Hosted
-{: #technical-specifications-for-ibm-cloud-private-hosted}
+{: #icp_overview-specs}
 
 The following table lists the minimum requirements to order the IBM Cloud Private Hosted service for the **Production-Ready** environment and the **Development/Test** environment.
 
@@ -35,7 +38,7 @@ Table 1. Minimum requirements for Production-Ready and Development/Test environm
 | Development/Test | 30 | 200 | 3 | 4,000 |
 
 ### Resource requirements for IBM Cloud Private Hosted
-{: #resource-requirements-for-ibm-cloud-private-hosted}
+{: #icp_overview-resource-req}
 
 The following tables list the resource requirements of the {{site.data.keyword.cloud_notm}} Private Hosted service in Production-Ready and Development/Test environments.
 

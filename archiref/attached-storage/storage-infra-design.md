@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ The following graphic provides the overall architecture of the attached storage 
 
 Figure 1. High-level architecture of attached storage on {{site.data.keyword.cloud_notm}}
 
-![Attached storage architecture](../solution/physical_nfs.svg "High-level architecture of attached storage on IBM Cloud")
+![Attached storage architecture](../solution/vcsv4radiagrams-ra-nfs-shares.svg "High-level architecture of attached storage on IBM Cloud")
 
 ## Physical infrastructure design
 {: #storage-infra-design-phys-infra-design}
@@ -64,9 +67,9 @@ The following section describes the configuration of the attached storage device
 
 Performance and Endurance storage are {{site.data.keyword.cloud_notm}} storage solutions that are designed to support high I/O applications that require predictable levels of performance. This predictable performance is achieved through the allocation of protocol-level input/output operations per second (IOPS) to individual volumes.
 
-IOPS ranging from 100 through 48,000 can be ordered with storage sizes of 20 GB - 12 TB. Performance and Endurance storage volumes are available for both block storage and file storage.
+IOPS ranging from 100 through 96,000 can be ordered with storage sizes of 20 GB - 24 TB. Performance and Endurance storage volumes are available for both block storage and file storage.
 
-In this design, the vCenter Server solution offers Endurance storage for attached storage. As a result, you can select and attach (via automation) Endurance NFS exports ranging in size from 20 GB to a maximum of 12 TB. The {{site.data.keyword.cloud_notm}} allows up to 64 vSphere ESXi hosts to connect to a single Endurance NFS export.
+In this design, the vCenter Server solution offers Endurance storage for attached storage. As a result, you can select and attach (via automation) Endurance NFS exports ranging in size from 20 GB to a maximum of 24 TB. The {{site.data.keyword.cloud_notm}} allows up to 64 vSphere ESXi hosts to connect to a single Endurance NFS export.
 
 Endurance is available in three IOPS performance tiers to support varying application needs.
 

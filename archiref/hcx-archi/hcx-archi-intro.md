@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # VMware HCX on IBM Cloud introduction
 {: #hcx-archi-intro}

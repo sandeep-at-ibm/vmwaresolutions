@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -21,11 +24,9 @@ To manage the {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.d
 ## Applying updates to IBM Spectrum Protect Plus on IBM Cloud
 {: #managingspp-updates}
 
-You are responsible for maintaining IBM Spectrum Protect Plus to keep it updated to the most recent version. You can download the required updates from the [IBM Spectrum Protect Plus Support](https://www.ibm.com/mysupport/s/topic/0TO50000000IQWtGAO/spectrum-protect-plus) page.
+You are responsible for maintaining IBM Spectrum Protect Plus to keep it updated to the most recent version. You can download the required updates from the [IBM Spectrum Protect Plus Support](https://www.ibm.com/mysupport/s/topic/0TO50000000IQWtGAO/spectrum-protect-plus){:new_window} page.
 
-For more information, see the following topics:
-* [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Updating the operating system of the IBM Spectrum Protect Plus VM
 {: #managingspp-update-os}
@@ -35,6 +36,6 @@ To update the operating system of the IBM Spectrum Protect Plus VM, you must log
 ## Related links
 {: #managingspp-related}
 
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations)
-* [How to increase vsnap storage for IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)
-* [IBM Spectrum Protect Plus documentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations){:new_window}
+* [How to increase vsnap storage for IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/){:new_window}
+* [IBM Spectrum Protect Plus documentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:new_window}

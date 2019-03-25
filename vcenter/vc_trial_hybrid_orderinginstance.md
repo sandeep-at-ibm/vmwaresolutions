@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -27,7 +30,7 @@ This trial is intended for use up to 90 days. When you are finished with the tri
 For information about the architecture design, see [HCX on IBM Cloud architecture design for the Single-node Trial for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html).
 
 ## Technical specifications for Single-node Trial for vCenter Server instances
-{: #vc_trial_hybrid_orderinginstance-tech-specs}
+{: #vc_trial_hybrid_orderinginstance-specs}
 
 The following components are included in your Single-node Trial for vCenter Server instance:
 
@@ -173,7 +176,7 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. The foll
 #### Viewing instance details
 {: #vc_trial_hybrid_orderinginstance-view-inst-details}
 
-You can check the status of the deployment by viewing the instance details. Click **Deployed Instances** from the left navigation pane and locate the **vCenter Server Instances** or **On-premises HCX Instances** table to view information about the instances that you ordered.
+You can check the status of the deployment by viewing the instance details. Click **Resources** from the left navigation pane and locate the **vCenter Server Instances** or **On-premises HCX Instances** table to view information about the instances that you ordered.
 
 When the instance is successfully deployed, the components that are described in the *Technical specifications* sections of this topic are installed on your VMware virtual platform and the on-premises HCX on {{site.data.keyword.cloud_notm}} service activation key is listed in the **On-premises HCX Instances** table.
 
@@ -184,8 +187,8 @@ The status of the instance changes to **Ready to Use** and you receive a notific
 
 Install the on-premises HCX Enterprise Manager and configure the connection to your HCX on {{site.data.keyword.cloud_notm}} instance.
 
-1. Locate the on-premises activation key on the **Deployed Instances** page.
-  1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. Locate the on-premises activation key on the **Resources** page.
+  1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
   2. In the **vCenter Server Instances** table, review the **Type** column to locate the vCenter Server Single-node Trial instance and make note of the instance name.
   3. Scroll to the **On-premises HCX Instances** table and review the **Name** column to locate the instance that has the same name as the single-node instance that you ordered with the *-OnPrem* suffix.
   4. Make note of the key in the **Activation key** field.
@@ -243,7 +246,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 
 Complete the following steps to delete a Single-node Trial for vCenter Server instance:
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, find the instance to delete.
 3. In the **Actions** column, click the Delete icon.
    The status of the instance is changed to **Deleting**. When the instance is deleted successfully, the components of the instance are released, and the status of the instance is changed to **Deleted**.
@@ -254,6 +257,6 @@ Complete the following steps to delete a Single-node Trial for vCenter Server in
 ## Related links
 {: #vc_trial_hybrid_orderinginstance-related}
 
-* [HCX on IBM Cloud architecture design for the Single-node Trial for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
+* [HCX on IBM Cloud architecture design for the Single-node Trial for vCenter Server on IBM Cloud](https://console.bluemix.net/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-28"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -89,7 +92,7 @@ Table 2. Failure Conditions and VM Response settings for the vSphere HA cluster
 For more information about configuring these settings in the vSphere Web Client, see [Configure Virtual Machine Responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html).
 
 #### Admission control
-{: #cluster-settings-admission-control}
+{: #cluster-settings-admin-control}
 
 vCenter Server uses admission control to ensure that sufficient resources are available in a cluster to provide failover protection and to ensure that VM resource reservations are respected. In this design, the failover capacity is reserved by specifying a percentage of the cluster resources. The defined failover capacity is set to 25% CPU and 25% memory.
 

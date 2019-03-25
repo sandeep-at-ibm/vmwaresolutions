@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -13,7 +16,7 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # HyTrust KeyControl on IBM Cloud overview
-{: #hytrust-keycontrol-on-ibm-cloud-overview}
+{: #htkc_considerations}
 
 The HyTrust KeyControl on {{site.data.keyword.cloud}} service simplifies the management of encrypted workloads. This service automates and simplifies the lifecycle of encryption keys, includes key storage, key distribution, key rotation, and key revocation. Using FIPS 140-2 compliant encryption, enterprises can easily manage encryption keys at scale.
 

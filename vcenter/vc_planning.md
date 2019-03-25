@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server 
 | DAL13 | Dallas | NA South | Skylake, SAP-certified, Broadwell |
 | FRA02 | Frankfurt | Europe | Skylake, SAP-certified, Broadwell |
 | FRA04 | Frankfurt | Europe | Skylake, SAP-certified, Broadwell |
+| FRA05 | Frankfurt | Europe | Skylake, Broadwell |
 | HKG02 | Hong Kong | Asia-Pacific | Skylake, Broadwell |
 | LON02 | London | Europe | Skylake, Broadwell |
 | LON04 | London | Europe | Skylake, SAP-certified, Broadwell |
+| LON05 | London | Europe | Skylake, Broadwell |
 | LON06 | London | Europe | Skylake, SAP-certified, Broadwell |
 | MEL01 | Melbourne | Asia-Pacific | Skylake, SAP-certified, Broadwell |
 | MEX01 | Queretaro | NA South | Skylake, SAP-certified, Broadwell |
@@ -77,6 +82,9 @@ You are responsible for maintaining and ensuring the availability of all instanc
 {: #vc_planning-addon-services}
 
 You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
+
+Services are supported for vCenter Server with NSX-T instances.
+{:note}
 
 ## Capacity considerations
 {: #vc_planning-capacity-considerations}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-11"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -77,13 +80,13 @@ The edge **customer-nsx-edge** is intended for your own usage, so you can modify
 To identify the details for the customer subnets so you can use the IP addresses ordered, complete the following steps in the VMware vSphere Web Client:
 
 1. Click **Home > Networking & Security**.
-2. On the navigator pane, click **NSX Edges** and double-click the **customer-nsx-edge edge**.
-3. On the **Summary** tab for this edge, review the edge description, which contains the subnet identifiers for both the private and public customer subnets.
+2. On the navigator pane, click **NSX Edges** and locate **customer-nsx-edge edge** in the list of edges in the right pane.
+3. In the **Description** column, hover over the edge description for **customer-nsx-edge** to see the subnet identifiers for both the private and public customer subnets.
 
-Additionally, you can find more details about the customer subnets by completing the following steps in the 	{{site.data.keyword.slportal}}:
+Additionally, you can find more details about the customer subnets by completing the following steps in the {{site.data.keyword.slportal}}:
 
 1. Click **Networking > IP Management > Subnets**.
-2. Click the filter menu and in the Subnet field enter the identifier as seen in the description of the **customer-nsx-edge** edge on the **Summary** tab in the VMware vSphere Web Client.
+2. Click the filter menu and in the **Subnet** field enter the identifier as seen in the description of **customer-nsx-edge** in the VMware vSphere Web Client.
 3. Review the notes that are shown for the IP addresses. These notes identify which of the subnets and IP addresses are ordered and used during the initial setup.
 
    Do not use the IP addresses that are ordered and used during the initial setup. However, you can use other IP addresses on these subnets according to your requirements. To set up additional network address translation rules, see [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.

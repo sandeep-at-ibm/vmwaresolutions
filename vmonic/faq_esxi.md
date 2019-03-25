@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -20,6 +23,7 @@ Find answers to frequently asked questions about the ESXi servers managed on the
 
 ## How many ESXi servers can I add to my instance?
 {: #faq_esxi-instance}
+{: faq}
 
 * For vCenter Server instances, you can expand the default cluster to have up to 51 ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers. Since you can add up to 10 clusters to an instance, each deployed instance can have a maximum of 51 + 9x59 = 582 ESXi servers across all clusters.
 * For Cloud Foundation instances, the standard configuration has four ESXi servers. You can add a maximum of 28 servers (to a total of 32 servers). For Cloud Foundation instances in a multi-site configuration, you can have a maximum of 128 ESXi servers across all instances.
@@ -29,6 +33,7 @@ Find answers to frequently asked questions about the ESXi servers managed on the
 
 ## How many ESXi servers can I add to a cluster?
 {: #faq_esxi-cluster}
+{: faq}
 
 For instances deployed in V2.2 and later, you can add a maximum of 51 ESXi servers to an initial cluster and a maximum of 59 ESXi servers to the added clusters.
 
@@ -46,6 +51,7 @@ For instances deployed in V2.1 or earlier, you must enable the necessary vSAN su
 
 ## Can I change the ESXi server names and IP addresses?
 {: #faq_esxi-change-name-ip}
+{: faq}
 
 The ESXi server names and IP addresses cannot be changed because they are registered for Windows DNS resolution. Changes might result in failure during deployment or failure of vCenter Server functions.
 
@@ -54,6 +60,7 @@ Don't use the **Rename Device** feature on the {{site.data.keyword.cloud_notm}} 
 
 ## Can I disable root access on my ESXi servers?
 {: #faq_esxi-disable-root}
+{: faq}
 
 It is recommended to keep root access enabled on ESXi servers, otherwise failure in the {{site.data.keyword.vmwaresolutions_short}} functions might occur.
 
@@ -63,6 +70,7 @@ You must re-enable root access for subsequent automation operations, for example
 
 ## Can I add static routes on my ESXi servers to mount storage from other locations?
 {: #faq_esxi-static-routes}
+{: faq}
 
 You can add static routes for storage but you must do it with extreme care. Otherwise, the existing shares might become unmounted.
 
@@ -73,7 +81,5 @@ Adding static routes for vMotion is not supported. Changes in vMotion subnet con
 {: #faq_esxi-related}
 
 * [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
-* [Adding, viewing, and deleting clusters for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-08"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -53,13 +56,6 @@ The vCenter Server with Hybridity offering is a hosted private cloud that helps 
 
 For more information, see [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview).
 
-### VMware Cloud Foundation on IBM Cloud
-{: #prod_overview-cf}
-
-The Cloud Foundation offering provides a unified VMware virtual environment by using standard {{site.data.keyword.cloud_notm}} compute, storage, and network resources that are dedicated to each user deployment.
-
-For more information, see [Cloud Foundation overview](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview).
-
 ### VMware vSphere on IBM Cloud
 {: #prod_overview-vss}
 
@@ -78,6 +74,11 @@ For more information, see [NetApp ONTAP Select overview](/docs/services/vmwareso
 {: #prod_overview-services}
 
 {{site.data.keyword.vmwaresolutions_short}} allows you to add various services at instance order time or after instance deployment. The following services are offered:
+
+### Caveonix RiskForesight on IBM Cloud
+{: #prod_overview-caveonix}
+
+The Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service manages cyber and compliance risk with proactive monitoring and automated defense controls to protect against threats and to meet industry or government regulations.
 
 ### F5 on IBM Cloud
 {: #prod_overview-f5}
@@ -119,7 +120,7 @@ For more information, see [HyTrust DataControl on {{site.data.keyword.cloud_notm
 
 The HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service simplifies the management of encrypted workloads by automating and simplifying the lifecycle of encryption keys. The service can easily manage encryption keys at scale by using FIPS 140-2 compliant encryption. By using this service, you can manage the encryption keys for all your virtual machines and encrypted data stores, and scale it to support thousands of encrypted workloads in large deployments.
 
-For more information, see [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview).
+For more information, see [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations).
 
 ### IBM Cloud Private Hosted
 {: #prod_overview-icp}

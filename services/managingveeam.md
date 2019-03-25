@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -25,9 +28,7 @@ To manage the Veeam on {{site.data.keyword.cloud_notm}} service, access the Veea
 
 You can find the Windows IP address and the Administrator credentials on the Veeam on {{site.data.keyword.cloud_notm}} service details page.
 
-For more information, see the following topics:
-* [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Backing up and restoring management components for instances that have Veeam on IBM Cloud installed
 {: #managing-veeam-backup-and-replication}
@@ -76,7 +77,7 @@ Because of this change, the previous **Backup and Restore** tab on the instance 
 You must create an {{site.data.keyword.cloud_notm}} Support ticket to get assistance with a restore. In addition, the license of the Veeam VSI in pre-V1.8 instances expired on 14 October 2017. Therefore, you must replace the previous Veeam VSI with the new Veeam on {{site.data.keyword.cloud_notm}} service.
 
 Complete the following steps:
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane, and then click the target instance.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane, and then click the target instance.
 2. On the instance details page, click the **Update and Patch** tab. Ensure that you upgraded the instance to the V1.8 release.
 3. Click the **Services** tab.
 4. On the **Add Services** tab, install the Veeam on {{site.data.keyword.cloud_notm}} service.

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -24,7 +27,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} does not automate the install
 Use this offering to create a new cluster of ESXi servers or scale out an existing cluster of ESXi servers in an {{site.data.keyword.CloudDataCent_notm}}. Depending on the VMware components that you select, you can start with just one ESXi server and then scale the cluster later as needed.
 
 ## Technical specifications for VMware vSphere on IBM Cloud clusters
-{: #technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters}
+{: #vs_vsphereclusteroverview-specs}
 
 Review the components of VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
@@ -35,7 +38,7 @@ The availability and pricing of standardized hardware configurations might vary 
 {: #vs_vsphereclusteroverview-specs-vmware-components}
 
 Select licenses (IBM-provided or BYOL) for the following VMware components:
-* VMware vSphere Enterprise Plus 6.0u2, 6.5u1, or 6.5u2
+* VMware vSphere Enterprise Plus 6.7 U1 or 6.5 U2
 * The following VMware components are optional:
    * VMware vCenter Server Standard
    * VMware NSX (Base, Advanced, or Enterprise)
@@ -48,10 +51,10 @@ Select licenses (IBM-provided or BYOL) for the following VMware components:
 ### Bare Metal Server
 {: #vs_vsphereclusteroverview-specs-bare-metal}
 
-Select one or more {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with your selected CPU model and RAM size:
-* 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
-* SAP-certified (Intel Xeon 6140/E5-2690/E7-8890 series)
-* 2-CPU Intel Broadwell generation (Intel Xeon E5-2600/E7-4800 series)
+You can order one or more {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with one of the following configurations:
+* **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
+* **SAP-certified**: Intel Skylake or Intel Broadwell generation servers (Intel Xeon 6140/E5-2690/E7-8890 series) with your selected CPU model.
+* **Broadwell**: 2-CPU Intel Broadwell generation servers (Intel Xeon E5-2600/E7-4800 series) with your selected CPU model and RAM size.
 
 The options available depend on whether you selected the VMware vSAN component.
 
@@ -86,18 +89,18 @@ Each vSphere cluster expansion node deploys and incurs charges for the following
 ### Hardware for expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs-hardware}
 
-One {{site.data.keyword.cloud_notm}} Bare Metal Server with the hardware configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+One {{site.data.keyword.cloud_notm}} Bare Metal Server with the hardware configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 ### Networking for expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs-network}
 
-One {{site.data.keyword.cloud_notm}} Bare Metal Server with the networking configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+One {{site.data.keyword.cloud_notm}} Bare Metal Server with the networking configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 ### VMware components for expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* One {{site.data.keyword.cloud_notm}} Bare Metal Server with VMware vSphere Enterprise Plus 6.0u2 or 6.5u1  
-* Optional VMware components presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+* One {{site.data.keyword.cloud_notm}} Bare Metal Server with VMware vSphere Enterprise Plus 6.7u1 or 6.5u2.  
+* Optional VMware components presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters).
 {:important}

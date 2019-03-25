@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -41,9 +44,8 @@ After the added users accept your invitation, they can log in to the {{site.data
 
 * [Inviting users and assigning access](/docs/iam?topic=iam-iamuserinv)
 * [Managing identity and access](/docs/iam?topic=iam-getstarted)
-* [Managing users and access](/docs/iam/iamusermanage.html)
+* [Inviting users](/docs/iam?topic=iam-iamuserinv#iamuserinv)
 * [What is IAM](/docs/iam?topic=iam-iamoverview)
 * [Migrating pre-V2.5 vCenter Server instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
 * [Migrating pre-V2.5 vCenter Server with Hybridity Bundle instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
-* [Migrating pre-V2.5 Cloud Foundation instances to IBM Cloud accounts](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addinstancetousraccount)
 * [Migrating pre-V2.5 NetApp ONTAP Select instances to IBM Cloud accounts](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)

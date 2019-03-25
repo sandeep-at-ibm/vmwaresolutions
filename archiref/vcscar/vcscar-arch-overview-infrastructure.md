@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -14,7 +17,7 @@ lastupdated: "2019-02-15"
 ## Virtual Routing and Forwarding
 {: #vcscar-arch-overview-infrastructure-vrf}
 
-{{site.data.keyword.cloud}} accounts can also be configured as a Virtual Routing and Forwarding (VRF) account. A VRF account provides similar functions to VLAN spanning, enabling automatic routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
+{{site.data.keyword.cloud}} accounts can be configured as a Virtual Routing and Forwarding (VRF) account. A VRF account enables automatic global routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
 
 ## Direct Link
 {: #vcscar-arch-overview-infrastructure-direct-link}
@@ -44,12 +47,12 @@ The physical infrastructure required to deploy an {{site.data.keyword.icpfull_no
 
 Table 1. vCenter Server specification for {{site.data.keyword.icpfull_notm}}
 
-| NFS Deployment | vSAN Deployment |
-:--|:----:|:----:
-Number of Servers | 3 | 4
-CPU | 28 Cores 2.2 GHz | 28 Cores 2.2 GHz
-Memory | 384 GB | 384 GB
-Storage | 2000 GB 2IOPS/GB Management, 2000 GB 4IOPS/GB Workload, 4000 GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | Min 960-GB SSD x 2
+| | NFS Deployment | vSAN Deployment |
+|:---------- |:---------- |:---------- |
+| Number of Servers | 3 | 4 |
+| CPU | 28 Cores 2.2 GHz | 28 Cores 2.2 GHz |
+| Memory | 384 GB | 384 GB |
+| Storage | 2000 GB 2IOPS/GB Management, 2000 GB 4IOPS/GB Workload, 4000 GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | Min 960-GB SSD x 2 |
 
 In addition to the {{site.data.keyword.cloud_notm}} Private hardware requirements, you must create persistent volumes in the {{site.data.keyword.icpfull_notm}} environment to store Cloud Automation Manager (CAM) database and log data. While CAM supports all of the persistent volume types that {{site.data.keyword.icpfull_notm}} supports, the two recommended storage configurations for CAM are NFS and GlusterFS.
 

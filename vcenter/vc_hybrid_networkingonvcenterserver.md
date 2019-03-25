@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -19,15 +22,17 @@ Review the following information for details about networking considerations and
 {: #vc_hybrid_networkingonvcenterserver-networking-components}
 {: faq}
 
-To review the networking components that are included in your vCenter Server with Hybridity Bundle instance, see [Technical specifications for vCenter Server with Hybridity Bundle instance](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances).
+To review the networking components that are included in your vCenter Server with Hybridity Bundle instance, see [Technical specifications for vCenter Server with Hybridity Bundle instance](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs).
 
 ## Firewall considerations
 {: #vc_hybrid_networkingonvcenterserver-firewall-considerations}
+{: faq}
 
 If you're using firewalls, you must configure rules for all communications from the {{site.data.keyword.IBM}} CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs). These rules must allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`. Examples of such firewalls are NSX Distributed Firewalls (DFW) or Vyatta firewalls.
 
 ## Using NSX with your virtual machines
 {: #vc_hybrid_networkingonvcenterserver-using-nsx-with-vm}
+{: faq}
 
 During vCenter Server instance deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
 
@@ -35,6 +40,7 @@ An NSX Edge Services Gateway is also deployed to be used by your workload virtua
 
 ## Considerations when changing passwords for NSX components
 {: #vc_hybrid_networkingonvcenterserver-change-nsx-component-password-considerations}
+{: faq}
 
 Review the following considerations before you change the passwords for the NSX Manager, NSX Controllers, and NSX Edges:
 * Do not change the NSX Manager's password that you can find on the **Summary** page of the instance in the {{site.data.keyword.vmwaresolutions_short}} console.

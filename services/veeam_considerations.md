@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-07"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -17,11 +20,11 @@ lastupdated: "2019-02-15"
 
 The Veeam on {{site.data.keyword.cloud}} service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
 
-This service is available only to instances that are deployed in V1.8 or later. The current Veeam version that is installed is 9.5u3.
+This service is available only to instances that are deployed in V1.8 or later. The current Veeam version that is installed is 9.5u4.
 {:note}
 
 ## Technical specifications for Veeam on IBM Cloud
-{: #technical-specifications-for-veeam-on-ibm-cloud}
+{: #veeam_considerations-specs}
 
 The following components are ordered and included in the Veeam on {{site.data.keyword.cloud_notm}} service:
 

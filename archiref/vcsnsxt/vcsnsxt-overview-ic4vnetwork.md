@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -40,24 +43,19 @@ Along with the public and private networks, each {{site.data.keyword.cloud_notm}
 * Primary IP addresses are assigned to devices, bare metal, and virtual servers provisioned by {{site.data.keyword.cloud_notm}}. Users shouldn't assign any IP addresses in these blocks.
 * Portable IP addresses are provided for the user to assign and manage as needed.
 
-Primary or Portable IP addresses can be made routable to any VLAN within the customer account if either VLAN Spanning is enabled within the account or the account is configured as a virtual routing and forwarding (VRF) account.
-
-## VLAN spanning
-{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
-
-VLAN spanning is an {{site.data.keyword.cloud_notm}} global account setting that allows each primary and portable subnet IP block within all VLANs in the account to be routable to each other. With this setting unavailable, IP blocks can still route to {{site.data.keyword.cloud_notm}} services but not each other. This architecture requires that VLAN Spanning is enabled within the account where VMware vCenter Server on {site.data.keyword.cloud_notm}} is deployed in order that connections are transparently made across the various subnets where the solution components reside.
+Primary or Portable IP addresses can be made routable to any VLAN within the customer account if the account is configured as a virtual routing and forwarding (VRF) account.
 
 ## Virtual Routing and Forwarding
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} accounts can also be configured as a Virtual Routing and Forwarding (VRF) account. A VRF account provides similar functions to VLAN spanning, enabling automatic routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
+{{site.data.keyword.cloud_notm}} accounts can also be configured as a Virtual Routing and Forwarding (VRF) account. A VRF account enables automatic global routing between subnet IP blocks within the account. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
 
 ## Physical host connections
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}
 
 Each physical host within the design has two redundant pairs of 10-Gbps Ethernet connections into each {{site.data.keyword.cloud_notm}} Top of Rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 × 10-Gbps connections. This allows each networking interface card (NIC) connection to work independently of the others.
 
-Figure 2. Physical host connections
+Figure 2. Physical host connections</br>
 ![Physical host connections](vcsnsxt-host-connections.svg)
 
 ## VLANs

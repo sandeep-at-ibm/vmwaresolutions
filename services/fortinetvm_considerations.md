@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ This service is available only to instances that are deployed in V2.0 or later r
 {:note}
 
 ## Technical specifications for FortiGate Virtual Appliance on IBM Cloud
-{: #technical-specifications-for-fortigate-virtual-appliance-on-ibm-cloud}
+{: #fortinetvm_considerations-specs}
 
 
 The following components are ordered and included in the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service:

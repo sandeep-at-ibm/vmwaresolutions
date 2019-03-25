@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Signing up for required accounts
@@ -30,4 +33,4 @@ To sign up for an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) ac
 * [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)
 * [Video - How to create an {{site.data.keyword.cloud_notm}} account](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Switching to IBMid and linking accounts](/docs/admin/softlayerlink.html){:new_window}
+* [Switching to IBMid and linking accounts](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)

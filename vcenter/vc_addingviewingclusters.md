@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -13,7 +16,7 @@ lastupdated: "2019-02-18"
 {:important: .important}
 
 # Adding, viewing, and deleting clusters for vCenter Server instances
-{: #adding-and-viewing-clusters-for-vcenter-server-instances}
+{: #vc_addingviewingclusters}
 
 The ESXi servers that you configured when you ordered an instance are grouped as **cluster1** by default.
 
@@ -56,7 +59,7 @@ If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}
 ### Bare Metal Server settings
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-You can choose **Skylake**, **SAP-certified**, or **Broadwell**.
+You can choose **Skylake**, **SAP-certified**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -187,7 +190,7 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 ## Procedure to add clusters to vCenter Server instances
 {: #vc_addingviewingclusters-adding-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to add clusters to.
 
    Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot add clusters to the instance.
@@ -228,7 +231,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
 ## Procedure to view clusters in vCenter Server instances
 {: #vc_addingviewingclusters-viewing-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click an instance to view the clusters in it.
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, view the summary about the clusters:
   * **Name**: The name of the cluster.
@@ -252,7 +255,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
         <dd class="dd">The cluster is deleted.</dd>
     </dl>
   * **Actions**: Click the **Delete** icon to delete the cluster.
-4. Click a cluster name to view the ESXi server and storage:
+4. Click a cluster name to view the ESXi server, storage, and network interface details:
 
 Table 4. ESXi server details
 
@@ -262,7 +265,7 @@ Table 4. ESXi server details
 | Version | The version of the ESXi server. |
 | Credentials | The user name and password to access the ESXi server. |
 | Private IP | The private IP address of the ESXi server. |
-| Status | The status of the ESXi server, which can be one of the following values:<br> **Added**: The ESXi server is added and is ready for use.<br> **Adding**: The ESXi server is being added.<br> **Deleting**: The ESXi server is being deleted. |
+| Status | The status of the ESXi server, which can be one of the following values:<br> **Added** The ESXi server is added and is ready for use.<br> **Adding** The ESXi server is being added.<br> **Deleting** The ESXi server is being deleted. |
 
 Table 5. Storage details
 
@@ -272,6 +275,33 @@ Table 5. Storage details
 | Size | The capacity of the storage. |
 | IOPS/GB | The performance level of the storage. |
 | NFS Protocol | The NFS version of the storage. |
+
+Table 6. Network Interface - VLAN details
+
+| Item        | Description       |  
+|:------------- |:------------- |
+| VLAN Number | The unique VLAN number.  |
+| Description | The description of the VLAN.  |
+| Location | The data center location. |
+| Primary Route | The primary route of the VLAN. |
+
+Click **View Resource** to access the VLAN details.
+
+Table 7. Network Interface - Subnet details
+
+| Item        | Description       |  
+|:------------- |:------------- |
+| Name | The subnet name. Click the name to access the subnet details. |
+| Type | The type of subnet: primary or portable. |
+| Description | The description of the subnet. |
+
+Table 8. Network Interface - IP details
+
+| Item        | Description       |  
+|:------------- |:------------- |
+| IP | The IP address. |
+| Status | The status of the IP address. |
+| Description |The description of the IP address.  |
 
 ## Deleting clusters from vCenter Server instances
 {: #vc_addingviewingclusters-deleting}
@@ -291,7 +321,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 ### Procedure to delete clusters from vCenter Server instances
 {: #vc_addingviewingclusters-deleting-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to delete clusters from.
 
    Ensure that the instance is in the **Ready to Use** status. Otherwise, you can't delete clusters from the instance.
