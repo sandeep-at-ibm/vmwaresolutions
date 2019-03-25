@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -25,7 +28,7 @@ For more information about how to link your Iaas-only account to your PaaS accou
 ## Procedure to migrate instances
 {: #np_addinstancetousraccount-procedure}
 
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** on the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** on the left navigation pane.
 2. From the console banner, click your user account icon, and then click the **Account** field to select the user account that you want to migrate the instance to.
 3. In the **NetApp ONTAP Select Instances** table, find the pre-V2.5 instance.
 4. In the **Actions** column, click the overflow menu icon, and then click **Migrate Instance to Account**.
@@ -35,7 +38,7 @@ For more information about how to link your Iaas-only account to your PaaS accou
 {: #np_addinstancetousraccount-results}
 
 1. You get a console notification that your request to migrate the instance to the specified {{site.data.keyword.cloud_notm}} account is accepted.
-2. When the instance migration is completed, the instance is displayed on the **Deployed Instances** page under the account that it is migrated in to. The migrated instance is no longer displayed in the original account from which it was migrated.
+2. When the instance migration is completed, the instance is displayed on the **Resources** page under the account that it is migrated in to. The migrated instance is no longer displayed in the original account from which it was migrated.
 
 ## Related links
 {: #np_addinstancetousraccount-related}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,7 @@ View the summary and detailed information of the NetApp ONTAP Select instances t
 
 To view a summary of all the NetApp ONTAP Select instances that are provisioned for a user account, complete the following steps:
 
-1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Deployed Instances** on the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Resources** on the left navigation pane.
 2. From the console banner, click your user account icon, and then click the **Account** field to select the user account that you want to check instances for.
 3. In the **NetApp ONTAP Select Instances** table, view the list of instances that are provisioned in the selected user account.
 
