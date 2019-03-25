@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # About attached storage for vCenter Server
