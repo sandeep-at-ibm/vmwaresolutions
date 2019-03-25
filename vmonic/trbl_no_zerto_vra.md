@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Zerto Virtual Replication Appliances are not displayed for newly created ESXi servers
@@ -27,4 +30,4 @@ Open an {{site.data.keyword.cloud}} Support ticket and work with IBM Support to 
 
 To access the Zerto console, click the Zerto card from the **Services** tab of the instance and click **View Details** then, **View Zerto Console**.
 
-For more information about contacting IBM Support, see [Contacting IBM Support](/docs/services/vmwaresolutions//vmonic/trbl_support.html).
+For more information about contacting IBM Support, see [Contacting IBM Support](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-trbl_support#trbl_support).

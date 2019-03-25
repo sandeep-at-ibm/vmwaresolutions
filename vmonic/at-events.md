@@ -2,7 +2,10 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -48,7 +51,6 @@ Table 2. Description of actions that generate management events
 | `vmware-solutions.notification.update` | <ul><li>The request to update notifications is received.</li><li>The request to update notifications is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>The request to wipe secure data is received.</li><li>The request to wipe secure data is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>The request to migrate to bss account is received.</li><li>The request to migrate to bss account is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcf.order`                 | <ul><li>The request to order a Cloud Foundation instance is received.</li><li>The request to order a Cloud Foundation instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
 | `vmware-solutions.vcf.delete`                | <ul><li>The request to delete a Cloud Foundation instance is received.</li><li>The request to delete a Cloud Foundation instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
 | `vmware-solutions.vcf.add_hosts`             | <ul><li>The request to add ESXi servers to a Cloud Foundation instance is received.</li><li>The request to add ESXi servers to a Cloud Foundation instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
 | `vmware-solutions.vcf.remove_hosts`          | <ul><li>The request to delete ESXi servers from a Cloud Foundation instance is received.</li><li>The request to delete ESXi servers from a Cloud Foundation instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |

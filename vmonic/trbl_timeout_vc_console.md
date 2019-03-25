@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -27,11 +30,11 @@ Use the following steps to investigate and fix the problem.
    your convenience, these steps are also listed as follows:   
    1. Install the Adobe Flash Player plug-in for your browser.   
    2. Create a VPN password from the {{site.data.keyword.slportal_full}}.    
-   3. Log in to the data center VPN portal by using the {{site.data.keyword.cloud_notm}} infrastructure VPN credentials.    
-   4. Add the IP address and the host name mapping of PSC (Platform Services Controller) into the hosts file by using the following format:
+   3. [Log in to the data center VPN](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#login-to-the-vpn) by using the {{site.data.keyword.cloud_notm}} infrastructure VPN credentials.    
+   4. Add the IP address and the host name mapping of PSC (Platform Services Controller) into the `hosts` file from your local computer. Use the following format:
 
       ```javascript
-      IPAddress              HostName
+      IP_Address              Host_Name
       ```
 
 2. Take note of the IP address that is displayed because you need it in one of the next steps.

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -47,22 +50,24 @@ Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} infrastru
 | View Passwords | This permission is required to be able to administer the ordered VSIs. |
 | Manage Server Monitoring | This permission is not required to place an order but it is required to retrieve and validate the monitoring status of the {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} on which the VMware ESXi servers are running in your instance. |
 
-## Virtual Routing and Forwarding (VRF) requirement
-{: #slaccountrequirement-vrf}
+## VRF with Service Endpoints enabled
+{: #slaccountrequirement-vrf-se}
 
-The {{site.data.keyword.cloud_notm}} infrastructure account must either be a VRF account or, if a non-VRF account, must have VLAN spanning enabled. For more information about converting your account from non-VRF to VRF, see [Overview of VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
+Your {{site.data.keyword.cloud_notm}} infrastructure account must be a Virtual Routing and Forwarding (VRF) account with Service Endpoints enabled. If your account is non-VRF, you must convert to a VRF account. In addition, you must enable your VRF account for using Service Endpoints.
 
-## VLAN spanning for non-VRF accounts
-{: #slaccountrequirement-vlan-spanning}
+For more information, see:
+* [Overview of VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [Enable your account for using Service Endpoints](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
 
-If you are using a non-VRF {{site.data.keyword.cloud_notm}} infrastructure account, VLAN spanning must be enabled. If VLAN spanning is not enabled for non-VRF accounts, the various components of the VMware virtualization environment might not be able to communicate with each other.
+## VLAN spanning end of support
+{: #slaccountrequirement-vlan-eos}
 
-To enable VLAN spanning in your account, see [VLAN Spanning](/docs/infrastructure/vlans?topic=vlans-vlan-spanning){:new_window}.
+Starting August 2019, VLAN spanning will no longer be supported. By the end of July 2019, you must convert your {{site.data.keyword.cloud_notm}} infrastructure account to VRF and enable Service Endpoints.
+{:important}
 
 ## Related links
 {: #slaccountrequirement-related}
 
-* [Requirements for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
 * [Requirements for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [User account and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
 * [Overview of VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

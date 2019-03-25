@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2018-05-28"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -18,6 +21,7 @@ lastupdated: "2018-05-28"
 This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Spectre and Meltdown remediation
+{: #relnotes_v23-spectre}
 
 {{site.data.keyword.vmwaresolutions_short}} has released patches from VMware in response to the vulnerabilities known as Spectre and Meltdown (CVE-2017-5753, CVE-2017-5715 and CVE-2017-5754).
 
@@ -25,9 +29,8 @@ This release includes new features, component updates, usability enhancements, a
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-For more information, see [Addressing Spectre and Meltdown vulnerabilities](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre).
-
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
+{: #relnotes_v23-vcs-hybrid}
 
 This release introduces the VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle offering. The vCenter Server with Hybridity Bundle is a hosted private cloud that helps quickly and easily extend your on-premises infrastructure into the cloud. The VMware environment is based on IBM-provided VMware Software Defined Data Center licenses and includes the VMware HCX on {{site.data.keyword.cloud_notm}} service that easily and securely connects a vSphere 5.0+ environment on-premises with {{site.data.keyword.cloud_notm}} sites for seamless infrastructure hybridity and true application mobility.
 
@@ -40,21 +43,18 @@ For more information about the vCenter Server with Hybridity Bundle, see the fol
 * [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 
 ## Delete cluster support for vCenter Server and Cloud Foundation instances
+{: #relnotes_v23-delete-cluster}
 
 You can now delete clusters from an instance without having to delete the entire instance. For clusters deployed in V2.2 or earlier instances, you must upgrade the instance to V2.3 to be able to delete the clusters that you added to the instance.
 
-For more information, see the following topics:
-
-* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances#deleting-clusters-from-vcenter-server-instances)
-* [Adding, viewing, and deleting clusters for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances#deleting-clusters-from-cloud-foundation-instances)
+For more information, see [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances#deleting-clusters-from-vcenter-server-instances).
 
 ## Updates for VMware vCenter Server instances
+{: #relnotes_v23-vcs}
 
 This release applies the following upgrades and improvements:
 *	VMware vSphere ESXi 6.5 U1g (ESXi 6.5u1 with patch level ESXi650-201803001 applied)
 *	VMware vCenter Server 6.5 Update 1g
-
-### Enhancements for vCenter Server instances and clusters
 
 Starting with the V2.3 release, the following new CPU models are available for deployment when you choose the **Customized** Bare Metal setting:
 * Dual Intel Xeon Silver 4110 processor / 16 cores total, 2.1 GHz
@@ -66,6 +66,7 @@ For more information, see the following topics:
 * [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ## Updates for VMware Cloud Foundation instances
+{: #relnotes_v23-vcf}
 
 This release applies the following upgrades and improvements:
 *	VMware vSphere ESXi 6.5 U1g (ESXi 6.5u1 with patch level ESXi650-201803001 applied)
@@ -73,8 +74,10 @@ This release applies the following upgrades and improvements:
 *	VMware NSX for vSphere 6.3.5
 
 ## Updates for add-on services
+{: #relnotes_v23-services}
 
 ### HyTrust CloudControl on IBM Cloud
+{: #relnotes_v23-htcc}
 
 The HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service is now available to VMware Cloud Foundation instances and VMware vCenter Server instances that are running vSphere 6.5 and that are deployed in or upgraded to V2.3 or later releases. The service enforces and controls compliance against security standards, and provides role-based access control (RBAC). When combined with HyTrust DataControl, the service can ensure that virtual machines and workload data do not leave a particular region, cluster, or ESXi server within the {{site.data.keyword.cloud_notm}} data center.
 
@@ -85,6 +88,7 @@ For more information, see the following topics:
 * [Managing HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtcc)
 
 ### HyTrust DataControl on IBM Cloud
+{: #relnotes_v23-htdc}
 
 The HyTrust DataControl on {{site.data.keyword.cloud_notm}} service is now available to VMware Cloud Foundation instances and VMware vCenter Server instances that are running vSphere 6.5 and that are deployed in or upgraded to V2.3 or later releases. The service offers strong encryption with integrated key management to secure workloads throughout their lifecycles. The service can provide encryption at both the operating system level and data level, which means that any directory, folder, or file within a workload can be encrypted and decrypted.
 
@@ -95,14 +99,17 @@ For more information, see the following topics:
 * [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtdc)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
+{: #relnotes_v23-spp}
 
 The current release installs IBM Spectrum Protect&trade; Plus V10.1.1, as the default backup service, on all newly deployed instances. For more information about the new features in IBM Spectrum Protect Plus V10.1.1, see [IBM Spectrum Protect Plus updates](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ## New and updated documentation
+{: #relnotes_v23-new-docs}
 
 A new developerWorks recipe is available with step-by-step instructions on how to add storage to IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment. For more information, see [Adding storage to IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/).
 
 ## User interface updates and enhancements
+{: #relnotes_v23-ui}
 
 The user interface is updated and provides the following enhancements:
 * **Consistency**: The user interface now provides a consistent look and feel with other services on {{site.data.keyword.cloud_notm}}.
