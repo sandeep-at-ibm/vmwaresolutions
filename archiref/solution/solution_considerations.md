@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,7 +18,7 @@ lastupdated: "2019-02-15"
 # Post-deployment considerations for your VMware instance
 {: #solution_considerations}
 
-{{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server, and VMware Cloud Foundation offerings are not managed services. You are responsible for the configuration, security, management, and monitoring of all software components. With complete administrative access to the solution, you have great power and flexibility that requires significant technical, administrative, and operational expertise across various domains. Managing a VMware instance in the {{site.data.keyword.cloud_notm}} requires the same planning and expertise as planning for an on-premises instance. Software-defined technologies such as VMware NSX and VMware vSAN greatly simplify some aspects of instance management, but might require new skills and tools to be properly managed and operated. Combining the power, speed, and reliability of {{site.data.keyword.cloud_notm}} automated VMware deployment with the appropriate operational planning and testing ensures quick and successful navigation to hybrid cloud.
+{{site.data.keyword.vmwaresolutions_full}} offerings are not managed services. You are responsible for the configuration, security, management, and monitoring of all software components. With complete administrative access to the solution, you have great power and flexibility that requires significant technical, administrative, and operational expertise across various domains. Managing a VMware instance in the {{site.data.keyword.cloud_notm}} requires the same planning and expertise as planning for an on-premises instance. Software-defined technologies such as VMware NSX and VMware vSAN greatly simplify some aspects of instance management, but might require new skills and tools to be properly managed and operated. Combining the power, speed, and reliability of {{site.data.keyword.cloud_notm}} automated VMware deployment with the appropriate operational planning and testing ensures quick and successful navigation to hybrid cloud.
 
 Review the following considerations to understand your responsibilities for managing and operating the instance before and after it has been deployed.
 
@@ -44,7 +47,7 @@ Complete the following steps to manage access to your {{site.data.keyword.cloud_
 - Access instance management endpoints by using the [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) or your [{{site.data.keyword.cloud_notm}} Direct-Link connection](https://www.ibm.com/cloud/direct-link).
 - Devise a strategy for public network connectivity from within your instance. Your options include: the sample customer VMware NSX Edge Services Gateway (ESG), gateway appliances such as Vyatta and FortiGate, and proxy servers deployed in the {{site.data.keyword.cloud_notm}} network or on your own network accessed through DirectLink.
 - Plan whether to deploy your workload on {{site.data.keyword.cloud_notm}} VLANs with [{{site.data.keyword.cloud_notm}} portable IP addresses](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips) or [on NSX logical switches (VXLANs) using your own IP addresses](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview). Note that using NSX software-defined networking (SDN) gives you the greatest flexibility to manage and secure your workload network in the {{site.data.keyword.cloud_notm}}.
-- Use NSX ESGs, [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance), and DirectLink peering to plan for connectivity to workloads (Network Address Translation, Virtual Private Network, routing).
+- Use NSX ESGs, [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance), and DirectLink peering to plan for connectivity to workloads (Network Address Translation, Virtual Private Network, routing).
 - If implementing Cross-vCenter NSX, ensure that your local segment ID ranges are not overlapping before deploying any local workloads.
 
 ## Security planning and hardening
@@ -55,7 +58,7 @@ You are responsible for securing, encrypting, and monitoring your VMware instanc
 - Change all passwords displayed in the {{site.data.keyword.vmwaresolutions_short}} console and use your own password management system. Note that IBM retains distinct user IDs needed for ongoing automation and support.
 - Review password policies, such as complexity and expiration period, across all components.
 - Review encryption settings across all components.
-- Plan and implement appropriate physical or virtual firewall solutions, such as NSX Distributed Firewall (DFW), NSX ESGs, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations), and [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance).
+- Plan and implement appropriate physical or virtual firewall solutions, such as NSX Distributed Firewall (DFW), NSX ESGs, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations), and [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance).
 - Plan and implement appropriate application load balancing and security solutions, such as [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations).
 - Plan and implement appropriate security information and event management (SIEM) solutions, such as [IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence).
 - Plan and implement appropriate vulnerability scanning.
@@ -66,7 +69,7 @@ You are responsible for securing, encrypting, and monitoring your VMware instanc
 
 Complete the following steps to customize the base VMware instance installation to fit your requirements.
 
-- Use your own certificate authority (CA) to generate certificates for components such as vCenter, VMware Platform Services Controller (PSC), and NSX Manager.
+- Use your own certificate authority (CA) to generate certificates for components such as vCenter (with embedded PSC) and NSX Manager.
 - Configure deployed services. For example:
   - For HyTrust CloudControl on {{site.data.keyword.cloud_notm}}, configure AD integration, access control, Simple Mail Transfer Protocol (SMTP) settings, and compliance policies.
   - For Zerto on {{site.data.keyword.cloud_notm}}, plan for IP addressing and routing of Zerto Virtual Replication Appliance (VRA) communications since network address translator (NAT) traversal is not supported. Consider either tunneling or redeployment of your VRAs for appropriate addressing and routing.

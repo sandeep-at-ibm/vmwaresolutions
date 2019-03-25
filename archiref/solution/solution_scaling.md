@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -31,10 +34,9 @@ In this design, the definition of a multi-site deployment is comprised of the fo
    * New SSO site name
    * New DNS site/subdomain tied to the root of the primary domain
    * DNS and AD replication setup between the secondary and primary site AD VMs
-   * PSC deployed and configured to synchronize with the primary site PSC
    * vCenter setup with Enhanced Linked Mode to the primary site vCenter
 
-Additionally, the NSX manager in secondary sites may be set up as secondary NSX managers for the NSX manager on the primary site.
+Additionally, the NSX manager in secondary sites may be set up as secondary NSX managers for the NSX manager on the primary site. This is a manual process that you need to complete.
 
 ## Adding new clusters
 {: #solution_scaling-clusters}
@@ -47,7 +49,7 @@ This method enables you to achieve the following things:
 * Segregating workloads based on other characteristics, for example, Microsoft SQL database cluster.
 * Deploying applications in highly available topologies.
 
-When the initial cluster is converted into a management-only cluster, the migration of existing workloads will involve manual steps to be taken by the user. This might involve the reattachment of data stores to the new cluster or alternately storage migration. The IP addresses of the workloads might need to be changed if the new cluster resides in a different {{site.data.keyword.cloud_notm}} pod or is assigned a different VLAN ID.
+When the initial cluster is converted into a management-only cluster, the migration of existing workloads will involve manual steps to be taken by the user. This might involve the reattachment of data stores to the new cluster or alternately storage migration. The IP addresses of the workloads might need to be changed if the new cluster resides in a different {{site.data.keyword.cloud_notm}} pod or if the cluster is assigned to a different VLAN ID.
 {:note}
 
 ## Adding ESXi hosts into existing clusters

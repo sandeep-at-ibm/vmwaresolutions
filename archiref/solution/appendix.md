@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -14,9 +17,21 @@ lastupdated: "2019-02-15"
 ## VMware NSX edition comparison
 {: #solution-appendix-nsx-editions}
 
-Table 1 lists the available features for the **Base**, **Advanced**, and **Enterprise** editions of VMware NSX that the solution supports.
+Within this design, there are multiple components that require licenses. This information captures the minimum licenses that are required for the environment to operate correctly.
 
-Table 1. VMware NSX edition comparison chart
+Table 1. License requirements
+
+Component | Purpose | License
+----------|---------|-------------
+**vSphere** | Compute virtualization | vSphere 6.7 Enterprise Plus
+**vCenter Server** | Infrastructure Management | vCenter Server 6.7 Standard
+**NSX** | Network virtualization | NSX Base for Service Providers 6.4
+**vSAN** | Storage virtualization | vSAN 6.6 Advanced  
+
+NSX Base for Service Providers edition is only available for service providers through the VMware vCloud Air Network (vCAN). The features in this edition can be found in the following table.
+{:note}
+
+Table 2. VMware NSX edition comparison chart
 
 | NSX Feature                                   | Base | Advanced | Enterprise |
 |-----------------------------------------------|------|----------|------------|
@@ -45,9 +60,9 @@ Table 1. VMware NSX edition comparison chart
 ## VMware vSAN edition comparison
 {: #solution-appendix-vsan-editions}
 
-Table 2 lists the available features for the **Advanced** and **Enterprise** editions of VMware vSAN that the solution supports.
+The following table lists the available features for the **Advanced** and **Enterprise** editions of VMware vSAN that the solution supports.
 
-Table 2. VMware vSAN edition comparison chart
+Table 3. VMware vSAN edition comparison chart
 
 | vSAN Feature                                    | Advanced | Enterprise |
 |-------------------------------------------------|----------|------------|

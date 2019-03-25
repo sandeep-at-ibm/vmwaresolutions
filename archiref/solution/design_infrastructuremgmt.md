@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,47 +18,32 @@ lastupdated: "2019-02-15"
 # Infrastructure management design
 {: #design_infrastructuremgmt}
 
-Infrastructure management refers to the components that are managing the VMware infrastructure. This design uses a single external Platform Services Controller (PSC) instance and a single vCenter Server instance:
-* The vCenter Server is the centralized platform for managing vSphere environments and is one of the fundamental components in this solution.
+Infrastructure management refers to the components that are managing the VMware infrastructure.
+* The vCenter Server with an embedded Platform Services Controller (PSC) is the centralized platform for managing vSphere environments and is one of the fundamental components in this solution.
 * The PSC is used in this solution to provide a set of infrastructure services, which include VMware vCenter Single Sign On, license service, lookup service, and VMware certificate authority.
 
-The PSC instances and vCenter Server instances are separate virtual machines (VMs).
+This design uses a PSC function that is integrated into an instance of vCenter Server. The PSC and vCenter Server are housed within the same virtual machine (VM).
 
-## PSC design
-{: #design_infrastructuremgmt-psc}
-
-This design deploys a single external PSC as a virtual appliance on a portable subnet on the private VLAN that is associated with the management VMs. Its default gateway is set to the back-end customer router (BCR). The virtual appliance is configured with the specifications in the following table.
-
-These values are set at the time of deployment and cannot be changed.
-{:note}
-
-Table 1. Platform Services Controller specifications
-
-| Attribute                    | Specification                  |
-|------------------------------|--------------------------------|
-| Platform Services Controller | Virtual appliance              |
-| Number of vCPUs              | 2                              |
-| Memory                       | 4 GB                           |
-| Disk                         | 114 GB on local VMFS datastore |
-| Disk type                    | Thin provisioned               |
+Figure 1. Infrastructure management</br>
+![Infrastructure management](vcsv4radiagrams-ra-inframgmt.svg)
 
 The PSC located in the primary instance is assigned the default SSO domain of `vsphere.local`.
 
 ## vCenter Server design
 {: #design_infrastructuremgmt-vcenter}
 
-The vCenter Server is also deployed as a virtual appliance. Additionally, the vCenter Server is installed on a portable subnet on the private VLAN that is associated with management VMs. Its default gateway is set to the IP address assigned on the BCR for that particular subnet. The virtual appliance is configured with the specifications in the following table.
+The vCenter Server with an embedded PSC is installed on a portable subnet on the private VLAN that is associated with management VMs. Its default gateway is set to the IP address assigned on the BCR for that particular subnet. The virtual appliance is configured with the specifications in the following table.
 
-Table 2. vCenter Server Appliance specifications
+Table 1. vCenter Server Appliance specifications
 
 | Attribute                    | Specification                       |
 |------------------------------|-------------------------------------|
 | vCenter Server               | Virtual appliance                   |
-| Appliance installation size  | Medium (up to 400 hosts, 4,000 VMs) |
-| Platform Services Controller | External                            |
-| Number of vCPUs              | 8                                   |
-| Memory                       | 24 GB                               |
-| Disk                         | 400 GB on local datastore           |
+| Appliance installation size  | Large (up to 1,000 hosts and 10,000 VMs) |
+| Platform Services Controller | Integrated                            |
+| Number of vCPUs              | 16                                   |
+| Memory                       | 32 GB                               |
+| Disk                         | 990 GB on local datastore (Large disk deployment) |
 | Disk type                    | Thin provisioned                    |
 
 ### vCenter Server database
@@ -86,55 +74,49 @@ You are responsible to adjust the admission control policy when the cluster is l
 
 By default, the **VM restart priority** option is set to medium and the **Host isolation response** option is disabled. Additionally, **VM monitoring** is disabled and the **Datastore Heartbeating** feature is configured to include any of the cluster data stores. This approach uses the NAS data stores if they are present.
 
-## Automation
-{: #design_infrastructuremgmt-automation}
+## Enhanced vMotion compatibility
+{: #design_infrastructuremgmt-evc}
 
-The cornerstone to these solutions is automation. Automation brings the following benefits:
-* Reduces the complexity of deployment.
-* Drastically reduces the deployment time.
-* Ensures that the VMware instance is deployed in a consistent manner.
+To simplify vMotion compatibility across cluster nodes with potentially differing CPU capabilities, Enhanced vMotion Compatibility (EVC) mode is enabled at a Skylake level to ensure vMotion compatibility across cluster nodes when newer processors arrive within {{site.data.keyword.cloud_notm}} inventory and allows for cluster expansion in the future if Skylake processor servers aren't in inventory.
 
-{{site.data.keyword.IBM}} CloudBuilder, IBM CloudDriver, and SDDC Manager VMs work together to start a new VMware instance and perform lifecycle management functions.
+### IBM CloudDriver
+{: #design_infrastructuremgmt-cloud-driver}
 
-### IBM CloudBuilder and IBM CloudDriver
-{: #design_infrastructuremgmt-cloud-builder-driver}
+Cornerstone to these solutions is automation. Automation reduces the complexity of deployment, drastically reduces deployment time, and ensures the VMware instance is deployed in a consistent manner.
 
-The IBM CloudBuilder and IBM CloudDriver virtual server instance (VSI) are IBM-developed components that you cannot access.
-* The IBM CloudBuilder is a temporary {{site.data.keyword.cloud_notm}} virtual server instance (VSI) that bootstraps the deployment, configuration, and validation of the solution components within the provisioned bare metal ESXi hosts.
-* The IBM CloudDriver VSI is deployed for instance creation and then periodically, as needed, with the latest {{site.data.keyword.cloud_notm}} for VMware code for operations such as deploying more nodes, clusters, or services. The IBM CloudDriver communicates with the {{site.data.keyword.vmwaresolutions_short}} console through a VMware NSX Edge Services Gateway, which is deployed exclusively for instance management purpose, and acts as an agent to maintain the instance. The IBM CloudDriver is responsible for ongoing actions such as the addition of new bare metal hosts to the cluster and the deployment of add-on services into the instance. For Cloud Foundation instances, the IBM CloudDriver communicates with the VMware SDDC Manager VM to perform functions such as host addition and patching.
+IBM CloudBuilder is an ephemeral {{site.data.keyword.cloud_notm}} VM virtual server instance (VSI) which
+works to bring up a new VMware instance and perform lifecycle management functions. It is deployed when overall vCenter Server instance management is required and is destroyed when the process is complete.
 
-It is possible for the user to delete or damage the VMs described in the following sections. When a VM is removed, shut down, or it becomes inoperable, the following Cloud Foundation or vCenter Server operations on the {{site.data.keyword.vmwaresolutions_short}} console are interrupted:
-* Viewing the instance or host status
-* Adding or removing clusters
-* Adding or removing ESXi hosts
-* Adding or removing services
-* Patching
+IBM CloudDriver can be configured to communicate back to the {{site.data.keyword.vmwaresolutions_short}}  management infrastructure over public or optionally, over a private network connection through {{site.data.keyword.cloud_notm}} object storage as the message queue. IBM CloudDriver is an IBM developed component, is not user accessible, and has the following attributes and function:
 
-### SDDC Manager
-{: #design_infrastructuremgmt-sddc-manager}
-
-For Cloud Foundation instances, the SDDC Manager VM is a component that is developed and maintained by VMware. It remains as part of the instance during its entire lifecycle. It is responsible for the following lifecycle functions of instances:
-* Management of VMware components: vCenter Server, Platform Services Controller (PSC), vSAN, and NSX, including IP address allocation and host name resolution.
-* Expansion and retraction of ESXi hosts within the cluster, which includes any affected services, such as NSX VTEP, vSAN, and resource pools.
-
-For vCenter Server instances, these activities are performed by the IBM CloudDriver as there is no SDDC Manager.
+- Deployment and configuration of the vCenter Server instance within the user account.
+- Add and remove hosts from the vCenter Server clusters.
+- Add and remove clusters from vCenter Server instances.
+- Add and remove add on services or function to vCenter Server
+instances.
 
 ### Automation flow
 {: #design_infrastructuremgmt-auto-flow}
 
-The following procedure describes the order of events when a VMware instance is ordered via the {{site.data.keyword.vmwaresolutions_short}} console:
-1.  Ordering VLANs and subnets for networking from {{site.data.keyword.cloud_notm}}.
-2.  Ordering {{site.data.keyword.baremetal_short}} with vSphere Hypervisor installed.
-3.  If applicable, ordering Microsoft Windows Virtual Server Instance (VSI) to serve as Active Directory domain controller.
-4.  Validation of the networking and deployed hardware.
-5.  If applicable, initial configuration of single node vSAN.
-6.  If applicable, deployment and configuration of two Microsoft Windows virtual machines to serve as Active Directory domain controllers.
-7.  Deployment and configuration of vCenter, PSC, and NSX.
-8.  Clustering of remaining ESXi nodes, expansion of vSAN if applicable, and configuration of NSX components (VTEP).
-9.  Deploying VMware Cloud Foundation SDDC Manager VM, if applicable, and the IBM CloudDriver VSI.
-10.  Validating the installation and configuration of the environment.
-11. Removal of the CloudBuilder VSI.
-12. Deployment of optional services, such as backup server and storage.
+The following describes the order of events when you use the {{site.data.keyword.vmwaresolutions_short}} console to order a VMware instance:
+1. Ordering VLANs and subnets for networking from {{site.data.keyword.cloud_notm}}.
+2. Ordering {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with vSphere Hypervisor installed.
+3. Ordering of Microsoft Windows VSI to serve as the Active Directory domain controller.
+4. Deployment of the Cloud Driver VSI.
+5. Validation of the networking and deployed hardware.
+6. If applicable, the initial configuration of the single node vSAN.
+7. Deployment and configuration of vCenter (with embedded PSC) and NSX.
+8. Clustering of remaining ESXi nodes, expansion of vSAN if applicable, and configuration of NSX components (VTEP).
+9. Validating the installation and configuration of the environment.
+10. Deployment of optional services, such as backup server and storage.
+11. Removal of the Cloud Driver VSI.
+
+## IDs and passwords
+{: #design_infrastructuremgmt-ids-pwd}
+
+IC4V management infrastructure stores all vCenter Server contained IDs and passwords encrypted within the {{site.data.keyword.cloud_notm}} management plane. Any change to these passwords by the user can disrupt the automation capabilities within vCenter Server.
+
+You can provide changed passwords in the IC4V solutions portal so that the automation can process functions uninterrupted. The solutions portal optionally allows for verification of the entered passwords.
 
 ## Related links
 {: #design_infrastructuremgmt-related}

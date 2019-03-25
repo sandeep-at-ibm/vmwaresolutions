@@ -4,30 +4,23 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-15"
+
+subcollection: vmwaresolutions
+
 
 ---
-# Design overview
+# IBM Cloud for VMware Solutions components
 {: #design_overview}
 
 {{site.data.keyword.vmwaresolutions_full}} provides automation to deploy VMware technology components into {{site.data.keyword.CloudDataCents_notm}} across the globe.
 
-## Solution offerings
-{: #design_overview-offerings}
+The offerings in this solution portfolio include VMware vSphere products within an automatically deployed and configured cluster: VMware vSphere ESXi, VMware vCenter Server Appliance with an embedded Platform Services Controller (PSC), VMware NSX-V or NSX-T, and optionally, VMware vSAN.
 
-The solution offerings include the following VMware vSphere products within an automatically deployed and configured cluster:
-* VMware Cloud Foundation: vSphere ESXi, Platform Services Controller (PSC), VMware vCenter Server Appliance, SDDC Manager, VMware NSX, and VMware vSAN.
-* VMware vCenter Server: vSphere ESXi, Platform Services Controller (PSC), vCenter Server Appliance, NSX, and optionally vSAN.
+The architecture consists of a single cloud region and supports the ability to extend into more cloud regions that are located in another geography and into another {{site.data.keyword.cloud_notm}} pod within the same data center. A region is defined as a unique vCenter Server instance. This design also allows for automated expansion and contraction of virtual capacity within a vCenter Server instance.
 
-In this design, an instance is deployed in a single pod of an {{site.data.keyword.CloudDataCent_notm}} at the initial order. After initial deployment, you can extend your virtual environment into other pods within the same data center or into other data centers.
-
-The design also allows for automated expansion and contraction of virtual capacity within a Cloud Foundation or vCenter Server instance.
-
-## VMware on IBM Cloud components
-{: #design_overview-comp}
-
-Figure 1. Components of VMware on {{site.data.keyword.cloud_notm}}
-![Components of VMware on {{site.data.keyword.cloud_notm}}](design_overview.svg "The solution comprises physical infrastructure, virtual infrastructure, infrastructure management, and common services.")
+Figure 1. Solution components of {{site.data.keyword.vmwaresolutions_short}}
+![Solution components of {{site.data.keyword.vmwaresolutions_short}}](vcsv4radiagrams-ra-full.svg "The solution comprises physical infrastructure, virtual infrastructure, infrastructure management, and common services.")
 
 ## Related links
 {: #design_overview-related}
