@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,16 +25,16 @@ This hybrid architecture allows Acme Skateboards to:
 - Use Cloud Automation Manager (CAM) to script infrastructure as code (IaC) to compose and orchestrate services that are made from both VMs and containers to integrate with their DevOps toolchains and their ITSM solution.
 
 The reference architecture has the following key components:
-- **On-premises virtualization** – On-premises virtualization is a VMware cluster that currently hosts the Acme Skateboards VMs. These VMs are currently hosting the applications to be modernized. This cluster is required to meet the prerequisites of the [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) architecture so that it can run HCX.
+- **On-premises virtualization** – On-premises virtualization is a VMware cluster that currently hosts the Acme Skateboards VMs. These VMs are currently hosting the applications to be modernized. This cluster is required to meet the prerequisites of the [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) architecture so that it can run HCX.
 
 HCX extends the on-premises networks into the {{site.data.keyword.cloud_notm}} allowing customers to migrate VMs into the VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance that runs on {{site.data.keyword.cloud_notm}}, and back if required.
 - **{{site.data.keyword.cloud_notm}} for VMware Solutions** – The vCenter Server instance provides the fundamental VMware building blocks, such as vSphere, vCenter Server, NSX-V, and storage options that include vSAN or {{site.data.keyword.cloud_notm}} Endurance storage, needed to automatically deploy a VMware Software Defined Data Center (SDDC) solution. The VMware cluster is the target for the migrated VMs and some of the modernized applications in containers hosted in {{site.data.keyword.icpfull_notm}}. The key components in vCenter Server are as follows:
   - **NSX-V** - NSX-V provides the network virtualization layer in vCenter Server that provides a network overlay for Acme Skateboards VMs. NSX-V enables BYOIP and isolates the workload networks from the {{site.data.keyword.cloud_notm}} networks. NSX-V is programmed by HCX to create the networks that Acme Skateboards extend from on-premises.
   - **NSX-T** - NSX-T provides a common set of tools for network and security management across both containers and VMs. NSX-T is fully compatible with Kubernetes Container Networking Interface (CNI) and integrates with CNI to provide container networking. NSX-T provides the overlay network that the modernized applications use and is replacing Calico, which is used natively by {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}}.
 
-- **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}} is an application platform for developing and managing containerized applications. {{site.data.keyword.icpfull_notm}} is an integrated environment that includes the container orchestrator Kubernetes, a private image repository, a management console, monitoring frameworks and a graphical user interface that provides a centralized location from where Acme Skateboards can deploy, manage, monitor, and scale their applications. The vCenter Server instance hosts the {{site.data.keyword.icpfull_notm}} components, master nodes, worker nodes, and so on, running them as VMs. {{site.data.keyword.icpfull_notm}} hosts:
-- **{{site.data.keyword.cloud_notm}} Automation Manager** – CAM is an enterprise-ready infrastructure as code (IaC) platform that provides a single pane of glass to provision VM workloads, on-premises or on vCenter Server, alongside Kubernetes workloads, in {{site.data.keyword.icpfull_notm}} or {{site.data.keyword.containerlong_notm}}, by using templates. CAM is a Dockerized application that runs on an {{site.data.keyword.icpfull_notm}} installation and is tightly integrated for authorization, role-based access control (RBAC), and other functions.
-    - The containerized Acme Skateboards applications that customers want to deploy in this environment.
+- **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}} is an application platform for developing and managing containerized applications. {{site.data.keyword.icpfull_notm}} is an integrated environment that includes the container orchestrator Kubernetes, a private image repository, a management console, monitoring frameworks and a graphical user interface that provides a centralized location from where Acme Skateboards can deploy, manage, monitor, and scale their applications. The vCenter Server instance hosts the {{site.data.keyword.icpfull_notm}} components, master nodes, worker nodes, and so on, running them as VMs. {{site.data.keyword.icpfull_notm}} hosts the following components:
+  - **{{site.data.keyword.cloud_notm}} Automation Manager** – CAM is an enterprise-ready infrastructure as code (IaC) platform that provides a single pane of glass to provision VM workloads, on-premises or on vCenter Server, alongside Kubernetes workloads, in {{site.data.keyword.icpfull_notm}} or {{site.data.keyword.containerlong_notm}}, by using templates. CAM is a Dockerized application that runs on an {{site.data.keyword.icpfull_notm}} installation and is tightly integrated for authorization, role-based access control (RBAC), and other functions.
+  - The containerized **Acme Skateboards applications** that customers want to deploy in this environment.
 
 - **{{site.data.keyword.containerlong_notm}}** – {{site.data.keyword.containerlong_notm}} enables Acme Skateboards to deploy their modernized applications in Docker containers that run in Kubernetes clusters. The master modes are fully managed by IBM while the worker nodes in the worker pool are deployed into the same {{site.data.keyword.cloud_notm}} account as their vCenter Server instance. Worker nodes can be: bare metal, public, or dedicated virtual server instances. Calico is installed and configured automatically in {{site.data.keyword.containerlong_notm}}. Calico provides secure network connectivity for containers and is configured in {{site.data.keyword.containerlong_notm}} to use IP-in-IP encapsulation for packets that travel across subnets and to use NAT for outgoing connections from the containers.
 
@@ -47,7 +50,7 @@ vCenter Server provides the fundamental building blocks that include VMware vSph
 
 In summary, the {{site.data.keyword.cloud_notm}} for VMware offerings:
 * Accelerate delivery of IT projects to Developers and lines of business by reducing the time that it takes for procurement, architecture, implementation, and deployment of resources from weeks or months, to hours.
-* Enhance security with dedicated bare metal servers in a hosted private cloud, including private endpoint deployment to {{site.data.keyword.cloud_notm}} services, including {{site.data.keyword.containerlong_notm}} and KMIP.
+* Enhance security with dedicated bare metal servers in a hosted private cloud, including private network service endpoint deployment to {{site.data.keyword.cloud_notm}} services, including {{site.data.keyword.containerlong_notm}} and KMIP.
 * Enable consistent management and governance of the deployed hybrid cloud by providing full administrative access to virtualization management. The management preserves your existing VMware tools, scripts, and investments in training.
 * Use VMware expertise at global scale with IBM Professional and Managed Services spanning 30+ {{site.data.keyword.CloudDataCents_notm}} worldwide.
 

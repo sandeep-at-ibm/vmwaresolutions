@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -14,7 +17,7 @@ lastupdated: "2019-02-15"
 ## Virtual Routing and Forwarding
 {: #vcsiks-arch-overview-infrastructure-vrf}
 
-{{site.data.keyword.cloud}} accounts can also be configured as a Virtual Routing and Forwarding (VRF) account. VRF accounts provide similar functions to VLAN spanning, enabling automatic routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
+{{site.data.keyword.cloud}} accounts can be configured as a Virtual Routing and Forwarding (VRF) account. VRF accounts enable automatic global routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
 
 ## Direct Link
 {: #vcsiks-arch-overview-infrastructure-direct-link}
@@ -157,7 +160,7 @@ Disk	| 1000 GB on local datastore
 ## IBM Cloud Kubernetes Service components
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
-Figure 3. {{site.data.keyword.containerlong_notm}} components
+Figure 3. {{site.data.keyword.containerlong_notm}} components</br>
 ![{{site.data.keyword.containerlong_notm}} components diagram](vcsiks-iks-components.svg)
 
 ### Kubernetes master
