@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 # Registering HCX Manager with vCenter
@@ -30,7 +33,7 @@ The Hybrid Cloud Services virtual appliance must be powered on before it can be 
 3. Configure the lookup service.
   1. Click the **Manage** tab.
   2. Click the **Edit** button on the far right of the **Lookup Service URL** text box.
-  3. Enter the lookup service endpoint in the following form:
+  3. Enter the lookup network service endpoint in the following form:
     * For vCenter Server 5.5u3 `https://ssoip:/7444/lookupservice/sdk`
     * For vCenter Server 6.0u2 `https://ssoip/lookupservice/sdk`
   4. Click **OK**. Do not restart when a message to restart the web engine is displayed.
