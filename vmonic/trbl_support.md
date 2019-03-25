@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-25"
 
 subcollection: vmwaresolutions
 
@@ -23,7 +23,7 @@ If you need help with {{site.data.keyword.vmwaresolutions_full}}, create an {{si
 ## Procedure to submit a Support ticket from the IBM Cloud for VMware Solutions console
 {: #trbl_support-procedure}
 
-1. Go to https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
+1. Go to https://cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Log in to the console with your **IBMid** account.
 3. Click **Support** on the menu bar.
 4. On the **Get support** page, click **Create a case**.
