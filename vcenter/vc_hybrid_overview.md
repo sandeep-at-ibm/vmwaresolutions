@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -68,7 +71,7 @@ This layer provides an abstraction of resources between the on-premises sites an
 Based on VMware Hybrid Cloud Extension (HCX), you can create loosely coupled interconnects among on-premises and {{site.data.keyword.cloud_notm}} sites to enable bulk migration of VMs or live vMotion of VMs without downtime.
 
 ## Technical specifications for vCenter Server with Hybridity Bundle instances
-{: #technical-specifications-for-vcenter-server-with-hybridity-bundle-instances}
+{: #vc_hybrid_overview-specs}
 
 The following components are included in your vCenter Server with Hybridity Bundle instance:
 
@@ -78,9 +81,9 @@ The availability and pricing of standardized hardware configurations might vary 
 ### Bare Metal Server
 {: #vc_hybrid_overview-bare-metal}
 
-Four **Skylake** or **Broadwell** {{site.data.keyword.baremetal_short}} come with your vCenter Server with Hybridity Bundle instance order. The following CPU models are available:
-  * 2-CPU Intel Skylake generation (Intel Xeon 4100/5100/6100 series)
-  * 2-CPU Intel Broadwell generation (Intel Xeon E5-2600/E7-4800 series)
+Four {{site.data.keyword.baremetal_short}} come with your vCenter Server with Hybridity Bundle instance order. The following configurations are available:
+  * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
+  * **Broadwell**: 2-CPU Intel Broadwell generation servers (Intel Xeon E5-2600/E7-4800 series) with your selected CPU model and RAM size.
 
 ### Networking
 {: #vc_hybrid_overview-networking}
@@ -120,7 +123,7 @@ vSAN storage offers customized configurations, with various options for disk typ
 
 The following licenses are included with your vCenter Server with Hybridity Bundle instance order.
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 or 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 * VMware vSAN (Advanced or Enterprise) 6.6
@@ -140,7 +143,7 @@ One Bare Metal Server with the configuration presented in [Technical specificati
 ### Licenses and fees for expansion nodes
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
 
-* One VMware vSphere Enterprise Plus 6.5u1
+* One VMware vSphere Enterprise Plus 6.5u2 or 6.7u1
 * One VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 * One Support and Services fee
 * VMware vSAN (Advanced or Enterprise) 6.6

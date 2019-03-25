@@ -15,33 +15,27 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Adding, viewing, and deleting clusters for vCenter Server instances
-{: #vc_addingviewingclusters}
+# Adding, viewing, and deleting clusters for vCenter Server with NSX-T instances
+{: #vc_nsx-t_addingviewingcluster}
 
 The ESXi servers that you configured when you ordered an instance are grouped as **cluster1** by default.
 
-You can add your own clusters to VMware vCenter Server instances to expand the compute and storage capacity. Within a cluster, you can manage ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instances.
-
-The delete cluster feature is available only to instances that are deployed in (or upgraded to) V2.3 and later.
-{:note}
+You can add your own clusters to VMware vCenter Server with NSX-T instances to expand the compute and storage capacity. Within a cluster, you can manage ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instances.
 
 ## Adding clusters to vCenter Server instances
-{: #vc_addingviewingclusters-adding}
+{: #vc_nsx-t_addingviewingclusters-adding}
 
-The number of clusters that can be added to an instance depends on the instance version:
-* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment.
-* For instances that were deployed in (or upgraded to) V2.2 and later, you can add up to 10 clusters.
-* For instances that were deployed in V2.1 or earlier, you can add up to five clusters.
+The number of clusters, hosts, and virtual machines (VMs) determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment.
 
 For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
 
 ### System settings
-{: #vc_addingviewingclusters-adding-sys-settings}
+{: #vc_nsx-t_addingviewingclusters-adding-sys-settings}
 
-When you add a cluster for a vCenter Server instance, you must specify the following settings.
+When you add a cluster for a vCenter Server with NSX-T instance, you must specify the following settings.
 
 #### Cluster name
-{: #vc_addingviewingclusters-adding-cluster-name}
+{: #vc_nsx-t_addingviewingclusters-adding-cluster-name}
 
 The cluster name must meet the following requirements:
 * Only alphanumeric and dash (-) characters are allowed.
@@ -50,19 +44,19 @@ The cluster name must meet the following requirements:
 * The cluster name must be unique within the vCenter Server instance.
 
 #### Data center location
-{: #vc_addingviewingclusters-adding-dc-location}
+{: #vc_nsx-t_addingviewingclusters-adding-dc-location}
 
 The {{site.data.keyword.CloudDataCent}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/).
 
 If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} or {{site.data.keyword.cloud_notm}} infrastructure pod, three extra VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
 ### Bare Metal Server settings
-{: #vc_addingviewingclusters-bare-metal-settings}
+{: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-You can choose **Skylake**, **SAP-certified**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
+You can choose **Skylake**, **SAP-certified**, or **Broadwell**.
 
 #### Skylake
-{: #vc_addingviewingclusters-adding-skylake}
+{: #vc_nsx-t_addingviewingclusters-adding-skylake}
 
 For the **Skylake** setting, you have options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
@@ -70,12 +64,12 @@ Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 
 #### SAP-certified
-{: #vc_addingviewingclusters-adding-sap}
+{: #vc_nsx-t_addingviewingclusters-adding-sap}
 
 When you select **SAP-certified**, you cannot alter the CPU or RAM settings.
 
@@ -89,7 +83,7 @@ Based on your requirements, select a Bare Metal Server configuration:
 * Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 4096 GB RAM
 
 #### Broadwell
-{: #vc_addingviewingclusters-adding-broadwell}
+{: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
 For the **Broadwell** setting, you have a number of options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
@@ -97,30 +91,28 @@ Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Number of Bare Metal Servers
-{: #vc_addingviewingclusters-adding-bare-metal-number}
+{: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
 
-Clusters require at least two {{site.data.keyword.baremetal_short}}.
+Clusters require at least three {{site.data.keyword.baremetal_short}}.
 
-For vCenter Server instances that are deployed in V2.1 or later, you can add up to 59 {{site.data.keyword.baremetal_short}} for a cluster. You can add 1 - 59 ESXi servers at a time.
-
-For vCenter Server instances that were deployed in V2.0 or earlier, you can add up to 32 {{site.data.keyword.baremetal_short}} for a cluster. You can add 1 - 20 ESXi servers at a time for the **Skylake**, **SAP-certified**, and **Broadwell** Bare Metal Server configuration.
+You can add up to 59 {{site.data.keyword.baremetal_short}} for a cluster. You can add 1 - 59 ESXi servers at a time.
 
 After deployment, you can create up to four more clusters. If you select the **Skylake** or **Broadwell** Bare Metal Server configuration with VMware vSAN storage, four servers are required for both the initial cluster and post-deployment clusters.
 
 ### Storage settings
-{: #vc_addingviewingclusters-adding-storage-settings}
+{: #vc_nsx-t_addingviewingclusters-adding-storage-settings}
 
 Storage settings are based on your selection of Bare Metal Server configuration and the storage type.
 
 #### vSAN storage
-{: #vc_addingviewingclusters-adding-vsan-storage}
+{: #vc_nsx-t_addingviewingclusters-adding-vsan-storage}
 
 Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
@@ -136,7 +128,7 @@ Specify the following vSAN options:
 If your initial cluster was a vSAN cluster, any additional vSAN clusters use the same vSAN license and have the same configuration as the initial one. This is also true if any cluster in the instance has vSAN chosen to be deployed on it (initial or additional). The first time you're prompted for the vSAN license (BYOL or purchased) and the edition. The next time that you select vSAN for a new cluster, the license that is chosen initially is reused.
 
 #### NFS storage
-{: #vc_addingviewingclusters-adding-nfs-storage}
+{: #vc_nsx-t_addingviewingclusters-adding-nfs-storage}
 
 When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
 
@@ -159,36 +151,31 @@ Table 3. NFS performance level options
   | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
 
 ### Local Disks
-{: #vc_addingviewingclusters-adding-local-disks}
+{: #vc_nsx-t_addingviewingclusters-adding-local-disks}
 
 The local disks option is available for the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor Bare Metal configuration only. Specify the following options:
 * **Disk Count**: Select the number of disks that you want to add.
 * **Disk type**: Select an option for the disk type that you need.
 
 ### Licensing settings
-{: #vc_addingviewingclusters-adding-licensing-settings}
+{: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
 
 Specify the licensing option for the VMware vSphere component in the cluster:
 * For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
 * For non-Business Partner users, you can use the IBM-provided VMware licenses for this component by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license key.
 
 ### Network interface settings
-{: #vc_addingviewingclusters-adding-network-interface-settings}
+{: #vc_nsx-t_addingviewingclusters-adding-network-interface-settings}
 
-Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and are not available if you select the private option:
-
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**.
 
 ### Order summary
-{: #vc_addingviewingclusters-adding-order-summary}
+{: #vc_nsx-t_addingviewingclusters-adding-order-summary}
 
 Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane.
 
-## Procedure to add clusters to vCenter Server instances
-{: #vc_addingviewingclusters-adding-procedure}
+## Procedure to add clusters to vCenter Server with NSX-T instances
+{: #vc_nsx-t_addingviewingclusters-adding-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to add clusters to.
@@ -219,8 +206,8 @@ Based on your selected configuration for the cluster, the estimated cost is inst
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you add the cluster.
    4. Click **Provision**.
 
-### Results after you add clusters to vCenter Server instances
-{: #vc_addingviewingclusters-adding-results}
+### Results after you add clusters to vCenter Server with NSX-T instances
+{: #vc_nsx-t_addingviewingclusters-adding-results}
 
 1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history from the **Summary** page of the instance.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
@@ -228,8 +215,8 @@ Based on your selected configuration for the cluster, the estimated cost is inst
 You can't change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
 {:important}
 
-## Procedure to view clusters in vCenter Server instances
-{: #vc_addingviewingclusters-viewing-procedure}
+## Procedure to view clusters in vCenter Server with NSX-T instances
+{: #vc_nsx-t_addingviewingclusters-viewing-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click an instance to view the clusters in it.
@@ -303,23 +290,21 @@ Table 8. Network Interface - IP details
 | Status | The status of the IP address. |
 | Description |The description of the IP address.  |
 
-## Deleting clusters from vCenter Server instances
-{: #vc_addingviewingclusters-deleting}
+## Deleting clusters from vCenter Server with NSX-T instances
+{: #vc_nsx-t_addingviewingclusters-deleting}
 
 You might want to delete a cluster from an instance when it's no longer needed.
 
 ### Before you delete
-{: #vc_addingviewingclusters-deleting-prereq}
+{: #vc_nsx-t_addingviewingclusters-deleting-prereq}
 
-* Use this procedure to delete clusters from instances that are deployed in V2.3 or later.
-* For clusters deployed in V2.2 or earlier instances, you must upgrade the instance to V2.3 if you want to delete the clusters that you added to the instance.
 * You can delete a single cluster at a time. To delete more than one cluster, you must do it in sequence. Wait for the previous cluster to be deleted before you delete the next cluster.
 * Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.
 * When you delete a cluster, all VMs from the cluster are also deleted and they can't be recovered. If you want to keep the VMs, migrate them to other clusters.
 * The default cluster can't be deleted.
 
-### Procedure to delete clusters from vCenter Server instances
-{: #vc_addingviewingclusters-deleting-procedure}
+### Procedure to delete clusters from vCenter Server with NSX-T instances
+{: #vc_nsx-t_addingviewingclusters-deleting-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance that you want to delete clusters from.
@@ -331,7 +316,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 4. Confirm that you completed the migration of VMs to other clusters, if needed, and that you want to delete the cluster.
 
 ## Related links
-{: #vc_addingviewingclusters-related}
+{: #vc_nsx-t_addingviewingclusters-related}
 
 * [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Expanding and contracting capacity for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_addingremovingservers)

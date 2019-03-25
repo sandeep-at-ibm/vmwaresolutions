@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -33,9 +36,9 @@ A multi-site deployment consists of the following components.
 * **Secondary instance or instances**: One or more secondary vCenter Server instances, linked to the primary instance, with the following configuration:
    *  SSO site name
    *  DNS subdomain that is linked to the root domain on the primary instance
-   *  DNS and AD replication set-up between the AD virtual machines on the primary and secondary instances.
-   *  For primary instances that are deployed in V2.8 or later: vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC) is deployed and configured.
-   *  VMware vCenter on the secondary instances is set up with Enhanced Linked Mode to the vCenter on the primary instance.
+   *  DNS and AD replication set-up between the AD virtual machines on the primary and secondary instances
+   *  For primary instances that are deployed in V2.8 or later: vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC) is deployed and configured
+   *  VMware vCenter on the secondary instances is set up with Enhanced Linked Mode to the vCenter on the primary instance
 
 ## vCenter Server multi-site deployment
 {: #vc_multisite-deployment}
@@ -49,7 +52,7 @@ The following graphic depicts the overall view of the vCenter Server multi-site 
 
 Figure 1. vCenter Server multi-site deployment
 
-![vCenter Server multi-site deployment](../sddc/multisite-hub-spoke.svg "vCenter Server multi-site deployment")
+![vCenter Server multi-site deployment](../vcenter/multisite-hub-spoke.svg "vCenter Server multi-site deployment")
 
 The model contains the following layers:
 

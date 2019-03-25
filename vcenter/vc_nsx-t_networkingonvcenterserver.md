@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-02-28"
 
 subcollection: vmwaresolutions
 
@@ -13,33 +13,33 @@ subcollection: vmwaresolutions
 
 {:faq: data-hd-content-type='faq'}
 
-# Networking considerations for vCenter Server instances
-{: #vc_networkingonvcenterserver}
+# Networking considerations for vCenter Server with NSX-T instances
+{: #vc_nsx-t_networkingonvcenterserver}
 
-Review the following information for details about networking considerations and requirements for your vCenter Server on {{site.data.keyword.cloud}} instances. Ensure that you meet the requirements so that your instance functions properly.
+Review the following information for details about networking considerations and requirements for your vCenter Server on {{site.data.keyword.cloud}} with NSX-T instances. Ensure that you meet the requirements so that your instance functions properly.
 
-## Networking components for vCenter Server instances
-{: #vc_networkingonvcenterserver-networking-components}
+## Networking components for vCenter Server with NSX-T instances
+{: #vc_nsx-t_networkingonvcenterserver-networking-components}
 {: faq}
 
-To review the networking components that are included in your vCenter Server instance, see [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
+To review the networking components that are included in your vCenter Server with NSX-T instance, see [Technical specifications for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs).
 
 ## Firewall considerations
-{: #vc_networkingonvcenterserver-firewall-considerations}
+{: #vc_nsx-t_networkingonvcenterserver-firewall-considerations}
 {: faq}
 
 If you're using firewalls, you must configure rules for all communications from the {{site.data.keyword.IBM}} CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs). These rules must allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`. Examples of such firewalls are NSX Distributed Firewalls (DFW) or Vyatta firewalls.
 
 ## Using NSX with your virtual machines
-{: #vc_networkingonvcenterserver-using-nsx-with-vm}
+{: #vc_nsx-t_networkingonvcenterserver-using-nsx-with-vm}
 {: faq}
 
-During vCenter Server instance deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
+During vCenter Server instance with NSX-T deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
 
-An NSX Edge Services Gateway is also deployed to be used by your workload virtual machines (VMs). For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+An NSX Edge Services Gateway is also deployed to be used by your workload VM. For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
 ## Considerations when changing passwords for NSX components
-{: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}
+{: #vc_nsx-t_networkingonvcenterserver-change-nsx-component-password-considerations}
 {: faq}
 
 Review the following considerations before you change the passwords for the NSX Manager, NSX Controllers, and NSX Edges:
@@ -48,7 +48,7 @@ Review the following considerations before you change the passwords for the NSX 
 * You can change the password and SSH settings for the customer-managed VMware NSX Edge Services Gateway (ESG). Do not change the password for the Management VMware NSX Edge Services Gateway (ESG) and related Distributed Logical Router.
 
 ## Related links
-{: #vc_networkingonvcenterserver-related}
+{: #vc_nsx-t_networkingonvcenterserver-related}
 
 * [Overview of NSX](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

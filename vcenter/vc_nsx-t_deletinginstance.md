@@ -15,14 +15,13 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Deleting vCenter Server instances
-{: #vc_deletinginstance}
+# Deleting vCenter Server with NSX-T instances
+{: #vc_nsx-t_deletinginstance}
 
-To release the components that you ordered in a VMware vCenter Server instance, delete the instance.
+To release the components that you ordered in a VMware vCenter Server with NSX-T instance, delete the instance.
 
-When you delete a vCenter Server instance, the following components are released sequentially:
-1. All deployed services
-2. Support and Services fee
+When you delete a vCenter Server with NSX-T instance, the following components are released sequentially:
+2. Support fees
 3. VMware product licenses
 4. ESXi servers
 5. Subnets
@@ -34,7 +33,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 {:note}
 
 ## Procedure to delete instances from the Resources page
-{: #vc_deletinginstance-procedure1}
+{: #vc_nsx-t_deletinginstance-procedure1}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, find the instance to delete.
@@ -45,7 +44,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
    2. In the **Delete Instance** window, click **OK**.
 
 ## Procedure to delete instances from the instance details page
-{: #vc_deletinginstance-procedure2}
+{: #vc_nsx-t_deletinginstance-procedure2}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to delete.
@@ -56,10 +55,10 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
    2. In the **Delete Instance** window, click **OK**.
 
 ## Related links
-{: #vc_deletinginstance-related}
+{: #vc_nsx-t_deletinginstance-related}
 
 * [Deleting vCenter Server instances in a multi-site configuration](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance_multi)
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
 * [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Expanding and contracting capacity for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_addingremovingservers)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
