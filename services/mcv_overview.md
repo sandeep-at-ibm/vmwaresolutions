@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -20,7 +23,7 @@ This architecture supports existing mission-critical, legacy workloads, includin
 The architecture covers various enterprise services, including networks, storage, resiliency, and other tools built for monitoring and troubleshooting cloud-based applications. In addition, this architecture can be integrated with the IBM Services Platform with Watson, built on the {{site.data.keyword.cloud_notm}}, to allow for a broader consumption of services. Using the platform’s cognitive capabilities, clients can mine data more effectively for new business insights to help maintain continuous operations.
 
 ## Technical specifications for Mission Critical VMware on IBM Cloud
-{: #technical-specifications-for-mission-critical-vmware-on-ibm-cloud}
+{: #mcv_overview-specs}
 
 The Mission Critical VMware on {{site.data.keyword.cloud_notm}} architecture is an end to end reference architecture that provides automated failover for customer workloads. It uses an {{site.data.keyword.cloud_notm}} multi-zone region with an IBM-managed service that covers the following components:
 

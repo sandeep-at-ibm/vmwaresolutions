@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -17,11 +20,11 @@ lastupdated: "2019-02-14"
 
 The Zerto on {{site.data.keyword.cloud}} service integrates replication and disaster recovery capabilities into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud_notm}}.
 
-This service is available only to instances that are deployed in V1.2 or later. The current Zerto version that is installed is 6.0 update 3.
+This service is available only to instances that are deployed in V1.2 or later. The current Zerto version that is installed is 6.5 update 3.
 {:note}
 
 ## Technical specifications for Zerto on IBM Cloud
-{: #technical-considerations-for-zerto-on-ibm-cloud}
+{: #addingzertodr-specs}
 
 The following components are ordered and included in the Zerto on {{site.data.keyword.cloud_notm}} service.
 
@@ -50,7 +53,7 @@ Zerto Virtual Replication Appliance (VRA) components are deployed only into the 
 ### Licenses and fees
 {: #addingzertodr-specs-licenses}
 
-Zerto Replication V6.0 update 3 license
+Zerto Replication V6.5 update 3 license
 
 ## Related links
 {: #addingzertodr-related}

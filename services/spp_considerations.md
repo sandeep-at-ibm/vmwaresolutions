@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-12"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -21,7 +24,7 @@ This service is available only to instances that are running vSphere 6.5 and tha
 {:note}
 
 ## Technical specifications for IBM Spectrum Protect Plus on IBM Cloud
-{: #technical-specifications-for-ibm-spectrum-protect-plus-on-ibm-cloud}
+{: #spp_considerations-specs}
 
 The following components are ordered and included in the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service:
 
@@ -72,7 +75,7 @@ Review the following considerations before you install the IBM Spectrum Protect 
 * Ensure that the CPU and memory in the default cluster of your instance is sufficient for the IBM Spectrum Protect Plus virtual machine.
 * Ensure that the NFS mounts available on the ESXi servers are sufficient based on the version of the ESXi servers.
 
-  Cloud Foundation instances and vCenter Server instances that are deployed in (or upgraded) to V2.2 or later releases have an `NFS.MaxVolumes` parameter setting in VMware. This parameter defines the maximum number of NFS mounts on an ESXi server and can be set to a maximum of 256 that is specific to the version of the ESXi server. For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
+  Instances that are deployed in (or upgraded) to V2.2 or later releases have an `NFS.MaxVolumes` parameter setting in VMware. This parameter defines the maximum number of NFS mounts on an ESXi server and can be set to a maximum of 256 that is specific to the version of the ESXi server. For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
 
   The IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service can use up to 11 of the NFS volumes on each ESXi server in the default cluster of your instance. In addition, the service creates transient NFS mounts for backup and restore purposes. Therefore, you must set the number of NFS mounts to a minimum of 64 to ensure that the service can be installed and function successfully.
 

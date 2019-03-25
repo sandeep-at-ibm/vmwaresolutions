@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -16,7 +19,7 @@ Use this procedure to view the KMIP for VMware on {{site.data.keyword.cloud}} in
 ## Procedure to view KMIP for VMware on IBM Cloud instances
 {: #kmip_standalone_viewing-procedure}
 
-Click **Deployed Instances** from the left navigation pane and scroll down to the **KMIP for VMware on {{site.data.keyword.cloud_notm}} Instances** table to view information about the instances that you ordered:
+Click **Resources** from the left navigation pane and scroll down to the **KMIP for VMware on {{site.data.keyword.cloud_notm}} Instances** table to view information about the instances that you ordered:
 
 Table 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} instances items
 

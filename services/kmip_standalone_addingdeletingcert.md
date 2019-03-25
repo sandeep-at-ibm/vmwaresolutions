@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -20,7 +23,7 @@ After your KMIP for VMware on {{site.data.keyword.cloud}} instance is ready, you
 ## Procedure to add certificates to KMIP for VMware on IBM Cloud instances
 {: #kmip_standalone_addingdeletingcert-add}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. Scroll down to the **KMIP for VMware on IBM Cloud Instances** table, click the instance that you want to add certificates for.
 3. Click **Add**.
 4. In the **Add Client SSL Certificate** window, enter the certificate name and content.
@@ -32,7 +35,7 @@ After your KMIP for VMware on {{site.data.keyword.cloud}} instance is ready, you
 ## Procedure to view certificates for KMIP for VMware on IBM Cloud instances
 {: #kmip_standalone_addingdeletingcert-view}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. Scroll down to the **KMIP for VMware on IBM Cloud Instances** table, click the instance to view the certificates for.
 3. View the list of added certificates under the **Client SSL Certificates** section.
 4. To view the content of a particular certificate, click **Download**.
@@ -40,7 +43,7 @@ After your KMIP for VMware on {{site.data.keyword.cloud}} instance is ready, you
 ## Procedure to delete certificates from KMIP for VMware on IBM Cloud instances
 {: #kmip_standalone_addingdeletingcert-delete}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Deployed Instances** from the left navigation pane.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. Scroll down to the **KMIP for VMware on IBM Cloud Instances** table, click the instance that you want to delete certificates from.
 3. In the **Client SSL Certificates** table, locate the certificate that you want to delete and click the **Delete** icon.
 

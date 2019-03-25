@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +21,7 @@ You can order a KMIP for VMware on {{site.data.keyword.cloud}} instance without 
 
 Ensure that you completed the following tasks:
 * You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-* You reviewed all the considerations in [Considerations when installing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
+* You reviewed all the considerations in [Considerations when installing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations-install).
 
 ## Procedure to order KMIP for VMware on IBM Cloud instances
 {: #kmip_standalone_ordering-procedure}
@@ -36,20 +39,21 @@ When you order this service, provide the following settings:
 ### Instance Name
 {: #kmip_standalone_ordering-config-instance-name}
 
-Specify a name for your KMIP for VMware {{site.data.keyword.cloud_notm}} instance.
+Specify a name for your KMIP for VMware on {{site.data.keyword.cloud_notm}} instance.
 
 ### Service Region
 {: #kmip_standalone_ordering-config-service-region}
 
-Select the {{site.data.keyword.cloud_notm}} region where your KMIP for VMware {{site.data.keyword.cloud_notm}} instance is to be hosted.
+Select the {{site.data.keyword.cloud_notm}} region where your KMIP for VMware on {{site.data.keyword.cloud_notm}} instance is to be hosted.
 
-{{site.data.keyword.cloud_notm}} maintains a highly available KMIP for VMware on {{site.data.keyword.cloud_notm}} service endpoint in each region where the service is available.
+{{site.data.keyword.cloud_notm}} maintains a highly available KMIP for VMware on {{site.data.keyword.cloud_notm}} network service endpoint in each region where the service is available.
 
-Table 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} service endpoint regions
+Table 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} network service endpoint regions
 
 | Region         | Endpoints               |
 |:---------------|:-----------------------|
 | Germany        |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Sydney        |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 | Tokyo          | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 | US South       |  <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
@@ -66,12 +70,12 @@ Click **Retrieve** to get the list of available IBM Key Protect Service instance
 ### Customer Root Key
 {: #kmip_standalone_ordering-config-root-key}
 
-Click **Retrieve** to get the customer root key that is stored in your selected IBM Key Protect instance.
+Click **Retrieve** to get the customer root key that is stored in your selected key manager instance.
 
 ## Results
 {: #kmip_standalone_ordering-results}
 
-The ordering of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the order by viewing the instance details.
+The ordering of the KMIP for VMware on {{site.data.keyword.cloud_notm}} instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the order by viewing the instance details.
 
 When the instance is ready to use, the status of the instance is changed to **Installed** and you receive a notification by email.
 

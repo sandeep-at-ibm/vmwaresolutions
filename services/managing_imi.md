@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +21,7 @@ IMI can serve as a single, trusted provider to reduce complexity of monitoring a
 IMI provides managed services for your Cloud Foundation instances and vCenter Server instances. These managed services include advanced VMware vSphere management, full VMware NSX coverage to ensure highly available and secure virtual network infrastructure, and VMware vSAN monitoring to ensure availability of data.
 
 ## Technical specifications for IMI
-{: #technical-specifications}
+{: #managing_imi-specs}
 
 The following specifications are included in the IMI managed service:
 
@@ -40,6 +43,5 @@ An IMI Pre-Sales representative contacts you using your {{site.data.keyword.clou
 ## Related links
 {: #managing_imi-related}
 
-* [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
