@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -33,7 +36,7 @@ Because vSAN encryption operates at the datastore level, its primary goal is to 
 * vSAN encryption does not encrypt the host to host vSAN replication communications within your cluster.
 * vSAN encryption is not applicable to other storage solutions such as {{site.data.keyword.cloud_notm}} Endurance file and block storage.
 * vSAN encryption requires the vSAN Enterprise license.
-* The vSAN health check might issue periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings.
+* The vSAN health check might issue periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:new_window}.
 
 ### vSphere encryption
 {: #kmip-design-vsphere-encrypt}
@@ -98,13 +101,13 @@ Your KMIP for VMware instance is authorized to your Key Protect instance by usin
 Figure 1. Components of KMIP for VMware on {{site.data.keyword.cloud_notm}}
 ![Components of KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip-key-protect.svg "The solution enables VMware vSphere encryption and vSAN encryption by using root keys that are stored in IBM Key Protect.")
 
-KMIP for VMware is available in a number of IBM Cloud multi&ndash;zone regions (MZRs). For the complete list, see the [Ordering KMIP for VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering).
+KMIP for VMware is available in a number of {{site.data.keyword.cloud_notm}} multi-zone regions (MZRs). For the complete list, see the [Ordering KMIP for VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering).
 
-Within each MZR, KMIP for VMware provides two service endpoints on the IBM Cloud Private network for high availability. Configure both of these endpoints in your vCenter key management server (KMS) configuration as a KMS cluster. For a list of the endpoints in each MZR and the KMIP server certificate signatures, see the [KMIP for VMware service documentation](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering).
+Within each MZR, KMIP for VMware provides two network service endpoints on the {{site.data.keyword.cloud_notm}} private network for high availability. Configure both of these endpoints in your vCenter key management server (KMS) configuration as a KMS cluster. For a list of the endpoints in each MZR and the KMIP server certificate signatures, see the [KMIP for VMware service documentation](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering).
 
-KMIP for VMware also connects to IBM Cloud Key Protect by using the IBM Cloud Private network rather than the public internet.
+KMIP for VMware also connects to {{site.data.keyword.cloud_notm}} Key Protect by using the {{site.data.keyword.cloud_notm}} private network rather than the public internet.
 
-To access KMIP for VMware over the private network, your IBM Cloud infrastructure account must be enabled for virtual routing and forwarding (VRF) and the IBM Cloud service endpoint routes must be added to the VRF routes of your account. For more information, see [enabling your account for service endpoints](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps).
+To access KMIP for VMware over the private network, your {{site.data.keyword.cloud_notm}} infrastructure account must be enabled for virtual routing and forwarding (VRF) and the {{site.data.keyword.cloud_notm}} network service endpoint routes must be added to the VRF routes of your account. For more information, see [enabling your account for service endpoints](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps).
 
 ## Related links
 {: #kmip-design-related}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -34,7 +37,7 @@ To enable vSphere encryption or vSAN encryption by using KMIP for VMware on {{si
 
 To use vSAN encryption, edit the vSAN general settings in your vCenter cluster and select the encryption check box.
 
-The vSAN health check might issue periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings.
+The vSAN health check might issue periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:new_window}.
 {:note}
 
 To use vSphere encryption, edit your virtual machine storage policies to require disk encryption.
@@ -42,7 +45,7 @@ To use vSphere encryption, edit your virtual machine storage policies to require
 ## Key rotation
 {: #kmip-implementation-key-rotation}
 
-[Rotate your Key Protect customer root key (CRK)](/docs/services/key-protect?topic=key-protect-rotating-keys) by using the {{site.data.keyword.cloud_notm}} console or API.
+[Rotate your Key Protect customer root key (CRK)](/docs/services/key-protect?topic=key-protect-key-rotation#key-rotation) by using the {{site.data.keyword.cloud_notm}} console or API.
 
 For VMware vSAN encryption, rotate your VMware key&ndash;encrypting keys (KEKs) and optionally data&ndash;encrypting keys (DEKs) from the vSAN general settings in your vCenter cluster.
 
