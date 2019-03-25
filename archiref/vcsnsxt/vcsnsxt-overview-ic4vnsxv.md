@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -121,7 +124,7 @@ The following are some key NSX components:
 
 The following diagram shows a high-level diagram of how you can implement some of the micro-segmentation features of NSX-V by creating security groups. In this example, production and development are the security groups and security rules are assigned based on those groups.
 
-Figure 3. NSX-V security
+Figure 3. NSX-V security</br>
 ![NSX-V security](vcsnsxt-vsecurity.svg)
 
 ## Related links

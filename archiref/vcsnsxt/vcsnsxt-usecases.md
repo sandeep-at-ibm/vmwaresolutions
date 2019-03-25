@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -49,7 +52,7 @@ Using {{site.data.keyword.cloud_notm}} automation, Acme Skateboards can provisio
 
 For more information about NSX-V, see [NSX-V overview](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). For more information about the vCenter Server and {{site.data.keyword.icpfull_notm}} offering, see [vCenter Server and {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro).
 
-Figure 2. vCenter Server with {{site.data.keyword.icpfull_notm}}
+Figure 2. vCenter Server with {{site.data.keyword.icpfull_notm}}</br>
 ![vCenter Server with {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
 
 This creates a loosely coupled interconnectivity between on-premises and {{site.data.keyword.cloud_notm}} and enables capabilities such as:
@@ -63,7 +66,7 @@ This creates a loosely coupled interconnectivity between on-premises and {{site.
 -	**Scheduled migration** – any number of VMs can be replicated to the destination site and then activated on that site at a designated time replacing the systems running on the originating site.
 -	**Migration of security policies** – if NSX is used on-premises any security policies, firewalls, and so on, are moved along with the workload.
 
-Using this solution Acme Skateboards was successfully able to migrate their on-premises VMware workloads to the {{site.data.keyword.cloud_notm}} meeting their requirements of little to no downtime and no application reconfiguration. For more information about vCenter Server with Hybridity Bundle, see [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
+Using this solution Acme Skateboards was successfully able to migrate their on-premises VMware workloads to the {{site.data.keyword.cloud_notm}} meeting their requirements of little to no downtime and no application reconfiguration. For more information about vCenter Server with Hybridity Bundle, see [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro).
 
 ## Related links
 {: #vcsnsxt-usecases-related}
