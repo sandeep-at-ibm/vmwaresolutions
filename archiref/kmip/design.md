@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-03-26"
 
 subcollection: vmwaresolutions
 
@@ -107,7 +107,7 @@ Within each MZR, KMIP for VMware provides two network service endpoints on the {
 
 KMIP for VMware also connects to {{site.data.keyword.cloud_notm}} Key Protect by using the {{site.data.keyword.cloud_notm}} private network rather than the public internet.
 
-To access KMIP for VMware over the private network, your {{site.data.keyword.cloud_notm}} infrastructure account must be enabled for virtual routing and forwarding (VRF) and the {{site.data.keyword.cloud_notm}} network service endpoint routes must be added to the VRF routes of your account. For more information, see [enabling your account for service endpoints](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps).
+To access KMIP for VMware over the private network, your {{site.data.keyword.cloud_notm}} infrastructure account must be enabled for virtual routing and forwarding (VRF) and the {{site.data.keyword.cloud_notm}} network service endpoint routes must be added to the VRF routes of your account. For more information, see [Enabling your account for using service endpoints](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps).
 
 ## Related links
 {: #kmip-design-related}
