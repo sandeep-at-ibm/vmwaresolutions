@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 # 向 vCenter 登錄 HCX Manager
@@ -30,7 +30,7 @@ lastupdated: "2019-02-15"
 3. 配置查閱服務。
   1. 按一下**管理**標籤。
   2. 按一下**查閱服務 URL** 文字框最右側的**編輯**按鈕。
-  3. 以下列形式，輸入查閱服務端點：
+  3. 以下列形式輸入查閱網路服務端點：
     * 對於 vCenter Server 5.5u3，輸入 `https://ssoip:/7444/lookupservice/sdk`
     * 對於 vCenter Server 6.0u2，輸入 `https://ssoip/lookupservice/sdk`
   4. 按一下**確定**。當顯示重新啟動 Web 引擎的訊息時，請不要重新啟動。

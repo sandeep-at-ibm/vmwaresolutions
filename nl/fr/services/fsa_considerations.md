@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ Ce service est disponible uniquement sur les instances déployées en version 1.
 {:note}
 
 ## Spécifications techniques relatives à FortiGate Security Appliance on IBM Cloud
-{: #technical-specifications-for-fortigate-security-appliance-on-ibm-cloud}
+{: #fsa_considerations-specs}
 
 Les composants suivants sont commandés et inclus dans le service FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} :
 
@@ -44,7 +44,7 @@ Deux dispositifs sont déployés dans une configuration active-passive
 * Un nouveau VLAN public {{site.data.keyword.cloud_notm}} en amont
 * Un VLAN public {{site.data.keyword.cloud_notm}} en aval existant
 
-## Considérations à prendre en compte lorsque vous installez FortiGate Security Appliance on IBM Cloud
+## Remarques relatives à l'installation de FortiGate Security Appliance on IBM Cloud
 {: #fsa_considerations-install}
 
 Passez en revue les remarques suivantes avant d'installer le service FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} :
@@ -56,7 +56,7 @@ Passez en revue les remarques suivantes avant d'installer le service FortiGate S
 * Vous devez gérer la configuration du service FortiGate Security Appliance avec la plus grande attention de manière à n'autoriser que les communications nécessaires et à refuser toutes les autres communications.
 * Si vous commandez d'autres clusters, les VLAN publics pour ces clusters nouvellement ajoutés ne disposeront pas de la paire à haute disponibilité de dispositifs Security Appliance.
 
-## Considérations à prendre en compte lorsque vous retirez FortiGate Security Appliance on IBM Cloud
+## Remarques relatives au retrait de FortiGate Security Appliance on IBM Cloud
 {: #fsa_considerations-remove}
 
 Passez en revue les remarques suivantes avant de supprimer le service FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} :

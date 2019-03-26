@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -37,7 +37,7 @@ VUM が VMware の更新サーバーからリソースを要求すると、ま�
 | アドレス | proxy ip | 予備の IP アドレスは、プロビジョニング・プロセス中に割り当てられた顧客のプライベート・ポータブル・サブネットから使用する必要があります。 このサブネットで予約されている IP アドレスは 2 つのみです。1 つは BCR 用で、もう 1 つは customer-esg 用です。
 | ネットマスク | 255.255.255.192 | |
 | ゲートウェイ| customer-nsx-edge プライベート・アップリンク IP | これは、customer-nsx-edge のプライベート・アップリンク IP アドレスであるプロキシー・サーバーのデフォルトのゲートウェイ設定です。 この IP アドレスは **customer-nsx-edge** の**「設定」**タブで確認できます。 |
-| DNS サーバー | AD/DNS ip | この IP アドレスは、{{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンス・ページである**「デプロイ済みインスタンス」**ページにあります。 |
+| DNS サーバー | AD/DNS ip | この IP アドレスは、{{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンス・ページである**「リソース」**ページにあります。 |
 | BCR IP | bcr ip | これは、{{site.data.keyword.cloud_notm}} Backend Customer Router の IP アドレスであり、10.0.0.0/8 および 161.26.0.0/16 のゲートウェイです。 このアドレスは、VCSA および AD/DNS サーバーに到達できるように、プロキシー・サーバーの静的ルートで使用されます。 |
 
 ## NSX の構成

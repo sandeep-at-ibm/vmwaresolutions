@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -26,7 +26,7 @@ A implementação do vCenter Server with Hybridity Bundle tem requisitos estrito
 Tabela 1. Instâncias disponíveis do {{site.data.keyword.CloudDataCents_notm}} for vCenter Server with Hybridity Bundle
 
 | {{site.data.keyword.CloudDataCent_notm}} | Localização | Região |
-|:-----|:----------------|
+|:----------------------|:---------|:---------------|
 | AMS03 | Amsterdã | Europa |
 | CHE01 | Chennai | Ásia-Pacífico |
 | DAL09 | Dallas | NA Sul |
@@ -53,6 +53,7 @@ Tabela 1. Instâncias disponíveis do {{site.data.keyword.CloudDataCents_notm}} 
 | SYD01 | Sydney | Ásia-Pacífico |
 | SYD04 | Sydney | Ásia-Pacífico |
 | TOK02 | Tóquio | Ásia-Pacífico |
+| TOK04 | Tóquio | Ásia-Pacífico |
 | TOR01 | Toronto | NA Leste |
 | WDC04 | Washington, DC | NA Leste |
 | WDC06 | Washington, DC | NA Leste |

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -22,7 +22,7 @@ Affichez les informations récapitulatives et détaillées des instances VMware 
 
 Pour afficher un récapitulatif de toutes les instances Cloud Foundation qui sont mises à disposition pour un compte utilisateur, procédez comme suit :
 
-1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur dont vous souhaitez vérifier les instances.
 3. Dans le tableau **Instances Cloud Foundation Select**, affichez la liste de vos instances :
 
@@ -136,6 +136,5 @@ Passez en revue les rubriques suivantes pour obtenir des informations qui vous a
 ## Liens connexes
 {: #sd_viewinginstances-related}
 
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [Suppression d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

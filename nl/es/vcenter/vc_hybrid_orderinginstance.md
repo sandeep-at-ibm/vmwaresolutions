@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,6 +52,14 @@ El nombre de instancia debe cumplir los siguientes requisitos:
 * La longitud máxima del nombre de instancia es de 10 caracteres.
 * El nombre de instancia debe ser exclusivo dentro de su cuenta.
 
+### Licencias de VMware vSphere
+{: #vc_hybrid_orderinginstance-vsphere-license}
+
+Seleccione si desea solicitar vSphere Enterprise Plus 6.7u1 o vSphere Enterprise Plus 6.5u2.
+
+vSphere Enterprise Plus 6.7u1 está disponible solo para {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} Broadwell y Skylake.
+{:note}
+
 ### Primaria o secundaria
 {: #vc_hybrid_orderinginstance-primary-secondary}
 
@@ -63,7 +71,7 @@ Seleccione si desea solicitar una nueva instancia primaria o una instancia secun
 Las siguientes licencias de VMware se incluyen con el pedido de instancia de vCenter Server con el paquete híbrido (Hybridity). Debe especificar la edición para las licencias NSX y vSAN.
 
 * vCenter Server 6.5
-* vSphere Enterprise Plus 6.5u1
+* vSphere Enterprise Plus 6.5 o 6.7
 * NSX Service Providers 6.4 (edición Advanced o Enterprise)
 * vSAN 6.6 (edición Advanced o Enterprise)
 
@@ -229,32 +237,33 @@ En función de la configuración seleccionada para la instancia y los servicios 
 1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** desde el panel de navegación de la izquierda y, a continuación, pulse **vCenter Server** en la sección **Centros de datos virtuales**.
 2. En la página **VMware vCenter Server on IBM Cloud**, pulse la tarjeta **vCenter Server con el paquete híbrido (Hybridity)** y pulse **Crear**.
 3. En la página **vCenter Server**, escriba el nombre de la instancia.
+5. Seleccione la versión de vSphere.
 4. Seleccione el tipo de instancia:
    * Pulse **Instancia primaria** para desplegar una sola instancia en el entorno o para desplegar la primera instancia en una topología de varios sitios.
    * Pulse **Instancia secundaria** para conectar la instancia con una instancia existente (primaria) en el entorno para conseguir alta disponibilidad y siga estos pasos:
      1. Seleccione la instancia primaria a la que desea conectar la instancia secundaria.
      2. Para las instancias primarias V2.8 o posteriores, especifique la contraseña del administrador de vCenter Server para la instancia primaria.
      3. Para las instancias primarias V2.7 o anteriores, especifique la contraseña del administrador de PSC para la instancia primaria.
-5. Seleccione la edición de licencia de NSX y la edición de licencia de vSAN.
-6. Complete los valores del servidor nativo.
+6. Seleccione la edición de licencia de NSX y la edición de licencia de vSAN.
+7. Complete los valores del servidor nativo.
   1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} que va a alojar la instancia.
   2. Seleccione el modelo de CPU y la cantidad de **RAM** de **Skylake** o **Broadwell**.
 
   El **Número de servidores nativos** se establece en cuatro de forma predeterminada y no se puede cambiar.
   {:note}
-7. Complete la configuración del almacenamiento. Especifique los tipos de disco para la capacidad y los discos de memoria caché y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
-8. Complete la configuración de interfaz de red.
+8. Complete la configuración del almacenamiento. Especifique los tipos de disco para la capacidad y los discos de memoria caché y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
+9. Complete la configuración de interfaz de red.
   1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio raíz.
   2. Seleccione el valor de red de **Red pública y privada** o **Solo red privada**.
   3. Seleccione la configuración de VLAN.
      *  Si desea solicitar nuevas VLAN públicas y privadas, pulse **Realizar pedido de nuevas VLAN**.
      *  Si desea reutilizar las VLAN públicas y privadas existentes cuando estén disponibles, pulse **Seleccionar las VLAN existentes** y luego seleccione la VLAN pública, la subred primaria, la VLAN privada, la subred primaria privada y la VLAN privada secundaria.
   4. Seleccione la configuración de DNS.
-9. Complete la configuración para el servicio de HCX on {{site.data.keyword.cloud_notm}} incluido. Para obtener más información sobre cómo proporcionar valores para el servicio, consulte la sección _Configuración de VMware HCX on IBM Cloud_ en [Solicitud de VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
-10. Seleccione los servicios complementarios que desea desplegar en la instancia pulsando la tarjeta del servicio correspondiente. Si un servicio requiere configuración, complete los valores específicos del servicio y pulse **Añadir servicio** en la tarjeta.  
+10. Complete la configuración para el servicio de HCX on {{site.data.keyword.cloud_notm}} incluido. Para obtener más información sobre cómo proporcionar valores para el servicio, consulte la sección _Configuración de VMware HCX on IBM Cloud_ en [Solicitud de VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
+11. Seleccione los servicios complementarios que desea desplegar en la instancia pulsando la tarjeta del servicio correspondiente. Si un servicio requiere configuración, complete los valores específicos del servicio y pulse **Añadir servicio** en la tarjeta.  
 Para obtener más información sobre cómo proporcionar valores para un servicio, consulte el tema de ordenación de servicio correspondiente.
 
-11. En el panel **Resumen del pedido**, verifique la configuración de la instancia antes de realizar el pedido.
+12. En el panel **Resumen del pedido**, verifique la configuración de la instancia antes de realizar el pedido.
    1. Revise los valores de la instancia.
    2. Revise el coste estimado de la instancia. Pulse **Detalles sobre precios** para generar un resumen en PDF. Para guardar o imprimir el resumen del pedido, pulse el icono **Imprimir** o **Descargar** en la parte superior derecha de la ventana del PDF.
    3. Pulse el enlace o enlaces de los términos que se aplican a su pedido y confirme que acepta estos términos antes de solicitar la instancia.
@@ -265,7 +274,7 @@ Para obtener más información sobre cómo proporcionar valores para un servicio
 
 El despliegue de la instancia comienza automáticamente. Recibirá una confirmación de que el pedido se está procesando y puede comprobar el estado del despliegue consultando los detalles de la instancia.
 
-Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
+Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
 
 Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 

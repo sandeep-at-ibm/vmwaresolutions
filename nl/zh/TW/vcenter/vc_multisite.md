@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -49,7 +49,7 @@ lastupdated: "2019-02-14"
 
 圖 1. vCenter Server 多站台部署
 
-![vCenter Server 多站台部署](../sddc/multisite-hub-spoke.svg "vCenter Server 多站台部署")
+![vCenter Server 多站台部署](../vcenter/multisite-hub-spoke.svg "vCenter Server 多站台部署")
 
 此模型包含下列各層：
 

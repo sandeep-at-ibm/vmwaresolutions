@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -16,7 +16,7 @@ VMware Hybrid Cloud Services (HCX) permite que diversas instancias de centros de
 Figura 1. VMware Hybrid Cloud Services
 ![VMware Hybrid Cloud Services](vcshcx.svg)
 
-Como tal, HCX es el método preferido para la interoperación entre las ofertas de vSphere completamente automatizadas dentro de {{site.data.keyword.cloud}} y cualquier otra instancia desplegada de vSphere. HCX ahora es una oferta completamente integrada dentro de {{site.data.keyword.vmwaresolutions_short}}.
+HCX es el método preferido para la interoperación entre las ofertas de vSphere completamente automatizadas dentro de {{site.data.keyword.cloud}} y cualquier otra instancia desplegada de vSphere. HCX ahora es una oferta completamente integrada dentro de {{site.data.keyword.vmwaresolutions_short}}.
 
 Esta guía describe el despliegue y las operaciones de HCX, incluyendo las mejores prácticas y la resolución de problemas, tal y como se aceptan y comprenden actualmente. Como HCX se desarrolla utilizando la metodología de desarrollo ágil, no utilice esta guía como origen de facto de las versiones o las plataformas soportadas.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -21,7 +21,7 @@ HyTrust DataControl on {{site.data.keyword.cloud}}는 워크로드를 해당 라
 {:note}
 
 ## HyTrust DataControl on IBM Cloud의 기술 스펙
-{: #technical-specifications-for-hytrust-datacontrol-on-ibm-cloud}
+{: #htdc_considerations-specs}
 
 다음 컴포넌트가 주문되고 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 

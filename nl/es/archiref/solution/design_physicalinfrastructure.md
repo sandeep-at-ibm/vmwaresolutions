@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -26,16 +26,16 @@ La infraestructura física comprende los componentes siguientes:
   <dd class="dd">La red física proporciona la conectividad de red en el entorno que utilizará la virtualización de red. La red la proporciona la red de servicios de {{site.data.keyword.cloud_notm}} e incluye servicios adicionales como, por ejemplo, DNS y NTP.</dd>
 </dl>
 
-Para obtener más información sobre los componentes físicos, consulte la Lista de materiales de la [instancia de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) o de la [instancia de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Para obtener más información sobre los componentes físicos, consulte la Lista de materiales de la [instancia de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
-Para obtener más información sobre el almacenamiento, consulte [Arquitectura de almacenamiento compartido](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
+Para obtener más información sobre el almacenamiento, consulte [Arquitectura de almacenamiento compartido](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
 ## Diseño de host físico
 {: #design_physicalinfrastructure-host-design}
 
 El host físico hace referencia al {{site.data.keyword.baremetal_short}} en el entorno que sirve los recursos de cálculo. El {{site.data.keyword.baremetal_short}} aplicado en esta solución está certificado por VMware y aparece listado en el [HCG de VMware](http://www.vmware.com/resources/compatibility/search.php).
 
-Las configuraciones de servidor disponibles en la solución cumplen o exceden los requisitos mínimos para instalar, configurar y gestionar vSphere ESXi. Existen varias configuraciones disponibles para satisfacer diferentes requisitos. Para obtener una lista detallada de las especificaciones exactas utilizadas para la solución VMware on {{site.data.keyword.cloud_notm}}, consulte la Lista de materiales de la [instancia de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) o de la [instancia de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Las configuraciones de servidor disponibles en la solución cumplen o exceden los requisitos mínimos para instalar, configurar y gestionar vSphere ESXi. Existen varias configuraciones disponibles para satisfacer diferentes requisitos. Para obtener una lista detallada de las especificaciones exactas utilizadas para la solución VMware on {{site.data.keyword.cloud_notm}}, consulte la Lista de materiales de la [instancia de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 Los {{site.data.keyword.baremetal_short}} residen en {{site.data.keyword.cloud_notm}}.
 {:note}
@@ -88,21 +88,12 @@ Además de las redes públicas y privadas, cada servidor de {{site.data.keyword.
 * Las direcciones IP primarias se asignan a los dispositivos, a los servidores nativos y virtuales suministrados por {{site.data.keyword.cloud_notm}}. No asigne ninguna dirección IP en estos bloques.
 * Las direcciones IP portátiles se proporcionan para que asigne y gestione según sea necesario.
 
-Las direcciones IP primarias o portátiles se pueden convertir en direccionables a cualquier VLAN dentro de la cuenta de cliente cuando **Distribución de VLAN** esté habilitado dentro del {{site.data.keyword.slportal}} o cuando la cuenta esté configurada como una cuenta de **Direccionamiento y reenvío virtual (VRF)**.
-
-### Distribución de VLAN
-{: #design_physicalinfrastructure-vlan-spanning}
-
-**Distribución de VLAN** es un valor de cuenta de {{site.data.keyword.slportal}} que permite que el bloque de IP de subred primario y portátil de todas las VLAN de la cuenta se pueda direccionar entre sí. Cuando el valor de **Distribución de VLAN** está inhabilitado, los bloques de IP todavía pueden direccionar a los servicios de {{site.data.keyword.cloud_notm}}, pero no entre sí.
-
-Para permitir una conexión transparente entre varias subredes en las que residen los componentes de la solución, debe habilitar **Distribución de VLAN** en la cuenta de {{site.data.keyword.slportal}} en la que se despliegan las instancias de Cloud Foundation y vCenter Server.
+Las direcciones IP primarias o portátiles se pueden convertir en direccionables a cualquier VLAN dentro de la cuenta de cliente cuando la cuenta esté configurada como una cuenta de **Direccionamiento y reenvío virtual (VRF)**.
 
 ### Direccionamiento virtual y reenvío
 {: #design_physicalinfrastructure-vrf}
 
-También puede configurar la cuenta de {{site.data.keyword.slportal}} como una cuenta de direccionamiento virtual y reenvío (VRF) para proporcionar funciones similares a la distribución de VLAN, habilitando así el direccionamiento automático entre los bloques de IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
-
-La consola de {{site.data.keyword.vmwaresolutions_short}} no puede detectar si VRF está habilitado en el {{site.data.keyword.slportal}}. Recibirá un aviso que le recordará que se asegure de que ha habilitado la **Distribución de VLAN** o VRF en su cuenta de {{site.data.keyword.slportal}}.
+Puede configurar la cuenta de {{site.data.keyword.slportal}} como una cuenta de direccionamiento virtual y reenvío (VRF), que habilitará el direccionamiento automático global entre los bloques de IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
 
 ### Conexiones de host físico
 {: #design_physicalinfrastructure-host-connect}
@@ -172,7 +163,7 @@ Este diseño permite la opción de utilizar el almacenamiento de nivel de archiv
 
 Cuando se utiliza, VMware vSAN se configura utilizando una configuración all-flash. Este diseño permite varias opciones de configuración, incluyendo el chasis 2U y 4U, varios números de discos y varios tamaños de disco. Todas las configuraciones utilizan dos grupos de discos vSAN, con un disco de estado sólido (SSD) para la memoria caché y uno o más SSD para la capacidad. Todas las unidades asignadas para el consumo de vSAN se configuran en un RAID-0 de un solo disco.
 
-Para obtener más información sobre las configuraciones soportadas, consulte la Lista de materiales para la [instancia de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) o la [instancia de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Para obtener más información sobre las configuraciones soportadas, consulte la Lista de materiales para la [instancia de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 ### Almacenamiento de nivel de archivo compartido entre hosts
 {: #design_physicalinfrastructure-shared-storage}
@@ -185,12 +176,11 @@ Figura 2. Comparticiones NFS adjuntas al despliegue de VMware
 
 Puede asignar y montar más comparticiones de archivos para las cargas de trabajo en el momento de la compra o más tarde dentro de la consola. Puede seleccionar entre las opciones de capacidad de almacenamiento de archivos de Endurance {{site.data.keyword.cloud_notm}} disponibles y niveles de rendimiento en el {{site.data.keyword.CloudDataCent_notm}} correspondiente. Todas las comparticiones se adjuntan utilizando el protocolo NFSv3. Además, es posible adjuntar comparticiones de archivos NFSv3 aplicando la oferta de NetApp ONTAP Select.
 
-{{site.data.keyword.CloudDataCents_notm}} que ofrecen el nivel de rendimiento de 10 IOPS/GB también incluyen el cifrado gestionado por el proveedor de datos en reposo (cifrado AES-256) y están respaldadas por almacenamiento all-flash. El nivel de rendimiento de 10 IOPS/GB está limitado a una capacidad máxima de 4 TB. Para obtener más información sobre el NAS compartido que se utiliza en esta solución, consulte [Arquitectura de almacenamiento compartido](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
+{{site.data.keyword.CloudDataCents_notm}} que ofrecen el nivel de rendimiento de 10 IOPS/GB también incluyen el cifrado gestionado por el proveedor de datos en reposo (cifrado AES-256) y están respaldadas por almacenamiento all-flash. El nivel de rendimiento de 10 IOPS/GB está limitado a una capacidad máxima de 4 TB. Para obtener más información sobre el NAS compartido que se utiliza en esta solución, consulte [Arquitectura de almacenamiento compartido](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
 ## Enlaces relacionados
 {: #design_physicalinfrastructure-related}
 
-* [Lista de materiales de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
 * [Lista de materiales de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
-* [Arquitectura de almacenamiento compartido](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
+* [Arquitectura de almacenamiento compartido](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [Arquitectura de NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

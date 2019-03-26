@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Visión general de la prueba de un solo nodo para migración y modernización de apps
-{: #single-node-trial-for-migration-and-app-modernization-overview}
+{: #cloud_modern_bundle_overview}
 
 La prueba de un solo nodo para la migración y modernización de apps le permite realizar una prueba de IBM Cloud para migrar cargas de trabajo de VMware a IBM Cloud y, a continuación, modernizar cargas de trabajo simples utilizando contenedores.
 
@@ -88,7 +88,7 @@ Se solicitan las siguientes instancias de servidor virtual (VSI):
 
 En el pedido de la instancia de prueba de un solo nodo para la migración y modernización de apps se incluyen las siguientes licencias.
 
-* VMware vSphere Enterprise Plus 6.5
+* VMware vSphere Enterprise Plus 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * IBM Cloud Private Hosted V3.1

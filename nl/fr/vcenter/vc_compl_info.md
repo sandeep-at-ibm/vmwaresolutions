@@ -4,14 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
-# Informations de conformité pour les instances vCenter Server et vCenter Server with Hybridity Bundle
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# Informations de conformité relatives aux instances vCenter Server
 {: #vc_compl_info}
 
-Passez en revue les informations suivantes pour obtenir des détails relatifs à la conformité pour les instances VMware vCenter Server et vCenter Server with Hybridity Bundle.
+Passez en revue les informations suivantes pour obtenir des détails relatifs à la conformité pour les instances VMware vCenter Server. 
+
+L'offre VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T n'est pas prise en charge pour les clients HIPAA.
+{:important}
 
 ## Responsabilité du client ou d'IBM pour vCenter Server on IBM Cloud
 {: #vc_compl_info-responsibility}
@@ -45,7 +52,7 @@ Ce service cloud n'est pas destiné à des exigences de sécurité spécifiques 
 ## Politique d'accès aux instances des clients
 {: #vc_compl_info-policy-for-access-client-inst}
 
-Les environnements VMware Cloud Foundation et vCenter Server, distribués en tant que solutions {{site.data.keyword.vmwaresolutions_short}}, fournissent à nos clients une couche de plateforme de gestion VMware afin de leur permettre gérer les fonctions de virtualisation. Tout au long du cycle de vie des produits et services IBM Cloud for VMware, il peut s'avérer nécessaire de faire appel au support IBM pour garantir leur bon fonctionnement. Dans la plupart des cas, une intervention du support IBM résulte d'une demande du client (au moyen de la création d'un ticket de demande de service). Toutefois, dans de rares cas, le support IBM peut fournir de l'aide de manière proactive et sans qu'un ticket de demande de service ne soit créé par le client, afin de prévenir de futurs problèmes. Cet accès, qui s'effectue via le réseau de support interne IBM Cloud, est documenté dans un ticket de demande de service généré par le support IBM et fait l'objet d'une surveillance en continu de la part d'IBM Cloud SOC. Le support IBM ne peut en aucun cas modifier la configuration d'instance sans le consentement préalable du client. Le support IBM accède aux composants de gestion VMware et/ou aux composants de gestion IBM Cloud, mais jamais aux machines virtuelles ou aux applications du client.
+Les environnements VMware vCenter Server, distribués en tant que solutions {{site.data.keyword.vmwaresolutions_short}}, fournissent à nos clients une couche de plateforme de gestion VMware afin de leur permettre gérer les fonctions de virtualisation. Tout au long du cycle de vie des produits et services IBM Cloud for VMware, il peut s'avérer nécessaire de faire appel au support IBM pour garantir leur bon fonctionnement. Dans la plupart des cas, une intervention du support IBM résulte d'une demande du client (au moyen de la création d'un ticket de demande de service). Toutefois, dans de rares cas, le support IBM peut fournir de l'aide de manière proactive et sans qu'un ticket de demande de service ne soit créé par le client, afin de prévenir de futurs problèmes. Cet accès, qui s'effectue via le réseau de support interne IBM Cloud, est documenté dans un ticket de demande de service généré par le support IBM et fait l'objet d'une surveillance en continu de la part d'IBM Cloud SOC. Le support IBM ne peut en aucun cas modifier la configuration d'instance sans le consentement préalable du client. Le support IBM accède aux composants de gestion VMware et/ou aux composants de gestion IBM Cloud, mais jamais aux machines virtuelles ou aux applications du client.
 
 ## Support proactif
 {: #vc_compl_info-proactive-support}
@@ -67,7 +74,7 @@ Les environnements VMware Cloud Foundation et vCenter Server, distribués en tan
 ### Tickets de demande de service
 {: #vc_compl_info-support-tickets}
 
-* Les environnements Cloud Foundation et vCenter Server ne font pas l'objet d'une surveillance active de la part d'IBM et, en temps normal, le support IBM ne pénètre jamais dans la couche de gestion VMware s'il ne dispose pas d'un ticket de demande de service écrit par le client.
+* Les environnements vCenter Server ne font pas l'objet d'une surveillance active de la part d'IBM et, en temps normal, le support IBM ne pénètre jamais dans la couche de gestion VMware s'il ne dispose pas d'un ticket de demande de service écrit par le client.
 * Lorsqu'un client crée un ticket de demande de service pour une instance, un service ou un problème de mise à disposition, le ticket est rapidement affecté à l'équipe de support IBM appropriée qui devient la principale partie chargée de résoudre le problème.
 * En raison du niveau de spécialisation requis pour maintenir une expertise technique optimale au niveau de l'équipe, il peut s'avérer nécessaire de faire appel à plus d'une équipe de support pour résoudre un problème logiciel spécifique. Cette situation est facilement gérée, car nos équipes de support sont toutes regroupées en réseau et fonctionnement comme une seule et même équipe pour résoudre tous les problèmes.
 * Pour déterminer la cause du problème, IBM peut avoir besoin d'accéder aux informations liées à la panne qui sont contenues sur votre système ou de recréer l'incident pour obtenir des informations supplémentaires.
@@ -136,5 +143,4 @@ Si le client n'a pas donné son consentement pour le support proactif d'une inst
 {: #vc_compl_info-related}
 
 * [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Présentation de vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
 * [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

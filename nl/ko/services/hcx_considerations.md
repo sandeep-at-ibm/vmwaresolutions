@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # VMware HCX on IBM Cloud 스펙 및 고려사항
-{: #vmware-hcx-on-ibm-cloud-overview}
+{: #hcx_considerations}
 
 HCX on {{site.data.keyword.cloud}} 서비스는 온프레미스 데이터 센터의 네트워크를 {{site.data.keyword.cloud_notm}}로 원활하게 확장하며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}} 간에 가상 머신(VM)을 마이그레이션할 수 있습니다.
 
@@ -26,7 +26,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 vCenter Server 인스턴스는 온프
 {:note}
 
 ## HCX on IBM Cloud의 기술 스펙
-{: #technical-specifications-for-hcx-on-ibm-cloud}
+{: #hcx_considerations-specs}
 
 다음 컴포넌트가 주문되고 HCX on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
@@ -72,7 +72,7 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스는 기본 클러스터에 52�
 HCX on {{site.data.keyword.cloud_notm}} 서비스를 설치하기 전에 HCX Manager 가상 어플라이언스(HCX Manager)가 자체적으로 등록할 수 있도록 모든 아웃바운드 HTTPS 트래픽을 허용하려면 방화벽 규칙을 기존 방화벽에 추가해야 합니다. HCX Manager 설치가 완료되면 방화벽 규칙을 제거할 수 있습니다. 또한 HCX가 올바르게 작동하도록 방화벽 규칙을 구성해야 합니다. 자세한 정보는 [VMWare HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)의 *Appendix A - Port Access Requirements*를 참조하십시오.
 
 ## HCX on IBM Cloud 제거 시 고려사항
-{: #considerations-when-removing-hcx-on-ibm-cloud}
+{: #hcx_considerations-delete}
 
 HCX on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 다음 고려사항을 검토하십시오.
 * 온프레미스 소스 사이트와 {{site.data.keyword.cloud_notm}} 대상 사이트 간의 상호연결 및 확장된 네트워크가 제거되었는지 확인하십시오. 상호연결 및 확장된 네트워크를 제거하려면 온프레미스 VMware vSphere Web Client에서 HCX 사용자 인터페이스를 사용하십시오.

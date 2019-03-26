@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -44,14 +44,14 @@ En cas de problème de connectivité avec le réseau WAN, vérifiez toujours le 
 Si des correctifs et des mises à jour ont été appliqués aux gestionnaires HCX (client et cloud) et que ces mises à jour corrigent également des problèmes au niveau des composants de la flotte, vous devez redéployer la passerelle Cloud Gateway et tous les L2Cs déployés. Il est possible d'effectuer un débogage supplémentaire du statut du tunnel, en se connectant au gestionnaire HCX via un client SSH tel que ccli  
 
 1. Accédez via SSH au gestionnaire HCX en utilisant le compte administrateur et le mot de passe fourni.
-2. Exécutez la commande `su –` et le mot de passe root (égal au mot de passe administrateur) pour passer au mode superutilisateur.
+2. Exécutez la commande `su –` et entrez le mot de passe de l'utilisateur `root` (identique au mot de passe administrateur) pour passer au mode superutilisateur.
 3. Accédez à `/opt/vmware/bin` et exécutez la commande `./ccli`. Si cette opération échoue car l'environnement n'est pas configuré pour un superutilisateur, exécutez la commande `./ccliSetup.pl`.
-4. Exécutez la commande `list` dans l'interpréteur de commande ccli pour afficher une liste des composants de flotte enregistrés auprès du gestionnaire HCX.
-5. Spécifiez l'ID de flotte du ccli en tapant l'ID indiqué pour le composant de flotte. Par exemple, `go 8`.
-6. Exécutez la commande `debug remoteaccess enable` pour vous connecter au composant de flotte désiré via SSH.
-7. Sortez de l'interface ccli et connectez-vous via SSH à l'adresse IP du composant de flotte activé pour SSH.
+4. Exécutez la commande `list` dans l'interpréteur de commandes `ccli` pour répertorier les composants de flotte enregistrés auprès du gestionnaire HCX. 
+5. Spécifiez l'ID de flotte de l'interface `ccli` en tapant l'ID indiqué pour le composant de flotte. Par exemple, `go 8`.
+6. Exécutez la commande `debug remoteaccess enable` pour vous connecter au composant de flotte désiré via SSH. 
+7. Quittez l'interface `ccli` et connectez-vous via SSH à l'adresse IP du composant de flotte activé pour SSH. 
 9. Poursuivez le traitement des incidents.
-10. Retournez à l'interface ccli et désactivez le service ssh pour le composant.
+10. Retournez à l'interface `ccli` et désactivez le service `ssh` pour le composant.
 11. Si nécessaire, utilisez la commande ccli `hc` pour exécuter un diagnostic d'intégrité sur les composants.
 
 ## Problèmes de compatibilité du matériel de destination
@@ -59,10 +59,10 @@ Si des correctifs et des mises à jour ont été appliqués aux gestionnaires HC
 
 La migration vMotion peut constituer un problème lorsque la source côté client appartient à une version matérielle et à version vSphere plus récentes que le cloud. Puisque la migration basée sur la réplication copie les données vers une machine virtuelle de fabrication récente du côté de la destination, changer le type de migration à "Migration en bloc" devrait permettre à la migration de réussir dans la plupart des cas.
 
-## Problèmes du concentrateur L2 étendu
+## Problèmes liés au concentrateur L2 étendu
 {: #vcshcx-troubleshooting-stretched-l2}
 
-Peu ou aucun problème n'a été rencontré avec le fonctionnement du concentrateur L2. Comme pour la passerelle CGW, si le L2C perd sa connectivité, il se reconnecte automatiquement une fois que la connectivité réseau est rétablie. Utilisez l'interpréteur de commande ccli pour vérifier l'intégrité et le fonctionnement. Après avoir activé SSH et connecté le concentrateur L2, exécutez les commandes `ip tunnel` et `ip link |grep t_` pour afficher le statut des tunnels.
+Très peu de problèmes liés au fonctionnement du concentrateur L2 ont été recensés. Comme pour la passerelle CGW, si le L2C perd sa connectivité, il se reconnecte automatiquement une fois que la connectivité réseau est rétablie. Utilisez l'interpréteur de commande ccli pour vérifier l'intégrité et le fonctionnement. Après avoir activé SSH et connecté le concentrateur L2, exécutez les commandes `ip tunnel` et `ip link |grep t_` pour afficher le statut des tunnels.
 
 ## Liens connexes
 {: #vcshcx-troubleshooting-related}

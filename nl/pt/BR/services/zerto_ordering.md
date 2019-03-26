@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Solicitando Zerto on IBM Cloud
 {: #zerto_ordering}
@@ -27,12 +31,14 @@ lastupdated: "2019-02-15"
 * No console do {{site.data.keyword.vmwaresolutions_short}}, visualize a instância para a qual você deseja incluir o serviço, clique em **Serviços** na área de janela de navegação esquerda e clique em **Incluir**.
 * No catálogo do {{site.data.keyword.cloud_notm}}, selecione **Zerto on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir em instância existente**.
 
+Se você incluir o Zerto for {{site.data.keyword.cloud_notm}} em uma instância do vCenter Server que tenha um servidor ESXi no modo de manutenção, você deverá usar o console do Zerto Virtual Manager (ZVM) e o endereço IP do Zerto Virtual Replication Appliance (VRA) pré-preenchido para implementar manualmente a máquina virtual (VM) do VRA.
+{:note}
+
 ## Links relacionados
 {: #zerto_ordering-related}
 
 * [ Zerto on  {{site.data.keyword.cloud_notm}}  visão geral ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
 * [Gerenciando o Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
-* [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Solicitando serviços gerenciados para o Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

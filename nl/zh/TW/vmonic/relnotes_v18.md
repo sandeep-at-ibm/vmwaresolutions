@@ -14,6 +14,7 @@ lastupdated: "2017-08-28"
 此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Fortinet on IBM Cloud 服務
+{: #relnotes_v18-fortinet}
 
 現在，Fortinet on {{site.data.keyword.cloud_notm}} 服務可用於 Cloud Foundation 實例及 vCenter Server 實例。此服務會以高可用性模式部署一組 FortiGate Security Appliance (FSA) 300 系列裝置，能提供防火牆、遞送、NAT及 VPN 服務，以維護您實例的公用 VLAN 上的所有伺服器及虛擬機器。您可以在訂購實例時訂購包含 Fortinet 服務的實例，或稍後透過實例詳細資料頁面將此服務新增至現有實例。
 
@@ -24,6 +25,7 @@ lastupdated: "2017-08-28"
 * [管理 Fortinet on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
 
 ## Veeam on IBM Cloud 服務
+{: #relnotes_v18-veeam}
 
 此版本引進 Veeam on {{site.data.keyword.cloud_notm}} 服務，它可同時備份管理元件及工作負載。這項新服務取代先前的 Veeam VSI（其已整合至 1.8 版之前的版本），並僅適用於管理元件的備份。
 
@@ -36,20 +38,20 @@ lastupdated: "2017-08-28"
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
 ## VMware Cloud Foundation 實例的更新
+{: #relnotes_v18-vcf}
 
 ### 訂購 Cloud Foundation 實例時，自帶 VMware 授權 (BYOL)
+{: #relnotes_v18-byol}
 
 從 1.8 版開始，當您訂購 Cloud Foundation 實例時，會向您提供兩個選項來為實例的 VMware 元件進行授權，包括 vSphere、vCenter Server、NSX 和 vSAN。您可以選擇使用要代表您購買的新授權。
 
 您也可以選擇對元件使用您自己的 VMware 授權，在此情況下，您需要提供授權碼。在此情況下，針對您提供授權的 VMware 元件，將由 VMware 提供支援，而不是由 IBM 支援中心提供。
 
-如需相關資訊，請參閱下列主題：
-* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
-* [關於 BYOL 的常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
-
 ## VMware vCenter Server 實例的更新
+{: #relnotes_v18-vcs}
 
 ### 自訂實例 CPU 及記憶體
+{: #relnotes_v18-custom-cpu}
 
 可自訂的伺服器選項可與預先建置及測試的「小型」、「中型」及「大型」選項搭配使用。除了 RAM 數量之外，您還可以根據雙 CPU 和核心數目總計，從 VMware HCL 相容伺服器清單中選取。本端儲存空間不可自訂。
 
@@ -58,6 +60,7 @@ lastupdated: "2017-08-28"
 * [新增及檢視 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### 支援新增超過 7 個的 NFS 檔案共用
+{: #relnotes_v18-nfs}
 
  在叢集的所有 ESXi 伺服器之間，您最多可以連接 32 個檔案共用。
 
@@ -66,12 +69,14 @@ lastupdated: "2017-08-28"
 * [新增及檢視 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### 資料中心的更新
+{: #relnotes_v18-dc}
 
 下列新的資料中心可用於部署：**DAL-09, DAL-12, DAL-13 - 達拉斯**、**LONG-04, LON-06 - 倫敦**、**SJC-04 - 聖荷西**、**WDC-06, WDC-07 - 華盛頓特區**
 
 如需相關資訊，請參閱 [vCenter Server 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 
 ## 可用性加強功能
+{: #relnotes_v18-ui}
 
 在整個使用者介面中進行了改善：
 * 您可以從左導覽窗格的**開始使用**頁面瞭解服務及訂購實例。

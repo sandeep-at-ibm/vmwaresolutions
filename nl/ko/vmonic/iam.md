@@ -4,12 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
 # IAM에서 사용자 액세스 관리
-{: #managing-user-access-with-iam}
+{: #iam}
 
 계정의 사용자와 관련한 {{site.data.keyword.vmwaresolutions_full}} 서비스 인스턴스에 대한 액세스는 {{site.data.keyword.cloud_notm}} IAM(Identity and Access Management)에 의해 제어됩니다. 계정에서 {{site.data.keyword.vmwaresolutions_short}} 서비스에 액세스하는 모든 사용자에게는 IAM 사용자 역할이 정의된 액세스 정책이 지정되어야 합니다.
 
@@ -69,12 +69,11 @@ IAM과 {{site.data.keyword.vmwaresolutions_short}}의 통합으로 인해, {{sit
 V2.4 이하 릴리스에서 배치된 기존 인스턴스의 경우에는 IAM-사용 관리를 위해 지정된 {{site.data.keyword.cloud_notm}} 계정으로 이를 마이그레이션할 수 있습니다. 자세한 정보는 다음 주제를 참조하십시오.
 * [IBM Cloud 계정으로 V2.5 이전 vCenter Server 인스턴스 마이그레이션](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
 * [IBM Cloud 계정으로 V2.5 이전 vCenter Server with Hybridity Bundle 인스턴스 마이그레이션](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
-* [IBM Cloud 계정으로 V2.5 이전 Cloud Foundation 인스턴스 마이그레이션](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addinstancetousraccount)
 * [IBM Cloud 계정으로 V2.5 이전 NetApp ONTAP Select 인스턴스 마이그레이션](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)
 
 ## 관련 링크
 {: #iam-related}
 
 * [ID 및 액세스 관리](/docs/iam?topic=iam-getstarted)
-* [사용자 및 액세스 관리](/docs/iam/iamusermanage.html)
+* [사용자 초대](/docs/iam?topic=iam-iamuserinv#iamuserinv)
 * [IAM 개념](/docs/iam?topic=iam-iamoverview)

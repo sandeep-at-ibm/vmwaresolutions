@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -56,10 +56,8 @@ Figura 1. Despliegue de varios sitios de Cloud Foundation
 
 El modelo contiene las siguientes capas:
 
-* **Instancia primaria**: en una configuración de varios sitios, para desplegar la primera instancia debe definir dicha instancia como primaria durante el proceso de pedido de la instancia.
-* **Instancias secundarias**: en una configuración de varios sitios, debe definir las instancias que están conectadas a la instancia primaria como instancias secundarias durante el proceso de pedido.
-
-Las instancias secundarias se asignan a una instancia primara de una en una. No puede asignar varias instancias secundarias a una instancia primaria al mismo tiempo. Para hacerlo, debe volver a pasar por el proceso de pedido y seleccionar la instancia primaria definida anteriormente como una instancia primaria para la instancia secundaria. Debe repetir el proceso para todas las instancias secundarias que desee crear.
+* **Instancia primaria**: en una configuración de varios sitios, la primera instancia se ha definido como primaria durante el proceso de pedido de la instancia.
+* **Instancias secundarias**: en una configuración de varios sitios, las instancias que están conectadas a la instancia primaria se han definido como instancias secundarias durante el proceso de pedido.
 
 Puede tener un máximo de 8 (1 primaria y 7 secundarias) instancias desplegadas en una configuración de varios sitios.
 

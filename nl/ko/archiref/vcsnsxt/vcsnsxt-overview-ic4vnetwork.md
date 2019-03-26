@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -40,17 +40,12 @@ lastupdated: "2019-02-15"
 * 기본 IP 주소는 디바이스, 베어메탈 및 {{site.data.keyword.cloud_notm}}에서 프로비저닝하는 가상 서버에 지정됩니다. 사용자는 이러한 블록에 IP 주소를 지정하면 안 됩니다.
 * 포터블 IP 주소는 사용자가 필요에 따라 지정 및 관리할 수 있도록 제공됩니다.
 
-기본 또는 포터블 IP 주소는 VLAN Spanning이 계정 내에서 사용되거나 계정이 VRF(virtual routing and forwarding) 계정으로 구성된 경우에 고객 계정 내에서 임의의 VLAN으로 라우팅 가능합니다.
-
-## VLAN Spanning
-{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
-
-VLAN Spanning은 계정의 모든 VLAN에 있는 각각의 기본 및 포터블 서브넷 IP 블록이 서로 간에 라우팅 가능하도록 허용하는 {{site.data.keyword.cloud_notm}} 글로벌 계정 설정입니다. 이 설정을 사용할 수 없는 경우, IP 블록은 계속해서 {{site.data.keyword.cloud_notm}} 서비스에 라우팅할 수 있지만 서로 간에는 라우팅할 수 없습니다. 이 아키텍처에서는 솔루션 컴포넌트가 있는 다양한 서브넷에서 연결이 투명하게 구성되도록 하기 위해 VMware vCenter Server on {site.data.keyword.cloud_notm}}가 배치된 계정에서 VLAN Spanning을 사용해야 합니다.
+기본 또는 포터블 IP 주소는 계정이 VRF(virtual routing and forwarding) 계정으로 구성된 경우에 고객 계정 내에서 임의의 VLAN으로 라우팅 가능합니다.
 
 ## VRF(Virtual Routing and Forwarding)
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} 계정을 VRF(Virtual Routing and Forwarding) 계정으로 구성할 수 있습니다. VRF 계정은 VLAN SPanning과 유사한 기능을 제공하여 서브넷 IP 블록 간에 자동 라우팅을 가능하게 합니다. Direct-Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
+{{site.data.keyword.cloud_notm}} 계정을 VRF(Virtual Routing and Forwarding) 계정으로 구성할 수 있습니다. VRF 계정은 계정 내의 서브넷 IP 블록 사이의 자동 글로벌 라우팅을 사용합니다. Direct-Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
 
 ## 실제 호스트 연결
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}

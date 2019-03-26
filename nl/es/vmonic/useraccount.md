@@ -57,7 +57,6 @@ Si las notificaciones por correo electrónico o en la consola están habilitadas
 {: #useraccount-related}
 
 * [Preguntas frecuentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Pedido de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Pedido de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Notificaciones](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)
 * [API de SoftLayer](/docs/customer-portal?topic=customer-portal-customerportal_api){:new_window}

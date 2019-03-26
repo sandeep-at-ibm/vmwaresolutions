@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-18"
 {:important: .important}
 
 # Adición, visualización y supresión de clústeres para instancias de vCenter Server
-{: #adding-and-viewing-clusters-for-vcenter-server-instances}
+{: #vc_addingviewingclusters}
 
 Los servidores ESXi que ha configurado al solicitar una instancia se agrupan como **cluster1** de forma predeterminada.
 
@@ -56,7 +56,7 @@ Si despliega el clúster en otro {{site.data.keyword.CloudDataCent_notm}} o en o
 ### Valores de Servidor nativo
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-Puede elegir **Skylake**, **Certificado por SAP** o **Broadwell**.
+Puede elegir **Skylake**, **Certificado por SAP** o **Broadwell**. Las opciones pueden variar dependiendo de la versión en que se desplegó inicialmente la instancia.
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -187,7 +187,7 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 ## Procedimiento para añadir clústeres a instancias de vCenter Server
 {: #vc_addingviewingclusters-adding-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia a la que desea añadir clústeres.
 
    Asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede añadir clústeres a la instancia.
@@ -228,7 +228,7 @@ No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es 
 ## Procedimiento para visualizar clústeres en las instancias de vCenter Server
 {: #vc_addingviewingclusters-viewing-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse una instancia para ver los clústeres que contiene.
 3. Pulse **Infraestructura** en el panel de navegación izquierdo. En la tabla **CLÚSTERES**, vea el resumen sobre los clústeres:
   * **Nombre**: el nombre del clúster.
@@ -252,7 +252,7 @@ No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es 
         <dd class="dd">El clúster se ha suprimido.</dd>
     </dl>
   * **Acciones**: Pulse el icono **Suprimir** para suprimir el clúster.
-4. Pulse un nombre de clúster para ver el servidor y el almacenamiento:
+4. Pulse un nombre de clúster para ver los detalles del servidor ESXi, almacenamiento e interfaz de red:
 
 Tabla 4. Detalles del servidor ESXi
 
@@ -262,7 +262,7 @@ Tabla 4. Detalles del servidor ESXi
 | Versión | La versión del servidor ESXi. |
 | Credenciales | El nombre de usuario y la contraseña para acceder al servidor ESXi. |
 | IP privada | La dirección IP privada del servidor ESXi. |
-| Estado | El estado del servidor ESXi, que puede tener uno de estos valores:<br> **Añadido**: El servidor ESXi se ha añadido y está listo para ser utilizado.<br> **Añadiendo**: El servidor ESXi se está añadiendo.<br> **Suprimiendo**: El servidor ESXi se está suprimiendo. |
+| Estado | El estado del servidor ESXi, que puede tener uno de estos valores:<br> **Añadido** El servidor ESXi se ha añadido y está listo para ser utilizado.<br> **Añadiendo** El servidor ESXi se está añadiendo.<br> **Suprimiendo** El servidor ESXi se está suprimiendo. |
 
 Tabla 5. Detalles de almacenamiento
 
@@ -272,6 +272,32 @@ Tabla 5. Detalles de almacenamiento
 | Tamaño | La capacidad de almacenamiento. |
 | IOPS/GB | El nivel de rendimiento del almacenamiento. |
 | Protocolo NFS | La versión NFS del almacenamiento. |
+
+Tabla 6. Interfaz de red - Detalles de VLAN
+
+| Elemento        | Descripción       |  
+|:------------- |:------------- |
+| Número de VLAN | El número exclusivo de VLAN.  |
+| Descripción | El tipo de VLAN.  |
+| Ubicación | La ubicación del centro de datos. |
+| Ruta primaria | La ruta primaria de la VLAN. |
+
+Tabla 7. Interfaz de red - Detalles de subred
+
+| Elemento        | Descripción       |  
+|:------------- |:------------- |
+| Nombre | El nombre de la subred. Pulse el nombre para acceder a los detalles de la dirección IP completa. |
+| Tipo | El tipo de subred: primario o portátil. |
+| Descripción | El propósito de la subred. |
+
+Tabla 8. Interfaz de red - Detalles de IP
+
+| Elemento        | Descripción       |  
+|:------------- |:------------- |
+| IP | Dirección IP. |
+| Estado | El estado de la dirección IP. |
+| Descripción |El host de la dirección IP.  |
+
 
 ## Supresión de clústeres de instancias de vCenter Server
 {: #vc_addingviewingclusters-deleting}
@@ -291,7 +317,7 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 ### Procedimiento para suprimir clústeres de instancias de vCenter Server
 {: #vc_addingviewingclusters-deleting-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia de la que desea suprimir clústeres.
 
    Asegúrese de que la instancia está en el estado **Listo para su uso**. De lo contrario, no puede suprimir clústeres de la instancia.

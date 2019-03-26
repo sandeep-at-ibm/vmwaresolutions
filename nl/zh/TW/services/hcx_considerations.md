@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # VMware HCX on IBM Cloud 規格及考量
-{: #vmware-hcx-on-ibm-cloud-overview}
+{: #hcx_considerations}
 
 HCX on {{site.data.keyword.cloud}} 服務會將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}，這容許您將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從該處移轉，而不需要進行任何轉換或變更。
 
@@ -24,7 +24,7 @@ HCX on {{site.data.keyword.cloud}} 服務會將內部部署資料中心的網路
 具有 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 實例限制為來自內部部署站台只能有三個同時連線。{:note}
 
 ## HCX on IBM Cloud 的技術規格
-{: #technical-specifications-for-hcx-on-ibm-cloud}
+{: #hcx_considerations-specs}
 
 下列元件已訂購並包括在 HCX on {{site.data.keyword.cloud_notm}} 服務中。
 
@@ -70,7 +70,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服務無法安裝至預設叢集具有�
 安裝 HCX on {{site.data.keyword.cloud_notm}} 服務之前，您必須先將防火牆規則新增至任何現有防火牆，以容許所有出埠 HTTPS 資料流量，讓 HCX Manager 虛擬應用裝置 (HCX Manager) 可以登錄它自己。完成 HCX Manager 安裝之後，即可移除防火牆規則。此外，您還必須配置防火牆規則，以容許 HCX 正常運作。如需相關資訊，請參閱 [HCX on {{site.data.keyword.cloud_notm}} 架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)中的*附錄 A - 埠存取需求*。
 
 ## 移除 HCX on IBM Cloud 時的考量
-{: #considerations-when-removing-hcx-on-ibm-cloud}
+{: #hcx_considerations-delete}
 
 請先檢閱下列考量，再移除 HCX on {{site.data.keyword.cloud_notm}} 服務：
 * 確定已移除內部部署來源站台與 {{site.data.keyword.cloud_notm}} 目標站台之間的交互連接及延伸網路。若要移除交互連接及延伸網路，請使用內部部署 VMware vSphere Web Client 中的 HCX 使用者介面。

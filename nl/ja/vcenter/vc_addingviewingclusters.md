@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-18"
 {:important: .important}
 
 # vCenter Server インスタンスのクラスターの追加、表示、削除
-{: #adding-and-viewing-clusters-for-vcenter-server-instances}
+{: #vc_addingviewingclusters}
 
 インスタンスの注文時に構成した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。
 
@@ -56,7 +56,7 @@ vCenter Server インスタンスにクラスターを追加するときには�
 ### ベア・メタル・サーバーの設定
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-**「Skylake」**、**「SAP 認定」**、または**「Broadwell」**のいずれかを選択できます。
+**「Skylake」**、**「SAP 認定」**、または**「Broadwell」**のいずれかを選択できます。 オプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -187,7 +187,7 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
 ## vCenter Server インスタンスにクラスターを追加する手順
 {: #vc_addingviewingclusters-adding-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、クラスターを追加するインスタンスをクリックします。
 
    インスタンスの状況が**「使用可能」**であることを確認してください。 そうでない場合、インスタンスにクラスターを追加できません。
@@ -228,7 +228,7 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
 ## vCenter Server インスタンスでクラスターを表示する手順
 {: #vc_addingviewingclusters-viewing-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、クラスターを表示するインスタンスをクリックします。
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。 **「クラスター」**表で、クラスターに関する要約を表示します。
   * **名前**: クラスターの名前。
@@ -252,17 +252,17 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
         <dd class="dd">クラスターが削除された場合。</dd>
     </dl>
   * **アクション**: **「削除」**アイコンをクリックしてクラスターを削除できます。
-4. クラスター名をクリックして、ESXi サーバーとストレージを表示します。
+4. ESXi サーバー、ストレージ、ネットワーク・インターフェースの詳細を表示するには、クラスター名をクリックします。
 
 表 4. ESXi サーバーの詳細
 
 | 項目        | 説明       |  
 |:------------- |:------------- |
-| 名前 | ESXi サーバーの名前は以下の形式です。<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> 各部の意味は、次のとおりです。<br> `host_prefix` はホスト名の接頭部です<br> `n` はサーバーの順序です<br> `subdomain_label` はサブドメイン・ラベルです<br> `root_domain` はルート・ドメイン名です|
+| 名前 | ESXi サーバーの名前は以下の形式です。<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> 各部の意味は、次のとおりです。<br> `host_prefix` はホスト名の接頭部です<br> `n` はサーバーの順序です<br> `subdomain_label` はサブドメイン・ラベルです<br> `root_domain` はルート・ドメイン名です |
 | バージョン | ESXi サーバーのバージョン。 |
 | 資格情報 | ESXi サーバーにアクセスするために使用するユーザー名とパスワード。 |
 | プライベート IP | ESXi サーバーのプライベート IP アドレス。 |
-| 状況 | ESXi サーバーの状況。次の値のいずれかになります。<br> **追加済み**: ESXi サーバーが追加され、使用可能な状態です。<br> **追加中**: ESXi サーバーが追加されています。<br> **削除中**: ESXi サーバーが削除されています。 |
+| 状況 | ESXi サーバーの状況。次の値のいずれかになります。<br> **追加済み** ESXi サーバーが追加され、使用可能な状態です。<br> **追加中** ESXi サーバーが追加されています。<br> **削除中** ESXi サーバーが削除されています。 |
 
 表 5. ストレージの詳細
 
@@ -272,6 +272,32 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
 | サイズ | ストレージの容量。 |
 | IOPS/GB | ストレージのパフォーマンス・レベル。 |
 | NFS プロトコル | ストレージの NFS バージョン。 |
+
+表 6. ネットワーク・インターフェース - VLAN の詳細
+
+| 項目        | 説明       |  
+|:------------- |:------------- |
+| VLAN 番号 | 固有の VLAN 番号。|
+| 説明 | VLAN のタイプ。  |
+| ロケーション | データ・センターのロケーション。|
+| 1 次経路 | VLAN の 1 次経路。 |
+
+表 7. ネットワーク・インターフェース - サブネットの詳細
+
+| 項目        | 説明       |  
+|:------------- |:------------- |
+| 名前 | サブネット名。 IP アドレスの全詳細にアクセスするには名前をクリックします。|
+| タイプ | サブネットのタイプ: 1 次またはポータブル。|
+| 説明 | サブネットの目的。|
+
+表 8. ネットワーク・インターフェース - IP の詳細
+
+| 項目        | 説明       |  
+|:------------- |:------------- |
+| IP | IP アドレス。 |
+| 状況 | IP アドレスの状況。 |
+| 説明 |IP アドレスのホスト。|
+
 
 ## vCenter Server インスタンスからのクラスターの削除
 {: #vc_addingviewingclusters-deleting}
@@ -291,7 +317,7 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
 ### vCenter Server インスタンスからクラスターを削除する手順
 {: #vc_addingviewingclusters-deleting-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、クラスターを削除するインスタンスをクリックします。
 
    インスタンスの状況が**「使用可能」**であることを確認してください。 そうでない場合、インスタンスからクラスターを削除できません。

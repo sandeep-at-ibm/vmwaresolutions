@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -59,7 +59,7 @@ En total, la oferta básica necesita 38 vCPU y 67 GB de vRAM que se reservan par
 Para obtener más información sobre la arquitectura, consulte [Referencia de arquitectura de {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Especificaciones técnicas para instancias de vCenter Server
-{: #technical-specifications-for-vcenter-server-instances}
+{: #vc_vcenterserveroverview-specs}
 
 Se incluyen los siguientes componentes en la instancia de vCenter Server.
 
@@ -70,9 +70,9 @@ La disponibilidad y los precios de las configuraciones estandarizadas de hardwar
 {: #vc_vcenterserveroverview-bare-metal}
 
 Puede solicitar tres o más {{site.data.keyword.baremetal_short}} con una de las siguientes configuraciones:
-* **Skylake**: servidores de generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100) con el modelo de CPU y el tamaño de RAM que seleccione.  
+* **Skylake**: servidores de generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100) con el modelo de CPU y el tamaño de RAM que seleccione.
 * **Certificado por SAP**: servidores de generación Intel Skylake o Intel Broadwell (Intel Xeon serie 6140/E5-2690/E7-8890) con el modelo de CPU que elija.
-* **Broadwell**: servidores de generación Intel Broadwell de 2 CPU (Intel Xeon serie E5-2600/E7-4800) con el modelo de CPU y el tamaño de RAM que seleccione. 
+* **Broadwell**: servidores de generación Intel Broadwell de 2 CPU (Intel Xeon serie E5-2600/E7-4800) con el modelo de CPU y el tamaño de RAM que seleccione.
 
 Si tiene pensado utilizar almacenamiento vSAN, la configuración necesita cuatro {{site.data.keyword.baremetal_short}}.
 {:note}
@@ -125,9 +125,12 @@ La opción vSAN ofrece configuraciones personalizadas, con diversas opciones par
 {: #vc_vcenterserveroverview-nfs-storage}
 
 La opción NFS ofrece almacenamiento a nivel de archivo compartido personalizado para cargas de trabajo con distintas opciones de tamaño y de rendimiento:
-* Tamaño: de 20 a 12000 GB
+* Tamaño: de 20 GB a 24 TB
 * Rendimiento: 0,25, 2, 4 o 10 IOPS/GB.
 * Configuración individual de comparticiones de archivos.
+
+  El nivel de rendimiento de 10 IOPS/GB está limitado a una capacidad máxima de 4 TB por compartición de archivo.
+  {:note}
 
 Si selecciona la opción NFS, se solicita una compartición de archivos de 2 TB y de 4 IOPS/GB para los componentes de gestión.
 
@@ -139,7 +142,7 @@ La opción de discos locales, que solo está disponible para las configuraciones
 ### Licencias (proporcionadas por IBM o BYOL) y cuotas
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 o 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * (Para clústeres vSAN) VMware vSAN Advanced o Enterprise 6.6
@@ -153,12 +156,12 @@ Cada nodo de expansión de vCenter Server desplegará e incurrirá en cargos por
 ### Hardware para nodos de expansión
 {: #vc_vcenterserveroverview-expansion-node-hardware}
 
-Un servidor nativo con la configuración presentada en [Especificaciones técnicas para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
+Un servidor nativo con la configuración presentada en [Especificaciones técnicas para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
 
 ### Licencias y tarifas correspondientes a nodos de expansión
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* Un VMware vSphere Enterprise Plus 6.5u1
+* Un VMware vSphere Enterprise Plus 6.5u2 o 6.7u1
 * Un VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * Una cuota de soporte y servicios
 * (Para clústeres vSAN) VMware vSAN Advanced o Enterprise 6.6
@@ -179,3 +182,4 @@ Las Excepciones de servicios de reinicio de estas actividades incluyen la gesti�
 * [Planificación de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Pedido de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Almacenamiento en bloque y de archivos de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [Ampliación de la capacidad de compartición de archivos](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

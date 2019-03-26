@@ -16,14 +16,14 @@ VMware HCX on IBM Cloud 安裝具有下列軟體需求：
 * 若要使用跨雲端 vMotion，則相同親緣性限制會套用至雲端，就像在內部部署上一樣。如需相關資訊，請參閱 [VMware EVC 及 CPU 相容性常見問題](http://bit.ly/2vK6Sp5)。
 
 ## 配置網路連線功能
-{: #hcx-archi-port-req-config-net}
+{: #hcx-archi-prep-install-config-net}
 
 HCX 必須遍訪公用網際網路及專用線路，並連接至資料中心元件（例如網路、交換器及埠群組）。
 * [埠存取需求](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req)列出的埠必須開啟，才能順利安裝 HCX 虛擬應用裝置。
 * 內部部署 vSphere 環境及 VCF/VCS HCX Cloud 環境都必須允許 vSphere 內部部署裝置及 VCF/VCS HCX 裝置中的「網路時間通訊協定 (NTP)」時鐘同步化。HCX 虛擬應用裝置及網路必須可存取 UDP 埠 123。
 
 ## 內部部署環境
-{: #hcx-archi-port-req-on-prem-env}
+{: #hcx-archi-prep-install-on-prem-env}
 
 在您安裝 HCX 之前，請驗證環境可以支援您要完成的作業。內部部署環境必須先支援下列作業，才能安裝 HCX。
 * 具有 vSphere 5.5 Update 3 或 6.0 Update 2 的「虛擬中心」。
@@ -38,7 +38,7 @@ HCX 必須遍訪公用網際網路及專用線路，並連接至資料中心元�
   * vCenter 處於鏈結模式（其中，次要 vCenter 使用主要 vCenter 或外部 SSO 服務中的 SSO 服務）。
 
 ## 驗證第 2 層安裝環境
-{: #hcx-archi-port-req-verify-layer-2-inst}
+{: #hcx-archi-prep-install-verify-layer-2-inst}
 
 第 2 層網路延伸具有下列需求：
 * vSphere Enterprise Plus 版本。
@@ -50,7 +50,7 @@ HCX 必須遍訪公用網際網路及專用線路，並連接至資料中心元�
   * 如果想要多個第 2 層集中器，則各在內部部署及雲端中都必須有 IP 位址。
 
 ## 相關鏈結
-{: #hcx-archi-port-req-related}
+{: #hcx-archi-prep-install-related}
 
 * [在來源上安裝及配置 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
 * [VMware EVC 及 CPU 相容性常見問題](http://bit.ly/2vK6Sp5)

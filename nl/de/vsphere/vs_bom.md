@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -17,7 +17,7 @@ Tabelle 1. Teileliste für VMware vSphere-Cluster
 
 | Hersteller | Komponente                       | Version |
 |:-------------|:--------------------------------|:--------|
-| VMware       | vSphere ESXi                    | Entweder 6.5 Update 1 oder 6.0 Update 2 |
+| VMware       | vSphere ESXi                    | Entweder 6.7 Update 1 oder 6.5 Update 2 |
 
 ## Zugehörige Links
 {: #vs_bom-related}

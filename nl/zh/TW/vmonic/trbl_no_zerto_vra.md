@@ -27,4 +27,4 @@ lastupdated: "2019-02-14"
 
 如果要存取 Zerto 主控台，請從該實例的**服務**標籤按一下 Zerto 服務卡，然後按一下**檢視詳細資料**，再按一下**檢視 Zerto 主控台**。
 
-如需與「IBM 支援中心」聯絡的相關資訊，請參閱[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions//vmonic/trbl_support.html)。
+如需與「IBM 支援中心」聯絡的相關資訊，請參閱[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-trbl_support#trbl_support)。

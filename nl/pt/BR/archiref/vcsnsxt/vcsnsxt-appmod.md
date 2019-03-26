@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -39,7 +39,7 @@ Os componentes principais da arquitetura são:
 {: #vcsnsxt-appmod-benefits}
 
 - Entrega acelerada de projetos de TI para desenvolvedores e linhas de negócios, reduzindo o tempo que leva para compras, arquitetura, implementação e implementação de recursos de semanas ou mesmo meses até horas. O tempo de maturação do aplicativo diminuirá se os clientes precisarem esperar até que as equipes de rede ou segurança possam pedir serviços, como balanceadores de carga, firewalls, comutadores e roteadores.
-- Segurança aprimorada com servidores bare metal dedicados em uma nuvem particular hospedada, incluindo a implementação de terminal privado para serviços do {{site.data.keyword.cloud_notm}}, como {{site.data.keyword.containerlong_notm}} e KMIP.
+- Segurança aprimorada com servidores bare metal dedicados em uma nuvem privada hospedada, incluindo a implementação de terminal em serviço de rede privada para serviços do {{site.data.keyword.cloud_notm}}, como o {{site.data.keyword.containerlong_notm}} e o KMIP.
 - Gerenciamento e controle consistentes da nuvem híbrida implementada, fornecendo acesso administrativo total ao gerenciamento de virtualização, preservando suas ferramentas, scripts e investimentos existentes do VMware em treinamento.
 - Conhecimento do VMware em escala global com o IBM Professional and Managed Services abrangendo 30+ {{site.data.keyword.CloudDataCents_notm}} no mundo inteiro.
 

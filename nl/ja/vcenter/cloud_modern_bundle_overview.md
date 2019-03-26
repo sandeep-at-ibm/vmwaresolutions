@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Single-node Trial for Migration and App Modernization の概要
-{: #single-node-trial-for-migration-and-app-modernization-overview}
+{: #cloud_modern_bundle_overview}
 
 Single-node Trial for Migration and App Modernization では、VMware ワークロードを IBM Cloud にマイグレーションしてから、コンテナーを使用して単純なワークロードをモダナイズする、という IBM Cloud のテスト・ドライブを行うことができます。
 
@@ -88,7 +88,7 @@ Dual Intel Xeon Gold 5120 プロセッサー / 合計 28 コア、2.2 GHz、384 
 
 Single-node Trial for Migration and App Modernization インスタンスの注文には、以下のライセンスが含まれています。
 
-* VMware vSphere Enterprise Plus 6.5
+* VMware vSphere Enterprise Plus 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * IBM Cloud Private Hosted V3.1

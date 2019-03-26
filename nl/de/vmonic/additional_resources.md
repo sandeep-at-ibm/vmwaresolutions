@@ -4,29 +4,38 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-26"
 
 ---
 
 # Zusätzliche Ressourcen
 {: #additional_resources}
 
-Ziehen Sie folgende Ressourcen hinzu, um den Einstieg zu beschleunigen.
-* Referenzinformationen zur Architektur
-* Videos
-* Demonstrationen
+Nutzen Sie die folgenden Ressourcen, um den Einstieg zu beschleunigen oder auf detaillierte technische Informationen zu {{site.data.keyword.vmwaresolutions_full}} zuzugreifen. 
+* Videos und Demonstrationen
 * Detaillierte technische Analysen
 * Lerntexte
+* Von der Community zur Verfügung gestellte Inhalte
 
 ## Datenblätter
 {: #additional_resources-data-sheets}
 
-* [{{site.data.keyword.vmwaresolutions_full}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+
+## developerWorks-Anleitungen
+{: #additional_resources-dWrecipes}
+
+* [developerWorks-Anleitungen](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:new_window}
+
+## IBM Cloud-Muster
+{: #additional_resources-patterns}
+
+* [IBM Cloud-Muster](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23)
 
 ## Plattformerweiterungen
 {: #additional_resources-plat-extensions}
 
-Informieren Sie sich über die Architektur der [Erweiterungen für die Virtualisierungsplattform](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions), z. B.:
+Informieren Sie sich über die Architektur der [Erweiterungen für die Virtualisierungsplattform](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions){:new_window}, z. B.:
 * FortiGate Security Appliance
 * {{site.data.keyword.cloud_notm}} File Storage und Block Storage
 * NSX Edge Services Gateway
@@ -38,22 +47,16 @@ Informieren Sie sich über die Architektur der [Erweiterungen für die Virtualis
 ## Videos und Demonstrationen
 {: #additional_resources-demos}
 
-* [Ressourcen und Videos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources)
-* [Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)
-* [Ausgewählte Ressourcen und Fallstudien](https://www.ibm.com/cloud/vmware/resources)
+* [Ressourcen und Videos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:new_window}
+* [Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware){:new_window}
+* [Ausgewählte Ressourcen und Fallstudien](https://www.ibm.com/cloud/vmware/resources){:new_window}
 
 ## IBM Cloud for VMware Solutions - Erkundungstour
 {: #additional_resources-test-drive}
 
-Möchten Sie sich einen eigenen Eindruck verschaffen? Die geführte Demonstration zu {{site.data.keyword.vmwaresolutions_short}} mit schrittweisen Anleitungen ermöglicht Ihnen eine kurze Erkundungstour, in der Sie [VMware vCenter Server ausprobieren](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions) können.
-
-## developerWorks-Anleitungen
-{: #additional_resources-dwrecipes}
-
-* [{{site.data.keyword.vmwaresolutions_short}} - Take a look under the hood](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
-* [Steps to attach dedicated storage to VMware Solutions on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+Möchten Sie sich einen eigenen Eindruck verschaffen? Die geführte Demonstration zu {{site.data.keyword.vmwaresolutions_short}} mit schrittweisen Anleitungen ermöglicht Ihnen eine kurze Erkundungstour, in der Sie [VMware vCenter Server ausprobieren](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions){:new_window} können.
 
 ## VMware-Dokumentation
-{: #additional_resources-vmware-doc}
+{: #additional_resources-VMware-doc}
 
-* [Dokumentation zu VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
+* [Dokumentation zu VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -21,7 +21,7 @@ HyTrust DataControl on {{site.data.keyword.cloud}} 服务通过集成密钥管�
 {:note}
 
 ## HyTrust DataControl on IBM Cloud 的技术规范
-{: #technical-specifications-for-hytrust-datacontrol-on-ibm-cloud}
+{: #htdc_considerations-specs}
 
 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
 

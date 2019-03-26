@@ -18,6 +18,7 @@ lastupdated: "2017-03-08"
 此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Cloud Foundation 实例的组件更新
+{: #relnotes_v14-vcf-comp}
 
 新增或更新了以下组件：
 
@@ -27,13 +28,13 @@ lastupdated: "2017-03-08"
 * VMware ESXi 6.0 u2 p04
 * 为 Microsoft Active Directory (AD) 和 DNS（域名系统）服务订购了新的 Windows VSI（虚拟服务器实例），在此发行版中，多站点配置支持需要此 VSI。此 VSI 具有以下规范：Windows 2012 R2（8 GB RAM / 2 个 CPU 核心 / 100 GB 磁盘 / 双 1 Gbps 专用上行链路）。
 
-有关更多信息，请参阅 [Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)。
-
 ## vCenter Server 实例的组件更新
+{: #relnotes_v14-vcs-comp}
 
 新增或更新了以下组件：
 
 ### VMware NSX for vSphere 6.2.4
+{: #relnotes_v14-nsx}
 
 缺省情况下，会在所有 vCenter Server 实例上安装 VMware NSX for vSphere 6.2.4（先前仅在 Cloud Foundation 实例上安装）。
 
@@ -45,6 +46,7 @@ lastupdated: "2017-03-08"
 有关 VMware NSX for vSphere 6.2.4 中引入的增强功能、其需求和已知问题的更多信息，请参阅 [NSX for vSphere 6.2.4 发行说明](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}。
 
 ### VMware NSX Edge
+{: #relnotes_v14-nsx-edge}
 
 NSX Edge 现在包含在要订购的新 vCenter Server 实例中。NSX Edge 提供网络边缘安全性和网关服务，以隔离虚拟化网络。
 
@@ -52,19 +54,22 @@ NSX Edge 现在包含在要订购的新 vCenter Server 实例中。NSX Edge 提�
 
 为了确保安全性，采用了防火墙规则，以仅允许由管理虚拟机发起的出站 HTTPS 通信。此 ESG 部署在大型配置中，只有 IBM 支持人员才能修改该配置。有关更多信息，请参阅以下主题：
 
-* [vCenter Server 技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [vCenter Server 技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)
 * [管理服务 NSX Edge 会构成安全风险吗？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [VMware NSX 文档](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ### NSX 许可证
+{: #relnotes_v14-nsx-license}
 
 为每个节点订购了一个 VMware NSX Base for Service Providers 版本的许可证。
 
 ### 新增子网地址块
+{: #relnotes_v14-subnet}
 
 为每个节点订购了包含 16 个公共可移植地址的子网块。
 
 ## 服务收费模型更新
+{: #relnotes_v14-svc-charge}
 
 简化了服务收费模型：
 
@@ -73,6 +78,7 @@ NSX Edge 现在包含在要订购的新 vCenter Server 实例中。NSX Edge 提�
 * 对于这两种实例类型，引入了新的_支持和服务_费用，将按每个节点每月收取费用。
 
 ## 对实例联网拓扑的更新
+{: #relnotes_v14-netwok-topo}
 
 此发行版包含针对实例的以下拓扑增强功能：
 
@@ -83,12 +89,12 @@ NSX Edge 现在包含在要订购的新 vCenter Server 实例中。NSX Edge 提�
 {:note}
 
 ## Cloud Foundation 实例的多站点配置支持
+{: #relnotes_v14-vcf-multisite}
 
 现在，您可以部署单个 Cloud Foundation 实例，就像在前发行版中那样，或者额外部署连接到主实例的辅助实例。多站点配置模型使用轴辐式拓扑，其中包含一个主站点和最多七个辅助站点。
 
-有关更多信息，请参阅 [Cloud Foundation 实例的多站点配置](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_multisite)。
-
 ## Zerto 灾难恢复部署的增强功能
+{: #relnotes_v14-zerto}
 
 * 对于 Cloud Foundation 实例，Zerto 灾难恢复部署会自动执行，而不是通过支持凭单来处理。所有 Zerto 组件（例如，专用可移植子网、Windows VSI（虚拟服务实例）和 Zerto 许可证）的费用都会列在估算成本上，这样您可以在下订单之前进行复查。
 * 对于 vCenter Server 实例，Zerto 灾难恢复部署是通过支持凭单完成的（与前发行版一样）。但是，不再需要 NSX Edge 和公用可移植子网，因为这两项现在包含在基本部署中。专用可移植子网、Windows VSI（虚拟服务实例）和 Zerto 许可证的费用仍然适用。
@@ -96,25 +102,25 @@ NSX Edge 现在包含在要订购的新 vCenter Server 实例中。NSX Edge 提�
 有关更多信息，请参阅 [Zerto 灾难恢复](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)。
 
 ## 实例订购过程
+{: #relnotes_v14-inst-order}
 
 极大地简化了实例订购过程：
 
 * 对于 Cloud Foundation 实例和 vCenter Server 实例，在订购过程中不再显示“SoftLayer 凭证”页面。缺省情况下，将使用在“设置”页面上定义的 SoftLayer 凭证，并且仅当不满足需求时，系统才会提示您更新这些凭证。
 * 此外，对于 vCenter Server 实例，现在对于**硬件**类型仅提供**大型**选项，对于**上行链路端口速度**仅提供 **10 Gbps 双**设置，这可减少订购时要指定的设置数量。
 
-有关更多信息，请参阅以下主题：
-
-* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
-* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+有关更多信息，请参阅[订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)。
 
 ## 实例管理
+{: #relnotes_v14-inst-mgmt}
 
 为实例管理过程提供了以下新功能和改进：
 
-* 对于 Cloud Foundation 实例，可以在实例详细信息页面上查看各种实例组件的用户名和密码。有关更多信息，请参阅[查看 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)。
+* 对于 Cloud Foundation 实例，可以在实例详细信息页面上查看各种实例组件的用户名和密码。
 * 对于 vCenter Server 实例，可以直接在控制台中安装 IBM 组件的软件更新和补丁。有关更多信息，请参阅[对 vCenter Server 实例应用更新和补丁](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)。
 
 ## 控制台通知
+{: #relnotes_v14-console-notif}
 
 现在，可以在**设置**页面上配置控制台通知。缺省情况下，此设置已启用，这意味着您将在控制台中收到所有事件的通知。还可以在**设置**页面上禁用控制台的通知。
 

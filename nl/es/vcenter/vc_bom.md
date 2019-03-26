@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -37,13 +37,13 @@ En la tabla siguiente se muestra la información de la lista de materiales para 
 
 Tabla 2. Lista de materiales para los componentes de software de instancias de vCenter Server
 
-| Fabricante  | Componente                      | Versión       |
+| Fabricante  | Componente                      | Versión    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.5 Actualización P3 (compilación 6.5.0-10884925) |
-| VMware       | vCenter Server Appliance        | 6.5 U2d (compilación 6.5.0-10964411) |
-| VMware       | Platform Services Controller    | 6.5 U2d (compilación 6.5.0-10964411) |
-| VMware       | vSAN                            | 6.6.1        |
-| VMware       | NSX for vSphere                 | 6.4.1        |
+| VMware       | vSphere ESXi                    | 6.7 Actualización 1 (build 6.7.0-11675023) o <br/>6.5 Actualización 2 (build 6.5.0-11925212) |
+| VMware       | vCenter Server Appliance        | 6.7 Actualización 1 (build 6.7.0-10244745) o <br/>6.5 Actualización 2d (build 6.5.0-10964411) |
+| VMware       | Platform Services Controller    | 6.7 Actualización 1 (build 6.7.0-10244745) o <br/>6.5 Actualización 2d (build 6.5.0-10964411) |
+| VMware       | vSAN                            | 6.7 Actualización 1 o <br/>6.6.1       |
+| VMware       | NSX for vSphere                 | 6.4.4 (build 11197766)    |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
 VMware vSAN es un componente opcional.
@@ -138,6 +138,6 @@ Para actualizar el valor de MTU del conmutador público, siga estos pasos en el 
 * [Números de compilación y versiones de VMware ESXi y ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Números de compilación y versiones de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Habilitación de tramas de gran tamaño en conmutadores distribuidos virtuales](https://kb.vmware.com/s/article/1038827)
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+* [Hoja de protección de datos de {{site.data.keyword.vmwaresolutions_short}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
 * [Visión general de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Planificación de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

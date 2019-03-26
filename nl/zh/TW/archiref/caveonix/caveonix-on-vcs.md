@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-28"
 
 ---
 
 # Caveonix RiskForesight on IBM Cloud for VMware Solutions
 {: #caveonix-on-vcs}
 
-Caveonix RiskForesight on {{site.data.keyword.vmwaresolutions_full}} 提供在「全功能」虛擬機器 (VM) 部署中自動化部署 Caveonix RiskForesight 解決方案。它最初配置了「服務提供者」及「承租戶」，並整合到 vCenter 及 NSX Manager 中。「資產儲存庫」中會移入 VMware vCenter Server 基礎架構元件，以及配置一個代表 VMware 基礎架構平台的「應用程式與子應用程式」。在儀表板上，會提供網路風險和法規遵循風險評分，以及所需之法規制度的法規遵循報告。
+Caveonix RiskForesight on {{site.data.keyword.vmwaresolutions_full}} 提供在「全功能」虛擬機器 (VM) 部署中自動化部署 Caveonix RiskForesight 解決方案。它最初配置了「服務提供者」及「承租戶」，並整合到 vCenter 及 NSX Manager 中。「資產儲存庫」會移入 VMware vCenter Server 基礎架構元件，以及配置代表 VMWare 基礎架構平台的「應用程式與子應用程式」。在儀表板上，會提供網路風險和法規遵循風險評分，以及所需之法規制度的法規遵循報告。
 
 下列清單是起始工作流程的概觀：
 1.	用戶端訂購服務，並起始「RiskForesight 應用程式」的自動化安裝。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -53,13 +53,6 @@ vCenter Server with Hybridity 오퍼링은 온프레미스 인프라를 클라�
 
 자세한 정보는 [vCenter Server with Hybridity Bundle 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)를 참조하십시오.
 
-### VMware Cloud Foundation on IBM Cloud
-{: #prod_overview-cf}
-
-Cloud Foundation 오퍼링은 각 사용자 배치에 전용인 표준 {{site.data.keyword.cloud_notm}} 컴퓨팅, 스토리지 및 네트워크 리소스를 사용하여 통합 VMware 가상 환경을 제공합니다.
-
-자세한 정보는 [Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)를 참조하십시오.
-
 ### VMware vSphere on IBM Cloud
 {: #prod_overview-vss}
 
@@ -78,6 +71,11 @@ NetApp ONTAP Select 오퍼링은 NetApp ONTAP Select 기반의 전용 및 고가
 {: #prod_overview-services}
 
 {{site.data.keyword.vmwaresolutions_short}}는 인스턴스 주문 시 또는 인스턴스 배치 후에 여러 서비스를 추가할 수 있도록 합니다. 다음 서비스가 제공됩니다.
+
+### IBM Cloud의 Caveonix RiskForesight
+{: #prod_overview-caveonix}
+
+{{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight 서비스는 위협으로부터 보호하고 업계 또는 정부 규제를 충족하도록 하기 위해 사전 모니터링 및 자동화된 방어 제어를 통해 사이버 및 규제 준수 위험을 관리합니다. 
 
 ### F5 on IBM Cloud
 {: #prod_overview-f5}
@@ -119,7 +117,7 @@ HyTrust DataControl on {{site.data.keyword.cloud_notm}}는 워크로드를 해�
 
 HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 서비스는 암호화 키의 라이프사이클을 자동화 및 간소화하여 암호화된 워크로드의 관리를 간소화합니다. 이 서비스는 FIPS 140-2 준수 암호화를 사용하여 암호화 키를 규모에 맞게 쉽게 관리할 수 있습니다. 이 서비스를 사용하면 모든 가상 머신 및 암호화된 데이터 저장소에 대한 암호화 키를 관리하고 대규모 배치에서 수천 개의 암호화된 워크로드를 지원하도록 확장할 수 있습니다.
 
-자세한 정보는 [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)를 참조하십시오.
+자세한 정보는 [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)를 참조하십시오.
 
 ### IBM Cloud Private Hosted
 {: #prod_overview-icp}

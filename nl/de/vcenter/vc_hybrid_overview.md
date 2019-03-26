@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -68,7 +68,7 @@ Diese Schicht bietet eine Abstraktion von Ressourcen zwischen den lokalen Sites 
 Sie können auf der Basis von VMware Hybrid Cloud Extension (HCX) lose gekoppelte Verbindungen zwischen lokalen Sites und {{site.data.keyword.cloud_notm}}-Sites erstellen, um Massenmigrationen von VMs oder Live-vMotion von VMs ohne Ausfallzeit zu ermöglichen.
 
 ## Technische Spezifikationen für vCenter Server with Hybridity Bundle-Instanzen
-{: #technical-specifications-for-vcenter-server-with-hybridity-bundle-instances}
+{: #vc_hybrid_overview-specs}
 
 Ihre vCenter Server with Hybridity Bundle-Instanz enthält die folgenden Komponenten:
 
@@ -78,9 +78,9 @@ Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen kön
 ### Bare Metal Server
 {: #vc_hybrid_overview-bare-metal}
 
-Zum Lieferumfang der Bestellung Ihrer vCenter Server with Hybridity Bundle-Instanz gehören vier **Skylake** oder **Broadwell** {{site.data.keyword.baremetal_short}}-Instanzen. Die folgenden CPU-Modelle sind verfügbar:
-  * 2-CPU Intel Skylake Generation (Intel Xeon 4100/5100/6100 Series)
-  * 2-CPU Intel Broadwell Generation (Intel Xeon E5-2600/E7-4800 Series)
+Vier {{site.data.keyword.baremetal_short}}-Instanzen erhalten Sie für Ihre Bestellung einer vCenter Server with Hybridity Bundle-Instanz. Die folgenden Konfigurationen sind verfügbar: 
+  * **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
+  * **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600/E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 
 ### Vernetzung
 {: #vc_hybrid_overview-networking}
@@ -120,7 +120,7 @@ Der vSAN-Speicher bietet angepasste Konfigurationen mit unterschiedlichen Option
 
 Die Bestellung der vCenter Server with Hybridity Bundle-Instanz enthält die folgenden Lizenzen.
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 oder 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Advanced oder Enterprise) 6.4
 * VMware vSAN (Advanced oder Enterprise) 6.6
@@ -140,7 +140,7 @@ Jeder vCenter Server with Hybridity Bundle-Erweiterungsknoten stellt die folgend
 ### Lizenzen und Gebühren für Erweiterungsknoten
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
 
-* 1 Lizenz für VMware vSphere Enterprise Plus 6.5u1
+* 1 Lizenz für VMware vSphere Enterprise Plus 6.5u2 oder 6.7u1
 * 1 Lizenz für VMware NSX Service Providers Edition (Advanced oder Enterprise) 6.4
 * 1 Support- und Servicegebühr
 * VMware vSAN (Advanced oder Enterprise) 6.6

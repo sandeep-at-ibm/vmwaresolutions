@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -16,7 +16,7 @@ Mit dem hier beschriebenen Verfahren können Sie die lokalen HCX on {{site.data.
 ## Vorgehensweise zum Anzeigen lokaler VMware HCX on IBM Cloud-Instanzen
 {: #standalone_viewingserviceinstances-procedure}
 
-Klicken Sie im linken Navigationsfenster auf **Bereitgestellte Instanzen** und blättern Sie abwärts zur Tabelle **Lokale HCX-Instanzen**, um die Informationen zu den von Ihnen bestellten Instanzen anzuzeigen:
+Klicken Sie im linken Navigationsfenster auf **Ressourcen** und blättern Sie abwärts zur Tabelle **Lokale HCX-Instanzen**, um die Informationen zu den von Ihnen bestellten Instanzen anzuzeigen: 
 
 Tabelle 1. Elemente von lokalen HCX on {{site.data.keyword.cloud_notm}}-Instanzen
 

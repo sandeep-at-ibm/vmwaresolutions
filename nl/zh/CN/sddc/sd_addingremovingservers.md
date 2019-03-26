@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -33,7 +33,7 @@ lastupdated: "2019-02-14"
 ## 添加 ESXi 服务器的过程
 {: #sd_addingremovingservers-adding-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **Cloud Foundation 实例**表中，单击要扩展容量的实例。
 3. 在左侧导航窗格上，单击**基础架构**。
 4. 在**集群**表中，单击要在其中添加 ESXi 服务器的集群。
@@ -61,7 +61,7 @@ lastupdated: "2019-02-14"
 ## 除去 ESXi 服务器的过程
 {: #sd_addingremovingservers-removing-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **Cloud Foundation 实例**表中，单击要压缩容量的实例。
 3. 在左侧导航窗格上，单击**基础架构**。
 4. 在**集群**表中，单击要从中除去 ESXi 服务器的集群。
@@ -81,7 +81,6 @@ lastupdated: "2019-02-14"
 {: #sd_addingremovingservers-related}
 
 * [Cloud Foundation 材料清单](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
-* [针对 Cloud Foundation 实例的需求和规划](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
-* [添加、查看和删除 Cloud Foundation 实例的集群](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [添加、查看和删除 Cloud Foundation 实例的集群](/docs/services/vmwaresolutions/services?topic=vmware-solutions-sd_addingviewingclusters#sd_addingviewingclusters)
 * [将主机置于维护模式](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) 处理器支持](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

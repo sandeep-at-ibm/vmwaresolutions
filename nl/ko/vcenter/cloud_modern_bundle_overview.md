@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 개요
-{: #single-node-trial-for-migration-and-app-modernization-overview}
+{: #cloud_modern_bundle_overview}
 
 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판을 사용하면 IBM Cloud를 시범 작동하여 VMware 워크로드를 IBM Cloud에 마이그레이션한 후 컨테이너의 사용을 통해 워크로드를 현대화할 수 있습니다.
 
@@ -32,7 +32,7 @@ lastupdated: "2019-02-14"
 ## 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스의 기술 스펙
 {: #cloud_modern_bundle_overview-tech-specs}
 
-다음 컴포넌트는 마이그레이션 및 현대화를 위한 단일 노드 평가판 인스턴스에 포함됩니다.
+다음 컴포넌트가 마이그레이션 및 현대화를 위한 단일 노드 평가판 인스턴스에 포함됩니다.
 
 표준화된 하드웨어 구성의 가용성 및 가격은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
 {:note}
@@ -88,7 +88,7 @@ lastupdated: "2019-02-14"
 
 다음 라이센스는 마이그레이션 및 현대화를 위한 단일 노드 평가판 인스턴스 주문에 포함됩니다.
 
-* VMware vSphere Enterprise Plus 6.5
+* VMware vSphere Enterprise Plus 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * IBM Cloud Private Hosted V3.1

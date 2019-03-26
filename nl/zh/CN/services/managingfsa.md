@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -27,9 +27,7 @@ lastupdated: "2019-02-15"
 * 使用可在 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务详细信息页面上找到的凭证，登录到 FortiOS Web Client。
 * 使用可在 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务详细信息页面上找到的凭证，通过 SSH 连接访问该控制台。
 
-有关更多信息，请参阅以下主题：
-* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+有关更多信息，请参阅[订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。
 
 ## 相关链接
 {: #managingfsa-related}

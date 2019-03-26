@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -41,9 +41,8 @@ lastupdated: "2019-02-21"
 
 * [邀请用户和分配访问权](/docs/iam?topic=iam-iamuserinv)
 * [管理身份和访问权](/docs/iam?topic=iam-getstarted)
-* [管理用户和访问权](/docs/iam/iamusermanage.html)
+* [邀请用户](/docs/iam?topic=iam-iamuserinv#iamuserinv)
 * [什么是 IAM](/docs/iam?topic=iam-iamoverview)
 * [将 V2.5 之前的 vCenter Server 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
 * [将 V2.5 之前的 vCenter Server with Hybridity Bundle 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
-* [将 V2.5 之前的 Cloud Foundation 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addinstancetousraccount)
 * [将 V2.5 之前的 NetApp ONTAP Select 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)

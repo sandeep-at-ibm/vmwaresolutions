@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -20,6 +20,7 @@ Encuentre las respuestas a preguntas frecuentes sobre los servidores ESXi que se
 
 ## ¿Cuántos servidores ESXi puedo añadir a mi instancia?
 {: #faq_esxi-instance}
+{: faq}
 
 * Para instancias de vCenter Server, puede expandir el clúster predeterminado para tener hasta 51 servidores ESXi. Cada uno de los clústeres no predeterminados se puede ampliar hasta tener un máximo de 59 servidores ESXi. Dado que puede añadir hasta 10 clústeres a una instancia, cada instancia desplegada puede tener un máximo de 51 + 9x59 = 582 servidores ESXi en todos los clústeres.
 * Para instancias de Cloud Foundation, la configuración estándar tiene cuatro servidores ESXi. Puede añadir un máximo de 28 servidores (hasta un total de 32 servidores). Para las instancias de Cloud Foundation de una configuración de varios sitios, puede tener un máximo de 128 servidores ESXi en todas las instancias.
@@ -29,6 +30,7 @@ Encuentre las respuestas a preguntas frecuentes sobre los servidores ESXi que se
 
 ## ¿Cuántos servidores ESXi puedo añadir a un clúster?
 {: #faq_esxi-cluster}
+{: faq}
 
 Para instancias desplegadas en V2.2 y posteriores, puede añadir un máximo de 51 servidores ESXi a un clúster inicial y un máximo de 59 servidores ESXi a clústeres añadidos.
 
@@ -46,6 +48,7 @@ Para instancias desplegadas en V2.1 o anteriores, debe habilitar el soporte de v
 
 ## ¿Puedo cambiar las direcciones IP y los nombres de los servidores ESXi?
 {: #faq_esxi-change-name-ip}
+{: faq}
 
 Los nombres de servidor de ESXi y las direcciones IP no se pueden cambiar porque están registrados para la resolución de DNS de Windows. Los cambios podrían dar lugar a errores durante el despliegue o a errores en funciones de vCenter Server.
 
@@ -54,6 +57,7 @@ No utilice la característica **Renombrar dispositivo** en la interfaz de usuari
 
 ## ¿Puedo inhabilitar el acceso raíz de mis servidores ESXi?
 {: #faq_esxi-disable-root}
+{: faq}
 
 Se recomienda mantener el acceso raíz habilitado en los servidores ESXi; de lo contrario podrían producirse anomalías en las funciones de {{site.data.keyword.vmwaresolutions_short}}.
 
@@ -63,6 +67,7 @@ Debe volver a habilitar el acceso raíz para las operaciones de automatización 
 
 ## ¿Puedo añadir rutas estáticas en mis servidores ESXi para montar el almacenamiento de otras ubicaciones?
 {: #faq_esxi-static-routes}
+{: faq}
 
 Puede añadir rutas estáticas para el almacenamiento, pero debe hacerlo con extrema precaución. De lo contrario, se podrían desmontar las comparticiones existentes.
 
@@ -73,7 +78,5 @@ No se da soporte a la adición de rutas estáticas para vMotion. Los cambios en 
 {: #faq_esxi-related}
 
 * [Ampliación y reducción de la capacidad para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [Adición, visualización y supresión de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
-* [Adición, visualización y supresión de clústeres para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
 * [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

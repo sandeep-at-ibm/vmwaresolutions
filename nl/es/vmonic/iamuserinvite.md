@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -41,9 +41,8 @@ Después de que los usuarios añadidos acepten la invitación, pueden iniciar se
 
 * [Invitación de usuarios y asignación de acceso](/docs/iam?topic=iam-iamuserinv)
 * [Gestión de identidad y acceso](/docs/iam?topic=iam-getstarted)
-* [Gestión de usuarios y acceso](/docs/iam/iamusermanage.html)
+* [Invitación a usuarios](/docs/iam?topic=iam-iamuserinv#iamuserinv)
 * [¿Qué es IAM?](/docs/iam?topic=iam-iamoverview)
 * [Migración de instancias anteriores a V2.5 vCenter Server a cuentas de IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
 * [Migración de vCenter Server anterior a V2.5 con las instancias del paquete híbrido (Hybridity) en cuentas de IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
-* [Migración de instancias anteriores a V2.5 Cloud Foundation a cuentas de IBM Cloud](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addinstancetousraccount)
 * [Migración de instancias anteriores a V2.5 NetApp ONTAP Select a cuentas de IBM Cloud](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)

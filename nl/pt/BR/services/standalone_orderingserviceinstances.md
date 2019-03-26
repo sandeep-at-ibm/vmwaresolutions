@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 ## Procedimento para pedir instâncias do VMware HCX on IBM Cloud no local
 {: #standalone_orderingserviceinstances-procedure}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Role para a tabela **Instâncias do HCX no local** e clique em **Provisionar novo**.
 3. Especifique o  ** Nome da Instância no local **.
 4. Clique no link ou nos links dos termos que se aplicam ao seu pedido e assegure-se de concordar com esses termos antes de pedir a instância.

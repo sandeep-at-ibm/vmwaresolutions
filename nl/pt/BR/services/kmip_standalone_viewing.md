@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -16,7 +16,7 @@ Use este procedimento para visualizar as instâncias do KMIP for VMware on {{sit
 ## Procedimento para visualizar instâncias do KMIP for VMware on IBM Cloud
 {: #kmip_standalone_viewing-procedure}
 
-Clique em **Instâncias implementadas** na área de janela de navegação à esquerda e role para baixo até a tabela **Instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}** para visualizar informações sobre as instâncias que você pediu:
+Clique em **Recursos** na área de janela de navegação à esquerda e role para baixo até a tabela **Instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}} ** para visualizar informações sobre as instâncias que você pediu:
 
 Tabela 1. Itens de instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}
 

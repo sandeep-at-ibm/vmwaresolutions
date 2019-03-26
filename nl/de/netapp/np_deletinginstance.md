@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -28,10 +28,10 @@ Aufgrund von Ressourcenabhängigkeiten werden die Komponenten in Ihrer Instanz n
 Die gelöschte Instanz wird Ihnen bis zum Ende des Abrechnungszyklus berechnet.
 {:note}
 
-## Vorgehensweise zum Löschen von Instanzen auf der Seite "Bereitgestellte Instanzen"
+## Vorgehensweise zum Löschen von Instanzen auf der Seite "Ressourcen"
 {: #np_deletinginstance-procedure1}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Suchen Sie in der Tabelle **NetApp ONTAP Select-Instanzen** nach der Instanz, die gelöscht werden soll.
 3. Klicken Sie in der Spalte **Aktionen** auf das Symbol "Löschen".
    Der Status der Instanz ändert sich in **Wird gelöscht**. Nachdem die Instanz erfolgreich gelöscht wurde und sich ihr Status in **Gelöscht** geändert hat, klicken Sie erneut in der Spalte **Aktionen** auf das Symbol "Löschen".
@@ -42,7 +42,7 @@ Die gelöschte Instanz wird Ihnen bis zum Ende des Abrechnungszyklus berechnet.
 ## Vorgehensweise zum Löschen von Instanzen auf der Seite "Instanzdetails"
 {: #np_deletinginstance-procedure2}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **NetApp ONTAP Select-Instanzen** auf die Instanz, die gelöscht werden soll.
 3. Klicken Sie auf das Überlaufmenüsymbol neben der **NetApp-Konsole** und klicken Sie auf **Instanz löschen**.
    Der Status der Instanz ändert sich in **Wird gelöscht**. Nachdem die Instanz erfolgreich gelöscht wurde, werden die Komponenten der Instanz freigegeben und der Status der Instanz ändert sich in **Gelöscht**.

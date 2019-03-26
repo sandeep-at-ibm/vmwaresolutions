@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-02-15"
 ## Virtual Routing and Forwarding (VRF)
 {: #vcscar-arch-overview-infrastructure-vrf}
 
-Les comptes {{site.data.keyword.cloud}} peuvent également être configurés en tant que comptes VRF (Virtual Routing and Forwarding). Un compte VRF permet de fournir des fonctionnalités similaires au spanning VLAN et ainsi d'activer le routage automatique entre les blocs d'adresses IP de sous-réseau. Tous les comptes dotés de connexions Direct Link doivent être convertis en ou créés en tant que compte VRF.
+Les comptes {{site.data.keyword.cloud}} peuvent être configurés en tant que comptes VRF (Virtual Routing and Forwarding). Un compte VRF active le routage global automatique entre des blocs IP de sous-réseau. Tous les comptes dotés de connexions Direct Link doivent être convertis en ou créés en tant que compte VRF.
 
 ## Direct Link
 {: #vcscar-arch-overview-infrastructure-direct-link}

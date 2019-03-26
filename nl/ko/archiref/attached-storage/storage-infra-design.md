@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-27"
 
 ---
 
@@ -64,9 +64,9 @@ VLAN에 대한 자세한 정보는 [실제 인프라 디자인](/docs/services/v
 
 Performance 및 Endurance 스토리지는 예측 가능한 레벨의 성능을 요구하는 높은 I/O 애플리케이션을 지원하도록 디자인된 {{site.data.keyword.cloud_notm}} 스토리지 솔루션입니다. 이 예측 가능한 성능은 프로토콜 레벨의 초당 입출력(I/O) 오퍼레이션(IOPS)을 개별 볼륨으로 할당하여 달성됩니다.
 
-100 - 48,000 범위의 IOPS는 20GB - 12TB 저장 크기로 주문할 수 있습니다. Performance 및 Endurance 스토리지 볼륨은 블록 스토리지 및 파일 스토리지에 사용 가능합니다.
+100 - 96,000 범위의 IOPS는 20GB - 24TB 저장 크기로 주문할 수 있습니다. Performance 및 Endurance 스토리지 볼륨은 블록 스토리지 및 파일 스토리지에 사용 가능합니다.
 
-이 디자인에서 vCenter Server 솔루션은 연결된 스토리지에 대해 Endurance 스토리지를 제공합니다. 따라서 20GB - 12TB 크기의 Endurance NFS 내보내기를 선택하여 연결할 수 있습니다(자동화를 통해). {{site.data.keyword.cloud_notm}}는 단일 Endurance NFS 내보내기에 연결할 vSphere ESXi 호스트를 64개까지 허용합니다.
+이 디자인에서 vCenter Server 솔루션은 연결된 스토리지에 대해 Endurance 스토리지를 제공합니다. 따라서 20GB - 24TB 크기의 Endurance NFS 내보내기를 선택하여 연결할 수 있습니다(자동화를 통해). {{site.data.keyword.cloud_notm}}는 단일 Endurance NFS 내보내기에 연결할 vSphere ESXi 호스트를 64개까지 허용합니다.
 
 Endurance는 다양한 애플리케이션 욕구를 지원하기 위해 세 가지 IOPS 성능 티어에서 사용 가능합니다.
 

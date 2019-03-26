@@ -14,6 +14,7 @@ lastupdated: "2017-08-28"
 Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Service "Fortinet on IBM Cloud"
+{: #relnotes_v18-fortinet}
 
 Der Service "Fortinet on {{site.data.keyword.cloud_notm}}" ist jetzt für Cloud Foundation- und für vCenter Server-Instanzen verfügbar. Dieser Service stellt ein Paar von Einheiten der FortiGate Security Appliance (FSA) 300-Serie in einem Hochverfügbarkeitsmodus bereit, um Firewall-, Routing-, NAT- und VPN-Services für den Schutz aller Server und virtuellen Maschinen im öffentlichen VLAN Ihrer Instanzen zur Verfügung zu stellen. Sie können Instanzen bestellen, die den Service "Fortinet" enthalten, oder diesen Service zu einem späteren Zeitpunkt über die Seite mit den Instanzdetails zu Ihren vorhandenen Instanzen hinzufügen.
 
@@ -24,6 +25,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Fortinet on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
 
 ## Service "Veeam on IBM Cloud"
+{: #relnotes_v18-veeam}
 
 Mit diesem Release wird der Service "Veeam on {{site.data.keyword.cloud_notm}}" eingeführt, der sowohl Managementkomponenten als auch Workloads sichern kann. Der neue Service ersetzt die vorherige virtuelle Serverinstanz von Veeam, die in Releases vor V1.8 zur ausschließlichen Sicherung von Managementkomponenten integriert war.
 
@@ -36,20 +38,20 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Veeam on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
 ## Updates für VMware Cloud Foundation-Instanzen
+{: #relnotes_v18-vcf}
 
 ### Eigene VMware-Lizenzen (BYOL) bei der Bestellung von Cloud Foundation-Instanzen verwenden
+{: #relnotes_v18-byol}
 
 Ab Release V1.8 haben Sie bei der Bestellung einer Cloud Foundation-Instanz zwei Möglichkeiten für die Lizenzierung der VMware-Komponenten der Instanz (inklusive vSphere, vCenter Server, NSX und vSAN). Sie können auswählen, dass in Ihrem Namen neue Lizenzen erworben werden sollen.
 
 Sie können aber auch die Verwendung Ihrer eigenen VMware-Lizenz für eine Komponente auswählen. In diesem Fall müssen Sie die Lizenzschlüssel bereitstellen. Die Unterstützung für die VMware-Komponenten, für die Sie Lizenzen selbst bereitstellen, erhalten Sie dann durch VMware und nicht durch den IBM Support.
 
-Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
-* [Häufig gestellte Fragen zu eigenen Lizenzen (BYOL)](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
-
 ## Updates für VMware vCenter Server-Instanzen
+{: #relnotes_v18-vcs}
 
 ### CPU und Speicher von Instanzen anpassen
+{: #relnotes_v18-custom-cpu}
 
 Neben den vordefinierten und getesteten Optionen "S (Klein)", "M (Mittel)" und "L (Groß)" gibt es eine anpassbare Serveroption. Sie können eine Auswahl in einer Liste mit VMware-HCL-kompatiblen Servern treffen, die auf Dual-CPUs und der Gesamtzahl der Kerne sowie der RAM-Menge basiert. Lokaler Speicher kann nicht angepasst werden.
 
@@ -58,6 +60,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### Unterstützung für das Hinzufügen von mehr als sieben gemeinsam genutzten NFS-Dateiressourcen
+{: #relnotes_v18-nfs}
 
  Für alle ESXi-Server in einem Cluster können Sie bis zu maximal 32 gemeinsam genutzte Dateiressourcen zuordnen.
 
@@ -66,12 +69,14 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### Updates für Rechenzentren
+{: #relnotes_v18-dc}
 
 Die folgenden neuen Rechenzentren sind für die Bereitstellung verfügbar: **DAL-09, DAL-12, DAL-13 - Dallas**; **LON-04, LON-06 - London**; **SJC-04 - San Jose**; **WDC-06, WDC-07 - Washington, DC**.
 
 Weitere Informationen finden Sie unter [Voraussetzungen und Planung für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning).
 
 ## Erweiterungen beim Bedienungskomfort
+{: #relnotes_v18-ui}
 
 In der gesamten Benutzerschnittstelle wurden Verbesserungen vorgenommen:
 * Auf der Seite **Einführung** im linken Navigationsfenster können Sie sich über Services informieren und eine Instanz bestellen.

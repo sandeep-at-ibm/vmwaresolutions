@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -21,7 +21,7 @@ HyTrust DataControl on {{site.data.keyword.cloud}} 服務提供具有整合式�
 {:note}
 
 ## HyTrust DataControl on IBM Cloud 的技術規格
-{: #technical-specifications-for-hytrust-datacontrol-on-ibm-cloud}
+{: #htdc_considerations-specs}
 
 下列元件已訂購並包括在 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務中：
 

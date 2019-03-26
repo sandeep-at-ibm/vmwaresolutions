@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -27,8 +27,7 @@ VMware NSX 是一種網路虛擬化平台，可將隔離的網路虛擬化，並
 * 在連接至第 2 層 (L2) 網路的本端工作負載之間，會針對潛在的東西向通訊而部署範例「NSX 分散式邏輯路由器 (DLR)」。
 * 部署及配置 NSX Edge 應用裝置，以執行從工作負載邏輯交換器之 IP 位址範圍到 NAT 規則上之公用 IP 位址的網址轉換 (NAT)。
 
-  未針對僅限專用的實例部署 NXS Edge。
-  {:note}
+  對於僅限專用的實例，不會部署 NSX Edge。{:note}
 
 * 如果您已安裝 Veeam on {{site.data.keyword.cloud_notm}} 服務，則會配置 NSX Manager 執行 NSX 配置的每日備份。如需相關資訊，請參閱[安裝 Veeam on {{site.data.keyword.cloud_notm}} 時的考量](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud)。
 
@@ -73,13 +72,13 @@ Edge **customer-nsx-edge** 是要給您自己使用的，因此您可以修改�
 若要識別客戶子網路的詳細資料，以便您可以使用已訂購的 IP 位址，請在 VMware vSphere Web Client 完成下列步驟：
 
 1. 按一下**首頁 > 網路與安全**。
-2. 在導覽窗格上，按一下 **NSX Edge**，然後按兩下 **customer-nsx-edge** Edge。
-3. 在這個 Edge 的**摘要**標籤中，檢閱 Edge 說明，其中包含專用和公用客戶子網路的子網路 ID。
+2. 在導覽窗格上，按一下 **NSX Edge**，然後在右窗格的 Edge 清單中找出 **customer-nsx-edge edge**。
+3. 在**說明**直欄中，將游標移至 **customer-nsx-edge** 的 Edge 說明，來查看專用和公用客戶子網路的子網路 ID。
 
 此外，您也可以在 {{site.data.keyword.slportal}} 中完成下列步驟，來尋找有關客戶子網路的更多詳細資料：
 
 1. 按一下**網路 > IP 管理 > 子網路**。
-2. 按一下過濾器功能表，然後在「子網路」欄位中輸入您在 VMware vSphere Web Client 的**摘要**標籤，**customer-nsx-edge** Edge 說明中所看到的 ID。
+2. 按一下過濾器功能表，然後在**子網路**欄位中輸入在 VMware vSphere Web Client 的 **customer-nsx-edge** 的說明中所看到的 ID。
 3. 檢閱針對 IP 位址所顯示的附註。這些附註可識別在起始設定期間所訂購及使用的子網路和 IP 位址。
 
    請勿使用在起始設定期間所訂購及使用的 IP 位址。不過，您可以根據自己的需求使用這些子網路上的其他 IP 位址。若要設定其他網址轉換規則，請參閱 [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}。

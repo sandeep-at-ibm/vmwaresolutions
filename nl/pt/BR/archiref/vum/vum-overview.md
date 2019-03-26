@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -45,7 +45,7 @@ A interface do cliente VUM fornece duas visualizações principais:
 *	Visualização de Administração
 *	Visualização de conformidade
 
-## Visualização de Administração
+##	Visualização de Administração
 {: #vum-overview-admin-view}
 
 A visualização de administração é acessada navegando para **Página inicial** > **Update Manager** e selecionando o endereço IP da instância do Update Manager. Na visualização Administração, é possível executar as tarefas a seguir:
@@ -56,7 +56,7 @@ A visualização de administração é acessada navegando para **Página inicial
 *	Revisar e Verificar Notificações
 *	Importar imagens do ESXi
 
-## Visualização de conformidade
+##	Visualização de conformidade
 {: #vum-overview-compliance-view}
 
 A visualização de conformidade de um objeto de inventário selecionado é acessada navegando para **Hosts e clusters** ou **MVs e modelos** e clicando na **guia Update Manager**. Na visualização Conformidade do Update Manager, é possível executar as tarefas a seguir:

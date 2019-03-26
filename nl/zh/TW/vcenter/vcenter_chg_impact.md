@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -31,6 +31,7 @@ lastupdated: "2019-02-14"
 
 ## 服務特定使用者帳戶
 {: #vcenter_chg_impact-service-usr-account}
+{: faq}
 
 每一個服務都會在 vCenter Server 中建立內部使用者帳戶。此帳戶是必要的，因此與服務相關聯的管理作業可以連接至 vCenter Server，以在服務上執行作業。
 
@@ -44,6 +45,7 @@ lastupdated: "2019-02-14"
 
 ## vCenter Server 實例的 VMware 資源（第 1.9 版以及更新版本）
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
+{: faq}
 
 若為部署在 1.9 版以及更新版本中的實例，如果 vCenter Server 實例處於**備妥使用**狀態，您可以從 VMware vSphere Web Client 修改 VMware 虛擬資料中心、叢集、交換器、埠群組及客戶資料儲存庫名稱。
 
@@ -51,6 +53,7 @@ lastupdated: "2019-02-14"
 
 ## vCenter Server 實例的 VMware 資源（1.8 版及更早版本）
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
+{: faq}
 
 下表列出當 SSO 管理者在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更 VMware vCenter Server 資源時可能受到影響的作業。如果有可用的回復解決方案，則也會提供它。
 
@@ -80,6 +83,7 @@ lastupdated: "2019-02-14"
 
 ## vCenter Server 實例的管理子網路
 {: #vcenter_chg_impact-mgmt-subnets}
+{: faq}
 
 下列資訊討論 {{site.data.keyword.vmwaresolutions_short}} 所訂購的子網路，並提供選項讓您訂購額外子網路以供您自己使用。
 

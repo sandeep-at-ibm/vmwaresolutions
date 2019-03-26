@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2019-02-14"
 
 사용자 계정에 대해 프로비저닝된 모든 Cloud Foundation 인스턴스의 요약을 보려면 다음 단계를 완료하십시오.
 
-1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. 콘솔 배너에서 사용자 계정 아이콘을 클릭한 다음 **계정** 필드를 클릭하여 인스턴스를 확인하려는 사용자 계정을 선택하십시오.
 3. **Cloud Foundation 인스턴스** 테이블에서 인스턴스의 목록을 보십시오.
 
@@ -136,6 +136,5 @@ lastupdated: "2019-02-14"
 ## 관련 링크
 {: #sd_viewinginstances-related}
 
-* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [Cloud Foundation 인스턴스 삭제](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

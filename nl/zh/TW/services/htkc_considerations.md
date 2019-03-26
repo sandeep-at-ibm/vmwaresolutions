@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # HyTrust KeyControl on IBM Cloud 概觀
-{: #hytrust-keycontrol-on-ibm-cloud-overview}
+{: #htkc_considerations}
 
 HyTrust KeyControl on {{site.data.keyword.cloud}} 服務簡化加密工作負載的管理。此服務會自動化及簡化加密金鑰的生命週期，包括金鑰儲存空間、金鑰配送、金鑰輪替及金鑰撤銷。使用符合 FIPS 140-2 標準的加密，企業可以輕鬆地大規模管理加密金鑰。
 

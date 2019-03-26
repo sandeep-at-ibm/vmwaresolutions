@@ -57,7 +57,6 @@ E メール通知またはコンソール通知を有効にしたインスタン
 {: #useraccount-related}
 
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [通知](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)
 * [SoftLayer API](/docs/customer-portal?topic=customer-portal-customerportal_api){:new_window}

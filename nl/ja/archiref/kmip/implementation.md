@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -34,7 +34,8 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} を使用して vSphere 暗�
 
 vSAN 暗号化を使用するには、vCenter クラスターの vSAN の一般設定を編集し、暗号化のチェック・ボックスを選択します。
 
-vSAN ヘルス・チェックを実行する時に、1 つ以上の vSphere ホストから KMS クラスターに接続できないという警告が周期的に出されることがあります。こうした警告が出されるのは、vSAN ヘルス・チェックの接続が短時間でタイムアウトになる場合です。このような警告は無視してかまいません。{:note}
+vSAN ヘルス・チェックを実行する時に、1 つ以上の vSphere ホストから KMS クラスターに接続できないという警告が周期的に出されることがあります。 こうした警告が出されるのは、vSAN ヘルス・チェックの接続が短時間でタイムアウトになる場合です。 このような警告は無視してかまいません。 詳しくは、[vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:new_window} を参照してください。
+{:note}
 
 vSphere 暗号化を使用するには、仮想マシンのストレージ・ポリシーを編集し、ディスクの暗号化を必須にします。
 
@@ -42,7 +43,7 @@ vSphere 暗号化を使用するには、仮想マシンのストレージ・ポ
 {: #kmip-implementation-key-rotation}
 
 {{site.data.keyword.cloud_notm}} コンソールまたは API を使用して、
-[Key Protect のカスタマー・ルート鍵 (CRK) のローテーション](/docs/services/key-protect?topic=key-protect-rotating-keys)を行います。
+[Key Protect のカスタマー・ルート鍵 (CRK) のローテーション](/docs/services/key-protect?topic=key-protect-key-rotation#key-rotation)を行います。
 
 VMware vSAN 暗号化の場合は、vCenter クラスターの vSAN の一般設定で、VMware の鍵暗号化鍵 (KEK) およびオプションでデータ暗号化鍵 (DEK) のローテーションを行います。
 

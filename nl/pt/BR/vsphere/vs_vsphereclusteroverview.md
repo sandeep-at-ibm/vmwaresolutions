@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -24,7 +24,7 @@ O VMware vSphere on {{site.data.keyword.cloud_notm}} não automatiza a instalaç
 Use essa oferta para criar um novo cluster de servidores ESXi ou ajuste a escala de um cluster existente de servidores ESXi em um {{site.data.keyword.CloudDataCent_notm}}. Dependendo dos componentes do VMware que você selecionar, será possível começar com apenas um servidor ESXi e, em seguida, escalar o cluster posteriormente conforme necessário.
 
 ## Especificações técnicas para clusters do VMware vSphere on IBM Cloud
-{: #technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters}
+{: #vs_vsphereclusteroverview-specs}
 
 Revise os componentes do VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
@@ -35,7 +35,7 @@ A disponibilidade e a precificação de configurações padronizadas de hardware
 {: #vs_vsphereclusteroverview-specs-vmware-components}
 
 Selecione licenças (fornecidas pela IBM ou BYOL) para os seguintes componentes do VMware:
-* VMware vSphere Enterprise Plus 6.0u2, 6.5u1 ou 6.5u2
+* VMware vSphere Enterprise Plus 6.7 U1 ou 6.5 U2
 * Os componentes do VMware a seguir são opcionais:
    * VMware vCenter Server Standard
    * VMware NSX (Base, Advanced ou Enterprise)
@@ -48,10 +48,10 @@ Selecione licenças (fornecidas pela IBM ou BYOL) para os seguintes componentes 
 ### Bare Metal Server
 {: #vs_vsphereclusteroverview-specs-bare-metal}
 
-Selecione um ou mais {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} com seu modelo de CPU e tamanho de RAM selecionados:
-* Geração Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100)
-* Certificado pela SAP (Série Intel Xeon 6140/E5-2690/E7-8890)
-* Geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600/E7-4800)
+É possível pedir um ou mais {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} com uma das configurações a seguir:
+* **Skylake**: servidores de geração do Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100) com o seu modelo de CPU selecionado e o tamanho de RAM.
+* **Certificado pela SAP**: servidores de geração Intel Skylake ou Intel Broadwell (série Intel Xeon 6140/E5-2690/E7-8890) com seu modelo de CPU selecionado.
+* **Broadwell**: servidores de geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600/E7-4800 ) com seu modelo de CPU e tamanho de RAM selecionados.
 
 As opções disponíveis dependem de se você selecionou o componente vSAN do VMware.
 
@@ -86,18 +86,18 @@ Cada nó de expansão de cluster do vSphere é implementado e incorre em encargo
 ### Hardware para nós de expansão
 {: #vs_vsphereclusteroverview-expansion-node-specs-hardware}
 
-Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração de hardware apresentada em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração de hardware apresentada em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 ### Rede para nós de expansão
 {: #vs_vsphereclusteroverview-expansion-node-specs-network}
 
-Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração de rede apresentada em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração de rede apresentada em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 ### Componentes do VMware para nós de expansão
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* Um {{site.data.keyword.cloud_notm}} Bare Metal Server com o VMware vSphere Enterprise Plus 6.0u2 ou 6.5u1  
-* Componentes opcionais do VMware apresentados em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+* Um {{site.data.keyword.cloud_notm}} Bare Metal Server com o VMware vSphere Enterprise Plus 6.7u1 ou 6.5u2.  
+* Componentes opcionais do VMware apresentados em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 Deve-se gerenciar os servidores ESXi, os componentes opcionais do VMware e o hardware adicional que são pedidos e entregues à sua conta do {{site.data.keyword.cloud_notm}} somente por meio do {{site.data.keyword.slportal}}. Depois de criar um novo cluster no console do {{site.data.keyword.vmwaresolutions_short}}, é possível retornar para o console e usar as informações salvas para escalar o novo cluster. Para obter mais informações, consulte [Ajustando a escala de clusters existentes do
 vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters).

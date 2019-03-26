@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2019-02-14"
 {: #vc_addingremovingservers}
 
 您可以根據商業需要，藉由新增或移除 ESXi 伺服器或是網路檔案系統 (NFS) 儲存空間來擴充或縮減 VMware vCenter Server 實例的容量。
+
+從 2.9 版開始，您可以在伺服器處於維護模式時將新的 ESXi 伺服器新增至叢集。此外，您還可以跨越多個叢集同時新增或移除 ESXi 伺服器。以下是可同時進行的作業：
+
+* 將主機新增至叢集以及將主機新增至其他叢集。
+* 從叢集中移除主機以及從其他叢集移除主機。
+* 將主機新增至叢集以及從其他叢集移除主機。
+* 從叢集移除主機以及將主機新增至其他叢集。
 
 您可以在現有 NFS 或 vSAN vCenter Server 叢集中新增或移除 NFS 儲存空間共用。
 {:note}
@@ -31,19 +38,20 @@ lastupdated: "2019-02-14"
 * 不要從 VMware vSphere Web Client 新增 ESXi 伺服器。您在 vSphere Web Client 上所做的變更不會與 {{site.data.keyword.vmwaresolutions_full}} 主控台同步。
 * 具有 NFS 儲存空間的 vCenter Server 實例至少必須有 2 部 ESXi 伺服器。對於在 2.1 版或更新版本中部署的實例，您可以將預設叢集擴充為具有多達 51 部 ESXi 伺服器。每一個非預設叢集可以擴充為具有多達 59 部 ESXi 伺服器。
 * 具有 vSAN 儲存空間的 vCenter Server 實例至少必須有 4 部 ESXi 伺服器。
-* 對於 2.0 版或更舊版本中部署的 vCenter Server 實例，您可以將每一個叢集擴充為具有多達 32 部 ESXi 伺服器。您可以一次新增的 {{site.data.keyword.baremetal_short}} 數目如下所示：
-   * 如果是**小型**、**中型**、**大型**配置，您一次可以新增 1 - 10 部 ESXi 伺服器。
-   * 如果是 **Skylake** 和 **Broadwell** 配置，您一次可以新增 1 - 20 部 ESXi 伺服器。如需最少 ESXi 伺服器的相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
+* 對於 2.0 版或更舊版本中部署的 vCenter Server 實例，您可以將每一個叢集擴充為具有多達 32 部 ESXi 伺服器。
+* 您一次可以新增 1 - 20 部 ESXi 伺服器。如需最少 ESXi 伺服器的相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ### 新增 ESXi 伺服器的程序
 {: #vc_addingremovingservers-adding-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要擴充容量的實例。
 3. 在左導覽窗格上，按一下**基礎架構**。
 4. 在**叢集**表格中，按一下您要在其中新增 ESXi 伺服器的叢集。
-5. 在 **ESXi 伺服器**區段中，按一下**新增伺服器**。
-6. 在**新增伺服器**視窗中，輸入您要新增的伺服器數目、檢閱預估成本，然後按一下**新增伺服器**。
+5. 在 **ESXi 伺服器**區段中，按一下**新增**。
+6. 在**新增伺服器**視窗中，輸入您要新增的伺服器數目。
+7. 選擇性地選取勾選框，以便在維護模式期間新增伺服器。
+8. 檢閱預估成本，然後按一下**新增**。
 
 ### 新增 ESXi 伺服器之後的結果
 {: #vc_addingremovingservers-adding-results}
@@ -51,6 +59,12 @@ lastupdated: "2019-02-14"
 1. 實例狀態從**備妥使用**變更為**正在修改**時，您可能會在主控台上感覺到稍微延遲。在對實例進行其他變更之前，請讓作業全部完成。
 2. 您將會收到電子郵件，通知正在處理您的新增 ESXi 伺服器要求。在主控台上，與 ESXi 伺服器相關聯的叢集狀態會變更為**正在修改**。
 3. 如果您未看到新的 ESXi 伺服器新增至叢集裡的清單，請檢查電子郵件或主控台通知，以尋找關於失敗的其他詳細資料。
+4. 在下列情況下，您必須使用 Zerto Virtual Manager (ZVM) 主控台和預先移入的 Zerto Virtual Replication Appliance (VRA) IP 位址來手動部署 VRA 虛擬機器 (VM)：
+   * 如果您在伺服器處於維護模式並且已安裝 Zerto for {{site.data.keyword.cloud_notm}} 時，將 ESXi 伺服器新增至預設叢集。
+   * 如果您將 Zerto for {{site.data.keyword.cloud_notm}} 新增至具有處於維護模式的 ESXi 伺服器的 vCenter Server 實例。
+
+如果您在維護模式期間新增 ESXi 伺服器，虛擬機器要在您移除維護模式之後才移轉至新的伺服器。   
+{:important}
 
 ## 從 vCenter Server 實例移除 ESXi 伺服器
 {: #vc_addingremovingservers-removing}
@@ -67,7 +81,7 @@ lastupdated: "2019-02-14"
 ### 移除 ESXi 伺服器的程序
 {: #vc_addingremovingservers-removing-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要縮減容量的實例。
 3. 在左導覽窗格上，按一下**基礎架構**。
 4. 在**叢集**表格中，按一下您要從中移除 ESXi 伺服器的叢集。
@@ -93,7 +107,7 @@ lastupdated: "2019-02-14"
 ### 新增 NFS 儲存空間的程序
 {: #vc_addingremovingservers-adding-nfs-storage-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要擴充容量的實例。
 3. 在左導覽窗格上，按一下**基礎架構**。
 4. 在**叢集**表格中，按一下您要在其中新增 NFS 儲存空間的叢集。
@@ -124,7 +138,7 @@ lastupdated: "2019-02-14"
 ### 移除 NFS 儲存空間的程序
 {: #vc_addingremovingservers-removing-nfs-storage-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要縮減容量的實例。
 3. 在左導覽窗格上，按一下**基礎架構**。
 4. 在**叢集**表格中，按一下您要從中移除 NFS 儲存空間的叢集。

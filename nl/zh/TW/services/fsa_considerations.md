@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ FortiGate Security Appliance on {{site.data.keyword.cloud}} 服務會以高可�
 {:note}
 
 ## FortiGate Security Appliance on IBM Cloud 的技術規格
-{: #technical-specifications-for-fortigate-security-appliance-on-ibm-cloud}
+{: #fsa_considerations-specs}
 
 下列元件已訂購並包括在 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務中：
 

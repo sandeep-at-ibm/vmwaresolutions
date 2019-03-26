@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
-# Koordinierte Upgrades
+#	Koordinierte Upgrades
 {: #vum-orchestr-updates}
 
 Sie können koordinierte Upgrades verwenden, um die virtuelle Hardware und die VMware Tools virtueller Maschinen im Bestand aufzurüsten, nachdem die vSphere ESXi-Hosts aktualisiert wurden. Nachdem die Hosts aktualisiert wurden, wird zuerst die Upgrade-Baseline für VMware Tools und danach die Hardware-Upgrade-Baseline der virtuellen Maschine ausgeführt. Koordinierte Upgrades können auf Cluster-, Ordner- oder Rechenzentrumsebene verwendet werden.

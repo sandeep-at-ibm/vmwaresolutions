@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -33,6 +33,7 @@ Os usuários e as senhas das operações automatizadas no console não devem ser
 
 ## As contas do usuário de serviço específico
 {: #vcenter_chg_impact-service-usr-account}
+{: faq}
 
 Cada serviço cria uma conta de usuário interna no vCenter Server. Esta conta é necessária para que as operações de gerenciamento associadas a um serviço possam se conectar ao vCenter Server para executar as operações no serviço.
 
@@ -46,6 +47,7 @@ O  `<service_name>` junto com o `<service_uuid>` trunca para 20 caracteres.
 
 ## Recursos do VMware para instâncias do vCenter Server (V1.9 e mais recente)
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
+{: faq}
 
 Para instâncias implementadas na V1.9 e mais recente, se a instância do vCenter Server estiver em um estado **Pronto para Uso**, será possível modificar o data center virtual do VMware, cluster, comutadores, grupos de portas e nomes do armazenamento de dados do cliente do VMware vSphere Web Client.
 
@@ -53,6 +55,7 @@ No entanto, não se deve mudar o nome do armazenamento de dados de gerenciamento
 
 ## Recursos do VMware para instâncias do vCenter Server (V1.8 e anterior)
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
+{: faq}
 
 A tabela a seguir lista as operações que poderão ser afetadas se o administrador SSO mudar os recursos do VMware vCenter Server fora do console do {{site.data.keyword.vmwaresolutions_short}}. Se uma solução para recuperar estiver disponível, ela também será fornecida.
 
@@ -82,6 +85,7 @@ Se você escolher desativar o SSH ou o acesso de shell, deverá reativá-lo temp
 
 ## Sub-redes de gerenciamento para instâncias do vCenter Server
 {: #vcenter_chg_impact-mgmt-subnets}
+{: faq}
 
 As informações a seguir discutem as sub-redes pedidas pelo {{site.data.keyword.vmwaresolutions_short}} e fornecem opções para você pedir sub-redes extras para seu próprio uso.
 

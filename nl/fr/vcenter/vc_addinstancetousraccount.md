@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -25,7 +25,7 @@ Pour savoir comment lier votre compte Iaas-only à votre compte PaaS, voir [Foll
 ## Procédure de migration des instances
 {: #vc_addinstancetousraccount-procedure}
 
-1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur vers lequel vous souhaitez faire migrer l'instance.
 3. Dans le tableau **Instances vCenter Server**, recherchez l'instance antérieure à la version 2.5.
 4. Dans la colonne **Actions**, cliquez sur l'icône de menu déroulant dynamique, puis cliquez sur **Migrer une instance vers un compte**.
@@ -35,7 +35,7 @@ Pour savoir comment lier votre compte Iaas-only à votre compte PaaS, voir [Foll
 {: #vc_addinstancetousraccount-results}
 
 1. Vous obtenez une notification par console vous confirmant que votre demande de migration de l'instance vers le compte {{site.data.keyword.cloud_notm}} spécifié est acceptée.
-2. Lorsque la migration de l'instance est terminée, l'instance apparaît sur la page **Instances déployées** sous le compte vers lequel elle a migré. L'instance migrée n'apparaît plus dans le compte source de la migration.
+2. Lorsque la migration de l'instance est terminée, l'instance apparaît sur la page **Ressources** sous le compte vers lequel elle a migré. L'instance migrée n'apparaît plus dans le compte source de la migration.
 
 ## Liens connexes
 {: #vc_addinstancetousraccount-related}

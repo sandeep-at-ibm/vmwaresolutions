@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -33,7 +33,7 @@ Cloud Foundation 인스턴스에는 최대 5개의 클러스터가 포함될 수
 ## ESXi 서버를 추가하는 프로시저
 {: #sd_addingremovingservers-adding-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **Cloud Foundation 인스턴스** 테이블에서 용량을 확장할 인스턴스를 클릭하십시오.
 3. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오.
 4. **클러스터** 테이블에서 ESXi 서버를 추가할 클러스터를 클릭하십시오.
@@ -61,7 +61,7 @@ Cloud Foundation 인스턴스에는 최대 5개의 클러스터가 포함될 수
 ## ESXi 서버를 제거하는 프로시저
 {: #sd_addingremovingservers-removing-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **Cloud Foundation 인스턴스** 테이블에서 용량을 축소할 인스턴스를 클릭하십시오.
 3. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오.
 4. **클러스터** 테이블에서 ESXi 서버를 제거할 클러스터를 클릭하십시오.
@@ -81,7 +81,6 @@ Cloud Foundation 인스턴스에는 최대 5개의 클러스터가 포함될 수
 {: #sd_addingremovingservers-related}
 
 * [Cloud Foundation 명세서](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
-* [Cloud Foundation 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
-* [Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/services?topic=vmware-solutions-sd_addingviewingclusters#sd_addingviewingclusters)
 * [Place a host in maintenance mode](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

@@ -47,7 +47,7 @@ Acme Skateboards 社は、アプリケーション・モダナイゼーション
 
 {{site.data.keyword.cloud_notm}} 自動化機能を使用して、Acme Skateboards 社は vCenter Server を含むハイブリッド・ソリューションをプロビジョンし、vCenter Server 上のデータベース VM および {{site.data.keyword.icpfull_notm}} を実行して、アプリケーションおよびフロントエンド Web サービスをコンテナーで実行することができます。 NSX は、オーバーレイ・ネットワーク内のネットワーキングとセキュリティー用の共通の管理ツール・セットを提供します。
 
-NSX-V について詳しくは、[NSX-V の概要](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)を参照してください。vCenter Server および {{site.data.keyword.icpfull_notm}} オファリングについて詳しくは、[vCenter Server および {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro) を参照してください。
+NSX-V について詳しくは、[NSX-V の概要](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)を参照してください。 vCenter Server および {{site.data.keyword.icpfull_notm}} オファリングについて詳しくは、[vCenter Server および {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro) を参照してください。
 
 図 2. {{site.data.keyword.icpfull_notm}} を使用する vCenter Server
 ![{{site.data.keyword.icpfull_notm}} を使用する vCenter Server](vcsnsxt-nsxvhl.svg)

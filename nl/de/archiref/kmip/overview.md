@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -25,8 +25,8 @@ Diese Lösung gilt als zusätzliche Komponente und Erweiterung der Lösungsangeb
 Während für Ihre VMware-Workload viele Speicherverschlüsselungslösungen zur Verfügung stehen, bietet KMIP for VMware die folgenden Vorteile:
 
 * Integration in die vSAN-Verschlüsselung und vSphere-Verschlüsselung von VMware. Beide werden in der Hypervisorebene und nicht in der Ebene des Speichers oder der virtuellen Maschinen implementiert. Dieser Ansatz ermöglicht ein einfaches Management sowie Transparenz für Ihre Speicherlösung und Anwendung.
-* Ein vollständig verwalteter Schlüsselmanagementserver ist in vielen IBM Cloud-Multizone-Regionen (MZRs) verfügbar.
-* Durch die Integration Ihres VMware-Clusters in IBM Cloud Key Protect erhalten Sie vollständig vom Kunden verwaltete Schlüssel, die Sie jederzeit widerrufen können.
+* Ein vollständig verwalteter Schlüsselmanagementserver ist in vielen {{site.data.keyword.cloud_notm}}-Regionen mit mehreren Zonen (MZRs) verfügbar. 
+* Durch die Integration Ihrer VMware-Cluster mit {{site.data.keyword.cloud_notm}} Key Protect erhalten Sie vollständig vom Kunden verwaltete Schlüssel, die Sie jederzeit widerrufen können. 
 
 ## Zugehörige Links
 {: #kmip-overview-related}

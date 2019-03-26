@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-14"
 # Cloud Foundation 개요
 {: #sd_cloudfoundationoverview}
 
-VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 VMware 환경이 자동으로 배치됩니다. 기본 배치는 통합된 소프트웨어 정의 데이터 센터(SDDC) 플랫폼을 제공하도록 VMware Cloud Foundation 스택이 사전 설치되고 구성된 네 개의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}로 구성됩니다. 기본적으로 Cloud Foundation은 VMware vSphere, VMware NSX, VMware Virtual SAN을 통합하고 VMware 유효성 검증 디자인을 기반으로 설계되었습니다.
+VMware Cloud Foundation on {{site.data.keyword.cloud}} 기본 배치는 통합된 소프트웨어 정의 데이터 센터(SDDC) 플랫폼을 제공하도록 VMware Cloud Foundation 스택이 사전 설치되고 구성된 네 개의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}로 구성됩니다. 기본적으로 Cloud Foundation은 VMware vSphere, VMware NSX, VMware Virtual SAN을 통합하고 VMware 유효성 검증 디자인을 기반으로 설계되었습니다.
 
 ## Cloud Foundation 아키텍처
 {: #sd_cloudfoundationoverview-archi}
@@ -49,9 +49,9 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 아키텍처에 대한 자세한 정보는 [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)를 참조하십시오.
 
 ## Cloud Foundation 인스턴스의 기술 스펙
-{: #technical-specifications-for-cloud-foundation-instances}
+{: #sd_cloudfoundationoverview-specs}
 
-다음 컴포넌트는 Cloud Foundation 인스턴스에 포함됩니다.
+다음 컴포넌트가 Cloud Foundation 인스턴스에 포함됩니다.
 
 하드웨어, 네트워킹, 가상 머신 및 스토리지에 대해 발생하는 비용은 배치에 선택되는 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
 {:note}
@@ -59,7 +59,7 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}}를 주문할 때 전체 V
 ### Bare Metal Server
 {: #sd_cloudfoundationoverview-bare-metal}
 
-다음 구성 중 하나로 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
+사용자 인스턴스는 다음 구성 중 하나로 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}를 가질 수 있습니다. 
 *  **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)   
 *  **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 Intel Broadwell 세대 서버(IntelXeon E5-2600/E7-4800 시리즈)
 
@@ -69,7 +69,7 @@ vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keywor
 ### 네트워킹
 {: #sd_cloudfoundationoverview-networking}
 
-다음 네트워킹 컴포넌트가 주문됩니다.
+사용자 인스턴스에는 다음 네트워킹 컴포넌트가 포함되어 있습니다. 
 * 10Gbps 듀얼 공용 및 사설 네트워크 업링크
 * 세 개의 VLAN(Virtual LANs): 한 개의 공용 VLAN 및 두 개의 사설 VLAN
 * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 자세한 정보는 [관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)를 참조하십시오.
@@ -82,7 +82,7 @@ vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keywor
 ### Virtual Server 인스턴스
 {: #sd_cloudfoundationoverview-vsi}
 
-다음 VSI(Virtual Server Instances)가 주문됩니다.
+사용자 인스턴스는 다음 VSI(Virtual Server Instances)를 가집니다. 
 * Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스용 VSI. VSI는 다중 사이트 구성 지원에 필요합니다. 이 VSI 스펙은 Windows 2012 R2(8GB RAM / 두 개의 CPU 코어 / 100GB 디스크 / 듀얼 1Gbps 사설 업링크)입니다.
 * 인스턴스 배치가 완료된 후 시스템이 종료되는 IBM CloudBuilder용 VSI
 * (Veeam on {{site.data.keyword.cloud_notm}}가 주문된 경우) Veeam 백업 서비스용 VSI가 주문됨
@@ -90,7 +90,7 @@ vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keywor
 ### 스토리지
 {: #sd_cloudfoundationoverview-storage}
 
-선택한 {{site.data.keyword.baremetal_short}} 구성에 따라 다음 스토리지가 주문됩니다.
+사용자 인스턴스는 선택된 {{site.data.keyword.baremetal_short}} 구성에 따라 다음 스토리지를 가질 수 있습니다.
 * 두 개의 1-TB SATA 부트 디스크
 * 두 개의 960-GB SSD(Solid-State Disk) 캐시 디스크
 * 한 개의 RAID 디스크 제어기
@@ -141,8 +141,6 @@ vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keywor
 {: #sd_cloudfoundationoverview-related}
 
 * [Cloud Foundation 소프트웨어 명세서](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
-* [Cloud Foundation 인스턴스 계획](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
-* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [VMware vSphere Documentation Center](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [VMware NSX 6 Documentation Center](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764)

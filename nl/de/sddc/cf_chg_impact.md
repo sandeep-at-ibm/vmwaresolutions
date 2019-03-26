@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -38,6 +38,7 @@ Die aus `<service_name>` und `<service_uuid>` zusammengesetzte Zeichenfolge wird
 
 ## VMware-Ressourcen für Cloud Foundation-Instanzen
 {: #cf_chg_impact-vmware-resources}
+{: faq}
 
 In der folgenden Tabelle sind die Operationen aufgelistet, die betroffen sein könnten, wenn Sie VMware-Ressourcen außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern. Wenn eine Lösung zur Wiederherstellung verfügbar ist, ist sie ebenfalls angegeben.
 
@@ -65,6 +66,7 @@ Wenn Sie den SSH- oder Shell-Zugriff inaktivieren, sollten Sie ihn vorübergehen
 
 ## Managementteilnetze für Cloud Foundation-Instanzen
 {: #cf_chg_impact-mgmt-subnets}
+{: faq}
 
 Nachfolgend sind die Teilnetze beschrieben, die von {{site.data.keyword.vmwaresolutions_short}} bestellt werden. Außerdem werden Sie über die Optionen für die Bestellung von zusätzlichen Teilnetzen für Ihre eigene Verwendung informiert.
 

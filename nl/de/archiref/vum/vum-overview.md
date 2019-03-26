@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -45,7 +45,7 @@ Die VUM-Clientschnittstelle bietet zwei Hauptansichten:
 *	Administrationsansicht
 *	Konformitätsansicht
 
-## Administrationsansicht
+##	Administrationsansicht
 {: #vum-overview-admin-view}
 
 Sie rufen die Administrationsansicht auf, indem Sie zu **Home** > **Update Manager** navigieren und die IP-Adresse der Update Manager-Instanz auswählen. In der Administrationsansicht können Sie die folgenden Tasks ausführen:
@@ -56,7 +56,7 @@ Sie rufen die Administrationsansicht auf, indem Sie zu **Home** > **Update Manag
 *	Benachrichtigungen ansehen und überprüfen
 *	ESXi-Images importieren
 
-## Konformitätsansicht
+##	Konformitätsansicht
 {: #vum-overview-compliance-view}
 
 Sie rufen die Konformitätsansicht eines ausgewählten Bestandsobjekts auf, indem Sie zu **Hosts und Cluster** oder **VMs und Vorlagen** navigieren und auf die Registerkarte **Update Manager** klicken. In der Konformitätsansicht können Sie die folgenden Tasks ausführen:

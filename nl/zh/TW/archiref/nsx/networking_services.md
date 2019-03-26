@@ -200,7 +200,7 @@ IBM 工作負載 ESG 是簡單拓蹼的一部分，主要用於工作負載網�
 
 「工作負載 ESG」上採用 NAT，以容許網路資料流量在一個 IP 位址空間與另一個 IP 位址空間之間遍訪。對於工作負載 ESG，需要 NAT 的目的，不僅在於容許與網際網路目的地的通訊，也容許與任何源自 {{site.data.keyword.cloud_notm}} 的 IP 範圍通訊。在此設計中，容許工作負載資料流量送出到網際網路，但不容許送到管理或任何 {{site.data.keyword.cloud_notm}} 網路。因此，「工作負載 ESG」上只需要定義一個 SNAT。整個工作負載可攜式子網路配置為透過 SNAT 進行遍訪。
 
-雖然可以使用 NAT 來容許跨多個 Cloud Foundation 或 vCenter Server 實例進行工作負載通訊，但當有許多工作負載需要跨實例連接時，這麼做會變得不切實際。如需使用進階 NSX 功能以建立跨 Cloud Foundation 或 vCeter Server 實例之 L2 覆蓋傳輸網路的範例，請參閱[多站台架構](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)。
+雖然可以使用 NAT 來容許跨多個 Cloud Foundation 或 vCenter Server 實例進行工作負載通訊，但當有許多工作負載需要跨實例連接時，這麼做會變得不切實際。如需使用進階 NSX 功能以建立跨 Cloud Foundation 或 vCeter Server 實例之 L2 層疊傳輸網路的範例，請參閱[多站台架構](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)。
 
 表 10. 工作負載 ESG NAT 規則
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -77,6 +77,9 @@ Sie sind für die Erhaltung und Sicherstellung der Verfügbarkeit aller Instanzk
 {: #vc_planning-addon-services}
 
 Sie können für Ihre Instanz auf der Basis Ihrer Anforderungen Add-on-Services bestellen, zum Beispiel für die Disaster-Recovery. Weitere Informationen finden Sie unter [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
+
+Services werden für vCenter Server with NSX-T-Instanzen unterstützt.
+{:note}
 
 ## Kapazitätsaspekte
 {: #vc_planning-capacity-considerations}

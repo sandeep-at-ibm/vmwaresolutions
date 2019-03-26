@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -100,6 +100,12 @@ Tabla 4. Resumen
 |Máquinas virtuales base	|1	|1	|20 |
 |Máquinas virtuales de escalado	|0	|3	|28 |
 |Total de máquinas virtuales	|1	|4	|48 |
+
+**Notas:**
+Cuando se elimina el servicio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}, la automatización de {{site.data.keyword.vmwaresolutions_short}} suprime sólo la única máquina virtual "todo en uno" de Caveonix que se ha desplegado y la subred privada dedicada que se ha solicitado para ella. Por tanto,
+* Si ha escalado la máquina virtual de Caveonix en varias máquinas virtuales, esas máquinas virtuales adicionales no se eliminan. 
+* Si ha utilizado las direcciones IP de la subred privada dedicada en máquinas virtuales adicionales, se deben asignar nuevas direcciones IP a esas máquinas virtuales para que continúen funcionando. 
+* Si suprime la instancia A de vCenter Server con el servicio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} instalado y ha utilizado las direcciones IP de la subred privada dedicada solicitada para el servicio en la instancia B de vCenter Server, la subred privada dedicada se cancela tras la supresión de la instancia A de vCenter Server.
 
 ## Enlaces relacionados
 {: #caveonix-deploy-related}

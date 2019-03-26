@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -48,7 +48,7 @@ O vCenter Server fornece os blocos de construção fundamentais que incluem o VM
 Em resumo, as ofertas do {{site.data.keyword.vmwaresolutions_short}} fornecem os benefícios a seguir:
 
 * Acelera a entrega de projetos de TI para os Desenvolvedores e linhas de negócios, reduzindo o tempo que leva para compras, arquitetura, implementação e implementação de recursos de semanas ou meses até horas.
-* Aprimora a segurança com servidores bare metal dedicados em uma nuvem particular hospedada, incluindo a implementação de terminal privado para os serviços do {{site.data.keyword.cloud_notm}}, incluindo {{site.data.keyword.containerlong_notm}} e KMIP.
+* Aprimora a segurança com servidores bare metal dedicados em uma nuvem privada hospedada, incluindo a implementação do terminal em serviço de rede privada para os serviços do {{site.data.keyword.cloud_notm}}, incluindo o {{site.data.keyword.containerlong_notm}} e o KMIP.
 * Permite o gerenciamento e o controle consistentes da nuvem híbrida implementada, fornecendo acesso administrativo total ao gerenciamento de virtualização, preservando suas ferramentas, scripts e investimentos existentes do VMware em treinamento.
 * Usa o conhecimento do VMware em escala global com o IBM Professional and Managed Services abrangendo 30+ {{site.data.keyword.CloudDataCents_notm}} no mundo inteiro.
 

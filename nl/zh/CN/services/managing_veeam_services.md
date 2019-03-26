@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -22,18 +22,17 @@ IBM Resiliency Backup as a Service 提供各种稳健的现场、非现场和基
 ## 请求 Veeam on IBM Cloud 的受管服务的过程
 {: #managing_veeam_services-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**开始**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**开始**。
 2. 向下滚动该页面，在**订购更多受管服务**下，单击 **Veeam on IBM Cloud 的受管服务**卡。
 3. 在 **Veeam on IBM Cloud** 页面上，查看 Veeam on {{site.data.keyword.cloud_notm}} 作为受管服务的描述和技术规范，然后单击**创建**。
 4. 根据需求指定配置设置，或者接受缺省值。
 5. 单击 **vCenter Server** 或 **Cloud Foundation** 以将相应服务添加到其中一个实例。
-6. 要在订购新实例期间添加服务，请单击**添加到新实例**，然后继续订购新的 [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)、[vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance) 或 [Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance) 实例。
+6. 要在订购新实例期间添加服务，请单击**添加到新实例**，然后继续订购新的 [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) 或 [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance) 实例。
 7. 要将服务添加到现有实例，请单击**添加到现有实例**，从列表中选择所需实例，然后通过单击**供应**以确认要继续处理订单。
 
 ## 相关链接
 {: #managing_veeam_services-related}
 
 * [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [数据备份和保护服务](https://www-935.ibm.com/services/business-continuity/backup-and-data-protection-services/)

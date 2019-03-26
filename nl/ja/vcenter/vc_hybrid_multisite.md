@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -46,7 +46,7 @@ lastupdated: "2019-02-14"
 
 図 1. vCenter Server with Hybridity Bundle のマルチサイト・デプロイメント
 
-![vCenter Server with Hybridity Bundle のマルチサイト・デプロイメント](../sddc/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle のマルチサイト・デプロイメント")
+![vCenter Server with Hybridity Bundle のマルチサイト・デプロイメント](../vcenter/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle のマルチサイト・デプロイメント")
 
 このモデルには以下の層が含まれています。
 

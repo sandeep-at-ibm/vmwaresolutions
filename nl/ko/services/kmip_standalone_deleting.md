@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2019-02-15"
 ## KMIP for VMware on IBM Cloud 인스턴스를 삭제하는 프로시저
 {: #kmip_standalone_deleting-procedure}
 
-1. 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **KMIP for VMware on IBM Cloud 인스턴스** 테이블을 아래로 스크롤하여 삭제할 인스턴스를 찾으십시오.
 3. **조치** 열에서 삭제 아이콘을 클릭하십시오.
 4. **인스턴스 삭제** 창에서 **확인**을 클릭하십시오.

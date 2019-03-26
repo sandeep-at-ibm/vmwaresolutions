@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -18,9 +18,7 @@ Um den Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud}}" zu v
 * Melden Sie sich beim FortiOS-Web-Client unter Verwendung der Berechtigungsnachweise an, die auf der Seite mit den Details für den Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" zu finden sind.
 * Greifen Sie über eine SSH-Verbindung unter Verwendung der Berechtigungsnachweise, die auf der Seite mit den Details für den Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" zu finden sind, auf die Konsole zu.
 
-Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+Weitere Informationen finden Sie unter [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Zugehörige Links
 {: #managingfortinetvm-related}

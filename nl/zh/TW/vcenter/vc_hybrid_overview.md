@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2019-02-14"
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是可在 2.3 版及更新版本中取得的實例。從 2.6 版開始，「事業夥伴」可以使用 vCenter Server with Hybridity Bundle 實例。
 
-vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為服務的代管專用雲端。VMware 環境建置在四部 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 上、包括 VMware vSAN 作為專用儲存空間、自動部署及配置容易管理的邏輯邊緣防火牆（其採用 VMware NSX 技術），以及包括 VMware HCX on {{site.data.keyword.cloud_notm}} 服務。
+vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為服務的代管專用雲端。VMware 環境建置在四部 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 上、包括 VMware vSAN 作為專用儲存空間、自動部署及配置容易管理的邏輯 Edge 防火牆（其採用 VMware NSX 技術），以及包括 VMware HCX on {{site.data.keyword.cloud_notm}} 服務。
 
 在許多情況下，整個環境可以在一天內佈建完成，且裸機基礎架構可以快速而彈性地擴充運算容量，並依需要擴增及縮減。
 
@@ -68,7 +68,7 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 根據 VMware Hybrid Cloud Extension (HCX)，您可以在內部部署與 {{site.data.keyword.cloud_notm}} 站台之間建立鬆散耦合交互連接，以在不需要關閉的情況下啟用 VM 的大量移轉或 VM 的即時 vMotion。
 
 ## vCenter Server with Hybridity Bundle 實例的技術規格
-{: #technical-specifications-for-vcenter-server-with-hybridity-bundle-instances}
+{: #vc_hybrid_overview-specs}
 
 下列元件已包含在 vCenter Server with Hybridity Bundle 實例中：
 
@@ -78,9 +78,9 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 ### Bare Metal Server
 {: #vc_hybrid_overview-bare-metal}
 
-您的 vCenter Server with Hybridity Bundle 實例訂單隨附四個 **Skylake** 或 **Broadwell** {{site.data.keyword.baremetal_short}}。以下是可用的 CPU 型號：
-  * 2-CPU Intel Skylake Generation（Intel Xeon 4100/5100/6100 系列）
-  * 2-CPU Intel Broadwell Generation（Intel Xeon E5-2600/E7-4800 系列）
+vCenter Server with Hybridity Bundle 實例訂單附隨四個 {{site.data.keyword.baremetal_short}}。可用的配置如下：
+  * **Skylake**：2-CPU Intel Skylake 產生伺服器（Intel Xeon 4100/5100/6100 系列），搭配您選取的 CPU 型號及 RAM 大小。
+  * **Broadwell**：2-CPU Intel Broadwell 產生伺服器（Intel Xeon E5-2600/E7-4800 系列），搭配您選取的 CPU 型號及 RAM 大小。
 
 ### 網路
 {: #vc_hybrid_overview-networking}
@@ -120,7 +120,7 @@ vSAN 儲存空間提供自訂的配置，以及磁碟類型和數量的各種選
 
 vCenter Server with Hybridity Bundle 實例訂單隨附下列授權。
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 或 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.4
 * VMware vSAN（Advanced 或 Enterprise）6.6
@@ -140,7 +140,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附下列授權。
 ### 擴充節點的授權與費用
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
 
-* 一個 VMware vSphere Enterprise Plus 6.5u1
+* 一個 VMware vSphere Enterprise Plus 6.5u2 或 6.7u1
 * 一個 VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.4
 * 一筆支援與服務費用
 * VMware vSAN（Advanced 或 Enterprise）6.6

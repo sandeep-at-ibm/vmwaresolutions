@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -49,7 +49,6 @@ Tabla 2. Descripción de las acciones que generan sucesos de gestión
 | `vmware-solutions.notification.update` | <ul><li>Se ha recibido la solicitud de actualizar notificaciones.</li><li>Se ha respondido a la solicitud de actualizar notificaciones.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>Se ha recibido la solicitud de borrar datos seguros.</li><li>Se ha respondido a la solicitud de borrar datos seguros.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>Se ha recibido la solicitud de migrar a la cuenta bss.</li><li>Se ha respondido a la solicitud de migrar a la cuenta bss.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
-| `vmware-solutions.vcf.order`                 | <ul><li>Se ha recibido la solicitud de solicitar una instancia de Cloud Foundation.</li><li>Se ha respondido a la solicitud de solicitar una instancia de Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.vcf.delete`                | <ul><li>Se ha recibido la solicitud de suprimir una instancia de Cloud Foundation.</li><li>Se ha respondido a la solicitud de suprimir una instancia de Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.vcf.add_hosts`             | <ul><li>Se ha recibido la solicitud de añadir servidores ESXi a una instancia de Cloud Foundation.</li><li>Se ha respondido a la solicitud de añadir servidores ESXi a una instancia de Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.vcf.remove_hosts`          | <ul><li>Se ha recibido la solicitud de suprimir servidores ESXi de una instancia de Cloud Foundation.</li><li>Se ha respondido a la solicitud de suprimir servidores ESXi de una instancia de Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |

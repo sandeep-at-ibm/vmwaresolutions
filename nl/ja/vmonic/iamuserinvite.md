@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -41,9 +41,8 @@ lastupdated: "2019-02-21"
 
 * [ユーザーの招待とアクセス権限の割り当て](/docs/iam?topic=iam-iamuserinv)
 * [ID およびアクセス権限の管理](/docs/iam?topic=iam-getstarted)
-* [ユーザーおよびアクセス権限の管理](/docs/iam/iamusermanage.html)
+* [ユーザーの招待](/docs/iam?topic=iam-iamuserinv#iamuserinv)
 * [IAM とは](/docs/iam?topic=iam-iamoverview)
 * [IBM Cloud アカウントへの V2.5 より前の vCenter Server インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
 * [IBM Cloud アカウントへの V2.5 より前の vCenter Server with Hybridity Bundle インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
-* [V2.5 以前の Cloud Foundation インスタンスの IBM Cloud アカウントへのマイグレーション](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addinstancetousraccount)
 * [V2.5 以前の NetApp ONTAP Select インスタンスの IBM Cloud アカウントへのマイグレーション](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)

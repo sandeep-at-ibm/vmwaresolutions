@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -20,7 +20,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} 实例准备就绪后，必须向
 ## 向 KMIP for VMware on IBM Cloud 实例添加证书的过程
 {: #kmip_standalone_addingdeletingcert-add}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 向下滚动到 **KMIP for VMware on IBM Cloud 实例**表，然后找到要为其添加证书的实例。
 3. 单击**添加**。
 4. 在**添加客户机 SSL 证书**窗口中，输入证书名称和内容。
@@ -32,7 +32,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} 实例准备就绪后，必须向
 ## 查看 KMIP for VMware on IBM Cloud 实例证书的过程
 {: #kmip_standalone_addingdeletingcert-view}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 向下滚动到 **KMIP for VMware on IBM Cloud 实例**表，然后找到要查看其证书的实例。
 3. 在**客户机 SSL 证书**部分下，查看已添加证书的列表。
 4. 要查看特定证书的内容，请单击**下载**。
@@ -40,7 +40,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} 实例准备就绪后，必须向
 ## 从 KMIP for VMware on IBM Cloud 实例中删除证书的过程
 {: #kmip_standalone_addingdeletingcert-delete}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 向下滚动到 **KMIP for VMware on IBM Cloud 实例**表，然后单击要删除其证书的实例。
 3. 在**客户机 SSL 证书**表中，找到要删除的证书，然后单击**删除**图标。
 

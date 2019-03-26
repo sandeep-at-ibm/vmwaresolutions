@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -26,16 +26,16 @@ L'infrastructure physique est constituée des composants suivants :
   <dd class="dd">Le réseau physique fournit la connectivité réseau dans l'environnement qui est ensuite utilisé par la virtualisation de réseau. Le réseau est fourni par le réseau des services {{site.data.keyword.cloud_notm}} et comprend d'autres services, tels que DNS et NTP.</dd>
 </dl>
 
-Pour plus d'informations sur les composants physiques, voir la nomenclature pour l'[instance Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) ou l'[instance vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Pour plus d'informations sur les composants physiques, voir la nomenclature pour l'[instance vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
-Pour plus d'informations sur le stockage, voir la documentation sur l'[architecture de stockage partagé](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
+Pour plus d'informations sur le stockage, voir la documentation sur l'[architecture de stockage partagé](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
 ## Conception d'hôte physique
 {: #design_physicalinfrastructure-host-design}
 
 L'hôte physique fait référence aux serveurs {{site.data.keyword.baremetal_short}} dans l'environnement qui sert les ressources de calcul. Les serveurs bare metal appliqués dans cette solution sont certifiés par VMware et répertoriés sur le site [VMware Compatibility Guide](http://www.vmware.com/resources/compatibility/search.php).
 
-Les configurations de serveur disponibles dans la solution sont conformes ou supérieures aux exigences minimales relatives à l'installation, la configuration et la gestion de vSphere ESXi. Différentes configurations sont disponibles pour satisfaire différentes exigences. Pour obtenir la liste détaillée des spécifications exactes utilisées pour la solution VMware on {{site.data.keyword.cloud_notm}}, voir la nomenclature pour l'[instance Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) ou l'[instance vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Les configurations de serveur disponibles dans la solution sont conformes ou supérieures aux exigences minimales relatives à l'installation, la configuration et la gestion de vSphere ESXi. Différentes configurations sont disponibles pour satisfaire différentes exigences. Pour obtenir la liste détaillée des spécifications exactes utilisées pour la solution VMware on {{site.data.keyword.cloud_notm}}, voir la nomenclature pour l'[instance vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 Les serveurs {{site.data.keyword.baremetal_short}} résident dans {{site.data.keyword.cloud_notm}}.
 {:note}
@@ -87,21 +87,12 @@ Outre les réseaux publics et privés, chaque serveur {{site.data.keyword.cloud_
 * Les adresses IP principales sont affectées aux unités, aux serveurs bare metal et aux serveurs virtuels qui sont mis à disposition par {{site.data.keyword.cloud_notm}}. Vous ne devez pas affecter d'adresses IP dans ces blocs.
 * Des adresses IP portables vous sont fournies et vous pouvez les affecter et les gérer en fonction de vos besoins.
 
-Les adresses IP principales ou portables peuvent devenir routables vers n'importe quel VLAN au sein du compte client lorsque le **spanning VLAN** est activé dans le portail {{site.data.keyword.slportal}} ou que le compte est configuré en tant que compte **d'acheminement et de routage virtuels (VRF)**.
-
-### Spanning VLAN
-{: #design_physicalinfrastructure-vlan-spanning}
-
-Le **VLAN Spanning** est un paramètre de compte de portail client d'infrastructure IBM Cloud qui permet au bloc d'adresses IP de sous-réseau portables et principales de tous les VLAN du compte d'être routables entre elles. Lorsque le **spanning VLAN** est désactivé, les blocs d'adresses IP peuvent tout de même être routés vers les services {{site.data.keyword.cloud_notm}}, mais pas entre eux.
-
-Pour permettre des connexions transparentes entre les différents sous-réseaux sur lesquels résident les composants de solution, vous devez activer le **Spanning VLAN** dans le compte de portail client d'infrastructure IBM Cloud sur lequel les instances Cloud Foundation et vCenter Server sont déployées.
+Les adresses IP principales ou portables peuvent devenir routables vers n'importe quel VLAN au sein du compte client lorsque celui-ci est configuré en tant que compte **VRF (Virtual Routing and Forwarding)**. 
 
 ### Virtual Routing and Forwarding (VRF)
 {: #design_physicalinfrastructure-vrf}
 
-Vous pouvez également configurer le compte {{site.data.keyword.slportal}} en tant que compte VRF pour fournir une fonctionnalité similaire au spanning VLAN et activer ainsi le routage automatique entre les blocs d'adresses IP de sous-réseau. Tous les comptes dotés de connexions Direct Link doivent être convertis en ou créés en tant que compte VRF.
-
-La console {{site.data.keyword.vmwaresolutions_short}} ne peut pas déterminer si VRF est activé dans le portail client d'infrastructure IBM Cloud. Vous recevrez un avertissement vous rappelant que vous devez vérifier que **VLAN spanning** ou VRF est activé dans votre compte de portail client d'infrastructure IBM Cloud.
+Vous pouvez configurer le compte {{site.data.keyword.slportal}} en tant que compte VRF (Virtual Routing and Forwarding) pour activer le routage global automatique entre les blocs d'adresses IP de sous-réseau. Tous les comptes dotés de connexions Direct Link doivent être convertis en ou créés en tant que compte VRF.
 
 ### Connexions d'hôte physique
 {: #design_physicalinfrastructure-host-connect}
@@ -171,7 +162,7 @@ Cette conception permet d'utiliser le stockage VMware vSAN ou le stockage de niv
 
 Lorsqu'il est utilisé, VMware vSAN est configuré à l'aide d'une configuration All-Flash. Cette conception offre plusieurs options de configuration, y compris les châssis 2U et 4U, différents nombres de disques et différentes tailles de disque. Toutes les configurations utilisent deux groupes de disques vSAN, avec un disque SSD pour le cache et un ou plusieurs disques SSD pour la capacité. Toutes les unités qui sont allouées pour la consommation vSAN sont configurées en RAID-0 à un disque.
 
-Pour en savoir plus sur les configurations prises en charge, voir la nomenclature pour l'[instance Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) ou pour l'[instance vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Pour plus d'informations sur les configurations prises en charge, voir la nomenclature pour l'[instance vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 ### Stockage de niveau fichier partagé entre plusieurs hôtes
 {: #design_physicalinfrastructure-shared-storage}
@@ -184,12 +175,11 @@ Figure 2. Partages NFS associés au déploiement VMware
 
 Vous pouvez allouer et monter des partages de fichiers supplémentaires pour vos charges de travail au moment de l'achat ou ultérieurement dans la console. Vous pouvez effectuer une sélection parmi les niveaux de performance et les options de capacité de stockage de fichiers {{site.data.keyword.cloud_notm}} Endurance disponibles dans l'{{site.data.keyword.CloudDataCent_notm}} correspondant. Tous les partages sont associés à l'aide du protocole NFSv3. En outre, il est possible d'associer des partages de fichiers NFSv3 en appliquant l'offre NetApp ONTAP Select.
 
-Les {{site.data.keyword.CloudDataCents_notm}} qui offrent le niveau de performance 10 IOPS/Go incluent également le chiffrement géré par le fournisseur des données au repos (chiffrement AES-256) et sont sauvegardés par le stockage All-flash. Ce niveau de performance est limité à une capacité maximale de 4 To. Pour plus d'informations sur le stockage NAS partagé utilisé dans cette solution, voir la documentation sur l'[architecture de stockage partagé](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
+Les {{site.data.keyword.CloudDataCents_notm}} qui offrent le niveau de performance 10 IOPS/Go incluent également le chiffrement géré par le fournisseur des données au repos (chiffrement AES-256) et sont sauvegardés par le stockage All-flash. Ce niveau de performance est limité à une capacité maximale de 4 To. Pour plus d'informations sur le stockage NAS partagé utilisé dans cette solution, voir la documentation sur l'[architecture de stockage partagé](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
 ## Liens connexes
 {: #design_physicalinfrastructure-related}
 
-* [Nomenclature de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
 * [Nomenclature de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
-* [Architecture de stockage partagé](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
+* [Architecture de stockage partagé](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [Architecture de NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

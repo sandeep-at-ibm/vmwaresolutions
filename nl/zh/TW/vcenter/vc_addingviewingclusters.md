@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-18"
 {:important: .important}
 
 # 新增、檢視及刪除 vCenter Server 實例的叢集
-{: #adding-and-viewing-clusters-for-vcenter-server-instances}
+{: #vc_addingviewingclusters}
 
 依預設，您訂購實例時所配置的 ESXi 伺服器會分組為 **cluster1**。
 
@@ -55,7 +55,7 @@ lastupdated: "2019-02-18"
 ### Bare Metal Server 設定
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-您可以選擇 **Skylake**、**SAP 認證**或 **Broadwell**。
+您可以選擇 **Skylake**、**SAP 認證**或 **Broadwell**。選項可能會根據一開始部署您實例所用的版本而不同。
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -186,7 +186,7 @@ lastupdated: "2019-02-18"
 ## 將叢集新增至 vCenter Server 實例的程序
 {: #vc_addingviewingclusters-adding-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要新增叢集的實例。
 
    請確定實例處於**備妥使用**狀態。否則，您無法將叢集新增至實例。{:note}
@@ -225,7 +225,7 @@ lastupdated: "2019-02-18"
 ## 在 vCenter Server 實例中檢視叢集的程序
 {: #vc_addingviewingclusters-viewing-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下實例來檢視其中的叢集。
 3. 在左導覽窗格上，按一下**基礎架構**。在**叢集**表格中，檢視叢集的摘要：
   * **名稱**：叢集的名稱。
@@ -249,7 +249,7 @@ lastupdated: "2019-02-18"
         <dd class="dd">已刪除叢集。</dd>
     </dl>
   * **動作**：按一下**刪除**圖示，以刪除叢集。
-4. 按一下叢集名稱，以檢視 ESXi 伺服器及儲存空間：
+4. 按一下叢集名稱來檢視 ESXi 伺服器、儲存空間和網路介面詳細資料：
 
 表 4. ESXi 伺服器詳細資料
 
@@ -259,7 +259,7 @@ lastupdated: "2019-02-18"
 |版本|ESXi 伺服器的版本。|
 |認證|用來存取 ESXi 伺服器的使用者名稱和密碼。|
 |專用 IP |ESXi 伺服器的專用 IP 位址。|
-|狀態|ESXi 伺服器的狀態，可以是下列其中一個值：<br> **已新增**：已新增 ESXi 伺服器，且已備妥可供使用。<br> **正在新增**：正在新增 ESXi 伺服器。<br> **正在刪除**：正在刪除 ESXi 伺服器。|
+|狀態|ESXi 伺服器的狀態，可以是下列其中一個值：<br> **已新增** ESXi 伺服器已完成新增並已備妥可供使用。<br> **正在新增** 正在新增 ESXi 伺服器。<br> **正在刪除** 正在刪除 ESXi 伺服器。|
 
 表 5. 儲存空間詳細資料
 
@@ -269,6 +269,32 @@ lastupdated: "2019-02-18"
 |大小|儲存空間的容量。|
 | IOPS/GB |儲存空間的效能層次。|
 | NFS 通訊協定| 儲存空間的 NFS 版本。|
+
+表 6. 網路介面 - VLAN 詳細資料
+
+|項目        |說明       |  
+|:------------- |:------------- |
+| VLAN 號碼 | 唯一的 VLAN 號碼。 |
+|說明              | VLAN 的類型。 |
+|位置| 資料中心位置。 |
+| 主要路徑 | VLAN 的主要路徑。 |
+
+表 7. 網路介面 - 子網路詳細資料
+
+|項目        |說明       |  
+|:------------- |:------------- |
+|名稱 | 子網路名稱。按一下名稱可存取完整 IP 位址詳細資料。 |
+|類型      | 子網路的類型：主要或可攜式。 |
+|說明              | 子網路的用途。 |
+
+表 8. 網路介面 - IP 詳細資料
+
+|項目        |說明       |  
+|:------------- |:------------- |
+| IP    | IP 位址。 |
+|狀態| IP 位址的狀態。 |
+|說明              |IP 位址主機。  |
+
 
 ## 從 vCenter Server 實例刪除叢集
 {: #vc_addingviewingclusters-deleting}
@@ -288,7 +314,7 @@ lastupdated: "2019-02-18"
 ### 從 vCenter Server 實例刪除叢集的程序
 {: #vc_addingviewingclusters-deleting-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要從中刪除叢集的實例。
 
    請確定實例處於**備妥使用**狀態。否則，您無法從實例刪除叢集。{:note}

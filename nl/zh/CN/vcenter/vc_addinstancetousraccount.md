@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2019-02-14"
 ## 迁移实例的过程
 {: #vc_addinstancetousraccount-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在控制台条幅中，单击您的用户帐户图标，然后单击**帐户**字段以选择要将实例迁移到的用户帐户。
 3. 在 **vCenter Server 实例**表中，找到 V2.5 之前的实例。
 4. 在**操作**列中，单击溢出菜单图标，然后单击**将实例迁移到帐户**。
@@ -35,7 +35,7 @@ lastupdated: "2019-02-14"
 {: #vc_addinstancetousraccount-results}
 
 1. 您将收到控制台通知，指示已接受您要将实例迁移到指定 {{site.data.keyword.cloud_notm}} 帐户的请求。
-2. 实例迁移完成后，实例将显示在**已部署的实例**页面上它所迁移到的帐户下。迁移的实例不会再显示在从中迁移该实例的原始帐户中。
+2. 实例迁移完成后，实例将显示在**资源**页面上它所迁移到的帐户下。迁移的实例不会再显示在从中迁移该实例的原始帐户中。
 
 ## 相关链接
 {: #vc_addinstancetousraccount-related}

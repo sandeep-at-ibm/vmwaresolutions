@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -27,7 +27,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスは、VMware イ
 * VMware と互換性のある Key Management Interoperability Protocol (KMIP)
 * マネージド・サービス
 * 世界各地にある複数の地理的領域で利用可能
-* 高可用性のために各地域に 2 つ用意される KMIP サービス・エンドポイント
+* 高可用性のために各地域に 2 つ用意される KMIP ネットワーク・サービス・エンドポイント
 
 ## KMIP for VMware on IBM Cloud インスタンスをインストールする際の考慮事項
 {: #kmip_standalone_considerations-install}

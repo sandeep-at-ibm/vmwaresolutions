@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -17,11 +17,11 @@ lastupdated: "2019-02-15"
 
 HyTrust CloudControl on {{site.data.keyword.cloud}} サービスは、役割ベースのアクセス制御 (RBAC)、承認、および監査を含むセキュリティー規格に対するコンプライアンスを実行および制御します。 このサービスを HyTrust DataControl と組み合わせると、仮想マシンとワークロードのデータを特定の地域、クラスター、または {{site.data.keyword.CloudDataCent_notm}} の ESXi サーバーから外に出さないようにすることができます。
 
-このサービスは、vSphere 6.5 を実行する、V2.3 以降でデプロイ、または V2.3 以降にアップグレードされたインスタンスでのみ利用できます。 現在インストールされている HyTrust CloudControl のバージョンは 5.4.0 です。
+このサービスは、vSphere 6.5 を実行する、V2.3 以降でデプロイ、または V2.3 以降にアップグレードされたインスタンスでのみ利用できます。 現在インストールされている HyTrust CloudControl のバージョンは 5.4.2 です。
 {:note}
 
 ## HyTrust CloudControl on IBM Cloud の技術仕様
-{: #technical-specifications-for-hytrust-cloudcontrol-on-ibm-cloud}
+{: #htcc_considerations-specs}
 
 以下のコンポーネントが注文され、HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 

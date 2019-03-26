@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ Ce service est disponible uniquement sur les instances déployées en version 2.
 {:note}
 
 ## Spécifications techniques relatives à FortiGate Virtual Appliance on IBM Cloud
-{: #technical-specifications-for-fortigate-virtual-appliance-on-ibm-cloud}
+{: #fortinetvm_considerations-specs}
 
 
 Les composants suivants sont commandés et inclus dans le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} :
@@ -95,7 +95,7 @@ Dans ce cas, l'installation de FortiGate Virtual Appliance on {{site.data.keywor
 
 Si des ressources supplémentaires sont nécessaires pour exécuter le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, vous pouvez ajouter d'autres serveurs ESXi avant d'installer le service.
 
-## Remarques relatives au retrait du service FortiGate Virtual Appliance on IBM Cloud
+## Remarques relatives au retrait de FortiGate Virtual Appliance on IBM Cloud
 {: #fortinetvm_considerations-remove}
 
 Avant de retirer le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, vérifiez que la configuration des dispositifs FortiGate Virtual Appliance existants a été correctement retirée. Plus précisément, que le trafic réseau a été routé de manière à contourner les dispositifs FortiGate Virtual Appliance au lieu de les traverser. Sinon, le trafic de données existant au sein de votre environnement risque d'être impacté.

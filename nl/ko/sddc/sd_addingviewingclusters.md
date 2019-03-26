@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제
-{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
+{: #sd_addingviewingclusters}
 
 인스턴스를 주문할 때 구성한 ESXi 서버는 기본 클러스터 아래에서 그룹화됩니다. 기본 클러스터 이름은 다음과 같습니다.
 * V2.1 이상 릴리스로 배치된 인스턴스의 경우: **MGMT-Cluster-`<subdomain_label>`**
@@ -111,7 +111,7 @@ VMware vSphere 및 VMware vSAN을 포함한 클러스터의 VMware 컴포넌트�
 ## Cloud Foundation 인스턴스에 클러스터를 추가하는 프로시저
 {: #sd_addingviewingclusters-adding-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **Cloud Foundation 인스턴스** 테이블에서 클러스터를 추가할 인스턴스를 클릭하십시오.
 
    인스턴스가 **사용할 준비가 됨** 상태인지 확인하십시오. 그렇지 않으면, 클러스터를 인스턴스에 추가할 수 없습니다.
@@ -147,7 +147,7 @@ VMware vSphere 및 VMware vSAN을 포함한 클러스터의 VMware 컴포넌트�
 ## Cloud Foundation 인스턴스의 클러스터를 보는 프로시저
 {: #sd_addingviewingclusters-viewing-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **Cloud Foundation 인스턴스** 테이블에서 클러스터를 볼 인스턴스를 클릭하십시오.
 3. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오. **CLUSTERS** 테이블에서 클러스터에 대한 요약을 보십시오.
    * **이름**: 클러스터의 이름입니다.
@@ -218,7 +218,7 @@ VMware vSphere 및 VMware vSAN을 포함한 클러스터의 VMware 컴포넌트�
 ## Cloud Foundation 인스턴스에서 클러스터를 삭제하는 프로시저
 {: #sd_addingviewingclusters-deleting-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **Cloud Foundation 인스턴스** 테이블에서 클러스터를 삭제할 인스턴스를 클릭하십시오.
 
    인스턴스가 **사용할 준비가 됨** 상태인지 확인하십시오. 그렇지 않으면 인스턴스에서 클러스터를 삭제할 수 없습니다.

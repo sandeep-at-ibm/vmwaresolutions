@@ -4,14 +4,20 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
-# vCenter Server 實例與 vCenter Server with Hybridity Bundle 實例的法規遵循資訊
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# vCenter Server 實例的法規遵循資訊
 {: #vc_compl_info}
 
-請檢閱下列資訊，以取得關於 VMware vCenter Server 實例與 vCenter Server with Hybridity Bundle 實例之法規遵循的詳細資料。
+請檢閱下列資訊以取得 VMware vCenter Server 實例的法規遵循相關詳細資料。
+
+對於 HIPAA 客戶，不提供 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T 供應項目的支援。{:important}
 
 ## 客戶與 IBM 對於 vCenter Server on IBM Cloud 的責任
 {: #vc_compl_info-responsibility}
@@ -45,7 +51,7 @@ lastupdated: "2019-02-14"
 ## 存取客戶實例的原則
 {: #vc_compl_info-policy-for-access-client-inst}
 
-VMware Cloud Foundation 及 vCenter Server 環境（以 {{site.data.keyword.vmwaresolutions_short}} 遞送）提供 VMware 管理平台層，讓我們的客戶能夠管理虛擬化功能。在 IBM Cloud for VMware 產品與服務的生命週期內，可能需要「IBM 支援中心」以協助保證其能夠順利完成。「IBM 支援中心」的人為介入多半是客戶要求（亦即支援問題單）的結果。不過，在少數情況下，沒有客戶撰寫支援問題單，「IBM 支援中心」也會提供預防性協助，以防止未來的問題發生。此存取是透過 IBM Cloud 內部支援網路進行，並透過「IBM 支援中心」開立的支援問題單加以記載，再由 IBM Cloud SOC 持續監視。未經客戶事先同意，「IBM 支援中心」不會修改實例配置。存取是針對 VMware 管理元件及/或 IBM Cloud 管理元件，決不會存取用戶端虛擬機器或應用程式。
+作為 {{site.data.keyword.vmwaresolutions_short}} 提供的 VMware vCenter Server 環境提供 VMWare 管理平台層，讓我們的客戶能夠管理虛擬化功能。在 IBM Cloud for VMware 產品與服務的生命週期內，可能需要「IBM 支援中心」以協助保證其能夠順利完成。「IBM 支援中心」的人為介入多半是客戶要求（亦即支援問題單）的結果。不過，在少數情況下，沒有客戶撰寫支援問題單，「IBM 支援中心」也會提供預防性協助，以防止未來的問題發生。此存取是透過 IBM Cloud 內部支援網路進行，並透過「IBM 支援中心」開立的支援問題單加以記載，再由 IBM Cloud SOC 持續監視。未經客戶事先同意，「IBM 支援中心」不會修改實例配置。存取是針對 VMware 管理元件及/或 IBM Cloud 管理元件，決不會存取用戶端虛擬機器或應用程式。
 
 ## 預防支援
 {: #vc_compl_info-proactive-support}
@@ -67,7 +73,7 @@ VMware Cloud Foundation 及 vCenter Server 環境（以 {{site.data.keyword.vmwa
 ### 支援問題單
 {: #vc_compl_info-support-tickets}
 
-* IBM 不主動監視 Cloud Foundation 及 vCenter Server 環境，而且在正常作業下，若無客戶撰寫的支援問題單，「IBM 支援中心」不會進入 VMware 管理層。
+* IBM 不主動監視 vCenter Server 環境，而且在正常作業情況下，如果沒有客戶撰寫的支援問題單，「IBM 支援中心」不會進入 VMWare 管理層。
 * 當客戶開立實例、服務或佈建問題的支援問題單時，該問題單會很快被指派給適當的「IBM 支援中心」團隊，該團隊將成為負責解決該問題的主要關係方。
 * 由於在團隊層次維護卓越技術專門知識需要有專業等級，因此在解決特定軟體問題時，有時需要涉及多個支援團隊。這很容易處理，因為我們的支援團隊都是透過網路連結，來共同解決發生的任何問題。
 * 為了調查問題，IBM 可能需要存取您系統上關於失敗的資訊，或需要重建失敗以取得其他資訊。
@@ -136,5 +142,4 @@ VMware Cloud Foundation 及 vCenter Server 環境（以 {{site.data.keyword.vmwa
 {: #vc_compl_info-related}
 
 * [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [vCenter Server with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

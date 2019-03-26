@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2019-02-14"
 {: #vc_hybrid_addingremovingservers}
 
 비즈니스 요구사항에 따라 ESXi 서버를 추가하거나 제거하여 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 인스턴스의 용량을 확장하거나 축소할 수 있습니다.
+
+V2.9 릴리스부터는 클러스터가 유지보수 모드에 있는 동안 새 ESXi 서버를 클러스터에 추가할 수 있습니다. 또한 여러 클러스터에서 ESXi 서버를 동시에 추가 또는 제거할 수 있습니다. 다음 동시 조작을 사용할 수 있습니다. 
+
+* 호스트를 **cluster1**에 추가하고 호스트를 추가 클러스터에 추가하십시오. 
+* **cluster1**에서 호스트를 제거하고 호스트를 추가 클러스터에서 제거하십시오. 
+* 호스트를 **cluster1**에 추가하고 호스트를 추가 클러스터에서 제거하십시오. 
+* **cluster1**에서 호스트를 제거하고 호스트를 추가 클러스터에 추가하십시오. 
 
 초기 클러스터의 스토리지가 vSAN이었으므로, 배치 후 하나 이상의 ESXi 서버를 추가하면 클러스터 스토리지 용량을 늘릴 수 있습니다.
 
@@ -30,7 +37,7 @@ lastupdated: "2019-02-14"
 ## ESXi 서버를 추가하는 프로시저
 {: #vc_hybrid_addingremovingservers-adding-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 용량을 확장할 인스턴스를 클릭하십시오.
 3. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오.
 4. **클러스터** 테이블에서 ESXi 서버를 추가할 클러스터를 클릭하십시오.
@@ -59,7 +66,7 @@ lastupdated: "2019-02-14"
 ## ESXi 서버를 제거하는 프로시저
 {: #vc_hybrid_addingremovingservers-removing-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 용량을 축소할 인스턴스를 클릭하십시오.
 3. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오.
 4. **클러스터** 테이블에서 ESXi 서버를 제거할 클러스터를 클릭하십시오.

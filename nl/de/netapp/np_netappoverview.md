@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -62,7 +62,7 @@ Manager
 NetApp ONTAP Select wird in einem VMware-Cluster ausgeführt und virtualisiert den lokalen Speicher auf den Hosts. NetApp ONTAP Select wird im dedizierten Modell bereitgestellt; hierbei wird davon ausgegangen, dass keine anderen Workloads den Cluster in diesem Modell gemeinsam nutzen. Der Umfang der Hardwarekonfiguration des Produktangebots "NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}" richtet sich daher nur nach den Voraussetzungen für NetApp ONTAP Select.
 
 ## Technische Spezifikationen für NetApp ONTAP Select-Instanzen
-{: #technical-specifications-for-netapp-ontap-select-instances}
+{: #np_netappoverview-specs}
 
 Ihre NetApp ONTAP Select-Instanz enthält die folgenden Komponenten.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -66,7 +66,7 @@ lastupdated: "2019-02-15"
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 如果您是非「事業夥伴」，則可以針對 vSphere 叢集選取下列元件：
-* VMware vSphere Enterprise Plus
+* VMware vSphere Enterprise Plus 6.7 U1 或 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -266,7 +266,7 @@ lastupdated: "2019-02-15"
    1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理叢集。
    2. 選取 Bare Metal Server 配置。
       * 當您選取 **Skylake** 或 **Broadwell** 時，請指定 CPU 型號及 RAM 大小。
-      * 當您選取 **SAP 認證**時，請選擇 CPU 型號。
+      * 當您選取 **SAP 認證**時，請選取其中一個預設配置。
    3. 指定 Bare Metal Server 數目。
 6. 如果您選取 **VMware vSAN** 元件，請完成 vSAN 儲存空間配置。指定容量及快取磁碟的磁碟類型以及磁碟數目。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
 7. 完成網路介面設定：
@@ -289,7 +289,8 @@ lastupdated: "2019-02-15"
 
 如果您已下訂單，則會自動啟動叢集的部署，且您會收到電子郵件確認，指出正在處理該訂單。當叢集已備妥可供使用時，會透過電子郵件通知您。
 
-vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。{:note}
+不同於 vCenter Server 和 Cloud Foundation 實例，vSphere 叢集並不會顯示在**資源**頁面上。
+{:note}
 
 ## 相關鏈結
 {: #vs_orderinginstances-related}

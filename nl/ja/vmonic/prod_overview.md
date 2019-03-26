@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -53,13 +53,6 @@ lastupdated: "2019-02-21"
 
 詳しくは、[vCenter Server with Hybridity Bundle の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)を参照してください。
 
-### VMware Cloud Foundation on IBM Cloud
-{: #prod_overview-cf}
-
-この Cloud Foundation オファリングでは、標準的な {{site.data.keyword.cloud_notm}} コンピュート、ストレージ、ネットワークのリソースを各ユーザー・デプロイメントに専用で使用して、統一された VMware 仮想環境を実現できます。
-
-詳しくは、[Cloud Foundation の概要](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)を参照してください。
-
 ### VMware vSphere on IBM Cloud
 {: #prod_overview-vss}
 
@@ -78,6 +71,11 @@ NetApp ONTAP Select オファリングでは、NetApp ONTAP Select をベース�
 {: #prod_overview-services}
 
 {{site.data.keyword.vmwaresolutions_short}} では、インスタンスの注文時に、また、インスタンスをデプロイした後でも、さまざまなサービスを追加できます。 以下のサービスが提供されています。
+
+### Caveonix RiskForesight on IBM Cloud
+{: #prod_overview-caveonix}
+
+Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスは、脅威から保護し、業界規制や政府規制を遵守するために、プロアクティブなモニターおよび自動ディフェンス制御によって、サイバーおよびコンプライアンスのリスクを管理します。
 
 ### F5 on IBM Cloud
 {: #prod_overview-f5}
@@ -119,7 +117,7 @@ HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスでは、鍵
 
 HyTrust KeyControl on {{site.data.keyword.cloud_notm}} サービスは、暗号鍵のライフサイクルを自動化および単純化することによって、暗号化ワークロードの管理を単純化します。 このサービスでは、FIPS 140-2 準拠の暗号化を使用することで、暗号鍵を簡単に一括して管理できるようになります。 このサービスを使用すると、すべての仮想マシンと暗号化データ・ストアの暗号鍵を管理することや、大規模なデプロイメントで何千もの暗号化ワークロードをサポートするように拡張することができます。
 
-詳しくは、[HyTrust KeyControl on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)を参照してください。
+詳しくは、[HyTrust KeyControl on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)を参照してください。
 
 ### IBM Cloud Private Hosted
 {: #prod_overview-icp}

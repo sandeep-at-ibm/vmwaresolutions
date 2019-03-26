@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -37,7 +37,7 @@ VUM이 VMware에 있는 업데이트 서버의 리소스를 요청하면 먼저 
 |주소 |프록시 IP |예비 IP 주소는 프로비저닝 프로세스 중에 지정된 고객의 사설 포터블 서브넷에서 사용되어야 합니다. 이 서브넷에는 두 개의 IP 주소만 예약되어 있을 수 있습니다(하나는 BCR용, 다른 하나는 customer-esg용).
 |넷마스크 |255.255.255.192 | |
 |게이트웨이| customer-nsx-edge private uplink ip | customer-nsx-edge의 사설 업링크 주소인 프록시 서버에 대한 기본 게이트웨이 설정입니다. IP 주소는 **customer-nsx-edge**에 대한 **설정** 탭을 검토하여 찾을 수 있습니다. |
-|DNS 서버 |AD/DNS ip |이 IP 주소는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 있는 인스턴스 페이지 **배치된 인스턴스** 페이지에서 찾을 수 있습니다. |
+|DNS 서버 |AD/DNS ip |이 IP 주소는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 있는 인스턴스 페이지 **리소스** 페이지에서 찾을 수 있습니다. |
 |BCR IP |bcr ip |{{site.data.keyword.cloud_notm}} Backend Customer Router의 IP 주소이며 10.0.0.0/8 및 161.26.0.0/16의 게이트웨이입니다. 이 주소는 VCSA 및 AD/DNS 서버에 연결할 수 있도록 프록시 서버의 정적 라우트에 사용됩니다. |
 
 ## NSX 구성

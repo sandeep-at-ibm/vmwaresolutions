@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -25,9 +25,7 @@ Veeam on {{site.data.keyword.cloud_notm}} サービスを管理するには、�
 
 Windows IP アドレスと Administrator 資格情報は、Veeam on {{site.data.keyword.cloud_notm}} サービスの詳細ページに表示されます。
 
-詳しくは、以下のトピックを参照してください。
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+詳しくは、[vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)を参照してください。
 
 ## Veeam on IBM Cloud がインストールされているインスタンスの管理コンポーネントのバックアップとリストア
 {: #managing-veeam-backup-and-replication}
@@ -76,7 +74,7 @@ Veeam ソフトウェアを最新バージョンに更新する責任は、ユ�
 リストアを行うための支援を受けるには、{{site.data.keyword.cloud_notm}} サポート・チケットを作成する必要があります。 また、V1.8 より前のインスタンス内の Veeam VSI のライセンスは、2017 年 10 月 14 日に有効期限が切れています。 そのため、以前の Veeam VSI を新しい Veeam on {{site.data.keyword.cloud_notm}} サービスに置き換える必要があります。
 
 以下のステップを実行します。
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインにある**「デプロイ済みインスタンス」**をクリックしてから、ターゲット・インスタンスをクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインにある**「リソース」**をクリックしてから、ターゲット・インスタンスをクリックします。
 2. インスタンスの詳細ページで、**「更新およびパッチ」**タブをクリックします。 インスタンスを必ず V1.8 リリースにアップグレードしてください。
 3. **「サービス」**タブをクリックします。
 4. **「サービスの追加」**タブで、Veeam on {{site.data.keyword.cloud_notm}} サービスをインストールします。

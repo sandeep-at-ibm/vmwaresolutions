@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -26,9 +26,7 @@ Pour accéder à la console HTDC à partir du client Web vSphere, procédez comm
 2. Cliquez avec le bouton droit de la souris sur **KC1** ou **KC2**, puis cliquez sur **Ouvrir la console**.
 3. Connectez-vous à la console à l'aide des données d'identification de console qui figurent sur la page des détails du service HyTrust DataControl on {{site.data.keyword.cloud_notm}}.
 
-Pour plus d'informations, voir les rubriques suivantes :
-* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+Pour plus d'informations, voir[Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Liens connexes
 {: #managinghtdc-related}

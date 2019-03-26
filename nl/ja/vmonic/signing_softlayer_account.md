@@ -30,4 +30,4 @@ lastupdated: "2019-02-14"
 * [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)
 * [ビデオ - {{site.data.keyword.cloud_notm}} アカウントの作成方法](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [IBM ID への切り替えとアカウントのリンク](/docs/admin/softlayerlink.html){:new_window}
+* [IBM ID への切り替えとアカウントのリンク](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)

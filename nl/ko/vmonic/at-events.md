@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -48,7 +48,6 @@ lastupdated: "2019-02-14"
 | `vmware-solutions.notification.update` | <ul><li>알림 업데이트 요청을 수신합니다.</li><li>알림 업데이트 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>보안 데이터 삭제 요청을 수신합니다.</li><li>보안 데이터 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>bss 계정 마이그레이션 요청을 수신합니다.</li><li>bss 계정 마이그레이션 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcf.order`                 | <ul><li>Cloud Foundation 인스턴스 주문 요청을 수신합니다.</li><li>Cloud Foundation 인스턴스 주문 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
 | `vmware-solutions.vcf.delete`                | <ul><li>Cloud Foundation 인스턴스 삭제 요청을 수신합니다.</li><li>Cloud Foundation 인스턴스 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
 | `vmware-solutions.vcf.add_hosts`             | <ul><li>Cloud Foundation 인스턴스에 ESXi 서버 추가 요청을 수신합니다.</li><li>Cloud Foundation 인스턴스에 ESXi 서버 추가 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
 | `vmware-solutions.vcf.remove_hosts`          | <ul><li>Cloud Foundation 인스턴스에 ESXi 서버 삭제 요청을 수신합니다.</li><li>Cloud Foundation 인스턴스에 ESXi 서버 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |

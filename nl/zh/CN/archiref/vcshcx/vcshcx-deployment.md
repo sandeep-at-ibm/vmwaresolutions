@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
 # 云和客户机部署
 {: #vcshcx-deployment}
 
-如本文档开头所述，最小的 HCX 安装包含单个云和客户机端部署。HCX 客户机端可以安装在 HCX 支持的任何版本的 vSphere 上，前提是客户机端与云端之间存在网络连接。
+最小的 HCX 安装包含单个云和客户机端部署。HCX 客户机端可以安装在 HCX 支持的任何版本的 vSphere 上，前提是客户机端与云端之间存在网络连接。
 
 ## 需求
 {: #vcshcx-deployment-req}
@@ -24,12 +24,12 @@ lastupdated: "2019-02-16"
 ## 云
 {: #vcshcx-deployment-cloud}
 
-云端 HCX 部署由 {{site.data.keyword.vmwaresolutions_full}} 自动化进行处理。缺省配置使用公共端口组来配置任何系列组件端点连接。云端上的系列组件通过其配置有公共 IP 地址的端点接口进行部署，因为这些组件是安全加固设备。可以将这些组件部署在防火墙后面。不支持客户机端和云端通过现有 VPN 隧道相互连接。如果要使用专用网络进行 HCX 端点连接，那么可以为专用网络系列部署订购 HCX 云端，以便通过专用链路（例如，MPLS）使用。
+云端 HCX 部署由 {{site.data.keyword.vmwaresolutions_full}} 自动化进行处理。缺省配置使用公共端口组来配置任何系列组件端点连接。云端的系列组件通过其配置有公共 IP 地址的端点接口进行部署，因为这些组件是安全加固设备。可以将这些组件部署在防火墙后面。不支持客户机端和云端通过现有 VPN 隧道相互连接。如果要使用专用网络进行 HCX 端点连接，那么可以为专用网络系列部署订购 HCX 云端，以便通过专用链路（例如，MPLS）使用。
 
 ## 客户机
 {: #vcshcx-deployment-client}
 
-客户机端 HCX 是用户部署的，需要具有对源 vCenter 的管理员级别许可权。本文撰写之时，HCX 客户机端管理器 OVA 大约为 1.7 GB。使用 {{site.data.keyword.vmwaresolutions_short}} 控制台订购 HCX 时，会提供一个 URL，其中包含用于下载客户机端 HCX 版本的链接，该版本与部署在云端的 HCX 版本相匹配。此链接在云端管理器 HCX 用户界面 (UI) 中提供。
+客户机端 HCX 是用户部署的，需要具有对源 vCenter 的管理员级别许可权。本文撰写之时，HCX 客户机端管理器 OVA 大约为 1.7 GB。使用 {{site.data.keyword.vmwaresolutions_short}} 控制台订购 HCX 时，会提供一个 URL，其中包含用于下载客户机端 HCX 版本的链接，该版本与部署在云端的 HCX 版本相匹配。此链接在云端 HCX Manager 用户界面 (UI) 中提供。
 
 此外，还提供一次性使用注册密钥。使用以下步骤来配置使用注册。
 
@@ -51,7 +51,7 @@ lastupdated: "2019-02-16"
 
 如果任一端发生部署失败，那么将退出并删除系列组件部署。确定故障原因后，单击客户机端 HCX vCenter Web UI 中的**互连**选项卡，然后在屏幕顶部选择**安装 HCX 组件**。
 
-成功部署系列组件并等待几分钟后，在**互连**选项卡中，CGW 和 L2C 组件的隧道状态将为**正常运行**状态。
+成功部署系列组件并等待几分钟后，在**互连**选项卡中，CGW 和 L2C 组件的隧道状态将显示为**正常运行**。
 
 ## 相关链接
 {: #vcshcx-deployment-related}

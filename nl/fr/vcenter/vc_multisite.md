@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -49,7 +49,7 @@ Le graphique suivant décrit l'architecture globale d'un déploiement vCenter Se
 
 Figure 1. Déploiement vCenter Server multisite
 
-![Déploiement multisite de vCenter Server](../sddc/multisite-hub-spoke.svg "Déploiement multisite de vCenter Server")
+![Déploiement multisite de vCenter Server](../vcenter/multisite-hub-spoke.svg "Déploiement multisite de vCenter Server")
 
 Le modèle contient les couches suivantes :
 

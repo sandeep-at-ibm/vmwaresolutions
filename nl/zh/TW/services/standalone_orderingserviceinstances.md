@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2019-02-15"
 ## 訂購內部部署 VMware HCX on IBM Cloud 實例的程序
 {: #standalone_orderingserviceinstances-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，從左導覽窗格按一下**資源**。
 2. 捲動至**內部部署 HCX 實例**表格，然後按一下**佈建新項目**。
 3. 指定**內部部署實例名稱**。
 4. 按一下適用於您的訂單的條款鏈結，並先確定您同意這些條款，再訂購實例。

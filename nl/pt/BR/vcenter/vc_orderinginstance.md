@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,6 +52,14 @@ O nome da instância deve atender aos requisitos a seguir:
 * O comprimento máximo do nome da instância é de 10 caracteres.
 * O nome da instância deve ser exclusivo dentro de sua conta.
 
+### Licenças do VMware vSphere
+{: #vc_orderinginstance-vsphere-license}
+
+Selecione se deve-se pedir o vSphere Enterprise Plus 6.7u1 ou o vSphere Enterprise Plus 6.5u2.
+
+O vSphere Enterprise Plus 6.7u1 está disponível para apenas Broadwell e Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
+{:note}
+
 ### Principal ou secundário
 {: #vc_orderinginstance-primary-secondary}
 
@@ -61,8 +69,8 @@ Selecione se pedirá uma nova instância primária ou uma instância secundária
 {: #vc_orderinginstance-licensing-settings}
 
 Especifique as opções de licenciamento para os seguintes componentes do VMware na instância:
-* vCenter Server 6.5 - edição Standard
-* vSphere 6.5u1 - edição Enterprise Plus
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5 ou 6.7
 * NSX Service Providers 6.4 (Edição Base, Advanced ou Enterprise)
 
 Para usuários do Parceiro de Negócios, a licença do vCenter Server (Standard Edition), a licença do vSphere (Enterprise Plus Edition) e a licença do NSX são incluídas e compradas em seu nome. No entanto, deve-se especificar a edição para a licença do NSX.
@@ -299,6 +307,7 @@ Com base em sua configuração selecionada para os serviços de instância e com
 1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **vCenter Server** na seção **Data centers virtuais**.
 2. Na página **VMware vCenter Server on IBM Cloud**, clique no cartão **vCenter Server** e clique em **Criar**.
 3. Na página **vCenter Server**, insira o nome da instância.
+5. Selecione a versão do vSphere.
 4. Selecione o tipo de instância:
    * Clique em **Instância primária** para implementar uma única instância no ambiente ou para implementar a primeira instância em uma topologia multissite.
    * Clique em **Instância secundária** para conectar a instância a uma instância existente (primária) no ambiente para alta disponibilidade e conclua as etapas a seguir:
@@ -306,21 +315,21 @@ Com base em sua configuração selecionada para os serviços de instância e com
      2. Para instâncias primárias V2.8 ou mais recente, insira a senha do administrador do vCenter Server para a instância primária.
      3. Para as instâncias primárias V2.5, 2.6 ou 2.7, insira a senha do administrador do PSC para a instância primária.
      4. Para as instâncias primárias V2.4 ou anterior, verifique se o valor pré-preenchido para a senha do administrador do PSC para a instância primária está correto.
-5. Conclua as configurações de licença para os componentes da instância.
+6. Conclua as configurações de licença para os componentes da instância.
    *  Para usar licenças fornecidas pela IBM, selecione **Incluir com a compra** e selecione a edição de licença, se necessário.
    *  Para usar sua própria licença, selecione **Eu fornecerei** e insira a chave de licença.
-6. Conclua as configurações de Bare Metal Server.
+7. Conclua as configurações de Bare Metal Server.
     1. Selecione o {{site.data.keyword.CloudDataCent_notm}} para hospedar a instância.
     2. Selecione a configuração do Bare Metal Server.
        * Ao selecionar **Skylake** ou **Broadwell**, especifique o modelo de CPU e o tamanho da RAM.
-       * Ao selecionar **Certificado por SAP**, escolha o modelo de CPU.
+       * Quando você selecionar **Certificado pelo SAP**, escolha uma das configurações pré-configuradas.
     3. Especifique o número de {{site.data.keyword.baremetal_short}}. Se você está planejando usar vSAN como sua solução de armazenamento, no mínimo 4 {{site.data.keyword.baremetal_short}} serão necessários.  
-7. Conclua a configuração de armazenamento.
+8. Conclua a configuração de armazenamento.
   * Se você selecionar **Armazenamento vSAN**, especifique os tipos de disco para os discos de capacidade e de cache, o número de discos e a edição de licença vSAN. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
   * Se você selecionar **Armazenamento NFS** e desejar incluir e configurar as mesmas definições para todos os compartilhamentos de arquivo, especifique o **Número de compartilhamentos**, o **Desempenho** e o **Tamanho (GB)**.
   * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar compartilhamentos de arquivo individualmente, selecione **Configurar compartilhamentos individualmente**. Em seguida, clique no ícone **+** ao lado do rótulo **Incluir armazenamento compartilhado** e selecione o **Desempenho** e o **Tamanho (GB)** para cada compartilhamento de arquivo. Deve-se selecionar pelo menos um compartilhamento de arquivo.
   * Se você selecionar **Discos locais**, especifique a contagem de discos e o tipo de disco.
-8. Conclua as configurações da interface de rede.
+9. Conclua as configurações da interface de rede.
    1. Insira o prefixo de nome do host, o rótulo do subdomínio e o nome do domínio-raiz. Para uma instância secundária, o nome de domínio é preenchido automaticamente.
    2. Selecione a configuração de rede de **Rede pública e privada** ou **Somente rede privada**.
    3. Selecione as configurações de VLAN:
@@ -328,10 +337,10 @@ Com base em sua configuração selecionada para os serviços de instância e com
       * Se quiser reutilizar as VLANs públicas e privadas existentes quando estiverem disponíveis, clique em **Selecionar VLANs existentes** e especifique as VLANs e as sub-redes.
    4. Especifique a configuração do DNS.
 
-9. Selecione os serviços complementares a serem implementados na instância clicando no cartão de serviço correspondente. Se um serviço requerer configuração, conclua as configurações específicas do serviço e clique em **Incluir serviço** no cartão.
+10. Selecione os serviços complementares a serem implementados na instância clicando no cartão de serviço correspondente. Se um serviço requerer configuração, conclua as configurações específicas do serviço e clique em **Incluir serviço** no cartão.
 Para obter mais informações sobre como fornecer configurações para um serviço, consulte o tópico de pedido de serviço correspondente.
 
-10. Na área de janela **Resumo do pedido**, verifique a configuração da instância antes de fazer o pedido.
+11. Na área de janela **Resumo do pedido**, verifique a configuração da instância antes de fazer o pedido.
    1. Revise as configurações para a instância.
    2. Revise o custo estimado da instância. Clique em **Detalhes da precificação** para gerar um PDF de resumo. Para salvar ou imprimir o resumo de seu pedido, clique no ícone **Imprimir** ou **Fazer download** no canto superior direito da janela PDF.
    3. Clique no link ou nos links dos termos que se aplicam ao seu pedido e confirme que concorda com esses termos antes de pedir a instância.
@@ -342,7 +351,7 @@ Para obter mais informações sobre como fornecer configurações para um servi�
 
 A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
 
-Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
+Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
 
 Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -23,7 +23,7 @@ Este servicio está disponible para las instancias siguientes:
 {:note}
 
 ## Especificaciones técnicas de IBM Cloud Private Hosted
-{: #technical-specifications-for-ibm-cloud-private-hosted}
+{: #icp_overview-specs}
 
 En la tabla siguiente se muestran los requisitos mínimos para solicitar el servicio IBM Cloud Private Hosted para un entorno **Preparado para producción** y un entorno de **Desarrollo/Prueba**.
 
@@ -35,7 +35,7 @@ Tabla 1. Requisitos mínimos para el entorno preparado para producción y el ent
 | Desarrollo/Prueba | 30 | 200 | 3 | 4.000 |
 
 ### Requisitos de recursos para IBM Cloud Private Hosted
-{: #resource-requirements-for-ibm-cloud-private-hosted}
+{: #icp_overview-resource-req}
 
 En las tablas siguientes se muestran los requisitos de recursos del servicio {{site.data.keyword.cloud_notm}} Private Hosted en un entorno preparado para producción y en un entorno de desarrollo/prueba.
 

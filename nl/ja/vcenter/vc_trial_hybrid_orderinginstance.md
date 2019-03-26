@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -27,7 +27,7 @@ Single-node Trial for VMware vCenter Server on {{site.data.keyword.cloud}} は�
 アーキテクチャー設計について詳しくは、[Single-node Trial for vCenter Server on IBM Cloud の HCX on IBM Cloud アーキテクチャー設計](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)を参照してください。
 
 ## Single-node Trial for vCenter Server インスタンスの技術仕様
-{: #vc_trial_hybrid_orderinginstance-tech-specs}
+{: #vc_trial_hybrid_orderinginstance-specs}
 
 Single-node Trial for vCenter Server インスタンスには以下のコンポーネントが含まれています。
 
@@ -173,7 +173,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 #### インスタンスの詳細の表示
 {: #vc_trial_hybrid_orderinginstance-view-inst-details}
 
-インスタンスの詳細を表示して、デプロイメントの状況を確認できます。 左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックし、**「vCenter Server インスタンス」**または**「オンプレミス HCX インスタンス」**表を見つけて、注文したインスタンスに関する情報を確認します。
+インスタンスの詳細を表示して、デプロイメントの状況を確認できます。 左側のナビゲーション・ペインの**「リソース」**をクリックし、**「vCenter Server インスタンス」**または**「オンプレミス HCX インスタンス」**表を見つけて、注文したインスタンスに関する情報を確認します。
 
 インスタンスが正常にデプロイされると、このトピックの*技術仕様*セクションで説明しているコンポーネントが VMware 仮想プラットフォームにインストールされ、オンプレミスの HCX on {{site.data.keyword.cloud_notm}} サービス・アクティベーション・キーが**「オンプレミス HCX インスタンス」**表にリストされます。
 
@@ -184,8 +184,8 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 
 オンプレミス HCX Enterprise Manager をインストールし、HCX on {{site.data.keyword.cloud_notm}} インスタンスへの接続を構成します。
 
-1. **「デプロイ済みインスタンス」**ページでオンプレミスのアクティベーション・キーを見つけます。
-  1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. **「リソース」**ページでオンプレミスのアクティベーション・キーを見つけます。
+  1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
   2. **「vCenter Server インスタンス」**テーブルで、**「タイプ」**列を確認して vCenter Server 単一ノード・トライアル・インスタンスを見つけ、インスタンス名をメモします。
   3. **「オンプレミス HCX インスタンス」**表までスクロールし、**「名前」**列を確認して、注文した単一ノード・インスタンスと同じ名前に *-OnPrem* サフィックスが付いたインスタンスを見つけます。
   4. **「アクティベーション・キー」**フィールドの鍵をメモします。
@@ -243,7 +243,7 @@ Single-node Trial for vCenter Server インスタンスを削除すると、以�
 
 Single-node Trial for vCenter Server インスタンスを削除するには、以下の手順を実行します。
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、削除するインスタンスを見つけます。
 3. **「アクション」**列で削除アイコンをクリックします。
    インスタンスの状況が**「削除中」**に変わります。 インスタンスが正常に削除されると、インスタンスのコンポーネントが解放され、インスタンスの状況が**「削除済み」**に変わります。
@@ -254,6 +254,6 @@ Single-node Trial for vCenter Server インスタンスを削除するには、�
 ## 関連リンク
 {: #vc_trial_hybrid_orderinginstance-related}
 
-* [Single-node Trial for vCenter Server on IBM Cloud の HCX on IBM Cloud アーキテクチャー設計](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
+* [Single-node Trial for vCenter Server on IBM Cloud の HCX on IBM Cloud アーキテクチャー設計](https://console.bluemix.net/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [VMware Hybrid Cloud Extension の資料](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

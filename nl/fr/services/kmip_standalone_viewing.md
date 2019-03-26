@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -16,7 +16,7 @@ Cette procédure permet d'afficher les instances KMIP for VMware on {{site.data.
 ## Procédure pour l'affichage des instances KMIP for VMware on IBM Cloud
 {: #kmip_standalone_viewing-procedure}
 
-Cliquez sur **Instances déployées** dans le panneau de navigation de gauche, puis faites défiler l'écran vers le tableau **KMIP for VMware on {{site.data.keyword.cloud_notm}} Instances** pour afficher des informations relatives aux instances que vous avez commandées :
+Cliquez sur **Ressources** dans le panneau de navigation de gauche, puis faites défiler l'écran vers le tableau **KMIP for VMware on {{site.data.keyword.cloud_notm}} Instances** pour afficher des informations relatives aux instances que vous avez commandées :
 
 Table 1. Eléments des instances KMIP for VMware on {{site.data.keyword.cloud_notm}}
 

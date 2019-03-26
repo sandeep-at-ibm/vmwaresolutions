@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -37,6 +37,7 @@ lastupdated: "2019-02-14"
 
 ## Cloud Foundation 實例的 VMware 資源
 {: #cf_chg_impact-vmware-resources}
+{: faq}
 
 下表列出在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更 VMware 資源時可能會受到影響的作業。如果有可用的回復解決方案，則也會提供它。
 
@@ -64,6 +65,7 @@ lastupdated: "2019-02-14"
 
 ## Cloud Foundation 實例的管理子網路
 {: #cf_chg_impact-mgmt-subnets}
+{: faq}
 
 下列資訊討論 {{site.data.keyword.vmwaresolutions_short}} 所訂購的子網路，並提供選項讓您訂購額外子網路以供您自己使用。
 
@@ -79,5 +81,5 @@ lastupdated: "2019-02-14"
 *  公用 VLAN 上有 16 個 IP 位址的公用可攜式子網路。
 
 如果您需要使用更多子網路，您可以用下列其中一種方式取得要使用的 IP 位址：
-* **選項 1（建議）：**使用 VMware NSX 虛擬網路覆蓋。訂購時會提供範例 VXLAN 範本。此 VXLAN 範本可以用作建置 SDN 的起點。
+* **選項 1（建議）：**使用 VMware NSX 虛擬網路層疊。訂購時會提供範例 VXLAN 範本。此 VXLAN 範本可以用作建置 SDN 的起點。
 * **選項 2：**訂購您自己的可攜式公用或專用子網路來取得 IP 位址。若要區別您訂購的子網路與管理子網路，您可以將附註新增至您訂購的所有子網路。

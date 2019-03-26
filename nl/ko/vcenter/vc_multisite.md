@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -49,7 +49,7 @@ vCenter Server 인스턴스에 대한 다중 사이트 구성은 V2.0 이상 인
 
 그림 1. vCenter Server 다중 사이트 배치
 
-![vCenter Server 다중 사이트 배치](../sddc/multisite-hub-spoke.svg "vCenter Server 다중 사이트 배치")
+![vCenter Server 다중 사이트 배치](../vcenter/multisite-hub-spoke.svg "vCenter Server 다중 사이트 배치")
 
 모델에는 다음 계층이 포함됩니다.
 

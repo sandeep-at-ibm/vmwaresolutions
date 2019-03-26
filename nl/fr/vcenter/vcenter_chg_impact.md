@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -32,6 +32,7 @@ Les noms utilisateur et mots de passe des opérations automatisées dans la cons
 
 ## Comptes utilisateur de service
 {: #vcenter_chg_impact-service-usr-account}
+{: faq}
 
 Chaque service crée un compte utilisateur interne dans vCenter Server. Ce compte est nécessaire pour que les opérations de gestion associées à un service puissent se connecter à vCenter Server afin d'effectuer les opérations sur le service.
 
@@ -45,6 +46,7 @@ Le `<service_name>` avec `<service_uuid>` tronque à 20 caractères.
 
 ## Ressources VMware pour des instances vCenter Server (version 1.9 et ultérieures)
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
+{: faq}
 
 Pour les instances déployées en version 1.9 et ultérieures, si l'instance vCenter Server a le statut **Prêt à l'emploi**, vous pouvez modifier le centre de données virtuel VMware, le cluster, les commutateurs, les groupes de ports et le nom du magasin de données client à partir du client Web VMware vSphere.
 
@@ -52,6 +54,7 @@ Toutefois, vous ne devez pas modifier la valeur par défaut du nom du magasin de
 
 ## Ressources VMware pour des instances vCenter Server (version 1.8 et antérieures)
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
+{: faq}
 
 Le tableau suivant répertorie les opérations susceptibles d'être affectées lorsque l'administrateur de la connexion unique modifie des ressources VMware vCenter Server en dehors de la console {{site.data.keyword.vmwaresolutions_short}}. Si une solution de récupération est disponible, elle est également fournie.
 
@@ -81,6 +84,7 @@ Si vous choisissez de désactiver l'accès à SSH ou à l'interpréteur de comma
 
 ## Sous-réseaux de gestion pour des instances vCenter Server
 {: #vcenter_chg_impact-mgmt-subnets}
+{: faq}
 
 Les informations suivantes concernent les sous-réseaux commandés par {{site.data.keyword.vmwaresolutions_short}} et indiquent les options de commande de sous-réseaux supplémentaires à votre usage personnel dont vous disposez.
 

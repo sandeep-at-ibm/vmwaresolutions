@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -20,7 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}} 提供多區域雲端架�
 此架構涵蓋各種企業服務，包括網路、儲存空間、備援，以及為了監視和疑難排解雲端型應用程式而建置的其他工具。此外，此架構可以與 IBM Services Platform with Watson（以 {{site.data.keyword.cloud_notm}} 為建置基礎）整合，以容許更廣泛地使用服務。藉由使用平台的認知功能，用戶端可以對新的商業洞察進行更有效的資料採礦，以協助維護持續運作。
 
 ## Mission Critical VMware on IBM Cloud 的技術規格
-{: #technical-specifications-for-mission-critical-vmware-on-ibm-cloud}
+{: #mcv_overview-specs}
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 架構是端對端參照架構，可為客戶的工作負載提供自動化失效接手。它會使用 {{site.data.keyword.cloud_notm}} 多區域地區來搭配 IBM 管理的服務，其中涵蓋下列元件：
 

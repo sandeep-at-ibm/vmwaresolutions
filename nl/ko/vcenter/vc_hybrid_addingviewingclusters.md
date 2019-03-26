@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,7 +52,7 @@ vCenter Server with Hybridity Bundle 인스턴스에 클러스터를 추가할 �
 ### Bare Metal Server 설정
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
-Bare Metal Server의 CPU 모델 및 RAM을 지정하십시오. 사용 가능한 옵션은 인스턴스가 처음에 배치된 버전에 따라 다를 수 있습니다.
+**Skylake** 또는 **Broadwell**을 선택할 수 있습니다. 옵션은 인스턴스가 처음에 배치된 버전에 따라 다를 수 있습니다.
 
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
@@ -131,7 +131,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
 ## vCenter Server with Hybridity Bundle 인스턴스에 클러스터를 추가하는 프로시저
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 클러스터를 볼 인스턴스를 클릭하십시오.
 
    인스턴스가 **사용할 준비가 됨** 상태인지 확인하십시오. 그렇지 않으면, 클러스터를 인스턴스에 추가할 수 없습니다.
@@ -162,7 +162,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
 ## vCenter Server with Hybridity Bundle 인스턴스의 클러스터를 보는 프로시저
 {: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 클러스터를 볼 인스턴스를 클릭하십시오.
 3. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오. **CLUSTERS** 테이블에서 클러스터에 대한 요약을 보십시오.
   * **이름**: 클러스터의 이름입니다.
@@ -232,7 +232,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
 ## vCenter Server with Hybridity Bundle 인스턴스에서 클러스터를 삭제하는 프로시저
 {: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 클러스터를 삭제할 인스턴스를 클릭하십시오.
 
    인스턴스가 **사용할 준비가 됨** 상태인지 확인하십시오. 그렇지 않으면 인스턴스에서 클러스터를 제거할 수 없습니다.

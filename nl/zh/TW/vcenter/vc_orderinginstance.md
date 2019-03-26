@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -51,6 +51,13 @@ lastupdated: "2019-02-14"
 * 實例名稱的長度上限為 10 個字元。
 * 實例名稱在您的帳戶中必須是唯一的。
 
+### VMware vSphere 授權
+{: #vc_orderinginstance-vsphere-license}
+
+選取是否要訂購 vSphere Enterprise Plus 6.7u1 或 vSphere Enterprise Plus 6.5u2。
+
+vSphere Enterprise Plus 6.7u1 僅適用於 Broadwell 及 Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}。{:note}
+
 ### 主要或次要
 {: #vc_orderinginstance-primary-secondary}
 
@@ -60,8 +67,8 @@ lastupdated: "2019-02-14"
 {: #vc_orderinginstance-licensing-settings}
 
 在實例中，指定下列 VMware 元件的授權選項：
-* vCenter Server 6.5 - Standard 版本
-* vSphere 6.5u1 - Enterprise Plus 版本
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5 或 6.7
 * NSX Service Providers 6.4（Base、Advanced 或 Enterprise 版本）
 
 對於「事業夥伴」使用者，包括 vCenter Server 授權（Standard 版本）、vSphere 授權（Enterprise Plus 版本）及 NSX 授權，並可代表您購買。不過，您必須指定 NSX 授權的版本。
@@ -290,6 +297,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 頁面上，按一下 **vCenter Server** 卡片，然後按一下**建立**。
 3. 在 **vCenter Server** 頁面上，輸入實例名稱。
+5. 選取 vSphere 版本。
 4. 選取實例類型：
    * 按一下**主要實例**，以在環境中部署單一實例，或是部署多站台拓蹼中的第一個實例。
    * 按一下**次要實例**，以連接該實例與環境中的現有（主要）實例以獲得高可用性，然後完成下列步驟：
@@ -297,21 +305,21 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
      2. 對於主要實例 2.8 版或更新版本，輸入主要實例的 vCenter Server 管理者密碼。
      3. 對於主要實例 2.5、2.6 或 2.7 版，輸入主要實例的 PSC 管理者密碼。
      4. 對於主要實例 2.4 版或更早版本，驗證主要實例 PSC 管理者密碼的預先填入值正確無誤。
-5. 完成實例元件的授權設定。
+6. 完成實例元件的授權設定。
    *  若要使用 IBM 提供的授權，請選取**購買隨附**，然後選取授權版本（必要的話）。
    *  若要使用您自己的授權，請選取**我將提供**，然後輸入授權碼。
-6. 完成 Bare Metal Server 設定。
+7. 完成 Bare Metal Server 設定。
     1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
     2. 選取 Bare Metal Server 配置。
        * 當您選取 **Skylake** 或 **Broadwell** 時，請指定 CPU 型號及 RAM 大小。
-       * 當您選取 **SAP 認證**時，請選擇 CPU 型號。
+       * 當您選取 **SAP 認證**時，請選取其中一個預設配置。
     3. 指定 {{site.data.keyword.baremetal_short}} 數目。如果您打算使用 vSAN 作為儲存空間解決方案，則至少需要 4 部 {{site.data.keyword.baremetal_short}}。  
-7. 完成儲存空間配置。
+8. 完成儲存空間配置。
   * 如果您選取 **vSAN 儲存空間**，請指定容量及快取磁碟的磁碟類型、磁碟數目以及「vSAN 授權」版本。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
   * 如果您選取 **NFS 儲存空間**，而且要對所有檔案共用新增及配置相同的設定，請指定**共用數目**、**效能**及**大小 (GB)**。
   * 如果您選取 **NFS 儲存空間**，而且要個別新增及配置檔案共用，請選取**個別配置共用**。然後，按一下**新增共用儲存空間**標籤旁的 **+** 圖示，並針對每個檔案共用選取**效能**及**大小 (GB)**。您必須至少選取一個檔案共用。
   * 如果您選取**本端磁碟**，請指定磁碟計數及磁碟類型。
-8. 完成網路介面設定。
+9. 完成網路介面設定。
    1. 輸入主機名稱字首、子網域標籤及根網域名稱。對於次要實例，會自動完成網域名稱。
    2. 選取**公用及專用網路**或**僅限專用網路**的網路設定。
    3. 選取 VLAN 設定：
@@ -319,9 +327,9 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
       * 如果您要重複使用可用的現有公用及專用 VLAN，則請按一下**選取現有的 VLAN**，然後指定 VLAN 及子網路。
    4. 指定 DNS 配置。
 
-9. 按一下對應的服務卡，以選取要部署到實例中的附加程式服務。如果需要配置服務，則請完成服務特定設定，然後按一下卡片上的**新增服務**。如需如何提供服務設定的相關資訊，請參閱對應的服務訂購主題。
+10. 按一下對應的服務卡，以選取要部署到實例中的附加程式服務。如果需要配置服務，則請完成服務特定設定，然後按一下卡片上的**新增服務**。如需如何提供服務設定的相關資訊，請參閱對應的服務訂購主題。
 
-10. 在**訂單摘要**窗格上，先驗證實例配置，再下訂單。
+11. 在**訂單摘要**窗格上，先驗證實例配置，再下訂單。
    1. 檢閱實例的設定。
    2. 檢閱預估實例成本。按一下**定價詳細資料**以產生 PDF 摘要。若要儲存或列印訂單摘要，請按一下 PDF 視窗右上方的**列印**或**下載**圖示。
    3. 按一下適用於您的訂單的條款鏈結，並先確認您同意這些條款，再訂購實例。
@@ -332,7 +340,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 
 實例的部署會自動啟動。您會收到正在處理訂單的確認，並且可以檢視實例詳細資料來檢查部署的狀態。
 
-順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
+順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
 
 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -27,7 +27,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务随附以下规范：
 * 与 VMware 兼容的密钥管理互操作性协议 (KMIP)
 * 受管服务
 * 在全球多个地理区域中可用
-* 每个区域中提供两个 KMIP 服务端点，以实现高可用性
+* 每个区域中提供两个 KMIP 网络服务端点，以实现高可用性
 
 ## 安装 KMIP for VMware on IBM Cloud 实例时的注意事项
 {: #kmip_standalone_considerations-install}

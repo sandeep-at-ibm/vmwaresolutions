@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -21,7 +21,7 @@ Ce service n'est disponible que pour les instances qui exécutent vSphere 6.5 et
 {:note}
 
 ## Spécifications techniques relatives à HyTrust DataControl on IBM Cloud
-{: #technical-specifications-for-hytrust-datacontrol-on-ibm-cloud}
+{: #htdc_considerations-specs}
 
 Les composants suivants sont commandés et inclus dans le service HyTrust DataControl on {{site.data.keyword.cloud_notm}} :
 
@@ -41,7 +41,7 @@ Deux dispositifs DataControl déployés dans une configuration active-active
 
 Licence par hôte : une licence HyTrust DataControl est commandée pour chaque hôte de l'environnement
 
-## Considérations à prendre en compte lorsque vous retirez HyTrust DataControl on IBM Cloud
+## Remarques relatives au retrait de HyTrust DataControl on IBM Cloud
 {: #htdc_considerations-remove}
 
 Avant de retirer le service HyTrust DataControl on {{site.data.keyword.cloud_notm}}, dissociez tous les clients pour qu'il n'utilisent pas DataControl. Après avoir retiré le service, les clés peuvent être supprimées et vous risquez de ne plus pouvoir accéder à vos machines virtuelles.

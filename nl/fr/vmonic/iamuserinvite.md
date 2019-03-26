@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -41,9 +41,8 @@ Une fois que les utilisateurs ajoutés ont accepté votre invitation, ils peuven
 
 * [Invitation d'utilisateurs et affectation d'accès](/docs/iam?topic=iam-iamuserinv)
 * [Gestion de l'identité et de l'accès](/docs/iam?topic=iam-getstarted)
-* [Gestion des utilisateurs et de l'accès](/docs/iam/iamusermanage.html)
+* [Invitation d'utilisateurs](/docs/iam?topic=iam-iamuserinv#iamuserinv)
 * [Présentation d'IAM](/docs/iam?topic=iam-iamoverview)
 * [Migration d'instances vCenter Server antérieures à la version 2.5 vers des comptes IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
 * [Migration d'instances vCenter Server with Hybridity Bundle antérieures à la version 2.5 vers des comptes IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
-* [Migration d'instances Cloud Foundation Select antérieures à la version 2.5 vers des comptes IBM Cloud](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addinstancetousraccount)
 * [Migration d'instances NetApp ONTAP Select antérieures à la version 2.5 vers des comptes IBM Cloud](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)

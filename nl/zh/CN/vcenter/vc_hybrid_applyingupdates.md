@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -43,7 +43,7 @@ lastupdated: "2019-02-14"
 ## 对 vCenter Server with Hybridity Bundle 实例应用更新的过程
 {: #vc_hybrid_applyingupdates-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击要更新的实例。
 3. 在**摘要**页面上，验证是否所有实例详细信息都正确显示。然后在左侧导航窗格上，单击**基础架构**以验证**基础架构**页面上的详细信息。
    如果未显示详细信息，这可能指示由于防火墙规则或其他网络问题而导致 IBM CloudDriver 虚拟服务器实例 (VSI) 发生连接问题。请解决该问题后，再继续下一步，否则更新可能会失败。

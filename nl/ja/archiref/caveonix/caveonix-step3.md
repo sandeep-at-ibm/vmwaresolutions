@@ -4,22 +4,24 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
 # ステップ 3 - アプリケーションの構成
 {: #caveonix-step3}
 
-このステップでは、Caveonix RiskForesight の構成スクリプトを使用します。 「オールインワン」デプロイメントでは、IC4VS の自動処理によってこのスクリプトが開始されます。 スケーリングの場合は、部分分散デプロイメントまたは完全分散デプロイメントでトポロジーをデプロイするためにクライアント側でこのスクリプトを呼び出す必要があります。 このスクリプトによって、RiskForesight の以下のサービスが構成されます。
--	Caveonix アプリ (API、Central Collector)
--	Elastic Search
+このステップでは、Caveonix RiskForesight の構成スクリプトを使用します。 「オールインワン」デプロイメントでは、IC4VS の自動処理によってこのスクリプトが開始されます。
+
+スケーリングの場合は、部分分散または完全分散でトポロジーをプロビジョンするために、お客様の側でこのスクリプトを呼び出す必要があります。このスクリプトによって、RiskForesight の以下のサービスが構成されます。
+- Caveonix アプリ (API、Central Collector)
+- Elastic Search
 - PostgresSQL
--	Remote Collector
--	UI
--	Kafka
--	Kibana
--	すべてのサービスの証明書
+- Remote Collector
+- UI
+- Kafka
+- Kibana
+- すべてのサービスの証明書
 
 このステップが終了すると、必要な仮想マシン (VM) にアプリケーション・コンポーネントがインストールされます。
 

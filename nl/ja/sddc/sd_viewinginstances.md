@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2019-02-14"
 
 1 つのユーザー・アカウントについてプロビジョンされたすべての Cloud Foundation Select インスタンスのサマリーを表示するには、以下の手順を実行します。
 
-1. {{site.data.keyword.vmwaresolutions_full}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_full}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. コンソール・バナーのユーザー・アカウント・アイコンをクリックし、**「アカウント」**フィールドをクリックして、インスタンスの確認対象となるユーザー・アカウントを選択します。
 3. **「Cloud Foundation インスタンス」**の表で、インスタンスのリストを表示します。
 
@@ -136,6 +136,5 @@ lastupdated: "2019-02-14"
 ## 関連リンク
 {: #sd_viewinginstances-related}
 
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [Cloud Foundation インスタンスの削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

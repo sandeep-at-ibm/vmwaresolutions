@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -100,7 +100,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 #### インスタンスの詳細の表示
 {: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
-インスタンスの詳細を表示して、デプロイメントの状況を確認できます。 左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックし、**「vCenter Server インスタンス」**または**「オンプレミス HCX インスタンス」**表を見つけて、注文したインスタンスに関する情報を確認します。
+インスタンスの詳細を表示して、デプロイメントの状況を確認できます。 左側のナビゲーション・ペインの**「リソース」**をクリックし、**「vCenter Server インスタンス」**または**「オンプレミス HCX インスタンス」**表を見つけて、注文したインスタンスに関する情報を確認します。
 
 インスタンスが正常にデプロイされると、このトピックの*技術仕様*セクションで説明しているコンポーネントが VMware 仮想プラットフォームにインストールされ、オンプレミスの HCX on {{site.data.keyword.cloud_notm}} サービス・アクティベーション・キーが**「オンプレミス HCX インスタンス」**表にリストされます。
 
@@ -111,8 +111,8 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 
 オンプレミス HCX Enterprise Manager をインストールし、HCX on {{site.data.keyword.cloud_notm}} インスタンスへの接続を構成します。
 
-1. **「デプロイ済みインスタンス」**ページでオンプレミスのアクティベーション・キーを見つけます。
-  1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. **「リソース」**ページでオンプレミスのアクティベーション・キーを見つけます。
+  1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
   2. **「vCenter Server インスタンス」**表で、**「タイプ」**列を確認して Single-node Trial for Migration and App Modernization インスタンスを見つけ、インスタンス名をメモします。
   3. **「オンプレミス HCX インスタンス」**表までスクロールし、**「名前」**列を確認して、注文した単一ノード・インスタンスと同じ名前に *-OnPrem* サフィックスが付いたインスタンスを見つけます。
   4. **「アクティベーション・キー」**フィールドの鍵をメモします。
@@ -170,7 +170,7 @@ Single-node Trial for Migration and App Modernization インスタンスを削�
 
 Single-node Trial for Migration and App Modernization インスタンスを削除するには、以下の手順を実行します。
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、削除するインスタンスを見つけます。
 3. **「アクション」**列で削除アイコンをクリックします。
    インスタンスの状況が**「削除中」**に変わります。 インスタンスが正常に削除されると、インスタンスのコンポーネントが解放され、インスタンスの状況が**「削除済み」**に変わります。

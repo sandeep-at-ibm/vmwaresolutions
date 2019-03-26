@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # 添加、查看和删除 Cloud Foundation 实例的集群
-{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
+{: #sd_addingviewingclusters}
 
 订购实例时配置的 ESXi 服务器会分组到缺省集群下。缺省集群名称为：
 * 对于在 V2.1 或更高发行版中部署的实例：**MGMT-Cluster-`<subdomain_label>`**
@@ -111,7 +111,7 @@ lastupdated: "2019-02-14"
 ## 向 Cloud Foundation 实例添加集群的过程
 {: #sd_addingviewingclusters-adding-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **Cloud Foundation 实例**表中，单击要添加集群的实例。
 
    确保实例处于**可供使用**状态。否则，无法向实例添加集群。
@@ -147,7 +147,7 @@ lastupdated: "2019-02-14"
 ## 查看 Cloud Foundation 实例中集群的过程
 {: #sd_addingviewingclusters-viewing-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **Cloud Foundation 实例**表中，单击实例以查看其中的集群。
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，查看有关集群的摘要：
    * **名称**：集群的名称。
@@ -219,7 +219,7 @@ lastupdated: "2019-02-14"
 ## 从 Cloud Foundation 实例中删除集群的过程
 {: #sd_addingviewingclusters-deleting-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **Cloud Foundation 实例**表中，单击要从中删除集群的实例。
 
    确保实例处于**可供使用**状态。否则，无法从实例中删除集群。

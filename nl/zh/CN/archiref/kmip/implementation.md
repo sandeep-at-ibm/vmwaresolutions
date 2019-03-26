@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -35,6 +35,7 @@ lastupdated: "2019-02-15"
 要使用 vSAN 加密，请编辑 vCenter 集群中的 vSAN 常规设置，并选中加密复选框。
 
 vSAN 运行状况检查可能会定期发出警告，指示无法从一个或多个 vSphere 主机连接到 KMS 集群。出现这些警告是因为 vSAN 运行状况检查连接超时过快。您可以忽略这些警告。
+有关更多信息，请参阅 [vSAN KMS 运行状况检查间歇性失败并返回 SSL 握手超时错误](https://kb.vmware.com/s/article/67115){:new_window}。
 {:note}
 
 要使用 vSphere 加密，请编辑虚拟机存储策略以要求磁盘加密。
@@ -42,7 +43,7 @@ vSAN 运行状况检查可能会定期发出警告，指示无法从一个或多
 ## 密钥轮换
 {: #kmip-implementation-key-rotation}
 
-使用 {{site.data.keyword.cloud_notm}} 控制台或 API 来[轮换 Key Protect 客户根密钥 (CRK)](/docs/services/key-protect?topic=key-protect-rotating-keys)。
+使用 {{site.data.keyword.cloud_notm}} 控制台或 API 来[轮换 Key Protect 客户根密钥 (CRK)](/docs/services/key-protect?topic=key-protect-key-rotation#key-rotation)。
 
 对于 VMware vSAN 加密，请轮换 VMware 密钥的加密密钥 (KEK)，并可选择通过 vCenter 集群中的 vSAN 常规设置来轮换数据加密密钥 (DEK)。
 

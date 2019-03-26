@@ -18,6 +18,7 @@ lastupdated: "2017-03-08"
 Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte o [{{site.data.keyword.vmwaresolutions_short}}dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Atualizações de componentes para instâncias do Cloud Foundation
+{: #relnotes_v14-vcf-comp}
 
 Os componentes a seguir são novos ou atualizados:
 
@@ -27,13 +28,13 @@ Os componentes a seguir são novos ou atualizados:
 * VMware ESXi 6.0 u2 p04
 * Um novo VSI (Virtual Server Instance) do Windows é pedido para os serviços Microsoft Active Directory (AD) e DNS (Domain Name System), que são necessários para o suporte de configuração de vários sites nesta liberação. Este VSI tem as seguintes especificações: Windows 2012 R2 (8 GB de RAM / 2 núcleos de CPU / 100 GB de disco / uplinks privados dual de 1 Gbps).
 
-Para obter mais informações, veja [Visão geral do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview).
-
 ## Atualizações de componentes para instâncias do vCenter Server
+{: #relnotes_v14-vcs-comp}
 
 Os componentes a seguir são novos ou atualizados:
 
 ### VMware NSX for vSphere 6.2.4
+{: #relnotes_v14-nsx}
 
 Agora, o VMware NSX for vSphere 6.2.4 é instalado por padrão em todas as instâncias do vCenter Server (anteriormente apenas em instâncias do Cloud Foundation).
 
@@ -45,6 +46,7 @@ O NSX Controller não é instalado em instâncias do vCenter Server (a maneira c
 Para obter mais informações sobre os aprimoramentos que foram introduzidos no VMware NSX for vSphere 6.2.4, seus requisitos e problemas conhecidos, consulte [Notas sobre a liberação do NSX for vSphere 6.2.4](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
 
 ### VMware NSX Edge
+{: #relnotes_v14-nsx-edge}
 
 Agora, o NSX Edge é incluído como parte das novas instâncias do vCenter Server que você está pedindo. O NSX Edge fornece serviços de segurança e de gateway de rede de ponta para isolar uma rede virtualizada.
 
@@ -52,19 +54,22 @@ Durante a implementação da instância, um Management VMware NSX Edge Services 
 
 Para garantir a segurança, as regras de firewall estão em vigor para permitir apenas comunicações HTTPS de saída iniciadas pelas máquinas virtuais de gerenciamento. Este ESG é implementado em uma configuração Grande e somente o Suporte IBM pode modificar a configuração. Para obter mais informações, veja os tópicos a seguir:
 
-* [especificações técnicas do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [especificações técnicas do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)
 * [O NSX Edge de serviços de gerenciamento representa um risco de segurança?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [Documentação do VMware NSX](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ### Licença do NSX
+{: #relnotes_v14-nsx-license}
 
 É pedida uma licença do VMware NSX Base for Service Providers Edition por nó.
 
 ### Novo bloco de endereço de sub-rede
+{: #relnotes_v14-subnet}
 
 É pedido um bloco de sub-rede de 16 endereços móveis públicos por nó.
 
 ## Atualizações do modelo de cobrança de serviço
+{: #relnotes_v14-svc-charge}
 
 O modelo de cobrança de serviço é simplificado:
 
@@ -74,6 +79,7 @@ O modelo de cobrança de serviço é simplificado:
 * Para ambos os tipos de instância, uma nova taxa de _Suporte e Serviços_ é introduzida, que é uma taxa mensal aplicada a cada nó.
 
 ## Atualizações para a topologia de rede da instância
+{: #relnotes_v14-netwok-topo}
 
 Esta liberação inclui os seguintes aprimoramentos de topologia para suas instâncias:
 
@@ -84,12 +90,12 @@ Por causa dessas mudanças, não é possível usar as instâncias pré-V1.4 exis
 {:note}
 
 ## Suporte de configuração de vários sites para instâncias do Cloud Foundation
+{: #relnotes_v14-vcf-multisite}
 
 Agora, é possível implementar uma única instância do Cloud Foundation, como em liberações anteriores ou, além disso, implementar instâncias secundárias que estão conectadas a uma instância primária. O modelo de configuração multisite usa uma topologia hub-and-spoke com um site primário e um máximo de sete sites secundários.
 
-Para obter mais informações, veja [Configuração de vários sites para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_multisite).
-
 ## Aprimoramentos para a implementação de recuperação de desastre do Zerto
+{: #relnotes_v14-zerto}
 
 * Para instâncias do Cloud Foundation, a implementação da recuperação de desastre Zerto é automatizada em vez de ser manipulada por meio de um chamado de suporte. Todos os componentes do Zerto, como uma sub-rede móvel privada, uma VSI (Virtual Service Instance) do Windows e os encargos de licença do Zerto são listados no custo estimado para que você possa revisar antes de fazer o seu pedido.
 * Para instâncias do vCenter Server, a implementação da recuperação de desastre Zerto é feita por meio de um chamado de suporte, como na liberação anterior. No entanto, o NSX Edge e a sub-rede móvel pública não são mais necessários, pois são incluídos, agora, na implementação base. Os encargos para uma sub-rede móvel privada, um VSI (Virtual Service Instance) do Windows e a licença do Zerto ainda se aplicam.
@@ -97,25 +103,25 @@ Para obter mais informações, veja [Configuração de vários sites para instâ
 Para obter mais informações, veja [Recuperação de desastre do Zerto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
 
 ## Processo de pedido da instância
+{: #relnotes_v14-inst-order}
 
 O processo de pedido da instância é muito simplificado:
 
 * Para as instâncias do Cloud Foundation e do vCenter Server, a página Credenciais do SoftLayer não é mais exibida durante o processo de pedido. As credenciais do SoftLayer que são definidas na página Configurações são usadas por padrão e será solicitado que você as atualize apenas se elas não atenderem aos requisitos.
 * Além disso, para instâncias do vCenter Server, apenas a opção **Grande** para o tipo **Hardware** e a configuração **10 Gbps Dual** para a **Velocidade da Porta de Uplink** estão disponíveis, o que reduz o número de configurações a especificar ao fazer o pedido.
 
-Para obter mais informações, veja os tópicos a seguir:
-
-* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
-* [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+Para obter mais informações, veja [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance).
 
 ## Gerenciamento de Instância
+{: #relnotes_v14-inst-mgmt}
 
 Novos recursos e aprimoramentos são feitos no processo de gerenciamento da instância:
 
-* Para instâncias do Cloud Foundation, é possível visualizar o nome do usuário e as senhas para vários componentes da instância na página de detalhes da instância. Para obter mais informações, veja [Visualizando instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances).
+* Para instâncias do Cloud Foundation, é possível visualizar o nome do usuário e as senhas para vários componentes da instância na página de detalhes da instância.
 * Para instâncias do vCenter Server, é possível instalar atualizações e correções de software para componentes IBM diretamente do console. Para obter mais informações, veja [Aplicando atualizações e correções a instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates).
 
 ## Notificações do console
+{: #relnotes_v14-console-notif}
 
 Agora, é possível configurar notificações do console na página **Configurações**. Por padrão, a configuração é ativada, o que significa que você recebe uma notificação no console para todos os eventos. É possível também desativar notificações para o console na página **Configurações**.
 

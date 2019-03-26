@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -44,14 +44,14 @@ HCX 現行版本的移轉問題通常分成三大類：授權、雲端閘道網�
 如果有已套用至 HCX Manager（用戶端和雲端）的修正程式和更新項目，且那些更新項目也修補機群元件的問題，則您必須重新部署「雲端閘道」及任何已部署的 L2C。透過 SSH 用戶端（例如 ccli）連接至 HCX Manager，可以執行進一步的通道狀態除錯  
 
 1. 使用 admin 帳戶和提供的密碼以 SSH 連接到 HCX Manager。
-2. 執行 `su -` 指令及 root 密碼（與 admin 密碼相同），以變更為 root。
+2. 執行 `su -` 指令並輸入 `root` 使用者的密碼（與 admin 密碼相同），來變更為 root。
 3. 將目錄切換至 `/opt/vmware/bin`，並執行 `./ccli` 指令。如果因為環境不是針對 root 設定而未成功，請執行 `./ccliSetup.pl` 指令。
-4. 在 ccli Shell 內執行 `list` 指令，以列出向 HCX Manager 登錄的機群元件。
-5. 輸入針對機群元件列出的 ID，以選取 ccli 的焦點。例如，`go 8`。
-6. 執行 `debug remoteaccess enable` 指令，以使用 SSH 所需的機群元件來連接。
-7. 結束 ccli 並使用 SSH 連接至已啟用 SSH 的機群元件的 IP 位址。
+4. 在 `ccli` Shell 內執行 `list` 指令來列出向 HCX Manager 登錄的機群元件。
+5. 輸入針對機群元件列出的 ID，來指定 `ccli` 的機群 ID。例如，`go 8`。
+6. 執行 `debug remoteaccess enable` 指令，來使用 SSH 連接到所要的機群元件。
+7. 結束 `ccli` 並使用 SSH 來連接至已啟用 SSH 的機群元件的 IP 位址。
 9. 繼續進行疑難排解。
-10. 回到 ccli，並停用元件的 ssh 服務。
+10. 回到 `ccli`，然後對元件停用 `ssh` 服務。
 11. 必要的話，請使用 `hc` ccli 指令，對元件執行性能檢查。
 
 ## 目的地硬體相容性問題
@@ -59,10 +59,10 @@ HCX 現行版本的移轉問題通常分成三大類：授權、雲端閘道網�
 
 如果用戶端來源端的硬體版本和 vSphere 版本比雲端還要新，則 vMotion 移轉可能會有問題。由於抄寫型移轉會將資料複製到目的端新建的虛擬機器 (VM)，因此將移轉類型變更為「大量移轉」，在大部分情況下，移轉作業應該會成功。
 
-## 延伸 L2 問題
+## 延伸 L2 集中器問題
 {: #vcshcx-troubleshooting-stretched-l2}
 
-在 L2 集中器的作業上很少遇到問題。與 CGW 類似，如果 L2C 失去連線，當網路連線功能還原之後，它會自動重新連接。使用 ccli Shell 來檢查性能和作業。在啟用 SSH 且已連接 L2C 之後，請執行 `ip tunnel` 及 `ip link |grep t_` 指令，以檢視通道的狀態。
+「L2 集中器 (L2C)」作業至今很少發生問題。與 CGW 類似，如果 L2C 失去連線，當網路連線功能還原之後，它會自動重新連接。使用 ccli Shell 來檢查性能和作業。在啟用 SSH 且已連接 L2C 之後，請執行 `ip tunnel` 及 `ip link |grep t_` 指令，以檢視通道的狀態。
 
 ## 相關鏈結
 {: #vcshcx-troubleshooting-related}

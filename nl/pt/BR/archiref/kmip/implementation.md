@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -34,14 +34,15 @@ Para ativar a criptografia do vSphere ou a criptografia do vSAN usando o KMIP fo
 
 Para usar a criptografia do vSAN, edite as configurações gerais do vSAN em seu cluster do vCenter e marque a caixa de seleção de criptografia.
 
-A verificação de funcionamento do vSAN pode emitir avisos periódicos de que ele não é capaz de se conectar ao cluster do KMS por meio de um ou mais de seus hosts vSphere. Esses avisos ocorrem porque a conexão de verificação de funcionamento do vSAN atinge o tempo limite muito rapidamente. É possível ignorar esses avisos.{:note}
+A verificação de funcionamento do vSAN pode emitir avisos periódicos de que ele não é capaz de se conectar ao cluster do KMS por meio de um ou mais de seus hosts vSphere. Esses avisos ocorrem porque a conexão de verificação de funcionamento do vSAN atinge o tempo limite muito rapidamente. É possível ignorar esses avisos. Para obter mais informações, consulte [o vSAN KMS Health Check falha intermitentemente com o erro de tempo limite de handshake SSL](https://kb.vmware.com/s/article/67115){:new_window}.
+{:note}
 
 Para usar a criptografia do vSphere, edite suas políticas de armazenamento da máquina virtual para requerer criptografia de disco.
 
 ## Rotação de chave
 {: #kmip-implementation-key-rotation}
 
-[Gire sua customer root key (CRK) do Key Protect](/docs/services/key-protect?topic=key-protect-rotating-keys) usando o console ou a API do {{site.data.keyword.cloud_notm}}.
+[Gire sua customer root key (CRK) do Key Protect](/docs/services/key-protect?topic=key-protect-key-rotation#key-rotation) usando o console ou a API do {{site.data.keyword.cloud_notm}}.
 
 Para criptografia do VMware vSAN, gire suas chaves de criptografia de chaves (KEKs) do VMware e, opcionalmente, data&ndash;encrypting keys (DEKs) por meio das configurações gerais do vSAN em seu cluster do vCenter.
 

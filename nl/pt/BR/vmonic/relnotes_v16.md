@@ -14,6 +14,7 @@ lastupdated: "2017-05-22"
 Esta liberação inclui novos recursos, atualizações de componentes, aprimoramentos de usabilidade e correções de bug. Para obter uma lista de problemas corrigidos em diferentes liberações, problemas conhecidos com o produto e dicas para usar o {{site.data.keyword.vmwaresolutions_full}}, consulte o [{{site.data.keyword.vmwaresolutions_short}}dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Atualizações para instâncias do VMware Cloud Foundation
+{: #relnotes_v16-vcf}
 
 Os componentes a seguir são novos ou atualizados:
 
@@ -22,11 +23,11 @@ Os componentes a seguir são novos ou atualizados:
 *  Novas especificações de hardware: **Pequeno** ou **Padrão**, dependendo de seus requisitos.
 *  Novos data centers disponíveis para implementação: **HKG02 - Hong Kong**, **OSL01 - Oslo**, **SEO01 - Seul**, **SNG01 - Singapura** e **SYD04 - Sydney**.
 
-Para obter uma lista completa de componentes, veja [Visão geral do VMware Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview).
-
 ## Atualizações para instâncias do VMware vCenter Server
+{: #relnotes_v16-vcs}
 
 ### Aprimoramentos de hardware para instâncias do vCenter Server
+{: #relnotes_v16-hw-vcs}
 
 Começando com a liberação V1.6, vários aprimoramentos estão disponíveis para suas instâncias do vCenter Server.
 
@@ -48,6 +49,7 @@ As ações a seguir estão disponíveis nas instâncias do vCenter Server pré-V
 Todas as outras ações em instâncias pré-V1.6 não estão mais disponíveis.
 
 ### Aprimoramentos de rede para instâncias do vCenter Server
+{: #relnotes_v16-network-vcs}
 
 *  Uma sub-rede pública com 16 endereços IP na VLAN pública é pedida em seu nome para permitir que suas MVs (máquinas virtuais) acessem a Internet.
 *  Uma sub-rede privada com 64 endereços IP na VLAN privada é pedida em seu nome para permitir que suas MVs acessem a rede interna do SoftLayer®.
@@ -70,10 +72,11 @@ Todas as outras ações em instâncias pré-V1.6 não estão mais disponíveis.
    *  [Documentação do VMware NSX](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## Aprimoramentos de usabilidade
+{: #relnotes_v16-ui}
 
 São feitas melhorias em toda a interface com o usuário:
 
 *  A navegação principal no console é muito melhorada por meio da introdução da área de janela de navegação esquerda com acesso a todas as áreas da interface com o usuário. É possível pedir rapidamente uma nova instância, visualizar as instâncias implementadas, revisar notificações do sistema, mudar configurações e acessar a documentação on-line.
 *  A nova página **Introdução** acessível na área de janela de navegação esquerda fornece detalhes suficientes diretamente no console para ajudá-lo a tomar uma decisão informada sobre os componentes da instância que você está pedindo. Na página **Introdução**, você também é guiado passo a passo pelo processo de pedido de uma instância, começando com atender a todos os pré-requisitos para pedir uma instância, como contas de usuário necessárias e terminando com fazer um pedido.
-*  Os detalhes do resumo para as instâncias do Cloud Foundation e do vCenter Server são consolidados em uma única página, que é acessível no menu **Instâncias Implementadas** na área de janela de navegação esquerda. Nessa página, é possível selecionar a guia apropriada para filtrar as instâncias do Cloud Foundation ou do vCenter Server.
-* Se você tiver a recuperação de desastre do Zerto que é instalada em sua instância, será possível acessar o console do Zerto por meio da página de detalhes de serviço diretamente com um único clique. Para obter mais informações, veja [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices) e [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
+*  Os detalhes do resumo para as instâncias do Cloud Foundation e do vCenter Server são consolidados em uma única página, que é acessível por meio do menu **Recursos** na área de janela de navegação à esquerda. Nessa página, é possível selecionar a guia apropriada para filtrar as instâncias do Cloud Foundation ou do vCenter Server.
+* Se você tiver a recuperação de desastre do Zerto que é instalada em sua instância, será possível acessar o console do Zerto por meio da página de detalhes de serviço diretamente com um único clique. Para obter mais informações, veja [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).

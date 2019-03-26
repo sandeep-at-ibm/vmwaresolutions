@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
 # Glossaire des termes Caveonix
 {: #caveonix-terminology}
 
-Ce glossaire fournit quelques descriptions de termes non spécifiques à la solution Caveonix RiskForesight :
+Ce glossaire fournit quelques descriptions de termes propres à la solution Caveonix RiskForesight :
 
 -	**Publication spéciale 800-53 du NIST :** Structure de gestion des risques qui traite du contrôle de sécurité.
 -	**SCAP (Security Content Automation Protocol) :** Méthode visant à utiliser des normes spécifiques pour permettre la gestion automatisée de la vulnérabilité, ainsi que la mesure et l'évaluation de la conformité des systèmes déployés dans une organisation. Les listes de contrôle normalisent et permettent d'automatiser le lien entre les configurations de sécurité informatique et la publication spéciale 800-53 du NIST.
@@ -30,7 +30,7 @@ Ce glossaire fournit quelques descriptions de termes non spécifiques à la solu
       -	Communication des résultats de cette évaluation.
 -	**STIG (Security Technical Implementation Guide) :** Méthodologie de cybersécurité permettant de normaliser les protocoles de sécurité au sein des réseaux, des serveurs, des ordinateurs et des conceptions logiques afin d'améliorer la sécurité globale. Une fois implémentés, ces guides améliorent la sécurité des logiciels, du matériel, des architectures physiques et logiques afin de réduire davantage les vulnérabilités.
 -	**Fournisseur de service :** Entreprise de plus haut niveau.
--	Fournisseur de cloud - Fournit l'infrastructure sur laquelle le cloud défini par logiciel fonctionne. RiskForesight peut être configuré pour plusieurs fournisseurs de cloud.
+-	**Fournisseur de cloud :** Fournit l'infrastructure sur laquelle le cloud défini par logiciel fonctionne. RiskForesight peut être configuré pour plusieurs fournisseurs de cloud.
 -	**Organisations :** Organisations et sous-organisations locataires du fournisseur de service. Si le référentiel d'actifs est vCenter, la liste des organisations/locataires doit être créée manuellement.
 -	**Rôles :** Rôles préconfigurés et rôles crées par le fournisseur de service. Les rôles préconfigurés ne sont pas éditables par le fournisseur de service.
 -	**Utilisateurs de l'organisation :** Utilisateurs des organisations et sous-organisations locataires.
@@ -56,13 +56,15 @@ Ce glossaire fournit quelques descriptions de termes non spécifiques à la solu
   - **Analyse d'infrastructure VMware :** Cette analyse effectue une analyse de l'infrastructure des ressources VMware.
   -	**Analyse de vulnérabilité VMware :** Cette analyse effectue une analyse de la vulnérabilité des actifs VMware.
 -	**Régime de conformité :** Disponible sous licence ; NIST, NESA, PCI, ISO, HIPAA, GDPR, Custom, FFIEC, FedRAMP Low, FedRAMP Moderate, FedRAMP High
--	**Gestionnaire de politiques :** Le gestionnaire de politiques sert à la fonction de création de politiques pour une organisation en fonction des résultats de l'apprentissage automatique. Caveonix propose par défaut trois types de travaux d'apprentissage automatique par organisation. Ceux-ci ne sont pas modifiables et l'implémentation d'autres travaux n'est pas encore prise en charge. Elle le sera dans une version ultérieure. Les types de travaux d'apprentissage automatique pris en charge actuellement sont :
+-	**Gestionnaire de politiques :** Le gestionnaire de politiques sert à la fonction de création de politiques pour une organisation en fonction des résultats de l'apprentissage automatique. Caveonix propose par défaut trois types de travaux d'apprentissage automatique par organisation. Ceux-ci ne sont pas modifiables et l'implémentation d'autres travaux n'est pas encore prise en charge. Les types de travaux d'apprentissage automatique pris en charge actuellement sont :
   -	Journaux Caveo
   -	Réseaux Caveo
   -	Analyse Caveo
 -	**Anomalie :** Sur la base des anomalies trouvées dans les données, nous pouvons configurer les politiques pour agir en fonction des conditions définies par l'utilisateur. Vous pouvez sélectionner le type de travail et configurer des conditions booléennes pour le score d'anomalie et définir une action lorsque la condition est vérifiée. Par exemple :
-  -	Si le score d'anomalie du travail "Caveo Logs" est > 90, alors mettre en quarantaine l'actif et envoyer une notification au canal Slack.
-  -	Si le score d'anomalie du travail "Caveo Network" est > 95, alors mettre en quarantaine l'actif et envoyer une notification par courrier électronique ainsi qu'une notification sur l'interface utilisateur.
+```
+Si le score d'anomalie du travail "Caveo Logs" est > 90, alors mettre en quarantaine l'actif et envoyer une notification au canal Slack.`
+Si le score d'anomalie du travail "Caveo Network" est > 95, alors mettre en quarantaine l'actif et envoyer une notification par courrier électronique ainsi qu'une notification sur l'interface utilisateur.
+```
 
 ## Liens connexes
 {: #caveonix-terminology-related}

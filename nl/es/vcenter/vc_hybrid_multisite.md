@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -46,7 +46,7 @@ En el siguiente gráfico se muestra una visión general del despliegue de varios
 
 Figura 1. Despliegue de varios sitios de vCenter Server con el paquete híbrido (Hybridity)
 
-![Despliegue de varios sitios de vCenter Server con el paquete híbrido (Hybridity)](../sddc/multisite-hub-spoke.svg "Despliegue de varios sitios de vCenter Server con el paquete híbrido (Hybridity)")
+![Despliegue de varios sitios de vCenter Server con el paquete híbrido (Hybridity)](../vcenter/multisite-hub-spoke.svg "Despliegue de varios sitios de vCenter Server con el paquete híbrido (Hybridity)")
 
 El modelo contiene las siguientes capas:
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -38,6 +38,7 @@ VMware vSphere Web Client の**「ユーザーおよびグループ」**ペー�
 
 ## Cloud Foundation インスタンスの VMware リソース
 {: #cf_chg_impact-vmware-resources}
+{: faq}
 
 以下の表では、{{site.data.keyword.vmwaresolutions_short}} コンソール以外で VMware リソースを変更すると影響を受ける可能性がある操作をリストします。 正常な状態に戻す解決方法がある場合は、その方法も示しています。
 
@@ -65,6 +66,7 @@ SSH アクセスまたはシェル・アクセスを無効にした場合は、�
 
 ## Cloud Foundation インスタンスの管理サブネット
 {: #cf_chg_impact-mgmt-subnets}
+{: faq}
 
 {{site.data.keyword.vmwaresolutions_short}} によって注文されるサブネットについて以下に説明します。また、専用のサブネットを追加注文するオプションについても説明します。
 

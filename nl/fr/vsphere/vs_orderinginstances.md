@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -67,7 +67,7 @@ L'option BYOL n'est pas disponible pour les partenaires commerciaux IBM.
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 Si vous n'êtes pas un partenaire commercial, vous pouvez sélectionner les composants suivants pour votre cluster vSphere :
-* VMware vSphere Enterprise Plus
+* VMware vSphere Enterprise Plus 6.7 U1 ou 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -270,7 +270,7 @@ Selon vos configurations, le coût estimé est généré et affiché instantané
    1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger le cluster.
    2. Sélectionnez la configuration de serveur bare metal.
       * Lorsque vous sélectionnez **Skylake** ou **Broadwell**, spécifiez le modèle d'UC et la taille de mémoire RAM.
-      * Lorsque vous sélectionnez **Certifiés SAP**, choisissez le modèle d'UC.
+      * Lorsque vous sélectionnez **Certifiés SAP**, choisissez l'une des configurations prédéfinies. 
    3. Spécifiez le nombre de serveurs bare metal.
 6. Si vous avez sélectionné le composant **VMware vSAN**, procédez à la configuration de stockage vSAN. Spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 7. Spécifiez les paramètres d'interface réseau :
@@ -294,8 +294,7 @@ Si vous avez sauvegardé la configuration en tant que modèle, vous obtenez une 
 
 Si vous avez passé la commande, le déploiement du cluster démarre automatiquement et vous recevez par courrier électronique la confirmation que la commande est en cours de traitement. Lorsque le cluster est prêt pour utilisation, un courrier électronique vous en avertit.
 
-Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.
-{:note}
+Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Ressources**.{:note}
 
 ## Liens connexes
 {: #vs_orderinginstances-related}

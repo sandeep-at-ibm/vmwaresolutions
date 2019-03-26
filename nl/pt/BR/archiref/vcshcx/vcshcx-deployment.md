@@ -4,15 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
 # Implementação de nuvem e do cliente
 {: #vcshcx-deployment}
 
-Conforme descrito no início deste documento, uma instalação mínima do HCX
-consiste em uma implementação de uma única nuvem e do lado do cliente. O lado do cliente
+Uma instalação mínima do HCX consiste em uma única implementação de nuvem e do lado do cliente. O lado do cliente
 HCX pode ser instalado em qualquer versão do vSphere suportada pelo HCX, assumindo que
 haja conectividade de rede entre os lados do cliente e da nuvem.
 
@@ -27,16 +26,9 @@ haja conectividade de rede entre os lados do cliente e da nuvem.
 ## Nuvem
 {: #vcshcx-deployment-cloud}
 
-A implementação do HCX do lado da nuvem é manipulada pela automação do {{site.data.keyword.vmwaresolutions_full}}. A configuração padrão usa o grupo de portas
-públicas para configurar qualquer conectividade de terminal de componentes de frota. Os
-componentes de frota no lado da nuvem são implementados com suas interfaces de
-terminal configuradas com endereços IP públicos, uma vez que são dispositivos com segurança
-reforçada. É possível implementá-los com a proteção de um firewall. Não é
+A implementação do HCX do lado da nuvem é manipulada pela automação do {{site.data.keyword.vmwaresolutions_full}}. A configuração padrão usa o grupo de portas públicas para configurar qualquer conectividade do terminal de componentes da frota. Os componentes da frota no lado da nuvem são implementados com suas interfaces de terminal configuradas com endereços IP públicos, pois eles são dispositivos reforçados para segurança. É possível implementá-los com a proteção de um firewall. Não é
 suportado que os lados do cliente e da nuvem se conectem
-entre si por um túnel VPN existente. Se você deseja usar
-a rede privada para conectividade de terminal do HCX, é possível pedir o lado da
-nuvem do HCX para a implementação da frota de rede privada para uso no link
-dedicado, como MPLS.
+entre si por um túnel VPN existente. Se você deseja usar a rede privada para conectividade de terminal HCX, é possível pedir o lado da nuvem do HCX para a implementação da frota de rede privada para uso em um link dedicado, como o MPLS.
 
 ## Cliente
 {: #vcshcx-deployment-client}
@@ -46,8 +38,7 @@ nível de administrador para o vCenter de origem. A partir dessa gravação, o o
 gerenciador do lado do cliente do HCX tem aproximadamente 1,7 GB. Ao usar o console do {{site.data.keyword.vmwaresolutions_short}} para pedir
 o HCX, é fornecida uma URL com
 um link para fazer download da versão do HCX do lado do cliente que corresponde
-à versão do HCX implementada no lado da nuvem. Esse link é fornecido na
-interface com o usuário (IU) do HCX do gerenciador do lado da nuvem.
+à versão do HCX implementada no lado da nuvem. Esse link é fornecido na interface com o usuário (IU) do HCX Manager do lado da nuvem.
 
 Uma chave de registro de uso descartável também é fornecida. Use as etapas a seguir para configurar o registro de uso.
 
@@ -70,11 +61,9 @@ Para o lado do cliente, use o menu **Tarefas** para monitorar a implementação 
 
 Se houver uma falha de implementação em
 ambos os lados, as implementações do componente de frota serão restauradas e
-excluídas. Ao determinar a causa da falha, clique na guia **Interconectar** na IU da web do HCX vCenter no lado do cliente e, em seguida,
-selecione **Instalar componentes do HCX** na parte superior da tela.
+excluídas. Depois de determinar a causa da falha, clique na guia **Interconexão** na IU da web do HCX vCenter no lado do cliente e, em seguida, selecione **Instalar componentes do HCX** na parte superior da tela.
 
-Após a implementação bem-sucedida de componentes da Frota e depois de vários
-minutos, o status do túnel para os componentes CGW e L2C será **Ativo** na guia **Interconexão**.
+Após a implementação bem-sucedida dos componentes da frota e após vários minutos, o status do túnel para o CGW e os componentes L2C é exibido como **Ativo** na guia **Interconexão**.
 
 ## Links relacionados
 {: #vcshcx-deployment-related}

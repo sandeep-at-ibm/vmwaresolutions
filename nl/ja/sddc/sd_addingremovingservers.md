@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -33,7 +33,7 @@ Cloud Foundation インスタンスには 5 つまでクラスターを配置で
 ## ESXi サーバーを追加する手順
 {: #sd_addingremovingservers-adding-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「Cloud Foundation インスタンス」**テーブルで、容量を拡張するインスタンスをクリックします。
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。
 4. **「クラスター」**テーブルで、ESXi サーバーを追加するクラスターをクリックします。
@@ -61,7 +61,7 @@ Cloud Foundation インスタンスには 5 つまでクラスターを配置で
 ## ESXi サーバーを削除する手順
 {: #sd_addingremovingservers-removing-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「Cloud Foundation インスタンス」**テーブルで、容量を縮小するインスタンスをクリックします。
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。
 4. **「クラスター」**テーブルで、ESXi サーバーを削除するクラスターをクリックします。
@@ -81,7 +81,6 @@ Cloud Foundation インスタンスには 5 つまでクラスターを配置で
 {: #sd_addingremovingservers-related}
 
 * [Cloud Foundation の部品構成表](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
-* [Cloud Foundation インスタンスの要件と計画](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
-* [Cloud Foundation インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [Cloud Foundation インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/services?topic=vmware-solutions-sd_addingviewingclusters#sd_addingviewingclusters)
 * [ホストをメンテナンス モードに切り替える](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

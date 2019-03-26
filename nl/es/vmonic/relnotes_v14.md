@@ -18,6 +18,7 @@ lastupdated: "2017-03-08"
 Este release incluye nuevas características, actualizaciones de componentes, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Actualizaciones de componentes para instancias de Cloud Foundation
+{: #relnotes_v14-vcf-comp}
 
 Los siguientes componentes son nuevos o se han actualizado:
 
@@ -27,13 +28,13 @@ Los siguientes componentes son nuevos o se han actualizado:
 * VMware ESXi 6.0 u2 p04
 * Se solicita una nueva VSI (instancia de servidor virtual) de Windows para los servicios Microsoft Active Directory (AD) y Sistema de nombres de dominio (DNS), necesarios para el soporte de la configuración de varios sitios en este release. Esta VSI tiene las siguientes especificaciones: Windows 2012 R2 (8 GB de RAM / 2 núcleos de CPU / 100 GB de disco / enlaces ascendentes duales privados de 1 Gbps).
 
-Para obtener más información, consulte [Visión general de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview).
-
 ## Actualizaciones de componentes para instancias de vCenter Server
+{: #relnotes_v14-vcs-comp}
 
 Los siguientes componentes son nuevos o se han actualizado:
 
 ### VMware NSX for vSphere 6.2.4
+{: #relnotes_v14-nsx}
 
 Ahora VMware NSX for vSphere 6.2.4 se instala de forma predeterminada en todas las instancias de vCenter Server (antes solo en instancias de Cloud Foundation).
 
@@ -45,6 +46,7 @@ El controlador NSX no se instala en las instancias de vCenter Server (del modo e
 Para obtener más información sobre las mejoras incorporadas en VMware NSX para vSphere 6.2.4, sus requisitos y problemas conocidos, consulte las [Notas del release de NSX for vSphere 6.2.4](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
 
 ### VMware NSX Edge
+{: #relnotes_v14-nsx-edge}
 
 Ahora NSX Edge se incluye como parte de las nuevas instancias de vCenter Server que se solicitan. NSX Edge ofrece seguridad de extremo a extremo de la red y servicios de pasarela para aislar una red virtualizada.
 
@@ -52,19 +54,22 @@ Durante el despliegue de la instancia, IBM despliega Management VMware NSX Edge 
 
 Para garantizar la seguridad, se imponen reglas de cortafuegos que solo permiten las comunicaciones HTTPS de salida iniciadas por las máquinas virtuales de gestión. Esta ESG se despliega en una configuración de tipo Grande y solo el equipo de soporte de IBM puede modificar la configuración. Para obtener más información, consulte los temas siguientes:
 
-* [Especificaciones técnicas de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Especificaciones técnicas de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)
 * [¿Representa NSX Edge de servicios de gestión un riesgo para la seguridad?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [Documentación de VMware NSX](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ### Licencia de NSX
+{: #relnotes_v14-nsx-license}
 
 Se solicita una licencia de VMware NSX Base para Service Providers Edition por nodo.
 
 ### Nuevo bloque de direcciones de subred
+{: #relnotes_v14-subnet}
 
 Se solicita un bloque de subred de 16 direcciones portátiles públicas por nodo.
 
 ## Actualizaciones del modelo de cargo por servicio
+{: #relnotes_v14-svc-charge}
 
 El modelo de cargo por servicio se ha simplificado:
 
@@ -73,6 +78,7 @@ El modelo de cargo por servicio se ha simplificado:
 * Para ambos tipos de instancias, se ha incorporado una nueva cuota de _soporte y servicios_, que es una cuota mensual que se aplica a cada nodo.
 
 ## Actualizaciones de la topología de la red de instancias
+{: #relnotes_v14-netwok-topo}
 
 Este release incluye las siguientes mejoras en la topología de las instancias:
 
@@ -83,12 +89,12 @@ Debido a estos cambios, no puede utilizar las instancias existentes previas a V1
 {:note}
 
 ## Soporte de la configuración de varios sitios para instancias de Cloud Foundation
+{: #relnotes_v14-vcf-multisite}
 
 Ahora puede desplegar una instancia sola instancia de Cloud Foundation, al igual que en releases anteriores o, además, puede desplegar instancias secundarias que se conectan a una instancia primaria. El modelo de configuración de varios sitios utiliza una topología de estrella ("hub and spoke") con un sitio primario y un máximo de siete sitios secundarios.
 
-Para obtener más información, consulte [Configuración de varios sitios para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_multisite).
-
 ## Mejoras en el despliegue de la recuperación tras desastre de Zerto
+{: #relnotes_v14-zerto}
 
 * Para instancias de Cloud Foundation, el despliegue de la recuperación tras desastre de Zerto es automático en lugar de gestionarse mediante una incidencia de soporte. Todos los componentes Zerto, como por ejemplo una subred privada portátil, una VSI (instancia de servicio virtual) de Windows y los cargos de licencia de Zerto, aparecen listados en el coste estimado, de modo que los puede revisar antes de realizar el pedido.
 * Para instancias de vCenter Server, el despliegue de la recuperación tras desastre de Zerto se realiza mediante una incidencia de soporte, como en el release anterior. Sin embargo, ya no se necesitan NSX Edge ni la subred portátil pública, ya que ahora están incluidos en el despliegue básico. Los cargos correspondientes a una subred privada portátil, a una VSI (instancia de servicio virtual) de Windows y a la licencia de Zerto se siguen aplicando.
@@ -96,25 +102,25 @@ Para obtener más información, consulte [Configuración de varios sitios para i
 Para obtener más información, consulte [Recuperación tras desastre de Zerto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
 
 ## Proceso de pedido de una instancia
+{: #relnotes_v14-inst-order}
 
 El proceso de pedido de una instancia se ha simplificado significativamente:
 
 * Tanto para instancias de Cloud Foundation como para instancias de vCenter Server, ya no se muestra página de credenciales de SoftLayer durante el proceso de pedido. Se utilizan de forma predeterminada las credenciales de SoftLayer definidas en la página de valores y se solicita al usuario que las actualice solo si no cumplen los requisitos.
 * Además, para instancias de vCenter Server, solo está disponible la opción **Grande** para el tipo de **Hardware** y el valor **10 Gbps Dual** para la opción **Velocidad de puerto de enlace ascendente**, lo que reduce el número de valores que se deben especificar cuando se realiza el pedido.
 
-Para obtener más información, consulte los temas siguientes:
-
-* [Pedido de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
-* [Pedido de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+Para obtener más información, consulte [Pedido de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance).
 
 ## Gestión de instancias
+{: #relnotes_v14-inst-mgmt}
 
 Se han realizado mejoras y se han incorporado nuevas características al proceso de gestión de instancias:
 
-* Para instancias de Cloud Foundation, puede ver el nombre de usuario y las contraseñas de distintos componentes de la instancia en la página de detalles de la instancia. Para obtener más información, consulte [Visualización de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances).
+* Para instancias de Cloud Foundation, puede ver el nombre de usuario y las contraseñas de distintos componentes de la instancia en la página de detalles de la instancia.
 * Para instancias de vCenter Server, ahora puede instalar actualizaciones de software y parches para componentes de IBM directamente desde la consola. Para obtener más información, consulte [Aplicación de actualizaciones y de parches a instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates).
 
 ## Notificaciones de la consola
+{: #relnotes_v14-console-notif}
 
 Puede configurar notificaciones de la consola en la página **Configuración**. De forma predeterminada, el valor está habilitado, lo que significa que recibe una notificación en la consola para todos los sucesos. También puede inhabilitar las notificaciones de la consola en la página **Configuración**.
 

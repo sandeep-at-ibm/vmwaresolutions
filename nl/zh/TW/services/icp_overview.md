@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2019-02-15"
 {:note}
 
 ## IBM Cloud Private Hosted 的技術規格
-{: #technical-specifications-for-ibm-cloud-private-hosted}
+{: #icp_overview-specs}
 
 下表列出為**正式作業就緒**環境和**開發/測試**環境訂購 IBM Cloud Private Hosted 服務的最低需求。
 
@@ -35,11 +35,11 @@ lastupdated: "2019-02-15"
 | 開發/測試 | 30 | 200 | 3 | 4,000 |
 
 ### IBM Cloud Private Hosted 的資源需求
-{: #resource-requirements-for-ibm-cloud-private-hosted}
+{: #icp_overview-resource-req}
 
 下表列出「正式作業就緒」和「開發/測試」環境中 {{site.data.keyword.cloud_notm}} Private Hosted 服務的資源需求。
 
-表 2. 「正式作業就緒」環境中的 {{site.data.keyword.cloud_notm}} Private Hosted 資源需求
+表 2.「正式作業就緒」環境中的 {{site.data.keyword.cloud_notm}} Private Hosted 資源需求
 
 | 節點類型  | CPU 核心   |  記憶體 (GB) | 磁碟 1 (GB) | 磁碟 2 (GB) | VM 數目 |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
@@ -55,7 +55,7 @@ lastupdated: "2019-02-15"
 |NSX Edge Services Gateway|2 |1 | 0.5 | 0.5 |2 |
 | 記載的限制 | 52 | 640 |  | 8,000 |   |
 
-表 3. 「開發/測試」環境中的 {{site.data.keyword.cloud_notm}} Private Hosted 資源需求
+表 3.「開發/測試」環境中的 {{site.data.keyword.cloud_notm}} Private Hosted 資源需求
 
 | 節點類型  | CPU 核心   |  記憶體 (GB) | 磁碟 1 (GB) | 磁碟 2 (GB) | VM 數目 |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
@@ -91,7 +91,7 @@ lastupdated: "2019-02-15"
 | HostOverheadCores	| ESXi 伺服器保留給額外需要的核心數（等於 0.1 核心）| 核心	| 0.1 |	0.1 |
 | MgmtOverheadCores | vCenter Server 管理元件（vCenter Server、PSC、AD/DNS、Edges）保留的核心數（等於 5 核心）| 核心	| 5	| 5 |
 | vSphereHAHostTolerance |	vSphere HA 配置中容忍的主機數（等於一個主機）|	主機	 |1 |1 |
-| HostVsanOverheadCorePercentage | vSAN 所使用的主機核心百分比，其等於 10% ，如果主機非 vSAN，則等於 0%| % | 10% |	0% |
+| HostVsanOverheadCorePercentage | vSAN 所使用的主機核心百分比，其等於 10%，如果主機非 vSAN，則等於 0%| % | 10% |	0% |
 
 #### 公式 2
 {: #icp_overview-formulas-2}

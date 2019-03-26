@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -41,9 +41,8 @@ Depois que os usuários incluídos aceitarem seu convite, eles poderão efetuar 
 
 * [ Convidando usuários e designando acesso ](/docs/iam?topic=iam-iamuserinv)
 * [ Gerenciando a identidade e o acesso ](/docs/iam?topic=iam-getstarted)
-* [ Gerenciando usuários e o acesso ](/docs/iam/iamusermanage.html)
+* [Convidando usuários](/docs/iam?topic=iam-iamuserinv#iamuserinv)
 * [ O que é IAM ](/docs/iam?topic=iam-iamoverview)
 * [Migrando instâncias do vCenter Server pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
 * [Migrando instâncias do vCenter Server with Hybridity Bundle pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
-* [Migrando instâncias do Cloud Foundation pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addinstancetousraccount)
 * [Migrando instâncias do NetApp ONTAP Select pré-V2.5 para contas do IBM Cloud](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)

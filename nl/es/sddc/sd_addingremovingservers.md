@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -33,7 +33,7 @@ Una instancia de Cloud Foundation puede tener un máximo de cinco clústeres, un
 ## Procedimiento para añadir servidores ESXi
 {: #sd_addingremovingservers-adding-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia para la que desea ampliar la capacidad.
 3. Pulse **Infraestructura** en el panel de navegación izquierdo.
 4. En la tabla **CLÚSTERES**, pulse el clúster al que desea añadir servidores ESXi.
@@ -61,7 +61,7 @@ Una instancia de Cloud Foundation puede tener un máximo de cinco clústeres, un
 ## Procedimiento para eliminar servidores ESXi
 {: #sd_addingremovingservers-removing-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia para la que desea to contratar capacidad.
 3. Pulse **Infraestructura** en el panel de navegación izquierdo.
 4. En la tabla **CLÚSTERES**, pulse el clúster desde el que desea eliminar los servidores ESXi.
@@ -81,7 +81,6 @@ Una instancia de Cloud Foundation puede tener un máximo de cinco clústeres, un
 {: #sd_addingremovingservers-related}
 
 * [Lista de materiales de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
-* [Requisitos y planificación de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
-* [Adición, visualización y supresión de clústeres para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [Adición, visualización y supresión de clústeres para instancias de Cloud Foundation](/docs/services/vmwaresolutions/services?topic=vmware-solutions-sd_addingviewingclusters#sd_addingviewingclusters)
 * [Colocación de un host en modalidad de mantenimiento](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Soporte del procesador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

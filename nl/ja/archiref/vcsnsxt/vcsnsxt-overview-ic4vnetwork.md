@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -40,17 +40,12 @@ lastupdated: "2019-02-15"
 * プライマリー IP アドレスは、{{site.data.keyword.cloud_notm}} によってプロビジョンされるデバイス、ベア・メタル・サーバー、仮想サーバーに割り当てられます。 これらのブロックの IP アドレスをユーザーが割り当ててはいけません。
 * ポータブル IP アドレスは、ユーザーが必要に応じて割り当て、管理できるように用意されています。
 
-アカウント内で VLAN スパンニングを有効にするか、アカウントを Virtual Routing and Forwarding (VRF) アカウントとして構成すると、お客様のアカウントの VLAN にプライマリー IP アドレスまたはポータブル IP アドレスをルーティングできるようになります。
-
-## VLAN スパンニング
-{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
-
-VLAN スパンニングとは、アカウント内のすべての VLAN のプライマリー/ポータブルの各サブネット IP ブロックを相互にルーティングできるようにする、{{site.data.keyword.cloud_notm}} のグローバルなアカウント設定です。 この設定を使用できない場合でも、IP ブロックは {{site.data.keyword.cloud_notm}} サービスにルーティングされますが、相互にはルーティングされません。 このアーキテクチャーでは、ソリューション・コンポーネントが存在するさまざまなサブネット間で透過的に接続を行えるように、VMware vCenter Server on {site.data.keyword.cloud_notm}} をデプロイしたアカウントの VLAN スパンニングを有効にする必要があります。
+アカウントを Virtual Routing and Forwarding (VRF) アカウントとして構成すると、お客様のアカウントの VLAN にプライマリー IP アドレスまたはポータブル IP アドレスをルーティングできるようになります。
 
 ## Virtual Routing and Forwarding
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} アカウントは、Virtual Routing and Forwarding (VRF) アカウントとして構成することもできます。 VRF アカウントでは、VLAN スパンニングと同様の機能を使用できるので、サブネット IP ブロック間の自動ルーティングが可能になります。 Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
+{{site.data.keyword.cloud_notm}} アカウントは、Virtual Routing and Forwarding (VRF) アカウントとして構成することもできます。 VRF アカウントにより、アカウント内でのサブネット IP ブロック間の自動グローバル・ルーティングが有効になります。Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
 
 ## 物理ホスト接続
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -19,11 +19,11 @@ F5 on {{site.data.keyword.cloud}} 服务 (F5 BIG-IP® Virtual Edition) 用于提
 
 可以根据需要安装此服务的多个实例。
 
-此服务仅可用于在 V1.9 或更高发行版中部署的实例。当前安装的 BIG-IP VE 版本为 V13.1.1.2。
+此服务仅可用于在 V1.9 或更高发行版中部署的实例。当前安装的 BIG-IP VE 版本为 v14.1.0.2。
 {:note}
 
 ## F5 on IBM Cloud 的技术规范
-{: #technical-specifications-for-f5-on-ibm-cloud}
+{: #f5_considerations-specs}
 
 F5 on {{site.data.keyword.cloud_notm}} 服务随附以下组件：
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -19,22 +19,22 @@ VUM は、vSAN によって生成されたシステム管理ベースライン�
 
 ほとんどの企業では、VUM の VMware デフォルト設定が適切であると見なされます。 以下の情報に、企業で別の設定を使用する場合にこれらの設定を変更する方法を示します。
 
-## ダウンロードのスケジュール
+##	ダウンロードのスケジュール
 {: #vum-metadata-download-schedule}
 
 更新は仮想アプライアンスのアップグレード、ホスト・パッチ、および拡張であり、デフォルトでは VUM によって更新が毎日ダウンロードされます。 ダウンロード・スケジュールを変更するには、vSphere Web Client にアクセスし、**「Home」**>**「Update Manager」**>**「Manage」**>**「Settings」**にナビゲートし、**「Download Schedule」**を選択し、**「Edit」**をクリックします。
 
-## 通知チェックのスケジュール
+##	通知チェックのスケジュール
 {: #vum-metadata-notif-check-schedule}
 
 通知は、パッチの再呼び出し、新しい修正、およびアラートに関する情報であり、デフォルトでは VUM によって 1 時間ごとに通知がダウンロードされます。 これを変更するには、vSphere Web Client にアクセスして、**「Home」**>**「Update Manager」**>**「Manage」**>**「Settings」**にナビゲートして、**「Notification Check Schedule」**を選択して、**「Edit」**をクリックします。
 
-## 仮想マシン設定
+##	仮想マシン設定
 {: #vum-metadata-vm-settings}
 
 仮想マシン (VM) 設定を変更するには、vSphere Web Client にアクセスして、**「Home」**>**「Update Manager」**>**「Manage」**>**「Settings」**から**「VM Settings」**にナビゲートして、**「Edit」**をクリックします。
 
-## ホスト/クラスター設定
+##	ホスト/クラスター設定
 {: #vum-metadata-host-settings}
 
 ホスト/クラスター設定を変更するには、vSphere Web Client にアクセスして、**「Home」**>**「Update Manager」**>**「Manage」**>**「Settings」**から**「Host/Cluster Settings」**にナビゲートして、**「Edit」**をクリックします。

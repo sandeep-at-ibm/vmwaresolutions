@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -26,16 +26,17 @@ lastupdated: "2019-02-15"
   <dd class="dd">物理网络提供环境的网络连接，该连接接着由网络虚拟化使用。网络由 {{site.data.keyword.cloud_notm}} 服务网络提供，并且包含 DNS 和 NTP 等额外服务。</dd>
 </dl>
 
-有关物理组件的更多信息，请参阅 [Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)或 [vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的材料清单。
+有关物理组件的更多信息，请参阅 [vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的材料清单。
 
-有关存储器的更多信息，请参阅[共享存储器体系结构](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)。
+有关存储器的更多信息，请参阅[共享存储器体系结构](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)。
 
 ## 物理主机设计
 {: #design_physicalinfrastructure-host-design}
 
 物理主机是指环境中提供计算资源的 {{site.data.keyword.baremetal_short}}。在此解决方案中应用的 {{site.data.keyword.baremetal_short}} 由 VMware 进行认证，并在 [VMware HCG](http://www.vmware.com/resources/compatibility/search.php) 中列出。
 
-解决方案中可用的服务器配置满足或超过安装、配置和管理 vSphere ESXi 的最低需求。有各种配置可用于满足不同需求。有关用于 VMware on {{site.data.keyword.cloud_notm}} 解决方案的确切规范的详细列表，请参阅 [Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)或 [vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的材料清单。
+解决方案中可用的服务器配置满足或超过安装、配置和管理 vSphere ESXi 的最低需求。有各种配置可用于满足不同需求。有关用于 VMware on {{site.data.keyword.cloud_notm}} 解决方案的确切规范的详细列表，请参阅
+[vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的材料清单。
 
 {{site.data.keyword.baremetal_short}} 位于 {{site.data.keyword.cloud_notm}} 中。
 {:note}
@@ -87,21 +88,12 @@ lastupdated: "2019-02-15"
 * 主 IP 地址，分配给由 {{site.data.keyword.cloud_notm}} 供应的设备、裸机服务器和虚拟服务器。不要分配这些块中的任何 IP 地址。
 * 可移植 IP 地址，供您根据需要进行分配和管理。
 
-在 {{site.data.keyword.slportal}} 中启用了 **VLAN 生成**，或者帐户配置为**虚拟路由和转发 (VRF)** 帐户时，主 IP 地址或可移植 IP 地址可以设置为可路由到客户帐户内的任何 VLAN。
-
-### VLAN 生成
-{: #design_physicalinfrastructure-vlan-spanning}
-
-**VLAN 生成**是一个 {{site.data.keyword.slportal}} 帐户设置，允许帐户中所有 VLAN 的主子网 IP 块和可移植子网 IP 块相互路由。禁用了 **VLAN 生成**设置时，IP 块仍可以路由到 {{site.data.keyword.cloud_notm}} 服务，但不能相互路由。
-
-要允许跨解决方案组件所在的各种不同子网建立透明连接，需要在部署了 Cloud Foundation 和 vCenter Server 实例的 {{site.data.keyword.slportal}} 帐户中启用 **VLAN 生成**。
+在帐户配置为**虚拟路由和转发 (VRF)** 帐户时，主 IP 地址或可移植 IP 地址可以设置为可路由到客户帐户内的任何 VLAN。
 
 ### 虚拟路由和转发
 {: #design_physicalinfrastructure-vrf}
 
-您还可以将 {{site.data.keyword.slportal}} 帐户配置为虚拟路由和转发 (VRF) 帐户，以提供与 VLAN 生成类似的功能，从而使子网 IP 块之间能够自动路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
-
-{{site.data.keyword.vmwaresolutions_short}} 控制台无法检测是否在 {{site.data.keyword.slportal}} 中启用了 VRF。您将收到一条警告，提醒您确保在 {{site.data.keyword.slportal}} 帐户中启用了 **VLAN 生成**或 VRF。
+您可以将 {{site.data.keyword.slportal}} 帐户配置为虚拟路由和转发 (VRF) 帐户，以使得子网 IP 块之间能够自动进行全局路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
 
 ### 物理主机连接
 {: #design_physicalinfrastructure-host-connect}
@@ -171,7 +163,7 @@ vSphere ESXi 系统管理程序设计为安装在持久位置。因此，物理�
 
 使用 VMware vSAN 时，将使用全闪存配置来配置 VMware vSAN。此设计支持多个配置选项，包括 2U 和 4U 机箱、不同磁盘数以及各种磁盘大小。所有配置都使用两个 vSAN 磁盘组，其中一个固态磁盘 (SSD) 用于高速缓存，一个或多个 SSD 用于容量。分配供 vSAN 使用的所有驱动器均在单磁盘 RAID-0 中配置。
 
-有关支持的配置的更多信息，请参阅 [Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)或 [vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的材料清单。
+有关所支持的配置的更多信息，请参阅 [vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的材料清单。
 
 ### 跨主机共享文件级别的存储器
 {: #design_physicalinfrastructure-shared-storage}
@@ -184,12 +176,11 @@ vSphere ESXi 系统管理程序设计为安装在持久位置。因此，物理�
 
 您可以在购买时或日后在控制台中为工作负载分配和安装更多文件共享。可以从相应的 {{site.data.keyword.CloudDataCent_notm}} 中可用的 {{site.data.keyword.cloud_notm}} 耐久性文件存储器容量选项和性能层中进行选择。所有共享均使用 NFSv3 协议进行连接。此外，还可通过应用 NetApp ONTAP Select 产品来连接 NFSv3 文件共享。
 
-提供 10 IOPS/ GB 性能层的 {{site.data.keyword.CloudDataCents_notm}} 还包含提供者管理的静态数据加密（AES-256 加密），并且这些数据中心通过全闪存存储器支持。10 IOPS/GB 性能层限制为最大容量 4 TB。有关此解决方案中使用的共享 NAS 的更多信息，请参阅[共享存储器体系结构](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)。
+提供 10 IOPS/ GB 性能层的 {{site.data.keyword.CloudDataCents_notm}} 还包含提供者管理的静态数据加密（AES-256 加密），并且这些数据中心通过全闪存存储器支持。10 IOPS/GB 性能层限制为最大容量 4 TB。有关此解决方案中使用的共享 NAS 的更多信息，请参阅[共享存储器体系结构](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)。
 
 ## 相关链接
 {: #design_physicalinfrastructure-related}
 
-* [Cloud Foundation 材料清单](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
 * [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
-* [共享存储器体系结构](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
+* [共享存储器体系结构](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [NetApp ONTAP Select 体系结构](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

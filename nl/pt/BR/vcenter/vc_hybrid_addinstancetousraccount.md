@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -25,7 +25,7 @@ Para obter mais informações sobre como vincular sua conta somente IaaS à sua 
 ## Procedimento para migrar instâncias
 {: #vc_hybrid_addinstancetousraccount-procedure}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. No banner do console, clique em seu ícone de conta do usuário e, em seguida, clique no campo **Conta** para selecionar a conta do usuário para a qual deseja migrar a instância.
 3. Na tabela **Instâncias do vCenter Server**, localize a instância anterior à V2.5.
 4. Na coluna **Ações**, clique no ícone de menu overflow e, em seguida, clique em **Migrar instância para a conta**.
@@ -35,7 +35,7 @@ Para obter mais informações sobre como vincular sua conta somente IaaS à sua 
 {: #vc_hybrid_addinstancetousraccount-results}
 
 1. Você obtém uma notificação do console de que sua solicitação para migrar a instância para a conta especificada do {{site.data.keyword.cloud_notm}} foi aceita.
-2. Quando a migração da instância for concluída, a instância será exibida na página **Instâncias implementadas** na conta para a qual foi migrada. A instância migrada não é mais exibida na conta original da qual foi migrada.
+2. Quando a migração da instância for concluída, a instância será exibida na página **Recursos** sob a conta para a qual ela foi migrada. A instância migrada não é mais exibida na conta original da qual foi migrada.
 
 ## Links relacionados
 {: #vc_hybrid_addinstancetousraccount-related}

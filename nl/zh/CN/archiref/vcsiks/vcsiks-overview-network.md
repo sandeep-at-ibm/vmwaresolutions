@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -53,11 +53,11 @@ lastupdated: "2019-02-18"
 
 每个 Kubernetes 集群都会设置为使用称为 Calico 的网络插件。
 
-设置的缺省网络策略可保护 {{site.data.keyword.containerlong_notm}} 中每个工作程序节点的公用网络接口。如果您具有独特的安全性需求，或者具有启用了 VLAN 生成的多专区集群，那么可以使用 Calico 和 Kubernetes 为集群创建网络策略。通过 Kubernetes 网络策略，可以指定要允许或阻止进出集群中 pod 的网络流量。 
+设置的缺省网络策略可保护 {{site.data.keyword.containerlong_notm}} 中每个工作程序节点的公用网络接口。如果您具有独特的安全性需求，或者具有启用了 VLAN 生成或虚拟路由和转发 (VRF) 的多专区集群，那么可以使用 Calico 和 Kubernetes 为集群创建网络策略。通过 Kubernetes 网络策略，可以指定要允许或阻止进出集群中 pod 的网络流量。
 
 要设置更高级的网络策略（例如阻止入站（流入）流量流至 LoadBalancer 服务），请使用 Calico 网络策略。
 
-Kubernetes 网络策略指定了 pod 如何与其他 pod 以及外部端点进行通信。还可以根据 pod 和名称空间标签对流量进行过滤。Kubernetes 网络策略使用 kubectl 命令或 Kubernetes API 进行应用。应用这些策略后，这些策略将自动转换成 Calico 网络策略，随后 Calico 会强制实施这些策略。
+Kubernetes 网络策略指定了 pod 如何与其他 pod 以及公用网络服务端点进行通信。还可以根据 pod 和名称空间标签对流量进行过滤。Kubernetes 网络策略使用 kubectl 命令或 Kubernetes API 进行应用。应用这些策略后，这些策略将自动转换成 Calico 网络策略，随后 Calico 会强制实施这些策略。
 
 适用于 Kubernetes 的 Calico 网络策略是 Kubernetes 网络策略的超集，使用 calicoctl 命令进行应用。
 

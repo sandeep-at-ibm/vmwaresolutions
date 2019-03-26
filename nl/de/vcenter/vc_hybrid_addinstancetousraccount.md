@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -25,7 +25,7 @@ Weitere Informationen zum Verknüpfen Ihres Nur-IaaS-Kontos mit Ihrem PaaS-Konto
 ## Vorgehensweise beim Migrieren von Instanzen
 {: #vc_hybrid_addinstancetousraccount-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie im Konsolenbanner auf das Symbol Ihres Benutzerkontos und klicken Sie anschließend auf das Feld **Konto**, um das Benutzerkonto auszuwählen, in das Sie die Instanz migrieren möchten.
 3. Suchen Sie die Instanz der Version vor 2.5 in der Tabelle **vCenter Server-Instanzen**.
 4. Klicken Sie in der Spalte **Aktionen** auf das Überlaufmenüsymbol und anschließend auf **Instanz auf Konto migrieren**.
@@ -35,7 +35,7 @@ Weitere Informationen zum Verknüpfen Ihres Nur-IaaS-Kontos mit Ihrem PaaS-Konto
 {: #vc_hybrid_addinstancetousraccount-results}
 
 1. Sie empfangen eine Konsolbenachrichtigung, dass Ihre Anforderung zum Migrieren der Instanz auf das angegebene {{site.data.keyword.cloud_notm}}-Konto akzeptiert wurde.
-2. Wenn die Instanzmigration abgeschlossen ist, wird die Instanz auf der Seite **Bereitgestellte Instanzen** unter dem Konto angezeigt, auf das sie migriert wurde. Die migrierte Instanz wird nicht mehr in dem ursprünglichen Konto angezeigt, aus dem sie migriert wurde.
+2. Wenn die Instanzmigration abgeschlossen ist, wird die Instanz auf der Seite **Ressourcen** unter dem Konto angezeigt, auf das sie migriert wurde. Die migrierte Instanz wird nicht mehr in dem ursprünglichen Konto angezeigt, aus dem sie migriert wurde.
 
 ## Zugehörige Links
 {: #vc_hybrid_addinstancetousraccount-related}

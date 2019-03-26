@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -22,7 +22,7 @@ Sie können die Zusammenfassung und die detaillierten Informationen der VMware C
 
 Wenn Sie eine Zusammenfassung aller Cloud Foundation-Instanzen, die für ein Benutzerkonto bereitgestellt wurden, anzeigen möchten, führen Sie die folgenden Schritte aus:
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie im Konsolenbanner auf das Symbol Ihres Benutzerkontos und klicken Sie anschließend auf das Feld **Konto**, um das Benutzerkonto auszuwählen, für das Sie Instanzen prüfen wollen.
 3. Zeigen Sie in der Tabelle **Cloud Foundation-Instanzen** die Liste Ihrer Instanzen an:
 
@@ -136,6 +136,5 @@ In den folgenden Abschnitten finden Sie Informationen, die Sie bei der Ausführu
 ## Zugehörige Links
 {: #sd_viewinginstances-related}
 
-* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Kapazität für Cloud Foundation-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [Cloud Foundation-Instanzen löschen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

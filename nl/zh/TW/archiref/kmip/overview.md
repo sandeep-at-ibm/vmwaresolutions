@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -25,8 +25,8 @@ lastupdated: "2019-02-15"
 當有許多儲存空間加密解決方案可用於 VMware 工作負載時，KMIP for VMware 提供下列優點：
 
 * 與 VMware vSAN 加密及 vSphere 加密整合，兩者都是在 Hypervisor 層實作，而非儲存空間或虛擬機器層。此方式容許輕鬆管理及瞭解儲存空間解決方案及應用程式。
-* 在許多 IBM Cloud 多區域地區 (MZR) 中提供完整受管理金鑰管理伺服器。
-* 整合 VMware 叢集與 IBM Cloud Key Protect，提供可隨時撤銷之完整客戶管理金鑰。
+* 在許多 {{site.data.keyword.cloud_notm}} 多區域地區 (MZR) 中提供完全受管理金鑰管理伺服器。
+* 整合 VMWare 叢集和 {{site.data.keyword.cloud_notm}} Key Protect 可提供您可以隨時撤銷的完全由客戶管理的金鑰。
 
 ## 相關鏈結
 {: #kmip-overview-related}

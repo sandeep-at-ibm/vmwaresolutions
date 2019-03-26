@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2019-02-14"
 
 可用更新是实例软件更新列表中的一个记录，可以立即应用，也可以安排在日后应用。更新是一个捆绑软件，包含一个或多个用于更新 IBM 管理组件和 VMware 组件的软件包。
 
-从 V2.5 开始，不会再列出 IBM CloudDriver 更新，因为已启用自动更新。添加主机、添加集群和订购服务等操作会自动将实例更新到最新版本。有关自动更新的更多信息，请参阅 [V2.5 发行说明](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)中的 *IBM CloudDriver 弹性*部分。
+将不再列出 IBM CloudDriver 更新，因为已启用自动更新。添加 ESXi 服务器、添加集群和订购服务等操作会自动将实例更新到最新版本。有关自动更新的更多信息，请参阅 [V2.5 发行说明](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)中的 *IBM CloudDriver 弹性*部分。
 {:note}
 
 ## 开始之前
@@ -56,7 +56,7 @@ lastupdated: "2019-02-14"
 ## 对 Cloud Foundation 实例应用更新的过程
 {: #sd_applyingupdates-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **Cloud Foundation 实例**表中，单击要更新的实例。
 3. 在**摘要**页面上，验证是否所有实例详细信息都正确显示。然后在左侧导航窗格上，单击**基础架构**以验证**基础架构**页面上的详细信息。
    如果未显示详细信息，这可能指示由于防火墙规则或其他网络问题而导致 IBM CloudDriver 虚拟服务器实例 (VSI) 发生连接问题。请解决该问题后，再继续下一步，否则更新可能会失败。

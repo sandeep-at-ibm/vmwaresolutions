@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -16,10 +16,7 @@ lastupdated: "2019-02-15"
 
 F5 on {{site.data.keyword.cloud}} サービスを管理するには、F5 on {{site.data.keyword.cloud_notm}} サービスの詳細ページにある対応する資格情報を使用して、1 次または 2 次の BIG-IP Web UI コンソールにログインします。
 
-サービスの詳細の表示について詳しくは、以下を参照してください。
-
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+サービス詳細の表示について詳しくは、[vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)を参照してください。
 
 ## 関連リンク
 {: #managing_f5-related}

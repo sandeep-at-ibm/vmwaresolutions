@@ -27,4 +27,4 @@ Abra una incidencia de soporte de {{site.data.keyword.cloud}} y trabaje con el e
 
 Para acceder a la consola de Zerto, pulse la tarjeta de Zerto desde el separador **Servicios** de la instancia y pulse **Ver detalles** y luego **Ver consola de Zerto**.
 
-Para obtener más información sobre cómo ponerse en contacto con el equipo de soporte de IBM, consulte [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions//vmonic/trbl_support.html).
+Para obtener más información sobre cómo ponerse en contacto con el equipo de soporte de IBM, consulte [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-trbl_support#trbl_support).

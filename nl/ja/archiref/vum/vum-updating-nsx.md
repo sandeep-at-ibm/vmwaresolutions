@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -63,7 +63,7 @@ NSX Manager が正常にアップグレードされた後に NSX をダウング
   - NSX Edge が正常にアップグレードされると、「Status」は「Deployed」になり、「Version」列に新しい NSX バージョンが表示されます。 Edge がアップグレードに失敗し、古いバージョンにロールバックされない場合は、**「Redeploy NSX Edge」**アイコンをクリックしてから、アップグレードを再試行します。
 
 ## 関連リンク
-{: #vum-type-updates-related}
+{: #vum-updating-nsx-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)

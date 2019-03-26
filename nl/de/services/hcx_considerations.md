@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # VMware HCX on IBM Cloud - Spezifikationen und Aspekte
-{: #vmware-hcx-on-ibm-cloud-overview}
+{: #hcx_considerations}
 
 Der Service "HCX on {{site.data.keyword.cloud}}" kann die Netze von lokalen Rechenzentren nahtlos in die {{site.data.keyword.cloud_notm}} erweitern. Dies ermöglicht die Migration von virtuellen Maschinen in die und aus der {{site.data.keyword.cloud_notm}}, ohne dass hierzu eine Konvertierung oder Änderung erforderlich ist.
 
@@ -26,7 +26,7 @@ Eine vCenter Server-Instanz mit HCX on {{site.data.keyword.cloud_notm}} ist auf 
 {:note}
 
 ## Technische Spezifikationen für HCX on IBM Cloud
-{: #technical-specifications-for-hcx-on-ibm-cloud}
+{: #hcx_considerations-specs}
 
 Mit dem Service "HCX on {{site.data.keyword.cloud_notm}}" werden die folgenden Komponenten bestellt und einbezogen.
 
@@ -72,7 +72,7 @@ Der Service "HCX on {{site.data.keyword.cloud_notm}}" kann nicht in einer Instan
 Bevor Sie den Service "HCX on {{site.data.keyword.cloud_notm}}" installieren, müssen Sie eine Firewallregel zu vorhandenen Firewalls hinzufügen, um den gesamten abgehenden HTTPS-Datenverkehr zuzulassen, damit die virtuelle Appliance für den HCX-Manager sich selbst registrieren kann. Nachdem die Installation des HCX-Managers abgeschlossen ist, können Sie die Firewallregel entfernen. Darüber hinaus müssen Sie Firewallregeln konfigurieren, damit HCX ordnungsgemäß funktionieren kann. Weitere Informationen finden Sie in *Anhang A - Portzugriffsvoraussetzungen* unter der [Architektur von HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
 
 ## Hinweise zum Entfernen von HCX on IBM Cloud
-{: #considerations-when-removing-hcx-on-ibm-cloud}
+{: #hcx_considerations-delete}
 
 Lesen Sie die folgenden Hinweise, bevor Sie den Service "HCX on {{site.data.keyword.cloud_notm}}" entfernen:
 * Stellen Sie sicher, dass die Verbindungen und erweiterten Netze zwischen dem lokalen Quellenstandort und den {{site.data.keyword.cloud_notm}}-Zielstandorten entfernt wurden. Verwenden Sie zum Entfernen der Verbindungen und erweiterten Netze die HCX-Benutzerschnittstelle in der lokalen Instanz von VMware vSphere Web Client.

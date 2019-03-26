@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -47,7 +47,7 @@ vCenter Server stellt die grundlegenden Bausteine zur Verfügung, wie z. B. VMwa
 
 Zusammengefasst bieten die {{site.data.keyword.cloud_notm}} for VMware-Angebote folgende Vorteile:
 * Beschleunigte Lieferung von IT-Projekten für Entwickler und Geschäftsbereiche durch Verringerung des Zeitaufwands für Beschaffung, Architektur, Implementierung und Bereitstellung von Ressourcen von Wochen oder Monaten auf Stunden.
-* Verbesserte Sicherheit mit dedizierten Bare Metal Servern in einer gehosteten privaten Cloud, einschließlich Bereitstellung über einen privaten Endpunkt an {{site.data.keyword.cloud_notm}}-Services (wie z. B. {{site.data.keyword.containerlong_notm}} und KMIP).
+* Verbesserte Sicherheit mit dedizierten Bare-Metal-Servern in einer gehosteten privaten Cloud, einschließlich Bereitstellung eines privaten Netzserviceendpunkts für {{site.data.keyword.cloud_notm}}-Services (z. B. {{site.data.keyword.containerlong_notm}} und KMIP). 
 * Konsistente Management- und Governance-Funktionalität der bereitgestellten Hybrid-Cloud durch Bereitstellung eines vollständigen Verwaltungszugriffs auf das Virtualisierungsmanagement. Durch das Management behalten vorhandene VMware-Tools, Scripts und Investitionen in Schulungen ihren Wert.
 * Globale Nutzung von VMware-Know-how mit IBM Professional Services und IBM Managed Services, die weltweit mehr als 30 {{site.data.keyword.CloudDataCents_notm}} umfassen.
 

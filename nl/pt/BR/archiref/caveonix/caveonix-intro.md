@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
 # Caveonix RiskForesight
 {: #caveonix-intro}
 
-As empresas que estão passando por uma transformação digital estão adotando uma estratégia de nuvem híbrida que inclui cargas de trabalho nos ambientes de nuvem privada e de múltiplas nuvens externas, isto é, a nuvem pública ou uma nuvem gerenciada por um provedor de serviços. A maioria das empresas também se confronta com o desafio de proteger uma superfície de ataque sempre crescente enquanto mantém simultaneamente a conformidade com os requisitos de conformidade regulamentar e da indústria. Para proteger essa superfície de ataque em expansão, as empresas precisam de visibilidade contínua das cargas de trabalho desde o momento de aceleração até o momento de desaceleração. Para fazer isso, as empresas devem manter um entendimento de "pilha completa" das vulnerabilidades de carga de trabalho e dos problemas de configuração no nível de infraestrutura, de plataforma e do aplicativo no contexto de ameaças e requisitos de conformidade. As empresas precisam de análise preditiva para "conectar os pontos" e fornecer uma visão proativa de sua postura de risco cibernética e de conformidade neste vasto e novo mundo híbrido.
+As empresas que estão passando por uma transformação digital estão adotando uma estratégia de nuvem híbrida que inclui cargas de trabalho nos ambientes de nuvem privada e de múltiplas nuvens externas, isto é, a nuvem pública ou uma nuvem gerenciada por um provedor de serviços. A maioria das empresas também se confronta com o desafio de proteger uma superfície de ataque sempre crescente enquanto mantém simultaneamente a conformidade com os requisitos de conformidade regulamentar e da indústria.
+
+Para proteger essa superfície de ataque em expansão, as empresas precisam de visibilidade contínua em cargas de trabalho desde o início até o término de seu ciclo de vida. Para fazer isso, as empresas devem manter um entendimento de "pilha completa" das vulnerabilidades de carga de trabalho e dos problemas de configuração no nível de infraestrutura, de plataforma e do aplicativo no contexto de ameaças e requisitos de conformidade. As empresas precisam de análise preditiva para "conectar os pontos" e fornecer uma visão proativa de sua postura de risco cibernética e de conformidade neste vasto e novo mundo híbrido.
 
 O Caveonix RiskForesight fornece proteção de carga de trabalho proativa contra riscos devido a ameaças cibernéticas e problemas de conformidade regulamentar. Ele fornece visibilidade em tempo real para o que está em execução na nuvem híbrida de uma empresa por meio de integração nativa nas plataformas de orquestração de nuvem. Combinando tal visibilidade com modelos de redução de risco e ações de aplicação automatizáveis, o RiskForesight desenvolve rapidamente uma lista priorizada de ações a serem minimizadas. O RiskForesight é uma plataforma de proteção de carga de trabalho de nuvem híbrida com reconhecimento de vários locatários que implementa uma estrutura de gerenciamento de risco proativa que pode operar em múltiplos planos de controle: rede, cálculo, segurança e conformidade, enquanto automatiza a implementação da estrutura em escala de nuvem.
 
@@ -37,7 +39,7 @@ Os três serviços principais disponíveis por meio da GUI do RiskForesight são
 - Monitoramento de conformidade automatizada
 -	Painel de pontuação de risco de conformidade
 -	Avaliação de controles de IA automatizada
--	Suporta: PCI, FISMA, FEDRAMP, HIPAA, GLBA, GDPR, NERC CIP Reports Against SCAP, OVAL, XCCDF e outros padrões comparativos de configuração global
+-	Suporta: PCI, FISMA, FEDRAMP, HIPAA, GLBA, GDPR, NERC CIP Reports Against SCAP, OVAL, XCCDF e outros padrões corporativos de configuração global
 -	Controles de IA e bibliotecas padrão atualizados e mapeados continuamente
 
 ** Gerenciamento forense **
@@ -47,7 +49,7 @@ Os três serviços principais disponíveis por meio da GUI do RiskForesight são
 -	Visualização Gráfica dos Resultados
 -	Agregação de dados de várias origens
 -	Analítica Baseada em Evento
--	Capacidade total de realizar drill down para análise baseada em evento/log
+-	Recurso de drill down completo para análise baseada em log e em eventos 
 -	Alertas e notificações
 
 ## Links relacionados

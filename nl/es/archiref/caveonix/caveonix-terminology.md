@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
 # Glosario de términos de Caveonix
 {: #caveonix-terminology}
 
-Este glosario proporciona algunas descripciones para los términos que no están asociados a la solución Caveonix RiskForesight:
+Este glosario proporciona algunas descripciones para los términos que están asociados a la solución Caveonix RiskForesight:
 
 -	**NIST Special Publication 800-53:** una infraestructura de gestión de riesgos que se encarga del control de seguridad.
 -	**Security Content Automation Protocol (SCAP):** un método que utiliza estándares específicos para habilitar la gestión automatizada de vulnerabilidades, la medición y la evaluación de la conformidad de políticas de los sistemas desplegados en una organización. Las listas de comprobación estandarizan y habilitan la automatización del enlace entre las configuraciones de seguridad del sistema y la infraestructura de controles de NIST Special Publication 800-53.
@@ -30,12 +30,12 @@ Este glosario proporciona algunas descripciones para los términos que no están
       -	Presentación de informes sobre los resultados de esta evaluación.
 -	**Security Technical Implementation Guide (STIG):** una metodología de ciberseguridad para estandarizar protocolos de seguridad en redes, servidores, sistemas y diseños lógicos para mejorar la seguridad general. Estas guías, cuando se implementan, mejoran la seguridad de las arquitecturas de software, hardware, físicas y lógicas para reducir aún más las vulnerabilidades.
 -	**Proveedor de servicios:** la organización de nivel superior.
--	Proveedor de nube: proporciona la infraestructura en la que opera la nube definida por software. RiskForesight se puede configurar para múltiples proveedores de nube.
+-	**Proveedor de nube**: proporciona la infraestructura en la que opera la nube definida por el software. RiskForesight se puede configurar para múltiples proveedores de nube.
 -	**Organizaciones:** las organizaciones de arrendatario y las suborganizaciones del proveedor de servicios. Si el repositorio de activos es vCenter, la lista de organización/arrendatario debe crearse manualmente.
 -	**Roles:** roles preconfigurados y roles creados por el proveedor de servicios. El proveedor de servicios no puede editar los roles preconfigurados.
 -	**Usuarios de la organización:** usuarios de las organizaciones y suborganizaciones de arrendatario.
 -	**Repositorio de activos:** un punto de integración que permite a RiskForesight sincronizar el activo actual en la zona de gestión de CSP y en la zona de cliente. La versión actual de RiskForesight admite la sincronización para VMware vCloud Director y vCenter Servers. También admite la recopilación de datos de VMware NSX Manager. Los activos se recopilan desde el repositorio de activos. El Proveedor de servicios asigna activos que se recopilan de vCenter a las organizaciones del arrendatario y las suborganizaciones del proveedor de servicios. Se puede asignar un activo solo a una organización.
--	**Acceso remoto:** proporciona las credenciales de la máquina final para habilitar las exploraciones de vulnerabilidades y la supervisión de conformidad y para recopilar registros de sucesos del sistema. El proveedor de servicios solo puede habilitar el acceso remoto para sus propios activos. Los arrendatarios tienen el control sobre el acceso remoto desde sus activos.
+-	**Acceso remoto:** proporciona las credenciales de la máquina final para habilitar las exploraciones de vulnerabilidades y la supervisión de conformidad y para recopilar registros de sucesos del sistema. El proveedor de servicios sólo puede habilitar el acceso remoto para sus propios activos. Los arrendatarios tienen el control sobre el acceso remoto desde sus activos.
 -	**Aplicaciones y subaplicaciones:** una forma lógica de agrupar activos. Aplicación de ejemplo: SAP, Subaplicaciones de ejemplo: SAP Front End, SAP Middle Tier, SAP Back End.
 -	**Ubicaciones:** los activos se agrupan de forma exclusiva por Ubicación, Proveedor de nube y Repositorio de activos.
 -	**Entornos:** una forma de agrupar activos y aplicaciones. A cada entorno se le asigna un factor de riesgo de 1 a 10. Este factor se aplica en el cálculo de la puntuación de riesgo. El proveedor de servicios define los entornos
@@ -56,13 +56,15 @@ Este glosario proporciona algunas descripciones para los términos que no están
   - **Exploración de infraestructura de VMware:** esta exploración realiza una exploración de infraestructura de los activos de VMware.
   -	**Exploración de vulnerabilidades de VMware:** esta exploración realiza una exploración de vulnerabilidades de los activos de VMware.
 -	**Régimen de conformidad:** disponible mediante licencia; NIST, NESA, PCI, ISO, HIPAA, GDPR, Custom, FFIEC, FedRAMP Low, FedRAMP Moderate, FedRAMP High
--	**Gestor de políticas:** el gestor de políticas ofrece la función de creación de políticas para una organización basándose en los resultados de machine learning. Caveonix proporciona de forma predeterminada tres tipos de trabajos de machine learning por organización. Los trabajos no editables y adicionales no están soportados todavía. Estarán disponibles en un release futuro. Los tipos de trabajos de machine learning soportados actualmente son:
+-	**Gestor de políticas:** el gestor de políticas ofrece la función de creación de políticas para una organización basándose en los resultados de machine learning. Caveonix proporciona de forma predeterminada tres tipos de trabajos de machine learning por organización. Los trabajos no editables y adicionales no están soportados todavía. Los tipos de trabajos de machine learning soportados actualmente son:
   -	Caveo Logs
   -	Caveo Networks
   -	Caveo Scan
 -	**Anomalía:** en función de las anomalías que se encuentran en los datos, podemos configurar las políticas para tomar medidas en función de las condiciones definidas por el usuario. Puede seleccionar el tipo de trabajo y configurar las condiciones booleanas para la puntuación de anomalía y definir la acción cuando la condición sea verdadera. Por ejemplo:
-  -	Trabajo: La puntuación de la anomalía "Caveo Logs" es > 90, entonces Marcar el activo para cuarentena y enviar una notificación al canal de Slack.
-  -	Trabajo: La puntuación de la anomalía "Caveo Network" es > 95, entonces Poner en cuarentena el activo y enviar notificación por correo electrónico y también enviar notificación por interfaz de usuario.
+```
+Trabajo: La puntuación de la anomalía "Caveo Logs" es > 90, entonces Marcar el activo para cuarentena y enviar una notificación al canal de Slack.`
+Trabajo: La puntuación de la anomalía "Caveo Network" es > 95, entonces Poner en cuarentena el activo y enviar notificación por correo electrónico y también enviar notificación por interfaz de usuario.
+```
 
 ## Enlaces relacionados
 {: #caveonix-terminology-related}

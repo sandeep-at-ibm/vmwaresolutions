@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -34,14 +34,15 @@ Um die vSphere- oder die vSAN-Verschlüsselung mithilfe von KMIP for VMware on {
 
 Wenn Sie die vSAN-Verschlüsselung verwenden möchten, bearbeiten Sie die allgemeinen vSAN-Einstellungen in Ihrem vCenter-Cluster und aktivieren Sie das Kontrollkästchen für die Verschlüsselung.
 
-Bei der vSAN-Statusprüfung werden möglicherweise in regelmäßigem Abstand Warnungen ausgegeben, die besagen, dass von keinem Ihrer vSphere-Hosts eine Verbindung zum KMS-Cluster hergestellt werden kann. Diese Warnungen treten auf, da es für die Verbindung der vSAN-Statusprüfung zu schnell zu einer Zeitlimitüberschreitung kommt. Sie können diese Warnungen ignorieren.{:note}
+Bei der vSAN-Statusprüfung werden möglicherweise in regelmäßigem Abstand Warnungen ausgegeben, die besagen, dass von keinem Ihrer vSphere-Hosts eine Verbindung zum KMS-Cluster hergestellt werden kann. Diese Warnungen treten auf, da es für die Verbindung der vSAN-Statusprüfung zu schnell zu einer Zeitlimitüberschreitung kommt. Sie können diese Warnungen ignorieren. Weitere Informationen finden Sie in [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:new_window}.
+{:note}
 
 Wenn Sie die vSphere-Verschlüsselung verwenden möchten, bearbeiten Sie die Speicherrichtlinien für virtuelle Maschinen so, dass eine Plattenverschlüsselung erforderlich ist.
 
 ## Schlüsselrotation
 {: #kmip-implementation-key-rotation}
 
-[Aktivieren Sie die Rotation Ihres Stammschlüssels für Kunden (Customer Root Key, CRK) für Key Protect](/docs/services/key-protect?topic=key-protect-rotating-keys) über die {{site.data.keyword.cloud_notm}}-Konsole oder die API.
+[Aktivieren Sie die Rotation Ihres Stammschlüssels für Kunden (Customer Root Key, CRK) für Key Protect](/docs/services/key-protect?topic=key-protect-key-rotation#key-rotation) über die {{site.data.keyword.cloud_notm}}-Konsole oder die API.
 
 Für eine VMware vSAN-Verschlüsselung lassen Sie die Ihre VMware-Schlüsselverschlüsselungsschlüssel (key encrypting keys, KEK) und optional die Datenverschlüsselungsschlüssel (data encrypting keys, DEK) über die allgemeinen vSAN-Einstellungen in Ihrem vCenter-Cluster rotieren.
 

@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -55,7 +55,7 @@ Vous aurez besoin d'un compte {{site.data.keyword.cloud_notm}} et d'un compte d'
    </tr>
    <tr>
       <td>IBMid</td>
-      <td>En utilisant l'**IBMid**, vous pouvez utiliser un seul et même nom d'utilisateur de connexion pour tous vos produits et services IBM, y-compris {{site.data.keyword.cloud_notm}}. {{site.data.keyword.vmwaresolutions_short}} est fourni en tant que solution d'infrastructure dans le catalogue {{site.data.keyword.cloud_notm}}. Pour accéder à la console {{site.data.keyword.vmwaresolutions_short}}, vous devez disposer d'un **IBMid**.<br><br>Afin d'utiliser votre **IBMid** pour vous connecter à la console {{site.data.keyword.vmwaresolutions_short}}, vous devez associer l'**IBMid** à un compte {{site.data.keyword.cloud_notm}}. Lors de votre première connexion à la console, vous avez le choix entre associer votre **IBMid** à un compte {{site.data.keyword.cloud_notm}} existant ou souscrire à un nouveau compte {{site.data.keyword.cloud_notm}}. Le nouveau compte {{site.data.keyword.cloud_notm}} est automatiquement associé à votre **IBMid**. Ce processus n'est à effectuer qu'une seule fois.<br><br>En cas de problème lors de l'association de votre **IBMid** à un compte {{site.data.keyword.cloud_notm}}, voir [Traitement des incidents liés à l'accès à {{site.data.keyword.cloud_notm}}](https://console.cloud.ibm.com/docs/account/ts_accessing.html).</td>
+      <td>En utilisant l'**IBMid**, vous pouvez utiliser un seul et même nom d'utilisateur de connexion pour tous vos produits et services IBM, y-compris {{site.data.keyword.cloud_notm}}. {{site.data.keyword.vmwaresolutions_short}} est fourni en tant que solution d'infrastructure dans le catalogue {{site.data.keyword.cloud_notm}}. Pour accéder à la console {{site.data.keyword.vmwaresolutions_short}}, vous devez disposer d'un **IBMid**.<br><br>Afin d'utiliser votre **IBMid** pour vous connecter à la console {{site.data.keyword.vmwaresolutions_short}}, vous devez associer l'**IBMid** à un compte {{site.data.keyword.cloud_notm}}. Lors de votre première connexion à la console, vous avez le choix entre associer votre **IBMid** à un compte {{site.data.keyword.cloud_notm}} existant ou souscrire à un nouveau compte {{site.data.keyword.cloud_notm}}. Le nouveau compte {{site.data.keyword.cloud_notm}} est automatiquement associé à votre **IBMid**. Ce processus n'est à effectuer qu'une seule fois.<br><br>En cas de problème lors de l'association de votre **IBMid** à un compte {{site.data.keyword.cloud_notm}}, voir [Traitement des incidents liés à l'accès à {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-accessing#accessing).</td>
    </tr>
    <tr>
       <td>Compte IBM Cloud</td>
@@ -63,13 +63,9 @@ Vous aurez besoin d'un compte {{site.data.keyword.cloud_notm}} et d'un compte d'
    </tr>
    <tr>
       <td>Compte d'infrastructure IBM Cloud (SoftLayer)</td>
-      <td>Auparavant, le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) était appelé compte IBM SoftLayer.  Pour plus d'informations sur les exigences auxquelles le compte doit répondre, voir [Exigences concernant le compte d'infrastructure {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).<br><br>Vous pouvez lier vos comptes d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) à des comptes {{site.data.keyword.cloud_notm}} afin d'utiliser des ressources IaaS (Infrastructure as a Service) et PaaS (Platform as a Service). Vous pouvez ensuite accéder à des ressources IaaS et à des ressources PaaS à partir d'une seule connexion. La liaison de vos comptes permet également l'émission d'une facture unique pour toutes les ressources PaaS et IaaS que vous utilisez.<ul><li>Si vous ne disposez d'aucun compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), demandez-en un en suivant la procédure décrite dans [Inscription à un compte d'infrastructure IBM Cloud (SoftLayer)](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account), puis liez votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) à votre compte {{site.data.keyword.cloud_notm}} en suivant la procédure décrite dans [Liaison de comptes IBMid](https://console.cloud.ibm.com/docs/account/softlayerlink.html).</li><li>Si vous disposez d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), vous pouvez le lier à votre compte {{site.data.keyword.cloud_notm}} en suivant la procédure décrite dans [Liaison de comptes IBMid](https://console.cloud.ibm.com/docs/account/softlayerlink.html).</li></ul></td>
+      <td>Auparavant, le compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) était appelé compte IBM SoftLayer.  Pour plus d'informations sur les exigences auxquelles le compte doit répondre, voir [Exigences concernant le compte d'infrastructure {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).<br><br>Vous pouvez lier vos comptes d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) à des comptes {{site.data.keyword.cloud_notm}} afin d'utiliser des ressources IaaS (Infrastructure as a Service) et PaaS (Platform as a Service). Vous pouvez ensuite accéder à des ressources IaaS et à des ressources PaaS à partir d'une seule connexion. La liaison de vos comptes permet également l'émission d'une facture unique pour toutes les ressources PaaS et IaaS que vous utilisez.<ul><li>Si vous ne disposez d'aucun compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), demandez-en un en suivant la procédure décrite dans [Inscription à un compte d'infrastructure IBM Cloud (SoftLayer)](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra), puis liez votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) à votre compte {{site.data.keyword.cloud_notm}} en suivant la procédure décrite dans [Passage à l'IBMid et liaison des comptes](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li><li>Si vous disposez d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer), vous pouvez le lier à votre compte {{site.data.keyword.cloud_notm}} en suivant la procédure décrite dans [Passage à l'IBMid et liaison des comptes](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li></ul></td>
    </tr>
    </table>
-
-Pour plus d'informations, voir les rubriques suivantes :
-* [Inscription à des comptes requis](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
-* [Exigences concernant le compte d'infrastructure {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)
 
 ### Offres de déploiement
 {: #getting-started-depl-offerings}
@@ -89,10 +85,6 @@ Examinez et sélectionnez votre offre de déploiement.
     <tr>
        <td>[VMware vCenter Server on IBM Cloud with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)</td>
        <td>L'offre vCenter Server with Hybridity est un cloud privé hébergé qui vous permet de déployer rapidement et facilement votre infrastructure locale dans le cloud. L'environnement VMware est basé sur des licences SDDC (Software Defined Data Center) VMware fournies par IBM et inclut VMware Hybrid Cloud Extension (HCX). HCX vous permet de connecter un environnement vSphere 5.0+ local à des sites {{site.data.keyword.cloud_notm}} de manière sécurisée pour obtenir une hybridité d'infrastructure transparente et une véritable mobilité d'application.</td>
-    </tr>
-    <tr>
-       <td>[VMware Cloud Foundation on IBM Cloud](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)</td>
-       <td>L'offre Cloud Foundation fournit un environnement virtuel VMware unifié avec les ressources de calcul, de stockage et de réseau {{site.data.keyword.cloud_notm}} standard dédiées à chaque déploiement utilisateur.</td>
     </tr>
     <tr>
        <td>[VMware vSphere on IBM Cloud](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview)</td>
@@ -136,7 +128,7 @@ Examinez et sélectionnez des services complémentaires pour votre offre de dép
        <td>Le service HyTrust DataControl on {{site.data.keyword.cloud_notm}} offre un chiffrement renforcé avec une gestion de clés intégrée permettant de sécuriser les charges de travail tout au long de leur cycle de vie. Le service peut fournir un chiffrement au niveau du système d'exploitation et au niveau des données, ce qui signifie que n'importe quel répertoire, dossier ou fichier d'une charge de travail peut être chiffré et déchiffré.</td>
     </tr>
     <tr>
-       <td>[HyTrust KeyControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)</td>
+       <td>[HyTrust KeyControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)</td>
        <td>Le service HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifie la gestion des charges de travail chiffrées en automatisant et en simplifiant le cycle de vie des clés de chiffrement. Le service peut facilement gérer les clés de chiffrement à l'échelle à l'aide du chiffrement compatible avec FIPS 140-2.</td>
     </tr>
     <tr>
@@ -156,7 +148,7 @@ Examinez et sélectionnez des services complémentaires pour votre offre de dép
        <td>Le service Veeam on {{site.data.keyword.cloud_notm}} s'intègre directement et en toute transparence à vos hyperviseurs VMware afin d'aider votre entreprise à obtenir la haute disponibilité requise. Il peut fournir des objectifs de point et de temps de reprise pour vos applications et vos données. Les objectifs de point et de temps de reprise peuvent être fournis moins de 15 minutes après la fin de la configuration. Ce service vous permet de contrôler directement à la fois la sauvegarde et la restauration de toutes les machines virtuelles de votre infrastructure depuis la console Veeam.</td>
     </tr>
     <tr>
-       <td>[VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)</td>
+       <td>[VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations)</td>
        <td>Le service HCX on {{site.data.keyword.cloud_notm}} peut en toute transparence étendre les réseaux des centres de données local dans {{site.data.keyword.cloud_notm}}, ce qui permet de migrer les machines virtuelles vers et depuis {{site.data.keyword.cloud_notm}} sans aucune conversion ni modification.</td>
     </tr>
     <tr>
@@ -189,7 +181,6 @@ Après avoir sélectionné une offre de déploiement, laquelle est gérée en ta
 Pour plus d'informations sur la commande d'une instance, reportez-vous aux rubriques suivantes en fonction de l'offre de déploiement que vous avez sélectionnée :
 * [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 * [Commande d'instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
 
@@ -201,7 +192,6 @@ Après avoir passé une commande d'instance à l'**étape 3**, le déploiement d
 Pour plus d'informations sur l'affichage de l'instance que vous avez commandée, voir les rubriques suivantes :
 * [Affichage des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [Affichage d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
 * [Affichage des instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
 
 ## Etape 5 : Gestion des services complémentaires pour l'instance
@@ -212,7 +202,6 @@ Si vous avez commandé des services complémentaires pour votre instance, vous p
 Pour plus d'informations sur la gestion des services, voir les rubriques suivantes :
 * [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-* [Commande, affichage et retrait de services pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
 
 ## Etape suivante
 {: #getting-started-next}

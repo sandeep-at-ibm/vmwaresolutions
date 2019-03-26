@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -77,6 +77,9 @@ Vous êtes chargé de gérer et d'assurer la disponibilité de tous les composan
 {: #vc_planning-addon-services}
 
 Vous pouvez commander des services complémentaires pour votre instance en fonction de vos besoins, par exemple, la reprise après incident. Pour plus d'informations, voir[Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
+
+Les services sont pris en charge pour les instances vCenter Server with NSX-T.
+{:note}
 
 ## Remarques sur la capacité
 {: #vc_planning-capacity-considerations}

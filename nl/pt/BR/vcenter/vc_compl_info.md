@@ -4,14 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
-# Informações de conformidade para instâncias do vCenter Server e do vCenter Server with Hybridity Bundle
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# Informações de conformidade para instâncias do vCenter Server
 {: #vc_compl_info}
 
-Revise as informações a seguir para obter detalhes sobre conformidade para instâncias do VMware vCenter Server e do vCenter Server with Hybridity Bundle.
+Revise as informações a seguir para obter detalhes sobre a conformidade para instâncias do VMware vCenter Server.
+
+O VMware vCenter Server on {{site.data.keyword.cloud_notm}} com a oferta NSX-T não é suportado para clientes HIPAA.
+{:important}
 
 ## Responsabilidade do cliente versus IBM para o vCenter Server on IBM Cloud
 {: #vc_compl_info-responsibility}
@@ -45,7 +52,7 @@ Este Serviço de nuvem não foi projetado para nenhum requisito de segurança es
 ## Política para acessar instâncias do cliente
 {: #vc_compl_info-policy-for-access-client-inst}
 
-Os ambientes do VMware Cloud Foundation e do vCenter Server, que são entregues como {{site.data.keyword.vmwaresolutions_short}}, fornecem uma camada de plataforma de gerenciamento do VMware para nossos clientes para gerenciar os recursos de virtualização. Ao longo do ciclo de vida de produtos e serviços do IBM Cloud for VMware, o Suporte IBM pode ser necessário para ajudar a garantir seu sucesso. Na maioria das vezes, a intervenção pelo Suporte IBM é o resultado de uma solicitação do cliente (ou seja, um chamado de suporte). No entanto, em raras ocasiões, o Suporte IBM pode ajudar proativamente e sem um chamado de suporte por escrito pelo cliente para evitar problemas futuros. Esse acesso é por meio da rede de suporte interno do IBM Cloud e é documentado por meio de um chamado de suporte aberto pelo Suporte IBM e monitorado continuamente pelo IBM Cloud SOC. Em nenhum momento o Suporte IBM modificará a configuração da instância sem o consentimento prévio do cliente. O acesso é para componentes de gerenciamento do VMware e/ou componentes de gerenciamento do IBM Cloud e nunca para as máquinas virtuais do cliente ou aplicativos.
+Os ambientes do VMware vCenter Server, que são entregues como {{site.data.keyword.vmwaresolutions_short}}, fornecem uma camada de plataforma de gerenciamento do VMware para os nossos clientes gerenciarem os recursos de virtualização. Ao longo do ciclo de vida de produtos e serviços do IBM Cloud for VMware, o Suporte IBM pode ser necessário para ajudar a garantir seu sucesso. Na maioria das vezes, a intervenção pelo Suporte IBM é o resultado de uma solicitação do cliente (ou seja, um chamado de suporte). No entanto, em raras ocasiões, o Suporte IBM pode ajudar proativamente e sem um chamado de suporte por escrito pelo cliente para evitar problemas futuros. Esse acesso é por meio da rede de suporte interno do IBM Cloud e é documentado por meio de um chamado de suporte aberto pelo Suporte IBM e monitorado continuamente pelo IBM Cloud SOC. Em nenhum momento o Suporte IBM modificará a configuração da instância sem o consentimento prévio do cliente. O acesso é para componentes de gerenciamento do VMware e/ou componentes de gerenciamento do IBM Cloud e nunca para as máquinas virtuais do cliente ou aplicativos.
 
 ## Suporte proativo
 {: #vc_compl_info-proactive-support}
@@ -67,7 +74,7 @@ Os ambientes do VMware Cloud Foundation e do vCenter Server, que são entregues 
 ### Chamados de Suporte
 {: #vc_compl_info-support-tickets}
 
-* Os ambientes do Cloud Foundation e do vCenter Server não são monitorados ativamente pela IBM e o Suporte IBM não entrará na camada de gerenciamento do VMware sob operações normais sem um chamado de suporte escrito pelo cliente.
+* Os ambientes do servidor vCenter não são monitorados ativamente pela IBM e o Suporte IBM não entrará na camada de gerenciamento do VMware em operações normais sem um chamado de suporte escrito pelo cliente.
 * Quando um cliente abre um chamado de suporte para um problema de instância, de serviço ou de fornecimento, o chamado é designado rapidamente à equipe de Suporte IBM apropriada, que será a parte principal responsável pela resolução do problema.
 * Devido ao nível de especialização necessário para manter o conhecimento técnico superior no nível da equipe, às vezes é necessário envolver mais de uma equipe de suporte na resolução de um problema de software específico. Isso é facilmente manipulado, uma vez que nossas equipes de suporte estão todas em rede juntas e trabalham como uma para resolver quaisquer problemas ou problemas que surjam.
 * Para investigar o problema, a IBM pode precisar acessar informações sobre o sistema relativas à falha ou pode precisar recriar a falha para obter informações adicionais.
@@ -136,5 +143,4 @@ Se o cliente não tiver concedido o consentimento para o suporte proativo para u
 {: #vc_compl_info-related}
 
 * [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [VCenter Server with Hybridity Bundle Visão Geral](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

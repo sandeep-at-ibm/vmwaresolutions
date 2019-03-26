@@ -15,7 +15,7 @@ lastupdated: "2019-02-15"
 
 ![시스템 컨텍스트 다이어그램](vcsiks-system-context.svg)
 
-핵심 구성요소는 다음과 같습니다.
+핵심 컴포넌트는 다음과 같습니다.
 
 - **온프레미스 가상화** - 이 컴포넌트는 클라이언트의 프레미스 또는 서드파티에서 호스팅되고, 현대화시킬 애플리케이션을 실행 중인 VM을 현재 호스팅하고 있는 VMware 환경입니다. 온프레미스 가상화는 VM 마이그레이션을 위한 소스 환경이며 VMware Hybridity(HCX)를 통해 {{site.data.keyword.cloud}} 인스턴스에 느슨하게 결합되어 있습니다.
 - **vCenter Server** - VMware vCenter Server on {{site.data.keyword.cloud_notm}}는 온프레미스 환경에서 마이그레이션된 VM의 대상이 되는 {{site.data.keyword.cloud_notm}} for VMware

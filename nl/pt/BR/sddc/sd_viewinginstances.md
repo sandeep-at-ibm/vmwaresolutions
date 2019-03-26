@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -22,7 +22,7 @@ Visualize o resumo e as informações detalhadas das instâncias do VMware Cloud
 
 Para visualizar um resumo de todas as instâncias do Cloud Foundation que são provisionadas para uma conta do usuário, conclua as etapas a seguir:
 
-1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. No banner do console, clique em seu ícone de conta do usuário e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar as instâncias.
 3. Na tabela **Instâncias do Cloud Foundation**, visualize a lista de suas instâncias:
 
@@ -136,6 +136,5 @@ Revise os tópicos a seguir para obter informações que ajudarão a concluir as
 ## Links relacionados
 {: #sd_viewinginstances-related}
 
-* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Expandindo e contraindo a capacidade para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [Excluindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

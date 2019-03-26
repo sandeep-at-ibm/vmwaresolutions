@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -67,7 +67,7 @@ Die BYOL-Option (Bring Your Own License) steht für IBM Business Partner-Benutze
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 Wenn Sie nicht Den IBM Business Partner-Status haben, können Sie für Ihren vSphere Cluster folgende Komponenten auswählen:
-* VMware vSphere Enterprise Plus
+* VMware vSphere Enterprise Plus 6.7 U1 oder 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -270,7 +270,7 @@ Auf Basis Ihrer Konfigurationen werden die geschätzten Kosten sofort generiert 
    1. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für den Cluster aus.
    2. Wählen Sie die Bare Metal Server-Konfiguration aus.
       * Wenn Sie **Skylake** oder **Broadwell** auswählen, dann müssen Sie das CPU-Modell und die RAM-Größe angeben.
-      * Wenn Sie **SAP-zertifiziert** auswählen, müssen Sie das CPU-Modell wählen.
+      * Wenn Sie **SAP-zertifiziert** auswählen, müssen Sie eine der voreingestellten Konfigurationen auswählen. 
    3. Geben Sie die Anzahl der Bare Metal Server an.
 6. Wenn Sie die Komponente **VMware vSAN** ausgewählt haben, müssen Sie die vSAN-Speicherkonfiguration ausführen. Geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten sowie die Anzahl der Platten an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
 7. Geben Sie die Netzschnittstelleneinstellungen an:
@@ -294,7 +294,7 @@ Wenn Sie die Clusterkonfiguration als Vorlage gespeichert haben, erhalten Sie in
 
 Falls Sie eine Bestellung aufgegeben haben, beginnt die Bereitstellung des Clusters automatisch und Sie empfangen eine E-Mail-Bestätigung, dass die Bestellung bearbeitet wird. Sobald der Cluster einsatzbereit ist, werden Sie per E-Mail benachrichtigt.
 
-Die vSphere-Cluster werden (anders als die vCenter Server- und Cloud Foundation-Instanzen) auf der Seite **Bereitgestellte Instanzen** nicht angezeigt.
+Die vSphere-Cluster werden (im Gegensatz zu den vCenter Server- und Cloud Foundation-Instanzen) auf der Seite **Ressourcen** nicht angezeigt.
 {:note}
 
 ## Zugehörige Links

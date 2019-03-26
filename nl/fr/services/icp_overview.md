@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -23,7 +23,7 @@ Ce service est disponible pour les instances suivantes :
 {:note}
 
 ## Spécifications techniques pour IBM Cloud Private Hosted
-{: #technical-specifications-for-ibm-cloud-private-hosted}
+{: #icp_overview-specs}
 
 Le tableau ci-après répertorie les exigences minimales requises pour commander le service IBM Cloud Private Hosted pour l'environnement **Prêt pour la production** et l'environnement **Développement/Test**.
 
@@ -35,7 +35,7 @@ Tableau 1. Exigences minimales requises pour les environnements Prêt pour la pr
 | Développement/Test | 30 | 200 | 3 | 4 000 |
 
 ### Besoins en ressources d'IBM Cloud Private Hosted
-{: #resource-requirements-for-ibm-cloud-private-hosted}
+{: #icp_overview-resource-req}
 
 Les tableaux ci-après répertorient les besoins en ressources du service {{site.data.keyword.cloud_notm}} Private Hosted dans les environnements Prêt pour la production et Développement/Test.
 
@@ -112,14 +112,14 @@ Tableau 5. Description des variables de la formule 2
 | HostVsanOverheadMemoryDiskPercentage | Nombre de Go de mémoire réservés par les composants vSAN (représenté en tant que pourcentage de l'un des disques vSAN de capacité), égal à 2,75 % |	% | 2,75%	| 2,75% |
 | HostVsanOverheadMemory | Nombre de Go de mémoire réservés par la gestion vSAN quelle que soit la taille du disque, égal à 7 Go ou à 0 Go pour un hôte hors VSAN	| Go |  7	| 0 |
 
-## Considérations à prendre en compte lorsque vous installez IBM Cloud Private Hosted
+## Remarques relatives à l'installation de IBM Cloud Private Hosted
 {: #icp_overview-install}
 
 * Procurez-vous la licence requise avant d'installer le service {{site.data.keyword.cloud_notm}} Private Hosted.Nous vous conseillons de vérifier que votre licence peut prendre en charge non seulement le déploiement {{site.data.keyword.cloud_notm}} Private Hosted initial, mais également la future extension de taille d'{{site.data.keyword.cloud_notm}} Private Hosted dans votre infrastructure.
 * Pour les déploiements {{site.data.keyword.cloud_notm}} Private Hosted en environnement prêt pour la production, 64 Go de mémoire RAM par hôte ne sont pas pris en charge. Par conséquent, vous devez sélectionner une option de plus de 64 Go pour la mémoire **RAM**.
 * Avant l'installation du service {{site.data.keyword.cloud_notm}} Private Hosted dans votre environnement, la capacité disponible sur le cluster par défaut dans l'environnement est vérifiée afin de s'assurer qu'il y aura suffisamment de place pour les composants de service. Si la vérification de la capacité échoue, le service n'est pas installé et l'état **La validation de la capacité a échoué** apparaît sur la console pour le service. De plus, un message de console contenant davantage de détails apparaît et vous êtes averti par courrier électronique. Pour installer le service, vous devez augmenter la capacité dans votre cluster par défaut en ajoutant d'autres hôtes ou en libérant de la mémoire RAM, de l'UC ou de l'espace disque, puis vous devez rajouter le service dans la console. Après cela, vous pouvez retirer le service qui est à l'état **La validation de la capacité a échoué** en cliquant sur l'icône **Supprimer** figurant en regard de son nom.
 
-## Considérations à prendre en compte lorsque vous retirez IBM Cloud Private Hosted
+## Remarques relatives au retrait d'IBM Cloud Private Hosted
 {: #icp_overview-remove}
 
 * {{site.data.keyword.cloud_notm}} supprime uniquement les machines virtuelles qui ont été déployées durant l'installation initiale du service {{site.data.keyword.cloud_notm}} Private Hosted. Tout noeud qui est déployé après l'installation ne sera pas nettoyé.

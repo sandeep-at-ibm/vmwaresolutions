@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-18"
 {:important: .important}
 
 # vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제
-{: #adding-and-viewing-clusters-for-vcenter-server-instances}
+{: #vc_addingviewingclusters}
 
 인스턴스를 주문할 때 구성한 ESXi 서버는 기본적으로 **cluster1**로 그룹화됩니다.
 
@@ -56,7 +56,7 @@ vCenter Server 인스턴스에 클러스터를 추가할 때는 다음 설정을
 ### Bare Metal Server 설정
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-**Skylake**, **SAP 인증** 또는 **Broadwell**을 선택할 수 있습니다.
+**Skylake**, **SAP 인증** 또는 **Broadwell**을 선택할 수 있습니다. 옵션은 인스턴스가 처음에 배치된 버전에 따라 다를 수 있습니다.
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -187,7 +187,7 @@ V2.0 이하에 배치된 vCenter Server 인스턴스의 경우, 클러스터에 
 ## vCenter Server 인스턴스에 클러스터를 추가하는 프로시저
 {: #vc_addingviewingclusters-adding-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 클러스터를 추가할 인스턴스를 클릭하십시오.
 
    인스턴스가 **사용할 준비가 됨** 상태인지 확인하십시오. 그렇지 않으면, 클러스터를 인스턴스에 추가할 수 없습니다.
@@ -228,7 +228,7 @@ V2.0 이하에 배치된 vCenter Server 인스턴스의 경우, 클러스터에 
 ## vCenter Server 인스턴스의 클러스터를 보는 프로시저
 {: #vc_addingviewingclusters-viewing-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 클러스터를 볼 인스턴스를 클릭하십시오.
 3. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오. **CLUSTERS** 테이블에서 클러스터에 대한 요약을 보십시오.
   * **이름**: 클러스터의 이름입니다.
@@ -252,7 +252,7 @@ V2.0 이하에 배치된 vCenter Server 인스턴스의 경우, 클러스터에 
         <dd class="dd">클러스터가 삭제되었습니다.</dd>
     </dl>
   * **조치**: **삭제** 아이콘을 클릭하여 클러스터를 삭제하십시오.
-4. 클러스터 이름을 클릭하여 ESXi 서버 및 스토리지를 보십시오.
+4. 클러스터 이름을 클릭하여 ESXi 서버, 스토리지 및 네트워크 인터페이스 세부사항을 보십시오.
 
 표 4. ESXi 서버 세부사항
 
@@ -262,7 +262,7 @@ V2.0 이하에 배치된 vCenter Server 인스턴스의 경우, 클러스터에 
 |버전 |ESXi 서버의 버전입니다. |
 |인증 정보 |ESXi 서버에 액세스하는 데 사용되는 사용자 이름 및 비밀번호입니다. |
 |사설 IP |ESXi 서버의 사설 IP 주소입니다. |
-|상태 |ESXi 서버의 상태이며, 다음 값 중 하나일 수 있습니다.<br> **추가됨**: ESXi 서버가 추가되었으며 사용할 준비가 되었습니다.<br> **추가 중**: ESXi 서버가 추가되고 있습니다.<br> **삭제 중**: ESXi 서버가 삭제되고 있습니다. |
+|상태 |ESXi 서버의 상태이며, 다음 값 중 하나일 수 있습니다.<br> **추가됨** ESXi 서버가 추가되었으며 사용할 준비가 되었습니다.<br> **추가 중** ESXi 서버가 추가되고 있습니다.<br> **삭제 중** ESXi 서버가 삭제되고 있습니다. |
 
 표 5. 스토리지 세부사항
 
@@ -272,6 +272,32 @@ V2.0 이하에 배치된 vCenter Server 인스턴스의 경우, 클러스터에 
 |크기 |스토리지의 용량입니다. |
 |IOPS/GB |스토리지의 성능 레벨입니다. |
 |NFS 프로토콜 |스토리지의 NFS 버전입니다. |
+
+표 6. 네트워크 인터페이스 - VLAN 세부사항
+
+|항목        |설명       |  
+|:------------- |:------------- |
+| VLAN 번호 | 고유한 VLAN 번호입니다.  |
+|설명 | VLAN의 유형입니다.  |
+|위치 | 데이터 센터 위치입니다. |
+| 기본 라우트 | VLAN의 기본 라우트입니다. |
+
+표 7. 네트워크 인터페이스 - 서브넷 세부사항
+
+|항목        |설명       |  
+|:------------- |:------------- |
+|이름 | 서브넷 이름입니다. 전체 IP 주소 세부사항에 액세스하려면 이름을 클릭하십시오. |
+|유형 | 서브넷의 유형: 기본 또는 포터블. |
+|설명 | 서브넷의 용도입니다. |
+
+표 8. 네트워크 인터페이스 - IP 세부사항
+
+|항목        |설명       |  
+|:------------- |:------------- |
+| IP | IP 주소입니다. |
+|상태 | IP 주소의 상태입니다. |
+|설명 |IP 주소 호스트입니다.  |
+
 
 ## vCenter Server 인스턴스에서 클러스터 삭제
 {: #vc_addingviewingclusters-deleting}
@@ -291,7 +317,7 @@ V2.0 이하에 배치된 vCenter Server 인스턴스의 경우, 클러스터에 
 ### vCenter Server 인스턴스에서 클러스터를 삭제하는 프로시저
 {: #vc_addingviewingclusters-deleting-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 클러스터를 삭제할 인스턴스를 클릭하십시오.
 
    인스턴스가 **사용할 준비가 됨** 상태인지 확인하십시오. 그렇지 않으면 인스턴스에서 클러스터를 삭제할 수 없습니다.

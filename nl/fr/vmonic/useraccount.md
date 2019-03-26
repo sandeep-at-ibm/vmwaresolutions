@@ -57,7 +57,6 @@ Si les notifications par courrier électronique ou sur la console sont activées
 {: #useraccount-related}
 
 * [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Notifications](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)
 * [API SoftLayer](/docs/customer-portal?topic=customer-portal-customerportal_api){:new_window}

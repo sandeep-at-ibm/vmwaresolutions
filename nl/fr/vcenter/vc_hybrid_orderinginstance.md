@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,6 +52,14 @@ Le nom de l'instance qui doit respecter les règles suivantes :
 * Le nom d'instance ne doit pas dépasser 10 caractères.
 * Le nom d'instance doit être unique au sein de votre compte.
 
+### Licences VMware vSphere
+{: #vc_hybrid_orderinginstance-vsphere-license}
+
+Indiquez si vous souhaitez commander vSphere Enterprise Plus 6.7u1 ou vSphere Enterprise Plus 6.5u2.
+
+vSphere Enterprise Plus 6.7u1 est disponible uniquement pour les serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} Broadwell et Skylake.
+{:note}
+
 ### Principale ou secondaire
 {: #vc_hybrid_orderinginstance-primary-secondary}
 
@@ -63,7 +71,7 @@ Indiquez si vous souhaitez commander une nouvelle instance principale ou une ins
 Les licences VMware suivantes sont incluses avec votre commande d'instance vCenter Server with Hybridity Bundle. Vous devez spécifier l'édition pour les licences NSX et vSAN.
 
 * vCenter Server 6.5
-* vSphere Enterprise Plus 6.5u1
+* vSphere Enterprise Plus 6.5 ou 6.7
 * NSX Service Providers 6.4 (édition Advanced ou Enterprise)
 * vSAN 6.6 (édition Advanced ou Enterprise)
 
@@ -229,32 +237,33 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
 1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur **VMware** dans le panneau de navigation de gauche, puis cliquez sur **vCenter Server** dans la section **Centres de données virtuels**.
 2. Sur la page **VMware vCenter Server on IBM Cloud**, cliquez sur la carte **vCenter Server with Hybridity Bundle**, puis sur **Créer**.
 3. Sur la page **vCenter Server**, entrez le nom de l'instance.
+5. Sélectionnez la version vSphere. 
 4. Sélectionnez le type d'instance :
    * Cliquez sur **Instance principale** pour déployer une seule instance dans l'environnement ou pour déployer la première instance dans une topologie multisite.
    * Cliquez sur **Instance secondaire** pour connecter l'instance à une instance (principale) existante dans l'environnement à des fins de haute disponibilité et procédez comme suit :
      1. Sélectionnez l'instance principale à laquelle vous voulez que l'instance secondaire soit connectée.
      2. Pour les instances principales V2.8 ou ultérieures, entrez le mot de passe administrateur vCenter Server pour l'instance principale.
      3. Pour les instances principales V2.7 ou antérieures, entrez le mot de passe administrateur PSC pour l'instance principale.
-5. Sélectionnez l'édition de licence NSX et l'édition de licence vSAN.
-6. Spécifiez les paramètres de serveur bare metal.
+6. Sélectionnez l'édition de licence NSX et l'édition de licence vSAN.
+7. Spécifiez les paramètres de serveur bare metal.
   1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger l'instance.
   2. Sélectionnez le modèle d'UC **Skylake** ou **Broadwell** et la quantité de mémoire **RAM**.
 
   La valeur quatre, affectée par défaut à la zone **Nombre de serveurs bare metal**, ne peut pas être modifiée.
   {:note}
-7. Procédez à la configuration du stockage. Spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
-8. Procédez à la configuration de l'interface réseau.
+8. Procédez à la configuration du stockage. Spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
+9. Procédez à la configuration de l'interface réseau.
   1. Renseignez les zones Préfixe de nom d'hôte, Libelle de sous-domaine et Nom de domaine racine.
   2. Sélectionnez le paramètre réseau **Réseau public et réseau privé** ou **réseau privé uniquement**.
   3. Sélectionnez la configuration VLAN.
      *  Si vous voulez commander de nouveaux VLAN publics et privés, cliquez sur **Commander de nouveaux VLAN**.
      *  Si vous voulez réutiliser les VLAN publics et privés existants lorsqu'ils sont disponibles, cliquez sur **Sélectionner des VLAN existants**, puis sélectionnez le VLAN public, le sous-réseau principal, le VLAN privé, le sous-réseau principal privé et le VLAN privé secondaire.
   4. Sélectionnez la configuration DNS.
-9. Effectuez la configuration du service HCX on {{site.data.keyword.cloud_notm}} inclus. Pour savoir comment indiquer les paramètres d'un service, voir la section _Configuration de VMware HCX on IBM Cloud_ dans [Commande de VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
-10. Sélectionnez les services complémentaires à déployer dans l'instance en cliquant sur la carte de service correspondante. Si un service nécessite de la configuration, spécifiez les paramètres qui lui sont propres et cliquez sur **Ajouter un service** sur la carte.  
+10. Effectuez la configuration du service HCX on {{site.data.keyword.cloud_notm}} inclus. Pour savoir comment indiquer les paramètres d'un service, voir la section _Configuration de VMware HCX on IBM Cloud_ dans [Commande de VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
+11. Sélectionnez les services complémentaires à déployer dans l'instance en cliquant sur la carte de service correspondante. Si un service nécessite de la configuration, spécifiez les paramètres qui lui sont propres et cliquez sur **Ajouter un service** sur la carte.  
 Pour savoir comment indiquer les paramètres d'un service, voir la rubrique de commande de service correspondante.
 
-11. Sur la page **Récapitulatif de la commande**, vérifiez la configuration de l'instance avant de passer la commande.
+12. Sur la page **Récapitulatif de la commande**, vérifiez la configuration de l'instance avant de passer la commande.
    1. Passez en revue les paramètres de l'instance.
    2. Passez en revue le coût estimé de l'instance. Cliquez sur **Détails concernant la tarification** pour générer un récapitulatif au format PDF. Pour sauvegarder ou imprimer votre récapitulatif de commande, cliquez sur l'icône d'**impression** ou de **téléchargement** dans l'angle supérieur droit de la fenêtre du PDF.
    3. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant de commander l'instance.
@@ -265,7 +274,7 @@ Pour savoir comment indiquer les paramètres d'un service, voir la rubrique de c
 
 Le déploiement de l'instance commence automatiquement. Vous recevez une confirmation que la commande est en cours de traitement et vous pouvez vérifier l'état du déploiement en affichant les détails de l'instance.
 
-Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**. Si vous avez commandé des services complémentaires, le déploiement des services commence une fois votre commande honorée.
+Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**. Si vous avez commandé des services complémentaires, le déploiement des services commence une fois votre commande honorée.
 
 Lorsque l'instance est prête pour utilisation, elle prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 

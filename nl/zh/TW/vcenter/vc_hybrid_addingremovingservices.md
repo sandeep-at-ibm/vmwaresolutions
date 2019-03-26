@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -26,18 +26,19 @@ lastupdated: "2019-02-14"
 
 | 服務名稱                                                                               | 現行服務版本 | 實例版本 |
 |----------------------------------------------------------------------------------------|------------------|
-| [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)                                 | BIG-IP VE 13.1.1.2 版 | 1.9 版以及更新版本 |
+| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2 | 2.9 版以及更新版本|
+| [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)                                 | BIG-IP VE v14.1.0.2 | 1.9 版以及更新版本 |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)       | 300 系列 | 1.8 版以及更新版本 |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | 2.0 版以及更新版本 |
-| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)              | 5.4.0 | 2.3 版以及更新版本 |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)              | 5.4.2 | 2.3 版以及更新版本 |
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)              | 4.2.1 | 2.3 版以及更新版本 |
-| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)              | 4.2 | 2.5 版以及更新版本 |
+| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)              | 4.2 | 2.5 版以及更新版本 |
 | [{{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview) | 3.1 | 2.7 版以及更新版本 |
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations)         | 10.1.2 | 2.2 版以及更新版本 |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)                  | 2.0 |N/A |
-| [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)                           | 9.5u3 | 1.8 版以及更新版本 |
+| [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)                           | 9.5u4 | 1.8 版以及更新版本 |
 | [VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)                         | 3.5.1 | 2.3 版以及更新版本 |
-| [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)                                  | 6.0 Update 3 | 1.2 版以及更新版本 |
+| [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)                                  | 6.5 Update 3 | 1.2 版以及更新版本 |
 
 ## 將服務新增至 vCenter Server with Hybridity Bundle 實例的程序
 {: #vc_hybrid_addingremovingservices-adding-procedure}
@@ -52,7 +53,7 @@ lastupdated: "2019-02-14"
 ## 檢視 vCenter Server with Hybridity Bundle 實例服務的程序
 {: #vc_hybrid_addingremovingservices-viewing-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要檢視服務的實例。
 3. 在左導覽窗格上，按一下**服務**。
 4. 在**服務**頁面上，按一下服務以檢閱其相關資訊（例如服務狀態及其他詳細資料）。
@@ -61,7 +62,7 @@ lastupdated: "2019-02-14"
 ## 移除 vCenter Server with Hybridity Bundle 實例服務的程序
 {: #vc_hybrid_addingremovingservices-removing-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要移除服務的實例。
 3. 在左導覽窗格上，按一下**服務**。
 4. 在**服務**頁面上，找出您要移除的服務實例，然後按一下**刪除**圖示。

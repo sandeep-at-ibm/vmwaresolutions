@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -106,12 +106,12 @@ Avant de lancer le processus de mise à niveau de vSAN, vérifiez que les condit
 
 Pour plus d'informations, voir [Mise à jour de VCSA et instances vCenter liées à SSO](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa).
 
-## Mise à niveau des hôtes vSphere ESXi
+##	Mise à niveau des hôtes vSphere ESXi
 {: #vum-updating-vsan-upgrade-hosts}
 
 Pour plus d'informations, voir [Création de lignes de base et association à des objets d'inventaire](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines).
 
-## Mise à niveau du format de disque vSAN
+##	Mise à niveau du format de disque vSAN
 {: #vum-updating-vsan-upgrade-vsan}
 
 La console RVC (Ruby vSphere Console) est une interface de ligne de commande Ruby pour vSphere. Elle peut être utilisée pour gérer VMware vSphere ESXi et vCenter. L'inventaire vSphere est présenté sous forme d'arborescence, ce qui vous permet de naviguer et d'exécuter des commandes sur les objets vCenter.

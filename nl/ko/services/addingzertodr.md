@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -17,11 +17,11 @@ lastupdated: "2019-02-14"
 
 Zerto on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm}}의 VMware virtual 환경에서 데이터를 보호하고 복구하도록 복제 및 재해 복구 기능을 배치 오퍼링에 통합합니다.
 
-이 서비스는 V1.2 이상에 배치되는 인스턴스에 대해서만 사용 가능합니다. 설치된 현재 Zerto 버전은 6.0 update 3입니다.
+이 서비스는 V1.2 이상에 배치되는 인스턴스에 대해서만 사용 가능합니다. 설치된 현재 Zerto 버전은 6.5 update 3입니다.
 {:note}
 
 ## Zerto on IBM Cloud의 기술 스펙
-{: #technical-considerations-for-zerto-on-ibm-cloud}
+{: #addingzertodr-specs}
 
 다음 컴포넌트가 주문되고 Zerto on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 
@@ -50,7 +50,7 @@ Zerto VRA(Virtual Replication Appliance) 컴포넌트는 기본 클러스터에�
 ### 라이센스 및 요금
 {: #addingzertodr-specs-licenses}
 
-Zerto Replication V6.0 update 3 라이센스
+Zerto Replication V6.5 업데이트 3 라이센스
 
 ## 관련 링크
 {: #addingzertodr-related}

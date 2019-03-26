@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -21,7 +21,7 @@ Dieser Service ist nur für Instanzen verfügbar, auf denen vSphere 6.5 ausgefü
 {:note}
 
 ## Technische Spezifikationen für HyTrust DataControl on IBM Cloud
-{: #technical-specifications-for-hytrust-datacontrol-on-ibm-cloud}
+{: #htdc_considerations-specs}
 
 Mit dem Service "HyTrust DataControl on {{site.data.keyword.cloud_notm}}" werden die folgenden Komponenten bestellt und einbezogen:
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -68,7 +68,7 @@ HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時の追加�
 VMware Hybrid Cloud Extension (HCX) に基づいてオンプレミス・サイトと {{site.data.keyword.cloud_notm}} サイトの間に疎結合の相互接続を作成すれば、ダウン時間なしでの VM の一括マイグレーションや VM のライブ vMotion が可能になります。
 
 ## vCenter Server with Hybridity Bundle インスタンスの技術仕様
-{: #technical-specifications-for-vcenter-server-with-hybridity-bundle-instances}
+{: #vc_hybrid_overview-specs}
 
 vCenter Server with Hybridity Bundle インスタンスには、以下のコンポーネントが含まれています。
 
@@ -78,9 +78,9 @@ vCenter Server with Hybridity Bundle インスタンスには、以下のコン�
 ### ベア・メタル・サーバー
 {: #vc_hybrid_overview-bare-metal}
 
-vCenter Server with Hybridity Bundle インスタンスの注文では、**Skylake** または **Broadwell** の{{site.data.keyword.baremetal_short}}を 4 台注文します。 次の CPU モデルが用意されています。
-  * 2-CPU Intel Skylake 世代 (Intel Xeon 4100/5100/6100 シリーズ)
-  * 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600/E7-4800 シリーズ)
+vCenter Server with Hybridity Bundle インスタンスの注文には、4 つの {{site.data.keyword.baremetal_short}} が付属します。以下の構成を使用できます。
+  * **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。
+  * **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600/E7-4800 シリーズ)。
 
 ### ネットワーキング
 {: #vc_hybrid_overview-networking}
@@ -120,7 +120,7 @@ vSAN ストレージでは構成をカスタマイズできます。ディスク
 
 vCenter Server with Hybridity Bundle インスタンスの注文には、以下のライセンスが含められます。
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 または 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Advanced または Enterprise) 6.4
 * VMware vSAN (Advanced または Enterprise) 6.6
@@ -140,7 +140,7 @@ vCenter Server with Hybridity Bundle 拡張ノードごとに、{{site.data.keyw
 ### 拡張ノード用のライセンスと料金
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u1 1 つ
+* VMware vSphere Enterprise Plus 6.5u2 または 6.7u1 1 つ
 * VMware NSX Service Providers Edition (Advanced または Enterprise) 6.4 1 つ
 * 1 つのサポートとサービスの料金
 * VMware vSAN (Advanced または Enterprise) 6.6

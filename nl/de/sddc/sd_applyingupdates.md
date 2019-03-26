@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -19,7 +19,7 @@ Die {{site.data.keyword.vmwaresolutions_full}}-Konsole führt laufend Erkennunge
 
 Ein verfügbares Update ist ein Eintrag in der Liste der Software-Updates für die Instanz, das sofort angewendet oder für einen späteren Zeitpunkt geplant werden kann. Das Update ist ein Bundle, das eines oder mehrere Pakete für die Aktualisierung der IBM Managementkomponenten und der VMware-Komponenten enthält.
 
-Ab Version 2.5 werden IBM CloudDriver-Updates nicht mehr aufgelistet, da automatische Aktualisierungsfunktionalität aktiviert ist. Durch Aktionen wie das Hinzufügen eines Hosts, Hinzufügen eines Clusters und Bestellen eines Service wird die Instanz automatisch auf die aktuelle Version aktualisiert. Weitere Informationen zu automatischen Aktualisierungen finden Sie im Abschnitt zur *IBM CloudDriver-Ausfallsicherheit* in den [Releaseinformationen für Version 2.5](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25).
+IBM CloudDriver-Updates werden nicht mehr aufgelistet, da automatisches Updates aktiviert sind. Durch Aktionen wie das Hinzufügen eines ESXi-Servers, das Hinzufügen eines Clusters und das Bestellen eines Service wird die Instanz automatisch auf die aktuelle Version aktualisiert. Weitere Informationen zu automatischen Aktualisierungen finden Sie im Abschnitt zur *IBM CloudDriver-Ausfallsicherheit* in den [Releaseinformationen für Version 2.5](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25).
 {:note}
 
 ## Vorbereitende Schritte
@@ -56,7 +56,7 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
 ## Vorgehensweise zum Anwenden von Updates auf Cloud Foundation-Instanzen
 {: #sd_applyingupdates-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf die Instanz, die Sie aktualisieren wollen.
 3. Überprüfen Sie auf der Seite **Zusammenfassung**, ob alle Instanzdetails korrekt angezeigt werden. Klicken Sie dann im linken Navigationsfenster auf **Infrastruktur**, um die Details auf der Seite **Infrastruktur** zu prüfen.
    Wenn die Details nicht angezeigt werden, kann dies auf ein Konnektivitätsproblem mit der virtuellen Serverinstanz (VSI) von IBM CloudDriver hinweisen, das aufgrund eines Problems mit einer Firewallregel oder aufgrund eines anderen Netzproblems aufgetreten ist. Lösen Sie das Problem, bevor Sie mit dem nächsten Schritt fortfahren, da das Update andernfalls fehlschlagen könnte.

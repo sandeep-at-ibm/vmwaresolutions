@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2019-02-15"
 
 Assegure-se de que tenha concluído as tarefas a seguir:
 * Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-* Você revisou todas as considerações em [Considerações ao instalar as instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
+* Você revisou todas as considerações em [Considerações ao instalar as instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations-install).
 
 ## Procedimento para pedir instâncias do KMIP for VMware on IBM Cloud
 {: #kmip_standalone_ordering-procedure}
@@ -36,20 +36,21 @@ Quando você pedir esse serviço, forneça as configurações a seguir:
 ### Nome da instância
 {: #kmip_standalone_ordering-config-instance-name}
 
-Especifique um nome para a instância do KMIP for VMware {{site.data.keyword.cloud_notm}}.
+Especifique um nome para a sua instância do KMIP for VMware on {{site.data.keyword.cloud_notm}}.
 
 ### Região do serviço
 {: #kmip_standalone_ordering-config-service-region}
 
-Selecione a região do {{site.data.keyword.cloud_notm}} na qual a instância do KMIP for VMware {{site.data.keyword.cloud_notm}} deve ser hospedada.
+Selecione a região do {{site.data.keyword.cloud_notm}} na qual a instância do KMIP for VMware on {{site.data.keyword.cloud_notm}} deve ser hospedada.
 
-O {{site.data.keyword.cloud_notm}} mantém um terminal de serviço KMIP para VMware no {{site.data.keyword.cloud_notm}} altamente disponível em cada região em que o serviço está disponível.
+O {{site.data.keyword.cloud_notm}} mantém um terminal em serviço de rede do KMIP for VMware on {{site.data.keyword.cloud_notm}} altamente disponível em cada região em que o serviço está disponível.
 
-Tabela 1. Regiões do terminal do serviço KMIP for VMware on {{site.data.keyword.cloud_notm}}
+Tabela 1. Regiões de terminal em serviço de rede do KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
 | Região         | Terminais               |
 |:---------------|:-----------------------|
 | Alemanha        |  <ul><li><code> kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696 </code></li><li><code> kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696 </code></li></ul> |
+| Sydney        |  <ul><li><code> kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696 </code></li><li><code> kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696 </code></li></ul> |
 | Tóquio          | <ul><li><code> kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696 </code></li><li><code> kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696 </code></li></ul> |
 | Sul dos EUA       |  <ul><li><code> kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696 </code></li><li><code> kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696 </code></li></ul> |
 
@@ -66,12 +67,12 @@ Clique em **Recuperar** para obter a lista de instâncias disponíveis do IBM Ke
 ### Chave raiz do cliente
 {: #kmip_standalone_ordering-config-root-key}
 
-Clique em **Recuperar** para obter a chave raiz do cliente que está armazenada em sua instância selecionada do IBM Key Protect.
+Clique em **Recuperar** para obter a chave raiz do cliente que está armazenada em sua instância do gerenciador de chave selecionado.
 
 ## Resultados
 {: #kmip_standalone_ordering-results}
 
-O pedido da instância é iniciado automaticamente. Você recebe a confirmação de que o pedido está sendo processado e pode verificar o status do pedido visualizando os detalhes da instância.
+O pedido da instância do KMIP for VMware on {{site.data.keyword.cloud_notm}} é iniciado automaticamente. Você recebe a confirmação de que o pedido está sendo processado e pode verificar o status do pedido visualizando os detalhes da instância.
 
 Quando a instância estiver pronta para uso, o status da instância será mudado para **Instalado** e você receberá uma notificação por e-mail.
 

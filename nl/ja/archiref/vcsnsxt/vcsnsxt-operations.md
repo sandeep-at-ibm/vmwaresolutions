@@ -21,7 +21,7 @@ Veeam バックアップ・ソフトウェアは、{{site.data.keyword.vmwaresol
 
 障害が発生した場合にシステムをその動作状態にリストアするためには、すべての NSX コンポーネントをバックアップしておくことが不可欠です。 NSX 仮想アプライアンスをバックアップするだけでは不十分です。有効なバックアップを取るためには、NSX マネージャー内の NSX バックアップ機能を使用する必要があります。 この操作では、NSX バックアップ・データのリポジトリーとして FTP サーバーまたは SFTP サーバーを指定する必要があります。
 
-NSX Manager のバックアップの対象となるのはすべての NSX 構成です。これには、コントローラー、論理スイッチング・エンティティー、論理ルーティング・エンティティー、セキュリティー、ファイアウォール・ルール、および NSX Manager ユーザー・インターフェースまたは API 内で構成するその他すべての項目が含まれます。 vCenter データベースおよびその関連エレメント (仮想スイッチなど) は、別個にバックアップする必要があります。 詳しくは、[NSX のファイル・ベースのバックアップ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#nsx-file-based-backup)を参照してください。NSX 構成は、[vCenter のファイル・ベースのバックアップ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#vcenter-file-based-backup)と一緒にバックアップする必要があります。
+NSX Manager のバックアップの対象となるのはすべての NSX 構成です。これには、コントローラー、論理スイッチング・エンティティー、論理ルーティング・エンティティー、セキュリティー、ファイアウォール・ルール、および NSX Manager ユーザー・インターフェースまたは API 内で構成するその他すべての項目が含まれます。 vCenter データベースおよびその関連エレメント (仮想スイッチなど) は、別個にバックアップする必要があります。 詳しくは、[NSX のファイル・ベースのバックアップ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#nsx-file-based-backup)を参照してください。 NSX 構成は、[vCenter のファイル・ベースのバックアップ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#vcenter-file-based-backup)と一緒にバックアップする必要があります。
 
 ### IBM Cloud Private のバックアップおよび災害復旧
 {: #vcsnsxt-operations-backup-dr-icp}
@@ -78,7 +78,7 @@ VMware on {{site.data.keyword.cloud_notm}} では、{{site.data.keyword.cloud_no
 #### 既存のクラスターのスケールアウト
 {: #vcsnsxt-operations-scale-out-existing-cluster}
 
-ユーザーは、コンソール内からホストを注文することによって既存のクラスターをスケールアウトできます。新しいホストは、当該クラスターに自動的に追加されます。 詳しくは、[vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)を参照してください。予約要件に基づいてクラスターの HA 予約ポリシーを調整しなければならない場合があります。
+ユーザーは、コンソール内からホストを注文することによって既存のクラスターをスケールアウトできます。新しいホストは、当該クラスターに自動的に追加されます。 詳しくは、[vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)を参照してください。 予約要件に基づいてクラスターの HA 予約ポリシーを調整しなければならない場合があります。
 
 ### IBM Cloud Private および IBM Cloud Kubernetes Service のスケーラビリティー
 {: #vcsnsxt-operations-icp-iks-scalability}

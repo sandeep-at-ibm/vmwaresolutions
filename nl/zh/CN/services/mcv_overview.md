@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -20,7 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}} 交付多专区云体系�
 此体系结构涵盖各种企业服务，包括网络、存储器、弹性以及其他构建用于对基于云的应用程序进行监视和故障诊断的工具。此外，该体系结构还可与基于 {{site.data.keyword.cloud_notm}} 构建的 IBM Services Platform with Watson 相集成，以支持更广泛的服务用途。通过使用平台的认知能力，客户可以更有效地挖掘数据，以获取新的业务洞察，从而帮助保持持续运营。
 
 ## Mission Critical VMware on IBM Cloud 的技术规范
-{: #technical-specifications-for-mission-critical-vmware-on-ibm-cloud}
+{: #mcv_overview-specs}
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 体系结构是一种端到端参考体系结构，可为客户的工作负载提供自动故障转移。此体系结构将 {{site.data.keyword.cloud_notm}} 多专区区域与涵盖以下组件的 IBM 管理的服务配合使用：
 

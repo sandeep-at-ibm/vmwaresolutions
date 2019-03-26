@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -37,7 +37,7 @@ VUM 向 VMware 的更新服务器请求资源时，会先将请求发送到代�
 |地址|代理 IP |必须使用供应过程中分配的客户专用可移植子网中的备用 IP 地址。此子网上只保留有两个 IP 地址：一个用于 BCR，另一个用于客户 ESG
 |网络掩码|255.255.255.192 | |
 |网关|customer-nsx-edge private uplink ip |这是代理服务器的缺省网关设置，即 customer-nsx-edge 的专用上行链路 IP 地址。可通过查看 **customer-nsx-edge** 的**设置**选项卡来找到此 IP 地址。|
-|DNS 服务器|AD/DNS IP |可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台中的**已部署的实例**页面上找到此 IP 地址。|
+|DNS 服务器|AD/DNS IP |可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台中的实例页面**资源**页面上找到此 IP 地址。|
 |BCR IP|BCR IP |这是 {{site.data.keyword.cloud_notm}} 后端客户路由器的 IP 地址，并且是 10.0.0.0/8 和 161.26.0.0/16 的网关。此地址在代理服务器的静态路由中使用，以便可以访问 VCSA 和 AD/DNS 服务器。|
 
 ## 配置 NSX

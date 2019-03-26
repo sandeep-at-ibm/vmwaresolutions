@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # 單一節點試用版移轉及應用程式現代化概觀
-{: #single-node-trial-for-migration-and-app-modernization-overview}
+{: #cloud_modern_bundle_overview}
 
 「單一節點試用版移轉及應用程式現代化」可讓您測試磁碟機 IBM Cloud 以將 VMware 工作負載移轉至 IBM Cloud，然後使用容器來現代化簡單工作負載。
 
@@ -88,7 +88,7 @@ lastupdated: "2019-02-14"
 
 「單一節點試用版移轉及應用程式現代化」實例訂購隨附下列授權。
 
-* VMware vSphere Enterprise Plus 6.5
+* VMware vSphere Enterprise Plus 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * IBM Cloud Private Hosted 3.1 版

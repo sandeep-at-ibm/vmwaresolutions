@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2019-02-14"
 
 要查看针对用户帐户供应的所有 vCenter Server 实例的摘要，请完成以下步骤：
 
-1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在控制台条幅中，单击您的用户帐户图标，然后单击**帐户**字段以选择要检查其实例的用户帐户。  
 3. 在 **vCenter Server 实例**表中，查看所选用户帐户中供应的实例的列表。
 
@@ -101,7 +101,7 @@ lastupdated: "2019-02-14"
 ## 查看 vCenter Server 实例的部署历史记录的过程
 {: #vc_viewinginstances-procedure-view-deploy-history}
 
-单击左侧导航窗格中的**部署历史记录**，以查看实例的部署历史记录。
+单击左侧导航窗格上的**部署历史记录**，以查看实例的部署历史记录。
 
 表 5. vCenter Server 实例部署历史记录
 

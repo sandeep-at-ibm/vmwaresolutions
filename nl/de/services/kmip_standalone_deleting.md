@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ Lesen Sie unbedingt alle Hinweise im Abschnitt [Hinweise zum Löschen von KMIP f
 ## Vorgehensweise zum Löschen von KMIP for VMware on IBM Cloud-Instanzen
 {: #kmip_standalone_deleting-procedure}
 
-1. Klicken Sie im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie im linken Navigationsfenster auf **Ressourcen**. 
 2. Blättern Sie abwärts zur Tabelle **KMIP for VMware on IBM Cloud-Instanzen** und suchen Sie die zu löschende Instanz.
 3. Klicken Sie in der Spalte **Aktionen** auf das Symbol "Löschen".
 4. Klicken Sie im Fenster **Instanz löschen** auf **OK**.

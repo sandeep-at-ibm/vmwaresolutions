@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -61,7 +61,7 @@ lastupdated: "2019-02-14"
 NetApp ONTAP Select は、VMware クラスター内で実行され、ホスト上のローカル・ストレージを仮想化します。 NetApp ONTAP Select は専用モデルでデプロイされます。つまり、他のワークロードとクラスターを共有するという想定にはなっていません。 そのため、{{site.data.keyword.cloud_notm}} オファリング上の NetApp ONTAP Select のハードウェア構成のサイズは、NetApp ONTAP Select の要件のみに基づいて決まります。
 
 ## NetApp ONTAP Select インスタンスの技術仕様
-{: #technical-specifications-for-netapp-ontap-select-instances}
+{: #np_netappoverview-specs}
 
 NetApp ONTAP Select インスタンスには以下のコンポーネントが含まれます。
 

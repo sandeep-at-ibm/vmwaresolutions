@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -45,7 +45,7 @@ lastupdated: "2019-02-14"
 
 拡張対象のクラスターを使用する準備ができていない場合は、エラー・メッセージが表示される可能性があります。
 
-vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスとは異なり、**「デプロイ済みインスタンス」**ページに表示されません。
+vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスとは異なり、**「リソース」**ページに表示されません。
 {:note}
 
 ## 関連リンク

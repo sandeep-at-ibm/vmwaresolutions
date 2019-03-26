@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -74,13 +74,13 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
 要确定客户子网的详细信息，以便可以使用订购的 IP 地址，请在 VMware vSphere Web Client 中完成以下步骤：
 
 1. 单击**主页 > 联网和安全性**。
-2. 在导航器窗格上，单击 **NSX Edge**，然后双击 **customer-nsx-edge** 边缘。
-3. 在此边缘的**摘要**选项卡上，查看边缘描述，其中包含专用和公用客户子网的子网标识。
+2. 在导航器窗格上，单击 **NSX Edge**，然后在右侧窗格的边缘列表中找到 **customer-nsx-edge**。
+3. 在**描述**列中，将鼠标悬停在 **customer-nsx-edge** 的边缘描述上，以查看专用和公用客户子网的子网标识。
 
 此外，还可以通过在 {{site.data.keyword.slportal}} 中完成以下步骤，找到有关客户子网的更多详细信息：
 
 1. 单击**联网 > IP 管理 > 子网**。
-2. 单击过滤器菜单，并在“子网”字段中输入标识，如 VMware vSphere Web Client 中**摘要**选项卡上 **customer-nsx-edge** 边缘的描述中所示。
+2. 单击过滤器菜单，在**子网**字段中输入标识，如 VMware vSphere Web Client 中 **customer-nsx-edge** 的描述中所示。
 3. 查看为 IP 地址显示的注释。这些注释用于确定在初始设置期间订购和使用的子网和 IP 地址。
 
    不要使用初始设置期间订购和使用的 IP 地址。但是，可以根据需求使用这些子网上的其他 IP 地址。要设置其他网络地址转换规则，请参阅[管理 NAT 规则](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}。

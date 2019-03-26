@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -25,8 +25,8 @@ lastupdated: "2019-02-15"
 VMware ワークロードのためのストレージ暗号化ソリューションは多数存在しますが、KMIP for VMware には以下の利点があります。
 
 * VMware の vSAN 暗号化および vSphere 暗号化と一体化する。どちらの暗号化もストレージ層や仮想マシン層ではなくハイパーバイザー層で実施されます。 この手法により、ストレージ・ソリューションやアプリケーションで意識することなく、簡単な管理が可能になります。
-* 多数の IBM Cloud マルチゾーン領域 (MZR) で提供されているフルマネージドの鍵管理サーバー。
-* VMware クラスターが IBM Cloud Key Protect と一体化するので、完全にユーザーが鍵を管理できる。ユーザーはいつでも鍵を無効化できます。
+* 多数の {{site.data.keyword.cloud_notm}} マルチゾーン領域 (MZR) で提供されているフルマネージドの鍵管理サーバー。
+* VMware クラスターが {{site.data.keyword.cloud_notm}} Key Protect と一体化するので、完全にユーザーが鍵を管理できる。ユーザーはいつでも鍵を無効化できます。
 
 ## 関連リンク
 {: #kmip-overview-related}

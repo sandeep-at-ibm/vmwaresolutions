@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -68,7 +68,7 @@ Esta capa proporciona una abstracción de recursos entre los sitios locales y lo
 En función de la VMware Hybrid Cloud Extension (HCX), puede crear interconexiones débilmente acopladas entre los sitios locales y de {{site.data.keyword.cloud_notm}} para habilitar la migración masiva de VM o de vMotion activos de VM sin tiempo de inactividad.
 
 ## Especificaciones técnicas para las instancias de vCenter Server con el paquete híbrido (Hybridity)
-{: #technical-specifications-for-vcenter-server-with-hybridity-bundle-instances}
+{: #vc_hybrid_overview-specs}
 
 Se incluyen los siguientes componentes en la instancia de vCenter Server con el paquete híbrido (Hybridity):
 
@@ -78,9 +78,9 @@ La disponibilidad y los precios de las configuraciones estandarizadas de hardwar
 ### Servidor nativo
 {: #vc_hybrid_overview-bare-metal}
 
-El pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity) incluye cuatro {{site.data.keyword.baremetal_short}} **Skylake** o **Broadwell**. Están disponibles los siguientes modelos de CPU:
-  * Generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100)
-  * Generación Intel Broadwell de 2 CPU (Intel Xeon serie E5-2600/E7-4800)
+Se incluyen cuatro {{site.data.keyword.baremetal_short}} con el pedido de instancia de vCenter Server con el paquete híbrido (Hybridity). Están disponibles las configuraciones siguientes:
+  * **Skylake**: servidores de generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100) con el modelo de CPU y el tamaño de RAM que seleccione.
+  * **Broadwell**: servidores de generación Intel Broadwell de 2 CPU (Intel Xeon serie E5-2600/E7-4800) con el modelo de CPU y el tamaño de RAM que seleccione.
 
 ### Redes
 {: #vc_hybrid_overview-networking}
@@ -120,7 +120,7 @@ El almacenamiento de vSAN ofrece configuraciones personalizadas, con diversas op
 
 Las licencias siguientes se incluyen con el pedido de instancia de vCenter Server con el paquete híbrido (Hybridity).
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 o 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Advanced o Enterprise) 6.4
 * VMware vSAN (Advanced o Enterprise) 6.6
@@ -140,7 +140,7 @@ Un servidor nativo con la configuración presentada en [Especificaciones técnic
 ### Licencias y tarifas correspondientes a nodos de expansión
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
 
-* Un VMware vSphere Enterprise Plus 6.5u1
+* Un VMware vSphere Enterprise Plus 6.5u2 o 6.7u1
 * Un VMware NSX Service Providers Edition (Advanced o Enterprise) 6.4
 * Una cuota de soporte y servicios
 * VMware vSAN (Advanced o Enterprise) 6.6

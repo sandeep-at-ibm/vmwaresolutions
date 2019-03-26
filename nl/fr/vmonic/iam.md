@@ -4,12 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
 # Gestion des accès utilisateur à l'aide d'IAM
-{: #managing-user-access-with-iam}
+{: #iam}
 
 L'accès aux instances de service {{site.data.keyword.vmwaresolutions_full}} pour les utilisateurs de votre compte est contrôlé par {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). Chaque utilisateur qui accède aux services {{site.data.keyword.vmwaresolutions_short}} de votre compte doit se voir attribuer une règle d'accès pour laquelle un rôle utilisateur IAM est défini.
 
@@ -69,12 +69,11 @@ En raison de l'intégration d'{{site.data.keyword.vmwaresolutions_short}} à IAM
 Quant aux instances existantes qui ont été déployées dans la version 2.4 et dans des éditions antérieures, vous pouvez les faire migrer vers des comptes {{site.data.keyword.cloud_notm}} spécifiés pour la gestion activée pour IAM. Pour plus d'informations, voir les rubriques suivantes :
 * [Migration d'instances vCenter Server antérieures à la version 2.5 vers des comptes IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
 * [Migration d'instances vCenter Server with Hybridity Bundle antérieures à la version 2.5 vers des comptes IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
-* [Migration d'instances Cloud Foundation Select antérieures à la version 2.5 vers des comptes IBM Cloud](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addinstancetousraccount)
 * [Migration d'instances NetApp ONTAP Select antérieures à la version 2.5 vers des comptes IBM Cloud](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)
 
 ## Liens connexes
 {: #iam-related}
 
 * [Gestion de l'identité et de l'accès](/docs/iam?topic=iam-getstarted)
-* [Gestion des utilisateurs et de l'accès](/docs/iam/iamusermanage.html)
+* [Invitation d'utilisateurs](/docs/iam?topic=iam-iamuserinv#iamuserinv)
 * [Présentation d'IAM](/docs/iam?topic=iam-iamoverview)

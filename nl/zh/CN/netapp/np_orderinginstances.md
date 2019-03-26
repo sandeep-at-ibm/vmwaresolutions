@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -128,7 +128,7 @@ lastupdated: "2019-02-14"
 
 实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
 
-成功部署实例后，[NetApp ONTAP Select 实例的技术规范](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#technical-specifications-for-netapp-ontap-select-instances)中描述的组件已安装在 VMware 虚拟平台上。
+成功部署实例后，[NetApp ONTAP Select 实例的技术规范](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)中描述的组件已安装在 VMware 虚拟平台上。
 
 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 

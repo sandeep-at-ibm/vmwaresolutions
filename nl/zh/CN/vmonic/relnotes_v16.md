@@ -14,6 +14,7 @@ lastupdated: "2017-05-22"
 此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## 对 VMware Cloud Foundation 实例的更新
+{: #relnotes_v16-vcf}
 
 新增或更新了以下组件：
 
@@ -22,11 +23,11 @@ lastupdated: "2017-05-22"
 *  新的硬件规范：**小型**或**标准**，具体取决于您的需求。
 *  可用于部署的新数据中心：**HKG02 - 中国香港特别行政区**、**OSL01 - 奥斯陆**、**SEO01 - 首尔**、**SNG01 - 新加坡**和 **SYD04 - 悉尼**。
 
-有关组件的完整列表，请参阅 [VMware Cloud Foundation 概述](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)。
-
 ## 对 VMware vCenter Server 实例的更新
+{: #relnotes_v16-vcs}
 
 ### vCenter Server 实例的硬件增强功能
+{: #relnotes_v16-hw-vcs}
 
 从 V1.6 发行版开始，有多项增强功能可用于 vCenter Server 实例。
 
@@ -48,6 +49,7 @@ lastupdated: "2017-05-22"
 对于 V1.6 之前的实例，其他所有操作都不再可用。
 
 ### vCenter Server 实例的联网增强功能
+{: #relnotes_v16-network-vcs}
 
 *  将以您的名义订购公用 VLAN 上包含 16 个 IP 地址的公用子网，用于允许 VM（虚拟机）访问因特网。
 *  将以您的名义订购专用 VLAN 上包含 64 个 IP 地址的专用子网，用于允许 VM 访问 SoftLayer® 内部网络。
@@ -66,10 +68,11 @@ lastupdated: "2017-05-22"
    *  [VMware NSX 文档](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## 易用性增强功能
+{: #relnotes_v16-ui}
 
 对整个用户界面进行了改进：
 
 *  通过引入可访问用户界面所有区域的左侧导航窗格，极大地改进了控制台上的主导航。您可以快速订购新实例，查看已部署的实例，复查系统通知，更改设置以及访问联机文档。
 *  可从左侧导航窗格访问的新**开始**页面，直接在控制台上提供了足够的详细信息，以帮助您就要订购的实例组件做出知情决策。在**开始**页面上，还将逐步引导您完成实例订购过程，从满足订购实例的所有先决条件（例如，必需的用户帐户）开始，一直到下订单结束。
-*  Cloud Foundation 实例和 vCenter Server 实例的摘要详细信息已合并到单个页面上，可通过左侧导航窗格上**已部署的实例**菜单来访问该页面。在该页面中，可以选择相应的选项卡来过滤 Cloud Foundation 实例或 vCenter Server 实例。
-* 如果实例上安装了 Zerto 灾难恢复，那么可通过一次单击直接从服务详细信息页面访问 Zerto 控制台。有关更多信息，请参阅[订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)和[订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。
+*  Cloud Foundation 实例和 vCenter Server 实例的摘要详细信息已合并到单个页面上，可通过左侧导航窗格上的**资源**菜单来访问该页面。在该页面中，可以选择相应的选项卡来过滤 Cloud Foundation 实例或 vCenter Server 实例。
+* 如果实例上安装了 Zerto 灾难恢复，那么可通过一次单击直接从服务详细信息页面访问 Zerto 控制台。有关更多信息，请参阅[订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。

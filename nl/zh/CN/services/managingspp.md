@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -21,11 +21,9 @@ lastupdated: "2019-02-15"
 ## 对 IBM Spectrum Protect Plus on IBM Cloud 应用更新
 {: #managingspp-updates}
 
-您应负责维护 IBM Spectrum Protect Plus，以使其保持为最新版本。可以从 [IBM Spectrum Protect Plus 支持](https://www.ibm.com/mysupport/s/topic/0TO50000000IQWtGAO/spectrum-protect-plus)页面下载所需的更新。
+您应负责维护 IBM Spectrum Protect Plus，以使其保持为最新版本。可以从 [IBM Spectrum Protect Plus 支持](https://www.ibm.com/mysupport/s/topic/0TO50000000IQWtGAO/spectrum-protect-plus){:new_window}页面下载所需的更新。
 
-有关更多信息，请参阅以下主题：
-* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+有关更多信息，请参阅[订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。
 
 ## 更新 IBM Spectrum Protect Plus VM 的操作系统
 {: #managingspp-update-os}
@@ -35,6 +33,6 @@ lastupdated: "2019-02-15"
 ## 相关链接
 {: #managingspp-related}
 
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations)
-* [如何向部署后的 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 添加 vSnap 存储](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)
-* [IBM Spectrum Protect Plus 文档](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations){:new_window}
+* [如何向部署后的 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 添加 vSnap 存储](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/){:new_window}
+* [IBM Spectrum Protect Plus 文档](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:new_window}

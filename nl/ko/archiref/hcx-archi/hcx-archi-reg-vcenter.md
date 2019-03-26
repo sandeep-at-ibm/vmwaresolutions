@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 # vCenter에 HCX Manager 등록
@@ -30,7 +30,7 @@ VMware vSphere Web Client에 하이브리드 클라우드 서비스 플러그인
 3. 검색 서비스를 구성하십시오.
   1. **관리** 탭을 클릭하십시오.
   2. **검색 서비스 URL** 텍스트 상자의 맨 오른쪽에 있는 **편집** 단추를 클릭하십시오.
-  3. 다음 양식으로 검색 서비스 엔드포인트를 입력하십시오.
+  3. 다음 양식으로 검색 네트워크 서비스 엔드포인트를 입력하십시오.
     * vCenter Server 5.5u3: `https://ssoip:/7444/lookupservice/sdk`
     * vCenter Server 6.0u2: `https://ssoip/lookupservice/sdk`
   4. **확인**을 클릭하십시오. 웹 엔진을 다시 시작해야 하는 메시지가 표시되면 다시 시작하지 마십시오.

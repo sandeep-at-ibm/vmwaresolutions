@@ -27,4 +27,4 @@ Abra um chamado de suporte {{site.data.keyword.cloud}} e trabalhe com o Suporte 
 
 Para acessar o console do Zerto, clique no cartão Zerto na guia **Serviços** da instância e clique em **Visualizar Detalhes** e em **Visualizar o Console do Zerto**.
 
-Para obter mais informações sobre como entrar em contato com o Suporte IBM, consulte [Contatando o Suporte IBM](/docs/services/vmwaresolutions//vmonic/trbl_support.html).
+Para obter mais informações sobre como entrar em contato com o Suporte IBM, consulte [Contatando o Suporte IBM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-trbl_support#trbl_support).

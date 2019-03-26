@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2019-02-14"
 
 {{site.data.keyword.vmwaresolutions_full}} を使用すると、短時間でインスタンスをさまざまな場所にデプロイして稼働させることができます。
 
-vCenter Server インスタンスのマルチサイト構成は、V2.0 以降のインスタンスでのみサポートされます。マルチサイト構成では、VMware Cloud Foundation インスタンスと VMware vCenter Server インスタンスをリンクすることはできません。
+vCenter Server インスタンスのマルチサイト構成は、V2.0 以降のインスタンスでのみサポートされます。 マルチサイト構成では、VMware Cloud Foundation インスタンスと VMware vCenter Server インスタンスをリンクすることはできません。
 {:note}
 
 ## マルチサイト・デプロイメントのコンポーネント
@@ -49,7 +49,7 @@ vCenter Server インスタンスのマルチサイト構成は、V2.0 以降の
 
 図 1. vCenter Server のマルチサイト・デプロイメント
 
-![vCenter Server のマルチサイト・デプロイメント](../sddc/multisite-hub-spoke.svg "vCenter Server のマルチサイト・デプロイメント")
+![vCenter Server のマルチサイト・デプロイメント](../vcenter/multisite-hub-spoke.svg "vCenter Server のマルチサイト・デプロイメント")
 
 このモデルには以下の層が含まれています。
 

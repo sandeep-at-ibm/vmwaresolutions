@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2019-02-15"
 {:note}
 
 ## IBM Cloud Private Hosted 的技术规范
-{: #technical-specifications-for-ibm-cloud-private-hosted}
+{: #icp_overview-specs}
 
 下表列出了为**生产就绪**环境和**开发/测试**环境订购 IBM Cloud Private Hosted 服务的最低需求。
 
@@ -35,7 +35,7 @@ lastupdated: "2019-02-15"
 |开发/测试|30|200|3|4,000|
 
 ### IBM Cloud Private Hosted 的资源需求
-{: #resource-requirements-for-ibm-cloud-private-hosted}
+{: #icp_overview-resource-req}
 
 以下各表列出了 {{site.data.keyword.cloud_notm}} Private Hosted 服务在生产就绪环境和开发/测试环境中的资源需求。
 

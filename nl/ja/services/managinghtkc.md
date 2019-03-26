@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -26,14 +26,12 @@ vSphere Web Client から HTKC コンソールにアクセスするには、次�
 2. **「KC1」**または**「KC2」**を右クリックし、**「コンソールを開く」**をクリックします。
 3. HyTrust KeyControl on {{site.data.keyword.cloud_notm}} サービスの詳細ページに表示されるコンソールの資格情報を使用して、コンソールにログインします。
 
-詳しくは、以下のトピックを参照してください。
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+詳しくは、[vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)を参照してください。
 
 ## 関連リンク
 {: #managinghtkc-related}
 
-* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)
+* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [HyTrust Web サイト](https://www.hytrust.com/)

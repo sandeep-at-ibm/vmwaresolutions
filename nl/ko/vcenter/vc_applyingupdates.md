@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -61,7 +61,7 @@ V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데
 
 이 프로시저는 2.1 이상에 배치된 인스턴스에 적용됩니다. V2.0 이전에 배치된 인스턴스의 경우, VMware 업데이트를 수동으로 적용해야 합니다.
 
-1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 업데이트할 인스턴스를 클릭하십시오.
 3. **요약** 페이지에서 모든 인스턴스 세부사항이 올바르게 표시되는지 확인하십시오. 그런 다음 왼쪽 탐색 분할창의 **인프라**를 클릭하여 **인프라** 페이지에서 세부사항을 확인하십시오.
    세부사항이 표시되지 않는 경우, 이는 방화벽 규칙이나 기타 네트워킹 문제로 인한 IBM CloudDriver VSI(Virtual Server Instance)의 연결 문제점을 표시할 수 있습니다. 다음 단계를 계속하기 전에 문제점을 해결하십시오. 그렇지 않으면, 업데이트에 실패할 수 있습니다.
@@ -93,7 +93,7 @@ Hybridity Bundle로 업그레이드하고 vCenter Server 인스턴스에 이미 
 
 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle로 업그레이드하려면 다음 단계를 완료하십시오.
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 업그레이드할 인스턴스를 클릭하십시오.
 3. **요약** 페이지에서 모든 인스턴스 세부사항이 올바르게 표시되는지 확인하십시오. 그런 다음 왼쪽 탐색 분할창의 **인프라**를 클릭하여 **인프라** 페이지에서 세부사항을 확인하십시오.
    세부사항이 표시되지 않는 경우, 이는 방화벽 규칙이나 기타 네트워킹 문제로 인한 IBM CloudDriver VSI(Virtual Server Instance)의 연결 문제점을 표시할 수 있습니다. 다음 단계를 계속하기 전에 문제점을 해결하십시오. 그렇지 않으면, 업데이트에 실패할 수 있습니다.

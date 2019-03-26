@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -41,7 +41,7 @@ Es gibt drei Bereitstellungsmodelle für Caveonix RiskForesight:
   -	Mit Master- und Datenknoten bereitgestellter Indexdatenspeicher.
   -	Weitere Datenknoten, die bei steigender Anzahl von Assets für das Scale-out verwendet werden.
 
-Alle Komponenten müssen über einen vollständig qualifizierten Domänennamen (FQDN = Fully Qualified Domain Name) verfügen und vor jeder VM-Bereitstellung beim DNS registriert sein. Dieser Schritt erfolgt durch die IC4VS-Automatisierung für die erste umfassende Bereitstellung; liegt aber bei der Skalierung der Bereitstellung in der Verantwortlichkeiten des Kunden.
+Alle Komponenten müssen über einen vollständig qualifizierten Domänennamen (FQDN = Fully Qualified Domain Name) verfügen und vor jeder VM-Bereitstellung beim DNS registriert sein. Dieser Schritt wird von der IBM Cloud for VMware Solutions-Automatisierung für die anfängliche umfassende Bereitstellung ausgeführt. Er liegt jedoch in Ihrer Verantwortlichkeit, wenn die Bereitstellung skaliert wird. 
 
 ## Zugehörige Links
 {: #caveonix-step1-related}

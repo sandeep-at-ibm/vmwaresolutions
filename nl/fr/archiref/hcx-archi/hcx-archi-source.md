@@ -63,7 +63,7 @@ Transférez un machine virtuelle hors tension vers IBM Cloud sur un réseau éte
 
 * L'optimisation en option du réseau WAN définie par logiciel, si elle est installée, accroît le débit et la vitesse de migration.
 * Il est possible de planifier la migration afin qu'elle ait lieu à une heure spécifique.
-* Une machine virtuelle migrée peut conserver son nom d’hôte et/ou son nom de machine virtuelle.
+* Une machine virtuelle migrée peut conserver son nom d'hôte et/ou son nom de machine virtuelle.
 
 ## Fonctions réseau
 {: #hcx-archi-source-net-feat}

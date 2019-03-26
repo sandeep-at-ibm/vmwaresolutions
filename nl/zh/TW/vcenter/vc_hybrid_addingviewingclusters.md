@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,7 +52,7 @@ lastupdated: "2019-02-15"
 ### Bare Metal Server 設定
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
-指定 Bare Metal Server 的 CPU 型號及 RAM。可用的選項可能會根據一開始部署您實例所用的版本而不同。
+您可以選擇 **Skylake** 或 **Broadwell**。選項可能會根據一開始部署您實例所用的版本而不同。
 
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
@@ -131,7 +131,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 ## 將叢集新增至 vCenter Server with Hybridity Bundle 實例的程序
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下實例來檢視其中的叢集。
 
    請確定實例狀態處於**備妥使用**。否則，您無法將叢集新增至實例。
@@ -161,7 +161,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 ## 檢視 vCenter Server with Hybridity Bundle 實例中叢集的程序
 {: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下實例來檢視其中的叢集。
 3. 在左導覽窗格上，按一下**基礎架構**。在**叢集**表格中，檢視叢集的摘要：
   * **名稱**：叢集的名稱。
@@ -231,7 +231,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 ## 從 vCenter Server with Hybridity Bundle 實例刪除叢集的程序
 {: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要從中刪除叢集的實例。
 
    請確定實例處於**備妥使用**狀態。否則，您無法從實例移除叢集。{:note}

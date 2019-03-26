@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -26,16 +26,16 @@ lastupdated: "2019-02-15"
   <dd class="dd">實體網路會提供與環境的網路連線功能，而之後網路虛擬化會使用該環境。網路由 {{site.data.keyword.cloud_notm}} 服務網路提供，並包含額外服務（例如 DNS 及 NTP）。</dd>
 </dl>
 
-如需實體元件的相關資訊，請參閱 [Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)或 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的「資料清單」。
+如需實體元件的相關資訊，請參閱 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的「資料清單」。
 
-如需儲存空間的相關資訊，請參閱[共用儲存空間架構](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)。
+如需儲存空間的相關資訊，請參閱[共用儲存空間架構](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)。
 
 ## 實體主機設計
 {: #design_physicalinfrastructure-host-design}
 
 實體主機是指環境中用來提供運算資源的 {{site.data.keyword.baremetal_short}}。此解決方案中所套用的 {{site.data.keyword.baremetal_short}} 已經過 VMware 認證，並列在 [VMware HCG](http://www.vmware.com/resources/compatibility/search.php) 中。
 
-解決方案中可用的伺服器配置符合或超出安裝、配置及管理 vSphere ESXi 的最低需求。有各種配置可用來滿足不同的需求。如需用於 VMware on {{site.data.keyword.cloud_notm}} 解決方案之確切規格的詳細清單，請參閱 [Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)或 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的「資料清單」。
+解決方案中可用的伺服器配置符合或超出安裝、配置及管理 vSphere ESXi 的最低需求。有各種配置可用來滿足不同的需求。如需用於 VMware on {{site.data.keyword.cloud_notm}} 解決方案的確切規格詳細清單，請參閱 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的「資料清單」。
 
 {{site.data.keyword.baremetal_short}} 位於 {{site.data.keyword.cloud_notm}}。
 {:note}
@@ -87,21 +87,12 @@ Bare Metal Server 的規格如下：
 * 主要 IP 位址會被指派給 {{site.data.keyword.cloud_notm}} 所佈建的裝置、Bare Metal Server 及虛擬伺服器。不要指派這些區塊中的任何 IP 位址。
 * 我們提供了可攜式 IP 位址，供您視需要指派及管理。
 
-若在 {{site.data.keyword.slportal}} 內啟用 **VLAN Spanning**，或將帳戶配置為**虛擬遞送及轉遞 (VRF)** 帳戶，則可以將主要或可攜式 IP 位址變成可遞送給客戶帳戶內的任何 VLAN。
-
-### VLAN Spanning
-{: #design_physicalinfrastructure-vlan-spanning}
-
-**VLAN Spanning** 是一種 {{site.data.keyword.slportal}} 帳戶設定，容許將帳戶內所有 VLAN 的主要及可攜式子網路 IP 區塊遞送給彼此。停用 **VLAN Spanning** 設定時，IP 區塊仍然可以遞送給 {{site.data.keyword.cloud_notm}} 服務，但不能遞送給彼此。
-
-若要容許在解決方案元件所在的各種子網路之間進行透通連線，您需要在已部署 Cloud Foundation 及 vCenter Server 實例的 {{site.data.keyword.slportal}} 帳戶中啟用 **VLAN Spanning**。
+當帳戶配置為**虛擬遞送及轉遞 (VRF)** 帳戶時，可以將主要或可攜式 IP 位址變成可遞送給客戶帳戶內的任何 VLAN。
 
 ### 虛擬遞送及轉遞
 {: #design_physicalinfrastructure-vrf}
 
-您也可以將 {{site.data.keyword.slportal}} 帳戶配置為虛擬遞送及轉遞 (VRF) 帳戶來提供與 VLAN Spanning 類似的功能，以啟用子網路 IP 區塊之間的自動遞送。所有具有 Direct Link 連線的帳戶都必須轉換或建立為 VRF 帳戶。
-
-{{site.data.keyword.vmwaresolutions_short}} 主控台無法偵測 {{site.data.keyword.slportal}} 中是否已啟用 VRF。您會收到警告，提醒您確定已在 {{site.data.keyword.slportal}} 帳戶中啟用 **VLAN Spanning** 或 VRF。
+您可以將 {{site.data.keyword.slportal}} 帳戶配置為「虛擬遞送及轉遞 (VRF)」帳戶，以啟用子網路 IP 區塊之間的自動廣域遞送。所有具有 Direct Link 連線的帳戶都必須轉換或建立為 VRF 帳戶。
 
 ### 實體主機連線
 {: #design_physicalinfrastructure-host-connect}
@@ -171,7 +162,7 @@ vSphere ESXi Hypervisor 設計成安裝於持續性位置中。因此，實體�
 
 使用時，會使用全快閃記憶體的配置來配置 VMware vSAN。此設計容許數個配置選項（包括 2U 和 4U 機箱）、各種磁碟數量，以及各種磁碟大小。所有配置都會使用兩個 vSAN 磁碟群組，搭配一個固態硬碟 (SSD) 用於快取，和一個以上的 SSD 用於容量。所有配置供 vSAN 耗用的磁碟機，都以單一磁碟 RAID-0 進行配置。
 
-如需所支援配置的相關資訊，請參閱 [Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)或 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的「資料清單」。
+如需支援的配置的相關資訊，請參閱 [vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)的「資料清單」。
 
 ### 跨主機的共用檔案層次儲存空間
 {: #design_physicalinfrastructure-shared-storage}
@@ -184,12 +175,11 @@ vSphere ESXi Hypervisor 設計成安裝於持續性位置中。因此，實體�
 
 您可以在購買時或之後在主控台內，配置及裝載工作負載用的其他檔案共用。您可以從對應 {{site.data.keyword.CloudDataCent_notm}} 的可用「{{site.data.keyword.cloud_notm}} 耐久性」檔案儲存空間容量選項及效能層級中進行選取。所有共用都是使用 NFS 第 3 版通訊協定進行連接。此外，套用 NetApp ONTAP Select 供應項目，即可連接 NFS 第 3 版檔案共用。
 
-提供 10 IOPS/GB 效能層級的 {{site.data.keyword.CloudDataCents_notm}} 也包含由提供者管理的靜態資料加密（AES-256 加密），並且由全快閃記憶體儲存空間加以備份。10 IOPS/GB 效能層級的容量上限為 4 TB。如需此解決方案中使用之共用 NAS 的相關資訊，請參閱[共用儲存空間架構](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)。
+提供 10 IOPS/GB 效能層級的 {{site.data.keyword.CloudDataCents_notm}} 也包含由提供者管理的靜態資料加密（AES-256 加密），並且由全快閃記憶體儲存空間加以備份。10 IOPS/GB 效能層級的容量上限為 4 TB。如需此解決方案中使用之共用 NAS 的相關資訊，請參閱[共用儲存空間架構](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)。
 
 ## 相關鏈結
 {: #design_physicalinfrastructure-related}
 
-* [Cloud Foundation 資料清單](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
 * [vCenter Server 資料清單](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
-* [共用儲存空間架構](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
+* [共用儲存空間架構](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [NetApp ONTAP Select 架構](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

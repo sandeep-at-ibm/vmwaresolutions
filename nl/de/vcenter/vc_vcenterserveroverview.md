@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -56,10 +56,10 @@ Das Basisangebot wird mit einer vCenter Server-Appliance bereitgestellt, deren G
 
 Insgesamt benötigt das Basisangebot 38 virtuelle CPUs und 67 GB virtuellen RAM, die für die Virtualisierungsmanagementschicht reserviert sind. Die verbleibende Hostkapazität für Ihre VMs hängt von mehreren Faktoren ab, beispielsweise der Übersubskriptionsrate, der VM-Dimensionierung und den Anforderungen an die Workloadleistung.
 
-Weitere Informationen zur Architektur enthält die [Referenzdokumentation zur Architektur von {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview). 
+Weitere Informationen zur Architektur enthält die [Referenzdokumentation zur Architektur von {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Technische Spezifikationen für vCenter Server-Instanzen
-{: #technical-specifications-for-vcenter-server-instances}
+{: #vc_vcenterserveroverview-specs}
 
 Ihre vCenter Server-Instanz enthält die folgenden Komponenten.
 
@@ -70,9 +70,9 @@ Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen kön
 {: #vc_vcenterserveroverview-bare-metal}
 
 Sie können drei oder mehr {{site.data.keyword.baremetal_short}}-Instanzen mit einer der folgenden Konfigurationen bestellen:
-* **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.  
+* **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 * **SAP-zertifiziert**: Intel Skylake oder Intel Broadwell Generation-Server (Intel Xeon 6140/E5-2690/E7-8890 Series) mit dem ausgewählten CPU-Modell.
-* **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600/E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe. 
+* **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600/E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 
 Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
 {:note}
@@ -125,9 +125,12 @@ Die Option "vSAN" bietet angepasste Konfigurationen mit unterschiedlichen Option
 {: #vc_vcenterserveroverview-nfs-storage}
 
 Die Option "NFS" bietet angepassten gemeinsam genutzten Speicher auf Dateiebene für Workloads mit verschiedenen Optionen für Größe und Leistung:
-* Größe: 20 bis 12000 GB
+* Größe: 20 GB bis 24 TB
 * Leistung: 0,25, 2, 4 oder 10 IOPS/GB.
 * Die gemeinsam genutzten Dateiressourcen werden einzeln konfiguriert.
+
+  Die Leistungsstufe 10 IOPS/GB ist auf eine maximale Kapazität von 4 TB pro gemeinsam genutzte Dateiressource begrenzt.
+  {:note}
 
 Wenn Sie die Option "NFS" auswählen, wird 1 gemeinsam genutzte Dateiressource mit 2 TB und 4 IOPS/GB für Managementkomponenten bestellt.
 
@@ -139,7 +142,7 @@ Die Option für lokale Festplatten, die nur für die Bare-Metal-Konfiguration de
 ### Lizenzen (von IBM bereitgestellt oder eigene) und Gebühren
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 oder 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.4
 * (Für vSAN-Cluster) VMware vSAN Advanced oder Enterprise 6.6
@@ -148,17 +151,17 @@ Die Option für lokale Festplatten, die nur für die Bare-Metal-Konfiguration de
 ## Technische Spezifikationen für vCenter Server-Erweiterungsknoten
 {: #vc_vcenterserveroverview-expansion-node-specs}
 
-Jeder vCenter Server-Erweiterungsknoten stellt die folgenden Komponenten in Ihrem {{site.data.keyword.cloud_notm}}-Konto mit den entsprechenden anfallenden Gebühren bereit.
+Jeder vCenter Server-Erweiterungsknoten stellt folgende Komponenten in Ihrem {{site.data.keyword.cloud_notm}}-Konto mit den entsprechenden anfallenden Gebühren bereit. 
 
 ### Hardware für Erweiterungsknoten
 {: #vc_vcenterserveroverview-expansion-node-hardware}
 
-1 Bare Metal Server mit der unter [Technische Spezifikationen für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances) aufgeführten Konfiguration.
+1 Bare Metal Server mit der unter [Technische Spezifikationen für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) aufgeführten Konfiguration.
 
 ### Lizenzen und Gebühren für Erweiterungsknoten
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* 1 Lizenz für VMware vSphere Enterprise Plus 6.5u1
+* 1 Lizenz für VMware vSphere Enterprise Plus 6.5u2 oder 6.7u1
 * 1 Lizenz für VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.4
 * 1 Support- und Servicegebühr
 * (Für vSAN-Cluster) VMware vSAN Advanced oder Enterprise 6.6
@@ -179,3 +182,4 @@ Ausgenommen von diesen Aktivitäten ist unter anderem das Management der gemeins
 * [vCenter Server-Instanzen planen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [{{site.data.keyword.cloud_notm}} File Storage und Block Storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [Kapazität von gemeinsam genutzten Dateiressourcen erweitern](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

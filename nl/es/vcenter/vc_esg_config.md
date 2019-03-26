@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -74,13 +74,13 @@ El extremo **customer-nsx-edge** está pensado para que lo utilice el cliente, d
 Para identificar los detalles de las subredes del cliente para que pueda utilizar las direcciones IP solicitadas, siga los pasos siguientes en el cliente web de VMware vSphere:
 
 1. Pulse **Inicio > Redes y seguridad**.
-2. En el panel de navegación, pulse **NSX Edges** y realice una doble pulsación en el extremo **customer-nsx-edge**.
-3. En el separador **Resumen** de este extremo, revise la descripción del extremo, que contiene los identificadores de subred de las subredes del cliente privada y pública.
+2. En el panel de navegación, pulse **NSX Edges** y localice **customer-nsx-edge edge** en la lista de extremos del panel de la derecha.
+3. En la columna **Descripción**, pase el ratón por encima de la descripción del extremo de **customer-nsx-edge** para ver los identificadores de subred de las subredes privada y pública del cliente.
 
 Encontrará más detalles sobre las subredes del cliente siguiendo estos pasos en el {{site.data.keyword.slportal}}:
 
 1. Pulse **Redes > Gestión de IP > Subredes**.
-2. Pulse el menú de filtro y en el campo de subred escriba el identificador tal como aparece en la descripción del extremo **customer-nsx-edge** del separador **Resumen** del cliente web de VMware vSphere.
+2. Pulse el menú de filtro y en el campo **Subred** escriba el identificador tal como aparece en la descripción de **customer-nsx-edge** del cliente web de VMware vSphere.
 3. Revise las notas que se muestran para las direcciones IP. Estas notas identifican cuáles de las subredes y direcciones IP se han solicitado y utilizado durante la configuración inicial.
 
    No utilice las direcciones IP que se ha solicitado y utilizado durante la configuración inicial. Sin embargo, puede utilizar otras direcciones IP en estas subredes según sus requisitos. Para configurar reglas adicionales de conversión de direcciones de red, consulte [Gestión de reglas NAT](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.

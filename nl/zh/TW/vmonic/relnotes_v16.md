@@ -14,6 +14,7 @@ lastupdated: "2017-05-22"
 此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## VMware Cloud Foundation 實例的更新
+{: #relnotes_v16-vcf}
 
 以下是新元件或更新的元件：
 
@@ -22,11 +23,11 @@ lastupdated: "2017-05-22"
 *  視您的需求而定，新硬體規格為：**小型**或**標準**。
 *  可用於部署的新資料中心：**HKG02 - 香港**、**OSL01 - 奧斯陸**、**SEO01 - 首爾**、**SNG01 - 新加坡**及 **SYD04 - 雪梨**。
 
-如需完整的元件清單，請參閱 [VMware Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)。
-
 ## VMware vCenter Server 實例的更新
+{: #relnotes_v16-vcs}
 
 ### vCenter Server 實例的硬體加強功能
+{: #relnotes_v16-hw-vcs}
 
 從 1.6 版開始，vCenter Server 實例有多項可用的加強功能。
 
@@ -48,6 +49,7 @@ lastupdated: "2017-05-22"
 1.6 版之前的實例上的所有其他動作皆不再可用。
 
 ### vCenter Server 實例的網路加強功能
+{: #relnotes_v16-network-vcs}
 
 *  代表您訂購公用 VLAN 上具有 16 個 IP 位址的公用子網路，以容許 VM（虛擬機器）存取網際網路。
 *  代表您訂購專用 VLAN 上具有 64 個 IP 位址的專用子網路，以容許 VM 存取 SoftLayer® 內部網路。
@@ -66,10 +68,11 @@ lastupdated: "2017-05-22"
    *  [VMware NSX 文件](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## 可用性加強功能
+{: #relnotes_v16-ui}
 
 在整個使用者介面中進行了改善：
 
 *  透過建立左導覽窗格來存取使用者介面的所有區域，使主控台的主要導覽大幅改進。您可以快速訂購新實例、檢視已部署的實例、檢閱系統通知、變更設定，以及存取線上文件。
 *  可從左導覽窗格中存取的新**開始使用**頁面，在主控台上直接提供足夠的詳細資料，以協助您對所要訂購的實例的元件做出明智的決策。在**開始使用**頁面上，也會逐步引導您完成實例的訂購處理程序，從滿足訂購實例的所有必要條件（例如所需的使用者帳戶）開始，一直到下訂單為止。
-*  Cloud Foundation 實例及 vCenter Server 實例的摘要詳細資料已合併至單一頁面（可從左導覽窗格的**已部署的實例**功能表中進行存取）。您可以從該頁面選取適當的標籤，以過濾 Cloud Foundation 實例或 vCenter Server 實例。
-* 如果您的實例上已安裝 Zerto 災難回復，您只要按一下就可以直接從服務詳細資料頁面存取 Zerto 主控台。如需相關資訊，請參閱[訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)及[訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。
+*  Cloud Foundation 實例和 vCenter Server 實例的摘要詳細資料已合併至單一頁面，可從左導覽窗格的**資源**功能表存取該頁面。您可以從該頁面選取適當的標籤，以過濾 Cloud Foundation 實例或 vCenter Server 實例。
+* 如果您的實例上已安裝 Zerto 災難回復，您只要按一下就可以直接從服務詳細資料頁面存取 Zerto 主控台。如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。

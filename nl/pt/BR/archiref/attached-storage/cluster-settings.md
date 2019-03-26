@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-28"
 
 ---
 
@@ -89,7 +89,7 @@ Tabela 2. Condições de falha e configurações de resposta da MV para o cluste
 Para obter mais informações sobre como configurar essas definições no vSphere Web Client, consulte [Configurar respostas da máquina virtual](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html).
 
 #### Controle de Admissão
-{: #cluster-settings-admission-control}
+{: #cluster-settings-admin-control}
 
 O vCenter Server usa o controle de admissão para assegurar que recursos suficientes estejam disponíveis em um cluster para fornecer proteção contra failover e assegurar que as reservas de recursos da MV sejam respeitadas. Nesse design, a capacidade de failover é reservada especificando uma porcentagem dos recursos de cluster. A capacidade de failover definida é configurada como 25% de CPU e 25% de memória.
 

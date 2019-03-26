@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2019-02-15"
 ## 將憑證新增至 KMIP for VMware on IBM Cloud 實例的程序
 {: #kmip_standalone_addingdeletingcert-add}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，從左導覽窗格按一下**資源**。
 2. 向下捲動至 **KMIP for VMware on IBM Cloud 實例**表格，按一下您要為其新增憑證的實例。
 3. 按一下**新增**。
 4. 在**新增用戶端 SSL 憑證**視窗中，輸入憑證名稱及內容。
@@ -32,7 +32,7 @@ lastupdated: "2019-02-15"
 ## 檢視 KMIP for VMware on IBM Cloud 實例憑證的程序
 {: #kmip_standalone_addingdeletingcert-view}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，從左導覽窗格按一下**資源**。
 2. 向下捲動至 **KMIP for VMware on IBM Cloud 實例**表格，按一下要檢視其憑證的實例。
 3. 檢視**用戶端 SSL 憑證**區段下的已新增憑證清單。
 4. 若要檢視特定憑證的內容，請按一下**下載**。
@@ -40,7 +40,7 @@ lastupdated: "2019-02-15"
 ## 從 KMIP for VMware on IBM Cloud 實例刪除憑證的程序
 {: #kmip_standalone_addingdeletingcert-delete}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，從左導覽窗格按一下**資源**。
 2. 向下捲動至 **KMIP for VMware on IBM Cloud 實例**表格，按一下您要從中刪除憑證的實例。
 3. 在**用戶端 SSL 憑證**表格中，找出您要刪除的憑證，然後按一下**刪除**圖示。
 

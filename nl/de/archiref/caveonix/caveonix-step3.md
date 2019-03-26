@@ -4,22 +4,24 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
 # Schritt 3 - Konfiguration der Anwendung
 {: #caveonix-step3}
 
-Bei diesem Schritt wird das Caveonix RiskForesight-Konfigurationsscript verwendet. Für die umfassende Bereitstellung wird dieses Script über die IC4VS-Automatisierung gestartet. Für die Skalierung muss der Client das Script aufrufen, um die teilweise oder vollständig verteilten Bereitstellungsstopologien bereitzustellen. Das Script konfiguriert die RiskForesight-Services:
--	Caveonix-Apps (API, zentraler Kollektor)
--	Elastische Suche
+Bei diesem Schritt wird das Caveonix RiskForesight-Konfigurationsscript verwendet. Für die umfassende Bereitstellung wird dieses Script über die IC4VS-Automatisierung gestartet.
+
+Für die Skalierung muss der Client das Script aufrufen, um die teilweise oder vollständig verteilten Topologien bereitzustellen. Das Script konfiguriert die RiskForesight-Services:
+- Caveonix-Apps (API, zentraler Kollektor)
+- Elastische Suche
 - PostgresSQL
--	Ferner Kollektor
--	Benutzerschnittstelle
--	Kafka
--	Kibana
--	Zertifikate für alle Services
+- Ferner Kollektor
+- Benutzerschnittstelle
+- Kafka
+- Kibana
+- Zertifikate für alle Services
 
 Am Ende dieses Schritts werden die Anwendungskomponenten auf den erforderlichen virtuellen Maschinen (VMs) installiert.
 

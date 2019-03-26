@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -18,7 +18,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} インスタンスは VMware イ�
 
 以下の作業を完了していることを確認してください。
 * **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)を参照してください。
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスをインストールする際の考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)に記載されている、すべての考慮事項を確認する。
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスをインストールする際の考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations-install)に記載されている、すべての考慮事項を確認する。
 
 ## KMIP for VMware on IBM Cloud インスタンスを注文する手順
 {: #kmip_standalone_ordering-procedure}
@@ -36,20 +36,21 @@ KMIP for VMware on {{site.data.keyword.cloud}} インスタンスは VMware イ�
 ### インスタンス名
 {: #kmip_standalone_ordering-config-instance-name}
 
-KMIP for VMware {{site.data.keyword.cloud_notm}} インスタンスの名前を指定します。
+KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスの名前を指定します。
 
 ### サービス地域
 {: #kmip_standalone_ordering-config-service-region}
 
-KMIP for VMware {{site.data.keyword.cloud_notm}} インスタンスをホストする {{site.data.keyword.cloud_notm}} の地域を選択します。
+KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスをホストする {{site.data.keyword.cloud_notm}} の地域を選択します。
 
-{{site.data.keyword.cloud_notm}} は、可用性の高い KMIP for VMware on {{site.data.keyword.cloud_notm}} サービス・エンドポイントを、サービスが使用可能な各地域で維持管理しています。
+{{site.data.keyword.cloud_notm}} は、可用性の高い KMIP for VMware on {{site.data.keyword.cloud_notm}} ネットワーク・サービス・エンドポイントを、サービスが使用可能な各地域で維持管理しています。
 
-表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} サービス・エンドポイントの地域
+表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} ネットワーク・サービス・エンドポイントの地域
 
 | 地域         | エンドポイント               |
 |:---------------|:-----------------------|
 | ドイツ        |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| シドニー        |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 | 東京          | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 | 米国南部       |  <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
@@ -66,12 +67,12 @@ IBM Key Protect Service インスタンスへのアクセスに使用する {{si
 ### カスタマー・ルート・キー
 {: #kmip_standalone_ordering-config-root-key}
 
-**「Retrieve」**をクリックして、選択した IBM Key Protect インスタンスに保管されているカスタマー・ルート・キーを取得します。
+**「Retrieve」**をクリックして、選択した鍵マネージャー・インスタンスに保管されているカスタマー・ルート・キーを取得します。
 
 ## 結果
 {: #kmip_standalone_ordering-results}
 
-インスタンスの注文が自動的に開始されます。 お客様は、注文を処理していることを示す確認メッセージを受信します。インスタンスの詳細を参照して、注文状況を確認できます。
+KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスの注文が自動的に開始します。お客様は、注文を処理していることを示す確認メッセージを受信します。インスタンスの詳細を参照して、注文状況を確認できます。
 
 インスタンスを使用する準備ができると、インスタンスの状況が**「インストール済み」**に変更され、お客様は E メールで通知を受け取ります。
 

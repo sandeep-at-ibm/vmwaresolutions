@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2019-02-15"
 {:note}
 
 ## IBM Spectrum Protect Plus on IBM Cloud 的技术规范
-{: #technical-specifications-for-ibm-spectrum-protect-plus-on-ibm-cloud}
+{: #spp_considerations-specs}
 
 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
 
@@ -72,7 +72,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并
 * 确保实例的缺省集群中的 CPU 和内存足够用于 IBM Spectrum Protect Plus 虚拟机。
 * 确保根据 ESXi 服务器版本，ESXi 服务器上的可用 NFS 安装足够。
 
-  部署在（或升级到）V2.2 或更高发行版的 Cloud Foundation 实例和 vCenter Server 实例在 VMware 中有 `NFS.MaxVolumes` 参数设置。此参数定义 ESXi 服务器上的最大 NFS 安装数，并可设置为最大值 256（特定于 ESXi 服务器版本）。有关更多信息，请参阅[增大定义 ESXi/ESX 主机上 NFS 最大挂载量的默认值](https://kb.vmware.com/s/article/2239)。
+  部署在（或升级到）V2.2 或更高发行版的实例在 VMware 中有 `NFS.MaxVolumes` 参数设置。此参数定义 ESXi 服务器上的最大 NFS 安装数，并可设置为最大值 256（特定于 ESXi 服务器版本）。有关更多信息，请参阅[增大定义 ESXi/ESX 主机上 NFS 最大挂载量的默认值](https://kb.vmware.com/s/article/2239)。
 
   在实例的缺省集群中的每个 ESXi 服务器上，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务最多可以使用 11 个 NFS 卷。此外，该服务将创建瞬态 NFS 安装以用于备份和复原。因此，必须将 NFS 安装数设置为最小值 64，以确保可以成功安装并运行此服务。
 

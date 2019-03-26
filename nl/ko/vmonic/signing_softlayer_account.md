@@ -30,4 +30,4 @@ lastupdated: "2019-02-14"
 * [{{site.data.keyword.cloud_notm}} 인프라 계정의 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)
 * [동영상 - {{site.data.keyword.cloud_notm}} 계정을 작성하는 방법](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [IBM ID로 전환 및 계정 연결](/docs/admin/softlayerlink.html){:new_window}
+* [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)

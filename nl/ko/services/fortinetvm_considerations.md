@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 서비스는 가상 �
 {:note}
 
 ## FortiGate Virtual Appliance on IBM Cloud의 기술 스펙
-{: #technical-specifications-for-fortigate-virtual-appliance-on-ibm-cloud}
+{: #fortinetvm_considerations-specs}
 
 
 다음 컴포넌트가 주문되고 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.

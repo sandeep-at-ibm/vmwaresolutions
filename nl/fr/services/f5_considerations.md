@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -19,11 +19,11 @@ Le service F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) fourn
 
 Vous pouvez installer plusieurs instances de ce service si besoin.
 
-Ce service est disponible uniquement sur les instances déployées en version 1.9 ou dans des éditions ultérieures. La version de BIG-IP en cours qui est installée est la version v13.1.1.2.
+Ce service est disponible uniquement sur les instances déployées en version 1.9 ou dans des éditions ultérieures. La version de BIG-IP VE qui est installée est la version 14.1.0.2.
 {:note}
 
 ## Spécifications techniques relatives à F5 on IBM Cloud
-{: #technical-specifications-for-f5-on-ibm-cloud}
+{: #f5_considerations-specs}
 
 Les composants suivants sont inclus avec le service F5 on {{site.data.keyword.cloud_notm}} :
 

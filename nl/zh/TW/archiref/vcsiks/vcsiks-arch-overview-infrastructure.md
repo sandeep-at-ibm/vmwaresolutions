@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-02-15"
 ## 虛擬遞送及轉遞
 {: #vcsiks-arch-overview-infrastructure-vrf}
 
-{{site.data.keyword.cloud}} 帳戶也可以配置為「虛擬遞送及轉遞 (VRF)」帳戶。VRF 帳戶提供與 VLAN Spanning 類似的功能，以啟用子網路 IP 區塊之間的自動遞送。所有具有 Direct Link 連線的帳戶都必須轉換或建立為 VRF 帳戶。
+{{site.data.keyword.cloud}} 帳戶可以配置為「虛擬遞送及轉遞 (VRF)」帳戶。VRF 帳戶可啟用子網路 IP 區塊之間的自動廣域遞送。所有具有 Direct Link 連線的帳戶都必須轉換或建立為 VRF 帳戶。
 
 ## Direct Link
 {: #vcsiks-arch-overview-infrastructure-direct-link}

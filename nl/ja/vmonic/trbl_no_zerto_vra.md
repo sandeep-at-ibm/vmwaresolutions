@@ -27,4 +27,4 @@ vCenter Server インスタンスでは、Zerto 災害復旧サービスは、�
 
 Zerto コンソールにアクセスするには、インスタンスの **「サービス」**タブの Zerto カードをクリックし、**「詳細を表示」**をクリックしてから**「Zerto コンソールの表示」**をクリックします。
 
-IBM サポートへの連絡について詳しくは、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions//vmonic/trbl_support.html)を参照してください。
+IBM サポートへの連絡について詳しくは、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-trbl_support#trbl_support)を参照してください。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -30,10 +30,10 @@ En raison des dépendances de ressource, les composants de votre instance ne son
 L'instance supprimée vous est facturée jusqu'à échéance du cycle de facturation de l'infrastructure {{site.data.keyword.cloud_notm}}.
 {:note}
 
-## Procédure de suppression d'instances dans la page Instances déployées
+## Procédure de suppression d'instances sur la page Ressources
 {: #vc_hybrid_deletinginstance-procedure1}
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, recherchez l'instance à supprimer.
 3. Dans la colonne **Actions**, cliquez sur l'icône Supprimer.
    L'instance prend le statut **Suppression en cours**. Une fois l'instance supprimée, ses composants sont libérés et elle prend le statut **Supprimé**.
@@ -44,7 +44,7 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 ## Procédure de suppression d'instances dans la page des détails de l'instance
 {: #vc_hybrid_deletinginstance-procedure2}
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance à supprimer.
 3. Cliquez sur l'icône de menu déroulant dynamique en regard de **Console vCenter**, puis cliquez sur **Supprimer une instance**.
    L'instance prend le statut **Suppression en cours**. Une fois l'instance supprimée, ses composants sont libérés et elle prend le statut **Supprimé**.

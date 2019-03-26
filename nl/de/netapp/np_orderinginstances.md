@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -128,7 +128,7 @@ Die Anzahl der ESXi-Server einer NetApp ONTAP Select-Instanz ist standardmäßig
 
 Die Bereitstellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen.
 
-Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für NetApp ONTAP Select-Instanzen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#technical-specifications-for-netapp-ontap-select-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert.
+Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für NetApp ONTAP Select-Instanzen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 

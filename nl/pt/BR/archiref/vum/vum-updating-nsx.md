@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -63,7 +63,7 @@ O fluxo de trabalho é o seguinte:
   - Após o upgrade do NSX Edge ser feito com êxito, o Status será Implementado e a coluna Versão exibirá a nova versão do NSX. Se um Edge falhar ao fazer upgrade e não retroceder para a versão antiga, clique no ícone **Reimplementar o NSX Edge** e, em seguida, tente novamente o upgrade.
 
 ## Links relacionados
-{: #vum-type-updates-related}
+{: #vum-updating-nsx-related}
 
 * [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)

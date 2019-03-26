@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,7 +52,7 @@ Si vous déployez le cluster dans un autre {{site.data.keyword.CloudDataCent_not
 ### Paramètres de serveur bare metal
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
-Indiquez le modèle d'UC et la mémoire RAM du serveur bare metal. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
+Vous pouvez choisir l'option **Skylake** ou **Broadwell**. Les options peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
 
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
@@ -131,7 +131,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 ## Procédure d'ajout de clusters à des instances vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous voulez afficher les clusters.
 
    Assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Si tel n'est pas le cas, vous ne pourrez pas ajouter de clusters à l'instance.
@@ -162,7 +162,7 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
 ## Procédure d'affichage des clusters dans les instances vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous voulez afficher les clusters.
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, consultez le récapitulatif concernant les clusters :
   * **Nom** : nom du cluster.
@@ -232,7 +232,7 @@ Vous souhaiterez peut-être supprimer un cluster d'une instance si vous n'en ave
 ## Procédure de suppression de clusters des instances vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous souhaitez supprimer les clusters.
 
    Assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas retirer de clusters de l'instance.

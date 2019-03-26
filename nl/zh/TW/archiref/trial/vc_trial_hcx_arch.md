@@ -145,7 +145,7 @@ VM 移轉根據「雲端閘道」與「WAN 最佳化」應用裝置的組合，�
 「第 2 層集中器」有下列介面：
 
 * **內部幹線介面**：此介面使用翻譯橋接器與 {{site.data.keyword.cloud_notm}} 中對應延伸網路的對映，處理延伸網路的 VM 資料流量內部部署。
-* **上行鏈路介面**：HCX 使用此介面來傳送與 {{site.data.keyword.cloud_notm}} 之間的封裝套版資料流量。應用程式資料會流過「上行鏈路」介面。
+* **上行鏈路介面**：HCX 使用此介面來傳送與 {{site.data.keyword.cloud_notm}} 之間的封裝層疊資料流量。應用程式資料會流過「上行鏈路」介面。
 
 ### 部署架構
 {: #vc_trial_hcx_arch-deployment}

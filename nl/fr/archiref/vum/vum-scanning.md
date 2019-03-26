@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -36,7 +36,7 @@ Vous pouvez analyser des machines virtuelles et des dispositifs virtuels dans l'
 3.	Sélectionnez les types de mises à jour à rechercher. Les options possibles sont : _Virtual Appliance upgrades, VM Hardware upgrades_ et _VMware Tools upgrades_.
 4.	Cliquez sur **Scan**.
 
-## Initiation manuelle d'une analyse d'un objet conteneur
+##	Initiation manuelle d'une analyse d'un objet conteneur
 {: #vum-scanning-scan-container}
 
 Lancez l'analyse simultanée des hôtes, des machines virtuelles et des dispositifs virtuels, en effectuant l'analyse d'un objet conteneur qui correspond à un centre de données ou un dossier de centre de données.
@@ -45,7 +45,7 @@ Lancez l'analyse simultanée des hôtes, des machines virtuelles et des disposit
 3.	Sélectionnez les types de mises à jour à rechercher. Les options possibles sont : _Virtual Appliance upgrades, VM Hardware upgrades_ et _VMware Tools upgrades_.
 4.	Cliquez sur **Scan**.
 
-## Planification d'une analyse
+##	Planification d'une analyse
 {: #vum-scanning-schedule}
 
 Vous pouvez configurer le client vSphere Web Client pour analyser des machines virtuelles, des dispositifs virtuels et des hôtes vSphere ESXi à des heures spécifiques ou aux intervalles qui vous conviennent.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -128,7 +128,7 @@ NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォ
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
 
-インスタンスが正常にデプロイされると、[NetApp ONTAP Select インスタンスの技術仕様](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#technical-specifications-for-netapp-ontap-select-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。
+インスタンスが正常にデプロイされると、[NetApp ONTAP Select インスタンスの技術仕様](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 

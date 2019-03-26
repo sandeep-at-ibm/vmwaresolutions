@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2019-02-15"
 ## 온프레미스 VMware HCX on IBM Cloud 인스턴스를 주문하는 프로시저
 {: #standalone_orderingserviceinstances-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **온프레미스 HCX 인스턴스** 테이블로 스크롤하여 **새로 프로비저닝**을 클릭하십시오.
 3. **온프레미스 인스턴스 이름**을 지정하십시오.
 4. 주문에 적용되는 이용 약관의 링크를 클릭하고 인스턴스를 주문하기 전에 이 이용 약관에 동의하는지 확인하십시오.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -55,11 +55,11 @@ lastupdated: "2019-02-18"
 
 모든 Kubernetes 클러스터는 Calico라는 네트워크 플러그인을 사용하여 설정됩니다.
 
-기본 네트워크 정책은 {{site.data.keyword.containerlong_notm}}에 있는 모든 작업자 노드의 공용 네트워크 인터페이스를 보호하도록 설정됩니다. 고유한 보안 요구사항이 있거나 VLAN Spanning을 사용하는 다중 구역 클러스터가 있는 경우 Calico와 Kubernetes를 사용하여 클러스터에 대한 네트워크 정책을 작성할 수 있습니다. Kubernetes 네트워크 정책을 사용하여 클러스터 내의 팟(Pod)에서 허용하거나 차단할 네트워크 트래픽을 지정할 수 있습니다. 
+기본 네트워크 정책은 {{site.data.keyword.containerlong_notm}}에 있는 모든 작업자 노드의 공용 네트워크 인터페이스를 보호하도록 설정됩니다. 고유한 보안 요구사항이 있거나 VLAN Spanning 또는 VRF(Virtual Routing and Forwarding)를 사용하는 다중 구역 클러스터가 있는 경우 Calico와 Kubernetes를 사용하여 클러스터에 대한 네트워크 정책을 작성할 수 있습니다. Kubernetes 네트워크 정책을 사용하여 클러스터 내의 팟(Pod)에서 허용하거나 차단할 네트워크 트래픽을 지정할 수 있습니다.
 
 LoadBalancer 서비스에 대한 인바운드(유입) 트래픽 차단과 같은 고급 네트워크 정책을 설정하려면 Calico 네트워크 정책을 사용하십시오.
 
-Kubernetes 네트워크 정책은 팟(Pod)이 다른 팟(Pod)과 그리고 외부 엔드포인트와 통신할 수 있는 방법을 지정합니다. 트래픽은 팟(Pod)과 네임스페이스 레이블을 기반으로 필터링할 수 있습니다. Kubernetes 네트워크 정책은 kubectl 명령 또는 Kubernetes API를 사용하여 적용됩니다. 이러한 정책이 적용되면 정책은 자동으로 Calico 네트워크 정책으로 변환되고 Calico에서 이러한 정책을 강제 적용합니다.
+Kubernetes 네트워크 정책은 팟(Pod)이 다른 팟 및 공용 네트워크 서비스 엔드포인트와 통신할 수 있는 방법을 지정합니다. 트래픽은 팟(Pod)과 네임스페이스 레이블을 기반으로 필터링할 수 있습니다. Kubernetes 네트워크 정책은 kubectl 명령 또는 Kubernetes API를 사용하여 적용됩니다. 이러한 정책이 적용되면 정책은 자동으로 Calico 네트워크 정책으로 변환되고 Calico에서 이러한 정책을 강제 적용합니다.
 
 Kubernetes를 위한 Calico 네트워크 정책은 Kubernetes 네트워크 정책의 수퍼세트이고 calicoctl 명령을 사용하여 적용됩니다.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -35,6 +35,7 @@ vSAN 加密在資料儲存庫層次操作，因此其主要目標是在遺失實
 * vSAN 加密需要 vSAN Enterprise 授權。
 
 * vSAN 性能檢查可能會定期發出警告，指出它無法從您的一個以上 vSphere 主機連接至 KMS 叢集。這些警告發生的原因是 vSAN 性能檢查連線太快逾時。您可以忽略這些警告。
+如需相關資訊，請參閱 [因出現「SSL 信號交換逾時」錯誤，而發生 vSAN KMS 性能檢查間歇性失敗](https://kb.vmware.com/s/article/67115){:new_window}。
 
 ### vSphere 加密
 {: #kmip-design-vsphere-encrypt}
@@ -99,13 +100,13 @@ KMIP for VMware 實例會授權給 Key Protect 實例，方法是使用已獲授
 圖 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 的元件
 ![KMIP for VMware on {{site.data.keyword.cloud_notm}} 的元件](kmip-key-protect.svg "此解決方案使用 IBM Key Protect 中所儲存的主要金鑰，來啟用 VMware vSphere 加密及 vSAN 加密。")
 
-KMIP for VMware 可用於數個 IBM Cloud 多區域地區 (MZR)。如需完整清單，請參閱[訂購 KMIP for VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)。
+KMIP for VMware 可用於許多個 {{site.data.keyword.cloud_notm}} 多區域地區 (MZR)。如需完整清單，請參閱[訂購 KMIP for VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)。
 
- 在每個 MZR 內，KMIP for VMware 都在 IBM Cloud Private 網路上提供兩個服務端點，以獲得高可用性。請將 vCenter 金鑰管理伺服器 (KMS) 中的這兩個端點配置都配置為 KMS 叢集。如需每個 MZR 中的端點清單及 KMIP 伺服器憑證簽章，請參閱 [KMIP for VMware 服務文件](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)。
+在每個 MZR 內，KMIP for VMware 在 {{site.data.keyword.cloud_notm}} 專用網路上提供兩個服務端點，以取得高可用性。請將 vCenter 金鑰管理伺服器 (KMS) 中的這兩個端點配置都配置為 KMS 叢集。如需每個 MZR 中的端點清單及 KMIP 伺服器憑證簽章，請參閱 [KMIP for VMware 服務文件](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)。
 
-KMIP for VMware 也會連接至 IBM Cloud Key Protect，方法是使用公用網際網路以外的 IBM Cloud Private 網路。
+KMIP for VMware 還使用 {{site.data.keyword.cloud_notm}} 專用網路而非公用網際網路來連接至 {{site.data.keyword.cloud_notm}} Key Protect。
 
-若要透過專用網路存取 KMIP for VMware，必須啟用 IBM Cloud 基礎架構帳戶以進行虛擬遞送及轉遞 (VRF)，並且必須將 IBM Cloud 服務端點路徑新增至您帳戶的 VRF 路徑。如需相關資訊，請參閱[針對服務端點啟用帳戶](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps)。
+若要透過專用網路存取 KMIP for VMware，必須針對虛擬遞送及轉遞 (VRF) 啟用您的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，而且還必須將 {{site.data.keyword.cloud_notm}} 網路服務端點新增至您帳戶的 VRF 路徑。如需相關資訊，請參閱[針對服務端點啟用帳戶](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps)。
 
 ## 相關鏈結
 {: #kmip-design-related}

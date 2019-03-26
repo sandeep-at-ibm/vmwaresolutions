@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 ## Vorgehensweise zum Bestellen von VMware HCX on IBM Cloud-Instanzen
 {: #standalone_orderingserviceinstances-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Blättern Sie abwärts zur Tabelle **Lokale HCX-Instanzen** und klicken Sie dann auf **Neu bereitstellen**.
 3. Geben Sie einen Wert für **Name der lokalen Instanz** an.
 4. Klicken Sie auf den Link bzw. die Links für die Bedingungen, die für Ihre Bestellung gelten, und vergewissern Sie sich, dass Sie mit diesen Bedingungen einverstanden sind, bevor Sie die Instanz bestellen.

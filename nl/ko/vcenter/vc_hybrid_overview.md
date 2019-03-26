@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -68,7 +68,7 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스 배치 시의 추가 관리 �
 VMware HCX(Hybrid Cloud Extension)를 기반으로, 온프레미스 및 {{site.data.keyword.cloud_notm}} 사이트 간에 느슨하게 결합된 상호연결을 작성하여 작동 중단 없는 VM의 라이브 vMotion 또는 VM의 대량 마이그레이션을 사용할 수 있습니다.
 
 ## vCenter Server with Hybridity Bundle 인스턴스의 기술 스펙
-{: #technical-specifications-for-vcenter-server-with-hybridity-bundle-instances}
+{: #vc_hybrid_overview-specs}
 
 vCenter Server with Hybridity Bundle 인스턴스에는 다음 컴포넌트가 포함됩니다.
 
@@ -78,9 +78,9 @@ vCenter Server with Hybridity Bundle 인스턴스에는 다음 컴포넌트가 �
 ### Bare Metal Server
 {: #vc_hybrid_overview-bare-metal}
 
-4개의 **Skylake** 또는 **Broadwell** {{site.data.keyword.baremetal_short}}는 vCenter Server with Hybridity Bundle 인스턴스 주문에 포함됩니다. 다음 CPU 모델이 사용 가능합니다.
-  * 두 개의 CPU Intel Skylake 세대(Intel Xeon 4100/5100/6100 시리즈)
-  * 두 개의 CPU Intel Broadwell 세대(Intel Xeon E5-2600/E7-4800 시리즈)
+4개의 {{site.data.keyword.baremetal_short}}가 vCenter Server with Hybridity Bundle 인스턴스 주문과 함께 제공됩니다. 다음 구성이 사용 가능합니다. 
+  * **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)
+  * **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 Intel Broadwell 세대 서버(IntelXeon E5-2600/E7-4800 시리즈)
 
 ### 네트워킹
 {: #vc_hybrid_overview-networking}
@@ -120,7 +120,7 @@ vSAN 스토리지는 디스크 유형과 양에 대한 다양한 옵션을 포�
 
 vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 라이센스가 포함됩니다.
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 또는 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition(Advanced 또는 Enterprise) 6.4
 * VMware vSAN(Advanced 또는 Enterprise) 6.6
@@ -140,7 +140,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 라이센�
 ### 확장 노드의 라이센스 및 요금
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
 
-* 하나의 VMware vSphere Enterprise Plus 6.5u1
+* 하나의 VMware vSphere Enterprise Plus 6.5u2 또는 6.7u1
 * 하나의 VMware NSX Service Providers Edition(Advanced 또는 Enterprise) 6.4
 * 하나의 지원 및 서비스 요금
 * VMware vSAN(Advanced 또는 Enterprise) 6.6

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -40,17 +40,12 @@ lastupdated: "2019-02-15"
 * 主 IP 地址，分配给由 {{site.data.keyword.cloud_notm}} 供应的设备、裸机和虚拟服务器。用户不应分配这些块中的任何 IP 地址。
 * 可移植 IP 地址，供用户根据需要进行分配和管理。
 
-如果在客户帐户内启用了 VLAN 生成，或者该帐户配置为虚拟路由和转发 (VRF) 帐户，那么主 IP 地址或可移植 IP 地址可以设置为可路由到客户帐户内的任何 VLAN。
-
-## VLAN 生成
-{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
-
-VLAN 生成是一个 {{site.data.keyword.cloud_notm}} 全局帐户设置，允许帐户中所有 VLAN 内的每个主子网 IP 块和可移植子网 IP 块可相互路由。此设置不可用时，IP 块仍可以路由到 {{site.data.keyword.cloud_notm}} 服务，但不能相互路由。此体系结构需要在部署了 VMware vCenter Server on {site.data.keyword.cloud_notm}} 的帐户内启用 VLAN 生成，以便跨解决方案组件所在的各个子网透明地建立连接。
+在帐户配置为虚拟路由和转发 (VRF) 帐户时，主 IP 地址或可移植 IP 地址可以设置为可路由到客户帐户内的任何 VLAN。
 
 ## 虚拟路由和转发
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} 帐户还可以配置为虚拟路由和转发 (VRF) 帐户。VRF 帐户提供了与 VLAN 生成类似的功能，支持子网 IP 块之间的自动路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
+{{site.data.keyword.cloud_notm}} 帐户还可以配置为虚拟路由和转发 (VRF) 帐户。VRF 帐户支持帐户内子网 IP 块之间的自动全局路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
 
 ## 物理主机连接
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}

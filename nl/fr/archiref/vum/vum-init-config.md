@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -37,7 +37,7 @@ Tableau 1. Valeurs de déploiement
 | Adresse | IP proxy | Une Adresse IP de secours doit être utilisée à partir du sous-réseau portable privé du client affectée lors du processus de mise à disposition. Seules deux adresses IP ont été réservées sur ce sous-réseau ; l'une pour le routeur BCR et l'autre pour le dispositif ESG du client (customer-esg)
 | Masque de réseau | 255.255.255.192 | |
 | Passerelle| Adresse IP de la liaison montante privée customer-nsx-edge | Il s'agit du paramètre de passerelle par défaut pour le serveur proxy, qui correspond à l'adresse IP de la liaison montante privée de customer-nsx-edge. L'adresse IP peut être obtenue en consultant l'onglet **Paramètres** pour **customer-nsx-edge**. |
-| Serveur DNS | Adresse IP AD/DNS | Cette adresse IP peut être obtenue sur la page d'instance **Instances déployées** dans la console {{site.data.keyword.vmwaresolutions_short}}. |
+| Serveur DNS | Adresse IP AD/DNS | Cette adresse IP peut être obtenue sur la page **Ressources** dans la console {{site.data.keyword.vmwaresolutions_short}}. |
 | IP BCR | Adresse IP du routeur BCR | Il s'agit de l'adresse IP du routeur BCR (Backend Customer Router) d'{{site.data.keyword.cloud_notm}} qui est la passerelle pour 10.0.0.0/8 et 161.26.0.0/16. Cette adresse est utilisée dans une route statique du serveur proxy pour que le dispositif VCSA et le serveur AD/DNS puissent y accéder. |
 
 ## Configuration de NSX

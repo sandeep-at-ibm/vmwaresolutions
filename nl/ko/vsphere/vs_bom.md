@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2019-02-14"
 
 |제조업체 |컴포넌트                       |버전 |
 |:-------------|:--------------------------------|:--------|
-|VMware       |vSphere ESXi                    |6.5 Update 1 또는 6.0 Update 2 |
+|VMware       |vSphere ESXi                    | 6.7 Update 1 또는 6.5 Update 2 |
 
 ## 관련 링크
 {: #vs_bom-related}

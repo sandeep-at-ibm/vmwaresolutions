@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -17,11 +17,11 @@ lastupdated: "2019-02-15"
 
 Le service Veeam on {{site.data.keyword.cloud}} s'intègre directement et en toute transparence à vos hyperviseurs VMware afin d'aider votre entreprise à obtenir la haute disponibilité requise. Il fournit des objectifs de points de récupération et de temps de reprise pour vos applications et vos données. Ces objectifs peuvent être fournis en moins de 15 minutes après la fin de la configuration. Ce service vous permet de contrôler directement à la fois la sauvegarde et la restauration de toutes les machines virtuelles de votre infrastructure depuis la console Veeam.
 
-Ce service est disponible uniquement sur les instances déployées en version 1.8 ou dans des éditions ultérieures. La version de Veeam en cours qui est installée est la version 9.5u3.
+Ce service est disponible uniquement sur les instances déployées en version 1.8 ou dans des éditions ultérieures. La version de Veeam en cours qui est installée est la version 9.5u4.
 {:note}
 
 ## Spécifications techniques relatives à Veeam on IBM Cloud
-{: #technical-specifications-for-veeam-on-ibm-cloud}
+{: #veeam_considerations-specs}
 
 Les composants suivants sont commandés et inclus dans le service Veeam on {{site.data.keyword.cloud_notm}} :
 
@@ -56,12 +56,12 @@ Veeam Backup and Replication 9.5 Enterprise Plus (licence pour 10, 25, 50, 100 o
 
 Des sauvegardes de gestion sont configurées par défaut avec un maximum de cinq machines virtuelles et 2000 Go de stockage
 
-## Considérations à prendre en compte lorsque vous installez Veeam on IBM Cloud
+## Remarques relatives à l'installation de Veeam on IBM Cloud
 {: #veeam_considerations-install}
 
 Le référentiel du stockage et celui du serveur Veeam se trouvent dans le pod et le centre de données d'origine. Par conséquent, les performances des opérations de sauvegarde des clusters distants peuvent se dégrader.
 
-## Considérations à prendre en compte lorsque vous retirez Veeam on IBM Cloud
+## Remarques relatives au retrait de Veeam on IBM Cloud
 {: #veeam_considerations-remove}
 
 Le retrait du service Veeam on {{site.data.keyword.cloud_notm}} arrête toutes les sauvegardes et supprime toutes les sauvegardes précédentes. Les sauvegardes des machines virtuelles de gestion sont arrêtées et la suppression des sauvegardes précédentes est irréversible. Si les machines virtuelles de gestion sont endommagées, leur restauration est impossible.

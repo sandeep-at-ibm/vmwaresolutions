@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -40,17 +40,12 @@ Neben dem öffentlichen und dem privaten Netz ist jeder {{site.data.keyword.clou
 * Primäre IP-Adressen werden Einheiten (Geräten), bare metal Servern und virtuellen Servern zugeordnet, die von {{site.data.keyword.cloud_notm}} bereitgestellt werden. Benutzer sollten keine IP-Adressen in diesen Blöcken zuweisen.
 * Portierbare IP-Adressen werden zur Verfügung gestellt, die ein Benutzer nach Bedarf zuweisen und verwalten kann.
 
-Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN im Kundenkonto weiterleitbar gemacht werden, wenn das VLAN-Spanning Konto aktiviert ist oder wenn das Konto als VRF-Konto (VRF - Virtual Routing and Forwarding) konfiguriert ist.
-
-## VLAN-Spanning
-{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
-
-Das VLAN-Spanning ist eine globale {{site.data.keyword.cloud_notm}}-Kontoeinstellung, durch die jeder IP-Block eines primären und portierbaren Teilnetzes aller VLANs im Konto untereinander weitergeleitet werden kann. Wenn diese Einstellung nicht verfügbar ist, können IP-Blöcke immer noch an {{site.data.keyword.cloud_notm}}-Services weiterleiten, jedoch nicht untereinander. Diese Architektur setzt voraus, dass das VLAN-Spanning in dem Konto aktiviert ist, in dem VMware vCenter Server on {site.data.keyword.cloud_notm}} bereitgestellt ist, damit Verbindungen über die verschiedenen Teilnetze, in denen sich die Lösungskomponenten befinden, transparent hergestellt werden können.
+Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN im Kundenkonto weiterleitbar gemacht werden, wenn das Konto als VRF-Konto (VRF - Virtual Routing and Forwarding) konfiguriert ist. 
 
 ## Virtual Routing and Forwarding
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}}-Konten können auch als Konto mit Virtual Routing and Forwarding (VRF) konfiguriert werden. Ein VRF-Konto bietet eine ähnliche Funktionalität wie das VLAN-Spanning, sodass ein automatisches Routing zwischen IP-Teilnetzblöcken möglich wird. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
+{{site.data.keyword.cloud_notm}}-Konten können auch als Konto mit Virtual Routing and Forwarding (VRF) konfiguriert werden. Ein VRF-Konto aktiviert das automatische globale Routing zwischen den Teilnetz-IP-Blöcken innerhalb des Kontos. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
 
 ## Physische Hostverbindungen
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}

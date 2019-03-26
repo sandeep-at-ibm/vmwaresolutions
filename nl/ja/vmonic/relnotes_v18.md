@@ -14,6 +14,7 @@ lastupdated: "2017-08-28"
 このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
 ## Fortinet on IBM Cloud サービス
+{: #relnotes_v18-fortinet}
 
 Fortinet on {{site.data.keyword.cloud_notm}} サービスを、Cloud Foundation と vCenter Server の両方のインスタンスで使用できるようになりました。 このサービスは、高可用性モードの FortiGate Security Appliance (FSA) 300 シリーズ・デバイスのペアをデプロイして、ファイアウォール、ルーティング、NAT、および VPN サービスを提供し、インスタンスのパブリック VLAN 上のすべてのサーバーと仮想マシンを保護します。 Fortinet サービスを組み込んだ形でインスタンスを注文することも、後からインスタンスの詳細ページで既存のインスタンスにこのサービスを追加することもできます。
 
@@ -24,6 +25,7 @@ Fortinet サービスが正常にインストールされたら、FortiGate コ�
 * [Fortinet on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
 
 ## Veeam on IBM Cloud サービス
+{: #relnotes_v18-veeam}
 
 このリリースでは、管理コンポーネントとワークロードの両方をバックアップできる Veeam on {{site.data.keyword.cloud_notm}} サービスが導入されました。 この新しいサービスは、管理コンポーネントだけをバックアップするために V1.8 より前のリリースに組み込まれていた従来の Veeam VSI に置き換わるものです。
 
@@ -36,20 +38,20 @@ Fortinet サービスが正常にインストールされたら、FortiGate コ�
 * [Veeam on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
 ## VMware Cloud Foundation インスタンスの更新
+{: #relnotes_v18-vcf}
 
 ### Cloud Foundation インスタンスを注文する際の VMware ライセンスの持ち込み (BYOL)
+{: #relnotes_v18-byol}
 
 V1.8 リリース以降、Cloud Foundation インスタンスを注文する際に vSphere、vCenter Server、NSX、vSAN などのインスタンスの VMware コンポーネントのライセンスを適用する方法は 2 つあります。 自動的に購入される新規ライセンスを使用することを選択できます。
 
 所有している VMware ライセンスをコンポーネントに使用することもできます。そのためにはライセンス・キーを提供する必要があります。 この場合、ライセンスを提供した VMware コンポーネントのサポートは、IBM サポートからではなく VMware から提供されます。
 
-詳しくは、以下のトピックを参照してください。
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
-* [BYOL に関するよくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
-
 ## VMware vCenter Server インスタンスの更新
+{: #relnotes_v18-vcs}
 
 ### インスタンスの CPU とメモリーのカスタマイズ
+{: #relnotes_v18-custom-cpu}
 
 事前に構築され、テストされた「スモール」、「ミディアム」、「ラージ」オプションのほか、カスタマイズ可能なサーバーのオプションも用意されています。 デュアル CPU ベースの VMware HCL 互換サーバー、コアの合計数、RAM の容量をリストから選択できます。 ローカル・ストレージはカスタマイズできません。
 
@@ -58,6 +60,7 @@ V1.8 リリース以降、Cloud Foundation インスタンスを注文する際�
 * [vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### 7 つを超える NFS ファイル共有を追加するためのサポート
+{: #relnotes_v18-nfs}
 
  クラスター内のすべての ESXi サーバーで最大 32 個のファイル共有を接続できます。
 
@@ -66,12 +69,14 @@ V1.8 リリース以降、Cloud Foundation インスタンスを注文する際�
 * [vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### データ・センターの更新
+{: #relnotes_v18-dc}
 
 デプロイメントに利用できる新しいデータ・センターは、**DAL-09、DAL-12、DAL-13 - ダラス**、**LON-04、LON-06 - ロンドン**、**SJC-04 - サンノゼ**、**WDC-06、WDC-07 - ワシントン、DC** です。
 
 詳しくは、[vCenter Server インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)を参照してください。
 
 ## 使いやすさの向上
+{: #relnotes_v18-ui}
 
 ユーザー・インターフェース全体が以下のように改善されました。
 * 左側のナビゲーション・ペインの**「開始」**ページで、サービスの内容を確認してインスタンスを注文できます。

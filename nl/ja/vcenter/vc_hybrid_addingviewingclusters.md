@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,7 +52,7 @@ vCenter Server with Hybridity Bundle インスタンスにクラスターを追�
 ### ベア・メタル・サーバーの設定
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
-ベア・メタル・サーバーの CPU モデルと RAM を指定します。 利用できるオプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
+**「Skylake」**または**「Broadwell」**のいずれかを選択できます。 オプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
 
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
@@ -131,7 +131,7 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 ## vCenter Server with Hybridity Bundle インスタンスにクラスターを追加する手順
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、クラスターを表示するインスタンスをクリックします。
 
    インスタンスの状況が**「使用可能」**であることを確認してください。 そうでない場合、インスタンスにクラスターを追加できません。
@@ -162,7 +162,7 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 ## vCenter Server with Hybridity Bundle インスタンスでクラスターを表示する手順
 {: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、クラスターを表示するインスタンスをクリックします。
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。 **「クラスター」**表で、クラスターに関する要約を表示します。
   * **名前**: クラスターの名前。
@@ -232,10 +232,11 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 ## vCenter Server with Hybridity Bundle インスタンスからクラスターを削除する手順
 {: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、クラスターを削除するインスタンスをクリックします。
 
-   インスタンスの状況が**「使用可能」**であることを確認してください。 そうでない場合、インスタンスからクラスターを削除できません。{:note}
+   インスタンスの状況が**「使用可能」**であることを確認してください。 そうでない場合、インスタンスからクラスターを削除できません。
+   {:note}
 
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。 **「クラスター」**テーブルで、削除するクラスターを見つけて、**「アクション」**列にある**「削除」**アイコンをクリックします。
 

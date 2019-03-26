@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -23,11 +23,13 @@ Para revisar los componentes de red que se incluyen en la instancia de Cloud Fou
 
 ## Consideraciones sobre cortafuegos
 {: #sd_networkingoncloudfoundation-firewall-considerations}
+{: faq}
 
 Si utiliza cortafuegos, debe configurar reglas para todas las comunicaciones desde la Instancia de servidor virtual (VSI) de {{site.data.keyword.IBM}} CloudDriver y las máquinas virtuales (VM) de SDDC Manager. Estas reglas deben permitir que todos los protocolos se comuniquen en las direcciones IP `10.0.0.0/8` y `161.26.0.0/16`. Los ejemplos de estos cortafuegos son NSX Distributed Firewalls (DFW) o cortafuegos Vyatta.
 
 ## Utilización de VMware NSX con sus VM
 {: #sd_networkingoncloudfoundation-using-nsx-with-vm}
+{: faq}
 
 Durante el despliegue de la instancia de Cloud Foundation, VMware NSX se solicita, se adquiere una licencia del mismo, se instala y se configura en la instancia. Además, se configuran NSX Manager, controladores NSX y NSX Transport Zone y cada servidor ESXi se configura con componentes de NSX.
 
@@ -39,6 +41,7 @@ Para obtener más información sobre cómo configurar NSX, consulte los temas si
 
 ## Consideraciones al cambiar contraseñas para componentes de NSX
 {: #sd_networkingoncloudfoundation-considerations-when-change-nsx-component-password}
+{: faq}
 
 Revise las siguientes consideraciones antes de cambiar las contraseñas de NSX Manager, controladores NSX y NSX Edge:
 * No cambie la contraseña de NSX Manager. Puede encontrar esta contraseña en la página **Resumen** de la instancia en la consola de {{site.data.keyword.vmwaresolutions_short}}.

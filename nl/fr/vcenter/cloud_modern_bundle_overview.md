@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Présentation de la version d'essai à noeud unique pour la migration et la modernisation des applications
-{: #single-node-trial-for-migration-and-app-modernization-overview}
+{: #cloud_modern_bundle_overview}
 
 La version d'essai à noeud unique pour la migration et la modernisation des applications permet de tester l'utilisation d'IBM Cloud pour migrer les charges de travail VMware vers IBM Cloud, puis de moderniser ces simples charges de travail à l'aide de conteneurs.
 
@@ -88,7 +88,7 @@ Les instances de serveur virtuel suivantes sont commandées :
 
 Les licences suivantes sont incluses avec votre commande d'instance Version d'essai à noeud unique pour la migration et la modernisation des applications :
 
-* VMware vSphere Enterprise Plus 6.5
+* VMware vSphere Enterprise Plus 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * IBM Cloud Private Hosted V3.1

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -25,8 +25,8 @@ lastupdated: "2019-02-15"
 虽然许多存储加密解决方案可用于 VMware 工作负载，但 KMIP for VMware 具有以下优点：
 
 * 与 VMware vSAN 加密和 vSphere 加密集成，这两种加密都是在系统管理程序层实现的，而不是在存储器或虚拟机层实现。通过此方法，可以轻松管理和透明了解存储解决方案及应用程序。
-* 完全受管的密钥管理服务器在许多 IBM Cloud 多专区区域 (MZR) 中可用。
-* 通过将 VMware 集群与 IBM Cloud Key Protect 集成，为您提供了完全由客户管理的密钥，您可以随时撤销这些密钥。
+* 完全受管的密钥管理服务器在许多 {{site.data.keyword.cloud_notm}} 多专区区域 (MZR) 中可用。
+* 通过将 VMware 集群与 {{site.data.keyword.cloud_notm}} Key Protect 集成，为您提供了完全由客户管理的密钥，您可以随时撤销这些密钥。
 
 ## 相关链接
 {: #kmip-overview-related}

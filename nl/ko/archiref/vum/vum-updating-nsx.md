@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -63,7 +63,7 @@ NSX Manager를 업그레이드된 후 NSX를 다운그레이드할 수 없습니
   - NSX Edge가 성공적으로 업그레이드되면 상태가 배치됨이 되고 버전 열에 새 NSX 버전이 표시됩니다. Edge 업그레이드에 실패하고 이전 버전으로 롤백되지 않은 경우 **NSX Edge 다시 배치** 아이콘을 클릭한 후 업그레이드를 재시도하십시오.
 
 ## 관련 링크
-{: #vum-type-updates-related}
+{: #vum-updating-nsx-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

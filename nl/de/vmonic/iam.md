@@ -4,12 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
 # Benutzerzugriff mit IAM verwalten
-{: #managing-user-access-with-iam}
+{: #iam}
 
 Der Zugriff auf {{site.data.keyword.vmwaresolutions_full}}-Serviceinstanzen für die Benutzer in Ihrem Konto wird durch {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) gesteuert. Jeder Benutzer, der auf die {{site.data.keyword.vmwaresolutions_short}}-Services in Ihrem Konto zugreift, muss über eine zugeordnete Zugriffsrichtlinie mit einer definierten IAM-Benutzerrolle verfügen.
 
@@ -69,12 +69,11 @@ Durch die Integration von {{site.data.keyword.vmwaresolutions_short}} in IAM wer
 Ihre vorhandenen Instanzen, die in V2.4 und früheren Releases bereitgestellt wurden, können Sie auf angegebene {{site.data.keyword.cloud_notm}}-Konten migrieren, um sie mithilfe von IAM zu verwalten. Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [vCenter Server-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
 * [vCenter Server with Hybridity Bundle-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
-* [Cloud Foundation-Instanzen einer Version vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addinstancetousraccount)
 * [NetApp ONTAP Select-Instanzen aus Versionen vor Version 2.5 auf IBM Cloud-Konten migrieren](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)
 
 ## Zugehörige Links
 {: #iam-related}
 
 * [Identität und Zugriff verwalten](/docs/iam?topic=iam-getstarted)
-* [Benutzer und Zugriff verwalten](/docs/iam/iamusermanage.html)
+* [Benutzer einladen](/docs/iam?topic=iam-iamuserinv#iamuserinv)
 * [Was ist IAM?](/docs/iam?topic=iam-iamoverview)

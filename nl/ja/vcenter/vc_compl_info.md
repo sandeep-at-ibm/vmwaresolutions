@@ -4,14 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
-# vCenter Server と vCenter Server with Hybridity Bundle のインスタンスに関するコンプライアンスの情報
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# vCenter Server インスタンスのコンプライアンス情報
 {: #vc_compl_info}
 
-vCenter Server と vCenter Server with Hybridity Bundle のインスタンスのコンプライアンスに関する詳細情報を以下に示します。
+VMware vCenter Server インスタンスのコンプライアンスに関する詳細情報を以下に示します。
+
+HIPAA のお客様には、VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T オファリングはサポート対象外です。
+{:important}
 
 ## vCenter Server on IBM Cloud に関するお客様の責任と IBM の責任
 {: #vc_compl_info-responsibility}
@@ -44,7 +51,7 @@ vCenter Server と vCenter Server with Hybridity Bundle のインスタンスの
 ## お客様のインスタンスへのアクセスに関するポリシー
 {: #vc_compl_info-policy-for-access-client-inst}
 
-VMware Cloud Foundation と vCenter Server の環境が、{{site.data.keyword.vmwaresolutions_short}} として提供され、お客様が仮想化機能を管理するための VMware 管理プラットフォーム層になります。 お客様の確実な成功を支援するためには、IBM Cloud for VMware の製品とサービスのライフサイクル全体を通じて IBM サポートが必要になる可能性があります。 ほとんどの場合、IBM サポートが介入するのは、お客様の要求 (つまりサポート・チケット) に対する結果としてです。 しかし、まれに、お客様がサポート・チケットを作成していないのに、将来の問題を防ぐために IBM サポートが事前対応的な支援を行うことがあります。 このアクセスは、IBM Cloud の内部サポート・ネットワークによって行われ、IBM サポートによって開かれたサポート・チケットに記録され、IBM Cloud SOC によって継続的にモニターされます。 事前にお客様の同意を得ることなく IBM サポートがインスタンス構成を変更することはありません。 アクセスは VMware 管理コンポーネントや IBM Cloud 管理コンポーネントに対するものであり、お客様の仮想マシンやアプリケーションにアクセスすることは決してありません。
+VMware vCenter Server の環境が、{{site.data.keyword.vmwaresolutions_short}} として提供され、お客様が仮想化機能を管理するための VMware 管理プラットフォーム層になります。 お客様の確実な成功を支援するためには、IBM Cloud for VMware の製品とサービスのライフサイクル全体を通じて IBM サポートが必要になる可能性があります。 ほとんどの場合、IBM サポートが介入するのは、お客様の要求 (つまりサポート・チケット) に対する結果としてです。 しかし、まれに、お客様がサポート・チケットを作成していないのに、将来の問題を防ぐために IBM サポートが事前対応的な支援を行うことがあります。 このアクセスは、IBM Cloud の内部サポート・ネットワークによって行われ、IBM サポートによって開かれたサポート・チケットに記録され、IBM Cloud SOC によって継続的にモニターされます。 事前にお客様の同意を得ることなく IBM サポートがインスタンス構成を変更することはありません。 アクセスは VMware 管理コンポーネントや IBM Cloud 管理コンポーネントに対するものであり、お客様の仮想マシンやアプリケーションにアクセスすることは決してありません。
 
 ## 事前対応サポート
 {: #vc_compl_info-proactive-support}
@@ -66,7 +73,7 @@ VMware Cloud Foundation と vCenter Server の環境が、{{site.data.keyword.vm
 ### サポート・チケット
 {: #vc_compl_info-support-tickets}
 
-* Cloud Foundation と vCenter Server の環境を、IBM は積極的にはモニターしないので、お客様がサポート・チケットを作成しなければ、IBM サポートが通常操作で VMware 管理層に入ることはありません。
+* vCenter Server の環境を、IBM は積極的にはモニターしないので、お客様がサポート・チケットを作成しなければ、IBM サポートが通常操作で VMware 管理層に入ることはありません。
 * お客様がインスタンス、サービス、またはプロビジョニングの問題に関するサポート・チケットを開いた場合は、ただちに適切な IBM サポート・チームにチケットが割り当てられ、そのチームが第一関係者として問題を解決する責任を負います。
 * チーム・レベルで高度な技術的専門知識を維持するためには、専門性のレベルにもよりますが、特定のソフトウェアの問題を解決するのに複数のサポート・チームの関与が必要になる場合があります。 IBM のサポート・チームの間には完全なネットワークが作られているのでこれは簡単です。どのような問題が発生しても 1 つのチームとして解決に取り組むことができます。
 * 問題を調査するために、IBM がお客様のシステム上にある障害関連の情報にアクセスしたり、詳しい情報を得るために障害を再現したりする必要がある場合があります。
@@ -135,5 +142,4 @@ VMware Cloud Foundation と vCenter Server の環境が、{{site.data.keyword.vm
 {: #vc_compl_info-related}
 
 * [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [vCenter Server with Hybridity Bundle の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

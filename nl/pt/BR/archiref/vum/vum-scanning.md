@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -36,7 +36,7 @@ Ao varrer hosts, máquinas virtuais (MVs) e dispositivos virtuais, você os aval
 3.	Selecione os tipos de atualizações a serem varridas. As opções são _Upgrades do dispositivo virtual, upgrades de hardware da MV_ e _Upgrades das ferramentas do VMware_.
 4.	Clique em  ** Varrer **.
 
-## Iniciando manualmente uma varredura de um objeto contêiner
+##	Iniciando manualmente uma varredura de um objeto contêiner
 {: #vum-scanning-scan-container}
 
 Inicie uma varredura simultânea de hosts, MVs e dispositivos virtuais, varrendo um objeto contêiner que é um data center ou uma pasta de data center.
@@ -45,7 +45,7 @@ Inicie uma varredura simultânea de hosts, MVs e dispositivos virtuais, varrendo
 3.	Selecione os tipos de atualizações a serem varridas. As opções são _Upgrades do dispositivo virtual, upgrades de hardware da MV_ e _Upgrades das ferramentas do VMware_.
 4.	Clique em  ** Varrer **.
 
-## Planejando uma Varredura
+##	Planejando uma Varredura
 {: #vum-scanning-schedule}
 
 É possível configurar o vSphere Web Client para varrer MVs, dispositivos virtuais e hosts vSphere ESXi em horários específicos ou em intervalos convenientes para você.

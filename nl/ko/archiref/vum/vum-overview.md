@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -45,7 +45,7 @@ VUM 클라이언트 인터페이스는 두 가지 기본 보기를 제공합니�
 *	관리 보기
 *	준수 보기
 
-## 관리 보기
+##	관리 보기
 {: #vum-overview-admin-view}
 
 관리 보기에는 **홈** > **Update Manager**로 이동하고 Update Manager 인스턴스의 IP 주소를 선택하여 액세스합니다. 관리 보기에서 다음 태스크를 수행할 수 있습니다.
@@ -56,7 +56,7 @@ VUM 클라이언트 인터페이스는 두 가지 기본 보기를 제공합니�
 *	알림 검토 및 확인
 *	ESXi 이미지 가져오기
 
-## 준수 보기
+##	준수 보기
 {: #vum-overview-compliance-view}
 
 **호스트 및 클러스터** 또는 **VM 및 템플리트**로 이동하고 **Update Manager 탭**을 클릭하여 선택한 인벤토리 오브젝트의 준수 보기에 액세스합니다. Update Manager 준수 보기에서 다음 태스크를 수행할 수 있습니다.

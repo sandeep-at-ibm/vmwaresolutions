@@ -14,6 +14,7 @@ lastupdated: "2017-08-28"
 Este release incluye nuevas características, actualizaciones de componentes, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Servicio Fortinet on IBM Cloud
+{: #relnotes_v18-fortinet}
 
 El servicio Fortinet on {{site.data.keyword.cloud_notm}} ya está disponible tanto para instancias de Cloud Foundation como para instancias de vCenter Server. Este servicio despliega un par de dispositivos de seguridad FortiGate (FSA) serie 300 en modalidad altamente disponible para ofrecer servicios de cortafuegos, direccionamiento, NAT y VPN para proteger todos los servidores y máquinas virtuales de la VLAN pública de sus instancias. Puede solicitar instancias con el servicio Fortinet incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante desde la página de detalles de la instancia.
 
@@ -24,6 +25,7 @@ Para obtener más información, consulte los temas siguientes:
 * [Gestión de Fortinet on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
 
 ## Servicio Veeam on IBM Cloud
+{: #relnotes_v18-veeam}
 
 Este release incorpora el servicio Veeam on {{site.data.keyword.cloud_notm}}, que puede hacer copia de seguridad de las cargas de trabajo y de los componentes de gestión. El nuevo servicio sustituye la VSI de Veeam anterior que venía integrada en los releases anteriores a V1.8 solo para los componentes de copia de seguridad y de gestión.
 
@@ -36,20 +38,20 @@ Para obtener más información, consulte los temas siguientes:
 * [Gestión de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
 ## Actualizaciones de instancias de VMware Cloud Foundation
+{: #relnotes_v18-vcf}
 
 ### Puede traer sus propias licencias (BYOL) de VMware cuando solicite instancias de Cloud Foundation
+{: #relnotes_v18-byol}
 
 A partir del release V1.8, cuando solicite una instancia de Cloud Foundation, dispone de dos opciones para obtener licencias de los componentes de VMware de la instancia, que incluyen vSphere, vCenter Server, NSX y vSAN. Puede utilizar nuevas licencias que se deben adquirir en su nombre.
 
 También puede optar por utilizar su propia licencia de VMware para un componente, en cuyo caso debe proporcionar las claves de licencia. En este caso, el soporte para los componentes de VMware para los que suministre licencias lo ofrece VMware, no el equipo de soporte de IBM.
 
-Para obtener más información, consulte los temas siguientes:
-* [Pedido de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
-* [Preguntas frecuentes sobre BYOL](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
-
 ## Actualizaciones de instancias de VMware vCenter Server
+{: #relnotes_v18-vcs}
 
 ### Personalice la CPU y la memoria de su instancia
+{: #relnotes_v18-custom-cpu}
 
 Dispone de una opción de servidor personalizable junto con las opciones integradas y probadas Pequeño, Medio y Grande. Puede realizar su selección en una lista de servicios compatibles con HCL de VMware en función de las CPU duales y del número total de núcleos, además de la cantidad de RAM. El almacenamiento local no se puede personalizar.
 
@@ -58,6 +60,7 @@ Para obtener más información, consulte los temas siguientes:
 * [Adición y visualización de clústeres correspondientes a instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### Soporte para añadir más de 7 comparticiones de archivos NFS
+{: #relnotes_v18-nfs}
 
  Puede conectar hasta un máximo de 32 comparticiones de archivos entre todos los servidores ESXi de un clúster.
 
@@ -66,12 +69,14 @@ Para obtener más información, consulte los temas siguientes:
 * [Adición y visualización de clústeres correspondientes a instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### Actualizaciones de centros de datos
+{: #relnotes_v18-dc}
 
 Dispone de los siguientes nuevos centros de datos para el despliegue: **DAL-09, DAL-12, DAL-13 - Dallas**; **LON-04, LON-06 - Londres**; **SJC-04 - San José**; **WDC-06, WDC-07 - Washington, DC**
 
 Para obtener más información, consulte [Requisitos y planificación de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 
 ## Mejoras en la usabilidad
+{: #relnotes_v18-ui}
 
 Se han realizado mejoras en la interfaz de usuario:
 * Puede obtener información sobre los servicios y solicitar una instancia en la página **Cómo comenzar** del panel de navegación izquierdo.

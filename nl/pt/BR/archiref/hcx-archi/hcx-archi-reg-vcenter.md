@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 # Registrando o HCX Manager com o vCenter
@@ -30,7 +30,7 @@ O dispositivo virtual do Hybrid Cloud Services deve ser ligado antes que ele pos
 3. Configure o serviço de consulta.
   1. Clique na guia  ** Gerenciar ** .
   2. Clique no botão **Editar** na extrema direita da caixa de texto **URL de serviço de consulta**.
-  3. Insira o terminal em serviço de consulta no formato a seguir:
+  3. Insira o terminal em serviço de rede de consulta no formato a seguir:
     * Para o vCenter Server 5.5u3  ` https://ssoip:/7444/lookupservice/sdk `
     * Para o vCenter Server 6.0u2 `https://ssoip/lookupservice/sdk`
   4. Clique em **OK**. Não reinicie quando uma mensagem para reiniciar o mecanismo da web for exibida.

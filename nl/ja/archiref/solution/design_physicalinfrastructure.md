@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -26,16 +26,16 @@ lastupdated: "2019-02-15"
   <dd class="dd">物理ネットワークは、後にネットワーク仮想化で使用される環境へのネットワーク接続を提供します。 このネットワークは {{site.data.keyword.cloud_notm}} サービス・ネットワークによって提供され、DNS や NTP などの追加のサービスが含まれています。</dd>
 </dl>
 
-物理コンポーネントについて詳しくは、[Cloud Foundation インスタンス](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)または [vCenter Server インスタンス](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)の部品構成表を参照してください。
+物理コンポーネントについて詳しくは、[vCenter Server インスタンス](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)の部品構成表を参照してください。
 
-ストレージについて詳しくは、[共有ストレージのアーキテクチャー](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)を参照してください。
+ストレージについて詳しくは、[共有ストレージのアーキテクチャー](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)を参照してください。
 
 ## 物理ホスト設計
 {: #design_physicalinfrastructure-host-design}
 
 物理ホストとは、コンピュート・リソースを提供する環境内の{{site.data.keyword.baremetal_short}}のことです。 このソリューションで適用される{{site.data.keyword.baremetal_short}}は VMware によって認証されています。これらは、[VMware HCG](http://www.vmware.com/resources/compatibility/search.php) にリストされています。
 
-ソリューションに用意されているサーバー構成は、vSphere ESXi をインストール、構成、管理するための最小要件を満たしているか上回っています。 さまざまな要件を満たす各種構成が使用可能です。 VMware on {{site.data.keyword.cloud_notm}} ソリューションに使用される正確な仕様の詳細リストについては、[Cloud Foundation インスタンス](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)または [vCenter Server インスタンス](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)の部品構成表を参照してください。
+ソリューションに用意されているサーバー構成は、vSphere ESXi をインストール、構成、管理するための最小要件を満たしているか上回っています。 さまざまな要件を満たす各種構成が使用可能です。 VMware on {{site.data.keyword.cloud_notm}} ソリューションに使用される正確な仕様の詳細リストについては、[vCenter Server インスタンス](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)の部品構成表を参照してください。
 
 {{site.data.keyword.baremetal_short}}は {{site.data.keyword.cloud_notm}} 内に存在します。
 {:note}
@@ -87,21 +87,12 @@ lastupdated: "2019-02-15"
 * プライマリー IP アドレスは、{{site.data.keyword.cloud_notm}} によってプロビジョンされるデバイス、ベア・メタル・サーバー、仮想サーバーに割り当てられます。 これらのブロックでは、どのような IP アドレスも割り当てないでください。
 * 必要に応じて割り当てたり管理したりするために、ポータブル IP アドレスが用意されています。
 
-{{site.data.keyword.slportal}}内で**「VLAN スパンニング」**を有効にするか、アカウントを**「Virtual Routing and Forwarding (VRF)」**アカウントとして構成すると、お客様のアカウントの範囲内の VLAN にプライマリー IP アドレスまたはポータブル IP アドレスをルーティングできるようになります。
-
-### VLAN スパンニング
-{: #design_physicalinfrastructure-vlan-spanning}
-
-**「VLAN スパンニング」**は {{site.data.keyword.slportal}}・アカウント設定の 1 つであり、アカウントの範囲内のすべての VLAN のプライマリー・サブネット IP ブロックとポータブル・サブネット IP ブロックを相互ルーティング可能にするための設定です。 **「VLAN スパンニング」**設定を無効にしても IP ブロックは {{site.data.keyword.cloud_notm}} サービスにルーティングされますが、相互にはルーティングされません。
-
-ソリューション・コンポーネントが常駐するさまざまなサブネット間のトランスペアレント接続を可能にするには、Cloud Foundation インスタンスと vCenter Server インスタンスがデプロイされている {{site.data.keyword.slportal}}・アカウントの範囲内の**「VLAN スパンニング」**を有効にする必要があります。
+アカウントを**「Virtual Routing and Forwarding (VRF)」**アカウントとして構成すると、お客様のアカウントに属する VLAN にプライマリー IP アドレスまたはポータブル IP アドレスをルーティングできるようになります。
 
 ### Virtual Routing and Forwarding
 {: #design_physicalinfrastructure-vrf}
 
-{{site.data.keyword.slportal}}・アカウントを Virtual Routing and Forwarding (VRF) アカウントとして構成して VLAN スパンニングに似た機能を持たせて、サブネット IP ブロック間の自動ルーティングを可能にすることもできます。Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
-
-{{site.data.keyword.vmwaresolutions_short}} コンソールは、{{site.data.keyword.slportal}}で VRF が有効になっているかどうかを検出できません。 {{site.data.keyword.slportal}}・アカウントの範囲内の**「VLAN スパンニング」**または VRF のどちらかを有効にしているかどうかの確認を促す警告が表示されます。
+{{site.data.keyword.slportal}}・アカウントを Virtual Routing and Forwarding (VRF) アカウントとして構成して、サブネット IP ブロック間の自動グローバル・ルーティングを有効にすることができます。Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
 
 ### 物理ホスト接続
 {: #design_physicalinfrastructure-host-connect}
@@ -171,7 +162,7 @@ vSphere ESXi ハイパーバイザーは、永続ロケーションにインス�
 
 使用する場合は、オール・フラッシュ構成を使用して VMware vSAN が構成されます。 この設計では、2U および 4U シャーシ、さまざまなディスク数、さまざまなディスク・サイズなど、いくつかの構成オプションが用意されています。 すべての構成で 2 つの vSAN ディスク・グループ (キャッシュ用ソリッド・ステート・ディスク (SSD) が 1 つ、容量用 SSD が 1 つ以上) が使用されます。 vSAN 消費に割り振られるドライブはすべて、単一ディスク RAID-0 内に構成されます。
 
-サポートされる構成について詳しくは、[Cloud Foundation インスタンス](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)または [vCenter Server インスタンス](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)の部品構成表を参照してください。
+サポートされる構成について詳しくは、[vCenter Server インスタンス](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)の部品構成表を参照してください。
 
 ### ホスト間のファイル・レベルの共有ストレージ
 {: #design_physicalinfrastructure-shared-storage}
@@ -184,12 +175,11 @@ vSphere ESXi ハイパーバイザーは、永続ロケーションにインス�
 
 購入時または購入後、ワークロードに応じてさらにファイル共有をコンソール内で割り振ってマウントできます。 対応する {{site.data.keyword.CloudDataCent_notm}}内の使用可能な {{site.data.keyword.cloud_notm}} エンデュランス・ファイル・ストレージ容量オプションとパフォーマンス・ティアの中から選択できます。 共有はすべて、NFSv3 プロトコルを使用して接続されます。 また、NetApp ONTAP Select オファリングを適用することによって NFSv3 ファイル共有を接続することができます。
 
-10 IOPS/GB パフォーマンス・ティアを提供する {{site.data.keyword.CloudDataCents_notm}}は、保存中のデータのプロバイダー管理暗号化 (AES-256 暗号化) も備えており、オール・フラッシュ・ストレージによってバックアップされます。 10 IOPS/GB パフォーマンス・ティアの容量は、最大 4 TB に制限されます。 このソリューションで使用される共有 NAS について詳しくは、[共有ストレージのアーキテクチャー](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)を参照してください。
+10 IOPS/GB パフォーマンス・ティアを提供する {{site.data.keyword.CloudDataCents_notm}}は、保存中のデータのプロバイダー管理暗号化 (AES-256 暗号化) も備えており、オール・フラッシュ・ストレージによってバックアップされます。 10 IOPS/GB パフォーマンス・ティアの容量は、最大 4 TB に制限されます。 このソリューションで使用される共有 NAS について詳しくは、[共有ストレージのアーキテクチャー](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)を参照してください。
 
 ## 関連リンク
 {: #design_physicalinfrastructure-related}
 
-* [Cloud Foundation の部品構成表](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
 * [vCenter Server の部品構成表](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
-* [共有ストレージのアーキテクチャー](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
+* [共有ストレージのアーキテクチャー](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [NetApp ONTAP Select のアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

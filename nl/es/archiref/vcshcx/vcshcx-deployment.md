@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
 # Despliegue de cliente y de nube
 {: #vcshcx-deployment}
 
-Tal y como se describe al principio de este documento, una instalación de HCX mínima consiste en un único despliegue del lado del cliente y de la nube. El lado del cliente de HCX se puede instalar en cualquier versión de vSphere admitida por HCX, asumiendo que hay conectividad de red entre el lado del cliente y la nube.
+Una instalación de HCX mínima consiste en un único despliegue del lado del cliente y de la nube. El lado del cliente de HCX se puede instalar en cualquier versión de vSphere admitida por HCX, asumiendo que hay conectividad de red entre el lado del cliente y la nube.
 
 ## Requisitos
 {: #vcshcx-deployment-req}
@@ -24,7 +24,7 @@ Tal y como se describe al principio de este documento, una instalación de HCX m
 ## Nube
 {: #vcshcx-deployment-cloud}
 
-El despliegue de HCX del lado de la nube se gestiona mediante la automatización de {{site.data.keyword.vmwaresolutions_full}}. La configuración predeterminada utiliza el grupo de puertos públicos para configurar cualquier conectividad de punto final de componentes de flota. Los componentes de flota en el lado de la nube se despliegan con sus interfaces de punto final configuradas con direcciones IP públicas, ya que son dispositivos de seguridad reforzada. Se pueden desplegar detrás del cortafuegos. No se da soporte a la conexión de los lados de cliente y de nube entre sí a través de un túnel VPN existente. Si quiere utilizar la red privada para la conectividad de puntos finales de HCX, puede solicitar HCX del lado de la nube para el despliegue de la flota de red privada para su uso a través del enlace dedicado, como MPLS.
+El despliegue de HCX del lado de la nube se gestiona mediante la automatización de {{site.data.keyword.vmwaresolutions_full}}. La configuración predeterminada utiliza el grupo de puertos públicos para configurar cualquier conectividad de punto final de componentes de flota. Los componentes de flota en el lado de la nube se despliegan con sus interfaces de punto final configuradas con direcciones IP públicas, ya que son dispositivos de seguridad reforzada. Se pueden desplegar detrás del cortafuegos. No se da soporte a la conexión de los lados de cliente y de nube entre sí a través de un túnel VPN existente. Si quiere utilizar la red privada para la conectividad de puntos finales de HCX, puede solicitar HCX del lado de la nube para el despliegue de la flota de red privada para su uso en un enlace dedicado, como MPLS.
 
 ## Cliente
 {: #vcshcx-deployment-client}
@@ -49,9 +49,9 @@ También se proporciona una clave de registro de un solo uso. Utilice los pasos 
 
 Para el lado del cliente, utilice el menú **Tareas** para supervisar el despliegue de los componentes de flota. Para el despliegue del lado de la nube, utilice el menú **Tareas** de la interfaz de usuario web de vCenter para la instancia de vCenter Server específica.
 
-Si se produce un error de despliegue en cualquiera de los dos lados, los despliegues de componentes de flota se restituyen y se suprimen. Una vez que se determina la causa del error, pulse el separador **Interconexión** en la interfaz de usuario web de HCX vCenter del lado del cliente y, a continuación, seleccione **Instalar componentes de HCX** en la parte superior de la pantalla.
+Si se produce un error de despliegue en cualquiera de los dos lados, los despliegues de componentes de flota se restituyen y se suprimen. Tras determinar la causa del error, pulse el separador **Interconexión** en la interfaz de usuario web de HCX vCenter del lado del cliente y, a continuación, seleccione **Instalar componentes de HCX** en la parte superior de la pantalla.
 
-Cuando el despliegue de los componentes de flota se completa correctamente y transcurridos varios minutos, el estado del túnel para los componentes de CGW y L2C se encuentra en el estado **Activo** en el separador **Interconexión**.
+Una vez que el despliegue de los componentes de flota se completa correctamente y transcurridos varios minutos, el estado del túnel para los componentes de CGW y L2C se visualiza como **Activo** en el separador **Interconexión**.
 
 ## Enlaces relacionados
 {: #vcshcx-deployment-related}

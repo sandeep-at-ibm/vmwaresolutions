@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-28"
 
 ---
 
@@ -89,7 +89,7 @@ VM のモニタリング機能では、ゲストのオペレーティング・�
 vSphere Web Client のこれらの設定に関して詳しくは、[仮想マシンの対応の構成](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html)を参照してください。
 
 #### アドミッション制御
-{: #cluster-settings-admission-control}
+{: #cluster-settings-admin-control}
 
 vCenter Server では、クラスターに十分なリソースを確保してフェイルオーバー保護を実現するため、また、VM リソース予約が尊重されるようにするために、アドミッション制御を使用します。 この設計では、クラスター・リソースのパーセントを指定してフェイルオーバー容量を予約しています。 定義されるフェイルオーバー容量は、25% の CPU および 25% のメモリーです。
 

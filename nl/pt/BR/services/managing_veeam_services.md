@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -27,13 +27,12 @@ Ao solicitar serviços gerenciados para o Veeam on {{site.data.keyword.cloud_not
 3. Na página **Veeam on IBM Cloud**, revise a descrição e as especificações técnicas para o Veeam on {{site.data.keyword.cloud_notm}} como um serviço gerenciado e, em seguida, clique em **Criar**.
 4. Especifique as definições de configuração de acordo com seus requisitos ou aceite os valores padrão.
 5. Clique em **vCenter Server** ou **Cloud Foundation** para incluir o serviço em uma de suas instâncias.
-6. Para incluir o serviço enquanto você pede uma nova instância, clique em **Incluir na nova instância** e, em seguida, continue pedindo uma nova instância do [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance), [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance) ou [Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance).
+6. Para incluir o serviço enquanto você pede uma nova instância, clique em **Incluir na nova instância** e, em seguida, continue com a solicitação de uma nova instância do [servidor do vCenter](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) ou [do servidor do vCenter com Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance).
 7. Para incluir o serviço em uma instância existente, clique em **Incluir na instância existente**, selecione a instância desejada na lista e, em seguida, confirme se deseja continuar com o pedido clicando em **Provisão**.
 
 ## Links relacionados
 {: #managing_veeam_services-related}
 
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Serviços de backup e proteção de dados](https://www-935.ibm.com/services/business-continuity/backup-and-data-protection-services/)

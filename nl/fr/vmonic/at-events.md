@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -48,7 +48,6 @@ Table 2. Description des actions qui génèrent des événements de gestion
 | `vmware-solutions.notification.update` | <ul><li>La demande de mise à jour des notification est reçue.</li><li>La demande de mise à jour des notification reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>La demande de nettoyage des données sécurisées est reçue.</li><li>La demande de nettoyage des données sécurisées reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>La demande de migration vers le compte bss compte est reçue.</li><li>La demande de migration vers le compte bss reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcf.order`                 | <ul><li>La demande de commande d'une instance Cloud Foundation est reçue.</li><li>La demande de commande d'une instance Cloud Foundation reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
 | `vmware-solutions.vcf.delete`                | <ul><li>La demande de suppression d'une instance Cloud Foundation est reçue.</li><li>La demande de suppression d'une instance Cloud Foundation reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
 | `vmware-solutions.vcf.add_hosts`             | <ul><li>La demande d'ajout de serveurs ESXi à une instance Cloud Foundation est reçue.</li><li>La demande d'ajout de serveurs ESXi à une instance Cloud Foundation reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
 | `vmware-solutions.vcf.remove_hosts`          | <ul><li>La demande de suppression de serveurs ESXi d'une instance Cloud Foundation est reçue.</li><li>La demande de suppression de serveurs ESXi d'une instance Cloud Foundation reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |

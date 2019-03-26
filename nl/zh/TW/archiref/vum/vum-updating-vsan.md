@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -19,10 +19,10 @@ vSAN 會產生系統基準線及基準線群組以與 VUM 搭配使用，您可�
 * 使用 **vSAN 建置建議** - VUM 會根據《VMware 相容性手冊》之『硬體相容性清單 (HCL)』中的資訊來檢查已安裝的 vSphere ESXi 版本。它會根據現行「vSAN 版本」型錄，判斷每個 vSAN 叢集的正確升級路徑。vSAN 也會包括其系統基準線中建議版本的必要驅動程式及修補程式更新。vSAN 建置建議可確保每個 vSAN 叢集都保持為現行硬體相容性狀態或更好的狀態。如果 HCL 上不包括 vSAN 叢集裡的硬體，則 vSAN 會建議升級至最新版本。
 
 vSAN 叢集升級會依下列作業序列執行：
-* **啟用 vSAN 線上性能工作流程** – 此工作流程會在 VUM 中啟用 vSAN 基準線，以檢閱及重新修補更新。一開始只需要執行它，即可使用 VUM 來啟用 vSAN
-* **必要條件** – 瞭解必要條件、處理程序及限制
+* **啟用 vSAN 線上性能工作流程** - 此工作流程會在 VUM 中啟用 vSAN 基準線，以檢閱及重新修補更新。一開始只需要執行它，即可使用 VUM 來啟用 vSAN
+* **必要條件** - 瞭解必要條件、處理程序及限制
 * **升級 vCenter Server Appliance**。如需相關資訊，請參閱 [VCSA 更新及 SSO 鏈結的 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)。
-* **升級 vSphere ESXi 主機** – 如需相關資訊，請參閱[建立基準線並連接至庫存物件](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines)。
+* **升級 vSphere ESXi 主機** - 如需相關資訊，請參閱[建立基準線並連接至庫存物件](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines)。
 * **升級 vSAN 磁碟格式** - 請參閱「升級 vSAN 磁碟格式」。升級磁碟格式是選用作業，但若要獲得最佳的結果，請升級物件以使用最新版本。磁碟內存格式會向完整 vSAN 特性集公開您的環境。
 
 ## 啟用 vSAN 線上性能工作流程
@@ -105,12 +105,12 @@ vSAN 叢集升級會依下列作業序列執行：
 
 如需相關資訊，請參閱 [VCSA 更新及 SSO 鏈結的 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)。
 
-## 升級 vSphere ESXi 主機
+##	升級 vSphere ESXi 主機
 {: #vum-updating-vsan-upgrade-hosts}
 
 如需相關資訊，請參閱[建立基準線並連接至庫存物件](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines)。
 
-## 升級 vSAN 磁碟格式
+##	升級 vSAN 磁碟格式
 {: #vum-updating-vsan-upgrade-vsan}
 
 「Ruby vSphere 主控台 (RVC)」是 vSphere 的 Ruby 型指令行介面，可以用來管理 VMware vSphere ESXi 及 vCenter。vSphere 庫存會以樹狀結構呈現，可讓您針對 vCenter 物件導覽及執行指令。

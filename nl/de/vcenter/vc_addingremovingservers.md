@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2019-02-14"
 {: #vc_addingremovingservers}
 
 Sie können die Kapazität Ihrer VMware vCenter Server-Instanz entsprechend Ihren Geschäftsanforderungen erweitern oder verringern, indem Sie ESXi-Server oder NFS-Speicher (Network File System) hinzufügen oder entfernen.
+
+Ab dem Release V2.9 können Sie einem Cluster neue ESXi-Server hinzufügen, während sich die Server im Wartungsmodus befinden. Darüber hinaus können Sie ESXi-Server über mehrere Cluster hinweg gleichzeitig hinzufügen oder entfernen. Die folgenden gleichzeitigen Operationen sind verfügbar: 
+
+* Hosts zu einem Cluster hinzufügen und Hosts zu weiteren Clustern hinzufügen. 
+* Hosts aus einem Cluster entfernen und Hosts aus weiteren Clustern entfernen. 
+* Hosts zu einem Cluster hinzufügen und Hosts aus weiteren Clustern entfernen. 
+* Hosts aus einem Cluster entfernen und Hosts zu weiteren Clustern hinzufügen. 
 
 Sie können NFS-Speicherfreigaben zu einem vorhandenen NFS- oder vSAN vCenter Server-Cluster hinzufügen oder aus einem vorhandenen NFS-oder vSAN vCenter Server-Cluster entfernen.
 {:note}
@@ -31,19 +38,20 @@ Wenn Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen von ei
 * Fügen Sie keine ESXi-Server über VMware vSphere Web Client hinzu. Die Änderungen, die Sie in vSphere Web Client vornehmen, werden nicht mit der {{site.data.keyword.vmwaresolutions_full}}-Konsole synchronisiert.
 * Eine vCenter Server-Instanz mit NFS-Speicher benötigt mindestens 2 ESXi-Server. Bei in V2.1 oder höheren Versionen bereitgestellten Instanzen können Sie den Standardcluster auf bis zu 51 ESXi-Server erweitern. Jeder Cluster, bei dem es sich nicht um den Standardcluster handelt, kann auf bis zu 59 ESXi-Server erweitert werden.
 * Eine vCenter Server-Instanz mit vSAN-Speicher benötigt mindestens 4 ESXi-Server.
-* Bei vCenter Server-Instanzen, die in V2.0 oder einer früheren Version bereitgestellt wurden, können Sie jeden Cluster auf bis zu 32 ESXi-Server erweitern. Für die Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen, die Sie jeweils hinzufügen können, gilt Folgendes:
-   * Bei Konfigurationen des Typs **S (Klein)**, **M (Mittel)** und **L (Groß)** können Sie gleichzeitig 1 bis 10 ESXi-Server hinzufügen.
-   * Bei Konfigurationen des Typs **Skylake** und **Broadwell** können Sie gleichzeitig 1 bis 20 ESXi-Server hinzufügen. Weitere Informationen zum Minimum von ESXi-Servern finden Sie im Abschnitt [Ist eine Serverinstanz mit zwei Knoten hoch verfügbar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
+* Bei vCenter Server-Instanzen, die in V2.0 oder einer früheren Version bereitgestellt wurden, können Sie jeden Cluster auf bis zu 32 ESXi-Server erweitern.
+* Sie können gleichzeitig 1 bis 20 ESXi-Server hinzufügen. Weitere Informationen zum Minimum von ESXi-Servern finden Sie unter [Ist eine vCenter Server-Instanz mit zwei Knoten hoch verfügbar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ### Vorgehensweise beim Hinzufügen von ESXi-Servern
 {: #vc_addingremovingservers-adding-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die die Kapazität erweitert werden soll.
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
 4. Klicken Sie in der Tabelle **CLUSTER** auf den Cluster, zu dem ESXi-Server hinzugefügt werden sollen.
-5. Klicken Sie im Abschnitt **ESXi-Server** auf **Server hinzufügen**.
-6. Geben Sie im Fenster **Server hinzufügen** die Anzahl der Server ein, die Sie hinzufügen möchten. Prüfen Sie die geschätzten Kosten und klicken Sie dann auf **Server hinzufügen**.
+5. Klicken Sie im Abschnitt **ESXi-Server** auf **Hinzufügen**.
+6. Geben Sie im Fenster **Server hinzufügen** die Anzahl der Server an, die hinzugefügt werden sollen. 
+7. Wählen Sie optional das Kontrollkästchen zum Hinzufügen von Servern während des Wartungsmodus aus. 
+8. Überprüfen Sie die geschätzten Kosten und klicken Sie auf **Hinzufügen**. 
 
 ### Ergebnisse nach dem Hinzufügen von ESXi-Servern
 {: #vc_addingremovingservers-adding-results}
@@ -51,6 +59,12 @@ Wenn Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen von ei
 1. Es kann eine leichte Verzögerung in der Konsole auftreten, während sich der Instanzstatus von **Bereit** in **Wird geändert** ändert. Warten Sie, bis die Operation vollständig abgeschlossen ist, bevor Sie weitere Änderungen an der Instanz vornehmen.
 2. Sie werden per E-Mail benachrichtigt, dass Ihre Anforderung zum Hinzufügen von ESXi-Servern verarbeitet wird. In der Konsole wird der Status des Clusters, der den ESXi-Servern zugeordnet ist, in **Wird geändert** geändert.
 3. Wenn die neuen ESXi-Server nicht zur Liste im Cluster hinzugefügt werden, überprüfen Sie die E-Mail- oder Konsolenbenachrichtigungen, um weitere Details über den Fehler zu ermitteln.
+4. In den folgenden Situationen müssen Sie die Konsole von Zerto Virtual Manager (ZVM) und die bereits ausgefüllte IP-Adresse von Zerto Virtual Replication Appliance (VRA) verwenden, um die virtuelle VRA-Maschine (VM) manuell bereitzustellen: 
+   * Wenn Sie ESXi-Server zu einem Standardcluster hinzufügen, während sich die Server im Wartungsmodus befinden und Zerto for {{site.data.keyword.cloud_notm}} installiert ist. 
+   * Wenn Sie Zerto for {{site.data.keyword.cloud_notm}} zu einer vCenter Server-Instanz hinzufügen, die über einen ESXi-Server im Wartungsmodus verfügt. 
+
+Wenn Sie ESXi-Server während des Wartungsmodus hinzufügen, werden virtuelle Maschinen erst dann auf die neuen Server migriert, wenn Sie den Wartungsmodus beenden.    
+{:important}
 
 ## ESXi-Server in vCenter Server-Instanzen entfernen
 {: #vc_addingremovingservers-removing}
@@ -67,7 +81,7 @@ Wenn Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen von ei
 ### Vorgehensweise beim Entfernen von ESXi-Servern
 {: #vc_addingremovingservers-removing-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die die Kapazität verringert werden soll.
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
 4. Klicken Sie in der Tabelle **CLUSTER** auf den Cluster, in dem ESXi-Server entfernt werden sollen.
@@ -94,7 +108,7 @@ Fügen Sie NFS-Speicher nicht über VMware vSphere Web Client hinzu. Die Änderu
 ### Vorgehensweise zum Hinzufügen von NFS-Speicher
 {: #vc_addingremovingservers-adding-nfs-storage-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die die Kapazität erweitert werden soll.
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
 4. Klicken Sie in der Tabelle **CLUSTER** auf den Cluster, zu dem NFS-Speicher hinzugefügt werden soll.
@@ -125,7 +139,7 @@ Fügen Sie NFS-Speicher nicht über VMware vSphere Web Client hinzu. Die Änderu
 ### Vorgehensweise zum Entfernen von NFS-Speicher
 {: #vc_addingremovingservers-removing-nfs-storage-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die die Kapazität verringert werden soll.
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
 4. Klicken Sie in der Tabelle **CLUSTER** auf den Cluster, von dem der NFS-Speicher entfernt werden soll.

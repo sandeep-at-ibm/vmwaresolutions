@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -21,7 +21,7 @@ Assegure-se de ter revisado todas as considerações em [Considerações ao excl
 ## Procedimento para excluir instâncias do VMware HCX on IBM Cloud no local
 {: #standalone_deletingserviceinstances-procedure}
 
-1. Clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. Clique em **Recursos** na área de janela de navegação esquerda.
 2. Role para baixo até a tabela **Instâncias do HCX no local** e localize a instância a ser excluída.
 3. Na coluna **Ações**, clique no ícone de exclusão.
 4. Na janela **Excluir instância**, clique em **OK**.

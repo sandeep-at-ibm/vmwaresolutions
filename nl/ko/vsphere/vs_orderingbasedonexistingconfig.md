@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -47,7 +47,7 @@ lastupdated: "2019-02-14"
 
 주문한 경우 클러스터의 배치가 자동으로 시작됩니다. 주문이 처리 중이라는 이메일 확인을 수신합니다. 클러스터를 사용할 준비가 되면 이메일로 알림도 받습니다.
 
-vSphere 클러스터는 vCenter Server 및 Cloud Foundation 인스턴스와 달리 **배치된 인스턴스** 페이지에 표시되지 않습니다.
+vSphere 클러스터는 vCenter Server 및 Cloud Foundation 인스턴스와 달리 **리소스** 페이지에 표시되지 않습니다.
 {:note}
 
 ## 관련 링크

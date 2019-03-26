@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2019-02-14"
 {: #vc_hybrid_addingremovingservers}
 
 Sie können die Kapazität Ihrer VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle-Instanz entsprechend Ihren Geschäftsanforderungen erweitern oder verringern, indem Sie ESXi-Server hinzufügen oder entfernen.
+
+Ab dem Release V2.9 können Sie einem Cluster neue ESXi-Server hinzufügen, während sich der Cluster im Wartungsmodus befindet. Darüber hinaus können Sie ESXi-Server über mehrere Cluster hinweg gleichzeitig hinzufügen oder entfernen. Die folgenden gleichzeitigen Operationen sind verfügbar: 
+
+* Hosts zu **cluster1** hinzufügen und Hosts zu weiteren Clustern hinzufügen. 
+* Hosts aus **cluster1** entfernen und Hosts aus weiteren Clustern entfernen. 
+* Hosts zu **cluster1** hinzufügen und Hosts aus weiteren Clustern entfernen. 
+* Hosts aus **cluster1** entfernen und Hosts zu weiteren Clustern hinzufügen. 
 
 Da Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen einzelner oder mehrerer ESXi-Server nach der Bereitstellung die Speicherkapazität des Clusters erhöhen.
 
@@ -30,7 +37,7 @@ Da Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen einzelne
 ## Vorgehensweise beim Hinzufügen von ESXi-Servern
 {: #vc_hybrid_addingremovingservers-adding-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die die Kapazität erweitert werden soll.
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
 4. Klicken Sie in der Tabelle **CLUSTER** auf den Cluster, zu dem ESXi-Server hinzugefügt werden sollen.
@@ -59,7 +66,7 @@ Da Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen einzelne
 ## Vorgehensweise beim Entfernen von ESXi-Servern
 {: #vc_hybrid_addingremovingservers-removing-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die die Kapazität verringert werden soll.
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
 4. Klicken Sie in der Tabelle **CLUSTER** auf den Cluster, in dem ESXi-Server entfernt werden sollen.

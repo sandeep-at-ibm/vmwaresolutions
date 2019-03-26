@@ -4,14 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
-# vCenter Server 및 Center Server with Hybridity Bundle 인스턴스에 대한 규제 준수 정보
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# vCenter Server 인스턴스에 대한 규제 준수 정보
 {: #vc_compl_info}
 
-VMware vCenter Server 및 vCenter Server with Hybridity Bundle 인스턴스에 대한 규제 준수 세부사항은 다음 정보를 검토하십시오.
+VMware vCenter Server 인스턴스에 대한 규제 준수 세부사항은 다음 정보를 검토하십시오.
+
+NSX-T 오퍼링을 사용하는 {{site.data.keyword.cloud_notm}}의 VMware vCenter Server는 HIPAA 고객에게 지원되지 않습니다.
+{:important}
 
 ## vCenter Server on IBM Cloud에 대한 고객 대 IBM 책임
 {: #vc_compl_info-responsibility}
@@ -45,7 +52,7 @@ VMware vCenter Server 및 vCenter Server with Hybridity Bundle 인스턴스에 �
 ## 고객 인스턴스 액세스에 대한 정책
 {: #vc_compl_info-policy-for-access-client-inst}
 
-{{site.data.keyword.vmwaresolutions_short}}로 제공되는 VMware Cloud Foundation 및 vCenter Server 환경에서는 고객이 가상화 기능을 관리할 수 있는 VMware 관리 플랫폼 계층을 제공합니다. IBM Cloud for VMware 제품 및 서비스의 라이프사이클 전반에서 성공을 보장하기 위해 IBM 지원 센터의 도움이 필요할 수 있습니다. 대부분 IBM 지원 센터의 개입은 고객 요청(즉, 지원 티켓)으로 발생합니다. 그러나 드문 경우에 IBM 지원 센터에서 향후 발생할 수 있는 문제를 방지하기 위해 고객이 작성한 지원 티켓 없이 사전 예방적으로 지원할 수 있습니다. 이 액세스는 IBM Cloud 내부 지원 네트워크를 통해 이루어지며 IBM 지원 센터에서 열고 IBM Cloud SOC에서 지속적으로 모니터하는 지원 티켓을 통해 문서화됩니다. IBM 지원 센터에서는 고객의 사전 동의 없이 인스턴스 구성을 수정하지 않습니다. VMware 관리 컴포넌트 및/또는 IBM Cloud 관리 컴포넌트에 액세스하며 고객 가상 머신 또는 애플리케이션에는 액세스하지 않습니다.
+{{site.data.keyword.vmwaresolutions_short}}로 제공되는 VMware vCenter Server 환경에서는 고객이 가상화 기능을 관리할 수 있는 VMware 관리 플랫폼 계층을 제공합니다. IBM Cloud for VMware 제품 및 서비스의 라이프사이클 전반에서 성공을 보장하기 위해 IBM 지원 센터의 도움이 필요할 수 있습니다. 대부분 IBM 지원 센터의 개입은 고객 요청(즉, 지원 티켓)으로 발생합니다. 그러나 드문 경우에 IBM 지원 센터에서 향후 발생할 수 있는 문제를 방지하기 위해 고객이 작성한 지원 티켓 없이 사전 예방적으로 지원할 수 있습니다. 이 액세스는 IBM Cloud 내부 지원 네트워크를 통해 이루어지며 IBM 지원 센터에서 열고 IBM Cloud SOC에서 지속적으로 모니터하는 지원 티켓을 통해 문서화됩니다. IBM 지원 센터에서는 고객의 사전 동의 없이 인스턴스 구성을 수정하지 않습니다. VMware 관리 컴포넌트 및/또는 IBM Cloud 관리 컴포넌트에 액세스하며 고객 가상 머신 또는 애플리케이션에는 액세스하지 않습니다.
 
 ## 사전 예방적 지원
 {: #vc_compl_info-proactive-support}
@@ -67,7 +74,7 @@ VMware vCenter Server 및 vCenter Server with Hybridity Bundle 인스턴스에 �
 ### 지원 티켓
 {: #vc_compl_info-support-tickets}
 
-* IBM에서는 Cloud Foundation 및 vCenter Server 환경을 적극적으로 모니터하지 않으며 IBM 지원 센터는 고객이 작성한 지원 티켓 없이 정상적인 운영 환경에서 VMware 관리 계층에 진입하지 않습니다.
+* IBM에서는 vCenter Server 환경을 적극적으로 모니터하지 않으며 IBM 지원 센터는 고객이 작성한 지원 티켓 없이 정상적인 운영 환경에서 VMware 관리 계층에 진입하지 않습니다.
 * 고객이 인스턴스, 서비스 또는 프로비저닝 문제에 대한 지원 티켓을 열면 해당 티켓이 문제 해결을 담당하는 1차 담당자인 적절한 IBM 지원 센터 팀에 신속하게 지정됩니다.
 * 팀 차원에서 뛰어난 기술 전문지식을 유지하기 위해서는 높은 수준의 전문성이 필요하기 때문에, 때로는 특정 소프트웨어 문제점을 해결하기 위해 둘 이상의 지원 팀이 관여해야 할 수 있습니다. IBM 지원 팀은 네트워크를 통해 모두 함께 연결되어 있고 발생하는 모든 문제점을 해결하기 위해 하나가 되어 작업하므로 쉽게 처리할 수 있습니다.
 * 문제를 조사하기 위해 IBM은 고객의 시스템에서 장애와 관련된 정보에 액세스하거나 추가 정보를 얻기 위해 장애를 재현해야 할 수 있습니다.
@@ -136,5 +143,4 @@ VMware vCenter Server 및 vCenter Server with Hybridity Bundle 인스턴스에 �
 {: #vc_compl_info-related}
 
 * [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [vCenter Server with Hybridity Bundle 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

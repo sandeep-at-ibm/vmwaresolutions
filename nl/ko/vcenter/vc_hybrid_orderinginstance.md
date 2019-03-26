@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,6 +52,14 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때는 다음 시
 * 인스턴스 이름의 최대 길이는 10자입니다.
 * 인스턴스 이름은 계정 내에서 고유해야 합니다.
 
+### VMware vSphere 라이센스
+{: #vc_hybrid_orderinginstance-vsphere-license}
+
+vSphere Enterprise Plus 6.7u1 또는 vSphere Enterprise Plus 6.5u2를 주문할 것인지 여부를 선택하십시오.
+
+vSphere Enterprise Plus 6.7u1은 Broadwell 및 Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}용으로만 사용 가능합니다.
+{:note}
+
 ### 기본 또는 보조
 {: #vc_hybrid_orderinginstance-primary-secondary}
 
@@ -63,7 +71,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때는 다음 시
 vCenter Server with Hybridity Bundle 인스턴스 주문에는 다음 VMware 라이센스가 포함됩니다. NSX 및 vSAN 라이센스에 대한 에디션을 지정해야 합니다.
 
 * vCenter Server 6.5
-* vSphere Enterprise Plus 6.5u1
+* vSphere Enterprise Plus 6.5 또는 6.7
 * NSX Service Providers 6.4(Advanced 또는 Enterprise 에디션)
 * vSAN 6.6(Advanced 또는 Enterprise 에디션)
 
@@ -229,32 +237,33 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 1. {{site.data.keyword.cloud_notm}} 카탈로그의 왼쪽 탐색 분할창에서 **VMware**를 클릭한 후 **가상 데이터 센터** 섹션에 있는 **vCenter Server**를 클릭하십시오.
 2. **VMware vCenter Server on IBM Cloud** 페이지에서 **vCenter Server with Hybridity Bundle** 카드를 클릭하고 **작성**을 클릭하십시오.
 3. **vCenter Server** 페이지에서 인스턴스 이름을 입력하십시오.
+5. vSphere 버전을 선택하십시오. 
 4. 인스턴스 유형을 선택하십시오.
    * 환경에 하나의 인스턴스를 배치하거나 다중 사이트 토폴로지에 첫 번째 인스턴스를 배치하려면 **기본 인스턴스**를 클릭하십시오.
    * 고가용성을 위해 인스턴스를 환경의 기존(기본) 인스턴스에 연결하려면 **보조 인스턴스**를 클릭하고 다음 단계를 완료하십시오.
      1. 보조 인스턴스를 연결할 기본 인스턴스를 선택하십시오.
      2. 기본 인스턴스 V2.8 이상의 경우 기본 인스턴스의 vCenter Server 관리자 비밀번호를 입력하십시오.
      3. 기본 인스턴스 V2.7 이상의 경우 기본 인스턴스의 PSC 관리자 비밀번호를 입력하십시오.
-5. NSX 라이센스 에디션 및 vSAN 라이센스 에디션을 선택하십시오.
-6. Bare Metal Server 설정을 완료하십시오.
+6. NSX 라이센스 에디션 및 vSAN 라이센스 에디션을 선택하십시오.
+7. Bare Metal Server 설정을 완료하십시오.
   1. {{site.data.keyword.CloudDataCent_notm}}를 선택하여 인스턴스를 호스팅하십시오.
   2. **Skylake** 또는 **Broadwell** CPU 모델 및 **RAM** 크기를 선택하십시오.
 
   **Bare Metal Server 수**는 기본적으로 네 개로 설정되어 있으며 변경할 수 없습니다.
   {:note}
-7. 스토리지 구성을 완료하십시오. 용량 및 캐시 디스크에 대한 디스크 유형과 디스크 수를 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
-8. 네트워크 인터페이스 구성을 완료하십시오.
+8. 스토리지 구성을 완료하십시오. 용량 및 캐시 디스크에 대한 디스크 유형과 디스크 수를 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
+9. 네트워크 인터페이스 구성을 완료하십시오.
   1. 호스트 이름 접두부, 하위 도메인 레이블 및 루트 도메인 이름을 입력하십시오.
   2. **공용 및 사설 네트워크** 또는 **사설 네트워크 전용** 중 네트워크 설정을 선택하십시오.
   3. VLAN 구성을 선택하십시오.
      *  새 공용 및 사설 VALN을 주문하려면 **새 VLAN 주문**을 클릭하십시오.
      *  기존 공용 및 사설 VALN이 사용 가능한 경우 이들을 재사용하려면 **기존 VLAN 선택**을 클릭한 후 공용 VLAN, 기본 서브넷, 사설 VLAN, 사설 기본 서브넷 및 보조 사설 VLAN을 선택하십시오.
   4. DNS 구성을 선택하십시오.
-9. 포함된 HCX on {{site.data.keyword.cloud_notm}} 서비스에 대해 구성을 완료하십시오. 서비스에 대한 설정을 제공하는 데 대한 자세한 정보는 [VMware HCX on IBM Cloud 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration)의 _VMware HCX on IBM Cloud 구성_ 섹션을 참조하십시오.
-10. 추가 기능 서비스 카드를 클릭하여 인스턴스에 배치할 해당 추가 기능 서비스를 선택하십시오. 서비스가 구성을 필요로 하는 경우에는 서비스 고유 설정을 완료하고 카드의 **서비스 추가**를 클릭하십시오.  
+10. 포함된 HCX on {{site.data.keyword.cloud_notm}} 서비스에 대해 구성을 완료하십시오. 서비스에 대한 설정을 제공하는 데 대한 자세한 정보는 [VMware HCX on IBM Cloud 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration)의 _VMware HCX on IBM Cloud 구성_ 섹션을 참조하십시오.
+11. 추가 기능 서비스 카드를 클릭하여 인스턴스에 배치할 해당 추가 기능 서비스를 선택하십시오. 서비스가 구성을 필요로 하는 경우에는 서비스 고유 설정을 완료하고 카드의 **서비스 추가**를 클릭하십시오.  
 서비스의 설정을 제공하는 방법에 대한 자세한 정보는 해당 서비스 주문 주제를 참조하십시오.
 
-11. 주문하기 전에 **주문 요약** 페이지에서 인스턴스 구성을 확인하십시오.
+12. 주문하기 전에 **주문 요약** 페이지에서 인스턴스 구성을 확인하십시오.
    1. 인스턴스의 설정을 검토하십시오.
    2. 인스턴스의 예상 비용을 검토하십시오. PDF 요약을 생성하려면 **가격 세부사항**을 클릭하십시오. 주문 요약을 저장하거나 인쇄하려면 PDF 창의 오른쪽 상단에 있는 **인쇄** 또는 **다운로드** 아이콘을 클릭하십시오.
    3. 주문에 적용되는 이용 약관에 대한 링크를 클릭하고, 인스턴스를 주문하기 전에 이러한 이용 약관에 동의하는지 확인하십시오.
@@ -265,7 +274,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 
 인스턴스의 배치가 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 배치의 상태를 확인할 수 있습니다.
 
-인스턴스가 성공적으로 배치된 경우에는 [Hybridity Bundle 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
+인스턴스가 성공적으로 배치된 경우에는 [Hybridity Bundle 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
 
 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 

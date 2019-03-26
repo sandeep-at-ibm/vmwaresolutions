@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -37,13 +37,13 @@ VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 �
 
 표 2. vCenter Server 인스턴스의 소프트웨어 컴포넌트에 대한 BOM
 
-|제조업체  |컴포넌트                      |버전       |
+|제조업체  |컴포넌트                      |버전    |
 |:------------- |:------------------------------ |:------------- |
-|VMware       |vSphere ESXi                    | 6.5 Update P3(6.5.0-10884925 빌드) |
-|VMware       |vCenter Server Appliance        | 6.5 U2d(6.5.0-10964411 빌드) |
-|VMware       |Platform Services Controller    | 6.5 U2d(6.5.0-10964411 빌드) |
-|VMware       |vSAN                            |6.6.1        |
-|VMware       |NSX for vSphere                 | 6.4.1        |
+|VMware       |vSphere ESXi                    | 6.7 Update 1(빌드 6.7.0-11675023) 또는 <br/>6.5 Update 2(빌드 6.5.0-11925212) |
+|VMware       |vCenter Server Appliance        | 6.7 Update 1(빌드 6.7.0-10244745) 또는 <br/>6.5 Update 2d(빌드 6.5.0-10964411) |
+|VMware       |Platform Services Controller    | 6.7 Update 1(빌드 6.7.0-10244745) 또는 <br/>6.5 Update 2d(빌드 6.5.0-10964411) |
+|VMware       |vSAN                            | 6.7 Update 1 또는 <br/>6.6.1       |
+|VMware       |NSX for vSphere                 | 6.4.4(빌드 11197766)    |
 |Microsoft    |Windows Server Standard 에디션 |2012R2       |
 
 VMware vSAN은 선택적 컴포넌트입니다.
@@ -138,6 +138,6 @@ V2.0 이하로 배치된 인스턴스의 경우에는 공용 스위치 MTU 설�
 * [빌드 번호 및 VMware ESXi와 ESX(2143832)의 버전](https://kb.vmware.com/s/article/2143832)
 * [빌드 번호 및 VMware vCenter Server(2143838)의 버전](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
 * [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [vCenter Server 인스턴스 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

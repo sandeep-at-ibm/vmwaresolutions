@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -46,7 +46,7 @@ Le graphique suivant décrit la vue globale du déploiement multisite vCenter Se
 
 Figure 1. Déploiement multisite vCenter Server with Hybridity Bundle
 
-![Déploiement multisite vCenter Server with Hybridity Bundle](../sddc/multisite-hub-spoke.svg "Déploiement multisite vCenter Server with Hybridity Bundle")
+![Déploiement multisite vCenter Server with Hybridity Bundle](../vcenter/multisite-hub-spoke.svg "Déploiement multisite vCenter Server with Hybridity Bundle")
 
 Le modèle contient les couches suivantes :
 

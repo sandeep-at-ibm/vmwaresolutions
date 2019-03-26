@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2019-02-15"
 ## 查看 KMIP for VMware on IBM Cloud 实例的过程
 {: #kmip_standalone_viewing-procedure}
 
-在左侧导航窗格中，单击**已部署的实例**，然后向下滚动到 **KMIP for VMware on {{site.data.keyword.cloud_notm}} 实例**表，以查看有关所订购实例的信息：
+在左侧导航窗格中，单击**资源**，然后向下滚动到 **KMIP for VMware on {{site.data.keyword.cloud_notm}} 实例**表，以查看有关所订购实例的信息：
 
 表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 实例项
 

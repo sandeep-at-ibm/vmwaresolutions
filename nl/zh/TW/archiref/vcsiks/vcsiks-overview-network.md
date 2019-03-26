@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -53,11 +53,11 @@ lastupdated: "2019-02-18"
 
 每個 Kubernetes 叢集都會設定稱為 Calico 的網路外掛程式。
 
-設定預設網路原則，以保護 {{site.data.keyword.containerlong_notm}} 中每個工作者節點的公用網路介面。如果您有獨特的安全需求，或您有已啟用 VLAN Spanning 的多區域叢集，則可以使用 Calico 及 Kubernetes 來建立叢集的網路原則。使用 Kubernetes 網路原則，您可以指定要容許或封鎖進出叢集內 Pod 的網路資料流量。 
+設定預設網路原則，以保護 {{site.data.keyword.containerlong_notm}} 中每個工作者節點的公用網路介面。如果您有獨特的安全需求，或者您有已啟用 VLAN Spanning 或「虛擬遞送及轉遞 (VRF) 」的多區域叢集，則可以使用 Calico 和 Kubernetes 來建立叢集的網路原則。使用 Kubernetes 網路原則，您可以指定要容許或封鎖進出叢集內 Pod 的網路資料流量。
 
 若要設定其他進階網路原則，例如封鎖入埠 (Ingress) 資料流量至 LoadBalancer 服務，請使用 Calico 網路原則。
 
-Kubernetes 網路原則指定 Pod 如何與其他 Pod 及外部端點通訊。也可以根據 Pod 及名稱空間標籤來過濾資料流量。您可以使用 kubectl 指令或 Kubernetes API 來套用 Kubernetes 網路原則。這些原則在套用時會自動轉換為 Calico 網路原則，而 Calico 會強制執行這些原則。
+Kubernetes 網路原則指定 Pod 如何和其他 Pod 及公用網路服務端點通訊。也可以根據 Pod 及名稱空間標籤來過濾資料流量。您可以使用 kubectl 指令或 Kubernetes API 來套用 Kubernetes 網路原則。這些原則在套用時會自動轉換為 Calico 網路原則，而 Calico 會強制執行這些原則。
 
 Kubernetes 的 Calico 網路原則是 Kubernetes 網路原則的超集，並使用 calicoctl 指令予以套用。
 

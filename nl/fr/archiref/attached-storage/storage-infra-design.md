@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-27"
 
 ---
 
@@ -64,9 +64,9 @@ La section ci-après présente la configuration de l'unité de stockage connect�
 
 Le stockage Performance et le stockage Endurance sont des solutions de stockage {{site.data.keyword.cloud_notm}} conçues pour prendre en charge des applications à entrées-sorties élevées qui nécessitent des niveaux prévisibles de performances. Ces performances prévisibles sont obtenues au moyen de l'allocation d'IOPS de niveau protocole à des volumes individuels.
 
-Entre 100 et 48 000 IOPS peuvent être commandées avec des tailles de stockage allant de 20 Go à 12 To. Les volumes de stockage Performance et les volumes de stockage Endurance sont disponibles pour le stockage par blocs et pour le stockage de fichiers.
+Entre 100 et 96 000 IOPS peuvent être commandées avec des tailles de stockage allant de 20 Go à 24 To. Les volumes de stockage Performance et les volumes de stockage Endurance sont disponibles pour le stockage par blocs et pour le stockage de fichiers.
 
-Dans cette conception, la solution vCenter Server offre le stockage Endurance pour le stockage connecté. Par conséquent, vous pouvez sélectionner et connecter (via l'automatisation) des exportations Endurance NFS dont la taille est comprise entre 20 Go et 12 To. {{site.data.keyword.cloud_notm}} permet à 64 hôtes vSphere ESXi au maximum de se connecter à une exportation Endurance NFS.
+Dans cette conception, la solution vCenter Server offre le stockage Endurance pour le stockage connecté. Par conséquent, vous pouvez sélectionner et connecter (via l'automatisation) des exportations Endurance NFS dont la taille est comprise entre 20 Go et 24 To. {{site.data.keyword.cloud_notm}} permet à 64 hôtes vSphere ESXi au maximum de se connecter à une exportation Endurance NFS.
 
 Endurance est disponible dans trois niveaux de performance d'IOPS pour prendre en charge les divers besoins des applications.
 

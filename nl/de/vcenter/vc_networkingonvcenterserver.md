@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -19,15 +19,17 @@ Die Informationen in diesem Abschnitt enthalten Hinweise und Voraussetzungen fü
 {: #vc_networkingonvcenterserver-networking-components}
 {: faq}
 
-Informationen zu den Komponenten für den Netzbetrieb, die in Ihrer vCenter Server-Instanz enthalten sind, finden Sie unter [Technische Spezifikationen für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
+Informationen zu den Komponenten für den Netzbetrieb, die in Ihrer vCenter Server-Instanz enthalten sind, finden Sie unter [Technische Spezifikationen für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
 
 ## Hinweise zur Firewall
 {: #vc_networkingonvcenterserver-firewall-considerations}
+{: faq}
 
 Wenn Sie Firewalls verwenden, müssen Sie Regeln für die gesamte Kommunikation aus der {{site.data.keyword.IBM}} CloudDriver-VSI (VSI - virtuelle Serverinstanz) und den SDDC Manager-VMs konfigurieren. Diese Regeln müssen es zulassen, dass alle Protokolle an den IP-Adressen `10.0.0.0/8` und `161.26.0.0/16` kommunizieren können. Beispiele für solche Firewalls sind NSX Distributed Firewalls (DFW) oder Vyatta-Firewalls.
 
 ## NSX mit virtuellen Maschinen verwenden
 {: #vc_networkingonvcenterserver-using-nsx-with-vm}
+{: faq}
 
 Während der Bereitstellung der vCenter Server-Instanz wird in Ihrer Instanz VMware NSX bestellt, installiert, lizenziert und konfiguriert. Auch der NSX-Manager, die NSX-Controller und die NSX-Transportzone werden eingerichtet und jeder ESXi-Server wird mit den NSX-Komponenten konfiguriert.
 
@@ -35,6 +37,7 @@ Zur Verwendung durch die Workload-VMs wird außerdem ein NSX Edge Services Gatew
 
 ## Hinweise zum Ändern von Kennwörtern für NSX-Komponenten
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}
+{: faq}
 
 Prüfen Sie vor dem Ändern der Kennwörter für den NSX-Manager, die NSX-Controller und NSX-Edges die folgenden Hinweise:
 * Ändern Sie nicht das Kennwort für den NSX-Manager, das auf der Seite **Zusammenfassung** der Instanz in der {{site.data.keyword.vmwaresolutions_short}}-Konsole zu finden ist.

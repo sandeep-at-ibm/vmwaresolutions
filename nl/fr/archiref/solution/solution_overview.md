@@ -25,7 +25,7 @@ Figure 1. Présentation de VMware on {{site.data.keyword.cloud_notm}}
 ## Principaux avantages d'IBM Cloud for VMware Solutions
 {: #solution_overview-benefits}
 
-VMware Cloud Foundation et vCenter Server sur {{site.data.keyword.cloud_notm}} fournissent les blocs de construction fondamentaux, notamment VMware vSphere, vCenter Server, NSX, et des options de stockage partagé, telles que vSAN. Ces composants sont nécessaires pour concevoir une architecture de solution de centre de données VMware souple et définie par le logiciel qui soit la mieux adaptée à vos charges de travail.
+VMware Cloud Foundation et vCenter Server on {{site.data.keyword.cloud_notm}} fournissent les blocs de construction fondamentaux, notamment VMware vSphere, vCenter Server, NSX, et des options de stockage partagé, telles que vSAN. Ces composants sont nécessaires pour concevoir une architecture de solution de centre de données VMware souple et définie par le logiciel qui soit la mieux adaptée à vos charges de travail.
 
 En exploitant l'automatisation avancée et l'infrastructure bare metal à service exclusif, vous pouvez rapidement déployer l'environnement VMware complet sur {{site.data.keyword.cloud_notm}} en quelques heures. Vous pouvez dès lors accéder à l'environnement hébergé par IBM et le gérer via les clients VMware natifs, l'interface de ligne de commande, des scripts existants ou d'autres outils compatibles avec l'API vSphere et qui vous sont familiers.
 

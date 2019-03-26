@@ -18,6 +18,7 @@ lastupdated: "2018-10-19"
 此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Spectre 和 Meltdown 修复
+{: #relnotes_v22-spectre}
 
 {{site.data.keyword.vmwaresolutions_short}} 发布了来自 VMware 的补丁，以响应称为 Spectre 和 Meltdown 的漏洞（CVE-2017-5753、CVE-2017-5715 和 CVE-2017-5754）。
 
@@ -25,9 +26,8 @@ lastupdated: "2018-10-19"
 * CVEID：[CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID：[CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-有关更多信息，请参阅[解决 Spectre 和 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)。
-
 ## IBM CloudDriver 虚拟机升级
+{: #relnotes_v22-cloud-driver}
 
 在 V2.2 升级过程中，会通过 CentOS Linux R7.4.1708 重新部署 IBM CloudDriver 虚拟机。此外，所有新供应的实例在 IBM CloudDriver 上都会包含 CentOS Linux R7.4.1708。
 
@@ -41,17 +41,17 @@ lastupdated: "2018-10-19"
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
 ## ESXi 服务器上的高级配置设置
+{: #relnotes_v22-config-esxi}
 
 对于 V2.2 或更高发行版，订购的新实例有一组新的高级配置设置用于 ESXi 服务器。
 对于从前发行版升级到 V2.2 或更高发行版的实例，某些设置需要重新引导 ESXi 服务器。因此仅会自动应用一部分配置设置。
 
 建议将其余配置设置更改为新值，以实现在所有实例上的一致性，并为存储扩展提供充分支持。对于所有 {{site.data.keyword.cloud_notm}} for VMware Solutions 未来发行版，IBM 计划仅测试这些新设置。
 
-有关更多信息，请参阅以下主题中的 _ESXi 服务器的高级配置设置_：
-* [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#advanced-configuration-settings-for-esxi-servers)
-* [Cloud Foundation 材料清单](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom#advanced-configuration-settings-for-esxi-servers)
+有关更多信息，请参阅 [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#advanced-configuration-settings-for-esxi-servers)中的 _ESXi 服务器的高级配置设置_。
 
 ## 针对初始集群最多支持 51 个 ESXi 服务器，针对其他集群最多支持 59 个 ESXi 服务器
+{: #relnotes_v22-esxi-cluster}
 
 对于 V2.2 和更高发行版，现在可以将 ESXi 服务器数增加到最大 51 个（对于初始集群）和最大 59 个（对于其他集群）。
 
@@ -59,22 +59,24 @@ lastupdated: "2018-10-19"
 {:important}
 
 ## vCenter Server 和 Cloud Foundation 实例的更多网络配置选项
+{: #relnotes_v22-network-config}
 
 对于 vCenter Server 和 Cloud Foundation 实例订单，现在可以将现有公用和专用 VLAN 复用于网络配置。现有 VLAN 不可用时，您可以订购一个新的公用 VLAN 和两个新的专用 VLAN。
 
-有关选择现有 VLAN 之前的重要注意事项，请参阅以下内容中的*网络接口设置*部分：
-* [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+有关选择现有 VLAN 之前的重要注意事项，请参阅[订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)中的*网络接口设置*部分。
 
 ## 对 VMware vCenter Server 实例的更新
+{: #relnotes_v22-vcs}
 
 ### NSX 组件和端口组配置设置更新
+{: #relnotes_v22-nsx}
 
 当前发行版会应用 VMware NSX for vSphere 6.3.5 组件更新。有关组件的更多信息，请参阅 [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)。
 
 对于 V2.2 或更高发行版中部署的 VMware vCenter Server 实例，NSX 和端口组配置设置已更改。有关更多信息，请参阅 [vCenter Server 软件材料清单](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#nsx-and-port-group-configuration-settings)中的 *NSX 和端口组配置设置*部分。
 
 ### DNS 配置的新选项
+{: #relnotes_v22-dns}
 
 现在，可以选择在管理集群中部署一个用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server 虚拟服务器实例 (VSI) 或两个高可用性 Microsoft Windows 虚拟机。对于 V2.2 之前的发行版，缺省情况下会自动部署一个用于 Microsoft AD 的 Microsoft Windows VSI。用于选择两个 Microsoft Windows 虚拟机的新选项提供了更多隐私性，并提供了使用 Veeam 服务来备份和复原虚拟机的选项。
 
@@ -84,40 +86,47 @@ lastupdated: "2018-10-19"
 有关更多信息，请参阅[订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#system-settings)中的*系统设置*部分。
 
 ### 增加每个实例的集群数
+{: #relnotes_v22-clusters-per-inst}
 
 现在，对于部署在或已升级到 V2.2 和更高发行版中的 VMware vCenter Server 实例，最多可以添加 10 个集群。有关更多信息，请参阅[添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)。
 
 ## 对 VMware vSphere 集群的更新
+{: #relnotes_v22-vss}
 
 ### 可用于业务合作伙伴客户的组件许可捆绑软件
+{: #relnotes_v22-license-bundles}
 
 现在，业务合作伙伴用户在订购新的 vSphere 集群时，可以从四个组件许可捆绑软件中进行选择。这四个选项为：“管理”、“高级”、“高级（带联网）”或“高级（带联网和管理）”。您还可以在订单中包含其他 VMware 组件。但是，自带许可证选项不可用。
 
 有关更多信息，请参阅[订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)中的*许可设置*部分。
 
 ## 对 NetApp ONTAP Select 实例的更新
+{: #relnotes_v22-netapp}
 
 当前发行版会应用 NetApp ONTAP Select 9.3 的更新。
 
 ### 增加了用于高容量 IBM Cloud 裸机服务器的 SATA 驱动器数
+{: #relnotes_v22-sata-drives}
 
-现在，有 34 个 SATA 驱动器可用于 NetApp ONTAP Select 高容量 {{site.data.keyword.baremetal_short}}。有关更多信息，请参阅 [NetApp ONTAP Select 实例的技术规范](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#technical-specifications-for-netapp-ontap-select-instances)。
+现在，有 34 个 SATA 驱动器可用于 NetApp ONTAP Select 高容量 {{site.data.keyword.baremetal_short}}。有关更多信息，请参阅 [NetApp ONTAP Select 实例的技术规范](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)。
 
 ## 对附加组件服务的更新
+{: #relnotes_v22-services}
 
 ### 增大了 F5 on IBM Cloud 的带宽选项
+{: #relnotes_v22-bandwidth}
 
 现在，为 Cloud Foundation 和 vCenter Server 实例安装 F5 on {{site.data.keyword.cloud_notm}} 服务时，可以选择的最大带宽为 10 Gbps。有关更多信息，请参阅 [F5 on {{site.data.keyword.cloud_notm}} 的注意事项](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)。
 
 ### KMIP for VMware on IBM Cloud
+{: #relnotes_v22-kmip}
 
 现在，可以订购包含 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务的 Cloud Foundation 或 vCenter Server 实例，也可以在初始部署后向现有 Cloud Foundation 或 vCenter Server 实例添加此服务。
 
 此服务用于提供全天候高可用性服务，以管理 {{site.data.keyword.cloud_notm}} 中 VMware 使用的加密密钥。此服务提供了运行时功能，以支持客户创建、检索、激活、撤销和删除加密密钥。此外，此服务还提供了管理功能，以维护客户机凭证与这些加密密钥之间的关联。
 
-有关更多信息，请参阅 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 的注意事项](/docs/services/vmwaresolutions/services/kmip_considerations.html)。
-
 ### IBM Spectrum Protect Plus on IBM Cloud
+{: #relnotes_v22-spp}
 
 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服务现在可用于部署在（或已升级到）V2.2 或更高发行版中的实例。
 
@@ -128,6 +137,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务仅为工作
 有关更多信息，请参阅[管理 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)。
 
 ### 受管服务
+{: #relnotes_v22-managed-services}
 
 Veeam on {{site.data.keyword.cloud_notm}} 和 Zerto on {{site.data.keyword.cloud_notm}} 的受管服务现在可用于 VMware vCenter Server 和 VMware Cloud Foundation 实例。如果您不想管理自己解决方案和环境的复杂性，那么请求这些受管服务。
 
@@ -142,6 +152,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 服务用于提供复制和灾难恢�
 * [请求 Zerto on {{site.data.keyword.cloud_notm}} 的服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 
 ## 新增和更新的文档
+{: #relnotes_v22-new-docs}
 
 * 现在，文档中提供了 Cloud Foundation 和 vCenter Server 实例受支持功能的比较表以及 VMware vSphere 集群的信息。您可以快速查看每种实例类型提供的功能之间的差异。有关更多信息，请参阅[产品比较图表](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inst_comp_chart)。
 
@@ -150,10 +161,10 @@ Zerto on {{site.data.keyword.cloud_notm}} 服务用于提供复制和灾难恢�
   有关更多信息，请参阅以下主题：
 
   * [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
-  * [Cloud Foundation 材料清单](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
   * [VMware vSphere 材料清单](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_bom)
 
 ## 用户界面更新和增强功能
+{: #relnotes_v22-ui}
 
 对整个用户界面进行了改进：
 

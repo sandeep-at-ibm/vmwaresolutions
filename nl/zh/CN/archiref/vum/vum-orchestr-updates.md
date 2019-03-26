@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
-# 编排的升级
+#	编排的升级
 {: #vum-orchestr-updates}
 
 在更新 vSphere ESXi 主机之后，可以使用编排的升级来升级库存中虚拟机的虚拟硬件和 VMware Tools。更新主机后，将首先运行 VMware Tools 升级基线，然后运行虚拟机硬件升级基线。可以在集群、文件夹或数据中心级别使用编排的升级。

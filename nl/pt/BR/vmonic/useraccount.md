@@ -58,7 +58,6 @@ Se as notificações por e-mail ou de console estiverem ativadas para determinad
 {: #useraccount-related}
 
 * [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Pedindo instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Notificações](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)
 * [SoftLayer API](/docs/customer-portal?topic=customer-portal-customerportal_api){:new_window}

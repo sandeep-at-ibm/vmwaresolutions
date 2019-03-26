@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -37,6 +37,7 @@ lastupdated: "2019-02-14"
 
 ## Cloud Foundation 实例的 VMware 资源
 {: #cf_chg_impact-vmware-resources}
+{: faq}
 
 下表列出了在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改 VMware 资源时，可能会影响到的操作。如果用于恢复的解决方案可用，那么还会提供该解决方案。
 
@@ -64,6 +65,7 @@ lastupdated: "2019-02-14"
 
 ## Cloud Foundation 实例的管理子网
 {: #cf_chg_impact-mgmt-subnets}
+{: faq}
 
 以下信息讨论了 {{site.data.keyword.vmwaresolutions_short}} 订购的子网，并提供了一些选项，供您订购额外子网以供自己使用。
 

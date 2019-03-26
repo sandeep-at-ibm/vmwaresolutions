@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-01"
 
 ---
 
 # Netzbetrieb, Sicherung, Disaster-Recovery und Skalierbarkeit
 {: #vcsiks-overview-network}
 
-Lesen Sie die Informationen zu den Aspekten des Netzbetriebs, der Sicherung, der Disaster-Recovery (DR) und der Skalierbarkeit. 
+Lesen Sie die Informationen zu den Aspekten des Netzbetriebs, der Sicherung, der Disaster-Recovery (DR) und der Skalierbarkeit.
 
 ## Netzbetrieb
 {: #vcsiks-overview-network-networking}
@@ -38,12 +38,12 @@ Bei den folgenden Szenarios werden {{site.data.keyword.containerlong_notm}} und 
 #### Netz-VLANs des IBM Cloud Kubernetes-Service
 {: #vcsiks-overview-network-iks-vlans}
 
-Die folgenden Informationen beziehen sich auf öffentliche VLAN-Teilnetze: 
+Die folgenden Informationen beziehen sich auf öffentliche VLAN-Teilnetze:
 - Das primäre öffentliche Teilnetz bestimmt die öffentlichen IP-Adressen, die den Workerknoten während der Clustererstellung zugeordnet werden. Mehrere Cluster in demselben VLAN können ein primäres öffentliches Teilnetz gemeinsam nutzen.
 - Das portierbare öffentliche Teilnetz ist nur an einen einzigen Cluster gebunden und stellt dem Cluster acht öffentliche IP-Adressen zur Verfügung. Drei IP-Adressen sind für Netzfunktionen reserviert. Eine IP-Adresse wird vom Standard-ALB für die öffentliche Ingress-Instanz genutzt und vier IP-Adressen werden zum Erstellen von öffentlichen Netzservices für die Lastausgleichsfunktion verwendet.
 - Portierbare öffentliche IP-Adressen sind permanente, festgelegte IP-Adressen, die für den Zugriff auf Lastausgleichsservices über das Internet verwendet werden.
 
-Die folgenden Informationen beziehen sich auf private VLAN-Teilnetze: 
+Die folgenden Informationen beziehen sich auf private VLAN-Teilnetze:
 - Das primäre private Teilnetz bestimmt die privaten IP-Adressen, die den Workerknoten während der Clustererstellung zugeordnet werden. Mehrere Cluster in demselben VLAN können ein primäres privates Teilnetz gemeinsam nutzen.
 - Das portierbare private Teilnetz ist nur an einen einzigen Cluster gebunden und stellt dem Cluster acht private IP-Adressen zur Verfügung. Drei IP-Adressen sind für Netzfunktionen reserviert. Eine IP-Adresse wird vom Standard-ALB für die private Ingress-Instanz genutzt und vier IP-Adressen werden zum Erstellen von privaten Netzservices für die Lastausgleichsfunktion verwendet.
 - Portierbare private IP-Adressen sind permanente, festgelegte IP-Adressen, die für den Zugriff auf Lastausgleichsservices über das Internet verwendet werden.
@@ -53,11 +53,11 @@ Die folgenden Informationen beziehen sich auf private VLAN-Teilnetze:
 
 Jeder Kubernetes-Cluster wird mit einem Netz-Plug-in namens "Calico" konfiguriert.
 
-Es gibt konfigurierte Standardnetzrichtlinien, die die öffentliche Netzschnittstelle jedes Workerknotens im {{site.data.keyword.containerlong_notm}} schützen. Falls Sie spezielle Anforderungen an die Sicherheit haben oder einen Mehrzonencluster mit aktiviertem VLAN-Spanning nutzen, können Sie mithilfe von Calisto und Kubernetes Netzrichtlinien für einen Cluster erstellen. Mit Kubernetes-Netzrichtlinien können Sie den Datenaustausch im Netz angeben, den Sie von einem und an einen Pod in einem Cluster zulassen oder sperren wollen. 
+Es gibt konfigurierte Standardnetzrichtlinien, die die öffentliche Netzschnittstelle jedes Workerknotens im {{site.data.keyword.containerlong_notm}} schützen. Falls Sie spezielle Sicherheitsanforderungen haben oder einen Mehrzonencluster mit aktiviertem VLAN-Spanning oder VRF (Virtual Routing and Forwarding) nutzen, können Sie mithilfe von Calico und Kubernetes Netzrichtlinien für einen Cluster erstellen. Mit Kubernetes-Netzrichtlinien können Sie den Datenaustausch im Netz angeben, den Sie von einem und an einen Pod in einem Cluster zulassen oder sperren wollen.
 
 Wenn Sie komplexere Netzrichtlinien wie beispielsweise das Sperren von eingehendem Datenverkehr (Ingress) an Laustausgleichsservices festlegen wollen, verwenden Sie Calico-Netzrichtlinien.
 
-Kubernetes-Netzrichtlinien geben an, wie Pods mit anderen Pods und mit externen Endpunkten kommunizieren können. Der Datenverkehr kann auch nach Pod- und Namensbereichsbezeichnungen gefiltert werden. Kubernetes-Netzrichtlinien werden mit kubectl-Befehlen oder den Kubernetes-APIs angewendet. Wenn diese Richtlinien angewendet werden, werden sie automatisch in Calico-Netzrichtlinien konvertiert und von Calico durchgesetzt.
+Kubernetes-Netzrichtlinien geben an, wie Pods mit anderen Pods und mit öffentlichen Netzserviceendpunkten kommunizieren können. Der Datenverkehr kann auch nach Pod- und Namensbereichsbezeichnungen gefiltert werden. Kubernetes-Netzrichtlinien werden mit kubectl-Befehlen oder den Kubernetes-APIs angewendet. Wenn diese Richtlinien angewendet werden, werden sie automatisch in Calico-Netzrichtlinien konvertiert und von Calico durchgesetzt.
 
 Calico-Netzrichtlinien für Kubernetes sind eine übergeordnete Menge der Kubernetes-Netzrichtlinien und werden mithilfe von calicoctl-Befehlen angewendet.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-27"
 
 ---
 
@@ -64,9 +64,9 @@ In folgenden Abschnitt ist die Konfiguration der angehängten Speichereinheit be
 
 Leistungs- und Endurance-Speicher stellen {{site.data.keyword.cloud_notm}}-Speicherlösungen dar, die zur Unterstützung von Anwendungen mit hohem E/A-Aufkommen entworfen werden, bei denen verlässliche Leistungsstufen gewährleistet werden müssen. Diese verlässliche Leistung wird durch die Zuordnung von IOPS (E/A-Operationen pro Sekunde) auf Protokollebene zu einzelnen Datenträgern erreicht.
 
-Mit den Speichergrößen 20 GB bis 12 TB kann eine Anzahl E/A-Operationen pro Sekunde im Bereich von 100 bis 48.000 bestellt werden. Leistungs- und Endurance-Speicherdatenträger stehen sowohl für Block Storage als auch für File Storage zur Verfügung.
+Mit den Speichergrößen 20 GB bis 24 TB kann eine Anzahl E/A-Operationen pro Sekunde im Bereich von 100 bis 96.000 bestellt werden. Leistungs- und Endurance-Speicherdatenträger stehen sowohl für Block Storage als auch für File Storage zur Verfügung.
 
-In diesem Design bietet die vCenter Server-Lösung Endurance-Speicher für den angehängten Speicher. Demzufolge können Sie (via Automatisierung) Endurance NFS-Exporte auswählen und anhängen, deren Größe zwischen 20 GB und maximal 12 TB liegen kann. Mit {{site.data.keyword.cloud_notm}} können bis zu 64 vSphere ESXi-Hosts mit einem einzigen Endurance NFS-Export verbunden werden.
+In diesem Design bietet die vCenter Server-Lösung Endurance-Speicher für den angehängten Speicher. Demzufolge können Sie (via Automatisierung) Endurance NFS-Exporte auswählen und anhängen, deren Größe zwischen 20 GB und maximal 24 TB liegen kann. Mit {{site.data.keyword.cloud_notm}} können bis zu 64 vSphere ESXi-Hosts mit einem einzigen Endurance NFS-Export verbunden werden.
 
 Endurance steht in drei IOPS-Leistungsstufen zur Unterstützung unterschiedlicher Anwendungsanforderungen zur Verfügung.
 

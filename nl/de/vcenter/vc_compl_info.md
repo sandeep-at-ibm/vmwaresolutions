@@ -4,14 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
-# Konformitätsinformationen für vCenter Server- und vCenter Server with Hybridity Bundle-Instanzen
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# Konformitätsinformationen für vCenter Server-Instanzen
 {: #vc_compl_info}
 
-Lesen Sie die folgenden Informationen, um Details zur Konformität für VMware vCenter Server- und vCenter Server with Hybridity Bundle-Instanzen zu erhalten.
+Die folgenden Informationen enthalten Details zur Konformität für VMware vCenter Server-Instanzen. 
+
+Das VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T-Angebot wird für HIPAA-Kunden nicht unterstützt.
+{:important}
 
 ## Verantwortlichkeiten des Kunden im Vergleich zu Verantwortlichkeiten der IBM für vCenter Server on IBM Cloud
 {: #vc_compl_info-responsibility}
@@ -45,7 +52,7 @@ Dieser Cloud-Service ist nicht auf spezielle Sicherheitsanforderungen für regul
 ## Richtlinien für den Zugriff auf Kundeninstanzen
 {: #vc_compl_info-policy-for-access-client-inst}
 
-Die VMware Cloud Foundation- und vCenter Server-Umgebungen, die als {{site.data.keyword.vmwaresolutions_short}} bereitgestellt werden, bieten eine Plattformebene für das VMware-Management für unsere Kunden, um die Virtualisierungsfunktionen zu verwalten. Während des gesamten Lebenszyklus von IBM Cloud for VMware-Produkten und -Services kann es sein, dass Sie auf die Unterstützung von IBM Support zurückgreifen müssen, um die erfolgreiche Implementierung dieser Produkte zu gewährleisten. In den meisten Fällen ist die Intervention von IBM Support das Ergebnis einer Kundenanforderung (d. h. eines Support-Tickets). In seltenen Fällen kann IBM Support jedoch auch proaktiv Unterstützung ohne ein Support-Ticket vom Kunden anbieten, um zukünftige Probleme zu vermeiden. Dieser Zugriff erfolgt über das interne IBM Cloud-Unterstützungsnetz und wird durch ein Support-Ticket dokumentiert, das von IBM Support geöffnet und von IBM Cloud SOC fortlaufend überwacht wird. IBM Support ändert Instanzkonfigurationen nur mit der vorherigen Zustimmung des Kunden. Der Zugriff erfolgt auf VMware-Managementkomponenten und/oder IBM Cloud-Managementkomponenten und nie auf die virtuellen Maschinen oder Anwendungen der Kunden.
+VMware vCenter Server-Umgebungen, die als {{site.data.keyword.vmwaresolutions_short}} bereitgestellt werden, stellen unseren Kunden eine Plattformschicht für das VMware-Management für die Verwaltung der Virtualisierungsfunktionalität zur Verfügung. Während des gesamten Lebenszyklus von IBM Cloud for VMware-Produkten und -Services kann es sein, dass Sie auf die Unterstützung von IBM Support zurückgreifen müssen, um die erfolgreiche Implementierung dieser Produkte zu gewährleisten. In den meisten Fällen ist die Intervention von IBM Support das Ergebnis einer Kundenanforderung (d. h. eines Support-Tickets). In seltenen Fällen kann IBM Support jedoch auch proaktiv Unterstützung ohne ein Support-Ticket vom Kunden anbieten, um zukünftige Probleme zu vermeiden. Dieser Zugriff erfolgt über das interne IBM Cloud-Unterstützungsnetz und wird durch ein Support-Ticket dokumentiert, das von IBM Support geöffnet und von IBM Cloud SOC fortlaufend überwacht wird. IBM Support ändert Instanzkonfigurationen nur mit der vorherigen Zustimmung des Kunden. Der Zugriff erfolgt auf VMware-Managementkomponenten und/oder IBM Cloud-Managementkomponenten und nie auf die virtuellen Maschinen oder Anwendungen der Kunden.
 
 ## Proaktive Unterstützung
 {: #vc_compl_info-proactive-support}
@@ -67,7 +74,7 @@ Die VMware Cloud Foundation- und vCenter Server-Umgebungen, die als {{site.data.
 ### Support-Tickets
 {: #vc_compl_info-support-tickets}
 
-* Cloud Foundation- und vCenter Server-Umgebungen werden nicht aktiv von IBM überwacht und IBM Support greift im Normalbetrieb nicht ohne ein vom Kunden geöffnetes Support-Ticket auf die VMware-Managementschicht zu.
+* vCenter Server-Umgebungen werden nicht aktiv von IBM überwacht und der IBM Support greift im Normalbetrieb nicht ohne ein vom Kunden geöffnetes Support-Ticket auf die VMware-Managementschicht zu. 
 * Wenn ein Kunde ein Support-Ticket für ein Instanz-, Service- oder Bereitstellungsproblem öffnet, wird das Ticket schnell dem zuständigen IBM Support Team zugewiesen, das primär für die Lösung des Problems verantwortlich ist.
 * Aufgrund des Grades an Spezialisierung, der erforderlich ist, um das technische Know-how auf Teamebene aufrecht zu erhalten, ist es in manchen Fällen nötig, dass mehr als ein Support-Team an der Lösung eines bestimmten Softwareproblems beteiligt ist. Dies ist ohne großen Aufwand durchsetzbar, da unsere Support-Teams gut miteinander vernetzt sind und Hand in Hand an aufgetretenen Probleme arbeiten.
 * Um das Problem zu untersuchen, muss IBM möglicherweise auf Informationen zu Ihrem System in Bezug auf den Fehler zugreifen oder den Fehler erneut generieren, um zusätzliche Informationen zu erhalten.
@@ -136,5 +143,4 @@ Wenn der Kunde keine Zustimmung zur proaktiven Unterstützung für eine Instanz 
 {: #vc_compl_info-related}
 
 * [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Übersicht über vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
 * [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

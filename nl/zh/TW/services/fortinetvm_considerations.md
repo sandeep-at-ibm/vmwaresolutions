@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 Fo
 {:note}
 
 ## FortiGate Virtual Appliance on IBM Cloud 的技術規格
-{: #technical-specifications-for-fortigate-virtual-appliance-on-ibm-cloud}
+{: #fortinetvm_considerations-specs}
 
 
 下列元件已訂購並包括在 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務中：

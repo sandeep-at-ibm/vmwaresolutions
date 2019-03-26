@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -27,7 +27,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}}에 대한 단일 노드 평
 아키텍처 디자인에 대한 자세한 정보는 [vCenter Server on IBM Cloud에 대한 단일 노드 평가판의 HCX on IBM Cloud 아키텍처 디자인](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)을 참조하십시오.
 
 ## vCenter Server 인스턴스에 대한 단일 노드 평가판의 기술 스펙
-{: #vc_trial_hybrid_orderinginstance-tech-specs}
+{: #vc_trial_hybrid_orderinginstance-specs}
 
 다음 컴포넌트가 vCenter Server 인스턴스에 대한 단일 노드 평가판에 포함됩니다.
 
@@ -173,7 +173,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 #### 인스턴스 세부사항 보기
 {: #vc_trial_hybrid_orderinginstance-view-inst-details}
 
-인스턴스 세부사항을 보고 배치 상태를 확인할 수 있습니다. 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하고 **vCenter Server 인스턴스** 또는 **온프레미스 HCX 인스턴스** 테이블을 찾아 주문한 인스턴스에 대한 정보를 보십시오.
+인스턴스 세부사항을 보고 배치 상태를 확인할 수 있습니다. 왼쪽 탐색 분할창에서 **리소스**를 클릭하고 **vCenter Server 인스턴스** 또는 **온프레미스 HCX 인스턴스** 테이블을 찾아 주문한 인스턴스에 대한 정보를 보십시오.
 
 인스턴스가 성공적으로 배치되는 경우 이 주제의 *기술 스펙* 섹션에 설명되어 있는 컴포넌트가 VMware 가상 플랫폼에 설치되며, 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 서비스 정품 인증 키는 **온프레미스 HCX 인스턴스**에 나열됩니다.
 
@@ -184,8 +184,8 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 
 온프레미스 HCX Enterprise Manager를 설치하고 HCX on {{site.data.keyword.cloud_notm}} 인스턴스에 대한 연결을 구성하십시오.
 
-1. **배치된 인스턴스** 페이지에서 온프레미스 정품 인증 키를 찾으십시오.
-  1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. **리소스** 페이지에서 온프레미스 정품 인증 키를 찾으십시오.
+  1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
   2. **vCenter Server 인스턴스** 테이블에서 **유형** 열을 검토하여 vCenter Server 단일 노드 평가판 인스턴스를 찾고 인스턴스 이름을 기록해 두십시오.
   3. **온프레미스 HCX 인스턴스** 테이블로 스크롤하고 **이름** 열을 검토하여 *-OnPrem* 접두어로 정렬한 단일 노드 인스턴스와 동일한 이름을 가진 인스턴스를 찾으십시오.
   4. **정품 인증 키** 필드에 있는 키를 기록해 두십시오.
@@ -243,7 +243,7 @@ vCenter Server 인스턴스에 대한 단일 노드 평가판을 삭제하는 �
 
 vCenter Server 인스턴스에 대한 단일 노드 평가판을 삭제하려면 다음 단계를 완료하십시오.
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 삭제할 인스턴스를 찾으십시오.
 3. **조치** 열에서 삭제 아이콘을 클릭하십시오.
    인스턴스의 상태가 **삭제 중**으로 변경됩니다. 인스턴스가 삭제되면 인스턴스의 컴포넌트가 릴리스되고 인스턴스의 상태가 **삭제됨**으로 변경됩니다.
@@ -254,6 +254,6 @@ vCenter Server 인스턴스에 대한 단일 노드 평가판을 삭제하려면
 ## 관련 링크
 {: #vc_trial_hybrid_orderinginstance-related}
 
-* [vCenter Server on IBM Cloud에 대한 단일 노드 평가판의 HCX on IBM Cloud 아키텍처 디자인](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
+* [vCenter Server on IBM Cloud에 대한 단일 노드 평가판의 HCX on IBM Cloud 아키텍처 디자인](https://console.bluemix.net/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [VMware Hybrid Cloud Extension 문서](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

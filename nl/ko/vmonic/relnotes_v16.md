@@ -14,6 +14,7 @@ lastupdated: "2017-05-22"
 이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
 ## VMware Cloud Foundation 인스턴스에 대한 업데이트
+{: #relnotes_v16-vcf}
 
 다음 컴포넌트가 새로 작성되거나 업데이트됩니다.
 
@@ -22,11 +23,11 @@ lastupdated: "2017-05-22"
 *  새 하드웨어 스펙: 사용자 요구사항에 따른 **소형** 또는 **표준**
 *  배치에 사용 가능한 새 데이터 센터: **HKG02 - 홍콩**, **OSL01 - 오슬로**, **SEO01 - 서울**, **SNG01 - 싱가포르** 및 **SYD04 - 시드니**
 
-전체 컴포넌트의 목록은 [VMware Cloud Foundation 개요](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)를 참조하십시오.
-
 ## VMware vCenter Server 인스턴스에 대한 업데이트
+{: #relnotes_v16-vcs}
 
 ### vCenter Server 인스턴스에 대한 하드웨어 개선사항
+{: #relnotes_v16-hw-vcs}
 
 V1.6 릴리스부터 vCenter Server 인스턴스에 대한 여러 개선사항을 사용할 수 있습니다.
 
@@ -48,6 +49,7 @@ V1.6 릴리스부터 vCenter Server 인스턴스에 대한 여러 개선사항�
 V1.6 이전 인스턴스의 기타 모든 조치는 더 이상 사용할 수 없습니다.
 
 ### vCenter Server 인스턴스에 대한 네트워킹 개선사항
+{: #relnotes_v16-network-vcs}
 
 *  사용자 VM(가상 머신)이 인터넷에 액세스할 수 있도록 사용자 대신 공용 VLAN의 16개 IP 주소가 있는 공인 서브넷이 주문됩니다.
 *  사용자 VM이 SoftLayer® 내부 네트워크에 액세스할 수 있도록 사용자 대신 사설 VLAN의 64개 IP 주소가 있는 사설 서브넷이 주문됩니다.
@@ -71,10 +73,11 @@ V1.6 이전 인스턴스의 기타 모든 조치는 더 이상 사용할 수 없
    *  [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## 사용성 개선사항
+{: #relnotes_v16-ui}
 
 개선사항은 사용자 인터페이스를 통해 수행됩니다.
 
 *  콘솔의 기본 탐색이 사용자 인터페이스의 모든 영역에 대한 액세스 권한이 있는 왼쪽 탐색 분할창의 도입을 통해 크게 개선되었습니다. 새 인스턴스를 빠르게 주문하고, 배치된 인스턴스를 보고, 시스템 알림을 검토하고, 설정을 변경하며, 온라인 문서에 액세스할 수 있습니다.
 *  왼쪽 탐색 분할창에서 액세스할 수 있는 새 **시작하기** 분할창이 주문 중인 인스턴스의 컴포넌트에 대한 올바른 결정을 할 수 있도록 콘솔에 직접 충분한 세부사항을 제공할 수 있습니다. 또한 **시작하기** 페이지에서 필수 사용자 계정과 같이 인스턴스 주문을 위한 모든 전제조건 충족부터 주문하기까지의 인스턴스 주문 프로세스를 통해 단계별로 안내됩니다.
-*  두 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스에 대한 요약이 왼쪽 탐색 분할창의 **배치된 인스턴스** 메뉴에서 액세스할 수 있는 단일 페이지로 통합됩니다. 페이지에서 적절한 탭을 선택하여 Cloud Foundation 인스턴스 또는 vCenter Server 인스턴스를 필터링할 수 있습니다.
-* Zerto 재해 복구가 인스턴스에 설치된 경우 한 번의 클릭으로 서비스 세부사항 페이지에서 Zerto 콘솔로 바로 액세스할 수 있습니다. 자세한 정보는 [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices) 및 [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)를 참조하십시오.
+*  두 Cloud Foundation 인스턴스 및 vCenter Server 인스턴스에 대한 요약이 왼쪽 탐색 분할창의 **리소스** 메뉴에서 액세스할 수 있는 단일 페이지로 통합됩니다. 페이지에서 적절한 탭을 선택하여 Cloud Foundation 인스턴스 또는 vCenter Server 인스턴스를 필터링할 수 있습니다.
+* Zerto 재해 복구가 인스턴스에 설치된 경우 한 번의 클릭으로 서비스 세부사항 페이지에서 Zerto 콘솔로 바로 액세스할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)를 참조하십시오.

@@ -4,14 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
-# Información de conformidad para vCenter Server y vCenter Server con instancias del paquete híbrido (Hybridity)
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# Información de conformidad para instancias de vCenter Server
 {: #vc_compl_info}
 
-Revise la información siguiente para obtener detalles sobre la conformidad de las instancias de VMware vCenter Server y vCenter Server con el paquete híbrido (Hybridity).
+Revise la información siguiente para obtener detalles sobre la conformidad de las instancias de VMware vCenter Server.
+
+La oferta VMware vCenter Server on {{site.data.keyword.cloud_notm}} con NSX-T no está soportada para clientes HIPAA.
+{:important}
 
 ## Responsabilidad del cliente y de IBM en relación a vCenter Server on IBM Cloud
 {: #vc_compl_info-responsibility}
@@ -45,7 +52,7 @@ Este Servicio de nube no ha sido diseñado para cumplir ningún requisito de seg
 ## Política para acceder a instancias de clientes
 {: #vc_compl_info-policy-for-access-client-inst}
 
-Los entornos VMware Cloud Foundation y vCenter Server, que se suministran como {{site.data.keyword.vmwaresolutions_short}}, proporcionan una capa de plataforma de gestión de VMware para que nuestros clientes gestionen las funciones de virtualización. A lo largo del ciclo de vida de los productos y servicios de IBM Cloud for VMware, es posible que se requiera el servicio de soporte de IBM para garantizar su éxito. Generalmente, la intervención del equipo de soporte de IBM es el resultado de una solicitud del cliente (es decir, una incidencia de soporte). Sin embargo, en raras ocasiones, el servicio de soporte de IBM puede ayudar de forma proactiva y sin una incidencia de soporte escrita por el cliente para evitar problemas futuros. Este acceso se realiza a través de la red de soporte interna de IBM Cloud y se documenta a través de una incidencia de soporte abierta por el servicio de soporte de IBM y supervisada continuamente por IBM Cloud SOC. En ningún momento el servicio de soporte de IBM modificará la configuración de la instancia sin el consentimiento previo del cliente. El acceso se realiza a los componentes de gestión de VMware y/o a los componentes de gestión de IBM Cloud y nunca a las máquinas virtuales ni a las aplicaciones del cliente.
+Los entornos VMware vCenter Server, que se suministran como {{site.data.keyword.vmwaresolutions_short}}, proporcionan una capa de plataforma de gestión de VMware para que nuestros clientes gestionen las funciones de virtualización. A lo largo del ciclo de vida de los productos y servicios de IBM Cloud for VMware, es posible que se requiera el servicio de soporte de IBM para garantizar su éxito. Generalmente, la intervención del equipo de soporte de IBM es el resultado de una solicitud del cliente (es decir, una incidencia de soporte). Sin embargo, en raras ocasiones, el servicio de soporte de IBM puede ayudar de forma proactiva y sin una incidencia de soporte escrita por el cliente para evitar problemas futuros. Este acceso se realiza a través de la red de soporte interna de IBM Cloud y se documenta a través de una incidencia de soporte abierta por el servicio de soporte de IBM y supervisada continuamente por IBM Cloud SOC. En ningún momento el servicio de soporte de IBM modificará la configuración de la instancia sin el consentimiento previo del cliente. El acceso se realiza a los componentes de gestión de VMware y/o a los componentes de gestión de IBM Cloud y nunca a las máquinas virtuales ni a las aplicaciones del cliente.
 
 ## Soporte proactivo
 {: #vc_compl_info-proactive-support}
@@ -67,7 +74,7 @@ Los entornos VMware Cloud Foundation y vCenter Server, que se suministran como {
 ### Incidencias de soporte
 {: #vc_compl_info-support-tickets}
 
-* IBM no supervisa de forma activa los entornos de Cloud Foundation y vCenter Server, y el servicio de soporte de IBM no entrará en la capa de gestión de VMware en operaciones normales sin una incidencia de soporte escrita por el cliente.
+* IBM no supervisa de forma activa los entornos de vCenter Server, y el servicio de soporte de IBM no entrará en la capa de gestión de VMware en operaciones normales sin una incidencia de soporte escrita por el cliente.
 * Cuando un cliente abre una incidencia de soporte para un problema de una instancia, un servicio o un suministro, la incidencia se asigna rápidamente al equipo de soporte e IBM adecuado, el cual será el principal responsable de solucionar el problema.
 * Debido al nivel de especialización que se necesita para ofrecer una experiencia técnica superior a nivel de equipo, a veces es necesario implicar a más de un equipo de soporte en la resolución de un problema de software concreto. Esto se gestiona fácilmente, ya que nuestros equipos de soporte trabajan en red y como uno solo para resolver los problemas que puedan surgir.
 * Para investigar el problema, es posible que IBM necesite acceder a la información del sistema relacionada con el problema o puede que sea necesario reproducir la anomalía para obtener información adicional.
@@ -137,5 +144,4 @@ Si el cliente no ha otorgado el consentimiento para un soporte proactivo para un
 {: #vc_compl_info-related}
 
 * [Visión general de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Visión general de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
 * [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

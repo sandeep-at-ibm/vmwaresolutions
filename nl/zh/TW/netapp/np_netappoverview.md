@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -61,7 +61,7 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目能提供儲
 NetApp ONTAP Select 是在 VMware 叢集裡執行，並將主機上的本端儲存空間虛擬化。NetApp ONTAP Select 部署在專用模型中，其中其他工作負載預期不會與其共用叢集。因此，NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目的硬體配置僅根據 NetApp ONTAP Select 的需求調整大小。
 
 ## NetApp ONTAP Select 實例的技術規格
-{: #technical-specifications-for-netapp-ontap-select-instances}
+{: #np_netappoverview-specs}
 
 NetApp ONTAP Select 實例中包含下列元件。
 

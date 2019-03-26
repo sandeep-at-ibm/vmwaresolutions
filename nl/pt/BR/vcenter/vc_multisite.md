@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -50,7 +50,7 @@ O gráfico a seguir representa a visão geral da implementação de vários site
 
 Figura 1. Implementação de vários sites do vCenter Server
 
-![Implementação multissite do vCenter Server](../sddc/multisite-hub-spoke.svg "Implementação multissite do vCenter Server")
+![Implementação multissite do vCenter Server](../vcenter/multisite-hub-spoke.svg "Implementação multissite do vCenter Server")
 
 O modelo contém as camadas a seguir:
 

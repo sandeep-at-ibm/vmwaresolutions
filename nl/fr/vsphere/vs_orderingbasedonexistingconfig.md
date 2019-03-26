@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -47,8 +47,7 @@ Si vous avez sauvegardé la configuration de cluster en tant que modèle, vous r
 
 Si vous avez passé commande, le déploiement du cluster démarre automatiquement. Une conformation par courrier électronique vous avise que la commande est en cours de traitement. Lorsque le cluster est prêt pour son utilisation, une notification vous en avertit.
 
-Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Instances déployées**.
-{:note}
+Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Ressources**.{:note}
 
 ## Liens connexes
 {: #vs_orderingbasedonexistingconfig-related}

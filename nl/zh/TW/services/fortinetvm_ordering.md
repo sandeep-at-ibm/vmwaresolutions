@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -73,7 +73,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的授權模型�
         <dd class="dd">除了下列服務之外，此組合還包括所有標準防火牆和 UTM 服務：<ul><li>雲端存取安全分配管理系統 (CASB) - 此服務為雲端型服務提供可見性、相符性、資料安全及威脅保護。</li><li>工業安全 - 此服務為一般 ICS/SCADA 通訊協定提供簽章。</li><li>安全評級 - 此服務提供審核功能，以識別重要漏洞和配置弱點，並實作最佳作法建議。</li></ul></dd>
 </dl>
 
-在 2018 年第三季，Fortinet 在其企業組合中新增了三項新服務（CASB 、「工業安全」和「安全評級」）。這些服務僅適用於 FortiGate 6.0。{:note}
+在 2018 年第三季，Fortinet 在其企業組合中新增了三項新服務（CASB、「工業安全」和「安全評級」）。這些服務僅適用於 FortiGate 6.0。{:note}
 
 您無法在安裝服務之後變更授權模型。若要變更授權模型，您必須移除現有服務，然後選取不同的授權選項來重新安裝服務。{:important}
 
@@ -82,7 +82,6 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的授權模型�
 
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)
 * [管理 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
-* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
 * [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

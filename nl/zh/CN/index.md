@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -55,7 +55,7 @@ lastupdated: "2019-02-21"
    </tr>
    <tr>
       <td>IBM 标识</td>
-      <td>通过使用 **IBM 标识**，您可以对使用的所有 IBM 产品和服务（包括 {{site.data.keyword.cloud_notm}}）使用一个登录用户名。{{site.data.keyword.vmwaresolutions_short}} 在 {{site.data.keyword.cloud_notm}}“目录”中作为基础架构解决方案提供。要访问 {{site.data.keyword.vmwaresolutions_short}} 控制台，您必须具有 **IBM 标识**。<br><br>要使用 **IBM 标识**登录到 {{site.data.keyword.vmwaresolutions_short}} 控制台，必须将 **IBM 标识**与 {{site.data.keyword.cloud_notm}} 帐户相关联。首次登录到控制台时，系统会引导您将现有 **IBM 标识**与 {{site.data.keyword.cloud_notm}} 帐户相关联，或者注册一个新的 {{site.data.keyword.cloud_notm}} 帐户。新的 {{site.data.keyword.cloud_notm}} 帐户将自动与您的 **IBM 标识**关联。您只需要完成此过程一次。<br><br>如果将 **IBM 标识**与 {{site.data.keyword.cloud_notm}} 帐户相关联时发生问题，请参阅 [{{site.data.keyword.cloud_notm}} 访问故障诊断](https://console.cloud.ibm.com/docs/account/ts_accessing.html)。</td>
+      <td>通过使用 **IBM 标识**，您可以对使用的所有 IBM 产品和服务（包括 {{site.data.keyword.cloud_notm}}）使用一个登录用户名。{{site.data.keyword.vmwaresolutions_short}} 在 {{site.data.keyword.cloud_notm}}“目录”中作为基础架构解决方案提供。要访问 {{site.data.keyword.vmwaresolutions_short}} 控制台，您必须具有 **IBM 标识**。<br><br>要使用 **IBM 标识**登录到 {{site.data.keyword.vmwaresolutions_short}} 控制台，必须将 **IBM 标识**与 {{site.data.keyword.cloud_notm}} 帐户相关联。首次登录到控制台时，系统会引导您将现有 **IBM 标识**与 {{site.data.keyword.cloud_notm}} 帐户相关联，或者注册一个新的 {{site.data.keyword.cloud_notm}} 帐户。新的 {{site.data.keyword.cloud_notm}} 帐户将自动与您的 **IBM 标识**关联。您只需要完成此过程一次。<br><br>如果将 **IBM 标识**与 {{site.data.keyword.cloud_notm}} 帐户相关联时发生问题，请参阅[访问 {{site.data.keyword.cloud_notm}} 的故障诊断](/docs/account?topic=account-accessing#accessing)。</td>
    </tr>
    <tr>
       <td>IBM Cloud 帐户</td>
@@ -63,13 +63,9 @@ lastupdated: "2019-02-21"
    </tr>
    <tr>
       <td>IBM Cloud Infrastructure (SoftLayer) 帐户</td>
-      <td>{{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户先前称为 IBM SoftLayer 帐户。有关帐户必须满足的需求的更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。<br><br>您可以将 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户与 {{site.data.keyword.cloud_notm}} 帐户相链接，以使用组合基础架构即服务 (IaaS) 和平台即服务 (PaaS) 资源。然后，可以通过一次登录来访问 IaaS 资源和 PaaS 资源。链接帐户以后，还会将您使用的所有 PaaS 和 IaaS 资源的费用都开具在一张发票中。<ul><li>如果您没有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户，请遵循[注册 IBM Cloud Infrastructure (SoftLayer) 帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)中的过程请求 Infrastructure (SoftLayer) 帐户，然后遵循[链接 IBM 标识帐户](https://console.cloud.ibm.com/docs/account/softlayerlink.html)中的指示信息将 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户与 {{site.data.keyword.cloud_notm}} 帐户相链接。</li><li>如果您已有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户，那么可以通过按[链接 IBM 标识帐户](https://console.cloud.ibm.com/docs/account/softlayerlink.html)中的过程操作将其与 {{site.data.keyword.cloud_notm}} 帐户相链接。</li></ul></td>
+      <td>{{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户先前称为 IBM SoftLayer 帐户。有关帐户必须满足的需求的更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。<br><br>您可以将 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户与 {{site.data.keyword.cloud_notm}} 帐户相链接，以使用组合基础架构即服务 (IaaS) 和平台即服务 (PaaS) 资源。然后，可以通过一次登录来访问 IaaS 资源和 PaaS 资源。链接帐户以后，还会将您使用的所有 PaaS 和 IaaS 资源的费用都开具在一张发票中。<ul><li>如果您没有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户，请遵循[注册 IBM Cloud Infrastructure (SoftLayer) 帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)中的过程请求 Infrastructure (SoftLayer) 帐户，然后遵循[切换到 IBM 标识和链接帐户](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的过程将 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户与 {{site.data.keyword.cloud_notm}} 帐户相链接。</li><li>如果您已有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户，那么可以通过遵循[切换到 IBM 标识和链接帐户](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的过程将其与 {{site.data.keyword.cloud_notm}} 帐户相链接。</li></ul></td>
    </tr>
    </table>
-
-有关更多信息，请参阅以下主题：
-* [注册必需的帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
-* [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)
 
 ### 部署产品
 {: #getting-started-depl-offerings}
@@ -89,10 +85,6 @@ lastupdated: "2019-02-21"
     <tr>
        <td>[VMware vCenter Server on IBM Cloud with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)</td>
        <td>vCenter Server with Hybridity 产品是一种托管的专用云，可帮助您快速、轻松地将内部部署基础架构扩展到云中。VMware 环境基于 IBM 提供的 VMware 软件定义的数据中心许可证，并包含 VMware Hybrid Cloud Extension (HCX)。通过使用 HCX，可以安全地将内部部署 vSphere 5.0+ 环境与 {{site.data.keyword.cloud_notm}} 站点相连接，以实现无缝的基础架构混合性和真正的应用程序移动性。</td>
-    </tr>
-    <tr>
-       <td>[VMware Cloud Foundation on IBM Cloud](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)</td>
-       <td>Cloud Foundation 产品使用专用于每个用户部署的标准 {{site.data.keyword.cloud_notm}} 计算、存储和网络资源，提供统一的 VMware 虚拟环境。</td>
     </tr>
     <tr>
        <td>[VMware vSphere on IBM Cloud](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview)</td>
@@ -136,7 +128,7 @@ lastupdated: "2019-02-21"
        <td>HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服务通过集成密钥管理提供高强度加密功能，以确保工作负载在整个生命周期中的安全。此服务可以提供操作系统级别和数据级别的加密，这意味着可以对工作负载中的任何目录、文件夹或文件进行加密和解密。</td>
     </tr>
     <tr>
-       <td>[HyTrust KeyControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)</td>
+       <td>[HyTrust KeyControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)</td>
        <td>HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 服务通过自动化和简化加密密钥的生命周期来简化已加密工作负载的管理工作。该服务可以使用符合 FIPS 140-2 的加密来轻松管理大批加密密钥。</td>
     </tr>
     <tr>
@@ -156,7 +148,7 @@ lastupdated: "2019-02-21"
        <td>Veeam on {{site.data.keyword.cloud_notm}} 服务可与 VMware 系统管理程序无缝集成，以帮助企业实现高可用性。此服务可为应用程序和数据提供恢复点和时间目标。在完成配置后的 15 分钟内就会提供恢复点和时间目标。通过使用此服务，您可以在 Veeam 控制台中直接控制基础架构的所有虚拟机的备份和复原。</td>
     </tr>
     <tr>
-       <td>[VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)</td>
+       <td>[VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations)</td>
        <td>HCX on {{site.data.keyword.cloud_notm}} 服务可以将内部部署数据中心的网络无缝扩展到 {{site.data.keyword.cloud_notm}}，这允许虚拟机 (VM) 在不进行任何转换或更改的情况下，迁移到 {{site.data.keyword.cloud_notm}} 或从中迁移出来。</td>
     </tr>
     <tr>
@@ -189,7 +181,6 @@ lastupdated: "2019-02-21"
 有关如何订购实例的信息，请参阅基于您选择的部署产品的以下主题：
 * [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [订购 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
-* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 * [订购 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
 
@@ -201,7 +192,6 @@ lastupdated: "2019-02-21"
 有关如何查看您订购的实例的信息，请参阅以下主题：
 * [查看 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [查看 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [查看 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
 * [查看 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
 
 ## 步骤 5：管理实例的附加服务
@@ -212,7 +202,6 @@ lastupdated: "2019-02-21"
 有关如何管理服务的信息，请参阅以下主题：
 * [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
 
 ## 下一步
 {: #getting-started-next}

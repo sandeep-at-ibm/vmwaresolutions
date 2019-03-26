@@ -4,14 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
-# vCenter Server 和 vCenter Server with Hybridity Bundle 实例的合规性信息
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# vCenter Server 实例的合规性信息
 {: #vc_compl_info}
 
-请查看以下信息，以获取有关 VMware vCenter Server 和 vCenter Server with Hybridity Bundle 实例合规性的详细信息。
+请查看以下信息，以获取有关 VMware vCenter Server 实例合规性的详细信息。
+
+HIPAA 客户不支持 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T 产品。
+{:important}
 
 ## vCenter Server on IBM Cloud 的客户责任与 IBM 责任
 {: #vc_compl_info-responsibility}
@@ -45,7 +52,7 @@ lastupdated: "2019-02-14"
 ## 用于访问客户实例的策略
 {: #vc_compl_info-policy-for-access-client-inst}
 
-VMware Cloud Foundation 和 vCenter Server 环境作为 {{site.data.keyword.vmwaresolutions_short}} 交付，用于为客户提供 VMware 管理平台层来管理虚拟化功能。在 IBM Cloud for VMware 产品和服务的整个生命周期中，可能需要 IBM 支持人员来帮助确保这些产品和服务成功使用。在大多数情况下，IBM 支持人员的干预是客户请求（即，支持凭单）的结果。但是，在极少数情况下，IBM 支持人员可能会主动提供帮助，而无需客户的书面支持凭单，目的是预防未来发生进一步的问题。此类访问通过 IBM Cloud 内部支持网络执行，通过 IBM 支持人员开具的支持凭单进行记录，并由 IBM Cloud SOC 持续监控。在任何情况下，IBM 支持人员都不会未经客户同意就修改实例配置。访问的对象是 VMware 管理组件和/或 IBM Cloud 管理组件，永远不会访问客户的虚拟机或应用程序。
+VMware vCenter Server 环境作为 {{site.data.keyword.vmwaresolutions_short}} 交付，用于为客户提供 VMware 管理平台层来管理虚拟化功能。在 IBM Cloud for VMware 产品和服务的整个生命周期中，可能需要 IBM 支持人员来帮助确保这些产品和服务成功使用。在大多数情况下，IBM 支持人员的干预是客户请求（即，支持凭单）的结果。但是，在极少数情况下，IBM 支持人员可能会主动提供帮助，而无需客户的书面支持凭单，目的是预防未来发生进一步的问题。此类访问通过 IBM Cloud 内部支持网络执行，通过 IBM 支持人员开具的支持凭单进行记录，并由 IBM Cloud SOC 持续监控。在任何情况下，IBM 支持人员都不会未经客户同意就修改实例配置。访问的对象是 VMware 管理组件和/或 IBM Cloud 管理组件，永远不会访问客户的虚拟机或应用程序。
 
 ## 主动支持
 {: #vc_compl_info-proactive-support}
@@ -67,7 +74,7 @@ VMware Cloud Foundation 和 vCenter Server 环境作为 {{site.data.keyword.vmwa
 ### 支持凭单
 {: #vc_compl_info-support-tickets}
 
-* IBM 不会主动监视 Cloud Foundation 和 vCenter Server 环境，并且 IBM 支持人员也不会在没有客户书面支持凭单的情况下，进入正常运行的 VMware 管理层。
+* IBM 不会主动监视 vCenter Server 环境，并且 IBM 支持人员也不会在没有客户书面支持凭单的情况下，进入正常运行的 VMware 管理层。
 * 客户针对实例、服务或供应问题开具支持凭单后，该凭单会迅速分配给相应的 IBM 支持团队，他们将是负责解决该问题的主要参与方。
 * 由于在团队级别维护高级技术专业知识所需的专业水平，有时需要多个支持团队参与解决特定软件问题。这一点可轻松得到解决，因为我们的支持团队全部联网在一起，可以作为一个整体通力合作来解决出现的任何问题。
 * 为了调查问题，IBM 可能需要访问您系统上与故障相关的信息，或者可能需要再现故障以获取其他信息。
@@ -137,5 +144,4 @@ VMware Cloud Foundation 和 vCenter Server 环境作为 {{site.data.keyword.vmwa
 {: #vc_compl_info-related}
 
 * [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [vCenter Server with Hybridity Bundle 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

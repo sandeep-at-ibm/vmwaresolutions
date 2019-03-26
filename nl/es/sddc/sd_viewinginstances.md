@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -22,7 +22,7 @@ Visualice el resumen y la información detallada de las instancias de VMware Clo
 
 Para ver un resumen de todas las instancias de Cloud Foundation que se han suministrado para una cuenta de usuario, complete los pasos siguientes:
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En el banner de la consola, pulse el icono de la cuenta de usuario y, a continuación, pulse el campo **Cuenta** para seleccionar la cuenta de usuario para la que desea comprobar las instancias.
 3. En la tabla **Instancias de Cloud Foundation**, vea la lista de las instancias:
 
@@ -136,6 +136,5 @@ Revise los temas siguientes para obtener información que le ayudará a seguir l
 ## Enlaces relacionados
 {: #sd_viewinginstances-related}
 
-* [Pedido de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Ampliación y reducción de la capacidad para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [Supresión de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance)

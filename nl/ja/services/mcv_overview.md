@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -20,7 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}} では、企業がクラ�
 このアーキテクチャーは、さまざまなエンタープライズ・サービスを網羅し、クラウド・ベースのアプリケーションの監視とトラブルシューティングを行うために作成されたネットワーク、ストレージ、回復力などのツールを備えています。 さらに、このアーキテクチャーは、{{site.data.keyword.cloud_notm}} 上に構築された IBM Services Platform with Watson と統合することができますので、より広範囲にサービスを利用できます。 お客様はプラットフォームのコグニティブ機能を使用して、継続的運用の維持に役立つ新しいビジネス洞察を得るために、より効率的にデータをマイニングできます。
 
 ## Mission Critical VMware on IBM Cloud の技術仕様
-{: #technical-specifications-for-mission-critical-vmware-on-ibm-cloud}
+{: #mcv_overview-specs}
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} のアーキテクチャーは、お客様のワークロードの自動フェイルオーバーを提供するエンドツーエンドのリファレンス・アーキテクチャーです。 IBM マネージド・サービスによる {{site.data.keyword.cloud_notm}} マルチゾーン領域を使用して、以下の構成要素をカバーします。
 

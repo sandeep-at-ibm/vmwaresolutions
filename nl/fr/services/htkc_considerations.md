@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # Présentation de HyTrust KeyControl on IBM Cloud
-{: #hytrust-keycontrol-on-ibm-cloud-overview}
+{: #htkc_considerations}
 
 Le service HyTrust KeyControl on {{site.data.keyword.cloud}} simplifie la gestion des charges de travail chiffrées. Ce service automatise et simplifie le cycle de vie des clés de chiffrement et comprend le stockage, la distribution, la rotation et la révocation des clés. Lorsqu'elles utilisent le chiffrement compatible FIPS 140-2, les entreprises peuvent facilement gérer des clés de chiffrement à grande échelle.
 
@@ -45,7 +45,7 @@ Vous pouvez éventuellement indiquer que deux dispositifs KeyControl doivent êt
 
 Une licence HyTrust KeyControl est commandée pour chaque installation d'instance.
 
-## Considérations à prendre en compte lorsque vous retirez HyTrust KeyControl on IBM Cloud
+## Remarques relatives au retrait de HyTrust KeyControl on IBM Cloud
 {: #htkc_considerations-remove}
 
 Avant de retirer le service HyTrust KeyControl on {{site.data.keyword.cloud_notm}}, prenez soin de dissocier tous les clients de l'utilisation de KeyControl. Après avoir retiré le service, les clés peuvent être supprimées et vous risquez de ne plus pouvoir accéder à vos machines virtuelles.

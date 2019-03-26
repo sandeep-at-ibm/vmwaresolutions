@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-18"
 ## VRF(Virtual Routing and Forwarding)
 {: #vcsicp-arch-overview-infrastructure-vrf}
 
-서브넷 IP 블록 간에 자동 라우팅을 사용하여 VLAN Spanning과 유사한 기능을 제공하도록 {{site.data.keyword.cloud}} 계정을 VRF(Virtual Routing and Forwarding) 계정으로서 구성할 수 있습니다. Direct-Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
+서브넷 IP 블록 간에 자동 글로벌 라우팅을 사용하여 VRF(Virtual Routing and Forwarding) 계정으로 {{site.data.keyword.cloud}} 계정을 구성할 수 있습니다. Direct-Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
 
 ## Direct Link
 {: #vcsicp-arch-overview-infrastructure-direct-link}

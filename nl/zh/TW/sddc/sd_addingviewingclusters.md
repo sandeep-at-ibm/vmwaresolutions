@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # 新增、檢視及刪除 Cloud Foundation 實例的叢集
-{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
+{: #sd_addingviewingclusters}
 
 您在訂購實例時所配置的 ESXi 伺服器會依預設叢集進行分組。預設叢集名稱是：
 * 對於已部署在 2.1 版或更新版本中的實例：**MGMT-Cluster-`<subdomain_label>`**
@@ -111,7 +111,7 @@ lastupdated: "2019-02-14"
 ## 將叢集新增至 Cloud Foundation 實例的程序
 {: #sd_addingviewingclusters-adding-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **Cloud Foundation 實例**表格中，按一下您要新增叢集的實例。
 
    請確定實例處於**備妥使用**狀態。否則，您無法將叢集新增至實例。{:note}
@@ -145,7 +145,7 @@ lastupdated: "2019-02-14"
 ## 在 Cloud Foundation 實例中檢視叢集的程序
 {: #sd_addingviewingclusters-viewing-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **Cloud Foundation 實例**表格中，按一下實例來檢視其中的叢集。
 3. 在左導覽窗格上，按一下**基礎架構**。在**叢集**表格中，檢視叢集的摘要：
    * **名稱**：叢集的名稱。
@@ -214,7 +214,7 @@ lastupdated: "2019-02-14"
 ## 從 Cloud Foundation 實例刪除叢集的程序
 {: #sd_addingviewingclusters-deleting-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **Cloud Foundation 實例**表格中，按一下您要從中刪除叢集的實例。
 
    請確定實例處於**備妥使用**狀態。否則，您無法從實例刪除叢集。{:note}

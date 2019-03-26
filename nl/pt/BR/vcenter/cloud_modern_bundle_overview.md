@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Visão geral do Single-node Trial for Migration and App Modernization
-{: #single-node-trial-for-migration-and-app-modernization-overview}
+{: #cloud_modern_bundle_overview}
 
 O Single-node Trial for Migration and App Modernization permite que você teste a unidade do IBM Cloud para migrar cargas de trabalho do VMware para o IBM Cloud e, em seguida, modernizar cargas de trabalho simples usando contêineres.
 
@@ -88,7 +88,7 @@ Os virtual server instances (VSIs) a seguir são pedidos:
 
 As licenças a seguir são incluídas com sua ordem de instância do Single-node Trial for Migration and App Modernization.
 
-* VMware vSphere Enterprise Plus 6.5
+* VMware vSphere Enterprise Plus 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * IBM Cloud Privado Hospedado V3.1

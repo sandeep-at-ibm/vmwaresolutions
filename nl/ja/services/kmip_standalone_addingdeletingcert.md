@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -20,7 +20,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} インスタンスの準備がで
 ## KMIP for VMware on IBM Cloud インスタンスに証明書を追加する手順
 {: #kmip_standalone_addingdeletingcert-add}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「KMIP for VMware on IBM Cloud インスタンス」**表までスクロールダウンし、証明書を追加するインスタンスをクリックします。
 3. **「追加」**をクリックします。
 4. **「クライアント SSL 証明書の追加 (Add Client SSL Certificate)」**ウィンドウで、証明書の名前と内容を入力します。
@@ -32,7 +32,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} インスタンスの準備がで
 ## KMIP for VMware on IBM Cloud インスタンスの証明書を表示する手順
 {: #kmip_standalone_addingdeletingcert-view}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「KMIP for VMware on IBM Cloud インスタンス」**表までスクロールダウンし、証明書を表示するインスタンスをクリックします。
 3. **「クライアント SSL 証明書」**セクションの下にある追加された証明書のリストを表示します。
 4. 特定の証明書の内容を表示するには、**「ダウンロード」**をクリックします。
@@ -40,7 +40,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} インスタンスの準備がで
 ## KMIP for VMware on IBM Cloud インスタンスから証明書を削除する手順
 {: #kmip_standalone_addingdeletingcert-delete}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「KMIP for VMware on IBM Cloud インスタンス」**表までスクロールダウンし、証明書を削除するインスタンスをクリックします。
 3. **「クライアント SSL 証明書」**表で、削除する証明書を見つけて**「削除」**アイコンをクリックします。
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -41,7 +41,7 @@ lastupdated: "2019-02-14"
   -	索引数据存储部署在主节点和数据节点中。
   -	随着资产数量增加，增加用于横向扩展的数据节点。
 
-在任何 VM 部署之前，所有组件都必须具有 FQDN 并已在 DNS 中注册。此步骤由 IC4VS 自动化针对初始“一体化”部署执行，但在缩放部署时是客户的责任。
+在任何 VM 部署之前，所有组件都必须具有 FQDN 并已在 DNS 中注册。此步骤由 IBM Cloud for VMware Solutions 自动化针对初始“一体化”部署执行，但在缩放部署时是您的责任。
 
 ## 相关链接
 {: #caveonix-step1-related}

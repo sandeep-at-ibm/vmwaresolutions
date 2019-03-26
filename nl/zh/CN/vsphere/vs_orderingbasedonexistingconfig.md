@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -28,7 +28,7 @@ lastupdated: "2019-02-14"
 ## 基于现有配置订购 vSphere 集群的过程
 {: #vs_orderingbasedonexistingconfig-procedure}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **VMware vSphere**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware**，然后单击**虚拟数据中心**部分中的 **VMware vSphere**。
 2. 在 **VMware vSphere on IBM Cloud** 页面上，单击**创建**。  
 3. 单击**新建**选项卡，然后从**集群配置**列表中选择配置模板。
 4. 输入新的集群名称。
@@ -47,12 +47,12 @@ lastupdated: "2019-02-14"
 
 如果已下订单，那么将自动开始部署集群。您将收到电子邮件确认，指示正在处理订单。集群准备就绪可供使用时，还将通过电子邮件通知您。
 
-与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**已部署的实例**页面上。
+与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**资源**页面上。
 {:note}
 
 ## 相关链接
 {: #vs_orderingbasedonexistingconfig-related}
 
 * [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
-* [扩展现有 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
-* [扩展在控制台外部创建的集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)
+* [缩放现有 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [缩放在控制台外部创建的集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

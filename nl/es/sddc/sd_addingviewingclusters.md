@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Adición, visualización y supresión de clústeres para instancias de Cloud Foundation
-{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
+{: #sd_addingviewingclusters}
 
 Los servidores ESXi que ha configurado al solicitar una instancia se agrupan bajo un clúster predeterminado. El nombre del clúster predeterminado es:
 * Para las instancias desplegadas en V2.1 o releases posteriores: **MGMT-Cluster-`<subdomain_label>`**
@@ -112,7 +112,7 @@ Puede especificar las opciones de licencia para los componentes de VMware en el 
 ## Procedimiento para añadir clústeres a instancias de Cloud Foundation
 {: #sd_addingviewingclusters-adding-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia a la que desea añadir clústeres.
 
    Asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede añadir clústeres a la instancia.
@@ -148,7 +148,7 @@ No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es 
 ## Procedimiento para visualizar clústeres en instancias de Cloud Foundation
 {: #sd_addingviewingclusters-viewing-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse una instancia para ver los clústeres que contiene.
 3. Pulse **Infraestructura** en el panel de navegación izquierdo. En la tabla **CLÚSTERES**, vea el resumen sobre los clústeres:
    * **Nombre**: el nombre del clúster.
@@ -219,7 +219,7 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 ## Procedimiento para suprimir clústeres de instancias de Cloud Foundation
 {: #sd_addingviewingclusters-deleting-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia de la que desea suprimir clústeres.
 
    Asegúrese de que la instancia está en el estado **Listo para su uso**. De lo contrario, no puede suprimir clústeres de la instancia.

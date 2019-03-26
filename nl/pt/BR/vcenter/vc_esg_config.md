@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -29,7 +29,7 @@ Como parte do processo de pedido para sua instância do vCenter Server, as açõ
 * Um dispositivo NSX Edge é implementado e configurado para executar a conversão de endereço de rede (NAT) do intervalo de endereços IP do
 comutador lógico de carga de trabalho até um endereço IP público nas regras NAT.
 
-  A borda NXS não é implementada para instâncias que são apenas privadas.
+  A borda do NSX não é implementada para instâncias que são apenas privadas.
   {:note}
 
 * Se você instalou o serviço Veeam on {{site.data.keyword.cloud_notm}}, o NSX Manager será configurado para fazer um backup diário das configurações do NSX. Para obter mais informações, veja [Considerações ao instalar o Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud).
@@ -78,13 +78,13 @@ O limite **customer-nsx-edge** destina-se ao seu próprio uso, então, você pod
 Para identificar os detalhes para as sub-redes do cliente para que seja possível usar os endereços IP pedidos, conclua as etapas a seguir no VMware vSphere Web Client:
 
 1. Clique em **Início > Rede e segurança**.
-2. Na área de janela do navegador, clique em **NSX Edges** e dê um clique duplo em **customer-nsx-edge edge**.
-3. Na guia **Resumo** para esse limite, revise a descrição do limite, que contém os identificadores de sub-rede para as sub-redes privadas e públicas do cliente.
+2. Na área de janela do navegador, clique em **Bordas do NSX** e localize **borda customer-nsx-edge** na lista de bordas na área de janela à direita.
+3. Na coluna **Descrição**, passe o mouse sobre a descrição de borda para **customer-nsx-edge** para ver os identificadores de sub-rede para as sub-redes do cliente privadas e públicas.
 
 Além disso, é possível localizar mais detalhes sobre as sub-redes do cliente concluindo as etapas a seguir no {{site.data.keyword.slportal}}:
 
 1. Clique em **Rede > Gerenciamento de IP > Subnets**.
-2. Clique no menu de filtro e, no campo Sub-rede, insira o identificador como visto na descrição do limite **customer-nsx-edge** na guia **Resumo** no VMware vSphere Web Client.
+2. Clique no menu de filtro e, no campo **Sub-rede**, insira o identificador conforme visto na descrição de **customer-nsx-edge** no VMware vSphere Web Client.
 3. Revise as notas que são mostradas para os endereços IP. Essas notas identificam quais das sub-redes e endereços IP são ordenados e usados durante a configuração inicial.
 
    Não use os endereços IP que são pedidos e usados durante a configuração inicial. No entanto, é possível usar outros endereços IP nessas

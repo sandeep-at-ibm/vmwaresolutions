@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -48,7 +48,6 @@ lastupdated: "2019-02-14"
 | `vmware-solutions.notification.update` | <ul><li>通知の更新要求を受信しました。</li><li>通知の更新要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>セキュア・データのワイプ要求を受信しました。</li><li>セキュア・データのワイプ要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>bss アカウントへのマイグレーション要求を受信しました。</li><li>bss アカウントへのマイグレーション要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcf.order`                 | <ul><li>Cloud Foundation インスタンスの注文要求を受信しました。</li><li>Cloud Foundation インスタンスの注文要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
 | `vmware-solutions.vcf.delete`                | <ul><li>Cloud Foundation インスタンスの削除要求を受信しました。</li><li>Cloud Foundation インスタンスの削除要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
 | `vmware-solutions.vcf.add_hosts`             | <ul><li>Cloud Foundation インスタンスへの ESXi サーバーの追加要求を受信しました。</li><li>Cloud Foundation インスタンスへの ESXi サーバーの追加要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
 | `vmware-solutions.vcf.remove_hosts`          | <ul><li>Cloud Foundation インスタンスからの ESXi サーバーの削除要求を受信しました。</li><li>Cloud Foundation インスタンスからの ESXi サーバーの削除要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |

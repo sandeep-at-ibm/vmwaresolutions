@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -68,7 +68,7 @@ vCenter Server with Hybridity Bundle 是一种托管的专用云，可将 VMware
 基于 VMware Hybrid Cloud Extension (HCX)，您可以在内部部署和 {{site.data.keyword.cloud_notm}} 站点之间创建松散耦合的互连，以支持批量迁移 VM 或对 VM 执行实时 vMotion，而不会产生停机时间。
 
 ## vCenter Server with Hybridity Bundle 实例的技术规范
-{: #technical-specifications-for-vcenter-server-with-hybridity-bundle-instances}
+{: #vc_hybrid_overview-specs}
 
 vCenter Server with Hybridity Bundle 实例中包含以下组件：
 
@@ -78,9 +78,9 @@ vCenter Server with Hybridity Bundle 实例中包含以下组件：
 ### 裸机服务器
 {: #vc_hybrid_overview-bare-metal}
 
-vCenter Server with Hybridity Bundle 实例订单中随附四个 **Skylake** 或 **Broadwell** {{site.data.keyword.baremetal_short}}。提供了以下 CPU 型号：
-  * 2 个 Intel Skylake 代 CPU（Intel Xeon 4100/5100/6100 系列）
-  * 2 个 CPU 的 Intel Broadwell 代（Intel Xeon E5-2600/E7-4800 系列）
+vCenter Server with Hybridity Bundle 实例订单中随附 4 个 {{site.data.keyword.baremetal_short}}。以下是可用的配置：
+  * **Skylake**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Skylake 代服务器（Intel Xeon 4100/5100/6100 系列）。
+  * **Broadwell**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU 的 Intel Broadwell 代服务器（Intel Xeon E5-2600/E7-4800 系列）。
 
 ### 联网
 {: #vc_hybrid_overview-networking}
@@ -120,7 +120,7 @@ vSAN 存储器提供定制配置，具有各种磁盘类型和数量的选项：
 
 vCenter Server with Hybridity Bundle 实例订单中包含以下许可证。
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 或 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.4
 * VMware vSAN（Advanced 或 Enterprise）6.6
@@ -140,7 +140,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下许可证。
 ### 扩展节点的许可证和费用
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
 
-* 一个 VMware vSphere Enterprise Plus 6.5u1
+* 一个 VMware vSphere Enterprise Plus 6.5u2 或 6.7u1
 * 一个 VMware NSX Service Providers Edition（Advanced 或 Enterprise）6.4
 * 一个支持和服务费用
 * VMware vSAN（Advanced 或 Enterprise）6.6

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -26,7 +26,7 @@ vCenter Server with Hybridity Bundle 部署具有嚴格的實體基礎架構需�
 表 1. vCenter Server with Hybridity Bundle 實例的可用 {{site.data.keyword.CloudDataCents_notm}}
 
 | {{site.data.keyword.CloudDataCent_notm}} |位置|地區           |
-|:-----|:----------------|
+|:----------------------|:---------|:---------------|
 |AMS03 |阿姆斯特丹|歐洲|
 |CHE01 |清奈|亞太地區|
 |DAL09 |達拉斯|NA 南部|
@@ -53,6 +53,7 @@ vCenter Server with Hybridity Bundle 部署具有嚴格的實體基礎架構需�
 |SYD01 |雪梨|亞太地區|
 |SYD04 |雪梨|亞太地區|
 |TOK02 |東京|亞太地區|
+| TOK04 |東京|亞太地區|
 |TOR01 |多倫多|NA 東部|
 |WDC04 |華盛頓特區|NA 東部|
 |WDC06 |華盛頓特區|NA 東部|

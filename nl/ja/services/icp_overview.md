@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2019-02-15"
 {:note}
 
 ## IBM Cloud Private Hosted の技術仕様
-{: #technical-specifications-for-ibm-cloud-private-hosted}
+{: #icp_overview-specs}
 
 **「実動対応 (Production-Ready)」**環境および**「開発/テスト (Development/Test)」**環境用に IBM Cloud Private Hosted サービスを注文するための最小要件を以下の表にリストします。
 
@@ -35,7 +35,7 @@ lastupdated: "2019-02-15"
 | 開発/テスト | 30 | 200 | 3 | 4,000 |
 
 ### IBM Cloud Private Hosted のリソース要件
-{: #resource-requirements-for-ibm-cloud-private-hosted}
+{: #icp_overview-resource-req}
 
 実動対応環境および開発/テスト環境での {{site.data.keyword.cloud_notm}} Private Hosted サービスのリソース要件を次の表にリストします。
 

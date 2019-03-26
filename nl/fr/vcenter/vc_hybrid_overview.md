@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -68,7 +68,7 @@ Cette couche fournit une abstraction de ressources entre les sites locaux et les
 Sur la base de VMware Hybrid Cloud Extension (HCX), vous pouvez créer des interconnexions à couplage lâche entre les sites locaux et les sites {{site.data.keyword.cloud_notm}} afin d'activer la migration en bloc de machines virtuelles ou le déplacement opérationnel de machines virtuelles via vMotion, sans temps d'indisponibilité.
 
 ## Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle
-{: #technical-specifications-for-vcenter-server-with-hybridity-bundle-instances}
+{: #vc_hybrid_overview-specs}
 
 Les composants suivants sont inclus dans votre instance vCenter Server with Hybridity Bundle :
 
@@ -78,9 +78,9 @@ La disponibilité et la tarification des configurations matérielles normalisée
 ### Serveur bare metal
 {: #vc_hybrid_overview-bare-metal}
 
-Quatre serveurs **Skylake** ou **Broadwell** {{site.data.keyword.baremetal_short}} sont inclus avec votre commande d'instance vCenter Server with Hybridity Bundle. Les modèles d'UC suivants sont disponibles :
-  * Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100)
-  * Génération Intel Broadwell à 2 UC (Intel Xeon série E5-2600/E7-4800)
+Quatre serveurs {{site.data.keyword.baremetal_short}} sont fournis avec votre commande d'instance vCenter Server with Hybridity Bundle. Les configurations suivantes sont disponibles :
+  * **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.
+  * **Broadwell** : Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600/E7-4800) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.
 
 ### Utilisation en réseau
 {: #vc_hybrid_overview-networking}
@@ -120,7 +120,7 @@ Le stockage vSAN offre des configurations personnalisées, avec différentes opt
 
 Les licences suivantes sont incluses avec votre commande d'instance vCenter Server with Hybridity Bundle.
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 ou 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Advanced ou Enterprise) 6.4
 * VMware vSAN (Advanced ou Enterprise) 6.6
@@ -140,7 +140,7 @@ Un serveur bare metal doté de la configuration présentée dans [Spécification
 ### Licences et frais pour les noeuds d'extension
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
 
-* Une pour VMware vSphere Enterprise Plus 6.5u1
+* One VMware vSphere Enterprise Plus 6.5u2 ou 6.7u1
 * Une pour VMware NSX Service Providers Edition (Advanced ou Enterprise) 6.4
 * Frais de support et de services
 * VMware vSAN (Advanced ou Enterprise) 6.6

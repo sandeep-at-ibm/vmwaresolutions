@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -17,11 +17,10 @@ lastupdated: "2019-02-15"
 
 Veeam on {{site.data.keyword.cloud}} 服務與 VMware Hypervisor 無縫整合，以協助您的企業達到高可用性。此服務提供您應用程式及資料的回復點及時間目標。完成配置之後，可以在 15 分鐘以內提供回復點及時間目標。使用此服務，您可以從 Veeam 主控台直接控制基礎架構之所有虛擬機器 (VM) 的備份及還原。
 
-只有在 1.8 版或更新版本中部署的實例，才能使用此服務。目前安裝的 Veeam 版本為 9.5u3。
-{:note}
+只有在 1.8 版或更新版本中部署的實例，才能使用此服務。目前安裝的 Veeam 版本是 9.5u4。{:note}
 
 ## Veeam on IBM Cloud 的技術規格
-{: #technical-specifications-for-veeam-on-ibm-cloud}
+{: #veeam_considerations-specs}
 
 下列元件已訂購並包含在 Veeam on {{site.data.keyword.cloud_notm}} 服務中：
 

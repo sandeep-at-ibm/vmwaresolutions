@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -20,6 +20,7 @@ lastupdated: "2019-02-14"
 
 ## 我可以新增多少部 ESXi 伺服器至實例中？
 {: #faq_esxi-instance}
+{: faq}
 
 * 對於 vCenter Server 實例，您可以將預設叢集擴充為具有多達 51 部 ESXi 伺服器。每一個非預設叢集可以擴充為具有多達 59 部 ESXi 伺服器。由於您最多可以將 10 個叢集新增至實例中，因此每一個已部署的實例在所有叢集裡最多可以有 51 + 9x59 = 582 部 ESXi 伺服器。
 * 若為 Cloud Foundation 實例，標準配置有四部 ESXi 伺服器。您最多可以新增 28 部伺服器（總共最多 32 部伺服器）。對於多站台配置中的 Cloud Foundation 實例，在所有實例中最多可以有 128 部 ESXi 伺服器。
@@ -29,6 +30,7 @@ lastupdated: "2019-02-14"
 
 ## 我可以新增多少部 ESXi 伺服器至叢集？
 {: #faq_esxi-cluster}
+{: faq}
 
 如果是部署在 2.2 版及更新版本中的實例，您最多可以將 51 部 ESXi 伺服器新增至起始叢集，以及最多可以將 59 部 ESXi 伺服器新增至已新增的叢集。
 
@@ -46,6 +48,7 @@ lastupdated: "2019-02-14"
 
 ## 我可以變更 ESXi 伺服器名稱及 IP 位址嗎？
 {: #faq_esxi-change-name-ip}
+{: faq}
 
 無法變更 ESXi 伺服器名稱及 IP 位址，因為已登錄它們以進行 Windows DNS 解析。變更可能會導致部署期間失敗或 vCenter Server 功能失敗。
 
@@ -54,6 +57,7 @@ lastupdated: "2019-02-14"
 
 ## 我可以在 ESXi 伺服器上停用 root 存取權嗎？
 {: #faq_esxi-disable-root}
+{: faq}
 
 建議在 ESXi 伺服器上保持啟用 root 存取權，否則可能會發生 {{site.data.keyword.vmwaresolutions_short}} 功能失敗。
 
@@ -63,6 +67,7 @@ lastupdated: "2019-02-14"
 
 ## 我可以在我的 ESXi 伺服器上新增靜態路徑，以便從其他位置裝載儲存空間嗎？
 {: #faq_esxi-static-routes}
+{: faq}
 
 您可以為儲存空間新增靜態路徑，但執行時必須格外小心。否則，現有的共用可能會變成未裝載。
 
@@ -73,7 +78,5 @@ lastupdated: "2019-02-14"
 {: #faq_esxi-related}
 
 * [擴充及縮減 vCenter Server 實例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [擴充及縮減 Cloud Foundation 實例的容量](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
-* [新增、檢視及刪除 Cloud Foundation 實例的叢集](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

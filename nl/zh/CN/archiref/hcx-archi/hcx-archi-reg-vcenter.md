@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 # 向 vCenter 注册 HCX Manager
@@ -30,7 +30,7 @@ Hybrid Cloud Services 虚拟设备的电源必须打开后才能进行注册。
 3. 配置查找服务。
   1. 单击**管理**选项卡。
   2. 单击**查找服务 URL** 文本框最右侧的**编辑**按钮。
-  3. 输入以下格式的查找服务端点：
+  3. 输入以下格式的查找网络服务端点：
     * 对于 vCenter Server 5.5u3，输入 `https://ssoip:/7444/lookupservice/sdk`
     * 对于 vCenter Server 6.0u2，输入 `https://ssoip/lookupservice/sdk`
   4. 单击**确定**。显示重新启动 Web 引擎的消息时，不要重新启动。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -45,7 +45,7 @@ VUM 用戶端介面提供兩個主視圖：
 *	管理視圖
 *	法規遵循視圖
 
-## 管理視圖
+##	管理視圖
 {: #vum-overview-admin-view}
 
 管理視圖的存取方式是導覽至：**首頁** > **Update Manager**，然後選取 Update Manager 實例的 IP 位址。在「管理」視圖中，您可以執行下列作業：
@@ -56,7 +56,7 @@ VUM 用戶端介面提供兩個主視圖：
 *	檢閱及檢查通知
 *	匯入 ESXi 映像檔
 
-## 法規遵循視圖
+##	法規遵循視圖
 {: #vum-overview-compliance-view}
 
 所選取庫存物件之法規遵循視圖的存取方式是導覽至**主機及叢集**或 **VM 及範本**，然後按一下 **Update Manager** 標籤。在「Update Manager 法規遵循」視圖中，您可以執行下列作業：

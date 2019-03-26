@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-28"
 
 ---
 
@@ -89,7 +89,7 @@ Tableau 2. Conditions d'incident et paramètres de réponse des machines virtuel
 Pour plus d'informations sur la configuration de ces paramètres dans le client Web vSphere, voir [Configure Virtual Machine Responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html).
 
 #### Contrôle d'admission
-{: #cluster-settings-admission-control}
+{: #cluster-settings-admin-control}
 
 vCenter Server utilise le contrôle d'admission pour s'assurer qu'il y a suffisamment de ressources disponibles dans un cluster pour fournir la protection par basculement et faire en sorte que les réservations de ressource de machine virtuelle soient respectées. Dans cette conception, la capacité de basculement est réservé en spécifiant un pourcentage des ressources de cluster. La capacité de basculement définie correspond à 25 % de l'unité centrale et à 25 % de la mémoire.
 

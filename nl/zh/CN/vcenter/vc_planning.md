@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -77,6 +77,9 @@ vCenter Server 部署对物理基础架构有严格要求。因此，只能将�
 {: #vc_planning-addon-services}
 
 您可以根据需要订购适用于实例的附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。
+
+针对 vCenter Server with NSX-T 实例支持服务。
+{:note}
 
 ## 容量注意事项
 {: #vc_planning-capacity-considerations}

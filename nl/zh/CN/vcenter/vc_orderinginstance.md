@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,6 +52,14 @@ lastupdated: "2019-02-14"
 * 实例名称的最大长度为 10 个字符。
 * 实例名称在您的帐户中必须唯一。
 
+### VMware vSphere 许可证
+{: #vc_orderinginstance-vsphere-license}
+
+选择是订购 vSphere Enterprise Plus 6.7u1 还是订购 vSphere Enterprise Plus 6.5u2。
+
+vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}。
+{:note}
+
 ### 主实例或辅助实例
 {: #vc_orderinginstance-primary-secondary}
 
@@ -61,8 +69,8 @@ lastupdated: "2019-02-14"
 {: #vc_orderinginstance-licensing-settings}
 
 为实例中的以下 VMware 组件指定许可选项：
-* vCenter Server 6.5 - Standard Edition
-* vSphere 6.5u1 - Enterprise Plus Edition
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5 或 6.7
 * NSX Service Providers 6.4（Base Edition、Advanced Edition 或 Enterprise Edition）
 
 对于业务合作伙伴用户，会包含 vCenter Server 许可证 (Standard Edition)、vSphere 许可证 (Enterprise Plus Edition) 和 NSX 许可证，这些许可证以您的名义购买。但是，您必须指定 NSX 许可证的版本。
@@ -293,9 +301,10 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 ## 订购 vCenter Server 实例的过程
 {: #vc_orderinginstance-procedure}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **vCenter Server**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware**，然后单击**虚拟数据中心**部分中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 页面上，单击 **vCenter Server** 卡，然后单击**创建**。
 3. 在 **vCenter Server** 页面上，输入实例名称。
+5. 选择 vSphere 版本。
 4. 选择实例类型：
    * 单击**主实例**以在环境中部署单个实例，或者在多站点拓扑中部署第一个实例。
    * 单击**辅助实例**以将该实例与环境中的现有（主）实例连接以获取高可用性，并完成以下步骤：
@@ -303,21 +312,21 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
      2. 对于主实例 V2.8 或更高版本，请输入主实例的 vCenter Server 管理员密码。
      3. 对于主实例 V2.5、2.6 或 2.7，请输入主实例的 PSC 管理员密码。
      4. 对于主实例 V2.4 或更低版本，请验证主实例的 PSC 管理员密码的预填充值是否正确。
-5. 完成实例组件的许可证设置。
+6. 完成实例组件的许可证设置。
    *  要使用 IBM 提供的许可证，请选择**购买时包含**，并根据需要选择许可证版本。
    *  要使用您自己的许可证，请选择**我将提供**并输入许可证密钥。
-6. 完成裸机服务器设置。
+7. 完成裸机服务器设置。
     1. 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
     2. 选择裸机服务器配置。
        * 选择 **Skylake** 或 **Broadwell** 时，请指定 CPU 型号和 RAM 大小。
-       * 选择的是 **SAP 认证**时，请选择 CPU 型号。
+       * 选择的是 **SAP 认证**时，请选择其中一个预设配置。
     3. 指定 {{site.data.keyword.baremetal_short}} 数。如果计划将 vSAN 用作存储解决方案，那么至少需要 4 个 {{site.data.keyword.baremetal_short}}。  
-7. 填写存储配置。
+8. 填写存储配置。
   * 如果选择 **vSAN 存储器**，请指定容量和高速缓存磁盘的磁盘类型、磁盘数和 vSAN 许可证版本。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
   * 如果选择 **NFS 存储器**，并且要向所有文件共享添加和配置相同设置，请指定**共享数**、**性能**和**大小 (GB)**。
   * 如果选择 **NFS 存储器**，并且要单独添加和配置文件共享，请选择**单独配置共享**。接着，单击**添加共享存储器**标签旁边的 **+** 图标，然后为每个文件共享选择**性能**和**大小 (GB)**。必须至少选择一个文件共享。
   * 如果选择**本地磁盘**，请指定磁盘计数和磁盘类型。
-8. 完成网络接口设置。
+9. 完成网络接口设置。
    1. 输入主机名前缀、子域标签和根域名。对于辅助实例，系统会自动填写域名。
    2. 选择网络设置**公用和专用网络**或**仅专用网络**。
    3. 选择 VLAN 设置：
@@ -325,9 +334,9 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
       * 如果要复用可用的现有公用和专用 VLAN，请单击**选择现有 VLAN**，然后指定 VLAN 和子网。
    4. 指定 DNS 配置。
 
-9. 通过单击相应的服务卡，选择要部署到实例中的附加组件服务。如果服务需要配置，请完成特定于服务的设置，然后单击相应卡上的**添加服务**。有关如何为服务提供设置的更多信息，请参阅相应的服务订购主题。
+10. 通过单击相应的服务卡，选择要部署到实例中的附加组件服务。如果服务需要配置，请完成特定于服务的设置，然后单击相应卡上的**添加服务**。有关如何为服务提供设置的更多信息，请参阅相应的服务订购主题。
 
-10. 在**订单摘要**窗格上，验证实例配置，然后再下订单。
+11. 在**订单摘要**窗格上，验证实例配置，然后再下订单。
    1. 复查实例的设置。
    2. 复查实例的估算成本。单击**定价详细信息**以生成 PDF 摘要。要保存或打印订单摘要，请单击 PDF 窗口右上角的**打印**或**下载**图标。
    3. 单击订单适用条款的链接，并在订购实例之前确认您同意这些条款。
@@ -338,7 +347,7 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 
 实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
 
-成功部署实例后，[vCenter Server 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
+成功部署实例后，[vCenter Server 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
 
 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 

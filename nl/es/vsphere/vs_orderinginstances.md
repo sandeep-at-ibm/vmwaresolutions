@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -67,7 +67,7 @@ Para los usuarios de IBM Business Partner, la opción Traiga su propia licencia 
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 Si no es un Business Partner, puede seleccionar los siguientes componentes para el clúster de vSphere:
-* VMware vSphere Enterprise Plus
+* VMware vSphere Enterprise Plus 6.7 U1 o 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -270,7 +270,7 @@ En función de sus configuraciones, el coste estimado se genera y se muestra al 
    1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar el clúster.
    2. Seleccione la configuración del servidor nativo.
       * Si seleccione **Skylake** o **Broadwell**, especifique el modelo de CPU y el tamaño de RAM.
-      * Si selecciona **Certificado por SAP**, especifique el modelo de CPU.
+      * Si selecciona **Certificado por SAP**, elija una de las configuraciones preestablecidas.
    3. Especifique el número de Servidores nativos.
 6. Si ha seleccionado el componente **VMware vSAN**, complete la configuración de almacenamiento de vSAN. Especifique los tipos de disco para la capacidad y los discos de memoria caché y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
 7. Complete los valores de interfaz de red:
@@ -294,7 +294,7 @@ Si ha guardado la configuración del clúster como una plantilla, recibirá una 
 
 Si ha realizado un pedido, el despliegue del clúster se inicia automáticamente y el usuario recibe una confirmación por correo electrónico de que el pedido se está procesando. Cuando el clúster esté listo para ser utilizado, se le notificará por correo electrónico.
 
-A diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Instancias desplegadas**.
+A diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Recursos**.
 {:note}
 
 ## Enlaces relacionados

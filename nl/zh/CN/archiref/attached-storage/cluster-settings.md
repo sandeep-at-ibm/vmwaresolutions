@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-28"
 
 ---
 
@@ -87,7 +87,7 @@ VM 监视功能使用 VMware Tools 代为捕获的脉动信号信息来提供访
 有关在 vSphere Web Client 中配置这些设置的更多信息，请参阅 [Configure Virtual Machine Responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html)。
 
 #### 许可控制
-{: #cluster-settings-admission-control}
+{: #cluster-settings-admin-control}
 
 vCenter Server 使用许可控制来确保集群中有足够的资源可用于提供故障转移保护，并且遵循 VM 资源保留协议。在此设计中，故障转移容量是通过指定集群资源的百分比来保留的。定义的故障转移容量设置为 25% CPU 和 25% 内存。
 

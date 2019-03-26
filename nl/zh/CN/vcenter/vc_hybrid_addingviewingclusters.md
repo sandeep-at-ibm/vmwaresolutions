@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,7 +52,7 @@ lastupdated: "2019-02-15"
 ### 裸机服务器设置
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
-指定用于裸机服务器的 CPU 型号和 RAM。可用选项可能有所不同，具体取决于初始部署实例的版本。
+可以选择 **Skylake** 或 **Broadwell**。选项可能有所不同，具体取决于初始部署实例的版本。
 
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
@@ -131,7 +131,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 ## 向 vCenter Server with Hybridity Bundle 实例添加集群的过程
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击实例以查看其中的集群。
 
    确保实例状态为**可供使用**。否则，无法向实例添加集群。
@@ -162,7 +162,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 ## 查看 vCenter Server with Hybridity Bundle 实例中集群的过程
 {: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击实例以查看其中的集群。
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，查看有关集群的摘要：
   * **名称**：集群的名称。
@@ -232,7 +232,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 ## 从 vCenter Server with Hybridity Bundle 实例中删除集群的过程
 {: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击要从中删除集群的实例。
 
    确保实例处于**可供使用**状态。否则，无法从实例中除去集群。

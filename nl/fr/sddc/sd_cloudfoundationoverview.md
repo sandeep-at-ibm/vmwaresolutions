@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-14"
 # Présentation de Cloud Foundation
 {: #sd_cloudfoundationoverview}
 
-Lorsque vous commandez VMware Cloud Foundation on {{site.data.keyword.cloud}}, un environnement VMware complet est automatiquement déployé. Le déploiement de base se compose de quatre serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} avec la pile VMware Cloud Foundation préinstallée et configurée de manière à fournir une plateforme de centre de données défini par les logiciels (SDDC, Software-Defined Data Center). Cloud Foundation intègre en natif VMware vSphere, VMware NSX, VMware Virtual SAN et son architecture est basée sur des conceptions validées par VMware.
+Le déploiement de base de VMware Cloud Foundation on {{site.data.keyword.cloud}} se compose de quatre serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} avec la pile VMware Cloud Foundation préinstallée et configurée de manière à fournir une plateforme de centre de données défini par les logiciels (SDDC, Software-Defined Data Center). Cloud Foundation intègre en natif VMware vSphere, VMware NSX, VMware Virtual SAN et son architecture est basée sur des conceptions validées par VMware.
 
 ## Architecture Cloud Foundation
 {: #sd_cloudfoundationoverview-archi}
@@ -49,7 +49,7 @@ Sur la console {{site.data.keyword.vmwaresolutions_short}}, vous pouvez augmente
 Pour plus d'informations sur l'architecture, voir [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Spécifications techniques relatives aux instances Cloud Foundation
-{: #technical-specifications-for-cloud-foundation-instances}
+{: #sd_cloudfoundationoverview-specs}
 
 Les composants suivants sont inclus dans votre instance Cloud Foundation.
 
@@ -59,7 +59,7 @@ Les frais encourus pour le matériel, la mise en réseau, les machines virtuelle
 ### Serveur bare metal
 {: #sd_cloudfoundationoverview-bare-metal}
 
-Vous pouvez commander les serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} dans l'une des configurations suivantes :
+Votre instance peut comporter un serveur {{site.data.keyword.baremetal_short}} {{site.data.keyword.cloud_notm}} dans l'une des configurations suivantes :
 *  **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.   
 *  **Broadwell** : Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600/E7-4800) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.
 
@@ -69,7 +69,7 @@ Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre 
 ### Utilisation en réseau
 {: #sd_cloudfoundationoverview-networking}
 
-Les composants réseau suivants sont commandés :
+Votre instance contient les composants de mise en réseau suivants :
 * Liaisons montantes réseau public et privé double de 10 Gbps
 * Trois VLAN (réseaux locaux virtuels) : un VLAN public et deux VLAN privés
 * Passerelle de gestion sécurisée VMware NSX Edge Services Gateway (ESG) pour le trafic de gestion HTTPS sortant, déployée par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -82,7 +82,7 @@ Les composants réseau suivants sont commandés :
 ### Instance de serveur virtuel
 {: #sd_cloudfoundationoverview-vsi}
 
-Les instances de serveur virtuel suivantes sont commandées :
+Votre instance contient les instances de serveur virtuel suivantes :
 * Une pour les services Microsoft Active Directory (AD) et système de noms de domaine (DNS, Domain Name System). L'instance de serveur virtuel est requise pour le support de configuration multisite. La spécification de cette instance de serveur virtuel est la suivante : Windows 2012 R2 (8 Go de RAM / 2 coeurs d'UC / disque de 100 Go / liaisons montantes privées doubles de 1 Gbps).
 * Une instance de serveur virtuel pour IBM CloudBuilder, fermée une fois le déploiement de l'instance terminé.
 * (Si vous commandez Veeam on {{site.data.keyword.cloud_notm}}) Une instance de serveur virtuel pour le service de sauvegarde Veeam est commandée.
@@ -90,7 +90,7 @@ Les instances de serveur virtuel suivantes sont commandées :
 ### Stockage
 {: #sd_cloudfoundationoverview-storage}
 
-Le stockage suivant est commandé selon la configuration des serveurs {{site.data.keyword.baremetal_short}} sélectionnée :
+Votre instance peut comporter le stockage suivant, selon la configuration de serveur {{site.data.keyword.baremetal_short}} sélectionnée :
 * Deux disques d'amorçage SATA de 1 To
 * Deux disques cache SSD (Solid-State Disk) de 960 Go
 * Un contrôleur de disque RAID
@@ -141,8 +141,6 @@ Vous devez gérer les composants {{site.data.keyword.vmwaresolutions_short}} cr�
 {: #sd_cloudfoundationoverview-related}
 
 * [Nomenclature du logiciel Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
-* [Planification des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Centre de documentation VMware vSphere](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [Centre de documentation VMware NSX 6](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [Foire aux questions sur la comptabilité entre EVC et les UC](https://kb.vmware.com/s/article/1005764)

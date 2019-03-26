@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2019-02-14"
 
 |制造商|组件|版本|
 |:-------------|:--------------------------------|:--------|
-|VMware|vSphere ESXi|Either 6.5 Update 1 或 6.0 Update 2 |
+|VMware|vSphere ESXi| 6.7 Update 1 或 6.5 Update 2 |
 
 ## 相关链接
 {: #vs_bom-related}

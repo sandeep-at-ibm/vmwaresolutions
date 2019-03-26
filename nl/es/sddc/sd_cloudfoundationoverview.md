@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-14"
 # Visión general de Cloud Foundation
 {: #sd_cloudfoundationoverview}
 
-Cuando solicita VMware Cloud Foundation on {{site.data.keyword.cloud}}, se despliega automáticamente un entorno VMware completo. El despliegue básico consta de cuatro {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} con la pila de VMware Cloud Foundation preinstalada y configurada para proporcionar una plataforma unificada de centro de datos definido por software (SDDC). Cloud Foundation integra de forma nativa VMware vSphere, VMware NSX, VMware Virtual SAN y su arquitectura se basa en diseños validados por VMware.
+El despliegue básico de VMware Cloud Foundation on {{site.data.keyword.cloud}} consta de cuatro {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} con la pila de VMware Cloud Foundation preinstalada y configurada para proporcionar una plataforma unificada de centro de datos definido por software (SDDC). Cloud Foundation integra de forma nativa VMware vSphere, VMware NSX, VMware Virtual SAN y su arquitectura se basa en diseños validados por VMware.
 
 ## Arquitectura de Cloud Foundation
 {: #sd_cloudfoundationoverview-archi}
@@ -49,7 +49,7 @@ En la consola de {{site.data.keyword.vmwaresolutions_short}}, puede expandir y c
 Para obtener más información sobre la arquitectura, consulte [Visión general de la solución](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Especificaciones técnicas para instancias de Cloud Foundation
-{: #technical-specifications-for-cloud-foundation-instances}
+{: #sd_cloudfoundationoverview-specs}
 
 Se incluyen los siguientes componentes en la instancia de Cloud Foundation.
 
@@ -59,7 +59,7 @@ Los cargos en los que se incurre en concepto de hardware, sistema de red, máqui
 ### Servidor nativo
 {: #sd_cloudfoundationoverview-bare-metal}
 
-Puede solicitar {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} con una de las siguientes configuraciones:
+La instancia puede tener {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} con una de las siguientes configuraciones:
 *  **Skylake**: servidores de generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100) con el modelo de CPU y el tamaño de RAM que seleccione.   
 *  **Broadwell**: servidores de generación Intel Broadwell de 2 CPU (Intel Xeon serie E5-2600/E7-4800) con el modelo de CPU y el tamaño de RAM que seleccione.
 
@@ -69,7 +69,7 @@ Si tiene pensado utilizar almacenamiento vSAN, la configuración necesita cuatro
 ### Redes
 {: #sd_cloudfoundationoverview-networking}
 
-Se solicitan los siguientes componentes del sistema de redes:
+La instancia contiene los siguientes componentes de red:
 * Enlaces ascendentes de red pública y privada de 10 Gbps
 * Tres VLAN (LAN virtuales): una VLAN pública y dos VLAN privadas
 * Edge Services Gateway (ESG) de NSX de VMware de servicios de gestión segura para el tráfico de gestión de HTTPS saliente, desplegado por IBM como parte de la topología del sistema de redes de gestión. Las máquinas virtuales de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Para obtener más información, consulte [¿Representa NSX Edge de servicios de gestión un riesgo para la seguridad?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -82,7 +82,7 @@ Se solicitan los siguientes componentes del sistema de redes:
 ### Instancias de servidor virtual
 {: #sd_cloudfoundationoverview-vsi}
 
-Se solicitan las siguientes VSI (instancias de servidor virtual):
+La instancia tiene las siguientes VSI (instancias de servidor virtual):
 * Una VSI para los servicios Microsoft Active Directory (AD) y Sistema de nombres de dominio (DNS). El VSI es necesario para el soporte de configuración de varios sitios. Esta especificación de VSI es la siguiente: Windows 2012 R2 (8 GB de RAM / 2 núcleos de CPU / 100 GB de disco / enlaces ascendentes duales privados de 1 Gbps).
 * Una VSI para IBM CloudBuilder, que se cierra una vez completado el despliegue de la instancia.
 * (Si se solicita Veeam on {{site.data.keyword.cloud_notm}}) Se solicita una VSI para el servicio de copia de seguridad de Veeam.
@@ -90,7 +90,7 @@ Se solicitan las siguientes VSI (instancias de servidor virtual):
 ### Almacenamiento
 {: #sd_cloudfoundationoverview-storage}
 
-Se solicita el siguiente almacenamiento, en función de la configuración de {{site.data.keyword.baremetal_short}} que seleccione:
+La instancia puede tener el almacenamiento siguiente, en función de la configuración de {{site.data.keyword.baremetal_short}} seleccionada:
 * Dos discos de arranque SATA de 1-TB
 * Dos discos de memoria caché SSD (Disco de estado sólido) de 960 GB
 * Un controlador de disco RAID
@@ -141,8 +141,6 @@ Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short
 {: #sd_cloudfoundationoverview-related}
 
 * [Lista de materiales de software de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
-* [Planificación de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
-* [Pedido de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Centro de documentación de VMware vSphere](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [Centro de documentación de VMware NSX 6](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [Preguntas más frecuentes (FAQ) de compatibilidad de CPU y EVC](https://kb.vmware.com/s/article/1005764)

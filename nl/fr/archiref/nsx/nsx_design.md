@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -43,7 +43,7 @@ L'architecture dédiée déploie les composants NSX Edge nécessaires dans un cl
 ## Plages d'adresses IP d'IBM Cloud Private et plages d'adresses IP BYO (Bring Your Own)
 {: #nsx_design-ip-addr-ranges}
 
-La plage d'adresses IP privées RFC1918 réserve spécifiquement l'utilisation des plages de réseau à l'usage interne de l'organisation mais jamais à une utilisation sur Internet. L'infrastructure réseau physique d'{{site.data.keyword.cloud_notm}} utilise un espace d'adressage privé RFC1918 spécifique, 10.x.x.x/8, sur tous les sites dans le monde entier. Ces plages d'adresses IP ne chevauchent pas les comptes des clients ou n'interfèrent pas dans un compte client {{site.data.keyword.cloud_notm}}. Dans un compte client, tout espace d'adressage IP privé {{site.data.keyword.cloud_notm}} alloué, peut, avec la fonction Spanning VLAN, effectuer un routage vers n'importe quel autre espace d'adressage IP privé {{site.data.keyword.cloud_notm}} dans n'importe quel centre de données {{site.data.keyword.CloudDataCents_notm}}.
+La plage d'adresses IP privées RFC1918 réserve spécifiquement l'utilisation des plages de réseau à l'usage interne de l'organisation mais jamais à une utilisation sur Internet. L'infrastructure réseau physique d'{{site.data.keyword.cloud_notm}} utilise un espace d'adressage privé RFC1918 spécifique, 10.x.x.x/8, sur tous les sites dans le monde entier. Ces plages d'adresses IP ne chevauchent pas les comptes des clients ou n'interfèrent pas dans un compte client {{site.data.keyword.cloud_notm}}. Dans un compte client, tout espace d'adressage IP privé {{site.data.keyword.cloud_notm}} alloué, peut, avec la fonction VRF (irtual Routing and Forwarding), effectuez un routage vers n'importe quel autre espace d'adressage IP privé {{site.data.keyword.cloud_notm}} dans n'importe quel centre de données {{site.data.keyword.CloudDataCents_notm}}.
 
 Alors que cela facilite la configuration d'une infrastructure connectée au niveau mondial dans votre compte, l'espace d'adressage IP fixe peut s'avérer problématique lorsque vous voulez étendre votre centre de données dans {{site.data.keyword.cloud_notm}} via le routage lorsque vous utilisez le même espace d'adressage privé qu'{{site.data.keyword.cloud_notm}}. La solution consiste à utiliser NSX pour créer une topologie de superposition sur l'infrastructure Cloud Foundation ou vCenter Server, en isolant votre espace d'adressage BYOIP (Bring Your Own IP) de toute interaction avec l'espace d'adressage privé affecté d'{{site.data.keyword.cloud_notm}}. NSX peut fournir un VPN L2 pour couvrir l'espace d'adressage BYOIP interne dans le tunnel sur plusieurs espaces d'adressage IP externes pouvant éventuellement se chevaucher.
 

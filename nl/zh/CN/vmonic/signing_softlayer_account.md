@@ -30,4 +30,4 @@ lastupdated: "2019-02-14"
 * [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)
 * [视频 - 如何创建 {{site.data.keyword.cloud_notm}} 帐户](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [切换到 IBM 标识并链接帐户](/docs/admin/softlayerlink.html){:new_window}
+* [切换到 IBM 标识并链接帐户](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)

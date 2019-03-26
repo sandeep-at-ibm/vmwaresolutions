@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -36,7 +36,7 @@ Sie können virtuelle Maschinen (VMs) und virtuelle Appliances anhand angehängt
 3.	Wählen Sie die Update-Typen aus, auf die geprüft werden soll. Die Optionen sind _Upgrades virtueller Appliances, VM-Hardware-Upgrades_ und _VMware Tools-Upgrades_.
 4.	Klicken Sie auf **Prüfen**.
 
-## Prüfung eines Containerobjekts manuell initiieren
+##	Prüfung eines Containerobjekts manuell initiieren
 {: #vum-scanning-scan-container}
 
 Sie können eine simultane Prüfung von Hosts, VMs und virtuellen Appliances starten, indem Sie ein Containerobjekt prüfen, das ein Rechenzentrum oder ein Rechenzentrumsordner ist.
@@ -45,7 +45,7 @@ Sie können eine simultane Prüfung von Hosts, VMs und virtuellen Appliances sta
 3.	Wählen Sie die Update-Typen aus, auf die geprüft werden soll. Die Optionen sind _Upgrades virtueller Appliances, VM-Hardware-Upgrades_ und _VMware Tools-Upgrades_.
 4.	Klicken Sie auf **Prüfen**.
 
-## Prüfung planen
+##	Prüfung planen
 {: #vum-scanning-schedule}
 
 Sie können den vSphere Web Client so konfigurieren, dass VMs, virtuelle Appliances und vSphere ESXi-Hosts zu bestimmten Zeiten oder in den gewünschten Abständen geprüft werden.

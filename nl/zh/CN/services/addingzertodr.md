@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -17,13 +17,13 @@ lastupdated: "2019-02-14"
 
 Zerto on {{site.data.keyword.cloud}} 服务用于将复制和灾难恢复功能集成到部署产品中，以保护和恢复 {{site.data.keyword.cloud_notm}} 上 VMware 虚拟环境中的数据。
 
-此服务仅可用于在 V1.2 或更高版本中部署的实例。安装的当前 Zerto 版本为 6.0 Update 3。
+此服务仅可用于在 V1.2 或更高版本中部署的实例。安装的当前 Zerto 版本为 6.5 Update 3。
 {:note}
 
 ## Zerto on IBM Cloud 技术规范
-{: #technical-considerations-for-zerto-on-ibm-cloud}
+{: #addingzertodr-specs}
 
-Zerto on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
+Zerto on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件。
 
 Zerto Virtual Replication Appliance (VRA) 组件将仅部署到缺省集群中。
 {:note}
@@ -50,7 +50,7 @@ Zerto Virtual Replication Appliance (VRA) 组件将仅部署到缺省集群中�
 ### 许可证和费用
 {: #addingzertodr-specs-licenses}
 
-Zerto Replication V6.0 Update 3 许可证
+Zerto Replication V6.5 update 3 许可证
 
 ## 相关链接
 {: #addingzertodr-related}

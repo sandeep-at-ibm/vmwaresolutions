@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -38,6 +38,7 @@ O  `<service_name>` junto com o `<service_uuid>` trunca para 20 caracteres.
 
 ## Recursos do VMware para instâncias do Cloud Foundation
 {: #cf_chg_impact-vmware-resources}
+{: faq}
 
 A tabela a seguir lista as operações que poderão ser afetadas se você mudar os recursos do VMware fora do console do {{site.data.keyword.vmwaresolutions_short}}. Se uma solução para recuperar estiver disponível, ela também será fornecida.
 
@@ -65,6 +66,7 @@ Se você escolher desativar o SSH ou o acesso de shell, deverá reativá-lo temp
 
 ## Gerenciamento de sub-redes para instâncias do Cloud Foundation
 {: #cf_chg_impact-mgmt-subnets}
+{: faq}
 
 As informações a seguir discutem as sub-redes pedidas pelo {{site.data.keyword.vmwaresolutions_short}} e fornecem opções para você pedir sub-redes extras para seu próprio uso.
 

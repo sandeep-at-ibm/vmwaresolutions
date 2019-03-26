@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -25,9 +25,7 @@ lastupdated: "2019-02-15"
 
 您可以在 Veeam on {{site.data.keyword.cloud_notm}} 服务详细信息页面上找到 Windows IP 地址和管理员凭证。
 
-有关更多信息，请参阅以下主题：
-* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+有关更多信息，请参阅[订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。
 
 ## 备份和复原安装了 Veeam on IBM Cloud 的实例的管理组件
 {: #managing-veeam-backup-and-replication}
@@ -76,7 +74,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 服务可以同时备份管理组件�
 您必须创建 {{site.data.keyword.cloud_notm}} 支持凭单来获取有关复原的帮助。此外，V1.8 之前版本的实例中的 Veeam VSI 许可证已于 2017 年 10 月 14 日到期。因此，必须将先前的 Veeam VSI 替换为新的 Veeam on {{site.data.keyword.cloud_notm}} 服务。
 
 完成以下步骤：
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**，然后单击目标实例。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**，然后单击目标实例。
 2. 在实例详细信息页面上，单击**更新和补丁**选项卡。确保已将实例升级到 V1.8 发行版。
 3. 单击**服务**选项卡。
 4. 在**添加服务**选项卡上，安装 Veeam on {{site.data.keyword.cloud_notm}} 服务。

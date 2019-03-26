@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -33,7 +33,7 @@ vSAN 暗号化はデータ・ストアのレベルで行われるので、主な
 * vSAN 暗号化では、クラスター内のホスト間で行われる vSAN レプリケーションの通信は暗号化されません。
 * vSAN 暗号化は、{{site.data.keyword.cloud_notm}} エンデュランスのファイル・ストレージやブロック・ストレージなどの他のストレージ・ソリューションには適用できません。
 * vSAN 暗号化には vSAN Enterprise ライセンスが必要です。
-* vSAN ヘルス・チェックを実行する時に、1 つ以上の vSphere ホストから KMS クラスターに接続できないという警告が周期的に出されることがあります。こうした警告が出されるのは、vSAN ヘルス・チェックの接続が短時間でタイムアウトになる場合です。このような警告は無視してかまいません。
+* vSAN ヘルス・チェックを実行する時に、1 つ以上の vSphere ホストから KMS クラスターに接続できないという警告が周期的に出されることがあります。 こうした警告が出されるのは、vSAN ヘルス・チェックの接続が短時間でタイムアウトになる場合です。 このような警告は無視してかまいません。 詳しくは、[vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:new_window} を参照してください。
 
 ### vSphere 暗号化
 {: #kmip-design-vsphere-encrypt}
@@ -98,13 +98,13 @@ KMIP for VMware インスタンスは、Key Protect インスタンスへのア�
 図 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} のコンポーネント
 ![KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip-key-protect.svg "このソリューションは、IBM Key Protect 内に保管されたルート鍵を使用して、VMware の vSphere 暗号化と vSAN 暗号化を可能にします。")
 
-KMIP for VMware は、多数の IBM Cloud マルチゾーン領域 (MZR) で提供されています。 完全なリストについては、[KMIP for VMware の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)を参照してください。
+KMIP for VMware は、多数の {{site.data.keyword.cloud_notm}} マルチゾーン領域 (MZR) で提供されています。完全なリストについては、[KMIP for VMware の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)を参照してください。
 
-KMIP for VMware では、高可用性を実現するために、MZR ごとに 2 つのサービス・エンドポイントが IBM Cloud プライベート・ネットワーク上に用意されています。 これらの両方のエンドポイントを KMS クラスターとして vCenter 鍵管理サーバー (KMS) 構成に構成してください。 各 MZR 内のエンドポイントのリストと、KMIP サーバー証明書の署名については、[KMIP for VMware サービスの資料](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)を参照してください。
+KMIP for VMware では、高可用性を実現するために、MZR ごとに 2 つのネットワーク・サービス・エンドポイントが {{site.data.keyword.cloud_notm}} プライベート・ネットワーク上に用意されています。これらの両方のエンドポイントを KMS クラスターとして vCenter 鍵管理サーバー (KMS) 構成に構成してください。 各 MZR 内のエンドポイントのリストと、KMIP サーバー証明書の署名については、[KMIP for VMware サービスの資料](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)を参照してください。
 
-また、KMIP for VMware は、公衆インターネットではなく IBM Cloud プライベート・ネットワークを使用して IBM Cloud Key Protect に接続します。
+また、KMIP for VMware は、公衆インターネットではなく {{site.data.keyword.cloud_notm}} プライベート・ネットワークを使用して {{site.data.keyword.cloud_notm}} Key Protect に接続します。
 
-プライベート・ネットワークを介して KMIP for VMware にアクセスするために、IBM Cloud インフラストラクチャー・アカウントの Virtual Routing and Forwarding (VRF) を有効にし、アカウントの VRF ルートに IBM Cloud サービス・エンドポイントのルートを追加しておく必要があります。 詳しくは、[アカウントのサービス・エンドポイントを有効にする方法](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps)を参照してください。
+プライベート・ネットワークを介して KMIP for VMware にアクセスするために、{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの Virtual Routing and Forwarding (VRF) を有効にし、アカウントの VRF ルートに {{site.data.keyword.cloud_notm}} ネットワーク・サービス・エンドポイントのルートを追加しておく必要があります。 詳しくは、[アカウントのサービス・エンドポイントを有効にする方法](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps)を参照してください。
 
 ## 関連リンク
 {: #kmip-design-related}

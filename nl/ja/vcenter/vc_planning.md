@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -77,6 +77,9 @@ vCenter Server のデプロイメントには、物理インフラストラク�
 {: #vc_planning-addon-services}
 
 それぞれのニーズに基づいて、インスタンスのアドオン・サービスを注文できます。例えば、災害復旧などがあります。 詳しくは、[vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)を参照してください。
+
+vCenter Server with NSX-T インスタンスのサービスはサポートされます。
+{:note}
 
 ## キャパシティーに関する考慮事項
 {: #vc_planning-capacity-considerations}

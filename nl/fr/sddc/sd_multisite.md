@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -56,10 +56,8 @@ Figure 1. Déploiement Cloud Foundation multisite
 
 Le modèle contient les couches suivantes :
 
-* **Instance principale** : dans une configuration multisite, pour déployer la première instance, vous définissez cette dernière en tant qu'instance principale au cours du processus de commande de l'instance.
-* **Instance secondaire** : dans une configuration multisite, vous définissez les instances liées à l'instance principale en tant qu'instances secondaires au cours du processus de commande.
-
-Vous ne pouvez affecter qu'une seule instance secondaire à la fois à une instance principale. Vous ne pouvez pas affecter plusieurs instances secondaires à une instance principale simultanément. Pour ce faire, vous devez exécuter de nouveau le processus de commande et sélectionner l'instance précédemment définie comme instance principale pour l'instance secondaire. Vous devez répéter le processus pour toutes les instances secondaires à créer.
+* **Instance principale** : dans une configuration multisite, la première instance a été définie en tant qu'instance principale au cours du processus de commande de l'instance.
+* **Instances secondaires** : dans une configuration multisite, les instances liées à l'instance principale ont été définies en tant qu'instances secondaires au cours du processus de commande.
 
 Vous pouvez avoir jusqu'à 8 instances (1 principale et 7 secondaires) au maximum déployées dans une configuration multisite.
 

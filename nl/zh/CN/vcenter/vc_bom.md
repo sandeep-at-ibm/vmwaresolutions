@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -39,11 +39,11 @@ lastupdated: "2019-02-14"
 
 |制造商|组件|版本|
 |:------------- |:------------------------------ |:------------- |
-|VMware|vSphere ESXi|6.5 Update P3（构建 6.5.0-10884925）|
-|VMware|vCenter Server Appliance|6.5 U2d（构建 6.5.0-10964411）|
-|VMware|Platform Services Controller|6.5 U2d（构建 6.5.0-10964411）|
-|VMware|vSAN|6.6.1|
-|VMware|NSX for vSphere|6.4.1|
+|VMware|vSphere ESXi| 6.7 Update 1（构建 6.7.0-11675023）或<br/>6.5 Update 2（构建 6.5.0-11925212）|
+|VMware|vCenter Server Appliance| 6.7 Update 1（构建 6.7.0-10244745）或<br/>6.5 Update 2d（构建 6.5.0-10964411）|
+|VMware|Platform Services Controller| 6.7 Update 1（构建 6.7.0-10244745）或<br/>6.5 Update 2d（构建 6.5.0-10964411）|
+|VMware|vSAN| 6.7 Update 1 或 <br/>6.6.1|
+|VMware|NSX for vSphere| 6.4.4（构建 11197766）|
 |Microsoft|Windows Server Standard Edition|2012R2|
 
 VMware vSAN 是可选组件。
@@ -138,6 +138,6 @@ vSphere 集群使用两个 vSphere 分布式交换机 (vDS)，一个用于公用
 * [VMware ESXi 和 ESX 的构建号和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
 * [VMware vCenter Server 的构建号和版本 (2143838)](https://kb.vmware.com/s/article/2143838)
 * [在虚拟分布式交换机上启用巨型帧](https://kb.vmware.com/s/article/1038827)
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+* [{{site.data.keyword.vmwaresolutions_short}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
 * [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [规划 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

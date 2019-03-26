@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 # Enregistrement de HCX Manager auprès de vCenter
@@ -30,7 +30,7 @@ Le dispositif virtuel Services cloud hybrides doit être sous tension pour pouvo
 3. Configurez le service de recherche.
   1. Cliquez sur l'onglet **Manage**.
   2. Cliquez sur le bouton **Edit** ou complètement à droite de la zone de texte **Lookup Service URL**.
-  3. Entrez le noeud final de service de recherche sous la forme suivante :
+  3. Entrez le noeud final de service de réseau recherche sous la forme suivante :
     * Pour vCenter Server 5.5u3, `https://ssoip:/7444/lookupservice/sdk`
     * Pour vCenter Server 6.0u2, `https://ssoip/lookupservice/sdk`
   4. Cliquez sur **OK**. Ne redémarrez pas lorsqu'un message demandant le redémarrage du moteur Web s'affiche.

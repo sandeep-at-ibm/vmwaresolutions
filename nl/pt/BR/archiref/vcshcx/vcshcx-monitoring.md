@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -52,8 +52,7 @@ Para configurar a IU da web do WAN Opt:
 14.	Acesse  ` https://<configured_WAN_OPT_IP>`.
 15.	Efetue login com o usuário padrão `admin` e a senha `admin`.
 
-Agora é possível usar a IU da web do WAN Opt para monitorar taxas de
-rendimento, proporções de compactação e configurar restrições de largura de banda.
+Agora é possível usar a IU da web do WAN Opt para monitorar as taxas de rendimento e as taxas de compactação, além de configurar restrições de largura da banda.
 
 ### throttling da largura da banda da migração
 {: #vcshcx-monitoring-mig-bandwidth}
@@ -74,15 +73,10 @@ Isso configura os limites de largura de banda somente para o tráfego de migraç
 estendido não é afetado por essa configuração.
 {:note}
 
-1.	Efetue login na IU da web do Wan Opt.
-2.	Na guia **Configuração**, selecione **Shaper** no menu suspenso.
-3.	Na caixa de largura de banda máxima, configure a largura de banda máxima disponível para o
-dispositivo Wan Opt em kbps. Não exceda a largura de banda máxima do link da
-WAN.     
-  - Para configurar para Mbps (base 10) = Mbps x 1000
-  - Para configurar para Gbps = 1000^2 = Gbps x 1000^2
-  - Padrão = 10 Gbps (10000000)
-4.	Clique em **Aplicar**.
+1. Efetue login na IU da web do WAN Opt.
+2. Na guia **Configuração**, selecione **Shaper** no menu suspenso.
+3. Na caixa **Largura da banda máxima**, configure a largura de banda máxima disponível para o dispositivo WAN Opt em Kbps. Não exceda a largura da banda máxima do link do WAN. Para configurar o valor em Mbps, multiplique por 1.000. Para configurar o valor em Gbps, multiplique por 1.000.000. O valor padrão é 10 Gbps (10.000.000 Kbps).
+4. Clique em **Aplicar**.
 
 Para a limitação da largura de banda do L2 estendido, o QoS pode ser empregado para UDP 500
 e 4500 para o tráfego de túnel entre os dispositivos L2C.
@@ -108,21 +102,12 @@ Use os métodos a seguir para monitorar o uso de largura da banda e a latência.
 
 - O tráfego do vMotion é melhor alcançado usando a IU da web do WAN Opt. O WAN
 Opt reduz significativamente o tráfego que está passando pela WAN e reduz
-a perda do pacote enviando pacotes redundantes. Foi observado que a
-razão típica de uso da largura de banda LAN para WAN é ~3:1 (350 Mbps LAN =
-90-120 Mbps de WAN).
+a perda do pacote enviando pacotes redundantes. Foi observado que a razão típica de uso de largura da banda da LAN para WAN é de aproximadamente 3:1 (LAN de 350 Mbps = WAN de 90 a 120 Mbps).
 
-- A migração baseada em replicação (em massa) de MVs dentro do HCX resulta na
-movimentação densa de MVs. Embora isso não possa ser desejável, a IU do WAN Opt
-revela uma razão alta entre LAN e WAN quando
-dados de disco "vazios" são movidos. Por outro lado, observa-se que, quando
-dados não compactáveis são migrados, como dados do BD e mídia digital, o uso
-da WAN atinge seu máximo, conforme se aproxima do uso de entrada
-da LAN.
+- A migração baseada em replicação (em massa) de VMs dentro dos resultados do HCX nas VMs que estão sendo movidas com provisonamento thick. Embora isso não seja desejável, a IU do WAN Opt revela uma razão alta entre a LAN e a WAN quando os dados do disco não usados são movidos. Por outro lado, é observado que, quando dados não compactáveis são migrados, como dados do banco de dados e mídia digital, o uso de WAN está em seu mais alto nível e fica mais próximo do uso da LAN.
 
 Observações:
-- O vMotion de uma MV dentro do HCX resulta em não mais do que o rendimento
-da rede do vMotion para um único host ESX.
+- A migração do vMotion de uma VM dentro do HCX não gera mais rendimento do que a rede do vMotion para um único host ESXi.
 - Como a migração em massa pode ter diversas migrações em andamento
 simultaneamente, ela atinge maior uso de largura de banda do que uma
 migração do vMotion. A razão observada em um lado do cliente com links do vMotion
@@ -138,25 +123,21 @@ a limitação é a rede do vMotion de 1 Gbps.
 ## Tráfego do Stretched Layer 2
 {: #vcshcx-monitoring-stretched-layer-2-traffic}
 
-O componente de frota do HCX Layer 2 Concentrator tem uma limitação de largura de banda
-de ~4 Gbps agregado para todo o tráfego de rede L2 que o atravessa. As redes
-estendidas individuais têm um limite de largura da banda de ~1 Gbps ou menos,
-dependendo do tipo de tráfego. É possível ter muitas redes de L2
+O concentrador de camada 2 do componente de frota do HCX tem uma limitação de largura de banda de aproximadamente 4 Gbps para todo o tráfego de rede L2 que o atravessa. As redes esticadas individualmente têm um limite de largura da banda de aproximadamente 1 Gbps ou menos, dependendo do tipo de tráfego. É possível ter muitas redes de L2
 estendidas em um único par de L2C (máximo teórico permitido de 4096
 redes por par de L2C). Embora o L2C seja projetado para detectar e
 proteger fluxos de tráfego pequenos para que não sejam superados por grandes fluxos dentro do
 mesmo par de L2C, pode ser vantajoso identificar se essa situação está
 ocorrendo e trazer mais L2Cs para aumentar a capacidade geral da
-largura de banda. A implementação de múltiplos L2Cs também pode ser vantajosa, na qual
-existem múltiplos caminhos entre o site do cliente e o {{site.data.keyword.cloud}}, como link direto e Internet, de forma que ambos possam ser usados, considerando que você
-tem mais de uma rede para ser difundida entre eles. Uma única rede não pode se tornar redundante ou receber a maior largura de banda em diversos
+largura de banda.
+
+A implementação de múltiplos L2Cs também pode ser vantajosa em locais onde existem múltiplos caminhos entre o site do cliente e o {{site.data.keyword.cloud}}, como link direto e Internet. Uma única rede não pode se tornar redundante ou receber a maior largura de banda em diversos
 pares de L2C.
 
 Monitore o tráfego em todas as interfaces que usam a guia Monitoramento
 da MV L2C. Se a taxa total de dados estiver se aproximando de 8 Gbps (4 Gbps dentro/fora),
 considere a inclusão de outro par de L2 e redistribua as redes estendidas para
 rebalancear.
-
 
 ## Links relacionados
 {: #vcshcx-monitoring-related}

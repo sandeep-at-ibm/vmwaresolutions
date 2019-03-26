@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -77,6 +77,9 @@ vCenter Server 배치에는 실제 인프라에 대한 엄격한 요구사항이
 {: #vc_planning-addon-services}
 
 사용자의 요구(재해 복구)에 따라 인스턴스에 추가 기능 서비스를 주문할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)를 참조하십시오.
+
+서비스는 NSX-T 인스턴스가 있는 vCenter Server에 지원됩니다.
+{:note}
 
 ## 용량 고려사항
 {: #vc_planning-capacity-considerations}

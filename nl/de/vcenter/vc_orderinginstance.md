@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,6 +52,14 @@ Der Instanzname muss die folgenden Anforderungen erfüllen:
 * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
 * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
 
+### VMware vSphere-Lizenzen
+{: #vc_orderinginstance-vsphere-license}
+
+Wählen Sie aus, ob vSphere Enterprise Plus 6.7u1 oder vSphere Enterprise Plus 6.5u2 bestellt werden soll. 
+
+vSphere Enterprise Plus 6.7u1 ist nur für Broadwell und Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} verfügbar.
+{:note}
+
 ### Primär oder sekundär
 {: #vc_orderinginstance-primary-secondary}
 
@@ -61,8 +69,8 @@ Wählen Sie aus, ob Sie eine neue primäre oder sekundäre Instanz für eine ber
 {: #vc_orderinginstance-licensing-settings}
 
 Geben Sie die Lizenzierungsoptionen für die folgenden VMware-Komponenten in der Instanz an:
-* vCenter Server 6.5 - Standard Edition
-* vSphere 6.5u1 - Enterprise Plus Edition
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5 oder 6.7
 * NSX Service Providers 6.4 (Base, Advanced oder Enterprise Edition)
 
 Für Benutzer der Kategorie "Business Partner" sind die vCenter Server-Lizenz (Standard Edition), die vSphere-Lizenz (Enterprise Plus Edition) und die NSX-Lizenz enthalten und werden in Ihrem Namen erworben. Für die NSX-Lizenz muss allerdings die Edition angegeben werden.
@@ -294,6 +302,7 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
 1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und klicken Sie anschließend im Abschnitt **Virtuelle Rechenzentren** auf **vCenter Server**.
 2. Klicken Sie auf der Seite **VMware vCenter Server on IBM Cloud** auf die Karte **vCenter Server** und dann auf **Erstellen**.
 3. Geben Sie auf der Seite **vCenter Server** den Instanznamen ein.
+5. Wählen Sie die vSphere-Version aus. 
 4. Wählen Sie den Instanztyp aus:
    * Klicken Sie auf **Primäre Instanz**, um eine einzelne Instanz in der Umgebung bereitzustellen oder um die erste Instanz in einer Topologie mit mehreren Standorten bereitzustellen.
    * Klicken Sie auf **Sekundäre Instanz**, um die Instanz mit einer vorhandenen (primären) Instanz in der Umgebung zu verbinden, um eine hohe Verfügbarkeit zu erreichen, und führen Sie dann die folgenden Schritte aus:
@@ -301,21 +310,21 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
      2. Geben Sie für primäre Instanzen ab Version 2.8 das Administratorkennwort für vCenter Server in der primären Instanz ein.
      3. Geben Sie für primäre Instanzen der Version 2.5, 2.6 oder 2.7 das PSC-Administratorkennwort in der primären Instanz ein.
      4. Überprüfen Sie für primäre Instanzen bis Version 2.4, ob der vorgegebene Wert für das PSC-Administratorkennwort der primären Instanz korrekt ist.
-5. Geben Sie die Lizenzeinstellungen für die Instanzkomponenten ein.
+6. Geben Sie die Lizenzeinstellungen für die Instanzkomponenten ein.
    *  Zur Verwendung der von IBM bereitgestellten Lizenzen müssen Sie **In Kauf einbeziehen** und bei Bedarf die Lizenzedition auswählen.
    *  Zur Verwendung einer eigenen Lizenz müssen Sie **Lizenz selbst bereitstellen** auswählen und den Lizenzschlüssel eingeben.
-6. Geben Sie die Bare Metal Server-Einstellungen an.
+7. Geben Sie die Bare Metal Server-Einstellungen an.
     1. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
     2. Wählen Sie die Bare Metal Server-Konfiguration aus.
        * Wenn Sie **Skylake** oder **Broadwell** auswählen, dann müssen Sie das CPU-Modell und die RAM-Größe angeben.
-       * Wenn Sie **SAP-zertifiziert** auswählen, müssen Sie das CPU-Modell wählen.
+       * Wenn Sie **SAP-zertifiziert** auswählen, müssen Sie eine der voreingestellten Konfigurationen auswählen. 
     3. Geben Sie die Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen an. Wenn vSAN als Speicherlösung verwendet werden soll, sind mindestens vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.  
-7. Führen Sie die Speicherkonfiguration durch.
+8. Führen Sie die Speicherkonfiguration durch.
   * Wenn Sie **vSAN-Speicher** auswählen, geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten, die Anzahl der Platten und die vSAN-Lizenzedition an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
   * Wenn Sie **NFS-Speicher** auswählen und für alle gemeinsam genutzten Dateiressourcen dieselben Einstellungen konfigurieren möchten, geben Sie die **Anzahl der gemeinsam genutzten Ressourcen**, die **Leistung**und die **Größe (GB)** an.
   * Wenn Sie **NFS-Speicher** auswählen und alle gemeinsam genutzten Dateiressourcen einzeln hinzufügen und konfigurieren möchten, wählen Sie **Gemeinsam genutzte Ressourcen einzeln konfigurieren** aus. Klicken Sie anschließend auf das Symbol **+** neben der Bezeichnung **Gemeinsam genutzten Speicher hinzufügen** und wählen Sie für jede Dateifreigabe die Optionen **Leistung** und **Größe (GB)** aus. Sie müssen mindestens eine gemeinsam genutzte Dateiressource auswählen.
   * Wenn Sie **Lokale Platten** auswählen, geben Sie die Plattenanzahl und den Plattentyp an.
-8. Geben Sie die Netzschnittstelleneinstellungen an.
+9. Geben Sie die Netzschnittstelleneinstellungen an.
    1. Geben Sie das Hostnamenspräfix, die Unterdomänenbezeichnung und den Rootdomänennamen ein. Für eine sekundäre Instanz wird der Domänenname automatisch ergänzt.
    2. Wählen Sie die Netzeinstellung für entweder **Öffentliches und privates Netz** oder **Nur privates Netz** aus.
    3. Wählen Sie die VLAN-Einstellungen aus:
@@ -323,10 +332,10 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
       * Wenn Sie die vorhandenen öffentlichen und privaten VLANs wiederverwenden möchten, sofern diese verfügbar sind, dann klicken Sie auf **Vorhandene VLANs auswählen** und geben Sie die VLANs und Teilnetze an.
    4. Geben Sie die DNS-Konfiguration an.
 
-9. Wählen Sie die Add-on-Services aus, die in der Instanz bereitgestellt werden sollen, indem Sie auf die entsprechende Servicekarte klicken. Wenn ein Service konfiguriert werden muss, dann geben Sie die servicespezifischen Einstellungen an und klicken Sie dann auf der Karte auf **Service hinzufügen**.
+10. Wählen Sie die Add-on-Services aus, die in der Instanz bereitgestellt werden sollen, indem Sie auf die entsprechende Servicekarte klicken. Wenn ein Service konfiguriert werden muss, dann geben Sie die servicespezifischen Einstellungen an und klicken Sie dann auf der Karte auf **Service hinzufügen**.
 Weitere Informationen zum Angeben von Einstellungen für einen Service finden Sie im entsprechenden Abschnitt zum Bestellen von Services.
 
-10. Überprüfen Sie im Fenster **Bestellübersicht** die Instanzkonfiguration, bevor Sie die Bestellung aufgeben.
+11. Überprüfen Sie im Fenster **Bestellübersicht** die Instanzkonfiguration, bevor Sie die Bestellung aufgeben.
    1. Überprüfen Sie die Einstellungen für die Instanz.
    2. Überprüfen Sie die geschätzten Kosten der Instanz. Klicken Sie auf **Preisdetails**, um eine PDF-Datei mit der Zusammenfassung zu generieren. Ihre Bestellübersicht können Sie speichern oder drucken, indem Sie rechts oben im PDF-Fenster auf das Symbol **Drucken** bzw. **Herunterladen** klicken.
    3. Klicken Sie auf den Link bzw. die Links für die Bedingungen, die für Ihre Bestellung gelten, und vergewissern Sie sich, dass Sie mit diesen Bedingungen einverstanden sind, bevor Sie die Instanz bestellen.
@@ -337,7 +346,7 @@ Weitere Informationen zum Angeben von Einstellungen für einen Service finden Si
 
 Die Bereitstellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen.
 
-Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert. Wenn Sie Add-on-Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
+Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert. Wenn Sie Add-on-Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 

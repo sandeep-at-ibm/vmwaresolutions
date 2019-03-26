@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-14"
 # Cloud Foundation 概觀
 {: #sd_cloudfoundationoverview}
 
-當您訂購 VMware Cloud Foundation on {{site.data.keyword.cloud}} 時，會自動部署整個 VMware 環境。基礎部署包含四部 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}，其中已預先安裝 VMware Cloud Foundation 堆疊且配置成提供統一軟體定義資料中心 (SDDC) 平台。Cloud Foundation 原本便整合了 VMware vSphere、VMware NSX、VMware Virtual SAN，並且是根據 VMware 驗證的設計進行架構。
+VMware Cloud Foundation on {{site.data.keyword.cloud}} 的基礎部署包含四個 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}，其中已預先安裝 VMware Cloud Foundation 堆疊，並配置為提供統一的軟體定義資料中心 (SDDC) 平台。Cloud Foundation 原本便整合了 VMware vSphere、VMware NSX、VMware Virtual SAN，並且是根據 VMware 驗證的設計進行架構。
 
 ## Cloud Foundation 架構
 {: #sd_cloudfoundationoverview-archi}
@@ -49,7 +49,7 @@ lastupdated: "2019-02-14"
 如需架構的相關資訊，請參閱[解決方案概觀](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)。
 
 ## Cloud Foundation 實例的技術規格
-{: #technical-specifications-for-cloud-foundation-instances}
+{: #sd_cloudfoundationoverview-specs}
 
 Cloud Foundation 實例中包括下列元件。
 
@@ -58,7 +58,7 @@ Cloud Foundation 實例中包括下列元件。
 ### Bare Metal Server
 {: #sd_cloudfoundationoverview-bare-metal}
 
-您可以使用下列其中一個配置來訂購 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}：
+您的實例可以具有附有下列其中一個配置的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}：
 *  **Skylake**：2-CPU Intel Skylake 產生伺服器（Intel Xeon 4100/5100/6100 系列），搭配您選取的 CPU 型號及 RAM 大小。   
 *  **Broadwell**：2-CPU Intel Broadwell 產生伺服器（Intel Xeon E5-2600/E7-4800 系列），搭配您選取的 CPU 型號及 RAM 大小。
 
@@ -67,7 +67,7 @@ Cloud Foundation 實例中包括下列元件。
 ### 網路
 {: #sd_cloudfoundationoverview-networking}
 
-訂購了下列網路元件：
+您的實例包含下列網路元件：
 * 10 Gbps 雙重公用及專用網路上行鏈路
 * 三個 VLAN（虛擬 LAN）：一個公用 VLAN 和兩個專用 VLAN
 * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，其由 IBM 部署為管理網路拓撲的一部分。IBM 管理虛擬機器會利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[管理服務 NSX Edge 是否有安全風險？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -80,7 +80,7 @@ Cloud Foundation 實例中包括下列元件。
 ### 虛擬伺服器實例
 {: #sd_cloudfoundationoverview-vsi}
 
-已訂購下列 VSI（虛擬伺服器實例）：
+您的實例具有下列 VSI（虛擬伺服器實例）：
 * Microsoft Active Directory (AD) 及「網域名稱系統 (DNS)」服務的 VSI。多站台配置支援需要 VSI。此 VSI 規格為：Windows 2012 R2（8 GB RAM/2 個 CPU 核心/100 GB 磁碟/雙重 1 Gbps 專用上行鏈路）。
 * IBM CloudBuilder 的 VSI，在完成實例部署之後會關閉它。
 * （如果已訂購 Veeam on {{site.data.keyword.cloud_notm}}）已訂購 Veeam 備份服務的 VSI。
@@ -88,7 +88,7 @@ Cloud Foundation 實例中包括下列元件。
 ### Storage
 {: #sd_cloudfoundationoverview-storage}
 
-以下是已訂購的儲存空間（視您選取的 {{site.data.keyword.baremetal_short}} 配置而定）：
+視選取的{{site.data.keyword.baremetal_short}}配置而定，您的實例可以具有下列儲存空間：
 * 兩個 1 TB 的 SATA 開機磁碟
 * 兩個 960 GB 的 SSD（固態磁碟）快取磁碟
 * 一個 RAID 磁碟控制器
@@ -138,8 +138,6 @@ Cloud Foundation 實例中包括下列元件。
 {: #sd_cloudfoundationoverview-related}
 
 * [Cloud Foundation 軟體資料清單](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
-* [規劃 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
-* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [VMware vSphere 文件中心](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [VMware NSX 6 文件中心](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [EVC 及 CPU 相容性常見問題](https://kb.vmware.com/s/article/1005764)

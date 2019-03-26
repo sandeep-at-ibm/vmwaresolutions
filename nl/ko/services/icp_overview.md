@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -23,52 +23,52 @@ lastupdated: "2019-02-15"
 {:note}
 
 ## IBM Cloud Private Hosted의 기술 스펙
-{: #technical-specifications-for-ibm-cloud-private-hosted}
+{: #icp_overview-specs}
 
 다음 표에는 **프로덕션에 사용 가능** 환경 및 **개발/테스트** 환경에 대한 IBM Cloud Private Hosted 서비스를 주문하는 데 필요한 최소 요구사항이 나열되어 있습니다.
 
 표 1. 프로덕션에 사용 가능 및 개발/테스트 환경에 대한 최소 요구사항
 
-|환경 | 코어 |  메모리(GB) | 호스트 수 | 스토리지(GB) |
+|환경 | 코어 수 |  메모리(GB) | 호스트 수 | 스토리지(GB) |
 |:---------- |:---- |:------ |:---- |:------- |
 | 프로덕션에 사용 가능 | 52 | 640 | 3 | 8,000 |
 | 개발/테스트 | 30 | 200 | 3 | 4,000 |
 
 ### IBM Cloud Private Hosted에 대한 리소스 요구사항
-{: #resource-requirements-for-ibm-cloud-private-hosted}
+{: #icp_overview-resource-req}
 
 다음 표에는 프로덕션에 사용 가능 및 개발/테스트 환경의 {{site.data.keyword.cloud_notm}} Private Hosted 서비스에 대한 리소스 요구사항이 나열되어 있습니다.
 
 표 2. 프로덕션에 사용 가능 환경의 {{site.data.keyword.cloud_notm}} Private Hosted 리소스 요구사항
 
-| 노드 유형  | CPU 코어   |  메모리(GB) | 디스크 1(GB) | 디스크 2(GB) | VM 수 |
+| 노드 유형  | CPU 코어 수 |  메모리(GB) | 디스크 1(GB) | 디스크 2(GB) | VM 수 |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
 | 부트       | 12 | 24 | 100 |1 |1 |   
-|관리 |8 | 64 | 500 | 3 | 3 |
+| 관리 |8 | 64 | 500 | 3 | 3 |
 | 마스터     |8 | 64 | 200 | 3 | 3 |  
-| 프록시      |2 | 4개  | 150 | 3 | 3 |
-| 작업자     | 4개 | 16 | 200 | 300 | 6 |
+| 프록시      |2 | 4  | 150 | 3 | 3 |
+| 작업자     | 4 | 16 | 200 | 300 | 6 |
 | Vulnerability Advisor |8 | 16 | 500 |1 |1 |
 | GlusterFS  |8 | 16 | 150 | 50 | 3 |
 | 부트스트랩 {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 |1 |1 |
-| NFS 서버 |8 | 4개  | 350 |1 |1 |
-|NSX Edge Services Gateway |2 |1 | 0.5 | 0.5 |2 |
+| NFS 서버 |8 | 4  | 350 |1 |1 |
+| NSX Edge Services Gateway |2 |1 | 0.5 | 0.5 |2 |
 | 문서화된 제한조건 | 52 | 640 |  | 8,000 |   |
 
 표 3. 개발/테스트 환경의 {{site.data.keyword.cloud_notm}} Private Hosted 리소스 요구사항
 
-| 노드 유형  | CPU 코어   |  메모리(GB) | 디스크 1(GB) | 디스크 2(GB) | VM 수 |
+| 노드 유형  | CPU 코어 수 |  메모리(GB) | 디스크 1(GB) | 디스크 2(GB) | VM 수 |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
 | 부트       | 12 | 24 | 100 |1 |1 |   
-|관리 |8 | 16 | 150 |1 |1 |
+| 관리 |8 | 16 | 150 |1 |1 |
 | 마스터     |8 | 16 | 200 |1 |1 |  
-| 프록시      |2 | 4개  | 150 |1 |1 |
-| 작업자     | 4개 | 16 | 200 | 300 | 3 |
+| 프록시      |2 | 4  | 150 |1 |1 |
+| 작업자     | 4 | 16 | 200 | 300 | 3 |
 | Vulnerability Advisor |8 | 16 | 150 |1 |1 |
 | GlusterFS  |8 | 16 | 150 | 50 | 3 |
 | 부트스트랩 {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 |1 |1 |
-| NFS 서버 |8 | 4개  | 350 |1 |1 |
-|NSX Edge Services Gateway |2 |1 | 0.5 | 0.5 |2 |
+| NFS 서버 |8 | 4  | 350 |1 |1 |
+| NSX Edge Services Gateway |2 |1 | 0.5 | 0.5 |2 |
 | 문서화된 제한조건 | 30 | 200 |  | 4,000 |  |
 
 ### IBM Cloud Private Hosted 공간 요구사항을 계산하기 위한 공식
@@ -86,7 +86,7 @@ lastupdated: "2019-02-15"
 | 변수	|설명 |	단위 |	vSAN 예제 | NFS 예제 |
 |:--------- |:----------- |:---- |:------------- |:----------- |
 | AvailableCores |	환경에서 워크로드 및 서비스에 사용 가능한 실제 코어의 수 |	코어 수 |	38	| 43 |
-| HostCount	| 기본 클러스터에 있는 호스트 수	| 호스트 수 | 4	| 4개 |
+| HostCount	| 기본 클러스터에 있는 호스트 수	| 호스트 수 | 4	| 4 |
 | HostCoreCount	| 기본 클러스터의 각 호스트에서 사용 가능한 원시 코어의 수 |	코어 수 |	16 | 16 |
 | HostOverheadCores	| ESXi 서버에 의해 오버헤드로 예약되는 코어의 수, 0.1 코어와 같음	| 코어 수	| 0.1 |	0.1 |
 | MgmtOverheadCores |vCenter Server 관리 컴포넌트(vCenter Server, PSC, AD/DNS, Edges)에 의해 예약되는 코어의 수(5개 코어와 동일함)	| 코어 수	| 5	|5 |

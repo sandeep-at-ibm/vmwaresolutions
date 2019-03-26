@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -65,12 +65,7 @@ VM のマイグレーション・トラフィックによって消費される W
 
 - クラウド・サイド UI – クラウド・サイド HCX UI には、HCX クライアント登録のために付与される公開の登録 URL からアクセスできます。 デフォルトでは、クラウド・サイドの vSphere SSO ログイン (` administrator@vsphere.local`) が使用されます。 通常は、インストール環境のアップグレードやネットワーク構成の変更のためにこの機能を使用します。 HCX で仮想ネットワークを構築するために使用することもあります。
 
-- クライアント/クラウド HCX Manager アプライアンス管理 UI – クラウド・サイドでもクライアント・サイドでも、
-vCenter に表示される VM のプライベート IP アドレスによってアプライアンス管理 UI にアクセスします。
-そのアドレスは `https://<hcxmanager_IP>:9443` です。 ID (通常は admin) とパスワードは、{{site.data.keyword.vmwaresolutions_short}} ポータルで提供されます。 管理 UI の用途は、
-HCX Manager サービスの開始と停止、ログ・モニターの構成、基本的なネットワーキングの構成、手動のアップグレード、
-Web UI が機能していない時のログ収集、vSphere コンポーネント (vCenter、PSC、NSX Manager) への登録、
-証明書の管理などです。
+- クライアント/クラウド HCX Manager アプライアンス管理 UI – クラウド・サイドまたはクライアント・サイドで、vCenter (`https://<hcxmanager_IP>:9443`) に表示される VM のプライベート IP アドレスによってアプライアンス管理 UI にアクセスします。ID (通常は admin) とパスワードは、{{site.data.keyword.vmwaresolutions_short}} ポータルで提供されます。 管理 UI の用途は、HCX Manager サービスの開始と停止、ログ・モニターの構成、基本的なネットワーキングの構成、手動のアップグレード、Web UI が機能していない時のログ収集のサポート、vSphere コンポーネント (vCenter、PSC、NSX Manager) への登録、証明書の管理などです。
 
 ## 関連リンク
 {: #vcshcx-components-related}

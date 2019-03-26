@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -45,7 +45,7 @@ L'interface du client VUM fournit deux vues principales :
 *	Vue Administration
 *	Vue Conformité
 
-## Vue Administration
+##	Vue Administration
 {: #vum-overview-admin-view}
 
 L'accès à la vue Administration s'effectue en accédant à **Home** > **Update Manager** et en sélectionnant l'adresse IP de l'instance Update Manager. Dans la vue Administration, vous pouvez effectuer les tâches suivantes :
@@ -56,7 +56,7 @@ L'accès à la vue Administration s'effectue en accédant à **Home** > **Update
 *	Passer en revue et vérifier les notifications
 *	Importer des images ESXi
 
-## Vue Conformité
+##	Vue Conformité
 {: #vum-overview-compliance-view}
 
 L'accès à la vue Conformité d'un objet d'inventaire sélectionné s'effectue en accédant à **Hosts and Clusters** ou **VMs and Templates** et en cliquant sur l'onglet **Update Manager**. Dans la vue Conformité d'Update Manager, vous pouvez effectuer les tâches suivantes :

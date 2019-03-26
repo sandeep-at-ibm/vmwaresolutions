@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -13,11 +13,11 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # Spécifications et considérations relatives à VMware HCX on IBM Cloud
-{: #vmware-hcx-on-ibm-cloud-overview}
+{: #hcx_considerations}
 
 Le service HCX on {{site.data.keyword.cloud}} étend en toute transparence les réseaux des centres de données locaux dans {{site.data.keyword.cloud_notm}}, ce qui vous permet de migrer les machines virtuelles (VM) vers et depuis {{site.data.keyword.cloud_notm}} sans aucune conversion ni modification.
 
-Ce service est disponible uniquement pour les instances VMware vCenter Server sur {{site.data.keyword.cloud_notm}} avec Hybridity Bundle qui sont déployées dans la version 2.3 ou ultérieure.
+Ce service est disponible uniquement pour les instances VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle qui sont déployées dans la version 2.3 ou ultérieure.
 {:note}
 
 Vous pouvez mettre à niveau votre instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle. Pour plus d'informations concernant la mise à niveau de votre instance et le déploiement du service HCX on {{site.data.keyword.cloud_notm}}, voir [Procédure de mise à niveau vers l'instance vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance).
@@ -26,7 +26,7 @@ Une instance vCenter Server avec HCX on {{site.data.keyword.cloud_notm}} est lim
 {:note}
 
 ## Spécifications techniques relatives à HCX on IBM Cloud
-{: #technical-specifications-for-hcx-on-ibm-cloud}
+{: #hcx_considerations-specs}
 
 Les composants suivants sont commandés et inclus dans le service HCX on {{site.data.keyword.cloud_notm}} :
 
@@ -56,7 +56,7 @@ Des dispositifs HCX supplémentaires sont déployés durant la configuration s'i
 * Deux sous-réseaux portables privés avec 64 adresses IP
 * Huit adresses IP issues du sous-réseau vMotion portable privé
 
-## Considérations à prendre en compte lorsque vous installez HCX on IBM Cloud
+## Remarques relatives à l'installation de HCX on IBM Cloud
 {: #hcx_considerations-install}
 
 Passez en revue les remarques suivantes avant d'installer le service HCX on {{site.data.keyword.cloud_notm}}.
@@ -71,8 +71,8 @@ Le service HCX on {{site.data.keyword.cloud_notm}} ne peut pas être installé d
 
 Avant d'installer le service HCX on {{site.data.keyword.cloud_notm}}, vous devez ajouter une règle de pare-feu à chaque pare-feu existant afin d'autoriser l'intégralité du trafic HTTPS sortant pour que le dispositif virtuel du gestionnaire HCX (HCX Manager) puisse s'enregistrer. Une fois l'installation de HCX Manager terminée, vous pouvez supprimer la règle de pare-feu. De plus, vous devez configurer des règles de pare-feu pour que le service HCX fonctionne correctement. Pour plus d'informations, voir *Appendix A - Port Access Requirements* dans le document [HCX on {{site.data.keyword.cloud_notm}} Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
 
-## Considérations à prendre en compte lorsque vous retirez HCX on IBM Cloud
-{: #considerations-when-removing-hcx-on-ibm-cloud}
+## Remarques relatives au retrait de HCX on IBM Cloud
+{: #hcx_considerations-delete}
 
 Passez en revue les remarques suivantes avant de supprimer le service HCX on {{site.data.keyword.cloud_notm}} :
 * Vérifiez que les interconnexions et les réseaux étendus entre le site source local et les sites cible {{site.data.keyword.cloud_notm}} sont supprimés. Pour supprimer les interconnexions et les réseaux étendus, utilisez l'interface utilisateur HCX sur le client Web VMware vSphere local.

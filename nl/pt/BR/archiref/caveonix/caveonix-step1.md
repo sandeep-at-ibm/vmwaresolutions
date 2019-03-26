@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -41,7 +41,7 @@ Há três modelos de implementação do Caveonix RiskForesight:
   -	Index Datastore que é implementado com os Nós principal e de dados.
   -	Mais Nós de dados que são usados para Ampliação, conforme o número de ativos aumenta.
 
-Todos os componentes devem ter um FQDN e serem registrados no DNS antes de qualquer implementação da MV. Essa etapa é realizada pela automação do IC4VS para a implementação inicial "tudo em um", mas é responsabilidade do cliente fazer o ajuste de escala da implementação.
+Todos os componentes devem ter um FQDN e serem registrados no DNS antes de qualquer implementação da MV. Essa etapa é concluída pela automação do IBM Cloud for VMware Solutions para a implementação inicial "tudo em um", mas é sua responsabilidade o ajuste de escala da implementação.
 
 ## Links relacionados
 {: #caveonix-step1-related}

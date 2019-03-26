@@ -18,6 +18,7 @@ lastupdated: "2018-08-30"
 このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
 ## Spectre および Meltdown への対処
+{: #relnotes_v25-spectre}
 
 {{site.data.keyword.vmwaresolutions_short}} は、Spectre および Meltdown と呼ばれる脆弱性 (CVE-2017-5753、CVE-2017-5715、CVE-2017-5754) に対して VMware から提供されたパッチをリリースしました。
 
@@ -25,13 +26,13 @@ lastupdated: "2018-08-30"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-詳しくは、[Spectre および Meltdown 脆弱性への対処](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)を参照してください。
-
 ## NSX コンポーネントの更新
+{: #relnotes_v25-nsx}
 
 このリリースは、VMware vCenter Server on {{site.data.keyword.cloud_notm}}、VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle、NetApp ONTAP Select の新しいデプロイメントのための VMware NSX for vSphere 6.4.1 をインストールします。
 
 ## デフォルト・バックアップ構成の削除
+{: #relnotes_v25-default-backup}
 
 {{site.data.keyword.vmwaresolutions_short}} には、バックアップ用に 2 つのアドオン・サービスが組み込まれています。それらは、IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} および Veeam on {{site.data.keyword.cloud_notm}} です。 これらのサービスにより、管理インフラストラクチャーとワークロードの両方のリカバリーを計画し、準備することができます。 さらに、IBM Resiliency Services では Veeam バックアップのためのマネージド・サービスを利用できます。
 
@@ -43,12 +44,14 @@ V2.5 リリース以降、IBM Spectrum Protect Plus on {{site.data.keyword.cloud
 {:note}
 
 ## IBM CloudDriver の回復力
+{: #relnotes_v25-cloud-driver}
 
 V2.5 以降のリリースにデプロイまたはアップグレードされたインスタンスの場合、IBM CloudDriver コンポーネントは、vSphere クラスター内の仮想マシン (VM) として構成されることがなくなりました。 代わりに、追加のノード、クラスター、サービスをデプロイするなどの操作のために、最新の {{site.data.keyword.cloud_notm}} for VMware コードと一緒に、{{site.data.keyword.cloud_notm}} インフラストラクチャーの仮想サーバー・インスタンス (VSI) として、必要に応じてデプロイされるようになりました。 さらに、IBM CloudDriver は、{{site.data.keyword.cloud_notm}} プライベート・ネットワークを使用して {{site.data.keyword.cloud_notm}} 管理プレーンと通信するように変更されました。 この変更により、IBM CloudDriver からパブリック・ネットワークへのアウトバウンド通信を許可する 管理 NSX Edge Services Gateway (ESG) ファイアウォールおよびネットワーク・アドレス変換 (NAT) の規則が削除されました。
 
 F5 on {{site.data.keyword.cloud_notm}}、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}、Zerto on {{site.data.keyword.cloud_notm}} などいくつかのアドオン・サービスでは引き続きパブリック・ネットワーク・アクセスが必要なので、管理 NSX ESG は引き続きすべてのインスタンスにデプロイされます。
 
 ## IAM 対応のユーザーおよびアクセス管理
+{: #relnotes_v25-iam}
 
 V2.5 リリースから、{{site.data.keyword.vmwaresolutions_short}} は IBM Identity and Access Management (IAM) と統合され、{{site.data.keyword.cloud_notm}} アカウント内でユーザー・アカウントとユーザー・アクセスを管理するための統一されたアプローチを提供するようになりました。 これにより、以下のようになりました。
 * コラボレーションのために {{site.data.keyword.cloud_notm}} アカウントに複数のユーザーを追加することができます。またそれらのユーザーに異なるプラットフォーム・アクセス役割を割り当てることにより、アカウント内でプロビジョンされるサービスおよびリソースへのユーザーのアクセスを管理することができます。  
@@ -60,6 +63,7 @@ V2.5 リリースから、{{site.data.keyword.vmwaresolutions_short}} は IBM Id
 * [IAM でのユーザー・アクセス権限の管理](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
 
 ## VMware vCenter Server および VMware Cloud Foundation インスタンスのためのユーザー・アカウントとグループへの変更
+{: #relnotes_v25-user-acct}
 
 **ic4v-vCenter** ユーザー・グループが Microsoft Active Directory サーバーに作成されて、vCenter Server のグローバル許可および NSX Manager のユーザー・グループに追加されました。 そのグループには、vCenter Server インスタンス用の **automation** ユーザー・アカウント、および vCenter Server と Cloud Foundation インスタンス用のサービス固有のユーザー・アカウントが含まれます。
 
@@ -69,14 +73,13 @@ Cloud Foundation インスタンスの場合、**customerroot** ホスト・ユ�
 
 vCenter Server インスタンスの場合、**root** ホスト・ユーザー ID を引き続き使用します。 **ic4vroot** ホスト・ユーザー ID は、IBM 専用に作成されたものです。
 
-ユーザー・アカウントについて詳しくは、以下のトピックを参照してください。
-
-* [vCenter Server 成果物の変更に関する考慮事項](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)
-* [Cloud Foundation 成果物の変更に関する考慮事項](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cf_chg_impact)
+ユーザー・アカウントについて詳しくは、[vCenter Server 成果物の変更に関する考慮事項](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)を参照してください。
 
 ## アドオン・サービスの更新
+{: #relnotes_v25-services}
 
 ### IBM Cloud Private Hosted (2018 年 8 月 30 日更新)
+{: #relnotes_v25-scp-hosted}
 
 {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} サービスが、V2.5 以降のリリースでデプロイ (または V2.5 以降のリリースにアップグレード) された vCenter Server インスタンスで使用できるようになりました。
 
@@ -85,28 +88,32 @@ vCenter Server インスタンスの場合、**root** ホスト・ユーザー I
 このサービスは、vCenter Server インスタンスの注文後に要求できます。
 
 ### IBM Spectrum Protect Plus on IBM Cloud
+{: #relnotes_v25-spp}
 
 V2.5 リリースから、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスは、ベスト・プラクティスに基づいて 2 つの独立した VM としてデプロイされます。1 つの VM は IBM Spectrum Protect Plus サーバーを実行し、もう 1 つの VM は vSnap サーバーと VADP プロキシーを実行します。
 
 最大 10 個のバックアップ・データ・ストアを注文できるので、最大 120 TB のバックアップ・ストレージが可能になります。 vSnap および VADP VM は、選択したバックアップ・ストレージ・サイズと [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) の情報に基づいてサイズ変更されます。
 
 ### KMIP for VMware on IBM Cloud
+{: #relnotes_v25-kmip}
 
 ドイツでは、KMIP for VMware on {{site.data.keyword.cloud_notm}} サービス用に新しいエンドポイントが使用可能になりました。
 
-詳しくは、[KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスの構成](/docs/services/vmwaresolutions/services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration)を参照してください。
-
 ## 新規資料および更新された資料
+{: #relnotes_v25-new-docs}
 
 ### 接続されたストレージの資料
+{: #relnotes_v25-docs-storage}
 
 vCenter Server on IBM Cloud の接続されたストレージに関する技術資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。 詳しくは、[vCenter Server on IBM Cloud の接続されたストレージ](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits)を参照してください。
 
 ### 技術仕様
+{: #relnotes_v25-docs-tech-specs}
 
 すべてのインスタンス・タイプとサービス・タイプの技術仕様がユーザー資料で確認できるようになっており、ユーザー・インターフェースからもリンクできるようになっています。 詳しくは、使用するインスタンスとサービスに対応した概要トピックを参照してください。
 
 ### サービスの資料
+{: #relnotes_v25-docs-services}
 
 サービス情報が改善されて、使用可能になったときのリリース番号に基づき、サービス・サポートを簡単に識別できるようになりました。
 
@@ -114,9 +121,9 @@ vCenter Server on IBM Cloud の接続されたストレージに関する技術�
 
 * [vCenter Server インスタンスで使用可能なサービス](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)
 * [vCenter Server with Hybridity Bundle インスタンスで使用可能なサービス](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [Cloud Foundation インスタンス用の使用可能なサービス](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices#available-services-for-cloud-foundation-instances)
 
 ## ユーザー・インターフェースの更新と向上
+{: #relnotes_v25-ui}
 
 ユーザー・インターフェースが更新され、以下の拡張機能が備えられました。
 

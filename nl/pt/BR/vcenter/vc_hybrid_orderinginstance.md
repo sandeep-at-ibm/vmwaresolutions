@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,6 +52,14 @@ O nome da instância deve atender aos requisitos a seguir:
 * O comprimento máximo do nome da instância é de 10 caracteres.
 * O nome da instância deve ser exclusivo dentro de sua conta.
 
+### Licenças do VMware vSphere
+{: #vc_hybrid_orderinginstance-vsphere-license}
+
+Selecione se deve-se pedir o vSphere Enterprise Plus 6.7u1 ou o vSphere Enterprise Plus 6.5u2.
+
+O vSphere Enterprise Plus 6.7u1 está disponível para apenas Broadwell e Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
+{:note}
+
 ### Principal ou secundário
 {: #vc_hybrid_orderinginstance-primary-secondary}
 
@@ -63,7 +71,7 @@ Selecione se pedirá uma nova instância primária ou uma instância secundária
 As licenças VMware a seguir são incluídas com o pedido da instância do vCenter Server with Hybridity Bundle. Deve-se especificar a edição das licenças NSX e vSAN.
 
 * vCenter Server 6.5
-* vSphere Enterprise Plus 6.5u1
+* vSphere Enterprise Plus 6.5 ou 6.7
 * NSX Service Providers 6.4 (Edição Advanced ou Enterprise)
 * vSAN 6.6 (Edição Advanced ou Enterprise)
 
@@ -229,32 +237,33 @@ Com base em sua configuração selecionada para os serviços de instância e com
 1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **vCenter Server** na seção **Data centers virtuais**.
 2. Na página **VMware vCenter Server on IBM Cloud**, clique no cartão **vCenter Server with Hybridity Bundle** e clique em **Criar**.
 3. Na página **vCenter Server**, insira o nome da instância.
+5. Selecione a versão do vSphere.
 4. Selecione o tipo de instância:
    * Clique em **Instância primária** para implementar uma única instância no ambiente ou para implementar a primeira instância em uma topologia multissite.
    * Clique em **Instância secundária** para conectar a instância a uma instância existente (primária) no ambiente para alta disponibilidade e conclua as etapas a seguir:
      1. Selecione a instância primária à qual deseja que a instância secundária seja conectada.
      2. Para instâncias primárias V2.8 ou mais recente, insira a senha do administrador do vCenter Server para a instância primária.
      3. Para as instâncias primárias V2.7 ou anterior, insira a senha do administrador do PSC para a instância primária.
-5. Selecione a edição de licença do NSX e a edição de licença do vSAN.
-6. Conclua as configurações de Bare Metal Server.
+6. Selecione a edição de licença do NSX e a edição de licença do vSAN.
+7. Conclua as configurações de Bare Metal Server.
   1. Selecione o {{site.data.keyword.CloudDataCent_notm}} para hospedar a instância.
   2. Selecione o modelo de CPU **Skylake** ou **Broadwell** e a quantia de **RAM**.
 
   O **Número de Bare Metal Servers** é configurado para quatro por padrão e não pode ser mudado.
   {:note}
-7. Conclua a configuração de armazenamento. Especifique os tipos de disco para os discos de capacidade e de cache, além do número de discos. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
-8. Conclua a configuração da interface de rede.
+8. Conclua a configuração de armazenamento. Especifique os tipos de disco para os discos de capacidade e de cache, além do número de discos. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
+9. Conclua a configuração da interface de rede.
   1. Insira o prefixo de nome do host, o rótulo do subdomínio e o nome do domínio-raiz.
   2. Selecione a configuração de rede de **Rede pública e privada** ou **Somente rede privada**.
   3. Selecione a configuração de VLAN.
      *  Se desejar pedir novas VLANs públicas e privadas, clique em **Pedir novas VLANs**.
      *  Se você desejar reutilizar as VLANs públicas e privadas existentes quando estiverem disponíveis, clique em **Selecionar VLANs existentes** e, em seguida, selecione a VLAN pública, a sub-rede primária, a VLAN privada, a sub-rede primária privada e a VLAN privada secundária.
   4. Selecione a configuração do DNS.
-9. Conclua a configuração do serviço HCX on {{site.data.keyword.cloud_notm}} incluído. Para obter mais informações sobre como fornecer configurações para o serviço, consulte a seção _Configuração do VMware HCX on IBM Cloud_ em [Pedindo o VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
-10. Selecione os serviços complementares a serem implementados na instância clicando no cartão de serviço correspondente. Se um serviço requerer configuração, conclua as configurações específicas do serviço e clique em **Incluir serviço** no cartão.  
+10. Conclua a configuração do serviço HCX on {{site.data.keyword.cloud_notm}} incluído. Para obter mais informações sobre como fornecer configurações para o serviço, consulte a seção _Configuração do VMware HCX on IBM Cloud_ em [Pedindo o VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
+11. Selecione os serviços complementares a serem implementados na instância clicando no cartão de serviço correspondente. Se um serviço requerer configuração, conclua as configurações específicas do serviço e clique em **Incluir serviço** no cartão.  
 Para obter mais informações sobre como fornecer configurações para um serviço, consulte o tópico de pedido de serviço correspondente.
 
-11. Na área de janela **Resumo do pedido**, verifique a configuração da instância antes de fazer o pedido.
+12. Na área de janela **Resumo do pedido**, verifique a configuração da instância antes de fazer o pedido.
    1. Revise as configurações para a instância.
    2. Revise o custo estimado da instância. Clique em **Detalhes da precificação** para gerar um PDF de resumo. Para salvar ou imprimir o resumo de seu pedido, clique no ícone **Imprimir** ou **Fazer download** no canto superior direito da janela PDF.
    3. Clique no link ou nos links dos termos que se aplicam ao seu pedido e confirme que concorda com esses termos antes de pedir a instância.
@@ -265,7 +274,7 @@ Para obter mais informações sobre como fornecer configurações para um servi�
 
 A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
 
-Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
+Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
 
 Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -24,7 +24,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} no automatiza la instalación
 Utilice esta oferta para crear un nuevo clúster de servidores ESXi o para escalar un clúster existente de servidores ESXi en un {{site.data.keyword.CloudDataCent_notm}}. Dependiendo de los componentes de VMware que seleccione, puede empezar con un solo servidor ESXi y luego escalar el clúster más adelante cuando sea necesario.
 
 ## Especificaciones técnicas para clústeres de VMware vSphere on IBM Cloud
-{: #technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters}
+{: #vs_vsphereclusteroverview-specs}
 
 Revise los componentes de VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
@@ -35,7 +35,7 @@ La disponibilidad y los precios de las configuraciones estandarizadas de hardwar
 {: #vs_vsphereclusteroverview-specs-vmware-components}
 
 Seleccione licencias (proporcionadas por IBM o BYOL) para los siguientes componentes de VMware:
-* VMware vSphere Enterprise Plus 6.0u2, 6.5u1 o 6.5u2
+* VMware vSphere Enterprise Plus 6.7 U1 o 6.5 U2
 * Los siguientes componentes de VMware son opcionales:
    * VMware vCenter Server Standard
    * VMware NSX (Base, Advanced o Enterprise)
@@ -48,10 +48,10 @@ Seleccione licencias (proporcionadas por IBM o BYOL) para los siguientes compone
 ### Servidor nativo
 {: #vs_vsphereclusteroverview-specs-bare-metal}
 
-Seleccione uno o varios {{site.data.keyword.baremetal_short}} de {{site.data.keyword.cloud_notm}} con el modelo de CPU y el tamaño de RAM que seleccione.
-* Generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100)
-* Certificado por SAP (Intel Xeon serie 6140/E5-2690/E7-8890)
-* Generación Intel Broadwell de 2 CPU (Intel Xeon serie E5-2600/E7-4800)
+Puede solicitar uno o varios {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} con una de las siguientes configuraciones:
+* **Skylake**: servidores de generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100) con el modelo de CPU y el tamaño de RAM que seleccione.
+* **Certificado por SAP**: servidores de generación Intel Skylake o Intel Broadwell (Intel Xeon serie 6140/E5-2690/E7-8890) con el modelo de CPU que elija.
+* **Broadwell**: servidores de generación Intel Broadwell de 2 CPU (Intel Xeon serie E5-2600/E7-4800) con el modelo de CPU y el tamaño de RAM que seleccione.
 
 Las opciones disponibles dependen de si ha seleccionado el componente vSAN de VMware.
 
@@ -86,18 +86,18 @@ Cada nodo de expansión de clúster de vSphere desplegará e incurrirá en cargo
 ### Hardware para nodos de expansión
 {: #vs_vsphereclusteroverview-expansion-node-specs-hardware}
 
-Un servidor nativo de {{site.data.keyword.cloud_notm}} con la configuración de hardware presentada en [Especificaciones técnicas para clústeres de VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+Un servidor nativo de {{site.data.keyword.cloud_notm}} con la configuración de hardware presentada en [Especificaciones técnicas para clústeres de VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 ### Sistema de redes para nodos de expansión
 {: #vs_vsphereclusteroverview-expansion-node-specs-network}
 
-Un servidor nativo de {{site.data.keyword.cloud_notm}} con la configuración de red presentada en [Especificaciones técnicas para clústeres de VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+Un servidor nativo de {{site.data.keyword.cloud_notm}} con la configuración de red presentada en [Especificaciones técnicas para clústeres de VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 ### Componentes de VMware para nodos de expansión
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* Un servidor nativo {{site.data.keyword.cloud_notm}} con VMware vSphere Enterprise Plus 6.0u2 o 6.5u1  
-* Componentes opcionales de VMware que se presentan en [Especificaciones técnicas para clústeres de VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+* Un servidor nativo {{site.data.keyword.cloud_notm}} con VMware vSphere Enterprise Plus 6.7u1 o 6.5u2.  
+* Componentes opcionales de VMware que se presentan en [Especificaciones técnicas para clústeres de VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 Debe gestionar los servidores ESXi, los componentes opcionales de VMware y el hardware adicional solicitados y distribuidos a su cuenta de {{site.data.keyword.cloud_notm}} solo desde el {{site.data.keyword.slportal}}. Después de crear un nuevo clúster en la consola de {{site.data.keyword.vmwaresolutions_short}}, puede volver a la consola y utilizar la información guardada para escalar el nuevo clúster. Para obtener más información, consulte [Escalado de clústeres existentes de vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters).
 {:important}

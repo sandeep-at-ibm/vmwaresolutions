@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -20,6 +20,7 @@ lastupdated: "2019-02-21"
 
 ## IBM Cloud for VMware Solutions에 필요한 사용자 계정은 무엇입니까?
 {: #faq-user-accts}
+{: faq}
 
 * **IBM ID 계정**. 이 계정은 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 액세스하는 데 필요합니다. 콘솔은 {{site.data.keyword.slportal}}에서 분리된 독립형 사용자 인터페이스입니다. 자세한 정보는 [시작하기](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)를 참조하십시오.
 * **{{site.data.keyword.cloud_notm}} 계정**. 이 계정은 프로비저닝에 필요합니다. 기존 **IBM ID**를 사용하거나 새 **IBM ID**를 작성하여 {{site.data.keyword.cloud_notm}} 계정을 등록할 수 있습니다.
@@ -27,41 +28,41 @@ lastupdated: "2019-02-21"
 
 ## 내 IBM Cloud 인프라 인증 정보를 IBM Cloud for VMware Solutions 콘솔과 연관시킬 수 있는 방법은 무엇입니까?
 {: #faq-associate-credentials}
+{: faq}
 
 처음 인스턴스를 주문할 때는 콘솔의 **설정** 페이지의 지시사항에 따라 {{site.data.keyword.slportal}}에서 {{site.data.keyword.cloud_notm}} 인프라 사용자 이름 및 API 키를 찾아서 복사하십시오. 첫 번째 주문 후 {{site.data.keyword.cloud_notm}} 인프라 인증 정보가 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 저장됩니다. 이후 주문 시 저장된 인증 정보를 자동으로 사용합니다.
 
 ## VMware 가상 플랫폼 사용 비용은 어떻게 청구됩니까?
 {: #faq-billing}
+{: faq}
 
 실제 및 가상 인프라의 모든 비용과 인스턴스에서 발생한 라이센스는 {{site.data.keyword.cloud_notm}} 계정에 비용이 청구됩니다. 인스턴스를 주문할 때 {{site.data.keyword.cloud_notm}} 계정이 있어야 하고 계정과 연관된 {{site.data.keyword.slapi_short}} 키를 제공해야 합니다.
 
-## vCenter Server 인스턴스, Cloud Foundation 인스턴스 및 VMware vSphere 클러스터 간 차이는 무엇입니까?
+## vCenter Server 인스턴스 및 VMware vSphere 클러스터 간 차이는 무엇입니까? 
 {: #faq-vcs-cf-vss}
+{: faq}
 
 모든 인스턴스 유형은 VMware 가상 환경에 맞는 배치 선택사항을 제공합니다. 하지만 사용자 정의 가능성과 자동화의 범위에 차이가 있습니다.
 
-* VMware vCenter Server 인스턴스를 주문하는 경우 사용자 정의된 컴퓨팅, 스토리지 및 네트워크 리소스와 함께 VMware 가상 환경을 배치하십시오. 배치된 컴포넌트에 대한 자세한 정보는 [vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)을 참조하십시오.
-* VMware Cloud Foundation 인스턴스를 주문하는 경우 통합된 소프트웨어 정의 데이터 센터(SDDC) 플랫폼을 배치하십시오. 배치된 컴포넌트에 대한 자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances)을 참조하십시오.
+* VMware vCenter Server 인스턴스를 주문하는 경우 사용자 정의된 컴퓨팅, 스토리지 및 네트워크 리소스와 함께 VMware 가상 환경을 배치하십시오. 배치된 컴포넌트에 대한 자세한 정보는 [vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)을 참조하십시오.
 * VMware vSphere 클러스터를 주문하는 경우 VMware 호환 하드웨어를 통합하면서 호스팅된 VMware 환경을 디자인하고 빌드할 수 있는 최대한의 유연성을 확보합니다. 하지만 {{site.data.keyword.cloud_notm}}는 VMware vSphere 클러스터에 대한 선택적 VMware 컴포넌트의 설치, 구성 및 가져오기를 자동화하지 않습니다.
-* vCenter Server 인스턴스, Cloud Foundation 인스턴스 및 vSphere 클러스터에 지원되는 기능은 서로 다릅니다. 자세한 정보는 [오퍼링 비교 차트](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inst_comp_chart)를 참조하십시오.
+* vCenter Server 인스턴스 및 vSphere 클러스터에 의해 지원되는 기능은 서로 다릅니다. 자세한 정보는 [오퍼링 비교 차트](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inst_comp_chart)를 참조하십시오.
 
 ## vCenter Server 인스턴스에 포함되는 항목은 무엇입니까?
 {: #faq-vcs}
+{: faq}
 
-자세한 정보는 [vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)을 참조하십시오.
-
-## Cloud Foundation 인스턴스에 포함되는 항목은 무엇입니까?
-{: #faq-cf}
-
-자세한 정보는 [Cloud Foundation 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances)을 참조하십시오.
+자세한 정보는 [vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)을 참조하십시오.
 
 ## vSphere 클러스터에 포함된 것은 무엇입니까?
 {: #faq-vss}
+{: faq}
 
 자세한 정보는 [VMware vSphere on {{site.data.keyword.cloud_notm}}의 컴포넌트](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview)를 참조하십시오.
 
 ## 두 개의 노드 vCenter Server 인스턴스는 고가용성입니까?
 {: #is-a-two-node-vcenter-server-instance-highly-available}
+{: faq}
 
 최소 세 개의 노드가 있는 환경에 프로덕션 워크로드를 배치하는 것이 좋습니다.
 
@@ -73,18 +74,22 @@ lastupdated: "2019-02-21"
 
 ## VMware vCenter 6.5 HA 구성을 설정할 수 있습니까?
 {: #faq-ha}
+{: faq}
 
 아니오, 권장하지 않습니다. {{site.data.keyword.vmwaresolutions_short}}에서 실패가 발생할 수 있습니다.
 
 ## 클러스터의 이름을 바꿀 수 있습니까?
 {: #faq-rename-cluster}
+{: faq}
 
 vCenter Server 인스턴스의 경우, 배치 중에 작성된 첫 번째 클러스터의 이름은 기본 이름인 **cluster1**입니다. VMware vSphere Client에서 기본 클러스터의 이름을 변경할 수 있습니다. 클러스터를 vCenter Server 인스턴스에 추가하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 원하는 이름을 지정할 수 있습니다.
 
-**참고:** Cloud Foundation 인스턴스의 경우, 기본 클러스터 이름을 변경할 수 없습니다.
+Cloud Foundation 인스턴스의 경우, 기본 클러스터 이름을 변경할 수 없습니다.
+{:note}
 
 ## 패치가 어떻게 관리되고 있습니까?
 {: #faq-patches}
+{: faq}
 
 IBM은 요청 시 IBM CloudDriver VSI(Virtual Server Instance)를 배치하여 IBM 코드에 대한 지속적 업데이트를 제공합니다. IBM은 Zerto on {{site.data.keyword.cloud_notm}} 또는 Veeam on {{site.data.keyword.cloud_notm}}와 같은 추가 서비스에 대한 지속적인 업데이트를 제공하지 않습니다. 업데이트의 확보 및 설치는 사용자의 책임입니다.
 
@@ -108,11 +113,11 @@ V2.0 이상에 배치된 인스턴스의 경우, VUM(VMware Update Manager)은 v
 자세한 정보는 다음 리소스를 참조하십시오.
 * [VMware Support](https://www.vmware.com/support.html)
 * [vCenter Server 인스턴스에 업데이트 적용](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
-* [업데이트를 Cloud Foundation 인스턴스에 적용](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_applyingupdates)
 * [vCenter Server with Hybridity Bundle 인스턴스에 업데이트 적용](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 
 ## 관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?
 {: #faq-mgmt-nsx}
+{: faq}
 
 관리 서비스용 VMware NSX Edge가 공인 서브넷에 있지만 다음 보안 위험이 발생하지 않도록 보안 조치가 제공됩니다.
 *  NSX Edge 방화벽은 관리 가상 머신에서 시작된 발신 HTTPS(TCP 포트 443) 트래픽만 허용하도록 구성됩니다.
@@ -122,6 +127,7 @@ V2.0 이상에 배치된 인스턴스의 경우, VUM(VMware Update Manager)은 v
 
 ## 고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?
 {: #faq-customer-nsx}
+{: faq}
 
 고객 관리 NSX Edge가 공용 VLAN에 연결되지만 보안 위험이 발생하지 않도록 보안 조치가 제공됩니다. 다음 보안 조치가 준비되어 있습니다.
 *  IP 주소의 사설 서브넷 범위에서 지속적인 트래픽만 허용하도록 방화벽 규칙이 제공됩니다.
@@ -131,23 +137,25 @@ V2.0 이상에 배치된 인스턴스의 경우, VUM(VMware Update Manager)은 v
 
 ## 내 인스턴스의 데이터 센터는 어떻게 선택합니까?
 {: #faq-data-center}
+{: faq}
 
 인스턴스 배치에는 엄격한 실제 인프라 요구사항이 있으며 이는 {{site.data.keyword.CloudDataCents_notm}} 간에 다릅니다. 인스턴스를 주문할 때 사용 가능한 데이터 센터가 지역 내에 나열되며 목록에서 원하는 데이터 센터를 선택할 수 있습니다.
 
 자세한 정보는 _IBM Cloud Data Center 가용성_ 절을 참조하십시오.
 * [vCenter Server 인스턴스 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [vCenter Server with Hybridity Bundle 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
-* [Cloud Foundation 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
 * [VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 * [NetApp ONTAP Select 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
 
 ## 내 인스턴스를 배치하는 데 시간이 얼마나 걸립니까?
 {: #faq-deploy}
+{: faq}
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 인스턴스 세부사항 페이지의 배치 히스토리를 보고 인스턴스 배치의 상태를 확인할 수 있습니다.
 
 ## VMware vSphere on IBM Cloud가 VMware 스택을 설치하고 구성하고 가져오는 데 자동화를 사용합니까?
 {: #faq-vss-automation}
+{: faq}
 
 아니오. VMware vSphere on {{site.data.keyword.cloud_notm}}는 Cloud Foundation 및 vCenter Server 플랫폼에 있는 고급 자동화를 사용하지 않습니다. 사용자의 주문 항목에 따라 플랫폼은 선택적 VMware 라이센스, ESXi 서버를 제공하고, 선택적으로 FortiGate 실제 방화벽의 HA 이중화를 제공합니다. 새 클러스터가 작성되는 경우 세 개의 새 VLAN(하나의 공용 VLAN 및 두 개의 사설 VLAN)도 프로비저닝됩니다.
 
@@ -155,11 +163,13 @@ VMware ESXi는 각 베어메탈 서버에 자동으로 설치되지만 vCenter S
 
 ## 모든 알림의 목록을 볼 수 있는 방법은 무엇입니까?
 {: #faq-notification}
+{: faq}
 
 전체 알림 히스토리를 보려면 왼쪽 탐색 분할창에서 **알림**을 클릭하십시오.
 
 ## IBM Cloud for VMware Solutions에 대한 문제점이 있으면 어떻게 해야 합니까?
 {: #faq-support}
+{: faq}
 
 {{site.data.keyword.vmwaresolutions_short}}에 대한 지원이 필요하면 지원 채널 중 하나를 통해 IBM 지원 센터에 문의하십시오. 자세한 정보는 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)를 참조하십시오.
 
@@ -167,7 +177,6 @@ VMware ESXi는 각 베어메탈 서버에 자동으로 설치되지만 vCenter S
 {: #faq-related}
 
 * [알림](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)
-* [Cloud Foundation 인스턴스](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
 * [vCenter Server 인스턴스](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [콘솔에 액세스](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-loginmethod)
 * [사용자 계정 및 설정](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)

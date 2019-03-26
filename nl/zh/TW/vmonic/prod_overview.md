@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -53,13 +53,6 @@ vCenter Server with Hybridity 供應項目是一種受管理的專用雲端，�
 
 如需相關資訊，請參閱 [vCenter Server with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)。
 
-### VMware Cloud Foundation on IBM Cloud
-{: #prod_overview-cf}
-
-Cloud Foundation 供應項目使用每個使用者部署專用的標準 {{site.data.keyword.cloud_notm}} 運算、儲存空間及網路資源，來提供統一的 VMware 虛擬環境。
-
-如需相關資訊，請參閱 [Cloud Foundation 概觀](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)。
-
 ### VMware vSphere on IBM Cloud
 {: #prod_overview-vss}
 
@@ -78,6 +71,11 @@ NetApp ONTAP Select 供應項目容許您部署軟體定義的儲存空間叢集
 {: #prod_overview-services}
 
 {{site.data.keyword.vmwaresolutions_short}} 可讓您在訂購實例時或實例部署之後新增各種服務。提供了下列服務：
+
+### Caveonix RiskForesight on IBM Cloud
+{: #prod_overview-caveonix}
+
+Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務利用主動監視和自動化防禦控制來防範威脅及因應業界或政府規章。
 
 ### F5 on IBM Cloud
 {: #prod_overview-f5}
@@ -119,7 +117,7 @@ HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務提供具有整合
 
 HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 服務藉由自動化及簡化加密金鑰的生命週期，來簡化加密工作負載的管理。服務可以使用符合 FIPS 140-2 標準的加密，輕鬆地大規模管理加密金鑰。使用此服務，您可以管理所有虛擬機器及加密資料儲存庫的加密金鑰，並將其調整為在大型部署中支援數千個加密工作負載。
 
-如需相關資訊，請參閱 [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)。
+如需相關資訊，請參閱 [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)。
 
 ### IBM Cloud Private Hosted
 {: #prod_overview-icp}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -19,11 +19,11 @@ F5 on {{site.data.keyword.cloud}} サービス (F5 BIG-IP® Virtual Edition) は
 
 必要に応じて、このサービスの複数のインスタンスをインストールできます。
 
-このサービスは、V1.9 以降でデプロイされたインスタンスでのみ利用可能です。 現在インストールされている BIG-IP VE のバージョンは v13.1.1.2 です。
+このサービスは、V1.9 以降でデプロイされたインスタンスでのみ利用可能です。 現在インストールされている BIG-IP VE のバージョンは v14.1.0.2 です。
 {:note}
 
 ## F5 on IBM Cloud の技術仕様
-{: #technical-specifications-for-f5-on-ibm-cloud}
+{: #f5_considerations-specs}
 
 以下のコンポーネントが F5 on {{site.data.keyword.cloud_notm}} サービスに含まれています。
 

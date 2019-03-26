@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2019-02-14"
 {: #vc_addingremovingservers}
 
 VMware vCenter Server インスタンスの容量は、ESXi サーバーまたはネットワーク・ファイル・システム (NFS) ストレージを追加/削除することで、ビジネス・ニーズに応じて拡張/縮小できます。
+
+V2.9 リリース以降では、サーバーが保守モードの間に、新規 ESXi サーバーをクラスターに追加できます。また、複数のクラスター間で同時に ESXi サーバーを追加または削除できます。以下の同時操作が可能です。
+
+* 1 つのクラスターへのホストの追加と、追加のクラスターへのホストの追加。
+* 1 つのクラスターからのホストの削除と、追加のクラスターからのホストの削除。
+* 1 つのクラスターへのホストの追加と、追加のクラスターからのホストの削除。
+* 1 つのクラスターからのホストの削除と、追加のクラスターへのホストの追加。
 
 既存の NFS または vSAN vCenter Server クラスターの NFS ストレージ共有を追加/削除することができます。
 {:note}
@@ -31,19 +38,20 @@ VMware vCenter Server インスタンスの容量は、ESXi サーバーまた�
 * VMware vSphere Web クライアントから ESXi サーバーの追加を行わないでください。 vSphere Web Client で行った変更は、{{site.data.keyword.vmwaresolutions_full}} コンソールと同期されません。
 * NFS ストレージのある vCenter Server インスタンスには、少なくとも 2 つの ESXi サーバーが必要です。 V2.1 以降にデプロイされたインスタンスの場合、デフォルト・クラスターについては、ESXi サーバーを最大 51 台まで配置して拡張できます。 デフォルト以外の各クラスターは、最大 59 台の ESXi サーバーを含むように拡張できます。
 * vSAN ストレージのある vCenter Server インスタンスには、少なくとも 4 つの ESXi サーバーが必要です。
-* V2.0 以前にデプロイされた vCenter Server インスタンスの場合、クラスターごとに、ESXi サーバーを最大 32 個まで配置して拡張できます。 一度に追加できる{{site.data.keyword.baremetal_short}}の数は、以下のとおりです。
-   * **「スモール」**、**「ミディアム」**、**「ラージ」**の各構成では、一度に 1 から 10 個の ESXi サーバーを追加できます。
-   * **「Skylake」**構成と**「Broadwell」**構成の場合、一度に 1 台から 20 台までの ESXi サーバーを追加できます。 最小限の ESXi サーバーについて詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
+* V2.0 以前にデプロイされた vCenter Server インスタンスの場合、クラスターごとに、ESXi サーバーを最大 32 個まで配置して拡張できます。
+* 一度に 1 台から 20 台の ESXi サーバーを追加できます。 最小限の ESXi サーバーについて詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
 
 ### ESXi サーバーを追加する手順
 {: #vc_addingremovingservers-adding-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、容量を拡張するインスタンスをクリックします。
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。
 4. **「クラスター」**テーブルで、ESXi サーバーを追加するクラスターをクリックします。
-5. **「ESXi サーバー」**セクションで**「サーバーの追加」**をクリックします。
-6. **「サーバーの追加」**ウィンドウで、追加するサーバーの数を入力し、見積もりコストを確認して、**「サーバーの追加」**をクリックします。
+5. **「ESXi サーバー」**セクションで**「追加」**をクリックします。
+6. **「サーバーの追加」**ウィンドウで、追加するサーバーの数を入力します。
+7. オプションで、保守モード中にサーバーを追加するためのチェック・ボックスを選択します。
+8. 見積もりコストを確認し、**「追加」**をクリックします。
 
 ### ESXi サーバーを追加した結果
 {: #vc_addingremovingservers-adding-results}
@@ -51,6 +59,12 @@ VMware vCenter Server インスタンスの容量は、ESXi サーバーまた�
 1. インスタンス状況が**「使用可能」**から**「変更中」**に変わる間、コンソールにわずかな遅延が生じることがあります。 インスタンスにさらに変更を加える場合は、その前にこの操作が完全に完了するまでお待ちください。
 2. ESXi サーバーを追加する要求の処理中であることが、E メールで通知されます。 コンソールで、ESXi サーバーに関連付けられたクラスターの状況が、**「変更中」**に変更されます。
 3. リストに新しく追加した ESXi サーバーがクラスター内にない場合は、E メールかコンソールの通知を確認して、失敗に関する詳細を調べてください。
+4. 以下のような状況では、Zerto Virtual Manager (ZVM) コンソールと事前定義済みの Zerto Virtual Replication Appliance (VRA) IP アドレスを使用して、手動で VRA 仮想マシン (VM) をデプロイする必要があります。
+   * ESXi サーバーが保守モードで、Zerto for {{site.data.keyword.cloud_notm}} がインストールされているときに、デフォルト・クラスターに ESXi サーバーを追加する場合。
+   * 保守モードの ESXi サーバーを持つ vCenter Server インスタンスに Zerto for {{site.data.keyword.cloud_notm}} を追加する場合。
+
+保守モード時に ESXi サーバーを追加する場合、保守モードを解除するまで仮想マシンは新規サーバーにマイグレーションされません。   
+{:important}
 
 ## vCenter Server インスタンスからの ESXi サーバーの削除
 {: #vc_addingremovingservers-removing}
@@ -67,7 +81,7 @@ VMware vCenter Server インスタンスの容量は、ESXi サーバーまた�
 ### ESXi サーバーを削除する手順
 {: #vc_addingremovingservers-removing-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、容量を縮小するインスタンスをクリックします。
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。
 4. **「クラスター」**テーブルで、ESXi サーバーを削除するクラスターをクリックします。
@@ -94,7 +108,7 @@ VMware vSphere Web クライアントから NFS ストレージの追加を行�
 ### NFS ストレージを追加する手順
 {: #vc_addingremovingservers-adding-nfs-storage-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、容量を拡張するインスタンスをクリックします。
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。
 4. **「クラスター」**テーブルで、NFS ストレージを追加するクラスターをクリックします。
@@ -125,7 +139,7 @@ VMware vSphere Web クライアントから NFS ストレージの追加を行�
 ### NFS ストレージを削除する手順
 {: #vc_addingremovingservers-removing-nfs-storage-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、容量を縮小するインスタンスをクリックします。
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。
 4. **「クラスター」**テーブルで、NFS ストレージを削除するクラスターをクリックします。

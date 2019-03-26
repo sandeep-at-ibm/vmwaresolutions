@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -27,7 +27,7 @@ Diese Testversion ist für eine Nutzung von bis zu 90 Tagen vorgesehen. Wenn Sie
 Weitere Informationen zum Architekturdesign finden Sie unter [HCX on IBM Cloud-Architektur für Single-node Trial for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html).
 
 ## Technische Spezifikationen für Single-node Trial for vCenter Server-Instanzen
-{: #vc_trial_hybrid_orderinginstance-tech-specs}
+{: #vc_trial_hybrid_orderinginstance-specs}
 
 Ihre Single-node Trial for vCenter Server-Instanz enthält die folgenden Komponenten:
 
@@ -173,7 +173,7 @@ Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert
 #### Instanzdetails anzeigen
 {: #vc_trial_hybrid_orderinginstance-view-inst-details}
 
-Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen. Klicken Sie im linken Navigationsfenster auf **Bereitgestellte Instanzen** und suchen Sie die Tabelle **vCenter Server-Instanzen** oder **Lokale HCX-Instanzen**, um Informationen zu den bestellten Instanzen anzuzeigen.
+Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen. Klicken Sie im linken Navigationsfenster auf **Ressourcen** und suchen Sie die Tabelle **vCenter Server-Instanzen** oder **Lokale HCX-Instanzen**, um Informationen zu den bestellten Instanzen anzuzeigen. 
 
 Wenn die Instanz erfolgreich bereitgestellt wurde, werden die in den Abschnitten *Technische Spezifikationen* dieses Themas beschriebenen Komponenten auf Ihrer virtuellen VMware-Plattform installiert und der Aktivierungsschlüssel für den lokalen HCX on {{site.data.keyword.cloud_notm}}-Service in der Tabelle **Lokale HCX-Instanzen** aufgeführt.
 
@@ -184,8 +184,8 @@ Der Status der Instanz ändert sich in **Bereit** und Sie erhalten eine Benachri
 
 Installieren Sie den lokalen HCX Enterprise Manager und konfigurieren Sie die Verbindung zu Ihrer HCX on {{site.data.keyword.cloud_notm}}-Instanz.
 
-1. Suchen Sie den lokalen Aktivierungsschlüssel auf der Seite **Bereitgestellte Instanzen**.
-  1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Suchen Sie den lokalen Aktivierungsschlüssel auf der Seite **Ressourcen**. 
+  1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
   2. Suchen Sie in der Tabelle **vCenter Server-Instanzen** in der Spalte **Typ** nach der vCenter Server Single-node Trial-Instanz und notieren Sie den Instanznamen.
   3. Blättern Sie zur Tabelle **Lokale HCX-Instanzen** und suchen Sie in der Spalte **Name** nach der Instanz mit demselben Namen wie die bestellte Einzelknoteninstanz mit dem Suffix *-OnPrem*.
   4. Notieren Sie den Schlüssel im Feld **Aktivierungsschlüssel**.
@@ -243,7 +243,7 @@ Die gelöschten Instanzen werden Ihnen bis zum Ende des Abrechnungszyklus für d
 
 Führen Sie folgende Schritte aus, um eine Instanz von Single-node Trial for vCenter Server zu löschen:
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Suchen Sie in der Tabelle **vCenter Server-Instanzen** nach der Instanz, die Sie löschen wollen.
 3. Klicken Sie in der Spalte **Aktionen** auf das Symbol "Löschen".
    Der Status der Instanz ändert sich in **Wird gelöscht**. Nachdem die Instanz erfolgreich gelöscht wurde, werden die Komponenten der Instanz freigegeben und der Status der Instanz ändert sich in **Gelöscht**.
@@ -254,6 +254,6 @@ Führen Sie folgende Schritte aus, um eine Instanz von Single-node Trial for vCe
 ## Zugehörige Links
 {: #vc_trial_hybrid_orderinginstance-related}
 
-* [HCX on IBM Cloud-Architekturdesign für Single-node Trial for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
+* [HCX on IBM Cloud-Architekturdesign für Single-node Trial for vCenter Server on IBM Cloud](https://console.bluemix.net/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [Dokumentation zu VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
 * [HCX OVA anfordern](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

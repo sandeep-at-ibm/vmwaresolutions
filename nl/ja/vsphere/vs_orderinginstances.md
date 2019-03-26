@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -67,7 +67,7 @@ IBM ビジネス・パートナーのユーザーの場合、ライセンス持�
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 非ビジネス・パートナーは、vSphere クラスターに以下のコンポーネントを選択できます。
-* VMware vSphere Enterprise Plus
+* VMware vSphere Enterprise Plus 6.7 U1 または 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -270,7 +270,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
    1. クラスターをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
    2. ベア・メタル・サーバー構成を選択します。
       * **「Skylake」**または**「Broadwell」**を選択した場合は、CPU モデルと RAM サイズを指定します。
-      * **「SAP 認定」**を選択した場合は、CPU モデルを選択します。
+      * **「SAP 認定」**を選択した場合は、事前設定構成のいずれかを選択します。
    3. ベア・メタル・サーバーの数を指定します。
 6. **VMware vSAN** コンポーネントを選択した場合は、vSAN ストレージの構成を完了します。 容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
 7. ネットワーク・インターフェースの設定を行います。
@@ -294,7 +294,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 
 注文を実行した場合は、クラスターのデプロイメントが自動的に開始され、注文が処理中であることを示す E メール確認を受け取ります。 クラスターが使用可能になると、E メールで通知されます。
 
-vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスとは異なり、**「デプロイ済みインスタンス」**ページに表示されません。
+vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスとは異なり、**「リソース」**ページに表示されません。
 {:note}
 
 ## 関連リンク

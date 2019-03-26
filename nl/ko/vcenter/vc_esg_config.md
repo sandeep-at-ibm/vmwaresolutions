@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -29,7 +29,7 @@ vCenter Server 인스턴스에 대한 주문 프로세스의 일부로 다음 �
 * NSX Edge 어플라이언스는 워크로드 논리 스위치의 IP 주소 범위와 네트워크 주소 변환(NAT) 규칙의 공인 IP 주소 간의 NAT를
 수행하도록 배치되고 구성됩니다.
 
-  NXS 에지는 개인 전용인 인스턴스의 경우에는 배치되지 않습니다.
+  NSX 에지는 개인 전용인 인스턴스의 경우에는 배치되지 않습니다.
   {:note}
 
 * Veeam on {{site.data.keyword.cloud_notm}} 서비스를 설치한 경우에는 NSX Manager가 NSX 구성의 일별 백업을 수행하도록 구성됩니다. 자세한 정보는 [Veeam on {{site.data.keyword.cloud_notm}} 설치 시 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud)을 참조하십시오.
@@ -77,13 +77,13 @@ NSX Edge NAT 규칙에 대한 자세한 정보는 [Managing NAT rules](https://p
 주문된 IP 주소를 사용할 수 있도록 고객 서브넷에 대한 세부사항을 식별하려면 VMware vSphere Web Client에서 다음 단계를 완료하십시오.
 
 1. **홈 > 네트워킹 및 보안**을 클릭하십시오.
-2. 네비게이터 분할창에서 **NSX Edge**를 클릭하고 **customer-nsx-edge**를 두 번 클릭하십시오.
-3. 이 에지의 **요약** 탭에서 사설 및 공인 고객 서브넷에 대한 서브넷 ID가 포함된 에지 설명을 검토하십시오.
+2. 네비게이터 분할창에서 **NSX 에지**를 클릭하고 오른쪽 분할창의 에지 목록에서 **customer-nsx-edge edge**를 찾으십시오.
+3. **설명** 열에서 **customer-nsx-edge**에 대한 에지 설명 위에 마우스를 갖다 대면 사설 및 공용 고객 서브넷 둘 다에 대한 서브넷 ID를 볼 수 있습니다.
 
 또한 {{site.data.keyword.slportal}}의 다음 단계를 완료하여 고객 서브넷에 대한 추가 세부사항을 찾을 수 있습니다.
 
 1. **네트워킹 > IP 관리 > 서브넷**을 클릭하십시오.
-2. 필터 메뉴를 클릭하고 VMware vSphere Web Client의 **요약** 탭에 있는 **customer-nsx-edge** 에지의 설명에 표시된 대로 서브넷 필드에 ID를 입력하십시오.
+2. VMware vSphere Web Client에서 **customer-nsx-edge**의 설명에 표시된 대로 필터 메뉴를 클릭하고 **서브넷** 필드에 ID를 입력하십시오.
 3. IP 주소에 표시된 참고사항을 검토하십시오. 이 참고사항은 초기 설정 중에 주문되고 사용된 서브넷과 및 IP 주소를 식별합니다.
 
    초기 설정 중에 주문되고 사용된 IP 주소를 사용하지 마십시오. 그러나 사용자의 요구사항에 따라 이 서브넷에

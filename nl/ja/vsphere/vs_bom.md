@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -17,7 +17,7 @@ VMware vSphere ソフトウェア・コンポーネントの部品構成表 (BOM
 
 | 製造元 | コンポーネント                       | バージョン |
 |:-------------|:--------------------------------|:--------|
-| VMware       | vSphere ESXi                    | 6.5 更新 1 または 6.0 更新 2 |
+| VMware       | vSphere ESXi                    | 6.7 更新 1 または 6.5 更新 2 |
 
 ## 関連リンク
 {: #vs_bom-related}

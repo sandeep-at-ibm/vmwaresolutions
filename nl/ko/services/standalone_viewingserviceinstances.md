@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2019-02-15"
 ## 온프레미스 VMware HCX on IBM Cloud 인스턴스를 보는 프로시저
 {: #standalone_viewingserviceinstances-procedure}
 
-왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하고 **온프레미스 HCX 인스턴스** 테이블로 스크롤하여 주문한 인스턴스에 대한 정보를 보십시오.
+왼쪽 탐색 분할창에서 **리소스**를 클릭하고 **온프레미스 HCX 인스턴스** 테이블로 스크롤하여 주문한 인스턴스에 대한 정보를 보십시오.
 
 표 1. 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 항목
 

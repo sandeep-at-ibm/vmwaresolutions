@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -77,6 +77,9 @@ El usuario es responsable de mantener y garantizar la disponibilidad de todos lo
 {: #vc_planning-addon-services}
 
 Puede solicitar servicios complementarios para su instancia en función de sus necesidades, por ejemplo, la recuperación tras desastre. Para obtener más información, consulte [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
+
+Los servicios están soportados para vCenter Server con instancias de NSX-T.
+{:note}
 
 ## Consideraciones de capacidad
 {: #vc_planning-capacity-considerations}

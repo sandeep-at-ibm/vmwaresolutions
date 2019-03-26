@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -21,7 +21,7 @@ Visualize o resumo e as informações detalhadas das instâncias do VMware vCent
 {: #vc_hybrid_viewinginstances-procedure-view-inst-summary}
 
 Para visualizar um resumo de todas as instâncias do vCenter Server with Hybridity Bundle que são provisionadas para uma conta do usuário, conclua as etapas a seguir:
-1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. No banner do console, clique em seu ícone de conta do usuário e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar as instâncias.
 3. Na tabela **Instâncias do vCenter Server**, visualize a lista de instâncias que são provisionadas na conta do usuário selecionada.
 

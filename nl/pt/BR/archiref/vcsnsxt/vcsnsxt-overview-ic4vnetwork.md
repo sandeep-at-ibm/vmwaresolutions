@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -40,17 +40,12 @@ O {{site.data.keyword.cloud_notm}} aloca dois tipos de endereços IP para serem 
 * Os endereços IP primários são designados a dispositivos, bare metal e servidores virtuais fornecidos pelo {{site.data.keyword.cloud_notm}}. Os usuários não devem designar nenhum endereço IP nesses blocos.
 * Os endereços IP móveis são fornecidos ao usuário para designar e gerenciar conforme necessário.
 
-Os endereços IP primários ou móveis poderão se tornar roteáveis para qualquer VLAN dentro da conta do cliente se o VLAN Spanning estiver ativado dentro da conta ou a conta estiver configurada como uma conta de virtual routing and forwarding (VRF).
-
-## VLAN Spanning
-{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
-
-O VLAN Spanning é uma configuração da conta global do {{site.data.keyword.cloud_notm}} que permite que cada bloco IP de sub-rede primário e móvel dentro de todas as VLANs na conta seja roteável de um para o outro. Com essa configuração indisponível, os blocos de IP ainda podem rotear para serviços do {{site.data.keyword.cloud_notm}}, mas não de um para o outro. Essa arquitetura requer que o VLAN Spanning seja ativado dentro da conta na qual o VMware vCenter Server on {site.data.keyword.cloud_notm}} é implementado na ordem em que as conexões são feitas de forma transparente nas várias sub-redes em que os componentes da solução residem.
+Os endereços IP primários ou móveis poderão ser transformados em roteáveis para qualquer VLAN dentro da conta do cliente se a conta estiver configurada como uma conta de Virtual Routing and Forwarding (VRF).
 
 ## Virtual Routing and Forwarding
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-As contas do {{site.data.keyword.cloud_notm}} também podem ser configuradas como uma conta Virtual Routing and Forwarding (VRF). Uma conta VRF fornece funções semelhantes ao VLAN Spanning, ativando o roteamento automático entre blocos de IP de sub-rede. Todas as contas com conexões de Link direto devem ser convertidas ou criadas como uma conta do VRF.
+As contas do {{site.data.keyword.cloud_notm}} também podem ser configuradas como uma conta Virtual Routing and Forwarding (VRF). Uma conta do VRF ativa o roteamento global automático entre blocos de IP de sub-rede dentro da conta. Todas as contas com conexões de Link direto devem ser convertidas ou criadas como uma conta do VRF.
 
 ## Conexões físicas do host
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}

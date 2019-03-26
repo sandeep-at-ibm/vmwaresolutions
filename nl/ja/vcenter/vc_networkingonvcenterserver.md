@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -19,15 +19,17 @@ vCenter Server on {{site.data.keyword.cloud}} インスタンスのネットワ�
 {: #vc_networkingonvcenterserver-networking-components}
 {: faq}
 
-vCenter Server インスタンス内に組み込まれているネットワーキング・コンポーネントを確認するには、[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)を参照してください。
+vCenter Server インスタンス内に組み込まれているネットワーキング・コンポーネントを確認するには、[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)を参照してください。
 
 ## ファイアウォールに関する考慮事項
 {: #vc_networkingonvcenterserver-firewall-considerations}
+{: faq}
 
 ファイアウォールを使用している場合は、{{site.data.keyword.IBM}} CloudDriver 仮想サーバー・インスタンス (VSI) と SDDC Manager 仮想マシン (VM) からのすべての通信に関してルールを構成する必要があります。 これらのルールでは、すべてのプロトコルが IP アドレス `10.0.0.0/8` と `161.26.0.0/16` 上で通信できるよう許可する必要があります。 このようなファイアウォールの例としては、NSX Distributed Firewalls (DFW)、Vyatta ファイアウォールなどがあります。
 
 ## 仮想マシンでの NSX の使用
 {: #vc_networkingonvcenterserver-using-nsx-with-vm}
+{: faq}
 
 vCenter Server インスタンスのデプロイメント中に、インスタンスで VMware NSX が注文され、インストールされ、ライセンスを適用され、構成されます。 また、NSX Manager、NSX Controllers、および NSX Transport Zone がセットアップされ、各 ESXi サーバーに NSX コンポーネントが構成されます。
 
@@ -35,6 +37,7 @@ vCenter Server インスタンスのデプロイメント中に、インスタ�
 
 ## NSX コンポーネントのパスワードを変更する際の考慮事項
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}
+{: faq}
 
 NSX Manager、NSX Controllers、NSX Edges のパスワードを変更する前に、以下の考慮事項を確認してください。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンスの**「サマリー」**ページに表示される NSX Manager のパスワードは変更しないでください。

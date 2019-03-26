@@ -30,4 +30,4 @@ Pour vous inscrire à un compte d'infrastructure {{site.data.keyword.cloud_notm}
 * [Exigences concernant le compte d'infrastructure {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)
 * [Vidéo - Comment créer un compte {{site.data.keyword.cloud_notm}}](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Passage à l'IBMid et liaison des comptes](/docs/admin/softlayerlink.html){:new_window}
+* [Passage à l'IBMid et liaison des comptes](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)

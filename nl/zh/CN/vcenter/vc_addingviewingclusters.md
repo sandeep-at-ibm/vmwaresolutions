@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-18"
 {:important: .important}
 
 # 添加、查看和删除 vCenter Server 实例的集群
-{: #adding-and-viewing-clusters-for-vcenter-server-instances}
+{: #vc_addingviewingclusters}
 
 缺省情况下，订购实例时配置的 ESXi 服务器会分组为 **cluster1**。
 
@@ -56,7 +56,7 @@ lastupdated: "2019-02-18"
 ### 裸机服务器设置
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-您可以选择 **Skylake**、**SAP 认证**或 **Broadwell**。
+您可以选择 **Skylake**、**SAP 认证**或 **Broadwell**。选项可能有所不同，具体取决于初始部署实例的版本。
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -188,7 +188,7 @@ lastupdated: "2019-02-18"
 ## 向 vCenter Server 实例添加集群的过程
 {: #vc_addingviewingclusters-adding-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击要添加集群的实例。
 
    确保实例处于**可供使用**状态。否则，无法向实例添加集群。
@@ -229,7 +229,7 @@ lastupdated: "2019-02-18"
 ## 查看 vCenter Server 实例中集群的过程
 {: #vc_addingviewingclusters-viewing-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击实例以查看其中的集群。
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，查看有关集群的摘要：
   * **名称**：集群的名称。
@@ -253,7 +253,7 @@ lastupdated: "2019-02-18"
         <dd class="dd">集群已删除。</dd>
     </dl>
   * **操作**：单击**删除**图标以删除集群。
-4. 单击集群名称以查看 ESXi 服务器及其存储：
+4. 单击集群名称以查看 ESXi 服务器、存储和网络接口详细信息：
 
 表 4. ESXi 服务器详细信息
 
@@ -263,7 +263,7 @@ lastupdated: "2019-02-18"
 |版本|ESXi 服务器的版本。|
 |凭证|用于访问 ESXi 服务器的用户名和密码。|
 |专用 IP|ESXi 服务器的专用 IP 地址。|
-|状态|ESXi 服务器的状态，可以是下列某个值：<br> **已添加**：ESXi 服务器已添加并随时可供使用。<br> **正在添加**：正在添加 ESXi 服务器。<br> **正在删除**：正在删除 ESXi 服务器。|
+|状态|ESXi 服务器的状态，可以是下列某个值：<br> **已添加** ESXi 服务器已添加并随时可供使用。<br> **正在添加** 正在添加 ESXi 服务器。<br> **正在删除** 正在删除 ESXi 服务器。|
 
 表 5. 存储详细信息
 
@@ -273,6 +273,32 @@ lastupdated: "2019-02-18"
 |大小|存储的容量。|
 |IOPS/GB|存储的性能级别。|
 |NFS 协议|存储的 NFS 版本。|
+
+表 6. 网络接口 - VLAN 详细信息
+
+|项|描述|  
+|:------------- |:------------- |
+|VLAN 编号| 唯一的 VLAN 编号。|
+|描述|VLAN 的类型。|
+|位置| 数据中心位置。|
+|主路由|VLAN 的主路由。|
+
+表 7. 网络接口 - 子网详细信息
+
+|项|描述|  
+|:------------- |:------------- |
+|名称|子网名称。单击该名称可访问完整 IP 地址详细信息。|
+|类型| 子网的类型：主子网或可移植子网。|
+|描述| 子网的用途。|
+
+表 8. 网络接口 - IP 详细信息
+
+|项|描述|  
+|:------------- |:------------- |
+|IP 数|IP 地址。|
+|状态|IP 地址的状态。|
+|描述|IP 地址主机。|
+
 
 ## 从 vCenter Server 实例中删除集群
 {: #vc_addingviewingclusters-deleting}
@@ -292,7 +318,7 @@ lastupdated: "2019-02-18"
 ### 从 vCenter Server 实例中删除集群的过程
 {: #vc_addingviewingclusters-deleting-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击要从中删除集群的实例。
 
    确保实例处于**可供使用**状态。否则，无法从实例中删除集群。

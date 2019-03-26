@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-27"
 
 ---
 
@@ -64,9 +64,9 @@ lastupdated: "2019-02-13"
 
 性能和耐久性存储器是 {{site.data.keyword.cloud_notm}} 存储解决方案，旨在为需要可预测性能级别的高 I/O 应用程序提供支持。要实现这种可预测性能，可以将协议级别的每秒输入/输出操作数 (IOPS) 分配给单个卷。
 
-可订购的 IOPS 范围从 100 到 48,000，存储大小范围从 20 GB 到 12 TB。性能和耐久性存储卷适用于块存储器和文件存储器。
+可订购的 IOPS 范围从 100 到 96,000，存储大小范围从 20 GB 到 24 TB。性能和耐久性存储卷适用于块存储器和文件存储器。
 
-在此设计中，vCenter Server 解决方案会为连接的存储器提供耐久性存储器。因此，您可以选择和附加（通过自动化）大小范围从 20 GB 到最大 12 TB 的耐久性 NFS 导出。{{site.data.keyword.cloud_notm}} 最多允许 64 个 vSphere ESXi 主机连接到单个耐久性 NFS 导出。
+在此设计中，vCenter Server 解决方案会为连接的存储器提供耐久性存储器。因此，您可以选择和附加（通过自动化）大小范围从 20 GB 到最大 24 TB 的耐久性 NFS 导出。{{site.data.keyword.cloud_notm}} 最多允许 64 个 vSphere ESXi 主机连接到单个耐久性 NFS 导出。
 
 耐久性有三个 IOPS 性能层，分别支持不同的应用程序需求。
 

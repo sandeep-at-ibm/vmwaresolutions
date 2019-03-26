@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -26,7 +26,7 @@ vCenter Server with Hybridity Bundle 배치에는 실제 인프라에 대한 엄
 표 1. vCenter Server with Hybridity Bundle 인스턴스에 사용 가능한 {{site.data.keyword.CloudDataCents_notm}}
 
 | {{site.data.keyword.CloudDataCent_notm}} |위치 |지역 |
-|:-----|:----------------|
+|:----------------------|:---------|:---------------|
 |AMS03 |암스테르담 |유럽 |
 |CHE01 |첸나이 |아시아 태평양 |
 |DAL09 |댈러스 |북미 남부 |
@@ -53,6 +53,7 @@ vCenter Server with Hybridity Bundle 배치에는 실제 인프라에 대한 엄
 |SYD01 |시드니 |아시아 태평양 |
 |SYD04 |시드니 |아시아 태평양 |
 |TOK02 |도쿄 |아시아 태평양 |
+|TOK04 |도쿄 |아시아 태평양 |
 |TOR01 |토론토 |북미 동부 |
 |WDC04 |워싱턴, DC |북미 동부 |
 |WDC06 |워싱턴, DC |북미 동부 |

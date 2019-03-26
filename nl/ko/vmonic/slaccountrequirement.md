@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
 
 ---
 
@@ -47,22 +47,24 @@ lastupdated: "2019-02-14"
 |비밀번호 보기 |이 권한은 주문된 VSI를 관리하는 데 필요합니다. |
 | 서버 모니터링 관리 |이 권한은 주문하는 데 필요하지 않지만 인스턴스에서 VMware ESXi 서버가 실행되는 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}의 모니터링 상태를 검색하고 유효성 검증하는 데 필요합니다. |
 
-## VRF(Virtual Routing and Forwarding) 요구사항
-{: #slaccountrequirement-vrf}
+## 서비스 엔드포인트가 사용으로 설정된 VRF
+{: #slaccountrequirement-vrf-se}
 
-{{site.data.keyword.cloud_notm}} 인프라 계정은 VRF 계정이어야 합니다. 또는 VRF 계정이 아니면 VLAN Spanning이 사용으로 설정되어야 합니다. 비-VRF 계정에서 VRF 계정으로의 변환에 대한 자세한 정보는 [IBM Cloud의 VRF 개요](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)를 참조하십시오.
+{{site.data.keyword.cloud_notm}} 인프라 계정은 서비스 엔드포인트가 사용으로 설정된 VRF(Virtual Routing and Forwarding) 계정이어야 합니다. 사용자 계정이 비 VRF인 경우, VRF 계정으로 변환해야 합니다. 또한 서비스 엔드포인트를 사용하여 VRF 계정을 사용으로 설정해야 합니다. 
 
-## 비-VRF 계정에 대한 VLAN Spanning
-{: #slaccountrequirement-vlan-spanning}
+자세한 정보는 다음을 참조하십시오.
+* [IBM Cloud의 VRF 개요](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [서비스 엔드포인트 사용을 위해 계정 사용](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
 
-비-VRF {{site.data.keyword.cloud_notm}} 인프라 계정을 사용 중이면 VLAN Spanning이 사용으로 설정되어야 합니다. 비-VRF 계정에 대해 VLAN Spanning이 사용으로 설정되지 않으면 VMware 가상화 환경의 다양한 컴포넌트가 서로 간에 통신할 수 없습니다.
+## VLAN Spanning 지원 종료
+{: #slaccountrequirement-vlan-eos}
 
-계정에서 VLAN Spanning을 사용으로 설정하려면 [VLAN Spanning](/docs/infrastructure/vlans?topic=vlans-vlan-spanning){:new_window}을 참조하십시오.
+2019년 8월부터는 VLAN Spanning이 더 이상 지원되지 않습니다. 2019년 7월 말까지는 {{site.data.keyword.cloud_notm}} 인프라 계정을 VRF로 변환하고 서비스 엔드포인트를 사용으로 설정해야 합니다.
+{:important}
 
 ## 관련 링크
 {: #slaccountrequirement-related}
 
-* [Cloud Foundation 인스턴스에 대한 요구사항](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
 * [vCenter Server 인스턴스에 대한 요구사항](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [사용자 계정 및 설정](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
 * [IBM Cloud의 VRF 개요](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

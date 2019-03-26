@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -20,7 +20,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} 인스턴스가 준비되면 인�
 ## KMIP for VMware on IBM Cloud 인스턴스에 인증서를 추가하는 프로시저
 {: #kmip_standalone_addingdeletingcert-add}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **KMIP for VMware on IBM Cloud 인스턴스** 테이블을 아래로 스크롤하여 인증서를 추가할 인스턴스를 클릭하십시오.
 3. **추가**를 클릭하십시오.
 4. **클라이언트 SSL 인증서 추가** 창에 인증서 이름 및 컨텐츠를 입력하십시오.
@@ -32,7 +32,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} 인스턴스가 준비되면 인�
 ## KMIP for VMware on IBM Cloud 인스턴스에 대한 인증서를 보는 프로시저
 {: #kmip_standalone_addingdeletingcert-view}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **KMIP for VMware on IBM Cloud 인스턴스** 테이블을 아래로 스크롤하여 인증서를 보려는 인스턴스를 클릭하십시오.
 3. **클라이언트 SSL 인증서** 섹션 아래에서 추가된 인증서의 목록을 보십시오.
 4. 특정 인증서의 컨텐츠를 보려면 **다운로드**를 클릭하십시오.
@@ -40,7 +40,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} 인스턴스가 준비되면 인�
 ## KMIP for VMware on IBM Cloud 인스턴스에서 인증서를 삭제하는 프로시저
 {: #kmip_standalone_addingdeletingcert-delete}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **KMIP for VMware on IBM Cloud 인스턴스** 테이블을 아래로 스크롤하여 인증서를 삭제할 인스턴스를 클릭하십시오.
 3. **클라이언트 SSL 인증서** 테이블에서 삭제할 인증서를 찾고 **삭제** 아이콘을 클릭하십시오.
 

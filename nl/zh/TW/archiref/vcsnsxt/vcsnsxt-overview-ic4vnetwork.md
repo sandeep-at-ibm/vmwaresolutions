@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -40,17 +40,12 @@ lastupdated: "2019-02-15"
 * 主要 IP 位址會指派給 {{site.data.keyword.cloud_notm}} 所佈建的裝置、裸機及虛擬伺服器。使用者不應該指派這些區塊中的任何 IP 位址。
 * 我們提供可攜式 IP 位址，供使用者視需要指派及管理。
 
-如果在帳戶內啟用 VLAN Spanning，或將帳戶配置為虛擬遞送及轉遞 (VRF) 帳戶，則可以將「主要」或「可攜式」IP 位址變成可遞送給客戶帳戶內的任何 VLAN。
-
-## VLAN Spanning
-{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
-
-VLAN Spanning 是 {{site.data.keyword.cloud_notm}} 廣域帳戶設定，容許將帳戶內所有 VLAN 的每個主要及可攜式子網路 IP 區塊遞送給彼此。此設定無法使用時，IP 區塊仍然可以遞送至 {{site.data.keyword.cloud_notm}} 服務，但不能遞送給彼此。此架構需要在已部署 VMware vCenter Server on {site.data.keyword.cloud_notm}} 的帳戶內啟用 VLAN Spanning，以在解決方案元件所在的各種子網路中透通地進行連線。
+如果帳戶配置為虛擬遞送及轉遞 (VRF) 帳戶，則可以將「主要」或「可攜式」IP 位址變成可遞送給客戶帳戶內的任何 VLAN。
 
 ## 虛擬遞送及轉遞
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} 帳戶也可以配置為「虛擬遞送及轉遞 (VRF)」帳戶。VRF 帳戶提供與 VLAN Spanning 類似的功能，以啟用子網路 IP 區塊之間的自動遞送。所有具有 Direct Link 連線的帳戶都必須轉換或建立為 VRF 帳戶。
+{{site.data.keyword.cloud_notm}} 帳戶也可以配置為「虛擬遞送及轉遞 (VRF)」帳戶。VRF 帳戶可啟用帳戶內子網路 IP 區塊之間的自動廣域遞送。所有具有 Direct Link 連線的帳戶都必須轉換或建立為 VRF 帳戶。
 
 ## 實體主機連線
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}
@@ -88,7 +83,7 @@ VLAN 	|子網路類型 	|說明
 專用 B 	|可攜式  |指派給 NAS（若使用中）。
 專用 B 	|可攜式  |指派給 vMotion。
 
-此設計是使用 VLAN 上的實體主機及虛擬系統實例 (VSI) 所實作，並配置成指向 {{site.data.keyword.cloud_notm}} BCR（後端「專用網路」客戶路由器）以作為預設路徑。vCenter Server 實例啟用軟體定義網路的使用。{{site.data.keyword.cloud_notm}} 管理路由器無法辨識由 NSX 所建立並包括遞送至 VLAN 子網路的任何網路套版，而且您可能需要建立靜態路徑、防火牆規則及 NAT 規則，才能適當地管理網路流程。
+此設計是使用 VLAN 上的實體主機及虛擬系統實例 (VSI) 所實作，並配置成指向 {{site.data.keyword.cloud_notm}} BCR（後端「專用網路」客戶路由器）以作為預設路徑。vCenter Server 實例啟用軟體定義網路的使用。{{site.data.keyword.cloud_notm}} 管理路由器無法辨識由 NSX 所建立並包括遞送至 VLAN 子網路的任何網路層疊，而且您可能需要建立靜態路徑、防火牆規則及 NAT 規則，才能適當地管理網路流程。
 
 專用網路連線配置成使用 MTU 大小為 9000 的巨大訊框，以改善大型資料傳送（例如儲存空間及 vMotion）的效能。這是 VMware 內及 {{site.data.keyword.cloud_notm}} 容許的最大 MTU。公用網路連線使用標準乙太網路 MTU 1500。必須維護此值，因為任何變更都可能導致透過網際網路傳送時發生封包片段化。
 

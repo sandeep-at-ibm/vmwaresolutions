@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -18,8 +18,8 @@ Le fournisseur de service est l'organisation de premier niveau et un ou plusieur
 Cette étape est initialement exécutée par l'automatisation IC4VS qui utilise les informations fournies par le client lors du processus de commande et des informations par défaut. Le processus de configuration peut être démarré par le client lors d'un déploiement postérieur pour modifier le fournisseur de service ou l'organisation locataire selon les besoins après l'installation.
 
 La configuration du fournisseur de service comporte huit sous-étapes :
--	Etape 1 : Détails de l'organisation - Ajoutez les détails de l'organisation parent globale de votre fournisseur de service de cloud. Cette organisation peut avoir plusieurs emplacements physiques et plusieurs centres de données. Les organisations de vos locataires et les sous-organisations de votre fournisseur de service sont ajoutées ultérieurement.
--	Etape 2 : Emplacements – Mappez l'infrastructure dans des "emplacements" RiskForesight. Les actifs sont regroupés par emplacement, fournisseur de cloud et référentiel d'actifs.
+-	Etape 1 : Détails de l'organisation - Ajoutez les détails de l'organisation parent de votre fournisseur de service de cloud. Cette organisation peut avoir plusieurs emplacements physiques et plusieurs centres de données. Les organisations de vos locataires et les sous-organisations de votre fournisseur de service sont ajoutées ultérieurement.
+-	Etape 2 : Emplacements – Mappez l'infrastructure dans des "emplacements" RiskForesight. Les actifs sont regroupés par emplacement, fournisseur de cloud et référentiel d'actifs. 
 -	Etape 3 : Environnements - Facultatif. Les environnements constituent un moyen de grouper les actifs. Par exemple, DevOps, Site DR, Production.
 -	Etape 4 : Fournisseur de cloud - Ajoutez les “fournisseurs” qui fournissent l'infrastructure sur laquelle votre application s'exécute.
 -	Etape 5 : Référentiels d'actifs - Un référentiel d'actifs associe un ensemble d'actifs à une organisation, à une fournisseur de cloud et à un emplacement.

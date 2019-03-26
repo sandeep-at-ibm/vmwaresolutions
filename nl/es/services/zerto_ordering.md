@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Solicitud de Zerto on IBM Cloud
 {: #zerto_ordering}
@@ -27,12 +31,14 @@ Puede añadir el servicio de Zerto on {{site.data.keyword.cloud_notm}} en una in
 * Desde la consola de {{site.data.keyword.vmwaresolutions_short}}, visualice la instancia para la que desea añadir el servicio, pulse **Servicios** en el panel de navegación izquierdo y pulse **Añadir**.
 * Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **Zerto on IBM Cloud**, especifique los valores de servicio y seleccione **Añadir a instancia existente**.
 
+Si añade Zerto para {{site.data.keyword.cloud_notm}} a una instancia de vCenter Server que tiene un servidor ESXi que está en modalidad de mantenimiento, debe utilizar la consola de Zerto Virtual Manager (ZVM) y la dirección IP de Zerto Virtual Replication Appliance (VRA) llenada previamente para desplegar de forma manual la máquina virtual (VM) del VRA.
+{:note}
+
 ## Enlaces relacionados
 {: #zerto_ordering-related}
 
 * [Visión general de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
 * [Gestión de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
-* [Solicitud, visualización y eliminación de servicios para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
 * [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Solicitud de servicios gestionados para Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

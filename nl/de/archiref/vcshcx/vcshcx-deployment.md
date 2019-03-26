@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
 # Cloud- und Clientbereitstellung
 {: #vcshcx-deployment}
 
-Wie zu Beginn dieses Dokuments beschrieben, besteht die HCX-Mindestinstallation aus einer einzigen Bereitstellung auf Cloud- und auf Clientseite. Die HCX-Clientseite kann in jeder Version von vSphere bereitgestellt werden, die von HCX unterstützt wird, vorausgesetzt, dass zwischen der Client- und der Cloudseite eine Netzkonnektivität besteht.
+Eine HCX-Mindestinstallation besteht aus einer einzigen Bereitstellung auf Cloud- und Clientseite. Die HCX-Clientseite kann in jeder Version von vSphere bereitgestellt werden, die von HCX unterstützt wird, vorausgesetzt, dass zwischen der Client- und der Cloudseite eine Netzkonnektivität besteht.
 
 ## Voraussetzungen
 {: #vcshcx-deployment-req}
@@ -24,12 +24,12 @@ Wie zu Beginn dieses Dokuments beschrieben, besteht die HCX-Mindestinstallation 
 ## Cloud
 {: #vcshcx-deployment-cloud}
 
-Die cloudseitige HCX-Bereitstellung wird von der {{site.data.keyword.vmwaresolutions_full}}-Automatisierung abgewickelt. Die Standardkonfiguration verwendet die öffentliche Portgruppe zur Konfiguration der Endpunktkonnektivität aller Paketkomponenten. Die Paketkomponenten auf Cloudseite werden mit ihren Endpunktschnittstellen bereitgestellt, die mit öffentlichen IP-Adressen konfiguriert sind, da es sich um sicherheitsgehärtete Appliances handelt. Es ist möglich, sie hinter einer Firewall bereitzustellen. Die Verbindung von Client- und Cloudseite zueinander über einen vorhandenen VPN-Tunnel wird nicht unterstützt. Wenn Sie für die HCX-Endpunktkonnektivität das private Netz verwenden möchten, können Sie eine Bereitstellung des HCX-Produktpakets für die Cloudseite für privates Netz bestellen, die über einen dedizierten Link wie z. B. MPLS hinweg verwendet wird.
+Die cloudseitige HCX-Bereitstellung wird von der {{site.data.keyword.vmwaresolutions_full}}-Automatisierung abgewickelt. In der Standardkonfiguration wird die öffentliche Portgruppe für die Konfiguration der Endpunktkonnektivität aller Paketkomponenten verwendet. Die Paketkomponenten auf der Cloudseite werden mit ihren Endpunktschnittstellen bereitgestellt, die mit öffentlichen IP-Adressen konfiguriert sind, da es sich um sicherheitsgehärtete Appliances handelt. Es ist möglich, sie hinter einer Firewall bereitzustellen. Die Verbindung von Client- und Cloudseite zueinander über einen vorhandenen VPN-Tunnel wird nicht unterstützt. Wenn Sie für die HCX-Endpunktkonnektivität das private Netz verwenden möchten, können Sie eine Bereitstellung des HCX-Produktpakets für die Cloudseite für privates Netz bestellen, die über einen dedizierten Link hinweg verwendet wird, z. B. MPLS. 
 
 ## Client
 {: #vcshcx-deployment-client}
 
-Das clientseitige HCX wird vom Benutzer bereitgestellt und erfordert für die vCenter-Quelleninstanz Berechtigungen auf Administratorebene. Gegenwärtig umfasst die clientseitige HCX-Manager-OVA ca. 1,7 GB. Wenn Sie zur Bestellung von HCX die {{site.data.keyword.vmwaresolutions_short}}-Konsole verwenden, wird eine URL mit einem Link zum Download der HCX-Version für die Clientseite angegeben, die mit der Version von HCX übereinstimmt, die auf der Cloudseite angegeben wurde. Dieser Link wird in der HCX-Benutzerschnittstelle (UI) des cloudseitigen Managers bereitgestellt.
+Das clientseitige HCX wird vom Benutzer bereitgestellt und erfordert für die vCenter-Quelleninstanz Berechtigungen auf Administratorebene. Gegenwärtig umfasst die clientseitige HCX-Manager-OVA ca. 1,7 GB. Wenn Sie zur Bestellung von HCX die {{site.data.keyword.vmwaresolutions_short}}-Konsole verwenden, wird eine URL mit einem Link zum Download der HCX-Version für die Clientseite angegeben, die mit der Version von HCX übereinstimmt, die auf der Cloudseite angegeben wurde. Dieser Link wird in der Benutzerschnittstelle (UI) des cloudseitigen HCX-Managers bereitgestellt. 
 
 Außerdem wird ein Registrierungsschlüssel für die einmalige Verwendung angegeben. Führen Sie die folgenden Schritte aus, um die Benutzerregistrierung zu konfigurieren.
 
@@ -49,9 +49,9 @@ Außerdem wird ein Registrierungsschlüssel für die einmalige Verwendung angege
 
 Für die Clientseite verwenden Sie das Menü **Tasks**, um die Bereitstellung der Paketkomponenten zu überwachen. Für die cloudseitige Bereitstellung verwenden Sie das Menü **Tasks** in der vCenter-Webbenutzerschnittstelle für die jeweilige vCenter Server-Instanz.
 
-Wenn auf beiden Seiten ein Bereitstellungsfehler aufgetreten ist, werden die Bereitstellungen der Paketkomponenten abgebrochen und gelöscht. Nachdem Sie die Fehlerursache ermittelt haben, klicken Sie in der HCX-vCenter-Webbenutzerschnittstelle auf Clientseite auf die Registerkarte **Verbindung** und wählen Sie dann oben im Bildschirm **HCX-Komponenten installieren** aus.
+Wenn auf beiden Seiten ein Bereitstellungsfehler aufgetreten ist, werden die Bereitstellungen der Paketkomponenten abgebrochen und gelöscht. Nachdem Sie die Fehlerursache ermittelt haben, klicken Sie in der vCenter-Webbenutzerschnittstelle von HCX auf Clientseite auf die Registerkarte **Verbindung** und wählen Sie dann oben im Bildschirm **HCX-Komponenten installieren** aus. 
 
-Nach erfolgreicher Bereitstellung der Paketkomponenten und nach mehreren Minuten befindet sich der Tunnelstatus für die CGW- und die L2C-Komponente auf der Registerkarte **Verbindung** im Status **Aktiv**.
+Nach erfolgreicher Bereitstellung der Paketkomponenten und nach einigen Minuten wird für den Tunnel für die CGW- und die L2C-Komponente auf der Registerkarte **Verbindung** der Status **Aktiv** angezeigt. 
 
 ## Zugehörige Links
 {: #vcshcx-deployment-related}

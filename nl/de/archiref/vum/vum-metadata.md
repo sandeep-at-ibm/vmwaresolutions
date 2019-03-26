@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -19,22 +19,22 @@ Sie können die systemverwalteten Baselines verwenden, um Ihre vSAN-Cluster mit 
 
 Die VMware-Standardeinstellungen für VUM sind für die meisten Unternehmen geeignet. Im Folgenden wird beschrieben, wie Sie diese Einstellungen ändern können, wenn Ihr Unternehmen andere Einstellungen verwenden möchte.
 
-## Zeitplan für Downloads
+##	Zeitplan für Downloads
 {: #vum-metadata-download-schedule}
 
 Unter Updates sind Upgrades für virtuelle Appliances, Host-Patches und Erweiterungen zu verstehen. Standardmäßig lädt VUM Downloads täglich herunter. Der Zeitplan für Downloads kann durch Zugriff auf den vSphere Web Client geändert werden. Navigieren Sie zu **Home** > **Update Manager** > **Verwalten** > **Einstellungen** und wählen Sie **Zeitplan für Downloads** aus und klicken Sie anschließend auf **Bearbeiten**.
 
-## Zeitplan für Benachrichtigungen
+##	Zeitplan für Benachrichtigungen
 {: #vum-metadata-notif-check-schedule}
 
 Benachrichtigungen sind Informationen über Patchrückrufe, neue Fixes und Alerts. Standardmäßig lädt VUM die Benachrichtigungen auf Stundenbasis herunter. Diese Änderung kann durch Zugriff auf den vSphere Web Client geändert werden. Navigieren Sie zu **Home** > **Update Manager** > **Verwalten** > **Einstellungen** und wählen Sie **Zeitplan für Benachrichtigungen** aus und klicken Sie anschließend auf **Bearbeiten**.
 
-## Einstellungen für virtuelle Maschinen
+##	Einstellungen für virtuelle Maschinen
 {: #vum-metadata-vm-settings}
 
 Um die Einstellungen für eine virtuelle Maschine (VM) zu ändern, rufen Sie den vSphere Web Client auf, navigieren Sie zu **Home** > **Update Manager** > **Verwalten** > **Einstellungen** und **VM-Einstellungen** und klicken Sie dann auf **Bearbeiten**.
 
-## Host-/Clustereinstellungen
+##	Host-/Clustereinstellungen
 {: #vum-metadata-host-settings}
 
 Um die Host-/Clustereinstellungen zu ändern, rufen Sie den vSphere Web Client auf, navigieren Sie zu **Home** > **Update Manager** > **Verwalten** > **Einstellungen** und **Host-/Clustereinstellungen** und klicken Sie dann auf **Bearbeiten**.

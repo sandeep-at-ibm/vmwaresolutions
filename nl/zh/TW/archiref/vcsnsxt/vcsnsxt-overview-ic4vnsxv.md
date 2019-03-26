@@ -92,7 +92,7 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|來源虛擬埠| 作用中：0�
 ## NSX-V
 {: #vcsnsxt-overview-ic4vnsxv-nsx-v}
 
-此設計指定 NSX 元件的配置，但不會套用任何網路套版元件配置。客戶可根據需求自行決定設計網路套版。
+此設計指定 NSX 元件的配置，但不會套用任何網路層疊元件配置。客戶可根據需求自行決定設計網路層疊。
 
 已配置下列元件：
 -	管理伺服器及控制器已安裝並整合至 vCenter Web 使用者介面。

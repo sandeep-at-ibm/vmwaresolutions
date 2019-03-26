@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -62,7 +62,7 @@ Dependendo da disponibilidade e do fornecimento do inventário, o {{site.data.ke
 
 Tabela 2. Indicadores de status para {{site.data.keyword.CloudDataCents_notm}} ao pedir instâncias do vCenter Server
 
-| Status | Detalhes do status |
+| Barra de Status | Detalhes do status |
 |:------------------------------|:--------------------------------------------------|
 | Em breve                   | O {{site.data.keyword.CloudDataCent_notm}} não está disponível atualmente. |
 | Provisoriamente fora do inventário  | O  {{site.data.keyword.CloudDataCent_notm}}  não tem nenhuma disponibilidade atualmente. |
@@ -77,6 +77,9 @@ Você é responsável por manter e assegurar a disponibilidade de todos os compo
 {: #vc_planning-addon-services}
 
 É possível pedir serviços complementares para a sua instância com base em suas necessidades, por exemplo, recuperação de desastre. Para obter mais informações, veja [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
+
+Os serviços são suportados para instâncias do vCenter Server com NSX-T.
+{:note}
 
 ## Considerações sobre capacidade
 {: #vc_planning-capacity-considerations}

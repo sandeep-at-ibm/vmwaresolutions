@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2019-02-15"
 {:note}
 
 ## IBM Spectrum Protect Plus on IBM Cloud の技術仕様
-{: #technical-specifications-for-ibm-spectrum-protect-plus-on-ibm-cloud}
+{: #spp_considerations-specs}
 
 以下のコンポーネントが注文され、IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
@@ -72,7 +72,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスをイ
 * インスタンスのデフォルト・クラスター内の CPU とメモリーが、IBM Spectrum Protect Plus 仮想マシンを使用するのに十分であることを確認します。
 * ESXi サーバーで使用できる NFS マウントが、ESXi サーバーのバージョンに基づいて十分であることを確認します。
 
-  V2.2 以降のリリースでデプロイ (または V2.2 以降のリリースにアップグレード) された Cloud Foundation インスタンスと vCenter Server インスタンスでは、VMware に `NFS.MaxVolumes` パラメーターの設定があります。 このパラメーターは、ESXi サーバー上の NFS マウントの最大数を定義するもので、最大 256 に設定できます (ESXi サーバーのバージョンに固有)。 詳しくは、[Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239) を参照してください。
+  V2.2 以降のリリースでデプロイ (または V2.2 以降のリリースにアップグレード) されたインスタンスでは、VMware に `NFS.MaxVolumes` パラメーターの設定があります。 このパラメーターは、ESXi サーバー上の NFS マウントの最大数を定義するもので、最大 256 に設定できます (ESXi サーバーのバージョンに固有)。 詳しくは、[Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239) を参照してください。
 
   IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスは、インスタンスのデフォルト・クラスターにおける ESXi サーバーごとに、最大 11 個の NFS ボリュームを使用します。 さらに、このサービスは、バックアップとリストア用の一時的な NFS マウントを作成します。 そのため、確実にサービスを正常にインストールして機能させるためには、NFS マウント数を 64 個以上に設定する必要があります。
 

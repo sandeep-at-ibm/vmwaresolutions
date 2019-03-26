@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2019-02-14"
 
 若要檢視針對使用者帳戶佈建之所有 vCenter Server 實例的摘要，請完成下列步驟：
 
-1. 在 {{site.data.keyword.vmwaresolutions_full}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
+1. 在 {{site.data.keyword.vmwaresolutions_full}} 主控台中，從左導覽窗格按一下**資源**。
 2. 從主控台橫幅，按一下您的使用者帳戶圖示，然後按一下**帳戶**欄位，以選取您要檢查其實例的使用者帳戶。  
 3. 在 **vCenter Server 實例**表格中，檢視佈建在所選取使用者帳戶中的實例清單。
 

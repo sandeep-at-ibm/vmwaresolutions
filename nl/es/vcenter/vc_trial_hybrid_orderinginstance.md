@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -27,7 +27,7 @@ Esta versión de prueba está pensada para utilizarla durante un máximo de 90 d
 Para obtener información sobre el diseño de la arquitectura, consulte [Diseño de la arquitectura de HCX on IBM Cloud para la prueba de un solo nodo de vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html).
 
 ## Especificaciones técnicas de la versión de prueba de un solo nodo de instancias de vCenter Server
-{: #vc_trial_hybrid_orderinginstance-tech-specs}
+{: #vc_trial_hybrid_orderinginstance-specs}
 
 En la versión de prueba de un solo nodo de la instancia de vCenter Server se incluyen los siguientes componentes:
 
@@ -173,7 +173,7 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. El proc
 #### Visualización de detalles de una instancia
 {: #vc_trial_hybrid_orderinginstance-view-inst-details}
 
-Puede comprobar el estado del despliegue visualizando los detalles de la instancia. Pulse **Instancias desplegadas** en el panel de navegación de la izquierda y localice la tabla **Instancias de vCenter Server** o **Instancias de HCX locales** para
+Puede comprobar el estado del despliegue visualizando los detalles de la instancia. Pulse **Recursos** en el panel de navegación de la izquierda y localice la tabla **Instancias de vCenter Server** o **Instancias de HCX locales** para
 ver información sobre las instancias que ha solicitado.
 
 Cuando la instancia se ha desplegado correctamente, los componentes que se describen en las secciones *Especificaciones técnicas* de este tema se instalan en la plataforma virtual de VMware y la clave de activación del servicio HCX local en {{site.data.keyword.cloud_notm}} aparece listado en la tabla **Instancias de HCX locales**.
@@ -185,8 +185,8 @@ El estado de la instancia pasa a ser **Listo para su uso** y el usuario recibe u
 
 Instale HCX Enterprise Manager local y configure la conexión con el HCX en la instancia de {{site.data.keyword.cloud_notm}}.
 
-1. Localice la clave de activación local en la página **Instancias desplegadas**.
-  1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. Localice la clave de activación local en la página **Recursos**.
+  1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
   2. En la tabla **Instancias de vCenter Server**, revise la columna **Tipo** para localizar la instancia de prueba de un solo nodo y anote el nombre de la instancia.
   3. Desplácese hasta la tabla **Instancias de HCX locales** y examine la columna **Nombre** para localizar la instancia que tiene el mismo nombre que la instancia de un solo nodo que ha solicitado con el prefijo *-OnPrem*.
   4. Anote la clave del campo **Clave de activación**.
@@ -244,7 +244,7 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 
 Siga los pasos siguientes para suprimir una instancia de prueba de un solo nodo para vCenter Server:
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, busque la instancia que desea suprimir.
 3. En la columna **Acciones**, pulse el icono Suprimir.
    El estado de la instancia pasa a ser **Suprimiendo**. Cuando la instancia se haya suprimido correctamente, los componentes de la instancia se liberarán y el estado de la instancia pasará a ser **Suprimido**.
@@ -255,6 +255,6 @@ Siga los pasos siguientes para suprimir una instancia de prueba de un solo nodo 
 ## Enlaces relacionados
 {: #vc_trial_hybrid_orderinginstance-related}
 
-* [Diseño de la arquitectura de HCX on IBM Cloud para la versión de prueba de un solo nodo para vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
+* [Diseño de la arquitectura de HCX on IBM Cloud para la versión de prueba de un solo nodo para vCenter Server on IBM Cloud](https://console.bluemix.net/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [Documentación de VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
 * [Obtención de HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

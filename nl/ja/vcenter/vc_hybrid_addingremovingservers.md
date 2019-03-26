@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2019-02-14"
 {: #vc_hybrid_addingremovingservers}
 
 ビジネス・ニーズに応じて、ESXi サーバーを追加または削除することで VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle インスタンスの容量を拡張または縮小できます。
+
+V2.9 リリース以降では、クラスターが保守モードの間に、新規 ESXi サーバーをクラスターに追加できます。また、複数のクラスター間で同時に ESXi サーバーを追加または削除できます。以下の同時操作が可能です。
+
+* **cluster1** へのホストの追加と、追加のクラスターへのホストの追加。
+* **cluster1** からのホストの削除と、追加のクラスターからのホストの削除。
+* **cluster1** へのホストの追加と、追加のクラスターからのホストの削除。
+* **cluster1** からのホストの削除と、追加のクラスターへのホストの追加。
 
 初期クラスターのストレージが vSAN なので、デプロイメント後に 1 つ以上の ESXi サーバーを追加して、クラスター・ストレージの容量を増やすことができます。
 
@@ -30,7 +37,7 @@ lastupdated: "2019-02-14"
 ## ESXi サーバーを追加する手順
 {: #vc_hybrid_addingremovingservers-adding-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、容量を拡張するインスタンスをクリックします。
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。
 4. **「クラスター」**テーブルで、ESXi サーバーを追加するクラスターをクリックします。
@@ -59,7 +66,7 @@ lastupdated: "2019-02-14"
 ## ESXi サーバーを削除する手順
 {: #vc_hybrid_addingremovingservers-removing-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「vCenter Server インスタンス」**テーブルで、容量を縮小するインスタンスをクリックします。
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。
 4. **「クラスター」**テーブルで、ESXi サーバーを削除するクラスターをクリックします。

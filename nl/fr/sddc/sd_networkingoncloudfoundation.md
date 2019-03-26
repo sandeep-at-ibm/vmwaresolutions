@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -23,13 +23,15 @@ Pour passer en revue les composants de mise en réseau inclus dans votre instanc
 
 ## Remarques relatives aux pare-feu
 {: #sd_networkingoncloudfoundation-firewall-considerations}
+{: faq}
 
 Si vous utilisez des pare-feu, vous devez configurer des règles pour toutes les communications établies à partir de l'instance de serveur virtuel {{site.data.keyword.IBM}} CloudDriver et des machines virtuelles SDDC Manager. Ces règles doivent autoriser tous les protocoles à communiquer sur les adresses IP `10.0.0.0/8` et `161.26.0.0/16`. Ces types de pare-feu sont notamment les pare-feu DFW (Distributed Firewall) NSX ou les pare-feu Vyatta.
 
 ## Utilisation de VMware NSX avec vos machines virtuelles
 {: #sd_networkingoncloudfoundation-using-nsx-with-vm}
+{: faq}
 
-Lors du déploiement d'une instance Cloud Foundation, VMware NSX est commandé, installé, mis sous licence et configuré dans votre instance. De même, NSX Manager, des contrôleurs NSX et la zone de transport NSX sont configurés et chaque serveur ESXi est configuré avec les composants NSX.
+Lors du déploiement d'une instance Cloud Foundation, VMware NSX a été commandé, installé, mis sous licence et configuré dans votre instance. De même, NSX Manager, des contrôleurs NSX et la zone de transport NSX sont configurés et chaque serveur ESXi est configuré avec les composants NSX.
 
 Cependant, si vos machines virtuelles de charge de travail ont besoin de communiquer entre elles et d'accéder à internet, c'est à vous de configurer NSX pour que vos machines virtuelles l'utilisent.
 
@@ -39,6 +41,7 @@ Pour plus d'informations sur la configuration de NSX, voir les rubriques suivant
 
 ## Remarques relatives à la modification de mots de passe pour des composants NSX
 {: #sd_networkingoncloudfoundation-considerations-when-change-nsx-component-password}
+{: faq}
 
 Passez en revue les remarques suivantes avant de modifier les mots de passe de NSX Manager, des contrôleurs NSX et de NSX Edge :
 * Ne modifiez pas le mot de passe de NSX Manager. Ce mot de passe figure sur la page **Récapitulatif** de l'instance dans la console {{site.data.keyword.vmwaresolutions_short}}.

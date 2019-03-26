@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -48,7 +48,6 @@ Tabela 2. Descrição de ações que geram eventos de gerenciamento
 | `vmware-solutions.notification.update` | <ul><li>A solicitação para atualizar notificações é recebida.</li><li>A solicitação para atualizar notificações é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>A solicitação para apagar os dados seguros é recebida.</li><li>A solicitação para apagar os dados seguros é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>A solicitação para migrar para a conta bss é recebida.</li><li>A solicitação para migrar para a conta bss é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.vcf.order`                 | <ul><li>A solicitação para pedir uma instância do Cloud Foundation é recebida.</li><li>A solicitação para pedir uma instância do Cloud Foundation é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
 | `vmware-solutions.vcf.delete`                | <ul><li>A solicitação para excluir uma instância do Cloud Foundation é recebida.</li><li>A solicitação para excluir uma instância do Cloud Foundation é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
 | `vmware-solutions.vcf.add_hosts`             | <ul><li>A solicitação para incluir servidores ESXi em uma instância do Cloud Foundation é recebida.</li><li>A solicitação para incluir servidores ESXi em uma instância do Cloud Foundation é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
 | `vmware-solutions.vcf.remove_hosts`          | <ul><li>A solicitação para excluir servidores ESXi de uma instância do Cloud Foundation é recebida.</li><li>A solicitação para excluir servidores ESXi de uma instância do Cloud Foundation é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |

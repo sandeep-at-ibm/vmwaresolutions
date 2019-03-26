@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -39,7 +39,7 @@ lastupdated: "2019-02-15"
 {: #vcsnsxt-appmod-benefits}
 
 - 通过将采购资源、构建资源体系结构、实施和部署资源所需的时间从数周甚至数月缩短到数小时，加速向开发者和业务线交付 IT 项目。对于客户需要等待联网或安全团队能够订购负载均衡器、防火墙、交换机和路由器等服务的情况，这可缩短应用程序的价值实现时间。
-- 通过托管的私有云中的专用裸机服务器来增强安全性，包括将专用端点部署到 {{site.data.keyword.cloud_notm}} 服务（例如，{{site.data.keyword.containerlong_notm}} 和 KMIP）。
+- 通过托管的私有云中的专用裸机服务器来增强安全性，包括将专用网络服务端点部署到 {{site.data.keyword.cloud_notm}} 服务（例如，{{site.data.keyword.containerlong_notm}} 和 KMIP）。
 - 通过提供对虚拟化管理的全面管理访问权，对部署的混合云进行一致管理和监管，从而保护现有 VMware 工具、脚本和训练投资。
 - 通过遍布全球 30 多家 {{site.data.keyword.CloudDataCents_notm}} 的 IBM 专业和受管服务来利用全球范围的 VMware 专业知识。
 

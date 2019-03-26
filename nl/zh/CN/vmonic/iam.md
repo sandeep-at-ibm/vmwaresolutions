@@ -4,12 +4,12 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
 # 使用 IAM 管理用户访问权
-{: #managing-user-access-with-iam}
+{: #iam}
 
 帐户中用户对 {{site.data.keyword.vmwaresolutions_full}} 服务实例的访问权通过 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) 进行控制。对于访问帐户中 {{site.data.keyword.vmwaresolutions_short}} 服务的每个用户，必须为其分配定义了 IAM 用户角色的访问策略。
 
@@ -69,12 +69,11 @@ lastupdated: "2019-02-21"
 对于部署在 V2.4 和更低发行版中的现有实例，可以将其迁移到指定的 {{site.data.keyword.cloud_notm}} 帐户，以进行支持 IAM 的管理。有关更多信息，请参阅以下主题：
 * [将 V2.5 之前的 vCenter Server 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
 * [将 V2.5 之前的 vCenter Server with Hybridity Bundle 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
-* [将 V2.5 之前的 Cloud Foundation 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addinstancetousraccount)
 * [将 V2.5 之前的 NetApp ONTAP Select 实例迁移到 IBM Cloud 帐户](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)
 
 ## 相关链接
 {: #iam-related}
 
 * [管理身份和访问权](/docs/iam?topic=iam-getstarted)
-* [管理用户和访问权](/docs/iam/iamusermanage.html)
+* [邀请用户](/docs/iam?topic=iam-iamuserinv#iamuserinv)
 * [什么是 IAM](/docs/iam?topic=iam-iamoverview)

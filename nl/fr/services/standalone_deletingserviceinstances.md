@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -21,7 +21,7 @@ Prenez soin de passer en revue toutes les remarques énoncées dans la rubrique 
 ## Procédure de suppression d'instances VMware HCX on IBM Cloud locales
 {: #standalone_deletingserviceinstances-procedure}
 
-1. Cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Faites défiler l'écran vers le tableau **Instances HCX locales** et localisez l'instance à supprimer.
 3. Dans la colonne **Actions**, cliquez sur l'icône de suppression.
 4. Dans la fenêtre **Supprimer une instance**, cliquez sur **OK**.

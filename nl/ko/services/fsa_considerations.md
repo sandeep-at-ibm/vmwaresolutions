@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ SSH를 통해 FortiOS Web Client 또는 명령 인터페이스를 사용하여 �
 {:note}
 
 ## FortiGate Security Appliance on IBM Cloud의 기술 스펙
-{: #technical-specifications-for-fortigate-security-appliance-on-ibm-cloud}
+{: #fsa_considerations-specs}
 
 다음 컴포넌트가 주문되고 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -17,11 +17,11 @@ lastupdated: "2019-02-15"
 
 Der Service "Veeam on {{site.data.keyword.cloud}}" wird nahtlos und direkt in Ihre VMware-Hypervisoren integriert und unterstützt so die Hochverfügbarkeit in Ihrem Unternehmen. Dieser Service stellt Wiederherstellungspunkte und Zeitziele für Ihre Anwendungen und Daten bereit. Die Wiederherstellungspunkte und Zeitziele können in weniger als 15 Minuten nach Abschluss der Konfiguration bereitgestellt werden. Durch die Verwendung dieses Service steuern Sie die Sicherung und Wiederherstellung aller virtuellen Maschinen (VMs) für Ihre Infrastruktur direkt über die Veeam-Konsole.
 
-Dieser Service ist nur für Instanzen verfügbar, die in V1.8 (oder höher) bereitgestellt werden. Die aktuell installierte Veeam-Version ist 9.5u3.
+Dieser Service ist nur für Instanzen verfügbar, die in V1.8 (oder höher) bereitgestellt werden. Die aktuell installierte Veeam-Version ist 9.5u4.
 {:note}
 
 ## Technische Spezifikationen für Veeam on IBM Cloud
-{: #technical-specifications-for-veeam-on-ibm-cloud}
+{: #veeam_considerations-specs}
 
 Mit dem Service "Veeam on {{site.data.keyword.cloud_notm}}" werden die folgenden Komponenten bestellt und einbezogen:
 

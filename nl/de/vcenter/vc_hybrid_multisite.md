@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -46,7 +46,7 @@ Die folgende Abbildung zeigt eine Gesamtübersicht über die vCenter Server with
 
 Abbildung 1. vCenter Server with Hybridity Bundle-Bereitstellung mit mehreren Standorten
 
-![vCenter Server with Hybridity Bundle-Bereitstellung mit mehreren Standorten](../sddc/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle-Bereitstellung mit mehreren Standorten")
+![vCenter Server with Hybridity Bundle-Bereitstellung mit mehreren Standorten](../vcenter/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle-Bereitstellung mit mehreren Standorten")
 
 Das Modell enthält die folgenden Schichten:
 

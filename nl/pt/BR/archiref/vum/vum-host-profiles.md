@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
-# Perfis do host
+#	Perfis do host
 {: #vum-host-profiles}
 
 O vCenter tem um recurso chamado Perfis do host. Esse recurso cria um perfil que captura uma configuração de host de referência pré-configurada e validada e ajuda um administrador do sistema a gerenciar as configurações do host em um cluster. Os Perfis do host fornecem um mecanismo automatizado e gerenciado centralmente para a configuração de host e a conformidade de host. Os Perfis do host permitem que a configuração seja tratada como um objeto gerenciado, que tem um catálogo de parâmetros a serem configurados, rede, armazenamento, segurança e outros parâmetros de nível do host. Esses Perfis do host podem ser aplicados a hosts individuais, a um cluster ou a todos os hosts e clusters associados a um perfil do host.
@@ -17,7 +17,7 @@ O vCenter tem um recurso chamado Perfis do host. Esse recurso cria um perfil que
 
 Para incluir mais hosts em seu cluster do vCenter Server, veja [ Expandindo e contraindo a capacidade para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers).
 
-**Notas**:
+Nota:
 *	Para instâncias implementadas ou submetidas a upgrade para a V2.1 ou superior, os servidores e clusters ESXi recém-implementados são corrigidos com atualizações recentes, não necessariamente as mais recentes, do ESXi do VMware.
 *	Você é responsável por todas as outras atualizações para os componentes do VMware, incluindo assegurar que os servidores e clusters ESXi recém-implementados tenham todas as atualizações mais recentes requeridas.
 
@@ -29,7 +29,7 @@ A sequência a seguir é necessária para verificar a conformidade:
 3.	Verifique a conformidade do novo host com o Perfil do Host.
 4.	Revise falhas de conformidade e corrija.
 
-## Criando um perfil do host por meio de um host existente
+##	Criando um perfil do host por meio de um host existente
 {: #vum-host-profiles-create-host-profile}
 
 1.	Na Página inicial do vSphere Web Client, clique em **Políticas e perfis**.
@@ -40,7 +40,7 @@ A sequência a seguir é necessária para verificar a conformidade:
 6.	Revise as informações de resumo para o novo perfil e clique em **Concluir**.
 7.	O novo perfil aparece na lista de perfis.
 
-## Anexando o novo host ao perfil do host
+##	Anexando o novo host ao perfil do host
 {: #vum-host-profiles-attach-to-profile}
 
 1.	Na **Lista de perfis** na visualização principal Perfis do host, selecione o Perfil do host que foi criado anteriormente para ser aplicado ao novo host.
@@ -49,14 +49,14 @@ A sequência a seguir é necessária para verificar a conformidade:
 4.	O novo host é incluído na lista Entidades anexadas.
 5.	Clique em  ** Avançar **  e, em seguida, clique em  ** Concluir **.
 
-## Verificando a conformidade do novo host com o perfil do host
+##	Verificando a conformidade do novo host com o perfil do host
 {: #vum-host-profiles-check-compliance}
 
 1.	Navegue para o Perfil do host que foi concluído anteriormente.
 2.	Clique no ícone **Verificar conformidade do perfil do host**.
 3.	Na guia **Objetos**, o status de conformidade é atualizado como _Em conformidade, Desconhecido ou _Fora de conformidade_. Um status fora de conformidade indica uma inconsistência descoberta e específica entre o perfil e o novo host.
 
-## Revisando falhas de conformidade e correção
+##	Revisando falhas de conformidade e correção
 {: #vum-host-profiles-review-compliance}
 
 1. Para ver mais detalhes sobre falhas de conformidade, selecione o **Perfil do host** na guia **Objetos** que é usada na verificação de conformidade.

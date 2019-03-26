@@ -16,14 +16,14 @@ VMware HCX on IBM Cloud를 설치하려면 다음 소프트웨어 요구사항�
 * 교차 클라우드 vMotion을 사용하기 위해 동일한 유사성 제한사항이 온프레미스에서와 같이 클라우드에 적용됩니다. 자세한 정보는 [VMware EVC 및 CPU 호환성 FAQ](http://bit.ly/2vK6Sp5)를 참조하십시오.
 
 ## 네트워크 연결 구성
-{: #hcx-archi-port-req-config-net}
+{: #hcx-archi-prep-install-config-net}
 
 HCX는 공용 인터넷 및 사설 회선을 순회하고 네트워크, 스위치 및 포트 그룹과 같은 데이터 센터 컴포넌트에 연결해야 합니다.
 * [포트 액세스 요구사항](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req)에는 HCX 가상 어플라이언스가 설치될 수 있도록 열려 있어야 하는 포트가 나열되어 있습니다.
 * 온프레미스 vSphere 환경 및 VCF/VCS HCX Cloud 환경은 모두 vSphere 온프레미스 디바이스와 VCF/VCS HCX 디바이스 사이에 NTP(Network Time Protocol) 클록 동기화를 허용해야 합니다. UDP 포트 123은 HCX 가상 어플라이언스 및 네트워크에 액세스할 수 있어야 합니다.
 
 ## 온프레미스 환경
-{: #hcx-archi-port-req-on-prem-env}
+{: #hcx-archi-prep-install-on-prem-env}
 
 HCX를 설치하기 전에 사용자의 환경이 수행할 태스크를 지원할 수 있는지 확인하십시오. 온프레미스 환경은 HCX를 설치하기 전에 다음 태스크를 지원해야 합니다.
 * vSphere 5.5 Update 3 또는 6.0 Update 2가 포함된 Virtual Center
@@ -38,7 +38,7 @@ HCX를 설치하기 전에 사용자의 환경이 수행할 태스크를 지원�
   * vCenter는 연결 모드에 있습니다(보조 vCenter가 기본 vCenter의 SSO 서비스를 사용하거나 외부 SSO 서비스를 사용함).
 
 ## 계층 2 설치 환경 확인
-{: #hcx-archi-port-req-verify-layer-2-inst}
+{: #hcx-archi-prep-install-verify-layer-2-inst}
 
 계층 2 네트워크 확장의 요구사항은 다음과 같습니다.
 * vSphere Enterprise Plus Edition
@@ -50,7 +50,7 @@ HCX를 설치하기 전에 사용자의 환경이 수행할 태스크를 지원�
   * 다중 Layer 2 Concentrator가 필요한 경우 각 Layer 2 Concentrator에는 온프레미스 및 클라우드에 IP 주소가 있어야 합니다.
 
 ## 관련 링크
-{: #hcx-archi-port-req-related}
+{: #hcx-archi-prep-install-related}
 
 * [소스에 HCX 설치 및 구성](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
 * [VMware EVC 및 CPU 호환성 FAQ](http://bit.ly/2vK6Sp5)

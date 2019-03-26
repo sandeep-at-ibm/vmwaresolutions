@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,7 +52,7 @@ Si despliega el clúster en otro {{site.data.keyword.CloudDataCent_notm}} o en o
 ### Valores de Servidor nativo
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
-Especifique el modelo de CPU y la RAM del servidor nativo. Las opciones disponibles pueden variar dependiendo de la versión en que se desplegó inicialmente la instancia.
+Puede elegir **Skylake** o **Broadwell**. Las opciones pueden variar dependiendo de la versión en que se desplegó inicialmente la instancia.
 
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
@@ -131,7 +131,7 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 ## Procedimiento para añadir clústeres a instancias de vCenter Server con el paquete híbrido (Hybridity)
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia para ver los clústeres que contiene.
 
    Asegúrese de que el estado de la instancia sea **Listo para su uso**. De lo contrario, no puede añadir clústeres a la instancia.
@@ -162,7 +162,7 @@ No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es 
 ## Procedimiento para visualizar clústeres a instancias de vCenter Server con el paquete híbrido (Hybridity)
 {: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia para ver los clústeres que contiene.
 3. Pulse **Infraestructura** en el panel de navegación izquierdo. En la tabla **CLÚSTERES**, vea el resumen sobre los clústeres:
   * **Nombre**: el nombre del clúster.
@@ -232,7 +232,7 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 ## Procedimiento para suprimir clústeres de instancias de vCenter Server con el paquete híbrido (Hybridity)
 {: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia de la que desea suprimir clústeres.
 
    Asegúrese de que la instancia está en el estado **Listo para su uso**. Si no es así, no puede eliminar clústeres de la instancia.

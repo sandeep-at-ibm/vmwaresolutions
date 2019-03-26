@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -19,22 +19,22 @@ VUM 显示由 vSAN 生成的系统管理的基线。系统管理的基线会自�
 
 对于大多数企业，VUM 的 VMware 缺省设置被视为适合使用。如果您的企业希望使用不同的设置，那么下面提供了有关如何更改这些设置的信息。
 
-## 下载安排
+##	下载安排
 {: #vum-metadata-download-schedule}
 
 更新是指虚拟设备升级、主机补丁和扩展，缺省情况下，VUM 会每天下载一次更新。更改下载安排的方法是访问 vSphere Web Client，浏览至**主页** > **Update Manager** > **管理** > **设置**，选择**下载安排**，然后单击**编辑**。
 
-## 通知检查安排
+##	通知检查安排
 {: #vum-metadata-notif-check-schedule}
 
 通知是指有关补丁召回、新修订和警报的信息，缺省情况下，VUM 会每小时下载一次通知。这可以通过访问 vSphere Web Client，浏览至**主页** > **Update Manager** > **管理** > **设置**，选择**通知检查安排**，然后单击**编辑**进行更改。
 
-## 虚拟机设置
+##	虚拟机设置
 {: #vum-metadata-vm-settings}
 
 要更改虚拟机 (VM) 设置，请访问 vSphere Web Client，浏览至**主页** > **Update Manager** > **管理** > **设置**和 **VM 设置**，然后单击**编辑**。
 
-## 主机/集群设置
+##	主机/集群设置
 {: #vum-metadata-host-settings}
 
 要更改主机/集群设置，请访问 vSphere Web Client，浏览至**主页** > **Update Manager** > **管理** > **设置**和**主机/集群设置**，然后单击**编辑**。

@@ -14,6 +14,7 @@ lastupdated: "2017-08-28"
 此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Fortinet on IBM Cloud 服务
+{: #relnotes_v18-fortinet}
 
 Fortinet on {{site.data.keyword.cloud_notm}} 服务现在可用于 Cloud Foundation 和 vCenter Server 实例。此服务用于以高可用性方式部署 FortiGate Security Appliance (FSA) 300 系列设备对，以提供防火墙、路由、NAT 和 VPN 服务来保护实例公用 VLAN 上的所有服务器和虚拟机。您可以在订购实例时订购包含 Fortinet 服务的实例，也可以日后在实例详细信息页面中向现有实例添加此服务。
 
@@ -24,6 +25,7 @@ Fortinet on {{site.data.keyword.cloud_notm}} 服务现在可用于 Cloud Foundat
 * [管理 Fortinet on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
 
 ## Veeam on IBM Cloud 服务
+{: #relnotes_v18-veeam}
 
 此发行版引入了 Veeam on {{site.data.keyword.cloud_notm}} 服务，此服务可以同时备份管理组件和工作负载。此新服务将取代仅备份管理组件且集成在 V1.8 之前发行版中的先前 Veeam VSI。
 
@@ -36,20 +38,20 @@ Fortinet on {{site.data.keyword.cloud_notm}} 服务现在可用于 Cloud Foundat
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
 ## 对 VMware Cloud Foundation 实例的更新
+{: #relnotes_v18-vcf}
 
 ### 订购 Cloud Foundation 实例时自带 VMware 许可证 (BYOL)
+{: #relnotes_v18-byol}
 
 从 V1.8 发行版开始，订购 Cloud Foundation 实例时，会向您提供两个用于许可实例的 VMware 组件（包括 vSphere、vCenter Server、NSX 和 vSAN）的选项。您可以选择使用要以您的名义购买的新许可证。
 
 还可以选择对组件使用您自己的 VMware 许可证，这样就需要您提供许可证密钥。在此情况下，对于您提供了许可证的 VMware 组件，将由 VMware 而不是 IBM 支持人员来提供后续支持。
 
-有关更多信息，请参阅以下主题：
-* [订购 Cloud Foundation 实例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
-* [关于 BYOL 的常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
-
 ## 对 VMware vCenter Server 实例的更新
+{: #relnotes_v18-vcs}
 
 ### 定制实例的 CPU 和内存
+{: #relnotes_v18-custom-cpu}
 
 在预构建并经过测试的“小型”、“中型”和“大型”选项旁边，提供了可定制服务器选项。除了 RAM 量之外，还可以根据双 CPU 以及总核心数，从 VMware HCL 兼容服务器列表中进行选择。本地存储器不可定制。
 
@@ -58,6 +60,7 @@ Fortinet on {{site.data.keyword.cloud_notm}} 服务现在可用于 Cloud Foundat
 * [添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### 支持添加 7 个以上的 NFS 文件共享
+{: #relnotes_v18-nfs}
 
  在集群中的所有 ESXi 服务器上，最多可以连接 32 个文件共享。
 
@@ -66,12 +69,14 @@ Fortinet on {{site.data.keyword.cloud_notm}} 服务现在可用于 Cloud Foundat
 * [添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### 对数据中心的更新
+{: #relnotes_v18-dc}
 
 以下新数据中心可用于部署：**DAL-09、DAL-12 和 DAL-13 - 达拉斯**；**LON-04 和 LON-06 - 伦敦**；**SJC-04 - 圣何塞**；**WDC-06 和 WDC-07 - 华盛顿**
 
 有关更多信息，请参阅[针对 vCenter Server 实例的需求和规划](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 
 ## 易用性增强功能
+{: #relnotes_v18-ui}
 
 对整个用户界面进行了改进：
 * 可以在左侧导航窗格中的**开始**页面上，了解有关服务的信息并订购实例。

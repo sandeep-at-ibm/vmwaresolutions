@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -61,9 +61,9 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링은 스토리�
 NetApp ONTAP Select는 VMware 클러스터에서 실행되고 호스트의 로컬 스토리지를 가상화합니다. NetApp ONTAP Select는 전용 모델에 배치되며, 여기서 기타 워크로드는 이와의 클러스터 공유가 예상되지 않습니다. 결과적으로 NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링의 하드웨어 구성은 NetApp ONTAP Select의 요구사항에 따라서만 크기가 조정됩니다.
 
 ## NetApp ONTAP Select 인스턴스의 기술 스펙
-{: #technical-specifications-for-netapp-ontap-select-instances}
+{: #np_netappoverview-specs}
 
-다음 컴포넌트는 NetApp ONTAP Select 인스턴스에 포함됩니다.
+다음 컴포넌트가 NetApp ONTAP Select 인스턴스에 포함됩니다.
 
 표준화된 구성의 가용성 및 가격은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
 {:note}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -50,7 +50,7 @@ Em resumo, as ofertas do {{site.data.keyword.cloud_notm}} for VMware:
 negócios, reduzindo o tempo que leva para compras, arquitetura,
 implementação e implantação de recursos de semanas ou meses para
 horas.
-* Aprimore a segurança com os servidores bare metal dedicados em uma nuvem particular hospedada, incluindo a implementação de terminal privado para os serviços do {{site.data.keyword.cloud_notm}}, incluindo o {{site.data.keyword.containerlong_notm}} e o KMIP.
+* Aprimore a segurança com servidores bare metal dedicados em uma nuvem privada hospedada, incluindo a implementação do terminal em serviço de rede privada para os serviços do {{site.data.keyword.cloud_notm}}, incluindo o {{site.data.keyword.containerlong_notm}} e o KMIP.
 * Ative o gerenciamento e o controle consistentes da nuvem híbrida
 implementada, fornecendo acesso administrativo total para o gerenciamento
 de virtualização. O gerenciamento preserva as ferramentas, os scripts e os investimentos

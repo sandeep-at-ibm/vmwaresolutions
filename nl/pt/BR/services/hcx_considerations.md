@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # Especificações e considerações do VMware HCX on IBM Cloud
-{: #vmware-hcx-on-ibm-cloud-overview}
+{: #hcx_considerations}
 
 O serviço HCX on {{site.data.keyword.cloud}} amplia perfeitamente as redes de data centers no local para o {{site.data.keyword.cloud_notm}}, o que permite que você migre máquinas virtuais (MVs) para e do {{site.data.keyword.cloud_notm}} sem nenhuma conversão ou mudança.
 
@@ -26,7 +26,7 @@ Uma instância do vCenter Server com HCX no {{site.data.keyword.cloud_notm}} é 
 {:note}
 
 ## Especificações técnicas para HCX on IBM Cloud
-{: #technical-specifications-for-hcx-on-ibm-cloud}
+{: #hcx_considerations-specs}
 
 Os componentes a seguir são ordenados e incluídos no serviço HCX on {{site.data.keyword.cloud_notm}}.
 
@@ -72,7 +72,7 @@ O serviço HCX no {{site.data.keyword.cloud_notm}} não pode ser instalado em um
 Antes de instalar o serviço HCX on {{site.data.keyword.cloud_notm}}, deve-se incluir uma regra de firewall em quaisquer firewalls existentes para permitir todo o tráfego HTTPS de saída para que o dispositivo virtual HCX Manager (HCX Manager) possa se registrar. Após a conclusão da instalação do HCX Manager, você poderá remover a regra de firewall. Além disso, deve-se configurar regras de firewall para permitir que o HCX funcione corretamente. Para obter mais informações, veja *Apêndice A - Requisitos de acesso de porta* em [Arquitetura do HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
 
 ## Considerações ao remover o HCX on IBM Cloud
-{: #considerations-when-removing-hcx-on-ibm-cloud}
+{: #hcx_considerations-delete}
 
 Revise as considerações a seguir antes de remover o serviço HCX no {{site.data.keyword.cloud_notm}}:
 * Assegure-se de que as interconexões e as redes estendidas entre o site de origem no local e os sites de destino do {{site.data.keyword.cloud_notm}} sejam removidas. Para remover as interconexões e as redes estendidas, use a interface com o usuário HCX no VMware vSphere Web Client no local.

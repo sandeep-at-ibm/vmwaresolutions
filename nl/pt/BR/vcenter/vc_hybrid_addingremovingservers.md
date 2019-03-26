@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2019-02-14"
 {: #vc_hybrid_addingremovingservers}
 
 É possível expandir ou contrair a capacidade de sua instância do VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle, de acordo com suas necessidades de negócios, incluindo ou removendo servidores ESXi.
+
+Iniciando com a liberação V2.9, é possível incluir novos servidores ESXi em um cluster enquanto o cluster está no modo de manutenção. Além disso, é possível incluir ou remover simultaneamente servidores do ESXi em múltiplos clusters. As operações simultâneas a seguir estão disponíveis:
+
+* Inclua hosts no **cluster1** e inclua hosts em clusters adicionais.
+* Remova hosts do **cluster1** e remova hosts para clusters adicionais.
+* Inclua hosts no **cluster1** e remova hosts para clusters adicionais.
+* Remova hosts do **cluster1** e inclua hosts em clusters adicionais.
 
 Como seu cluster inicial tem o vSAN como seu armazenamento, incluir um ou mais servidores ESXi após a implementação pode aumentar a capacidade de armazenamento do cluster.
 
@@ -30,7 +37,7 @@ Como seu cluster inicial tem o vSAN como seu armazenamento, incluir um ou mais s
 ## Procedimento para Incluir Servidores ESXi
 {: #vc_hybrid_addingremovingservers-adding-procedure}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância para a qual você deseja expandir a capacidade.
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda.
 4. Na tabela **CLUSTERS**, clique no cluster no qual você deseja incluir servidores ESXi.
@@ -59,7 +66,7 @@ Como seu cluster inicial tem o vSAN como seu armazenamento, incluir um ou mais s
 ## Procedimento para remover servidores ESXi
 {: #vc_hybrid_addingremovingservers-removing-procedure}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância para a qual você deseja contratar a capacidade.
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda.
 4. Na tabela **CLUSTERS**, clique no cluster do qual você deseja remover servidores ESXi.

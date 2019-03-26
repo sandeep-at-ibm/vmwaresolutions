@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -47,7 +47,7 @@ Falls Sie die Clusterkonfiguration als Vorlage gespeichert haben, erhalten Sie i
 
 Falls Sie eine Bestellung aufgegeben haben, beginnt die Bereitstellung des Clusters automatisch. Sie erhalten eine E-Mail, in der die Bearbeitung der Bestellung bestätigt wird. Sobald der Cluster einsatzbereit ist, werden Sie ebenfalls per E-Mail benachrichtigt.
 
-Die vSphere-Cluster werden (anders als die vCenter Server- und Cloud Foundation-Instanzen) auf der Seite **Bereitgestellte Instanzen** nicht angezeigt.
+Die vSphere-Cluster werden (im Gegensatz zu den vCenter Server- und Cloud Foundation-Instanzen) auf der Seite **Ressourcen** nicht angezeigt.
 {:note}
 
 ## Zugehörige Links

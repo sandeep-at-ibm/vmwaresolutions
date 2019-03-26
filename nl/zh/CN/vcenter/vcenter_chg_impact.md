@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -31,6 +31,7 @@ lastupdated: "2019-02-14"
 
 ## 特定于服务的用户帐户
 {: #vcenter_chg_impact-service-usr-account}
+{: faq}
 
 每个服务在 vCenter Server 中都会创建一个内部用户帐户。此帐户是必需的，有了此帐户，与服务关联的管理操作才能连接到 vCenter Server 以对该服务执行操作。
 
@@ -44,6 +45,7 @@ lastupdated: "2019-02-14"
 
 ## vCenter Server 实例（V1.9 和更高版本）的 VMware 资源
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
+{: faq}
 
 对于 V1.9 和更高版本中部署的实例，如果 vCenter Server 实例处于**可供使用**状态，那么可以在 VMware vSphere Web Client 中修改 VMware 虚拟数据中心、集群、交换机、端口组和客户数据存储名称。
 
@@ -51,6 +53,7 @@ lastupdated: "2019-02-14"
 
 ## vCenter Server 实例（V1.8 和更低版本）的 VMware 资源
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
+{: faq}
 
 下表列出了 SSO 管理员在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改 VMware vCenter Server 资源时，可能会影响的操作。如果用于恢复的解决方案可用，那么还会提供该解决方案。
 
@@ -80,6 +83,7 @@ lastupdated: "2019-02-14"
 
 ## vCenter Server 实例的管理子网
 {: #vcenter_chg_impact-mgmt-subnets}
+{: faq}
 
 以下信息讨论了 {{site.data.keyword.vmwaresolutions_short}} 订购的子网，并提供了一些选项，供您订购额外子网以供自己使用。
 

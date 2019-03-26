@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -23,13 +23,15 @@ Cloud Foundation インスタンス内に組み込まれているネットワー
 
 ## ファイアウォールに関する考慮事項
 {: #sd_networkingoncloudfoundation-firewall-considerations}
+{: faq}
 
 ファイアウォールを使用している場合は、{{site.data.keyword.IBM}} CloudDriver 仮想サーバー・インスタンス (VSI) と SDDC Manager 仮想マシン (VM) からのすべての通信に関してルールを構成する必要があります。 これらのルールでは、すべてのプロトコルが IP アドレス `10.0.0.0/8` と `161.26.0.0/16` 上で通信できるよう許可する必要があります。 このようなファイアウォールの例としては、NSX Distributed Firewalls (DFW)、Vyatta ファイアウォールなどがあります。
 
 ## VM での VMware NSX の使用
 {: #sd_networkingoncloudfoundation-using-nsx-with-vm}
+{: faq}
 
-Cloud Foundation インスタンスのデプロイ時に、インスタンス内で VMware NSX の注文、インストール、ライセンス交付、構成が行われます。 また、NSX Manager、NSX Controllers、および NSX Transport Zone がセットアップされ、各 ESXi サーバーに NSX コンポーネントが構成されます。
+Cloud Foundation インスタンスのデプロイ時に、インスタンス内で VMware NSX の注文、インストール、ライセンス交付、および構成が行われています。また、NSX Manager、NSX Controllers、および NSX Transport Zone がセットアップされ、各 ESXi サーバーに NSX コンポーネントが構成されます。
 
 しかし、ワークロード VM が相互に通信したりインターネットにアクセスしたりする必要がある場合は、VM で使用できる NSX をユーザーの責任で構成する必要があります。
 
@@ -39,6 +41,7 @@ NSX をセットアップする方法について詳しくは、以下のトピ�
 
 ## NSX コンポーネントのパスワードを変更する際の考慮事項
 {: #sd_networkingoncloudfoundation-considerations-when-change-nsx-component-password}
+{: faq}
 
 NSX Manager、NSX Controllers、NSX Edge のパスワードを変更する場合は、その前に以下の考慮事項を確認してください。
 * NSX Manager のパスワードは変更しないでください。 このパスワードは、{{site.data.keyword.vmwaresolutions_short}} コンソール内のインスタンスの**「サマリー」**ページにあります。

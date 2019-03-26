@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -56,10 +56,8 @@ Figura 1. Implementação de vários sites do Cloud Foundation
 
 O modelo contém as camadas a seguir:
 
-* **Instância primária**: em uma configuração de vários sites, para implementar a primeira instância, defina-a como primária durante o processo de pedido da instância.
-* **Instâncias secundárias**: em uma configuração de vários sites, defina as instâncias anexadas à instância primária como instâncias secundárias durante o processo de pedido.
-
-É possível designar apenas uma instância secundária para uma instância primária de cada vez. Não é possível designar múltiplas instâncias secundárias a uma instância primária ao mesmo tempo. Para fazer isso, deve-se passar pelo processo de pedido novamente e selecionar a instância primária definida anteriormente como uma instância primária para a instância secundária. Deve-se repetir o processo para todas as instâncias secundárias que você deseja criar.
+* **Instância primária**: em uma configuração de multisite, a primeira instância foi definida como primária durante o processo de pedido da instância.
+* **Instâncias secundárias**: em uma configuração multisite, as instâncias que são anexadas à instância primária foram definidas como secundárias durante o processo de pedido.
 
 É possível ter um máximo de 8 instâncias (1 primária e 7 secundárias) que serão implementadas em uma configuração de vários sites.
 

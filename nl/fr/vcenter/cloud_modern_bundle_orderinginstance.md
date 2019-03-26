@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -100,7 +100,7 @@ Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatis
 #### Affichage des détails d'instance
 {: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
-Vous pouvez vérifier le statut du déploiement en affichant les détails de l'instance. Cliquez sur **Instances déployées** dans le panneau de navigation de gauche, puis recherchez le tableau **Instances vCenter Server** ou **Instances HCX locales** pour afficher des informations relatives aux instances que vous avez commandées .
+Vous pouvez vérifier le statut du déploiement en affichant les détails de l'instance. Cliquez sur **Ressources** dans le panneau de navigation de gauche, puis recherchez le tableau **Instances vCenter Server** ou **Instances HCX locales** pour afficher des informations relatives aux instances que vous avez commandées.
 
 Une fois l'instance correctement déployée, les composants décrits dans les sections *Spécifications techniques* de cette rubrique sont installés sur votre plateforme virtuelle VMware et la clé d'activation du service HCX on {{site.data.keyword.cloud_notm}} sur site est indiquée dans le tableau **Instances HCX locales**.
 
@@ -111,8 +111,8 @@ L'instance prend le statut **Prêt à l'emploi** et vous recevez une notificatio
 
 Installez HCX Enterprise Manager sur site et configurez la connexion à votre instance HCX on {{site.data.keyword.cloud_notm}}.
 
-1. Localisez la clé d'activation sur site sur la page **Instances déployées**.
-  1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Localisez la clé d'activation sur site sur la page **Ressources**.
+  1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
   2. Dans le tableau **Instances vCenter Server**, examinez la colonne **Type** pour localiser la version d'essai à noeud unique pour la migration et la modernisation des applications et notez le nom de cette instance.
   3. Faites défiler l'écran vers le tableau **Instances HCX locales**, examinez la colonne **Nom** pour localiser l'instance portant le même nom que l'instance de version d'essai à noeud unique que vous avez commandée avec le suffixe *-OnPrem*.
   4. Notez la clé dans la zone **Clé d'activation**.
@@ -170,7 +170,7 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 
 Procédez comme suit pour supprimer une instance Version d'essai à noeud unique pour la migration et la modernisation des applications :
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, recherchez l'instance à supprimer.
 3. Dans la colonne **Actions**, cliquez sur l'icône Supprimer.
    L'instance prend le statut **Suppression en cours**. Une fois l'instance supprimée, ses composants sont libérés et elle prend le statut **Supprimé**.

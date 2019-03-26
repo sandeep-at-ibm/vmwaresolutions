@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -27,7 +27,7 @@ Im Rahmen des Bestellablaufs für Ihre vCenter Server-Instanz werden die folgend
 * Ein Beispiel für einen verteilten logischen NSX-Router (Distributed Logical Router, DLR) wird für die potenzielle Ost-West-Kommunikation zwischen lokalen Workloads bereitgestellt, die mit Netzen der Schicht 2 (L2) verbunden sind.
 * Eine NSX Edge-Appliance wird zur Ausführung der Netzadressumsetzung (Network Address Translation, NAT) aus dem Bereich der IP-Adressen eines logischen Workload-Switch in eine öffentliche IP-Adresse nach den NAT-Regeln bereitgestellt und konfiguriert.
 
-  NXS Edge wird für ausschließlich private Instanzen nicht bereitgestellt.
+  NSX Edge wird für ausschließlich private Instanzen nicht bereitgestellt.
   {:note}
 
 * Wenn Sie den Service "Veeam on {{site.data.keyword.cloud_notm}}" installiert haben, wird der NSX-Manager für eine tägliche Sicherung der NSX-Konfigurationen konfiguriert. Weitere Informationen finden Sie unter [Hinweise zur Installation von Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud).
@@ -74,13 +74,13 @@ Die Edge **customer-nsx-edge** ist für Ihre eigene Verwendung vorgesehen. Sie k
 Führen Sie die folgenden Schritte in VMware vSphere Web Client aus, um die Details für die Kundenteilnetze anzugeben, damit Sie die bestellten IP-Adressen verwenden können:
 
 1. Klicken Sie auf **Home > Networking & Security**.
-2. Klicken Sie im Navigatorfenster auf **NSX Edges** und doppelklicken Sie auf die Edge **customer-nsx-edge**.
-3. Sehen Sie sich auf der Registerkarte **Summary** für diese Edge die Edge-Beschreibung an, die die Teilnetz-IDs für das private und das öffentliche Kundenteilnetz enthält.
+2. Klicken Sie im Navigatorfenster auf **NSX Edges** und suchen Sie **customer-nsx-edge edge** in der Liste der Edges im rechten Fenster. 
+3. Bewegen Sie den Mauszeiger in der Spalte **Description** über die Edge-Beschreibung für **customer-nsx-edge**, um die Teilnetz-IDs für das private und das öffentliche Kundenteilnetz anzuzeigen. 
 
 Weitere Details über die Kundenteilnetze können Sie außerdem mit den folgenden Schritten im {{site.data.keyword.slportal}} ermitteln:
 
 1. Klicken Sie auf **Networking > IP-Management > Teilnetze**.
-2. Klicken Sie auf das Filtermenü und geben Sie im Feld "Teilnetz" die ID an, die Sie in der Beschreibung der Edge **customer-nsx-edge** auf der Registerkarte **Summary** in VMware vSphere Web Client ermittelt haben.
+2. Klicken Sie auf das Filtermenü und geben Sie im Feld **Teilnetz** die ID ein, die in der Beschreibung für **customer-nsx-edge** im VMware vSphere Web Client angezeigt wird. 
 3. Lesen Sie die Hinweise, die für die IP-Adressen angezeigt werden. Diese Hinweise geben an, welche der Teilnetze und IP-Adressen bestellt und während der Erstkonfiguration verwendet werden.
 
    Verwenden Sie nicht die IP-Adressen, die bestellt und während der Erstkonfiguration verwendet werden. Sie können jedoch nach Bedarf andere IP-Adressen in diesen Teilnetzen verwenden. Informationen zum Konfigurieren zusätzlicher Regeln für die Netzadressumsetzung finden Sie auf der Seite [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.

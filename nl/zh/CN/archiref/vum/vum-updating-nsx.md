@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -63,7 +63,7 @@ Manager
   - NSX Edge 成功升级后，“状态”为“已部署”，并且“版本”列会显示新的 NSX 版本。如果 Edge 升级失败，并且未回滚到旧版本，请单击**重新部署 NSX Edge** 图标，然后重试升级。
 
 ## 相关链接
-{: #vum-type-updates-related}
+{: #vum-updating-nsx-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）

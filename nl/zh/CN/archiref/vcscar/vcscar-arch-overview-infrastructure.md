@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-02-15"
 ## 虚拟路由和转发
 {: #vcscar-arch-overview-infrastructure-vrf}
 
-{{site.data.keyword.cloud}} 帐户还可以配置为虚拟路由和转发 (VRF) 帐户。VRF 帐户提供了与 VLAN 生成类似的功能，支持子网 IP 块之间的自动路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
+{{site.data.keyword.cloud}} 帐户可以配置为虚拟路由和转发 (VRF) 帐户。VRF 帐户支持子网 IP 块之间的自动全局路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
 
 ## 直接链路
 {: #vcscar-arch-overview-infrastructure-direct-link}

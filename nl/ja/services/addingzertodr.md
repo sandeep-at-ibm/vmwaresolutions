@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -17,11 +17,11 @@ lastupdated: "2019-02-14"
 
 Zerto on {{site.data.keyword.cloud}} サービスは、レプリケーション機能と災害復旧機能をデプロイメント・オファリングに統合して、{{site.data.keyword.cloud_notm}} 上の VMware 仮想環境内のデータを保護および復旧します。
 
-このサービスは、V1.2 以降でデプロイされたインスタンスでのみ利用可能です。 現在インストールされている Zerto バージョンは 6.0 更新 3 です。
+このサービスは、V1.2 以降でデプロイされたインスタンスでのみ利用可能です。 現在インストールされている Zerto バージョンは 6.5 更新 3 です。
 {:note}
 
 ## Zerto on IBM Cloud の技術仕様
-{: #technical-considerations-for-zerto-on-ibm-cloud}
+{: #addingzertodr-specs}
 
 以下のコンポーネントが注文されて Zerto on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
@@ -50,7 +50,7 @@ Zerto Virtual Replication Appliance (VRA) のコンポーネントは、デフ�
 ### ライセンスと料金
 {: #addingzertodr-specs-licenses}
 
-Zerto Replication V6.0 更新 3 ライセンス
+Zerto Replication V6.5 更新 3 ライセンス
 
 ## 関連リンク
 {: #addingzertodr-related}

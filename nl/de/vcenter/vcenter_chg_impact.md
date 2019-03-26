@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -32,6 +32,7 @@ Benutzer und Kennwörter für die automatisierten Operationen in der Konsole dü
 
 ## Servicespezifische Benutzerkonten
 {: #vcenter_chg_impact-service-usr-account}
+{: faq}
 
 Jeder Service erstellt ein internes Benutzerkonto in vCenter Server. Dieses Konto ist erforderlich, damit Managementoperationen, die einem Service zugeordnet sind, eine vCenter Server-Verbindung herstellen können, um die Operationen für den Service ausführen zu können.
 
@@ -45,6 +46,7 @@ Die aus `<service_name>` und `<service_uuid>` zusammengesetzte Zeichenfolge wird
 
 ## VMware-Ressourcen für vCenter Server-Instanzen (V1.9 und höher)
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
+{: faq}
 
 Für Instanzen, die in V1.9 und höher bereitgestellt werden, können Sie das virtuelle VMware-Rechenzentrum, den Cluster, die Switches, die Portgruppen und die Namen von Kundendatenspeichern in VMware vSphere Web Client ändern, falls sich die vCenter Server-Instanz im Status **Bereit** befindet.
 
@@ -52,6 +54,7 @@ Der Standardname des Managementdatenspeichers darf jedoch nicht geändert werden
 
 ## VMware-Ressourcen für vCenter Server-Instanzen (V1.8 und früher)
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
+{: faq}
 
 In der folgenden Tabelle sind die Operationen aufgelistet, die betroffen sein könnten, wenn VMware vCenter Server-Ressourcen vom SSO-Administrator außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole geändert werden. Wenn eine Lösung zur Wiederherstellung verfügbar ist, ist sie ebenfalls angegeben.
 
@@ -81,6 +84,7 @@ Wenn Sie den SSH- oder Shell-Zugriff inaktivieren, sollten Sie ihn vorübergehen
 
 ## Managementteilnetze für vCenter Server-Instanzen
 {: #vcenter_chg_impact-mgmt-subnets}
+{: faq}
 
 Nachfolgend sind die Teilnetze beschrieben, die von {{site.data.keyword.vmwaresolutions_short}} bestellt werden. Außerdem werden Sie über die Optionen für die Bestellung von zusätzlichen Teilnetzen für Ihre eigene Verwendung informiert.
 

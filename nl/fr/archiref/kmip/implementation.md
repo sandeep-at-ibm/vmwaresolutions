@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -34,14 +34,15 @@ Pour activer le chiffrement vSphere ou le chiffrement vSAN à l'aide de KMIP for
 
 Pour utiliser le chiffrement vSAN, éditez les paramètres généraux vSAN dans votre cluster vCenter et sélectionnez la case à cocher du chiffrement.
 
-Le diagnostic d'intégrité vSAN peut générer des avertissement périodiques indiquant l'impossibilité de se connecter au cluster KMS depuis un ou plusieurs de vos hôtes vSphere. Ces avertissements se produisent parce que le diagnostic d'intégrité vSAN dépasse le délai d'attente trop rapidement. Vous pouvez ignorer ces avertissements.{:note}
+Le diagnostic d'intégrité vSAN peut générer des avertissement périodiques indiquant l'impossibilité de se connecter au cluster KMS depuis un ou plusieurs de vos hôtes vSphere. Ces avertissements se produisent parce que le diagnostic d'intégrité vSAN dépasse le délai d'attente trop rapidement. Vous pouvez ignorer ces avertissements. Pour plus d'informations, voir [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:new_window}.
+{:note}
 
 Pour utiliser le chiffrement vSphere, éditez vos règles de stockage de machine virtuelle pour demander le chiffrement de disque.
 
 ## Rotation des clés
 {: #kmip-implementation-key-rotation}
 
-[Effectuez une rotation de votre clé racine de client Key Protect (CRK)](/docs/services/key-protect?topic=key-protect-rotating-keys) à l'aide de la console {{site.data.keyword.cloud_notm}} ou de l'API.
+[Effectuez une rotation de votre clé racine de client Key Protect (CRK)](/docs/services/key-protect?topic=key-protect-key-rotation#key-rotation) à l'aide de la console {{site.data.keyword.cloud_notm}} ou de l'API.
 
 Pour le chiffrement VMware vSAN, effectuez une rotation des clés de chiffrement (KEK) de votre clé VMware et si vous le souhaitez des clés de chiffrement de données (DEK) dans les paramètres généraux vSAN de votre cluster vCenter.
 

@@ -18,6 +18,7 @@ lastupdated: "2018-10-19"
 このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
 ## Spectre および Meltdown への対処
+{: #relnotes_v22-spectre}
 
 {{site.data.keyword.vmwaresolutions_short}} は、Spectre および Meltdown と呼ばれる脆弱性 (CVE-2017-5753、CVE-2017-5715、CVE-2017-5754) に対して VMware から提供されたパッチをリリースしました。
 
@@ -25,9 +26,8 @@ lastupdated: "2018-10-19"
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-詳しくは、[Spectre および Meltdown 脆弱性への対処](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)を参照してください。
-
 ## IBM CloudDriver 仮想マシンのアップグレード
+{: #relnotes_v22-cloud-driver}
 
 IBM CloudDriver 仮想マシンは、V2.2 へのアップグレード処理中に、CentOS Linux リリース 7.4.1708 を使用して再デプロイされます。 また、新たにプロビジョンされるすべてのインスタンスの IBM CloudDriver には CentOS Linux リリース 7.4.1708 が含まれています。
 
@@ -41,17 +41,17 @@ Veeam on {{site.data.keyword.cloud_notm}} サービスを使用する方法に�
 * [Veeam on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
 ## ESXi サーバーの拡張構成設定
+{: #relnotes_v22-config-esxi}
 
 V2.2 以降のリリースでは、新規インスタンスは、ESXi サーバーの新しい拡張構成設定を使用して注文されます。
 前のリリースから V2.2 以降のリリースにアップグレードしたインスタンスの場合は、ESXi サーバーを再始動しなければならない設定があります。 そのため、自動的に適用される構成設定は一部だけです。
 
 ストレージ拡張が適切にサポートされるように、残りの構成設定を新しい値に変更してすべてのインスタンスで統一することをお勧めします。 IBM は、{{site.data.keyword.cloud_notm}} for VMware Solutions の今後のすべてのリリースで、これらの新しい設定だけを使用してテストする予定です。
 
-詳しくは、以下の _ESXi サーバーの拡張構成設定_を参照してください。
-* [vCenter Server の部品構成表](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#advanced-configuration-settings-for-esxi-servers)
-* [Cloud Foundation の部品構成表](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom#advanced-configuration-settings-for-esxi-servers)
+詳しくは、[vCenter Server の部品構成表](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#advanced-configuration-settings-for-esxi-servers)の『_ESXi サーバーの拡張構成の設定_』を参照してください。
 
 ## 初期クラスターで最大 51 台の ESXi サーバーをサポートし、追加のクラスターで最大 59 台の ESXi サーバーをサポート
+{: #relnotes_v22-esxi-cluster}
 
 V2.2 以降のリリースでは、ESXi サーバー数を初期クラスターについては最大 51 台まで、追加のクラスターについては最大 59 台まで増やせるようになりました。
 
@@ -59,22 +59,24 @@ V2.1 以前のリリースでデプロイされたインスタンスの場合は
 {:important}
 
 ## vCenter Server および Cloud Foundation インスタンスのその他のネットワーク構成オプション
+{: #relnotes_v22-network-config}
 
 vCenter Server および Cloud Foundation インスタンスの注文で、既存のパブリック VLAN とプライベート VLAN をネットワーク構成に再利用できるようになりました。 既存の VLAN がない場合は、新規パブリック VLAN 1 つと新規プライベート VLAN 2 つを注文することができます。
 
-既存の VLAN を選択する前に考慮すべき重要な事項については、以下の資料にある『*ネットワーク・インターフェースの設定*』セクションを参照してください。
-* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
+既存の VLAN を選択する前に考慮すべき重要な事項については、[vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)の『*ネットワーク・インターフェースの設定*』セクションを参照してください。
 
 ## VMware vCenter Server インスタンスの更新
+{: #relnotes_v22-vcs}
 
 ### NSX コンポーネントとポート・グループの構成設定の更新
+{: #relnotes_v22-nsx}
 
 現行リリースでは、VMware NSX for vSphere 6.3.5 コンポーネントの更新が適用されます。 コンポーネントについて詳しくは、[vCenter Server の部品構成表](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)を参照してください。
 
 V2.2 以降のリリースでデプロイされる VMware vCenter Server インスタンスでは、NSX およびポート・グループの構成設定が変更されています。 詳しくは、[vCenter Server Software 部品構成表](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#nsx-and-port-group-configuration-settings)の『*NSX とポート・グループの構成設定*』セクションを参照してください。
 
 ### DNS 構成の新しいオプション
+{: #relnotes_v22-dns}
 
 Microsoft Active Directory (AD) 用に 1 つの Microsoft Windows Server 仮想サーバー・インスタンス (VSI) をデプロイするか、管理クラスターに 2 つの高可用性 Microsoft Windows 仮想マシンをデプロイするかを選択できるようになりました。 V2.2 より前のリリースでは、デフォルトで単一の Microsoft Windows VSI が Microsoft AD として自動的にデプロイされていました。 2 つの Microsoft Windows 仮想マシンを選択する新しいオプションを使用すると、プライバシーを強化できるうえに、Veeam サービスを使用してそれらの仮想マシンをバックアップおよびリストアできます。
 
@@ -84,40 +86,47 @@ Microsoft Active Directory (AD) 用に 1 つの Microsoft Windows Server 仮想�
 詳しくは、[vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#system-settings)の『*システム設定*』セクションを参照してください。
 
 ### インスタンスあたりのクラスター数の増加
+{: #relnotes_v22-clusters-per-inst}
 
 V2.2 以降のリリースでデプロイまたは V2.2 以降のリリースにアップグレードされた VMware vCenter Server インスタンスには、最大 10 個のクラスターを追加できるようになりました。 詳しくは、[vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)を参照してください。
 
 ## VMware vSphere クラスターの更新
+{: #relnotes_v22-vss}
 
 ### ビジネス・パートナーのお客様が利用できるコンポーネント・ライセンス・バンドル
+{: #relnotes_v22-license-bundles}
 
 ビジネス・パートナーのユーザーは、新規 vSphere クラスターを注文するときに、4 つのコンポーネント・ライセンス・バンドルから選択できるようになりました。 「Standard with Management」、「Advanced」、「Advanced with Networking」、または「Advanced with Networking and Management」から選択します。 追加の VMware コンポーネントを注文に含めることもできます。 ただし、ライセンス持ち込みのオプションは利用できません。
 
 詳しくは、[新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)の『*ライセンス交付の設定*』セクションを参照してください。
 
 ## NetApp ONTAP Select インスタンスの更新
+{: #relnotes_v22-netapp}
 
 現行リリースでは、NetApp ONTAP Select 9.3 の更新が適用されます。
 
 ### 大容量の IBM Cloud ベア・メタル・サーバーのための SATA ドライブ数の増加
+{: #relnotes_v22-sata-drives}
 
-NetApp ONTAP Select の大容量の{{site.data.keyword.baremetal_short}}では、34 個の SATA ドライブを使用できるようになりました。 詳しくは、[NetApp ONTAP Select インスタンスの技術仕様](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#technical-specifications-for-netapp-ontap-select-instances)を参照してください。
+NetApp ONTAP Select の大容量の{{site.data.keyword.baremetal_short}}では、34 個の SATA ドライブを使用できるようになりました。 詳しくは、[NetApp ONTAP Select インスタンスの技術仕様](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)を参照してください。
 
 ## アドオン・サービスの更新
+{: #relnotes_v22-services}
 
 ### F5 on IBM Cloud の帯域幅オプションの拡張
+{: #relnotes_v22-bandwidth}
 
 Cloud Foundation および vCenter Server インスタンス用に F5 on {{site.data.keyword.cloud_notm}} サービスをインストールするときに、最大帯域幅として 10 Gbps を選択できるようになりました。 詳しくは、[F5 on {{site.data.keyword.cloud_notm}} に関する考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)を参照してください。
 
 ### KMIP for VMware on IBM Cloud
+{: #relnotes_v22-kmip}
 
 KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスを含めて Cloud Foundation または vCenter Server インスタンスを注文したり、初期デプロイメントの後に既存の Cloud Foundation または vCenter Server インスタンスにこのサービスを追加したりできるようになりました。
 
 このサービスは、24 時間 365 日の高可用性サービスを提供し、{{site.data.keyword.cloud_notm}} で VMware が使用する暗号鍵を管理します。 このサービスは、お客様が暗号鍵を作成、取得、活動化、取り消し、削除できるようにするランタイム機能を提供します。 さらにこのサービスは、クライアントの資格情報とそれらの暗号鍵の間の関連付けを管理する管理機能も提供します。
 
-詳しくは、[KMIP for VMware on {{site.data.keyword.cloud_notm}} に関する考慮事項](/docs/services/vmwaresolutions/services/kmip_considerations.html)を参照してください。
-
 ### IBM Spectrum Protect Plus on IBM Cloud
+{: #relnotes_v22-spp}
 
 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} サービスが、V2.2 以降のリリースでデプロイまたは V2.2 以降のリリースにアップグレードされたインスタンスでのみ使用できるようになりました。
 
@@ -128,6 +137,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスは、
 詳しくは、[IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)を参照してください。
 
 ### マネージド・サービス
+{: #relnotes_v22-managed-services}
 
 Veeam on {{site.data.keyword.cloud_notm}} および Zerto on {{site.data.keyword.cloud_notm}} のマネージド・サービスを、VMware vCenter Server および VMware Cloud Foundation インスタンスで使用できるようになりました。 複雑なソリューションと環境を自分で管理したくない場合には、マネージド・サービスを要求してください。
 
@@ -142,6 +152,7 @@ Zerto on {{site.data.keyword.cloud_notm}} サービスは、複製と災害復�
 * [Zerto on {{site.data.keyword.cloud_notm}} のサービスの要求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 
 ## 新規資料および更新された資料
+{: #relnotes_v22-new-docs}
 
 * VMware vSphere クラスターだけでなく、Cloud Foundation インスタンスと vCenter Server インスタンスのサポート機能を含む比較表が、資料に追加されました。 各タイプのインスタンスで利用できる機能の違いを一目で確認できます。 詳しくは、[オファリングの比較表](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inst_comp_chart)を参照してください。
 
@@ -150,10 +161,10 @@ Zerto on {{site.data.keyword.cloud_notm}} サービスは、複製と災害復�
   詳しくは、以下のトピックを参照してください。
 
   * [vCenter Server の部品構成表](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
-  * [Cloud Foundation の部品構成表](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
   * [VMware vSphere の部品構成表](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_bom)
 
 ## ユーザー・インターフェースの更新と向上
+{: #relnotes_v22-ui}
 
 ユーザー・インターフェース全体が以下のように改善されました。
 

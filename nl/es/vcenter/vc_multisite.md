@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -49,7 +49,7 @@ En el siguiente gráfico se muestra una visión general del despliegue de varios
 
 Figura 1. Despliegue de varios sitios de vCenter Server
 
-![Despliegue de varios sitios de vCenter Server](../sddc/multisite-hub-spoke.svg "Despliegue de varios sitios de vCenter Server")
+![Despliegue de varios sitios de vCenter Server](../vcenter/multisite-hub-spoke.svg "Despliegue de varios sitios de vCenter Server")
 
 El modelo contiene las siguientes capas:
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -20,7 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}}는 다중 구역 클라�
 이 아키텍처에는 클라우드 기반 애플리케이션의 모니터링 및 문제점 해결을 위해 구축된 네트워크, 스토리지, 복원 및 기타 도구를 포함하여 다양한 엔터프라이즈 서비스가 포함됩니다. 또한 서비스를 폭넓게 사용할 수 있도록 {{site.data.keyword.cloud_notm}}에 구축된 IBM Services Platform with Watson과 이 아키텍처를 통합할 수 있습니다. 클라이언트는 플랫폼의 코그너티브 기능을 사용하여 지속적인 운영을 유지하는 데 도움이 되도록 새로운 비즈니스 인사이트를 위해 보다 효과적으로 데이터를 마이닝할 수 있습니다.
 
 ## Mission Critical VMware on IBM Cloud의 기술 스펙
-{: #technical-specifications-for-mission-critical-vmware-on-ibm-cloud}
+{: #mcv_overview-specs}
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 아키텍처는 고객 워크로드에 대한 자동화된 장애 복구 기능을 제공하는 엔드-투-엔드 참조 아키텍처입니다. 이 제품은 다음 컴포넌트를 포함하는 IBM 관리 서비스와 함께 {{site.data.keyword.cloud_notm}} 다중 구역 지역을 사용합니다.
 

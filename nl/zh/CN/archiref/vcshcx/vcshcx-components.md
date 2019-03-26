@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -33,8 +33,8 @@ HCX 系列组件负责在客户机和云端之间创建数据和控制平面。�
 
 - 云网关 (CGW) - 云网关是一个可选组件，负责创建支持 vMotion 和复制（批量迁移）流量的加密隧道。每个链接的 HCX 站点仅存在一个对。
 - 第 2 层集中器 (L2C) - 第 2 层集中器是一个可选组件，负责为数据和控制平面创建对应于第 2 层延伸流量的加密隧道。每个 L2C 对可以处理多达 4096 个延伸网络。可根据需要部署更多 L2C 对。带宽能力限制为约 4 Gbps，因此如果外部带宽容量大于 4 Gbps，那么使用更多 L2C 对可提高底层网络的利用率。
-- WAN Optimizer - HCX 包含可选择部署的 Silver Peak™ WAN 优化设备。它会部署为 VM 设备。部署后，CGW 隧道流量会重定向，以遍历 WAN Optimizer 对。由于 WAN Optimizer 可显著降低 WAN 上的流量（据观察，通常比率为 3:1 到 6:1），同时提高了连接可靠性，因此建议始终对 CGW 部署 WAN Optimizer。部署 WAN Optimizer 的额外好处是，可限制 VM 迁移流量使用的 WAN 带宽。缺省情况下，未配置 WAN Optimizer 管理界面。
-- 代理 ESX 主机 - 每当将 CGW 配置为连接到云端 HCX 站点时，都会在任何集群外部的 vCenter 中显示代理 ESXi 主机。此 ESXi 主机的管理和 vMotion IP 地址与对应的 CGW 设备相同。这支持客户机和云端的 vSphere 环境像执行本地 vMotion 一样正常运行。此方法的优点如下：
+- WAN Optimizer - HCX 包含可选择部署的 Silver Peak™ WAN 优化设备。它会部署为 VM 设备。部署后，CGW 隧道流量会重定向，以遍历 WAN Optimizer。由于 WAN Optimizer 可显著降低 WAN 上的流量（据观察，通常比率为 3:1 到 6:1），同时提高了连接可靠性，因此建议始终对 CGW 部署 WAN Optimizer。部署 WAN Optimizer 的额外好处是，可限制 VM 迁移流量使用的 WAN 带宽。缺省情况下，未配置 WAN Optimizer 管理界面。
+- 代理 ESXi 主机 - 每当将 CGW 配置为连接到云端 HCX 站点时，都会在任何集群外部的 vCenter 中显示代理 ESXi 主机。此 ESXi 主机的管理和 vMotion IP 地址与对应的 CGW 设备相同。这支持客户机和云端的 vSphere 环境像执行本地 vMotion 一样正常运行。此方法的优点如下：
     - 任一端的管理 IP 范围可能重叠，但功能不会丢失。
     - 云端无法查看客户机端的 vSphere，因此安全性更高。
 
@@ -45,7 +45,7 @@ HCX 系列组件负责在客户机和云端之间创建数据和控制平面。�
 
 - 云端 UI - 通过为 HCX 客户机注册提供的公共注册 URL，可以访问云端 HCX UI。缺省情况下，云端 UI 会使用云端 vSphere SSO 登录 (`administrator@vsphere.local`)。此 UI 通常用于升级安装和修改某些网络配置。还可用于在 HCX 中构建虚拟网络。
 
-- 客户机/云 HCX Manager 设备管理 UI - 通过 VM 专用 IP 地址（可在 vCenter 中查看）访问云端或客户机端的设备管理 UI。`https://<hcxmanager_IP>:9443`。标识（通常为“admin”）和密码通过 {{site.data.keyword.vmwaresolutions_short}} 门户网站提供。管理 UI 用于启动和停止 HCX Manager 服务，配置日志监视，进行基本联网配置，手动升级，支持在 Web UI 未运行时收集日志，以及注册 vSphere 组件（vCenter、PSC 和 NSX Manager）和管理证书。
+- 客户机/云 HCX Manager 设备管理 UI - 通过 VM 专用 IP 地址（可在 vCenter 中查看）访问云端或客户机端的设备管理 UI，网址为：`https://<hcxmanager_IP>:9443`。标识（通常为“admin”）和密码通过 {{site.data.keyword.vmwaresolutions_short}} 门户网站提供。管理 UI 用于启动和停止 HCX Manager 服务，配置日志监视，进行基本联网配置，手动升级，支持在 Web UI 未正常运行时收集日志，以及注册 vSphere 组件（vCenter、PSC 和 NSX Manager）和管理证书。
 
 ## 相关链接
 {: #vcshcx-components-related}

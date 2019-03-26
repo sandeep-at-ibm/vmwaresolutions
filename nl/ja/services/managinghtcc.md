@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -26,9 +26,7 @@ vSphere Web Client から HTCC コンソールにアクセスするには、次�
 2. **「CC1」**または**「CC2」**を右クリックし、**「コンソールを開く」**をクリックします。
 3. HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービスの詳細ページに表示されるコンソールの資格情報を使用して、コンソールにログインします。
 
-詳しくは、以下のトピックを参照してください。
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+詳しくは、[vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)を参照してください。
 
 ## 関連リンク
 {: #managinghtcc-related}

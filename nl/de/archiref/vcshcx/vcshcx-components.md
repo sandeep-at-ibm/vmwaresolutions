@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -34,9 +34,9 @@ Die HCX-Paketkomponenten sind zuständig für die Erstellung der Daten- und der 
 
 - Cloud-Gateway (CGW): Das Cloud-Gateway ist eine optionale Komponente, die für die Erstellung von verschlüsselten Tunneln verantwortlich ist, die den vMotion- und den Replikations- (Massenmigrations-) Datenverkehr unterstützen. Pro verknüpften HCX-Standort gibt es nur ein Paar.
 - Layer-2-Konzentrator (L2C): Der Layer-2-Konzentrator ist eine optionale Komponente, die für die Erstellung von verschlüsselten Tunneln für die Daten- und die Steuerebene entsprechend dem erweiterten Layer-2-Datenverkehr verantwortlich ist. Jedes L2C-Paar kann bis zu 4096 erweiterte Netze verarbeiten. Weitere L2C-Paare werden nach Bedarf bereitgestellt. Die Bandbreite ist auf ungefähr 4 Gb/s begrenzt. Wenn also die Kapazität der externen Bandbreite größer als 4 Gb/s ist, ermöglicht die Verwendung weiterer L2C-Paare eine bessere Nutzung des zugrundeliegenden Netzes.
-- WAN-Optimierungsprpogramm: HCX enthält eine optional bereitgestellte Silver Peak™ WAN-Optimierungs-Appliance. Diese wird als VM-Appliance bereitgestellt. In dem Fall wird der CGW-Tunnelverkehr umgeleitet, sodass er das WAN-Optimierer-Paar durchquert.
+- WAN-Optimierungsprpogramm: HCX enthält eine optional bereitgestellte Silver Peak™ WAN-Optimierungs-Appliance. Diese wird als VM-Appliance bereitgestellt. Nach der Bereitstellung wird der CGW-Tunnelverkehr so umgeleitet, dass er das WAN-Optimierungsprogramm durchläuft.
 Da das WAN-Optimierungsprogramm den Datenverkehr über das WAN (typischerweise ist ein Verhältnis von 3:1 bis 6:1 zu beobachten) deutlich verringert und gleichzeitig die Zuverlässigkeit der Verbindung erhöht, wird empfohlen, das WAN-Optimierungsprogramm immer zusammen mit dem CGW bereitzustellen. Der zusätzliche Vorteil der Bereitstellung des WAN-Optimierungsprogramms bezieht sich auch auf die Begrenzung der WAN-Bandbreite, die vom Datenverkehr der VM-Migration genutzt wird. Die Managementschnittstelle des WAN-Optimierungsprogramms ist standardmäßig nicht konfiguriert.
-- Proxy-ESX-Host: Wenn das CGW für die Verbindung mit dem cloudseitigen HCX-Standort konfiguriert wird, erscheint in vCenter außerhalb jedes Clusters ein Proxy-ESXi-Host. Dieser ESXi-Host besitzt dieselbe Management- und vMotion-IP-Adresse wie die entsprechende CGW-Appliance. Dadurch kann die vSphere-Umgebung sowohl auf Clientseite als auch auf Cloudseite so funktionieren, als ob sie eine lokale vMotion-Umgebung ausführt. Die Vorteile dieser Methode sind folgende:
+- Proxy-ESXi-Host - Wenn das CGW für die Verbindung mit dem cloudseitigen HCX-Standort konfiguriert wird, erscheint in vCenter außerhalb der Cluster ein Proxy-ESXi-Host. Dieser ESXi-Host besitzt dieselbe Management- und vMotion-IP-Adresse wie die entsprechende CGW-Appliance. Dadurch kann die vSphere-Umgebung sowohl auf Clientseite als auch auf Cloudseite so funktionieren, als ob sie eine lokale vMotion-Umgebung ausführt. Die Vorteile dieser Methode sind folgende:
     - Die Management-IP-Bereiche auf beiden Seiten können sich überlappen, ohne ihre Funktionalität zu verlieren.
     - Die Cloudseite bietet keine vSphere-Einsicht in die Clientseite, wodurch sich die Sicherheit erhöht.
 
@@ -47,8 +47,7 @@ Da das WAN-Optimierungsprogramm den Datenverkehr über das WAN (typischerweise i
 
 - Cloudseitige Benutzerschnittstelle: Die cloudseitige HCX-Benutzerschnittstelle ist über die öffentliche Registrierungs-URL für die HCX-Clientregistrierung zugänglich. Standardmäßig verwendet sie die cloudseitige vSphere-SSO-Anmeldung (` administrator@vsphere.local`). In der Regel wird sie für das Upgrade der Installation und zum Ändern einiger Netzkonfigurationen verwendet. Außerdem werden mit ihr auch virtuelle Netze innerhalb von HCX erstellt.
 
-- Management-Benutzerschnittstelle für client-/cloudseitige HCX-Manager-Appliance: Der Zugriff auf die Appliance-Managementbenutzerschnittstelle für die Cloud- oder Clientseite erfolgt über die private IP-Adresse der VM, so wie sie in vCenter angezeigt wird.
-`https://<hcxmanager_IP>:9443`. Die ID (meist "admin") und das Kennwort werden über das {{site.data.keyword.vmwaresolutions_short}}-Portal bereitgestellt. Die Managementbenutzerschnittstelle wird für Folgendes verwendet: zum Starten und Stoppen von HCX-Manager-Services, Konfigurieren der Protokollüberwachung, für grundlegende Netzkonfigurationen, manuelle Upgrades, Unterstützung der Protokollerfassung, wenn die Webbenutzerschnittstelle nicht funktioniert, Registrierung bei vSphere-Komponenten (vCenter, PSC, NSX-Manager) und Zertifikatsmanagement.
+- Management-Benutzerschnittstelle für client-/cloudseitige HCX-Manager-Appliance: Der Zugriff auf die Appliance-Managementbenutzerschnittstelle für die Cloud- oder Clientseite erfolgt über die private IP-Adresse der VM, so wie sie in vCenter angezeigt wird `https://<hcxmanager_IP>:9443`. Die ID (meist "admin") und das Kennwort werden über das {{site.data.keyword.vmwaresolutions_short}}-Portal bereitgestellt. Die Managementbenutzerschnittstelle wird für Folgendes verwendet: Starten und Stoppen von HCX-Manager-Services; Konfigurieren der Protokollüberwachung; grundlegende Netzkonfiguration; manuelle Upgrades; Unterstützung der Protokollerfassung, wenn die Webbenutzerschnittstelle nicht funktioniert; Registrierung bei vSphere-Komponenten (vCenter, PSC, NSX-Manager); Zertifikatsmanagement. 
 
 ## Zugehörige Links
 {: #vcshcx-components-related}

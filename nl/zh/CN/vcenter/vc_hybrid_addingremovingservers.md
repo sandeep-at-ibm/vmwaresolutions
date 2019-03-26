@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2019-02-14"
 {: #vc_hybrid_addingremovingservers}
 
 可以根据业务需求，通过添加或除去 ESXi 服务器，扩展或收缩 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 实例的容量。
+
+从 V2.9 发行版开始，您可以在集群处于维护模式时将新的 ESXi 服务器添加到集群。此外，您还可以跨多个集群同时添加或除去 ESXi 服务器。可同时进行以下操作：
+
+* 将主机添加到 **cluster1**，并将主机添加到其他集群。
+* 从 **cluster1** 中除去主机，并从其他集群中除去主机。
+* 将主机添加到 **cluster1**，并从其他集群除去主机。
+* 从 **cluster1** 中除去主机，并将主机添加到其他集群。
 
 由于初始集群将 vSAN 作为其存储器，因此在部署后添加一个或多个 ESXi 服务器可以增加集群存储容量。
 
@@ -30,7 +37,7 @@ lastupdated: "2019-02-14"
 ## 添加 ESXi 服务器的过程
 {: #vc_hybrid_addingremovingservers-adding-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击要扩展容量的实例。
 3. 在左侧导航窗格上，单击**基础架构**。
 4. 在**集群**表中，单击要在其中添加 ESXi 服务器的集群。
@@ -59,7 +66,7 @@ lastupdated: "2019-02-14"
 ## 除去 ESXi 服务器的过程
 {: #vc_hybrid_addingremovingservers-removing-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击要压缩容量的实例。
 3. 在左侧导航窗格上，单击**基础架构**。
 4. 在**集群**表中，单击要从中除去 ESXi 服务器的集群。

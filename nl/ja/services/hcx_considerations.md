@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # VMware HCX on IBM Cloud の仕様と考慮事項
-{: #vmware-hcx-on-ibm-cloud-overview}
+{: #hcx_considerations}
 
 HCX on {{site.data.keyword.cloud}} サービスは、オンプレミス・データ・センターのネットワークを {{site.data.keyword.cloud_notm}} にシームレスに拡張できます。これにより、変換や変更を行わずに仮想マシン (VM) を {{site.data.keyword.cloud_notm}} との間で移行できるようになります。
 
@@ -26,7 +26,7 @@ vCenter Server with HCX on {{site.data.keyword.cloud_notm}} インスタンス�
 {:note}
 
 ## HCX on IBM Cloud の技術仕様
-{: #technical-specifications-for-hcx-on-ibm-cloud}
+{: #hcx_considerations-specs}
 
 以下のコンポーネントが注文されて HCX on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
@@ -72,7 +72,7 @@ HCX on {{site.data.keyword.cloud_notm}} をインストールしようとする�
 HCX on {{site.data.keyword.cloud_notm}} サービスをインストールする前に、HCX Manager 仮想アプライアンス (HCX Manager) が自己登録できるように、すべてのアウトバウンド HTTPS トラフィックを許可するファイアウォール・ルールを既存のファイアウォールに追加する必要があります。 HCX Manager のインストールが完了したら、ファイアウォール・ルールを除去してもかまいません。 さらに、HCX を適切に機能させるためのファイアウォール・ルールを構成する必要があります。 詳しくは、「[HCX on {{site.data.keyword.cloud_notm}} Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)」の『*Appendix A - Port Access Requirements*』を参照してください。
 
 ## HCX on IBM Cloud を削除する際の考慮事項
-{: #considerations-when-removing-hcx-on-ibm-cloud}
+{: #hcx_considerations-delete}
 
 HCX on {{site.data.keyword.cloud_notm}} サービスを削除する前に、以下の考慮事項を確認してください。
 * オンプレミス・ソース・サイトと {{site.data.keyword.cloud_notm}} ターゲット・サイトの間の相互接続と拡張ネットワークを削除しておきます。 相互接続と拡張ネットワークを削除するには、オンプレミスの VMware vSphere Web Client で HCX ユーザー・インターフェースを使用します。

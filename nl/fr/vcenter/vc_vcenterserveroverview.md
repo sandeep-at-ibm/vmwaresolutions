@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-14"
 # Présentation de vCenter Server
 {: #vc_vcenterserveroverview}
 
-VMware vCenter Server sur {{site.data.keyword.cloud}} est un cloud privé hébergé qui offre la pile VMware vSphere en tant que service. L'environnement VMware, constitué au-dessus d'un minimum de deux (trois recommandé) serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, offre un stockage sur réseau partagé et des options de stockage à définition logicielle dédié. Il inclut également la configuration et le déploiement automatique d'un pare-feu périphérique logique simple à gérer optimisé pour VMware NSX.
+VMware vCenter Server on {{site.data.keyword.cloud}} est un cloud privé hébergé qui offre la pile VMware vSphere en tant que service. L'environnement VMware, constitué au-dessus d'un minimum de deux (trois recommandé) serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, offre un stockage sur réseau partagé et des options de stockage à définition logicielle dédié. Il inclut également la configuration et le déploiement automatique d'un pare-feu périphérique logique simple à gérer optimisé pour VMware NSX.
 
 Dans de nombreux cas, l'ensemble de l'environnement peut être mis à disposition en moins d'une journée et l'infrastructure bare metal peut rapidement et de manière élastique augmenter ou diminuer en fonction des besoins de la capacité de calcul.
 
@@ -58,7 +58,7 @@ Au total, l'offre de base nécessite 38 UC virtuelles et 67 Go de vRAM réservé
 Pour plus d'informations sur l'architecture, voir [Référence de l'architecture {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Spécifications techniques relatives aux instances vCenter Server
-{: #technical-specifications-for-vcenter-server-instances}
+{: #vc_vcenterserveroverview-specs}
 
 Les composants suivants sont inclus dans votre instance vCenter Server.
 
@@ -69,9 +69,9 @@ La disponibilité et la tarification des configurations matérielles normalisée
 {: #vc_vcenterserveroverview-bare-metal}
 
 Vous pouvez commander trois serveurs {{site.data.keyword.baremetal_short}} ou plus dans l'une des configurations suivantes :
-* **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.  
+* **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.
 * **Certifiés SAP** : serveurs des générations Intel Skylake ou Intel Broadwell (Intel série Xeon 6140/E5-2690/E7-8890) avec votre modèle d'UC sélectionné.
-* **Broadwell** : serveurs des générations Intel Broadwell à 2 UC (Intel série Xeon E5-2600/E7-4800) avec vos modèle d'UC et taille de RAM sélectionnées. 
+* **Broadwell** : serveurs des générations Intel Broadwell à 2 UC (Intel série Xeon E5-2600/E7-4800) avec vos modèle d'UC et taille de RAM sélectionnées.
 
 Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.
 {:note}
@@ -124,9 +124,11 @@ L'option vSAN offre des configurations personnalisées, avec différentes option
 {: #vc_vcenterserveroverview-nfs-storage}
 
 L'option NFS offre un stockage de niveau fichier partagé personnalisé pour les charges de travail avec diverses options de taille et de performance :
-* Taille : 20 à 12000 Go
+* Taille : 20 Go à 24 To
 * Performances : 0.25, 2, 4 ou 10 IOPS/Go.
 * Configuration individuelle des partages de fichiers.
+
+  Le niveau de performance 10 IOPS/Go est limité à une capacité maximale de 4 To par partage de fichiers. {:note}
 
 Si vous sélectionnez l'option NFS, un partage de fichiers de 2 To et 4 IOPS/Go pour les composants de gestion est commandé.
 
@@ -138,7 +140,7 @@ L'option Disques locaux, disponible uniquement pour la configuration de processe
 ### Licences (fournies par IBM ou BYOL) et frais
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 ou 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * (Pour les clusters vSAN) VMware vSAN Advanced ou Enterprise 6.6
@@ -147,17 +149,17 @@ L'option Disques locaux, disponible uniquement pour la configuration de processe
 ## Spécifications techniques relatives aux noeuds d'extension vCenter Server
 {: #vc_vcenterserveroverview-expansion-node-specs}
 
-Chaque noeud d'extension vCenter Server déployé génère des frais, imputés à votre compte {{site.data.keyword.cloud_notm}}, pour les composants suivants.
+Chaque noeud d'extension vCenter Server déploie et génère des frais, imputés à votre compte {{site.data.keyword.cloud_notm}}, pour les composants suivants.
 
 ### Matériel pour les noeuds d'extension
 {: #vc_vcenterserveroverview-expansion-node-hardware}
 
-Un serveur bare metal doté de la configuration présentée dans [Spécifications techniques relatives aux instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
+Un serveur bare metal doté de la configuration présentée dans [Spécifications techniques relatives aux instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
 
 ### Licences et frais pour les noeuds d'extension
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* Une pour VMware vSphere Enterprise Plus 6.5u1
+* One VMware vSphere Enterprise Plus 6.5u2 ou 6.7u1
 * Une pour VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * Frais de support et de services
 * (Pour les clusters vSAN) VMware vSAN Advanced ou Enterprise 6.6
@@ -178,3 +180,4 @@ Gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés da
 * [Planification des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Stockage de fichiers et de blocs d'{{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [Extension de la capacité de partage de fichiers](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

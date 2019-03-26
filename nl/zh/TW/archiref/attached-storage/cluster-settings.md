@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-28"
 
 ---
 
@@ -87,7 +87,7 @@ VM 監視特性使用 VMware 工具擷取的活動訊號資訊作為 Proxy，以
 如需在 vSphere Web Client 中配置這些設定的相關資訊，請參閱 [Configure Virtual Machine Responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html)。
 
 #### 許可控制
-{: #cluster-settings-admission-control}
+{: #cluster-settings-admin-control}
 
 vCenter Server 使用許可控制來確保叢集裡有足夠的資源可用來提供失效接手保護，以及確保有遵循 VM 資源保留。在本設計中，會透過指定叢集資源百分比來保留失效接手容量。定義的失效接手容量是設為 25% CPU 和 25% 記憶體。
 

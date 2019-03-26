@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2019-02-15"
 ## オンプレミス VMware HCX on IBM Cloud インスタンスを注文する手順
 {: #standalone_orderingserviceinstances-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「オンプレミス HCX インスタンス」**テーブルにスクロールして、**「新規プロビジョン」**をクリックします。
 3. **「オンプレミス・インスタンス名」**を指定します。
 4. 注文に適用される条件のリンクをクリックして、インスタンスを注文する前にこれらの条件に同意しておく必要があります。

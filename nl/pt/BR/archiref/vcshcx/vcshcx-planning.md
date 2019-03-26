@@ -4,17 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
 # Planejamento de pré-implementação
 {: #vcshcx-planning}
 
-Grande parte do tempo gasto na implementação do HCX está no estágio de pré-implementação.
-Embora seja típico que os projetos de migração de sistemas de informações levem
-de muitos meses a anos, o HCX permite que migrações e conectividade de
-rede para a nuvem sejam iniciadas imediatamente após a implementação. Como a
+Grande parte do tempo gasto na implementação do HCX está no estágio de pré-implementação. Embora seja típico que os projetos de migração de sistemas de informações levem meses e até mesmo anos para serem concluídos, o HCX permite que a migração leve um tempo muito curto e a conectividade de rede para a nuvem seja iniciada imediatamente após a implementação.
+
+Como a
 implementação do HCX para um cliente de nível corporativo geralmente
 envolve segurança, rede, armazenamento e equipes de infraestrutura do vSphere, faz
 sentido envolver essas equipes no POC, se possível. O gerenciamento
@@ -27,10 +26,7 @@ garantir que a velocidade de implementação e a operação do HCX sejam realiza
 Muitos dos obstáculos e o tempo que leva na migração de uma máquina virtual (MV) ou grupo de MVs
 estão lá devido à necessidade de modificar partes do ambiente de
 aplicativos, o design dessas mudanças e o planejamento do
-tempo de inatividade necessário para fazer essas mudanças. Depois que essas mudanças são feitas,
-torna-se difícil voltar a migração, aumentando ainda mais a paralisia da
-análise. Tentar capturar todos os aspectos da migração, coordenar entre as equipes e mudar as principais partes interessadas no
-tempo necessário para finalizar o plano pode atrasar ou forçar o encaminhamento do projeto.
+tempo de inatividade necessário para fazer essas mudanças. Após essas mudanças serem feitas, a migração torna-se difícil de reverter, incluindo ainda mais a paralisia de análise. Tentar capturar todos os aspectos da migração, coordenar entre as equipes e mudar as partes interessadas da chave pode atrasar o projeto.
 
 O HCX permite a migração de instância cruzada do vSphere de uma MV ou um grupo de MVs
 que representa um aplicativo composto parcial ou completo, sem qualquer
@@ -51,13 +47,12 @@ um cliente específico com mais de 20 VLANs estendidas para o
 {{site.data.keyword.cloud}} na WAN de 1 Gbps compartilhada com outros túneis de tráfego e de migração
 do HCX, não há problemas de aplicativos atribuídos à rede.
 Os links de rede ficam ativos por mais de 6 meses dessa maneira.
-Redes mais estendidas foram incluídas e removidas sem problemas.
-Escolher um {{site.data.keyword.CloudDataCent_notm}} bem próximo (< 6ms de latência para esse
+
+Redes mais estendidas foram incluídas e removidas sem problemas. Escolher um {{site.data.keyword.CloudDataCent_notm}} bem próximo (< 6ms de latência para esse
 cliente em particular) também atua na estabilidade da rede de redes
 estendidas. Deixar as redes estendidas ativas a longo prazo não deve ser um
 fator negativo em seu design, visto que você tem largura de banda suficiente e baixa
 latência suficiente para seus aplicativos.
-
 
 ## Ciclo de vida de
 {: #vcshcx-planning-mig-lifecycle}
@@ -69,28 +64,22 @@ paralelo.
 ## Inventário do vSphere
 {: #vcshcx-planning-vsphere-planning}
 
-- Use um aplicativo como o [RVTOOLS](https://www.robware.net/rvtools/)
-para fazer dump do inventário dos vCenters de origem no formato de planilha.
-- Avaliação de alta granularidade de MVs dentro de um aplicativo a ser migrado.
-Alta granularidade implica em entender as MVs que participam de um
+- Avaliação de alta granularidade de MVs dentro de um aplicativo a ser migrado. Alta granularidade implica em entender as MVs que participam de um
 aplicativo, sem entrar em detalhes.
 - Se você planeja migrar muitas MVs e a largura de banda da rede é limitada
 entre os sites de origem e na nuvem, agrupe ainda mais as MVs por VLAN ou VXLAN
-caso o NSX seja empregado na origem. Isso permite um plano de migração em
-cascata do HCX em que os grupos de MVs por VLAN são migrados e as redes
-L2 nas quais eles residem são estendidas apenas até o ponto em que as VLANs
-são evacuadas. Isso significa que o grupo inicial de redes L2 estendidas
+caso o NSX seja empregado na origem. Isso permite um plano de migração do HCX em cascata em que os grupos de VMs por VLAN são migrados e as redes L2 em que residem são estendidas apenas até o ponto em que as VLANs são liberadas.
+
+Isso significa que o grupo inicial de redes L2 estendidas
 relacionadas pode ser não estendido apenas quando o design de rede do lado da nuvem
 é finalizado e implementado. Não estender implica em trocar o
 tráfego específico de VXLAN para agora ser roteado por meio da infraestrutura NSX
 da instância da nuvem.
 
-
 ## Configuração de rede de linha de base
 {: #vcshcx-planning-baseline-net-config}
 
-Crie uma rede de perímetro reforçada dentro da instância do vSphere do
-lado da nuvem. Isso geralmente consiste em um dispositivo NSX DLR ou de Borda. Se você usa o HCX Proximity Routing, não é necessário
+Crie uma rede de perímetro segura dentro da instância do vSphere do lado da nuvem. Isso geralmente consiste em um dispositivo NSX DLR ou de Borda. Se você usa o HCX Proximity Routing, não é necessário
 criar nenhuma regra de firewall ou topologia de uplink, pois ela pode
 ser concluída posteriormente ou simultaneamente sem afetar o tráfego L2
 estendido.
@@ -113,10 +102,7 @@ de linha de base.
 ## Migração de apps não de produção
 {: #vcshcx-planning-mig-non-prod-apps}
 
-Neste ponto, a migração de MVs começa com as ondas planejadas de
-MVs menos críticas. Desenvolvimento, teste etc., usam a conectividade da Internet para
-migração e tráfego L2 estendido.
-
+Neste ponto, a migração de VMs começa com os estágios planejados de VMs menos críticas. Desenvolvimento, teste, e assim por diante, usam a conectividade da Internet para migração e tráfego L2 estendido.
 
 ## O design e a implementação da rede do Cloud começam
 {: #vcshcx-planning-cloud-net-begins}
@@ -165,10 +151,7 @@ precisam de consideração extra antes da migração.
 
 A Troca de rede ocorre após a evacuação das MVs nas redes do lado
 de origem ser concluída e o design/implementação de rede ser
-concluído no lado da nuvem. Configurar o HCX para não estender as redes
-relacionadas às MVs concluídas dentro das ondas de migração permite que as MVs
-migradas roteiem o tráfego de rede usando a infraestrutura NSX do
-lado da nuvem.
+concluído no lado da nuvem. A configuração do HCX para não estender as redes relacionadas às VMs concluídas dentro das ondas de migração permite que as VMs migradas roteiem o tráfego de rede usando a infraestrutura NSX do lado da nuvem.
 
 ## Plataformas do cliente suportadas
 {: #vcshcx-planning-client-platforms}

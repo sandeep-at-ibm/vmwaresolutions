@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -77,6 +77,8 @@ vCenter Server 部署具有嚴格的實體基礎架構需求。因此，您只�
 {: #vc_planning-addon-services}
 
 您可以根據需要來訂購實例基礎的附加程式服務（例如災難回復）。如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。
+
+對 vCenter Server with NSX-T 實例提供服務。{:note}
 
 ## 容量考量
 {: #vc_planning-capacity-considerations}

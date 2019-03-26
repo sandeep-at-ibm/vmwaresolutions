@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -45,8 +45,7 @@ lastupdated: "2019-02-14"
 
 如果您擴充的叢集尚無法使用，則您可能會收到錯誤訊息。
 
-vSphere 叢集與 vCenter Server 及 Cloud Foundation 實例不同，並不會顯示在**已部署的實例**頁面上。
-{:note}
+不同於 vCenter Server 和 Cloud Foundation 實例，vSphere 叢集並不會顯示在**資源**頁面上。{:note}
 
 ## 相關鏈結
 {: #vs_scalingexistingclusters-related}

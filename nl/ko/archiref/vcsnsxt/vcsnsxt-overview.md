@@ -19,7 +19,7 @@ lastupdated: "2019-02-15"
   - **{{site.data.keyword.containerlong_notm}}** - {{site.data.keyword.containerlong_notm}}는 Calico를 Container Network Interface 플러그인으로 사용합니다.
   - **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}}는 Calico를 Container Network Interface 플러그인으로 사용합니다.
 
-* **통합** - 필수 네트워크 트래픽 플로우와 주소 지정을 허용하기 위한 네트워킹 구성요소의 아키텍처에 대해 설명합니다.
+* **통합** - 필수 네트워크 트래픽 플로우와 주소 지정을 허용하기 위한 네트워킹 컴포넌트의 아키텍처에 대해 설명합니다.
   - IP 주소 할당
   - 네트워크 트래픽 플로우
 

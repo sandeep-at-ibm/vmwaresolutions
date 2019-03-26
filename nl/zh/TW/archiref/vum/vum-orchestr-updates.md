@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
-# 編排的升級
+#	編排的升級
 {: #vum-orchestr-updates}
 
 在更新 vSphere ESXi 主機之後，您可以使用編排的升級來升級庫存中虛擬機器的虛擬硬體及 VMware Tools。更新主機之後，會先執行 VMware Tools 升級基準線，接著執行虛擬機器硬體升級基準線。您可以在叢集、資料夾或資料中心層次使用編排的升級。

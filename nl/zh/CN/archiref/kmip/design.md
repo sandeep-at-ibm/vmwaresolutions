@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -35,6 +35,7 @@ VMware vSAN 加密仅适用于 vSAN 数据存储。使用此解决方案时，VM
 * vSAN 加密需要 vSAN Enterprise 许可证。
 
 * vSAN 运行状况检查可能会定期发出警告，指示无法从一个或多个 vSphere 主机连接到 KMS 集群。出现这些警告是因为 vSAN 运行状况检查连接超时过快。您可以忽略这些警告。
+有关更多信息，请参阅 [vSAN KMS 运行状况检查间歇性失败并返回 SSL 握手超时错误](https://kb.vmware.com/s/article/67115){:new_window}。
 
 ### vSphere 加密
 {: #kmip-design-vsphere-encrypt}
@@ -99,13 +100,13 @@ VMware vCenter 和 ESXi 使用创建密钥管理服务器 (KMS) 连接时在 VMw
 图 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 的组件
 ![KMIP for VMware on {{site.data.keyword.cloud_notm}} 的组件](kmip-key-protect.svg "此解决方案使用存储在 IBM Key Protect 中的根密钥来支持 VMware vSphere 加密和 vSAN 加密。")
 
-KMIP for VMware 在若干 IBM Cloud 多专区区域 (MZR) 中可用。有关完整列表，请参阅[订购 KMIP for VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)。
+KMIP for VMware 在若干个 {{site.data.keyword.cloud_notm}} 多专区区域 (MZR) 中可用。有关完整列表，请参阅[订购 KMIP for VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)。
 
-在每个 MZR 中，KMIP for VMware 都会在 IBM Cloud Private 网络上提供两个服务端点，以实现高可用性。请将 vCenter 密钥管理服务器 (KMS) 配置中的这两个端点配置为 KMS 集群。有关每个 MZR 中的端点的列表以及 KMIP 服务器证书签名的信息，请参阅 [KMIP for VMware 服务文档](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)。
+在每个 MZR 中，KMIP for VMware 都会在 {{site.data.keyword.cloud_notm}} 专用网络上提供两个网络服务端点，以实现高可用性。请将 vCenter 密钥管理服务器 (KMS) 配置中的这两个端点配置为 KMS 集群。有关每个 MZR 中的端点的列表以及 KMIP 服务器证书签名的信息，请参阅 [KMIP for VMware 服务文档](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)。
 
-KMIP for VMware 还可使用 IBM Cloud Private 网络（而不是公用因特网）来连接到 IBM Cloud Key Protect。
+KMIP for VMware 还可使用 {{site.data.keyword.cloud_notm}} 专用网络（而不是公用因特网）来连接到 {{site.data.keyword.cloud_notm}} Key Protect。
 
-要通过专用网络访问 KMIP for VMware，必须为 IBM Cloud 基础架构帐户启用虚拟路由和转发 (VRF)，并且必须将 IBM Cloud 服务端点路径添加到帐户的 VRF 路径中。有关更多信息，请参阅[支持帐户使用服务端点](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps)。
+要通过专用网络访问 KMIP for VMware，必须为 {{site.data.keyword.cloud_notm}} 基础架构帐户启用虚拟路由和转发 (VRF)，并且必须将 {{site.data.keyword.cloud_notm}} 网络服务端点路径添加到帐户的 VRF 路径中。有关更多信息，请参阅[支持帐户使用服务端点](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps)。
 
 ## 相关链接
 {: #kmip-design-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,6 +52,14 @@ Der Instanzname muss die folgenden Anforderungen erfüllen:
 * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
 * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
 
+### VMware vSphere-Lizenzen
+{: #vc_hybrid_orderinginstance-vsphere-license}
+
+Wählen Sie aus, ob vSphere Enterprise Plus 6.7u1 oder vSphere Enterprise Plus 6.5u2 bestellt werden soll. 
+
+vSphere Enterprise Plus 6.7u1 ist nur für Broadwell und Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} verfügbar.
+{:note}
+
 ### Primär oder sekundär
 {: #vc_hybrid_orderinginstance-primary-secondary}
 
@@ -63,7 +71,7 @@ Wählen Sie aus, ob Sie eine neue primäre oder sekundäre Instanz für eine ber
 In die Bestellung Ihrer vCenter Server with Hybridity Bundle-Instanz sind folgende VMware-Lizenzen eingeschlossen. Sie müssen die Edition der NSX-Lizenz und der vSAN-Lizenz angeben.
 
 * vCenter Server 6.5
-* vSphere Enterprise Plus 6.5u1
+* vSphere Enterprise Plus 6.5 oder 6.7
 * NSX Service Providers 6.4 (Advanced Edition oder Enterprise Edition)
 * vSAN 6.6 (Advanced Edition oder Enterprise Edition)
 
@@ -229,32 +237,33 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
 1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und klicken Sie anschließend im Abschnitt **Virtuelle Rechenzentren** auf **vCenter Server**.
 2. Klicken Sie auf der Seite **VMware vCenter Server on IBM Cloud** auf die Karte **vCenter Server with Hybridity Bundle** und dann auf **Erstellen**.
 3. Geben Sie auf der Seite **vCenter Server** den Instanznamen ein.
+5. Wählen Sie die vSphere-Version aus. 
 4. Wählen Sie den Instanztyp aus:
    * Klicken Sie auf **Primäre Instanz**, um eine einzelne Instanz in der Umgebung bereitzustellen oder um die erste Instanz in einer Topologie mit mehreren Standorten bereitzustellen.
    * Klicken Sie auf **Sekundäre Instanz**, um die Instanz mit einer vorhandenen (primären) Instanz in der Umgebung zu verbinden, um eine hohe Verfügbarkeit zu erreichen, und führen Sie dann die folgenden Schritte aus:
      1. Wählen Sie die primäre Instanz aus, mit der die sekundäre Instanz verbunden werden soll.
      2. Geben Sie für primäre Instanzen ab Version 2.8 das Administratorkennwort für vCenter Server in der primären Instanz ein.
      3. Geben Sie für primäre Instanzen ab Version 2.7 das PSC-Administratorkennwort in der primären Instanz ein.
-5. Wählen Sie die NSX-Lizenzedition und die vSAN-Lizenzedition aus.
-6. Geben Sie die Bare Metal Server-Einstellungen an.
+6. Wählen Sie die NSX-Lizenzedition und die vSAN-Lizenzedition aus.
+7. Geben Sie die Bare Metal Server-Einstellungen an.
   1. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
   2. Wählen Sie das CPU-Modell **Skylake** oder **Broadwell** und die Menge des **RAM** aus.
 
   Die **Anzahl der Bare Metal Server** ist standardmäßig auf vier gesetzt und kann nicht geändert werden.
   {:note}
-7. Führen Sie die Speicherkonfiguration durch. Geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten sowie die Anzahl der Platten an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
-8. Führen Sie die Netzschnittstellenkonfiguration durch.
+8. Führen Sie die Speicherkonfiguration durch. Geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten sowie die Anzahl der Platten an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
+9. Führen Sie die Netzschnittstellenkonfiguration durch.
   1. Geben Sie das Hostnamenspräfix, die Unterdomänenbezeichnung und den Rootdomänennamen ein.
   2. Wählen Sie die Netzeinstellung für entweder **Öffentliches und privates Netz** oder **Nur privates Netz** aus.
   3. Wählen Sie die VLAN-Konfiguration aus.
      *  Falls Sie neue öffentliche und private VLANs bestellen wollen, klicken Sie auf **Neue VLANs bestellen**.
      *  Wenn Sie die vorhandenen öffentlichen und privaten VLANs wiederverwenden möchten, sofern diese verfügbar sind, dann klicken Sie auf **Vorhandene VLANs auswählen** und wählen Sie anschließend das öffentliche VLAN, das primäre Teilnetz, das private VLAN, das primäre private Teilnetz und das sekundäre private VLAN aus.
   4. Wählen Sie die DNS-Konfiguration aus.
-9. Führen Sie die Konfiguration für den enthaltenen Service "HCX on {{site.data.keyword.cloud_notm}}" aus. Weitere Informationen zum Angeben von Einstellungen für den Service finden Sie im Abschnitt _VMware HCX on IBM Cloud - Konfiguration_ in [VMware HCX on IBM Cloud bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
-10. Wählen Sie die Add-on-Services aus, die in der Instanz bereitgestellt werden sollen, indem Sie auf die entsprechende Servicekarte klicken. Wenn ein Service konfiguriert werden muss, dann geben Sie die servicespezifischen Einstellungen an und klicken Sie dann auf der Karte auf **Service hinzufügen**.  
+10. Führen Sie die Konfiguration für den enthaltenen Service "HCX on {{site.data.keyword.cloud_notm}}" aus. Weitere Informationen zum Angeben von Einstellungen für den Service finden Sie im Abschnitt _VMware HCX on IBM Cloud - Konfiguration_ in [VMware HCX on IBM Cloud bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
+11. Wählen Sie die Add-on-Services aus, die in der Instanz bereitgestellt werden sollen, indem Sie auf die entsprechende Servicekarte klicken. Wenn ein Service konfiguriert werden muss, dann geben Sie die servicespezifischen Einstellungen an und klicken Sie dann auf der Karte auf **Service hinzufügen**.  
 Weitere Informationen zum Angeben von Einstellungen für einen Service finden Sie im entsprechenden Abschnitt zum Bestellen von Services.
 
-11. Überprüfen Sie im Fenster **Bestellübersicht** die Instanzkonfiguration, bevor Sie die Bestellung aufgeben.
+12. Überprüfen Sie im Fenster **Bestellübersicht** die Instanzkonfiguration, bevor Sie die Bestellung aufgeben.
    1. Überprüfen Sie die Einstellungen für die Instanz.
    2. Überprüfen Sie die geschätzten Kosten der Instanz. Klicken Sie auf **Preisdetails**, um eine PDF-Datei mit der Zusammenfassung zu generieren. Ihre Bestellübersicht können Sie speichern oder drucken, indem Sie rechts oben im PDF-Fenster auf das Symbol **Drucken** bzw. **Herunterladen** klicken.
    3. Klicken Sie auf den Link bzw. die Links für die Bedingungen, die für Ihre Bestellung gelten, und vergewissern Sie sich, dass Sie mit diesen Bedingungen einverstanden sind, bevor Sie die Instanz bestellen.
@@ -265,7 +274,7 @@ Weitere Informationen zum Angeben von Einstellungen für einen Service finden Si
 
 Die Bereitstellung der Instanz wird automatisch gestartet. Sie erhalten eine Bestätigung, dass die Bestellung bearbeitet wird, und Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen.
 
-Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert. Wenn Sie Add-on-Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
+Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert. Wenn Sie Add-on-Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
 
 Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 

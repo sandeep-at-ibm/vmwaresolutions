@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -58,12 +58,12 @@ lastupdated: "2019-02-15"
   - 在 vSphere Web Client 中，導覽至**首頁** > **網路及安全** > **安裝**，然後選取**主機準備**標籤。對於您要升級的每個叢集，按一下**升級可用**。「安裝狀態」會顯示「安裝中」。
   - 叢集「安裝狀態」會顯示_未備妥_。按一下**未備妥**以顯示相關資訊，然後按一下**全部解決**來嘗試完成 VIB 安裝。主機會進入維護模式，並在必要時重新開機，以完成升級。「安裝狀態」直欄會顯示「安裝中」。升級完成之後，「安裝狀態」直欄會顯示綠色勾號及已升級的 NSX 版本。
 9. **Edge Services Gateway**：
-  - 在升級處理程序期間，會一起部署新的 Edge 虛擬應用裝置與現有的 Edge 虛擬應用裝置。新的 Edge 備妥時，會中斷舊 Edge vNIC 的連線，並且會連接新的 Edge vNIC。新的 Edge 接著會傳送無償 ARP (GARP) 封包，以更新已連接交換器的 ARP 快取。部署 HA 時，升級處理程序會執行兩次。此處理程序可能會暫時影響封包轉遞。
+  - 在升級處理程序期間，會一起部署新的邊緣虛擬應用裝置與現有的邊緣虛擬應用裝置。新的 Edge 備妥時，會中斷舊 Edge vNIC 的連線，並且會連接新的 Edge vNIC。新的 Edge 接著會傳送無償 ARP (GARP) 封包，以更新已連接交換器的 ARP 快取。部署 HA 時，升級處理程序會執行兩次。此處理程序可能會暫時影響封包轉遞。
   - 在 vSphere Web Client 中，選取**網路及安全** > **NSX Edge**。對於每個 NSX Edge 實例，選取**動作**功能表中的**升級版本**。
   - 順利升級 NSX Edge 之後，「狀態」為「已部署」，而且「版本」直欄會顯示新的 NSX 版本。如果 Edge 無法升級且未回復至舊版本，請按一下**重新部署 NSX Edge** 圖示，然後重試升級。
 
 ## 相關鏈結
-{: #vum-type-updates-related}
+{: #vum-updating-nsx-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

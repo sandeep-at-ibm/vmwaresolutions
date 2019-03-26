@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -106,12 +106,12 @@ vSAN 업그레이드 프로세스를 시작하기 전에 다음 요구사항이 
 
 자세한 정보는 [VCSA 업데이트 및 SSO 링크된 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)를 참조하십시오.
 
-## vSphere ESXi 호스트 업그레이드
+##	vSphere ESXi 호스트 업그레이드
 {: #vum-updating-vsan-upgrade-hosts}
 
 자세한 정보는 [기준선 작성 및 인벤토리 오브젝트에 연결](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines)을 참조하십시오.
 
-## vSAN 디스크 형식 업그레이드
+##	vSAN 디스크 형식 업그레이드
 {: #vum-updating-vsan-upgrade-vsan}
 
 RVC(Ruby vSphere Console)는 vSphere에 대한 Ruby 기반 명령행 인터페이스이며 VMware vSphere ESXi 및 vCenter를 관리하는 데 사용될 수 있습니다. vSphere 인벤토리는 트리 구조로 표시되어 vCenter 오브젝트에 대한 명령을 탐색하고 실행할 수 있습니다.

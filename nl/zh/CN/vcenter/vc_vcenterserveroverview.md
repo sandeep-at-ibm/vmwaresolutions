@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -59,7 +59,7 @@ VMware vSAN 还可作为专用存储器选项提供。要增大 vSAN 集群的�
 有关体系结构的更多信息，请参阅 [{{site.data.keyword.vmwaresolutions_short}} 体系结构参考](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)。
 
 ## vCenter Server 实例的技术规范
-{: #technical-specifications-for-vcenter-server-instances}
+{: #vc_vcenterserveroverview-specs}
 
 vCenter Server 实例中包含以下组件。
 
@@ -70,9 +70,9 @@ vCenter Server 实例中包含以下组件。
 {: #vc_vcenterserveroverview-bare-metal}
 
 可以使用下列其中一个配置来订购三个或更多 {{site.data.keyword.baremetal_short}}：
-* **Skylake**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Skylake 代服务器（Intel Xeon 4100/5100/6100 系列）。  
+* **Skylake**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Skylake 代服务器（Intel Xeon 4100/5100/6100 系列）。
 * **SAP 认证**：具有所选 CPU 型号的 Intel Skylake 或 Intel Broadwell 代服务器（Intel Xeon 6140/E5-2690/E7-8890 系列）。
-* **Broadwell**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU 的 Intel Broadwell 代服务器（Intel Xeon E5-2600/E7-4800 系列）。 
+* **Broadwell**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU 的 Intel Broadwell 代服务器（Intel Xeon E5-2600/E7-4800 系列）。
 
      如果计划使用 vSAN 存储器，那么配置需要 4 个 {{site.data.keyword.baremetal_short}}。
      {:note}
@@ -125,9 +125,12 @@ vSAN 选项提供定制配置，具有各种磁盘类型、大小和数量的选
 {: #vc_vcenterserveroverview-nfs-storage}
 
 NFS 选项为工作负载提供定制的共享文件级别存储器，具有各种大小和性能的选项：
-* 大小：20 到 12000 GB
+* 大小：20 GB 到 24 TB
 * 性能：0.25、2、4 或 10 IOPS/GB。
 * 单独配置文件共享。
+
+  此 10 IOPS/GB 性能级别限制为每个文件共享的最大容量为 4 TB。
+  {:note}
 
 如果选择 NFS 选项，那么会为管理组件订购一个 2 TB、4 IOPS/GB 文件共享。
 
@@ -139,7 +142,7 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 ### 许可证（IBM 提供或 BYOL）和费用
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 或 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
@@ -153,12 +156,12 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 ### 扩展节点的硬件
 {: #vc_vcenterserveroverview-expansion-node-hardware}
 
-一个裸机服务器，其配置在 [vCenter Server 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)中提供。
+一个裸机服务器，其配置在 [vCenter Server 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)中提供。
 
 ### 扩展节点的许可证和费用
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* 一个 VMware vSphere Enterprise Plus 6.5u1
+* 一个 VMware vSphere Enterprise Plus 6.5u2 或 6.7u1
 * 一个 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * 一个支持和服务费用
 * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
@@ -178,3 +181,4 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 * [规划 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [{{site.data.keyword.cloud_notm}} 文件和块存储器](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [扩展文件共享容量](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2019-02-15"
 ## 刪除 KMIP for VMware on IBM Cloud 實例的程序
 {: #kmip_standalone_deleting-procedure}
 
-1. 從左導覽窗格中，按一下**已部署的實例**。
+1. 從左導覽窗格中，按一下**資源**。
 2. 向下捲動至 **KMIP for VMware on IBM Cloud 實例**表格，並尋找要刪除的實例。
 3. 在**動作**直欄中，按一下刪除圖示。
 4. 在**刪除實例**視窗中，按一下**確定**。

@@ -26,7 +26,7 @@ Sie können außerdem angeben, ob Sie E-Mail- und Konsolenbenachrichtigungen fü
 {: #useraccount-reqs}
 
 * Sie können nur ein Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit einem {{site.data.keyword.cloud_notm}}-Benutzerkonto verknüpfen.
-* Das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer), das Sie verwenden, muss bestimmte Anforderungen erfüllen. Weitere Informationen finden Sie in [Anforderungen an das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement). 
+* Das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer), das Sie verwenden, muss bestimmte Anforderungen erfüllen. Weitere Informationen finden Sie in [Anforderungen an das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 * Wenn der API-Schlüssel für Ihr Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) geändert wird, müssen Sie den Schlüssel auf der Seite **Einstellungen** in der Konsole von {{site.data.keyword.vmwaresolutions_short}} aktualisieren.
 
    **Wichtig:** Sie müssen dafür sorgen, dass der auf der Seite **Einstellungen** gespeicherte API-Schlüssel richtig und aktuell ist. Andernfalls können Operationen fehlschlagen, die eine Validierung des API-Schlüssels erforderlich machen.
@@ -57,7 +57,6 @@ Falls für bestimmte Instanzereignisse E-Mail- oder Konsolenbenachrichtigungen a
 {: #useraccount-related}
 
 * [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Benachrichtigungen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)
 * [SoftLayer-API](/docs/customer-portal?topic=customer-portal-customerportal_api){:new_window}

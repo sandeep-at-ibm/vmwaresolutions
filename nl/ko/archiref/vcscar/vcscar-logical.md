@@ -13,7 +13,7 @@ lastupdated: "2019-02-15"
 
 다음 정보는 시스템의 논리적 디자인을 형성하는 애플리케이션 요소를 설명합니다.
 
-## 시스템 구성요소
+## 시스템 컴포넌트
 {: #vcscar-logical-sys-comp}
 
 그림 1. Skate Advisor 컴포넌트
@@ -84,10 +84,10 @@ Skate Advisor의 핵심 데이터 요소는 트릭입니다. 트릭 언어는 �
 ---|---
 1 | 유효한 대화를 초기화하고 Conversation Streams의 섹션을 참조하십시오.
 2 | 챗봇이 음성을 Speech to Text 서비스로 보냅니다.
- 3 | Speech to Text service가 텍스트를 챗봇으로 보냅니다.
- 4개 | 챗봇이 텍스트 조회를 Skate Advisor로 보냅니다.
+3 | Speech to Text service가 텍스트를 챗봇으로 보냅니다.
+4 | 챗봇이 텍스트 조회를 Skate Advisor로 보냅니다.
 5 | Skate Advisor가 요청을 평가하여 Watson Assistant로 보냅니다.
- 6 | Watson Assistant가 요청을 분류하고 수행할 조치를 Skate Advisor로 보내 응답합니다.
+6 | Watson Assistant가 요청을 분류하고 수행할 조치를 Skate Advisor로 보내 응답합니다.
 7 | Skate Advisor가 Discovery Service에서 데이터 세트를 요청합니다.
 8 | Discovery Service가 조회를 평가하고 응답을 보냅니다.
 9 |Skate Advisor가 응답을 만들어 챗봇에 텍스트로 보냅니다.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -22,16 +22,16 @@ lastupdated: "2019-02-18"
 
 |服务名称|当前服务版本|实例版本|
 |----------------------------------------------------------------------------------------|------------------|
-|[F5 on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)|BIG-IP VE V13.1.1.2| V1.9 和更高版本 |
+|[F5 on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)| BIG-IP VE v14.1.0.2 | V1.9 和更高版本 |
 |[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)|300 系列| V1.8 和更高版本 |
 |[FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)|6.0.3| V2.0 和更高版本 |
-|[HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)|5.4.0| V2.3 和更高版本 |
+|[HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)| 5.4.2 | V2.3 和更高版本 |
 |[HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)|4.2.1| V2.3 和更高版本 |
-|[HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)|4.2|V2.5 和更高版本|
+|[HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)|4.2|V2.5 和更高版本|
 |[IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations)|10.1.2| V2.2 和更高版本 |
 |[KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)|2.0|不适用|
-|[Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)|9.5u3| V1.8 和更高版本 |
-|[Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)|6.0 Update 3| V1.2 和更高版本 |
+|[Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)| 9.5u4 | V1.8 和更高版本 |
+|[Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)| 6.5 update 3 | V1.2 和更高版本 |
 
 ## 向 Cloud Foundation 实例添加服务的过程
 {: #sd_addingremovingservices-adding-procedure}
@@ -46,7 +46,7 @@ lastupdated: "2019-02-18"
 ## 查看 Cloud Foundation 实例的服务的过程
 {: #sd_addingremovingservices-viewing-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **Cloud Foundation 实例**表中，单击要查看其服务的实例。
 3. 在左侧导航窗格上，单击**服务**。
 4. 在**服务**页面上，单击某个服务以查看相关信息，例如服务状态和其他详细信息。
@@ -55,7 +55,7 @@ lastupdated: "2019-02-18"
 ## 除去 Cloud Foundation 实例的服务的过程
 {: #sd_addingremovingservices-removing-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **Cloud Foundation 实例**表中，单击要除去其服务的实例。
 3. 在左侧导航窗格上，单击**服务**。
 4. 在**服务**页面上，找到要除去的服务实例，然后单击**删除**图标。

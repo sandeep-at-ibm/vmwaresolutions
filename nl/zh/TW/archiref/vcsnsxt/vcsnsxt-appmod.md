@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -39,7 +39,7 @@ lastupdated: "2019-02-15"
 {: #vcsnsxt-appmod-benefits}
 
 - 已將採購、架構、實作及部署資源所需的時間從數週甚至數個月縮減為數小時，以加速將 IT 專案交付給開發人員和事業單位。如果客戶需要等待網路或安全團隊可訂購負載平衡器、防火牆、交換器及路由器這類服務，則會縮短應用程式創造價值的時間。
-- 已利用受管理專用雲端中的專用裸機伺服器來加強安全，包括將專用端點部署至 {{site.data.keyword.cloud_notm}} 服務（例如 {{site.data.keyword.containerlong_notm}} 和 KMIP）。
+- 利用受管理專用雲端中的專用 Bare Metal Server 來加強安全，包括將專用網路服務端點部署至 {{site.data.keyword.cloud_notm}} 服務，例如 {{site.data.keyword.containerlong_notm}} 和 KMIP。
 - 藉由提供虛擬化管理的完整管理存取權，而能夠對所部署的混合式雲端進行一致的管理與控制，進而保留您現有的 VMware 工具、Script 和訓練投資。
 - 透過遍佈全球 30 個以上 {{site.data.keyword.CloudDataCents_notm}} 的 IBM Professional and Managed Services 的全球規模 VMware 專門知識。
 

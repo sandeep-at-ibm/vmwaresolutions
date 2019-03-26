@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -23,11 +23,13 @@ Cloud Foundation 인스턴스에 포함된 네트워킹 컴포넌트를 검토�
 
 ## 방화벽 고려사항
 {: #sd_networkingoncloudfoundation-firewall-considerations}
+{: faq}
 
 방화벽을 사용 중인 경우에는 {{site.data.keyword.IBM}} CloudDriver VSI(Virtual Server Instance) 및 SDDC Manager 가상 머신(VM)의 모든 통신에 대한 규칙을 구성해야 합니다. 이러한 규칙은 모든 프로토콜이 `10.0.0.0/8` 및 `161.26.0.0/16`의 IP 주소에서 통신할 수 있도록 허용해야 합니다. 이러한 방화벽의 예로는 NSX DFW(Distributed Firewall) 또는 Vyatta 방화벽이 있습니다.
 
 ## VM에서 VMware NSX 사용
 {: #sd_networkingoncloudfoundation-using-nsx-with-vm}
+{: faq}
 
 Cloud Foundation 인스턴스 배치 중에 VMware NSX는 인스턴스에서 주문되고, 설치되고, 라이센스가 부여되고, 구성됩니다. 또한 NSX Manager, NSX Controller 및 NSX Transport Zone이 설정되고 각 ESXi 서버가 NSX 컴포넌트로 구성됩니다.
 
@@ -39,6 +41,7 @@ NSX 설정 방법에 대한 자세한 정보는 다음 주제를 참조하십시
 
 ## NSX 컴포넌트의 비밀번호 변경 시 고려사항
 {: #sd_networkingoncloudfoundation-considerations-when-change-nsx-component-password}
+{: faq}
 
 NSX Manager, NSX Controller 및 NSX Edge의 비밀번호를 변경하기 전에 다음 고려사항을 검토하십시오.
 * NSX Manager 비밀번호를 변경하지 마십시오. {{site.data.keyword.vmwaresolutions_short}} 콘솔에 있는 인스턴스의 **요약** 페이지에서 이 비밀번호를 찾을 수 있습니다.

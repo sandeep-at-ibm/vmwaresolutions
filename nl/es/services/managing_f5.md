@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -16,10 +16,7 @@ lastupdated: "2019-02-15"
 
 Para gestionar el servicio F5 on {{site.data.keyword.cloud}}, inicie una sesión en las consolas de interfaz de usuario secundarias de BIG-IP utilizando las credenciales correspondientes que encontrará en la página de detalles del servicio F5 on {{site.data.keyword.cloud_notm}}.
 
-Para obtener más información sobre la visualización de los detalles del servicio, consulte:
-
-* [Solicitud, visualización y eliminación de servicios para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+Para obtener más información sobre la visualización de los detalles del servicio, consulte [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 
 ## Enlaces relacionados
 {: #managing_f5-related}

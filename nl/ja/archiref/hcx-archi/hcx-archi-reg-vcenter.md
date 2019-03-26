@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 # vCenter への HCX Manager の登録
@@ -30,7 +30,7 @@ VMware vSphere Web Client でハイブリッド・クラウド・サービス・
 3. ルックアップ・サービスを構成します。
   1. **「管理」**タブをクリックします。
   2. **「ルックアップ・サービス URL (Lookup Service URL)」**テキスト・ボックスの右端にある**「編集」**ボタンをクリックします。
-  3. ルックアップ・サービス・エンドポイントを次の形式で入力します。
+  3. ルックアップ・ネットワーク・サービス・エンドポイントを次の形式で入力します。
     * vCenter Server 5.5u3 の場合は `https://ssoip:/7444/lookupservice/sdk`
     * vCenter Server 6.0u2 の場合は `https://ssoip/lookupservice/sdk`
   4. **「OK」**をクリックします。 Web エンジンを再始動するメッセージが表示された場合は、再始動しないでください。

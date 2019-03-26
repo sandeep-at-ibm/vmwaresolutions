@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Cluster für Cloud Foundation-Instanzen hinzufügen, anzeigen und löschen
-{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
+{: #sd_addingviewingclusters}
 
 Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, werden unter einem Standardcluster gruppiert. Der Standardclustername lautet wie folgt:
 * Bei in V2.1 oder höheren Releases bereitgestellten Instanzen: **MGMT-Cluster-`<subdomain_label>`**
@@ -111,7 +111,7 @@ Sie können die Lizenzierungsoptionen für die VMware-Komponenten im Cluster ein
 ## Vorgehensweise zum Hinzufügen von Clustern zu Cloud Foundation-Instanzen
 {: #sd_addingviewingclusters-adding-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf die Instanz, zu der Cluster hinzugefügt werden sollen.
 
    Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster zur Instanz hinzufügen.
@@ -147,7 +147,7 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
 ## Vorgehensweise zum Anzeigen von Clustern in Cloud Foundation-Instanzen
 {: #sd_addingviewingclusters-viewing-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf eine Instanz, um die Cluster in dieser Instanz anzuzeigen.
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Prüfen Sie in der Tabelle **CLUSTER** die Zusammenfassung für die Cluster:
    * **Name**: Der Name des Clusters.
@@ -218,7 +218,7 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 ## Vorgehensweise zum Löschen von Clustern aus Cloud Foundation-Instanzen
 {: #sd_addingviewingclusters-deleting-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **Cloud Foundation-Instanzen** auf die Instanz, aus der Cluster gelöscht werden sollen.
 
    Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster aus der Instanz löschen.

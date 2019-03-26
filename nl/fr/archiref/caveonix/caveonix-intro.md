@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
 # Caveonix RiskForesight
 {: #caveonix-intro}
 
-Les entreprises qui subissent une transformation numérique adoptent une stratégie hybride de cloud qui inclut des charges de travail à la fois dans le cloud privé et dans de multiples environnements cloud externes, à savoir le cloud public ou un cloud géré par un fournisseur de service. La plupart des entreprises sont également confrontées au défi de protéger une surface d'attaque de plus en plus importante tout en respectant les exigences réglementaires et industrielles. Pour protéger cette surface d'attaque grandissante, les entreprises ont besoin d'une visibilité continue sur les charges de travail depuis le moment où elles augmentent jusqu'au moment où elles diminuent. Pour ce faire, les entreprises doivent avoir une vision globale des vulnérabilités de la charge de travail et des problèmes de configuration au niveau de l'infrastructure, de la plateforme et des applications, dans le contexte des menaces et des exigences de conformité. Les entreprises ont besoin d'analyses prédictives pour "faire le lien" afin de donner une vision proactive de leur position en matière de risque cybernétique et de conformité dans ce vaste et nouveau monde hybride.
+Les entreprises qui subissent une transformation numérique adoptent une stratégie hybride de cloud qui inclut des charges de travail à la fois dans le cloud privé et dans de multiples environnements cloud externes, à savoir le cloud public ou un cloud géré par un fournisseur de service. La plupart des entreprises sont également confrontées au défi de protéger une surface d'attaque de plus en plus importante tout en respectant les exigences réglementaires et industrielles.
+
+Pour protéger cette surface d'attaque grandissante, les entreprises ont besoin d'une visibilité continue sur les charges de travail du début à la fin de leur cycle de vie. Pour ce faire, les entreprises doivent avoir une vision globale des vulnérabilités de la charge de travail et des problèmes de configuration au niveau de l'infrastructure, de la plateforme et des applications, dans le contexte des menaces et des exigences de conformité. Les entreprises ont besoin d'analyses prédictives pour "faire le lien" afin de donner une vision proactive de leur position en matière de risque cybernétique et de conformité dans ce vaste et nouveau monde hybride.
 
 Caveonix RiskForesight offre une protection proactive de la charge de travail contre les risques liés aux cybermenaces et aux problèmes de conformité réglementaire. Il fournit une visibilité en temps réel de ce qui se passe dans le cloud hybride d'une entreprise grâce à une intégration native dans les plates-formes d'orchestration du cloud. En combinant cette visibilité avec des modèles de réduction des risques et des mesures d'application automatisables, RiskForesight élabore rapidement une liste de mesures prioritaires qui atténueront les risques. RiskForesight est une plateforme hybride de protection de la charge de travail dans le Cloud, compatible avec plusieurs locataires, qui met en oeuvre une infrastructure proactive de gestion des risques pouvant fonctionner sur plusieurs plans de contrôle (réseau, calcul, sécurité et conformité) tout en automatisant son implémentation à l'échelle du cloud.
 

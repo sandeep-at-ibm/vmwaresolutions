@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2019-02-15"
 ## オンプレミス VMware HCX on IBM Cloud インスタンスを参照する手順
 {: #standalone_viewingserviceinstances-procedure}
 
-左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックし、**「オンプレミス HCX インスタンス」**テーブルまでスクロールダウンして、注文したインスタンスに関する情報を確認します。
+左側のナビゲーション・ペインの**「リソース」**をクリックし、**「オンプレミス HCX インスタンス」**テーブルまでスクロールダウンして、注文したインスタンスに関する情報を確認します。
 
 表 1. オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの項目
 

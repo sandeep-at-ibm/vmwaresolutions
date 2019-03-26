@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,7 +52,7 @@ Se você implementar o cluster em um pod de infraestrutura diferente do {{site.d
 ### Configurações do Bare Metal Server
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
-Especifique o modelo de CPU e RAM para o Bare Metal Server. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
+É possível escolher **Skylake** ou **Broadwell**. As opções podem diferir dependendo da versão em que a sua instância foi implementada inicialmente.
 
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
@@ -131,7 +131,7 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 ## Procedimento para incluir clusters em instâncias do vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância para visualizar os clusters contidos.
 
    Assegure-se de que o status da instância seja **Pronto para uso**. Caso contrário, não será possível incluir clusters na instância.
@@ -162,7 +162,7 @@ Não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar f
 ## Procedimento para visualizar clusters em instâncias do vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância para visualizar os clusters contidos.
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda. Na tabela **CLUSTERS**, visualize o resumo sobre os clusters:
   * **Nome**: o nome do cluster.
@@ -232,7 +232,7 @@ Talvez você queira excluir um cluster de uma instância no caso de ela não ser
 ## Procedimento para excluir clusters de instâncias do vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância da qual deseja excluir clusters.
 
    Assegure-se de que a instância esteja no status **Pronta para uso**. Caso contrário, não será possível remover clusters da instância.

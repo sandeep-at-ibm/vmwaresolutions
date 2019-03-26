@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -49,7 +49,7 @@ Die folgende Abbildung zeigt eine vollständige vCenter Server-Bereitstellung mi
 
 Abbildung 1. vCenter Server-Bereitstellung mit mehreren Standorten
 
-![vCenter Server-Bereitstellung mit mehreren Standorten](../sddc/multisite-hub-spoke.svg "vCenter Server-Bereitstellung mit mehreren Standorten")
+![vCenter Server-Bereitstellung mit mehreren Standorten](../vcenter/multisite-hub-spoke.svg "vCenter Server-Bereitstellung mit mehreren Standorten")
 
 Das Modell enthält die folgenden Schichten:
 

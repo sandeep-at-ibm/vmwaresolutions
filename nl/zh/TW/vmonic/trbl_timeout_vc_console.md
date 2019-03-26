@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -26,8 +26,8 @@ lastupdated: "2019-02-14"
 1. 確定您已完成當游標移至 **vCenter 主控台**按鈕時工具提示中所顯示的步驟。為方便起見，這些步驟也如下所示：   
    1. 安裝適用於您瀏覽器的 Adobe Flash Player 外掛程式。   
    2. 從 {{site.data.keyword.slportal_full}} 建立 VPN 密碼。    
-   3. 使用 {{site.data.keyword.cloud_notm}} 基礎架構 VPN 認證登入資料中心 VPN 入口網站。    
-   4. 使用下列格式，將 PSC (Platform Services Controller) 的 IP 位址和主機名稱對映新增至主機檔案：
+   3. 使用 {{site.data.keyword.cloud_notm}} 基礎架構 VPN 認證來[登入資料中心 VPN](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#login-to-the-vpn)。    
+   4. 從您的本端電腦將 PSC (Platform Services Controller) 的 IP 位址和主機名稱對映新增至主機檔案。請使用下列格式：
 
       ```javascript
       IPAddress              HostName

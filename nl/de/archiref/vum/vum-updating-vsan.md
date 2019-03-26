@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -106,12 +106,12 @@ Stellen Sie vor dem Starten des vSAN-Upgradeprozesses sicher, dass die folgenden
 
 Weitere Informationen finden Sie unter [VCSA-Update und über SSO angebundene vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa).
 
-## Upgrade für vSphere ESXi-Hosts durchführen
+##	Upgrade für vSphere ESXi-Hosts durchführen
 {: #vum-updating-vsan-upgrade-hosts}
 
 Weitere Informationen finden Sie unter [Baselines erstellen und an Bestandsobjekte anhängen](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines).
 
-## Upgrade des vSAN-Plattenformats durchführen
+##	Upgrade des vSAN-Plattenformats durchführen
 {: #vum-updating-vsan-upgrade-vsan}
 
 Ruby vSphere Console (RVC) ist eine Ruby-basierte Befehlszeilenschnittstelle für vSphere und kann zur Verwaltung von VMware vSphere ESXi und vCenter verwendet werden. Der vSphere-Bestand wird in einer Baumstruktur dargestellt, die es Ihnen ermöglicht, zu navigieren und Befehle für vCenter-Objekte auszuführen.

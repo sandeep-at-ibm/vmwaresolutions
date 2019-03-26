@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -36,7 +36,7 @@ lastupdated: "2019-02-18"
 3.	選取要掃描的更新類型。選項為_虛擬應用裝置升級、VM 硬體升級_ 及 _VMware Tools 升級_。
 4.	按一下**掃描**。
 
-## 手動起始容器物件的掃描
+##	手動起始容器物件的掃描
 {: #vum-scanning-scan-container}
 
 藉由掃描作為資料中心或資料中心資料夾的容器物件，來開始同時掃描主機、VM 及虛擬應用裝置。
@@ -45,7 +45,7 @@ lastupdated: "2019-02-18"
 3.	選取要掃描的更新類型。選項為_虛擬應用裝置升級、VM 硬體升級_ 及 _VMware Tools 升級_。
 4.	按一下**掃描**。
 
-## 排定掃描
+##	排定掃描
 {: #vum-scanning-schedule}
 
 您可以將 vSphere Web Client 配置為在特定時間或依您方便的時間間隔來掃描 VM、虛擬應用裝置及 vSphere ESXi 主機。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -17,7 +17,7 @@ Tableau 1. Nomenclature pour les clusters VMware vSphere
 
 | Fabricant | Composant                       | Version |
 |:-------------|:--------------------------------|:--------|
-| VMware       | vSphere ESXi                    | Soit 6.5 Mise à jour 1 ou 6.0 Mise à jour 2 |
+| VMware       | vSphere ESXi                    | Either 6.7 Update 1 ou 6.5 Update 2 |
 
 ## Liens connexes
 {: #vs_bom-related}

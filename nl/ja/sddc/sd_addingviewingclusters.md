@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Cloud Foundation インスタンスのクラスターの追加、表示、削除
-{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
+{: #sd_addingviewingclusters}
 
 インスタンスの注文時に構成した ESXi サーバーは、デフォルトのクラスターの下にグループ化されます。 デフォルトのクラスター名は次のとおりです。
 * V2.1 以降のリリースでデプロイされたインスタンスの場合: **MGMT-Cluster-`<subdomain_label>`**
@@ -111,7 +111,7 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 ## Cloud Foundation インスタンスにクラスターを追加する手順
 {: #sd_addingviewingclusters-adding-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「Cloud Foundation インスタンス」**テーブルで、クラスターを追加するインスタンスをクリックします。
 
    インスタンスの状況が**「使用可能」**であることを確認してください。 そうでない場合、インスタンスにクラスターを追加できません。
@@ -147,7 +147,7 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 ## Cloud Foundation インスタンスでクラスターを表示する手順
 {: #sd_addingviewingclusters-viewing-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「Cloud Foundation インスタンス」**テーブルで、クラスターを表示するインスタンスをクリックします。
 3. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。 **「クラスター」**表で、クラスターに関する要約を表示します。
    * **名前**: クラスターの名前。
@@ -218,7 +218,7 @@ Cloud Foundation インスタンスにクラスターを追加するときには
 ## Cloud Foundation インスタンスからクラスターを削除する手順
 {: #sd_addingviewingclusters-deleting-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「Cloud Foundation インスタンス」**テーブルで、クラスターを削除するインスタンスをクリックします。
 
    インスタンスの状況が**「使用可能」**であることを確認してください。 そうでない場合、インスタンスからクラスターを削除できません。

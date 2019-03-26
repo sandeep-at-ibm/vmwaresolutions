@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
-# Upgrades Orquestrados
+#	Upgrades Orquestrados
 {: #vum-orchestr-updates}
 
 É possível usar upgrades orquestrados para fazer upgrade do hardware virtual e do VMware Tools de máquinas virtuais no inventário após a atualização dos hosts vSphere ESXi. Depois que os hosts são atualizados, a linha de base de upgrade do VMware Tools é executada primeiro, seguida pela linha de base de upgrade de hardware da máquina virtual. É possível usar upgrades orquestrados em um nível de cluster, pasta ou data center.

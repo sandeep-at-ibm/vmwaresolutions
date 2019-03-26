@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -32,6 +32,7 @@ VMware vSphere Web Client の**「ユーザーおよびグループ」**ペー�
 
 ## サービス固有のユーザー・アカウント
 {: #vcenter_chg_impact-service-usr-account}
+{: faq}
 
 サービスごとに、vCenter Server 内に内部ユーザー・アカウントが作成されます。 このアカウントは、サービスに関連付けられている管理操作が vCenter Server に接続できるようにすることで、サービスに対して操作を実行できるようにするために必要になります。
 
@@ -45,13 +46,15 @@ VMware vSphere Web Client の**「ユーザーおよびグループ」**ペー�
 
 ## vCenter Server インスタンスの VMware リソース (V1.9 以降)
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
+{: faq}
 
 V1.9 以降でデプロイされたインスタンスの場合は、vCenter Server インスタンスが**「使用可能」**状態であれば、VMware vSphere Web Client から VMware 仮想データ・センター、クラスター、スイッチ、ポート・グループ、およびカスタマー・データ・ストア名を変更できます。
 
-ただし、管理データ・ストアの名前は、デフォルト値の **vsanDatastore** (vSAN インスタンスの場合) と **management-share** (ネットワーク・ファイル・システム (NFS) インスタンスの場合) から変更しないでください。また、プロビジョニング中に作成されたネットワーク・アップリンクの名前も変更しないでください。
+ただし、管理データ・ストアの名前は、デフォルト値の **vsanDatastore** (vSAN インスタンスの場合) と **management-share** (ネットワーク・ファイル・システム (NFS) インスタンスの場合) から変更しないでください。 また、プロビジョニング中に作成されたネットワーク・アップリンクの名前も変更しないでください。
 
 ## vCenter Server インスタンスの VMware リソース (V1.8 以前)
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
+{: faq}
 
 次の表に、SSO 管理者が {{site.data.keyword.vmwaresolutions_short}} コンソール以外で VMware vCenter Server リソースを変更した場合に影響を受ける可能性がある操作を示します。 正常な状態に戻す解決方法がある場合は、その方法も示しています。
 
@@ -81,6 +84,7 @@ SSH アクセスまたはシェル・アクセスを無効にした場合は、�
 
 ## vCenter Server インスタンスの管理サブネット
 {: #vcenter_chg_impact-mgmt-subnets}
+{: faq}
 
 {{site.data.keyword.vmwaresolutions_short}} によって注文されるサブネットについて以下に説明します。また、専用のサブネットを追加注文するオプションについても説明します。
 

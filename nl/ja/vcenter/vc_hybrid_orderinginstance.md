@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,6 +52,14 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 * インスタンス名の最大の長さは 10 文字です。
 * インスタンス名はアカウント内で固有である必要があります。
 
+### VMware vSphere ライセンス
+{: #vc_hybrid_orderinginstance-vsphere-license}
+
+vSphere Enterprise Plus 6.7u1 と vSphere Enterprise Plus 6.5u2 のどちらを注文するかを選択します。
+
+vSphere Enterprise Plus 6.7u1 は Broadwell および Skylake の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} でのみ使用可能です。
+{:note}
+
 ### プライマリーまたはセカンダリー
 {: #vc_hybrid_orderinginstance-primary-secondary}
 
@@ -63,7 +71,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 vCenter Server with Hybridity Bundle インスタンスの注文には、以下の VMware ライセンスが含められます。 NSX および vSAN のライセンスのエディションを指定する必要があります。
 
 * vCenter Server 6.5
-* vSphere Enterprise Plus 6.5u1
+* vSphere Enterprise Plus 6.5 または 6.7
 * NSX Service Providers 6.4 (Advanced または Enterprise エディション)
 * vSAN 6.6 (Advanced または Enterprise エディション)
 
@@ -229,32 +237,33 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
 1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクションの**「vCenter サーバー」**をクリックします。
 2. **「VMware vCenter Server on IBM Cloud」**ページで、**「vCenter Server with Hybridity Bundle」**カードをクリックし、**「作成」**をクリックします。
 3. **「vCenter サーバー」**ページで、インスタンス名を入力します。
+5. vSphere バージョンを選択します。
 4. インスタンス・タイプを選択します。
    * 環境の単一インスタンスをデプロイするか、マルチサイト・トポロジーの最初のインスタンスをデプロイする場合は、**「プライマリー・インスタンス」**をクリックします。
    * 可用性を向上させる場合は、**「セカンダリー・インスタンス」**をクリックし、環境内の既存の (プライマリー) インスタンスにインスタンスを接続して、以下の手順を実行します。
      1. セカンダリー・インスタンスを接続するプライマリー・インスタンスを選択します。
      2. プライマリー・インスタンスが V2.8 以降である場合は、プライマリー・インスタンスの vCenter Server 管理者パスワードを入力します。
      3. プライマリー・インスタンスが V2.7 以前である場合は、プライマリー・インスタンスの PSC 管理者パスワードを入力します。
-5. NSX ライセンス・エディションと vSAN ライセンス・エディションを選択します。
-6. ベア・メタル・サーバーの設定を次の手順で実行します。
+6. NSX ライセンス・エディションと vSAN ライセンス・エディションを選択します。
+7. ベア・メタル・サーバーの設定を次の手順で実行します。
   1. インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
   2. **「Skylake」**または**「Broadwell」**の CPU モデルと **RAM** の容量を選択します。
 
   **「ベア・メタル・サーバーの数」**はデフォルトで 4 に設定されます。変更はできません。
   {:note}
-7. ストレージ構成を次の手順で実行します。 容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
-8. ネットワーク・インターフェース構成を行います。
+8. ストレージ構成を次の手順で実行します。 容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
+9. ネットワーク・インターフェース構成を行います。
   1. ホスト名接頭部、サブドメイン・ラベル、ルート・ドメイン・ネームを入力します。
   2. **「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のいずれかのネットワーク設定を選択します。
   3. VLAN 構成を選択します。
      *  新規のパブリック VLAN とプライベート VLAN を注文する場合は、**「新規 VLAN を注文」**をクリックします。
      *  既存のパブリック VLAN とプライベート VLAN を使用できる場合に再利用するには、**「既存の VLAN を選択」**をクリックし、パブリック VLAN、プライマリー・サブネット、プライベート VLAN、プライベート・プライマリー・サブネット、セカンダリー・プライベート VLAN を選択します。
   4. DNS 構成を選択します。
-9. 組み込まれている HCX on {{site.data.keyword.cloud_notm}} サービスの構成を完了します。 サービスの設定方法について詳しくは、[VMware HCX on IBM Cloud の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration)の『_VMware HCX on IBM Cloud の構成_』セクションを参照してください。
-10. インスタンスにデプロイするアドオン・サービスを、対応するサービス・カードをクリックして選択します。 サービスに構成が必要な場合は、サービス固有の設定を入力し、カードの**「サービスの追加」**をクリックします。  
+10. 組み込まれている HCX on {{site.data.keyword.cloud_notm}} サービスの構成を完了します。 サービスの設定方法について詳しくは、[VMware HCX on IBM Cloud の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration)の『_VMware HCX on IBM Cloud の構成_』セクションを参照してください。
+11. インスタンスにデプロイするアドオン・サービスを、対応するサービス・カードをクリックして選択します。 サービスに構成が必要な場合は、サービス固有の設定を入力し、カードの**「サービスの追加」**をクリックします。  
 サービスの設定方法について詳しくは、対応するサービス注文トピックを参照してください。
 
-11. **「発注要約」**ペインで、インスタンス構成を確認してから注文を実行します。
+12. **「発注要約」**ペインで、インスタンス構成を確認してから注文を実行します。
    1. インスタンスの設定を確認します。
    2. インスタンスの見積もりコストを確認します。 PDF のサマリーを生成するには、**「料金詳細」**をクリックします。 注文のサマリーを保存または印刷するには、PDF ウィンドウの右上にある**「印刷」**アイコンまたは **「ダウンロード」**アイコンをクリックします。
    3. 注文に適用される使用条件のリンクをクリックして、インスタンスを注文する前にそれらの条件に同意することを確認する必要があります。
@@ -265,7 +274,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
 
-インスタンスが正常にデプロイされると、[vCenter Server with Hybridity Bundle インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 アドオン・サービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
+インスタンスが正常にデプロイされると、[vCenter Server with Hybridity Bundle インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 アドオン・サービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 

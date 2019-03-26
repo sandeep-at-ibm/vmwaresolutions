@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # VMware HCX on IBM Cloud 规范和注意事项
-{: #vmware-hcx-on-ibm-cloud-overview}
+{: #hcx_considerations}
 
 HCX on {{site.data.keyword.cloud}} 服务可将内部部署数据中心的网络无缝扩展到 {{site.data.keyword.cloud_notm}}，这允许虚拟机 (VM) 在不进行任何转换或更改的情况下，迁移到 {{site.data.keyword.cloud_notm}} 或从中迁移出来。
 
@@ -26,7 +26,7 @@ HCX on {{site.data.keyword.cloud}} 服务可将内部部署数据中心的网络
 {:note}
 
 ## HCX on IBM Cloud 的技术规范
-{: #technical-specifications-for-hcx-on-ibm-cloud}
+{: #hcx_considerations-specs}
 
 HCX on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件：
 
@@ -72,7 +72,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件�
 安装 HCX on {{site.data.keyword.cloud_notm}} 服务之前，必须向任何现有防火墙添加防火墙规则以允许所有出站 HTTPS 流量，以便 HCX Manager 虚拟设备 (HCX Manager) 可以注册自身。在 HCX Manager 安装完成后，可以除去该防火墙规则。此外，必须配置防火墙规则以允许 HCX 正常运行。有关更多信息，请参阅 [HCX on {{site.data.keyword.cloud_notm}} 体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)中的*附录 A - 端口访问需求*。
 
 ## 除去 HCX on IBM Cloud 时的注意事项
-{: #considerations-when-removing-hcx-on-ibm-cloud}
+{: #hcx_considerations-delete}
 
 除去 HCX on {{site.data.keyword.cloud_notm}} 服务之前，请查看以下注意事项：
 * 确保除去了内部部署源站点与 {{site.data.keyword.cloud_notm}} 目标站点之间的互连和扩展网络。要除去互连和扩展网络，请使用内部部署 VMware vSphere Web Client 中的 HCX 用户界面。

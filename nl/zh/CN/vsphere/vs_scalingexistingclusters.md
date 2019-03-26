@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2019-02-14"
 {:note: .note}
 {:important: .important}
 
-# 扩展现有 vSphere 集群
+# 缩放现有 vSphere 集群
 {: #vs_scalingexistingclusters}
 
-对于您在 {{site.data.keyword.vmwaresolutions_full}} 控制台中订购或保存的 VMware vSphere 集群，可以进行向外扩展。要执行此操作，请为集群添加 ESXi 服务器或者订购 FortiGate 300 Series Security Appliance HA 对。
+对于您在 {{site.data.keyword.vmwaresolutions_full}} 控制台中订购或保存的 VMware vSphere 集群，可以进行横向扩展。要执行此操作，请为集群添加 ESXi 服务器或者订购 FortiGate 300 Series Security Appliance HA 对。
 
 ## 需求
 {: #vs_scalingexistingclusters-req}
@@ -28,7 +28,7 @@ lastupdated: "2019-02-14"
 ## 扩展现有集群的过程
 {: #vs_scalingexistingclusters-procedure}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **VMware vSphere**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware**，然后单击**虚拟数据中心**部分中的 **VMware vSphere**。
 2. 在 **VMware vSphere on IBM Cloud** 页面上，单击**创建**。  
 3. 单击**扩展现有**选项卡，然后从**集群配置**列表中选择要扩展的集群。
 4. 复查自动填写的集群设置。
@@ -45,7 +45,7 @@ lastupdated: "2019-02-14"
 
 如果要扩展的集群尚未准备就绪，那么可能会收到错误消息。
 
-与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**已部署的实例**页面上。
+与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**资源**页面上。
 {:note}
 
 ## 相关链接
@@ -53,4 +53,4 @@ lastupdated: "2019-02-14"
 
 * [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 * [基于现有配置订购 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
-* [扩展在控制台外部创建的集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)
+* [缩放在控制台外部创建的集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

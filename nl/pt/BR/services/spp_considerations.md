@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -21,7 +21,7 @@ Esse serviço está disponível somente para instâncias que estão executando o
 {:note}
 
 ## Especificações técnicas para o IBM Spectrum Protect Plus on IBM Cloud
-{: #technical-specifications-for-ibm-spectrum-protect-plus-on-ibm-cloud}
+{: #spp_considerations-specs}
 
 Os componentes a seguir são pedidos e incluídos no serviço IBM Spectrum Protect Plus no {{site.data.keyword.cloud_notm}}:
 
@@ -72,9 +72,7 @@ Revise as considerações a seguir antes de instalar o serviço IBM Spectrum Pro
 * Assegure-se de que a CPU e a memória no cluster padrão de sua instância sejam suficientes para a máquina virtual do IBM Spectrum Protect Plus.
 * Assegure-se de que as montagens NFS disponíveis nos servidores ESXi sejam suficientes com base na versão dos servidores ESXi.
 
-  Instâncias do Cloud Foundation e instâncias do vCenter Server que são implementadas na V2.2
-ou em liberações mais recentes (ou que passaram por upgrade para elas) têm uma configuração de parâmetro `NFS.MaxVolumes` no
-VMware. Esse parâmetro define o número máximo de montagens do NFS em um servidor ESXi e pode ser configurado para um máximo de 256, que é específico para a versão do servidor ESXi. Para obter mais informações, veja [Aumentando o valor padrão que define o número máximo de montagens NFS em um host ESXi/ESX](https://kb.vmware.com/s/article/2239).
+  As instâncias implementadas (ou atualizadas) para a V2.2 ou liberações mais recentes têm uma configuração de parâmetro `NFS.MaxVolumes` no VMware. Esse parâmetro define o número máximo de montagens do NFS em um servidor ESXi e pode ser configurado para um máximo de 256, que é específico para a versão do servidor ESXi. Para obter mais informações, veja [Aumentando o valor padrão que define o número máximo de montagens NFS em um host ESXi/ESX](https://kb.vmware.com/s/article/2239).
 
   O serviço IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} pode usar até 11 dos volumes NFS em cada servidor ESXi no cluster padrão de sua instância. Além disso, o serviço cria montagens transientes do NFS para propósitos de backup e restauração. Portanto, deve-se configurar o número de montagens NFS para um mínimo de 64 para assegurar que o serviço possa ser instalado e funcionar corretamente.
 

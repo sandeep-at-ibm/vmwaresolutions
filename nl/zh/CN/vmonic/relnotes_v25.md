@@ -18,6 +18,7 @@ lastupdated: "2018-08-30"
 此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
 ## Spectre 和 Meltdown 修复
+{: #relnotes_v25-spectre}
 
 {{site.data.keyword.vmwaresolutions_short}} 发布了来自 VMware 的补丁，以响应称为 Spectre 和 Meltdown 的漏洞（CVE-2017-5753、CVE-2017-5715 和 CVE-2017-5754）。
 
@@ -25,13 +26,13 @@ lastupdated: "2018-08-30"
 * CVEID：[CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID：[CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-有关更多信息，请参阅[解决 Spectre 和 Meltdown 漏洞](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre)。
-
 ## NSX 组件更新
+{: #relnotes_v25-nsx}
 
 此发行版会安装 VMware NSX for vSphere 6.4.1，以用于 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 与带有 Hybridity Bundle 和 NetApp ONTAP Select 的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的新部署。
 
 ## 除去了缺省备份配置
+{: #relnotes_v25-default-backup}
 
 {{site.data.keyword.vmwaresolutions_short}} 为备份提供了两个集成的附加组件服务：IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 和 Veeam on {{site.data.keyword.cloud_notm}}。通过这些服务，您可以计划并提供对管理基础架构和工作负载的恢复。此外，IBM Resiliency Services 还提供了用于 Veeam 备份的受管服务。
 
@@ -43,12 +44,14 @@ lastupdated: "2018-08-30"
 {:note}
 
 ## IBM CloudDriver 弹性
+{: #relnotes_v25-cloud-driver}
 
 对于已部署到或升级到 V2.5 或更高发行版的实例，不再将 IBM CloudDriver 组件配置为 vSphere 集群中的虚拟机 (VM)，而是根据需要使用最新的 {{site.data.keyword.cloud_notm}} for VMware 代码将其部署为 {{site.data.keyword.cloud_notm}} 基础架构虚拟服务器实例 (VSI)，以用于诸如部署更多节点、集群或服务之类的操作。此外，还将 IBM CloudDriver 更改为使用 {{site.data.keyword.cloud_notm}} 专用网络与 {{site.data.keyword.cloud_notm}} 管理平面进行通信。此更改除去了允许 IBM CloudDriver 与公用网络进行出站通信的管理 NSX Edge 服务网关 (ESG) 防火墙和网络地址转换 (NAT) 规则。
 
 某些附加组件服务（例如，F5 on {{site.data.keyword.cloud_notm}}、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 和 Zerto on {{site.data.keyword.cloud_notm}}）仍需要公用网络访问，因此管理 NSX ESG 仍保持部署在所有实例中。
 
 ## 支持 IAM 的用户和访问权管理
+{: #relnotes_v25-iam}
 
 从 V2.5 发行版开始，{{site.data.keyword.vmwaresolutions_short}} 与 IBM Identity and Access Management (IAM) 集成，以提供统一的方法来管理 {{site.data.keyword.cloud_notm}} 帐户中的用户帐户和用户访问权。因此，可以实现以下操作：
 * 现在，您可以向 {{site.data.keyword.cloud_notm}} 帐户添加多个用户来进行协作，还可以通过为用户分配不同的平台访问角色来管理用户对帐户中所供应服务和资源的访问权。  
@@ -60,6 +63,7 @@ lastupdated: "2018-08-30"
 * [使用 IAM 管理用户访问权](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
 
 ## 更改了 VMware vCenter Server 和 VMware Cloud Foundation 实例的用户帐户和组
+{: #relnotes_v25-user-acct}
 
 **ic4v-vCenter** 用户组已在 Microsoft Active Directory 服务器上创建，并添加到 vCenter Server 上的全局许可权以及 NSX Manager 的用户组。该组包含用于 vCenter Server 实例的 **automation** 用户帐户，以及用于 vCenter Server 和 Cloud Foundation 实例的特定于服务的用户帐户。
 
@@ -69,14 +73,13 @@ lastupdated: "2018-08-30"
 
 对于 vCenter Server 实例，请继续使用 **root** 主机用户标识。创建的 **ic4vroot** 主机用户标识仅供 IBM 使用。
 
-有关用户帐户的更多信息，请参阅以下主题：
-
-* [关于更改 vCenter Server 工件的注意事项](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)
-* [关于更改 Cloud Foundation 工件的注意事项](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cf_chg_impact)
+有关用户帐户的更多信息，请参阅[有关更改 vCenter Server 工件的注意事项](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)。
 
 ## 对附加组件服务的更新
+{: #relnotes_v25-services}
 
 ### IBM Cloud Private Hosted（于 2018 年 8 月 30 日更新）
+{: #relnotes_v25-scp-hosted}
 
 {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} 服务现在可用于在 V2.5 或更高发行版中部署或升级到这些版本的 vCenter Server 实例。
 
@@ -85,28 +88,32 @@ lastupdated: "2018-08-30"
 在订购 vCenter Server 实例后，您可以请求此服务。
 
 ### IBM Spectrum Protect Plus on IBM Cloud
+{: #relnotes_v25-spp}
 
 从 V2.5 发行版开始，会基于最佳实践将 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务部署为两个单独的 VM：一个 VM 运行 IBM Spectrum Protect Plus 服务器；另一个 VM 运行 vSnap 服务器和 VADP 代理。
 
 现在，您最多可订购 10 个备份数据存储，且可使用的最大备份存储器大小为 120 TB。vSnap 和 VADP VM 的大小取决于所选的备份存储器大小，并根据 [IBM Spectrum Protect Plus 蓝图](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)中的信息进行调整。
 
 ### KMIP for VMware on IBM Cloud
+{: #relnotes_v25-kmip}
 
 现在，德国有可用于 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务的新端点。
 
-有关更多信息，请参阅 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务配置](/docs/services/vmwaresolutions/services/kmip_ordering.html#kmip-for-vmware-on-ibm-cloud-service-configuration)。
-
 ## 新增和更新的文档
+{: #relnotes_v25-new-docs}
 
 ### 连接的存储器文档
+{: #relnotes_v25-docs-storage}
 
 现在，用户文档的*参考*部分中提供了“vCenter Server on IBM Cloud 的连接存储器”技术文档。有关更多信息，请参阅 [vCenter Server on IBM Cloud 的连接存储器](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits)。
 
 ### 技术规范
+{: #relnotes_v25-docs-tech-specs}
 
 现在，用户文档中提供了所有实例类型和服务类型的技术规范，这些规范还可通过用户界面中的链接获取。有关更多信息，请参阅实例和服务的相应概述主题。
 
 ### 服务文档
+{: #relnotes_v25-docs-services}
 
 改进了服务信息，以便根据在其中提供服务支持的发行版号轻松识别服务支持。
 
@@ -114,9 +121,9 @@ lastupdated: "2018-08-30"
 
 * [可用于 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)
 * [vCenter Server with Hybridity Bundle 实例的可用服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances)
-* [可用于 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices#available-services-for-cloud-foundation-instances)
 
 ## 用户界面更新和增强功能
+{: #relnotes_v25-ui}
 
 用户界面已更新，并提供了以下增强功能：
 

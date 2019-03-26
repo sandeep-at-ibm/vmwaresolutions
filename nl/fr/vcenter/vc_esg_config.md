@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -29,8 +29,7 @@ Dans le cadre du processus de commande de votre instance vCenter Server, les act
 * Déploiement et configuration d'un dispositif NSX Edge pour la conversion des adresses réseau de la plage d'adresses IP du
 commutateur logique de charge de travail en une adresse IP publique sur les règles de conversion d'adresses réseau.
 
-  NXS Edge n'est pas déployé pour les instances qui sont privées uniquement.
-  {:note}
+  NSX Edge n'est pas déployé pour les instances qui sont privées uniquement. {:note}
 
 * Si vous avez installé le service Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager est configuré de manière à effectuer une sauvegarde quotidienne des configurations NSX. Pour plus d'informations, voir [Remarques relatives à l'installation de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud).
 
@@ -78,13 +77,13 @@ Etant donné que le serveur de périphérie **customer-nsx-edge** est conçu pou
 Pour identifier les détails des sous-réseaux client de manière à pouvoir utiliser les adresses IP commandées, effectuez les opérations suivantes dans le client Web VMware vSphere :
 
 1. Cliquez sur **Home > Networking & Security**.
-2. Dans le volet de navigation, cliquez sur **NSX Edges**, puis cliquez deux fois sur **customer-nsx-edge edge**.
-3. Dans l'onglet **Summary** de ce serveur de périphérie, passez en revue sa description, qui contient les identificateurs des sous-réseaux client privés et publics.
+2. Dans le volet de navigation, cliquez sur **NSX Edges**, puis localisez **customer-nsx-edge edge** dans la liste de serveurs de périphérie sur la droite. 
+3. Dans la colonne **Description**, passez en revue la description du serveur de périphérie **customer-nsx-edge** pour voir les identificateurs de sous-réseau à la fois pour les sous-réseaux client privés et publics.
 
 Vous trouverez d'autres détails concernant les sous-réseau client en effectuant les opérations suivantes dans le portail	{{site.data.keyword.slportal}} :
 
 1. Cliquez sur **Networking > IP Management > Subnets**.
-2. Cliquez sur le menu de filtre et, dans la zone Subnet, entrez l'identificateur tel qu'indiqué dans la description du serveur de périphérie **customer-nsx-edge** sur l'onglet **Summary** dans le client Web VMware vSphere.
+2. Cliquez sur le menu de filtre et, dans la zone **Subnet**, entrez l'identificateur tel qu'indiqué dans la description du serveur de périphérie **customer-nsx-edge** dans le client Web VMware vSphere.
 3. Passez en revue les remarques affichées pour les adresses IP. Ces remarques identifient les sous-réseaux et adresses IP commandés et utilisés au cours de la configuration initiale.
 
    N'utilisez pas les adresses IP commandées et utilisées au cours de la configuration initiale. Toutefois, vous pouvez, au besoin, utiliser d'autres adresses IP sur ces sous-réseaux. Pour définir des règles de conversion d'adresses réseau supplémentaires, voir [Gestion des règles de conversion d'adresses réseau](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.

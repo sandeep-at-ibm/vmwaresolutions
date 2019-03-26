@@ -100,7 +100,7 @@ vSAN トラフィック	|無制限	|100	|0
 ### NSX-V および NSX-T を含む vCenter Server
 {: #vcsnsxt-techpreview-vcs-nsx-v-nsx-t}
 
-元の vCenter Server クラスターには、vCenter Server アプライアンスとともに NSX-V および NSX-T のすべての管理コンポーネントが含まれています。 [NSX-V の概要](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)で説明しているように、このクラスター内のホストには NSX-V 用の準備が施されています。2 番目のクラスター内のホストは NSX-T 用に準備され、トランスポート・ノードとして構成されます。 この構成により、お客様が選択すれば NSX-V から NSX-T にマイグレーションできるようになっています。
+元の vCenter Server クラスターには、vCenter Server アプライアンスとともに NSX-V および NSX-T のすべての管理コンポーネントが含まれています。 [NSX-V の概要](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)で説明しているように、このクラスター内のホストには NSX-V 用の準備が施されています。 2 番目のクラスター内のホストは NSX-T 用に準備され、トランスポート・ノードとして構成されます。 この構成により、お客様が選択すれば NSX-V から NSX-T にマイグレーションできるようになっています。
 
 ### NSX-T と NSX-V
 {: #vcsnsxt-techpreview-nsx-t-vs-nsx-v}

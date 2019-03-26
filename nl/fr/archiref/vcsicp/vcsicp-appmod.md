@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -48,7 +48,7 @@ vCenter Server fournit les blocs de construction fondamentaux qui incluent notam
 En résumé, les avantages des offres {{site.data.keyword.vmwaresolutions_short}} sont les suivants :
 
 * Une livraison plus rapide des projets informatiques pour les développeurs et les secteurs d'activité. En effet, le temps nécessaire à l'approvisionnement, à l'architecture, à l'implémentation et au déploiement des ressources passe de quelques semaines ou quelques mois à quelques heures.
-* Une sécurité renforcée au moyen de serveurs bare metal dédiés dans un cloud privé hébergé, y compris le déploiement de noeud final privé dans des services {{site.data.keyword.cloud_notm}}, tels qu'{{site.data.keyword.containerlong_notm}} et KMIP.
+* Une sécurité renforcée au moyen de serveurs bare metal dédiés dans un cloud privé hébergé, y compris le déploiement de noeud final de service de réseau privé dans des services {{site.data.keyword.cloud_notm}}, tels qu'{{site.data.keyword.containerlong_notm}} et KMIP.
 * Une gestion et une gouvernance cohérentes du cloud hybride déployé grâce à des droits d'accès administrateur complets à la gestion de la virtualisation, ce qui permet de préserver vos outils et vos scripts VMware existants, ainsi que les efforts réalisés en matière de formation.
 * Une expertise VMware à l'échelle mondiale grâce aux services professionnels et gérés d'IBM qui couvrent plus de 30 centres de données {{site.data.keyword.CloudDataCents_notm}} dans le monde entier.
 

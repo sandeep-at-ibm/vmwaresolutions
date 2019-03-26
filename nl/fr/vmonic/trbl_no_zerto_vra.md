@@ -27,4 +27,4 @@ Ouvrez un ticket de demande de service {{site.data.keyword.cloud}} et contactez 
 
 Pour accéder à la console Zerto, cliquez sur la carte Zerto depuis l'onglet **Services** de l'instance et cliquez sur **Afficher des détails**, puis sur **Afficher la console Zerto**.
 
-Pour savoir comment contacter le support IBM, voir [Contacter le support IBM](/docs/services/vmwaresolutions//vmonic/trbl_support.html).
+Pour savoir comment contacter le support IBM, voir [Contacter le support IBM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-trbl_support#trbl_support).

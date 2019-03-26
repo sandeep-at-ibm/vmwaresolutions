@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -30,10 +30,10 @@ Devido a dependências de recursos, os componentes em sua instância não são l
 Você é faturado até o final do ciclo de faturamento da infraestrutura do {{site.data.keyword.cloud_notm}} para a instância excluída.
 {:note}
 
-## Procedimento para excluir instâncias da página Instâncias implementadas
+## Procedimento para excluir instâncias da página Recursos
 {: #vc_hybrid_deletinginstance-procedure1}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, localize a instância a ser excluída.
 3. Na coluna **Ações**, clique no ícone Excluir.
    O status da instância é mudado para **Excluindo**. Quando a instância for excluída com êxito, seus componentes serão liberados e seu status mudará para **Excluído**.
@@ -44,7 +44,7 @@ Você é faturado até o final do ciclo de faturamento da infraestrutura do {{si
 ## Procedimento para excluir instâncias da página Detalhes da instância
 {: #vc_hybrid_deletinginstance-procedure2}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância a ser excluída.
 3. Clique no ícone do menu overflow próximo ao **Console do vCenter** e clique em **Excluir instância**.
    O status da instância é mudado para **Excluindo**. Quando a instância for excluída com êxito, seus componentes serão liberados e seu status mudará para **Excluído**.

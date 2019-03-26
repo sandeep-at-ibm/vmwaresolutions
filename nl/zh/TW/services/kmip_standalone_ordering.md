@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2019-02-15"
 
 請確定您已完成下列作業：
 * 您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)。
-* 您已檢閱[安裝 KMIP for VMware on {{site.data.keyword.cloud_notm}} 實例時的考量](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)中的所有考量。
+* 您已檢閱[安裝 KMIP for VMware on {{site.data.keyword.cloud_notm}} 實例時的考量](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations-install)中的所有考量。
 
 ## 訂購 KMIP for VMware on IBM Cloud 實例的程序
 {: #kmip_standalone_ordering-procedure}
@@ -36,20 +36,21 @@ lastupdated: "2019-02-15"
 ### 實例名稱
 {: #kmip_standalone_ordering-config-instance-name}
 
-指定 KMIP for VMware {{site.data.keyword.cloud_notm}} 實例的名稱。
+指定 KMIP for VMware on {{site.data.keyword.cloud_notm}} 實例的名稱。
 
 ### 服務地區
 {: #kmip_standalone_ordering-config-service-region}
 
-選取要在其中管理 KMIP for VMware {{site.data.keyword.cloud_notm}} 實例的 {{site.data.keyword.cloud_notm}} 地區。
+選取要在其中管理 KMIP for VMware on {{site.data.keyword.cloud_notm}} 實例的 {{site.data.keyword.cloud_notm}} 地區。
 
-{{site.data.keyword.cloud_notm}} 在服務可用的每一個地區中都會維護高度可用的 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務端點。
+{{site.data.keyword.cloud_notm}} 在每個可使用該服務的地區維護一個高度可用的 KMIP for VMware on {{site.data.keyword.cloud_notm}} 網路服務端點。
 
-表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務端點地區
+表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 網路服務端點地區
 
 |地區           |端點|
 |:---------------|:-----------------------|
 |德國           |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|雪梨           |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 |東京| <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 |美國南部       |  <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
@@ -66,12 +67,12 @@ lastupdated: "2019-02-15"
 ### 客戶主要金鑰
 {: #kmip_standalone_ordering-config-root-key}
 
-按一下**擷取**，以取得所選取 IBM Key Protect 實例中儲存的客戶主要金鑰。
+按一下**擷取**以取得儲存在您的所選金鑰管理程式實例中的客戶主要金鑰。
 
 ## 結果
 {: #kmip_standalone_ordering-results}
 
-自動啟動實例的訂購。您會收到正在處理訂單的確認，而且您可以檢視實例詳細資料來檢查訂單的狀態。
+KMIP for VMware on {{site.data.keyword.cloud_notm}} 實例的訂購會自動啟動。您會收到正在處理訂單的確認，而且您可以檢視實例詳細資料來檢查訂單的狀態。
 
 實例備妥可供使用時，實例的狀態會變更為**已安裝**，而且您會透過電子郵件收到通知。
 

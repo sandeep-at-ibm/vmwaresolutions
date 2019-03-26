@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -33,7 +33,8 @@ vSAN 암호화가 데이터 저장소 레벨에서 작동하므로 기본 목표
 * vSAN 암호화는 클러스터 내에서 호스트 대 호스트 vSAN 복제 통신을 암호화하지 않습니다.
 * vSAN 암호화는 기타 스토리지 솔루션(예: {{site.data.keyword.cloud_notm}} Endurance 파일 및 블록 스토리지)에 적용되지 않습니다.
 * vSAN 암호화에는 vSAN Enterprise 라이센스가 필요합니다.
-* vSAN 상태 검사 시 하나 이상의 vSphere 호스트에서 KMS 클러스터에 연결할 수 없다는 경고가 주기적으로 나타날 수 있습니다. 이러한 경고는 vSAN 상태 검사 연결 제한시간이 너무 빨리 초과하기 때문에 발생합니다. 이 경고는 무시해도 됩니다.
+* vSAN 상태 검사 시 하나 이상의 vSphere 호스트에서 KMS 클러스터에 연결할 수 없다는 경고가 주기적으로 나타날 수 있습니다. 이러한 경고는 vSAN 상태 검사 연결 제한시간이 너무 빨리 초과하기 때문에 발생합니다. 이 경고는 무시해도 됩니다. 자세한 정보는 [vSAN KMS 상태 검사가 간헐적으로 SSL Handshake Timeout 오류와 함께 실패](https://kb.vmware.com/s/article/67115){:new_window}를 참조하십시오.
+
 
 ### vSphere 암호화
 {: #kmip-design-vsphere-encrypt}
@@ -98,13 +99,13 @@ KMIP for VMware 인스턴스는 Key Protect 인스턴스에 대한 액세스 권
 그림 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 컴포넌트
 ![{{site.data.keyword.cloud_notm}} 컴포넌트](kmip-key-protect.svg "솔루션은 IBM Key Protect에 저장된 루트 키를 사용하여 VMware vSphere 암호화 및 vSAN 암호화를 사용으로 설정합니다.")
 
-KMIP for VMware는 많은 IBM Cloud 다중 구역 지역(MZR)에서 사용 가능합니다. 전체 목록은 [KMIP for VMware 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)을 참조하십시오.
+KMIP for VMware는 많은 {{site.data.keyword.cloud_notm}} 다중 영역 지역(MZR)에서 사용 가능합니다. 전체 목록은 [KMIP for VMware 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)을 참조하십시오.
 
-각 MZR 내에서 KMIP for VMware는 고가용성을 위해 IBM Cloud Private 네트워크에서 두 가지 서비스 엔드포인트를 제공합니다. KMS 클러스터로 vCenter 키 관리 서버(KMS) 구성의 두 가지 엔드포인트를 구성하십시오. 각 MZR의 엔드포인트와 KMIP 서버 인증서 서명의 목록은 [KMIP for VMware 서비스 문서](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)를 참조하십시오.
+각 MZR 내에서 KMIP for VMware는 고가용성을 위해 {{site.data.keyword.cloud_notm}} 사설 네트워크에서 두 가지 네트워크 서비스 엔드포인트를 제공합니다. KMS 클러스터로 vCenter 키 관리 서버(KMS) 구성의 두 가지 엔드포인트를 구성하십시오. 각 MZR의 엔드포인트와 KMIP 서버 인증서 서명의 목록은 [KMIP for VMware 서비스 문서](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)를 참조하십시오.
 
-KMIP for VMware는 사설 인터넷이 아닌 IBM Cloud Private 네트워크를 사용하여 IBM Cloud Key Protect에도 연결합니다.
+KMIP for VMware는 사설 인터넷이 아닌 {{site.data.keyword.cloud_notm}} 사설 네트워크를 사용하여 {{site.data.keyword.cloud_notm}} Key Protect에도 연결합니다.
 
-사설 네트워크를 통해 KMIP for VMware에 액세스하려면 IBM Cloud 인프라 계정은 VRF(Virtual Routing and Forwarding)에 사용으로 설정되어야 하고 IBM Cloud 서비스 엔드포인트 라우트는 사용자 계정의 VRF 라우트에 추가되어야 합니다. 자세한 정보는 [서비스 엔드포인트에 대한 계정 사용](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps)을 참조하십시오.
+사설 네트워크를 통해 KMIP for VMware에 액세스하려면 {{site.data.keyword.cloud_notm}} 인프라 계정은 VRF(Virtual Routing and Forwarding)에 사용으로 설정되어야 하고 IBM network 서비스 엔드포인트 라우트는 사용자 계정의 VRF 라우트에 추가되어야 합니다. 자세한 정보는 [서비스 엔드포인트에 대한 계정 사용](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps)을 참조하십시오.
 
 ## 관련 링크
 {: #kmip-design-related}

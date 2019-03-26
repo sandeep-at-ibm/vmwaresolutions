@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -24,7 +24,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} では、オプションの V
 このオファリングを使用して、{{site.data.keyword.CloudDataCent_notm}}内に ESXi サーバーの新規クラスターを作成したり、ESXi サーバーの既存クラスターを拡張したりできます。 選択した VMware コンポーネントによっては、ESXi サーバー 1 つだけで始めて、後で必要に応じてクラスターを拡張することができます。
 
 ## VMware vSphere on IBM Cloud クラスターの技術仕様
-{: #technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters}
+{: #vs_vsphereclusteroverview-specs}
 
 ここには、VMware vSphere on {{site.data.keyword.cloud_notm}} のコンポーネントを記載します。
 
@@ -35,7 +35,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} では、オプションの V
 {: #vs_vsphereclusteroverview-specs-vmware-components}
 
 以下の VMware コンポーネントのライセンス (IBM 提供または BYOL) を選択します。
-* VMware vSphere Enterprise Plus 6.0u2、6.5u1、または 6.5u2
+* VMware vSphere Enterprise Plus 6.7 U1 または 6.5 U2
 * 以下の VMware コンポーネントはオプションです。
    * VMware vCenter Server Standard
    * VMware NSX (Base、Advanced、または Enterprise)
@@ -48,10 +48,10 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} では、オプションの V
 ### ベア・メタル・サーバー
 {: #vs_vsphereclusteroverview-specs-bare-metal}
 
-選択した CPU モデルと RAM サイズの 1 つ以上の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} を選択します。
-* 2-CPU Intel Skylake 世代 (Intel Xeon 4100/5100/6100 シリーズ)
-* SAP 認定 (Intel Xeon 6140/E5-2690/E7-8890 シリーズ)
-* 2-CPU Intel Broadwell 世代 (Intel Xeon E5-2600/E7-4800 シリーズ)
+以下のいずれかの構成で{{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}を 1 つ以上注文できます。
+* **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。
+* **SAP 認定**: 選択した CPU モデルの Intel Skylake または Intel Broadwell 世代サーバー (Intel Xeon 6140/E5-2690/E7-8890 シリーズ)。
+* **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600/E7-4800 シリーズ)。
 
 使用可能なオプションは、VMware vSAN コンポーネントを選択したかどうかによります。
 
@@ -86,18 +86,18 @@ vSphere クラスター拡張ノードごとに、{{site.data.keyword.slportal}}
 ### 拡張ノード用のハードウェア
 {: #vs_vsphereclusteroverview-expansion-node-specs-hardware}
 
-[VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているハードウェア構成の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。
+[VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs)で示されているハードウェア構成の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。
 
 ### 拡張ノード用ネットワーキング
 {: #vs_vsphereclusteroverview-expansion-node-specs-network}
 
-[VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているネットワーキング構成の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。
+[VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs)で示されているネットワーキング構成の {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。
 
 ### 拡張ノード用 VMware コンポーネント
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* VMware vSphere Enterprise Plus 6.0u2 または 6.5u1 が適用された {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。  
-* [VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters)で示されているオプションの VMware コンポーネント。
+* VMware vSphere Enterprise Plus 6.7u1 または 6.5u2 が適用された {{site.data.keyword.cloud_notm}} ベア・メタル・サーバー 1 つ。  
+* [VMware vSphere on {{site.data.keyword.cloud_notm}} クラスターの技術仕様](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs)で示されているオプションの VMware コンポーネント。
 
 注文して {{site.data.keyword.cloud_notm}} アカウントに提供された ESXi サーバー、オプションの VMware コンポーネント、追加のハードウェアの管理は、必ず {{site.data.keyword.slportal}}のみから行う必要があります。 {{site.data.keyword.vmwaresolutions_short}} コンソールで新規クラスターを作成した後、コンソールに戻り、保存されている情報を使用して、その新規クラスターを拡張できます。 詳しくは、[既存の vSphere クラスターの拡張](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)を参照してください。
 {:important}

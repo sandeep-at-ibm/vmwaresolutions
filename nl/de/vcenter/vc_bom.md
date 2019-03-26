@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -37,13 +37,13 @@ Die folgende Tabelle enthält detaillierte Informationen zur Teileliste für die
 
 Tabelle 2. Teileliste für Softwarekomponenten in vCenter Server-Instanzen
 
-| Hersteller  | Komponente                      | Version       |
+| Hersteller  | Komponente                      | Version    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.5 Update P3 (Build 6.5.0-10884925) |
-| VMware       | vCenter Server Appliance        | 6.5 Update 2d (Build 6.5.0-10964411) |
-| VMware       | Platform Services Controller    | 6.5 Update 2d (Build 6.5.0-10964411) |
-| VMware       | vSAN                            | 6.6.1        |
-| VMware       | NSX for vSphere                 | 6.4.1        |
+| VMware       | vSphere ESXi                    | 6.7 Update 1 (Build 6.7.0-11675023) oder <br/>6.5 Update 2 (Build 6.5.0-11925212) |
+| VMware       | vCenter Server Appliance        | 6.7 Update 1 (Build 6.7.0-10244745) oder <br/>6.5 Update 2d (Build 6.5.0-10964411) |
+| VMware       | Platform Services Controller    | 6.7 Update 1 (Build 6.7.0-10244745) oder <br/>6.5 Update 2d (Build 6.5.0-10964411) |
+| VMware       | vSAN                            | 6.7 Update 1 oder <br/>6.6.1       |
+| VMware       | NSX for vSphere                 | 6.4.4 (Build 11197766)    |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
 VMware vSAN ist eine optionale Komponente.
@@ -138,6 +138,6 @@ Führen Sie zum Aktualisieren der MTU-Einstellung für den öffentlichen Switch 
 * [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
 * [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [vCenter Server-Instanzen planen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ FortiGate Security Appliance on {{site.data.keyword.cloud}} サービスでは�
 {:note}
 
 ## FortiGate Security Appliance on IBM Cloud の技術仕様
-{: #technical-specifications-for-fortigate-security-appliance-on-ibm-cloud}
+{: #fsa_considerations-specs}
 
 以下のコンポーネントが注文され、FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 

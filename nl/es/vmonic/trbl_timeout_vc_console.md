@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -26,8 +26,8 @@ Utilice los pasos siguientes para investigar y solucionar el problema.
 1. Asegúrese de haber seguido los pasos de la ayuda contextual que se muestra cuando mueve el puntero del ratón sobre el botón de la **consola de vCenter**. Por su comodidad, estos pasos también se muestran de la siguiente manera:   
    1. Instale el plug-in Adobe Flash Player para su navegador.   
    2. Cree una contraseña de VPN desde el {{site.data.keyword.slportal_full}}.    
-   3. Inicie una sesión en el portal de VPN del centro de datos utilizando las credenciales de VPN de la infraestructura {{site.data.keyword.cloud_notm}}.    
-   4. Añada la correlación entre dirección IP y nombre de host de PSC (Platform Services Controller) al archivo hosts con el siguiente formato:
+   3. [Inicie una sesión en la VPN del centro de datos](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#login-to-the-vpn) utilizando las credenciales de VPN de la infraestructura {{site.data.keyword.cloud_notm}}.    
+   4. Añada la correlación entre dirección IP y nombre de host de PSC (Platform Services Controller) al archivo de host desde el sistema local. Utilice el formato siguiente:
 
       ```javascript
       IPAddress              HostName

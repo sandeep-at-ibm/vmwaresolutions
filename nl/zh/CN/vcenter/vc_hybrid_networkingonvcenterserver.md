@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -19,15 +19,17 @@ lastupdated: "2019-02-14"
 {: #vc_hybrid_networkingonvcenterserver-networking-components}
 {: faq}
 
-要查看 vCenter Server with Hybridity Bundle 实例中包含的联网组件，请参阅 [vCenter Server with Hybridity Bundle 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)。
+要查看 vCenter Server with Hybridity Bundle 实例中包含的联网组件，请参阅 [vCenter Server with Hybridity Bundle 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs)。
 
 ## 防火墙注意事项
 {: #vc_hybrid_networkingonvcenterserver-firewall-considerations}
+{: faq}
 
 如果在使用防火墙，那么必须针对来自 {{site.data.keyword.IBM}} CloudDriver 虚拟服务器实例 (VSI) 和 SDDC Manager 虚拟机 (VM) 的所有通信配置规则。这些规则必须允许所有协议在 IP 地址 `10.0.0.0/8` 和 `161.26.0.0/16` 上进行通信。此类防火墙的示例为 NSX 分布式防火墙 (DFW) 或 Vyatta 防火墙。
 
 ## 将 NSX 与虚拟机配合使用
 {: #vc_hybrid_networkingonvcenterserver-using-nsx-with-vm}
+{: faq}
 
 在 vCenter Server 实例部署期间，将在该实例中订购、安装、许可和配置 VMware NSX。此外，还会设置 NSX Manager、NSX Controller 和 NSX 传输区域，并且每个 ESXi 服务器都会配置有 NSX 组件。
 
@@ -35,6 +37,7 @@ lastupdated: "2019-02-14"
 
 ## 更改 NSX 组件密码时的注意事项
 {: #vc_hybrid_networkingonvcenterserver-change-nsx-component-password-considerations}
+{: faq}
 
 在更改 NSX Manager、NSX Controller 和 NSX Edge 的密码之前，请查看以下注意事项：
 * 不要更改 NSX Manager 的密码，此密码可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台中实例的**摘要**页面上找到。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -67,7 +67,7 @@ Para usuários do Parceiro de Negócios IBM, a opção Bring Your Own License (B
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 Se você não for um Parceiro de Negócios, será possível selecionar os componentes a seguir para seu cluster do vSphere:
-* VMware vSphere Enterprise Plus
+* VMware vSphere Enterprise Plus 6.7 U1 ou 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -270,7 +270,7 @@ Com base em suas configurações, o custo estimado é gerado instantaneamente e 
    1. Selecione o {{site.data.keyword.CloudDataCent_notm}} para hospedar o cluster.
    2. Selecione a configuração do Bare Metal Server.
       * Ao selecionar **Skylake** ou **Broadwell**, especifique o modelo de CPU e o tamanho da RAM.
-      * Ao selecionar **Certificado por SAP**, escolha o modelo de CPU.
+      * Quando você selecionar **Certificado pelo SAP**, escolha uma das configurações pré-configuradas.
    3. Especifique o número de Bare Metal Servers.
 6. Se você selecionou o componente **VMware vSAN**, conclua a configuração de armazenamento vSAN. Especifique os tipos de disco para os discos de capacidade e de cache, além do número de discos. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
 7. Conclua as configurações da interface de rede:
@@ -294,7 +294,7 @@ Se você salvou a configuração de cluster como um modelo, obterá uma notifica
 
 Se tiver feito um pedido, a implementação do cluster será iniciada automaticamente e você receberá uma confirmação por e-mail de que o pedido está sendo processado. Quando o cluster estiver pronto para usar, você será notificado por e-mail.
 
-Os clusters do vSphere, ao contrário das instâncias do vCenter Server e do Cloud Foundation, não são exibidos na página **Instâncias implementadas**.
+Os clusters do vSphere, ao contrário das instâncias do servidor vCenter e do Cloud Foundation, não são exibidos na página **Recursos**.
 {:note}
 
 ## Links relacionados

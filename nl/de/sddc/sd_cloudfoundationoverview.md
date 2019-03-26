@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-14"
 # Übersicht über Cloud Foundation
 {: #sd_cloudfoundationoverview}
 
-Wenn Sie VMware Cloud Foundation on {{site.data.keyword.cloud}} bestellen, wird automatisch eine vollständige VMware-Umgebung bereitgestellt. Die Basisbereitstellung besteht aus vier {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen mit vorinstalliertem VMware Cloud Foundation-Stack, deren Konfiguration eine einheitliche Plattform für SDDC (Software-Defined Data Center, softwaredefiniertes Rechenzentrum) bereitstellt. Cloud Foundation integriert nativ VMware vSphere, VMware NSX sowie VMware Virtual SAN und seine Architektur basiert auf VMware-geprüften Designs.
+Die Basisbereitstellung von VMware Cloud Foundation on {{site.data.keyword.cloud}} besteht aus vier {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen mit vorinstalliertem VMware Cloud Foundation-Stack, deren Konfiguration eine einheitliche Plattform für SDDC (Software-Defined Data Center, softwaredefiniertes Rechenzentrum) bereitstellt. Cloud Foundation integriert nativ VMware vSphere, VMware NSX sowie VMware Virtual SAN und seine Architektur basiert auf VMware-geprüften Designs.
 
 ## Cloud Foundation-Architektur
 {: #sd_cloudfoundationoverview-archi}
@@ -49,7 +49,7 @@ In der {{site.data.keyword.vmwaresolutions_short}}-Konsole können Sie die Kapaz
 Weitere Informationen zur Architektur enthält der Abschnitt [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Technische Spezifikationen für Cloud Foundation-Instanzen
-{: #technical-specifications-for-cloud-foundation-instances}
+{: #sd_cloudfoundationoverview-specs}
 
 Ihre Cloud Foundation-Instanz enthält die folgenden Komponenten.
 
@@ -59,7 +59,7 @@ Die für Hardware, Netzbetrieb, virtuelle Maschinen und Speicher anfallenden Geb
 ### Bare Metal Server
 {: #sd_cloudfoundationoverview-bare-metal}
 
-Sie können {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen mit einer der folgenden Konfigurationen bestellen:
+Ihre Instanz kann {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} mit einer der folgenden Konfigurationen beinhalten: 
 *  **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.   
 *  **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600/E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 
@@ -69,7 +69,7 @@ Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration vier {{si
 ### Vernetzung
 {: #sd_cloudfoundationoverview-networking}
 
-Die folgenden Netzkomponenten werden bestellt:
+Ihre Instanz enthält die folgenden Netzkomponenten: 
 * 10-Gbps-Uplinks für öffentliche und private Netze
 * 3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
 * Sicheres VMware NSX Edge Services Gateway (ESG) für die Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Über dieses ESG kommunizieren virtuelle IBM Management-Maschinen mit bestimmten externen IBM Managementkomponenten, die mit der Automatisierung zusammenhängen. Weitere Information finden Sie im Abschnitt [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -82,7 +82,7 @@ Die folgenden Netzkomponenten werden bestellt:
 ### Virtual Server-Instanzen
 {: #sd_cloudfoundationoverview-vsi}
 
-Die folgenden VSIs (Virtual Server-Instanzen) werden bestellt:
+Ihre Instanz enthält die folgenden VSIs (Virtual Server-Instanzen): 
 * 1 VSI für Microsoft Active Directory (AD) und DNS-Services Die virtuelle Serverinstanz (VSI) ist für die Unterstützung von Konfigurationen mit mehreren Standorten erforderlich. Spezifikation dieser VSI: Windows 2012 R2 (8 GB RAM / 2 CPU-Kerne / 100 GB Plattenspeicher / Duale 1-Gbps-Uplinks für private Netze).
 * 1 VSI für IBM CloudBuilder (wird nach vollständiger Bereitstellung der Instanz beendet).
 * (Bei Bestellung von Veeam on {{site.data.keyword.cloud_notm}}) 1 VSI für den Veeam-Sicherungsservice wird bestellt.
@@ -90,7 +90,7 @@ Die folgenden VSIs (Virtual Server-Instanzen) werden bestellt:
 ### Speicher
 {: #sd_cloudfoundationoverview-storage}
 
-Abhängig von der von Ihnen ausgewählten {{site.data.keyword.baremetal_short}}-Konfiguration wird der folgende Speicher bestellt:
+Ihre Instanz kann abhängig von der ausgewählten {{site.data.keyword.baremetal_short}}-Konfiguration den folgenden Speicher enthalten: 
 * 2 1-TB-SATA-Bootlaufwerke
 * 2 Solid-State-Cacheplatten mit 960 GB
 * 1 RAID-Plattencontroller
@@ -141,8 +141,6 @@ Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in 
 {: #sd_cloudfoundationoverview-related}
 
 * [Softwareteileliste für Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
-* [Cloud Foundation-Instanzen planen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
-* [Cloud Foundation-Instanzen bestellen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [VMware vSphere Documentation Center](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [VMware NSX 6 Documentation Center](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [Häufig gestellte Fragen zur Kompatibilität von EVC und CPU](https://kb.vmware.com/s/article/1005764)

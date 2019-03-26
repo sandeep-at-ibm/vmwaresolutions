@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -59,9 +59,9 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 아키텍처에 대한 자세한 정보는 [{{site.data.keyword.vmwaresolutions_short}} 아키텍처 참조](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)를 참조하십시오.
 
 ## vCenter Server 인스턴스의 기술 스펙
-{: #technical-specifications-for-vcenter-server-instances}
+{: #vc_vcenterserveroverview-specs}
 
-다음 컴포넌트는 vCenter Server 인스턴스에 포함됩니다.
+다음 컴포넌트가 vCenter Server 인스턴스에 포함됩니다.
 
 표준화된 하드웨어 구성의 가용성 및 가격은 배치에 선택된 {{site.data.keyword.CloudDataCent_notm}}에 따라 달라질 수 있습니다.
 {:note}
@@ -70,9 +70,9 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 {: #vc_vcenterserveroverview-bare-metal}
 
 다음 구성 중 하나로 세 개 이상의 {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
-* **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)  
+* **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)
 * **SAP-certified**: 선택한 CPU 모델을 사용하는 Intel Skylake 또는 Intel Broadwell 세대 서버(Intel Xeon 6140/E5-2690/E7-8890 시리즈)
-* **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 Intel Broadwell 세대 서버(IntelXeon E5-2600/E7-4800 시리즈) 
+* **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 Intel Broadwell 세대 서버(IntelXeon E5-2600/E7-4800 시리즈)
 
      vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
 {:note}
@@ -125,9 +125,12 @@ vSAN 옵션은 디스크 유형, 크기 및 양에 대한 다양한 옵션을 �
 {: #vc_vcenterserveroverview-nfs-storage}
 
 NFS 옵션은 크기 및 성능에 대한 다양한 옵션을 포함하여 워크로드의 사용자 정의된 공유 파일 스토리지를 제공합니다.
-* 크기: 20 - 12000GB
+* 크기: 20GB - 24TB
 * 성능: 0.25, 2, 4 또는 10IOPS/GB
 * 파일 공유의 개별 구성
+
+  10 IOPS/GB 성능 레벨은 파일 공유당 4TB의 최대 용량으로 제한됩니다.
+  {:note}
 
 NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 및 4 IOPS/GB 파일 공유가 주문됩니다.
 
@@ -139,7 +142,7 @@ NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 
 ### 라이센스(IBM 제공 또는 BYOL) 및 요금
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 또는 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4
 * (vSAN 클러스터의 경우) VMware vSAN Advanced 또는 Enterprise 6.6
@@ -148,17 +151,17 @@ NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 
 ## vCenter Server 확장 노드의 기술 스펙
 {: #vc_vcenterserveroverview-expansion-node-specs}
 
-각 vCenter Server 확장 노드가 배치되고 {{site.data.keyword.cloud_notm}} 계정에서 다음 컴포넌트에 대한 비용이 발생합니다.
+각 vCenter Server 확장 노드가 {{site.data.keyword.cloud_notm}} 계정에서 다음 컴포넌트를 배치하고 이에 대한 비용을 부과합니다.
 
 ### 확장 노드를 위한 하드웨어
 {: #vc_vcenterserveroverview-expansion-node-hardware}
 
-[vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)에 제시된 구성을 지닌 하나의 Bare Metal Server.
+[vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)에 제시된 구성을 지닌 하나의 Bare Metal Server.
 
 ### 확장 노드의 라이센스 및 요금
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* 하나의 VMware vSphere Enterprise Plus 6.5u1
+* 하나의 VMware vSphere Enterprise Plus 6.5u2 또는 6.7u1
 * 하나의 VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4
 * 하나의 지원 및 서비스 요금
 * (vSAN 클러스터의 경우) VMware vSAN Advanced 또는 Enterprise 6.6
@@ -179,3 +182,4 @@ NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 
 * [vCenter Server 인스턴스 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [{{site.data.keyword.cloud_notm}} file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [파일 공유 용량 확장](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

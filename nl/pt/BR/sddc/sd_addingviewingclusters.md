@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Incluindo, visualizando e excluindo clusters para instâncias do Cloud Foundation
-{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
+{: #sd_addingviewingclusters}
 
 Os servidores ESXi que você configurou quando pediu uma instância são agrupados em um cluster padrão. O nome do cluster padrão é:
 * Para instâncias que foram implementadas na V2.1 ou liberações mais recentes: **MGMT-Cluster-`<subdomain_label>`**
@@ -111,7 +111,7 @@ Para a configuração **Skylake** e **Broadwell** do Bare Metal Server, é poss�
 ## Procedimento para incluir clusters em instâncias do Cloud Foundation
 {: #sd_addingviewingclusters-adding-procedure}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do Cloud Foundation**, clique na instância na qual você deseja incluir clusters.
 
    Assegure-se de que a instância esteja no status **Pronta para uso**. Caso contrário, não será possível incluir clusters na instância.
@@ -147,7 +147,7 @@ Não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar f
 ## Procedimento para visualizar clusters em instâncias do Cloud Foundation
 {: #sd_addingviewingclusters-viewing-procedure}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do Cloud Foundation**, clique em uma instância para visualizar os clusters contidos.
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda. Na tabela **CLUSTERS**, visualize o resumo sobre os clusters:
    * **Nome**: o nome do cluster.
@@ -218,7 +218,7 @@ Talvez você queira excluir um cluster de uma instância quando ela não for mai
 ## Procedimento para excluir clusters de instâncias do Cloud Foundation
 {: #sd_addingviewingclusters-deleting-procedure}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do Cloud Foundation**, clique na instância da qual você deseja excluir clusters.
 
    Assegure-se de que a instância esteja no status **Pronta para uso**. Caso contrário, não será possível excluir clusters da instância.

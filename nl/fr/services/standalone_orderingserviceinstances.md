@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ Assurez-vous que :
 ## Procédure pour commander des instances VMware HCX on IBM Cloud locales
 {: #standalone_orderingserviceinstances-procedure}
 
-1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Faites défiler l'écran vers le tableau **Instances HCX locales** et cliquez sur **Mettre à disposition un nouvel élément**.
 3. Renseignez la zone **Nom de l'instance locale**.
 4. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant de commander l'instance.

@@ -4,20 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
 # Planification de prédéploiement
 {: #vcshcx-planning}
 
-Une grande partie du temps consacré au déploiement du HCX correspond à la phase de pré-déploiement.
-Alors que les projets de migration des systèmes d'information prennent généralement plusieurs mois voire plusieurs années, HCX permet des migrations et une connectivité du réseau vers le cloud immédiatement après le déploiement. Etant donné que le déploiement de HCX pour un client au niveau de l'entreprise implique généralement des équipes de sécurité, de réseau, de stockage et d'infrastructure vSphere, il est logique d'impliquer ces équipes dans la preuve de concept si possible. Une gestion de projet efficace et l'inclusion précoce des parties prenantes sont essentielles pour assurer la rapidité du déploiement et de l'exploitation du HCX.
+Une grande partie du temps consacré au déploiement du HCX correspond à la phase de pré-déploiement. Alors que les projets de migration des systèmes d'information prennent généralement plusieurs mois voire plusieurs années, HCX permet une migration très rapide et un début de connectivité du réseau vers le cloud immédiatement après le déploiement. 
+
+Etant donné que le déploiement de HCX pour un client au niveau de l'entreprise implique généralement des équipes de sécurité, de réseau, de stockage et d'infrastructure vSphere, il est logique d'impliquer ces équipes dans la preuve de concept si possible. Une gestion de projet efficace et l'inclusion précoce des parties prenantes sont essentielles pour assurer la rapidité du déploiement et de l'exploitation du HCX.
 
 ## Eviter la paralysie d'analyse
 {: #vcshcx-planning-avoiding}
 
-La plupart des obstacles et du temps nécessaire à la migration d'une machine virtuelle ou d'un groupe de machines virtuelles sont dus à la nécessité de modifier certaines parties de l'environnement d'application, à la conception de ces changements et à la programmation des temps d'arrêt nécessaires pour effectuer ces changements. Une fois ces changements apportés, la migration devient difficile à annuler, ce qui accentue la paralysie de l'analyse. Essayer de saisir tous les aspects de la migration, de coordonner les différentes équipes et de changer les principaux intervenants dans les délais requis pour finaliser le plan peut retarder ou contraindre la réalisation du projet.
+La plupart des obstacles et du temps nécessaire à la migration d'une machine virtuelle ou d'un groupe de machines virtuelles sont dus à la nécessité de modifier certaines parties de l'environnement d'application, à la conception de ces changements et à la programmation des temps d'arrêt nécessaires pour effectuer ces changements. Une fois ces changements apportés, la migration devient difficile à annuler, ce qui accentue la paralysie de l'analyse. Essayer de saisir tous les aspects de la migration, de coordonner les différentes équipes et de changer les principaux intervenants peut retarder la réalisation du projet.
 
 HCX permet la migration croisée d'instances vSphere d'une machine virtuelle ou d'un groupe de machines virtuelles qui représentent une application composite partielle ou complète, sans aucune modification de l'application. Pour cette raison, abandonner une migration signifie déplacer les machines virtuelles vers l'arrière ou redéployer les réseaux. Cela élimine la nécessité d'une grande partie de la planification de la migration et permet un certain parallélisme dans le processus de planification. Après avoir sélectionné les applications à déplacer et créé une conception de réseau de haut niveau, les applications peuvent commencer la migration avec une configuration minimale sur l'instance de cloud pendant que la connectivité et la conception finales du réseau sont élaborées.
 
@@ -26,9 +27,8 @@ HCX permet la migration croisée d'instances vSphere d'une machine virtuelle ou 
 
 Les composants d'extension du réseau de la flotte HCX sont très stables. Chez un client particulier ayant plus de 20 VLANs répartis dans le {{site.data.keyword.cloud}} sur un réseau WAN de 1 Gbit/s partagé avec d'autres tunnels de trafic et de migration HCX, il n'y a aucun problème applicatif attribué au réseau.
 Les liaisons réseau ont une durée de vie supérieure à 6 mois de cette façon.
-D'autres réseaux étendus ont été ajoutés et supprimés sans problème.
-Le choix d'un {{site.data.keyword.CloudDataCent_notm}} à proximité immédiate (latence < 6 ms pour ce client particulier) joue également un rôle dans la stabilité réseau d'un réseau étendu. Laisser les réseaux étendus à long terme ne devrait pas être un facteur négatif dans votre conception étant donné que vous disposez d'une bande passante suffisante et d'une latence suffisamment faible pour vos applications.
 
+D'autres réseaux étendus ont été ajoutés et supprimés sans problème. Le choix d'un {{site.data.keyword.CloudDataCent_notm}} à proximité immédiate (latence < 6 ms pour ce client particulier) joue également un rôle dans la stabilité réseau d'un réseau étendu. Laisser les réseaux étendus à long terme ne devrait pas être un facteur négatif dans votre conception étant donné que vous disposez d'une bande passante suffisante et d'une latence suffisamment faible pour vos applications.
 
 ## Cycle de vie de la migration
 {: #vcshcx-planning-mig-lifecycle}
@@ -38,11 +38,10 @@ Les sections suivantes décrivent les phases d'un cycle de migration HCX typique
 ## Inventaire vSphere
 {: #vcshcx-planning-vsphere-planning}
 
-- Utilisez une application telle que [RVTOOLS](https://www.robware.net/rvtools/) pour télécharger l'inventaire du ou des vCenter(s) source sous forme de feuille de calcul.
-- Evaluation grossière des machines virtuelles au sein d'une application à migrer.
-Ce processus implique la compréhension des machines virtuelles qui participent à une application, sans entrer dans les détails.
-- Si vous prévoyez de migrer de nombreuses machines virtuelles et que la bande passante réseau est limitée entre les sites source et cloud, regroupez les machines virtuelles par VLAN ou VXLAN si NSX est utilisé à la source. Cela permet un plan de migration HCX en cascade où les groupes de machines virtuelles par VLAN sont migrés et les réseaux L2 sur lesquels ils résident ne sont étendus que jusqu'au point où les VLAN sont évacués. Cela signifie que le groupe initial de réseaux étendus L2 connexes ne peut être libéré que lorsque la conception du réseau côté cloud est finalisée et déployée. Le déblocage implique de faire basculer le trafic VXLAN particulier vers l'infrastructure NSX de l'instance de cloud.
+- Evaluation grossière des machines virtuelles au sein d'une application à migrer. Ce processus implique la compréhension des machines virtuelles qui participent à une application, sans entrer dans les détails.
+- Si vous prévoyez de migrer de nombreuses machines virtuelles et que la bande passante réseau est limitée entre les sites source et cloud, regroupez les machines virtuelles par VLAN ou VXLAN si NSX est utilisé à la source. Cela permet un plan de migration HCX en cascade où les groupes de machines virtuelles par VLAN sont migrés et les réseaux L2 sur lesquels ils résident ne sont étendus que jusqu'au point où les VLAN sont libérés. 
 
+Cela signifie que le groupe initial de réseaux étendus L2 connexes ne peut être libéré que lorsque la conception du réseau côté cloud est finalisée et déployée. Le déblocage implique de faire basculer le trafic VXLAN particulier vers l'infrastructure NSX de l'instance de cloud.
 
 ## Configuration réseau de base
 {: #vcshcx-planning-baseline-net-config}
@@ -63,7 +62,6 @@ Les tests pré-implémentation consistent à effectuer une migration HCX avec la
 {: #vcshcx-planning-mig-non-prod-apps}
 
 A ce stade, la migration des machines virtuelles commence avec les vagues prévues de machines virtuelles moins critiques. Le développement, les tests, etc., utilisent la connectivité Internet pour la migration et le trafic L2 étendu.
-
 
 ## Début de la conception et de l'implantation du réseau cloud
 {: #vcshcx-planning-cloud-net-begins}
@@ -88,7 +86,7 @@ Les machines virtuelles avec des VMDK partagés en mode d'écriture multiple tel
 ## Basculement du réseau
 {: #vcshcx-planning-net-swing}
 
-Un basculement du réseau se produit une fois que l'évacuation des machines virtuelles des réseaux côté source est terminée et que la conception et l'implémentation du réseau est terminée côté cloud. Configurer HCX pour débloquer les réseaux liés aux machines virtuelles achevées dans les vagues de migration, permet aux machines virtuelles migrées de router le trafic réseau en utilisant l'infrastructure NSX côté cloud.
+Un basculement du réseau se produit une fois que l'évacuation des machines virtuelles des réseaux côté source est terminée et que la conception et l'implémentation du réseau est terminée côté cloud. Configurer HCX pour débloquer les réseaux liés aux machines virtuelles achevées dans les vagues de migration permet aux machines virtuelles migrées de router le trafic réseau en utilisant l'infrastructure NSX côté cloud.
 
 ## Plateformes client prises en charge
 {: #vcshcx-planning-client-platforms}

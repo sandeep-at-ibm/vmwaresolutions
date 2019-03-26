@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-14"
 # vCenter Server 概觀
 {: #vc_vcenterserveroverview}
 
-VMware vCenter Server on {{site.data.keyword.cloud}} 是一個提供 VMware vSphere 堆疊作為服務的受管理專用雲。VMware 環境建置在至少兩部（建議三部）{{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 上，提供共用網路連接儲存空間及專用軟體定義儲存空間選項，而且它能自動部署及配置容易管理的邏輯邊緣防火牆（其採用 VMware NSX 技術）。
+VMware vCenter Server on {{site.data.keyword.cloud}} 是一個提供 VMware vSphere 堆疊作為服務的受管理專用雲。VMware 環境建置在至少兩部（建議三部）{{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 上，提供共用網路連接儲存空間及專用軟體定義儲存空間選項，而且它能自動部署及配置容易管理的邏輯 Edge 防火牆（其採用 VMware NSX 技術）。
 
 在許多情況下，整個環境可以在一天內佈建完成，且裸機基礎架構可以快速而彈性地擴充運算容量，並依需要擴增及縮減。
 
@@ -59,7 +59,7 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 如需架構的相關資訊，請參閱 [{{site.data.keyword.vmwaresolutions_short}} 架構參考資料](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)。
 
 ## vCenter Server 實例的技術規格
-{: #technical-specifications-for-vcenter-server-instances}
+{: #vc_vcenterserveroverview-specs}
 
 下列元件已包含在 vCenter Server 實例中。
 
@@ -69,9 +69,9 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 {: #vc_vcenterserveroverview-bare-metal}
 
 您可以使用下列其中一項配置，訂購三部以上的 {{site.data.keyword.baremetal_short}}：
-* **Skylake**：2-CPU Intel Skylake 產生伺服器（Intel Xeon 4100/5100/6100 系列），搭配您選取的 CPU 型號及 RAM 大小。  
+* **Skylake**：2-CPU Intel Skylake 產生伺服器（Intel Xeon 4100/5100/6100 系列），搭配您選取的 CPU 型號及 RAM 大小。
 * **SAP 認證**：Intel Skylake 或 Intel Broadwell 產生伺服器（Intel Xeon 6140/E5-2690/E7-8890 系列），搭配您選取的 CPU 型號。
-* **Broadwell**：2-CPU Intel Broadwell 產生伺服器（Intel Xeon E5-2600/E7-4800 系列），搭配您選取的 CPU 型號及 RAM 大小。 
+* **Broadwell**：2-CPU Intel Broadwell 產生伺服器（Intel Xeon E5-2600/E7-4800 系列），搭配您選取的 CPU 型號及 RAM 大小。
 
 如果您計劃使用 vSAN 儲存空間，則配置需要四個 {{site.data.keyword.baremetal_short}}。{:note}
 
@@ -122,9 +122,11 @@ vSAN 選項提供自訂的配置，以及磁碟類型、大小和數量的各種
 {: #vc_vcenterserveroverview-nfs-storage}
 
 NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及大小和效能的各種選項：
-* 大小：20 到 12000 GB
+* 大小：20 GB 到 24 TB
 * 效能：0.25、2、4 或 10 IOPS/GB。
 * 檔案共用的個別配置。
+
+  10 IOPS/GB 效能層次限制為每個檔案共用的容量上限為 4 TB。{:note}
 
 如果您選擇 NFS 選項，則會訂購用於管理元件的一個 2 TB 及 4 IOPS/GB 檔案共用。
 
@@ -136,7 +138,7 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 ### 授權（IBM 提供或 BOYL）與費用
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 或 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6
@@ -145,17 +147,17 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 ## vCenter Server 擴充節點的技術規格
 {: #vc_vcenterserveroverview-expansion-node-specs}
 
-每一個 vCenter Server 擴充節點都會將下列元件部署在{{site.data.keyword.cloud_notm}} 帳戶中並收取費用。
+每個 vCenter Server 擴充節點會部署下列節點，並在您的 {{site.data.keyword.cloud_notm}} 帳戶中產生費用。
 
 ### 擴充節點的硬體
 {: #vc_vcenterserveroverview-expansion-node-hardware}
 
-一部具有 [vCenter Server 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)中所呈現之配置的 Bare Metal Server。
+一部具有 [vCenter Server 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)中所呈現之配置的 Bare Metal Server。
 
 ### 擴充節點的授權與費用
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* 一個 VMware vSphere Enterprise Plus 6.5u1
+* 一個 VMware vSphere Enterprise Plus 6.5u2 或 6.7u1
 * 一個 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * 一筆支援與服務費用
 * （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6
@@ -174,3 +176,4 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 * [規劃 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [{{site.data.keyword.cloud_notm}} file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [擴充檔案共用容量](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

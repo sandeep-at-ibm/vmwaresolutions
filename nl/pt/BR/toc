@@ -11,6 +11,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Notas sobre a liberação
+        vmonic/relnotes_v29.md
         vmonic/relnotes_v28.md
         vmonic/relnotes_v27.md
         vmonic/relnotes_v26.md
@@ -69,7 +70,7 @@ IBM Cloud for VMware Solutions
         vcenter/vc_hybrid_planning.md
         vcenter/vc_hybrid_networkingonvcenterserver.md
         vcenter/vc_hybrid_multisite.md
-        vcenter/vc_compl_info.md
+        vcenter/vc_hybrid_compl_info.md
         vcenter/vc_hybrid_orderinginstance.md
         vcenter/vc_hybrid_addingviewingclusters.md
         vcenter/vc_hybrid_addingremovingservers.md
@@ -82,6 +83,16 @@ IBM Cloud for VMware Solutions
         vcenter/vc_hybrid_deletinginstance_multi.md
 
     {: .topicgroup}
+    vCenter Server on IBM Cloud com NSX-T
+        vcenter/vc_nsx-t_overview.md
+        vcenter/vc_nsx-t_networkingonvcenterserver.md
+        vcenter/vc_nsx-t_esg_config.md
+        vcenter/vc_nsx-t_orderinginstance.md
+        vcenter/vc_nsx-t_addingviewingclusters.md
+        vcenter/vc_nsx-t_addingremovingservers.md
+        vcenter/vc_nsx-t_deletinginstance.md
+
+    {: .topicgroup}
     Single-node Trial for Migration and App Modernization
         vcenter/cloud_modern_bundle_overview.md
         vcenter/cloud_modern_bundle_orderinginstance.md
@@ -90,16 +101,13 @@ IBM Cloud for VMware Solutions
     Cloud Foundation on IBM Cloud
         sddc/sd_cloudfoundationoverview.md
         sddc/sd_bom.md
-        sddc/sd_planning.md
         sddc/sd_networkingoncloudfoundation.md
         sddc/sd_multisite.md
-        sddc/sd_orderinginstance.md
         sddc/sd_addingviewingclusters.md
         sddc/sd_addingremovingservers.md
         sddc/sd_applyingupdates.md
         sddc/sd_addingremovingservices.md
         sddc/sd_viewinginstances.md
-        sddc/sd_addinstancetousraccount.md
         sddc/sd_deletinginstance.md
         sddc/sd_deletinginstance_multi.md
 
@@ -121,6 +129,15 @@ IBM Cloud for VMware Solutions
         netapp/np_viewinginstances.md
         netapp/np_addinstancetousraccount.md
         netapp/np_deletinginstance.md
+
+    {: .topicgroup}
+    Caveonix RiskForesight on IBM Cloud
+        services/caveonix_considerations.md
+        services/caveonix_ordering.md
+        services/managingcaveonix.md
+        services/caveonix_license_considerations.md
+        services/caveonix_license_ordering.md
+        services/caveonix_license_managing.md
 
     {: .topicgroup}
     F5 on IBM Cloud
@@ -210,8 +227,6 @@ IBM Cloud for VMware Solutions
     {: .topicgroup}
     Serviços gerenciados
         services/managing_imi.md
-        services/managing_veeam_services.md
-        services/managing_zerto_services.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -224,27 +239,23 @@ IBM Cloud for VMware Solutions
         vmonic/faq_byol.md
         vcenter/vcenter_chg_impact.md
         sddc/cf_chg_impact.md
-        vcenter/vc_networkingonvcenterserver.md
-        vcenter/vc_hybrid_networkingonvcenterserver.md
-        sddc/sd_networkingoncloudfoundation.md
         vmonic/trbl_limitations.md
 
     {: .topicgroup}
     Resolução de problemas
         vmonic/trbl_timeout_vc_console.md
         vmonic/trbl_sec_inst_not_visible.md
-        vmonic/trbl_cfupdatesfail.md
         vmonic/trbl_add_ha_cluster_config.md
         vmonic/trbl_no_zerto_vra.md
         vmonic/trbl_host_displays_warning_msg.md
         vmonic/trbl_deploy_ovf.md
         vmonic/trbl_vsan_alerts.md
         vmonic/getting-started.md
-        vmonic/trbl_fix_spectre.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     vmonic/at-events.md
+    [Referência de API](https://console.bluemix.net/apidocs/vmware-solutions)
 
     {: .topicgroup}
     Arquitetura do IBM Cloud for VMware Solutions
@@ -318,7 +329,6 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Guia de rede do vCenter Server
-        archiref/vcs/vcs-hybridity-intro.md
         archiref/vcsnsxt/vcsnsxt-intro.md
         archiref/vcsnsxt/vcsnsxt-systemcontext.md
         archiref/vcsnsxt/vcsnsxt-appmod.md
@@ -334,7 +344,6 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Guia do vCenter Server e do IBM Cloud Private
-        archiref/vcs/vcs-hybridity-intro.md
         archiref/vcsicp/vcsicp-intro.md
         archiref/vcsicp/vcsicp-systemcontext.md
         archiref/vcsicp/vcsicp-appmod.md
@@ -348,7 +357,6 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Guia de serviço do vCenter Server e do IBM Kubernetes
-        archiref/vcs/vcs-hybridity-intro.md
         archiref/vcsiks/vcsiks-intro.md
         archiref/vcsiks/vcsiks-systemcontext.md
         archiref/vcsiks/vcsiks-appmod.md
@@ -358,8 +366,7 @@ IBM Cloud for VMware Solutions
         archiref/vcsiks/vcsiks-overview-network.md
 
     {: .topicgroup}
-    Guia do VMware and Skate Advisor Concept Car
-        archiref/vcs/vcs-hybridity-intro.md
+    Guia do VMware e do Skate Advisor Concept Car
         archiref/vcscar/vcscar-preface.md
         archiref/vcscar/vcscar-intro.md
         archiref/vcscar/vcscar-syscontext.md

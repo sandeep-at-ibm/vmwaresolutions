@@ -19,7 +19,7 @@ lastupdated: "2019-02-15"
 
 アプリケーション・モダナイゼーションの最大の課題は、マイグレーション、ネットワーキング、およびセキュリティーです。 vCenter Server、VMware Hybrid Cloud Extension (HCX)、VMware NSX、{{site.data.keyword.containerlong_notm}}、{{site.data.keyword.icpfull_notm}} を利用してこれらの課題をいくつか解決することができます。 以下のネットワーク・アーキテクチャーでは、Acme Skateboards 社を例として使用して、クラウド環境とオンプレミス環境に分かれたコンポーネントを接続する方法について説明します。
 
-[NSX-T プレビュー](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-techpreview)は、将来のリファレンス・アーキテクチャーで VMware NSX Transformers (NSX-T) を使用する方法を説明するためのテクノロジー・プレビューです。NSX-T は、異種のエンドポイントや技術スタックが混在したアプリケーション・フレームワークおよびアーキテクチャー向けに設計されています。 このような環境には、vSphere の他にも異種のハイパーバイザー、KVM、コンテナー、ベアメタルが存在することがあります。 NSX-T を使用すると、IT チームも開発チームも自分たちのアプリケーションに最適なテクノロジーを選択できます。 NSX-T は、ネットワーク・チームだけでなく開発組織も管理、運用、利用できるように設計されています。
+[NSX-T プレビュー](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-techpreview)は、将来のリファレンス・アーキテクチャーで VMware NSX Transformers (NSX-T) を使用する方法を説明するためのテクノロジー・プレビューです。 NSX-T は、異種のエンドポイントや技術スタックが混在したアプリケーション・フレームワークおよびアーキテクチャー向けに設計されています。 このような環境には、vSphere の他にも異種のハイパーバイザー、KVM、コンテナー、ベアメタルが存在することがあります。 NSX-T を使用すると、IT チームも開発チームも自分たちのアプリケーションに最適なテクノロジーを選択できます。 NSX-T は、ネットワーク・チームだけでなく開発組織も管理、運用、利用できるように設計されています。
 
 ## IBM Cloud でのアプリケーション・モダナイゼーション
 {: #vcsnsxt-intro-app-mod}

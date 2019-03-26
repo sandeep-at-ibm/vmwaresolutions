@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -48,7 +48,6 @@ lastupdated: "2019-02-14"
 | `vmware-solutions.notification.update` | <ul><li>接收到更新通知的要求。</li><li>已答覆更新通知的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>接收到清除安全資料的要求。</li><li>已答覆清除安全資料的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>接收到移轉至 bss 帳戶的要求。</li><li>已答覆移轉至 bss 帳戶的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-| `vmware-solutions.vcf.order`                 | <ul><li>接收到訂購 Cloud Foundation 實例的要求。</li><li>已答覆訂購 Cloud Foundation 實例的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 | `vmware-solutions.vcf.delete`                | <ul><li>接收到刪除 Cloud Foundation 實例的要求。</li><li>已答覆刪除 Cloud Foundation 實例的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 | `vmware-solutions.vcf.add_hosts`             | <ul><li>接收到將 ESXi 伺服器新增至 Cloud Foundation 實例的要求。</li><li>已答覆將 ESXi 伺服器新增至 Cloud Foundation 實例的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 | `vmware-solutions.vcf.remove_hosts`          | <ul><li>接收到從 Cloud Foundation 實例刪除 ESXi 伺服器的要求。</li><li>已答覆從 Cloud Foundation 實例刪除 ESXi 伺服器的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |

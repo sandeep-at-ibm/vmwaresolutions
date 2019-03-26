@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
 
 ---
 
@@ -46,22 +46,24 @@ lastupdated: "2019-02-14"
 |檢視密碼|需要此許可權，才能管理已訂購的 VSI。|
 |管理伺服器監視|下訂單不需要此許可權，但需要它才能擷取及驗證在實例中執行 VMware ESXi 伺服器的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 的監視狀態。|
 
-## 虛擬遞送及轉遞 (VRF) 需求
-{: #slaccountrequirement-vrf}
+## 已啟用具有服務端點的 VRF
+{: #slaccountrequirement-vrf-se}
 
-{{site.data.keyword.cloud_notm}} 基礎架構帳戶必須是 VRF 帳戶，或者，如果是非 VRF 帳戶，則必須已啟用 VLAN Spanning。如需將帳戶從非 VRF 轉換成 VRF 的相關資訊，請參閱 [VRF on IBM Cloud 概觀](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)。
+您的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須是已啟用「服務端點」的「虛擬遞送及轉遞 (VRF)」帳戶。如果您的帳戶為非 VRF，您必須轉換為 VRF 帳戶。此外，您必須啟用您的 VRF 帳戶，以使用「服務端點」。
 
-## 非 VRF 帳戶的 VLAN Spanning
-{: #slaccountrequirement-vlan-spanning}
+如需相關資訊，請參閱：
+* [VRF on IBM Cloud 概觀](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [啟用您的帳戶以使用服務端點](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
 
-如果您使用非 VRF {{site.data.keyword.cloud_notm}} 基礎架構帳戶，則必須啟用 VLAN Spanning。如果未對非 VRF 帳戶啟用 VLAN Spanning，則 VMware 虛擬化環境的各種元件可能無法彼此通訊。
+## VLAN Spanning 終止支援
+{: #slaccountrequirement-vlan-eos}
 
-若要在帳戶中啟用 VLAN Spanning，請參閱 [VLAN Spanning](/docs/infrastructure/vlans?topic=vlans-vlan-spanning){:new_window}。
+從 2019 年 8 月起，將不再支援 VLAN Spanning。在 2019 年 7 月底之前，您必須將您的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶轉換至 VRF 並啟用「服務端點」。
+{:important}
 
 ## 相關鏈結
 {: #slaccountrequirement-related}
 
-* [Cloud Foundation 實例的需求](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
 * [vCenter Server 實例的需求](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
 * [VRF on IBM Cloud 概觀](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

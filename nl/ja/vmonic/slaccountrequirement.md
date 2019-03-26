@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
 
 ---
 
@@ -47,22 +47,24 @@ lastupdated: "2019-02-14"
 | パスワードの表示 | この許可は注文した VSI を管理するために必要です。 |
 | サーバー・モニタリングの管理 | この権限は、注文を実行するときには不要ですが、インスタンス内で VMware ESXi サーバーを実行している {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}のモニタリング状況を取得して確認するときに必要です。 |
 
-## Virtual Routing and Forwarding (VRF) の要件
-{: #slaccountrequirement-vrf}
+## サービス・エンドポイントが有効になっている VRF
+{: #slaccountrequirement-vrf-se}
 
-{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、VRF アカウントでなければなりません。あるいは、非 VRF アカウントである場合、VLAN スパンニングが有効になっている必要があります。 非 VRF から VRF へのアカウントの変換について詳しくは、[IBM Cloud での VRF の概要](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)を参照してください。
+{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、サービス・エンドポイントが有効になっている Virtual Routing and Forwarding (VRF) アカウントである必要があります。アカウントが非 VRF である場合は、VRF アカウントに変換する必要があります。さらに、VRF アカウントでサービス・エンドポイントの使用を有効にする必要があります。
 
-## 非 VRF アカウントの VLAN スパンニング
-{: #slaccountrequirement-vlan-spanning}
+詳しくは、以下を参照してください。
+* [IBM Cloud での VRF の概要](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [サービス・エンドポイントを使用できるよう、ご使用のアカウントを有効にする](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
 
-非 VRF {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを使用する場合は、VLAN スパンニングを有効にする必要があります。 非 VRF アカウントの VLAN スパンニングを有効にしないと、VMware 仮想化環境のさまざまなコンポーネントが相互に通信できなくなる可能性があります。
+## VLAN スパンニングのサポート終了
+{: #slaccountrequirement-vlan-eos}
 
-アカウントの VLAN スパンニングを有効にするには、[VLAN スパンニング](/docs/infrastructure/vlans?topic=vlans-vlan-spanning){:new_window}を参照してください。
+2019 年 8 月以降、VLAN スパンニングはサポートされなくなります。2019 年 7 月末までに、ご使用の {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを VRF に変換し、サービス・エンドポイントを有効にする必要があります。
+{:important}
 
 ## 関連リンク
 {: #slaccountrequirement-related}
 
-* [Cloud Foundation インスタンスの要件](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
 * [vCenter Server インスタンスの要件](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [ユーザー・アカウントと設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
 * [IBM Cloud での VRF の概要](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

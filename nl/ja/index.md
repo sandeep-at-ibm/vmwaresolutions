@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -55,7 +55,7 @@ Microsoft Internet Explorer はサポートされていません。
    </tr>
    <tr>
       <td>IBMid</td>
-      <td>**IBMid** を使用すると、1 つのログイン・ユーザー名を、{{site.data.keyword.cloud_notm}} など、お客様が使用する IBM のすべての製品およびサービスに使用できます。 {{site.data.keyword.vmwaresolutions_short}} は、{{site.data.keyword.cloud_notm}} カタログの中でインフラストラクチャー・ソリューションとして提供されています。 {{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスするには、**IBMid** が必要です。<br><br>**IBMid** を使用して {{site.data.keyword.vmwaresolutions_short}} コンソールにログインするために、{{site.data.keyword.cloud_notm}} アカウントに **IBMid** を関連付ける必要があります。 コンソールに初めてログインするときに、既存の **IBMid** を {{site.data.keyword.cloud_notm}} アカウントに関連付けるか、新規 {{site.data.keyword.cloud_notm}} アカウントを登録するように指示されます。 新規 {{site.data.keyword.cloud_notm}} アカウントは **IBMid** に自動的に関連付けられます。 このプロセスを行う必要があるのは 1 回だけです。<br><br>**IBMid** と {{site.data.keyword.cloud_notm}} アカウントの関連付けに問題がある場合は、[{{site.data.keyword.cloud_notm}} へのアクセスに関するトラブルシューティング](https://console.cloud.ibm.com/docs/account/ts_accessing.html)を参照してください。</td>
+      <td>**IBMid** を使用すると、1 つのログイン・ユーザー名を、{{site.data.keyword.cloud_notm}} など、お客様が使用する IBM のすべての製品およびサービスに使用できます。 {{site.data.keyword.vmwaresolutions_short}} は、{{site.data.keyword.cloud_notm}} カタログの中でインフラストラクチャー・ソリューションとして提供されています。 {{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスするには、**IBMid** が必要です。<br><br>**IBMid** を使用して {{site.data.keyword.vmwaresolutions_short}} コンソールにログインするために、{{site.data.keyword.cloud_notm}} アカウントに **IBMid** を関連付ける必要があります。 コンソールに初めてログインするときに、既存の **IBMid** を {{site.data.keyword.cloud_notm}} アカウントに関連付けるか、新規 {{site.data.keyword.cloud_notm}} アカウントを登録するように指示されます。 新規 {{site.data.keyword.cloud_notm}} アカウントは **IBMid** に自動的に関連付けられます。 このプロセスを行う必要があるのは 1 回だけです。<br><br>**IBMid** と {{site.data.keyword.cloud_notm}} アカウントの関連付けに問題がある場合は、[{{site.data.keyword.cloud_notm}} へのアクセスに関するトラブルシューティング](/docs/account?topic=account-accessing#accessing)を参照してください。</td>
    </tr>
    <tr>
       <td>IBM Cloud アカウント</td>
@@ -63,13 +63,9 @@ Microsoft Internet Explorer はサポートされていません。
    </tr>
    <tr>
       <td>IBM Cloud インフラストラクチャー (SoftLayer) アカウント</td>
-      <td>{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントは、以前は IBM SoftLayer アカウントと呼ばれていました。  アカウントが満たす必要のある要件について詳しくは、[{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)を参照してください。<br><br>{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントと {{site.data.keyword.cloud_notm}} アカウントをリンクして、Infrastructure as a Service (IaaS) リソースと Platform as a Service (PaaS) リソースを組み合わせて使用できます。 その後、単一のログインから IaaS リソースと PaaS リソースにアクセスできます。 さらに、アカウントをリンクする場合は、使用するすべての PaaS リソースおよび IaaS リソースに対して単一の請求書が提供されます。<ul><li>{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントがない場合は、[IBM Cloud インフラストラクチャー (SoftLayer) アカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)の手順に従ってアカウントを要求し、[IBMid アカウントのリンク](https://console.cloud.ibm.com/docs/account/softlayerlink.html)の手順に従って {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントとご使用の {{site.data.keyword.cloud_notm}} アカウントをリンクします。</li><li>{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを持っている場合は、それを [IBMid アカウントのリンク](https://console.cloud.ibm.com/docs/account/softlayerlink.html)の手順に従って {{site.data.keyword.cloud_notm}} アカウントにリンクします。</li></ul></td>
+      <td>{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントは、以前は IBM SoftLayer アカウントと呼ばれていました。  アカウントが満たす必要のある要件について詳しくは、[{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)を参照してください。<br><br>{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントと {{site.data.keyword.cloud_notm}} アカウントをリンクして、Infrastructure as a Service (IaaS) リソースと Platform as a Service (PaaS) リソースを組み合わせて使用できます。 その後、単一のログインから IaaS リソースと PaaS リソースにアクセスできます。 さらに、アカウントをリンクする場合は、使用するすべての PaaS リソースおよび IaaS リソースに対して単一の請求書が提供されます。<ul><li>{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントがない場合は、[IBM Cloud インフラストラクチャー (SoftLayer) アカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)の手順に従ってアカウントを要求し、[IBM ID への切り替えとアカウントのリンク](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)の手順に従って {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントとご使用の {{site.data.keyword.cloud_notm}} アカウントをリンクします。</li><li>{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを持っている場合は、それを [IBM ID への切り替えとアカウントのリンク](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)の手順に従って {{site.data.keyword.cloud_notm}} アカウントにリンクします。</li></ul></td>
    </tr>
    </table>
-
-詳しくは、以下のトピックを参照してください。
-* [必要なアカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
-* [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)
 
 ### デプロイメント・オファリング
 {: #getting-started-depl-offerings}
@@ -89,10 +85,6 @@ Microsoft Internet Explorer はサポートされていません。
     <tr>
        <td>[VMware vCenter Server on IBM Cloud with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)</td>
        <td>この vCenter Server with Hybridity オファリングは、オンプレミスのインフラストラクチャーを素早く簡単にクラウドに拡張できるホステッド・プライベート・クラウドです。 この VMware 環境は、IBM 提供の VMware Software Defined Data Center ライセンスに基づくものであり、VMware Hybrid Cloud Extension (HCX) が含まれています。 HCX を使用すると、オンプレミスの vSphere 5.0+ 環境と {{site.data.keyword.cloud_notm}} サイトを安全に接続して、インフラストラクチャーのシームレスなハイブリッド化と真のアプリケーション・モビリティーを実現できます。</td>
-    </tr>
-    <tr>
-       <td>[VMware Cloud Foundation on IBM Cloud](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)</td>
-       <td>この Cloud Foundation オファリングでは、標準的な {{site.data.keyword.cloud_notm}} コンピュート、ストレージ、ネットワークのリソースを各ユーザー・デプロイメントに専用で使用して、統一された VMware 仮想環境を実現できます。</td>
     </tr>
     <tr>
        <td>[VMware vSphere on IBM Cloud](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview)</td>
@@ -136,7 +128,7 @@ Microsoft Internet Explorer はサポートされていません。
        <td>HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスでは、鍵管理機能が組み込まれた強い暗号を使用して、ワークロードをライフサイクルにわたって保護できます。 このサービスは、オペレーティング・システム・レベルとデータ・レベルの両方で暗号化を実行できます。つまり、ワークロード内で任意のディレクトリー、フォルダー、またはファイルを暗号化/復号できます。</td>
     </tr>
     <tr>
-       <td>[HyTrust KeyControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)</td>
+       <td>[HyTrust KeyControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)</td>
        <td>HyTrust KeyControl on {{site.data.keyword.cloud_notm}} サービスは、暗号鍵のライフサイクルを自動化および単純化することによって、暗号化ワークロードの管理を単純化します。 このサービスでは、FIPS 140-2 準拠の暗号化を使用することで、暗号鍵を簡単に一括して管理できるようになります。</td>
     </tr>
     <tr>
@@ -156,7 +148,7 @@ Microsoft Internet Explorer はサポートされていません。
        <td>Veeam on {{site.data.keyword.cloud_notm}} サービスは VMware ハイパーバイザーに直接、シームレスに統合され、企業での高可用性の実現を支援します。 このサービスを使用すると、アプリケーションとデータのリカバリー・ポイントと目標復旧時間を利用できます。 リカバリー・ポイントと目標復旧時間は、構成が完了してから 15 分以内に利用可能になります。 このサービスを使用することにより、ご使用のインフラストラクチャーに配置されたすべての仮想マシンのバックアップとリストアの両方を Veeam コンソールから直接制御できます。</td>
     </tr>
     <tr>
-       <td>[VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)</td>
+       <td>[VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations)</td>
        <td>HCX on {{site.data.keyword.cloud_notm}} サービスでは、オンプレミス・データ・センターのネットワークを {{site.data.keyword.cloud_notm}} にシームレスに拡張できるので、変換も変更も行わずに {{site.data.keyword.cloud_notm}} との間で仮想マシン (VM) をマイグレーションできます。</td>
     </tr>
     <tr>
@@ -189,7 +181,6 @@ Microsoft Internet Explorer はサポートされていません。
 インスタンスを注文する方法について詳しくは、選択したデプロイメント・オファリングに応じて以下のトピックを参照してください。
 * [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 * [NetApp ONTAP Select インスタンスの注文](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
 
@@ -201,7 +192,6 @@ Microsoft Internet Explorer はサポートされていません。
 注文したインスタンスを表示する方法について詳しくは、以下のトピックを参照してください。
 * [vCenter Server インスタンスの表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [vCenter Server with Hybridity Bundle インスタンスの表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [Cloud Foundation インスタンスの表示](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
 * [NetApp ONTAP Select インスタンスの表示](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
 
 ## ステップ 5: インスタンスのアドオン・サービスの管理
@@ -212,7 +202,6 @@ Microsoft Internet Explorer はサポートされていません。
 サービスを管理する方法について詳しくは、以下のトピックを参照してください。
 * [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-* [Cloud Foundation インスタンス用サービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
 
 ## 次のステップ
 {: #getting-started-next}

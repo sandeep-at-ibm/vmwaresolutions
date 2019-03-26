@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-18"
 {:important: .important}
 
 # Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server
-{: #adding-and-viewing-clusters-for-vcenter-server-instances}
+{: #vc_addingviewingclusters}
 
 Os servidores ESXi configurados quando você pediu uma instância são agrupados como **cluster1** por padrão.
 
@@ -56,7 +56,7 @@ Se você implementar o cluster em um pod de infraestrutura diferente do {{site.d
 ### Configurações do Bare Metal Server
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-É possível escolher **Skylake**, **Certificado pelo SAP** ou **Broadwell**.
+É possível escolher **Skylake**, **Certificado pelo SAP** ou **Broadwell**. As opções podem diferir dependendo da versão em que a sua instância foi implementada inicialmente.
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -188,7 +188,7 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 ## Procedimento para incluir clusters em instâncias do vCenter Server
 {: #vc_addingviewingclusters-adding-procedure}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância na qual você deseja incluir clusters.
 
    Assegure-se de que a instância esteja no status **Pronta para uso**. Caso contrário, não será possível incluir clusters na instância.
@@ -229,7 +229,7 @@ Não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar f
 ## Procedimento para visualizar clusters em instâncias do vCenter Server
 {: #vc_addingviewingclusters-viewing-procedure}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique em uma instância para visualizar os clusters contidos.
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda. Na tabela **CLUSTERS**, visualize o resumo sobre os clusters:
   * **Nome**: o nome do cluster.
@@ -253,7 +253,7 @@ Não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar f
         <dd class="dd">O cluster é excluído.</dd>
     </dl>
   * **Ações**: clique no ícone **Excluir** para excluir o cluster.
-4. Clique em um nome de cluster para visualizar o servidor ESXi e o armazenamento:
+4. Clique em um nome do cluster para visualizar os detalhes do servidor do ESXi, de armazenamento e de interface de rede:
 
 Tabela 4. Detalhes do servidor ESXi
 
@@ -263,7 +263,7 @@ Tabela 4. Detalhes do servidor ESXi
 | Versão | A versão do servidor ESXi. |
 | Credenciais | O nome de usuário e a senha para acessar o servidor ESXi. |
 | IP privado | O endereço IP privado do servidor ESXi. |
-| Status | O status do servidor ESXi, que pode ser um dos valores a seguir:<br> **Added**: o servidor ESXi está incluído e pronto para uso.<br> **Adding**: o servidor ESXi está sendo incluído.<br> **Deleting**: o servidor ESXi está sendo excluído. |
+| Status | O status do servidor ESXi, que pode ser um dos valores a seguir:<br> **Incluído** o servidor do ESXi foi incluído e está pronto para uso.<br> **Incluindo** o servidor do ESXi está sendo incluído.<br> **Excluindo** o servidor do ESXi está sendo excluído. |
 
 Tabela 5. Detalhes do armazenamento
 
@@ -273,6 +273,32 @@ Tabela 5. Detalhes do armazenamento
 | Tamanho | A capacidade do armazenamento. |
 | IOPS/GB | O nível de desempenho do armazenamento. |
 | Protocolo do NFS | A versão NFS do armazenamento. |
+
+Tabela 6. Interface de rede - detalhes da VLAN
+
+| Item        | Descrição       |  
+|:------------- |:------------- |
+| Número da VLAN | O número exclusivo da VLAN.  |
+| Descrição | O tipo de VLAN.  |
+| Localização | O local do data center. |
+| Rota primária | A rota primária da VLAN. |
+
+Tabela 7. Interface de rede - detalhes de sub-rede
+
+| Item        | Descrição       |  
+|:------------- |:------------- |
+| Nome | O nome da sub-rede. Clique no nome para acessar os detalhes completos do endereço IP. |
+| Tipo | O tipo de sub-rede: primária ou móvel. |
+| Descrição | O propósito da sub-rede. |
+
+Tabela 8. Interface de rede - detalhes do IP
+
+| Item        | Descrição       |  
+|:------------- |:------------- |
+| IP | O endereço IP. |
+| Status | O status do endereço IP. |
+| Descrição |O host do endereço IP.  |
+
 
 ## Excluindo os clusters de instâncias do vCenter Server
 {: #vc_addingviewingclusters-deleting}
@@ -292,7 +318,7 @@ Talvez você queira excluir um cluster de uma instância no caso de ela não ser
 ### Procedimento para excluir clusters de instâncias do vCenter Server
 {: #vc_addingviewingclusters-deleting-procedure}
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância da qual deseja excluir clusters.
 
    Assegure-se de que a instância esteja no status **Pronta para uso**. Caso contrário, não será possível excluir clusters da instância.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -47,7 +47,7 @@ lastupdated: "2019-02-14"
 ## 订购 Migration and App Modernization 单节点试用版实例的过程
 {: #cloud_modern_bundle_orderinginstance-procedure}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **Migration and App Modernization 单节点试用版**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware**，然后单击**虚拟数据中心**部分中的 **Migration and App Modernization 单节点试用版**。
 2. 在 **Migration and App Modernization 单节点试用版**页面上，单击**继续**。
 3. 完成请求 {{site.data.keyword.cloud_notm}} 基础架构帐户的步骤，或提供现有**用户名**和 **API 密钥**，然后单击**检索**。
 
@@ -100,7 +100,7 @@ lastupdated: "2019-02-14"
 #### 查看实例详细信息
 {: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
-您可以通过查看实例详细信息来检查部署的状态。在左侧导航窗格中，单击**已部署的实例**，然后找到 **vCenter Server 实例**或**内部部署 HCX 实例**表，以查看有关所订购实例的信息。
+您可以通过查看实例详细信息来检查部署的状态。在左侧导航窗格中，单击**资源**，然后找到 **vCenter Server 实例**或**内部部署 HCX 实例**表，以查看有关所订购实例的信息。
 
 成功部署实例后，本主题的*技术规范*部分中所述的组件已安装在 VMware 虚拟平台上，并且内部部署 HCX on {{site.data.keyword.cloud_notm}} 服务激活密钥在**内部部署 HCX 实例**表中列出。
 
@@ -111,8 +111,8 @@ lastupdated: "2019-02-14"
 
 安装内部部署 HCX Enterprise Manager，并配置与 HCX on {{site.data.keyword.cloud_notm}} 实例的连接。
 
-1. 在**已部署的实例**页面上找到内部部署激活密钥。
-  1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在**资源**页面上找到内部部署激活密钥。
+  1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
   2. 在 **vCenter Server 实例**表中，查看**类型**列以找到 Migration and App Modernization 单节点试用版实例，并记下该实例的名称。
   3. 滚动到**内部部署 HCX 实例**表并查看**名称**列，以找到与订购的单节点实例同名但后缀为 *-OnPrem* 的实例。
   4. 记下**激活密钥**字段中的密钥。
@@ -169,7 +169,7 @@ lastupdated: "2019-02-14"
 
 要删除 Migration and App Modernization 单节点试用版实例，请完成以下步骤：
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，找到要删除的实例。
 3. 在**操作**列中，单击“删除”图标。
    实例的状态会更改为**正在删除**。成功删除实例后，会释放该实例的组件，并且实例的状态会更改为**已删除**。

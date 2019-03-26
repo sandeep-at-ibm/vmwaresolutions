@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
 
 ---
 
@@ -47,22 +47,24 @@ lastupdated: "2019-02-14"
 |查看密码|需要此许可权才能管理订购的 VSI。|
 |管理服务器监视|下订单时不需要此许可权，但需要此许可权来检索和验证实例中运行 VMware ESXi 服务器的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 的监视状态。|
 
-## 虚拟路由和转发 (VRF) 需求
-{: #slaccountrequirement-vrf}
+## 启用了服务端点的 VRF
+{: #slaccountrequirement-vrf-se}
 
-{{site.data.keyword.cloud_notm}} 基础架构帐户必须是 VRF 帐户，或者如果是非 VRF 帐户，那么必须启用 VLAN 生成。有关将帐户从非 VRF 转换为 VRF 的更多信息，请参阅 [VRF on IBM Cloud 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)。
+您的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须是启用了服务端点的虚拟路由和转发 (VRF) 帐户。如果您的帐户是非 VRF 帐户，那么必须转换为 VRF 帐户。 此外，您必须支持 VRF 帐户使用服务端点。
 
-## 非 VRF 帐户的 VLAN 生成
-{: #slaccountrequirement-vlan-spanning}
+有关更多信息，请参阅：
+* [VRF on IBM Cloud 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [支持帐户使用服务端点](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
 
-如果使用的是非 VRF {{site.data.keyword.cloud_notm}} 基础架构帐户，那么必须启用 VLAN 生成。如果非 VRF 帐户未启用 VLAN 生成，那么 VMware 虚拟化环境的各种组件可能无法相互通信。
+## VLAN 生成支持结束
+{: #slaccountrequirement-vlan-eos}
 
-要启用帐户中的 VLAN 生成，请参阅 [VLAN 生成](/docs/infrastructure/vlans?topic=vlans-vlan-spanning){:new_window}。
+从 2019 年 8 月起，不再支持 VLAN 生成。到 2019 年 7 月底，您必须将 {{site.data.keyword.cloud_notm}} 基础架构帐户转换为 VRF 并启用服务端点。
+{:important}
 
 ## 相关链接
 {: #slaccountrequirement-related}
 
-* [Cloud Foundation 实例的需求](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
 * [vCenter Server 实例的需求](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [用户帐户和设置](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
 * [VRF on IBM Cloud 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

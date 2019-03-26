@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -53,11 +53,11 @@ As informações a seguir se aplicam a sub-redes de VLAN privada:
 
 Cada cluster do Kubernetes é configurado com um plug-in de rede chamado Calico.
 
-As políticas de rede padrão são configuradas para assegurar a interface de rede pública de cada nó do trabalhador no {{site.data.keyword.containerlong_notm}}. Se você tiver requisitos de segurança exclusivos ou tiver um cluster de múltiplas zonas com o VLAN Spanning ativado, será possível usar o Calico e o Kubernetes para criar políticas de rede para um cluster. Com políticas de rede do Kubernetes, é possível especificar o tráfego de rede que você deseja permitir ou bloquear para/de um pod em um cluster. 
+As políticas de rede padrão são configuradas para assegurar a interface de rede pública de cada nó do trabalhador no {{site.data.keyword.containerlong_notm}}. Se você tiver requisitos de segurança exclusivos ou tiver um cluster multizona com ampliação de VLAN ou Virtual Routing and Forwarding (VRF) ativado, será possível usar o Calico e o Kubernetes para criar políticas de rede para um cluster. Com políticas de rede do Kubernetes, é possível especificar o tráfego de rede que você deseja permitir ou bloquear para/de um pod em um cluster.
 
 Para configurar políticas de rede mais avançadas, como bloquear o tráfego de entrada (ingresso) para serviços LoadBalancer, use políticas de rede do Calico.
 
-As políticas de rede Kubernetes especificam como os pods podem se comunicar com outros pods e com terminais externos. O tráfego também pode ser filtrado com base nos rótulos de pod e de namespace. As políticas de rede do Kubernetes são aplicadas usando comandos kubectl ou as APIs do Kubernetes. Quando essas políticas são aplicadas, elas são automaticamente convertidas em políticas de rede Calico e o Calico cumpre essas políticas.
+As políticas de rede do Kubernetes especificam como os pods podem se comunicar com outros pods e com os terminais em serviço de rede pública. O tráfego também pode ser filtrado com base nos rótulos de pod e de namespace. As políticas de rede do Kubernetes são aplicadas usando comandos kubectl ou as APIs do Kubernetes. Quando essas políticas são aplicadas, elas são automaticamente convertidas em políticas de rede Calico e o Calico cumpre essas políticas.
 
 As políticas de rede Calico para o Kubernetes são um superconjunto das políticas de rede do Kubernetes e são aplicadas usando os comandos calicoctl.
 

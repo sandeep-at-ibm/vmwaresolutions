@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -19,7 +19,7 @@ La consola de {{site.data.keyword.vmwaresolutions_full}} detecta y muestra peri�
 
 Una actualización disponible es un registro de la lista de actualizaciones de software de la instancia, que se puede aplicar de inmediato o se puede planificar para un momento posterior. La actualización es un paquete que a su vez contiene uno o varios paquetes para actualizar los componentes de gestión de IBM y los componentes de VMware.
 
-A partir de la V2.5, las actualizaciones de IBM CloudDriver ya no aparecen listadas porque se han habilitado las actualizaciones automáticas. Las acciones como la adición de un host, la adición de un clúster y la solicitud de un servicio actualizan automáticamente la instancia a la última versión. Para obtener más información sobre las actualizaciones automáticas, consulte la sección *Resiliencia de IBM CloudDriver* en las [Notas del release de V2.5](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25).
+Las actualizaciones de IBM CloudDriver ya no aparecen listadas porque se han habilitado las actualizaciones automáticas. Las acciones como la adición de un servidor ESXi, la adición de un clúster y la solicitud de un servicio actualizan automáticamente la instancia a la última versión. Para obtener más información sobre las actualizaciones automáticas, consulte la sección *Resiliencia de IBM CloudDriver* en las [Notas del release de V2.5](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25).
 {:note}
 
 ## Antes de empezar
@@ -56,7 +56,7 @@ Tabla 1. Niveles de actualización e impacto
 ## Procedimiento para aplicar actualizaciones a instancias de Cloud Foundation
 {: #sd_applyingupdates-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia que desea actualizar.
 3. En la página **Resumen**, verifique que todos los detalles de la instancia se muestren correctamente. A continuación, pulse **Infraestructura** en el panel de navegación de la izquierda para verificar los detalles en la página **Infraestructura**.
    Si no se visualizan los detalles, esto podría indicar un problema de conectividad con la IBM CloudDriver Virtual Server Instance (VSI), como resultado de una regla de cortafuegos u otro problema de red. Resuelva el problema antes de continuar con el siguiente paso; de lo contrario, la actualización puede fallar.

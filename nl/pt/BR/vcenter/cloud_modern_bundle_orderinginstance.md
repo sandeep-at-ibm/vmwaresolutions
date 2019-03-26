@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -101,7 +101,7 @@ HCX, os componentes do HCX local e os componentes do HCX remoto.
 #### Visualizando detalhes da instância
 {: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
-É possível verificar o status da implementação visualizando os detalhes da instância. Clique em **Instâncias implementadas** na área de janela de navegação esquerda e localize a tabela **Instâncias do vCenter Server** ou **Instâncias do HCX no local** para visualizar informações sobre as instâncias que você pediu.
+É possível verificar o status da implementação visualizando os detalhes da instância. Clique em **Recursos** na área de janela de navegação esquerda e localize a tabela **Instâncias do servidor do vCenter** ou **Instâncias do HCX no local** para visualizar informações sobre as instâncias que você pediu.
 
 Quando a instância é implementada com êxito, os componentes que são descritos nas seções *Especificações técnicas* deste tópico são instalados em sua plataforma virtual VMware e a chave de ativação do serviço HCX on {{site.data.keyword.cloud_notm}} no local é listada na tabela **Instâncias do HCX no local**.
 
@@ -112,8 +112,8 @@ O status da instância muda para **Pronto para uso** e você recebe uma notifica
 
 Instale o HCX Enterprise Manager local e configure a conexão com a instância do HCX on {{site.data.keyword.cloud_notm}}.
 
-1. Localize a chave de ativação no local na página **Instâncias implementadas**.
-  1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. Localize a chave de ativação no local na página **Recursos**.
+  1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
   2. Na tabela **Instâncias do vCenter Server**, revise a coluna **Tipo** para localizar a instância do Single-node Trial for Migration and App Modernization e anote o nome da instância.
   3. Role para a tabela **Instâncias do HCX no local** e revise a coluna **Nome** para localizar a instância que tem o mesmo nome que a instância de nó único que você pediu com o sufixo *-OnPrem*.
   4. Anote a chave no campo **Chave de ativação**.
@@ -171,7 +171,7 @@ Você é faturado até o final do ciclo de faturamento da infraestrutura do {{si
 
 Conclua as etapas a seguir para excluir uma instância do Single-node Trial for Migration and App Modernization:
 
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Instâncias implementadas** na área de janela de navegação esquerda.
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, localize a instância a ser excluída.
 3. Na coluna **Ações**, clique no ícone Excluir.
    O status da instância é mudado para **Excluindo**. Quando a instância for excluída com êxito, seus componentes serão liberados e seu status mudará para **Excluído**.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -26,8 +26,8 @@ vSphere Web Client に接続しようとすると、次のタイムアウト・�
 1. **「vCenter コンソール」**ボタンにマウスオーバーすると表示されるツールチップの手順を実行したことを確認します。 参考までに、それらの手順も以下にリストします。   
    1. 使用するブラウザー用の Adobe Flash Player プラグインをインストールします。   
    2. {{site.data.keyword.slportal_full}}から VPN パスワードを作成します。    
-   3. {{site.data.keyword.cloud_notm}} インフラストラクチャー VPN 資格情報を使用して、データ・センターの VPN ポータルにログインします。    
-   4. 次の形式を使用して、PSC (Platform Services Controller) の IP アドレスとホスト名のマッピングを hosts ファイルに追加します。
+   3. {{site.data.keyword.cloud_notm}} インフラストラクチャー VPN 資格情報を使用して、[データ・センターの VPN にログインします](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#login-to-the-vpn)。    
+   4. ローカル・コンピューターから、PSC (Platform Services Controller) の IP アドレスとホスト名のマッピングを hosts ファイルに追加します。以下のフォーマットを使用します。
 
       ```javascript
       IPAddress              HostName

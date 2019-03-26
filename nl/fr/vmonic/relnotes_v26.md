@@ -14,6 +14,7 @@ lastupdated: "2018-10-01"
 Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour obtenir la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des astuces relatives à l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Résolution de Spectre et Meltdown
+{: #relnotes_v26-spectre}
 
 {{site.data.keyword.vmwaresolutions_short}} a publié des modules de correction depuis VMware afin de remédier à des vulnérabilités liées à Spectre et Meltdown (CVE-2017-5753, CVE-2017-5715 et CVE-2017-5754).
 
@@ -21,9 +22,8 @@ Cette édition inclut de nouvelles fonctionnalités, des mises à jour de compos
 * CVEID : [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID : [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-Pour plus d'informations, voir [Résolution des vulnérabilités Spectre et Meltdown](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_fix_spectre).
-
 ## Option Hautes performances avec Intel Optane
+{: #relnotes_v26-optane}
 
 Cette édition fournit une option vous permettant d'ajouter un cache hautes performances pour le stockage vSAN lorsque vous commandez une nouvelle instance ou que vous ajoutez un nouveau cluster vSAN après le déploiement initial.
 
@@ -34,6 +34,7 @@ L'option Hautes performances avec Intel Optane est disponible uniquement pour le
 Pour plus d'informations, voir la rubrique de commande appropriée pour votre type d'instance ou de cluster.
 
 ## Activation d'un réseau public ou privé
+{: #relnotes_v26-pub-private-network}
 
 Vous pouvez désormais déployer des instances vCenter Server et vCenter Server with Hybridity Bundle, ainsi que des clusters VMware vSphere, avec des cartes d'interface réseau public et privé activées ou des cartes d'interface réseau privé uniquement activées. Cette option est également disponible lorsque vous ajoutez un nouveau cluster à vos instances vCenter Server et vCenter Server with Hybridity Bundle.
 
@@ -46,6 +47,7 @@ Pour plus d'informations, voir la section _Paramètres d'interface réseau_ dans
 * [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#network-interface-settings)
 
 ## Suppression de serveurs ESXi
+{: #relnotes_v26-delete-esxi}
 
 Vous pouvez désormais supprimer un serveur ESXi de votre instance vCenter Server, vCenter Server with Hybridity Bundle ou Cloud Foundation si vous respectez la configuration minimale requise pour votre instance.
 
@@ -53,9 +55,9 @@ Pour plus d'informations sur la configuration requise pour les serveurs ESXi, vo
 
 * [Extension et réduction de capacité pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
 * [Extension et réduction de capacité pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
-* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 
 ## Mises à jour des instances VMware vCenter Server
+{: #relnotes_v26-vcs}
 
 Cette édition applique les mises à niveau et améliorations suivantes :
 
@@ -65,14 +67,17 @@ Cette édition applique les mises à niveau et améliorations suivantes :
 * NSX for vSphere 6.4.1
 
 ## Mises à jour de VMware vCenter Server with Hybridity Bundle
+{: #relnotes_v26-vcs-hybrid}
 
 ### Retrait de la licence Hybridity Bundle d'une instance vCenter Server
+{: #relnotes_v26-remove-bundle}
 
 Vous pouvez désormais retirer la licence Hybridity Bundle de votre instance vCenter Server. Pour ce faire, vous devez remplacer les clés de licence locative VMware NSX et VMware vSAN par des clés BYOL (Bring Your Own License) et ouvrir un ticket de demande de service pour annuler les frais liés aux licences locatives.
 
 Pour plus d'informations, voir [Retrait de la licence Hybridity Bundle d'une instance vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletingbundle).
 
 ### Disponibilité de vCenter Server with Hybridity Bundle
+{: #relnotes_v26-bundle-available}
 
 Les partenaires commerciaux peuvent désormais commander une instance vCenter Server with Hybridity Bundle. Les partenaires commerciaux ne peuvent pas mettre à niveau une instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle et ne peuvent pas retirer la licence Hybridity Bundle d'une instance vCenter Server with Hybridity Bundle.
 
@@ -82,6 +87,7 @@ Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 
 ## Mises à jour des instances VMware Cloud Foundation
+{: #relnotes_v26-vcf}
 
 Cette édition applique les mises à niveau et améliorations suivantes :
 
@@ -91,26 +97,31 @@ Cette édition applique les mises à niveau et améliorations suivantes :
 * NSX for vSphere 6.4.1
 
 ## Mises à jour apportées aux services complémentaires
+{: #relnotes_v26-services}
 
 ### HyTrust KeyControl on IBM Cloud
+{: #relnotes_v26-htkc}
 
 Le service HyTrust KeyControl on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances VMware Cloud Foundation et VMware vCenter Server qui exécutent vSphere 6.5 et qui sont déployées dans ou mises à niveau vers la version 2.5 et des éditions ultérieures. Le service simplifie la gestion des charges de travail chiffrées en automatisant et en simplifiant le cycle de vie des clés de chiffrement. Le service peut facilement gérer les clés de chiffrement à l'échelle à l'aide du chiffrement compatible avec FIPS 140-2. En utilisant ce service, vous pouvez gérer les clés de chiffrement pour toutes vos machines virtuelles et tous vos magasins de données chiffrés et les faire évoluer pour prendre en charge des milliers de charges de travail chiffrées dans des déploiements de grande taille.
 
 Vous pouvez commander des instances avec le service déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes.
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Composants et remarques pour HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)
+* [Composants et remarques pour HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)
 * [Gestion de HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtkc)
 
 ### HyTrust CloudControl on IBM Cloud
+{: #relnotes_v26-htcc}
 
 L'édition en cours installe HyTrust CloudControl 5.4 sur toutes les instances nouvellement déployées. Pour plus d'informations sur les nouvelles fonctions dans HyTrust CloudControl 5.4, voir l'[ensemble de la documentation en ligne pour HyTrust CloudControl v 5.4](https://docs.hytrust.com/CloudControl/5.4.0/Online/index.html).
 
 ### HyTrust DataControl on IBM Cloud
+{: #relnotes_v26-htdc}
 
 L'édition en cours installe HyTrust DataControl 4.2 sur toutes les instances nouvellement déployées. Pour plus d'informations sur les nouvelles fonctions dans HyTrust DataControl 4.2, voir [What's New in HyTrust DataControl 4.x](https://docs.hytrust.com/DataControl/4.2/Admin_Guide-4.2/Content/Books/aaCommon/New-Changed-4x.htm).
 
 ### Prise en charge de Veeam on IBM Cloud pour vSphere ESXi V6.5 update 2c
+{: #relnotes_v26-veeam}
 
 A compter de la version 2.6, de nouvelles instances et de nouveaux hôtes sont mis à disposition à l'aide de vSphere ESXi V6.5 Update 2c. Si vous utilisez Veeam Backup and Replication, Veeam vous recommande de mettre à jour votre instance Veeam on {{site.data.keyword.cloud_notm}} vers V9.5u3a ou une édition ultérieure afin de garantir une compatibilité optimale avec vSphere ESXi 6.5 Update 2c.
 
@@ -119,10 +130,12 @@ Il est recommandé de mettre à jour également les instances Cloud Foundation e
 Pour plus d'informations sur Veeam on {{site.data.keyword.cloud_notm}}, voir [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations).
 
 ### VMware HCX on IBM Cloud
+{: #relnotes_v26-hcx}
 
 L'édition en cours installe VMware HCX 3.5.1 sur toutes les instances nouvellement déployées. Pour plus d'informations sur les nouvelles fonctions de HCX 3.5.1, voir [VMware NSX Hybrid Connect Documentation](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html).
 
 ### Prise en charge de Zerto on IBM Cloud pour vSphere ESXi V6.5 update 2c
+{: #relnotes_v26-zerto}
 
 Si vous mettez à jour des hôtes existants vers vSphere ESXi V6.5 update 2 et que vous avez déjà installé Zerto on {{site.data.keyword.cloud_notm}}, la console de réplication virtuelle de Zerto
 peut afficher le message d'avertissement `Unsupported ESX Version` sous le statut des dispositifs VRA (Virtual Replication Appliance) de Zerto.
@@ -133,13 +146,17 @@ Pour en savoir plus sur comment résoudre ce message d'avertissement, voir :
 * [Updating a ZVM to Support Zerto-Approved Host Releases Prior to a Full ZVR Update](https://www.zerto.com/myzerto/knowledge-base/updating-a-zvm-to-support-zerto-approved-host-releases-prior-to-a-full-zvr-update/)
 
 ## Documentation nouvelle et mise à jour
+{: #relnotes_v26-new-docs}
 
 ### Documentation d'architecture de référence
+{: #relnotes_v26-ref-archi}
+
 Le document sur l'architecture {{site.data.keyword.vmwaresolutions_short}} a été mis à jour avec des remarques importantes destinées à vous permettre de bien comprendre quelles sont vos responsabilités en termes de gestion et d'exécution de votre instance VMware.
 
 Pour plus d'informations, voir [Remarques relatives au post-déploiement pour votre instance VMware](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_considerations).
 
 ## Améliorations et mises à jour apportées à l'interface utilisateur
+{: #relnotes_v26-ui}
 
 L'interface utilisateur a été mise à jour et présente les améliorations suivantes :
 

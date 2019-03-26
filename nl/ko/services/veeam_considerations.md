@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -17,11 +17,11 @@ lastupdated: "2019-02-15"
 
 Veeam on {{site.data.keyword.cloud}} 서비스는 엔터프라이즈가 고가용성을 달성할 수 있도록 VMware 하이퍼바이저와 직접 원활하게 통합합니다. 이 서비스는 애플리케이션 및 데이터에 대한 복구 지점 및 시간 목표를 제공합니다. 복구 지점 및 시간 목표는 구성이 완료된 후 15분 내에 제공될 수 있습니다. 이 서비스를 사용하여 Veeam 콘솔에서 인프라에 대한 모든 가상 머신(VM)의 백업과 복원을 모두 직접 제어합니다.
 
-이 서비스는 V1.8 이상에 배치되는 인스턴스에 대해서만 사용 가능합니다. 설치된 현재 Veeam 버전은 9.5u3입니다.
+이 서비스는 V1.8 이상에 배치되는 인스턴스에 대해서만 사용 가능합니다. 설치된 현재 Veeam 버전은 9.5u4입니다.
 {:note}
 
 ## Veeam on IBM Cloud의 기술 스펙
-{: #technical-specifications-for-veeam-on-ibm-cloud}
+{: #veeam_considerations-specs}
 
 다음 컴포넌트가 주문되고 Veeam on {{site.data.keyword.cloud_notm}} 서비스에 포함됩니다.
 

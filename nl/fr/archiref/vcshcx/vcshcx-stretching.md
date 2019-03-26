@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -19,13 +19,13 @@ lastupdated: "2019-02-16"
 
 L'élément de jonction qui relie le réseau côté client au VXLAN côté cloud est un VPN multi-tunnel sophistiqué qui consiste en une technologie HCX propriétaire. Il n'est pas basé sur NSX, mais fonctionne avec NSX et étend ses capacités. Ce processus est contrôlé par l'interface utilisateur Web vCenter côté client et automatise le déploiement et l'affichage des points finaux côté client et côté cloud. La sélection du réseau à étendre se fait individuellement ou par lots.
 
-En outre, dans le cadre du flux de travail de l'extension du réseau, NSX du côté cloud est chargé de construire un VXLAN qui est ensuite connecté à une interface créée sur le périphérique L3 spécifié côté cloud (DLR ou ESG laissé dans un état non connecté) et le dispositif L2C côté cloud.
+En outre, dans le cadre du flux de travail de l'extension du réseau, NSX du côté cloud est autorisé à construire un VXLAN qui est ensuite connecté à une interface créée sur le périphérique L3 spécifié côté cloud (DLR ou ESG laissé dans un état non connecté) et le dispositif L2C côté cloud.
 
-Lorsque vous migrez une application particulière, tous les réseaux utilisés par les machines virtuelles applicables doivent généralement être étendus à l'ensemble de l'instance {{site.data.keyword.cloud}}.
+Généralement, lorsque vous migrez une application particulière, tous les réseaux utilisés par les machines virtuelles applicables doivent être étendus à l'ensemble de l'instance {{site.data.keyword.cloud}}.
 
 Pourquoi généralement et pas toujours ? Il peut être avantageux de déconnecter certains trafics du côté client après la migration de la machine virtuelle. Par exemple, les clients de sauvegarde invités des machines virtuelles, qui peuvent entraîner une utilisation importante de la bande passante lorsqu'ils sont déplacés vers le cloud. Le client de sauvegarde invité n'est pas nécessaire lors de la migration de la machine virtuelle car il est automatiquement récupéré par une sauvegarde plus moderne au niveau du bloc côté cloud.
 
-Plutôt que d'accéder à chaque machine virtuelle pour arrêter le programme de sauvegarde du client invité, il est préférable de ne pas connecter l'adaptateur réseau de sauvegarde du client (si un réseau de sauvegarde est utilisé), car cela entraîne un échec de la sauvegarde. Il s'agit d'une situation temporaire jusqu'à ce que toutes les machines virtuelles puissent être atteintes après la migration pour désactiver le client de sauvegarde invité.
+L'adaptateur réseau de sauvegarde du client n'est pas connecté car cela reviendrait à accéder à chaque machine virtuelle pour fermer le programme de sauvegarde du client invité. Par conséquent, si un réseau de sauvegarde est utilisé, la sauvegarde risque d'échouer. Il s'agit d'une situation temporaire jusqu'à ce que toutes les machines virtuelles puissent être atteintes après la migration pour désactiver le client de sauvegarde invité.
 
 La bande passante d'un seul L2C est théoriquement de 4 Gbit/s, mais cela peut être la limite pour tous les réseaux étendus au sein d'une seule paire L2C et n'est pas réalisable avec un seul réseau étendu. Un seul réseau étendu peut atteindre environ 1 Gbits/s étant donné qu'il y a suffisamment de bande passante sous-jacente allouée et que la latence est faible (<~10 ms).
 
@@ -57,11 +57,11 @@ HCX est essentiellement un proxy bidirectionnel vMotion. Chaque instance de HCX 
 
 En même temps, une migration vMotion est lancée de l'hôte proxy ESXi distant vers l'hôte ESXi physique vSphere de destination, alors qu'il reçoit les données de la passerelle CGW source via le tunnel. Lorsqu'une migration vMotion est utilisée, contrairement à l'option de migration en bloc, une seule opération de migration de machine virtuelle est exécutée à la fois. Pour cette raison, en cas de migration d'un grand nombre de machines virtuelles, il est recommandé de ne l'utiliser que lorsque les temps d'arrêt ne sont pas envisageables ou lorsqu'il existe un risque de redémarrage de la machine virtuelle. Cependant, comme pour la vMotion standard, la machine virtuelle peut être sous tension pendant le processus.
 
-Il a été observé qu'une seule vMotion peut atteindre environ 1,7 Gbits/s sur le LAN et 300 à 400 Mbits/s sur le WAN grâce à l'optimiseur de réseau WAN. Cela ne signifie pas que 1,7 Gbits/s sur le réseau LAN équivaut à 400 Mbits/s sur le réseau WAN, mais uniquement que ces maximums ont été observés dans un environnement spécifique. L'environnement sur lequel cela a été observé consistait en un réseau LAN vMotion de 10 Go et une liaison Internet montante de 1 Go, partagés avec le trafic Web de production.
+Il a été constaté qu'une seule vMotion peut atteindre environ 1,7 Gbits/s sur le LAN et 300 à 400 Mbits/s sur le WAN grâce à l'optimiseur de réseau WAN. Cela ne signifie pas que 1,7 Gbits/s sur le réseau LAN équivaut à 400 Mbits/s sur le réseau WAN grâce à l'optimiseur de réseau WAN, mais uniquement que ces valeurs maximales ont été observées dans des environnements spécifiques. L'environnement sur lequel cela a été observé consistait en un réseau LAN vMotion de 10 Go et une liaison Internet montante de 1 Go, partagés avec le trafic Web de production.
 
 Utilisez vMotion lorsque :
 - La machine virtuelle est difficile à éteindre, à démarrer ou le temps de fonctionnement peut être long et présenterait un risque en l'éteignant.
-- Une application de type cluster nécessite des UUID de disque, comme les clusters Oracle Rac. Notez que vMotion ne change pas les UUID de disque sur la destination.
+- Une application de type cluster nécessite des UUID de disque, comme les clusters Oracle RAC. Notez que vMotion ne change pas les UUID de disque sur la destination.
 - Vous souhaitez déplacer une seule machine virtuelle le plus rapidement possible.
 - Une migration programmée n'est pas nécessaire.
 
@@ -82,16 +82,16 @@ La fonction de migration en bloc de HCX utilise la réplication vSphere pour mig
 - Création d'une nouvelle machine virtuelle du côté de la destination et de ses disques virtuels correspondants.
 - Réplication des données de machine virtuelle sur la nouvelle machine virtuelle. La réplication démarre dès que l'assistant termine, indépendamment du basculement de la planification.
 - Mise hors tension de la machine virtuelle d'origine.
-- Durant la période de mise hors tension, la réplication finale de toutes les données modifiées se produit.
+- Durant la période de mise hors tension, la réplication finale de toutes les modifications de données se produit.
 - Mise sous tension de la nouvelle machine virtuelle du côté de la destination.
-- Renommage et déplacement de la machine virtuelle d'origine vers le dossier cloud.
+- Changement de nom et déplacement de la machine virtuelle d'origine vers le dossier de cloud vers lequel elle a été déplacée. 
 
 Les avantages de la migration en bloc par rapport à la migration vMotion sont les suivants :
-- Migration de plusieurs machines virtuelles simultanément.
+- Migration simultanée de plusieurs machines virtuelles.
 - Utilisation plus cohérente de la bande passante. La migration vMotion peut générer des fluctuations dans l'utilisation de la bande passante qui seraient visibles sous forme de pics et de creux dans les outils de surveillance du réseau ou dans l'interface utilisateur de l'optimiseur de réseau WAN.
 - La migration en bloc permet d'obtenir une utilisation globale de la bande passante du réseau supérieure à celle d'une migration vMotion.
 - La migration en bloc peut être programmée pour basculer vers les machines virtuelles nouvellement migrées au cours d'une interruption de service programmée.
-- Possibilité de migrer des machines virtuelles qui utilisent des fonctions d'unités centrales virtuelles différentes de celles du côté cloud, là où vMotion échoue.
+- Possibilité de migrer des machines virtuelles qui utilisent des fonctions d'unités centrales virtuelles différentes de celles du côté cloud. La migration vMotion pourrait échouer dans ces cas-là. 
 
 Les inconvénients de la migration en bloc par rapport à la migration vMotion sont les suivants :
 - La migration des machines virtuelles individuelles est plus lente qu'avec la migration vMotion.
@@ -109,24 +109,24 @@ Les clusters Oracle RAC, MS Exchange et MS-SQL sont des exemples d'applications 
 Migration d'un cluster ayant activé les disques virtuels à écriture multiple :
 - vMotion est utilisée car les mappages d'origine du disque de machine virtuelle et de l'UUID sont maintenus.
 - Le cluster reste à l'état dégradé (noeud unique) durant la migration.
-- Le cluster subit un temps d'arrêt avant le début de la migration et après que la migration soit terminée pour réassembler la configuration d'écriture multiple entre les noeuds de machine virtuelle du cluster.
+- Le cluster subit un temps d'arrêt avant le début de la migration et après que la migration soit terminée pour réassembler la configuration d'écriture multiple entre les machines virtuelles du cluster.
 
 Effectuez les opérations suivantes pour migrer un cluster avec disque à écriture multiple activé :
-1. Désactivez le cluster et tous les noeuds conformément aux pratiques recommandées de l'application.
+1. Mettez hors tension le cluster et tous les noeuds conformément aux pratiques recommandées de l'application.
 2. Prenez note de l'ordre des disques, si l'application l'exige, dans chaque noeud de machine virtuelle pour les disques virtuels configurés en écriture multiple.
 3. Pour Oracle et toute autre application qui utilise la fonctionnalité UUID du disque virtuel, connectez-vous à un hôte ESXi particulier et exécutez la commande `vmkfstools -J getuuid /vmfs/volumes/datastore/VM/vm.vmdk` pour obtenir l'UUID de chaque fichier de disque virtuel nécessitant que l'indicateur d'écriture multiple soit défini pour le cluster.
   Ceci est nécessaire lorsqu'il est conseillé d'aligner l'ordre des disques sur l'affichage du chemin dans le système d'exploitation. vMotion peut réorganiser les disques (disque 1, disque 2, disque 3) mais les UUID restent les mêmes.
-  Utilisez les informations de mappage UUID-disque notées pour recréer l'ordre de nommage des disques. Utilisez un ID SCSI une fois la migration terminée, si nécessaire. L'application doit fonctionner d'une manière comme de l'autre. On l'utilise lorsqu'une instance Oracle possède un grand nombre de disques virtuels mappés, pour le dépannage de l'application.
-4. Retirez les disques virtuels de tous les noeuds de machine virtuelle du cluster, à l'exception du noeud principal.
-5. Supprimez l'indicateur d'écriture multiple du noeud primaire du cluster de machines virtuelles qui devrait être le seul à posséder les disques du cluster actuellement.
-6. Remontez le noeud du cluster principal si nécessaire pour réduire au minimum les temps d'arrêt.
-7. Migrez tous les noeuds de cluster avec vMotion. Migrez d'abord le cluster principal, puis tous les autres noeuds une fois placés hors tension.
+  Une fois la migration terminée, utilisez l'UUID noté pour mapper les informations de disque, pour recréer l'ordre de nommage des disques, et l'ID SCSI, si besoin. L'application doit fonctionner d'une manière comme de l'autre. On l'utilise lorsqu'une instance Oracle possède un grand nombre de disques virtuels mappés, pour le dépannage de l'application.
+4. Retirez les disques virtuels de toutes les machines virtuelles de cluster, à l'exception de celles du cluster principal. 
+5. Supprimez l'indicateur d'écriture multiple de la machine virtuelle du cluster principal qui devrait être la seule à posséder les disques du cluster actuellement.
+6. Mettez sous tension le cluster principal, si nécessaire pour réduire au minimum les temps d'arrêt.
+7. Migrez tous les noeuds de cluster avec vMotion. Commencez par migrer le cluster principal. Faites migrer tous les autres noeuds après les avoir mis hors tension. 
 8. Lorsque le noeud propriétaire du disque principal termine la migration, mettez-le hors tension.
 9. Si nécessaire, remappez l'ordre des disques avec l'UUID de disque et l'ID SCSI appropriés. Le remappage n'est pas nécessaire pour que l'application fonctionne.
 10. Ré-activez l'indicateur d'écriture multiple sur le noeud principal.
 11. Démarrez le noeud principal et vérifiez le fonctionnement.
-12. Mappez les disques et activez l'indicateur d'écriture multiple sur toutes les autres machines virtuelles du noeud de cluster et mettez-les sous tension.
-13. Vérifiez le fonctionnement de tous les autres noeuds de cluster.
+12. Mappez les disques et activez l'indicateur d'écriture multiple sur toutes les autres machines virtuelles du cluster et mettez-les sous tension.
+13. Vérifiez le fonctionnement de tous les autres clusters. 
 
 ### Machines virtuelles générales
 {: #vcshcx-stretching-general-vms}
@@ -140,34 +140,38 @@ La technologie NFS est généralement utilisée pour partager des données sur d
 
 Dans un cas comme dans l'autre, si la latence peut être maintenue faible dans {{site.data.keyword.CloudDataCent_notm}} (< ~7 ms pour iSCSI et ce que l'application tolère pour NFS) et si l'application fonctionne avec un débit de 1 Gbits/s ou inférieur, alors le réseau NAS peut être étendu avec HCX à un emplacement {{site.data.keyword.clou_notm}}. Après cela, les machines virtuelles peuvent être migrées / transférées via vMotion avec HCX comme d'habitude.
 
-Après la migration, les volumes iSCSI peuvent être dupliqués avec le système d'exploitation vers une autre solution de stockage en cloud local et les données NFS peuvent être répliquées vers une solution en cloud quelconque. Les considérations suivantes doivent être prises en compte :
+Après la migration, les volumes iSCSI peuvent être dupliqués avec le système d'exploitation vers une autre solution de stockage en cloud local et les données NFS peuvent être répliquées vers n'importe quelle solution de cloud. Les considérations suivantes doivent être prises en compte :
 - Latence (iSCSI ou tolérance d'application pour NFS)
 - Bande passante (~1 Gbits/s pour un réseau étendu)
 - Bande passante sous-jacente de la liaison
 
-Après le cycle de vie de la migration, assurez-vous de tester avec les applications de développement ou de mise à disposition avant d'essayer avec la production. La QoS peut être utilisée pour le trafic tunnel sous-jacent (udp 500/4500) entre les dispositifs L2C de HCX qui prennent en charge des réseaux L2 étendus sensibles à la latence.
+Après le cycle de vie de la migration, testez les applications de développement ou de préproduction avant de passer en production. La QoS peut être utilisée pour le trafic tunnel sous-jacent (udp 500/4500) entre les dispositifs L2C de HCX qui prennent en charge des réseaux L2 étendus sensibles à la latence.
 
 ## Basculement du réseau
 {: #vcshcx-stretching-network-swing}
 
-Si le but est d'évacuer le centre de données dans {{site.data.data.keyword.cloud_notm}}, alors l'avant-dernière étape avant la suppression du HCX est le basculement du réseau. Le basculement du réseau permet une migration du sous-réseau du réseau qui héberge les machines virtuelles migrées du centre de données source vers un réseau dissocié NSX dans {{site.data.keyword.cloud_notm}}.
+Si le but est d'évacuer le centre de données dans {{site.data.keyword.cloud_notm}}, alors l'avant-dernière étape avant la suppression du HCX est le basculement du réseau. Le basculement du réseau permet une migration du sous-réseau du réseau qui héberge les machines virtuelles migrées du centre de données source vers un réseau dissocié NSX dans {{site.data.keyword.cloud_notm}}.
 
-Pour procéder au basculement du réseau, les points suivants sont à prendre en compte :
+Pour procéder au basculement du réseau, procédez comme suit :
 - Vérifiez que le réseau est libéré de toutes les charges de travail et que tous les périphériques qui ne sont pas des machines virtuelles sur le réseau sont déplacés vers un autre réseau, migrés fonctionnellement vers le cloud ou dépréciés.
 - Vérifiez que toute topologie NSX ou toute topologie de réseau prenant en charge {{site.data.keyword.cloud_notm}} est compatible avec le basculement de réseau. Par exemple, les protocoles de routage dynamique et les pare-feu.
-- Exécutez un flux de travail de réseau non étendu HCX dans l'interface utilisateur et sélectionnez l'appareil NSX de routage approprié pour prendre en charge la passerelle par défaut pour réseaux non étendus.
-- Exécutez tout changement de routage externe. Par exemple, insérez un routage modifié pour les réseaux qui ont été migrés, supprimez les routes au site source dans le réseau migré, et assurez le routage vers ce sous-réseau migré sur tout le réseau WAN pour les applications non migrées, si nécessaire.
+- Exécutez un flux de travail de réseau non étendu HCX dans l'interface utilisateur et sélectionnez l'appareil NSX de routage approprié pour prendre le contrôle de la passerelle par défaut du réseau non étendu.
+- Exécutez tout changement de routage externe. Par exemple, insérez un routage modifié pour les réseaux qui ont été migrés, supprimez les routes au site source dans le réseau migré, et assurez-vous que le routage vers le sous-réseau migré sur tout le réseau WAN fonctionne toujours pour les applications non migrées. 
 - Réalisez un test d'application propriétaire sur toutes les applications migrées depuis tous les points d'accès possibles : internet, intranet et VPN.
 
-Considérations à prendre en compte lors du basculement réseau d'une application spécifique ayant toutes les machines virtuelles complètement migrées vers le cloud :
-Vous utilisez un pare-feu Vyatta sur le réseau privé pour insérer des routes dans votre cloud MPLS et créer un tunnel vers les dispositifs de routage de périphérie sur le MPLS afin d'éviter tout espace d'adresse IP dans {{site.data.keyword.cloud_notm}}. Votre compte est défini en tant que compte VRF {{site.data.keyword.cloud_notm}}. Certaines applications se trouvent derrière une adresse IP virtuelle (vIP) avec équilibrage de charge réseau. Ces adresses IP virtuelles se trouvent sur votre sous-réseau propriétaire qui réside sur un F5 virtuel derrière Vyatta. Même si la diffusion d'un routage plus spécifique dans le MPLS pour les réseaux qui sont basculés vers {{site.data.keyword.cloud_notm}} via HCX fonctionne bien pour les autres réseaux, elle ne fonctionne pas pour les adresses IP virtuelles individuelles car une route /32 est ajoutée.
+Imaginons que vous souhaitiez effectuer le basculement réseau d'une application spécifique dont toutes les machines virtuelles sont complètement migrées vers le cloud. Par exemple :
+- Vous utilisez un pare-feu Vyatta sur le réseau privé pour insérer des routes dans votre cloud MPLS et créer un tunnel vers les dispositifs de routage de périphérie sur le MPLS afin d'éviter tout espace d'adresse IP dans {{site.data.keyword.cloud_notm}}. 
+- Votre compte est défini en tant que compte VRF {{site.data.keyword.cloud_notm}}.
+- Certaines applications se trouvent derrière une adresse IP virtuelle avec équilibrage de charge réseau. Ces adresses IP virtuelles se trouvent sur votre sous-réseau propriétaire qui réside sur un F5 virtuel derrière Vyatta.
 
-Solution : il est courant pour les fournisseurs WAN de filtrer les routes /32 qui sont diffusées. Travaillez avec le fournisseur de réseau WAN pour permettre cela.
+Même si l'ajout d'un routage plus spécifique dans le MPLS pour les réseaux qui sont basculés vers {{site.data.keyword.cloud_notm}} via HCX fonctionne bien pour les autres réseaux, elle ne fonctionne pas pour les adresses IP virtuelles individuelles car une route /32 est ajoutée.
+
+Solution : il est courant pour les fournisseurs WAN de filtrer les routes /32 qui sont ajoutées. Travaillez avec le fournisseur de réseau WAN pour permettre cela.
 
 Tenez compte des considérations et implications suivantes :
 - Les applications qui partagent un sous-réseau, un réseau vLAN et un réseau VXLAN doivent être déplacées ensemble.
 - Les applications se trouvant derrière un équilibreur de charge utilisant une adresse IP interne routable peuvent nécessiter des changements au niveau du routage si elles ne peuvent pas être déplacées ensemble ou s'il n'est pas souhaitable de le faire. Par exemple, si le fait d'impliquer un trop grand nombre d'applications dans un seul basculement représente un risque trop important.
-- Les administrateurs VMware, les administrateurs de réseau (y compris les clients/fournisseurs de WAN) et les propriétaires d'applications doivent être impliqués. Même si vous ne prévoyez pas que les changements aient un impact sur un système ou un équipement de réseau particulier.
+- Les administrateurs VMware, les administrateurs de réseau (y compris les clients/fournisseurs de WAN) et les propriétaires d'applications doivent être impliqués, même s'il n'y a aucun impact prévu sur un système ou un équipement réseau spécifique. 
 
 ## Liens connexes
 {: #vcshcx-stretching-related}

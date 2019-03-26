@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -20,6 +20,7 @@ lastupdated: "2019-02-14"
 
 ## インスタンスには ESXi サーバーをいくつ追加できますか?
 {: #faq_esxi-instance}
+{: faq}
 
 * vCenter Server インスタンスの場合、デフォルトのクラスターを拡張して、最大 51 台の ESXi サーバーを含めることができます。 デフォルト以外の各クラスターは、最大 59 台の ESXi サーバーを含むように拡張できます。 1 インスタンスに最大 10 個のクラスターを追加できるので、デプロイされたインスタンスごとに、すべてのクラスターの ESXi サーバーの合計数は、最大で 51 + 9x59 = 582 になります。
 * Cloud Foundation インスタンスの場合、標準構成には 4 つの ESXi サーバーが含まれています。 最大 28 台のサーバーを追加できます (合計サーバー数は最大 32 台)。 マルチサイト構成の Cloud Foundation インスタンスの場合、すべてのインスタンスの ESXi サーバーの合計数は、最大で 128 になります。
@@ -29,6 +30,7 @@ lastupdated: "2019-02-14"
 
 ## クラスターには ESXi サーバーをいくつ追加できますか?
 {: #faq_esxi-cluster}
+{: faq}
 
 V2.2 以降でデプロイされたインスタンスの場合、初期クラスターには最大 51 台の ESXi サーバーを、追加クラスターには最大 59 台の ESXi サーバーを追加できます。
 
@@ -46,6 +48,7 @@ V2.1 以前でデプロイされたインスタンスの場合は、必要な vS
 
 ## ESXi サーバー名と IP アドレスは変更できますか?
 {: #faq_esxi-change-name-ip}
+{: faq}
 
 ESXi サーバー名と IP アドレスは、Windows DNS 解決のために登録されているため、変更できません。 変更すると、デプロイ中に問題が生じたり、vCenter Server の機能に問題が生じたりする可能性があります。
 
@@ -54,6 +57,7 @@ ESXi サーバー名を変更するために、{{site.data.keyword.cloud_notm}} 
 
 ## ESXi サーバーのルート・アクセスを無効にすることはできますか?
 {: #faq_esxi-disable-root}
+{: faq}
 
 ESXi サーバーのルート・アクセス有効にしておくことをお勧めします。無効にすると、{{site.data.keyword.vmwaresolutions_short}} 機能に問題が生じる可能性があります。
 
@@ -63,6 +67,7 @@ ESXi サーバーのルート・アクセス有効にしておくことをお勧
 
 ## ESXi サーバーに静的ルートを追加して、他の場所からストレージをマウントすることはできますか?
 {: #faq_esxi-static-routes}
+{: faq}
 
 ストレージ用に静的ルートを追加できますが、その操作には細心の注意を払う必要があります。 注意を怠ると、既存の共有がアンマウントされる可能性があります。
 
@@ -73,7 +78,5 @@ vMotion の静的ルートの追加はサポートされていません。 vMoti
 {: #faq_esxi-related}
 
 * [vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
-* [Cloud Foundation インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

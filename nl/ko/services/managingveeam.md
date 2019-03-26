@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -25,9 +25,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 서비스를 관리하려면 다음 �
 
 Windows IP 주소 및 관리자 인증 정보는 Veeam on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 찾을 수 있습니다.
 
-자세한 정보는 다음 주제를 참조하십시오.
-* [Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+자세한 정보는 [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)를 참조하십시오.
 
 ## Veeam on IBM Cloud가 설치된 인스턴스에 대한 관리 컴포넌트 백업 및 복원
 {: #managing-veeam-backup-and-replication}
@@ -76,7 +74,7 @@ Veeam 서비스가 사설 네트워크만의 인스턴스에 설치된 경우에
 복원에 대한 지원을 받으려면 {{site.data.keyword.cloud_notm}} 지원 티켓을 작성해야 합니다. 또한 V1.8 이전 인스턴스의 Veeam VSI 라이센스가 2017년 10월 14일에 만료되었습니다. 그러므로 이전 Veeam VSI를 새 Veeam on {{site.data.keyword.cloud_notm}} 서비스로 대체해야 합니다.
 
 다음 단계를 완료하십시오.
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭한 후 대상 인스턴스를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭한 후 대상 인스턴스를 클릭하십시오.
 2. 인스턴스 세부사항 페이지에서 **업데이트 및 패치** 탭을 클릭하십시오. 인스턴스를 V1.8 릴리스로 업그레이드했는지 확인하십시오.
 3. **서비스** 탭을 클릭하십시오.
 4. **서비스 추가** 탭에서 Veeam on {{site.data.keyword.cloud_notm}} 서비스를 설치하십시오.

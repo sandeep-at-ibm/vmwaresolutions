@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Ajout, affichage et suppression de clusters pour des instances Cloud Foundation
-{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
+{: #sd_addingviewingclusters}
 
 Les serveurs ESXi que vous avez configurés lors de la commande d'une instance sont regroupés dans un cluster par défaut. Le nom du cluster par défaut est le suivant :
 * Pour les instances déployées dans la version 2.1 ou des éditions ultérieures : **MGMT-Cluster-`<subdomain_label>`**
@@ -111,7 +111,7 @@ Vous pouvez spécifier les options d'octroi de licence pour les composants VMwar
 ## Procédure d'ajout de clusters à des instances Cloud Foundation
 {: #sd_addingviewingclusters-adding-procedure}
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance à laquelle vous souhaitez ajouter des clusters.
 
    Assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas ajouter de clusters à l'instance.
@@ -147,7 +147,7 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
 ## Procédure d'affichage des clusters dans les instances Cloud Foundation
 {: #sd_addingviewingclusters-viewing-procedure}
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur une instance dont vous voulez afficher les clusters.
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, consultez le récapitulatif concernant les clusters :
    * **Nom** : nom du cluster.
@@ -218,7 +218,7 @@ Vous pouvez être amené à vouloir supprimer un cluster d'une instance si vous 
 ## Procédure de suppression de clusters des instances Cloud Foundation
 {: #sd_addingviewingclusters-deleting-procedure}
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances Cloud Foundation**, cliquez sur l'instance dont vous souhaitez supprimer des clusters.
 
    Assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas supprimer de clusters de l'instance.

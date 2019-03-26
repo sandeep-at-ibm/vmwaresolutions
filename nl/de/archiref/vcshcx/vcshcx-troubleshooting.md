@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -44,14 +44,14 @@ Wenn ein Problem mit der WAN-Konnektivität auftritt, überprüfen Sie die Anzei
 Wenn es Fixes und Aktualisierungen gibt, die auf die HCX-Manager (Client und Cloud) angewendet wurden, und diese Aktualisierungen auch Programmkorrekturen an den Paketkomponenten bewirken, müssen Sie das Cloud-Gateway und alle bereitgestellten L2Cs erneut bereitstellen. Es ist möglich, ein weiteres Debugging des Tunnelstatus vorzunehmen, indem eine Verbindung zum HCX-Manager über einen SSH-Client wie z. B. 'ccli' hergestellt wird.  
 
 1. Stellen Sie eine SSH-Verbindung zum HCX-Manager mithilfe des Administratorkontos und des angegebenen Kennworts her.
-2. Führen Sie den Befehl `su-` und das Root-Kennwort (identisch mit dem Administratorkennwort) aus, um zu 'Root' zu wechseln.
+2. Führen Sie den Befehl `su –` aus und geben Sie das Kennwort des Benutzers `root` (identisch mit dem Administratorkennwort) ein, um zu 'Root' zu wechseln. 
 3. Ändern Sie das Verzeichnis in `/opt/vmware/bin` und führen Sie den Befehl `./ccli` aus. Wenn dies nicht erfolgreich ist, weil die Umgebung nicht für 'Root' konfiguriert ist, führen Sie den Befehl `./ccliSetup.pl` aus.
-4. Führen Sie in der ccli-Shell den Befehl `list` aus, um die Paketkomponenten aufzulisten, die beim HCX-Manager registriert sind.
-5. Wählen Sie den Fokus von 'ccli' aus, indem Sie die ID eingeben, die für die Paketkomponente aufgelistet ist. Beispiel: `go 8`.
-6. Führen Sie den Befehl `debug remoteaccess enable` aus, um eine Verbindung über SSH herzustellen, indem Sie die von SSH geforderte Paketkomponente verwenden.
-7. Beenden Sie 'ccli' und stelllen Sie die Verbindung über SSH zur IP-Adresse der SSH-fähigen Paketkomponente her.
+4. Führen Sie den Befehl `list` in der `ccli`-Shell aus, um die Paketkomponenten aufzulisten, die beim HCX-Manager registriert sind. 
+5. Geben Sie die Paket-ID für `ccli` an, indem Sie die für die Paketkomponente aufgelistete ID eingeben. Beispiel: `go 8`.
+6. Führen Sie den Befehl `debug remoteaccess enable` aus, um über SSH eine Verbindung zu der gewünschten Paketkomponente herzustellen. 
+7. Verlassen Sie `ccli` und stellen Sie über SSH eine Verbindung zu der IP-Adresse der SSH-fähigen Paketkomponente her. 
 9. Fahren Sie mit der Fehlerbehebung fort.
-10. Kehren Sie zu 'ccli' zurück und inaktivieren Sie den SSH-Service für die Komponente.
+10. Kehren Sie zu `ccli` zurück und inaktivieren Sie den `ssh`-Service für die Komponente. 
 11. Verwenden Sie bei Bedarf den ccli-Befehl `hc`, um eine Zustandsprüfung der Komponenten auszuführen.
 
 ## Kompatibilitätsproblem mit der Zielhardware
@@ -59,10 +59,10 @@ Wenn es Fixes und Aktualisierungen gibt, die auf die HCX-Manager (Client und Clo
 
 Die vMotion-Migration kann zu Problemen führen, wenn die Clientquellenseite eine neuere Hardwareversion und ein neueres vSphere-Release aufweist als die Cloud. Da bei der replikationsbasierten Migration Daten auf eine neu erstellte virtuelle Maschine (VM) auf der Zielseite kopiert werden, sollte die Änderung des Migrationstyps in "Massenmigration" in den meisten Fällen dazu führen, dass die Migration gelingt.
 
-## Probleme mit erweitertem L2
+## Probleme mit erweitertem L2-Konzentrator
 {: #vcshcx-troubleshooting-stretched-l2}
 
-Bei der Arbeit mit dem L2-Konzentrator wurden praktisch keine Fehler festgestellt. Ähnlich wie beim CGW wird bei einem Verbindungsverlust des L2C automatisch die Verbindung wiederhergestellt, nachdem die Netzkonnektivität wiederhergestellt wurde. Verwenden Sie die ccli-Shell, um den Zustand und den Betrieb zu übeprüfen. Nach der SSH-Aktivierung und dem Anschluss von L2C führen Sie die Befehle `ip tunnel` und `ip link |grep t_` aus, um den Status der Tunnel anzuzeigen.
+Beim Betrieb des L2-Konzentrators (L2C) sind nur sehr wenige Probleme aufgetreten. Ähnlich wie beim CGW wird bei einem Verbindungsverlust des L2C automatisch die Verbindung wiederhergestellt, nachdem die Netzkonnektivität wiederhergestellt wurde. Verwenden Sie die ccli-Shell, um den Zustand und den Betrieb zu übeprüfen. Nach der SSH-Aktivierung und dem Anschluss von L2C führen Sie die Befehle `ip tunnel` und `ip link |grep t_` aus, um den Status der Tunnel anzuzeigen.
 
 ## Zugehörige Links
 {: #vcshcx-troubleshooting-related}

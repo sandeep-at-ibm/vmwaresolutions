@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Migration and App Modernization 单节点试用版概述
-{: #single-node-trial-for-migration-and-app-modernization-overview}
+{: #cloud_modern_bundle_overview}
 
 通过 Migration and App Modernization 单节点试用版，您可以试用 IBM Cloud，以将 VMware 工作负载迁移到 IBM Cloud，然后使用容器对简单工作负载进行现代化。
 
@@ -88,7 +88,7 @@ Migration and App Modernization 单节点试用版实例中包含以下组件。
 
 Migration and App Modernization 单节点试用版实例订单随附以下许可证。
 
-* VMware vSphere Enterprise Plus 6.5
+* VMware vSphere Enterprise Plus 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * IBM Cloud Private Hosted V3.1

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -16,7 +16,7 @@ VMware HCX(Hybrid Cloud Services)를 사용하면 vSphere 소프트웨어 정의
 그림 1. VMware Hybrid Cloud Services
 ![VMware Hybrid Cloud Services](vcshcx.svg)
 
-이와 같이 HCX는 {{site.data.keyword.cloud}}에서 완전히 자동화된 vSphere 오퍼링과 기타 배치된 vSphere 인스턴스 사이의 상호 운용에 사용되는 기본 방법입니다. HCX는 이제 {{site.data.keyword.vmwaresolutions_short}}에 완전히 통합된 오퍼링입니다.
+HCX는 {{site.data.keyword.cloud}}에서 완전히 자동화된 vSphere 오퍼링과 기타 배치된 vSphere 인스턴스 사이의 상호 운용에 사용되는 기본 방법입니다. HCX는 이제 {{site.data.keyword.vmwaresolutions_short}}에 완전히 통합된 오퍼링입니다.
 
 이 안내서는 HCX의 배치와 운영에 사용하도록 제공되며, 현재 허용되고 용인되는 우수 사례와 문제점 해결이 포함되어 있습니다. HCX는 Agile 개발 방법론을 사용하여 개발되므로 이 안내서를 지원되는 버전 또는 지원되는 플랫폼의 실질적인 소스로 사용하지 마십시오.
 

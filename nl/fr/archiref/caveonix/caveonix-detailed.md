@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -37,9 +37,9 @@ Figure 1. Composants de l'application
     - Résultats d'analyse
     - Logiciel
     - Jeu de données agrégés chaque jour ou chaque semaine
--	Magasin de données de messagerie - RiskForesight utilise une file d'attente de messagerie persistante pour éviter toute perte de données et décharger la contre-pression sur les composants. Le contenu des données entrantes est persistant dans un premier temps, puis prélevé du fichier persistant pour traitement ultérieur.
--	Magasin de données d'index - Il indexe et stocke les données brutes entrantes de chaque locataire pour effectuer des analyses supplémentaires afin de prendre en charge la fonction multi-locataires.
--	Plug-in – Ils résident dans le service de routage d'application et incluent la configuration et l'intégration avec les composants VMware pour synchroniser toutes les machines virtuelles avec les informations de leurs locataires.
+- Magasin de données de messagerie - RiskForesight utilise une file d'attente de messagerie persistante pour éviter toute perte de données et décharger la contre-pression sur les composants.
+- Magasin de données d'index - Il indexe et stocke les données brutes entrantes de chaque locataire pour effectuer des analyses supplémentaires afin de prendre en charge la fonction multi-locataires.
+- Plug-in – Ils résident dans le serveur de routage d'application et incluent la configuration et l'intégration avec les composants VMware pour synchroniser toutes les machines virtuelles avec les informations de leurs locataires.
 
 Le tableau suivant montre les ports et les protocoles requis pour chaque composant.
 

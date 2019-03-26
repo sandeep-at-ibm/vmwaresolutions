@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -51,6 +51,13 @@ lastupdated: "2019-02-14"
 * 實例名稱的長度上限為 10 個字元。
 * 實例名稱在您的帳戶中必須是唯一的。
 
+### VMware vSphere 授權
+{: #vc_hybrid_orderinginstance-vsphere-license}
+
+選取是否要訂購 vSphere Enterprise Plus 6.7u1 或 vSphere Enterprise Plus 6.5u2。
+
+vSphere Enterprise Plus 6.7u1 僅適用於 Broadwell 及 Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}。{:note}
+
 ### 主要或次要
 {: #vc_hybrid_orderinginstance-primary-secondary}
 
@@ -62,7 +69,7 @@ lastupdated: "2019-02-14"
 vCenter Server with Hybridity Bundle 實例訂單隨附下列 VMware 授權。您必須指定 NSX 及 vSAN 授權的版本。
 
 * vCenter Server 6.5
-* vSphere Enterprise Plus 6.5u1
+* vSphere Enterprise Plus 6.5 或 6.7
 * NSX Service Providers 6.4（Advanced 或 Enterprise 版本）
 * vSAN 6.6（Advanced 或 Enterprise 版本）
 
@@ -226,32 +233,33 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 頁面上，按一下 **vCenter Server with Hybridity Bundle** 卡片，然後按一下**建立**。
 3. 在 **vCenter Server** 頁面上，輸入實例名稱。
+5. 選取 vSphere 版本。
 4. 選取實例類型：
    * 按一下**主要實例**，以在環境中部署單一實例，或是部署多站台拓蹼中的第一個實例。
    * 按一下**次要實例**，以連接該實例與環境中的現有（主要）實例以獲得高可用性，然後完成下列步驟：
      1. 選取您要與次要實例連接的主要實例。
      2. 對於主要實例 2.8 版或更新版本，輸入主要實例的 vCenter Server 管理者密碼。
      3. 對於主要實例 2.7 版或更早版本，輸入主要實例的 PSC 管理者密碼。
-5. 選取 NSX 授權版本及 vSAN 授權版本。
-6. 完成 Bare Metal Server 設定。
+6. 選取 NSX 授權版本及 vSAN 授權版本。
+7. 完成 Bare Metal Server 設定。
   1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
   2. 選取 **Skylake** 或 **Broadwell** CPU 模型，以及 **RAM** 的數量。
 
   依預設，**Bare Metal Server 數目**設為 4，且無法變更。
   {:note}
-7. 完成儲存空間配置。指定容量及快取磁碟的磁碟類型以及磁碟數目。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
-8. 完成網路介面配置。
+8. 完成儲存空間配置。指定容量及快取磁碟的磁碟類型以及磁碟數目。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
+9. 完成網路介面配置。
   1. 輸入主機名稱字首、子網域標籤及根網域名稱。
   2. 選取**公用及專用網路**或**僅限專用網路**的網路設定。
   3. 選取 VLAN 配置。
      *  如果您要訂購新的公用及專用 VLAN，則請按一下**訂購新的 VLAN**。
      *  如果您要重複使用可用的現有公用及專用 VLAN，則請按一下**選取現有的 VLAN**，然後選取公用 VLAN、主要子網路、專用 VLAN、專用主要子網路及次要專用 VLAN。
   4. 選取 DNS 配置。
-9. 完成 {{site.data.keyword.cloud_notm}} 服務上所含 HCX 的配置。如需如何提供服務設定的相關資訊，請參閱[訂購 VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration) 中的 _VMware HCX on IBM Cloud 配置_ 小節。
-10. 按一下對應的服務卡，以選取要部署到實例中的附加程式服務。如果需要配置服務，則請完成服務特定設定，然後按一下卡片上的**新增服務**。  
+10. 完成 {{site.data.keyword.cloud_notm}} 服務上所含 HCX 的配置。如需如何提供服務設定的相關資訊，請參閱[訂購 VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration) 中的 _VMware HCX on IBM Cloud 配置_ 小節。
+11. 按一下對應的服務卡，以選取要部署到實例中的附加程式服務。如果需要配置服務，則請完成服務特定設定，然後按一下卡片上的**新增服務**。  
 如需如何提供服務設定的相關資訊，請參閱對應的服務訂購主題。
 
-11. 在**訂單摘要**窗格上，先驗證實例配置，再下訂單。
+12. 在**訂單摘要**窗格上，先驗證實例配置，再下訂單。
    1. 檢閱實例的設定。
    2. 檢閱預估實例成本。按一下**定價詳細資料**以產生 PDF 摘要。若要儲存或列印訂單摘要，請按一下 PDF 視窗右上方的**列印**或**下載**圖示。
    3. 按一下適用於您的訂單的條款鏈結，並先確認您同意這些條款，再訂購實例。
@@ -262,7 +270,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 
 實例的部署會自動啟動。您會收到正在處理訂單的確認，並且可以檢視實例詳細資料來檢查部署的狀態。
 
-順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server with Hybridity Bundle 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
+順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server with Hybridity Bundle 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
 
 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 

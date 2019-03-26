@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -100,6 +100,12 @@ Tabela 4. Resumo
 |MVs de base	|1	|1	|20 |
 |Ajuste de escala de MVs	|0	|3	|28 |
 |Total de MVs	|1	|4	|48 |
+
+**Notas:**
+Ao remover o serviço Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}, a automação do {{site.data.keyword.vmwaresolutions_short}} exclui apenas a única VM do Caveonix "tudo em um" que foi implementada e a sub-rede privada dedicada que foi pedida para ele. Portanto,
+* Se você escalou a VM do Caveonix em múltiplas VMs, essas VMs adicionais não serão removidas. 
+* Se você usou os endereços IP da sub-rede privada dedicada em VMs adicionais, essas VMs deverão ser designadas a novos endereços IP para continuarem a funcionar. 
+* Se você excluir a instância A do servidor do vCenter com o serviço do Caveonix RiskForesight no {{site.data.keyword.cloud_notm}} instalado e você usou os endereços IP da sub-rede privada dedicada pedida para o serviço na instância B do servidor do vCenter, a sub-rede privada dedicada será cancelada na exclusão da instância A do servidor vCenter.
 
 ## Links relacionados
 {: #caveonix-deploy-related}

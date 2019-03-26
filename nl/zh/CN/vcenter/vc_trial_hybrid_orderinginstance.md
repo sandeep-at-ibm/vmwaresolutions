@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -27,7 +27,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} 单节点试用版是一种
 有关体系结构设计的信息，请参阅[针对 vCenter Server on IBM Cloud 单节点试用版的 HCX on IBM Cloud 体系结构设计](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)。
 
 ## vCenter Server 单节点试用版实例的技术规范
-{: #vc_trial_hybrid_orderinginstance-tech-specs}
+{: #vc_trial_hybrid_orderinginstance-specs}
 
 vCenter Server 单节点试用版实例中包含以下组件：
 
@@ -173,7 +173,7 @@ vCenter Server 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}�
 #### 查看实例详细信息
 {: #vc_trial_hybrid_orderinginstance-view-inst-details}
 
-您可以通过查看实例详细信息来检查部署的状态。在左侧导航窗格中，单击**已部署的实例**，然后找到 **vCenter Server 实例**或**内部部署 HCX 实例**表，以查看有关所订购实例的信息。
+您可以通过查看实例详细信息来检查部署的状态。在左侧导航窗格中，单击**资源**，然后找到 **vCenter Server 实例**或**内部部署 HCX 实例**表，以查看有关所订购实例的信息。
 
 成功部署实例后，本主题的*技术规范*部分中所述的组件已安装在 VMware 虚拟平台上，并且内部部署 HCX on {{site.data.keyword.cloud_notm}} 服务激活密钥在**内部部署 HCX 实例**表中列出。
 
@@ -184,8 +184,8 @@ vCenter Server 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}�
 
 安装内部部署 HCX Enterprise Manager，并配置与 HCX on {{site.data.keyword.cloud_notm}} 实例的连接。
 
-1. 在**已部署的实例**页面上找到内部部署激活密钥。
-  1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在**资源**页面上找到内部部署激活密钥。
+  1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
   2. 在 **vCenter Server 实例**表中，查看**类型**列以找到 vCenter Server 单节点试用版实例，并记下该实例的名称。
   3. 滚动到**内部部署 HCX 实例**表并查看**名称**列，以找到与订购的单节点实例同名但后缀为 *-OnPrem* 的实例。
   4. 记下**激活密钥**字段中的密钥。
@@ -242,7 +242,7 @@ vCenter Server 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}�
 
 要删除 vCenter Server 单节点试用版实例，请完成以下步骤：
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，找到要删除的实例。
 3. 在**操作**列中，单击“删除”图标。
    实例的状态会更改为**正在删除**。成功删除实例后，会释放该实例的组件，并且实例的状态会更改为**已删除**。
@@ -253,6 +253,6 @@ vCenter Server 单节点试用版包含 HCX on {{site.data.keyword.cloud_notm}}�
 ## 相关链接
 {: #vc_trial_hybrid_orderinginstance-related}
 
-* [针对 vCenter Server on IBM Cloud 单节点试用版的 HCX on IBM Cloud 体系结构设计](/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
+* [针对 vCenter Server on IBM Cloud 单节点试用版的 HCX on IBM Cloud 体系结构设计](https://console.bluemix.net/docs/services/vmwaresolutions/archiref/trial/vc_trial_hcx_arch.html)
 * [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#/vm-documentation)
 * [获取 HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

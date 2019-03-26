@@ -287,9 +287,9 @@
 			<rect x="387.2" y="621" class="st23" width="89.8" height="37"/>
 		</g>
 		<text transform="matrix(1 0 0 1 353.2979 645.4043)" class="st0 st7 st24">MV</text>
-		<text transform="matrix(1 0 0 1 391.9365 645.4043)" class="st0 st7 st24">HCX Cloud</text>
+		<text transform="matrix(1 0 0 1 391.9365 645.4043)" class="st0 st7 st24">Nuvem HCX</text>
 	</g>
-	<text transform="matrix(1 0 0 1 353 679)" class="st7 st21">HCX Manager</text>
+	<text transform="matrix(1 0 0 1 353 679)" class="st7 st21">Gerenciador de HCX</text>
 </g>
 <g id="VM_HCX">
 	<g>
@@ -298,7 +298,7 @@
 			<rect x="235.8" y="333" class="st23" width="111.2" height="47"/>
 		</g>
 		<text transform="matrix(1 0 0 1 194 364)" class="st0 st7 st8">MV</text>
-		<text transform="matrix(1 0 0 1 242 364)" class="st0 st7 st8">HCX Cloud</text>
+		<text transform="matrix(1 0 0 1 242 364)" class="st0 st7 st8">Nuvem HCX</text>
 	</g>
 </g>
 </svg>

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -19,22 +19,22 @@ Vous pouvez utiliser les lignes de base gérées par le système pour mettre à 
 
 Pour la plupart des entreprises, les paramètres par défaut de VMware pour VUM sont considérés comme appropriés. Les informations suivantes indiquent comment modifier ces paramètres si votre entreprise souhaite utiliser d'autres paramètres.
 
-## Download Schedule
+##	Download Schedule
 {: #vum-metadata-download-schedule}
 
 Les mises à jour sont des mises à niveau de dispositifs virtuels, des correctifs d'hôte et des extensions. Par défaut, VUM télécharge les mises à jour quotidiennement. Modifiez ce comportement en accédant à vSphere Web Client, en cliquant sur **Home** > **Update Manager** > **Manage** > **Settings**, puis en sélectionnant **Download Schedule** et en cliquant sur **Edit**.
 
-## Notification Check Schedule
+##	Notification Check Schedule
 {: #vum-metadata-notif-check-schedule}
 
 Les notifications sont des informations sur les rappels de correctif, les nouveaux correctifs et les alertes. Par défaut, VUM télécharge les notifications toutes les heures. Ce comportement peut être modifié en accédant à vSphere Web Client, en cliquant sur **Home** > **Update Manager** > **Manage** > **Settings**, puis en sélectionnant **Notification Check Schedule** et en cliquant sur **Edit**.
 
-## Virtual Machine Settings
+##	Virtual Machine Settings
 {: #vum-metadata-vm-settings}
 
 Pour modifier les paramètres de machine virtuelle, accédez à vSphere Web Client, sélectionnez **Home** > **Update Manager** > **Manage** > **Settings** et **VM Settings**, puis cliquez sur **Edit**.
 
-## Host/Cluster Settings
+##	Host/Cluster Settings
 {: #vum-metadata-host-settings}
 
 Pour modifier les paramètres d'hôte ou de cluster (Host/Cluster Settings), accédez à vSphere Web Client, cliquez sur **Home** > **Update Manager** > **Manage** > **Settings** et **Host/Cluster Settings**, puis cliquez sur **Edit**.

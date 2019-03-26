@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -30,10 +30,10 @@ Cloud Foundation 인스턴스를 삭제하는 경우 다음 컴포넌트가 순�
 삭제된 인스턴스에 대한 {{site.data.keyword.cloud_notm}} 비용 청구 주기 종료 시까지 비용이 청구됩니다.
 {:note}
 
-## 배치된 인스턴스 페이지에서 인스턴스를 삭제하는 프로시저
+## 리소스 페이지에서 인스턴스를 삭제하는 프로시저
 {: #sd_deletinginstance-procedure1}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **Cloud Foundation 인스턴스** 테이블에서 삭제할 인스턴스를 찾으십시오.
 3. **조치** 열에서 삭제 아이콘을 클릭하십시오.
    인스턴스의 상태가 **삭제 중**으로 변경됩니다. 인스턴스가 삭제되면 인스턴스의 컴포넌트가 릴리스되고 인스턴스의 상태가 **삭제됨**으로 변경됩니다.
@@ -44,7 +44,7 @@ Cloud Foundation 인스턴스를 삭제하는 경우 다음 컴포넌트가 순�
 ## 인스턴스 세부사항 페이지에서 인스턴스를 삭제하는 프로시저
 {: #sd_deletinginstance-procedure2}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **Cloud Foundation 인스턴스** 테이블에서 삭제할 인스턴스를 클릭하십시오.
 3. **vCenter 콘솔** 옆에 있는 오버플로우 메뉴 아이콘을 클릭하고 **인스턴스 삭제**를 클릭하십시오.
    인스턴스의 상태가 **삭제 중**으로 변경됩니다. 인스턴스가 삭제되면 인스턴스의 컴포넌트가 릴리스되고 인스턴스의 상태가 **삭제됨**으로 변경됩니다.
@@ -56,7 +56,6 @@ Cloud Foundation 인스턴스를 삭제하는 경우 다음 컴포넌트가 순�
 {: #sd_deletinginstance-related}
 
 * [다중 사이트 구성에서 Cloud Foundation 인스턴스 삭제](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
-* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Cloud Foundation 인스턴스 보기](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
 * [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [다중 사이트 구성 삭제](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)

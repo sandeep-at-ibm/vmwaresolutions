@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -59,7 +59,7 @@ No total, a oferta de base requer 38 vCPU e 67 GB de vRAM que são reservados pa
 Para obter mais informações sobre a arquitetura, consulte a [Referência de arquitetura do {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Especificações técnicas para instâncias do vCenter Server
-{: #technical-specifications-for-vcenter-server-instances}
+{: #vc_vcenterserveroverview-specs}
 
 Os componentes a seguir estão incluídos em sua instância do vCenter Server.
 
@@ -70,9 +70,9 @@ A disponibilidade e a precificação de configurações padronizadas de hardware
 {: #vc_vcenterserveroverview-bare-metal}
 
 É possível pedir três ou mais {{site.data.keyword.baremetal_short}} com uma das configurações a seguir:
-* **Skylake**: servidores de geração do Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100) com o seu modelo de CPU selecionado e o tamanho de RAM.  
+* **Skylake**: servidores de geração do Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100) com o seu modelo de CPU selecionado e o tamanho de RAM.
 * **Certificado pela SAP**: servidores de geração Intel Skylake ou Intel Broadwell (série Intel Xeon 6140/E5-2690/E7-8890) com seu modelo de CPU selecionado.
-* **Broadwell**: servidores de geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600/E7-4800 ) com seu modelo de CPU e tamanho de RAM selecionados. 
+* **Broadwell**: servidores de geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600/E7-4800 ) com seu modelo de CPU e tamanho de RAM selecionados.
 
 Se você planeja usar o armazenamento vSAN, a configuração requer quatro {{site.data.keyword.baremetal_short}}.
 {:note}
@@ -129,9 +129,12 @@ A opção vSAN oferece configurações customizadas com várias opções para ti
 {: #vc_vcenterserveroverview-nfs-storage}
 
 A opção NFS oferece armazenamento compartilhado customizado no nível de arquivo para cargas de trabalho com várias opções para tamanho e desempenho:
-* Tamanho: 20 a 12000 GB
+* Tamanho: 20 GB a 24 TB
 * Desempenho: 0,25, 2, 4 ou 10 IOPS/GB.
 * Configuração individual de compartilhamentos de arquivos.
+
+  O nível de desempenho de 10 IOPS/GB é limitado a uma capacidade máxima de 4 TB por compartilhamento de arquivo.
+  {:note}
 
 Se você escolher a opção NFS, um compartilhamento de arquivo de 2 TB e 4 IOPS/GB para componentes de gerenciamento será pedido.
 
@@ -143,7 +146,7 @@ A opção de discos locais, disponível somente para a configuração Bare Metal
 ### Licenças (fornecidas pela IBM ou BYOL) e taxas
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 ou 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * (Para clusters do vSAN) VMware vSAN Advanced ou Enterprise 6.6
@@ -152,17 +155,17 @@ A opção de discos locais, disponível somente para a configuração Bare Metal
 ## Especificações técnicas para nós de expansão do vCenter Server
 {: #vc_vcenterserveroverview-expansion-node-specs}
 
-Cada nó de expansão do vCenter Server implementará e incorrerá em encargos para os componentes a seguir em sua conta do {{site.data.keyword.cloud_notm}}.
+Cada nó de expansão do vCenter Server implementa e incorre em encargos para os componentes a seguir em sua conta do {{site.data.keyword.cloud_notm}}.
 
 ### Hardware para nós de expansão
 {: #vc_vcenterserveroverview-expansion-node-hardware}
 
-Um Bare Metal Server com a configuração apresentada em [Especificações técnicas para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
+Um Bare Metal Server com a configuração apresentada em [Especificações técnicas para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
 
 ### Licenças e taxas para os nós de expansão
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* Um VMware vSphere Enterprise Plus 6.5u1
+* Um VMware vSphere Enterprise Plus 6.5u2 ou 6.7u1
 * Um VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * Uma taxa de suporte e de serviços
 * (Para clusters do vSAN) VMware vSAN Advanced ou Enterprise 6.6
@@ -184,3 +187,4 @@ Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}}, 
 * [Planejando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Armazenamento de arquivo e de bloco do {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [ Expandindo Capacidade de Compartilhamento de Arquivo ](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

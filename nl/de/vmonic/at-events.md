@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -48,7 +48,6 @@ Tabelle 2. Beschreibung von Aktionen, die Managementereignisse generieren
 | `vmware-solutions.notification.update` | <ul><li>Die Anforderung zum Aktualisieren von Benachrichtigungen wird empfangen.</li><li>Die Anforderung zum Aktualisieren von Benachrichtigungen wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>Die Anforderung zum Bereinigen von gesicherten Daten wird empfangen.</li><li>Die Anforderung zum Bereinigen von gesicherten Daten wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>Die Anforderung zum Migrieren auf ein bss-Konto wird empfangen.</li><li>Die Anforderung zum Migrieren auf ein bss-Konto wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcf.order`                 | <ul><li>Die Anforderung zum Bestellen einer Cloud Foundation-Instanz wird empfangen.</li><li>Die Anforderung zum Bestellen einer Cloud Foundation-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
 | `vmware-solutions.vcf.delete`                | <ul><li>Die Anforderung zum Löschen einer Cloud Foundation-Instanz wird empfangen.</li><li>Die Anforderung zum Löschen einer Cloud Foundation-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
 | `vmware-solutions.vcf.add_hosts`             | <ul><li>Die Anforderung zum Hinzufügen von ESXi-Servern zu einer Cloud Foundation-Instanz wird empfangen.</li><li>Die Anforderung zum Hinzufügen von ESXi-Servern zu einer Cloud Foundation-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
 | `vmware-solutions.vcf.remove_hosts`          | <ul><li>Die Anforderung zum Löschen von ESXi-Servern aus einer Cloud Foundation-Instanz wird empfangen.</li><li>Die Anforderung zum Löschen von ESXi-Servern aus einer Cloud Foundation-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |

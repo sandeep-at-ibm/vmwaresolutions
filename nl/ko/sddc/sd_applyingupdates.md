@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2019-02-14"
 
 사용 가능한 업데이트는 인스턴스의 소프트웨어 업데이트 목록에 있는 레코드로, 즉시 적용되거나 나중에 실행되도록 스케줄될 수 있습니다. 업데이트는 IBM 관리 컴포넌트 및 VMware 컴포넌트를 업데이트하기 위해 하나 이상의 패키지가 포함된 번들입니다.
 
-V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데이트는 더 이상 나열되지 않습니다. 호스트 추가, 클러스터 추가 및 서비스 주문과 같은 조치를 수행하면 인스턴스가 최신 버전으로 자동 업데이트됩니다. 자동 업데이트에 대한 자세한 정보는 [V2.5 릴리스 정보](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)에서 *IBM CloudDriver 복원성* 섹션을 참조하십시오.
+자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데이트는 더 이상 나열되지 않습니다. ESXi 서버 추가, 클러스터 추가 및 서비스 주문과 같은 조치를 수행하면 인스턴스가 최신 버전으로 자동 업데이트됩니다. 자동 업데이트에 대한 자세한 정보는 [V2.5 릴리스 정보](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)에서 *IBM CloudDriver 복원성* 섹션을 참조하십시오.
 {:note}
 
 ## 시작하기 전에
@@ -56,7 +56,7 @@ V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데
 ## Cloud Foundation 인스턴스에 업데이트를 적용하는 프로시저
 {: #sd_applyingupdates-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **배치된 인스턴스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **Cloud Foundation 인스턴스** 테이블에서 업데이트할 인스턴스를 클릭하십시오.
 3. **요약** 페이지에서 모든 인스턴스 세부사항이 올바르게 표시되는지 확인하십시오. 그런 다음, 왼쪽 탐색 분할창에 있는 **인프라**를 클릭하여 **인프라** 페이지의 세부사항을 확인하십시오.
    세부사항이 표시되지 않는 경우, 방화벽 규칙 또는 다른 네트워킹 문제로 인해 IBM CloudDriver VSI(Virtual Server Instance)에 연결 문제점이 있음을 나타낼 수 있습니다. 다음 단계를 계속하기 전에 문제점을 해결하십시오. 그렇지 않으면, 업데이트에 실패할 수 있습니다.

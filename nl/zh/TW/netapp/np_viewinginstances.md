@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2019-02-14"
 
 若要檢視針對使用者帳戶佈建之所有 NetApp ONTAP Select 實例的摘要，請完成下列步驟：
 
-1. 從 {{site.data.keyword.vmwaresolutions_full}} 主控台，按一下左導覽窗格上的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_full}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 從主控台橫幅，按一下您的使用者帳戶圖示，然後按一下**帳戶**欄位，以選取您要檢查其實例的使用者帳戶。
 3. 在 **NetApp ONTAP Select 實例**表格中，檢視所選取使用者帳戶中佈建的實例清單。
 

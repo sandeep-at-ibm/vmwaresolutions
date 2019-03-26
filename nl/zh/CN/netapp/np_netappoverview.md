@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -62,7 +62,7 @@ Manager
 NetApp ONTAP Select 在 VMware 集群中运行，并对主机上的本地存储器进行虚拟化。NetApp ONTAP Select 部署在专用模型中，其他工作负载不应与之共享集群。因此，NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品的硬件配置仅基于 NetApp ONTAP Select 的需求来设置大小。
 
 ## NetApp ONTAP Select 实例的技术规范
-{: #technical-specifications-for-netapp-ontap-select-instances}
+{: #np_netappoverview-specs}
 
 NetApp ONTAP Select 实例中包含以下组件。
 

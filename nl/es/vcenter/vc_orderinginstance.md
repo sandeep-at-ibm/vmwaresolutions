@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,6 +52,14 @@ El nombre de instancia debe cumplir los siguientes requisitos:
 * La longitud máxima del nombre de instancia es de 10 caracteres.
 * El nombre de instancia debe ser exclusivo dentro de su cuenta.
 
+### Licencias de VMware vSphere
+{: #vc_orderinginstance-vsphere-license}
+
+Seleccione si desea solicitar vSphere Enterprise Plus 6.7u1 o vSphere Enterprise Plus 6.5u2.
+
+vSphere Enterprise Plus 6.7u1 está disponible solo para {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} Broadwell y Skylake.
+{:note}
+
 ### Primaria o secundaria
 {: #vc_orderinginstance-primary-secondary}
 
@@ -61,8 +69,8 @@ Seleccione si desea solicitar una nueva instancia primaria o una instancia secun
 {: #vc_orderinginstance-licensing-settings}
 
 Especifique las opciones de licencia para los siguientes componentes de VMware de la instancia:
-* vCenter Server 6.5 - edición Standard
-* vSphere 6.5u1 - edición Enterprise Plus
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5 o 6.7
 * NSX Service Providers 6.4 (edición Base, Advanced o Enterprise)
 
 Para los usuarios de Business Partners, se incluyen y se adquieren en su nombre la licencia de vCenter Server (edición Standard), la licencia de vSphere (edición Enterprise Plus) y la licencia de NSX. Sin embargo, debe especificar la edición para la licencia de NSX.
@@ -294,6 +302,7 @@ En función de la configuración seleccionada para la instancia y los servicios 
 1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** desde el panel de navegación de la izquierda y, a continuación, pulse **vCenter Server** en la sección **Centros de datos virtuales**.
 2. En la página **VMware vCenter Server on IBM Cloud**, pulse la tarjeta **vCenter Server** y pulse **Crear**.
 3. En la página **vCenter Server**, escriba el nombre de la instancia.
+5. Seleccione la versión de vSphere.
 4. Seleccione el tipo de instancia:
    * Pulse **Instancia primaria** para desplegar una sola instancia en el entorno o para desplegar la primera instancia en una topología de varios sitios.
    * Pulse **Instancia secundaria** para conectar la instancia con una instancia existente (primaria) en el entorno para conseguir alta disponibilidad y siga estos pasos:
@@ -301,21 +310,21 @@ En función de la configuración seleccionada para la instancia y los servicios 
      2. Para las instancias primarias V2.8 o posteriores, especifique la contraseña del administrador de vCenter Server para la instancia primaria.
      3. Para las instancias primarias V2.5, 2.6 o 2.7, especifique la contraseña del administrador de PSC para la instancia primaria.
      4. Para las instancias primarias V2.4 o anteriores, verifique que el valor especificado correspondiente a la contraseña del administrador de PSC para la instancia primaria sea correcto.
-5. Complete los valores de licencia de los componentes de la instancia.
+6. Complete los valores de licencia de los componentes de la instancia.
    *  Para utilizar licencias proporcionadas por IBM, seleccione **Incluir con la compra** y seleccione la edición de licencia, si es necesario.
    *  Para utilizar su propia licencia, seleccione **Proporcionaré** y escriba la clave de la licencia.
-6. Complete los valores del servidor nativo.
+7. Complete los valores del servidor nativo.
     1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} que va a alojar la instancia.
     2. Seleccione la configuración del servidor nativo.
        * Si seleccione **Skylake** o **Broadwell**, especifique el modelo de CPU y el tamaño de RAM.
-       * Si selecciona **Certificado por SAP**, especifique el modelo de CPU.
+       * Si selecciona **Certificado por SAP**, elija una de las configuraciones preestablecidas.
     3. Especifique el número de {{site.data.keyword.baremetal_short}}. Si tiene previsto utilizar vSAN como solución de almacenamiento, se necesitan un mínimo de 4 {{site.data.keyword.baremetal_short}}.  
-7. Complete la configuración del almacenamiento.
+8. Complete la configuración del almacenamiento.
   * Si selecciona **Almacenamiento vSAN**, especifique los tipos de disco para la capacidad y los discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
   * Si selecciona **Almacenamiento NFS** y desea añadir y configurar los mismos valores para todas las comparticiones de archivos, especifique el **Número de comparticiones**, el **Rendimiento** y el **Tamaño (GB)**.
   * Si selecciona **Almacenamiento NFS** y desea añadir y configurar comparticiones de archivos individualmente, seleccione **Configurar comparticiones individualmente**. A continuación, pulse el icono **+** situado junto a la etiqueta **Añadir almacenamiento compartido** y seleccione el **Rendimiento** y el **Tamaño (GB)** de cada compartición de archivos. Debe seleccionar al menos una unidad compartida de archivo.
   * Si selecciona **Discos locales**, especifique el recuento de discos y el tipo de disco.
-8. Complete los valores de interfaz de red.
+9. Complete los valores de interfaz de red.
    1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio raíz. Para una instancia secundaria, el nombre de dominio se rellena automáticamente.
    2. Seleccione el valor de red de **Red pública y privada** o **Solo red privada**.
    3. Seleccione los valores de VLAN:
@@ -323,10 +332,10 @@ En función de la configuración seleccionada para la instancia y los servicios 
       * Si desea reutilizar las VLAN públicas y privadas existentes cuando estén disponibles, pulse **Seleccionar las VLAN existentes** y especifique las VLAN y las subredes.
    4. Especifique la configuración de DNS.
 
-9. Seleccione los servicios complementarios que desea desplegar en la instancia pulsando la tarjeta del servicio correspondiente. Si un servicio requiere configuración, complete los valores específicos del servicio y pulse **Añadir servicio** en la tarjeta.
+10. Seleccione los servicios complementarios que desea desplegar en la instancia pulsando la tarjeta del servicio correspondiente. Si un servicio requiere configuración, complete los valores específicos del servicio y pulse **Añadir servicio** en la tarjeta.
 Para obtener más información sobre cómo proporcionar valores para un servicio, consulte el tema de ordenación de servicio correspondiente.
 
-10. En el panel **Resumen del pedido**, verifique la configuración de la instancia antes de realizar el pedido.
+11. En el panel **Resumen del pedido**, verifique la configuración de la instancia antes de realizar el pedido.
    1. Revise los valores de la instancia.
    2. Revise el coste estimado de la instancia. Pulse **Detalles sobre precios** para generar un resumen en PDF. Para guardar o imprimir el resumen del pedido, pulse el icono **Imprimir** o **Descargar** en la parte superior derecha de la ventana del PDF.
    3. Pulse el enlace o enlaces de los términos que se aplican a su pedido y confirme que acepta estos términos antes de solicitar la instancia.
@@ -337,7 +346,7 @@ Para obtener más información sobre cómo proporcionar valores para un servicio
 
 El despliegue de la instancia comienza automáticamente. Recibirá una confirmación de que el pedido se está procesando y puede comprobar el estado del despliegue consultando los detalles de la instancia.
 
-Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
+Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
 
 Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 

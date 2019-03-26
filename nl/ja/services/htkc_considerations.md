@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # HyTrust KeyControl on IBM Cloud の概要
-{: #hytrust-keycontrol-on-ibm-cloud-overview}
+{: #htkc_considerations}
 
 HyTrust KeyControl on {{site.data.keyword.cloud}} サービスは、暗号化ワークロードの管理を単純化します。 このサービスは、鍵の保管、鍵の配布、鍵のローテーション、鍵の失効など、暗号鍵のライフサイクルを自動化および単純化します。 FIPS 140-2 準拠の暗号化を使用すると、企業で簡単に暗号鍵を一括して管理できるようになります。
 

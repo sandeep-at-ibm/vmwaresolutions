@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -20,6 +20,7 @@ lastupdated: "2019-02-14"
 
 ## 몇 개의 ESXi 서버를 내 인스턴스에 추가할 수 있습니까?
 {: #faq_esxi-instance}
+{: faq}
 
 * vCenter Server 인스턴스의 경우, 최대 51개의 ESXi 서버를 보유하도록 기본 클러스터를 확장할 수 있습니다. 기본이 아닌 각 클러스터는 최대 59개의 ESXi 서버를 보유하도록 확장할 수 있습니다. 최대 10개의 클러스터를 인스턴스에 추가할 수 있으므로 모든 클러스터의 각 배치된 인스턴스에는 최대 51 + 9x59 = 582개의 ESXi 서버가 있을 수 있습니다.
 * Cloud Foundation 인스턴스의 경우, 표준 구성에 네 개의 ESXi 서버가 있습니다. 최대 28개의 서버를(총 32개의 서버에) 추가할 수 있습니다. 다중 사이트 구성에 있는 Cloud Foundation 인스턴스의 경우, 모든 인스턴스에 최대 128개의 ESXi 서버를 보유할 수 있습니다.
@@ -29,6 +30,7 @@ lastupdated: "2019-02-14"
 
 ## 몇 개의 ESXi 서버를 클러스터에 추가할 수 있습니까?
 {: #faq_esxi-cluster}
+{: faq}
 
 V2.2 이상에 배치된 인스턴스의 경우, 최대 51개의 ESXi 서버를 초기 클러스터에 추가하고 최대 59개의 ESXi 서버를 추가된 클러스터에 추가할 수 있습니다.
 
@@ -46,6 +48,7 @@ V2.1 이전에 배치된 인스턴스의 경우, 필요한 vSAN 지원을 사용
 
 ## ESXi 서버 이름 및 IP 주소를 변경할 수 있습니까?
 {: #faq_esxi-change-name-ip}
+{: faq}
 
 ESXi 서버 이름 및 IP 주소는 Windows DNS 해석을 위해 등록되었으므로 변경할 수 없습니다. 변경하면 배치 중에 실패가 발생하거나 vCenter Server 기능의 실패가 발생할 수 있습니다.
 
@@ -54,6 +57,7 @@ ESXi 서버 이름 및 IP 주소는 Windows DNS 해석을 위해 등록되었으
 
 ## ESXi 서버에 루트 액세스를 사용 안함으로 설정할 수 있습니까?
 {: #faq_esxi-disable-root}
+{: faq}
 
 ESXi 서버에서 루트 액세스가 계속해서 사용으로 설정되는 것이 좋습니다. 그렇지 않으면 {{site.data.keyword.vmwaresolutions_short}} 기능의 실패가 발생할 수 있습니다.
 
@@ -63,6 +67,7 @@ ESXi 서버에서 루트 액세스가 계속해서 사용으로 설정되는 것
 
 ## 다른 위치에서 스토리지를 마운트하도록 내 ESXi 서버에서 정적 라우트를 추가할 수 있습니까?
 {: #faq_esxi-static-routes}
+{: faq}
 
 스토리지에 맞는 정적 라우트를 추가할 수 있지만 주의하여 수행해야 합니다. 그렇지 않으면 기존 공유가 마운트 해제될 수 있습니다.
 
@@ -73,7 +78,5 @@ vMotion에 대한 정적 라우트 추가는 지원되지 않습니다. vMotion 
 {: #faq_esxi-related}
 
 * [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [Cloud Foundation 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
-* [Cloud Foundation 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

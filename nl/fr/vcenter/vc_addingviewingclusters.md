@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-18"
 {:important: .important}
 
 # Ajout, affichage et suppression de clusters pour des instances vCenter Server
-{: #adding-and-viewing-clusters-for-vcenter-server-instances}
+{: #vc_addingviewingclusters}
 
 Les serveurs ESXi que vous avez configurés lors de la commande d'une instance sont, par défaut, regroupés sous **cluster1**.
 
@@ -56,7 +56,7 @@ Si vous déployez le cluster dans un autre {{site.data.keyword.CloudDataCent_not
 ### Paramètres de serveur bare metal
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-Vous pouvez choisir l'option **Skylake**, **Certifiés SAP** ou **Broadwell**.
+Vous pouvez choisir l'option **Skylake**, **Certifiés SAP** ou **Broadwell**. Les options peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -187,7 +187,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 ## Procédure d'ajout de clusters à des instances vCenter Server
 {: #vc_addingviewingclusters-adding-procedure}
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance à laquelle vous souhaitez ajouter des clusters.
 
    Assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas ajouter de clusters à l'instance.
@@ -228,7 +228,7 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
 ## Procédure d'affichage des clusters dans les instances vCenter Server
 {: #vc_addingviewingclusters-viewing-procedure}
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous voulez afficher les clusters.
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, consultez le récapitulatif concernant les clusters :
   * **Nom** : nom du cluster.
@@ -252,13 +252,13 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
         <dd class="dd">Le cluster est supprimé.</dd>
     </dl>
   * **Actions** : cliquez sur l'icône **Supprimer** pour supprimer le cluster.
-4. Cliquez sur un nom de cluster pour afficher le serveur ESXi et le stockage :
+4. Cliquez sur un nom de cluster pour afficher les détails relatifs au serveur ESXi, au stockage et à l'interface réseau :
 
 Tableau 4. Informations relatives au serveur ESXi
 
 | Elément        | Description       |  
 |:------------- |:------------- |
-| Nom |Le nom du serveur ESXi a le format suivant :<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> où :<br> `host_prefix` est le préfixe du nom d'hôte<br> `n` est la séquence du serveur<br> `subdomain_label` est le libellé de sous-domaine<br> `root_domain` est le nom du domaine racine |
+| Nom | Le nom du serveur ESXi a le format suivant :<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> où :<br> `host_prefix` est le préfixe du nom d'hôte<br> `n` est la séquence du serveur<br> `subdomain_label` est le libellé de sous-domaine<br> `root_domain` est le nom du domaine racine |
 | Version | Version du serveur ESXi. |
 | Données d'identification | Nom d'utilisateur et mot de passe d'accès au serveur ESXi. |
 | Adresse IP privée | Adresse IP privée du serveur ESXi. |
@@ -272,6 +272,32 @@ Tableau 5. Informations relatives au stockage
 | Taille | Capacité du stockage. |
 | IOPS/Go | Niveau de performance du stockage. |
 | Protocole NFS | Version NFS du stockage. |
+
+Tableau 6. Interface réseau - Détails VLAN
+
+| Elément        | Description       |  
+|:------------- |:------------- |
+| Numéro de VLAN |Numéro unique de VLAN.  |
+| Description | Type de VLAN.  |
+| Emplacement | Emplacement du centre de données. |
+|Route principale| Route principale du VLAN. |
+
+Tableau 7. Interface réseau - Détails de sous-réseau
+
+| Elément        | Description       |  
+|:------------- |:------------- |
+| Nom | Nom du sous-réseau. Cliquez sur le nom pour accéder à tous les détails d'adresse IP. |
+| Type | Type de sous-réseau : principal ou portable. |
+| Description | Objectif du sous-réseau. |
+
+Tableau 8. Interface réseau - Détails d'adresse IP
+
+| Elément        | Description       |  
+|:------------- |:------------- |
+| IP |Adresse IP. |
+| Statut | Statut de l'adresse IP. |
+| Description |Hôte de l'adresse IP. |
+
 
 ## Suppression de clusters des instances vCenter Server
 {: #vc_addingviewingclusters-deleting}
@@ -291,7 +317,7 @@ Vous souhaiterez peut-être supprimer un cluster d'une instance si vous n'en ave
 ### Procédure de suppression de clusters des instances vCenter Server
 {: #vc_addingviewingclusters-deleting-procedure}
 
-1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Instances déployées** dans le panneau de navigation de gauche.
+1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. Dans le tableau **Instances vCenter Server**, cliquez sur l'instance dont vous souhaitez supprimer les clusters.
 
    Assurez-vous que le statut de l'instance est **Prêt à l'emploi**. Sinon, vous ne pouvez pas supprimer de clusters de l'instance.

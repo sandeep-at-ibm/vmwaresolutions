@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -23,13 +23,15 @@ Para revisar os componentes de rede que estão incluídos em sua instância do C
 
 ## Considerações de firewall
 {: #sd_networkingoncloudfoundation-firewall-considerations}
+{: faq}
 
 Caso esteja usando firewalls, deve-se configurar regras para todas as comunicações por meio da instância de servidor virtual (VSI) do {{site.data.keyword.IBM}} CloudDriver e das máquinas virtuais (MVs) do SDDC Manager. Essas regras devem permitir que todos os protocolos se comuniquem nos endereços IP `10.0.0.0/8` e `161.26.0.0/16`. Exemplos desses firewalls são os NSX Distributed Firewalls (DFW) ou os firewalls Vyatta.
 
 ## Usando o VMware NSX com suas MVs
 {: #sd_networkingoncloudfoundation-using-nsx-with-vm}
+{: faq}
 
-Durante a implementação de instâncias do Cloud Foundation, o VMware NSX é pedido, instalado, licenciado e configurado em sua instância. Além disso, o NSX Manager, os NSX Controllers e o NSX Transport Zone são configurados e cada servidor ESXi é configurado com os componentes do NSX.
+Durante a implementação da instância do Cloud Foundation, o VMware NSX foi pedido, instalado, licenciado e configurado em sua instância. Além disso, o NSX Manager, os NSX Controllers e o NSX Transport Zone são configurados e cada servidor ESXi é configurado com os componentes do NSX.
 
 No entanto, se as MVs de carga de trabalho precisarem se comunicar entre si e acessar a Internet, será sua responsabilidade configurar o NSX para uso pelas MVs.
 
@@ -39,6 +41,7 @@ Para obter mais informações sobre como configurar o NSX, consulte os seguintes
 
 ## Considerações ao mudar senhas para componentes NSX
 {: #sd_networkingoncloudfoundation-considerations-when-change-nsx-component-password}
+{: faq}
 
 Revise as considerações a seguir antes de mudar as senhas para o NSX Manager, NSX Controllers e NSX Edge:
 * Não mude a senha do NSX Manager. É possível localizar essa senha na página **Resumo** da instância no console do {{site.data.keyword.vmwaresolutions_short}}.

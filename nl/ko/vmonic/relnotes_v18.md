@@ -14,6 +14,7 @@ lastupdated: "2017-08-28"
 이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
 ## Fortinet on IBM Cloud 서비스
+{: #relnotes_v18-fortinet}
 
 Fortinet on {{site.data.keyword.cloud_notm}} 서비스는 이제 Cloud Foundation 및 vCenter Server 인스턴스 모두에 사용 가능합니다. 이 서비스는 고가용성 모드에서 방화벽, 라우팅, NAT 및 VPN 서비스를 제공하도록 FSA(FortiGate Security Appliance) 300 시리즈 디바이스의 쌍을 배치하여 인스턴스의 공용 VLAN에서 모든 서버 및 가상 머신을 보호합니다. 인스턴스를 주문할 때 포함된 Fortinet 서비스와 함께 인스턴스를 주문하거나 인스턴스 세부사항 페이지에서 나중에 이 서비스를 기존 인스턴스에 추가할 수 있습니다.
 
@@ -24,6 +25,7 @@ Fortinet 서비스가 설치된 후 FortiGate 콘솔에서 FSA의 방화벽 규�
 * [Fortinet on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
 
 ## Veeam on IBM Cloud 서비스
+{: #relnotes_v18-veeam}
 
 이 릴리스에서는 관리 컴포넌트 및 워크로드 모두를 백업할 수 있는 Veeam on {{site.data.keyword.cloud_notm}} 서비스를 도입했습니다. 새 서비스는 관리 컴포넌트의 백업을 목적으로만 V1.8 이전 릴리스로 통합된 이전 Veeam VSI를 대체합니다.
 
@@ -36,20 +38,20 @@ Fortinet 서비스가 설치된 후 FortiGate 콘솔에서 FSA의 방화벽 규�
 * [Veeam on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
 ## VMware Cloud Foundation 인스턴스에 대한 업데이트
+{: #relnotes_v18-vcf}
 
 ### Cloud Foundation 인스턴스 주문 시 고유한 VMware 라이센스 가져오기(BYOL)
+{: #relnotes_v18-byol}
 
 V1.8 릴리스부터 Cloud Foundation 인스턴스를 주문하는 경우 vSphere, vCenter Server, NSX 및 vSAN을 포함한 인스턴스의 VMware 컴포넌트에 대한 라이센스 부여를 위해 두 가지 옵션이 제공됩니다. 사용자 대신 구매할 새 라이센스를 사용하도록 선택할 수 있습니다.
 
 라이센스 키를 제공해야 하는 경우 컴포넌트에 고유한 VMware 라이센스를 사용하도록 선택할 수도 있습니다. 이 경우, 라이센스를 제공하는 VMware 컴포넌트에 대한 지원은 IBM 지원 센터가 아닌 VMware에서 제공됩니다.
 
-자세한 정보는 다음 주제를 참조하십시오.
-* [Cloud Foundation 인스턴스 주문](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
-* [BYOL에 대한 FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
-
 ## VMware vCenter Server 인스턴스에 대한 업데이트
+{: #relnotes_v18-vcs}
 
 ### 인스턴스 CPU 및 메모리 사용자 정의
+{: #relnotes_v18-custom-cpu}
 
 사용자 정의 서버 옵션은 사전 빌드되고 테스트된 소형, 중형 및 대형 옵션과 함께 사용할 수 있습니다. RAM 양 외에도, 듀얼 CPU 및 총 코어 수에 따라 VMware HCL 호환 가능 서버의 목록에서 선택할 수 있습니다. 로컬 스토리지는 사용자 정의할 수 없습니다.
 
@@ -58,6 +60,7 @@ V1.8 릴리스부터 Cloud Foundation 인스턴스를 주문하는 경우 vSpher
 * [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### 여덟 개 이상의 NFS 파일 공유를 추가하는 지원
+{: #relnotes_v18-nfs}
 
  클러스터의 모든 ESXi 서버에서 최대 32개의 파일 공유에 연결할 수 있습니다.
 
@@ -66,12 +69,14 @@ V1.8 릴리스부터 Cloud Foundation 인스턴스를 주문하는 경우 vSpher
 * [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### 데이터 센터에 대한 업데이트
+{: #relnotes_v18-dc}
 
 새 데이터 센터 즉, **DAL-09, DAL-12, DAL-13 - 달라스**, **LON-04, LON-06 - 런던**, **SJC-04 - 산호세**, **WDC-06, WDC-07 - 워싱턴, DC**를 배치에 사용할 수 있습니다.
 
 자세한 정보는 [vCenter Server 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)을 참조하십시오.
 
 ## 사용성 개선사항
+{: #relnotes_v18-ui}
 
 개선사항은 사용자 인터페이스를 통해 수행됩니다.
 * 왼쪽 탐색 분할창의 **시작하기** 페이지에서 서비스에 대해 알아보고 인스턴스를 주문할 수 있습니다.

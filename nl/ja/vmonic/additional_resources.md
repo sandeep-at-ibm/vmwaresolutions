@@ -4,29 +4,38 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-26"
 
 ---
 
 # 追加リソース
 {: #additional_resources}
 
-円滑に作業を開始できるように、以下のリソースを確認してください。
-* アーキテクチャー・リファレンス情報
-* ビデオ
-* デモンストレーション
+円滑に作業を開始できるように、また、{{site.data.keyword.vmwaresolutions_full}} のより詳しい技術情報を取得するために、以下のリソースを確認してください。
+* ビデオおよびデモンストレーション
 * 技術面での詳細な分析
 * チュートリアル
+* コミュニティーに寄せられたコンテンツ
 
 ## データ・シート
 {: #additional_resources-data-sheets}
 
-* [{{site.data.keyword.vmwaresolutions_full}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+
+## developerWorks レシピ
+{: #additional_resources-dWrecipes}
+
+* [developerWorks レシピ](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:new_window}
+
+## IBM Cloud パターン
+{: #additional_resources-patterns}
+
+* [IBM Cloud パターン](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23)
 
 ## プラットフォーム拡張
 {: #additional_resources-plat-extensions}
 
-すべての[仮想化プラットフォーム拡張機能](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions)のアーキテクチャーを確認します。次のものが含まれます。
+すべての[仮想化プラットフォーム拡張機能](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions){:new_window}のアーキテクチャーを確認します。次のものが含まれます。
 * FortiGate Security Appliance
 * {{site.data.keyword.cloud_notm}} のファイル・ストレージとブロック・ストレージ
 * NSX Edge Services Gateway
@@ -38,22 +47,16 @@ lastupdated: "2019-02-18"
 ## ビデオおよびデモンストレーション
 {: #additional_resources-demos}
 
-* [リソースおよびビデオ](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources)
-* [Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)
-* [主なリソースおよびケース・スタディー](https://www.ibm.com/cloud/vmware/resources)
+* [リソースおよびビデオ](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:new_window}
+* [Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware){:new_window}
+* [主なリソースおよびケース・スタディー](https://www.ibm.com/cloud/vmware/resources){:new_window}
 
 ## IBM Cloud for VMware Solutions のテスト・ドライブ
 {: #additional_resources-test-drive}
 
-実際にご覧になりますか? 段階的に説明した {{site.data.keyword.vmwaresolutions_short}} ガイド付きデモンストレーション [Try VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions) に従って、製品の簡単なテスト・ドライブを実行します。
-
-## developerWorks レシピ
-{: #additional_resources-dwrecipes}
-
-* [{{site.data.keyword.vmwaresolutions_short}} - Take a look under the hood](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
-* [Steps to attach dedicated storage to VMware Solutions on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+実際にご覧になりますか? 段階的に説明した {{site.data.keyword.vmwaresolutions_short}} ガイド付きデモンストレーション [Try VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions){:new_window} に従って、製品の簡単なテスト・ドライブを実行します。
 
 ## VMware の資料
-{: #additional_resources-vmware-doc}
+{: #additional_resources-VMware-doc}
 
-* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources){:new_window}

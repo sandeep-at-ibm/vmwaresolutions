@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -21,7 +21,7 @@ Dieser Service ist nur für Instanzen verfügbar, auf denen vSphere 6.5 ausgefü
 {:note}
 
 ## Technische Spezifikationen für IBM Spectrum Protect Plus on IBM Cloud
-{: #technical-specifications-for-ibm-spectrum-protect-plus-on-ibm-cloud}
+{: #spp_considerations-specs}
 
 Mit dem Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" werden die folgenden Komponenten bestellt und einbezogen:
 
@@ -72,7 +72,7 @@ Lesen Sie die folgenden Hinweise, bevor Sie den Service "IBM Spectrum Protect Pl
 * Stellen Sie sicher, dass die CPU und der Speicher im Standardcluster Ihrer Instanz für die virtuelle Maschine von IBM Spectrum Protect Plus ausreichen.
 * Stellen Sie sicher, dass die NFS-Mounts, die auf den ESXi-Servern verfügbar sind, auf der Basis der Version der ESXi-Server ausreichend sind.
 
-  Cloud Foundation-Instanzen und vCenter Server-Instanzen, die in V2.2 oder höheren Releases bereitgestellt werden (oder für die ein entsprechendes Upgrade durchgeführt wurde), verfügen über eine Einstellung für den Parameter `NFS.MaxVolumes` in VMware. Dieser Parameter definiert die maximale Anzahl der NFS-Mounts auf einem ESXi-Server und kann je nach Version des ESXi-Servers auf maximal 256 gesetzt werden. Weitere Informationen finden Sie unter [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
+  Instanzen, die in V2.2 oder höheren Releases bereitgestellt (oder auf diese Releases aktualisiert) werden, verfügen über eine Einstellung für den Parameter `NFS.MaxVolumes` in VMware. Dieser Parameter definiert die maximale Anzahl der NFS-Mounts auf einem ESXi-Server und kann je nach Version des ESXi-Servers auf maximal 256 gesetzt werden. Weitere Informationen finden Sie unter [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
 
   Der Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" kann bis zu 11 der NFS-Datenträger auf jedem ESXi-Server im Standardcluster Ihrer Instanz verwenden. Darüber hinaus erstellt der Service transiente NFS-Mounts für Sicherungs- und Wiederherstellungszwecke. Daher müssen Sie die Anzahl der NFS-Mounts auf mindestens 64 setzen, um sicherzustellen, dass der Service installiert und erfolgreich ausgeführt werden kann.
 

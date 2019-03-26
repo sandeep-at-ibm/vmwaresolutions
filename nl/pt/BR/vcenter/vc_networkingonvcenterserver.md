@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -19,15 +19,17 @@ Revise as informações a seguir para obter detalhes sobre as considerações de
 {: #vc_networkingonvcenterserver-networking-components}
 {: faq}
 
-Para revisar os componentes de rede que estão incluídos em sua instância do vCenter Server, veja [Especificações técnicas para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
+Para revisar os componentes de rede que estão incluídos em sua instância do vCenter Server, veja [Especificações técnicas para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
 
 ## Considerações de firewall
 {: #vc_networkingonvcenterserver-firewall-considerations}
+{: faq}
 
 Caso esteja usando firewalls, deve-se configurar regras para todas as comunicações por meio da instância de servidor virtual (VSI) do {{site.data.keyword.IBM}} CloudDriver e das máquinas virtuais (MVs) do SDDC Manager. Essas regras devem permitir que todos os protocolos se comuniquem nos endereços IP `10.0.0.0/8` e `161.26.0.0/16`. Exemplos desses firewalls são os NSX Distributed Firewalls (DFW) ou os firewalls Vyatta.
 
 ## Usando NSX com suas máquinas virtuais
 {: #vc_networkingonvcenterserver-using-nsx-with-vm}
+{: faq}
 
 Durante a implementação da instância do vCenter Server, o VMware NSX é pedido, instalado, licenciado e configurado em sua instância. Além disso, o NSX Manager, os NSX Controllers e o NSX Transport Zone são configurados e cada servidor ESXi é configurado com os componentes do NSX.
 
@@ -35,6 +37,7 @@ Um NSX Edge Services Gateway também é implementado para ser usado por suas má
 
 ## Considerações ao mudar senhas de componentes NSX
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}
+{: faq}
 
 Revise as considerações a seguir antes de mudar as senhas para o NSX Manager, o NSX Controllers e o NSX Edges:
 * Não mude a senha do NSX Manager, que pode ser localizada na página **Resumo** da instância no console do {{site.data.keyword.vmwaresolutions_short}}.

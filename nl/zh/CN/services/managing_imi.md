@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -18,7 +18,7 @@ IMI 可以充当可信的单个提供者，通过为 VMware Cloud Foundation 和
 IMI 为 Cloud Foundation 实例和 vCenter Server 实例提供受管服务。这些受管服务包括高级 VMware vSphere 管理、完全 VMware NSX 覆盖范围（用于确保高可用性的安全虚拟网络基础架构）和 VMware vSAN 监视（用于确保数据可用性）。
 
 ## IMI 的技术规范
-{: #technical-specifications}
+{: #managing_imi-specs}
 
 IMI 受管服务中包含以下规范：
 
@@ -40,6 +40,5 @@ IMI 售前代表将通过您的 {{site.data.keyword.cloud_notm}} 联系信息与
 ## 相关链接
 {: #managing_imi-related}
 
-* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

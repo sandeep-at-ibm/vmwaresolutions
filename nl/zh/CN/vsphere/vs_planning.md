@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -36,7 +36,7 @@ vSphere 部署对物理基础架构有严格要求。因此，只能将集群部
 表 1. 可用于 vSphere 集群的 {{site.data.keyword.CloudDataCents_notm}}
 
 | {{site.data.keyword.CloudDataCent_notm}} |位置|区域|
-|:----------------------|:---------|:-------|
+|:----------------------|:---------|:---------------|
 |AMS03|阿姆斯特丹|欧洲|
 |CHE01|金奈|亚太地区|
 |DAL09|达拉斯|北美南部|
@@ -65,6 +65,7 @@ vSphere 部署对物理基础架构有严格要求。因此，只能将集群部
 |SYD01|悉尼|亚太地区|
 |SYD04|悉尼|亚太地区|
 |TOK02|东京|亚太地区|
+|TOK04|东京|亚太地区|
 |TOR01|多伦多|北美东部|
 |WDC04|华盛顿|北美东部|
 |WDC06|华盛顿|北美东部|
@@ -74,5 +75,5 @@ vSphere 部署对物理基础架构有严格要求。因此，只能将集群部
 {: #vs_planning-related}
 
 * [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
-* [扩展现有集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
-* [扩展在控制台外部创建的现有集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)
+* [缩放现有集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [缩放在控制台外部创建的现有集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

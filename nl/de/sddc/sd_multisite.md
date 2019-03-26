@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -56,10 +56,8 @@ Abbildung 1. Cloud Foundation-Bereitstellung mit mehreren Standorten
 
 Das Modell enthält die folgenden Schichten:
 
-* **Primäre Instanz**: In einer Konfiguration mit mehreren Standorten definieren Sie beim Bereitstellen der ersten Instanz diese Instanz während des Instanzbestellprozesses als primäre Instanz.
-* **Sekundäre Instanzen**: In einer Konfiguration mit mehreren Standorten definieren Sie die Instanzen, die der primären Instanz zugeordnet werden sollen, während des Bestellprozesses als sekundäre Instanzen.
-
-Sie können gleichzeitig jeweils nur eine einzige sekundäre Instanz zu einer primären Instanz zuordnen. Die gleichzeitige Zuordnung mehrerer sekundärer Instanzen zu einer primären Instanz ist nicht möglich. Dazu müssen Sie den Bestellprozess erneut durchlaufen und die zuvor definierte primäre Instanz als primäre Instanz für die sekundäre Instanz auswählen. Sie müssen den Prozess für alle sekundären Instanzen wiederholen, die Sie erstellen möchten.
+* **Primäre Instanz**: In einer Konfiguration mit mehreren Standorten wurde die erste Instanz während des Bestellprozesses für die Instanz als primäre Instanz definiert. 
+* **Sekundäre Instanzen**: In einer Konfiguration mit mehreren Standorten wurden die Instanzen, die der primären Instanz zugeordnet sind, während des Bestellprozesses als sekundäre Instanzen definiert. 
 
 Sie können maximal 8 Instanzen (1 primäre und 7 sekundäre) in einer Konfiguration mit mehreren Standorten bereitstellen.
 

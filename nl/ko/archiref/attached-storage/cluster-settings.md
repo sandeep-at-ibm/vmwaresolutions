@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-28"
 
 ---
 
@@ -89,7 +89,7 @@ VM 모니터링 기능은 VMware 도구가 게스트 운영 체제 가용성을 
 vSphere Web Client에서 이러한 설정을 구성하는 데 대한 자세한 정보는 [가상 머신 응답 구성](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html)을 참조하십시오.
 
 #### 허가 제어
-{: #cluster-settings-admission-control}
+{: #cluster-settings-admin-control}
 
 vCenter Server는 허가 제어를 통해 충분한 리소스가 클러스터에서 사용 가능한지 확인하여 장애 복구 보호를 제공하고 VM 리소스 예약이 준수되는지 확인합니다. 이 디자인에서 장애 복구 용량은 클러스터 리소스의 백분율을 지정하여 예약됩니다. 정의된 장애 복구 용량은 25% CPU 및 25% 메모리로 설정됩니다.
 

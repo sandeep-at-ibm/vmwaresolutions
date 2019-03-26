@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -59,7 +59,7 @@ IBM 提供の VMware ライセンスを購入した場合は、VMware NSX Base �
 アーキテクチャーについて詳しくは、[{{site.data.keyword.vmwaresolutions_short}} アーキテクチャーの参照情報](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)を参照してください。
 
 ## vCenter Server インスタンスの技術仕様
-{: #technical-specifications-for-vcenter-server-instances}
+{: #vc_vcenterserveroverview-specs}
 
 vCenter Server インスタンスには、以下のコンポーネントが含まれています。
 
@@ -70,9 +70,9 @@ vCenter Server インスタンスには、以下のコンポーネントが含�
 {: #vc_vcenterserveroverview-bare-metal}
 
 以下のいずれかの構成で{{site.data.keyword.baremetal_short}}を 3 つ以上注文できます。
-* **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。  
+* **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。
 * **SAP 認定**: 選択した CPU モデルの Intel Skylake または Intel Broadwell 世代サーバー (Intel Xeon 6140/E5-2690/E7-8890 シリーズ)。
-* **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600/E7-4800 シリーズ)。 
+* **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600/E7-4800 シリーズ)。
 
 vSAN ストレージを使用する計画がある場合は、構成に 4 つの{{site.data.keyword.baremetal_short}}が必要です。
 {:note}
@@ -125,9 +125,12 @@ vSAN オプションでは、構成をカスタマイズできます。ディス
 {: #vc_vcenterserveroverview-nfs-storage}
 
 NFS オプションでは、ワークロード用のファイル・レベルの共有ストレージをカスタマイズできます。サイズとパフォーマンスをさまざまなオプションから選択できます。
-* サイズ: 20 から 12000 GB
+* サイズ: 20 GB から 24 TB
 * パフォーマンス: 0.25、2、4、または 10 IOPS/GB。
 * ファイル共有の個々の構成。
+
+  10 IOPS/GB パフォーマンス・レベルは、ファイル共有あたり最大 4 TB の容量に制限されています。
+  {:note}
 
 NFS オプションを選択すると、管理コンポーネント用の 2 TB および 4 IOPS/GB ファイル共有が 1 つ注文されます。
 
@@ -139,7 +142,7 @@ NFS オプションを選択すると、管理コンポーネント用の 2 TB �
 ### ライセンス (IBM 提供または BYOL) および料金
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 または 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.4
 * (vSAN クラスターの場合) VMware vSAN Advanced または Enterprise 6.6
@@ -153,12 +156,12 @@ vCenter Server 拡張ノードごとに、{{site.data.keyword.cloud_notm}} ア�
 ### 拡張ノード用のハードウェア
 {: #vc_vcenterserveroverview-expansion-node-hardware}
 
-[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)に示されている構成になっている、1 台のベア・メタル・サーバー。
+[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)に示されている構成になっている、1 台のベア・メタル・サーバー。
 
 ### 拡張ノード用のライセンスと料金
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u1 1 つ
+* VMware vSphere Enterprise Plus 6.5u2 または 6.7u1 1 つ
 * VMware NSX Service Providers Edition (Base、Advanced、Enterprise) 6.4 1 つ
 * 1 つのサポートとサービスの料金
 * (vSAN クラスターの場合) VMware vSAN Advanced または Enterprise 6.6
@@ -179,3 +182,4 @@ vCenter Server 拡張ノードごとに、{{site.data.keyword.cloud_notm}} ア�
 * [vCenter Server インスタンスの計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [{{site.data.keyword.cloud_notm}} のファイル・ストレージとブロック・ストレージ](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [ファイル共有容量の拡張](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

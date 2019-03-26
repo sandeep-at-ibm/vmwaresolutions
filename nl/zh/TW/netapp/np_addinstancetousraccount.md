@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2019-02-14"
 ## 移轉實例的程序
 {: #np_addinstancetousraccount-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 從主控台橫幅，按一下您的使用者帳戶圖示，然後按一下**帳戶**欄位，以選取您要將實例移轉至其中的使用者帳戶。
 3. 在 **NetApp ONTAP Select 實例**表格中，尋找 2.5 版之前的實例。
 4. 在**動作**直欄中，按一下溢位功能表圖示，然後按一下**將實例移轉至帳戶**。
@@ -35,7 +35,7 @@ lastupdated: "2019-02-14"
 {: #np_addinstancetousraccount-results}
 
 1. 您會收到主控台通知，指出已接受將實例移轉至指定 {{site.data.keyword.cloud_notm}} 帳戶的要求。
-2. 完成實例移轉時，實例即會顯示在移轉目的地帳戶的**已部署的實例**頁面。移轉的實例不再顯示於移轉來源的原始帳戶。
+2. 當實例移轉完成時，實例會顯示在**資源**頁面上對其移轉實例的帳戶之下。移轉的實例不再顯示於移轉來源的原始帳戶。
 
 ## 相關鏈結
 {: #np_addinstancetousraccount-related}

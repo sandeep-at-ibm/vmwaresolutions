@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -27,7 +27,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스는 VMware 인스�
 * VMware 호환 가능 KMIP(Key Management Interoperability Protocol)
 * 관리 서비스
 * 전세계 여러 지리적 지역에서 사용 가능
-* 고가용성을 위해 각 지역에 제공되는 두 개의 KMIP 서비스 엔드포인트
+* 고가용성을 위해 각 지역에 제공되는 두 개의 KMIP 네트워크 서비스 엔드포인트
 
 ## KMIP for VMware on IBM Cloud 인스턴스 설치 시 고려사항
 {: #kmip_standalone_considerations-install}

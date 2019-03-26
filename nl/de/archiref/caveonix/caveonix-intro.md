@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
 # Caveonix RiskForesight
 {: #caveonix-intro}
 
-Unternehmen, die eine digitale Transformation durchlaufen, nehmen eine hybride Cloud-Strategie an, die Workloads sowohl in der privaten Cloud als auch in mehreren externen Cloud-Umgebungen umfasst, nämlich die öffentliche Cloud oder eine Cloud, die von einem Service-Provider verwaltet wird. Die meisten Unternehmen stehen außerdem vor der Herausforderung, eine immer größer werdende Angriffsfläche zu schützen und gleichzeitig die Konformität mit Branchenanforderungen und gesetzlichen Bestimmungen zu gewährleisten. Um diese wachsende Angriffsfläche zu schützen, benötigen Unternehmen von dem Moment, in dem sie den Betrieb aufnehmen, bis zu dem Moment, in dem sie inaktiv werden, kontinuierliche Einsicht in die Workloads. Zu diesem Zweck benötigen die Unternehmen vollständige Einsicht in Workload-Schwachstellen und Konfigurationsprobleme auf Ebene der Infrastruktur, Plattform und Anwendung vor dem Hintergrund von Sicherheits- und Konformitätsanforderungen. Unternehmen benötigen Vorhersageanalyse, um "die Punkte zu verbinden" und eine proaktive Ansicht ihrer Position hinsichtlich Cyberrisiko und Konformitätsrisiko in dieser unübersichtlichen neuen Hybrid-Welt zu liefern.
+Unternehmen, die eine digitale Transformation durchlaufen, nehmen eine hybride Cloud-Strategie an, die Workloads sowohl in der privaten Cloud als auch in mehreren externen Cloud-Umgebungen umfasst, nämlich die öffentliche Cloud oder eine Cloud, die von einem Service-Provider verwaltet wird. Die meisten Unternehmen stehen außerdem vor der Herausforderung, eine immer größer werdende Angriffsfläche zu schützen und gleichzeitig die Konformität mit Branchenanforderungen und gesetzlichen Bestimmungen zu gewährleisten.
+
+Um diese wachsende Angriffsfläche zu schützen, benötigen Unternehmen vom Anfang bis zum Ende des Lebenszyklus kontinuierliche Einsicht in die Workloads. Zu diesem Zweck benötigen die Unternehmen vollständige Einsicht in Workload-Schwachstellen und Konfigurationsprobleme auf Ebene der Infrastruktur, Plattform und Anwendung vor dem Hintergrund von Sicherheits- und Konformitätsanforderungen. Unternehmen benötigen Vorhersageanalyse, um "die Punkte zu verbinden" und eine proaktive Ansicht ihrer Position hinsichtlich Cyberrisiko und Konformitätsrisiko in dieser unübersichtlichen neuen Hybrid-Welt zu liefern.
 
 Caveonix RiskForesight bietet proaktiven Workloadschutz vor Risiken aufgrund von Cyberbedrohungen und Problemen mit der Einhaltung gesetzlicher Bestimmungen. Es ermöglicht die Echtzeit-Sichtbarkeit in die Aktivitäten der Hybrid-Cloud eines Unternehmens durch die native Integration in Cloud-Orchestrierungsplattformen. Durch die Kombination einer solchen Transparenz mit Risikominderungsmodellen und automatisierbaren Durchsetzungsmaßnahmen entwickelt RiskForesight schnell eine nach Prioritäten geordnete Liste von Aktionen zur Risikominderung. RiskForesight ist eine Multi-Tenant-spezifische Hybrid-Cloud-Workload-Schutzplattform, die ein proaktives Risikomanagement-Framework implementiert, das in mehreren Steuerebenen betrieben werden kann - Netz, Berechnung, Sicherheit und Konformität -, während die Implementierung des Frameworks im Cloud-Maßstab automatisiert wird.
 
@@ -37,7 +39,7 @@ Die drei wichtigsten Services, die über die GUI von RiskForesight zur Verfügun
 - Automatisierte Konformitätsüberwachung
 -	Dashboard zur Bewertung des Konformitätsrisikos
 -	Bewertung der automatisierten IA-Steuerung
--	Unterstützung von Berichten von PCI, FISMA, FEDRAMP, HIPAA, GLBA, GDPR, NERC CIP zu SCAP-, OVAL-, XCCDF- und anderen Benchmarking-Standards für die globale Konfiguration
+-	Unterstützung für: PCI, FISMA, FEDRAMP, HIPAA, GLBA, DSGVO, NERC CIP Reports Against SCAP, OVAL, XCCDF und andere Benchmarking-Standards für die globale Konfiguration
 -	Kontinuierlich aktualisierte und zugeordnete IA-Steuerungen und Bibliotheken für Standards
 
 **Forensik-Management**
@@ -47,7 +49,7 @@ Die drei wichtigsten Services, die über die GUI von RiskForesight zur Verfügun
 -	Grafische Darstellung der Ergebnisse
 -	Datenaggregation aus mehreren Quellen
 -	Ereignisbasierte Analyse
--	Vollständige Drilldown-Funktionalität für die Ereignis-/Protokollanalyse
+-	Vollständige Drilldown-Funktionalität für Ereignisse und protokollbasierte Analyse
 -	Alerts und Benachrichtigungen
 
 ## Zugehörige Links

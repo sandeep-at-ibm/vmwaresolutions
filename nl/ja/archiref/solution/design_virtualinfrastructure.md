@@ -41,7 +41,7 @@ vSphere ESXi 構成は、以下の側面から成ります。
 | 時刻同期   | {{site.data.keyword.cloud}} NTP サーバーを使用 |
 | ホスト・アクセス            | DCUI、ESXi Shell、または SSH をサポート |
 | ユーザー・アクセス            | ローカル認証と MSAD |
-| ドメイン・ネームの解決 |DNS を使用 ([共通サービス設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)を参照) |
+| ドメイン・ネームの解決 | DNS を使用 ([共通サービス設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)を参照) |
 
 vSphere クラスターには、中央クラウドおよびユーザー・ワークロード用コンピュート・リソースを管理する仮想マシン (VM) が収容されます。
 

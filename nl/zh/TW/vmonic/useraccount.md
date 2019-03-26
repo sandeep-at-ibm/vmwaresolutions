@@ -56,7 +56,6 @@ lastupdated: "2019-02-14"
 {: #useraccount-related}
 
 * [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [訂購 Cloud Foundation 實例](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [通知](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)
 * [SoftLayer API](/docs/customer-portal?topic=customer-portal-customerportal_api){:new_window}

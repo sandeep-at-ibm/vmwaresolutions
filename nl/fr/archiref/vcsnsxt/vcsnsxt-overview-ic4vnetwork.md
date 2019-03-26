@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -40,17 +40,12 @@ Outre les réseaux publics et privés, chaque serveur {{site.data.keyword.cloud_
 * Les adresses IP principales sont affectées aux unités, aux serveurs bare metal et aux serveurs virtuels qui sont mis à disposition par {{site.data.keyword.cloud_notm}}. Les utilisateurs ne doivent pas affecter d'adresses IP dans ces blocs.
 * Des adresses IP portables sont fournies à l'utilisateur et il peut les affecter et les gérer en fonction de ses besoins.
 
-Les adresses IP principales ou portables peuvent devenir routables vers n'importe quel VLAN au sein du compte client si le spanning VLAN est activé dans le compte ou que le compte est configuré en tant que compte VRF.
-
-## Spanning VLAN
-{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
-
-Le paramètre Spanning VLAN est un paramètre de compte global {{site.data.keyword.cloud_notm}} qui permet à chacun des blocs d'adresses IP de sous-réseau portable et principal de tous les VLAN du compte d'être routables entre eux. Lorsque ce paramètre est indisponible, les blocs d'adresses IP peuvent tout de même être routés vers les services {{site.data.keyword.cloud_notm}}, mais pas entre eux. Cette architecture requiert que le paramètre Spanning VLAN soit activé dans le compte où VMware vCenter Server on {site.data.keyword.cloud_notm}} est déployé de sorte que les connexions soient établies en toute transparence sur les différents sous-réseaux sur lesquels résident les composants de solution.
+Les adresses IP principales ou portables peuvent devenir routables vers n'importe quel VLAN au sein du compte client si celui-ci est configuré en tant que compte VRF (Virtual Routing and Forwarding). 
 
 ## Virtual Routing and Forwarding (VRF)
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-Les comptes {{site.data.keyword.cloud_notm}} peuvent également être configurés en tant que comptes VRF (Virtual Routing and Forwarding). Un compte VRF permet de fournir des fonctionnalités similaires au spanning VLAN et ainsi d'activer le routage automatique entre les blocs d'adresses IP de sous-réseau. Tous les comptes dotés de connexions Direct Link doivent être convertis en ou créés en tant que compte VRF.
+Les comptes {{site.data.keyword.cloud_notm}} peuvent également être configurés en tant que comptes VRF (Virtual Routing and Forwarding). Un compte VRF active le routage global automatique entre des blocs IP de sous-réseau au sein du compte. Tous les comptes dotés de connexions Direct Link doivent être convertis en ou créés en tant que compte VRF.
 
 ## Connexions d'hôte physique
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}

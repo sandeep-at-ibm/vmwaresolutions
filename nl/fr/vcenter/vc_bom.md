@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -37,13 +37,13 @@ Le tableau suivant fournit des informations de nomenclature détaillées concern
 
 Tableau 2. Nomenclature des composants logiciels des instances vCenter Server
 
-| Fabricant  | Composant                      | Version       |
+| Fabricant  | Composant                      | Version    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.5 Update P3 (build 6.5.0-10884925) |
-| VMware       | vCenter Server Appliance        | 6.5 U2d (build 6.5.0-10964411) |
-| VMware       | Contrôleur PSC (Platform Services Controller)    | 6.5 U2d (build 6.5.0-10964411) |
-| VMware       | vSAN                            | 6.6.1        |
-| VMware       | NSX for vSphere                 | 6.4.1        |
+| VMware       | vSphere ESXi                    | 6.7 Update 1 (build 6.7.0-11675023) ou <br/>6.5 Update 2 (build 6.5.0-11925212) |
+| VMware       | vCenter Server Appliance        | 6.7 Update 1 (build 6.7.0-10244745) ou <br/>6.5 Update 2d (build 6.5.0-10964411) |
+| VMware       | Contrôleur PSC (Platform Services Controller)    | 6.7 Update 1 (build 6.7.0-10244745) ou <br/>6.5 Update 2d (build 6.5.0-10964411) |
+| VMware       | vSAN                            | 6.7 Update 1 ou <br/>6.6.1       |
+| VMware       | NSX for vSphere                 | 6.4.4 (build 11197766)    |
 | Microsoft    | Windows Server édition Standard | 2012R2       |
 
 VMware vSAN est un composant optionnel.
@@ -138,6 +138,6 @@ Afin de mettre à jour le paramètre de MTU pour le commutateur public, procéde
 * [Numéros et versions de génération de VMware ESXi et ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Numéros et versions de génération de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Activation de trames Jumbo sur des commutateurs distribués virtuels](https://kb.vmware.com/s/article/1038827)
-* [Feuille de données de protection de VMware vCenter Server on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
 * [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Planification des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -33,7 +33,7 @@ Cloud Foundation 實例最多可以有五個叢集，而其中一個是預設值
 ## 新增 ESXi 伺服器的程序
 {: #sd_addingremovingservers-adding-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **Cloud Foundation 實例**表格中，按一下您要擴充容量的實例。
 3. 在左導覽窗格上，按一下**基礎架構**。
 4. 在**叢集**表格中，按一下您要在其中新增 ESXi 伺服器的叢集。
@@ -61,7 +61,7 @@ Cloud Foundation 實例最多可以有五個叢集，而其中一個是預設值
 ## 移除 ESXi 伺服器的程序
 {: #sd_addingremovingservers-removing-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格上的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **Cloud Foundation 實例**表格中，按一下您要縮減容量的實例。
 3. 在左導覽窗格上，按一下**基礎架構**。
 4. 在**叢集**表格中，按一下您要從中移除 ESXi 伺服器的叢集。
@@ -81,7 +81,6 @@ Cloud Foundation 實例最多可以有五個叢集，而其中一個是預設值
 {: #sd_addingremovingservers-related}
 
 * [Cloud Foundation 資料清單](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
-* [Cloud Foundation 實例的需求及規劃](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
-* [新增、檢視及刪除 Cloud Foundation 實例的叢集](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
+* [新增、檢視及刪除 Cloud Foundation 實例的叢集](/docs/services/vmwaresolutions/services?topic=vmware-solutions-sd_addingviewingclusters#sd_addingviewingclusters)
 * [Place a host in maintenance mode](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

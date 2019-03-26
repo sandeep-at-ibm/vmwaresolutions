@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
 
 ---
 
@@ -47,26 +47,24 @@ Tabela 1. Permissões necessárias para a conta de infraestrutura do {{site.data
 | Visualizar senhas | Essa permissão é necessária para poder administrar os VSIs pedidos. |
 | Gerenciar Monitoramento do Servidor | Essa permissão não é necessária para fazer um pedido, mas é necessária para recuperar e validar o status de monitoramento do {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} no qual os servidores VMware ESXi estão em execução em sua instância. |
 
-## Requisito de roteamento e encaminhamento virtual (VRF)
-{: #slaccountrequirement-vrf}
+## VRF com terminais em serviço ativados
+{: #slaccountrequirement-vrf-se}
 
-A conta de infraestrutura do {{site.data.keyword.cloud_notm}} deve ser uma conta VRF ou, caso seja uma conta não VRF, deve ter a ampliação de VLAN ativada. Para obter mais informações sobre como converter sua conta de não VRF para VRF,
-consulte [Visão geral do VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
+A sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} deve ser uma conta Virtual Routing and Forwarding (VRF) com os terminais em serviço ativados. Se a sua conta for não VRF, você deverá convertê-la para uma conta VRF. Além disso, deve-se ativar a conta VRF para usar os terminais em serviço.
 
-## Ampliação de VLAN para contas não VRF
-{: #slaccountrequirement-vlan-spanning}
+Para obter mais informações, veja:
+* [ Visão geral do VRF no IBM Cloud ](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [Ativar sua conta para usar terminais em serviço](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
 
-Se você estiver usando uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} não VRF, a
-ampliação de VLAN deve ser ativada. Se a ampliação de VLAN não estiver ativada para contas não VRF, os vários
-componentes do ambiente de virtualização do VMware podem não ser capazes de se comunicar uns com os outros.
+## VLAN Spanning end of support
+{: #slaccountrequirement-vlan-eos}
 
-Para ativar a ampliação de VLAN em sua conta, consulte
-[Ampliação de VLAN](/docs/infrastructure/vlans?topic=vlans-vlan-spanning){:new_window}.
+A partir de agosto de 2019, a ampliação de VLAN não será mais suportada. Até o final de julho de 2019, deve-se converter sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} para VRF e ativar os terminais em serviço.
+{:important}
 
 ## Links relacionados
 {: #slaccountrequirement-related}
 
-* [Requisitos para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
 * [Requisitos para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Conta do usuário e configurações](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
 * [ Visão geral do VRF no IBM Cloud ](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

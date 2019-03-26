@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -23,13 +23,15 @@ lastupdated: "2019-02-14"
 
 ## 防火牆考量
 {: #sd_networkingoncloudfoundation-firewall-considerations}
+{: faq}
 
 如果您使用防火牆，則必須針對來自 {{site.data.keyword.IBM}} CloudDriver 虛擬伺服器實例 (VSI) 及 SDDC Manager 虛擬機器 (VM) 的所有通訊配置規則。這些規則必須容許所有通訊協定在 IP 位址 `10.0.0.0/8` 及 `161.26.0.0/16` 上進行通訊。這類防火牆的範例包含 NSX Distributed Firewall (DFW) 或 Vyatta 防火牆。
 
 ## 搭配使用 VMware NSX 與 VM
 {: #sd_networkingoncloudfoundation-using-nsx-with-vm}
+{: faq}
 
-在 Cloud Foundation 實例部署期間，會在實例中訂購、安裝、授權及配置 VMware NSX。同時，會設定 NSX Manager、NSX Controller 及「NSX 傳輸區域」，且每一部 ESXi 伺服器中都配置了 NSX 元件。
+在 Cloud Foundation 實例部署期間，VMware NSX 已在您的實例中完成訂購、安裝、授權及配置。同時，會設定 NSX Manager、NSX Controller 及「NSX 傳輸區域」，且每一部 ESXi 伺服器中都配置了 NSX 元件。
 
 不過，如果您的工作負載 VM 需要彼此通訊，並存取網際網路，則您必須負責配置 NSX，以供 VM 使用。
 
@@ -39,6 +41,7 @@ lastupdated: "2019-02-14"
 
 ## 變更 NSX 元件密碼時的考量
 {: #sd_networkingoncloudfoundation-considerations-when-change-nsx-component-password}
+{: faq}
 
 請先檢閱下列考量，再變更 NSX Manager、NSX Controller 及 NSX Edge 的密碼：
 * 不要變更 NSX Manager 密碼。您可以在 {{site.data.keyword.vmwaresolutions_short}} 主控台之實例的**摘要**頁面上找到此密碼。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -25,9 +25,7 @@ Greifen Sie zum Verwalten des Service "Veeam on {{site.data.keyword.cloud_notm}}
 
 Sie finden die Windows-IP-Adresse und die Administratorberechtigungsnachweise auf der Seite mit den Details für den Service "Veeam on {{site.data.keyword.cloud_notm}}".
 
-Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Services für Cloud Foundation-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+Weitere Informationen finden Sie unter [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Managementkomponenten für Instanzen mit installiertem Service "Veeam on IBM Cloud" sichern und wiederherstellen
 {: #managing-veeam-backup-and-replication}
@@ -76,7 +74,7 @@ Aufgrund dieser Änderung wurde die vorherige Registerkarte **Sicherung und Wied
 Sie müssen ein {{site.data.keyword.cloud_notm}}-Support-Ticket erstellen, um Unterstützung bei einer Wiederherstellung zu erhalten. Darüber hinaus lief die Lizenz der virtuellen Serverinstanz für Veeam in Instanzen aus Releases vor V1.8 am 14. Oktober 2017 ab. Daher müssen Sie die vorherige virtuelle Serverinstanz für Veeam durch den neuen Service "Veeam on {{site.data.keyword.cloud_notm}}" ersetzen.
 
 Führen Sie die folgenden Schritte aus:
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen** und klicken Sie dann auf die Zielinstanz.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen** und klicken Sie dann auf die Zielinstanz. 
 2. Klicken Sie auf der Seite mit den Instanzdetails auf die Registerkarte **Update und Patch**. Vergewissern Sie sich, dass für die Instanz ein Upgrade auf das Release V1.8 durchgeführt worden ist.
 3. Klicken Sie auf die Registerkarte **Services**.
 4. Installieren Sie auf der Registerkarte **Services hinzufügen** den Service "Veeam on {{site.data.keyword.cloud_notm}}".

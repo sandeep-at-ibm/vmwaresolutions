@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -26,16 +26,16 @@ Die physische Infrastruktur setzt sich aus den folgenden Komponenten zusammen:
   <dd class="dd">Das physische Netz stellt die Netzkonnektivität in die Umgebung bereit, die dann durch die Netzvirtualisierung genutzt wird. Das Netz wird durch das {{site.data.keyword.cloud_notm}}-Servicenetz bereitgestellt und es schließt weitere Services wie DNS und NTP ein.</dd>
 </dl>
 
-Weitere Informationen zu den physischen Komponenten finden Sie in der Teileliste für die [Cloud Foundation-Instanz](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) bzw. [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Weitere Informationen zu den physischen Komponenten finden Sie in der Teileliste für die [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom). 
 
-Weitere Informationen zum Speicher finden Sie im Dokument zur [Architektur des gemeinsam genutzten Speichers](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
+Weitere Informationen zum Speicher finden Sie im Dokument zur [Architektur des gemeinsam genutzten Speichers](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
 ## Physisches Host-Design
 {: #design_physicalinfrastructure-host-design}
 
 "Physischer Host" bezieht sich auf die {{site.data.keyword.baremetal_short}} in der Umgebung, in der Rechenressourcen bereitgestellt werden. Die in dieser Lösung eingesetzten {{site.data.keyword.baremetal_short}} sind von VMware zertifiziert und werden im [VMware Compatibility Guide (HCG)](http://www.vmware.com/resources/compatibility/search.php) aufgeführt.
 
-Die in der Lösung verfügbaren Serverkonfigurationen erfüllen oder überschreiten die Mindestanforderungen für die Installation, Konfiguration und Verwaltung von vSphere ESXi. Es stehen verschiedene Konfigurationen für unterschiedliche Anforderungen zur Verfügung. Eine detaillierte Liste der genauen Spezifikationen für die VMware on {{site.data.keyword.cloud_notm}}-Lösung finden Sie in der Teileliste für die [Cloud Foundation-Instanz](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) bzw. [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Die in der Lösung verfügbaren Serverkonfigurationen erfüllen oder überschreiten die Mindestanforderungen für die Installation, Konfiguration und Verwaltung von vSphere ESXi. Es stehen verschiedene Konfigurationen für unterschiedliche Anforderungen zur Verfügung. Eine detaillierte Liste der genauen Spezifikationen für die VMware on {{site.data.keyword.cloud_notm}}-Lösung finden Sie in der Teileliste für die [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom). 
 
 Die {{site.data.keyword.baremetal_short}} befindet sich in der {{site.data.keyword.cloud_notm}}.
 {:note}
@@ -88,21 +88,12 @@ Neben dem öffentlichen und dem privaten Netz ist jeder {{site.data.keyword.clou
 * Primäre IP-Adressen werden Einheiten (Geräten), Bare Metal Servern und virtuellen Servern zugeordnet, die von {{site.data.keyword.cloud_notm}} bereitgestellt werden. Weisen Sie keine IP-Adressen in diesen Blöcken zu.
 * Portierbare IP-Adressen werden zur Verfügung gestellt, die Sie nach Bedarf zuweisen und verwalten können.
 
-Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN im Kundenkonto weiterleitbar gemacht werden, wenn das **VLAN-Spanning** im {{site.data.keyword.slportal}} aktiviert ist oder wenn das Konto als **VRF-Konto** (VRF - Virtual Routing and Forwarding) konfiguriert ist.
-
-### VLAN-Spanning
-{: #design_physicalinfrastructure-vlan-spanning}
-
-**VLAN-Spanning** ist eine {{site.data.keyword.slportal}}-Kontoeinstellung, durch die der IP-Block des primären und portierbaren Teilnetzes aller VLANs im Konto untereinander weitergeleitet werden kann. Wenn die Einstellung **VLAN-Spanning** inaktiviert ist, können IP-Blöcke immer noch an {{site.data.keyword.cloud_notm}}-Services weiterleiten, jedoch nicht untereinander.
-
-Für eine transparente Verbindung über verschiedene Teilnetze hinweg, in denen sich die Lösungskomponenten befinden, müssen Sie das **VLAN-Spanning** in dem {{site.data.keyword.slportal}}-Konto aktivieren, in dem die Cloud Foundation- und die vCenter Server-Instanz bereitgestellt wurden.
+Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN im Kundenkonto weiterleitbar gemacht werden, wenn das Konto als **VRF-Konto (Virtual Routing and Forwarding)** konfiguriert ist. 
 
 ### Virtual Routing and Forwarding
 {: #design_physicalinfrastructure-vrf}
 
-Sie können das {{site.data.keyword.slportal}}-Konto auch als VRF-Konto (VRF = Virtual Routing and Forwarding) konfigurieren, um ähnliche Funktionen wie das VLAN-Spanning zur Verfügung zu stellen, sodass ein automatisches Routing zwischen IP-Teilnetzblöcken möglich wird. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
-
-Die Konsole von {{site.data.keyword.vmwaresolutions_short}} kann nicht erkennen, ob VRF im {{site.data.keyword.slportal}} aktiviert ist. Sie empfangen eine Warnung, die Sie daran erinnert, sicherzustellen, dass entweder das **VLAN-Spanning** oder VRF in Ihrem {{site.data.keyword.slportal}}-Konto aktiviert wird.
+Sie können das {{site.data.keyword.slportal}}-Konto als VRF-Konto (Virtual Routing and Forwarding) konfigurieren. Dadurch wird das automatische globale Routing zwischen Teilnetz-IP-Blöcken aktiviert. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
 
 ### Physische Hostverbindungen
 {: #design_physicalinfrastructure-host-connect}
@@ -172,7 +163,7 @@ Dieses Design bietet die Option, entweder VMware vSAN-Speicher oder gemeinsam ge
 
 Für die Verwendung wird VMware vSAN mithilfe einer reinen Flashkonfiguration konfiguriert. Dieses Design bietet mehrere Konfigurationsoptionen, einschließlich 2U- und 4U-Chassis, verschiedener Plattenanzahlen und verschiedener Plattengrößen. Alle Konfigurationen verwenden zwei vSAN-Plattengruppen, wobei eine SSD-Platte (Solid State Disk) für Cachefunktionen und eine oder mehrere SSDs für Kapazität verwendet werden. Alle für vSAN-Nutzung zugeordneten Laufwerke werden in einer RAID-0-Konfiguration mit einer einzelnen Platte konfiguriert.
 
-Weitere Informationen zu den unterstützten Konfigurationen finden Sie in der Teileliste für die [Cloud Foundation-Instanz](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) bzw. [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Weitere Informationen zu den unterstützten Konfigurationen finden Sie in der Teileliste für die [vCenter Server-Instanz](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom). 
 
 ### Hostübergreifend gemeinsam genutzter Speicher auf Dateiebene
 {: #design_physicalinfrastructure-shared-storage}
@@ -185,12 +176,11 @@ Abbildung 2. An die VMware-Bereitstellung angehängte, gemeinsam genutzte NFS-Re
 
 Sie können beim Kauf oder später weitere gemeinsam genutzte Dateiressourcen für Ihre Workloads in der Konsole zuordnen und anhängen. Sie können unter den verfügbaren Kapazitätsoptionen für {{site.data.keyword.cloud_notm}} Endurance-Dateispeicher und den Leistungsstufen in dem entsprechenden {{site.data.keyword.CloudDataCent_notm}} auswählen. Alle gemeinsam genutzten Ressourcen werden unter Verwendung des Protokolls NFSv3 angehängt. Darüber hinaus ist es möglich, gemeinsam genutzte NFSv3-Dateiressourcen durch Anwenden des NetApp ONTAP Select-Angebots anzuhängen.
 
-{{site.data.keyword.CloudDataCents_notm}}, die das Leistungstier mit 10 IOPS/GB anbieten, schließen auch eine vom Provider verwaltete Verschlüsselung ruhender Daten (AES-256-Verschlüsselung) ein und werden mithilfe von reinem Flashspeicher gesichert. Die Leistungsstufe von 10 IOPS/GB ist auf eine maximale Kapazität von 4 TB beschränkt. Weitere Informationen zu gemeinsam genutztem NAS-Speicher in dieser Lösung finden Sie im Dokument [Architektur des gemeinsam genutzten Speichers](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
+{{site.data.keyword.CloudDataCents_notm}}, die das Leistungstier mit 10 IOPS/GB anbieten, schließen auch eine vom Provider verwaltete Verschlüsselung ruhender Daten (AES-256-Verschlüsselung) ein und werden mithilfe von reinem Flashspeicher gesichert. Die Leistungsstufe von 10 IOPS/GB ist auf eine maximale Kapazität von 4 TB beschränkt. Weitere Informationen zu gemeinsam genutztem NAS-Speicher in dieser Lösung finden Sie im Dokument [Architektur des gemeinsam genutzten Speichers](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
 ## Zugehörige Links
 {: #design_physicalinfrastructure-related}
 
-* [Cloud Foundation-Teileliste](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
 * [vCenter Server-Teileliste](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
-* [Architektur des gemeinsam genutzten Speichers](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
+* [Architektur des gemeinsam genutzten Speichers](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [Architektur von NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

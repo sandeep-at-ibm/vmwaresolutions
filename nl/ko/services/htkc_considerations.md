@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # HyTrust KeyControl on IBM Cloud 개요
-{: #hytrust-keycontrol-on-ibm-cloud-overview}
+{: #htkc_considerations}
 
 HyTrust KeyControl on {{site.data.keyword.cloud}} 서비스는 암호화된 워크로드의 관리를 간소화합니다. 이 서비스는 키 스토리지, 키 분배, 키 순환 및 키 취소를 포함하는 암호화 키의 라이프사이클을 자동화하고 간소화합니다. 엔터프라이즈는 FIPS 140-2 준수 암호화를 사용하여 암호화 키를 규모에 맞게 쉽게 관리할 수 있습니다.
 

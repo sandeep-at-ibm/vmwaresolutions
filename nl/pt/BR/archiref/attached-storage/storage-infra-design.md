@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-27"
 
 ---
 
@@ -64,9 +64,9 @@ A seção a seguir descreve a configuração do dispositivo de armazenamento con
 
 O desempenho e o armazenamento do Endurance são soluções de armazenamento do {{site.data.keyword.cloud_notm}} projetadas para suportar aplicativos de E/S alta que requerem níveis previsíveis de desempenho. Esse desempenho previsível é alcançado por meio da alocação de operações de entrada/saída por segundo (IOPS) no nível de protocolo para volumes individuais.
 
-Os IOPS que variam de 100 a 48.000 podem ser pedidos com tamanhos de armazenamento de 20 GB a 12 TB. Os volumes de armazenamento do Performance e do Endurance estão disponíveis para armazenamento de bloco e armazenamento de arquivo.
+Os IOPS que variam de 100 a 96.000 podem ser pedidos com tamanhos de armazenamento de 20 GB a 24 TB. Os volumes de armazenamento do Performance e do Endurance estão disponíveis para armazenamento de bloco e armazenamento de arquivo.
 
-Nesse design, a solução do vCenter Server oferece armazenamento do Endurance para armazenamento conectado. Como resultado, é possível selecionar e anexar (por meio de automação) as exportações de NFS do Endurance, cujo tamanho varia de 20 GB a um máximo de 12 TB. O {{site.data.keyword.cloud_notm}} permite que até 64 hosts do vSphere ESXi se conectem a uma única exportação de NFS do Endurance.
+Nesse design, a solução do vCenter Server oferece armazenamento do Endurance para armazenamento conectado. Como resultado, é possível selecionar e anexar (por meio da automação) as exportações de NFS do Endurance que variam de 20 GB a um máximo de 24 TB. O {{site.data.keyword.cloud_notm}} permite que até 64 hosts do vSphere ESXi se conectem a uma única exportação de NFS do Endurance.
 
 A Resistência está disponível em três camadas de desempenho de IOPS para suportar diferentes necessidades
 do aplicativo.

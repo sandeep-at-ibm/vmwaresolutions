@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -106,12 +106,12 @@ vSAN 集群升级将按以下顺序执行任务：
 
 有关更多信息，请参阅 [VCSA 更新和 SSO 链接的 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)。
 
-## 升级 vSphere ESXi 主机
+##	升级 vSphere ESXi 主机
 {: #vum-updating-vsan-upgrade-hosts}
 
 有关更多信息，请参阅[创建基线并连接到库存对象](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines)。
 
-## 升级 vSAN 磁盘格式
+##	升级 vSAN 磁盘格式
 {: #vum-updating-vsan-upgrade-vsan}
 
 Ruby vSphere Console (RVC) 是面向 vSphere 的基于 Ruby 的命令行界面，可用于管理 VMware vSphere ESXi 和 vCenter。vSphere 库存以树结构呈现，允许您浏览 vCenter 对象并对其运行命令。

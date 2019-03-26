@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -34,7 +34,7 @@ Para habilitar el cifrado de vSphere o el cifrado de vSAN utilizando KMIP for VM
 
 Para utilizar el cifrado de vSAN, edite los valores generales de vSAN en el clúster de vCenter y seleccione el recuadro de selección de cifrado.
 
-La comprobación de estado de vSAN puede emitir avisos periódicos que indican que no se puede conectar al clúster de KMS desde uno de los hosts de vSphere. Estos avisos se producen porque el tiempo de espera de conexión de la comprobación de estado de vSAN se excede demasiado rápido. Puede pasar por alto estos avisos.
+La comprobación de estado de vSAN puede emitir avisos periódicos que indican que no se puede conectar al clúster de KMS desde uno de los hosts de vSphere. Estos avisos se producen porque el tiempo de espera de conexión de la comprobación de estado de vSAN se excede demasiado rápido. Puede pasar por alto estos avisos. Para obtener más información, consulte [la comprobación de estado del KMS vSAN falla de forma intermitente con un error de tiempo de espera excedido de reconocimiento SSL](https://kb.vmware.com/s/article/67115){:new_window}.
 {:note}
 
 Para utilizar el cifrado de vSphere, edite las políticas de almacenamiento de máquina virtual para que requieran cifrado de disco.
@@ -42,7 +42,7 @@ Para utilizar el cifrado de vSphere, edite las políticas de almacenamiento de m
 ## Rotación de claves
 {: #kmip-implementation-key-rotation}
 
-[Rote la clave raíz de cliente de Key Protect (CRK)](/docs/services/key-protect?topic=key-protect-rotating-keys) mediante la consola de {{site.data.keyword.cloud_notm}} o la API.
+[Rote la clave raíz de cliente de Key Protect (CRK)](/docs/services/key-protect?topic=key-protect-key-rotation#key-rotation) mediante la consola de {{site.data.keyword.cloud_notm}} o la API.
 
 Para el cifrado de VMware vSAN, rote las claves de cifrado de claves de VMware (KEK) y, opcionalmente, las claves de cifrado de datos (DEK) desde los valores generales de vSAN en el clúster vCenter.
 

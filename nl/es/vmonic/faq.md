@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -20,6 +20,7 @@ Encuentre las respuestas a las preguntas más frecuentes sobre {{site.data.keywo
 
 ## ¿Qué cuentas de usuario necesito para IBM Cloud for VMware Solutions?
 {: #faq-user-accts}
+{: faq}
 
 * **Cuenta de IBMid**. Se necesita esta cuenta para acceder a la consola de {{site.data.keyword.vmwaresolutions_short}}. La consola es una interfaz de usuario autónoma, independiente del {{site.data.keyword.slportal}}. Para obtener más información, consulte
 [Iniciación](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started).
@@ -28,41 +29,41 @@ Encuentre las respuestas a las preguntas más frecuentes sobre {{site.data.keywo
 
 ## ¿Cómo puedo asociar mis credenciales de la infraestructura IBM Cloud a la consola de IBM Cloud for VMware Solutions?
 {: #faq-associate-credentials}
+{: faq}
 
 La primera vez que solicite su instancia, siga las instrucciones de la página **Valores** de la consola para localizar y copiar el nombre de usuario de la infraestructura de {{site.data.keyword.cloud_notm}} y la clave de API del {{site.data.keyword.slportal}}. Las credenciales de la infraestructura {{site.data.keyword.cloud_notm}} se almacenan en la consola de {{site.data.keyword.vmwaresolutions_short}} tras el primer pedido. Los siguientes pedidos utilizan automáticamente las credenciales almacenadas.
 
 ## ¿Cómo se facturan mis consumos de la plataforma virtual VMware?
 {: #faq-billing}
+{: faq}
 
 Todos los costes correspondientes a la infraestructura física y virtual y a las licencias resultantes de la instancia se cargan en su cuenta de {{site.data.keyword.cloud_notm}}. Cuando solicite una instancia, debe tener una cuenta de {{site.data.keyword.cloud_notm}} y especificar la clave de {{site.data.keyword.slapi_short}} asociada a la cuenta.
 
-## ¿Cuáles son las diferencias entre una instancia de vCenter Server, una instancia de Cloud Foundation y un clúster de VMware vSphere?
+## ¿Cuáles son las diferencias entre una instancia de vCenter Server y un clúster de VMware vSphere?
 {: #faq-vcs-cf-vss}
+{: faq}
 
 Todos los tipos de instancias proporcionan opciones de despliegue para entornos virtuales VMware. Sin embargo, la diferencia es el grado de personalización y de automatización.
 
-* Cuando solicita una instancia de VMware vCenter Server, despliega un entorno virtual VMware con recursos personalizados de cálculo, de almacenamiento y de red. Para obtener más información sobre los componentes desplegados, consulte [Especificaciones técnicas para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
-* Cuando solicita una instancia de VMware Cloud Foundation, despliega una plataforma unificada de centro de datos definido por software (SDDC). Para obtener más información sobre los componentes desplegados, consulte [Especificaciones técnicas para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances).
+* Cuando solicita una instancia de VMware vCenter Server, despliega un entorno virtual VMware con recursos personalizados de cálculo, de almacenamiento y de red. Para obtener más información sobre los componentes desplegados, consulte [Especificaciones técnicas para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
 * Al solicitar un clúster de VMware vSphere, obtendrá el máximo de flexibilidad para diseñar y crear su entorno VMware alojado mientras incorpora hardware compatible con VMware. Sin embargo, {{site.data.keyword.cloud_notm}} no automatiza la instalación, la configuración ni la activación de los componentes opcionales de VMware para el clúster de VMware vSphere.
-* Las funciones que reciben soporte para las instancias de vCenter Server, las instancias de Cloud Foundation y los clústeres de vSphere son diferentes. Para obtener más información, consulte [Gráfico de comparación de ofertas](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inst_comp_chart).
+* Las funciones que reciben soporte de las instancias de vCenter Server y los clústeres de vSphere son diferentes. Para obtener más información, consulte [Gráfico de comparación de ofertas](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inst_comp_chart).
 
 ## ¿Qué se incluye en una instancia de vCenter Server?
 {: #faq-vcs}
+{: faq}
 
-Para obtener más información, consulte [Especificaciones técnicas para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
-
-## ¿Qué se incluye en una instancia de Cloud Foundation?
-{: #faq-cf}
-
-Para obtener más información, consulte [Especificaciones técnicas para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances).
+Para obtener más información, consulte [Especificaciones técnicas para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
 
 ## ¿Qué se incluye en un clúster de vSphere?
 {: #faq-vss}
+{: faq}
 
 Para obtener más información, consulte [Componentes de VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview).
 
 ## ¿Está altamente disponible una instancia de vCenter Server de dos nodos?
 {: #is-a-two-node-vcenter-server-instance-highly-available}
+{: faq}
 
 Se recomienda desplegar las cargas de trabajo de producción en entornos que tengan al menos tres nodos.
 
@@ -75,18 +76,22 @@ Cuando se añade un tercer nodo a un clúster de dos nodos, vCenter Server vuelv
 
 ## ¿Puedo definir una configuración de alta disponibilidad de VMware vCenter 6.5?
 {: #faq-ha}
+{: faq}
 
 No, no se recomienda. Podrían producirse errores en las funciones de {{site.data.keyword.vmwaresolutions_short}}.
 
 ## ¿Se puede cambiar el nombre de los clústeres?
 {: #faq-rename-cluster}
+{: faq}
 
 Para instancias de vCenter Server, el primer clúster que se crea durante el despliegue tiene el nombre predeterminado **cluster1**. Puede cambiar el nombre del clúster predeterminado en el cliente de VMware vSphere. Cuando añada un clúster a una instancia de vCenter Server, puede especificar el nombre que desee en la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
-**Nota:** para instancias de Cloud Foundation, el nombre de clúster predeterminado no se puede cambiar.
+Para instancias de Cloud Foundation, el nombre de clúster predeterminado no se puede cambiar.
+{:note}
 
 ## ¿Cómo se gestionan los parches?
 {: #faq-patches}
+{: faq}
 
 IBM proporciona actualizaciones continuas del código de IBM desplegando la instancia de servidor virtual (VSI) de IBM CloudDriver a petición. IBM no proporciona actualizaciones continuas de los servicios complementarios, como Zerto on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. La obtención y la instalación de estas actualizaciones es responsabilidad del usuario.
 
@@ -110,11 +115,11 @@ Para las instancias desplegadas en V2.0 o posteriores, VMware Update Manager (VU
 Para más información, consulte los siguientes recursos:
 * [Soporte de VMware](https://www.vmware.com/support.html)
 * [Aplicación de actualizaciones a instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
-* [Aplicación de actualizaciones a instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_applyingupdates)
 * [Aplicación de actualizaciones a instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 
 ## ¿Representa NSX Edge de servicios de gestión un riesgo para la seguridad?
 {: #faq-mgmt-nsx}
+{: faq}
 
 Aunque VMware NSX Edge para servicios de gestión está en una subred pública, se siguen las siguientes medidas de seguridad para garantizar que no representa un riesgo para la seguridad:
 *  Se configura el cortafuegos de NSX Edge de modo que solo permita el tráfico HTTPS de salida (puerto TCP 443) iniciado por las máquinas virtuales de gestión.
@@ -124,6 +129,7 @@ Aunque VMware NSX Edge para servicios de gestión está en una subred pública, 
 
 ## ¿Representan NSX Edge gestionado por el cliente un riesgo para la seguridad?
 {: #faq-customer-nsx}
+{: faq}
 
 Aunque el Edge NSX gestionado por cliente está conectado a la VLAN pública, se utilizan medidas de seguridad para garantizar que no representa un riesgo de seguridad. Se han adoptado las medidas de seguridad siguientes:
 *  Se coloca una regla de cortafuegos para permitir solo el tráfico saliente desde el rango de direcciones IP de la subred privada.
@@ -133,23 +139,25 @@ Aunque el Edge NSX gestionado por cliente está conectado a la VLAN pública, se
 
 ## ¿Cómo elijo los centros de datos para mis instancias?
 {: #faq-data-center}
+{: faq}
 
 Los despliegues de instancia tienen requisitos de infraestructura física estrictos, que varían entre {{site.data.keyword.CloudDataCents_notm}}. Al realizar el pedido de la instancia, los centros de datos disponibles se listan dentro de las regiones y puede seleccionar el que desee de la lista.
 
 Para obtener más información, consulte las secciones _Disponibilidad de IBM Cloud Data Center_ en:
 * [Requisitos y planificación de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Requisitos y planificación de instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
-* [Requisitos y planificación de instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
 * [Requisitos y planificación de VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 * [Requisitos y planificación de las instancias de NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
 
 ## ¿Cuánto se tarda en desplegar mi instancia?
 {: #faq-deploy}
+{: faq}
 
 Puede comprobar el estado del despliegue de la instancia visualizando el historial de despliegues en la página de detalles de la instancia desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
 ## ¿Utiliza VMware vSphere on IBM Cloud el sistema de automatización para instalar, configurar y activar la pila de VMware?
 {: #faq-vss-automation}
+{: faq}
 
 No. VMware vSphere on {{site.data.keyword.cloud_notm}} no utiliza la automatización avanzada que se encuentra en las plataformas Cloud Foundation ni vCenter Server. Según lo que solicite, la plataforma proporciona licencias opcionales de VMware, servidores ESXi y, si lo desea, un par de alta disponibilidad de cortafuegos físicos FortiGate. Si se crea un nuevo clúster, también se suministran tres nuevas VLAN: una VLAN pública y dos VLAN privadas.
 
@@ -157,11 +165,13 @@ VMware ESXi se instala automáticamente en cada servidor nativo, pero el usuario
 
 ## ¿Cómo puedo ver una lista de todas las notificaciones?
 {: #faq-notification}
+{: faq}
 
 Para ver el historial completo de notificaciones, pulse **Notificaciones** en el panel de navegación izquierdo.
 
 ## ¿Qué pasa si tengo un problema con IBM Cloud for VMware Solutions?
 {: #faq-support}
+{: faq}
 
 Si necesita ayuda con {{site.data.keyword.vmwaresolutions_short}}, póngase en contacto con el equipo de soporte de IBM a través de uno de los canales de soporte. Para obtener más información, consulte [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
@@ -169,7 +179,6 @@ Si necesita ayuda con {{site.data.keyword.vmwaresolutions_short}}, póngase en c
 {: #faq-related}
 
 * [Notificaciones](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)
-* [Instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)
 * [Instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Acceso a la consola](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-loginmethod)
 * [Cuentas de usuario y valores](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)

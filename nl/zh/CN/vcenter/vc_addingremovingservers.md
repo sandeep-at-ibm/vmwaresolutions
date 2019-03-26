@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2019-02-14"
 {: #vc_addingremovingservers}
 
 可以根据业务需求，通过添加或除去 ESXi 服务器或网络文件系统 (NFS) 存储器，扩展或收缩 VMware vCenter Server 实例的容量。
+
+从 V2.9 发行版开始，您可以在新的 ESXi 服务器处于维护模式时将这些服务器添加到集群。此外，您还可以跨多个集群同时添加或除去 ESXi 服务器。可同时进行以下操作：
+
+* 向一个集群添加主机，并向其他集群添加主机。
+* 从一个集群中除去主机，并从其他集群中除去主机。
+* 向一个集群添加主机，并从其他集群除去主机。
+* 从一个集群除去主机，并向其他集群添加主机。
 
 可以在现有 NFS 或 vSAN vCenter Server 集群中添加或除去 NFS 存储共享。
 {:note}
@@ -31,19 +38,20 @@ lastupdated: "2019-02-14"
 * 不要通过 VMware vSphere Web Client 来添加 ESXi 服务器。在 vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_full}} 控制台同步。
 * 使用 NFS 存储器的 vCenter Server 实例必须至少具有 2 个 ESXi 服务器。对于在 V2.1 或更高版本中部署的实例，可以将缺省集群扩展为最多具有 51 个 ESXi 服务器。每个非缺省集群可以扩展为最多具有 59 个 ESXi 服务器。
 * 使用 vSAN 存储器的 vCenter Server 实例必须至少具有 4 个 ESXi 服务器。
-* 对于在 V2.0 或更低版本中部署的 vCenter Server 实例，可以将每个集群扩展为最多具有 32 个 ESXi 服务器。一次可以添加的 {{site.data.keyword.baremetal_short}} 数量如下：
-   * 对于**小型**、**中型**和**大型**配置，一次可以添加 1 到 10 个 ESXi 服务器。
-   * 对于 **Skylake** 和 **Broadwell** 配置，一次可以添加 1 到 20 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
+* 对于在 V2.0 或更低版本中部署的 vCenter Server 实例，可以将每个集群扩展为最多具有 32 个 ESXi 服务器。
+* 一次可以添加 1 到 20 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ### 添加 ESXi 服务器的过程
 {: #vc_addingremovingservers-adding-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击要扩展容量的实例。
 3. 在左侧导航窗格上，单击**基础架构**。
 4. 在**集群**表中，单击要在其中添加 ESXi 服务器的集群。
-5. 在 **ESXi 服务器**部分中，单击**添加服务器**。
-6. 在**添加服务器**窗口中，输入要添加的服务器数，复查估算成本，然后单击**添加服务器**。
+5. 在 **ESXi 服务器**部分中，单击**添加**。
+6. 在**添加服务器**窗口中，输入要添加的服务器数。
+7. (可选）选中此复选框以在维护模式下添加服务器。
+8. 查看估算成本并单击**添加**。
 
 ### 添加 ESXi 服务器后的结果
 {: #vc_addingremovingservers-adding-results}
@@ -51,6 +59,12 @@ lastupdated: "2019-02-14"
 1. 当实例状态从**可供使用**变为**正在修改**时，您在控制台上可能会遇到轻微延迟。在对实例进行更多更改之前，请允许该操作完全完成。
 2. 系统将通过电子邮件通知您，正在处理添加 ESXi 服务器的请求。在控制台上，与 ESXi 服务器关联的集群的状态会更改为**正在修改**。
 3. 如果在集群中看不到添加到列表中的新 ESXi 服务器，请检查电子邮件或控制台通知以查找有关该故障的更多详细信息。
+4. 在以下情况下，必须使用 Zerto Virtual Manager (ZVM) 控制台和预填充的 Zerto Virtual Replication Appliance (VRA) IP 地址来手动部署 VRA 虚拟机 (VM)：
+   * 在 ESXi 服务器处于维护模式时将这些服务器添加到缺省集群，并且已安装 Zerto for {{site.data.keyword.cloud_notm}}。
+   * 将 Zerto for {{site.data.keyword.cloud_notm}} 添加到具有处于维护模式的 ESXi 服务器的 vCenter Server 实例。
+
+如果要在维护模式下添加 ESXi 服务器，那么在除去维护模式之前，虚拟机不会迁移到新服务器。   
+{:important}
 
 ## 从 vCenter Server 实例中除去 ESXi 服务器
 {: #vc_addingremovingservers-removing}
@@ -67,7 +81,7 @@ lastupdated: "2019-02-14"
 ### 除去 ESXi 服务器的过程
 {: #vc_addingremovingservers-removing-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击要压缩容量的实例。
 3. 在左侧导航窗格上，单击**基础架构**。
 4. 在**集群**表中，单击要从中除去 ESXi 服务器的集群。
@@ -94,7 +108,7 @@ lastupdated: "2019-02-14"
 ### 添加 NFS 存储器的过程
 {: #vc_addingremovingservers-adding-nfs-storage-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击要扩展容量的实例。
 3. 在左侧导航窗格上，单击**基础架构**。
 4. 在**集群**表中，单击要在其中添加 NFS 存储器的集群。
@@ -125,7 +139,7 @@ lastupdated: "2019-02-14"
 ### 除去 NFS 存储器的过程
 {: #vc_addingremovingservers-removing-nfs-storage-procedure}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击要压缩容量的实例。
 3. 在左侧导航窗格上，单击**基础架构**。
 4. 在**集群**表中，单击要从中除去 NFS 存储器的集群。

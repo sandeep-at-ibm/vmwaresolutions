@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
-# Mises à niveau orchestrées
+#	Mises à niveau orchestrées
 {: #vum-orchestr-updates}
 
 Vous pouvez utiliser des mises à niveau orchestrées pour mettre à niveau le matériel virtuel et les outils VMware Tools des machines virtuelles dans l'inventaire après la mise à jour des hôtes vSphere ESXi. Une fois les hôtes mis à jour, la ligne de base de mise à niveau de VMware Tools s'exécute en premier, suivie par la ligne de base de mise à niveau du matériel des machines virtuelles. Vous pouvez utiliser les mises à niveau orchestrées au niveau d'un cluster, d'un dossier ou d'un centre de données.

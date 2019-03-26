@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -25,9 +25,7 @@ Para gestionar el servicio Veeam on {{site.data.keyword.cloud_notm}}, acceda a l
 
 Puede encontrar la dirección IP de Windows y las credenciales del administrador en el servicio Veeam en la página de detalles del servicio de {{site.data.keyword.cloud_notm}}.
 
-Para obtener más información, consulte los temas siguientes:
-* [Solicitud, visualización y eliminación de servicios para instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+Para obtener más información, consulte [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Copia de seguridad y restauración de componentes de gestión para instancias que tienen instalado Veeam on IBM Cloud
 {: #managing-veeam-backup-and-replication}
@@ -76,7 +74,7 @@ Debido a este cambio, el separador **Copia de seguridad y restauración** anteri
 Debe crear una incidencia de soporte de {{site.data.keyword.cloud_notm}} para obtener ayuda con una restauración. Además, la licencia de la VSI de Veeam en instancias anteriores a V1.8 caducó el 14 de octubre de 2017. Por lo tanto, debe sustituir la VSI de Veeam anterior por el nuevo servicio Veeam on {{site.data.keyword.cloud_notm}}.
 
 Siga estos pasos:
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación de la izquierda y luego pulse la instancia de destino.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación de la izquierda y luego pulse la instancia de destino.
 2. En la página de detalles de instancia, pulse el separador **Actualización y parche**. Asegúrese de que ha actualizado la instancia a la versión V1.8.
 3. Pulse el separador **Servicios**.
 4. En el separador **Añadir servicios**, instale el servicio Veeam on {{site.data.keyword.cloud_notm}}.

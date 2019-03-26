@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -37,9 +37,9 @@ Abbildung 1. Anwendungskomponenten
     - Ergebnisprüfung
     - Software
     - Täglich oder wöchentlich zusammengefasster Datensatz
--	Messaging-Datenspeicher: RiskForesight verwendet eine Warteschlange für persistente Nachrichten, um Datenverluste vollständig zu vermeiden und Rückstaue zu den Komponenten auszulagen. Die Nutzdaten der eingehenden Daten werden zuerst persistent gespeichert und dann zur späteren Verarbeitung aus dem persistenten Speicher entnommen.
--	Indexdatenspeicher: indexiert und speichert die eingehenden Rohdaten für jeden Tenant zur weiteren Analyse und unterstützt damit die Multi-Tenant-Fähigkeit.
--	Plug-ins: befinden sich im Routing-Server der Anwendung und umfassen das Setup und die Integration in VMware-Komponenten zur Synchronisierung aller VMs zusammen mit ihren Tenant-Informationen.
+- Messaging-Datenspeicher: RiskForesight verwendet eine Warteschlange für persistente Nachrichten, um Datenverluste vollständig zu vermeiden und Rückstaue zu den Komponenten auszulagen.
+- Indexdatenspeicher: indexiert und speichert die eingehenden Rohdaten für jeden Tenant zur weiteren Analyse und unterstützt damit die Multi-Tenant-Fähigkeit. 
+- Plug-ins: befinden sich im Routing-Server der Anwendung und umfassen das Setup und die Integration in VMware-Komponenten zur Synchronisierung aller VMs zusammen mit ihren Tenant-Informationen. 
 
 In der folgenden Tabelle sind die Ports und Protokolle aufgeführt, die für die einzelnen Komponenten erforderlich sind.
 

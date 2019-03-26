@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-28"
 
 ---
 
 # Caveonix RiskForesight on IBM Cloud for VMware Solutions
 {: #caveonix-on-vcs}
 
-Caveonix RiskForesight on {{site.data.keyword.vmwaresolutions_full}} bietet eine automatisierte Implementierung der Caveonix RiskForesight-Lösung in einer umfassenden VM-Bereitstellung. Es wird zunächst mit einem Service-Provider und einem Tenant konfiguriert und dann in vCenter und den NSX-Manager integriert. Das Asset-Repository wird mit den Infrastrukturkomponenten von VMware vCenter Server und einer konfigurierten Anwendung und Unteranwendung gefüllt, die die VMware-Infrastrukturplattform darstellt. Im Dashboard stehen die Bewertungen für Cyber- und Konformitätsrisiken sowie Konformitätsberichte für die erforderlichen Konformitätsvorschriften zur Verfügung.
+Caveonix RiskForesight on {{site.data.keyword.vmwaresolutions_full}} bietet eine automatisierte Implementierung der Caveonix RiskForesight-Lösung in einer umfassenden VM-Bereitstellung. Es wird zunächst mit einem Service-Provider und einem Tenant konfiguriert und dann in vCenter und den NSX-Manager integriert. Das Asset-Repository wird mit den Infrastrukturkomponenten von VMware vCenter Server gefüllt und eine Anwendung und Unteranwendung, die die VMware-Infrastrukturplattform darstellen, werden konfiguriert. Im Dashboard stehen die Bewertungen für Cyber- und Konformitätsrisiken sowie Konformitätsberichte für die erforderlichen Konformitätsvorschriften zur Verfügung.
 
 Die folgende Liste enthält eine Übersicht über die ersten Workflows:
 1.	Der Kunde bestellt den Service und initiiert eine automatisierte Installation der RiskForesight-Anwendung.

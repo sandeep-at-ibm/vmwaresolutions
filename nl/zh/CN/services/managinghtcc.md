@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -26,9 +26,7 @@ lastupdated: "2019-02-18"
 2. 右键单击 **CC1** 或 **CC2**，并单击**打开控制台**。
 3. 使用可在 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务详细信息页面上找到的控制台凭证，登录到控制台。
 
-有关更多信息，请参阅以下主题：
-* [订购、查看和除去 Cloud Foundation 实例的服务](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+有关更多信息，请参阅[订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。
 
 ## 相关链接
 {: #managinghtcc-related}

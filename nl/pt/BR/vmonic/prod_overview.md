@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -53,13 +53,6 @@ A oferta vCenter Server with Hybridity é uma nuvem particular host que ajuda a 
 
 Para obter mais informações, veja [Visão geral do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview).
 
-### VMware Cloud Foundation on IBM Cloud
-{: #prod_overview-cf}
-
-A oferta Cloud Foundation fornece um ambiente virtual VMware unificado usando recursos padrão de cálculo, armazenamento e rede do {{site.data.keyword.cloud_notm}} que são dedicados a cada implementação do usuário.
-
-Para obter mais informações, veja [Visão geral do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview).
-
 ### VMware vSphere on IBM Cloud
 {: #prod_overview-vss}
 
@@ -78,6 +71,11 @@ Para obter mais informações, veja [Visão geral do NetApp ONTAP Select](/docs/
 {: #prod_overview-services}
 
 O {{site.data.keyword.vmwaresolutions_short}} permite incluir vários serviços no horário de pedido da instância ou após a implementação da instância. Os serviços a seguir são oferecidos:
+
+### Caveonix RiskForesight no IBM Cloud
+{: #prod_overview-caveonix}
+
+O serviço Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} gerencia o risco cibernético e de conformidade com controles proativos de monitoramento e de defesa automatizada para proteger contra ameaças e para atender às regulamentações da indústria ou do governo.
 
 ### F5 on IBM Cloud
 {: #prod_overview-f5}
@@ -119,7 +117,7 @@ Para obter mais informações, consulte [Visão geral do HyTrust DataControl on 
 
 O serviço HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifica o gerenciamento de cargas de trabalho criptografadas automatizando e simplificando o ciclo de vida de chaves de criptografia. O serviço pode gerenciar facilmente as chaves de criptografia em escala usando a criptografia compatível com FIPS 140-2. Ao usar esse serviço, é possível gerenciar as chaves de criptografia de todas as máquinas virtuais e armazenamentos de dados criptografados, além de escalá-lo para suportar milhares de cargas de trabalho criptografadas em grandes implementações.
 
-Para obter mais informações, consulte [Visão geral do HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview).
+Para obter mais informações, consulte [Visão geral do HyTrust KeyControl on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations).
 
 ### IBM Cloud Privado Hospedado
 {: #prod_overview-icp}

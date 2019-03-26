@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -67,7 +67,7 @@ lastupdated: "2019-02-15"
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 如果您是非业务合作伙伴，那么可以为 vSphere 集群选择以下组件：
-* VMware vSphere Enterprise Plus
+* VMware vSphere Enterprise Plus 6.7 U1 或 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -257,7 +257,7 @@ lastupdated: "2019-02-15"
 ## 订购 vSphere 集群的过程
 {: #vs_orderinginstances-procedure}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **VMware vSphere**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware**，然后单击**虚拟数据中心**部分中的 **VMware vSphere**。
 2. 在 **VMware vSphere on IBM Cloud** 页面上，单击**创建**。  
    确保位于**新建**选项卡上，并且**集群配置**列表中显示了**新集群**。
 3. 输入集群名称。
@@ -270,7 +270,7 @@ lastupdated: "2019-02-15"
    1. 选择要托管集群的 {{site.data.keyword.CloudDataCent_notm}}。
    2. 选择裸机服务器配置。
       * 选择 **Skylake** 或 **Broadwell** 时，请指定 CPU 型号和 RAM 大小。
-      * 选择的是 **SAP 认证**时，请选择 CPU 型号。
+      * 选择的是 **SAP 认证**时，请选择其中一个预设配置。
    3. 指定裸机服务器数。
 6. 如果选择的是 **VMware vSAN** 组件，请完成 vSAN 存储配置。指定容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
 7. 完成网络接口设置：
@@ -294,12 +294,12 @@ lastupdated: "2019-02-15"
 
 如果已下订单，那么集群的部署将自动启动，并且您将收到电子邮件确认，指示正在处理订单。集群准备就绪可供使用时，将通过电子邮件通知您。
 
-与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**已部署的实例**页面上。
+与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**资源**页面上。
 {:note}
 
 ## 相关链接
 {: #vs_orderinginstances-related}
 
 * [基于现有配置订购 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
-* [扩展现有集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
-* [扩展在控制台外部创建的集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)
+* [缩放现有集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [缩放在控制台外部创建的集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)

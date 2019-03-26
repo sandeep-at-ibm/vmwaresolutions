@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -63,7 +63,7 @@ Le workflow se présente comme suit :
   - Lorsque la mise à niveau de NSX Edge a abouti, le statut passe à Deployed et la colonne Version affiche la nouvelle version de NSX. Si un dispositif Edge ne parvient pas à se mettre à niveau et n'est pas restauré à son ancienne version, cliquez sur l'icône **Redeploy NSX Edge** et relancez la mise à niveau.
 
 ## Liens connexes
-{: #vum-type-updates-related}
+{: #vum-updating-nsx-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)

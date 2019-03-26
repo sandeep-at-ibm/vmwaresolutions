@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-18"
 ## Virtual Routing and Forwarding
 {: #vcsicp-arch-overview-infrastructure-vrf}
 
-Sie können {{site.data.keyword.cloud}}-Konten auch als VRF-Konto (VRF = Virtual Routing and Forwarding) konfigurieren, um eine ähnliche Funktion wie das VLAN-Spanning zur Verfügung zu stellen, sodass ein automatisches Routing zwischen IP-Teilnetzblöcken möglich wird. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
+Sie können {{site.data.keyword.cloud}}-Konten als VRF-Konten (Virtual Routing and Forwarding) konfigurieren. Dadurch wird das automatische globale Routing zwischen Teilnetz-IP-Blöcken aktiviert. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
 
 ## Direct Link
 {: #vcsicp-arch-overview-infrastructure-direct-link}

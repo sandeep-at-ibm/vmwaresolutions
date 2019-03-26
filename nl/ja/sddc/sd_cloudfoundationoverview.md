@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-14"
 # Cloud Foundation の概要
 {: #sd_cloudfoundationoverview}
 
-{{site.data.keyword.cloud}} の VMware Cloud Foundation を注文すると、VMware 環境全体が自動的にデプロイされます。 基本デプロイメントは、VMware Cloud Foundation スタックの事前インストールと構成が整った 4 つの {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}で構成され、ソフトウェア定義による統合データ・センター (SDDC) プラットフォームが提供されます。 Cloud Foundation は、VMware Validated Design に基づくアーキテクチャーを使って、ネイティブ構成として VMware vSphere、VMware NSX、VMware Virtual SAN が統合されています。
+VMware Cloud Foundation on {{site.data.keyword.cloud}} の基本デプロイメントは、VMware Cloud Foundation スタックの事前インストールと構成が整った 4 つの {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}で構成され、ソフトウェア定義による統合データ・センター (SDDC) プラットフォームが提供されます。 Cloud Foundation は、VMware Validated Design に基づくアーキテクチャーを使って、ネイティブ構成として VMware vSphere、VMware NSX、VMware Virtual SAN が統合されています。
 
 ## Cloud Foundation のアーキテクチャー
 {: #sd_cloudfoundationoverview-archi}
@@ -49,7 +49,7 @@ lastupdated: "2019-02-14"
 アーキテクチャーについて詳しくは、[ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)を参照してください。
 
 ## Cloud Foundation インスタンスの技術仕様
-{: #technical-specifications-for-cloud-foundation-instances}
+{: #sd_cloudfoundationoverview-specs}
 
 Cloud Foundation インスタンスには以下のコンポーネントが含まれます。
 
@@ -59,7 +59,7 @@ Cloud Foundation インスタンスには以下のコンポーネントが含ま
 ### ベア・メタル・サーバー
 {: #sd_cloudfoundationoverview-bare-metal}
 
-以下のいずれかの構成の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}を注文できます。
+以下のいずれかの構成の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}をインスタンスに含めることができます。
 *  **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。   
 *  **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600/E7-4800 シリーズ)。
 
@@ -69,7 +69,7 @@ vSAN ストレージを使用する計画がある場合は、構成に 4 つの
 ### ネットワーキング
 {: #sd_cloudfoundationoverview-networking}
 
-以下のネットワーキング・コンポーネントが注文されます。
+インスタンスには、以下のネットワーキング・コンポーネントが含まれます。
 * 10 Gbps デュアル・ネットワーク・アップリンク (パブリックとプライベート)
 * VLAN (仮想 LAN) 3 つ: パブリック VLAN 1 つとプライベート VLAN 2 つ
 * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX Edge Services Gateway (ESG)。これは、管理ネットワーキング類型の一部として IBM によってデプロイされます。 この ESG は、IBM 管理仮想マシンが、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[管理サービス NSX Edge でセキュリティー・リスクが生じますか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-) を参照してください。
@@ -82,7 +82,7 @@ vSAN ストレージを使用する計画がある場合は、構成に 4 つの
 ### 仮想サーバー・インスタンス
 {: #sd_cloudfoundationoverview-vsi}
 
-以下の VSI (仮想サーバー・インスタンス) が注文されます。
+インスタンスには以下の VSI (仮想サーバー・インスタンス) が含まれます。
 * Microsoft Active Directory (AD) とドメイン・ネーム・システム (DNS) サービス用に 1 つの VSI。 VSI はマルチサイト構成のサポートに必要です。 この VSI 仕様は、Windows 2012 R2 (8 GB RAM / 2 CPU コア/ 100 GB ディスク / デュアル 1 Gbps プライベート・アップリンク) です。
 * IBM CloudBuilder の VSI。これは、インスタンスのデプロイメントが完了した後にシャットダウンされます。
 * (Veeam on {{site.data.keyword.cloud_notm}} を注文する場合) Veeam バックアップ・サービス用に 1 つの VSI を注文します。
@@ -90,13 +90,13 @@ vSAN ストレージを使用する計画がある場合は、構成に 4 つの
 ### ストレージ
 {: #sd_cloudfoundationoverview-storage}
 
-選択した{{site.data.keyword.baremetal_short}}構成に応じて、以下のストレージを注文します。
+選択した {{site.data.keyword.baremetal_short}} 構成に応じて、インスタンスに以下のストレージを含めることができます。
 * 2 台の 1 TB SATA ブート・ディスク
 * 2 台の 960 GB SSD (ソリッド・ステート・ディスク) キャッシュ・ディスク
 * RAID ディスク・コントローラー 1 つ
 * **「Skylake」**および**「Broadwell」**構成の場合のみ、要件に従って、ディスク・ドライブの数、ディスク・タイプ、ディスク容量を設定できます。 また、High-Performance Intel Optane オプションもあります。このオプションは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイを提供します。 High-Performance Intel Optane オプションは、CPU モデルに応じて異なります。
 
-### ライセンス (IBM 提供または BYOL) と料金
+### ライセンス (IBM 提供または BYOL) および料金
 {: #sd_cloudfoundationoverview-license-and-fee}
 
 * 4 つの VMware vSphere Enterprise Plus 6.5u1
@@ -141,8 +141,6 @@ Cloud Foundation 拡張ノードごとに、{{site.data.keyword.cloud_notm}} ア
 {: #sd_cloudfoundationoverview-related}
 
 * [Cloud Foundation ソフトウェアの部品構成表](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
-* [Cloud Foundation インスタンスの計画](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [VMware vSphere ドキュメント・センター](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [VMware NSX 6 Documentation Center](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764)

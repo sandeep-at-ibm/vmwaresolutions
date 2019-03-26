@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -63,7 +63,7 @@ Es gilt folgender Workflow:
   - Nach dem erfolgreichen Upgrade der NSX Edge lautet der Status "Bereitgestellt" und in der Spalte "Version" wird die neue NSX-Version angezeigt. Falls das Upgrade einer Edge fehlschlägt und kein Rollback auf die alte Version erfolgt, klicken Sie auf das Symbol **NSX Edge erneut bereitstellen** und führen Sie dann das Upgrade erneut durch.
 
 ## Zugehörige Links
-{: #vum-type-updates-related}
+{: #vum-updating-nsx-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

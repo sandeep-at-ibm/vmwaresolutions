@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -20,6 +20,7 @@ Trouvez les réponses aux questions fréquemment posées au sujet des serveurs E
 
 ## Combien de serveurs ESXi puis-je ajouter à mon instance ?
 {: #faq_esxi-instance}
+{: faq}
 
 * Pour les instances vCenter Server, vous pouvez développer le cluster par défaut jusqu'à contenir 51 serveurs ESXi. Chacun des autres clusters peut contenir jusqu'à 59 serveurs ESXi. Etant donné que vous pouvez ajouter jusqu'à 10 clusters à une instance, chaque instance déployée peut avoir un maximum de 51 + 9x59 = 582 serveurs ESXi pour l'ensemble des clusters.
 * Pour les instances Cloud Foundation, la configuration standard contient quatre serveurs ESXi. Vous pouvez ajouter jusqu'à 28 serveurs au maximum (soit un total de 32 serveurs). Pour les instances Cloud Foundation d'une configuration multisite, vous pouvez avoir jusqu'à 128 serveurs ESXi au maximum pour toutes les instances.
@@ -29,6 +30,7 @@ Trouvez les réponses aux questions fréquemment posées au sujet des serveurs E
 
 ## Combien de serveurs ESXi puis-je ajouter à un cluster ?
 {: #faq_esxi-cluster}
+{: faq}
 
 Pour les instances déployés dans la version 2.2 et les versions suivantes, vous pouvez ajouter jusqu'à 51 serveurs ESXi au maximum au cluster initial et jusqu'à 59 serveurs ESXi au maximum aux clusters additionnels.
 
@@ -46,6 +48,7 @@ Pour les instances déployées dans la version 2.1 ou des éditions antérieures
 
 ## Puis-je modifier les noms et les adresses IP des serveurs ESXi ?
 {: #faq_esxi-change-name-ip}
+{: faq}
 
 Vous ne pouvez pas modifier les noms et les adresses IP des serveurs ESXi car ils sont enregistrés pour la résolution DNS Windows. Toute modification pourrait entraîner des échecs durant le déploiement ou dans les fonctions de vCenter Server.
 
@@ -54,6 +57,7 @@ N'utilisez pas la fonction **Renommer unité** de l'interface utilisateur {{site
 
 ## Puis-je désactiver l'accès racine sur mes serveurs ESXi ?
 {: #faq_esxi-disable-root}
+{: faq}
 
 Il est recommandé de maintenir activé l'accès racine sur les serveurs ESXi, faute de quoi des échecs des fonctions d'{{site.data.keyword.vmwaresolutions_short}} pourraient survenir.
 
@@ -63,6 +67,7 @@ Vous devez réactiver l'accès racine pour les opérations d'automatisation ult�
 
 ## Puis-je ajouter des routes statiques sur mes serveurs ESXi afin de monter du stockage depuis d'autres emplacements ?
 {: #faq_esxi-static-routes}
+{: faq}
 
 Vous pouvez ajouter des routes statiques pour le stockage mais vous devez le faire avec précaution. Sinon, les partages existants risquent d'être démontés.
 
@@ -73,7 +78,5 @@ L'ajout de routes statiques n'est pas pris en charge pour vMotion. Une modificat
 {: #faq_esxi-related}
 
 * [Extension et réduction de capacité pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [Extension et réduction de capacité pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
-* [Ajout, affichage et suppression de clusters pour des instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
 * [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

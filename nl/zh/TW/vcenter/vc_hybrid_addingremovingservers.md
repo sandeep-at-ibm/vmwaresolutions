@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2019-02-14"
 {: #vc_hybrid_addingremovingservers}
 
 您可以根據商業需要，透過新增或移除 ESXi 伺服器來擴充或縮減 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 實例的容量。
+
+從 2.9 版開始，您可以在叢集處於維護模式時，將新的 ESXi 伺服器新增至叢集。此外，您還可以跨越多個叢集同時新增或移除 ESXi 伺服器。以下是可同時進行的作業：
+
+* 將主機新增至 **cluster1** 以及將主機新增至其他叢集。
+* 從 **cluster1** 移除主機以及從其他叢集移除主機。
+* 將主機新增至 **cluster1** 以及從其他叢集移除主機。
+* 從 **cluster1** 移除主機以及將主機新增至其他叢集。
 
 因為您的起始叢集以 vSAN 作為其儲存空間，所以在部署之後新增一部以上的 ESXi 伺服器可以增加叢集儲存空間容量。
 
@@ -30,7 +37,7 @@ lastupdated: "2019-02-14"
 ## 新增 ESXi 伺服器的程序
 {: #vc_hybrid_addingremovingservers-adding-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要擴充容量的實例。
 3. 在左導覽窗格上，按一下**基礎架構**。
 4. 在**叢集**表格中，按一下您要在其中新增 ESXi 伺服器的叢集。
@@ -59,7 +66,7 @@ lastupdated: "2019-02-14"
 ## 移除 ESXi 伺服器的程序
 {: #vc_hybrid_addingremovingservers-removing-procedure}
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要縮減容量的實例。
 3. 在左導覽窗格上，按一下**基礎架構**。
 4. 在**叢集**表格中，按一下您要從中移除 ESXi 伺服器的叢集。

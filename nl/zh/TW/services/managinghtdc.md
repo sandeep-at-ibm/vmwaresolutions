@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -26,9 +26,7 @@ lastupdated: "2019-02-15"
 2. 以滑鼠右鍵按一下 **KC1** 或 **KC2**，然後按一下**開啟主控台**。
 3. 使用您可以在 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上找到的主控台認證，登入主控台。
 
-如需相關資訊，請參閱下列主題：
-* [訂購、檢視及移除 Cloud Foundation 實例的服務](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。
 
 ## 相關鏈結
 {: #managinghtdc-related}

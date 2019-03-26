@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -38,6 +38,7 @@ VMware vSphere Web Client의 **사용자 및 그룹** 페이지에서 **ic4v-vCe
 
 ## Cloud Foundation 인스턴스에 대한 VMware 리소스
 {: #cf_chg_impact-vmware-resources}
+{: faq}
 
 다음 표는 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 VMware 리소스를 변경하는 경우 영향을 받을 수 있는 오퍼레이션을 나열합니다. 복구하기 위한 솔루션을 사용할 수 있는 경우 해당 솔루션도 제공됩니다.
 
@@ -65,6 +66,7 @@ SSH 또는 쉘 액세스를 사용 안함으로 선택하는 경우 표시된 �
 
 ## Cloud Foundation 인스턴스에 대한 관리 서브넷
 {: #cf_chg_impact-mgmt-subnets}
+{: faq}
 
 다음 정보는 {{site.data.keyword.vmwaresolutions_short}}에서 주문된 서브넷에 대해 설명하고 사용자 전용의 추가 서브넷을 주문할 수 있는 옵션을 제공합니다.
 

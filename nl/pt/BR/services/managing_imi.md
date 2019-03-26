@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -18,7 +18,7 @@ O IMI pode servir como um provedor único e confiável para reduzir a complexida
 O IMI fornece serviços gerenciados para as instâncias do Cloud Foundation e do vCenter Server. Esses serviços gerenciados incluem gerenciamento avançado do VMware vSphere, cobertura integral do VMware NSX para assegurar a infraestrutura de rede virtual altamente disponível e segura e o monitoramento do VMware vSAN para assegurar a disponibilidade de dados.
 
 ## Especificações técnicas do IMI
-{: #technical-specifications}
+{: #managing_imi-specs}
 
 As especificações a seguir estão incluídas no serviço gerenciado IMI:
 
@@ -40,6 +40,5 @@ Um representante de pré-vendas do IMI entra em contato com você usando suas in
 ## Links relacionados
 {: #managing_imi-related}
 
-* [Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

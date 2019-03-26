@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -99,7 +99,7 @@ lastupdated: "2019-02-14"
 #### 檢視實例詳細資料
 {: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
-您可以檢視實例詳細資料，以查看部署的狀態。從左導覽窗格中，按一下**已部署的實例**，然後找出 **vCenter Server 實例**或**內部部署 HCX 實例**表格，以檢視您所訂購實例的相關資訊。
+您可以檢視實例詳細資料，以查看部署的狀態。從左導覽窗格中，按一下**資源**，然後尋找 **vCenter Server 實例**或**內部部署 HCX 實例**表格，來檢視您所訂購實例的相關資訊。
 
 順利部署實例之後，此主題的*技術規格* 小節中所說明的元件即會安裝在 VMware 虛擬平台上，而內部部署 HCX on {{site.data.keyword.cloud_notm}} 服務啟動金鑰會列在**內部部署 HCX 實例**表格中。
 
@@ -110,8 +110,8 @@ lastupdated: "2019-02-14"
 
 安裝內部部署 HCX Enterprise Manager，並配置與 HCX on {{site.data.keyword.cloud_notm}} 實例的連線。
 
-1. 在**部署的實例**頁面中，找出內部部署啟動金鑰。
-  1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**已部署的實例**。
+1. 在**資源**頁面上尋找內部部署啟動金鑰。
+  1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，從左導覽窗格按一下**資源**。
   2. 在 **vCenter Server 實例**表格中，檢閱**類型**直欄，以找出「單一節點試用版移轉及應用程式現代化」實例，並記下實例名稱。
   3. 捲動至**內部部署 HCX 實例**表格，檢閱**名稱**直欄，以找出與使用 *-OnPrem* 字尾所訂購之單一節點實例同名的實例。
   4. 記下**啟動金鑰**欄位中的金鑰。
@@ -167,7 +167,7 @@ lastupdated: "2019-02-14"
 
 請完成下列步驟，以刪除「單一節點試用版移轉及應用程式現代化」實例：
 
-1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**已部署的實例**。
+1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，尋找要刪除的實例。
 3. 在**動作**直欄中，按一下「刪除」圖示。
    實例的狀態會變更為**刪除中**。順利刪除實例後，會釋出該實例的元件，且該實例的狀態會變更為**已刪除**。

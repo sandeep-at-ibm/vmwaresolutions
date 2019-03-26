@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-28"
 
 ---
 
 # Caveonix RiskForesight on IBM Cloud for VMware Solutions
 {: #caveonix-on-vcs}
 
-Caveonix RiskForesight on {{site.data.keyword.vmwaresolutions_full}} は、「オールインワン」仮想マシン (VM) デプロイメントでの、Caveonix RiskForesight ソリューションの自動デプロイメントを行います。 これは最初にサービス・プロバイダーとテナントで構成されてから、vCenter と NSX Manager に統合されます。 資産リポジトリーに VMware vCenter Server インフラストラクチャー・コンポーネントが取り込まれ、VMware インフラストラクチャー・プラットフォームに相当するアプリケーションとサブアプリケーションが構成されます。 ダッシュボードでは、サイバー・リスク・スコアとコンプライアンス・リスク・スコアに加えて、必要なコンプライアンス制度を表示するコンプライアンス・レポートを利用できます。
+Caveonix RiskForesight on {{site.data.keyword.vmwaresolutions_full}} は、「オールインワン」仮想マシン (VM) デプロイメントでの、Caveonix RiskForesight ソリューションの自動デプロイメントを行います。 これは最初にサービス・プロバイダーとテナントで構成されてから、vCenter と NSX Manager に統合されます。 資産リポジトリーに VMware vCenter Server インフラストラクチャー・コンポーネントが取り込まれ、VMware インフラストラクチャー・プラットフォームに相当するアプリケーションとサブアプリケーションが構成されます。ダッシュボードでは、サイバー・リスク・スコアとコンプライアンス・リスク・スコアに加えて、必要なコンプライアンス制度を表示するコンプライアンス・レポートを利用できます。
 
 初期ワークフローの概要を以下のリストに示します。
 1.	お客様はサービスを注文し、RiskForesight アプリケーションの自動インストールを開始します。

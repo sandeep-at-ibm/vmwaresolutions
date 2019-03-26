@@ -33,7 +33,7 @@ Dans le diagramme, CAM crée des connexions de cloud aux services vCenter, aux f
 
 {{site.data.keyword.icpfull_notm}} peut être déployé avec des composants NSX-V ou NSX-T. {{site.data.keyword.icpfull_notm}} avec NSX-V permet d'exécuter les machines virtuelles {{site.data.keyword.icpfull_notm}} sur le réseau VXLAN et d'utiliser la mise en réseau interne Kubernetes Calico.
 
-{{site.data.keyword.icpfull_notm}} avec NSX-T permet aux utilisateurs de contrôler et configurer la mise en réseau, le sous-réseau et les règles à partir d'une interface utilisateur centralisée (NSX-T Manager). Pour plus d'informations sur les différences entre NSX-V et NSX-T, voir [Architecture de référence de la mise en réseau VCS {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/
+{{site.data.keyword.icpfull_notm}} with NSX-T permet aux utilisateurs de contrôler et configurer la mise en réseau, le sous-réseau et les règles à partir d'une interface utilisateur centralisée (NSX-T Manager). Pour plus d'informations sur les différences entre NSX-V et NSX-T, voir [Architecture de référence de la mise en réseau VCS {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/
 vcsnsxt/vcsnsxt-intro.html).
 
 ## Plateforme de gestion du cloud sur site

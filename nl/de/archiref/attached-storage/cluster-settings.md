@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-28"
 
 ---
 
@@ -90,7 +90,7 @@ Weitere Informationen zur Konfiguration dieser Einstellungen in vSphere Web Clie
 [Konfigurieren von VM-Antworten](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html).
 
 #### Zugangssteuerung
-{: #cluster-settings-admission-control}
+{: #cluster-settings-admin-control}
 
 vCenter Server verwendet die Zugangssteuerung, um sicherzustellen, dass genügend Ressourcen in einem Cluster verfügbar sind, um einen Failover-Schutz bereitzustellen, und um zu gewährleisten, dass die VM-Ressourcenreservierungen berücksichtigt werden. In diesem Design wird die Failover-Kapazität reserviert, indem ein Prozentsatz der Clusterressourcen angegeben wird. Die definierte Failover-Kapazität wird auf 25% CPU und 25% Speicher festgelegt.
 

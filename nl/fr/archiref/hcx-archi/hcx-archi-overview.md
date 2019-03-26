@@ -52,7 +52,7 @@ Avec la migration à froid, vous pouvez transférer une machine virtuelle hors t
 ### Fonctions de migration communes
 {: #hcx-archi-overview-cold-mig-features}
 
-D'autres fonctions disponibles sur les trois types de migration incluent l'optimisation de réseau WAN définie par les logiciels qui accroît le débit et la vitesse de migration. En outre, il est possible de planifier la migration afin qu'elle ait lieu à une heure spécifique et conserver son nom d’hôte et/ou son nom de machine virtuelle.
+D'autres fonctions disponibles sur les trois types de migration incluent l'optimisation de réseau WAN définie par les logiciels qui accroît le débit et la vitesse de migration. En outre, il est possible de planifier la migration afin qu'elle ait lieu à une heure spécifique et conserver son nom d'hôte et/ou son nom de machine virtuelle.
 
 ## Fonctions réseau
 {: #hcx-archi-overview-net-features}

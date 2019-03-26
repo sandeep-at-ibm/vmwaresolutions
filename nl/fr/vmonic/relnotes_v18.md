@@ -14,6 +14,7 @@ lastupdated: "2017-08-28"
 Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour obtenir la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des astuces relatives à l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Service Fortinet on IBM Cloud
+{: #relnotes_v18-fortinet}
 
 Le service Fortinet on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances Cloud Foundation et vCenter Server. Ce service déploie une paire de dispositifs FortiGate Security Appliance (FSA) série 300 en mode haute disponibilité, qui fournissent des services de pare-feu, de routage, de conversion d'adresses réseau (NAT) et de réseau privé virtuel (VPN) afin de protéger tous les serveurs et machines virtuelles sur le réseau privé virtuel (VLAN) de vos instances. Vous pouvez commander des instances avec le service Fortinet déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances existantes à partir de la page des détails d'instance.
 
@@ -24,6 +25,7 @@ Pour plus d'informations, voir les rubriques suivantes :
 * [Gestion de Fortinet on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
 
 ## Service Veeam on IBM Cloud
+{: #relnotes_v18-veeam}
 
 Cette édition introduit le service Veeam on {{site.data.keyword.cloud_notm}}, capable de sauvegarder aussi bien des composants de gestion que des charges de travail. Ce nouveau service remplace les instances de serveur virtuel Veeam précédentes intégrées aux éditions antérieures à la version 1.8 pour la sauvegarde des composants de gestion uniquement.
 
@@ -36,42 +38,45 @@ Pour plus d'informations, voir les rubriques suivantes :
 * [Gestion de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
 ## Mises à jour des instances VMware Cloud Foundation
+{: #relnotes_v18-vcf}
 
 ### Apport de vos propres licences (BYOL, Bring your own VMware license) lors de la commande d'instances Cloud Foundation
+{: #relnotes_v18-byol}
 
 A compter de l'édition de la version 1.8, lorsque vous commandez une instance Cloud Foundation, vous avez le choix entre deux options d'octroi de licence aux composants VMware de l'instance, y compris vSphere, vCenter Server, NSX et vSAN. Vous pouvez choisir d'utiliser de nouvelles licences qui sont achetées pour votre compte.
 
 Mais vous pouvez également choisir d'utiliser votre propre licence VMware pour un composant, et vous devez alors fournir la clé de licence. Dans ce cas, la prise en charge des composants VMware pour lesquels vous fournissez des licences sera assurée par VMware et non par le support IBM.
 
-Pour plus d'informations, voir les rubriques suivantes :
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
-* [Foire aux questions sur le mode BYOL](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
-
 ## Mises à jour des instances VMware vCenter Server
+{: #relnotes_v18-vcs}
 
 ### Personnalisez l'UC et la mémoire de votre instance
+{: #relnotes_v18-custom-cpu}
 
 Une option de serveur personnalisable est disponible avec les options Petite, Moyenne et Grande préconfigurées et testées. Vous pouvez sélectionner dans une liste de serveurs VMware compatibles HCL sur la base des doubles UC et du nombre total de coeurs, en plus de la quantité de RAM. Le stockage local n'est pas personnalisable.
 
 Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Ajout et affichage des clusters des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Ajout et affichage de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### Prise en charge pour l'ajout de plus de 7 partages de fichiers NFS
+{: #relnotes_v18-nfs}
 
  Vous pouvez associer jusqu'à 32 partages de fichiers au maximum entre tous les serveurs ESXi d'un cluster.
 
  Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Ajout et affichage des clusters des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Ajout et affichage de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
 
 ### Mises à jour des centres de données
+{: #relnotes_v18-dc}
 
 Les nouveaux centres de données suivants sont disponibles pour déploiement : **DAL-09, DAL-12, DAL-13 - Dallas**; **LON-04, LON-06 - Londres**; **SJC-04 - San José**; **WDC-06, WDC-07 - Washington, DC**
 
 Pour plus d'informations, voir [Exigences et planification pour les instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 
 ## Améliorations de la convivialité
+{: #relnotes_v18-ui}
 
 Des améliorations ont été apportées à l'interface utilisateur, à savoir :
 * Vous pouvez en savoir plus sur les services et commander une instance sur la page **Initiation** du panneau de navigation de gauche.

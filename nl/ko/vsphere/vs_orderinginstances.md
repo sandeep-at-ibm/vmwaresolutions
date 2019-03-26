@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -67,7 +67,7 @@ IBM 비즈니스 파트너 사용자의 경우 BYOL(Bring Your Own License) 옵�
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 비즈니스 파트너가 아닌 사용자는 vSphere 클러스터에 대해 다음 컴포넌트를 선택할 수 있습니다.
-* VMware vSphere Enterprise Plus
+* VMware vSphere Enterprise Plus 6.7 U1 또는 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -270,7 +270,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
    1. 클러스터를 호스팅할 {{site.data.keyword.CloudDataCent_notm}}를 선택하십시오.
    2. Bare Metal Server 구성을 선택하십시오.
       * **Skylake** 또는 **Broadwell**을 선택하는 경우 CPU 모델 및 RAM 크기를 지정하십시오.
-      * **SAP 인증**을 선택하는 경우 CPU 모델을 선택하십시오.
+      * **SAP 인증**을 선택하는 경우, 사전 설정된 구성 중 하나를 선택하십시오. 
    3. Bare Metal Server의 수를 지정하십시오.
 6. **VMware vSAN** 컴포넌트를 선택한 경우 vSAN 스토리지 구성을 완료하십시오. 용량 및 캐시 디스크에 대한 디스크 유형과 디스크 수를 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
 7. 네트워크 인터페이스 설정을 완료하십시오.
@@ -294,7 +294,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 
 주문한 경우 클러스터의 배치가 자동으로 시작되고 주문이 처리 중이라는 이메일 확인을 수신합니다. 클러스터를 사용할 준비가 되면 이메일로 알림을 받습니다.
 
-vSphere 클러스터는 vCenter Server 및 Cloud Foundation 인스턴스와 달리 **배치된 인스턴스** 페이지에 표시되지 않습니다.
+vSphere 클러스터는 vCenter Server 및 Cloud Foundation 인스턴스와 달리 **리소스** 페이지에 표시되지 않습니다.
 {:note}
 
 ## 관련 링크

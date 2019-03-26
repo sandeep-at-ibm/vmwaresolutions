@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -25,8 +25,8 @@ Se considera que esta solución es un componente adicional y una extensión de l
 Aunque hay muchas soluciones de cifrado de almacenamiento disponibles para la carga de trabajo de VMware, KMIP for VMware ofrece las ventajas siguientes:
 
 * Integración con el cifrado de VMware VSAN y con el cifrado de vSphere, que se implementan en la capa del hipervisor en lugar de implementarse en la capa de almacenamiento o de máquina virtual. Este enfoque facilita la gestión y ofrece transparencia en la aplicación y en la solución de almacenamiento.
-* Servidor de gestión de claves totalmente gestionado disponible en muchas regiones multizona (MZR) de IBM Cloud.
-* La integración del clúster de VMware con IBM Cloud Key Protect le proporciona claves totalmente gestionadas por el cliente que puede revocar en cualquier momento.
+* Servidor de gestión de claves totalmente gestionado disponible en muchas regiones multizona (MZR) de {{site.data.keyword.cloud_notm}}.
+* La integración del clúster de VMware con {{site.data.keyword.cloud_notm}} Key Protect le proporciona claves totalmente gestionadas por el cliente que puede revocar en cualquier momento.
 
 ## Enlaces relacionados
 {: #kmip-overview-related}

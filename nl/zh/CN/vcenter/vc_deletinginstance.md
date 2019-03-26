@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -30,10 +30,10 @@ lastupdated: "2019-02-14"
 在所删除实例的 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束之前，仍然会对您计费。
    {:note}
 
-## 在“已部署的实例”页面中删除实例的过程
+## 在资源页面中删除实例的过程
 {: #vc_deletinginstance-procedure1}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，找到要删除的实例。
 3. 在**操作**列中，单击“删除”图标。
    实例的状态会更改为**正在删除**。成功删除实例后，会释放该实例的组件，并且实例的状态会更改为**已删除**。
@@ -44,7 +44,7 @@ lastupdated: "2019-02-14"
 ## 在实例详细信息页面中删除实例的过程
 {: #vc_deletinginstance-procedure2}
 
-1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**已部署的实例**。
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，单击要删除的实例。
 3. 单击 **vCenter 控制台**旁边的溢出菜单图标，然后单击**删除实例**。
    实例的状态会更改为**正在删除**。成功删除实例后，会释放该实例的组件，并且实例的状态会更改为**已删除**。

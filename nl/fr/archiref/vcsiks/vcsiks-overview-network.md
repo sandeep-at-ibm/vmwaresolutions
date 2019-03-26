@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -31,7 +31,7 @@ Figure 1. Mise en réseau de vCenter Server et d'{{site.data.keyword.containerlo
 ### Intégration d'IBM Cloud Kubernetes Service et vCenter Server
 {: #vcsiks-overview-network-iks-vcs-integration}
 
-Actuellement, les scénarios suivants permettent d'intégrer {{site.data.keyword.containerlong_notm}} et VMware vCenter Server sur la mise en réseau d'{{site.data.keyword.cloud_notm}} :
+Actuellement, les scénarios suivants permettent d'intégrer la mise en réseau d'{{site.data.keyword.containerlong_notm}} et de VMware vCenter Server on {{site.data.keyword.cloud_notm}} :
 - **Routage VRA** - Ce scénario nécessite que les noeuds worker {{site.data.keyword.containerlong_notm}} soient déployés sur le même VLAN que l'instance vCenter. Ce scénario permet l'appairage d'une passerelle ESG avec VRA via BGP et active le routage entre le réseau dissocié et le réseau sous-jacent entre vCenter Server et {{site.data.keyword.containerlong_notm}}. Une route statique est nécessaire sur les noeuds worker {{site.data.keyword.containerlong_notm}} pour chaque réseau VXLAN afin de réacheminer ces demandes vers BCR/VRA.
 - **Réseau privé virtuel strongSwan** – Ce scénario utilise la solution de connectivité {{site.data.keyword.containerlong_notm}} vers l'entreprise standard. Un conteneur strongSwan fournit une passerelle VPN pour le cluster qui réachemine les paquets vers les réseaux distants le long d'un tunnel IPSec vers la passerelle éloignée. Cette passerelle éloignée est une passerelle ESG sur l'instance vCenter Server. Sur les passerelles, les routes sont configurées en envoyant toutes les plages d'adresses IP de service et de cluster vers le conteneur StrongSwan et toutes les adresses vCenter Server BYOIP vers la passerelle ESG. Les adresses IP cible pour les passerelles sont l'adresse IP portable privée du service d'équilibrage de charge qui est affecté au conteneur strongSwan et l'adresse IP portable privée de la passerelle ESG.
 
@@ -53,11 +53,11 @@ Les informations suivantes s'appliquent aux sous-réseaux VLAN privés :
 
 Chaque cluster Kubernetes est configuré avec un plug-in réseau nommé Calico.
 
-Des règles réseau par défaut sont configurées pour sécuriser l'interface de réseau public de chaque noeud worker dans {{site.data.keyword.containerlong_notm}}. Si vous avez des exigences particulières en matière de sécurité ou si vous disposez d'un cluster à zones multiples avec le Spanning VLAN activé, vous pouvez utiliser Calico et Kubernetes afin de créer des règles réseau pour un cluster. Avec les règles réseau Kubernetes, vous pouvez spécifier le trafic réseau que vous désirez autoriser ou bloquer vers et depuis un pod au sein d'un cluster. 
+Des règles réseau par défaut sont configurées pour sécuriser l'interface de réseau public de chaque noeud worker dans {{site.data.keyword.containerlong_notm}}. Si vous avez des exigences particulières en matière de sécurité ou si vous disposez d'un cluster à zones multiples avec le Spanning VLAN ou la fonction Virtual Routing and Forwarding (VRF) activés, vous pouvez utiliser Calico et Kubernetes afin de créer des règles réseau pour un cluster. Avec les règles réseau Kubernetes, vous pouvez spécifier le trafic réseau que vous désirez autoriser ou bloquer vers et depuis un pod au sein d'un cluster.
 
 Pour définir des règles réseau plus avancées, par exemple le blocage de trafic entrant (ingress) vers les services d'équilibreur de charge (LoadBalancer), utilisez les règles réseau Calico.
 
-Les règles de réseau Kubernetes spécifient de quelle façon les pods peuvent communiquer avec d'autres pods et avec des noeuds finaux externes. Le trafic peut également être filtré en fonction des libellés de pod et d'espace de nom. Les règles réseau Kubernetes sont appliquées à l'aide de commandes kubectl ou d'API Kubernetes. Lorsque ces règles sont appliquées, elles sont converties automatiquement en règles réseau Calico et imposées par Calico.
+Les règles de réseau Kubernetes spécifient de quelle façon les pods peuvent communiquer avec d'autres pods et avec des noeuds finaux de service de réseau public. Le trafic peut également être filtré en fonction des libellés de pod et d'espace de nom. Les règles réseau Kubernetes sont appliquées à l'aide de commandes kubectl ou d'API Kubernetes. Lorsque ces règles sont appliquées, elles sont converties automatiquement en règles réseau Calico et imposées par Calico.
 
 Les règles réseau Calico pour Kubernetes constituent un sur-ensemble des règles réseau Kubernetes et sont appliquées à l'aide de commandes calicoctl.
 

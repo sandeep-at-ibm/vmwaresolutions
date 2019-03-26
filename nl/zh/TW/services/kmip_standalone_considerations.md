@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -27,7 +27,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務隨附下列規格：
 * VMware 相容的「金鑰管理交互作業通訊協定 (KMIP)」
 * 受管理服務
 * 可在全球多個地理區域使用
-* 每個地區中提供兩個 KMIP 服務端點，以獲得高可用性
+* 每個地區提供兩個 KMIP 服務端點，以獲得高可用性
 
 ## 安裝 KMIP for VMware on IBM Cloud 實例時的考量
 {: #kmip_standalone_considerations-install}
@@ -46,7 +46,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務隨附下列規格：
      **重要事項：**沒有 CRK 就無法訂購服務。強烈建議您使用下列方法：使用現有金鑰資料建立 CRK，並備份您要建立的金鑰資料。這樣做，即可確保您可在套用 IBM Key Protect 以儲存您 CRK 的資料中心故障時回復金鑰。
 * 請確定啟用 {{site.data.keyword.cloud_notm}} 基礎架構帳戶來進行「虛擬遞送及轉遞 (VRF)」以及連接至「服務端點」。如需相關資訊，請參閱：
    * [IBM Cloud 上的虛擬遞送及轉遞 (VRF) 概觀](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-   * [使用 IBM Cloud CLI 啟用用於使用服務端點的帳戶](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#getting-started)
+   * [使用 IBM Cloud CLI 啟用可使用服務端點的帳戶](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#getting-started)
 * 因為僅支援專用連線，所以您不需要針對從 vCenter Server 到 KMIP for VMware on {{site.data.keyword.cloud_notm}} 實例端點的網路連線功能，在 vCenter Server 中配置任何防火牆或 SNAT 規則。
 
 如需相關資訊，請參閱 [KMIP for VMware on IBM Cloud 解決方案架構](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-overview)。

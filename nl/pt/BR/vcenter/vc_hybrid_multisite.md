@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -47,7 +47,7 @@ O gráfico a seguir descreve a visão geral da implementação multissite do vCe
 
 Figura 1. Implementação multissite do vCenter Server with Hybridity Bundle
 
-![Implementação multissite do vCenter Server with Hybridity Bundle](../sddc/multisite-hub-spoke.svg "Implementação multissite do vCenter Server with Hybridity Bundle")
+![Implementação multissite do vCenter Server with Hybridity Bundle](../vcenter/multisite-hub-spoke.svg "Implementação multissite do vCenter Server with Hybridity Bundle")
 
 O modelo contém as camadas a seguir:
 

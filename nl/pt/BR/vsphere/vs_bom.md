@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -17,7 +17,7 @@ Tabela 1. BOM para clusters do VMware vSphere
 
 | Fabricante | Componente                       | Versão |
 |:-------------|:--------------------------------|:--------|
-| VMware       | vSphere ESXi                    | 6.5 Atualização 1 ou 6.0 Atualização 2 |
+| VMware       | vSphere ESXi                    | 6.7 Atualização 1 ou 6.5 Atualização 2 |
 
 ## Links relacionados
 {: #vs_bom-related}

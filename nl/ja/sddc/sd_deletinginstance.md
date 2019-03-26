@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -30,10 +30,10 @@ Cloud Foundation インスタンスを削除すると、以下のコンポーネ
 削除対象のインスタンスに関する請求は、{{site.data.keyword.cloud_notm}} 請求処理サイクルの終わりまで行われます。
 {:note}
 
-## 「デプロイ済みインスタンス」ページからインスタンスを削除する手順
+## 「リソース」ページからインスタンスを削除する手順
 {: #sd_deletinginstance-procedure1}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「Cloud Foundation インスタンス」**の表で、削除するインスタンスを見つけます。
 3. **「アクション」**列で削除アイコンをクリックします。
    インスタンスの状況が**「削除中」**に変わります。 インスタンスが正常に削除されると、インスタンスのコンポーネントが解放され、インスタンスの状況が**「削除済み」**に変わります。
@@ -44,7 +44,7 @@ Cloud Foundation インスタンスを削除すると、以下のコンポーネ
 ## インスタンスの詳細ページからインスタンスを削除する手順
 {: #sd_deletinginstance-procedure2}
 
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**をクリックします。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「リソース」**をクリックします。
 2. **「Cloud Foundation インスタンス」**の表で、削除するインスタンスをクリックします。
 3. **vCenter コンソール**の横にあるオーバーフロー・メニュー・アイコンをクリックしてから、**「インスタンスの削除」**をクリックします。
    インスタンスの状況が**「削除中」**に変わります。 インスタンスが正常に削除されると、インスタンスのコンポーネントが解放され、インスタンスの状況が**「削除済み」**に変わります。
@@ -56,7 +56,6 @@ Cloud Foundation インスタンスを削除すると、以下のコンポーネ
 {: #sd_deletinginstance-related}
 
 * [マルチサイト構成での Cloud Foundation インスタンスの削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
-* [Cloud Foundation インスタンスの注文](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Cloud Foundation インスタンスの表示](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
 * [Cloud Foundation インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [マルチサイト構成の削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)

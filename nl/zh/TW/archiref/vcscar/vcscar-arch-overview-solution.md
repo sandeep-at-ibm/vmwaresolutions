@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -92,7 +92,7 @@ Edge Services Gateway| 虛擬應用裝置
 ### Proxy 節點
 {: #vcscar-arch-overview-solution-proxy-node}
 
-Proxy 節點的功能是將外部要求傳輸至在叢集內建立的服務。因為高可用性 (HA) 環境有多個 Proxy 節點，所以如果首要 Proxy 節點故障，失效接手邏輯就會自動將另一個節點提升為 Proxy 角色。 
+Proxy 節點的功能是將外部要求傳輸至在叢集內建立的服務。因為高可用性 (HA) 環境有多個 Proxy 節點，所以如果首要 Proxy 節點故障，失效接手邏輯就會自動將另一個節點提升為 Proxy 角色。
 
 雖然單一節點可以同時用來作為主節點和 Proxy 節點，但最好是使用專用的 Proxy 節點來減輕主節點上的負載。如果叢集內部需要負載平衡，則叢集必須至少有一個 Proxy 節點。
 

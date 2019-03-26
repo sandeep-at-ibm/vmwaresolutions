@@ -49,7 +49,7 @@ Pour plus d'informations, voir la section *Paramètres de serveur {{site.data.ke
 ## Prise en charge du serveur Broadwell E7-4820 et E7-4850
 {: #relnotes_v28-broadwell-e7}
 
-A compter de la version 2.8, les nouveaux modèles d'UC de serveur {{site.data.keyword.baremetal_short_sing}} {{site.data.keyword.cloud_notm}} sont disponibles pour déploiement pour les instances et les clusters vCenter Server, vCenter Server avec Hybridity Bundle, Cloud Foundation et vSphere on {{site.data.keyword.cloud_notm}} :
+A compter de la version 2.8, les nouveaux modèles d'UC de serveur {{site.data.keyword.baremetal_short_sing}} {{site.data.keyword.cloud_notm}} sont disponibles pour déploiement pour les instances et les clusters vCenter Server, vCenter Server with Hybridity Bundle, Cloud Foundation et vSphere on {{site.data.keyword.cloud_notm}} :
 
 * Quad Intel Xeon E7-4820 v4/40 coeurs au total, 2,0 GHz
 * Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,1 GHz
@@ -57,13 +57,12 @@ A compter de la version 2.8, les nouveaux modèles d'UC de serveur {{site.data.k
 Pour plus d'informations, voir la section *Paramètres de serveur {{site.data.keyword.baremetal_short_sing}}* dans :
 * [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#bare-metal-server-settings)
 * [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance#bare-metal-server-settings)
-* [Commande d'instances Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance#bare-metal-server-settings)
 * [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)
 
 ## Platform Services Controller intégré
 {: #relnotes_v28-psc}
 
-A compter de la version 2.8, vCenter Server est déployé avec une version intégrée de PSC (Platform Services Controller), ce qui signifie que vCenter Server, les composants vCenter Server et PSC sont déployés sur une machine virtuelle unique. Cette modification concerne toutes les instances de vCenter Server, vCenter Server avec Hybridity et NetApp nouvellement déployées.
+A compter de la version 2.8, vCenter Server est déployé avec une version intégrée de PSC (Platform Services Controller), ce qui signifie que vCenter Server, les composants vCenter Server et PSC sont déployés sur une machine virtuelle unique. Cette modification concerne toutes les instances de vCenter Server, vCenter Server with Hybridity et NetApp nouvellement déployées.
 
 Pour les instances qui sont mises à niveau à partir d'une version antérieure à la version 2.8, PSC n'est pas intégré dans vCenter Server. Si vous voulez utiliser la version intégrée de PSC, vous devez procéder vous-même à une conversion en externe vers la version PSC intégrée.
 
@@ -111,7 +110,7 @@ Pour plus d'informations, voir [Présentation de KMIP for VMware on {{site.data.
 
 (mis à jour le 8 février 2019) Les documents techniques suivants sont maintenant disponibles dans la section *Référence* de la documentation utilisateur :
 
-* [Architecture {{site.data.keyword.vmwaresolutions_short}} avec NSX-T](/docs/services/vmwaresolutions/archiref/vcsarch?topic=vmware-solutions-vcsarch-overview)
+* [Architecture {{site.data.keyword.vmwaresolutions_short}} with NSX-T](/docs/services/vmwaresolutions/archiref/vcsarch?topic=vmware-solutions-vcsarch-overview)
 * [Architecture de référence de Caveonix RiskForesight](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
 * [Guide de déploiement et d'opération de HCX sur {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
 

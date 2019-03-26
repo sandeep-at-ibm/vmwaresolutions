@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -45,7 +45,7 @@ VUM 客户机界面提供了两个主视图：
 *	管理视图
 *	一致性视图
 
-## 管理视图
+##	管理视图
 {: #vum-overview-admin-view}
 
 “管理”视图可通过浏览至**主页** > **Update Manager**，然后选择 Update Manager 实例的 IP 地址进行访问。在“管理”视图中，可以执行以下任务：
@@ -56,7 +56,7 @@ VUM 客户机界面提供了两个主视图：
 *	查看和检查通知
 *	导入 ESXi 映像
 
-## 一致性视图
+##	一致性视图
 {: #vum-overview-compliance-view}
 
 所选库存对象的“一致性”视图可通过浏览至**主机和集群**或 **VM 和模板**，然后单击 **Update Manager** 选项卡进行访问。在 Update Manager 的“一致性”视图中，可以执行以下任务：

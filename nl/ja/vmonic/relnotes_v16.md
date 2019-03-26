@@ -14,6 +14,7 @@ lastupdated: "2017-05-22"
 このリリースには、新機能、コンポーネントの更新、使いやすさの向上、バグ修正などが含まれています。 各リリースの修正された問題のリスト、製品に関する既知の問題、および {{site.data.keyword.vmwaresolutions_full}} を使用するためのヒントについては、[{{site.data.keyword.vmwaresolutions_short}} dW の回答](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}を参照してください。
 
 ## VMware Cloud Foundation インスタンスの更新
+{: #relnotes_v16-vcf}
 
 以下のコンポーネントが新規追加または更新されました。
 
@@ -22,11 +23,11 @@ lastupdated: "2017-05-22"
 *  新しいハードウェア仕様: **スモール**または**標準** (要件に従う)。
 *  デプロイメントに使用できる新しいデータ・センター: **HKG02 - 香港**、**OSL01 - オスロ**、**SEO01 - ソウル**、**SNG01 - シンガポール**、**SYD04 - シドニー**。
 
-コンポーネントの完全なリストについては、[VMware Cloud Foundation の概要](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview)を参照してください。
-
 ## VMware vCenter Server インスタンスの更新
+{: #relnotes_v16-vcs}
 
 ### vCenter Server インスタンスのハードウェア強化
+{: #relnotes_v16-hw-vcs}
 
 V1.6 リリース以降、vCenter Server インスタンスでは以下の複数の機能拡張を利用できます。
 
@@ -48,6 +49,7 @@ V1.6 より前の vCenter Server インスタンスでは、以下のアクシ�
 V1.6 より前のインスタンスではこれ以外のアクションは使用できなくなりました。
 
 ### vCenter Server インスタンスのネットワーキングの機能強化
+{: #relnotes_v16-network-vcs}
 
 *  パブリック VLAN 上の 16 個の IP アドレスをカバーするパブリック・サブネットが自動的に注文され、VM (仮想マシン) からインターネットにアクセスすることが可能になります。
 *  プライベート VLAN 上の 64 個の IP アドレスをカバーするプライベート・サブネットが自動的に注文され、VM から SoftLayer® 内部ネットワークにアクセスすることが可能になります。
@@ -68,10 +70,11 @@ V1.6 より前のインスタンスではこれ以外のアクションは使用
    *  [VMware NSX 資料](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## 使いやすさの向上
+{: #relnotes_v16-ui}
 
 ユーザー・インターフェース全体が以下のように改善されました。
 
 *  ユーザー・インターフェースのすべての領域にアクセスできるナビゲーション・ペインが左側に導入されたことで、コンソールのメイン・ナビゲーションが大幅に改善されました。 新規インスタンスの注文、デプロイ済みのインスタンスの表示、システム通知の確認、設定の変更、オンライン・ドキュメントのアクセスを簡単に行えます。
 *  左側のナビゲーション・ペインからアクセスできる新しい**「開始」**ページにより、十分に詳しい情報がコンソールで直接得られるので、注文するインスタンスのコンポーネントについて、情報に基づいた決定を行うことができます。 **「開始」**ページでは、インスタンスを注文するプロセスの手順が、インスタンスを注文するためのすべての前提条件 (必要なユーザー・アカウントなど) を満たすところから始まり、最終的に注文を実行するところまで順を追って説明されます。
-*  Cloud Foundation インスタンスと vCenter Server インスタンスの両方のサマリーの詳細が、左側のナビゲーション・ペインの**「デプロイ済みインスタンス」**メニューからアクセスできる単一のページに統合されました。 このページから、適切なタブを選択して、Cloud Foundation インスタンスまたは vCenter Server インスタンスをフィルタリングできます。
-* インスタンスに Zerto 災害復旧がインストールされている場合は、サービスの詳細のページから Zerto コンソールにワンクリックで直接アクセスできます。 詳しくは、[Cloud Foundation インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)および[vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)を参照してください。
+*  Cloud Foundation インスタンスと vCenter Server インスタンスの両方のサマリーの詳細が、左側のナビゲーション・ペインの**「リソース」**メニューからアクセスできる単一のページに統合されました。 このページから、適切なタブを選択して、Cloud Foundation インスタンスまたは vCenter Server インスタンスをフィルタリングできます。
+* インスタンスに Zerto 災害復旧がインストールされている場合は、サービスの詳細のページから Zerto コンソールにワンクリックで直接アクセスできます。 詳しくは、[vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)を参照してください。

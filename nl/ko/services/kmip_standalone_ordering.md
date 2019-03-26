@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2019-02-15"
 
 다음 태스크를 완료했는지 확인하십시오.
 * **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)을 참조하십시오.
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스 설치 시 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)의 모든 고려사항을 검토했습니다.
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스 설치 시 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations-install)의 모든 고려사항을 검토했습니다.
 
 ## KMIP for VMware on IBM Cloud 인스턴스를 주문하는 프로시저
 {: #kmip_standalone_ordering-procedure}
@@ -36,20 +36,21 @@ lastupdated: "2019-02-15"
 ### 인스턴스 이름
 {: #kmip_standalone_ordering-config-instance-name}
 
-KMIP for VMware {{site.data.keyword.cloud_notm}} 인스턴스의 이름을 지정하십시오.
+KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스의 이름을 지정하십시오.
 
 ### 서비스 지역
 {: #kmip_standalone_ordering-config-service-region}
 
-KMIP for VMware {{site.data.keyword.cloud_notm}} 인스턴스를 호스팅할 {{site.data.keyword.cloud_notm}} 지역을 선택하십시오.
+KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스를 호스팅할 {{site.data.keyword.cloud_notm}} 지역을 선택하십시오.
 
-{{site.data.keyword.cloud_notm}}는 서비스가 사용 가능한 각 지역에서 고가용성 KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스 엔드포인트를 유지보수합니다.
+{{site.data.keyword.cloud_notm}}는 서비스가 사용 가능한 각 지역에서 고가용성 KMIP for VMware on {{site.data.keyword.cloud_notm}} 네트워크 서비스 엔드포인트를 유지보수합니다.
 
-표 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스 엔드포인트 지역
+표 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 네트워크 서비스 엔드포인트 지역
 
 |지역         |엔드포인트               |
 |:---------------|:-----------------------|
 |독일        |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|시드니        |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 |도쿄          | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 |미국 남부       |  <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
@@ -66,12 +67,12 @@ IBM Key Protect Service 인스턴스에 액세스하는 데 사용되는 {{site.
 ### 고객 루트 키
 {: #kmip_standalone_ordering-config-root-key}
 
-**검색**을 클릭하여 선택된 IBM Key Protect 인스턴스에 저장된 고객 루트 키를 가져오십시오.
+**검색**을 클릭하여 선택된 키 관리자 인스턴스에 저장된 고객 루트 키를 가져오십시오. 
 
 ## 결과
 {: #kmip_standalone_ordering-results}
 
-인스턴스 주문이 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 주문의 상태를 확인할 수 있습니다.
+KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스 주문이 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 주문의 상태를 확인할 수 있습니다.
 
 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **설치됨**으로 변경되고 이메일로 알림을 받습니다.
 

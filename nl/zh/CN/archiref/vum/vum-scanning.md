@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -36,7 +36,7 @@ lastupdated: "2019-02-18"
 3.	选择要扫描以查找的更新的类型。选项包括_虚拟设备升级、VM 硬件升级_和 _VMware Tools 升级_。
 4.	单击**扫描**。
 
-## 手动启动容器对象扫描
+##	手动启动容器对象扫描
 {: #vum-scanning-scan-container}
 
 通过扫描作为数据中心或数据中心文件夹的容器对象，对主机、VM 和虚拟设备启动同时扫描。
@@ -45,7 +45,7 @@ lastupdated: "2019-02-18"
 3.	选择要扫描以查找的更新的类型。选项包括_虚拟设备升级、VM 硬件升级_和 _VMware Tools 升级_。
 4.	单击**扫描**。
 
-## 安排扫描
+##	安排扫描
 {: #vum-scanning-schedule}
 
 可以配置 vSphere Web Client 以在特定时间扫描 VM、虚拟设备和 vSphere ESXi 主机，或按您方便的时间间隔对这些对象进行扫描。

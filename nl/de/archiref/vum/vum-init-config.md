@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -37,7 +37,7 @@ Tabelle 1. Werte für die Bereitstellung
 | Adresse | proxy ip | Eine Ersatz-IP-Adresse sollte aus dem privaten portierbaren Teilnetz des Kunden verwendet werden, die während des Bereitstellungsprozesses zugewiesen wird. Nur zwei IP-Adressen werden für dieses Teilnetz reserviert; eine für den BCR und die andere für das Kunden-ESG.
 | Netzmaske | 255.255.255.192 | |
 | Gateway| customer-nsx-edge private uplink ip | Dies ist die Standardgateway-Einstellung für den Proxy-Server, nämlich die private Uplink-IP-Adresse "customer-nsx-edge". Die IP findet sich auf der Registerkarte **Einstellungen** für **customer-nsx-edge**. |
-| DNS-Server | AD/DNS ip | Diese IP-Adresse befindet sich auf der Instanzseite in der {{site.data.keyword.vmwaresolutions_short}}-Konsole auf der Seite **Bereitgestellte Instanzen**. |
+| DNS-Server | AD/DNS ip | Diese IP-Adresse befindet sich auf der Instanzseite in der {{site.data.keyword.vmwaresolutions_short}}-Konsole auf der Seite **Ressourcen**. |
 | BCR-IP | bcr ip | Dies ist die IP-Adresse des {{site.data.keyword.cloud_notm}} Backend Customer Router und fungiert als Gateway für 10.0.0.0/8 und 161.26.0.0/16. Diese Adresse wird in einer statischen Route im Proxy-Server verwendet, sodass sie die VCSA und den AD/DNS-Server erreichen kann. |
 
 ## NSX konfigurieren

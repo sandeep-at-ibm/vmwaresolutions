@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -61,7 +61,7 @@ A camada de gerenciamento de virtualização consiste nos seguintes componentes:
 O NetApp ONTAP Select é executado em um cluster VMware e virtualiza o armazenamento local nos hosts. O NetApp ONTAP Select é implementado no modelo dedicado, em que outras cargas de trabalho não são esperadas compartilhar o cluster com ele. Como resultado, a configuração de hardware do NetApp ONTAP Select na oferta do {{site.data.keyword.cloud_notm}} é dimensionada apenas com base nos requisitos do NetApp ONTAP Select.
 
 ## Especificações técnicas para instâncias do NetApp ONTAP Select
-{: #technical-specifications-for-netapp-ontap-select-instances}
+{: #np_netappoverview-specs}
 
 Os componentes a seguir estão incluídos em sua instância do NetApp ONTAP Select.
 
@@ -95,7 +95,7 @@ As unidades SSD de 3,8 TB (Disco de estado sólido) são suportadas quando são 
 * Um controlador de disco RAID
 * VMware Server Virtualization 6.5
 
-### Rede
+### Redes
 {: #np_netappoverview-network}
 
 * Uplinks duais de rede pública e privada de 10 Gbps

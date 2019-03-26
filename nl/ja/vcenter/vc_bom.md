@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -37,13 +37,13 @@ lastupdated: "2019-02-14"
 
 表 2. vCenter Server インスタンス内のソフトウェア・コンポーネントの BOM
 
-| 製造元  | コンポーネント                      | バージョン       |
+| 製造元  | コンポーネント                      | バージョン    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.5 Update P3 (ビルド 6.5.0-10884925) |
-| VMware       | vCenter Server Appliance        | 6.5 U2d (ビルド 6.5.0-10964411) |
-| VMware       | Platform Services Controller    | 6.5 U2d (ビルド 6.5.0-10964411) |
-| VMware       | vSAN                            | 6.6.1        |
-| VMware       | NSX for vSphere                 | 6.4.1        |
+| VMware       | vSphere ESXi                    | 6.7 Update 1 (ビルド 6.7.0-11675023) または <br/>6.5 Update 2 (ビルド 6.5.0-11925212) |
+| VMware       | vCenter Server Appliance        | 6.7 Update 1 (ビルド 6.7.0-10244745) または <br/>6.5 Update 2d (ビルド 6.5.0-10964411) |
+| VMware       | Platform Services Controller    | 6.7 Update 1 (ビルド 6.7.0-10244745) または <br/>6.5 Update 2d (ビルド 6.5.0-10964411) |
+| VMware       | vSAN                            | 6.7 Update 1 または <br/>6.6.1       |
+| VMware       | NSX for vSphere                 | 6.4.4 (ビルド 11197766)    |
 | Microsoft    | Windows Server Standard Edition | 2012R2       |
 
 VMware vSAN はオプションのコンポーネントです。
@@ -129,7 +129,8 @@ V2.0 以前でデプロイされたインスタンスの場合は、パブリッ
 2. **「プロパティ」**タブで、**「詳細」**オプションを選択します。
 3. **「最大 MTU」**値を 1500 に設定します。
 
-   vDS の MTU サイズを変更すると、接続アップリンク (物理 NIC) が停止した後で再開されます。結果として、アップリンクを使用している VM に短時間の停止が発生します。 そのため、スケジュールされたダウン時間中に MTU 設定更新を計画することをお勧めします。{:note}
+   vDS の MTU サイズを変更すると、接続アップリンク (物理 NIC) が停止した後で再開されます。 結果として、アップリンクを使用している VM に短時間の停止が発生します。 そのため、スケジュールされたダウン時間中に MTU 設定更新を計画することをお勧めします。
+   {:note}
 
 ## 関連リンク
 {: #vc_bom-related}
@@ -137,6 +138,6 @@ V2.0 以前でデプロイされたインスタンスの場合は、パブリッ
 * [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
 * [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [vCenter Server インスタンスの計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

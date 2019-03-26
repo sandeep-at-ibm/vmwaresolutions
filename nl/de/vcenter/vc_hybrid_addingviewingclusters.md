@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,7 +52,7 @@ Wenn Sie den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}}- 
 ### Einstellungen für Bare Metal Server
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
-Geben Sie das CPU-Modell und den RAM (Arbeitsspeicher) für den Bare Metal Server an. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
+Sie können **Skylake** oder **Broadwell** auswählen. Die Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren. 
 
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
@@ -131,7 +131,7 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 ## Vorgehensweise zum Hinzufügen von Clustern zu vCenter Server with Hybridity Bundle-Instanzen
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, um die Cluster in dieser Instanz anzuzeigen.
 
    Stellen Sie sicher, dass der Instanzstatus **Bereit** lautet. Andernfalls können Sie der Instanz keine Cluster hinzufügen.
@@ -162,7 +162,7 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
 ## Vorgehensweise zum Anzeigen von Clustern in vCenter Server with Hybridity Bundle-Instanzen
 {: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, um die Cluster in dieser Instanz anzuzeigen.
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Prüfen Sie in der Tabelle **CLUSTER** die Zusammenfassung für die Cluster:
   * **Name**: Der Name des Clusters.
@@ -232,7 +232,7 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 ## Vorgehensweise zum Löschen von Clustern aus vCenter Server with Hybridity Bundle-Instanzen
 {: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Bereitgestellte Instanzen**.
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, aus der Cluster gelöscht werden sollen.
 
    Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster aus der Instanz entfernen.

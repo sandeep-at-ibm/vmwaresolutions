@@ -16,14 +16,14 @@ L'installation de VMware HCX on IBM Cloud exige la configuration logicielle suiv
 * Pour utiliser une migration vMotion entre clouds, les mêmes restrictions d'affinité s'appliquent entre les clouds comme c'est le cas en local. Pour plus d'informations, voir [Foire aux questions relatives à la compatibilité entre VMware EVC et UC](http://bit.ly/2vK6Sp5).
 
 ## Configuration de la connectivité du réseau
-{: #hcx-archi-port-req-config-net}
+{: #hcx-archi-prep-install-config-net}
 
 HCX doit traverser l'Internet public et des lignes privées, et se connecter à des composants de centre de données, comme des réseaux, des commutateurs et des groupes de ports.
 * La section [Accès aux ports requis](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req) répertorie les ports qui doivent être ouverts afin que des dispositifs virtuels HCX puissent être installés.
 * L'environnement vSphere local et l'environnement VCF/VCS HCX Cloud doivent permettre une synchronisation des horloges NTP (Network Time Protocol) entre les unités vSphere locales et les unités VCF/VCS HCX. Le port UDP 123 doit être accessible aux dispositifs virtuels et aux réseaux HCX.
 
 ## Environnement local
-{: #hcx-archi-port-req-on-prem-env}
+{: #hcx-archi-prep-install-on-prem-env}
 
 Avant d'installer HCX, vérifiez que votre environnement peut prendre en charge les tâches que vous voulez accomplir. L'environnement local doit prendre en charge les tâches suivantes pour que HCX puisse être installé.
 * Virtual Center avec vSphere 5.5 Update 3 ou 6.0 Update 2.
@@ -38,7 +38,7 @@ Avant d'installer HCX, vérifiez que votre environnement peut prendre en charge 
   * vCenter est en mode lié (dans lequel le vCenter secondaire utilise le service SSO depuis le vCenter principal ou un service SSO externe).
 
 ## Vérification de l'environnement d'installation de couche 2
-{: #hcx-archi-port-req-verify-layer-2-inst}
+{: #hcx-archi-prep-install-verify-layer-2-inst}
 
 L'extension de réseau de couche 2 doit respecter les règles suivantes :
 * vSphere édition Enterprise Plus.
@@ -50,7 +50,7 @@ L'extension de réseau de couche 2 doit respecter les règles suivantes :
   * Si plusieurs concentrateurs de couche 2 sont nécessaires, chacun doit avoir une adresse IP en local et dans le cloud.
 
 ## Liens connexes
-{: #hcx-archi-port-req-related}
+{: #hcx-archi-prep-install-related}
 
 * [Installation et configuration de HCX sur la source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
 * [Foire aux questions relatives à la compatibilité entre VMware EVC et UC](http://bit.ly/2vK6Sp5)

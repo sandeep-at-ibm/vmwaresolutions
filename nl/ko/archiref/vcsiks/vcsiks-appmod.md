@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -47,7 +47,7 @@ vCenter Server는 사용자의 워크로드에 가장 적합하며 유연한 VMw
 
 요약하면, {{site.data.keyword.cloud_notm}} for VMware 오퍼링은 다음을 제공합니다.
 * 리소스의 조달, 아키텍처, 구현 및 배치에 걸리는 시간을 몇 주나 심지어는 몇 달에서 몇 시간으로 줄임으로써 개발자 및 비즈니스 라인을 위한 IT 프로젝트의 제공을 가속화합니다.
-* {{site.data.keyword.containerlong_notm}} 및 KMIP 등 {{site.data.keyword.cloud_notm}} 서비스에 대한 사설 엔드포인트 배치를 포함하여 호스팅되는 프라이빗 클라우드의 전용 Bare Metal Server를 사용하여 보안을 개선합니다.
+* {{site.data.keyword.containerlong_notm}} 및 KMIP 등 {{site.data.keyword.cloud_notm}} 서비스에 대한 사설 네트워크 서비스 엔드포인트 배치를 포함하여 호스팅되는 프라이빗 클라우드의 전용 Bare Metal Server를 사용하여 보안을 개선합니다.
 * 가상화 관리에 대한 전체 관리 액세스를 제공하여 배치된 하이브리드 클라우드의 지속적인 관리 및 통제가 가능합니다. 관리에서는 기존 VMware 도구, 스크립트 및 교육 투자를 그대로 유지합니다.
 * 전세계 30개 이상의 {{site.data.keyword.CloudDataCents_notm}}에 걸쳐 있는 IBM Professional 및
 Managed Services를 사용하여 전세계적으로 VMware 전문 지식을 사용할 수 있습니다.
