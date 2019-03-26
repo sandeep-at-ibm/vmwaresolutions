@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-26"
+lastupdated: "2019-03-26"
 
 subcollection: vmwaresolutions
 
@@ -57,7 +57,7 @@ Your {{site.data.keyword.cloud_notm}} infrastructure account must be a Virtual R
 
 For more information, see:
 * [Overview of VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Enable your account for using Service Endpoints](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
+* [Enabling your account for using Service Endpoints](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## VLAN spanning end of support
 {: #slaccountrequirement-vlan-eos}
