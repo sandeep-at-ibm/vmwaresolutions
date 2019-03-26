@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-26"
 
 subcollection: vmwaresolutions
 
@@ -49,7 +49,7 @@ Review the following considerations before you install a KMIP for VMware on {{si
      **Important:** You cannot order the service without CRKs. It is highly recommended that you use the method to create a CRK using existing key material, and back up the key material that you are creating. By doing so, you ensure that you can recover your keys if a failure of the data center where IBM Key Protect is applied to store your CRKs.
 * Ensure that your {{site.data.keyword.cloud_notm}} infrastructure account is enabled for Virtual Routing and Forwarding (VRF) and for connectivity to Service Endpoints. For more information, see:
    * [Overview of Virtual Routing and Forwarding (VRF) on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-   * [Enabling your account for using Service Endpoints by using IBM Cloud CLI](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#getting-started)
+   * [Enabling your account for using Service Endpoints](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 * Because only private connection is supported, you do not need to configure any firewall or SNAT rules in vCenter Server for the network connectivity from the vCenter Server to the endpoint of the KMIP for VMware on {{site.data.keyword.cloud_notm}} instance.
 
 For more information, see [KMIP for VMware on IBM Cloud solution architecture](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-overview).
