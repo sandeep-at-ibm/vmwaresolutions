@@ -84,7 +84,7 @@
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="36" y="563" width="91" height="29" fill="#fff" stroke-width="0"/>
    <text x="80" y="573">Migra</text>
-   <text x="80" y="587">macchine virtuali</text>
+   <text x="80" y="587">VM (Virtual Machine)</text>
   </g>
   <path d="m110 687h164q10 0 10-10v-49.88" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <path d="m284 620.12 3.5 7h-7z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,7 +23,7 @@ Assicurati di aver completato le seguenti attività:
 ## Procedura per ordinare le istanze VMware HCX on IBM Cloud in loco
 {: #standalone_orderingserviceinstances-procedure}
 
-1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
+1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Scorri fino alla tabella **Istanze HCX on-premise** e fai clic su **Esegui provisioning del nuovo**.
 3. Specifica il **Nome istanza on-premises**.
 4. Fai clic sul link o sui link dei termini che si applicano al tuo ordine e assicurati di accettare questi termini prima di ordinare l'istanza.

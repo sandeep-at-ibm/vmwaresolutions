@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -33,7 +33,7 @@ Una distribuzione multisito è costituita dai seguenti componenti.
 * **Istanza o istanze secondarie**: una o più istanze vCenter Server secondarie, collegate all'istanza primaria, con la seguente configurazione:
    *  Nome del sito SSO
    *  Dominio secondario DNS collegato al dominio root sull'istanza primaria
-   *  Replica DNS e AD configurata tra le macchine virtuali AD sulle istanze primarie e secondarie.
+   *  Replica DNS e AD configurata tra le VM (Virtual Machine) AD sulle istanze primarie e secondarie.
    *  Per le istanze primarie distribuite nella V2.8 o successiva: vCenter Server Appliance (vCSA) con PSC (Platform Services Controller) integrato viene distribuito e configurato.
    *  VMware vCenter sulle istanze secondarie è configurato con la modalità di collegamento migliorata per vCenter sull'istanza primaria.
 
@@ -49,7 +49,7 @@ Il seguente grafico illustra la vista generale della distribuzione multisito di 
 
 Figura 1. Distribuzione multisito di vCenter Server
 
-![Distribuzione multisito di vCenter Server](../sddc/multisite-hub-spoke.svg "Distribuzione multisito di vCenter Server")
+![Distribuzione multisito di vCenter Server](../vcenter/multisite-hub-spoke.svg "Distribuzione multisito di vCenter Server")
 
 Il modello contiene i seguenti livelli:
 

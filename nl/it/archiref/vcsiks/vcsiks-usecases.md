@@ -30,8 +30,8 @@ vCenter Server with Hybridity Bundle crea una connettività debolmente accoppiat
 - **Ottimizzazione della rete** – seleziona la connettività migliore e allarga in modo efficace la connessione in modo che il traffico di rete venga spostato il più velocemente possibile.
 - **Deduplicazione dei dati** - può essere raggiunta la riduzione del 50% del traffico di rete.
 - **Instradamento intelligente** - quando un carico di lavoro viene spostato, l'instradamento di prossimità può modificare il percorso di rete, o il gateway, in modo che il traffico di rete utilizzi il gateway del sito di destinazione e non esegua l'“hairpinning” nuovamente al sito di origine.
-- **Migrazione senza tempo di inattività** - una macchina virtuale in esecuzione può essere spostata nel (o indietro dal) cloud utilizzando vMotion.
-- **Migrazione pianificata** - qualsiasi numero di macchine virtuali può essere replicato sul sito di destinazione e poi attivato su quel sito in un momento designato per sostituire i sistemi in esecuzione sul sito di origine.
+- **Migrazione senza tempo di inattività** - una VM (Virtual Machine) in esecuzione può essere spostata nel (o indietro dal) cloud utilizzando vMotion.
+- **Migrazione pianificata** - qualsiasi numero di VM (Virtual Machine) può essere replicato sul sito di destinazione e poi attivato su quel sito in un momento designato per sostituire i sistemi in esecuzione sul sito di origine.
 - **Migrazione delle politiche di sicurezza** - se viene utilizzato NSX in loco, tutte le politiche di sicurezza, i firewall e così via, vengono spostati insieme al carico di lavoro.
 
 Utilizzando questa soluzione, Acme Skateboards ha migrato correttamente i propri carichi di lavoro VMware in loco a {{site.data.keyword.cloud_notm}} soddisfacendo i propri requisiti di poco o zero tempo di inattività e senza alcuna riconfigurazione dell'applicazione.
@@ -39,7 +39,7 @@ Utilizzando questa soluzione, Acme Skateboards ha migrato correttamente i propri
 ## Distribuzione architettura ibrida
 {: #vcsiks-usecases-hybrid-archi-deployment}
 
-Quelli della Acme Skateboards vogliono distribuire un'architettura ibrida su {{site.data.keyword.cloud_notm}} costituita da vCenter Server e {{site.data.keyword.icpfull_notm}}, per il proprio percorso di modernizzazione dell'applicazione. I loro requisiti sono quelli di eseguire i loro database su macchine virtuali, le applicazioni e i servizi web nei contenitori e utilizzare una serie comune di strumenti per la gestione della rete e della sicurezza.
+Quelli della Acme Skateboards vogliono distribuire un'architettura ibrida su {{site.data.keyword.cloud_notm}} costituita da vCenter Server e {{site.data.keyword.icpfull_notm}}, per il proprio percorso di modernizzazione dell'applicazione. I loro requisiti sono quelli di eseguire i loro database su VM (Virtual Machine), le applicazioni e i servizi web nei contenitori e utilizzare una serie comune di strumenti per la gestione della rete e della sicurezza.
 
 Figura 2. Applicazione ibrida Acme Skateboards
 ![Diagramma dell'applicazione ibrida Acme Skateboards](vcsiks-acme-app-arch.svg)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # Panoramica di HyTrust KeyControl on IBM Cloud
-{: #hytrust-keycontrol-on-ibm-cloud-overview}
+{: #htkc_considerations}
 
 Il servizio HyTrust KeyControl on {{site.data.keyword.cloud}} semplifica la gestione dei carichi di lavoro crittografati. Questo servizio automatizza e semplifica il ciclo di vita delle chiavi di crittografia, che include l'archiviazione, la distribuzione, la rotazione e la revoca delle chiavi. Utilizzando la crittografia conforme a FIPS 140-2, le aziende possono gestire facilmente le chiavi di crittografia in scala.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -17,7 +17,7 @@ Figura 1. Diagramma di panoramica dell'architettura
 ![Diagramma di panoramica dell'architettura](vcsicp-arch-overview.svg)
 
 Questa architettura ibrida consente ad Acme Skateboards di raggiungere i seguenti obiettivi:
-- Migrare le macchine virtuali (VM) VMware che sono in loco a {{site.data.keyword.cloud}} con poco o nessun tempo di inattività e nessuna riconfigurazione dell'applicazione.
+- Migrare le VM (Virtual Machine) VMware che sono in loco a {{site.data.keyword.cloud}} con poco o nessun tempo di inattività e nessuna riconfigurazione dell'applicazione.
 - Abilitare l'avvio del percorso di modernizzazione dell'applicazione consentendo di concentrarsi sull'inserire nel contenitore il middleware e le interfacce web più semplici, consentendo al tempo stesso ai database più complessi di rimanere come VM.
 - Utilizzare CAM ({{site.data.keyword.cloud_notm}} Automation Manager) per gli script IaC (Infrastructure as Code) per creare e orchestrare i servizi creati sia dalle VM che dai contenitori per l'integrazione con le relative toolchain DevOps e la loro soluzione ITSM.
 
@@ -49,7 +49,7 @@ vCenter Server fornisce i blocchi di creazione fondamentali che includono VMware
 In sintesi, le offerte {{site.data.keyword.vmwaresolutions_short}} forniscono i seguenti vantaggi:
 
 * Accelerazione della fornitura di progetti IT per sviluppatori e linee di business riducendo il tempo necessario per approvvigionamento, architettura, implementazione e distribuzione di risorse da settimane, o anche mesi, ad alcune ore.
-* Migliora la sicurezza con server bare metal dedicati in un cloud privato ospitato, inclusa la distribuzione dell'endpoint privato ai servizi {{site.data.keyword.cloud_notm}}, inclusi {{site.data.keyword.containerlong_notm}} e KMIP.
+* Migliora la sicurezza con server bare metal dedicati in un cloud privato ospitato, inclusa la distribuzione dell'endpoint di servizio di rete privata ai servizi {{site.data.keyword.cloud_notm}}, tra cui {{site.data.keyword.containerlong_notm}} e KMIP.
 * Abilita la gestione e la governance coerenti del cloud ibrido distribuito fornendo un accesso amministrativo completo alla gestione della virtualizzazione, preservando gli investimenti in formazione, gli script e gli strumenti VMware esistenti.
 * Utilizza le competenze VMware su scala globale con i servizi professionali e gestiti di IBM disponibili in più di 30 {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo.
 

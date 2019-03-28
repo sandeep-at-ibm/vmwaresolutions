@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -54,11 +54,11 @@ Le seguenti informazioni si applicano alle sottoreti VLAN private:
 
 Ogni cluster Kubernetes è configurato con un plug-in di rete chiamato Calico.
 
-Le politiche di rete predefinite sono configurate per proteggere l'interfaccia di rete pubblica di ogni nodo di lavoro in {{site.data.keyword.containerlong_notm}}. Se hai dei requisiti di sicurezza univoci o hai un cluster multizona con lo spanning della VLAN abilitato, puoi utilizzare Calico e Kubernetes per creare politiche di rete per un cluster. Con le politiche di rete Kubernetes, puoi specificare il traffico di rete che vuoi consentire o bloccare da e verso un pod all'interno di un cluster. 
+Le politiche di rete predefinite sono configurate per proteggere l'interfaccia di rete pubblica di ogni nodo di lavoro in {{site.data.keyword.containerlong_notm}}. Se hai dei requisiti di sicurezza univoci o hai un cluster multizona con lo spanning della VLAN o VRF (Virtual Routing and Forwarding) abilitati, puoi utilizzare Calico e Kubernetes per creare politiche di rete per un cluster. Con le politiche di rete Kubernetes, puoi specificare il traffico di rete che vuoi consentire o bloccare da e verso un pod all'interno di un cluster.
 
 Per impostare politiche di rete più avanzate come il blocco del traffico in entrata (ingress) ai servizi LoadBalancer, utilizza le politiche di rete Calico.
 
-Le politiche di rete Kubernetes specificano in che modo i pod possono comunicare con altri pod e con endpoint esterni. Il traffico può inoltre essere filtrato in base alle etichette di pod e spazio dei nomi. Le politiche di rete Kubernetes vengono applicate utilizzando i comandi kubectl o le API Kubernetes. Quando queste politiche vengono applicate, vengono automaticamente convertite in politiche di rete Calico e quindi Calico applica tali politiche.
+Le politiche di rete Kubernetes specificano in che modo i pod possono comunicare con altri pod e con endpoint di servizio di rete pubblica. Il traffico può inoltre essere filtrato in base alle etichette di pod e spazio dei nomi. Le politiche di rete Kubernetes vengono applicate utilizzando i comandi kubectl o le API Kubernetes. Quando queste politiche vengono applicate, vengono automaticamente convertite in politiche di rete Calico e quindi Calico applica tali politiche.
 
 Le politiche di rete Calico per Kubernetes sono un superset delle politiche di rete Kubernetes e vengono applicate usando i comandi calicoctl.
 
@@ -82,10 +82,10 @@ Calico applica queste politiche, incluse le politiche di rete Kubernetes convert
 5. All'interno del nodo di lavoro, kube-proxy instrada la richiesta al servizio ALB o Ingress.
 6. Se l'applicazione si trova sullo stesso nodo di lavoro, vengono utilizzate le iptable per determinare quale interfaccia interna viene utilizzata per inoltrare la richiesta. Se l'applicazione si trova su un nodo di lavoro differente, il vRouter Calico instrada al nodo di lavoro applicabile, utilizzando l'incapsulamento IP-in-IP solo se il nodo di lavoro si trova su una sottorete diversa.
 
-#### Livello web ospitato in un contenitore in IBM Cloud Kubernetes Service al livello del database ospitato in una macchina virtuale in vCenter Server
+#### Livello web ospitato in un contenitore in IBM Cloud Kubernetes Service al livello del database ospitato in una VM (Virtual Machine) in vCenter Server
 {: #vcsiks-overview-network-web-tier-vm}
 
-Vengono create risorse endpoint che descrivono i dettagli delle macchine virtuali (VM) del database esterno che includono l'indirizzo IP NAT e il numero di porta delle VM del database mysql, ad esempio:
+Vengono create risorse endpoint che descrivono i dettagli delle VM (Virtual Machine) del database esterno che includono l'indirizzo IP NAT e il numero di porta delle VM del database mysql, ad esempio:
 
 - tipo: Endpoint
 - versioneApi: v1

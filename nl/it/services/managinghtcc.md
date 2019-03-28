@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -22,13 +22,11 @@ Per accedere alla GUI web del dispositivo HTCC primario o secondario, utilizza l
 {: #managinghtcc-accessing-console}
 
 Per accedere alla console HTCC dal client web vSphere, utilizza la seguente procedura:
-1. Nel client web vSphere, individua le macchine virtuali denominate **CC1** e **CC2**.
+1. Nel client web vSphere, individua le VM (Virtual Machine) denominate **CC1** e **CC2**.
 2. Fai clic con il tasto destro del mouse su **CC1** o **CC2** e quindi seleziona **Apri console**.
 3. Accedi alla console utilizzando le relative credenziali che puoi trovare nella pagina dei dettagli del servizio HyTrust CloudControl on {{site.data.keyword.cloud_notm}}.
 
-Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Link correlati
 {: #managinghtcc-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -23,22 +23,22 @@ Questo servizio è disponibile solo per le istanze distribuite nelle release del
 {:note}
 
 ## Specifiche tecniche per FortiGate Virtual Appliance on IBM Cloud
-{: #technical-specifications-for-fortigate-virtual-appliance-on-ibm-cloud}
+{: #fortinetvm_considerations-specs}
 
 
 Nel servizio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} vengono ordinati e inclusi i seguenti componenti:
 
-### Macchine virtuali
+### VM (Virtual Machine)
 {: #fortinetvm_considerations-specs-vms}
 
-* Tutte le opzioni includono una coppia di macchine virtuali ad alta disponibilità (HA)
-* 2, 4 o 8 vCPU per macchina virtuale in base al tipo di sottoscrizione e alla dimensione della distribuzione
-* 4, 6 o 12 GB di RAM per macchina virtuale in base al tipo di sottoscrizione e alla dimensione della distribuzione
+* Tutte le opzioni includono una coppia di VM (Virtual Machine) ad alta disponibilità (HA)
+* 2, 4 o 8 vCPU per VM (Virtual Machine) in base al tipo di sottoscrizione e alla dimensione della distribuzione
+* 4, 6 o 12 GB di RAM per VM (Virtual Machine) in base al tipo di sottoscrizione e alla dimensione della distribuzione
 
 ### Alta disponibilità (HA)
 {: #fortinetvm_considerations-specs-ha}
 
-Due macchine virtuali sono distribuite e pronte per la configurazione HA o VRRP (Virtual Router Redundancy Protocol).
+Due VM (Virtual Machine) sono distribuite e pronte per la configurazione HA o VRRP (Virtual Router Redundancy Protocol).
 
 ### Rete
 {: #fortinetvm_considerations-specs-network}
@@ -48,7 +48,7 @@ L'accesso alla console FortiGate® viene fornito tramite una rete di gestione pr
 ### Licenza e tariffe
 {: #fortinetvm_considerations-specs-license}
 
-Le tariffe della licenza per ogni macchina virtuale vengono applicate a ciascun ciclo di fatturazione in base alla dimensione della distribuzione selezionata e al modello di licenza di sottoscrizione mensile.
+Le tariffe della licenza per ogni VM (Virtual Machine) vengono applicate a ciascun ciclo di fatturazione in base alla dimensione della distribuzione selezionata e al modello di licenza di sottoscrizione mensile.
 
 Non puoi modificare il livello di licenza dopo l'installazione del servizio. Per modificare il livello di licenza, devi rimuovere il servizio esistente e reinstallare il servizio utilizzando un'opzione di licenza diversa.
 {:important}
@@ -57,7 +57,7 @@ Non puoi modificare il livello di licenza dopo l'installazione del servizio. Per
 {: #fortinetvm_considerations-install}
 
 Esamina le seguenti considerazioni prima di installare il servizio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}:
-* Le macchine virtuali (VM) FortiGate vengono distribuite solo nel cluster predefinito.
+* Le VM (Virtual Machine) FortiGate vengono distribuite solo nel cluster predefinito.
 * Viene anche prenotato il 100% di CPU e RAM per le due VM FortiGate perché queste VM si trovano nel piano dati delle comunicazioni di rete ed è fondamentale che per loro siano ancora disponibili risorse.
 
   Per calcolare la prenotazione di CPU e RAM per una singola VM FortiGate, utilizza la seguente formula:

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-02-15"
 ## VRF (Virtual Routing and Forwarding)
 {: #vcscar-arch-overview-infrastructure-vrf}
 
-Gli account {{site.data.keyword.cloud}} possono anche essere configurati come account VRF (Virtual Routing and Forwarding). Un account VRF fornisce funzioni simili allo spanning della VLAN, abilitando l'instradamento automatico tra blocchi di IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
+Gli account {{site.data.keyword.cloud}} possono essere configurati come account VRF (Virtual Routing and Forwarding). Un account VRF abilita l'instradamento globale automatico tra i blocchi IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
 
 ## Direct Link
 {: #vcscar-arch-overview-infrastructure-direct-link}
@@ -34,7 +34,7 @@ Il servizio VPN strongSwan IPSec fornisce un canale di comunicazione end-to-end 
 ### Hybridity (HCX)
 {: #vcscar-arch-overview-infrastructure-hcx}
 
-Il servizio VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle può estendere senza soluzione di continuità le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione delle macchine virtuali (VM) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
+Il servizio VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle può estendere senza soluzione di continuità le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione delle VM (Virtual Machine) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
 
 ## Struttura fisica
 {: #vcscar-arch-overview-infrastructure-phys-structure}

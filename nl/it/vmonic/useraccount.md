@@ -57,7 +57,6 @@ Se sono state abilitate le notifiche via e-mail o console per determinati eventi
 {: #useraccount-related}
 
 * [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Notifiche](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)
 * [API SoftLayer](/docs/customer-portal?topic=customer-portal-customerportal_api){:new_window}

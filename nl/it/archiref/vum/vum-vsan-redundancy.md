@@ -8,7 +8,7 @@ lastupdated: "2019-02-15"
 
 ---
 
-# Ridondanza vSAN della macchina virtuale
+# Ridondanza vSAN della VM (Virtual Machine)
 {: #vum-vsan-redundancy}
 
 Quando metti un host vSphere ESXi in modalità di manutenzione su un cluster vSAN, ti viene richiesto di selezionare una modalità di rimozione dei dati. La selezione della modalità può avere un impatto sulle macchine e sui dispositivi virtuali che utilizzano l'archivio dati vSAN:

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -36,7 +36,7 @@ Una distribuzione multisito è costituita dai seguenti componenti.
 * **Istanza o istanze secondarie**: una o più istanze Cloud Foundation secondarie, collegate all'istanza primaria, con la seguente configurazione:
    *  Nome del sito SSO
    *  Dominio secondario DNS collegato al dominio root sull'istanza primaria
-   *  La replica DNS e AD viene configurata tra le macchine virtuali AD sulle istanze primarie e secondarie
+   *  La replica DNS e AD viene configurata tra le VM (Virtual Machine) AD sulle istanze primarie e secondarie
    *  PSC (Platform Services Controller) distribuito e configurato per la replica con il PSC sull'istanza primaria
    *  VMware vCenter sulle istanze secondarie è configurato con la modalità di collegamento migliorata per vCenter sull'istanza primaria
 
@@ -56,10 +56,8 @@ Figura 1. Distribuzione multisito di Cloud Foundation
 
 Il modello contiene i seguenti livelli:
 
-* **Istanza primaria**: in una configurazione multisito, per distribuire la prima istanza, definisci tale istanza come primaria durante il processo di ordine dell'istanza.
-* **Istanze secondarie**: in una configurazione multisito, definisci le istanze collegate all'istanza primaria come istanze secondarie durante il processo di ordine.
-
-Puoi assegnare solo un'istanza secondaria a un'istanza primaria alla volta. Non puoi assegnare più istanze secondarie a un'istanza primaria contemporaneamente. Per farlo, devi ripetere il processo di ordine e selezionare l'istanza primaria definita in precedenza come istanza primaria per l'istanza secondaria. Devi ripetere il processo per tutte le istanze secondarie che vuoi creare.
+* **Istanza primaria**: in una configurazione multisito, la prima istanza era definita come primaria durante il processo di ordine dell'istanza.
+* **Istanze secondarie**: in una configurazione multisito, le istanze collegate all'istanza primaria erano definite come secondarie durante il processo di ordine.
 
 Puoi avere un massimo di 8 istanze (1 primaria e 7 secondarie) che vengono distribuite in una configurazione multisito.
 

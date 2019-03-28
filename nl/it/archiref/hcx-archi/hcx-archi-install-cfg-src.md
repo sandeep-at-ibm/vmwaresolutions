@@ -51,7 +51,7 @@ Tabella 1. Valori di esempio per le proprietà di rete
 9. Sulla pagina **Ready to complete**, segui questa procedura:
   * Seleziona la casella **Power on after deployment**.
   * Controlla le impostazioni di Hybrid Cloud Services e fai clic su **Finish**. Potrebbero essere necessari diversi minuti per l'accensione dell'applicazione Hybrid Cloud Services.
-  * Per controllare lo stato, vai alla home page del client web e sulla scheda **Home**, vai a **Inventories** e fai clic su **Hosts and Clusters**. Espandi la gerarchia del data center e fai clic sulla macchina virtuale del servizio Hybrid Cloud Services per visualizzare un riepilogo nel pannello centrale.
+  * Per controllare lo stato, vai alla home page del client web e sulla scheda **Home**, vai a **Inventories** e fai clic su **Hosts and Clusters**. Espandi la gerarchia del data center e fai clic sulla VM (Virtual Machine) del servizio Hybrid Cloud Services per visualizzare un riepilogo nel pannello centrale.
   * Visualizza la scheda **Summary**, la console legge **Powered On** e il pulsante **Play** è verde.
 10. L'HCX Manager è acceso ed è pronto per essere registrato con il vCenter.
 

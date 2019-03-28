@@ -10,7 +10,7 @@ lastupdated: "2019-02-15"
 # Installazione e configurazione dei servizi ibridi
 {: #hcx-archi-install-cfg-hybrid}
 
-Il programma di installazione esegue il provisioning e configura una macchina virtuale per ogni applicazione virtuale del servizio. Le macchine virtuali del servizio vengono distribuite sia in loco che nel cloud.
+Il programma di installazione esegue il provisioning e configura una VM (Virtual Machine) per ogni applicazione virtuale del servizio. Le VM (Virtual Machine) del servizio vengono distribuite sia in loco che nel cloud.
 
 ## Prerequisiti
 {: #hcx-archi-install-cfg-hybrid-prereq}
@@ -89,7 +89,7 @@ Configura un servizio Network Extension per una distribuzione a singolo percorso
 ## Monitoraggio della distribuzione dell'applicazione del servizio
 {: #hcx-archi-install-cfg-hybrid-monitor}
 
-La console delle attività può essere utilizzata per monitorare l'avanzamento della distribuzione per una macchina virtuale del servizio.
+La console delle attività può essere utilizzata per monitorare l'avanzamento della distribuzione per una VM (Virtual Machine) del servizio.
 
 ### Procedura per monitorare la distribuzione dell'applicazione del servizio
 {: #hcx-archi-install-cfg-hybrid-monitor-proc}

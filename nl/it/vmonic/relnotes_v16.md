@@ -14,6 +14,7 @@ lastupdated: "2017-05-22"
 Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Aggiornamenti per le istanze VMware Cloud Foundation
+{: #relnotes_v16-vcf}
 
 I seguenti componenti sono nuovi o aggiornati:
 
@@ -22,11 +23,11 @@ I seguenti componenti sono nuovi o aggiornati:
 *  Nuove specifiche hardware: **Small** o **Standard**, a seconda dei tuoi requisiti.
 *  Nuovi data center disponibili per la distribuzione: **HKG02 - Hong Kong**, **OSL01 - Oslo**, **SEO01 - Seul**, **SNG01 - Singapore** e **SYD04 - Sydney**.
 
-Per l'elenco completo dei componenti, vedi [Panoramica di VMware Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview).
-
 ## Aggiornamenti per le istanze VMware vCenter Server
+{: #relnotes_v16-vcs}
 
 ### Miglioramenti hardware per le istanze vCenter Server
+{: #relnotes_v16-hw-vcs}
 
 A partire dalla release della V1.6, sono disponibili numerosi miglioramenti per le tue istanze vCenter Server.
 
@@ -48,8 +49,9 @@ Sulle istanze vCenter Server precedenti alla V1.6 sono disponibili le seguenti a
 Tutte le altre azioni sulle istanze precedenti alla V1.6 non sono più disponibili.
 
 ### Miglioramenti della rete per le istanze vCenter Server
+{: #relnotes_v16-network-vcs}
 
-*  Una sottorete pubblica con 16 indirizzi IP sulla VLAN pubblica viene ordinata per tuo conto per consentire alle tue VM (macchine virtuali) di accedere a Internet.
+*  Una sottorete pubblica con 16 indirizzi IP sulla VLAN pubblica viene ordinata per tuo conto per consentire alle tue VM (Virtual Machine) di accedere a Internet.
 *  Una sottorete privata con 64 indirizzi IP sulla VLAN privata viene ordinata per tuo conto per consentire alle tue VM di accedere alla rete interna SoftLayer®.
 *  I controller NSX vengono distribuiti con regole di anti-affinità ed eseguiti su server ESXi separati in una configurazione di distribuzione a 3 nodi.
 *  Nuovo gateway dei servizi edge VMware NSX per l'utilizzo da parte del cliente.
@@ -71,10 +73,11 @@ Tutte le altre azioni sulle istanze precedenti alla V1.6 non sono più disponibi
    *  [Documentazione di VMware NSX](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## Miglioramenti dell'usabilità
+{: #relnotes_v16-ui}
 
 Sono stati apportati miglioramenti in tutta l'interfaccia utente:
 
 *  La navigazione principale sulla console è notevolmente migliorata attraverso l'introduzione del riquadro di navigazione a sinistra con accesso a tutte le aree dell'interfaccia utente. Puoi rapidamente ordinare una nuova istanza, visualizzare le tue istanze distribuite, rivedere le notifiche di sistema, modificare le impostazioni e accedere alla documentazione in linea.
 *  La nuova pagina **Introduzione** accessibile dal riquadro di navigazione a sinistra ti fornisce dettagli sufficienti direttamente sulla console per aiutarti a prendere una decisione consapevole sui componenti dell'istanza che stai ordinando. Nella pagina **Introduzione**, sei anche guidato passo dopo passo nel processo di ordine di un'istanza, iniziando con soddisfare tutti i prerequisiti per ordinare un'istanza, come gli account utente richiesti, e terminando con effettuare un ordine.
-*  I dettagli di riepilogo per le istanze Cloud Foundation e vCenter Server sono consolidati in un'unica pagina, accessibile dal menu **Istanze distribuite** nel riquadro di navigazione a sinistra. Da questa pagina, puoi selezionare la scheda appropriata per filtrare le istanze Cloud Foundation o le istanze vCenter Server.
-* Se sulla tua istanza è installato il ripristino di emergenza Zerto, puoi accedere direttamente alla console Zerto dalla pagina dei dettagli del servizio con un solo clic. Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices) e [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
+*  I dettagli di riepilogo per le istanze Cloud Foundation e vCenter Server sono consolidati in un'unica pagina, accessibile dal menu **Risorse** nel riquadro di navigazione a sinistra. Da questa pagina, puoi selezionare la scheda appropriata per filtrare le istanze Cloud Foundation o le istanze vCenter Server.
+* Se sulla tua istanza è installato il ripristino di emergenza Zerto, puoi accedere direttamente alla console Zerto dalla pagina dei dettagli del servizio con un solo clic. Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).

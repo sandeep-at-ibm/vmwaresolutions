@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -48,7 +48,6 @@ Tabella 2. Descrizione delle azioni che generano eventi di gestione
 | `vmware-solutions.notification.update` | <ul><li>Viene ricevuta la richiesta di aggiornare le notifiche.</li><li>Viene data risposta alla richiesta di aggiornare le notifiche.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>Viene ricevuta la richiesta di cancellare i dati protetti.</li><li>Viene data risposta alla richiesta di cancellare i dati protetti.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>Viene ricevuta la richiesta di migrare all'account bss.</li><li>Viene data riposta alla richiesta di migrare all'account bss.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
-| `vmware-solutions.vcf.order`                 | <ul><li>Viene ricevuta la richiesta di ordinare un'istanza Cloud Foundation.</li><li>Viene data risposta alla richiesta di ordinare un'istanza Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.vcf.delete`                | <ul><li>Viene ricevuta la richiesta di eliminare un'istanza Cloud Foundation.</li><li>Viene data risposta alla richiesta di eliminare un'istanza Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.vcf.add_hosts`             | <ul><li>Viene ricevuta la richiesta di aggiungere server ESXi a un'istanza Cloud Foundation.</li><li>Viene data risposta alla richiesta di aggiungere server ESXi a un'istanza Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.vcf.remove_hosts`          | <ul><li>Viene ricevuta la richiesta di eliminare i server ESXi da un'istanza Cloud Foundation.</li><li>Viene data risposta alla richiesta di eliminare i server ESXi da un'istanza Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |

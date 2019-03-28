@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -24,9 +24,9 @@ Questa soluzione viene considerata come un componente extra e un'estensione dell
 
 Sebbene siano disponibili molte soluzioni di codifica dell'archiviazione per il tuo carico di lavoro VMware, KMIP for VMware offre i seguenti vantaggi:
 
-* Integrazione con le codifiche VMware vSAN e vSphere, entrambe implementate al livello dell'hypervisor invece che al livello della macchina virtuale o dell'archiviazione. Questo approccio consente una gestione e una trasparenza facili per la tua applicazione e soluzione di archiviazione.
-* Un server di gestione delle chiavi completamente gestito e disponibile in molte regioni multizona (MZR) IBM Cloud.
-* L'integrazione del tuo cluster VMware con IBM Cloud Key Protect ti fornisce delle chiavi completamente gestite dal cliente che puoi revocare in qualsiasi momento.
+* Integrazione con le codifiche VMware vSAN e vSphere, entrambe implementate al livello dell'hypervisor invece che al livello della VM (Virtual Machine) o dell'archiviazione. Questo approccio consente una gestione e una trasparenza facili per la tua applicazione e soluzione di archiviazione.
+* Un server di gestione delle chiavi completamente gestito e disponibile in molte regioni multizona (MZR) {{site.data.keyword.cloud_notm}}.
+* L'integrazione del tuo cluster VMware con {{site.data.keyword.cloud_notm}} Key Protect ti fornisce delle chiavi completamente gestite dal cliente che puoi revocare in qualsiasi momento.
 
 ## Link correlati
 {: #kmip-overview-related}

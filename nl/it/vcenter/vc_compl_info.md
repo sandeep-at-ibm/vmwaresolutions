@@ -4,22 +4,29 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
-# Informazioni di conformità per le istanze di vCenter Server e vCenter Server with Hybridity Bundle
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
+# Informazioni sulla conformità per le istanze vCenter Server
 {: #vc_compl_info}
 
-Rivedi le seguenti informazioni per i dettagli sulla conformità delle istanze VMware vCenter Server e vCenter Server with Hybridity Bundle.
+Rivedi le seguenti informazioni per i dettagli sulla conformità per le istanze VMware vCenter Server.
+
+L'offerta VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T non è supportata per i clienti HIPAA.
+{:important}
 
 ## Responsabilità del cliente rispetto a IBM per vCenter Server on IBM Cloud
 {: #vc_compl_info-responsibility}
 
 Il seguente diagramma fornisce i dettagli sulle responsabilità del cliente (tu) e di IBM per le attività di conformità.
 
-Figura 1. Matrice della responsabilità del cliente rispetto a IBM per vCenter Server on IBM Cloud
-![Matrice della responsabilità del cliente rispetto a IBM](customer_ibm_responsibility_matrix.svg "Matrice della responsabilità del cliente rispetto a IBM")
+Figura 1. Matrice di messa a confronto delle responsabilità del cliente e di quelle di IBM per vCenter Server on IBM Cloud
+![Matrice di messa a confronto delle responsabilità del cliente e di quelle di IBM](customer_ibm_responsibility_matrix.svg "Matrice di messa a confronto delle responsabilità del cliente e di quelle di IBM")
 
 ## Limitazioni all'integrità dei dati
 {: #vc_compl_info-health-data-restrictions}
@@ -45,7 +52,7 @@ Questo servizio cloud non è progettato per requisiti specifici di sicurezza per
 ## Politica per l'accesso alle istanze client
 {: #vc_compl_info-policy-for-access-client-inst}
 
-Gli ambienti VMware Cloud Foundation e vCenter Server, che vengono forniti come {{site.data.keyword.vmwaresolutions_short}}, forniscono un livello della piattaforma di gestione VMware per i nostri clienti per gestire le funzionalità di virtualizzazione. Durante tutto il ciclo di vita dei prodotti e dei servizi IBM Cloud for VMware, può essere richiesto il supporto di IBM per contribuire a garantire i risultati. Nella maggior parte dei casi, l'intervento del supporto IBM è il risultato di una richiesta client (cioè un ticket di supporto). Tuttavia, in rare occasioni, il supporto IBM può aiutare in modo proattivo e senza un ticket di supporto scritto dal client per evitare problemi futuri. Questo accesso avviene tramite la rete di supporto interno di IBM Cloud ed è documentato tramite un ticket di supporto aperto dal supporto IBM e monitorato continuamente da IBM Cloud SOC. In nessun momento il supporto IBM modifica la configurazione dell'istanza senza il previo consenso del cliente. L'accesso è ai componenti di gestione VMware e/o ai componenti di gestione di IBM Cloud e mai alle macchine o alle applicazioni virtuali del cliente.
+Gli ambienti vCenter Server, che vengono forniti come {{site.data.keyword.vmwaresolutions_short}}, forniscono un livello della piattaforma di gestione VMware per i nostri clienti per gestire le funzionalità di virtualizzazione. Durante tutto il ciclo di vita dei prodotti e dei servizi IBM Cloud for VMware, può essere richiesto il supporto di IBM per contribuire a garantire i risultati. Nella maggior parte dei casi, l'intervento del supporto IBM è il risultato di una richiesta client (cioè un ticket di supporto). Tuttavia, in rare occasioni, il supporto IBM può aiutare in modo proattivo e senza un ticket di supporto scritto dal client per evitare problemi futuri. Questo accesso avviene tramite la rete di supporto interno di IBM Cloud ed è documentato tramite un ticket di supporto aperto dal supporto IBM e monitorato continuamente da IBM Cloud SOC. In nessun momento il supporto IBM modifica la configurazione dell'istanza senza il previo consenso del cliente. L'accesso è ai componenti di gestione VMware e/o ai componenti di gestione di IBM Cloud e mai alle macchine o alle applicazioni virtuali del cliente.
 
 ## Supporto proattivo
 {: #vc_compl_info-proactive-support}
@@ -67,7 +74,7 @@ Gli ambienti VMware Cloud Foundation e vCenter Server, che vengono forniti come 
 ### Ticket di supporto
 {: #vc_compl_info-support-tickets}
 
-* Gli ambienti Cloud Foundation e vCenter Server non sono attivamente monitorati da IBM e il supporto IBM non entrerà nel livello di gestione VMware in normali operazioni senza un ticket di supporto scritto dal cliente.
+* Gli ambienti vCenter Server non sono attivamente monitorati da IBM e il supporto IBM non entrerà nel livello di gestione VMware in normali operazioni senza un ticket di supporto scritto dal cliente.
 * Quando un cliente apre un ticket di supporto per un'istanza, un servizio o un problema di provisioning, il ticket viene velocemente assegnato al team di supporto IBM appropriato, che sarà il responsabile principale per la risoluzione del problema.
 * A causa del livello di specializzazione richiesto per mantenere una competenza tecnica superiore a livello di team, a volte è necessario coinvolgere più di un team di supporto nella risoluzione di un particolare problema software. Questo è gestito facilmente, poiché i nostri team di supporto sono tutti collegati in rete e lavorano come una squadra per risolvere i problemi o le questioni che vengono individuati.
 * Per analizzare il problema, IBM potrebbe avere bisogno di accedere alle informazioni sul tuo sistema relative all'errore o potrebbe essere necessario ricreare l'errore per ottenere ulteriori informazioni.
@@ -136,5 +143,4 @@ Se il cliente non ha concesso il consenso a un supporto proattivo per un'istanza
 {: #vc_compl_info-related}
 
 * [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Panoramica di vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -26,16 +26,16 @@ L'infrastruttura fisica comprende i seguenti componenti:
   <dd class="dd">La rete fisica fornisce la connettività di rete nell'ambiente che viene quindi utilizzato dalla virtualizzazione di rete. La rete è fornita dalla rete dei servizi {{site.data.keyword.cloud_notm}} e include servizi supplementari come DNS e NTP.</dd>
 </dl>
 
-Per ulteriori informazioni sui componenti fisici, vedi la distinta base per l'[istanza Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) o l'[istanza vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Per ulteriori informazioni sui componenti fisici, vedi la distinta base per l'[istanza vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
-Per ulteriori informazioni sull'archiviazione, vedi [Architettura dell'archiviazione condivisa](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
+Per ulteriori informazioni sull'archiviazione, vedi [Architettura dell'archiviazione condivisa](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
 ## Progettazione dell'host fisico
 {: #design_physicalinfrastructure-host-design}
 
 L'host fisico si riferisce ai {{site.data.keyword.baremetal_short}} nell'ambiente che fornisce risorse di calcolo. I {{site.data.keyword.baremetal_short}} applicati in questa soluzione sono certificati da VMware ed elencati nella guida [VMware HCG](http://www.vmware.com/resources/compatibility/search.php).
 
-Le configurazioni del server disponibili nella soluzione soddisfano o superano i requisiti minimi per installare, configurare e gestire vSphere ESXi. Sono disponibili varie configurazioni per soddisfare diversi requisiti. Per l'elenco dettagliato delle specifiche esatte utilizzate per la soluzione VMware on {{site.data.keyword.cloud_notm}}, vedi la distinta base per l'[istanza Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) o l'[istanza vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Le configurazioni del server disponibili nella soluzione soddisfano o superano i requisiti minimi per installare, configurare e gestire vSphere ESXi. Sono disponibili varie configurazioni per soddisfare diversi requisiti. Per l'elenco dettagliato delle esatte specifiche utilizzate per la soluzione VMware on {{site.data.keyword.cloud_notm}}, vedi la distinta base per l'[istanza vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 I {{site.data.keyword.baremetal_short}} risiedono in {{site.data.keyword.cloud_notm}}.
 {:note}
@@ -88,21 +88,12 @@ Oltre alle reti pubbliche e private, ogni server {{site.data.keyword.cloud_notm}
 * Gli indirizzi IP primari sono assegnati a dispositivi, server virtuali e Bare Metal forniti da {{site.data.keyword.cloud_notm}}. Non assegnare alcun indirizzo IP in questi blocchi.
 * Gli indirizzi IP portatili ti vengono forniti per l'assegnazione e la gestione in base alle esigenze.
 
-Gli indirizzi IP primari o portatili possono essere resi instradabili a qualsiasi VLAN all'interno dell'account del cliente quando lo **spanning della VLAN** è abilitato all'interno del {{site.data.keyword.slportal}} o l'account è configurato come account **VRF (Virtual Routing and Forwarding)**.
-
-### Spanning della VLAN
-{: #design_physicalinfrastructure-vlan-spanning}
-
-**VLAN Spanning** è un'impostazione dell'account {{site.data.keyword.slportal}} che consente di instradare l'un l'altro il blocco di IP della sottorete primaria e portatile di tutte le VLAN all'interno dell'account. Se l'impostazione **VLAN Spanning** è disabilitata, i blocchi di IP possono ancora essere instradati ai servizi {{site.data.keyword.cloud_notm}}, ma non l'uno all'altro.
-
-Per consentire la connessione trasparente tra varie sottoreti in cui risiedono i componenti della soluzione, devi abilitare **VLAN Spanning** nell'account {{site.data.keyword.slportal}} in cui sono distribuite le istanze Cloud Foundation e vCenter Server.
+Gli indirizzi IP primari o portatili possono essere resi instradabili a qualsiasi VLAN nell'account del cliente quando l'account è configurato come un account **VRF (Virtual Routing and Forwarding)**.
 
 ### VRF (Virtual Routing and Forwarding)
 {: #design_physicalinfrastructure-vrf}
 
-Puoi anche configurare l'account del {{site.data.keyword.slportal}} come un account VRF (Virtual Routing and Forwarding) per fornire funzioni simili allo spanning della VLAN, consentendo l'instradamento automatico tra i blocchi di IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
-
-La console {{site.data.keyword.vmwaresolutions_short}} non è in grado di rilevare se VRF è abilitato nel {{site.data.keyword.slportal}}. Riceverai un'avvertenza che ti ricorda di verificare di aver abilitato lo **spanning della VLAN** o VRF nel tuo account del {{site.data.keyword.slportal}}.
+Puoi configurare l'account {{site.data.keyword.slportal}} come un account VRF (Virtual Routing and Forwarding), abilitando così l'instradamento globale automatico tra i blocchi di IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
 
 ### Connessioni all'host fisico
 {: #design_physicalinfrastructure-host-connect}
@@ -122,7 +113,7 @@ La VLAN pubblica e la prima VLAN privata create e assegnate in questa progettazi
 
 In questa progettazione, la rete privata è composta da due VLAN. Alla prima di queste VLAN (indicata qui come VLAN privata A) sono assegnate tre sottoreti:
 * La prima sottorete è un intervallo di sottoreti di IP privati primari che {{site.data.keyword.cloud_notm}} assegna agli host fisici.
-* La seconda sottorete è utilizzata per le macchine virtuali di gestione come vCenter Server Appliance e Platform Services Controller
+* La seconda sottorete è utilizzata per le VM (Virtual Machine) di gestione come vCenter Server Appliance e Platform Services Controller
 * La terza sottorete è utilizzata per i VTEP (VXLAN Tunnel Endpoint) assegnati a ciascun host tramite VMware NSX Manager.
 
 Oltre alla VLAN privata A, esiste una seconda VLAN privata (qui indicata come VLAN privata B) per supportare le funzioni di VMware, come vSAN e vMotion, e per la connettività al NAS (Network Attached Storage). Pertanto, la VLAN è divisa in due o tre sottoreti portatili.
@@ -142,27 +133,27 @@ Tabella 1. Riepilogo VLAN e sottorete
 |:---- |:---- |:----------- |
 | Pubblica| Primaria  | Assegnata agli host fisici per l'accesso alla rete pubblica. Non utilizzata al momento della distribuzione iniziale. |
 | Privata A | Primaria  | Sottorete singola assegnata agli host fisici assegnati da {{site.data.keyword.cloud_notm}}. Utilizzata dall'interfaccia di gestione per il traffico di gestione vSphere. |
-| Privata A | Portatile | Sottorete singola assegnata alle macchine virtuali che funzionano come componenti di gestione |
+| Privata A | Portatile | Sottorete singola assegnata alle VM (Virtual Machine) che funzionano come componenti di gestione |
 | Privata A | Portatile | Sottorete singola assegnata al VTEP NSX |
 | Privata B | Portatile | Sottorete singola assegnata per vSAN, se in uso |
 | Privata B | Portatile | Sottorete singola assegnata per NAS, se in uso |
 | Privata B | Portatile | Sottorete singola assegnata per vMotion |
 
-In questa progettazione, tutti gli host e le macchine virtuali supportati dalla VLAN sono configurati in modo che puntino al router del cliente della “rete privata” di back-end {{site.data.keyword.cloud_notm}} come rotta predefinita. Sebbene le istanze vCenter Server e Cloud Foundation consentano l'utilizzo di SDN (Software-Defined Networking), le sovrapposizioni di rete create all'interno di un'istanza VMware che includono l'instradamento alle sottoreti interne non sono note ai router gestiti da {{site.data.keyword.cloud_notm}}. Pertanto, potresti dover creare rotte statiche all'interno dell'istanza VMware su alcuni o su tutti i componenti di gestione.
+In questa progettazione, tutti gli host e le VM (Virtual Machine) supportati dalla VLAN sono configurati in modo che puntino al router del cliente della “rete privata” di back-end {{site.data.keyword.cloud_notm}} come rotta predefinita. Sebbene le istanze vCenter Server e Cloud Foundation consentano l'utilizzo di SDN (Software-Defined Networking), le sovrapposizioni di rete create all'interno di un'istanza VMware che includono l'instradamento alle sottoreti interne non sono note ai router gestiti da {{site.data.keyword.cloud_notm}}. Pertanto, potresti dover creare rotte statiche all'interno dell'istanza VMware su alcuni o su tutti i componenti di gestione.
 
 Le connessioni alla rete privata sono configurate per utilizzare una dimensione MTU dei frame Jumbo pari a 9000 per migliorare le prestazioni per trasferimenti di dati di grandi dimensioni, come archiviazione e vMotion. Questa è la MTU massima consentita in VMware e da {{site.data.keyword.cloud_notm}}. Le connessioni alla rete pubblica utilizzano una MTU Ethernet standard di 1500. Questo valore deve essere mantenuto poiché qualsiasi modifica potrebbe causare la frammentazione dei pacchetti su Internet.
 
 ## Progettazione dell'archiviazione fisica
 {: #design_physicalinfrastructure-storage-design}
 
-La progettazione dell'archiviazione fisica consiste nella configurazione dei dischi fisici installati negli host fisici e nella configurazione dell'archiviazione a livello di file condivisa. Ciò include i dischi del sistema operativo dell'hypervisor vSphere ESXi e quelli utilizzati per l'archiviazione delle macchine virtuali (VM). L'archiviazione per le VM può essere composta di dischi locali virtualizzati da VMware vSAN o di un'archiviazione a livello di file condivisa.
+La progettazione dell'archiviazione fisica consiste nella configurazione dei dischi fisici installati negli host fisici e nella configurazione dell'archiviazione a livello di file condivisa. Ciò include i dischi del sistema operativo dell'hypervisor vSphere ESXi e quelli utilizzati per l'archiviazione delle VM (Virtual Machine). L'archiviazione per le VM può essere composta di dischi locali virtualizzati da VMware vSAN o di un'archiviazione a livello di file condivisa.
 
 ### Dischi del sistema operativo
 {: #design_physicalinfrastructure-os-disks}
 
 L'hypervisor vSphere ESXi è progettato per essere installato in una ubicazione persistente. Di conseguenza, gli host fisici contengono due dischi SATA da 1-TB nella configurazione RAID-1 per supportare la ridondanza per l'hypervisor vSphere ESXi.
 
-### Archiviazione delle macchine virtuali
+### Archiviazione delle VM (Virtual Machine)
 {: #design_physicalinfrastructure-vm-storage}
 
 Questa progettazione consente di utilizzare VMware vSAN o l'archiviazione a livello di file condivisa come archivio dati primario per le VM.
@@ -172,7 +163,7 @@ Questa progettazione consente di utilizzare VMware vSAN o l'archiviazione a live
 
 Se utilizzato, VMware vSAN viene configurato utilizzando una configurazione all-flash. Questa progettazione consente diverse opzioni di configurazione, tra cui chassis 2U e 4U, vari numeri di dischi e varie dimensioni del disco. Tutte le configurazioni utilizzano due gruppi di dischi vSAN, con un SSD (Solid State Disk) per la cache e uno o più SSD per la capacità. Tutte le unità che vengono assegnate per il consumo di vSAN sono configurate in RAID-0 a singolo disco.
 
-Per ulteriori informazioni sulle configurazioni supportate, vedi la distinta base per l'[istanza Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom) o l'[istanza vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Per ulteriori informazioni sulle configurazioni supportate, vedi la distinta base per l'[istanza vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 ### Archiviazione a livello di file condivisa tra gli host
 {: #design_physicalinfrastructure-shared-storage}
@@ -185,12 +176,11 @@ Figura 2. Condivisioni NFS collegate alla distribuzione VMware
 
 Puoi assegnare e montare più condivisioni di file per i tuoi carichi di lavoro al momento dell'acquisto o successivamente nella console. Puoi scegliere tra le opzioni di capacità di archiviazione file Endurance {{site.data.keyword.cloud_notm}} e i livelli di prestazioni disponibili nel {{site.data.keyword.CloudDataCent_notm}} corrispondente. Tutte le condivisioni vengono collegate utilizzando il protocollo NFSv3. Inoltre, è possibile collegare le condivisioni file NFSv3 applicando l'offerta NetApp ONTAP Select.
 
-I {{site.data.keyword.CloudDataCents_notm}} che offrono il livello di prestazioni di 10 IOPS/GB includono anche la crittografia dei dati inattivi gestita dal provider (crittografia AES-256) e sono supportati dall'archiviazione all-flash. Il livello di prestazioni di 10 IOPS/GB è limitato a una capacità massima di 4 TB. Per ulteriori informazioni sul NAS condiviso utilizzato in questa soluzione, vedi [Architettura dell'archiviazione condivisa](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
+I {{site.data.keyword.CloudDataCents_notm}} che offrono il livello di prestazioni di 10 IOPS/GB includono anche la crittografia dei dati inattivi gestita dal provider (crittografia AES-256) e sono supportati dall'archiviazione all-flash. Il livello di prestazioni di 10 IOPS/GB è limitato a una capacità massima di 4 TB. Per ulteriori informazioni sul NAS condiviso utilizzato in questa soluzione, vedi [Architettura dell'archiviazione condivisa](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
 ## Link correlati
 {: #design_physicalinfrastructure-related}
 
-* [Distinta base di Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
 * [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
-* [Architettura dell'archiviazione condivisa](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
+* [Architettura dell'archiviazione condivisa](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [Architettura di NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

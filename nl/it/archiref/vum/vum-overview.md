@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2019-02-18"
 {: #vum-overview}
 
 VMware Update Manager (VUM) utilizza un processo a più fasi per aggiornare gli oggetti vSphere e applicare patch o estensioni. Questo processo consente una procedura di aggiornamento uniforme con un tempo di inattività minimo del sistema. Prima di esaminare questo processo, dobbiamo comprendere i seguenti termini:
-* **Oggetto di inventario** - Un oggetto all'interno di vCenter come, ad esempio, la macchina virtuale, i dispositivi virtuali o l'host vSphere ESXi.
+* **Oggetto di inventario** - Un oggetto all'interno di vCenter come, ad esempio, la VM (Virtual Machine), i dispositivi virtuali o l'host vSphere ESXi.
 * **Baseline** - Le baseline contengono una raccolta di una o più patch, estensioni, service pack, correzioni di bug o aggiornamenti e possono essere classificate come baseline di patch, estensione o aggiornamento. Esistono due classificazioni di baseline: host e VM/VA che hanno entrambe baseline predefinite da VMware ed è possibile aggiungere quelle personalizzate secondo necessità:
   - Baseline host predefinite:
     - Critical Host Patches
@@ -45,7 +45,7 @@ L'interfaccia del client VUM fornisce due viste principali:
 *	Vista di amministrazione (Administration)
 *	Vista di compatibilità (Compliance)
 
-## Vista di amministrazione (Administration)
+##	Vista di amministrazione (Administration)
 {: #vum-overview-admin-view}
 
 Per accedere alla vista di amministrazione, passa a **Home** > **Update Manager** e seleziona l'indirizzo IP dell'istanza Update Manager. Nella vista di amministrazione, puoi effettuare le seguenti attività:
@@ -56,7 +56,7 @@ Per accedere alla vista di amministrazione, passa a **Home** > **Update Manager*
 *	Esaminare e controllare le notifiche
 *	Importare immagini ESXi
 
-## Vista di compatibilità (Compliance)
+##	Vista di compatibilità (Compliance)
 {: #vum-overview-compliance-view}
 
 Per accedere alla vista di conformità di un oggetto di inventario selezionato, passa a **Hosts and Clusters** o **VMs and Templates** e fai clic sulla **scheda Update Manager**. Nella vista di conformità di Update Manager, puoi effettuare le seguenti attività:

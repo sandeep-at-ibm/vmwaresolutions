@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -20,7 +20,7 @@ Una volta che la tua istanza KMIP for VMware on {{site.data.keyword.cloud}} è p
 ## Procedura per aggiungere i certificati alle istanze KMIP for VMware on IBM Cloud
 {: #kmip_standalone_addingdeletingcert-add}
 
-1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
+1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Scorri fino alla tabella **Istanze KMIP for VMware on IBM Cloud** e fai clic sull'istanza per la quale vuoi aggiungere i certificati.
 3. Fai clic su **Aggiungi**.
 4. Nella finestra **Aggiungi certificato SSL del client**, immetti il nome e il contenuto del certificato.
@@ -32,7 +32,7 @@ Una volta che la tua istanza KMIP for VMware on {{site.data.keyword.cloud}} è p
 ## Procedura per visualizzare i certificati per le istanze KMIP for VMware on IBM Cloud
 {: #kmip_standalone_addingdeletingcert-view}
 
-1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
+1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Scorri fino alla tabella **Istanze KMIP for VMware on IBM Cloud** e fai clic sull'istanza per la quale visualizzare i certificati.
 3. Visualizza l'elenco dei certificati aggiunti sotto la sezione **Certificati SSL del client**.
 4. Per visualizzare il contenuto di un particolare certificato, fai clic su **Scarica**.
@@ -40,7 +40,7 @@ Una volta che la tua istanza KMIP for VMware on {{site.data.keyword.cloud}} è p
 ## Procedura per eliminare i certificati dalle istanze KMIP for VMware on IBM Cloud
 {: #kmip_standalone_addingdeletingcert-delete}
 
-1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
+1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Scorri fino alla tabella **Istanze KMIP for VMware on IBM Cloud** e fai clic sull'istanza dalla quale vuoi eliminare i certificati.
 3. Nella tabella **Certificati SSL del client**, individua il certificato che vuoi eliminare e fai clic sull'icona **Elimina**.
 

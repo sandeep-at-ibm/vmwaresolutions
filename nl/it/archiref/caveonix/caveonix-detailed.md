@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -25,8 +25,8 @@ Figura 1. Componenti dell'applicazione
     - Metadati di carico di lavoro
 - Router centrale - gestisce tutti i touchpoint di integrazione con il livello di orchestrazione VMware. Tutti i plugin RiskForesight devono comunicare con il router centrale per ottenere l'autorizzazione a comunicare con l'ecosistema RiskForesight.
 -	Server API - è il middleware endpoint REST che connette la GUI e gli archivi dati di backend. Convalida inoltre le richieste di accesso degli utenti e gestisce il RBAC.
--	Raccoglitore dati vCenter - il plugin estrae i dettagli della macchina virtuale (VM, Virtual Machine) da vCenter. Il plugin generico utilizza le API VMware per stabilire una connessione a vCenter ed estrae le informazioni pertinenti del carico di lavoro. Quando le informazioni sono disponibili, il plugin assembla il payload e lo invia al raccoglitore centrale.
--	Raccoglitore dati vCD - il plugin estrae i dettagli della macchina virtuale (VM, Virtual Machine) da VMware vCloud Director. Il plugin generico utilizza le API VMWare per stabilire una connessione a VMware vCloud Director ed estrae le informazioni correlate ai carichi di lavoro. Quando le informazioni sono disponibili, il plugin assembla il payload e lo invia al raccoglitore centrale.
+-	Raccoglitore dati vCenter - il plugin estrae i dettagli della VM (Virtual Machine) da vCenter. Il plugin generico utilizza le API VMware per stabilire una connessione a vCenter ed estrae le informazioni pertinenti del carico di lavoro. Quando le informazioni sono disponibili, il plugin assembla il payload e lo invia al raccoglitore centrale.
+-	Raccoglitore dati vCD - il plugin estrae i dettagli della VM (Virtual Machine) da VMware vCloud Director. Il plugin generico utilizza le API VMWare per stabilire una connessione a VMware vCloud Director ed estrae le informazioni correlate ai carichi di lavoro. Quando le informazioni sono disponibili, il plugin assembla il payload e lo invia al raccoglitore centrale.
 -	Raccoglitore dati di rete vCD - il plugin estrae i dettagli Netflow da VMware vCD. Il plugin generico utilizza le API VMware per stabilire una connessione a VMware NSX ed estrae i gruppi e le regole di sicurezza, FW e rete. Quando le informazioni sono disponibili, il plugin assembla il payload e lo invia al raccoglitore centrale.
 -	Raccoglitore dati di rete - un plugin che estrae i dettagli Netflow da VMware vCenter. Il plugin generico utilizza le API VMware per stabilire una connessione a VMware NSX ed estrae le informazioni sui gruppi e le regole di sicurezza, firewall e rete. Quando le informazioni sono disponibili, il plugin assembla il payload e lo invia al raccoglitore centrale.
 -	Raccoglitore remoto - si trova nell'ambiente tenant o un'altra ubicazione dove ha un accesso di rete alle VM tenant. Gestisce tutta la scansione dei rischi informatici e di conformità.
@@ -37,9 +37,9 @@ Figura 1. Componenti dell'applicazione
     - Risultati della scansione
     - Software
     - Insieme di dati aggregati giornaliero o settimanale
--	Archivio dati di messaggistica - RiskForesight utilizza la coda di messaggistica persistente per fornire una perdita di dati pari a zero e una riduzione del carico per i componenti. Il payload dei dati in entrata è persistente inizialmente e viene quindi preso da tale condizione per un'ulteriore elaborazione.
--	Archivio dati indice - indicizza e archivia i dati non elaborati in entrata per ciascun tenant per un'ulteriore analisi per supportare la funzionalità multi-tenant.
--	Plugin – si trovano nella funzione Application Routing e includono l'impostazione e l'integrazione con i componenti VMware per sincronizzare tutte le VM con le loro informazioni tenant.
+- Archivio dati di messaggistica - RiskForesight utilizza la coda di messaggistica persistente per fornire una perdita di dati pari a zero e una riduzione del carico per i componenti.
+- Archivio dati indice - indicizza e archivia i dati non elaborati in entrata per ciascun tenant per un'ulteriore analisi per supportare la funzionalità multi-tenant.
+- Plugin – si trovano nel server Application Routing e includono l'impostazione e l'integrazione con i componenti VMware per sincronizzare tutte le VM con le loro informazioni tenant.
 
 La seguente tabella mostra le porte e i protocolli necessari per ciascun componente.
 

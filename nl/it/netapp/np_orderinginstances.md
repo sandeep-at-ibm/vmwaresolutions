@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -73,7 +73,7 @@ Il nome del dominio root deve rispettare i seguenti requisiti:
 * L'ultima stringa può includere solo caratteri alfabetici.
 * La lunghezza dell'ultima stringa deve essere compresa tra 2 e 24 caratteri.
 
-La lunghezza massima del nome di dominio completo (o FQDN, Fully Qualified Domain Name) per gli host e le VM (macchine virtuali) è di 50 caratteri. I nomi di dominio devono essere adattati a questa lunghezza massima.
+La lunghezza massima del nome di dominio completo (o FQDN, Fully Qualified Domain Name) per gli host e le VM (Virtual Machine) è di 50 caratteri. I nomi di dominio devono essere adattati a questa lunghezza massima.
 {:note}
 
 ## Impostazioni di licenza
@@ -128,7 +128,7 @@ Il numero di server ESXi di un'istanza NetApp ONTAP Select è 4 per impostazione
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#technical-specifications-for-netapp-ontap-select-instances) vengono installati sulla tua piattaforma virtuale VMware.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs) vengono installati sulla tua piattaforma virtuale VMware.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 

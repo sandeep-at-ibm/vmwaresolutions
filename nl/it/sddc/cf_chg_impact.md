@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-22"
 
 ---
 
@@ -38,6 +38,7 @@ Il `<service_name>` insieme al `<service_uuid>` viene troncato a 20 caratteri.
 
 ## Risorse VMware per le istanze Cloud Foundation
 {: #cf_chg_impact-vmware-resources}
+{: faq}
 
 La seguente tabella elenca le operazioni che potrebbero essere interessate se modifichi le risorse VMware all'esterno della console {{site.data.keyword.vmwaresolutions_short}}. Se disponibile, verrà fornita anche una soluzione per il recupero.
 
@@ -65,6 +66,7 @@ Se scegli di disabilitare l'accesso shell o SSH, puoi riabilitarlo temporaneamen
 
 ## Sottoreti di gestione per le istanze Cloud Foundation
 {: #cf_chg_impact-mgmt-subnets}
+{: faq}
 
 Le seguenti informazioni trattano le sottoreti ordinate da {{site.data.keyword.vmwaresolutions_short}} e forniscono opzioni per ordinare sottoreti aggiuntive per uso personale.
 

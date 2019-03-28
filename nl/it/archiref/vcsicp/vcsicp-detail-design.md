@@ -56,13 +56,13 @@ Per ulteriori informazioni, vedi [Guida di rete di vCenter Server](/docs/service
 ### Rete NSX-T
 {: #vcsicp-detail-design-nst-t}
 
-NSX-T è progettata in modo che una singola piattaforma di rete possa connettersi a qualsiasi tipo di applicazione, basata su macchina virtuale o contenitore, in esecuzione all'interno o all'esterno di un ambiente vSphere.
+NSX-T è progettata in modo che una singola piattaforma di rete possa connettersi a qualsiasi tipo di applicazione, basata su VM (Virtual Machine) o contenitore, in esecuzione all'interno o all'esterno di un ambiente vSphere.
 
 {{site.data.keyword.icpfull_notm}} fornisce un'opzione per sostituire la rete di Calico con un'istanza NSX-T, fornendo una singola ubicazione per la gestione della rete e della sicurezza.
 
-Figura 3. {{site.data.keyword.icpfull_notm}} con rete NSX-T
+Figura 3. Rete {{site.data.keyword.icpfull_notm}} con NSX-T
 
-![{{site.data.keyword.icpfull_notm}} con rete NSX-T](vcsicp-icp-nsxt-networking.svg)
+![{{site.data.keyword.icpfull_notm}} con NSX-T - Rete](vcsicp-icp-nsxt-networking.svg)
 
 ## Link correlati
 {: #vcsicp-detail-design-related}

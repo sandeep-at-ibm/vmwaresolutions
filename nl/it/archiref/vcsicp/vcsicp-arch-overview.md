@@ -25,7 +25,7 @@ Utilizza Cloud Automation Manager Service Composer per visualizzare i servizi cl
 ## Piattaforma di gestione cloud lato IBM Cloud
 {: #vcsicp-arch-overview-ibm-cloud-side-platform}
 
-Il seguente diagramma è un esempio di una distribuzione {{site.data.keyword.icpfull_notm}} e CAM con l'infrastruttura {{site.data.keyword.cloud_notm}}, con connessioni al vCenter in loco e {{site.data.keyword.containerlong_notm}} distribuito su {{site.data.keyword.cloud_notm}}. Gli utenti possono distribuire macchine virtuali (VM) in locale e VM in un'istanza vCenter Server e contenitori al cluster {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
+Il seguente diagramma è un esempio di una distribuzione {{site.data.keyword.icpfull_notm}} e CAM con l'infrastruttura {{site.data.keyword.cloud_notm}}, con connessioni al vCenter in loco e {{site.data.keyword.containerlong_notm}} distribuito su {{site.data.keyword.cloud_notm}}. Gli utenti possono distribuire VM (Virtual Machine) in locale e VM in un'istanza vCenter Server e contenitori al cluster {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
 Figura 1. Gestione cloud dal lato cloud
 

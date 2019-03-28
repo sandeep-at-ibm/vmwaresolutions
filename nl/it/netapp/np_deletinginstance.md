@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2019-02-14"
 {: #np_deletinginstance}
 
 Se elimini un'istanza NetApp ONTAP Select, i seguenti componenti vengono rilasciati in modo sequenziale:
-1. Le VM (macchine virtuali) organizzate in cluster NetApp ONTAP distribuite e la VM di distribuzione NetApp ONTAP Select
+1. Le VM (Virtual Machine) organizzate in cluster NetApp ONTAP distribuite e la VM di distribuzione NetApp ONTAP Select
 2. Tariffa per supporto e servizi
 3. Licenze del prodotto VMware
 4. Server ESXi
@@ -28,10 +28,10 @@ A causa delle dipendenze delle risorse, i componenti della tua istanza non vengo
 Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di fatturazione.
 {:note}
 
-## Procedura per eliminare le istanze dalla pagina Istanze distribuite
+## Procedura per eliminare le istanze dalla pagina Risorse
 {: #np_deletinginstance-procedure1}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze di NetApp ONTAP Select**, trova l'istanza da eliminare.
 3. Nella colonna **Azioni**, fai clic sull'icona Elimina.
    Lo stato dell'istanza viene modificato in **In fase di eliminazione**. Una volta che l'istanza viene eliminata correttamente e il suo stato viene modificato in **Eliminato**, fai di nuovo clic sull'icona di eliminazione nella colonna **Azioni**.
@@ -42,7 +42,7 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 ## Procedura per eliminare le istanze dalla pagina dei dettagli dell'istanza
 {: #np_deletinginstance-procedure2}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze di NetApp ONTAP Select**, fai clic sull'istanza da eliminare.
 3. Fai clic sull'icona del menu di overflow accanto a **Console NetApp** e quindi su **Elimina istanza**.
    Lo stato dell'istanza viene modificato in **In fase di eliminazione**. Una volta che l'istanza è stata eliminata, i suoi componenti vengono rilasciati e il suo stato viene modificato in **Eliminato**.

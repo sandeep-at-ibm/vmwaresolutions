@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
 # Distribuzione cloud e client
 {: #vcshcx-deployment}
 
-Come descritto all'inizio di questo documento, un'installazione HCX minima consiste in una singola distribuzione lato cloud e client. Il lato client HCX
+Un'installazione HCX minima consiste in una singola distribuzione lato cloud e client. Il lato client HCX
 può essere installato su qualsiasi versione di vSphere supportata da HCX, presumendo che ci sia una connettività di rete tra i lati client e cloud.
 
 ## Requisiti
@@ -25,9 +25,8 @@ può essere installato su qualsiasi versione di vSphere supportata da HCX, presu
 ## Cloud
 {: #vcshcx-deployment-cloud}
 
-La distribuzione HCX lato cloud è gestita dall'automazione {{site.data.keyword.vmwaresolutions_full}}. La configurazione predefinita utilizza il gruppo di porte pubblico per configurare qualsiasi connettività di endpoint dei componenti della flotta. I componenti della flotta
-sul lato cloud vengono distribuiti con le loro interfacce endpoint configurate con gli indirizzi IP
-pubblici poiché sono dispositivi con un potenziamento della sicurezza. È possibile distribuirli dietro un firewall. La connessione dei lati client e cloud tra di loro tramite un tunnel VPN esistente non è supportata. Se desideri utilizzare la rete privata per la connettività di endpoint HCX, puoi ordinare il lato cloud HCX per la distribuzione della flotta di rete privata per l'utilizzo mediante un collegamento dedicato come MPLS.
+La distribuzione HCX lato cloud è gestita dall'automazione {{site.data.keyword.vmwaresolutions_full}}. La configurazione predefinita utilizza il gruppo di porte pubblico per configurare qualsiasi connettività di endpoint dei componenti della flotta. I componenti della flotta sul lato cloud vengono distribuiti con le loro interfacce endpoint configurate con gli indirizzi IP
+pubblici poiché sono dispositivi con un potenziamento della sicurezza. È possibile distribuirli dietro un firewall. La connessione dei lati client e cloud tra di loro tramite un tunnel VPN esistente non è supportata. Se desideri utilizzare la rete privata per la connettività di endpoint HCX, puoi ordinare il lato cloud HCX per la distribuzione della flotta di rete privata per l'utilizzo su un collegamento dedicato come MPLS.
 
 ## Client
 {: #vcshcx-deployment-client}
@@ -52,9 +51,9 @@ Viene fornita anche una chiave di registrazione monouso. Per configurare la regi
 
 Per il lato client, utilizza il menu **Tasks** per monitorare la distribuzioni dei componenti della flotta. Per la distribuzione lato cloud, utilizza il menu **Tasks** nell'IU web vCenter per la specifica istanza di vCenter Server.
 
-Se si verifica un errore di distribuzione sull'uno o sull'altro lato, le distribuzioni dei componenti della flotta vengono annullate ed eliminate. Dopo che è stata determinata la causa dell'errore, fai clic sulla scheda **Interconnect** nell'IU web HCX vCenter sul lato client e seleziona quindi **Install HCX Components** nella parte superiore dello schermo.
+Se si verifica un errore di distribuzione sull'uno o sull'altro lato, le distribuzioni dei componenti della flotta vengono annullate ed eliminate. Dopo che hai determinato la causa dell'errore, fai clic sulla scheda **Interconnect** nell'IU web HCX vCenter sul lato client e seleziona quindi **Install HCX Components** nella parte superiore dello schermo.
 
-Dopo la corretta distribuzione dei componenti della flotta e dopo diversi minuti, lo stato del tunnel per i componenti CGW e L2C è **Up** nella scheda **Interconnect**.
+Dopo la corretta distribuzione dei componenti della flotta e dopo diversi minuti, lo stato del tunnel per i componenti CGW e L2C viene visualizzato come **Up** nella scheda **Interconnect**.
 
 ## Link correlati
 {: #vcshcx-deployment-related}

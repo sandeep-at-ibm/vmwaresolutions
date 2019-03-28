@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -44,25 +44,25 @@ Se si verifica un problema con la connettività WAN, controlla sempre la scherma
 Se erano stati applicati aggiornamenti o correzioni agli HCX Manager (client e cloud) e tali aggiornamenti correggono anche dei problemi con i componenti della flotta, devi ridistribuire il gateway cloud e qualsiasi L2C distribuito. È possibile eseguire un ulteriore debug dello stato del tunnel stabilendo una connessione a HCX Manager tramite un client SSH come ad esempio ccli  
 
 1. Esegui un SSH a HCX Manager utilizzando l'account di amministratore e la password fornita.
-2. Esegui il comando `su –` e la password root (uguale alla password amministratore) per andare alla root.
+2. Esegui il comando `su –` e immetti la password dell'utente `root` (uguale alla password dell'amministratore) per andare alla root.
 3. Passa alla directory `/opt/vmware/bin` ed esegui il comando `./ccli`. Se tale operazione non riesce perché l'ambiente non è impostato per root, esegui il comando `./ccliSetup.pl`.
-4. Esegui il comando `list` nella shell ccli per elencare i componenti della flotta registrati presso HCX Manager.
-5. Seleziona il focus di ccli immettendo l'ID elencato per il componente della flotta. Ad esempio, `go 8`.
-6. Esegui il comando `debug remoteaccess enable` per stabilire una connessione utilizzando SSH al componente della fotta desiderato.
-7. Esci da ccli e stabilisci una connessione utilizzando SSH all'indirizzo IP del componente della flotta abilitato a SSH.
+4. Esegui il comando `list` nella shell `ccli` per elencare i componenti della flotta registrati presso HCX Manager.
+5. Specifica l'ID flotta per `ccli` immettendo l'ID elencato per il componente della flotta. Ad esempio, `go 8`.
+6. Esegui il comando `debug remoteaccess enable` per stabilire una connessione utilizzando SSH al componente della flotta desiderato.
+7. Esci da `ccli` e stabilisci una connessione utilizzando SSH all'indirizzo IP del componente della flotta abilitato a SSH.
 9. Continua la risoluzione dei problemi.
-10. Ritorna a ccli e disabilita il servizio ssh per il componente.
+10. Ritorna a `ccli` e disabilita il servizio `ssh` per il componente.
 11. Se necessario, utilizza il comando ccli `hc` per eseguire un controllo di integrità sui componenti.
 
 ## Problemi di compatibilità dell'hardware di destinazione
 {: #vcshcx-troubleshooting-hw-compatibility}
 
-La migrazione vMotion può essere un problema quando il lato di origine client è a una versione hardware e una release vSphere più recenti rispetto al cloud. Poiché la migrazione basata sulla replica copia i dati in una macchina virtuale (VM, Virtual Machine) di nuova creazione sul lato di destinazione, la modifica del tipo di migrazione come “Bulk Migration” dovrebbe consentire la corretta esecuzione della migrazione nella maggior parte dei casi.
+La migrazione vMotion può essere un problema quando il lato di origine client è a una versione hardware e una release vSphere più recenti rispetto al cloud. Poiché la migrazione basata sulla replica copia i dati in una VM (Virtual Machine) di nuova creazione sul lato di destinazione, la modifica del tipo di migrazione come “Bulk Migration” dovrebbe consentire la corretta esecuzione della migrazione nella maggior parte dei casi.
 
-## Problemi di L2 esteso
+## Problemi di L2 Concentrator esteso
 {: #vcshcx-troubleshooting-stretched-l2}
 
-Nel funzionamento di L2C (L2 Concentrator) sono stati riscontrati pochi o zero problemi. Analogamente a CGW, se L2C perde la connettività, si riconnette automaticamente dopo che la connettività di rete è stata ripristinata. Utilizza la shell ccli per controllare l'integrità e il funzionamento. Dopo che SSH è abilitato e L2C è connesso, esegui i comandi `ip tunnel` e `ip link |grep t_` per visualizzare lo stato dei tunnel.
+Sono stati riscontrati pochissimi problemi relativi al funzionamento di L2C (L2 Concentrator). Analogamente a CGW, se L2C perde la connettività, si riconnette automaticamente dopo che la connettività di rete è stata ripristinata. Utilizza la shell ccli per controllare l'integrità e il funzionamento. Dopo che SSH è abilitato e L2C è connesso, esegui i comandi `ip tunnel` e `ip link |grep t_` per visualizzare lo stato dei tunnel.
 
 ## Link correlati
 {: #vcshcx-troubleshooting-related}

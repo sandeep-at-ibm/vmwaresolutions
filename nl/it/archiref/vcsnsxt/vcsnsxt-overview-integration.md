@@ -14,7 +14,7 @@ lastupdated: "2019-02-15"
 ## Integrazione di IBM Cloud Private e VMware vCenter Server on IBM Cloud
 {: #vcsnsxt-overview-integration-icp-vcs-integration}
 
-{{site.data.keyword.cloud}} Private viene installato su diverse macchine virtuali (VM) su un'istanza vCenter Server. All'interno dell'istanza vCenter Server, l'istanza {{site.data.keyword.icpfull_notm}} viene distribuita con un DLR (Distributed Logical Router) ed ESG (Edge Services Gateway) NSX dedicato e utilizza una VXLAN.
+{{site.data.keyword.cloud}} Private viene installato su diverse VM (Virtual Machine) su un'istanza vCenter Server. All'interno dell'istanza vCenter Server, l'istanza {{site.data.keyword.icpfull_notm}} viene distribuita con un DLR (Distributed Logical Router) ed ESG (Edge Services Gateway) NSX dedicato e utilizza una VXLAN.
 
 L'ESG è configurato con una regola NAT di origine (SNAT) per consentire il traffico in uscita, che abilita la connettività per scaricare i prerequisiti {{site.data.keyword.icpfull_notm}} e la connessione a GitHub e Docker. In alternativa, puoi utilizzare un proxy web per la connettività internet. L'ESG è configurato con la connettività privata per accedere ai servizi DNS e NTP. L'ESG è anche configurato con una regola DNAT per abilitare l'accesso ai vIP Proxy e Master {{site.data.keyword.icpfull_notm}} dalla rete {{site.data.keyword.cloud_notm}} 10.x.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,7 +52,7 @@ Se distribuisci il cluster in un diverso {{site.data.keyword.CloudDataCent_notm}
 ### Impostazioni di Bare Metal Server
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
-Specifica il modello di CPU e la RAM per il Bare Metal Server. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
+Puoi scegliere **Skylake** o **Broadwell**. Le opzioni possono variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
 
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
@@ -131,7 +131,7 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 ## Procedura per aggiungere i cluster alle istanze vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza per visualizzare i cluster al suo interno.
 
    Assicurati che lo stato dell'istanza sia **Pronto per l'utilizzo**. Altrimenti, non puoi aggiungere i cluster all'istanza.
@@ -162,7 +162,7 @@ Non puoi modificare il nome del cluster. La modifica del nome del cluster potreb
 ## Procedura per visualizzare i cluster nelle istanze vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza per visualizzare i cluster al suo interno.
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, visualizza il riepilogo dei cluster:
   * **Nome**: il nome del cluster.
@@ -226,13 +226,13 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 
 * Puoi eliminare un singolo cluster alla volta. Per eliminare più cluster, devi farlo in sequenza: attendi che il cluster precedente venga eliminato prima di eliminare quello successivo.
 * Assicurati che tutti i nodi in un cluster siano accesi e operativi prima di eliminare il cluster.
-* Quando elimini un cluster, da questo vengono eliminate anche tutte le VM (macchine virtuali) e non possono essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.
+* Quando elimini un cluster, da questo vengono eliminate anche tutte le VM (Virtual Machine) e non possono essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.
 * Il cluster predefinito non può essere eliminato.
 
 ## Procedura per eliminare i cluster dalle istanze vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza da cui vuoi eliminare i cluster.
 
    Assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. Altrimenti, non potrai rimuovere i cluster dall'istanza.

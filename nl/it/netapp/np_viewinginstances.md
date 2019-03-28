@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -22,7 +22,7 @@ Visualizza il riepilogo e le informazioni dettagliate delle istanze NetApp ONTAP
 
 Per visualizzare un riepilogo di tutte le istanze NetApp ONTAP Select fornite per un account utente, completa la seguente procedura:
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Risorse** nel riquadro di navigazione a sinistra.
 2. Dal banner della console, fai clic sull'icona del tuo account utente e quindi sul campo **Account** per selezionare l'account utente per il quale vuoi controllare le istanze.
 3. Nella tabella **Istanze di NetApp ONTAP Select**, visualizza l'elenco delle istanze fornite nell'account utente selezionato.
 
@@ -33,7 +33,7 @@ Tabella 1. Elementi dell'istanza NetApp ONTAP Select
 | Nome | Il nome dell'istanza. |
 | Versione | La versione dell'istanza. |  
 | Ubicazione | Il data center in cui è ospitata l'istanza. |
-| Ora di creazione | La data e ora di creazione dell'istanza. |   
+| Data/ora di creazione | La data e ora di creazione dell'istanza. |   
 | Stato | Lo stato dell'istanza. Lo stato può assumere uno dei seguenti valori:<ul><li>In fase di creazione: l'istanza è in fase di creazione.</li><li>In fase di build: l'istanza è in fase di configurazione.</li><li>Pronto per l'utilizzo: l'istanza è pronta per l'uso.</li><li>In fase di modifica: l'istanza è in fase di modifica.</li><li>Non riuscito: il processo di creazione, configurazione o modifica non è riuscito.</li><li>In fase di eliminazione: l'istanza è in fase di eliminazione.</li><li>Errore di eliminazione: si è verificato un errore durante l'eliminazione dell'istanza.</li><li>Eliminato: l'istanza è stata eliminata.</li></ul>|
 
 ## Procedura per visualizzare i dettagli delle proprietà delle istanze NetApp ONTAP Select
@@ -80,9 +80,9 @@ Tabella 3. Informazioni di accesso per i componenti relativi alle istanze NetApp
 | IP cluster NetApp | L'indirizzo IP del cluster NetApp ONTAP Select. |
 | Nome di dominio completo cluster NetApp | Il dome di dominio completo del cluster NetApp ONTAP. |
 | HTTPS cluster NetApp | Il nome utente e la password che puoi utilizzare per accedere al cluster NetApp ONTAP Select. |
-| IP strumento di distribuzione NetApp | L'indirizzo IP della macchina virtuale di distribuzione NetApp ONTAP Select. |
-| Nome di dominio completo strumento di distribuzione NetApp | Il nome di dominio completo della macchina virtuale di distribuzione NetApp ONTAP Select. |
-| HTTPS strumento di distribuzione NetApp | Il nome utente e la password che puoi utilizzare per accedere alla macchina virtuale di distribuzione NetApp ONTAP Select. |
+| IP strumento di distribuzione NetApp | L'indirizzo IP della VM (Virtual Machine) di distribuzione NetApp ONTAP Select. |
+| Nome di dominio completo strumento di distribuzione NetApp | Il nome di dominio completo della VM (Virtual Machine) di distribuzione NetApp ONTAP Select. |
+| HTTPS strumento di distribuzione NetApp | Il nome utente e la password che puoi utilizzare per accedere alla VM (Virtual Machine) di distribuzione NetApp ONTAP Select. |
 | IP vCenter | L'indirizzo IP di vCenter Server. |
 | Nome di dominio completo vCenter | Il nome di dominio completo di vCenter Server. |
 | ADMIN vCenter | Il nome utente e la password di VMware vCenter Single Sign-On che puoi utilizzare per accedere a vCenter Server utilizzando il client web vSphere. |

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 # Registrazione dell'HCX Manager con vCenter
@@ -30,7 +30,7 @@ L'applicazione virtuale Hybrid Cloud Services deve essere accesa prima di poter 
 3. Configura il servizio di ricerca.
   1. Fai clic sulla scheda **Manage**.
   2. Fai clic sul pulsante **Edit** all'estrema destra della casella di testo **Lookup Service URL**.
-  3. Immetti l'endpoint del servizio di ricerca nel seguente formato:
+  3. Immetti l'endpoint del servizio di rete di ricerca nel seguente formato:
     * Per vCenter Server 5.5u3 `https://ssoip:/7444/lookupservice/sdk`
     * Per vCenter Server 6.0u2 `https://ssoip/lookupservice/sdk`
   4. Fai clic su **OK**. Non riavviare quando viene visualizzato un messaggio che richiede di riavviare il motore web.

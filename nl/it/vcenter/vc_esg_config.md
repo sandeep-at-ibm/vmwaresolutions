@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -15,13 +15,13 @@ lastupdated: "2019-02-14"
 # Configurazione della rete per utilizzare l'ESG NSX gestito dal cliente con le tue VM
 {: #vc_esg_config}
 
-Configura la rete per le tue macchine virtuali in modo da poter usufruire del gateway dei servizi edge (ESG) VMware NSX che viene distribuito nelle tue istanze VMware vCenter Server. Per ulteriori informazioni sulle misure di sicurezza implementate per ridurre al minimo il rischio di sicurezza, vedi [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
+Configura la rete per le tue VM (Virtual Machine) in modo da poter usufruire del gateway dei servizi edge (ESG) VMware NSX che viene distribuito nelle tue istanze VMware vCenter Server. Per ulteriori informazioni sulle misure di sicurezza implementate per ridurre al minimo il rischio di sicurezza, vedi [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX è una piattaforma di virtualizzazione di rete che consente la virtualizzazione di reti isolate e fornisce numerosi servizi
 di rete come switch, instradamento e firewall. Per ulteriori informazioni su NSX, vedi [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
 
 Come parte del processo di ordine per la tua istanza di vCenter Server, le seguenti azioni vengono completate per tuo conto:
-* Una sottorete del cliente privata viene ordinata per essere utilizzata dalle tue VM (macchine virtuali) per accedere alla rete privata dell'infrastruttura {{site.data.keyword.cloud}}.
+* Una sottorete del cliente privata viene ordinata per essere utilizzata dalle tue VM (Virtual Machine) per accedere alla rete privata dell'infrastruttura {{site.data.keyword.cloud}}.
 * Una sottorete del cliente pubblica viene ordinata per consentire alla tue VM di accedere a Internet.
 * NSX viene distribuito e configurato nella tua istanza vCenter Server.
 * Uno switch logico NSX di esempio viene distribuito per essere utilizzato dalle VM del carico di lavoro del cliente.
@@ -29,7 +29,7 @@ Come parte del processo di ordine per la tua istanza di vCenter Server, le segue
 * Un dispositivo Edge NSX viene distribuito e configurato per eseguire la conversione degli indirizzi di rete (NAT) dall'intervallo di indirizzi IP
 dello switch logico del carico di lavoro a un indirizzo IP pubblico sulle regole NAT.
 
-  L'edge NXS non viene distribuito per le istanze che sono solo private.
+  L'edge NSX non viene distribuito per le istanze che sono solo private.
   {:note}
 
 * Se hai installato il servizio Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager è configurato per eseguire un backup giornaliero delle configurazioni NSX. Per ulteriori informazioni, vedi [Considerazioni sull'istallazione di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud).
@@ -40,7 +40,7 @@ dello switch logico del carico di lavoro a un indirizzo IP pubblico sulle regole
 Per usufruire di NSX per le tue VM del carico di lavoro, devi configurare una serie di impostazioni completando le seguenti operazioni quando crei le VM:
 
 1. Imposta l'adattatore di rete della VM sullo switch logico del carico di lavoro:
-   1. Nella casella di dialogo **Nuova macchina virtuale**, fai clic sulla scheda **Personalizza hardware**.
+   1. Nella casella di dialogo **Nuova VM (Virtual Machine)**, fai clic sulla scheda **Personalizza hardware**.
    2. Nel menu **nuovo dispositivo**, seleziona **Rete** e fai clic su **Aggiungi**.
    3. Sull'adattatore di rete appena aggiunto, seleziona lo switch logico del carico di lavoro dal menu. Un nome di esempio per lo switch logico del carico di lavoro
    è **vxw-dvs-17-virtualwire-1-sid-6000-Workload**.
@@ -78,13 +78,13 @@ L'edge **customer-nsx-edge** è destinato al tuo utilizzo personale, quindi puoi
 Per identificare i dettagli per le sottoreti del cliente in modo da poter utilizzare gli indirizzi IP ordinati, completa la seguente procedura nel client web VMware vSphere:
 
 1. Fai clic su **Home > Rete & Sicurezza**.
-2. Nel riquadro di navigazione, fai clic su **Edge NSX** e doppio clic sull'**edge customer-nsx-edge**.
-3. Nella scheda **Riepilogo** relativa a questo edge, esamina la descrizione che contiene gli identificativi di sottorete per le sottoreti del cliente pubbliche e private.
+2. Nel riquadro di navigazione, fai clic su **Edge NSX** e individua **customer-nsx-edge edge** nell'elenco di edge nel riquadro a destra.
+3. Nella colonna **Descrizione**, passa il puntatore del mouse sulla descrizione dell'edge per **customer-nsx-edge** per vedere gli identificativi di sottorete sie per le sottoreti del cliente pubbliche che per quelle private.
 
 Inoltre, puoi trovare ulteriori dettagli sulle sottoreti del cliente completando la seguente procedura nel 	{{site.data.keyword.slportal}}:
 
 1. Fai clic su **Rete > Gestione IP > Sottoreti**.
-2. Fai clic sul menu del filtro e nel campo della sottorete immetti l'identificativo come mostrato nella descrizione dell'edge **customer-nsx-edge** sulla scheda **Riepilogo** nel client web VMware vSphere.
+2. Fai clic sul menu del filtro e, nel campo **Sottorete**, immetti l'identificativo come mostrato nella descrizione di **customer-nsx-edge** nel client web VMware vSphere.
 3. Riesamina le note che vengono visualizzate per gli indirizzi IP. Queste note identificano quali sottoreti e indirizzi IP vengono ordinati e utilizzati durante la configurazione iniziale.
 
    Non utilizzare gli indirizzi IP che vengono ordinati e utilizzati durante la configurazione iniziale. Puoi comunque utilizzare altri indirizzi IP

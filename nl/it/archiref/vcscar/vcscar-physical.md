@@ -134,7 +134,7 @@ un frontend ai microservizi.
 {: #vcscar-physical-acme-skate-db}
 
 Il database Acme Skate è un database MySQL che viene distribuito su
-una macchina virtuale gestita da vSphere.
+una VM (Virtual Machine) gestita da vSphere.
 
 ### Panoramica delle comunicazioni
 {: #vcscar-physical-comm-overview}
@@ -142,7 +142,7 @@ una macchina virtuale gestita da vSphere.
 Skate Advisor richiede le seguenti comunicazioni:
 -	Dal contenitore web all'utente del sistema.
 -	Dal contenitore Advisor e web ai servizi Watson.
--	Tra il contenitore e gli aspetti della macchina virtuale
+-	Tra il contenitore e gli aspetti della VM (Virtual Machine)
 dell'implementazione.
 
 Per raggiungere questo obiettivo, la piattaforma di modernizzazione dell'applicazione è
@@ -204,7 +204,7 @@ Figura 5. Gestione cloud
 Questo diagramma rappresenta {{site.data.keyword.icpfull_notm}} e CAM distribuiti su un'istanza vCenter
 Server, con connessioni al vCenter in loco e al servizio
 {{site.data.keyword.containerlong_notm}}. Utilizzando CAM, gli amministratori di sistema e gli sviluppatori possono
-distribuire macchine virtuali in loco o nell'istanza vCenter Server
+distribuire VM (Virtual Machine) in loco o nell'istanza vCenter Server
 e contenitori nei cluster {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
 Nel diagramma, CAM crea in modo logico connessioni cloud ai vCenter,

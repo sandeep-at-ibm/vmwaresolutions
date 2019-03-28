@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -16,7 +16,7 @@ Utilizza questa procedura per visualizzare le istanze HCX on {{site.data.keyword
 ## Procedura per visualizzare le istanze VMware HCX on IBM Cloud in loco
 {: #standalone_viewingserviceinstances-procedure}
 
-Fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra e scorri fino alla tabella **Istanze HCX on-premise** per visualizzare informazioni sulle istanze che hai ordinato:
+Fai clic su **Risorse** nel riquadro di navigazione a sinistra e scorri fino alla tabella **Istanze HCX on-premise** per visualizzare informazioni sulle istanze che hai ordinato:
 
 Tabella 1. Elementi delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco
 
@@ -24,7 +24,7 @@ Tabella 1. Elementi delle istanze HCX on {{site.data.keyword.cloud_notm}} in loc
 |:------------- |:------------- |
 | Nome | Il nome dell'istanza. |
 | Chiave di attivazione | La chiave di attivazione dell'istanza HCX on {{site.data.keyword.cloud_notm}} in loco. |  
-| Ora di creazione | La data e ora di creazione dell'istanza. |
+| Data/ora di creazione | La data e ora di creazione dell'istanza. |
 | Stato | Lo stato dell'istanza. |  
 | Azioni | Fai clic sull'icona **Elimina** per eliminare l'istanza. |
 

@@ -23,7 +23,7 @@ Questo è un problema noto di VMware 6.5.
 
 Per risolvere il problema, devi riavviare il client web vSphere:
 
-1. Utilizzando l'account **root**, connettiti attraverso **ssh** alla VM (macchina virtuale) vCenter dell'istanza precedentemente ordinata.
+1. Utilizzando l'account **root**, connettiti attraverso **ssh** alla VM (VM (Virtual Machine)) vCenter dell'istanza precedentemente ordinata.
 2. Immetti ``shell`` per inserire la shell bash.
 3. Immetti `service-control --stop vsphere-client` per arrestare il client.
 4. Immetti `service-control --start vsphere-client` per riavviare il client.

@@ -18,7 +18,7 @@ ixgben è un driver nativo che sostituisce il driver vmklinux net-ixgbe ma non s
 Prima di iniziare questa attività, recupera tutti gli indirizzi IP degli host fisici, gli ID di accesso e le password dal [{{site.data.keyword.cloud}}portale dell'infrastruttura](https://control.softlayer.com/devices). Ciò è necessario in caso di ripristino o per controllare l'avanzamento di un aggiornamento, in cui non esiste un accesso di rete diretto all'host.
 
 Per ogni host, effettua le seguenti operazioni in successione:
-1. Utilizza il client web vSphere per mettere l'host vSphere ESXi in modalità di manutenzione selezionando **Home** > **Hosts and Clusters**. Nel riquadro di navigazione, seleziona l'host vSphere ESXi, fai clic con il tasto destro del mouse sull'host e seleziona **Maintenance Mode** > **Enter Maintenance Mode**. Poiché l'host fa parte di un cluster DRS automatizzato, le macchine virtuali vengono migrate su host diversi quando l'host entra in modalità di manutenzione.
+1. Utilizza il client web vSphere per mettere l'host vSphere ESXi in modalità di manutenzione selezionando **Home** > **Hosts and Clusters**. Nel riquadro di navigazione, seleziona l'host vSphere ESXi, fai clic con il tasto destro del mouse sull'host e seleziona **Maintenance Mode** > **Enter Maintenance Mode**. Poiché l'host fa parte di un cluster DRS automatizzato, le VM (Virtual Machine) vengono migrate su host diversi quando l'host entra in modalità di manutenzione.
 2. Esegui l'SSH nell'host vSphere ESXi utilizzando i dettagli forniti nella console IC4VS.
 3. Immetti il seguente comando della vCLI per abilitare i driver nativi ixgben:
   `esxcli system module set --enabled=true --module=ixgben`

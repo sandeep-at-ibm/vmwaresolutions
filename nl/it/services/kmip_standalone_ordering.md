@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -18,7 +18,7 @@ Puoi ordinare un'istanza KMIP for VMware on {{site.data.keyword.cloud}} senza as
 
 Assicurati di aver completato le seguenti attività:
 * Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-* Hai esaminato tutte le considerazioni in [Considerazioni sull'istallazione delle istanze KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
+* Hai esaminato tutte le considerazioni in [Considerazioni sull'istallazione delle istanze KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations-install).
 
 ## Procedura per ordinare le istanze KMIP for VMware on IBM Cloud
 {: #kmip_standalone_ordering-procedure}
@@ -36,20 +36,21 @@ Quando ordini questo servizio, fornisci le seguenti impostazioni:
 ### Nome istanza
 {: #kmip_standalone_ordering-config-instance-name}
 
-Specifica un nome per la tua istanza KMIP for VMware {{site.data.keyword.cloud_notm}}.
+Specifica un nome per la tua istanza KMIP for VMware on {{site.data.keyword.cloud_notm}}.
 
 ### Regione servizio
 {: #kmip_standalone_ordering-config-service-region}
 
-Seleziona la regione {{site.data.keyword.cloud_notm}} in cui dovrà essere ospitata la tua istanza KMIP for VMware {{site.data.keyword.cloud_notm}}.
+Seleziona la regione {{site.data.keyword.cloud_notm}} in cui dovrà essere ospitata la tua istanza KMIP for VMware on {{site.data.keyword.cloud_notm}}.
 
-{{site.data.keyword.cloud_notm}} mantiene un endpoint del servizio KMIP for VMware on {{site.data.keyword.cloud_notm}} altamente disponibile in ciascuna regione in cui il servizio è disponibile.
+{{site.data.keyword.cloud_notm}} mantiene un endpoint del servizio di rete KMIP for VMware on {{site.data.keyword.cloud_notm}} altamente disponibile in ciascuna regione in cui il servizio è disponibile. 
 
-Tabella 1. Regioni degli endpoint del servizio KMIP for VMware on {{site.data.keyword.cloud_notm}}
+Tabella 1. Regioni degli endpoint del servizio di rete KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
 | Regione         | Endpoint               |
 |:---------------|:-----------------------|
 | Germania        |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Sydney        |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 | Tokyo          | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 | Stati Uniti Sud       |  <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
@@ -66,12 +67,12 @@ Fai clic su **Recupera** per ottenere l'elenco delle istanze del servizio IBM Ke
 ### Chiave root del cliente
 {: #kmip_standalone_ordering-config-root-key}
 
-Fai clic su **Recupera** per ottenere la chiave root del cliente memorizzata nella tua istanza IBM Key Protect selezionata.
+Fai clic su **Recupera** per ottenere la chiave root del cliente archiviata nella tua istanza del gestore chiavi selezionata.
 
 ## Risultati
 {: #kmip_standalone_ordering-results}
 
-L'ordine dell'istanza si avvia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato dell'ordine visualizzando i dettagli dell'istanza.
+L'ordine dell'istanza KMIP for VMware on {{site.data.keyword.cloud_notm}} viene avviato automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato dell'ordine visualizzando i dettagli dell'istanza.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Installato** e ricevi una notifica via email.
 

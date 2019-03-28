@@ -57,13 +57,12 @@ A partire dalla release della V2.8, i seguenti nuovi modelli di CPU {{site.data.
 Per ulteriori informazioni, vedi la sezione *Impostazioni di {{site.data.keyword.baremetal_short_sing}}* in:
 * [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#bare-metal-server-settings)
 * [Ordine di istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance#bare-metal-server-settings)
-* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance#bare-metal-server-settings)
 * [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)
 
 ## Platform Services Controller (PSC) integrato
 {: #relnotes_v28-psc}
 
-A partire dalla release della V2.8, vCenter Server viene distribuito con un PSC (Platform Services Controller) integrato, ovvero vCenter Server, i componenti di vCenter Server e il PSC vengono distribuiti su una singola macchina virtuale. Questa modifica si applica a tutte le istanze vCenter Server, vCenter Server with Hybridity e NetApp appena distribuite.
+A partire dalla release della V2.8, vCenter Server viene distribuito con un PSC (Platform Services Controller) integrato, ovvero vCenter Server, i componenti di vCenter Server e il PSC vengono distribuiti su una singola VM (Virtual Machine). Questa modifica si applica a tutte le istanze vCenter Server, vCenter Server with Hybridity e NetApp appena distribuite.
 
 Per le istanze che vengono aggiornate da un release precedente alla V2.8, il PSC non è integrato in vCenter Server. Se vuoi utilizzare il PSC integrato, devi eseguire autonomamente la conversione dal PSC esterno al PSC integrato.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -19,20 +19,20 @@ Il servizio F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) forn
 
 Puoi installare più di un'istanza di questo servizio a seconda delle necessità.
 
-Questo servizio è disponibile solo per le istanze distribuite nella V1.9 o successive. La versione BIG-IP VE corrente installata è la v13.1.1.2.
+Questo servizio è disponibile solo per le istanze distribuite nella V1.9 o successive. La versione BIG-IP VE corrente installata è la v14.1.0.2.
 {:note}
 
 ## Specifiche tecniche per F5 on IBM Cloud
-{: #technical-specifications-for-f5-on-ibm-cloud}
+{: #f5_considerations-specs}
 
 Con il servizio F5 on {{site.data.keyword.cloud_notm}} sono inclusi i seguenti componenti:
 
-### Macchine virtuali
+### VM (Virtual Machine)
 {: #f5_considerations-specs-vms}
 
-* Due macchine virtuali (VM) con tutte le opzioni disponibili.
-* 2, 4 o 8 vCPU per macchina virtuale in base all'opzione di licenza.
-* 4, 8 o 16 GB di RAM per macchina virtuale in base all'opzione di licenza.
+* Due VM (Virtual Machine) con tutte le opzioni disponibili.
+* 2, 4 o 8 vCPU per VM (Virtual Machine) in base all'opzione di licenza.
+* 4, 8 o 16 GB di RAM per VM (Virtual Machine) in base all'opzione di licenza.
 
 ### Rete
 {: #f5_considerations-specs-network}
@@ -53,7 +53,7 @@ Non puoi modificare il livello di licenza dopo l'installazione del servizio. Per
 
 Prima di installare il servizio F5 on {{site.data.keyword.cloud_notm}}, esamina le seguenti considerazioni.
 
-In base al modello di licenza e alla larghezza di banda che selezioni, vengono distribuite due VM (macchine virtuali) di BIG-IP VE con la seguente configurazione:
+In base al modello di licenza e alla larghezza di banda che selezioni, vengono distribuite due VM (Virtual Machine) di BIG-IP VE con la seguente configurazione:
 
 Tabella 1. distribuzioni di CPU e RAM per diverse selezioni di larghezza di banda e modello di licenza
 

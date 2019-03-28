@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -30,10 +30,10 @@ A causa delle dipendenze delle risorse, i componenti della tua istanza non vengo
 Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di fatturazione di {{site.data.keyword.cloud_notm}}.
 {:note}
 
-## Procedura per eliminare le istanze dalla pagina Istanze distribuite
+## Procedura per eliminare le istanze dalla pagina Risorse
 {: #sd_deletinginstance-procedure1}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, trova l'istanza da eliminare.
 3. Nella colonna **Azioni**, fai clic sull'icona Elimina.
    Lo stato dell'istanza viene modificato in **In fase di eliminazione**. Una volta che l'istanza è stata eliminata, i suoi componenti vengono rilasciati e il suo stato viene modificato in **Eliminato**.
@@ -44,7 +44,7 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 ## Procedura per eliminare le istanze dalla pagina dei dettagli dell'istanza
 {: #sd_deletinginstance-procedure2}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza da eliminare.
 3. Fai clic sull'icona del menu di overflow accanto a **Console vCenter** e quindi su **Elimina istanza**.
    Lo stato dell'istanza viene modificato in **In fase di eliminazione**. Una volta che l'istanza è stata eliminata, i suoi componenti vengono rilasciati e il suo stato viene modificato in **Eliminato**.
@@ -56,7 +56,6 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 {: #sd_deletinginstance-related}
 
 * [Eliminazione di istanze Cloud Foundation in una configurazione multisito](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)
-* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Visualizzazione delle istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_viewinginstances)
 * [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [Eliminazione di configurazioni multisito](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_deletinginstance_multi)

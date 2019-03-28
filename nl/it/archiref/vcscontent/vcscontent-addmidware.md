@@ -286,7 +286,7 @@ qualsiasi altra credenziale sensibile, rendendo la sua applicazione portatile.
 Jane vuole una codebase unificata, anche quando Stock Trader può essere eseguito su
 più di un cloud. Il DB2 di segreti nella seguente figura ha diversi
 dettagli di instradamento ma nello stesso formato. Quando il microservizio del portfolio di Jane viene distribuito, cerca il parametro di endpoint del segreto DB2 per
-connettersi all'istanza Db2 appropriata. All'applicazione Stock Trader non importa se è in esecuzione in una macchina virtuale VMware, in un servizio inserito in un contenitore
+connettersi all'istanza Db2 appropriata. All'applicazione Stock Trader non importa se è in esecuzione in una VM (Virtual Machine) VMware, in un servizio inserito in un contenitore
 o come servizio gestito dal cloud.
 
 Figura 2. Stock Trader - servizi pivot

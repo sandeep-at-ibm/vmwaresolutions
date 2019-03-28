@@ -631,5 +631,5 @@
 <text transform="matrix(1 0 0 1 273 33.7598)" class="st65 st72">Gestione / Edge / Calcolo</text>
 <polygon class="st1" points="500.4,172.3 680,172.3 680,205 500.4,205 500.4,172.3 "/>
 <rect x="525" y="181" class="st63" width="142" height="19"/>
-<text transform="matrix(1 0 0 1 525 194.3198)" class="st64 st65 st66">Macchine virtuali</text>
+<text transform="matrix(1 0 0 1 525 194.3198)" class="st64 st65 st66">VM (Virtual Machine)</text>
 </svg>

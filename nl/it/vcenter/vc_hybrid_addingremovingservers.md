@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2019-02-14"
 {: #vc_hybrid_addingremovingservers}
 
 Puoi espandere o contrarre la capacità della tua istanza VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle in base alle tue esigenze aziendali, aggiungendo o rimuovendo i server ESXi.
+
+A partire dalla release V2.9, puoi aggiungere dei nuovi server ESXi a un cluster mentre il cluster è in modalità di manutenzione. Inoltre, puoi aggiungere o rimuovere simultaneamente i server ESXi in più cluster. Sono disponibili le seguenti operazioni simultanee:
+
+* Aggiungi host a **cluster1** e aggiungi host a cluster aggiuntivi.
+* Rimuovi host da **cluster1** e rimuovi host da cluster aggiuntivi.
+* Aggiungi host a **cluster1** e rimuovi host da cluster aggiuntivi.
+* Rimuovi host da **cluster1** e aggiungi host a cluster aggiuntivi.
 
 Poiché il tuo cluster iniziale ha vSAN come archiviazione, l'aggiunta di uno o più server ESXi dopo la distribuzione può aumentare la capacità di archiviazione del cluster.
 
@@ -30,7 +37,7 @@ Poiché il tuo cluster iniziale ha vSAN come archiviazione, l'aggiunta di uno o 
 ## Procedura per aggiungere i server ESXi
 {: #vc_hybrid_addingremovingservers-adding-procedure}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza per la quale vuoi espandere la capacità.
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra.
 4. Nella tabella **CLUSTER**, fai clic sul cluster a cui vuoi aggiungere i server ESXi.
@@ -54,12 +61,12 @@ Poiché il tuo cluster iniziale ha vSAN come archiviazione, l'aggiunta di uno o 
 * L'archiviazione vSAN richiede almeno 4 server ESXi.
 * Prima di rimuovere i server ESXi con il servizio F5 on {{site.data.keyword.cloud_notm}} o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installato, devi migrare le VM di F5 BIG-IP e FortiGate in un server ESXi diverso rispetto a quello che ospita le VM.
 * Prima di rimuovere i server ESXi con il servizio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} installato, assicurati che non vi siano operazioni di backup o ripristino attive (non riuscite o in corso), poiché queste operazioni attive potrebbero impedire la rimozione dei server ESXi.
-* Quando rimuovi i server ESXi, i server vengono messi in modalità di manutenzione e, successivamente, tutte le macchine virtuali (VM) in esecuzione sui server vengono migrate prima di essere rimosse da vCenter Server. Per il massimo controllo sulla ricollocazione delle VM, si consiglia di mettere in modalità di manutenzione i server ESXi da rimuovere e di migrare manualmente le VM in esecuzione sui server utilizzando il client web VMware vSphere. Dopo di che, rimuovi i server ESXi utilizzando la console {{site.data.keyword.vmwaresolutions_short}}.
+* Quando rimuovi i server ESXi, i server vengono messi in modalità di manutenzione e, successivamente, tutte le VM (Virtual Machine) in esecuzione sui server vengono migrate prima di essere rimosse da vCenter Server. Per il massimo controllo sulla ricollocazione delle VM, si consiglia di mettere in modalità di manutenzione i server ESXi da rimuovere e di migrare manualmente le VM in esecuzione sui server utilizzando il client web VMware vSphere. Dopo di che, rimuovi i server ESXi utilizzando la console {{site.data.keyword.vmwaresolutions_short}}.
 
 ## Procedura per rimuovere i server ESXi
 {: #vc_hybrid_addingremovingservers-removing-procedure}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza per la quale vuoi contrarre la capacità.
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra.
 4. Nella tabella **CLUSTER**, fai clic sul cluster da cui vuoi rimuovere i server ESXi.

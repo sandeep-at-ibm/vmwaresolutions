@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
 # Passo 1 - Pianificazione iniziale e prerequisiti
 {: #caveonix-step1}
 
-Ogni componente dell'applicazione Caveonix RiskForesight è debolmente accoppiato ma è gestito centralmente. Pertanto, possono essere distribuiti in un pattern di distribuzione di macchina virtuale (VM, Virtual Machine) “tutto in uno” oppure i componenti dell'applicazione possono essere “ridimensionati in modo incrementale” e distribuiti su più VM per una disponibilità, delle prestazioni e una capacità maggiori.
+Ogni componente dell'applicazione Caveonix RiskForesight è debolmente accoppiato ma è gestito centralmente. Pertanto, possono essere distribuiti in un pattern di distribuzione di VM (Virtual Machine) “tutto in uno” oppure i componenti dell'applicazione possono essere “ridimensionati in modo incrementale” e distribuiti su più VM per una disponibilità, delle prestazioni e una capacità maggiori.
 
 I pattern di distribuzione sono basati sia sui requisiti di disponibilità che sul dimensionamento per la conservazione dei dati. I nodi di distribuzione RiskForesight possono essere caratterizzati come:
 
@@ -41,7 +41,7 @@ Ci sono tre modelli di distribuzione Caveonix RiskForesight:
   -	Archivio dati indice distribuito con nodi master e di dati.
   -	Ulteriori nodi di dati utilizzati per il ridimensionamento incrementale al crescere del numero di asset.
 
-Tutti i componenti devono avere un FQDN ed essere registrati in DNS prima di qualsiasi distribuzione di VM. Questo passo viene eseguito dall'automazione IC4VS per la distribuzione "tutto-in-uno" iniziale ma è responsabilità del client quando viene eseguito il ridimensionamento della distribuzione.
+Tutti i componenti devono avere un FQDN ed essere registrati in DNS prima di qualsiasi distribuzione di VM. Questo passo viene completato dall'automazione IBM Cloud for VMware Solutions per la distribuzione "tutto-in-uno" iniziale ma è tua responsabilità quando viene eseguito il ridimensionamento della distribuzione.
 
 ## Link correlati
 {: #caveonix-step1-related}

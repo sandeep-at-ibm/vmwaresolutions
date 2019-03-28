@@ -22,7 +22,7 @@ Come parte di {{site.data.keyword.vmwaresolutions_full}}, il software di backup 
 ### Backup NSX
 {: #vcsicp-detail-design-resiliency-nsx-backup}
 
-Un corretto backup di tutti i componenti NSX è fondamentale per ripristinare il sistema al suo stato operativo in caso di malfunzionamento. Non è sufficiente eseguire il backup delle macchine virtuali (VM) NSX). Per un backup corretto, occorre invece utilizzare la funzione di backup NSX in NSX Manager. È necessario specificare un server FTP o SFTP per il repository di dati di backup NSX.
+Un corretto backup di tutti i componenti NSX è fondamentale per ripristinare il sistema al suo stato operativo in caso di malfunzionamento. Non è sufficiente eseguire il backup delle VM (Virtual Machine) NSX). Per un backup corretto, occorre invece utilizzare la funzione di backup NSX in NSX Manager. È necessario specificare un server FTP o SFTP per il repository di dati di backup NSX.
 Il backup NSX Manager contiene tutta la configurazione NSX, inclusi i controller, le entità di commutazione e di instradamento logiche, la sicurezza, le regole del firewall e qualsiasi altra cosa configuri all'interno dell'IU o dell'API NSX Manager. Il database vCenter e gli elementi correlati, come ad esempio gli switch virtuali, devono essere sottoposti a backup separatamente. La configurazione NSX deve essere sottoposta a backup insieme a un backup di vCenter.
 
 ### Backup e DR per IBM Cloud Private

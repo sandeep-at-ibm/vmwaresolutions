@@ -56,12 +56,12 @@ L'Hybrid Cloud Gateway e tutte le applicazioni virtuali del servizio ibride che 
 ## Disinstallazione dell'HCX Manager
 {: #hcx-archi-mod-uninstall-unist-hcxm}
 
-L'applicazione HCX Manager dovrebbe essere disinstallata prima di rimuovere la soluzione HCX dal data center in loco. Segui questa procedura per disinstallare la macchina virtuale Hybrid Cloud Services.
+L'applicazione HCX Manager dovrebbe essere disinstallata prima di rimuovere la soluzione HCX dal data center in loco. Segui questa procedura per disinstallare la VM (Virtual Machine) Hybrid Cloud Services.
 
 1. Annulla l'estensione di tutte le reti di livello 2.
 2. Rimuovi le applicazioni virtuali del servizio ibride.
-3. Nel vCenter in loco, spegni la macchina virtuale Hybrid Cloud Services.
-4. Elimina la macchina virtuale Hybrid Cloud Services.
+3. Nel vCenter in loco, spegni la VM (Virtual Machine) Hybrid Cloud Services.
+4. Elimina la VM (Virtual Machine) Hybrid Cloud Services.
 
 Tutte le applicazioni del servizio virtuali vengono rimosse. Potrebbero rimanere i seguenti elementi:
 * Log

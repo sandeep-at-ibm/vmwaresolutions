@@ -11,7 +11,7 @@ lastupdated: "2019-02-14"
 # Parzialmente distribuito
 {: #caveonix-partially}
 
-Dopo il completamento della distribuzione automatizzata, puoi eseguire il ridimensionamento incrementale in modo manuale aumentando la RAM e il disco nella macchina virtuale (VM, Virtual Machine) iniziale e aggiungere tre VM di ridimensionamento incrementale. Lo script di configurazione di Riskforesight può essere eseguito per abilitare e configurare i componenti dell'applicazione su tutte e quattro le VM.
+Dopo il completamento della distribuzione automatizzata, puoi eseguire il ridimensionamento incrementale in modo manuale aumentando la RAM e il disco nella VM (Virtual Machine) iniziale e aggiungere tre VM di ridimensionamento incrementale. Lo script di configurazione di Riskforesight può essere eseguito per abilitare e configurare i componenti dell'applicazione su tutte e quattro le VM.
 
 È previsto che questo modello di distribuzione serva fino a 500 asset con un massimo di 30 giorni di indicizzazione di dati.
 

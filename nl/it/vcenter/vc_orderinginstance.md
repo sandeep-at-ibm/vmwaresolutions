@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,6 +52,14 @@ Il nome dell'istanza deve rispettare i seguenti requisiti:
 * La lunghezza massima del nome dell'istanza è di 10 caratteri.
 * Il nome dell'istanza deve essere univoco all'interno del tuo account.
 
+### Licenze VMware vSphere
+{: #vc_orderinginstance-vsphere-license}
+
+Seleziona se ordinare vSphere Enterprise Plus 6.7u1 o vSphere Enterprise Plus 6.5u2.
+
+vSphere Enterprise Plus 6.7u1 è disponibile solo per {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} Broadwell e Skylake.
+{:note}
+
 ### Primaria o secondaria
 {: #vc_orderinginstance-primary-secondary}
 
@@ -61,8 +69,8 @@ Scegli se ordinare un nuova istanza primaria o un'istanza secondaria per un'ista
 {: #vc_orderinginstance-licensing-settings}
 
 Specifica le opzioni di licenza per i seguenti componenti VMware nell'istanza:
-* vCenter Server 6.5 - Edizione Standard
-* vSphere 6.5u1 - Edizione Enterprise Plus
+* vCenter Server 6.5
+* vSphere Enterprise Plus 6.5 o 6.7
 * NSX Service Providers 6.4 (Edizione Base, Advanced o Enterprise)
 
 Per gli utenti Business Partner, la licenza vCenter Server (Standard edition), la licenza vSphere (Enterprise Plus edition) e la licenza NSX sono incluse e acquistate per tuo conto. Tuttavia, devi specificare l'edizione per la licenza NSX.
@@ -178,7 +186,7 @@ Tabella 4. Opzioni del livello di prestazioni NFS
 | Opzione        | Dettagli       |
   |:------------- |:------------- |
   | 0,25 IOPS/GB | Questa opzione è progettata per i carichi di lavoro che non vengono utilizzati spesso. Applicazioni di esempio includono: dati archiviati, hosting di database di grandi dimensioni con dati legacy o immagini di dischi virtuali del sistema di memoria virtuale come backup. |
-  | 2 IOPS/GB | Questa opzione è progettata per i carichi di lavoro più generici. Applicazioni di esempio includono: hosting di piccoli database, backup di applicazioni web o immagini disco di macchine virtuali per un hypervisor. |
+  | 2 IOPS/GB | Questa opzione è progettata per i carichi di lavoro più generici. Applicazioni di esempio includono: hosting di piccoli database, backup di applicazioni web o immagini disco di VM (Virtual Machine) per un hypervisor. |
   | 4 IOPS/GB | Questa opzione è progettata per i carichi di lavoro ad alta intensità che hanno un'alta percentuale di dati attivi alla volta. Applicazioni di esempio includono: database transazionali. |
   | 10 IOPS/GB | Questa opzione è progettata per i tipi di carichi di lavoro più impegnativi, come l'analisi. Applicazioni di esempio includono: database ad alte transazioni e altri database sensibili alle prestazioni. Questo livello di prestazioni è limitato a una capacità massima di 4 TB per condivisione file. |
 
@@ -221,7 +229,7 @@ Il nome del dominio root deve rispettare i seguenti requisiti:
 * L'ultima stringa può contenere solo caratteri alfabetici.
 * La lunghezza dell'ultima stringa deve essere compresa tra 2 e 24 caratteri.
 
-La lunghezza massima del nome di dominio completo (FQDN) per gli host e le VM (macchine virtuali) è di 50 caratteri. I nomi di dominio devono essere adattati a questa lunghezza massima.
+La lunghezza massima del nome di dominio completo (FQDN) per gli host e le VM (Virtual Machine) è di 50 caratteri. I nomi di dominio devono essere adattati a questa lunghezza massima.
 {:note}
 
 ### Rete pubblica o privata
@@ -294,6 +302,7 @@ In base alla configurazione che hai selezionato per l'istanza e i servizi aggiun
 1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **vCenter Server** nella sezione **Data center virtuali**.
 2. Nella pagina **VMware vCenter Server on IBM Cloud**, fai clic sulla scheda **vCenter Server** e quindi su **Crea**.
 3. Nella pagina **vCenter Server**, immetti il nome dell'istanza.
+5. Seleziona la versione di vSphere.
 4. Seleziona il tipo di istanza:
    * Fai clic su **Istanza primaria** per distribuire una singola istanza nell'ambiente o per distribuire la prima istanza in una topologia multisito.
    * Fai clic su **Istanza secondaria** per connettere l'istanza a un'istanza esistente (primaria) nell'ambiente per l'alta disponibilità e completa quindi la seguente procedura:
@@ -301,21 +310,21 @@ In base alla configurazione che hai selezionato per l'istanza e i servizi aggiun
      2. Per le istanze primarie della V2.8 o successive, immetti la password dell'amministratore vCenter Server per l'istanza primaria.
      3. Per le istanze primarie della V2.5, 2.6 o 2.7, immetti la password dell'amministratore PSC per l'istanza primaria.
      4. Per le istanze primarie della V2.4 o precedenti, verifica che il valore precompilato per la password dell'amministratore PSC per l'istanza primaria sia corretto.
-5. Completa le impostazioni di licenza per i componenti dell'istanza.
+6. Completa le impostazioni di licenza per i componenti dell'istanza.
    *  Per utilizzare le licenze fornite da IBM, seleziona **Includi con l'acquisto** e, se necessario, seleziona l'edizione della licenza.
    *  Per utilizzare la tua propria licenza, seleziona **Fornita dall'utente** e immetti la chiave di licenza.
-6. Completa le impostazioni di Bare Metal Server.
+7. Completa le impostazioni di Bare Metal Server.
     1. Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui ospitare l'istanza.
     2. Seleziona la configurazione di Bare Metal Server.
        * Se selezioni **Skylake** o **Broadwell**, specifica il modello di CPU e la dimensione della RAM.
-       * Se selezioni **Certificato SAP**, scegli il modello CPU.
+       * Quando selezioni **Certificato SAP**, scegli una delle configurazioni preimpostate.
     3. Specifica il numero di {{site.data.keyword.baremetal_short}}. Se intendi utilizzare vSAN come soluzione di archiviazione, sono richiesti almeno 4 {{site.data.keyword.baremetal_short}}.  
-7. Completa la configurazione di archiviazione.
+8. Completa la configurazione di archiviazione.
   * Se selezioni **Storage vSAN**, specifica i tipi di disco per i dischi di capacità e cache, il numero di dischi e l'edizione della licenza vSAN. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
   * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, le **Prestazioni** e la **Dimensione (GB)**.
   * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**. Quindi, fai clic sull'icona **+** accanto all'etichetta **Aggiungi storage condiviso** e seleziona le **Prestazioni** e la **Dimensione (GB)** per ogni condivisione file. Devi selezionare almeno una condivisione file.
   * Se selezioni **Dischi locali**, specifica il numero di dischi e il tipo di disco.
-8. Completa le impostazioni dell'interfaccia di rete.
+9. Completa le impostazioni dell'interfaccia di rete.
    1. Immetti il prefisso del nome host, l'etichetta del dominio secondario e il nome del dominio root. Per un'istanza secondaria, il nome di dominio viene completato automaticamente.
    2. Seleziona l'impostazione di rete **Rete pubblica e privata** o **Solo rete privata**.
    3. Seleziona le impostazioni della VLAN:
@@ -323,10 +332,10 @@ In base alla configurazione che hai selezionato per l'istanza e i servizi aggiun
       * Se vuoi riutilizzare le VLAN pubbliche e private esistenti quando sono disponibili, fai clic su **Seleziona VLAN esistenti** e specifica le VLAN e le sottoreti.
    4. Specifica la configurazione DNS.
 
-9. Seleziona i servizi aggiuntivi da distribuire nell'istanza facendo clic sulla scheda del servizio corrispondente. Se un servizio richiede la configurazione, completa le impostazioni specifiche del servizio e fai clic su **Aggiungi servizio** sulla scheda.
+10. Seleziona i servizi aggiuntivi da distribuire nell'istanza facendo clic sulla scheda del servizio corrispondente. Se un servizio richiede la configurazione, completa le impostazioni specifiche del servizio e fai clic su **Aggiungi servizio** sulla scheda.
 Per ulteriori informazioni su come fornire le impostazioni per un servizio, vedi l'argomento relativo all'ordine del servizio corrispondente.
 
-10. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza prima di effettuare l'ordine.
+11. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza prima di effettuare l'ordine.
    1. Esamina le impostazioni per l'istanza.
    2. Esamina il costo stimato dell'istanza. Fai clic su **Dettagli sui prezzi** per generare un riepilogo in formato PDF. Per salvare o stampare il riepilogo del tuo ordine, fai clic sull'icona **Stampa** o **Download** nella parte superiore destra della finestra PDF.
    3. Fai clic sul link o sui link dei termini che si applicano al tuo ordine e conferma di accettare questi termini prima di ordinare l'istanza.
@@ -337,7 +346,7 @@ Per ulteriori informazioni su come fornire le impostazioni per un servizio, vedi
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 

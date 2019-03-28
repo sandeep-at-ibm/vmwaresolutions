@@ -12,14 +12,14 @@ lastupdated: "2019-02-15"
 {:note: .note}
 {:important: .important}
 
-# Migrazione di una macchina virtuale
+# Migrazione di una VM (Virtual Machine)
 {: #hcx-archi-migrate-vm}
 
 HCX abilita la migrazione bidirezionale: dal locale al cloud o dal cloud al data center in loco. HCX utilizza la tecnologia di replica durante il processo di migrazione. La tecnologia di replica è integrata nell'applicazione virtuale Hybrid Cloud Gateway. Non è necessaria l'installazione di un ulteriore software di replica.
 
 ## Migrazione con basso tempo di inattività
 
-La migrazione con basso tempo di inattività utilizza la replica basata sull'host per spostare una macchina virtuale live da un vCenter a un data center virtuale o nella direzione opposta. Per ridurre il tempo di inattività, la VM di origine rimane online durante la replica e ne viene eseguito il bootstrap sull'host ESX di destinazione dopo il completamento della replica.
+La migrazione con basso tempo di inattività utilizza la replica basata sull'host per spostare una VM (Virtual Machine) live da un vCenter a un data center virtuale o nella direzione opposta. Per ridurre il tempo di inattività, la VM di origine rimane online durante la replica e ne viene eseguito il bootstrap sull'host ESX di destinazione dopo il completamento della replica.
 
 1. Una richiesta di migrazione attiva le seguenti azioni:
   * La replica avvia un trasferimento della sincronizzazione completa in un data center virtuale VCF/VCS HCX. Il tempo necessario per la replica dipende dalla dimensione della VM e alla larghezza di banda disponibile.
@@ -34,30 +34,30 @@ La migrazione con basso tempo di inattività utilizza la replica basata sull'hos
 ## vMotion senza tempo di inattività
 {: #hcx-archi-migrate-vm-no-downtime-vm}
 
-vMotion trasferisce una macchina virtuale live da un vSphere vCenter a un cloud VCF/VCS. Questo vMotion richiede una rete estesa. Il trasferimento vMotion acquisisce la memoria attiva della macchina virtuale e i relativi stato di esecuzione, indirizzo IP e indirizzo MAC.
+vMotion trasferisce una VM (Virtual Machine) live da un vSphere vCenter a un cloud VCF/VCS. Questo vMotion richiede una rete estesa. Il trasferimento vMotion acquisisce la memoria attiva della VM (Virtual Machine) e i relativi stato di esecuzione, indirizzo IP e indirizzo MAC.
 
-La versione hardware della macchina virtuale deve essere almeno alla 9 o il vMotion tra cloud potrebbe non riuscire.
+La versione hardware della VM (Virtual Machine) deve essere almeno alla 9 o il vMotion tra cloud potrebbe non riuscire.
 {:note}
 
 ## Migrazione di tipo cold (a freddo)
 {: #hcx-archi-migrate-vm-cold-mig}
 
-La migrazione di tipo cold (a freddo) utilizza lo stesso piano di dati del vMotion tra cloud per trasferire una macchina virtuale spenta su una rete estesa. I relativi indirizzi IP e MAC vengono conservati. I requisiti e le limitazioni della macchina virtuale sono gli stessi del vMotion.
+La migrazione di tipo cold (a freddo) utilizza lo stesso piano di dati del vMotion tra cloud per trasferire una VM (Virtual Machine) spenta su una rete estesa. I relativi indirizzi IP e MAC vengono conservati. I requisiti e le limitazioni della VM (Virtual Machine) sono gli stessi del vMotion.
 
 ### Migrazione delle VM utilizzando la procedura guidata bidirezionale
 {: #hcx-archi-migrate-vm-mig-bidir-wiz}
 
-Utilizzando il client web vSphere, è possibile accedere alla procedura guidata bidirezionale dalla scheda Getting Started dell'Hybrid Cloud Services. Questa procedura guidata gestisce tutti i dettagli della migrazione, incluse più macchine virtuali.
+Utilizzando il client web vSphere, è possibile accedere alla procedura guidata bidirezionale dalla scheda Getting Started dell'Hybrid Cloud Services. Questa procedura guidata gestisce tutti i dettagli della migrazione, incluse più VM (Virtual Machine).
 
-Dal client web vSphere, è possibile accedere alla procedura guidata bidirezionale dalla scheda Getting Started dell'Hybrid Cloud Services. Questa procedura guidata gestisce tutti i dettagli della migrazione, incluse più macchine virtuali.
+Dal client web vSphere, è possibile accedere alla procedura guidata bidirezionale dalla scheda Getting Started dell'Hybrid Cloud Services. Questa procedura guidata gestisce tutti i dettagli della migrazione, incluse più VM (Virtual Machine).
 * Da vSphere a VCF/VCS Hybrid Cloud Services
 * Da VCF/VCS HCX Cloud a vSphere
 
 ### Verifica delle VM prima della migrazione
 {: #hcx-archi-migrate-vm-check-vms}
 
-Per migrare una macchina virtuale, deve essere mantenuta una connessione sicura dall'Hybrid Cloud Gateway e la VM deve soddisfare i seguenti requisiti:
-* La macchina virtuale deve essere accesa.
+Per migrare una VM (Virtual Machine), deve essere mantenuta una connessione sicura dall'Hybrid Cloud Gateway e la VM deve soddisfare i seguenti requisiti:
+* La VM (Virtual Machine) deve essere accesa.
 * L'architettura sottostante deve essere x86, indipendentemente dal sistema operativo.
 * Per utilizzare la migrazione vMotion, la versione hardware deve essere superiore alla 9.
 * La versione hardware deve essere inferiore alla 10.
@@ -99,7 +99,7 @@ Potrebbe verificarsi un'interruzione nel ping continuo durante il cambio. Tuttav
 ### Visualizzazione delle VM migrate
 {: #hcx-archi-migrate-vm-view-vms}
 
-Quando Hybrid Cloud Services accende una macchina virtuale migrata correttamente, spegne la VM originale e la archivia in una cartella nel vCenter. Le macchine virtuali archiviate sono conservate finché non vengono eliminate manualmente.
+Quando Hybrid Cloud Services accende una VM (Virtual Machine) migrata correttamente, spegne la VM originale e la archivia in una cartella nel vCenter. Le VM (Virtual Machine) archiviate sono conservate finché non vengono eliminate manualmente.
 
 Dopo la migrazione, controlla il vCenter e prendi nota delle cartelle etichettate **VMs migrated from the cloud** e **VMs migrated to the cloud**.
 * Come per le repliche, le VM spente hanno il nome originale, con una data/ora binaria accodata.

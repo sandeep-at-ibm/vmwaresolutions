@@ -43,7 +43,7 @@ Cloud Private.
 {: #vcsiks-arch-overview-ibm-cloud-side}
 
 Il seguente diagramma visualizza {{site.data.keyword.icpfull_notm}} e CAM distribuiti con l'infrastruttura {{site.data.keyword.cloud_notm}},
-con connessioni al vCenter in loco e al servizio {{site.data.keyword.containerlong_notm}} distribuiti su {{site.data.keyword.cloud_notm}}. Gli utenti possono distribuire macchine virtuali (VM) in loco, VM nelle istanze
+con connessioni al vCenter in loco e al servizio {{site.data.keyword.containerlong_notm}} distribuiti su {{site.data.keyword.cloud_notm}}. Gli utenti possono distribuire VM (Virtual Machine) in loco, VM nelle istanze
 vCenter Server e contenitori al cluster {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
 Figura 1. Gestione cloud dal lato cloud

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -36,7 +36,7 @@ Se selezioni un componente vSAN, l'elenco di ubicazioni viene filtrato in base a
 Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per i cluster vSphere
 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicazione | Regione |
-|:----------------------|:---------|:-------|
+|:----------------------|:---------|:---------------|
 | AMS03 | Amsterdam | Europa |
 | CHE01 | Chennai | Asia-Pacifico |
 | DAL09 | Dallas | Nord America meridionale |
@@ -65,6 +65,7 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per i cluster v
 | SYD01 | Sydney | Asia-Pacifico |
 | SYD04 | Sydney | Asia-Pacifico |
 | TOK02 | Tokyo | Asia-Pacifico |
+| TOK04 | Tokyo | Asia-Pacifico |
 | TOR01 | Toronto | Nord America orientale |
 | WDC04 | Washington, DC | Nord America orientale |
 | WDC06 | Washington, DC | Nord America orientale |

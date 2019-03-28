@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-18"
 {:important: .important}
 
 # Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server
-{: #adding-and-viewing-clusters-for-vcenter-server-instances}
+{: #vc_addingviewingclusters}
 
 I server ESXi che hai configurato quando hai ordinato un'istanza vengono raggruppati sotto forma di **cluster1** per impostazione predefinita.
 
@@ -56,7 +56,7 @@ Se distribuisci il cluster in un diverso {{site.data.keyword.CloudDataCent_notm}
 ### Impostazioni di Bare Metal Server
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-Puoi scegliere **Skylake**, **Certificato SAP** o **Broadwell**.
+Puoi scegliere **Skylake**, **Certificato SAP** o **Broadwell**. Le opzioni possono variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -151,7 +151,7 @@ Tabella 3. Opzioni del livello di prestazioni NFS
 | Opzione        | Dettagli       |
   |:------------- |:------------- |
   | 0,25 IOPS/GB | Questa opzione è progettata per i carichi di lavoro che non vengono utilizzati spesso. Applicazioni di esempio includono: dati archiviati, hosting di database di grandi dimensioni con dati legacy o immagini di dischi virtuali del sistema di memoria virtuale come backup. |
-  | 2 IOPS/GB | Questa opzione è progettata per i carichi di lavoro più generici. Applicazioni di esempio includono: hosting di database di piccole dimensioni, backup di applicazioni web o immagini di dischi di macchine virtuali (VM) per un hypervisor. |
+  | 2 IOPS/GB | Questa opzione è progettata per i carichi di lavoro più generici. Applicazioni di esempio includono: hosting di database di piccole dimensioni, backup di applicazioni web o immagini di dischi di VM (Virtual Machine) per un hypervisor. |
   | 4 IOPS/GB | Questa opzione è progettata per i carichi di lavoro ad alta intensità che hanno un'alta percentuale di dati attivi alla volta. Applicazioni di esempio includono: database transazionali. |
   | 10 IOPS/GB | Questa opzione è progettata per i tipi di carichi di lavoro più impegnativi, come l'analisi. Applicazioni di esempio includono: database ad alte transazioni e altri database sensibili alle prestazioni. Questo livello di prestazioni è limitato a una capacità massima di 4 TB per condivisione file. |
 
@@ -187,7 +187,7 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 ## Procedura per aggiungere i cluster alle istanze vCenter Server
 {: #vc_addingviewingclusters-adding-procedure}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza a cui vuoi aggiungere i cluster.
 
    Assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
@@ -228,7 +228,7 @@ Non puoi modificare il nome del cluster. La modifica del nome del cluster potreb
 ## Procedura per visualizzare i cluster nelle istanze vCenter Server
 {: #vc_addingviewingclusters-viewing-procedure}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic su un'istanza per visualizzare i cluster al suo interno.
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, visualizza il riepilogo dei cluster:
   * **Nome**: il nome del cluster.
@@ -252,17 +252,17 @@ Non puoi modificare il nome del cluster. La modifica del nome del cluster potreb
         <dd class="dd">Il cluster è stato eliminato.</dd>
     </dl>
   * **Azioni**: fai clic sull'icona **Elimina** per eliminare il cluster.
-4. Fai clic sul nome di un cluster per visualizzare il server ESXi e l'archiviazione:
+4. Fai clic sul nome di un cluster per visualizzare i dettagli del server ESXi, dell'archiviazione e dell'interfaccia di rete.
 
 Tabella 4. Dettagli del server ESXi
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
-| Nome | Il nome del server ESXi è nel seguente formato:<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> dove:<br> `host_prefix` è il prefisso del nome host<br> `n` è la sequenza del server<br> `subdomain_label` è l'etichetta del dominio secondario<br> `root_domain` è il nome del dominio root|
+| Nome | Il nome del server ESXi è nel seguente formato:<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> dove:<br> `host_prefix` è il prefisso del nome host<br> `n` è la sequenza del server<br> `subdomain_label` è l'etichetta del dominio secondario<br> `root_domain` è il nome del dominio root |
 | Versione | La versione del server ESXi. |
 | Credenziali | Il nome utente e la password per accedere al server ESXi. |
 | IP privato | L'indirizzo IP privato del server ESXi. |
-| Stato | Lo stato del server ESXi, che può assumere uno dei seguenti valori:<br> **Aggiunto**: il server ESXi è stato aggiunto ed è pronto per l'uso. <br> **In fase di aggiunta**: il server ESXi è in fase di aggiunta.<br> **In fase di eliminazione**: il server ESXi è in fase di eliminazione. |
+| Stato | Lo stato del server ESXi, che può assumere uno dei seguenti valori:<br> **Aggiunto** Il server ESXi è stato aggiunto ed è pronto per l'uso. <br> **In fase di aggiunta** Il server ESXi è in fase di aggiunta.<br> **In fase di eliminazione** Il server ESXi è in fase di eliminazione. |
 
 Tabella 5. Dettagli dell'archiviazione
 
@@ -272,6 +272,32 @@ Tabella 5. Dettagli dell'archiviazione
 | Dimensione | La capacità di archiviazione. |
 | IOPS/GB | Il livello di prestazioni dell'archiviazione. |
 | Protocollo NFS | La versione NFS dell'archiviazione. |
+
+Tabella 6. Interfaccia di rete - Dettagli VLAN
+
+| Elemento        | Descrizione       |  
+|:------------- |:------------- |
+| Numero VLAN | Il numero VLAN univoco.  |
+| Descrizione | Il tipo di VLAN. |
+| Ubicazione | L'ubicazione del data center. |
+| Rotta primaria | La rotta primaria della VLAN. |
+
+Tabella 7. Interfaccia Rete - Dettagli della sottorete
+
+| Elemento        | Descrizione       |  
+|:------------- |:------------- |
+| Nome | Il nome della sottorete. Fai clic sul nome per accedere ai dettagli dell'indirizzo IP completo. |
+| Tipo | Il tipo di sottorete: primaria o portatile. |
+| Descrizione | Lo scopo della sottorete. |
+
+Tabella 8. Interfaccia di rete - Dettagli IP
+
+| Elemento        | Descrizione       |  
+|:------------- |:------------- |
+| IP | L'indirizzo IP. |
+| Stato | Lo stato dell'indirizzo IP. |
+| Descrizione | L'host dell'indirizzo IP.  |
+
 
 ## Eliminazione di cluster dalle istanze vCenter Server
 {: #vc_addingviewingclusters-deleting}
@@ -291,7 +317,7 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 ### Procedura per eliminare i cluster dalle istanze vCenter Server
 {: #vc_addingviewingclusters-deleting-procedure}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza da cui vuoi eliminare i cluster.
 
    Assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. Altrimenti, non puoi eliminare i cluster dall'istanza.

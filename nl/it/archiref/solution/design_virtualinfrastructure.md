@@ -43,7 +43,7 @@ Tabella 1. Configurazione di vSphere ESXi
 | Accesso utente            | Autenticazione locale e MSAD |
 | Risoluzione nomi di dominio | Utilizza DNS come descritto in [Progettazione di servizi comuni](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice). |
 
-Il cluster vSphere ospita le macchine virtuali (VM) che gestiscono il cloud centrale e le risorse di calcolo per i carichi di lavoro dell'utente.
+Il cluster vSphere ospita le VM (Virtual Machine) che gestiscono il cloud centrale e le risorse di calcolo per i carichi di lavoro dell'utente.
 
 Per le istanze Cloud Foundation:
 * Un'istanza contiene 4 host ESXi nella distribuzione iniziale.
@@ -111,7 +111,7 @@ Le impostazioni vSAN sono impostate in base alle procedure ottimali per la distr
 * Impostazioni della politica di cache SSD: No **Read Ahead**, **Write Through**, **Direct** (NRWTD)
 * Impostazioni del controllo I/O di rete
    * Gestione - 20 condivisioni
-   * Macchina virtuale - 30 condivisioni
+   * VM (Virtual Machine) - 30 condivisioni
    * vMotion - 50 condivisioni
    * vSAN - 100 condivisioni
 * Porte kernel vSAN: **Failover esplicito**

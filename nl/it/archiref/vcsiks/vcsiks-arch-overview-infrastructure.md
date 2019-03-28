@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-02-15"
 ## VRF (Virtual Routing and Forwarding)
 {: #vcsiks-arch-overview-infrastructure-vrf}
 
-Gli account {{site.data.keyword.cloud}} possono anche essere configurati come account VRF (Virtual Routing and Forwarding). Gli account VRF forniscono funzioni simili allo spanning della VLAN, abilitando l'instradamento automatico tra blocchi di IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
+Gli account {{site.data.keyword.cloud}} possono essere configurati come account VRF (Virtual Routing and Forwarding). Gli account VRF abilitano l'instradamento globale automatico tra i blocchi IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
 
 ## Direct Link
 {: #vcsiks-arch-overview-infrastructure-direct-link}
@@ -33,7 +33,7 @@ Il servizio VPN strongSwan IPSec fornisce un canale di comunicazione end-to-end 
 ### Hybridity (HCX)
 {: #vcsiks-arch-overview-infrastructure-hcx}
 
-VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle estende senza soluzione di continuità le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione delle macchine virtuali (VM) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
+VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle estende senza soluzione di continuità le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione delle VM (Virtual Machine) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
 
 ## Struttura fisica
 {: #vcsiks-arch-overview-infrastructure-physical-structure}
@@ -53,7 +53,7 @@ Le opzioni di distribuzione di {{site.data.keyword.containerlong_notm}} variano 
 
 Tabella 2. Specifiche {{site.data.keyword.containerlong_notm}}
 
-  | Macchina virtuale (VM) | Bare Metal
+  | VM (Virtual Machine) | Bare Metal
 --|---|--
 Numero di server | 3 | 3
 CPU | 2 – 56 core | 4 – 28 core

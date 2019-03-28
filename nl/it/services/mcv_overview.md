@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -20,7 +20,7 @@ Questa architettura supporta i carichi di lavoro esistenti di importanza critica
 L'architettura comprende vari servizi aziendali, tra cui reti, archiviazione, resilienza e altri strumenti creati per il monitoraggio e la risoluzione dei problemi delle applicazioni basate sul cloud. Inoltre, questa architettura può essere integrata con IBM Services Platform with Watson, creata su {{site.data.keyword.cloud_notm}}, per consentire un più ampio utilizzo dei servizi. Utilizzando le funzionalità cognitive della piattaforma, i client possono estrarre i dati in modo più efficace per le nuove informazioni aziendali per aiutare a mantenere le operazioni continue.
 
 ## Specifiche tecniche per Mission Critical VMware on IBM Cloud
-{: #technical-specifications-for-mission-critical-vmware-on-ibm-cloud}
+{: #mcv_overview-specs}
 
 L'architettura Mission Critical VMware on {{site.data.keyword.cloud_notm}} è un'architettura di riferimento end-to-end che fornisce il failover automatizzato per i carichi di lavoro del cliente. Utilizza una regione a più zone {{site.data.keyword.cloud_notm}} on un servizio gestito da IBM che comprende i seguenti componenti:
 
@@ -64,7 +64,7 @@ L'architettura dello strumento e della tecnologia ha le seguenti specifiche:
 
 L'architettura cluster estesa vSphere + vSAN ha le seguenti specifiche:
 * Il cluster fornisce le funzionalità di archiviazione e di calcolo che si estendono su due siti per fornire una maggiore disponibilità.
-* Le richieste di scrittura da macchine virtuali (VM) sono scritte in modo sincrono su entrambi i siti incorrendo nella latenza della rete site-to-site.
+* Le richieste di scrittura da VM (Virtual Machine) sono scritte in modo sincrono su entrambi i siti incorrendo nella latenza della rete site-to-site.
 * Le richieste di lettura dalle VM sono realizzate localmente nell'ubicazione fisica in cui è ubicata la VM, evitando ulteriore latenza.
 * Il sito e l'host di controllo agiscono come split brain/quorum.
 * La codifica nativa vSAN (per la crittografia inattiva) può essere utilizzata insieme a questa architettura.

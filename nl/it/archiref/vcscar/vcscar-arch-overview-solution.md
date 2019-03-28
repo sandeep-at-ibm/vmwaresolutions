@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -20,12 +20,12 @@ Figura 1. Diagramma dell'ambiente vCenter Server
 ### Controller servizio piattaforma
 {: #vcscar-arch-overview-solution-psc}
 
-La distribuzione vCenter Server utilizza un solo controller di servizi della piattaforma esterno installato su una sottorete portatile nella VLAN privata associata alle macchine virtuali (VM) di gestione. Il suo gateway predefinito è impostato sul BCR (backend customer router).
+La distribuzione vCenter Server utilizza un solo controller di servizi della piattaforma esterno installato su una sottorete portatile nella VLAN privata associata alle VM (Virtual Machine) di gestione. Il suo gateway predefinito è impostato sul BCR (backend customer router).
 
 ### vCenter Server
 {: #vcscar-arch-overview-solution-vcs}
 
-Come il controller dei servizi della piattaforma, il vCenter Server viene distribuito come un'applicazione. Inoltre, vCenter Server viene installato su una sottorete portatile nella VLAN privata associata alle macchine virtuali di gestione. Il suo gateway predefinito è impostato sull'indirizzo IP assegnato sul BCR per quella particolare sottorete.
+Come il controller dei servizi della piattaforma, il vCenter Server viene distribuito come un'applicazione. Inoltre, vCenter Server viene installato su una sottorete portatile nella VLAN privata associata alle VM (Virtual Machine) di gestione. Il suo gateway predefinito è impostato sull'indirizzo IP assegnato sul BCR per quella particolare sottorete.
 
 ### NSX Manager
 {: #vcscar-arch-overview-solution-nsx-manager}
@@ -96,7 +96,7 @@ Un nodo di lavoro è un nodo che fornisce un ambiente contenitore per l'esecuzio
 ### Nodo proxy
 {: #vcscar-arch-overview-solution-proxy-node}
 
-Un nodo proxy è un nodo che trasmette una richiesta esterna ai servizi creati all'interno del proprio cluster. Poiché un ambiente ad elevata disponibilità (HA) presenta più di un singolo nodo proxy, se il nodo proxy principale ha un malfunzionamento, la logica di failover promuove automaticamente un nodo differente al ruolo proxy. 
+Un nodo proxy è un nodo che trasmette una richiesta esterna ai servizi creati all'interno del proprio cluster. Poiché un ambiente ad elevata disponibilità (HA) presenta più di un singolo nodo proxy, se il nodo proxy principale ha un malfunzionamento, la logica di failover promuove automaticamente un nodo differente al ruolo proxy.
 
 Sebbene tu possa utilizzare un singolo nodo sia come master e che come proxy, è meglio utilizzare dei nodi proxy dedicati per ridurre il carico sul nodo master. Un cluster deve avere almeno un nodo proxy se al suo interno è necessario il bilanciamento del carico.
 

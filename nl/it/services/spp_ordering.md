@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -55,7 +55,7 @@ L'IOPS (Input/output Operations Per Second) per GB in base ai tuoi requisiti del
 La distribuzione di IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} è automatizzata. Sia che tu scelga di ordinare un'istanza con questo servizio incluso o di distribuire il servizio nella tua istanza in un secondo momento, i seguenti passi sono completati dal processo di automazione {{site.data.keyword.vmwaresolutions_short}}:
 
 1. In base alle impostazioni che specifichi, l'archiviazione NFS Endurance viene ordinata dall'infrastruttura {{site.data.keyword.cloud_notm}} per il repository di backup IBM Spectrum Protect Plus.
-2. In base alle impostazioni che specifichi, alcune licenze di IBM Spectrum Protect Plus vengono ordinate dall'infrastruttura {{site.data.keyword.cloud_notm}}. Le licenze sono ordinate in incrementi di 10 pacchetti di licenze per macchine virtuali (VM), in base al numero di VM che hai specificato per la licenza al momento dell'ordine del servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}. Se vuoi portare una licenza IBM Spectrum Protect Plus esistente, non viene effettuato alcun ordine di licenza dall'infrastruttura {{site.data.keyword.cloud_notm}}.
+2. In base alle impostazioni che specifichi, alcune licenze di IBM Spectrum Protect Plus vengono ordinate dall'infrastruttura {{site.data.keyword.cloud_notm}}. Le licenze sono ordinate in incrementi di 10 pacchetti di licenze per VM (Virtual Machine), in base al numero di VM che hai specificato per la licenza al momento dell'ordine del servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}. Se vuoi portare una licenza IBM Spectrum Protect Plus esistente, non viene effettuato alcun ordine di licenza dall'infrastruttura {{site.data.keyword.cloud_notm}}.
 3. L'archiviazione NFS ordinata per questo servizio viene montata su tutti i server ESXi nel cluster predefinito dell'istanza, inclusa l'aggiunta di rotte statiche corrette su ciascun server ESXi alla sottorete privata dell'archiviazione.
 4. Gli archivi dati NFS vengono creati in vCenter Server per tutti i volumi di archiviazione NFS montati sui server ESXi.
 5. Le VM di IBM Spectrum Protect Plus vengono distribuite, attivate e configurate nel cluster predefinito dell'istanza.
@@ -68,7 +68,6 @@ La distribuzione di IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}
 * [Panoramica di IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations)
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service Planning](http://www.ibm.com/support/docview.wss?uid=swg22012650)
 * [Gestione di IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Documentazione di IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)

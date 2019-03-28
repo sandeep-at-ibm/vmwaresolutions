@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -40,17 +40,12 @@ Oltre alle reti pubbliche e private, ogni server {{site.data.keyword.cloud_notm}
 * Gli indirizzi IP primari sono assegnati a dispositivi, server bare metal e virtuali forniti da {{site.data.keyword.cloud_notm}}. Gli utenti non devono assegnare alcun indirizzo IP in questi blocchi.
 * Gli indirizzi IP portatili vengono forniti all'utente per l'assegnazione e la gestione secondo necessità.
 
-Gli indirizzi IP primari o portatili possono essere resi instradabili a qualsiasi VLAN all'interno dell'account del cliente se il VLAN Spanning è abilitato nell'account o se l'account è configurato come un account VRF (virtual routing and forwarding).
-
-## Spanning della VLAN
-{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
-
-Lo spanning della VLAN è un'impostazione di account globale di {{site.data.keyword.cloud_notm}} che consente a ogni blocco di IP della sottorete primaria e portatile all'interno di tutte le VLAN nell'account di essere instradabili tra loro. Se questa impostazione non è disponibile, i blocchi di IP possono ancora essere instradati ai servizi {{site.data.keyword.cloud_notm}} ma non l'uno all'altro. Questa architettura richiede che l'impostazione VLAN Spanning sia abilitata all'interno dell'account in cui è distribuito VMware vCenter Server on {site.data.keyword.cloud_notm}} in modo che le connessioni siano effettuate in modo trasparente attraverso le varie sottoreti in cui risiedono i componenti della soluzione.
+Gli indirizzi IP primari o portatili possono essere resi instradabili a qualsiasi VLAN all'interno dell'account del cliente se l'account è configurato come un account VRF (virtual routing and forwarding).
 
 ## VRF (Virtual Routing and Forwarding)
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-Gli account {{site.data.keyword.cloud_notm}} possono anche essere configurati come account VRF (Virtual Routing and Forwarding). Un account VRF fornisce funzioni simili allo spanning della VLAN, abilitando l'instradamento automatico tra blocchi di IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
+Gli account {{site.data.keyword.cloud_notm}} possono anche essere configurati come account VRF (Virtual Routing and Forwarding). Un account VRF abilita l'instradamento globale automatico tra i blocchi IP della sottorete nell'account. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
 
 ## Connessioni all'host fisico
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}
@@ -65,7 +60,7 @@ Figura 2. Connessioni all'host fisico
 
 Le offerte VMware on {{site.data.keyword.cloud_notm}} sono progettate con tre VLAN (una pubblica e due private) assegnate al momento della distribuzione. La VLAN pubblica è assegnata a eth1 ed eth3, mentre le connessioni private sono assegnate a eth0 ed eth2. È importante notare che la VLAN pubblica e la prima VLAN privata create e assegnate a questa progettazione sono prive di tag per impostazione predefinita. Successivamente, la VLAN privata aggiuntiva viene trascinata sulle porte dello switch fisico e contrassegnata con tag all'interno dei gruppi di porte VMware che consumano queste sottoreti.
 
-Come specificato in precedenza, la rete privata è composta da due VLAN all'interno di questa progettazione. Alla prima di queste VLAN (indicata qui come VLAN privata A) sono assegnate tre sottoreti. La prima è un intervallo di sottoreti di IP privati primari che {{site.data.keyword.cloud_notm}} assegna agli host fisici. La seconda sottorete è utilizzata per le macchine virtuali di gestione (ad esempio, vCenter Server Appliance, Platform Services Controller). La terza è utilizzata per i VTEP (VXLAN Tunnel Endpoint) assegnati ad ogni host mediante NSX Manager.
+Come specificato in precedenza, la rete privata è composta da due VLAN all'interno di questa progettazione. Alla prima di queste VLAN (indicata qui come VLAN privata A) sono assegnate tre sottoreti. La prima è un intervallo di sottoreti di IP privati primari che {{site.data.keyword.cloud_notm}} assegna agli host fisici. La seconda sottorete è utilizzata per le VM (Virtual Machine) di gestione (ad esempio, vCenter Server Appliance, Platform Services Controller). La terza è utilizzata per i VTEP (VXLAN Tunnel Endpoint) assegnati ad ogni host mediante NSX Manager.
 
 Insieme alla VLAN Privata A, esiste una seconda VLAN privata (qui indicata come VLAN Privata B) per supportare le funzioni di VMware, come vSAN e vMotion, e per la connettività al NAS (Network Attached Storage). Pertanto, la VLAN è divisa in due o tre sottoreti portatili. La prima sottorete viene assegnata a un gruppo di porte kernel per il traffico vMotion. La sottorete o le sottoreti rimanenti vengono utilizzate per il traffico di archiviazione e, quando si utilizza vSAN, ne viene assegnata una ai gruppi di porte kernel utilizzati per il traffico vSAN. Quando si utilizza NAS una sottorete viene assegnata a un gruppo di porte dedicato al traffico NFS. Tutte le sottoreti configurate come parte di una distribuzione automatizzata di vCenter Server utilizzano intervalli gestiti da {{site.data.keyword.cloud_notm}}. Ciò serve a garantire che qualsiasi indirizzo IP possa essere instradato a qualsiasi data center all'interno dell'account {{site.data.keyword.cloud_notm}} che viene utilizzato, se necessario, attualmente o in futuro.
 
@@ -78,7 +73,7 @@ Pubblica	|Portatile 	|Assegnata per l'utilizzo di uplink e NAT su customer-nsx-e
 Pubblica	|Portatile 	|Assegnata per l'utilizzo di uplink e NAT su mgmt-nsx-esg.
 Pubblica	|Portatile 	|Assegnata per l'utilizzo di uplink e NAT su hcx-mgmt-esg, se viene selezionato Hybridity Bundle.
 Privata A 	|Primaria 	  |Assegnata agli host fisici assegnati da {{site.data.keyword.cloud_notm}}. Utilizzata dall'interfaccia di gestione per il traffico di gestione vSphere.
-Privata A 	|Portatile 	|Assegnata alle macchine virtuali che funzionano come componenti di gestione.
+Privata A 	|Portatile 	|Assegnata alle VM (Virtual Machine) che funzionano come componenti di gestione.
 Privata A 	|Portatile 	|Assegnata al VTEP NSX.
 Privata A 	|Portatile 	|Assegnata a HCX per uso interno, se viene selezionato Hybridity Bundle.
 Privata A 	|Portatile 	|Assegnata per l'utilizzo di uplink su customer-nsx-esg.

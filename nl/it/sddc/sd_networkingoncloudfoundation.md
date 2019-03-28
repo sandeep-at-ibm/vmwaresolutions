@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -23,13 +23,15 @@ Per esaminare i componenti di rete inclusi nella tua istanza Cloud Foundation, v
 
 ## Considerazioni su firewall
 {: #sd_networkingoncloudfoundation-firewall-considerations}
+{: faq}
 
 Se utilizzi i firewall, devi configurare le regole per tutte le comunicazioni dalla VSI (Virtual Server Instance) {{site.data.keyword.IBM}} CloudDriver e dalle VM (virtual machine) di SDDC Manager. Queste regole devono consentire a tutti i protocolli di comunicare sugli indirizzi IP `10.0.0.0/8` e `161.26.0.0/16`. Esempi di questi firewall sono i DFW (Distributed Firewall) NSX o i firewall Vyatta.
 
 ## Utilizzo di VMware NSX con le tue VM
 {: #sd_networkingoncloudfoundation-using-nsx-with-vm}
+{: faq}
 
-Durante la distribuzione dell'istanza Cloud Foundation, VMware NSX viene ordinato, installato, concesso in licenza e configurato nella tua istanza. Inoltre, vengono configurati NSX Manager, i controller NSX e NSX Transport Zone e ciascun server ESXi viene configurato con i componenti NSX.
+Durante la distribuzione dell'istanza Cloud Foundation, VMware NSX è stato ordinato, installato, concesso in licenza e configurato nella tua istanza. Inoltre, vengono configurati NSX Manager, i controller NSX e NSX Transport Zone e ciascun server ESXi viene configurato con i componenti NSX.
 
 Tuttavia, se le tue VM del carico di lavoro devono comunicare tra loro e accedere a Internet, è tua responsabilità configurare NSX per l'utilizzo da parte delle tue VM.
 
@@ -39,6 +41,7 @@ Per ulteriori informazioni su come configurare NSX, vedi i seguenti argomenti:
 
 ## Considerazioni sulla modifica delle password per i componenti NSX
 {: #sd_networkingoncloudfoundation-considerations-when-change-nsx-component-password}
+{: faq}
 
 Esamina le seguenti considerazioni prima di modificare le password per NSX Manager, i controller NSX e l'edge NSX:
 * Non modificare la password per NSX Manager. Puoi trovare questa password nella pagina **Riepilogo** dell'istanza nella console {{site.data.keyword.vmwaresolutions_short}}.

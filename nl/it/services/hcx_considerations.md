@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -13,9 +13,9 @@ lastupdated: "2019-02-15"
 {:important: .important}
 
 # Considerazioni e specifiche di VMware HCX on IBM Cloud
-{: #vmware-hcx-on-ibm-cloud-overview}
+{: #hcx_considerations}
 
-Il servizio HCX on {{site.data.keyword.cloud}} estende senza problemi le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che ti consente di migrare le macchine virtuali (VM) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
+Il servizio HCX on {{site.data.keyword.cloud}} estende senza problemi le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che ti consente di migrare le VM (Virtual Machine) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
 
 Questo servizio è disponibile solo per le istanze VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle distribuite nella V2.3 e successive.
 {:note}
@@ -26,7 +26,7 @@ Un'istanza vCenter Server con HCX on {{site.data.keyword.cloud_notm}} è limitat
 {:note}
 
 ## Specifiche tecniche per HCX on IBM Cloud
-{: #technical-specifications-for-hcx-on-ibm-cloud}
+{: #hcx_considerations-specs}
 
 Nel servizio HCX on {{site.data.keyword.cloud_notm}} vengono ordinati e inclusi i seguenti componenti.
 
@@ -40,7 +40,7 @@ Le istanze HCX in loco includono solo la licenza e l'attivazione.
 * RAM: 8 GB
 * Disco: 3 GB VMDK
 
-### Dispositivo di gestione HCX - macchina virtuale
+### Dispositivo di gestione HCX - VM (Virtual Machine)
 {: #hcx_considerations-vm}
 
 * CPU: 4 vCPU
@@ -72,7 +72,7 @@ Il servizio HCX on {{site.data.keyword.cloud_notm}} non può essere installato i
 Prima di installare il servizio HCX on {{site.data.keyword.cloud_notm}}, devi aggiungere una regola firewall a qualsiasi firewall esistente per consentire tutto il traffico HTTPS in uscita in modo che il dispositivo virtuale HCX Manager possa registrarsi. Al termine dell'installazione di HCX Manager, puoi rimuovere la regola del firewall. Inoltre, devi configurare le regole del firewall per consentire a HCX di funzionare correttamente. Per ulteriori informazioni, vedi *Appendix A - Port Access Requirements* in [HCX on {{site.data.keyword.cloud_notm}} Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
 
 ## Considerazioni sulla rimozione di HCX on IBM Cloud
-{: #considerations-when-removing-hcx-on-ibm-cloud}
+{: #hcx_considerations-delete}
 
 Esamina le seguenti considerazioni prima di rimuovere il servizio HCX on {{site.data.keyword.cloud_notm}}:
 * Assicurati che le interconnessioni e le reti estese tra il sito di origine in loco e i siti di destinazione {{site.data.keyword.cloud_notm}} siano rimossi. Per rimuovere le interconnessioni e le reti estese, utilizza l'interfaccia utente HCX nel client web VMware vSphere installato in loco.

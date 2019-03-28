@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-14"
 # Panoramica di Cloud Foundation
 {: #sd_cloudfoundationoverview}
 
-Quando ordini VMware Cloud Foundation on {{site.data.keyword.cloud}}, viene distribuito automaticamente un intero ambiente VMware. La distribuzione di base è composta da quattro {{site.data.keyword.baremetal_short}} {{site.data.keyword.cloud_notm}} con lo stack VMware Cloud Foundation preinstallato e configurato per fornire una piattaforma SDDC (Software-Defined Data Center) unificata. Cloud Foundation integra nativamente VMware vSphere, VMware NSX, VMware Virtual SAN e la sua architettura si basa su progetti convalidati da VMware.
+La distribuzione di base di VMware Cloud Foundation on {{site.data.keyword.cloud}} consiste in quattro {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} con lo stack VMware Cloud Foundation preinstallato e configurato per fornire una piattaforma SDDC (software-defined data center) unificata. Cloud Foundation integra nativamente VMware vSphere, VMware NSX, VMware Virtual SAN e la sua architettura si basa su progetti convalidati da VMware.
 
 ## Architettura di Cloud Foundation
 {: #sd_cloudfoundationoverview-archi}
@@ -49,17 +49,17 @@ Nella console {{site.data.keyword.vmwaresolutions_short}}, puoi espandere e cont
 Per ulteriori informazioni sull'architettura, vedi [Panoramica della soluzione](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Specifiche tecniche per le istanze Cloud Foundation
-{: #technical-specifications-for-cloud-foundation-instances}
+{: #sd_cloudfoundationoverview-specs}
 
 Nella tua istanza Cloud Foundation sono inclusi i seguenti componenti.
 
-Gli addebiti sostenuti per hardware, rete, macchine virtuali e archiviazione potrebbero variare in base al {{site.data.keyword.CloudDataCent_notm}} selezionato per la distribuzione.
+Gli addebiti sostenuti per hardware, rete, VM (Virtual Machine) e archiviazione potrebbero variare in base al {{site.data.keyword.CloudDataCent_notm}} selezionato per la distribuzione.
 {:note}
 
 ### Bare Metal Server
 {: #sd_cloudfoundationoverview-bare-metal}
 
-Puoi ordinare {{site.data.keyword.baremetal_short}} {{site.data.keyword.cloud_notm}} con una delle seguenti configurazioni:
+La tua istanza può avere {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} con una delle seguenti configurazioni:
 *  **Skylake**: server di generazione 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series) con i tuoi modello CPU e dimensione RAM selezionati.   
 *  **Broadwell**: server di generazione 2-CPU Intel Broadwell (Intel Xeon E5-2600/E7-4800 series) con il modello di CPU e la dimensione della RAM da te selezionati.
 
@@ -69,20 +69,20 @@ Se intendi utilizzare l'archiviazione vSAN, la configurazione richiede quattro {
 ### Rete
 {: #sd_cloudfoundationoverview-networking}
 
-Vengono ordinati i seguenti componenti di rete:
+La tua istanza contiene i seguenti componenti di rete:
 * Doppi uplink di rete privata e pubblica da 10 Gbps
 * Tre VLAN (Virtual LAN): una VLAN pubblica e due VLAN private
-* Gateway dei servizi edge (ESG) VMware NSX sicuro dei servizi di gestione per il traffico di gestione HTTPS in uscita, distribuito da IBM come parte della tipologia di rete di gestione. Questo ESG viene utilizzato dalle macchine virtuali di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. Per ulteriori informazioni, vedi [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* Gateway dei servizi edge (ESG) VMware NSX sicuro dei servizi di gestione per il traffico di gestione HTTPS in uscita, distribuito da IBM come parte della tipologia di rete di gestione. Questo ESG viene utilizzato dalle VM (Virtual Machine) di gestione IBM per comunicare con specifici componenti di gestione IBM esterni correlati all'automazione. Per ulteriori informazioni, vedi [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
   Non puoi accedere a questo ESG e non puoi usarlo. Se lo modifichi, potresti non essere in grado di gestire l'istanza Cloud Foundation dalla console {{site.data.keyword.vmwaresolutions_short}}. Inoltre, l'utilizzo di un firewall o la disabilitazione delle comunicazioni ESG ai componenti di gestione IBM esterni comporterà l'inutilizzabilità di {{site.data.keyword.vmwaresolutions_short}}.
   {:important}
 
-* La funzione EVC (Enhanced vMotion Compatibility) viene abilitata automaticamente se disponi di un cluster esistente con i server ESXi supportati dalla versione corrente di VMware vSphere. EVC fornisce la compatibilità vMotion per tutti i server ESXi in un cluster garantendo che tutti i server ESXi del cluster espongano lo stesso insieme di funzioni CPU alle macchine virtuali. Utilizzando EVC, le macchine virtuali possono migrare tra qualsiasi server ESXi nel cluster, anche se le reali CPU sui server ESXi potrebbero essere diverse.
+* La funzione EVC (Enhanced vMotion Compatibility) viene abilitata automaticamente se disponi di un cluster esistente con i server ESXi supportati dalla versione corrente di VMware vSphere. EVC fornisce la compatibilità vMotion per tutti i server ESXi in un cluster garantendo che tutti i server ESXi del cluster espongano lo stesso insieme di funzioni CPU alle VM (Virtual Machine). Utilizzando EVC, le VM (Virtual Machine) possono migrare tra qualsiasi server ESXi nel cluster, anche se le reali CPU sui server ESXi potrebbero essere diverse.
 
 ### VSI (Virtual Server Instance)
 {: #sd_cloudfoundationoverview-vsi}
 
-Vengono ordinate le seguenti VSI (Virtual Server Instance):
+La tua istanza ha le seguenti VSI (Virtual Server Instance):
 * Una VSI per i servizi Microsoft AD (Active Directory) e Domain Name System (DNS). La VSI è richiesta per il supporto della configurazione multisito. La specifica di questa VSI è: Windows 2012 R2 (8 GB di RAM / 2 core CPU / disco da 100 GB / Doppi uplink privati da 1 Gbps).
 * Una VSI per IBM CloudBuilder, che viene arrestata al termine della distribuzione dell'istanza.
 * (Se viene ordinato Veeam on {{site.data.keyword.cloud_notm}}) Viene ordinata una VSI per il servizio di backup Veeam.
@@ -90,7 +90,7 @@ Vengono ordinate le seguenti VSI (Virtual Server Instance):
 ### Archiviazione
 {: #sd_cloudfoundationoverview-storage}
 
-Viene ordinata la seguente archiviazione, a seconda della configurazione di {{site.data.keyword.baremetal_short}} che hai selezionato:
+La propria istanza può avere la seguente archiviazione, a seconda della configurazione di {{site.data.keyword.baremetal_short}} selezionata:
 * Due dischi di avvio SATA da 1 TB
 * Due dischi di cache SSD (Solid-State Disk) da 960 GB
 * Un controller disco RAID
@@ -141,8 +141,6 @@ Devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel
 {: #sd_cloudfoundationoverview-related}
 
 * [Distinta base del software Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_bom)
-* [Pianificazione per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
-* [Ordine di istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance)
 * [Centro di documentazione di VMware vSphere](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}
 * [Centro di documentazione di VMware NSX 6](https://pubs.vmware.com/NSX-6/index.jsp){:new_window}
 * [EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764)

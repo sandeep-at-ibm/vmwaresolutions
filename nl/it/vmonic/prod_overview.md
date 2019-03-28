@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -53,13 +53,6 @@ L'offerta vCenter Server with Hybridity è un cloud privato ospitato che consent
 
 Per ulteriori informazioni, vedi [Panoramica di vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview).
 
-### VMware Cloud Foundation on IBM Cloud
-{: #prod_overview-cf}
-
-L'offerta Cloud Foundation fornisce un ambiente virtuale VMware unificato utilizzando le risorse di calcolo, archiviazione e rete standard di {{site.data.keyword.cloud_notm}} dedicate a ogni distribuzione utente.
-
-Per ulteriori informazioni, vedi [Panoramica di Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview).
-
 ### VMware vSphere on IBM Cloud
 {: #prod_overview-vss}
 
@@ -79,6 +72,11 @@ Per ulteriori informazioni, vedi [Panoramica di NetApp ONTAP Select](/docs/servi
 
 {{site.data.keyword.vmwaresolutions_short}} ti consente di aggiungere vari servizi al momento dell'ordine o dopo la distribuzione dell'istanza. Sono offerti i seguenti servizi:
 
+### Caveonix RiskForesight on IBM Cloud
+{: #prod_overview-caveonix}
+
+Il servizio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} gestisce i rischi informatici e di conformità con un monitoraggio proattivo e dei controlli di difesa automatizzati per proteggere da minacce e soddisfare le normative del settore e quelle governative.
+
 ### F5 on IBM Cloud
 {: #prod_overview-f5}
 
@@ -89,7 +87,7 @@ Per ulteriori informazioni, vedi [Panoramica di F5 on {{site.data.keyword.cloud_
 ### FortiGate Security Appliance on IBM Cloud
 {: #prod_overview-fortigate-security}
 
-Il servizio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} distribuisce una coppia di dispositivi FortiGate Security Appliance (FSA) della serie 300 in una modalità altamente disponibile per fornire servizi di firewall, instradamento, NAT e VPN per proteggere ogni server e macchina virtuale sulla VLAN pubblica delle tue istanze.
+Il servizio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} distribuisce una coppia di dispositivi FortiGate Security Appliance (FSA) della serie 300 in una modalità altamente disponibile per fornire servizi di firewall, instradamento, NAT e VPN per proteggere ogni server e VM (Virtual Machine) sulla VLAN pubblica delle tue istanze.
 
 Per ulteriori informazioni, vedi [Panoramica di FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
 
@@ -103,7 +101,7 @@ Per ulteriori informazioni, vedi [Panoramica di FortiGate Virtual Appliance on {
 ### HyTrust CloudControl on IBM Cloud
 {: #prod_overview-hytrust-cloudcontrol}
 
-Il servizio HyTrust CloudControl on {{site.data.keyword.cloud_notm}} applica e controlla la conformità rispetto agli standard di sicurezza e fornisce funzionalità dettagliate di controllo degli accessi in base al ruolo (RBAC), approvazione e verifica. Se combinato con HyTrust DataControl, il servizio può garantire che le macchine virtuali e i dati del carico di lavoro non lascino una particolare regione, cluster o server ESXi all'interno del {{site.data.keyword.CloudDataCent_notm}}.
+Il servizio HyTrust CloudControl on {{site.data.keyword.cloud_notm}} applica e controlla la conformità rispetto agli standard di sicurezza e fornisce funzionalità dettagliate di controllo degli accessi in base al ruolo (RBAC), approvazione e verifica. Se combinato con HyTrust DataControl, il servizio può garantire che le VM (Virtual Machine) e i dati del carico di lavoro non lascino una particolare regione, cluster o server ESXi all'interno del {{site.data.keyword.CloudDataCent_notm}}.
 
 Per ulteriori informazioni, vedi [Panoramica di HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations).
 
@@ -117,9 +115,9 @@ Per ulteriori informazioni, vedi [Panoramica di HyTrust DataControl on {{site.da
 ### HyTrust KeyControl on IBM Cloud
 {: #prod_overview-hytrust-keycontrol}
 
-Il servizio HyTrust KeyControl on {{site.data.keyword.cloud_notm}} semplifica la gestione dei carichi di lavoro crittografati automatizzando e semplificando il ciclo di vita delle chiavi di crittografia. Il servizio può facilmente gestire le chiavi di crittografia in scala utilizzando la crittografia conforme a FIPS 140-2. Utilizzando questo servizio, puoi gestire le chiavi di crittografia per tutte le tue macchine virtuali e gli archivi di dati crittografati e ridimensionarli per supportare migliaia di carichi di lavoro crittografati nelle grandi distribuzioni.
+Il servizio HyTrust KeyControl on {{site.data.keyword.cloud_notm}} semplifica la gestione dei carichi di lavoro crittografati automatizzando e semplificando il ciclo di vita delle chiavi di crittografia. Il servizio può facilmente gestire le chiavi di crittografia in scala utilizzando la crittografia conforme a FIPS 140-2. Utilizzando questo servizio, puoi gestire le chiavi di crittografia per tutte le tue VM (Virtual Machine) e gli archivi di dati crittografati e ridimensionarli per supportare migliaia di carichi di lavoro crittografati nelle grandi distribuzioni.
 
-Per ulteriori informazioni, vedi [Panoramica di HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview).
+Per ulteriori informazioni, vedi [Panoramica di HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations).
 
 ### IBM Cloud Private Hosted
 {: #prod_overview-icp}
@@ -145,14 +143,14 @@ Per ulteriori informazioni, vedi [Panoramica di KMIP for VMware on {{site.data.k
 ### Veeam on IBM Cloud
 {: #prod_overview-veeam}
 
-Il servizio Veeam on {{site.data.keyword.cloud_notm}} si integra perfettamente con i tuoi hypervisor VMware per aiutare la tua azienda a raggiungere l'alta disponibilità. Questo servizio fornisce obiettivi di tempo e punti di ripristino per le tue applicazioni e i tuoi dati. Gli obiettivi di tempo e punti di ripristino sono forniti in meno di 15 minuti dopo il completamento della configurazione. Utilizzando questo servizio, controlli direttamente sia il backup che il ripristino di tutte le macchine virtuali per la tua infrastruttura dalla console Veeam.
+Il servizio Veeam on {{site.data.keyword.cloud_notm}} si integra perfettamente con i tuoi hypervisor VMware per aiutare la tua azienda a raggiungere l'alta disponibilità. Questo servizio fornisce obiettivi di tempo e punti di ripristino per le tue applicazioni e i tuoi dati. Gli obiettivi di tempo e punti di ripristino sono forniti in meno di 15 minuti dopo il completamento della configurazione. Utilizzando questo servizio, controlli direttamente sia il backup che il ripristino di tutte le VM (Virtual Machine) per la tua infrastruttura dalla console Veeam.
 
 Per ulteriori informazioni, vedi [Panoramica di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations).
 
 ### VMware HCX on IBM Cloud
 {: #prod_overview-hcx}
 
-Il servizio HCX on {{site.data.keyword.cloud_notm}} può estendere senza problemi le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione delle macchine virtuali (VM) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
+Il servizio HCX on {{site.data.keyword.cloud_notm}} può estendere senza problemi le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione delle VM (Virtual Machine) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
 
 Per ulteriori informazioni, vedi [Panoramica di VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview).
 

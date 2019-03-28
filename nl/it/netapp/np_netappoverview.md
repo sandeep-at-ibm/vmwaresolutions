@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -61,7 +61,7 @@ Il livello di gestione della virtualizzazione è costituito dai seguenti compone
 NetApp ONTAP Select viene eseguito in un cluster VMware e virtualizza l'archiviazione locale sugli host. NetApp ONTAP Select è distribuito nel modello dedicato, dove non è previsto che altri carichi di lavoro condividano il cluster con esso. Di conseguenza, la configurazione hardware dell'offerta NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} viene ridimensionata solo in base ai requisiti di NetApp ONTAP Select.
 
 ## Specifiche tecniche per le istanze NetApp ONTAP Select
-{: #technical-specifications-for-netapp-ontap-select-instances}
+{: #np_netappoverview-specs}
 
 Nella tua istanza NetApp ONTAP Select sono inclusi i seguenti componenti.
 

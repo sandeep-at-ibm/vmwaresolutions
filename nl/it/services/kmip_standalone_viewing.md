@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -16,7 +16,7 @@ Utilizza questa procedura per visualizzare le istanze KMIP for VMware on {{site.
 ## Procedura per visualizzare le istanze KMIP for VMware on IBM Cloud
 {: #kmip_standalone_viewing-procedure}
 
-Fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra e scorri fino alla tabella **Istanze KMIP for VMware on {{site.data.keyword.cloud_notm}}** per visualizzare informazioni sulle istanze che hai ordinato:
+Fai clic su **Risorse** nel riquadro di navigazione a sinistra e scorri fino alla tabella **Istanze KMIP for VMware on {{site.data.keyword.cloud_notm}}** per visualizzare informazioni sulle istanze che hai ordinato:
 
 Tabella 1. Elementi delle istanze KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
@@ -24,7 +24,7 @@ Tabella 1. Elementi delle istanze KMIP for VMware on {{site.data.keyword.cloud_n
 |:----------- |:----------------- |
 | Nome | Il nome dell'istanza. |
 | Regione | La regione {{site.data.keyword.cloud_notm}} in cui è ospitata l'istanza. |
-| Ora di creazione | La data e ora di creazione dell'istanza. |  
+| Data/ora di creazione | La data e ora di creazione dell'istanza. |  
 | Stato | Lo stato dell'istanza. |
 
 Lo stato dell'istanza può avere una gamma di opzioni.

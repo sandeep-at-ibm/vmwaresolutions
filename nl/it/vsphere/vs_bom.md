@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -17,7 +17,7 @@ Tabella 1. Diba per i cluster VMware vSphere
 
 | Produttore | Componente                       | Versione |
 |:-------------|:--------------------------------|:--------|
-| VMware       | vSphere ESXi                    | 6.5 Aggiornamento 1 o 6.0 Aggiornamento 2 |
+| VMware       | vSphere ESXi                    | 6.7 Aggiornamento 1 o 6.5 Aggiornamento 2 |
 
 ## Link correlati
 {: #vs_bom-related}

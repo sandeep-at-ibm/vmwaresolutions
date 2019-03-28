@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-07"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Aggiunta, visualizzazione ed eliminazione di cluster per le istanze Cloud Foundation
-{: #adding-and-viewing-clusters-for-cloud-foundation-instances}
+{: #sd_addingviewingclusters}
 
 I server ESXi che hai configurato quando hai ordinato un'istanza sono raggruppati in un cluster predefinito. Il nome del cluster predefinito è:
 * Per le istanze distribuite nelle release della V2.1 o successive: **MGMT-Cluster-`<subdomain_label>`**
@@ -111,7 +111,7 @@ Puoi specificare le opzioni di licenza per i componenti VMware nel cluster, incl
 ## Procedura per aggiungere i cluster alle istanze Cloud Foundation
 {: #sd_addingviewingclusters-adding-procedure}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza a cui vuoi aggiungere i cluster.
 
    Assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
@@ -147,7 +147,7 @@ Non puoi modificare il nome del cluster. La modifica del nome del cluster potreb
 ## Procedura per visualizzare i cluster nelle istanze Cloud Foundation
 {: #sd_addingviewingclusters-viewing-procedure}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic su un'istanza per visualizzare i cluster al suo interno.
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, visualizza il riepilogo dei cluster:
    * **Nome**: il nome del cluster.
@@ -212,13 +212,13 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 * Per i cluster distribuiti nelle istanze della V2.2 o precedenti, devi aggiornare l'istanza alla V2.3 per poter eliminare i cluster che hai aggiunto all'istanza.
 * Puoi eliminare un singolo cluster alla volta. Per eliminare più cluster, devi farlo in sequenza: attendere che il cluster precedente venga eliminato prima di tentare di eliminare quello successivo.
 * Assicurati che tutti i nodi in un cluster siano accesi e operativi prima di eliminare il cluster.
-* Quando elimini un cluster, da questo vengono eliminate anche tutte le VM (macchine virtuali) e non possono essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.
+* Quando elimini un cluster, da questo vengono eliminate anche tutte le VM (Virtual Machine) e non possono essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.
 * Il cluster predefinito non può essere eliminato.
 
 ## Procedura per eliminare i cluster dalle istanze Cloud Foundation
 {: #sd_addingviewingclusters-deleting-procedure}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze Cloud Foundation**, fai clic sull'istanza da cui vuoi eliminare i cluster.
 
    Assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. Altrimenti, non puoi eliminare i cluster dall'istanza.

@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-06"
 
 ---
 
 # Glossario dei termini Caveonix
 {: #caveonix-terminology}
 
-Questo glossario fornisce alcune descrizioni per i termini che non sono associati alla soluzione Caveonix RiskForesight.
+Questo glossario fornisce alcune descrizioni per i termini che sono associati alla soluzione Caveonix RiskForesight.
 
 -	**NIST Special Publication 800-53:** un RMF (Risk Management Framework) che si occupa del controllo della sicurezza.
 -	**SCAP (Security Content Automation Protocol):** un metodo per l'utilizzo di standard specifici per abilitare la misurazione e la gestione delle vulnerabilità e la valutazione della conformità alle politiche automatizzate dei sistemi distribuiti in un'organizzazione. Delle liste di controllo standardizzano e abilitano l'automazione del collegamento tra le configurazioni della sicurezza dei computer e il quadro dei controlli NIST Special Publication 800-53.
@@ -30,7 +30,7 @@ Questo glossario fornisce alcune descrizioni per i termini che non sono associat
       -	Notifica dei risultati di tale valutazione.
 -	**STIG (Security Technical Implementation Guide):** una metodologia di sicurezza informatica per la standardizzazione dei protocolli di sicurezza all'interno di reti, server, computer e progettazioni logiche per migliorare la sicurezza complessiva. Queste guide, quando vengono implementate, migliorano la sicurezza per le architetture software, hardware, fisiche e logiche per ridurre ulteriormente le vulnerabilità.
 -	**Provider di servizi:** l'organizzazione di livello superiore.
--	Provider cloud - fornisce l'infrastruttura in cui opera il cloud definito dal software. RiskForesight può essere configurato per più provider cloud.
+-	**Provider cloud** - fornisce l'infrastruttura in cui opera il cloud definito dal software. RiskForesight può essere configurato per più provider cloud.
 -	**Organizzazioni:** organizzazioni e organizzazioni secondarie tenant del provider di servizi. Se il repository di asset è vCenter, è necessario creare manualmente l'elenco di organizzazioni/tenant.
 -	**Ruoli:** ruoli preconfigurati e ruoli creati dal provider di servizi. I ruoli preconfigurati non possono essere modificati dal provider di servizi.
 -	**Utenti delle organizzazioni:** gli utenti delle organizzazioni e delle organizzazioni secondarie tenant.
@@ -56,13 +56,15 @@ Questo glossario fornisce alcune descrizioni per i termini che non sono associat
   - **Scansione dell'infrastruttura VMware:** questa scansione esegue una scansione dell'infrastruttura degli asset VMware.
   -	**Scansione delle vulnerabilità VMware:** questa scansione esegue una scansione delle vulnerabilità degli asset VMware.
 -	**Regime di conformità:** disponibile mediante licenza; NIST, NESA, PCI, ISO, HIPAA, GDPR, Custom, FFIEC, FedRAMP Low, FedRAMP Moderate, FedRAMP High
--	**Gestore politiche:** il gestore politiche svolge la funzione di creazione delle politiche per un'organizzazione in base all'output del machine learning. Caveonix fornisce per impostazione predefinita tre tipi di lavori di machine learning per ogni organizzazione. Non sono modificabili e non sono ancora supportati dei lavori aggiuntivi. Questi ultimi saranno disponibili in una release futura. I tipi attualmente supportati di lavori di machine learning sono:
+-	**Gestore politiche:** il gestore politiche svolge la funzione di creazione delle politiche per un'organizzazione in base all'output del machine learning. Caveonix fornisce per impostazione predefinita tre tipi di lavori di machine learning per ogni organizzazione. Non sono modificabili e non sono ancora supportati dei lavori aggiuntivi. I tipi attualmente supportati di lavori di machine learning sono:
   -	Log Caveo
   -	Reti Caveo
   -	Scansione Caveo
 -	**Anomalia:** in base alle anomalie rilevate nei dati, possiamo configurare le politiche per intervenire in base alle condizioni definite dall'utente. Puoi selezionare il tipo di lavoro e configurare le condizioni booleane per il punteggio di anomalie e definire l'azione nel caso in cui la condizione ricorra (sia true). Ad esempio:
-  -	Lavoro: "Log Caveo" Il punteggio dell'anomalia è > 90 allora contrassegna l'asset per la quarantena e invia una notifica al canale slack.
-  -	Lavoro: "Rete Caveo" Il punteggio dell'anomalia è > 95 quindi metti in quarantena l'asset e invia una notifica email e invia anche una notifica IU.
+```
+Lavoro: "Log Caveo" Il punteggio dell'anomalia è > 90 allora contrassegna l'asset per la quarantena e invia una notifica al canale slack.`
+Lavoro: "Rete Caveo" Il punteggio dell'anomalia è > 95 quindi metti in quarantena l'asset e invia una notifica email e invia anche una notifica IU.
+```
 
 ## Link correlati
 {: #caveonix-terminology-related}

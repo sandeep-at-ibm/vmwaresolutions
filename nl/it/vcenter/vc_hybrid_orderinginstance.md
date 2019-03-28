@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -52,6 +52,14 @@ Il nome dell'istanza deve rispettare i seguenti requisiti:
 * La lunghezza massima del nome dell'istanza è di 10 caratteri.
 * Il nome dell'istanza deve essere univoco all'interno del tuo account.
 
+### Licenze VMware vSphere
+{: #vc_hybrid_orderinginstance-vsphere-license}
+
+Seleziona se ordinare vSphere Enterprise Plus 6.7u1 o vSphere Enterprise Plus 6.5u2.
+
+vSphere Enterprise Plus 6.7u1 è disponibile solo per {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} Broadwell e Skylake.
+{:note}
+
 ### Primaria o secondaria
 {: #vc_hybrid_orderinginstance-primary-secondary}
 
@@ -63,7 +71,7 @@ Scegli se ordinare un nuova istanza primaria o un'istanza secondaria per un'ista
 Con il tuo ordine dell'istanza vCenter Server with Hybridity Bundle sono incluse le seguenti licenze VMware. Devi specificare l'edizione per le licenze NSX e vSAN.
 
 * vCenter Server 6.5
-* vSphere Enterprise Plus 6.5u1
+* vSphere Enterprise Plus 6.5 o 6.7
 * NSX Service Providers 6.4 (Edizione Advanced o Enterprise)
 * vSAN 6.6 (Edizione Advanced o Enterprise)
 
@@ -163,7 +171,7 @@ Il nome del dominio root deve rispettare i seguenti requisiti:
 * L'ultima stringa può contenere solo caratteri alfabetici.
 * La lunghezza dell'ultima stringa deve essere compresa tra 2 e 24 caratteri.
 
-La lunghezza massima del nome di dominio completo (o FQDN, Fully Qualified Domain Name) per gli host e le VM (macchine virtuali) è di 50 caratteri. I nomi di dominio devono essere adattati a questa lunghezza massima.
+La lunghezza massima del nome di dominio completo (o FQDN, Fully Qualified Domain Name) per gli host e le VM (Virtual Machine) è di 50 caratteri. I nomi di dominio devono essere adattati a questa lunghezza massima.
 {:note}
 
 ### Rete pubblica o privata
@@ -229,32 +237,33 @@ In base alla configurazione che hai selezionato per l'istanza e i servizi aggiun
 1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **vCenter Server** nella sezione **Data center virtuali**.
 2. Nella pagina **VMware vCenter Server on IBM Cloud**, fai clic sulla scheda **vCenter Server with Hybridity Bundle** e quindi su **Crea**.
 3. Nella pagina **vCenter Server**, immetti il nome dell'istanza.
+5. Seleziona la versione di vSphere.
 4. Seleziona il tipo di istanza:
    * Fai clic su **Istanza primaria** per distribuire una singola istanza nell'ambiente o per distribuire la prima istanza in una topologia multisito.
    * Fai clic su **Istanza secondaria** per connettere l'istanza a un'istanza esistente (primaria) nell'ambiente per l'alta disponibilità e completa quindi la seguente procedura:
      1. Seleziona l'istanza primaria a cui desideri collegare l'istanza secondaria.
      2. Per le istanze primarie della V2.8 o successive, immetti la password dell'amministratore vCenter Server per l'istanza primaria.
      3. Per le istanze primarie della V2.7 o precedenti, immetti la password dell'amministratore PSC per l'istanza primaria.
-5. Seleziona l'edizione della licenza NSX e l'edizione della licenza vSAN.
-6. Completa le impostazioni di Bare Metal Server.
+6. Seleziona l'edizione della licenza NSX e l'edizione della licenza vSAN.
+7. Completa le impostazioni di Bare Metal Server.
   1. Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui ospitare l'istanza.
   2. Seleziona il modello CPU **Skylake** o **Broadwell** e la quantità di **RAM**.
 
   Il **Numero di server Bare Metal** è impostato su quattro per impostazione predefinita e non può essere modificato.
   {:note}
-7. Completa la configurazione di archiviazione. Specifica i tipi di disco per i dischi di capacità e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
-8. Completa la configurazione dell'interfaccia di rete.
+8. Completa la configurazione di archiviazione. Specifica i tipi di disco per i dischi di capacità e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
+9. Completa la configurazione dell'interfaccia di rete.
   1. Immetti il prefisso del nome host, l'etichetta del dominio secondario e il nome del dominio root.
   2. Seleziona l'impostazione di rete **Rete pubblica e privata** o **Solo rete privata**.
   3. Seleziona la configurazione della VLAN.
      *  Se vuoi ordinare nuove VLAN pubbliche e private, fai clic su **Ordina nuove VLAN**.
      *  Se vuoi riutilizzare le VLAN pubbliche e private esistenti quando sono disponibili, fai clic su **Seleziona VLAN esistenti** e quindi seleziona la VLAN pubblica, la sottorete primaria, la VLAN privata, la sottorete primaria privata e la VLAN privata secondaria.
   4. Seleziona la configurazione DNS.
-9. Completa la configurazione per il servizio HCX on {{site.data.keyword.cloud_notm}} incluso. Per ulteriori informazioni su come fornire le impostazioni per il servizio, vedi la sezione _Configurazione di VMware HCX on IBM Cloud_ in [Ordine di VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
-10. Seleziona i servizi aggiuntivi da distribuire nell'istanza facendo clic sulla scheda del servizio corrispondente. Se un servizio richiede la configurazione, completa le impostazioni specifiche del servizio e fai clic su **Aggiungi servizio** sulla scheda.  
+10. Completa la configurazione per il servizio HCX on {{site.data.keyword.cloud_notm}} incluso. Per ulteriori informazioni su come fornire le impostazioni per il servizio, vedi la sezione _Configurazione di VMware HCX on IBM Cloud_ in [Ordine di VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering#vmware-hcx-on-ibm-cloud-configuration).
+11. Seleziona i servizi aggiuntivi da distribuire nell'istanza facendo clic sulla scheda del servizio corrispondente. Se un servizio richiede la configurazione, completa le impostazioni specifiche del servizio e fai clic su **Aggiungi servizio** sulla scheda.  
 Per ulteriori informazioni su come fornire le impostazioni per un servizio, vedi l'argomento relativo all'ordine del servizio corrispondente.
 
-11. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza prima di effettuare l'ordine.
+12. Nel riquadro **Riepilogo ordine**, verifica la configurazione dell'istanza prima di effettuare l'ordine.
    1. Esamina le impostazioni per l'istanza.
    2. Esamina il costo stimato dell'istanza. Fai clic su **Dettagli sui prezzi** per generare un riepilogo in formato PDF. Per salvare o stampare il riepilogo del tuo ordine, fai clic sull'icona **Stampa** o **Download** nella parte superiore destra della finestra PDF.
    3. Fai clic sul link o sui link dei termini che si applicano al tuo ordine e conferma di accettare questi termini prima di ordinare l'istanza.
@@ -265,7 +274,7 @@ Per ulteriori informazioni su come fornire le impostazioni per un servizio, vedi
 
 La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
 
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
+Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
 
 Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 

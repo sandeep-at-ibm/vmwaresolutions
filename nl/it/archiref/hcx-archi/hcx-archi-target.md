@@ -15,9 +15,9 @@ Questa sezione descrive l'architettura di ogni componente HCX distribuito nell'a
 ## Edge NSX
 {: #hcx-archi-target-nsx-edge}
 
-Il primo componente che viene configurato all'interno di IBM Cloud è una coppia di macchine virtuali Edge NSX. È importante tenere presente che tutte le distribuzioni IBM Cloud for VMware Solutions installano e configurano un dispositivo edge per la comunicazione in uscita di IBM CloudDriver. Tuttavia, mentre questo ESG può essere riutilizzato per le comunicazioni di Hybrid Cloud Services, si consiglia di distribuire una nuova coppia.
+Il primo componente che viene configurato all'interno di IBM Cloud è una coppia di VM (Virtual Machine) Edge NSX. È importante tenere presente che tutte le distribuzioni IBM Cloud for VMware Solutions installano e configurano un dispositivo edge per la comunicazione in uscita di IBM CloudDriver. Tuttavia, mentre questo ESG può essere riutilizzato per le comunicazioni di Hybrid Cloud Services, si consiglia di distribuire una nuova coppia.
 
-Le macchine virtuali Edge NSX sono configurate come una coppia attiva/passiva di dispositivi Edge NSX X-Large. Questi dispositivi vengono utilizzati per il collegamento nell'ambiente IBM Cloud VMware utilizzando una connessione internet pubblica. L'Edge NSX X-Large è stato scelto per l'ambiente interno poiché è adatto per gli ambienti che hanno un programma di bilanciamento del carico con milioni di sessioni simultanee che non richiedono necessariamente un'elevata velocità effettiva. Come parte del processo di configurazione, l'Edge NSX è connesso alla VLAN pubblica di IBM Cloud e alla VLAN privata di IBM Cloud designata per la gestione dell'infrastruttura.
+Le VM (Virtual Machine) Edge NSX sono configurate come una coppia attiva/passiva di dispositivi Edge NSX X-Large. Questi dispositivi vengono utilizzati per il collegamento nell'ambiente IBM Cloud VMware utilizzando una connessione internet pubblica. L'Edge NSX X-Large è stato scelto per l'ambiente interno poiché è adatto per gli ambienti che hanno un programma di bilanciamento del carico con milioni di sessioni simultanee che non richiedono necessariamente un'elevata velocità effettiva. Come parte del processo di configurazione, l'Edge NSX è connesso alla VLAN pubblica di IBM Cloud e alla VLAN privata di IBM Cloud designata per la gestione dell'infrastruttura.
 
 Tabella 1. Distribuzione Edge NSX
 
@@ -34,7 +34,7 @@ Tabella 2. Regole anti-affinità Edge NSX
 | Campo     | Valore         |
 |-----------|---------------|
 | Nome      | Gateway esterno Edge NSX |
-| Tipo      | Macchine virtuali separate |
+| Tipo      | VM (Virtual Machine) separate |
 | Membri   | Edge NSX 1 |
 |           | Edge NSX 2 |
 
@@ -149,7 +149,7 @@ Figura 3. Distribuzione WAN Optimizer
 ## Concentratore di livello 2
 {: #hcx-archi-target-layer-2-conc}
 
-Il terzo componente è noto come concentratore di livello 2 (L2C) e fa parte dei Network Extension Service. L2C è la macchina virtuale che consente l'estensione delle reti del data center in loco a IBM Cloud. L2C estende le VLAN in loco e/o le VXLAN. Ogni L2C può estendere fino a 4096 VLAN. Ogni L2C, quando accoppiato con il proprio partner in loco, può fornire fino a 1 Gbps per “flusso” e fino a una aggregazione di 4 Gbps per VLAN (o VXLAN). La distribuzione di più applicazioni L2C è supportata se sono necessarie più velocità effettive di rete.
+Il terzo componente è noto come concentratore di livello 2 (L2C) e fa parte dei Network Extension Service. L2C è la VM (Virtual Machine) che consente l'estensione delle reti del data center in loco a IBM Cloud. L2C estende le VLAN in loco e/o le VXLAN. Ogni L2C può estendere fino a 4096 VLAN. Ogni L2C, quando accoppiato con il proprio partner in loco, può fornire fino a 1 Gbps per “flusso” e fino a una aggregazione di 4 Gbps per VLAN (o VXLAN). La distribuzione di più applicazioni L2C è supportata se sono necessarie più velocità effettive di rete.
 
 Come parte di questa progettazione, l'applicazione L2C viene distribuita in modo tale che un cliente possa estendere più VLAN e VLXAN in IBM Cloud su internet pubblico o tramite la rete privata utilizzando Direct Link. La specifica di ridimensionamento dell'applicazione L2C su IBM Cloud viene elencata nella seguente tabella.
 

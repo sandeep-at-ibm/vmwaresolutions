@@ -22,7 +22,7 @@ Figura 1. Contesto di sistema
 
 Di seguito sono riportati i componenti principali del contesto di sistema:
 -	vCenter Server – VMware vCenter Server on {{site.data.keyword.cloud_notm}} è un'istanza {{site.data.keyword.cloud_notm}} for VMware
-Services che rappresenta la destinazione per le macchine virtuali (VM) migrate dall'ambiente
+Services che rappresenta la destinazione per le VM (Virtual Machine) migrate dall'ambiente
 in loco. Insieme alla virtualizzazione in loco, è
 un ambiente ibrido e consente alle VM di spostarsi da un ambiente
 all'altro.
@@ -74,8 +74,7 @@ richiamare il contenuto relativo allo skate che corrisponde ai parametri richies
 esempio potrebbe essere: “Elenca tutti i record per il trick Casper”. Watson
 Discovery utilizza tecniche di machine learning avanzate per segnalare i passaggi
 più rilevanti dal contenuto acquisito.  
-* Database - Il database Acme Skate Advisor è ospitato su una macchina
-virtuale gestita da vCenter Server.
+* Database - Il database Acme Skate Advisor è ospitato su una VM (Virtual Machine) gestita da vCenter Server.
 * Contenitori di applicazioni - Le applicazioni che hanno attraversato il percorso di modernizzazione dell'applicazione e che ora sono in esecuzione come contenitori. Per questa architettura di riferimento e in questo esempio per Acme Skateboards, una delle applicazioni inserite nei contenitori è un server web che fa parte del carico di lavoro di presenza online. I contenitori ACME ospitano l'applicazione web Acme e l'applicazione Acme Skate Advisor.
 * Edge NSX - Gli edge NSX sono dispositivi virtuali che gestiscono il traffico nord-sud in entrata e in uscita dell'istanza vCenter Server.
 

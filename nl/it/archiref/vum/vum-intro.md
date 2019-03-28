@@ -16,7 +16,7 @@ Lo scopo di questo documento è quello di fornirti, in qualità di amministrator
 VUM consente la gestione centralizzata e automatizzata di patch e versioni per VMware vSphere e ti consente di completare le seguenti attività nel tuo ambiente VMware vCenter Server on {{site.data.keyword.cloud_notm}}:
 * Aggiornare e applicare patch agli host vSphere ESXi.
 * Installare e aggiornare software di terze parti sugli host.
-* Aggiornare l'hardware delle macchine virtuali, i VMware Tools e le applicazioni virtuali.
+* Aggiornare l'hardware delle VM (Virtual Machine), i VMware Tools e le applicazioni virtuali.
 
 Questo documento descrive anche i processi per conservare i seguenti componenti della tua istanza vCenter Server:
 * vCenter Server Appliance

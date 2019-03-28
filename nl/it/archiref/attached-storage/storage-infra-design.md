@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-27"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-13"
 # Progettazione dell'infrastruttura di archiviazione collegata
 {: #storage-infra-design}
 
-{{site.data.keyword.vmwaresolutions_full}} fornisce la tecnologia VMware che viene distribuita in modo automatizzato all'interno dei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. All'interno del portfolio di soluzioni {{site.data.keyword.cloud_notm}}, l'offerta VMware vCenter Server on {{site.data.keyword.cloud_notm}} di base comprende fino a 10 cluster, ciascuno contenente fino a 59 host vSphere, un singolo PSC (Platform Services Controller) e un vCenter Server Appliance in grado di gestire fino a 400 host e 4.000 macchine virtuali.
+{{site.data.keyword.vmwaresolutions_full}} fornisce la tecnologia VMware che viene distribuita in modo automatizzato all'interno dei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. All'interno del portfolio di soluzioni {{site.data.keyword.cloud_notm}}, l'offerta VMware vCenter Server on {{site.data.keyword.cloud_notm}} di base comprende fino a 10 cluster, ciascuno contenente fino a 59 host vSphere, un singolo PSC (Platform Services Controller) e un vCenter Server Appliance in grado di gestire fino a 400 host e 4.000 VM (Virtual Machine).
 
 L'architettura qui presentata integra la soluzione vCenter Server aggiungendo l'archiviazione collegata come un dispositivo di archiviazione condivisa per l'ambiente. Il dispositivo di archiviazione collegato si trova nello stesso {{site.data.keyword.CloudDataCent_notm}} della distribuzione del vCenter Server e consiste in una singola condivisione NFS (Network file system) o più esportazioni NFS da {{site.data.keyword.cloud_notm}}.
 
@@ -64,9 +64,9 @@ La seguente sezione descrive la configurazione del dispositivo di archiviazione 
 
 Le archiviazioni Performance e Endurance sono soluzioni di archiviazione {{site.data.keyword.cloud_notm}} progettate per supportare applicazioni ad elevato I/O che richiedono dei livelli prevedibili di prestazioni. Queste prestazioni prevedibili vengono raggiunte tramite l'assegnazione di IOPS (input/output operations per second) a livello di protocollo ai singoli volumi.
 
-È possibile ordinare IOPS da 100 a 48.000 con dimensioni di archiviazione da 20 GB a 12 TB. I volumi di archiviazione Performance ed Endurance sono disponibili sia per l'archiviazione blocchi che per l'archiviazione file.
+È possibile ordinare IOPS da 100 a 96.000 con dimensioni di archiviazione da 20 GB a 24 TB. I volumi di archiviazione Performance ed Endurance sono disponibili sia per l'archiviazione blocchi che per l'archiviazione file.
 
-In questa progettazione la soluzione vCenter Server offre l'archiviazione Endurance per l'archiviazione collegata. Di conseguenza, puoi selezionare e collegare (mediante l'automazione) le esportazioni NFS Endurance in un intervallo di dimensioni che va da 20 GB a un massimo di 12 TB. {{site.data.keyword.cloud_notm}} consente a un massimo di 64 host vSphere ESXi di connettersi a una singola esportazione NFS Endurance.
+In questa progettazione la soluzione vCenter Server offre l'archiviazione Endurance per l'archiviazione collegata. Di conseguenza, puoi selezionare e collegare (mediante l'automazione) le esportazioni NFS Endurance in un intervallo di dimensioni che va da 20 GB a un massimo di 24 TB. {{site.data.keyword.cloud_notm}} consente a un massimo di 64 host vSphere ESXi di connettersi a una singola esportazione NFS Endurance.
 
 Endurance è disponibile in tre livelli di prestazioni IOPS per supportare esigenze applicative diverse.
 

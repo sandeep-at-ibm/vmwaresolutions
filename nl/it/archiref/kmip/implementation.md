@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -34,15 +34,15 @@ Per abilitare la codifica vSphere o vSAN utilizzando KMIP for VMware on {{site.d
 
 Per utilizzare la codifica vSAN, modifica le impostazioni generali vSAN nel tuo cluster vCenter e seleziona la casella di spunta della codifica.
 
-Il controllo di integrità vSAN può emettere delle avvertenze periodiche in cui attesta di non potersi connettere al cluster KMS da uno o più dei tuoi host vSphere. Queste avvertenze si verificano perché la connessione del controllo di integrità vSAN va in timeout troppo velocemente. Puoi ignorare queste avvertenze.
+Il controllo di integrità vSAN può emettere delle avvertenze periodiche in cui attesta di non potersi connettere al cluster KMS da uno o più dei tuoi host vSphere. Queste avvertenze si verificano perché la connessione del controllo di integrità vSAN va in timeout troppo velocemente. Puoi ignorare queste avvertenze. Per ulteriori informazioni, vedi [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:new_window}.
 {:note}
 
-Per utilizzare la codifica vSphere, modifica le tue politiche di archiviazione della macchina virtuale in modo da richiedere la codifica del disco.
+Per utilizzare la codifica vSphere, modifica le tue politiche di archiviazione della VM (Virtual Machine) in modo da richiedere la codifica del disco.
 
 ## Rotazione delle chiavi
 {: #kmip-implementation-key-rotation}
 
-[Ruota la tua chiave root del cliente (CRK) Key Protect](/docs/services/key-protect?topic=key-protect-rotating-keys) utilizzando la console o l'API {{site.data.keyword.cloud_notm}}.
+[Ruota la tua chiave root del cliente (CRK) Key Protect](/docs/services/key-protect?topic=key-protect-key-rotation#key-rotation) utilizzando la console o l'API {{site.data.keyword.cloud_notm}}.
 
 Per la codifica VMware vSAN, ruota le tue chiavi di codifica della chiave (KEK) e facoltativamente le chiavi di codifica dei dati (DEK) dalle impostazioni generali vSAN nel tuo cluster vCenter.
 

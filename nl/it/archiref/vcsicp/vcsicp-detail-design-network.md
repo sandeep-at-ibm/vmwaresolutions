@@ -65,7 +65,7 @@ Un Ingress è una raccolta di regole che consentono alle connessioni in entrata 
 Sono descritti i seguenti flussi di traffico:
 
 - Utente esterno su internet a un livello web ospitato in un contenitore in {{site.data.keyword.icpfull_notm}}.
-- Livello web ospitato in un contenitore in {{site.data.keyword.icpfull_notm}} al livello del database ospitato in una macchina virtuale (VM) in VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
+- Livello web ospitato in un contenitore in {{site.data.keyword.icpfull_notm}} al livello del database ospitato in una VM (Virtual Machine) in VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 - Utente aziendale sull'accesso di rete aziendale a una VM in vCenter Server.
 
 ### Utente esterno su internet a un livello web ospitato in un contenitore in IBM Cloud Private

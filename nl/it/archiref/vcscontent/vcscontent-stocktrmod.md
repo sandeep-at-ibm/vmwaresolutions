@@ -15,7 +15,7 @@ lastupdated: "2019-02-15"
 # Trasformazione di Stock Trader da WebSphere Application Server in Stock Trader nei contenitori
 {: #vcscontent-stocktrmod}
 
-Il passo successivo nel percorso di modernizzazione di Stock Trader consiste nel trasformare il carico di lavoro dall'esecuzione nelle macchine virtuali (VM) all'esecuzione nei contenitori.
+Il passo successivo nel percorso di modernizzazione di Stock Trader consiste nel trasformare il carico di lavoro dall'esecuzione nelle VM (Virtual Machine) all'esecuzione nei contenitori.
 
 Per continuare, Todd e Jane eseguono Transformation Advisor per analizzare il carico di lavoro di Stock Trader, identificare qualsiasi complessità di migrazione e consigliare delle modifiche. Quando sono pronti, utilizzano Transformation Advisor per distribuire Stock Trader nei contenitori Liberty eseguiti in {{site.data.keyword.icpfull_notm}}.
 

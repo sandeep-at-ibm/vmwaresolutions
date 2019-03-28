@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-14"
 {:important: .important}
 
 # Panoramica di Single-node Trial for Migration and App Modernization
-{: #single-node-trial-for-migration-and-app-modernization-overview}
+{: #cloud_modern_bundle_overview}
 
 Single-node Trial for Migration and App Modernization ti consente di eseguire un test drive di IBM Cloud per migrare i carichi di lavoro VMware in IBM Cloud e quindi modernizzare semplici carichi di lavoro utilizzando i contenitori.
 
@@ -88,7 +88,7 @@ Vengono ordinate le seguenti VSI (Virtual Server Instance):
 
 Con il tuo ordine dell'istanza Single-node Trial for Migration and App Modernization sono incluse le seguenti licenze.
 
-* VMware vSphere Enterprise Plus 6.5
+* VMware vSphere Enterprise Plus 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * IBM Cloud Private Hosted V3.1
@@ -111,7 +111,7 @@ Le istanze HCX in loco includono solo la licenza e l'attivazione.
 * RAM: 8 GB
 * Disco: 3 GB VMDK
 
-### Dispositivo di gestione HCX - macchina virtuale
+### Dispositivo di gestione HCX - VM (Virtual Machine)
 {: #cloud_modern_bundle_overview-hcx-mgmt-appliance}
 
 * CPU: 4 vCPU

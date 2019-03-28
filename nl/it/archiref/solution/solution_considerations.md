@@ -114,7 +114,7 @@ La tua istanza VMware è in esecuzione sui server Bare Metal in {{site.data.keyw
 
 - Esamina la configurazione di vSphere HA e vSphere Distributed Resource Scheduler (DRS) in base ai tuoi requisiti.
 - Esamina la configurazione del controllo I/O di rete e di archiviazione in base ai tuoi requisiti.
-- Configura l'ordine di avvio della macchina virtuale in base ai tuoi requisiti.
+- Configura l'ordine di avvio della VM (Virtual Machine) in base ai tuoi requisiti.
 - Configura i pool di risorse, secondo necessità, per la gestione e il carico di lavoro.
 - Pianifica, implementa e monitora una soluzione di backup per i [componenti di gestione dell'istanza](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup) e per il carico di lavoro.
 - Pianifica l'alta disponibilità della gestione dell'istanza, inclusa la possibilità di più istanze, più cluster, vCenter HA e PSC HA.

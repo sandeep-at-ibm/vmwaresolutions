@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-15"
 # Panoramica di FortiGate Security Appliance on IBM Cloud
 {: #fsa_considerations}
 
-Il servizio FortiGate Security Appliance on {{site.data.keyword.cloud}} distribuisce una coppia di dispositivi FortiGate Security Appliance (FSA) della serie 300 in una modalità altamente disponibile per fornire servizi di firewall, instradamento, NAT e VPN per proteggere ogni server e macchina virtuale sulla VLAN pubblica delle tue istanze.
+Il servizio FortiGate Security Appliance on {{site.data.keyword.cloud}} distribuisce una coppia di dispositivi FortiGate Security Appliance (FSA) della serie 300 in una modalità altamente disponibile per fornire servizi di firewall, instradamento, NAT e VPN per proteggere ogni server e VM (Virtual Machine) sulla VLAN pubblica delle tue istanze.
 
 Puoi gestire questo servizio utilizzando il client web FortiOS o l'interfaccia della riga di comando tramite SSH.
 
@@ -23,7 +23,7 @@ Questo servizio è disponibile solo per le istanze distribuite nelle release del
 {:note}
 
 ## Specifiche tecniche per FortiGate Security Appliance on IBM Cloud
-{: #technical-specifications-for-fortigate-security-appliance-on-ibm-cloud}
+{: #fsa_considerations-specs}
 
 Nel servizio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} vengono ordinati e inclusi i seguenti componenti:
 

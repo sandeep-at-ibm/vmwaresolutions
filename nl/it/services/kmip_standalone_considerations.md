@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
 
 ---
 
@@ -27,7 +27,7 @@ Con il servizio KMIP for VMware on {{site.data.keyword.cloud_notm}} sono incluse
 * Un KMIP (Key Management Interoperability Protocol) compatibile con VMware
 * Un servizio gestito
 * Disponibile in più regioni geografiche in tutto il mondo
-* Due endpoint del servizio KMIP forniti in ciascuna regione per l'alta disponibilità
+* Due endpoint del servizio di rete KMIP forniti in ciascuna regione per l'alta disponibilità
 
 ## Considerazioni sull'istallazione delle istanze KMIP for VMware on IBM Cloud
 {: #kmip_standalone_considerations-install}

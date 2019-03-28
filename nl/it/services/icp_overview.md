@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -23,7 +23,7 @@ Questo servizio è disponibile per le seguenti istanze:
 {:note}
 
 ## Specifiche tecniche per IBM Cloud Private Hosted
-{: #technical-specifications-for-ibm-cloud-private-hosted}
+{: #icp_overview-specs}
 
 La seguente tabella elenca i requisiti minimi per ordinare il servizio IBM Cloud Private Hosted per l'ambiente **Pronto per la produzione** e **Sviluppo/Test**.
 
@@ -35,7 +35,7 @@ Tabella 1. Requisiti minimi per gli ambienti Pronto per la produzione e Sviluppo
 | Sviluppo/Test | 30 | 200 | 3 | 4.000 |
 
 ### Requisiti della risorsa di IBM Cloud Private Hosted
-{: #resource-requirements-for-ibm-cloud-private-hosted}
+{: #icp_overview-resource-req}
 
 Le seguenti tabelle elencano i requisiti della risorsa del servizio {{site.data.keyword.cloud_notm}} Private Hosted negli ambienti Pronto per la produzione e Sviluppo/Test.
 
@@ -122,7 +122,7 @@ Tabella 5. Descrizione delle variabili nella formula 2
 ## Considerazioni quando rimuovi IBM Cloud Private Hosted
 {: #icp_overview-remove}
 
-* {{site.data.keyword.cloud_notm}} elimina solo le macchine virtuali (VM) che sono state distribuite durante l'installazione iniziale del servizio {{site.data.keyword.cloud_notm}} Private Hosted. Tutti i nodi che sono stati distribuiti dopo l'installazione non saranno eliminati.
+* {{site.data.keyword.cloud_notm}} elimina solo le VM (Virtual Machine) che sono state distribuite durante l'installazione iniziale del servizio {{site.data.keyword.cloud_notm}} Private Hosted. Tutti i nodi che sono stati distribuiti dopo l'installazione non saranno eliminati.
 * {{site.data.keyword.cloud_notm}} eliminerà la VXLAN, il DLR e il gateway edge creati durante la distribuzione iniziale del servizio {{site.data.keyword.cloud_notm}} Private Hosted. Le VM che hai distribuito su VXLAN perderanno la connettività una volta avviata la rimozione del servizio {{site.data.keyword.cloud_notm}} Private Hosted.
 
 ## Link correlati

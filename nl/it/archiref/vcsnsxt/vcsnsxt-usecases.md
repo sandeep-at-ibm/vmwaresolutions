@@ -20,7 +20,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 
 connessione trasparente tra le istanze vCenter Server e un
 data center virtualizzato VMware installato in loco.
 
-I componenti VMware HCX, che vengono distribuiti come macchine virtuali (VM) nel sito di destinazione vCenter Server, consentono di stabilire una connessione con i componenti VMware HCX installati nel sito di origine in loco del peer.
+I componenti VMware HCX, che vengono distribuiti come VM (Virtual Machine) nel sito di destinazione vCenter Server, consentono di stabilire una connessione con i componenti VMware HCX installati nel sito di origine in loco del peer.
 
 Figura 1. Servizio VMware Hybrid Cloud Extension
 ![Servizio VMware Hybrid Cloud Extension](vcsnsxt-hcx-1.svg)

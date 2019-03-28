@@ -18,6 +18,7 @@ lastupdated: "2017-07-05"
 Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Aggiornamenti per le istanze VMware Cloud Foundation
+{: #relnotes_v17-vcf}
 
 Questo aggiornamento applica i seguenti potenziamenti e miglioramenti:
 * VMware SDDC Manager 2.3
@@ -32,27 +33,31 @@ Questo aggiornamento applica i seguenti potenziamenti e miglioramenti:
 
 * Le distribuzioni di VMware Cloud Foundation che sono state distribuite prima del 22 maggio e che pertanto utilizzano server della V3 ordineranno adesso i server della V4 durante l'aggiunta di un nuovo nodo all'istanza. Questi server hanno 256 GB di memoria; se ti servono 512 GB di memoria, dopo aver aggiunto i server, apri un ticket di supporto per richiedere l'aggiornamento del server a 512 GB di memoria. Per ulteriori informazioni su come contattare il supporto IBM, vedi [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
-Per ulteriori informazioni sui componenti, vedi [Specifiche tecniche per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_cloudfoundationoverview#technical-specifications-for-cloud-foundation-instances).
-
 ### Requisiti del processo di aggiornamento
+{: #relnotes_v17-update-process}
 
-A seconda della complessità della distribuzione della tua istanza Cloud Foundation e se disponi di una configurazione multisito, il processo di aggiornamento potrebbe richiedere una sequenza di passi che devi completare come visualizzato nella scheda **Aggiorna e applica patch** sulla console. Per ulteriori informazioni, vedi [Applicazione di aggiornamenti alle istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_applyingupdates#applying-updates-to-cloud-foundation-instances).
+A seconda della complessità della distribuzione della tua istanza Cloud Foundation e se disponi di una configurazione multisito, il processo di aggiornamento potrebbe richiedere una sequenza di passi che devi completare come visualizzato nella scheda **Aggiorna e applica patch** sulla console.
 
 ## Aggiornamenti per le istanze VMware vCenter Server
+{: #relnotes_v17-vcs}
 
 ### Supporto cluster
+{: #relnotes_v17-cluster}
 
 A partire dalla release della V1.7, puoi utilizzare i cluster per gestire i server ESXi nelle istanze vCenter Server per una migliore gestione delle risorse e alta disponibilità. I server ESXi che hai configurato quando hai ordinato un'istanza vengono raggruppati sotto forma di **cluster1** per impostazione predefinita. Puoi visualizzare i dettagli del cluster o aggiungere fino a un totale di cinque cluster a un'istanza dalla scheda **Infrastruttura** appena introdotta nella pagina dei dettagli dell'istanza. Quando espandi o contrai la capacità di un'istanza, puoi selezionare il cluster a cui aggiungere o da cui rimuovere i server ESXi. Per ulteriori informazioni, vedi [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
 
 ### Miglioramenti alla distribuzione del ripristino di emergenza Zerto
+{: #relnotes_v17-zerto}
 
 La distribuzione del ripristino di emergenza Zerto è ora automatizzata anziché gestita tramite un ticket di supporto. Tutti i componenti di Zerto, come una sottorete portatile privata, una VSI (Virtual Service Instance) di Windows e i costi di licenza Zerto vengono elencati sotto il costo stimato, quindi puoi esaminarli prima di effettuare l'ordine. Per ulteriori informazioni, vedi [Processo di distribuzione del ripristino di emergenza Zerto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
 
 ### Funzionalità di aggiornamento delle licenze NSX
+{: #relnotes_v17-nsx}
 
 Puoi aggiornare l'edizione della licenza NSX dalla scheda **Riepilogo** della tua istanza vCenter Server. L'aggiornamento della licenza sostituisce tutte le licenze NSX SoftLayer esistenti nel tuo account con la nuova licenza. Per ulteriori informazioni, vedi [Visualizzazione delle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances).
 
 ## Miglioramenti dell'usabilità
+{: #relnotes_v17-ui}
 
 Sono stati apportati miglioramenti in tutta l'interfaccia utente:
 * La scheda **Proprietà** nella pagina dei dettagli dell'istanza Cloud Foundation è stata rinominata in **Riepilogo**. In questa scheda puoi ora visualizzare i dettagli dell'istanza, le informazioni di accesso dei componenti relativi all'istanza e la cronologia di distribuzione dell'istanza.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -20,6 +20,7 @@ Trova le risposte alle domande frequenti sui server ESXi gestiti nella console {
 
 ## Quanti server ESXi posso aggiungere alla mia istanza?
 {: #faq_esxi-instance}
+{: faq}
 
 * Per le istanze vCenter Server, puoi espandere il cluster predefinito per avere fino a 51 server ESXi. Ciascuno dei cluster non predefiniti può essere espanso per avere fino a 59 server ESXi. Dal momento che puoi aggiungere fino a 10 cluster a un'istanza, ciascuna istanza distribuita può avere un massimo di 51 + 9x59 = 582 server ESXi tra tutti i cluster.
 * Per le istanze Cloud Foundation, la configurazione standard ha quattro server ESXi. Puoi aggiungere un massimo di 28 server (per un totale di 32 server). Per le istanze Cloud Foundation in una configurazione multisito, puoi avere un massimo di 128 server ESXi tra tutte le istanze.
@@ -29,6 +30,7 @@ Trova le risposte alle domande frequenti sui server ESXi gestiti nella console {
 
 ## Quanti server ESXi posso aggiungere a un cluster?
 {: #faq_esxi-cluster}
+{: faq}
 
 Per le istanze distribuite nella V2.2 e successive, puoi aggiungere un massimo di 51 server ESXi a un cluster iniziale e un massimo di 59 server ESXi ai cluster aggiunti.
 
@@ -41,11 +43,12 @@ Per le istanze distribuite nella V2.1 o precedenti, devi abilitare il supporto v
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
 2. Riavvia ogni server ESXi. Per ulteriori informazioni, vedi [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081).
-3. Potresti dover aumentare le dimensioni di vCenter Server per ospitare le macchine virtuali e i server ESXi aggiunti.
+3. Potresti dover aumentare le dimensioni di vCenter Server per ospitare le VM (Virtual Machine) e i server ESXi aggiunti.
 4. Apri un ticket di supporto IBM per indicare che hai applicato manualmente le modifiche vSAN completando i passi da 1 a 3. Nel ticket, richiedi che la tua istanza aggiornata sia abilitata per avere più di 32 server ESXi.
 
 ## Posso modificare i nomi e gli indirizzi IP del server ESXi?
 {: #faq_esxi-change-name-ip}
+{: faq}
 
 I nomi e gli indirizzi IP del server ESXi non possono essere modificati perché sono registrati per la risoluzione DNS di Windows. Le modifiche potrebbero comportare un errore durante la distribuzione o un errore delle funzioni di vCenter Server.
 
@@ -54,6 +57,7 @@ Non utilizzare la funzione **Rinomina dispositivo** sull'interfaccia utente di {
 
 ## Posso disabilitare l'accesso root sui miei server ESXi?
 {: #faq_esxi-disable-root}
+{: faq}
 
 Si consiglia di mantenere l'accesso root abilitato sui server ESXi, altrimenti si potrebbe verificare un errore nelle funzioni di {{site.data.keyword.vmwaresolutions_short}}.
 
@@ -63,6 +67,7 @@ Devi riabilitare l'accesso root per le successive operazioni di automazione, ad 
 
 ## Posso aggiungere rotte statiche sui miei server ESXi per montare l'archiviazione da altre ubicazioni?
 {: #faq_esxi-static-routes}
+{: faq}
 
 Puoi aggiungere rotte statiche per l'archiviazione, ma dovrai farlo con estrema cautela. Altrimenti, le condivisioni esistenti potrebbero essere smontate.
 
@@ -73,7 +78,5 @@ L'aggiunta di rotte statiche per vMotion non è supportata. Le modifiche nella c
 {: #faq_esxi-related}
 
 * [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [Espansione e contrazione della capacità per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservers)
 * [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
-* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-and-viewing-clusters-for-cloud-foundation-instances)
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

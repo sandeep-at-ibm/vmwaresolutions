@@ -24,7 +24,7 @@ Tabella 1. Funzioni disponibili con il gateway dei servizi edge NSX
 
 | Funzione | Descrizione |
 |:------- |:----------- |
-| Instradamento servizi edge NSX | Fornisce le informazioni di inoltro necessarie tra i domini di trasmissione di livello 2, consentendoti di ridurre i domini di trasmissione di livello 2 e di migliorare l'efficienza e la scalabilità della rete. NSX estende questa intelligenza al punto in cui risiedono i carichi di lavoro per effettuare l'instradamento est-ovest. Ciò consente una comunicazione più diretta tra le macchine virtuali senza la costosa o tempestiva necessità di estendere i punti di connessione. Allo stesso tempo, NSX fornisce anche la connettività nord-sud, consentendo ai tenant di accedere alle reti pubbliche. |
+| Instradamento servizi edge NSX | Fornisce le informazioni di inoltro necessarie tra i domini di trasmissione di livello 2, consentendoti di ridurre i domini di trasmissione di livello 2 e di migliorare l'efficienza e la scalabilità della rete. NSX estende questa intelligenza al punto in cui risiedono i carichi di lavoro per effettuare l'instradamento est-ovest. Ciò consente una comunicazione più diretta tra le VM (Virtual Machine) senza la costosa o tempestiva necessità di estendere i punti di connessione. Allo stesso tempo, NSX fornisce anche la connettività nord-sud, consentendo ai tenant di accedere alle reti pubbliche. |
 | Firewall | Le regole supportate del firewall includono la configurazione a 5 tuple di IP con intervalli di IP e porte per l'ispezione stateful per tutti i protocolli. |
 | NAT | Fornisce controlli separati per gli indirizzi IP di origine e destinazione è la conversione delle porte. |
 | DHCP | Fornisce la configurazione di pool di IP, gateway, server DNS e domini di ricerca. |
@@ -32,7 +32,7 @@ Tabella 1. Funzioni disponibili con il gateway dei servizi edge NSX
 | L2VPN | Estende le reti L2 sulle topologie L3. |
 | SSL VPN-Plus |  SSL VPN-Plus consente agli utenti remoti di connettersi in modo sicuro alle reti private dietro un gateway Edge NSX. |
 | Bilanciamento del carico | Fornisce indirizzi IP virtuali e gruppi di server semplici e dinamicamente configurabili. |
-| Alta disponibilità | Assicura un Edge NSX attivo sulla rete nel caso in cui la macchina virtuale Edge NSX primaria non sia disponibile. |
+| Alta disponibilità | Assicura un Edge NSX attivo sulla rete nel caso in cui la VM (Virtual Machine) Edge NSX primaria non sia disponibile. |
 
 ## Link correlati
 {: #nsx_overview-related}

@@ -16,7 +16,7 @@ IBM Cloud for VMware Solutions include distribuzioni rapide e completamente auto
 
 Il servizio VMware HCX on IBM Cloud porta questa ibridità alla fase successiva, combinando le istanze di VCS o VCF con i data center virtualizzati in loco esistenti abilitando la creazione di estensioni d rete trasparenti e la migrazione bidirezionale dei carichi di lavoro.
 
-I componenti di VMware HCX on IBM Cloud che vengono distribuiti come delle macchine virtuali nel sito di destinazione IBM Cloud VMware consentono di stabilire una connessione con i componenti VMware HCX on IBM Cloud installati nel sito di origine in loco peer.
+I componenti di VMware HCX on IBM Cloud che vengono distribuiti come delle VM (Virtual Machine) nel sito di destinazione IBM Cloud VMware consentono di stabilire una connessione con i componenti VMware HCX on IBM Cloud installati nel sito di origine in loco peer.
 
 Figura 1. VMware Cloud Foundation – Hybrid Cloud Services
 ![VMware Cloud Foundation – Hybrid Cloud Services](cloudfoundation_hybrid_cloud_services.svg)
@@ -30,7 +30,7 @@ siti.
 la connessione in modo che il traffico di rete venga spostato il più velocemente possibile.
 * Deduplicazione dei dati - può essere raggiunta la riduzione del 50% del traffico di rete dall'instradamento intelligente - quando un carico di lavoro viene spostato, l'instradamento di prossimità può modificare il percorso di rete (ossia il gateway) in modo che il traffico di rete utilizzi il gateway del sito di destinazione e non “torni” al sito di origine.
 * Migrazione senza tempo di inattività – un sistema in esecuzione può essere spostato nel o tolto dal cloud utilizzando vMotion.
-* Migrazione pianificata – qualsiasi numero di macchine virtuali può essere replicato nel sito di destinazione e quindi attivato su quel sito in un momento designato, sostituendo i sistemi in esecuzione sul sito di origine.
+* Migrazione pianificata – qualsiasi numero di VM (Virtual Machine) può essere replicato nel sito di destinazione e quindi attivato su quel sito in un momento designato, sostituendo i sistemi in esecuzione sul sito di origine.
 * Migrazione delle politiche di sicurezza – se viene utilizzato NSX in loco, tutti i firewall o le politiche di sicurezza
 di sicurezza vengono spostati insieme al carico di lavoro.
 

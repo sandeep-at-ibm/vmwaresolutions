@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -17,11 +17,11 @@ lastupdated: "2019-02-14"
 
 Il servizio Zerto on {{site.data.keyword.cloud}} integra le funzionalità di replica e ripristino di emergenza nelle offerte di distribuzione per proteggere e recuperare i dati nel tuo ambiente virtuale VMware su {{site.data.keyword.cloud_notm}}.
 
-Questo servizio è disponibile solo per le istanze distribuite nella V1.2 o successive. La versione corrente di Zerto installata è la 6.0 aggiornamento 3.
+Questo servizio è disponibile solo per le istanze distribuite nella V1.2 o successive. La versione corrente di Zerto installata è la 6.5 aggiornamento 3.
 {:note}
 
 ## Specifiche tecniche per Zerto on IBM Cloud
-{: #technical-considerations-for-zerto-on-ibm-cloud}
+{: #addingzertodr-specs}
 
 Nel servizio Zerto on {{site.data.keyword.cloud_notm}} vengono ordinati e inclusi i seguenti componenti.
 
@@ -50,7 +50,7 @@ Disco da 100 GB (SAN)
 ### Licenze e tariffe
 {: #addingzertodr-specs-licenses}
 
-Licenza di Zerto Replication V6.0 aggiornamento 3
+Licenza di Zerto Replication V6.5 aggiornamento 3
 
 ## Link correlati
 {: #addingzertodr-related}

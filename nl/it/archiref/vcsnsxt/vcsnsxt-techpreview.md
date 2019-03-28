@@ -67,7 +67,7 @@ Tabella 3. Definizione del profilo NIOC
 Tipo di traffico/Nome traffico	|Limite (%)	|Condivisioni	|Prenotazione (%)
 ---|---|---|---
 Traffico di gestione	|Illimitato	|20	|0
-Traffico macchine virtuali	|Illimitato	|30	|0
+Traffico VM (Virtual Machine)	|Illimitato	|30	|0
 Traffico a tolleranza di errore	|Illimitato	|50	|0
 Traffico di replica vSphere	|Illimitato	|50	|0
 Traffico iSCSI	|Illimitato	|50	|0
@@ -199,7 +199,7 @@ Concetti chiave per l'esame includono:
 -	Modello di politica di sicurezza uniforme per la distribuzione in loco e su cloud, che supporta più hypervisor (ovvero ESXi e KVM) e più carichi di lavoro, con un livello di granularità fino agli attributi di VM e contenitore.
 -	Gestione di calcolo agnostico, che supporta gli hypervisor gestiti da diversi gestori di calcolo consentendo al contempo di applicare qualsiasi politica di micro-segmentazione definita tra gli hypervisor che si estendono su più ambienti vCenter.
 -	Il firewall Edge NSX-T funge da servizio firewall stateful centralizzato per il traffico N-S. Il firewall Edge è implementato per ogni router logico ed è supportato sia a livello 0 che a livello 1. Il firewall Edge è indipendente dal DFW NSX-T dal punto di vista della configurazione delle politiche e dell'applicazione.
--	Raggruppamento dinamico di oggetti in costrutti logici chiamati NSGroup in base a vari criteri tra cui tag, nome macchina virtuale, sottorete e switch logico.
+-	Raggruppamento dinamico di oggetti in costrutti logici chiamati NSGroup in base a vari criteri tra cui tag, nome VM (Virtual Machine), sottorete e switch logico.
 -	L'ambito di applicazione delle politiche può essere selettivo, con granularità a livello di applicazione o carico di lavoro.
 -	DNE (Distributed Network Encryption) fornisce riservatezza e integrità dei dati che transitano nella rete.
 -	Il meccanismo di rilevamento IP identifica in modo dinamico l'indirizzamento del carico di lavoro.
@@ -219,7 +219,7 @@ NSX Transformers (NSX-T) è una soluzione autonoma che può supportare più ambi
 #### Scalabilità di rete con NSX–V
 {: #vcsnsxt-techpreview-net-scalability-nsx-v}
 
-VMware NSX-V è progettato per i framework applicativi e le architetture che hanno migliaia di endpoint e stack tecnologici che gli consentono di estendersi da un singolo cluster vSphere con tre host a una distribuzione Cross-vCenter con oltre un migliaio di host e migliaia di macchine virtuali.
+VMware NSX-V è progettato per i framework applicativi e le architetture che hanno migliaia di endpoint e stack tecnologici che gli consentono di estendersi da un singolo cluster vSphere con tre host a una distribuzione Cross-vCenter con oltre un migliaio di host e migliaia di VM (Virtual Machine).
 
 #### Scalabilità di rete con NSX-T
 {: #vcsnsxt-techpreview-net-scalability-nsx-t}
@@ -254,7 +254,7 @@ Il firewall distribuito NSX-T consente la creazione di politiche di rete, che ve
 Figura 8. NSX-T e Kubernetes
 ![NSX-T e Kubernetes](vcsnsxt-t1t0router.svg)
 
-## Link correlati 
+## Link correlati
 {: #vcsnsxt-techpreview-related}
 
 * [VMware NSX-T reference design guide](https://communities.vmware.com/servlet/JiveServlet/download/37591-3-195840/VMware%20NSX-T%20Reference%20Design%20Guide.pdf) (download del PDF)

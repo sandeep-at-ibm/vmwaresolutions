@@ -28,7 +28,7 @@ Per ospitare questi backup, distribuisci un file server Linux nel tuo cluster ut
 
 1. Ordina una sottorete portatile privata dall'infrastruttura {{site.data.keyword.cloud_notm}} e posizionala sulla stessa VLAN dei tuoi componenti di sistema. Questa è la VLAN privata su cui risiedono gli indirizzi IP di gestione per i tuoi host.
 2. Carica un'immagine del sistema operativo nel tuo archivio dati di gestione VMware, ad esempio Ubuntu Server 18.04 LTS, dal mirror privato di {{site.data.keyword.cloud_notm}}.
-3. Distribuisci questa macchina virtuale (VM) nel tuo cluster sul gruppo di porte di gestione utilizzando un indirizzo IP portatile privato ordinato in precedenza. Assicurati che la VM sia configurata per puntare ai tuoi server AD/DNS e, facoltativamente, aggiungi la VM al DNS del tuo dominio secondario.
+3. Distribuisci questa VM (Virtual Machine) nel tuo cluster sul gruppo di porte di gestione utilizzando un indirizzo IP portatile privato ordinato in precedenza. Assicurati che la VM sia configurata per puntare ai tuoi server AD/DNS e, facoltativamente, aggiungi la VM al DNS del tuo dominio secondario.
 4. Crea un ID utente di backup non root su questo server e assicurati che tutti i servizi necessari siano configurati e avviati per i trasferimenti di file. Ad esempio, FTP o SSH.
 5. Assicurati che questa VM sia inclusa nel tuo lavoro di backup di gestione Veeam o IBM Spectrum Protect Plus.
 
@@ -47,16 +47,16 @@ VMware richiede che l'ubicazione di backup sia una cartella vuota, quindi pianif
 
 Un corretto backup di tutti i componenti NSX è fondamentale per ripristinare il sistema al suo stato operativo in caso di malfunzionamento. La progettazione richiede di configurare il backup NSX tramite la funzione di backup del gestore NSX. A tale scopo, puoi [configurare il gestore NSX per eseguire regolarmente i backup](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} sul tuo file server. Assicurati che il backup del file server o dei suoi dati sia stato eseguito correttamente e garantisci la rotazione dei vecchi backup NSX.
 
-## Backup basato su immagine delle macchine virtuali di gestione
+## Backup basato su immagine delle VM (Virtual Machine) di gestione
 {: #solution_backingup-image}
 
-Dopo aver distribuito la tua istanza e il servizio IBM Spectrum Protect Plus o il servizio di backup Veeam, configura un lavoro di backup per le tue macchine virtuali di gestione. Pianifica il backup delle seguenti VM con almeno 7 giorni di backup giornalieri:
+Dopo aver distribuito la tua istanza e il servizio IBM Spectrum Protect Plus o il servizio di backup Veeam, configura un lavoro di backup per le tue VM (Virtual Machine) di gestione. Pianifica il backup delle seguenti VM con almeno 7 giorni di backup giornalieri:
 
 * Se presente, VMware SDDC Manager
 * Se presenti, i server Active Directory
 * Server di backup dei file
 
-Pianifica l'assegnazione di un numero sufficiente di licenze Veeam o IBM Spectrum Protect Plus per eseguire il backup di queste macchine virtuali e predisponi almeno 2 TB di archiviazione di backup per le VM.
+Pianifica l'assegnazione di un numero sufficiente di licenze Veeam o IBM Spectrum Protect Plus per eseguire il backup di queste VM (Virtual Machine) e predisponi almeno 2 TB di archiviazione di backup per le VM.
 
 ## Servizi aggiuntivi
 {: #solution_backingup-addons}

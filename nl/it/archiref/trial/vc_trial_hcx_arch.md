@@ -19,7 +19,7 @@ VMware HCX on {{site.data.keyword.cloud}} con Single-node Trial for VMware vCent
 
 {{site.data.keyword.vmwaresolutions_short}} include delle distribuzioni rapide e completamente automatizzate delle configurazioni vCenter Server in {{site.data.keyword.cloud_notm}}. L'offerta Single-node Trial for vCenter Server integra l'infrastruttura in loco e consente ai carichi di lavoro esistenti o futuri di essere eseguiti in {{site.data.keyword.cloud_notm}} senza la conversione. L'offerta utilizza gli stessi strumenti, competenze e processi utilizzati in loco. Per ulteriori informazioni sull'offerta {{site.data.keyword.vmwaresolutions_short}}, consulta [IBM Architecture Center](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture).
 
-Il servizio HCX on {{site.data.keyword.cloud_notm}} unisce le istanze vCenter Server con i data center virtualizzati in loco consentendo la creazione di estensioni di rete trasparenti e la migrazione bidirezionale dei carichi di lavoro. I componenti di HCX on IBM Cloud, distribuiti come macchine virtuali (VM) nel sito di destinazione {{site.data.keyword.cloud_notm}} VMware, consentono di stabilire una connessione con i componenti di HCX on {{site.data.keyword.cloud_notm}} installati nel sito di origine in loco peer.
+Il servizio HCX on {{site.data.keyword.cloud_notm}} unisce le istanze vCenter Server con i data center virtualizzati in loco consentendo la creazione di estensioni di rete trasparenti e la migrazione bidirezionale dei carichi di lavoro. I componenti di HCX on IBM Cloud, distribuiti come VM (Virtual Machine) nel sito di destinazione {{site.data.keyword.cloud_notm}} VMware, consentono di stabilire una connessione con i componenti di HCX on {{site.data.keyword.cloud_notm}} installati nel sito di origine in loco peer.
 
 Figura 1. Architettura HCX
 
@@ -32,7 +32,7 @@ Le seguenti informazioni forniscono la progettazione dell'implementazione del se
 
 {{site.data.keyword.cloud_notm}} integra rapidamente le reti vSphere vCenter in loco nelle distribuzioni {{site.data.keyword.vmwaresolutions_short}}. La rete ibrida estende le reti vSphere vCenter in loco in {{site.data.keyword.cloud_notm}}, supportando la mobilità della VM bidirezionale.
 
-HCX gestisce i processi di codifica e decodifica dell'origine e della destinazione, garantendo una protezione coerente e fornendo l'ammissione per i flussi di lavoro ibridi come la migrazione della macchina virtuale e l'estensione della rete. Questa offerta crea una WAN (Wide Area Network) definita dal software e ottimizzata per aumentare le prestazioni della rete estesa, consentendo delle prestazioni che si avvicinano alla velocità della LAN (local area network). HCX consente il carico di lavoro bidirezionale e la migrazione della politica di sicurezza VMware NSX a {{site.data.keyword.cloud_notm}}, si integra con vSphere vCenter ed è gestito dal client web vSphere.
+HCX gestisce i processi di codifica e decodifica dell'origine e della destinazione, garantendo una protezione coerente e fornendo l'ammissione per i flussi di lavoro ibridi come la migrazione della VM (Virtual Machine) e l'estensione della rete. Questa offerta crea una WAN (Wide Area Network) definita dal software e ottimizzata per aumentare le prestazioni della rete estesa, consentendo delle prestazioni che si avvicinano alla velocità della LAN (local area network). HCX consente il carico di lavoro bidirezionale e la migrazione della politica di sicurezza VMware NSX a {{site.data.keyword.cloud_notm}}, si integra con vSphere vCenter ed è gestito dal client web vSphere.
 
 ### Estensione della rete di livello 2
 {: #vc_trial_hcx_arch-layer-2-extension}
@@ -44,7 +44,7 @@ HCX consente a una condizione vSphere in loco esistente di estendere in modo sic
 * La possibilità di distribuire più di un concentratore di livello 2 standard per ottenere la scalabilità e aumentare la velocità effettiva dal vCenter in loco.
 * Le VM che vengono migrate tramite il gateway cloud e attraverso il livello 2 esteso possono conservare i propri indirizzi IP e MAC.
 
-### Migrazione della macchina virtuale
+### Migrazione della VM (Virtual Machine)
 {: #vc_trial_hcx_arch-vm-mig}
 
 HCX fornisce i seguenti tre metodi di spostamento della VM:
@@ -145,7 +145,7 @@ Le applicazioni dei concentratori di livello 2 (L2C) permettono l'estensione di 
 
 I concentratori di livello 2 hanno le seguenti interfacce:
 
-* **Interfaccia trunk interna** questa interfaccia gestisce il traffico della macchina virtuale in loco per le reti estese utilizzando un'associazione bridge traslazionale a una rete estesa corrispondente in {{site.data.keyword.cloud_notm}}.
+* **Interfaccia trunk interna** questa interfaccia gestisce il traffico della VM (Virtual Machine) in loco per le reti estese utilizzando un'associazione bridge traslazionale a una rete estesa corrispondente in {{site.data.keyword.cloud_notm}}.
 * **Interfaccia uplink** HCX utilizza questa interfaccia per inviare il traffico di sovrapposizione incapsulato a/da {{site.data.keyword.cloud_notm}}. I dati dell'applicazione passano attraverso l'interfaccia uplink.
 
 ### Architettura di distribuzione

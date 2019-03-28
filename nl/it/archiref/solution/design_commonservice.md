@@ -20,7 +20,7 @@ I servizi comuni forniscono i servizi che vengono utilizzati da altri servizi ne
 ## Servizi di identità e accesso
 {: #design_commonservice-identity-access}
 
-In questa progettazione, Microsoft Active Directory (AD) viene utilizzato per la gestione delle identità. La progettazione distribuisce una o due macchine virtuali Windows Active Directory come parte dell'automazione della distribuzione di Cloud Foundation e vCenter Server. vCenter viene configurato per utilizzare l'autenticazione AD.
+In questa progettazione, Microsoft Active Directory (AD) viene utilizzato per la gestione delle identità. La progettazione distribuisce una o due VM (Virtual Machine) Windows Active Directory come parte dell'automazione della distribuzione di Cloud Foundation e vCenter Server. vCenter viene configurato per utilizzare l'autenticazione AD.
 
 ### Microsoft Active Directory
 {: #design_commonservice-msad}

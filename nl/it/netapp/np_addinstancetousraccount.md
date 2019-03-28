@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -25,7 +25,7 @@ Per ulteriori informazioni su come collegare il tuo account solo IaaS al tuo acc
 ## Procedura per migrare le istanze
 {: #np_addinstancetousraccount-procedure}
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** nel riquadro di navigazione a sinistra.
 2. Dal banner della console, fai clic sull'icona del tuo account utente e quindi sul campo **Account** per selezionare l'account utente in cui vuoi migrare l'istanza.
 3. Nella tabella **Istanze di NetApp ONTAP Select**, trova l'istanza precedente alla V2.5.
 4. Nella colonna **Azioni**, fai clic sull'icona del menu di overflow e seleziona **Migra istanza nell'account**.
@@ -35,7 +35,7 @@ Per ulteriori informazioni su come collegare il tuo account solo IaaS al tuo acc
 {: #np_addinstancetousraccount-results}
 
 1. Viene visualizzata una notifica della console che indica che la richiesta di migrazione dell'istanza all'account {{site.data.keyword.cloud_notm}} specificato è stata accettata.
-2. Al termine della migrazione dell'istanza, questa viene visualizzata nella pagina **Istanze distribuite** nell'account a cui è stata migrata. L'istanza migrata non viene più visualizzata nell'account originale dal quale è stata migrata.
+2. Al termine della migrazione dell'istanza, questa viene visualizzata nella pagina **Risorse** nell'account a cui è stata migrata. L'istanza migrata non viene più visualizzata nell'account originale dal quale è stata migrata.
 
 ## Link correlati
 {: #np_addinstancetousraccount-related}

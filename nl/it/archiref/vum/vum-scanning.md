@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
 # Scansione e revisione
 {: #vum-scanning}
 
-Quando esegui la scansione di host, macchine virtuali (VM) e dispositivi virtuali, li valuti rispetto alle baseline e ai gruppi di baseline per determinarne il livello di conformità. Gli oggetti di inventario vengono sottoposti a scansione e i risultati vengono esaminati per determinare la loro conformità alle baseline e ai gruppi di baseline. I risultati della scansione possono essere filtrati mediante ricerca di testo, selezione del gruppo, selezione della baseline e selezione dello stato di conformità. Puoi avviare le seguenti scansioni:
+Quando esegui la scansione di host, VM (Virtual Machine) e dispositivi virtuali, li valuti rispetto alle baseline e ai gruppi di baseline per determinarne il livello di conformità. Gli oggetti di inventario vengono sottoposti a scansione e i risultati vengono esaminati per determinare la loro conformità alle baseline e ai gruppi di baseline. I risultati della scansione possono essere filtrati mediante ricerca di testo, selezione del gruppo, selezione della baseline e selezione dello stato di conformità. Puoi avviare le seguenti scansioni:
 *	**Avviare manualmente una scansione di host vSphere ESXi** - Puoi eseguire la scansione degli host vSphere ESXi nell'inventario di vSphere in base alle baseline e ai gruppi di baseline collegati.
-*	**Avviare manualmente una scansione di macchine virtuali e dispositivi virtuali** - Puoi eseguire la scansione di macchine e dispositivi virtuali nell'inventario di vSphere in base alle baseline e ai gruppi di baseline collegati.
+*	**Avviare manualmente una scansione di VM (Virtual Machine) e dispositivi virtuali** - Puoi eseguire la scansione di macchine e dispositivi virtuali nell'inventario di vSphere in base alle baseline e ai gruppi di baseline collegati.
 *	**Avviare manualmente una scansione di un oggetto contenitore** - Avvia una scansione simultanea di host, VM e dispositivi virtuali, eseguendo la scansione di un oggetto contenitore che sia un data center o una cartella del data center.
 *	**Pianificare una scansione** - Puoi configurare il client web vSphere per eseguire la scansione di VM, dispositivi virtuali e host ESXi in momenti specifici o a intervalli appropriati.
 
@@ -26,17 +26,17 @@ Quando esegui la scansione di host, macchine virtuali (VM) e dispositivi virtual
 
   I file di log di VUM si trovano nel seguente percorso: _/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
 
-## Avvio manuale di una scansione di macchine virtuali e dispositivi virtuali
+## Avvio manuale di una scansione di VM (Virtual Machine) e dispositivi virtuali
 {: #vum-scanning-scan-vm-va}
 
 Puoi eseguire la scansione di VM e dispositivi virtuali nell'inventario di vSphere in base alle baseline e ai gruppi di baseline collegati. Le macchine e i dispositivi virtuali selezionati vengono scansionati rispetto alle baseline collegate, a seconda delle opzioni che selezioni. Vengono scansionati tutti gli oggetti figlio, quindi più grande è l'infrastruttura virtuale e più in alto nella gerarchia di oggetti di cui avvii la scansione, più tempo impiega la scansione e più accurata è la vista di conformità.
 
 1.	Utilizzando il client web vSphere, seleziona **Home** > **VMs and Templates**.
-2.	Fai clic con il tasto destro su una _macchina virtuale_, un _dispositivo virtuale_ o una _cartella di macchine e dispositivi virtuali_ e fai clic su **Scan for Updates**.
+2.	Fai clic con il tasto destro su una _VM (Virtual Machine)_, un _dispositivo virtuale_ o una _cartella di macchine e dispositivi virtuali_ e fai clic su **Scan for Updates**.
 3.	Seleziona i tipi di aggiornamenti da sottoporre a scansione. Le opzioni sono: _aggiornamenti dispositivo virtuale, aggiornamenti hardware VM_ e _aggiornamenti VMware Tools_.
 4.	Fai clic su **Scan**.
 
-## Avvio manuale di una scansione di un oggetto contenitore
+##	Avvio manuale di una scansione di un oggetto contenitore
 {: #vum-scanning-scan-container}
 
 Avvia una scansione simultanea di host, VM e dispositivi virtuali, eseguendo la scansione di un oggetto contenitore che sia un data center o una cartella del data center.
@@ -45,7 +45,7 @@ Avvia una scansione simultanea di host, VM e dispositivi virtuali, eseguendo la 
 3.	Seleziona i tipi di aggiornamenti da sottoporre a scansione. Le opzioni sono: _aggiornamenti dispositivo virtuale, aggiornamenti hardware VM_ e _aggiornamenti VMware Tools_.
 4.	Fai clic su **Scan**.
 
-## Pianificazione di una scansione
+##	Pianificazione di una scansione
 {: #vum-scanning-schedule}
 
 Puoi configurare il client web vSphere per eseguire la scansione di VM, dispositivi virtuali e host vSphere ESXi in momenti specifici o a intervalli appropriati.

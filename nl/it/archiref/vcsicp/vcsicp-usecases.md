@@ -31,7 +31,7 @@ VMware Hybrid Cloud Extension Services crea un'interconnettività debolmente acc
 - **Ottimizzazione della rete** – seleziona la connettività migliore e allarga in modo efficace la connessione in modo che il traffico di rete venga spostato il più velocemente possibile.
 - **Deduplicazione dei dati** - può essere raggiunta la riduzione del 50% del traffico di rete.
 - **Instradamento intelligente** - quando un carico di lavoro viene spostato, l'instradamento di prossimità può modificare il percorso di rete (ossia il gateway) in modo che il traffico di rete utilizzi il gateway del sito di destinazione e non “torni” al sito di origine.
-- **Migrazione senza tempo di inattività** – utilizza vMotion per spostare una macchina virtuale (VM) in esecuzione verso il (o indietro dal) cloud.
+- **Migrazione senza tempo di inattività** – utilizza vMotion per spostare una VM (Virtual Machine) in esecuzione verso il (o indietro dal) cloud.
 - **Migrazione pianificata** – puoi replicare qualsiasi numero di VM al sito di destinazione e quindi eseguire l'attivazione su tale sito a un momento designato per sostituire i sistemi che sono eseguiti sul sito di origine.
 - **Migrazione delle politiche di sicurezza** - se viene utilizzato NSX in loco, tutte le politiche di sicurezza, i firewall e così via, vengono spostati insieme al carico di lavoro.
 
@@ -40,7 +40,7 @@ Utilizzando questa soluzione, Acme Skateboards ha migrato correttamente i propri
 ## Distribuzione architettura ibrida
 {: #vcsicp-usecases-hybrid-archi-deployment}
 
-Quelli della Acme Skateboards vogliono distribuire un'architettura ibrida su {{site.data.keyword.cloud_notm}} costituita da vCenter Server e {{site.data.keyword.icpfull_notm}}, per il proprio percorso di modernizzazione dell'applicazione. I loro requisiti sono quelli di eseguire i loro database su macchine virtuali, le applicazioni e i servizi web nei contenitori e utilizzare una serie comune di strumenti per la gestione della rete e della sicurezza.
+Quelli della Acme Skateboards vogliono distribuire un'architettura ibrida su {{site.data.keyword.cloud_notm}} costituita da vCenter Server e {{site.data.keyword.icpfull_notm}}, per il proprio percorso di modernizzazione dell'applicazione. I loro requisiti sono quelli di eseguire i loro database su VM (Virtual Machine), le applicazioni e i servizi web nei contenitori e utilizzare una serie comune di strumenti per la gestione della rete e della sicurezza.
 
 Figura 2. Applicazione ibrida di Acme Skateboards
 

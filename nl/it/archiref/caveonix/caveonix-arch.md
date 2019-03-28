@@ -17,7 +17,7 @@ Figura 1. Architettura per Caveonix RiskForesight
 ![Diagramma dell'architettura](caveonix-architecture.svg)
 
 L'architettura di Caveonix RiskForesight ha quattro livelli:
--	Detect - il modulo Detect è completamente integrato nello stack VMware e in molti cloud pubblici. Utilizzando i plugin, RiskForesight utilizza vCenter e NSX Manager come repository di asset, raccogliendo dettagli sulle macchine virtuali (VM, Virtual machine), sulle reti e sui flussi di rete. I raccoglitori remoti scansionano i carichi di lavoro, i sistemi operativi e le applicazioni per consentire una visualizzazione “full-stack” di conformità e vulnerabilità.
+-	Detect - il modulo Detect è completamente integrato nello stack VMware e in molti cloud pubblici. Utilizzando i plugin, RiskForesight utilizza vCenter e NSX Manager come repository di asset, raccogliendo dettagli sulle VM (Virtual Machine), sulle reti e sui flussi di rete. I raccoglitori remoti scansionano i carichi di lavoro, i sistemi operativi e le applicazioni per consentire una visualizzazione “full-stack” di conformità e vulnerabilità.
 -	Predict - il modulo Predict utilizza l'analisi per identificare gli asset rischiosi e i passi di attenuazione con i modelli di riduzione dei rischi per migliorare la posizione che hanno per quanto riguarda il rischio.
 -	Act - il modulo Act implementa i passi di attenuazione in base alla priorità indicata e alle azioni protettive automatizzate per fornire una protezione del carico di lavoro proattiva contro i rischi imputabili a minacce informatiche.
     - RMCP – l'RMCP (Risk Management Control Plane) fornisce una protezione continua e proattiva dei carichi di lavoro monitorando il full-stack all'interno di data center cloud gestiti, pubblici e privati.
@@ -30,7 +30,7 @@ L'architettura di Caveonix RiskForesight ha quattro livelli:
   - Grafici, metriche e filtri facili da usare per sviluppare un'analisi approfondita nei rischi identificati.
   - Drill-down interattivi per un maggiore dettaglio delle informazioni sui flussi di dati delle applicazioni, le vulnerabilità o i problemi di configurazione nelle ubicazioni, nelle organizzazioni, nelle applicazioni e negli asset.
   - La capacità all'utente di sviluppare una conoscenza completa dello stack operativo che include infrastruttura, piattaforma, applicazione e dati.
-  - La capacità di visualizzare e implementare politiche per la segmentazione di reti, macchine virtuali o applicazioni nel cloud ibrido.
+  - La capacità di visualizzare e implementare politiche per la segmentazione di reti, VM (Virtual Machine) o applicazioni nel cloud ibrido.
 
 ## Zone
 {: #caveonix-arch-zones}

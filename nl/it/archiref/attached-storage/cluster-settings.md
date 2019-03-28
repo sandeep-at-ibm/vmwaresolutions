@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-28"
 
 ---
 
@@ -21,7 +21,7 @@ Due funzioni principali sono abilitate quando attivi vSphere DRS su un cluster: 
 ### Bilanciamento del carico
 {: #cluster-settings-load-balance}
 
-Con il bilanciamento del carico, la distribuzione e l'utilizzo delle risorse di CPU e memoria per tutti gli host e le macchine virtuali (VM, Virtual Machine) nel cluster sono monitorati costantemente. DRS confronta queste metriche a un utilizzo delle risorse ideale, dati gli attributi dei pool di risorse e delle VM del cluster e la domanda attuale. Completa o suggerisce quindi le migrazioni di VM come necessario.
+Con il bilanciamento del carico, la distribuzione e l'utilizzo delle risorse di CPU e memoria per tutti gli host e le VM (Virtual Machine) nel cluster sono monitorati costantemente. DRS confronta queste metriche a un utilizzo delle risorse ideale, dati gli attributi dei pool di risorse e delle VM del cluster e la domanda attuale. Completa o suggerisce quindi le migrazioni di VM come necessario.
 
 Quando una VM viene accesa per la prima volta nel cluster, DRS prova a mantenere un corretto bilanciamento del carico posizionando la VM su un host appropriato oppure formulando un suggerimento. Le impostazioni di posizionamento o suggerimento sono impostate nella sezione DRS Automation delle impostazioni del cluster.
 
@@ -89,7 +89,7 @@ Tabella 2. Impostazioni delle condizioni di errore e della risposta delle VM per
 Per ulteriori informazioni sulla configurazione di queste impostazioni nel client web vSphere, vedi [Configure Virtual Machine Responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html).
 
 #### Admission Control
-{: #cluster-settings-admission-control}
+{: #cluster-settings-admin-control}
 
 vCenter Server utilizza la funzione Admission Control (Controllo di ammissione) per garantire che siano disponibili risorse sufficienti in un cluster per fornire la protezione da failover e per garantire che le prenotazioni di risorse VM siano rispettate. In questa progettazione, la capacità di failover è riservata specificando una percentuale delle risorse del cluster. La capacità di failover definita è impostata sul 25% della CPU e il 25% della memoria.
 

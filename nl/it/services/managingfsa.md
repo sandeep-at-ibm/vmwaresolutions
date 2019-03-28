@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -27,9 +27,7 @@ Per gestire il servizio FortiGate Security Appliance on {{site.data.keyword.clou
 * Accedi al client web FortiOS utilizzando le credenziali che puoi trovare nella pagina dei dettagli del servizio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}.
 * Accedi alla console tramite una connessione SSH utilizzando le credenziali che puoi trovare nella pagina dei dettagli del servizio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}.
 
-Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Link correlati
 {: #managingfsa-related}

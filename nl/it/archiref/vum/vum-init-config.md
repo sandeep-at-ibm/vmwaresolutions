@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-02-15"
 
 L'automazione di IC4VS configura il VCSA con un gateway predefinito impostato sul BCR (Backend Customer Router) di {{site.data.keyword.cloud}}. Tuttavia, non esiste una rotta a Internet tramite il BCR. La rotta standard a Internet dall'istanza VMware vCenter Server on {{site.data.keyword.cloud_notm}} avviene tramite l'ESG di gestione. Poiché non è consigliabile modificare la configurazione di VCSA o dell'ESG di gestione, è più opportuno implementare un server proxy sulla sottorete del cliente per abilitare VUM.
 
-Questo approccio significa che non devi riconfigurare il VCSA o l'ESG di gestione, tuttavia, è necessario installare una piccola macchina virtuale (VM) o un piccolo dispositivo. Un server proxy è un sistema che si trova tra due dispositivi endpoint e funge da dispositivo intermedio. In questo caso, si trova tra VUM e i server di aggiornamento presso VMware.
+Questo approccio significa che non devi riconfigurare il VCSA o l'ESG di gestione, tuttavia, è necessario installare una piccola VM (Virtual Machine) o un piccolo dispositivo. Un server proxy è un sistema che si trova tra due dispositivi endpoint e funge da dispositivo intermedio. In questo caso, si trova tra VUM e i server di aggiornamento presso VMware.
 
 Quando VUM richiede una risorsa dal server di aggiornamento su VMware, la richiesta viene prima inviata al server proxy e il server proxy invia quindi la richiesta al server di aggiornamento. Dopo che il server proxy ottiene la risorsa, la invia a VUM. Un server proxy può essere utilizzato per facilitare la sicurezza, i controlli di amministrazione e servizi di cache.
 
@@ -37,7 +37,7 @@ Tabella 1. Valori di distribuzione
 | Indirizzo | proxy ip | Deve essere utilizzato un indirizzo IP di riserva dalla sottorete portatile privata del cliente assegnata durante il processo di provisioning. Solo due indirizzi IP vengono riservati su questa sottorete; uno per il BCR e l'altro per il customer-esg
 | Maschera di rete | 255.255.255.192 | |
 | Gateway| ip uplink privato customer-nsx-edge | Questa è l'impostazione predefinita del gateway per il server proxy, che è l'indirizzo di uplink privato di customer-nsx-edge. L'indirizzo IP può essere trovato riesaminando la scheda **Settings** per **customer-nsx-edge**. |
-| Server DNS | ip AD/DNS | Questo indirizzo IP può essere trovato nella pagina dell'istanza nella console di {{site.data.keyword.vmwaresolutions_short}}, la pagina **Deployed Instances**. |
+| Server DNS | ip AD/DNS | Questo indirizzo IP può essere trovato nella pagina dell'istanza nella console {{site.data.keyword.vmwaresolutions_short}} **Risorse**. |
 | IP BCR | ip bcr | Questo è l'indirizzo IP del BCR (Backend Customer Router) di {{site.data.keyword.cloud_notm}} ed è il gateway per 10.0.0.0/8 e 161.26.0.0/16. Questo indirizzo viene utilizzato in una rotta statica nel server proxy in modo che possa raggiungere il VCSA e il server AD/DNS. |
 
 ## Configurazione di NSX

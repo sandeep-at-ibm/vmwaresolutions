@@ -11,7 +11,7 @@ lastupdated: "2019-02-14"
 # Distribuzione tutto-in-uno
 {: #caveonix-allinone}
 
-Una distribuzione e una configurazione automatizzate di una singola macchina virtuale (VM, Virtual Machine) che ospita tutti i componenti dell'applicazione RiskForesight. Questo modello di distribuzione è adatto per le piccole distribuzioni, fino a 100 asset con 7-30 giorni di indicizzazione. I dettagli della VM “tutto-in-uno” sono visualizzati nella seguente tabella:
+Una distribuzione e una configurazione automatizzate di una singola VM (Virtual Machine) che ospita tutti i componenti dell'applicazione RiskForesight. Questo modello di distribuzione è adatto per le piccole distribuzioni, fino a 100 asset con 7-30 giorni di indicizzazione. I dettagli della VM “tutto-in-uno” sono visualizzati nella seguente tabella:
 
 Tabella 1. Parametri tutto-in-uno
 

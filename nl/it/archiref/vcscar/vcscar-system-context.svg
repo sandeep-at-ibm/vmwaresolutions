@@ -38,7 +38,7 @@
   <g font-family="Helvetica" font-size="8px" text-anchor="middle">
    <text x="674.25" y="358.25">ACME</text>
    <text x="674.25" y="368.25">Database</text>
-   <text x="674.25" y="378.25">Macchina virtuale</text>
+   <text x="674.25" y="378.25">VM (Virtual Machine)</text>
   </g>
   <g pointer-events="none">
    <g stroke="#999" stroke-miterlimit="10">

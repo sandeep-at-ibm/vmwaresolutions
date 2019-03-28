@@ -20,12 +20,12 @@ lastupdated: "2019-02-15"
 ## Indirizzo MAC duplicato
 {: #hcx-archi-trbl-dupl-mac-addr}
 
-Dopo la migrazione, potrebbero verificarsi dei problemi di comunicazione tra le tue macchine virtuali. Quando l'indirizzo MAC viene conservato durante una migrazione, potrebbe essere inavvertitamente creato un indirizzo MAC duplicato.
+Dopo la migrazione, potrebbero verificarsi dei problemi di comunicazione tra le tue VM (Virtual Machine). Quando l'indirizzo MAC viene conservato durante una migrazione, potrebbe essere inavvertitamente creato un indirizzo MAC duplicato.
 
-L'indirizzo MAC per la macchina virtuale migrata può essere modificato per risolvere questo problema.
+L'indirizzo MAC per la VM (Virtual Machine) migrata può essere modificato per risolvere questo problema.
 
-1. Nel client vSphere, spegni la macchina virtuale.
-2. Nell'inventario, fai clic con il tasto destro sulla macchina virtuale e scegli **Edit Settings** dal menu.
+1. Nel client vSphere, spegni la VM (Virtual Machine).
+2. Nell'inventario, fai clic con il tasto destro sulla VM (Virtual Machine) e scegli **Edit Settings** dal menu.
 3. Sulla scheda **Virtual Hardware**, espandi l'adattatore di rete.
 4. Accanto alla casella di testo MAC Address, scegli **Manual** dal menu.
 5. Specifica un indirizzo MAC univoco e fai clic su **OK**.
@@ -34,7 +34,7 @@ L'indirizzo MAC per la macchina virtuale migrata può essere modificato per riso
 ## Consumo elevato di risorse host
 {: #hcx-archi-trbl-high-host-resource}
 
-In rari casi, se tutte le applicazioni virtuali del servizio risiedono sullo stesso host, le macchine virtuali del servizio Hybrid Cloud Services possono esaurire le risorse disco e la CPU dell'host.
+In rari casi, se tutte le applicazioni virtuali del servizio risiedono sullo stesso host, le VM (Virtual Machine) del servizio Hybrid Cloud Services possono esaurire le risorse disco e la CPU dell'host.
 
 Alcuni utenti hanno riscontrato questo problema quando tutte le applicazioni virtuali sono state installate su un host fisico. Data questa configurazione, le prestazioni si degradano quando si verificano le seguenti cose contemporaneamente:
 * La rete ha un'elevata latenza o una perdita di pacchetti o entrambe. La migrazione o il trasporto dei dati è lento quando utilizzi internet pubblico o una rete occupata.

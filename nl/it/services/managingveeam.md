@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
 # Gestione di Veeam on IBM Cloud
 {: #managingveeam}
 
-Una volta che il servizio è stato distribuito nella tua istanza, puoi accedere alla console Veeam utilizzando RDP per gestire il backup e il ripristino di tutte le macchine virtuali nel tuo ambiente, compreso il backup e il ripristino dei componenti di gestione. Puoi anche aggiornare il servizio scaricando e installando gli aggiornamenti di Veeam dal sito web Veeam.
+Una volta che il servizio è stato distribuito nella tua istanza, puoi accedere alla console Veeam utilizzando RDP per gestire il backup e il ripristino di tutte le VM (Virtual Machine) nel tuo ambiente, compreso il backup e il ripristino dei componenti di gestione. Puoi anche aggiornare il servizio scaricando e installando gli aggiornamenti di Veeam dal sito web Veeam.
 
 Per le istanze che sono state distribuite in release precedenti alla V1.8, se vuoi utilizzare il servizio Veeam on {{site.data.keyword.cloud}}, devi sostituire la VSI Veeam esistente nelle istanze. Per ulteriori informazioni, vedi la sezione _Sostituzione della VSI Veeam delle istanze precedenti alla V1.8 con Veeam on IBM Cloud_.
 
@@ -25,9 +25,7 @@ Per gestire il servizio Veeam on {{site.data.keyword.cloud_notm}}, accedi alla c
 
 Puoi trovare l'indirizzo IP di Windows IP e le credenziali di amministratore nella pagina dei dettagli del servizio Veeam on {{site.data.keyword.cloud_notm}}.
 
-Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Backup e ripristino dei componenti di gestione per le istanze in cui è installato Veeam on IBM Cloud
 {: #managing-veeam-backup-and-replication}
@@ -76,7 +74,7 @@ A causa di questa modifica, la precedente scheda **Backup e ripristino** nella p
 Devi creare un ticket di supporto {{site.data.keyword.cloud_notm}} per ottenere assistenza con un ripristino. Inoltre, la licenza della VSI Veeam nelle istanze precedenti alla V1.8 è scaduta il 14 ottobre 2017. Pertanto, devi sostituire la VSI Veeam precedente con il nuovo servizio Veeam on {{site.data.keyword.cloud_notm}}.
 
 Completa la seguente procedura:
-1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra e seleziona l'istanza di destinazione.
+1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** nel riquadro di navigazione a sinistra e seleziona l'istanza di destinazione.
 2. Nella pagina dei dettagli dell'istanza, fai clic sulla scheda **Aggiorna e applica patch**. Assicurati di aver aggiornato l'istanza alla release della V1.8.
 3. Fai clic sulla scheda **Servizi**.
 4. Nella scheda **Aggiungi servizi**, installa il servizio Veeam on {{site.data.keyword.cloud_notm}}.

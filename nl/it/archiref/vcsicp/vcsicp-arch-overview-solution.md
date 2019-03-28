@@ -20,7 +20,7 @@ Figura 1. Diagramma dell'ambiente vCenter Server
 ### Controller servizio piattaforma
 {: #vcsicp-arch-overview-solution-psc}
 
-La distribuzione vCenter Server utilizza un solo controller di servizi della piattaforma esterno installato su una sottorete portatile nella VLAN privata associata alle macchine virtuali (VM) di gestione. Il suo gateway predefinito è impostato sul BCR (backend customer router).
+La distribuzione vCenter Server utilizza un solo controller di servizi della piattaforma esterno installato su una sottorete portatile nella VLAN privata associata alle VM (Virtual Machine) di gestione. Il suo gateway predefinito è impostato sul BCR (backend customer router).
 
 ### vCenter Server
 {: #vcsicp-arch-overview-solution-vcs}
@@ -101,7 +101,7 @@ Un nodo Controllo vulnerabilità è un nodo facoltativo utilizzato per l'esecuzi
 
 Le seguenti specifiche di VM sono richieste per un'istanza {{site.data.keyword.icpfull_notm}} ad elevata disponibilità:
 
-Tabella 3. Specifiche macchina virtuale {{site.data.keyword.icpfull_notm}}
+Tabella 3. Specifiche VM (Virtual Machine) {{site.data.keyword.icpfull_notm}}
 
 Nodo | 	Istanze	| IP	| CPU	| RAM (GB)	| DISK (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -114,7 +114,7 @@ Di lavoro	| 3-6	| IP (x3)	|4-8	|4	|150
 
 CAM richiede che i nodi di lavoro abbiano una configurazione di vCPU e memoria superiore.
 
-Tabella 4. Specifiche macchina virtuale {{site.data.keyword.icpfull_notm}}
+Tabella 4. Specifiche VM (Virtual Machine) {{site.data.keyword.icpfull_notm}}
 
 Nodo | 	Istanze	| IP	| CPU	| RAM (GB)	| DISK (GB)
 :-----|------------:|:----|----:|----------:|----------:|

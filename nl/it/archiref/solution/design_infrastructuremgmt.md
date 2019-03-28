@@ -19,7 +19,7 @@ La gestione dell'infrastruttura si riferisce ai componenti che stanno gestendo l
 * vCenter Server è la piattaforma centralizzata per la gestione degli ambienti vSphere ed è uno dei componenti fondamentali di questa soluzione.
 * Il PSC viene utilizzato in questa soluzione per fornire una serie di servizi dell'infrastruttura tra cui VMware vCenter Single Sign On, il servizio di licenza, il servizio di ricerca e VMware certificate authority.
 
-Le istanze PSC e le istanze vCenter Server sono macchine virtuali (VM) separate.
+Le istanze PSC e le istanze vCenter Server sono VM (Virtual Machine) separate.
 
 ## Progettazione di PSC
 {: #design_infrastructuremgmt-psc}
@@ -128,7 +128,7 @@ La seguente procedura descrive l'ordine degli eventi quando si ordina un'istanza
 3.  Se applicabile, ordine della VSI (Virtual Server Instance) di Microsoft Windows da utilizzare come controller di dominio Active Directory.
 4.  Convalida della rete e dell'hardware distribuito.
 5.  Se applicabile, configurazione iniziale di vSAN a singolo nodo.
-6.  Se applicabile, distribuzione e configurazione di due macchine virtuali Microsoft Windows da utilizzare come controller di dominio Active Directory.
+6.  Se applicabile, distribuzione e configurazione di due VM (Virtual Machine) Microsoft Windows da utilizzare come controller di dominio Active Directory.
 7.  Distribuzione e configurazione di vCenter, PSC e NSX.
 8.  Clustering dei nodi ESXi rimanenti, espansione di vSAN (se applicabile) e configurazione dei componenti NSX (VTEP).
 9.  Distribuzione della VM SDDC Manager di VMware Cloud Foundation, se applicabile, e della VSI IBM CloudDriver.

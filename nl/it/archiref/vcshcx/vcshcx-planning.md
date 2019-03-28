@@ -4,22 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
 # Pianificazione pre-distribuzione
 {: #vcshcx-planning}
 
-Molto del tempo impiegato nella distribuzione HCX è in fase pre-distribuzione.
-Mentre è normale che i progetti di migrazione dei sistemi informatici impieghino molti mesi e
-anche anni, HCX consente di iniziare immediatamente le migrazioni e la connettività di rete al cloud subito dopo
-la distribuzione. Poiché la distribuzione di HCX per un cliente a livello aziendale di norma coinvolge team di sicurezza, rete, archiviazione e infrastruttura vSphere, ha senso coinvolgere tali team nel modello di verifica (POC, Proof Of Concept), se possibile. Una gestione efficace del progetto e un coinvolgimento in fase iniziale delle parti interessate è di importanza critica per garantire l'ottenimento della velocità di distribuzione e operativa di HCX.
+Molto del tempo impiegato nella distribuzione HCX è in fase pre-distribuzione. Mentre è normale che il completamento dei progetti di migrazione dei sistemi informatici richieda mesi e anche anni, HCX consente un'esecuzione della migrazione in tempi molto brevi e un avvio immediato della connettività di rete al cloud dopo la distribuzione.
+
+Poiché la distribuzione di HCX per un cliente a livello aziendale di norma coinvolge team di sicurezza, rete, archiviazione e infrastruttura vSphere, ha senso coinvolgere tali team nel modello di verifica (POC, Proof Of Concept), se possibile. Una gestione efficace del progetto e un coinvolgimento in fase iniziale delle parti interessate è di importanza critica per garantire l'ottenimento della velocità di distribuzione e operativa di HCX.
 
 ## Come evitare la paralisi dell'analisi
 {: #vcshcx-planning-avoiding}
 
-Molti degli ostacoli e buona parte del tempo necessario per la migrazione di una macchina virtuale (VM; Virtual Machine) o di un gruppo di VM sono da imputare alla necessità di modificare parti dell'ambiente applicativo, alla progettazione di tali modifiche e alla pianificazione del tempo di inattività necessario per apportare tali modifiche. Dopo che le modifiche sono state apportate, diventa difficile ripristinare lo stato ad esse antecedente, contribuendo ulteriormente alla paralisi dell'analisi. Provare a cogliere tutti gli aspetti della migrazione, coordinando i diversi team e cambiando le parti interessate più importanti nel tempo necessario per finalizzare il piano, può ritardare o forzare l'avanzamento del progetto.
+Molti degli ostacoli e buona parte del tempo necessario per la migrazione di una VM (Virtual Machine) o di un gruppo di VM sono da imputare alla necessità di modificare parti dell'ambiente applicativo, alla progettazione di tali modifiche e alla pianificazione del tempo di inattività necessario per apportare tali modifiche. Dopo che le modifiche sono state apportate, diventa difficile ripristinare lo stato ad esse antecedente, contribuendo ulteriormente alla paralisi dell'analisi. Provare a cogliere tutti gli aspetti della migrazione, coordinando i diversi team e cambiando le parti interessate più importanti può ritardare il progetto.
 
 HCX consente la migrazione tra istanze vSphere di una VM o di un gruppo di VM che
 rappresenta un'applicazione composita parziale o completa, senza alcuna
@@ -32,10 +31,9 @@ riportare le VM dove si trovavano o riestendere le reti. Ciò rende non necessar
 I componenti di estensione della rete della flotta HCX sono molto stabili. Ponendo il caso di uno
 specifico cliente con più di 20 VLAN estese nell'ambito della VLAN {{site.data.keyword.cloud}} da 1 Gbps condivisa con altro traffico e tunnel di migrazione HCX, non si rilevano problemi applicativi da attribuire alla rete.
 I collegamenti di rete sono attivi per più di 6 mesi, in questo modo.
-Sono state aggiunte e rimosse ulteriori reti estese senza alcun problema.
-Anche scegliere un {{site.data.keyword.CloudDataCent_notm}} in stretta prossimità (< 6ms di latenza per questo specifico cliente)
-contribuisce alla stabilità della rete, in un contesto in cui quest'ultima è estesa. Lasciare le reti estese attive a lungo termine non dovrebbe essere un fattore negativo nella tua progettazione, visto che disponi di una larghezza di banda sufficiente e di una latenza abbastanza bassa per le tue applicazioni.
 
+Sono state aggiunte e rimosse ulteriori reti estese senza alcun problema. Anche scegliere un {{site.data.keyword.CloudDataCent_notm}} in stretta prossimità (< 6ms di latenza per questo specifico cliente)
+contribuisce alla stabilità della rete, in un contesto in cui quest'ultima è estesa. Lasciare le reti estese attive a lungo termine non dovrebbe essere un fattore negativo nella tua progettazione, visto che disponi di una larghezza di banda sufficiente e di una latenza abbastanza bassa per le tue applicazioni.
 
 ## Ciclo di vita della migrazione
 {: #vcshcx-planning-mig-lifecycle}
@@ -45,17 +43,15 @@ Le seguenti sezioni descrivono le fasi in un tipico ciclo di vita di migrazione 
 ## Inventario vSphere
 {: #vcshcx-planning-vsphere-planning}
 
-- Utilizza un'applicazione come [RVTOOLS](https://www.robware.net/rvtools/)
-per eseguire il dump dell'inventario del(i) vCenter di origine in formato foglio di calcolo.
-- Valutazione non dettagliata delle VM in un'applicazione da migrare.
-Una valutazione di questo tipo implica una comprensione delle VM che partecipano in un'applicazione senza però scendere nei dettagli.
-- Se intendi migrare molte VM e la larghezza di banda di rete è limitata tra i siti di origine e cloud, raggruppa ulteriormente le VM in base alla VLAN o alla VXLAN, se NSX viene utilizzato all'origine. Ciò consente un piano di migrazione HCX a cascata in cui i gruppi di VM, in base alla VLAN, vengono migrati e le reti L2 su cui si trovano vengono estese solo fino al punto di evacuazione delle VLAN. Ciò significa che per il gruppo iniziale di reti estese L2 correlate è possibile annullare l'estensione solo quando la progettazione di rete lato cloud è finalizzata e distribuita. Annullare l'estensione comporta il passaggio (swing) dello specifico traffico VXLAN in modo che venga ora instradato tramite l'infrastruttura NSX dell'istanza cloud.
+- Valutazione non dettagliata delle VM in un'applicazione da migrare. Una valutazione di questo tipo implica una comprensione delle VM che partecipano in un'applicazione senza però scendere nei dettagli.
+- Se intendi migrare molte VM e la larghezza di banda di rete è limitata tra i siti di origine e cloud, raggruppa ulteriormente le VM in base alla VLAN o alla VXLAN, se NSX viene utilizzato all'origine. Ciò consente un piano di migrazione HCX a cascata in cui i gruppi di VM, in base alla VLAN, vengono migrati e le reti L2 su cui si trovano vengono estese solo fino al punto di rilascio delle VLAN.
 
+Ciò significa che per il gruppo iniziale di reti estese L2 correlate è possibile annullare l'estensione solo quando la progettazione di rete lato cloud è finalizzata e distribuita. Annullare l'estensione comporta il passaggio (swing) dello specifico traffico VXLAN in modo che venga ora instradato tramite l'infrastruttura NSX dell'istanza cloud.
 
 ## Configurazione della rete base di riferimento
 {: #vcshcx-planning-baseline-net-config}
 
-Crea una rete di perimetro con protezione avanzata nell'istanza vSphere lato cloud. Ciò di norma consiste in un dispositivo Edge o DLR NSX. Se utilizzi l'instradamento di prossimità HCX, non è necessario creare alcuna regola del firewall o topologia di uplink poiché è un'operazione che può essere completata in un secondo momento o contemporaneamente senza alcuna ripercussione sul traffico L2 esteso.
+Crea una rete di perimetro protetta nell'istanza vSphere lato cloud. Ciò di norma consiste in un dispositivo Edge o DLR NSX. Se utilizzi l'instradamento di prossimità HCX, non è necessario creare alcuna regola del firewall o topologia di uplink poiché è un'operazione che può essere completata in un secondo momento o contemporaneamente senza alcuna ripercussione sul traffico L2 esteso.
 
 ## 	Estensione di rete
 {: #vcshcx-planning-net-extension}
@@ -71,10 +67,8 @@ di migrazione in blocco per stabilire una velocità di trasferimento base di rif
 ## Migrazione di applicazioni non di produzione
 {: #vcshcx-planning-mig-non-prod-apps}
 
-A questo punto, la migrazione delle VM inizia con i cicli pianificati di VM meno
-critiche. Sviluppo, test e così via utilizzano la connettività internet per la migrazione
+A questo punto, la migrazione delle VM inizia con le fasi pianificate di VM meno critiche. Sviluppo, test e così via utilizzano la connettività internet per la migrazione
 e il traffico L2 esteso.
-
 
 ## La progettazione e l'implementazione della rete cloud inizia
 {: #vcshcx-planning-cloud-net-begins}

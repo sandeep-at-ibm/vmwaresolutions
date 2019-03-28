@@ -4,22 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
 # Passo 4 - Impostazione dell'applicazione
 {: #caveonix-step4}
 
-Dopo che le macchine virtuali (VM, virtual machine) sono state distribuite e i componenti dell'applicazione sono stati installati, la soluzione Caveonix RiskForesight è disponibile per essere impostata per il provider di servizi e il primo tenant o la prima organizzazione.
+Dopo che le VM (Virtual Machine) sono state distribuite e i componenti dell'applicazione sono stati installati, la soluzione Caveonix RiskForesight è disponibile per essere impostata per il provider di servizi e il primo tenant o la prima organizzazione.
 
 Il provider di servizi è l'organizzazione di livello superiore e ci sono uno o più tenant/organizzazioni serviti dal provider di servizi. Il provider di servizi assegna gli asset raccolti dal vCenter ai tenant o alle organizzazioni, che quindi li assegnano alle applicazioni o alle applicazioni secondarie. Queste applicazioni sono quindi soggette a un regime di conformità.
 
 Questo passo viene inizialmente completato dall'automazione IC4VS che utilizza le informazioni fornite dal client durante il processo di ordinazione e le informazioni predefinite. Il processo di impostazione può essere avviato dal client, dopo la distribuzione, per modificare il provider di servizi o l'organizzazione tenant come richiesto, dopo l'installazione.
 
 L'impostazione del provider di servizi si articola in otto passi secondari:
--	Passo 1: Dettagli dell'organizzazione - aggiungi i dettagli per l'organizzazione principale globale per il tuo provider di servizi cloud. Questa organizzazione può avere più ubicazioni fisiche e più data center. Le organizzazioni per i tuoi tenant e le tue organizzazioni secondarie per il tuo provider di servizi vengono aggiunte in un secondo momento.
--	Passo 2: Ubicazioni – Associa l'infrastruttura in "ubicazioni” RiskForesight poiché gli asset sono raggruppati in base all'ubicazione, al provider cloud e al repository di asset.
+-	Passo 1: Dettagli dell'organizzazione - aggiungi i dettagli per l'organizzazione principale per il tuo provider di servizi cloud. Questa organizzazione può avere più ubicazioni fisiche e più data center. Le organizzazioni per i tuoi tenant e le tue organizzazioni secondarie per il tuo provider di servizi vengono aggiunte in un secondo momento.
+-	Passo 2: Ubicazioni – Associa l'infrastruttura in "Ubicazioni” RiskForesight. Gli asset sono raggruppati in base all'ubicazione, al provider cloud e al repository di asset.
 -	Passo 3: Ambienti - facoltativo. Gli ambienti sono un modo per raggruppare gli asset. Ad esempio, DevOps, sito del ripristino di emergenza (DR Site), produzione (Production).
 -	Passo 4: Provider cloud - aggiungi i “provider” che forniscono l'infrastruttura su cui viene eseguita la tua applicazione.
 -	Passo 5: Repository di asset - un repository di asset associa un insieme di asset a un'organizzazione, un provider cloud o un'ubicazione.

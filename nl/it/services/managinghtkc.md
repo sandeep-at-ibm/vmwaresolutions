@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-08"
 
 ---
 
@@ -22,18 +22,16 @@ Per accedere alla GUI web del dispositivo HTKC primario o secondario, utilizza l
 {: #managinghtkc-accessing-console}
 
 Per accedere alla console HTKC dal client web vSphere, utilizza la seguente procedura:
-1. Nel client web vSphere, individua le macchine virtuali che iniziano con i nomi **KC1** e **KC2** che hanno l'indirizzo IP corrispondente trovato nella pagina dei dettagli del servizio HyTrust KeyControl on {{site.data.keyword.cloud_notm}}.
+1. Nel client web vSphere, individua le VM (Virtual Machine) che iniziano con i nomi **KC1** e **KC2** che hanno l'indirizzo IP corrispondente trovato nella pagina dei dettagli del servizio HyTrust KeyControl on {{site.data.keyword.cloud_notm}}.
 2. Fai clic con il tasto destro del mouse su **KC1** o **KC2** e quindi seleziona **Apri console**.
 3. Accedi alla console utilizzando le relative credenziali che puoi trovare nella pagina dei dettagli del servizio HyTrust KeyControl on {{site.data.keyword.cloud_notm}}.
 
-Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_addingremovingservices)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Link correlati
 {: #managinghtkc-related}
 
-* [Panoramica di HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)
+* [Panoramica di HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Sito web HyTrust](https://www.hytrust.com/)

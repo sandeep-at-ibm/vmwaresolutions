@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -35,15 +35,15 @@ Inizialmente è un singolo file immagine OVA distribuito specifico per il lato c
 ## Componenti della flotta
 {: #vcshcx-components-fleet}
 
-I componenti della flotta HCX sono responsabili della creazione dei piani di dati e controllo tra il lato client e quello cloud. Distribuita come macchine virtuali (VM, Virtual Machine) in coppie con mirroring, la flotta consiste nei seguenti componenti:
+I componenti della flotta HCX sono responsabili della creazione dei piani di dati e controllo tra il lato client e quello cloud. Distribuita come VM (Virtual Machine) in coppie con mirroring, la flotta consiste nei seguenti componenti:
 
 - CGW (Cloud Gateway) - il Cloud Gateway è un componente facoltativo
 responsabile della creazione di tunnel crittografati che supportano il traffico (migrazione in blocco) di replica e vMotion. Esiste solo una singola coppia per ogni sito HCX collegato.
 - L2C (Layer 2 Concentrator) - il Layer 2 Concentrator è un componente facoltativo responsabile della creazione di tunnel crittografati per il piano di dati e di controllo corrispondente al traffico L2 (Layer 2) esteso. Ogni coppia L2C può gestire fino a 4096 delle reti estese. Ulteriori coppie L2C vengono distribuite come necessario. La capacità di larghezza di banda è limitata a ~4 Gbps e pertanto, se la capacità di larghezza di banda esterna è superiore ai 4 Gbps, l'utilizzo di ulteriori coppie L2C consente un maggiore utilizzo della rete sottostante.
-- Ottimizzatore WAN - HCX include un dispositivo di ottimizzazione WAN Silver Peak™ distribuito facoltativamente. Viene distribuito come un dispositivo VM. Quando viene distribuito, il traffico di tunnel CGW viene reindirizzato per passare attraverso la coppia dell'ottimizzatore WAN.
+- Ottimizzatore WAN - HCX include un dispositivo di ottimizzazione WAN Silver Peak™ distribuito facoltativamente. Viene distribuito come un dispositivo VM. Quando viene distribuito, il traffico di tunnel CGW viene reindirizzato per passare attraverso l'ottimizzatore WAN.
 Poiché l'ottimizzatore WAN riduce considerevolmente il traffico attraverso la WAN (quello osservato di norma è
 da 3:1 a 6:1) aumentando al tempo stesso l'affidabilità della connessione, si consiglia di distribuire sempre l'ottimizzatore WAN con CGW. L'ulteriore vantaggio offerto dalla distribuzione dell'ottimizzatore WAN si estende alla limitazione della larghezza di banda della WAN consumata dal traffico di migrazione di VM. L'interfaccia di gestione dell'ottimizzatore WAN non è configurata per impostazione predefinita.
-- Host ESX proxy - Ogni volta che CGW è configurato per stabilire una connessione al sito HCX lato cloud, nel vCenter è presente un host ESXi proxy esternamente a qualsiasi cluster. Questo host ESXi ha lo stesso indirizzo IP vMotion e di gestione del dispositivo CGW corrispondente. Ciò consente un funzionamento dell'ambiente vSphere
+- Host ESXi proxy - Ogni volta che CGW è configurato per stabilire una connessione al sito HCX lato cloud, nel vCenter è presente un host ESXi proxy esternamente a qualsiasi cluster. Questo host ESXi ha lo stesso indirizzo IP vMotion e di gestione del dispositivo CGW corrispondente. Ciò consente un funzionamento dell'ambiente vSphere
 sia sul lato client che su quello cloud come se stesse eseguendo un vMotion locale. Questo metodo offre i seguenti vantaggi:
     - Gli intervalli IP di gestione sull'uno o sull'altro lato possono essere in sovrapposizione senza alcuna perdita di funzionalità.
     - Il lato cloud non ha alcuna visibilità vSphere nel lato client, il che lo rende più sicuro.
@@ -53,9 +53,9 @@ sia sul lato client che su quello cloud come se stesse eseguendo un vMotion loca
 
 - IU web client – il portale web client HCX è l'IU principale per HCX. Una volta installato, HCX Manager lato client viene visualizzato come uno snap-in all'IU web vCenter. Controlla la registrazione HCX cloud remota (accoppiamento di siti), la distribuzione dei componenti della flotta, l'estensione di rete e la migrazione di VM verso e dal cloud.
 
-- IU lato cloud – l'IU HCX lato cloud è accessibile tramite l'URL di registrazione pubblico fornito per la registrazione client HCX. Per impostazione predefinita, utilizza l'accesso SSO vSphere lato cloud (` administrator@vsphere.local`). Viene di norma utilizzato per eseguire l'upgrade dell'installazione e la modifica di qualche configurazione di rete. Viene utilizzato anche per creare macchine virtuali all'interno di HCX.
+- IU lato cloud – l'IU HCX lato cloud è accessibile tramite l'URL di registrazione pubblico fornito per la registrazione client HCX. Per impostazione predefinita, utilizza l'accesso SSO vSphere lato cloud (` administrator@vsphere.local`). Viene di norma utilizzato per eseguire l'upgrade dell'installazione e la modifica di qualche configurazione di rete. Viene utilizzato anche per creare VM (Virtual Machine) all'interno di HCX.
 
-- IU di gestione del dispositivo di HCX Manager client/cloud – Accesso all'IU di gestione del dispositivo per il lato cloud o quello client tramite l'indirizzo IP privato VM come visualizzato in vCenter.
+- IU di gestione del dispositivo di HCX Manager client/cloud – Accesso all'IU di gestione del dispositivo per il lato cloud o quello client tramite l'indirizzo IP privato VM come visualizzato in vCenter
 `https://<hcxmanager_IP>:9443`. L'ID (di norma “admin”) e la password sono forniti tramite il portale {{site.data.keyword.vmwaresolutions_short}}. L'IU di gestione viene utilizzata per avviare e arrestare i servizi di HCX Manager, configurare il monitoraggio dei log, la configurazione di rete di base, gli upgrade manuali, la raccolta di log di supporto quando l'IU web non funziona, la registrazione presso i componenti vSphere (vCenter, PSC e NSX Manager) e la gestione dei certificati.
 
 ## Link correlati

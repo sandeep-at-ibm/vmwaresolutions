@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -77,6 +77,9 @@ Sei responsabile del mantenimento e della verifica della disponibilità di tutti
 {: #vc_planning-addon-services}
 
 Puoi ordinare servizi aggiuntivi per la tua istanza in base alle tue esigenze, ad esempio il ripristino di emergenza. Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
+
+I servizi sono supportati per il vCenter Server con istanze NSX-T.
+{:note}
 
 ## Considerazioni sulla capacità
 {: #vc_planning-capacity-considerations}

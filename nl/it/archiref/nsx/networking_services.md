@@ -33,7 +33,7 @@ L'errata configurazione o la disabilitazione dell'ESG di gestione non impedisce 
 
 L'ESG di gestione IBM è un cluster edge NSX dedicato solo per il traffico della rete di gestione {{site.data.keyword.cloud_notm}}. Non è inteso per il traffico trasversale di qualsiasi componente che non sia distribuito e gestito dall'automazione di Cloud Foundation o vCenter Server.
 
-L'ESG di gestione fornisce un percorso di comunicazione tra le macchine virtuali (VM) dei servizi aggiuntivi che risiedono all'interno delle istanze Cloud Foundation o vCenter Server e l'infrastruttura di automazione IBM in {{site.data.keyword.cloud_notm}}, come mostrato per Cloud Foundation nel seguente grafico.
+L'ESG di gestione fornisce un percorso di comunicazione tra le VM (Virtual Machine) dei servizi aggiuntivi che risiedono all'interno delle istanze Cloud Foundation o vCenter Server e l'infrastruttura di automazione IBM in {{site.data.keyword.cloud_notm}}, come mostrato per Cloud Foundation nel seguente grafico.
 
 Figura 2. Comunicazioni dell'edge di gestione su Cloud Foundation
 

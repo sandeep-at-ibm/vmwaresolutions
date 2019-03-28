@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
 # Caveonix RiskForesight
 {: #caveonix-intro}
 
-le aziende impegnate in una trasformazione digitale stanno adottando una strategia cloud ibrida che include carichi di lavoro sia nel cloud privato sia in molteplici ambienti cloud esterni, nello specifico il cloud pubblico o un cloud gestito da un provider di servizi. La maggior parte delle aziende deve anche affrontare la sfida rappresentata dalla protezione di una superficie di attacco sempre più ampia rispettando, al tempo stesso, i requisiti di conformità normativa e del settore. Per proteggere questa superficie di attacco in espansione, le aziende hanno bisogno di una visibilità continua sui carichi di lavoro, dall'inizio alla fine del loro ciclo di vita. A tale fine, le aziende devono mantenere una comprensione “full-stack” delle vulnerabilità dei carichi di lavoro e dei problemi di configurazione a livello di infrastruttura, piattaforma e applicazioni nel contesto delle minacce e dei requisiti di conformità. Le aziende hanno bisogno di un'analisi predittiva per collegare tra loro i vari fattori per fornire una vista proattiva della posizione che hanno per quanto riguarda il rischio informatico e la conformità in questo vasto e nuovo mondo ibrido.
+le aziende impegnate in una trasformazione digitale stanno adottando una strategia cloud ibrida che include carichi di lavoro sia nel cloud privato sia in molteplici ambienti cloud esterni, nello specifico il cloud pubblico o un cloud gestito da un provider di servizi. La maggior parte delle aziende deve anche affrontare la sfida rappresentata dalla protezione di una superficie di attacco sempre più ampia rispettando, al tempo stesso, i requisiti di conformità normativa e del settore.
+
+Per proteggere questa superficie di attacco in espansione, le aziende hanno bisogno di una visibilità continua sui carichi di lavoro dall'inizio alla fine del loro ciclo di vita. A tale fine, le aziende devono mantenere una comprensione “full-stack” delle vulnerabilità dei carichi di lavoro e dei problemi di configurazione a livello di infrastruttura, piattaforma e applicazioni nel contesto delle minacce e dei requisiti di conformità. Le aziende hanno bisogno di un'analisi predittiva per collegare tra loro i vari fattori per fornire una vista proattiva della posizione che hanno per quanto riguarda il rischio informatico e la conformità in questo vasto e nuovo mondo ibrido.
 
 Caveonix RiskForesight fornisce una protezione dei carichi di lavoro proattiva dai rischi dovuti a minacce informatiche e problemi di conformità normativa. Fornisce una visibilità in tempo reale su quanto è in esecuzione nel cloud ibrido di un'azienda tramite un'integrazione nativa nelle piattaforme di orchestrazione cloud. Combinando tale visibilità con i modelli di riduzione dei rischi e le azioni di implementazione automatizzabili, RiskForesight sviluppa rapidamente un elenco di azioni di attenuazione con un'indicazione della priorità. RiskForesight è un piattaforma di protezione dei carichi di lavoro di cloud ibrido con riconoscimento multi-tenant che implementa un RMF (Risk Management Framework) proattivo che può funzionare su più piani di controllo e su rete, calcolo, sicurezza e conformità, automatizzando al tempo stesso l'implementazione del framework su scala cloud.
 
@@ -37,7 +39,7 @@ I tre servizi chiave disponibili tramite la GUI RiskForesight sono; gestione dei
 - Monitoraggio della conformità automatizzato
 -	Dashboard di valutazione del rischio di conformità
 -	Valutazione dei controlli IA automatizzati
--	Supporta; PCI, FISMA, FEDRAMP, HIPAA, GLBA, GDPR, report NERC CIP su SCAP, OVAL, XCCDF e altri standard di benchmarking di configurazione globali
+-	Supporta: PCI, FISMA, FEDRAMP, HIPAA, GLBA, GDPR, report NERC CIP su SCAP, OVAL, XCCDF e altri standard di benchmarking di configurazione globali
 -	Librerie di standard e controlli IA aggiornati e associati continuamente
 
 **Gestione dell'analisi**
@@ -47,7 +49,7 @@ I tre servizi chiave disponibili tramite la GUI RiskForesight sono; gestione dei
 -	Visualizzazione grafica dei risultati
 -	Aggregazione dei dati da più origini
 -	Analisi basata sugli eventi
--	funzionalità di drill-down completa per l'analisi basata su eventi/log
+-	funzionalità di drill-down completa per l'analisi basata su log ed eventi
 -	Avvisi e notifiche
 
 ## Link correlati

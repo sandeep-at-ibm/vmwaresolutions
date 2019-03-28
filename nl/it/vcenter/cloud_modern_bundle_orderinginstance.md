@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -101,7 +101,7 @@ La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Le
 #### Visualizzazione dei dettagli dell'istanza
 {: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
-Puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza. Fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra e individua la tabella **Istanze vCenter Server** o **Istanze HCX on-premise** per visualizzare informazioni sulle istanze che hai ordinato.
+Puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza. Fai clic su **Risorse** nel riquadro di navigazione a sinistra e individua la tabella **Istanze vCenter Server** o **Istanze HCX on-premise** per visualizzare informazioni sulle istanze che hai ordinato.
 
 Una volta che l'istanza è stata distribuita correttamente, i componenti descritti nelle sezioni delle *Specifiche tecniche* di questo argomento vengono installati sulla tua piattaforma virtuale VMware e la chiave di attivazione del servizio HCX on {{site.data.keyword.cloud_notm}} in loco viene elencata nella tabella **Istanze HCX on-premise**.
 
@@ -112,8 +112,8 @@ Lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e ricevi una
 
 Installa HCX Enterprise Manager in loco e configura la connessione alla tua istanza HCX on {{site.data.keyword.cloud_notm}}.
 
-1. Individua la chiave di attivazione in loco nella pagina **Istanze distribuite**.
-  1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
+1. Individua la chiave di attivazione in loco nella pagina **Risorse**.
+  1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
   2. Nella tabella **Istanze vCenter Server**, controlla la colonna **Tipo** per individuare l'istanza Single-node Trial for Migration and App Modernization e prendi nota del nome dell'istanza.
   3. Scorri fino alla tabella **Istanze HCX on-premise** e controlla la colonna **Nome** per individuare l'istanza che ha lo stesso nome dell'istanza a singolo nodo che hai ordinato con il suffisso *-OnPrem*.
   4. Prendi nota della chiave nel campo **Chiave di attivazione**.
@@ -171,7 +171,7 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 
 Completa la seguente procedura per eliminare un'istanza Single-node Trial for Migration and App Modernization:
 
-1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, trova l'istanza da eliminare.
 3. Nella colonna **Azioni**, fai clic sull'icona Elimina.
    Lo stato dell'istanza viene modificato in **In fase di eliminazione**. Una volta che l'istanza è stata eliminata, i suoi componenti vengono rilasciati e il suo stato viene modificato in **Eliminato**.

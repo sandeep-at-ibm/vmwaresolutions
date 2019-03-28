@@ -30,4 +30,4 @@ Per registrare un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (
 * [Requisiti per l'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)
 * [Video - How to create an {{site.data.keyword.cloud_notm}} account](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Passaggio all'ID IBM e collegamento degli account](/docs/admin/softlayerlink.html){:new_window}
+* [Passaggio all'ID IBM e collegamento degli account](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)

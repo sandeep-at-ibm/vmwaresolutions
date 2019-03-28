@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -56,7 +56,7 @@ Questo livello comprende il dispositivo vCenter Server Appliance (vCSA) con Plat
 
 L'offerta di base viene distribuita con un dispositivo vCenter Server dimensionato per supportare un ambiente con un massimo di 400 host e 4000 VM. Gli stessi strumenti e script compatibili con l'API vSphere possono essere utilizzati per gestire l'ambiente VMware ospitato da IBM.
 
-In totale, l'offerta di base richiede 38 vCPU e 67 GB di vRAM che sono riservati per il livello di gestione della virtualizzazione. La capacità host rimanente per le tue macchine virtuali dipende da diversi fattori, come la percentuale di sottoscrizione eccedente, il dimensionamento della VM e i requisiti delle prestazioni del carico di lavoro.
+In totale, l'offerta di base richiede 38 vCPU e 67 GB di vRAM che sono riservati per il livello di gestione della virtualizzazione. La capacità host rimanente per le tue VM (Virtual Machine) dipende da diversi fattori, come la percentuale di sottoscrizione eccedente, il dimensionamento della VM e i requisiti delle prestazioni del carico di lavoro.
 
 Per ulteriori requisiti delle risorse di gestione durante la distribuzione del servizio HCX on {{site.data.keyword.cloud_notm}}, consulta [Panoramica di VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview).
 
@@ -68,7 +68,7 @@ Questo livello fornisce un'astrazione di risorse tra i siti in loco e i siti {{s
 Sulla base di VMware Hybrid Cloud Extension (HCX), puoi creare interconnessioni indipendenti tra i siti in loco e i siti {{site.data.keyword.cloud_notm}} per abilitare la migrazione in blocco delle VM o la migrazione live delle VM senza tempi di inattività.
 
 ## Specifiche tecniche per le istanze vCenter Server with Hybridity Bundle
-{: #technical-specifications-for-vcenter-server-with-hybridity-bundle-instances}
+{: #vc_hybrid_overview-specs}
 
 Nella tua istanza vCenter Server with Hybridity Bundle sono inclusi i seguenti componenti:
 
@@ -78,9 +78,9 @@ La disponibilità e il prezzo delle configurazioni hardware standardizzate posso
 ### Bare Metal Server
 {: #vc_hybrid_overview-bare-metal}
 
-Quattro **Skylake** o **Broadwell** {{site.data.keyword.baremetal_short}} vengono forniti con il tuo ordine dell'istanza vCenter Server with Hybridity Bundle. Sono disponibili i seguenti modelli CPU:
-  * 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series)
-  * 2-CPU Intel Broadwell (Intel Xeon E5-2600/E7-4800 series)
+Con il tuo ordine dell'istanza vCenter Server with Hybridity Bundle, vengono forniti quattro {{site.data.keyword.baremetal_short}}. Sono disponibili le seguenti configurazioni:
+  * **Skylake**: server di generazione 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series) con i tuoi modello CPU e dimensione RAM selezionati.
+  * **Broadwell**: server di generazione 2-CPU Intel Broadwell (Intel Xeon E5-2600/E7-4800 series) con il modello di CPU e la dimensione della RAM da te selezionati.
 
 ### Rete
 {: #vc_hybrid_overview-networking}
@@ -120,7 +120,7 @@ L'archiviazione vSAN offre configurazioni personalizzate, con varie opzioni per 
 
 Con il tuo ordine dell'istanza vCenter Server with Hybridity Bundle sono incluse le seguenti licenze.
 
-* VMware vSphere Enterprise Plus 6.5u1
+* VMware vSphere Enterprise Plus 6.5u2 o 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Advanced o Enterprise) 6.4
 * VMware vSAN (Advanced o Enterprise) 6.6
@@ -140,7 +140,7 @@ Un Bare Metal Server con la configurazione presentata in [Specifiche tecniche pe
 ### Licenze e tariffe per i nodi di espansione
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
 
-* Un VMware vSphere Enterprise Plus 6.5u1
+* Un VMware vSphere Enterprise Plus 6.5u2 o 6.7u1
 * Un VMware NSX Service Providers Edition (Advanced o Enterprise) 6.4
 * Una tariffa per supporto e servizi
 * VMware vSAN (Advanced o Enterprise) 6.6

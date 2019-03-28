@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-12"
 
 ---
 
@@ -21,7 +21,7 @@ Questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e ch
 {:note}
 
 ## Specifiche tecniche per IBM Spectrum Protect Plus on IBM Cloud
-{: #technical-specifications-for-ibm-spectrum-protect-plus-on-ibm-cloud}
+{: #spp_considerations-specs}
 
 Nel servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} vengono ordinati e inclusi i seguenti componenti:
 
@@ -51,7 +51,7 @@ Consulta [IBM Spectrum Protect Plus blueprint and sizing tool](https://www.ibm.c
 ### Archiviazione per la gestione
 {: #spp_considerations-mgmt-storage}
 
-Un'archiviazione di file endurance da 1000 GB, 2 IOPS/GB che ospita la macchina virtuale IBM Spectrum Protect Plus e che è in esecuzione sulla stessa sottorete dell'archiviazione di backup.
+Un'archiviazione di file endurance da 1000 GB, 2 IOPS/GB che ospita la VM (Virtual Machine) IBM Spectrum Protect Plus e che è in esecuzione sulla stessa sottorete dell'archiviazione di backup.
 
 ### Rete
 {: #spp_considerations-network}
@@ -69,10 +69,10 @@ Due indirizzi IP privati portatili.
 
 Esamina le seguenti considerazioni prima di installare il servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}.
 
-* Assicurati che la CPU e la memoria nel cluster predefinito della tua istanza siano sufficienti per la macchina virtuale IBM Spectrum Protect Plus.
+* Assicurati che la CPU e la memoria nel cluster predefinito della tua istanza siano sufficienti per la VM (Virtual Machine) IBM Spectrum Protect Plus.
 * Assicurati che i montaggi NFS disponibili sui server ESXi siano sufficienti in base alla versione dei server ESXi.
 
-  Le istanze Cloud Foundation e vCenter Server distribuite o aggiornate alle release della V2.2 o successive hanno un'impostazione di parametro `NFS.MaxVolumes` in VMware. Questo parametro definisce il numero massimo di montaggi NFS su un server ESXi e può essere impostato su un massimo di 256, che è specifico per la versione del server ESXi. Per ulteriori informazioni, vedi [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
+  Le istanze distribuite (o di cui viene eseguito l'upgrade) alla V2.2 o release successive hanno un'impostazione di parametro `NFS.MaxVolumes` in VMware. Questo parametro definisce il numero massimo di montaggi NFS su un server ESXi e può essere impostato su un massimo di 256, che è specifico per la versione del server ESXi. Per ulteriori informazioni, vedi [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
 
   Il servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} può utilizzare fino a 11 dei volumi NFS su ogni server ESXi nel cluster predefinito della tua istanza. Inoltre, il servizio crea montaggi NFS temporanei per scopi di backup e ripristino. Pertanto, devi impostare il numero di montaggi NFS su un minimo di 64 per garantire che il servizio possa essere installato e funzioni correttamente.
 

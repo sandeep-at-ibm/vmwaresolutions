@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -21,7 +21,7 @@ Visualizza il riepilogo e le informazioni dettagliate delle istanze VMware vCent
 {: #vc_hybrid_viewinginstances-procedure-view-inst-summary}
 
 Per visualizzare un riepilogo di tutte le istanze vCenter Server with Hybridity Bundle fornite per un account utente, completa la seguente procedura:
-1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Istanze distribuite** dal riquadro di navigazione a sinistra.
+1. Nella console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
 2. Dal banner della console, fai clic sull'icona del tuo account utente e quindi sul campo **Account** per selezionare l'account utente per il quale vuoi controllare le istanze.
 3. Nella tabella **Istanze di vCenter Server**, visualizza l'elenco delle istanze fornite nell'account utente selezionato.
 
@@ -33,7 +33,7 @@ Tabella 1. Elementi dell'istanza vCenter Server with Hybridity Bundle
 | Tipo | Il tipo dell'istanza vCenter Server |
 | Versione | La versione di release in cui è stata distribuita o aggiornata l'istanza |  
 | Ubicazione | Il {{site.data.keyword.CloudDataCent_notm}} in cui è ospitata l'istanza |  
-| Ora di creazione | La data e ora di creazione dell'istanza |  
+| Data/ora di creazione | La data e ora di creazione dell'istanza |  
 | Stato | Lo stato dell'istanza |  
 
 L'istanza può avere una serie di stati.

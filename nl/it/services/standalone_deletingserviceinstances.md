@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -21,7 +21,7 @@ Assicurati di aver esaminato tutte le considerazioni in [Considerazioni sull'eli
 ## Procedura per eliminare le istanze VMware HCX on IBM Cloud in loco
 {: #standalone_deletingserviceinstances-procedure}
 
-1. Fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
+1. Fai clic su **Risorse** nel riquadro di navigazione a sinistra.
 2. Scorri fino alla tabella **Istanze HCX on-premise** e trova l'istanza da eliminare.
 3. Nella colonna **Azioni**, fai clic sull'icona di eliminazione.
 4. Nella finestra **Elimina istanza**, fai clic su **OK**.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -26,7 +26,7 @@ La distribuzione di vCenter Server with Hybridity Bundle ha requisiti rigorosi s
 Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze vCenter Server with Hybridity Bundle
 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicazione | Regione |
-|:-----|:----------------|
+|:----------------------|:---------|:---------------|
 | AMS03 | Amsterdam | Europa |
 | CHE01 | Chennai | Asia-Pacifico |
 | DAL09 | Dallas | Nord America meridionale |
@@ -53,6 +53,7 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze 
 | SYD01 | Sydney | Asia-Pacifico |
 | SYD04 | Sydney | Asia-Pacifico |
 | TOK02 | Tokyo | Asia-Pacifico |
+| TOK04 | Tokyo | Asia-Pacifico |
 | TOR01 | Toronto | Nord America orientale |
 | WDC04 | Washington, DC | Nord America orientale |
 | WDC06 | Washington, DC | Nord America orientale |
@@ -76,7 +77,7 @@ Sei responsabile del mantenimento e della verifica della disponibilità di tutti
 ## Servizi per le istanze vCenter Server with Hybridity Bundle
 {: #vc_hybrid_planning-addon-services}
 
-L'istanza vCenter Server with Hybridity Bundle include la licenza di VMware Hybrid Cloud Extension (HCX) che ti dà diritto al servizio VMware HCX on {{site.data.keyword.cloud_notm}}. Questo servizio può estendere senza problemi le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione delle macchine virtuali (VM) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
+L'istanza vCenter Server with Hybridity Bundle include la licenza di VMware Hybrid Cloud Extension (HCX) che ti dà diritto al servizio VMware HCX on {{site.data.keyword.cloud_notm}}. Questo servizio può estendere senza problemi le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione delle VM (Virtual Machine) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
 
 Quando distribuisci questo servizio, completa le seguenti impostazioni:
 * Specifica il **Tipo di interconnessione HCX** selezionando una delle seguenti opzioni:

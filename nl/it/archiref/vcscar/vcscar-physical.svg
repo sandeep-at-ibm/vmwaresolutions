@@ -41,7 +41,7 @@
    <text x="304" y="523">MySQL</text>
   </g>
   <g font-family="Helvetica" font-size="10px" text-anchor="middle">
-   <text x="304" y="565">Macchina virtuale</text>
+   <text x="304" y="565">VM (Virtual Machine)</text>
   </g>
   <g fill="none" pointer-events="none" stroke-miterlimit="10" stroke-width="2">
    <path d="m299.67 501.33 1.64-94.05" stroke="#fa6800"/>

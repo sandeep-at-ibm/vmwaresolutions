@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
 
 ---
 
@@ -59,13 +59,10 @@ Le modifiche vanno perse se distribuisci CGW HCX dall'IU web HCX.
 Questo imposta i limiti di larghezza di banda solo per il traffico di migrazione. Il traffico L2 esteso non è interessato da questa impostazione.
 {:note}
 
-1.	Accedi all'interfaccia web dell'ottimizzatore WAN.
-2.	Dalla scheda **Configuration**, seleziona **Shaper** dal menu a discesa.
-3.	Nella casella di larghezza di banda massima, imposta la larghezza di banda massima disponibile per il dispositivo dell'ottimizzatore WAN in kpbs. Non superare la larghezza di banda massima del collegamento WAN.     
-  - Per eseguire l'impostazione per Mbps (base 10) = Mbps x 1000
-  - Per eseguire l'impostazione per Gbps = 1000^2 = Gbps x 1000^2
-  - Valore predefinito = 10 Gbps (10000000)
-4.	Fai clic su **Apply**.
+1. Accedi all'interfaccia Web dell'ottimizzatore WAN.
+2. Dalla scheda **Configuration**, seleziona **Shaper** dal menu a discesa.
+3. Nella casella **Max bandwidth**, imposta la larghezza di banda massima disponibile per il dispositivo dell'ottimizzatore WAN in Kbps. Non superare la larghezza di banda massima del collegamento WAN. Per impostare il valore in Mbps, moltiplica per 1.000. Per impostare il valore in Gbps, moltiplica per 1.000.000. Il valore predefinito è 10 Gbps (10.000.000 Kbps).
+4. Fai clic su **Apply**.
 
 Per la limitazione della larghezza di banda di L2 esteso, è possibile utilizzare
 QoS per UDP 500 e 4500 per il traffico di tunnel tra i dispositivi L2C.
@@ -87,14 +84,12 @@ Manager o altri strumenti di monitoraggio di VM VMware.
 Utilizza i seguenti metodi per monitorare l'utilizzo della larghezza di banda e la latenza.
 
 - Il traffico vMotion può essere eseguito più efficacemente utilizzando l'IU web dell'ottimizzatore WAN. L'ottimizzatore WAN
-riduce notevolmente il traffico che passa sulla WAN e riduce la perdita di pacchetti inviando pacchetti ridondanti. Si è osservato che il tipico rapporto di larghezza di banda LAN-WAN utilizzato è ~ 3:1 (350 Mbps LAN =
-90-120Mbps WAN).
+riduce notevolmente il traffico che passa sulla WAN e riduce la perdita di pacchetti inviando pacchetti ridondanti. Si è osservato che il tipico rapporto di larghezza di banda LAN-WAN utilizzato è circa 3:1 (350 Mbps LAN = 90-120Mbps WAN).
 
-- La migrazione (in blocco) basata sulla replica delle VM all'interno di HCX rende "thick" le VM in fase di spostamento. Mentre ciò non può essere desiderabile, l'IU dell'ottimizzatore WAN rivela un elevato rapporto tra LAN e WAN quando sposti dati del disco
-“vuoti”. Viceversa si osserva che, se vengono migrati dei dati non comprimibili, come ad esempio dei dati di DB o del contenuto multimediale, l'utilizzo della WAN è al suo massimo man mano che si approssima all'utilizzo di input della LAN.
+- La migrazione (in blocco) basata sulla replica delle VM all'interno di HCX produce uno spostamento delle VM con il thick provisioning. Mentre ciò non è desiderabile, l'IU dell'ottimizzatore WAN rivela un elevato rapporto tra utilizzo di LAN e WAN quando sposti dati del disco inutilizzati. Viceversa si osserva che, se vengono migrati dei dati non comprimibili, come ad esempio dei dati di DB e del contenuto multimediale, l'utilizzo della WAN è al suo massimo man mano che si approssima all'utilizzo della LAN.
 
 Osservazioni:
-- Il vMotion di una VM in HCX produce non più della velocità effettiva della rete vMotion a un singolo host ESX.
+- La migrazione vMotion di una VM all'interno di HCX non genera più velocità effettiva rispetto alla rete vMotion per un singolo host ESXi.
 - Poiché la migrazione in blocco può avere più migrazioni in-flight simultaneamente, raggiunge un utilizzo della larghezza di banda
 superiore a quello di una migrazione vMotion. Il rapporto osservato su un lato cliente con collegamento vMotion da 1 Gbps
 agli host ESX era: Otto repliche = utilizzo della larghezza di banda di 1 vMotion.
@@ -107,13 +102,12 @@ la limitazione è la rete vMotion di 1 Gbps.
 ## Traffico L2 (Layer 2) esteso
 {: #vcshcx-monitoring-stretched-layer-2-traffic}
 
-Il componente della flotta HCX L2C (Layer 2 Concentrator) ha una limitazione della larghezza di banda di
-~4 Gbps aggregata per tutto il traffico di rete L2 che l'attraversa. Le singole reti estese hanno un limite di larghezza di banda
-di ~ 1 Gbps o meno, a seconda del tipo di traffico. È possibile avere molte reti L2 estese in una singola coppia L2C (massimo teorico consentibile di
-4096 reti per ogni coppia L2C). Mentre l'L2C è progettato per rilevare e proteggere piccoli flussi di traffico in modo che non siano sopraffatti dai flussi di grandi dimensioni nella stessa coppia L2C, può essere vantaggioso identificare se la situazione si sta verificando e attivare più L2C per aumentare la capacità di larghezza di banda complessiva. La distribuzione di più L2C può anche essere vantaggiosa laddove esistano più percorsi tra il sito del cliente e {{site.data.keyword.cloud}}, come ad esempio un collegamento diretto e internet, in modo che entrambi possano essere utilizzati, dato che hai più di una rete da distribuire tra essi. Una singola rete non può essere resa ridondante né è possibile darle della larghezza di banda aumentata su più coppie L2C.
+Il componente della flotta HCX L2C (Layer 2 Concentrator) ha una limitazione della larghezza di banda di circa 4 Gbps per tutto il traffico di rete L2 che l'attraversa. Le reti estese singolarmente hanno un limite di larghezza di banda di circa 1 Gbps o meno, a seconda del tipo di traffico. È possibile avere molte reti L2 estese in una singola coppia L2C (massimo teorico consentibile di
+4096 reti per ogni coppia L2C). Mentre l'L2C è progettato per rilevare e proteggere piccoli flussi di traffico in modo che non siano sopraffatti dai flussi di grandi dimensioni nella stessa coppia L2C, può essere vantaggioso identificare se la situazione si sta verificando e attivare più L2C per aumentare la capacità di larghezza di banda complessiva.
+
+La distribuzione di più L2C può anche essere vantaggiosa laddove esistano più percorsi tra il sito del cliente e {{site.data.keyword.cloud}}, come ad esempio un collegamento diretto e internet. Una singola rete non può essere resa ridondante né è possibile darle della larghezza di banda aumentata su più coppie L2C.
 
 Monitora il traffico su tutte le interfacce che utilizzano la scheda Monitoring della VM L2C. Se la frequenza dati totale si sta avvicinando a 8 Gbps (4 Gbps input/output), prendi in considerazione l'aggiunta di un'altra coppia L2 e ridistribuisci le reti estese per un riequilibrio.
-
 
 ## Link correlati
 {: #vcshcx-monitoring-related}

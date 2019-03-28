@@ -90,9 +90,9 @@ In base alla capacità di calcolo disponibile presso le ubicazioni in loco o in 
 #### Espansione IBM Cloud Private
 {: #vcsnsxt-operations-icp-expansion}
 
-I nodi della macchina virtuale del nodo di lavoro {{site.data.keyword.icpfull_notm}} vengono ridimensionati per espandere il calcolo e l'applicazione:
-- Il cliente esegue il provisioning di una nuova macchina virtuale nella stessa VXLAN in cui viene distribuito {{site.data.keyword.icpfull_notm}}.
-- I clienti possono ridimensionare i nodi di lavoro eseguendo il provisioning di nuove macchine virtuali, accedendo al nodo di avvio ed eseguendo un comando per portare i nuovi nodi nel cluster. Per ulteriori dettagli, vedi [Adding or removing cluster nodes](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/installing/modify_cluster.html).
+I nodi della VM (Virtual Machine) del nodo di lavoro {{site.data.keyword.icpfull_notm}} vengono ridimensionati per espandere il calcolo e l'applicazione:
+- Il cliente esegue il provisioning di una nuova VM (Virtual Machine) nella stessa VXLAN in cui viene distribuito {{site.data.keyword.icpfull_notm}}.
+- I clienti possono ridimensionare i nodi di lavoro eseguendo il provisioning di nuove VM (Virtual Machine), accedendo al nodo di avvio ed eseguendo un comando per portare i nuovi nodi nel cluster. Per ulteriori dettagli, vedi [Adding or removing cluster nodes](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/installing/modify_cluster.html).
 - Utilizza CAM per automatizzare il provisioning della VM e l'esecuzione dei comandi per aggiungerla al cluster {{site.data.keyword.icpfull_notm}}.
 
 #### Espansione di IBM Cloud Kubernetes Service

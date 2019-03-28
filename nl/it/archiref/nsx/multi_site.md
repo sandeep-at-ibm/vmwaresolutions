@@ -29,7 +29,7 @@ Il seguente esempio aggiunge una zona di trasporto universale NSX alle topologie
 
 * La zona di trasporto universale si estende su due {{site.data.keyword.CloudDataCents_notm}} o POD all'interno di un {{site.data.keyword.CloudDataCent_notm}}.
 * Una volta aggiunta la zona di trasporto, vengono aggiunte più VXLAN insieme a un Universal Distributed Router che si estende sulle nuove VXLAN.
-* Devi configurare gli uplink agli ESG del carico di lavoro in entrambi i siti. Questa configurazione consente alle macchine virtuali (VM) nel sito locale di passare al proprio ESG locale.
+* Devi configurare gli uplink agli ESG del carico di lavoro in entrambi i siti. Questa configurazione consente alle VM (Virtual Machine) nel sito locale di passare al proprio ESG locale.
 * Per il traffico in entrata, è richiesto un sistema di bilanciamento del carico globale. Vedi le offerte di bilanciamento del carico globale {{site.data.keyword.cloud_notm}} per soddisfare questo requisito.
 * Questo esempio richiede VMware NSX Enterprise Edition.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -19,22 +19,22 @@ Puoi utilizzare le baseline gestite dal sistema per aggiornare i cluster vSAN al
 
 Per la maggior parte delle aziende, le impostazioni predefinite di VMware per VUM sono considerate adeguate. Se la tua azienda vuole utilizzare impostazioni diverse, le seguenti informazioni indicano come modificare tali impostazioni.
 
-## Download Schedule
+##	Download Schedule
 {: #vum-metadata-download-schedule}
 
 Gli aggiornamenti sono aggiornamenti di dispositivi virtuali, estensioni e patch di host e, per impostazione predefinita, VUM scarica gli aggiornamenti ogni giorno. Modifica la pianificazione di download accedendo al client web vSphere, passando a **Home** > **Update Manager** > **Manage** > **Settings**, selezionando **Download Schedule** e facendo quindi clic su **Edit**.
 
-## Notification Check Schedule
+##	Notification Check Schedule
 {: #vum-metadata-notif-check-schedule}
 
 Le notifiche sono informazioni su richiami di patch, nuove correzioni e avvisi e, per impostazione predefinita, VUM scarica le notifiche su base oraria. Per modificare questa impostazione, accedi al client web vSphere, passa a **Home** > **Update Manager** > **Manage** > **Settings**, seleziona **Notification Check Schedule** e fai clic su **Edit**.
 
-## Impostazioni della macchina virtuale
+##	Impostazioni della VM (Virtual Machine)
 {: #vum-metadata-vm-settings}
 
-Per modificare le impostazioni della macchina virtuale (VM), accedi al client web vSphere, passa a **Home** > **Update Manager** > **Manage** > **Settings** e **VM Settings** e fai clic su **Edit**.
+Per modificare le impostazioni della VM (Virtual Machine), accedi al client web vSphere, passa a **Home** > **Update Manager** > **Manage** > **Settings** e **VM Settings** e fai clic su **Edit**.
 
-## Host/Cluster Settings
+##	Host/Cluster Settings
 {: #vum-metadata-host-settings}
 
 Per modificare le impostazioni di host e cluster, accesi al client web vSphere, passa a **Home** > **Update Manager** > **Manage** > **Settings** e **Host/Cluster Settings** e fai clic su **Edit**.

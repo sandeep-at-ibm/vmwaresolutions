@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-15"
 
 ---
 
@@ -91,7 +91,7 @@ Prima di avviare il processo di aggiornamento vSAN, assicurati che siano soddisf
   - Nessun oggetto vSAN è inaccessibile. Questo può essere verificato con il **vSAN Health Service** facendo clic su **Home** > **Hosts and Clusters** e selezionando quindi il **Cluster vSAN**. Fai clic sulla **scheda Monitor**, **vSAN** e su **Health**. Esamina i risultati del test.
   - Nessuna risincronizzazione attiva all'inizio del processo di aggiornamento; per verificarlo fai clic su **Home** > **Hosts and Clusters**, seleziona quindi il **Cluster vSAN**, fai clic sulla **scheda vSAN** e su **Resync Components**. _Il conteggio di risincronizzazione dei componenti dovrebbe essere 0_. Alcune attività di risincronizzazione sono previste durante il processo di aggiornamento, poiché i dati devono essere sincronizzati dopo il riavvio dell'host.
 * **Preparazione dell'host vSphere ESXi** - Quando sposti un host in modalità di manutenzione in un cluster vSAN, sono disponibili tre opzioni:
-  - **No data migration** - Se selezioni questa opzione, vSAN non rimuove alcun dato da questo host. Se spegni o rimuovi l'host dal cluster, alcune macchine virtuali (VM) potrebbero diventare inaccessibili.
+  - **No data migration** - Se selezioni questa opzione, vSAN non rimuove alcun dato da questo host. Se spegni o rimuovi l'host dal cluster, alcune VM (Virtual Machine) potrebbero diventare inaccessibili.
   - **Ensure availability** - Se selezioni questa opzione, vSAN ti consente di spostare l'host in modalità di manutenzione più velocemente rispetto alla migrazione completa dei dati e consente l'accesso alle VM nell'ambiente.
   - **Full data migration**
 * **Uscita dalla modalità di manutenzione e risincronizzazione** - Quando l'host vSphere ESXi viene aggiornato e tolto dalla modalità di manutenzione, si verifica una risincronizzazione che puoi vedere tramite il server web. Assicurati che questa operazione venga completata prima di passare al prossimo host. Una risincronizzazione si verifica in quanto l'host che viene aggiornato può ora contribuire di nuovo all'archivio dati vSAN. È fondamentale attendere fino al termine della risincronizzazione per garantire che non ci siano perdite di dati.
@@ -106,12 +106,12 @@ Prima di avviare il processo di aggiornamento vSAN, assicurati che siano soddisf
 
 Per ulteriori informazioni, vedi [Aggiornamento di VCSA e vCenter collegati a SSO](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa).
 
-## Aggiorna gli host vSphere ESXi
+##	Aggiorna gli host vSphere ESXi
 {: #vum-updating-vsan-upgrade-hosts}
 
 Per ulteriori informazioni, vedi [Creazione di baseline e collegamento a oggetti di inventario](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines).
 
-## Aggiorna il formato del disco vSAN
+##	Aggiorna il formato del disco vSAN
 {: #vum-updating-vsan-upgrade-vsan}
 
 RVC (Ruby vSphere Console) è un'interfaccia riga di comando basata su Ruby per vSphere e può essere utilizzata per gestire VMware vSphere ESXi e vCenter. L'inventario di vSphere viene presentato in una struttura ad albero, che ti consente di navigare ed eseguire comandi sugli oggetti vCenter.

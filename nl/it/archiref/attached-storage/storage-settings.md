@@ -25,7 +25,7 @@ L'architettura specifica che gli archivi dati NFS v3 vengono collegati utilizzan
 ## vSphere Storage DRS (Distributed Resource Scheduler)
 {: #storage-settings-vsphere-storage-drs}
 
-Utilizza Storage DRS per gestire le risorse aggregate di un cluster di archivi dati. Quando Storage DRS è attivato, fornisce suggerimenti per la migrazione e il posizionamento dei dischi delle macchine virtuali (VM) per bilanciare spazio e risorse di I/O tra gli archivi dati nel cluster di archivi dati.
+Utilizza Storage DRS per gestire le risorse aggregate di un cluster di archivi dati. Quando Storage DRS è attivato, fornisce suggerimenti per la migrazione e il posizionamento dei dischi delle VM (Virtual Machine) per bilanciare spazio e risorse di I/O tra gli archivi dati nel cluster di archivi dati.
 
 Quando Storage DRS è attivato, sono disponibili le seguenti funzioni:
 * Bilanciamento del carico dello spazio tra gli archivi dati in un cluster di archivi dati

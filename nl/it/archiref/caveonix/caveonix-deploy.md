@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -22,7 +22,7 @@ Quando selezioni l'opzione {{site.data.keyword.vmwaresolutions_full}} RiskForesi
 L'installazione di RiskForesight consiste nei seguenti passi di livello superiore:
 
 1. [Pianificazione iniziale e prerequisiti](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step1) – Comprensione e selezione di un'opzione di distribuzione, configurando DNS per fornire la risoluzione di FQDN/IP per i componenti dell'applicazione.
-2. [Distribuzione della macchina virtuale](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step2) – Distribuzione delle macchine virtuali (VM, Virtual Machine) da un modello OVF. Sulla VM sono installati tutti i componenti dell'applicazione.
+2. [Distribuzione della VM (Virtual Machine)](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step2) – Distribuzione delle VM (Virtual Machine) da un modello OVF. Sulla VM sono installati tutti i componenti dell'applicazione.
 3. [Configurazione dell'applicazione](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step3) – Esecuzione dello script di configurazione Caveonix che configura il componente dell'applicazione su ciascuna delle VM.
 4. [Impostazione dell'applicazione](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step4) – Impostazione del provider di servizi e di un tenant o un'organizzazione in modo che l'applicazione diventi accessibile per gli utenti.
 
@@ -100,6 +100,12 @@ Tabella 4. Riepilogo
 |VM di base	|1	|1	|20 |
 |VM di ridimensionamento	|0	|3	|28 |
 |Totale VM	|1	|4	|48 |
+
+**Nota:**
+quando rimuovi il servizio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}, l'automazione {{site.data.keyword.vmwaresolutions_short}} elimina solo la singola VM Caveonix "tutta-in-uno" che era stata distribuita e la sottorete privata dedicata che era stata ordinata per essa. Pertanto:
+* Se avevi ridimensionato la VM Caveonix VM in più VM, queste VM aggiuntive non vengono rimosse. 
+* Se avevi utilizzato gli indirizzi IP della sottorete privata dedicata sulle VM aggiuntive, a tali VM devono essere assegnati dei nuovi indirizzi IP perché continuino a funzionare. 
+* Se elimini l'istanza A di vCenter Server con il servizio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} installato, e avevi usato gli indirizzi IP sulla sottorete privata dedicata che era stata ordinata per il servizio nell'istanza B di vCenter Server, la sottorete privata dedicata viene annullata quando viene eseguita l'eliminazione dell'istanza A di vCenter Server. 
 
 ## Link correlati
 {: #caveonix-deploy-related}

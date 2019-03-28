@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-11"
 
 ---
 
@@ -67,7 +67,7 @@ Per gli utenti Business Partner IBM, l'opzione BYOL (Bring Your Own License) non
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 Se non sei un Business Partner, puoi selezionare i seguenti componenti per il tuo cluster vSphere:
-* VMware vSphere Enterprise Plus
+* VMware vSphere Enterprise Plus 6.7 U1 o 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -178,7 +178,7 @@ Quando ordini un nuovo cluster vSphere, devi specificare le seguenti impostazion
 ### Prefisso nome host
 {: #vs_orderinginstances-host-name-prefix}
 
-Il nome host è utilizzato per tutti gli ordini di server bare metal. Si consiglia di utilizzare il nome host per tutte le macchine virtuali di gestione, come vCenter Server e NSX.
+Il nome host è utilizzato per tutti gli ordini di server bare metal. Si consiglia di utilizzare il nome host per tutte le VM (Virtual Machine) di gestione, come vCenter Server e NSX.
 
 Il prefisso del nome host deve rispettare i seguenti requisiti:
 * Il nome deve iniziare e terminare con un carattere alfanumerico.
@@ -270,7 +270,7 @@ In base alle tue configurazioni, il costo stimato viene generato e visualizzato 
    1. Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui ospitare il cluster.
    2. Seleziona la configurazione di Bare Metal Server.
       * Se selezioni **Skylake** o **Broadwell**, specifica il modello di CPU e la dimensione della RAM.
-      * Se selezioni **Certificato SAP**, scegli il modello CPU.
+      * Quando selezioni **Certificato SAP**, scegli una delle configurazioni preimpostate.
    3. Specifica il numero di server bare metal.
 6. Se hai selezionato il componente **VMware vSAN**, completa la configurazione dell'archiviazione vSAN. Specifica i tipi di disco per i dischi di capacità e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
 7. Completa le impostazioni dell'interfaccia di rete:
@@ -294,7 +294,7 @@ Se hai salvato la configurazione del cluster come template, ricevi una notifica 
 
 Se hai effettuato un ordine, la distribuzione del cluster inizia automaticamente e ricevi un'e-mail di conferma che ti indica che l'ordine è in fase di elaborazione. Quando il cluster è pronto per l'uso, ti viene inviata una notifica via e-mail.
 
-I cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Istanze distribuite**.
+I cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Risorse**.
 {:note}
 
 ## Link correlati
