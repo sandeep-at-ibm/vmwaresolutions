@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-26"
+lastupdated: "2019-04-02"
 
 subcollection: vmwaresolutions
 
@@ -23,10 +23,10 @@ subcollection: vmwaresolutions
 
 To enable vSphere encryption or vSAN encryption by using KMIP for VMware on {{site.data.keyword.cloud_notm}}, you need to complete the following tasks:
 
-1. [Enable your account for using service endpoints](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps).
-2. Create an [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) instance.
-3. Create a customer root key (CRK) within IBM Key Protect.
-4. Create an Identity and Access Management (IAM) [service ID and API key](/docs/iam?topic=iam-serviceidapikeys) for use with KMIP for VMware. Grant this service ID platform viewer access and service write access to your Key Protect instance.
+1. [Enabling your account for using Service Endpoints using IBM Cloud CLI](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps).
+2. Create a key manager instance, using either [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) or [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started). If you are using Hyper Protect Crypto Services, be sure to [initialize your crypto instance](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm) so that Hyper Protect Crypto Services can provide key related functions.
+3. Create a customer root key (CRK) within your key manager instance.
+4. Create an Identity and Access Management (IAM) [service ID and API key](/docs/iam?topic=iam-serviceidapikeys) for use with KMIP for VMware. Grant this service ID platform viewer access and service write access to your key manager instance.
 5. Create a [KMIP for VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering) instance from the {{site.data.keyword.cloud_notm}} catalog.
 6. Within VMware vCenter, create a key management server (KMS) cluster with two servers, one for each KMIP for VMware endpoint in your chosen region.
 7. Select one of VMware&rsquo;s methods to generate or install a KMS client certificate in vCenter.
@@ -45,7 +45,7 @@ To use vSphere encryption, edit your virtual machine storage policies to require
 ## Key rotation
 {: #kmip-implementation-key-rotation}
 
-[Rotate your Key Protect customer root key (CRK)](/docs/services/key-protect?topic=key-protect-key-rotation#key-rotation) by using the {{site.data.keyword.cloud_notm}} console or API.
+Rotate your [Key Protect](/docs/services/key-protect?topic=key-protect-rotate-keys#rotate-keys) or [Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-rotating-keys) customer root key (CRK) by using the {{site.data.keyword.cloud_notm}} console or API.
 
 For VMware vSAN encryption, rotate your VMware key&ndash;encrypting keys (KEKs) and optionally data&ndash;encrypting keys (DEKs) from the vSAN general settings in your vCenter cluster.
 
@@ -54,14 +54,14 @@ For VMware vSphere encryption, rotate your VMware KEKs and DEKs (optionally) by 
 ## Key revocation
 {: #kmip-implementation-key-revocation}
 
-You can revoke all keys in use by KMIP for VMware by deleting your chosen CRK from Key Protect.
+You can revoke all keys in use by KMIP for VMware by deleting your chosen CRK from your key manager.
 
 When keys are revoked, all data that is protected by these keys and by your KMIP for VMware instance is cryptographically shredded by this method. VMware preserves some keys while an ESXi host is powered on, so you need to restart your vSphere cluster to ensure that all encrypted data is no longer in use.
 {:important}
 
-KMIP for VMware stores individual wrapped KEKs in your Key Protect instance by using names that are associated with the key IDs that are known to VMware. You can delete individual keys to revoke the encryption of individual disks or drives.
+KMIP for VMware stores individual wrapped KEKs in your Key Protect or Hyper Protect Crypto Services instance by using names that are associated with the key IDs that are known to VMware. You can delete individual keys to revoke the encryption of individual disks or drives.
 
-VMware does not delete keys from the KMS when a VM having encrypted disks is removed from inventory. This is to allow recovery of that VM from backup or if it is restored to inventory. If you wish to reclaim these keys and cryptographically invalidate all backups, you need to delete the keys from Key Protect after deleting your VMs.
+VMware does not delete keys from the KMS when a VM having encrypted disks is removed from inventory. This is to allow recovery of that VM from backup or if it is restored to inventory. If you wish to reclaim these keys and cryptographically invalidate all backups, you need to delete the keys from your key manager instance after deleting your VMs.
 {:note}
 
 ## Related links
@@ -70,3 +70,4 @@ VMware does not delete keys from the KMS when a VM having encrypted disks is rem
 * [Solution overview](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-overview)
 * [Solution design](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-design)
 * [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial)
+* [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started)
