@@ -93,7 +93,7 @@ Three components make up your storage encryption solution: your VMware cluster, 
 
 VMware vCenter and ESXi authenticate with your KMIP for VMware instance by using certificates that you install or generate in VMware vCenter when you create a key management server (KMS) connection. You install the public certificate into KMIP for VMware to identify the vCenter client or clients that are allowed to connect. Each client is authorized to all keys stored in that KMIP for VMware instance.
 
-Your KMIP for VMware instance is authorized to your Key Protect or Hyper Protect Crypto Services instance by using an {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) service ID that has been granted access to the instance. The service ID must have a minimum of platform Viewer access and service Manager access to your key manager instance. KMIP for VMware uses the customer root key (CRK) of your choice in the key manager instance, and stores all KEKs generated on behalf of VMware, in wrapped form, in the key manager instance.
+Your KMIP for VMware instance is authorized to your Key Protect or Hyper Protect Crypto Services instance by using an {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) service ID that has been granted access to the instance. The service ID must have a minimum of `Platform Viewer` access and `Service Manager` access to your key manager instance. KMIP for VMware uses the customer root key (CRK) of your choice in the key manager instance, and stores all KEKs generated on behalf of VMware, in wrapped form, in the key manager instance.
 
 ### Topology
 {: #kmip-design-topology}
