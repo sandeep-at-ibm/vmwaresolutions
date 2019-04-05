@@ -8,7 +8,7 @@ lastupdated: "2019-03-22"
 
 keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
