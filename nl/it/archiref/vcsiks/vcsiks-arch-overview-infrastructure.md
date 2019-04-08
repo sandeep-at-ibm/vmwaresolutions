@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -95,7 +98,7 @@ gateway predefinito è impostato sul BCR.
 {: #vcsiks-arch-overview-infrastructure-nsx-manager}
 
 NSX Manager viene distribuito sul cluster vCenter Server iniziale. Inoltre,
-a NSX Manager viene assegnato un indirizzo IP dal blocco di indirizzi portatile privato designato per i componenti di gestione.
+a NSX Manager viene assegnato un indirizzo IP dal blocco di indirizzi portatili privato designato per i componenti di gestione.
 
 ### Controller NSX
 {: #vcsiks-arch-overview-infrastructure-nsx-controllers}
@@ -133,8 +136,8 @@ Disco	| 1000 GB sul datastore locale
 ## Componenti di IBM Cloud Kubernetes Service
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
-Figura 3. Componenti di {{site.data.keyword.containerlong_notm}}
-![{{site.data.keyword.containerlong_notm}} Diagramma dei componenti](vcsiks-iks-components.svg)
+Figura 3. Componenti di {{site.data.keyword.containerlong_notm}} </br>
+![{{site.data.keyword.containerlong_notm}} - Diagramma dei componenti](vcsiks-iks-components.svg)
 
 ### Master Kubernetes
 {: #vcsiks-arch-overview-infrastructure-kube-master}
@@ -156,5 +159,4 @@ Docker Engine gestito da IBM, risorse di calcolo separate, rete e un servizio vo
 ## Link correlati
 {: #vcsiks-arch-overview-infrastructure-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

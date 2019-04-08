@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,7 +18,7 @@ lastupdated: "2019-02-15"
 # Considerazioni sulla post-distribuzione per la tua istanza VMware
 {: #solution_considerations}
 
-Le offerte {{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server e VMware Cloud Foundation non sono dei servizi gestiti. Sei responsabile della configurazione, della sicurezza, della gestione e del monitoraggio di tutti i componenti software. Con l'accesso amministrativo completo alla soluzione, hai una grande potenza e flessibilità che richiede competenze tecniche, amministrative e operative significative in vari domini. La gestione di un'istanza VMware in {{site.data.keyword.cloud_notm}} richiede la stessa pianificazione e competenza della pianificazione di un'istanza installata in loco. Le tecnologie definite dal software come VMware NSX e VMware vSAN semplificano notevolmente alcuni aspetti della gestione delle istanze, ma potrebbero richiedere nuove competenze e nuovi strumenti affinché siano correttamente gestite e realizzate. La combinazione della potenza, della velocità e dell'affidabilità della distribuzione VMware automatizzata da {{site.data.keyword.cloud_notm}} con la pianificazione e i test operativi appropriati garantisce una navigazione rapida e corretta verso il cloud ibrido.
+Le offerte di {{site.data.keyword.vmwaresolutions_full}} non sono servizi gestiti. Sei responsabile della configurazione, della sicurezza, della gestione e del monitoraggio di tutti i componenti software. Con l'accesso amministrativo completo alla soluzione, hai una grande potenza e flessibilità che richiede competenze tecniche, amministrative e operative significative in vari domini. La gestione di un'istanza VMware in {{site.data.keyword.cloud_notm}} richiede la stessa pianificazione e competenza della pianificazione di un'istanza installata in loco. Le tecnologie definite dal software come VMware NSX e VMware vSAN semplificano notevolmente alcuni aspetti della gestione delle istanze, ma potrebbero richiedere nuove competenze e nuovi strumenti affinché siano correttamente gestite e realizzate. La combinazione della potenza, della velocità e dell'affidabilità della distribuzione VMware automatizzata da {{site.data.keyword.cloud_notm}} con la pianificazione e i test operativi appropriati garantisce una navigazione rapida e corretta verso il cloud ibrido.
 
 Esamina le seguenti considerazioni per comprendere le tue responsabilità per la gestione e il funzionamento dell'istanza prima e dopo la sua distribuzione.
 
@@ -39,12 +42,12 @@ Familiarizza con le seguenti limitazioni relative alla tua istanza:
 ## Progettazione e connettività della rete
 {: #solution_considerations-net-design}
 
-Completa la seguente procedura per gestire l'accesso alla tua rete {{site.data.keyword.cloud_notm}} e ai tuoi componenti di gestione VMware e per pianificare la tipologia di rete {{site.data.keyword.cloud_notm}}.
+Completa la seguente procedura per gestire l'accesso alla tua rete {{site.data.keyword.cloud_notm}} e ai tuoi componenti di gestione VMware e per pianificare la topologia di rete {{site.data.keyword.cloud_notm}}.
 
 - Accedi agli endpoint di gestione delle istanze utilizzando la [VPN {{site.data.keyword.cloud_notm}}](https://www.softlayer.com/vpn-access) o la tua [connessione Direct-Link {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/direct-link).
 - Definisci una strategia per la connettività di rete pubblica dall'interno della tua istanza. Le opzioni includono: il gateway dei servizi edge (ESG) VMware NSX del cliente di esempio, dispositivi gateway come Vyatta e FortiGate e i server proxy distribuiti nella rete {{site.data.keyword.cloud_notm}} o nella tua propria rete a cui si accede tramite DirectLink.
 - Pianifica se distribuire il tuo carico di lavoro sulle VLAN {{site.data.keyword.cloud_notm}} con [indirizzi IP portatili di {{site.data.keyword.cloud_notm}}](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips) o [su switch logici NSX (VXLAN) utilizzando i tuoi propri indirizzi IP](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview). Nota che l'utilizzo della SDN (software-defined networking) NSX ti fornisce la massima flessibilità per gestire e proteggere la tua rete del carico di lavoro in {{site.data.keyword.cloud_notm}}.
-- Utilizza ESG NSX, [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) e peering DirectLink per pianificare la connettività ai carichi di lavoro (Network Address Translation, Virtual Private Network, instradamento).
+- Utilizza ESG NSX, [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) e peering DirectLink per pianificare la connettività ai carichi di lavoro (Network Address Translation, Virtual Private Network, instradamento).
 - Se si implementa Cross-vCenter NSX, assicurati che gli intervalli di ID del segmento locale non si sovrappongano prima di distribuire i carichi di lavoro locali.
 
 ## Pianificazione e protezione della sicurezza
@@ -55,7 +58,7 @@ Sei responsabile della protezione, della crittografia e del monitoraggio della t
 - Modifica tutte le password visualizzate nella console {{site.data.keyword.vmwaresolutions_short}} e utilizza il tuo proprio sistema di gestione delle password. Nota che IBM conserva ID utente distinti necessari per l'automazione e il supporto continui.
 - Esamina le politiche delle password, come la complessità e il periodo di scadenza, per tutti i componenti.
 - Esamina le impostazioni di crittografia su tutti i componenti.
-- Pianifica e implementa soluzioni di firewall fisico o virtuale appropriate, come ad esempio DFW (Distributed Firewall) NSX, ESG NSX, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) e [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance).
+- Pianifica e implementa soluzioni di firewall fisico o virtuale appropriate, come ad esempio DFW (Distributed Firewall) NSX, ESG NSX, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) e [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance).
 - Pianifica e implementa soluzioni di sicurezza e bilanciamento del carico dell'applicazione appropriate, come ad esempio [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations).
 - Pianifica e implementa soluzioni SIEM (security information and event management) appropriate, come ad esempio [IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence).
 - Pianifica e implementa una scansione delle vulnerabilità appropriata.
@@ -66,7 +69,7 @@ Sei responsabile della protezione, della crittografia e del monitoraggio della t
 
 Completa la seguente procedura per personalizzare l'installazione dell'istanza VMware di base in modo da soddisfare i tuoi requisiti.
 
-- Utilizza la tua propria autorità di certificazione (CA) per generare certificati per componenti come vCenter, VMware Platform Services Controller (PSC) e NSX Manager.
+- Utilizza la tua autorità di certificazione (CA) per generare certificati per componenti come vCenter (con PSC integrato) e NSX Manager.
 - Configura i servizi distribuiti. Ad esempio:
   - Per HyTrust CloudControl on {{site.data.keyword.cloud_notm}}, configura l'integrazione AD, il controllo degli accessi, le impostazioni SMTP (Simple Mail Transfer Protocol) e le politiche di conformità.
   - Per Zerto on {{site.data.keyword.cloud_notm}}, pianifica l'indirizzamento e l'instradamento di IP delle comunicazioni del dispositivo Zerto Virtual Replication Appliance (VRA) poiché l'attraversamento NAT (Network Address Translator) non è supportato. Prendi in considerazione il tunneling o la ridistribuzione dei tuoi VRA per l'indirizzamento e l'instradamento appropriati.

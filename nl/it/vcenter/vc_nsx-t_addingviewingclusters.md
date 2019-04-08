@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -50,7 +53,7 @@ Se distribuisci il cluster in un diverso {{site.data.keyword.CloudDataCent_notm}
 ### Impostazioni di Bare Metal Server
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-Puoi scegliere **Skylake**, **Certificato SAP** o **Broadwell**.
+Puoi scegliere **Skylake** o **Broadwell**.
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -65,20 +68,6 @@ Tabella 1. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
 | Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
-#### Certificato SAP
-{: #vc_nsx-t_addingviewingclusters-adding-sap}
-
-Se selezioni **Certificato SAP**, non puoi modificare le impostazioni di CPU o RAM.
-
-In base ai tuoi requisiti, seleziona una configurazione di Bare Metal Server:
-* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 192 GB RAM
-* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 384 GB RAM
-* Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 768 GB RAM
-* Processore Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz / 512 GB di RAM
-* Processore Quad Intel Xeon E7-8890 v4 / 96 core totali, 2,2 GHz / 1024 GB di RAM
-* Processore Quad Intel Xeon E7-8890 v4 / 96 core totali, 2,2 GHz / 2048 GB di RAM
-* Processore Quad Intel Xeon E7-8890 v4 / 96 core totali, 2,2 GHz / 4096 GB di RAM
-
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -88,9 +77,6 @@ Tabella 2. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 
 | Opzioni del modello CPU        | Opzioni RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 core totali, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
@@ -116,7 +102,7 @@ Specifica le seguenti opzioni vSAN:
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
 * Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
 
-  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPI Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
+  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
   {:note}
 
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
@@ -147,13 +133,6 @@ Tabella 3. Opzioni del livello di prestazioni NFS
   | 4 IOPS/GB | Questa opzione è progettata per i carichi di lavoro ad alta intensità che hanno un'alta percentuale di dati attivi alla volta. Applicazioni di esempio includono: database transazionali. |
   | 10 IOPS/GB | Questa opzione è progettata per i tipi di carichi di lavoro più impegnativi, come l'analisi. Applicazioni di esempio includono: database ad alte transazioni e altri database sensibili alle prestazioni. Questo livello di prestazioni è limitato a una capacità massima di 4 TB per condivisione file. |
 
-### Dischi locali
-{: #vc_nsx-t_addingviewingclusters-adding-local-disks}
-
-L'opzione dischi locali è disponibile solo per la configurazione Bare Metal del processore Quad Intel Xeon E7-8890 v4 con **Certificato SAP**. Specifica le seguenti opzioni:
-* **Numero di dischi**: seleziona il numero di dischi che vuoi aggiungere.
-* **Tipo di disco**: seleziona un'opzione per il tipo di disco di cui hai bisogno.
-
 ### Impostazioni di licenza
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
 
@@ -164,7 +143,7 @@ Specifica l'opzione di licenza per il componente VMware vSphere nel cluster:
 ### Impostazioni dell'interfaccia di rete
 {: #vc_nsx-t_addingviewingclusters-adding-network-interface-settings}
 
-Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC) si basano sulla tua selezione di **Rete pubblica e privata** o **Solo rete privata**rd.cloud_notm}}
+Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC) si basano sulla tua selezione di **Rete pubblica e privata** o **Solo rete privata**.
 
 ### Riepilogo ordine
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
@@ -182,14 +161,11 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra e quindi su **Aggiungi** nell'angolo superiore destro della tabella **CLUSTER**.
 4. Nella pagina **Aggiungi cluster**, immetti il nome del cluster.
 5. Se vuoi ospitare il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso da quello in cui è ospitata l'istanza, in **Bare Metal Server**, seleziona la casella di spunta **Seleziona un'ubicazione differente** e scegli il {{site.data.keyword.CloudDataCent_notm}} per ospitare l'istanza.
-6. Completa la configurazione Bare Metal.
-   * Se hai selezionato **Skylake** o **Broadwell**, specifica il **Modello CPU**, la quantità di **RAM** e il **Numero di {{site.data.keyword.baremetal_short}}**.
-   * Se hai selezionato **Certificato SAP**, specifica il modello CPU.
+6. Completa la configurazione Bare Metal. Specifica il **CPU Model**, la quantità di **RAM** e il **Number of {{site.data.keyword.baremetal_short}}**.
 7. Completa la configurazione di archiviazione.
   * Se selezioni **Storage vSAN**, specifica i tipi di disco per i dischi di capacità e cache, il numero di dischi e l'edizione della licenza vSAN. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
   * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, le **Prestazioni** e la **Dimensione (GB)**.
   * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le condivisioni file singolarmente, seleziona **Configura condivisioni singolarmente**. Quindi, fai clic sull'icona **+** accanto all'etichetta **Aggiungi storage condiviso** e seleziona le **Prestazioni** e la **Dimensione (GB)** per ogni condivisione file. Devi selezionare almeno una condivisione file.
-  * Se selezioni **Dischi locali**, specifica il numero di dischi e il tipo di disco.
 8. Completa le impostazioni dell'interfaccia di rete.
 8. Specifica come viene fornita la chiave di licenza vSphere:
   * Per gli utenti Business Partner, la licenza vSphere (Enterprise Plus edition) viene inclusa e acquistata per tuo conto.
@@ -250,7 +226,7 @@ Tabella 4. Dettagli del server ESXi
 | Versione | La versione del server ESXi. |
 | Credenziali | Il nome utente e la password per accedere al server ESXi. |
 | IP privato | L'indirizzo IP privato del server ESXi. |
-| Stato | Lo stato del server ESXi, che può assumere uno dei seguenti valori:<br> **Aggiunto** Il server ESXi è stato aggiunto ed è pronto per l'uso. <br> **In fase di aggiunta** Il server ESXi è in fase di aggiunta.<br> **In fase di eliminazione** Il server ESXi è in fase di eliminazione. |
+| Stato | Lo stato del server ESXi, che può assumere uno dei seguenti valori:<br> **Aggiunto** Il server ESXi è stato aggiunto ed è pronto per l'uso.<br> **In fase di aggiunta** Il server ESXi è in fase di aggiunta.<br> **In fase di eliminazione** Il server ESXi è in fase di eliminazione. |
 
 Tabella 5. Dettagli dell'archiviazione
 
@@ -260,6 +236,33 @@ Tabella 5. Dettagli dell'archiviazione
 | Dimensione | La capacità di archiviazione. |
 | IOPS/GB | Il livello di prestazioni dell'archiviazione. |
 | Protocollo NFS | La versione NFS dell'archiviazione. |
+
+Tabella 6. Interfaccia di rete - Dettagli VLAN
+
+| Elemento        | Descrizione       |  
+|:------------- |:------------- |
+| Numero VLAN | Il numero VLAN univoco.  |
+| Descrizione | La descrizione della VLAN.  |
+| Ubicazione | L'ubicazione del data center. |
+| Rotta primaria | La rotta primaria della VLAN. |
+
+Fai clic su **View Resource** per accedere ai dettagli della VLAN.
+
+Tabella 7. Interfaccia Rete - Dettagli della sottorete
+
+| Elemento        | Descrizione       |  
+|:------------- |:------------- |
+| Nome | Il nome della sottorete. Fai clic sul nome per accedere ai dettagli della sottorete. |
+| Tipo | Il tipo di sottorete: primaria o portatile. |
+| Descrizione | La descrizione della sottorete.  |
+
+Tabella 8. Interfaccia di rete - Dettagli IP
+
+| Elemento        | Descrizione       |  
+|:------------- |:------------- |
+| IP | L'indirizzo IP. |
+| Stato | Lo stato dell'indirizzo IP. |
+| Descrizione |La descrizione dell'indirizzo IP. |
 
 ## Eliminazione di cluster dalle istanze vCenter Server with NSX-T
 {: #vc_nsx-t_addingviewingclusters-deleting}

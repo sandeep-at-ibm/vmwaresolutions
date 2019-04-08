@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,117 +18,125 @@ lastupdated: "2019-03-08"
 # Progettazione dell'infrastruttura fisica
 {: #design_physicalinfrastructure}
 
-L'infrastruttura fisica comprende i seguenti componenti:
+L'infrastruttura fisica è formata dai seguenti componenti:
 
 <dl class="dl">
   <dt class="dt dlterm">Calcolo fisico</dt>
   <dd class="dd">Il calcolo fisico fornisce l'elaborazione fisica e la memoria che viene utilizzata dall'infrastruttura di virtualizzazione. Per questa progettazione, i componenti di calcolo sono forniti da {{site.data.keyword.baremetal_long}} e sono elencati nella [Guida alla compatibilità hardware per VMware](https://www.vmware.com/resources/compatibility/search.php).</dd>
   <dt class="dt dlterm">Archiviazione fisica</dt>
-  <dd class="dd">L'archiviazione fisica fornisce la capacità di archiviazione non elaborata utilizzata dall'infrastruttura di virtualizzazione. I componenti di archiviazione sono forniti da {{site.data.keyword.baremetal_short}} o tramite array NAS (Network Attached Storage) condiviso utilizzando NFS v3.</dd>
+  <dd class="dd">L'archiviazione fisica fornisce la capacità di archiviazione non elaborata utilizzata dall'infrastruttura di virtualizzazione. I componenti di archiviazione sono forniti da {{site.data.keyword.baremetal_short}} o tramite array NAS (Network Attached Storage) condiviso che utilizza NFSv3 o iSCSI.</dd>
   <dt class="dt dlterm">Rete fisica</dt>
   <dd class="dd">La rete fisica fornisce la connettività di rete nell'ambiente che viene quindi utilizzato dalla virtualizzazione di rete. La rete è fornita dalla rete dei servizi {{site.data.keyword.cloud_notm}} e include servizi supplementari come DNS e NTP.</dd>
 </dl>
 
-Per ulteriori informazioni sui componenti fisici, vedi la distinta base per l'[istanza vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Per ulteriori informazioni sui componenti fisici, vedi [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 Per ulteriori informazioni sull'archiviazione, vedi [Architettura dell'archiviazione condivisa](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
-## Progettazione dell'host fisico
-{: #design_physicalinfrastructure-host-design}
+Figura 1. Infrastruttura fisica</br>
+![Infrastruttura fisica](vcsv4radiagrams-ra-physinfra.svg)
 
-L'host fisico si riferisce ai {{site.data.keyword.baremetal_short}} nell'ambiente che fornisce risorse di calcolo. I {{site.data.keyword.baremetal_short}} applicati in questa soluzione sono certificati da VMware ed elencati nella guida [VMware HCG](http://www.vmware.com/resources/compatibility/search.php).
+## Progettazione del calcolo fisico
+{: #design_physicalinfrastructure-host-design}
 
 Le configurazioni del server disponibili nella soluzione soddisfano o superano i requisiti minimi per installare, configurare e gestire vSphere ESXi. Sono disponibili varie configurazioni per soddisfare diversi requisiti. Per l'elenco dettagliato delle esatte specifiche utilizzate per la soluzione VMware on {{site.data.keyword.cloud_notm}}, vedi la distinta base per l'[istanza vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 I {{site.data.keyword.baremetal_short}} risiedono in {{site.data.keyword.cloud_notm}}.
 {:note}
 
-Ogni istanza Cloud Foundation inizia con una distribuzione a 4 host e ogni istanza vCenter Server inizia con una distribuzione a 3 o 4 host a seconda della scelta della soluzione di archiviazione.
+Ogni istanza vCenter Server inizia con una distribuzione a 3 o 4 host a seconda della scelta della soluzione di archiviazione.
 
-L'host fisico utilizza due dischi collegati localmente da assegnare all'hypervisor vSphere ESXi. Puoi assegnare altri dischi utilizzando vSAN come descritto nella sezione _Progettazione dell'archiviazione fisica_ o utilizzando NetApp ONTAP come descritto in [Architettura di NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Ogni
+L'host fisico utilizza due dischi collegati localmente assegnati all'hypervisor vSphere ESXi. Puoi assegnare altri dischi utilizzando vSAN come descritto nella sezione _Progettazione dell'archiviazione fisica_ o utilizzando NetApp ONTAP come descritto in [Architettura di NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Ogni
 host fisico ha connessioni di rete ridondanti da 10 Gbps per l'accesso alla rete pubblica e privata.
 
 Il Bare Metal Server ha le seguenti specifiche:
 * CPU: Dual Intel Xeon, configurazione core e velocità variabile
-* Memoria: configurazione variabile, da 128 GB o superiore
+* Memoria: configurazione variabile, da 64 GB o superiore
 * Rete: 4 x 10 Gbps
 * Numero di unità: 2 o più
 
 ## Progettazione della rete fisica
 {: #design_physicalinfrastructure-net-design}
 
-Questa sezione descrive la rete fisica fornita da {{site.data.keyword.cloud_notm}} e le connessioni all'host fisico (VLAN, MTU) associate agli host fisici.
+La rete fisica è gestita da {{site.data.keyword.cloud_notm}}. Controlla le seguenti descrizioni della rete fisica fornita da IBM Cloud e le connessioni all'host fisico (VLAN, MTU) associate agli host fisici.
 
-La rete fisica di {{site.data.keyword.cloud_notm}} è suddivisa in tre reti distinte: pubblica, privata e di gestione. Per un'illustrazione delle tre reti e del modo in cui funzionano, vedi [Rete {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud-computing/bluemix/our-network).
+### Panoramica della rete di IBM Cloud
+{: #design_physicalinfrastructure-ibm-cloud-network}
 
-### Rete pubblica
+La rete fisica di {{site.data.keyword.cloud_notm}} è suddivisa in due reti distinte: pubblica e privata. La rete privata contiene il traffico IPMI (Intelligent Platform Management Interface) di gestione fuori banda ai server fisici.
+
+Figura 2. {{site.data.keyword.cloud_notm}} - Rete di alto livello
+![{{site.data.keyword.cloud_notm}} - Rete di alto livello](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
+
+#### Rete pubblica
 {: #design_physicalinfrastructure-public-net}
 
-I {{site.data.keyword.CloudDataCents_notm}} e i PoP (point of presence) di rete dispongono di più connessioni da 1 Gbps o 10 Gbps ai vettori di rete di transito e peering di alto livello.
+I {{site.data.keyword.CloudDataCents_notm}} e i PoP (point of presence) di rete dispongono di più connessioni da 1 Gbps o 10 Gbps ai vettori di rete di transito e peering di alto livello. Il traffico di rete proveniente da qualsiasi parte del mondo si collega al PoP di rete più vicino e viaggia direttamente attraverso la rete verso il suo data center, riducendo al minimo il numero di hop e handoff di rete tra i provider. 
 
-Il traffico di rete esterno proveniente da qualsiasi parte del mondo si collega al PoP di rete più vicino e viaggia direttamente, attraverso la rete, verso il suo data center, minimizzando il numero di hop e handoff di rete tra provider.
-
-All'interno del data center, {{site.data.keyword.cloud_notm}} fornisce 1 Gbps o 10 Gbps di larghezza di banda di rete ai singoli server tramite una coppia di switch FCS (front-end customer switch) separati aggregati ai peer. Questi switch aggregati sono collegati a una coppia di router FCR (front-end customer router) separati per la rete L3.
+All'interno del data center, {{site.data.keyword.cloud_notm}} fornisce 1 Gbps o 10 Gbps di larghezza di banda di rete ai singoli server tramite una coppia di switch FCS (front-end customer switch) separati aggregati ai peer. Questi switch aggregati sono collegati a una coppia di router separati, FCR, per la rete L3.
 
 Questa progettazione multilivello consente alla rete di ridimensionarsi tra rack, righe e pod all'interno di un {{site.data.keyword.CloudDataCent_notm}}.
 
-### Rete privata
+#### Rete privata
 {: #design_physicalinfrastructure-private-net}
 
-Tutti i {{site.data.keyword.CloudDataCents_notm}} e i PoP sono connessi mediante un backbone di rete privata. La rete privata è separata dalla rete pubblica e consente la connettività ai servizi nei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. Lo spostamento dei dati tra i {{site.data.keyword.CloudDataCents_notm}} avviene tramite più connessioni da 10 Gbps o 40 Gbps alla rete privata.
+Tutti i {{site.data.keyword.CloudDataCents_notm}} e i PoP sono connessi mediante il backbone di rete privata. Questa rete privata è separata dalla rete pubblica e abilita la connettività ai servizi nei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. Lo spostamento dei dati tra i {{site.data.keyword.CloudDataCents_notm}} avviene tramite più connessioni da 10 Gbps o 40 Gbps alla rete privata.
 
 Analogamente alla rete pubblica, la rete privata è multilivello in quanto i server e gli altri componenti dell'infrastruttura sono connessi a switch BCS (back-end customer switch) aggregati. Questi switch aggregati sono collegati a una coppia di router BCR (back-end customer router) separati per la rete L3. La rete privata supporta anche la possibilità di utilizzare i frame Jumbo (MTU 9000) per connessioni all'host fisico.
 
-### Rete di gestione
+#### Rete di gestione
 {: #design_physicalinfrastructure-mgmt-net}
 
-Oltre alle reti pubbliche e private, ogni server {{site.data.keyword.cloud_notm}} è connesso a una rete di gestione fuori banda. Questa rete di gestione, accessibile tramite VPN, consente l'accesso IPMI (Intelligent Platform Management Interface) al server indipendentemente dalla CPU, dal firmware e dal sistema operativo per scopi di manutenzione e amministrazione.
+Oltre alle reti pubbliche e private, ogni server {{site.data.keyword.cloud_notm}} è connesso per la gestione fuori banda alla sottorete della rete primaria privata. Questa connessione consente l'accesso IPMI (Intelligent Platform Management Interface) al server indipendentemente dalla CPU, dal firmware e dal sistema operativo per scopi di manutenzione e amministrazione.
 
-### Blocchi di IP primari e portatili
+#### Blocchi di IP primari e portatili
 {: #design_physicalinfrastructure-ip-blocks}
 
 {{site.data.keyword.cloud_notm}} assegna due tipi di indirizzi IP da utilizzare all'interno dell'infrastruttura {{site.data.keyword.cloud_notm}}:
 * Gli indirizzi IP primari sono assegnati a dispositivi, server virtuali e Bare Metal forniti da {{site.data.keyword.cloud_notm}}. Non assegnare alcun indirizzo IP in questi blocchi.
-* Gli indirizzi IP portatili ti vengono forniti per l'assegnazione e la gestione in base alle esigenze.
+* Gli indirizzi IP portatili ti vengono forniti per l'assegnazione e la gestione in base alle esigenze. vCenter Server esegue il provisioning di diversi intervalli di IP portatili per il proprio utilizzo. Utilizza solo gli intervalli di IP portatili assegnati a componenti NSX-T o NSX-V selezionati specificati per l'utilizzo da parte del cliente. Ad esempio, **EDGE del cliente**.
 
-Gli indirizzi IP primari o portatili possono essere resi instradabili a qualsiasi VLAN nell'account del cliente quando l'account è configurato come un account **VRF (Virtual Routing and Forwarding)**.
+Gli indirizzi IP primari o portatili possono essere resi instradabili a qualsiasi VLAN nel tuo account quando è configurato come un account **VRF (Virtual Routing and Forwarding)**.
 
-### VRF (Virtual Routing and Forwarding)
+#### VRF (Virtual Routing and Forwarding)
 {: #design_physicalinfrastructure-vrf}
 
-Puoi configurare l'account {{site.data.keyword.slportal}} come un account VRF (Virtual Routing and Forwarding), abilitando così l'instradamento globale automatico tra i blocchi di IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
+L'account {{site.data.keyword.slportal}} deve essere configurato come un account VRF (Virtual Routing and Forwarding), abilitando così l'instradamento globale automatico tra i blocchi di IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
 
-### Connessioni all'host fisico
+Poiché molte opzioni di connettività insieme a delle opzioni di instradamento di rete richiedono che l'account {{site.data.keyword.cloud_notm}} sia in modalità VRF, si consiglia che l'account sia nella modalità VRF prima di eseguire il provisioning di vCenter Server
+
+#### Connessioni all'host fisico
 {: #design_physicalinfrastructure-host-connect}
 
-Ogni host fisico nella progettazione ha due coppie ridondanti di connessioni Ethernet da 10-Gbps in ogni switch ToR (Top of Rack) {{site.data.keyword.cloud_notm}} (pubblico e privato). Gli adattatori sono configurati come connessioni individuali (non collegate) per un totale di 4 connessioni da 10-Gbps. Ciò consente alle connessioni della scheda dell'interfaccia di rete (NIC) di funzionare indipendentemente l'una dall'altra.
+Ogni host fisico in questa progettazione ha due coppie ridondanti di connessioni Ethernet da 10 Gbps in ogni switch (pubblico e privato) ToR (Top of Rack) di {{site.data.keyword.cloud_notm}}. Gli adattatori sono configurati come connessioni individuali (non collegate) per un totale di 4 connessioni da 10 Gbps. Ciò consente alle connessioni della scheda dell'interfaccia di rete (NIC) di funzionare indipendentemente l'una dall'altra.
 
-Figura 1. Connessioni NIC all'host fisico
+La rimozione della connettività di rete fisica dalla rete privata o pubblica per i server bare metal utilizzati nell'offerta vCenter Server non è possibile. Le porte fisiche sul NIC interno del bare metal possono essere disabilitate, ma non esiste supporto per lo scollegamento dei cavi.
 
-![Connessioni NIC all'host fisico](physical_nic_connection.svg "Connessioni NIC all'host fisico")
+Figura 3. Connessioni all'host fisico </br>
+![Connessioni all'host fisico](vcsv4radiagrams-ra-physical-host-connections.svg "Connessioni all'host fisico")
 
-### VLAN
+#### VLAN e instradamento da quelle di underlay a quelle di overlay
 {: #design_physicalinfrastructure-vlans}
 
 Le offerte {{site.data.keyword.vmwaresolutions_short}} sono progettate con 3 VLAN, una pubblica e due private, assegnate al momento della distribuzione. Come mostrato nella figura precedente, la VLAN pubblica è assegnata a eth1 e eth3 e le VLAN private sono assegnate a eth0 e eth2.
 
-La VLAN pubblica e la prima VLAN privata create e assegnate in questa progettazione sono prive di tag per impostazione predefinita all'interno di {{site.data.keyword.cloud_notm}}. La VLAN privata aggiuntiva viene trascinata sulle porte dello switch fisico e contrassegnata con tag all'interno dei gruppi di porte VMware che utilizzano queste sottoreti.
+La VLAN pubblica e la prima VLAN privata create e assegnate in questa progettazione sono prive di tag per impostazione predefinita all'interno di {{site.data.keyword.cloud_notm}}. Successivamente, la VLAN privata aggiuntiva viene trascinata sulle porte dello switch fisico e contrassegnata con tag all'interno dei gruppi di porte VMware che utilizzano queste sottoreti.
 
 In questa progettazione, la rete privata è composta da due VLAN. Alla prima di queste VLAN (indicata qui come VLAN privata A) sono assegnate tre sottoreti:
 * La prima sottorete è un intervallo di sottoreti di IP privati primari che {{site.data.keyword.cloud_notm}} assegna agli host fisici.
 * La seconda sottorete è utilizzata per le VM (Virtual Machine) di gestione come vCenter Server Appliance e Platform Services Controller
-* La terza sottorete è utilizzata per i VTEP (VXLAN Tunnel Endpoint) assegnati a ciascun host tramite VMware NSX Manager.
+* La terza sottorete è utilizzata per i VTEP (VXLAN Tunnel Endpoint) della rete di sovrapposizione incapsulati assegnati a ciascun host tramite l'NSX Manager.
 
-Oltre alla VLAN privata A, esiste una seconda VLAN privata (qui indicata come VLAN privata B) per supportare le funzioni di VMware, come vSAN e vMotion, e per la connettività al NAS (Network Attached Storage). Pertanto, la VLAN è divisa in due o tre sottoreti portatili.
-
+Oltre alla VLAN privata A, esiste una seconda VLAN privata (qui indicata come VLAN privata B) per supportare le funzioni di VMware, come vSAN, vMotion, NFS e iSCSI. Pertanto, la VLAN è divisa in due, tre o quattro sottoreti portatili: 
 * La prima sottorete viene assegnata a un gruppo di porte kernel per il traffico vMotion.
 * Le restanti sottoreti vengono utilizzate per il traffico di archiviazione:
    * Se si utilizza vSAN, una sottorete viene assegnata ai gruppi di porte kernel utilizzati per il traffico vSAN.
-   * Se si utilizza NAS, una sottorete viene assegnata a un gruppo di porte dedicato al traffico NFS.
+   * Se si utilizza NFS collegato a NAS, una sottorete viene assegnata a un gruppo di porte dedicato al traffico NFS.
+   * Per il collegamento iSCSI, vengono creati due gruppi di porte per consentire i percorsi multipli attivo-attivo tra le porte NIC private poiché solo una porta NIC può essere attivata alla volta per la documentazione VMware iSCSI.
 
 Tutte le sottoreti configurate come parte di una distribuzione automatizzata di vCenter Server o Cloud Foundation utilizzano intervalli gestiti da {{site.data.keyword.cloud_notm}}. Ciò serve a garantire che qualsiasi indirizzo IP possa essere indirizzato a qualsiasi data center all'interno dell'account {{site.data.keyword.cloud_notm}} ogni volta che hai bisogno della connessione.
 
-Tutto ciò è riepilogato nella Tabella 1.
+Rivedi la seguente tabella per un riepilogo 
 
 Tabella 1. Riepilogo VLAN e sottorete
 
@@ -134,49 +145,65 @@ Tabella 1. Riepilogo VLAN e sottorete
 | Pubblica| Primaria  | Assegnata agli host fisici per l'accesso alla rete pubblica. Non utilizzata al momento della distribuzione iniziale. |
 | Privata A | Primaria  | Sottorete singola assegnata agli host fisici assegnati da {{site.data.keyword.cloud_notm}}. Utilizzata dall'interfaccia di gestione per il traffico di gestione vSphere. |
 | Privata A | Portatile | Sottorete singola assegnata alle VM (Virtual Machine) che funzionano come componenti di gestione |
-| Privata A | Portatile | Sottorete singola assegnata al VTEP NSX |
-| Privata B | Portatile | Sottorete singola assegnata per vSAN, se in uso |
+| Privata A | Portatile | Sottorete singola assegnata al VTEP NSX-V o NSX-T |
+| Privata A | Portatile | Sottorete singola assegnata per vSAN, se in uso |
 | Privata B | Portatile | Sottorete singola assegnata per NAS, se in uso |
+| Privata B | Portatile | Due sottoreti assegnate per iSCSI NAS, se in uso (una per la porta NIC fisica) |
 | Privata B | Portatile | Sottorete singola assegnata per vMotion |
 
-In questa progettazione, tutti gli host e le VM (Virtual Machine) supportati dalla VLAN sono configurati in modo che puntino al router del cliente della “rete privata” di back-end {{site.data.keyword.cloud_notm}} come rotta predefinita. Sebbene le istanze vCenter Server e Cloud Foundation consentano l'utilizzo di SDN (Software-Defined Networking), le sovrapposizioni di rete create all'interno di un'istanza VMware che includono l'instradamento alle sottoreti interne non sono note ai router gestiti da {{site.data.keyword.cloud_notm}}. Pertanto, potresti dover creare rotte statiche all'interno dell'istanza VMware su alcuni o su tutti i componenti di gestione.
+In questa progettazione, tutti gli host e le VM (Virtual Machine) supportati dalla VLAN sono configurati in modo che puntino al router del cliente della “rete privata” di back-end (BCR) {{site.data.keyword.cloud_notm}} come rotta predefinita. Mentre le istanze vCenter Server consentono l'utilizzo di SDN (Software-Defined Networking), le sovrapposizioni di rete create all'interno di un'istanza VMware che includono l'instradamento alle sottoreti interne non sono note ai router gestiti da {{site.data.keyword.cloud_notm}}. 
+
+Se vuoi eseguire l'instradamento tra la rete di overlay e di underlay, devi distribuire un dispositivo firewall IBM per una particolare VLAN privata predefinita quando viene distribuita l'istanza vCenter Server. Questo dispositivo consente l'inserimento di rotte statiche e il peering del protocollo di instradamento dinamico con i dispositivi della rete di sovrapposizione per consentire l'instradamento tra la rete di overlay e di underlay.
 
 Le connessioni alla rete privata sono configurate per utilizzare una dimensione MTU dei frame Jumbo pari a 9000 per migliorare le prestazioni per trasferimenti di dati di grandi dimensioni, come archiviazione e vMotion. Questa è la MTU massima consentita in VMware e da {{site.data.keyword.cloud_notm}}. Le connessioni alla rete pubblica utilizzano una MTU Ethernet standard di 1500. Questo valore deve essere mantenuto poiché qualsiasi modifica potrebbe causare la frammentazione dei pacchetti su Internet.
 
 ## Progettazione dell'archiviazione fisica
 {: #design_physicalinfrastructure-storage-design}
 
-La progettazione dell'archiviazione fisica consiste nella configurazione dei dischi fisici installati negli host fisici e nella configurazione dell'archiviazione a livello di file condivisa. Ciò include i dischi del sistema operativo dell'hypervisor vSphere ESXi e quelli utilizzati per l'archiviazione delle VM (Virtual Machine). L'archiviazione per le VM può essere composta di dischi locali virtualizzati da VMware vSAN o di un'archiviazione a livello di file condivisa.
+La progettazione dell'archiviazione fisica consiste nella configurazione dei dischi fisici installati negli host fisici e nella configurazione dell'archiviazione a livello di file condivisa. Ciò include il sistema operativo (vSphere ESXi) e i dischi utilizzati per l'archiviazione delle VM (Virtual Machine). L'archiviazione per le VM può essere composta di dischi locali virtualizzati da VMware vSAN, di un'archiviazione a livello di file condivisa o di un'archiviazione a livello di blocco condivisa.
 
 ### Dischi del sistema operativo
 {: #design_physicalinfrastructure-os-disks}
 
-L'hypervisor vSphere ESXi è progettato per essere installato in una ubicazione persistente. Di conseguenza, gli host fisici contengono due dischi SATA da 1-TB nella configurazione RAID-1 per supportare la ridondanza per l'hypervisor vSphere ESXi.
-
-### Archiviazione delle VM (Virtual Machine)
-{: #design_physicalinfrastructure-vm-storage}
-
-Questa progettazione consente di utilizzare VMware vSAN o l'archiviazione a livello di file condivisa come archivio dati primario per le VM.
+L'hypervisor vSphere ESXi è installato in una ubicazione persistente. Di conseguenza, gli host fisici sono formati da due dischi in una configurazione RAID–1 per supportare la ridondanza per l'hypervisor vSphere ESXi.
 
 ### Dischi vSAN
 {: #design_physicalinfrastructure-vsan-disks}
 
-Se utilizzato, VMware vSAN viene configurato utilizzando una configurazione all-flash. Questa progettazione consente diverse opzioni di configurazione, tra cui chassis 2U e 4U, vari numeri di dischi e varie dimensioni del disco. Tutte le configurazioni utilizzano due gruppi di dischi vSAN, con un SSD (Solid State Disk) per la cache e uno o più SSD per la capacità. Tutte le unità che vengono assegnate per il consumo di vSAN sono configurate in RAID-0 a singolo disco.
+Questa progettazione consente di utilizzare VMware vSAN o l'archiviazione a livello di file condivisa come archivio dati primario per le macchine virtuali. Per VMware vSAN, viene configurata utilizzando una configurazione all–flash. Questa progettazione consente diverse opzioni di configurazione, tra cui chassis 2U e 4U, vari numeri di dischi e varie dimensioni del disco. Tutte le configurazioni utilizzano due gruppi di dischi vSAN, con un SSD (Solid State Disk) per la cache e uno o più SSD per la capacità. Tutte le unità che vengono assegnate per il consumo di vSAN sono configurate in RAID-0 a singolo disco.
 
-Per ulteriori informazioni sulle configurazioni supportate, vedi la distinta base per l'[istanza vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+Per ulteriori informazioni sulle configurazioni supportate, vedi [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 ### Archiviazione a livello di file condivisa tra gli host
 {: #design_physicalinfrastructure-shared-storage}
 
-Quando si utilizza l'archiviazione a livello di file condivisa, una condivisione NFS da 2-TB è collegata agli host che comprendono il cluster VMware iniziale. Questa condivisione, che è nota come condivisione di gestione, viene utilizzata per i componenti di gestione come VMware vCenter Server, PSC (Platform Services Controller) e VMware NSX. L'archiviazione viene collegata utilizzando il protocollo NFSv3 e può supportare fino a 4000 IOPS.
+Quando si utilizza l'archiviazione a livello di file condivisa, una condivisione NFS da 2-TB è collegata agli host che comprendono il cluster VMware iniziale. Questa condivisione, che è nota come condivisione di gestione, viene utilizzata per i componenti di gestione come VMware vCenter Server, PSC (Platform Services Controller) e VMware NSX.
 
-Figura 2. Condivisioni NFS collegate alla distribuzione VMware
+L'archiviazione viene collegata utilizzando il protocollo NFSv3 con un livello di 2 IOPS per GB da IBM Cloud. IBM normalizza il livello IOP che viene fornito a una dimensione blocco di 16 K perché dimensioni blocco più grandi visualizzano un limite inferiore mentre dimensioni blocco più piccole un limite superiore.
 
-![Condivisioni NFS collegate alla distribuzione VMware](physical_nfs.svg "Condivisioni NFS collegate alla distribuzione VMware: condivisione di gestione e condivisione specificata dal cliente")
+Figura 4. Condivisioni NFS collegate alla distribuzione VMware
 
-Puoi assegnare e montare più condivisioni di file per i tuoi carichi di lavoro al momento dell'acquisto o successivamente nella console. Puoi scegliere tra le opzioni di capacità di archiviazione file Endurance {{site.data.keyword.cloud_notm}} e i livelli di prestazioni disponibili nel {{site.data.keyword.CloudDataCent_notm}} corrispondente. Tutte le condivisioni vengono collegate utilizzando il protocollo NFSv3. Inoltre, è possibile collegare le condivisioni file NFSv3 applicando l'offerta NetApp ONTAP Select.
+![Condivisioni NFS collegate alla distribuzione VMware](vcsv4radiagrams-ra-nfs-shares.svg "Condivisioni NFS collegate alla distribuzione VMware: condivisione di gestione e condivisione specificata dal cliente")
 
-I {{site.data.keyword.CloudDataCents_notm}} che offrono il livello di prestazioni di 10 IOPS/GB includono anche la crittografia dei dati inattivi gestita dal provider (crittografia AES-256) e sono supportati dall'archiviazione all-flash. Il livello di prestazioni di 10 IOPS/GB è limitato a una capacità massima di 4 TB. Per ulteriori informazioni sul NAS condiviso utilizzato in questa soluzione, vedi [Architettura dell'archiviazione condivisa](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
+Puoi assegnare e montare più condivisioni di file tra tutti gli host per i tuoi carichi di lavoro al momento dell'acquisto o successivamente nella console. Puoi scegliere tra le opzioni di capacità di archiviazione file Endurance {{site.data.keyword.cloud_notm}} e i livelli di prestazioni disponibili nel {{site.data.keyword.CloudDataCent_notm}} corrispondente. Tutte le condivisioni vengono collegate utilizzando il protocollo NFSv3. Inoltre, è possibile collegare le condivisioni file NFSv3 applicando l'offerta NetApp ONTAP Select.
+
+La disponibilità di 10 IOPS/GB dipende dal data center IBM Cloud. I {{site.data.keyword.CloudDataCents_notm}} che offrono il livello di prestazioni di 10 IOPS/GB includono anche la crittografia dei dati inattivi gestita dal provider (crittografia AES-256) e sono supportati dall'archiviazione all-flash. Il livello di prestazioni di 10 IOPS/GB è limitato a una capacità massima di 4 TB. Per ulteriori informazioni sul NAS condiviso utilizzato in questa soluzione, vedi [Architettura dell'archiviazione condivisa](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
+
+### Archiviazione iSCSI condivisa
+{: #design_physicalinfrastructure-shared-iscsi}
+
+Simile a NFS, con l'archiviazione iSCSI condivisa, un LUN iSCSI da 2-TB è collegato agli host che comprendono il cluster VMware iniziale. Questo LUN iSCSI viene utilizzato per i componenti di gestione come VMware vCenter Server, PSC (Platform Services Controller) e VMware NSX. L'archiviazione viene collegata tramite il protocollo iSCSI con un livello di 2 IOPs per GB da IBM Cloud. 
+
+IBM normalizza il livello IOP fornito a una dimensione blocco di 16 K perché dimensioni blocco più grandi visualizzano un limite inferiore mentre dimensioni blocco più piccole un limite superiore.
+
+Figura 5. LUN iSCSI collegati alla distribuzione VMware</br>
+![LUN iSCSI collegati alla distribuzione VMware](vcsv4radiagrams-ra-iscsi-lun.svg "LUN iSCSI collegati alla distribuzione VMware")
+
+Ulteriori LUN iSCSI per i carichi di lavoro possono essere assegnati e montati tra tutti gli host al momento dell'acquisto o successivamente nella console. Scegli tra le opzioni disponibili di capacità di archiviazione blocchi IBM Cloud Endurance e i livelli di prestazioni disponibili nel data center IBM Cloud corrispondente. Tutte i LUN vengono collegati utilizzando il protocollo iSCSI. Inoltre, è possibile collegare i LUN iSCSI dall'offerta NetApp ONTAP Select.
+
+La disponibilità di 10 IOPS/GB dipende dal data center IBM Cloud. I data center che offrono il livello di prestazioni di 10 IOPS/GB includono anche la crittografia gestita dal provider dei dati inattivi (crittografia AES–256) e sono supportati dall'archiviazione all–flash. Il livello di prestazioni di 10 IOPS/GB è limitato a una capacità massima di 4 TB.
+
+Per ulteriori informazioni sul NAS condiviso utilizzato in questa soluzione, vedi [Architettura dell'archiviazione condivisa](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
 ## Link correlati
 {: #design_physicalinfrastructure-related}

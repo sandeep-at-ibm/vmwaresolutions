@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-14"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,7 @@ I diversi componenti della soluzione richiedono differenti strategie per il back
 ## File server per il backup basato su file
 {: #solution_backingup-fileserver-backup}
 
-Alcuni componenti, come VMware vCenter Server, PSC (Platform Services Controller) e VMware NSX, richiedono il backup della loro configurazione su un file server.
+Alcuni componenti, come VMware vCenter Server con un PSC (Platform Services Controller) integrato e VMware NSX, richiedono il backup della loro configurazione su un file server.
 
 Per ospitare questi backup, distribuisci un file server Linux nel tuo cluster utilizzando la seguente procedura:
 
@@ -35,7 +38,7 @@ Per ospitare questi backup, distribuisci un file server Linux nel tuo cluster ut
 ## Backup basato su file di vCenter
 {: #solution_backingup-vcenter}
 
-VMware vCenter Server e PSC forniscono un'[interfaccia utente di gestione dispositivi e un'API per esportare il database e la configurazione in un file server](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} utilizzando vari protocolli. VMware documenta un esempio di come puoi configurare tutto questo in modo che venga [eseguito periodicamente come lavoro cron](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} direttamente su vCenter Server Appliance e PSC, che puoi adattare per il tuo utilizzo.
+VMware vCenter Server con PSC integrato fornisce un'[interfaccia utente di gestione dispositivi e un'API per esportare il database e la configurazione in un file server](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} utilizzando vari protocolli. VMware documenta un esempio di come puoi configurare tutto questo in modo che venga [eseguito periodicamente come lavoro cron](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} direttamente su vCenter Server Appliance e PSC, che puoi adattare per il tuo utilizzo.
 
 Se hai un PSC esterno, devi eseguire separatamente il backup di vCenter Server Appliance e del PSC utilizzando questa tecnica. Se hai un PSC integrato, il backup di PSC viene incluso nel tuo backup vCenter. Scopri e pianifica le considerazioni e le limitazioni documentate da VMware. Inoltre, pianifica una rotazione e una scadenza regolari dei backup dei file sul tuo file server.
 
@@ -82,7 +85,7 @@ A partire da VMware vCenter 6.5u2, VMware supporta il backup del database vCente
 Quando ripristini i backup di gestione, ci sono diverse considerazioni speciali:
 
 * Per vCenter e PSC, VMware fornisce un programma di installazione che può distribuire un nuovo dispositivo virtuale e ripristinare la configurazione dal backup.
-* Quando ripristini un dispositivo dal backup, il programma di installazione rileva il tipo di dispositivo (vCenter Server, PSC o vCenter con PSC integrato) in base alle informazioni di backup da te fornite.
+* Quando ripristini un dispositivo dal backup, il programma di installazione rileva il tipo di dispositivo (vCenter Server con PSC integrato) in base alle informazioni di backup da te fornite.
 * Poiché distribuisci direttamente su uno dei tuoi host, potresti non essere in grado di eseguire la distribuzione su uno switch distribuito o un gruppo di porte. Potresti dover creare uno switch e un gruppo di porte standard temporaneo per la distribuzione dei dispositivi ripristinati e migrare temporaneamente una delle tue vmnic a questo switch per fornire la connettività di rete per le tue VM. Dopo la distribuzione, puoi migrare le VM al gruppo di porte distribuito e restituire la vmnic al dvSwitch.
 * Per NSX, potresti dover ridistribuire NSX Manager e i controller prima di ripristinare la configurazione dal backup.
 * Assicurati di acquisire familiarità con le considerazioni e le limitazioni di VMware per il backup e il ripristino di vCenter.

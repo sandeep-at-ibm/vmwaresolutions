@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Informazioni su Gateway dei servizi edge NSX

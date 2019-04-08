@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -53,6 +56,7 @@ Gli account {{site.data.keyword.cloud_notm}} possono anche essere configurati co
 Ogni host fisico all'interno della progettazione ha due coppie ridondanti di connessioni Ethernet da 10 Gbps in ogni switch ToR (Top of Rack) {{site.data.keyword.cloud_notm}} (pubblico e privato). Gli adattatori sono configurati come connessioni individuali (non collegate) per un totale di 4 connessioni da 10 Gbps. Ciò consente a ciascuna connessione della scheda di interfaccia di rete (NIC) di funzionare indipendentemente dalle altre.
 
 Figura 2. Connessioni all'host fisico
+</br>
 ![Connessioni all'host fisico](vcsnsxt-host-connections.svg)
 
 ## VLAN

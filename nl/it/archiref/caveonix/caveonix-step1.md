@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Passo 1 - Pianificazione iniziale e prerequisiti

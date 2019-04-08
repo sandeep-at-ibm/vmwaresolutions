@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,7 @@ Questa architettura ibrida consente ad Acme Skateboards di:
 -	Utilizzare CAM (Cloud Automation Manager) per gli script IaC (Infrastructure as Code) per creare e orchestrare i servizi creati sia dalle VM che dai contenitori per l'integrazione con le relative toolchain DevOps e la loro soluzione ITSM.
 
 Ponendo l'accento sull'architettura di rete, l'architettura di riferimento ha i seguenti componenti chiave:
-- **Virtualizzazione in loco** – Un cluster VMware che attualmente ospita le VM Acme Skateboards. Sono queste le VM che attualmente ospitano le applicazioni che saranno modernizzate. Questo cluster è necessario per soddisfare i prerequisiti come indicato nel documento [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) per consentire ai clienti di migrare le VM nell'istanza VMware vCenter Server on {{site.data.keyword.cloud_notm}} in esecuzione su {{site.data.keyword.cloud_notm}} e nell'altro senso, se necessario.
+- **Virtualizzazione in loco** – Un cluster VMware che attualmente ospita le VM Acme Skateboards. Sono queste le VM che attualmente ospitano le applicazioni che saranno modernizzate. Questo cluster è necessario per soddisfare i prerequisiti come indicato in [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) per consentire ai clienti di migrare le VM nell'istanza VMware vCenter Server on {{site.data.keyword.cloud_notm}} in esecuzione su {{site.data.keyword.cloud_notm}} e nell'altro senso, se necessario.
 - **VMware vCenter Server on IBM Cloud** – vCenter Server fornisce i blocchi di creazione fondamentali di VMware, tra cui vSphere, vCenter Server, NSX-V e le opzioni di archiviazione che includono vSAN o l'archiviazione {{site.data.keyword.cloud_notm}} Endurance, necessari per distribuire automaticamente una soluzione VMware SDDC (Software Defined Data Center). Questo cluster VMware è la destinazione delle VM migrate e di alcune applicazioni modernizzate nei contenitori ospitati in {{site.data.keyword.icpfull_notm}}.
 
 I componenti chiave dell'architettura sono:
@@ -50,5 +53,4 @@ Questa architettura di riferimento mostra come VCS, {{site.data.keyword.icpfull_
 ## Link correlati
 {: #vcsnsxt-appmod-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Migrazione di istanze vCenter Server precedenti alla V2.5 agli account IBM Cloud

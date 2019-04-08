@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Informazioni sulla conformità per le istanze vCenter Server with Hybridity Bundle
@@ -101,8 +104,8 @@ Gli ambienti vCenter Server, che vengono forniti come {{site.data.keyword.vmware
 * Gestione del servizio cloud: il cliente è responsabile della gestione dell'amministrazione, delle operazioni, della manutenzione e della sicurezza delle applicazioni, incluso il middleware sottostante.
 * Integrità e disponibilità dei servizi: IBM inoltrerà al cliente tutte le notifiche di intrusione nella rete rilevate per questo servizio cloud. La responsabilità del cliente è quella di valutare l'impatto di ciascuna notifica. Il cliente verrà informato di malfunzionamenti hardware. Il monitoraggio e la risposta ai malfunzionamenti del sistema operativo o del software sono responsabilità del cliente, coinvolgere il supporto IBM come richiesto.
 * Registrazione delle attività: il cliente è responsabile della registrazione delle attività di SO/Sistema e Database/Applicazioni, se necessario.
-* Codifica: il cliente è responsabile della configurazione e della gestione di tutte le codifiche (sia per i dati a riposo che in transito), se necessario.
-* Continuità di business e ripristino d'emergenza: il cliente è responsabile della configurazione e della gestione di tutti i processi di continuità di business e di ripristino d'emergenza, se necessario.
+* Crittografia: il cliente è responsabile della configurazione e della gestione di tutte le crittografie (sia per i dati inattivi che in transito), come necessario.
+* Continuità di business e ripristino d'emergenza: il cliente è responsabile della configurazione e della gestione di tutti i processi di continuità di business e di ripristino d'emergenza, come necessario.
 
 ### Servizi di terze parti
 {: #vc_hybrid_compl_info-third-party-services}

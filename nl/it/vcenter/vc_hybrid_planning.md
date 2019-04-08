@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze 
 | DAL13 | Dallas | Nord America meridionale |
 | FRA02 | Francoforte | Europa |
 | FRA04 | Francoforte | Europa |
+| FRA05 | Francoforte | Europa |
 | HKG02 | Hong Kong | Asia-Pacifico |
 | LON02 | Londra | Europa |
 | LON04 | Londra | Europa |
+| LON05 | Londra | Europa |
 | LON06 | Londra | Europa |
 | MEL01 | Melbourne | Asia-Pacifico |
 | MEX01 | Queretaro | Nord America meridionale |

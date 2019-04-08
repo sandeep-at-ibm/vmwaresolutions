@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Refactoring e aggiunta del middleware in IBM Cloud Private

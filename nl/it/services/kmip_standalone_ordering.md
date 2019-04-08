@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-21"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Ordine di istanze KMIP for VMware on IBM Cloud
@@ -43,7 +46,7 @@ Specifica un nome per la tua istanza KMIP for VMware on {{site.data.keyword.clou
 
 Seleziona la regione {{site.data.keyword.cloud_notm}} in cui dovrà essere ospitata la tua istanza KMIP for VMware on {{site.data.keyword.cloud_notm}}.
 
-{{site.data.keyword.cloud_notm}} mantiene un endpoint del servizio di rete KMIP for VMware on {{site.data.keyword.cloud_notm}} altamente disponibile in ciascuna regione in cui il servizio è disponibile. 
+{{site.data.keyword.cloud_notm}} mantiene un endpoint del servizio di rete KMIP for VMware on {{site.data.keyword.cloud_notm}} altamente disponibile in ciascuna regione in cui il servizio è disponibile.
 
 Tabella 1. Regioni degli endpoint del servizio di rete KMIP for VMware on {{site.data.keyword.cloud_notm}}
 

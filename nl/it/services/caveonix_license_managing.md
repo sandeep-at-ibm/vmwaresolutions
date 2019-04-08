@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:note: .note}
@@ -37,7 +40,7 @@ Puoi visualizzare il riepilogo e i dettagli delle licenze Caveonix RiskForesight
        </tr>
        <tr>
          <td>Data/ora di creazione</td>
-         <td> La data e l'ora in cui è stata creata la licenza.</td>
+         <td>La data e l'ora in cui è stata creata la licenza.</td>
        </tr>
        <tr>
          <td>Stato</td>
@@ -61,7 +64,7 @@ Puoi modificare le note delle licenze Caveonix RiskForesight che hai ordinato.
 
 Puoi eliminare le licenze Caveonix RiskForesight quando non ne hai più bisogno.
 
-Prima di eliminare la licenza Caveonix RiskForesight, assicurati di avere esaminato le considerazioni in [Considerazioni quando si eliminano le licenze Caveonix RiskForesight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations-remove)
+Prima di eliminare la licenza Caveonix RiskForesight, assicurati di avere esaminato le considerazioni in [Considerazioni quando si eliminano le licenze Caveonix RiskForesight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations-remove).
 {:note}
 
 1. Fai clic su **Risorse** nel riquadro di navigazione a sinistra.

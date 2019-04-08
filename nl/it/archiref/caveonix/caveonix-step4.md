@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Passo 4 - Impostazione dell'applicazione

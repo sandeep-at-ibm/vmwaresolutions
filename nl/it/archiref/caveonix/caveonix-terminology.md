@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-06"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Glossario dei termini Caveonix

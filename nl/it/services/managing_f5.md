@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Gestione di F5 on IBM Cloud
@@ -16,7 +19,7 @@ lastupdated: "2019-03-08"
 
 Per gestire il servizio F5 on {{site.data.keyword.cloud}}, accedi alle console dell'interfaccia utente web BIG-IP primaria o secondaria utilizzando le credenziali corrispondenti che puoi trovare nella pagina dei dettagli del servizio F5 on {{site.data.keyword.cloud_notm}}.
 
-Per ulteriori informazioni sulla visualizzazione dei dettagli del servizio, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+Per ulteriori informazioni sulla visualizzazione dei dettagli del servizio, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Link correlati
 {: #managing_f5-related}

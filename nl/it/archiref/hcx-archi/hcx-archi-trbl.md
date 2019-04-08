@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # Risoluzione dei problemi di HCX on IBM Cloud
 {: #hcx-archi-trbl}

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-06"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Ordine, visualizzazione e rimozione dei servizi per le istanze Cloud Foundation

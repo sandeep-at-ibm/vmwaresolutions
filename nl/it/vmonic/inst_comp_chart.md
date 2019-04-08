@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Tabella di confronto delle offerte

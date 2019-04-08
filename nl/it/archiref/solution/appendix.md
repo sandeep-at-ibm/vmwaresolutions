@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -14,11 +17,23 @@ lastupdated: "2019-02-15"
 ## Confronto delle edizioni di VMware NSX
 {: #solution-appendix-nsx-editions}
 
-La Tabella 1 elenca le funzioni disponibili per le edizioni **Base**, **Avanzata** ed **Enterprise** di VMware NSX supportate dalla soluzione.
+In questa progettazione, ci sono più componenti che necessitano di licenze. Queste informazioni mostrano le licenze minime che sono necessarie all'ambiente per funzionare correttamente.
 
-Tabella 1. Tabella di confronto per le edizioni di VMware NSX
+Tabella 1. Requisiti di licenza
 
-| Funzione NSX                                   | Base | Avanzata | Enterprise |
+Componente | Scopo | Licenza
+----------|---------|-------------
+**vSphere** |Virtualizzazione di calcolo| vSphere 6.7 Enterprise Plus
+**vCenter Server** | Gestione infrastruttura | vCenter Server 6.7 Standard
+**NSX** |Virtualizzazione di rete| NSX Base for Service Providers 6.4
+**vSAN** |Virtualizzazione di archiviazione| vSAN 6.6 Advanced  
+
+NSX Base for Service Providers edition è l'unica disponibile per i provider di servizi tramite VMware vCloud Air Network (vCAN). Le funzioni in questa edizione possono essere trovate nella seguente tabella.
+{:note}
+
+Tabella 2. Tabella di confronto per le edizioni di VMware NSX
+
+| Funzione NSX                                   | Base | Advanced | Enterprise |
 |-----------------------------------------------|------|----------|------------|
 | Commutazione e instradamento distribuiti             | •    | •        | •          |
 | Firewall edge NSX                             | •    | •        | •          |
@@ -45,11 +60,11 @@ Tabella 1. Tabella di confronto per le edizioni di VMware NSX
 ## Confronto delle edizioni di VMware vSAN
 {: #solution-appendix-vsan-editions}
 
-La Tabella 2 elenca le funzioni disponibili per le edizioni **Avanzata** ed **Enterprise** di VMware vSAN supportate dalla soluzione.
+La seguente tabella elenca le funzioni disponibili per le edizioni **Advanced** ed **Enterprise** di VMware vSAN supportate dalla soluzione.
 
-Tabella 2. Tabella di confronto per le edizioni di VMware vSAN
+Tabella 3. Tabella di confronto per le edizioni di VMware vSAN
 
-| Funzione vSAN                                    | Avanzata | Enterprise |
+| Funzione vSAN                                    | Advanced | Enterprise |
 |-------------------------------------------------|----------|------------|
 | Gestione basata sulla politica di archiviazione                 | •        | •          |
 | Memorizzazione nella cache di lettura/scrittura Flash                        | •        | •          |

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -124,7 +127,7 @@ Specifica le seguenti opzioni vSAN:
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
 * Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
 
-  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPI Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
+  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
   {:note}
 
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
@@ -262,7 +265,7 @@ Tabella 4. Dettagli del server ESXi
 | Versione | La versione del server ESXi. |
 | Credenziali | Il nome utente e la password per accedere al server ESXi. |
 | IP privato | L'indirizzo IP privato del server ESXi. |
-| Stato | Lo stato del server ESXi, che può assumere uno dei seguenti valori:<br> **Aggiunto** Il server ESXi è stato aggiunto ed è pronto per l'uso. <br> **In fase di aggiunta** Il server ESXi è in fase di aggiunta.<br> **In fase di eliminazione** Il server ESXi è in fase di eliminazione. |
+| Stato | Lo stato del server ESXi, che può assumere uno dei seguenti valori:<br> **Aggiunto** Il server ESXi è stato aggiunto ed è pronto per l'uso.<br> **In fase di aggiunta** Il server ESXi è in fase di aggiunta.<br> **In fase di eliminazione** Il server ESXi è in fase di eliminazione. |
 
 Tabella 5. Dettagli dell'archiviazione
 
@@ -278,17 +281,19 @@ Tabella 6. Interfaccia di rete - Dettagli VLAN
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
 | Numero VLAN | Il numero VLAN univoco.  |
-| Descrizione | Il tipo di VLAN. |
+| Descrizione | La descrizione della VLAN.  |
 | Ubicazione | L'ubicazione del data center. |
 | Rotta primaria | La rotta primaria della VLAN. |
+
+Fai clic su **View Resource** per accedere ai dettagli della VLAN.
 
 Tabella 7. Interfaccia Rete - Dettagli della sottorete
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
-| Nome | Il nome della sottorete. Fai clic sul nome per accedere ai dettagli dell'indirizzo IP completo. |
+| Nome | Il nome della sottorete. Fai clic sul nome per accedere ai dettagli della sottorete. |
 | Tipo | Il tipo di sottorete: primaria o portatile. |
-| Descrizione | Lo scopo della sottorete. |
+| Descrizione | La descrizione della sottorete.  |
 
 Tabella 8. Interfaccia di rete - Dettagli IP
 
@@ -296,8 +301,7 @@ Tabella 8. Interfaccia di rete - Dettagli IP
 |:------------- |:------------- |
 | IP | L'indirizzo IP. |
 | Stato | Lo stato dell'indirizzo IP. |
-| Descrizione | L'host dell'indirizzo IP.  |
-
+| Descrizione |La descrizione dell'indirizzo IP. |
 
 ## Eliminazione di cluster dalle istanze vCenter Server
 {: #vc_addingviewingclusters-deleting}

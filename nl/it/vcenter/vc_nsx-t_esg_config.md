@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -25,7 +28,7 @@ Come parte del processo di ordine per la tua istanza di vCenter Server with NSX-
 * Una sottorete del cliente pubblica viene ordinata per consentire alla tue VM di accedere a Internet.
 * NSX-T viene distribuito e configurato nella tua istanza vCenter Server with NSX-T.
 * Uno switch logico NSX-T di esempio viene distribuito per essere utilizzato dalle VM del carico di lavoro del cliente.
-* Un DLR (Distributed Logical Router) NSX-T di esempio viene distribuito per la potenziale comunicazione est-ovest tra carichi di lavoro locali connessi alle reti di livello 2 (L2).
+* Un router NSX-T Tier 1 di esempio viene distribuito per la potenziale comunicazione est-ovest tra carichi di lavoro locali connessi alle reti di livello 2 (L2).
 * Un dispositivo Edge NSX-T viene distribuito e configurato per eseguire la conversione degli indirizzi di rete (NAT) dall'intervallo di indirizzi IP
 dello switch logico del carico di lavoro a un indirizzo IP pubblico sulle regole NAT.
 
@@ -40,8 +43,7 @@ Per usufruire di NSX-T per le tue VM del carico di lavoro, devi configurare una 
 1. Imposta l'adattatore di rete della VM sullo switch logico del carico di lavoro:
    1. Nella casella di dialogo **Nuova VM (Virtual Machine)**, fai clic sulla scheda **Personalizza hardware**.
    2. Nel menu **nuovo dispositivo**, seleziona **Rete** e fai clic su **Aggiungi**.
-   3. Sull'adattatore di rete appena aggiunto, seleziona lo switch logico del carico di lavoro dal menu. Un nome di esempio per lo switch logico del carico di lavoro
-   è **vxw-dvs-17-virtualwire-1-sid-6000-Workload**.
+   3. Sull'adattatore di rete appena aggiunto, seleziona lo switch logico di sovrapposizione del carico di lavoro dal menu. Il nome dell'esempio dello switch è **overlay-ls**.
 
    Assicurati di non selezionare lo switch **Workload Transit**.
    {:important}
@@ -54,35 +56,29 @@ Per usufruire di NSX-T per le tue VM del carico di lavoro, devi configurare una 
    Sei responsabile della gestione dell'intervallo di indirizzi IP a cui hai assegnato le tue VM.
    {:note}
 
-3. Assegna il gateway predefinito della VM come `192.168.10.1`. Questo è l'indirizzo IP del DLR NSX sullo stesso switch logico delle VM del carico di lavoro.
+3. Assegna il gateway predefinito della VM come `192.168.10.1`. Questo è l'indirizzo IP della porta del router di downlink sul router logico Tier 1 ed è collegato allo stesso switch logico di sovrapposizione delle VM del carico di lavoro.
 
-## Procedura per abilitare la regola SNAT
+## Abilitazione della regola SNAT
 {: #vc_nsx-t_esg_config-procedure-enable-snat-rule}
 
-Se vuoi che le tue VM del carico di lavoro abbiano accesso in uscita a Internet, devi abilitare la regola SNAT (Source Network Address Translation) associata. L'abilitazione della regola SNAT consente di convertire l'accesso Internet dalle tue VM in un unico indirizzo IP pubblico. Completa la seguente procedura nel client web VMware vSphere:
-
-1. Fai clic su **Home > Rete & Sicurezza**.
-2. Nel riquadro di navigazione, fai clic su **Edge NSX** e doppio clic sull'edge denominato **customer-nsx-edge**.
-3. Fai clic su **Gestione > NAT** per aprire la scheda **NAT**.
-4. Seleziona la regola SNAT predefinita nella tabella e fai clic sul segno di spunta verde sopra la tabella per abilitare la regola.
-
-Per ulteriori informazioni sulle regole NAT dell'edge NSX-T, vedi [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+NSX-T abilita la regola SNAT per impostazione predefinita. Per informazioni sulla modifica di regole esistenti, vedi [Configure Source and Destination NAT on a Tier-0 Logical Router](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:new_window}.
 
 ## Procedura per identificare i dettagli delle sottoreti del cliente
 {: #vc_nsx-t_esg_config-procedure-identify-customer-subnets-details}
 
-L'edge **customer-nsx-edge** è destinato al tuo utilizzo personale, quindi puoi modificarlo per definire più regole NAT per il traffico in entrata o in uscita. Queste regole devono utilizzare solo gli indirizzi IP sulle sottoreti del cliente pubbliche o private ordinate a tuo nome.
+I router logici **Customer-T1-LR** e **Customer-T0-LR** così come gli edge **cust-nsx-edge0** e **cust-nsx-edge1** sono destinati al tuo utilizzo personale, quindi puoi modificarli per definire più regole NAT per il traffico in entrata o in uscita. Queste regole devono utilizzare solo gli indirizzi IP sulle sottoreti del cliente pubbliche o private ordinate a tuo nome.
 
-Per identificare i dettagli per le sottoreti del cliente in modo da poter utilizzare gli indirizzi IP ordinati, completa la seguente procedura nel client web VMware vSphere:
+Per identificare i dettagli per le sottoreti del cliente in modo da poter utilizzare gli indirizzi IP ordinati, completa la seguente procedura nel client web NSX-T:
 
-1. Fai clic su **Home > Rete & Sicurezza**.
-2. Nel riquadro di navigazione, fai clic su **Edge NSX** e individua **customer-nsx-edge edge** nell'elenco di edge nel riquadro a destra.
-3. Nella colonna **Descrizione**, passa il puntatore del mouse sulla descrizione dell'edge per **customer-nsx-edge** per vedere gli identificativi di sottorete sie per le sottoreti del cliente pubbliche che per quelle private.
+1. Fai clic sulla scheda **Advanced Networking & Security**.
+2. Sul pannello di sinistra, fai clic su **Fabric**, poi sull'elenco a discesa e seleziona **Nodes**.
+3. Sulla scheda, seleziona **Edge Transport Nodes**.
+4. Fai clic su uno degli edge del cliente. Ad esempio, **cust-nsx-edge0**. Le sottoreti del cliente pubblica e privata vengono visualizzate nel campo **Description**.
 
 Inoltre, puoi trovare ulteriori dettagli sulle sottoreti del cliente completando la seguente procedura nel 	{{site.data.keyword.slportal}}:
 
-1. Fai clic su **Rete > Gestione IP > Sottoreti**.
-2. Fai clic sul menu del filtro e nel campo della sottorete immetti l'identificativo come mostrato nella descrizione dell'edge **customer-nsx-edge** sulla scheda **Riepilogo** nel client web VMware vSphere.
+1. Fai clic su **Networking > IP Management > Subnets**.
+2. Fai clic sul menu del filtro e, nel campo **Sottorete**, immetti l'identificativo come mostrato nella descrizione di **customer-nsx-edge0** nel client web NSX-T.
 3. Riesamina le note che vengono visualizzate per gli indirizzi IP. Queste note identificano quali sottoreti e indirizzi IP vengono ordinati e utilizzati durante la configurazione iniziale.
 
    Non utilizzare gli indirizzi IP che vengono ordinati e utilizzati durante la configurazione iniziale. Puoi comunque utilizzare altri indirizzi IP

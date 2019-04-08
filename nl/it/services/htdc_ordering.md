@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Ordine di HyTrust DataControl on IBM Cloud

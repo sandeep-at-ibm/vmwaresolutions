@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -105,7 +108,7 @@ Tabella 4. Riepilogo
 quando rimuovi il servizio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}, l'automazione {{site.data.keyword.vmwaresolutions_short}} elimina solo la singola VM Caveonix "tutta-in-uno" che era stata distribuita e la sottorete privata dedicata che era stata ordinata per essa. Pertanto:
 * Se avevi ridimensionato la VM Caveonix VM in più VM, queste VM aggiuntive non vengono rimosse. 
 * Se avevi utilizzato gli indirizzi IP della sottorete privata dedicata sulle VM aggiuntive, a tali VM devono essere assegnati dei nuovi indirizzi IP perché continuino a funzionare. 
-* Se elimini l'istanza A di vCenter Server con il servizio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} installato, e avevi usato gli indirizzi IP sulla sottorete privata dedicata che era stata ordinata per il servizio nell'istanza B di vCenter Server, la sottorete privata dedicata viene annullata quando viene eseguita l'eliminazione dell'istanza A di vCenter Server. 
+* Se elimini l'istanza A di vCenter Server con il servizio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} installato, e avevi usato gli indirizzi IP sulla sottorete privata dedicata che era stata ordinata per il servizio nell'istanza B di vCenter Server, la sottorete privata dedicata viene annullata quando viene eseguita l'eliminazione dell'istanza A di vCenter Server.
 
 ## Link correlati
 {: #caveonix-deploy-related}

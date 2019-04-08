@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Passo 2 - distribuzione della VM (Virtual Machine)

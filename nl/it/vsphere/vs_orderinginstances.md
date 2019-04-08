@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -165,7 +168,7 @@ Se per il cluster selezioni il componente VMware vSAN, specifica le seguenti imp
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
 * Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
 
-  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPI Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
+  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
   {:note}
 
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-22"
+lastupdated: "2019-03-14"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -60,7 +63,6 @@ Tabella 2. Operazioni interessate dall'accesso shell e SSH (locale)
 | Tentativo di modifica  | Operazioni interessate  | Severità  | Metodo di recupero  |
 |:------------- |:------------- |:--------------|:--------------|
 | Disabilita l'accesso SSH o shell per vCenter Server o PSC.    | L'accoppiamento di un istanza primaria e secondaria potrebbe non riuscire. Applicare le patch alle risorse potrebbe non riuscire.    | Importante    | N/A    |
-| Disabilita l'accesso SSH o shell per ESXi.    | L'aggiunta e la rimozione degli host, dei servizi e della memoria di rete per l'istanza potrebbe non riuscire. Applicare le patch alle risorse potrebbe non riuscire.    | Importante    | N/A    |
 
 Se scegli di disabilitare l'accesso shell o SSH, puoi riabilitarlo temporaneamente prima di eseguire le operazioni indicate.
 

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -99,7 +102,7 @@ VMware vSAN 6.6 è incluso con il tuo ordine dell'istanza vCenter Server with Hy
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
 * Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
 
-  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPI Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
+  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
   {:note}
 
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
@@ -185,7 +188,7 @@ Non puoi modificare il nome del cluster. La modifica del nome del cluster potreb
         <dt class="dt dlterm">Eliminato</dt>
         <dd class="dd">Il cluster è stato eliminato.</dd>
     </dl>
-4. Fai clic sul nome di un cluster per visualizzare i dettagli dei server ESXi e di archiviazione:
+4. Fai clic sul nome di un cluster per visualizzare i dettagli dei server ESXi, dell'archiviazione e dell'interfaccia di rete.
 
   * Dettagli dei server ESXi:
      * **Nome**: il nome del server ESXi è nel formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, dove:
@@ -215,6 +218,20 @@ Non puoi modificare il nome del cluster. La modifica del nome del cluster potreb
     * **Dimensione**: la capacità di archiviazione.
     * **IOPS/GB**: il livello di prestazioni dell'archiviazione.
     * **Protocollo NFS**: la versione NFS dell'archiviazione.
+  * Interfaccia di rete - Dettagli VLAN:
+    * **Numero VLAN**: il numero VLAN univoco.
+    * **Descrizione**: la descrizione della VLAN.
+    * **Ubicazione**: l'ubicazione del data center.
+    * **Rotta primaria**: la rotta primaria della VLAN.
+    Fai clic su **View Resource** per accedere ai dettagli della VLAN.
+  * Interfaccia di rete - Dettagli sottorete:
+    * **Nome**: il nome della sottorete. Fai clic sul nome per accedere ai dettagli della sottorete. 
+    * **Tipo**: il tipo di sottorete: primaria o portatile.
+    * **Descrizione**: la descrizione della sottorete.
+  * Interfaccia di rete - Dettagli IP:
+    * **IP**: l'indirizzo IP.
+    * **Stato**: lo stato dell'indirizzo IP. 
+    * **Descrizione**: la descrizione dell'indirizzo IP.
 
 ## Eliminazione di cluster dalle istanze vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-deleting}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -13,7 +16,7 @@ lastupdated: "2019-02-15"
 
 I servizi comuni forniscono i servizi che vengono utilizzati da altri servizi nella piattaforma di gestione cloud. I servizi comuni includono i servizi di identità e di accesso, i servizi di nome dominio e i servizi NTP.
 
-Figura 1. Servizi comuni {{site.data.keyword.icpfull_notm}}
+Figura 1. Servizi comuni {{site.data.keyword.icpfull_notm}}</br>
 ![{{site.data.keyword.icpfull_notm}} - Servizi comuni](vcscar-common-services.svg)
 
 ## Servizi di identità e accesso
@@ -34,5 +37,4 @@ La distribuzione di vCenter Server utilizza i server NTP (Network Time Protocol)
 ## Link correlati
 {: #vcscar-commonservices-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

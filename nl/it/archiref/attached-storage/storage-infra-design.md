@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-27"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ Il seguente grafico fornisce l'architettura generale dell'archiviazione collegat
 
 Figura 1. Architettura di alto livello dell'archiviazione collegata su {{site.data.keyword.cloud_notm}}
 
-![Architettura dell'archiviazione collegata](../solution/physical_nfs.svg "Architettura di alto livello dell'archiviazione collegata su IBM Cloud")
+![Architettura dell'archiviazione collegata](../solution/vcsv4radiagrams-ra-nfs-shares.svg "Architettura di alto livello dell'archiviazione collegata su IBM Cloud")
 
 ## Progettazione dell'infrastruttura fisica
 {: #storage-infra-design-phys-infra-design}

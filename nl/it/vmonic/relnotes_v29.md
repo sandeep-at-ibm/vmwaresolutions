@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -34,7 +37,6 @@ Per ulteriori informazioni, consulta i seguenti argomenti:
 Per consolidare le nostre offerte per una migliore esperienza del cliente, {{site.data.keyword.cloud_notm}} non fornirà più il supporto per VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} a partire dal 13 maggio 2019.  
  
 Nel corso del tempo, tutti i clienti verranno indirizzati a VMware vCenter Server on {{site.data.keyword.cloud_notm}}, che offre maggiore flessibilità per quanto riguarda le opzioni di archiviazione e licenza.
-
 I clienti esistenti che utilizzano VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} saranno assistiti nella migrazione a VMware vCenter Server on {{site.data.keyword.cloud_notm}} entro la data di fine supporto del 13 maggio 2019.
 
 Dopo il 13 maggio, le capacità di gestione per VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} saranno rimosse dalla console {{site.data.keyword.vmwaresolutions_short}}. È possibile accedere alle istanze che non sono state migrate a VMware vCenter Server on {{site.data.keyword.cloud_notm}} mediante la console dell'infrastruttura IBM Cloud.
@@ -66,14 +68,14 @@ A partire da agosto 2019, {{site.data.keyword.vmwaresolutions_short}} non suppor
 Per ulteriori informazioni, vedi:
 
 * [Panoramica di VRF (Virtual Routing and Forwarding) su IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Abilita il tuo account per l'utilizzo degli endpoint del servizio utilizzando la CLI IBM Cloud](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps)
+* [Abilita il tuo account per l'utilizzo degli endpoint del servizio utilizzando la CLI IBM Cloud](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## Supporto per le API (Application Programming Interface)
 {: #relnotes_v29-api}
 
 Le API (Application Programming Interface) sono ora disponibili per la distribuzione e l'eliminazione di istanze e l'aggiunta e la rimozione di cluster e server ESXi.
 
-La documentazione dell'API REST è disponibile anche nella sezione *Riferimento* della documentazione dell'utente. Per ulteriori informazioni, vedi il documento relativo all'[API {{site.data.keyword.vmwaresolutions_short}}](https://console.bluemix.net/apidocs/vmware-solutions).
+La documentazione dell'API REST è disponibile anche nella sezione *Riferimento* della documentazione dell'utente. Per ulteriori informazioni, vedi il documento relativo all'[API {{site.data.keyword.vmwaresolutions_short}}](https://cloud.ibm.com/apidocs/vmware-solutions).
 
 ## Aggiornamenti per le istanze VMware vCenter Server
 {: #relnotes_v29-vcs}
@@ -90,6 +92,11 @@ Questa release applica i seguenti aggiornamenti e miglioramenti:
 * NSX-T for vSphere 2.4
 
 Per ulteriori informazioni sulla selezione dei tuoi componenti VMware, vedi [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+
+### Aggiornamenti ai data center
+{: #relnotes_v29-dc}
+
+I seguenti nuovi data center sono disponibili per la distribuzione: **FRA-05 - Francoforte** e **LON-05 - Londra**. Per ulteriori informazioni, vedi [Requisiti e pianificazione per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning).
 
 ### Miglioramenti del server ESXi
 {: #relnotes_v29-vcs-esxi}
@@ -108,7 +115,7 @@ Per ulteriori informazioni, vedi [Espansione e contrazione della capacità per l
 Per gli ordini dell'istanza vCenter Server, puoi ora aggiungere fino a 24 TB di archiviazione condivisa NFS (Network File System) per i livelli di prestazioni di 0,25, 2 e 4 IOPS/GB.
 
 Il livello di prestazioni di 10 IOPS/GB è ancora limitato a una capacità massima di 4 TB per condivisione file.
-  {:note}
+{:note}
 
 ## Aggiornamenti per i servizi aggiuntivi
 {: #relnotes_v29-services}

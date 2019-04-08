@@ -4,7 +4,12 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-22"
+
+keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +23,7 @@ lastupdated: "2019-03-12"
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-# Introduzione a IBM Cloud for VMware Solutions
+# Esercitazione introduttiva 
 {: #getting-started}
 
 In questa esercitazione introduttiva, ti guidiamo attraverso il processo di ordine di un'istanza e di alcuni servizi aggiuntivi per tale istanza.
@@ -192,18 +197,4 @@ Dopo aver effettuato un ordine di istanza nel **Passo 3**, la distribuzione dell
 Per informazioni su come visualizzare l'istanza che hai ordinato, vedi i seguenti argomenti:
 * [Visualizzazione delle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Visualizzazione delle istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [Visualizzazione delle istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
-
-## Passo 5: gestione dei servizi aggiuntivi per l'istanza
-{: #getting-started-step5}
-
-Se hai ordinato servizi aggiuntivi per la tua istanza, puoi gestire anche tali servizi:
-
-Per informazioni su come gestire i servizi, vedi i seguenti argomenti:
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-
-## Passo successivo
-{: #getting-started-next}
-
-Gestisci la tua istanza dalla console {{site.data.keyword.vmwaresolutions_short}} o dal client web VMware vSphere.
+* [Visualizzazione delle istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/services?topic=vmware-solutions-np_viewinginstances#np_viewinginstances)

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -152,7 +155,7 @@ Per ulteriori informazioni, vedi [Panoramica di Veeam on {{site.data.keyword.clo
 
 Il servizio HCX on {{site.data.keyword.cloud_notm}} può estendere senza problemi le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione delle VM (Virtual Machine) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
 
-Per ulteriori informazioni, vedi [Panoramica di VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview).
+Per ulteriori informazioni, vedi [Panoramica di VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Zerto on IBM Cloud
 {: #prod_overview-zerto}

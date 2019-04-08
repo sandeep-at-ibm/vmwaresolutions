@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -31,10 +34,9 @@ In questa progettazione, la definizione di una distribuzione multisito è compos
    * Nuovo nome del sito SSO
    * Nuovo sito/dominio secondario DNS collegato alla root del dominio primario
    * Configurazione della replica DNS e AD tra le VM AD del sito primario e secondario
-   * PSC distribuito e configurato per la sincronizzazione con il PSC del sito primario
    * vCenter configurato con la modalità di collegamento migliorata nel vCenter del sito primario
 
-Inoltre, il gestore NSX nei siti secondari può essere configurato come gestore NSX secondario per il gestore NSX sul sito primario.
+Inoltre, il gestore NSX nei siti secondari può essere configurato come gestore NSX secondario per il gestore NSX sul sito primario. Questo è un processo manuale che deve essere completato.
 
 ## Aggiunta di nuovi cluster
 {: #solution_scaling-clusters}
@@ -47,7 +49,7 @@ Questo metodo ti consente di ottenere i seguenti risultati:
 * Segregazione dei carichi di lavoro in base ad altre caratteristiche, ad esempio, il cluster di database Microsoft SQL.
 * Distribuzione di applicazioni in topologie altamente disponibili.
 
-Quando il cluster iniziale viene convertito in un cluster di sola gestione, la migrazione dei carichi di lavoro esistenti implicherà dei passi manuali che dovranno essere eseguiti dall'utente. Ciò potrebbe comportare il ricollegamento degli archivi dati dal nuovo cluster o, in alternativa, la migrazione dell'archiviazione. Potrebbe essere necessario modificare gli indirizzi IP dei carichi di lavoro se il nuovo cluster risiede in un pod {{site.data.keyword.cloud_notm}} diverso o se gli viene assegnato un ID VLAN differente.
+Quando il cluster iniziale viene convertito in un cluster di sola gestione, la migrazione dei carichi di lavoro esistenti implicherà dei passi manuali che dovranno essere eseguiti dall'utente. Ciò potrebbe comportare il ricollegamento degli archivi dati dal nuovo cluster o, in alternativa, la migrazione dell'archiviazione. Potrebbe essere necessario modificare gli indirizzi IP dei carichi di lavoro se il nuovo cluster risiede in un pod {{site.data.keyword.cloud_notm}} diverso o se il cluster è assegnato a un ID VLAN differente.
 {:note}
 
 ## Aggiunta di host ESXi nei cluster esistenti

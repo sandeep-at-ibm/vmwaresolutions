@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Ordine di licenze Caveonix RiskForesight

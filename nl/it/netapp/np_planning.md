@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Requisiti e pianificazione per le istanze NetApp ONTAP Select

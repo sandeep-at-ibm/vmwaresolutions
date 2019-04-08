@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -39,7 +42,7 @@ Se il tuo cluster iniziale ha vSAN come archiviazione, l'aggiunta di uno o più 
 * Un'istanza vCenter Server con l'archiviazione NFS deve avere almeno 2 server ESXi. Per le istanze distribuite nella V2.1 o successive, puoi espandere il cluster predefinito per avere fino a 51 server ESXi. Ciascuno dei cluster non predefiniti può essere espanso per avere fino a 59 server ESXi.
 * Un'istanza vCenter Server con l'archiviazione vSAN deve avere almeno 4 server ESXi.
 * Per le istanze vCenter Server distribuite nella V2.0 o precedenti, puoi espandere ciascun cluster per avere fino a 32 server ESXi.
-* Puoi aggiungere da 1 a 20 server ESXi alla volta.Per ulteriori informazioni sul numero minimo di server ESXi, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
+* Puoi aggiungere da 1 a 20 server ESXi alla volta. Per ulteriori informazioni sul numero minimo di server ESXi, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ### Procedura per aggiungere i server ESXi
 {: #vc_addingremovingservers-adding-procedure}

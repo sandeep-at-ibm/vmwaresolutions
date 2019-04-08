@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-05"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Distinta base di VMware vSphere

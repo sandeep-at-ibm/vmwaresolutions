@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -26,6 +29,7 @@ Questo documento descrive anche i processi per conservare i seguenti componenti 
 Questo documento descrive l'utilizzo di un'implementazione del server proxy, basata su CentOS e Squid, per consentire a VUM di accedere ai repository VMware. Quando VUM richiede una risorsa dal server di aggiornamento su VMware, la richiesta viene prima inviata al server proxy e il server proxy invia quindi la richiesta al server di aggiornamento tramite il gateway dei servizi esterno (ESG). Dopo che il server proxy ottiene la risorsa, la invia a VUM.
 
 Figura 1. Diagramma della panoramica
+</br>
 ![Diagramma della panoramica](vum-vcsproxy.svg)
 
 vCenter Server attualmente distribuisce vSphere 6.5, il che significa che VUM è ora integrato all'interno di vCenter Server Appliance (VCSA) e, poiché il componente client VUM è un plug-in che viene eseguito sul client web vSphere, viene automaticamente abilitato dopo la distribuzione di VCSA. Tuttavia, VUM non ha accesso a Internet per accedere ai repository VMware.
@@ -67,5 +71,5 @@ Questa funzione consente l'aggiornamento automatizzato solo per i componenti di 
 ## Link correlati
 {: #vum-intro-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)

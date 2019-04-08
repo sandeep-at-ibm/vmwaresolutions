@@ -10,7 +10,7 @@ IBM Cloud for VMware Solutions
     vmonic/inst_comp_chart.md
 
     {: .topicgroup}
-    Release notes
+    Note sulla release
         vmonic/relnotes_v29.md
         vmonic/relnotes_v28.md
         vmonic/relnotes_v27.md
@@ -36,7 +36,7 @@ IBM Cloud for VMware Solutions
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    First steps
+    Prime operazioni
         vmonic/slaccountrequirement.md
         vmonic/signing_softlayer_account.md
         vmonic/loginmethod.md
@@ -226,7 +226,7 @@ IBM Cloud for VMware Solutions
         services/managing_zerto_services.md
 
     {: .topicgroup}
-    Managed Services
+    Servizi gestiti
         services/managing_imi.md
     {: .navgroup-end}
 
@@ -234,7 +234,7 @@ IBM Cloud for VMware Solutions
     vmonic/trbl_support.md
 
     {: .topicgroup}
-    FAQs
+    Domande frequenti
         vmonic/faq.md
         vmonic/faq_esxi.md
         vmonic/faq_byol.md
@@ -243,7 +243,7 @@ IBM Cloud for VMware Solutions
         vmonic/trbl_limitations.md
 
     {: .topicgroup}
-    Troubleshooting
+    Risoluzione dei problemi
         vmonic/trbl_timeout_vc_console.md
         vmonic/trbl_sec_inst_not_visible.md
         vmonic/trbl_add_ha_cluster_config.md
@@ -256,10 +256,10 @@ IBM Cloud for VMware Solutions
 
     {: .navgroup id="reference"}
     vmonic/at-events.md
-    [API reference](https://cloud.ibm.com/apidocs/vmware-solutions)
+    [Guida di riferimento API](https://cloud.ibm.com/apidocs/vmware-solutions)
 
     {: .topicgroup}
-    IBM Cloud for VMware Solutions architecture (with NSX-V and NSX-T)
+    Architettura di IBM Cloud for VMware Solutions (con NSX-V e NSX-T)
         archiref/solution/solution_overview.md
         archiref/solution/design_overview.md
         archiref/solution/design_physicalinfrastructure.md
@@ -273,7 +273,7 @@ IBM Cloud for VMware Solutions
         archiref/solution/appendix.md
 
     {: .topicgroup}
-    Attached storage for vCenter Server on IBM Cloud
+    Archiviazione collegata per vCenter Server on IBM Cloud
         archiref/attached-storage/storage-benefits.md
         archiref/attached-storage/storage-infra-design.md
         archiref/attached-storage/storage-infra-mgmt.md
@@ -281,7 +281,7 @@ IBM Cloud for VMware Solutions
         archiref/attached-storage/cluster-settings.md
 
     {: .topicgroup}
-    Caveonix RiskForesight reference architecture
+    Architettura di riferimento Caveonix RiskForesight
         archiref/caveonix/caveonix-intro.md
         archiref/caveonix/caveonix-on-vcs.md
         archiref/caveonix/caveonix-arch.md
@@ -297,14 +297,14 @@ IBM Cloud for VMware Solutions
         archiref/caveonix/caveonix-terminology.md
 
     {: .topicgroup}
-    NSX Edge Services Gateway solution architecture
+    Architettura della soluzione NSX Edge Services Gateway
         archiref/nsx/nsx_overview.md
         archiref/nsx/nsx_design.md
         archiref/nsx/networking_services.md
         archiref/nsx/multi_site.md
 
     {: .topicgroup}
-    VMware Update Manager guide
+    Guida di VMware Update Manager
         archiref/vcs/vcs-hybridity-intro.md
         archiref/vum/vum-intro.md
         archiref/vum/vum-overview.md
@@ -324,13 +324,13 @@ IBM Cloud for VMware Solutions
         archiref/vum/vum-host-profiles.md
 
     {: .topicgroup}
-    KMIP for VMware on IBM Cloud solution architecture
+    Architettura della soluzione KMIP for VMware on IBM Cloud
         archiref/kmip/overview.md
         archiref/kmip/design.md
         archiref/kmip/implementation.md
 
     {: .topicgroup}
-    vCenter Server networking guide
+    Guida di rete di vCenter Server
         archiref/vcsnsxt/vcsnsxt-intro.md
         archiref/vcsnsxt/vcsnsxt-systemcontext.md
         archiref/vcsnsxt/vcsnsxt-appmod.md
@@ -345,7 +345,7 @@ IBM Cloud for VMware Solutions
         archiref/vcsnsxt/vcsnsxt-techpreview.md
 
     {: .topicgroup}
-    vCenter Server and IBM Cloud Private guide
+    Guida di vCenter Server e IBM Cloud Private
         archiref/vcsicp/vcsicp-intro.md
         archiref/vcsicp/vcsicp-systemcontext.md
         archiref/vcsicp/vcsicp-appmod.md
@@ -358,7 +358,7 @@ IBM Cloud for VMware Solutions
         archiref/vcsicp/vcsicp-detail-design-resiliency.md
 
     {: .topicgroup}
-    vCenter Server and IBM Kubernetes service guide
+    Guida del servizio vCenter Server e IBM Kubernetes
         archiref/vcsiks/vcsiks-intro.md
         archiref/vcsiks/vcsiks-systemcontext.md
         archiref/vcsiks/vcsiks-appmod.md
@@ -368,7 +368,7 @@ IBM Cloud for VMware Solutions
         archiref/vcsiks/vcsiks-overview-network.md
 
     {: .topicgroup}
-    VMware and Skate Advisor Concept Car guide
+    Guida di VMware e Skate Advisor Concept Car
         archiref/vcscar/vcscar-preface.md
         archiref/vcscar/vcscar-intro.md
         archiref/vcscar/vcscar-syscontext.md
@@ -380,7 +380,7 @@ IBM Cloud for VMware Solutions
         archiref/vcscar/vcscar-commonservices.md
 
     {: .topicgroup}
-    VMware: The modernization journey of Stock Trader
+    VMware: Percorso di modernizzazione di Stock Trader
         archiref/vcscontent/vcscontent-modjourney.md
         archiref/vcscontent/vcscontent-hcx.md
         archiref/vcscontent/vcscontent-stocktrmod.md
@@ -390,7 +390,7 @@ IBM Cloud for VMware Solutions
         archiref/vcscontent/vcscontent-summary.md
 
     {: .topicgroup}
-    VMware HCX on IBM Cloud solution architecture
+    Architettura della soluzione VMware HCX on IBM Cloud
         archiref/hcx-archi/hcx-archi-intro.md
         archiref/hcx-archi/hcx-archi-overview.md
         archiref/hcx-archi/hcx-archi-source.md
@@ -405,7 +405,7 @@ IBM Cloud for VMware Solutions
         archiref/hcx-archi/hcx-archi-trbl.md
 
     {: .topicgroup}
-    HCX on IBM Cloud deployment and operations guide
+    Guida operativa e per la distribuzione di HCX on IBM Cloud
         archiref/vcshcx/vcshcx-intro.md
         archiref/vcshcx/vcshcx-planning.md
         archiref/vcshcx/vcshcx-licensing.md

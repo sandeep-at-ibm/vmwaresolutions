@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Note sulla release per la V2.8
@@ -75,7 +78,7 @@ Per ulteriori informazioni, vedi la sezione *Architettura di vCenter Server* in 
 
 Questa release applica i seguenti aggiornamenti e miglioramenti:
 
-* vSphere ESXi 6.5 Aggiornamento P3 (build 6.5.0-10884925)
+* vSphere ESXi 6.5 Aggiornamento EP11 (build 6.5.0-10719125)
 * vCenter Server 6.5 U2d (build 6.5.0-10964411)
 * Platform Services Controller 6.5 U2d (build 6.5.0-10964411)
 
@@ -108,9 +111,10 @@ Per ulteriori informazioni, vedi [Panoramica di KMIP for VMware on {{site.data.k
 ## Documentazione dell'architettura di riferimento
 {: #relnotes_v28-ref}
 
-(Aggiornato l'8 febbraio 2019) La seguente documentazione tecnica è ora disponibile nella sezione *Riferimento* della documentazione dell'utente:
+(Aggiornato l'8 febbraio 2019) La seguente documentazione tecnica è ora nuova o aggiornata nella sezione *Riferimento* della documentazione dell'utente:
 
-* [{{site.data.keyword.vmwaresolutions_short}} con architettura NSX-T](/docs/services/vmwaresolutions/archiref/vcsarch?topic=vmware-solutions-vcsarch-overview)
+* [Architettura {{site.data.keyword.vmwaresolutions_short}} (con NSX-V e NSX-T)
+](/docs/services/vmwaresolutions/services?topic=vmware-solutions-solution_overview#solution_overview)
 * [Architettura di riferimento Caveonix RiskForesight](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
 * [Guida operativa e per la distribuzione di HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
 

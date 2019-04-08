@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -53,6 +56,7 @@ Skate Advisor in un'implementazione dell'infrastruttura di modernizzazione
 dell'applicazione.
 
 Figura 1. Componenti fisici di Skate Advisor
+</br>
 ![Componenti fisici di Skate Advisor](vcscar-physical.svg)
 
 L'applicazione Skate Advisor estende l'applicazione web Acme esistente
@@ -94,6 +98,7 @@ database.
 e lo schema del database preinstallati.
 
 Figura 2. Orchestrazione CAM
+</br>
 ![Orchestrazione CAM](vcscar-cam.svg)
 
 ### Bilanciamento del carico e proxy
@@ -149,6 +154,7 @@ Per raggiungere questo obiettivo, la piattaforma di modernizzazione dell'applica
 progettata con i seguenti componenti.
 
 Figura 3. Accesso alla rete pubblica
+</br>
 ![Accesso alla rete pubblica](vcscar-network.svg)
 
 {{site.data.keyword.cloud_notm}} ha due reti. La rete pubblica consente ai server di essere
@@ -175,6 +181,7 @@ L'applicazione Skate Advisor utilizza i seguenti componenti
 software.
 
 Figura 4. Associazione software di Skate Advisor
+</br>
 ![Associazione software di Skate Advisor](vcscar-sw-mapping.svg)
 
 Vengono utilizzati i seguenti componenti software:

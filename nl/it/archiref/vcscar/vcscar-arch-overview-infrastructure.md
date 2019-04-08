@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -43,12 +46,12 @@ L'infrastruttura fisica richiesta per distribuire un'istanza di produzione {{sit
 
 Tabella 1. Specifica di vCenter Server per {{site.data.keyword.icpfull_notm}}
 
-| Distribuzione NFS | Distribuzione vSAN |
-:--|:----:|:----:
-Numero di server | 3 | 4
-CPU | 28 core 2,2 GHz | 28 core 2,2 GHz
-Memoria | 384 GB | 384 GB
-Archiviazione | Gestione 2000 GB 2IOPS/GB, Carico di lavoro 2000 GB 4IOPS/GB, {{site.data.keyword.icpfull_notm}} 4000 GB 4IOPS/GB | Min 960-GB SSD x 2
+| | Distribuzione NFS | Distribuzione vSAN |
+|:---------- |:---------- |:---------- |
+|Numero di server| 3 | 4 |
+| CPU | 28 core 2.2 GHz | 28 core 2.2 GHz |
+| Memoria | 384 GB | 384 GB |
+| Archiviazione | Gestione 2000 GB 2IOPS/GB, Carico di lavoro 2000 GB 4IOPS/GB, 4000 GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | Minimo 960-GB SSD x 2 |
 
 Oltre ai requisiti hardware di {{site.data.keyword.cloud_notm}} Private, devi creare volumi persistenti nell'ambiente {{site.data.keyword.icpfull_notm}} per archiviare i dati database e log di CAM (Cloud Automation Manager). Mentre CAM supporta tutti i tipi di volumi persistenti supportati da {{site.data.keyword.icpfull_notm}}, le due configurazioni di archiviazione consigliate per CAM sono NFS e GlusterFS.
 
@@ -68,5 +71,4 @@ L'ESG è anche configurato con una regola NAT di destinazione (DNAT) agli indiri
 ## Link correlati
 {: #vcscar-arch-overview-infrastructure-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

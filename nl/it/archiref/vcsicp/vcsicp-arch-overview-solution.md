@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -30,7 +33,7 @@ Come il controller dei servizi della piattaforma, il vCenter Server viene distri
 ### NSX Manager
 {: #vcsicp-arch-overview-solution-nsx-manager}
 
-NSX Manager viene distribuito sul cluster iniziale. Inoltre, a NSX Manager viene assegnato un indirizzo IP di backend della VLAN dal blocco di indirizzi portatile privato progettato per i componenti di gestione e configurato con i server DNS e NTP
+NSX Manager viene distribuito sul cluster iniziale. Inoltre, a NSX Manager viene assegnato un indirizzo IP di backend della VLAN dal blocco di indirizzi portatili privato progettato per i componenti di gestione e configurato con i server DNS e NTP
 
 ### Controller NSX
 {: #vcsicp-arch-overview-solution-nsx-controllers}
@@ -114,7 +117,7 @@ Di lavoro	| 3-6	| IP (x3)	|4-8	|4	|150
 
 CAM richiede che i nodi di lavoro abbiano una configurazione di vCPU e memoria superiore.
 
-Tabella 4. Specifiche VM (Virtual Machine) {{site.data.keyword.icpfull_notm}}
+Tabella 4. Specifiche macchina virtuale {{site.data.keyword.icpfull_notm}}
 
 Nodo | 	Istanze	| IP	| CPU	| RAM (GB)	| DISK (GB)
 :-----|------------:|:----|----:|----------:|----------:|
@@ -125,7 +128,7 @@ worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 CAM ({{site.data.keyword.cloud_notm}} Automation Manager) è una piattaforma di gestione self-service multicloud che viene eseguita su {{site.data.keyword.icpfull_notm}} che consente agli sviluppatori e agli amministratori di soddisfare le richieste di business.
 
-Fig 3. Riferimento del componente CAM
+Figura 3. Riferimento del componente CAM</br>
 ![Riferimento del componente CAM](vcsicp-cam-component-ref.svg)
 
 ### Proxy CAM
@@ -181,5 +184,4 @@ Il database per l'applicazione designer del modello.
 ## Link correlati
 {: #vcsicp-arch-overview-solution-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

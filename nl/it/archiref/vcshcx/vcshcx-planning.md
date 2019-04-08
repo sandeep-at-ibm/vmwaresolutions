@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-05"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -29,8 +32,7 @@ riportare le VM dove si trovavano o riestendere le reti. Ciò rende non necessar
 {: #vcshcx-planning-stretched-net}
 
 I componenti di estensione della rete della flotta HCX sono molto stabili. Ponendo il caso di uno
-specifico cliente con più di 20 VLAN estese nell'ambito della VLAN {{site.data.keyword.cloud}} da 1 Gbps condivisa con altro traffico e tunnel di migrazione HCX, non si rilevano problemi applicativi da attribuire alla rete.
-I collegamenti di rete sono attivi per più di 6 mesi, in questo modo.
+specifico cliente con più di 20 VLAN estese nell'ambito della VLAN {{site.data.keyword.cloud}} da 1 Gbps condivisa con altro traffico e tunnel di migrazione HCX, non si rilevano problemi applicativi da attribuire alla rete. I collegamenti di rete sono attivi per più di 6 mesi, in questo modo.
 
 Sono state aggiunte e rimosse ulteriori reti estese senza alcun problema. Anche scegliere un {{site.data.keyword.CloudDataCent_notm}} in stretta prossimità (< 6ms di latenza per questo specifico cliente)
 contribuisce alla stabilità della rete, in un contesto in cui quest'ultima è estesa. Lasciare le reti estese attive a lungo termine non dovrebbe essere un fattore negativo nella tua progettazione, visto che disponi di una larghezza di banda sufficiente e di una latenza abbastanza bassa per le tue applicazioni.
@@ -92,7 +94,9 @@ Quando l'obiettivo è la migrazione del data center nel cloud, qualsiasi server 
 che interagisce con le VM in fase di migrazione può essere valutato per la migrazione in {{site.data.keyword.cloud_notm}} come una VM (P2V), bare metal o rimanere all'origine. Se il server fisico
 deve rimanere all'origine, e HCX verrà utilizzato solo durante la migrazione finché non viene
 stabilita una rete dedicata, è importante comprendere se risiede su qualsiasi rete estesa nel cloud
-con HCX. In questo scenario, HCX sta consentendo la migrazione nel cloud non solo delle VM ma dell'intera subnet. Per rimuovere HCX alla fine della migrazione, la subnet non può esistere nell'origine e nella
+con HCX. In questo scenario, HCX sta consentendo la migrazione nel cloud non solo delle VM ma dell'intera subnet.
+
+Per rimuovere HCX alla fine della migrazione, la subnet non può esistere nell'origine e nella
 destinazione se deve essere mantenuta la connessione tra i dispositivi fisici e le
 VM migrate. Questo implica che qualsiasi dispositivo fisico lasciato indietro al sito di origine che
 esiste sulle reti L2 estese deve essere migrato a un'altra subnet di rete di cui sarebbe possibile

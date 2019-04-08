@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Visualizzazione delle istanze KMIP for VMware on IBM Cloud

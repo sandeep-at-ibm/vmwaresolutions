@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-05"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Estensione di rete e migrazione della VM (Virtual Machine)
@@ -116,7 +119,7 @@ Completa la seguente procedura per migrare un cluster abilitato al disco multiwr
 2. Annota l'ordine dei dischi, se l'applicazione lo richiede, in ogni VM del nodo per i dischi virtuali configurati multiwriter.
 3. Per Oracle e qualsiasi altra applicazione che utilizza la funzione UUID di disco virtuale, accedi a uno specifico ESXi ed esegui il comando `vmkfstools -J getuuid /vmfs/volumes/datastore/VM/vm.vmdk` per ottenere l'UUID di ciascun file disco virtuale che richiede l'indicatore multiwriter impostato per il cluster.
   Ciò è necessario se la prassi ottimale allinea gli ordini dei dischi con il modo in cui il percorso viene visualizzato nel sistema operativo. vMotion può riordinare i dischi (disk1, disk2, disk3) ma gli UUID rimangono gli stessi.
-  Quando la migrazione viene completata, utilizza l'UUID annotato per associare le informazioni sul disco, per creare nuovamente l'ordine di denominazione del disco e l'ID SCSI, se necessario.L'applicazione dovrebbe funzionare in entrambi i modi. Ciò viene utilizzato nei casi in cui un'istanza Oracle abbia molti dischi virtuali associati per la risoluzione dei problemi dell'applicazione.
+  Quando la migrazione viene completata, utilizza l'UUID annotato per associare le informazioni sul disco, per creare nuovamente l'ordine di denominazione del disco e l'ID SCSI, se necessario. L'applicazione dovrebbe funzionare in entrambi i modi. Ciò viene utilizzato nei casi in cui un'istanza Oracle abbia molti dischi virtuali associati per la risoluzione dei problemi dell'applicazione.
 4. Rimuovi i dischi virtuali da tutte le VM del cluster, fatta eccezione per quello ritenuto primario.
 5. Rimuovi l'indicatore multiwriter dalla VM del cluster primario che dovrebbe essere, al momento, la sola a possedere i dischi del cluster.
 6. Accendi il cluster primario, se necessario, per un tempo di inattività minimo.

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -19,10 +22,10 @@ Puoi espandere o contrarre la capacità della tua istanza VMware vCenter Server 
 
 Puoi aggiungere dei nuovi server ESXi a un cluster mentre il cluster è in modalità di manutenzione. Inoltre, puoi aggiungere o rimuovere simultaneamente i server ESXi in più cluster. Sono disponibili le seguenti operazioni simultanee:
 
-* Aggiungi host a **cluster1** e aggiungi host a cluster aggiuntivi.
-* Rimuovi host da **cluster1** e rimuovi host da cluster aggiuntivi.
-* Aggiungi host a **cluster1** e rimuovi host da cluster aggiuntivi.
-* Rimuovi host da **cluster1** e aggiungi host a cluster aggiuntivi.
+* Aggiungi host a un cluster e aggiungi host a cluster aggiuntivi.
+* Rimuovi host da un cluster e rimuovi host da cluster aggiuntivi.
+* Aggiungi host a un cluster e rimuovi host da cluster aggiuntivi.
+* Rimuovi host da un cluster e aggiungi host a cluster aggiuntivi.https://github.ibm.com/tornado/tracker/issues/14183
 
 Puoi aggiungere o rimuovere condivisioni di archiviazione NFS in un cluster vCenter Server with NSX-T NFS o vSAN esistente.
 {:note}
@@ -37,7 +40,7 @@ Se il tuo cluster iniziale ha vSAN come archiviazione, l'aggiunta di uno o più 
 
 * Non aggiungere i server ESXi dal client web VMware vSphere. Le modifiche che apporti al client web vSphere non vengono sincronizzate con la console {{site.data.keyword.vmwaresolutions_full}}.
 * Un'istanza vCenter Server with NSX-T con l'archiviazione NFS deve avere almeno 3 server ESXi. Puoi espandere il cluster predefinito per avere fino a 51 server ESXi. Ciascuno dei cluster non predefiniti può essere espanso per avere fino a 59 server ESXi.
-* Un'istanza vCenter Server with NSX-T con l'archiviazione vSAN deve avere almeno 4 server ESXi. 
+* Un'istanza vCenter Server with NSX-T con l'archiviazione vSAN deve avere almeno 4 server ESXi.
 
 ### Procedura per aggiungere i server ESXi
 {: #vc_nsx-t_addingremovingservers-adding-procedure}

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2018-10-01"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Note sulla release per la V2.6

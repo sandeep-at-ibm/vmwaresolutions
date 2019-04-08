@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -47,7 +50,7 @@ Tabella 2. Sistemi
 
 Attore | Descrizione
 ---|---
-vCenter | Il vCenter è l'interfaccia primaria per l'amministratore di sistema per gestire le VM in loco e accedere al plug-in HCX per estendere le reti e migrare le VM. Con vCenter Server with Hybridity Bundle, l'amministratore di sistema può integrare facilmente le reti vSphere in loco nell'istanza vCenter Server eseguita su {{site.data.keyword.cloud_notm}}. La rete ibrida estende le reti in loco in {{site.data.keyword.cloud_notm}} consentendo ai clienti di migrare le loro applicazioni in un'istanza vCenter Server eseguita su {{site.data.keyword.cloud_notm}} e nell'altro senso, se necessario. Per ulteriori dettagli su vCenter Server with Hybridity Bundle, fai riferimento al documento [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
+vCenter | Il vCenter è l'interfaccia primaria per l'amministratore di sistema per gestire le VM in loco e accedere al plug-in HCX per estendere le reti e migrare le VM. Con vCenter Server with Hybridity Bundle, l'amministratore di sistema può integrare facilmente le reti vSphere in loco nell'istanza vCenter Server eseguita su {{site.data.keyword.cloud_notm}}. La rete ibrida estende le reti in loco in {{site.data.keyword.cloud_notm}} consentendo ai clienti di migrare le loro applicazioni in un'istanza vCenter Server eseguita su {{site.data.keyword.cloud_notm}} e nell'altro senso, se necessario. Per ulteriori dettagli su vCenter Server with Hybridity Bundle, vedi [Architettura della soluzione VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro).
 VM in loco | Le VM in loco ospitano le applicazioni che migrano al cloud. Inizialmente, vengono migrate come VM e poi, attraverso il percorso di modernizzazione dell'applicazione, migrate da VM a contenitori.
 VM sul cloud | Le VM cloud ospitano le applicazioni che erano state migrate da locale. Comunicazioni con le applicazioni in loco tramite la rete L2 estesa. Per questa architettura di riferimento e in questo esempio per Acme Skateboards, una delle VM sul cloud è un server di database, che fa parte del carico di lavoro di presenza online.
 NSX-V | NSX-V su vCenter Server fornisce la rete di sovrapposizione definita dal software che è gestita dall'amministratore di sistema. La rete di sovrapposizione è la destinazione per le reti estese HCX in quanto gestisce il traffico dalle VM per {{site.data.keyword.icpfull_notm}}. NSX-V fornisce all'architettura di riferimento funzioni quali distribuzione, riconfigurazione ed eliminazione di reti virtuali su richiesta e servizi di micro-segmentazione all'interno di VMware utilizzando i vDS (vSphere Distributed Switch). Per ulteriori informazioni, vedi la [Panoramica di NSX–V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv).
@@ -58,5 +61,4 @@ Watson | Per questa architettura di riferimento e in questo esempio per Acme Ska
 ## Link correlati
 {: #vcsnsxt-systemcontext-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

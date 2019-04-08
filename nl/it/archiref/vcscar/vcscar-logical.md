@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -75,6 +78,7 @@ Il chatbot è un componente web che conversa con l'utente. Il chatbot può accet
 I chatbot interagiscono con il sistema nel seguente modo:
 
 Figura 2. Tipica query di chatbot
+</br>
 ![Tipica query di chatbot](vcscar-query.svg)
 
 Tabella 2. Interazioni del chatbot
@@ -133,6 +137,7 @@ esposta ha le seguenti categorie generali:
 Watson Discovery deve essere formato tramite un modello di machine learning, che viene creato in modo iterativo da un esperto in materia utilizzando Watson Knowledge Studio.
 
 Figura 3. Formazione del Discovery Service
+</br>
 ![Formazione del Discovery Service](vcscar-training.svg)
 
 Per Skate Advisor, il modello è costituito dalla relazione tra i tipi di entità con una combinazione di formazione basata su regole e formazione basata sul dizionario per creare un modello. Questo modello consente al Discovery Service di riconoscere e classificare i trick che vengono acquisiti da articoli e descrizioni video utilizzati come set di formazione.

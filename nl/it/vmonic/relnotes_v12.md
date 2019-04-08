@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2016-12-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Note sulla release per la V1.2

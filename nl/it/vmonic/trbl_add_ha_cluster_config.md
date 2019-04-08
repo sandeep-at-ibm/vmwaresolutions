@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Problema di configurazione della console vSphere che si verifica all'aggiunta del cluster HA
